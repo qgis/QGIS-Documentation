@@ -160,30 +160,35 @@ Icon                            Substitution                        Icon        
 Digitizing and Advanced Digitizing
 ..................................
 
-============================  =================================  =============================  ================================
-Icon                          Substitution                       Icon                           Substitution
-============================  =================================  =============================  ================================
-|cad|                         ``|cad|``                          |cadConstruction|              ``|cadConstruction|``
-|cadParallel|                 ``|cadParallel|``                  |cadPerpendicular|             ``|cadPerpendicular|``
-|toggleEditing|               ``|toggleEditing|``                |allEdits|                     ``|allEdits|``
-|tracing|                     ``|tracing|``                      |snapping|                     ``|snapping|``
-|capturePoint|                ``|capturePoint|``                 |capturePolygon|               ``|capturePolygon|``
-|captureLine|                 ``|captureLine|``                  |deleteSelectedFeatures|       ``|deleteSelectedFeatures|``
-|circularStringCurvePoint|    ``|circularStringCurvePoint|``     |circularStringRadius|         ``|circularStringRadius|``
-|vertexTool|                  ``|vertexTool|``                   |vertexToolActiveLayer|        ``|vertexToolActiveLayer|``
-|moveFeature|                 ``|moveFeature|``                  |moveFeatureCopy|              ``|moveFeatureCopy|``
-|moveFeatureLine|             ``|moveFeatureLine|``              |moveFeatureCopyLine|          ``|moveFeatureCopyLine|``
-|moveFeaturePoint|            ``|moveFeaturePoint|``             |moveFeatureCopyPoint|         ``|moveFeatureCopyPoint|``
-|rotateFeature|               ``|rotateFeature|``                |rotatePointSymbols|           ``|rotatePointSymbols|``
-|offsetCurve|                 ``|offsetCurve|``                  |offsetPointSymbols|           ``|offsetPointSymbols|``
-|simplifyFeatures|            ``|simplifyFeatures|``             |reshape|                      ``|reshape|``
-|addRing|                     ``|addRing|``                      |addPart|                      ``|addPart|``
-|fillRing|                    ``|fillRing|``                     \                              \
-|deleteRing|                  ``|deleteRing|``                   |deletePart|                   ``|deletePart|``
-|mergeFeatures|               ``|mergeFeatures|``                |mergeFeatAttributes|          ``|mergeFeatAttributes|``
-|splitFeatures|               ``|splitFeatures|``                |splitParts|                   ``|splitParts|``
-|reverseLine|                 ``|reverseLine|``
-============================  =================================  =============================  ================================
+===============================  ====================================  ================================  =================================
+Icon                             Substitution                          Icon                              Substitution
+===============================  ====================================  ================================  =================================
+|cad|                            ``|cad|``                             |cadConstruction|                 ``|cadConstruction|``
+|cadParallel|                    ``|cadParallel|``                     |cadPerpendicular|                ``|cadPerpendicular|``
+|floater|                        ``|floater|``
+|toggleEditing|                  ``|toggleEditing|``                   |allEdits|                        ``|allEdits|``
+|tracing|                        ``|tracing|``                         |snapping|                        ``|snapping|``
+|capturePoint|                   ``|capturePoint|``                    |capturePolygon|                  ``|capturePolygon|``
+|captureLine|                    ``|captureLine|``                     |deleteSelectedFeatures|          ``|deleteSelectedFeatures|``
+|circularStringCurvePoint|       ``|circularStringCurvePoint|``        |circularStringRadius|            ``|circularStringRadius|``
+|vertexTool|                     ``|vertexTool|``                      |vertexToolActiveLayer|           ``|vertexToolActiveLayer|``
+|streamingDigitize|              ``|streamingDigitize|``               |digitizeWithCurve|               ``|digitizeWithCurve|``
+|moveFeature|                    ``|moveFeature|``                     |moveFeatureCopy|                 ``|moveFeatureCopy|``
+|moveFeatureLine|                ``|moveFeatureLine|``                 |moveFeatureCopyLine|             ``|moveFeatureCopyLine|``
+|moveFeaturePoint|               ``|moveFeaturePoint|``                |moveFeatureCopyPoint|            ``|moveFeatureCopyPoint|``
+|rotateFeature|                  ``|rotateFeature|``                   |rotatePointSymbols|              ``|rotatePointSymbols|``
+|scaleFeature|                   ``|scaleFeature|``
+|offsetCurve|                    ``|offsetCurve|``                     |offsetPointSymbols|              ``|offsetPointSymbols|``
+|simplifyFeatures|               ``|simplifyFeatures|``                |reshape|                         ``|reshape|``
+|addRing|                        ``|addRing|``                         |addPart|                         ``|addPart|``
+|fillRing|                       ``|fillRing|``
+|deleteRing|                     ``|deleteRing|``                      |deletePart|                      ``|deletePart|``
+|mergeFeatures|                  ``|mergeFeatures|``                   |mergeFeatAttributes|             ``|mergeFeatAttributes|``
+|splitFeatures|                  ``|splitFeatures|``                   |splitParts|                      ``|splitParts|``
+|reverseLine|                    ``|reverseLine|``
+|allowIntersections|             ``|allowIntersections|``              |avoidIntersectionsCurrentLayer|  ``|avoidIntersectionsCurrentLayer|``
+|avoidIntersectionsLayers|       ``|avoidIntersectionsLayers|``        |snappingSelf|                    ``|snappingSelf|``
+===============================  ====================================  ================================  =================================
 
 
 Map Navigation and attributes
@@ -594,6 +599,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |allEdits| image:: /static/common/mActionAllEdits.png
    :width: 1.5em
+.. |allowIntersections| image:: /static/common/mActionAllowIntersections.png
+   :width: 1.5em
 .. |annotation| image:: /static/common/mActionAnnotation.png
    :width: 1.5em
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
@@ -607,6 +614,10 @@ Icon                            Substitution                        Icon        
 .. |autoPlacement| image:: /static/common/mIconAutoPlacementSettings.png
    :width: 1.5em
 .. |auxiliaryStorage| image:: /static/common/mIconAuxiliaryStorage.png
+   :width: 1.5em
+.. |avoidIntersectionsCurrentLayer| image:: /static/common/mActionAvoidIntersectionsCurrentLayer.png
+   :width: 1.5em
+.. |avoidIntersectionsLayers| image:: /static/common/mActionAvoidIntersectionsLayers.png
    :width: 1.5em
 .. |browserCollapse| image:: /static/common/browser_collapse.png
    :width: 1.5em
@@ -728,6 +739,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |difference| image:: /static/common/difference.png
    :width: 1.5em
+.. |digitizeWithCurve| image:: /static/common/mActionDigitizeWithCurve.png
+   :width: 1.5em
 .. |digitizing| image:: /static/common/digitizing.png
    :width: 1.5em
 .. |display| image:: /static/common/display.png
@@ -794,6 +807,8 @@ Icon                            Substitution                        Icon        
 .. |filterMap| image:: /static/common/mActionFilterMap.png
    :width: 1.5em
 .. |filterTableFields| image:: /static/common/mActionFilterTableFields.png
+   :width: 1.5em
+.. |floater| image:: /static/common/floater.png
    :width: 1.5em
 .. |folder| image:: /static/common/mActionFolder.png
    :width: 1.5em
@@ -1191,6 +1206,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |scaleBar| image:: /static/common/mActionScaleBar.png
    :width: 1.5em
+.. |scaleFeature| image:: /static/common/mActionScaleFeature.png
+   :width: 1.5em
 .. |search| image:: /static/common/search.png
    :width: 1.5em
 .. |select| image:: /static/common/mActionSelect.png
@@ -1260,6 +1277,8 @@ Icon                            Substitution                        Icon        
 .. |slider| image:: /static/common/slider.png
 .. |snapping| image:: /static/common/mIconSnapping.png
    :width: 1.5em
+.. |snappingSelf| image:: /static/common/mIconSnappingSelf.png
+   :width: 1.5em
 .. |sort| image:: /static/common/sort.png
    :width: 1.5em
 .. |sourceFields| image:: /static/common/mSourceFields.png
@@ -1277,6 +1296,8 @@ Icon                            Substitution                        Icon        
 .. |stackedBar| image:: /static/common/stacked-bar.png
    :width: 1.5em
 .. |start| image:: /static/common/mActionStart.png
+   :width: 1.5em
+.. |streamingDigitize| image:: /static/common/mActionStreamingDigitize.png
    :width: 1.5em
 .. |styleManager| image:: /static/common/mActionStyleManager.png
    :width: 1.5em

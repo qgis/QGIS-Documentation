@@ -507,6 +507,10 @@ details).
      -
      - :guilabel:`Advanced Digitizing`
      - :ref:`rotate_feature`
+   * - :menuselection:`-->` |scaleFeature| :guilabel:`Scale Feature(s)`
+     -
+     - :guilabel:`Advanced Digitizing`
+     -
    * - :menuselection:`-->` |simplifyFeatures| :guilabel:`Simplify Feature`
      -
      - :guilabel:`Advanced Digitizing`
@@ -560,16 +564,6 @@ details).
      -
      - :guilabel:`Digitizing`
      - :ref:`vertex_tool`
-   * - :menuselection:`-->` |rotatePointSymbols|
-       :guilabel:`Rotate Point Symbols`
-     -
-     - :guilabel:`Advanced Digitizing`
-     - :ref:`rotate_symbol`
-   * - :menuselection:`-->` |offsetPointSymbols|
-       :guilabel:`Offset Point Symbols`
-     -
-     - :guilabel:`Advanced Digitizing`
-     - :ref:`offset_symbol`
    * - :menuselection:`-->` |reverseLine| :guilabel:`Reverse Line`
      -
      - :guilabel:`Advanced Digitizing`
@@ -578,6 +572,14 @@ details).
      -
      - :guilabel:`Advanced Digitizing`
      - :ref:`trim_extend_feature`
+   * - |rotatePointSymbols| :guilabel:`Rotate Point Symbols`
+     -
+     - :guilabel:`Advanced Digitizing`
+     - :ref:`rotate_symbol`
+   * - |offsetPointSymbols| :guilabel:`Offset Point Symbols`
+     -
+     - :guilabel:`Advanced Digitizing`
+     - :ref:`offset_symbol`
 
 
 Tools that depend on the selected layer geometry type i.e. point,
@@ -3013,6 +3015,8 @@ Click the icon to open the Plugin Manager dialog.
 .. |saveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
    :width: 1.5em
 .. |scaleBar| image:: /static/common/mActionScaleBar.png
+   :width: 1.5em
+.. |scaleFeature| image:: /static/common/mActionScaleFeature.png
    :width: 1.5em
 .. |search| image:: /static/common/search.png
    :width: 1.5em
