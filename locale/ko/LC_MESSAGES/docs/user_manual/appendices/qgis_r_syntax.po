@@ -1,24 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
-# Kwon.Yongchan <ruvyn@naver.com>, 2020
+# Harrissou Sant-anna, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-05-10 09:48+0000\n"
-"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
+"POT-Creation-Date: 2021-01-20 10:25+0000\n"
+"PO-Revision-Date: 2020-12-24 12:00+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2021\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -29,20 +31,20 @@ msgstr "부록 D: QGIS R 스크립트 문법"
 #: ../../docs/user_manual/appendices/qgis_r_syntax.rst:9
 msgid ""
 "Contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna "
-"<http://www.santannapisa.it/it/istituto/scienze-della-vita/agricultural-"
-"water-management>`_"
+"<https://www.santannapisa.it/en/istituto/scienze-della-vita/istituto-di-"
+"scienze-della-vita>`_"
 msgstr ""
-"`Scuola Superiore Sant'Anna <http://www.santannapisa.it/it/istituto/scienze-"
-"della-vita/agricultural-water-management>`_ 의 지원으로 마테오 게타(Matteo Ghetta)가 "
-"작성함"
+"`Scuola Superiore Sant'Anna <https://www.santannapisa.it/en/istituto"
+"/scienze-della-vita/istituto-di-scienze-della-vita>`_ 의 지원으로 마테오 게타(Matteo "
+"Ghetta)가 작성함"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:11
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:12
 msgid ""
 "Writing R scripts in Processing is a bit tricky because of the special "
 "syntax."
 msgstr "공간 처리 프레임워크에서 R 스크립트를 작성하는 일은 그 특수 문법 때문에 조금 까다로울 수도 있습니다."
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:14
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:15
 msgid ""
 "A Processing R script starts with defining its **Inputs** and **Outputs**, "
 "each preceded with double hash characters (``##``)."
@@ -50,7 +52,7 @@ msgstr ""
 "공간 처리 R 스크립트는 그 **입력물** 과 **산출물** 을 정의하는 것으로 시작합니다. 각각 그 앞에 2중 해시 "
 "문자(``##``)를 삽입해야 합니다."
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:17
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:18
 msgid ""
 "Before the inputs, the group to place the algoritm in can be specified. If "
 "the group already exists, the algorithm will be added to it, if not, the "
@@ -60,51 +62,51 @@ msgstr ""
 "입력물 앞에, 알고리즘을 배치할 그룹을 지정할 수 있습니다. 이미 존재하는 그룹이라면 알고리즘이 해당 그룹에 추가될 것입니다. 존재하지 "
 "않는 그룹이라면 해당 그룹을 생성할 것입니다. 다음 예시에서 그룹의 명칭은 *My group* 입니다:"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:23
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:24
 msgid "``##My Group=group``"
 msgstr "``##My Group=group``"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:27
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:28
 msgid "Inputs"
 msgstr "입력물"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:29
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:30
 msgid ""
 "All input data and parameters have to be specified. There are several types "
 "of inputs:"
 msgstr "모든 입력 데이터 및 파라미터를 지정해야 합니다. 입력물의 유형은 여럿 있습니다:"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:32
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:33
 msgid "vector: ``##Layer = vector``"
 msgstr "벡터: ``##Layer = vector``"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:33
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:34
 msgid ""
 "vector field: ``##F = Field Layer`` (where `Layer` is the name of an input "
 "vector layer the field belongs to)"
 msgstr "벡터 필드: ``##F = Field Layer`` (여기서 'Layer' 는 필드가 속한 입력 벡터 레이어의 명칭입니다)"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:35
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:36
 msgid "raster: ``##r = raster``"
 msgstr "래스터: ``##r = raster``"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:36
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:37
 msgid "table: ``##t = table``"
 msgstr "테이블: ``##t = table``"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:37
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:38
 msgid "number: ``##Num = number``"
 msgstr "숫자: ``##Num = number``"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:38
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:39
 msgid "string: ``##Str = string``"
 msgstr "문자열: ``##Str = string``"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:39
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:40
 msgid "boolean: ``##Bol = boolean``"
 msgstr "불(boolean): ``##Bol = boolean``"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:41
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:42
 msgid ""
 "elements in a dropdown menu. The items must be separated with semicolons "
 "``;``: ``##type=selection point;lines;point+lines``"
@@ -112,319 +114,319 @@ msgstr ""
 "드롭다운 메뉴의 항목들은 쌍반점 ``;`` 으로 구분되어야만 합니다: ``##type=selection "
 "point;lines;point+lines``"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:46
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:47
 msgid "Outputs"
 msgstr "산출물"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:48
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:49
 msgid ""
 "As for the inputs, each output has to be defined at the beginning of the "
 "script:"
 msgstr "입력물의 경우와 마찬가지로, 스크립트 시작 부분에서 각 산출물을 정의해야 합니다."
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:51
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:52
 msgid "vector: ``##output= output vector``"
 msgstr "벡터: ``##output= output vector``"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:52
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:53
 msgid "raster: ``##output= output raster``"
 msgstr "래스터: ``##output= output raster``"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:53
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:54
 msgid "table: ``##output= output table``"
 msgstr "테이블: ``##output= output table``"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:54
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:55
 msgid "plots: ``##output_plots_to_html`` (##showplots in earlier versions)"
 msgstr "플롯(plot): ``##output_plots_to_html`` (이전 버전에서의 ##showplots)"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:55
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:56
 msgid ""
 "To show R output in the *Result Viewer*, put ``>`` in front of the command "
 "whose output you would like to show."
 msgstr ""
 "*결과물 뷰어* 에 R 산출물을 표시하려면, 사용자가 표시하고자 하는 산출물을 생산하는 명령어 앞에 ``>`` 문자를 삽입하십시오."
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:64
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:65
 msgid "Syntax Summary for QGIS R scripts"
 msgstr "QGIS R 스크립트용 문법 요약"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:69
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:70
 msgid "A number of input and output parameter types are offered."
 msgstr "수많은 입력 및 산출 파라미터 유형을 지원합니다."
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:72
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:73
 msgid "Input parameter types"
 msgstr "입력 파라미터 유형"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:75
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:128
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:76
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:129
 msgid "Parameter"
 msgstr "파라미터"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:75
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:128
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:76
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:129
 msgid "Syntax example"
 msgstr "문법 예시"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:75
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:76
 msgid "Returning objects"
 msgstr "반환하는 객체"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:77
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:130
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:78
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:131
 msgid "vector"
 msgstr "vector"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:77
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:78
 msgid "Layer = vector"
 msgstr "Layer = vector"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:77
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:79
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:81
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:78
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:80
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:82
 msgid ""
 "sf object (or SpatialDataFrame object, if ##load_vector_using_rgdal is "
 "specified)"
 msgstr "sf 객체 (또는 ##load_vector_using_rgdal 을 지정한 경우 SpatialDataFrame 객체)"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:79
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:80
 msgid "vector point"
 msgstr "vector point"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:79
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:80
 msgid "Layer = vector point"
 msgstr "Layer = vector point"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:81
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:82
 msgid "vector line"
 msgstr "vector line"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:81
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:82
 msgid "Layer = vector line"
 msgstr "Layer = vector line"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:83
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:84
 msgid "vector polygon"
 msgstr "vector polygon"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:83
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:84
 msgid "Layer = vector polygon"
 msgstr "Layer = vector polygon"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:83
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:84
 msgid ""
 "sf object (or SpatialPolygonsDataFrame object, if ##load_vector_using_rgdal "
 "is used)"
 msgstr ""
 "sf 객체 (또는 ##load_vector_using_rgdal 을 사용하는 경우 SpatialPolygonsDataFrame 객체)"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:85
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:86
 msgid "multiple vector"
 msgstr "multiple vector"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:85
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:86
 msgid "Layer = multiple vector"
 msgstr "Layer = multiple vector"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:85
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:86
 msgid ""
 "sf object (or SpatialDataFrame objects if ##load_vector_using_rgdal is "
 "specified)"
 msgstr "sf 객체 (또는 ##load_vector_using_rgdal 을 지정한 경우 SpatialDataFrame 객체)"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:87
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:134
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:88
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:135
 msgid "table"
 msgstr "table"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:87
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:88
 msgid "Layer = table"
 msgstr "Layer = table"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:87
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:88
 msgid "dataframe conversion from csv, default object of ``read.csv`` function"
 msgstr "CVS에서 변환한 데이터프레임으로 ``read.csv`` 함수의 기본 객체"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:89
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:90
 msgid "field"
 msgstr "field"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:89
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:90
 msgid "Field = Field Layer"
 msgstr "Field = Field Layer"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:89
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:90
 msgid "name of the Field selected, e.g. ``\"Area\"``"
 msgstr "선택한 필드의 명칭, 예: ``\"Area\"``"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:91
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:132
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:92
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:133
 msgid "raster"
 msgstr "raster"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:91
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:92
 msgid "Layer = raster"
 msgstr "Layer = raster"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:91
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:92
 msgid "RasterBrick object, default object of ``raster`` package"
 msgstr "RasterBrick 객체로 ``raster`` 패키지의 기본 객체"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:93
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:94
 msgid "multiple raster"
 msgstr "multiple raster"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:93
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:94
 msgid "Layer = multiple raster"
 msgstr "Layer = multiple raster"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:93
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:94
 msgid "RasterBrick objects, default object of ``raster`` package"
 msgstr "RasterBrick 객체로 ``raster`` 패키지의 기본 객체"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:95
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:96
 msgid "number"
 msgstr "number"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:95
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:96
 msgid "N = number"
 msgstr "N = number"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:95
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:96
 msgid "integer or floating number chosen"
 msgstr "정수 또는 부동소수점 가운데 선택"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:97
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:98
 msgid "string"
 msgstr "string"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:97
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:98
 msgid "S = string"
 msgstr "S = string"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:97
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:98
 msgid "string added in the box"
 msgstr "텍스트란에 입력한 문자열"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:99
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:100
 msgid "longstring"
 msgstr "longstring"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:99
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:100
 msgid "LS = longstring"
 msgstr "LS = longstring"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:99
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:100
 msgid "string added in the box, could be longer then the normal string"
 msgstr "텍스트란에 입력한 문자열로 일반 문자열보다 길 수 있음"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:101
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:102
 msgid "selection"
 msgstr "selection"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:101
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:102
 msgid "S = selection first;second;third"
 msgstr "S = selection first;second;third"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:101
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:102
 msgid "string of the selected item chosen in the dropdown menu"
 msgstr "드롭다운 메뉴에서 선택한 항목의 문자열"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:103
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:104
 msgid "crs"
 msgstr "crs"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:103
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:104
 msgid "C = crs"
 msgstr "C = crs"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:103
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:104
 msgid "string of the resulting CRS chosen, in the format: ``\"EPSG:4326\"``"
 msgstr "선택한 좌표계의 문자열, 서식: ``\"EPSG:4326\"``"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:105
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:106
 msgid "extent"
 msgstr "extent"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:105
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:106
 msgid "E = extent"
 msgstr "E = extent"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:105
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:106
 msgid ""
 "Extent object of the ``raster`` package, you can extract values as "
 "``E@xmin``"
 msgstr "``raster`` 패키지의 범위 객체로, 값을 ``E@xmin`` 으로 추출 가능"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:107
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:108
 msgid "point"
 msgstr "point"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:107
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:108
 msgid "P = point"
 msgstr "P = point"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:107
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:108
 msgid "when clicked on the map, you have the coordinates of the point"
 msgstr "맵을 클릭한 경우, 클릭한 포인트의 좌표"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:109
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:136
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:110
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:137
 msgid "file"
 msgstr "file"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:109
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:110
 msgid "F = file"
 msgstr "F = file"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:109
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:110
 msgid "path of the file chosen, e.g. \"/home/matteo/file.txt\""
 msgstr "선택한 파일을 가리키는 경로, 예: \"/home/matteo/file.txt\""
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:111
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:112
 msgid "folder"
 msgstr "folder"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:111
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:112
 msgid "F = folder"
 msgstr "F = folder"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:111
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:112
 msgid "path of the folder chosen, e.g. \"/home/matteo/Downloads\""
 msgstr "선택한 폴더를 가리키는 경로, 예: \"/home/matteo/Downloads\""
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:114
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:115
 msgid "A parameter can be **OPTIONAL**, meaning that it can be ignored."
 msgstr "파라미터는 **부가적(optional)** 일 수 있습니다. 무시할 수 있다는 뜻입니다."
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:116
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:117
 msgid ""
 "In order to set an input as optional, you add the string ``optional`` "
 "**before** the input, e.g::"
 msgstr "입력물을 부가적인 것으로 설정하려면, 다음과 같이 입력물 **앞에** ``optional`` 문자열을 추가하십시오:"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:125
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:126
 msgid "Output parameter types"
 msgstr "산출 파라미터 유형"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:130
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:131
 msgid "Output = output vector"
 msgstr "Output = output vector"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:132
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:133
 msgid "Output = output raster"
 msgstr "Output = output raster"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:134
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:135
 msgid "Output = output table"
 msgstr "Output = output table"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:136
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:137
 msgid "Output = output file"
 msgstr "Output = output file"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:139
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:140
 msgid ""
 "You can save plots as ``png`` from the *Processing Result Viewer*, or you "
 "can choose to save the plot directly from the algorithm interface."
@@ -432,66 +434,66 @@ msgstr ""
 "*공간 처리 결과물 뷰어* 에서 플롯을 :file:`.png` 포맷으로 저장할 수도 있고, 또는 알고리즘 인터페이스에서 직접 저장할 수도"
 " 있습니다."
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:146
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:147
 msgid "Script body"
 msgstr "스크립트 본문"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:148
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:149
 msgid ""
 "The script body follows R syntax and the **Log** panel can help you if there"
 " is something wrong with your script."
 msgstr ""
 "스크립트 본문은 R 문법을 따르며, 사용자 스크립트에 잘못된 점이 있을 경우 **로그** 패널에서 그 원인을 찾아볼 수 있습니다."
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:151
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:152
 msgid ""
 "**Remember** that you have to load all additional libraries in the script::"
 msgstr "스크립트에서 모든 추가 라이브러리를 불러와야 한다는 점을 **기억하십시오**:"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:160
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:161
 msgid "Examples"
 msgstr "예제"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:163
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:164
 msgid "Example with vector output"
 msgstr "벡터 산출물 예시"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:165
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:166
 msgid ""
 "Let's take an algorithm from the online collection that creates random "
 "points from the extent of an input layer::"
 msgstr "온라인 저장소에서 입력 레이어의 범위 안에서 랜덤한 포인트들을 생성하는 알고리즘을 선택해봅시다:"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:178
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:179
 msgid "Explanation (per line in the script):"
 msgstr "설명(스크립트의 각 줄별로):"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:180
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:181
 msgid "``Point pattern analysis`` is the group of the algorithm"
 msgstr "``Point pattern analysis`` 는 알고리즘이 속한 그룹입니다."
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:181
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:182
 msgid "``Layer`` is the input **vector** layer"
 msgstr "``Layer`` 는 입력 **벡터** 레이어입니다."
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:182
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:183
 msgid "``Size`` is a **numerical** parameter with a default value of 10"
 msgstr "``Size`` 는 기본값이 10인 **숫자** 파라미터입니다."
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:183
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:184
 msgid ""
 "``Output`` is the **vector** layer that will be created by the algorithm"
 msgstr "``Output`` 은 알고리즘이 생성할 **벡터** 레이어입니다."
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:185
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:186
 msgid "``library(sp)`` loads the **sp** library"
 msgstr "``library(sp)`` 는 **sp** 라이브러리를 불러옵니다."
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:186
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:187
 msgid "``spatpoly = as(Layer, \"Spatial\")`` translate to an sp object"
 msgstr "``spatpoly = as(Layer, \"Spatial\")`` 은 입력 레이어를 **sp** 객체로 변형합니다."
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:187
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:188
 msgid ""
 "Call the ``spsample`` function of the ``sp`` library and run it using the "
 "input defined above (``Layer`` and ``Size``)"
@@ -499,18 +501,18 @@ msgstr ""
 "``sp`` 라이브러리의 ``spsample`` 함수를 호출, 앞에서 정의한 입력물을 (``Layer`` 및 ``Size`` 를) "
 "사용해서 실행합니다."
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:189
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:190
 msgid ""
 "Create a *SpatialPointsDataFrame* object using the "
 "``SpatialPointsDataFrame`` function"
 msgstr ""
 "``SpatialPointsDataFrame`` 함수를 사용해서 *SpatialPointsDataFrame* 객체를 생성합니다."
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:191
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:192
 msgid "Create the output vector layer using the ``st_as_sf`` function"
 msgstr "``st_as_sf`` 함수를 사용해서 산출 벡터 레이어를 생성합니다."
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:194
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:195
 msgid ""
 "That's it! Just run the algorithm with a vector layer you have in the QGIS "
 "Legend, choose the number of random point. The resulting layer will be added"
@@ -519,11 +521,11 @@ msgstr ""
 "끝입니다! QGIS 범례에 있는 벡터 레이어와 함께 알고리즘을 실행하고, 랜덤 포인트의 개수를 선택하십시오. 산출되는 레이어가 사용자 "
 "맵에 추가될 것입니다."
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:200
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:201
 msgid "Example with raster output"
 msgstr "래스터 산출물 예시"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:202
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:203
 msgid ""
 "The following script will perform basic ordinary kriging to create a raster "
 "map of interpolated values from a specified field of the input point vector "
@@ -535,7 +537,7 @@ msgstr ""
 "함수를 사용해서 입력 포인트 벡터 레이어의 지정 필드로부터 보간한 값들의 래스터 맵을 생성할 것입니다. 먼저 크리그 격자법 모델을 계산한"
 " 다음 래스터를 생성할 것입니다. 이 래스터는 ``raster`` R 패키지의 ``raster`` 함수를 통해 생성됩니다."
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:226
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:227
 msgid ""
 "By using ``##load_vector_using_rgdal``, the input vector layer will be made "
 "available as a ``SpatialDataFrame`` objects, so we avoid having to translate"
@@ -544,51 +546,51 @@ msgstr ""
 "``##load_vector_using_rgdal`` 을 사용하면, 입력 벡터 레이어를 ``SpatialDataFrame`` 객체로 "
 "사용할 수 있게 됩니다. ``sf`` 객체에서 변형해야 할 필요가 없어집니다."
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:231
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:232
 msgid "Example with table output"
 msgstr "테이블 산출물 예시"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:233
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:234
 msgid ""
 "Let's edit the ``Summary Statistics`` algorithm so that the output is a "
 "table file (csv)."
 msgstr "``Summary Statistics`` 알고리즘이 테이블 파일(:file:`.csv`)을 산출하도록 편집해봅시다."
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:236
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:237
 msgid "The script body is the following::"
 msgstr "스크립트 본문은 다음과 같습니다:"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:257
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:258
 msgid ""
 "The third line specifies the **Vector Field** in input and the fourth line "
 "tells the algorithm that the output should be a table."
 msgstr "세 번째 줄에서 입력물의 **벡터 필드** 를 지정하고, 네 번째 줄에서 알고리즘에 테이블을 산출해야 한다고 알려줍니다."
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:260
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:261
 msgid ""
 "The last line will take the ``Stat`` object created in the script and "
 "convert it into a ``csv`` table."
 msgstr "마지막 줄에서 스크립트가 생성한 ``Stat`` 객체를 받아 :file:`.csv` 테이블로 변환할 것입니다."
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:264
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:265
 msgid "Example with console output"
 msgstr "콘솔 산출물 예시"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:266
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:267
 msgid ""
 "We can use the previous example and instead of creating a table, print the "
 "result in the **Result Viewer**::"
 msgstr "앞의 예시를 사용해서 테이블을 생성하는 대신 **결과물 뷰어** 에 결과물을 출력해보겠습니다:"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:286
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:287
 msgid "The script is exactly the same as the one above except for two edits:"
 msgstr "이 스크립트는 두 군데 수정 사항을 제외하면 앞의 것과 완전히 동일합니다:"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:288
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:289
 msgid "no output specified (the fourth line has been removed)"
 msgstr "산출물을 지정하지 않았습니다. (네 번째 줄을 제거했습니다.)"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:289
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:290
 msgid ""
 "the last line begins with ``>``, telling Processing to make the object "
 "available through the result viewer"
@@ -596,17 +598,17 @@ msgstr ""
 "마지막 줄 맨 앞에 ``>`` 기호를 삽입했습니다. 결과물 뷰어를 통해 사용할 수 있는 객체를 생성해야 한다고 공간 처리 프레임워크에 "
 "알려주는 것입니다."
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:294
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:295
 msgid "Example with plot"
 msgstr "플롯 예시"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:295
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:296
 msgid ""
 "To create plots, you have to use the ``##output_plots_to_html`` parameter as"
 " in the following script::"
 msgstr "플롯을 생성하려면, 다음 스크립트에서와 같이 ``##output_plots_to_html`` 파라미터를 사용해야 합니다:"
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:306
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:307
 msgid ""
 "The script uses a field (``Field``) of a vector layer (``Layer``) as input, "
 "and creates a *QQ Plot* (to test the normality of the distribution)."
@@ -614,6 +616,6 @@ msgstr ""
 "이 스크립트는 벡터 레이어(``Layer``)의 필드(``Field``)를 입력물로 사용해서 (분포의 정규성을 점검하기 위한) *QQ "
 "Plot* 을 생성합니다."
 
-#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:310
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:311
 msgid "The plot is automatically added to the Processing *Result Viewer*."
 msgstr "이 플롯은 *공간 처리 결과물 뷰어* 에 자동적으로 추가됩니다."
