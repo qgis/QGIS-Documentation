@@ -393,8 +393,6 @@ tab and activate the |checkbox| :guilabel:`Draw callouts`. Then you can:
    * :guilabel:`Balloons`: a polygon surrounding the label and pointing to the feature.
      It can have rounded corners.
 
-
-
 #. Select the :guilabel:`Line style` with full capabilities of a :ref:`line
    symbol <vector_line_symbols>` including layer effects, and data-defined
    settings
@@ -830,6 +828,8 @@ Under :guilabel:`Feature options`:
 .. |labelplacement| image:: /static/common/labelplacement.png
    :width: 1.5em
 .. |labelshadow| image:: /static/common/labelshadow.png
+   :width: 1.5em
+.. |moveLabel| image:: /static/common/mActionMoveLabel.png
    :width: 1.5em
 .. |paintEffects| image:: /static/common/mIconPaintEffects.png
    :width: 1.5em
