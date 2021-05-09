@@ -93,9 +93,10 @@ In the |text| :guilabel:`Text` tab, you can set:
   whether the text should be underlined or striked through
 * the :guilabel:`Size` in any :ref:`supported unit <unit_selector>`
 * the :guilabel:`Color`
-* and the :guilabel:`Opacity`.
-
-
+* the :guilabel:`Opacity`
+* and :guilabel:`Allow HTML Formatting`:
+  The HTML formatting option enables the proper rendering of some HTML tag to customize the label.
+  The supported tags are the HTML Color tags, underline, strikethrough, and overline for the text.
 
 At the bottom of the tab, a widget shows a filterable list of compatible items
 stored in your :ref:`style manager database <vector_style_manager>`.
@@ -388,6 +389,9 @@ tab and activate the |checkbox| :guilabel:`Draw callouts`. Then you can:
 
    * :guilabel:`Simple lines`: a straight line, the shortest path
    * :guilabel:`Manhattan style`: a 90° broken line
+   * :guilabel:`Curved lines`: a curved line
+   * :guilabel:`Balloons`: a polygon surrounding the label and pointing to the feature.
+     It can have rounded corners.
 
 #. Select the :guilabel:`Line style` with full capabilities of a :ref:`line
    symbol <vector_line_symbols>` including layer effects, and data-defined
@@ -416,7 +420,13 @@ tab and activate the |checkbox| :guilabel:`Draw callouts`. Then you can:
    * Fixed position at the edge (:guilabel:`Top left`, :guilabel:`Top center`,
      :guilabel:`Top right`, :guilabel:`Left middle`, :guilabel:`Right middle`,
      :guilabel:`Bottom left`, :guilabel:`Bottom center` and :guilabel:`Bottom right`).
+#. Set the :guilabel:`Blend mode`: controls the :ref:`blending <blend-modes>` of the callout.
 
+Callouts can also be controlled manually by using the |moveLabel|
+:sup:`Move Label or Diagram` tool in the :ref:`Labeling Toolbar <label_toolbar>`.
+The start and end points of each callout can be moved this way. The nodes should be highlighted
+when the mouse pointer is nearby. If needed the :kbd:`Shift` Key can be held during the movement.
+This will snap the point in a way that the angle between the two callout points in increment of 15 degrees.
 
 .. _labels_placement:
 
@@ -529,6 +539,9 @@ Next to placement modes, you can set:
     * |labelAnchorEnd| :guilabel:`End of Line`
     * or |labelAnchorCustom| :guilabel:`Custom...`.
 
+  * :guilabel:`Clipping`: Determines how the label placement on a line is calculated.
+    By default only the visible extent of the line is used but the whole extent
+    can be used to have more consistent results.
   * :guilabel:`Placement Behavior`: use :guilabel:`Preferred Placement Hint`
     to treat the label anchor only as a hint for the label placement.
     By choosing :guilabel:`Strict`, labels are placed exactly on the label
@@ -604,6 +617,38 @@ Common placement settings
 .........................
 
 Some label placement settings are available for all layer geometry types:
+
+Geometry Generator
+^^^^^^^^^^^^^^^^^^
+
+The :guilabel:`Geometry Generator` section allows a user to alter the underlying
+geometry used to place and render the label, by using :ref:`expressions <vector_expressions>`.
+This can be useful to perform displacement of the geometry dynamically
+or to convert it to another geometry (type).
+
+In order to use the geometry generator:
+
+#. Check the |checkbox| : guilabel:`Geometry generator` option
+#. Enter the expression generating the geometry to rely on
+#. If relevant, select the geometry type of the expression output:
+   the label geometry-based settings such as placement or rendering
+   are updated to match the new geometry type capabilities.
+
+Some use cases include:
+
+* Use a geometry which is saved in another field "label_position"
+* Use the :ref:`generated geometry <geometry_generator_symbol>` from the symbology
+  also for labeling
+* Use the @map_scale variable to calculate distances / sizes be zoom level independent.
+* Combined with the curved placement mode, creates a circular label around a point feature::
+
+     exterior_ring(make_circle($geometry, 20))
+* Add a label at the start and the end of a line feature::
+
+    collect_geometries( start_point($geometry), end_point($geometry) )
+* Rely on a smoothed line of a river to get more room for label placement::
+
+    smooth( $geometry, iterations:=30, offset:=0.25, min_length:=10 )
 
 Data Defined
 ^^^^^^^^^^^^
@@ -783,6 +828,8 @@ Under :guilabel:`Feature options`:
 .. |labelplacement| image:: /static/common/labelplacement.png
    :width: 1.5em
 .. |labelshadow| image:: /static/common/labelshadow.png
+   :width: 1.5em
+.. |moveLabel| image:: /static/common/mActionMoveLabel.png
    :width: 1.5em
 .. |paintEffects| image:: /static/common/mIconPaintEffects.png
    :width: 1.5em
