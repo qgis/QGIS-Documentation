@@ -1,24 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
-# Kwon.Yongchan <ruvyn@naver.com>, 2020
+# Harrissou Sant-anna, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:27+0000\n"
-"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
+"POT-Creation-Date: 2021-02-17 02:06+0000\n"
+"PO-Revision-Date: 2020-12-24 12:04+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2021\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -329,18 +331,18 @@ msgstr ""
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:154
 msgid ""
-"the |checkbox| :guilabel:`Enable layer` option controls the symbol layer's "
-"visibility. Disabled symbol layers are not drawn when rendering the symbol "
-"but are saved in the symbol. Being able to hide symbol layers is convenient "
-"when looking for the best design of your symbol as you don't need to remove "
-"any for the testing. The data-defined override then makes it possible to "
-"hide or display different symbol layers based on expressions (using, for "
-"instance, feature attributes)."
+"the |checkbox| :guilabel:`Enable symbol layer` option controls the symbol "
+"layer's visibility. Disabled symbol layers are not drawn when rendering the "
+"symbol but are saved in the symbol. Being able to hide symbol layers is "
+"convenient when looking for the best design of your symbol as you don't need"
+" to remove any for the testing. The data-defined override then makes it "
+"possible to hide or display different symbol layers based on expressions "
+"(using, for instance, feature attributes)."
 msgstr ""
-"|checkbox| :guilabel:`Enable layer`: 이 옵션은 심볼 레이어의 가시성을 제어합니다. 심볼 레이어를 "
-"비활성화하면 심볼 렌더링 시 그리지 않지만 심볼 내에 저장합니다. 심볼 레이어를 숨길 수 있다는 사실은 사용자 심볼을 디자인하는 데 "
-"유용합니다. 디자인 도중 심볼 레이어를 제거하지 않아도 되기 때문입니다. 이때 데이터 정의 무시를 사용하면 (예를 들어 피처 속성을 "
-"이용한) 표현식을 기반으로 서로 다른 심볼 레이어들을 숨기거나 표시할 수 있습니다."
+"|checkbox| :guilabel:`Enable symbol layer`: 이 옵션은 심볼 레이어의 가시성을 제어합니다. 심볼 "
+"레이어를 비활성화하면 심볼 렌더링 시 그리지 않지만 심볼 내에 저장합니다. 심볼 레이어를 숨길 수 있다는 사실은 사용자 심볼을 디자인하는"
+" 데 유용합니다. 디자인 도중 심볼 레이어를 제거하지 않아도 되기 때문입니다. 이때 데이터 정의 무시를 사용하면 (예를 들어 피처 속성을"
+" 이용한) 표현식을 기반으로 서로 다른 심볼 레이어들을 숨기거나 표시할 수 있습니다."
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:160
 msgid ""
@@ -399,33 +401,70 @@ msgstr ""
 "부풀리기(shapeburst) 같은 모든 기존 QGIS 채우기 (및 획) 스타일을 사용할 수 있습니다."
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:196
-msgid "**Font marker**: use installed fonts as marker symbols"
-msgstr "**글꼴 마커**: 설치된 폰트를 마커 심볼로 사용합니다."
+msgid ""
+"**Font marker**: similar to the simple marker symbol layer, except that it "
+"uses installed fonts to render the marker. Its additional properties are:"
+msgstr ""
+"**글꼴 마커(font marker)**: 단순 마커 심볼 레이어와 비슷하지만, 마커를 렌더링하는 데 설치된 글꼴을 이용한다는 점이 "
+"다릅니다. 이 마커의 추가적인 속성은 다음과 같습니다:"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:197
-#: ../../docs/user_manual/style_library/symbol_selector.rst:275
-#: ../../docs/user_manual/style_library/symbol_selector.rst:348
+#: ../../docs/user_manual/style_library/symbol_selector.rst:200
+msgid ":guilabel:`Font family`"
+msgstr ":guilabel:`Font family`: 글꼴 집합"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:201
+msgid ":guilabel:`Font style`"
+msgstr ":guilabel:`Font style`: 글꼴 스타일"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:202
+msgid ""
+":guilabel:`Character(s)`, representing the text to display as symbol. They "
+"can be typed in or selected from the font characters collection widget and "
+"you can live :guilabel:`Preview` them with the selected settings."
+msgstr ""
+":guilabel:`Character(s)`: 심볼로서 표시될 텍스트를 나타냅니다. 텍스트를 직접 입력하거나, 글꼴 문자 집합 위젯에서 "
+"텍스트 문자를 선택할 수 있습니다. 또한 :guilabel:`Preview` 에서 텍스트 문자를 선택한 설정대로 실시간 미리보기할 수도 "
+"있습니다."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:206
+#: ../../docs/user_manual/style_library/symbol_selector.rst:314
+#: ../../docs/user_manual/style_library/symbol_selector.rst:397
 msgid "**Geometry generator** (see :ref:`geometry_generator_symbol`)"
 msgstr "**도형 생성기(geometry generator)** (:ref:`geometry_generator_symbol` 참조)"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:201
+#: ../../docs/user_manual/style_library/symbol_selector.rst:210
+msgid ""
+"**Mask**: its sub-symbol defines a mask shape whose color property will be "
+"ignored and only the opacity will be used. This is convenient when the "
+"marker symbol overlaps with labels or other symbols whose colors are close, "
+"making it hard to decipher. More details at :ref:`vector_mask_menu`."
+msgstr ""
+"**마스크(mask)**: 마스크 심볼의 하위 심볼이 마스크 형태를 정의합니다. 마스크 심볼의 색상 속성은 무시되며, 투명도만 적용될 "
+"것입니다. 마스크 심볼이 색상이 고정된 라벨 또는 다른 심볼과 겹치는 경우 유용한 습성입니다. 이렇지 않으면 겹치는 라벨 또는 심볼을 "
+"읽기 어렵기 때문입니다. 더 자세한 내용은 :ref:`vector_mask_menu` 을 참조하세요."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:217
 msgid ""
 "**Raster image marker**: use an image (:file:`PNG`, :file:`JPG`, :file:`BMP`"
 " ...) as marker symbol. The image can be a file on the disk, a remote URL or"
 " embedded in the style database (:ref:`more details <svg_paths>`). Width and"
 " height of the image can be set independently or using the |lockedGray| "
-":sup:`Lock aspect ratio`."
+":sup:`Lock aspect ratio`. The size can be set using any of the :ref:`common "
+"units <unit_selector>` or as a percentage of the image's original size "
+"(scaled by the width)."
 msgstr ""
 "**래스터 이미지 마커**: 이미지(:file:`PNG`, :file:`JPG`, :file:`BMP` 등등)를 마커 심볼로 사용합니다."
 " 이때 이미지는 디스크 상의 파일일 수도 있고, 원격 URL일 수도 있으며, 스타일 데이터베이스에 (자세한 내용은 :ref:`여기를 "
 "<svg_paths>` 참조하세요) 내장되어 있을 수도 있습니다. 이미지의 너비와 높이를 독립적으로 설정할 수도 있고, "
-"|lockedGray| :sup:`Lock aspect ratio` 버튼으로 고정할 수도 있습니다."
+"|lockedGray| :sup:`Lock aspect ratio` 버튼으로 고정할 수도 있습니다. :ref:`공통 단위 "
+"<unit_selector>` 가운데 하나를 사용하거나, 이미지의 원본 크기의 (너비의) 백분율을 사용해서 이미지 크기를 설정할 수 "
+"있습니다."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:206
+#: ../../docs/user_manual/style_library/symbol_selector.rst:224
 msgid "**Vector Field marker** (see :ref:`vector_field_marker`)"
 msgstr "**벡터장 마커(vector field marker)** (:ref:`vector_field_marker` 참조)"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:210
+#: ../../docs/user_manual/style_library/symbol_selector.rst:228
 msgid ""
 "**SVG marker**: provides you with images from your SVG paths (set in "
 ":menuselection:`Settings --> Options... --> System` menu) to render as "
@@ -440,11 +479,11 @@ msgstr ""
 "조정할 수 있습니다. 이때 이미지는 디스크 상의 파일일 수도 있고, 원격 URL일 수도 있으며, 스타일 데이터베이스에 (자세한 내용은 "
 ":ref:`여기를 <svg_paths>` 참조하세요) 내장되어 있을 수도 있습니다."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:217
+#: ../../docs/user_manual/style_library/symbol_selector.rst:235
 msgid "SVG version requirements"
 msgstr "SVG 버전 요구사항"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:219
+#: ../../docs/user_manual/style_library/symbol_selector.rst:237
 msgid ""
 "QGIS renders SVG files that follow the `SVG Tiny 1.2 profile "
 "<https://www.w3.org/TR/SVGMobile12/>`_, intended for implementation on a "
@@ -456,17 +495,17 @@ msgstr ""
 "파일을 렌더링합니다. 이 프로파일은 휴대폰, PDA, 노트북, 데스크탑컴퓨터를 아우르는 광범위한 기기에서 실행되도록 설계되어 있기 "
 "때문에, SVG의 성능을 확장하기 위한 새 피처들과 함께 SVG 1.1 전체에 포함된 피처들의 서브셋을 포함하고 있습니다."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:225
+#: ../../docs/user_manual/style_library/symbol_selector.rst:243
 msgid ""
 "Some features not included in these specifications might not be rendered "
 "correctly in QGIS."
 msgstr "이 사양에 포함되지 않은 일부 피처는 QGIS에서 정확하게 렌더링되지 않을 수도 있습니다."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:228
+#: ../../docs/user_manual/style_library/symbol_selector.rst:246
 msgid "Enable SVG marker symbol customization"
 msgstr "SVG 마커 심볼 사용자 지정 활성화"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:230
+#: ../../docs/user_manual/style_library/symbol_selector.rst:248
 msgid ""
 "To have the possibility to change the colors of a :guilabel:`SVG marker`, "
 "you have to add the placeholders ``param(fill)`` for fill color, "
@@ -478,26 +517,26 @@ msgstr ""
 "``param(outline)`` 및 획(stroke)의 너비 용 ``param(outline-width)`` "
 "자리표시자(placeholder)를 추가해야 합니다. 이 자리표시자들은 다음과 같이 기본값 앞에 선택적으로 삽입할 수 있습니다:"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:246
+#: ../../docs/user_manual/style_library/symbol_selector.rst:264
 msgid "Line Symbols"
 msgstr "라인 심볼"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:248
+#: ../../docs/user_manual/style_library/symbol_selector.rst:266
 msgid ""
-"Appropriate for line geometry features, line symbols have following symbol "
-"layer types:"
+"Appropriate for line geometry features, line symbols have the following "
+"symbol layer types:"
 msgstr ""
 "라인 도형 피처에 어울리는 라인 심볼은 다음과 같은 여러 :guilabel:`Symbol layer types` 를 가지고 있습니다:"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:251
+#: ../../docs/user_manual/style_library/symbol_selector.rst:271
 msgid "**Simple line** (default): available settings are:"
 msgstr "**단순 라인** (기본값): 다음 옵션을 설정할 수 있습니다:"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:258
+#: ../../docs/user_manual/style_library/symbol_selector.rst:278
 msgid "Designing a Simple Line Symbol"
 msgstr "단순 라인 심볼 디자인하기"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:260
+#: ../../docs/user_manual/style_library/symbol_selector.rst:280
 msgid ""
 "The simple line symbol layer type has many of the same properties as the "
 ":ref:`simple marker symbol <simple_marker_symbol>`, and in addition:"
@@ -505,11 +544,11 @@ msgstr ""
 "단순 라인 심볼 레이어 유형의 속성은 많은 부분 :ref:`단순 마커 심볼 <simple_marker_symbol>` 과 동일하며, "
 "추가로:"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:263
+#: ../../docs/user_manual/style_library/symbol_selector.rst:283
 msgid ":guilabel:`Cap style`"
 msgstr ":guilabel:`Cap style`: 라인의 끝을 어떻게 그릴지 설정합니다."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:264
+#: ../../docs/user_manual/style_library/symbol_selector.rst:284
 msgid ""
 "|checkbox| :guilabel:`Use custom dash pattern`: overrides the "
 ":guilabel:`Stroke style` setting with a custom dash."
@@ -517,27 +556,89 @@ msgstr ""
 "|checkbox| :guilabel:`Use custom dash pattern`: :guilabel:`Stroke style` 설정을"
 " 무시하고 사용자 지정 점선 패턴을 사용합니다."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:269
+#: ../../docs/user_manual/style_library/symbol_selector.rst:286
+msgid ""
+"|checkbox| :guilabel:`Align dash pattern to line length`: the dash pattern "
+"length will be adjusted so that the line will end with a complete dash "
+"element, instead of a gap."
+msgstr ""
+"|checkbox| :guilabel:`Align dash pattern to line length`: 라인의 끝이 점선 패턴의 틈이 "
+"아니라 완전한 점선 요소로 끝나도록 점선 패턴 길이를 조정합니다."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:289
+msgid ""
+"|checkbox| :guilabel:`Tweak dash pattern at sharp corners`: dynamically "
+"adjusts the dash pattern placement so that sharp corners are represented by "
+"a full dash element coming into and out of the sharp corner. Dependent on "
+":guilabel:`Align dash pattern to line length`."
+msgstr ""
+"|checkbox| :guilabel:`Tweak dash pattern at sharp corners`: 완전한 점선 요소가 뾰족한 "
+"모서리에 걸치도록 -- 뾰족한 모서리가 드러나도록 -- 점선 패턴의 배치를 동적으로 조정합니다. 이 옵션은 :guilabel:`Align"
+" dash pattern to line length` 옵션을 체크한 상태에서만 동작합니다."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:293
+msgid "|checkbox| :guilabel:`Draw line only inside polygon`"
+msgstr ""
+"|checkbox| :guilabel:`Draw line only inside polygon`: 이 옵션을 활성화하면 폴리곤 내부에만 "
+"라인을 그립니다."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:297
 msgid ""
 "**Arrow**: draws lines as curved (or not) arrows with a single or a double "
-"head with configurable width, length and thickness. To create a curved arrow"
-" the line feature must have at least three vertices. It also uses a "
-":ref:`fill symbol <vector_fill_symbols>` such as gradients or shapeburst to "
-"render the arrow body. Combined with the geometry generator, this type of "
-"layer symbol helps you representing flow maps."
+"head with configurable (and data-defined):"
 msgstr ""
-"**화살표**: 환경 설정할 수 있는 너비, 길이 및 두께를 가진, 한쪽 혹은 양쪽에 화살 표시가 있는 만곡(또는 직선) 화살표로 라인을"
-" 그립니다. 만곡 화살표를 생성하려면 라인 피처가 꼭지점을 적어도 3 개 이상 보유하고 있어야 합니다. 또 화살표 본체를 렌더링하는 데 "
-"그레이디언트나 부풀리기 같은 :ref:`채우기 심볼 <vector_fill_symbols>` 도 이용합니다. 도형 생성기와 결합하면, 이"
-" 심볼 레이어 유형으로 흐름도를 표현할 수 있습니다."
+"**화살표(arrow)**: 라인을 만곡 (또는 직선) 화살표로 그립니다. 라인의 한쪽 또는 양쪽에 화살촉 표시를 할 수 있는데, 다음과"
+" 같은 옵션(및 데이터 정의)으로 화살표를 환경 설정할 수 있습니다:"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:279
+#: ../../docs/user_manual/style_library/symbol_selector.rst:300
+msgid ":guilabel:`Head type`"
+msgstr ":guilabel:`Head type`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:301
+msgid ":guilabel:`Arrow type`"
+msgstr ":guilabel:`Arrow type`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:302
+msgid ":guilabel:`Arrow width`"
+msgstr ":guilabel:`Arrow width`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:303
+msgid ":guilabel:`Arrow width at start`"
+msgstr ":guilabel:`Arrow width at start`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:304
+msgid ":guilabel:`Head length`"
+msgstr ":guilabel:`Head length`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:305
+msgid ":guilabel:`Head thickness`"
+msgstr ":guilabel:`Head thickness`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:306
+msgid ":guilabel:`Offset`"
+msgstr ":guilabel:`Offset`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:308
+msgid ""
+"It is possible to create |checkbox| :guilabel:`Curved arrows` (the line "
+"feature must have at least three vertices) and |checkbox| :guilabel:`Repeat "
+"arrow on each segment`. It also uses a :ref:`fill symbol "
+"<vector_fill_symbols>` such as gradients or shapeburst to render the arrow "
+"body. Combined with the geometry generator, this type of layer symbol helps "
+"you representing flow maps."
+msgstr ""
+"(라인 피처가 적어도 꼭짓점 3개를 가지고 있어야만 하는) |checkbox| :guilabel:`Curved arrows` 만곡 "
+"화살표를 새 선분마다 |checkbox| :guilabel:`Repeat arrow on each segment` 반복해서 생성할 수 "
+"있습니다. 또 화살표 본체를 렌더링하는 데 그레이디언트나 부풀리기 같은 :ref:`채우기 심볼 <vector_fill_symbols>` "
+"도 이용합니다. 도형 생성기와 결합하면, 이 심볼 레이어 유형으로 흐름도를 표현할 수 있습니다."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:318
 msgid ""
 "**Marker line**: repeats a :ref:`marker symbol <vector_marker_symbols>` over"
 " the length of a line."
 msgstr "**마커 라인**: 라인의 길이만큼 :ref:`마커 심볼 <vector_marker_symbols>` 을 반복합니다."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:282
+#: ../../docs/user_manual/style_library/symbol_selector.rst:321
 msgid ""
 "The markers placement can be at a regular distance or based on the line "
 "geometry: first, last or each vertex, on the central point of the line or of"
@@ -546,19 +647,20 @@ msgstr ""
 "마커를 일정한 간격으로 배치할 수도 있고, 도형에 따라 처음, 마지막 또는 각 꼭짓점에, 라인의 중심점 아니면 각 선분의 중심점마다, "
 "혹은 만곡 포인트마다 배치할 수도 있습니다."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:285
+#: ../../docs/user_manual/style_library/symbol_selector.rst:324
 msgid "The markers placement can also be given an offset along the line"
 msgstr "마커를 라인을 따라 지정한 오프셋으로 배치할 수도 있습니다."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:286
+#: ../../docs/user_manual/style_library/symbol_selector.rst:325
 msgid ""
-"The |checkbox| :guilabel:`Rotate marker` option allows you to set whether "
-"each marker symbol should be oriented relative to the line direction or not."
+"The |checkbox| :guilabel:`Rotate marker to follow line direction` option "
+"sets whether each marker symbol should be oriented relative to the line "
+"direction or not."
 msgstr ""
-"|checkbox| :guilabel:`Rotate marker` 옵션을 통해 각 마커 심볼의 방향이 라인 방향을 따라야 하는지 아닌지 "
-"설정할 수 있습니다."
+"|checkbox| :guilabel:`Rotate marker to follow line direction` 옵션을 통해 각 마커 "
+"심볼의 방향이 라인 방향을 따라야 하는지 아닌지 설정합니다."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:289
+#: ../../docs/user_manual/style_library/symbol_selector.rst:329
 msgid ""
 "Because a line is often a succession of segments of different directions, "
 "the rotation of the marker is calculated by averaging over a specified "
@@ -575,11 +677,11 @@ msgstr ""
 " 벗어난 국지적 편차를 평탄하게 만드는 (또는 제거하는) 효과를 볼 수 있습니다. 즉 마커 라인 심볼의 시각적 방향이 매우 보기 좋게 "
 "됩니다."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:298
+#: ../../docs/user_manual/style_library/symbol_selector.rst:338
 msgid "The marker line can also be offset from the line itself."
 msgstr "마커 라인을 라인 자체로부터 오프셋만큼 떨어지게 할 수도 있습니다."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:302
+#: ../../docs/user_manual/style_library/symbol_selector.rst:342
 msgid ""
 "**Hashed line**: repeats a line segment (a hash) over the length of a line "
 "symbol, with a line sub-symbol used to render each individual segment. In "
@@ -591,72 +693,99 @@ msgstr ""
 " 심볼을 사용합니다. 다시 말해, 해시 라인은 마커 심볼을 선분으로 대체한 마커 라인이라는 뜻입니다. 따라서 해시 라인은 마커 라인 "
 "심볼과 :ref:`동일한 속성 <marker_line_symbol>` 을 다음 속성과 함께 가지고 있습니다:"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:309
+#: ../../docs/user_manual/style_library/symbol_selector.rst:349
 msgid ":guilabel:`Hash length`"
 msgstr ":guilabel:`Hash length`: 해시의 길이"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:310
+#: ../../docs/user_manual/style_library/symbol_selector.rst:350
 msgid ":guilabel:`Hash rotation`"
 msgstr ":guilabel:`Hash rotation`: 해시의 기울기"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:318
+#: ../../docs/user_manual/style_library/symbol_selector.rst:351
+msgid "|checkbox| :guilabel:`Rotate hash to follow line direction`"
+msgstr ""
+"|checkbox| :guilabel:`Rotate hash to follow line direction`: 라인 방향을 따라 해시 "
+"기울이기"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:359
 msgid "Examples of hashed lines"
 msgstr "해시 라인의 예시"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:324
+#: ../../docs/user_manual/style_library/symbol_selector.rst:365
 msgid "Fill Symbols"
 msgstr "채우기 심볼"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:326
+#: ../../docs/user_manual/style_library/symbol_selector.rst:367
 msgid ""
 "Appropriate for polygon geometry features, fill symbols have also several "
 "symbol layer types:"
 msgstr ""
 "폴리곤 도형 피처에 어울리는 채우기 심볼은 다음과 같은 여러 :guilabel:`Symbol layer types` 를 가지고 있습니다:"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:329
+#: ../../docs/user_manual/style_library/symbol_selector.rst:370
 msgid "**Simple fill** (default): fills a polygon with a uniform color"
 msgstr "**단순 채우기** (기본값): 폴리곤을 단일 색상으로 채웁니다."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:336
+#: ../../docs/user_manual/style_library/symbol_selector.rst:377
 msgid "Designing a Simple Fill Symbol"
 msgstr "단순 채우기 심볼 디자인하기"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:338
+#: ../../docs/user_manual/style_library/symbol_selector.rst:379
 msgid ""
 "**Centroid fill**: places a :ref:`marker symbol <vector_marker_symbols>` at "
 "the centroid of the visible feature. The position of the marker may not be "
 "the real centroid of the feature, because calculation takes into account the"
 " polygon(s) clipped to area visible in map canvas for rendering and ignores "
-"holes. Use the geometry generator symbol if you want the exact centroid."
+"holes. Use the :ref:`geometry generator symbol <geometry_generator_symbol>` "
+"if you want the exact centroid."
 msgstr ""
 "**중심 채우기(centroid fill)**: 가시화된 피처의 중심(centroid)에 :ref:`마커 심볼 "
 "<vector_marker_symbols>` 을 배치합니다. 하지만 마커의 위치가 피처의 실제 중심이 아닐 수도 있습니다. 중심 계산 시"
 " 맵 캔버스에 보이는 영역으로 폴리곤(들)이 잘려서 렌더링되기도 하고 폴리곤 내부의 구멍을 무시하기도 하기 때문입니다. 정확한 중심에 "
-"마커 심볼을 배치하려면 도형 생성기 심볼을 이용하십시오."
+"마커 심볼을 배치하려면 :ref:`도형 생성기 심볼 <geometry_generator_symbol>` 을 이용하십시오."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:345
+#: ../../docs/user_manual/style_library/symbol_selector.rst:387
+msgid "You can:"
+msgstr "다음 작업을 할 수 있습니다:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:389
+msgid ":guilabel:`Force point inside polygon`"
+msgstr ":guilabel:`Force point inside polygon`: 폴리곤 내부에 포인트를 그리도록 강제할 수 있습니다."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:390
 msgid ""
-"The marker(s) can be placed on every part of a multi-part feature or only on"
-" its biggest part, and forced to be inside the polygon."
+":guilabel:`Draw point on every part of multi-part feature` or place the "
+"point only on its biggest part"
 msgstr ""
-"여러 부분으로 이루어진 피처의 모든 부분에 마커(들)를 그리거나 또는 가장 큰 부분에만 그릴 수도 있고, 폴리곤 내부에 그리도록 강제할 "
-"수도 있습니다."
+":guilabel:`Draw point on every part of multi-part feature`: 여러 부분으로 이루어진 피처의"
+" 모든 부분에 포인트를 그리거나, 또는 가장 큰 부분에만 그릴 수도 있습니다."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:349
+#: ../../docs/user_manual/style_library/symbol_selector.rst:392
+msgid ""
+"display the marker symbol(s) in whole or in part, keeping parts overlapping "
+"the current feature geometry (:guilabel:`Clip markers to polygon boundary`) "
+"or the geometry part the symbol belongs to (:guilabel:`Clip markers to "
+"current part boundary only`)"
+msgstr ""
+"현재 피처 도형과 겹치는 부분들을 유지하면서(:guilabel:`Clip markers to polygon boundary`) 또는 "
+"심볼이 속해 있는 도형 부분을 유지하면서(:guilabel:`Clip markers to current part boundary "
+"only`) 마커 심볼 전체 또는 일부를 표시할 수 있습니다."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:398
 msgid ""
 "**Gradient fill**: uses a radial, linear or conical gradient, based on "
 "either simple two color gradients or a predefined :ref:`gradient color ramp "
 "<color-ramp>` to fill polygons. The gradient can be rotated and applied on a"
 " single feature basis or across the whole map extent. Also start and end "
-"points can be set via coordinates or using the centroid (of feature or map);"
+"points can be set via coordinates or using the centroid (of feature or map)."
+" A data-defined offset can be defined;"
 msgstr ""
 "**그레이디언트 채우기**: 단순한 2색상 그레이디언트 또는 사전 정의된 :ref:`그레이디언트 색상표 <color-ramp>` 를 "
 "바탕으로 방사형, 선형 또는 원추형 그레이디언트를 사용해서 폴리곤을 채웁니다. 그레이디언트를 회전시킬 수도 있고, 단일 피처에 한해 또는"
 " 전체 맵 범위에 걸쳐 적용할 수도 있습니다. 또 좌표를 통해, 또는 (피처 또는 맵의) 중심을 이용해서 시작점 및 종단점을 설정할 수도"
-" 있습니다."
+" 있습니다. 데이터 정의 오프셋도 정의할 수 있습니다."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:354
+#: ../../docs/user_manual/style_library/symbol_selector.rst:404
 msgid ""
 "**Line pattern fill**: fills the polygon with a hatching pattern of "
 ":ref:`line symbol layer <vector_line_symbols>`. You can set a rotation, the "
@@ -665,7 +794,7 @@ msgstr ""
 "**라인 패턴 채우기**: :ref:`라인 심볼 레이어 <vector_line_symbols>` 의 해치(hatch) 패턴으로 폴리곤을 "
 "채웁니다. 라인의 기울기, 라인 사이의 간격 및 피처 경계로부터의 오프셋을 설정할 수 있습니다. "
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:357
+#: ../../docs/user_manual/style_library/symbol_selector.rst:407
 msgid ""
 "**Point pattern fill**: fills the polygon with a hatching pattern of "
 ":ref:`marker symbol layer <vector_marker_symbols>`. You can set the distance"
@@ -675,24 +804,60 @@ msgstr ""
 "**포인트 패턴 채우기**: :ref:`마커 심볼 레이어 <vector_marker_symbols>` 의 해치(hatch) 패턴으로 "
 "폴리곤을 채웁니다. 마커들의 행 사이의 거리, 전치(轉置; displacement) 및 피처 경계로부터의 오프셋을 설정할 수 있습니다."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:361
+#: ../../docs/user_manual/style_library/symbol_selector.rst:411
+msgid ""
+"**Random marker fill**: fills the polygon with a :ref:`marker symbol "
+"<vector_marker_symbols>` placed at random locations within the polygon "
+"boundary. You can set:"
+msgstr ""
+"**랜덤 마커 채우기**: 폴리곤 경계선 안의 랜덤한 위치에 :ref:`마커 심볼 <vector_marker_symbols>` 을 "
+"배치해서 폴리곤을 채웁니다. 다음을 설정할 수 있습니다:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:415
+msgid ""
+"the number of marker symbols to render, either as an absolute count or as "
+"density-based (the fill density will remain the same on different scale / "
+"zoom levels)"
+msgstr ""
+"렌더링할 마커 심볼의 개수를 확실한 개수 또는 밀도 기반으로 (채우기 밀도는 서로 다른 축척 또는 확대/축소 수준에서도 동일할 것입니다)"
+" 설정할 수 있습니다."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:418
+msgid ""
+"an optional random number seed, to give consistent placement of markers "
+"whenever maps are refreshed (also allows random placement to play nice with "
+"QGIS server and tile-based rendering)"
+msgstr ""
+"맵이 새로고침될 때마다 변함없는 마커 배치를 보장하도록 시드(seed) 개수를 랜덤하게 설정할 수 있습니다. (이 옵션은 QGIS 서버 "
+"및 타일 기반 렌더링에서도 보기 좋도록 하는 랜덤한 배치도 허용합니다.)"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:421
+msgid ""
+"whether markers rendered near the edges of polygons should be clipped to the"
+" polygon boundary or not"
+msgstr "폴리곤 경계 가까이 렌더링된 마커를 폴리곤 경계선에 맞춰 잘라낼지 말지를 설정할 수 있습니다."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:424
 msgid ""
 "**Raster image fill**: fills the polygon with tiles from a raster image "
 "(:file:`PNG` :file:`JPG`, :file:`BMP` ...). The image can be a file on the "
 "disk, a remote URL or an embedded file encoded as a string (:ref:`more "
 "details <svg_paths>`). Options include (data defined) opacity, image width, "
-"coordinate mode (object or viewport), rotation and offset."
+"coordinate mode (object or viewport), rotation and offset. The image width "
+"can be set using any of the :ref:`common units <unit_selector>` or as a "
+"percentage of the original size."
 msgstr ""
 "**래스터 이미지 채우기**: 래스터 이미지(:file:`PNG` :file:`JPG`, :file:`BMP` 등등)의 타일로 폴리곤을 "
 "채웁니다. 이때 이미지는 디스크 상의 파일일 수도 있고, 원격 URL일 수도 있으며, 문자열로 인코딩된 파일로 (자세한 내용은 "
 ":ref:`여기를 <svg_paths>` 참조하세요) 내장되어 있을 수도 있습니다. (데이터 정의된) 투명도, 이미지 너비, 좌표 "
-"모드(객체 또는 뷰), 기울기 및 오프셋 옵션을 설정할 수 있습니다."
+"모드(객체 또는 뷰), 기울기 및 오프셋 옵션을 설정할 수 있습니다. :ref:`공통 단위 <unit_selector>` 가운데 하나를 "
+"사용하거나, 이미지의 원본 크기의 백분율을 사용해서 이미지 너비를 설정할 수 있습니다."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:366
+#: ../../docs/user_manual/style_library/symbol_selector.rst:430
 msgid "**SVG fill**: fills the polygon using :ref:`SVG markers <svg_marker>`;"
 msgstr "**SVG 채우기**: :ref:`SVG 마커 <svg_marker>` 로 폴리곤을 채웁니다."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:367
+#: ../../docs/user_manual/style_library/symbol_selector.rst:431
 msgid ""
 "**Shapeburst fill**: buffers a gradient fill, where a gradient is drawn from"
 " the boundary of a polygon towards the polygon's centre. Configurable "
@@ -703,42 +868,50 @@ msgstr ""
 "그레이디언트를 그립니다. 경계선에서 음영을 그릴 거리, 색상표 사용 또는 단순한 2색상 그레이디언트 사용, (선택적인) 채우기의 번짐 "
 "효과, 그리고 오프셋 파라미터 등을 설정할 수 있습니다."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:372
+#: ../../docs/user_manual/style_library/symbol_selector.rst:436
 msgid ""
 "**Outline: Arrow**: uses a line :ref:`arrow symbol <arrow_symbol>` layer to "
-"represent the polygon boundary;"
+"represent the polygon boundary. The settings for the outline arrow are the "
+"same as for line symbols."
 msgstr ""
-"**외곽선: 화살표**: 라인 :ref:`화살표 심볼 <arrow_symbol>` 레이어를 이용해서 폴리곤 경계선을 표현합니다."
+"**외곽선: 화살표**: 라인 :ref:`화살표 심볼 <arrow_symbol>` 레이어를 이용해서 폴리곤 경계선을 표현합니다. 외곽선 "
+"화살표의 설정은 라인 심볼의 설정과 동일합니다."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:374
+#: ../../docs/user_manual/style_library/symbol_selector.rst:439
 msgid ""
 "**Outline: Hashed line**: uses a :ref:`hash line symbol "
 "<hashed_line_symbol>` layer to represent the polygon boundary (the interior "
-"rings, the exterior ring or all the rings)."
+"rings, the exterior ring or all the rings). The settings for the outline "
+"hashed line are the same as for line symbols."
 msgstr ""
 "**외곽선: 해시 라인**: :ref:`해시 라인 심볼 <hashed_line_symbol>` 레이어를 이용해서 폴리곤 경계선(내부 "
-"고리, 외부 고리 또는 모든 고리)을 표현합니다."
+"고리, 외부 고리 또는 모든 고리)을 표현합니다. 외곽선 해시 라인의 설정은 라인 심볼의 설정과 동일합니다."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:377
+#: ../../docs/user_manual/style_library/symbol_selector.rst:443
 msgid ""
-"**Outline: Marker line**: uses a marker line symbol layer to represent the "
-"polygon boundary (the interior rings, the exterior ring or all the rings)."
+"**Outline: Marker line**: uses a :ref:`marker line symbol "
+"<marker_line_symbol>` layer to represent the polygon boundary (the interior "
+"rings, the exterior ring or all the rings). The settings for the outline "
+"marker line are same as for line symbols."
 msgstr ""
-"**외곽선: 마커 라인**: 마커 라인 심볼 레이어를 이용해서 폴리곤 경계선(내부 고리, 외부 고리 또는 모든 고리)을 표현합니다."
+"**외곽선: 마커 라인**: :ref:`마커 라인 심볼 <marker_line_symbol>` 레이어를 이용해서 폴리곤 경계선(내부 "
+"고리, 외부 고리 또는 모든 고리)을 표현합니다. 외곽선 마커 라인의 설정은 라인 심볼의 설정과 동일합니다."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:379
+#: ../../docs/user_manual/style_library/symbol_selector.rst:447
 msgid ""
-"**Outline: simple line**: uses a simple line symbol layer to represent the "
-"polygon boundary (the interior rings, the exterior ring or all the rings). "
-"The :guilabel:`Draw line only inside polygon` option displays the polygon "
-"borders inside the polygon and can be useful to clearly represent adjacent "
-"polygon boundaries."
+"**Outline: simple line**: uses a :ref:`simple line symbol "
+"<simple_line_symbol>` layer to represent the polygon boundary (the interior "
+"rings, the exterior ring or all the rings). The settings for the outline "
+"simple line are the same as for line symbols. The :guilabel:`Draw line only "
+"inside polygon` option displays the polygon borders inside the polygon and "
+"can be useful to clearly represent adjacent polygon boundaries."
 msgstr ""
-"**외곽선: 단순 라인**: 단순 라인 심볼 레이어를 이용해서 폴리곤 경계선(내부 고리, 외부 고리 또는 모든 고리)을 표현합니다. "
-":guilabel:`Draw line only inside polygon` 옵션을 선택하면 폴리곤 안쪽에 폴리곤 경계선을 그리는데, 서로"
-" 인접한 폴리곤들의 경계선을 명확하게 표현하는 데 유용합니다."
+"**외곽선: 단순 라인**: :ref:`단순 라인 심볼 <simple_line_symbol>` 레이어를 이용해서 폴리곤 경계선(내부 "
+"고리, 외부 고리 또는 모든 고리)을 표현합니다. 외곽선 단순 라인의 설정은 라인 심볼의 설정과 동일합니다. :guilabel:`Draw"
+" line only inside polygon` 옵션을 선택하면 폴리곤 안쪽에 폴리곤 경계선을 그리는데, 서로 인접한 폴리곤들의 경계선을"
+" 명확하게 표현하는 데 유용합니다."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:387
+#: ../../docs/user_manual/style_library/symbol_selector.rst:457
 msgid ""
 "When geometry type is polygon, you can choose to disable the automatic "
 "clipping of lines/polygons to the canvas extent. In some cases this clipping"
@@ -748,11 +921,11 @@ msgstr ""
 "도형 유형이 폴리곤인 경우, 라인/폴리곤을 자동적으로 캔버스 범위에 맞춰 자르는 옵션을 비활성화할 수 있습니다. 어떤 경우 이 자르기 "
 "옵션이 심볼 스타일에 방해가 되기도 하기 때문입니다. (예를 들어 중심 채우기 유형은 중심이 언제나 실제 피처의 중심이어야만 합니다.)"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:395
+#: ../../docs/user_manual/style_library/symbol_selector.rst:465
 msgid "The Geometry Generator"
 msgstr "도형 생성기"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:397
+#: ../../docs/user_manual/style_library/symbol_selector.rst:467
 msgid ""
 "Available with all types of symbols, the :guilabel:`geometry generator` "
 "symbol layer allows to use :ref:`expression syntax <functions_list>` to "
@@ -764,15 +937,15 @@ msgstr ""
 " 도형을 생성하는 :ref:`표현식 문법 <functions_list>` 을 사용할 수 있습니다. 산출 도형은 원본 도형 유형과 일치할 "
 "필요가 없고, 서로 다르게 수정된 여러 심볼 레이어들을 중첩해서 추가할 수 있습니다."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:403
+#: ../../docs/user_manual/style_library/symbol_selector.rst:473
 msgid "Some examples:"
 msgstr "다음은 몇몇 예시입니다:"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:433
+#: ../../docs/user_manual/style_library/symbol_selector.rst:503
 msgid "The Vector Field Marker"
 msgstr "벡터장 마커"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:435
+#: ../../docs/user_manual/style_library/symbol_selector.rst:505
 msgid ""
 "The vector field marker is used to display vector field data such as earth "
 "deformation, tidal flows, and the like. It displays the vectors as lines "
@@ -784,17 +957,17 @@ msgstr ""
 "선택한 데이터 포인트의 속성에 따라 축척 및 방향이 정의된 라인으로 (화살표가 낫습니다) 벡터를 표시합니다. 포인트 데이터를 렌더링하는 "
 "데에만 이 마커를 사용할 수 있습니다. 라인 및 폴리곤 레이어를 이 심볼로 그릴 수는 없습니다."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:441
+#: ../../docs/user_manual/style_library/symbol_selector.rst:511
 msgid ""
 "The vector field is defined by attributes in the data, which can represent "
 "the field either by:"
 msgstr "벡터장은 데이터의 속성으로 정의되는데, 다음 방법 가운데 하나로 벡터장을 표현할 수 있습니다:"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:444
+#: ../../docs/user_manual/style_library/symbol_selector.rst:514
 msgid "**cartesian** components (``x`` and ``y`` components of the field)"
 msgstr "**데카르트** 요소 (벡터장의 ``x`` 및 ``y`` 요소)"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:445
+#: ../../docs/user_manual/style_library/symbol_selector.rst:515
 msgid ""
 "or **polar** coordinates: in this case, attributes define ``Length`` and "
 "``Angle``. The angle may be measured either clockwise from north, or "
@@ -803,7 +976,7 @@ msgstr ""
 "**극(polar)** 좌표: 이 경우, 속성이 ``Length`` 와 ``Angle`` 을 정의합니다. 각도는 북쪽에서 시계 방향으로 "
 "또는 동쪽에서 반시계 방향으로 측정될 수도 있고, 도 단위 또는 라디안 단위일 수도 있습니다."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:448
+#: ../../docs/user_manual/style_library/symbol_selector.rst:518
 msgid ""
 "or as **height only** data, which displays a vertical arrow scaled using an "
 "attribute of the data. This is appropriate for displaying the vertical "
@@ -812,7 +985,7 @@ msgstr ""
 "**높이만 있는(height only)** 데이터: 데이터의 속성을 이용해서 척도를 조정한 수직 화살표를 표시합니다. 예를 들어 지구 "
 "변형의 수직적 요소를 표시하는 데 적합합니다."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:452
+#: ../../docs/user_manual/style_library/symbol_selector.rst:522
 msgid ""
 "The magnitude of field can be scaled up or down to an appropriate size for "
 "viewing the field."
