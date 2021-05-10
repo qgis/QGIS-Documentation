@@ -1182,6 +1182,14 @@ copy or paste layer properties (style, scale, CRS...).
      - :kbd:`F6`
      - :guilabel:`Attributes`
      - :ref:`sec_attribute_table`
+   * - |openTableSelected| :guilabel:`Open Attribute Table (selected items)`
+     - :kbd:`Shift+F6`
+     - :guilabel:`Attributes`
+     - :ref:`sec_attribute_table`
+   * - |openTableVisible| :guilabel:`Open Attribute Table (visible items)`
+     - :kbd:`Ctrl+F6`
+     - :guilabel:`Attributes`
+     - :ref:`sec_attribute_table`
    * - |toggleEditing| :guilabel:`Toggle Editing`
      -
      - :guilabel:`Digitizing`
@@ -2945,6 +2953,10 @@ Click the icon to open the Plugin Manager dialog.
 .. |offsetPointSymbols| image:: /static/common/mActionOffsetPointSymbols.png
    :width: 1.5em
 .. |openTable| image:: /static/common/mActionOpenTable.png
+   :width: 1.5em
+.. |openTableSelected| image:: /static/common/mActionOpenTableSelected.png
+   :width: 1.5em
+.. |openTableVisible| image:: /static/common/mActionOpenTableVisible.png
    :width: 1.5em
 .. |options| image:: /static/common/mActionOptions.png
    :width: 1em

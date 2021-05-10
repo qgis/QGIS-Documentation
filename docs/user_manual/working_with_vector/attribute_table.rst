@@ -318,10 +318,14 @@ only these records in the table. This can be easily done using the
 :guilabel:`Show Selected Features` item from the drop-down list at the bottom
 left of the attribute table dialog. This list offers the following filters:
 
-* :guilabel:`Show All Features`
-* :guilabel:`Show Selected Features`
-* :guilabel:`Show Features visible on map`
-* :guilabel:`Show Edited and New Features`
+* |openTable| :guilabel:`Show All Features`
+* |openTableSelected| :guilabel:`Show Selected Features` - same as using
+  :guilabel:`Open Attribute Table (Selected Features)` from the :guilabel:`Layer`
+  menu or the :guilabel:`Attributes Toolbar` or pressing :kbd:`Shift+F6`
+* |openTableVisible| :guilabel:`Show Features visible on map` - same as using
+  :guilabel:`Open Attribute Table (Visible Features)` from the :guilabel:`Layer`
+  menu or the :guilabel:`Attributes Toolbar` or pressing :kbd:`Ctrl+F6`
+* |openTableEdited| :guilabel:`Show Edited and New Features`
 * :guilabel:`Field Filter` - allows the user to filter based on value of a field:
   choose a column from a list, type a value and press :kbd:`Enter` to filter.
   Then, only the matching features are shown in the attribute table.
@@ -1059,6 +1063,12 @@ table.
 .. |newTableRow| image:: /static/common/mActionNewTableRow.png
    :width: 1.5em
 .. |openTable| image:: /static/common/mActionOpenTable.png
+   :width: 1.5em
+.. |openTableEdited| image:: /static/common/mActionOpenTableEdited.png
+   :width: 1.5em
+.. |openTableSelected| image:: /static/common/mActionOpenTableSelected.png
+   :width: 1.5em
+.. |openTableVisible| image:: /static/common/mActionOpenTableVisible.png
    :width: 1.5em
 .. |panToSelected| image:: /static/common/mActionPanToSelected.png
    :width: 1.5em
