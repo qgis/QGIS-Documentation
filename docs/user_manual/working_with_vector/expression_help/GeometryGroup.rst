@@ -1891,7 +1891,9 @@ Orders the parts of a MultiGeometry by a given criteria
    :widths: 15 85
 
    * - Syntax
-     - order_parts(geometry, orderby, ascending)
+     - order_parts(geometry, orderby, [ascending=true])
+
+       [] marks optional arguments
    * - Arguments
      - * **geometry** - a multi-type geometry
        * **orderby** - an expression string defining the order criteria
