@@ -512,7 +512,7 @@ Index operator. Returns an element from an array or map value.
    :widths: 15 85
 
    * - Syntax
-     - [] index
+     - [index]
    * - Arguments
      - * **index** - array index or map key value
    * - Examples

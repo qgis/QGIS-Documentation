@@ -110,7 +110,9 @@ def format_variant(function_dict, f_name):
     syntax = f'   * - Syntax\n     - '
     if len(arg_syntax_list) > 0:
         if 'type' in function_dict and function_dict['type'] == 'operator':
-            if len(arg_syntax_list) == 1:
+            if f_name =='[]':
+                syntax += f'[{arg_syntax_list[0]}]\n'
+            elif len(arg_syntax_list) == 1:
                 syntax += f'{f_name} {arg_syntax_list[0]}\n'
             elif len(arg_syntax_list) == 2:
                 syntax += f'{arg_syntax_list[0]} {f_name} {arg_syntax_list[1]}\n'
