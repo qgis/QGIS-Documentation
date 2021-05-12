@@ -13,14 +13,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-12 10:14+0000\n"
+"POT-Creation-Date: 2021-05-12 02:37+0000\n"
 "PO-Revision-Date: 2020-12-24 11:59+0000\n"
 "Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2021\n"
 "Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.9.1\n"
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -136,6 +136,10 @@ msgstr ""
 "Apri :menuselection:`Impostazioni -->` |options| :menuselection:`Opzioni... "
 "--> SR`"
 
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:415
+msgid "options"
+msgstr "options"
+
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:71
 msgid "The CRS tab in the QGIS Options Dialog"
 msgstr "Scheda SR nella finestra di dialogo opzioni QGIS "
@@ -171,6 +175,14 @@ msgstr ""
 "terrestri, i.e. lo stesso comportamento di tutti i livelli quando un "
 "progetto è impostato per non avere SR. <project_crs>`."
 
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:419
+msgid "radioButtonOn"
+msgstr "radioButtonOn"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:413
+msgid "indicatorNoCRS"
+msgstr "indicatorNoCRS"
+
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:85
 msgid ""
 "|radioButtonOff| :guilabel:`Prompt for CRS`: it will prompt you to manually "
@@ -186,6 +198,10 @@ msgstr ""
 "Talvolta, i medadata associati descrivono il corretto SR di un layer, in "
 "altri casi avrai bisogno di contattare l'autore del data per determinare il "
 "corretto SR da associare."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:417
+msgid "radioButtonOff"
+msgstr "radioButtonOff"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:91
 msgid "|radioButtonOff| :guilabel:`Use project CRS`"
@@ -358,6 +374,10 @@ msgstr ""
 "(basato sulle sue coordinate grezze o quando si usa QGIS per usi non "
 "terrestri come mappe di giochi di ruolo, mappatura di edifici o roba simile."
 " In questo caso:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:429
+msgid "unchecked"
+msgstr "unchecked"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:172
 msgid ""
@@ -540,6 +560,10 @@ msgstr ""
 "database utente di QGIS. Oltre ai SR personalizzati, questo database "
 "contiene anche i segnalibri geospaziali e altri dati utente."
 
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:411
+msgid "customProjection"
+msgstr "customProjection"
+
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:249
 msgid ""
 "Defining a custom CRS in QGIS requires a good understanding of the PROJ "
@@ -588,6 +612,10 @@ msgstr "Per creare un nuovo SR:"
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:267
 msgid "Click the |signPlus| :sup:`Add new CRS` button"
 msgstr "Fai clic sul pulsante |signPlus| :sup:`Aggiungi nuovo SR`"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:425
+msgid "signPlus"
+msgstr "signPlus"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:268
 msgid "Enter a descriptive name"
@@ -764,6 +792,10 @@ msgstr ""
 "da questa finestra di dialogo, allora la scelta viene ricordata e applicata "
 "automaticamente a qualsiasi progetto QGIS appena creato."
 
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:409
+msgid "checkbox"
+msgstr "checkbox"
+
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:351
 msgid ""
 "or defining a list of appropriate datum transformations to use as defaults "
@@ -788,6 +820,10 @@ msgstr ""
 "Scegli il :guilabel:`SR sorgente` del layer, usando il menu a tendina o il "
 "widget |setProjection| :sup:`Seleziona SR`."
 
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:421
+msgid "setProjection"
+msgstr "setProjection"
+
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:359
 msgid "Provide the :guilabel:`Destination CRS` in the same way."
 msgstr "Definisci il :guilabel:`SR destinazione` allo stesso modo."
@@ -811,22 +847,24 @@ msgstr "Seleziona una trasformazione di default di datum"
 msgid ""
 "In some cases a transformation may not be available for use on your system. "
 "In this case, the transformation will still be shown (greyed) in this list "
-"but can not be picked until you download and install the required package of"
-" transformation support. Usually, a button is provided to download the "
-"corresponding grid."
+"but can not be picked until you install the required package of "
+"transformation support. Usually, a button is provided to download and "
+"install the corresponding grid, which is then stored under the :file:`proj` "
+"folder in the active :ref:`user profile <user_profiles>` directory."
 msgstr ""
 "In alcuni casi una trasformazione potrebbe non essere disponibile per l'uso "
 "sul tuo sistema. In questo caso, la trasformazione sarà ancora mostrata (in "
-"grigio) in questa lista ma non potrà essere scelta fino a quando non "
-"scaricherai e installerai il pacchetto di supporto alla trasformazione "
-"richiesto. Di solito, viene fornito un pulsante per scaricare la "
-"trasformazione corrispondente."
+"grigio) in questa lista, ma non può essere scelta fino a quando non si "
+"installa il pacchetto richiesto di supporto alla trasformazione. Di solito, "
+"viene fornito un pulsante per scaricare e installare la trasformazione "
+"corrispondente, che viene poi memorizzata sotto la cartella :file:`proj` nel"
+" profilo attivo :ref:`user profile <user_profiles>`."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:378
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:379
 msgid "Find your preferred transformation and select it"
 msgstr "Trova la tua trasformazione preferita e selezionala"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:379
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:380
 msgid ""
 "Set whether you |checkbox| :guilabel:`Allow fallback transforms if preferred"
 " operation fails`"
@@ -834,11 +872,11 @@ msgstr ""
 "Imposta se tu |checkbox| :guilabel: `Consenti trasformazioni alternative se "
 "l'operazione preferita dovesse fallire`."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:381
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:382
 msgid "Click :guilabel:`OK`."
 msgstr "Fai clic su :guilabel:`OK`."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:383
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:384
 msgid ""
 "A row is added to the table under :guilabel:`Default Datum Transformations` "
 "with information about the :guilabel:`Source CRS`, the "
@@ -851,7 +889,7 @@ msgstr ""
 "trasformazione e se :guilabel:`Consenti trasformazioni alternative` è "
 "abilitato."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:388
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:389
 msgid ""
 "From now, QGIS automatically uses the selected datum transformations for "
 "further transformation between these two CRSs until you remove it "
@@ -863,7 +901,15 @@ msgstr ""
 "non lo si rimuove (|signMinus|) dalla lista o si cambia la voce "
 "(|toggleEditing|) nella lista."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:393
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:423
+msgid "signMinus"
+msgstr "signMinus"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:427
+msgid "toggleEditing"
+msgstr "toggleEditing"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:394
 msgid ""
 "Datum transformations set in the :menuselection:`Settings -->` |options| "
 ":menuselection:`Options --> Transformations` tab will be inherited by all "
@@ -880,28 +926,3 @@ msgstr ""
 "trasformazioni specificato tramite la scheda :guilabel:`SR` della finestra "
 "di dialogo :guilabel:`Proprietà progetto` (:menuselection:`Progetto --> "
 "Proprietà...`). Queste impostazioni si applicano solo al progetto corrente."
-
-#~ msgid ""
-#~ "By default, QGIS starts each new project using a global default projection. "
-#~ "This default CRS is ``EPSG:4326`` (also known as \"WGS 84\"), and it is a "
-#~ "global latitude/longitude based reference system. This default CRS can be "
-#~ "changed via the :guilabel:`CRS for New Projects` setting in the "
-#~ ":guilabel:`CRS` tab under :menuselection:`Settings -->` |options| "
-#~ ":menuselection:`Options...` (see figure_projection_options_). There is an "
-#~ "option to automatically set the project's CRS to match the CRS of the first "
-#~ "layer loaded into a new project, or alternatively you can select a different"
-#~ " default CRS to use for all newly created projects. This choice will be "
-#~ "saved for use in subsequent QGIS sessions."
-#~ msgstr ""
-#~ "Per default, QGIS inizia ogni nuovo progetto usando una proiezione globale "
-#~ "di default. Questo SR di default è ``EPSG:4326`` (conosciuto anche come "
-#~ "\"WGS 84\"), ed è un sistema di riferimento globale basato su "
-#~ "latitudine/longitudine. Questo SR di default può essere cambiato tramite "
-#~ "l'impostazione :guilabel:`SR per i Progetti` nella scheda :guilabel:`SR` "
-#~ "sotto :menuselection: `Impostazioni -->` |opzioni| "
-#~ ":menuselection:`Opzioni...` (vedi figure_projection_options_). C'è "
-#~ "un'opzione per impostare automaticamente il SR del progetto in modo che "
-#~ "corrisponda al SR del primo layer caricato in un nuovo progetto, o in "
-#~ "alternativa puoi selezionare un diverso SR di default da usare per tutti i "
-#~ "nuovi progetti creati. Questa scelta sarà salvata per l'uso nelle sessioni "
-#~ "successive di QGIS."
