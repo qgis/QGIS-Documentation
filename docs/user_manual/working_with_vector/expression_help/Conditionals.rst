@@ -6,8 +6,6 @@
    in the resources/function_help/json/ folder in the
    qgis/QGIS repository.
 
-.. CASE_section
-
 .. _expression_function_Conditionals_CASE:
 
 CASE
@@ -45,8 +43,6 @@ END
 
 .. end_CASE_section
 
-.. coalesce_section
-
 .. _expression_function_Conditionals_coalesce:
 
 coalesce
@@ -71,8 +67,6 @@ This function can take any number of arguments.
 
 
 .. end_coalesce_section
-
-.. if_section
 
 .. _expression_function_Conditionals_if:
 
@@ -102,8 +96,6 @@ Tests a condition and returns a different result depending on the conditional ch
 
 .. end_if_section
 
-.. nullif_section
-
 .. _expression_function_Conditionals_nullif:
 
 nullif
@@ -127,8 +119,6 @@ Returns a NULL value if value1 equals value2; otherwise it returns value1. This 
 
 .. end_nullif_section
 
-.. regexp_match_section
-
 .. _expression_function_Conditionals_regexp_match:
 
 regexp_match
@@ -150,8 +140,6 @@ Return the first matching position matching a regular expression within an unico
 
 
 .. end_regexp_match_section
-
-.. try_section
 
 .. _expression_function_Conditionals_try:
 

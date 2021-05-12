@@ -6,8 +6,6 @@
    in the resources/function_help/json/ folder in the
    qgis/QGIS repository.
 
-.. env_section
-
 .. _expression_function_General_env:
 
 env
@@ -30,8 +28,6 @@ Gets an environment variable and returns its content as a string. If the variabl
 
 .. end_env_section
 
-.. eval_section
-
 .. _expression_function_General_eval:
 
 eval
@@ -53,8 +49,6 @@ Evaluates an expression which is passed in a string. Useful to expand dynamic pa
 
 .. end_eval_section
 
-.. eval_template_section
-
 .. _expression_function_General_eval_template:
 
 eval_template
@@ -75,8 +69,6 @@ Evaluates a template which is passed in a string. Useful to expand dynamic param
 
 .. end_eval_template_section
 
-.. is_layer_visible_section
-
 .. _expression_function_General_is_layer_visible:
 
 is_layer_visible
@@ -96,8 +88,6 @@ Returns true if a specified layer is visible.
 
 
 .. end_is_layer_visible_section
-
-.. mime_type_section
 
 .. _expression_function_General_mime_type:
 
@@ -120,8 +110,6 @@ Returns the mime type of the binary data.
 
 .. end_mime_type_section
 
-.. var_section
-
 .. _expression_function_General_var:
 
 var
@@ -141,8 +129,6 @@ Returns the value stored within a specified variable.
 
 
 .. end_var_section
-
-.. with_variable_section
 
 .. _expression_function_General_with_variable:
 

@@ -64,6 +64,11 @@ def sphynxify_html(text, base_indent=0):
 
     return text
 
+def escape_colliding_functions(f_name):
+    # Escape operators which are rst special characters
+
+    return ''.join(['\\', f_name]) if f_name in ['*', '-', '+', '||'] else f_name
+
 def format_function(function_dict):
     f_name = function_dict['name']
     if not 'variants' in function_dict:
@@ -222,11 +227,10 @@ for g_name in groups:
                 f"   qgis/QGIS repository.\n\n")
         for f_name in func_list:
             f_description = sphynxify_html(functions[f_name]['description'])
-            f.write(f'.. {f_name}_section\n\n'
-                    f".. _expression_function_{g_name.replace(' ','_')}_{f_name}:\n\n"
-                    f"{f_name}\n"
-                    f"{'.'* len(f_name)}\n\n"
-                    f"{f_description}\n"
+            f.write(f".. _expression_function_{g_name.replace(' ','_')}_{f_name}:\n\n"
+                    f"{escape_colliding_functions(f_name)}\n"
+                    f"{'.'* (len(escape_colliding_functions(f_name)))}\n\n"
+                     f"{f_description}\n"
                     f"\n")
             text = format_function(functions[f_name])
             f.write(text)

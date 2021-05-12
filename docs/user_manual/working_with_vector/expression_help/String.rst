@@ -6,8 +6,6 @@
    in the resources/function_help/json/ folder in the
    qgis/QGIS repository.
 
-.. ascii_section
-
 .. _expression_function_String_ascii:
 
 ascii
@@ -28,8 +26,6 @@ Returns the unicode code associated with the first character of a string.
 
 .. end_ascii_section
 
-.. char_section
-
 .. _expression_function_String_char:
 
 char
@@ -49,8 +45,6 @@ Returns the character associated with a unicode code.
 
 
 .. end_char_section
-
-.. concat_section
 
 .. _expression_function_String_concat:
 
@@ -75,8 +69,6 @@ Concatenates several strings to one. NULL values are converted to empty strings.
 
 .. end_concat_section
 
-.. format_section
-
 .. _expression_function_String_format:
 
 format
@@ -98,8 +90,6 @@ Format a string using supplied arguments.
 
 
 .. end_format_section
-
-.. format_date_section
 
 .. _expression_function_String_format_date:
 
@@ -168,8 +158,6 @@ Formats a date type or string into a custom string format. Uses Qt date/time for
 
 .. end_format_date_section
 
-.. format_number_section
-
 .. _expression_function_String_format_number:
 
 format_number
@@ -195,8 +183,6 @@ Returns a number formatted with the locale separator for thousands. Also truncat
 
 .. end_format_number_section
 
-.. left_section
-
 .. _expression_function_String_left:
 
 left
@@ -217,8 +203,6 @@ Returns a substring that contains the *n* leftmost characters of the string.
 
 
 .. end_left_section
-
-.. length_section
 
 .. _expression_function_String_length:
 
@@ -259,8 +243,6 @@ Calculate the length of a geometry line object. Calculations are always planimet
 
 .. end_length_section
 
-.. lower_section
-
 .. _expression_function_String_lower:
 
 lower
@@ -280,8 +262,6 @@ Converts a string to lower case letters.
 
 
 .. end_lower_section
-
-.. lpad_section
 
 .. _expression_function_String_lpad:
 
@@ -306,8 +286,6 @@ Returns a string padded on the left to the specified width, using a fill charact
 
 .. end_lpad_section
 
-.. regexp_match_section
-
 .. _expression_function_String_regexp_match:
 
 regexp_match
@@ -329,8 +307,6 @@ Return the first matching position matching a regular expression within an unico
 
 
 .. end_regexp_match_section
-
-.. regexp_replace_section
 
 .. _expression_function_String_regexp_replace:
 
@@ -356,8 +332,6 @@ Returns a string with the supplied regular expression replaced.
 
 .. end_regexp_replace_section
 
-.. regexp_substr_section
-
 .. _expression_function_String_regexp_substr:
 
 regexp_substr
@@ -378,8 +352,6 @@ Returns the portion of a string which matches a supplied regular expression.
 
 
 .. end_regexp_substr_section
-
-.. replace_section
 
 .. _expression_function_String_replace:
 
@@ -426,8 +398,6 @@ Returns a string with the supplied map keys replaced by paired values. Longer ma
 
 .. end_replace_section
 
-.. right_section
-
 .. _expression_function_String_right:
 
 right
@@ -448,8 +418,6 @@ Returns a substring that contains the *n* rightmost characters of the string.
 
 
 .. end_right_section
-
-.. rpad_section
 
 .. _expression_function_String_rpad:
 
@@ -474,8 +442,6 @@ Returns a string padded on the right to the specified width, using a fill charac
 
 .. end_rpad_section
 
-.. strpos_section
-
 .. _expression_function_String_strpos:
 
 strpos
@@ -497,8 +463,6 @@ Return the first matching position of a substring within another string, or 0 if
 
 
 .. end_strpos_section
-
-.. substr_section
 
 .. _expression_function_String_substr:
 
@@ -529,8 +493,6 @@ Returns a part of a string.
 
 .. end_substr_section
 
-.. title_section
-
 .. _expression_function_String_title:
 
 title
@@ -550,8 +512,6 @@ Converts all words of a string to title case (all words lower case with leading 
 
 
 .. end_title_section
-
-.. to_string_section
 
 .. _expression_function_String_to_string:
 
@@ -573,8 +533,6 @@ Converts a number to string.
 
 .. end_to_string_section
 
-.. trim_section
-
 .. _expression_function_String_trim:
 
 trim
@@ -595,8 +553,6 @@ Removes all leading and trailing whitespace (spaces, tabs, etc) from a string.
 
 .. end_trim_section
 
-.. upper_section
-
 .. _expression_function_String_upper:
 
 upper
@@ -616,8 +572,6 @@ Converts a string to upper case letters.
 
 
 .. end_upper_section
-
-.. wordwrap_section
 
 .. _expression_function_String_wordwrap:
 

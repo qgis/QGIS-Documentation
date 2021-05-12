@@ -6,8 +6,6 @@
    in the resources/function_help/json/ folder in the
    qgis/QGIS repository.
 
-.. abs_section
-
 .. _expression_function_Math_abs:
 
 abs
@@ -27,8 +25,6 @@ Returns the absolute value of a number.
 
 
 .. end_abs_section
-
-.. acos_section
 
 .. _expression_function_Math_acos:
 
@@ -50,8 +46,6 @@ Returns the inverse cosine of a value in radians.
 
 .. end_acos_section
 
-.. asin_section
-
 .. _expression_function_Math_asin:
 
 asin
@@ -71,8 +65,6 @@ Returns the inverse sine of a value in radians.
 
 
 .. end_asin_section
-
-.. atan_section
 
 .. _expression_function_Math_atan:
 
@@ -94,8 +86,6 @@ Returns the inverse tangent of a value in radians.
 
 .. end_atan_section
 
-.. atan2_section
-
 .. _expression_function_Math_atan2:
 
 atan2
@@ -116,8 +106,6 @@ Returns the inverse tangent of dy/dx by using the signs of the two arguments to 
 
 
 .. end_atan2_section
-
-.. azimuth_section
 
 .. _expression_function_Math_azimuth:
 
@@ -141,8 +129,6 @@ Returns the north-based azimuth as the angle in radians measured clockwise from 
 
 .. end_azimuth_section
 
-.. ceil_section
-
 .. _expression_function_Math_ceil:
 
 ceil
@@ -163,8 +149,6 @@ Rounds a number upwards.
 
 
 .. end_ceil_section
-
-.. clamp_section
 
 .. _expression_function_Math_clamp:
 
@@ -196,8 +180,6 @@ Restricts an input value to a specified range.
 
 .. end_clamp_section
 
-.. cos_section
-
 .. _expression_function_Math_cos:
 
 cos
@@ -217,8 +199,6 @@ Returns cosine of an angle.
 
 
 .. end_cos_section
-
-.. degrees_section
 
 .. _expression_function_Math_degrees:
 
@@ -241,8 +221,6 @@ Converts from radians to degrees.
 
 .. end_degrees_section
 
-.. exp_section
-
 .. _expression_function_Math_exp:
 
 exp
@@ -262,8 +240,6 @@ Returns exponential of an value.
 
 
 .. end_exp_section
-
-.. floor_section
 
 .. _expression_function_Math_floor:
 
@@ -285,8 +261,6 @@ Rounds a number downwards.
 
 
 .. end_floor_section
-
-.. inclination_section
 
 .. _expression_function_Math_inclination:
 
@@ -312,8 +286,6 @@ Returns the inclination measured from the zenith (0) to the nadir (180) on point
 
 .. end_inclination_section
 
-.. ln_section
-
 .. _expression_function_Math_ln:
 
 ln
@@ -334,8 +306,6 @@ Returns the natural logarithm of a value.
 
 
 .. end_ln_section
-
-.. log_section
 
 .. _expression_function_Math_log:
 
@@ -359,8 +329,6 @@ Returns the value of the logarithm of the passed value and base.
 
 .. end_log_section
 
-.. log10_section
-
 .. _expression_function_Math_log10:
 
 log10
@@ -381,8 +349,6 @@ Returns the value of the base 10 logarithm of the passed expression.
 
 
 .. end_log10_section
-
-.. max_section
 
 .. _expression_function_Math_max:
 
@@ -405,8 +371,6 @@ Returns the largest value in a set of values.
 
 .. end_max_section
 
-.. min_section
-
 .. _expression_function_Math_min:
 
 min
@@ -428,8 +392,6 @@ Returns the smallest value in a set of values.
 
 .. end_min_section
 
-.. pi_section
-
 .. _expression_function_Math_pi:
 
 pi
@@ -447,8 +409,6 @@ Returns value of pi for calculations.
 
 
 .. end_pi_section
-
-.. radians_section
 
 .. _expression_function_Math_radians:
 
@@ -470,8 +430,6 @@ Converts from degrees to radians.
 
 
 .. end_radians_section
-
-.. rand_section
 
 .. _expression_function_Math_rand:
 
@@ -497,8 +455,6 @@ Returns a random integer within the range specified by the minimum and maximum a
 
 .. end_rand_section
 
-.. randf_section
-
 .. _expression_function_Math_randf:
 
 randf
@@ -523,8 +479,6 @@ Returns a random float within the range specified by the minimum and maximum arg
 
 .. end_randf_section
 
-.. round_section
-
 .. _expression_function_Math_round:
 
 round
@@ -548,8 +502,6 @@ Rounds a number to number of decimal places.
 
 
 .. end_round_section
-
-.. scale_exp_section
 
 .. _expression_function_Math_scale_exp:
 
@@ -581,8 +533,6 @@ Transforms a given value from an input domain to an output range using an expone
 
 .. end_scale_exp_section
 
-.. scale_linear_section
-
 .. _expression_function_Math_scale_linear:
 
 scale_linear
@@ -613,8 +563,6 @@ Transforms a given value from an input domain to an output range using linear in
 
 .. end_scale_linear_section
 
-.. sin_section
-
 .. _expression_function_Math_sin:
 
 sin
@@ -635,8 +583,6 @@ Returns the sine of an angle.
 
 .. end_sin_section
 
-.. sqrt_section
-
 .. _expression_function_Math_sqrt:
 
 sqrt
@@ -656,8 +602,6 @@ Returns square root of a value.
 
 
 .. end_sqrt_section
-
-.. tan_section
 
 .. _expression_function_Math_tan:
 

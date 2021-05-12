@@ -6,8 +6,6 @@
    in the resources/function_help/json/ folder in the
    qgis/QGIS repository.
 
-.. NULL_section
-
 .. _expression_function_Fields_and_Values_NULL:
 
 NULL

@@ -6,8 +6,6 @@
    in the resources/function_help/json/ folder in the
    qgis/QGIS repository.
 
-.. parameter_section
-
 .. _expression_function_Processing_parameter:
 
 parameter

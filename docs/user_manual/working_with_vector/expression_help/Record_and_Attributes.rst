@@ -6,8 +6,6 @@
    in the resources/function_help/json/ folder in the
    qgis/QGIS repository.
 
-.. attribute_section
-
 .. _expression_function_Record_and_Attributes_attribute:
 
 attribute
@@ -48,8 +46,6 @@ Allows the target feature and attribute name to be specified.
 
 .. end_attribute_section
 
-.. attributes_section
-
 .. _expression_function_Record_and_Attributes_attributes:
 
 attributes
@@ -87,8 +83,6 @@ Allows the target feature to be specified.
 
 .. end_attributes_section
 
-.. $currentfeature_section
-
 .. _expression_function_Record_and_Attributes_$currentfeature:
 
 $currentfeature
@@ -106,8 +100,6 @@ Returns the current feature being evaluated. This can be used with the 'attribut
 
 
 .. end_$currentfeature_section
-
-.. display_expression_section
 
 .. _expression_function_Record_and_Attributes_display_expression:
 
@@ -166,8 +158,6 @@ If the function is called with both a layer and a feature, it will evaluate the 
 
 .. end_display_expression_section
 
-.. get_feature_section
-
 .. _expression_function_Record_and_Attributes_get_feature:
 
 get_feature
@@ -190,8 +180,6 @@ Returns the first feature of a layer matching a given attribute value.
 
 .. end_get_feature_section
 
-.. get_feature_by_id_section
-
 .. _expression_function_Record_and_Attributes_get_feature_by_id:
 
 get_feature_by_id
@@ -213,8 +201,6 @@ Returns the feature with an id on a layer.
 
 .. end_get_feature_by_id_section
 
-.. $id_section
-
 .. _expression_function_Record_and_Attributes_$id:
 
 $id
@@ -232,8 +218,6 @@ Returns the feature id of the current row.
 
 
 .. end_$id_section
-
-.. is_selected_section
 
 .. _expression_function_Record_and_Attributes_is_selected:
 
@@ -290,8 +274,6 @@ If the function is called with both a layer and a feature, it will return true i
 
 
 .. end_is_selected_section
-
-.. maptip_section
 
 .. _expression_function_Record_and_Attributes_maptip:
 
@@ -350,8 +332,6 @@ If the function is called with both a layer and a feature, it will evaluate the 
 
 .. end_maptip_section
 
-.. num_selected_section
-
 .. _expression_function_Record_and_Attributes_num_selected:
 
 num_selected
@@ -375,8 +355,6 @@ Returns the number of selected features on a given layer. By default works on th
 
 .. end_num_selected_section
 
-.. represent_value_section
-
 .. _expression_function_Record_and_Attributes_represent_value:
 
 represent_value
@@ -398,8 +376,6 @@ Returns the configured representation value for a field value. It depends on the
 
 
 .. end_represent_value_section
-
-.. sqlite_fetch_and_increment_section
 
 .. _expression_function_Record_and_Attributes_sqlite_fetch_and_increment:
 
@@ -454,8 +430,6 @@ When the database parameter is a layer and the layer is in transaction mode, the
 
 
 .. end_sqlite_fetch_and_increment_section
-
-.. uuid_section
 
 .. _expression_function_Record_and_Attributes_uuid:
 

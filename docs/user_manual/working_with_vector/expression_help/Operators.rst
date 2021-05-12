@@ -6,8 +6,6 @@
    in the resources/function_help/json/ folder in the
    qgis/QGIS repository.
 
-.. %_section
-
 .. _expression_function_Operators_%:
 
 %
@@ -30,12 +28,10 @@ Remainder of division
 
 .. end_%_section
 
-.. *_section
-
 .. _expression_function_Operators_*:
 
-*
-.
+\*
+..
 
 Multiplication of two values
 
@@ -54,12 +50,10 @@ Multiplication of two values
 
 .. end_*_section
 
-.. +_section
-
 .. _expression_function_Operators_+:
 
-+
-.
+\+
+..
 
 Addition of two values. If one of the values is NULL the result will be NULL.
 
@@ -80,12 +74,10 @@ Addition of two values. If one of the values is NULL the result will be NULL.
 
 .. end_+_section
 
-.. -_section
-
 .. _expression_function_Operators_-:
 
--
-.
+\-
+..
 
 Subtraction of two values. If one of the values is NULL the result will be NULL.
 
@@ -104,8 +96,6 @@ Subtraction of two values. If one of the values is NULL the result will be NULL.
 
 
 .. end_-_section
-
-.. /_section
 
 .. _expression_function_Operators_/:
 
@@ -128,8 +118,6 @@ Division of two values
 
 
 .. end_/_section
-
-.. <_section
 
 .. _expression_function_Operators_<:
 
@@ -154,8 +142,6 @@ Compares two values and evaluates to 1 if the left value is less than the right 
 
 .. end_<_section
 
-.. <=_section
-
 .. _expression_function_Operators_<=:
 
 <=
@@ -178,8 +164,6 @@ Compares two values and evaluates to 1 if the left value is less or equal than t
 
 
 .. end_<=_section
-
-.. <>_section
 
 .. _expression_function_Operators_<>:
 
@@ -205,8 +189,6 @@ Compares two values and evaluates to 1 if they are not equal.
 
 .. end_<>_section
 
-.. =_section
-
 .. _expression_function_Operators_=:
 
 =
@@ -231,8 +213,6 @@ Compares two values and evaluates to 1 if they are equal.
 
 .. end_=_section
 
-.. >_section
-
 .. _expression_function_Operators_>:
 
 >
@@ -255,8 +235,6 @@ Compares two values and evaluates to 1 if the left value is greater than the rig
 
 
 .. end_>_section
-
-.. >=_section
 
 .. _expression_function_Operators_>=:
 
@@ -281,8 +259,6 @@ Compares two values and evaluates to 1 if the left value is greater or equal tha
 
 .. end_>=_section
 
-.. AND_section
-
 .. _expression_function_Operators_AND:
 
 AND
@@ -306,8 +282,6 @@ Returns 1 when condition a and b are true.
 
 
 .. end_AND_section
-
-.. ILIKE_section
 
 .. _expression_function_Operators_ILIKE:
 
@@ -342,8 +316,6 @@ Returns 1 if the first parameter matches case-insensitive the supplied pattern. 
 
 .. end_ILIKE_section
 
-.. IN_section
-
 .. _expression_function_Operators_IN:
 
 IN
@@ -365,8 +337,6 @@ Returns 1 if value is found within a list of values.
 
 
 .. end_IN_section
-
-.. IS_section
 
 .. _expression_function_Operators_IS:
 
@@ -394,8 +364,6 @@ Returns 1 if a is the same as b.
 
 .. end_IS_section
 
-.. IS NOT_section
-
 .. _expression_function_Operators_IS NOT:
 
 IS NOT
@@ -418,8 +386,6 @@ Returns 1 if a is not the same as b.
 
 
 .. end_IS NOT_section
-
-.. LIKE_section
 
 .. _expression_function_Operators_LIKE:
 
@@ -451,8 +417,6 @@ Returns 1 if the first parameter matches the supplied pattern. Works with number
 
 .. end_LIKE_section
 
-.. NOT_section
-
 .. _expression_function_Operators_NOT:
 
 NOT
@@ -473,8 +437,6 @@ Negates a condition.
 
 
 .. end_NOT_section
-
-.. OR_section
 
 .. _expression_function_Operators_OR:
 
@@ -498,8 +460,6 @@ Returns 1 when condition a or b is true.
 
 
 .. end_OR_section
-
-.. []_section
 
 .. _expression_function_Operators_[]:
 
@@ -525,8 +485,6 @@ Index operator. Returns an element from an array or map value.
 
 .. end_[]_section
 
-.. ^_section
-
 .. _expression_function_Operators_^:
 
 ^
@@ -549,12 +507,10 @@ Power of two values.
 
 .. end_^_section
 
-.. ||_section
-
 .. _expression_function_Operators_||:
 
-||
-..
+\||
+...
 
 Joins two values together into a string.
 
@@ -578,8 +534,6 @@ If one of the values is NULL the result will be NULL. See the CONCAT function fo
 
 
 .. end_||_section
-
-.. ~_section
 
 .. _expression_function_Operators_~:
 

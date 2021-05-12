@@ -6,8 +6,6 @@
    in the resources/function_help/json/ folder in the
    qgis/QGIS repository.
 
-.. from_json_section
-
 .. _expression_function_Maps_from_json:
 
 from_json
@@ -29,8 +27,6 @@ Loads a JSON formatted string.
 
 .. end_from_json_section
 
-.. hstore_to_map_section
-
 .. _expression_function_Maps_hstore_to_map:
 
 hstore_to_map
@@ -50,8 +46,6 @@ Creates a map from a hstore-formatted string.
 
 
 .. end_hstore_to_map_section
-
-.. map_section
 
 .. _expression_function_Maps_map:
 
@@ -74,8 +68,6 @@ Returns a map containing all the keys and values passed as pair of parameters.
 
 .. end_map_section
 
-.. map_akeys_section
-
 .. _expression_function_Maps_map_akeys:
 
 map_akeys
@@ -95,8 +87,6 @@ Returns all the keys of a map as an array.
 
 
 .. end_map_akeys_section
-
-.. map_avals_section
 
 .. _expression_function_Maps_map_avals:
 
@@ -118,8 +108,6 @@ Returns all the values of a map as an array.
 
 .. end_map_avals_section
 
-.. map_concat_section
-
 .. _expression_function_Maps_map_concat:
 
 map_concat
@@ -139,8 +127,6 @@ Returns a map containing all the entries of the given maps. If two maps contain 
 
 
 .. end_map_concat_section
-
-.. map_delete_section
 
 .. _expression_function_Maps_map_delete:
 
@@ -163,8 +149,6 @@ Returns a map with the given key and its corresponding value deleted.
 
 .. end_map_delete_section
 
-.. map_exist_section
-
 .. _expression_function_Maps_map_exist:
 
 map_exist
@@ -185,8 +169,6 @@ Returns true if the given key exists in the map.
 
 
 .. end_map_exist_section
-
-.. map_get_section
 
 .. _expression_function_Maps_map_get:
 
@@ -209,8 +191,6 @@ Returns the value of a map, given its key. Returns NULL if the key does not exis
 
 
 .. end_map_get_section
-
-.. map_insert_section
 
 .. _expression_function_Maps_map_insert:
 
@@ -235,8 +215,6 @@ Returns a map with an added key/value. If the key already exists, its value is o
 
 .. end_map_insert_section
 
-.. map_to_hstore_section
-
 .. _expression_function_Maps_map_to_hstore:
 
 map_to_hstore
@@ -256,8 +234,6 @@ Merge map elements into a hstore-formatted string.
 
 
 .. end_map_to_hstore_section
-
-.. to_json_section
 
 .. _expression_function_Maps_to_json:
 

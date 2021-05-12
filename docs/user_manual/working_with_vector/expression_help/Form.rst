@@ -6,8 +6,6 @@
    in the resources/function_help/json/ folder in the
    qgis/QGIS repository.
 
-.. current_parent_value_section
-
 .. _expression_function_Form_current_parent_value:
 
 current_parent_value
@@ -27,8 +25,6 @@ Only usable in an embedded form context, this function returns the current, unsa
 
 
 .. end_current_parent_value_section
-
-.. current_value_section
 
 .. _expression_function_Form_current_value:
 

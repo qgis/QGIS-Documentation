@@ -6,8 +6,6 @@
    in the resources/function_help/json/ folder in the
    qgis/QGIS repository.
 
-.. item_variables_section
-
 .. _expression_function_Layout_item_variables:
 
 item_variables
@@ -27,8 +25,6 @@ Returns a map of variables from a layout item inside this print layout.
 
 
 .. end_item_variables_section
-
-.. map_credits_section
 
 .. _expression_function_Layout_map_credits:
 

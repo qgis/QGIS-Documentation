@@ -6,8 +6,6 @@
    in the resources/function_help/json/ folder in the
    qgis/QGIS repository.
 
-.. decode_uri_section
-
 .. _expression_function_Map_Layers_decode_uri:
 
 decode_uri
@@ -32,8 +30,6 @@ Takes a layer and decodes the uri of the underlying data provider. It depends on
 
 
 .. end_decode_uri_section
-
-.. layer_property_section
 
 .. _expression_function_Map_Layers_layer_property:
 

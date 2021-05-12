@@ -6,8 +6,6 @@
    in the resources/function_help/json/ folder in the
    qgis/QGIS repository.
 
-.. from_base64_section
-
 .. _expression_function_Conversions_from_base64:
 
 from_base64
@@ -27,8 +25,6 @@ Decodes a string in the Base64 encoding into a binary value.
 
 
 .. end_from_base64_section
-
-.. hash_section
 
 .. _expression_function_Conversions_hash:
 
@@ -64,8 +60,6 @@ Creates a hash from a string with a given method. One byte (8 bits) is represent
 
 .. end_hash_section
 
-.. md5_section
-
 .. _expression_function_Conversions_md5:
 
 md5
@@ -85,8 +79,6 @@ Creates a md5 hash from a string.
 
 
 .. end_md5_section
-
-.. sha256_section
 
 .. _expression_function_Conversions_sha256:
 
@@ -108,8 +100,6 @@ Creates a sha256 hash from a string.
 
 .. end_sha256_section
 
-.. to_base64_section
-
 .. _expression_function_Conversions_to_base64:
 
 to_base64
@@ -129,8 +119,6 @@ Encodes a binary value into a string, using the Base64 encoding.
 
 
 .. end_to_base64_section
-
-.. to_date_section
 
 .. _expression_function_Conversions_to_date:
 
@@ -158,8 +146,6 @@ Converts a string into a date object. An optional format string can be provided 
 
 .. end_to_date_section
 
-.. to_datetime_section
-
 .. _expression_function_Conversions_to_datetime:
 
 to_datetime
@@ -186,8 +172,6 @@ Converts a string into a datetime object. An optional format string can be provi
 
 .. end_to_datetime_section
 
-.. to_decimal_section
-
 .. _expression_function_Conversions_to_decimal:
 
 to_decimal
@@ -207,8 +191,6 @@ Converts a degree, minute, second coordinate to its decimal equivalent.
 
 
 .. end_to_decimal_section
-
-.. to_dm_section
 
 .. _expression_function_Conversions_to_dm:
 
@@ -237,8 +219,6 @@ Converts a coordinate to degree, minute.
 
 .. end_to_dm_section
 
-.. to_dms_section
-
 .. _expression_function_Conversions_to_dms:
 
 to_dms
@@ -266,8 +246,6 @@ Converts a coordinate to degree, minute, second.
 
 .. end_to_dms_section
 
-.. to_int_section
-
 .. _expression_function_Conversions_to_int:
 
 to_int
@@ -287,8 +265,6 @@ Converts a string to integer number. Nothing is returned if a value cannot be co
 
 
 .. end_to_int_section
-
-.. to_interval_section
 
 .. _expression_function_Conversions_to_interval:
 
@@ -312,8 +288,6 @@ Converts a string to an interval type. Can be used to take days, hours, month, e
 
 .. end_to_interval_section
 
-.. to_real_section
-
 .. _expression_function_Conversions_to_real:
 
 to_real
@@ -334,8 +308,6 @@ Converts a string to a real number. Nothing is returned if a value cannot be con
 
 .. end_to_real_section
 
-.. to_string_section
-
 .. _expression_function_Conversions_to_string:
 
 to_string
@@ -355,8 +327,6 @@ Converts a number to string.
 
 
 .. end_to_string_section
-
-.. to_time_section
 
 .. _expression_function_Conversions_to_time:
 

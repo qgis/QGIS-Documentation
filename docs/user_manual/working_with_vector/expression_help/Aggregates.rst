@@ -6,8 +6,6 @@
    in the resources/function_help/json/ folder in the
    qgis/QGIS repository.
 
-.. aggregate_section
-
 .. _expression_function_Aggregates_aggregate:
 
 aggregate
@@ -68,8 +66,6 @@ Returns an aggregate value calculated using features from another layer.
 
 .. end_aggregate_section
 
-.. array_agg_section
-
 .. _expression_function_Aggregates_array_agg:
 
 array_agg
@@ -95,8 +91,6 @@ Returns an array of aggregated values from a field or expression.
 
 .. end_array_agg_section
 
-.. collect_section
-
 .. _expression_function_Aggregates_collect:
 
 collect
@@ -121,8 +115,6 @@ Returns the multipart geometry of aggregated geometries from an expression
 
 
 .. end_collect_section
-
-.. concatenate_section
 
 .. _expression_function_Aggregates_concatenate:
 
@@ -150,8 +142,6 @@ Returns all aggregated strings from a field or expression joined by a delimiter.
 
 .. end_concatenate_section
 
-.. concatenate_unique_section
-
 .. _expression_function_Aggregates_concatenate_unique:
 
 concatenate_unique
@@ -178,8 +168,6 @@ Returns all unique strings from a field or expression joined by a delimiter.
 
 .. end_concatenate_unique_section
 
-.. count_section
-
 .. _expression_function_Aggregates_count:
 
 count
@@ -203,8 +191,6 @@ Returns the count of matching features.
 
 
 .. end_count_section
-
-.. count_distinct_section
 
 .. _expression_function_Aggregates_count_distinct:
 
@@ -230,8 +216,6 @@ Returns the count of distinct values.
 
 .. end_count_distinct_section
 
-.. count_missing_section
-
 .. _expression_function_Aggregates_count_missing:
 
 count_missing
@@ -255,8 +239,6 @@ Returns the count of missing (NULL) values.
 
 
 .. end_count_missing_section
-
-.. iqr_section
 
 .. _expression_function_Aggregates_iqr:
 
@@ -282,8 +264,6 @@ Returns the calculated inter quartile range from a field or expression.
 
 .. end_iqr_section
 
-.. majority_section
-
 .. _expression_function_Aggregates_majority:
 
 majority
@@ -307,8 +287,6 @@ Returns the aggregate majority of values (most commonly occurring value) from a 
 
 
 .. end_majority_section
-
-.. max_length_section
 
 .. _expression_function_Aggregates_max_length:
 
@@ -334,8 +312,6 @@ Returns the maximum length of strings from a field or expression.
 
 .. end_max_length_section
 
-.. maximum_section
-
 .. _expression_function_Aggregates_maximum:
 
 maximum
@@ -359,8 +335,6 @@ Returns the aggregate maximum value from a field or expression.
 
 
 .. end_maximum_section
-
-.. mean_section
 
 .. _expression_function_Aggregates_mean:
 
@@ -386,8 +360,6 @@ Returns the aggregate mean value from a field or expression.
 
 .. end_mean_section
 
-.. median_section
-
 .. _expression_function_Aggregates_median:
 
 median
@@ -411,8 +383,6 @@ Returns the aggregate median value from a field or expression.
 
 
 .. end_median_section
-
-.. min_length_section
 
 .. _expression_function_Aggregates_min_length:
 
@@ -438,8 +408,6 @@ Returns the minimum length of strings from a field or expression.
 
 .. end_min_length_section
 
-.. minimum_section
-
 .. _expression_function_Aggregates_minimum:
 
 minimum
@@ -463,8 +431,6 @@ Returns the aggregate minimum value from a field or expression.
 
 
 .. end_minimum_section
-
-.. minority_section
 
 .. _expression_function_Aggregates_minority:
 
@@ -490,8 +456,6 @@ Returns the aggregate minority of values (least occurring value) from a field or
 
 .. end_minority_section
 
-.. q1_section
-
 .. _expression_function_Aggregates_q1:
 
 q1
@@ -515,8 +479,6 @@ Returns the calculated first quartile from a field or expression.
 
 
 .. end_q1_section
-
-.. q3_section
 
 .. _expression_function_Aggregates_q3:
 
@@ -542,8 +504,6 @@ Returns the calculated third quartile from a field or expression.
 
 .. end_q3_section
 
-.. range_section
-
 .. _expression_function_Aggregates_range:
 
 range
@@ -567,8 +527,6 @@ Returns the aggregate range of values (maximum - minimum) from a field or expres
 
 
 .. end_range_section
-
-.. relation_aggregate_section
 
 .. _expression_function_Aggregates_relation_aggregate:
 
@@ -626,8 +584,6 @@ Returns an aggregate value calculated using all matching child features from a l
 
 .. end_relation_aggregate_section
 
-.. stdev_section
-
 .. _expression_function_Aggregates_stdev:
 
 stdev
@@ -651,8 +607,6 @@ Returns the aggregate standard deviation value from a field or expression.
 
 
 .. end_stdev_section
-
-.. sum_section
 
 .. _expression_function_Aggregates_sum:
 

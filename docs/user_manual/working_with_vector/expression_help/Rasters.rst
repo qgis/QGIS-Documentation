@@ -6,8 +6,6 @@
    in the resources/function_help/json/ folder in the
    qgis/QGIS repository.
 
-.. raster_statistic_section
-
 .. _expression_function_Rasters_raster_statistic:
 
 raster_statistic
@@ -41,8 +39,6 @@ Returns statistics from a raster layer.
 
 
 .. end_raster_statistic_section
-
-.. raster_value_section
 
 .. _expression_function_Rasters_raster_value:
 

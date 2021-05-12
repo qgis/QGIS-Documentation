@@ -6,8 +6,6 @@
    in the resources/function_help/json/ folder in the
    qgis/QGIS repository.
 
-.. base_file_name_section
-
 .. _expression_function_Files_and_Paths_base_file_name:
 
 base_file_name
@@ -27,8 +25,6 @@ Returns the base name of the file without the directory or file suffix.
 
 
 .. end_base_file_name_section
-
-.. file_exists_section
 
 .. _expression_function_Files_and_Paths_file_exists:
 
@@ -50,8 +46,6 @@ Returns true if a file path exists.
 
 .. end_file_exists_section
 
-.. file_name_section
-
 .. _expression_function_Files_and_Paths_file_name:
 
 file_name
@@ -71,8 +65,6 @@ Returns the name of a file (including the file extension), excluding the directo
 
 
 .. end_file_name_section
-
-.. file_path_section
 
 .. _expression_function_Files_and_Paths_file_path:
 
@@ -94,8 +86,6 @@ Returns the directory component of a file path. This does not include the file n
 
 .. end_file_path_section
 
-.. file_size_section
-
 .. _expression_function_Files_and_Paths_file_size:
 
 file_size
@@ -115,8 +105,6 @@ Returns the size (in bytes) of a file.
 
 
 .. end_file_size_section
-
-.. file_suffix_section
 
 .. _expression_function_Files_and_Paths_file_suffix:
 
@@ -138,8 +126,6 @@ Returns the file suffix (extension) from a file path.
 
 .. end_file_suffix_section
 
-.. is_directory_section
-
 .. _expression_function_Files_and_Paths_is_directory:
 
 is_directory
@@ -160,8 +146,6 @@ Returns true if a path corresponds to a directory.
 
 
 .. end_is_directory_section
-
-.. is_file_section
 
 .. _expression_function_Files_and_Paths_is_file:
 

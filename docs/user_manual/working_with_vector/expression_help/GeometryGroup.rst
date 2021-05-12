@@ -6,8 +6,6 @@
    in the resources/function_help/json/ folder in the
    qgis/QGIS repository.
 
-.. angle_at_vertex_section
-
 .. _expression_function_GeometryGroup_angle_at_vertex:
 
 angle_at_vertex
@@ -29,8 +27,6 @@ Returns the bisector angle (average angle) to the geometry for a specified verte
 
 .. end_angle_at_vertex_section
 
-.. $area_section
-
 .. _expression_function_GeometryGroup_$area:
 
 $area
@@ -48,8 +44,6 @@ Returns the area of the current feature. The area calculated by this function re
 
 
 .. end_$area_section
-
-.. area_section
 
 .. _expression_function_GeometryGroup_area:
 
@@ -70,8 +64,6 @@ Returns the area of a geometry polygon object. Calculations are always planimetr
 
 
 .. end_area_section
-
-.. azimuth_section
 
 .. _expression_function_GeometryGroup_azimuth:
 
@@ -95,8 +87,6 @@ Returns the north-based azimuth as the angle in radians measured clockwise from 
 
 .. end_azimuth_section
 
-.. boundary_section
-
 .. _expression_function_GeometryGroup_boundary:
 
 boundary
@@ -117,8 +107,6 @@ Returns the closure of the combinatorial boundary of the geometry (ie the topolo
 
 
 .. end_boundary_section
-
-.. bounds_section
 
 .. _expression_function_GeometryGroup_bounds:
 
@@ -141,8 +129,6 @@ Returns a geometry which represents the bounding box of an input geometry. Calcu
 
 .. end_bounds_section
 
-.. bounds_height_section
-
 .. _expression_function_GeometryGroup_bounds_height:
 
 bounds_height
@@ -164,8 +150,6 @@ Returns the height of the bounding box of a geometry. Calculations are in the Sp
 
 .. end_bounds_height_section
 
-.. bounds_width_section
-
 .. _expression_function_GeometryGroup_bounds_width:
 
 bounds_width
@@ -186,8 +170,6 @@ Returns the width of the bounding box of a geometry. Calculations are in the Spa
 
 
 .. end_bounds_width_section
-
-.. buffer_section
 
 .. _expression_function_GeometryGroup_buffer:
 
@@ -213,8 +195,6 @@ Returns a geometry that represents all points whose distance from this geometry 
 
 .. end_buffer_section
 
-.. buffer_by_m_section
-
 .. _expression_function_GeometryGroup_buffer_by_m:
 
 buffer_by_m
@@ -238,8 +218,6 @@ Creates a buffer along a line geometry where the buffer diameter varies accordin
 
 .. end_buffer_by_m_section
 
-.. centroid_section
-
 .. _expression_function_GeometryGroup_centroid:
 
 centroid
@@ -259,8 +237,6 @@ Returns the geometric center of a geometry.
 
 
 .. end_centroid_section
-
-.. close_line_section
 
 .. _expression_function_GeometryGroup_close_line:
 
@@ -283,8 +259,6 @@ Returns a closed line string of the input line string by appending the first poi
 
 .. end_close_line_section
 
-.. closest_point_section
-
 .. _expression_function_GeometryGroup_closest_point:
 
 closest_point
@@ -305,8 +279,6 @@ Returns the point on geometry1 that is closest to geometry2.
 
 
 .. end_closest_point_section
-
-.. collect_geometries_section
 
 .. _expression_function_GeometryGroup_collect_geometries:
 
@@ -347,8 +319,6 @@ Geometry parts are specified as an array of geometry parts.
 
 .. end_collect_geometries_section
 
-.. combine_section
-
 .. _expression_function_GeometryGroup_combine:
 
 combine
@@ -370,8 +340,6 @@ Returns the combination of two geometries.
 
 
 .. end_combine_section
-
-.. contains_section
 
 .. _expression_function_GeometryGroup_contains:
 
@@ -395,8 +363,6 @@ Tests whether a geometry contains another. Returns true if and only if no points
 
 .. end_contains_section
 
-.. convex_hull_section
-
 .. _expression_function_GeometryGroup_convex_hull:
 
 convex_hull
@@ -416,8 +382,6 @@ Returns the convex hull of a geometry. It represents the minimum convex geometry
 
 
 .. end_convex_hull_section
-
-.. crosses_section
 
 .. _expression_function_GeometryGroup_crosses:
 
@@ -441,8 +405,6 @@ Tests whether a geometry crosses another. Returns true if the supplied geometrie
 
 .. end_crosses_section
 
-.. difference_section
-
 .. _expression_function_GeometryGroup_difference:
 
 difference
@@ -463,8 +425,6 @@ Returns a geometry that represents that part of geometry1 that does not intersec
 
 
 .. end_difference_section
-
-.. disjoint_section
 
 .. _expression_function_GeometryGroup_disjoint:
 
@@ -488,8 +448,6 @@ Tests whether geometries do not spatially intersect. Returns true if the geometr
 
 .. end_disjoint_section
 
-.. distance_section
-
 .. _expression_function_GeometryGroup_distance:
 
 distance
@@ -510,8 +468,6 @@ Returns the minimum distance (based on spatial ref) between two geometries in pr
 
 
 .. end_distance_section
-
-.. distance_to_vertex_section
 
 .. _expression_function_GeometryGroup_distance_to_vertex:
 
@@ -534,8 +490,6 @@ Returns the distance along the geometry to a specified vertex.
 
 .. end_distance_to_vertex_section
 
-.. end_point_section
-
 .. _expression_function_GeometryGroup_end_point:
 
 end_point
@@ -555,8 +509,6 @@ Returns the last node from a geometry.
 
 
 .. end_end_point_section
-
-.. extend_section
 
 .. _expression_function_GeometryGroup_extend:
 
@@ -581,8 +533,6 @@ Extends the start and end of a linestring geometry by a specified amount. Lines 
 
 .. end_extend_section
 
-.. exterior_ring_section
-
 .. _expression_function_GeometryGroup_exterior_ring:
 
 exterior_ring
@@ -602,8 +552,6 @@ Returns a line string representing the exterior ring of a polygon geometry. If t
 
 
 .. end_exterior_ring_section
-
-.. extrude_section
 
 .. _expression_function_GeometryGroup_extrude:
 
@@ -628,8 +576,6 @@ Returns an extruded version of the input (Multi-)Curve or (Multi-)Linestring geo
 
 .. end_extrude_section
 
-.. flip_coordinates_section
-
 .. _expression_function_GeometryGroup_flip_coordinates:
 
 flip_coordinates
@@ -649,8 +595,6 @@ Returns a copy of the geometry with the x and y coordinates swapped. Useful for 
 
 
 .. end_flip_coordinates_section
-
-.. force_rhr_section
 
 .. _expression_function_GeometryGroup_force_rhr:
 
@@ -672,8 +616,6 @@ Forces a geometry to respect the Right-Hand-Rule, in which the area that is boun
 
 .. end_force_rhr_section
 
-.. geom_from_gml_section
-
 .. _expression_function_GeometryGroup_geom_from_gml:
 
 geom_from_gml
@@ -693,8 +635,6 @@ Returns a geometry from a GML representation of geometry.
 
 
 .. end_geom_from_gml_section
-
-.. geom_from_wkb_section
 
 .. _expression_function_GeometryGroup_geom_from_wkb:
 
@@ -716,8 +656,6 @@ Returns a geometry created from a Well-Known Binary (WKB) representation.
 
 .. end_geom_from_wkb_section
 
-.. geom_from_wkt_section
-
 .. _expression_function_GeometryGroup_geom_from_wkt:
 
 geom_from_wkt
@@ -738,8 +676,6 @@ Returns a geometry created from a Well-Known Text (WKT) representation.
 
 .. end_geom_from_wkt_section
 
-.. geom_to_wkb_section
-
 .. _expression_function_GeometryGroup_geom_to_wkb:
 
 geom_to_wkb
@@ -759,8 +695,6 @@ Returns the Well-Known Binary (WKB) representation of a geometry
 
 
 .. end_geom_to_wkb_section
-
-.. geom_to_wkt_section
 
 .. _expression_function_GeometryGroup_geom_to_wkt:
 
@@ -787,8 +721,6 @@ Returns the Well-Known Text (WKT) representation of the geometry without SRID me
 
 .. end_geom_to_wkt_section
 
-.. $geometry_section
-
 .. _expression_function_GeometryGroup_$geometry:
 
 $geometry
@@ -806,8 +738,6 @@ Returns the geometry of the current feature. Can be used for processing with oth
 
 
 .. end_$geometry_section
-
-.. geometry_section
 
 .. _expression_function_GeometryGroup_geometry:
 
@@ -830,8 +760,6 @@ Returns a feature's geometry.
 
 .. end_geometry_section
 
-.. geometry_n_section
-
 .. _expression_function_GeometryGroup_geometry_n:
 
 geometry_n
@@ -852,8 +780,6 @@ Returns a specific geometry from a geometry collection, or NULL if the input geo
 
 
 .. end_geometry_n_section
-
-.. hausdorff_distance_section
 
 .. _expression_function_GeometryGroup_hausdorff_distance:
 
@@ -893,8 +819,6 @@ If the default approximate provided by this method is insufficient, specify the 
 
 .. end_hausdorff_distance_section
 
-.. inclination_section
-
 .. _expression_function_GeometryGroup_inclination:
 
 inclination
@@ -919,8 +843,6 @@ Returns the inclination measured from the zenith (0) to the nadir (180) on point
 
 .. end_inclination_section
 
-.. interior_ring_n_section
-
 .. _expression_function_GeometryGroup_interior_ring_n:
 
 interior_ring_n
@@ -941,8 +863,6 @@ Returns a specific interior ring from a polygon geometry, or NULL if the geometr
 
 
 .. end_interior_ring_n_section
-
-.. intersection_section
 
 .. _expression_function_GeometryGroup_intersection:
 
@@ -966,8 +886,6 @@ Returns a geometry that represents the shared portion of two geometries.
 
 .. end_intersection_section
 
-.. intersects_section
-
 .. _expression_function_GeometryGroup_intersects:
 
 intersects
@@ -989,8 +907,6 @@ Tests whether a geometry intersects another. Returns true if the geometries spat
 
 
 .. end_intersects_section
-
-.. intersects_bbox_section
 
 .. _expression_function_GeometryGroup_intersects_bbox:
 
@@ -1014,8 +930,6 @@ Tests whether a geometry's bounding box overlaps another geometry's bounding box
 
 .. end_intersects_bbox_section
 
-.. is_closed_section
-
 .. _expression_function_GeometryGroup_is_closed:
 
 is_closed
@@ -1036,8 +950,6 @@ Returns true if a line string is closed (start and end points are coincident), o
 
 
 .. end_is_closed_section
-
-.. is_empty_section
 
 .. _expression_function_GeometryGroup_is_empty:
 
@@ -1061,8 +973,6 @@ Returns true if a geometry is empty (without coordinates), false if the geometry
 
 
 .. end_is_empty_section
-
-.. is_empty_or_null_section
 
 .. _expression_function_GeometryGroup_is_empty_or_null:
 
@@ -1088,8 +998,6 @@ Returns true if a geometry is NULL or empty (without coordinates) or false other
 
 .. end_is_empty_or_null_section
 
-.. is_multipart_section
-
 .. _expression_function_GeometryGroup_is_multipart:
 
 is_multipart
@@ -1110,8 +1018,6 @@ Returns true if the geometry is of Multi type.
 
 
 .. end_is_multipart_section
-
-.. is_valid_section
 
 .. _expression_function_GeometryGroup_is_valid:
 
@@ -1134,8 +1040,6 @@ Returns true if a geometry is valid; if it is well-formed in 2D according to the
 
 .. end_is_valid_section
 
-.. $length_section
-
 .. _expression_function_GeometryGroup_$length:
 
 $length
@@ -1153,8 +1057,6 @@ Returns the length of a linestring. If you need the length of a border of a poly
 
 
 .. end_$length_section
-
-.. length_section
 
 .. _expression_function_GeometryGroup_length:
 
@@ -1195,8 +1097,6 @@ Calculate the length of a geometry line object. Calculations are always planimet
 
 .. end_length_section
 
-.. length3D_section
-
 .. _expression_function_GeometryGroup_length3D:
 
 length3D
@@ -1216,8 +1116,6 @@ Calculates the 3D length of a geometry line object. If the geometry is not a 3D 
 
 
 .. end_length3D_section
-
-.. line_interpolate_angle_section
 
 .. _expression_function_GeometryGroup_line_interpolate_angle:
 
@@ -1240,8 +1138,6 @@ Returns the angle parallel to the geometry at a specified distance along a lines
 
 .. end_line_interpolate_angle_section
 
-.. line_interpolate_point_section
-
 .. _expression_function_GeometryGroup_line_interpolate_point:
 
 line_interpolate_point
@@ -1262,8 +1158,6 @@ Returns the point interpolated by a specified distance along a linestring geomet
 
 
 .. end_line_interpolate_point_section
-
-.. line_locate_point_section
 
 .. _expression_function_GeometryGroup_line_locate_point:
 
@@ -1286,8 +1180,6 @@ Returns the distance along a linestring corresponding to the closest position th
 
 .. end_line_locate_point_section
 
-.. line_merge_section
-
 .. _expression_function_GeometryGroup_line_merge:
 
 line_merge
@@ -1308,8 +1200,6 @@ Returns a LineString or MultiLineString geometry, where any connected LineString
 
 
 .. end_line_merge_section
-
-.. line_substring_section
 
 .. _expression_function_GeometryGroup_line_substring:
 
@@ -1333,8 +1223,6 @@ Returns the portion of a line (or curve) geometry which falls between the specif
 
 .. end_line_substring_section
 
-.. m_section
-
 .. _expression_function_GeometryGroup_m:
 
 m
@@ -1354,8 +1242,6 @@ Returns the m value of a point geometry.
 
 
 .. end_m_section
-
-.. m_max_section
 
 .. _expression_function_GeometryGroup_m_max:
 
@@ -1378,8 +1264,6 @@ Returns the maximum m (measure) value of a geometry.
 
 .. end_m_max_section
 
-.. m_min_section
-
 .. _expression_function_GeometryGroup_m_min:
 
 m_min
@@ -1401,8 +1285,6 @@ Returns the minimum m (measure) value of a geometry.
 
 .. end_m_min_section
 
-.. main_angle_section
-
 .. _expression_function_GeometryGroup_main_angle:
 
 main_angle
@@ -1422,8 +1304,6 @@ Returns the main angle of a geometry (clockwise, in degrees from North), which r
 
 
 .. end_main_angle_section
-
-.. make_circle_section
 
 .. _expression_function_GeometryGroup_make_circle:
 
@@ -1450,8 +1330,6 @@ Creates a circular polygon.
 
 
 .. end_make_circle_section
-
-.. make_ellipse_section
 
 .. _expression_function_GeometryGroup_make_ellipse:
 
@@ -1480,8 +1358,6 @@ Creates an elliptical polygon.
 
 
 .. end_make_ellipse_section
-
-.. make_line_section
 
 .. _expression_function_GeometryGroup_make_line:
 
@@ -1523,8 +1399,6 @@ Line vertices are specified as an array of points.
 
 .. end_make_line_section
 
-.. make_point_section
-
 .. _expression_function_GeometryGroup_make_point:
 
 make_point
@@ -1552,8 +1426,6 @@ Creates a point geometry from an x and y (and optional z and m) value.
 
 .. end_make_point_section
 
-.. make_point_m_section
-
 .. _expression_function_GeometryGroup_make_point_m:
 
 make_point_m
@@ -1575,8 +1447,6 @@ Creates a point geometry from an x, y coordinate and m value.
 
 
 .. end_make_point_m_section
-
-.. make_polygon_section
 
 .. _expression_function_GeometryGroup_make_polygon:
 
@@ -1601,8 +1471,6 @@ Creates a polygon geometry from an outer ring and optional series of inner ring 
 
 
 .. end_make_polygon_section
-
-.. make_rectangle_3points_section
 
 .. _expression_function_GeometryGroup_make_rectangle_3points:
 
@@ -1630,8 +1498,6 @@ Creates a rectangle from 3 points.
 
 .. end_make_rectangle_3points_section
 
-.. make_regular_polygon_section
-
 .. _expression_function_GeometryGroup_make_regular_polygon:
 
 make_regular_polygon
@@ -1658,8 +1524,6 @@ Creates a regular polygon.
 
 .. end_make_regular_polygon_section
 
-.. make_square_section
-
 .. _expression_function_GeometryGroup_make_square:
 
 make_square
@@ -1681,8 +1545,6 @@ Creates a square from a diagonal.
 
 
 .. end_make_square_section
-
-.. make_triangle_section
 
 .. _expression_function_GeometryGroup_make_triangle:
 
@@ -1706,8 +1568,6 @@ Creates a triangle polygon.
 
 
 .. end_make_triangle_section
-
-.. minimal_circle_section
 
 .. _expression_function_GeometryGroup_minimal_circle:
 
@@ -1733,8 +1593,6 @@ Returns the minimal enclosing circle of a geometry. It represents the minimum ci
 
 .. end_minimal_circle_section
 
-.. nodes_to_points_section
-
 .. _expression_function_GeometryGroup_nodes_to_points:
 
 nodes_to_points
@@ -1759,8 +1617,6 @@ Returns a multipoint geometry consisting of every node in the input geometry.
 
 .. end_nodes_to_points_section
 
-.. num_geometries_section
-
 .. _expression_function_GeometryGroup_num_geometries:
 
 num_geometries
@@ -1780,8 +1636,6 @@ Returns the number of geometries in a geometry collection, or NULL if the input 
 
 
 .. end_num_geometries_section
-
-.. num_interior_rings_section
 
 .. _expression_function_GeometryGroup_num_interior_rings:
 
@@ -1803,8 +1657,6 @@ Returns the number of interior rings in a polygon or geometry collection, or NUL
 
 .. end_num_interior_rings_section
 
-.. num_points_section
-
 .. _expression_function_GeometryGroup_num_points:
 
 num_points
@@ -1825,8 +1677,6 @@ Returns the number of vertices in a geometry.
 
 .. end_num_points_section
 
-.. num_rings_section
-
 .. _expression_function_GeometryGroup_num_rings:
 
 num_rings
@@ -1846,8 +1696,6 @@ Returns the number of rings (including exterior rings) in a polygon or geometry 
 
 
 .. end_num_rings_section
-
-.. offset_curve_section
 
 .. _expression_function_GeometryGroup_offset_curve:
 
@@ -1878,8 +1726,6 @@ Returns a geometry formed by offsetting a linestring geometry to the side. Dista
 
 .. end_offset_curve_section
 
-.. order_parts_section
-
 .. _expression_function_GeometryGroup_order_parts:
 
 order_parts
@@ -1905,8 +1751,6 @@ Orders the parts of a MultiGeometry by a given criteria
 
 .. end_order_parts_section
 
-.. oriented_bbox_section
-
 .. _expression_function_GeometryGroup_oriented_bbox:
 
 oriented_bbox
@@ -1926,8 +1770,6 @@ Returns a geometry which represents the minimal oriented bounding box of an inpu
 
 
 .. end_oriented_bbox_section
-
-.. overlaps_section
 
 .. _expression_function_GeometryGroup_overlaps:
 
@@ -1950,8 +1792,6 @@ Tests whether a geometry overlaps another. Returns true if the geometries share 
 
 
 .. end_overlaps_section
-
-.. overlay_contains_section
 
 .. _expression_function_GeometryGroup_overlay_contains:
 
@@ -1988,8 +1828,6 @@ Read more on the underlying GEOS "Contains" predicate, as described in PostGIS `
 
 .. end_overlay_contains_section
 
-.. overlay_crosses_section
-
 .. _expression_function_GeometryGroup_overlay_crosses:
 
 overlay_crosses
@@ -2024,8 +1862,6 @@ Read more on the underlying GEOS "Crosses" predicate, as described in PostGIS `S
 
 
 .. end_overlay_crosses_section
-
-.. overlay_disjoint_section
 
 .. _expression_function_GeometryGroup_overlay_disjoint:
 
@@ -2062,8 +1898,6 @@ Read more on the underlying GEOS "Disjoint" predicate, as described in PostGIS `
 
 .. end_overlay_disjoint_section
 
-.. overlay_equals_section
-
 .. _expression_function_GeometryGroup_overlay_equals:
 
 overlay_equals
@@ -2099,8 +1933,6 @@ Read more on the underlying GEOS "Equals" predicate, as described in PostGIS `ST
 
 .. end_overlay_equals_section
 
-.. overlay_intersects_section
-
 .. _expression_function_GeometryGroup_overlay_intersects:
 
 overlay_intersects
@@ -2135,8 +1967,6 @@ Read more on the underlying GEOS "Intersects" predicate, as described in PostGIS
 
 
 .. end_overlay_intersects_section
-
-.. overlay_nearest_section
 
 .. _expression_function_GeometryGroup_overlay_nearest:
 
@@ -2175,8 +2005,6 @@ Note: This function can be slow and consume a lot of memory for large layers.
 
 .. end_overlay_nearest_section
 
-.. overlay_touches_section
-
 .. _expression_function_GeometryGroup_overlay_touches:
 
 overlay_touches
@@ -2211,8 +2039,6 @@ Read more on the underlying GEOS "Touches" predicate, as described in PostGIS `S
 
 
 .. end_overlay_touches_section
-
-.. overlay_within_section
 
 .. _expression_function_GeometryGroup_overlay_within:
 
@@ -2249,8 +2075,6 @@ Read more on the underlying GEOS "Within" predicate, as described in PostGIS `ST
 
 .. end_overlay_within_section
 
-.. $perimeter_section
-
 .. _expression_function_GeometryGroup_$perimeter:
 
 $perimeter
@@ -2268,8 +2092,6 @@ Returns the perimeter length of the current feature. The perimeter calculated by
 
 
 .. end_$perimeter_section
-
-.. perimeter_section
 
 .. _expression_function_GeometryGroup_perimeter:
 
@@ -2290,8 +2112,6 @@ Returns the perimeter of a geometry polygon object. Calculations are always plan
 
 
 .. end_perimeter_section
-
-.. point_n_section
 
 .. _expression_function_GeometryGroup_point_n:
 
@@ -2314,8 +2134,6 @@ Returns a specific node from a geometry.
 
 .. end_point_n_section
 
-.. point_on_surface_section
-
 .. _expression_function_GeometryGroup_point_on_surface:
 
 point_on_surface
@@ -2335,8 +2153,6 @@ Returns a point guaranteed to lie on the surface of a geometry.
 
 
 .. end_point_on_surface_section
-
-.. pole_of_inaccessibility_section
 
 .. _expression_function_GeometryGroup_pole_of_inaccessibility:
 
@@ -2358,8 +2174,6 @@ Calculates the approximate pole of inaccessibility for a surface, which is the m
 
 
 .. end_pole_of_inaccessibility_section
-
-.. project_section
 
 .. _expression_function_GeometryGroup_project:
 
@@ -2385,8 +2199,6 @@ Returns a point projected from a start point using a distance, a bearing (azimut
 
 
 .. end_project_section
-
-.. relate_section
 
 .. _expression_function_GeometryGroup_relate:
 
@@ -2430,8 +2242,6 @@ Tests whether the DE-9IM relationship between two geometries matches a specified
 
 .. end_relate_section
 
-.. reverse_section
-
 .. _expression_function_GeometryGroup_reverse:
 
 reverse
@@ -2451,8 +2261,6 @@ Reverses the direction of a line string by reversing the order of its vertices.
 
 
 .. end_reverse_section
-
-.. rotate_section
 
 .. _expression_function_GeometryGroup_rotate:
 
@@ -2479,8 +2287,6 @@ Returns a rotated version of a geometry. Calculations are in the Spatial Referen
 
 .. end_rotate_section
 
-.. segments_to_lines_section
-
 .. _expression_function_GeometryGroup_segments_to_lines:
 
 segments_to_lines
@@ -2500,8 +2306,6 @@ Returns a multi line geometry consisting of a line for every segment in the inpu
 
 
 .. end_segments_to_lines_section
-
-.. shortest_line_section
 
 .. _expression_function_GeometryGroup_shortest_line:
 
@@ -2524,8 +2328,6 @@ Returns the shortest line joining geometry1 to geometry2. The resultant line wil
 
 .. end_shortest_line_section
 
-.. simplify_section
-
 .. _expression_function_GeometryGroup_simplify:
 
 simplify
@@ -2547,8 +2349,6 @@ Simplifies a geometry by removing nodes using a distance based threshold (ie, th
 
 .. end_simplify_section
 
-.. simplify_vw_section
-
 .. _expression_function_GeometryGroup_simplify_vw:
 
 simplify_vw
@@ -2569,8 +2369,6 @@ Simplifies a geometry by removing nodes using an area based threshold (ie, the V
 
 
 .. end_simplify_vw_section
-
-.. single_sided_buffer_section
 
 .. _expression_function_GeometryGroup_single_sided_buffer:
 
@@ -2601,8 +2399,6 @@ Returns a geometry formed by buffering out just one side of a linestring geometr
 
 .. end_single_sided_buffer_section
 
-.. smooth_section
-
 .. _expression_function_GeometryGroup_smooth:
 
 smooth
@@ -2629,8 +2425,6 @@ Smooths a geometry by adding extra nodes which round off corners in the geometry
 
 .. end_smooth_section
 
-.. start_point_section
-
 .. _expression_function_GeometryGroup_start_point:
 
 start_point
@@ -2650,8 +2444,6 @@ Returns the first node from a geometry.
 
 
 .. end_start_point_section
-
-.. sym_difference_section
 
 .. _expression_function_GeometryGroup_sym_difference:
 
@@ -2673,8 +2465,6 @@ Returns a geometry that represents the portions of two geometries that do not in
 
 
 .. end_sym_difference_section
-
-.. tapered_buffer_section
 
 .. _expression_function_GeometryGroup_tapered_buffer:
 
@@ -2701,8 +2491,6 @@ Creates a buffer along a line geometry where the buffer diameter varies evenly o
 
 .. end_tapered_buffer_section
 
-.. touches_section
-
 .. _expression_function_GeometryGroup_touches:
 
 touches
@@ -2724,8 +2512,6 @@ Tests whether a geometry touches another. Returns true if the geometries have at
 
 
 .. end_touches_section
-
-.. transform_section
 
 .. _expression_function_GeometryGroup_transform:
 
@@ -2749,8 +2535,6 @@ Returns the geometry transformed from a source CRS to a destination CRS.
 
 .. end_transform_section
 
-.. translate_section
-
 .. _expression_function_GeometryGroup_translate:
 
 translate
@@ -2773,8 +2557,6 @@ Returns a translated version of a geometry. Calculations are in the Spatial Refe
 
 .. end_translate_section
 
-.. union_section
-
 .. _expression_function_GeometryGroup_union:
 
 union
@@ -2795,8 +2577,6 @@ Returns a geometry that represents the point set union of the geometries.
 
 
 .. end_union_section
-
-.. wedge_buffer_section
 
 .. _expression_function_GeometryGroup_wedge_buffer:
 
@@ -2824,8 +2604,6 @@ Returns a wedge shaped buffer originating from a point geometry.
 
 .. end_wedge_buffer_section
 
-.. within_section
-
 .. _expression_function_GeometryGroup_within:
 
 within
@@ -2848,8 +2626,6 @@ Tests whether a geometry is within another. Returns true if the geometry1 is com
 
 .. end_within_section
 
-.. $x_section
-
 .. _expression_function_GeometryGroup_$x:
 
 $x
@@ -2867,8 +2643,6 @@ Returns the x coordinate of the current point feature. If the feature is a multi
 
 
 .. end_$x_section
-
-.. x_section
 
 .. _expression_function_GeometryGroup_x:
 
@@ -2891,8 +2665,6 @@ Returns the x coordinate of a point geometry, or the x coordinate of the centroi
 
 .. end_x_section
 
-.. $x_at_section
-
 .. _expression_function_GeometryGroup_$x_at:
 
 $x_at
@@ -2912,8 +2684,6 @@ Retrieves a x coordinate of the current feature's geometry.
 
 
 .. end_$x_at_section
-
-.. x_max_section
 
 .. _expression_function_GeometryGroup_x_max:
 
@@ -2935,8 +2705,6 @@ Returns the maximum x coordinate of a geometry. Calculations are in the spatial 
 
 .. end_x_max_section
 
-.. x_min_section
-
 .. _expression_function_GeometryGroup_x_min:
 
 x_min
@@ -2957,8 +2725,6 @@ Returns the minimum x coordinate of a geometry. Calculations are in the spatial 
 
 .. end_x_min_section
 
-.. $y_section
-
 .. _expression_function_GeometryGroup_$y:
 
 $y
@@ -2976,8 +2742,6 @@ Returns the y coordinate of the current point feature. If the feature is a multi
 
 
 .. end_$y_section
-
-.. y_section
 
 .. _expression_function_GeometryGroup_y:
 
@@ -3000,8 +2764,6 @@ Returns the y coordinate of a point geometry, or the y coordinate of the centroi
 
 .. end_y_section
 
-.. $y_at_section
-
 .. _expression_function_GeometryGroup_$y_at:
 
 $y_at
@@ -3021,8 +2783,6 @@ Retrieves a y coordinate of the current feature's geometry.
 
 
 .. end_$y_at_section
-
-.. y_max_section
 
 .. _expression_function_GeometryGroup_y_max:
 
@@ -3044,8 +2804,6 @@ Returns the maximum y coordinate of a geometry. Calculations are in the spatial 
 
 .. end_y_max_section
 
-.. y_min_section
-
 .. _expression_function_GeometryGroup_y_min:
 
 y_min
@@ -3066,8 +2824,6 @@ Returns the minimum y coordinate of a geometry. Calculations are in the spatial 
 
 .. end_y_min_section
 
-.. z_section
-
 .. _expression_function_GeometryGroup_z:
 
 z
@@ -3087,8 +2843,6 @@ Returns the z coordinate of a point geometry, or NULL if the geometry has no z v
 
 
 .. end_z_section
-
-.. z_max_section
 
 .. _expression_function_GeometryGroup_z_max:
 
@@ -3113,8 +2867,6 @@ Returns the maximum z coordinate of a geometry, or NULL if the geometry has no z
 
 
 .. end_z_max_section
-
-.. z_min_section
 
 .. _expression_function_GeometryGroup_z_min:
 
