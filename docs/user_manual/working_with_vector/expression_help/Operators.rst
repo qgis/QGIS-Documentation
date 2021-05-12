@@ -19,7 +19,7 @@ Remainder of division
    :widths: 15 85
 
    * - Syntax
-     - %(a, b)
+     - a % b
    * - Arguments
      - * **a** - value
        * **b** - value
@@ -43,7 +43,7 @@ Multiplication of two values
    :widths: 15 85
 
    * - Syntax
-     - *(a, b)
+     - a * b
    * - Arguments
      - * **a** - value
        * **b** - value
@@ -67,7 +67,7 @@ Addition of two values. If one of the values is NULL the result will be NULL.
    :widths: 15 85
 
    * - Syntax
-     - +(a, b)
+     - a + b
    * - Arguments
      - * **a** - value
        * **b** - value
@@ -93,7 +93,7 @@ Subtraction of two values. If one of the values is NULL the result will be NULL.
    :widths: 15 85
 
    * - Syntax
-     - -(a, b)
+     - a - b
    * - Arguments
      - * **a** - value
        * **b** - value
@@ -118,7 +118,7 @@ Division of two values
    :widths: 15 85
 
    * - Syntax
-     - /(a, b)
+     - a / b
    * - Arguments
      - * **a** - value
        * **b** - value
@@ -142,7 +142,7 @@ Compares two values and evaluates to 1 if the left value is less than the right 
    :widths: 15 85
 
    * - Syntax
-     - <(a, b)
+     - a < b
    * - Arguments
      - * **a** - value
        * **b** - value
@@ -167,7 +167,7 @@ Compares two values and evaluates to 1 if the left value is less or equal than t
    :widths: 15 85
 
    * - Syntax
-     - <=(a, b)
+     - a <= b
    * - Arguments
      - * **a** - value
        * **b** - value
@@ -192,7 +192,7 @@ Compares two values and evaluates to 1 if they are not equal.
    :widths: 15 85
 
    * - Syntax
-     - <>(a, b)
+     - a <> b
    * - Arguments
      - * **a** - value
        * **b** - value
@@ -218,7 +218,7 @@ Compares two values and evaluates to 1 if they are equal.
    :widths: 15 85
 
    * - Syntax
-     - =(a, b)
+     - a = b
    * - Arguments
      - * **a** - value
        * **b** - value
@@ -244,7 +244,7 @@ Compares two values and evaluates to 1 if the left value is greater than the rig
    :widths: 15 85
 
    * - Syntax
-     - >(a, b)
+     - a > b
    * - Arguments
      - * **a** - value
        * **b** - value
@@ -269,7 +269,7 @@ Compares two values and evaluates to 1 if the left value is greater or equal tha
    :widths: 15 85
 
    * - Syntax
-     - >=(a, b)
+     - a >= b
    * - Arguments
      - * **a** - value
        * **b** - value
@@ -294,7 +294,7 @@ Returns 1 when condition a and b are true.
    :widths: 15 85
 
    * - Syntax
-     - AND(a, b)
+     - a AND b
    * - Arguments
      - * **a** - condition
        * **b** - condition
@@ -320,7 +320,7 @@ Returns 1 if the first parameter matches case-insensitive the supplied pattern. 
    :widths: 15 85
 
    * - Syntax
-     - ILIKE(string/number, pattern)
+     - string/number ILIKE pattern
    * - Arguments
      - * **string/number** - string to search
        * **pattern** - pattern to find, you can use '%' as a wildcard, '_' as a single char and '\\' to escape.
@@ -355,7 +355,7 @@ Returns 1 if value is found within a list of values.
    :widths: 15 85
 
    * - Syntax
-     - IN(a, b)
+     - a IN b
    * - Arguments
      - * **a** - value
        * **b** - list of values
@@ -379,7 +379,7 @@ Returns 1 if a is the same as b.
    :widths: 15 85
 
    * - Syntax
-     - IS(a, b)
+     - a IS b
    * - Arguments
      - * **a** - any value
        * **b** - any value
@@ -407,7 +407,7 @@ Returns 1 if a is not the same as b.
    :widths: 15 85
 
    * - Syntax
-     - IS NOT(a, b)
+     - a IS NOT b
    * - Arguments
      - * **a** - value
        * **b** - value
@@ -432,7 +432,7 @@ Returns 1 if the first parameter matches the supplied pattern. Works with number
    :widths: 15 85
 
    * - Syntax
-     - LIKE(string/number, pattern)
+     - string/number LIKE pattern
    * - Arguments
      - * **string/number** - value
        * **pattern** - pattern to compare value with, you can use '%' as a wildcard, '_' as a single char and '\\' to escape.
@@ -464,7 +464,7 @@ Negates a condition.
    :widths: 15 85
 
    * - Syntax
-     - NOT(a)
+     - NOT a
    * - Arguments
      - * **a** - condition
    * - Examples
@@ -487,7 +487,7 @@ Returns 1 when condition a or b is true.
    :widths: 15 85
 
    * - Syntax
-     - OR(a, b)
+     - a OR b
    * - Arguments
      - * **a** - condition
        * **b** - condition
@@ -512,7 +512,7 @@ Index operator. Returns an element from an array or map value.
    :widths: 15 85
 
    * - Syntax
-     - [](index)
+     - [] index
    * - Arguments
      - * **index** - array index or map key value
    * - Examples
@@ -538,7 +538,7 @@ Power of two values.
    :widths: 15 85
 
    * - Syntax
-     - ^(a, b)
+     - a ^ b
    * - Arguments
      - * **a** - value
        * **b** - value
@@ -566,7 +566,7 @@ If one of the values is NULL the result will be NULL. See the CONCAT function fo
    :widths: 15 85
 
    * - Syntax
-     - ||(a, b)
+     - a || b
    * - Arguments
      - * **a** - value
        * **b** - value
@@ -592,7 +592,7 @@ Performs a regular expression match on a string value. Backslash characters must
    :widths: 15 85
 
    * - Syntax
-     - ~(string, regex)
+     - string ~ regex
    * - Arguments
      - * **string** - A string value
        * **regex** - A regular expression. Slashes must be escaped, eg \\\\d.

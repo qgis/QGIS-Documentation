@@ -109,7 +109,14 @@ def format_variant(function_dict, f_name):
     # Prepare syntax and arguments strings
     syntax = f'   * - Syntax\n     - '
     if len(arg_syntax_list) > 0:
-        syntax += f'{f_name}({", ".join(arg_syntax_list)}{variable_args})\n'
+        if 'type' in function_dict and function_dict['type'] == 'operator':
+            if len(arg_syntax_list) == 1:
+                syntax += f'{f_name} {arg_syntax_list[0]}\n'
+            elif len(arg_syntax_list) == 2:
+                syntax += f'{arg_syntax_list[0]} {f_name} {arg_syntax_list[1]}\n'
+        else:
+            syntax += f'{f_name}({", ".join(arg_syntax_list)}{variable_args})\n'
+
         descriptions = '\n       * '.join(arg_description_list)
         arguments = (f"   * - Arguments\n"
                      f"     - * {descriptions}\n")
