@@ -13,14 +13,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-12 10:14+0000\n"
+"POT-Creation-Date: 2021-05-12 02:37+0000\n"
 "PO-Revision-Date: 2020-12-24 10:24+0000\n"
 "Last-Translator: DiGro, 2021\n"
 "Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.9.1\n"
 "Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -308,6 +308,10 @@ msgstr ""
 "parameters verschaffen zoals die worden gebruikt in QGIS en zijn vermeld in "
 "het dialoogvenster :guilabel:`CRS`."
 
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:693
+msgid "setProjection"
+msgstr "setProjection"
+
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:149
 msgid ""
 "For the same reason, if you create a new ESRI Shapefile format dataset with "
@@ -318,10 +322,10 @@ msgid ""
 msgstr ""
 "Als u met QGIS een nieuwe gegevensset in de indeling ESRI Shapefile maakt "
 "worden, om dezelfde reden, twee verschillende projectiebestanden gemaakt: "
-"een bestand :file:`.prj` met beperkte parameters voor projectie, compatibele"
-" met software voor ESRI, en een bestand :file:`.qpj`, dat alle parameters "
-"van het CRS verschaft. Iedere keer wanneer QGIS een bestand :file:`.qpj` "
-"vindt, zal dat worden gebruikt in plaats van het bestand :file:`.prj`."
+"een bestand :file:`.prj` met beperkte parameters voor projectie, compatibel "
+"met software voor ESRI, en een bestand :file:`.qpj`, dat alle parameters van"
+" het CRS verschaft. Iedere keer wanneer QGIS een bestand :file:`.qpj` vindt,"
+" zal dat worden gebruikt in plaats van het bestand :file:`.prj`."
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:162
 msgid "Delimited Text Files"
@@ -747,6 +751,10 @@ msgstr ""
 "database worden verzonden. Expressies die niet ondersteunde operatoren of "
 "functies gebruiken zullen netjes terugvallen naar lokale evaluatie."
 
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:683
+msgid "checkbox"
+msgstr "checkbox"
+
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:367
 msgid "Support of PostgreSQL data types"
 msgstr "Ondersteuning van gegevenstypen van PostgreSQL"
@@ -787,6 +795,10 @@ msgstr ""
 "QGIS heeft standaard ook de plug-in |dbManager| :sup:`DB Manager`. Deze kan "
 "gebruikt worden om gegevens te laden en het ondersteunt ook schema's. Bekijk"
 " het gedeelte :ref:`dbmanager` voor meer informatie."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:685
+msgid "dbManager"
+msgstr "dbManager"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:392
 msgid "shp2pgsql"
@@ -868,6 +880,10 @@ msgstr ""
 "Onthoud dat OGR moet zijn gebouwd met PostgreSQL om PostGIS te ondersteunen."
 " U kunt dit verifiëren door te typen (in |nix|)::"
 
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:689
+msgid "nix"
+msgstr "nix"
+
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:442
 msgid ""
 "If you prefer to use the PostgreSQL's **COPY** command instead of the "
@@ -877,6 +893,10 @@ msgstr ""
 "Als u de voorkeur hebt om de opdracht **COPY** van PostgreSQL te gebruiken "
 "in plaats van de standaard methode **INSERT INTO**, kunt u de volgende "
 "omgevingsvariabele exporteren (tenminste beschikbaar op |nix| en |osx|)::"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:691
+msgid "osx"
+msgstr "osx"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:448
 msgid ""
@@ -1052,7 +1072,7 @@ msgid ""
 "to create a SpatiaLite database. See also "
 "https://gdal.org/drivers/vector/sqlite.html."
 msgstr ""
-"U kunt ook ``SQLite`` als indeling selecteren en dan``SPATIALITE=YES`` "
+"U kunt ook ``SQLite`` als indeling selecteren en dan ``SPATIALITE=YES`` "
 "toevoegen in het  veld :menuselection:`Aangepaste opties --> Databron`. Dit "
 "vertelt GDAL om een database voor SpatiaLite te maken. Zie ook "
 "https://gdal.org/drivers/vector/sqlite.html."
@@ -1255,22 +1275,3 @@ msgstr ""
 "bestanden voor DB2 zijn opgenomen in het pad voor Windows. Dat kan worden "
 "gedaan door een batchbestand te maken zoals het volgende, met de naam, "
 "**db2.bat** en daarin de map **%OSGEO4W_ROOT%/etc/ini** op te nemen::"
-
-#~ msgid ""
-#~ "Many GIS packages don't wrap vector maps with a geographic reference system "
-#~ "(lat/lon) crossing the 180 degrees longitude line "
-#~ "(http://postgis.refractions.net/documentation/manual-2.0/ST_Shift_Longitude.html)."
-#~ " As result, if we open such a map in QGIS, we could see two widely separated"
-#~ " locations, that should appear near each other. In Figure_vector_crossing_, "
-#~ "the tiny point on the far left of the map canvas (Chatham Islands) should be"
-#~ " within the grid, to the right of the New Zealand main islands."
-#~ msgstr ""
-#~ "Veel GIS-pakketten verpakken vectorkaarten met een geografisch "
-#~ "referentiesysteem (lat/lon) dat de lijn van 180-graden longitude kruist niet"
-#~ " "
-#~ "(http://postgis.refractions.net/documentation/manual-2.0/ST_Shift_Longitude.html)."
-#~ " Als resultaat, wanneer we een dergelijke kaart in QGIS openen, zouden we "
-#~ "twee wijd verspreide locaties zien, die vlak naast elkaar zouden "
-#~ "verschijnen. In Figure_vector_crossing_, zou het kleine puntje aan de "
-#~ "uiterste linkerkant van het kaartvenster (Chatham Islands) binnen het raster"
-#~ " moeten liggen, rechts van de hoofdeilanden van Nieuw-Zeeland."
