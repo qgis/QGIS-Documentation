@@ -113,7 +113,7 @@ def format_variant(function_dict, f_name):
         descriptions = '\n       * '.join(arg_description_list)
         arguments = (f"   * - Arguments\n"
                      f"     - * {descriptions}\n")
-    elif f_name.startswith("$"):
+    elif f_name.startswith("$") or ('type' in function_dict and function_dict['type'] == 'value'):
         syntax += f"{f_name}\n"
         arguments = ''
     else:

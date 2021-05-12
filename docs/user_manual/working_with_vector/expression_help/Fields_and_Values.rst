@@ -19,7 +19,7 @@ Equates to a NULL value.
    :widths: 15 85
 
    * - Syntax
-     - NULL()
+     - NULL
    * - Examples
      - * ``NULL`` → a NULL value
 
