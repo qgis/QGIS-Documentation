@@ -180,10 +180,10 @@ for file in filenames:
     #print(data)
     if data['type'] == 'group':
         groups[data['name']] = {'description': data['description'], 'func_list': []}
-    elif data['type'] == 'function' or data['type'] == 'expression':
+    elif data['type'] in ['function', 'expression', 'operator', 'value']:
         functions[data['name']] = data
     else:
-        print(f'{data["name"]} is not a group or a function. It is a {data["type"]}.')
+        print(f'{data["name"]} is not a group, a function, a value or an operator. It is a {data["type"]}.')
 
 # Distribute functions by the groups
 for f_name in functions.keys():
