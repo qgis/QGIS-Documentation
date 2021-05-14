@@ -192,7 +192,7 @@ Adding or subtracting an interval to dates, datetimes or times, using the
 Fields and Values
 ------------------
 
-Contains a list of fields from the layer.
+Contains a list of fields from the layer, and special values.
 
 Double-click a field name to have it added to your expression. You can also
 type the field name (preferably inside double quotes) or its :ref:`alias
@@ -207,6 +207,13 @@ Sample values can also be accessed via right-clicking on a field.
 To add a value to the expression you are writing, double-click on it in the list.
 If the value is of a string type, it should be simple quoted, otherwise no quote
 is needed.
+
+.. contents::
+   :local:
+   :class: toc_columns
+
+.. include:: expression_help/Fields_and_Values.rst
+   :start-after: :orphan:
 
 
 Files and Paths Functions
@@ -675,52 +682,32 @@ This group contains operators (e.g., +, -, \*).
 Note that for most of the mathematical functions below,
 if one of the inputs is NULL then the result is NULL.
 
-.. csv-table::
-   :header: "Function", "Description"
-   :widths: 27,68
-   :class: longtable
+.. contents::
+   :local:
+   :class: toc_columns
 
-   "a + b", "Addition of two values (a plus b)"
-   "a - b", "Subtraction of two values (a minus b)."
-   "a * b", "Multiplication of two values (a multiplied by b)"
-   "a / b", "Division of two values (a divided by b)"
-   "a % b", "Remainder of division of a by b (eg, 7 % 2 = 1, or 2 fits into 7 three times with remainder 1)"
-   "a ^ b", "Power of two values (for example, 2^2=4 or 2^3=8)"
-   "a < b", "Compares two values and evaluates to 1 if the left value is less than the right value (a is smaller than b)"
-   "a <= b", "Compares two values and evaluates to 1 if the left value is less than or equal to the right value"
-   "a <> b", "Compares two values and evaluates to 1 if they are not equal"
-   "a = b", "Compares two values and evaluates to 1 if they are equal"
-   "a != b", "a and b are not equal"
-   "a > b", "Compares two values and evaluates to 1 if the left value is greater than the right value (a is larger than b)"
-   "a >= b", "Compares two values and evaluates to 1 if the left value is greater than or equal to the right value"
-   "a ~ b", "a matches the regular expression b"
-   "||", "Joins two values together into a string. If one of the values is NULL the result will be NULL"
-   "'\\n'", "Inserts a new line in a string"
-   "LIKE", "Returns 1 if the first parameter matches the supplied pattern"
-   "ILIKE", "Returns 1 if the first parameter matches case-insensitive the supplied
-   pattern (ILIKE can be used instead of LIKE to make the match case-insensitive)"
-   "a IS b", "Tests whether two values are identical. Returns 1 if a is the same as b"
-   "a OR b", "Returns 1 when condition a or condition b is true"
-   "a AND b", "Returns 1 when conditions a and b are true"
-   "NOT", "Negates a condition"
-   """Column_name""", "Value of the field *Column_name*, take care to not be confused with simple quote, see below"
-   "'string'", "a string value, take care to not be confused with double quote, see above"
-   "NULL", "null value"
-   "a IS NULL", "a has no value"
-   "a IS NOT NULL", "a has a value"
-   "a IN (value[,value])", "a is below the values listed"
-   "a NOT IN (value[,value])", "a is not below the values listed"
+.. include:: expression_help/Operators.rst
+   :start-after: :orphan:
+   :end-before: end_+_section
 
-**Some examples:**
+Further reading: :ref:`expression_function_String_concat`,
+:ref:`expression_function_Operators_concat`
 
-* Joins a string and a value from a column name::
+.. include:: expression_help/Operators.rst
+   :start-after: end_+_section
+   :end-before: end_||_section
 
-    'My feature''s id is: ' || "gid"
+Further reading: :ref:`expression_function_String_concat`,
+:ref:`expression_function_Operators_plus`
 
-* Test if the "description" attribute field starts with the 'Hello' string
-  in the value (note the position of the ``%`` character)::
+.. include:: expression_help/Operators.rst
+   :start-after: end_||_section
+   :end-before: end_~_section
 
-    "description" LIKE 'Hello%'
+Further reading: :ref:`expression_function_String_regexp_match`
+
+.. include:: expression_help/Operators.rst
+   :start-after: end_~_section
 
 
 .. _processing_functions:
@@ -835,6 +822,8 @@ operators, with some special characteristics:
     'My feature id is: ' || NULL => NULL 
     concat('My feature id is: ', NULL) => My feature's id is 
 
+further reading: :ref:`expression_function_Operators_concat`,
+:ref:`expression_function_Operators_plus`
 
 .. include:: expression_help/String.rst
    :start-after: .. end_concat_section
