@@ -192,6 +192,7 @@ for file in filenames:
     with open(filepath) as f:
         data = json.load(f)
     #print(data)
+    data['filename'] = file.replace('op_', '')
     if data['type'] == 'group':
         groups[data['name']] = {'description': data['description'], 'func_list': []}
     elif data['type'] in ['function', 'expression', 'operator', 'value']:
@@ -227,7 +228,7 @@ for g_name in groups:
                 f"   qgis/QGIS repository.\n\n")
         for f_name in func_list:
             f_description = sphynxify_html(functions[f_name]['description'])
-            f.write(f".. _expression_function_{g_name.replace(' ','_')}_{f_name}:\n\n"
+            f.write(f".. _expression_function_{g_name.replace(' ','_')}_{functions[f_name]['filename']}:\n\n"
                     f"{escape_colliding_functions(f_name)}\n"
                     f"{'.'* (len(escape_colliding_functions(f_name)))}\n\n"
                      f"{f_description}\n"

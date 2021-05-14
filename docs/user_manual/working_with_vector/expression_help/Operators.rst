@@ -6,7 +6,7 @@
    in the resources/function_help/json/ folder in the
    qgis/QGIS repository.
 
-.. _expression_function_Operators_%:
+.. _expression_function_Operators_modulo:
 
 %
 .
@@ -28,7 +28,7 @@ Remainder of division
 
 .. end_%_section
 
-.. _expression_function_Operators_*:
+.. _expression_function_Operators_asterisk:
 
 \*
 ..
@@ -50,7 +50,7 @@ Multiplication of two values
 
 .. end_*_section
 
-.. _expression_function_Operators_+:
+.. _expression_function_Operators_plus:
 
 \+
 ..
@@ -74,7 +74,7 @@ Addition of two values. If one of the values is NULL the result will be NULL.
 
 .. end_+_section
 
-.. _expression_function_Operators_-:
+.. _expression_function_Operators_minus:
 
 \-
 ..
@@ -97,7 +97,7 @@ Subtraction of two values. If one of the values is NULL the result will be NULL.
 
 .. end_-_section
 
-.. _expression_function_Operators_/:
+.. _expression_function_Operators_div:
 
 /
 .
@@ -119,7 +119,7 @@ Division of two values
 
 .. end_/_section
 
-.. _expression_function_Operators_<:
+.. _expression_function_Operators_lt:
 
 <
 .
@@ -142,7 +142,7 @@ Compares two values and evaluates to 1 if the left value is less than the right 
 
 .. end_<_section
 
-.. _expression_function_Operators_<=:
+.. _expression_function_Operators_le:
 
 <=
 ..
@@ -165,7 +165,7 @@ Compares two values and evaluates to 1 if the left value is less or equal than t
 
 .. end_<=_section
 
-.. _expression_function_Operators_<>:
+.. _expression_function_Operators_ne:
 
 <>
 ..
@@ -189,7 +189,7 @@ Compares two values and evaluates to 1 if they are not equal.
 
 .. end_<>_section
 
-.. _expression_function_Operators_=:
+.. _expression_function_Operators_eq:
 
 =
 .
@@ -213,7 +213,7 @@ Compares two values and evaluates to 1 if they are equal.
 
 .. end_=_section
 
-.. _expression_function_Operators_>:
+.. _expression_function_Operators_gt:
 
 >
 .
@@ -236,7 +236,7 @@ Compares two values and evaluates to 1 if the left value is greater than the rig
 
 .. end_>_section
 
-.. _expression_function_Operators_>=:
+.. _expression_function_Operators_ge:
 
 >=
 ..
@@ -461,7 +461,7 @@ Returns 1 when condition a or b is true.
 
 .. end_OR_section
 
-.. _expression_function_Operators_[]:
+.. _expression_function_Operators_index:
 
 []
 ..
@@ -485,7 +485,7 @@ Index operator. Returns an element from an array or map value.
 
 .. end_[]_section
 
-.. _expression_function_Operators_^:
+.. _expression_function_Operators_exp:
 
 ^
 .
@@ -507,7 +507,7 @@ Power of two values.
 
 .. end_^_section
 
-.. _expression_function_Operators_||:
+.. _expression_function_Operators_concat:
 
 \||
 ...
@@ -535,7 +535,7 @@ If one of the values is NULL the result will be NULL. See the CONCAT function fo
 
 .. end_||_section
 
-.. _expression_function_Operators_~:
+.. _expression_function_Operators_regex:
 
 ~
 .
