@@ -21,7 +21,7 @@ Equates to a NULL value.
    * - Examples
      - * ``NULL`` → a NULL value
 
-.. note:: To test for NULL use an <pre>IS NULL</pre> or <pre>IS NOT NULL</pre> expression.
+.. note:: To test for NULL use an *IS NULL* or *IS NOT NULL* expression.
 
 
 .. end_NULL_section

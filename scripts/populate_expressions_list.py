@@ -165,7 +165,7 @@ def format_variant(function_dict, f_name):
         v_description = ''
 
     if 'notes' in function_dict:
-        notes = f"\n\n.. note:: {function_dict['notes']}"
+        notes = f"\n\n.. note:: {sphynxify_html(function_dict['notes'])}"
     else:
         notes = ''
 
