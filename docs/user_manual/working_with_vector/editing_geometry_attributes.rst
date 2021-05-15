@@ -12,9 +12,9 @@
 QGIS has various capabilities for editing OGR, SpatiaLite, PostGIS,
 MSSQL Spatial and Oracle Spatial vector layers and tables.
 
-Editing can be done by placing nodes manually. And for lines and polygons
-, free-hand digitising can be toggled by pressing :kbd:`R` or activating
-stream digitizing in the 'Advanced Digitizing Toolbar'.
+Editing can be done by placing nodes manually. And for lines and polygons,
+free-hand digitizing can be toggled by pressing :kbd:`R` or activating
+stream digitizing in the :guilabel:`Advanced Digitizing Toolbar`.
 
 .. note::
    The procedure for editing GRASS layers is different - see section
@@ -33,8 +33,8 @@ stream digitizing in the 'Advanced Digitizing Toolbar'.
 .. tip:: **Validating Edits**
 
    The core plugin Geometry Checker can be used to validate new or modified
-   geometries to ensure their validity in order to prevent issues laterF
-   for more information see :ref:`geometry_checker`.
+   geometries to ensure their validity in order to prevent issues later.
+   For more information see :ref:`geometry_checker`.
 
 .. index:: Snapping
    single: Digitizing; Snapping
@@ -242,7 +242,7 @@ Topological editing works with features from different layers, as long
 as the layers are visible and in editing mode.
 
 In layer with Z values, topological editing will interpolate the Z value of 
-a point based on the value of the edge used for the connection.
+the vertex based on the value of the edge used for the connection.
 
 .. index:: Avoid overlap
    seealso: Avoid overlap; Topology
@@ -354,9 +354,20 @@ direction and a negative value does the opposite.
 Self-snapping
 -------------
 
-The last tool on the Snapping toolbar allows you to toggle self-snapping.
-When active, it allows you to snap to the geometry that is being edited.
+The |snappingSelf| :sup:`Self-snapping` option allows you to snap to
+the geometry that is being edited. Combined with the :ref:`advanced
+digitizing panel <advanced_digitizing_panel>`, this provides a handy way
+to digitize new edges relative to the previous edges or vertices.
 Self-snapping can cause invalid geometries, use with caution.
+
+.. only:: html
+
+  .. _figure_self_snapping:
+
+  .. figure:: img/self_snapping.gif
+     :align: center
+
+     Drawing features with self-snapping
 
 
 Digitizing an existing layer
@@ -863,7 +874,7 @@ Advanced digitizing
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
 | Icon                      | Purpose                                 | Icon                   | Purpose                 |
 +===========================+=========================================+========================+=========================+
-| |digitizewithCurve|       | Draw curves                             | |streamDigitizing|     | Enable stream digitizing|
+| |digitizewithCurve|       | Digitize with Curve                     | |streamDigitizing|     | Enable Stream Digitizing|
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
 | |moveFeature|             | Move Feature(s)                         | |moveFeatureCopy|      | Copy and Move Feature(s)|
 | |moveFeatureLine|         |                                         | |moveFeatureCopyLine|  |                         |
@@ -871,7 +882,7 @@ Advanced digitizing
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
 | |rotateFeature|           | Rotate Feature(s)                       | |simplifyFeatures|     | Simplify Feature        |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
-| |cad|                     | Enable Advanced Digitizing Tools        | |scaleFeature|         | Enable Tracing          |
+| |cad|                     | Enable Advanced Digitizing Tools        | |scaleFeature|         | Scale Feature           |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
 | |addRing|                 | Add Ring                                | |addPart|              | Add Part                |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
@@ -894,13 +905,13 @@ Table Advanced Editing: Vector layer advanced editing toolbar
 
 .. index::
    single: Digitizing tools; Draw curves
-   single: Digitizing tools; Enable stream digitizing
+   single: Digitizing tools; Stream digitizing
 .. _draw_curves:
 
-Draw Curves
----------------
+Straight, curve and stream digitizing
+-------------------------------------
 
-The |drawCurves| :sup:`Draw Curves` tool allows you to draw curves in layers with
+The |digitizewithCurve| :sup:`Digitize with Curve` tool allows you to draw curves in layers with
 geometries that support curves.
 
 Alternatively the |streamDigitizing| :sup:`Stream Digitizing` tool allows you to
@@ -987,9 +998,9 @@ To abort feature rotation, press the :kbd:`ESC` button or click on the
 Scale Feature
 -------------
 
-The Scale Feature tool is similar to the Rotate feature. Though instead of performing
-a rotation of selected features, it changes rescales their geometry. The change is
-performed in relation to the anchor point and the scale ration can be manually specified
+The |scaleFeature| :sup:`Scale Feature` tool is similar to the Rotate feature. Though instead of performing
+a rotation of selected features, it rescales their geometry. The change is
+performed in relation to the anchor point and the scale ratio can be manually specified
 in the widget that appears in the upper corner of the canvas.
 
 
@@ -1820,8 +1831,8 @@ and angle entered. Repeating the process, several points can be added.
 Information Floater
 -------------------
 
-As an additionnal tool, the Floater can also be activated. This allows to display
-the values in the panel right next to the cursor.
+As an additional tool, the |floater| :sup:`Floater` can also be activated.
+This allows to display and edit the values in the panel right next to the cursor.
 
 .. index:: Edit in place
 .. _processing_inplace_edit:
