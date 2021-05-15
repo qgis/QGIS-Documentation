@@ -1,24 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
-# Kwon.Yongchan <ruvyn@naver.com>, 2020
+# Harrissou Sant-anna, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:25+0000\n"
-"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
+"POT-Creation-Date: 2021-05-12 02:37+0000\n"
+"PO-Revision-Date: 2020-12-24 10:24+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2021\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -268,6 +270,10 @@ msgstr ""
 "|setProjection| :sup:`Select CRS` 버튼을 클릭한 다음 적절한 투영체를 직접 정의해줘야 합니다. "
 ":file:`.prj` 파일이 QGIS에서 사용되는, :guilabel:`CRS` 대화창 목록에 있는 완전한 투영체 파라미터를 제공하지 "
 "못 하는 경우가 많기 때문입니다."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:693
+msgid "setProjection"
+msgstr "setProjection"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:149
 msgid ""
@@ -654,6 +660,10 @@ msgstr ""
 "side if possible` 체크박스를 활성화하면 됩니다. 이 옵션을 활성화하면 데이터베이스에 지원하는 표현식만 전송할 것입니다. "
 "지원하지 않는 연산자 또는 함수를 이용한 표현식은 자연스럽게 폴백(fallback)되어 로컬에서 평가될 것입니다."
 
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:683
+msgid "checkbox"
+msgstr "checkbox"
+
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:367
 msgid "Support of PostgreSQL data types"
 msgstr "PostgreSQL 데이터 유형의 지원"
@@ -692,6 +702,10 @@ msgid ""
 msgstr ""
 "QGIS는 |dbManager| :sup:`DB Manager` 라는 핵심 플러그인을 내장하고 있습니다. 이 도구는 데이터를 불러오는 데"
 " 쓸 수 있으며, 스키마를 지원하기도 합니다. 더 자세한 내용은 :ref:`dbmanager` 을 참조하세요."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:685
+msgid "dbManager"
+msgstr "dbManager"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:392
 msgid "shp2pgsql"
@@ -765,6 +779,10 @@ msgstr ""
 "PostGIS를 지원하려면 OGR을 PostgreSQL과 함께 빌드해야만 한다는 사실을 기억하십시오. 함께 빌드했는지 확인하려면 "
 "(|nix| 에서) 다음과 같이 입력해보세요::"
 
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:689
+msgid "nix"
+msgstr "nix"
+
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:442
 msgid ""
 "If you prefer to use the PostgreSQL's **COPY** command instead of the "
@@ -773,6 +791,10 @@ msgid ""
 msgstr ""
 "PostgreSQL의 기본 메소드인 **INSERT INTO** 대신 **COPY** 명령어를 더 선호하는 경우, 다음 명령어로 (적어도"
 " |nix| 와 |osx| 에서는) 다음 환경 변수를 내보낼 수 있습니다::"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:691
+msgid "osx"
+msgstr "osx"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:448
 msgid ""
@@ -843,14 +865,15 @@ msgid ""
 "(lat/lon) crossing the 180 degrees longitude line "
 "(http://postgis.refractions.net/documentation/manual-2.0/ST_Shift_Longitude.html)."
 " As result, if we open such a map in QGIS, we could see two widely separated"
-" locations, that should appear near each other. In Figure_vector_crossing_, "
-"the tiny point on the far left of the map canvas (Chatham Islands) should be"
-" within the grid, to the right of the New Zealand main islands."
+" locations, that should appear near each other. In "
+":numref:`Figure_vector_crossing`, the tiny point on the far left of the map "
+"canvas (Chatham Islands) should be within the grid, to the right of the New "
+"Zealand main islands."
 msgstr ""
 "많은 GIS 패키지들이 경도 180˚ 선을 가로지르는 지리 참조 시스템(위도/경도)으로 벡터 맵을 감싸고 있지 않습니다. "
 "(http://postgis.refractions.net/documentation/manual-2.0/ST_Shift_Longitude.html)"
 " 그 결과, QGIS에서 이런 맵을 열었을 때, 서로 가까이 있어야 하지만 멀리 떨어져 있는 두 위치를 보게 됩니다. "
-":ref:`figure_vector_crossing` 그림에서, 맵 캔버스 왼쪽 구석에 있는 작은 점들(채텀 제도)은 그리드 내부, "
+":numref:`figure_vector_crossing` 에서, 맵 캔버스 왼쪽 구석에 있는 작은 점들(채텀 제도)은 그리드 내부, "
 "뉴질랜드 본도의 오른쪽에 있어야 합니다."
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:522
@@ -1000,14 +1023,14 @@ msgstr ":guilabel:`WRITE_BBOX`: YES로 설정하면 피처 및 피처 집합 수
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:608
 msgid ""
 "Besides GeoJSON there is also an option to export to \"GeoJSON - Newline "
-"Delimited\" (see https://gdal.org/drv_geojsonseq.html). Instead of a "
-"FeatureCollection with Features, you can stream one type (probably only "
-"Features) sequentially separated with newlines."
+"Delimited\" (see https://gdal.org/drivers/vector/geojsonseq.html). Instead "
+"of a FeatureCollection with Features, you can stream one type (probably only"
+" Features) sequentially separated with newlines."
 msgstr ""
 "GeoJSON 이외에, \"GeoJSON - 새줄 문자 구분(Newline Delimited)\" 으로 내보낼 수 있는 옵션도 있습니다."
-" (https://gdal.org/drv_geojsonseq.html 참조) 피처를 가진 피처 집합(FeatureCollection "
-"with Features) 대신 새줄 문자(newline)로 연속적으로 구분된 (아마도 피처만의) 한 유형을 줄줄이 이어지게 할 수 "
-"있습니다."
+" (https://gdal.org/drivers/vector/geojsonseq.html 참조) 피처를 가진 피처 "
+"집합(FeatureCollection with Features) 대신 새줄 문자(newline)로 연속적으로 구분된 (아마도 피처만의) "
+"한 유형을 줄줄이 이어지게 할 수 있습니다."
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:614
 msgid ""
