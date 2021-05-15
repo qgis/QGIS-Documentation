@@ -13,14 +13,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"POT-Creation-Date: 2021-05-12 02:37+0000\n"
 "PO-Revision-Date: 2020-12-24 12:04+0000\n"
 "Last-Translator: tomoyuki arai <tarai.3367@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
+"Generated-By: Babel 2.9.1\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -48,6 +48,14 @@ msgstr ""
 ":menuselection:`名前をつけて保存...` を利用することで、ワークスペースの状態を :ref:`QGISプロジェクトファイル "
 "<qgisprojectfile>`  に保存できます。"
 
+#: ../../docs/user_manual/introduction/project_files.rst:221
+msgid "fileSave"
+msgstr "fileSave"
+
+#: ../../docs/user_manual/introduction/project_files.rst:223
+msgid "fileSaveAs"
+msgstr "fileSaveAs"
+
 #: ../../docs/user_manual/introduction/project_files.rst:34
 msgid ""
 "If the project has been modified the ``*`` symbol will appear in the title "
@@ -61,6 +69,10 @@ msgstr ""
 "--> 一般情報` にある |checkbox| :guilabel:`必要なときにプロジェクトおよびデータソースの変更を保存するか尋ねる` "
 "の設定によって制御されます。"
 
+#: ../../docs/user_manual/introduction/project_files.rst:213
+msgid "checkbox"
+msgstr "checkbox"
+
 #: ../../docs/user_manual/introduction/project_files.rst:40
 msgid ""
 "You can load existing projects into QGIS from the Browser panel or by "
@@ -71,6 +83,10 @@ msgstr ""
 "既存のプロジェクトをQGISに読み込むには、ブラウザパネルを利用するか、 :menuselection:`プロジェクト -->` |fileOpen| "
 ":menuselection:`開く...` 、 :menuselection:`プロジェクト --> テンプレートから新規作成` 、または "
 ":menuselection:`プロジェクト --> 最近使用したプロジェクト -->` を使用します。"
+
+#: ../../docs/user_manual/introduction/project_files.rst:219
+msgid "fileOpen"
+msgstr "fileOpen"
 
 #: ../../docs/user_manual/introduction/project_files.rst:46
 msgid ""
@@ -96,6 +112,10 @@ msgstr ""
 "セッションをクリアして新たなセッションを開始したい場合は、:menuselection:`プロジェクト -->` |FileNew| "
 ":menuselection:`新規` "
 "を実行します。このとき、プロジェクトを開いてからや最後に保存されて以降に変更があった場合には、現在のプロジェクトを保存するように促されます。"
+
+#: ../../docs/user_manual/introduction/project_files.rst:217
+msgid "fileNew"
+msgstr "fileNew"
 
 #: ../../docs/user_manual/introduction/project_files.rst:60
 msgid ""
@@ -309,6 +329,10 @@ msgstr ""
 "パネルに表示されますが、 :guilabel:`レイヤ` パネルの横にある |indicatorBadLayer| :sup:`利用できないレイヤ!` "
 "アイコンまたはレイヤのコンテキストメニューの :guilabel:`データソースの変更...` を使用してパスを修正するまでは、データは何もありません。"
 
+#: ../../docs/user_manual/introduction/project_files.rst:225
+msgid "indicatorBadLayer"
+msgstr "indicatorBadLayer"
+
 #: ../../docs/user_manual/introduction/project_files.rst:161
 msgid ""
 "With the :guilabel:`Repair Data Source...` tool, once a layer path has been "
@@ -322,6 +346,10 @@ msgstr ""
 msgid ""
 "|deleteSelected| :guilabel:`Remove Unavailable Layers` from the project."
 msgstr "プロジェクトから |deleteSelected| :guilabel:`利用できないレイヤを削除します` 。"
+
+#: ../../docs/user_manual/introduction/project_files.rst:215
+msgid "deleteSelected"
+msgstr "deleteSelected"
 
 #: ../../docs/user_manual/introduction/project_files.rst:170
 msgid "Generating output"
@@ -344,10 +372,14 @@ msgid ""
 "resolution, size, ... Georeferencing the image is possible. See "
 ":ref:`exportingmapcanvas` for more details."
 msgstr ""
-"イメージの作成: :menuselection:`プロジェクト --> インポートとエクスポート -->` |saveMapAsImage| "
+"画像の作成： :menuselection:`プロジェクト --> インポートとエクスポート -->` |saveMapAsImage| "
 ":menuselection:`地図を画像にエクスポート...` "
-"を使うと地図キャンバスに描画されているものをスケール,解像度,サイズを指定してイメージ形式 (PNG, JPG, TIFF...) で出力できます, "
-"... ジオリファレンスされたイメージの出力も可能です. 詳細は :ref:`exportingmapcanvas` を参照して下さい."
+"を使うと、カスタムのスケール、解像度、サイズ等でマップキャンバスに描画されているものを画像形式（PNG、JPG、TIFF等）で出力できます。画像に地理参照情報を追加することも可能です。詳細は"
+" :ref:`exportingmapcanvas` を参照して下さい。"
+
+#: ../../docs/user_manual/introduction/project_files.rst:229
+msgid "saveMapAsImage"
+msgstr "saveMapAsImage"
 
 #: ../../docs/user_manual/introduction/project_files.rst:187
 msgid ""
@@ -356,9 +388,9 @@ msgid ""
 "resolution, and with some advanced settings (simplification, georeferencing,"
 " ...). See :ref:`exportingmapcanvas` for more details."
 msgstr ""
-"PDF ファイルへの出力: :menuselection:`プロジェクト --> インポートとエクスポート --> 地図をPDFへエクスポート...` "
-"を使うとスケール,解像度といくつかの設定(簡素化, ジオリファレンス, ...)を指定して地図キャンバスをPDFに出力することができます. 詳細は "
-":ref:`exportingmapcanvas` を参照して下さい."
+"PDF ファイルへの出力： :menuselection:`プロジェクト --> インポートとエクスポート --> 地図をPDFへエクスポート...` "
+"を使うと、カスタムのスケール、解像度といくつかの詳細設定（簡素化、ジオリファレンス等）を指定してマップキャンバスをPDFに出力することができます。詳細は"
+" :ref:`exportingmapcanvas` を参照して下さい。"
 
 #: ../../docs/user_manual/introduction/project_files.rst:193
 msgid ""
@@ -368,10 +400,10 @@ msgid ""
 "Through the 'Symbology mode', symbols from the original QGIS Symbology can "
 "be exported with high fidelity (see section :ref:`create_dxf_files`)."
 msgstr ""
-"DXF ファイルに出力する: :menuselection:`プロジェクト --> インポートとエクスポート --> Export Project to"
-" プロジェクトをDXFにエクスポート...` を選ぶとダイアログが開き 'シンボロジモード'  'シンボルの縮尺' と "
-"DXFに出力するベクタレイヤを選択できます. Through the 'シンボロジモード' を使うとQGISのオリジナルシンボルを忠実に出力できます  "
-"( :ref:`create_dxf_files` 参照)."
+"DXF ファイルに出力する： :menuselection:`プロジェクト --> インポートとエクスポート --> "
+"プロジェクトをDXFにエクスポート...` を選ぶとダイアログが開き、「シンボロジーモード」、「シンボルの縮尺」 "
+"、DXFに出力するベクタレイヤを定義できます。「シンボロジーモード」によって、QGISのオリジナルシンボルを忠実に出力できます（ "
+":ref:`create_dxf_files` セクションを参照）。"
 
 #: ../../docs/user_manual/introduction/project_files.rst:200
 msgid ""
@@ -379,6 +411,10 @@ msgid ""
 " Print Layout...` opens a dialog where you can layout and print the current "
 "map canvas (see section :ref:`label_printlayout`)."
 msgstr ""
-"地図デザイン: :menuselection:`プロジェクト -->` |newLayout| "
-":menuselection:`新規印刷レイアウト...` を選択すると現在のマップキャンバスをレイアウトして印刷するダイアログが表示されます ( "
-":ref:`label_printlayout` 参照)."
+"地図をデザインする： :menuselection:`プロジェクト -->` |newLayout| "
+":menuselection:`新規印刷レイアウト...` を選択するとダイアログが開き、現在のマップキャンバスをレイアウトして印刷することができます（"
+" :ref:`label_printlayout` セクションを参照）。"
+
+#: ../../docs/user_manual/introduction/project_files.rst:227
+msgid "newLayout"
+msgstr "newLayout"
