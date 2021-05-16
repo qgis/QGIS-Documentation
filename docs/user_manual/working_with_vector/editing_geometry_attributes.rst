@@ -12,7 +12,7 @@
 QGIS has various capabilities for editing OGR, SpatiaLite, PostGIS,
 MSSQL Spatial and Oracle Spatial vector layers and tables.
 
-Editing can be done by placing nodes manually. And for lines and polygons,
+Digitizing can be done by placing nodes manually. And for lines and polygons,
 free-hand digitizing can be toggled by pressing :kbd:`R` or activating
 stream digitizing in the :guilabel:`Advanced Digitizing Toolbar`.
 
@@ -32,9 +32,8 @@ stream digitizing in the :guilabel:`Advanced Digitizing Toolbar`.
 
 .. tip:: **Validating Edits**
 
-   The core plugin Geometry Checker can be used to validate new or modified
-   geometries to ensure their validity in order to prevent issues later.
-   For more information see :ref:`geometry_checker`.
+   Continuous validation can be acivated on a layer basis in the
+   Layer Properties -> Digitizing Tab.
 
 .. index:: Snapping
    single: Digitizing; Snapping
@@ -67,12 +66,6 @@ snapping` button on the :guilabel:`Snapping Toolbar` or pressing :kbd:`s`.
 The snapping mode, tolerance value, and units can also be configured in
 this toolbar.
 
-The snapping configuration can also be set in
-:menuselection:`Project --> Snapping Options...`. Or it can be customied for
-each layer in the layer properties in the Digitizing tab. This will show
-a dotted grid when the scale is low enough to show the specified precision limit.
-Snapping can be performed on the dots of the grid.
-
 There are three options to select the layer(s) to snap to:
 
 * :guilabel:`All layers`: quick setting for all visible layers in the
@@ -104,6 +97,14 @@ distances.
 For example, if you have a minimum distance between elements, this
 option can be useful to ensure that you don’t add vertices too close to
 each other.
+
+The snapping configuration can also be set in
+:menuselection:`Project --> Snapping Options...`.  Or it can be customized for
+each layer in the :guilabel:`Digitizing` tab of the layer properties dialog.
+This will show This will show a dotted grid when the scale is low enough to
+show the specified precision limit.
+Snapping can then be performed on the dots of the grid. The dots will only appear
+when the canvas scale is near the precision limit.
 
 .. _figure_edit_snapping:
 
@@ -250,21 +251,16 @@ the vertex based on the value of the edge used for the connection.
 Overlapping control
 -------------------
 
-Overlapping can be controlled by the overlap tool. Three modes are available:
+Overlapping prevents you from drawing new features that overlap existing ones in the
+selected layer, speeding up digitizing of adjacent polygons.
+It can be controlled by the overlap tool. Three modes are available:
 
-#. Allow Overlap
-#. Avoid Overlap on Active Layer
-#. Follow Advanced Configuration
-
-Allow Overlap is the default setting. The 'Avoid Overlap on Active Layer' prevent
- any overlap with other features from the layer being edited. And 'Follow Advanced
-Configuration' allows the overlapping setting to be set on a layer basis in the
-advanced configuration panel.
-
-With avoid overlap enabled, if you already have one polygon, you can digitize
-a second one such that they intersect. QGIS will then cut the second polygon to the
-boundary of the existing one. The advantage is that you don't have to
-digitize all vertices of the common boundary.
+#. |allowIntersections| :guilabel:`Allow Overlap` (default)
+#. |avoidIntersectionsCurrentLayer| :guilabel:`Avoid Overlap on Active Layer`:
+   prevents any overlap with other features from the layer being edited
+#. |avoidIntersectionsLayers| :guilabel:`Follow Advanced Configuration`:
+   allows the overlapping setting to be set on a layer basis in the
+   :guilabel:`Advanced configuration` view mode.
 
 .. note:: If the new geometry is totally covered by existing ones, it gets
    cleared, and QGIS will show an error message.
@@ -274,6 +270,10 @@ digitize all vertices of the common boundary.
    Since this option will cut new overlapping geometries of any polygon layer,
    you can get unexpected geometries if you forget to uncheck it when no longer
    needed.
+
+QGIS will cut the geometry of any new polygon to the boundary of the existing ones.
+The advantage is that you don't have to digitize all vertices of the common boundary
+ by voluntarily overlapping any new geomtries and letting QGIS cut them.
 
 .. index::
    single: Digitizing tools; Automatic tracing
@@ -874,6 +874,8 @@ Advanced digitizing
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
 | Icon                      | Purpose                                 | Icon                   | Purpose                 |
 +===========================+=========================================+========================+=========================+
+| |cad|                     | Enable Advanced Digitizing Tools        |                        |                         |
++---------------------------+-----------------------------------------+------------------------+-------------------------+
 | |digitizewithCurve|       | Digitize with Curve                     | |streamDigitizing|     | Enable Stream Digitizing|
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
 | |moveFeature|             | Move Feature(s)                         | |moveFeatureCopy|      | Copy and Move Feature(s)|
@@ -882,7 +884,7 @@ Advanced digitizing
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
 | |rotateFeature|           | Rotate Feature(s)                       | |simplifyFeatures|     | Simplify Feature        |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
-| |cad|                     | Enable Advanced Digitizing Tools        | |scaleFeature|         | Scale Feature           |
+| |scaleFeature|            | Scale Feature                           |                        |                         |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
 | |addRing|                 | Add Ring                                | |addPart|              | Add Part                |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
@@ -916,8 +918,8 @@ geometries that support curves.
 
 Alternatively the |streamDigitizing| :sup:`Stream Digitizing` tool allows you to
 activate and deactivate stream digitizing. Allowing to create features in freehand
-mode. Generatig features with curves with dense vertices, even if the layer does not
-support curved geometries. 
+mode. The tolerance of the tool affects the spacing between each created vertex
+when the tool is used with Advanced digitizing enabled.
 
 .. index::
    single: Digitizing tools; Move feature
