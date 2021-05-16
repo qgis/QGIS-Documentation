@@ -551,12 +551,62 @@ Outputs
    * - **File**
      - ``OUTPUT``
      - [String]
-     - Destination of the loggin
+     - Destination of the log
 
 Python code
 ...........
 
 **Algorithm ID**: ``qgis:savelog``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+.. _qgiscreatedirectory:
+
+Create Directory
+----------------
+This algorithm creates a new directory on a file system.
+Directories will be created recursively, creating all required parent
+directories in order to construct the full specified directory path.
+No errors will be raised if the directory already exists.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Directory Path**
+     - ``PATH``
+     - [String]
+     - Folder path to create
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output**
+     - ``OUTPUT``
+     - [Folder]
+     - Created folder
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:createdirectory``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
