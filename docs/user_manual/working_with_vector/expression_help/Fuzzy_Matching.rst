@@ -6,8 +6,6 @@
    in the resources/function_help/json/ folder in the
    qgis/QGIS repository.
 
-.. hamming_distance_section
-
 .. _expression_function_Fuzzy_Matching_hamming_distance:
 
 hamming_distance
@@ -30,8 +28,6 @@ Returns the Hamming distance between two strings. This equates to the number of 
 
 
 .. end_hamming_distance_section
-
-.. levenshtein_section
 
 .. _expression_function_Fuzzy_Matching_levenshtein:
 
@@ -58,8 +54,6 @@ The Levenshtein distance is a measure of the similarity between two strings. Sma
 
 .. end_levenshtein_section
 
-.. longest_common_substring_section
-
 .. _expression_function_Fuzzy_Matching_longest_common_substring:
 
 longest_common_substring
@@ -82,8 +76,6 @@ Returns the longest common substring between two strings. This substring is the 
 
 
 .. end_longest_common_substring_section
-
-.. soundex_section
 
 .. _expression_function_Fuzzy_Matching_soundex:
 

@@ -6,8 +6,6 @@
    in the resources/function_help/json/ folder in the
    qgis/QGIS repository.
 
-.. age_section
-
 .. _expression_function_Date_and_Time_age:
 
 age
@@ -44,8 +42,6 @@ The difference is returned as an ``Interval`` and needs to be used with one of t
 
 .. end_age_section
 
-.. datetime_from_epoch_section
-
 .. _expression_function_Date_and_Time_datetime_from_epoch:
 
 datetime_from_epoch
@@ -65,8 +61,6 @@ Returns a datetime whose date and time are the number of milliseconds, msecs, th
 
 
 .. end_datetime_from_epoch_section
-
-.. day_section
 
 .. _expression_function_Date_and_Time_day:
 
@@ -109,8 +103,6 @@ Calculates the length in days of an interval.
 
 .. end_day_section
 
-.. day_of_week_section
-
 .. _expression_function_Date_and_Time_day_of_week:
 
 day_of_week
@@ -131,8 +123,6 @@ Returns the day of the week for a specified date or datetime. The returned value
 
 .. end_day_of_week_section
 
-.. epoch_section
-
 .. _expression_function_Date_and_Time_epoch:
 
 epoch
@@ -152,8 +142,6 @@ Returns the interval in milliseconds between the unix epoch and a given date val
 
 
 .. end_epoch_section
-
-.. format_date_section
 
 .. _expression_function_Date_and_Time_format_date:
 
@@ -222,8 +210,6 @@ Formats a date type or string into a custom string format. Uses Qt date/time for
 
 .. end_format_date_section
 
-.. hour_section
-
 .. _expression_function_Date_and_Time_hour:
 
 hour
@@ -265,8 +251,6 @@ Calculates the length in hours of an interval.
 
 .. end_hour_section
 
-.. make_date_section
-
 .. _expression_function_Date_and_Time_make_date:
 
 make_date
@@ -288,8 +272,6 @@ Creates a date value from year, month and day numbers.
 
 
 .. end_make_date_section
-
-.. make_datetime_section
 
 .. _expression_function_Date_and_Time_make_datetime:
 
@@ -315,8 +297,6 @@ Creates a datetime value from year, month, day, hour, minute and second numbers.
 
 
 .. end_make_datetime_section
-
-.. make_interval_section
 
 .. _expression_function_Date_and_Time_make_interval:
 
@@ -348,8 +328,6 @@ Creates an interval value from year, month, weeks, days, hours, minute and secon
 
 .. end_make_interval_section
 
-.. make_time_section
-
 .. _expression_function_Date_and_Time_make_time:
 
 make_time
@@ -371,8 +349,6 @@ Creates a time value from hour, minute and second numbers.
 
 
 .. end_make_time_section
-
-.. minute_section
 
 .. _expression_function_Date_and_Time_minute:
 
@@ -415,8 +391,6 @@ Calculates the length in minutes of an interval.
 
 .. end_minute_section
 
-.. month_section
-
 .. _expression_function_Date_and_Time_month:
 
 month
@@ -457,8 +431,6 @@ Calculates the length in months of an interval.
 
 .. end_month_section
 
-.. now_section
-
 .. _expression_function_Date_and_Time_now:
 
 now
@@ -476,8 +448,6 @@ Returns the current date and time. The function is static and will return consis
 
 
 .. end_now_section
-
-.. second_section
 
 .. _expression_function_Date_and_Time_second:
 
@@ -520,8 +490,6 @@ Calculates the length in seconds of an interval.
 
 .. end_second_section
 
-.. to_date_section
-
 .. _expression_function_Date_and_Time_to_date:
 
 to_date
@@ -547,8 +515,6 @@ Converts a string into a date object. An optional format string can be provided 
 
 
 .. end_to_date_section
-
-.. to_datetime_section
 
 .. _expression_function_Date_and_Time_to_datetime:
 
@@ -576,8 +542,6 @@ Converts a string into a datetime object. An optional format string can be provi
 
 .. end_to_datetime_section
 
-.. to_interval_section
-
 .. _expression_function_Date_and_Time_to_interval:
 
 to_interval
@@ -599,8 +563,6 @@ Converts a string to an interval type. Can be used to take days, hours, month, e
 
 
 .. end_to_interval_section
-
-.. to_time_section
 
 .. _expression_function_Date_and_Time_to_time:
 
@@ -627,8 +589,6 @@ Converts a string into a time object. An optional format string can be provided 
 
 
 .. end_to_time_section
-
-.. week_section
 
 .. _expression_function_Date_and_Time_week:
 
@@ -669,8 +629,6 @@ Calculates the length in weeks of an interval.
 
 
 .. end_week_section
-
-.. year_section
 
 .. _expression_function_Date_and_Time_year:
 

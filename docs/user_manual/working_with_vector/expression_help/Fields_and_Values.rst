@@ -6,23 +6,23 @@
    in the resources/function_help/json/ folder in the
    qgis/QGIS repository.
 
-.. _expression_function_Processing_parameter:
+.. _expression_function_Fields_and_Values_NULL:
 
-parameter
-.........
+NULL
+....
 
-Returns the value of a processing algorithm input parameter.
+Equates to a NULL value.
 
 .. list-table::
    :widths: 15 85
 
    * - Syntax
-     - parameter(name)
-   * - Arguments
-     - * **name** - name of the corresponding input parameter
+     - NULL
    * - Examples
-     - * ``parameter('BUFFER_SIZE')`` → 5.6
+     - * ``NULL`` → a NULL value
+
+.. note:: To test for NULL use an *IS NULL* or *IS NOT NULL* expression.
 
 
-.. end_parameter_section
+.. end_NULL_section
 

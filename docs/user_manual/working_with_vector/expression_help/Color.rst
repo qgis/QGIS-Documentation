@@ -6,8 +6,6 @@
    in the resources/function_help/json/ folder in the
    qgis/QGIS repository.
 
-.. color_cmyk_section
-
 .. _expression_function_Color_color_cmyk:
 
 color_cmyk
@@ -30,8 +28,6 @@ Returns a string representation of a color based on its cyan, magenta, yellow an
 
 
 .. end_color_cmyk_section
-
-.. color_cmyka_section
 
 .. _expression_function_Color_color_cmyka:
 
@@ -57,8 +53,6 @@ Returns a string representation of a color based on its cyan, magenta, yellow, b
 
 .. end_color_cmyka_section
 
-.. color_grayscale_average_section
-
 .. _expression_function_Color_color_grayscale_average:
 
 color_grayscale_average
@@ -78,8 +72,6 @@ Applies a grayscale filter and returns a string representation from a provided c
 
 
 .. end_color_grayscale_average_section
-
-.. color_hsl_section
 
 .. _expression_function_Color_color_hsl:
 
@@ -102,8 +94,6 @@ Returns a string representation of a color based on its hue, saturation, and lig
 
 
 .. end_color_hsl_section
-
-.. color_hsla_section
 
 .. _expression_function_Color_color_hsla:
 
@@ -128,8 +118,6 @@ Returns a string representation of a color based on its hue, saturation, lightne
 
 .. end_color_hsla_section
 
-.. color_hsv_section
-
 .. _expression_function_Color_color_hsv:
 
 color_hsv
@@ -151,8 +139,6 @@ Returns a string representation of a color based on its hue, saturation, and val
 
 
 .. end_color_hsv_section
-
-.. color_hsva_section
 
 .. _expression_function_Color_color_hsva:
 
@@ -177,8 +163,6 @@ Returns a string representation of a color based on its hue, saturation, value a
 
 .. end_color_hsva_section
 
-.. color_mix_rgb_section
-
 .. _expression_function_Color_color_mix_rgb:
 
 color_mix_rgb
@@ -200,8 +184,6 @@ Returns a string representing a color mixing the red, green, blue, and alpha val
 
 
 .. end_color_mix_rgb_section
-
-.. color_part_section
 
 .. _expression_function_Color_color_part:
 
@@ -243,8 +225,6 @@ Returns a specific component from a color string, e.g., the red component or alp
 
 .. end_color_part_section
 
-.. color_rgb_section
-
 .. _expression_function_Color_color_rgb:
 
 color_rgb
@@ -266,8 +246,6 @@ Returns a string representation of a color based on its red, green, and blue com
 
 
 .. end_color_rgb_section
-
-.. color_rgba_section
 
 .. _expression_function_Color_color_rgba:
 
@@ -292,8 +270,6 @@ Returns a string representation of a color based on its red, green, blue, and al
 
 .. end_color_rgba_section
 
-.. create_ramp_section
-
 .. _expression_function_Color_create_ramp:
 
 create_ramp
@@ -316,8 +292,6 @@ Returns a gradient ramp from a map of color strings and steps.
 
 
 .. end_create_ramp_section
-
-.. darker_section
 
 .. _expression_function_Color_darker:
 
@@ -346,8 +320,6 @@ Returns a darker (or lighter) color string
 
 .. end_darker_section
 
-.. lighter_section
-
 .. _expression_function_Color_lighter:
 
 lighter
@@ -375,8 +347,6 @@ Returns a lighter (or darker) color string
 
 .. end_lighter_section
 
-.. project_color_section
-
 .. _expression_function_Color_project_color:
 
 project_color
@@ -396,8 +366,6 @@ Returns a color from the project's color scheme.
 
 
 .. end_project_color_section
-
-.. ramp_color_section
 
 .. _expression_function_Color_ramp_color:
 
@@ -441,8 +409,6 @@ Returns a string representing a color from an expression-created ramp
 
 
 .. end_ramp_color_section
-
-.. set_color_part_section
 
 .. _expression_function_Color_set_color_part:
 
