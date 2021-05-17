@@ -58,12 +58,12 @@ Refer back to the module on vector analysis.
       the :menuselection:`Properties --> Source` tab.
    #. Then build the query ``"suitable" = 1``.
    #. Click :guilabel:`OK` to filter out all the polygons where this condition
-      isn't met. When viewed over the original raster, the areas should overlap 
+      isn't met. When viewed over the original raster, the areas should overlap
       perfectly:
-     
+
       .. figure:: img/polygonize_raster.png
          :align: center
-    
+
    #. You can save this layer by right-clicking on the :guilabel:`all_terrain`
       layer in the :guilabel:`Layers` panel and choosing :guilabel:`Save As...`,
       then continue as per the instructions.
@@ -81,11 +81,14 @@ opposite conversion from the one performed above. Convert to raster the
 .. figure:: img/vector_to_raster.png
    :align: center
 
-* :guilabel:`Input file` is :guilabel:`all_terrain`.
-* :guilabel:`Output file...` is
-  :file:`exercise_data/residential_development/raster_conversion.tif`.
+* :guilabel:`Input layer` is :guilabel:`all_terrain`.
+* Field name is :guilabel:`suitable`.
+* :guilabel:`Output raster size units` is :guilabel:`Pixels`.
 * :guilabel:`Width` and :guilabel:`Height` are ``837`` and ``661``,
   respectively.
+* Get the :guilabel:`Output extent` from the :guilabel:`all_terrain` layer.
+* Set output file :guilabel:`Rasterized` to
+  :file:`exercise_data/residential_development/raster_conversion.tif`.
 
 .. note::  The size of the output image is specified here to be the same as the
    original raster which was vectorized. To view the dimensions of an image,
