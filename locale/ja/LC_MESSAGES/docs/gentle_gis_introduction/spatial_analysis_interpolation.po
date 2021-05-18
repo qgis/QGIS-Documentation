@@ -1,23 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
+# Harrissou Sant-anna, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:15+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"POT-Creation-Date: 2021-05-12 02:37+0000\n"
+"PO-Revision-Date: 2020-12-24 10:28+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -73,23 +75,6 @@ msgstr ""
 msgid "Spatial interpolation in detail"
 msgstr "空間補間の詳細"
 
-#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:31
-msgid ""
-"Spatial interpolation is the process of using points with known values to "
-"estimate values at other unknown points. For example, to make a "
-"precipitation (rainfall) map for your country, you will not find enough "
-"evenly spread weather stations to cover the entire region. Spatial "
-"interpolation can estimate the temperatures at locations without recorded "
-"data by using known temperature readings at nearby weather stations (see "
-"figure_temperature_map_). This type of interpolated surface is often called "
-"a **statistical surface**. Elevation data, precipitation, snow accumulation,"
-" water table and population density are other types of data that can be "
-"computed using interpolation."
-msgstr ""
-"空間補間は、既知の値を持つ点を使用して、他の未知の点の値を推定するプロセスです。たとえば、国内の降水量（降雨量）図を作成するには、全域をカバーするために十分に均等に広がる気象観測所を見つけることはできません。空間補間では、近くの気象観測所での既知の温度測定値を使用して、記録されていない場所の温度を推定できます（"
-" figure_temperature_map_ を参照）。このタイプの補間された表面は、しばしば **統計的サーフェス** "
-"と呼ばれます。補間を使用して計算できるデータには他にも、標高データ、降水量、積雪量、水位表および人口密度があります。"
-
 #: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:47
 msgid "Temperature map interpolated from South African Weather Stations."
 msgstr "気温図は、南アフリカの気候条件から補間されています。"
@@ -130,16 +115,6 @@ msgstr ""
 msgid "Inverse Distance Weighted (IDW)"
 msgstr "逆距離加重（IDW）"
 
-#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:69
-msgid ""
-"In the IDW interpolation method, the sample points are weighted during "
-"interpolation such that the influence of one point relative to another "
-"declines with distance from the unknown point you want to create (see "
-"figure_idw_interpolation_)."
-msgstr ""
-"IDW補間法では、ある点から別の点への影響が推定される新点からの距離で減衰するように、サンプル点に重みを与えます（ "
-"figure_idw_interpolation_ を参照）。"
-
 #: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:80
 msgid ""
 "Inverse Distance Weighted interpolation based on weighted sample point "
@@ -160,28 +135,6 @@ msgid ""
 msgstr ""
 "重み付けが、新しい点からの距離が増加するにつれて重み付けの影響がどのように低下​​するかを制御する重み付け係数を使用して、サンプル点に割り当てられます。重み付け係数が大きくなるほど、補間処理に与える効果はその未知の点から遠い点ほど小さくなります。係数が増加するにつれ、未知の点の値は最も近い観測点の値に近づきます。"
 
-#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:91
-msgid ""
-"It is important to notice that the IDW interpolation method also has some "
-"disadvantages: the quality of the interpolation result can decrease, if the "
-"distribution of sample data points is uneven. Furthermore, maximum and "
-"minimum values in the interpolated surface can only occur at sample data "
-"points. This often results in small peaks and pits around the sample data "
-"points as shown in figure_idw_interpolation_."
-msgstr ""
-"IDW補間法にもいくつかの欠点があることに注意することが重要です。サンプルデータ点の分布が不均一な場合、補間結果の品質が低下する可能性があります。さらに、補間されたサーフェスの最大値と最小値は、サンプルデータポイントでのみ発生できます。これにより、"
-" figure_idw_interpolation_ に示すように、サンプルデータポイントの周りに小さなでっぱりとへこみが生じることがよくあります。"
-
-#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:98
-msgid ""
-"In GIS, interpolation results are usually shown as a 2 dimensional raster "
-"layer. In figure_idw_result_, you can see a typical IDW interpolation "
-"result, based on elevation sample points collected in the field with a GPS "
-"device."
-msgstr ""
-"GISにおいて、補間結果は、通常、2次元ラスターレイヤーとして示されています。 figure_idw_result_ "
-"では、GPS機器でフィールド収集された標高サンプル点に基づく、典型的なIDW補間結果を見ることができます。"
-
 #: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:108
 msgid ""
 "IDW interpolation result from irregularly collected elevation sample points "
@@ -192,19 +145,6 @@ msgstr "IDW補間では不規則に集められた標高サンプルポイント
 msgid "Triangulated Irregular Network (TIN)"
 msgstr "不規則三角網（TIN）"
 
-#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:114
-msgid ""
-"TIN interpolation is another popular tool in GIS. A common TIN algorithm is "
-"called **Delaunay triangulation**. It tries to create a surface formed by "
-"triangles of nearest neighbour points. To do this, circumcircles around "
-"selected sample points are created and their intersections are connected to "
-"a network of non overlapping and as compact as possible triangles (see "
-"figure_tin_interpolation_)."
-msgstr ""
-"TIN補間はGISにおけるもう一つの一般的なツールです。一般的なTINアルゴリズムは **ドロネー三角形分割** "
-"と呼ばれ、最近傍点の三角形で形成されたサーフェスを作成しようとします。これを行うために、選択されたサンプル点の周りの外接円が作成され、それらの交点は、重複せず、可能な限りコンパクトなネットワークに連結されます（"
-" figure_tin_interpolation_ 参照）。"
-
 #: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:126
 msgid ""
 "Delaunay triangulation with circumcircles around the red sample data. The "
@@ -213,17 +153,6 @@ msgid ""
 msgstr ""
 "赤のサンプルデータの周りの外接円とのドロネー三角形分割。標高ベクターポイントから作成された結果として補間したTINサーフェスを右側に示します。画像元: "
 "Mitas, L., Mitasova, H. (1999)."
-
-#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:130
-msgid ""
-"The main disadvantage of the TIN interpolation is that the surfaces are not "
-"smooth and may give a jagged appearance. This is caused by discontinuous "
-"slopes at the triangle edges and sample data points. In addition, "
-"triangulation is generally not suitable for extrapolation beyond the area "
-"with collected sample data points (see figure_tin_result_ )."
-msgstr ""
-"TIN補間の主な欠点は、サーフェスがスムーズではなく、ギザギザの外観になることです。これは、三角形の辺とサンプルのデータ点で傾きが不連続であるせいで起こります。さらに、三角形分割は一般に、収集されたサンプルデータ点を含む領域を超える外挿には適しません（"
-" figure_tin_result_ 参照）。"
 
 #: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:142
 msgid ""

@@ -1,23 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
+# Harrissou Sant-anna, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:16+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"POT-Creation-Date: 2021-05-12 02:37+0000\n"
+"PO-Revision-Date: 2020-12-24 12:05+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2020\n"
 "Language-Team: Russian (https://www.transifex.com/qgis/teams/6144/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 "Language: ru\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
@@ -65,25 +67,6 @@ msgstr ""
 "пересечения). Топология необходима при проведении некоторых видов анализа, "
 "например, анализа сети."
 
-#: ../../docs/gentle_gis_introduction/topology.rst:23
-msgid ""
-"Imagine you travel to London. On a sightseeing tour you plan to visit St. "
-"Paul's Cathedral first and in the afternoon Covent Garden Market for some "
-"souvenirs. Looking at the Underground map of London (see "
-"figure_topology_london_) you have to find connecting trains to get from "
-"Covent Garden to St. Paul's. This requires topological information (data) "
-"about where it is possible to change trains. Looking at a map of the "
-"underground, the topological relationships are illustrated by circles that "
-"show connectivity."
-msgstr ""
-"Представьте, что вы приехали в Лондон. Вы хотите посетить собор Св. Павла, а"
-" во второй половине дня поехать на Ковент-Гарден и купить сувениры. Поэтому "
-"вам необходимо на карте метро Лондона (см.рисунок figure_topology_london_) "
-"найти поезда, соединяющие собор Св. Павла и Ковент-Гарден. Для решение этой "
-"задачи нужна топологическая информация (данные) о том, где можно выполнить "
-"пересадку. На карте метро топологические взаимоотношения ообзначены "
-"окружностями."
-
 #: ../../docs/gentle_gis_introduction/topology.rst:37
 msgid "Topology of London Underground Network."
 msgstr "Топология лондонского метро"
@@ -91,26 +74,6 @@ msgstr "Топология лондонского метро"
 #: ../../docs/gentle_gis_introduction/topology.rst:40
 msgid "Topology errors"
 msgstr "Ошибки топологии"
-
-#: ../../docs/gentle_gis_introduction/topology.rst:42
-msgid ""
-"There are different types of topological errors and they can be grouped "
-"according to whether the vector feature types are polygons or polylines. "
-"Topological errors with **polygon** features can include unclosed polygons, "
-"gaps between polygon borders or overlapping polygon borders. A common "
-"topological error with **polyline** features is that they do not meet "
-"perfectly at a point (node). This type of error is called an **undershoot** "
-"if a gap exists between the lines, and an **overshoot** if a line ends "
-"beyond the line it should connect to (see figure_topology_errors_)."
-msgstr ""
-"Существует разные ошибки топологии, но все они делятся на группы в "
-"зависимости от того наблюдаются они на линиях или на полигонах. "
-"Топологические ошибки **полигональных** объектов включают незамкнутые "
-"полигоны, щели между смежными границами полигонов или наложение полигонов. "
-"Наиболее частая ошибка топологии **линейных** объектов --- отсутствие "
-"правильного пересечения в узле. Такие ошибки называют **недоводом**, если "
-"между линиями имеется щель, и **перехлест**, если концы линий выходят за "
-"пределы узла вместо соединения в нем (см. рисунок figure_topology_errors_)."
 
 #: ../../docs/gentle_gis_introduction/topology.rst:57
 msgid ""
@@ -232,36 +195,6 @@ msgstr "Горизонтали в линейном слое не должны п
 msgid "Topological tools"
 msgstr "Инструменты топологии"
 
-#: ../../docs/gentle_gis_introduction/topology.rst:104
-msgid ""
-"Many GIS applications provide tools for topological editing. For example in "
-"QGIS you can **enable topological editing** to improve editing and "
-"maintaining common boundaries in polygon layers. A GIS such as QGIS "
-"'detects' a shared boundary in a polygon map so you only have to move the "
-"edge vertex of one polygon boundary and QGIS will ensure the updating of the"
-" other polygon boundaries as shown in figure_topological_tools_ (1)."
-msgstr ""
-"Многие ГИС-приложения предоставляют инструменты для топологического "
-"редактирования. Так, в QGIS можно использовать активировать режим "
-"«Топологическое редактирование» чтобы сделать редактирование общих границ "
-"полигонов более удобным. Такие ГИС как QGIS «обнаруживает» общую границу "
-"полигонов, и при изменении вершины одного из полигонов автоматически "
-"обновляет границы остальных как показано на рисунке "
-"figure_topological_tools_ (1)."
-
-#: ../../docs/gentle_gis_introduction/topology.rst:111
-msgid ""
-"Another topological option allows you to prevent** polygon overlaps** during"
-" digitising (see figure_topological_tools_ (2)). If you already have one "
-"polygon, it is possible with this option to digitise a second adjacent "
-"polygon so that both polygons overlap and QGIS then clips the second polygon"
-" to the common boundary."
-msgstr ""
-"Ещё одной возможностью является предотвращение **пересечений полигонов** в "
-"процессе офифровки (см. рисунок figure_topological_tools_ (2)). Если один "
-"полигон уже создан, можно нарисовать смежный полигон с «нахлестом» и QGIS "
-"автоматически произведет обрезку второго полигона по общей границе."
-
 #: ../../docs/gentle_gis_introduction/topology.rst:123
 msgid ""
 "(1) Topological editing to detect shared boundaries, when moving vertices. "
@@ -278,23 +211,6 @@ msgstr ""
 #: ../../docs/gentle_gis_introduction/topology.rst:129
 msgid "Snapping distance"
 msgstr "Расстояние прилипания"
-
-#: ../../docs/gentle_gis_introduction/topology.rst:131
-msgid ""
-"Snapping distance is the distance a GIS uses to search for the closest "
-"vertex and / or segment you are trying to connect when you digitise. A "
-"**segment** is a straight line formed between two vertices in a polygon or "
-"polyline geometry. If you aren't within the snapping distance, a GIS such as"
-" QGIS will leave the vertex where you release the mouse button, instead of "
-"snapping it to an existing vertex and / or segment (see "
-"figure_snapping_distance_)."
-msgstr ""
-"Расстояние прилипания это расстояние, используемое ГИС для поиска ближайшего"
-" узла и/или вершины, к которому можно присоединиться в процессе оцифровки. "
-"«Сегмент» --- это участок полигона или линии между двумя соседними узлами. "
-"Если вы не превысили расстояние прилипания, такая ГИС как QGIS оставит новый"
-" узел именно в том месте, где была нажата кнопка мыши, а не присоединит его "
-"к существующему узлу или сегменту (см. figure_snapping_distance_)."
 
 #: ../../docs/gentle_gis_introduction/topology.rst:144
 msgid ""

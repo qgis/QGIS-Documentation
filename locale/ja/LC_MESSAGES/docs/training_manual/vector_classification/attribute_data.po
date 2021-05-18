@@ -1,25 +1,42 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
+# Harrissou Sant-anna, 2020
+# fairtommy <fairtommy@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:20+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"POT-Creation-Date: 2021-05-12 02:37+0000\n"
+"PO-Revision-Date: 2020-12-24 12:02+0000\n"
+"Last-Translator: fairtommy <fairtommy@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:4
+msgid "|LS| Vector Attribute Data"
+msgstr "|LS| ベクタ属性データ"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:6
+msgid ""
+"Vector data is arguably the most common kind of data in the daily use of "
+"GIS. The vector model represents the location and shape of geographic "
+"features using points, lines and polygons (and for 3D data also surfaces and"
+" volumes), while their other properties are included as attributes (often "
+"presented as a table in QGIS)."
+msgstr ""
+"ベクタデータは、GISの日常的な使用において間違いなく最も一般的な種類のデータです。ベクタモデルは、ポイント、ライン、ポリゴン（および3Dデータの場合はサーフェスとボリューム）を使用して地理的特徴の位置と形状を表し、その他のプロパティは属性として含まれます（QGISではよくテーブルとして表示されます）。"
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:12
 msgid ""
@@ -29,7 +46,7 @@ msgid ""
 "viewers don't know anything about the roads they are seeing; only that there"
 " is a road of a certain shape in a certain area."
 msgstr ""
-"今までは、地図に行った変更はどれも、表示されているオブジェクトに影響されませんでした。言い換えれば、すべての土地利用エリアが同じように見え、そしてすべての道路が同じように見えます。地図を見る人とき、人は見ている道路については何も知りません。知っているのは何らかの地域に何らかの形状の道があることだけ。"
+"今までは、地図に行った変更はどれも、表示されているオブジェクトに影響されませんでした。言い換えれば、すべての土地利用エリアは同じように見え、そしてすべての道路は同じように見えます。地図を見ている人は、見ている道路については何もわかっていません。わかっているのは、その地域にその形状の道があるということだけです。"
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:18
 msgid ""
@@ -39,6 +56,12 @@ msgid ""
 "objects."
 msgstr ""
 "しかし、GISの全体強みは、地図上に表示されるすべてのオブジェクトが属性も持っていることです。GISでの地図はただの絵ではありません。それらは場所内のオブジェクトだけでなく、それらのオブジェクトに関する情報も表しています。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:23
+msgid ""
+"**The goal for this lesson:** To learn about the structure of vector data "
+"and explore the attribute data of an object"
+msgstr "**このレッスンの目標：** ベクタデータの構造について学び、オブジェクトの属性データについて探ります"
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:27
 msgid "|basic| |FA| Viewing Layer Attributes"
@@ -52,6 +75,50 @@ msgid ""
 msgstr ""
 "作業しているデータは、オブジェクトが空間の **どこ** にあるかを表すだけでなく、それらのオブジェクトが **何** "
 "であるかを語っていることも、知っておくことが重要です。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:33
+msgid ""
+"From the previous exercise, you should have the ``protected_areas`` layer "
+"loaded in your map. If it is not loaded, then you can find the "
+":file:`protected_areas.shp` *ESRI Shapefile* format dataset in directory "
+":file:`exercise_data/shapefile`."
+msgstr ""
+"前の演習から、地図に ``protected_areas`` レイヤーがロードされているはずです。ロードされていない場合は、ディレクトリ "
+":file:`exercise_data/shapefile` に :file:`protected_areas.shp` という *ESRI "
+"Shapefile* 形式のデータセットがあります。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:51
+msgid ""
+"A row is called a **record** and is associated with a **feature** in the "
+"Canvas Map, such as a polygon. A column is called a **field** (or an "
+"**attribute**), and has a name that helps describe it, such as ``name`` or "
+"``id``. Values in the cells are known as **attribute values**. These "
+"definitions are commonly used in GIS, so it is good to become familiar with "
+"them."
+msgstr ""
+"行は **レコード** と呼ばれ、ポリゴンなど、キャンバスマップ中の **地物** に関連付けられています。列は **フィールド** （または "
+"**属性** ）と呼ばれ、「name」や「id」など、列を説明するのに役立つ名前が付いています。セル内の値は **属性値** "
+"と呼ばれます。これらの定義はGISで一般的に使用されているため、よく理解しておくとよいでしょう。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:62
+msgid ""
+"In order to understand what the **fields** and **attribute values** "
+"represent, one may need to find documentation (or metadata) describing the "
+"meaning of the attribute values. This is usually available from the creator "
+"of the data set."
+msgstr ""
+"**フィールド** と **属性値** "
+"が何を表しているかを理解するには、属性値の意味を説明するドキュメント（またはメタデータ）を見つける必要がある場合があります。これは通常、データセットの作成者から入手できます。"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:101
+msgid ""
+"Sometimes there are many features shown on the Map Canvas and it might be "
+"difficult to see which feature is selected from the Attribute Table.  "
+"Another way to identify the location of a feature is to use the "
+":guilabel:`Flash Feature` tool."
+msgstr ""
+"地図キャンバスに表示される地物が多数あり、属性テーブルからどの地物が選択されているかを確認するのが難しい場合があります。地物の場所を特定する別の方法は、"
+" :guilabel:`FlashFeature` ツールを使用することです。"
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:130
 msgid "You may now close the attribute table."

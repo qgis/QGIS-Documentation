@@ -1,23 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
+# Harrissou Sant-anna, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:26+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"POT-Creation-Date: 2021-05-12 02:37+0000\n"
+"PO-Revision-Date: 2020-12-24 10:18+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -308,20 +310,7 @@ msgstr "認証データベースが利用できるようにする必要があり
 msgid "Authentication database's master password needs to be available"
 msgstr "認証データベースのマスターパスワードが利用できるようにする必要があります"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:305
-msgid ""
-"When instantiating the authentication system, Server will create or use "
-":file:`qgis-auth.db` in :file:`~/.qgis2/` or the directory defined by the "
-"``QGIS_AUTH_DB_DIR_PATH`` environment variable. It may be that the Server's "
-"user has no HOME directory, in which case, use the environment variable to "
-"define a directory that the Server's user has read/write permissions and is "
-"not located within the web-accessible directories."
-msgstr ""
-"認証システムをインスタンス化する場合、サーバーによって :file:`QGIS-auth.db` 中 :file:`~/.qgis2/`  や "
-"``QGIS_AUTH_DB_DIR_PATH`` "
-"環境変数で定義されているディレクトリが作成または使用されます。これはサーバーのユーザーがホームディレクトリを持っていないということかもしれません。この場合は環境変数を使用して、サーバーのユーザーが読み取り/書き込み権限を持っていてウェブアクセス可能なディレクトリ内に存在しないディレクトリを定義します。"
-
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:312
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:313
 msgid ""
 "To pass the master password to Server, write it to the first line of file at"
 " a path on the file system readable by the Server processes user and defined"
@@ -333,22 +322,22 @@ msgstr ""
 "``QGIS_AUTH_PASSWORD_FILE`` "
 "環境変数を使用して定義されました。サーバーのプロセスのユーザーによってのみ読めるようファイルを制限し、ウェブアクセス可能なディレクトリ内のファイルを保存しないように確認してください。"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:324
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:325
 msgid "SSL server exceptions"
 msgstr "SSLサーバーの例外"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:331
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:332
 msgid "SSL server exception"
 msgstr "SSLサーバーの例外"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:333
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:334
 msgid ""
 "You can manage SSL server configurations and exceptions from the **Servers**"
 " tab in the **Authentication** section of the QGIS **Options** dialog."
 msgstr ""
 "QGISの **オプション** ダイアログの **認証** セクション中の **サーバー** タブから、SSLサーバーの設定および例外を管理できます。"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:336
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:337
 msgid ""
 "Sometimes, when connecting to an SSL server, there are errors with the SSL "
 "\"handshake\" or the server's certificate. You can ignore those errors or "
@@ -358,7 +347,7 @@ msgid ""
 msgstr ""
 "SSLサーバーへの接続時に時々、SSL「握手」や、サーバーの証明書でエラーがあります。これらのエラーを無視するか、例外としてSSLサーバー構成を作成できます。これは、Webブラウザを使用してSSLエラーをどのように上書きできるかに似ていますが、より細かく制御しています。"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:342
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:343
 msgid ""
 "You should not create an SSL server configuration unless you have complete "
 "knowledge of the entire SSL setup between the server and client. Instead, "
@@ -366,7 +355,7 @@ msgid ""
 msgstr ""
 "サーバーとクライアントの間で全体のSSLの設定の完全な知識を持っていない限り、SSLのサーバー構成を作成しないでください。代わりに、サーバー管理者に問題を報告してください。"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:347
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:348
 msgid ""
 "Some PKI setups use a completely different CA trust chain to validate client"
 " identities than the chain used to validate the SSL server certificate. In "
@@ -377,7 +366,7 @@ msgid ""
 msgstr ""
 "一部のPKIのセットアップは、SSLサーバー証明書を検証するために使用するチェーンよりも、クライアントのアイデンティティを検証するために完全に異なるCAの信頼チェーンを使用します。このような状況では、接続するサーバー用に作成された任意の構成は、必ずしもあなたのクライアントのアイデンティティの検証の問題を解決しないだろう、自分のクライアントIDの発行者またはサーバー管理者だけが問題を解決できます。"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:353
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:354
 msgid ""
 "You can pre-configure an SSL server configuration by clicking the |signPlus|"
 " button. Alternatively, you can add a configuration when an SSL error occurs"
@@ -388,29 +377,29 @@ msgstr ""
 "|signPlus| ボタンをクリックすることにより、SSLサーバーの設定を事前に設定できます。SSLエラーが接続時に発生しますが **SSLエラー**"
 " ダイアログが表示されたときに代わりに、設定を追加できます（ここではエラーは一時的に無視されるか、またはデータベースに保存されて無視できます）："
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:363
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:364
 msgid "Manually adding configuration"
 msgstr "手動で設定を追加"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:370
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:371
 msgid "Adding configuration during SSL error"
 msgstr "SSLエラー時の設定を追加"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:372
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:373
 msgid ""
 "Once an SSL configuration is saved to the database, it can be edited or "
 "deleted."
 msgstr "SSLの設定がデータベースに保存されれば、編集したり削除できます。"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:379
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:380
 msgid "Existing SSL configuration"
 msgstr "既存のSSL設定"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:386
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:387
 msgid "Editing an existing SSL configuration"
 msgstr "既存のSSL設定を編集します"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:402
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:403
 msgid ""
 "This will open an SSL error dialog if any errors occur, where you can choose"
 " to save the configuration to the database."

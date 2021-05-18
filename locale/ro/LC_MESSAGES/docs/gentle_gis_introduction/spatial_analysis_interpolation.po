@@ -1,23 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
+# Harrissou Sant-anna, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:15+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"POT-Creation-Date: 2021-05-12 02:37+0000\n"
+"PO-Revision-Date: 2020-12-24 10:28+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2020\n"
 "Language-Team: Romanian (https://www.transifex.com/qgis/teams/6144/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 "Language: ro\n"
 "Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
 
@@ -85,32 +87,6 @@ msgstr ""
 msgid "Spatial interpolation in detail"
 msgstr "Interpolarea spațială în detaliu"
 
-#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:31
-msgid ""
-"Spatial interpolation is the process of using points with known values to "
-"estimate values at other unknown points. For example, to make a "
-"precipitation (rainfall) map for your country, you will not find enough "
-"evenly spread weather stations to cover the entire region. Spatial "
-"interpolation can estimate the temperatures at locations without recorded "
-"data by using known temperature readings at nearby weather stations (see "
-"figure_temperature_map_). This type of interpolated surface is often called "
-"a **statistical surface**. Elevation data, precipitation, snow accumulation,"
-" water table and population density are other types of data that can be "
-"computed using interpolation."
-msgstr ""
-"Interpolarea spațială reprezintă procesul de utilizare a punctelor cu valori"
-" cunoscute, în scopul estimării valorilor necunoscute ale altor puncte. De "
-"exemplu, pentru a face o hartă a precipitațiilor (a ploilor) pentru țara "
-"dumneavoastră, veți observa că, deși scopul este de a acoperi întreaga "
-"regiune, stațiile meteorologice nu sunt repartizate chiar uniform. "
-"Interpolarea spațială poate estima temperaturile în locurile fără "
-"înregistrări de date, cu ajutorul citirilor de temperatură obținute de la "
-"stațiile meteorologice din apropiere (v. figure_temperature_map_). Acest tip"
-" de suprafață interpolată este adesea numită **suprafață statistică**. "
-"Datele de elevație, precipitațiile, acumulările de zăpadă, masele de apă și "
-"densitatea populației constituie alte tipuri de date care pot fi calculate "
-"cu ajutorul interpolării."
-
 #: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:47
 msgid "Temperature map interpolated from South African Weather Stations."
 msgstr ""
@@ -164,18 +140,6 @@ msgstr ""
 msgid "Inverse Distance Weighted (IDW)"
 msgstr "Distanța Inversă Ponderată (IDW)"
 
-#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:69
-msgid ""
-"In the IDW interpolation method, the sample points are weighted during "
-"interpolation such that the influence of one point relative to another "
-"declines with distance from the unknown point you want to create (see "
-"figure_idw_interpolation_)."
-msgstr ""
-"În metoda de interpolare IDW, punctele de eșantionare sunt ponderate pe "
-"durata interpolării, astfel încât influența unui punct în raport cu altul "
-"scade o dată cu distanța de la punctul necunoscut pe care doriți să-l creați"
-" (v. figure_idw_interpolation_)."
-
 #: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:80
 msgid ""
 "Inverse Distance Weighted interpolation based on weighted sample point "
@@ -204,35 +168,6 @@ msgstr ""
 "de interpolare. Pe măsură ce crește coeficientul, valoarea punctului "
 "necunoscut se apropie de valoarea celui mai apropiat punct observațional."
 
-#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:91
-msgid ""
-"It is important to notice that the IDW interpolation method also has some "
-"disadvantages: the quality of the interpolation result can decrease, if the "
-"distribution of sample data points is uneven. Furthermore, maximum and "
-"minimum values in the interpolated surface can only occur at sample data "
-"points. This often results in small peaks and pits around the sample data "
-"points as shown in figure_idw_interpolation_."
-msgstr ""
-"Este important de observat faptul că metoda de interpolare IDW are și unele "
-"dezavantaje: calitatea rezultatului interpolării poate scădea, în cazul în "
-"care distribuția punctelor din eșantionul de date este inegală. Mai mult, "
-"valorile maxime și minime din suprafața interpolată pot apărea numai pentru "
-"punctele din eșantionul de date. Acest fapt conduce la mici paliere de "
-"creștere și scădere în jurul punctelor din eșantion, după cum se arată în "
-"figure_idw_interpolation_."
-
-#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:98
-msgid ""
-"In GIS, interpolation results are usually shown as a 2 dimensional raster "
-"layer. In figure_idw_result_, you can see a typical IDW interpolation "
-"result, based on elevation sample points collected in the field with a GPS "
-"device."
-msgstr ""
-"În GIS, rezultatele de interpolare sunt de obicei prezentate ca un strat "
-"raster cu 2 dimensiuni. În figure_idw_result_, puteți vedea un rezultat de "
-"interpolare IDW tipic, bazat pe eșantionul punctelor de elevație, colectat "
-"din teren cu ajutorul unui dispozitiv GPS."
-
 #: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:108
 msgid ""
 "IDW interpolation result from irregularly collected elevation sample points "
@@ -245,22 +180,6 @@ msgstr ""
 msgid "Triangulated Irregular Network (TIN)"
 msgstr "Rețea Neregulată Triangulată (TIN) "
 
-#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:114
-msgid ""
-"TIN interpolation is another popular tool in GIS. A common TIN algorithm is "
-"called **Delaunay triangulation**. It tries to create a surface formed by "
-"triangles of nearest neighbour points. To do this, circumcircles around "
-"selected sample points are created and their intersections are connected to "
-"a network of non overlapping and as compact as possible triangles (see "
-"figure_tin_interpolation_)."
-msgstr ""
-"Interpolarea TIN este un alt instrument popular în GIS. Un algoritm TIN "
-"comun este denumit **Triangulare Delaunay**. Acesta încearcă să creeze o "
-"suprafață formată din triunghiurile celor mai apropiate puncte vecine. "
-"Pentru a face acest lucru, se circumscriu eșantioanele de puncte selectate, "
-"iar intersecțiile lor sunt conectate la o rețea, pe cât de posibil compactă,"
-" de triunghiuri care nu se suprapun (v. figure_tin_interpolation_)."
-
 #: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:126
 msgid ""
 "Delaunay triangulation with circumcircles around the red sample data. The "
@@ -271,21 +190,6 @@ msgstr ""
 "roșie. Suprafața interpolată TIN, care a rezultat din punctele vectoriale de"
 " elevație, este afișată în partea dreaptă. Sursa Imaginii: Mitas, L., "
 "Mitasova, H. (1999)."
-
-#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:130
-msgid ""
-"The main disadvantage of the TIN interpolation is that the surfaces are not "
-"smooth and may give a jagged appearance. This is caused by discontinuous "
-"slopes at the triangle edges and sample data points. In addition, "
-"triangulation is generally not suitable for extrapolation beyond the area "
-"with collected sample data points (see figure_tin_result_ )."
-msgstr ""
-"Principalul dezavantaj al interpolării TIN se datorează faptului că "
-"suprafețele nu sunt netede și pot avea un aspect zimțat. Acest lucru este "
-"cauzat de pantele discontinue la muchiile triunghiurilor și la punctele "
-"eșantionului de date. În plus, triangulația nu este, în general, adecvată "
-"pentru extrapolare dincolo de suprafața de pe care s-au colectat punctele "
-"din eșantionul de date (vedeți figure_tin_result_ )."
 
 #: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:142
 msgid ""

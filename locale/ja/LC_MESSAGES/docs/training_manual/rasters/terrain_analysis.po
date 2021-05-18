@@ -1,23 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
+# Harrissou Sant-anna, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:20+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"POT-Creation-Date: 2021-05-12 02:37+0000\n"
+"PO-Revision-Date: 2020-12-24 10:17+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -45,13 +47,13 @@ msgstr "**このレッスンの目標:** 地形に関する詳細な情報を取
 msgid "|basic| |FA| Calculating a Hillshade"
 msgstr "|basic| |FA| 陰影起伏を計算する"
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:49
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:53
 msgid ""
 "You will now have a new layer called :guilabel:`hillshade` that looks like "
 "this:"
 msgstr ":guilabel:`hillshade` と呼ばれる新しいレイヤーが次のように表示されます:"
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:55
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:59
 msgid ""
 "That looks nice and 3D, but can we improve on this? On its own, the "
 "hillshade looks like a plaster cast. Can't we use it together with our "
@@ -62,11 +64,11 @@ msgstr ""
 "陰影図はそれだけでは石膏模型のように見えます。どうにかしてそれを他のよりカラフルなラスターと一緒に使用できないでしょうか? "
 "もちろんできます。オーバーレイとして陰影図を使用します。"
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:61
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:65
 msgid "|basic| |FA| Using a Hillshade as an Overlay"
 msgstr "|basic| |FA| 陰影図をオーバーレイとして使用する"
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:63
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:67
 msgid ""
 "A hillshade can provide very useful information about the sunlight at a "
 "given time of day. But it can also be used for aesthetic purposes, to make "
@@ -75,11 +77,11 @@ msgid ""
 msgstr ""
 "陰影図は一日のある時点の日光について非常に有用な情報を提供することができますが審美的な目的で使うこともできます。それを使えば地図をよりよく見せることができます。陰影図をほとんど透過させる設定がその鍵となります。"
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:76
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:80
 msgid "Set the :guilabel:`Global opacity` to ``50%``."
 msgstr ":guilabel:`全体の不透明度` を :kbd:`50%` に設定します:"
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:86
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:90
 msgid ""
 "Using a hillshade in this way, it's possible to enhance the topography of "
 "the landscape. If the effect doesn't seem strong enough to you, you can "
@@ -91,66 +93,47 @@ msgstr ""
 ":guilabel:`hillshade` "
 "レイヤーの透明度を変更すればよいですが、もちろん、陰影起伏がより明るくなるほど、その背後の色は薄暗くなります。ちょうど良いバランスを見つける必要があります。"
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:96
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:115
 msgid "|moderate| |FA| Calculating the Slope"
 msgstr "|moderate| |FA| 傾斜の計算"
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:98
-msgid ""
-"Another useful thing to know about the terrain is how steep it is. If, for "
-"example, you want to build houses on the land there, then you need land that"
-" is relatively flat."
-msgstr "地形の傾斜がどれほど急であるかを知るのも有用なことです。たとえば、土地に家を建てたい場合には比較的平坦な土地が必要です。"
-
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:133
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:154
 msgid ":ref:`Check your results <raster-analysis-1>`"
 msgstr ":ref:`結果をチェックする <raster-analysis-1>`"
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:136
-msgid "|moderate| |FA| Using the Raster Calculator"
-msgstr "|moderate| |FA| ラスター計算機の使用"
-
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:148
-msgid ""
-"Fortunately, you already have rasters showing you the slope as well as the "
-"aspect, but you have no way of knowing where both conditions are satisfied "
-"at once. How could this analysis be done?"
-msgstr ""
-"幸いにも、あなたは既に斜面方位だけではなく傾斜を示すラスターを持っていますが、両方の条件が同時に満たされている場所を知る方法がありません。この分析はどのように行うことができるでしょうか?"
-
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:153
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:164
 msgid "The answer lies with the :guilabel:`Raster calculator`."
 msgstr "その答えは :guilabel:`ラスター計算機` です。"
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:203
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:214
 msgid "Your result will be this:"
 msgstr "あなたの結果はこのようになります:"
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:229
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:241
 msgid ":ref:`Check your results <raster-analysis-2>`"
 msgstr ":ref:`結果をチェックする <raster-analysis-2>`"
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:233
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:245
 msgid "|moderate| |FA| Combining Raster Analysis Results"
 msgstr "|moderate| |FA| ラスター分析結果を組み合わせる"
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:257
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:269
 msgid "To calculate the areas that satisfy these criteria:"
 msgstr "これらの抽出条件を満たすエリアを計算します:"
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:271
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:283
 msgid "The result:"
 msgstr "結果："
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:278
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:295
 msgid "|moderate| |FA| Simplifying the Raster"
 msgstr "|moderate| |FA| ラスターを簡素化する"
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:330
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:347
 msgid "Your output looks like this:"
 msgstr "出力はこのようになります:"
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:335
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:352
 msgid ""
 "This is what was expected: a simplified version of the earlier results. "
 "Remember that if the results you get from a tool aren't what you expected, "
@@ -159,11 +142,11 @@ msgid ""
 msgstr ""
 "これは期待されたもので、以前の結果を簡素化したものです。あなたが得た結果が期待したものでない場合は、メタデータ(および該当する場合はベクターの属性)を見ると問題を解決するための要点がわかることを覚えておいて下さい。"
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:483
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:500
 msgid "|IC|"
 msgstr "|IC|"
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:485
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:502
 msgid ""
 "You've seen how to derive all kinds of analysis products from a DEM. These "
 "include hillshade, slope and aspect calculations. You've also seen how to "
@@ -172,11 +155,11 @@ msgid ""
 msgstr ""
 "DEMから様々な種類の分析結果を取り出す方法を見てきました。陰影起伏や傾斜、斜面方位の計算をしました。またこれらの結果をさらに分析し結合するためにラスタ計算機の使用方法を見てきました。最後に、レイヤを再分類する方法と結果をクエリする方法を学びました。"
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:493
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:510
 msgid "|WN|"
 msgstr "|WN|"
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:495
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:512
 msgid ""
 "Now you have two analyses: the vector analysis which shows you the "
 "potentially suitable plots, and the raster analysis that shows you the "

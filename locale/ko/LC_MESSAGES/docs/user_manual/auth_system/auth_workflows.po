@@ -1,24 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
-# Kwon.Yongchan <ruvyn@naver.com>, 2020
+# Harrissou Sant-anna, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:26+0000\n"
-"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
+"POT-Creation-Date: 2021-05-12 02:37+0000\n"
+"PO-Revision-Date: 2020-12-24 10:18+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -56,18 +57,6 @@ msgstr "HTTP BASIC에 대한 WMS 연결 환경 설정하기"
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:37
 msgid "Database authentication"
 msgstr "데이터베이스 인증"
-
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:39
-msgid ""
-"Connections to database resources are generally stored as ``key=value`` "
-"pairs, which will expose usernames and (optionally) passwords, if *not* "
-"using an authentication configuration. When configuring with the new auth "
-"system, the ``key=value`` will be an abstracted representation of the "
-"credentials, e.g. ``authfg=81t21b9``."
-msgstr ""
-"인증 환경 설정을 사용하지 *않는다면*, 데이터베이스 리소스에 대한 연결은 일반적으로 사용자 이름과 (선택적으로) 암호를 노출하게 되는 "
-"``key=value`` 쌍으로 저장됩니다. 새로운 인증 시스템으로 구성할 때, ``key=value`` 는 "
-"``authfg=81t21b9`` 처럼 인증 정보의 추상적인 표현이 될 것입니다."
 
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:50
 msgid "Configuring a Postgres SSL-with-PKI connection"
@@ -444,21 +433,7 @@ msgstr "인증 데이터베이스를 사용할 수 있도록 설정해야 합니
 msgid "Authentication database's master password needs to be available"
 msgstr "인증 데이터베이스의 마스터 비밀번호를 사용할 수 있도록 설정해야 합니다."
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:305
-msgid ""
-"When instantiating the authentication system, Server will create or use "
-":file:`qgis-auth.db` in :file:`~/.qgis2/` or the directory defined by the "
-"``QGIS_AUTH_DB_DIR_PATH`` environment variable. It may be that the Server's "
-"user has no HOME directory, in which case, use the environment variable to "
-"define a directory that the Server's user has read/write permissions and is "
-"not located within the web-accessible directories."
-msgstr ""
-"인증 시스템을 처음 사용하는 경우, 서버가 :file:`~/.qgis2/` 또는 ``QGIS_AUTH_DB_DIR_PATH`` 환경 "
-"변수가 정의한 디렉터리에 :file:`qgis-auth.db` 파일을 생성하고 사용할 것입니다. 서버 사용자에게 *홈* 디렉터리가 없을 "
-"수도 있는데, 이런 경우 환경 변수를 사용해서 서버 사용자가 읽기/쓰기 권한을 가지고 있으며 웹에서 접근할 수 있는 디렉터리 안에 "
-"위치하지 않은 디렉터리를 정의하십시오."
-
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:312
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:313
 msgid ""
 "To pass the master password to Server, write it to the first line of file at"
 " a path on the file system readable by the Server processes user and defined"
@@ -471,21 +446,21 @@ msgstr ""
 "서버 프로세스 사용자만 읽을 수 있도록 파일 권한을 제약했는지, 그리고 웹에서 접근할 수 있는 디렉터리에 파일을 저장하지는 않았는지 "
 "확인하십시오."
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:320
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:321
 msgid ""
 "``QGIS_AUTH_PASSWORD_FILE`` variable will be removed from the Server "
 "environment immediately after accessing."
 msgstr "접근 후 바로 서버 환경에서 ``QGIS_AUTH_PASSWORD_FILE`` 환경 변수를 제거할 것입니다."
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:324
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:325
 msgid "SSL server exceptions"
 msgstr "SSL 서버 예외"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:331
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:332
 msgid "SSL server exception"
 msgstr "SSL 서버 예외"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:333
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:334
 msgid ""
 "You can manage SSL server configurations and exceptions from the **Servers**"
 " tab in the **Authentication** section of the QGIS **Options** dialog."
@@ -494,7 +469,7 @@ msgstr ""
 ":guilabel:`Certificate Manager` 대화창을 열어 :guilabel:`Servers` 탭을 선택하면 SSL 서버 "
 "환경 설정 및 예외를 관리할 수 있습니다."
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:336
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:337
 msgid ""
 "Sometimes, when connecting to an SSL server, there are errors with the SSL "
 "\"handshake\" or the server's certificate. You can ignore those errors or "
@@ -507,7 +482,7 @@ msgstr ""
 " 또는 서버의 인증서에서 오류가 발생하는 경우가 있습니다. 이런 오류를 무시할 수도 있고 또는 이런 오류를 SSL 서버의 예외로 환경 "
 "설정할 수도 있습니다. 웹 브라우저가 SSL 오류를 무시할 수 있도록 해주는 방법과 비슷하지만, 좀 더 세밀하게 제어할 수 있습니다."
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:342
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:343
 msgid ""
 "You should not create an SSL server configuration unless you have complete "
 "knowledge of the entire SSL setup between the server and client. Instead, "
@@ -516,7 +491,7 @@ msgstr ""
 "서버와 클라이언트 간의 SSL 전체 설정을 완전히 이해하고 있지 않다면 SSL 서버 환경 설정을 생성해서는 안 됩니다. 그 대신 서버 "
 "관리자에서 문제점을 보고하십시오."
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:347
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:348
 msgid ""
 "Some PKI setups use a completely different CA trust chain to validate client"
 " identities than the chain used to validate the SSL server certificate. In "
@@ -529,7 +504,7 @@ msgstr ""
 " 연결고리를 사용합니다. 이런 상황이라면, 연결 서버에 대해 어떤 환경 설정을 생성하더라도 사용자 클라이언트 신원 관련 문제점을 반드시 "
 "해결할 수 있는 것은 아닙니다. 사용자 클라이언트 신원 발행자 또는 서버 관리자만이 해당 문제점을 해결할 수 있습니다."
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:353
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:354
 msgid ""
 "You can pre-configure an SSL server configuration by clicking the |signPlus|"
 " button. Alternatively, you can add a configuration when an SSL error occurs"
@@ -541,29 +516,29 @@ msgstr ""
 "사전 설정할 수 있습니다. 아니면, 연결 중 SSL 오류가 발생하는 경우 환경 설정을 추가하면 (일시적으로 오류를 무시하거나 또는 "
 "데이터베이스에 환경 설정을 저장한 다음 무시할 수 있는) 다음 **SSL 오류** 대화창이 열립니다:"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:363
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:364
 msgid "Manually adding configuration"
 msgstr "환경 설정을 직접 추가하기"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:370
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:371
 msgid "Adding configuration during SSL error"
 msgstr "SSL 오류 발생 도중 환경 설정을 추가하기"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:372
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:373
 msgid ""
 "Once an SSL configuration is saved to the database, it can be edited or "
 "deleted."
 msgstr "데이터베이스에 SSL 환경 설정을 저장하고 나면, 해당 설정을 편집하거나 삭제할 수 있습니다."
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:379
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:380
 msgid "Existing SSL configuration"
 msgstr "기존 SSL 환경 설정"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:386
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:387
 msgid "Editing an existing SSL configuration"
 msgstr "기존 SSL 환경 설정 편집하기"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:388
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:389
 msgid ""
 "If you want to pre-configure an SSL configuration and the import dialog is "
 "not working for your server's connection, you can manually trigger a "
@@ -574,7 +549,7 @@ msgstr ""
 "**파이썬 콘솔** 을 통해 연결을 직접 촉발할 수 있습니다. (``https://bugreports.qt-project.org`` "
 "문자열을 사용자 서버의 URL로 교체하십시오):"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:402
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:403
 msgid ""
 "This will open an SSL error dialog if any errors occur, where you can choose"
 " to save the configuration to the database."

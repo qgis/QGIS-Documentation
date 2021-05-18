@@ -1,23 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
+# Harrissou Sant-anna, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:19+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"POT-Creation-Date: 2021-05-12 02:37+0000\n"
+"PO-Revision-Date: 2020-12-24 10:26+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -25,7 +27,7 @@ msgstr ""
 msgid "|LS| Serving WMS"
 msgstr "|LS| WMSサーバーを運用する"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:9
+#: ../../docs/training_manual/qgis_server/wms.rst:10
 msgid ""
 "The demo data contains a QGIS project named :file:`world.qgs` that is "
 "already prepared to be served with QGIS Server. If you want to use your own "
@@ -36,18 +38,18 @@ msgstr ""
 "という名前のQGISプロジェクトが含まれています。独自のプロジェクトを使用したい場合や、プロジェクトの準備方法を知りたい場合は、 "
 ":ref:`Creatingwmsfromproject` セクションを参照してください。"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:16
+#: ../../docs/training_manual/qgis_server/wms.rst:17
 msgid ""
 "This module presents the URLs so that the audience can easily distinguish "
 "the parameters and parameters values. While the normal format is:"
 msgstr ""
 "このモジュールは、オーディエンスがパラメーターとパラメーターの値を簡単に区別できるようにURLを提示します。通常のフォーマットは次のとおりです。"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:23
+#: ../../docs/training_manual/qgis_server/wms.rst:24
 msgid "this tutorial uses:"
 msgstr "このチュートリアルで使用するのは："
 
-#: ../../docs/training_manual/qgis_server/wms.rst:31
+#: ../../docs/training_manual/qgis_server/wms.rst:32
 msgid ""
 "Pasting them into Mozilla Firefox works properly but other web browsers like"
 " Chrome may add unwanted spaces between the ``field:parameter`` pairs. So, "
@@ -58,12 +60,12 @@ msgstr ""
 "``field:parameter`` "
 "のペアの間に不要なスペースを追加する可能性があります。したがって、この問題が発生した場合は、Firefoxを使用するか、URLを変更して1行の形式にすることができます。"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:36
+#: ../../docs/training_manual/qgis_server/wms.rst:37
 msgid ""
 "Let's make a WMS GetCapabilities request in the web browser or with curl:"
 msgstr "WebブラウザまたはcurlでWMS GetCapabilitiesリクエストを作成しましょう："
 
-#: ../../docs/training_manual/qgis_server/wms.rst:46
+#: ../../docs/training_manual/qgis_server/wms.rst:47
 msgid ""
 "In the Apache config from the previous lesson the ``QGIS_PROJECT_FILE`` "
 "variable sets the default project to :file:`/home/qgis/projects/world.qgs`. "
@@ -77,7 +79,7 @@ msgstr ""
 "パラメーターを明示的に使用し、どのプロジェクトでも使用できることを示しました。上記の要求から **map** "
 "パラメーターを削除すると、QGISサーバーは同じ応答を出力します。"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:52
+#: ../../docs/training_manual/qgis_server/wms.rst:53
 msgid ""
 "By pointing any WMS client to the ``GetCapabilities`` URL, the client gets "
 "in response an XML document with metadata of the Web Map Server’s "
@@ -87,7 +89,7 @@ msgstr ""
 "WMSクライアントを ``GetCapabilities`` "
 "のURLに指すことで、クライアントはWebマップサーバーの情報のメタデータを持つXML文書を返します。例えば、レイヤーはどのレイヤーに対応していますか、地理的なカバレッジ、形式、WMSのバージョン等"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:57
+#: ../../docs/training_manual/qgis_server/wms.rst:58
 msgid ""
 "As QGIS is also a :ref:`ogc-wms` you can create a new WMS server connection "
 "with the help of the above GetCapabilities url. See the :ref:`wms-services` "
@@ -96,17 +98,17 @@ msgstr ""
 "QGISは :ref:`ogc-wms` でもあるので、上記のGetCapabilitiesのURLを利用して新しいWMSサーバー接続を作成できます。 "
 ":ref:`wms-services` または :ref:`ogc-wms-servers` セクションを参照してください。"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:61
+#: ../../docs/training_manual/qgis_server/wms.rst:62
 msgid ""
 "By adding the ``countries`` WMS layer to your QGIS project you should get an"
 " image like the one below:"
 msgstr "QGISプロジェクトに ``countries`` WMSレイヤーを追加すると、以下のような画像が得られます："
 
-#: ../../docs/training_manual/qgis_server/wms.rst:67
+#: ../../docs/training_manual/qgis_server/wms.rst:68
 msgid "QGIS Desktop consuming the QGIS Server countries layer WMS service"
 msgstr "QGISサーバーの国レイヤーWMSサービスを消費するQGISデスクトップ"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:71
+#: ../../docs/training_manual/qgis_server/wms.rst:72
 msgid ""
 "QGIS Server serves layers that are defined in the :file:`world.qgs` project."
 " By opening the project with QGIS you can see there are multiple styles for "
@@ -118,11 +120,11 @@ msgstr ""
 "プロジェクトで定義されたレイヤーを提供します。QGISでプロジェクトを開くと、各国のレイヤーに複数のスタイルがあることがわかります。QGISサーバーはこれも認識しており、要求に応じてスタイルを選択できます。上記の画像では"
 " ``classified_by_population`` スタイルが選択されています。"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:78
+#: ../../docs/training_manual/qgis_server/wms.rst:79
 msgid "Logging"
 msgstr "ログ出力"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:80
+#: ../../docs/training_manual/qgis_server/wms.rst:81
 msgid ""
 "When you're setting up a server, the logs are always important as they show "
 "you what's going on. We have setup in the :file:`*.conf` file the following "
@@ -130,24 +132,24 @@ msgid ""
 msgstr ""
 "サーバーを設定するときは、ログは常に何が起こっているかを示す重要なものです。 :file:`*.conf` ファイルに以下のログを設定します："
 
-#: ../../docs/training_manual/qgis_server/wms.rst:83
+#: ../../docs/training_manual/qgis_server/wms.rst:84
 msgid "QGIS Server log at :file:`/logs/qgisserver.log`"
 msgstr "QGISサーバーログ :file:`/logs/qgisserver.log`"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:84
+#: ../../docs/training_manual/qgis_server/wms.rst:85
 msgid ""
 "``qgisplatform.demo`` Apache access log at "
 ":file:`qgisplatform.demo.access.log`"
 msgstr ""
 "``qgisplatform.demo`` Apacheアクセスログ :file:`qgisplatform.demo.access.log`"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:85
+#: ../../docs/training_manual/qgis_server/wms.rst:86
 msgid ""
 "``qgisplatform.demo`` Apache error log at "
 ":file:`qgisplatform.demo.error.log`"
 msgstr "``qgisplatform.demo`` Apacheエラーログ :file:`qgisplatform.demo.error.log`"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:87
+#: ../../docs/training_manual/qgis_server/wms.rst:88
 msgid ""
 "The log files are simply text files so you can use a text editor to check "
 "them out. You can also use the ``tail`` command in a terminal: ``sudo tail "
@@ -156,18 +158,18 @@ msgstr ""
 "ログファイルはテキストファイルなので、テキストエディタを使用してチェックできます。 ``sudo tail "
 "-f/logs/qgisserver.log`` という端末で ``tail`` コマンドを使うこともできます。"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:91
+#: ../../docs/training_manual/qgis_server/wms.rst:92
 msgid ""
 "This will continuously output in the terminal what's written in that log "
 "file. You can also have three terminals opened for each of the log files "
 "like so:"
 msgstr "これは、そのログファイルに書き込まれたものを端末に出力し続けます。次のように、ログファイルごとに3つの端末を開くこともできます。"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:97
+#: ../../docs/training_manual/qgis_server/wms.rst:98
 msgid "Using the ``tail`` command to visualise QGIS Server logs output"
 msgstr "``tail`` コマンドを使ってQGISサーバーのログ出力を視覚化する"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:99
+#: ../../docs/training_manual/qgis_server/wms.rst:100
 msgid ""
 "When you use QGIS Desktop to consume the QGIS Server WMS services you will "
 "see all the requests QGIS sends to the Server in the access log, the errors "
@@ -175,23 +177,23 @@ msgid ""
 msgstr ""
 "QGISデスクトップを使用してQGISサーバーのWMSサービスを使用すると、QGISがアクセスログ内のサーバーに送信するすべての要求、QGISサーバーログのQGISサーバーのエラーなどが表示されます。"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:105
+#: ../../docs/training_manual/qgis_server/wms.rst:106
 msgid ""
 "If you look at the logs in the following sections you should get a better "
 "understanding on what's happening."
 msgstr "次のセクションのログを見ると、何が起きているのかをよりよく理解することができます。"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:107
+#: ../../docs/training_manual/qgis_server/wms.rst:108
 msgid ""
 "By restarting Apache while looking in the QGIS Server log you can find some "
 "extra pointers on how things work."
 msgstr "QGISサーバーのログを見ながらApacheを再起動することで、動作の仕方についてのいくつかの追加情報を見つけることができます。"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:111
+#: ../../docs/training_manual/qgis_server/wms.rst:112
 msgid "GetMap requests"
 msgstr "GetMapリクエスト"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:113
+#: ../../docs/training_manual/qgis_server/wms.rst:114
 msgid ""
 "In order to display the ``countries`` layer, QGIS Desktop, like any other "
 "WMS client, is using ``GetMap`` requests."
@@ -199,34 +201,34 @@ msgstr ""
 "``countries`` レイヤーを表示するために、他のWMSクライアントと同様、QGISデスクトップでも ``GetMap`` "
 "リクエストを使用しています。"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:116
+#: ../../docs/training_manual/qgis_server/wms.rst:117
 msgid "A simple request looks like:"
 msgstr "簡単なリクエストは以下のようになります："
 
-#: ../../docs/training_manual/qgis_server/wms.rst:132
-#: ../../docs/training_manual/qgis_server/wms.rst:189
+#: ../../docs/training_manual/qgis_server/wms.rst:133
+#: ../../docs/training_manual/qgis_server/wms.rst:190
 msgid "The above request should output the following image:"
 msgstr "上記の要求は次の画像を出力するはずです："
 
-#: ../../docs/training_manual/qgis_server/wms.rst:134
+#: ../../docs/training_manual/qgis_server/wms.rst:135
 msgid "**Figure: simple GetMap request to QGIS Server**"
 msgstr "**図：QGISサーバーへの簡単なGetMapリクエスト**"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:139
+#: ../../docs/training_manual/qgis_server/wms.rst:140
 msgid "Qgis Server response after a simple GetMap request"
 msgstr "単純なGetMap要求の後のQgisサーバーの応答"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:142
+#: ../../docs/training_manual/qgis_server/wms.rst:143
 msgid "|moderate| |TY| Change the Image and Layers parameters"
 msgstr "|moderate| |TY| 画像とレイヤーのパラメーターを変更する"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:144
+#: ../../docs/training_manual/qgis_server/wms.rst:145
 msgid ""
 "Based on the request above, let's replace the ``countries`` layer with "
 "another."
 msgstr "上記の要求に基づいて、 ``countries`` レイヤーを別のものに置き換えましょう。"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:146
+#: ../../docs/training_manual/qgis_server/wms.rst:147
 msgid ""
 "In order to see what other layers are available you could open up the "
 ":file:`world.qgs` project in QGIS and look at its contents. Keep in mind "
@@ -236,14 +238,14 @@ msgstr ""
 "他にどのレイヤーがあるのか​​を知るためには、QGISの :file:`world.qgs` "
 "プロジェクトを開き、その内容を見てください。ただし、WMSクライアントはQGISプロジェクトへのアクセス権を持たず、機能文書の内容を参照するだけです。"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:151
+#: ../../docs/training_manual/qgis_server/wms.rst:152
 msgid ""
 "Also, there's a configuration option so that some of the layers existing in "
 "the QGIS project are ignored by QGIS when serving the WMS service."
 msgstr ""
 "また、QGISプロジェクトに存在するいくつかのレイヤーがWMSサービスを提供する際にQGISによって無視されるように構成オプションがあります。"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:154
+#: ../../docs/training_manual/qgis_server/wms.rst:155
 msgid ""
 "So, you could look at the layer list when you point QGIS Desktop to the "
 "``GetCapabilities`` URL or you could try yourself finding other layer names "
@@ -252,7 +254,7 @@ msgstr ""
 "したがって、QGISデスクトップを ``GetCapabilities`` のURLに向けるとレイヤーリストを見ることができ、 "
 "``GetCapabilities`` XMLレスポンスで他のレイヤー名を見つけることができます。"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:158
+#: ../../docs/training_manual/qgis_server/wms.rst:159
 msgid ""
 "One of the layer names that you could find and works is "
 "``countries_shapeburst``. You may find others but keep in mind some may not "
@@ -261,13 +263,13 @@ msgstr ""
 "あなたが見つけて働くことができるレイヤー名の1つは ``countries_shapeburst`` "
 "です。他を見つけるかもしれませんが、そのような小縮尺では見えないかもしれないので、空白の画像をレスポンスとして得ることがあることをご承知おきください。"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:162
+#: ../../docs/training_manual/qgis_server/wms.rst:163
 msgid ""
 "You can also play around with others parameters from above, like changing "
 "the returned image type to ``image/png``."
 msgstr "返された画像タイプを ``image/png`` に変更するなど、上からの他のパラメーターを使って遊ぶこともできます。"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:168
+#: ../../docs/training_manual/qgis_server/wms.rst:169
 msgid ""
 "Let's do another request that adds another layer, some of the :ref:`extra-"
 "getmap-parameters`, **FILTER** and **OPACITIES**, but also uses the standard"
@@ -276,11 +278,11 @@ msgstr ""
 ":ref:`extra-getmap-parameters` 、**FILTER** 、 **OPACITIES** "
 "のような別のレイヤーを追加するリクエストを行いますが、標準のSTYLESパラメーターも使用します。"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:194
+#: ../../docs/training_manual/qgis_server/wms.rst:195
 msgid "Response to a GetMap request with FILTER and OPACITIES parameters"
 msgstr "FILTERパラメーターとOPACITIESパラメーターを使用したGetMap要求への応答"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:196
+#: ../../docs/training_manual/qgis_server/wms.rst:197
 msgid ""
 "As you can see from the above image, among other things, we told QGIS Server"
 " to render only **Germany** and **Italy** from the countries layer."
@@ -288,11 +290,11 @@ msgstr ""
 "上の画像からわかるように、QGISサーバーには、 **Germany** と **Italy** "
 "のみを国レイヤーからレンダリングするように指示しました。"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:200
+#: ../../docs/training_manual/qgis_server/wms.rst:201
 msgid "|moderate| |FA| Use Redlining"
 msgstr "|moderate| |FA| レッドラインを使う"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:202
+#: ../../docs/training_manual/qgis_server/wms.rst:203
 msgid ""
 "Let's do another GetMap request that makes use of the :ref:`qgisserver-"
 "redlining` feature and of the **SELECTION** parameter detailed in the :ref"
@@ -301,18 +303,18 @@ msgstr ""
 ":ref:`qgisserver-redlining` 機能と :ref:`extra-getmap-parameters` "
 "セクションで詳しく説明されている **SELECTION** パラメーターを利用する別のGetMapリクエストをしましょう："
 
-#: ../../docs/training_manual/qgis_server/wms.rst:228
+#: ../../docs/training_manual/qgis_server/wms.rst:229
 msgid ""
 "Pasting the above request in your web browser should output the following "
 "image:"
 msgstr "上記のリクエストをWebブラウザに貼り付けると、次の画像が出力されます。"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:233
+#: ../../docs/training_manual/qgis_server/wms.rst:234
 msgid ""
 "Response to a request with the REDLINING feature and SELECTION parameter"
 msgstr "REDLINING機能とSELECTIONパラメーターによるリクエストへの応答"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:235
+#: ../../docs/training_manual/qgis_server/wms.rst:236
 msgid ""
 "You can see from the above image that the countries with the 171 and 65 ids "
 "were highlighted in yellow (Romania and France) by using the **SELECTION** "
@@ -322,20 +324,20 @@ msgstr ""
 "上記の画像から、171 IDと65 IDを持つ国が **SELECTION** パラメーターを使用して黄色（ルーマニアとフランス）に強調表示され、 "
 "**REDLINING** 機能を使用して矩形を **QGISチュートリアル** ラベル。"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:241
+#: ../../docs/training_manual/qgis_server/wms.rst:242
 msgid "GetPrint requests"
 msgstr "GetPrintリクエスト"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:268
+#: ../../docs/training_manual/qgis_server/wms.rst:269
 msgid "Shows the pdf resulted from the above GetPrint request"
 msgstr "上記のGetPrintリクエストに起因するpdfを表示します。"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:270
+#: ../../docs/training_manual/qgis_server/wms.rst:271
 msgid ""
 "Naturally, it's hard to write your ``GetMap``, ``GetPrint`` etc. requests."
 msgstr "当然、あなたの ``GetMap`` 、 ``GetPrint`` などのリクエストを書くのは難しいです。"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:272
+#: ../../docs/training_manual/qgis_server/wms.rst:273
 msgid ""
 "`QGIS Web Client <https://github.com/qgis/qgis-web-client>`_ or QWC is a Web"
 " client project that can work alongside QGIS Server so that you can publish "
@@ -345,15 +347,15 @@ msgstr ""
 "`QGIS Webクライアント <https://github.com/qgis/qgis-web-client>`_ "
 "またはQWCは、QGISサーバーと連携してプロジェクトをWeb上に公開したり、QGISサーバーリクエスト作成を手助けできるWebクライアントプロジェクトです、可能性についてのより良い理解を求めて。"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:277
+#: ../../docs/training_manual/qgis_server/wms.rst:278
 msgid "You can install it like this:"
 msgstr "このようにインストールできます："
 
-#: ../../docs/training_manual/qgis_server/wms.rst:279
+#: ../../docs/training_manual/qgis_server/wms.rst:280
 msgid "As user ``qgis`` go to the home directory with ``cd /home/qgis``."
 msgstr "ユーザ ``qgis`` が ``cd/home/qgis`` でホームディレクトリに行きます。"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:280
+#: ../../docs/training_manual/qgis_server/wms.rst:281
 msgid ""
 "Download the QWC project from `here <https://github.com/qgis/QGIS-Web-"
 "Client/archive/master.zip>`_ and unzip it."
@@ -361,7 +363,7 @@ msgstr ""
 "`ここ <https://github.com/qgis/QGIS-Web-Client/archive/master.zip>`_ "
 "からQWCプロジェクトをダウンロードし、解凍します。"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:281
+#: ../../docs/training_manual/qgis_server/wms.rst:282
 msgid ""
 "Make a symbolic link to the ``/var/www/html`` directory as it's the "
 "``DocumentRoot`` that we've setup in the virtual host configuration. If you "
@@ -374,7 +376,7 @@ msgstr ""
 "master` を実行すると、 ``sudo ln -s /home/qgis/Downloads/QGIS-Web-Client-"
 "master/var/www/html/`` となります。"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:285
+#: ../../docs/training_manual/qgis_server/wms.rst:286
 msgid ""
 "Access http://qgisplatform.demo/QGIS-Web-Client-"
 "master/site/qgiswebclient.html?map=/home/qgis/projects/world.qgs from your "
@@ -384,15 +386,15 @@ msgstr ""
 "master/site/qgiswebclient.html?map=/home/qgis/projects/world.qgs "
 "にアクセスしてください。"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:288
+#: ../../docs/training_manual/qgis_server/wms.rst:289
 msgid "Now you should be able to see the Map as in the following figure:"
 msgstr "これで、次の図のように地図を表示できるはずです："
 
-#: ../../docs/training_manual/qgis_server/wms.rst:293
+#: ../../docs/training_manual/qgis_server/wms.rst:294
 msgid "QGIS Web Client consuming the world.qgs project"
 msgstr "world.qgsプロジェクトを使用するQGIS Webクライアント"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:295
+#: ../../docs/training_manual/qgis_server/wms.rst:296
 msgid ""
 "If you click the Print button in QWC you can interactively create "
 "``GetPrint`` requests. You can also click the ``?`` icon in the QWC to "
@@ -402,19 +404,19 @@ msgstr ""
 "QWCの[印刷]ボタンをクリックすると、対話的に ``GetPrint`` 要求を作成できます。またQWCの ``？`` "
 "アイコンをクリックすると、利用可能なヘルプにアクセスして、QWCの可能性をよりよく知ることができます。"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:300
+#: ../../docs/training_manual/qgis_server/wms.rst:301
 msgid "|IC|"
 msgstr "|IC|"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:302
+#: ../../docs/training_manual/qgis_server/wms.rst:303
 msgid "You learned how use QGIS Server to provide WMS Services."
 msgstr "QGISサーバーを使ってWMSサービスを提供する方法を学びました。"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:305
+#: ../../docs/training_manual/qgis_server/wms.rst:306
 msgid "|WN|"
 msgstr "|WN|"
 
-#: ../../docs/training_manual/qgis_server/wms.rst:307
+#: ../../docs/training_manual/qgis_server/wms.rst:308
 msgid ""
 "Next, you'll see how to use QGIS as a frontend for the famous GRASS GIS."
 msgstr "次に、有名なGRASS GISのフロントエンドとしてQGISを使用する方法を見ていきます。"

@@ -1,23 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
+# Harrissou Sant-anna, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:15+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"POT-Creation-Date: 2021-05-12 02:37+0000\n"
+"PO-Revision-Date: 2020-12-24 10:24+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2020\n"
 "Language-Team: Czech (https://www.transifex.com/qgis/teams/6144/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 "Language: cs\n"
 "Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
@@ -98,25 +100,6 @@ msgstr ""
 "která je mimo \"zadanou oblast\". Oblast, která je v určité vzdálenosti se "
 "nazývá \"nárazníková zóna\"."
 
-#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:34
-msgid ""
-"A **buffer zone** is any area that serves the purpose of keeping real world "
-"features distant from one another. Buffer zones are often set up to protect "
-"the environment, protect residential and commercial zones from industrial "
-"accidents or natural disasters, or to prevent violence. Common types of "
-"buffer zones may be greenbelts between residential and commercial areas, "
-"border zones between countries (see figure_buffer_zone_), noise protection "
-"zones around airports, or pollution protection zones along rivers."
-msgstr ""
-"\"nárazníková zóna\" je nějaká oblast, která slouží k udržování funkcí "
-"skutečného světa a je od sebe vzdálena. Nárazníková pásma jsou často zřízena"
-" k ochraně životního prostředí, chránit obytné a komerční zóny z "
-"průmyslových havárií nebo živelních pohrom, nebo aby se zabránilo násilí. "
-"Běžné typy nárazníkových zón mohou být zelená pásma mezi obytnými a "
-"komerčními oblastmi, hraniční oblasti mezi jednotlivými zeměmi (viz "
-"figure_buffer_zone_), ochrany proti hluku pásem kolem letišť, nebo "
-"ochranných pásem znečištění podél řek"
-
 #: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:48
 msgid ""
 "The border between the United States of America and Mexico is separated by a"
@@ -124,16 +107,6 @@ msgid ""
 msgstr ""
 "Hranice mezi Spojenými státy a Mexikem je oddělena nárazníkovou zónou. (Foto"
 " vytvoření SGT Jim Greenhill v roce 2006)."
-
-#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:51
-msgid ""
-"In a GIS Application, **buffer zones are** always represented as **vector "
-"polygons** enclosing other polygon, line or point features (see "
-"figure_point_buffer_, figure_line_buffer_, )."
-msgstr ""
-"V GIS aplikacích jsou \"nárazníkové zóny\" vždy reprezentovány jako "
-"\"vektorové polygony\" obklopující další polygon, linii nebo bodové prvky "
-"(viz figure_point_buffer_, figure_line_buffer_, )."
 
 #: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:61
 msgid "A buffer zone around vector points."
@@ -146,28 +119,6 @@ msgstr "Nárazníková zóna okolo vektorových křivek."
 #: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:80
 msgid "Variations in buffering"
 msgstr "Možnosti nárazníkových zón"
-
-#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:82
-msgid ""
-"There are several variations in buffering. The **buffer distance** or buffer"
-" size **can vary** according to numerical values provided in the vector "
-"layer attribute table for each feature. The numerical values have to be "
-"defined in map units according to the Coordinate Reference System (CRS) used"
-" with the data. For example, the width of a buffer zone along the banks of a"
-" river can vary depending on the intensity of the adjacent land use. For "
-"intensive cultivation the buffer distance may be bigger than for organic "
-"farming (see Figure figure_variable_buffer_ and Table "
-"table_buffer_attributes_)."
-msgstr ""
-"Existuje několik variant v ukládání do vyrovnávací paměti. \"Nárazníková "
-"vzdálenost\" nebo nárazníková velikost \"se může lišit\" podle číselných "
-"hodnot uvedených v tabulce atributu vektorové vrstvy pro každou funkci. "
-"Číselné hodnoty musí být definovány v mapových jednotkách v souladu s "
-"referenčním souřadnicovým systémem (CRS) používaným s daty. Například, šířka"
-" nárazníkové zóny podél břehu řeky se může měnit v závislosti na intenzitě "
-"přilehlého využití půdy. Pro intenzivní pěstování může být vzdálenost "
-"nárazníkové paměti větší, než pro ekologické zemědělství (viz obrázek "
-"figure_variable_buffer_ a Tabulka table_buffer_attributes_)."
 
 #: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:97
 msgid "Buffering rivers with different buffer distances."
@@ -252,18 +203,6 @@ msgstr ""
 msgid "Multiple buffer zones"
 msgstr "Násobné nárazníkové zóny"
 
-#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:124
-msgid ""
-"A feature can also have more than one buffer zone. A nuclear power plant may"
-" be buffered with distances of 10, 15, 25 and 30 km, thus forming multiple "
-"rings around the plant as part of an evacuation plan (see "
-"figure_multiple_buffers_)."
-msgstr ""
-"Funkce může mít také víc než jednu nárazníkovou zónu. Jaderné elektrárny "
-"mohou být ohraničeny nárazníkovými zónami 10, 15, 25 a 30 km, formujících "
-"násobné prstence okolo elektráren používaným k evakuačnímu plánu. (viz "
-"figure_multiple_buffers_)."
-
 #: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:134
 msgid "Buffering a point feature with distances of 10, 15, 25 and 30 km."
 msgstr ""
@@ -272,21 +211,6 @@ msgstr ""
 #: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:137
 msgid "Buffering with intact or dissolved boundaries"
 msgstr "Buffering s neporušenými nebo zničenými hranicemi."
-
-#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:139
-msgid ""
-"Buffer zones often have dissolved boundaries so that there are no "
-"overlapping areas between the buffer zones. In some cases though, it may "
-"also be useful for boundaries of buffer zones to remain intact, so that each"
-" buffer zone is a separate polygon and you can identify the overlapping "
-"areas (see Figure figure_buffer_dissolve_)."
-msgstr ""
-"Nárazníkové zóny mají často rozpuštěné hranice tak, že neexistují žádné "
-"překrývající se oblasti mezi těmito nárazníkovými zónami. V některých "
-"případech však může být také užitečné aby pro hranice nárazníkové zóny "
-"zůstaly beze změny, tak, že každá vyrovnávací zóna je samostatný polygon a "
-"lze identifikovat překrývající se oblasti (viz obrázek "
-"figure_buffer_dissolve_)."
 
 #: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:151
 msgid ""
@@ -360,18 +284,6 @@ msgstr ""
 "Nárazníková analýza je důležitým a často používaným nástrojem prostorové "
 "analýzy, ale existuje mnoho dalších, které mohou být použity v GIS a můžou "
 "být prozkoumány uživatelem."
-
-#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:183
-msgid ""
-"**Spatial overlay** is a process that allows you to identify the "
-"relationships between two polygon features that share all or part of the "
-"same area. The output vector layer is a combination of the input features "
-"information (see figure_overlay_operations_)."
-msgstr ""
-"\"Prostorové překrytí\" je proces, který umožňuje určit vztahy mezi dvěma "
-"polygonálními funkcemi, které sdílejí všechny nebo část téže oblasti. "
-"Výstupní vektor je vrstva kombinací jednotlivých vstupu (viz "
-"figure_overlay_operations_)."
 
 #: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:194
 msgid ""
@@ -483,17 +395,6 @@ msgstr "Nyní si to zkuste vy!"
 #: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:226
 msgid "Here are some ideas for you to try with your learners:"
 msgstr "Zde je pár nápadů k pokusům s Vašimi studenty:"
-
-#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:228
-msgid ""
-"Because of dramatic traffic increase, the town planners want to widen the "
-"main road and add a second lane. Create a buffer around the road to find "
-"properties that fall within the buffer zone (see figure_buffer_road_)."
-msgstr ""
-"Vzhledem k dramatickému nárůstu dopravy, urbanisté chtějí rozšířit hlavní "
-"silnici a přidat druhý jízdní pruh. Vytvoření nárazníkové zóny kolem silnice"
-" k hledání vlastností, které spadají do nárazníkové zóny (viz "
-"figure_buffer_road_)."
 
 #: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:231
 msgid ""

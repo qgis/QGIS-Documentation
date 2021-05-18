@@ -1,24 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
-# Aline Furlanetto Viero <afviero@gmail.com>, 2020
+# Harrissou Sant-anna, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:16+0000\n"
-"Last-Translator: Aline Furlanetto Viero <afviero@gmail.com>, 2020\n"
+"POT-Creation-Date: 2021-05-12 02:37+0000\n"
+"PO-Revision-Date: 2020-12-24 12:02+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2020\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 "Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
@@ -52,25 +53,6 @@ msgstr ""
 msgid "Overview"
 msgstr "Visão Geral"
 
-#: ../../docs/gentle_gis_introduction/raster_data.rst:15
-msgid ""
-"In the previous topics we have taken a closer look at vector data. While "
-"vector features use geometry (points, polylines and polygons) to represent "
-"the real world, raster data takes a different approach. Rasters are made up "
-"of a matrix of pixels (also called cells), each containing a value that "
-"represents the conditions for the area covered by that cell (see "
-"figure_raster_). In this topic we are going to take a closer look at raster "
-"data, when it is useful and when it makes more sense to use vector data."
-msgstr ""
-"Nos tópicos anteriores demos uma olhada nos dados vetoriais. Enquanto as "
-"feições vetoriais utilizam geometria (pontos, polilinhas e polígonos) para "
-"representar o mundo real, os dados rasters tem uma abordagem diferente. "
-"Dados rasters são formados por uma matriz de pixels (também chamados de "
-"células) , cada uma contem um valor que representa uma condição da área "
-"coberta por essa célula (veja a figura_raster_). Nesse tópico nós vamos dar "
-"uma olhada nos dados raster, entender o quando eles são úteis e quando faz "
-"mais sentido utilizar dados vetoriais. "
-
 #: ../../docs/gentle_gis_introduction/raster_data.rst:29
 msgid ""
 "A raster dataset is composed of rows (running across) and columns (running "
@@ -86,45 +68,6 @@ msgstr ""
 #: ../../docs/gentle_gis_introduction/raster_data.rst:35
 msgid "Raster data in detail"
 msgstr "Dados Raster em detalhe"
-
-#: ../../docs/gentle_gis_introduction/raster_data.rst:37
-msgid ""
-"Raster data is used in a GIS application when we want to display information"
-" that is continuous across an area and cannot easily be divided into vector "
-"features. When we introduced you to vector data we showed you the image in "
-"figure_landscape_. Point, polyline and polygon features work well for "
-"representing some features on this landscape, such as trees, roads and "
-"building footprints. Other features on a landscape can be more difficult to "
-"represent using vector features. For example the grasslands shown have many "
-"variations in colour and density of cover. It would be easy enough to make a"
-" single polygon around each grassland area, but a lot of the information "
-"about the grassland would be lost in the process of simplifying the features"
-" to a single polygon. This is because when you give a vector feature "
-"attribute values, they apply to the whole feature, so vectors aren't very "
-"good at representing features that are not homogeneous (entirely the same) "
-"all over. Another approach you could take is to digitise every small "
-"variation of grass colour and cover as a separate polygon. The problem with "
-"that approach is that it will take a huge amount of work in order to create "
-"a good vector dataset."
-msgstr ""
-"Dados Raster são usado em um aplicativo GIS quando queremos exibir "
-"informações continuas em uma determinada área e que não pode ser facilmente "
-"dividido em funções vetoriais. Quando apresentamos os dados vetoriais, nós "
-"mostramos a imagem figura_paisagem_. Pontos, linhas e poligonos funcionam "
-"bem para representar algumas caracteristicas dessa paisagem, como "
-"árvores,estradas e contruções. Outras caracterisiticas da paisagem podem ser"
-" mais difíceis de se representar utilizando vetores. Por exemplo, os campos "
-"mostrados têm muitas variações de cor e densidade de cobertura. Seria muito "
-"fácil fazer um único polígono ao redor de cada área de pastagem, mas um "
-"monte de informações sobre o gramado seria perdido no processo de "
-"simplificação dos recursos para um único polígono. Isso ocorre poque você "
-"está dando um único valor de atributo para esse vetor, aplicando-o para toda"
-" área, dessa forma os vetores não são muito bons para representar áreas que "
-"apresenta características que não são homogêneas (inteiramente o mesmo) para"
-" toa área. Outra abordagem que você pode tomar é a de digitalizar cada "
-"pequena variação de grama cor e cobrir como um polígono separado. O problema"
-" com essa abordagem é que ela vai demandar uma enorme quantidade de "
-"trabalho, a fim de criar um bom conjunto de dados de vetor."
 
 #: ../../docs/gentle_gis_introduction/raster_data.rst:60
 msgid ""
@@ -168,16 +111,6 @@ msgstr ""
 "para representar o risco de incêndio em uma paisagem. Nestes tipos de "
 "aplicações, cada célula no raster representa um valor diferente, por "
 "exemplo, risco de incêndio em uma escala de um a dez."
-
-#: ../../docs/gentle_gis_introduction/raster_data.rst:78
-msgid ""
-"An example that shows the difference between an image obtained from a "
-"satellite and one that shows calculated values can be seen in "
-"figure_raster_types_."
-msgstr ""
-"Um exemplo que mostra a diferença entre a imagem obtida a partir de um "
-"satélite e uma que mostra os valores calculados pode ser visto na "
-"figura_tipos_de_raster_."
 
 #: ../../docs/gentle_gis_introduction/raster_data.rst:87
 msgid ""
@@ -227,31 +160,6 @@ msgstr ""
 msgid "Sources of raster data"
 msgstr "Fontes de dados Raster"
 
-#: ../../docs/gentle_gis_introduction/raster_data.rst:111
-msgid ""
-"Raster data can be obtained in a number of ways. Two of the most common ways"
-" are aerial photography and satellite imagery. In aerial photography, an "
-"aeroplane flies over an area with a camera mounted underneath it. The "
-"photographs are then imported into a computer and georeferenced. Satellite "
-"imagery is created when satellites orbiting the earth point special digital "
-"cameras towards the earth and then take an image of the area on earth they "
-"are passing over. Once the image has been taken it is sent back to earth "
-"using radio signals to special receiving stations such as the one shown in "
-"figure_csir_station_. The process of capturing raster data from an aeroplane"
-" or satellite is called **remote sensing**."
-msgstr ""
-"Dados matriciais pode ser obtida num número de maneiras. Duas das formas "
-"mais comuns são a fotografia aérea e imagens de satélite. Na fotografia "
-"aérea, uma aeronave sobrevoa uma área com uma câmera montada debaixo dela. "
-"As fotografias são então importadas para um computador e georreferenciadas. "
-"As imagens de satélite são criadas quando os satélites que orbitam um ponto "
-"na superfície da terra com câmeras digitais especiais apontadas para a "
-"superfície, essas câmeras obtêm uma imagem da área na Terra em eles estão "
-"passando por cima. Depois que a imagem foi obtida ela é enviada de volta à "
-"Terra através de sinais de rádio para estações especiais de recepção, como a"
-" mostrado na figura_csir_station_. O processo de captura de dados raster de "
-"um avião ou satélite é chamado de **sensoriamento remoto.**"
-
 #: ../../docs/gentle_gis_introduction/raster_data.rst:127
 msgid ""
 "The CSIR Satellite Applications Center at Hartebeeshoek near Johannesburg. "
@@ -261,29 +169,6 @@ msgstr ""
 "O Centro de Aplicações  Satelitais em Hartebeeshoek nas proximidades de "
 "Joanesburgo.  Essas antenas especiais monitoram os satélites que passam "
 "sobre essa região e fazem o download de imagens usando ondas de rádio."
-
-#: ../../docs/gentle_gis_introduction/raster_data.rst:131
-msgid ""
-"In other cases, raster data can be computed. For example an insurance "
-"company may take police crime incident reports and create a country wide "
-"raster map showing how high the incidence of crime is likely to be in each "
-"area. Meteorologists (people who study weather patterns) might generate a "
-"province level raster showing average temperature, rainfall and wind "
-"direction using data collected from weather stations (see "
-"figure_csir_station_). In these cases, they will often use raster analysis "
-"techniques such as interpolation (which we describe in Topic "
-":ref:`spatial_analysys`)."
-msgstr ""
-"Em outros casos, os dados raster pode ser computado. Por exemplo: uma "
-"companhia de seguros pode obter os dados dos ocorrência de crimes policiais "
-"e criar, através desses dados, uma mapa raster de todo um pais mostrando as "
-"áreas onde existe uma maior probabilidades de incidência de crimes. Os "
-"Meteorologistas (profissionais que estudam os padrões climáticos) pode gerar"
-" um mapa raster a nível estadual mostrando a temperatura média, precipitação"
-" e velocidade do vento usando dados coletados nas estações climáticas (veja "
-"a figura_csir_station_) Nesses casos, eles vão usar técnicas de análise de "
-"dados raster como a interpolação (procedimento que descrevemos no tópico "
-":ref:`spatial_analysys`)"
 
 #: ../../docs/gentle_gis_introduction/raster_data.rst:140
 msgid ""
@@ -312,18 +197,6 @@ msgstr ""
 #: ../../docs/gentle_gis_introduction/raster_data.rst:151
 msgid "Spatial Resolution"
 msgstr "Resolução Espacial"
-
-#: ../../docs/gentle_gis_introduction/raster_data.rst:153
-msgid ""
-"Every raster layer in a GIS has pixels (cells) of a fixed size that "
-"determine its spatial resolution. This becomes apparent when you look at an "
-"image at a small scale (see figure_raster_small_scale_) and then zoom in to "
-"a large scale (see figure_raster_large_scale_)."
-msgstr ""
-"Cada camada raste em um SIG contém pixels (células) de tamanhos fixos que "
-"determinam sua resolução espacial. Isso se torna bem vi´sivel quando você "
-"olha uma imagem em uma escala pequena (veja a figura_raster_small_scale_) e "
-",usando o zoom, em uma escala grande (veja a figura_raster_large_scale_)."
 
 #: ../../docs/gentle_gis_introduction/raster_data.rst:164
 msgid "This satellite image looks good when using a small scale..."

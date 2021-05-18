@@ -1,58 +1,59 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
-# WuJianling <wujllee@sina.com>, 2020
+# Harrissou Sant-anna, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:16+0000\n"
-"Last-Translator: WuJianling <wujllee@sina.com>, 2020\n"
+"POT-Creation-Date: 2021-05-12 02:37+0000\n"
+"PO-Revision-Date: 2020-12-24 10:26+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2020\n"
 "Language-Team: Chinese Simplified (https://www.transifex.com/qgis/teams/6144/zh-Hans/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 "Language: zh-Hans\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:4
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:5
 msgid "Coordinate Reference Systems"
 msgstr "坐标参考系"
 
-#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:7
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:8
 msgid "|gentleLogo|"
 msgstr "|gentleLogo|"
 
-#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:7
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:8
 msgid "Objectives:"
 msgstr "目标："
 
-#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:7
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:8
 msgid "Understanding of Coordinate Reference Systems."
 msgstr "理解坐标参考系。"
 
-#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:9
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:10
 msgid "Keywords:"
 msgstr "关键词："
 
-#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:9
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:10
 msgid ""
 "Coordinate Reference System (CRS), Map Projection, On the Fly Projection, "
 "Latitude, Longitude, Northing, Easting"
 msgstr "坐标参考系(CRS)，地图投影，动态投影，纬度，经度，北距、东距"
 
-#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:13
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:14
 msgid "Overview"
 msgstr "概述"
 
-#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:15
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:16
 msgid ""
 "**Map projections** try to portray the surface of the earth, or a portion of"
 " the earth, on a flat piece of paper or computer screen. In layman's term, "
@@ -61,7 +62,7 @@ msgid ""
 msgstr ""
 "**地图投影**试图在一张纸或电脑屏幕上描绘地球的表面，或地球的一部分。用通俗的话来说，地图投影试图将地球从球形(3D)转化为平面(2D)。"
 
-#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:19
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:20
 msgid ""
 "A **coordinate reference system** (CRS) then defines how the two-"
 "dimensional, projected map in your GIS relates to real places on the earth. "
@@ -72,11 +73,11 @@ msgstr ""
 "然后，**坐标参考系统** "
 "(CRS)定义地理信息系统中投影的二维地图如何与地球上的真实地点联系起来。使用哪种地图投影和CRS的决定取决于您想要工作的区域范围、您想要进行的分析，通常还取决于数据的可用性。"
 
-#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:26
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:27
 msgid "Map Projection in detail"
 msgstr "详细地图投影"
 
-#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:28
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:29
 msgid ""
 "A traditional method of representing the earth's shape is the use of globes."
 " There is, however, a problem with this approach. Although globes preserve "
@@ -87,7 +88,7 @@ msgid ""
 msgstr ""
 "表示地球形状的传统方法是使用地球仪。然而，这种方法有一个问题。尽管地球仪保留了地球的大部分形状，并展示了大陆尺度特征的空间构型，但它们很难装在口袋里。它们也只方便在非常小的尺度下使用(例如1:100万)。"
 
-#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:34
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:35
 msgid ""
 "Most of the thematic map data commonly used in GIS applications are of "
 "considerably larger scale. Typical GIS datasets have scales of 1:250 000 or "
@@ -100,7 +101,7 @@ msgstr ""
 "GIS应用中常用的专题地图数据大多比例尺较大。典型的GIS数据集具有1:250 "
 "000或更大的比例尺，取决于数据详细程度。这种大小的地球仪生产起来很困难，成本也很高，而且携带起来更困难。因此，制图者开发了一套被称为“地图投影”的技术，旨在以合理的精度显示二维球形地球。"
 
-#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:41
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:42
 msgid ""
 "When viewed at close range the earth appears to be relatively flat. However "
 "when viewed from space, we can see that the earth is relatively spherical. "
@@ -119,6 +120,6 @@ msgid ""
 msgstr ""
 "从近处看，地球似乎是相对平坦的。然而，从太空看，我们可以看到地球相对来说是球形的。正如我们将在即将到来的地图制作主题中看到的，地图，是现实的表现。它们不仅被设计用来表现特征，而且也用来表现形状和空间布局。每个地图投影都有**优点**和**缺点**。地图的最佳投影取决于地图的**比例尺**以及使用目的。例如，一个投影用来绘制非洲大陆可能会存在不可接受的失真，但对你们国家的**大比例尺（详细）地图**来说，是一个很好的选择。地图投影的属性也可能会影响到地图的一些设计特征。有些投影在小区域制图很好用，有些适用于绘制大范围东西方向的区域，有些对大范围南北方向制图区域更合适。"
 
-#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:56
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:57
 msgid "The three families of map projections"
 msgstr "地图投影的三个系列"

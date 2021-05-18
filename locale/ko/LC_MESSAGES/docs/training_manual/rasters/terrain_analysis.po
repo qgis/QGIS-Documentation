@@ -1,23 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
+# Harrissou Sant-anna, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:20+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"POT-Creation-Date: 2021-05-12 02:37+0000\n"
+"PO-Revision-Date: 2020-12-24 10:17+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -47,13 +49,13 @@ msgstr "**이 강의의 목표:** 지형 분석을 이용해서 지형에 대해
 msgid "|basic| |FA| Calculating a Hillshade"
 msgstr "|basic| |FA| 음영기복도 계산"
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:49
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:53
 msgid ""
 "You will now have a new layer called :guilabel:`hillshade` that looks like "
 "this:"
 msgstr "이제 다음과 같이 :guilabel:`hillshade` 라는 새 레이어가 생성되었습니다."
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:55
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:59
 msgid ""
 "That looks nice and 3D, but can we improve on this? On its own, the "
 "hillshade looks like a plaster cast. Can't we use it together with our "
@@ -63,11 +65,11 @@ msgstr ""
 "멋진 3D로 보입니다만, 좀 더 향상시킬 수 있을까요? 음영기복도 그 자체로는 마치 석고 모형처럼 보입니다. 다른, 좀 더 다채로운 "
 "래스터들과 어떻게 함께 사용할 수는 없을까요? 물론 할 수 있습니다. 음영기복도를 오버레이로서 사용한다면 말이죠."
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:61
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:65
 msgid "|basic| |FA| Using a Hillshade as an Overlay"
 msgstr "|basic| |FA| 음영기복도를 오버레이로 사용"
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:63
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:67
 msgid ""
 "A hillshade can provide very useful information about the sunlight at a "
 "given time of day. But it can also be used for aesthetic purposes, to make "
@@ -77,7 +79,7 @@ msgstr ""
 "음영기복도는 낮 동안의 특정 시간의 햇빛에 대한 유용한 정보를 제공할 수 있습니다. 하지만 맵을 더 보기 좋게 하기 위한 심미적 목적을 "
 "위해서도 사용할 수 있습니다. 이렇게 하려면 음영기복도를 거의 투명하게 설정하면 됩니다."
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:86
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:90
 msgid ""
 "Using a hillshade in this way, it's possible to enhance the topography of "
 "the landscape. If the effect doesn't seem strong enough to you, you can "
@@ -89,69 +91,47 @@ msgstr ""
 ":guilabel:`hillshade` 레이어의 투명도를 조절할 수 있습니다. 하지만 물론, 음영기복도가 밝아질수록 그 아래의 색상은 "
 "침침해질 것입니다. 여러분이 만족할 수 있는 균형을 찾아야 합니다."
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:96
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:115
 msgid "|moderate| |FA| Calculating the Slope"
 msgstr "|moderate| |FA| 경사도 계산"
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:98
-msgid ""
-"Another useful thing to know about the terrain is how steep it is. If, for "
-"example, you want to build houses on the land there, then you need land that"
-" is relatively flat."
-msgstr ""
-"지형에 대해 알아두면 좋은 점 가운데 하나는 얼마나 가파르냐는 것입니다. 예를 들어 어떤 토지에 집을 짓고 싶다고 할 때, 그 토지는 "
-"어느 정도 평평해야 할 것입니다."
-
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:133
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:154
 msgid ":ref:`Check your results <raster-analysis-1>`"
 msgstr ":ref:`결과 확인 <raster-analysis-1>`"
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:136
-msgid "|moderate| |FA| Using the Raster Calculator"
-msgstr "|moderate| |FA| 래스터 계산기 사용"
-
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:148
-msgid ""
-"Fortunately, you already have rasters showing you the slope as well as the "
-"aspect, but you have no way of knowing where both conditions are satisfied "
-"at once. How could this analysis be done?"
-msgstr ""
-"다행히 여러분에게는 이미 경사는 물론 향을 보여주는 래스터가 있습니다. 그런데 이 두 가지 조건을 동시에 만족하는 곳을 알 도리가 없죠."
-" 어떻게 이런 분석을 할 수 있을까요?"
-
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:153
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:164
 msgid "The answer lies with the :guilabel:`Raster calculator`."
 msgstr "그 답은 :guilabel:`Raster calculator` 가 가지고 있습니다."
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:203
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:214
 msgid "Your result will be this:"
 msgstr "결과는 다음과 같을 것입니다."
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:229
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:241
 msgid ":ref:`Check your results <raster-analysis-2>`"
 msgstr ":ref:`결과 확인 <raster-analysis-2>`"
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:233
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:245
 msgid "|moderate| |FA| Combining Raster Analysis Results"
 msgstr "|moderate| |FA| 래스터 분석 결과 결합"
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:257
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:269
 msgid "To calculate the areas that satisfy these criteria:"
 msgstr "이 기준들을 만족하는 지역을 계산하려면,"
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:271
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:283
 msgid "The result:"
 msgstr "결과물은 다음과 같습니다."
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:278
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:295
 msgid "|moderate| |FA| Simplifying the Raster"
 msgstr "|moderate| |FA| 래스터 단순화"
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:330
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:347
 msgid "Your output looks like this:"
 msgstr "산출물은 다음과 같습니다."
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:335
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:352
 msgid ""
 "This is what was expected: a simplified version of the earlier results. "
 "Remember that if the results you get from a tool aren't what you expected, "
@@ -161,15 +141,15 @@ msgstr ""
 "우리가 기대한 산출물입니다. 이전 결과물을 단순화시킨 버전이죠. 어떤 도구의 결과물이 기대했던 것과 다를 경우, 문제를 해결 하는 데 "
 "메타데이터(및, 적용 가능할 경우 벡터 속성)을 살펴보는 작업이 필수적일 수도 있습니다."
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:483
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:500
 msgid "|IC|"
 msgstr "|IC|"
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:493
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:510
 msgid "|WN|"
 msgstr "|WN|"
 
-#: ../../docs/training_manual/rasters/terrain_analysis.rst:495
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:512
 msgid ""
 "Now you have two analyses: the vector analysis which shows you the "
 "potentially suitable plots, and the raster analysis that shows you the "

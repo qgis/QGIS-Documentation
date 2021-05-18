@@ -1,23 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
+# Harrissou Sant-anna, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:16+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"POT-Creation-Date: 2021-05-12 02:37+0000\n"
+"PO-Revision-Date: 2020-12-24 10:22+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2020\n"
 "Language-Team: Romanian (https://www.transifex.com/qgis/teams/6144/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 "Language: ro\n"
 "Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
 
@@ -53,18 +55,6 @@ msgstr "Atribut, bază de date, câmpuri, date, vector, simbologie"
 msgid "Overview"
 msgstr "Vedere generală"
 
-#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:16
-msgid ""
-"If every line on a map was the same colour, width, thickness, and had the "
-"same label, it would be very hard to make out what was going on. The map "
-"would also give us very little information. Take a look at "
-"figure_map_attributes_ for example."
-msgstr ""
-"Dacă fiecare linie de pe o hartă ar fi avut aceeași culoare, lățime, "
-"grosime, și aceeași etichetă, ar fi foarte greu de identificat despre ce "
-"este vorba. Harta însăși ar fi oferit foarte puține informații. Parcurgeți "
-"figure_map_attributes_, ca exemplu."
-
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:26
 msgid ""
 "Maps come to life when colour and different symbols are used to help you to "
@@ -78,19 +68,6 @@ msgstr ""
 " În schimb, este mult mai ușor să observați diferențele dintre entități, "
 "folosind harta din dreapta. "
 
-#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:31
-msgid ""
-"In this topic we will look at how attribute data can help us to make "
-"interesting and informative maps. In the previous topic on vector data, we "
-"briefly explained that **attribute data** are used to **describe vector "
-"features**. Take a look at the house pictures in figure_house_."
-msgstr ""
-"În acest capitol vom analiza modul în care atributele datelor  ne pot ajuta "
-"să creăm hărți interesante și pline de informații. În capitolul anterior, "
-"s-a explicat că **atributele datelor** sunt folosite pentru a descrie "
-"**entitățile vectoriale**. Aruncați o privire la imaginile caselor din "
-"figure_house_."
-
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:42
 msgid ""
 "Every feature has characteristics that we can describe. These can be visible"
@@ -99,25 +76,6 @@ msgstr ""
 "Fiecare entitate are caracteristici, care pot fi descrise. Caracteristicile "
 "pot fi lucruri vizibile, sau informații pe care le cunoaștem despre entitate"
 " (de exemplu, anul construirii)."
-
-#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:45
-msgid ""
-"The geometry of these house features is a polygon (based on the floor plan "
-"of the house), the attributes we have recorded are roof colour, whether "
-"there is a balcony, and the year the house was built. Note that attributes "
-"don't have to be visible things --– they can describe things we know about "
-"the feature such as the year it was built. In a GIS Application, we can "
-"represent this feature type in a houses polygon layer, and the attributes in"
-" an attribute table (see figure_house_gis_)."
-msgstr ""
-"Geometria entităților care reprezintă aceste case este de tip poligon (bazat"
-" pe planul parterului), atributele înregistrate fiind culoarea acoperișului,"
-" prezența balconului și anul ridicării construcției. Rețineți că atributele "
-"nu trebuie să fie obligatoriu lucruri vizibile --- se poate utiliza și "
-"informații pe care le știm despre entitate, cum ar fi anul în care a fost "
-"construită. Într-o aplicație GIS, putem reprezenta acest tip de "
-"caracteristică într-un strat poligonal, dedicat caselor, iar atributele vor "
-"fi introduse într-un tabel de atribute (a se vedea figure_house_gis_)."
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:58
 msgid ""
@@ -131,22 +89,6 @@ msgstr ""
 " jos a imaginii) listează atributele pentru zonele de case prezente pe "
 "hartă. Când o entitate este evidențiată în tabel, ea va apărea pe hartă sub "
 "forma unui poligon de culoare galbenă."
-
-#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:63
-msgid ""
-"The fact that features have attributes as well geometry in a GIS Application"
-" opens up many possibilities. For example we can use the attribute values to"
-" tell the GIS what colours and style to use when drawing features (see "
-"figure_style_by_attribute_). The process of setting colours and drawing "
-"styles is often referred to as setting feature **symbology**."
-msgstr ""
-"Într-o aplicație GIS se deschid multe posibilități datorită faptul că "
-"entitățile dispun de atribute precum și de geometrie. De exemplu, putem "
-"folosi valorile atributelor pentru a indica aplicației GIS ce culori și ce "
-"stil să utilizeze atunci când desenează entitățile (a se vedea "
-"figure_style_by_attribute_). Procesul de setare a culorilor și a stilurilor "
-"de desenare mai este cunoscut și ca activitatea de stabilire a "
-"**simbologiei** entității."
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:75
 msgid ""
@@ -170,20 +112,6 @@ msgstr ""
 "**etichetele hărții**. Cele mai multe aplicații GIS au posibilitatea de a "
 "selecta atributul care ar trebui să fie folosit la etichetarea fiecărei "
 "entități."
-
-#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:84
-msgid ""
-"If you have ever **searched a map** for a place name or a specific feature, "
-"you will know how time consuming it can be. Having attribute data can make "
-"searching for a specific feature quick and easy. In "
-"figure_search_by_attribute_ you can see an example of an attribute search in"
-" a GIS."
-msgstr ""
-"Dacă vreodată ați **căutat pe o hartă** un nume de locație sau o entitate "
-"anume, atunci cunoașteți cât de mult timp poate dura acest lucru. Căutând "
-"însă în atributele datelor veți putea identifica rapid și ușor entitatea "
-"dorită. În figure_search_by_attribute_ puteti vedea un exemplu de căutare în"
-" atribute, cu ajutorul aplicației GIS."
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:95
 msgid ""
@@ -229,20 +157,6 @@ msgid ""
 msgstr ""
 "Înainte de a trece la detalierea datelor atributelor, haideți să efectuăm o "
 "recapitulare rapidă."
-
-#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:112
-msgid ""
-"Features are real world things such as roads, property boundaries, "
-"electrical substation sites and so on. A **feature** has a **geometry** "
-"(which determines if it is a **point**, **polyline** or **polygon**) and "
-"**attributes** (which describe the feature). This is shown in "
-"figure_features_at_glance_."
-msgstr ""
-"Entitățile sunt lucruri ale lumii reale, cum ar fi drumuri, limitele de "
-"proprietate, clădirile stației electrice și așa mai departe. O **entitate** "
-"are o **geometrie** (care determină dacă aceasta este un **punct**, o "
-"**polilinie** sau un **poligon**) și **atribute** (care descriu entitatea) ."
-" Acest lucru este arătat în figure_features_at_glance_."
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:123
 msgid "Vector features at a glance."
@@ -898,10 +812,6 @@ msgstr ""
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:494
 msgid "Further reading"
 msgstr "Lecturi suplimentare"
-
-#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:496
-msgid "**Website:** https://en.wikipedia.org/wiki/Cartography#Map_symbology"
-msgstr "**Website:** https://en.wikipedia.org/wiki/Cartography#Map_symbology"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:498
 msgid ""

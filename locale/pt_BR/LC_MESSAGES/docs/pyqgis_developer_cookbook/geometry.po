@@ -1,24 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
-# Aline Furlanetto Viero <afviero@gmail.com>, 2020
+# Harrissou Sant-anna, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:23+0000\n"
-"Last-Translator: Aline Furlanetto Viero <afviero@gmail.com>, 2020\n"
+"POT-Creation-Date: 2021-04-28 02:21+0000\n"
+"PO-Revision-Date: 2020-12-24 10:26+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2020\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
 "Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
@@ -30,11 +31,11 @@ msgstr ""
 "Os trechos de código desta página precisam das seguintes importações se você"
 " estiver fora do console do pyqgis:"
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:43
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:45
 msgid "Geometry Handling"
 msgstr "Manipulação Geométrica"
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:48
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:50
 msgid ""
 "Points, linestrings and polygons that represent a spatial feature are "
 "commonly referred to as geometries. In QGIS they are represented with the "
@@ -44,7 +45,7 @@ msgstr ""
 "referidos como geometrias. No QGIS, eles são representados com a classe "
 ":class:`QgsGeometry <qgis.core.QgsGeometry>`."
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:52
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:54
 msgid ""
 "Sometimes one geometry is actually a collection of simple (single-part) "
 "geometries. Such a geometry is called a multi-part geometry. If it contains "
@@ -58,7 +59,7 @@ msgstr ""
 "multi-cadeia linear ou multi-polígono. Por exemplo, um país que consiste de "
 "múltiplas ilhas pode ser representado como um sistema multi-polígono."
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:58
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:60
 msgid ""
 "The coordinates of geometries can be in any coordinate reference system "
 "(CRS). When fetching features from a layer, associated geometries will have "
@@ -68,7 +69,7 @@ msgstr ""
 "de coordenadas (SRC). Ao buscar feições a partir de uma camada, geometrias "
 "associadas terão coordenadas no SRC da camada."
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:62
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:64
 msgid ""
 "Description and specifications of all possible geometries construction and "
 "relationships are available in the `OGC Simple Feature Access Standards "
@@ -79,19 +80,19 @@ msgstr ""
 "<https://www.opengeospatial.org/standards/sfa>`_ para detalhes mais "
 "avançados."
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:69
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:71
 msgid "Geometry Construction"
 msgstr "Construção de Geométria"
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:71
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:73
 msgid "PyQGIS provides several options for creating a geometry:"
 msgstr "O PyQGIS fornece várias opções para criar uma geometria:"
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:73
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:75
 msgid "from coordinates"
 msgstr "a partir das coordenadas"
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:92
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:94
 msgid ""
 "Coordinates are given using :class:`QgsPoint <qgis.core.QgsPoint>` class or "
 ":class:`QgsPointXY <qgis.core.QgsPointXY>` class. The difference between "
@@ -103,11 +104,11 @@ msgstr ""
 "<qgis.core.QgsPointXY>`. A diferençae entre estas classes é que a classe "
 ":class:`QgsPoint <qgis.core.QgsPoint>` suporta M e Z dimensões."
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:96
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:98
 msgid "A Polyline (Linestring) is represented by a list of points."
 msgstr " Uma Polilinha (Linestring) é representada por uma lista de pontos. "
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:98
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:100
 msgid ""
 "A Polygon is represented by a list of linear rings (i.e. closed "
 "linestrings). The first ring is the outer ring (boundary), optional "
@@ -121,7 +122,7 @@ msgstr ""
 "diferentemente de alguns programas, o QGIS fechará o anel para você, não "
 "sendo necessário duplicar o primeiro ponto como o último."
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:104
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:106
 msgid ""
 "Multi-part geometries go one level further: multi-point is a list of points,"
 " multi-linestring is a list of linestrings and multi-polygon is a list of "
@@ -131,23 +132,23 @@ msgstr ""
 "de pontos, multi-cadeia linear é uma lista de cadeias lineares e multi-"
 "polígono é uma lista de polígonos."
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:108
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:110
 msgid "from well-known text (WKT)"
 msgstr "a partir de textos conhecidos (WKT)"
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:120
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:122
 msgid "from well-known binary (WKB)"
 msgstr "a partir de binários conhecidos (WKB)"
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:139
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:141
 msgid "Access to Geometry"
 msgstr "Acesso a Geometria"
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:220
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:269
 msgid "Geometry Predicates and Operations"
 msgstr "Operações e Predicados Geométricos"
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:343
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:377
 msgid ""
 "You can find many example of algorithms that are included in QGIS and use "
 "these methods to analyze and transform vector data. Here are some links to "
@@ -157,7 +158,7 @@ msgstr ""
 " e usar esses métodos para analisar e transformar dados vetoriais. Aqui "
 "estão alguns links para o código de alguns deles."
 
-#: ../../docs/pyqgis_developer_cookbook/geometry.rst:349
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:383
 msgid ""
 ":source:`Lines to polygons algorithm "
 "<python/plugins/processing/algs/qgis/LinesToPolygons.py>`"

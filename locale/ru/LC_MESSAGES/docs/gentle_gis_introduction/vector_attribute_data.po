@@ -1,23 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
+# Harrissou Sant-anna, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:16+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"POT-Creation-Date: 2021-05-12 02:37+0000\n"
+"PO-Revision-Date: 2020-12-24 10:22+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2020\n"
 "Language-Team: Russian (https://www.transifex.com/qgis/teams/6144/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 "Language: ru\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
@@ -50,17 +52,6 @@ msgstr "Атрибут, база данных, поля, данные, вект�
 msgid "Overview"
 msgstr "Обзор"
 
-#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:16
-msgid ""
-"If every line on a map was the same colour, width, thickness, and had the "
-"same label, it would be very hard to make out what was going on. The map "
-"would also give us very little information. Take a look at "
-"figure_map_attributes_ for example."
-msgstr ""
-"Если все линии на карте будут иметь один и тот же цвет, одинаковую ширину и "
-"подпись, будет очень трудно понять что к чему. Такая карта будет "
-"малоинформативной. Взгляните на рисунок figure_map_attributes_."
-
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:26
 msgid ""
 "Maps come to life when colour and different symbols are used to help you to "
@@ -73,19 +64,6 @@ msgstr ""
 "реки, дороги и горизонтали на карте слева? А вот сделать это при помощи "
 "карты, показанной справа, намного проще."
 
-#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:31
-msgid ""
-"In this topic we will look at how attribute data can help us to make "
-"interesting and informative maps. In the previous topic on vector data, we "
-"briefly explained that **attribute data** are used to **describe vector "
-"features**. Take a look at the house pictures in figure_house_."
-msgstr ""
-"В этом разделе мы узнаем как атрибутивные данные помогают создавать "
-"интересные и информативные карты. В предыдущих разделах, посвященных "
-"векторным данным, мы кратко объясняли, что **атрибутивные данные** "
-"используются для **описания векторных объектов**. Посмотрите на изображенные"
-" на рисунке figure_house_ дома."
-
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:42
 msgid ""
 "Every feature has characteristics that we can describe. These can be visible"
@@ -93,24 +71,6 @@ msgid ""
 msgstr ""
 "Каждый объект имеет характеристики. Это могут быть как видимые вещи, так и "
 "информация, которую мы просто знаем (например, год постройки)."
-
-#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:45
-msgid ""
-"The geometry of these house features is a polygon (based on the floor plan "
-"of the house), the attributes we have recorded are roof colour, whether "
-"there is a balcony, and the year the house was built. Note that attributes "
-"don't have to be visible things --– they can describe things we know about "
-"the feature such as the year it was built. In a GIS Application, we can "
-"represent this feature type in a houses polygon layer, and the attributes in"
-" an attribute table (see figure_house_gis_)."
-msgstr ""
-"Геометрия этих объектов полигональная (соответствует плану дома), а в "
-"качестве атрибутов мы используем цвет крыши, наличие балкона и год "
-"постройки. Обратите внимание, что в качестве атрибутов не обязательно "
-"выступают видимые признаки --- также можно использовать любую известную "
-"информацию об объекте, например год постройки дома. В ГИС-приложении мы "
-"можем отобразить дома в виде полигонального слоя, а их атрибуты в виде "
-"таблицы атрибутов (см. figure_house_gis_)."
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:58
 msgid ""
@@ -123,20 +83,6 @@ msgstr ""
 "свойства. Таблица атрибутов (нижнее изображение) показывает атрибуты домов, "
 "видимых на карте. Если объект выделен в таблице атрибутов, он будет "
 "подсвечен желтым цветом на карте."
-
-#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:63
-msgid ""
-"The fact that features have attributes as well geometry in a GIS Application"
-" opens up many possibilities. For example we can use the attribute values to"
-" tell the GIS what colours and style to use when drawing features (see "
-"figure_style_by_attribute_). The process of setting colours and drawing "
-"styles is often referred to as setting feature **symbology**."
-msgstr ""
-"Тот факт, что объекты в ГИС-приложении наряду с геометрией имеют и атрибуты,"
-" открывает широкие возможности. Например, мы может использовать значения "
-"атрибутов, чтобы задать цвет и стиль отрисовки объектов (см. рисунок "
-"figure_style_by_attribute_). Процесс настройки цветов и стилей отображения "
-"часто называется настройкой **символики**."
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:75
 msgid ""
@@ -159,19 +105,6 @@ msgstr ""
 "Атрибутивные данные также могут использоваться при создании **подписей**. "
 "Большинство ГИС-приложений позволяют указать атрибут, который будет "
 "использоваться для подписывания каждого объекта."
-
-#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:84
-msgid ""
-"If you have ever **searched a map** for a place name or a specific feature, "
-"you will know how time consuming it can be. Having attribute data can make "
-"searching for a specific feature quick and easy. In "
-"figure_search_by_attribute_ you can see an example of an attribute search in"
-" a GIS."
-msgstr ""
-"Если вы когда-либо **искали на карте** определенное место или объект, вы "
-"должны знать как много времени может уходить на это. Наличие атрибутивных "
-"данных может сделать поиск заданного объекта быстрым и легким. На рисунке "
-"figure_search_by_attribute_ показан процесс поиска по атрибутам в ГИС."
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:95
 msgid ""
@@ -215,19 +148,6 @@ msgid ""
 "Before we move on to attribute data in more detail, let's take a quick "
 "recap."
 msgstr "Прежде чем мы двинемся дальше, подведем итоги."
-
-#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:112
-msgid ""
-"Features are real world things such as roads, property boundaries, "
-"electrical substation sites and so on. A **feature** has a **geometry** "
-"(which determines if it is a **point**, **polyline** or **polygon**) and "
-"**attributes** (which describe the feature). This is shown in "
-"figure_features_at_glance_."
-msgstr ""
-"Объекты это предметы реального мира, такие как дороги, границы участков, "
-"подстанции и т.д. **Объект** имеет **геометрию** (которая может быть "
-"**точкой**, **линией** или **полигоном**) и **атрибуты** (которые описывают "
-"объект). Это показано на рисунке figure_features_at_glance_."
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:123
 msgid "Vector features at a glance."

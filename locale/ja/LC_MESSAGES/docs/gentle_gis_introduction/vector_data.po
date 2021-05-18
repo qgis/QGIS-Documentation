@@ -1,24 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
-# mnamihdk, 2020
+# Harrissou Sant-anna, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:16+0000\n"
-"Last-Translator: mnamihdk, 2020\n"
+"POT-Creation-Date: 2021-05-12 02:37+0000\n"
+"PO-Revision-Date: 2020-12-24 10:24+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -52,21 +53,6 @@ msgstr "ベクトル、ポイント、ポリライン、ポリゴン、頂点、
 msgid "Overview"
 msgstr "概要"
 
-#: ../../docs/gentle_gis_introduction/vector_data.rst:16
-msgid ""
-"**Vector** data provide a way to represent real world **features** within "
-"the GIS environment. A feature is anything you can see on the landscape. "
-"Imagine you are standing on the top of a hill. Looking down you can see "
-"houses, roads, trees, rivers, and so on (see figure_vector_landscape_). Each"
-" one of these things would be a **feature** when we represent them in a GIS "
-"Application. Vector features have **attributes**, which consist of text or "
-"numerical information that **describe** the features."
-msgstr ""
-"**ベクタ** は、 GIS 環境で現実世界の **地物** "
-"を表現する1つの手法です。地物は景観に目にすることができるものあらゆるものです。丘の頂上に立っているところを想像してください。見下ろすと家屋、道路、樹木、河川などを見ることができます"
-" (figure_vector_landscape_ を参照)。これらのもののそれぞれが、 GIS アプリケーションで表示する時の **地物** "
-"です。ベクタ地物は **属性** を持っており、それは地物を **説明する** テキストあるいは数値情報で構成されます。"
-
 #: ../../docs/gentle_gis_introduction/vector_data.rst:30
 msgid ""
 "Looking over a landscape you can see the main features, such as roads, "
@@ -84,21 +70,6 @@ msgstr ""
 "ベクタ形式の地物は、 **ジオメトリ** を用いて形状を表します。ジオメトリは1つまたはそれ以上の相互につながった **頂点** "
 "で作られます。頂点は空間における位置を **X** , **Y** そして必要に応じて **Z** 軸を用いて表します。 ``Z`` "
 "軸がある頂点を持ったジオメトリは、それぞれの頂点の高さあるいは深さ（両方ではない）を表すため、しばしば **2.5D** と呼ばれます。"
-
-#: ../../docs/gentle_gis_introduction/vector_data.rst:39
-msgid ""
-"When a feature's geometry consists of only a single vertex, it is referred "
-"to as a **point** feature (see illustration figure_geometry_point_). Where "
-"the geometry consists of two or more vertices and the first and last vertex "
-"are not equal, a **polyline** feature is formed (see illustration "
-"figure_geometry_polyline_). Where three or more vertices are present, and "
-"the last vertex is equal to the first, an enclosed **polygon** feature is "
-"formed (see illustration figure_geometry_polygon_)."
-msgstr ""
-"地物のジオメトリが単一の頂点からなる場合、それは **ポイント** 地物と言われます (イラスト figure_geometry_point_ "
-"を参照)。ジオメトリが2つの以上の頂点で構成され、最初と最後の頂点が等しくない場合、 **ポリライン** 地物が形成されます (イラスト "
-"figure_geometry_polyline_ を参照)。三つ以上の頂点が存在し、最後の頂点が最初に等しいと、閉じた **ポリゴン** "
-"地物が形成されます (イラスト figure_geometry_polygon_ を参照)。"
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:52
 msgid ""
@@ -118,15 +89,6 @@ msgid ""
 "A polygon, like a polyline, is a sequence of vertices. However in a polygon,"
 " the first and last vertices are always at the same position."
 msgstr "ポリゴンはポリラインのように、一連の頂点です。ただしポリゴンにおいては、最初と最後の頂点は常に同じ位置です。"
-
-#: ../../docs/gentle_gis_introduction/vector_data.rst:73
-msgid ""
-"Looking back at the picture of a landscape we showed you further up, you "
-"should be able to see the different types of features in the way that a GIS "
-"represents them now (see illustration figure_geometry_landscape_)."
-msgstr ""
-"先にご覧いただいた景観写真を見直してみると、GISが表している様々な種類の地物を見ることができるはずです (イラスト "
-"figure_geometry_landscape_ 参照)。"
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:83
 msgid ""
@@ -165,27 +127,6 @@ msgstr ""
 "(ポイント地物を作成するのはポリゴン地物よりも時間がかからない)、地物の種類 (電信柱のようなものはポリゴンとして格納することに意味がない) "
 "によります。"
 
-#: ../../docs/gentle_gis_introduction/vector_data.rst:102
-msgid ""
-"As we show in illustration figure_geometry_point_, a point feature has an X,"
-" Y and optionally, Z value. The X and Y values will depend on the "
-"**Coordinate Reference System** (CRS) being used. We are going to go into "
-"more detail about Coordinate Reference Systems in a later tutorial. For now "
-"let's simply say that a CRS is a way to accurately describe where a "
-"particular place is on the earth's surface. One of the most common reference"
-" systems is **Longitude and Latitude**. Lines of Longitude run from the "
-"North Pole to the South Pole. Lines of Latitude run from the East to West. "
-"You can describe precisely where you are at any place on the earth by giving"
-" someone your Longitude (X) and Latitude (Y). If you make a similar "
-"measurement for a tree or a telephone pole and marked it on a map, you will "
-"have created a point feature."
-msgstr ""
-"図 figure_geometry_point_ "
-"に示したように、ポイント地物はX値、Y値、そして場合によってはZ値を持ちます。XとYの値は使用されている **座標参照系** (CRS) "
-"に依存します。後のチュートリアルでは座標参照系についてより詳細に説明する予定です。今のところは、 CRS "
-"とは特定の場所が地球の表面上にある場所を正確に記述するための方法である、とだけしておきましょう。最も一般的な参照系の一つは **経度と緯度** "
-"です。経度の線は北極から南極へ引かれます。緯度の線は東から西へ引かれます。経度（X）と緯度（Y）を与えれば、地球上のどの場所であれ、どこにいるか正確に記述できます。木や電柱のために同様の測定を行って地図上にマークすると、ポイント地物が作成されるでしょう。"
-
 #: ../../docs/gentle_gis_introduction/vector_data.rst:114
 msgid ""
 "Since we know the earth is not flat, it is often useful to add a Z value to "
@@ -195,18 +136,6 @@ msgstr "我々は地球は平らではないと知っているので、点の地
 #: ../../docs/gentle_gis_introduction/vector_data.rst:118
 msgid "Polyline features in detail"
 msgstr "ポリライン地物の詳細"
-
-#: ../../docs/gentle_gis_introduction/vector_data.rst:120
-msgid ""
-"Where a point feature is a single vertex, **a polyline has two or more "
-"vertices**. The polyline is a continuous path drawn through each vertex, as "
-"shown in figure_geometry_polyline_. When two vertices are joined, a line is "
-"created. When more than two are joined, they form a 'line of lines', or "
-"**polyline**."
-msgstr ""
-"ポイント地物は単一の頂点ですが、 **ポリラインは二つ以上の頂点を持ちます** 。ポリラインは figure_geometry_polyline_ "
-"に示すように、各頂点を通って引かれる連続的な経路です。2つの頂点が連結されている場合、ラインが作成されます。二つ以上が結合しているとき、「ラインのライン」すなわち"
-" **ポリライン** が形成されます。"
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:125
 msgid ""
@@ -221,19 +150,6 @@ msgid ""
 msgstr ""
 "ポリラインは、道路、河川、等高線、歩道、飛行経路などの **線形の地物** "
 "のジオメトリを示すために使用されます。時にはそれらの基本的なジオメトリに加えて、ポリラインのための特別なルールがあります。例えば、等高線は互いに接する（例えば崖面で）ことはできますが交わることはありません。同様に、道路網を格納するために使用されるポリラインは、交差点で接続されるべきです。GISアプリケーションによっては、地物タイプ（例えば道路）に対してこれらの特別な規則を設定できて、そうするとこれらのポリラインが常にこれらの規則に準拠していることをGISの方で確認してくれるものもあります。"
-
-#: ../../docs/gentle_gis_introduction/vector_data.rst:134
-msgid ""
-"If a curved polyline has very large distances between vertices, it may "
-"appear **angular** or jagged, depending on the scale at which it is viewed "
-"(see figure_polyline_jagged_). Because of this it is important that "
-"polylines are digitised (captured into the computer) with distances between "
-"vertices that are small enough for the scale at which you want to use the "
-"data."
-msgstr ""
-"湾曲したポリラインは、頂点間の距離が非常に大きい場合、それを見る時の倍率によっては、**カクカク** だったりギザギザに見えるかもしれません（ "
-"figure_polyline_jagged_ "
-"を参照）。このためポリラインでは、データを使用したい縮尺に対して頂点間の距離が十分に小さくデジタル化されている（コンピュータに取り込まれている）ことが重要です。"
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:146
 msgid ""
@@ -354,30 +270,6 @@ msgstr ""
 msgid "Scale and vector data"
 msgstr "縮尺とベクターデータ"
 
-#: ../../docs/gentle_gis_introduction/vector_data.rst:212
-msgid ""
-"Map **scale** is an important issue to consider when working with vector "
-"data in a GIS. When data is captured, it is usually digitised from existing "
-"maps, or by taking information from surveyor records and global positioning "
-"system devices. Maps have different scales, so if you import vector data "
-"from a map into a GIS environment (for example by digitising paper maps), "
-"the digital vector data will have the same scale issues as the original map."
-" This effect can be seen in illustrations figure_vector_small_scale_ and "
-"figure_vector_large_scale_. Many issues can arise from making a poor choice "
-"of map scale. For example using the vector data in illustration "
-"figure_vector_small_scale_ to plan a wetland conservation area could result "
-"in important parts of the wetland being left out of the reserve! On the "
-"other hand if you are trying to create a regional map, using data captured "
-"at 1:1000 000 might be just fine and will save you a lot of time and effort "
-"capturing the data."
-msgstr ""
-"地図 **縮尺** "
-"は、GISのベクターデータを扱う際に考慮すべき重要な問題です。データがキャプチャされるときは、既存の地図から、または測量記録と全地球測位システム(GPS)装置から情報を取ることにより、通常はデジタル化されます。地図はさまざまな縮尺を持っているので、(例えば紙の地図をデジタル化することによって)地図からGIS環境にベクターデータをインポートする場合は、デジタルベクターデータは、元の地図と同じ縮尺の問題があります。この効果は、イラスト"
-" figure_vector_small_scale_ と figure_vector_large_scale_ "
-"で見ることができます。多くの問題は、地図の縮尺の拙い選択から生じ得ます。例えば湿地保全エリアを計画するためにイラスト "
-"figure_vector_small_scale_ "
-"中のベクターデータを使用すると、湿地の重要な部分が可能性が保全区外に残されることになります！その一方、地域の地図を作成しようとしている場合は、1：1000000で取り込んだデータを使用するのはちょうど良くて、データを取り込む時間と労力を大きく省けるかもしれません。"
-
 #: ../../docs/gentle_gis_introduction/vector_data.rst:232
 msgid ""
 "Vector data (red lines) that was digitised from a small scale (1:1000 000) "
@@ -393,23 +285,6 @@ msgstr "大縮尺（1:50000）の地図からデジタル化されたベクタ�
 #: ../../docs/gentle_gis_introduction/vector_data.rst:243
 msgid "Symbology"
 msgstr "シンボロジー"
-
-#: ../../docs/gentle_gis_introduction/vector_data.rst:245
-msgid ""
-"When you add vector layers to the map view in a GIS application, they will "
-"be drawn with random colours and basic symbols. One of the great advantages "
-"of using a GIS is that you can create personalised maps very easily. The GIS"
-" program will let you choose colours to suite the feature type (e.g. you can"
-" tell it to draw a water bodies vector layer in blue). The GIS will also let"
-" you adjust the symbol used. So if you have a trees point layer, you can "
-"show each tree position with a small picture of a tree, rather than the "
-"basic circle marker that the GIS uses when you first load the layer (see "
-"illustrations figure_vector_symbology_, figure_generic_symbology_ and "
-"figure_custom_symbology_)."
-msgstr ""
-"GISアプリケーションで地図ビューにベクターレイヤーを追加すると、それらはランダムな色と基本的なシンボルで描画されます。GISを使用する大きな利点の一つは、非常に簡単に自分用の地図を作成できることです。GISプログラムでは、地物タイプに合った色を選択できます（例えば、青で水域ベクターレイヤーを描画するよう設定できます）。GISでは使用するシンボルも調整できます。だから樹木のポイントレイヤーを持っているのであれば、最初にレイヤーをロードした時GISが使用する基本的な円マーカーではなく、木の小さな絵を各ツリーの位置に表示できます（イラスト"
-" figure_vector_symbology_ figure_generic_symbology_ figure_custom_symbology_"
-" を参照）。"
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:261
 msgid ""
@@ -477,15 +352,6 @@ msgid ""
 msgstr ""
 "ベクターデータの取り扱いには,いくつかの問題や課題があります。既に挙げた例として、異なる縮尺でベクターデータが作成されることによって起こる問題があります。これに加えて、ベクターデータの正確さと信頼性を担保するためには、多くのメンテナンス作業が必要となることも挙げられます。不正確なベクターデータは、データを作成する際に使用したツールが適切に設定されていない場合、作成者が注意深く作業を行わなかった場合、十分に詳細なデータ収集を行うには時間とお金が足りなかった場合、などに生じ得るものです。"
 
-#: ../../docs/gentle_gis_introduction/vector_data.rst:311
-msgid ""
-"If you have poor quality vector data, you can often detect this when viewing"
-" the data in a GIS. For example **slivers** can occur when the edges of two "
-"polygon areas don't meet properly (see figure_vector_slivers_)."
-msgstr ""
-"質の低いベクターデータをGIS上に表示させると、この不正確な箇所をよく見かけることがあります。例えば **スライバ** "
-"は2つのポリゴンの境界が正常に接合していない場合に生じます( figure_vector_slivers_ 参照)"
-
 #: ../../docs/gentle_gis_introduction/vector_data.rst:321
 msgid ""
 "Slivers occur when the vertices of two polygons do not match up on their "
@@ -495,18 +361,6 @@ msgid ""
 msgstr ""
 "スライバは隣接する二つのポリゴンの境界を構成する頂点がうまく合致していないときに発生します。小縮尺(ex.左図 1 "
 ")ではこれらのエラーを見つけられないかもしれません。しかし大縮尺(ex.右図 2 )にするとそれらが二つのポリゴンの間の細い領域として顕在化します。"
-
-#: ../../docs/gentle_gis_introduction/vector_data.rst:326
-msgid ""
-"**Overshoots** can occur when a line feature such as a road does not meet "
-"another road exactly at an intersection. **Undershoots** can occur when a "
-"line feature (e.g. a river) does not exactly meet another feature to which "
-"it should be connected. Figure figure_vector_shoots_ demonstrates what "
-"undershoots and overshoots look like."
-msgstr ""
-"**オーバーシュート** は道路データのようなライン地物が、本来ぴったり接合すべき対象の道路地物に対して、交差しはみ出している状態を指します。 "
-"**アンダーシュート** はライン地物(例.河川データ)が、接合すべき対象の地物に対して、接合できていない状態を指します。 図 "
-"figure_vector_overshoots_ はアンダーシュートとオーバーシュートがどのようなものかを示しています。"
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:338
 msgid ""
@@ -600,12 +454,6 @@ msgid ""
 "example to find the nearest hospital to a school."
 msgstr "GISアプリケーションではベクターデータを **空間分析** に利用できます。例えば、学校に近い病院を見つけるなどです。"
 
-#: ../../docs/gentle_gis_introduction/vector_data.rst:372
-msgid ""
-"We have summarised the GIS Vector Data concept in Figure "
-"figure_vector_summary_."
-msgstr "図 figure_vector_summary_ に、GISのベクターデータのコンセプトをまとめました。"
-
 #: ../../docs/gentle_gis_introduction/vector_data.rst:380
 msgid "This diagram shows how GIS applications deal with vector data."
 msgstr "この図は、GISアプリケーションがベクターデータを扱う方法を示しています。"
@@ -617,15 +465,6 @@ msgstr "やってみよう"
 #: ../../docs/gentle_gis_introduction/vector_data.rst:385
 msgid "Here are some ideas for you to try with your learners:"
 msgstr "ここでは人に教える際のアイデアいくつか述べていきます:"
-
-#: ../../docs/gentle_gis_introduction/vector_data.rst:387
-msgid ""
-"Using a copy of a toposheet map for your local area (like the one shown in "
-"figure_sample_map_), see if your learners can identify examples of the "
-"different types of vector data by highlighting them on the map."
-msgstr ""
-"お住まいの地域のためのtoposheet地図のコピー（ figure_sample_map_ "
-"に示すような）を使用して、生徒たちがベクターデータの異なるタイプの例を、地図上で強調表示することによって識別できたか確認してください。"
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:390
 msgid ""

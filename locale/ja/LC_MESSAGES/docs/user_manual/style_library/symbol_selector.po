@@ -13,14 +13,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-25 09:53+0000\n"
+"POT-Creation-Date: 2021-05-12 02:37+0000\n"
 "PO-Revision-Date: 2020-12-24 12:04+0000\n"
 "Last-Translator: tomoyuki arai <tarai.3367@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.9.1\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -412,8 +412,8 @@ msgstr ""
 ":guilabel:`プレビュー` で選択した設定を確認することができます。"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:206
-#: ../../docs/user_manual/style_library/symbol_selector.rst:302
-#: ../../docs/user_manual/style_library/symbol_selector.rst:384
+#: ../../docs/user_manual/style_library/symbol_selector.rst:314
+#: ../../docs/user_manual/style_library/symbol_selector.rst:397
 msgid "**Geometry generator** (see :ref:`geometry_generator_symbol`)"
 msgstr "**ジオメトリジェネレータ** （ :ref:`geometry_generator_symbol` を参照）"
 
@@ -558,28 +558,63 @@ msgstr ""
 "：破線パターンの配置を動的に調整して、破線要素が鋭角部に出入りし、鋭角が完全な破線要素で表現されるようにします。これは "
 ":guilabel:`破線の間隔を線の長さに調整する` の設定に依存します。"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:296
+#: ../../docs/user_manual/style_library/symbol_selector.rst:297
 msgid ""
 "**Arrow**: draws lines as curved (or not) arrows with a single or a double "
-"head with configurable width, length and thickness. To create a curved arrow"
-" the line feature must have at least three vertices. It also uses a "
-":ref:`fill symbol <vector_fill_symbols>` such as gradients or shapeburst to "
-"render the arrow body. Combined with the geometry generator, this type of "
-"layer symbol helps you representing flow maps."
+"head with configurable (and data-defined):"
 msgstr ""
-"**矢印** "
-"：曲がった（あるいは曲がっていない）矢印としてラインを描画します。矢印の先端は幅、長さ、太さの設定が変更可能で、片方矢印も両矢印も使えます。曲がった矢印を作成するには、ライン地物は少なくとも3つの頂点を持っていなければなりません。また、矢印のボディのレンダリングにはグラデーションや形状バーストのような"
-" :ref:`塗りつぶしシンボル <vector_fill_symbols>` "
-"を使用します。ジオメトリジェネレータと組み合わせると、このタイプのレイヤシンボルはフローマップを表現するのに役立ちます。"
+"**矢印** ：ラインを曲がった（または直線的な）矢印として描画します。ヘッドは一方向または両方向で、設定が可能です（データ定義とすることもできます）。"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:300
+msgid ":guilabel:`Head type`"
+msgstr ":guilabel:`ヘッドの種類`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:301
+msgid ":guilabel:`Arrow type`"
+msgstr ":guilabel:`矢印の種類`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:302
+msgid ":guilabel:`Arrow width`"
+msgstr ":guilabel:`矢印の幅`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:303
+msgid ":guilabel:`Arrow width at start`"
+msgstr ":guilabel:`矢印の始点での幅`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:304
+msgid ":guilabel:`Head length`"
+msgstr ":guilabel:`ヘッドの長さ`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:305
+msgid ":guilabel:`Head thickness`"
+msgstr ":guilabel:`ヘッドの太さ`"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:306
+msgid ":guilabel:`Offset`"
+msgstr ":guilabel:`オフセット`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:308
+msgid ""
+"It is possible to create |checkbox| :guilabel:`Curved arrows` (the line "
+"feature must have at least three vertices) and |checkbox| :guilabel:`Repeat "
+"arrow on each segment`. It also uses a :ref:`fill symbol "
+"<vector_fill_symbols>` such as gradients or shapeburst to render the arrow "
+"body. Combined with the geometry generator, this type of layer symbol helps "
+"you representing flow maps."
+msgstr ""
+"|checkbox| :guilabel:`湾曲した矢印` （ライン地物は少なくとも3つの頂点を持っていなければなりません）を作成したり、 "
+"|checkbox| :guilabel:`各セグメント上に矢印を繰り返す` ことができます。また、矢印のボディのレンダリングにはグラデーションや "
+"shapeburst といった :ref:`塗りつぶしシンボル <vector_fill_symbols>` "
+"を使用します。ジオメトリジェネレータと組み合わせると、このタイプのレイヤシンボルはフローマップを表現するのに役立ちます。"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:318
 msgid ""
 "**Marker line**: repeats a :ref:`marker symbol <vector_marker_symbols>` over"
 " the length of a line."
 msgstr ""
 "**マーカーライン** ：ラインの長さにわたって :ref:`マーカーシンボル <vector_marker_symbols>` を繰り返します。"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:309
+#: ../../docs/user_manual/style_library/symbol_selector.rst:321
 msgid ""
 "The markers placement can be at a regular distance or based on the line "
 "geometry: first, last or each vertex, on the central point of the line or of"
@@ -587,11 +622,11 @@ msgid ""
 msgstr ""
 "マーカーの位置は、等間隔、もしくはラインジオメトリを基に最初の点、最後の点、すべての各点、ラインの中央もしくは各セグメントの中心、あるいは各カーブ点とすることができます。"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:312
+#: ../../docs/user_manual/style_library/symbol_selector.rst:324
 msgid "The markers placement can also be given an offset along the line"
 msgstr "マーカーの位置には、線に沿ったオフセットを与えることもできます。"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:313
+#: ../../docs/user_manual/style_library/symbol_selector.rst:325
 msgid ""
 "The |checkbox| :guilabel:`Rotate marker to follow line direction` option "
 "sets whether each marker symbol should be oriented relative to the line "
@@ -600,7 +635,7 @@ msgstr ""
 "|checkbox| :guilabel:`線の向きに沿って回転` "
 "オプションは、各マーカーシンボルをラインの方向に対する相対的な向きとするかどうかを設定します。"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:317
+#: ../../docs/user_manual/style_library/symbol_selector.rst:329
 msgid ""
 "Because a line is often a succession of segments of different directions, "
 "the rotation of the marker is calculated by averaging over a specified "
@@ -615,11 +650,11 @@ msgstr ""
 ":guilabel:`角度の平均化範囲` プロパティを ``4mm`` に設定すると、シンボル位置の前後 ``2mm`` "
 "にある、線に沿った2点がそのマーカーシンボルの線の角度を計算するのに使われます。これは全体的な線の方向からの局所的なわずかな変動を平滑化（あるいは除去）する効果があり、結果としてマーカーラインシンボルの見た目の方向がより良くなります。"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:326
+#: ../../docs/user_manual/style_library/symbol_selector.rst:338
 msgid "The marker line can also be offset from the line itself."
 msgstr "マーカーラインは、線自体からのオフセットも設定できます。"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:330
+#: ../../docs/user_manual/style_library/symbol_selector.rst:342
 msgid ""
 "**Hashed line**: repeats a line segment (a hash) over the length of a line "
 "symbol, with a line sub-symbol used to render each individual segment. In "
@@ -631,37 +666,41 @@ msgstr ""
 "：ラインシンボルの長さにわたって線分（ハッシュ）を繰り返します。ハッシュはラインのサブシンボルを使用して個々のセグメントがレンダリングされます。言い換えると、ハッシュ線はマーカーシンボルが線分に置き換わったマーカーラインのようなものです。従って、ハッシュ線はマーカーラインと"
 " :ref:`同様のプロパティ <marker_line_symbol>` を持ち、これに加えて以下のプロパティがあります："
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:337
+#: ../../docs/user_manual/style_library/symbol_selector.rst:349
 msgid ":guilabel:`Hash length`"
 msgstr ":guilabel:`ハッシュ線の長さ`"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:338
+#: ../../docs/user_manual/style_library/symbol_selector.rst:350
 msgid ":guilabel:`Hash rotation`"
 msgstr ":guilabel:`ハッシュ線の回転`"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:346
+#: ../../docs/user_manual/style_library/symbol_selector.rst:351
+msgid "|checkbox| :guilabel:`Rotate hash to follow line direction`"
+msgstr "|checkbox| :guilabel:`線の向きに沿って回転`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:359
 msgid "Examples of hashed lines"
 msgstr "ハッシュ線の例"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:352
+#: ../../docs/user_manual/style_library/symbol_selector.rst:365
 msgid "Fill Symbols"
 msgstr "塗りつぶしシンボル"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:354
+#: ../../docs/user_manual/style_library/symbol_selector.rst:367
 msgid ""
 "Appropriate for polygon geometry features, fill symbols have also several "
 "symbol layer types:"
 msgstr "ポリゴンジオメトリの地物に適するように、塗りつぶしシンボルにも以下のような様々なシンボルレイヤタイプがあります："
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:357
+#: ../../docs/user_manual/style_library/symbol_selector.rst:370
 msgid "**Simple fill** (default): fills a polygon with a uniform color"
 msgstr "**シンプル塗りつぶし** （デフォルト）：ポリゴンを均一な色で塗りつぶします"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:364
+#: ../../docs/user_manual/style_library/symbol_selector.rst:377
 msgid "Designing a Simple Fill Symbol"
 msgstr "シンプル塗りつぶしのシンボルをデザインする"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:366
+#: ../../docs/user_manual/style_library/symbol_selector.rst:379
 msgid ""
 "**Centroid fill**: places a :ref:`marker symbol <vector_marker_symbols>` at "
 "the centroid of the visible feature. The position of the marker may not be "
@@ -674,21 +713,21 @@ msgstr ""
 "を配置します。重心位置の計算はマップキャンバスで表示されている領域にクリップされたポリゴンに対して行われ、穴は無視されているため、マーカーの位置は地物の実際の重心位置ではないかもしれません。正確な重心位置が必要な場合には、"
 " :ref:`ジオメトリジェネレータシンボル <geometry_generator_symbol>` を使用してください。"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:374
+#: ../../docs/user_manual/style_library/symbol_selector.rst:387
 msgid "You can:"
 msgstr "以下の設定ができます："
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:376
+#: ../../docs/user_manual/style_library/symbol_selector.rst:389
 msgid ":guilabel:`Force point inside polygon`"
 msgstr ":guilabel:`マーカーをポリゴンの内側に強制移動する`"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:377
+#: ../../docs/user_manual/style_library/symbol_selector.rst:390
 msgid ""
 ":guilabel:`Draw point on every part of multi-part feature` or place the "
 "point only on its biggest part"
 msgstr ":guilabel:`マルチパート地物の全パートにマーカーを描画` 、もしくは最大のパートのみに描画"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:379
+#: ../../docs/user_manual/style_library/symbol_selector.rst:392
 msgid ""
 "display the marker symbol(s) in whole or in part, keeping parts overlapping "
 "the current feature geometry (:guilabel:`Clip markers to polygon boundary`) "
@@ -699,20 +738,21 @@ msgstr ""
 ":guilabel:`地物でマーカーをクリップ` ）か、シンボルが属するジオメトリパートと重複する部分を残す （ "
 ":guilabel:`地物のパートでマーカーをクリップ` ）かを設定できます。"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:385
+#: ../../docs/user_manual/style_library/symbol_selector.rst:398
 msgid ""
 "**Gradient fill**: uses a radial, linear or conical gradient, based on "
 "either simple two color gradients or a predefined :ref:`gradient color ramp "
 "<color-ramp>` to fill polygons. The gradient can be rotated and applied on a"
 " single feature basis or across the whole map extent. Also start and end "
-"points can be set via coordinates or using the centroid (of feature or map);"
+"points can be set via coordinates or using the centroid (of feature or map)."
+" A data-defined offset can be defined;"
 msgstr ""
 "**グラデーション塗りつぶし** ：シンプルな2つの色のグラデーションか、または既定の :ref:`グラデーションカラーランプ <color-"
 "ramp>` "
 "に基づいて、放射状、線形、円錐形のグラデーションを使用してポリゴンを塗りつぶします。グラデーションは回転させたり、グラデーション座標の基準を地物単独とするか、マップ全体とするかを選んで適用することもできます。また、始点と終点を座標や中心（地物あるいはマップの）"
-" を使用して設定することもできます。"
+" を使用して設定することもできます。データ定義のオフセットを設定することもできます。"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:390
+#: ../../docs/user_manual/style_library/symbol_selector.rst:404
 msgid ""
 "**Line pattern fill**: fills the polygon with a hatching pattern of "
 ":ref:`line symbol layer <vector_line_symbols>`. You can set a rotation, the "
@@ -721,7 +761,7 @@ msgstr ""
 "**ラインパターン塗りつぶし** ：ポリゴンを :ref:`ラインシンボルレイヤ <vector_line_symbols>` "
 "によるハッチングパターンで塗りつぶします。ラインの回転と間隔 、地物の境界からのオフセットを設定できます。"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:393
+#: ../../docs/user_manual/style_library/symbol_selector.rst:407
 msgid ""
 "**Point pattern fill**: fills the polygon with a hatching pattern of "
 ":ref:`marker symbol layer <vector_marker_symbols>`. You can set the distance"
@@ -731,7 +771,7 @@ msgstr ""
 "**ポイントパターン塗りつぶし** ：ポリゴンを :ref:`マーカーシンボルレイヤ <vector_marker_symbols>` "
 "のハッチングパターンで塗りつぶします。マーカー列の距離と変位、地物の境界からのオフセットをを設定できます。"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:397
+#: ../../docs/user_manual/style_library/symbol_selector.rst:411
 msgid ""
 "**Random marker fill**: fills the polygon with a :ref:`marker symbol "
 "<vector_marker_symbols>` placed at random locations within the polygon "
@@ -740,7 +780,7 @@ msgstr ""
 "**ランダム塗りつぶし** ：ポリゴン境界内のランダムな位置に配置した :ref:`マーカーシンボル <vector_marker_symbols>` "
 "でポリゴンを塗りつぶします。以下の設定ができます："
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:401
+#: ../../docs/user_manual/style_library/symbol_selector.rst:415
 msgid ""
 "the number of marker symbols to render, either as an absolute count or as "
 "density-based (the fill density will remain the same on different scale / "
@@ -749,7 +789,7 @@ msgstr ""
 "レンダリングするマーカーシンボルの数。 "
 "絶対値カウントもしくは密度ベースのカウント（塗りつぶし密度が異なるスケール/ズームレベルで保持されます）のどちらか"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:404
+#: ../../docs/user_manual/style_library/symbol_selector.rst:418
 msgid ""
 "an optional random number seed, to give consistent placement of markers "
 "whenever maps are refreshed (also allows random placement to play nice with "
@@ -758,13 +798,13 @@ msgstr ""
 "オプションの乱数シードで、マップが更新されたときにマーカーを一貫して配置できるようにします（QGIS "
 "サーバやタイルベースのレンダリングとの相性が良いよう、ランダムに配置することもできます）"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:407
+#: ../../docs/user_manual/style_library/symbol_selector.rst:421
 msgid ""
 "whether markers rendered near the edges of polygons should be clipped to the"
 " polygon boundary or not"
 msgstr "ポリゴン境界付近にレンダリングされるマーカーがポリゴン境界でクリップされるかどうか"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:410
+#: ../../docs/user_manual/style_library/symbol_selector.rst:424
 msgid ""
 "**Raster image fill**: fills the polygon with tiles from a raster image "
 "(:file:`PNG` :file:`JPG`, :file:`BMP` ...). The image can be a file on the "
@@ -780,11 +820,11 @@ msgstr ""
 "）が使用できます。オプションには（データによって定義された）不透明度、画像の幅、座標モード（オブジェクトもしくはビューポート）、回転、オフセットが含まれます。画像の幅は任意の"
 " :ref:`共通の単位 <unit_selector>` を使用するか、画像のオリジナルサイズに対するパーセントで設定できます。"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:416
+#: ../../docs/user_manual/style_library/symbol_selector.rst:430
 msgid "**SVG fill**: fills the polygon using :ref:`SVG markers <svg_marker>`;"
 msgstr "**SVG塗りつぶし** ：ポリゴンを :ref:`SVGマーカー <svg_marker>` を使用して塗りつぶします。"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:417
+#: ../../docs/user_manual/style_library/symbol_selector.rst:431
 msgid ""
 "**Shapeburst fill**: buffers a gradient fill, where a gradient is drawn from"
 " the boundary of a polygon towards the polygon's centre. Configurable "
@@ -794,44 +834,50 @@ msgstr ""
 "**形状バースト塗りつぶし** "
 "：グラデーション塗りつぶしをバッファします。つまり、グラデーションはポリゴンの境界からポリゴン中心に向かって描画されます。設定可能なパラメータには、境界からシェードまでの距離、グラデーションにカラーランプを使用するかシンプルな2個の色を使用するか、塗りつぶしのぼかし、オフセットが含まれます。"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:422
+#: ../../docs/user_manual/style_library/symbol_selector.rst:436
 msgid ""
 "**Outline: Arrow**: uses a line :ref:`arrow symbol <arrow_symbol>` layer to "
-"represent the polygon boundary;"
+"represent the polygon boundary. The settings for the outline arrow are the "
+"same as for line symbols."
 msgstr ""
-"**アウトライン：矢印** ：ポリゴンの境界の表現に :ref:`矢印シンボル <arrow_symbol>` レイヤのラインを使用します。"
+"**アウトライン：矢印** ：ポリゴンの境界の表現に :ref:`矢印シンボル <arrow_symbol>` "
+"レイヤのラインを使用します。このアウトライン矢印の設定は、ラインシンボルと同様です。"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:424
+#: ../../docs/user_manual/style_library/symbol_selector.rst:439
 msgid ""
 "**Outline: Hashed line**: uses a :ref:`hash line symbol "
 "<hashed_line_symbol>` layer to represent the polygon boundary (the interior "
-"rings, the exterior ring or all the rings)."
+"rings, the exterior ring or all the rings). The settings for the outline "
+"hashed line are the same as for line symbols."
 msgstr ""
-"**アウトライン：ハッシュ線** ：ポリゴンの境界（内側リングのみ、外側リングのみ、全てのリング）の表現に :ref:`ハッシュ線シンボル "
-"<hashed_line_symbol>` レイヤを使用します。"
+"**アウトライン：ハッシュ線** ：ポリゴンの境界（内側リングのみ、外側リングのみ、すべてのリング）の表現に :ref:`ハッシュ線シンボル "
+"<hashed_line_symbol>` レイヤを使用します。このアウトラインハッシュ線の設定は、ラインシンボルのハッシュ線と同様です。"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:427
+#: ../../docs/user_manual/style_library/symbol_selector.rst:443
 msgid ""
 "**Outline: Marker line**: uses a :ref:`marker line symbol "
 "<marker_line_symbol>` layer to represent the polygon boundary (the interior "
-"rings, the exterior ring or all the rings)."
+"rings, the exterior ring or all the rings). The settings for the outline "
+"marker line are same as for line symbols."
 msgstr ""
 "**アウトライン：マーカーライン** ：ポリゴンの境界（内側リングのみ、外側リングのみ、全てのリング）の表現に :ref:`マーカーラインシンボル "
-"<marker_line_symbol>` レイヤを使用します。"
+"<marker_line_symbol>` レイヤを使用します。このアウトラインマーカーラインの設定は、ラインシンボルのマーカーラインと同様です。"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:430
+#: ../../docs/user_manual/style_library/symbol_selector.rst:447
 msgid ""
 "**Outline: simple line**: uses a :ref:`simple line symbol "
 "<simple_line_symbol>` layer to represent the polygon boundary (the interior "
-"rings, the exterior ring or all the rings). The :guilabel:`Draw line only "
+"rings, the exterior ring or all the rings). The settings for the outline "
+"simple line are the same as for line symbols. The :guilabel:`Draw line only "
 "inside polygon` option displays the polygon borders inside the polygon and "
 "can be useful to clearly represent adjacent polygon boundaries."
 msgstr ""
 "**アウトライン：直線** ：ポリゴンの境界（内側リングのみ、外側リングのみ、全てのリング）の表現に :ref:`シンプルラインシンボル "
-"<simple_line_symbol>` レイヤを使用します。 :guilabel:`ポリゴンの内部のみラインを描画する` "
+"<simple_line_symbol>` レイヤを使用します。このアウトライン直線の設定は、ラインシンボルと同様です。 "
+":guilabel:`ポリゴンの内部にだけラインを描画する` "
 "オプションはポリゴンの内側にポリゴン境界を表示するため、隣接するポリゴンの境界をわかりやすく表現するのに便利です。"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:439
+#: ../../docs/user_manual/style_library/symbol_selector.rst:457
 msgid ""
 "When geometry type is polygon, you can choose to disable the automatic "
 "clipping of lines/polygons to the canvas extent. In some cases this clipping"
@@ -840,11 +886,11 @@ msgid ""
 msgstr ""
 "ジオメトリタイプがポリゴンの場合、ライン/ポリゴンのキャンバス範囲への自動クリッピングを無効にするよう選択することができます。いくつかのケース（例：中心点塗りつぶしで、中心が常に実際の地物の中心でなければならない場合など）では、クリッピングによって好ましくないシンボロジが発生してしまうことがあります。"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:447
+#: ../../docs/user_manual/style_library/symbol_selector.rst:465
 msgid "The Geometry Generator"
 msgstr "ジオメトリジェネレータ"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:449
+#: ../../docs/user_manual/style_library/symbol_selector.rst:467
 msgid ""
 "Available with all types of symbols, the :guilabel:`geometry generator` "
 "symbol layer allows to use :ref:`expression syntax <functions_list>` to "
@@ -856,15 +902,15 @@ msgstr ""
 "<functions_list>` "
 "を使用して、レンダリング処理中にオンザフライでジオメトリを生成することができます。生成されたジオメトリは元のジオメトリタイプと一致している必要はなく、別に修正されたさまざまなシンボルレイヤとお互いに重ねて追加することができます。"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:455
+#: ../../docs/user_manual/style_library/symbol_selector.rst:473
 msgid "Some examples:"
 msgstr "いくつかの例："
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:485
+#: ../../docs/user_manual/style_library/symbol_selector.rst:503
 msgid "The Vector Field Marker"
 msgstr "ベクタフィールドマーカー"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:487
+#: ../../docs/user_manual/style_library/symbol_selector.rst:505
 msgid ""
 "The vector field marker is used to display vector field data such as earth "
 "deformation, tidal flows, and the like. It displays the vectors as lines "
@@ -874,17 +920,17 @@ msgid ""
 msgstr ""
 "ベクタフィールドマーカーは、地殻変動や潮汐流などのベクトル場データを表示するために使用されます。これはベクトル量を、データ点の選択された属性に応じてスケーリングされ方向付けられた線（できれば矢印）として表示します。これはポイントデータの描画にのみ使用でき、ラインやポリゴンレイヤーはこのシンボロジでは描画できません。"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:493
+#: ../../docs/user_manual/style_library/symbol_selector.rst:511
 msgid ""
 "The vector field is defined by attributes in the data, which can represent "
 "the field either by:"
 msgstr "ベクトル場はデータの属性によって定義され、 以下のどれかで表されます："
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:496
+#: ../../docs/user_manual/style_library/symbol_selector.rst:514
 msgid "**cartesian** components (``x`` and ``y`` components of the field)"
 msgstr "**デカルト座標** 成分（フィールドの ``x`` と ``y`` 成分）"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:497
+#: ../../docs/user_manual/style_library/symbol_selector.rst:515
 msgid ""
 "or **polar** coordinates: in this case, attributes define ``Length`` and "
 "``Angle``. The angle may be measured either clockwise from north, or "
@@ -893,7 +939,7 @@ msgstr ""
 "または **極座標** 系：この場合には、属性は ``長さ`` と ``角度`` "
 "を定義します。角度は北から時計回りに測るか、東から反時計回りに測るかを選べ、角度単位は度もしくはラジアンです。"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:500
+#: ../../docs/user_manual/style_library/symbol_selector.rst:518
 msgid ""
 "or as **height only** data, which displays a vertical arrow scaled using an "
 "attribute of the data. This is appropriate for displaying the vertical "
@@ -902,7 +948,7 @@ msgstr ""
 "または **高さのみ** "
 "データ：これはデータの属性値を使ってスケーリングされた垂直方向の矢印を表示します。これは、例えば変形の鉛直成分を表現するのに適しています。"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:504
+#: ../../docs/user_manual/style_library/symbol_selector.rst:522
 msgid ""
 "The magnitude of field can be scaled up or down to an appropriate size for "
 "viewing the field."

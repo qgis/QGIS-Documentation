@@ -13,14 +13,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-12 10:14+0000\n"
+"POT-Creation-Date: 2021-05-12 02:37+0000\n"
 "PO-Revision-Date: 2020-12-24 11:59+0000\n"
 "Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2021\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.9.1\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
@@ -403,129 +403,46 @@ msgstr "Définir les paramètres de transformation pour le géoréférencement"
 msgid "Available Transformation algorithms"
 msgstr "Algorithmes de transformation disponibles"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:151
-msgid ""
-"Depending on how many ground control points you have captured, you may want "
-"to use different transformation algorithms. Choice of transformation "
-"algorithm is also dependent on the type and quality of input data and the "
-"amount of geometric distortion that you are willing to introduce to the "
-"final result."
-msgstr ""
-"Selon le nombre de points que vous saisissez, vous aurez à utiliser "
-"différents algorithmes de transformation. Le choix d'un algorithme dépend "
-"aussi du type et de la qualité de vos sources de données et du niveau de "
-"distorsion géométrique que vous êtes prêt à accepter dans le résultat final."
-
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:157
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:155
 msgid ""
 "Currently, the following :guilabel:`Transformation types` are available:"
 msgstr ""
 "Actuellement les :guilabel:`types de transformation` suivants sont "
 "disponibles :"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:159
-msgid ""
-"The **Linear** algorithm is used to create a world file and is different "
-"from the other algorithms, as it does not actually transform the raster. "
-"This algorithm likely won't be sufficient if you are dealing with scanned "
-"material."
-msgstr ""
-"L'algorithme **Linéaire** est utilisé pour créer un fichier world. Il est "
-"différent des autres algorithmes en ce sens qu'il ne transforme pas le "
-"raster. Cet algorithme ne sera vraisemblablement pas suffisant pour "
-"géoréférencer des données scannées."
-
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:163
-msgid ""
-"The **Helmert** transformation performs simple scaling and rotation "
-"transformations."
-msgstr ""
-"L'algorithme **Helmert** applique de simples translation, rotation et mise à"
-" l'échelle."
-
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:165
-msgid ""
-"The **Polynomial** algorithms 1-3 are among the most widely used algorithms "
-"introduced to match source and destination ground control points. The most "
-"widely used polynomial algorithm is the second-order polynomial "
-"transformation, which allows some curvature. First-order polynomial "
-"transformation (affine) preserves collinearity and allows scaling, "
-"translation and rotation only."
-msgstr ""
-"Les algorithmes **Polynomiaux** de degré 1 à 3 sont parmi les algorithmes "
-"les plus utilisés pour le géoréférencement et chacun diffère par le degré de"
-" distorsion qu'il introduit pour faire correspondre au mieux la source aux "
-"points de contrôles. La transformation polynomiale la plus utilisée est "
-"celle d'ordre deux qui autorise quelques courbes. La transformation "
-"polynomiale d'ordre un (aussi appelée transformation affine) préserve la "
-"colinéarité et permet seulement les translation, rotation et mise à "
-"l'échelle (comme la transformation de Helmert)."
-
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:170
-msgid ""
-"The **Thin Plate Spline** (TPS) algorithm is a more modern georeferencing "
-"method, which is able to introduce local deformations in the data. This "
-"algorithm is useful when very low quality originals are being georeferenced."
-msgstr ""
-"L'algorithme **Thin Plate Spline** (TPS) est une méthode plus moderne qui "
-"est capable d'introduire des déformations sur des secteurs précis de "
-"l'image. Il est très pratique quand des sources de faible qualité sont "
-"utilisées."
-
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:173
-msgid ""
-"The **Projective** transformation is a linear rotation and translation of "
-"coordinates."
-msgstr ""
-"L'algorithme **Projective** est une rotation linéaire puis une translation "
-"des coordonnées."
-
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:177
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:193
 msgid "Define the Resampling method"
 msgstr "Définir la méthode de rééchantillonage"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:179
-msgid ""
-"The type of resampling you choose will likely depending on your input data "
-"and the ultimate objective of the exercise. If you don't want to change "
-"statistics of the image, you might want to choose 'Nearest neighbour', "
-"whereas a 'Cubic resampling' will likely provide a more smoothed result."
-msgstr ""
-"Le type de ré-échantillonnage à effectuer dépendra de votre donnée en entrée"
-" et de l'objectif de l'exercice. Si vous ne voulez pas changer les "
-"statistiques de l'image, vous devriez sélectionner la méthode du plus proche"
-" voisin tandis que le ré-échantillonnage cubique produira un résultat plus "
-"lisse."
-
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:184
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:201
 msgid "It is possible to choose between five different resampling methods:"
 msgstr "Il est possible de choisir entre 5 méthodes de ré-échantillonnage :"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:186
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:203
 msgid "Nearest neighbour"
 msgstr "Plus proche voisin"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:187
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:204
 msgid "Linear"
 msgstr "Linéaire"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:188
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:205
 msgid "Cubic"
 msgstr "Cubique"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:189
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:206
 msgid "Cubic Spline"
 msgstr "Cubic Spline"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:190
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:207
 msgid "Lanczos"
 msgstr "Lanczos"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:193
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:210
 msgid "Define the transformation settings"
 msgstr "Définir les paramètres de transformation"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:195
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:212
 msgid ""
 "There are several options that need to be defined for the georeferenced "
 "output raster."
@@ -533,7 +450,7 @@ msgstr ""
 "Plusieurs paramètres doivent être renseignés afin de créer un raster "
 "géoréférencé."
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:198
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:215
 msgid ""
 "The |checkbox| :guilabel:`Create world file` checkbox is only available if "
 "you decide to use the linear transformation type, because this means that "
@@ -547,7 +464,7 @@ msgstr ""
 "sortie. Dans ce cas précis, le champ :guilabel:`raster de sortie` ne sera "
 "pas activé, car seul le fichier de coordonnées sera créé."
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:203
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:220
 msgid ""
 "For all other transformation types, you have to define an :guilabel:`Output "
 "raster`. As default, a new file ([filename]_modified) will be created in the"
@@ -558,7 +475,7 @@ msgstr ""
 "([nomdefichier]_georef) et sera enregistré dans le même répertoire que le "
 "raster original."
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:206
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:223
 msgid ""
 "As a next step, you have to define the :guilabel:`Target SRS` (Spatial "
 "Reference System) for the georeferenced raster (see "
@@ -567,7 +484,7 @@ msgstr ""
 "L'étape suivante est la définition du :guilabel:`SCR cible` pour le raster "
 "géoréférencé (lire :ref:`label_projections`)."
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:208
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:225
 msgid ""
 "If you like, you can **generate a pdf map** and also **a pdf report**. The "
 "report includes information about the used transformation parameters, an "
@@ -578,7 +495,7 @@ msgstr ""
 "qu'une image avec tous les résidus et une liste des points de contrôles et "
 "leurs erreurs RMS."
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:211
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:228
 msgid ""
 "Furthermore, you can activate the |checkbox| :guilabel:`Set Target "
 "Resolution` checkbox and define the pixel resolution of the output raster. "
@@ -588,7 +505,7 @@ msgstr ""
 " cible` et préciser la résolution de pixel du raster généré. La résolution "
 "horizontale et verticale par défaut est de 1."
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:214
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:231
 msgid ""
 "The |checkbox| :guilabel:`Use 0 for transparency when needed` can be "
 "activated, if pixels with the value 0 shall be visualized transparent. In "
@@ -599,7 +516,7 @@ msgstr ""
 "de la visualisation. Dans notre exemple, toutes les zones blanches seront "
 "transparentes."
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:217
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:234
 msgid ""
 "Finally, |checkbox| :guilabel:`Load in QGIS when done` loads the output "
 "raster automatically into the QGIS map canvas when the transformation is "
@@ -609,11 +526,11 @@ msgstr ""
 " assure le chargement automatique du raster quand la transformation est "
 "achevée."
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:221
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:238
 msgid "Show and adapt raster properties"
 msgstr "Afficher et modifier les propriétés raster"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:223
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:240
 msgid ""
 "Clicking on the :guilabel:`Raster properties` option in the "
 ":guilabel:`Settings` menu opens the :ref:`Layer properties "
@@ -625,28 +542,28 @@ msgstr ""
 "couche<raster_properties_dialog>' du fichier raster que vous voulez "
 "géoréférencer."
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:230
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:247
 msgid "Configure the georeferencer"
 msgstr "Configurer le géoreferenceur"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:232
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:249
 msgid "You can define whether you want to show GCP coordinates and/or IDs."
 msgstr ""
 "Vous pouvez choisir d'afficher les coordonnées des points ou leur "
 "identifiant."
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:233
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:250
 msgid "As residual units, pixels and map units can be chosen."
 msgstr "Les résidus peuvent être exprimés en unités de la carte ou en pixel."
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:234
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:251
 msgid ""
 "For the PDF report, a left and right margin can be defined and you can also "
 "set the paper size for the PDF map."
 msgstr ""
 "Vous pouvez modifier les marges et la taille de papier du rapport PDF."
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:236
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:253
 msgid ""
 "Finally, you can activate to |checkbox| :guilabel:`Show Georeferencer window"
 " docked`."
@@ -654,11 +571,11 @@ msgstr ""
 "Enfin, vous pouvez aussi activer la case |checkbox| :guilabel:`Afficher la "
 "fenêtre de géoréférencement dans la fenêtre principale`."
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:241
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:258
 msgid "Running the transformation"
 msgstr "Lancer la transformation"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:243
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:260
 msgid ""
 "After all GCPs have been collected and all transformation settings are "
 "defined, just press the |start| :sup:`Start georeferencing` button to create"
@@ -667,25 +584,3 @@ msgstr ""
 "Lorsque tous les points de contrôle ont été posés et les paramètres de "
 "transformation saisis, appuyez sur le bouton |start| :sup:`Commencer le "
 "géoréférencement` pour créer le raster final."
-
-#~ msgid ""
-#~ "The first step is to start QGIS and click on :menuselection:`Raster -->` "
-#~ "|georefRun| :menuselection:`Georeferencer`, which appears in the QGIS menu "
-#~ "bar. The Georeferencer dialog appears as shown in "
-#~ "figure_georeferencer_dialog_."
-#~ msgstr ""
-#~ "La première étape consiste à lancer QGIS et cliquer sur "
-#~ ":menuselection:`Raster -->` |georefRun| :menuselection:`Géoréférencer` qui "
-#~ "apparaît dans la barre de menu de QGIS. La fenêtre du Géoréférenceur se "
-#~ "présente sous la forme montrée dans la figure figure_georeferencer_dialog_."
-
-#~ msgid ""
-#~ "Using the |addGCPPoint| :sup:`Add Point` button, add points to the main "
-#~ "working area and enter their coordinates (see Figure "
-#~ "figure_georeferencer_add_points_). For this procedure you have three "
-#~ "options:"
-#~ msgstr ""
-#~ "En utilisant le bouton |addGCPPoint| :sup:`Ajouter des Points`, ajoutez par "
-#~ "un clic des points dans la surface de travail et saisissez leurs coordonnées"
-#~ " (voir figure figure_georeferencer_add_points_). Pour ce faire, il y a trois"
-#~ " manières de procéder :"

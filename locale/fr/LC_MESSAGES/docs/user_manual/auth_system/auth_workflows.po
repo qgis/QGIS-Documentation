@@ -13,14 +13,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"POT-Creation-Date: 2021-05-12 02:37+0000\n"
 "PO-Revision-Date: 2020-12-24 10:18+0000\n"
 "Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
+"Generated-By: Babel 2.9.1\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
@@ -521,25 +521,7 @@ msgstr ""
 "Le mot de passe principal de la base de données d'authentification doit être"
 " disponible."
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:305
-msgid ""
-"When instantiating the authentication system, Server will create or use "
-":file:`qgis-auth.db` in :file:`~/.qgis2/` or the directory defined by the "
-"``QGIS_AUTH_DB_DIR_PATH`` environment variable. It may be that the Server's "
-"user has no HOME directory, in which case, use the environment variable to "
-"define a directory that the Server's user has read/write permissions and is "
-"not located within the web-accessible directories."
-msgstr ""
-"Lors du lancement du système d'authentification, le serveur créera ou "
-"utilisera le fichier :file:`qgis-auth.db` situé dans le répertoire "
-":file:`~/.qgis2/` ou dans le répertoire défini par la variable "
-"d'environnement ``QGIS_AUTH_DB_DIR_PATH``. Dans le cas où le compte "
-"utilisateur utilisé par le serveur ne dispose pas d'un répertoire HOME, "
-"utilisez la variable d'environnement pour indiquer un répertoire accessible "
-"en lecture/écriture au compte utilisateur du serveur qui ne soit pas situé "
-"dans les répertoires accessibles par le web."
-
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:312
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:313
 msgid ""
 "To pass the master password to Server, write it to the first line of file at"
 " a path on the file system readable by the Server processes user and defined"
@@ -554,7 +536,7 @@ msgstr ""
 "soit accessible uniquement en lecture par le compte utilisateur du serveur "
 "et qu'il ne soit pas situé au sein des répertoires accessibles par le web."
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:320
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:321
 msgid ""
 "``QGIS_AUTH_PASSWORD_FILE`` variable will be removed from the Server "
 "environment immediately after accessing."
@@ -562,15 +544,15 @@ msgstr ""
 "La variable ``QGIS_AUTH_PASSWORD_FILE`` sera effacée de l'environnement du "
 "serveur tout de suite après avoir été utilisée"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:324
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:325
 msgid "SSL server exceptions"
 msgstr "Exceptions du serveur SSL"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:331
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:332
 msgid "SSL server exception"
 msgstr "Exception du serveur SSL"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:333
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:334
 msgid ""
 "You can manage SSL server configurations and exceptions from the **Servers**"
 " tab in the **Authentication** section of the QGIS **Options** dialog."
@@ -579,7 +561,7 @@ msgstr ""
 "de l'onglet **Serveurs** dans la section **Authentification** de la boîte de"
 " dialogue **Options** de QGIS."
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:336
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:337
 msgid ""
 "Sometimes, when connecting to an SSL server, there are errors with the SSL "
 "\"handshake\" or the server's certificate. You can ignore those errors or "
@@ -593,7 +575,7 @@ msgstr ""
 "C'est similaire au comportement des navigateurs internet qui vous permettent"
 " d'ignorer les erreurs SSL, mais avec plus de contrôle granulaire."
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:342
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:343
 msgid ""
 "You should not create an SSL server configuration unless you have complete "
 "knowledge of the entire SSL setup between the server and client. Instead, "
@@ -604,7 +586,7 @@ msgstr ""
 "serveur et client. Vous devriez plutôt signaler le problème au gestionnaire "
 "du serveur."
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:347
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:348
 msgid ""
 "Some PKI setups use a completely different CA trust chain to validate client"
 " identities than the chain used to validate the SSL server certificate. In "
@@ -621,7 +603,7 @@ msgstr ""
 "de votre identité client ou le gestionnaire du serveur qui puisse résoudre "
 "ce problème."
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:353
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:354
 msgid ""
 "You can pre-configure an SSL server configuration by clicking the |signPlus|"
 " button. Alternatively, you can add a configuration when an SSL error occurs"
@@ -635,15 +617,15 @@ msgstr ""
 "apparaît (lorsque l'erreur peut être temporairement ignorée ou alors "
 "sauvegardée dans la base de données et ignorée) :"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:363
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:364
 msgid "Manually adding configuration"
 msgstr "Ajouter manuellement une configuration"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:370
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:371
 msgid "Adding configuration during SSL error"
 msgstr "Ajouter une configuration lors d'une erreur SSL"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:372
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:373
 msgid ""
 "Once an SSL configuration is saved to the database, it can be edited or "
 "deleted."
@@ -651,15 +633,15 @@ msgstr ""
 "Une fois qu'une configuration SSL est enregistrée dans la base de données, "
 "elle peut être éditée ou effacée."
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:379
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:380
 msgid "Existing SSL configuration"
 msgstr "Configuration SSL existante"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:386
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:387
 msgid "Editing an existing SSL configuration"
 msgstr "Éditer une configuration SSL existante"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:388
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:389
 msgid ""
 "If you want to pre-configure an SSL configuration and the import dialog is "
 "not working for your server's connection, you can manually trigger a "
@@ -672,7 +654,7 @@ msgstr ""
 "le code suivant (remplacer ``https://bugreports.qt-project.org`` par l'URL "
 "de votre serveur) :"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:402
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:403
 msgid ""
 "This will open an SSL error dialog if any errors occur, where you can choose"
 " to save the configuration to the database."

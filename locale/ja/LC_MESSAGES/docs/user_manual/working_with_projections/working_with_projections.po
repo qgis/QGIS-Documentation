@@ -13,14 +13,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-12 10:14+0000\n"
+"POT-Creation-Date: 2021-05-12 02:37+0000\n"
 "PO-Revision-Date: 2020-12-24 11:59+0000\n"
 "Last-Translator: tomoyuki arai <tarai.3367@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.9.1\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -675,31 +675,21 @@ msgstr ""
 msgid "Selecting a preferred default datum transformation"
 msgstr "デフォルトの測地系変換を選択する"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:372
-msgid ""
-"In some cases a transformation may not be available for use on your system. "
-"In this case, the transformation will still be shown (greyed) in this list "
-"but can not be picked until you download and install the required package of"
-" transformation support. Usually, a button is provided to download the "
-"corresponding grid."
-msgstr ""
-"場合によっては使用中のシステムでは利用可能でない変換があります。この場合には、変換はリストに（灰色網掛けで）表示されますが、変換サポートに必要なパッケージをダウンロードしてインストールしない限りは選択はできません。たいていは、対応するグリッドのダウンロードボタンがあります。"
-
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:378
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:379
 msgid "Find your preferred transformation and select it"
 msgstr "お好みの変換方法を見つけて、選択します"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:379
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:380
 msgid ""
 "Set whether you |checkbox| :guilabel:`Allow fallback transforms if preferred"
 " operation fails`"
 msgstr "|checkbox| :guilabel:`優先される演算が失敗した場合、Fallback変換を許可` するかどうかを設定します"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:381
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:382
 msgid "Click :guilabel:`OK`."
 msgstr ":guilabel:`OK` をクリックします。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:383
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:384
 msgid ""
 "A row is added to the table under :guilabel:`Default Datum Transformations` "
 "with information about the :guilabel:`Source CRS`, the "
@@ -710,7 +700,7 @@ msgstr ""
 ":guilabel:`変換先CRS` に関する情報、 変換に適用される :guilabel:`操作` 、 "
 ":guilabel:`Fallback変換を許可` が有効になっているかどうかの情報があります。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:388
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:389
 msgid ""
 "From now, QGIS automatically uses the selected datum transformations for "
 "further transformation between these two CRSs until you remove it "
@@ -720,7 +710,7 @@ msgstr ""
 "今後は、リストからそれを削除する (|signMinus|) か、リスト内のエントリを変更する (|toggleEditing|) "
 "までは、QGISは選択された測地系変換を自動的に使用して、これら2つのCRS間で変換を行います。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:393
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:394
 msgid ""
 "Datum transformations set in the :menuselection:`Settings -->` |options| "
 ":menuselection:`Options --> Transformations` tab will be inherited by all "
@@ -734,23 +724,3 @@ msgstr ""
 "タブで設定された測地系変換は、システム上で作成されるすべての新しいQGISプロジェクトにも継承されます。さらに、プロジェクトは "
 ":guilabel:`プロジェクトのプロパティ` ダイアログ（ :menuselection:`プロジェクト --> プロパティ...` ）の "
 ":guilabel:`座標参照系` タブで指定した固有の変換セットを持つこともできます。この設定は現在のプロジェクトにのみ適用されます。"
-
-#~ msgid ""
-#~ "By default, QGIS starts each new project using a global default projection. "
-#~ "This default CRS is ``EPSG:4326`` (also known as \"WGS 84\"), and it is a "
-#~ "global latitude/longitude based reference system. This default CRS can be "
-#~ "changed via the :guilabel:`CRS for New Projects` setting in the "
-#~ ":guilabel:`CRS` tab under :menuselection:`Settings -->` |options| "
-#~ ":menuselection:`Options...` (see figure_projection_options_). There is an "
-#~ "option to automatically set the project's CRS to match the CRS of the first "
-#~ "layer loaded into a new project, or alternatively you can select a different"
-#~ " default CRS to use for all newly created projects. This choice will be "
-#~ "saved for use in subsequent QGIS sessions."
-#~ msgstr ""
-#~ "デフォルトでは、QGIS はグローバルなデフォルトの投影法を使用して新しいプロジェクトを開始します。このデフォルトの CRS は "
-#~ "``EPSG:4326`` （「WGS 84」としても知られています）であり、グローバルな緯度/経度ベースの参照システムです。このデフォルトCRSは "
-#~ ":menuselection:`設定 -->` |options| :menuselection:`オプション...` （ "
-#~ "figure_projection_options_ を参照）の :guilabel:`座標参照系（CRS）` タブで、 "
-#~ ":guilabel:`新しいプロジェクトが作られた時のCRS` "
-#~ "の設定で変更することができます。プロジェクトのCRSを、新規プロジェクトに読み込まれた最初のレイヤーのCRSに合わせて自動的に設定するオプションと、新規作成されたすべてのプロジェクトで使用するデフォルトのCRSを選択するオプションがあります。この選択はその後の"
-#~ " QGIS セッションで使用するために保存されます。"

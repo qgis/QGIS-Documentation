@@ -1,23 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
+# Harrissou Sant-anna, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:15+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"POT-Creation-Date: 2021-05-12 02:37+0000\n"
+"PO-Revision-Date: 2020-12-24 10:28+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2020\n"
 "Language-Team: Czech (https://www.transifex.com/qgis/teams/6144/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 "Language: cs\n"
 "Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
@@ -83,30 +85,6 @@ msgstr ""
 msgid "Spatial interpolation in detail"
 msgstr "Detail prostorové interpolace"
 
-#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:31
-msgid ""
-"Spatial interpolation is the process of using points with known values to "
-"estimate values at other unknown points. For example, to make a "
-"precipitation (rainfall) map for your country, you will not find enough "
-"evenly spread weather stations to cover the entire region. Spatial "
-"interpolation can estimate the temperatures at locations without recorded "
-"data by using known temperature readings at nearby weather stations (see "
-"figure_temperature_map_). This type of interpolated surface is often called "
-"a **statistical surface**. Elevation data, precipitation, snow accumulation,"
-" water table and population density are other types of data that can be "
-"computed using interpolation."
-msgstr ""
-"Prostorová interpolace je proces používání bodů se známými hodnotami pro "
-"odhad hodnot v jiných neznámých bodech. Například, k vytvoření srážkové "
-"(vodní srážky) mapy pro vaši zemi, nenajdete dostatek rovnoměrně "
-"rozprostřených meteorologických stanic, aby pokryly celý region. Prostorovou"
-" interpolací lze odhadnout teploty na místech bez zaznamenaných dat pomocí "
-"známých měření teploty v okolních meteorologických stanicích (viz. "
-"figure_temperature_map_). Tento typ interpolovaného povrchu je často nazýván"
-" **statistický povrch**. Data o nadmořské výšce, srážkách, hromadění sněhu, "
-"hladině podzemní vody a hustotě obyvatelstva jsou dalšími typy dat, které "
-"lze vypočítat pomocí interpolace."
-
 #: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:47
 msgid "Temperature map interpolated from South African Weather Stations."
 msgstr "Teplotní mapa vyinterpolovaná z jihoafrických meteostanic."
@@ -156,17 +134,6 @@ msgstr ""
 msgid "Inverse Distance Weighted (IDW)"
 msgstr "Vážené inverzní vzdálenosti (IDW)"
 
-#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:69
-msgid ""
-"In the IDW interpolation method, the sample points are weighted during "
-"interpolation such that the influence of one point relative to another "
-"declines with distance from the unknown point you want to create (see "
-"figure_idw_interpolation_)."
-msgstr ""
-"V metodě interpolace IDW jsou vzorové body váženy v průběhu interpolace tak,"
-" že vliv jednoho bodu vzhledem k jinému klesá se vzdáleností od neznámého "
-"bodu, který chcete vytvořit (viz. figure_idw_interpolation_)."
-
 #: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:80
 msgid ""
 "Inverse Distance Weighted interpolation based on weighted sample point "
@@ -193,34 +160,6 @@ msgstr ""
 "zvyšování koeficientu se hodnota neznámého bodu blíží k hodnotě nejbližšího "
 "pozorovacího bodu."
 
-#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:91
-msgid ""
-"It is important to notice that the IDW interpolation method also has some "
-"disadvantages: the quality of the interpolation result can decrease, if the "
-"distribution of sample data points is uneven. Furthermore, maximum and "
-"minimum values in the interpolated surface can only occur at sample data "
-"points. This often results in small peaks and pits around the sample data "
-"points as shown in figure_idw_interpolation_."
-msgstr ""
-"Je důležité si uvědomit, že interpolační metoda IDW má také některé "
-"nevýhody: kvalita interpolačního výsledku může klesnout, pokud je distribuce"
-" měřených bodů nerovnoměrná. Dále, maximální a minimální hodnoty se mohou na"
-" interpolovaném povrchu vyskytovat pouze v měřených bodech. To často vede k "
-"malým špičkám a jamkám okolo měřených bodů, jak je znázorněno na obr. "
-"figure_idw_interpolation_."
-
-#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:98
-msgid ""
-"In GIS, interpolation results are usually shown as a 2 dimensional raster "
-"layer. In figure_idw_result_, you can see a typical IDW interpolation "
-"result, based on elevation sample points collected in the field with a GPS "
-"device."
-msgstr ""
-"V GIS se výsledky interpolace obvykle zobrazují jako dvourozměrná rastrová "
-"vrstva. V obrázku_idw_result_ můžete vidět typický výsledek interpolace IDW,"
-" který je založen na měřených výškách bodů shromážděných v poli pomocí "
-"zařízení GPS."
-
 #: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:108
 msgid ""
 "IDW interpolation result from irregularly collected elevation sample points "
@@ -233,22 +172,6 @@ msgstr ""
 msgid "Triangulated Irregular Network (TIN)"
 msgstr "Trojúhelníková nepravidelná síť (TIN)"
 
-#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:114
-msgid ""
-"TIN interpolation is another popular tool in GIS. A common TIN algorithm is "
-"called **Delaunay triangulation**. It tries to create a surface formed by "
-"triangles of nearest neighbour points. To do this, circumcircles around "
-"selected sample points are created and their intersections are connected to "
-"a network of non overlapping and as compact as possible triangles (see "
-"figure_tin_interpolation_)."
-msgstr ""
-"TIN interpolace je dalším populárním nástrojem v GIS. Obecný algoritmus TIN "
-"se nazývá **Delaunayho triangulace**. Snaží se vytvořit povrch tvořený "
-"trojúhelníky z nejbližších sousedních bodů. K tomu jsou vytvořeny kružnice "
-"kolem vybraných měřených bodů a jejich průsečíky jsou spojeny se sítí "
-"nepřekrývajících se a co možná nejkompaktnějších trojúhelníků (viz "
-"figure_tin_interpolation_)."
-
 #: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:126
 msgid ""
 "Delaunay triangulation with circumcircles around the red sample data. The "
@@ -258,19 +181,6 @@ msgstr ""
 "Delaunayho triangulace s kružnicemi kolem červených měřených bodů. Výsledný "
 "interpolovaný povrch TIN vytvořený z výškových vektorových bodů je zobrazen "
 "vpravo. Zdroj obrázku: Mitas, L., Mitasova, H. (1999)."
-
-#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:130
-msgid ""
-"The main disadvantage of the TIN interpolation is that the surfaces are not "
-"smooth and may give a jagged appearance. This is caused by discontinuous "
-"slopes at the triangle edges and sample data points. In addition, "
-"triangulation is generally not suitable for extrapolation beyond the area "
-"with collected sample data points (see figure_tin_result_ )."
-msgstr ""
-"Hlavní nevýhodou TIN interpolace je to, že povrchy nejsou hladké a mohou mít"
-" zubatý vzhled. To je způsobeno nespojitými svahy na okrajích trojúhelníků a"
-" měřených bodech. Navíc triangulace není obecně vhodná pro extrapolaci mimo "
-"oblast se shromážděnými měřenými body (viz figure_tin_result_)."
 
 #: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:142
 msgid ""

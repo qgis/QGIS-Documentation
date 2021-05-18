@@ -1,24 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
-# Peter Gräbel <graebel@gis-consult-nord.de>, 2020
+# Harrissou Sant-anna, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:16+0000\n"
-"Last-Translator: Peter Gräbel <graebel@gis-consult-nord.de>, 2020\n"
+"POT-Creation-Date: 2021-05-12 02:37+0000\n"
+"PO-Revision-Date: 2020-12-24 10:24+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2020\n"
 "Language-Team: German (https://www.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -54,25 +55,6 @@ msgstr ""
 msgid "Overview"
 msgstr "Übersicht"
 
-#: ../../docs/gentle_gis_introduction/vector_data.rst:16
-msgid ""
-"**Vector** data provide a way to represent real world **features** within "
-"the GIS environment. A feature is anything you can see on the landscape. "
-"Imagine you are standing on the top of a hill. Looking down you can see "
-"houses, roads, trees, rivers, and so on (see figure_vector_landscape_). Each"
-" one of these things would be a **feature** when we represent them in a GIS "
-"Application. Vector features have **attributes**, which consist of text or "
-"numerical information that **describe** the features."
-msgstr ""
-"**Vektordaten** bieten eine Möglichkeit, reale **features** in der GIS-"
-"Umgebung darzustellen. Eine feature ist alles, was Sie in der Landschaft "
-"sehen können. Stellen Sie sich vor, Sie stehen auf einem Hügel. Wenn Sie "
-"nach unten schauen, sehen Sie Häuser, Straßen, Bäume, Flüsse usw. (siehe "
-"figure_vector_landscape_). Jedes dieser Dinge wäre eine **feature**, wenn "
-"wir sie in einer GIS-Anwendung darstellen. Vektor features haben "
-"**Attribute**, die aus Text oder numerischen Informationen bestehen, die die"
-" features **beschreiben**."
-
 #: ../../docs/gentle_gis_introduction/vector_data.rst:30
 msgid ""
 "Looking over a landscape you can see the main features, such as roads, "
@@ -96,26 +78,6 @@ msgstr ""
 "Geometrien mit Scheitelpunkten an einer Z-Achse werden häufig als **2,5D** "
 "bezeichnet, da sie die Höhe oder Tiefe an jedem Scheitelpunkt beschreiben, "
 "jedoch nicht beide."
-
-#: ../../docs/gentle_gis_introduction/vector_data.rst:39
-msgid ""
-"When a feature's geometry consists of only a single vertex, it is referred "
-"to as a **point** feature (see illustration figure_geometry_point_). Where "
-"the geometry consists of two or more vertices and the first and last vertex "
-"are not equal, a **polyline** feature is formed (see illustration "
-"figure_geometry_polyline_). Where three or more vertices are present, and "
-"the last vertex is equal to the first, an enclosed **polygon** feature is "
-"formed (see illustration figure_geometry_polygon_)."
-msgstr ""
-"Wenn die Geometrie eines Features nur aus einem einzigen Scheitelpunkt "
-"besteht, wird sie als **Punkt** -Feature bezeichnet (siehe Abbildung "
-"figure_geometry_point_). Wenn die Geometrie aus zwei oder mehr "
-"Scheitelpunkten besteht und der erste und der letzte Scheitelpunkt nicht "
-"gleich sind, wird ein Merkmal **Polylinie** gebildet (siehe Abbildung "
-"figure_geometry_polyline_). Wenn drei oder mehr Scheitelpunkte vorhanden "
-"sind und der letzte Scheitelpunkt gleich dem ersten ist, wird ein "
-"eingeschlossenes **Polygon** -Feature gebildet (siehe Abbildung "
-"figure_geometry_polygon_)."
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:52
 msgid ""
@@ -143,17 +105,6 @@ msgstr ""
 "Ein Polygon besteht wie auch eine Polylinie aus einer Sequenz von Vertices. "
 "In einem Polygon befinden sich der erste und letzte Vertex jedoch an der "
 "gleichen Stelle."
-
-#: ../../docs/gentle_gis_introduction/vector_data.rst:73
-msgid ""
-"Looking back at the picture of a landscape we showed you further up, you "
-"should be able to see the different types of features in the way that a GIS "
-"represents them now (see illustration figure_geometry_landscape_)."
-msgstr ""
-"Wenn Sie sich jetzt noch einmal das Landschaftsfoto von eben anschauen, "
-"sollten Sie in der Lage sein die verschiedenen Feature-Typen auf die Art zu "
-"sehen, wie ein GIS sie jetzt repräsentiert (siehe "
-"figure_geometry_landscape_)."
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:83
 msgid ""
@@ -201,35 +152,6 @@ msgstr ""
 "Dingen wie z.B. Telefonmasten hat es keinen Sinn sie als Polygone zu "
 "speichern)."
 
-#: ../../docs/gentle_gis_introduction/vector_data.rst:102
-msgid ""
-"As we show in illustration figure_geometry_point_, a point feature has an X,"
-" Y and optionally, Z value. The X and Y values will depend on the "
-"**Coordinate Reference System** (CRS) being used. We are going to go into "
-"more detail about Coordinate Reference Systems in a later tutorial. For now "
-"let's simply say that a CRS is a way to accurately describe where a "
-"particular place is on the earth's surface. One of the most common reference"
-" systems is **Longitude and Latitude**. Lines of Longitude run from the "
-"North Pole to the South Pole. Lines of Latitude run from the East to West. "
-"You can describe precisely where you are at any place on the earth by giving"
-" someone your Longitude (X) and Latitude (Y). If you make a similar "
-"measurement for a tree or a telephone pole and marked it on a map, you will "
-"have created a point feature."
-msgstr ""
-"Wie in der Abbildung figure_geometry_point_ gezeigt, hat ein Punkt-Feature "
-"einen X-, Y- und optional einen Z-Wert. Die X- und Y-Werte hängen vom "
-"verwendeten **Koordinatenbezugssystem** (KBS) ab. Wir werden in einem "
-"späteren Tutorial näher auf Koordinatenbezugssysteme eingehen. Lassen Sie "
-"uns zunächst einfach sagen, dass ein KBS eine Möglichkeit ist, genau zu "
-"beschreiben, wo sich ein bestimmter Ort auf der Erdoberfläche befindet. "
-"Eines der gebräuchlichsten Bezugssysteme ist **Längen- und Breitengrad**. "
-"Längengrade verlaufen vom Nordpol zum Südpol. Die Linien der Breitengrade "
-"verlaufen von Ost nach West. Sie können genau beschreiben, wo Sie sich an "
-"einem beliebigen Ort auf der Erde befinden, indem Sie jemandem Ihren "
-"Längengrad (X) und Breitengrad (Y) geben. Wenn Sie eine ähnliche Messung für"
-" einen Baum oder einen Telefonmast durchführen und diese auf einer Karte "
-"markieren, haben Sie ein Punkt-Feature erstellt."
-
 #: ../../docs/gentle_gis_introduction/vector_data.rst:114
 msgid ""
 "Since we know the earth is not flat, it is often useful to add a Z value to "
@@ -242,21 +164,6 @@ msgstr ""
 #: ../../docs/gentle_gis_introduction/vector_data.rst:118
 msgid "Polyline features in detail"
 msgstr "Polylinien-Features im Detail"
-
-#: ../../docs/gentle_gis_introduction/vector_data.rst:120
-msgid ""
-"Where a point feature is a single vertex, **a polyline has two or more "
-"vertices**. The polyline is a continuous path drawn through each vertex, as "
-"shown in figure_geometry_polyline_. When two vertices are joined, a line is "
-"created. When more than two are joined, they form a 'line of lines', or "
-"**polyline**."
-msgstr ""
-"Während ein Punkt-Feature ein einzelner Scheitelpunkt ist, **hat eine "
-"Polylinie zwei oder mehr Scheitelpunkte**. Die Polylinie ist ein "
-"kontinuierlicher Pfad, der durch jeden Scheitelpunkt gezogen wird, wie in "
-"figure_geometry_polyline_ gezeigt. Wenn zwei Scheitelpunkte verbunden "
-"werden, wird eine Linie erstellt. Wenn mehr als zwei verbunden sind, bilden "
-"sie eine 'Linienlinie' oder **Polylinie**."
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:125
 msgid ""
@@ -278,22 +185,6 @@ msgstr ""
 "GIS-Anwendungen kann man diese speziellen Regeln für den jeweiligen Feature-"
 "Typ (z.B. Straßen) einstellen, so dass das GIS gewährleistet, dass diese "
 "Polylinien stets diesen Vorgaben entsprechen."
-
-#: ../../docs/gentle_gis_introduction/vector_data.rst:134
-msgid ""
-"If a curved polyline has very large distances between vertices, it may "
-"appear **angular** or jagged, depending on the scale at which it is viewed "
-"(see figure_polyline_jagged_). Because of this it is important that "
-"polylines are digitised (captured into the computer) with distances between "
-"vertices that are small enough for the scale at which you want to use the "
-"data."
-msgstr ""
-"Wenn eine gekrümmte Polylinie sehr große Abstände zwischen den "
-"Scheitelpunkten aufweist, kann sie je nach Betrachtungsmaßstab **eckig** "
-"oder gezackt erscheinen (siehe figure_polyline_jagged_). Aus diesem Grund "
-"ist es wichtig, dass Polylinien mit Abständen zwischen Scheitelpunkten "
-"digitalisiert (im Computer erfasst) werden, die klein genug für den Maßstab "
-"sind, in dem Sie die Daten verwenden möchten."
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:146
 msgid ""

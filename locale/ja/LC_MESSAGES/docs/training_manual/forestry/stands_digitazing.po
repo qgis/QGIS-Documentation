@@ -1,29 +1,46 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
+# Harrissou Sant-anna, 2020
+# fairtommy <fairtommy@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:20+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"POT-Creation-Date: 2021-05-12 02:37+0000\n"
+"PO-Revision-Date: 2020-12-24 11:59+0000\n"
+"Last-Translator: fairtommy <fairtommy@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:2
 msgid "|LS| Digitizing Forest Stands"
 msgstr "|LS| 林分をデジタル化する"
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:4
+msgid ""
+"Unless you are going to use your georeferenced map as a simple background "
+"image, the next natural step is to digitize elements from it. You have "
+"already done so in the exercises about creating vector data in "
+":doc:`../create_vector_data/create_new_vector`, when you digitized the "
+"school fields. In this lesson, you are going to digitize the forest stands' "
+"borders that appear in the map as green lines but instead of doing it using "
+"an aerial image, you will use your georeferenced map."
+msgstr ""
+"地理参照された地図を単純な背景画像として使用するつもりでないならば、次の自然なステップは、そこから要素をデジタル化することです。それは学校のフィールドをデジタル化したときに、"
+" :doc:`../create_vector_data/create_new_vector` "
+"でベクタデータを作成することに関する演習ですでに行っています。このレッスンでは、地図に緑色の線で表示される林分境界線をデジタル化しますが、航空写真を使用する代わりに、地理参照された地図を使用します。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:11
 msgid ""
@@ -49,6 +66,19 @@ msgid ""
 "aerial photograph."
 msgstr ""
 "地図をスキャンして地理参照してしまえば、画像をガイドとして見ることで直接デジタル化を開始できるでしょう。デジタル化に使用しようとしている画像が、例えば航空写真である場合には、それが最も正しい方向である可能性が高いでしょう。"
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:24
+msgid ""
+"If what you are using to digitize is a good map, as it is in our case, it is"
+" likely that the information is clearly displayed as lines with different "
+"colors for each type of element. Those colors can be relatively easy "
+"extracted as individual images using an image processing software like `GIMP"
+" <https://www.gimp.org/>`_. Such separate images can be used to assist the "
+"digitizing, as you will see below."
+msgstr ""
+"ここでの場合のように、デジタル化に使用しているものが良い地図であれば、情報は要素の種類ごとに異なる色の線として明確に表示されているでしょう。これらの色は、"
+" `GIMP <https://www.gimp.org/>`_ "
+"のような画像処理ソフトウェアを使用すれば、個別の画像として比較的簡単に抽出できます。このような個別の画像はデジタル化の支援に使用できます。それはこの後見ていきます。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:30
 msgid ""
@@ -358,6 +388,12 @@ msgid ""
 "snapping options:"
 msgstr "過去のモジュールを覚えていれば今、私たちは、セットアップおよびスナップオプションを有効にする必要があります："
 
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:171
+msgid ""
+"Activate the snapping for the :kbd:`green_centroids` and the "
+":kbd:`forest_stands` layers."
+msgstr ":kbd:`green_centroids` レイヤーと :kbd:`forest_stands` レイヤーのスナップを有効にします。"
+
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:172
 msgid "Set their :guilabel:`Tolerance` to 5 map units."
 msgstr "それらのレイヤーの :guilabel:`許容誤差` を5地図単位に設定してください。"
@@ -518,12 +554,18 @@ msgstr "右の林358の編集を終了します"
 msgid "Enter the :kbd:`id` as 358."
 msgstr ":kbd:`id` を358と入力します。"
 
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:236
+msgid ""
+"Click :guilabel:`OK`, your new polygon should show a common border with the "
+"stand 357 as you can see in the image on the right."
+msgstr ":guilabel:`OK` をクリックすると、右の画像に示すように、新しいポリゴンに林分357との共通の境界線が表示されます。"
+
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:242
 msgid ""
 "The part of the polygon that was overlapping the existing polygon has been "
 "automatically trimmed out and you are left with a common border, as you "
 "intended it to be."
-msgstr "既存のポリゴンを重ねたポリゴンの一部は自動的にトリミングされていて、それがあることを意図したように、共通の境界が残されています。"
+msgstr "既存のポリゴンと重なるポリゴンの部分は自動的にトリミングされていて、意図したとおりに、共通の境界が残されています。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:248
 msgid "|basic| |TY| Finish Digitizing the Forest Stands"

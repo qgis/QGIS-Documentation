@@ -12,14 +12,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"POT-Creation-Date: 2021-05-12 02:37+0000\n"
 "PO-Revision-Date: 2020-12-24 11:59+0000\n"
 "Last-Translator: Harrissou Sant-anna, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
+"Generated-By: Babel 2.9.1\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -251,17 +251,6 @@ msgstr ""
 "이미지 배경지도의 일반과정은 래스터에 여러점을 선택하여 좌표와 투영법을 지정하는것입니다. 입력방식와 데이터 기반으로 지오리퍼런서는 "
 "월드파일 파라미터를 계산합니다. 좌표가 많이 있을 수록 결과는 더 좋아집니다."
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:73
-msgid ""
-"The first step is to start QGIS and click on :menuselection:`Raster -->` "
-"|georefRun| :menuselection:`Georeferencer`, which appears in the QGIS menu "
-"bar. The Georeferencer dialog appears as shown in "
-"figure_georeferencer_dialog_."
-msgstr ""
-"첫단계는 QGIS를 시작하고 QGIS 메뉴바에 있는 :menuselection:`래스터 -->` |georefRun| "
-":menuselection:`지오리퍼런서`를 클릭하는것입니다. 지오리퍼런서 대화창이 "
-"figure_georeferencer_dialog_처럼 보여집니다. "
-
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:77
 msgid ""
 "For this example, we are using a topo sheet of South Dakota from SDGS. It "
@@ -291,17 +280,6 @@ msgid ""
 msgstr ""
 "참조되지 않은 래스터를 지리참조시키려면, 먼저 |addRasterLayer| 버튼을 사용해서 해당 래스터를 불러와야만 합니다. 이 "
 "래스터는 대화창의 주 작업 영역에 나타날 것입니다. 래스터를 불러오고 나면, 참조 포인트를 입력할 수 있습니다."
-
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:99
-msgid ""
-"Using the |addGCPPoint| :sup:`Add Point` button, add points to the main "
-"working area and enter their coordinates (see Figure "
-"figure_georeferencer_add_points_). For this procedure you have three "
-"options:"
-msgstr ""
-"|addGCPPoint| :sup:`Add Point` 버튼을 사용해서 주 작업 영역에 포인트를 추가하고 그 좌표를 입력하십시오. "
-"(:ref:`figure_georeferencer_add_points` 그림을 참조하세요.) 이 절차에서 다음 세 가지 옵션을 선택할 수"
-" 있습니다:"
 
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:103
 msgid ""
@@ -371,118 +349,50 @@ msgstr "지오리퍼런서 투영 설정"
 msgid "Available Transformation algorithms"
 msgstr "사용 가능한 투영 알고리즘"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:151
-msgid ""
-"Depending on how many ground control points you have captured, you may want "
-"to use different transformation algorithms. Choice of transformation "
-"algorithm is also dependent on the type and quality of input data and the "
-"amount of geometric distortion that you are willing to introduce to the "
-"final result."
-msgstr ""
-"GCP의 사용갯수에 따라 다른 투영 알고리즘을 사용해야합니다. 입력데이터 종류 & 품질과 지오매트리 왜곡량에 따른 결과에 따라 "
-"투영알고리즘은 달라집니다."
-
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:157
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:155
 msgid ""
 "Currently, the following :guilabel:`Transformation types` are available:"
 msgstr "현재, 사용할 수 있는 :guilabel:`투영종류`:"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:159
-msgid ""
-"The **Linear** algorithm is used to create a world file and is different "
-"from the other algorithms, as it does not actually transform the raster. "
-"This algorithm likely won't be sufficient if you are dealing with scanned "
-"material."
-msgstr ""
-"**선형(Linear)** 알고리즘을 사용해서 월드 파일을 생성하는데, 다른 알고리즘과 달리 래스터를 실제로 변형하지는 않습니다. 스캔 "
-"이미지를 처리하는 경우, 이 알고리즘으로는 부족한 경우가 많습니다."
-
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:163
-msgid ""
-"The **Helmert** transformation performs simple scaling and rotation "
-"transformations."
-msgstr "**헬머트** 투영법은 간단한 스캐일과 회전투영을 실행합니다."
-
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:165
-msgid ""
-"The **Polynomial** algorithms 1-3 are among the most widely used algorithms "
-"introduced to match source and destination ground control points. The most "
-"widely used polynomial algorithm is the second-order polynomial "
-"transformation, which allows some curvature. First-order polynomial "
-"transformation (affine) preserves collinearity and allows scaling, "
-"translation and rotation only."
-msgstr ""
-"1차, 2차, 3차 **다항(Polynomial)** 알고리즘은 원본과 대상 지상기준점을 일치시키는 데 가장 널리 사용되는 알고리즘 "
-"가운데 하나입니다. 그 중에서도 가장 자주 사용되는 다항 알고리즘은 2차 다항 변형으로, 어느 정도의 만곡(curvature)을 "
-"허용합니다. 1차 다항 변형(아핀 affine)은 공선성(共線性 collinearity)을 보전하고, 크기 조정, "
-"변형(translation), 기울이기만을 허용합니다."
-
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:170
-msgid ""
-"The **Thin Plate Spline** (TPS) algorithm is a more modern georeferencing "
-"method, which is able to introduce local deformations in the data. This "
-"algorithm is useful when very low quality originals are being georeferenced."
-msgstr ""
-"**박판 스플라인(Thin Plate Spline)** (TPS) 알고리즘은 좀 더 현대적인 지리참조 방법으로, 데이터에 존재하는 국지 "
-"변형(local deformation)을 반영할 수 있습니다. 지리참조시키는 원본의 질이 아주 떨어지는 경우 이 알고리즘이 유용합니다."
-
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:173
-msgid ""
-"The **Projective** transformation is a linear rotation and translation of "
-"coordinates."
-msgstr ""
-"`Projective 투영법 <https://en.wikipedia.org/wiki/Homography>`_ 은 선형 기울이기 및 좌표 "
-"변환을 수행합니다."
-
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:177
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:193
 msgid "Define the Resampling method"
 msgstr "리샘플링 방법 정의"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:179
-msgid ""
-"The type of resampling you choose will likely depending on your input data "
-"and the ultimate objective of the exercise. If you don't want to change "
-"statistics of the image, you might want to choose 'Nearest neighbour', "
-"whereas a 'Cubic resampling' will likely provide a more smoothed result."
-msgstr ""
-"입력 데이터 및 작업의 궁긍적인 목표에 따라 서로 다른 리샘플링 유형을 선택해야 합니다. 이미지의 통계를 변경하고 싶지 않다면, '최근접"
-" 이웃' 을 선택하는 편이 좋습니다. 반면에 '3차 리샘플링' 을 선택하면, 좀 더 다듬어진 결과물을 산출할 것입니다."
-
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:184
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:201
 msgid "It is possible to choose between five different resampling methods:"
 msgstr "다음 다섯 가지 리샘플링 메소드 가운데 하나를 선택할 수 있습니다:"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:186
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:203
 msgid "Nearest neighbour"
 msgstr "Nearest neighbour"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:187
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:204
 msgid "Linear"
 msgstr "선형(Linear)"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:188
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:205
 msgid "Cubic"
 msgstr "Cubic"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:189
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:206
 msgid "Cubic Spline"
 msgstr "Cubic Spline"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:190
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:207
 msgid "Lanczos"
 msgstr "란초시 (Lánczos)"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:193
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:210
 msgid "Define the transformation settings"
 msgstr "투영설정"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:195
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:212
 msgid ""
 "There are several options that need to be defined for the georeferenced "
 "output raster."
 msgstr "지리참조된 산출 래스터를 위해 정의해야 할 몇몇 옵션들이 있습니다."
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:198
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:215
 msgid ""
 "The |checkbox| :guilabel:`Create world file` checkbox is only available if "
 "you decide to use the linear transformation type, because this means that "
@@ -494,7 +404,7 @@ msgstr ""
 "월드 파일을 생성한다는 것은 래스터 이미지를 실제로 변형시키지 않는다는 의미이기 때문입니다. 이 경우, 새 월드 파일만 생성하기 때문에 "
 ":guilabel:`Output raster` 란은 활성화되지 않습니다."
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:203
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:220
 msgid ""
 "For all other transformation types, you have to define an :guilabel:`Output "
 "raster`. As default, a new file ([filename]_modified) will be created in the"
@@ -503,7 +413,7 @@ msgstr ""
 "다른 모든 변형 유형의 경우, :guilabel:`Output raster` 를 정의해야 합니다. 기본적으로, 원본 래스터 이미지와 "
 "동일한 폴더에 ``[filename]_modified`` 라는 새 파일을 생성할 것입니다."
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:206
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:223
 msgid ""
 "As a next step, you have to define the :guilabel:`Target SRS` (Spatial "
 "Reference System) for the georeferenced raster (see "
@@ -512,7 +422,7 @@ msgstr ""
 "그 다음 단계로, 지리참조된 래스터를 위한 :guilabel:`Target SRS` (Spatial Reference System)을 "
 "정의해야 합니다. (:ref:`label_projections` 을 참조하세요.)"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:208
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:225
 msgid ""
 "If you like, you can **generate a pdf map** and also **a pdf report**. The "
 "report includes information about the used transformation parameters, an "
@@ -522,7 +432,7 @@ msgstr ""
 "파라미터, 잔여물의 이미지, 그리고 모든 GCP 및 그 평균 제곱근 오차(Root Mean Square Error) 목록 관련 정보를 "
 "포함합니다."
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:211
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:228
 msgid ""
 "Furthermore, you can activate the |checkbox| :guilabel:`Set Target "
 "Resolution` checkbox and define the pixel resolution of the output raster. "
@@ -531,7 +441,7 @@ msgstr ""
 "또한, |checkbox| :guilabel:`Set Target Resolution` 옵션을 활성화하면 산출 래스터의 픽셀 해상도를 "
 "정의할 수 있습니다. 수평 및 수직 해상도의 기본값은 1입니다."
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:214
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:231
 msgid ""
 "The |checkbox| :guilabel:`Use 0 for transparency when needed` can be "
 "activated, if pixels with the value 0 shall be visualized transparent. In "
@@ -540,7 +450,7 @@ msgstr ""
 "0 값을 가진 픽셀을 투명하게 가시화해야 하는 경우, |checkbox| :guilabel:`Use 0 for transparency "
 "when needed` 옵션을 활성화하면 됩니다. 예시 지형 데이터의 모든 하얀색 영역이 투명하게 변할 것입니다."
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:217
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:234
 msgid ""
 "Finally, |checkbox| :guilabel:`Load in QGIS when done` loads the output "
 "raster automatically into the QGIS map canvas when the transformation is "
@@ -549,11 +459,11 @@ msgstr ""
 "마지막으로, |checkbox| :guilabel:`Load in QGIS when done` 옵션을 활성화하면 변형 작업 종료시 "
 "QGIS 맵 캔버스에 산출 래스터를 자동적으로 불러올 것입니다."
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:221
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:238
 msgid "Show and adapt raster properties"
 msgstr "래스터 속성 표시 및 조정"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:223
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:240
 msgid ""
 "Clicking on the :guilabel:`Raster properties` option in the "
 ":guilabel:`Settings` menu opens the :ref:`Layer properties "
@@ -563,25 +473,25 @@ msgstr ""
 ":guilabel:`Settings --> Raster properties` 메뉴 옵션을 선택하면 사용자가 지리참조시키고자 하는 래스터 "
 "파일의 :ref:`레이어 속성 <raster_properties_dialog>` 대화창이 열립니다."
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:230
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:247
 msgid "Configure the georeferencer"
 msgstr "지리참조기 환경 설정"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:232
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:249
 msgid "You can define whether you want to show GCP coordinates and/or IDs."
 msgstr "GCP 좌표 그리고/또는 그 ID를 표시할 것인지 여부를 정의할 수 있습니다."
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:233
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:250
 msgid "As residual units, pixels and map units can be chosen."
 msgstr "잔차단위로 픽셀과 지도단위를 선택할 수 있습니다."
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:234
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:251
 msgid ""
 "For the PDF report, a left and right margin can be defined and you can also "
 "set the paper size for the PDF map."
 msgstr "PDF 보고서는 좌우 여백과 PDF 지도의 종이크기를 설정할 수 있습니다."
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:236
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:253
 msgid ""
 "Finally, you can activate to |checkbox| :guilabel:`Show Georeferencer window"
 " docked`."
@@ -589,11 +499,11 @@ msgstr ""
 "마지막으로 |checkbox| :guilabel:`Show Georeferencer window docked` 옵션을 활성화해서 "
 "지리참조기 대화창을 고정할 수 있습니다."
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:241
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:258
 msgid "Running the transformation"
 msgstr "투영법 실행"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:243
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:260
 msgid ""
 "After all GCPs have been collected and all transformation settings are "
 "defined, just press the |start| :sup:`Start georeferencing` button to create"
