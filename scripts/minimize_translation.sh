@@ -1,10 +1,16 @@
 #!/bin/bash
 
-# This script is used to clean QGIS-Documentation translated resources pulled
-# from Transifex and keep only the translated strings/files
+# This script is used to pull translated resources of QGIS-Documentation
+# from Transifex, clean and keep only the translated strings in them.
 # https://www.transifex.com
 #
+# Run `minimize_translation.sh -l yourlanguage`
+# or `minimize_translation.sh` for all languages
+#
 # Harrissou Sant-anna, December 2020
+
+# target language: default to all
+LANG=${*:--a}
 
 # list of target folders
 SOURCEPOFILES='locale'
@@ -14,8 +20,7 @@ SOURCEPOFILES='locale'
 
 # Pull translations of all languages from Transifex,
 # fetching only the strings that are really translated and not the whole file
-tx pull --mode onlytranslated -a
-#tx pull --mode onlytranslated -l yourlanguage ## to pull a particular language
+tx pull --parallel --mode onlytranslated $LANG
 
 # The onlytranslated mode actually pulls all the existing files
 # (with only the file header when no string has been translated yet)
