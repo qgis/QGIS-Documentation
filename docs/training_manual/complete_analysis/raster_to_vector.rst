@@ -65,11 +65,14 @@ opposite conversion from the one performed above. Convert to raster the
 .. figure:: img/vector_to_raster.png
    :align: center
 
-* :guilabel:`Input file` is :guilabel:`all_terrain`.
-* :guilabel:`Output file...` is
-  :file:`exercise_data/residential_development/raster_conversion.tif`.
+* :guilabel:`Input layer` is :guilabel:`all_terrain`.
+* Field name is :guilabel:`suitable`.
+* :guilabel:`Output raster size units` is :guilabel:`Pixels`.
 * :guilabel:`Width` and :guilabel:`Height` are ``837`` and ``661``,
   respectively.
+* Get the :guilabel:`Output extent` from the :guilabel:`all_terrain` layer.
+* Set output file :guilabel:`Rasterized` to
+  :file:`exercise_data/residential_development/raster_conversion.tif`.
 
 .. note::  The size of the output image is specified here to be the same as the
    original raster which was vectorized. To view the dimensions of an image,
