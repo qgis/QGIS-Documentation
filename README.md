@@ -215,6 +215,11 @@ To do so, you need to manually pull the translations from Transifex to your loca
    ```
    ./scripts/minimize_translation.sh
    ```
+   To pull a specific language (e.g. italian), do
+   ```
+   ./scripts/minimize_translation.sh -l it
+   ```
+
    IMPORTANT: to be able to pull from transifex.com, you will need a credentials file. 
    This file should be named: ``.transifexrc`` and easiest is to put it in your home dir. 
    The file should contain this:
@@ -230,4 +235,4 @@ To do so, you need to manually pull the translations from Transifex to your loca
    make html LANG=yourlanguage
    ```
 1. Share the changes by opening a pull-request, allowing us to integrate
-   the new strings for all the languages
+   the new strings for the pulled language(s)
