@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2021
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-12 02:37+0000\n"
 "PO-Revision-Date: 2020-12-24 10:21+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2021\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,6 +27,26 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/expression.rst:7
 msgid "Expressions"
 msgstr "표현식"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:15
+msgid ""
+"Based on layer data and prebuilt or user defined functions, **Expressions** "
+"offer a powerful way to manipulate attribute value, geometry and variables "
+"in order to dynamically change the geometry style, the content or position "
+"of the label, the value for diagram, the height of a layout item, select "
+"some features, create virtual field, ..."
+msgstr ""
+"레이어 데이터 및 사전 생성된 또는 사용자가 정의한 함수를 기반으로, **표현식** 은 도형 스타일, 라벨의 내용 또는 위치, 도표의 "
+"값, 조판기 항목의 높이 등을 동적으로 변경하고, 피처를 선택하고, 가상 필드 등을 생성하기 위해 속성값, 도형 및 변수를 처리할 수 "
+"있는 강력한 방법을 제공합니다."
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:21
+msgid ""
+"A list of the default functions and variables for writing expressions can be"
+" found at :ref:`functions_list`, with detailed information and examples."
+msgstr ""
+":ref:`functions_list` 에서 표현식 작성을 위한 기본 함수와 변수 목록을 자세한 정보 및 예시와 함께 찾아볼 수 "
+"있습니다."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:27
 msgid "The Expression string builder"
@@ -43,6 +64,10 @@ msgstr ""
 msgid "clicking the |expression| button;"
 msgstr "|expression| 버튼을 클릭하는 경우"
 
+#: ../../docs/user_manual/working_with_vector/expression.rst:412
+msgid "expression"
+msgstr "expression"
+
 #: ../../docs/user_manual/working_with_vector/expression.rst:33
 msgid ""
 ":ref:`selecting features <sec_selection>` with the |expressionSelect| "
@@ -50,6 +75,10 @@ msgid ""
 msgstr ""
 "|expressionSelect| :sup:`Select By Expression...` 도구로 :ref:`피처를 선택 "
 "<sec_selection>` 하는 경우"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:414
+msgid "expressionSelect"
+msgstr "expressionSelect"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:35
 msgid ""
@@ -59,6 +88,10 @@ msgstr ""
 "|calculateField| :sup:`Field calculator` 도구 등으로 :ref:`속성을 편집 "
 "<calculate_fields_values>` 하는 경우"
 
+#: ../../docs/user_manual/working_with_vector/expression.rst:404
+msgid "calculateField"
+msgstr "calculateField"
+
 #: ../../docs/user_manual/working_with_vector/expression.rst:37
 msgid ""
 "manipulating symbology, label or layout item parameters with the "
@@ -66,6 +99,10 @@ msgid ""
 msgstr ""
 "|dataDefined| :sup:`Data defined override` 도구로 심볼, 라벨 또는 조판기 항목 파라미터를 처리하는 "
 "경우 (:ref:`data_defined` 참조)"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:408
+msgid "dataDefined"
+msgstr "dataDefined"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:39
 msgid ""
@@ -94,9 +131,30 @@ msgid ""
 "of functions by creating custom ones."
 msgstr ":ref:`함수 편집기 탭 <function_editor>`: 사용자 지정 함수를 생성해서 함수 목록을 확장할 수 있습니다."
 
+#: ../../docs/user_manual/working_with_vector/expression.rst:50
+msgid "The Interface"
+msgstr "인터페이스"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:52
+msgid ""
+"The :guilabel:`Expression` tab provides the main interface to write "
+"expressions using functions, layer fields and values. It contains the "
+"following widgets:"
+msgstr ""
+":guilabel:`Expression` 탭은 함수, 레이어 필드 및 값을 이용해서 표현식을 작성할 수 있는 주 인터페이스를 제공합니다."
+" 이 탭에 다음 작업을 할 수 있는 위젯들이 있습니다:"
+
 #: ../../docs/user_manual/working_with_vector/expression.rst:61
 msgid "The Expression tab"
 msgstr "표현식 탭"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:63
+msgid ""
+"An expression editor area for typing or pasting expressions. Autocompletion "
+"is available to speed expression writing:"
+msgstr ""
+"표현식을 입력하거나 붙여넣을 수 있는 표현식 편집기 영역이 있습니다. 표현식 작성 속도를 향상시키기 위해 자동완성 기능을 사용할 수 "
+"있습니다:"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:66
 msgid ""
@@ -140,6 +198,53 @@ msgstr ""
 "복잡 표현식을 사용할 때, 사용자가 기억하기 쉽도록 텍스트를 여러 줄 또는 인라인(inline) 코멘트 가운데 하나로 추가하는 편이 "
 "좋습니다."
 
+#: ../../docs/user_manual/working_with_vector/expression.rst:109
+msgid "Above the expression editor, a set of tools helps you:"
+msgstr "표현식 편집기 위에 있는 도구 모음을 사용할 수 있습니다:"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:111
+msgid "|fileNew|:sup:`Clear the expression editor`"
+msgstr "|fileNew|:sup:`Clear the expression editor`: 표현식 편집기 초기화"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:416
+msgid "fileNew"
+msgstr "fileNew"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:112
+msgid "create and manage :ref:`user expressions <user_expressions_functions>`"
+msgstr ":ref:`사용자 표현식 <user_expressions_functions>` 생성 및 관리"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:114
+msgid "Under the expression editor, you find:"
+msgstr "표현식 편집기 아래에는:"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:116
+msgid "a set of basic operators to help you build the expression"
+msgstr "표현식 작성에 도움이 되는 기본 연산자 모음이 있습니다."
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:117
+msgid ""
+"an indication of the expected format of output when you are data-defining "
+"feature properties"
+msgstr "피처 속성을 데이터로 정의하는 경우 산출물의 예상 포맷을 알려줍니다."
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:119
+msgid ""
+"a live :guilabel:`Output preview` of the expression, evaluated on the first "
+"feature of the Layer by default. You can browse and evaluate other features "
+"of the layer using the :guilabel:`Feature` combobox (the values are taken "
+"from the :ref:`display name <maptips>` property of the layer)."
+msgstr ""
+"표현식의 실시간 :guilabel:`Output preview` 를 볼 수 있습니다. 기본적으로 레이어의 첫 번째 피처를 대상으로 "
+"미리보기를 구합니다. :guilabel:`Feature` 콤보박스를 이용하면 레이어의 다른 피처를 탐색해서 미리보기를 구할 수 있습니다."
+" (콤보박스에 표시되는 값은 레이어의 :ref:`표시명 <maptips>` 속성에서 가져옵니다.)"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:125
+msgid ""
+"In case of error, it indicates it and you can access the details with the "
+"provided hyperlink."
+msgstr "오류가 발생하는 경우, 이를 알려주는 하이퍼링크를 통해 오류의 자세한 내용을 볼 수 있습니다."
+
 #: ../../docs/user_manual/working_with_vector/expression.rst:128
 msgid ""
 "A function selector displays the list of functions, variables, fields... "
@@ -161,6 +266,48 @@ msgid ""
 "automatically display its help in the dialog."
 msgstr "표현식에 있는 함수명을 :kbd:`Ctrl+Click` 하면 자동적으로 대화창에 도움말을 표시합니다."
 
+#: ../../docs/user_manual/working_with_vector/expression.rst:139
+msgid ""
+"A field's values widget shown when a field is selected in the function "
+"selector helps to fetch features attributes:"
+msgstr "함수 선택기에서 필드를 선택하면 나타나는 필드의 값 위젯을 통해 다음과 같은 피처 속성을 가져올 수 있습니다:"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:142
+msgid "Look for a particular field value"
+msgstr "특정 필드 값 탐색"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:143
+msgid ""
+"Display the list of :guilabel:`All Unique` or :guilabel:`10 Samples` values."
+" Also available from right-click."
+msgstr ""
+":guilabel:`All Unique` 또는 :guilabel:`10 Samples` 값 목록을 표시. 오른쪽 클릭으로도 표시할 수 "
+"있습니다."
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:146
+msgid ""
+"When the field is mapped with another layer or a set of values, i.e. if the "
+":ref:`field widget <edit_widgets>` is of *RelationReference*, "
+"*ValueRelation* or *ValueMap* type, it's possible to list all the values of "
+"the mapped field (from the referenced layer, table or list). Moreover, you "
+"can filter this list to |checkbox| :guilabel:`Only show values in use` in "
+"the current field."
+msgstr ""
+"필드가 또다른 레이어나 값 모음과 매핑된 경우, 예를 들어 :ref:`필드 위젯 <edit_widgets>` 이 "
+"*RelationReference*, *ValueRelation* 또는 *ValueMap* 유형인 경우 (참조된 레이어, 테이블 또는 "
+"목록으로부터) 매핑된 필드의 모든 값을 목록화할 수 있습니다. 여기에 더해, |checkbox| :guilabel:`Only show "
+"values in use` 옵션을 체크하면 이 목록을 현재 필드에서 사용중인 값만 표시하도록 필터링할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:406
+msgid "checkbox"
+msgstr "checkbox"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:152
+msgid ""
+"Double-clicking a field value in the widget adds it to the expression "
+"editor."
+msgstr "위젯에 있는 필드 값을 더블 클릭하면 표현식 편집기에 해당 값을 추가합니다."
+
 #: ../../docs/user_manual/working_with_vector/expression.rst:156
 msgid ""
 "The right panel, showing functions help or field values, can be collapsed "
@@ -169,6 +316,109 @@ msgid ""
 msgstr ""
 "대화창에서 함수 도움말이나 필드값을 표시하는 오른쪽 패널을 접을 수 (보이지 않게 할 수) 있습니다. 이 패널을 다시 펼치려면 "
 ":guilabel:`Show Values` 또는 :guilabel:`Show Help` 버튼을 클릭하세요."
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:162
+msgid "Writing an expression"
+msgstr "표현식 작성하기"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:164
+msgid ""
+"QGIS expressions are used to select features or set values. Writing an "
+"expression in QGIS follows some rules:"
+msgstr "QGIS 표현식은 피처를 선택하거나 값을 설정하는 데 쓰입니다. QGIS에서 표현식을 작성하려면 몇몇 규칙을 따라야 합니다:"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:167
+msgid ""
+"**The dialog defines the context**: if you are used to SQL, you probably "
+"know queries of the type *select features from layer where condition* or "
+"*update layer set field = new_value where condition*. A QGIS expression also"
+" needs all these information but the tool you use to open the expression "
+"builder dialog provides parts of them. For example, giving a layer "
+"(building) with a field (height):"
+msgstr ""
+"**대화창이 맥락을 정의한다**: 사용자가 SQL에 익숙하다면 아마도 *select 피처 from 레이어 where 조건* 또는 "
+"*update 레이어 set 필드 = 새_값 where 조건* 같은 유형의 쿼리들을 알고 있을 것입니다. QGIS 표현식도 이런 모든 "
+"정보를 필요로 하지만, 사용자가 표현식 작성기 대화창을 열기 위해 사용하는 도구가 일부 정보를 제공합니다. 예를 들어 (높이) 필드를 "
+"가진 (건물) 레이어가 있다면:"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:174
+msgid ""
+"pressing the |expressionSelect|:sup:`Select by expression` tool means that "
+"you want to \"select features from buildings\". The **condition** is the "
+"only information you need to provide in the expression text widget, e.g. "
+"type ``\"height\" > 20`` to select buildings that are higher than 20."
+msgstr ""
+"|expressionSelect|:sup:`Select by expression` 도구를 클릭한다는 것은 \"건물 레이어에서 피처를 "
+"선택\" 하려 한다는 뜻입니다. 사용자가 표현식 텍스트 위젯에 입력해야 하는 정보는 **조건** 뿐입니다. 예를 들면 높이가 20을 "
+"초과하는 건물을 선택하려면 ``\"height\" > 20`` 이라고 입력하면 됩니다."
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:178
+msgid ""
+"with this selection made, pressing the |calculateField| :sup:`Field "
+"calculator` button and choosing \"height\" as :guilabel:`Update existing "
+"field`, you already provide the command \"update buildings set height = ??? "
+"where height > 20\". The only remaining bits you have to provide in this "
+"case is the **new value**, e.g. just enter ``50`` to set the height of the "
+"previously selected buildings."
+msgstr ""
+"이렇게 피처를 선택하고, |calculateField| :sup:`Field calculator` 버튼을 누른 다음 "
+":guilabel:`Update existing field` 로 \"height\" 를 선택하면 이미 \"update buildings "
+"set height = ??? where height > 20\" 이라는 명령어를 입력한 것입니다. 이 경우 이제 사용자가 입력해야 하는"
+" 것은  **새 값** 뿐입니다. 예를 들어 이미 선택한 건물들의 높이를 50으로 설정하려면 ``50`` 을 입력하기만 하면 됩니다."
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:184
+msgid ""
+"**Pay attention to quotes**: single quotes return a literal, so a text "
+"placed between single quotes (``'145'``) is interpreted as a string. Double "
+"quotes will give you the value of that text so use them for fields "
+"(``\"myfield\"``). Fields can also be used without quotes (``myfield``). No "
+"quotes for numbers (``3.16``)."
+msgstr ""
+"**따옴표에 주의하라**: 작은따옴표는 문자 그대로 반환하기 때문에, 작은따옴표 사이에 있는 텍스트는 문자열로 (``'145'``) "
+"해석됩니다. 큰따옴표는 해당 텍스트의 값을 반환하므로 필드 용으로 (``\"myfield\"``) 사용하십시오. 필드는 따옴표 없이도 "
+"(``myfield``) 사용할 수 있습니다. 숫자는 따옴표를 사용하지 않습니다(``3.16``)."
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:190
+msgid "Functions normally take as argument a string for field name. Do::"
+msgstr "필드명으로 보통 문자열을 인자로 받는 함수에서는 다음과 같이 입력하고:"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:195
+msgid "And not::"
+msgstr "다음처럼 입력하면 안 됩니다:"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:205
+msgid "**Use named parameters to ease expression reading**"
+msgstr "**표현식을 읽기 쉽게 하려면 명명된 파라미터를 이용**"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:207
+msgid ""
+"Some functions require many parameters to be set. The expression engine "
+"supports the use of named parameters. This means that instead of writing the"
+" cryptic expression ``clamp( 1, 2, 9)``, you can use ``clamp( min:=1, "
+"value:=2, max:=9)``. This also allows arguments to be switched, e.g. "
+"``clamp( value:=2, max:=9, min:=1)``. Using named parameters helps clarify "
+"what the arguments for an expression function refer to, which is helpful "
+"when you are trying to interpret an expression later!"
+msgstr ""
+"어떤 함수들은 설정하는 데 여러 파라미터가 필요합니다. 표현식 엔진은 명명 파라미터를 지원하고 있습니다. 즉 암호 같은 표현식 "
+"``clamp(1, 2, 9)`` 을 작성하는 대신, ``clamp(min:=1, value:=2, max:=9)`` 같은 표현식을 "
+"사용할 수 있다는 뜻입니다. 이렇게 하면 인자들도 ``clamp(value:=2, max:=9, min:=1)`` 처럼 위치를 바꿀 수 "
+"있습니다. 명명 파라미터를 이용하면 표현식 함수의 인자들이 어떤 의미인지 명확해집니다. 시간이 지난 뒤에 표현식을 해석하려 할 때 "
+"유용하겠죠!"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:215
+msgid "Some use cases of expressions"
+msgstr "몇몇 표현식 용례"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:217
+msgid ""
+"From the Field Calculator, calculate a \"pop_density\" field using the "
+"existing \"total_pop\" and \"area_km2\" fields::"
+msgstr "필드 계산기에서 기존 \"total_pop\"과 \"area_km2\" 필드를 이용, \"pop_density\" 필드를 계산합니다:"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:222
+msgid "Label or categorize features based on their area::"
+msgstr "피처의 면적에 따라 피처에 라벨을 추가하거나 범주화합니다:"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:226
 msgid ""
@@ -190,6 +440,115 @@ msgid ""
 msgstr ""
 ":guilabel:`Select By Expression...` 도구를 통해 “High population density” 지역인 동시에"
 " 평균 집값이 제곱미터 당 1만 유로를 초과하는 지역을 나타내는 모든 피처를 선택합니다:"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:244
+msgid ""
+"The previous expression could also be used to define which features to label"
+" or show on the map."
+msgstr "이런 표현식을 이용해서 어떤 피처에 라벨을 적용할지 또는 맵에 표시할지 정의할 수도 있습니다."
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:247
+msgid ""
+"Create a different symbol (type) for the layer, using the geometry "
+"generator::"
+msgstr "도형 생성기를 통해 레이어 별로 서로 다른 (유형의) 심볼을 생성합니다:"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:251
+msgid ""
+"Given a point feature, generate a closed line (using ``make_line``) around "
+"its geometry::"
+msgstr "포인트 피처를 지정, 포인트 도형 주위에 닫힌 라인을 (``make_line`` 을 이용해서) 생성합니다:"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:264
+msgid ""
+"In a print layout label, display the name of the \"airports\" features that "
+"are within the layout \"Map 1\" item::"
+msgstr "인쇄 조판기 라벨에, 조판 \"Map 1\" 항목 안에 있는 \"airports\" 피처들의 명칭을 표시합니다:"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:278
+msgid "Saving Expressions"
+msgstr "표현식 저장하기"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:280
+msgid ""
+"Using the |fileSave| :sup:`Add current expression to user expressions` "
+"button above the expression editor frame, you can save important expressions"
+" you want to have quick access to. These are available from the **User "
+"expressions** group in the middle panel. They are saved under the user "
+"profile (:file:`<userprofile>/QGIS/QGIS3.ini` file) and available in all "
+"expression dialogs inside all projects of the current user profile."
+msgstr ""
+"표현식 편집기 프레임 위에 있는 |fileSave| :sup:`Add current expression to user "
+"expressions` 버튼을 누르면, 사용자가 손쉽게 접근할 수 있도록 하려는 중요한 표현식을 저장할 수 있습니다. 이렇게 저장한 "
+"표현식들은 가운데 패널에 있는 **User expressions** 그룹에서 사용할 수 있습니다. 사용자 표현식은 사용자 "
+"프로파일(:file:`<userprofile>/QGIS/QGIS3.ini` 파일)에 저장되며 현재 사용자 프로파일의 모든 프로젝트에서의 "
+"모든 표현식 대화창에서 사용할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:418
+msgid "fileSave"
+msgstr "fileSave"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:288
+msgid ""
+"A set of tools available above the expression editor frame helps you manage "
+"the user expressions:"
+msgstr "표현식 편집기 프레임 위에 있는 도구 모음을 통해 사용자 표현식을 관리할 수 있습니다:"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:291
+msgid ""
+"|fileSave|:sup:`Add the current expression to user expressions`: store the "
+"expression in the user profile. A label and a help text can be added for "
+"easy identification."
+msgstr ""
+"|fileSave|:sup:`Add the current expression to user expressions`: 사용자 프로파일에 "
+"표현식을 저장합니다. 더 쉽게 식별하기 위한 라벨과 도움말 텍스트도 추가할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:294
+msgid ""
+"|symbologyEdit| :sup:`Edit selected expression from user expressions`, as "
+"well as their help and label"
+msgstr ""
+"|symbologyEdit| :sup:`Edit selected expression from user expressions`: 사용자 "
+"표현식에서 선택한 표현식은 물론 그 라벨과 도움말을 편집합니다."
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:430
+msgid "symbologyEdit"
+msgstr "symbologyEdit"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:296
+msgid ""
+"|deleteSelected| :sup:`Remove selected expression from user expressions`"
+msgstr ""
+"|deleteSelected| :sup:`Remove selected expression from user expressions`: "
+"사용자 표현식에서 선택한 표현식을 제거합니다."
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:410
+msgid "deleteSelected"
+msgstr "deleteSelected"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:297
+msgid ""
+"|sharingImport| :sup:`Import user expressions` from a ``.json`` file into "
+"the active user profile folder"
+msgstr ""
+"|sharingImport| :sup:`Import user expressions`: ``.json`` 파일에서 현재 사용자 프로파일 "
+"폴더로 사용자 표현식을 가져옵니다."
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:422
+msgid "sharingImport"
+msgstr "sharingImport"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:299
+msgid ""
+"|sharingExport| :sup:`Export user expressions` as a ``.json`` file; all the "
+"user expressions in the user profile :file:`QGIS3.ini` file are shared"
+msgstr ""
+"|sharingExport| :sup:`Export user expressions`: 사용자 프로파일 :file:`QGIS3.ini` "
+"파일에 있는 모든 사용자 표현식을 ``.json`` 파일로 공유합니다."
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:420
+msgid "sharingExport"
+msgstr "sharingExport"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:308
 msgid "Function Editor"
@@ -216,6 +575,10 @@ msgstr "새 함수를 생성하려면:"
 #: ../../docs/user_manual/working_with_vector/expression.rst:323
 msgid "Press the |signPlus| :sup:`New File` button."
 msgstr "|signPlus| :sup:`New File` 버튼을 누르십시오."
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:426
+msgid "signPlus"
+msgstr "signPlus"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:324
 msgid "Enter a name to use in the form that pops up and press :guilabel:`OK`."
@@ -249,6 +612,10 @@ msgstr ""
 ":guilabel:`Expression` 탭의 함수 트리에 사용자가 작성한 함수를 추가합니다. 기본적으로 ``Custom`` 그룹 아래 "
 "추가될 것입니다."
 
+#: ../../docs/user_manual/working_with_vector/expression.rst:428
+msgid "start"
+msgstr "start"
+
 #: ../../docs/user_manual/working_with_vector/expression.rst:335
 msgid "Enjoy your new function."
 msgstr "사용자의 새 함수를 즐겨보세요."
@@ -277,6 +644,35 @@ msgstr ""
 " 함수를 자동적으로 불러올 것입니다. :file:`/python/expressions` 폴더에만 새 함수를 저장하고 프로젝트 파일에는 "
 "저장하지 않는다는 사실을 알아두십시오. 사용자 지정 함수를 이용하는 프로젝트를 공유하는 경우, "
 ":file:`/python/expressions` 폴더에 있는 :file:`.py` 파일도 함께 공유해야 합니다."
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:348
+msgid "To delete a custom function:"
+msgstr "사용자 지정 함수를 삭제하려면:"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:350
+msgid "Enable the :guilabel:`Function Editor` tab"
+msgstr ":guilabel:`Function Editor` 탭을 활성화하고"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:351
+msgid "Select the function in the list"
+msgstr "목록에서 함수를 선택한 다음"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:352
+msgid ""
+"Press the |signMinus| :sup:`Remove selected function`. The function is "
+"removed from the list and the corresponding ``.py`` file deleted from the "
+"user profile folder."
+msgstr ""
+"|signMinus| :sup:`Remove selected function` 버튼을 누르십시오. 목록에서 선택한 함수를 제거하고, "
+"사용자 프로파일 폴더에서 해당 함수에 대응하는 ``.py`` 파일도 삭제합니다."
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:424
+msgid "signMinus"
+msgstr "signMinus"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:356
+msgid "**Example**"
+msgstr "**예시**"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:358
 msgid "Here's a short example on how to create your own functions:"
