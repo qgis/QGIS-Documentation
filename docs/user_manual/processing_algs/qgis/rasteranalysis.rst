@@ -1203,6 +1203,8 @@ Parameters
        the selected reference layer(s) will be used.
        The cell size will be the same for the X and Y axes.
    * - **Output extent (xmin, xmax, ymin, ymax)**
+
+       Optional
      - ``EXTENT``
      - [extent]
      - Extent of the output raster layer.
