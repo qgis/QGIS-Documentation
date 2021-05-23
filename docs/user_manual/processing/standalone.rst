@@ -40,7 +40,7 @@ The command ``help`` can be used to get further information about commands or al
 
    qgis_process help qgis:regularpoints
 
-Where a paramater accepts a list of values, set the same variable multiple times.
+Where a parameter accepts a list of values, set the same variable multiple times.
 
 .. code-block:: bash
 
