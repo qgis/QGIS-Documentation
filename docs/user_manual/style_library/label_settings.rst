@@ -390,21 +390,48 @@ tab and activate the |checkbox| :guilabel:`Draw callouts`. Then you can:
    * :guilabel:`Simple lines`: a straight line, the shortest path
    * :guilabel:`Manhattan style`: a 90° broken line
    * :guilabel:`Curved lines`: a curved line
-   * :guilabel:`Balloons`: a polygon surrounding the label and pointing to the feature.
-     It can have rounded corners.
+   * :guilabel:`Balloons`: a speech bubble surrounding the label and pointing
+     to the feature. It can have rounded corners.
 
-#. Select the :guilabel:`Line style` with full capabilities of a :ref:`line
-   symbol <vector_line_symbols>` including layer effects, and data-defined
-   settings
-#. Set the :guilabel:`Minimum length` of callout lines
+#. For line-based callouts:
+
+   #. Select the :guilabel:`Line style` with full capabilities of a :ref:`line
+      symbol <vector_line_symbols>` including layer effects, and data-defined
+      settings
+   #. Set the :guilabel:`Minimum length` of callout lines
+   #. For curved callouts, you also define:
+
+      * the percentage of :guilabel:`Curvature` of the connection line
+      * and its :guilabel:`Orientation`: starting from the label to the feature,
+        it can be :guilabel:`Clockwise` or :guilabel:`Counter-clockwise`, or
+        :guilabel:`Automatic` (determining an optimal orientation for each label)
+   #. Set the :guilabel:`Offset from label area` option: controls the distance
+      from the label anchor point (where the callout line ends).
+      This avoids drawing lines right up against the text.
+   #. Set the :guilabel:`Label anchor point`: controls where the connector
+      line should join to the label text. Available options:
+
+      * :guilabel:`Closest point`
+      * :guilabel:`Centroid`
+      * Fixed position at the edge (:guilabel:`Top left`, :guilabel:`Top center`,
+        :guilabel:`Top right`, :guilabel:`Left middle`, :guilabel:`Right middle`,
+        :guilabel:`Bottom left`, :guilabel:`Bottom center` and :guilabel:`Bottom right`).
+   #. |checkbox| :guilabel:`Draw lines to all feature parts` from the feature's
+      label
+
+#. For Balloons callout, you'd need to set:
+
+   * the :guilabel:`Fill style` with full capabilities of a :ref:`fill
+     symbol <vector_fill_symbols>` including layer effects, and data-defined
+     settings
+   * the :guilabel:`Corner radius` of the speech bubble
+   * the :guilabel:`Wedge width`: how large the bubble speech connection with
+     feature's pointer should be
+   * the :guilabel:`Margins` around the label's text
+
 #. Set the :guilabel:`Offset from feature` option: controls the distance
    from the feature (or its anchor point if a polygon) where callout lines end.
    Eg, this avoids drawing lines right up against the edges of the features.
-#. Set the :guilabel:`Offset from label area` option: controls the distance
-   from the label anchor point (where the callout line ends).
-   This avoids drawing lines right up against the text.
-#. |checkbox| :guilabel:`Draw lines to all feature parts` from the feature's
-   label
 #. Set the :guilabel:`Anchor point` for the (polygon) feature (the end
    point of the connector line). Available options:
 
@@ -412,21 +439,20 @@ tab and activate the |checkbox| :guilabel:`Draw callouts`. Then you can:
    * :guilabel:`Point on exterior`
    * :guilabel:`Point on surface`
    * :guilabel:`Centroid`
-#. Set the :guilabel:`Label anchor point`: controls where the connector
-   line should join to the label text. Available options:
+#. Set the :guilabel:`Blend mode`: controls the :ref:`blending <blend-modes>`
+   of the callout.
 
-   * :guilabel:`Closest point`
-   * :guilabel:`Centroid`
-   * Fixed position at the edge (:guilabel:`Top left`, :guilabel:`Top center`,
-     :guilabel:`Top right`, :guilabel:`Left middle`, :guilabel:`Right middle`,
-     :guilabel:`Bottom left`, :guilabel:`Bottom center` and :guilabel:`Bottom right`).
-#. Set the :guilabel:`Blend mode`: controls the :ref:`blending <blend-modes>` of the callout.
-
+Under the :guilabel:`Data defined` group, coordinates of the :guilabel:`Origin`
+(on the label side) and/or :guilabel:`Destination` (on the feature side)
+points of the callout can be controlled.
 Callouts can also be controlled manually by using the |moveLabel|
-:sup:`Move Label or Diagram` tool in the :ref:`Labeling Toolbar <label_toolbar>`.
-The start and end points of each callout can be moved this way. The nodes should be highlighted
-when the mouse pointer is nearby. If needed the :kbd:`Shift` Key can be held during the movement.
-This will snap the point in a way that the angle between the two callout points in increment of 15 degrees.
+:sup:`Move Label, Diagram or Callout` tool in the :ref:`Labeling Toolbar
+<label_toolbar>`.
+The start and end points of each callout can be moved this way.
+The nodes should be highlighted when the mouse pointer is nearby.
+If needed the :kbd:`Shift` Key can be held during the movement.
+This will snap the point in a way that the angle between the two callout points
+increments by 15 degrees.
 
 .. _labels_placement:
 
