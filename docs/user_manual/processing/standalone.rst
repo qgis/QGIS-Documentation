@@ -39,3 +39,9 @@ The command ``help`` can be used to get further information about commands or al
 .. code-block:: bash
 
    qgis_process help qgis:regularpoints
+
+Where a paramater accepts a list of values, set the same variable multiple times.
+
+.. code-block:: bash
+
+   qgis_process run native:mergevectorlayers -- LAYERS=input1.shp LAYERS=input2.shp OUTPUT=merged.shp
