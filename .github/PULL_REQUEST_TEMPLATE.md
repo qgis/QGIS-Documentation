@@ -12,7 +12,7 @@ Ticket(s): #
 Indicate whether the fix should be backported to previous release.
 Replace the space between square brackets by a `x` to make it checked.
 -->
-- [ ] Backport to LTR documentation is required
+- [ ] Backport to LTR documentation is requested
 
 <!---
 Reviewing is a process done by community members, mostly on a volunteer basis.
