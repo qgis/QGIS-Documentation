@@ -95,8 +95,34 @@ In the |text| :guilabel:`Text` tab, you can set:
 * the :guilabel:`Color`
 * the :guilabel:`Opacity`
 * and :guilabel:`Allow HTML Formatting`:
-  The HTML formatting option enables the proper rendering of some HTML tag to customize the label.
-  The supported tags are the HTML Color tags, underline, strikethrough, and overline for the text.
+  The HTML formatting option enables the proper rendering of some HTML tags to
+  customize the label. The supported tags are the HTML Color tags
+  (applied to text, underline, strikethrough, and overline).
+
+  In order to use the HTML formatting, you need to provide the HTML code
+  in the :guilabel:`Value` field. The expression is parsed and any supported
+  HTML tag overrides its corresponding setting in the labels properties.
+  They also combine well with other background, shadow, buffer... properties
+  of labels.
+
+  Below an example of a HTML-based expression and rendering
+  (applies different colors and underline to the same label):
+
+  .. code:: html
+
+    format(
+      '<span style="color:blue">%1</span> ( <span style="color:red"><u>%2 ft</u></span> )',
+      title( lower( "Name" ) ),
+      round($length)
+    )
+
+  .. _figure_label_html_formatting:
+
+  .. figure:: img/label_HTML_formatting.png
+     :align: center
+
+     Labeling with HTML formatting enabled
+
 
 At the bottom of the tab, a widget shows a filterable list of compatible items
 stored in your :ref:`style manager database <vector_style_manager>`.
