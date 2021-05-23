@@ -1542,8 +1542,8 @@ The Label Toolbar
 .................
 
 The :guilabel:`Label Toolbar` provides some tools to manipulate |labeling|
-:ref:`label <vector_labels_tab>` or |diagram| :ref:`diagram <sec_diagram>`
-properties.
+:ref:`label <vector_labels_tab>` (including their :ref:`callout <labels_callouts>`)
+or |diagram| :ref:`diagram <sec_diagram>` properties:
 
 .. _figure_labels_tools:
 
@@ -1552,30 +1552,29 @@ properties.
 
    The Label toolbar
 
-While for readability, ``label`` has been used below to describe the Label
-toolbar, note that when mentioned in their name, the tools work almost the
-same way with diagrams:
-
-* |showPinnedLabels| :sup:`Highlight Pinned Labels and Diagrams`. If the
-  vector layer of the label is editable, then the highlighting is green,
+* |showPinnedLabels| :sup:`Highlight Pinned Labels, Diagrams and Callouts`.
+  If the vector layer of the item is editable, then the highlighting is green,
   otherwise it's blue.
-* |showUnplacedLabel| :sup:`Toggles Display of Unplaced Labels`: Allows to
+* |showUnplacedLabel| :sup:`Toggle Display of Unplaced Labels`: Allows to
   determine whether any important labels are missing from the maps (e.g. due
   to overlaps or other constraints). They are displayed with a customizable
   color (see :ref:`automated_placement`).
 * |pinLabels| :sup:`Pin/Unpin Labels and Diagrams`. By clicking or draging an
-  area, you pin label(s). If you click or drag an area holding :kbd:`Shift`,
-  label(s) are unpinned. Finally, you can also click or drag an area holding
-  :kbd:`Ctrl` to toggle the pin status of label(s).
-* |showHideLabels| :sup:`Show/Hide Labels and Diagrams`. If you click on the labels,
+  area, you pin overlaid items. If you click or drag an area holding :kbd:`Shift`,
+  the items are unpinned. Finally, you can also click or drag an area holding
+  :kbd:`Ctrl` to toggle their pin status.
+* |showHideLabels| :sup:`Show/Hide Labels and Diagrams`. If you click on the items,
   or click and drag an area holding :kbd:`Shift`, they are hidden.
-  When a label is hidden, you just have to click on the feature to restore its
-  visibility. If you drag an area, all the labels in the area will be restored.
-* |moveLabel| :sup:`Moves a Label or Diagram`. You just have to click to select
-   the label and click to move it to the desired place. Selecting the label with
-   this tool and hitting the :kbd:`Delete` key will delete the stored position value.
-* |rotateLabel| :sup:`Rotates a Label`. Click to select the label and click again
-  to apply the desired rotation. Selecting a label with this tool and hitting the
+  When an item is hidden, you just have to click on the feature to restore its
+  visibility. If you drag an area, all the items in the area will be restored.
+* |moveLabel| :sup:`Move a Label, Diagram or Callout`: click to select
+  the item and click to move it to the desired place. The new coordinates are
+  stored in :ref:`auxiliary fields <vector_auxiliary_storage>`.
+  Selecting the item with this tool and hitting the :kbd:`Delete` key
+  will delete the stored position value.
+* |rotateLabel| :sup:`Rotate a Label`. Click to select the label and click again
+  to apply the desired rotation. Likewise, the new angle is stored in an auxiliary
+  field. Selecting a label with this tool and hitting the
   :kbd:`Delete` key will delete the rotation value of this label.
 * |changeLabelProperties| :sup:`Change Label Properties`. It opens a dialog to change the
   clicked label properties; it can be the label itself, its coordinates, angle,
@@ -1600,7 +1599,8 @@ Customize the labels from the map canvas
 Combined with the :guilabel:`Label Toolbar`, the data defined override setting
 helps you manipulate labels in the map canvas (move, edit, rotate).
 We now describe an example using the data-defined override function for the
-|moveLabel|:sup:`Move label` function (see :numref:`figure_labels_coordinate_data_defined`).
+|moveLabel|:sup:`Move Label, Diagram or Callout` function
+(see :numref:`figure_labels_coordinate_data_defined`).
 
 #. Import :file:`lakes.shp` from the QGIS sample dataset.
 #. Double-click the layer to open the Layer Properties. Click on :guilabel:`Labels`
