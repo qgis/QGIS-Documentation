@@ -109,6 +109,8 @@ Icon                            Substitution                        Icon        
 |indicatorEmbedded|             ``|indicatorEmbedded|``             |indicatorFilter|               ``|indicatorFilter|``
 |indicatorMemory|               ``|indicatorMemory|``               |indicatorNoCRS|                ``|indicatorNoCRS|``
 |indicatorBadLayer|             ``|indicatorBadLayer|``             |favourites|                    ``|favourites|``
+|indicatorLayerError|           ``|indicatorLayerError|``           |indicatorNotes|                ``|indicatorNotes|``
+|indicatorLowAccuracy|          ``|indicatorLowAccuracy|``          |indicatorOffline|              ``|indicatorOffline|``
 ==============================  ==================================  ==============================  ==================================
 
 File
@@ -897,11 +899,19 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |indicatorFilter| image:: /static/common/mIndicatorFilter.png
    :width: 1.5em
+.. |indicatorLayerError| image:: /static/common/mIndicatorLayerError.png
+   :width: 1.5em
+.. |indicatorLowAccuracy| image:: /static/common/mIndicatorLowAccuracy.png
+   :width: 1.5em
 .. |indicatorMemory| image:: /static/common/mIndicatorMemory.png
    :width: 1.5em
 .. |indicatorNoCRS| image:: /static/common/mIndicatorNoCRS.png
    :width: 1.5em
 .. |indicatorNonRemovable| image:: /static/common/mIndicatorNonRemovable.png
+   :width: 1.5em
+.. |indicatorNotes| image:: /static/common/mIndicatorNotes.png
+   :width: 1.5em
+.. |indicatorOffline| image:: /static/common/mIndicatorOffline.png
    :width: 1.5em
 .. |indicatorTemporal| image:: /static/common/mIndicatorTemporal.png
    :width: 1.5em
