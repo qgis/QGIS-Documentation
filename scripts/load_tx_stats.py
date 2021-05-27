@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+from sys import argv
 from os import path
 from datetime import date
 
@@ -8,11 +9,15 @@ import requests
 
 # This script downloads the statistics of localization of the project from Transifex.
 # To be able to use it, you need to provide your user account token
-# and run `python3 scripts/load_tx_stats.py` from the repo main folder
+# and run `python3 scripts/load_tx_stats.py <TX_TOKEN>` from the repo main folder
+
+# Catch the Transifex api token value (passed as argument to the python command)
+if len(argv) > 1:
+    TX_TOKEN = argv[1]
 
 #Load stats of the QGIS Documentation project from transifex
 response = requests.get('https://api.transifex.com/organizations/qgis/projects/qgis-documentation/',
-                        auth=('api', '<token>')
+                        auth=('api', TX_TOKEN)
                        )
 data = response.json()
 #print(data)
