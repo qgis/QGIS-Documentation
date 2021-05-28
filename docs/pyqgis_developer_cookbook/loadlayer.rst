@@ -241,7 +241,7 @@ providers:
       uri2 = 'https://demo.mapserver.org/cgi-bin/wfs?' + urllib.parse.unquote(urllib.parse.urlencode(params))
 
 .. note:: You can change the data source of an existing layer by calling
-   :meth:`setDataSource() <qgis.core.QgsVectorLayer.setDataSource>`
+   :meth:`setDataSource() <qgis.core.QgsMapLayer.setDataSource>`
    on a :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` instance, as
    in the following example:
 
