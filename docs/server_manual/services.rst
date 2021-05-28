@@ -289,14 +289,17 @@ BBOX
 ^^^^
 
 This parameter allows to specify the map extent with units according
-to the current CRS.
-Coordinates have to be separated by a comma.
+to the current CRS. Coordinates have to be separated by a comma.
 
-However, a slight difference has to be noticed according to the
-current ``VERSION`` parameter.
-In WMS **1.1.1**, coordinates are formed like
-``minx,miny,maxx,maxy`` or ``minlong,minlat,maxlong,maxlat``.
-For example:
+The ``BBOX`` parameter is formed like ``min_a,min_b,max_a,max_b`` but ``a`` and
+``b`` axis definition is different according to the current ``VERSION``
+parameter:
+
+* in WMS **1.1.1**, the axis ordering is always east/north
+* in WMS **1.3.0**, the axis ordering depends on the CRS authority
+
+For example in case of ``EPSG:4326`` and WMS **1.1.1**, ``a`` is the longitude
+(east) and ``b`` the latitude (north), leading to a request like:
 
 .. code-block:: none
 
@@ -308,9 +311,8 @@ For example:
   &BBOX=-180,-90,180,90
   &...
 
-But the axis is reversed in WMS **1.3.0**, so coordinates are formed
-like ``miny,minx,maxy,maxx`` or ``minlat,minlong,maxlat,maxlong``.
-For example:
+But in case of WMS **1.3.0**, the axis ordering defined in the EPSG database is
+north/east so ``a`` is the latitude and ``b`` the longitude:
 
 .. code-block:: none
 
@@ -2251,8 +2253,8 @@ QGIS Server catalog
 ===================
 
 The QGIS Server Catalog is a simple catalog that shows the list of QGIS projects
-served by the QGIS Server. It provides a user-friendly fully 
-browsable website with basic mapping capabilities to quickly browse the 
+served by the QGIS Server. It provides a user-friendly fully
+browsable website with basic mapping capabilities to quickly browse the
 datasets exposed through those QGIS projects.
 
 The QGIS Server catalog uses the variables QGIS_SERVER_LANDING_PAGE_PROJECTS_DIRECTORIES
@@ -2264,7 +2266,7 @@ and  QGIS_SERVER_LANDING_PAGE_PROJECTS_PG_CONNECTIONS (see :ref:`qgis-server-env
    :align: center
 
    Server Catalog project list page
-   
+
 You can consult the metadata associated to a project and the services that it
 provides. Links to those services are also given.
 
@@ -2273,17 +2275,17 @@ provides. Links to those services are also given.
 .. figure:: img/server_project_metadata_services.png
    :align: center
 
-   Server Catalog, metadata associated to a project and services (links to) that it provides. 
+   Server Catalog, metadata associated to a project and services (links to) that it provides.
 
-By browsing a project, it is listed the dataset that it serves. 
- 
+By browsing a project, it is listed the dataset that it serves.
+
 .. _figure_server_browse_dataset:
 
 .. figure:: img/server_browse_dataset.png
    :align: center
 
    Browsing a dataset served by a project in the Server Catalog
-   
+
 Use Right click on a layer to display the attribute table associated to it.
 
 .. _figure_server_attribute_table:
@@ -2299,5 +2301,5 @@ It is possible to consult information of the elements in the map as shown in the
 
 .. figure:: img/server_info_results.png
    :align: center
-   
+
    Consulting information of a map element
