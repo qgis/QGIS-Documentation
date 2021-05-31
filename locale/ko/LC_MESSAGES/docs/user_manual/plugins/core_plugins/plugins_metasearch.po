@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2021
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-12 02:37+0000\n"
 "PO-Revision-Date: 2020-12-24 10:22+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2021\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -91,10 +92,24 @@ msgstr ""
 ":guilabel:`Services`, :guilabel:`Search` 및 :guilabel:`Settings` 탭 3 개로 이루어져 "
 "있습니다."
 
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:222
+msgid "metasearch"
+msgstr "metasearch"
+
 #: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:55
 #: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:62
 msgid "Managing Catalog Services"
 msgstr "카탈로그 서비스 관리하기"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:64
+msgid ""
+"The :guilabel:`Services` tab allows the user to manage all available catalog"
+" services. MetaSearch provides a default list of Catalog Services, which can"
+" be added by pressing the :guilabel:`Add Default Services` button."
+msgstr ""
+":guilabel:`Services` 탭에서 사용할 수 있는 모든 카탈로그 서비스를 관리할 수 있습니다. 메타검색은 카탈로그 서비스의 "
+"기본 목록을 제공하는데, :guilabel:`Add Default Services` 버튼을 클릭해서 목록에 카탈로그 서비스를 추가할 수 "
+"있습니다."
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:69
 msgid ""
@@ -159,6 +174,15 @@ msgstr ""
 "카탈로그 서비스 항목을 삭제하려면, 삭제하고자 하는 항목을 선택한 다음 :guilabel:`Delete` 버튼을 클릭하십시오. 항목 "
 "삭제를 확인하는 메시지 창이 뜰 것입니다."
 
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:92
+msgid ""
+"MetaSearch allows loading and saving connections to an XML file. This is "
+"useful when you need to share settings between applications. Below is an "
+"example of the XML file format."
+msgstr ""
+"메타검색은 서비스 연결을 XML 파일로 저장하고 불러올 수 있습니다. 서로 다른 응용 프로그램 사이에서 설정을 공유해야 하는 경우 이 "
+"기능이 유용합니다. 다음은 이 XML 파일 포맷의 예시입니다."
+
 #: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:111
 msgid "To load a list of entries:"
 msgstr "항목 목록을 불러오려면:"
@@ -181,6 +205,18 @@ msgstr ":guilabel:`Open` 버튼을 클릭하십시오. 항목 목록이 표시�
 msgid ""
 "Select the entries you wish to add from the list and click :guilabel:`Load`."
 msgstr "목록에서 원하는 항목을 선택한 다음 :guilabel:`Load` 버튼을 누르십시오."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:120
+msgid ""
+"Click the :guilabel:`Service Info` button to display information about the "
+"selected Catalog Service such as service identification, service provider "
+"and contact information. If you would like to view the raw XML response, "
+"click the :guilabel:`GetCapabilities Response` button. A separate window "
+"will open displaying the Capabilities XML."
+msgstr ""
+"카탈로그 서비스를 선택하고 :guilabel:`Service Info` 버튼을 클릭하면 서비스 식별 정보, 서비스 제공자 및 연락 정보와"
+" 같은 서비스 관련 정보를 표시합니다. 원시(raw) XML 응답을 살펴보고 싶다면, :guilabel:`GetCapabilities "
+"Response` 버튼을 누르십시오. Capabilities XML을 표시한 개별 창이 열릴 것입니다."
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:128
 msgid "Searching Catalog Services"
@@ -210,9 +246,65 @@ msgstr ":guilabel:`Keywords`: 텍스트 검색 키워드를 마음대로 지정�
 msgid ":guilabel:`From`: the Catalog Service to perform the query against;"
 msgstr ":guilabel:`From`: 쿼리를 수행할 카탈로그 서비스를 선택할 수 있습니다."
 
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:144
+msgid ""
+"**Bounding box**: the spatial area of interest to filter, defined by "
+":guilabel:`Xmax`, :guilabel:`Xmin`, :guilabel:`Ymax`, and :guilabel:`Ymin`. "
+"Click :guilabel:`Set  Global` to do a  global search, click :guilabel:`Map "
+"Extent` to do a search in the visible area, or enter values manually."
+msgstr ""
+"**Bounding box**: :guilabel:`Xmax`, :guilabel:`Xmin`, :guilabel:`Ymax`, 및 "
+":guilabel:`Ymin` 을 정의해서 필터링할 관심 공간 영역을 지정합니다. :guilabel:`Set Global` 버튼을 "
+"클릭하면 전체 검색을, :guilabel:`Map Extent` 버튼을 클릭하면 가시화된 영역만 또는 값을 직접 입력해서 정의한 영역만 "
+"검색할 수 있습니다."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:151
+msgid ""
+"Clicking the :guilabel:`Search` button will search the selected Metadata "
+"Catalog. Search results are displayed in a list, and can be sorted by "
+"clicking on the column header. You can navigate through search results with "
+"the directional buttons below the search results."
+msgstr ""
+":guilabel:`Search` 버튼을 누르면 선택한 메타데이터 카탈로그를 검색할 것입니다. 검색 결과는 목록으로 표시되어, 열 제목을"
+" 클릭하면 정렬시킬 수 있습니다. 검색 결과 표 아래 있는 방향 버튼을 통해 검색 결과를 탐색할 수 있습니다."
+
 #: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:157
 msgid "Select a result and:"
 msgstr "검색 결과를 선택한 다음:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:159
+msgid ""
+"Click the :guilabel:`View Search Results as XML` button to open a window "
+"with the service response in raw XML format."
+msgstr ""
+":guilabel:`View Search Results as XML` 버튼을 클릭하면 서비스 응답을 원시 XML 포맷으로 담고 있는 창이"
+" 열립니다."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:161
+msgid ""
+"If the metadata record has an associated bounding box, a footprint of the "
+"bounding box will be displayed on the map."
+msgstr "메타데이터 레코드가 관련 경계 상자를 보유하고 있는 경우, 경계 상자의 범위가 맵 상에 표시될 것입니다."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:163
+msgid ""
+"Double-click the record to display the record metadata with any associated "
+"access links. Clicking a link opens the link in the user's web browser."
+msgstr ""
+"레코드를 더블클릭하면 모든 관련 접근 링크를 담은 레코드 메타데이터를 표시합니다. 이 링크를 클릭하면 사용자 웹브라우저로 링크를 엽니다."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:166
+msgid ""
+"If the record is a supported web service (WMS/WMTS, WFS, WCS, ArcGIS Map "
+"Service, ArcGIS Feature Service, etc.), the :guilabel:`Add Data` button will"
+" be enabled. When clicking this button, MetaSearch will verify if this is a "
+"valid OWS. The service will then be added to the appropriate QGIS connection"
+" list, and the appropriate connection dialog will appear."
+msgstr ""
+"레코드가 OGC 지원 웹 서비스(WMS/WMTS, WFS, WCS, ArcGIS Map Service, ArcGIS Feature "
+"Service 등)인 경우, :guilabel:`Add Data` 버튼이 활성화됩니다. 이 버튼을 클릭하면, 메타검색이 해당 레코드가 "
+"유효한 OGC 웹 서비스인지 검증할 것입니다. 그 다음 적절한 QGIS 연결 목록에 OGC 웹 서비스를 추가하고, 적합한 연결 대화창을 "
+"열 것입니다."
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:179
 msgid "Metadata record display"
@@ -245,3 +337,23 @@ msgid ""
 msgstr ""
 ":guilabel:`Results paging`: 메타데이터 카탈로그를 검색할 때, 페이지 당 결과를 몇 개나 표시할지 설정합니다. "
 "기본값은 10입니다."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:200
+msgid "CSW Server Errors"
+msgstr "웹용 카탈로그 서비스(CSW) 서버 오류"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:202
+msgid ""
+"In some cases, the CSW will work in a web browser, but not in MetaSearch. "
+"This may be due to the CSW server's configuration/setup. CSW server "
+"providers should ensure URLs are consistent and up to date in their "
+"configuration (this is common in HTTP -> HTTPS redirection scenarios). "
+"Please see the `pycsw FAQ item`_ for a deeper explanation of the issue and "
+"fix. Although the FAQ item is pycsw specific it can also apply in general to"
+" other CSW servers."
+msgstr ""
+"CSW가 웹 브라우저에서 작동할 경우도 있지만, 메타검색은 아닙니다. 그 원인은 CSW 서버의 환경 설정 때문일 수도 있습니다. CSW "
+"서버 제공자는 자신의 환경 설정에서 URL들이 일관되고 최신 상태인 것을 보장해야 합니다. (HTTP -> HTTPS 전환 시나리오에서 "
+"흔히 일어나는 일입니다.) 해당 문제에 대한 심화 설명 및 해결책을 알고 싶다면 :ref:`pycsw FAQ 항목 <pycsw FAQ "
+"item>`_ 을 읽어보십시오. FAQ 항목들이 pycsw에 특화되어 있기는 하지만, 다른 CSW 서버에도 일반적으로 적용할 수 "
+"있습니다."
