@@ -73,7 +73,7 @@ WMS 1.1.1 and 1.3.0 specifications:
    :widths: auto
 
    ":ref:`SERVICE <wms-service>`", "Yes", "Name of the service (**WMS**)"
-   ":ref:`VERSION <wms-version>`", "No", "Version of the service"
+   ":ref:`VERSION <wms-version>`", "Yes", "Version of the service"
    ":ref:`REQUEST <wms-getmap-request>`", "Yes", "Name of the request (**GetMap**)"
    ":ref:`LAYERS <wms-layers>` ", "No", "Layers to display"
    ":ref:`STYLES <wms-styles>`", "No", "Layers' style"
@@ -157,9 +157,6 @@ Available values for the ``VERSION`` parameter are:
 
 - ``1.1.1``
 - ``1.3.0``
-
-If no version is indicated in the request, then ``1.3.0`` is used by
-default.
 
 According to the version number, slight differences have to be expected
 as explained later for the next parameters:
@@ -2251,8 +2248,8 @@ QGIS Server catalog
 ===================
 
 The QGIS Server Catalog is a simple catalog that shows the list of QGIS projects
-served by the QGIS Server. It provides a user-friendly fully 
-browsable website with basic mapping capabilities to quickly browse the 
+served by the QGIS Server. It provides a user-friendly fully
+browsable website with basic mapping capabilities to quickly browse the
 datasets exposed through those QGIS projects.
 
 The QGIS Server catalog uses the variables QGIS_SERVER_LANDING_PAGE_PROJECTS_DIRECTORIES
@@ -2264,7 +2261,7 @@ and  QGIS_SERVER_LANDING_PAGE_PROJECTS_PG_CONNECTIONS (see :ref:`qgis-server-env
    :align: center
 
    Server Catalog project list page
-   
+
 You can consult the metadata associated to a project and the services that it
 provides. Links to those services are also given.
 
@@ -2273,17 +2270,17 @@ provides. Links to those services are also given.
 .. figure:: img/server_project_metadata_services.png
    :align: center
 
-   Server Catalog, metadata associated to a project and services (links to) that it provides. 
+   Server Catalog, metadata associated to a project and services (links to) that it provides.
 
-By browsing a project, it is listed the dataset that it serves. 
- 
+By browsing a project, it is listed the dataset that it serves.
+
 .. _figure_server_browse_dataset:
 
 .. figure:: img/server_browse_dataset.png
    :align: center
 
    Browsing a dataset served by a project in the Server Catalog
-   
+
 Use Right click on a layer to display the attribute table associated to it.
 
 .. _figure_server_attribute_table:
@@ -2299,5 +2296,5 @@ It is possible to consult information of the elements in the map as shown in the
 
 .. figure:: img/server_info_results.png
    :align: center
-   
+
    Consulting information of a map element
