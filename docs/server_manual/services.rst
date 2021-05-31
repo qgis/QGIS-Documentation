@@ -73,7 +73,7 @@ WMS 1.1.1 and 1.3.0 specifications:
    :widths: auto
 
    ":ref:`SERVICE <wms-service>`", "Yes", "Name of the service (**WMS**)"
-   ":ref:`VERSION <wms-version>`", "No", "Version of the service"
+   ":ref:`VERSION <wms-version>`", "Yes", "Version of the service"
    ":ref:`REQUEST <wms-getmap-request>`", "Yes", "Name of the request (**GetMap**)"
    ":ref:`LAYERS <wms-layers>` ", "No", "Layers to display"
    ":ref:`STYLES <wms-styles>`", "No", "Layers' style"
@@ -157,9 +157,6 @@ Available values for the ``VERSION`` parameter are:
 
 - ``1.1.1``
 - ``1.3.0``
-
-If no version is indicated in the request, then ``1.3.0`` is used by
-default.
 
 According to the version number, slight differences have to be expected
 as explained later for the next parameters:
