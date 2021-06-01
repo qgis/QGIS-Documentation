@@ -3,12 +3,6 @@
  Documentation for QGIS |version|
 **********************************
 
-.. only:: not i18n
-
-  .. note:: QGIS documentation is available in various languages and versions.
-      Expand the :guilabel:`QGIS Documentation` menu at the bottom of the
-      sidebar to see the list.
-
 .. only:: testing
 
   .. attention::  You are reading the testing version of QGIS documentation,
@@ -18,11 +12,13 @@
 
 .. only:: not testing
 
-  .. tip:: This is the documentation for the QGIS |version| Long Term Release.
-      Looking for the documentation of more recent versions, including the
-      development branch? Have a look at the `testing docs <https://docs.qgis.org/en/testing>`_.
-      You can also browse the documentation for the previous stable
-      versions at https://docs.qgis.org/.
+  .. hint:: Looking for documentation of versions newer than the
+    |version| Long Term Release? Have a look at the
+    `testing docs <https://docs.qgis.org/en/testing>`_.
+
+.. note:: QGIS documentation is available in various languages and versions.
+  Expand the :guilabel:`QGIS Documentation` menu at the bottom of the
+  sidebar to see the list.
 
 .. only:: i18n
 
