@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2021
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-12 02:37+0000\n"
 "PO-Revision-Date: 2020-12-24 10:24+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2021\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,6 +27,84 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2
 msgid "Raster analysis"
 msgstr "래스터 분석"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:13
+msgid "Cell statistics"
+msgstr "셀 통계"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:15
+msgid ""
+"Computes per-cell statistics based on input raster layers and for each cell "
+"writes the resulting statistics to an output raster. At each cell location, "
+"the output value is defined as a function of all overlaid cell values of the"
+" input rasters."
+msgstr ""
+"이 알고리즘은 입력 래스터 레이어를 기반으로 셀 당 통계를 계산한 다음 산출 래스터의 각 셀에 산출된 통계를 씁니다. 각 셀의 위치에서,"
+" 산출값은 모든 입력 래스터의 중첩된 셀 값들의 함수로 정의됩니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:20
+msgid ""
+"By default, a NoData cell in ANY of the input layers will result in a NoData"
+" cell in the output raster. If the :guilabel:`Ignore NoData values` option "
+"is checked, then NoData inputs will be ignored in the statistic calculation."
+" This may result in NoData output for locations where all cells are NoData."
+msgstr ""
+"입력 레이어 가운데 **하나에만** NODATA 셀이 있어도, 기본적으로 산출 래스터에서도 NODATA 셀로 산출될 것입니다. "
+":guilabel:`Ignore NoData values` 옵션을 활성화한 경우, 통계 계산에서 NODATA 입력을 무시할 것입니다. "
+"이때 해당 위치의 모든 셀이 NODATA인 경우 NODATA를 산출할 수도 있습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:26
+msgid ""
+"The :guilabel:`Reference layer` parameter specifies an existing raster layer"
+" to use as a reference when creating the output raster. The output raster "
+"will have the same extent, CRS, and pixel dimensions as this layer."
+msgstr ""
+":guilabel:`Reference layer` 파라미터는 산출 래스터 생성 시 참조물로 사용할 기존 래스터 레이어를 지정합니다. 산출"
+" 래스터는 참조 레이어와 동일한 범위, 좌표계, 그리고 픽셀 크기를 가질 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:31
+msgid ""
+"**Calculation details:** Input raster layers that do not match the cell size"
+" of the reference raster layer will be resampled using ``nearest neighbor "
+"resampling``. The output raster data type will be set to the most complex "
+"data type present in the input datasets except when using the functions "
+"``Mean``, ``Standard deviation`` and ``Variance`` (data type is always "
+"``Float32`` or ``Float64`` depending on input float type) or ``Count`` and "
+"``Variety`` (data type is always ``Int32``)."
+msgstr ""
+"**계산 방법**: 입력 레이어의 셀 크기가 참조 래스터 레이어의 셀 크기와 일치하지 않는 경우 입력 레이어를 ``nearest "
+"neighbor resampling`` 방법으로 리샘플링할 것입니다. ``Mean``, ``Standard deviation`` 및 "
+"``Variance`` 함수(입력 부동소수점 유형에 따라 항상 ``Float32`` 또는 ``Float64`` 유형입니다) 또는 "
+"``Count`` 및 ``Variety`` 함수(항상 ``Int32`` 유형입니다)를 이용하는 경우를 제외하면, 산출 래스터 데이터 "
+"유형은 입력 데이터셋 가운데 가장 복잡도가 높은 데이터 유형으로 설정될 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:40
+msgid ""
+"``Count``: The count statistic will always result in the number of cells "
+"without NoData values at the current cell location."
+msgstr "``Count``: 개수 통계는 언제나 현재 셀 위치에서 NODATA 값이 아닌 셀의 개수를 산출할 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:43
+msgid ""
+"``Median``: If the number of input layers is even, the median will be "
+"calculated as the arithmetic mean of the two middle values of the ordered "
+"cell input values."
+msgstr ""
+"``Median``: 입력 레이어의 숫자가 짝수일 경우, 정렬된 셀 입력 값의 두 가운데 값의 산술 평균으로 중간값을 계산할 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:46
+msgid ""
+"``Minority/Majority``: If no unique minority or majority could be found, the"
+" result is NoData, except all input cell values are equal."
+msgstr ""
+"``Minority/Majority``: 유일한 희귀값이나 최빈값을 찾을 수 없는 경우, 모든 입력 셀의 값이 동등할 경우를 제외하고, "
+"NODATA를 산출합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:53
+msgid ""
+"Example with all the statistic functions. ``NoData`` cells (grey) are taken "
+"into account."
+msgstr "모든 통계 함수의 예. ``NoData`` (회색) 셀도 계산에 넣습니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:56
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:190
@@ -244,6 +323,18 @@ msgstr "``INPUT``"
 msgid "[raster] [list]"
 msgstr "[raster] [list]"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:69
+msgid "Input raster layers"
+msgstr "입력 래스터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:70
+msgid "**Statistic**"
+msgstr "**Statistic**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:71
+msgid "``STATISTIC``"
+msgstr "``STATISTIC``"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:72
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:899
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1039
@@ -266,6 +357,18 @@ msgstr "[enumeration]"
 msgid "Default: 0"
 msgstr "기본값: 0"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:75
+msgid "Available statistics. Options:"
+msgstr "다음과 같은 통계를 낼 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:77
+msgid "0 --- Sum"
+msgstr "0 --- 합계(Sum)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:78
+msgid "1 --- Count"
+msgstr "1 --- 개수(Count)"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:79
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2228
 msgid "2 --- Mean"
@@ -276,6 +379,46 @@ msgstr "2 --- 평균(Mean)"
 msgid "3 --- Median"
 msgstr "3 --- 중간값(Median)"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:81
+msgid "4 --- Standard deviation"
+msgstr "4 --- 표준 편차(Standard deviation)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:82
+msgid "5 --- Variance"
+msgstr "5 --- 분산(Variance)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:83
+msgid "6 --- Minimum"
+msgstr "6 --- 최소값(Minimum)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:84
+msgid "7 --- Maximum"
+msgstr "7 --- 최대값(Maximum)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:85
+msgid "8 --- Minority (least common value)"
+msgstr "8 --- 희귀값(Minority, 가장 드문 값)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:86
+msgid "9 --- Majority (most common value)"
+msgstr "9 --- 최빈값(Majority, 가장 흔한 값)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:87
+msgid "10 --- Range (max - min)"
+msgstr "10 --- 범위(Range, 최대~최소)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:88
+msgid "11 --- Variety (unique value count)"
+msgstr "11 --- 다양성(Variety, 유일값 개수)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:89
+msgid "**Ignore NoData values**"
+msgstr "**Ignore NoData values**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:90
+msgid "``IGNORE_NODATA``"
+msgstr "``IGNORE_NODATA``"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:91
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:886
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1026
@@ -283,6 +426,15 @@ msgstr "3 --- 중간값(Median)"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1934
 msgid "[boolean]"
 msgstr "[boolean]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:93
+msgid "Default: True"
+msgstr "기본값: True"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:94
+msgid ""
+"Calculate statistics also for all cells stacks, ignoring NoData occurrence."
+msgstr "NODATA 셀을 무시하고 중첩한 모든 셀에 대해 통계를 계산합니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:95
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:879
@@ -358,6 +510,10 @@ msgstr "**Output no data value**"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2158
 msgid "Optional"
 msgstr "부가적"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:103
+msgid "``OUTPUT_NO_DATA_VALUE``"
+msgstr "``OUTPUT_NO_DATA_VALUE``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:104
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:214
@@ -454,6 +610,22 @@ msgstr "**Output layer**"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2266
 msgid "``OUTPUT``"
 msgstr "``OUTPUT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:110
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:226
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:247
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:336
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:357
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:451
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:472
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:560
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:581
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:678
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:699
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:787
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:808
+msgid "[same as input]"
+msgstr "[same as input]"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:111
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:227
@@ -644,6 +816,16 @@ msgstr "``EXTENT``"
 msgid "[extent]"
 msgstr "[extent]"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:136
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:257
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:367
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:481
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:590
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:708
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:817
+msgid "The spatial extent of the output raster layer"
+msgstr "산출 래스터 레이어의 공간 영역"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:137
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:262
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:372
@@ -719,6 +901,10 @@ msgstr "[integer]"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1088
 msgid "The height in pixels of the output raster layer"
 msgstr "산출 래스터 레이어의 픽셀 단위 높이"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:141
+msgid "**Output raster**"
+msgstr "**Output raster**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:144
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:248
@@ -834,6 +1020,10 @@ msgstr "산출 래스터 레이어의 픽셀 단위 너비"
 msgid "Python code"
 msgstr "파이썬 코드"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:157
+msgid "**Algorithm ID**: ``qgis:cellstatistics``"
+msgstr "**알고리즘 ID**: ``qgis:cellstatistics``"
+
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
 msgid ""
 "The *algorithm id* is displayed when you hover over the algorithm in the "
@@ -844,6 +1034,56 @@ msgstr ""
 "공간 처리 툴박스에 있는 알고리즘 위에 마우스를 가져가면 *알고리즘 ID* 를 표시합니다. *파라미터 목록(dictionary)* 은 "
 "파라미터 **명칭** 및 값을 제공합니다. 파이썬 콘솔에서 공간 처리 알고리즘을 어떻게 실행하는지 자세히 알고 싶다면 "
 ":ref:`processing_console` 을 참조하세요."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:167
+msgid "Fuzzify raster (gaussian membership)"
+msgstr "래스터 퍼지화 (가우스 멤버십)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:169
+msgid ""
+"Transforms an input raster to a fuzzified raster by assigning a membership "
+"value to each pixel, using a Gaussian membership function. Membership values"
+" range from 0 to 1. In the fuzzified raster, a value of 0 implies no "
+"membership of the defined fuzzy set, whereas a value of 1 means full "
+"membership. The gaussian membership function is defined as "
+"|gaussian_formula|, where *f1* is the spread and *f2* the midpoint."
+msgstr ""
+"이 알고리즘은 가우스 멤버십(gaussian membership) 함수를 통해 입력 래스터의 각 셀에 멤버십 값을 할당해서 입력 래스터를"
+" 퍼지화한 래스터로 변형시킵니다. 멤버십 값의 범위는 0에서 1까지입니다. 퍼지화된 래스터에서 0값은 정의된 퍼지 집합(fuzzy "
+"set)에 속하지 않는다는 의미이며, 1은 완전히 속한다는 뜻입니다. 가우스 멤버십 함수는 |gaussian_formula| 으로 "
+"정의되는데, *f1* 이 확산(spread)이고 *f2* 는 중점(midpoint)입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2281
+msgid "gaussian_formula"
+msgstr "gaussian_formula"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:180
+msgid ""
+"Fuzzify raster example. Input raster source: Land Tirol - data.tirol.gv.at."
+msgstr "래스터 퍼지화의 예. 입력 래스터 소스: 오스트리아 티롤 지역 - data.tirol.gv.at"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:183
+msgid ""
+":ref:`qgisfuzzifyrasterlargemembership` "
+":ref:`qgisfuzzifyrasterlinearmembership`, "
+":ref:`qgisfuzzifyrasternearmembership`, "
+":ref:`qgisfuzzifyrasterpowermembership`, "
+":ref:`qgisfuzzifyrastersmallmembership`"
+msgstr ""
+":ref:`qgisfuzzifyrasterlargemembership`, "
+":ref:`qgisfuzzifyrasterlinearmembership`, "
+":ref:`qgisfuzzifyrasternearmembership`, "
+":ref:`qgisfuzzifyrasterpowermembership`, "
+":ref:`qgisfuzzifyrastersmallmembership`"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:201
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:311
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:426
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:535
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:647
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:762
+msgid "**Input Raster**"
+msgstr "**Input Raster**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:204
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:314
@@ -856,6 +1096,15 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1517
 msgid "Input raster layer"
 msgstr "입력 래스터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:205
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:315
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:430
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:539
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:651
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:766
+msgid "**Band Number**"
+msgstr "**Band Number**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:206
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:316
@@ -901,6 +1150,125 @@ msgstr "[raster band]"
 msgid "Default: The first band of the raster layer"
 msgstr "기본값: 래스터 레이어의 첫 번째 밴드"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:210
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:320
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:435
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:544
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:656
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:771
+msgid "If the raster is multiband, choose the band that you want to fuzzify."
+msgstr "래스터가 다중 밴드인 경우, 퍼지화하려는 밴드를 선택하십시오."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:212
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:322
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:546
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:773
+msgid "**Function midpoint**"
+msgstr "**Function midpoint**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:213
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:323
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:547
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:774
+msgid "``FUZZYMIDPOINT``"
+msgstr "``FUZZYMIDPOINT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:216
+msgid "Default: 10"
+msgstr "기본값: 10"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:217
+msgid "Midpoint of the gaussian function"
+msgstr "가우스 함수의 중점"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:218
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:328
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:552
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:779
+msgid "**Function spread**"
+msgstr "**Function spread**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:219
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:329
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:553
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:780
+msgid "``FUZZYSPREAD``"
+msgstr "``FUZZYSPREAD``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:222
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:556
+msgid "Default: 0.01"
+msgstr "기본값: 0.01"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:223
+msgid "Spread of the gaussian function"
+msgstr "가우스 함수의 확산"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:224
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:245
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:334
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:355
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:449
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:470
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:558
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:579
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:676
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:697
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:785
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:806
+msgid "**Fuzzified raster**"
+msgstr "**Fuzzified raster**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:274
+msgid "**Algorithm ID**: ``qgis:fuzzifyrastergaussianmembership``"
+msgstr "**알고리즘 ID**: ``qgis:fuzzifyrastergaussianmembership``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:284
+msgid "Fuzzify raster (large membership)"
+msgstr "래스터 퍼지화 (큰 값 멤버십)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:286
+msgid ""
+"Transforms an input raster to a fuzzified raster by assigning a membership "
+"value to each pixel, using a Large membership function. Membership values "
+"range from 0 to 1. In the fuzzified raster, a value of 0 implies no "
+"membership of the defined fuzzy set, whereas a value of 1 means full "
+"membership. The large membership function is defined as "
+"|fuzzy_large_formula|, where *f1* is the spread and *f2* the midpoint."
+msgstr ""
+"이 알고리즘은 큰 값 멤버십(large membership) 함수를 통해 입력 래스터의 각 셀에 멤버십 값을 할당해서 입력 래스터를 "
+"퍼지화한 래스터로 변형시킵니다. 멤버십 값의 범위는 0에서 1까지입니다. 퍼지화된 래스터에서 0값은 정의된 퍼지 집합(fuzzy "
+"set)에 속하지 않는다는 의미이며, 1은 완전히 속한다는 뜻입니다. 큰 값 멤버십 함수는 |fuzzy_large_formula| 로 "
+"정의되는데, *f1* 이 확산(spread)이고 *f2* 는 중점(midpoint)입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2283
+msgid "fuzzy_large_formula"
+msgstr "fuzzy_large_formula"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:294
+msgid ""
+":ref:`qgisfuzzifyrastergaussianmembership`, "
+":ref:`qgisfuzzifyrasterlinearmembership`, "
+":ref:`qgisfuzzifyrasternearmembership`, "
+":ref:`qgisfuzzifyrasterpowermembership`, "
+":ref:`qgisfuzzifyrastersmallmembership`"
+msgstr ""
+":ref:`qgisfuzzifyrastergaussianmembership`, "
+":ref:`qgisfuzzifyrasterlinearmembership`, "
+":ref:`qgisfuzzifyrasternearmembership`, "
+":ref:`qgisfuzzifyrasterpowermembership`, "
+":ref:`qgisfuzzifyrastersmallmembership`"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:326
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:550
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:777
+msgid "Default: 50"
+msgstr "기본값: 50"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:327
+msgid "Midpoint of the large function"
+msgstr "큰 값 함수의 중점"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:332
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:783
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:901
@@ -910,11 +1278,256 @@ msgstr "기본값: 래스터 레이어의 첫 번째 밴드"
 msgid "Default: 5"
 msgstr "기본값: 5"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:333
+msgid "Spread of the large function"
+msgstr "큰 값 함수의 확산"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:384
+msgid "**Algorithm ID**: ``qgis:fuzzifyrasterlargemembership``"
+msgstr "**알고리즘 ID**: ``qgis:fuzzifyrasterlargemembership``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:394
+msgid "Fuzzify raster (linear membership)"
+msgstr "래스터 퍼지화 (선형 멤버십)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:396
+msgid ""
+"Transforms an input raster to a fuzzified raster by assigning a membership "
+"value to each pixel, using a Linear membership function. Membership values "
+"range from 0 to 1. In the fuzzified raster, a value of 0 implies no "
+"membership of the defined fuzzy set, whereas a value of 1 means full "
+"membership. The linear function is defined as |fuzzy_linear_formula|, where "
+"*a* is the low bound and *b* the high bound. This equation assigns "
+"membership values using a linear transformation for pixel values between the"
+" low and high bounds. Pixels values smaller than the low bound are given 0 "
+"membership whereas pixel values greater than the high bound are given 1 "
+"membership."
+msgstr ""
+"이 알고리즘은 선형 멤버십(linear membership) 함수를 통해 입력 래스터의 각 셀에 멤버십 값을 할당해서 입력 래스터를 "
+"퍼지화한 래스터로 변형시킵니다. 멤버십 값의 범위는 0에서 1까지입니다. 퍼지화된 래스터에서 0값은 정의된 퍼지 집합(fuzzy "
+"set)에 속하지 않는다는 의미이며, 1은 완전히 속한다는 뜻입니다. 선형 멤버십 함수는 |fuzzy_linear_formula| 로 "
+"정의되는데, *a* 가 하한(low bound)이고 *b* 는 상한(high bound)입니다. 이 방정식은 하한과 상한 사이에 있는 "
+"픽셀 값에 선형 변형을 통해 멤버십 값을 할당합니다. 하한보다 작은 픽셀 값은 0을 할당받으며, 상한보다 큰 픽셀 값은 1을 "
+"할당받습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2285
+msgid "fuzzy_linear_formula"
+msgstr "fuzzy_linear_formula"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:409
+msgid ""
+":ref:`qgisfuzzifyrastergaussianmembership`, "
+":ref:`qgisfuzzifyrasterlargemembership`, "
+":ref:`qgisfuzzifyrasternearmembership`, "
+":ref:`qgisfuzzifyrasterpowermembership`, "
+":ref:`qgisfuzzifyrastersmallmembership`"
+msgstr ""
+":ref:`qgisfuzzifyrastergaussianmembership`, "
+":ref:`qgisfuzzifyrasterlargemembership`, "
+":ref:`qgisfuzzifyrasternearmembership`, "
+":ref:`qgisfuzzifyrasterpowermembership`, "
+":ref:`qgisfuzzifyrastersmallmembership`"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:437
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:658
+msgid "**Low fuzzy membership bound**"
+msgstr "**Low fuzzy membership bound**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:438
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:659
+msgid "``FUZZYLOWBOUND``"
+msgstr "``FUZZYLOWBOUND``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:442
+msgid "Low bound of the linear function"
+msgstr "선형 함수의 하한"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:443
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:664
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:670
+msgid "**High fuzzy membership bound**"
+msgstr "**High fuzzy membership bound**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:444
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:665
+msgid "``FUZZYHIGHBOUND``"
+msgstr "``FUZZYHIGHBOUND``"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:447
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:668
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1905
 msgid "Default: 1"
 msgstr "기본값: 1"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:448
+msgid "High bound of the linear function"
+msgstr "선형 함수의 상한"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:498
+msgid "**Algorithm ID**: ``qgisfuzzifyrasterlinearmembership``"
+msgstr "**알고리즘 ID**: ``qgisfuzzifyrasterlinearmembership``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:508
+msgid "Fuzzify raster (near membership)"
+msgstr "래스터 퍼지화 (근접 멤버십)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:510
+msgid ""
+"Transforms an input raster to a fuzzified raster by assigning a membership "
+"value to each pixel, using a Near membership function. Membership values "
+"range from 0 to 1. In the fuzzified raster, a value of 0 implies no "
+"membership of the defined fuzzy set, whereas a value of 1 means full "
+"membership. The near membership function is defined as |near_formula|, where"
+" *f1* is the spread and *f2* the midpoint."
+msgstr ""
+"이 알고리즘은 근접 멤버십(near membership) 함수를 통해 입력 래스터의 각 셀에 멤버십 값을 할당해서 입력 래스터를 퍼지화한"
+" 래스터로 변형시킵니다. 멤버십 값의 범위는 0에서 1까지입니다. 퍼지화된 래스터에서 0값은 정의된 퍼지 집합(fuzzy set)에 "
+"속하지 않는다는 의미이며, 1은 완전히 속한다는 뜻입니다. 근접 멤버십 함수는 |near_formula| 로 정의되는데, *f1* 이 "
+"확산(spread)이고 *f2* 는 중점(midpoint)입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2287
+msgid "near_formula"
+msgstr "near_formula"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:518
+msgid ""
+":ref:`qgisfuzzifyrastergaussianmembership`, "
+":ref:`qgisfuzzifyrasterlargemembership`, "
+":ref:`qgisfuzzifyrasterlinearmembership`, "
+":ref:`qgisfuzzifyrasterpowermembership`, "
+":ref:`qgisfuzzifyrastersmallmembership`"
+msgstr ""
+":ref:`qgisfuzzifyrastergaussianmembership`, "
+":ref:`qgisfuzzifyrasterlargemembership`, "
+":ref:`qgisfuzzifyrasterlinearmembership`, "
+":ref:`qgisfuzzifyrasterpowermembership`, "
+":ref:`qgisfuzzifyrastersmallmembership`"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:551
+msgid "Midpoint of the near function"
+msgstr "근접 함수의 중점"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:557
+msgid "Spread of the near function"
+msgstr "근접 함수의 확산"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:607
+msgid "**Algorithm ID**: ``qgis:fuzzifyrasternearmembership``"
+msgstr "**알고리즘 ID**: ``qgis:fuzzifyrasternearmembership``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:617
+msgid "Fuzzify raster (power membership)"
+msgstr "래스터 퍼지화 (거듭제곱 멤버십)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:619
+msgid ""
+"Transforms an input raster to a fuzzified raster by assigning a membership "
+"value to each pixel, using a Power membership function. Membership values "
+"range from 0 to 1. In the fuzzified raster, a value of 0 implies no "
+"membership of the defined fuzzy set, whereas a value of 1 means full "
+"membership. The power function is defined as |power_formula|, where *a* is "
+"the low bound, *b* is the high bound, and *f1* the exponent. This equation "
+"assigns membership values using the power transformation for pixel values "
+"between the low and high bounds. Pixels values smaller than the low bound "
+"are given 0 membership whereas pixel values greater than the high bound are "
+"given 1 membership."
+msgstr ""
+"이 알고리즘은 거듭제곱 멤버십(power membership) 함수를 통해 입력 래스터의 각 셀에 멤버십 값을 할당해서 입력 래스터를 "
+"퍼지화한 래스터로 변형시킵니다. 멤버십 값의 범위는 0에서 1까지입니다. 퍼지화된 래스터에서 0값은 정의된 퍼지 집합(fuzzy "
+"set)에 속하지 않는다는 의미이며, 1은 완전히 속한다는 뜻입니다. 거듭제곱 멤버십 함수는 |power_formula| 로 정의되는데,"
+" *a* 가 하한(low bound)이고 *b* 는 상한(high bound)이며, *f1* 은 지수(exponent)입니다. 이 "
+"방정식은 하한과 상한 사이에 있는 픽셀 값에 거듭제곱 변형을 통해 멤버십 값을 할당합니다. 하한보다 작은 픽셀 값은 0을 할당받으며, "
+"상한보다 큰 픽셀 값은 1을 할당받습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2289
+msgid "power_formula"
+msgstr "power_formula"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:632
+msgid ""
+":ref:`qgisfuzzifyrastergaussianmembership`, "
+":ref:`qgisfuzzifyrasterlargemembership`, "
+":ref:`qgisfuzzifyrasterlinearmembership`, "
+":ref:`qgisfuzzifyrasternearmembership`, "
+":ref:`qgisfuzzifyrastersmallmembership`"
+msgstr ""
+":ref:`qgisfuzzifyrastergaussianmembership`, "
+":ref:`qgisfuzzifyrasterlargemembership`, "
+":ref:`qgisfuzzifyrasterlinearmembership`, "
+":ref:`qgisfuzzifyrasternearmembership`, "
+":ref:`qgisfuzzifyrastersmallmembership`"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:663
+msgid "Low bound of the power function"
+msgstr "거듭제곱 함수의 하한"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:669
+msgid "High bound of the power function"
+msgstr "거듭제곱 함수의 상한"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:671
+msgid "``FUZZYEXPONENT``"
+msgstr "``FUZZYEXPONENT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:674
+msgid "Default: 2"
+msgstr "기본값: 2"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:675
+msgid "Exponent of the power function"
+msgstr "거듭제곱 함수의 지수"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:725
+msgid "**Algorithm ID**: ``qgisfuzzifyrasterpowermembership``"
+msgstr "**알고리즘 ID**: ``qgisfuzzifyrasterpowermembership``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:735
+msgid "Fuzzify raster (small membership)"
+msgstr "래스터 퍼지화 (작은 값 멤버십)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:737
+msgid ""
+"Transforms an input raster to a fuzzified raster by assigning a membership "
+"value to each pixel, using a Small membership function. Membership values "
+"range from 0 to 1. In the fuzzified raster, a value of 0 implies no "
+"membership of the defined fuzzy set, whereas a value of 1 means full "
+"membership. The small membership function is defined as |small_formula|, "
+"where *f1* is the spread and *f2* the midpoint."
+msgstr ""
+"이 알고리즘은 작은 값 멤버십(small membership) 함수를 통해 입력 래스터의 각 셀에 멤버십 값을 할당해서 입력 래스터를 "
+"퍼지화한 래스터로 변형시킵니다. 멤버십 값의 범위는 0에서 1까지입니다. 퍼지화된 래스터에서 0값은 정의된 퍼지 집합(fuzzy "
+"set)에 속하지 않는다는 의미이며, 1은 완전히 속한다는 뜻입니다. 작은 값 멤버십 함수는 |small_formula| 로 정의되는데,"
+" *f1* 이 확산(spread)이고 *f2* 는 중점(midpoint)입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2291
+msgid "small_formula"
+msgstr "small_formula"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:745
+msgid ""
+":ref:`qgisfuzzifyrastergaussianmembership`, "
+":ref:`qgisfuzzifyrasterlargemembership` "
+":ref:`qgisfuzzifyrasterlinearmembership`, "
+":ref:`qgisfuzzifyrasternearmembership`, "
+":ref:`qgisfuzzifyrasterpowermembership`"
+msgstr ""
+":ref:`qgisfuzzifyrastergaussianmembership`, "
+":ref:`qgisfuzzifyrasterlargemembership` "
+":ref:`qgisfuzzifyrasterlinearmembership`, "
+":ref:`qgisfuzzifyrasternearmembership`, "
+":ref:`qgisfuzzifyrasterpowermembership`"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:778
+msgid "Midpoint of the small function"
+msgstr "작은 값 함수의 중점"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:784
+msgid "Spread of the small function"
+msgstr "작은 값 함수의 확산"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:834
+msgid "**Algorithm ID**: ``qgisfuzzifyrastersmallmembership``"
+msgstr "**알고리즘 ID**: ``qgisfuzzifyrastersmallmembership``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:844
 msgid "Raster boolean AND"
@@ -1149,7 +1762,7 @@ msgstr "산출 래스터 레이어에 있는 (값이 0인) 거짓 픽셀의 개�
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:974
 msgid "**Algorithm ID**: ``qgis:rasterbooleanand``"
-msgstr "**Algorithm ID**: ``qgis:rasterbooleanand``"
+msgstr "**알고리즘 ID**: ``qgis:rasterbooleanand``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:984
 msgid "Raster boolean OR"
@@ -1172,7 +1785,7 @@ msgstr ":ref:`qgisrasterbooleanand`"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1113
 msgid "**Algorithm ID**: ``qgis:rasterbooleanor``"
-msgstr "**Algorithm ID**: ``qgis:rasterbooleanor``"
+msgstr "**알고리즘 ID**: ``qgis:rasterbooleanor``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1123
 msgid "Raster calculator"
@@ -1203,6 +1816,10 @@ msgstr ""
 "대응하는 레이어는 (전체 경로가 아닌) 기본명을 사용해서 참조시켜야 합니다. 예를 들어, "
 "``path/to/my/rasterfile.tif`` 위치에 있는 레이어를 사용하는 경우 해당 레이어의 첫 번째 밴드는 "
 "``rasterfile.tif@1`` 로 참조될 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1139
+msgid ":ref:`label_raster_calc`"
+msgstr ":ref:`label_raster_calc`"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1153
 msgid "**Layers**"
@@ -1357,7 +1974,7 @@ msgstr "계산된 값을 가진 산출 래스터 파일"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1250
 msgid "**Algorithm ID**: ``qgis:rastercalculator``"
-msgstr "**Algorithm ID**: ``qgis:rastercalculator``"
+msgstr "**알고리즘 ID**: ``qgis:rastercalculator``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1260
 msgid "Raster layer statistics"
@@ -1525,7 +2142,7 @@ msgstr "``SUM_OF_SQUARES``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1360
 msgid "**Algorithm ID**: ``qgis:rasterlayerstatistics``"
-msgstr "**Algorithm ID**: ``qgis:rasterlayerstatistics``"
+msgstr "**알고리즘 ID**: ``qgis:rasterlayerstatistics``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1370
 msgid "Raster layer unique values report"
@@ -1643,7 +2260,7 @@ msgstr "*m*\\ :sup:`2`: 해당 값을 가진 픽셀의 제곱미터 단위 총 �
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1486
 msgid "**Algorithm ID**: ``qgis:rasterlayeruniquevaluesreport``"
-msgstr "**Algorithm ID**: ``qgis:rasterlayeruniquevaluesreport``"
+msgstr "**알고리즘 ID**: ``qgis:rasterlayeruniquevaluesreport``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1496
 msgid "Raster layer zonal statistics"
@@ -1654,6 +2271,10 @@ msgid ""
 "Calculates statistics for a raster layer's values, categorized by zones "
 "defined in another raster layer."
 msgstr "래스터 레이어의 값을 또다른 레이어에서 정의한 구역(zone)으로 범주화한 통계를 계산합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1500
+msgid ":ref:`qgiszonalstatisticsfb`"
+msgstr ":ref:`qgiszonalstatisticsfb`"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1514
 msgid "**Input Layer**"
@@ -1746,7 +2367,7 @@ msgstr "평균: 구역에 있는 픽셀 값들의 평균"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1609
 msgid "**Algorithm ID**: ``qgis:rasterlayerzonalstats``"
-msgstr "**Algorithm ID**: ``qgis:rasterlayerzonalstats``"
+msgstr "**알고리즘 ID**: ``qgis:rasterlayerzonalstats``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1619
 msgid "Raster surface volume"
@@ -1930,7 +2551,7 @@ msgstr "(부피, 면적 및 픽셀 개수를 담고 있는) 산출 테이블"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1740
 msgid "**Algorithm ID**: ``qgis:rastersurfacevolume``"
-msgstr "**Algorithm ID**: ``qgis:rastersurfacevolume``"
+msgstr "**알고리즘 ID**: ``qgis:rastersurfacevolume``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1750
 msgid "Reclassify by layer"
@@ -2105,7 +2726,7 @@ msgstr "재범주화된 밴드 값을 가진 산출 래스터 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1871
 msgid "**Algorithm ID**: ``qgis:reclassifybylayer``"
-msgstr "**Algorithm ID**: ``qgis:reclassifybylayer``"
+msgstr "**알고리즘 ID**: ``qgis:reclassifybylayer``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1881
 msgid "Reclassify by table"
@@ -2171,7 +2792,7 @@ msgstr "산출 래스터 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1995
 msgid "**Algorithm ID**: ``qgis:reclassifybytable``"
-msgstr "**Algorithm ID**: ``qgis:reclassifybytable``"
+msgstr "**알고리즘 ID**: ``qgis:reclassifybytable``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2005
 msgid "Sample raster values"
@@ -2257,7 +2878,7 @@ msgstr "샘플링된 값을 담고 있는 산출 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2075
 msgid "**Algorithm ID**: ``qgis:rastersampling``"
-msgstr "**Algorithm ID**: ``qgis:rastersampling``"
+msgstr "**알고리즘 ID**: ``qgis:rastersampling``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2085
 msgid "Zonal histogram"
@@ -2334,7 +2955,7 @@ msgstr "산출 벡터 폴리곤 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2168
 msgid "**Algorithm ID**: ``qgis:zonalhistogram``"
-msgstr "**Algorithm ID**: ``qgis:zonalhistogram``"
+msgstr "**알고리즘 ID**: ``qgis:zonalhistogram``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2179
 msgid "Zonal statistics"
@@ -2345,6 +2966,18 @@ msgid ""
 "Calculates statistics of a raster layer for each feature of an overlapping "
 "polygon vector layer."
 msgstr "중첩하는 폴리곤 벡터 레이어의 각 피처에 해당하는 래스터 레이어 영역의 통계를 계산합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2183
+msgid ""
+"Prior to QGIS 3.16, the algorithm edited the layer in-place, adding the new "
+"statistics fields to it. Now, it outputs a new layer with these statistics."
+msgstr ""
+"QGIS 3.16 이전 버전에서는 알고리듬이 레이어에 새 통계 필드를 추가하며 레이어를 제자리(in-place) 편집했습니다. QGIS "
+"3.16 버전부터, 이 통계를 담은 새 레이어를 산출합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2201
+msgid "Vector polygon layer that contains the zones."
+msgstr "구역을 담고 있는 벡터 폴리곤 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2206
 msgid "**Raster band**"
@@ -2417,3 +3050,20 @@ msgstr "10 --- 다양도(Variety)"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2237
 msgid "11 --- Variance"
 msgstr "11 --- 변동(Variance)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2238
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2265
+msgid "**Zonal Statistics** |316|"
+msgstr "**Zonal Statistics** |316|"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2250
+msgid "Append to Layer..."
+msgstr "레이어에 추가"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2268
+msgid "The zone vector layer with added statistics."
+msgstr "통계를 추가한 입력 구역 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2273
+msgid "**Algorithm ID**: ``qgis:zonalstatisticsfb``"
+msgstr "**알고리즘 ID**: ``qgis:zonalstatisticsfb``"
