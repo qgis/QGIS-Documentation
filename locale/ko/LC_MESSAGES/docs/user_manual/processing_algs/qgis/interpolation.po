@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2021
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-12 02:37+0000\n"
 "PO-Revision-Date: 2020-12-24 12:04+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2021\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -452,6 +453,12 @@ msgstr ""
 "<http://www.qgistutorials.com/en/docs/creating_heatmaps.html>`_ 에서 찾을 수 "
 "있습니다."
 
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:178
+msgid ""
+"In :numref:`Figure_Heatmap_data_processing`, the airports of Alaska are "
+"shown."
+msgstr ":numref:`Figure_Heatmap_data_processing` 에서 알래스카 주의 공항을 볼 수 있습니다."
+
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:185
 msgid "Airports of Alaska"
 msgstr "알래스카 주의 공항들"
@@ -472,6 +479,10 @@ msgstr ""
 ":guilabel:`Point layer` |selectString| 필드에서 현재 프로젝트에 불러온 포인트 레이어의 목록 가운데 "
 "``airports`` 를 선택하십시오."
 
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:632
+msgid "selectString"
+msgstr "selectString"
+
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:193
 msgid "Change the :guilabel:`Radius` to ``1000000`` meters."
 msgstr ":guilabel:`Radius` 를 ``1000000`` 미터로 변경하십시오."
@@ -483,6 +494,14 @@ msgid ""
 msgstr ""
 ":guilabel:`Pixel size X` 를 ``1000`` 으로 변경하십시오. :guilabel:`Pixel size Y`, "
 ":guilabel:`Rows` 그리고 :guilabel:`Columns` 는 자동적으로 업데이트될 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:197
+msgid ""
+"Click on :guilabel:`Run` to create and load the airports heatmap (see "
+":numref:`Figure_Heatmap_created_processing`)."
+msgstr ""
+":guilabel:`Run` 버튼을 클릭해서 공항 히트 맵을 생성하고 불러오십시오. "
+"(:numref:`Figure_Heatmap_created_processing` 참조)"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:205
 msgid "The Heatmap Dialog"
@@ -539,6 +558,11 @@ msgstr ":guilabel:`Classify` 버튼을 클릭하십시오."
 msgid "Press :guilabel:`OK` to update the layer."
 msgstr ":guilabel:`OK` 를 클릭해서 레이어를 업데이트하십시오."
 
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:231
+msgid ""
+"The final result is shown in :numref:`Figure_Heatmap_styled_processing`."
+msgstr "마지막 결과물은 :numref:`Figure_Heatmap_styled_processing` 와 같습니다."
+
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:238
 msgid "Styled heatmap of airports of Alaska"
 msgstr "스타일을 적용한 알래스카 주 공항의 히트 맵"
@@ -552,7 +576,7 @@ msgstr "파이썬 코드"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:245
 msgid "**Algorithm ID**: ``qgis:heatmapkerneldensityestimation``"
-msgstr "**Algorithm ID**: ``qgis:heatmapkerneldensityestimation``"
+msgstr "**알고리즘 ID**: ``qgis:heatmapkerneldensityestimation``"
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
 msgid ""
@@ -745,7 +769,95 @@ msgstr "보간된 값을 가진 래스터 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:377
 msgid "**Algorithm ID**: ``qgis:idwinterpolation``"
-msgstr "**Algorithm ID**: ``qgis:idwinterpolation``"
+msgstr "**알고리즘 ID**: ``qgis:idwinterpolation``"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:387
+msgid "Line Density"
+msgstr "라인 밀도"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:389
+msgid ""
+"Calculates for each raster cell, the density measure of linear features "
+"within a circular neighbourhood. This measure is obtained by summing all the"
+" line segments intersecting the circular neighbourhood and dividing this sum"
+" by the area of such neighbourhood. A weighting factor can be applied to the"
+" line segments."
+msgstr ""
+"이 알고리즘은 각 래스터 셀에 대해 각 셀의 원형 구역(circular neighbourhood) 내에 있는 선형 객체들의 밀도 측정값을"
+" 계산합니다. 이 측정값은 각 셀에 대해 원형 구역과 교차하는 모든 라인 선분을 합한 값을 해당 원형 구역의 면적으로 나누어 얻어집니다."
+" 라인 선분에 가중치를 적용할 수 있습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:398
+msgid ""
+"Line density example. Input layer source: Roads Overijssel - The Netherlands"
+" (OSM)."
+msgstr "라인 밀도의 예. 입력 레이어 소스: 네덜란드 오퍼레이셀 주의 도로(OSM)"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:414
+msgid "**Input line layer**"
+msgstr "**Input line layer**"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:416
+msgid "[vector: any]"
+msgstr "[vector: any]"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:417
+msgid "Input vector layer containing line features"
+msgstr "라인 객체를 담고 있는 입력 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:418
+msgid "**Weight field**"
+msgstr "**Weight field**"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:419
+msgid "``WEIGHT``"
+msgstr "``WEIGHT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:421
+msgid ""
+"Field of the layer containing the weight factor to use during the "
+"calculation"
+msgstr "계산 도중 사용할 가중치 인자를 담고 있는 레이어 필드"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:423
+msgid "**Search Radius**"
+msgstr "**Search Radius**"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:427
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:434
+msgid "Default: 10"
+msgstr "기본값: 10"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:428
+msgid "Radius of the circular neighbourhood. Units can be specified here."
+msgstr "원형 구역의 반경. 여기에 단위를 지정할 수 있습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:430
+msgid "**Pixel size**"
+msgstr "**Pixel size**"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:435
+msgid ""
+"Pixel size of the output raster layer in layer units. The raster has square "
+"pixels."
+msgstr "산출 래스터 레이어의 레이어 단위 픽셀 크기. 래스터 픽셀은 정사각형입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:437
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:462
+msgid "**Line density raster**"
+msgstr "**Line density raster**"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:442
+msgid "The output as a raster layer. One of:"
+msgstr "산출 래스터 레이어입니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:465
+msgid "The output line density raster layer."
+msgstr "산출 라인 밀도 래스터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:470
+msgid "**Algorithm ID**: ``qgis:linedensity``"
+msgstr "**Algorithm ID**: ``qgis:linedensity``"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:480
 msgid "TIN Interpolation"
@@ -852,4 +964,4 @@ msgstr "삼각불규칙망 보간의 산출물을 저장한 벡터 레이어"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:619
 msgid "**Algorithm ID**: ``qgis:tininterpolation``"
-msgstr "**Algorithm ID**: ``qgis:tininterpolation``"
+msgstr "**알고리즘 ID**: ``qgis:tininterpolation``"
