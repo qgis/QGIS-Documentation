@@ -272,6 +272,7 @@ Some use cases of expressions
                 )
 
 
+.. index:: User expression
 .. _user_expressions_functions:
 
 Saving Expressions
