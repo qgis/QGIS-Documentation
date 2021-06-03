@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2021
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-12 02:37+0000\n"
 "PO-Revision-Date: 2020-12-24 11:59+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2021\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,6 +27,34 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2
 msgid "Vector geometry"
 msgstr "벡터 도형"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:13
+msgid "Affine transform"
+msgstr "아핀(affine) 변형"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:15
+msgid ""
+"Applies an affine transformation to the layer geometries. Affine "
+"transformations can include translation, scaling and rotation. The "
+"operations are performed in the following order: scale, rotation, and "
+"translation."
+msgstr ""
+"레이어 도형에 아핀 변형을 적용합니다. 아핀 변형은 좌표 이동(translation), 축척 작업 및 기울이기를 포함할 수 있습니다. 이"
+" 작업은 축척, 기울이기, 그리고 좌표 이동 순서대로 이루어집니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:19
+msgid "Z and M values (if present) can be translated and scaled."
+msgstr "Z 및 M 값도 (존재할 경우) 이동 및 축척 조정할 수 있습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:24
+msgid ""
+"Vector point layer (green dots) before (left), and after (rigth) an affine "
+"transformation (translation)."
+msgstr "벡터 포인트 레이어(녹색 점)의 아핀 변형(좌표 이동) 전(왼쪽)과 후(오른쪽)."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:26
+msgid ":ref:`qgistranslategeometry`"
+msgstr ":ref:`qgistranslategeometry`"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:29
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:165
@@ -1020,6 +1049,10 @@ msgstr "[vector: any]"
 msgid "Input vector layer"
 msgstr "입력 벡터 레이어"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:44
+msgid "**Translation (x-axis)**"
+msgstr "**Translation (x-axis)**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:45
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7135
 msgid "``DELTA_X``"
@@ -1093,6 +1126,10 @@ msgstr "``DELTA_X``"
 msgid "[number |dataDefined|]"
 msgstr "[number |dataDefined|]"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7478
+msgid "dataDefined"
+msgstr "dataDefined"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:48
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:54
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:60
@@ -1109,20 +1146,56 @@ msgstr "[number |dataDefined|]"
 msgid "Default: 0"
 msgstr "기본값: 0"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:49
+msgid "Displacement to apply on the X axis."
+msgstr "X축에 적용할 변위(displacement)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:50
+msgid "**Translation (y-axis)**"
+msgstr "**Translation (y-axis)**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:51
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7141
 msgid "``DELTA_Y``"
 msgstr "``DELTA_Y``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:55
+msgid "Displacement to apply on the Y axis."
+msgstr "Y축에 적용할 변위(displacement)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:56
+msgid "**Translation (z-axis)**"
+msgstr "**Translation (z-axis)**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:57
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7147
 msgid "``DELTA_Z``"
 msgstr "``DELTA_Z``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:61
+msgid "Displacement to apply on the Z axis."
+msgstr "Z축에 적용할 변위(displacement)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:62
+msgid "**Translation (m-values)**"
+msgstr "**Translation (m-values)**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:63
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7153
 msgid "``DELTA_M``"
 msgstr "``DELTA_M``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:67
+msgid "Offset to apply on m values."
+msgstr "M값에 적용할 오프셋"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:68
+msgid "**Scale factor (x-axis)**"
+msgstr "**Scale factor (x-axis)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:69
+msgid "``SCALE_X``"
+msgstr "``SCALE_X``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:72
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:78
@@ -1136,6 +1209,63 @@ msgstr "``DELTA_M``"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6328
 msgid "Default: 1"
 msgstr "기본값: 1"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:73
+msgid "Scaling value (expansion or contraction) to apply on the X axis."
+msgstr "X축에 적용할 척도값 (확장 또는 수축)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:74
+msgid "**Scale factor (y-axis)**"
+msgstr "**Scale factor (y-axis)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:75
+msgid "``SCALE_Y``"
+msgstr "``SCALE_Y``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:79
+msgid "Scaling value (expansion or contraction) to apply on the Y axis."
+msgstr "Y축에 적용할 척도값 (확장 또는 수축)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:80
+msgid "**Scale factor (z-axis)**"
+msgstr "**Scale factor (z-axis)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:81
+msgid "``SCALE_Z``"
+msgstr "``SCALE_Z``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:85
+msgid "Scaling value (expansion or contraction) to apply on the Z axis."
+msgstr "Z축에 적용할 척도값 (확장 또는 수축)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:86
+msgid "**Scale factor (m-values)**"
+msgstr "**Scale factor (m-values)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:87
+msgid "``SCALE_M``"
+msgstr "``SCALE_M``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:91
+msgid "Scaling value (expansion or contraction) to apply on m values."
+msgstr "M값에 적용할 척도값 (확장 또는 수축)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:92
+msgid "**Rotation around z-axis (degrees counter-clockwise)**"
+msgstr "**Rotation around z-axis (degrees counter-clockwise)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:93
+msgid "``ROTATION_Z``"
+msgstr "``ROTATION_Z``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:97
+msgid "Angle of the rotation in degrees."
+msgstr "기울기의 도 단위 각도"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:99
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:126
+msgid "**Transformed**"
+msgstr "**Transformed**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:100
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:127
@@ -2008,6 +2138,10 @@ msgstr "이 파라미터에서 파일 인코딩도 변경할 수 있습니다."
 msgid "Outputs"
 msgstr "산출물"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:129
+msgid "Output (transformed) vector layer."
+msgstr "산출 (변형된) 벡터 레이어"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:132
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:225
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:379
@@ -2091,6 +2225,10 @@ msgstr "산출물"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7455
 msgid "Python code"
 msgstr "파이썬 코드"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:134
+msgid "**Algorithm ID**: ``qgis:affinetransform``"
+msgstr "**Algorithm ID**: ``qgis:affinetransform``"
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
 msgid ""
@@ -2334,18 +2472,38 @@ msgstr ""
 msgid "Click the |newAttribute| button to add a new field."
 msgstr "|newAttribute| 버튼을 클릭해서 새 필드를 추가할 수 있습니다."
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7484
+msgid "newAttribute"
+msgstr "newAttribute"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:297
 msgid "Click |deleteAttribute| to delete the selected field."
 msgstr "|deleteAttribute| 버튼을 클릭해서 선택한 필드를 삭제할 수 있습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7480
+msgid "deleteAttribute"
+msgstr "deleteAttribute"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:298
 msgid "Use |arrowUp| and |arrowDown| to change order of the fields."
 msgstr "|arrowUp| 및 |arrowDown| 버튼을 클릭해서 필드 순서를 변경할 수 있습니다."
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7472
+msgid "arrowUp"
+msgstr "arrowUp"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7470
+msgid "arrowDown"
+msgstr "arrowDown"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:299
 msgid ""
 "Click |clearText| to reset to the default (the fields of the input layer)."
 msgstr "|clearText| 버튼을 클릭해서 (입력 레이어 필드의) 기본값으로 리셋할 수 있습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7476
+msgid "clearText"
+msgstr "clearText"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:302
 msgid ""
@@ -2615,6 +2773,10 @@ msgid ""
 "|checkbox| Allows :ref:`features in-place modification "
 "<processing_inplace_edit>`"
 msgstr "|checkbox| :ref:`제자리 피처 수정 <processing_inplace_edit>` 옵션을 사용할 수 있습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7474
+msgid "checkbox"
+msgstr "checkbox"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:484
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4021
@@ -4197,6 +4359,13 @@ msgstr "**Remove holes with area less than**"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1874
 msgid "``MIN_AREA``"
 msgstr "``MIN_AREA``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1878
+msgid ""
+"Only holes with an area less than this threshold will be deleted. With a "
+"value of ``0.0``, **all** the holes will be deleted."
+msgstr ""
+"이 한계값보다 좁은 면적을 가진 구멍만 제거할 것입니다. 값이 ``0.0`` 인 경우, 모든 구멍을 제거한 산출물을 생성할 것입니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1881
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1906
@@ -5872,6 +6041,14 @@ msgstr "고정 또는 동적인 서리와 고리의 개수를 사용해서 입�
 msgid "Multi-ring buffer for a line, point and polygon layer"
 msgstr "라인, 포인트 및 폴리곤 레이어의 다중 고리 버퍼"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4100
+msgid ""
+":ref:`qgisbuffer`, :ref:`qgisvariabledistancebuffer`, "
+":ref:`qgisrectanglesovalsdiamonds`, :ref:`qgissinglesidedbuffer`"
+msgstr ""
+":ref:`qgisbuffer`, :ref:`qgisvariabledistancebuffer`, "
+":ref:`qgisrectanglesovalsdiamonds`, :ref:`qgissinglesidedbuffer`"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4121
 msgid "**Number of rings**"
 msgstr "**Number of rings**"
@@ -6472,6 +6649,26 @@ msgstr "산출 다중 부분 벡터 레이어"
 msgid "**Algorithm ID**: ``qgis:promotetomulti``"
 msgstr "**Algorithm ID**: ``qgis:promotetomulti``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5179
+msgid "Rectangles, ovals, diamonds"
+msgstr "직사각형, 타원형, 마름모"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5180
+msgid ""
+"Creates a buffer area with a rectangle, oval or diamond shape for each "
+"feature of the input point layer."
+msgstr "입력 포인트 레이어의 각 피처에 대해 직사각형, 타원형, 마름모 형태의 버퍼 영역을 생성합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5183
+msgid ""
+"The shape parameters can be fixed for all features or dynamic using a field "
+"or an expression."
+msgstr "형태 파라미터를 모든 피처에 대해 고정할 수도 있고, 아니면 필드 또는 표현식을 사용해서 동적으로 설정할 수도 있습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5189
+msgid "Different buffer shapes with dynamic parameters"
+msgstr "동적 파라미터를 가진 서로 다른 버퍼 형태"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5207
 msgid "**Buffer shape**"
 msgstr "**Buffer shape**"
@@ -6635,9 +6832,26 @@ msgstr "**Algorithm ID**: ``qgis:removeduplicatevertices``"
 msgid "Remove null geometries"
 msgstr "NULL 도형 제거하기"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5386
+msgid ""
+"Removes any features which do not have a geometry from a vector layer. All "
+"other features will be copied unchanged."
+msgstr "벡터 레이어에서 도형을 보유하지 않는 객체를 모두 제거합니다. 다른 모든 객체는 그대로 복제될 것입니다."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5389
 msgid "The features with null geometries can be saved to a separate layer."
 msgstr "NULL 도형을 가진 피처를 개별 레이어로 저장할 수 있습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5391
+msgid ""
+"If :guilabel:`Also remove empty geometries` is checked, the algorithm "
+"removes features whose geometries have no coordinates, i.e., geometries that"
+" are empty. In that case, also the null output will reflect this option, "
+"containing both null and empty geometries."
+msgstr ""
+":guilabel:`Also remove empty geometries` 옵션을 체크한 경우, 이 알고리즘은 비어 있는 도형, 즉 좌표가"
+" 없는 도형을 가진 객체를 제거합니다. 이런 경우, NULL 산출물도 이 옵션을 반영해서 NULL 및 비어 있는 도형을 둘 다 담게 될 "
+"것입니다."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5397
 msgid ":ref:`qgisdeleteduplicategeometries`"
@@ -6647,10 +6861,25 @@ msgstr ":ref:`qgisdeleteduplicategeometries`"
 msgid "Input vector layer (with non-NULL geometries)"
 msgstr "NULL이 아닌 도형을 가진 입력 벡터 레이어"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5415
+msgid "**Also remove empty geometries**"
+msgstr "**Also remove empty geometries**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5416
+msgid "``REMOVE_EMPTY``"
+msgstr "``REMOVE_EMPTY``"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5419
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5465
 msgid "**Non null geometries**"
 msgstr "**Non null geometries**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5424
+msgid ""
+"Specify the output vector layer for the non-NULL (and non-empty) geometries."
+" One of:"
+msgstr ""
+"NULL이 아닌 (그리고 비어 있지도 않은) 도형을 저장할 산출 벡터 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5434
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5461
@@ -6666,9 +6895,23 @@ msgstr "``NULL_OUTPUT``"
 msgid "Default: ``[Skip output]``"
 msgstr "기본값: ``[Skip output]``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5439
+msgid ""
+"Specify the output vector layer for the NULL (and empty) geometries. One of:"
+msgstr "NULL (그리고 비어 있는) 도형을 저장할 산출 벡터 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5442
 msgid "Skip Output"
 msgstr "산출물 건너뛰기"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5464
+msgid "Output vector layer (for NULL and, if chosen, empty geometries)"
+msgstr "산출 벡터 레이어 (NULL 도형 및 선택한 경우 비어 있는 도형도)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5468
+msgid ""
+"The output vector layer (without NULL and, if chosen, empty geometries)"
+msgstr "산출 벡터 레이어 (NULL 도형 및 선택한 경우 비어 있는 도형도 없는)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5473
 msgid "**Algorithm ID**: ``qgis:removenullgeometries``"
@@ -6889,6 +7132,10 @@ msgid ""
 msgstr ""
 "|identify|:sup:`Identify Features` 버튼을 사용해서 M 값을 확인하고 추가하십시오. "
 ":guilabel:`Identify Results` 대화창에서 결과를 볼 수 있습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7482
+msgid "identify"
+msgstr "identify"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5809
 msgid ""
