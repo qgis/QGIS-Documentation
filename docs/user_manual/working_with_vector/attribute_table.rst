@@ -1007,7 +1007,7 @@ Introducing polymorphic relations
 Polymorphic relations are special case of 1-N relations, where a single referencing (document) layer contains 
 the features for multiple referenced layers. This differs from normal relations which require different 
 referencing layer for each referenced layer. A single referencing (document) layer is achieved by adding an adiditonal 
-`layer_field` column in the referencing (document) layer that stores information to identify the referenced layer. In 
+``layer_field`` column in the referencing (document) layer that stores information to identify the referenced layer. In 
 its most simple form, the referencing (document) layer will just insert the layer name of the referenced layer into 
 this field.
 
