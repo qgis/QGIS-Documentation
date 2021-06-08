@@ -1013,7 +1013,7 @@ this field.
 
 To be more precise, a polymorphic relation is a set of normal relations having the same referencing 
 layer but having the referenced layer dynamically defined. The polymorphic setting of the layer is solved by using 
-an expression which has to match some properties of the the referenced layer like the table name, layer id, layer name.
+an expression which has to match some properties of the referenced layer like the table name, layer id, layer name.
 
 Imagine we are going to the park and want to take pictures of different species of ``plants`` and ``animals`` 
 we see there. Each plant or animal has multiple pictures associated with it, so if we use the normal 1:N 
