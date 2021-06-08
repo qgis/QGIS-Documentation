@@ -1108,7 +1108,7 @@ from the newly appeared dropdown.
 * **Referenced Layers** also considered as parent layers, are those with
   the primary key, pointed to, so here they would be ``plants`` and ``animals`` layers. You need to define
   the primary key of the referenced layers from the dropdown, so it is ``fid``. Note that the definition of a
-  valid primary key requires all the referenced layer to have a field with that name. If there is no such field
+  valid primary key requires all the referenced layers to have a field with that name. If there is no such field
   you cannot save a polymorphic relation.
 
 Once added, the polymorphic relation can be edited via the :guilabel:`Edit Polymorphic Relation` menu entry.
