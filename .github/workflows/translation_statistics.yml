@@ -1,0 +1,38 @@
+name: Translation statistics
+# Pull statistics of translation in Transifex
+
+on: 
+  #push:
+  schedule:
+    # runs wednesday at 6:00 UTC
+    - cron: '0 6 * * 3'
+  workflow_dispatch:
+
+jobs:
+  ReportTranslationStats:
+
+    runs-on: ubuntu-latest
+    env:
+      TRANSIFEX_PASSWORD: ${{ secrets.TRANSIFEX_PASSWORD }}
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 1
+
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.7
+
+    - name: Install dependencies
+      run: python3 -m pip install requests
+
+    - name: Report statistics
+      run: python3 ./scripts/load_tx_stats.py $TRANSIFEX_PASSWORD
+
+    - name: Commit changes
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Update statistics of translation

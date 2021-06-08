@@ -108,3 +108,6 @@ The current translations are made possible thanks to:
    "Spanish", "Carlos Dávila, Diana Galindo, Edwin Amado, Gabriela Awad,
    Javier César Aldariz, Mayeul Kauffmann, Fran Raga"
    "Ukrainian", "Alexander Bruy"
+
+.. include:: translation_stats.rst
+   :start-line: 4
