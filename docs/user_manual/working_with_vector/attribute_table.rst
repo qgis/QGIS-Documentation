@@ -1020,7 +1020,7 @@ we see there. Each plant or animal has multiple pictures associated with it, so 
 relations to store pictures, we would need two separate tables, ``animal_images`` and ``plant_images``.
 This might not be a problem for 2 tables, but imagine if we want to take separate pictures for mushrooms, birds etc.
 
-Polymorphic relations solve this problem as all the referencing features are stored in the same table table ``documents``. 
+Polymorphic relations solve this problem as all the referencing features are stored in the same table ``documents``. 
 For each feature the referenced layer is stored in the ``referenced_layer`` field and the referenced 
 feature id in the ``referenced_fk``.
 
