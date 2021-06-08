@@ -89,8 +89,11 @@ def load_lang_stats(stats, nb_columns=1):
             text += (f"     - {stats[lang]['percentage']}\n")
             i+=1
 
-            # todo: Add empty cells when the number of languages
-            # is not a multiple of number of columns
+    # Add empty cells to keep a well formatted rst table
+    # when the number of target languages is not a multiple of the number of columns
+    if nb_languages % nb_columns:
+        remaining_cells = nb_columns - (nb_languages % nb_columns)
+        text += (f"     -\n     -\n" * remaining_cells)
 
     return text
 
