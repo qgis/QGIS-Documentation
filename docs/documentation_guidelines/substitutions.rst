@@ -322,7 +322,9 @@ Attribute Table
 ========================================== ============================================  =========================  =============================
 Icon                                       Substitution                                  Icon                       Substitution
 ========================================== ============================================  =========================  =============================
-|openTable|                                ``|openTable|``                               |selectedToTop|            ``|selectedToTop|``
+|openTable|                                ``|openTable|``                               |openTableSelected|        ``|openTableSelected|``
+|openTableVisible|                         ``|openTableVisible|``                        |openTableEdited|          ``|openTableEdited|``
+|selectedToTop|                            ``|selectedToTop|``
 |selectAll|                                ``|selectAll|``                               |invertSelection|          ``|invertSelection|``
 |panToSelected|                            ``|panToSelected|``                           |zoomToSelected|           ``|zoomToSelected|``
 |copySelected|                             ``|copySelected|``                            |editPaste|                ``|editPaste|``
@@ -1093,6 +1095,12 @@ Icon                            Substitution                        Icon        
 .. |offsetPointSymbols| image:: /static/common/mActionOffsetPointSymbols.png
    :width: 1.5em
 .. |openTable| image:: /static/common/mActionOpenTable.png
+   :width: 1.5em
+.. |openTableEdited| image:: /static/common/mActionOpenTableEdited.png
+   :width: 1.5em
+.. |openTableSelected| image:: /static/common/mActionOpenTableSelected.png
+   :width: 1.5em
+.. |openTableVisible| image:: /static/common/mActionOpenTableVisible.png
    :width: 1.5em
 .. |options| image:: /static/common/mActionOptions.png
    :width: 1em
