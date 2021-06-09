@@ -319,24 +319,26 @@ Icon                            Substitution                        Icon        
 Attribute Table
 ===============
 
-============================ ===============================  =========================  =============================
-Icon                         Substitution                     Icon                       Substitution
-============================ ===============================  =========================  =============================
-|openTable|                  ``|openTable|``                  |openTableSelected|        ``|openTableSelected|``
-|openTableVisible|           ``|openTableVisible|``           |openTableEdited|          ``|openTableEdited|``
-|selectedToTop|              ``|selectedToTop|``
-|selectAll|                  ``|selectAll|``                  |invertSelection|          ``|invertSelection|``
-|panToSelected|              ``|panToSelected|``              |zoomToSelected|           ``|zoomToSelected|``
-|copySelected|               ``|copySelected|``               |editPaste|                ``|editPaste|``
-|expressionSelect|           ``|expressionSelect|``           |deleteSelectedFeatures|   ``|deleteSelectedFeatures|``
-|newAttribute|               ``|newAttribute|``               |deleteAttribute|          ``|deleteAttribute|``
-|newTableRow|                ``|newTableRow|``                |calculateField|           ``|calculateField|``
-|refresh|                    ``|refresh|``                    |formView|                 ``|formView|``
-|conditionalFormatting|      ``|conditionalFormatting|``      |multiEdit|                ``|multiEdit|``
-|dock|                       ``|dock|``                       |actionRun|                ``|actionRun|``
-|duplicateFeature|           ``|duplicateFeature|``
-|panTo|                      ``|panTo|``                      |highlightFeature|         ``|highlightFeature|``
-============================ ===============================  =========================  =============================
+========================================== ============================================  =========================  =============================
+Icon                                       Substitution                                  Icon                       Substitution
+========================================== ============================================  =========================  =============================
+|openTable|                                ``|openTable|``                               |openTableSelected|        ``|openTableSelected|``
+|openTableVisible|                         ``|openTableVisible|``                        |openTableEdited|          ``|openTableEdited|``
+|selectedToTop|                            ``|selectedToTop|``
+|selectAll|                                ``|selectAll|``                               |invertSelection|          ``|invertSelection|``
+|panToSelected|                            ``|panToSelected|``                           |zoomToSelected|           ``|zoomToSelected|``
+|copySelected|                             ``|copySelected|``                            |editPaste|                ``|editPaste|``
+|expressionSelect|                         ``|expressionSelect|``                        |deleteSelectedFeatures|   ``|deleteSelectedFeatures|``
+|newAttribute|                             ``|newAttribute|``                            |deleteAttribute|          ``|deleteAttribute|``
+|newTableRow|                              ``|newTableRow|``                             |calculateField|           ``|calculateField|``
+|refresh|                                  ``|refresh|``                                 |formView|                 ``|formView|``
+|conditionalFormatting|                    ``|conditionalFormatting|``                   |multiEdit|                ``|multiEdit|``
+|dock|                                     ``|dock|``                                    |actionRun|                ``|actionRun|``
+|duplicateFeature|                         ``|duplicateFeature|``
+|panTo|                                    ``|panTo|``                                   |highlightFeature|         ``|highlightFeature|``
+|handleStoreFilterExpressionChecked|       ``|handleStoreFilterExpressionChecked|``
+|handleStoreFilterExpressionUnchecked|     ``|handleStoreFilterExpressionUnchecked|``
+========================================== ============================================  =========================  =============================
 
 
 Projections and Georeferencer
@@ -858,6 +860,10 @@ Icon                            Substitution                        Icon        
 .. |grassTools| image:: /static/common/grass_tools.png
    :width: 1.5em
 .. |groupItems| image:: /static/common/mActionGroupItems.png
+   :width: 1.5em
+.. |handleStoreFilterExpressionChecked| image:: /static/common/mActionHandleStoreFilterExpressionChecked.png
+   :width: 1.5em
+.. |handleStoreFilterExpressionUnchecked| image:: /static/common/mActionHandleStoreFilterExpressionUnchecked.png
    :width: 1.5em
 .. |heatmap| image:: /static/common/heatmap.png
    :width: 1.5em

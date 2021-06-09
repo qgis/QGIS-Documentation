@@ -329,13 +329,17 @@ left of the attribute table dialog. This list offers the following filters:
   :guilabel:`Open Attribute Table (Edited and New Features)` from the :guilabel:`Layer`
   menu or the :guilabel:`Attributes Toolbar`
 * :guilabel:`Field Filter` - allows the user to filter based on value of a field:
-  choose a column from a list, type a value and press :kbd:`Enter` to filter.
-  Then, only the matching features are shown in the attribute table.
+  choose a column from a list, type or select a value and press :kbd:`Enter` to filter.
+  Then, only the features matching ``num_field = value`` or ``string_field ilike '%value%'``
+  expression are shown in the attribute table. You can check |checkbox|
+  :guilabel:`Case sensitive` to be less permissive with strings.
 * :guilabel:`Advanced filter (Expression)` - Opens the expression builder
   dialog. Within it, you can create :ref:`complex expressions
   <vector_expressions>` to match table rows.
   For example, you can filter the table using more than one field.
   When applied, the filter expression will show up at the bottom of the form.
+* :menuselection:`Stored filter expressions -->`: a shortcut to :ref:`saved
+  expressions <store_filter>` frequently used for filtering your attribute table.
 
 It is also possible to :ref:`filter features using forms <filter_select_form>`.
 
@@ -354,6 +358,27 @@ It is also possible to :ref:`filter features using forms <filter_select_form>`.
   <tip_table_filtering>` for a how-to), selecting :guilabel:`Show Features
   Visible on Map` on a new canvas extent updates the spatial restriction.
 
+.. index:: Expression filter
+.. _store_filter:
+
+Storing filter expressions
+----------------------------
+
+Expressions you use for attribute table filtering can be saved for further calls.
+When using :guilabel:`Field Filter` or :guilabel:`Advanced Filter (expression)`
+entries, the expression used is displayed in a text widget in the bottom of the
+attribute table dialog. Press the |handleStoreFilterExpressionUnchecked|
+:sup:`Save expression with text as name` next to the box to save the expression
+in the project. Pressing the drop-down menu next to the button allows to save
+the expression with a custom name (:guilabel:`Save expression as...`).
+Once a saved expression is displayed, the |handleStoreFilterExpressionChecked|
+button is triggered and its drop-down menu allows you to :guilabel:`Edit the
+expression` and name if any, or :guilabel:`Delete stored expression`.
+
+Saved filter expressions are saved in the project and available through the
+:guilabel:`Stored filter expressions` menu of the attribute table.
+They are different from the :ref:`user expressions <user_expressions_functions>`,
+shared by all projects of the active user profile.
 
 .. _filter_select_form:
 
@@ -1048,6 +1073,10 @@ table.
    :width: 1.5em
 .. |formView| image:: /static/common/mActionFormView.png
    :width: 1.2em
+.. |handleStoreFilterExpressionChecked| image:: /static/common/mActionHandleStoreFilterExpressionChecked.png
+   :width: 1.5em
+.. |handleStoreFilterExpressionUnchecked| image:: /static/common/mActionHandleStoreFilterExpressionUnchecked.png
+   :width: 1.5em
 .. |invertSelection| image:: /static/common/mActionInvertSelection.png
    :width: 1.5em
 .. |link| image:: /static/common/mActionLink.png

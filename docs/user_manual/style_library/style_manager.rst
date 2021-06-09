@@ -341,9 +341,9 @@ choose the ramp type:
    :width: 1.5em
 .. |polygonLayer| image:: /static/common/mIconPolygonLayer.png
    :width: 1.5em
-.. |sharing| image:: /static/common/mActionSharing.png
-   :width: 1.5em
 .. |search| image:: /static/common/search.png
+   :width: 1.5em
+.. |sharing| image:: /static/common/mActionSharing.png
    :width: 1.5em
 .. |signMinus| image:: /static/common/symbologyRemove.png
    :width: 1.5em

@@ -150,6 +150,10 @@ html_context = {
 if html_context['isTesting'] or html_context['outdated']:
   html_css_files = ['css/qgis_topbar.css']
 
+# Add custom tag to allow display of text based on the branch status
+if html_context['isTesting']:
+  tags.add('testing')
+
 supported_languages = cfg['supported_languages'].replace(' ','').split(',')
 version_list = cfg['version_list'].replace(' ','').split(',')
 docs_url = 'https://docs.qgis.org/'
