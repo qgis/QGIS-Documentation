@@ -409,7 +409,7 @@ def start_qgis():
     f.setAttributes([1, 'First feature'])
     f.setGeometry(QgsGeometry.fromWkt('point( 7 45)'))
     f2 = QgsFeature(iface.activeLayer().fields())
-    f2.setAttributes([1, 'First feature'])
+    f2.setAttributes([2, 'Second feature'])
     f2.setGeometry(QgsGeometry.fromWkt('point( 7.5 45.5)'))
     iface.activeLayer().dataProvider().addFeatures([f, f2])
 
