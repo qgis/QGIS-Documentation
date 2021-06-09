@@ -25,10 +25,10 @@
   .. note:: This documentation is translated from the original English version
     by community members on `Transifex <https://transifex.com/qgis/qgis-documentation>`_.
 
-    Depending on the translation effort's completion level, you may
-    find paragraphs or whole pages which are still in English. You can
-    help the community by providing new translations or reviewing existing
-    ones on Transifex.
+    Depending on the translation effort's :ref:`completion level <translation_stats>`,
+    you may find paragraphs or whole pages which are still in English.
+    You can help the community by providing new translations or reviewing
+    existing ones on Transifex.
 
     For the time being, localized translations are only available for
     the Long Term releases branch, but should be suitable to learn
