@@ -84,13 +84,13 @@ by calling :meth:`fields() <qgis.core.QgsVectorLayer.fields>` on a :class:`QgsVe
     NAME String
     USE String
 
-The :meth:`displayField() <qgis.core.QgsVectorLayer.displayField>` and 
+The :meth:`displayField() <qgis.core.QgsVectorLayer.displayField>` and
 :meth:`mapTipTemplate() <qgis.core.QgsVectorLayer.mapTipTemplate>` methods of
 the :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` class provide
 information on the field and template used in the :ref:`maptips` tab.
 
-When you load a vector layer, a field is always chosen by QGIS as the 
-``Display Name``, while the ``HTML Map Tip`` is empty by default. With these 
+When you load a vector layer, a field is always chosen by QGIS as the
+``Display Name``, while the ``HTML Map Tip`` is empty by default. With these
 methods you can easily get both:
 
 .. testcode:: vectors
@@ -306,6 +306,7 @@ Here's an example:
 .. testoutput:: vectors
 
     <qgis._core.QgsFeature object at 0x7f9b78590948>
+    <qgis._core.QgsFeature object at 0x7faef5881670>
 
 If you need an attribute-based filter instead (or in addition) of a spatial
 one like shown in the examples above, you can build a :class:`QgsExpression
