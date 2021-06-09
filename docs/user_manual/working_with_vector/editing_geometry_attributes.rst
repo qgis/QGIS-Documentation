@@ -273,7 +273,7 @@ It can be controlled by the overlap tool. Three modes are available:
 
 QGIS will cut the geometry of any new polygon to the boundary of the existing ones.
 The advantage is that you don't have to digitize all vertices of the common boundary
- by voluntarily overlapping any new geomtries and letting QGIS cut them.
+by voluntarily overlapping any new geometries and letting QGIS cut them.
 
 .. index::
    single: Digitizing tools; Automatic tracing
@@ -876,7 +876,7 @@ Advanced digitizing
 +===========================+=========================================+========================+=========================+
 | |cad|                     | Enable Advanced Digitizing Tools        |                        |                         |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
-| |digitizewithCurve|       | Digitize with Curve                     | |streamDigitizing|     | Enable Stream Digitizing|
+| |digitizeWithCurve|       | Digitize with Curve                     | |streamingDigitize|    | Enable Stream Digitizing|
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
 | |moveFeature|             | Move Feature(s)                         | |moveFeatureCopy|      | Copy and Move Feature(s)|
 | |moveFeatureLine|         |                                         | |moveFeatureCopyLine|  |                         |
@@ -913,10 +913,10 @@ Table Advanced Editing: Vector layer advanced editing toolbar
 Straight, curve and stream digitizing
 -------------------------------------
 
-The |digitizewithCurve| :sup:`Digitize with Curve` tool allows you to draw curves in layers with
+The |digitizeWithCurve| :sup:`Digitize with Curve` tool allows you to draw curves in layers with
 geometries that support curves.
 
-Alternatively the |streamDigitizing| :sup:`Stream Digitizing` tool allows you to
+Alternatively the |streamingDigitize| :sup:`Stream Digitizing` tool allows you to
 activate and deactivate stream digitizing. Allowing to create features in freehand
 mode. The tolerance of the tool affects the spacing between each created vertex
 when the tool is used with Advanced digitizing enabled.
@@ -1006,8 +1006,9 @@ performed in relation to the anchor point and the scale ratio can be manually sp
 in the widget that appears in the upper corner of the canvas.
 
 
-single: Digitizing tools; Simplify Feature
-.. _simplify_features:
+.. index::
+   single: Digitizing tools; Simplify Feature
+.. _simplify_feature:
 
 
 Simplify Feature
@@ -1899,6 +1900,12 @@ To edit features in-place:
    :width: 2em
 .. |allEdits| image:: /static/common/mActionAllEdits.png
    :width: 1.5em
+.. |allowIntersections| image:: /static/common/mActionAllowIntersections.png
+   :width: 1.5em
+.. |avoidIntersectionsCurrentLayer| image:: /static/common/mActionAvoidIntersectionsCurrentLayer.png
+   :width: 1.5em
+.. |avoidIntersectionsLayers| image:: /static/common/mActionAvoidIntersectionsLayers.png
+   :width: 1.5em
 .. |cad| image:: /static/common/cad.png
    :width: 1.5em
 .. |cadConstruction| image:: /static/common/cad_construction.png
@@ -1941,6 +1948,8 @@ To edit features in-place:
    :width: 1.5em
 .. |delta| image:: /static/common/delta.png
    :width: 1.5em
+.. |digitizeWithCurve| image:: /static/common/mActionDigitizeWithCurve.png
+   :width: 1.5em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
 .. |editCut| image:: /static/common/mActionEditCut.png
@@ -1960,6 +1969,8 @@ To edit features in-place:
 .. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
    :width: 1.5em
 .. |fillRing| image:: /static/common/mActionFillRing.png
+   :width: 1.5em
+.. |floater| image:: /static/common/floater.png
    :width: 1.5em
 .. |locked| image:: /static/common/locked.png
    :width: 1.5em
@@ -2021,6 +2032,8 @@ To edit features in-place:
    :width: 1.5em
 .. |saveEdits| image:: /static/common/mActionSaveEdits.png
    :width: 1.5em
+.. |scaleFeature| image:: /static/common/mActionScaleFeature.png
+   :width: 1.5em
 .. |selectNumber| image:: /static/common/selectnumber.png
    :width: 2.8em
 .. |selectRectangle| image:: /static/common/mActionSelectRectangle.png
@@ -2033,9 +2046,13 @@ To edit features in-place:
    :width: 1.5em
 .. |snappingIntersection| image:: /static/common/mIconSnappingIntersection.png
    :width: 1.5em
+.. |snappingSelf| image:: /static/common/mIconSnappingSelf.png
+   :width: 1.5em
 .. |splitFeatures| image:: /static/common/mActionSplitFeatures.png
    :width: 1.5em
 .. |splitParts| image:: /static/common/mActionSplitParts.png
+   :width: 1.5em
+.. |streamingDigitize| image:: /static/common/mActionStreamingDigitize.png
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
