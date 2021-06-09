@@ -325,7 +325,9 @@ left of the attribute table dialog. This list offers the following filters:
 * |openTableVisible| :guilabel:`Show Features visible on map` - same as using
   :guilabel:`Open Attribute Table (Visible Features)` from the :guilabel:`Layer`
   menu or the :guilabel:`Attributes Toolbar` or pressing :kbd:`Ctrl+F6`
-* |openTableEdited| :guilabel:`Show Edited and New Features`
+* |openTableEdited| :guilabel:`Show Edited and New Features` - same as using
+  :guilabel:`Open Attribute Table (Edited and New Features)` from the :guilabel:`Layer`
+  menu or the :guilabel:`Attributes Toolbar`
 * :guilabel:`Field Filter` - allows the user to filter based on value of a field:
   choose a column from a list, type a value and press :kbd:`Enter` to filter.
   Then, only the matching features are shown in the attribute table.
