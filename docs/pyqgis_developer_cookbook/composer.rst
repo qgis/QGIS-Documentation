@@ -110,6 +110,7 @@ extent calculations you have to explicitly set the destination CRS
 .. testcode:: composer
 
   layers = [iface.activeLayer()]
+  settings = QgsMapSettings()
   settings.setLayers(layers)
   settings.setDestinationCrs(layers[0].crs())
 

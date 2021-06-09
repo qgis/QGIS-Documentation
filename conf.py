@@ -17,6 +17,13 @@
 
 # -- Project information -----------------------------------------------------
 
+import sphinx.ext.doctest as ext_doctest
+import re
+import doctest
+import yaml
+import sys
+import os
+from sphinx.roles import MenuSelection
 project = 'QGIS Documentation'
 copyright = '2002-now, QGIS project'
 author = 'QGIS Authors'
@@ -85,7 +92,7 @@ html_theme = 'rtd_qgis'
 # https://sphinx-rtd-theme.readthedocs.io/en/stable/configuring.html#theme-options
 # rtd / read the docs theme options:
 html_theme_options = {
-     # collapse_navigation: With this enabled, navigation entries are not expandable – the [+] icons next to each entry are removed. Default: True
+    # collapse_navigation: With this enabled, navigation entries are not expandable – the [+] icons next to each entry are removed. Default: True
     'collapse_navigation': True,
     # sticky_navigation: Scroll the navigation with the main page content as you scroll the page. Default: True
     'sticky_navigation': True,
@@ -104,7 +111,7 @@ html_theme_options = {
     # style_external_links': Add an icon next to external links. Default: False,
     'style_external_links': False,
     # style_nav_header_background': Changes the background of the search area in the navigation bar. The value can be anything valid in a CSS background property. Default: 'white',
-    #'style_nav_header_background': 'Gray',
+    # 'style_nav_header_background': 'Gray',
     # Toc options
     # titles_only: When enabled, page subheadings are not included in the navigation. Default: False
     # 'titles_only': False,
@@ -122,14 +129,10 @@ html_static_path = ['static']
 
 # Set a bullet character for :menuselection: role
 # easier to identify in non latin languages, e.g. japanese
-from sphinx.roles import MenuSelection
-MenuSelection.BULLET_CHARACTER = '\u25BA' #'\N{BLACK RIGHT-POINTING POINTER}'
+MenuSelection.BULLET_CHARACTER = '\u25BA'  # '\N{BLACK RIGHT-POINTING POINTER}'
 
-## for rtd themes, creating a html_context for the version/language part
+# for rtd themes, creating a html_context for the version/language part
 
-import os
-import sys
-import yaml
 # sys.path.insert(0, os.path.abspath('.'))
 
 sys.path.insert(0, os.path.abspath('../../'))
@@ -148,51 +151,55 @@ html_context = {
 
 # Add custom CSS when a top bar is needed to be shown (for testing or outdated versions)
 if html_context['isTesting'] or html_context['outdated']:
-  html_css_files = ['css/qgis_topbar.css']
+    html_css_files = ['css/qgis_topbar.css']
 
 # Add custom tag to allow display of text based on the branch status
 if html_context['isTesting']:
-  tags.add('testing')
+    tags.add('testing')
 
-supported_languages = cfg['supported_languages'].replace(' ','').split(',')
-version_list = cfg['version_list'].replace(' ','').split(',')
+supported_languages = cfg['supported_languages'].replace(' ', '').split(',')
+version_list = cfg['version_list'].replace(' ', '').split(',')
 docs_url = 'https://docs.qgis.org/'
 
 if version not in version_list:
-  raise ValueError('QGIS version is not in version list', version, version_list)
+    raise ValueError('QGIS version is not in version list',
+                     version, version_list)
 
 # This config value contains the locations and names of other projects that
 # should be linked to in this documentation.
 
 pyqgis_version = version if version != 'testing' else 'master'
-intersphinx_mapping = {'pyqgis_api': ('https://qgis.org/pyqgis/{}/'.format(pyqgis_version), None)}
+intersphinx_mapping = {'pyqgis_api': (
+    'https://qgis.org/pyqgis/{}/'.format(pyqgis_version), None)}
 
 # This config value must be a dictionary of external sites, mapping unique short
 # alias names to a base URL and a prefix.
 
 api_version = version if version != 'testing' else ''
-source_version = ''.join(['release-', version]).replace('.', '_') if version != 'testing' else 'master'
+source_version = ''.join(['release-', version]).replace('.',
+                                                        '_') if version != 'testing' else 'master'
 
-extlinks = {# api website: docs master branch points to '/' while x.y points to x.y
-            'api': ('https://qgis.org/api/{}%s'.format(''.join([version, '/']) if version != 'testing' else ''), None),
-            # pyqgis website: docs master branch points to 'master' and x.y points to x.y
-            'pyqgis': ('https://qgis.org/pyqgis/{}/%s'.format(pyqgis_version), None),
-            # code on github: docs master branch points to 'master' while x.y points to release-x_y
-            'source': ('https://github.com/qgis/QGIS/blob/{}/%s'.format(source_version), None)
-           }
+extlinks = {  # api website: docs master branch points to '/' while x.y points to x.y
+    'api': ('https://qgis.org/api/{}%s'.format(''.join([version, '/']) if version != 'testing' else ''), None),
+    # pyqgis website: docs master branch points to 'master' and x.y points to x.y
+    'pyqgis': ('https://qgis.org/pyqgis/{}/%s'.format(pyqgis_version), None),
+    # code on github: docs master branch points to 'master' while x.y points to release-x_y
+    'source': ('https://github.com/qgis/QGIS/blob/{}/%s'.format(source_version), None)
+}
 
 context = {
     # 'READTHEDOCS': True,
     'version_downloads': True,
-    'versions': [ [v, docs_url+v] for v in version_list],
-    'supported_languages': [ [l, docs_url+version+'/'+l] for l in supported_languages],
-    'downloads': [ ['PDF', docs_url+version+'/pdf'] , ['HTML', docs_url+version+'/zip'] ],
+    'versions': [[v, docs_url+v] for v in version_list],
+    'supported_languages': [[l, docs_url+version+'/'+l] for l in supported_languages],
+    'downloads': [['PDF', docs_url+version+'/pdf'], ['HTML', docs_url+version+'/zip']],
 
-    'display_github': not html_context['outdated'], # Do not display for outdated releases
+    # Do not display for outdated releases
+    'display_github': not html_context['outdated'],
     'github_user': 'qgis',
     'github_repo': 'QGIS-Documentation',
     'github_version': 'master/',
-    'github_url':'https://github.com/qgis/QGIS-Documentation/edit/master',
+    'github_url': 'https://github.com/qgis/QGIS-Documentation/edit/master',
     'transifex_url': 'https://www.transifex.com/qgis/qgis-documentation/translate',
 
     'pyqgis_version': pyqgis_version,
@@ -219,12 +226,17 @@ latex_paper_size = 'a4'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('docs/user_manual/index', 'QGISDesktopUserGuide.tex', f'QGIS Desktop {version} User Guide', u'QGIS Project', 'manual'),
-  ('docs/server_manual/index', 'QGISServerUserGuide.tex', f'QGIS Server {version} User Guide', u'QGIS Project', 'manual'),
-  ('docs/pyqgis_developer_cookbook/index', 'PyQGISDeveloperCookbook.tex', f'PyQGIS {version} developer cookbook', u'QGIS Project', 'manual'),
-  ('docs/training_manual/index', 'QGISTrainingManual.tex', u'QGIS Training Manual', u'QGIS Project', 'manual'),
-  ('docs/documentation_guidelines/index', 'QGISDocumentationGuidelines.tex', u'QGIS Documentation Guidelines', u'QGIS Project', 'manual'),
-  #('docs/developers_guide/index', 'QGISDevelopersGuide.tex', u'QGIS Developers Guide', u'QGIS Project', 'manual'),
+    ('docs/user_manual/index', 'QGISDesktopUserGuide.tex',
+     f'QGIS Desktop {version} User Guide', u'QGIS Project', 'manual'),
+    ('docs/server_manual/index', 'QGISServerUserGuide.tex',
+        f'QGIS Server {version} User Guide', u'QGIS Project', 'manual'),
+    ('docs/pyqgis_developer_cookbook/index', 'PyQGISDeveloperCookbook.tex',
+        f'PyQGIS {version} developer cookbook', u'QGIS Project', 'manual'),
+    ('docs/training_manual/index', 'QGISTrainingManual.tex',
+        u'QGIS Training Manual', u'QGIS Project', 'manual'),
+    ('docs/documentation_guidelines/index', 'QGISDocumentationGuidelines.tex',
+        u'QGIS Documentation Guidelines', u'QGIS Project', 'manual'),
+    #('docs/developers_guide/index', 'QGISDevelopersGuide.tex', u'QGIS Developers Guide', u'QGIS Project', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -250,7 +262,7 @@ latex_elements = {
     'papersize': 'a4paper',
 
     # The font size ('10pt', '11pt' or '12pt').
-    #'pointsize': '10pt',
+    # 'pointsize': '10pt',
 
     # Additional stuff for the LaTeX preamble.
     'preamble': u'''
@@ -286,7 +298,7 @@ if tags.has('ko'):
         \\usepackage[space]{xeCJK}
         \\renewcommand\CJKglue{}
         \\setCJKmainfont{NanumMyeongjo}''',
-        }
+    }
 
 # Special case for hindi that need different setting and typeset
 if tags.has('hi'):
@@ -296,7 +308,7 @@ if tags.has('hi'):
         'preamble': '''
         \\usepackage{fontspec}
         \\setmainfont[Script=Devanagari]{Nakula}''',
-        }
+    }
 
 
 # -- Settings for Python code samples testing --------------------------------
@@ -305,34 +317,35 @@ if tags.has('hi'):
 # eg: Map canvas is implemented as :class:`QgsMapCanvas` ...
 # I hope somebody will create the real references for these so they can be removed here...
 nitpick_ignore = [
-                  ('py:class', 'QDomElement'),
-                  ('py:class', 'QAction'),
-                  ('py:class', 'QMenu'),
+    ('py:class', 'QDomElement'),
+    ('py:class', 'QAction'),
+    ('py:class', 'QMenu'),
 
-                  ('py:data', 'iface'),
-                  ('py:data', 'qgis.utils.iface'),
+    ('py:data', 'iface'),
+    ('py:data', 'qgis.utils.iface'),
 
-                  ('py:func', 'classFactory'),
-                  ('py:func', '__init__'),
-                  ('py:func', 'initGui'),
-                  ('py:func', 'hide'),
-                  ('py:func', 'requestReady'),
-                  ('py:func', 'sendResponse'),
-                  ('py:func', 'serverClassFactory'),
-                  ('py:func', 'show'),
-                  ('py:func', 'showPluginHelp'),
-                  ('py:func', 'unload'),
+    ('py:func', 'classFactory'),
+    ('py:func', '__init__'),
+    ('py:func', 'initGui'),
+    ('py:func', 'hide'),
+    ('py:func', 'requestReady'),
+    ('py:func', 'sendResponse'),
+    ('py:func', 'serverClassFactory'),
+    ('py:func', 'show'),
+    ('py:func', 'showPluginHelp'),
+    ('py:func', 'unload'),
 
-                  ('py:mod', 'qgis.utils'),
+    ('py:mod', 'qgis.utils'),
 
-                  ('py:const', 'False'),
-                  ('py:const', 'True'),
-                  ]
+    ('py:const', 'False'),
+    ('py:const', 'True'),
+]
 
 
 # Add doctest configuration
 
-doctest_path = ['/usr/share/qgis/python/plugins/', os.path.join(os.getcwd(), 'testdata', 'processing')]
+doctest_path = ['/usr/share/qgis/python/plugins/',
+                os.path.join(os.getcwd(), 'testdata', 'processing')]
 
 doctest_global_setup = '''
 import os
@@ -395,7 +408,10 @@ def start_qgis():
     f = QgsFeature(iface.activeLayer().fields())
     f.setAttributes([1, 'First feature'])
     f.setGeometry(QgsGeometry.fromWkt('point( 7 45)'))
-    iface.activeLayer().dataProvider().addFeatures([f])
+    f2 = QgsFeature(iface.activeLayer().fields())
+    f2.setAttributes([1, 'First feature'])
+    f2.setGeometry(QgsGeometry.fromWkt('point( 7.5 45.5)'))
+    iface.activeLayer().dataProvider().addFeatures([f, f2])
 
     # Mock messageBar
     iface.messageBar.return_value = QgsMessageBar()
@@ -432,17 +448,17 @@ QgsProject.instance().clear()
 
 # Make Sphinx doctest insensitive to object address differences,
 # also 'output_....' processing alg ids
-import doctest
-import re
-import sphinx.ext.doctest as ext_doctest
 
 
-ADDRESS_RE = re.compile(r'\b0x[0-9a-f]{1,16}\b|_[a-z0-9]{8}_[a-z0-9]{4}_[a-z0-9]{4}_[a-z0-9]{4}_[a-z0-9]{12}')
+ADDRESS_RE = re.compile(
+    r'\b0x[0-9a-f]{1,16}\b|_[a-z0-9]{8}_[a-z0-9]{4}_[a-z0-9]{4}_[a-z0-9]{4}_[a-z0-9]{12}')
+
 
 class BetterDocTestRunner(ext_doctest.SphinxDocTestRunner):
     def __init__(self, checker=None, verbose=None, optionflags=0):
         checker = BetterOutputChecker()
         doctest.DocTestRunner.__init__(self, checker, verbose, optionflags)
+
 
 class BetterOutputChecker(doctest.OutputChecker):
     def check_output(self, want, got, optionflags):
@@ -453,6 +469,7 @@ class BetterOutputChecker(doctest.OutputChecker):
         got = ADDRESS_RE.sub('0x7f00ed991e80', got)
         return doctest.OutputChecker.check_output(self, want, got, optionflags)
 
+
 ext_doctest.SphinxDocTestRunner = BetterDocTestRunner
 
 # -- External Link check settings --------------------------------
@@ -462,7 +479,7 @@ ext_doctest.SphinxDocTestRunner = BetterDocTestRunner
 linkcheck_ignore = [r'http://localhost(:|/)?',
                     r'http://qgis(platform)?\.demo',
                     r'http://myhost/'
-                   ]
+                    ]
 
 # The number of times the linkcheck builder will attempt to check a URL
 # before declaring it broken. Defaults to 1 attempt.

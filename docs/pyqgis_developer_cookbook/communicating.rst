@@ -204,6 +204,7 @@ example:
     :hide:
 
     .
+    .
 
 
 Logging
@@ -271,7 +272,7 @@ The python built in logging module
 The basicConfig method configures the basic setup of the logging.
 In the above code the filename, logging level and the format are defined.
 The filename refers to where to write the logfile to, the logging level defines what
-levels to output and the format defines the format in which each message is output. 
+levels to output and the format defines the format in which each message is output.
 
 .. code-block::
 
@@ -279,7 +280,7 @@ levels to output and the format defines the format in which each message is outp
   2020-10-08 13:14:42,998 - root - DEBUG - This logging debug text goes into the file as well
 
 If you want to erase the log file every time you execute your script you can do something like:
-   
+
 .. code-block:: python
 
    if os.path.isfile(logfilename):
