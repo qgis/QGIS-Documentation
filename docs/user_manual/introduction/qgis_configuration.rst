@@ -179,6 +179,8 @@ When using an SVG file in a symbol or a label, QGIS allows you to:
 Add or Remove :guilabel:`Path(s) to search for additional C++
 plugin libraries`.
 
+.. _doc_config_path:
+
 **Documentation paths**
 
 Add or Remove :guilabel:`Documentation Path(s)` to use for QGIS help. By default,
