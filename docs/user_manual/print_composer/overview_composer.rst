@@ -657,8 +657,9 @@ Updating page properties
 ........................
 
 Any page can be later customized through the Page :guilabel:`Item Properties`
-panel. Right-click on a page and select :guilabel:`Page Properties...`. The
-:guilabel:`Item Properties` panel opens with settings such as:
+panel. To access a page's properties, left-click on an empty section
+of the page or right-click on a page and select :guilabel:`Page Properties...`.
+The :guilabel:`Item Properties` panel opens with settings such as:
 
 * the :guilabel:`Page size` frame described above. You can modify each property
   using the data defined override options (see :ref:`atlas_data_defined_override`
