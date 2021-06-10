@@ -165,8 +165,8 @@ Customizing legend items
 Legend items can also be customized individually in the :guilabel:`Legend Items Properties`.
 But these customization can only be done with |checkbox| :guilabel:`Auto update` disabled.
 
-Double-clicking or on an item allows for futher customization. Editing multiple items can be
-done by clicking on  |symbologyEdit| .
+Double-clicking on an item or pressing |symbologyEdit| :sup:`Edit selected item properties`
+allows for futher customization.
 
 :guilabel:`Label`
 
