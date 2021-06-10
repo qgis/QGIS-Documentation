@@ -1024,39 +1024,6 @@ Polymorphic relations solve this problem as all the referencing features are sto
 For each feature the referenced layer is stored in the ``referenced_layer`` field and the referenced 
 feature id in the ``referenced_fk``.
 
-.. code-block:: sql
-
-   CREATE SCHEMA park;
-
-   CREATE TABLE park.animals
-   (
-      fid serial NOT NULL,
-      geom geometry(Point, 4326) NOT NULL,
-      animal_species text NOT NULL,
-      CONSTRAINT animals_pkey PRIMARY KEY (fid)
-   );
-
-   CREATE INDEX animals_geom_idx ON park.animals USING gist (geom);
-
-   CREATE TABLE park.plants
-   (
-      fid serial NOT NULL,
-      geom geometry(Point, 4326) NOT NULL,
-      plant_species text NOT NULL,
-      CONSTRAINT plants_pkey PRIMARY KEY (fid)
-   );
-
-   CREATE INDEX plants_geom_idx ON park.plants USING gist (geom);
-
-   CREATE TABLE park.documents
-   (
-      fid serial NOT NULL,
-      referenced_layer text NOT NULL,
-      referenced_fk integer NOT NULL,
-      image_filename text NOT NULL,
-      CONSTRAINT documents_pkey PRIMARY KEY (fid)
-   );
-
 
 Defining polymorphic relations
 ..............................
@@ -1119,6 +1086,42 @@ Once added, the polymorphic relation can be edited via the :guilabel:`Edit Polym
    :align: center
 
    Preview of the newly created polymorphic relation and it's child relations for animals and plants.
+
+
+The example above uses the following database schema:
+
+.. code-block:: sql
+
+   CREATE SCHEMA park;
+
+   CREATE TABLE park.animals
+   (
+      fid serial NOT NULL,
+      geom geometry(Point, 4326) NOT NULL,
+      animal_species text NOT NULL,
+      CONSTRAINT animals_pkey PRIMARY KEY (fid)
+   );
+
+   CREATE INDEX animals_geom_idx ON park.animals USING gist (geom);
+
+   CREATE TABLE park.plants
+   (
+      fid serial NOT NULL,
+      geom geometry(Point, 4326) NOT NULL,
+      plant_species text NOT NULL,
+      CONSTRAINT plants_pkey PRIMARY KEY (fid)
+   );
+
+   CREATE INDEX plants_geom_idx ON park.plants USING gist (geom);
+
+   CREATE TABLE park.documents
+   (
+      fid serial NOT NULL,
+      referenced_layer text NOT NULL,
+      referenced_fk integer NOT NULL,
+      image_filename text NOT NULL,
+      CONSTRAINT documents_pkey PRIMARY KEY (fid)
+   );
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
