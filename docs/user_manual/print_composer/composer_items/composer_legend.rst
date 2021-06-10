@@ -131,8 +131,6 @@ panel provides the following functionalities (see :numref:`figure_layout_legend_
 Data-define the legend labels
 .............................
 
-These customization can only be done with |checkbox| :guilabel:`Auto update` disabled.
-
 |expression| allows you to add :ref:`expressions <vector_expressions>` to
 each symbol label of a given layer. New variables (``@symbol_label``,
 ``@symbol_id`` and ``@symbol_count``) help you interact with the legend entry.
@@ -155,8 +153,6 @@ e.g. ``Borough (3) - 850ha``:
 #. Press :guilabel:`OK`
 
 
-Expressions can also be added directly anywhere in the legend by using the expression
-notation: [% expression %].
 
 Customizing legend items
 ........................
@@ -174,28 +170,30 @@ done by clicking on  |symbologyEdit| .
 
 :guilabel:`Label`
 
-For all item types it allows to modify the label text manually or by typing in or by inserting expressions
- by using the :guilabel:`Insert Expression`.
+For all item types it allows to modify the label text by typing in or by inserting expressions
+using the |expression| :guilabel:`Insert or Edit an Expression`.
+Expressions can also be added directly anywhere in the item's label by using the
+[% expression %] notation.
 
 :guilabel:`Columns`
 
 The Legend Item Property also allows you to control the column splitting behaviour by forcing the column split
 to occur after a specific item or all symbols of a layer. Automatic splitting of a layer and its child can
-also be allowed or block on a layer-basis in this widget.
+also be allowed or blocked on a layer-basis in this widget.
 
 :guilabel:`Patch`
 
-For items with a symbol, the Legend Item Propery allows you to specify the maximum height and width
+For items with a symbol, the Legend Item Property allows you to specify the maximum height and width
 that a symbol can occupy.
 
 For vector symbols, you can specify a custom shape for the symbol. The shapes are usually
-defined by an expression to represent the geometry in a simple plain, but those symbol can also
+defined by an expression to represent the geometry in a simple plane, but those symbols can also
 be saved in the style manager and imported later. The default symbol for each geometry type can
 also be controlled via the style manager.
 
 :guilabel:`Custom Symbol`
 
-A custom symbol can also be specified for vector symbols.This can be useful to tweak the render
+A custom symbol can also be specified for vector symbols. This can be useful to tweak the render
 of a specific symbol, to enhance it in the legend or have a symbol independent from its true symbol preview.
 This custom symbol will override the legend symbol, but will take into account the symbol :guilabel:`Patch` specified. 
 
@@ -301,8 +299,7 @@ The :guilabel:`Spacing` section allows you to customize the spacing within the l
 Spacing can greatly help denote the groupement of items in the legend and their relation.
 
 :guilabel:`Spacing` around and before title, groups, subgroups, symbols, labels, boxes, columns
-and lines can be customized through this dialog. The group and subgroup can be modified as stated
- in :guilabel:`Legend items`.
+and lines can be customized through this dialog.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
