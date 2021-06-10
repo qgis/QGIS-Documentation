@@ -2014,8 +2014,8 @@ returns only the ``name`` attribute
     http://localhost/qgisserver/wfs3/collection_one/items.json?properties=name
 
 
-The HTML template language
---------------------------
+Customize the HTML pages
+------------------------
 
 The HTML representation uses a set of HTML templates to generate the
 response.
