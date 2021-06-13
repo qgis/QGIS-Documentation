@@ -2,15 +2,19 @@ name: Translation statistics
 # Pull statistics of translation in Transifex
 
 on: 
-  #push:
+  push:
+    branches:
+      - master
+      - release_3.16
   schedule:
-    # runs wednesday at 6:00 UTC
-    - cron: '0 6 * * 3'
+    # runs tuesday at 6:00 UTC
+    - cron: '0 6 * * 2'
   workflow_dispatch:
 
 jobs:
   ReportTranslationStats:
 
+    if: github.repository_owner == 'qgis'
     runs-on: ubuntu-latest
     env:
       TRANSIFEX_PASSWORD: ${{ secrets.TRANSIFEX_PASSWORD }}
