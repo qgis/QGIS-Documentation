@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2021
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-12 02:37+0000\n"
 "PO-Revision-Date: 2020-12-24 12:00+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2021\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -73,6 +74,10 @@ msgstr ""
 "|processingModel| :sup:`Models` 작업: :guilabel:`Create New Model...`, "
 ":guilabel:`Open Existing Model...` 및 :guilabel:`Add Model to Toolbox...`"
 
+#: ../../docs/user_manual/processing/toolbox.rst:397
+msgid "processingModel"
+msgstr "processingModel"
+
 #: ../../docs/user_manual/processing/toolbox.rst:38
 msgid ""
 "work with |pythonFile| :sup:`Scripts`: :guilabel:`Create New Script...`, "
@@ -83,13 +88,25 @@ msgstr ""
 ":guilabel:`Create New Script from Template...`, :guilabel:`Open Existing "
 "Script...` 및 :guilabel:`Add Script to Toolbox...`"
 
+#: ../../docs/user_manual/processing/toolbox.rst:401
+msgid "pythonFile"
+msgstr "pythonFile"
+
 #: ../../docs/user_manual/processing/toolbox.rst:41
 msgid "open the |processingHistory| :sup:`History` panel;"
 msgstr "|processingHistory| :sup:`History`: 이력 패널 열기"
 
+#: ../../docs/user_manual/processing/toolbox.rst:395
+msgid "processingHistory"
+msgstr "processingHistory"
+
 #: ../../docs/user_manual/processing/toolbox.rst:42
 msgid "open the |processingResult| :sup:`Results Viewer` panel;"
 msgstr "|processingResult| :sup:`Results Viewer`: 결과물 뷰어 패널 열기"
+
+#: ../../docs/user_manual/processing/toolbox.rst:399
+msgid "processingResult"
+msgstr "processingResult"
 
 #: ../../docs/user_manual/processing/toolbox.rst:43
 msgid ""
@@ -102,9 +119,17 @@ msgstr ""
 " 모드 <processing_inplace_edit>` 를 켜고 끕니다. 새 레이어를 산출하지 않고, 활성 레이어에 대해서 실행하는 데 "
 "적합한 알고리즘만 표시됩니다."
 
+#: ../../docs/user_manual/processing/toolbox.rst:393
+msgid "processSelected"
+msgstr "processSelected"
+
 #: ../../docs/user_manual/processing/toolbox.rst:47
 msgid "open the |options| :sup:`Options` dialog."
 msgstr "|options| :sup:`Options`: 옵션 대화창 열기"
+
+#: ../../docs/user_manual/processing/toolbox.rst:391
+msgid "options"
+msgstr "options"
 
 #: ../../docs/user_manual/processing/toolbox.rst:49
 msgid ""
@@ -117,6 +142,10 @@ msgstr ""
 "이 툴바 아래에는 필요한 도구를 쉽게 찾을 수 있게 해주는 |search| :guilabel:`Search...` 란이 있습니다. 이 "
 "텍스트란에 어떤 단어 또는 문구라도 입력할 수 있습니다. 사용자가 입력하는 동안, 사용자가 입력한 텍스트 또는 키워드가 포함된 알고리즘,"
 " 모델 및 스크립트만 필터링해서 툴박스에 표시된다는 사실을 알 수 있을 겁니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:403
+msgid "search"
+msgstr "search"
 
 #: ../../docs/user_manual/processing/toolbox.rst:55
 msgid ""
@@ -136,9 +165,40 @@ msgstr "어느 도구를 실행하려면, 툴박스에 있는 해당 명칭을 �
 msgid "The algorithm dialog"
 msgstr "알고리즘 대화창"
 
+#: ../../docs/user_manual/processing/toolbox.rst:71
+msgid ""
+"Once you double-click on the name of the algorithm that you want to execute,"
+" a dialog similar to that in the :numref:`figure_parameters_dialog` below is"
+" shown (in this case, the dialog corresponds to the ``Centroids`` "
+"algorithm)."
+msgstr ""
+"사용자가 실행하고자 하는 알고리즘의 명칭을 더블클릭하고 나면, :numref:`figure_parameters_dialog` 과 비슷한 "
+"대화창이 열립니다. (이 그림은 ``Centroids`` 알고리즘에 대응하는 대화창입니다.)"
+
 #: ../../docs/user_manual/processing/toolbox.rst:80
 msgid "Algorithm Dialog - Parameters"
 msgstr "알고리즘 대화창 ─ 파라미터 탭"
+
+#: ../../docs/user_manual/processing/toolbox.rst:82
+msgid ""
+"The dialog shows two tabs (:guilabel:`Parameters` and :guilabel:`Log`) on "
+"the left part, the algorithm description on the right, and a set of buttons "
+"at the bottom."
+msgstr ""
+"이 대화창 왼쪽에는 탭이 2개 (:guilabel:`Parameters` 와 :guilabel:`Log`) 있으며, 오른쪽에는 알고리즘 "
+"설명이, 하단에는 몇몇 버튼들이 있습니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:86
+msgid ""
+"The :guilabel:`Parameters` tab is used to set the input values that the "
+"algorithm needs to be executed. It shows a list of input values and "
+"configuration parameters to be set. It of course has a different content, "
+"depending on the requirements of the algorithm to be executed, and is "
+"created automatically based on those requirements."
+msgstr ""
+":guilabel:`Parameters` 탭에서 알고리즘을 실행하는 데 필요한 입력값들을 설정할 수 있습니다. 이 탭은 설정해야 할 "
+"입력값 및 환경 설정 파라미터 목록을 표시합니다. 물론 실행할 알고리즘의 요구 사항에 따라 목록 내용이 달라지며, 해당 요구 사항을 "
+"기반으로 자동적으로 생성됩니다."
 
 #: ../../docs/user_manual/processing/toolbox.rst:92
 msgid ""
@@ -243,6 +303,10 @@ msgstr ""
 "QGIS가 불러온 데이터에 관련된 몇몇 유용한 변수들을 표현식에 추가할 수 있습니다. 즉 어떤 레이어의 셀 크기 또는 다른 레이어의 "
 "최북단 좌표 같은, 이런 변수들에서 파생된 어떤 값이라도 선택할 수 있다는 뜻입니다."
 
+#: ../../docs/user_manual/processing/toolbox.rst:385
+msgid "dataDefined"
+msgstr "dataDefined"
+
 #: ../../docs/user_manual/processing/toolbox.rst:152
 msgid "Expression based input"
 msgstr "표현식 기반 입력"
@@ -271,6 +335,39 @@ msgid ""
 msgstr ""
 "**좌표계**: 드롭다운 목록에서 최근 사용한 좌표계 가운데 선택하거나 또는 목록 오른쪽에 있는 |browse| 버튼을 누르면 열리는 "
 ":ref:`좌표계 선택기 <crs_selector>` 에서 선택할 수 있습니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:161
+msgid ""
+"An **extent**, a text box defining a rectangle through its corners "
+"coordinate in the format ``xmin, xmax, ymin, ymax``. Clicking on the button "
+"on the right-hand side of the value selector, a pop-up menu will appear, "
+"giving you options to:"
+msgstr ""
+"**범위(extent)**: ``xmin``, ``xmax``, ``ymin``, ``ymax`` 서식으로 된 모서리 좌표를 통해 "
+"직사각형을 정의하는 텍스트 란입니다. 값 선택기 오른쪽에 있는 |browse| 버튼을 클릭하면, 다음 세 가지 옵션을 제공하는 팝업 "
+"메뉴가 나타납니다:"
+
+#: ../../docs/user_manual/processing/toolbox.rst:166
+msgid ""
+":guilabel:`Calculate from layer`: fills the text box with the coordinates of"
+" the bounding box of a layer to select among the loaded ones"
+msgstr ""
+":guilabel:`Calculate from layer`: 불러온 레이어들 가운데 선택한 레이어의 경계 상자 좌표로 텍스트 란을 "
+"채웁니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:168
+msgid ":guilabel:`Use map canvas extent`"
+msgstr ":guilabel:`Use map canvas extent`: 맵 캔버스 범위의 좌표로 텍스트 란을 채웁니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:169
+msgid ""
+":guilabel:`Draw on canvas`: the parameters window will hide itself, so you "
+"can click and drag onto the canvas. Once you have defined the extent "
+"rectangle, the dialog will reappear, containing the values in the extent "
+"text box."
+msgstr ""
+":guilabel:`Draw on canvas`: 파라미터 대화창이 사라져서 캔버스 상에서 직사각형을 클릭&드래그할 수 있게 됩니다. "
+"직사각형 영역을 정의하고 나면, 대화창이 범위 텍스트 란에 값을 담은 채 다시 나타납니다."
 
 #: ../../docs/user_manual/processing/toolbox.rst:179
 msgid "Extent selector"
@@ -317,9 +414,71 @@ msgid ""
 "using the buttons on the right side of the window."
 msgstr "알고리즘에 따라, 대화창 우측에 있는 버튼들을 사용해서 여러 행들을 수정할 수도 있고 못 할 수도 있습니다."
 
+#: ../../docs/user_manual/processing/toolbox.rst:211
+msgid ""
+"Some algorithms require many parameters to run, e.g. in the "
+":ref:`qgisrastercalculator` you have to specify manually the cell size, the "
+"extent and the CRS. You can avoid to choose all the parameters manually when"
+" the algorithm has the ``Reference layers`` parameter. With this parameter "
+"you can choose the reference layer and all its properties (cell size, "
+"extent, CRS) will be used."
+msgstr ""
+"일부 알고리즘은 실행하는 데 많은 파라미터를 필요로 합니다. 예를 들어 :ref:`qgisrastercalculator` 에서는 사용자가"
+" 직접 셀 크기, 범위 및 좌표계를 지정해야 합니다. 알고리즘이 ``Reference layers`` 파라미터를 가지고 있을 경우 모든 "
+"파라미터를 직접 지정하는 일을 피할 수 있습니다. 이 파라미터를 사용하면 참조 레이어와 사용할 모든 레이어 속성(셀 크기, 범위, "
+"좌표계)을 선택할 수 있습니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:218
+msgid ""
+"Along with the :guilabel:`Parameters` tab, there is another tab named "
+":guilabel:`Log` (see :numref:`figure_alg_dialog_log` below). Information "
+"provided by the algorithm during its execution is written in this tab, and "
+"allow you to track the execution and be aware and have more details about "
+"the algorithm as it runs. Information on algorithm execution is also output "
+"in the :menuselection:`View --> Panels --> Log Messages Panel`."
+msgstr ""
+":guilabel:`Log` 라는 또다른 탭이 :guilabel:`Parameters` 탭 옆에 있습니다. (다음 "
+":numref:`figure_alg_dialog_log` 참조) 이 탭은 알고리즘 실행 도중 알고리즘이 제공하는 정보를 표시해서 사용자가"
+" 그 과정을 추적하고 더 자세한 정보를 알 수 있게 해줍니다. 알고리즘 실행 정보는 :menuselection:`View --> "
+"Panels --> Log Messages Panel` 에도 산출됩니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:226
+msgid ""
+"Notice that not all algorithms write information to the :guilabel:`Log` tab,"
+" and many of them might run silently without producing any output other than"
+" the final files. Check the :guilabel:`Log Messages Panel` in that case."
+msgstr ""
+"하지만 모든 알고리즘이 :guilabel:`Log` 탭에 정보를 작성하지는 않습니다. 사실 최종 파일 이외에는 어떤 정보도 출력하지 않은"
+" 채 조용히 실행되는 알고리즘이 많습니다. 이 경우 :guilabel:`Log Messages Panel` 을 확인하십시오."
+
 #: ../../docs/user_manual/processing/toolbox.rst:236
 msgid "Algorithm Dialog - Log"
 msgstr "알고리즘 대화창 ─ 로그 탭"
+
+#: ../../docs/user_manual/processing/toolbox.rst:238
+msgid ""
+"At the bottom of the :guilabel:`Log` tab you will find buttons to |fileSave|"
+" :guilabel:`Save Log to File`, |editCopy| :guilabel:`Copy Log to Clipboard` "
+"and |clearConsole| :guilabel:`Clear Log`. These are particularly handy when "
+"you have checked the :guilabel:`Keep dialog open after running algorithm` in"
+" the :guilabel:`General` part of the Processing options."
+msgstr ""
+":guilabel:`Log` 탭 하단에 |fileSave| :guilabel:`Save Log to File`, |editCopy| "
+":guilabel:`Copy Log to Clipboard` 및 |clearConsole| :guilabel:`Clear Log` 버튼이"
+" 있습니다. 공간 처리 옵션 대화창의 :guilabel:`General` 그룹에서 |checkbox| :guilabel:`Keep "
+"dialog open after running algorithm` 옵션을 활성화한 경우 이 도구들이 특히 유용합니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:389
+msgid "fileSave"
+msgstr "fileSave"
+
+#: ../../docs/user_manual/processing/toolbox.rst:387
+msgid "editCopy"
+msgstr "editCopy"
+
+#: ../../docs/user_manual/processing/toolbox.rst:383
+msgid "clearConsole"
+msgstr "clearConsole"
 
 #: ../../docs/user_manual/processing/toolbox.rst:245
 msgid ""
@@ -342,6 +501,16 @@ msgstr ""
 "알고리즘이 사용하는 모든 파라미터에 대한 설명이나 예시를 포함할 수도 있는 더 자세한 도움말 파일이 필요한 경우, 대화창 하단에 있는 "
 ":guilabel:`Help` 버튼을 클릭하면 :ref:`공간 처리 알고리즘 문서 <processing_algs>` 또는 (몇몇 제 3자"
 " 제공자의 경우) 제공자 문서를 볼 수 있습니다."
+
+#: ../../docs/user_manual/processing/toolbox.rst:255
+msgid ""
+"The :guilabel:`Run as batch process` button triggers the :ref:`batch "
+"processing mode <processing_batch>` allowing to configure and run multiple "
+"instances of the algorithm with a variety of parameters."
+msgstr ""
+":guilabel:`Run as batch process` 버튼을 누르면 :ref:`배치 프로세스 모드 "
+"<processing_batch>` 를 촉발합니다. 이 모드에서 알고리즘의 중복된 인스턴스들을 서로 다른 파라미터로 환경 설정하고 실행할"
+" 수 있습니다."
 
 #: ../../docs/user_manual/processing/toolbox.rst:261
 msgid "A note on projections"
