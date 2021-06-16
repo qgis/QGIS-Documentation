@@ -16,7 +16,7 @@ Statistics of translation
      - Overall Translation ratio
    * - **31789**
      - **57**
-     - **11.05%**
+     - **11.06%**
 
 
 
@@ -56,7 +56,7 @@ Statistics of translation
    * - Danish
      - 0.67
      - Dutch
-     - 99.64
+     - 100.0
      - Estonian
      - 1.34
    * - Finnish
@@ -88,7 +88,7 @@ Statistics of translation
      - Kabyle
      - 0.11
      - Korean
-     - 67.82
+     - 68.06
    * - Lithuanian
      - 1.02
      - Macedonian
