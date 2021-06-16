@@ -62,7 +62,7 @@ Statistics of translation
    * - Finnish
      - 1.84
      - French
-     - 99.43
+     - 99.46
      - Galician
      - 0.6
    * - Georgian
