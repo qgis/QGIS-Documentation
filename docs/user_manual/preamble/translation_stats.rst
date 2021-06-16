@@ -76,7 +76,7 @@ Statistics of translation
      - Hindi
      - 0.31
      - Hungarian
-     - 0.76
+     - 1.13
    * - Igbo
      - 0.01
      - Indonesian
