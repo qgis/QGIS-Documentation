@@ -56,7 +56,7 @@ Statistics of translation
    * - Danish
      - 0.67
      - Dutch
-     - 99.25
+     - 99.3
      - Estonian
      - 1.34
    * - Finnish
