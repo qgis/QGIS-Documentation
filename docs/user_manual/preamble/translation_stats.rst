@@ -88,7 +88,7 @@ Statistics of translation
      - Kabyle
      - 0.11
      - Korean
-     - 68.43
+     - 68.45
    * - Lithuanian
      - 1.02
      - Macedonian
