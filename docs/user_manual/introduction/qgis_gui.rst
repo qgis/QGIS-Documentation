@@ -855,6 +855,10 @@ actions like:
      -
      -
      - :ref:`browser_panel`
+   * - :menuselection:`--> Geometry Validation`
+     -
+     -
+     - :ref:`digitizingmenu`
    * - :menuselection:`--> GPS Information`
      -
      -
@@ -2031,6 +2035,7 @@ Below is a list of the default panels provided by QGIS:
 
 * the :ref:`Advanced Digitizing Panel <advanced_digitizing_panel>`
 * the :ref:`Browser Panel <browser_panel>`
+* the :ref:`Geometry Validation Panel <geometry_validation_panel>`
 * the :ref:`GPS Information Panel <sec_gpstracking>`
 * the :ref:`Identify Panel <identify>`
 * the :ref:`Layer Order Panel <layer_order>`
