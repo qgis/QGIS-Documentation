@@ -40,28 +40,61 @@ MSSQL Spatial and Oracle Spatial vector layers and tables.
 Setting the snapping tolerance and search radius
 ================================================
 
+Under the :menuselection:`Settings --> Options... --> Digitizing` menu,
+QGIS provides a number of parameters to configure default behaviour of
+editing tools. More information at :ref:`digitizing_options`.
+
 For optimal and accurate editing of vector layer geometries, we need
 to set an appropriate value of snapping tolerance and search radius for
-features vertices.
+features vertices. The :guilabel:`Snapping` group provides related options,
+namely handling of the snapping tolerance and the search radius.
 
-.. index:: Snapping tolerance
+* Snapping tolerance: When you add a new vertex or move an existing one,
+  the snapping tolerance is the distance QGIS uses to search for the closest
+  vertex or segment you are trying to connect to.
+  If you are not within the snapping tolerance, QGIS will leave the
+  vertex where you release the mouse button, instead of snapping
+  it to an existing vertex or segment.
 
-Snapping tolerance
-------------------
+  The tolerance setting affects all tools that work with snapping and
+  applies by default to new layers and projets. It can however be overridden
+  at layer level (see :ref:`snapping_options`).
 
-When you add a new vertex or move an existing one, the snapping
-tolerance is the distance QGIS uses to search for the closest vertex
-or segment you are trying to connect to.
-If you are not within the snapping tolerance, QGIS will leave the
-vertex where you release the mouse button, instead of snapping
-it to an existing vertex or segment.
+.. index:: Search radius
 
-The snapping tolerance setting affects all tools that work with tolerance.
+* Search radius:
+  :guilabel:`Search radius for vertex edits` is the distance QGIS uses
+  to ``search`` for the vertex to select when you click on the map.
+  If you are not within the search radius, QGIS will not find and select
+  any vertex for editing.
 
-You can enable / disable snapping by using the |snapping| :sup:`Enable
-snapping` button on the :guilabel:`Snapping Toolbar` or pressing :kbd:`s`.
+Snap tolerance and search radius are set in ``map units`` or ``pixels``.
+You may need to experiment to get them right.
+If you specify a too big tolerance, QGIS may snap to the wrong vertex,
+especially if you are dealing with a large number of vertices in close
+proximity.
+The smaller the search radius, the more difficult it will be to hit
+what you want to move.
+
+.. _snapping_options:
+
+Snapping and Digitizing Options
+================================
+
+Global :ref:`snapping and digitizing settings <digitizing_options>`
+(snapping mode, tolerance value, and units...) can be overridden in the
+project from the :menuselection:`Project --> Snapping Options...` menu.
+In the :guilabel:`Snapping and Digitizing Options`, you can also configure
+some other properties (snapping layers, scale limit, topology...)
+The guilabel:`Snapping Toolbar` gives access to most of these features.
+
+By default, snapping is disabled in a project until you press the
+|snapping| :sup:`Enable snapping` button or press :kbd:`S`.
 The snapping mode, tolerance value, and units can also be configured in
 this toolbar.
+
+Snapping properties
+-------------------
 
 There are three options to select the layer(s) to snap to:
 
@@ -144,28 +177,6 @@ Another available option is to use |snappingIntersection| :guilabel:`snapping on
 intersection`, which allows you to snap to geometry intersections of
 snapping enabled layers, even if there are no vertices at the intersections.
 
-
-
-
-Search radius
---------------
-
-:guilabel:`Search radius for vertex edits` is the distance QGIS uses
-to ``search`` for the vertex to select when you click on the map.
-If you are not within the search radius, QGIS will not find and select
-any vertex for editing.
-The search radius for vertex edits can be defined under the
-:menuselection:`Settings -->` |options|
-:menuselection:`Options --> Digitizing` tab (this is where you define
-the snapping default values).
-
-Snap tolerance and search radius are set in ``map units`` or ``pixels``.
-You may need to experiment to get them right.
-If you specify a too big tolerance, QGIS may snap to the wrong vertex,
-especially if you are dealing with a large number of vertices in close
-proximity.
-The smaller the search radius, the more difficult it will be to hit
-what you want to move.
 
 .. index:: Limit snapping to a scale range
 
