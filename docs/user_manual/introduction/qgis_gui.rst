@@ -166,7 +166,7 @@ The :menuselection:`Project` menu provides access and exit points for
    * - :guilabel:`Snapping Options...`
      -
      -
-     - :ref:`snapping_tolerance`
+     - :ref:`snapping_options`
    * - :menuselection:`Import/Export -->`
      -
      -
