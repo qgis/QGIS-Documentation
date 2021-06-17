@@ -12,17 +12,13 @@
 QGIS has various capabilities for editing OGR, SpatiaLite, PostGIS,
 MSSQL Spatial and Oracle Spatial vector layers and tables.
 
-Digitizing can be done by placing nodes manually. And for lines and polygons,
-free-hand digitizing can be toggled by pressing :kbd:`R` or activating
-stream digitizing in the :guilabel:`Advanced Digitizing Toolbar`.
-
 .. note::
    The procedure for editing GRASS layers is different - see section
    :ref:`grass_digitizing` for details.
 
 .. _tip_concurrent_edits:
 
-.. tip:: **Concurrent Edits**
+.. attention:: **Concurrent Edits**
 
    This version of QGIS does not track if somebody else is editing the
    same feature at the same time as you are.
@@ -32,15 +28,16 @@ stream digitizing in the :guilabel:`Advanced Digitizing Toolbar`.
 
 .. tip:: **Validating Edits**
 
-   Continuous validation can be acivated on a layer basis in the
-   Layer Properties -> Digitizing Tab.
+   Continuous validation can be activated on a layer basis in the
+   :menuselection:`Layer Properties --> Digitizing` tab.
+   More at :ref:`digitizingmenu`.
 
-.. index:: Snapping
+.. index:: Snapping; Snapping tolerance
    single: Digitizing; Snapping
 
 .. _`snapping_tolerance`:
 
-Setting the Snapping Tolerance and Search Radius
+Setting the snapping tolerance and search radius
 ================================================
 
 For optimal and accurate editing of vector layer geometries, we need
@@ -76,7 +73,8 @@ There are three options to select the layer(s) to snap to:
 * :guilabel:`Current layer`: only the active layer is used, a convenient
   way to ensure topological consistency within the layer being edited.
 * :guilabel:`Advanced Configuration`: allows you to enable and adjust
-  snapping mode and tolerance on a layer basis (see :numref:`figure_edit_snapping`).
+  snapping mode, tolerance and units, overlaps and scales of snapping
+  on a layer basis (see :numref:`figure_edit_snapping`).
   If you need to edit a layer and snap its vertices to another, make
   sure that the target layer is checked and increase the snapping
   tolerance to a higher value.
@@ -85,6 +83,23 @@ There are three options to select the layer(s) to snap to:
 
 As for snapping mode, you can choose between ``Vertex``, ``Segment``,
 ``Area``, ``Centroid``, ``Middle of Segments`` and ``Line Endpoints``.
+
+.. index:: Snapping icons
+
+QGIS will show different *snap* icons depending on the kind of *snap*:
+
+.. list-table::
+
+   * - .. figure:: img/snap_vertex_icon.png
+     - .. figure:: img/snap_segment_icon.png
+     - .. figure:: img/snap_intersection_icon.png
+   * - Snapping to a vertex: box icon
+     - Snapping to a segment: hourglass icon
+     - Snapping to an intersection: cross icon
+
+
+Note that it is possible to change the color of these icons in the
+:guilabel:`Digitizing` part of the global settings.
 
 The tolerance values can be set either in the project's ``map units``
 or in ``pixels``.
@@ -97,14 +112,6 @@ distances.
 For example, if you have a minimum distance between elements, this
 option can be useful to ensure that you don’t add vertices too close to
 each other.
-
-The snapping configuration can also be set in
-:menuselection:`Project --> Snapping Options...`.  Or it can be customized for
-each layer in the :guilabel:`Digitizing` tab of the layer properties dialog.
-This will show This will show a dotted grid when the scale is low enough to
-show the specified precision limit.
-Snapping can then be performed on the dots of the grid. The dots will only appear
-when the canvas scale is near the precision limit.
 
 .. _figure_edit_snapping:
 
@@ -137,27 +144,7 @@ Another available option is to use |snappingIntersection| :guilabel:`snapping on
 intersection`, which allows you to snap to geometry intersections of
 snapping enabled layers, even if there are no vertices at the intersections.
 
-.. index:: Snapping icons
 
-Snapping icons
---------------
-
-QGIS will show different *snap* icons depending on the kind of *snap*:
-
-.. list-table::
-
-   * - .. figure:: img/snap_vertex_icon.png
-     - .. figure:: img/snap_segment_icon.png
-     - .. figure:: img/snap_intersection_icon.png
-   * - Snapping to a vertex: box icon
-     - Snapping to a segment: hourglass icon
-     - Snapping to an intersection: cross icon
-
-
-Note that it is possible to change the color of these icons in the
-:guilabel:`Digitizing` part of your settings.
-
-.. index:: Search radius
 
 
 Search radius
@@ -181,7 +168,6 @@ The smaller the search radius, the more difficult it will be to hit
 what you want to move.
 
 .. index:: Limit snapping to a scale range
-
 
 Limit snapping to a scale range
 -------------------------------
@@ -209,11 +195,41 @@ To limit snapping to a scale range you have three modes available:
   When selecting this mode two columns become available
   to configure the minimum and maximum scales for each layer.
 
-
-
 Please note that the minimum and maximum scales follow the QGIS convention:
 minimum scale is the most "zoomed out" scale while maximum scale is the most "zoomed in".
 A minimum or maximum scale that is set to "0" or "not set" is considered not limiting.
+
+Self-snapping
+-------------
+
+The |snappingSelf| :sup:`Self-snapping` option allows you to snap to
+the geometry that is being edited. Combined with the :ref:`advanced
+digitizing panel <advanced_digitizing_panel>`, this provides a handy way
+to digitize new edges relative to the previous edges or vertices.
+Self-snapping can cause invalid geometries, use with caution.
+
+.. only:: html
+
+  .. _figure_self_snapping:
+
+  .. figure:: img/self_snapping.gif
+     :align: center
+
+     Drawing features with self-snapping
+
+.. index:: Grid snapping
+
+Snapping on custom grid
+-----------------------
+
+A snapping distance can also be customized on a layer basis in the
+:guilabel:`Digitizing` tab of the layer properties dialog.
+With setting the :guilabel:`Geometry precision` distance, you enable
+a dotted grid visible when the map canvas is at a coherent scale for display.
+Snapping can then be performed on the dots of the grid: an added or modified
+geometry will have all of its vertices snapped automatically to the closest
+node of the grid. More information at :ref:`digitizingmenu`.
+
 
 .. index:: Topological editing
    single: Digitizing; Topology
@@ -257,7 +273,11 @@ It can be controlled by the overlap tool. Three modes are available:
 
 #. |allowIntersections| :guilabel:`Allow Overlap` (default)
 #. |avoidIntersectionsCurrentLayer| :guilabel:`Avoid Overlap on Active Layer`:
-   prevents any overlap with other features from the layer being edited
+   prevents any overlap with other features from the layer being edited.
+   Digitize the new geometries so that they overlap their neighbours and
+   QGIS will cut the overlapping part(s) of the new geometries and snap them
+   to the boundary of the existing features. The advantage is that you don't
+   have to digitize the common vertices on boundary.
 #. |avoidIntersectionsLayers| :guilabel:`Follow Advanced Configuration`:
    allows the overlapping setting to be set on a layer basis in the
    :guilabel:`Advanced configuration` view mode.
@@ -271,9 +291,6 @@ It can be controlled by the overlap tool. Three modes are available:
    you can get unexpected geometries if you forget to uncheck it when no longer
    needed.
 
-QGIS will cut the geometry of any new polygon to the boundary of the existing ones.
-The advantage is that you don't have to digitize all vertices of the common boundary
-by voluntarily overlapping any new geometries and letting QGIS cut them.
 
 .. index::
    single: Digitizing tools; Automatic tracing
@@ -349,26 +366,6 @@ direction and a negative value does the opposite.
    seealso: Digitizing; Attribute table
 
 .. _sec_edit_existing_layer:
-
-
-Self-snapping
--------------
-
-The |snappingSelf| :sup:`Self-snapping` option allows you to snap to
-the geometry that is being edited. Combined with the :ref:`advanced
-digitizing panel <advanced_digitizing_panel>`, this provides a handy way
-to digitize new edges relative to the previous edges or vertices.
-Self-snapping can cause invalid geometries, use with caution.
-
-.. only:: html
-
-  .. _figure_self_snapping:
-
-  .. figure:: img/self_snapping.gif
-     :align: center
-
-     Drawing features with self-snapping
-
 
 Digitizing an existing layer
 ============================
@@ -475,6 +472,10 @@ geometry then enter its attributes. To digitize the geometry:
    capability to accelerate the digitization.
    This will create consecutive straight lines between the vertices you
    place.
+
+   Along with placing nodes clik by click, lines and polygons can be free-hand
+   digitized, pressing :kbd:`R` or activating |streamingDigitize|
+   :sup:`Stream digitizing` in the :guilabel:`Advanced Digitizing Toolbar`.
 
    .. note::
     Pressing :kbd:`Delete` or :kbd:`Backspace` key reverts the last
