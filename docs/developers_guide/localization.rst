@@ -85,9 +85,9 @@ there is no match.
 
 The general recommendation is to use :class:`QgsDoubleSpinBox <qgis.gui.QgsDoubleSpinBox>`
 for all floating point types I/O whenever it is possible because it is very well tested and
-it validates the input correctly, as an alternative it is possible
+it validates the input correctly. As an alternative it is possible
 to use the :class:`QgsDoubleValidator <qgis.gui.QgsDoubleValidator>` class
-intedependently on a string obtained from another widget (e.g. a simple
+inedependently on a string obtained from another widget (e.g. a simple
 ``QLineEdit`` widget).
 
 
