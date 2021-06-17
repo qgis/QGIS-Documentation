@@ -159,7 +159,7 @@ Parameters
      - [raster]
      - The input raster
    * - **Mask layer**
-     - ``EXTENT``
+     - ``MASK``
      - [vector: polygon]
      - Vector mask for clipping the raster
    * - **Source CRS**
