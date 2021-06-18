@@ -251,7 +251,8 @@ the |unchecked| :guilabel:`Draw Background` checkbox and select
 the :guilabel:`Shape` type. It can be:
 
 * a regular shape such as :guilabel:`Rectangle`, :guilabel:`Square`,
-  :guilabel:`Circle` or :guilabel:`Ellipse`
+  :guilabel:`Circle` or :guilabel:`Ellipse` using full properties of a
+  :ref:`fill symbol <vector_fill_symbols>`
 * an :guilabel:`SVG` symbol from a file, a URL or embedded in the project
   or style database (:ref:`more details <embedded_file_selector>`)
 * or a :guilabel:`Marker Symbol` you can create or select from the
@@ -283,12 +284,9 @@ properties:
 * An :guilabel:`Opacity` of the background
 * A :guilabel:`Blend mode` to mix the background with the other items in the
   rendering (see :ref:`blend-modes`).
-* The :guilabel:`Fill color`, :guilabel:`Stroke color` and
-  :guilabel:`Stroke width` for shape types other than the marker symbol.
-  Use the :guilabel:`Load symbol parameters` to revert changes on an SVG symbol
-  to its default settings.
-* A :guilabel:`Pen join style`: it can be :guilabel:`Round`, :guilabel:`Miter`
-  or :guilabel:`Bevel` (applies to rectangle and square shapes only)
+* For SVG symbol, you can use its default properties (:guilabel:`Load symbol
+  parameters`) or set a custom :guilabel:`Fill color`, :guilabel:`Stroke color`
+  and :guilabel:`Stroke width`.
 * |unchecked| :guilabel:`Draw effects` to add advanced |paintEffects|
   :ref:`paint effects <draw_effects>` for improving text readability,
   eg through outer glows and blurs.
