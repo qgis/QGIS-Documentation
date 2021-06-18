@@ -358,6 +358,13 @@ Depending on the format of export, some of these options may be available:
   ``value map``, you can keep the displayed values in the layer by checking
   |checkbox| :guilabel:`Replace all selected raw fields values by displayed
   values`.
+* :guilabel:`Persist layer metadata`: ensures that any layer :ref:`metadata
+  <vectormetadatamenu>` present in the source layer will be copied and stored:
+
+  * in the newly created layer, if the output is of GeoPackage format
+  * as a :file:`.qmd` file along with the output layer, for other formats.
+    Note that file-based formats supporting more than one dataset
+    (e.g. SpatiaLite, DXF,...) may have unintended behavior.
 * :guilabel:`Symbology export`: can be used mainly for DXF export and for all
   file formats who manage OGR feature styles (see note below) as DXF, KML, tab
   file formats:
