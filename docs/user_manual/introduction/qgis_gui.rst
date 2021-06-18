@@ -2454,7 +2454,15 @@ Terrain
     tiles to hide the cracks.
 
 * :guilabel:`Terrain elevation offset`: moves the terrain up or down,
-  e.g. to adjust its elevation with the ground of some objects
+  e.g. to adjust its elevation with respect to the ground level of other objects
+  in the scene.
+
+  This can be useful when there is a discrepancy between the height of the terrain
+  and the height of layers in your scene (e.g. point clouds which use a relative
+  vertical height only). In this case adjusting the terrain elevation manually to
+  coincide with the elevation of objects in your scene can improve the navigation
+  experience.
+
 * When a mesh layer is used as terrain, you can configure the
   :guilabel:`Triangles settings` (wireframe display, smooth triangles) and the
   :guilabel:`Rendering colors settings` (as uniform or depending on terrain level).
