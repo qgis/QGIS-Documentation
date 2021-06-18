@@ -56,6 +56,11 @@ in order to be interpreted and evaluated as such.
   .. tip:: The top menu :menuselection:`Add Item --> Add Dynamic Text -->` can be
    used to create a new label item filled with the selected predefined expression.
 
+  It's possible to turn a dynamic label into static: press the drop-down arrow
+  next to the :guilabel:`Insert/Edit Expression...` button and select
+  :guilabel:`Convert to Static`. Any dynamic parts of the label's contents
+  will be evaluated and replaced with their current values.
+  You can then manually tweak the resulting text when needed.
 
 * Labels can be interpreted as HTML code: check |checkbox|
   :guilabel:`Render as HTML`. You can now insert HTML tags or styles, URL,
