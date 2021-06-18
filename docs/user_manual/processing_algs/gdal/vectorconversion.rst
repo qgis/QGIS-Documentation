@@ -286,6 +286,16 @@ Parameters
 
        Default: 0.0
      - A fixed value to burn into a band for all features.
+   * - **Burn value extracted from the "Z" values of the feature** 
+
+       Optional
+     - ``USE_Z``
+     - [boolean]
+
+       Default: False
+     - Indicates that a burn value should be extracted from the "Z" values of the feature.
+       Works with points and lines (linear interpolation along each segment).
+       For polygons, works properly only if they are flat (same Z value for all vertices)
    * - **Output raster size units**
      - ``UNITS``
      - [enumeration]
