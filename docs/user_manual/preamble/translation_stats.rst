@@ -6,7 +6,7 @@
 Statistics of translation
 ===========================
 
-*(last update: 2021-06-17)*
+*(last update: 2021-06-19)*
 
 .. list-table::
    :widths: auto
@@ -62,7 +62,7 @@ Statistics of translation
    * - Finnish
      - 1.84
      - French
-     - 99.47
+     - 99.64
      - Galician
      - 0.6
    * - Georgian
@@ -84,7 +84,7 @@ Statistics of translation
      - Italian
      - 56.79
    * - Japanese
-     - 50.28
+     - 50.31
      - Kabyle
      - 0.11
      - Korean
