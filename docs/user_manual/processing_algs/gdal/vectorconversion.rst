@@ -286,7 +286,7 @@ Parameters
 
        Default: 0.0
      - A fixed value to burn into a band for all features.
-   * - **Burn value extracted from the "Z" values of the feature** 
+   * - **Burn value extracted from the "Z" values of the feature** |320|
 
        Optional
      - ``USE_Z``
@@ -427,3 +427,12 @@ Python code
 .. include:: ../qgis/qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |320| replace:: ``NEW in 3.20``
