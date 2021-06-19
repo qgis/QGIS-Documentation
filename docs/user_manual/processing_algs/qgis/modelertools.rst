@@ -284,6 +284,147 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+.. _qgislayouttoimage:
+
+Layout to image
+-----------------------
+This algorithm outputs a print layout as an image file (e.g. PNG or JPEG images)
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Print Layout**
+     - ``LAYOUT``
+     - [Layout]
+     - Layout to export
+   * - **DPI**
+     - ``DPI``
+     - [Int]
+     - DPI of the output
+   * - **Generate world file**
+     - ``GEOREFERENCE``
+     - [Bool]
+     - Determines if a world file should be generated
+   * - **Export RDF metadata**
+     - ``INCLUDE_METADATA``
+     - [Bool]
+     - Determines if RDF metadata should be generated
+   * - **Enable antialiasing**
+     - ``ANTIALIAS``
+     - [Bool]
+     - Determines if antialiasing should be enabled
+
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Image file**
+     - ``OUTPUT``
+     - [File]
+     - Name (including path) of the file to generate
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:printlayouttoimage``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgislayoutopdf:
+
+Layout to pdf
+-----------------------
+This algorithm outputs a print layout as a PDF file.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Print Layout**
+     - ``LAYOUT``
+     - [Layout]
+     - Layout to export
+   * - **DPI**
+     - ``DPI``
+     - [Int]
+     - DPI of the output
+   * - **Always export as vectors**
+     - ``FORCE_VECTOR``
+     - [Bool]
+     - Determines if vectorial data should be left as vectors
+   * - **Generate world file**
+     - ``GEOREFERENCE``
+     - [Bool]
+     - Determines if georeference information should be added
+   * - **Export RDF metadata**
+     - ``INCLUDE_METADATA``
+     - [Bool]
+     - Determines if RDF metadata should be generated
+   * - **Disable tiled raster layer exports**
+     - ``DISABLE_TILED``
+     - [Bool]
+     - Determines if raster should be tiled
+   * - **Simplify geometries**
+     - ``SIMPLIFY``
+     - [Bool]
+     - Determines if geometries should be simplify to reduce output size
+   * - **Text export**
+     - ``TEXT_FORMAT``
+     - [Enum]
+     - Determines text should be exported as path or text objects.
+
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Image file**
+     - ``OUTPUT``
+     - [File]
+     - Name (including path) of the pdf to generate
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:printlayouttopdf``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisloadlayer:
 
@@ -304,11 +445,11 @@ Parameters
      - Description
    * - **Layer**
      - ``INPUT``
-     - [layer]
+     - [Layer]
      - Layer to load in the legend
    * - **Loaded layer name**
      - ``NAME``
-     - [string]
+     - [String]
      - Name of the loaded layer
 
 Outputs
