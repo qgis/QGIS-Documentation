@@ -855,6 +855,14 @@ actions like:
      -
      -
      - :ref:`browser_panel`
+   * - :menuselection:`--> Debugging/Development Tools`
+     -
+     -
+     -
+   * - :menuselection:`--> Geometry Validation`
+     -
+     -
+     - :ref:`digitizingmenu`
    * - :menuselection:`--> GPS Information`
      -
      -
@@ -903,6 +911,10 @@ actions like:
      -
      -
      - :ref:`statistical_summary`
+   * - :menuselection:`--> Temporal Controller`
+     -
+     -
+     -
    * - :menuselection:`--> Tile Scale`
      -
      -
@@ -2044,6 +2056,8 @@ Below is a list of the default panels provided by QGIS:
 
 * the :ref:`Advanced Digitizing Panel <advanced_digitizing_panel>`
 * the :ref:`Browser Panel <browser_panel>`
+* the :guilabel:`Debugging/Development Tools`
+* the :ref:`Geometry Validation Panel <geometry_validation_panel>`
 * the :ref:`GPS Information Panel <sec_gpstracking>`
 * the :ref:`Identify Panel <identify>`
 * the :ref:`Layer Order Panel <layer_order>`
@@ -2055,6 +2069,7 @@ Below is a list of the default panels provided by QGIS:
 * the :guilabel:`Result Viewer Panel`
 * the :ref:`Spatial Bookmark Manager Panel <sec_bookmarks>`
 * the :ref:`Statistics Panel <statistical_summary>`
+* the :guilabel:`Temporal Controller`
 * the :ref:`Tile Scale Panel <tilesets>`
 * the :ref:`Undo/Redo Panel <undo_redo_panel>`
 

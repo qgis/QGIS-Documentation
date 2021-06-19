@@ -3183,13 +3183,14 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
 
 To learn more about QGIS Server, read the :ref:`QGIS-Server-manual`.
 
+.. index:: Geometry fix
 .. _digitizingmenu:
 
 Digitizing Properties
 =====================
 
-|digitizing| The :guilabel:`Digitizing` tab gives access to options that help to ensure the
-quality of digitized geometries.
+|digitizing| The :guilabel:`Digitizing` tab gives access to options that help
+to ensure the quality of digitized geometries.
 
 .. _figure_digitizing_vector:
 
@@ -3215,7 +3216,7 @@ Geometry Checks
 
 In the :guilabel:`Geometry checks` section, additional validations on a per
 geometry basis can be activated. Immediately after any geometry modification,
-failures in these checks are reported to the user in the geometry validation panel.
+failures in these checks are reported to the user in the :guilabel:`Geometry validation` panel.
 As long as a check is failing, it is not possible to save the layer.
 The |checkbox| :guilabel:`Is valid` check will run basic validity checks like self intersection on
 geometries.
@@ -3225,7 +3226,7 @@ Topology Checks
 
 In the :guilabel:`Topology checks` section, additional topology validation
 checks can be activated. Topology checks will be executed when the user
-saves the layer. Check errors will be reported in the geometry validation
+saves the layer. Check errors will be reported in the :guilabel:`Geometry validation`
 panel. As long as validation errors are present, the layer can not be saved.
 Topology checks are executed in the area of the bounding box of the modified
 features. Since other features may be present in the same area, topological
@@ -3275,6 +3276,27 @@ during digitizing.
 If the :guilabel:`Add Allowed Gap` button is pushed, a new polygon with the geometry
 of the detected gap is inserted into the *Allowed Gaps Layer*.
 This makes it possible to quickly flag gaps as allowed.
+
+.. _geometry_validation_panel:
+
+Geometry validation panel
+.........................
+
+The :guilabel:`Geometry Validation` panel is triggered when any of the abovementioned
+digitizing checks finds an error. The dialog provides you with the list of errors
+and their description, and you can to browse the list using the keyboard arrows or
+dedicated arrows.
+
+You'll need to address all the issues before you can save edits to the layer.
+To do so:
+
+#. Select an error, and it's possible to:
+
+   * |zoomToSelected| :guilabel:`Zoom to Feature(s)`
+   * |zoomToLayer| :guilabel:`Zoom to problem`
+
+#. Pick the usual :ref:`digitizing tools <editingvector>` to fix the issue.
+
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -3457,3 +3479,8 @@ This makes it possible to quickly flag gaps as allowed.
    :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
+.. |zoomToLayer| image:: /static/common/mActionZoomToLayer.png
+   :width: 1.5em
+.. |zoomToSelected| image:: /static/common/mActionZoomToSelected.png
+   :width: 1.5em
+
