@@ -2,10 +2,6 @@ name: Translation statistics
 # Pull statistics of translation in Transifex
 
 on: 
-  push:
-    branches:
-      - master
-      - release_3.16
   schedule:
     # runs tuesday at 6:00 UTC
     - cron: '0 6 * * 2'
@@ -16,6 +12,9 @@ jobs:
 
     if: github.repository_owner == 'qgis'
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        target_branch: [master, release_3.16]
     env:
       TRANSIFEX_PASSWORD: ${{ secrets.TRANSIFEX_PASSWORD }}
 
@@ -24,6 +23,7 @@ jobs:
       uses: actions/checkout@v2
       with:
         fetch-depth: 1
+        ref: ${{ matrix.target_branch }}
 
     - name: Set up Python 3.7
       uses: actions/setup-python@v2
