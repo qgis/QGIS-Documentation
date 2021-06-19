@@ -687,7 +687,8 @@ This tab helps you configure general settings when :ref:`editing vector layer
   this choice can be overridden in each layer properties dialog.
 * |checkbox| :guilabel:`Reuse last entered attribute values`: remember the last 
   used value of every attribute and use it as default for the next feature being digitized. 
-  Works per layer.
+  Works per layer. This behavior can also be controled on a per-field basis
+  (see :ref:`configure_field`).
 * :guilabel:`Validate geometries`. Editing complex lines and polygons with many
   nodes can result in very slow rendering. This is because the default
   validation procedures in QGIS can take a lot of time. To speed up rendering, it
