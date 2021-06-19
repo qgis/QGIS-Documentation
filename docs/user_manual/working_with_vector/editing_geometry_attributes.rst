@@ -18,19 +18,26 @@ MSSQL Spatial and Oracle Spatial vector layers and tables.
 
 .. _tip_concurrent_edits:
 
-.. tip:: **Concurrent Edits**
+.. attention:: **Concurrent Edits**
 
    This version of QGIS does not track if somebody else is editing the
    same feature at the same time as you are.
    The last person to save the edits wins.
 
+.. _tip_validating_edits:
 
-.. index:: Snapping
+.. tip:: **Validating Edits**
+
+   Continuous validation can be activated on a layer basis in the
+   :menuselection:`Layer Properties --> Digitizing` tab.
+   More at :ref:`digitizingmenu`.
+
+.. index:: Snapping; Snapping tolerance
    single: Digitizing; Snapping
 
 .. _`snapping_tolerance`:
 
-Setting the Snapping Tolerance and Search Radius
+Setting the snapping tolerance and search radius
 ================================================
 
 For optimal and accurate editing of vector layer geometries, we need
@@ -56,9 +63,6 @@ snapping` button on the :guilabel:`Snapping Toolbar` or pressing :kbd:`s`.
 The snapping mode, tolerance value, and units can also be configured in
 this toolbar.
 
-The snapping configuration can also be set in
-:menuselection:`Project --> Snapping Options...`.
-
 There are three options to select the layer(s) to snap to:
 
 * :guilabel:`All layers`: quick setting for all visible layers in the
@@ -69,15 +73,33 @@ There are three options to select the layer(s) to snap to:
 * :guilabel:`Current layer`: only the active layer is used, a convenient
   way to ensure topological consistency within the layer being edited.
 * :guilabel:`Advanced Configuration`: allows you to enable and adjust
-  snapping mode and tolerance on a layer basis (see :numref:`figure_edit_snapping`).
+  snapping mode, tolerance and units, overlaps and scales of snapping
+  on a layer basis (see :numref:`figure_edit_snapping`).
   If you need to edit a layer and snap its vertices to another, make
   sure that the target layer is checked and increase the snapping
   tolerance to a higher value.
   Snapping will not occur to a layer that is not checked in the
   snapping options dialog.
 
-As for snapping mode, you can choose between ``To vertex``, ``To segment``,
-and ``To vertex and segment``.
+As for snapping mode, you can choose between ``Vertex``, ``Segment``,
+``Area``, ``Centroid``, ``Middle of Segments`` and ``Line Endpoints``.
+
+.. index:: Snapping icons
+
+QGIS will show different *snap* icons depending on the kind of *snap*:
+
+.. list-table::
+
+   * - .. figure:: img/snap_vertex_icon.png
+     - .. figure:: img/snap_segment_icon.png
+     - .. figure:: img/snap_intersection_icon.png
+   * - Snapping to a vertex: box icon
+     - Snapping to a segment: hourglass icon
+     - Snapping to an intersection: cross icon
+
+
+Note that it is possible to change the color of these icons in the
+:guilabel:`Digitizing` part of the global settings.
 
 The tolerance values can be set either in the project's ``map units``
 or in ``pixels``.
@@ -122,27 +144,7 @@ Another available option is to use |snappingIntersection| :guilabel:`snapping on
 intersection`, which allows you to snap to geometry intersections of
 snapping enabled layers, even if there are no vertices at the intersections.
 
-.. index:: Snapping icons
 
-Snapping icons
---------------
-
-QGIS will show different *snap* icons depending on the kind of *snap*:
-
-.. list-table::
-
-   * - .. figure:: img/snap_vertex_icon.png
-     - .. figure:: img/snap_segment_icon.png
-     - .. figure:: img/snap_intersection_icon.png
-   * - Snapping to a vertex: box icon
-     - Snapping to a segment: hourglass icon
-     - Snapping to an intersection: cross icon
-
-
-Note that it is possible to change the color of these icons in the
-:guilabel:`Digitizing` part of your settings.
-
-.. index:: Search radius
 
 
 Search radius
@@ -166,7 +168,6 @@ The smaller the search radius, the more difficult it will be to hit
 what you want to move.
 
 .. index:: Limit snapping to a scale range
-
 
 Limit snapping to a scale range
 -------------------------------
@@ -194,11 +195,41 @@ To limit snapping to a scale range you have three modes available:
   When selecting this mode two columns become available
   to configure the minimum and maximum scales for each layer.
 
-
-
 Please note that the minimum and maximum scales follow the QGIS convention:
 minimum scale is the most "zoomed out" scale while maximum scale is the most "zoomed in".
 A minimum or maximum scale that is set to "0" or "not set" is considered not limiting.
+
+Self-snapping
+-------------
+
+The |snappingSelf| :sup:`Self-snapping` option allows you to snap to
+the geometry that is being edited. Combined with the :ref:`advanced
+digitizing panel <advanced_digitizing_panel>`, this provides a handy way
+to digitize new edges relative to the previous edges or vertices.
+Self-snapping can cause invalid geometries, use with caution.
+
+.. only:: html
+
+  .. _figure_self_snapping:
+
+  .. figure:: img/self_snapping.gif
+     :align: center
+
+     Drawing features with self-snapping
+
+.. index:: Grid snapping
+
+Snapping on custom grid
+-----------------------
+
+A snapping distance can also be customized on a layer basis in the
+:guilabel:`Digitizing` tab of the layer properties dialog.
+With setting the :guilabel:`Geometry precision` distance, you enable
+a dotted grid visible when the map canvas is at a coherent scale for display.
+Snapping can then be performed on the dots of the grid: an added or modified
+geometry will have all of its vertices snapped automatically to the closest
+node of the grid. More information at :ref:`digitizingmenu`.
+
 
 .. index:: Topological editing
    single: Digitizing; Topology
@@ -227,22 +258,29 @@ the geometries of the neighboring features.
 Topological editing works with features from different layers, as long
 as the layers are visible and in editing mode.
 
+In layer with Z values, topological editing will interpolate the Z value of 
+the vertex based on the value of the edge used for the connection.
 
 .. index:: Avoid overlap
    seealso: Avoid overlap; Topology
 
-Avoid overlap of new polygons
------------------------------
+Overlapping control
+-------------------
 
-When the snapping mode is set to ``Advanced configuration``, for polygon layers,
-there's an option called |checkbox| :guilabel:`Avoid overlap`. This option
-prevents you from drawing new features that overlap existing ones in the
+Overlapping prevents you from drawing new features that overlap existing ones in the
 selected layer, speeding up digitizing of adjacent polygons.
+It can be controlled by the overlap tool. Three modes are available:
 
-With avoid overlap enabled, if you already have one polygon, you can digitize
-a second one such that they intersect. QGIS will then cut the second polygon to the
-boundary of the existing one. The advantage is that you don't have to
-digitize all vertices of the common boundary.
+#. |allowIntersections| :guilabel:`Allow Overlap` (default)
+#. |avoidIntersectionsCurrentLayer| :guilabel:`Avoid Overlap on Active Layer`:
+   prevents any overlap with other features from the layer being edited.
+   Digitize the new geometries so that they overlap their neighbours and
+   QGIS will cut the overlapping part(s) of the new geometries and snap them
+   to the boundary of the existing features. The advantage is that you don't
+   have to digitize the common vertices on boundary.
+#. |avoidIntersectionsLayers| :guilabel:`Follow Advanced Configuration`:
+   allows the overlapping setting to be set on a layer basis in the
+   :guilabel:`Advanced configuration` view mode.
 
 .. note:: If the new geometry is totally covered by existing ones, it gets
    cleared, and QGIS will show an error message.
@@ -254,16 +292,8 @@ digitize all vertices of the common boundary.
    needed.
 
 
-Geometry Checker
------------------
-
-A core plugin can help the user to find the geometry invalidity. You can find
-more information on this plugin at :ref:`geometry_checker`.
-
-
 .. index::
    single: Digitizing tools; Automatic tracing
-
 .. _tracing:
 
 Automatic Tracing
@@ -443,6 +473,10 @@ geometry then enter its attributes. To digitize the geometry:
    This will create consecutive straight lines between the vertices you
    place.
 
+   Along with placing nodes clik by click, lines and polygons can be free-hand
+   digitized, pressing :kbd:`R` or activating |streamingDigitize|
+   :sup:`Stream digitizing` in the :guilabel:`Advanced Digitizing Toolbar`.
+
    .. note::
     Pressing :kbd:`Delete` or :kbd:`Backspace` key reverts the last
     node you add.
@@ -463,6 +497,8 @@ geometry then enter its attributes. To digitize the geometry:
     in :menuselection:`Settings --> Options --> Digitizing` menu.
     You can also avoid the use of the rubber band by checking :guilabel:`Don't
     update rubber band during node editing`.
+
+#. For line feature pressing :kbd:`Shift` + right-click will close the line automatically.
 
 #. The attribute window will appear, allowing you to enter the information for
    the new feature. :numref:`Figure_edit_values` shows setting attributes for a fictitious
@@ -563,7 +599,9 @@ Red circles will appear when hovering vertices.
   A double-click on any location of the boundary also creates a new
   node.
   For lines, a virtual node is also proposed at both extremities of a
-  line to extend it.
+  line to extend it. When adding a node at the end of a line the function
+  will remain active until a right-click. This allows to easily extend an
+  existing line.
 
   .. _figure_vertex_add_node:
 
@@ -837,13 +875,17 @@ Advanced digitizing
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
 | Icon                      | Purpose                                 | Icon                   | Purpose                 |
 +===========================+=========================================+========================+=========================+
-| |cad|                     | Enable Advanced Digitizing Tools        | |tracing|              | Enable Tracing          |
+| |cad|                     | Enable Advanced Digitizing Tools        |                        |                         |
++---------------------------+-----------------------------------------+------------------------+-------------------------+
+| |digitizeWithCurve|       | Digitize with Curve                     | |streamingDigitize|    | Enable Stream Digitizing|
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
 | |moveFeature|             | Move Feature(s)                         | |moveFeatureCopy|      | Copy and Move Feature(s)|
 | |moveFeatureLine|         |                                         | |moveFeatureCopyLine|  |                         |
 | |moveFeaturePoint|        |                                         | |moveFeatureCopyPoint| |                         |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
 | |rotateFeature|           | Rotate Feature(s)                       | |simplifyFeatures|     | Simplify Feature        |
++---------------------------+-----------------------------------------+------------------------+-------------------------+
+| |scaleFeature|            | Scale Feature                           |                        |                         |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
 | |addRing|                 | Add Ring                                | |addPart|              | Add Part                |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
@@ -864,6 +906,21 @@ Advanced digitizing
 
 Table Advanced Editing: Vector layer advanced editing toolbar
 
+.. index::
+   single: Digitizing tools; Draw curves
+   single: Digitizing tools; Stream digitizing
+.. _draw_curves:
+
+Straight, curve and stream digitizing
+-------------------------------------
+
+The |digitizeWithCurve| :sup:`Digitize with Curve` tool allows you to draw curves in layers with
+geometries that support curves.
+
+Alternatively the |streamingDigitize| :sup:`Stream Digitizing` tool allows you to
+activate and deactivate stream digitizing. Allowing to create features in freehand
+mode. The tolerance of the tool affects the spacing between each created vertex
+when the tool is used with Advanced digitizing enabled.
 
 .. index::
    single: Digitizing tools; Move feature
@@ -938,8 +995,22 @@ To abort feature rotation, press the :kbd:`ESC` button or click on the
 |rotateFeature| :sup:`Rotate Feature(s)` icon.
 
 .. index::
+   single: Digitizing tools; Scale Feature
+.. _scale_feature:
+
+Scale Feature
+-------------
+
+The |scaleFeature| :sup:`Scale Feature` tool is similar to the Rotate feature. Though instead of performing
+a rotation of selected features, it rescales their geometry. The change is
+performed in relation to the anchor point and the scale ratio can be manually specified
+in the widget that appears in the upper corner of the canvas.
+
+
+.. index::
    single: Digitizing tools; Simplify Feature
 .. _simplify_feature:
+
 
 Simplify Feature
 ----------------
@@ -1240,8 +1311,11 @@ a multipolygon/multipolyline/multipoint feature is created.
    * manually replacing the value in the corresponding cell;
    * selecting a row in the table and pressing :guilabel:`Take attributes from
      selected feature` to use the values of this initial feature;
+   * pressing the :guilabel:`Take attributes from the largest geometry`
+     to use the attributes from the longest line feature
+     the largest polygon, or the multipoints with the most parts;
    * pressing :guilabel:`Skip all fields` to use empty attributes;
-   * or, expanding the drop down menu at the top of the table, select any of the
+   * expanding the drop down menu at the top of the table, select any of the
      above options to apply to the corresponding field only. There, you can also
      choose to aggregate the initial features attributes (Minimum, Maximum, Median,
      Sum, Count, Concatenation... depending on the type of the field.
@@ -1757,8 +1831,16 @@ and angle entered. Repeating the process, several points can be added.
 
    Points at given distance and angle
 
+
+Information Floater
+-------------------
+
+As an additional tool, the |floater| :sup:`Floater` can also be activated.
+This allows to display and edit the values in the panel right next to the cursor.
+
 .. index:: Edit in place
 .. _processing_inplace_edit:
+
 
 The Processing in-place layer modifier
 ======================================
@@ -1819,6 +1901,12 @@ To edit features in-place:
    :width: 2em
 .. |allEdits| image:: /static/common/mActionAllEdits.png
    :width: 1.5em
+.. |allowIntersections| image:: /static/common/mActionAllowIntersections.png
+   :width: 1.5em
+.. |avoidIntersectionsCurrentLayer| image:: /static/common/mActionAvoidIntersectionsCurrentLayer.png
+   :width: 1.5em
+.. |avoidIntersectionsLayers| image:: /static/common/mActionAvoidIntersectionsLayers.png
+   :width: 1.5em
 .. |cad| image:: /static/common/cad.png
    :width: 1.5em
 .. |cadConstruction| image:: /static/common/cad_construction.png
@@ -1861,6 +1949,8 @@ To edit features in-place:
    :width: 1.5em
 .. |delta| image:: /static/common/delta.png
    :width: 1.5em
+.. |digitizeWithCurve| image:: /static/common/mActionDigitizeWithCurve.png
+   :width: 1.5em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
 .. |editCut| image:: /static/common/mActionEditCut.png
@@ -1880,6 +1970,8 @@ To edit features in-place:
 .. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
    :width: 1.5em
 .. |fillRing| image:: /static/common/mActionFillRing.png
+   :width: 1.5em
+.. |floater| image:: /static/common/floater.png
    :width: 1.5em
 .. |locked| image:: /static/common/locked.png
    :width: 1.5em
@@ -1941,6 +2033,8 @@ To edit features in-place:
    :width: 1.5em
 .. |saveEdits| image:: /static/common/mActionSaveEdits.png
    :width: 1.5em
+.. |scaleFeature| image:: /static/common/mActionScaleFeature.png
+   :width: 1.5em
 .. |selectNumber| image:: /static/common/selectnumber.png
    :width: 2.8em
 .. |selectRectangle| image:: /static/common/mActionSelectRectangle.png
@@ -1953,9 +2047,13 @@ To edit features in-place:
    :width: 1.5em
 .. |snappingIntersection| image:: /static/common/mIconSnappingIntersection.png
    :width: 1.5em
+.. |snappingSelf| image:: /static/common/mIconSnappingSelf.png
+   :width: 1.5em
 .. |splitFeatures| image:: /static/common/mActionSplitFeatures.png
    :width: 1.5em
 .. |splitParts| image:: /static/common/mActionSplitParts.png
+   :width: 1.5em
+.. |streamingDigitize| image:: /static/common/mActionStreamingDigitize.png
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
