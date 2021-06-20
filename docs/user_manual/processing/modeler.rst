@@ -301,10 +301,10 @@ your model elements:
   example:
 
 
-   .. figure:: img/model_group_box.png
-      :align: center
+  .. figure:: img/model_group_box.png
+     :align: center
 
-      Model Group Box
+     Model Group Box
 
 You can change the name and the color of the boxes.
 Group boxes are very useful when used together with
