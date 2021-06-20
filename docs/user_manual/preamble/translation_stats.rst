@@ -16,7 +16,7 @@ Statistics of translation
      - Overall Translation ratio
    * - **31789**
      - **57**
-     - **11.12%**
+     - **11.13%**
 
 
 
@@ -84,13 +84,13 @@ Statistics of translation
      - Italian
      - 56.79
    * - Japanese
-     - 50.31
+     - 50.43
      - Kabyle
      - 0.11
      - Korean
-     - 70.11
+     - 70.75
    * - Lithuanian
-     - 1.02
+     - 1.2
      - Macedonian
      - 0.13
      - Malay
