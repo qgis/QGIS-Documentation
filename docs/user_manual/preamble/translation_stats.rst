@@ -16,7 +16,7 @@ Statistics of translation
      - Overall Translation ratio
    * - **31789**
      - **57**
-     - **11.12%**
+     - **11.13%**
 
 
 
@@ -88,7 +88,7 @@ Statistics of translation
      - Kabyle
      - 0.11
      - Korean
-     - 70.11
+     - 70.52
    * - Lithuanian
      - 1.02
      - Macedonian
