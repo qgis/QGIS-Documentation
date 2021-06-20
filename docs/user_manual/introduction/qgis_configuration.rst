@@ -576,6 +576,51 @@ still have the possibility to remove your changes and reset to the predefined
 list.
 
 
+.. index:: 3D
+.. _3d_options:
+
+3D Settings
+-----------
+
+.. _figure_3d_options:
+
+.. figure:: img/options_3d.png
+   :align: center
+
+   3D Settings
+
+The |3d| :guilabel:`3D` menu helps you configure some default settings to use
+for any :guilabel:`3D Map view`. These can refer to :guilabel:`Default Camera Settings`:
+
+* :guilabel:`Projection type`: allowing to view the 3D scene in a:
+
+  * :guilabel:`Perspective projection` (default): Parallel lines appear to meet
+    in the distance. Objects appear to shrink the farther they are from the camera.
+  * or an :guilabel:`Orthogonal projection`: Parallel lines appear parallel.
+    Objects appear the same size regardless of distance.
+* Camera's :guilabel:`Field of view`: only relevant in perspective projection,
+  specifies the current vertical field of view in degrees and determines how much
+  of the scene is visible to the camera. Default value is 45\°.
+* :guilabel:`Navigation mode`: provides different means to interact with the 3D scene.
+  Available modes are:
+
+  * :guilabel:`Terrain based`: the camera follows around a fixed position on
+    the surface of the terrain as the scene is navigated.
+  * :guilabel:`Walk mode (first person)`
+
+  Depending on the selected mode, :ref:`navigation commands <3d_navigation>` differ.
+* :guilabel:`Movement speed`
+* :guilabel:`Invert vertical axis`: Controls whether vertical axis movements
+  should be inverted from their normal behaviour. Only affects movement in the
+  :guilabel:`Walk mode`. It can be set to:
+
+  * :guilabel:`Never`
+  * :guilabel:`Only when dragging`: causes the vertical motion to inverted only
+    when performing a click-and-drag camera rotation
+  * and :guilabel:`Always`: causes the motions to be inverted when both
+    click-and-dragging and when the camera movement is locked to the cursor
+    (via a :kbd:`~` key press)
+
 .. index:: Colors
 .. _colors_options:
 
@@ -1959,6 +2004,8 @@ in the QGIS user profile.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |3d| image:: /static/common/3d.png
+   :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |codeEditor| image:: /static/common/mIconCodeEditor.png

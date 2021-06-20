@@ -2499,6 +2499,16 @@ Terrain
     Raising this value will add vertical walls ("skirts") around terrain
     tiles to hide the cracks.
 
+* :guilabel:`Terrain elevation offset`: moves the terrain up or down,
+  e.g. to adjust its elevation with respect to the ground level of other objects
+  in the scene.
+
+  This can be useful when there is a discrepancy between the height of the terrain
+  and the height of layers in your scene (e.g. point clouds which use a relative
+  vertical height only). In this case adjusting the terrain elevation manually to
+  coincide with the elevation of objects in your scene can improve the navigation
+  experience.
+
 * When a mesh layer is used as terrain, you can configure the
   :guilabel:`Triangles settings` (wireframe display, smooth triangles) and the
   :guilabel:`Rendering colors settings` (as uniform or depending on terrain level).
@@ -2559,17 +2569,18 @@ given:
 Camera & Skybox
 ...............
 
-* Camera's :guilabel:`Field of view`: allowing to create panoramic scenes.
-  Default value is 45\°.
-* Check |unchecked| :guilabel:`Show skybox` to enable skybox rendering in
-  the scene. The skybox type can be:
+In this tab, you can override some :ref:`default camera settings <3d_options>`
+made in the :menuselection:`Settings --> Options --> 3D` dialog.
 
-  * :guilabel:`Panoramic texture`, with a single file providing sight on 360\°
-  * :guilabel:`Distinct faces`, with a texture file for each of the six sides
-    of a box containing the scene
+Furthermore, check |unchecked| :guilabel:`Show skybox` to enable skybox rendering
+in the scene. The skybox type can be:
 
-  Texture files can be files on the disk, remote URLs or embedded in the project
-  (:ref:`more details <svg_paths>`).
+* :guilabel:`Panoramic texture`, with a single file providing sight on 360\°
+* :guilabel:`Distinct faces`, with a texture file for each of the six sides
+  of a box containing the scene
+
+Texture image files of the skybox can be files on the disk, remote URLs or embedded
+in the project (:ref:`more details <embedded_file_selector>`).
 
 Advanced
 ........
