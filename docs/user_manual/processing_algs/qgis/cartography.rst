@@ -428,6 +428,338 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _qgisatlaslayouttoimage:
+
+Export Atlas Layout to image
+----------------------------
+Exports the atlas of a print layout as an image files (e.g. PNG or JPEG images)
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Print Layout**
+     - ``LAYOUT``
+     - [Layout]
+     - Layout to export
+   * - **Coverage layer**
+     - ``COVERAGE_LAYER``
+     - [Vector Layer]
+     - Layer to use to generate the atlas
+   * - **Filter expression**
+     - ``FILTER_EXPRESSION``
+     - [Expression]
+     - Expression to use to filter out atlas features
+   * - **Sort expression**
+     - ``SORT_EXPRESSION``
+     - [Expression]
+     - Expression to use to sort the atlas features
+   * - **Reverse sort order**
+     - ``SORTBY_REVERSE``
+     - [Bool]
+     - Determines if sorting should be inverted
+   * - **Map layers to assign to unlocked map item(s)**
+     - ``LAYERS``
+     - [Layers]
+     - Layers to display in the all the maps
+   * - **Image format**
+     - ``FORMAT``
+     - [Enum]
+     - Image format to be generated
+   * - **Output folder**
+     - ``Faolder``
+     - [Folder]
+     - Destination folder where the images will be generated
+   * - **Output filename expression**
+     - ``FILENAME_EXPRESSION``
+     - [Expression]
+     - Expression for use to generate filenames
+   * - **DPI**
+     - ``DPI``
+     - [Int]
+     - DPI of the output
+   * - **Generate world file**
+     - ``GEOREFERENCE``
+     - [Bool]
+     - Determines if a world file should be generated
+   * - **Export RDF metadata**
+     - ``INCLUDE_METADATA``
+     - [Bool]
+     - Determines if RDF metadata should be generated
+   * - **Enable antialiasing**
+     - ``ANTIALIAS``
+     - [Bool]
+     - Determines if antialiasing should be enabled
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:printlayouttoimage``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgisatlaslayoutopdf:
+
+Export Atlas Layout to pdf
+--------------------------
+Exports the atlas of a print layout as a PDF file(s).
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Print Layout**
+     - ``LAYOUT``
+     - [Layout]
+     - Layout to export
+   * - **Coverage layer**
+     - ``COVERAGE_LAYER``
+     - [Vector Layer]
+     - Layer to use to generate the atlas
+   * - **Filter expression**
+     - ``FILTER_EXPRESSION``
+     - [Expression]
+     - Expression to use to filter out atlas features
+   * - **Sort expression**
+     - ``SORT_EXPRESSION``
+     - [Expression]
+     - Expression to use to sort the atlas features
+   * - **Reverse sort order**
+     - ``SORTBY_REVERSE``
+     - [Bool]
+     - Determines if sorting should be inverted
+   * - **Map layers to assign to unlocked map item(s)**
+     - ``LAYERS``
+     - [Layers]
+     - Layers to display in the all the maps
+   * - **DPI**
+     - ``DPI``
+     - [Int]
+     - DPI of the output
+   * - **Always export as vectors**
+     - ``FORCE_VECTOR``
+     - [Bool]
+     - Determines if vectorial data should be left as vectors
+   * - **Generate world file**
+     - ``GEOREFERENCE``
+     - [Bool]
+     - Determines if georeference information should be added
+   * - **Export RDF metadata**
+     - ``INCLUDE_METADATA``
+     - [Bool]
+     - Determines if RDF metadata should be generated
+   * - **Disable tiled raster layer exports**
+     - ``DISABLE_TILED``
+     - [Bool]
+     - Determines if raster should be tiled
+   * - **Simplify geometries**
+     - ``SIMPLIFY``
+     - [Bool]
+     - Determines if geometries should be simplify to reduce output size
+   * - **Text export**
+     - ``TEXT_FORMAT``
+     - [Enum]
+     - Determines text should be exported as path or text objects.
+
+
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Image file**
+     - ``OUTPUT``
+     - [File]
+     - Name (including path) of the pdf to generate
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:printlayouttopdf``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgislayouttoimage:
+
+Export Layout to image
+----------------------
+Exports a print layout as an image file (e.g. PNG or JPEG images)
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Print Layout**
+     - ``LAYOUT``
+     - [Layout]
+     - Layout to export
+   * - **DPI**
+     - ``DPI``
+     - [Int]
+     - DPI of the output
+   * - **Generate world file**
+     - ``GEOREFERENCE``
+     - [Bool]
+     - Determines if a world file should be generated
+   * - **Export RDF metadata**
+     - ``INCLUDE_METADATA``
+     - [Bool]
+     - Determines if RDF metadata should be generated
+   * - **Enable antialiasing**
+     - ``ANTIALIAS``
+     - [Bool]
+     - Determines if antialiasing should be enabled
+
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Image file**
+     - ``OUTPUT``
+     - [File]
+     - Name (including path) of the file to generate
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:printlayouttoimage``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgislayoutopdf:
+
+Export Layout to pdf
+--------------------
+Exports a print layout as a PDF file.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Print Layout**
+     - ``LAYOUT``
+     - [Layout]
+     - Layout to export
+   * - **DPI**
+     - ``DPI``
+     - [Int]
+     - DPI of the output
+   * - **Always export as vectors**
+     - ``FORCE_VECTOR``
+     - [Bool]
+     - Determines if vectorial data should be left as vectors
+   * - **Generate world file**
+     - ``GEOREFERENCE``
+     - [Bool]
+     - Determines if georeference information should be added
+   * - **Export RDF metadata**
+     - ``INCLUDE_METADATA``
+     - [Bool]
+     - Determines if RDF metadata should be generated
+   * - **Disable tiled raster layer exports**
+     - ``DISABLE_TILED``
+     - [Bool]
+     - Determines if raster should be tiled
+   * - **Simplify geometries**
+     - ``SIMPLIFY``
+     - [Bool]
+     - Determines if geometries should be simplify to reduce output size
+   * - **Text export**
+     - ``TEXT_FORMAT``
+     - [Enum]
+     - Determines text should be exported as path or text objects.
+
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Image file**
+     - ``OUTPUT``
+     - [File]
+     - Name (including path) of the pdf to generate
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:printlayouttopdf``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgisprintlayoutmapextenttolayer:
 
 Print layout map extent to layer
