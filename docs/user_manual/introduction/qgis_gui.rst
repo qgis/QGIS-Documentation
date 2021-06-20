@@ -2354,95 +2354,6 @@ The following tools are provided at the top of the 3D map view panel:
 * |options| :sup:`Configure` the map view :ref:`settings <scene_configuration>`
 
 
-.. _`3d_navigation`:
-
-Navigation options
-------------------
-
-To explore the map view in 3D:
-
-* Tilt the terrain (rotating it around a horizontal axis that
-  goes through the center of the window)
-
-  * Press the |tiltUp| :sup:`Tilt up` and |tiltDown| :sup:`Tilt down` tools
-  * Press :kbd:`Shift` and use the up/down keys
-  * Drag the mouse forward/backward with the middle mouse button pressed
-  * Press :kbd:`Shift` and drag the mouse forward/backward
-    with the left mouse button pressed
-
-* Rotate the terrain (around a vertical axis that goes through
-  the center of the window)
-
-  * Turn the compass of the navigation widget to the watching direction
-  * Press :kbd:`Shift` and use the left/right keys
-  * Drag the mouse right/left with the middle mouse button pressed
-  * Press :kbd:`Shift` and drag the mouse right/left with the
-    left mouse button pressed
-
-* Change the camera position (and the view center), moving it around
-  in a horizontal plan
-
-  * Drag the mouse with the left mouse button pressed, and the |pan|
-    :sup:`Camera control` button enabled
-  * Press the directional arrows of the navigation widget
-  * Use the up/down/left/right keys to move the
-    camera forward, backward, right and left, respectively
-
-* Change the camera altitude: press the :kbd:`Page Up`/:kbd:`Page Down` keys
-* Change the camera orientation (the camera is kept at its position but the
-  view center point moves)
-
-  * Press :kbd:`Ctrl` and use the arrow keys to turn
-    the camera up, down, left and right
-  * Press :kbd:`Ctrl` and drag the mouse with the left mouse
-    button pressed
-
-* Zoom in and out
-
-  * Press the corresponding |zoomIn| :sup:`Zoom In` and |zoomOut|
-    :sup:`Zoom Out` tools of the navigation widget
-  * Scroll the mouse wheel (keep :kbd:`Ctrl` pressed results in finer zooms)
-  * Drag the mouse with the right mouse button pressed to
-    zoom in (drag down) and out (drag up)
-
-To reset the camera view, click the |zoomFullExtent| :sup:`Zoom Full`
-button on the top of the 3D canvas panel.
-
-.. _`create_animation`:
-
-Creating an animation
----------------------
-
-An animation is based on a set of keyframes - camera positions at particular times.
-To create an animation:
-
-#. Toggle on the |play| :sup:`Animations` tool, displaying the animation player
-   widget
-#. Click the |signPlus| :sup:`Add keyframe` button and enter a :guilabel:`Keyframe
-   time` in seconds. The :guilabel:`Keyframe` combo box now displays the time set.
-#. Using the navigation tools, move the camera to the position to associate with
-   the current keyframe time.
-#. Repeat the previous steps to add as many keyframes (with time and position) as necessary.
-#. Click the |play| button to preview the animation. QGIS will generate scenes using
-   the camera positions/rotations at set times, and interpolating them in between
-   these keyframes. Various :guilabel:`Interpolation` modes for animations are
-   available (eg, linear, inQuad, outQuad, inCirc... -- more details at
-   https://doc.qt.io/qt-5/qeasingcurve.html#EasingFunction-typedef).
-
-   The animation can also be previewed by moving the time slider.
-   Keeping the |refresh| :sup:`Repeat` button pressed will repeatedly run the
-   animation while clicking |play| stops a running animation.
-
-It is possible to browse the different views of the camera, using the
-:guilabel:`Keyframe` list. Whenever a time is active, changing the map view
-will automatically update the associated position. You can also |symbologyEdit|
-:sup:`Edit keyframe` (time only) or |signMinus| :sup:`Remove keyframe`.
-
-Click |fileSave| :sup:`Export animation frames` to generate a series of images
-representing the scene. Other than the filename :guilabel:`Template` and the
-:guilabel:`Output directory`, you can set the number of :guilabel:`Frames per
-second`, the :guilabel:`Output width` and :guilabel:`Output height`.
-
 .. _`scene_configuration`:
 
 Scene Configuration
@@ -2613,6 +2524,95 @@ Advanced
 * |unchecked| :guilabel:`Show light sources`: shows a sphere at light source
   origins, allowing easier repositioning and placement of light sources relative
   to the scene contents
+
+.. _`3d_navigation`:
+
+Navigation options
+------------------
+
+To explore the map view in 3D:
+
+* Tilt the terrain (rotating it around a horizontal axis that
+  goes through the center of the window)
+
+  * Press the |tiltUp| :sup:`Tilt up` and |tiltDown| :sup:`Tilt down` tools
+  * Press :kbd:`Shift` and use the up/down keys
+  * Drag the mouse forward/backward with the middle mouse button pressed
+  * Press :kbd:`Shift` and drag the mouse forward/backward
+    with the left mouse button pressed
+
+* Rotate the terrain (around a vertical axis that goes through
+  the center of the window)
+
+  * Turn the compass of the navigation widget to the watching direction
+  * Press :kbd:`Shift` and use the left/right keys
+  * Drag the mouse right/left with the middle mouse button pressed
+  * Press :kbd:`Shift` and drag the mouse right/left with the
+    left mouse button pressed
+
+* Change the camera position (and the view center), moving it around
+  in a horizontal plan
+
+  * Drag the mouse with the left mouse button pressed, and the |pan|
+    :sup:`Camera control` button enabled
+  * Press the directional arrows of the navigation widget
+  * Use the up/down/left/right keys to move the
+    camera forward, backward, right and left, respectively
+
+* Change the camera altitude: press the :kbd:`Page Up`/:kbd:`Page Down` keys
+* Change the camera orientation (the camera is kept at its position but the
+  view center point moves)
+
+  * Press :kbd:`Ctrl` and use the arrow keys to turn
+    the camera up, down, left and right
+  * Press :kbd:`Ctrl` and drag the mouse with the left mouse
+    button pressed
+
+* Zoom in and out
+
+  * Press the corresponding |zoomIn| :sup:`Zoom In` and |zoomOut|
+    :sup:`Zoom Out` tools of the navigation widget
+  * Scroll the mouse wheel (keep :kbd:`Ctrl` pressed results in finer zooms)
+  * Drag the mouse with the right mouse button pressed to
+    zoom in (drag down) and out (drag up)
+
+To reset the camera view, click the |zoomFullExtent| :sup:`Zoom Full`
+button on the top of the 3D canvas panel.
+
+.. _`create_animation`:
+
+Creating an animation
+---------------------
+
+An animation is based on a set of keyframes - camera positions at particular times.
+To create an animation:
+
+#. Toggle on the |play| :sup:`Animations` tool, displaying the animation player
+   widget
+#. Click the |signPlus| :sup:`Add keyframe` button and enter a :guilabel:`Keyframe
+   time` in seconds. The :guilabel:`Keyframe` combo box now displays the time set.
+#. Using the navigation tools, move the camera to the position to associate with
+   the current keyframe time.
+#. Repeat the previous steps to add as many keyframes (with time and position) as necessary.
+#. Click the |play| button to preview the animation. QGIS will generate scenes using
+   the camera positions/rotations at set times, and interpolating them in between
+   these keyframes. Various :guilabel:`Interpolation` modes for animations are
+   available (eg, linear, inQuad, outQuad, inCirc... -- more details at
+   https://doc.qt.io/qt-5/qeasingcurve.html#EasingFunction-typedef).
+
+   The animation can also be previewed by moving the time slider.
+   Keeping the |refresh| :sup:`Repeat` button pressed will repeatedly run the
+   animation while clicking |play| stops a running animation.
+
+It is possible to browse the different views of the camera, using the
+:guilabel:`Keyframe` list. Whenever a time is active, changing the map view
+will automatically update the associated position. You can also |symbologyEdit|
+:sup:`Edit keyframe` (time only) or |signMinus| :sup:`Remove keyframe`.
+
+Click |fileSave| :sup:`Export animation frames` to generate a series of images
+representing the scene. Other than the filename :guilabel:`Template` and the
+:guilabel:`Output directory`, you can set the number of :guilabel:`Frames per
+second`, the :guilabel:`Output width` and :guilabel:`Output height`.
 
 3D vector layers
 ----------------
