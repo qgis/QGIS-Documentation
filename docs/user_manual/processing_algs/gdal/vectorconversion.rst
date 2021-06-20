@@ -286,6 +286,16 @@ Parameters
 
        Default: 0.0
      - A fixed value to burn into a band for all features.
+   * - **Burn value extracted from the "Z" values of the feature** |320|
+
+       Optional
+     - ``USE_Z``
+     - [boolean]
+
+       Default: False
+     - Indicates that a burn value should be extracted from the "Z" values of the feature.
+       Works with points and lines (linear interpolation along each segment).
+       For polygons, works properly only if they are flat (same Z value for all vertices)
    * - **Output raster size units**
      - ``UNITS``
      - [enumeration]
@@ -417,3 +427,12 @@ Python code
 .. include:: ../qgis/qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |320| replace:: ``NEW in 3.20``
