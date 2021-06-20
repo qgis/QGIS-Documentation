@@ -84,7 +84,7 @@ Statistics of translation
      - Italian
      - 56.79
    * - Japanese
-     - 50.43
+     - 50.44
      - Kabyle
      - 0.11
      - Korean
