@@ -6422,7 +6422,7 @@ Parameters
        Default: 10.0
      - Control how close input vertices need to be to the
        reference layer geometries before they are snapped.
-   * - *Behavior**
+   * - **Behavior**
      - ``BEHAVIOR``
      - [enumeration]
 
@@ -6433,13 +6433,44 @@ Parameters
 
        * 0 --- Prefer aligning nodes, insert extra vertices where
          required
+
+         Prefer to snap to nodes, even when a segment may be closer
+         than a node. New nodes will be inserted to make geometries
+         follow each other exactly when inside allowable tolerance.
+
        * 1 --- Prefer closest point, insert extra vertices where
          required
+
+         Snap to closest point, regardless of it is a node or a
+         segment. New nodes will be inserted to make geometries
+         follow each other exactly when inside allowable tolerance.
+
        * 2 --- Prefer aligning nodes, don't insert new vertices
+
+         Prefer to snap to nodes, even when a segment may be closer
+         than a node. No new nodes will be inserted.
+
        * 3 --- Prefer closest point, don't insert new vertices
+
+         Snap to closest point, regardless of it is a node or a
+         segment. No new nodes will be inserted.
+
        * 4 --- Move end points only, prefer aligning nodes
+
+         Only snap start/end points of lines (point features will
+         also be snapped, polygon features will not be modified),
+         prefer to snap to nodes.
+
        * 5 --- Move end points only, prefer closest point
+
+         Only snap start/end points of lines (point features will
+         also be snapped, polygon features will not be modified),
+         snap to closest point
+
        * 6 --- Snap end points to end points only
+
+         Only snap the start/end points of lines to other start/end points of lines
+
        * 7 --- Snap to anchor nodes (single layer only)
 
    * - **Snapped geometry**
