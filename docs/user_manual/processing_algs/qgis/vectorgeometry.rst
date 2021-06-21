@@ -7,6 +7,99 @@ Vector geometry
       :local:
       :depth: 1
 
+.. _qgisexportaddgeometrycolumns:
+
+Add geometry attributes
+-----------------------
+Computes geometric properties of the features in a vector layer and
+includes them in the output layer.
+
+It generates a new vector layer with the same content as the input one,
+but with additional attributes, containing geometric measurements
+based on a selected CRS.
+
+The attributes added to the table depend on the geometry type and
+dimension of the input layer:
+
+* for **point** layers: X (``xcoord``), Y (``ycoord``), Z (``zcoord``)
+  coordinates and/or M value (``mvalue``)
+* for **line** layers: ``length`` and, for the LineString and
+  CompoundCurve geometry types, the feature ``sinuosity`` and straight
+  distance (``straightdis``)
+* for **polygon** layers: ``perimeter`` and ``area``
+
+**Default menu**: :menuselection:`Vector --> Geometry Tools`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Calculate using**
+     - ``CALC_METHOD``
+     - [enumeration]
+
+       Default: 0
+     - Calculation parameters to use for the geometric properties.
+       One of:
+
+       * 0 --- Layer CRS
+       * 1 --- Project CRS
+       * 2 --- Ellipsoidal
+
+   * - **Added geom info**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output (input copy with geometry) layer.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
+
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Added geom info**
+     - ``OUTPUT``
+     - [same as input]
+     - Copy of the input vector layer with the addition of the geometry fields
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:exportaddgeometrycolumns``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgisaffinetransform:
 
 Affine transform
@@ -132,99 +225,6 @@ Python code
 ...........
 
 **Algorithm ID**: ``qgis:affinetransform``
-
-.. include:: qgis_algs_include.rst
-  :start-after: **algorithm_code_section**
-  :end-before: **end_algorithm_code_section**
-
-
-.. _qgisexportaddgeometrycolumns:
-
-Add geometry attributes
------------------------
-Computes geometric properties of the features in a vector layer and
-includes them in the output layer.
-
-It generates a new vector layer with the same content as the input one,
-but with additional attributes, containing geometric measurements
-based on a selected CRS.
-
-The attributes added to the table depend on the geometry type and
-dimension of the input layer:
-
-* for **point** layers: X (``xcoord``), Y (``ycoord``), Z (``zcoord``)
-  coordinates and/or M value (``mvalue``)
-* for **line** layers: ``length`` and, for the LineString and
-  CompoundCurve geometry types, the feature ``sinuosity`` and straight
-  distance (``straightdis``)
-* for **polygon** layers: ``perimeter`` and ``area``
-
-**Default menu**: :menuselection:`Vector --> Geometry Tools`
-
-Parameters
-..........
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
-   :class: longtable
-
-   * - Label
-     - Name
-     - Type
-     - Description
-   * - **Input layer**
-     - ``INPUT``
-     - [vector: any]
-     - Input vector layer
-   * - **Calculate using**
-     - ``CALC_METHOD``
-     - [enumeration]
-
-       Default: 0
-     - Calculation parameters to use for the geometric properties.
-       One of:
-
-       * 0 --- Layer CRS
-       * 1 --- Project CRS
-       * 2 --- Ellipsoidal
-
-   * - **Added geom info**
-     - ``OUTPUT``
-     - [same as input]
-
-       Default: ``[Create temporary layer]``
-     - Specify the output (input copy with geometry) layer.
-       One of:
-
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
-
-       The file encoding can also be changed here.
-
-Outputs
-.......
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
-   :class: longtable
-
-   * - Label
-     - Name
-     - Type
-     - Description
-   * - **Added geom info**
-     - ``OUTPUT``
-     - [same as input]
-     - Copy of the input vector layer with the addition of the geometry fields
-
-Python code
-...........
-
-**Algorithm ID**: ``qgis:exportaddgeometrycolumns``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
