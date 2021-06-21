@@ -224,7 +224,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:affinetransform``
+**Algorithm ID**: ``native:affinetransform``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -378,7 +378,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:aggregate``
+**Algorithm ID**: ``native:aggregate``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -459,7 +459,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:boundary``
+**Algorithm ID**: ``native:boundary``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -532,7 +532,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:boundingboxes``
+**Algorithm ID**: ``native:boundingboxes``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -681,7 +681,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:buffer``
+**Algorithm ID**: ``native:buffer``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -771,7 +771,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:centroids``
+**Algorithm ID**: ``native:centroids``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1155,7 +1155,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:collect``
+**Algorithm ID**: ``native:collect``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1504,7 +1504,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:convexhull``
+**Algorithm ID**: ``native:convexhull``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1572,7 +1572,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:extenttolayer``
+**Algorithm ID**: ``native:extenttolayer``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1645,7 +1645,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:pointtolayer``
+**Algorithm ID**: ``native:pointtolayer``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1756,7 +1756,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:wedgebuffers``
+**Algorithm ID**: ``native:wedgebuffers``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1911,7 +1911,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:deleteholes``
+**Algorithm ID**: ``native:deleteholes``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1997,7 +1997,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:densifygeometries``
+**Algorithm ID**: ``native:densifygeometries``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -2090,7 +2090,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:densifygeometriesgivenaninterval``
+**Algorithm ID**: ``native:densifygeometriesgivenaninterval``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -2187,7 +2187,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:dissolve``
+**Algorithm ID**: ``native:dissolve``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -2284,7 +2284,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:setzfromraster``
+**Algorithm ID**: ``native:setzfromraster``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -2361,7 +2361,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:dropmzvalues``
+**Algorithm ID**: ``native:dropmzvalues``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -2524,7 +2524,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:explodelines``
+**Algorithm ID**: ``native:explodelines``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -2610,7 +2610,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:extendlines``
+**Algorithm ID**: ``native:extendlines``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -2712,7 +2712,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:extractmvalues``
+**Algorithm ID**: ``native:extractmvalues``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -2803,7 +2803,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:extractspecificvertices``
+**Algorithm ID**: ``native:extractspecificvertices``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -2884,7 +2884,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:extractvertices``
+**Algorithm ID**: ``native:extractvertices``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -2987,7 +2987,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:extractzvalues``
+**Algorithm ID**: ``native:extractzvalues``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -3086,7 +3086,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:filterverticesbym``
+**Algorithm ID**: ``native:filterverticesbym``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -3187,7 +3187,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:filterverticesbyz``
+**Algorithm ID**: ``native:filterverticesbyz``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -3258,7 +3258,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:fixgeometries``
+**Algorithm ID**: ``native:fixgeometries``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -3323,7 +3323,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:forcerhr``
+**Algorithm ID**: ``native:forcerhr``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -3400,7 +3400,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:antimeridiansplit``
+**Algorithm ID**: ``native:antimeridiansplit``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -3505,7 +3505,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:geometrybyexpression``
+**Algorithm ID**: ``native:geometrybyexpression``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -3590,7 +3590,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:interpolatepoint``
+**Algorithm ID**: ``native:interpolatepoint``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -3756,7 +3756,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:linesubstring``
+**Algorithm ID**: ``native:linesubstring``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -3894,7 +3894,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:mergelines``
+**Algorithm ID**: ``native:mergelines``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -4075,7 +4075,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:minimumenclosingcircle``
+**Algorithm ID**: ``native:minimumenclosingcircle``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -4169,7 +4169,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:multiringconstantbuffer``
+**Algorithm ID**: ``native:multiringconstantbuffer``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -4247,7 +4247,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:multiparttosingleparts``
+**Algorithm ID**: ``native:multiparttosingleparts``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -4362,7 +4362,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:offsetline``
+**Algorithm ID**: ``native:offsetline``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -4434,7 +4434,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:orientedminimumboundingbox``
+**Algorithm ID**: ``native:orientedminimumboundingbox``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -4527,7 +4527,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:orthogonalize``
+**Algorithm ID**: ``native:orthogonalize``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -4599,7 +4599,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:pointonsurface``
+**Algorithm ID**: ``native:pointonsurface``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -4695,7 +4695,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:pointsalonglines``
+**Algorithm ID**: ``native:pointsalonglines``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -4864,7 +4864,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:poleofinaccessibility``
+**Algorithm ID**: ``native:poleofinaccessibility``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -4944,7 +4944,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:polygonize``
+**Algorithm ID**: ``native:polygonize``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -5015,7 +5015,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:polygonstolines``
+**Algorithm ID**: ``native:polygonstolines``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -5092,7 +5092,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:projectpointcartesian``
+**Algorithm ID**: ``native:projectpointcartesian``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -5166,7 +5166,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:promotetomulti``
+**Algorithm ID**: ``native:promotetomulti``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -5272,7 +5272,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:rectanglesovalsdiamonds``
+**Algorithm ID**: ``native:rectanglesovalsdiamonds``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -5371,7 +5371,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:removeduplicatevertices``
+**Algorithm ID**: ``native:removeduplicatevertices``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -5470,7 +5470,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:removenullgeometries``
+**Algorithm ID**: ``native:removenullgeometries``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -5539,7 +5539,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:reverselinedirection``
+**Algorithm ID**: ``native:reverselinedirection``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -5625,7 +5625,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:rotatefeatures``
+**Algorithm ID**: ``native:rotatefeatures``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -5704,7 +5704,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:segmentizebymaxangle``
+**Algorithm ID**: ``native:segmentizebymaxangle``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -5783,7 +5783,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:segmentizebymaxdistance``
+**Algorithm ID**: ``native:segmentizebymaxdistance``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -5865,7 +5865,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:setmvalue``
+**Algorithm ID**: ``native:setmvalue``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -5961,7 +5961,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:setmfromraster``
+**Algorithm ID**: ``native:setmfromraster``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -6042,7 +6042,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:setzvalue``
+**Algorithm ID**: ``native:setzvalue``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -6143,7 +6143,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:simplifygeometries``
+**Algorithm ID**: ``native:simplifygeometries``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -6258,7 +6258,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:singlesidedbuffer``
+**Algorithm ID**: ``native:singlesidedbuffer``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -6375,7 +6375,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:smoothgeometry``
+**Algorithm ID**: ``native:smoothgeometry``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -6507,7 +6507,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:snapgeometries``
+**Algorithm ID**: ``native:snapgeometries``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -6609,7 +6609,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:snappointstogrid``
+**Algorithm ID**: ``native:snappointstogrid``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -6683,7 +6683,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:splitlinesbylength``
+**Algorithm ID**: ``native:splitlinesbylength``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -6776,7 +6776,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:subdivide``
+**Algorithm ID**: ``native:subdivide``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -6848,7 +6848,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:swapxy``
+**Algorithm ID**: ``native:swapxy``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -6941,7 +6941,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:taperedbuffer``
+**Algorithm ID**: ``native:taperedbuffer``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -7016,7 +7016,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:tessellate``
+**Algorithm ID**: ``3d:tessellate``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -7119,7 +7119,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:transect``
+**Algorithm ID**: ``native:transect``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -7220,7 +7220,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:translategeometry``
+**Algorithm ID**: ``native:translategeometry``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -7403,7 +7403,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:bufferbym``
+**Algorithm ID**: ``native:bufferbym``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
