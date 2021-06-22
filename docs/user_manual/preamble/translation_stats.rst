@@ -6,7 +6,7 @@
 Statistics of translation
 ===========================
 
-*(last update: 2021-06-20)*
+*(last update: 2021-06-22)*
 
 .. list-table::
    :widths: auto
@@ -16,7 +16,7 @@ Statistics of translation
      - Overall Translation ratio
    * - **31789**
      - **57**
-     - **11.13%**
+     - **11.15%**
 
 
 
@@ -84,13 +84,13 @@ Statistics of translation
      - Italian
      - 56.79
    * - Japanese
-     - 50.31
+     - 50.44
      - Kabyle
      - 0.11
      - Korean
-     - 70.72
+     - 71.35
    * - Lithuanian
-     - 1.02
+     - 1.2
      - Macedonian
      - 0.13
      - Malay
