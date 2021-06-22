@@ -16,7 +16,7 @@ Statistics of translation
      - Overall Translation ratio
    * - **31789**
      - **57**
-     - **11.15%**
+     - **11.16%**
 
 
 
@@ -62,7 +62,7 @@ Statistics of translation
    * - Finnish
      - 1.84
      - French
-     - 99.64
+     - 99.65
      - Galician
      - 0.6
    * - Georgian
@@ -88,7 +88,7 @@ Statistics of translation
      - Kabyle
      - 0.11
      - Korean
-     - 71.91
+     - 72.2
    * - Lithuanian
      - 1.2
      - Macedonian
