@@ -83,7 +83,7 @@ The settings are made for the class ``suburb`` here. For better visibility most 
 the rules are deselected. 
 At the bottom the :guilabel:`Current Zoom` is shown. According to this information
 it is possible to reduce the number of rules to only those that are visible
-at the given zoom lovel. This makes it easier to work with complex vector styling
+at the given zoom level. This makes it easier to work with complex vector styling
 and to locate troublesome rules. Style and labelling can be dependent on the
 zoom level.
 
