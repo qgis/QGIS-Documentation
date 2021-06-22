@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2021
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-14 02:17+0000\n"
 "PO-Revision-Date: 2020-12-24 10:17+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2021\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,6 +40,18 @@ msgid ""
 "their effects."
 msgstr "**이 강의의 목표:** 공간 기능을 설치하고 그 효과를 간단히 실행해보기."
 
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:10
+msgid ""
+"We will assume the use of PostGIS version 2.1 or newer in this exercise. The"
+" installation and database configuration are different for older versions, "
+"but the rest of this material in this module will still work. Consult the "
+"documentation for your platform for help with installation and database "
+"configuration."
+msgstr ""
+"이번 예제에서는 PostGIS 2.1 이후 버전을 사용한다고 가정합니다. 설치 및 데이터베이스 설정은 이전 버전과 다르지만, 이 모듈에서"
+" 소개하는 다른 기능을 실행하는 데 문제는 없을 겁니다. 설치 및 데이터베이스 설정에 대한 도움말은 사용자 플랫폼에 대한 PostGIS "
+"문서를 참조하십시오."
+
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:17
 msgid "Installing under Ubuntu"
 msgstr "우분투 설치"
@@ -51,13 +64,63 @@ msgstr "apt를 통해 PostGIS를 간단히 설치할 수 있습니다."
 msgid "Really, it's that easy..."
 msgstr "네, 정말로 쉽죠..."
 
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:28
+msgid ""
+"The exact versions that will be installed depend on which version of Ubuntu "
+"you are using and which repositories you have configured. After installing "
+"you can check the version by issuing a ``select PostGIS_full_version();`` "
+"query with psql or another tool."
+msgstr ""
+"사용자의 우분투 버전 및 환경 설정한 저장소에 따라 설치될 정확한 버전이 달라질 것입니다. 설치 후, psql이나 다른 도구에서 "
+"``select PostGIS_full_version();`` 쿼리를 실행하면 설치된 버전을 알 수 있습니다."
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:32
+msgid ""
+"To install a specific version (eg, PostgreSQL version 13 and PostGIS 3), you"
+" can use the following commands."
+msgstr ""
+"특정 버전을 (예를 들면 PostgreSQL version 13 및 PostGIS 3을) 설치하려면, 다음 명령어를 사용하면 됩니다."
+
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:46
 msgid "Installing under Windows"
 msgstr "윈도우 설치"
 
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:48
+msgid ""
+"Installing on Windows can be done from binary packages using a normal "
+"Windows installation dialogs."
+msgstr "일반적인 윈도우 설치 대화창을 사용하는 바이너리 패키지로 윈도우에 설치할 수 있습니다."
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:50
+msgid ""
+"First Visit `the download page <https://www.postgresql.org/download/>`_. "
+"Then follow `this guide "
+"<https://www.bostongis.com/PrinterFriendly.aspx?content_name=postgis_tut01>`_."
+msgstr ""
+"먼저 `다운로드 페이지 <https://www.postgresql.org/download/>`_ 로 간 다음, `이 지침 "
+"<https://www.bostongis.com/PrinterFriendly.aspx?content_name=postgis_tut01>`_"
+" 을 따르십시오."
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:53
+msgid ""
+"More information about installing on Windows can be found on the `PostGIS "
+"website <https://postgis.net/windows_downloads>`_."
+msgstr ""
+"`PostGIS 웹사이트 <https://postgis.net/windows_downloads>`_ 에서 윈도우 설치에 대한 자세한 "
+"정보를 얻을 수 있습니다."
+
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:57
 msgid "Installing on Other Platforms"
 msgstr "다른 플랫폼 설치"
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:59
+msgid ""
+"The `PostGIS website download <https://postgis.net/install/>`_ has "
+"information about installing on other platforms including macOS and on other"
+" Linux distributions"
+msgstr ""
+"`PostGIS 웹사이트 다운로드 페이지 <https://postgis.net/install/>`_ 에 맥OS 및 다른 리눅스 배포판을 "
+"포함한 다른 플랫폼 설치에 대한 정보가 있습니다."
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:63
 msgid "Configuring Databases to use PostGIS"
@@ -73,6 +136,16 @@ msgstr ""
 "PostGIS 설치가 끝나면 이 확장 프로그램을 사용하기 위해 사용자 데이터베이스를 설정해줘야 합니다. PostGIS 2.0 버전 이상을"
 " 설치했다면, 이전 모듈에서 사용했던 주소 데이터베이스를 사용하는 다음 psql 명령어를 실행해서 손쉽게 설정할 수 있습니다."
 
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:74
+msgid ""
+"Depending on your version, you could find more instructions on how to "
+"spatially enable a database at "
+"https://postgis.net/docs/postgis_administration.html#create_spatial_db."
+msgstr ""
+"사용 버전에 따라, "
+"https://postgis.net/docs/postgis_administration.html#create_spatial_db 에서 "
+"데이터베이스를 공간적으로 활성화시키는 방법에 대한 자세한 지침을 찾아볼 수 있습니다."
+
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:79
 msgid "Looking at the installed PostGIS functions"
 msgstr "설치된 PostGIS의 기능 살펴보기"
@@ -86,6 +159,33 @@ msgid ""
 msgstr ""
 "PostGIS를 PostgreSQL의 핵심 기능을 공간 데이터를 다룰 수 있도록 확장하는 데이터베이스 내장 기능들의 집합으로 생각할 수 "
 "있습니다. '다룬다'라는 말은 저장, 추출, 쿼리, 조작을 뜻합니다. 이를 위해, 데이터베이스에 많은 기능들이 설치되어 있습니다."
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:86
+msgid ""
+"Our PostgreSQL ``address`` database is now geospatially enabled, thanks to "
+"PostGIS. We are going to delve a lot deeper into this in the coming "
+"sections, but let's give you a quick little taster. Let's say we want to "
+"create a point from text. First we use the psql command to find functions "
+"relating to point. If you are not already connected to the ``address`` "
+"database, do so now. Then run:"
+msgstr ""
+"PostGIS 덕분에 이제 사용자의 PostgreSQL ``address`` 데이터베이스가 공간 데이터를 다룰 수 있게 되었습니다. 다음"
+" 강의에서 이를 심도 있게 살펴보겠지만, 먼저 간단한 예를 들어보겠습니다. 텍스트에서 포인트를 생성하려 한다고 해봅시다. 먼저 포인트에 "
+"관련된 기능을 찾기 위해 psql 명령어를 사용합니다. 아직 ``address`` 데이터베이스에 접속하지 않았다면 지금 하십시오. 그리고"
+" 다음 명령어를 실행합니다."
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:96
+msgid ""
+"This is the command we're looking for: :kbd:`st_pointfromtext`.  To page "
+"through the list, use the down arrow, then press :kbd:`Q` to quit back to "
+"the psql shell."
+msgstr ""
+"우리가 찾는 것은 :kbd:`st_pointfromtext` 라는 명령어입니다. 아래 방향 화살표 키를 이용해 목록을 살펴본 다음, "
+":kbd:`Q` 키를 눌러 psql 셸로 나오십시오."
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:99
+msgid "Try running this command:"
+msgstr "다음 명령어를 실행해보십시오."
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:105
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:139
@@ -121,6 +221,18 @@ msgstr ""
 "결과물 행은 'WKB(Well Known Binary)'라는 OGC 포맷으로 되어 있습니다. 다음 강의에서 이 포맷을 자세히 살펴볼 "
 "것입니다."
 
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:125
+msgid ""
+"To get the results back as text, we can do a quick scan through the function"
+" list for something that returns text:"
+msgstr "결과물을 텍스트로 받아보려면, 텍스트를 반환하는 기능을 찾아 기능 목록을 검색해볼 수 있습니다:"
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:132
+msgid ""
+"The query we're looking for now is ``st_astext``. Let's combine it with the "
+"previous query:"
+msgstr "지금 찾고 있는 쿼리는 ``st_astext`` 입니다. 이 명령어를 이전 쿼리와 합쳐봅시다:"
+
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:148
 msgid ""
 "Here, we entered the string :kbd:`POINT(1,1)`, turned it into a point using "
@@ -129,6 +241,11 @@ msgid ""
 msgstr ""
 ":kbd:`POINT(1,1)` 을 입력해서 :kbd:`st_pointfromtext()` 를 통해 포인트로 변환한 다음 "
 ":kbd:`st_astext()` 로 사람이 읽을 수 있는 형태로 다시 바꿨습니다. 그 결과 원래 문자열을 반환했습니다."
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:153
+msgid ""
+"One last example before we really get into the detail of using PostGIS:"
+msgstr "다음은 PostGIS 사용법을 자세히 알아보기 전, 마지막 예시입니다:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:159
 msgid ""
@@ -157,6 +274,16 @@ msgid ""
 "normal database tables."
 msgstr "SRS가 일반 데이터베이스 테이블에 저장되어 있기 때문에, 사용자 데이터베이스에서 이 SRS의 정의를 조사할 수 있습니다."
 
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:173
+msgid ""
+"First, let's look at the schema of the table by entering the following "
+"command in the psql prompt:"
+msgstr "먼저 psql 프롬프트에 다음 명령어를 입력해서 테이블의 스키마를 살펴봅시다:"
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:180
+msgid "The result should be this:"
+msgstr "다음과 같은 결과가 나와야 합니다:"
+
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:195
 msgid ""
 "You can use standard SQL queries (as we have learned from our introductory "
@@ -165,6 +292,14 @@ msgid ""
 msgstr ""
 "표준 SQL 쿼리를 (서론 부분에서 배웠던 것처럼) 사용해서 이 테이블을 보고 조작할 수 있습니다. 그러나 SRS에 대해 잘 모른다면 "
 "어떤 레코드도 업데이트 혹은 삭제하지 않는 편이 좋습니다."
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:199
+msgid ""
+"One SRID you may be interested in is EPSG:4326 - the geographic / lat lon "
+"reference system using the WGS 84 ellipsoid. Let's take a look at it:"
+msgstr ""
+"사용자가 관심을 가져야 할 SRID가 있다면 바로 EPSG:4326입니다. WGS84 타원체를 사용하는 지리/경위도 참조 시스템입니다. "
+"한번 살펴봅시다:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:220
 msgid ""
