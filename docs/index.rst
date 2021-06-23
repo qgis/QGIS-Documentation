@@ -14,7 +14,7 @@
 
   .. hint:: Looking for documentation of versions newer than the
     |version| Long Term Release? Have a look at the
-    `testing docs <https://docs.qgis.org/en/testing>`_.
+    `testing docs <https://docs.qgis.org/testing/en/>`_.
 
 .. note:: QGIS documentation is available in various languages and versions.
   Expand the :guilabel:`QGIS Documentation` menu at the bottom of the
