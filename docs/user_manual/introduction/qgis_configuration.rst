@@ -1003,6 +1003,8 @@ It provides some default filters (with prefix) to use:
   comma or space separated pair of x and y coordinates or a formatted URL
   (e.g., OpenStreetMap, Leaflet, OpenLayer, Google Maps, ...).
   The coordinate is expected in WGS 84 (``epsg:4326``) and/or map canvas CRS.
+* Nominatim geocoder (``>``): geocodes using the `Nominatim <https://nominatim.org>`_
+  geocoding service of the OpenStreetMap Foundation.
 * Processing algorithms (``a``): searches and opens a Processing algorithm dialog.
 * Edit selected features (``ef``): gives quick access and runs a compatible
   :ref:`modify-in-place <processing_inplace_edit>` Processing algorithm on the
