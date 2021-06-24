@@ -11,10 +11,10 @@ These tools are only available in the Graphical Modeler.
 They are not available in the Processing Toolbox.
 
 
-.. _qgisconditionalbranch:
+.. _qgiscondition:
 
-Conditional Branch
------------------
+Conditional branch
+------------------
 Adds a conditional branch into a model,
 allowing parts of the model to be executed based on
 the result of an expression evaluation. Mostly by using
@@ -33,11 +33,11 @@ Parameters
      - Description
    * - **Field**
      - ``BRANCH``
-     - [String]
+     - [string]
      - Name of the condition
    * - **Field**
      - ``CONDITION``
-     - [Expression]
+     - [expression]
      - Expression to evaluate
 
 Outputs
@@ -48,7 +48,7 @@ None.
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:condition``
+**Algorithm ID**: ``native:condition``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -57,7 +57,7 @@ Python code
 
 .. _qgiscreatedirectory:
 
-Create Directory
+Create directory
 ----------------
 Creates a new directory on a file system.
 Directories will be created recursively, creating all required parent
@@ -75,9 +75,9 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Directory Path**
+   * - **Directory path**
      - ``PATH``
-     - [String]
+     - [string]
      - Folder path to create
 
 Outputs
@@ -93,20 +93,20 @@ Outputs
      - Description
    * - **Output**
      - ``OUTPUT``
-     - [Folder]
+     - [folder]
      - Created folder
 
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:createdirectory``
+**Algorithm ID**: ``native:createdirectory``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
 
-.. _qgisfeaturefilter:
+.. _qgisfilter:
 
 Feature filter
 -----------------------------
@@ -115,9 +115,6 @@ them to one or several outputs.
 If you do not know about any attribute names that are common to all
 possible input layers, filtering is only possible on the feature
 geometry and general record mechanisms, such as ``$id`` and ``uuid``.
-
-.. note:: This algorithm is only available from the
-  :ref:`Graphical modeler <processing.modeler>`.
 
 Parameters
 ..........
@@ -163,61 +160,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:featurefilter``
-
-.. include:: qgis_algs_include.rst
-  :start-after: **algorithm_code_section**
-  :end-before: **end_algorithm_code_section**
-
-
-.. _qgisfilterlayerbytype:
-
-Filter layer by type
---------------------
-Filters layer by their type. Incoming layers will be directed
-to different outputs based on whether they are a vector or raster layer.
-
-Parameters
-..........
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
-
-   * - Label
-     - Name
-     - Type
-     - Description
-   * - **Layer**
-     - ``INPUT``
-     - [Map Layer]
-     - Generic Map Layer
-
-
-Outputs
-.......
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
-
-   * - Label
-     - Name
-     - Type
-     - Description
-   * - **Layer**
-     - ``VECTOR``
-     - [Vector Layer]
-     - A Vector Layer of the input, if compatible
-	 * - **Layer**
-     - ``RASTER``
-     - [Raster Layer]
-     - A Raster Layer of the input, if compatible
-
-Python code
-...........
-
-**Algorithm ID**: ``qgis:filterlayersbytype``
+**Algorithm ID**: ``native:filter``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -226,8 +169,8 @@ Python code
 
 .. _qgisfilterbygeometry:
 
-Filter by Geometry
-------------------
+Filter by geometry type
+-----------------------
 Filters features by their geometry type. Incoming features will be directed
 to different outputs based on whether they have a point, line or polygon geometry.
 
@@ -242,9 +185,9 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Layer**
+   * - **Input layer**
      - ``INPUT``
-     - [Vector Layer]
+     - [vector: any]
      - Layer to evaluate
 
 Outputs
@@ -258,37 +201,47 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Layer**
+   * - **Point features**
+
+       Optional
      - ``POINTS``
-     - [same as input]
+     - [vector: point]
      - Layer with points
-   * - **Layer**
+   * - **Line features**
+
+       Optional
      - ``LINES``
-     - [same as input]
+     - [vector: line]
      - Layer with lines
-   * - **Layer**
+   * - **Polygon features**
+
+       Optional
      - ``POLYGONS``
-     - [same as input]
+     - [vector: polygon]
      - Layer with polygons
-   * - **Layer**
+   * - **Features with no geometry**
+
+       Optional
      - ``NO_GEOMETRY``
-     - [same as input]
+     - [table]
      - Geometry-less vector layer
 
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:filterbygeometry``
+**Algorithm ID**: ``native:filterbygeometry``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
-.. _qgislayouttoimage:
 
-Layout to image
------------------------
-This algorithm outputs a print layout as an image file (e.g. PNG or JPEG images)
+.. _qgisfilterlayersbytype:
+
+Filter layers by type
+---------------------
+Filters layers by their type. Incoming layers will be directed
+to different outputs based on whether they are a vector or raster layer.
 
 Parameters
 ..........
@@ -301,26 +254,10 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Print Layout**
-     - ``LAYOUT``
-     - [Layout]
-     - Layout to export
-   * - **DPI**
-     - ``DPI``
-     - [Int]
-     - DPI of the output
-   * - **Generate world file**
-     - ``GEOREFERENCE``
-     - [Bool]
-     - Determines if a world file should be generated
-   * - **Export RDF metadata**
-     - ``INCLUDE_METADATA``
-     - [Bool]
-     - Determines if RDF metadata should be generated
-   * - **Enable antialiasing**
-     - ``ANTIALIAS``
-     - [Bool]
-     - Determines if antialiasing should be enabled
+   * - **Input layer**
+     - ``INPUT``
+     - [layer]
+     - Generic Map Layer
 
 
 Outputs
@@ -334,92 +271,23 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Image file**
-     - ``OUTPUT``
-     - [File]
-     - Name (including path) of the file to generate
+   * - **Vector features**
+
+       Optional
+     - ``VECTOR``
+     - [vector]
+     - A Vector Layer of the input, if compatible
+   * - **Raster layer**
+ 
+       Optional
+     - ``RASTER``
+     - [raster]
+     - A Raster Layer of the input, if compatible
 
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:printlayouttoimage``
-
-.. include:: qgis_algs_include.rst
-  :start-after: **algorithm_code_section**
-  :end-before: **end_algorithm_code_section**
-
-
-.. _qgislayoutopdf:
-
-Layout to pdf
------------------------
-This algorithm outputs a print layout as a PDF file.
-
-Parameters
-..........
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
-
-   * - Label
-     - Name
-     - Type
-     - Description
-   * - **Print Layout**
-     - ``LAYOUT``
-     - [Layout]
-     - Layout to export
-   * - **DPI**
-     - ``DPI``
-     - [Int]
-     - DPI of the output
-   * - **Always export as vectors**
-     - ``FORCE_VECTOR``
-     - [Bool]
-     - Determines if vectorial data should be left as vectors
-   * - **Generate world file**
-     - ``GEOREFERENCE``
-     - [Bool]
-     - Determines if georeference information should be added
-   * - **Export RDF metadata**
-     - ``INCLUDE_METADATA``
-     - [Bool]
-     - Determines if RDF metadata should be generated
-   * - **Disable tiled raster layer exports**
-     - ``DISABLE_TILED``
-     - [Bool]
-     - Determines if raster should be tiled
-   * - **Simplify geometries**
-     - ``SIMPLIFY``
-     - [Bool]
-     - Determines if geometries should be simplify to reduce output size
-   * - **Text export**
-     - ``TEXT_FORMAT``
-     - [Enum]
-     - Determines text should be exported as path or text objects.
-
-
-Outputs
-.......
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
-
-   * - Label
-     - Name
-     - Type
-     - Description
-   * - **Image file**
-     - ``OUTPUT``
-     - [File]
-     - Name (including path) of the pdf to generate
-
-Python code
-...........
-
-**Algorithm ID**: ``qgis:printlayouttopdf``
+**Algorithm ID**: ``native:filterlayersbytype``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -445,11 +313,11 @@ Parameters
      - Description
    * - **Layer**
      - ``INPUT``
-     - [Layer]
+     - [layer]
      - Layer to load in the legend
    * - **Loaded layer name**
      - ``NAME``
-     - [String]
+     - [string]
      - Name of the loaded layer
 
 Outputs
@@ -471,7 +339,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:loadlayer``
+**Algorithm ID**: ``native:loadlayer``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -480,7 +348,7 @@ Python code
 
 .. _qgisraiseexception:
 
-Raise Exception
+Raise exception
 ---------------
 Raises an exception and cancels a model's execution.
 The exception message can be customized, and optionally an expression based condition
@@ -501,11 +369,11 @@ Parameters
      - Description
    * - **Message**
      - ``MESSAGE``
-     - [String]
+     - [string]
      - Message to display
    * - **Condition**
      - ``CONDITION``
-     - [Expression]
+     - [expression]
      - Expression to evaluate if true
 
 Outputs
@@ -516,7 +384,7 @@ None.
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:raiseexception``
+**Algorithm ID**: ``native:raiseexception``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -525,7 +393,7 @@ Python code
 
 .. _qgisraisewarning:
 
-Raise Warning
+Raise warning
 -------------
 Raises a warning message in the log.
 The warning message can be customized, and optionally an expression based condition
@@ -546,11 +414,11 @@ Parameters
      - Description
    * - **Message**
      - ``MESSAGE``
-     - [String]
+     - [string]
      - Message to display
    * - **Condition**
      - ``CONDITION``
-     - [Expression]
+     - [expression]
      - Expression to evaluate if true
 
 Outputs
@@ -561,7 +429,7 @@ None.
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:raisewarning``
+**Algorithm ID**: ``native:raisewarning``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -613,14 +481,14 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:renamelayer``
+**Algorithm ID**: ``native:renamelayer``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
 
-.. _qgissavelogtofile:
+.. _qgissavelog:
 
 Save log to file
 ----------------
@@ -641,6 +509,8 @@ Parameters
    * - **Use HTML**
      - ``USE_HTML``
      - [Boolean]
+
+       Default: False
      - Use HTML formatting
 
 Outputs
@@ -656,13 +526,13 @@ Outputs
      - Description
    * - **File**
      - ``OUTPUT``
-     - [String]
+     - [string]
      - Destination of the log
 
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:savelog``
+**Algorithm ID**: ``native:savelog``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -670,7 +540,7 @@ Python code
 
 .. _qgissetprojectvariable:
 
-Set Project Variable
+Set project variable
 --------------------
 Sets an expression variable for the current project.
 
@@ -685,13 +555,13 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Name**
+   * - **Variable name**
      - ``NAME``
-     - [String]
+     - [string]
      - Name of the variable
-   * - **Value**
+   * - **Variable value**
      - ``VALUE``
-     - [String]
+     - [string]
      - Value to be stored
 
 Outputs
@@ -702,7 +572,7 @@ None.
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:setprojectvariable``
+**Algorithm ID**: ``native:setprojectvariable``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -754,7 +624,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:stringconcatenation``
+**Algorithm ID**: ``native:stringconcatenation``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**

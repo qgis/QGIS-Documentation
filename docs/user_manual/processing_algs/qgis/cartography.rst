@@ -102,7 +102,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:angletonearest``
+**Algorithm ID**: ``native:angletonearest``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -193,7 +193,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:combinestyles``
+**Algorithm ID**: ``native:combinestyles``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -325,7 +325,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:categorizeusingstyle``
+**Algorithm ID**: ``native:categorizeusingstyle``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -421,7 +421,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:stylefromproject``
+**Algorithm ID**: ``native:stylefromproject``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -430,9 +430,13 @@ Python code
 
 .. _qgisatlaslayouttoimage:
 
-Export Atlas Layout to image
+Export atlas layout as image
 ----------------------------
-Exports the atlas of a print layout as an image files (e.g. PNG or JPEG images)
+Exports the atlas of a print layout as image files (e.g. PNG or JPEG images).
+
+If a coverage layer is set, the selected layout's atlas settings exposed
+in this algorithm will be overwritten. In this case, an empty filter or
+sort by expression will turn those settings off.
 
 Parameters
 ..........
@@ -445,152 +449,81 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Print Layout**
+   * - **Atlas layout**
      - ``LAYOUT``
-     - [Layout]
+     - [layout]
      - Layout to export
    * - **Coverage layer**
+
+       Optional
      - ``COVERAGE_LAYER``
-     - [Vector Layer]
+     - [vector: any]
      - Layer to use to generate the atlas
    * - **Filter expression**
      - ``FILTER_EXPRESSION``
-     - [Expression]
+     - [expression]
      - Expression to use to filter out atlas features
    * - **Sort expression**
-     - ``SORT_EXPRESSION``
-     - [Expression]
+
+       Optional
+     - ``SORTBY_EXPRESSION``
+     - [expression]
      - Expression to use to sort the atlas features
    * - **Reverse sort order**
+
+       Optional
      - ``SORTBY_REVERSE``
-     - [Bool]
-     - Determines if sorting should be inverted
-   * - **Map layers to assign to unlocked map item(s)**
-     - ``LAYERS``
-     - [Layers]
-     - Layers to display in the all the maps
-   * - **Image format**
-     - ``FORMAT``
-     - [Enum]
-     - Image format to be generated
-   * - **Output folder**
-     - ``Faolder``
-     - [Folder]
-     - Destination folder where the images will be generated
+     - [boolean]
+     - Determines if sorting should be inverted.
+       Used when a sort expression is provided.
    * - **Output filename expression**
      - ``FILENAME_EXPRESSION``
-     - [Expression]
+     - [expression]
+
+       Default: 'output_'||@atlas_featurenumber
      - Expression for use to generate filenames
+   * - **Output folder**
+     - ``FOLDER``
+     - [folder]
+     - Destination folder where the images will be generated
+   * - **Map layers to assign to unlocked map item(s)**
+
+       Optional
+     - ``LAYERS``
+     - [enumeration] [layer]
+     - Layers to display in the map item(s) whose contents are not locked
+   * - **Image format**
+     - ``EXTENSION``
+     - [list]
+
+       Default: png
+     - File format of the generated output(s).
    * - **DPI**
+
+       Optional
      - ``DPI``
-     - [Int]
-     - DPI of the output
+
+       Default: Not set
+     - [number]
+     - DPI of the output file(s). If not set, the value in the print layout settings will be used.
    * - **Generate world file**
      - ``GEOREFERENCE``
-     - [Bool]
+     - [boolean]
+
+       Default: True
      - Determines if a world file should be generated
    * - **Export RDF metadata**
      - ``INCLUDE_METADATA``
-     - [Bool]
-     - Determines if RDF metadata should be generated
+     - [boolean]
+
+       Default: True
+     - Determines if RDF metadata (title, author, ...) should be generated
    * - **Enable antialiasing**
      - ``ANTIALIAS``
-     - [Bool]
+     - [boolean]
+
+       Default: True
      - Determines if antialiasing should be enabled
-
-Outputs
-.......
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
-
-   * - Label
-     - Name
-     - Type
-     - Description
-
-Python code
-...........
-
-**Algorithm ID**: ``qgis:printlayouttoimage``
-
-.. include:: qgis_algs_include.rst
-  :start-after: **algorithm_code_section**
-  :end-before: **end_algorithm_code_section**
-
-
-.. _qgisatlaslayoutopdf:
-
-Export Atlas Layout to pdf
---------------------------
-Exports the atlas of a print layout as a PDF file(s).
-
-Parameters
-..........
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
-
-   * - Label
-     - Name
-     - Type
-     - Description
-   * - **Print Layout**
-     - ``LAYOUT``
-     - [Layout]
-     - Layout to export
-   * - **Coverage layer**
-     - ``COVERAGE_LAYER``
-     - [Vector Layer]
-     - Layer to use to generate the atlas
-   * - **Filter expression**
-     - ``FILTER_EXPRESSION``
-     - [Expression]
-     - Expression to use to filter out atlas features
-   * - **Sort expression**
-     - ``SORT_EXPRESSION``
-     - [Expression]
-     - Expression to use to sort the atlas features
-   * - **Reverse sort order**
-     - ``SORTBY_REVERSE``
-     - [Bool]
-     - Determines if sorting should be inverted
-   * - **Map layers to assign to unlocked map item(s)**
-     - ``LAYERS``
-     - [Layers]
-     - Layers to display in the all the maps
-   * - **DPI**
-     - ``DPI``
-     - [Int]
-     - DPI of the output
-   * - **Always export as vectors**
-     - ``FORCE_VECTOR``
-     - [Bool]
-     - Determines if vectorial data should be left as vectors
-   * - **Generate world file**
-     - ``GEOREFERENCE``
-     - [Bool]
-     - Determines if georeference information should be added
-   * - **Export RDF metadata**
-     - ``INCLUDE_METADATA``
-     - [Bool]
-     - Determines if RDF metadata should be generated
-   * - **Disable tiled raster layer exports**
-     - ``DISABLE_TILED``
-     - [Bool]
-     - Determines if raster should be tiled
-   * - **Simplify geometries**
-     - ``SIMPLIFY``
-     - [Bool]
-     - Determines if geometries should be simplify to reduce output size
-   * - **Text export**
-     - ``TEXT_FORMAT``
-     - [Enum]
-     - Determines text should be exported as path or text objects.
-
-
 
 Outputs
 .......
@@ -605,23 +538,162 @@ Outputs
      - Description
    * - **Image file**
      - ``OUTPUT``
-     - [File]
-     - Name (including path) of the pdf to generate
+     - [file]
+     - Image files generated by the atlas layout
 
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:printlayouttopdf``
+**Algorithm ID**: ``native:atlaslayouttoimage``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
 
-.. _qgislayouttoimage:
+.. _qgisatlaslayouttopdf:
 
-Export Layout to image
-----------------------
+Export atlas layout as PDF
+--------------------------
+Exports the atlas of a print layout as a PDF file(s).
+
+If a coverage layer is set, the selected layout's atlas settings exposed
+in this algorithm will be overwritten. In this case, an empty filter or
+sort by expression will turn those settings off.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Atlas layout**
+     - ``LAYOUT``
+     - [layout]
+     - Layout to export
+   * - **Coverage layer**
+
+       Optional
+     - ``COVERAGE_LAYER``
+     - [vector: any]
+     - Layer to use to generate the atlas
+   * - **Filter expression**
+     - ``FILTER_EXPRESSION``
+     - [expression]
+     - Expression to use to filter out atlas features
+   * - **Sort expression**
+
+       Optional
+     - ``SORTBY_EXPRESSION``
+     - [expression]
+     - Expression to use to sort the atlas features
+   * - **Reverse sort order**
+
+       Optional
+     - ``SORTBY_REVERSE``
+     - [boolean]
+     - Determines if sorting should be inverted.
+       Used when a sort expression is provided.
+   * - **Map layers to assign to unlocked map item(s)**
+
+       Optional
+     - ``LAYERS``
+     - [enumeration] [layer]
+     - Layers to display in the map item(s) whose contents are not locked
+   * - **DPI**
+
+       Optional
+     - ``DPI``
+
+       Default: Not set
+     - [number]
+     - DPI of the output file(s). If not set, the value in the print layout settings will be used.
+   * - **Always export as vectors**
+     - ``FORCE_VECTOR``
+     - [boolean]
+
+       Default: False
+     - Determines if vectorial data should be left as vectors
+   * - **Append georeference information**
+     - ``GEOREFERENCE``
+     - [boolean]
+
+       Default: True
+     - Determines if a world file should be generated
+   * - **Export RDF metadata**
+     - ``INCLUDE_METADATA``
+     - [boolean]
+
+       Default: True
+     - Determines if RDF metadata (title, author, ...) should be generated
+   * - **Disable tiled raster layer exports**
+     - ``DISABLE_TILED``
+     - [boolean]
+
+       Default: False
+     - Determines if raster should be tiled
+   * - **Simplify geometries to reduce output file size**
+     - ``SIMPLIFY``
+     - [boolean]
+
+       Default: True
+     - Determines if geometries should be simplified to reduce output file size
+   * - **Text export**
+     - ``TEXT_FORMAT``
+     - [list]
+
+       Default: 0
+     - Determines if text should be exported as path or text objects.
+       Possible options are:
+
+       * 0 - Always export text as paths (recommended)
+       * 1 - Always export texts as text objects
+
+   * - **PDF file**
+     - ``OUTPUT``
+     - [file]
+
+       Default: [Save to temporary file]
+     - Name (including path) of the output file. One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **PDF file**
+     - ``OUTPUT``
+     - [file]
+     - PDF file corresponding to the exported atlas layout
+
+Python code
+...........
+
+**Algorithm ID**: ``native:atlaslayouttopdf``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgisprintlayouttoimage:
+
+Export print layout as image
+----------------------------
 Exports a print layout as an image file (e.g. PNG or JPEG images)
 
 Parameters
@@ -635,27 +707,51 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Print Layout**
+   * - **Print layout**
      - ``LAYOUT``
-     - [Layout]
+     - [layout]
      - Layout to export
+   * - **Map layers to assign to unlocked map item(s)**
+
+       Optional
+     - ``LAYERS``
+     - [enumeration] [layer]
+     - Layers to display in the map item(s) whose contents are not locked
    * - **DPI**
+
+       Optional
      - ``DPI``
-     - [Int]
-     - DPI of the output
+
+       Default: Not set
+     - [number]
+     - DPI of the output file(s). If not set, the value in the print layout settings will be used.
    * - **Generate world file**
      - ``GEOREFERENCE``
-     - [Bool]
+     - [boolean]
+
+       Default: True
      - Determines if a world file should be generated
    * - **Export RDF metadata**
      - ``INCLUDE_METADATA``
-     - [Bool]
-     - Determines if RDF metadata should be generated
+     - [boolean]
+
+       Default: True
+     - Determines if RDF metadata (title, author, ...) should be generated
    * - **Enable antialiasing**
      - ``ANTIALIAS``
-     - [Bool]
-     - Determines if antialiasing should be enabled
+     - [boolean]
 
+       Default: True
+     - Determines if antialiasing should be enabled
+   * - **Image file**
+     - ``OUTPUT``
+     - [file]
+
+       Default: [Save to temporary file]
+     - Name (including path) of the output file. One of:
+
+       * Save to a Temporary File
+       * Save to File...
 
 Outputs
 .......
@@ -670,23 +766,23 @@ Outputs
      - Description
    * - **Image file**
      - ``OUTPUT``
-     - [File]
-     - Name (including path) of the file to generate
+     - [file]
+     - Image file corresponding to the exported print layout
 
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:printlayouttoimage``
+**Algorithm ID**: ``native:printlayouttoimage``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
 
-.. _qgislayoutopdf:
+.. _qgisprintlayouttopdf:
 
-Export Layout to pdf
---------------------
+Export print layout as pdf
+--------------------------
 Exports a print layout as a PDF file.
 
 Parameters
@@ -702,37 +798,80 @@ Parameters
      - Description
    * - **Print Layout**
      - ``LAYOUT``
-     - [Layout]
+     - [layout]
      - Layout to export
+   * - **Map layers to assign to unlocked map item(s)**
+
+       Optional
+     - ``LAYERS``
+     - [enumeration] [layer]
+     - Layers to display in the map item(s) whose contents are not locked
    * - **DPI**
+
+       Optional
      - ``DPI``
-     - [Int]
-     - DPI of the output
+
+       Default: Not set
+     - [number]
+     - DPI of the output file(s). If not set, the value in the print layout settings will be used.
    * - **Always export as vectors**
      - ``FORCE_VECTOR``
-     - [Bool]
+     - [boolean]
+
+       Default: False
      - Determines if vectorial data should be left as vectors
-   * - **Generate world file**
+   * - **Append georeference information**
      - ``GEOREFERENCE``
-     - [Bool]
-     - Determines if georeference information should be added
+     - [boolean]
+
+       Default: True
+     - Determines if a world file should be generated
    * - **Export RDF metadata**
      - ``INCLUDE_METADATA``
-     - [Bool]
-     - Determines if RDF metadata should be generated
+     - [boolean]
+
+       Default: True
+     - Determines if RDF metadata (title, author, ...) should be generated
    * - **Disable tiled raster layer exports**
      - ``DISABLE_TILED``
-     - [Bool]
+     - [boolean]
+
+       Default: False
      - Determines if raster should be tiled
-   * - **Simplify geometries**
+   * - **Simplify geometries to reduce output file size**
      - ``SIMPLIFY``
-     - [Bool]
-     - Determines if geometries should be simplify to reduce output size
+     - [boolean]
+
+       Default: True
+     - Determines if geometries should be simplified to reduce output file size
    * - **Text export**
      - ``TEXT_FORMAT``
-     - [Enum]
-     - Determines text should be exported as path or text objects.
+     - [list]
 
+       Default: 0
+     - Determines if text should be exported as path or text objects.
+       Possible options are:
+
+       * 0 - Always export text as paths (recommended)
+       * 1 - Always export texts as text objects
+
+   * - **Export layers as separate PDF files**
+     - ``SEPARATE_LAYERS``
+     - [boolean]
+
+       Default: False
+     - If True, then a separate PDF file will be created per layer per map item in the
+       layout. Additionally, separate PDF files may be created for other complex layout items,
+       resulting in a set of PDF files which contain logical atomic components of the layout.
+   * - **PDF file**
+     - ``OUTPUT``
+     - [file]
+
+       Default: [Save to temporary file]
+     - Name (including path) of the output file. One of:
+
+       * Save to a Temporary File
+       * Save to File...
 
 Outputs
 .......
@@ -747,13 +886,13 @@ Outputs
      - Description
    * - **Image file**
      - ``OUTPUT``
-     - [File]
-     - Name (including path) of the pdf to generate
+     - [file]
+     - PDF file(s) corresponding to the exported print layout
 
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:printlayouttopdf``
+**Algorithm ID**: ``native:printlayouttopdf``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -858,7 +997,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:printlayoutmapextenttolayer``
+**Algorithm ID**: ``native:printlayoutmapextenttolayer``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -914,7 +1053,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:setlayerstyle``
+**Algorithm ID**: ``native:setlayerstyle``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
