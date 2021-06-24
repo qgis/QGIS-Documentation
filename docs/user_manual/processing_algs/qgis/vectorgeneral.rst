@@ -90,6 +90,81 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _qgisbatchnominatimgeocoder:
+
+Batch Nominatim geocoder
+------------------------
+
+Performs batch geocoding using the Nominatim service against an input
+layer string field.
+The output layer will have a point geometry reflecting the geocoded location
+as well as a number of attributes associated to the geocoded location.
+
+.. note:: This algorithm is compliant with the `usage policy
+ <https://operations.osmfoundation.org/policies/nominatim/>`_ of the
+ Nominatim geocoding service provided by the OpenStreetMap Foundation.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Vector layer to geocode the features
+   * - **Address field**
+     - ``FIELD``
+     - [tablefield: string]
+     - Field containing the addresses to geocode
+   * - **Geocoded**
+     - ``OUTPUT``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output layer containing only the geocoded addresses.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to Database Table...
+       * Append to Layer...
+
+       The file encoding can also be changed here.
+
+Outputs
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Geocoded**
+     - ``OUTPUT``
+     - [vector: point]
+     - Vector layer with point features corresponding to the geocoded addresses
+
+Python code
+...........
+
+**Algorithm ID**: ``native:batchnominatimgeocoder``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgislayertobookmarks:
 
 Convert layer to spatial bookmarks

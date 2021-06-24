@@ -2666,6 +2666,11 @@ filter, which means that e.g. a file search filter will show results one by one
 as the file tree is scanned. This ensures that the UI is always responsive, even
 if a very slow search filter is present (e.g. one which uses an online service).
 
+.. note:: The Nominatim locator tool may behave differently (no autocompletion
+  search, delay of fetching results, ...) with respect to the OpenStreetMap
+  Nominatim `usage policy <https://operations.osmfoundation.org/policies/nominatim/>`_.
+
+
 .. tip:: **Quick access to the locator's configurations**
 
   Click on the |search| icon inside the locator widget on the status bar to
