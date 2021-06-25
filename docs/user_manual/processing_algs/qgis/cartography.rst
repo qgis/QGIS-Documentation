@@ -498,6 +498,7 @@ Parameters
 
        Default: png
      - File format of the generated output(s).
+       The list of available formats varies depending on OS and installed drivers.
    * - **DPI**
 
        Optional
@@ -884,7 +885,7 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Image file**
+   * - **PDF file**
      - ``OUTPUT``
      - [file]
      - PDF file(s) corresponding to the exported print layout

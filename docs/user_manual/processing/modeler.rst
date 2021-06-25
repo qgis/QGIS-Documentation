@@ -270,14 +270,11 @@ the editor will have the dialog prefilled with those value on any subsequent run
 Definition of Model Variables
 -----------------------------
 
-Model can also contain dedicated variables that are unique to them.
-
+Model can contain dedicated variables that are unique to them.
 These variables can be accessed by any expression used within the model.
-
 These variables can be useful to control algorithms within a model and 
 control multiple aspects of the model by changing a single variable.
-
-The variables can be viewed and modified in the Variables widget
+The variables can be viewed and modified in the :guilabel:`Variables` widget.
 
 Interacting with the canvas and elements
 ----------------------------------------
