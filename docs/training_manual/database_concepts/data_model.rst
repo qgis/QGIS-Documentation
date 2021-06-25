@@ -11,7 +11,7 @@ implement our example database.
 Install PostgreSQL
 -------------------------------------------------------------------------------
 
-.. note:: You can find PostGreSQL packages and installation instructions for
+.. note:: You can find PostgreSQL packages and installation instructions for
   your operating system at https://www.postgresql.org/download/.
   Please note that the documentation will assume users are running QGIS under
   Ubuntu.
