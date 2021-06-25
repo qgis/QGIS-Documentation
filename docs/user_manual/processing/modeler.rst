@@ -296,8 +296,8 @@ dragging the mouse.
 If you want to snap the elements while moving them in the canvas you can choose
 :menuselection:`View --> Enable Snapping`.
 
-Models can also be validated by using the |validateModel|:sup:`Validate Model` action located in the
-:menuselection:`Model --> Validate Model` menu. 
+Models can also be validated by using the |success|:guilabel:`Validate Model`
+action located in the :menuselection:`Model -->` menu.
 
 The :menuselection:`Edit` menu contains some very useful options to interact with
 your model elements:
@@ -340,10 +340,12 @@ allowing you to change the order of the inputs:
 
 
 Comments can also be added to Inputs or algorithms present in the modeler.
-This can be done by going in the comment widget of the item or with a right click.
+This can be done by going in the :guilabel:`Comment` tab of the item or with
+a right-click.
 
 Comments are visible only in the modeler canvas and not in the
-final algorithm dialog, they can be hiden by deactivating :menuselection:`View --> Show Comments`
+final algorithm dialog, they can be hiden by deactivating
+:menuselection:`View --> Show Comments`.
 
 
 Saving and loading models
@@ -517,7 +519,7 @@ then it is not possible to use it within a model, and it will not
 appear in the list of algorithms that you can find in the modeler
 dialog.
 On the other hand some algorithms are specific to the modeler.
-Those algorithm are located within the group 'Modeler Tools'.
+Those algorithms are located within the group 'Modeler Tools'.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -568,6 +570,8 @@ Those algorithm are located within the group 'Modeler Tools'.
 .. |selectAll| image:: /static/common/mActionSelectAll.png
    :width: 1.5em
 .. |start| image:: /static/common/mActionStart.png
+   :width: 1.5em
+.. |success| image:: /static/common/mIconSuccess.png
    :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em

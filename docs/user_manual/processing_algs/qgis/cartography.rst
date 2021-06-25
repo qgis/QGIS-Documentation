@@ -480,7 +480,7 @@ Parameters
      - ``FILENAME_EXPRESSION``
      - [expression]
 
-       Default: 'output_'||@atlas_featurenumber
+       Default: 'output\_'||\@atlas_featurenumber
      - Expression for use to generate filenames
    * - **Output folder**
      - ``FOLDER``
