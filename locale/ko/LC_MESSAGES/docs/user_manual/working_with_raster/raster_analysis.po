@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2021
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-12 02:37+0000\n"
 "PO-Revision-Date: 2020-12-24 11:58+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2021\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,6 +32,17 @@ msgstr "래스터 분석"
 #: ../../docs/user_manual/working_with_raster/raster_analysis.rst:29
 msgid "Raster Calculator"
 msgstr "래스터 계산기"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:19
+msgid ""
+"The :menuselection:`Raster Calculator` in the :menuselection:`Raster` menu "
+"allows you to perform calculations on the basis of existing raster pixel "
+"values (see :numref:`figure_raster_calculator`). The results are written to "
+"a new raster layer in a GDAL-supported format."
+msgstr ""
+":menuselection:`Raster` 메뉴에 있는 :menuselection:`Raster Calculator` 는 기존 래스터 "
+"픽셀값을 기반으로 계산을 수행할 수 있습니다. (:numref:`figure_raster_calculator` 참조) 계산 결과는 "
+"GDAL 지원 포맷의 새 래스터 레이어로 작성됩니다."
 
 #: ../../docs/user_manual/working_with_raster/raster_analysis.rst:32
 msgid ""
@@ -56,6 +68,21 @@ msgstr ""
 "열과 행을 기반으로 계산 영역의 범위를 정의해서 산출 레이어의 해상도를 설정할 수 있습니다. 입력 레이어가 서로 다른 해상도인 경우, "
 "'Nearest Neighbor' 알고리즘으로 값들을 리샘플링할 것입니다."
 
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:43
+msgid ""
+"The **Operators** section contains all available operators. To add an "
+"operator to the raster calculator expression box, click the appropriate "
+"button. Mathematical calculations (``+``, ``-``, ``*``, ... ) and "
+"trigonometric functions (``sin``, ``cos``, ``tan``, ... ) are available. "
+"Conditional expressions (``=``, ``!=``, ``<``, ``>=``, ... ) return either 0"
+" for false or 1 for true, and therefore can be used with other operators and"
+" functions."
+msgstr ""
+"**Operators** 부분은 사용할 수 있는 모든 연산자를 담고 있습니다. 래스터 계산기 표현식 란에 연산자를 추가하려면, 알맞은 "
+"버튼을 클릭하십시오. 수학 계산(``+``, ``-``, ``*`` 등등) 및 삼각함수(``sin``, ``cos``, ``tan`` "
+"등등)를 사용할 수 있습니다. 조건 표현식(``=``, ``!=``, ``<``, ``>=`` 등등)은 거짓인 경우 0, 참인 경우 1을"
+" 반환하기 때문에 다른 연산자 및 함수와 함께 사용할 수 있습니다."
+
 #: ../../docs/user_manual/working_with_raster/raster_analysis.rst:50
 msgid ""
 "With the |checkbox| :guilabel:`Add result to project` checkbox, the result "
@@ -63,6 +90,14 @@ msgid ""
 msgstr ""
 "|checkbox| :guilabel:`Add result to project` 체크박스를 활성화하면, 범례 영역에 산출 레이어를 "
 "자동적으로 추가하므로 사용자가 가시화할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:160
+msgid "checkbox"
+msgstr "checkbox"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:53
+msgid "See also the :ref:`qgisrastercalculator` algorithm."
+msgstr ":ref:`qgisrastercalculator` 알고리즘도 참조하세요."
 
 #: ../../docs/user_manual/working_with_raster/raster_analysis.rst:56
 msgid "Examples"
@@ -150,6 +185,25 @@ msgstr "필요한 경우 값을 재조정할 수 있습니다."
 msgid "All rasters will be saved in another files."
 msgstr "이때 모든 래스터는 다른 파일로 저장될 것입니다."
 
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:111
+msgid ""
+"First, open the tools from :menuselection:`Raster --> Align Raster...` and "
+"click on the |signPlus| :sup:`Add new raster` button to choose one existing "
+"raster in QGIS. Select an output file to save the raster after the "
+"alignment, the resampling method and if the tools need to :guilabel:`Rescale"
+" values according to the cell size`. The resampling method can be (see "
+":numref:`figure_raster_align_edit`):"
+msgstr ""
+"먼저, :menuselection:`Raster --> Align Raster...` 에서 이 도구를 열고 |signPlus| "
+":sup:`Add new raster` 아이콘을 클릭해서 QGIS에 있는 기존 래스터 가운데 하나를 선택하십시오. 정렬 작업 뒤에 "
+"래스터를 저장할 산출 파일, 리샘플링 방법, 그리고 :guilabel:`Rescale values according to the cell"
+" size` 옵션으로 셀 크기에 따라 값을 재조정할지 여부를 선택하십시오. 리샘플링 방법은 다음 가운데 하나를 선택할 수 있습니다. "
+"(:numref:`figure_raster_align_edit` 을 참조하세요.):"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:164
+msgid "signPlus"
+msgstr "signPlus"
+
 #: ../../docs/user_manual/working_with_raster/raster_analysis.rst:117
 msgid "**Nearest Neighbor**"
 msgstr "**Nearest Neighbor**"
@@ -197,6 +251,26 @@ msgstr ""
 msgid "Select Raster Resampling Options"
 msgstr "래스터 리샘플링 옵션 선택하기"
 
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:134
+msgid ""
+"In the main :guilabel:`Align raster` dialog, you can still |symbologyEdit| "
+":sup:`Edit file settings` or |signMinus| :sup:`Remove an existing file` from"
+" the list of raster layers. You can also choose one or more other options "
+"(see :numref:`figure_raster_align`):"
+msgstr ""
+":guilabel:`Align raster` 대화창에서, 래스터 레이어 목록으로부터 |symbologyEdit| :sup:`Edit "
+"file settings` 아이콘으로 파일 설정을 편집하거나 |signMinus| :sup:`Remove an existing file`"
+" 아이콘으로 기존 파일을 제거할 수 있습니다. 다음 기타 옵션도 하나 이상 선택할 수 있습니다. "
+"(:numref:`figure_raster_align` 를 참조하세요.):"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:166
+msgid "symbologyEdit"
+msgstr "symbologyEdit"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:162
+msgid "signMinus"
+msgstr "signMinus"
+
 #: ../../docs/user_manual/working_with_raster/raster_analysis.rst:138
 msgid "Select the :guilabel:`Reference Layer`,"
 msgstr ":guilabel:`Reference Layer`: 참조 레이어 선택"
@@ -212,6 +286,12 @@ msgstr ":guilabel:`Cell size`: 다른 셀 크기를 설정"
 #: ../../docs/user_manual/working_with_raster/raster_analysis.rst:141
 msgid "Setup a different :guilabel:`Grid Offset`,"
 msgstr ":guilabel:`Grid Offset`: 다른 그리드 오프셋을 설정"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:142
+msgid ""
+":guilabel:`Clip to Extent`: it can be user-defined, bound to a layer or to "
+"the map canvas"
+msgstr ":guilabel:`Clip to Extent`: 사용자 정의, 레이어 기반, 또는 맵 캔버스 기반 가운데 하나를 선택"
 
 #: ../../docs/user_manual/working_with_raster/raster_analysis.rst:143
 msgid ":guilabel:`Output Size`,"
