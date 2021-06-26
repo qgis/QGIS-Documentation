@@ -47,7 +47,7 @@ The :guilabel:`General` block contains a number of interesting parameters.
   :guilabel:`Layers` panel, set a group name for this parameter. The group
   may exist already or not. QGIS will add all output layers to such a group.
   By default, this parameter is empty, so all output layers are added to 
-  different places in the :guilabel:`Layers` panel, depending on the layer
+  different places in the :guilabel:`Layers` panel, depending on the item
   that is active when running an algorithm.
   Note that output layers will be loaded to the :guilabel:`Layers` panel 
   only if :guilabel:`Open output file after running algorithm` is checked 
