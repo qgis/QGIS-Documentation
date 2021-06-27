@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2021
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-12 02:37+0000\n"
 "PO-Revision-Date: 2020-12-24 10:18+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2021\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -41,6 +42,21 @@ msgstr ""
 "|label| :guilabel:`Add Label` 도구로 라벨을 추가하고 :ref:`interact_layout_item` 에서 "
 "설명한 내용과 동일한 방법으로 수정할 수 있습니다."
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:200
+msgid "label"
+msgstr "label"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:19
+msgid ""
+"By default, the label item provides a default text that you can customize "
+"using its :guilabel:`Item Properties` panel. Other than the :ref:`items "
+"common properties <item_common_properties>`, this feature has the following "
+"functionalities (see :numref:`figure_layout_label`):"
+msgstr ""
+"라벨 항목은 기본적으로 라벨의 :guilabel:`Item Properties` 패널에서 사용자 지정할 수 있는 기본 텍스트를 "
+"제공합니다. 이 항목은 :ref:`공통 속성 <item_common_properties>` 이외에도 다음과 같은 기능을 가지고 "
+"있습니다(:numref:`figure_layout_label` 참조):"
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:29
 msgid "Label Item Properties Panel"
 msgstr "라벨 항목 속성 패널"
@@ -66,6 +82,44 @@ msgid ""
 msgstr ""
 "|checkbox| :guilabel:`Render as HTML`: 이 옵션을 활성화하면 라벨을 HTML 코드로 해석시킬 수 있습니다."
 " URL, 웹페이지로 연결되는 클릭할 수 있는 이미지, 또는 더 복잡한 무언가를 삽입할 수 있습니다."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:198
+msgid "checkbox"
+msgstr "checkbox"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:41
+msgid ""
+"You can also use :ref:`expressions <expression_builder>`: click on "
+":guilabel:`Insert or Edit an expression...` button, write your formula as "
+"usual and when the dialog is applied, QGIS automatically adds the "
+"surrounding characters."
+msgstr ""
+":guilabel:`Insert or Edit an expression...` 버튼을 클릭하면 :ref:`표현식 "
+"<expression_builder>` 도 사용할 수 있습니다. 대화창이 열리면 동일한 방법으로 공식을 작성하십시오. QGIS가 괄호 "
+"문자를 자동적으로 추가합니다."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:45
+msgid ""
+"Clicking the :guilabel:`Insert or Edit an Expression...` button when no "
+"selection is made in the textbox will append the new expression to the "
+"existing text. If you want to update an existing text, you need to select it"
+" the part of interest beforehand."
+msgstr ""
+"텍스트란에서 아무것도 선택하지 않았을 때 :guilabel:`Insert or Edit an expression...` 버튼을 클릭하면 "
+"기존 텍스트에 새 표현식을 덧붙일 것입니다. 기존 텍스트를 업데이트하고 싶다면, :guilabel:`Insert an "
+"Expression` 버튼을 클릭하기 전에 텍스트에서 관심 부분을 선택해야 합니다."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:50
+msgid ""
+"You can combine HTML rendering with expressions, leading to advanced "
+"labeling. The following code will output :numref:`figure_layout_label_html`:"
+msgstr ""
+"HTML 렌더링과 표현식을 결합해서 고급 라벨 작업을 할 수 있습니다. 다음 코드는 "
+":numref:`figure_layout_label_html` 를 산출할 것입니다:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:84
+msgid "Leveraging a label with HTML styling"
+msgstr "HTML 스타일 작업으로 라벨에 영향 주기"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:89
 msgid "Appearance"
@@ -137,6 +191,26 @@ msgstr "또는 :guilabel:`Main properties` 부분에서 작성하면:"
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:125
 msgid "Add a pagination for processed atlas features (eg, ``Page 1/10``):"
 msgstr "공간 처리된 지도책 피처용 페이지 번호를 (예: ``Page 1/10``) 추가합니다:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:131
+msgid ""
+"Return the name of the airports of the current atlas region feature, based "
+"on their common attributes:"
+msgstr "공항의 공통 속성을 기반으로 현재 지도책 지역 피처의 공항 이름을 반환합니다:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:143
+msgid "Or, if an :ref:`attributes relation <vector_relations>` is set:"
+msgstr "또는, :ref:`속성 관계 <vector_relations>` 를 설정한 경우:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:153
+msgid ""
+"Return the name of the airports contained in the current atlas region "
+"feature, based on their spatial relationship:"
+msgstr "공항의 공간 관계를 기반으로 현재 현재 지도책 지역 피처가 담고 있는 공항 이름을 반환합니다:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:165
+msgid "OR::"
+msgstr "또는::"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_label.rst:172
 msgid "Return the lower X coordinate of the ``Map 1`` item's extent:"
