@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2021
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-12 02:37+0000\n"
 "PO-Revision-Date: 2020-12-24 12:04+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2021\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -41,6 +42,24 @@ msgstr ""
 "<create_layout_item>` 을 따라 사용해서 새 축척 막대 항목을 추가하십시오. 이후 "
 ":ref:`interact_layout_item` 에서 설명한 내용과 동일한 방법으로 새 맵 항목을 수정할 수 있습니다."
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:178
+msgid "scaleBar"
+msgstr "scaleBar"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:18
+msgid ""
+"By default, a new scale bar item shows the scale of the map item over which "
+"it is drawn. If there is no map item below, the :ref:`reference map "
+"<reference_map>` is used. You can customize it in the :guilabel:`Item "
+"Properties` panel. Other than the :ref:`items common properties "
+"<item_common_properties>`, this feature has the following functionalities "
+"(see :numref:`figure_layout_scalebar`):"
+msgstr ""
+"새 축척 막대 항목은 기본적으로 해당 항목이 그려지는 맵 항목의 축척을 표시합니다. 축척 막대를 그릴 맵 항목이 없는 경우, "
+":ref:`참조 맵 <reference_map>` 을 사용합니다. :guilabel:`Item Properties` 패널에서 축척 막대를"
+" 사용자 지정할 수 있습니다. 이 항목은 :ref:`공통 속성 <item_common_properties>` 이외에도 다음과 같은 기능을"
+" 가지고 있습니다(:numref:`figure_layout_scalebar` 참조):"
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:29
 msgid "Scale Bar Item Properties Panel"
 msgstr "축척 막대 항목 속성 패널"
@@ -49,6 +68,15 @@ msgstr "축척 막대 항목 속성 패널"
 msgid "Main properties"
 msgstr "주요 속성"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:34
+msgid ""
+"The :guilabel:`Main properties` group of the scale bar :guilabel:`Item "
+"Properties` panel provides the following functionalities (see "
+":numref:`figure_layout_scalebar_ppt`):"
+msgstr ""
+"축척 막대 :guilabel:`Item Properties` 패널의 :guilabel:`Main properties` 그룹은 다음 기능을"
+" 제공하고 있습니다. (:numref:`figure_layout_scalebar_ppt` 을 참조하세요.):"
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:43
 msgid "Scale Bar Main properties group"
 msgstr "축척 막대 주요 속성 그룹"
@@ -56,6 +84,10 @@ msgstr "축척 막대 주요 속성 그룹"
 #: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:45
 msgid "First, choose the map the scale bar will be attached to"
 msgstr "먼저, 축척 막대를 첨부할 맵을 선택하십시오."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:46
+msgid "Then, choose the style of the scale bar. Available styles are:"
+msgstr "그리고 축척 막대의 스타일을 선택하십시오. 다음 스타일들을 사용할 수 있습니다:"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:48
 msgid ""
@@ -67,6 +99,18 @@ msgstr "**Single box** 또는 **Double box** 스타일: 색상을 교차하는 �
 msgid "**Middle**, **Up** or **Down** line ticks;"
 msgstr "**Middle**, **Up** 또는 **Down**: 축척 표시선이 축척 막대 가운데, 위쪽, 또는 아래쪽에 있음"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:51
+msgid ""
+"**Stepped line** style that draws a stepped line representation of a "
+"scalebar"
+msgstr "**Stepped line**: 축척 막대를 표현하는 계단형 라인"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:52
+msgid ""
+"**Hollow** style that draws a single box with alternating color for the "
+"segments, with horizontal lines through alternating segments"
+msgstr "**Hollow**: 선분마다 색상이 교체되며, 색상이 교체되는 선분들 가운데를 수평선이 지나는 단일 상자"
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:54
 msgid "**Numeric**, where the scale ratio is printed (e.g., ``1:50000``)."
 msgstr "**Numeric**: 축척 비율을 인쇄 (예: ``1:50000``)"
@@ -74,6 +118,34 @@ msgstr "**Numeric**: 축척 비율을 인쇄 (예: ``1:50000``)"
 #: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:55
 msgid "Set properties as appropriate"
 msgstr "속성을 적절하게 설정하십시오."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:58
+msgid "Units"
+msgstr "단위"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:60
+msgid ""
+"The :guilabel:`Units` group of the scale bar :guilabel:`Item Properties` "
+"panel provides the functionalities to set the units of display and some text"
+" formatting (see :numref:`figure_layout_scalebar_units`):"
+msgstr ""
+"축척 막대 :guilabel:`Item Properties` 패널의 :guilabel:`Units` 그룹은 표시될 단위와 텍스트 서식을 "
+"설정하기 위한 다음 기능을 제공하고 있습니다. (:numref:`figure_layout_scalebar_units` 를 참조하세요.):"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:69
+msgid "Scale Bar Units group"
+msgstr "축척 막대 단위 그룹"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:71
+msgid ""
+"Select the units you want to use with :guilabel:`Scalebar units`. There are "
+"many possible choices: **Map Units** (the default one), **Meters**, "
+"**Feet**, **Miles** or **Nautical Miles**... and some derivatives. Units "
+"conversion is handled automatically."
+msgstr ""
+":guilabel:`Scalebar units`: 사용자가 원하는 단위를 선택하십시오. **Map Units** (기본값), "
+"**Meters**, **Feet**,  **Miles** 또는 **Nautical Miles** 등등과 몇몇 파생형 가운데 하나를 "
+"선택할 수 있습니다. 단위 변환은 자동으로 이루어집니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:75
 msgid ""
@@ -94,13 +166,97 @@ msgstr ""
 ":guilabel:`Label for units`: 축척 막대 단위를 설명하는 데 쓰이는 텍스트를 ─ 예를 들어 ``m`` 또는 "
 "``km`` ─ 정의합니다. 앞에서 말한 곱수를 반영하도록 맞춰야 합니다."
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:81
+msgid ""
+"Press :guilabel:`Customize` next to :guilabel:`Number format` to have "
+"control over all the formatting properties for the numbers in the scale bar,"
+" including thousand separators, decimal places, scientific notation, etc. "
+"(see :ref:`number_formatting` for more details). Very useful in the case of "
+"making maps for audiences outside of the current QGIS locale, or when you "
+"would like to vary the style from the locale defaults (e.g. adding thousands"
+" separators when the locale default is to hide them)."
+msgstr ""
+":guilabel:`Customize`:  :guilabel:`Number format` 옆에 있는 이 버튼을 누르면 축척 막대에서 "
+"천단위 구분자, 십진 자릿수, 과학적 기수법 등을 포함한 모든 숫자 서식 속성을 제어할 수 있습니다. (자세한 내용은 "
+":ref:`number_formatting` 을 참조하세요.) 현재 QGIS 로케일 밖에 있는 사용자를 위한 맵을 만들거나, 또는 로케일"
+" 기본값이 아닌 다른 스타일을 원하는 경우 매우 유용합니다. (예: 로케일 기본값은 천단위 구분자를 감추는 것이지만 천단위 구분자를 "
+"사용하고 싶은 경우)"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:91
+msgid "Segments"
+msgstr "선분"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:93
+msgid ""
+"The :guilabel:`Segments` group of the scale bar :guilabel:`Item Properties` "
+"panel provides the functionalities to configure the number and size of "
+"segments and subdivisions (see :numref:`figure_layout_scalebar_segments`):"
+msgstr ""
+"축척 막대 :guilabel:`Item Properties` 패널의 :guilabel:`Segments` 그룹은 선분과 그 분할의 개수와"
+" 크기를 환경 설정하기 위한 다음 기능을 제공하고 있습니다. (:numref:`figure_layout_scalebar_segments`"
+" 를 참조하세요.):"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:102
+msgid "Scale Bar Segments group"
+msgstr "축척 막대 선분 그룹"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:104
+msgid ""
+"You can define the number of :guilabel:`Segments` that will be drawn at the "
+"left and right sides of the ``0`` of the scale bar:"
+msgstr ""
+":guilabel:`Segments`: 축척 막대의 ``0`` 의 좌측 및 우측에 얼마나 많은 분할을 그릴지 정의할 수 있습니다:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:107
+msgid ""
+"number of subdivisions of a unique segment on the :guilabel:`Left` side"
+msgstr ":guilabel:`Left`: 좌측에 있는 유일 선분의 분할 개수"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:108
+msgid "number of segments on the :guilabel:`Right` side"
+msgstr ":guilabel:`Right`: 우측에 있는 선분들의 분할 개수"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:109
+msgid ""
+"You can set how long a segment will be (:guilabel:`Fixed width`), or limit "
+"the scale bar size in ``mm`` with :guilabel:`Fit segment width` option. In "
+"the latter case, each time the map scale changes, the scale bar is resized "
+"(and its label updated) to fit the range set."
+msgstr ""
+":guilabel:`Fixed width` 옵션에서 분할 1개가 나타내는 거리를 설정할 수 있고, 또는 :guilabel:`Fit "
+"segment width` 옵션에서 축척 막대 크기를 ``mm`` 단위로 제한할 수도 있습니다. 후자의 경우, 맵 축척이 변경될 때마다 "
+"설정된 범위에 맞춰 축척 막대의 크기도 조정됩니다(그리고 축척 라벨도 업데이트됩니다)."
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:113
 msgid ":guilabel:`Height` is used to define the height of the bar."
 msgstr ":guilabel:`Height`: 축척 막대의 높이를 정의할 수 있습니다."
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:114
+msgid ""
+":guilabel:`Right segment subdivisions` is used to define the number of "
+"sections the right-side segments of the scale bar can have (for *Line Ticks "
+"Down*, *Line Ticks Middle* and *Line Ticks Up* scale bar styles) ."
+msgstr ""
+":guilabel:`Right segment subdivisions`: 축척 막대의 우측을 몇 개로 분할할지 정의할 수 있습니다. "
+"(*Line Ticks Down*, *Line Ticks Middle* 및 *Line Ticks Up* 축척 막대 스타일 전용)"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:117
+msgid ""
+":guilabel:`Subdivision height` is used to define the height of the "
+"subdivision segment."
+msgstr ":guilabel:`Subdivision height`: 분할 선분의 높이를 정의할 수 있습니다."
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:121
 msgid "Display"
 msgstr "표시"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:123
+msgid ""
+"The :guilabel:`Display` group of the scale bar :guilabel:`Item Properties` "
+"panel provides the following functionalities:"
+msgstr ""
+"축척 막대 :guilabel:`Item Properties` 패널의 :guilabel:`Display` 그룹은 다음 기능을 제공하고 "
+"있습니다:"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:131
 msgid "Scale Bar Display group"
@@ -130,3 +286,68 @@ msgid ""
 " bar segment's edge or center"
 msgstr ""
 ":guilabel:`Horizontal label placement`: 라벨을 축척 막대 분할의 경계 또는 중심에 중앙 정렬합니다."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:141
+msgid ""
+":guilabel:`Primary fill` and :guilabel:`Secondary fill` of the scale bar "
+"drawing using :ref:`fill symbols properties <vector_fill_symbols>` (color, "
+"opacity, patterns, effects...) --- for *Single Box*, *Double Box* and "
+"*Hollow* styles"
+msgstr ""
+":guilabel:`Primary fill` 및 :guilabel:`Secondary fill`: 축척 막대의 첫 번째 채우기와 두 번째"
+" 채우기를 (색상, 투명도, 패턴, 효과 등등) :ref:`채우기 심볼 속성 <vector_fill_symbols>` 을 사용해서 "
+"그립니다. (*Single Box*, *Double Box* 및 *Hollow* 스타일 전용)"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:145
+msgid ""
+":guilabel:`Line style` of the scale bar drawing using :ref:`line symbols "
+"properties <vector_line_symbols>` (color, stroke, join, cap style, patterns,"
+" effects...) --- for all but *Numeric* style"
+msgstr ""
+":guilabel:`Line style`: 축척 막대의 라인을 (색상, 획, 결합 스타일, 선끝 스타일, 패턴, 효과 등등) "
+":ref:`라인 심볼 속성 <vector_line_symbols>` 을 사용해서 그립니다. (*Numeric* 을 제외한 모든 스타일 "
+"전용)"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:148
+msgid ""
+":guilabel:`Division style` and :guilabel:`Subdivision style` respectively "
+"for division and subdivision segments in *Line Ticks Up*, *Line Ticks "
+"Middle* and *Line Ticks Down* scale bar styles using :ref:`line symbols "
+"properties <vector_line_symbols>` (color, stroke, join, cap style, patterns,"
+" effects...)"
+msgstr ""
+":guilabel:`Division style` 및 :guilabel:`Subdivision style`: *Line Ticks Up*,"
+" *Line Ticks Middle* 및 *Line Ticks Down* 축척 막대 스타일에서 각각 분할 및 하위분할 선분을 (색상, "
+"획, 결합 스타일, 선끝 스타일, 패턴, 효과 등등) :ref:`라인 심볼 속성 <vector_line_symbols>` 을 사용해서 "
+"그립니다."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:152
+msgid ""
+":guilabel:`Alignment` puts text on the left, center or right side of the "
+"frame (only for *Numeric* scale bar style)"
+msgstr ""
+":guilabel:`Alignment`: 텍스트를 축척 프레임의 좌측, 중앙, 또는 우측으로 정렬합니다. (**Numeric** 축척 "
+"막대 스타일 전용)"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:154
+msgid ""
+":guilabel:`Font` to set the :ref:`properties <text_format>` (size, font, "
+"color, letter spacing, shadow, background...) of the scale bar label."
+msgstr ""
+":guilabel:`Font` 버튼을 클릭하면 축척 막대 라벨의 (크기, 글꼴, 색상, 자간, 음영, 배경 등등) :ref:`속성 "
+"<text_format>` 을 설정할 수 있습니다."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:158
+msgid ""
+"Since most of the display properties of the scale bar rely on symbols whose "
+"properties can be data-defined, it's possible to render data-defined scale "
+"bars."
+msgstr ""
+"축척 막대의 표시 속성 대부분이 데이터 정의된 속성을 가지고 있을 수도 있는 심볼에 의존하기 때문에, 데이터 정의된 축척 막대를 렌더링할"
+" 수도 있습니다."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:161
+msgid ""
+"**Example**: The following code applied to the bold property of the scale "
+"labels will display numbers in bold when they are a multiple of 500:"
+msgstr "**예시**: 축척 라벨의 볼드체에 적용된 다음 코드는 숫자가 500의 배수인 경우 숫자를 볼드체로 표시할 것입니다:"
