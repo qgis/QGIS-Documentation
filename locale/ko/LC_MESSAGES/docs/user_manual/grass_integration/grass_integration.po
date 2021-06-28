@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2021
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-12 02:37+0000\n"
 "PO-Revision-Date: 2020-12-24 12:01+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2021\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -99,6 +100,10 @@ msgstr ""
 "GRASS |grass| 아이콘과 함께 추가합니다. :file:`grassdata` 폴더를 찾아 :file:`alaska` 로케이션 및 "
 ":file:`demo` 맵셋을 펼치십시오."
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:908
+msgid "grass"
+msgstr "grass"
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:49
 msgid ""
 "You can load GRASS raster and vector layers like any other layer from the "
@@ -152,6 +157,10 @@ msgstr ""
 "대상 맵셋에 레이어를 드래그&드롭하십시오. 대용량 레이어인 경우 가져오기에 시간이 좀 걸릴 수도 있습니다. 가져오기를 완료할 때까지 새 "
 "레이어 항목 앞에 움직이는 |import| 아이콘이 나타날 겁니다."
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:920
+msgid "import"
+msgstr "import"
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:73
 msgid ""
 "When raster data are in different CRS, they can be reprojected using an "
@@ -176,6 +185,14 @@ msgstr ""
 "소스 래스터가 더 많은 밴드를 가지고 있는 경우, 각 밴드 레이어 별로 **.<밴드 번호>** 접미어를 붙인 새 GRASS 맵을 생성한 "
 "다음 모든 맵들의 그룹을 래스터 그룹 |rasterGroup| 아이콘과 함께 생성합니다. 외부 래스터인 경우 래스터 링크 "
 "|rasterLink| 아이콘을 사용합니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:930
+msgid "rasterGroup"
+msgstr "rasterGroup"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:932
+msgid "rasterLink"
+msgstr "rasterLink"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:86
 msgid "Managing GRASS data in QGIS Browser"
@@ -229,6 +246,14 @@ msgstr ""
 "Install Plugins...` 메뉴를 선택하고 플러그인 관리자 대화창에서 |checkbox| :guilabel:`GRASS` 를 "
 "체크한 다음 :guilabel:`OK` 버튼을 클릭하십시오."
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:938
+msgid "showPluginManager"
+msgstr "showPluginManager"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:904
+msgid "checkbox"
+msgstr "checkbox"
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:110
 msgid ""
 "The following main features are provided with the GRASS menu "
@@ -241,25 +266,49 @@ msgstr ""
 msgid "|grassOpenMapset| :sup:`Open Mapset`"
 msgstr "|grassOpenMapset| :sup:`Open Mapset`"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:914
+msgid "grassOpenMapset"
+msgstr "grassOpenMapset"
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:114
 msgid "|grassNewMapset| :sup:`New Mapset`"
 msgstr "|grassNewMapset| :sup:`New Mapset`"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:912
+msgid "grassNewMapset"
+msgstr "grassNewMapset"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:115
 msgid "|grassCloseMapset| :sup:`Close Mapset`"
 msgstr "|grassCloseMapset| :sup:`Close Mapset`"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:910
+msgid "grassCloseMapset"
+msgstr "grassCloseMapset"
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:116
 msgid "|grassTools| :sup:`Open GRASS Tools`"
 msgstr "|grassTools| :sup:`Open GRASS Tools`"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:918
+msgid "grassTools"
+msgstr "grassTools"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:117
 msgid "|grassRegion| :sup:`Display Current GRASS Region`"
 msgstr "|grassRegion| :sup:`Display Current GRASS Region`"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:916
+msgid "grassRegion"
+msgstr "grassRegion"
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:118
 msgid "|general| :sup:`GRASS Options`"
 msgstr "|general| :sup:`GRASS Options`"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:906
+msgid "general"
+msgstr "general"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:121
 msgid "Opening GRASS mapset"
@@ -489,6 +538,22 @@ msgstr ""
 "기존 GRASS 데이터베이스(GISDBASE) 폴더 :file:`grassdata` 를 선택하거나, 또는 사용자 컴퓨터에서 파일 탐색기를"
 " 사용해서 새 :file:`LOCATION` 용 폴더를 생성한 다음 :guilabel:`Next` 버튼을 클릭하십시오."
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:222
+msgid ""
+"We can use this wizard to create a new :file:`MAPSET` within an existing "
+":file:`LOCATION` (see section :ref:`sec_add_mapset`) or to create a new "
+":file:`LOCATION` altogether. Select |radioButtonOn| :guilabel:`Create new "
+"location` (see :numref:`figure_grass_new_location`)."
+msgstr ""
+"이 마법사를 통해 기존 :file:`LOCATION` 안에 새 :file:`MAPSET` 을 생성하거나 "
+"(:ref:`sec_add_mapset` 참조) 또는 새 :file:`LOCATION` 을 처음부터 생성할 수 있습니다. "
+"|radioButtonOn| :guilabel:`Create new location` 옵션을 체크하십시오. "
+"(:numref:`figure_grass_new_location` 를 참조하세요.)"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:928
+msgid "radioButtonOn"
+msgstr "radioButtonOn"
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:226
 msgid ""
 "Enter a name for the :file:`LOCATION` -- we used 'alaska' -- and click "
@@ -518,6 +583,10 @@ msgstr ""
 "있으므로, 검색 란에 해당 문자열을 입력할 수 있습니다. (주의 사항: 또다른 :file:`LOCATION` 과 그 투영체에 대해 이 "
 "과정을 반복하려 하는데 ESPG ID를 기억하지 못 하는 경우, 상태 바의 우하단에 있는 |projectionEnabled| "
 ":sup:`CRS Status` 아이콘을 클릭하십시오. (:ref:`label_projections` 참조))"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:926
+msgid "projectionEnabled"
+msgstr "projectionEnabled"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:235
 msgid "In :guilabel:`Filter`, insert 2964 to select the projection."
@@ -632,6 +701,18 @@ msgstr ""
 ":file:`LOCATION` 'alaska' 가 있는 GRASS 데이터베이스(``GISDBASE``) 폴더 "
 ":file:`grassdata` 를 선택하십시오. :file:`LOCATION` 'alaska' 에 'test' 라는 심화 "
 ":file:`MAPSET` 을 추가하려 합니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:290
+msgid ""
+"We can use this wizard to create a new :file:`MAPSET` within an existing "
+":file:`LOCATION` or to create a new :file:`LOCATION` altogether. Click on "
+"the radio button |radioButtonOn| :guilabel:`Select location` (see "
+":numref:`figure_grass_new_location`) and click :guilabel:`Next`."
+msgstr ""
+"이 마법사를 통해 기존 :file:`LOCATION` 안에 새 :file:`MAPSET` 을 생성하거나 "
+"(:ref:`sec_add_mapset` 참조) 또는 새 :file:`LOCATION` 을 처음부터 생성할 수 있습니다. "
+"|radioButtonOn| :guilabel:`Select location` 라디오 버튼을 클릭한 다음 "
+"(:numref:`figure_grass_new_location` 참조) :guilabel:`Next` 버튼을 클릭하십시오."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:294
 msgid ""
@@ -910,6 +991,10 @@ msgstr "목적"
 msgid "|capturePoint|"
 msgstr "|capturePoint|"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:900
+msgid "capturePoint"
+msgstr "capturePoint"
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:429
 msgid "New Point"
 msgstr "New Point"
@@ -921,6 +1006,10 @@ msgstr "새 포인트를 디지타이즈합니다."
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:431
 msgid "|captureLine|"
 msgstr "|captureLine|"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:898
+msgid "captureLine"
+msgstr "captureLine"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:431
 msgid "New Line"
@@ -934,6 +1023,10 @@ msgstr "새 라인을 디지타이즈합니다."
 msgid "|captureBoundary|"
 msgstr "|captureBoundary|"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:894
+msgid "captureBoundary"
+msgstr "captureBoundary"
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:433
 msgid "New Boundary"
 msgstr "New Boundary"
@@ -946,6 +1039,10 @@ msgstr "새 경계를 디지타이즈합니다."
 msgid "|captureCentroid|"
 msgstr "|captureCentroid|"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:896
+msgid "captureCentroid"
+msgstr "captureCentroid"
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:435
 msgid "New Centroid"
 msgstr "New Centroid"
@@ -957,6 +1054,10 @@ msgstr "새 중심(라벨 위치)을 디지타이즈합니다."
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:437
 msgid "|capturePolygon|"
 msgstr "|capturePolygon|"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:902
+msgid "capturePolygon"
+msgstr "capturePolygon"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:437
 msgid "New Closed Boundary"
@@ -1146,6 +1247,14 @@ msgstr ""
 "|nix| |osx| 리눅스 및 맥 상에서는 한 번에 하나의 GRASS 레이어만 편집할 수 있습니다. 데이터베이스 드라이버를 랜덤한 "
 "순서로 종료할 수 없는 GRASS의 버그 때문입니다. 현재 GRASS 개발자들이 이 문제를 해결하고 있는 중입니다."
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:922
+msgid "nix"
+msgstr "nix"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:924
+msgid "osx"
+msgstr "osx"
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:527
 msgid "**GRASS Edit Permissions**"
 msgstr "**GRASS 편집 권한**"
@@ -1268,6 +1377,16 @@ msgid ""
 msgstr ""
 "GRASS 툴박스의 내용을 사용자 지정할 수도 있습니다. 이 과정은 :ref:`sec_toolbox-customizing` 에서 설명하고"
 " 있습니다."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:604
+msgid ""
+"As shown in :numref:`figure_grass_toolbox`, you can look for the appropriate"
+" GRASS module using the thematically grouped :guilabel:`Modules Tree` or the"
+" searchable :guilabel:`Modules List` tab."
+msgstr ""
+":numref:`figure_grass_toolbox` 에서 알 수 있는 바와 같이, 테마 별로 그룹화된 "
+":guilabel:`Modules Tree` 또는 검색 가능한 :guilabel:`Modules List` 탭을 통해 알맞은 GRASS "
+"모듈을 찾을 수 있습니다."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:608
 msgid ""
@@ -1438,6 +1557,10 @@ msgid ""
 msgstr ""
 ":guilabel:`Increment between Contour levels` |selectNumber| 옵션의 값을 100으로 "
 "입력하십시오. (이렇게 하면 등고선을 100미터 간격으로 생성할 것입니다.)"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:934
+msgid "selectNumber"
+msgstr "selectNumber"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:696
 msgid ""
@@ -1779,6 +1902,10 @@ msgstr ""
 "|selectString| 옵션을 'Unique value' 로 선택하고 :guilabel:`Classification field` "
 "옵션을 'VEGDESC' 으로 설정하십시오. (:ref:`vector_style_menu` 절의 :guilabel:`Symbology` "
 "탭에 관한 설명을 참조하세요.)"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:936
+msgid "selectString"
+msgstr "selectString"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:845
 msgid ""
