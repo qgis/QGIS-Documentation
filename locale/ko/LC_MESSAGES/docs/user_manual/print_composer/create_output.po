@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2021
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-12 02:37+0000\n"
 "PO-Revision-Date: 2020-12-24 10:26+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2021\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -59,6 +60,10 @@ msgstr ""
 "|filePrint| :sup:`Print` 아이콘을 클릭하면 설치된 프린터 드라이버에 따라 조판을 연결된 프린터 또는 "
 "PostScript 파일로 인쇄할 수 있습니다."
 
+#: ../../docs/user_manual/print_composer/create_output.rst:624
+msgid "filePrint"
+msgstr "filePrint"
+
 #: ../../docs/user_manual/print_composer/create_output.rst:37
 msgid ""
 "The |saveMapAsImage| :sup:`Export as image` icon exports the print layout "
@@ -68,6 +73,10 @@ msgstr ""
 "|saveMapAsImage| :sup:`Export as image` 아이콘을 클릭하면 인쇄 조판을 :file:`PNG`, "
 ":file:`BMP`, :file:`TIF`, :file:`JPG` 등과 같은 여러 이미지 포맷으로 내보낼 수 있습니다."
 
+#: ../../docs/user_manual/print_composer/create_output.rst:632
+msgid "saveMapAsImage"
+msgstr "saveMapAsImage"
+
 #: ../../docs/user_manual/print_composer/create_output.rst:40
 msgid ""
 "The |saveAsSVG| :sup:`Export as SVG` icon saves the print layout as an "
@@ -76,6 +85,10 @@ msgstr ""
 "|saveAsSVG| :sup:`Export as SVG` 아이콘을 클릭하면 인쇄 조판을 :file:`SVG` (Scalable "
 "Vector Graphic) 파일로 저장할 수 있습니다."
 
+#: ../../docs/user_manual/print_composer/create_output.rst:630
+msgid "saveAsSVG"
+msgstr "saveAsSVG"
+
 #: ../../docs/user_manual/print_composer/create_output.rst:42
 msgid ""
 "The |saveAsPDF| :sup:`Export as PDF` icon saves the defined print layout "
@@ -83,6 +96,10 @@ msgid ""
 msgstr ""
 "|saveAsPDF| :sup:`Export as PDF` 아이콘을 클릭하면 정의된 인쇄 조판을 :file:`PDF` (Portable "
 "Document Format) 파일로 직접 저장할 수 있습니다."
+
+#: ../../docs/user_manual/print_composer/create_output.rst:628
+msgid "saveAsPDF"
+msgstr "saveAsPDF"
 
 #: ../../docs/user_manual/print_composer/create_output.rst:46
 msgid "Export settings"
@@ -181,6 +198,10 @@ msgstr ""
 "등등) *ESRI 월드 파일* 을 생성할 것입니다. :ref:`조판기 패널 <layout_panel>` 에서 이 옵션을 기본값으로 체크할"
 " 수도 있습니다."
 
+#: ../../docs/user_manual/print_composer/create_output.rst:636
+msgid "unchecked"
+msgstr "unchecked"
+
 #: ../../docs/user_manual/print_composer/create_output.rst:90
 msgid ""
 "For multi-page output, only the page that contains the :ref:`reference map "
@@ -198,6 +219,10 @@ msgid ""
 msgstr ""
 "|checkbox| :guilabel:`Crop to content` 옵션을 활성화하면, 조판기가 각 구성 페이지의 모든 항목들을 (맵,"
 " 범례, 축척 막대, 도형, 라벨, 이미지 등등) 감싸는 최소 영역만 이미지로 출력할 것입니다:"
+
+#: ../../docs/user_manual/print_composer/create_output.rst:620
+msgid "checkbox"
+msgstr "checkbox"
 
 #: ../../docs/user_manual/print_composer/create_output.rst:102
 msgid ""
@@ -409,6 +434,15 @@ msgstr ""
 "그 다음 :guilabel:`PDF Export Options` 대화창에서 조판기의 기본 :ref:`내보내기 설정 "
 "<layout_export_settings>` 을 무시하거나 또는 새로 환경 설정할 수 있습니다:"
 
+#: ../../docs/user_manual/print_composer/create_output.rst:218
+msgid ""
+"|checkbox| :guilabel:`Append georeference information`: available only if "
+"the :ref:`reference map <reference_map>`, from which the information is "
+"taken, is on the first page."
+msgstr ""
+"|checkbox| :guilabel:`Append georeference information`: 이 옵션은 정보를 가져오는 "
+":ref:`참조 맵 <reference_map>` 이 첫 페이지에 있을 경우에만 사용할 수 있습니다."
+
 #: ../../docs/user_manual/print_composer/create_output.rst:223
 msgid ""
 "Set the :guilabel:`Text export`: controls whether text labels are exported "
@@ -425,6 +459,23 @@ msgstr ""
 " 설정합니다. 텍스트 라벨을 텍스트 객체로 내보낼 경우 (`잉크스케이프 <https://inkscape.org/ko/>`_ 같은) 외부 "
 "응용 프로그램에서 일반 텍스트처럼 편집할 수 있습니다. **하지만** 렌더링의 질이 하락하는 부작용이 있습니다. **게다가** 버퍼 같은"
 " 설정이 적용된 특정 텍스트의 경우 렌더링 오류가 생길 수도 있습니다. 경로로 내보내기를 추천하는 이유입니다."
+
+#: ../../docs/user_manual/print_composer/create_output.rst:231
+msgid "Control the PDF :guilabel:`Image compression` using:"
+msgstr ":guilabel:`Image compression`: PDF의 이미지 압축 모드는: "
+
+#: ../../docs/user_manual/print_composer/create_output.rst:233
+msgid ":guilabel:`Lossy (JPEG)`, which is the default compression mode"
+msgstr ":guilabel:`Lossy (JPEG)`: 기본 압축 모드입니다."
+
+#: ../../docs/user_manual/print_composer/create_output.rst:234
+msgid ""
+"or :guilabel:`Lossless`, which creates bigger files in most cases, but is "
+"much more suitable for printing outputs or for post-production in external "
+"applications (requires Qt 5.13 or later)."
+msgstr ""
+":guilabel:`Lossless`: 대부분의 경우 더 큰 용량의 파일을 생성하지만, 인쇄물로 출력 또는 외부 응용 프로그램에서 "
+"후처리를 하는 경우 훨씬 적합한 모드입니다. (Qt 5.13 이후 버전이 필요합니다.)"
 
 #: ../../docs/user_manual/print_composer/create_output.rst:237
 msgid ""
@@ -554,6 +605,15 @@ msgstr ""
 "가운데 지도책 관련 함수 및 변수를 사용하면 조판기 항목은 물론, 지도책 상태에 따라 레이어의 심볼도 수정할 수 있습니다. 이 기능들을 "
 "결합하면 사용자가 높은 유연성을 발휘해서 고급 지도를 쉽게 생성할 수 있습니다."
 
+#: ../../docs/user_manual/print_composer/create_output.rst:304
+msgid ""
+"To enable the generation of an atlas and access atlas parameters, refer to "
+"the :guilabel:`Atlas` panel. This panel contains the following (see "
+":numref:`figure_layout_atlas`):"
+msgstr ""
+"지도책 생성 기능을 활성화하고 지도책 파라미터를 설정하려면, :guilabel:`Atlas` 패널을 사용하십시오. 이 패널은 다음과 같은"
+" 기능들을 담고 있습니다(:numref:`figure_layout_atlas` 참조):"
+
 #: ../../docs/user_manual/print_composer/create_output.rst:313
 msgid "Atlas Panel"
 msgstr "지도책 패널"
@@ -575,6 +635,10 @@ msgid ""
 msgstr ""
 ":guilabel:`Coverage layer` |selectString|: 이 콤보박스에서 생성 작업을 반복할 피처들을 담고 있는 "
 "테이블 또는 벡터 레이어를 선택할 수 있습니다."
+
+#: ../../docs/user_manual/print_composer/create_output.rst:634
+msgid "selectString"
+msgstr "selectString"
 
 #: ../../docs/user_manual/print_composer/create_output.rst:321
 msgid ""
@@ -723,6 +787,10 @@ msgstr ""
 "여러 군데 있습니다. 이 옵션들은 지도책 생성 작업 시 특히 유용합니다. 이 위젯에 대한 자세한 내용은 "
 ":ref:`data_defined` 을 참조하세요."
 
+#: ../../docs/user_manual/print_composer/create_output.rst:622
+msgid "dataDefined"
+msgstr "dataDefined"
+
 #: ../../docs/user_manual/print_composer/create_output.rst:403
 msgid ""
 "For the following examples the :file:`Regions` layer of the QGIS sample "
@@ -800,6 +868,10 @@ msgstr ""
 ":guilabel:`Center` 로 설정하십시오. 그 다음 라벨을 올바른 위치로 이동시키고, :guilabel:`Reference "
 "point` 를 가운데 라디오 버튼으로 설정하십시오. 그리고 :guilabel:`X` 필드에 다음 표현식을 입력하십시오:"
 
+#: ../../docs/user_manual/print_composer/create_output.rst:626
+msgid "radioButtonOn"
+msgstr "radioButtonOn"
+
 #: ../../docs/user_manual/print_composer/create_output.rst:458
 msgid ""
 "For all other layout items you can set the position in a similar way so they"
@@ -821,6 +893,52 @@ msgstr ""
 "여기에 제공한 정보는 데이터 정의 무시 옵션에 대한 `훌륭한 블로그 게시글 "
 "<Multiple_format_map_series_using_QGIS_2.6>`_ 을 업데이트한 것입니다."
 
+#: ../../docs/user_manual/print_composer/create_output.rst:469
+msgid ""
+"Another example for using data-defined override buttons is the usage of a "
+"dynamic picture. For the following examples we use a geopackage layer "
+"containing a BLOB field called ``logo`` with the field type binary (see "
+":ref:`vector_create_geopackage`). For every feature there is defined a "
+"different picture so that the atlas can iterate over as described in "
+":ref:`atlas_preview`. All you need to do is add a picture in the print "
+"layout and go to its :guilabel:`Item properties` in the atlas context. There"
+" you can find a data-defined override button in the :guilabel:`Image source`"
+" section of the :guilabel:`Main Properties`."
+msgstr ""
+"데이터 정의 무시 버튼을 사용하는 또다른 예는, 동적 그림의 활용법입니다. 다음 예시에서 바이너리 필드 유형인 ``logo`` 라는 "
+"이름의 BLOB(Binary Large Object) 필드를 담고 있는 GeoPackage 레이어를 사용합니다. "
+"(:ref:`vector_create_geopackage` 를 참조하세요.) :ref:`atlas_preview` 에서 설명한 대로 "
+"지도책이 반복되려면, 모든 객체에 대해 서로 다른 그림이 정의돼 있어야 합니다. 인쇄 조판기에 그림을 추가하고 지도책 맥락에서 그림의 "
+":guilabel:`Item properties` 로 가십시오. :guilabel:`Main Properties` 의 "
+":guilabel:`Image source` 부분에 데이터 정의 무시 버튼이 있을 것입니다."
+
+#: ../../docs/user_manual/print_composer/create_output.rst:484
+msgid ""
+"In the following window choose :guilabel:`Edit` so that the "
+":guilabel:`Expression String Builder` opens. From the :guilabel:`Fields and "
+"values` section you can find the BLOB field that was defined in the "
+"geopackage layer. Double-click the field name :file:`logo` and click "
+":guilabel:`OK`."
+msgstr ""
+"다음 창에서 :guilabel:`Edit` 버튼을 누르면 :guilabel:`Expression String Builder` 대화창이 "
+"열립니다. :guilabel:`Fields and values` 부분에서 GeoPackage 레이어에 정의된 BLOB 필드를 찾을 수 "
+"있을 겁니다. :file:`logo` 필드명을 더블클릭한 다음 :guilabel:`OK` 를 클릭하십시오."
+
+#: ../../docs/user_manual/print_composer/create_output.rst:493
+msgid ""
+"The atlas iterates over the entries in the BLOB field provided that you "
+"choose the geopackage layer as :guilabel:`Coverage layer` (further "
+"instructions you can find in :ref:`atlas_preview`)."
+msgstr ""
+"사용자가 GeoPackage 레이어를 :guilabel:`Coverage layer` 로 선택해놨다면 지도책이 BLOB 필드의 항목 "
+"전체에 걸쳐 반복될 것입니다. (:ref:`atlas_preview` 에서 더 자세한 지침을 찾아볼 수 있습니다)"
+
+#: ../../docs/user_manual/print_composer/create_output.rst:496
+msgid ""
+"These are just two examples of how you can use some advanced settings with "
+"atlas."
+msgstr "이것은 지도책에 몇몇 고급 설정을 어떻게 활용할 수 있는지에 대한 2개의 예시일 뿐입니다."
+
 #: ../../docs/user_manual/print_composer/create_output.rst:501
 msgid "Preview and generate an atlas"
 msgstr "미리보기 및 지도책 생성"
@@ -841,21 +959,41 @@ msgstr ""
 "--> Preview Atlas` 메뉴 옵션을 선택하거나 |atlas| :sup:`Preview Atlas` 아이콘을 클릭해서 모든 "
 "페이지의 미리보기를 생성할 수 있습니다. 그 다음 다음 화살표를 클릭해서 모든 피처들을 탐색할 수 있습니다:"
 
+#: ../../docs/user_manual/print_composer/create_output.rst:610
+msgid "atlas"
+msgstr "atlas"
+
 #: ../../docs/user_manual/print_composer/create_output.rst:516
 msgid "|atlasFirst| :sup:`First feature`"
 msgstr "|atlasFirst| :sup:`First feature`: 첫 피처로 돌아갑니다."
+
+#: ../../docs/user_manual/print_composer/create_output.rst:612
+msgid "atlasFirst"
+msgstr "atlasFirst"
 
 #: ../../docs/user_manual/print_composer/create_output.rst:517
 msgid "|atlasPrev| :sup:`Previous feature`"
 msgstr "|atlasPrev| :sup:`Previous feature`: 이전 피처로 돌아갑니다."
 
+#: ../../docs/user_manual/print_composer/create_output.rst:618
+msgid "atlasPrev"
+msgstr "atlasPrev"
+
 #: ../../docs/user_manual/print_composer/create_output.rst:518
 msgid "|atlasNext| :sup:`Next feature`"
 msgstr "|atlasNext| :sup:`Next feature`: 다음 피처로 넘어갑니다."
 
+#: ../../docs/user_manual/print_composer/create_output.rst:616
+msgid "atlasNext"
+msgstr "atlasNext"
+
 #: ../../docs/user_manual/print_composer/create_output.rst:519
 msgid "|atlasLast| :sup:`Last feature`"
 msgstr "|atlasLast| :sup:`Last feature`: 마지막 피처로 넘어갑니다."
+
+#: ../../docs/user_manual/print_composer/create_output.rst:614
+msgid "atlasLast"
+msgstr "atlasLast"
 
 #: ../../docs/user_manual/print_composer/create_output.rst:521
 msgid ""
