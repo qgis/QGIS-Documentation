@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2021
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-12 02:37+0000\n"
 "PO-Revision-Date: 2020-12-24 10:18+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2021\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -57,6 +58,18 @@ msgstr "HTTP BASIC에 대한 WMS 연결 환경 설정하기"
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:37
 msgid "Database authentication"
 msgstr "데이터베이스 인증"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:39
+msgid ""
+"Connections to database resources are generally stored as ``key=value`` "
+"pairs, which will expose usernames and (optionally) passwords, if *not* "
+"using an authentication configuration. When configuring with the auth "
+"system, the ``key=value`` will be an abstracted representation of the "
+"credentials, e.g. ``authfg=81t21b9``."
+msgstr ""
+"인증 환경 설정을 사용하지 *않는다면*, 데이터베이스 리소스에 대한 연결은 일반적으로 사용자 이름과 (선택적으로) 암호를 노출하게 되는 "
+"``key=value`` 쌍으로 저장됩니다. 인증 시스템을 환경 설정할 때, ``key=value`` 는 "
+"``authfg=81t21b9`` 처럼 인증 정보의 추상적인 표현이 될 것입니다."
 
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:50
 msgid "Configuring a Postgres SSL-with-PKI connection"
@@ -174,6 +187,10 @@ msgstr ""
 "것입니다. 어느 인증서에 대해서든 QGIS가 찾을 수 있는 신뢰 연결고리를 살펴보려면, 해당 인증서를 선택한 다음 |metadata| "
 ":sup:`Show information for certificate` 아이콘을 클릭하십시오."
 
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:415
+msgid "metadata"
+msgstr "metadata"
+
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:129
 msgid "Certificate info dialog"
 msgstr "인증서 정보 대화창"
@@ -192,6 +209,14 @@ msgstr ""
 ":sup:`Save certificate trust policy change to database` 아이콘을 클릭하지 않는 한 "
 "데이터베이스에 변경 사항을 저장하지 않을 것입니다. 대화창을 닫는다고 해도 신뢰 정책의 변경 사항은 적용되지 **않을** 것입니다."
 
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:417
+msgid "selectString"
+msgstr "selectString"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:413
+msgid "fileSave"
+msgstr "fileSave"
+
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:143
 msgid "Saving the trust policy changes"
 msgstr "신뢰 정책의 변경 사항을 저장하기"
@@ -204,6 +229,10 @@ msgid ""
 msgstr ""
 "|transformSettings| :guilabel:`Options` 아이콘을 클릭하면 보안 연결에 사용할 만큼 신뢰할 수 있다고 "
 "필터링된 인증서 권한을 -- 중간 인증서와 루트 인증서 모두 -- 검토하거나, 또는 신뢰 정책의 기본값을 변경할 수도 있습니다."
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:421
+msgid "transformSettings"
+msgstr "transformSettings"
 
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:150
 msgid ""
@@ -433,6 +462,21 @@ msgstr "인증 데이터베이스를 사용할 수 있도록 설정해야 합니
 msgid "Authentication database's master password needs to be available"
 msgstr "인증 데이터베이스의 마스터 비밀번호를 사용할 수 있도록 설정해야 합니다."
 
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:305
+msgid ""
+"When instantiating the authentication system, Server will create or use "
+":file:`qgis-auth.db` file in the active :ref:`user profile <user_profiles>`,"
+" or the  directory defined by the ``QGIS_AUTH_DB_DIR_PATH`` environment "
+"variable. It may be that the Server's user has no HOME directory, in which "
+"case, use the environment variable to define a directory that the Server's "
+"user has read/write permissions and is not located within the web-accessible"
+" directories."
+msgstr ""
+"인증 시스템을 처음 사용하는 경우, 서버가 활성화된 :ref:`사용자 프로파일 <user_profiles>` 에 또는 "
+"``QGIS_AUTH_DB_DIR_PATH`` 환경 변수가 정의한 디렉터리에 :file:`qgis-auth.db` 파일을 생성하거나 "
+"사용할 것입니다. 서버 사용자에게 *홈* 디렉터리가 없을 수도 있는데, 이런 경우 환경 변수를 사용해서 서버 사용자가 읽기/쓰기 권한을 "
+"가지고 있으며 웹에서 접근할 수 있는 디렉터리 안에 위치하지 않은 디렉터리를 정의하십시오."
+
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:313
 msgid ""
 "To pass the master password to Server, write it to the first line of file at"
@@ -515,6 +559,10 @@ msgstr ""
 ":guilabel:`Certificate Manager` 대화창에 있는 |signPlus| 아이콘을 클릭하면 SSL 서버 환경 설정을 "
 "사전 설정할 수 있습니다. 아니면, 연결 중 SSL 오류가 발생하는 경우 환경 설정을 추가하면 (일시적으로 오류를 무시하거나 또는 "
 "데이터베이스에 환경 설정을 저장한 다음 무시할 수 있는) 다음 **SSL 오류** 대화창이 열립니다:"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:419
+msgid "signPlus"
+msgstr "signPlus"
 
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:364
 msgid "Manually adding configuration"
