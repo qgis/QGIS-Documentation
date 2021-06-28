@@ -126,8 +126,8 @@ Set a more appropriate form widget for the :guilabel:`highway` field.
    #. If you use the :guilabel:`Identify` tool on a street now while edit mode is
       active, the dialog you get should look like this:
 
-     .. figure:: img/highway_as_value_map.png
-        :align: center
+      .. figure:: img/highway_as_value_map.png
+         :align: center
 
 |hard| |TY| Creating Test Data
 ----------------------------------------------------------------------
