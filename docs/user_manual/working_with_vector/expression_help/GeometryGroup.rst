@@ -1218,7 +1218,7 @@ Returns the portion of a line (or curve) geometry which falls between the specif
        * **start_distance** - distance to start of substring
        * **end_distance** - distance to end of substring
    * - Examples
-     - * ``geom_to_wkt(line_substring(geometry:=geom_from_wkt('LineString(0 0, 10 0)'),start_distance:=2,end_distance=6))`` → 'LineString (2 0,6 0)'
+     - * ``geom_to_wkt(line_substring(geometry:=geom_from_wkt('LineString(0 0, 10 0)'),start_distance:=2,end_distance:=6))`` → 'LineString (2 0,6 0)'
 
 
 .. end_line_substring_section
@@ -1720,8 +1720,8 @@ Returns a geometry formed by offsetting a linestring geometry to the side. Dista
    * - Examples
      - * ``offset_curve($geometry, 10.5)`` → line offset to the left by 10.5 units
        * ``offset_curve($geometry, -10.5)`` → line offset to the right by 10.5 units
-       * ``offset_curve($geometry, 10.5, segments=16, join=1)`` → line offset to the left by 10.5 units, using more segments to result in a smoother curve
-       * ``offset_curve($geometry, 10.5, join=3)`` → line offset to the left by 10.5 units, using a beveled join
+       * ``offset_curve($geometry, 10.5, segments:=16, join:=1)`` → line offset to the left by 10.5 units, using more segments to result in a smoother curve
+       * ``offset_curve($geometry, 10.5, join:=3)`` → line offset to the left by 10.5 units, using a beveled join
 
 
 .. end_offset_curve_section
@@ -2393,8 +2393,8 @@ Returns a geometry formed by buffering out just one side of a linestring geometr
    * - Examples
      - * ``single_sided_buffer($geometry, 10.5)`` → line buffered to the left by 10.5 units
        * ``single_sided_buffer($geometry, -10.5)`` → line buffered to the right by 10.5 units
-       * ``single_sided_buffer($geometry, 10.5, segments=16, join=1)`` → line buffered to the left by 10.5 units, using more segments to result in a smoother buffer
-       * ``single_sided_buffer($geometry, 10.5, join=3)`` → line buffered to the left by 10.5 units, using a beveled join
+       * ``single_sided_buffer($geometry, 10.5, segments:=16, join:=1)`` → line buffered to the left by 10.5 units, using more segments to result in a smoother buffer
+       * ``single_sided_buffer($geometry, 10.5, join:=3)`` → line buffered to the left by 10.5 units, using a beveled join
 
 
 .. end_single_sided_buffer_section
