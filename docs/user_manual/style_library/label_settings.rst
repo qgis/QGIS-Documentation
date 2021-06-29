@@ -167,6 +167,9 @@ In the |labelformatting| :guilabel:`Formatting` tab, you can:
     label is placed to the left of the point, then the label will be right
     aligned, while if it is placed to the right, it will be left aligned.
 
+  .. note:: The :guilabel:`Multiple lines` formatting is not yet supported by curve based
+    :ref:`label placement <labels_placement>`. The options will then be deactivated.
+
 * For line labels you can include :guilabel:`Line direction symbol`
   to help determine the line directions, with symbols to use to indicate the
   :guilabel:`Left` or :guilabel:`Right`. They work particularly well when
