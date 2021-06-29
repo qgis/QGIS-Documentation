@@ -41,6 +41,12 @@ Parameters
      - Extent that should be used for the output raster.
        Only pixels within the specified bounding box will be
        included in the output.
+   * - **Override the projection for the output file** |318|
+     - ``OVERCRS``
+     - [boolean]
+
+       Default: False
+     - If checked, the output file is assigned the input layer CRS.
    * - **Assign a specified nodata value to output bands**
 
        Optional
@@ -570,3 +576,12 @@ Python code
 .. include:: ../qgis/qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |318| replace:: ``NEW in 3.18``
