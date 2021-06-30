@@ -263,9 +263,9 @@ In order to use the algorithm from the toolbox, it has to be saved
 and the modeler dialog closed, to allow the toolbox to refresh its
 contents.
 
-When using the editor to execute a model, any non-default value will be 
-saved in the inputs. This mean that executing the model at a later time from
-the editor will have the dialog prefilled with those value on any subsequent run.
+When using the editor to execute a model, any non-default values will be 
+saved in the inputs. This means that executing the model at a later time from
+the editor will have the dialog prefilled with those values on any subsequent run.
 
 Definition of Model Variables
 -----------------------------
