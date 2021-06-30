@@ -102,14 +102,19 @@ Source Properties
 
    Source tab in vector Layer Properties dialog
 
+Settings
+--------
 
-Other than setting the :guilabel:`Layer name` to display in the
-:guilabel:`Layers Panel`, available options include:
+* Set a :guilabel:`Layer name` different from the layer filename that will be
+  used to identify the layer in the project (in the :guilabel:`Layers Panel`, with
+  expressions, in print layout legend, ...)
+* Depending on the data format, select the :guilabel:`Data source encoding` if not
+  correctly detected by QGIS.
 
-Coordinate Reference System
----------------------------
+Coordinate Reference System and Geometry
+----------------------------------------
 
-* Displays the layer's :ref:`Coordinate Reference System (CRS) <layer_crs>`.
+* Displays the layer's :ref:`Assigned Coordinate Reference System (CRS) <layer_crs>`.
   You can change the layer's CRS, selecting a recently used one
   in the drop-down list or clicking on |setProjection| :sup:`Select CRS` button
   (see :ref:`crs_selector`). Use this process only if the CRS applied to the
@@ -159,6 +164,12 @@ The complete expression::
   NOT ("name" > 'S' OR FID > 10)
 
 
+You can also open the :guilabel:`Query Builder` dialog using the :guilabel:`Filter...`
+option from the :menuselection:`Layer` menu or the layer contextual menu.
+The :guilabel:`Fields`, :guilabel:`Values` and :guilabel:`Operators` sections in
+the dialog help you to construct the SQL-like query exposed in the
+:guilabel:`Provider specific filter expression` box.
+
 .. _figure_vector_querybuilder:
 
 .. figure:: img/queryBuilder.png
@@ -166,12 +177,6 @@ The complete expression::
 
    Query Builder
 
-
-You can also open the :guilabel:`Query Builder` dialog using the :guilabel:`Filter...`
-option from the :menuselection:`Layer` menu or the layer contextual menu.
-The :guilabel:`Fields`, :guilabel:`Values` and :guilabel:`Operators` sections in
-the dialog help you to construct the SQL-like query exposed in the
-:guilabel:`Provider specific filter expression` box.
 
 The **Fields** list contains all the fields of the layer. To add an attribute
 column to the SQL WHERE clause field, double-click its name or just type it into
@@ -3486,4 +3491,3 @@ To do so:
    :width: 1.5em
 .. |zoomToSelected| image:: /static/common/mActionZoomToSelected.png
    :width: 1.5em
-

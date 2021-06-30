@@ -352,33 +352,8 @@ Data Sources Settings
   * ‘Never’: Never prompt, will not load anything
   * ‘Load all’: Never prompt, but load all sublayers
 
-* |checkbox| :guilabel:`Ignore shapefile encoding declaration`. If a shapefile
-  has encoding information, this will be ignored by QGIS.
-* |checkbox| :guilabel:`Execute expressions on server-side if possible`: When
-  requesting features from a datasource, QGIS will try to optimize requests by
-  sending filter criteria directly to the server and only download the features
-  which match the criteria. For example, if for a list on the user interface
-  only the farmers which live in Bern should be listed, QGIS will send a ``WHERE
-  "hometown" = 'Bern'`` to the database.
-  In some cases, filter criteria are too complex to be translated from QGIS
-  Expressions to database compatible SQL. In those cases, QGIS will download
-  the whole data and filter locally to be on the safe side, which is much less
-  performant.
 
-  By disabling this option, QGIS can be forced to always download the whole data
-  and filter locally, at the expense of a performance penalty. This option is
-  meant as a safety break and should only be deactivated if you identify a
-  misbehavior of the QGIS expression translation engine.
-
-
-**Hidden Browser Path**
-
-This widget lists all the folders you chose to hide from the :ref:`Browser panel
-<browser_panel>`.
-Removing a folder from the list will make it available in the :guilabel:`Browser`
-panel.
-
-**Localized paths**
+**Localized data paths**
 
 It is possible to use localized paths for any kind of file based data source.
 They are a list of paths which are used to abstract the data source location.
@@ -388,6 +363,13 @@ will be saved in the project using :file:`localized:my_country\\ortho.tif`.
 
 The paths are listed by order of preference, in other words QGIS will first look
 for the file in the first path, then in the second one, etc.
+
+**Hidden browser paths**
+
+This widget lists all the folders you chose to hide from the :ref:`Browser panel
+<browser_panel>`.
+Removing a folder from the list will make it available in the :guilabel:`Browser`
+panel.
 
 
 .. index:: Rendering
