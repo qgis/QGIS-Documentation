@@ -132,6 +132,23 @@ For bookmark entries you can :guilabel:`Zoom to Bookmark`,
 :guilabel:`Delete Spatial Bookmark`
 
 
+Project Home
+............
+
+Available once the project file has been saved, the :guilabel:`Project home`
+entry is a folder containing data and other contents (scripts, models, text, ...)
+that may be used within the current project.
+Displayed in the :guilabel:`Browser` panel, it allows you to quickly
+access data and other files of the project.
+
+It defaults to the project file folder but can be changed through the
+:menuselection:`Project --> Properties... --> General --> Project home` option,
+or by right-clicking on the :guilabel:`Project Home` item of the Browser panel
+and selecting :guilabel:`Set project home...`.
+Customizing that folder is especially useful in contexts where QGIS projects
+are not stored in the root folder of an organisational 'project', along with datasets.
+
+
 Home
 ......................................................................
 Your file system home directory / folder.
