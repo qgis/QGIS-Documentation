@@ -156,28 +156,42 @@ Customizing that folder is especially useful in contexts where QGIS projects
 are not stored in the root folder of an organisational 'project', along with datasets.
 
 
-Home
-......................................................................
-Your file system home directory / folder.
-By right-clicking on an entry, and choosing
-:guilabel:`Add as a Favorite`, the location will be added to
-:guilabel:`Favorites`.
-From the context menu, you can also
+Drives and file system
+......................
 
-* add a directory, Geopackage or ESRI Shapefile format dataset
-  (:guilabel:`Add`)
+The next items of the :guilabel:`Browser` panel depend on the OS in use
+and concern the top level entries of its file system.
+
+They are mainly:
+
+* The :guilabel:`Home` folder, pointing to the current user home folder
+* on Unix-based machines, the root :guilabel:`/` folder
+* the connected drives, either local or network. Depending on the OS,
+  they are directly listed (eg, ``C:\``, ``D:\``) or through the ``/Volumes``
+  entry.
+
+From the contextual menu of each of these folders or drives, you can:
+
+* refresh the contents
+* create a :menuselection:`New -->` subitem that is a :guilabel:`Directory`,
+  :guilabel:`GeoPackage` or ESRI :guilabel:`Shapefile` format dataset
 * hide the directory (:guilabel:`Hide from Browser`)
-* toggle :guilabel:`Fast Scan this Directory`
-* open the directory in your file manager (:guilabel:`Open Directory`)
-* open the directory in a terminal window
-  (:guilabel:`Open in Terminal`)
-* inspect properties (:guilabel:`Properties...`,
-  :guilabel:`Directory Properties...`)
+* :guilabel:`Set color`: customize the folder icon color, aiding in rapid
+  browser navigation of complex folder structures
+* enable :guilabel:`Scanning`:
 
-
-/
-......................................................................
-Your file system root directory / folder.
+  * |checkbox| :guilabel:`Monitor for changes`: allows to manually control
+     whether a particular directory should be monitored and automatically updated.
+     This setting applies to the selected directory and all subdirectories.
+     This means that you can manually opt-in to monitoring of network drives
+     if you know there's no issue, or manually opt-out of monitoring of large
+     directories which you don't want monitored for other reasons.
+     By default, remote or network drives are not automatically monitored.
+  * |unchecked| :guilabel:`Fast scan this directory`
+* open the directory in your file manager (:guilabel:`Open Directory...`)
+* open the directory in a terminal window  (:guilabel:`Open in Terminal...`)
+* inspect the :guilabel:`Properties...` or the parent :guilabel:`Directory
+  Properties...`
 
 
 Database entries
@@ -455,3 +469,5 @@ Resources
    :width: 1.5em
 .. |spatialite| image:: /static/common/mIconSpatialite.png
    :width: 1.5em
+.. |unchecked| image:: /static/common/checkbox_unchecked.png
+   :width: 1.3em

@@ -351,7 +351,10 @@ Data Sources Settings
   * ‘If needed’: Ask if layer has no bands, but has sublayers
   * ‘Never’: Never prompt, will not load anything
   * ‘Load all’: Never prompt, but load all sublayers
-
+* |checkbox| :guilabel:`Automatically refresh directories in browser dock when
+  their contents change`: Allows you to manually opt-out of monitoring directories
+  in the :guilabel:`Browser` panel by default (eg, to avoid potential slow down
+  due to network latency).
 
 **Localized data paths**
 
