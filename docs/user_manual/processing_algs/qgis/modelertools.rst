@@ -11,6 +11,289 @@ These tools are only available in the Graphical Modeler.
 They are not available in the Processing Toolbox.
 
 
+.. _qgiscondition:
+
+Conditional branch
+------------------
+Adds a conditional branch into a model,
+allowing parts of the model to be executed based on
+the result of an expression evaluation. Mostly by using
+tool dependencies to control the flow of a model.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Field**
+     - ``BRANCH``
+     - [string]
+     - Name of the condition
+   * - **Field**
+     - ``CONDITION``
+     - [expression]
+     - Expression to evaluate
+
+Outputs
+.......
+
+None.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:condition``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgiscreatedirectory:
+
+Create directory
+----------------
+Creates a new directory on a file system.
+Directories will be created recursively, creating all required parent
+directories in order to construct the full specified directory path.
+No errors will be raised if the directory already exists.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Directory path**
+     - ``PATH``
+     - [string]
+     - Folder path to create
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output**
+     - ``OUTPUT``
+     - [folder]
+     - Created folder
+
+Python code
+...........
+
+**Algorithm ID**: ``native:createdirectory``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgisfilter:
+
+Feature filter
+-----------------------------
+Filters features from the input layer and redirects
+them to one or several outputs.
+If you do not know about any attribute names that are common to all
+possible input layers, filtering is only possible on the feature
+geometry and general record mechanisms, such as ``$id`` and ``uuid``.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - The input layer.
+   * - **Outputs and filters**
+       
+       (one or more)
+     - ``OUTPUT_<name of the filter>``
+     - [same as input]
+     - The output layers with filters (as many as there are filters).
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output**
+       
+       (one or more)
+     - ``native:filter_1:OUTPUT_<name of filter>``
+     - [same as input]
+     - The output layers with filtered features (as many as there are
+       filters).
+
+Python code
+...........
+
+**Algorithm ID**: ``native:filter``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgisfilterbygeometry:
+
+Filter by geometry type
+-----------------------
+Filters features by their geometry type. Incoming features will be directed
+to different outputs based on whether they have a point, line or polygon geometry.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Layer to evaluate
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Point features**
+
+       Optional
+     - ``POINTS``
+     - [vector: point]
+     - Layer with points
+   * - **Line features**
+
+       Optional
+     - ``LINES``
+     - [vector: line]
+     - Layer with lines
+   * - **Polygon features**
+
+       Optional
+     - ``POLYGONS``
+     - [vector: polygon]
+     - Layer with polygons
+   * - **Features with no geometry**
+
+       Optional
+     - ``NO_GEOMETRY``
+     - [table]
+     - Geometry-less vector layer
+
+Python code
+...........
+
+**Algorithm ID**: ``native:filterbygeometry``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgisfilterlayersbytype:
+
+Filter layers by type
+---------------------
+Filters layers by their type. Incoming layers will be directed
+to different outputs based on whether they are a vector or raster layer.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [layer]
+     - Generic Map Layer
+
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Vector features**
+
+       Optional
+     - ``VECTOR``
+     - [vector]
+     - A Vector Layer of the input, if compatible
+   * - **Raster layer**
+ 
+       Optional
+     - ``RASTER``
+     - [raster]
+     - A Raster Layer of the input, if compatible
+
+Python code
+...........
+
+**Algorithm ID**: ``native:filterlayersbytype``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgisloadlayer:
 
 Load layer into project
@@ -56,7 +339,97 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:loadlayer``
+**Algorithm ID**: ``native:loadlayer``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgisraiseexception:
+
+Raise exception
+---------------
+Raises an exception and cancels a model's execution.
+The exception message can be customized, and optionally an expression based condition
+can be specified. If an expression condition is used, then the exception will only
+be raised if the expression result is true. A false result indicates that no exception
+will be raised, and the model execution can continue uninterrupted.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Message**
+     - ``MESSAGE``
+     - [string]
+     - Message to display
+   * - **Condition**
+     - ``CONDITION``
+     - [expression]
+     - Expression to evaluate if true
+
+Outputs
+.......
+
+None.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:raiseexception``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgisraisewarning:
+
+Raise warning
+-------------
+Raises a warning message in the log.
+The warning message can be customized, and optionally an expression based condition
+can be specified. If an expression condition is used, then the warning will only
+be logged if the expression result is true. A false result indicates that no warning
+will be logged.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Message**
+     - ``MESSAGE``
+     - [string]
+     - Message to display
+   * - **Condition**
+     - ``CONDITION``
+     - [expression]
+     - Expression to evaluate if true
+
+Outputs
+.......
+
+None.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:raisewarning``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -108,7 +481,98 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:renamelayer``
+**Algorithm ID**: ``native:renamelayer``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgissavelog:
+
+Save log to file
+----------------
+Saves the model's execution log to a file.
+Optionally, the log can be saved in a HTML formatted version.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Use HTML**
+     - ``USE_HTML``
+     - [Boolean]
+
+       Default: False
+     - Use HTML formatting
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **File**
+     - ``OUTPUT``
+     - [string]
+     - Destination of the log
+
+Python code
+...........
+
+**Algorithm ID**: ``native:savelog``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+.. _qgissetprojectvariable:
+
+Set project variable
+--------------------
+Sets an expression variable for the current project.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Variable name**
+     - ``NAME``
+     - [string]
+     - Name of the variable
+   * - **Variable value**
+     - ``VALUE``
+     - [string]
+     - Value to be stored
+
+Outputs
+.......
+
+None.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:setprojectvariable``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -160,8 +624,9 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:stringconcatenation``
+**Algorithm ID**: ``native:stringconcatenation``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+

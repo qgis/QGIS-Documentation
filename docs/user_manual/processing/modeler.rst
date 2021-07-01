@@ -127,11 +127,6 @@ checkbox you can set the input to be within the ``Advanced`` section. This is
 particularly useful when the model has many parameters and some of them are not
 trivial, but you still want to choose them.
 
-The ``Comments`` tab allows you to tag the input with more information,
-to better describe 
-the parameter. Comments are visible only in the modeler canvas and not in the
-final algorithm dialog.
-
 For each added input, a new element is added to the modeler canvas.
 
 .. _figure_model_parameter_canvas:
@@ -145,6 +140,9 @@ You can also add inputs by dragging the input type from the list and
 dropping it at the position where you want it in the modeler canvas. If you want
 to change a parameter of an existing input, just double click on it, and the 
 same dialog will pop up.
+
+When using a model within another model, the inputs and outputs necessary will
+be displayed in the canvas.
 
 Definition of the workflow
 --------------------------
@@ -265,6 +263,19 @@ In order to use the algorithm from the toolbox, it has to be saved
 and the modeler dialog closed, to allow the toolbox to refresh its
 contents.
 
+When using the editor to execute a model, any non-default values will be 
+saved in the inputs. This means that executing the model at a later time from
+the editor will have the dialog prefilled with those values on any subsequent run.
+
+Definition of Model Variables
+-----------------------------
+
+Model can contain dedicated variables that are unique to them.
+These variables can be accessed by any expression used within the model.
+These variables can be useful to control algorithms within a model and 
+control multiple aspects of the model by changing a single variable.
+The variables can be viewed and modified in the :guilabel:`Variables` widget.
+
 Interacting with the canvas and elements
 ----------------------------------------
 
@@ -281,6 +292,9 @@ dragging the mouse.
 
 If you want to snap the elements while moving them in the canvas you can choose
 :menuselection:`View --> Enable Snapping`.
+
+Models can also be validated by using the |success|:guilabel:`Validate Model`
+action located in the :menuselection:`Model -->` menu.
 
 The :menuselection:`Edit` menu contains some very useful options to interact with
 your model elements:
@@ -320,6 +334,15 @@ allowing you to change the order of the inputs:
    :align: center
 
    Reorder Model Inputs
+
+
+Comments can also be added to Inputs or algorithms present in the modeler.
+This can be done by going in the :guilabel:`Comment` tab of the item or with
+a right-click.
+
+Comments are visible only in the modeler canvas and not in the
+final algorithm dialog, they can be hiden by deactivating
+:menuselection:`View --> Show Comments`.
 
 
 Saving and loading models
@@ -492,7 +515,8 @@ instance, if the number of output layers cannot be known in advance),
 then it is not possible to use it within a model, and it will not
 appear in the list of algorithms that you can find in the modeler
 dialog.
-
+On the other hand some algorithms are specific to the modeler.
+Those algorithms are located within the group 'Modeler Tools'.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -543,6 +567,8 @@ dialog.
 .. |selectAll| image:: /static/common/mActionSelectAll.png
    :width: 1.5em
 .. |start| image:: /static/common/mActionStart.png
+   :width: 1.5em
+.. |success| image:: /static/common/mIconSuccess.png
    :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
