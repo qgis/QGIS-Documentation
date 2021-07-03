@@ -777,6 +777,23 @@ It provides drivers to read and (often) write data in these formats.
 The :guilabel:`GDAL` tab exposes the drivers for raster and vector
 formats with their capabilities.
 
+GDAL raster and vector drivers
+..............................
+
+The :guilabel:`Raster Drivers` and :guilabel:`Vector Drivers` tabs
+allow you to define which GDAL driver is enabled to read and/or
+write files, as in some cases more than one GDAL driver is available.
+
+.. _figure_gdal_settings:
+.. figure:: img/options_gdal.png
+   :align: center
+
+   GDAL Settings in QGIS - Raster drivers
+
+.. tip:: Double-click a raster driver that allows read and write access
+   (``rw+(v)``) opens the :ref:`Edit Create options <gdal_createoptions>`
+   dialog for customization.
+
 Raster driver options
 .....................
 
@@ -822,23 +839,6 @@ support read and write access:
      :align: center
 
      Sample of Pyramids profile
-
-GDAL raster and vector drivers
-..............................
-
-The :guilabel:`Raster Drivers` and :guilabel:`Vector Drivers` (in a separated
-tab) allow you to define which GDAL driver is enabled to read and/or
-write files, as in some cases more than one GDAL driver is available.
-
-.. _figure_gdal_settings:
-.. figure:: img/options_gdal.png
-   :align: center
-
-   GDAL Settings in QGIS - Raster drivers
-
-.. tip:: Double-click a raster driver that allows read and write access
-   (``rw+(v)``) opens the :ref:`Edit Create options <gdal_createoptions>`
-   dialog for customization.
 
 .. index:: Variables
 .. _variables_options:
@@ -1005,39 +1005,6 @@ The set of default locator filters can be extended by plugins, eg for OSM
 nominatim searches, direct database searching, layer catalog searches, ...
 
 
-.. _optionsadvanced:
-
-Advanced Settings
------------------
-
-.. _figure_advanced_settings:
-
-.. figure:: img/options_advanced.png
-   :align: center
-
-   Advanced Settings tab in QGIS
-
-All the settings related to QGIS (UI, tools, data providers, Processing
-configurations, default values and paths, plugins options, expressions,
-geometry checks...) are saved in a :file:`QGIS/QGIS3.ini` file under the active
-:ref:`user profile <user_profiles>` directory.
-Configurations can be shared by copying this file to other installations.
-
-From within QGIS, the :guilabel:`Advanced` tab offers a way to manage these
-settings through the :guilabel:`Advanced Settings Editor`.
-After you promise to be careful, the widget is populated with a tree of all
-the existing settings, and you can edit their value.
-Right-click over a setting or a group and you can delete it
-(to add a setting or group, you have to edit the :file:`QGIS3.ini` file).
-Changes are automatically saved in the :file:`QGIS3.ini` file.
-
-.. warning:: **Avoid using the Advanced tab settings blindly**
-
-   Be careful while modifying items in this dialog given that changes are
-   automatically applied. Doing changes without knowledge can break your
-   QGIS installation in various ways.
-
-
 Acceleration Settings
 ---------------------
 OpenCL acceleration settings.
@@ -1163,6 +1130,39 @@ JavaScript). A convenient way to adjust settings.
     scheme.
   * change the :ref:`color <color_widget>` of each element in code writing,
     such as the colors to use for comments, quotes, functions, background, ...
+
+
+.. _optionsadvanced:
+
+Advanced Settings
+-----------------
+
+.. _figure_advanced_settings:
+
+.. figure:: img/options_advanced.png
+   :align: center
+
+   Advanced Settings tab in QGIS
+
+All the settings related to QGIS (UI, tools, data providers, Processing
+configurations, default values and paths, plugins options, expressions,
+geometry checks...) are saved in a :file:`QGIS/QGIS3.ini` file under the active
+:ref:`user profile <user_profiles>` directory.
+Configurations can be shared by copying this file to other installations.
+
+From within QGIS, the :guilabel:`Advanced` tab offers a way to manage these
+settings through the :guilabel:`Advanced Settings Editor`.
+After you promise to be careful, the widget is populated with a tree of all
+the existing settings, and you can edit their value.
+Right-click over a setting or a group and you can delete it
+(to add a setting or group, you have to edit the :file:`QGIS3.ini` file).
+Changes are automatically saved in the :file:`QGIS3.ini` file.
+
+.. warning:: **Avoid using the Advanced tab settings blindly**
+
+   Be careful while modifying items in this dialog given that changes are
+   automatically applied. Doing changes without knowledge can break your
+   QGIS installation in various ways.
 
 
 .. index:: User profile
