@@ -1259,21 +1259,35 @@ Thanks to QGIS Server, you can also publish such services.
 Using Vector Tiles services
 ---------------------------
 
-Vector Tiles services can be found in the :guilabel:`Vector Tiles`
-top level entry in the :guilabel:`Browser`.
-You can add a service by opening the context menu with a right-click
-and choosing :guilabel:`New Generic Connection ...`.
-You set up a service by adding a :guilabel:`Name` and a :guilabel:`URL`.
-The Vector Tiles Service must provide tiles in :file:`.pbf` format. 
-The dialog provides two menus to define the 
-|checkbox|:guilabel:`Min. Zoom Level` and the
-|checkbox|:guilabel:`Max. Zoom Level`. Vector Tiles have a 
-pyramid structure. By using these options you have the opportunity 
-to individually generate layers from the tile pyramid. These layers
-will then be used to render the Vector Tile in QGIS.
-For Mercator projection (used by OpenStreetMap Vector Tiles) Zoom Level 0
-represents the whole world at a scale of 1:500.000.000. Zoom Level 14
-represents the scale 1:35.000. 
+Vector Tile services can be added via the |addVectorTileLayer| :guilabel:`Vector
+Tiles` tab of the :guilabel:`Data Source Manager` dialog or the contextual menu
+of the :guilabel:`Vector Tiles` entry in the :guilabel:`Browser` panel.
+Services can be either a :guilabel:`New Generic Connection...` or a
+:guilabel:`New ArcGIS Vector Tile Service Connection...`.
+
+You set up a service by adding:
+
+* a :guilabel:`Name`
+* the :guilabel:`URL`: of the type ``http://example.com/{z}/{x}/{y}.pbf`` for generic
+  services and ``http://example.com/arcgis/rest/services/Layer/VectorTileServer``
+  for ArcGIS based services.
+  The service must provide tiles in :file:`.pbf` format.
+* the |checkbox|:guilabel:`Min. Zoom Level` and the |checkbox|:guilabel:`Max. Zoom Level`.
+  Vector Tiles have a pyramid structure. By using these options you have the
+  opportunity to individually generate layers from the tile pyramid.
+  These layers will then be used to render the Vector Tile in QGIS.
+
+  For Mercator projection (used by OpenStreetMap Vector Tiles) Zoom Level 0
+  represents the whole world at a scale of 1:500.000.000. Zoom Level 14
+  represents the scale 1:35.000.
+* a :guilabel:`Style URL`: a URL to a MapBox GL JSON style configuration.
+  If provided, then that style will be applied whenever the layers
+  from the connection are added to QGIS.
+  In the case of Arcgis vector tile service connections, the URL overrides
+  the default style configuration specified in the server configuration.
+* the :ref:`authentication <authentication_index>` configuration if necessary
+* a :guilabel:`Referer`
+
 :numref:`figure_vector_tiles_maptilerplanet` shows the dialog with the
 MapTiler planet Vector Tiles service configuration.
 
@@ -1284,8 +1298,22 @@ MapTiler planet Vector Tiles service configuration.
    
    Vector Tiles - Maptiler Planet configuration
 
-By using :guilabel:`New ArcGIS Vector Tile Service Connection ...` you can
-connect to ArcGIS Vector Tile Services.
+Configurations can be saved to :file:`.XML` file (:guilabel:`Save Connections`)
+through the :guilabel:`Vector Tiles` entry in :guilabel:`Data Source Manager`
+dialog or its context menu in the :guilabel:`Browser` panel.
+Likewise, they can be added from a file (:guilabel:`Load Connections`).
+
+Once a connection to a vector tile service is set, it's possible to:
+
+* :guilabel:`Edit` the vector tile connection settings
+* :guilabel:`Remove` the connection
+* From the :guilabel:`Browser` panel, right-click over the entry
+  and you an also:
+
+  * :guilabel:`Add layer to project`: a double-click also adds the layer
+  * View the :guilabel:`Layer Properties...` and get access to metadata and
+    a preview of the data provided by the service.
+    More settings are available when the layer has been loaded into the project.
 
 .. index:: XYZ Tile services
 .. _xyz_tile:
@@ -1293,12 +1321,21 @@ connect to ArcGIS Vector Tile Services.
 Using XYZ Tile services
 -----------------------
 
-XYZ Tile services can be found in the :guilabel:`XYZ Tiles` top level
-entry in the :guilabel:`Browser`.
-By default, the OpenStreetMap XYZ Tile service is configured. You can
-add other services that use the XYZ Tile protocol by choosing
-:guilabel:`New Connection` in the XYZ Tiles context menu (right-click
-to open).
+XYZ Tile services can be added via the |addXyzLayer| :guilabel:`XYZ` tab
+of the :guilabel:`Data Source Manager` dialog or the contextual menu of the
+:guilabel:`XYZ Tiles` entry in the :guilabel:`Browser` panel.
+Press :guilabel:`New` (respectively :guilabel:`New Connection`) and provide:
+
+* a :guilabel:`Name`
+* the :guilabel:`URL`
+* the :ref:`authentication <authentication_index>` configuration if necessary
+* the :guilabel:`Min. Zoom level` and :guilabel:`Max. Zoom level`
+* a :guilabel:`Referer`
+* the :guilabel:`Tile Resolution`: possible values are
+  :guilabel:`Unknown (not scaled)`, :guilabel:`Standard (256x256 / 96DPI)`
+  and :guilabel:`High (512x512 / 192DPI)`
+
+By default, the OpenStreetMap XYZ Tile service is configured.
 :numref:`figure_xyz_tiles_openstreetmap` shows the dialog with the OpenStreetMap
 XYZ Tile service configuration.
 
@@ -1309,9 +1346,11 @@ XYZ Tile service configuration.
 
    XYZ Tiles - OpenStreetMap configuration
 
-Configurations can be saved (:guilabel:`Save Connections`) to XML
-and loaded (:guilabel:`Load Connections`) through the context menu.
-Authentication configuration is supported.
+Configurations can be saved to :file:`.XML` file (:guilabel:`Save Connections`)
+through the :guilabel:`XYZ Tiles` entry in :guilabel:`Data Source Manager`
+dialog or its context menu in the :guilabel:`Browser` panel.
+Likewise, they can be added from a file (:guilabel:`Load Connections`).
+
 The XML file for OpenStreetMap looks like this:
 
 .. code-block:: xml
@@ -1323,16 +1362,19 @@ The XML file for OpenStreetMap looks like this:
      authcfg="" referer=""/>
   </qgsXYZTilesConnections>
 
-Once a connection to a XYZ tile service is set, right-click over the entry to:
+Once a connection to a XYZ tile service is set, it's possible to:
 
-* :guilabel:`Edit...` the XYZ connection settings
-* :guilabel:`Delete` the connection
-* :menuselection:`Export layer... --> To File`, :ref:`saving it as a raster
-  <general_saveas>`
-* :guilabel:`Add layer to project`: a double-click also adds the layer
-* View the :guilabel:`Layer Properties...` and get access to metadata and
-  a preview of the data provided by the service.
-  More settings are available when the layer has been loaded into the project.
+* :guilabel:`Edit` the XYZ connection settings
+* :guilabel:`Remove` the connection
+* From the :guilabel:`Browser` panel, right-click over the entry
+  and you can also:
+
+  * :menuselection:`Export layer... --> To File`, :ref:`saving it as a raster
+    <general_saveas>`
+  * :guilabel:`Add layer to project`: a double-click also adds the layer
+  * View the :guilabel:`Layer Properties...` and get access to metadata and
+    a preview of the data provided by the service.
+    More settings are available when the layer has been loaded into the project.
 
 
 Examples of XYZ Tile services:
@@ -1375,6 +1417,10 @@ Examples of XYZ Tile services:
 .. |addRasterLayer| image:: /static/common/mActionAddRasterLayer.png
    :width: 1.5em
 .. |addSpatiaLiteLayer| image:: /static/common/mActionAddSpatiaLiteLayer.png
+   :width: 1.5em
+.. |addVectorTileLayer| image:: /static/common/mActionAddVectorTileLayer.png
+   :width: 1.5em
+.. |addXyzLayer| image:: /static/common/mActionAddXyzLayer.png
    :width: 1.5em
 .. |afs| image:: /static/common/mIconAfs.png
    :width: 1.5em
