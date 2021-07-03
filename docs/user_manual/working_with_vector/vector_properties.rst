@@ -2306,7 +2306,7 @@ with the field type. The available widgets are:
   pairs within a single field. This is currently supported by the PostgreSQL
   provider, for fields of ``hstore`` type.
 * **JSON View**: Displays JSON data in a syntax highlighted text edit or in
-  three view. This widget is currently read only.
+  tree view. This widget is currently read only.
 * **List**: Displays a single column table to add different values within a
   single field. This is currently supported by the PostgreSQL provider,
   for fields of ``array`` type.
@@ -3485,4 +3485,3 @@ To do so:
    :width: 1.5em
 .. |zoomToSelected| image:: /static/common/mActionZoomToSelected.png
    :width: 1.5em
-
