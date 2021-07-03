@@ -1285,7 +1285,7 @@ You set up a service by adding:
   from the connection are added to QGIS.
   In the case of Arcgis vector tile service connections, the URL overrides
   the default style configuration specified in the server configuration.
-* the :guilabel:`Authentication` configuration if necessary
+* the :ref:`authentication <authentication_index>` configuration if necessary
 * a :guilabel:`Referer`
 
 :numref:`figure_vector_tiles_maptilerplanet` shows the dialog with the
@@ -1297,6 +1297,11 @@ MapTiler planet Vector Tiles service configuration.
    :align: center
    
    Vector Tiles - Maptiler Planet configuration
+
+Configurations can be saved to :file:`.XML` file (:guilabel:`Save Connections`)
+through the :guilabel:`Vector Tiles` entry in :guilabel:`Data Source Manager`
+dialog or its context menu in the :guilabel:`Browser` panel.
+Likewise, they can be added from a file (:guilabel:`Load Connections`).
 
 Once a connection to a vector tile service is set, it's possible to:
 
@@ -1323,7 +1328,7 @@ Press :guilabel:`New` (respectively :guilabel:`New Connection`) and provide:
 
 * a :guilabel:`Name`
 * the :guilabel:`URL`
-* the :guilabel:`Authentication` configuration if necessary
+* the :ref:`authentication <authentication_index>` configuration if necessary
 * the :guilabel:`Min. Zoom level` and :guilabel:`Max. Zoom level`
 * a :guilabel:`Referer`
 * the :guilabel:`Tile Resolution`: possible values are
@@ -1341,8 +1346,11 @@ XYZ Tile service configuration.
 
    XYZ Tiles - OpenStreetMap configuration
 
-Part or all the configured tile services can be saved (:guilabel:`Save`)
-to XML and loaded (:guilabel:`Load`) through the context menu.
+Configurations can be saved to :file:`.XML` file (:guilabel:`Save Connections`)
+through the :guilabel:`XYZ Tiles` entry in :guilabel:`Data Source Manager`
+dialog or its context menu in the :guilabel:`Browser` panel.
+Likewise, they can be added from a file (:guilabel:`Load Connections`).
+
 The XML file for OpenStreetMap looks like this:
 
 .. code-block:: xml
