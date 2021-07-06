@@ -6,15 +6,16 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
+"POT-Creation-Date: 2021-06-16 02:18+0000\n"
 "PO-Revision-Date: 2020-12-24 12:03+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2021\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,6 +35,18 @@ msgid ""
 msgstr ""
 "QGIS 서버는 **OGC(Open Geospatial Consortium)** 가 개발한 표준 프로토콜에 따라 데이터를 서비스할 수 "
 "있습니다:"
+
+#: ../../docs/server_manual/services.rst:15
+msgid "WMS 1.1.1 and 1.3.0"
+msgstr "WMS 1.1.1 및 1.3.0"
+
+#: ../../docs/server_manual/services.rst:16
+msgid "WFS 1.0.0 and 1.1.0"
+msgstr "WFS 1.0.0 및 1.1.0"
+
+#: ../../docs/server_manual/services.rst:17
+msgid "OGC API - Features (WFS3)"
+msgstr "OGC API - Features (WFS3)"
 
 #: ../../docs/server_manual/services.rst:18
 msgid "WCS 1.1.1"
@@ -56,9 +69,29 @@ msgstr ""
 msgid "Web Map Service (WMS)"
 msgstr "WMS(웹 맵 서비스)"
 
+#: ../../docs/server_manual/services.rst:29
+msgid ""
+"The **1.1.1** and **1.3.0** WMS standards implemented in QGIS Server provide"
+" a HTTP interface to request map or legend images generated from a QGIS "
+"project. A typical WMS request defines the QGIS project to use, the layers "
+"to render as well as the image format to generate. Basic support is also "
+"available for **Styled Layer Descriptor (SLD)**."
+msgstr ""
+"QGIS 서버에 구현된 WMS **1.1.1** 및 **1.3.0** 표준은 QGIS 프로젝트로부터 생성된 맵 또는 범례 이미지를 요청할"
+" 수 있는 HTTP 인터페이스를 제공합니다. 전형적인 WMS 요청은 사용할 QGIS 프로젝트, 렌더링할 레이어는 물론 생성할 이미지 "
+"포맷도 정의합니다. **SLD(Styled Layer Descriptor)** 사용도 기본으로 지원합니다."
+
 #: ../../docs/server_manual/services.rst:35
 msgid "Specifications:"
 msgstr "사양:"
+
+#: ../../docs/server_manual/services.rst:37
+msgid ""
+"`WMS 1.1.1 "
+"<https://portal.ogc.org/files/?artifact_id=1081&amp;version=1&amp;format=pdf>`_"
+msgstr ""
+"`WMS 1.1.1 "
+"<https://portal.ogc.org/files/?artifact_id=1081&amp;version=1&amp;format=pdf>`_"
 
 #: ../../docs/server_manual/services.rst:38
 msgid ""
@@ -77,8 +110,8 @@ msgstr ""
 "<http://portal.opengeospatial.org/files/?artifact_id=22364&format=pdf>`_"
 
 #: ../../docs/server_manual/services.rst:41
-#: ../../docs/server_manual/services.rst:1083
-#: ../../docs/server_manual/services.rst:1267
+#: ../../docs/server_manual/services.rst:1082
+#: ../../docs/server_manual/services.rst:1266
 msgid "Standard requests provided by QGIS Server:"
 msgstr "QGIS 서버가 제공하는 표준 요청:"
 
@@ -91,7 +124,7 @@ msgid "Description"
 msgstr "설명"
 
 #: ../../docs/server_manual/services.rst:1
-#: ../../docs/server_manual/services.rst:1281
+#: ../../docs/server_manual/services.rst:1280
 msgid "GetCapabilities"
 msgstr "GetCapabilities"
 
@@ -100,12 +133,24 @@ msgid "Returns XML metadata with information about the server"
 msgstr "서버에 대한 정보를 담은 XML 메타데이터를 반환합니다."
 
 #: ../../docs/server_manual/services.rst:1
+msgid ":ref:`GetMap <qgisserver-wms-getmap>`"
+msgstr ":ref:`GetMap <qgisserver-wms-getmap>`"
+
+#: ../../docs/server_manual/services.rst:1
 msgid "Returns a map"
 msgstr "맵을 반환합니다."
 
 #: ../../docs/server_manual/services.rst:1
+msgid ":ref:`GetFeatureInfo <server_wms_getfeatureinfo>`"
+msgstr ":ref:`GetFeatureInfo <server_wms_getfeatureinfo>`"
+
+#: ../../docs/server_manual/services.rst:1
 msgid "Retrieves data (geometry and values) for a pixel location"
 msgstr "픽셀 위치에 대한 데이터(도형 및 값)를 검색합니다."
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`GetLegendGraphics <server_wms_getlegendgraphics>`"
+msgstr ":ref:`GetLegendGraphics <server_wms_getlegendgraphics>`"
 
 #: ../../docs/server_manual/services.rst:1
 msgid "Returns legend symbols"
@@ -116,8 +161,16 @@ msgid "Vendor requests provided by QGIS Server:"
 msgstr "QGIS 서버가 제공하는 상용 제품 요청:"
 
 #: ../../docs/server_manual/services.rst:1
+msgid ":ref:`GetPrint <server_wms_getprint>`"
+msgstr ":ref:`GetPrint <server_wms_getprint>`"
+
+#: ../../docs/server_manual/services.rst:1
 msgid "Returns a QGIS composition"
 msgstr "QGIS 조판을 반환합니다."
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`GetProjectSettings <server_wms_getprojectsettings>`"
+msgstr ":ref:`GetProjectSettings <server_wms_getprojectsettings>`"
 
 #: ../../docs/server_manual/services.rst:1
 msgid "Returns specific information about QGIS Server"
@@ -126,6 +179,12 @@ msgstr "QGIS 서버에 대한 특정 정보를 반환합니다."
 #: ../../docs/server_manual/services.rst:66
 msgid "GetMap"
 msgstr "GetMap"
+
+#: ../../docs/server_manual/services.rst:68
+msgid ""
+"Standard parameters for the **GetMap** request according to the OGC WMS "
+"1.1.1 and 1.3.0 specifications:"
+msgstr "OGC WMS 1.1.1 및 1.3.0 사양에 따른 **GetMap** 요청용 표준 파라미터:"
 
 #: ../../docs/server_manual/services.rst:1
 msgid "Parameter"
@@ -136,44 +195,96 @@ msgid "Required"
 msgstr "필수 여부"
 
 #: ../../docs/server_manual/services.rst:1
+msgid ":ref:`SERVICE <wms-service>`"
+msgstr ":ref:`SERVICE <wms-service>`"
+
+#: ../../docs/server_manual/services.rst:1
 msgid "Yes"
 msgstr "○"
 
 #: ../../docs/server_manual/services.rst:1
-msgid "No"
-msgstr "Ｘ"
+msgid "Name of the service (**WMS**)"
+msgstr "서비스(**WMS**)의 명칭"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`VERSION <wms-version>`"
+msgstr ":ref:`VERSION <wms-version>`"
 
 #: ../../docs/server_manual/services.rst:1
 msgid "Version of the service"
 msgstr "서비스의 버전"
 
 #: ../../docs/server_manual/services.rst:1
+msgid ":ref:`REQUEST <wms-getmap-request>`"
+msgstr ":ref:`REQUEST <wms-getmap-request>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Name of the request (**GetMap**)"
+msgstr "요청(**GetMap**)의 명칭"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`LAYERS <wms-layers>`"
+msgstr ":ref:`LAYERS <wms-layers>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "No"
+msgstr "Ｘ"
+
+#: ../../docs/server_manual/services.rst:1
 msgid "Layers to display"
 msgstr "표시할 레이어"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`STYLES <wms-styles>`"
+msgstr ":ref:`STYLES <wms-styles>`"
 
 #: ../../docs/server_manual/services.rst:1
 msgid "Layers' style"
 msgstr "레이어의 스타일"
 
 #: ../../docs/server_manual/services.rst:1
+msgid ":ref:`SRS / CRS <wms-srs>`"
+msgstr ":ref:`SRS / CRS <wms-srs>`"
+
+#: ../../docs/server_manual/services.rst:1
 msgid "Coordinate reference system"
 msgstr "좌표계"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`BBOX <wms-bbox>`"
+msgstr ":ref:`BBOX <wms-bbox>`"
 
 #: ../../docs/server_manual/services.rst:1
 msgid "Map extent"
 msgstr "맵 범위"
 
 #: ../../docs/server_manual/services.rst:1
+msgid ":ref:`WIDTH <wms-width>`"
+msgstr ":ref:`WIDTH <wms-width>`"
+
+#: ../../docs/server_manual/services.rst:1
 msgid "Width of the image in pixels"
 msgstr "이미지의 픽셀 단위 너비"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`HEIGHT <wms-height>`"
+msgstr ":ref:`HEIGHT <wms-height>`"
 
 #: ../../docs/server_manual/services.rst:1
 msgid "Height of the image in pixels"
 msgstr "이미지의 픽셀 단위 높이"
 
 #: ../../docs/server_manual/services.rst:1
+msgid ":ref:`FORMAT <wms-getmap-format>`"
+msgstr ":ref:`FORMAT <wms-getmap-format>`"
+
+#: ../../docs/server_manual/services.rst:1
 msgid "Image format"
 msgstr "이미지 포맷"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`TRANSPARENT <wms-transparent>`"
+msgstr ":ref:`TRANSPARENT <wms-transparent>`"
 
 #: ../../docs/server_manual/services.rst:1
 msgid "Transparent background"
@@ -196,39 +307,67 @@ msgid "In-line SLD (XML) to be used for styling"
 msgstr "스타일 작업에 사용될 인라인(In-line) SLD(XML)"
 
 #: ../../docs/server_manual/services.rst:90
-#: ../../docs/server_manual/services.rst:632
-#: ../../docs/server_manual/services.rst:1122
-#: ../../docs/server_manual/services.rst:1294
-#: ../../docs/server_manual/services.rst:1357
-#: ../../docs/server_manual/services.rst:1513
+#: ../../docs/server_manual/services.rst:631
+#: ../../docs/server_manual/services.rst:1121
+#: ../../docs/server_manual/services.rst:1293
+#: ../../docs/server_manual/services.rst:1356
+#: ../../docs/server_manual/services.rst:1512
 msgid ""
 "In addition to the standard ones, QGIS Server supports the following extra "
 "parameters:"
 msgstr "표준 파라미터 이외에도, QGIS 서버는 다음과 같은 추가 파라미터를 지원합니다:"
 
 #: ../../docs/server_manual/services.rst:1
+msgid ":ref:`MAP <wms-map>`"
+msgstr ":ref:`MAP <wms-map>`"
+
+#: ../../docs/server_manual/services.rst:1
 msgid "Specify the QGIS project file"
 msgstr "QGIS 프로젝트 파일을 지정합니다."
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`BGCOLOR <wms-bgcolor>`"
+msgstr ":ref:`BGCOLOR <wms-bgcolor>`"
 
 #: ../../docs/server_manual/services.rst:1
 msgid "Specify the background color"
 msgstr "배경 색상을 지정합니다."
 
 #: ../../docs/server_manual/services.rst:1
+msgid ":ref:`DPI <wms-dpi>`"
+msgstr ":ref:`DPI <wms-dpi>`"
+
+#: ../../docs/server_manual/services.rst:1
 msgid "Specify the output resolution"
 msgstr "출력물의 해상도를 지정합니다."
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`IMAGE_QUALITY <wms-imagequality>`"
+msgstr ":ref:`IMAGE_QUALITY <wms-imagequality>`"
 
 #: ../../docs/server_manual/services.rst:1
 msgid "JPEG compression"
 msgstr "JPEG 압축"
 
 #: ../../docs/server_manual/services.rst:1
+msgid ":ref:`OPACITIES <wms-opacities>`"
+msgstr ":ref:`OPACITIES <wms-opacities>`"
+
+#: ../../docs/server_manual/services.rst:1
 msgid "Opacity for layer or group"
 msgstr "레이어 또는 레이어 그룹의 투명도"
 
 #: ../../docs/server_manual/services.rst:1
+msgid ":ref:`FILTER <wms-filter>`"
+msgstr ":ref:`FILTER <wms-filter>`"
+
+#: ../../docs/server_manual/services.rst:1
 msgid "Subset of features"
 msgstr "피처의 하위집합"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`SELECTION <wms-selection>`"
+msgstr ":ref:`SELECTION <wms-selection>`"
 
 #: ../../docs/server_manual/services.rst:1
 msgid "Highlight features"
@@ -247,37 +386,49 @@ msgid "Only for ``FORMAT=application/dxf``"
 msgstr "``FORMAT=application/dxf`` 파라미터 사용시에만 쓰입니다."
 
 #: ../../docs/server_manual/services.rst:1
+msgid ":ref:`FORMAT_OPTIONS <wms-formatoptions>`"
+msgstr ":ref:`FORMAT_OPTIONS <wms-formatoptions>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Options of the specified file format"
+msgstr "지정한 파일 포맷의 옵션들"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`TILED <wms-tiled>`"
+msgstr ":ref:`TILED <wms-tiled>`"
+
+#: ../../docs/server_manual/services.rst:1
 msgid "Working in *tiled mode*"
 msgstr "*타일 모드* 로 작동합니다."
 
 #: ../../docs/server_manual/services.rst:113
-#: ../../docs/server_manual/services.rst:363
-#: ../../docs/server_manual/services.rst:498
-#: ../../docs/server_manual/services.rst:650
-#: ../../docs/server_manual/services.rst:847
-#: ../../docs/server_manual/services.rst:1163
-#: ../../docs/server_manual/services.rst:1179
-#: ../../docs/server_manual/services.rst:1199
-#: ../../docs/server_manual/services.rst:1221
-#: ../../docs/server_manual/services.rst:1243
-#: ../../docs/server_manual/services.rst:1305
-#: ../../docs/server_manual/services.rst:1368
-#: ../../docs/server_manual/services.rst:1524
-#: ../../docs/server_manual/services.rst:1868
-#: ../../docs/server_manual/services.rst:1943
-#: ../../docs/server_manual/services.rst:1955
-#: ../../docs/server_manual/services.rst:1969
-#: ../../docs/server_manual/services.rst:1980
-#: ../../docs/server_manual/services.rst:2009
+#: ../../docs/server_manual/services.rst:362
+#: ../../docs/server_manual/services.rst:497
+#: ../../docs/server_manual/services.rst:649
+#: ../../docs/server_manual/services.rst:846
+#: ../../docs/server_manual/services.rst:1162
+#: ../../docs/server_manual/services.rst:1178
+#: ../../docs/server_manual/services.rst:1198
+#: ../../docs/server_manual/services.rst:1220
+#: ../../docs/server_manual/services.rst:1242
+#: ../../docs/server_manual/services.rst:1304
+#: ../../docs/server_manual/services.rst:1367
+#: ../../docs/server_manual/services.rst:1523
+#: ../../docs/server_manual/services.rst:1867
+#: ../../docs/server_manual/services.rst:1942
+#: ../../docs/server_manual/services.rst:1954
+#: ../../docs/server_manual/services.rst:1968
+#: ../../docs/server_manual/services.rst:1979
+#: ../../docs/server_manual/services.rst:2008
 msgid "URL example:"
 msgstr "URL 예시:"
 
 #: ../../docs/server_manual/services.rst:1
 #: ../../docs/server_manual/services.rst:137
-#: ../../docs/server_manual/services.rst:1137
-#: ../../docs/server_manual/services.rst:1316
-#: ../../docs/server_manual/services.rst:1384
-#: ../../docs/server_manual/services.rst:1539
+#: ../../docs/server_manual/services.rst:1136
+#: ../../docs/server_manual/services.rst:1315
+#: ../../docs/server_manual/services.rst:1383
+#: ../../docs/server_manual/services.rst:1538
 msgid "SERVICE"
 msgstr "SERVICE"
 
@@ -286,24 +437,28 @@ msgid "This parameter has to be ``WMS``."
 msgstr "이 파라미터는 ``WMS`` 이어야 합니다."
 
 #: ../../docs/server_manual/services.rst:141
-#: ../../docs/server_manual/services.rst:868
-#: ../../docs/server_manual/services.rst:1142
+#: ../../docs/server_manual/services.rst:867
+#: ../../docs/server_manual/services.rst:1141
 msgid "For example:"
 msgstr "다음은 예시입니다:"
 
 #: ../../docs/server_manual/services.rst:1
 #: ../../docs/server_manual/services.rst:153
-#: ../../docs/server_manual/services.rst:1152
+#: ../../docs/server_manual/services.rst:1151
 msgid "VERSION"
 msgstr "VERSION"
 
 #: ../../docs/server_manual/services.rst:155
-#: ../../docs/server_manual/services.rst:1154
+#: ../../docs/server_manual/services.rst:1153
 msgid ""
 "This parameter allows to specify the version of the service to use. "
 "Available values for the ``VERSION`` parameter are:"
 msgstr ""
 "이 파라미터는 사용할 서비스의 버전을 지정할 수 있습니다. ``VERSION`` 파라미터가 사용할 수 있는 값은 다음과 같습니다:"
+
+#: ../../docs/server_manual/services.rst:158
+msgid "``1.1.1``"
+msgstr "``1.1.1``"
 
 #: ../../docs/server_manual/services.rst:159
 msgid "``1.3.0``"
@@ -311,68 +466,62 @@ msgstr "``1.3.0``"
 
 #: ../../docs/server_manual/services.rst:161
 msgid ""
-"If no version is indicated in the request, then ``1.3.0`` is used by "
-"default."
-msgstr "요청에서 버전을 지정하지 않을 경우, ``1.3.0`` 을 기본값으로 사용합니다."
-
-#: ../../docs/server_manual/services.rst:164
-msgid ""
 "According to the version number, slight differences have to be expected as "
 "explained later for the next parameters:"
 msgstr "버전 번호에 따라, 다음 파라미터의 사용 방법이 조금씩 달라집니다. 이에 대해서는 차후 설명하겠습니다:"
 
-#: ../../docs/server_manual/services.rst:167
+#: ../../docs/server_manual/services.rst:164
 msgid "``CRS`` / ``SRS``"
 msgstr "``CRS`` / ``SRS``"
 
-#: ../../docs/server_manual/services.rst:168
+#: ../../docs/server_manual/services.rst:165
 msgid "``BBOX``"
 msgstr "``BBOX``"
 
 #: ../../docs/server_manual/services.rst:1
-#: ../../docs/server_manual/services.rst:174
-#: ../../docs/server_manual/services.rst:674
-#: ../../docs/server_manual/services.rst:886
-#: ../../docs/server_manual/services.rst:1174
-#: ../../docs/server_manual/services.rst:1323
-#: ../../docs/server_manual/services.rst:1390
-#: ../../docs/server_manual/services.rst:1546
+#: ../../docs/server_manual/services.rst:171
+#: ../../docs/server_manual/services.rst:673
+#: ../../docs/server_manual/services.rst:885
+#: ../../docs/server_manual/services.rst:1173
+#: ../../docs/server_manual/services.rst:1322
+#: ../../docs/server_manual/services.rst:1389
+#: ../../docs/server_manual/services.rst:1545
 msgid "REQUEST"
 msgstr "REQUEST"
 
-#: ../../docs/server_manual/services.rst:176
+#: ../../docs/server_manual/services.rst:173
 msgid "This parameter is ``GetMap`` in case of the **GetMap** request."
 msgstr "**GetMap** 요청의 경우, 이 파라미터는 ``GetMap`` 이어야 합니다."
 
-#: ../../docs/server_manual/services.rst:182
+#: ../../docs/server_manual/services.rst:179
 msgid "LAYERS"
 msgstr "LAYERS"
 
-#: ../../docs/server_manual/services.rst:184
+#: ../../docs/server_manual/services.rst:181
 msgid ""
 "This parameter allows to specify the layers to display on the map. Names "
 "have to be separated by a comma."
 msgstr "이 파라미터는 맵 상에 표시할 레이어를 지정할 수 있습니다. 레이어명을 쉼표로 구분해야 합니다."
 
-#: ../../docs/server_manual/services.rst:187
+#: ../../docs/server_manual/services.rst:184
 msgid "In addition, QGIS Server introduced some options to select layers by:"
 msgstr "이에 더해, QGIS 서버는 레이어를 다음을 통해 선택할 수 있는 옵션을 제공합니다:"
 
-#: ../../docs/server_manual/services.rst:189
-#: ../../docs/server_manual/services.rst:1403
-#: ../../docs/server_manual/services.rst:1573
+#: ../../docs/server_manual/services.rst:186
+#: ../../docs/server_manual/services.rst:1402
+#: ../../docs/server_manual/services.rst:1572
 msgid "a short name"
 msgstr "약칭(short name)"
 
-#: ../../docs/server_manual/services.rst:190
-#: ../../docs/server_manual/services.rst:1404
-#: ../../docs/server_manual/services.rst:1574
+#: ../../docs/server_manual/services.rst:187
+#: ../../docs/server_manual/services.rst:1403
+#: ../../docs/server_manual/services.rst:1573
 msgid "the layer id"
 msgstr "레이어 ID"
 
-#: ../../docs/server_manual/services.rst:192
-#: ../../docs/server_manual/services.rst:1406
-#: ../../docs/server_manual/services.rst:1576
+#: ../../docs/server_manual/services.rst:189
+#: ../../docs/server_manual/services.rst:1405
+#: ../../docs/server_manual/services.rst:1575
 msgid ""
 "The short name of a layer may be configured through "
 ":menuselection:`Properties --> Metadata` in layer menu. If the short name is"
@@ -381,7 +530,7 @@ msgstr ""
 "레이어 메뉴의 :menuselection:`Properties --> Metadata` 를 통해 레이어의 약칭을 설정할 수도 있습니다. "
 "약칭을 정의한 경우, 레이어명 대신 약칭을 기본으로 사용할 것입니다:"
 
-#: ../../docs/server_manual/services.rst:205
+#: ../../docs/server_manual/services.rst:202
 msgid ""
 "Moreover, there's a project option allowing to select layers by their id in "
 ":menuselection:`OWS Server --> WMS capabilities` menu of the "
@@ -392,11 +541,11 @@ msgstr ""
 "Server --> WMS capabilities` 메뉴에서 레이어 ID로 레이어를 선택할 수 있는 프로젝트 수준 옵션도 있습니다. 이 "
 "옵션을 활성화하려면, |checkbox| :guilabel:`Use layer ids as names` 를 체크하십시오."
 
-#: ../../docs/server_manual/services.rst:223
+#: ../../docs/server_manual/services.rst:220
 msgid "STYLES"
 msgstr "STYLES"
 
-#: ../../docs/server_manual/services.rst:225
+#: ../../docs/server_manual/services.rst:222
 msgid ""
 "This parameter can be used to specify a layer's style for the rendering "
 "step. Styles have to be separated by a comma. The name of the default style "
@@ -405,17 +554,26 @@ msgstr ""
 "렌더링 단계에서 어떤 레이어 스타일을 사용할지 지정하는 데 이 파라미터를 사용할 수 있습니다. 스타일을 쉼표로 구분해야 합니다. 기본 "
 "스타일의 명칭은 ``default`` 입니다."
 
-#: ../../docs/server_manual/services.rst:234
+#: ../../docs/server_manual/services.rst:231
 msgid "SRS / CRS"
 msgstr "SRS / CRS"
 
-#: ../../docs/server_manual/services.rst:240
+#: ../../docs/server_manual/services.rst:233
+msgid ""
+"This parameter allows to indicate the map output Spatial Reference System in"
+" WMS **1.1.1** and has to be formed like ``EPSG:XXXX``. Note that ``CRS`` is"
+" also supported if current version is **1.1.1**."
+msgstr ""
+"``SRS`` 파라미터는 WMS **1.1.1** 에서 맵 출력물의 좌표계를 나타낼 수 있으며, ``EPSG:XXXX`` 같은 서식이어야"
+" 합니다. 현재 버전이 **1.1.1** 이라면 ``CRS`` 도 지원한다는 사실을 기억하십시오."
+
+#: ../../docs/server_manual/services.rst:237
 msgid ""
 "For WMS **1.3.0**, ``CRS`` parameter is preferable but ``SRS`` is also "
 "supported."
 msgstr "WMS **1.3.0** 의 경우, ``CRS`` 파라미터가 선호되지만 ``SRS`` 도 지원합니다."
 
-#: ../../docs/server_manual/services.rst:243
+#: ../../docs/server_manual/services.rst:240
 msgid ""
 "Note that if both ``CRS`` and ``SRS`` parameters are indicated in the "
 "request, then it's the current version indicated in ``VERSION`` parameter "
@@ -423,156 +581,189 @@ msgid ""
 msgstr ""
 "요청에서 ``CRS`` 와 ``SRS`` 파라미터 둘 다 사용한 경우, ``VERSION`` 파라미터에서 지정한 현재 버전을 우선합니다."
 
-#: ../../docs/server_manual/services.rst:247
+#: ../../docs/server_manual/services.rst:244
 msgid ""
 "In the next case, the ``SRS`` parameter is kept whatever the ``VERSION`` "
 "parameter because ``CRS`` is not indicated:"
 msgstr ""
 "다음 예시에서는, ``VERSION`` 파라미터 값이 무엇이든 ``SRS`` 파라미터를 사용합니다. ``CRS`` 가 없기 때문입니다:"
 
-#: ../../docs/server_manual/services.rst:259
+#: ../../docs/server_manual/services.rst:256
 msgid ""
 "In the next case, the ``SRS`` parameter is kept instead of ``CRS`` because "
 "of the ``VERSION`` parameter:"
 msgstr "다음 예시에서는, ``VERSION`` 파라미터 값 때문에 ``CRS`` 대신 ``SRS`` 파라미터를 사용합니다:"
 
-#: ../../docs/server_manual/services.rst:272
+#: ../../docs/server_manual/services.rst:269
 msgid ""
 "In the next case, the ``CRS`` parameter is kept instead of ``SRS`` because "
 "of the ``VERSION`` parameter:"
 msgstr "다음 예시에서는, ``VERSION`` 파라미터 값 때문에 ``SRS`` 대신 ``CRS`` 파라미터를 사용합니다:"
 
 #: ../../docs/server_manual/services.rst:1
-#: ../../docs/server_manual/services.rst:289
+#: ../../docs/server_manual/services.rst:286
 msgid "BBOX"
 msgstr "BBOX"
 
-#: ../../docs/server_manual/services.rst:291
+#: ../../docs/server_manual/services.rst:288
 msgid ""
 "This parameter allows to specify the map extent with units according to the "
 "current CRS. Coordinates have to be separated by a comma."
 msgstr "이 파라미터는 맵 범위를 현재 좌표계의 단위로 지정할 수 있습니다. 좌표를 쉼표로 구분해야 합니다."
 
-#: ../../docs/server_manual/services.rst:329
+#: ../../docs/server_manual/services.rst:291
+msgid ""
+"The ``BBOX`` parameter is formed like ``min_a,min_b,max_a,max_b`` but ``a`` "
+"and ``b`` axis definition is different according to the current ``VERSION`` "
+"parameter:"
+msgstr ""
+"``BBOX`` 파라미터는 ``min_a,min_b,max_a,max_b`` 와 같은 서식이지만 ``a`` 와 ``b`` 축의 정의는 "
+"현재 ``VERSION`` 파라미터에 따라 달라집니다:"
+
+#: ../../docs/server_manual/services.rst:295
+msgid "in WMS **1.1.1**, the axis ordering is always east/north"
+msgstr "WMS **1.1.1** 에서는 축의 순서가 언제나 동/북입니다."
+
+#: ../../docs/server_manual/services.rst:296
+msgid "in WMS **1.3.0**, the axis ordering depends on the CRS authority"
+msgstr "WMS **1.3.0** 에서는 축의 순서가 좌표계 기관(CRS authority)을 따릅니다."
+
+#: ../../docs/server_manual/services.rst:298
+msgid ""
+"For example in case of ``EPSG:4326`` and WMS **1.1.1**, ``a`` is the "
+"longitude (east) and ``b`` the latitude (north), leading to a request like:"
+msgstr ""
+"예를 들면 ``EPSG:4326`` 과 WMS **1.1.1** 인 경우, ``a`` 가 경도(동)이고 ``b`` 는 위도(북)이기 "
+"때문에 요청이 다음과 같이 보입니다:"
+
+#: ../../docs/server_manual/services.rst:311
+msgid ""
+"But in case of WMS **1.3.0**, the axis ordering defined in the EPSG database"
+" is north/east so ``a`` is the latitude and ``b`` the longitude:"
+msgstr ""
+"그러나 WMS **1.3.0** 인 경우, EPSG 데이터베이스에 정의된 축의 순서가 북/동이기 때문에 ``a`` 가 위도이고 ``b``"
+" 는 경도가 됩니다:"
+
+#: ../../docs/server_manual/services.rst:328
 msgid "WIDTH"
 msgstr "WIDTH"
 
-#: ../../docs/server_manual/services.rst:331
+#: ../../docs/server_manual/services.rst:330
 msgid ""
 "This parameter allows to specify the width in pixels of the output image."
 msgstr "이 파라미터는 출력 이미지의 너비를 픽셀 단위로 지정할 수 있습니다."
 
-#: ../../docs/server_manual/services.rst:338
+#: ../../docs/server_manual/services.rst:337
 msgid "HEIGHT"
 msgstr "HEIGHT"
 
-#: ../../docs/server_manual/services.rst:340
+#: ../../docs/server_manual/services.rst:339
 msgid ""
 "This parameter allows to specify the height in pixels of the output image."
 msgstr "이 파라미터는 출력 이미지의 높이를 픽셀 단위로 지정할 수 있습니다."
 
 #: ../../docs/server_manual/services.rst:1
-#: ../../docs/server_manual/services.rst:347
-#: ../../docs/server_manual/services.rst:901
-#: ../../docs/server_manual/services.rst:1434
+#: ../../docs/server_manual/services.rst:346
+#: ../../docs/server_manual/services.rst:900
+#: ../../docs/server_manual/services.rst:1433
 msgid "FORMAT"
 msgstr "FORMAT"
 
-#: ../../docs/server_manual/services.rst:349
+#: ../../docs/server_manual/services.rst:348
 msgid ""
 "This parameter may be used to specify the format of map image. Available "
 "values are:"
 msgstr "이 파라미터는 맵 이미지의 포맷을 지정할 수 있습니다. 사용할 수 있는 값은 다음과 같습니다:"
 
+#: ../../docs/server_manual/services.rst:351
+#: ../../docs/server_manual/services.rst:906
+#: ../../docs/server_manual/services.rst:1438
+msgid "``jpg``"
+msgstr "``jpg``"
+
 #: ../../docs/server_manual/services.rst:352
 #: ../../docs/server_manual/services.rst:907
 #: ../../docs/server_manual/services.rst:1439
-msgid "``jpg``"
-msgstr "``jpg``"
+msgid "``jpeg``"
+msgstr "``jpeg``"
 
 #: ../../docs/server_manual/services.rst:353
 #: ../../docs/server_manual/services.rst:908
 #: ../../docs/server_manual/services.rst:1440
-msgid "``jpeg``"
-msgstr "``jpeg``"
-
-#: ../../docs/server_manual/services.rst:354
-#: ../../docs/server_manual/services.rst:909
-#: ../../docs/server_manual/services.rst:1441
 msgid "``image/jpeg``"
 msgstr "``image/jpeg``"
 
-#: ../../docs/server_manual/services.rst:355
-#: ../../docs/server_manual/services.rst:906
-#: ../../docs/server_manual/services.rst:1442
+#: ../../docs/server_manual/services.rst:354
+#: ../../docs/server_manual/services.rst:905
+#: ../../docs/server_manual/services.rst:1441
 msgid "``image/png``"
 msgstr "``image/png``"
 
-#: ../../docs/server_manual/services.rst:356
+#: ../../docs/server_manual/services.rst:355
 msgid "``image/png; mode=1bit``"
 msgstr "``image/png; mode=1bit``"
 
-#: ../../docs/server_manual/services.rst:357
+#: ../../docs/server_manual/services.rst:356
 msgid "``image/png; mode=8bit``"
 msgstr "``image/png; mode=8bit``"
 
-#: ../../docs/server_manual/services.rst:358
+#: ../../docs/server_manual/services.rst:357
 msgid "``image/png; mode=16bit``"
 msgstr "``image/png; mode=16bit``"
 
-#: ../../docs/server_manual/services.rst:359
+#: ../../docs/server_manual/services.rst:358
 msgid ""
 "``application/dxf`` Only layers that have read access in the WFS service are"
 " exported in the DXF format."
 msgstr "``application/dxf``: WFS 서비스에서 읽기 접근 권한이 있는 레이어만 DXF 포맷으로 내보냅니다."
 
-#: ../../docs/server_manual/services.rst:381
+#: ../../docs/server_manual/services.rst:380
 msgid "TRANSPARENT"
 msgstr "TRANSPARENT"
 
-#: ../../docs/server_manual/services.rst:383
+#: ../../docs/server_manual/services.rst:382
 msgid ""
 "This boolean parameter can be used to specify the background transparency. "
 "Available values are (not case sensitive):"
 msgstr ""
 "이 불(boolean) 파라미터는 배경 투명도를 지정할 수 있습니다. 사용할 수 있는 값은 다음과 같습니다(대소문자 구분 안 함):"
 
-#: ../../docs/server_manual/services.rst:387
-#: ../../docs/server_manual/services.rst:790
-#: ../../docs/server_manual/services.rst:804
+#: ../../docs/server_manual/services.rst:386
+#: ../../docs/server_manual/services.rst:789
+#: ../../docs/server_manual/services.rst:803
 msgid "``TRUE``"
 msgstr "``TRUE``"
 
-#: ../../docs/server_manual/services.rst:388
-#: ../../docs/server_manual/services.rst:791
-#: ../../docs/server_manual/services.rst:805
+#: ../../docs/server_manual/services.rst:387
+#: ../../docs/server_manual/services.rst:790
+#: ../../docs/server_manual/services.rst:804
 msgid "``FALSE``"
 msgstr "``FALSE``"
 
-#: ../../docs/server_manual/services.rst:390
+#: ../../docs/server_manual/services.rst:389
 msgid ""
 "However, this parameter is ignored if the format of the map image indicated "
 "with ``FORMAT`` is different from PNG."
 msgstr "하지만, ``FORMAT`` 파라미터가 나타내는 맵 이미지의 포맷이 PNG가 아닌 경우 이 파라미터를 무시합니다."
 
 #: ../../docs/server_manual/services.rst:1
-#: ../../docs/server_manual/services.rst:397
-#: ../../docs/server_manual/services.rst:1330
-#: ../../docs/server_manual/services.rst:1476
-#: ../../docs/server_manual/services.rst:1553
+#: ../../docs/server_manual/services.rst:396
+#: ../../docs/server_manual/services.rst:1329
+#: ../../docs/server_manual/services.rst:1475
+#: ../../docs/server_manual/services.rst:1552
 msgid "MAP"
 msgstr "MAP"
 
-#: ../../docs/server_manual/services.rst:399
-#: ../../docs/server_manual/services.rst:1332
-#: ../../docs/server_manual/services.rst:1478
-#: ../../docs/server_manual/services.rst:1555
+#: ../../docs/server_manual/services.rst:398
+#: ../../docs/server_manual/services.rst:1331
+#: ../../docs/server_manual/services.rst:1477
+#: ../../docs/server_manual/services.rst:1554
 msgid "This parameter allows to define the QGIS project file to use."
 msgstr "이 파라미터는 사용할 QGIS 프로젝트 파일을 정의할 수 있습니다."
 
-#: ../../docs/server_manual/services.rst:401
-#: ../../docs/server_manual/services.rst:1480
-#: ../../docs/server_manual/services.rst:1557
+#: ../../docs/server_manual/services.rst:400
+#: ../../docs/server_manual/services.rst:1479
+#: ../../docs/server_manual/services.rst:1556
 msgid ""
 "As mentioned in :ref:`GetMap parameters table <qgisserver-wms-getmap>`, "
 "``MAP`` is mandatory because a request needs a QGIS project to actually "
@@ -586,11 +777,11 @@ msgstr ""
 " 사용해서 기본 QGIS 프로젝트를 정의할 수도 있습니다. 이런 특정한 경우에만, ``MAP`` 이 필수 파라미터가 아니게 됩니다. 더 "
 "자세한 내용은 :ref:`server_env_variables` 을 참조하세요."
 
-#: ../../docs/server_manual/services.rst:413
+#: ../../docs/server_manual/services.rst:412
 msgid "BGCOLOR"
 msgstr "BGCOLOR"
 
-#: ../../docs/server_manual/services.rst:415
+#: ../../docs/server_manual/services.rst:414
 msgid ""
 "This parameter allows to indicate a background color for the map image. "
 "However it cannot be combined with ``TRANSPARENT`` parameter in case of PNG "
@@ -601,33 +792,33 @@ msgstr ""
 "결합해서 사용할 수 없습니다. (투명을 더 우선하기 때문입니다.) 일반적인 색상명을 사용할 수도 있고, 십육진법으로 표기할 수도 "
 "있습니다."
 
-#: ../../docs/server_manual/services.rst:420
+#: ../../docs/server_manual/services.rst:419
 msgid "URL example with the literal notation:"
 msgstr "일반적인 표기법을 사용한 URL 예시:"
 
-#: ../../docs/server_manual/services.rst:431
+#: ../../docs/server_manual/services.rst:430
 msgid "URL example with the hexadecimal notation:"
 msgstr "십육진법 표기법을 사용한 URL 예시:"
 
-#: ../../docs/server_manual/services.rst:446
+#: ../../docs/server_manual/services.rst:445
 msgid "DPI"
 msgstr "DPI"
 
-#: ../../docs/server_manual/services.rst:448
+#: ../../docs/server_manual/services.rst:447
 msgid "This parameter can be used to specify the requested output resolution."
 msgstr "이 파라미터는 요청한 출력물의 해상도를 지정할 수 있습니다."
 
-#: ../../docs/server_manual/services.rst:454
+#: ../../docs/server_manual/services.rst:453
 msgid "IMAGE_QUALITY"
 msgstr "IMAGE_QUALITY"
 
-#: ../../docs/server_manual/services.rst:456
+#: ../../docs/server_manual/services.rst:455
 msgid ""
 "This parameter is only used for JPEG images. By default, the JPEG "
 "compression is ``-1``."
 msgstr "이 파라미터는 JPEG 이미지 전용입니다. JPEG 압축 기본값은 ``-1`` 입니다."
 
-#: ../../docs/server_manual/services.rst:459
+#: ../../docs/server_manual/services.rst:458
 msgid ""
 "You can change the default per QGIS project in the :menuselection:`OWS "
 "Server --> WMS capabilities` menu of the :menuselection:`Project --> "
@@ -638,16 +829,25 @@ msgstr ""
 "--> WMS capabilities` 메뉴에서 이 기본값을 QGIS 프로젝트 별로 변경할 수 있습니다. ``GetMap`` 요청에서 이"
 " 파라미터를 무시하고 싶은 경우 ``IMAGE_QUALITY`` 파라미터를 사용하면 됩니다."
 
-#: ../../docs/server_manual/services.rst:469
+#: ../../docs/server_manual/services.rst:468
 msgid "OPACITIES"
 msgstr "OPACITIES"
 
+#: ../../docs/server_manual/services.rst:470
+msgid ""
+"Comma separated list of opacity values. Opacity can be set on layer or group"
+" level. Allowed values range from 0 (fully transparent) to 255 (fully "
+"opaque)."
+msgstr ""
+"불투명도 값들을 쉼표로 구분한 목록. 레이어 또는 레이어 그룹 수준에서 불투명도를 설정할 수 있습니다. 0(완전히 투명)에서 "
+"255(완전히 불투명)까지의 범위에서 값을 정의할 수 있습니다."
+
 #: ../../docs/server_manual/services.rst:1
-#: ../../docs/server_manual/services.rst:479
+#: ../../docs/server_manual/services.rst:478
 msgid "FILTER"
 msgstr "FILTER"
 
-#: ../../docs/server_manual/services.rst:481
+#: ../../docs/server_manual/services.rst:480
 msgid ""
 "A subset of layers can be selected with the ``FILTER`` parameter. The syntax"
 " is basically the same as for the QGIS subset string. However, there are "
@@ -659,7 +859,7 @@ msgstr ""
 " 하지만, QGIS 서버를 통해 데이터베이스에 SQL 삽입(injection)이 일어나는 일을 막기 위한 몇몇 제약 조건이 있습니다. "
 "파라미터에서 위험한 문자열이 발견될 경우, QGIS 서버는 다음 오류를 반환할 것입니다:"
 
-#: ../../docs/server_manual/services.rst:509
+#: ../../docs/server_manual/services.rst:508
 msgid ""
 "In this example, the same filter (field ``col2`` equals the string "
 "``blabla``) is applied to layers ``mylayer1`` and ``mylayer2``, while the "
@@ -668,7 +868,7 @@ msgstr ""
 "이 예시에서 ``mylayer1`` 및 ``mylayer2`` 양쪽에 동일한 필터(``col2`` 필드는 ``blabla`` 문자열과 "
 "동등합니다)가 적용되는 반면, ``col1`` 필드에 대한 필터는 ``mylayer1`` 레이어에만 적용됩니다."
 
-#: ../../docs/server_manual/services.rst:515
+#: ../../docs/server_manual/services.rst:514
 msgid ""
 "It is possible to make attribute searches via GetFeatureInfo and omit the "
 "X/Y parameter if a FILTER is there. QGIS Server then returns info about the "
@@ -677,11 +877,11 @@ msgstr ""
 "``FILTER`` 파라미터가 존재하는 경우 ``GetFeatureInfo`` 를 통해 속성을 검색할 수 있고 X/Y 파라미터를 생략할 "
 "수도 있습니다. 그러면 QGIS 서버가 일치하는 피처에 관한 정보를 반환하고 결합된 경계 상자를 XML 출력물 형태로 생성할 것입니다."
 
-#: ../../docs/server_manual/services.rst:524
+#: ../../docs/server_manual/services.rst:523
 msgid "SELECTION"
 msgstr "SELECTION"
 
-#: ../../docs/server_manual/services.rst:526
+#: ../../docs/server_manual/services.rst:525
 msgid ""
 "The ``SELECTION`` parameter can highlight features from one or more layers. "
 "Vector features can be selected by passing comma separated lists with "
@@ -690,7 +890,7 @@ msgstr ""
 "``SELECTION`` 파라미터는 하나 이상의 레이어에서 피처를 강조시킬 수 있습니다. 피처 ID를 쉼표로 구분한 목록을 전송하면 벡터"
 " 피처를 선택할 수 있습니다."
 
-#: ../../docs/server_manual/services.rst:540
+#: ../../docs/server_manual/services.rst:539
 msgid ""
 "The following image presents the response from a GetMap request using the "
 "``SELECTION`` option e.g. "
@@ -699,24 +899,37 @@ msgstr ""
 "다음 그림은, 예를 들어 ``http://myserver.com/...&SELECTION=countries:171,65`` 처럼, "
 "``SELECTION`` 파라미터를 사용한 ``GetMap`` 요청이 반환한 응답의 예시입니다. "
 
-#: ../../docs/server_manual/services.rst:544
+#: ../../docs/server_manual/services.rst:543
 msgid ""
 "As those features id's correspond in the source dataset to **France** and "
 "**Romania** they're highlighted in yellow."
 msgstr "소스 데이터셋에서 파라미터의 피처 ID에 해당하는 **프랑스** 와 **루마니아** 가 노란색으로 강조돼 있습니다."
 
-#: ../../docs/server_manual/services.rst:552
+#: ../../docs/server_manual/services.rst:551
 msgid "Server response to a GetMap request with SELECTION parameter"
 msgstr "SELECTION 파라미터를 사용한 GetMap 요청에 대한 서버의 응답"
 
-#: ../../docs/server_manual/services.rst:563
+#: ../../docs/server_manual/services.rst:556
+msgid "FORMAT-OPTIONS"
+msgstr "FORMAT-OPTIONS"
+
+#: ../../docs/server_manual/services.rst:558
+msgid ""
+"This parameter can be used to specify options for the selected format. Only "
+"for ``FORMAT=application/dxf``. A list of key:value pairs separated by "
+"semicolon:"
+msgstr ""
+"선택한 포맷을 위한 옵션들을 지정하는 데 이 파라미터를 사용할 수 있습니다. ``FORMAT=application/dxf`` 전용입니다."
+" 쌍반점으로 구분한 키:값 쌍의 목록입니다:"
+
+#: ../../docs/server_manual/services.rst:562
 msgid ""
 "SCALE: to be used for symbology rules, filters and styles (not actual "
 "scaling of the data - data remains in the original scale)."
 msgstr ""
 "SCALE: 심볼 규칙, 필터, 스타일용으로 사용됩니다. (데이터를 실제로 크기 조정하지는 않습니다. 데이터는 원본 척도로 유지됩니다.)"
 
-#: ../../docs/server_manual/services.rst:565
+#: ../../docs/server_manual/services.rst:564
 msgid ""
 "MODE: corresponds to the export options offered in the QGIS Desktop DXF "
 "export dialog. Possible values are ``NOSYMBOLOGY``, ``FEATURESYMBOLOGY`` and"
@@ -725,7 +938,7 @@ msgstr ""
 "MODE: QGIS 데스크탑 DXF 내보내기 대화창에서 지정하는 내보내기 옵션에 대응합니다. ``NOSYMBOLOGY``, "
 "``FEATURESYMBOLOGY`` 및 ``SYMBOLLAYERSYMBOLOGY`` 값을 사용할 수 있습니다."
 
-#: ../../docs/server_manual/services.rst:568
+#: ../../docs/server_manual/services.rst:567
 msgid ""
 "LAYERSATTRIBUTES: specify a field that contains values for DXF layer names -"
 " if not specified, the original QGIS layer names are used."
@@ -733,13 +946,13 @@ msgstr ""
 "LAYERSATTRIBUTES: DXF 레이어명을 위한 값을 담고 있는 필드를 지정합니다 ─ 지정하지 않을 경우, 원본 QGIS "
 "레이어명을 사용합니다."
 
-#: ../../docs/server_manual/services.rst:570
+#: ../../docs/server_manual/services.rst:569
 msgid ""
 "USE_TITLE_AS_LAYERNAME: if enabled, the title of the layer will be used as "
 "layer name."
 msgstr "USE_TITLE_AS_LAYERNAME: 이 파라미터를 사용하면, 레이어의 제목을 레이어명으로 사용할 것입니다."
 
-#: ../../docs/server_manual/services.rst:572
+#: ../../docs/server_manual/services.rst:571
 msgid ""
 "CODEC: specify a codec to be used for encoding. Default is ``ISO-8859-1`` "
 "check the QGIS desktop DXF export dialog for valid values."
@@ -747,11 +960,40 @@ msgstr ""
 "CODEC: 인코딩에 사용할 코덱을 지정합니다. 기본값은 ``ISO-8859-1`` 입니다. QGIS 데스크탑 DXF 내보내기 대화창에서"
 " 사용할 수 있는 유효한 값을 찾아보십시오."
 
-#: ../../docs/server_manual/services.rst:580
+#: ../../docs/server_manual/services.rst:573
+msgid "NO_MTEXT: Use TEXT instead of MTEXT for labels."
+msgstr "NO_MTEXT: 라벨에 MTEXT 대신 TEXT를 사용합니다."
+
+#: ../../docs/server_manual/services.rst:574
+msgid "FORCE_2D: Force 2D output. This is required for polyline width."
+msgstr "FORCE_2D: 산출물을 2D로 강제합니다. 폴리라인 너비를 지정하려면 이 옵션이 필수입니다."
+
+#: ../../docs/server_manual/services.rst:579
 msgid "TILED"
 msgstr "TILED"
 
-#: ../../docs/server_manual/services.rst:592
+#: ../../docs/server_manual/services.rst:581
+msgid ""
+"For performance reasons, QGIS Server can be used in tiled mode. In this "
+"mode, the client requests several small fixed size tiles, and assembles them"
+" to form the whole map. Doing this, symbols at or near the boundary between "
+"two tiles may appeared cut, because they are only present in one of the "
+"tile."
+msgstr ""
+"성능 향상을 위해 QGIS 서버를 타일 모드로 사용할 수 있습니다. 이 모드에서, 클라이언트는 몇 개의 조그만 고정 크기 타일을 요청해서"
+" 조립하여 전체 맵을 만듭니다. 이 과정에서 두 타일 사이의 경계선 위 또는 가까이 있는 심볼이 잘린 것으로 보일 수도 있습니다. 심볼이"
+" 두 타일 가운데 하나에만 존재하기 때문입니다."
+
+#: ../../docs/server_manual/services.rst:587
+msgid ""
+"Set the ``TILED`` parameter to ``TRUE`` to tell QGIS Server to work in "
+"*tiled* mode, and to apply the *Tile buffer* configured in the QGIS project "
+"(see :ref:`Creatingwmsfromproject`)."
+msgstr ""
+"``TILED`` 파라미터를 ``TRUE`` 로 설정하면 QGIS 서버가 *타일* 모드로 작동해서, QGIS 프로젝트에서 환경 설정한 "
+"*타일 버퍼* 를 적용합니다. (:ref:`Creatingwmsfromproject` 를 참조하세요.)"
+
+#: ../../docs/server_manual/services.rst:591
 msgid ""
 "When ``TILED`` is ``TRUE`` and when a non-zero Tile buffer is configured in "
 "the QGIS project, features outside the tile extent are drawn to avoid cut "
@@ -760,128 +1002,227 @@ msgstr ""
 "``TILED`` 가 ``TRUE`` 이고 QGIS 프로젝트에서 타일 버퍼를 0이 아닌 값으로 환경 설정했다면, 타일 경계선에서 심볼이 "
 "잘리는 일을 피하기 위해 타일 범위 바깥에 있는 피처를 렌더링합니다."
 
-#: ../../docs/server_manual/services.rst:596
+#: ../../docs/server_manual/services.rst:595
 msgid "``TILED`` defaults to ``FALSE``."
 msgstr "``TILED`` 파라미터의 기본값은 ``FALSE`` 입니다."
 
 #: ../../docs/server_manual/services.rst:1
-#: ../../docs/server_manual/services.rst:601
-#: ../../docs/server_manual/services.rst:1492
+#: ../../docs/server_manual/services.rst:600
+#: ../../docs/server_manual/services.rst:1491
 msgid "GetFeatureInfo"
 msgstr "GetFeatureInfo"
+
+#: ../../docs/server_manual/services.rst:602
+msgid ""
+"Standard parameters for the **GetFeatureInfo** request according to the OGC "
+"WMS 1.1.1 and 1.3.0 specifications:"
+msgstr "OGC WMS 1.1.1 및 1.3.0 사양에 따른 **GetFeatureInfo** 요청용 표준 파라미터:"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`REQUEST <wms-getfeatureinfo-request>`"
+msgstr ":ref:`REQUEST <wms-getfeatureinfo-request>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Name of the request (**GetFeatureInfo**)"
+msgstr "요청(**GetFeatureInfo**)의 명칭"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`QUERY_LAYERS <wms-querylayers>`"
+msgstr ":ref:`QUERY_LAYERS <wms-querylayers>`"
 
 #: ../../docs/server_manual/services.rst:1
 msgid "Layers to query"
 msgstr "쿼리할 레이어"
 
 #: ../../docs/server_manual/services.rst:1
+msgid "Layers to display (identical to `QUERY_LAYERS`)"
+msgstr "표시할 레이어 (`QUERY_LAYERS` 와 동일)"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`INFO_FORMAT <wms-infoformat>`"
+msgstr ":ref:`INFO_FORMAT <wms-infoformat>`"
+
+#: ../../docs/server_manual/services.rst:1
 msgid "Output format"
 msgstr "출력물 포맷"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`FEATURE_COUNT <wms-featurecount>`"
+msgstr ":ref:`FEATURE_COUNT <wms-featurecount>`"
 
 #: ../../docs/server_manual/services.rst:1
 msgid "Maximum number of features to return"
 msgstr "반환할 피처의 최대 개수"
 
 #: ../../docs/server_manual/services.rst:1
+msgid ":ref:`I <wms-i>`"
+msgstr ":ref:`I <wms-i>`"
+
+#: ../../docs/server_manual/services.rst:1
 msgid "Pixel column of the point to query"
 msgstr "쿼리할 포인트의 픽셀 열"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`X <wms-x>`"
+msgstr ":ref:`X <wms-x>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Same as `I` parameter, but in WMS 1.1.1"
+msgstr "``I`` 파라미터와 동일 (WMS 1.1.1 용)"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`J <wms-j>`"
+msgstr ":ref:`J <wms-j>`"
 
 #: ../../docs/server_manual/services.rst:1
 msgid "Pixel row of the point to query"
 msgstr "쿼리할 포인트의 픽셀 행"
 
 #: ../../docs/server_manual/services.rst:1
+msgid ":ref:`Y <wms-y>`"
+msgstr ":ref:`Y <wms-y>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Same as `J` parameter, but in WMS 1.1.1"
+msgstr "``J`` 파라미터와 동일 (WMS 1.1.1 용)"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "WMS_PRECISION"
+msgstr "WMS_PRECISION"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ""
+"The precision (number of digits) to be used when returning geometry (see "
+":ref:`how to add geometry to feature response "
+"<addGeometryToFeatureResponse>`). The default value is ``-1`` meaning that "
+"the precision defined in the project is used."
+msgstr ""
+"도형 반환시 사용할 정밀도(소수점 이하 자릿수). (:ref:`객체 요청에 도형을 추가하는 방법 "
+"<addGeometryToFeatureResponse>` 을 참조하세요.) 기본값은 ``-1`` 로, 프로젝트에서 정의한 정밀도를 "
+"사용한다는 뜻입니다."
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`FI_POINT_TOLERANCE <wms-fipointtolerance>`"
+msgstr ":ref:`FI_POINT_TOLERANCE <wms-fipointtolerance>`"
+
+#: ../../docs/server_manual/services.rst:1
 msgid "Tolerance in pixels for point layers"
 msgstr "포인트 레이어의 픽셀 단위 허용 오차"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`FI_LINE_TOLERANCE <wms-filinetolerance>`"
+msgstr ":ref:`FI_LINE_TOLERANCE <wms-filinetolerance>`"
 
 #: ../../docs/server_manual/services.rst:1
 msgid "Tolerance in pixels for line layers"
 msgstr "라인 레이어의 픽셀 단위 허용 오차"
 
 #: ../../docs/server_manual/services.rst:1
+msgid ":ref:`FI_POLYGON_TOLERANCE <wms-fipolygontolerance>`"
+msgstr ":ref:`FI_POLYGON_TOLERANCE <wms-fipolygontolerance>`"
+
+#: ../../docs/server_manual/services.rst:1
 msgid "Tolerance in pixels for polygon layers"
 msgstr "폴리곤 레이어의 픽셀 단위 허용 오차"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`FILTER_GEOM <wms-filtergeom>`"
+msgstr ":ref:`FILTER_GEOM <wms-filtergeom>`"
 
 #: ../../docs/server_manual/services.rst:1
 msgid "Geometry filtering"
 msgstr "도형 필터링"
 
 #: ../../docs/server_manual/services.rst:1
+msgid ":ref:`WITH_MAPTIP <wms-withmaptip>`"
+msgstr ":ref:`WITH_MAPTIP <wms-withmaptip>`"
+
+#: ../../docs/server_manual/services.rst:1
 msgid "Add map tips to the output"
 msgstr "출력물에 맵 도움말(map tip) 추가"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`WITH_GEOMETRY <wms-withgeometry>`"
+msgstr ":ref:`WITH_GEOMETRY <wms-withgeometry>`"
 
 #: ../../docs/server_manual/services.rst:1
 msgid "Add geometry to the output"
 msgstr "출력물에 도형 추가"
 
-#: ../../docs/server_manual/services.rst:676
-#: ../../docs/server_manual/services.rst:1548
+#: ../../docs/server_manual/services.rst:675
+#: ../../docs/server_manual/services.rst:1547
 msgid ""
 "This parameter is ``GetFeatureInfo`` in case of the **GetFeatureInfo** "
 "request."
 msgstr "**GetFeatureInfo** 요청의 경우, 이 파라미터는 ``FeatureInfo`` 이어야 합니다."
 
-#: ../../docs/server_manual/services.rst:681
+#: ../../docs/server_manual/services.rst:680
 msgid "INFO_FORMAT"
 msgstr "INFO_FORMAT"
 
-#: ../../docs/server_manual/services.rst:683
+#: ../../docs/server_manual/services.rst:682
 msgid ""
 "This parameter may be used to specify the format of the result. Available "
 "values are:"
 msgstr "이 파라미터는 산출물의 포맷을 지정할 수 있습니다. 사용할 수 있는 값은 다음과 같습니다:"
 
-#: ../../docs/server_manual/services.rst:686
-#: ../../docs/server_manual/services.rst:1610
+#: ../../docs/server_manual/services.rst:685
+#: ../../docs/server_manual/services.rst:1609
 msgid "``text/xml``"
 msgstr "``text/xml``"
 
-#: ../../docs/server_manual/services.rst:687
-#: ../../docs/server_manual/services.rst:1611
+#: ../../docs/server_manual/services.rst:686
+#: ../../docs/server_manual/services.rst:1610
 msgid "``text/html``"
 msgstr "``text/html``"
 
-#: ../../docs/server_manual/services.rst:688
-#: ../../docs/server_manual/services.rst:1612
+#: ../../docs/server_manual/services.rst:687
+#: ../../docs/server_manual/services.rst:1611
 msgid "``text/plain``"
 msgstr "``text/plain``"
 
-#: ../../docs/server_manual/services.rst:689
-#: ../../docs/server_manual/services.rst:1613
+#: ../../docs/server_manual/services.rst:688
+#: ../../docs/server_manual/services.rst:1612
 msgid "``application/vnd.ogc.gml``"
 msgstr "``application/vnd.ogc.gml``"
 
-#: ../../docs/server_manual/services.rst:690
+#: ../../docs/server_manual/services.rst:689
 msgid "``application/json``"
 msgstr "``application/json``"
 
-#: ../../docs/server_manual/services.rst:695
+#: ../../docs/server_manual/services.rst:694
 msgid "QUERY_LAYERS"
 msgstr "QUERY_LAYERS"
 
-#: ../../docs/server_manual/services.rst:697
+#: ../../docs/server_manual/services.rst:696
 msgid ""
 "This parameter specifies the layers to display on the map. Names are "
 "separated by a comma."
 msgstr "이 파라미터는 맵 상에 표시할 레이어를 지정합니다. 레이어명을 쉼표로 구분해야 합니다."
 
-#: ../../docs/server_manual/services.rst:700
+#: ../../docs/server_manual/services.rst:699
 msgid "In addition, QGIS Server introduces options to select layers by:"
 msgstr "이에 더해, QGIS 서버는 레이어를 다음을 통해 선택할 수 있는 옵션을 제공합니다:"
 
-#: ../../docs/server_manual/services.rst:702
+#: ../../docs/server_manual/services.rst:701
 msgid "short name"
 msgstr "약칭(short name)"
 
-#: ../../docs/server_manual/services.rst:703
+#: ../../docs/server_manual/services.rst:702
 msgid "layer id"
 msgstr "레이어 ID"
 
-#: ../../docs/server_manual/services.rst:711
+#: ../../docs/server_manual/services.rst:704
+msgid ""
+"See the ``LAYERS`` parameter defined in :ref:`GetMap <wms-layers>` for more "
+"information."
+msgstr "더 자세한 내용은 :ref:`GetMap <wms-layers>` 에서 설명하는 ``LAYERS`` 파라미터를 참조하세요."
+
+#: ../../docs/server_manual/services.rst:710
 msgid "FEATURE_COUNT"
 msgstr "FEATURE_COUNT"
 
-#: ../../docs/server_manual/services.rst:713
+#: ../../docs/server_manual/services.rst:712
 msgid ""
 "This parameter specifies the maximum number of features per layer to return."
 " For example if ``QUERY_LAYERS`` is set to ``layer1,layer2`` and "
@@ -893,94 +1234,102 @@ msgstr ""
 "``layer1,layer2`` 로 설정하고 ``FEATURE_COUNT`` 를 ``3`` 으로 설정하면 'layer1' 로부터 피처를 "
 "최대 3개 반환할 것입니다. 'layer2' 도 마찬가지로 피처를 최대 3개 반환할 것입니다."
 
-#: ../../docs/server_manual/services.rst:720
+#: ../../docs/server_manual/services.rst:719
 msgid "By default, only 1 feature per layer is returned."
 msgstr "각 레이어별로 피처 1개만 반환하는 것이 기본값입니다."
 
 #: ../../docs/server_manual/services.rst:1
-#: ../../docs/server_manual/services.rst:725
-#: ../../docs/server_manual/services.rst:1619
+#: ../../docs/server_manual/services.rst:724
+#: ../../docs/server_manual/services.rst:1618
 msgid "I"
 msgstr "I"
 
-#: ../../docs/server_manual/services.rst:727
+#: ../../docs/server_manual/services.rst:726
 msgid ""
 "This parameter, defined in WMS 1.3.0, allows you to specify the pixel column"
 " of the query point."
 msgstr "WMS 1.3.0에서 정의된 이 파라미터는 쿼리 포인트의 픽셀 열을 지정할 수 있습니다."
 
-#: ../../docs/server_manual/services.rst:733
+#: ../../docs/server_manual/services.rst:732
 msgid "X"
 msgstr "X"
 
+#: ../../docs/server_manual/services.rst:734
+msgid "Same parameter as ``I``, but defined in WMS 1.1.1."
+msgstr "``I`` 파라미터와 동일하지만, WMS 1.1.1에서 정의되었습니다."
+
 #: ../../docs/server_manual/services.rst:1
-#: ../../docs/server_manual/services.rst:740
-#: ../../docs/server_manual/services.rst:1626
+#: ../../docs/server_manual/services.rst:739
+#: ../../docs/server_manual/services.rst:1625
 msgid "J"
 msgstr "J"
 
-#: ../../docs/server_manual/services.rst:742
+#: ../../docs/server_manual/services.rst:741
 msgid ""
 "This parameter, defined in WMS 1.3.0, allows you to specify the pixel row of"
 " the query point."
 msgstr "WMS 1.3.0에서 정의된 이 파라미터는 쿼리 포인트의 픽셀 행을 지정할 수 있습니다."
 
-#: ../../docs/server_manual/services.rst:748
+#: ../../docs/server_manual/services.rst:747
 msgid "Y"
 msgstr "Y"
 
-#: ../../docs/server_manual/services.rst:755
+#: ../../docs/server_manual/services.rst:749
+msgid "Same parameter as ``J``, but defined in WMS 1.1.1."
+msgstr "``J`` 파라미터와 동일하지만, WMS 1.1.1에서 정의되었습니다."
+
+#: ../../docs/server_manual/services.rst:754
 msgid "FI_POINT_TOLERANCE"
 msgstr "FI_POINT_TOLERANCE"
 
-#: ../../docs/server_manual/services.rst:757
+#: ../../docs/server_manual/services.rst:756
 msgid "This parameter specifies the tolerance in pixels for point layers."
 msgstr "이 파라미터는 포인트 레이어의 허용 오차를 픽셀 단위로 지정합니다."
 
-#: ../../docs/server_manual/services.rst:762
+#: ../../docs/server_manual/services.rst:761
 msgid "FI_LINE_TOLERANCE"
 msgstr "FI_LINE_TOLERANCE"
 
-#: ../../docs/server_manual/services.rst:764
+#: ../../docs/server_manual/services.rst:763
 msgid "This parameter specifies the tolerance in pixels for line layers."
 msgstr "이 파라미터는 라인 레이어의 허용 오차를 픽셀 단위로 지정합니다."
 
-#: ../../docs/server_manual/services.rst:769
+#: ../../docs/server_manual/services.rst:768
 msgid "FI_POLYGON_TOLERANCE"
 msgstr "FI_POLYGON_TOLERANCE"
 
-#: ../../docs/server_manual/services.rst:771
+#: ../../docs/server_manual/services.rst:770
 msgid "This parameter specifies the tolerance in pixels for polygon layers."
 msgstr "이 파라미터는 폴리곤 레이어의 허용 오차를 픽셀 단위로 지정합니다."
 
-#: ../../docs/server_manual/services.rst:776
+#: ../../docs/server_manual/services.rst:775
 msgid "FILTER_GEOM"
 msgstr "FILTER_GEOM"
 
-#: ../../docs/server_manual/services.rst:778
+#: ../../docs/server_manual/services.rst:777
 msgid ""
 "This parameter specifies a WKT geometry with which features have to "
 "intersect."
 msgstr "이 파라미터는 피처가 교차해야 하는 WKT 도형을 지정합니다."
 
-#: ../../docs/server_manual/services.rst:784
+#: ../../docs/server_manual/services.rst:783
 msgid "WITH_MAPTIP"
 msgstr "WITH_MAPTIP"
 
-#: ../../docs/server_manual/services.rst:786
+#: ../../docs/server_manual/services.rst:785
 msgid "This parameter specifies whether to add map tips to the output."
 msgstr "이 파라미터는 출력물에 맵 도움말(map tip)을 추가할지 여부를 지정합니다."
 
-#: ../../docs/server_manual/services.rst:788
-#: ../../docs/server_manual/services.rst:802
+#: ../../docs/server_manual/services.rst:787
+#: ../../docs/server_manual/services.rst:801
 msgid "Available values are (not case sensitive):"
 msgstr "다음 값을 사용할 수 있습니다(대소문자 구분 안 함):"
 
-#: ../../docs/server_manual/services.rst:796
+#: ../../docs/server_manual/services.rst:795
 msgid "WITH_GEOMETRY"
 msgstr "WITH_GEOMETRY"
 
-#: ../../docs/server_manual/services.rst:798
+#: ../../docs/server_manual/services.rst:797
 msgid ""
 "This parameter specifies whether to add geometries to the output. To use "
 "this feature you must first enable the :guilabel:`Add geometry to feature "
@@ -991,11 +1340,11 @@ msgstr ""
 "geometry to feature response` 옵션을 활성화해야만 합니다. ref:`사용자 프로젝트 환경 설정 "
 "<Creatingwmsfromproject>` 을 참조하세요."
 
-#: ../../docs/server_manual/services.rst:811
+#: ../../docs/server_manual/services.rst:810
 msgid "GetPrint"
 msgstr "GetPrint"
 
-#: ../../docs/server_manual/services.rst:813
+#: ../../docs/server_manual/services.rst:812
 msgid ""
 "QGIS Server has the capability to create print layout output in pdf or pixel"
 " format. Print layout windows in the published project are used as "
@@ -1005,47 +1354,95 @@ msgstr ""
 "QGIS 서버는 인쇄 조판 출력물을 PDF 또는 픽셀 포맷으로 생성할 수 있습니다. 게시된 프로젝트에 있는 인쇄 조판기 창을 템플릿으로 "
 "사용합니다. 클라이언트는 **GetPrint** 요청 안에 템플릿이 담고 있는 조판 맵 및 라벨의 파라미터를 지정할 수 있습니다."
 
-#: ../../docs/server_manual/services.rst:819
+#: ../../docs/server_manual/services.rst:818
 msgid "Parameters for the **GetPrint** request:"
 msgstr "**GetPrint** 요청의 파라미터:"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`REQUEST <wms-getprint-request>`"
+msgstr ":ref:`REQUEST <wms-getprint-request>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Name of the request (**GetPrint**)"
+msgstr "요청(**GetPrint**)의 명칭"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`TEMPLATE <wms-template>`"
+msgstr ":ref:`TEMPLATE <wms-template>`"
 
 #: ../../docs/server_manual/services.rst:1
 msgid "Layout template to use"
 msgstr "사용할 레이어 템플릿"
 
 #: ../../docs/server_manual/services.rst:1
+msgid ":ref:`FORMAT <wms-getprint-format>`"
+msgstr ":ref:`FORMAT <wms-getprint-format>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`ATLAS_PK <wms-atlaspk>`"
+msgstr ":ref:`ATLAS_PK <wms-atlaspk>`"
+
+#: ../../docs/server_manual/services.rst:1
 msgid "Atlas features"
 msgstr "지도책 피처"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`mapX:EXTENT <wms-mapextent>`"
+msgstr ":ref:`mapX:EXTENT <wms-mapextent>`"
 
 #: ../../docs/server_manual/services.rst:1
 msgid "Extent of the map 'X'"
 msgstr "맵 'X' 의 범위"
 
 #: ../../docs/server_manual/services.rst:1
+msgid ":ref:`mapX:LAYERS <wms-maplayers>`"
+msgstr ":ref:`mapX:LAYERS <wms-maplayers>`"
+
+#: ../../docs/server_manual/services.rst:1
 msgid "Layers of the map 'X'"
 msgstr "맵 'X' 의 레이어"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`mapX:STYLES <wms-mapstyles>`"
+msgstr ":ref:`mapX:STYLES <wms-mapstyles>`"
 
 #: ../../docs/server_manual/services.rst:1
 msgid "Layers' style of the map 'X'"
 msgstr "맵 'X' 의 레이어의 스타일"
 
 #: ../../docs/server_manual/services.rst:1
+msgid ":ref:`mapX:SCALE <wms-mapscale>`"
+msgstr ":ref:`mapX:SCALE <wms-mapscale>`"
+
+#: ../../docs/server_manual/services.rst:1
 msgid "Layers' scale of the map 'X'"
 msgstr "맵 'X' 의 레이어의 축척"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`mapX:ROTATION <wms-maprotation>`"
+msgstr ":ref:`mapX:ROTATION <wms-maprotation>`"
 
 #: ../../docs/server_manual/services.rst:1
 msgid "Rotation  of the map 'X'"
 msgstr "맵 'X' 의 기울기"
 
 #: ../../docs/server_manual/services.rst:1
+msgid ":ref:`mapX:GRID_INTERVAL_X <wms-mapgridintervalx>`"
+msgstr ":ref:`mapX:GRID_INTERVAL_X <wms-mapgridintervalx>`"
+
+#: ../../docs/server_manual/services.rst:1
 msgid "Grid interval on x axis of the map 'X'"
 msgstr "맵 'X' 의 X축 그리드 간격"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`mapX:GRID_INTERVAL_Y <wms-mapgridintervaly>`"
+msgstr ":ref:`mapX:GRID_INTERVAL_Y <wms-mapgridintervaly>`"
 
 #: ../../docs/server_manual/services.rst:1
 msgid "Grid interval on y axis of the map 'X'"
 msgstr "맵 'X' 의 Y축 그리드 간격"
 
-#: ../../docs/server_manual/services.rst:863
+#: ../../docs/server_manual/services.rst:862
 msgid ""
 "Note that the layout template may contain more than one map. In this way, if"
 " you want to configure a specific map, you have to use ``mapX:`` parameters "
@@ -1056,56 +1453,60 @@ msgstr ""
 "``mapX:`` 파라미터를 사용해야 합니다. 이때 ``X`` 는 **GetProjectSettings** 요청 시 받아올 수 있는 "
 "양수(陽數)입니다."
 
-#: ../../docs/server_manual/services.rst:888
+#: ../../docs/server_manual/services.rst:887
 msgid "This parameter has to be ``GetPrint`` for the **GetPrint** request."
 msgstr "**GetPrint** 요청의 경우, 이 파라미터는 ``GetPrint`` 이어야 합니다."
 
-#: ../../docs/server_manual/services.rst:893
+#: ../../docs/server_manual/services.rst:892
 msgid "TEMPLATE"
 msgstr "TEMPLATE"
 
-#: ../../docs/server_manual/services.rst:895
+#: ../../docs/server_manual/services.rst:894
 msgid ""
 "This parameter can be used to specify the name of a layout template to use "
 "for printing."
 msgstr "이 파라미터는 인쇄용으로 사용할 조판 템플릿의 명칭을 지정할 수 있습니다."
 
-#: ../../docs/server_manual/services.rst:903
+#: ../../docs/server_manual/services.rst:902
 msgid ""
 "This parameter specifies the format of map image. Available values are:"
 msgstr "이 파라미터는 맵 이미지의 포맷을 지정할 수 있습니다. 사용할 수 있는 값은 다음과 같습니다:"
 
-#: ../../docs/server_manual/services.rst:910
+#: ../../docs/server_manual/services.rst:904
+msgid "``png`` (default value)"
+msgstr "``png`` (기본값)"
+
+#: ../../docs/server_manual/services.rst:909
 msgid "``svg``"
 msgstr "``svg``"
 
-#: ../../docs/server_manual/services.rst:911
+#: ../../docs/server_manual/services.rst:910
 msgid "``image/svg``"
 msgstr "``image/svg``"
 
-#: ../../docs/server_manual/services.rst:912
+#: ../../docs/server_manual/services.rst:911
 msgid "``image/svg+xml``"
 msgstr "``image/svg+xml``"
 
-#: ../../docs/server_manual/services.rst:913
+#: ../../docs/server_manual/services.rst:912
 msgid "``pdf``"
 msgstr "``pdf``"
 
-#: ../../docs/server_manual/services.rst:914
+#: ../../docs/server_manual/services.rst:913
 msgid "``application/pdf``"
 msgstr "``application/pdf``"
 
-#: ../../docs/server_manual/services.rst:916
+#: ../../docs/server_manual/services.rst:915
 msgid ""
 "If the ``FORMAT`` parameter is different from one of these values, then an "
 "exception is returned."
 msgstr "``FORMAT`` 파라미터가 이 값들 가운데 하나가 아닐 경우, 예외를 반환합니다."
 
-#: ../../docs/server_manual/services.rst:922
+#: ../../docs/server_manual/services.rst:921
 msgid "ATLAS_PK"
 msgstr "ATLAS_PK"
 
-#: ../../docs/server_manual/services.rst:924
+#: ../../docs/server_manual/services.rst:923
 msgid ""
 "This parameter allows activation of Atlas rendering by indicating which "
 "features we want to print. In order to retrieve an atlas with all features, "
@@ -1115,7 +1516,7 @@ msgstr ""
 "이 파라미터는 인쇄하려는 피처를 지정해서 지도책 렌더링을 활성화할 수 있습니다. (프로젝트 환경 설정에서 설정한 피처 최대 개수에 따라)"
 " 모든 피처를 담은 지도책을 받아오려면, ``*`` 특수문자를 사용하면 됩니다."
 
-#: ../../docs/server_manual/services.rst:930
+#: ../../docs/server_manual/services.rst:929
 msgid ""
 "When ``FORMAT`` is ``pdf``, a single PDF document combining the feature "
 "pages is returned. For all other formats, a single page is returned."
@@ -1123,45 +1524,45 @@ msgstr ""
 "``FORMAT`` 파라미터가 ``pdf`` 인 경우, 모든 피처 페이지를 결합한 PDF 문서 파일 1개를 반환합니다. 다른 모든 포맷의"
 " 경우, 단일 페이지를 반환합니다."
 
-#: ../../docs/server_manual/services.rst:937
+#: ../../docs/server_manual/services.rst:936
 msgid "mapX:EXTENT"
 msgstr "mapX:EXTENT"
 
-#: ../../docs/server_manual/services.rst:939
+#: ../../docs/server_manual/services.rst:938
 msgid ""
 "This parameter specifies the extent for a layout map item as "
 "xmin,ymin,xmax,ymax."
 msgstr "이 파라미터는 조판 맵 항목의 범위를 ``xmin,ymin,xmax,ymax`` 서식으로 지정합니다."
 
-#: ../../docs/server_manual/services.rst:945
+#: ../../docs/server_manual/services.rst:944
 msgid "mapX:ROTATION"
 msgstr "mapX:ROTATION"
 
-#: ../../docs/server_manual/services.rst:947
+#: ../../docs/server_manual/services.rst:946
 msgid "This parameter specifies the map rotation in degrees."
 msgstr "이 파라미터는 맵의 기울기를 도 단위로 지정합니다."
 
-#: ../../docs/server_manual/services.rst:952
+#: ../../docs/server_manual/services.rst:951
 msgid "mapX:GRID_INTERVAL_X"
 msgstr "mapX:GRID_INTERVAL_X"
 
-#: ../../docs/server_manual/services.rst:954
+#: ../../docs/server_manual/services.rst:953
 msgid "This parameter specifies the grid line density in the X direction."
 msgstr "이 파라미터는 X축 방향의 그리드선 밀도를 지정합니다."
 
-#: ../../docs/server_manual/services.rst:959
+#: ../../docs/server_manual/services.rst:958
 msgid "mapX:GRID_INTERVAL_Y"
 msgstr "mapX:GRID_INTERVAL_Y"
 
-#: ../../docs/server_manual/services.rst:961
+#: ../../docs/server_manual/services.rst:960
 msgid "This parameter specifies the grid line density in the Y direction."
 msgstr "이 파라미터는 Y축 방향의 그리드선 밀도를 지정합니다."
 
-#: ../../docs/server_manual/services.rst:966
+#: ../../docs/server_manual/services.rst:965
 msgid "mapX:SCALE"
 msgstr "mapX:SCALE"
 
-#: ../../docs/server_manual/services.rst:968
+#: ../../docs/server_manual/services.rst:967
 msgid ""
 "This parameter specifies the map scale for a layout map item. This is useful"
 " to ensure scale based visibility of layers and labels even if client and "
@@ -1170,100 +1571,122 @@ msgstr ""
 "이 파라미터는 조판 맵 항목의 맵 축척을 지정합니다. 클라이언트 및 서버가 축척 분모를 계산할 때 서로 다른 알고리즘을 사용하는 "
 "경우라도, 레이어와 라벨의 축척 기반 가시성을 보장하는 데 유용합니다."
 
-#: ../../docs/server_manual/services.rst:976
+#: ../../docs/server_manual/services.rst:975
 msgid "mapX:LAYERS"
 msgstr "mapX:LAYERS"
 
-#: ../../docs/server_manual/services.rst:985
+#: ../../docs/server_manual/services.rst:977
+msgid ""
+"This parameter specifies the layers for a layout map item. See :ref:`GetMap "
+"Layers <wms-layers>` for more information on this parameter."
+msgstr ""
+"이 파라미터는 조판 맵 항목에 표시될 레이어를 지정할 수 있습니다. 더 자세한 내용은 :ref:`GetMap Layers <wms-"
+"layers>` 를 참조하세요."
+
+#: ../../docs/server_manual/services.rst:984
 msgid "mapX:STYLES"
 msgstr "mapX:STYLES"
 
-#: ../../docs/server_manual/services.rst:996
+#: ../../docs/server_manual/services.rst:986
+msgid ""
+"This parameter specifies the layers' styles defined in a specific layout map"
+" item. See :ref:`GetMap Styles <wms-styles>` for more information on this "
+"parameter."
+msgstr ""
+"이 파라미터는 특정 조판 맵 항목에 표시되는 레이어의 스타일을 지정할 수 있습니다. 더 자세한 내용은 :ref:`GetMap Styles"
+" <wms-styles>` 를 참조하세요."
+
+#: ../../docs/server_manual/services.rst:995
 msgid "GetLegendGraphics"
 msgstr "GetLegendGraphics"
 
-#: ../../docs/server_manual/services.rst:998
+#: ../../docs/server_manual/services.rst:997
 msgid ""
 "Several additional parameters are available to change the size of the legend"
 " elements:"
 msgstr "다음은 범례 항목의 크기를 변경하는 데 사용할 수 있는 여러 추가 파라미터들입니다:"
 
-#: ../../docs/server_manual/services.rst:1001
+#: ../../docs/server_manual/services.rst:1000
 msgid "**BOXSPACE** space between legend frame and content (mm)"
 msgstr "**BOXSPACE**: 범례 프레임과 내용물 사이의 여백을 밀리미터 단위로 정의합니다."
 
-#: ../../docs/server_manual/services.rst:1002
+#: ../../docs/server_manual/services.rst:1001
 msgid "**LAYERSPACE** vertical space between layers (mm)"
 msgstr "**LAYERSPACE**: 레이어들 사이의 수직 여백을 밀리미터 단위로 정의합니다."
 
-#: ../../docs/server_manual/services.rst:1003
+#: ../../docs/server_manual/services.rst:1002
 msgid ""
 "**LAYERTITLESPACE** vertical space between layer title and items following "
 "(mm)"
 msgstr "**LAYERTITLESPACE**: 레이어 제목과 그 옆에 있는 항목들 사이의 수직 여백을 밀리미터 단위로 정의합니다."
 
-#: ../../docs/server_manual/services.rst:1005
+#: ../../docs/server_manual/services.rst:1004
 msgid "**SYMBOLSPACE** vertical space between symbol and item following (mm)"
 msgstr "**SYMBOLSPACE**: 심볼과 그 옆에 있는 항목 사이의 수직 여백을 밀리미터 단위로 정의합니다."
 
-#: ../../docs/server_manual/services.rst:1007
+#: ../../docs/server_manual/services.rst:1006
 msgid "**ICONLABELSPACE** horizontal space between symbol and label text (mm)"
 msgstr "**ICONLABELSPACE**: 심볼과 라벨 텍스트 사이의 수평 여백을 밀리미터 단위로 정의합니다."
 
-#: ../../docs/server_manual/services.rst:1009
+#: ../../docs/server_manual/services.rst:1008
 msgid "**SYMBOLWIDTH** width of the symbol preview (mm)"
 msgstr "**SYMBOLWIDTH**: 심볼 미리보기의 너비를 밀리미터 단위로 정의합니다."
 
-#: ../../docs/server_manual/services.rst:1010
+#: ../../docs/server_manual/services.rst:1009
 msgid "**SYMBOLHEIGHT** height of the symbol preview (mm)"
 msgstr "**SYMBOLHEIGHT**: 심볼 미리보기의 높이를 밀리미터 단위로 정의합니다."
 
-#: ../../docs/server_manual/services.rst:1012
+#: ../../docs/server_manual/services.rst:1011
 msgid ""
 "These parameters change the font properties for layer titles and item "
 "labels:"
 msgstr "다음은 레이어 제목 및 항목 라벨의 글꼴 속성을 변경하는 파라미터들입니다:"
 
-#: ../../docs/server_manual/services.rst:1015
+#: ../../docs/server_manual/services.rst:1014
 msgid ""
 "**LAYERFONTFAMILY / ITEMFONTFAMILY** font family for layer title / item text"
 msgstr ""
 "**LAYERFONTFAMILY**, **ITEMFONTFAMILY**: 각각 레이어 제목 및 항목의 텍스트 용 글꼴 패밀리를 "
 "정의합니다."
 
-#: ../../docs/server_manual/services.rst:1017
+#: ../../docs/server_manual/services.rst:1016
 msgid "**LAYERFONTBOLD / ITEMFONTBOLD** ``TRUE`` to use a bold font"
 msgstr "**LAYERFONTBOLD**, **ITEMFONTBOLD**: 값이 ``TRUE`` 이면 굵은체를 사용합니다."
 
-#: ../../docs/server_manual/services.rst:1018
+#: ../../docs/server_manual/services.rst:1017
 msgid "**LAYERFONTSIZE / ITEMFONTSIZE** Font size in point"
 msgstr "**LAYERFONTSIZE**, **ITEMFONTSIZE**: 글꼴 크기를 포인트 단위로 정의합니다."
 
-#: ../../docs/server_manual/services.rst:1019
+#: ../../docs/server_manual/services.rst:1018
 msgid "**LAYERFONTITALIC / ITEMFONTITALIC** ``TRUE`` to use italic font"
 msgstr "**LAYERFONTITALIC**, **ITEMFONTITALIC**: 값이 ``TRUE`` 이면 이탤릭체를 사용합니다."
 
-#: ../../docs/server_manual/services.rst:1020
+#: ../../docs/server_manual/services.rst:1019
 msgid ""
 "**LAYERFONTCOLOR / ITEMFONTCOLOR** Hex color code (e.g. ``#FF0000`` for red)"
 msgstr ""
 "**LAYERFONTCOLOR**, **ITEMFONTCOLOR**: 색상을 헥사 코드로 (예: 빨간색의 경우 ``#FF0000``) "
 "정의합니다."
 
-#: ../../docs/server_manual/services.rst:1023
+#: ../../docs/server_manual/services.rst:1021
+msgid ""
+"**LAYERTITLE** ``FALSE`` to get only the legend graphics without layer title"
+msgstr "**LAYERTITLE**: ``FALSE`` 로 설정하면 레이어 제목 없이 범례 그래픽만 반환합니다."
+
+#: ../../docs/server_manual/services.rst:1022
 msgid "**RULELABEL**:"
 msgstr "**RULELABEL**:"
 
-#: ../../docs/server_manual/services.rst:1025
+#: ../../docs/server_manual/services.rst:1024
 msgid "``FALSE`` legend graphics without item labels"
 msgstr "``FALSE`` 로 설정하면 항목 라벨 없이 범례 그래픽만 반환합니다."
 
-#: ../../docs/server_manual/services.rst:1026
+#: ../../docs/server_manual/services.rst:1025
 msgid ""
 "``AUTO`` hide item label for layers with :guilabel:`Single symbol` rendering"
 msgstr "``AUTO`` 로 설정하면 :guilabel:`Single symbol` 렌더링된 레이어의 항목 라벨을 숨깁니다."
 
-#: ../../docs/server_manual/services.rst:1028
+#: ../../docs/server_manual/services.rst:1027
 msgid ""
 "Content based legend. These parameters let the client request a legend "
 "showing only the symbols for the features falling into the requested area:"
@@ -1271,17 +1694,26 @@ msgstr ""
 "내용 기반(content based) 범례를 위한 파라미터는 클라이언트가 요청한 영역 안에 들어오는 피처에 대한 심볼만 표시하는 범례를 "
 "요청할 수 있도록 해줍니다:"
 
-#: ../../docs/server_manual/services.rst:1032
+#: ../../docs/server_manual/services.rst:1031
 msgid "**BBOX** the geographical area for which the legend should be built"
 msgstr "**BBOX**: 범례를 생성해야 하는 지리적 영역을 정의합니다."
 
-#: ../../docs/server_manual/services.rst:1033
+#: ../../docs/server_manual/services.rst:1032
 msgid ""
 "**CRS / SRS** the coordinate reference system adopted to define the BBOX "
 "coordinates"
 msgstr "**CRS**, **SRS**: **BBOX** 의 좌표를 계산하는 데 사용될 좌표계를 정의합니다."
 
-#: ../../docs/server_manual/services.rst:1039
+#: ../../docs/server_manual/services.rst:1034
+msgid ""
+"**SRCWIDTH / SRCHEIGHT** if set these should match the WIDTH and HEIGHT "
+"parameters of the GetMap request, to let QGIS Server scale symbols according"
+" to the map view image size."
+msgstr ""
+"**SRCWIDTH / SRCHEIGHT**: 이 파라미터들을 설정하는 경우, QGIS 서버가 심볼의 크기를 맵 뷰 이미지 크기에 따라 "
+"조정할 수 있도록 ``GetMap`` 요청에서 정의한 WIDTH 및 HEIGHT 파라미터와 일치해야 합니다."
+
+#: ../../docs/server_manual/services.rst:1038
 msgid ""
 "Content based legend features are based on the `UMN MapServer "
 "implementation: <https://www.mapserver.org/development/rfc/ms-"
@@ -1290,18 +1722,28 @@ msgstr ""
 "내용 기반 범례 피처는 `UMN 맵서버 구현 사양 <https://www.mapserver.org/development/rfc/ms-"
 "rfc-101.html>`_ 을 기반으로 합니다:"
 
-#: ../../docs/server_manual/services.rst:1043
+#: ../../docs/server_manual/services.rst:1042
 msgid ""
 "**SHOWFEATURECOUNT** if set to ``TRUE`` adds in the legend the feature count"
 " of the features like in the following image:"
 msgstr ""
 "**SHOWFEATURECOUNT**: ``TRUE`` 로 설정한 경우 범례에 각 피처의 개수를 다음 그림과 같이 추가합니다:"
 
-#: ../../docs/server_manual/services.rst:1056
+#: ../../docs/server_manual/services.rst:1048
+msgid "**RULE** set it to a given rule name to get only the named rule symbol"
+msgstr "**RULE**: 이 파라미터를 지정한 규칙명으로 설정하면, 이름을 지정한 규칙 심볼만 가져옵니다."
+
+#: ../../docs/server_manual/services.rst:1049
+msgid ""
+"**WIDTH/HEIGHT** the generated legend image size if the **RULE** parameter "
+"is set"
+msgstr "**WIDTH/HEIGHT**: **RULE** 파라미터를 설정한 경우 생성하는 범례 이미지 크기입니다."
+
+#: ../../docs/server_manual/services.rst:1055
 msgid "GetProjectSettings"
 msgstr "GetProjectSettings"
 
-#: ../../docs/server_manual/services.rst:1058
+#: ../../docs/server_manual/services.rst:1057
 msgid ""
 "This request type works similar to **GetCapabilities**, but it is more "
 "specific to QGIS Server and allows a client to read additional information "
@@ -1310,27 +1752,33 @@ msgstr ""
 "이 요청 유형은 ``GetCapabilities`` 요청과 비슷하게 동작하지만, 좀 더 QGIS 서버에 특화돼 있고 클라이언트가 "
 "``GetCapabilities`` 출력물에서는 볼 수 없는 다음 추가 정보를 읽을 수 있습니다:"
 
-#: ../../docs/server_manual/services.rst:1062
+#: ../../docs/server_manual/services.rst:1061
 msgid "initial visibility of layers"
 msgstr "레이어의 초기 가시성"
 
-#: ../../docs/server_manual/services.rst:1063
+#: ../../docs/server_manual/services.rst:1062
 msgid "information about vector attributes and their edit types"
 msgstr "벡터 속성 및 속성 편집 유형 관련 정보"
 
-#: ../../docs/server_manual/services.rst:1064
+#: ../../docs/server_manual/services.rst:1063
 msgid "information about layer order and drawing order"
 msgstr "레이어 순서 및 렌더링 순서 관련 정보"
 
-#: ../../docs/server_manual/services.rst:1065
+#: ../../docs/server_manual/services.rst:1064
 msgid "list of layers published in WFS"
 msgstr "WFS에 게시된 레이어 목록"
 
-#: ../../docs/server_manual/services.rst:1070
+#: ../../docs/server_manual/services.rst:1065
+msgid ""
+"show if a group in the layer tree is :ref:`mutually exclusive "
+"<group_layers_interact>`"
+msgstr "레이어 트리에 있는 그룹이 :ref:`상호 배타적 <group_layers_interact>` 인 경우 표시합니다."
+
+#: ../../docs/server_manual/services.rst:1069
 msgid "Web Feature Service (WFS)"
 msgstr "WFS(웹 피처 서비스)"
 
-#: ../../docs/server_manual/services.rst:1072
+#: ../../docs/server_manual/services.rst:1071
 msgid ""
 "The **1.0.0** and **1.1.0** WFS standards implemented in QGIS Server provide"
 " a HTTP interface to query geographic features from a QGIS project. A "
@@ -1339,25 +1787,25 @@ msgstr ""
 "QGIS 서버에 구현된 WFS **1.0.0** 및 **1.1.0** 표준은 QGIS 프로젝트로부터 지리 피처를 쿼리할 수 있는 HTTP"
 " 인터페이스를 제공합니다. 전형적인 WFS 요청은 사용할 QGIS 프로젝트와 쿼리할 레이어를 정의합니다."
 
-#: ../../docs/server_manual/services.rst:1078
+#: ../../docs/server_manual/services.rst:1077
 msgid ""
 "Specifications document according to the version number of the service:"
 msgstr "서비스 버전에 따른 사양 문서:"
 
-#: ../../docs/server_manual/services.rst:1080
+#: ../../docs/server_manual/services.rst:1079
 msgid ""
 "`WFS 1.0.0 <http://portal.opengeospatial.org/files/?artifact_id=7176>`_"
 msgstr ""
 "`WFS 1.0.0 <http://portal.opengeospatial.org/files/?artifact_id=7176>`_"
 
-#: ../../docs/server_manual/services.rst:1081
+#: ../../docs/server_manual/services.rst:1080
 msgid ""
 "`WFS 1.1.0 <http://portal.opengeospatial.org/files/?artifact_id=8339>`_"
 msgstr ""
 "`WFS 1.1.0 <http://portal.opengeospatial.org/files/?artifact_id=8339>`_"
 
 #: ../../docs/server_manual/services.rst:1
-#: ../../docs/server_manual/services.rst:1098
+#: ../../docs/server_manual/services.rst:1097
 msgid "GetFeature"
 msgstr "GetFeature"
 
@@ -1381,7 +1829,7 @@ msgstr "Transaction"
 msgid "Allows features to be inserted, updated or deleted"
 msgstr "피처를 삽입, 업데이트, 삭제 가능"
 
-#: ../../docs/server_manual/services.rst:1100
+#: ../../docs/server_manual/services.rst:1099
 msgid ""
 "Standard parameters for the **GetFeature** request according to the OGC WFS "
 "1.0.0 and 1.1.0 specifications:"
@@ -1412,7 +1860,7 @@ msgid "Output Format"
 msgstr "출력물 포맷"
 
 #: ../../docs/server_manual/services.rst:1
-#: ../../docs/server_manual/services.rst:1191
+#: ../../docs/server_manual/services.rst:1190
 msgid "RESULTTYPE"
 msgstr "RESULTTYPE"
 
@@ -1461,7 +1909,7 @@ msgid "Sort the results"
 msgstr "산출물 정렬"
 
 #: ../../docs/server_manual/services.rst:1
-#: ../../docs/server_manual/services.rst:1235
+#: ../../docs/server_manual/services.rst:1234
 msgid "STARTINDEX"
 msgstr "STARTINDEX"
 
@@ -1470,7 +1918,7 @@ msgid "Paging"
 msgstr "페이지 번호 붙이기"
 
 #: ../../docs/server_manual/services.rst:1
-#: ../../docs/server_manual/services.rst:1212
+#: ../../docs/server_manual/services.rst:1211
 msgid "GEOMETRYNAME"
 msgstr "GEOMETRYNAME"
 
@@ -1486,63 +1934,63 @@ msgstr "EXP_FILTER"
 msgid "Expression filtering"
 msgstr "표현식 필터링"
 
-#: ../../docs/server_manual/services.rst:1139
+#: ../../docs/server_manual/services.rst:1138
 msgid ""
 "This parameter has to be ``WFS`` in case of the **GetFeature** request."
 msgstr "**GetFeature** 요청의 경우, 이 파라미터는 ``WFS`` 이어야 합니다."
 
-#: ../../docs/server_manual/services.rst:1157
+#: ../../docs/server_manual/services.rst:1156
 msgid "``1.0.0``"
 msgstr "``1.0.0``"
 
-#: ../../docs/server_manual/services.rst:1158
+#: ../../docs/server_manual/services.rst:1157
 msgid "``1.1.0``"
 msgstr "``1.1.0``"
 
-#: ../../docs/server_manual/services.rst:1160
+#: ../../docs/server_manual/services.rst:1159
 msgid ""
 "If no version is indicated in the request, then ``1.1.0`` is used by "
 "default."
 msgstr "요청에서 버전을 지정하지 않을 경우, ``1.1.0`` 을 기본값으로 사용합니다."
 
-#: ../../docs/server_manual/services.rst:1176
+#: ../../docs/server_manual/services.rst:1175
 msgid ""
 "This parameter is ``GetFeature`` in case of the **GetFeature** request."
 msgstr "**GetFeature** 요청의 경우, 이 파라미터는 ``GetFeature`` 이어야 합니다."
 
-#: ../../docs/server_manual/services.rst:1193
+#: ../../docs/server_manual/services.rst:1192
 msgid ""
 "This parameter may be used to specify the kind of result to return. "
 "Available values are:"
 msgstr "이 파라미터는 산출물의 종류를 지정할 수 있습니다. 사용할 수 있는 값은 다음과 같습니다:"
 
-#: ../../docs/server_manual/services.rst:1196
+#: ../../docs/server_manual/services.rst:1195
 msgid "``results``: the default behavior"
 msgstr "``results``: 기본 습성"
 
-#: ../../docs/server_manual/services.rst:1197
+#: ../../docs/server_manual/services.rst:1196
 msgid "``hits``: returns only a feature count"
 msgstr "``hits``: 피처 개수만 반환"
 
-#: ../../docs/server_manual/services.rst:1214
+#: ../../docs/server_manual/services.rst:1213
 msgid ""
 "This parameter can be used to specify the kind of geometry to return for "
 "features. Available values are:"
 msgstr "이 파라미터는 피처에 대해 반환할 도형의 종류를 지정할 수 있습니다. 사용할 수 있는 값은 다음과 같습니다:"
 
-#: ../../docs/server_manual/services.rst:1217
+#: ../../docs/server_manual/services.rst:1216
 msgid "``extent``"
 msgstr "``extent``"
 
-#: ../../docs/server_manual/services.rst:1218
+#: ../../docs/server_manual/services.rst:1217
 msgid "``centroid``"
 msgstr "``centroid``"
 
-#: ../../docs/server_manual/services.rst:1219
+#: ../../docs/server_manual/services.rst:1218
 msgid "``none``"
 msgstr "``none``"
 
-#: ../../docs/server_manual/services.rst:1237
+#: ../../docs/server_manual/services.rst:1236
 msgid ""
 "This parameter is standard in WFS 2.0, but it's an extension for WFS 1.0.0. "
 "Actually, it can be used to skip some features in the result set and in "
@@ -1552,11 +2000,11 @@ msgstr ""
 "이 파라미터는 WFS 2.0에서는 표준이지만, WFS 1.0.0에서는 확장 기능입니다. 실제로는 산출물 집합에서 일부 피처를 건너뛰는데 "
 "사용할 수 있기 때문에, ``MAXFEATURES`` 파라미터와 함께 사용하면 산출물의 페이지를 넘기는 기능으로 쓸 수 있습니다."
 
-#: ../../docs/server_manual/services.rst:1256
+#: ../../docs/server_manual/services.rst:1255
 msgid "Web Map Tile Service (WMTS)"
 msgstr "WMTS(웹 맵 타일 서비스)"
 
-#: ../../docs/server_manual/services.rst:1258
+#: ../../docs/server_manual/services.rst:1257
 msgid ""
 "The **1.0.0** WMTS standard implemented in QGIS Server provides a HTTP "
 "interface to request tiled map images generated from a QGIS project. A "
@@ -1567,18 +2015,18 @@ msgstr ""
 "인터페이스를 제공합니다. 전형적인 WMTS 요청은 사용할 QGIS 프로젝트, 렌더링할 레이어와 같은 몇몇 WMS 파라미터들은 물론 타일 "
 "파라미터들도 정의합니다."
 
-#: ../../docs/server_manual/services.rst:1263
+#: ../../docs/server_manual/services.rst:1262
 msgid "Specifications document of the service:"
 msgstr "WMTS 서비스의 사양 문서:"
 
-#: ../../docs/server_manual/services.rst:1265
+#: ../../docs/server_manual/services.rst:1264
 msgid ""
 "`WMTS 1.0.0 <http://portal.opengeospatial.org/files/?artifact_id=35326>`_"
 msgstr ""
 "`WMTS 1.0.0 <http://portal.opengeospatial.org/files/?artifact_id=35326>`_"
 
 #: ../../docs/server_manual/services.rst:1
-#: ../../docs/server_manual/services.rst:1338
+#: ../../docs/server_manual/services.rst:1337
 msgid "GetTile"
 msgstr "GetTile"
 
@@ -1586,7 +2034,7 @@ msgstr "GetTile"
 msgid "Returns a tile"
 msgstr "타일을 반환"
 
-#: ../../docs/server_manual/services.rst:1283
+#: ../../docs/server_manual/services.rst:1282
 msgid ""
 "Standard parameters for the **GetCapabilities** request according to the OGC"
 " WMTS 1.0.0 specifications:"
@@ -1600,19 +2048,19 @@ msgstr "서비스(WMTS)의 명칭"
 msgid "Name of the request (GetCapabilities)"
 msgstr "요청(GetCapabilities)의 명칭"
 
-#: ../../docs/server_manual/services.rst:1318
+#: ../../docs/server_manual/services.rst:1317
 msgid ""
 "This parameter has to be ``WMTS`` in case of the **GetCapabilities** "
 "request."
 msgstr "**GetCapabilities** 요청의 경우, 이 파라미터는 ``WMTS`` 이어야 합니다."
 
-#: ../../docs/server_manual/services.rst:1325
+#: ../../docs/server_manual/services.rst:1324
 msgid ""
 "This parameter is ``GetCapabilities`` in case of the **GetCapabilities** "
 "request."
 msgstr "**GetCapabilities** 요청의 경우, 이 파라미터는 ``GetCapabilities`` 이어야 합니다."
 
-#: ../../docs/server_manual/services.rst:1340
+#: ../../docs/server_manual/services.rst:1339
 msgid ""
 "Standard parameters for the **GetTile** request according to the OGC WMTS "
 "1.0.0 specifications:"
@@ -1623,8 +2071,8 @@ msgid "Name of the request (GetTile)"
 msgstr "요청(GetTile)의 명칭"
 
 #: ../../docs/server_manual/services.rst:1
-#: ../../docs/server_manual/services.rst:1396
-#: ../../docs/server_manual/services.rst:1567
+#: ../../docs/server_manual/services.rst:1395
+#: ../../docs/server_manual/services.rst:1566
 msgid "LAYER"
 msgstr "LAYER"
 
@@ -1637,7 +2085,7 @@ msgid "Output format of the tile"
 msgstr "타일의 산출물 포맷"
 
 #: ../../docs/server_manual/services.rst:1
-#: ../../docs/server_manual/services.rst:1449
+#: ../../docs/server_manual/services.rst:1448
 msgid "TILEMATRIXSET"
 msgstr "TILEMATRIXSET"
 
@@ -1646,7 +2094,7 @@ msgid "Name of the pyramid"
 msgstr "피라미드명"
 
 #: ../../docs/server_manual/services.rst:1
-#: ../../docs/server_manual/services.rst:1456
+#: ../../docs/server_manual/services.rst:1455
 msgid "TILEMATRIX"
 msgstr "TILEMATRIX"
 
@@ -1655,7 +2103,7 @@ msgid "Meshing"
 msgstr "메시 작업"
 
 #: ../../docs/server_manual/services.rst:1
-#: ../../docs/server_manual/services.rst:1462
+#: ../../docs/server_manual/services.rst:1461
 msgid "TILEROW"
 msgstr "TILEROW"
 
@@ -1664,7 +2112,7 @@ msgid "Row coordinate in the mesh"
 msgstr "메시 내부의 행 좌표"
 
 #: ../../docs/server_manual/services.rst:1
-#: ../../docs/server_manual/services.rst:1469
+#: ../../docs/server_manual/services.rst:1468
 msgid "TILECOL"
 msgstr "TILECOL"
 
@@ -1672,26 +2120,26 @@ msgstr "TILECOL"
 msgid "Column coordinate in the mesh"
 msgstr "메시 내부의 열 좌표"
 
-#: ../../docs/server_manual/services.rst:1386
+#: ../../docs/server_manual/services.rst:1385
 msgid "This parameter has to be ``WMTS`` in case of the **GetTile** request."
 msgstr "**GetTile** 요청의 경우, 이 파라미터는 ``WMTS`` 이어야 합니다."
 
-#: ../../docs/server_manual/services.rst:1392
+#: ../../docs/server_manual/services.rst:1391
 msgid "This parameter is ``GetTile`` in case of the **GetTile** request."
 msgstr "**GetTile** 요청의 경우, 이 파라미터는 ``GetTile`` 이어야 합니다."
 
-#: ../../docs/server_manual/services.rst:1398
-#: ../../docs/server_manual/services.rst:1569
+#: ../../docs/server_manual/services.rst:1397
+#: ../../docs/server_manual/services.rst:1568
 msgid "This parameter allows to specify the layer to display on the tile."
 msgstr "이 파라미터는 타일 상에 표시할 레이어를 지정할 수 있습니다."
 
-#: ../../docs/server_manual/services.rst:1400
-#: ../../docs/server_manual/services.rst:1571
+#: ../../docs/server_manual/services.rst:1399
+#: ../../docs/server_manual/services.rst:1570
 msgid "In addition, QGIS Server introduced some options to select a layer by:"
 msgstr "이에 더해, QGIS 서버는 레이어를 다음을 통해 선택할 수 있는 옵션을 제공합니다:"
 
-#: ../../docs/server_manual/services.rst:1418
-#: ../../docs/server_manual/services.rst:1589
+#: ../../docs/server_manual/services.rst:1417
+#: ../../docs/server_manual/services.rst:1588
 msgid ""
 "Moreover, there's a project option allowing to select layers by their id in "
 ":menuselection:`OWS Server --> WMS capabilities` menu of the "
@@ -1700,48 +2148,54 @@ msgid ""
 msgstr ""
 "이에 더해, :menuselection:`Project --> Properties...` 대화창의 :menuselection:`OWS "
 "Server --> WMS capabilities` 메뉴에서 레이어 ID로 레이어를 선택할 수 있는 프로젝트 수준 옵션도 있습니다. 이 "
-"옵션을 활성화하려면, |checkbox| :guilabel:`Use layer ids as names` 를 체크하십시오."
+"옵션을 활성화하려면, :guilabel:`Use layer ids as names` 옵션을 체크하십시오."
 
-#: ../../docs/server_manual/services.rst:1436
+#: ../../docs/server_manual/services.rst:1435
 msgid ""
 "This parameter may be used to specify the format of tile image. Available "
 "values are:"
 msgstr "이 파라미터는 타일 이미지의 포맷을 지정할 수 있습니다. 사용할 수 있는 값은 다음과 같습니다:"
 
-#: ../../docs/server_manual/services.rst:1444
+#: ../../docs/server_manual/services.rst:1443
 msgid ""
 "If the ``FORMAT`` parameter is different from one of these values, then the "
 "default format PNG is used instead."
 msgstr "``FORMAT`` 파라미터가 이 값들 가운데 하나가 아닐 경우, 기본 포맷인 PNG를 대신 사용합니다."
 
-#: ../../docs/server_manual/services.rst:1451
+#: ../../docs/server_manual/services.rst:1450
 msgid ""
 "This parameter defines the CRS to use when computing the underlying pyramid."
 " Format: ``EPSG:XXXX``."
 msgstr "이 파라미터는 기저 피라미드를 계산할 때 사용할 좌표계를 정의합니다. 서식: ``EPSG:XXXX``."
 
-#: ../../docs/server_manual/services.rst:1458
+#: ../../docs/server_manual/services.rst:1457
 msgid "This parameter allows to define the matrix to use for the output tile."
 msgstr "이 파라미터는 산출물 타일용으로 사용할 매트릭스를 정의할 수 있습니다."
 
-#: ../../docs/server_manual/services.rst:1464
+#: ../../docs/server_manual/services.rst:1463
 msgid ""
 "This parameter allows to select the row of the tile to get within the "
 "matrix."
 msgstr "이 파라미터는 매트릭스 내부에 들어갈 타일의 행을 선택할 수 있습니다."
 
-#: ../../docs/server_manual/services.rst:1471
+#: ../../docs/server_manual/services.rst:1470
 msgid ""
 "This parameter allows to select the column of the tile to get within the "
 "matrix."
 msgstr "이 파라미터는 매트릭스 내부에 들어갈 타일의 열을 선택할 수 있습니다."
 
-#: ../../docs/server_manual/services.rst:1
-msgid "Name of the request (GetFeatureInfo)"
-msgstr "요청(GetFeatureInfo)의 명칭"
+#: ../../docs/server_manual/services.rst:1493
+msgid ""
+"Standard parameters for the **GetFeatureInfo** request according to the OGC "
+"WMTS 1.0.0 specification:"
+msgstr "OGC WMTS 1.0.0 사양에 따른 **GetFeatureInfo** 요청용 표준 파라미터:"
 
 #: ../../docs/server_manual/services.rst:1
-#: ../../docs/server_manual/services.rst:1605
+msgid "Name of the request (GetFeatureInfo)"
+msgstr "요청(**GetFeatureInfo**)의 명칭"
+
+#: ../../docs/server_manual/services.rst:1
+#: ../../docs/server_manual/services.rst:1604
 msgid "INFOFORMAT"
 msgstr "INFOFORMAT"
 
@@ -1757,38 +2211,38 @@ msgstr "픽셀의 Y 좌표"
 msgid ":ref:`See GetTile <qgisserver-wmts-gettile>`"
 msgstr ":ref:`GetTile 참조 <qgisserver-wmts-gettile>`"
 
-#: ../../docs/server_manual/services.rst:1541
+#: ../../docs/server_manual/services.rst:1540
 msgid ""
 "This parameter has to be ``WMTS`` in case of the **GetFeatureInfo** request."
 msgstr "**GetFeatureInfo** 요청의 경우, 이 파라미터는 ``WMTS`` 이어야 합니다."
 
-#: ../../docs/server_manual/services.rst:1607
+#: ../../docs/server_manual/services.rst:1606
 msgid ""
 "This parameter allows to define the output format of the result. Available "
 "values are:"
 msgstr "이 파라미터는 산출물의 포맷을 지정할 수 있습니다. 사용할 수 있는 값은 다음과 같습니다:"
 
-#: ../../docs/server_manual/services.rst:1615
+#: ../../docs/server_manual/services.rst:1614
 msgid "The default value is ``text/plain``."
 msgstr "기본값은 ``text/plain`` 입니다."
 
-#: ../../docs/server_manual/services.rst:1621
+#: ../../docs/server_manual/services.rst:1620
 msgid ""
 "This parameter allows to define the X coordinate of the pixel for which we "
 "want to retrieve underlying information."
 msgstr "이 파라미터는 기저 정보를 검색하고자 하는 픽셀의 X 좌표를 정의할 수 있습니다."
 
-#: ../../docs/server_manual/services.rst:1628
+#: ../../docs/server_manual/services.rst:1627
 msgid ""
 "This parameter allows to define the Y coordinate of the pixel for which we "
 "want to retrieve underlying information."
 msgstr "이 파라미터는 기저 정보를 검색하고자 하는 픽셀의 Y 좌표를 정의할 수 있습니다."
 
-#: ../../docs/server_manual/services.rst:1635
+#: ../../docs/server_manual/services.rst:1634
 msgid "WFS3 (OGC API Features)"
 msgstr "WFS3 (OGC API ─ 피처)"
 
-#: ../../docs/server_manual/services.rst:1637
+#: ../../docs/server_manual/services.rst:1636
 msgid ""
 "WFS3 is the first implementation of the new generation of OGC protocols. It "
 "is described by the `OGC API - Features - Part 1: Core "
@@ -1798,13 +2252,13 @@ msgstr ""
 "<http://docs.opengeospatial.org/is/17-069r3/17-069r3.html>`_ 문서에 잘 설명되어 "
 "있습니다."
 
-#: ../../docs/server_manual/services.rst:1642
+#: ../../docs/server_manual/services.rst:1641
 msgid ""
 "Here is a quick informal summary of the most important differences between "
 "the well known WFS protocol and WFS3:"
 msgstr "다음 내용은 잘 알려진 WFS 프로토콜과 WFS3의 주요 차이점을 비공식적으로 간단히 요약한 것입니다:"
 
-#: ../../docs/server_manual/services.rst:1645
+#: ../../docs/server_manual/services.rst:1644
 msgid ""
 "WFS3 is based on a `REST "
 "<https://en.wikipedia.org/wiki/Representational_state_transfer>`_ API"
@@ -1813,7 +2267,7 @@ msgstr ""
 "<https://en.wikipedia.org/wiki/Representational_state_transfer>`_ API를 기반으로 "
 "합니다."
 
-#: ../../docs/server_manual/services.rst:1648
+#: ../../docs/server_manual/services.rst:1647
 msgid ""
 "WFS3 API must follow the `OPENAPI "
 "<https://en.wikipedia.org/wiki/OpenAPI_Specification>`_ specifications"
@@ -1821,7 +2275,7 @@ msgstr ""
 "WFS3 API는 `OPENAPI <https://en.wikipedia.org/wiki/OpenAPI_Specification>`_ "
 "사양을 따라야만 합니다."
 
-#: ../../docs/server_manual/services.rst:1651
+#: ../../docs/server_manual/services.rst:1650
 msgid ""
 "WFS3 supports multiple output formats but it does not dictate any (only "
 "GeoJSON and HTML are currently available in QGIS WFS3) and it uses `content "
@@ -1832,19 +2286,19 @@ msgstr ""
 "클라이언트에 서비스할 포맷을 결정하는 데 `내용 협상(content negotiation) "
 "<https://en.wikipedia.org/wiki/Content_negotiation>`_ 을 사용합니다."
 
-#: ../../docs/server_manual/services.rst:1656
+#: ../../docs/server_manual/services.rst:1655
 msgid "JSON and HTML are first class citizens in WFS3"
 msgstr "JSON과 HTML은 WFS3의 일급 객체(first class citizen)입니다."
 
-#: ../../docs/server_manual/services.rst:1657
+#: ../../docs/server_manual/services.rst:1656
 msgid "WFS3 is self-documenting (through the ``/api`` endpoint)"
 msgstr "WFS3은 (``/api`` 종단점을 통해) 자체 문서화(self-documenting)합니다."
 
-#: ../../docs/server_manual/services.rst:1658
+#: ../../docs/server_manual/services.rst:1657
 msgid "WFS3 is fully navigable (through links) and browsable"
 msgstr "WFS3을 (링크를 통해) 완전하게 둘러보고 또 탐색할 수 있습니다."
 
-#: ../../docs/server_manual/services.rst:1662
+#: ../../docs/server_manual/services.rst:1661
 msgid ""
 "While the WFS3 implementation in QGIS can make use of the ``MAP`` parameter "
 "to specify the project file, no extra query parameters are allowed by the "
@@ -1858,7 +2312,7 @@ msgstr ""
 "서버 고쳐쓰기 규칙을 통해 해당 환경에 ``QGIS_PROJECT_FILE`` 을 설정해서) 프로젝트 파일을 지정할 것을 강력히 "
 "추천합니다."
 
-#: ../../docs/server_manual/services.rst:1673
+#: ../../docs/server_manual/services.rst:1672
 msgid ""
 "The **API** endpoint provides comprehensive documentation of all supported "
 "parameters and output formats of your service. The following paragraphs will"
@@ -1867,25 +2321,25 @@ msgstr ""
 "**API** 종단점은 사용자 서비스가 지원하는 모든 파라미터 및 산출물 포맷의 포괄적인 기록을 지원합니다. 다음은 그 가운데 가장 "
 "중요한 것들만 설명한 것입니다."
 
-#: ../../docs/server_manual/services.rst:1679
+#: ../../docs/server_manual/services.rst:1678
 msgid "Resource representation"
 msgstr "리소스 표현"
 
-#: ../../docs/server_manual/services.rst:1681
+#: ../../docs/server_manual/services.rst:1680
 msgid ""
 "The QGIS Server WFS3 implementation currently supports the following "
 "resource representation (output) formats:"
 msgstr "QGIS 서버에 구현된 WFS3은 현재 다음과 같은 리소스 표현(산출물) 포맷을 지원합니다:"
 
-#: ../../docs/server_manual/services.rst:1684
+#: ../../docs/server_manual/services.rst:1683
 msgid "HTML"
 msgstr "HTML"
 
-#: ../../docs/server_manual/services.rst:1685
+#: ../../docs/server_manual/services.rst:1684
 msgid "JSON"
 msgstr "JSON"
 
-#: ../../docs/server_manual/services.rst:1687
+#: ../../docs/server_manual/services.rst:1686
 msgid ""
 "The format that is actually served will depend on content negotiation, but a"
 " specific format can be explicitly requested by appending a format specifier"
@@ -1893,38 +2347,38 @@ msgid ""
 msgstr ""
 "실제로 서비스되는 포맷은 내용 협상에 좌우될 것이지만, 종단점에 포맷 지정자를 추가해서 특정 포맷을 명확하게 요청할 수 있습니다."
 
-#: ../../docs/server_manual/services.rst:1691
+#: ../../docs/server_manual/services.rst:1690
 msgid "Supported format specifier extensions are:"
 msgstr "다음과 같은 포맷 지정자 확장자를 지원합니다:"
 
-#: ../../docs/server_manual/services.rst:1693
+#: ../../docs/server_manual/services.rst:1692
 msgid "``.json``"
 msgstr "``.json``"
 
-#: ../../docs/server_manual/services.rst:1694
+#: ../../docs/server_manual/services.rst:1693
 msgid "``.html``"
 msgstr "``.html``"
 
-#: ../../docs/server_manual/services.rst:1696
+#: ../../docs/server_manual/services.rst:1695
 msgid ""
 "Additional format specifier aliases may be defined by specific endpoints:"
 msgstr "특정 종단점이 포맷 지정자의 추가적인 별명을 정의할 수도 있습니다:"
 
-#: ../../docs/server_manual/services.rst:1699
+#: ../../docs/server_manual/services.rst:1698
 msgid "``.openapi``: alias for ``.json`` supported by the **API** endpoint"
 msgstr "``.openapi``: **API** 종단점이 지원하는 ``.json`` 의 별명"
 
-#: ../../docs/server_manual/services.rst:1700
+#: ../../docs/server_manual/services.rst:1699
 msgid ""
 "``.geojson``: alias for ``.json`` supported by the **Features** and "
 "**Feature** endpoints"
 msgstr "``.geojson``: **Features** 및 **Feature** 종단점이 지원하는 ``.json`` 의 별명"
 
-#: ../../docs/server_manual/services.rst:1706
+#: ../../docs/server_manual/services.rst:1705
 msgid "Endpoints"
 msgstr "종단점(Endpoint)"
 
-#: ../../docs/server_manual/services.rst:1708
+#: ../../docs/server_manual/services.rst:1707
 msgid ""
 "The API provides a list of endpoints that the clients can retrieve. The "
 "system is designed in such a way that every response provides a set of links"
@@ -1933,7 +2387,7 @@ msgstr ""
 "API는 클라이언트가 검색할 수 있는 종단점 목록을 제공합니다. 이 시스템은 모든 응답이 모든 제공 리소스를 탐색할 수 있는 링크 집합을"
 " 제공하도록 설계되었습니다."
 
-#: ../../docs/server_manual/services.rst:1712
+#: ../../docs/server_manual/services.rst:1711
 msgid "Endpoints points provided by the QGIS implementation are:"
 msgstr "QGIS에 구현된 종단점 포인트는 다음과 같습니다:"
 
@@ -1946,7 +2400,7 @@ msgid "Path"
 msgstr "경로"
 
 #: ../../docs/server_manual/services.rst:1
-#: ../../docs/server_manual/services.rst:1735
+#: ../../docs/server_manual/services.rst:1734
 msgid "Landing Page"
 msgstr "Landing Page"
 
@@ -2034,7 +2488,7 @@ msgstr "``/collections/{collectionId}/items/{featureId}``"
 msgid "Information about a single feature"
 msgstr "단일 피처 관련 정보"
 
-#: ../../docs/server_manual/services.rst:1737
+#: ../../docs/server_manual/services.rst:1736
 msgid ""
 "The main endpoint is the **Landing Page**. From that page it is possible to "
 "navigate to all the available service endpoints. The **Landing Page** must "
@@ -2043,31 +2497,31 @@ msgstr ""
 "주 종단점은 **Landing Page** 입니다. 해당 페이지에서 사용할 수 있는 모든 서비스 종단점으로 탐색해 갈 수 있습니다. "
 "**Landing Page** 는 다음을 가리키는 링크를 제공해야만 합니다:"
 
-#: ../../docs/server_manual/services.rst:1741
+#: ../../docs/server_manual/services.rst:1740
 msgid ""
 "the API definition (path ``/api`` link relations ``service-desc`` and "
 "``service-doc``),"
 msgstr "API 정의 (경로 ``/api``, 링크 관계 ``service-desc`` 그리고 ``service-doc``)"
 
-#: ../../docs/server_manual/services.rst:1743
+#: ../../docs/server_manual/services.rst:1742
 msgid ""
 "the Conformance declaration (path ``/conformance``, link relation "
 "``conformance``), and"
 msgstr "적합성 선언 (경로 ``/conformance``, 링크 관계 ``conformance``)"
 
-#: ../../docs/server_manual/services.rst:1745
+#: ../../docs/server_manual/services.rst:1744
 msgid "the Collections (path ``/collections``, link relation ``data``)."
 msgstr "선택 집합 (경로 ``/collections``, 링크 관계 ``data``)."
 
-#: ../../docs/server_manual/services.rst:1752
+#: ../../docs/server_manual/services.rst:1751
 msgid "Server WFS3 landing page"
 msgstr "서버 WFS3 랜딩 페이지"
 
-#: ../../docs/server_manual/services.rst:1757
+#: ../../docs/server_manual/services.rst:1756
 msgid "API Definition"
 msgstr "API 정의"
 
-#: ../../docs/server_manual/services.rst:1759
+#: ../../docs/server_manual/services.rst:1758
 msgid ""
 "The **API Definition** is an OPENAPI-compliant description of the API "
 "provided by the service. In its HTML representation it is a browsable page "
@@ -2077,21 +2531,21 @@ msgstr ""
 "**API 정의** 는 서비스가 제공하는 API의, OPENAPI와 호환되는 설명입니다. 이 HTML 표현은 모든 종단점 및 각 종단점의"
 " 응답 포맷을 정확하게 목록화하고 문서화한, 탐색 가능한 페이지입니다. 이 종단점의 경로는 ``/api`` 입니다."
 
-#: ../../docs/server_manual/services.rst:1766
+#: ../../docs/server_manual/services.rst:1765
 msgid ""
 "The API definition provides a comprehensive and authoritative documentation "
 "of the service, including all supported parameters and returned formats."
 msgstr "API 정의는 서비스에 대한, 지원하는 파라미터와 반환되는 포맷을 모두 포함하는 포괄적이고 권위 있는 문서를 제공합니다."
 
-#: ../../docs/server_manual/services.rst:1772
+#: ../../docs/server_manual/services.rst:1771
 msgid "This endpoint is analogue to WFS's ``GetCapabilities``"
 msgstr "이 종단점은 WFS의 ``GetCapabilities`` 와 유사합니다."
 
-#: ../../docs/server_manual/services.rst:1775
+#: ../../docs/server_manual/services.rst:1774
 msgid "Collections list"
 msgstr "Collections 목록"
 
-#: ../../docs/server_manual/services.rst:1777
+#: ../../docs/server_manual/services.rst:1776
 msgid ""
 "The collections endpoint provides a list of all the collections available in"
 " the service. Since the service \"serves\" a single QGIS project the "
@@ -2103,15 +2557,15 @@ msgstr ""
 "\"서비스\" 하기 때문에, 선택 집합은 (프로젝트 속성에서 벡터 레이어를 WFS로 게시한 경우) 현재 프로젝트의 벡터 레이어들입니다. "
 "이 종단점의 경로는 ``/collections/`` 입니다."
 
-#: ../../docs/server_manual/services.rst:1789
+#: ../../docs/server_manual/services.rst:1788
 msgid "Server WFS3 collections list page"
 msgstr "서버 WFS3 선택 집합 목록 페이지"
 
-#: ../../docs/server_manual/services.rst:1793
+#: ../../docs/server_manual/services.rst:1792
 msgid "Collection detail"
 msgstr "Collection 상세 정보"
 
-#: ../../docs/server_manual/services.rst:1795
+#: ../../docs/server_manual/services.rst:1794
 msgid ""
 "While the collections endpoint does not provide detailed information about "
 "each available collection, that information is available in the "
@@ -2122,22 +2576,22 @@ msgstr ""
 "``/collections/{collectionId}`` 종단점에서는 해당 정보를 사용할 수 있습니다. 이 정보는 전형적으로 범위, "
 "설명, 좌표계 및 기타 메타데이터를 포함합니다."
 
-#: ../../docs/server_manual/services.rst:1801
-#: ../../docs/server_manual/services.rst:1822
+#: ../../docs/server_manual/services.rst:1800
+#: ../../docs/server_manual/services.rst:1821
 msgid ""
 "The HTML representation also provides a browsable map with the available "
 "features."
 msgstr "이 HTML 표현은 사용할 수 있는 피처를 보유한 탐색 가능한 맵도 제공합니다."
 
-#: ../../docs/server_manual/services.rst:1810
+#: ../../docs/server_manual/services.rst:1809
 msgid "Server WFS3 collection detail page"
 msgstr "서버 WFS3 선택 집합 상세 정보 페이지"
 
-#: ../../docs/server_manual/services.rst:1816
+#: ../../docs/server_manual/services.rst:1815
 msgid "Features list"
 msgstr "Features 목록"
 
-#: ../../docs/server_manual/services.rst:1818
+#: ../../docs/server_manual/services.rst:1817
 msgid ""
 "This endpoint provides a list of all features in a collection knowing the "
 "collection ID. The path of this endpoint is "
@@ -2146,19 +2600,19 @@ msgstr ""
 "이 종단점은 ID를 알고 있는 선택 집합에 있는 모든 피처의 목록을 제공합니다. 이 종단점의 경로는 "
 "``/collections/{collectionId}/items`` 입니다."
 
-#: ../../docs/server_manual/services.rst:1828
+#: ../../docs/server_manual/services.rst:1827
 msgid "This endpoint is analogue to ``GetFeature`` in  WFS 1 and WFS 2."
 msgstr "이 종단점은 WFS1 및 WFS2의 ``GetFeature`` 와 유사합니다."
 
-#: ../../docs/server_manual/services.rst:1836
+#: ../../docs/server_manual/services.rst:1835
 msgid "Server WFS3 features list page"
 msgstr "서버 WFS3 피처 목록 페이지"
 
-#: ../../docs/server_manual/services.rst:1840
+#: ../../docs/server_manual/services.rst:1839
 msgid "Feature detail"
 msgstr "Feature 상세 정보"
 
-#: ../../docs/server_manual/services.rst:1842
+#: ../../docs/server_manual/services.rst:1841
 msgid ""
 "This endpoint provides all the available information about a single feature,"
 " including the feature attributes and its geometry. The path of this "
@@ -2167,21 +2621,21 @@ msgstr ""
 "이 종단점은 단일 피처에 대해 피처 속성과 도형을 포함하는, 사용할 수 있는 모든 정보를 제공합니다. 이 종단점의 경로는 "
 "``/collections/{collectionId}/items/{itemId}`` 입니다."
 
-#: ../../docs/server_manual/services.rst:1847
+#: ../../docs/server_manual/services.rst:1846
 msgid ""
 "The HTML representation also provides a browsable map with the feature "
 "geometry."
 msgstr "이 HTML 표현은 피처 도형을 보유한 탐색 가능한 맵도 제공합니다."
 
-#: ../../docs/server_manual/services.rst:1856
+#: ../../docs/server_manual/services.rst:1855
 msgid "Server WFS3 feature detail page"
 msgstr "서버 WFS3 피처 상세 정보 페이지"
 
-#: ../../docs/server_manual/services.rst:1861
+#: ../../docs/server_manual/services.rst:1860
 msgid "Pagination"
 msgstr "페이지 번호 매기기"
 
-#: ../../docs/server_manual/services.rst:1863
+#: ../../docs/server_manual/services.rst:1862
 msgid ""
 "Pagination of a long list of features is implemented in the OGC API through "
 "``next`` and ``prev`` links, QGIS server constructs these links by appending"
@@ -2190,7 +2644,7 @@ msgstr ""
 "OGC API에서 피처의 긴 목록에 페이지 번호를 메기는 기능(pagination)은 ``next`` 및 ``prev`` 링크를 통해 "
 "구현되어 있습니다. QGIS 서버는 ``limit`` 및 ``offset`` 을 쿼리 문자열 파라미터로 추가해서 이 링크들을 구성합니다."
 
-#: ../../docs/server_manual/services.rst:1876
+#: ../../docs/server_manual/services.rst:1875
 msgid ""
 "The maximum acceptable value for ``limit`` can be configured with the "
 "``QGIS_SERVER_API_WFS3_MAX_LIMIT`` server configuration setting (see: :ref"
@@ -2199,21 +2653,21 @@ msgstr ""
 "``QGIS_SERVER_API_WFS3_MAX_LIMIT`` 서버 환경 설정으로 ``limit`` 의 최대 허용 값의 환경을 설정할 수"
 " 있습니다. (:ref:`qgis-server-envvar` 참조)"
 
-#: ../../docs/server_manual/services.rst:1882
+#: ../../docs/server_manual/services.rst:1881
 msgid "Feature filtering"
-msgstr "Feature 필터링"
+msgstr "객체 필터링"
 
-#: ../../docs/server_manual/services.rst:1884
+#: ../../docs/server_manual/services.rst:1883
 msgid ""
 "The features available in a collection can be filtered/searched by "
 "specifying one or more filters."
 msgstr "하나 이상의 필터를 지정해서 선택 집합에서 사용할 수 있는 피처를 필터링/검색할 수 있습니다."
 
-#: ../../docs/server_manual/services.rst:1889
+#: ../../docs/server_manual/services.rst:1888
 msgid "Date and time filter"
 msgstr "날짜 및 시간 필터"
 
-#: ../../docs/server_manual/services.rst:1890
+#: ../../docs/server_manual/services.rst:1889
 msgid ""
 "Collections with date and/or datetime attributes can be filtered by "
 "specifying a ``datetime`` argument in the query string. By default the first"
@@ -2225,7 +2679,7 @@ msgstr ""
 " 작업에 첫 번째 날짜/날짜&시간 필드를 기본적으로 이용합니다. 레이어 속성 대화창의 :menuselection:`QGIS Server "
 "--> Dimension` 부분에서 \"Date\" 및 \"Time\" 차원을 설정하면 이 습성의 환경을 설정할 수 있습니다."
 
-#: ../../docs/server_manual/services.rst:1897
+#: ../../docs/server_manual/services.rst:1896
 msgid ""
 "The date and time filtering syntax is fully described in the "
 ":ref:`ogc_api_features_api_definition` and also supports ranges (begin and "
@@ -2234,57 +2688,57 @@ msgstr ""
 "날짜와 시간 필터링 문법은 :ref:`ogc_api_features_api_definition` 에 충분히 설명되어 있으며, 단일 값만이"
 " 아니라 (시작 및 종단 값도 포함하는) 범위도 지원합니다."
 
-#: ../../docs/server_manual/services.rst:1902
+#: ../../docs/server_manual/services.rst:1901
 msgid "URL examples:"
 msgstr "URL 예시:"
 
-#: ../../docs/server_manual/services.rst:1904
+#: ../../docs/server_manual/services.rst:1903
 msgid "Returns only the features with date dimension matching ``2019-01-01``"
 msgstr "날짜 차원이 ``2019-01-01`` 과 일치하는 피처만 반환"
 
-#: ../../docs/server_manual/services.rst:1910
+#: ../../docs/server_manual/services.rst:1909
 msgid ""
 "Returns only the features with datetime dimension matching "
 "``2019-01-01T01:01:01``"
 msgstr "날짜&시간 차원이 ``2019-01-01T01:01:01`` 과 일치하는 피처만 반환"
 
-#: ../../docs/server_manual/services.rst:1917
+#: ../../docs/server_manual/services.rst:1916
 msgid ""
 "Returns only the features with datetime dimension in the range "
 "``2019-01-01T01:01:01`` - ``2019-01-01T12:00:00``"
 msgstr ""
 "날짜 차원이 ``2019-01-01T01:01:01`` ─ ``2019-01-01T12:00:00`` 범위에 들어오는 피처만 반환"
 
-#: ../../docs/server_manual/services.rst:1926
+#: ../../docs/server_manual/services.rst:1925
 msgid "Bounding box filter"
 msgstr "경계 상자 필터"
 
-#: ../../docs/server_manual/services.rst:1928
+#: ../../docs/server_manual/services.rst:1927
 msgid ""
 "A bounding box spatial filter can be specified with the ``bbox`` parameter:"
 msgstr "경계 상자 공간 필터는 ``bbox`` 파라미터로 지정할 수 있습니다:"
 
-#: ../../docs/server_manual/services.rst:1930
+#: ../../docs/server_manual/services.rst:1929
 msgid "The order of the comma separated elements is:"
 msgstr "쉼표로 구분된 요소들의 순서는 다음과 같습니다:"
 
-#: ../../docs/server_manual/services.rst:1932
+#: ../../docs/server_manual/services.rst:1931
 msgid "Lower left corner, WGS 84 longitude"
 msgstr "좌하단 모서리, WGS 84 경도"
 
-#: ../../docs/server_manual/services.rst:1933
+#: ../../docs/server_manual/services.rst:1932
 msgid "Lower left corner, WGS 84 latitude"
 msgstr "좌하단 모서리, WGS 84 위도"
 
-#: ../../docs/server_manual/services.rst:1934
+#: ../../docs/server_manual/services.rst:1933
 msgid "Upper right corner, WGS 84 longitude"
 msgstr "우상단 모서리, WGS 84 경도"
 
-#: ../../docs/server_manual/services.rst:1935
+#: ../../docs/server_manual/services.rst:1934
 msgid "Upper right corner, WGS 84 latitude"
 msgstr "우상단 모서리, WGS 84 위도"
 
-#: ../../docs/server_manual/services.rst:1938
+#: ../../docs/server_manual/services.rst:1937
 msgid ""
 "The OGC specifications also allow a 6 item bbox specifier where the third "
 "and sixth items are the Z components, this is not yet supported by QGIS "
@@ -2293,11 +2747,23 @@ msgstr ""
 "OGC 사양은 경계 상자 파라미터의 값을 6개 항목으로 지정하는 일도 지원합니다. 이때 세 번째와 여섯 번째는 Z 요소인데, QGIS "
 "서버가 아직 지원하지 않고 있습니다."
 
-#: ../../docs/server_manual/services.rst:1963
+#: ../../docs/server_manual/services.rst:1948
+msgid ""
+"If the *CRS* of the bounding box is not `WGS 84 "
+"<https://www.opengis.net/def/crs/OGC/1.3/CRS84>`_, a different CRS can be "
+"specified by using the optional parameter ``bbox-crs``. The CRS format "
+"identifier must be in the `OGC URI <https://www.opengis.net/def/crs/>`_ "
+"format:"
+msgstr ""
+"경계 상자의 좌표계가 `WGS 84 <https://www.opengis.net/def/crs/OGC/1.3/CRS84>`_ 가 아닌 "
+"경우, 부가적인 ``bbox-crs`` 파라미터를 사용해서 다른 좌표계를 지정할 수 있습니다. 이때 좌표계 식별자 서식은 `OGC URI"
+" <https://www.opengis.net/def/crs/>`_ 에 있는 서식이어야만 합니다."
+
+#: ../../docs/server_manual/services.rst:1962
 msgid "Attribute filters"
 msgstr "속성 필터"
 
-#: ../../docs/server_manual/services.rst:1965
+#: ../../docs/server_manual/services.rst:1964
 msgid ""
 "Attribute filters can be combined with the bounding box filter and they are "
 "in the general form: ``<attribute name>=<attribute value>``. Multiple "
@@ -2306,23 +2772,41 @@ msgstr ""
 "속성 필터와 경계 상자 필터를 결합할 수 있습니다. 속성 필터의 일반적인 서식은 ``<attribute name>=<attribute "
 "value>`` 입니다. ``AND`` 연산자를 사용해서 여러 필터를 결합할 수 있습니다."
 
-#: ../../docs/server_manual/services.rst:1971
+#: ../../docs/server_manual/services.rst:1970
 msgid "filters all features where attribute ``name`` equals \"my value\""
 msgstr "``name`` 속성이 \"my value\" 와 동일한 모든 피처를 필터링"
 
-#: ../../docs/server_manual/services.rst:1978
+#: ../../docs/server_manual/services.rst:1977
 msgid "Partial matches are also supported by using a ``*`` (\"star\") operator:"
 msgstr "``*`` (\"star\") 연산자를 사용하는 부분 일치도 지원합니다:"
 
-#: ../../docs/server_manual/services.rst:1982
+#: ../../docs/server_manual/services.rst:1981
 msgid "filters all features where attribute ``name`` ends with \"value\""
 msgstr "``name`` 속성이 \"value\" 로 끝나는 모든 피처를 필터링"
 
-#: ../../docs/server_manual/services.rst:2003
+#: ../../docs/server_manual/services.rst:1988
+msgid "Feature sorting"
+msgstr "객체 정렬"
+
+#: ../../docs/server_manual/services.rst:1990
+msgid ""
+"It is possible to order the result set by field value using the ``sortby`` "
+"query parameter."
+msgstr "``sortby`` 쿼리 파라미터를 사용하면 필드값으로 설정된 산출물을 정렬할 수 있습니다."
+
+#: ../../docs/server_manual/services.rst:1993
+msgid ""
+"The results are sorted in ascending order by default. To sort the results in"
+" descending order, a boolean flag (``sortdesc``) can be set:"
+msgstr ""
+"산출물은 기본적으로 오름차순으로 정렬됩니다. 산출물을 내림차순으로 정렬하려면, 불(boolean) 플래그(``sortdesc``)를 "
+"설정하면 됩니다:"
+
+#: ../../docs/server_manual/services.rst:2002
 msgid "Attribute selection"
 msgstr "속성 선택"
 
-#: ../../docs/server_manual/services.rst:2005
+#: ../../docs/server_manual/services.rst:2004
 msgid ""
 "The feature attributes returned by a :ref:`ogc_api_features_features_list` "
 "call can be limited by adding a comma separated list of attribute names in "
@@ -2331,33 +2815,47 @@ msgstr ""
 "부가적인 ``properties`` 쿼리 문자열 인자에 쉼표로 구분한 속성명 목록을 추가하면 "
 ":ref:`ogc_api_features_features_list` 호출이 반환하는 피처 속성을 제한할 수 있습니다."
 
-#: ../../docs/server_manual/services.rst:2011
+#: ../../docs/server_manual/services.rst:2010
 msgid "returns only the ``name`` attribute"
 msgstr "``name`` 속성만 반환"
 
-#: ../../docs/server_manual/services.rst:2019
-msgid "The HTML template language"
-msgstr "HTML 템플릿 언어"
+#: ../../docs/server_manual/services.rst:2018
+msgid "Customize the HTML pages"
+msgstr "HTML 페이지 사용자 정의"
 
-#: ../../docs/server_manual/services.rst:2033
+#: ../../docs/server_manual/services.rst:2020
+msgid ""
+"The HTML representation uses a set of HTML templates to generate the "
+"response. The template is parsed by a template engine called `inja "
+"<https://github.com/pantor/inja/>`_. The templates can be customized by "
+"overriding them (see: :ref:`server_wfs3_template_override`). The template "
+"has access to the same data that are available to the ``JSON`` "
+"representation and a few additional functions are available to the template:"
+msgstr ""
+"HTML 표현은 응답을 생성하기 위해 HTML 템플릿의 집합을 사용합니다. `inja "
+"<https://github.com/pantor/inja/>`_ 라는 템플릿 엔진이 템플릿을 파싱합니다. 템플릿을 무시하면 "
+"(:ref:`server_wfs3_template_override` 참조) 템플릿을 사용자 지정할 수 있습니다. 템플릿은 ``JSON``"
+" 표현에 사용할 수 있는 데이터와 동일한 데이터에 접근할 수 있으며, 템플릿에 몇몇 추가 함수를 사용할 수 있습니다:"
+
+#: ../../docs/server_manual/services.rst:2032
 msgid "Custom template functions"
 msgstr "사용자 지정 템플릿 함수"
 
-#: ../../docs/server_manual/services.rst:2035
+#: ../../docs/server_manual/services.rst:2034
 msgid "``path_append( path )``: appends a directory path to the current url"
 msgstr "``path_append( path )``: 현재 URL에 디렉터리 경로를 추가합니다."
 
-#: ../../docs/server_manual/services.rst:2036
+#: ../../docs/server_manual/services.rst:2035
 msgid ""
 "``path_chomp( n )``: removes the specified number \"n\" of directory "
 "components from the current url path"
 msgstr "``path_chomp( n )``: 현재 URL 경로에서 디렉터리 요소들 가운데 지정한 \"n\" 번 디렉터리를 제거합니다."
 
-#: ../../docs/server_manual/services.rst:2038
+#: ../../docs/server_manual/services.rst:2037
 msgid "``json_dump( )``: prints the JSON data passed to the template"
 msgstr "``json_dump( )``: 템플릿에 전송된 JSON 데이터를 인쇄합니다."
 
-#: ../../docs/server_manual/services.rst:2039
+#: ../../docs/server_manual/services.rst:2038
 msgid ""
 "``static( path )``: returns the full URL to the specified static path. For "
 "example: \"static( \"/style/black.css\" )\" with a root path "
@@ -2368,13 +2866,13 @@ msgstr ""
 "\"http://localhost/qgisserver/wfs3\" 인 \"static( \"/style/black.css\" )\" 는 "
 "\"http://localhost/qgisserver/wfs3/static/style/black.css\" 를 반환할 것입니다."
 
-#: ../../docs/server_manual/services.rst:2043
+#: ../../docs/server_manual/services.rst:2042
 msgid ""
 "``links_filter( links, key, value )``: Returns filtered links from a link "
 "list"
 msgstr "``links_filter( links, key, value )``: 링크 목록에서 필터링한 링크를 반환합니다."
 
-#: ../../docs/server_manual/services.rst:2045
+#: ../../docs/server_manual/services.rst:2044
 msgid ""
 "``content_type_name( content_type )``: Returns a short name from a content "
 "type, for example \"text/html\" will return \"HTML\""
@@ -2382,11 +2880,11 @@ msgstr ""
 "``content_type_name( content_type )``: 내용 유형으로부터 약칭을 반환합니다. 예를 들어 "
 "\"text/html\" 은 \"HTML\" 을 반환할 것입니다."
 
-#: ../../docs/server_manual/services.rst:2052
+#: ../../docs/server_manual/services.rst:2051
 msgid "Template overrides"
 msgstr "템플릿 무시"
 
-#: ../../docs/server_manual/services.rst:2054
+#: ../../docs/server_manual/services.rst:2053
 msgid ""
 "Templates and static assets are stored in subdirectories of the QGIS server "
 "default API resource directory "
@@ -2398,11 +2896,11 @@ msgstr ""
 ":file:`/usr/share/qgis/resources/server/api/`)의 하위 디렉터리에 저장되는데, "
 "``QGIS_SERVER_API_RESOURCES_DIRECTORY`` 환경 변수를 변경하면 기본 디렉터리를 사용자 지정할 수 있습니다."
 
-#: ../../docs/server_manual/services.rst:2060
+#: ../../docs/server_manual/services.rst:2059
 msgid "A typical Linux installation will have the following directory tree:"
 msgstr "전형적인 리눅스 설치는 다음과 같은 디렉터리 트리를 가지게 될 것입니다:"
 
-#: ../../docs/server_manual/services.rst:2085
+#: ../../docs/server_manual/services.rst:2084
 msgid ""
 "To override the templates you can copy the whole tree to another location "
 "and point ``QGIS_SERVER_API_RESOURCES_DIRECTORY`` to the new location."
@@ -2410,26 +2908,26 @@ msgstr ""
 "템플릿을 무시하려면, 이 트리 전체를 다른 위치에 복사한 다음 ``QGIS_SERVER_API_RESOURCES_DIRECTORY`` "
 "환경 변수가 새 위치를 가리키도록 변경하십시오."
 
-#: ../../docs/server_manual/services.rst:2092
+#: ../../docs/server_manual/services.rst:2091
 msgid "Extra parameters supported by all request types"
 msgstr "모든 요청 유형이 지원하는 추가 파라미터들"
 
-#: ../../docs/server_manual/services.rst:2094
+#: ../../docs/server_manual/services.rst:2093
 msgid "The following extra parameters are supported by all protocols."
 msgstr "모든 프로토콜이 다음과 같은 추가 파라미터를 지원합니다."
 
-#: ../../docs/server_manual/services.rst:2096
+#: ../../docs/server_manual/services.rst:2095
 msgid ""
 "**FILE_NAME**: if set, the server response will be sent to the client as a "
 "file attachment with the specified file name."
 msgstr ""
 "**FILE_NAME**: 이 파라미터를 설정하면, 서버가 클라이언트에게 지정한 파일명을 가진 첨부 파일로 응답을 전송할 것입니다."
 
-#: ../../docs/server_manual/services.rst:2101
+#: ../../docs/server_manual/services.rst:2100
 msgid "Not available for WFS3."
 msgstr "WFS3에서는 사용할 수 없습니다."
 
-#: ../../docs/server_manual/services.rst:2103
+#: ../../docs/server_manual/services.rst:2102
 msgid ""
 "**MAP**: Similar to MapServer, the ``MAP`` parameter can be used to specify "
 "the path to the QGIS project file. You can specify an absolute path or a "
@@ -2442,11 +2940,11 @@ msgstr ""
 "지정할 수도 있습니다. 이 파라미터를 설정하지 않으면, QGIS는 서버 실행 파일이 위치한 디렉터리에서 :file:`.qgs` 파일을 "
 "검색합니다."
 
-#: ../../docs/server_manual/services.rst:2110
+#: ../../docs/server_manual/services.rst:2109
 msgid "Example::"
 msgstr "다음은 그 예시입니다:"
 
-#: ../../docs/server_manual/services.rst:2117
+#: ../../docs/server_manual/services.rst:2116
 msgid ""
 "You can define a **QGIS_PROJECT_FILE** as an environment variable to tell "
 "the server executable where to find the QGIS project file. This variable "
@@ -2458,17 +2956,17 @@ msgstr ""
 "알려줄 수 있습니다. 이 변수가 QGIS가 프로젝트 파일을 검색할 위치가 될 것입니다. 정의하지 않을 경우, 요청에 있는 ``MAP`` "
 "파라미터를 이용한 다음 마지막으로 서버 실행 파일이 있는 디렉터리를 살펴볼 것입니다."
 
-#: ../../docs/server_manual/services.rst:2128
+#: ../../docs/server_manual/services.rst:2127
 msgid "REDLINING"
 msgstr "REDLINING(특정 경계 지역 지정)"
 
-#: ../../docs/server_manual/services.rst:2130
+#: ../../docs/server_manual/services.rst:2129
 msgid ""
 "This feature is available and can be used with ``GetMap`` and ``GetPrint`` "
 "requests."
 msgstr "``GetMap`` 및 ``GetPrint`` 요청을 통해 이 기능을 사용할 수 있습니다."
 
-#: ../../docs/server_manual/services.rst:2133
+#: ../../docs/server_manual/services.rst:2132
 msgid ""
 "The redlining feature can be used to pass geometries and labels in the "
 "request which are overlapped by the server over the standard returned image "
@@ -2479,21 +2977,33 @@ msgstr ""
 "수 있습니다. 이 기능은 사용자가 표준 맵에는 없는 일부 지역 또는 위치 등을 강조하거나 또는 그런 곳에 주석(라벨)을 달 수 있도록 "
 "해줍니다."
 
-#: ../../docs/server_manual/services.rst:2165
+#: ../../docs/server_manual/services.rst:2138
+msgid "The ``GetMap`` request is in the format::"
+msgstr "다음과 같은 서식으로 ``GetMap`` 을 요청합니다:"
+
+#: ../../docs/server_manual/services.rst:2151
+msgid ""
+"The ``GetPrint`` equivalent is in the format (note that ``mapX:`` parameter "
+"is added to tell which map has redlining)::"
+msgstr ""
+"동일한 내용의 ``GetPrint`` 요청은 다음과 같습니다(어떤 맵을 특정 경계 지역 지정하는지 알리기 위해 ``mapX:`` "
+"파라미터를 추가했다는 점을 기억하세요):"
+
+#: ../../docs/server_manual/services.rst:2164
 msgid ""
 "Here is the image outputed by the above request in which a polygon and a "
 "label are drawn on top of the normal map:"
 msgstr "다음 그림은 앞의 요청을 통해 일반 맵 위에 폴리곤 및 라벨을 렌더링한 출력물을 보여줍니다:"
 
-#: ../../docs/server_manual/services.rst:2173
+#: ../../docs/server_manual/services.rst:2172
 msgid "Server response to a GetMap request with redlining parameters"
 msgstr "REDLINING 파라미터를 보유한 GetMap 요청에 대한 서버의 응답"
 
-#: ../../docs/server_manual/services.rst:2175
+#: ../../docs/server_manual/services.rst:2174
 msgid "You can see there are several parameters in this request:"
 msgstr "이 요청 안에 다음 여러 파라미터들이 있다는 것을 알 수 있습니다:"
 
-#: ../../docs/server_manual/services.rst:2177
+#: ../../docs/server_manual/services.rst:2176
 msgid ""
 "**HIGHLIGHT_GEOM**: You can add POINT, MULTILINESTRING, POLYGON etc. It "
 "supports multipart geometries. Here is an example: "
@@ -2504,7 +3014,7 @@ msgstr ""
 "파라미터는 ``HIGHLIGHT_GEOM=MULTILINESTRING((0 0, 0 1, 1 1))`` 과 같이 사용할 수 있습니다. "
 "사용 좌표는 ``GetMap`` / ``GetPrint`` 요청의 좌표계의 좌표여야 합니다."
 
-#: ../../docs/server_manual/services.rst:2182
+#: ../../docs/server_manual/services.rst:2181
 msgid ""
 "**HIGHLIGHT_SYMBOL**: This controls how the geometry is outlined and you can"
 " change the stroke width, color and opacity."
@@ -2512,38 +3022,44 @@ msgstr ""
 "**HIGHLIGHT_SYMBOL**: 이 파라미터는 도형의 외곽선을 어떻게 렌더링할지 제어하며, 사용자가 획의 너비, 색상 및 "
 "불투명도를 변경할 수 있습니다."
 
-#: ../../docs/server_manual/services.rst:2185
+#: ../../docs/server_manual/services.rst:2184
 msgid ""
 "**HIGHLIGHT_LABELSTRING**: You can pass your labeling text to this "
 "parameter."
 msgstr "**HIGHLIGHT_LABELSTRING**: 이 파라미터를 통해 사용자의 라벨 텍스트를 넘겨줄 수 있습니다."
 
-#: ../../docs/server_manual/services.rst:2188
+#: ../../docs/server_manual/services.rst:2187
 msgid ""
 "**HIGHLIGHT_LABELSIZE**: This parameter controls the size of the label."
 msgstr "**HIGHLIGHT_LABELSIZE**: 이 파라미터는 라벨의 크기를 제어합니다."
 
-#: ../../docs/server_manual/services.rst:2194
+#: ../../docs/server_manual/services.rst:2190
+msgid ""
+"**HIGHLIGHT_LABELFONT**: This parameter controls the font of the label (e.g."
+" Arial)"
+msgstr "**HIGHLIGHT_LABELFONT**: 이 파라미터는 라벨의 글꼴(예: Arial)을 제어합니다."
+
+#: ../../docs/server_manual/services.rst:2193
 msgid "**HIGHLIGHT_LABELCOLOR**: This parameter controls the label color."
 msgstr "**HIGHLIGHT_LABELCOLOR**: 이 파라미터는 라벨의 색상을 제어합니다."
 
-#: ../../docs/server_manual/services.rst:2196
+#: ../../docs/server_manual/services.rst:2195
 msgid ""
 "**HIGHLIGHT_LABELBUFFERCOLOR**: This parameter controls the label buffer "
 "color."
 msgstr "**HIGHLIGHT_LABELBUFFERCOLOR**: 이 파라미터는 라벨 버퍼의 색상을 제어합니다."
 
-#: ../../docs/server_manual/services.rst:2199
+#: ../../docs/server_manual/services.rst:2198
 msgid ""
 "**HIGHLIGHT_LABELBUFFERSIZE**: This parameter controls the label buffer "
 "size."
 msgstr "**HIGHLIGHT_LABELBUFFERSIZE**: 이 파라미터는 라벨 버퍼의 크기를 제어합니다."
 
-#: ../../docs/server_manual/services.rst:2203
+#: ../../docs/server_manual/services.rst:2202
 msgid "External WMS layers"
 msgstr "외부 WMS 레이어"
 
-#: ../../docs/server_manual/services.rst:2205
+#: ../../docs/server_manual/services.rst:2204
 msgid ""
 "QGIS Server allows including layers from external WMS servers in WMS GetMap "
 "and WMS GetPrint requests. This is especially useful if a web client uses an"
@@ -2557,7 +3073,7 @@ msgstr ""
 "(QGIS 서버를 통해 순차적으로 요청하는 것이 아니라) 직접 요청해야 합니다. 하지만 인쇄 작업의 경우, 인쇄한 맵에 이런 레이어가 "
 "나타나게 하려면 QGIS 서버를 통해 순차적으로 요청해야 합니다."
 
-#: ../../docs/server_manual/services.rst:2212
+#: ../../docs/server_manual/services.rst:2211
 msgid ""
 "External layers can be added to the LAYERS parameter as "
 "EXTERNAL_WMS:<layername>. The parameters for the external WMS layers (e.g. "
@@ -2570,6 +3086,75 @@ msgstr ""
 "``styles`` 등)는 차후 서비스 파라미터 ``<layername>:<parameter>`` 로 지정할 수 있습니다. "
 "``GetMap`` 요청에서는 다음과 같이 보일 수도 있습니다:"
 
-#: ../../docs/server_manual/services.rst:2233
+#: ../../docs/server_manual/services.rst:2232
 msgid "Similarly, external layers can be used in GetPrint requests:"
 msgstr "``GetPrint`` 요청에서도 이와 비슷하게 외부 레이어를 사용할 수 있습니다:"
+
+#: ../../docs/server_manual/services.rst:2250
+msgid "QGIS Server catalog"
+msgstr "QGIS 서버 카탈로그"
+
+#: ../../docs/server_manual/services.rst:2252
+msgid ""
+"The QGIS Server Catalog is a simple catalog that shows the list of QGIS "
+"projects served by the QGIS Server. It provides a user-friendly fully "
+"browsable website with basic mapping capabilities to quickly browse the "
+"datasets exposed through those QGIS projects."
+msgstr ""
+"QGIS 서버 카탈로그는 QGIS 서버가 서비스하는 QGIS 프로젝트들의 목록을 보여주는 단순 카탈로그입니다. 해당 QGIS 프로젝트들을"
+" 통해 노출되는 데이터셋을 손쉽게 탐색할 수 있는 기본 매핑 케이퍼빌리티를 가지고 있는, 완전 검색이 가능하고 사용자 친화적인 웹사이트를"
+" 제공합니다."
+
+#: ../../docs/server_manual/services.rst:2257
+msgid ""
+"The QGIS Server catalog uses the variables "
+"QGIS_SERVER_LANDING_PAGE_PROJECTS_DIRECTORIES and  "
+"QGIS_SERVER_LANDING_PAGE_PROJECTS_PG_CONNECTIONS (see :ref:`qgis-server-"
+"envvar`)"
+msgstr ""
+"QGIS 서버 카탈로그는 QGIS_SERVER_LANDING_PAGE_PROJECTS_DIRECTORIES 및 "
+"QGIS_SERVER_LANDING_PAGE_PROJECTS_PG_CONNECTIONS 변수를 사용합니다. (:ref:`qgis-"
+"server-envvar` 를 참조하세요.)"
+
+#: ../../docs/server_manual/services.rst:2265
+msgid "Server Catalog project list page"
+msgstr "서버 카탈로그 프로젝트 목록 페이지"
+
+#: ../../docs/server_manual/services.rst:2267
+msgid ""
+"You can consult the metadata associated to a project and the services that "
+"it provides. Links to those services are also given."
+msgstr "프로젝트에 관련된 메타데이터와 프로젝트가 제공하는 서비스를 참고할 수 있습니다. 이런 서비스를 가리키는 링크도 제공됩니다."
+
+#: ../../docs/server_manual/services.rst:2275
+msgid ""
+"Server Catalog, metadata associated to a project and services (links to) "
+"that it provides."
+msgstr "서버 카탈로그, 프로젝트에 관련된 메타데이터와 프로젝트가 제공하는 서비스(를 가리키는 링크)"
+
+#: ../../docs/server_manual/services.rst:2277
+msgid "By browsing a project, it is listed the dataset that it serves."
+msgstr "프로젝트를 탐색하면 해당 프로젝트가 서비스하는 데이터셋 목록을 볼 수 있습니다."
+
+#: ../../docs/server_manual/services.rst:2284
+msgid "Browsing a dataset served by a project in the Server Catalog"
+msgstr "서버 카탈로그에 있는 프로젝트가 서비스하는 데이터셋 탐색하기"
+
+#: ../../docs/server_manual/services.rst:2286
+msgid ""
+"Use Right click on a layer to display the attribute table associated to it."
+msgstr "레이어를 오른쪽 클릭하면 해당 레이어 관련 속성 테이블을 표시합니다."
+
+#: ../../docs/server_manual/services.rst:2293
+msgid "Attribute table associated to a layer"
+msgstr "레이어 관련 속성 테이블"
+
+#: ../../docs/server_manual/services.rst:2295
+msgid ""
+"It is possible to consult information of the elements in the map as shown in"
+" the image below:"
+msgstr "다음 그림에서 볼 수 있는 것처럼, 맵에 있는 요소들의 정보도 참고할 수 있습니다:"
+
+#: ../../docs/server_manual/services.rst:2302
+msgid "Consulting information of a map element"
+msgstr "맵 요소의 정보 참고하기"
