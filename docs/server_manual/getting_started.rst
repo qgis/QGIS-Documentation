@@ -265,6 +265,7 @@ Install NGINX:
 
  apt install nginx
 
+You can follow this guide for more detailed `installation of nginx <https://www.armanism.com/blog/install-nginx-on-ubuntu>`_.
 
 * As a first option, you can use **spawn-fcgi** or **fcgiwrap** to start and manage the
   QGIS Server processes.
