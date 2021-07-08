@@ -352,33 +352,8 @@ Data Sources Settings
   * ‘Never’: Never prompt, will not load anything
   * ‘Load all’: Never prompt, but load all sublayers
 
-* |checkbox| :guilabel:`Ignore shapefile encoding declaration`. If a shapefile
-  has encoding information, this will be ignored by QGIS.
-* |checkbox| :guilabel:`Execute expressions on server-side if possible`: When
-  requesting features from a datasource, QGIS will try to optimize requests by
-  sending filter criteria directly to the server and only download the features
-  which match the criteria. For example, if for a list on the user interface
-  only the farmers which live in Bern should be listed, QGIS will send a ``WHERE
-  "hometown" = 'Bern'`` to the database.
-  In some cases, filter criteria are too complex to be translated from QGIS
-  Expressions to database compatible SQL. In those cases, QGIS will download
-  the whole data and filter locally to be on the safe side, which is much less
-  performant.
 
-  By disabling this option, QGIS can be forced to always download the whole data
-  and filter locally, at the expense of a performance penalty. This option is
-  meant as a safety break and should only be deactivated if you identify a
-  misbehavior of the QGIS expression translation engine.
-
-
-**Hidden Browser Path**
-
-This widget lists all the folders you chose to hide from the :ref:`Browser panel
-<browser_panel>`.
-Removing a folder from the list will make it available in the :guilabel:`Browser`
-panel.
-
-**Localized paths**
+**Localized data paths**
 
 It is possible to use localized paths for any kind of file based data source.
 They are a list of paths which are used to abstract the data source location.
@@ -388,6 +363,13 @@ will be saved in the project using :file:`localized:my_country\\ortho.tif`.
 
 The paths are listed by order of preference, in other words QGIS will first look
 for the file in the first path, then in the second one, etc.
+
+**Hidden browser paths**
+
+This widget lists all the folders you chose to hide from the :ref:`Browser panel
+<browser_panel>`.
+Removing a folder from the list will make it available in the :guilabel:`Browser`
+panel.
 
 
 .. index:: Rendering
@@ -795,6 +777,23 @@ It provides drivers to read and (often) write data in these formats.
 The :guilabel:`GDAL` tab exposes the drivers for raster and vector
 formats with their capabilities.
 
+GDAL raster and vector drivers
+..............................
+
+The :guilabel:`Raster Drivers` and :guilabel:`Vector Drivers` tabs
+allow you to define which GDAL driver is enabled to read and/or
+write files, as in some cases more than one GDAL driver is available.
+
+.. _figure_gdal_settings:
+.. figure:: img/options_gdal.png
+   :align: center
+
+   GDAL Settings in QGIS - Raster drivers
+
+.. tip:: Double-click a raster driver that allows read and write access
+   (``rw+(v)``) opens the :ref:`Edit Create options <gdal_createoptions>`
+   dialog for customization.
+
 Raster driver options
 .....................
 
@@ -840,23 +839,6 @@ support read and write access:
      :align: center
 
      Sample of Pyramids profile
-
-GDAL raster and vector drivers
-..............................
-
-The :guilabel:`Raster Drivers` and :guilabel:`Vector Drivers` (in a separated
-tab) allow you to define which GDAL driver is enabled to read and/or
-write files, as in some cases more than one GDAL driver is available.
-
-.. _figure_gdal_settings:
-.. figure:: img/options_gdal.png
-   :align: center
-
-   GDAL Settings in QGIS - Raster drivers
-
-.. tip:: Double-click a raster driver that allows read and write access
-   (``rw+(v)``) opens the :ref:`Edit Create options <gdal_createoptions>`
-   dialog for customization.
 
 .. index:: Variables
 .. _variables_options:
@@ -1023,39 +1005,6 @@ The set of default locator filters can be extended by plugins, eg for OSM
 nominatim searches, direct database searching, layer catalog searches, ...
 
 
-.. _optionsadvanced:
-
-Advanced Settings
------------------
-
-.. _figure_advanced_settings:
-
-.. figure:: img/options_advanced.png
-   :align: center
-
-   Advanced Settings tab in QGIS
-
-All the settings related to QGIS (UI, tools, data providers, Processing
-configurations, default values and paths, plugins options, expressions,
-geometry checks...) are saved in a :file:`QGIS/QGIS3.ini` file under the active
-:ref:`user profile <user_profiles>` directory.
-Configurations can be shared by copying this file to other installations.
-
-From within QGIS, the :guilabel:`Advanced` tab offers a way to manage these
-settings through the :guilabel:`Advanced Settings Editor`.
-After you promise to be careful, the widget is populated with a tree of all
-the existing settings, and you can edit their value.
-Right-click over a setting or a group and you can delete it
-(to add a setting or group, you have to edit the :file:`QGIS3.ini` file).
-Changes are automatically saved in the :file:`QGIS3.ini` file.
-
-.. warning:: **Avoid using the Advanced tab settings blindly**
-
-   Be careful while modifying items in this dialog given that changes are
-   automatically applied. Doing changes without knowledge can break your
-   QGIS installation in various ways.
-
-
 Acceleration Settings
 ---------------------
 OpenCL acceleration settings.
@@ -1181,6 +1130,39 @@ JavaScript). A convenient way to adjust settings.
     scheme.
   * change the :ref:`color <color_widget>` of each element in code writing,
     such as the colors to use for comments, quotes, functions, background, ...
+
+
+.. _optionsadvanced:
+
+Advanced Settings
+-----------------
+
+.. _figure_advanced_settings:
+
+.. figure:: img/options_advanced.png
+   :align: center
+
+   Advanced Settings tab in QGIS
+
+All the settings related to QGIS (UI, tools, data providers, Processing
+configurations, default values and paths, plugins options, expressions,
+geometry checks...) are saved in a :file:`QGIS/QGIS3.ini` file under the active
+:ref:`user profile <user_profiles>` directory.
+Configurations can be shared by copying this file to other installations.
+
+From within QGIS, the :guilabel:`Advanced` tab offers a way to manage these
+settings through the :guilabel:`Advanced Settings Editor`.
+After you promise to be careful, the widget is populated with a tree of all
+the existing settings, and you can edit their value.
+Right-click over a setting or a group and you can delete it
+(to add a setting or group, you have to edit the :file:`QGIS3.ini` file).
+Changes are automatically saved in the :file:`QGIS3.ini` file.
+
+.. warning:: **Avoid using the Advanced tab settings blindly**
+
+   Be careful while modifying items in this dialog given that changes are
+   automatically applied. Doing changes without knowledge can break your
+   QGIS installation in various ways.
 
 
 .. index:: User profile
