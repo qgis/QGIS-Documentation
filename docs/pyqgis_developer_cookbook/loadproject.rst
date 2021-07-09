@@ -96,18 +96,20 @@ Resolving bad paths
 ===================
 
 It can happen that layers loaded in the project are moved to another location.
-When the project is loaded again all the layer paths are broken. 
+When the project is loaded again all the layer paths are broken.
+The :class:`QgsPathResolver <qgis.core.QgsPathResolver>` class helps you rewrite
+layers path within the project.
 
-The :class:`QgsPathResolver <qgis.core.QgsPathResolver>` class with the 
-:meth:`setPathPreprocessor() <qgis.core.QgsPathResolver.setPathPreprocessor>` 
-allows setting a custom path pre-processor function, which allows for 
-manipulation of paths and data sources prior to resolving them to file references 
+Its :meth:`setPathPreprocessor() <qgis.core.QgsPathResolver.setPathPreprocessor>`
+method allows setting a custom path pre-processor function to
+manipulate paths and data sources prior to resolving them to file references
 or layer sources.
 
 The processor function must accept a single string argument (representing the
 original file path or data source) and return a processed version of this path.
-
-The path pre-processor function is called **before** any bad layer handler. 
+The path pre-processor function is called **before** any bad layer handler.
+If multiple preprocessors are set, they will be called in sequence based
+on the order in which they were originally set.
 
 Some use cases:
 
@@ -139,3 +141,20 @@ Some use cases:
             return path
 
         QgsPathResolver.setPathPreprocessor(my_processor)
+
+Likewise, a :meth:`setPathWriter() <qgis.core.QgsPathResolver.setPathWriter>`
+method is available for a path writer function.
+
+An example to replace the path with a variable:
+
+.. testcode:: loadproject
+
+  def my_processor(path):
+    return path.replace('c:/Users/ClintBarton/Documents/Projects', '$projectdir$')
+
+  QgsPathResolver.setPathWriter(my_processor)
+
+Both methods return an ``id`` that can be used to remove the pre-processor
+or writer they added.
+See :meth:`removePathPreprocessor() <qgis.core.QgsPathResolver.removePathPreprocessor>`
+and :meth:`removePathWriter() <qgis.core.QgsPathResolver.removePathWriter>`.
