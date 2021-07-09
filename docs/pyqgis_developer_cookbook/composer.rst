@@ -7,9 +7,15 @@
 
     iface = start_qgis()
 
-The code snippets on this page need the following imports:
+.. _layout:
 
-.. testcode:: composer
+**************************
+Map Rendering and Printing
+**************************
+
+.. hint:: The code snippets on this page need the following imports:
+
+  .. testcode:: composer
 
     import os
 
@@ -44,14 +50,10 @@ The code snippets on this page need the following imports:
         QSize,
     )
 
-.. _layout:
+.. only:: html
 
-**************************
-Map Rendering and Printing
-**************************
-
-.. contents::
-   :local:
+   .. contents::
+      :local:
 
 There are generally two approaches when input data should be rendered as a map:
 either do it quick way using `QgsMapRendererJob` or produce more fine-tuned

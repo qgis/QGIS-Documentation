@@ -18,10 +18,15 @@
         assert vlayer.isValid()
         QgsProject.instance().addMapLayers([vlayer])
 
+.. _geometry:
 
-The code snippets on this page need the following imports if you're outside the pyqgis console:
+*****************
+Geometry Handling
+*****************
 
-.. testcode:: geometry
+.. hint:: The code snippets on this page need the following imports if you're outside the pyqgis console:
+
+ .. testcode:: geometry
 
     from qgis.core import (
       QgsGeometry,
@@ -37,15 +42,10 @@ The code snippets on this page need the following imports if you're outside the 
       QgsCoordinateReferenceSystem
     )
 
-.. _geometry:
+.. only:: html
 
-
-*****************
-Geometry Handling
-*****************
-
-.. contents::
-   :local:
+   .. contents::
+      :local:
 
 Points, linestrings and polygons that represent a spatial feature are commonly
 referred to as geometries. In QGIS they are represented with the

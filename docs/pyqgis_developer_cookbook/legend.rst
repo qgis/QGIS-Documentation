@@ -1,4 +1,3 @@
-
 .. highlight:: python
    :linenothreshold: 5
 
@@ -18,24 +17,25 @@
         assert vlayer.isValid()
         QgsProject.instance().addMapLayers([vlayer])
 
-The code snippets on this page need the following imports if you're outside the pyqgis console:
-
-.. testcode:: legend
-
-    from qgis.core import (
-        QgsProject,
-        QgsVectorLayer,
-    )
-
-
 .. _legendpy:
 
 *************************************
 Accessing the Table Of Contents (TOC)
 *************************************
 
-.. contents::
-   :local:
+.. hint:: The code snippets on this page need the following imports if you're outside the pyqgis console:
+
+  .. testcode:: legend
+
+    from qgis.core import (
+        QgsProject,
+        QgsVectorLayer,
+    )
+
+.. only:: html
+
+   .. contents::
+      :local:
 
 
 You can use different classes to access all the loaded layers in the TOC and

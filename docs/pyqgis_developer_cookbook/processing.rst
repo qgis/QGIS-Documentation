@@ -1,4 +1,3 @@
-
 .. highlight:: python
    :linenothreshold: 5
 
@@ -17,8 +16,10 @@
 Writing a Processing plugin
 ****************************
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 Depending on the kind of plugin that you are going to develop, it might be a better
 option to add its functionality as a Processing algorithm (or a set of them).

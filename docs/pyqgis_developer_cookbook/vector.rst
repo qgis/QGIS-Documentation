@@ -1,4 +1,3 @@
-
 .. highlight:: python
    :linenothreshold: 5
 
@@ -8,9 +7,15 @@
 
     problem_occurred = False
 
-The code snippets on this page need the following imports if you're outside the pyqgis console:
+.. _vector:
 
-.. testcode:: vectors
+*******************
+Using Vector Layers
+*******************
+
+.. hint:: The code snippets on this page need the following imports if you're outside the pyqgis console:
+
+  .. testcode:: vectors
 
     from qgis.core import (
       QgsApplication,
@@ -47,14 +52,10 @@ The code snippets on this page need the following imports if you're outside the 
         QColor,
     )
 
-.. _vector:
+.. only:: html
 
-*******************
-Using Vector Layers
-*******************
-
-.. contents::
-   :local:
+   .. contents::
+      :local:
 
 This section summarizes various actions that can be done with vector layers.
 

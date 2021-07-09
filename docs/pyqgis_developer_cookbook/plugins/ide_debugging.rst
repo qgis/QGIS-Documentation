@@ -4,8 +4,10 @@
 IDE settings for writing and debugging plugins
 **********************************************
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 
 Although each programmer has his preferred IDE/Text editor, here are some

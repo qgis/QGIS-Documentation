@@ -1,16 +1,20 @@
-.. index:: Map canvas
-
 .. highlight:: python
    :linenothreshold: 5
-
 
 .. testsetup:: canvas
 
     iface = start_qgis()
 
-The code snippets on this page need the following imports if you're outside the pyqgis console:
+.. index:: Map canvas
+.. _canvas:
 
-.. testcode:: canvas
+********************
+Using the Map Canvas
+********************
+
+.. hint:: The code snippets on this page need the following imports if you're outside the pyqgis console:
+
+  .. testcode:: canvas
 
     from qgis.PyQt.QtGui import (
         QColor,
@@ -34,16 +38,10 @@ The code snippets on this page need the following imports if you're outside the 
         QgsRubberBand,
     )
 
+.. only:: html
 
-.. _canvas:
-
-********************
-Using the Map Canvas
-********************
-
-
-.. contents::
-   :local:
+   .. contents::
+      :local:
 
 The Map canvas widget is probably the most important widget within QGIS because
 it shows the map composed from overlaid map layers and allows interaction with

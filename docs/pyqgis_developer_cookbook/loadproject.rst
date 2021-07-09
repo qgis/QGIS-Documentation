@@ -1,4 +1,3 @@
-
 .. highlight:: python
    :linenothreshold: 5
 
@@ -8,9 +7,15 @@
 
     canvas = iface.mapCanvas()
 
-The code snippets on this page need the following imports if you're outside the pyqgis console:
+.. _loadproject:
 
-.. testcode:: loadproject
+****************
+Loading Projects
+****************
+
+.. hint:: The code snippets on this page need the following imports if you're outside the pyqgis console:
+
+  .. testcode:: loadproject
 
     from qgis.core import (
         QgsProject,
@@ -21,12 +26,10 @@ The code snippets on this page need the following imports if you're outside the 
         QgsLayerTreeMapCanvasBridge,
     )
 
+.. only:: html
 
-.. _loadproject:
-
-****************
-Loading Projects
-****************
+   .. contents::
+      :local:
 
 Sometimes you need to load an existing project from a plugin or (more often)
 when developing a standalone QGIS Python application (see: :ref:`pythonapplications`).

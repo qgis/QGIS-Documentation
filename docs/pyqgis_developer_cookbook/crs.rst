@@ -1,4 +1,3 @@
-
 .. highlight:: python
    :linenothreshold: 5
 
@@ -6,10 +5,15 @@
 
     iface = start_qgis()
 
+.. _crs:
 
-The code snippets on this page need the following imports if you're outside the pyqgis console:
+*******************
+Projections Support
+*******************
 
-.. testcode:: crs
+.. hint:: The code snippets on this page need the following imports if you're outside the pyqgis console:
+
+  .. testcode:: crs
 
     from qgis.core import (
         QgsCoordinateReferenceSystem,
@@ -18,12 +22,10 @@ The code snippets on this page need the following imports if you're outside the 
         QgsPointXY,
     )
 
-.. _crs:
+.. only:: html
 
-*******************
-Projections Support
-*******************
-
+   .. contents::
+      :local:
 
 .. index:: Coordinate reference systems
 

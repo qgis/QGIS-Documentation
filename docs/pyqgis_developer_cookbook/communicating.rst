@@ -7,9 +7,14 @@
 
     iface = start_qgis()
 
-The code snippets on this page need the following imports if you're outside the pyqgis console:
 
-.. testcode:: communicating
+***************************
+Communicating with the user
+***************************
+
+.. hint:: The code snippets on this page need the following imports if you're outside the pyqgis console:
+
+  .. testcode:: communicating
 
     from qgis.core import (
         QgsMessageLog,
@@ -28,14 +33,10 @@ The code snippets on this page need the following imports if you're outside the 
         QDialogButtonBox,
     )
 
+.. only:: html
 
-
-***************************
-Communicating with the user
-***************************
-
-.. contents::
-   :local:
+   .. contents::
+      :local:
 
 This section shows some methods and elements that should be used to communicate
 with the user, in order to keep consistency in the User Interface.

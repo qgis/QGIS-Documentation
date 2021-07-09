@@ -8,9 +8,15 @@
 
     iface = start_qgis()
 
-The code snippets on this page need the following imports if you're outside the pyqgis console:
+.. _tasks:
 
-.. testcode:: tasks
+******************************************
+Tasks - doing heavy work in the background
+******************************************
+
+.. hint:: The code snippets on this page need the following imports if you're outside the pyqgis console:
+
+  .. testcode:: tasks
 
     from qgis.core import (
       QgsProcessingContext,
@@ -23,11 +29,10 @@ The code snippets on this page need the following imports if you're outside the 
       QgsMessageLog,
     )
 
-.. _tasks:
+.. only:: html
 
-******************************************
-Tasks - doing heavy work in the background
-******************************************
+   .. contents::
+      :local:
 
 Introduction
 ------------

@@ -4,8 +4,10 @@
  Releasing your plugin
 ***********************
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 Once your plugin is ready and you think the plugin could be helpful for
 some people, do not hesitate to upload it to :ref:`official_pyqgis_repository`.

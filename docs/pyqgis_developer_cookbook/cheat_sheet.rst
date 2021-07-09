@@ -1,5 +1,3 @@
-.. _cheat-sheet:
-
 .. highlight:: python
    :linenothreshold: 5
 
@@ -19,9 +17,15 @@
 
     iface.attributesToolBar.return_value = toolbar
 
-The code snippets on this page need the following imports if you're outside the pyqgis console:
+.. _cheat-sheet:
 
-.. testcode:: cheat_sheet
+**********************
+Cheat sheet for PyQGIS
+**********************
+
+.. hint:: The code snippets on this page need the following imports if you're outside the pyqgis console:
+
+  .. testcode:: cheat_sheet
 
     from qgis.PyQt.QtCore import (
         QRectF,
@@ -36,15 +40,11 @@ The code snippets on this page need the following imports if you're outside the 
         QgsLayerTreeView,
     )
 
-
-**********************
-Cheat sheet for PyQGIS
-**********************
-
 .. only:: html
 
    .. contents::
       :local:
+
 
 User Interface
 ==============

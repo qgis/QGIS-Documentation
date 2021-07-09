@@ -26,9 +26,18 @@
     QgsProject.instance().addMapLayers([rlayer, rlayer_multi])
     assert rlayer.isValid()
 
-The code snippets on this page need the following imports if you're outside the pyqgis console:
+.. _raster:
 
-.. testcode:: raster
+.. index::
+   pair: Raster; Raster layers
+
+*********************
+ Using Raster Layers
+*********************
+
+.. hint:: The code snippets on this page need the following imports if you're outside the pyqgis console:
+
+  .. testcode:: raster
 
     from qgis.core import (
         QgsRasterLayer,
@@ -46,14 +55,10 @@ The code snippets on this page need the following imports if you're outside the 
         QColor,
     )
 
-.. _raster:
+.. only:: html
 
-.. index::
-   pair: Raster; Raster layers
-
-*********************
- Using Raster Layers
-*********************
+   .. contents::
+      :local:
 
 .. index:: Raster layers; Details
 
