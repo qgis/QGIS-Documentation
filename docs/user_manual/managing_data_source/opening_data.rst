@@ -29,7 +29,7 @@ and often write a lot of formats:
   many more...
   Read the complete list of `supported raster formats
   <https://gdal.org/drivers/raster/index.html>`_.
-* Database formats include PostgreSQL/PostGIS, SQLite/SpatiaLite, Oracle, DB2,
+* Database formats include PostgreSQL/PostGIS, SQLite/SpatiaLite, Oracle,
   MSSQL Spatial, SAP HANA, MySQL...
 * Web map and data services (WM(T)S, WFS, WCS, CSW, XYZ tiles, ArcGIS
   services, ...) are also handled by QGIS providers.
@@ -154,7 +154,6 @@ hierarchically, and there are several top level entries:
    * |postgis| :guilabel:`PostGIS`
    * |mssql| :guilabel:`MSSQL`
    * |oracle| :guilabel:`Oracle`
-   * |db2| :guilabel:`DB2`
    * |hana| :guilabel:`SAP HANA`
    * |wms| :guilabel:`WMS/WMTS`
    * |vectorTileLayer| :guilabel:`Vector Tiles`
@@ -293,7 +292,7 @@ The DB Manager
 
 The :guilabel:`DB Manager` Plugin is another tool
 for integrating and managing spatial database formats supported by
-QGIS (PostGIS, SpatiaLite, GeoPackage, Oracle Spatial, MSSQL, DB2, Virtual
+QGIS (PostGIS, SpatiaLite, GeoPackage, Oracle Spatial, MSSQL, Virtual
 layers). It can be activated from the
 :menuselection:`Plugins --> Manage and Install Plugins...` menu.
 
@@ -734,8 +733,6 @@ of them and load their tables:
 * |addMssqlLayer| :menuselection:`Add MSSQL Spatial Layer`
 * |addOracleLayer| :menuselection:`Add Oracle Spatial Layer...` or by typing
   :kbd:`Ctrl+Shift+O`
-* |addDb2Layer| :menuselection:`Add DB2 Spatial Layer...` or by typing
-  :kbd:`Ctrl+Shift+2`
 * |addHanaLayer| :menuselection:`Add SAP HANA Spatial Layer...` or by typing
   :kbd:`Ctrl+Shift+G`
 
@@ -756,7 +753,6 @@ corresponding descriptions at:
 
 * :ref:`create_mssql_connection`;
 * :ref:`create_oracle_connection`;
-* :ref:`create_db2_connection`;
 * :ref:`create_hana_connection`.
 
 The first time you use a PostGIS data source, you must create a connection to a
@@ -1008,52 +1004,6 @@ Optionally, you can activate the following checkboxes:
 
    To ensure that selection tools work correctly, it is recommended that your
    tables have a **primary key**.
-
-
-.. _create_db2_connection:
-
-Connecting to DB2 Spatial
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-In addition to some of the options described in
-:ref:`vector_create_stored_connection`, the connection to a DB2 database (see
-:ref:`label_db2_spatial` for more information) can be specified using either a
-:guilabel:`Service/DSN` name defined to ODBC or :guilabel:`Driver`,
-:guilabel:`Host` and :guilabel:`Port`.
-
-An ODBC **Service/DSN** connection requires the service name defined to ODBC.
-
-A driver/host/port connection requires:
-
-* **Driver**: Name of the DB2 driver.
-  Typically this would be IBM DB2 ODBC DRIVER.
-* **DB2 Host**: Name of the database host.
-  This must be a resolvable host name such as would be used to open a
-  TCP/IP connection or ping the host.
-  If the database is on the same computer as QGIS, simply enter
-  *localhost* here.
-* **DB2 Port**: Port number the DB2 database server listens on.
-  The default DB2 LUW port is ``50000``.
-  The default DB2 z/OS port is ``446``.
-
-.. _tip_db2_Spatial_layers:
-
-.. tip:: **DB2 Spatial Layers**
-
-   A DB2 Spatial layer is defined by a row in the
-   **DB2GSE.ST_GEOMETRY_COLUMNS** view.
-
-.. note::
-
-  In order to work effectively with DB2 spatial tables in QGIS, it is important
-  that tables have an INTEGER or BIGINT column defined as PRIMARY KEY and if new
-  features are going to be added, this column should also have the GENERATED
-  characteristic.
-
-  It is also helpful for the spatial column to be registered with a specific
-  spatial reference identifier (most often ``4326`` for WGS84 coordinates).
-  A spatial column can be registered by calling the
-  ``ST_Register_Spatial_Column`` stored procedure.
 
 
 .. _create_mssql_connection:
@@ -1396,8 +1346,6 @@ Examples of XYZ Tile services:
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |addDb2Layer| image:: /static/common/mActionAddDb2Layer.png
-   :width: 1.5em
 .. |addDelimitedTextLayer| image:: /static/common/mActionAddDelimitedTextLayer.png
    :width: 1.5em
 .. |addHanaLayer| image:: /static/common/mActionAddHanaLayer.png
@@ -1431,8 +1379,6 @@ Examples of XYZ Tile services:
 .. |collapseTree| image:: /static/common/mActionCollapseTree.png
    :width: 1.5em
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
-   :width: 1.5em
-.. |db2| image:: /static/common/mIconDb2.png
    :width: 1.5em
 .. |dbManager| image:: /static/common/dbmanager.png
    :width: 1.5em

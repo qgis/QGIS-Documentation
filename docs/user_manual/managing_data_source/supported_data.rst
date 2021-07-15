@@ -52,7 +52,7 @@ Many of the features and tools available in QGIS work the same,
 regardless the vector data source.
 However, because of the differences in format specifications
 (GeoPackage, ESRI Shapefile, MapInfo and MicroStation file formats,
-AutoCAD DXF, PostGIS, SpatiaLite, DB2, Oracle Spatial, MSSQL
+AutoCAD DXF, PostGIS, SpatiaLite, Oracle Spatial, MSSQL
 Spatial, SAP HANA Spatial databases and many more), QGIS may handle some of
 their properties differently.
 Support is provided by the
@@ -621,58 +621,6 @@ GeoJSON - Newline Delimited has some specific Layer options availabe too:
   geojsons).
   Default to NO.
   Files are given the :file:`.json` extension if extension is not provided.
-
-
-.. index:: DB2 Spatial
-.. _label_db2_spatial:
-
-DB2 Spatial Layers
-------------------
-
-IBM DB2 for Linux, Unix and Windows (DB2 LUW), IBM DB2 for z/OS (mainframe)
-and IBM DashDB products allow
-users to store and analyse spatial data in relational table columns.
-The DB2 provider for QGIS supports the full range of visualization, analysis
-and manipulation of spatial data in these databases.
-
-.. _DB2 z/OS KnowledgeCenter: https://www.ibm.com/support/knowledgecenter/en/SSEPEK_11.0.0/spatl/src/tpc/spatl_db2sb03.html
-.. _DB2 LUW KnowledgeCenter: https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.spatial.topics.doc/doc/db2sb03.html
-.. _DB2 DashDB KnowledgeCenter: https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.db2.luw.spatial.topics.doc/doc/csbp1001.html
-.. _DB2 Spatial Tutorial: https://www.ibm.com/developerworks/data/tutorials/dm-1202db2spatialdata1/
-
-User documentation on these capabilities can be found at the
-`DB2 z/OS KnowledgeCenter`_, `DB2 LUW KnowledgeCenter`_
-and `DB2 DashDB KnowledgeCenter`_.
-
-For more information about working with the DB2 spatial capabilities,
-check out the `DB2 Spatial Tutorial`_ on IBM DeveloperWorks.
-
-The DB2 provider currently only supports the Windows environment
-through the Windows ODBC driver.
-
-The client running QGIS needs to have one of the following installed:
-
-* DB2 LUW
-* IBM Data Server Driver Package
-* IBM Data Server Client
-
-To open a DB2 data in QGIS, see the :ref:`browser_panel` or
-:ref:`vector_loading_database` section. 
-
-If you are accessing a DB2 LUW database on the same machine or using DB2 LUW as
-a client, the DB2 executables and supporting files need to be included in the
-Windows path.
-This can be done by creating a batch file like the following with
-the name **db2.bat** and including it in the directory
-**%OSGEO4W_ROOT%/etc/ini**::
-
-	@echo off
-	REM Point the following to where DB2 is installed
-	SET db2path=C:\Program Files (x86)\sqllib
-	REM This should usually be ok - modify if necessary
-	SET gskpath=C:\Program Files (x86)\ibm\gsk8
-	SET Path=%db2path%\BIN;%db2path%\FUNCTION;%gskpath%\lib64;%gskpath%\lib;%path%
-
 
 
 .. index:: SAP HANA Spatial

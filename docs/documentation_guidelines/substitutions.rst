@@ -81,7 +81,7 @@ Manage Layers and overview
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
 |dataSourceManager|             ``|dataSourceManager|``             \                               \
-|addOgrLayer|                   ``|addOgrLayer|``                   |addDb2Layer|                   ``|addDb2Layer|``
+|addOgrLayer|                   ``|addOgrLayer|``
 |addRasterLayer|                ``|addRasterLayer|``                |addMssqlLayer|                 ``|addMssqlLayer|``
 |addDelimitedTextLayer|         ``|addDelimitedTextLayer|``         |addSpatiaLiteLayer|            ``|addSpatiaLiteLayer|``
 |addPostgisLayer|               ``|addPostgisLayer|``               |addOracleLayer|                ``|addOracleLayer|``
@@ -526,8 +526,6 @@ Icon                            Substitution                        Icon        
 .. |addBasicShape| image:: /static/common/mActionAddBasicShape.png
    :width: 1.5em
 .. |addBasicTriangle| image:: /static/common/mActionAddBasicTriangle.png
-   :width: 1.5em
-.. |addDb2Layer| image:: /static/common/mActionAddDb2Layer.png
    :width: 1.5em
 .. |addDelimitedTextLayer| image:: /static/common/mActionAddDelimitedTextLayer.png
    :width: 1.5em
