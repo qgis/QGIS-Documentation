@@ -16,13 +16,12 @@ From a command line tool, run ``qgis_process`` and you should get:
 
 .. code-block:: bash
 
-  QGIS Processing Executor - 3.21.0-Master 'Master' (3.21.0-Master)
-  Usage: C:\OSGeo4W\apps\qgis-dev\bin\qgis_process.exe [--json] [--verbose] [command] [algorithm id or path to model file] [parameters]
+  QGIS Processing Executor - 3.16.8-Hannover 'Hannover' (3.16.8-Hannover)
+  Usage: C:\OSGeo4W\apps\qgis-ltr\bin\qgis_process.exe [--json] [command] [algorithm id or path to model file] [parameters]
 
   Options:
 
     --json          Output results as JSON objects
-    --verbose       Output verbose logs
 
   Available commands:
 
