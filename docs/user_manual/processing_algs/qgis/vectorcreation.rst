@@ -117,7 +117,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:arrayoffsetlines``
+**Algorithm ID**: ``native:arrayoffsetlines``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -229,7 +229,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:arraytranslatedfeatures``
+**Algorithm ID**: ``native:arraytranslatedfeatures``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -353,7 +353,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:creategrid``
+**Algorithm ID**: ``native:creategrid``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -446,7 +446,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:createpointslayerfromtable``
+**Algorithm ID**: ``native:createpointslayerfromtable``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -594,7 +594,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:generatepointspixelcentroidsinsidepolygons``
+**Algorithm ID**: ``native:generatepointspixelcentroidsinsidepolygons``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -699,7 +699,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:importphotos``
+**Algorithm ID**: ``native:importphotos``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1264,7 +1264,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:randompointsinpolygons``
+**Algorithm ID**: ``native:randompointsinpolygons``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1531,7 +1531,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:randompointsonlines``
+**Algorithm ID**: ``native:randompointsonlines``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1608,7 +1608,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:pixelstopoints``
+**Algorithm ID**: ``native:pixelstopoints``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1685,7 +1685,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:pixelstopolygons``
+**Algorithm ID**: ``native:pixelstopolygons``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
