@@ -510,6 +510,26 @@ Returns the last node from a geometry.
 
 .. end_end_point_section
 
+.. _expression_function_GeometryGroup_exif_geotag:
+
+exif_geotag
+...........
+
+Creates a point geometry from the exif geotags of an image file.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - exif_geotag(path)
+   * - Arguments
+     - * **path** - An image file path.
+   * - Examples
+     - * ``geom_to_wkt(exif_geotag('/my/photo.jpg'))`` → 'Point (2 4)'
+
+
+.. end_exif_geotag_section
+
 .. _expression_function_GeometryGroup_extend:
 
 extend
