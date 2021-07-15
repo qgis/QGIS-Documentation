@@ -569,7 +569,7 @@ Those algorithms are located within the group 'Modeler Tools'.
 .. |start| image:: /static/common/mActionStart.png
    :width: 1.5em
 .. |success| image:: /static/common/mIconSuccess.png
-   :width: 1.5em
+   :width: 1em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
 .. |undo| image:: /static/common/mActionUndo.png

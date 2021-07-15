@@ -1126,11 +1126,6 @@ copy or paste layer properties (style, scale, CRS...).
      -
      - :guilabel:`Manage Layers`
      - :ref:`db_tools`
-   * - :menuselection:`-->` |addDb2Layer|
-       :guilabel:`Add DB2 Spatial Layer...`
-     - :kbd:`Ctrl+Shift+2`
-     - :guilabel:`Manage Layers`
-     - :ref:`db_tools`
    * - :menuselection:`-->` |addVirtualLayer|
        :guilabel:`Add/Edit Virtual Layer...`
      -
@@ -2783,8 +2778,6 @@ Click the icon to open the Plugin Manager dialog.
 .. |addAllToOverview| image:: /static/common/mActionAddAllToOverview.png
    :width: 1.5em
 .. |addAmsLayer| image:: /static/common/mActionAddAmsLayer.png
-   :width: 1.5em
-.. |addDb2Layer| image:: /static/common/mActionAddDb2Layer.png
    :width: 1.5em
 .. |addDelimitedTextLayer| image:: /static/common/mActionAddDelimitedTextLayer.png
    :width: 1.5em
