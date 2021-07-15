@@ -7,9 +7,8 @@
 The Browser panel
 ======================================================================
 
-.. only:: html
 
-   .. contents::
+.. contents::
       :local:
       :depth: 2
 
@@ -262,114 +261,41 @@ each level of the dataset tree.
 +---------------+--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
 
 
-WMS/WMTS
-......................................................................
-Web Map Services (WMS) and Web Map Tile Services (WMTS)
+Tiles and Web Services
+......................
 
-From the top level context menu, you can add a new connection
-(:guilabel:`New Connection...`).
++---------------+----------------------------------------------+------------------------------------------------------------------------------------------------------+
+| Level         | Context menu                                 |                                               Type of services                                       |
+|               |                                              +------------+-------------------+------------+------------+----------------+-------------+------------+
+|               |                                              | |wms|      | |vectorTileLayer| | |xyz|      | |wcs|      | |wfs|          | |afs|       | |geonode|  |
+|               |                                              | WMS/WMTS   | Vector Tiles      | XYZ Tiles  | WCS        | WFS / OGC      | ArcGIS REST | GeoNode    |
+|               |                                              |            |                   |            |            | API - Features | Servers     |            |
++===============+==============================================+============+===================+============+============+================+=============+============+
+| Top menu      | Create a :guilabel:`New Connection…`         | |checkbox| |                   | |checkbox| | |checkbox| | |checkbox|     | |checkbox|  | |checkbox| |
+|               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+------------+
+|               | Create a :guilabel:`New Generic Connection…` |            | |checkbox|        |            |            |                |             |            |
+|               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+------------+
+|               | Create a :guilabel:`New ArcGIS Vector Tile   |            | |checkbox|        |            |            |                |             |            |
+|               | Service Connection…`                         |            |                   |            |            |                |             |            |
+|               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+------------+
+|               | :guilabel:`Save Connections…` details        | |checkbox| | |checkbox|        | |checkbox| | |checkbox| | |checkbox|     | |checkbox|  | |checkbox| |
+|               | to a file                                    |            |                   |            |            |                |             |            |
+|               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+------------+
+|               | :guilabel:`Load Connections…`                | |checkbox| | |checkbox|        | |checkbox| | |checkbox| | |checkbox|     | |checkbox|  | |checkbox| |
++---------------+----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+------------+
+| Connection    | :guilabel:`Refresh` connection               | |checkbox| |                   | |checkbox| | |checkbox| | |checkbox|     |             | |checkbox| |
+|               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+------------+
+|               | :guilabel:`Edit…` connection settings        | |checkbox| | |checkbox|        | |checkbox| | |checkbox| | |checkbox|     |             | |checkbox| |
+|               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+------------+
+|               | :guilabel:`Delete` connection                | |checkbox| | |checkbox|        | |checkbox| | |checkbox| | |checkbox|     |             | |checkbox| |
++---------------+----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+------------+
+| Table / Layer | :menuselection:`Export Layer --> To File...` | |checkbox| |                   | |checkbox| | |checkbox| | |checkbox|     |             | |checkbox| |
+|               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+------------+
+|               | :guilabel:`Add layer to Project`             | |checkbox| | |checkbox|        | |checkbox| | |checkbox| | |checkbox|     |             | |checkbox| |
+|               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+------------+
+|               | Open :guilabel:`Layer properties…` dialog    | |checkbox| | |checkbox|        | |checkbox| | |checkbox| | |checkbox|     |             | |checkbox| |
++---------------+----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+------------+
 
-The context menu of each WSM/WMTS service lets you :guilabel:`Refresh`
-it, :guilabel:`Edit...` it and delete it (:guilabel:`Delete`).
-
-Group layers can be added by dragging them onto the map canvas.
-
-For WMS/WMTS layer entries you can 
-
-* export it (:menuselection:`Export Layer --> To file`)
-* add it to the project (:guilabel:`Add Layer to Project`)
-* inspect properties (:guilabel:`Layer Properties...`)
-
-
-Vector Tiles
-......................................................................
-Vector tile services
-
-From the top level context menu, you add an existing service
-(:guilabel:`New Connection...`), and you can
-:guilabel:`Save Connections...` or :guilabel:`Load Connections...`
-to / from XML files.
-
-
-XYZ Tiles
-......................................................................
-XYZ tile services
-
-From the top level context menu, you add an existing service
-(:guilabel:`New Connection...`), and you can
-:guilabel:`Save Connections...` or :guilabel:`Load Connections...`
-to / from XML files.
-
-For the XYZ tile service entries you can 
-
-* edit it (:guilabel:`Edit...`)
-* delete it (:guilabel:`Delete`)
-* export it (:menuselection:`Export Layer --> To file`)
-* add it to the project :guilabel:`Add Layer to Project`
-* inspect properties (:guilabel:`Layer Properties...`)
-
-
-WCS
-......................................................................
-Web Coverage Services
-
-From the top level context menu, you can add a new connection
-(:guilabel:`New Connection...`).
-
-The context menu of each WCS lets you :guilabel:`Refresh`
-it, :guilabel:`Edit...` it and delete it (:guilabel:`Delete`).
-
-For WCS layer entries you can 
-
-* export it (:menuselection:`Export Layer --> To file`)
-* add it to the project (:guilabel:`Add Layer to Project`)
-* inspect properties (:guilabel:`Layer Properties...`)
-
-
-WFS / OGC API - Features
-......................................................................
-*Web Feature Services* (WFS) and *OGC API - Features services* (aka WFS3)
-
-From the top level context menu, you can add a new connection
-(:guilabel:`New Connection...`).
-
-The context menu of each WFS lets you :guilabel:`Refresh`
-it, :guilabel:`Edit...` it and delete it (:guilabel:`Delete`).
-
-For WFS layer entries you can 
-
-* export it (:menuselection:`Export Layer --> To file`)
-* add it to the project (:guilabel:`Add Layer to Project`)
-* inspect properties (:guilabel:`Layer Properties...`)
-
-
-OWS
-......................................................................
-Here you will find a read-only list of all your Open Web Services (OWS)
-- WMS / WCS / WFS / ...
-
-
-ArcGIS Rest Servers
-......................................................................
-*ArcGIS Feature Services* and *ArcGIS Map Services*
-
-From the top level context menu, you add an existing service
-(:guilabel:`New Connection...`), and you can
-:guilabel:`Save Connections...` or :guilabel:`Load Connections...`.
-
-GeoNode
-......................................................................
-From the top level context menu, you can add a new connection
-(:guilabel:`New Connection...`).
-
-The context menu of each service lets you :guilabel:`Refresh`
-it, :guilabel:`Edit...` it and delete it (:guilabel:`Delete`).
-
-For the service layer entries you can 
-
-* export it (:menuselection:`Export Layer --> To file`)
-* add it to the project (:guilabel:`Add Layer to Project`)
-* inspect properties (:guilabel:`Layer Properties...`)
 
 
 Resources
@@ -443,6 +369,8 @@ Resources
 
 .. |addLayer| image:: /static/common/mActionAddLayer.png
    :width: 1.5em
+.. |afs| image:: /static/common/mIconAfs.png
+   :width: 1.5em
 .. |browserCollapse| image:: /static/common/browser_collapse.png
    :width: 1.5em
 .. |browserExpand| image:: /static/common/browser_expand.png
@@ -454,6 +382,8 @@ Resources
 .. |filterMap| image:: /static/common/mActionFilterMap.png
    :width: 1.5em
 .. |geoPackage| image:: /static/common/mGeoPackage.png
+   :width: 1.5em
+.. |geonode| image:: /static/common/mIconGeonode.png
    :width: 1.5em
 .. |hana| image:: /static/common/mIconHana.png
    :width: 1.5em
@@ -471,3 +401,13 @@ Resources
    :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
+.. |vectorTileLayer| image:: /static/common/mIconVectorTileLayer.png
+   :width: 1.5em
+.. |wcs| image:: /static/common/mIconWcs.png
+   :width: 1.5em
+.. |wfs| image:: /static/common/mIconWfs.png
+   :width: 1.5em
+.. |wms| image:: /static/common/mIconWms.png
+   :width: 1.5em
+.. |xyz| image:: /static/common/mIconXyz.png
+   :width: 1.5em
