@@ -7,6 +7,12 @@
 The Browser panel
 ======================================================================
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 2
+
 The QGIS Browser panel is a great tool for browsing, searching,
 inspecting, copying and loading QGIS resources.
 Only resources that QGIS knows how to handle are shown in the
@@ -118,6 +124,7 @@ context menu allows you to :guilabel:`Rename Favorite...` and
 
 Spatial Bookmarks
 ......................................................................
+
 This is where you will find your spatial bookmarks, organised
 into :guilabel:`Project Bookmarks` and :guilabel:`User Bookmarks`.
 
@@ -173,118 +180,72 @@ From the context menu, you can also
 Your file system root directory / folder.
 
 
-Geopackage
-......................................................................
-Geopackage files / databases.
-From the top level context menu, you can create a Geopackage
-file / database (:guilabel:`Create Database...`) or add an existing
-Geopackage file / database (:guilabel:`New Connection...`).
+Database entries
+.................
 
-The context menu of each Geopackage lets you remove it from
-the list (:guilabel:`Remove connection...`), add a new layer
-or table to the Geopackage (:guilabel:`Create new Layer or Table...`),
-delete the Geopackage (:guilabel:`Delete <name of geopackage>`)
-and :guilabel:`Compact Database (VACUUM)`.
+Depending on your OS and installed drivers, you might have access to different database
+types to use in QGIS. Below are listed the different entries of contextual menu at
+each level of the dataset tree.
 
-For layer/table entries you can 
+.. You might want to use https://www.tablesgenerator.com/text_tables (Text tab) to update the next table.
+    Particularly useful if you need to add, resize or move columns
 
-* rename it (:guilabel:`Rename Layer <layer name>...`)
-* export it (:menuselection:`Export Layer --> To file`)
-* add it to the project :guilabel:`Add Layer to Project`
-* delete it (:guilabel:`Delete Layer`)
-* inspect properties (:guilabel:`Layer Properties...`,
-  :guilabel:`File Properties...`)
-
-
-SpatiaLite
-......................................................................
-SpatiaLite database connections.
-
-From the top level context menu, you can create a SpatiaLite
-file / database (:guilabel:`Create Database...`) or add an
-existing SpatiaLite file / database (:guilabel:`New Connection...`).
-
-The context menu of each SpatiaLite file lets you delete it
-(:guilabel:`Delete`).
-
-For layer/table entries you can 
-
-* export it (:menuselection:`Export Layer --> To file`)
-* add it to the project :guilabel:`Add Layer to Project`
-* delete it (:guilabel:`Delete Layer`)
-* inspect properties (:guilabel:`Layer Properties...`)
-
-
-PostGIS
-......................................................................
-PostGIS database connections.
-
-From the top level context menu, you can add a new connection
-(:guilabel:`New Connection...`).
-
-The context menu of each connection lets you :guilabel:`Refresh` it,
-edit it :guilabel:`Edit connection...`, delete it
-(:guilabel:`Delete connection`) or :guilabel:`Create Schema...`.
-
-The context menu of each schema lets you :guilabel:`Refresh`,
-:guilabel:`Rename Schema...` or :guilabel:`Delete Schema`.
-
-For layers/tables you can 
-
-* rename it (:guilabel:`Rename Table...`)
-* remove its contents (:guilabel:`Truncate Table...`)
-* export it (:menuselection:`Export Layer --> To file`)
-* add it to the project (:guilabel:`Add Layer to Project`)
-* delete it (:guilabel:`Delete Layer`)
-* inspect its properties (:guilabel:`Layer Properties...`)
-
-
-MSSQL
-......................................................................
-Microsoft SQL Server connections.
-
-From the top level context menu, you can add a new connection
-(:guilabel:`New Connection...`).
-
-The context menu of each connection lets you :guilabel:`Refresh` it,
-edit it :guilabel:`Edit connection...`, delete it
-(:guilabel:`Delete connection`) or :guilabel:`Create Schema...`.
-
-The context menu of each schema lets you :guilabel:`Refresh`,
-:guilabel:`Rename Schema...` or :guilabel:`Delete Schema`.
-
-For layers/tables you can 
-
-* rename it (:guilabel:`Rename Table...`)
-* remove its contents (:guilabel:`Truncate Table...`)
-* export it (:menuselection:`Export Layer --> To file`)
-* add it to the project (:guilabel:`Add Layer to Project`)
-* delete it (:guilabel:`Delete Layer`)
-* inspect its properties (:guilabel:`Layer Properties...`)
-
-
-DB2
-......................................................................
-IBM DB2 database connections.
-
-From the top level context menu, you can add a new connection
-(:guilabel:`New Connection...`).
-
-The context menu of each connection lets you :guilabel:`Refresh` it,
-edit it :guilabel:`Edit connection...`, delete it
-(:guilabel:`Delete connection`) or :guilabel:`Create Schema...`.
-
-The context menu of each schema lets you :guilabel:`Refresh`,
-:guilabel:`Rename Schema...` or :guilabel:`Delete Schema`.
-
-For layers/tables you can 
-
-* rename it (:guilabel:`Rename Table...`)
-* remove its contents (:guilabel:`Truncate Table...`)
-* export it (:menuselection:`Export Layer --> To file`)
-* add it to the project (:guilabel:`Add Layer to Project`)
-* delete it (:guilabel:`Delete Layer`)
-* inspect its properties (:guilabel:`Layer Properties...`)
++---------------+--------------------------------------------+---------------------------------------------------------------------------------+
+| Level         | Context menu                               |                                 Type of database                                |
+|               |                                            +--------------+--------------+------------+------------+------------+------------+
+|               |                                            | |geoPackage| | |spatialite| | |postgis|  | |hana|     | |mssql|    | |oracle|   |
+|               |                                            | GeoPackage   | SpatiaLite   | PostGIS    | SAP HANA   | MSSQL      | Oracle     |
++===============+============================================+==============+==============+============+============+============+============+
+| Top menu      | Create a :guilabel:`New Connection…`       | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| | |checkbox| | |checkbox| |
+|               | to an existing database                    |              |              |            |            |            |            |
+|               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
+|               | :guilabel:`Create Database…`               | |checkbox|   | |checkbox|   |            |            |            |            |
+|               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
+|               | :guilabel:`Save Connections…` details      |              |              | |checkbox| | |checkbox| | |checkbox| |            |
+|               | to a file                                  |              |              |            |            |            |            |
+|               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
+|               | :guilabel:`Load Connections…`              |              |              | |checkbox| | |checkbox| | |checkbox| |            |
++---------------+--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
+| Connection    | :guilabel:`Refresh` a connection           |              |              | |checkbox| | |checkbox| | |checkbox| |            |
+| / Database    +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
+|               | :guilabel:`Edit Connection…` settings      |              |              | |checkbox| | |checkbox| | |checkbox| |            |
+|               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
+|               | :guilabel:`Delete Connection…`             | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| | |checkbox| |            |
+|               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
+|               | :guilabel:`Delete` the database            | |checkbox|   | |checkbox|   |            |            |            |            |
+|               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
+|               | :guilabel:`Compact Database (VACUUM)`      | |checkbox|   |              |            |            |            |            |
+|               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
+|               | Create a :guilabel:`New Schema…`           |              |              | |checkbox| | |checkbox| | |checkbox| |            |
+|               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
+|               | Create a :guilabel:`New Table…`            | |checkbox|   |              | |checkbox| | |checkbox| |            |            |
++---------------+--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
+| Schema        | :guilabel:`Refresh` a schema               |              |              | |checkbox| | |checkbox| | |checkbox| |            |
+|               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
+|               | :guilabel:`Rename Schema…`                 |              |              | |checkbox| | |checkbox| | |checkbox| |            |
+|               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
+|               | :guilabel:`Delete Schema…`                 |              |              | |checkbox| | |checkbox| | |checkbox| |            |
+|               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
+|               | Create a :guilabel:`New Table…`            |              |              | |checkbox| | |checkbox| |            |            |
++---------------+--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
+| Table / Layer | :guilabel:`Rename Table…`                  | |checkbox|   |              | |checkbox| | |checkbox| | |checkbox| |            |
+|               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
+|               | :guilabel:`Truncate Table…`                |              |              | |checkbox| |            | |checkbox| |            |
+|               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
+|               | :menuselection:`Export Layer --> To file`  | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| | |checkbox| |            |
+|               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
+|               | :guilabel:`Add Layer to Project`           | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| | |checkbox| |            |
+|               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
+|               | :guilabel:`Delete Layer` from the database | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| | |checkbox| |            |
+|               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
+|               | Open :guilabel:`Layer Properties…` dialog  | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| | |checkbox| |            |
+|               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
+|               | Open :guilabel:`File Properties…` dialog   | |checkbox|   |              |            |            |            |            |
++---------------+--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
+| Fields        | :guilabel:`Add New Field…`                 | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| |            |            |
++---------------+--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
+| Field         | :guilabel:`Delete Field…`                  | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| |            |            |
++---------------+--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
 
 
 WMS/WMTS
@@ -472,11 +433,25 @@ Resources
    :width: 1.5em
 .. |browserExpand| image:: /static/common/browser_expand.png
    :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
 .. |collapseTree| image:: /static/common/mActionCollapseTree.png
    :width: 1.5em
 .. |filterMap| image:: /static/common/mActionFilterMap.png
    :width: 1.5em
+.. |geoPackage| image:: /static/common/mGeoPackage.png
+   :width: 1.5em
+.. |hana| image:: /static/common/mIconHana.png
+   :width: 1.5em
 .. |metadata| image:: /static/common/metadata.png
+   :width: 1.5em
+.. |mssql| image:: /static/common/mIconMssql.png
    :width: 1.5em
 .. |options| image:: /static/common/mActionOptions.png
    :width: 1em
+.. |oracle| image:: /static/common/mIconOracle.png
+   :width: 1.5em
+.. |postgis| image:: /static/common/mIconPostgis.png
+   :width: 1.5em
+.. |spatialite| image:: /static/common/mIconSpatialite.png
+   :width: 1.5em
