@@ -6,8 +6,10 @@
 Structuring Python Plugins
 **************************
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 
 In order to create a plugin, here are some steps to follow:

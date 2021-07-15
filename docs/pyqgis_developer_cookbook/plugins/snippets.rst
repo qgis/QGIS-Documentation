@@ -1,4 +1,3 @@
-
 .. highlight:: python
    :linenothreshold: 5
 
@@ -7,16 +6,7 @@
     from qgis.core import (
         QgsProject,
     )
-
-    from qgis.gui import (
-        QgsOptionsWidgetFactory,
-        QgsOptionsPageWidget
-    )
-
-    from qgis.PyQt.QtCore import Qt
-    from qgis.PyQt.QtWidgets import QMessageBox, QAction, QHBoxLayout
-    from qgis.PyQt.QtGui import QIcon
-
+    
     import mock
 
     iface = start_qgis()
@@ -35,8 +25,27 @@
 Code Snippets
 *************
 
-.. contents::
-   :local:
+.. hint:: The code snippets on this page need the following imports if you're outside the pyqgis console:
+
+  .. testcode:: plugin_snippets
+
+    from qgis.core import (
+        QgsProject,
+    )
+
+    from qgis.gui import (
+        QgsOptionsWidgetFactory,
+        QgsOptionsPageWidget
+    )
+
+    from qgis.PyQt.QtCore import Qt
+    from qgis.PyQt.QtWidgets import QMessageBox, QAction, QHBoxLayout
+    from qgis.PyQt.QtGui import QIcon
+
+.. only:: html
+
+   .. contents::
+      :local:
 
 This section features code snippets to facilitate plugin development.
 

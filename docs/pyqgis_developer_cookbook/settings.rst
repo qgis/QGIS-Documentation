@@ -8,10 +8,16 @@
 
     iface = start_qgis()
 
+.. _settings:
 
-The code snippets on this page need the following imports if you're outside the pyqgis console:
+****************************
+Reading And Storing Settings
+****************************
 
-.. testcode:: settings
+
+.. hint:: The code snippets on this page need the following imports if you're outside the pyqgis console:
+
+  .. testcode:: settings
 
     from qgis.core import (
       QgsProject,
@@ -19,11 +25,10 @@ The code snippets on this page need the following imports if you're outside the 
       QgsVectorLayer
     )
 
-.. _settings:
+.. only:: html
 
-****************************
-Reading And Storing Settings
-****************************
+   .. contents::
+      :local:
 
 Many times it is useful for a plugin to save some variables so that the user
 does not have to enter or select them again next time the plugin is run.

@@ -1,20 +1,21 @@
-.. _introduction:
-
-
 .. highlight:: python
    :linenothreshold: 5
 
+.. _introduction:
 
 ************
 Introduction
 ************
 
+
 This document is intended to be both a tutorial and a reference
 guide. While it does not list all possible use cases, it should
 give a good overview of the principal functionality.
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 Python support was first introduced in QGIS 0.9.
 There are several ways to use Python in QGIS Desktop

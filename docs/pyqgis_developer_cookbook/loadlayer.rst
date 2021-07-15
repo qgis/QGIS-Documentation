@@ -1,4 +1,3 @@
-
 .. highlight:: python
    :linenothreshold: 5
 
@@ -25,17 +24,19 @@
 Loading Layers
 **************
 
-The code snippets on this page need the following imports:
+.. hint:: The code snippets on this page need the following imports:
 
-.. testcode:: loadlayer
+ .. testcode:: loadlayer
 
- import os # This is is needed in the pyqgis console also
- from qgis.core import (
-     QgsVectorLayer
- )
+  import os # This is is needed in the pyqgis console also
+  from qgis.core import (
+      QgsVectorLayer
+  )
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 Let's open some layers with data. QGIS recognizes vector and raster layers.
 Additionally, custom layer types are available, but we are not going to discuss

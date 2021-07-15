@@ -1,11 +1,21 @@
-.. index:: Plugin layers
-
-.. _pluginlayer:
-
 .. highlight:: python
    :linenothreshold: 5
 
 .. testsetup:: pluginlayer
+
+   iface = start_qgis()
+
+
+.. index:: Plugin layers
+.. _pluginlayer:
+
+*******************
+Using Plugin Layers
+*******************
+
+.. hint:: The code snippets on this page need the following imports if you're outside the pyqgis console:
+
+  .. testcode:: pluginlayer
 
     from qgis.core import (
         QgsPluginLayer,
@@ -17,12 +27,10 @@
 
     from qgis.PyQt.QtGui import QImage
 
-    iface = start_qgis()
+.. only:: html
 
-
-*******************
-Using Plugin Layers
-*******************
+   .. contents::
+      :local:
 
 If your plugin uses its own methods to render a map layer, writing your own
 layer type based on :class:`QgsPluginLayer <qgis.core.QgsPluginLayer>` might be the best way to implement that.

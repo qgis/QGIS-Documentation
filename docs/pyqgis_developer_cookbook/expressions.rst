@@ -1,14 +1,21 @@
+.. highlight:: python
+   :linenothreshold: 5
+
 .. testsetup:: expr
 
     iface = start_qgis()
 
 
-.. highlight:: python
-   :linenothreshold: 5
+.. index:: Expressions, Filtering, Calculating values
+.. _expressions:
 
-The code snippets on this page need the following imports if you're outside the pyqgis console:
+*********************************************
+Expressions, Filtering and Calculating Values
+*********************************************
 
-.. testcode:: expr
+.. hint:: The code snippets on this page need the following imports if you're outside the pyqgis console:
+
+  .. testcode:: expr
 
     from qgis.core import (
         edit,
@@ -25,16 +32,10 @@ The code snippets on this page need the following imports if you're outside the 
         QgsExpressionContextUtils
     )
 
-.. index:: Expressions, Filtering, Calculating values
+.. only:: html
 
-.. _expressions:
-
-*********************************************
-Expressions, Filtering and Calculating Values
-*********************************************
-
-.. contents::
-   :local:
+   .. contents::
+      :local:
 
 QGIS has some support for parsing of SQL-like expressions. Only a small subset
 of SQL syntax is supported. The expressions can be evaluated either as boolean
