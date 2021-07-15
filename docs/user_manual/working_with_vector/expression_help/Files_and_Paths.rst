@@ -26,6 +26,29 @@ Returns the base name of the file without the directory or file suffix.
 
 .. end_base_file_name_section
 
+.. _expression_function_Files_and_Paths_exif:
+
+exif
+....
+
+Retrieves exif tag values from an image file.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - exif(path, [tag])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **path** - An image file path.
+       * **tag** - The tag to return. If empty, a map with all exif tag values will be returned.
+   * - Examples
+     - * ``exif('/my/photo.jpg','Exif.Image.Orientation')`` → 0
+
+
+.. end_exif_section
+
 .. _expression_function_Files_and_Paths_file_exists:
 
 file_exists
