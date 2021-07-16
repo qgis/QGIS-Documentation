@@ -181,12 +181,12 @@ From the contextual menu of each of these folders or drives, you can:
 * enable :guilabel:`Scanning`:
 
   * |checkbox| :guilabel:`Monitor for changes`: allows to manually control
-     whether a particular directory should be monitored and automatically updated.
-     This setting applies to the selected directory and all subdirectories.
-     This means that you can manually opt-in to monitoring of network drives
-     if you know there's no issue, or manually opt-out of monitoring of large
-     directories which you don't want monitored for other reasons.
-     By default, remote or network drives are not automatically monitored.
+    whether a particular directory should be monitored and automatically updated.
+    This setting applies to the selected directory and all subdirectories.
+    This means that you can manually opt-in to monitoring of network drives
+    if you know there's no issue, or manually opt-out of monitoring of large
+    directories which you don't want monitored for other reasons.
+    By default, remote or network drives are not automatically monitored.
   * |unchecked| :guilabel:`Fast scan this directory`
 * open the directory in your file manager (:guilabel:`Open Directory...`)
 * open the directory in a terminal window  (:guilabel:`Open in Terminal...`)
