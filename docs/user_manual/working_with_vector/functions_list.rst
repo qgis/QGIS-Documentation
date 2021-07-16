@@ -922,8 +922,10 @@ To use these variables in an expression, they should be preceded by the
    "layout_name", "The layout name"
    "layout_numpages", "The number of pages in the layout"
    "layout_page", "The page number of the current item in the layout"
-   "layout_pageheight", "The active page height in the layout (in mm for standard paper sizes, or whatever unit was used for custom paper size)"
-   "layout_pagewidth", "The active page width in the layout (in mm for standard paper sizes, or whatever unit was used for custom paper size)"
+   "layout_pageheight", "The active page height in the layout (in mm
+   for standard paper sizes, or whatever unit was used for custom paper size)"
+   "layout_pagewidth", "The active page width in the layout (in mm
+   for standard paper sizes, or whatever unit was used for custom paper size)"
    "legend_column_count", "The number of columns in the legend"
    "legend_filter_by_map", "Indicates if the content of the legend is
    filtered by the map"
