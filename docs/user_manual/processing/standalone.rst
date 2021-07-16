@@ -9,8 +9,8 @@ Using processing from the command line
       :local:
 
 QGIS comes with a tool called ``QGIS Processing Executor`` which allows you to run
-commands (Processing algorithms and models, plugins) directly from the command line
-without starting QGIS Desktop itself.
+Processing algorithms and models (built-in or provided by plugins) directly
+from the command line without starting QGIS Desktop itself.
 
 From a command line tool, run ``qgis_process`` and you should get:
 
@@ -36,6 +36,12 @@ From a command line tool, run ``qgis_process`` and you should get:
                      e.g. --LAYERS=layer1.shp --LAYERS=layer2.shp
                      If required, the ellipsoid to use for distance and area calculations can be specified via the "--ELLIPSOID=name" argument.
                      If required, an existing QGIS project to use during the algorithm execution can be specified via the "--PROJECT_PATH=path" argument.
+
+.. note::
+  Only installed plugins that advertize ``hasProcessingProvider=yes``
+  in their :file:`metadata.txt` file are recognized and can be activated
+  or loaded by qgis_process tool.
+
 
 The command ``list`` can be used to get a list of all available providers
 and algorithms.
@@ -63,6 +69,8 @@ Where a parameter accepts a list of values, set the same variable multiple times
 
    qgis_process run native:mergevectorlayers -- LAYERS=input1.shp LAYERS=input2.shp OUTPUT=merged.shp
 
+While running an algorithm a text-based feedback bar is shown, and the operation
+can be cancelled via :kbd:`CTRL+C`.
 The ``run`` command also supports further parameters.
 
 - ``--json`` will format stdout output in a JSON structured way.
