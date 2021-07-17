@@ -182,7 +182,7 @@ and so on.
   is available then the *testing* doc, with features from newer and development
   versions, is used.
 
-**QSettings**
+**Settings**
 
 It helps you :guilabel:`Reset user interface to default settings (restart required)`
 if you made any :ref:`customization <sec_customization>`.
@@ -1608,7 +1608,7 @@ setups for different use cases as well.
 
    * unchecking |checkbox| :guilabel:`Enable customization` option in the
      Customization dialog or click the |selectAllTree| :sup:`Check All` button
-   * pressing the :guilabel:`Reset` button in the **QSettings** frame under
+   * pressing the :guilabel:`Reset` button in the **Settings** frame under
      :menuselection:`Settings --> Options` menu, :guilabel:`System` tab
    * launching QGIS at a command prompt with the following command line
      ``qgis --nocustomization``
