@@ -208,6 +208,45 @@ Three new layers are added to the :guilabel:`Layers Panel`:
 ``waypoints``, ``routes`` and ``tracks``.
 
 
+.. index:: New Mesh layer
+.. _vector_create_mesh:
+
+Creating a new Mesh layer
+--------------------------
+
+To create a new Mesh layer, press the |newMeshLayer|
+:menuselection:`New Mesh Layer...` button in the
+:menuselection:`Layer --> Create Layer -->` menu or from the
+:guilabel:`Data Source Manager` toolbar.
+The :guilabel:`New Mesh Layer` dialog will be displayed as shown in
+:numref:`figure_create_mesh`.
+
+.. _figure_create_mesh:
+
+.. figure:: img/editNewMesh.png
+   :align: center
+
+   Creating a New Mesh layer dialog
+
+#. The first step is to provide:
+
+   * the :guilabel:`Layer name`, i.e. the name the layer is displayed with
+     in the :guilabel:`Layers` panel
+   * the file path and name: this can be done by pressing the :guilabel:`...`
+     button to the right of the :guilabel:`File name` field and select an
+     existing Mesh file or create a new one.
+     Currently supported file formats are ``2DM Mesh file``, ``Selafin fie``
+     and ``UGRID Results``.
+
+     .. do these formats have anything particular/common that explains why
+      only them are supported and is worth a mention in the docs?
+
+   * the Coordinate Reference System to assign to the dataset
+#. Then you can initialize the layer, i.e. populate the new layer with
+   faces and vertices from a mesh layer loaded in the project` or
+   from a file. Datasets of the indicated layers are not copied.
+
+
 .. index:: New Temporary Scratch layer
 .. _vector_new_scratch_layer:
 
@@ -706,6 +745,8 @@ when used in conjunction with this spatial index syntax.
 .. |newAttribute| image:: /static/common/mActionNewAttribute.png
    :width: 1.5em
 .. |newGeoPackageLayer| image:: /static/common/mActionNewGeoPackageLayer.png
+   :width: 1.5em
+.. |newMeshLayer| image:: /static/common/mActionNewMeshLayer.png
    :width: 1.5em
 .. |newSpatiaLiteLayer| image:: /static/common/mActionNewSpatiaLiteLayer.png
    :width: 1.5em

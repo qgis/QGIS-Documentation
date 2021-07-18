@@ -1077,6 +1077,11 @@ copy or paste layer properties (style, scale, CRS...).
      -
      - :guilabel:`Data Source Manager`
      - :ref:`vector_new_scratch_layer`
+   * - :menuselection:`-->` |newMeshLayer|
+       :guilabel:`New Mesh Layer...`
+     -
+     - :guilabel:`Data Source Manager`
+     - :ref:`vector_create_mesh`
    * - :menuselection:`-->` |newVirtualLayer|
        :guilabel:`New Virtual Layer...`
      -
@@ -2971,6 +2976,8 @@ Click the icon to open the Plugin Manager dialog.
 .. |newLayout| image:: /static/common/mActionNewLayout.png
    :width: 1.5em
 .. |newMap| image:: /static/common/mActionNewMap.png
+   :width: 1.5em
+.. |newMeshLayer| image:: /static/common/mActionNewMeshLayer.png
    :width: 1.5em
 .. |newReport| image:: /static/common/mActionNewReport.png
    :width: 1.5em
