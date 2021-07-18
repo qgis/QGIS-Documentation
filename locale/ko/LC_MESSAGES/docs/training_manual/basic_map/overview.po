@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2021
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-12 02:37+0000\n"
 "PO-Revision-Date: 2020-12-24 10:24+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2021\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -45,6 +46,10 @@ msgstr "**이 강의의 목표:** QGIS 사용자 인터페이스의 기본을 �
 msgid "|basic| |TY|: The Basics"
 msgstr "|basic| |TY|: 기본"
 
+#: ../../docs/training_manual/basic_map/overview.rst:172
+msgid "basic"
+msgstr "basic"
+
 #: ../../docs/training_manual/basic_map/overview.rst:19
 msgid "The elements identified in the figure above are:"
 msgstr "앞의 그림에 나타난 요소들은 다음과 같습니다."
@@ -69,6 +74,10 @@ msgstr "상태 바"
 msgid "Side Toolbar"
 msgstr "사이드 툴바"
 
+#: ../../docs/training_manual/basic_map/overview.rst:26
+msgid "Locator bar"
+msgstr "위치 탐색란"
+
 #: ../../docs/training_manual/basic_map/overview.rst:32
 msgid "|basic| The Layers List"
 msgstr "|basic| 레이어 목록"
@@ -85,6 +94,15 @@ msgid ""
 " will provide you with more information on the layer's current appearance."
 msgstr ""
 "접혀 있는 항목을 (항목 옆의 화살표나 더하기 심볼을 클릭해서) 확장시키면 해당 레이어의 현재 모양에 대한 상세 정보를 알 수 있습니다."
+
+#: ../../docs/training_manual/basic_map/overview.rst:40
+msgid ""
+"Hovering over the layer will give you some basic information: layer name, "
+"type of geometry, coordinate reference system and the complete path of the "
+"location on your device."
+msgstr ""
+"레이어 위에 마우스 커서를 가져가면 레이어명, 도형 유형, 좌표계 및 해당 레이어가 사용자 컴퓨터 어디에 있는지를 가리키는 절대 경로와 "
+"같은 몇몇 기본 정보를 알 수 있을 겁니다."
 
 #: ../../docs/training_manual/basic_map/overview.rst:44
 msgid ""
@@ -103,19 +121,139 @@ msgstr ""
 
 #: ../../docs/training_manual/basic_map/overview.rst:54
 msgid "|basic| The Browser Panel"
-msgstr "|basic| 브라우저 패널"
+msgstr "|basic| 탐색기 패널"
+
+#: ../../docs/training_manual/basic_map/overview.rst:56
+msgid ""
+"The QGIS Browser is a panel in QGIS that lets you easily navigate in your "
+"database. You can have access to common vector files (e.g. ESRI Shapefile or"
+" MapInfo files), databases (e.g. PostGIS, Oracle, SpatiaLite, GeoPackage or "
+"MSSQL Spatial) and WMS/WFS connections. You can also view your GRASS data."
+msgstr ""
+"QGIS 탐색기는 QGIS에 내장된 패널로, 사용자 데이터베이스를 쉽게 탐색할 수 있습니다. (ESRI shapefile 또는 "
+"MapInfo 파일 같은) 일반 벡터 파일, (PostGIS, Oracle, SpatiaLite, GeoPackage, MSSQL "
+"Spatial 같은) 데이터베이스, 그리고 WMS/WFS 연결에 접속할 수 있습니다. 또 사용자의 GRASS 데이터도 볼 수 있습니다."
+
+#: ../../docs/training_manual/basic_map/overview.rst:61
+msgid ""
+"If you have saved a project, the Browser Panel will also give you quick "
+"access to all the layers stored in the same path of the project file under "
+"in the |qgsProjectFile| :guilabel:`Project Home` item."
+msgstr ""
+"프로젝트를 저장했다면, 탐색기 패널의 |qgsProjectFile| :guilabel:`Project Home` 항목 아래에서 프로젝트 "
+"파일과 동일한 경로에 저장된 모든 레이어에 쉽게 접근할 수도 있을 것입니다."
+
+#: ../../docs/training_manual/basic_map/overview.rst:183
+msgid "qgsProjectFile"
+msgstr "qgsProjectFile"
+
+#: ../../docs/training_manual/basic_map/overview.rst:65
+msgid ""
+"Moreover, you can set one or more folder as **Favorites**: search under your"
+" path and once you have found the folder, right click on it and click on "
+"``Add as a Favorite``. You should then be able to see your folder in the "
+"|favourites| :guilabel:`Favorites` item."
+msgstr ""
+"또, 하나 이상의 폴더를 **즐겨찾기(Favorites)** 로 설정할 수도 있습니다: 사용자 경로를 검색해서 폴더를 찾아 오른쪽 클릭한"
+" 다음 :guilabel:`Add as a Favorite` 메뉴를 클릭하세요. 그러면 |favourites| "
+":guilabel:`Favorites` 항목에서 사용자가 선택한 폴더를 볼 수 있을 겁니다."
+
+#: ../../docs/training_manual/basic_map/overview.rst:175
+msgid "favourites"
+msgstr "favourites"
+
+#: ../../docs/training_manual/basic_map/overview.rst:70
+msgid ""
+"It can happen that the folders added to Favorite item have a really long "
+"name: don't worry right-click on the path and choose ``Rename Favorite...`` "
+"to set another name."
+msgstr ""
+"즐겨찾기 항목에 추가한 폴더의 이름이 정말 긴 경우가 생길 수도 있습니다: 걱정하지 말고 경로를 오른쪽 클릭한 다음 "
+":guilabel:`Rename Favorite...` 메뉴를 선택한 다음 다른 이름으로 설정하십시오."
 
 #: ../../docs/training_manual/basic_map/overview.rst:75
 msgid "|basic| Toolbars"
 msgstr "|basic| 툴바"
 
+#: ../../docs/training_manual/basic_map/overview.rst:77
+msgid ""
+"Your most often used sets of tools can be turned into toolbars for basic "
+"access. For example, the File toolbar allows you to save, load, print, and "
+"start a new project. You can easily customize the interface to see only the "
+"tools you use most often, adding or removing toolbars as necessary via the "
+":menuselection:`View --> Toolbars` menu."
+msgstr ""
+"기본적인 접근성을 위해 사용자가 가장 자주 사용하는 도구 모음을 툴바로 만들 수 있습니다. 예를 들어 파일 툴바에서 새 프로젝트를 "
+"시작하고 저장, 불러오기, 인쇄할 수 있습니다. 사용자가 가장 자주 사용하는 도구들만 보이도록 :menuselection:`View "
+"--> Toolbars` 메뉴를 통해 툴바를 추가 혹은 제거하여 쉽게 인터페이스를 사용자 지정할 수 있습니다."
+
+#: ../../docs/training_manual/basic_map/overview.rst:83
+msgid ""
+"Even if they are not visible in a toolbar, all of your tools will remain "
+"accessible via the menus. For example, if you remove the :guilabel:`File` "
+"toolbar (which contains the :guilabel:`Save` button), you can still save "
+"your map by clicking on the :guilabel:`Project` menu and then clicking on "
+":guilabel:`Save`."
+msgstr ""
+"툴바에 없다고 해도, 메뉴를 통해 모든 도구를 사용할 수 있습니다. 예를 들면 (:guilabel:`Save` 버튼이 포함된) "
+":guilabel:`File` 툴바를 제거하더라도 :menuselection:`Project --> Save` 메뉴를 클릭해서 사용자 "
+"맵을 저장할 수 있습니다."
+
 #: ../../docs/training_manual/basic_map/overview.rst:90
 msgid "|basic| The Map Canvas"
 msgstr "|basic| 맵 캔버스"
 
+#: ../../docs/training_manual/basic_map/overview.rst:92
+msgid ""
+"This is where the map itself is displayed and where layers are loaded. In "
+"the map canvas you can interact with the visible layers: zoom in/out, move "
+"the map, select features and many other operations that we will deeply see "
+"in the next sections."
+msgstr ""
+"맵 캔버스는 맵 그 자체를 표시하고 레이어를 불러오는 곳입니다. 맵 캔버스에 가시화된 레이어들과 다음 강의에서 자세히 다룰 확대/축소, "
+"이동, 객체 선택, 그리고 다른 많은 대화형 작업들을 할 수 있습니다."
+
 #: ../../docs/training_manual/basic_map/overview.rst:98
 msgid "|basic| The Status Bar"
 msgstr "|basic| 상태 바"
+
+#: ../../docs/training_manual/basic_map/overview.rst:100
+msgid ""
+"Shows you information about the current map. Also allows you to adjust the "
+"map scale, the map rotation and see the mouse cursor's coordinates on the "
+"map."
+msgstr ""
+"현재 맵에 관련된 정보를 보여줍니다. 맵 축척, 맵 기울기를 조정하거나 현재 맵 상에서 마우스 위치의 좌표를 볼 수도 있습니다."
+
+#: ../../docs/training_manual/basic_map/overview.rst:104
+msgid "|basic| The Side Toolbar"
+msgstr "|basic| 사이드 툴바"
+
+#: ../../docs/training_manual/basic_map/overview.rst:106
+msgid ""
+"By default the Side toolbar contains the buttons to load the layer and all "
+"the buttons to create a new layer. But remember that you can move all the "
+"toolbars wherever it is more comfortable for you."
+msgstr ""
+"사이드 툴바는 기본적으로 레이어를 불러오기 위한 버튼들과 새 레이어를 생성하기 위한 모든 버튼들을 담고 있습니다. 하지만 모든 툴바를 "
+"사용자가 사용하기 편한 위치로 옮길 수 있다는 사실을 기억하세요."
+
+#: ../../docs/training_manual/basic_map/overview.rst:111
+msgid "|basic| The Locator Bar"
+msgstr "|basic| 위치 탐색란"
+
+#: ../../docs/training_manual/basic_map/overview.rst:113
+msgid ""
+"Within this bar you can access to almost all the objects of QGIS: layers, "
+"layer features, algorithms, spatial bookmarks, etc. Check all the different "
+"options in the :ref:`locator_options` section of the QGIS User Manual."
+msgstr ""
+"이 탐색란에서 레이어, 레이어 피처, 알고리즘, 공간 북마크 등등 QGIS의 거의 모든 객체에 접근할 수 있습니다. QGIS 사용자 "
+"지침서의 :ref:`locator_options` 에서 모든 옵션들을 확인해보세요."
+
+#: ../../docs/training_manual/basic_map/overview.rst:117
+msgid "With the shortcut :kbd:`Ctrl+K` you can easily access the bar."
+msgstr ":kbd:`Ctrl+K` 단축키를 누르면 커서가 즉시 위치 탐색란으로 이동합니다."
 
 #: ../../docs/training_manual/basic_map/overview.rst:123
 msgid "|basic| |TY| 1"
@@ -147,17 +285,41 @@ msgstr "다음 도구들을 사용자 화면에서 찾아보십시오. 각각 �
 msgid "|fileSaveAs|"
 msgstr "|fileSaveAs|"
 
+#: ../../docs/training_manual/basic_map/overview.rst:177
+msgid "fileSaveAs"
+msgstr "fileSaveAs"
+
 #: ../../docs/training_manual/basic_map/overview.rst:141
 msgid "|zoomToLayer|"
 msgstr "|zoomToLayer|"
+
+#: ../../docs/training_manual/basic_map/overview.rst:185
+msgid "zoomToLayer"
+msgstr "zoomToLayer"
 
 #: ../../docs/training_manual/basic_map/overview.rst:142
 msgid "|invertSelection|"
 msgstr "|invertSelection|"
 
+#: ../../docs/training_manual/basic_map/overview.rst:179
+msgid "invertSelection"
+msgstr "invertSelection"
+
+#: ../../docs/training_manual/basic_map/overview.rst:143
+msgid "|checkbox|:guilabel:`Render`"
+msgstr "|checkbox|:guilabel:`Render`"
+
+#: ../../docs/training_manual/basic_map/overview.rst:173
+msgid "checkbox"
+msgstr "checkbox"
+
 #: ../../docs/training_manual/basic_map/overview.rst:144
 msgid "|measure|"
 msgstr "|measure|"
+
+#: ../../docs/training_manual/basic_map/overview.rst:181
+msgid "measure"
+msgstr "measure"
 
 #: ../../docs/training_manual/basic_map/overview.rst:146
 msgid ""
@@ -179,3 +341,9 @@ msgstr ":ref:`결과 확인 <interface-overview-2>`"
 #: ../../docs/training_manual/basic_map/overview.rst:157
 msgid "|WN|"
 msgstr "|WN|"
+
+#: ../../docs/training_manual/basic_map/overview.rst:159
+msgid ""
+"Now that you are familiar with the basics of the QGIS interface, in the next"
+" lesson we will see how to load some common data types."
+msgstr "이제 기본적인 QGIS 인터페이스에 익숙해졌으니, 다음 강의에서는 몇몇 공통 데이터 유형을 어떻게 불러오는지 살펴보겠습니다."
