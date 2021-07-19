@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2021
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-12 02:37+0000\n"
 "PO-Revision-Date: 2020-12-24 10:26+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2021\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,6 +23,10 @@ msgstr ""
 "Generated-By: Babel 2.9.1\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:2
+msgid "|LS| Adding your first layers"
+msgstr "|LS| 첫 레이어 추가"
 
 #: ../../docs/training_manual/basic_map/preparation.rst:4
 msgid ""
@@ -33,11 +38,32 @@ msgstr "응용 프로그램을 시작하고 예제 및 연습에 쓰일 기본 �
 msgid "**The goal for this lesson:** To get started with an example map."
 msgstr "**이 강의의 목표:** 예제 맵으로 시작하기."
 
+#: ../../docs/training_manual/basic_map/preparation.rst:9
+msgid ""
+"Before starting this exercise, QGIS must be installed on your computer. "
+"Also, you should have downloaded the :ref:`sample data <data_downloadlink>` "
+"to use."
+msgstr ""
+"이 연습을 시작하기 전에, 사용자 컴퓨터에 QGIS가 설치되어 있어야만 합니다. 또한 사용할 :ref:`샘플 데이터 "
+"<data_downloadlink>` 를 다운로드해 두어야 합니다."
+
 #: ../../docs/training_manual/basic_map/preparation.rst:13
 msgid ""
 "Launch QGIS from its desktop shortcut, menu item, etc., depending on how you"
 " configured its installation."
 msgstr "사용자의 설치 설정에 따라 데스크탑 바로가기 또는 메뉴 항목에서 QGIS를 실행합니다."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:16
+msgid ""
+"The screenshots for this course were taken in QGIS 3.4 running on Linux. "
+"Depending on your setup, the screens you encounter may well appear somewhat "
+"different. However, all the same buttons will still be available, and the "
+"instructions will work on any OS. You will need QGIS 3.4 (the latest version"
+" at time of writing) to use this course."
+msgstr ""
+"이 강의에 쓰일 스크린샷은 리눅스에서 실행되는 QGIS 3.4 버전을 캡처한 것입니다. 사용자 설정에 따라 실제 화면이 조금씩 다를 수도"
+" 있습니다. 그러나 동일한 버튼들을 모두 사용할 수 있고, 어떤 OS에서도 동일하게 실행될 것입니다. 이 강의를 따라하려면 (교재 작성 "
+"당시 최신 버전인) QGIS 3.4가 필요합니다."
 
 #: ../../docs/training_manual/basic_map/preparation.rst:22
 msgid "Let's get started right away!"
@@ -47,9 +73,80 @@ msgstr "그럼 바로 시작해볼까요!"
 msgid "|basic| |FA| Prepare a map"
 msgstr "|basic| |FA| 맵 준비"
 
+#: ../../docs/training_manual/basic_map/preparation.rst:255
+msgid "basic"
+msgstr "basic"
+
 #: ../../docs/training_manual/basic_map/preparation.rst:29
 msgid "Open QGIS. You will have a new, blank map."
 msgstr "QGIS를 시작합니다. 텅 빈 새 맵이 나타날 것입니다."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:35
+msgid ""
+"The :guilabel:`Data Source Manager` dialog allows you to choose the data to "
+"load depending on the data type. We'll use it to load our dataset: click the"
+" |dataSourceManager| :sup:`Open Data Source Manager` button."
+msgstr ""
+":guilabel:`Data Source Manager` 대화창에서 데이터 유형에 따라 불러올 데이터를 선택할 수 있습니다. 이 대화창을"
+" 통해 데이터셋을 불러올 것입니다: |dataSourceManager| :sup:`Open Data Source Manager` 버튼을 "
+"클릭하세요."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:256
+msgid "dataSourceManager"
+msgstr "dataSourceManager"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:39
+msgid ""
+"If you can't find the icon, check that the :guilabel:`Data Source Manager` "
+"toolbar is enabled in the :menuselection:`View --> Toolbars` menu."
+msgstr ""
+"이 아이콘을 찾을 수 없다면, :menuselection:`View --> Toolbars` 메뉴에서 :guilabel:`Data "
+"Source Manager` 툴바가 활성화돼 있는지 확인해보십시오."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:46
+msgid "Load the :file:`protected_areas.shp` vector dataset:"
+msgstr ":file:`protected_areas.shp` 벡터 데이터셋을 불러오십시오:"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:48
+msgid "Click on the :guilabel:`Vector` tab."
+msgstr ":guilabel:`Vector` 탭을 클릭합니다."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:49
+msgid "Enable the |radioButtonOn|:guilabel:`File` source type."
+msgstr "|radioButtonOn|:guilabel:`File` 소스 유형을 활성화하십시오."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:271
+msgid "radioButtonOn"
+msgstr "radioButtonOn"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:50
+msgid ""
+"Press the :guilabel:`...` button next to :guilabel:`Vector Dataset(s)`."
+msgstr ":guilabel:`Vector Dataset(s)` 옆에 있는 :guilabel:`...` 버튼을 클릭합니다."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:51
+msgid ""
+"Select the :file:`exercise_data/shapefile/protected_areas.shp` file in your "
+"training directory."
+msgstr ""
+"사용자의 연습용 디렉터리에서 :file:`exercise_data/shapefile/protected_areas.shp` 파일을 "
+"선택하십시오."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:53
+msgid ""
+"Click :guilabel:`Open`. You will see the original dialog, with the file path"
+" filled in."
+msgstr ":guilabel:`Open` 을 클릭하세요. 대화창의 파일 경로가 채워진 것을 볼 수 있을 겁니다."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:59
+msgid ""
+"Click :guilabel:`Add` here as well. The data you specified will now load: "
+"you can see a ``protected_areas`` item in the :guilabel:`Layers` panel "
+"(bottom left) with its features shown in the main map canvas."
+msgstr ""
+"대화창의 :guilabel:`Add` 버튼을 클릭하십시오. 사용자가 지정한 데이터를 불러올 것입니다: (좌하단에 있는) "
+":guilabel:`Layers` 패널에 ``protected_areas`` 항목이 추가되고, 메인 맵 캔버스에 해당 항목의 객체들이 "
+"표시됩니다."
 
 #: ../../docs/training_manual/basic_map/preparation.rst:67
 msgid ""
@@ -57,13 +154,298 @@ msgid ""
 "your work."
 msgstr "축하합니다! 이제 기본 맵을 사용할 수 있습니다. 이제 사용자의 작업을 저장하도록 합시다."
 
+#: ../../docs/training_manual/basic_map/preparation.rst:70
+msgid "Click on the :guilabel:`Save As` button: |fileSaveAs|"
+msgstr ":guilabel:`Save As` 버튼을 클릭합니다: |fileSaveAs|"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:262
+msgid "fileSaveAs"
+msgstr "fileSaveAs"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:71
+msgid ""
+"Save the map under a :file:`solution` folder next to :file:`exercise_data` "
+"and call it :file:`basic_map.qgz`."
+msgstr ""
+"맵을 :file:`exercise_data` 옆에 있는 :file:`solution` 폴더 아래에 :file:`basic_map.qgz`"
+" 라는 파일명으로 저장합니다."
+
 #: ../../docs/training_manual/basic_map/preparation.rst:77
 msgid "|basic| |TY|"
 msgstr "|basic| |TY|"
 
+#: ../../docs/training_manual/basic_map/preparation.rst:79
+msgid ""
+"Repeat the steps above to add the :file:`places.shp` and :file:`rivers.shp` "
+"layers from the same folder (:file:`exercise_data/shapefile`) to the map."
+msgstr ""
+"앞에서 설명한 단계를 반복해서, 맵에 동일 폴더(:file:`exercise_data/shapefile`)의 "
+":file:`places.shp` 및 :file:`rivers.shp` 레이어를 추가하십시오."
+
 #: ../../docs/training_manual/basic_map/preparation.rst:82
 msgid ":ref:`Check your results <interface-preparation-1>`"
 msgstr ":ref:`결과 확인 <interface-preparation-1>`"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:88
+msgid "|basic| |FA| Loading vector data from a GeoPackage Database"
+msgstr "|basic| |FA| GeoPackage 데이터베이스에서 벡터 데이터 불러오기"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:90
+msgid ""
+"Databases allow you to store a large volume of associated data in one file. "
+"You may already be familiar with a database management system (DBMS) such as"
+" Libreoffice Base or MS Access. GIS applications can also make use of "
+"databases. GIS-specific DBMSes (such as PostGIS) have extra functions, "
+"because they need to handle spatial data."
+msgstr ""
+"데이터베이스는 대용량의 관련 데이터를 하나의 파일로 저장할 수 있습니다. 여러분은 벌써 리브레오피스 베이스 또는 마이크로소프트 액세스 "
+"같은 DBMS(database management system)를 잘 알고 있을지도 모르겠군요. GIS 응용 프로그램도 데이터베이스를 "
+"활용할 수 있습니다. 공간 데이터를 다뤄야 하기 때문에 GIS에 특화된 (PostGIS 같은) DBMS들은 추가 기능들을 갖추고 "
+"있습니다."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:96
+msgid ""
+"The `GeoPackage <https://www.geopackage.org/>`_ open format is a container "
+"that allows you to store GIS data (layers) in a single file. Unlike the ESRI"
+" Shapefile format (e.g. the :file:`protected_areas.shp` dataset you loaded "
+"earlier), a single GeoPackage file can contain various data (both vector and"
+" raster data) in different coordinate reference systems, as well as tables "
+"without spatial information; all these features allow you to share data "
+"easily and avoid file duplication."
+msgstr ""
+"`GeoPackage <https://www.geopackage.org/>`_ 오픈 포맷은 단일 파일 안에 GIS 데이터(레이어)를 "
+"저장할 수 있는 컨테이너입니다. ESRI Shapefile 포맷(예: 이전 단계에서 불러온 "
+":file:`protected_areas.shp` 데이터셋)과는 달리, 단일 GeoPackage 파일이 서로 다른 좌표계의 다양한 (벡터"
+" 및 래스터 데이터 모두) 데이터는 물론 공간 정보가 없는 테이블도 담을 수 있습니다. 이런 기능들 덕분에 데이터를 쉽게 공유할 수 있고"
+" 파일 중복을 피할 수 있습니다."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:104
+msgid ""
+"In order to load a layer from a GeoPackage, you will first need to create "
+"the connection to it:"
+msgstr "GeoPackage에서 레이어를 불러오기 위해서는 먼저 GeoPackage와의 연결을 생성해야 합니다."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:107
+msgid ""
+"Click on the |dataSourceManager| :sup:`Open Data Source Manager` button."
+msgstr "|dataSourceManager| :sup:`Open Data Source Manager` 버튼을 클릭합니다."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:108
+msgid ""
+"On the left click on the |newGeoPackageLayer| :guilabel:`GeoPackage` tab."
+msgstr "왼쪽에 있는 |newGeoPackageLayer| :guilabel:`GeoPackage` 탭을 선택하십시오."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:267
+msgid "newGeoPackageLayer"
+msgstr "newGeoPackageLayer"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:109
+msgid ""
+"Click on the :guilabel:`New` button and browse to the "
+":file:`training_data.gpkg` file in the :file:`exercise_data` folder you "
+"downloaded before."
+msgstr ""
+":guilabel:`New` 버튼을 클릭한 다음 이전에 다운로드한 :file:`exercise_data` 폴더에서 "
+":file:`training_data.gpkg` 파일을 찾으십시오."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:111
+msgid ""
+"Select the file and press :guilabel:`Open`. The file path is now added to "
+"the Geopackage connections list, and appears in the drop-down menu."
+msgstr ""
+"해당 파일을 선택하고 :guilabel:`Open` 을 클릭하십시오. 이제 GeoPackage 연결 목록에 해당 파일 경로가 추가되고, "
+"드롭다운 메뉴에 표시됩니다."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:114
+msgid "You are now ready to add any layer from this GeoPackage to QGIS."
+msgstr "이제 이 GeoPackage 에 있는 모든 레이어를 QGIS로 추가할 준비가 끝났습니다."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:116
+msgid ""
+"Click on the :guilabel:`Connect` button. In the central part of the window "
+"you should now see the list of all the layers contained in the GeoPackage "
+"file."
+msgstr ""
+":guilabel:`Connect` 버튼을 클릭하십시오. 창 가운데 부분에서 GeoPackage 파일이 담고 있는 모든 레이어들의 목록을"
+" 볼 수 있을 겁니다."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:119
+msgid ""
+"Select the :guilabel:`roads` layer and click on the :guilabel:`Add` button."
+msgstr ":guilabel:`roads` 레이어를 선택한 다음 :guilabel:`Add` 버튼을 클릭하세요."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:124
+msgid ""
+"A :guilabel:`roads` layer is added to the :guilabel:`Layers` panel with "
+"features displayed on the map canvas."
+msgstr ""
+":guilabel:`Layers` 패널에 :guilabel:`roads` 레이어가 추가되고, 맵 캔버스에 해당 레이어의 객체들이 "
+"표시됩니다."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:126
+msgid "Click on :guilabel:`Close`."
+msgstr ":guilabel:`Close` 를 클릭합니다."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:128
+msgid "Congratulations! You have loaded the first layer from a GeoPackage."
+msgstr "축하합니다! GeoPackage로부터 처음으로 레이어를 불러왔습니다."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:134
+msgid ""
+"|basic| |FA| Loading vector data from a SpatiaLite Database with the Browser"
+msgstr "|basic| |FA| 탐색기를 통해 SpatiaLite 데이터베이스에서 벡터 데이터 불러오기"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:136
+msgid ""
+"QGIS provides access to many other database formats. Like GeoPackage, the "
+"SpatiaLite database format is an extension of the SQLite library. And adding"
+" a layer from a SpatiaLite provider follows the same rules as described "
+"above: Create the connection --> Enable it --> Add the layer(s)."
+msgstr ""
+"QGIS는 수많은 다른 데이터베이스 포맷에도 접근할 수 있습니다. GeoPackage와 마찬가지로, SpatiaLite 데이터베이스 "
+"포맷은 SQLite 라이브러리의 확장 포맷입니다. SpatiaLite 제공자로부터 레이어를 추가하는 작업은 앞에서 설명한 것과 동일한 "
+"규칙을 따릅니다: 연결 생성 --> 연결 활성화 --> 레이어(들) 추가하기."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:141
+msgid ""
+"While this is one way to add SpatiaLite data to your map, let's explore "
+"another powerful way to add data: the :guilabel:`Browser`."
+msgstr ""
+"이 규칙을 따르는 것도 사용자 맵에 SpatiaLite 데이터를 추가하는 한 가지 방법이지만, 데이터를 추가하는 또다른 강력한 방법을 "
+"알아보겠습니다: 바로 :guilabel:`Browser` 죠."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:145
+msgid ""
+"Click the |dataSourceManager| icon to open the :guilabel:`Data Source "
+"Manager` window."
+msgstr ""
+"|dataSourceManager| 아이콘을 클릭해서 :guilabel:`Data Source Manager` 대화창을 여십시오."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:147
+msgid "Click on the |fileOpen| :guilabel:`Browser` tab."
+msgstr "|fileOpen| :guilabel:`Browser` 탭을 클릭합니다."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:260
+msgid "fileOpen"
+msgstr "fileOpen"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:148
+msgid ""
+"In this tab you can see all the storage disks connected to your computer as "
+"well as entries for most of the tabs in the left. These allow quick access "
+"to connected databases or folders."
+msgstr ""
+"이 탭에서 사용자 컴퓨터에 연결된 모든 저장 디스크는 물론 왼쪽에 있는 거의 모든 탭 항목들도 볼 수 있습니다. 이를 통해 연결된 "
+"데이터베이스 또는 폴더에 빠르게 접근할 수 있습니다."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:152
+msgid ""
+"For example, click on the drop-down icon next to the |geoPackage| "
+":guilabel:`GeoPackage` entry. You'll see the :file:`training-data.gpkg` file"
+" we previously connected to (and its layers, if expanded)."
+msgstr ""
+"예를 들어, |geoPackage| :guilabel:`GeoPackage` 항목 옆에 있는 드롭다운 아이콘을 클릭해보십시오. 이전 "
+"단계에서 연결했던 :file:`training-data.gpkg` 파일을 (펼치면 그 레이어들도) 볼 수 있을 것입니다."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:264
+msgid "geoPackage"
+msgstr "geoPackage"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:155
+msgid ""
+"Right-click the |spatialite| :guilabel:`SpatiaLite` entry and select "
+":guilabel:`New Connection...`."
+msgstr ""
+"|spatialite| :guilabel:`SpatiaLite` 항목을 오른쪽 클릭하고 :guilabel:`New "
+"Connection...` 메뉴를 선택하십시오."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:273
+msgid "spatialite"
+msgstr "spatialite"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:157
+msgid ""
+"Navigate to the :file:`exercise_data` folder, select the "
+":file:`landuse.sqlite` file and click :guilabel:`Open`."
+msgstr ""
+":file:`exercise_data` 폴더를 찾아 :file:`landuse.sqlite` 파일을 선택한 다음, "
+":guilabel:`Open` 을 클릭합니다."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:160
+msgid ""
+"Notice that a |dbSchema| :guilabel:`landuse.sqlite` entry has been added "
+"under the :guilabel:`SpatiaLite` one."
+msgstr ""
+":guilabel:`SpatiaLite` 항목 아래 |dbSchema| :guilabel:`landuse.sqlite` 항목이 추가된 "
+"것이 보일 겁니다."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:258
+msgid "dbSchema"
+msgstr "dbSchema"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:162
+msgid "Expand the |dbSchema| :guilabel:`landuse.sqlite` entry."
+msgstr "|dbSchema| :guilabel:`landuse.sqlite` 항목을 펼쳐보십시오."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:163
+msgid ""
+"Double-click the |polygonLayer| :guilabel:`landuse` layer or select and "
+"drag-and-drop it onto the map canvas. A new layer is added to the "
+":guilabel:`Layers` panel and its features are displayed on the map canvas."
+msgstr ""
+"|polygonLayer| :guilabel:`landuse` 레이어를 더블클릭하거나, 선택한 다음 맵 캔버스로 드래그&드롭하십시오. "
+":guilabel:`Layers` 패널에 새 레이어가 추가되고, 맵 캔버스에 해당 레이어의 객체들이 표시됩니다."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:269
+msgid "polygonLayer"
+msgstr "polygonLayer"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:170
+msgid ""
+"Enable the :guilabel:`Browser` panel in :menuselection:`View --> Panels -->`"
+" and use it to add your data. It's a handy shortcut for the "
+":menuselection:`Data Source Manager --> Browser` tab, with the same "
+"functionality."
+msgstr ""
+":menuselection:`View --> Panels -->` 메뉴에서 :guilabel:`Browser` 패널을 활성화시켜 사용자 "
+"데이터를 추가하는 데 사용하십시오. 동일한 기능을 가진 :menuselection:`Data Source Manager --> "
+"Browser` 탭을 손쉽게 불러올 수 있는 단축키입니다."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:174
+msgid ""
+"Remember to save your project frequently! The project file doesn't contain "
+"any of the data itself, but it remembers which layers you loaded into your "
+"map."
+msgstr ""
+"사용자 프로젝트를 자주 저장해야 합니다! 프로젝트 파일은 어떤 데이터도 직접 담고 있지 않지만, 사용자 맵에 어떤 레이어를 불러왔는지 "
+"저장하고 있습니다."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:181
+msgid "|moderate| |TY| Load More Vector Data"
+msgstr "|moderate| |TY| 더 많은 벡터 데이터 불러오기"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:266
+msgid "moderate"
+msgstr "moderate"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:183
+msgid ""
+"Load the following datasets from the :file:`exercise_data` folder into your "
+"map using any of the methods explained above:"
+msgstr ""
+"앞에서 설명한 어떤 방법을 사용하든, :file:`exercise_data` 폴더로부터 다음 데이터셋들을 사용자 맵으로 불러오십시오:"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:186
+msgid ":guilabel:`buildings`"
+msgstr ":guilabel:`buildings`"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:187
+msgid ":guilabel:`water`"
+msgstr ":guilabel:`water`"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:189
+msgid ":ref:`Check your results <vector-load-more-data>`"
+msgstr ":ref:`결과 확인 <vector-load-more-data>`"
 
 #: ../../docs/training_manual/basic_map/preparation.rst:193
 msgid "|FA| Reordering the Layers"
@@ -79,18 +461,34 @@ msgstr ""
 "사용자 레이어 목록에 있는 레이어들은 맵 상에 특정 순서대로 그려집니다. 목록 맨 아래에 있는 레이어를 첫 번째로 그리고, 맨 위에 있는"
 " 레이어를 마지막에 그립니다. 목록에서 레이어 순서를 바꾸면 맵 상에 그려지는 순서도 바꿀 수 있습니다."
 
+#: ../../docs/training_manual/basic_map/preparation.rst:200
+msgid ""
+"You can alter this behavior using the :guilabel:`Control rendering order` "
+"checkbox beneath the :guilabel:`Layer Order` panel. We will however not "
+"discuss this feature yet."
+msgstr ""
+":guilabel:`Layer Order` 패널에 있는 :guilabel:`Control rendering order` 체크박스를 "
+"활용하면 이 습성을 변경할 수 있습니다. 그러나 아직 이 기능을 사용할 때는 아닙니다."
+
 #: ../../docs/training_manual/basic_map/preparation.rst:204
 msgid ""
 "The order in which the layers have been loaded into the map is probably not "
 "logical at this stage. It's possible that the road layer is completely "
 "hidden because other layers are on top of it."
 msgstr ""
-"현재 맵 상에 레이어가 로드되는 순서가 전혀 논리적이지 않을 수도 있습니다. 다른 레이어들이 road 레이어를 덮어 완전히 가려져 있을 "
-"수도 있습니다."
+"현재 맵 상에 레이어가 로드되는 순서가 전혀 논리적이지 않을 수도 있습니다. 다른 레이어들이 도로 레이어를 덮어 완전히 가려져 있을 수도"
+" 있습니다."
 
 #: ../../docs/training_manual/basic_map/preparation.rst:208
 msgid "For example, this layer order..."
 msgstr "예를 들어 레이어 순서를 이렇게 하면..."
+
+#: ../../docs/training_manual/basic_map/preparation.rst:213
+msgid ""
+"... would result in roads and places being hidden as they run *underneath* "
+"the polygons of the landuse layer."
+msgstr ""
+"...``roads`` 및 ``places`` 레이어가 ``landuse`` 레이어의 폴리곤 *아래로* 가기 때문에 보이지 않게 됩니다."
 
 #: ../../docs/training_manual/basic_map/preparation.rst:216
 msgid "To resolve this problem:"
@@ -98,7 +496,7 @@ msgstr "이 문제를 해결하려면,"
 
 #: ../../docs/training_manual/basic_map/preparation.rst:218
 msgid "Click and drag on a layer in the Layers list."
-msgstr "레이어 목록에서 레이어를 클릭 & 드래그하십시오."
+msgstr "레이어 목록에서 레이어를 클릭&드래그하십시오."
 
 #: ../../docs/training_manual/basic_map/preparation.rst:219
 msgid "Reorder them to look like this:"
@@ -114,6 +512,23 @@ msgstr "이제 도로와 건물이 토지이용구역 위에 나타나는, 시�
 msgid "|IC|"
 msgstr "|IC|"
 
+#: ../../docs/training_manual/basic_map/preparation.rst:231
+msgid ""
+"Now you've added all the layers you need from several different sources and "
+"created a basic map!"
+msgstr "이제 몇 가지 서로 다른 소스들로부터 필요한 모든 레이어를 추가하고 기본 맵을 생성했습니다!"
+
 #: ../../docs/training_manual/basic_map/preparation.rst:236
 msgid "|WN|"
 msgstr "|WN|"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:238
+msgid ""
+"Now you're familiar with the basic function of the :guilabel:`Open Data "
+"Source Manager` button, but what about all the others? How does this "
+"interface work? Before we go on, let's take a look at some basic interaction"
+" with the QGIS interface. This is the topic of the next lesson."
+msgstr ""
+"이제 :guilabel:`Open Data Source Manager` 버튼의 기능을 배웠습니다만, 다른 버튼들은 어떻습니까? 이 "
+"인터페이스는 어떻게 동작할까요? 더 깊이 들어가기 전에, QGIS 인터페이스의 몇몇 기본적인 대화형 작업을 살펴봅시다. 이것이 다음 "
+"강의의 주제입니다."
