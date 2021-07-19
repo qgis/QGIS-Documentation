@@ -83,7 +83,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:assignprojection``
+**Algorithm ID**: ``native:assignprojection``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -152,7 +152,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:layertobookmarks``
+**Algorithm ID**: ``native:layertobookmarks``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -228,7 +228,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:bookmarkstolayer``
+**Algorithm ID**: ``native:bookmarkstolayer``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -287,7 +287,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:createattributeindex``
+**Algorithm ID**: ``native:createattributeindex``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -342,7 +342,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:createspatialindex``
+**Algorithm ID**: ``native:createspatialindex``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -485,7 +485,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:deleteduplicategeometries``
+**Algorithm ID**: ``native:deleteduplicategeometries``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -598,7 +598,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:deleteduplicatesbyattribute``
+**Algorithm ID**: ``native:deleteduplicatesbyattribute``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -738,7 +738,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:detectdatasetchanges``
+**Algorithm ID**: ``native:detectdatasetchanges``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -808,7 +808,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:dropgeometries``
+**Algorithm ID**: ``native:dropgeometries``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -997,7 +997,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:saveselectedfeatures``
+**Algorithm ID**: ``native:saveselectedfeatures``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1315,7 +1315,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:joinattributestable``
+**Algorithm ID**: ``native:joinattributestable``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1471,7 +1471,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:joinattributesbylocation``
+**Algorithm ID**: ``native:joinattributesbylocation``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1750,7 +1750,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:joinbynearest``
+**Algorithm ID**: ``native:joinbynearest``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1845,7 +1845,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:mergevectorlayers``
+**Algorithm ID**: ``native:mergevectorlayers``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1927,7 +1927,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:orderbyexpression``
+**Algorithm ID**: ``native:orderbyexpression``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1977,7 +1977,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:repairshapefile``
+**Algorithm ID**: ``native:repairshapefile``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -2061,7 +2061,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:reprojectlayer``
+**Algorithm ID**: ``native:reprojectlayer``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -2145,7 +2145,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:splitfeaturesbycharacter``
+**Algorithm ID**: ``native:splitfeaturesbycharacter``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -2225,7 +2225,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:splitvectorlayer``
+**Algorithm ID**: ``native:splitvectorlayer``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -2276,7 +2276,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:truncatetable``
+**Algorithm ID**: ``native:truncatetable``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
