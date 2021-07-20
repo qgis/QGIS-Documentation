@@ -2315,6 +2315,7 @@ with the field type. The available widgets are:
   provider, for fields of ``hstore`` type.
 * **JSON View**: Displays JSON data in a syntax highlighted text edit or in
   tree view. This widget is currently read only. Several options are available to change how the data is displayed. 'Default view' specify if the widget should appear in Text or Tree mode. 'Format JSON' has three options which are related to the tree view only:
+
   * Indented: Display data in a human readable form with newlines and four space characters for indentation.
   * Compact: Display data in a one-line size optimized string whiteout newlines or spaces.
   * Disabled: Display data as it comes from the provider
