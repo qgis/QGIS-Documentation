@@ -2064,6 +2064,38 @@ you to fill:
   can live out of the QGIS project.
 * **notes**: instructions and comments regarding the layer in the current project
 
+.. index:: Metadata, Metadata editor, Keyword
+.. _metadatamenu:
+
+Metadata
+--------
+
+In the layer properties dialog, the |editMetadata| :guilabel:`Metadata` tab
+provides you with options to create and edit a metadata report on your layer.
+
+Information to fill concern:
+
+* the data :guilabel:`Identification`: basic attribution of the dataset (parent,
+  identifier, title, abstract, language...);
+* the :guilabel:`Categories` the data belongs to. Alongside the **ISO** categories,
+  you can add custom ones;
+* the :guilabel:`Keywords` to retrieve the data and associated concepts following
+  a standard based vocabulary;
+* the :guilabel:`Access` to the dataset (licenses, rights, fees, and constraints);
+* the :guilabel:`Extent` of the dataset, either spatial one (CRS, map extent,
+  altitudes) or temporal;
+* the :guilabel:`Contact` of the owner(s) of the dataset;
+* the :guilabel:`Links` to ancillary resources and related information;
+* the :guilabel:`History` of the dataset.
+
+A summary of the filled information is provided in the :guilabel:`Validation`
+tab and helps you identify potential issues related to the form. You can then
+either fix them or ignore them.
+
+Metadata are currently saved in the project file. They can also be saved in a
+:file:`.qmd` file alongside file based layers or in a local :file:`.sqlite`
+database for remote layers (e.g. PostGIS).
+
 
 .. index:: Variables, Expressions
 .. _`general_tools_variables`:
@@ -2665,6 +2697,8 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
+.. |editMetadata| image:: /static/common/editmetadata.png
+   :width: 1.2em
 .. |editableEdits| image:: /static/common/mIconEditableEdits.png
    :width: 1em
 .. |expandNewTree| image:: /static/common/mActionExpandNewTree.png
