@@ -117,7 +117,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:arrayoffsetlines``
+**Algorithm ID**: ``native:arrayoffsetlines``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -229,7 +229,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:arraytranslatedfeatures``
+**Algorithm ID**: ``native:arraytranslatedfeatures``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -353,7 +353,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:creategrid``
+**Algorithm ID**: ``native:creategrid``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -446,7 +446,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:createpointslayerfromtable``
+**Algorithm ID**: ``native:createpointslayerfromtable``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -594,7 +594,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:generatepointspixelcentroidsinsidepolygons``
+**Algorithm ID**: ``native:generatepointspixelcentroidsinsidepolygons``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -699,7 +699,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:importphotos``
+**Algorithm ID**: ``native:importphotos``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -712,10 +712,9 @@ Points to path
 --------------
 
 Converts a point layer to a line layer, by joining points in an
-order defined by an expression or a field in the input point layer (if the order
-field is a date/time field, the format must be specified).
+order defined by an expression or a field in the input point layer.
 
-Points can be grouped by a field to distinguish line features.
+Points can be grouped by a field or an expression to distinguish line features.
 
 In addition to the line vector layer, a text file is output
 that describes the resulting line as a start point and a
@@ -738,7 +737,7 @@ Parameters
      - ``INPUT``
      - [vector: point]
      - Input point vector layer
-   * - **Close path**
+   * - **Create closed paths**
      - ``CLOSE_PATH``
      - [boolean]
 
@@ -746,26 +745,29 @@ Parameters
      - If checked, the first and last points of the line will be connected
        and close the generated path
    * - **Order expression** |318|
+
+       Optional
      - ``ORDER_EXPRESSION``
      - [expression]
-     - Field or expression providing the order to connect the points in the path
-   * - **Group field**
+     - Field or expression providing the order to connect the points in the path.
+       If not set, the feature ID (``$id``) is used.
+   * - **Sort text containing numbers naturally** |318|
 
        Optional
-     - ``GROUP_FIELD``
-     - [tablefield: any]
-     - Point features of the same value in the field will be
+     - ``NATURAL_SORT``
+     - [boolean]
+
+       Default: False
+     - If checked, naturally sorts the features based on the provided expression
+       (i.e., 'a9' < 'a10').
+   * - **Path group expression**
+
+       Optional
+     - ``GROUP_EXPRESSION``
+     - [expression]
+     - Point features of the same value in the field or expression will be
        grouped in the same line.
-       If not set, a single path is drawn with all the input
-       points.
-   * - **Date format (if order field is DateTime)**
-
-       Optional
-     - ``DATE_FORMAT``
-     - [string]
-     - The format to use for the ``Order field`` parameter.
-       Specify this only if the ``Order field`` is of type
-       Date/Time.
+       If not set, a single path is drawn with all the input points.
    * - **Paths**
      - ``OUTPUT``
      - [vector: line]
@@ -780,6 +782,8 @@ Parameters
 
        The file encoding can also be changed here.
    * - **Directory for text output**
+
+       Optional
      - ``OUTPUT_TEXT_DIR``
      - [folder]
 
@@ -817,7 +821,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:pointstopath``
+**Algorithm ID**: ``native:pointstopath``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1260,7 +1264,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:randompointsinpolygons``
+**Algorithm ID**: ``native:randompointsinpolygons``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1527,7 +1531,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:randompointsonlines``
+**Algorithm ID**: ``native:randompointsonlines``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1604,7 +1608,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:pixelstopoints``
+**Algorithm ID**: ``native:pixelstopoints``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1681,7 +1685,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:pixelstopolygons``
+**Algorithm ID**: ``native:pixelstopolygons``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
