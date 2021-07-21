@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-02 05:08+0000\n"
+"POT-Creation-Date: 2021-07-21 02:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,58 +24,73 @@ msgstr ""
 
 #: ../../docs/user_manual/processing/standalone.rst:11
 msgid ""
-"QGIS comes with a tool called ``qgis_process`` which allows you to call "
-"processing algorithms and models directly from the command line without "
-"starting QGIS desktop itself."
+"QGIS comes with a tool called ``QGIS Processing Executor`` which allows "
+"you to run Processing algorithms and models (built-in or provided by "
+"plugins) directly from the command line without starting QGIS Desktop "
+"itself."
 msgstr ""
 
 #: ../../docs/user_manual/processing/standalone.rst:15
+msgid "From a command line tool, run ``qgis_process`` and you should get:"
+msgstr ""
+
+#: ../../docs/user_manual/processing/standalone.rst:41
+msgid ""
+"Only installed plugins that advertize ``hasProcessingProvider=yes`` in "
+"their :file:`metadata.txt` file are recognized and can be activated or "
+"loaded by qgis_process tool."
+msgstr ""
+
+#: ../../docs/user_manual/processing/standalone.rst:46
 msgid ""
 "The command ``list`` can be used to get a list of all available providers"
 " and algorithms."
 msgstr ""
 
-#: ../../docs/user_manual/processing/standalone.rst:22
-msgid ""
-"The command ``run`` can be used to run an algorithm or model. Specify the"
-" name of the algorithm or a path to a model as first parameter."
-msgstr ""
-
-#: ../../docs/user_manual/processing/standalone.rst:29
-msgid "The ``run`` command also supports further parameters."
-msgstr ""
-
-#: ../../docs/user_manual/processing/standalone.rst:31
-msgid "``--json`` will format stdout output in a JSON structured way."
-msgstr ""
-
-#: ../../docs/user_manual/processing/standalone.rst:32
-msgid "``--ellipsoid`` will set the ellipsoid to the specified one."
-msgstr ""
-
-#: ../../docs/user_manual/processing/standalone.rst:33
-msgid "``--distance_units`` will use the specified distance units."
-msgstr ""
-
-#: ../../docs/user_manual/processing/standalone.rst:34
-msgid "``--area_units`` will use the specified area units."
-msgstr ""
-
-#: ../../docs/user_manual/processing/standalone.rst:35
-msgid ""
-"``--project_path`` will load the specified project for running the "
-"algorithm."
-msgstr ""
-
-#: ../../docs/user_manual/processing/standalone.rst:37
+#: ../../docs/user_manual/processing/standalone.rst:53
 msgid ""
 "The command ``help`` can be used to get further information about "
 "commands or algorithms."
 msgstr ""
 
-#: ../../docs/user_manual/processing/standalone.rst:43
+#: ../../docs/user_manual/processing/standalone.rst:59
+msgid ""
+"The command ``run`` can be used to run an algorithm or model. Specify the"
+" name of the algorithm or a path to a model as first parameter."
+msgstr ""
+
+#: ../../docs/user_manual/processing/standalone.rst:66
 msgid ""
 "Where a parameter accepts a list of values, set the same variable "
 "multiple times."
+msgstr ""
+
+#: ../../docs/user_manual/processing/standalone.rst:72
+msgid ""
+"While running an algorithm a text-based feedback bar is shown, and the "
+"operation can be cancelled via :kbd:`CTRL+C`. The ``run`` command also "
+"supports further parameters."
+msgstr ""
+
+#: ../../docs/user_manual/processing/standalone.rst:76
+msgid "``--json`` will format stdout output in a JSON structured way."
+msgstr ""
+
+#: ../../docs/user_manual/processing/standalone.rst:77
+msgid "``--ellipsoid`` will set the ellipsoid to the specified one."
+msgstr ""
+
+#: ../../docs/user_manual/processing/standalone.rst:78
+msgid "``--distance_units`` will use the specified distance units."
+msgstr ""
+
+#: ../../docs/user_manual/processing/standalone.rst:79
+msgid "``--area_units`` will use the specified area units."
+msgstr ""
+
+#: ../../docs/user_manual/processing/standalone.rst:80
+msgid ""
+"``--project_path`` will load the specified project for running the "
+"algorithm."
 msgstr ""
 
