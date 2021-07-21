@@ -54,12 +54,14 @@ an interesting place to quickly grab summarized information and
 metadata for the current layer.
 Provided information are:
 
-* based on the provider of the layer (format of storage, path, data
-  type, extent, width/height, compression, pixel size, statistics on
-  bands, number of columns, rows and no-data values of the raster...);
-* picked from the :ref:`provided metadata <raster_metadata>`: access,
-  links, contacts, history... as well as dataset information (CRS,
-  Extent, bands...).
+* based on the provider of the layer: name, path;
+* the Coordinate Reference System: name, units, method, accuracy, reference
+  (i.e. whether it's static or dynamic)
+* read from layer properties: data type, extent, width/height, compression,
+  pixel size, statistics on bands, number of columns, rows and no-data values
+  of the raster...
+* picked from the :ref:`filled metadata <raster_metadata>`: access, extents,
+  links, contacts, history...
 
 .. _raster_sourcetab:
 

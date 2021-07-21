@@ -16,8 +16,8 @@ A mesh is an unstructured grid usually with temporal and other components.
 The spatial component contains a collection of vertices, edges and faces
 in 2D or 3D space:
 
-* **vertices** - XY(Z) points (in the layer's coordinate reference system)
-* **edges** - connect pairs of vertices
+* **vertices** - XY(Z) points (in the layer's coordinate reference system)
+* **edges** - connect pairs of vertices
 * **faces** - a face is a set of edges forming a closed shape - typically
   a triangle or a quadrilateral (quad), rarely polygons with more vertices
 
@@ -122,8 +122,14 @@ Information Properties
 
 The :guilabel:`Information` tab is read-only and represents an interesting
 place to quickly grab summarized information and metadata on the current layer.
-Provided information are (based on the provider of the layer) uri, vertex count,
-face count and dataset groups count.
+Provided information are:
+
+* based on the provider of the layer: name, path, extent, vertex, face, edges
+  and/or dataset groups count
+* the Coordinate Reference System: name, units, method, accuracy, reference
+  (i.e. whether it's static or dynamic)
+* extracted from filled :ref:`metadata <meshmetadata>`: access, extents,
+  links, contacts, history...
 
 Source Properties
 -----------------

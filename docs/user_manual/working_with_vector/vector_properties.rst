@@ -79,11 +79,13 @@ Information Properties
 place to quickly grab summarized information and metadata on the current layer.
 Provided information are:
 
-* based on the provider of the layer (format of storage, path, geometry type,
-  data source encoding, extent...);
-* picked from the :ref:`filled metadata <vectormetadatamenu>` (access, links,
-  contacts, history...);
-* or related to its geometry (spatial extent, CRS...) or its attributes (number
+* based on the provider of the layer: format of storage, path, geometry type,
+  data source encoding, extent...
+* the Coordinate Reference System: name, units, method, accuracy, reference
+  (i.e. whether it's static or dynamic)
+* picked from the :ref:`filled metadata <vectormetadatamenu>`: access, extents,
+  links, contacts, history...
+* and related to its geometry (spatial extent, CRS...) or its attributes (number
   of fields, characteristics of each...).
 
 

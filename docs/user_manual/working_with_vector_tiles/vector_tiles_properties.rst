@@ -55,12 +55,16 @@ Vector Tiles Dataset Properties
 Information Properties
 ----------------------
 
-The :guilabel:`Information` tab is read-only and represents an interesting place to quickly grab
-summarized information and metadata on the current layer.
+The :guilabel:`Information` tab is read-only and represents an interesting
+place to quickly grab summarized information and metadata on the current layer.
 Provided information are:
 
-* based on the provider of the layer (e.g. URI and number of Zoom levels)
-* related to its geometry (CRS, Spatial Extent)
+* based on the provider of the layer: name, URI, source type and path, number
+  of zoom levels
+* the Coordinate Reference System: name, units, method, accuracy, reference
+  (i.e. whether it's static or dynamic)
+* picked from the :ref:`filled metadata <vectortilesmetadatamenu>`: access,
+  extents, links, contacts, history...
 
 Symbology Properties
 --------------------
@@ -111,19 +115,5 @@ See :ref:`metadatamenu` for more information.
    :width: 1.5em
 .. |editMetadata| image:: /static/common/editmetadata.png
    :width: 1.2em
-.. |checkbox| image:: /static/common/checkbox.png
-   :width: 1.3em
-.. |general| image:: /static/common/general.png
-   :width: 1.5em
-.. |selectString| image:: /static/common/selectstring.png
-   :width: 2.5em
-.. |setProjection| image:: /static/common/mActionSetProjection.png
-   :width: 1.5em
-.. |signMinus| image:: /static/common/symbologyRemove.png
-   :width: 1.5em
-.. |signPlus| image:: /static/common/symbologyAdd.png
-   :width: 1.5em
-.. |slider| image:: /static/common/slider.png
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
-
