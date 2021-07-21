@@ -297,6 +297,15 @@ as shown in :numref:`figure_mesh_symbology_grid`:
 The line width and color can be changed in this dialog, and both the grid renderings can be turned off.
 
 
+.. index:: Metadata, Metadata editor, Keyword
+.. _meshmetadata:
+
+Metadata Properties
+-------------------
+
+The |editMetadata| :guilabel:`Metadata` tab provides you with options
+to create and edit a metadata report on your layer.
+See :ref:`metadatamenu` for more information.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -309,6 +318,8 @@ The line width and color can be changed in this dialog, and both the grid render
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+.. |editMetadata| image:: /static/common/editmetadata.png
+   :width: 1.2em
 .. |general| image:: /static/common/general.png
    :width: 1.5em
 .. |meshcontours| image:: /static/common/meshcontours.png

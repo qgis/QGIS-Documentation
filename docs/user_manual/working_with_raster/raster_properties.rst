@@ -637,8 +637,7 @@ Metadata Properties
 
 The |editMetadata| :guilabel:`Metadata` tab provides you with options
 to create and edit a metadata report on your layer.
-See :ref:`vector layer metadata properties <vectormetadatamenu>` for
-more information.
+See :ref:`metadatamenu` for more information.
 
 .. _figure_raster_metadata:
 

@@ -3086,6 +3086,10 @@ More information on variables usage in the General Tools
 Metadata Properties
 ===================
 
+The |editMetadata| :guilabel:`Metadata` tab provides you with options
+to create and edit a metadata report on your layer.
+See :ref:`metadatamenu` for more information.
+
 
 .. index:: Dependencies
 .. _vectordependenciesmenu:

@@ -90,6 +90,16 @@ at the given zoom level. This makes it easier to work with complex vector stylin
 and to locate troublesome rules. Style and labelling can be dependent on the
 zoom level.
 
+.. index:: Metadata, Metadata editor, Keyword
+.. _vectortilesmetadatamenu:
+
+Metadata Properties
+-------------------
+
+The |editMetadata| :guilabel:`Metadata` tab provides you with options
+to create and edit a metadata report on your layer.
+See :ref:`metadatamenu` for more information.
+
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -99,6 +109,8 @@ zoom level.
 
 .. |addVectorTileLayer| image:: /static/common/mActionAddVectorTileLayer.png
    :width: 1.5em
+.. |editMetadata| image:: /static/common/editmetadata.png
+   :width: 1.2em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |general| image:: /static/common/general.png
