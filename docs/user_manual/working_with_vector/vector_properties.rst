@@ -2320,7 +2320,7 @@ with the field type. The available widgets are:
   to the tree view only:
 
   * Indented: Display data in a human readable form with newlines and four space characters for indentation.
-  * Compact: Display data in a one-line size optimized string whiteout newlines or spaces.
+  * Compact: Display data in a one-line size optimized string without newlines or spaces.
   * Disabled: Display data as it comes from the provider.
 
 * **List**: Displays a single column table to add different values within a
