@@ -2052,6 +2052,19 @@ the layers (with the saved style) to the Layers Panel.
 You can also drag and drop :file:`.qlr` files from the system file manager into the map
 canvas.
 
+
+Documenting your data
+=====================
+
+In addition to displaying and symbolizing the data in the layers, QGIS allows
+you to fill:
+
+* **metadata**: information to help people find and understand the dataset,
+  how they can access and use it... these are properties of the datasource and
+  can live out of the QGIS project.
+* **notes**: instructions and comments regarding the layer in the current project
+
+
 .. index:: Variables, Expressions
 .. _`general_tools_variables`:
 
