@@ -67,25 +67,8 @@ Downloading sample data
 -----------------------
 
 This user guide contains examples based on the QGIS sample dataset (also called
-the ``Alaska dataset``).
-
-|win| The Windows installer has an option to download the QGIS sample dataset.
-If checked, the data will be downloaded to your :file:`Documents` folder and
-placed in a folder called :file:`GIS Database`. You may use Windows Explorer to
-move this folder to any convenient location. If you did not select the checkbox
-to install the sample dataset during the initial QGIS installation,
-you may do one of the following:
-
-* Use GIS data that you already have
-* Download sample data from
-  https://github.com/qgis/QGIS-Sample-Data/archive/master.zip and unzip the archive
-  on any convenient location on your system.
-* Uninstall QGIS and reinstall with the data download option checked (only
-  recommended if the above solutions are unsuccessful)
-
-|nix| |osx| For GNU/Linux and macOS, there are no dataset installation
-packages available as rpm, deb or dmg. To use the sample dataset, download it
-from https://github.com/qgis/QGIS-Sample-Data/archive/master.zip and unzip the archive
+the ``Alaska dataset``).  Download the sample data from
+https://github.com/qgis/QGIS-Sample-Data/archive/master.zip and unzip the archive
 on any convenient location on your system.
 
 The Alaska dataset includes all GIS data that are used for the examples and
