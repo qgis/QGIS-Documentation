@@ -393,21 +393,20 @@ tab and activate the |checkbox| :guilabel:`Draw callouts`. Then you can:
    * :guilabel:`Balloons`: a speech bubble surrounding the label and pointing
      to the feature. It can have rounded corners.
 
-#. For line-based callouts:
+#. For a line-based callout:
 
    #. Select the :guilabel:`Line style` with full capabilities of a :ref:`line
       symbol <vector_line_symbols>` including layer effects, and data-defined
       settings
-   #. Set the :guilabel:`Minimum length` of callout lines
-   #. For curved callouts, you also define:
+   #. If curved, you also define:
 
       * the percentage of :guilabel:`Curvature` of the connection line
       * and its :guilabel:`Orientation`: starting from the label to the feature,
         it can be :guilabel:`Clockwise` or :guilabel:`Counter-clockwise`, or
         :guilabel:`Automatic` (determining an optimal orientation for each label)
-   #. Set the :guilabel:`Offset from label area` option: controls the distance
-      from the label anchor point (where the callout line ends).
-      This avoids drawing lines right up against the text.
+   #. Set the :guilabel:`Minimum length` of callout lines
+   #. Check whether to |checkbox| :guilabel:`Draw lines to all feature parts`
+      from the feature's label
    #. Set the :guilabel:`Label anchor point`: controls where the connector
       line should join to the label text. Available options:
 
@@ -416,10 +415,11 @@ tab and activate the |checkbox| :guilabel:`Draw callouts`. Then you can:
       * Fixed position at the edge (:guilabel:`Top left`, :guilabel:`Top center`,
         :guilabel:`Top right`, :guilabel:`Left middle`, :guilabel:`Right middle`,
         :guilabel:`Bottom left`, :guilabel:`Bottom center` and :guilabel:`Bottom right`).
-   #. |checkbox| :guilabel:`Draw lines to all feature parts` from the feature's
-      label
+   #. Set the :guilabel:`Offset from label area` option: controls the distance
+      from the label anchor point (where the callout line ends).
+      This avoids drawing lines right up against the text.
 
-#. For Balloons callout, you'd need to set:
+#. For a balloon callout, you'd need to set:
 
    * the :guilabel:`Fill style` with full capabilities of a :ref:`fill
      symbol <vector_fill_symbols>` including layer effects, and data-defined
@@ -432,7 +432,7 @@ tab and activate the |checkbox| :guilabel:`Draw callouts`. Then you can:
 #. Set the :guilabel:`Offset from feature` option: controls the distance
    from the feature (or its anchor point if a polygon) where callout lines end.
    Eg, this avoids drawing lines right up against the edges of the features.
-#. Set the :guilabel:`Anchor point` for the (polygon) feature (the end
+#. Set the :guilabel:`Feature anchor point` for the (polygon) feature (the end
    point of the connector line). Available options:
 
    * :guilabel:`Pole of inaccessibility`
@@ -442,9 +442,9 @@ tab and activate the |checkbox| :guilabel:`Draw callouts`. Then you can:
 #. Set the :guilabel:`Blend mode`: controls the :ref:`blending <blend-modes>`
    of the callout.
 
-Under the :guilabel:`Data defined` group, coordinates of the :guilabel:`Origin`
-(on the label side) and/or :guilabel:`Destination` (on the feature side)
-points of the callout can be controlled.
+Under the :guilabel:`Data defined placement` group, coordinates of the
+:guilabel:`Origin` (on the label side) and/or :guilabel:`Destination`
+(on the feature side) points of the callout can be controlled.
 Callouts can also be controlled manually by using the |moveLabel|
 :sup:`Move Label, Diagram or Callout` tool in the :ref:`Labeling Toolbar
 <label_toolbar>`.
