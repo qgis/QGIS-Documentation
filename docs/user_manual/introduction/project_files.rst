@@ -72,6 +72,7 @@ The information saved in a project file includes:
 * Layers added
 * Which layers can be queried
 * Layer properties, including symbolization and styles
+* Layer notes
 * Projection for the map view
 * Last viewed extent
 * Print layouts
