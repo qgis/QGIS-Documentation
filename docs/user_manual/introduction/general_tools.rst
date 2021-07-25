@@ -224,6 +224,9 @@ Option                                                             Vector Layer 
 :menuselection:`--> Edit symbol...`                                |checkbox|          \                  \
 :menuselection:`--> Copy Symbol`                                   |checkbox|          \                  \
 :menuselection:`--> Paste Symbol`                                  |checkbox|          \                  \
+:guilabel:`Add Layer Notes...`                                     |checkbox|          |checkbox|         \
+:guilabel:`Edit Layer Notes...`                                    |checkbox|          |checkbox|         \
+:guilabel:`Remove Layer Notes`                                     |checkbox|          |checkbox|         \
 :guilabel:`Properties...`                                          |checkbox|          |checkbox|         \
 =================================================================  ==================  =================  =============
 
@@ -308,6 +311,7 @@ symbols are:
   the icon to store the layer in any of the OGR vector formats supported by QGIS.
 * |indicatorNoCRS| to identify a layer that has no/unknown CRS
 * |indicatorTemporal| to identify a temporal layer controlled by canvas animation
+* |indicatorNotes| to identify a layer that has :ref:`notes <layer_notes>` associated
 
 .. index:: Style
 
@@ -2097,6 +2101,51 @@ Metadata are currently saved in the project file. They can also be saved in a
 database for remote layers (e.g. PostGIS).
 
 
+.. _layer_notes:
+
+Layer notes
+-----------
+
+Layer notes allow you to document the layer within the current project.
+They can be place to store important messages for users of the project like
+to do lists, instructions, warnings, ...
+
+From the layer's contextual menu in :guilabel:`Layers` panel, select
+:guilabel:`Add layer notes...` and fill the open dialog with necessary texts.
+
+.. _figure_layer_notes:
+
+.. figure:: img/layer_notes.png
+   :align: center
+
+   Adding notes to a layer
+
+The :guilabel:`Add layer notes` dialog provides a html-based multiline text box
+with a complete set of tools for:
+
+* text manipulation: cut, copy, paste, undo, redo
+* characters formatting, applied to all or parts of the contents: font size
+  and color, bold, italic, underline, strikethrough, background color, URL highlighting
+* paragraph structuring: bullet and numbered lists, indentation, predefined headings
+* file insertion, even with drag-and-drop
+* editing with HTML coding
+
+From the :guilabel:`...` drop-down at the far right of the toolbar, you can:
+
+* :guilabel:`Remove all formatting`
+* :guilabel:`Remove character formatting`
+* :guilabel:`Clear all content`
+
+In the :guilabel:`Layers` panel, a layer with a note is assigned
+the |indicatorNotes| icon which, upon hover, displays the note.
+Click the icon to edit the note. You can as well right-click the layer and
+:guilabel:`Edit layer note...` or :guilabel:`Remove layer note`.
+
+.. note:: Notes are part of the :ref:`layer style <store_style>` and
+  can be saved in the :file:`.qml` or :file:`.qlr` file. They can also be
+  transferred from one layer to another while copy-pasting the layer style.
+
+
 .. index:: Variables, Expressions
 .. _`general_tools_variables`:
 
@@ -2756,6 +2805,8 @@ The values presented in the varying size assistant above will set the size
 .. |indicatorNoCRS| image:: /static/common/mIndicatorNoCRS.png
    :width: 1.5em
 .. |indicatorNonRemovable| image:: /static/common/mIndicatorNonRemovable.png
+   :width: 1.5em
+.. |indicatorNotes| image:: /static/common/mIndicatorNotes.png
    :width: 1.5em
 .. |indicatorTemporal| image:: /static/common/mIndicatorTemporal.png
    :width: 1.5em
