@@ -253,6 +253,31 @@ or when a layer without a CRS is loaded.
 * |radioButtonOff| :guilabel:`Use project CRS`
 * |radioButtonOff| :guilabel:`Use a default CRS`
 
+.. _crs_inaccuracies:
+
+**Accuracy warnings**
+
+.. A small intro either on accuracy differences between CRS/datum,
+   or static vs dynamic CRS would be nice here.
+   Or if you want, you can expand a lot in the working_with_projection.rst file.
+
+   Also if anyone knows a link to "datum ensemble" concept?
+
+:guilabel:`Only show warnings for CRS inaccuracies which exceed` a given
+distance: occurs when you are explicitly creating or modifying a data and
+select in the CRS selector widget a CRS based on a datum ensemble with lower
+accuracy. The default is to ``Always show`` the warning if any inaccuracy.
+Requires a QGIS version using at least `PROJ 8.0 <https://proj.org/index.html>`_.
+
+|unchecked| :guilabel:`Show warning for CRS inaccuracies for layers in project legend`:
+If checked, any layer with a CRS with accuracy issues (i.e. a dynamic crs with
+no coordinate epoch available, or a crs based on a datum ensemble with accuracy
+exceeding the user-set limit) will have the |indicatorLowAccuracy| warning icon
+in the :guilabel:`Layers` panel reflecting that it is a low-accuracy layer.
+
+This is designed for use in engineering, BIM,... industries where inaccuracies
+of meter/submeter level are very dangerous.
+
 |unchecked| :guilabel:`Planimetric measurements`: sets the default for the
 "planimetric measurements" property for newly created projects.
 
@@ -2013,6 +2038,8 @@ in the QGIS user profile.
 .. |fileOpen| image:: /static/common/mActionFileOpen.png
    :width: 1.5em
 .. |fileSave| image:: /static/common/mActionFileSave.png
+   :width: 1.5em
+.. |indicatorLowAccuracy| image:: /static/common/mIndicatorLowAccuracy.png
    :width: 1.5em
 .. |interfaceCustomization| image:: /static/common/mActionInterfaceCustomization.png
    :width: 1.5em

@@ -293,7 +293,7 @@ symbols are:
 * |editableEdits| to indicate that the layer being edited has some unsaved changes
 * |indicatorFilter| to indicate :ref:`a filter <vector_query_builder>` applied
   to the layer. Hover over the icon to see the filter expression and double-click
-  to update the setting
+  to update the query
 * |indicatorNonRemovable| to identify layers that are
   :ref:`required <project_layer_capabilities>` in the project, hence non removable
 * |indicatorEmbedded| to identify an :ref:`embedded group or layer
@@ -307,6 +307,8 @@ symbols are:
   close this project. To avoid data loss and make the layer permanent, click
   the icon to store the layer in any of the OGR vector formats supported by QGIS.
 * |indicatorNoCRS| to identify a layer that has no/unknown CRS
+* |indicatorLowAccuracy| for layers with crs inaccuracies (requires the
+  :ref:`corresponding setting <crs_inaccuracies>` to be enabled)
 * |indicatorTemporal| to identify a temporal layer controlled by canvas animation
 
 .. index:: Style
@@ -2703,6 +2705,8 @@ The values presented in the varying size assistant above will set the size
 .. |indicatorEmbedded| image:: /static/common/mIndicatorEmbedded.png
    :width: 1.5em
 .. |indicatorFilter| image:: /static/common/mIndicatorFilter.png
+   :width: 1.5em
+.. |indicatorLowAccuracy| image:: /static/common/mIndicatorLowAccuracy.png
    :width: 1.5em
 .. |indicatorMemory| image:: /static/common/mIndicatorMemory.png
    :width: 1.5em
