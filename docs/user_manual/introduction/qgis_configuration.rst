@@ -496,12 +496,8 @@ These properties let you set:
   * :guilabel:`Minimum` and :guilabel:`Maximum legend symbol size`
     to control symbol size display in the :guilabel:`Layers` panel
 * the :guilabel:`Delay` in milliseconds of layers :ref:`map tips <maptips>` display
-* Whether QGIS should |checkbox| :guilabel:`Respect screen DPI`; see below.
-
-*Respecting screen DPI*
-
-If |checkbox| :guilabel:`Respect screen DPI` is enabled, QGIS will attempt to 
-display the canvas with physically 
+* Whether QGIS should |checkbox| :guilabel:`Respect screen DPI`: If enabled,
+  QGIS will attempt to display the canvas with physically 
 accurate scale on screen, depending on the monitor's physical DPI. Symbology with specified 
 display size will also be rendered accurately, e.g. a 10mm 
 symbol will show as 10mm on screen. However, label font sizes on canvas may differ from those in 
