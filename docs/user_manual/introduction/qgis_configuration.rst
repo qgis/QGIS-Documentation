@@ -510,7 +510,7 @@ For best experience, it is recommended to enable |checkbox| :guilabel:`Respect s
 especially when using multiple or different monitors and preparing visually high-quality maps. 
 Disabling |checkbox| :guilabel:`Respect screen DPI` will generate output that
 may be more suitable for mapping intended for on-screen use only, especially 
-where styles (especially font sizes) are shared between application.
+where font sizes should match other applications.
 
 .. note:: Rendering in layouts is not affected by the :guilabel:`Respect screen DPI`
   setting; it always respects the specified DPI for the target output device.
