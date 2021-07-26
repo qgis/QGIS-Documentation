@@ -39,6 +39,9 @@ To use the plugin:
 #. After being connected again, upload the changes using :menuselection:`Database
    --> Offline Editing -->` |offlineEditingSync| :guilabel:`Synchronize`.
 
+.. note:: Layers that are used offline are marked with the |indicatorOffline|
+ icon in the :guilabel:`Layers` panel.
+
 .. _figure_offline_editing:
 
 .. figure:: img/create_offline_project.png
@@ -55,6 +58,8 @@ To use the plugin:
 
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+.. |indicatorOffline| image:: /static/common/mIndicatorOffline.png
+   :width: 1.5em
 .. |offlineEditingCopy| image:: /static/common/offline_editing_copy.png
    :width: 1.5em
 .. |offlineEditingSync| image:: /static/common/offline_editing_sync.png
