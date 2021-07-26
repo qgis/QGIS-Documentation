@@ -309,6 +309,8 @@ symbols are:
   layer <vector_new_scratch_layer>` and its content will be discarded when you
   close this project. To avoid data loss and make the layer permanent, click
   the icon to store the layer in any of the OGR vector formats supported by QGIS.
+* |indicatorOffline| to identify a layer used in :ref:`offline editing mode
+  <offlinedit>`.
 * |indicatorNoCRS| to identify a layer that has no/unknown CRS
 * |indicatorTemporal| to identify a temporal layer controlled by canvas animation
 * |indicatorNotes| to identify a layer that has :ref:`notes <layer_notes>` associated
@@ -2807,6 +2809,8 @@ The values presented in the varying size assistant above will set the size
 .. |indicatorNonRemovable| image:: /static/common/mIndicatorNonRemovable.png
    :width: 1.5em
 .. |indicatorNotes| image:: /static/common/mIndicatorNotes.png
+   :width: 1.5em
+.. |indicatorOffline| image:: /static/common/mIndicatorOffline.png
    :width: 1.5em
 .. |indicatorTemporal| image:: /static/common/mIndicatorTemporal.png
    :width: 1.5em
