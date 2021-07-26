@@ -498,19 +498,19 @@ These properties let you set:
 * the :guilabel:`Delay` in milliseconds of layers :ref:`map tips <maptips>` display
 * Whether QGIS should |checkbox| :guilabel:`Respect screen DPI`: If enabled,
   QGIS will attempt to display the canvas with physically 
-accurate scale on screen, depending on the monitor's physical DPI. Symbology with specified 
-display size will also be rendered accurately, e.g. a 10mm 
-symbol will show as 10mm on screen. However, label font sizes on canvas may differ from those in 
-QGIS' UI or other applications. If this setting is turned off, QGIS will use the operating 
-system's logical DPI, which will be consistent with other applications on the system. However, 
-canvas scale and symbology size may be physically inaccurate on screen. In particular, on 
-high-dpi screens, symbology is likely to appear too small.
+  accurate scale on screen, depending on the monitor's physical DPI. Symbology with specified 
+  display size will also be rendered accurately, e.g. a 10mm 
+  symbol will show as 10mm on screen. However, label font sizes on canvas may differ from those in 
+  QGIS' UI or other applications. If this setting is turned off, QGIS will use the operating 
+  system's logical DPI, which will be consistent with other applications on the system. However, 
+  canvas scale and symbology size may be physically inaccurate on screen. In particular, on 
+  high-dpi screens, symbology is likely to appear too small.
 
-For best experience, it is recommended to enable |checkbox| :guilabel:`Respect screen DPI`, 
-especially when using multiple or different monitors and preparing visually high-quality maps. 
-Disabling |checkbox| :guilabel:`Respect screen DPI` will generate output that
-may be more suitable for mapping intended for on-screen use only, especially 
-where font sizes should match other applications.
+  For best experience, it is recommended to enable |checkbox| :guilabel:`Respect screen DPI`, 
+  especially when using multiple or different monitors and preparing visually high-quality maps. 
+  Disabling |checkbox| :guilabel:`Respect screen DPI` will generate output that
+  may be more suitable for mapping intended for on-screen use only, especially 
+  where font sizes should match other applications.
 
 .. note:: Rendering in layouts is not affected by the :guilabel:`Respect screen DPI`
   setting; it always respects the specified DPI for the target output device.
