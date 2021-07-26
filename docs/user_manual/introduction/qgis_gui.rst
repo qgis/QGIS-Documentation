@@ -2723,7 +2723,7 @@ is not magnified, i.e. is rendered at accurate scale relative to the monitor's r
 A default magnification value can be defined within
 :menuselection:`Settings --> Options --> Rendering --> Rendering behavior`,
 which is very useful for high-resolution screens to enlarge small
-symbols. In addition, a setting in :menuselection:`Settings --> Options --> Canvas & Options --> DPI` 
+symbols. In addition, a setting in :menuselection:`Settings --> Options --> Canvas & Legend --> DPI` 
 controls whether QGIS respects each monitor's physical DPI or uses the overall system logical DPI.
 
 To the right of the magnifier tool you can define a current clockwise
