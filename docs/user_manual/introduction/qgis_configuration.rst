@@ -508,8 +508,8 @@ high-dpi screens, symbology is likely to appear too small.
 
 For best experience, it is recommended to enable |checkbox| :guilabel:`Respect screen DPI`, 
 especially when using multiple or different monitors and preparing visually high-quality maps. 
-Disabling |checkbox| :guilabel:`Respect screen DPI` will generate output consistent with prior 
-QGIS versions, and may be more suitable for mapping intended for on-screen use only, especially 
+Disabling |checkbox| :guilabel:`Respect screen DPI` will generate output that
+may be more suitable for mapping intended for on-screen use only, especially 
 where styles (especially font sizes) are shared between application.
 
 Note that rendering in layouts is not affected by this setting; it always respects the 
