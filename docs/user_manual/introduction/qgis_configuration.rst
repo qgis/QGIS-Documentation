@@ -496,6 +496,30 @@ These properties let you set:
   * :guilabel:`Minimum` and :guilabel:`Maximum legend symbol size`
     to control symbol size display in the :guilabel:`Layers` panel
 * the :guilabel:`Delay` in milliseconds of layers :ref:`map tips <maptips>` display
+* Whether QGIS should |checkbox| :guilabel:`Respect screen DPI`; see below.
+
+*Respecting screen DPI*
+
+If |checkbox| :guilabel:`Respect screen DPI` is enabled, QGIS will attempt to 
+display the canvas with physically 
+accurate scale on screen, depending on the monitor's physical DPI. Symbology with specified 
+display size will also be rendered accurately, e.g. a 10mm 
+symbol will show as 10mm on screen. However, label font sizes on canvas may differ from those in 
+QGIS' UI or other applications. If this setting is turned off, QGIS will use the operating 
+system's logical DPI, which will be consistent with other applications on the system. However, 
+canvas scale and symbology size may be physically inaccurate on screen. In particular, on 
+high-dpi screens, symbology is likely to appear too small.
+
+For best experience, it is recommended to enable |checkbox| :guilabel:`Respect screen DPI`, 
+especially when using multiple or different monitors and preparing visually high-quality maps. 
+Disabling |checkbox| :guilabel:`Respect screen DPI` will generate output consistent with prior 
+QGIS versions, and may be more suitable for mapping intended for on-screen use only, especially 
+where styles (especially font sizes) are shared between application.
+
+Note that rendering in layouts is not affected by this setting; it always respects the 
+specified DPI for the target output device. Also note that |checkbox| :guilabel:`Respect screen DPI` 
+uses the physical screen DPI as 
+reported by the operating system, which may not be accurate for all displays.
 
 .. index:: Map tools
 .. _maptools_options:
