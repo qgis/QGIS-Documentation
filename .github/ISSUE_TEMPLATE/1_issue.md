@@ -1,6 +1,6 @@
 ---
 name: 📖 Documentation
-about: Report problems about the documentation only.
+about: Report problems about the documentation only (https://docs.qgis.org).
 
 ---
 
