@@ -16,8 +16,8 @@ A mesh is an unstructured grid usually with temporal and other components.
 The spatial component contains a collection of vertices, edges and faces
 in 2D or 3D space:
 
-* **vertices** - XY(Z) points (in the layer's coordinate reference system)
-* **edges** - connect pairs of vertices
+* **vertices** - XY(Z) points (in the layer's coordinate reference system)
+* **edges** - connect pairs of vertices
 * **faces** - a face is a set of edges forming a closed shape - typically
   a triangle or a quadrilateral (quad), rarely polygons with more vertices
 
@@ -122,8 +122,14 @@ Information Properties
 
 The :guilabel:`Information` tab is read-only and represents an interesting
 place to quickly grab summarized information and metadata on the current layer.
-Provided information are (based on the provider of the layer) uri, vertex count,
-face count and dataset groups count.
+Provided information are:
+
+* based on the provider of the layer: name, path, extent, vertex, face, edges
+  and/or dataset groups count
+* the Coordinate Reference System: name, units, method, accuracy, reference
+  (i.e. whether it's static or dynamic)
+* extracted from filled :ref:`metadata <meshmetadata>`: access, extents,
+  links, contacts, history...
 
 Source Properties
 -----------------
@@ -297,6 +303,15 @@ as shown in :numref:`figure_mesh_symbology_grid`:
 The line width and color can be changed in this dialog, and both the grid renderings can be turned off.
 
 
+.. index:: Metadata, Metadata editor, Keyword
+.. _meshmetadata:
+
+Metadata Properties
+-------------------
+
+The |editMetadata| :guilabel:`Metadata` tab provides you with options
+to create and edit a metadata report on your layer.
+See :ref:`metadatamenu` for more information.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -309,6 +324,8 @@ The line width and color can be changed in this dialog, and both the grid render
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+.. |editMetadata| image:: /static/common/editmetadata.png
+   :width: 1.2em
 .. |general| image:: /static/common/general.png
    :width: 1.5em
 .. |meshcontours| image:: /static/common/meshcontours.png

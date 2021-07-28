@@ -79,11 +79,13 @@ Information Properties
 place to quickly grab summarized information and metadata on the current layer.
 Provided information are:
 
-* based on the provider of the layer (format of storage, path, geometry type,
-  data source encoding, extent...);
-* picked from the :ref:`filled metadata <vectormetadatamenu>` (access, links,
-  contacts, history...);
-* or related to its geometry (spatial extent, CRS...) or its attributes (number
+* based on the provider of the layer: format of storage, path, geometry type,
+  data source encoding, extent...
+* the Coordinate Reference System: name, units, method, accuracy, reference
+  (i.e. whether it's static or dynamic)
+* picked from the :ref:`filled metadata <vectormetadatamenu>`: access, extents,
+  links, contacts, history...
+* and related to its geometry (spatial extent, CRS...) or its attributes (number
   of fields, characteristics of each...).
 
 
@@ -3086,29 +3088,10 @@ More information on variables usage in the General Tools
 Metadata Properties
 ===================
 
-|editMetadata| The :guilabel:`Metadata` tab provides you with options to create
-and edit a metadata report on your layer. Information to fill concern:
+The |editMetadata| :guilabel:`Metadata` tab provides you with options
+to create and edit a metadata report on your layer.
+See :ref:`metadatamenu` for more information.
 
-* the data :guilabel:`Identification`: basic attribution of the dataset (parent,
-  identifier, title, abstract, language...);
-* the :guilabel:`Categories` the data belongs to. Alongside the **ISO** categories,
-  you can add custom ones;
-* the :guilabel:`Keywords` to retrieve the data and associated concepts following
-  a standard based vocabulary;
-* the :guilabel:`Access` to the dataset (licenses, rights, fees, and constraints);
-* the :guilabel:`Extent` of the dataset, either spatial one (CRS, map extent,
-  altitudes) or temporal;
-* the :guilabel:`Contact` of the owner(s) of the dataset;
-* the :guilabel:`Links` to ancillary resources and related information;
-* the :guilabel:`History` of the dataset.
-
-A summary of the filled information is provided in the :guilabel:`Validation`
-tab and helps you identify potential issues related to the form. You can then
-either fix them or ignore them.
-
-Metadata are currently saved in the project file. They can also be saved in a
-:file:`.qmd` file alongside file based layers or in a local :file:`.sqlite`
-database for remote layers (e.g. PostGIS).
 
 .. index:: Dependencies
 .. _vectordependenciesmenu:
