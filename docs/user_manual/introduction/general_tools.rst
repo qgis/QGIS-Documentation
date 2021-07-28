@@ -307,7 +307,8 @@ symbols are:
   close this project. To avoid data loss and make the layer permanent, click
   the icon to store the layer in any of the OGR vector formats supported by QGIS.
 * |indicatorNoCRS| to identify a layer that has no/unknown CRS
-* |indicatorLowAccuracy| for layers with crs inaccuracies (requires the
+* |indicatorLowAccuracy| for layers with coordinates stored in a coordinate
+  reference system which is inherently low accuracy (requires the
   :ref:`corresponding setting <crs_inaccuracies>` to be enabled)
 * |indicatorTemporal| to identify a temporal layer controlled by canvas animation
 
