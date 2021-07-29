@@ -320,12 +320,20 @@ See :ref:`metadatamenu` for more information.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |3d| image:: /static/common/3d.png
+   :width: 1.5em
+.. |add| image:: /static/common/mActionAdd.png
+   :width: 1.5em
 .. |addMeshLayer| image:: /static/common/mActionAddMeshLayer.png
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+.. |collapseTree| image:: /static/common/mActionCollapseTree.png
+   :width: 1.5em
 .. |editMetadata| image:: /static/common/editmetadata.png
    :width: 1.2em
+.. |expandTree| image:: /static/common/mActionExpandTree.png
+   :width: 1.5em
 .. |general| image:: /static/common/general.png
    :width: 1.5em
 .. |meshcontours| image:: /static/common/meshcontours.png
@@ -335,6 +343,10 @@ See :ref:`metadatamenu` for more information.
 .. |meshframe| image:: /static/common/meshframe.png
    :width: 1.5em
 .. |meshvectors| image:: /static/common/meshvectors.png
+   :width: 1.5em
+.. |refresh| image:: /static/common/mActionRefresh.png
+   :width: 1.5em
+.. |rendering| image:: /static/common/rendering.png
    :width: 1.5em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
@@ -347,3 +359,5 @@ See :ref:`metadatamenu` for more information.
 .. |slider| image:: /static/common/slider.png
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
+.. |unchecked| image:: /static/common/checkbox_unchecked.png
+   :width: 1.3em

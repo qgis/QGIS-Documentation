@@ -312,7 +312,7 @@ Icon                            Substitution                        Icon        
 |settings|                      ``|settings|``                      |start|                         ``|start|``
 |3dconfigure|                   ``|3dconfigure|``                   |deleteSelected|                ``|deleteSelected|``
 |browserExpand|                 ``|browserExpand|``                 |browserCollapse|               ``|browserCollapse|``
-|codeEditor|                    ``|codeEditor|``
+|codeEditor|                    ``|codeEditor|``                    |add|                           ``|add|``
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -508,6 +508,8 @@ Icon                            Substitution                        Icon        
 .. |action| image:: /static/common/action.png
    :width: 2em
 .. |actionRun| image:: /static/common/mAction.png
+   :width: 1.5em
+.. |add| image:: /static/common/mActionAdd.png
    :width: 1.5em
 .. |add3DMap| image:: /static/common/mActionAdd3DMap.png
    :width: 1.5em
