@@ -296,22 +296,26 @@ Available properties depend on the selected symbology as shown in the following 
 Rendering
 .........
 
-In the tab |meshframe|,  QGIS offers two possibilities to display the grid,
-as shown in :numref:`figure_mesh_symbology_grid`:
+In the tab |meshframe| :sup:`Rendering` tab, QGIS offers possibilities to
+display the grid, as shown in :numref:`figure_mesh_symbology_grid`:
 
-*	``Native Mesh Rendering`` that shows quadrants
-*	``Triangular Mesh Rendering`` that display triangles
+* ``Native Mesh Rendering`` that shows quadrants
+* ``Triangular Mesh Rendering`` that display triangles
 
 
 .. _figure_mesh_symbology_grid:
 
 .. figure:: img/mesh_symbology_grid.png
    :align: center
-   
+
    Mesh Rendering
+
+
+The lines width and color can be changed in this dialog, and both the grid
+renderings can be turned off.
+
    
    
-The line width and color can be changed in this dialog, and both the grid renderings can be turned off.
 
 .. _mesh_stacked_averaging:
 
