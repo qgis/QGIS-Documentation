@@ -137,16 +137,45 @@ Source Properties
 The :guilabel:`Source` tab displays basic information about the selected mesh,
 including:
 
-* the Layer name to display in the :guilabel:`Layers` panel
+.. _figure_mesh_source:
+
+.. figure:: img/mesh_source.png
+   :align: center
+
+   Mesh Layer Source Properties
+
+* the layer name to display in the :guilabel:`Layers` panel
 * setting the Coordinate Reference System: Displays the layer’s
-  :ref:`Coordinate Reference System (CRS) <layer_crs>`. You can change the layer’s CRS by
-  selecting a recently used one in the drop-down list or clicking on |setProjection|
-  :guilabel:`Select CRS` button (see :ref:`crs_selector`).
+  :ref:`Assigned Coordinate Reference System (CRS) <layer_crs>`. You can change
+  the layer’s CRS by selecting a recently used one in the drop-down list or
+  clicking on |setProjection| :guilabel:`Select CRS` button (see :ref:`crs_selector`).
   Use this process only if the CRS applied to the layer is wrong or
   if none was applied.
+* The :guilabel:`Available datasets` frame lists all the dataset groups (and
+  subitems) in the mesh layer, with their type and description in a tree view.
 
-Use the :guilabel:`Assign Extra Dataset to Mesh` button to add more groups
-to the current mesh layer.
+  * Use the |add| :guilabel:`Assign extra dataset to mesh` button to add more
+    groups to the current mesh layer.
+  * |collapseTree| :guilabel:`Collapse all` and |expandTree| :guilabel:`Expand
+    all` the dataset tree, in case of embedded groups
+  * If you are interested in few datasets, you can uncheck the others and
+    make them unavailable in the project
+  * Double-click over a name and you can rename the dataset.
+  * |refresh| :guilabel:`Reset to defaults`, removing additional groups
+    or renames.
+* |unchecked| :guilabel:`Always treat as static dataset, regardless of temporal
+  properties`
+* :guilabel:`Static dataset`: each active dataset (as selected in |symbology|
+  :menuselection:`Symbology -->` |general| :guilabel:`Datasets` tab) can be
+  assigned a date and will render independently of QGIS time controller.
+  Select ``None`` in the combobox if you wish to keep a dynamic dataset.
+
+  .. I am not really sure of this because depending on the dataset I use,
+   I also find 'display dataset' in the combobox. Not sure what it means.
+
+.. Are the last two points not related? Isn't the last point a subitem of the previous one?
+ if so, the GUI is confusing (I'd expect the subitem deactivated in some cases) and
+ visualize this hierarchy (eg, via a group box).
 
 Symbology Properties
 --------------------
