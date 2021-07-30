@@ -237,37 +237,65 @@ visualization options of contours for the selected group, as shown in
 Vectors Symbology
 .................
 
-In the tab |general|, click on |meshcontoursoff| to display vectors if available.
-The map canvas will display the vectors in the selected group with default parameters.
-Click on the tab |meshvectors| to change the visualization parameters for vectors
-as shown in the image below:
+.. note:: The |meshvectors| :sup:`Vectors` tab can be activated only if a
+  vector dataset has been selected in the |general| :guilabel:`Datasets` tab.
 
-.. _figure_mesh_symbology_vector:
+In the |meshcontours| :sup:`Vectors` tab you can see and change the current
+visualization options of vectors for the selected group, as shown in
+:numref:`figure_mesh_symbology_vectors`:
 
-.. figure:: img/mesh_symbology_vector.png
+.. _figure_mesh_symbology_vectors:
+
+.. figure:: img/mesh_symbology_vectors.png
    :align: center
 
-   Styling Vectors in a Mesh Layer
+   Styling Vectors in a Mesh Layer with arrows
 
-The line width can be set using the combo box or typing the value.
-The color widget opens the dialog :guilabel:`Change color`,
-where you can select a color to apply to vectors.
+Mesh vector dataset can be styled using various types of :guilabel:`Symbology`:
 
-Enter values for :guilabel:`Min` and :guilabel:`Max` to filter vectors according to their magnitude.
+* **Arrows**: ???
+* **Streamlines**: vectors are represented with streamlines seeded from start
+  points. The seeding points can start from the vertices of the mesh, from
+  a user grid or randomly.
+* **Traces**: ???
 
-Check on the box |checkbox| :guilabel:`Display Vectors on User Grid` and specify
-the :guilabel:`X spacing` and the :guilabel:`Y spacing`,
-QGIS will render the vector considering the given spacing.
+.. a one-line description for the items above would be nice
 
-With the Head Options :guilabel:`Head Options`, QGIS allows the shape of the arrow
-head to be set by specifying width and length (in percentage).
+Available properties depend on the selected symbology as shown in the following table.
 
-Vector's :guilabel:`Arrow length` can be rendered in QGIS in three different ways:
+.. I assumed below that "magnitude" means vector data in mesh world. Right?
 
-* Defined by Min and Max: You specify the minimum and maximum length for the vectors,
-  QGIS will adjust their visualization accordingly
-* Scale to magnitude: You specify the (multiplying) factor to use
-* Fixed: all the vectors are shown with the same length
++----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
+| Label                                  | Description and Properties                                                                | Arrow      | Streamlines | Traces     |
++========================================+===========================================================================================+============+=============+============+
+| :guilabel:`Line width`                 | Width of the vector representation                                                        | |checkbox| | |checkbox|  | |checkbox| |
++----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
+| :guilabel:`Coloring method`            | * a :guilabel:`Single color` assigned to all vectors                                      | |checkbox| | |checkbox|  | |checkbox| |
+|                                        | * or a variable color based on vectors magnitude, using a                                 |            |             |            |
+|                                        |   :ref:`Color ramp shader <color_ramp_shader>`                                            |            |             |            |
++----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
+| :guilabel:`Filter by magnitude`        | Only vectors whose value for the selected dataset falls between a :guilabel:`Min`         | |checkbox| | |checkbox|  |            |
+|                                        | and :guilabel:`Max` range are displayed                                                   |            |             |            |
++----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
+| :guilabel:`Display on user grid`       | Places the vector on a grid with custom :guilabel:`X spacing` and :guilabel:`Y spacing`   | |checkbox| | |checkbox|  |            |
+|                                        | and interpolates the values based on neighbours                                           |            |             |            |
++----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
+| :guilabel:`Head options`               | :guilabel:`Length` and :guilabel:`Width` of the arrow head, as a percentage of its shaft  | |checkbox| |             |            |
+|                                        | length                                                                                    |            |             |            |
++----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
+| :guilabel:`Arrow length`               | * **Defined by Min and Max**: You specify the minimum and maximum length for the arrows,  | |checkbox| |             |            |
+|                                        |   QGIS will interpolate their size based on the underlying vector's magnitude             |            |             |            |
+|                                        | * **Scale to magnitude**: arrow length is proportional to their vector's magnitude        |            |             |            |
+|                                        | * **Fixed**: all the vectors are shown with the same length                               |            |             |            |
++----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
+| :guilabel:`Streamlines seeding method` | * **On mesh/grid**: relies on the user grid to display the vectors                        |            | |checkbox|  |            |
+|                                        | * **Randomly**: vector placement is randomly done with respect to a certain density       |            |             |            |
++----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
+| :guilabel:`Particles count`            | ???                                                                                       |            |             | |checkbox| |
++----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
+| :guilabel:`Max tail length`            | ???                                                                                       |            |             | |checkbox| |
++----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
+
 
 .. _mesh_symbology_rendering:
 
