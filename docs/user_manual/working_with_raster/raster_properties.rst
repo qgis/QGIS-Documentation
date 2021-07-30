@@ -393,6 +393,74 @@ on the:
 Color ramp shader classification
 ................................
 
+This method can be used to represent scalar dataset based on their values.
+Given a range of values, it interpolates each item's value and assigns a
+color using a color ramp.
+
+.. _figure_raster_colorrampshader:
+
+.. figure:: img/color_ramp_shader.png
+   :align: center
+
+   Classifying a dataset with a color ramp shader
+
+#. QGIS detects the :guilabel:`Min` and :guilabel:`Max` values of the dataset
+   but you can edit those if you want to exclude some.
+#. Following types of data :guilabel:`Interpolation` are then available:
+
+   * Discrete (a ``<=`` symbol appears in the header of the
+     :guilabel:`Value` column): a range of values are assigned the same class
+   * Linear
+   * Exact (an ``=`` symbol appears in the header of the
+     :guilabel:`Value` column)
+
+   .. an explanation of these interpolation settings is highly welcome and how they
+    play with the classification mode/classes
+
+#. The :guilabel:`Color ramp` widget helps you select the color ramp to assign
+   to the dataset. As usual with :ref:`this widget <color_ramp_widget>`,
+   you can create a new one and edit or save the currently selected one.
+   The name of the color ramp will be saved in the configuration.
+#. The :guilabel:`Label unit suffix` adds a label after the value in
+   the legend, and the :guilabel:`Label precision` controls the number of
+   decimals to display.
+#. Under the classification :guilabel:`Mode`, you can apply:
+
+   * :guilabel:`Equal interval`: you set a :guilabel:`number of classes`
+     and QGIS assigns their limits so that they all have the same magnitude
+   * :guilabel:`Continuous`: ???
+   * :guilabel:`Quantile`: you set a :guilabel:`number of classes` and
+     QGIS assigns their limits so that they have the same number of cells
+
+#. You can then :guilabel:`Classify` or tweak the classes:
+
+   * The button |signPlus| :sup:`Add values manually` adds a value to the table.
+   * The button |signMinus| :sup:`Remove selected row` deletes selected values
+     from the table.
+   * Double clicking in the :guilabel:`Value` lets you modify the class value.
+   * Double clicking in the :guilabel:`Color` column opens the dialog
+     :guilabel:`Change color`, where you can select a color to apply for
+     that value.
+   * Double clicking in the :guilabel:`Label` column to modify the label of
+     the class, but this value won't be displayed when you use the identify
+     feature tool.
+   * Right-clicking over selected rows in the color table shows a contextual
+     menu to :guilabel:`Change Color...` and :guilabel:`Change Opacity...`
+     for the selection.
+
+   You can use the buttons |fileOpen| :sup:`Load color map from file`
+   or |fileSaveAs| :sup:`Export color map to file` to load an existing
+   color table or to save the color table for later use.
+
+#. With linear :guilabel:`Interpolation`, you can also configure:
+
+   * |checkbox| :guilabel:`Clip out of range values`: allows QGIS to
+     not render pixel greater than the :guilabel:`Max` value.
+   * :guilabel:`Legend settings`, for display in the :guilabel:`Layers`
+     panel and the layout :ref:`legend item <layout_legend_item>`.
+     More details at :ref:`raster_legend_settings`.
+
+
 
 Color rendering
 ---------------
