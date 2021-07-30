@@ -227,6 +227,12 @@ to MinMax' and 'Clip to min max'.
 
    Raster Symbology - Singleband gray rendering
 
+Pixels are assigned a color based on the selected color gradient and the
+layer's legend (in the :guilabel:`Layers` panel and the layout :ref:`legend
+item <layout_legend_item>`) is displayed using a continuous color ramp.
+Press :guilabel:`Legend settings...` if you wish to tweak the settings.
+More details at :ref:`raster_legend_settings`.
+
 
 .. index:: Color map, Color interpolation, Discrete
 .. _label_colormaptab:
@@ -296,6 +302,12 @@ color table or to save the color table for later use.
 The |checkbox| :guilabel:`Clip out of range values` allows QGIS to
 not render pixel greater than the :guilabel:`Max` value.
 
+Pixels are assigned a color based on the selected color ramp and the
+layer's legend (in the :guilabel:`Layers` panel and the layout :ref:`legend
+item <layout_legend_item>`) is displayed using a continuous color ramp.
+Press :guilabel:`Legend settings...` if you wish to tweak the settings
+or instead use a legend with separated classes (and colors).
+More details at :ref:`raster_legend_settings`.
 
 .. index:: Hillshade
 .. _hillshade_renderer:
