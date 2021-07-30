@@ -168,6 +168,7 @@ Symbology properties are divided in several tabs:
 * :ref:`Contours Symbology <mesh_symbology_contours>`
 * :ref:`Vectors Symbology <mesh_symbology_vectors>`
 * :ref:`Rendering <mesh_symbology_rendering>`
+* :ref:`Stacked mesh averaging method <mesh_stacked_averaging>`
 
 .. _mesh_symbology_general:
 
@@ -302,6 +303,28 @@ as shown in :numref:`figure_mesh_symbology_grid`:
    
 The line width and color can be changed in this dialog, and both the grid renderings can be turned off.
 
+.. _mesh_stacked_averaging:
+
+Stacked mesh averaging method
+.............................
+
+.. Should this tab be active only if a 3D layered dataset group (is that volume?)
+ is enabled for rendering?
+
+3D layered meshes consist of multiple stacked 2D unstructured meshes each
+extruded in the vertical direction (``levels``) by means of a vertical
+coordinate. The vertices and faces have the same topology in each vertical level.
+Values are usually stored on the volumes that are regularly stacked over
+base 2d mesh. In order to visualise them on 2D canvas, you need to convert
+values on volumes (3d) to values on faces (2d) that can be shown in mesh layer.
+The |meshAveraging| :sup:`Stacked mesh averaging method` provides different
+averaging/interpolation methods to handle this.
+
+You can select the method to derive the 2D datasets and corresponding parameters
+(level index, depth or height values). For each method, an example of application
+is shown in the dialog but you can read more on the methods at
+https://fvwiki.tuflow.com/index.php?title=Depth_Averaging_Results.
+
 
 .. index:: Metadata, Metadata editor, Keyword
 .. _meshmetadata:
@@ -335,6 +358,8 @@ See :ref:`metadatamenu` for more information.
 .. |expandTree| image:: /static/common/mActionExpandTree.png
    :width: 1.5em
 .. |general| image:: /static/common/general.png
+   :width: 1.5em
+.. |meshaveraging| image:: /static/common/meshaveraging.png
    :width: 1.5em
 .. |meshcontours| image:: /static/common/meshcontours.png
    :width: 1.5em
