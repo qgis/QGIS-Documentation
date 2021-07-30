@@ -17,16 +17,25 @@ choose :guilabel:`Properties` from the context menu. This will open the
 
 There are several tabs in the dialog:
 
-* |metadata| :ref:`Information <raster_information>`
-* |system| :ref:`Source <raster_sourcetab>`
-* |symbology| :ref:`Symbology <raster_symbology>`
-* |transparency| :ref:`Transparency <raster_transparency>`
-* |rasterHistogram| :ref:`Histogram <raster_histogram>`
-* |rendering| :ref:`Rendering <raster_rendering>`
-* |pyramids| :ref:`Pyramids <raster_pyramids>`
-* |editMetadata| :ref:`Metadata <raster_metadata>`
-* |legend| :ref:`Legend <raster_server>`
-* |overlay| :ref:`QGIS Server <raster_server>`
+.. list-table::
+
+  * - |metadata| :ref:`Information <raster_information>`
+    - |system| :ref:`Source <raster_sourcetab>`
+    - |symbology| :ref:`Symbology <raster_symbology>`:sup:`[1]`
+  * - |transparency| :ref:`Transparency <raster_transparency>`:sup:`[1]`
+    - |rasterHistogram| :ref:`Histogram <raster_histogram>`:sup:`[1]`
+    - |rendering| :ref:`Rendering <raster_rendering>`
+  * - |temporal| :guilabel:`Temporal`
+    - |pyramids| :ref:`Pyramids <raster_pyramids>`
+    - |editMetadata| :ref:`Metadata <raster_metadata>`
+  * - |legend| :ref:`Legend <raster_server>`
+    - |overlay| :ref:`QGIS Server <raster_server>`
+    - :ref:`External plugins <plugins>`:sup:`[2]` tabs
+
+:sup:`[1]` Also available in the :ref:`Layer styling panel <layer_styling_panel>`
+
+:sup:`[2]` :ref:`External plugins <plugins>` you install can optionally add tabs to this
+dialog. Those are not presented in this document. Refer to their documentation.
 
 
 .. tip:: **Live update rendering**
@@ -743,6 +752,8 @@ be provided for :guilabel:`Description`, :guilabel:`Attribution`,
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
 .. |system| image:: /static/common/system.png
+   :width: 1.5em
+.. |temporal| image:: /static/common/temporal.png
    :width: 1.5em
 .. |transparency| image:: /static/common/transparency.png
    :width: 1.5em
