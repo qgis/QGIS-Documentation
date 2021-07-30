@@ -208,7 +208,7 @@ contextual menu to:
    Raster Symbology - Paletted unique value rendering
 
 The pulldown menu, that opens when clicking the :guilabel:`...`
-(:guilabel:`Advanced options`) button below the color map to the
+(:sup:`Advanced options`) button below the color map to the
 right, offers color map loading
 (:guilabel:`Load Color Map from File...`) and exporting
 (:guilabel:`Export Color Map to File...`), and loading of classes
@@ -219,7 +219,7 @@ right, offers color map loading
 Singleband gray
 ...............
 
-This renderer allows you to render a single band layer with a
+This renderer allows you to render a layer using only one band with a
 :guilabel:`Color gradient`: 'Black to white' or 'White to black'.
 You can change the range of values to color (:guilabel:`Min` and
 :guilabel:`Max`) in the
@@ -251,7 +251,7 @@ Singleband pseudocolor
 
 This is a render option for single-band files that include a
 continuous palette.
-You can also create color maps for a bands of a multiband raster.
+You can also create color maps for a band of a multiband raster.
 
 .. _figure_raster_pseudocolor:
 
@@ -261,55 +261,9 @@ You can also create color maps for a bands of a multiband raster.
    Raster Symbology - Singleband pseudocolor rendering
 
 
-Using a :guilabel:`Band` of the layer and a
-:ref:`values range <minmaxvalues>`, three types of color
-:guilabel:`Interpolation` are available:
-
-* Discrete (a ``<=`` symbol appears in the header of the
-  :guilabel:`Value` column)
-* Linear
-* Exact (an ``=`` symbol appears in the header of the
-  :guilabel:`Value` column)
-
-The :guilabel:`Color ramp` drop down lists the available color ramps.
-You can create a new one and edit or save the currently selected one.
-The name of the color ramp will be saved in the configuration and in
-the QML file.
-
-The :guilabel:`Label unit suffix` is a label added after the value in
-the legend.
-
-For classification :guilabel:`Mode` |selectString| 'Equal interval',
-you only need to select the :guilabel:`number of classes`
-|selectNumber| and press the button :guilabel:`Classify`.
-For :guilabel:`Mode` |selectString| 'Continuous', QGIS creates
-classes automatically depending on :guilabel:`Min` and
-:guilabel:`Max`.
-
-The button |signPlus| :sup:`Add values manually` adds a value
-to the table.
-The button |signMinus| :sup:`Remove selected row` deletes a value from
-the table.
-Double clicking in the :guilabel:`Value` column lets you insert a
-specific value.
-Double clicking in the :guilabel:`Color` column opens the dialog
-:guilabel:`Change color`, where you can select a color to apply for
-that value.
-Further, you can also add labels for each color, but this value won't
-be displayed when you use the identify feature tool.
-
-Right-clicking over selected rows in the color table shows a
-contextual menu to:
-
-* :guilabel:`Change Color...` for the selection
-* :guilabel:`Change Opacity...` for the selection
-
-You can use the buttons |fileOpen| :sup:`Load color map from file`
-or |fileSaveAs| :sup:`Export color map to file` to load an existing
-color table or to save the color table for later use.
-
-The |checkbox| :guilabel:`Clip out of range values` allows QGIS to
-not render pixel greater than the :guilabel:`Max` value.
+Using a :guilabel:`Band` of the layer and a :ref:`values range <minmaxvalues>`,
+you can now interpolate and assign representation color to pixels within classes.
+More at :ref:`color_ramp_shader`.
 
 Pixels are assigned a color based on the selected color ramp and the
 layer's legend (in the :guilabel:`Layers` panel and the layout :ref:`legend
