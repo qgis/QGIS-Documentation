@@ -159,20 +159,27 @@ Symbology properties are divided into several tabs:
 * :ref:`Vectors <mesh_symbology_vectors>`
 * :ref:`Rendering <mesh_symbology_rendering>`
 
+.. _mesh_symbology_datasets:
 
+Datasets
+........
 
+The tab |general| :sup:`Datasets` is the main place to control and set which
+datasets will be used for the layer. It presents the following items:
 
-.. _mesh_symbology_general:
+* :guilabel:`Groups` available in the mesh dataset, with whether they provide
+  scalar and/or vector dataset. Click on the icon next to the dataset name to
+  select the data to represent.
+* metadata (mesh and data type, whether vector or scalar, and name) of the
+  of dataset(s) in selected group(s)
+* :ref:`blending mode <blend-modes>` available for the selected datasets.
 
-General 
-.......
+.. _figure_mesh_symbology_datasets:
 
-The tab |general| presents the following items:
+.. figure:: img/mesh_symbology_datasets.png
+   :align: center
 
-* groups available in the mesh dataset
-* dataset in the selected group(s), for example, if the layer has a temporal dimension
-* metadata if available
-* :ref:`blending mode <blend-modes>` available for the selected dataset.
+   Mesh Layer Datasets
 
 
 The slider |slider|, the combo box |selectString| and the :guilabel:`|<`,
@@ -189,9 +196,12 @@ The map canvas will display the selected dataset group as well.
 
    Dataset in Selected Group(s)
 
+.. Is the widget described just above still available? I can't find it but I'm
+ conscious that the mesh layer I'm testing does not cover all the possibilities
+ of mesh layer properties. So does this feature still exist?
 
-
-You can apply symbology to each group using the tabs.
+You can apply symbology to the selected vector and/or scalar group using
+the next tabs.
 
 
 .. _mesh_symbology_contours:
