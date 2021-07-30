@@ -209,11 +209,11 @@ the next tabs.
 Contours Symbology
 ..................
 
-Under :guilabel:`Groups`, click on |meshcontoursoff| to show contours with
-default visualization parameters.
+.. note:: The |meshcontours| :sup:`Contours` tab can be activated only if a
+  scalar dataset has been selected in the |general| :guilabel:`Datasets` tab.
 
-In the tab |meshcontours| you can see and change the current visualization
-options of contours for the selected group, as shown in
+In the |meshcontours| :sup:`Contours` tab you can see and change the current
+visualization options of contours for the selected group, as shown in
 :numref:`figure_mesh_symbology_contours` below:
 
 .. _figure_mesh_symbology_contours:
@@ -223,6 +223,13 @@ options of contours for the selected group, as shown in
 
    Styling Contours in a Mesh Layer
 
+* Use the slider or the spinbox to set the :guilabel:`Opacity` of the current
+  group.
+* Use |refresh| :sup:`Load` to adjust the min and max values of the current group
+  or enter custom values if you want to exclude some.
+* Select the :guilabel:`Resampling method`
+* Classify the dataset using the :ref:`color ramp shader <color_ramp_shader>`
+  classification.
 
 
 .. _mesh_symbology_vectors:
