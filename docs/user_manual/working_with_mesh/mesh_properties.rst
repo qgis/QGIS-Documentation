@@ -220,27 +220,6 @@ options of contours for the selected group, as shown in
 
    Styling Contours in a Mesh Layer
 
-Use the slide bar or combo box to set the opacity of the current group.
-
-Use :guilabel:`Load` to adjust the min and max values of the current group.
-
-The :guilabel:`Interpolation` list contains three options to render contours:
-:guilabel:`Linear`, :guilabel:`Discrete` and :guilabel:`Exact`.
-
-The :guilabel:`Color ramp` widget opens the :ref:`color ramp drop-down shortcut <color_ramp_widget>`.
-
-The :guilabel:`Label unit suffix` is a label added after the value in the legend.
-
-By selecting :guilabel:`Continuous` in the classification :guilabel:`Mode`,
-QGIS creates classes automatically considering the :guilabel:`Min` and
-:guilabel:`Max` values. With ‘Equal interval’, you only need to select the number of classes
-using the combo box :guilabel:`Classes` and press the button :guilabel:`Classify`.
-
-The button |signPlus| :sup:`Add values manually` adds a value
-to the individual color table. The button |signMinus| :sup:`Remove selected row`
-deletes a value from the individual color table. Double clicking on the value column
-lets you insert a specific value. Double clicking on the color column opens the dialog
-:guilabel:`Change color`, where you can select a color to apply on that value.
 
 
 .. _mesh_symbology_vectors:
