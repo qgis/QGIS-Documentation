@@ -151,23 +151,16 @@ to the current mesh layer.
 Symbology Properties
 --------------------
 
-Click the |symbology| :guilabel:`Symbology` button to activate the dialog
-as shown in the following image:
+Click the |symbology| :guilabel:`Symbology` button to activate the dialog.
+Symbology properties are divided into several tabs:
 
-
-.. _figure_mesh_symbology:
-
-.. figure:: img/mesh_symbology.png
-   :align: center
-
-   Mesh Layer Symbology
-
-Symbology properties are divided in several tabs:
-
-* :ref:`General <mesh_symbology_general>`
-* :ref:`Contours Symbology <mesh_symbology_contours>`
-* :ref:`Vectors Symbology <mesh_symbology_vectors>`
+* :ref:`Datasets <mesh_symbology_datasets>`
+* :ref:`Contours <mesh_symbology_contours>`
+* :ref:`Vectors <mesh_symbology_vectors>`
 * :ref:`Rendering <mesh_symbology_rendering>`
+
+
+
 
 .. _mesh_symbology_general:
 
