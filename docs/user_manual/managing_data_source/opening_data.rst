@@ -463,8 +463,12 @@ To add a mesh layer to QGIS:
 #. Enable the |addMeshLayer| :guilabel:`Mesh` tab on the left panel
 #. Press the :guilabel:`...` :sup:`Browse` button to select the file.
    :ref:`Various formats <mesh_supported_formats>` are supported.
-#. Select the layer and press :guilabel:`Add`.
+#. Select the file and press :guilabel:`Add`.
    The layer will be added using the native mesh rendering.
+#. If the selected file contains many mesh layers, then you'll be prompted
+   with a dialog to choose the sublayers to load.
+   Do your selection and press :guilabel:`OK` and the layers are loaded with
+   the native mesh rendering. It's also possible to load them within a group.
 
 .. _figure_mesh_datasource_manager:
 
