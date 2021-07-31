@@ -313,6 +313,7 @@ as shown in :numref:`figure_mesh_symbology_grid`:
    
 The line width and color can be changed in this dialog, and both the grid renderings can be turned off.
 
+
 .. _mesh_stacked_averaging:
 
 Stacked mesh averaging method
@@ -331,6 +332,47 @@ You can select the method to derive the 2D datasets and corresponding parameters
 (level index, depth or height values). For each method, an example of application
 is shown in the dialog but you can read more on the methods at
 https://fvwiki.tuflow.com/index.php?title=Depth_Averaging_Results.
+
+
+.. _mesh_temporal:
+
+Temporal Properties
+-------------------
+
+The |temporal| :guilabel:`Temporal` tab controls ....
+
+.. _figure_mesh_temporal:
+
+.. figure:: img/mesh_temporal.png
+   :align: center
+
+   Mesh Temporal properties
+
+**Layer temporal settings**
+
+* :guilabel:`Reference time` of the dataset group, as an absolute date time.
+  It is set from the data provider, from the project or the current time.
+  It can also be user defined, or reset with |refresh| :sup:`Reload from provider`.
+
+.. are the different ways to set reference time still true?
+
+* :guilabel:`Start time`
+* :guilabel:`End time`
+* :guilabel:`Dataset matching method`: determines the dataset to display
+  at the given time. Options are :guilabel:`Find closest dataset before requested time`
+  or :guilabel:`Find closest dataset from requested time (after or before)`
+
+.. I couldn't succeed in triggering the start and end time. They are always grayed.
+ Any idea?
+
+**Provider time settings**
+
+* :guilabel:`Time unit` extracted from the raw data, or user defined.
+  Supported units are :guilabel:`Seconds`, :guilabel:`Minutes`, :guilabel:`Hours`
+  and :guilabel:`Days`.
+
+.. refs https://github.com/qgis/QGIS/commit/c252a3ad4cc7230d8fabb930ae4e927a9fb08787
+ but what happens if I change the unit, using a wrong one?
 
 
 .. index:: Metadata, Metadata editor, Keyword
@@ -458,5 +500,7 @@ the expression to execute.
 .. |slider| image:: /static/common/slider.png
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
+.. |temporal| image:: /static/common/temporal.png
+   :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
