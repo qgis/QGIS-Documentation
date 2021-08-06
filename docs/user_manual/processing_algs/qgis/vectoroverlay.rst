@@ -12,7 +12,7 @@ Vector overlay
 
 Clip
 ----
-Clips a vector layer using the features of an additional polygon
+Clips a vector layer using the geometric features of an additional polygon
 layer.
 
 Only the parts of the features in the input layer that fall within the
