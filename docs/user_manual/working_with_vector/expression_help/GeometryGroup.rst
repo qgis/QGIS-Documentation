@@ -2424,7 +2424,7 @@ Returns a geometry formed by buffering out just one side of a linestring geometr
 sinuosity
 .........
 
-Returns the sinuosity of a geometry. The geometry must be a curve (circularstring, linestring).
+Returns the sinuosity of a curve, which is the ratio of the curve length to the straight (2D) distance between its endpoints.
 
 .. list-table::
    :widths: 15 85
@@ -2432,7 +2432,7 @@ Returns the sinuosity of a geometry. The geometry must be a curve (circularstrin
    * - Syntax
      - sinuosity(geometry)
    * - Arguments
-     - * **geometry** - The geometry.
+     - * **geometry** - Input curve (circularstring, linestring)
    * - Examples
      - * ``round(sinuosity(geom_from_wkt('LINESTRING(2 0, 2 2, 3 2, 3 3)')), 3)`` → 1.265
        * ``sinuosity(geom_from_wkt('LINESTRING( 3 1, 5 1)'))`` → 1.0
