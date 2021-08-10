@@ -367,6 +367,9 @@ and the maximum distance allowed between clustered points.
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -393,13 +396,29 @@ Parameters
        Default: 1.0
      - Distance beyond which two features can not belong
        to the same cluster (eps)
-   * - **Cluster field name**
-     - ``FIELD_NAME``
-     - [string]
+   * - **Clusters**
+     - ``OUTPUT``
+     - [vector: point]
 
-       Default: 'CLUSTER_ID'
-     - Name of the field where the associated cluster number
-       shall be stored
+       Default: ``[Create temporary layer]``
+     - Specify the vector layer for the result of the clustering. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Treat border points as noise (DBSCAN\*)**
 
        Optional
@@ -411,10 +430,19 @@ Parameters
        themselves treated as unclustered points, and only
        points in the interior of a cluster are tagged as
        clustered.
-   * - **Clusters**
-     - ``OUTPUT``
-     - [vector: point]
-     - Vector layer for the result of the clustering
+   * - **Cluster field name**
+     - ``FIELD_NAME``
+     - [string]
+
+       Default: 'CLUSTER_ID'
+     - Name of the field where the associated cluster number
+       shall be stored
+   * - **Cluster size field name**
+     - ``SIZE_FIELD_NAME``
+     - [string]
+
+       Default: 'CLUSTER_SIZE'
+     - Name of the field with the count of features in the same cluster
 
 Outputs
 .......
@@ -777,6 +805,9 @@ A smaller distance results in a denser, more accurate line.
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -823,6 +854,29 @@ Parameters
        Default: False
      - Create geodesic lines (the shortest path on the surface of
        an ellipsoid)
+   * - **Hub lines**
+     - ``OUTPUT``
+     - [vector: line]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output hub line vector layer. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Distance between vertices (geodesic lines only)**
      - ``GEODESIC_DISTANCE``
      - [number]
@@ -837,10 +891,6 @@ Parameters
        Default: False
      - Split lines at ±180 degrees longitude (to improve rendering
        of the lines)
-   * - **Hub lines**
-     - ``OUTPUT``
-     - [vector: line]
-     - The resulting line layer
 
 Outputs
 .......
@@ -911,17 +961,43 @@ Parameters
 
        Default: 5
      - Number of clusters to create with the features
+   * - **Clusters**
+     - ``OUTPUT``
+     - [vector: any]
+
+       Default:``[Create temporary layer]``
+     - Specify the output vector layer for generated the clusters.
+       One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Cluster field name**
      - ``FIELD_NAME``
      - [string]
 
        Default: 'CLUSTER_ID'
-     - Name of the cluster number field
-   * - **Clusters**
-     - ``OUTPUT``
-     - [vector: any]
-     - Vector layer for generated the clusters
+     - Name of the field where the associated cluster number
+       shall be stored
+   * - **Cluster size field name**
+     - ``SIZE_FIELD_NAME``
+     - [string]
 
+       Default: 'CLUSTER_SIZE'
+     - Name of the field with the count of features in the same cluster
 
 Outputs
 .......
