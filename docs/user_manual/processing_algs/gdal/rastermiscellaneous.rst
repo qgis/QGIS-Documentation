@@ -1166,10 +1166,10 @@ Parameters
      - Specify the output folder for the tiles.
        One of:
 
-       * Save to Temporary Directory
-       * Save to Directory...
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **directory_output_types**
+          :end-before: **end_directory_output_types**
 
-       The file encoding can also be changed here.
    * - **CSV file containing the tile(s) georeferencing information**
      - ``OUTPUT_CSV``
      - [file]

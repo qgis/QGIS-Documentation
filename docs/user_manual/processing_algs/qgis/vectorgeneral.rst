@@ -2222,10 +2222,9 @@ Parameters
      - Specify the directory for the output layers.
        One of:
 
-       * Save to a Temporary Directory
-       * Save to Directory...
-
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **directory_output_types**
+          :end-before: **end_directory_output_types**
 
 Outputs
 ..........
