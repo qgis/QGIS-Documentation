@@ -312,8 +312,6 @@ Outputs
    * - **Class summary**
      - ``SUMMARY_OUTPUT``
      - [table]
-       
-       Default: ``[Skip Output]``
      - Table with summary of the class field mapped to the
        corresponding unique value.  
 
@@ -813,7 +811,7 @@ Parameters
      - ``OUTPUT``
      - [vector: any]
        
-       Default: ``[Save to temporary file]``
+       Default: ``[Create temporary layer]``
      - Specification of the output layer.
 
 Outputs

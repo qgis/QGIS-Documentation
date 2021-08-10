@@ -1958,7 +1958,7 @@ Parameters
      - ``OUTPUT``
      - [raster]
 
-       Default: '[Save to temporary file]'
+       Default: ``[Save to temporary file]``
      - Specification of the output raster layer.
        One of:
 
@@ -1980,9 +1980,7 @@ Outputs
    * - **Reclassified raster**
      - ``OUTPUT``
      - [raster]
-
-       Default: '[Save to temporary file]'
-     - The output raster layer.
+     - Output raster layer with reclassified band values
 
 Python code
 ...........
@@ -2015,11 +2013,11 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Input Point Layer**
+   * - **Input Layer**
      - ``INPUT``
      - [vector: point]
      - Point vector layer to use for  sampling
-   * - **Raster Layer to sample**
+   * - **Raster Layer**
      - ``RASTERCOPY``
      - [raster]
      - Raster layer to sample at the given point locations.
@@ -2027,9 +2025,9 @@ Parameters
      - ``COLUMN_PREFIX``
      - [string]
 
-       Default: 'rvalue'
+       Default: 'SAMPLE\_'
      - Prefix for the names of the added columns.
-   * - **Sampled Points**
+   * - **Sampled**
 
        Optional
      - ``OUTPUT``
@@ -2055,9 +2053,7 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Sampled Points**
-
-       Optional
+   * - **Sampled**
      - ``OUTPUT``
      - [vector: point]
      - The output layer containing the sampled values.
@@ -2145,12 +2141,8 @@ Outputs
      - Type
      - Description
    * - **Output zones**
-
-       Optional
      - ``OUTPUT``
      - [vector: polygon]
-
-       Default: ``[Create temporary layer]``
      - The output vector polygon layer.
 
 Python code

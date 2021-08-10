@@ -82,8 +82,8 @@ Parameters
    * - **Output layer**
      - ``OUTPUT``
      - [raster]
-       
-       Default: Save to temporary file
+
+       Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
        .. include:: qgis_algs_include.rst

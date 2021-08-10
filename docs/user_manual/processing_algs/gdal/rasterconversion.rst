@@ -333,7 +333,7 @@ Parameters
      - ``OUTPUT``
      - [raster]
 
-       Default: Save to temporary file
+       Default:  ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
        .. include:: ../qgis/qgis_algs_include.rst

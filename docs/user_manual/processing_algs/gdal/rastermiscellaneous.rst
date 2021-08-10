@@ -1175,8 +1175,7 @@ Parameters
      - [file]
 
        Default: ``[Skip output]``
-     -
-       One of:
+     - Specify the output file for the tiles. One of:
 
        .. include:: ../qgis/qgis_algs_include.rst
           :start-after: **file_output_types_skip**

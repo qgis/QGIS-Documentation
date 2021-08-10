@@ -102,7 +102,7 @@ Parameters
      - ``OUTPUT``
      - [raster]
 
-       Default: '[Save to temporary file]'
+       Default: ``[Save to temporary file]``
      - Specification of the output raster layer.
        One of:
 
@@ -278,7 +278,7 @@ Parameters
    * - **Clipped (mask)**
      - ``OUTPUT``
      - [raster]
-       Default: '[Save to temporary file]'
+       Default: ``[Save to temporary file]``
      - Specification of the output raster layer.
        One of:
 
@@ -404,7 +404,7 @@ Parameters
      - ``OUTPUT``
      - [vector: line]
 
-       Default: '[Save to temporary file]'
+       Default: ``[Save to temporary file]``
      - Specification of the output vector layer.
        One of:
 
@@ -541,7 +541,7 @@ Parameters
      - ``OUTPUT``
      - [vector: polygon]
 
-       Default: '[Save to temporary file]'
+       Default: ``[Save to temporary file]``
      - Specification of the output vector layer.
        One of:
 
