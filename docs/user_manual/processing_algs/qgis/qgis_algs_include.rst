@@ -439,7 +439,7 @@ Algorithm Output Types
 ......................
 
 .. The following describes the different options for algorithm outputs,
- with variants including the "skip output" option
+ with variants including the "skip output" and the "append" options
 
 Directory
 ^^^^^^^^^
@@ -492,6 +492,19 @@ Layer
 The file encoding can also be changed here.
 
 **end_layer_output_types**
+
+
+**layer_output_types_append**
+
+* Create Temporary Layer (``TEMPORARY_OUTPUT``)
+* Save to File...
+* Save to Geopackage...
+* Save to Database Table...
+* Append to Layer...
+
+The file encoding can also be changed here.
+
+**end_layer_output_types_append**
 
 
 **layer_output_types_skip**
