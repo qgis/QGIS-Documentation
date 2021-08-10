@@ -43,19 +43,19 @@ Parameters
    * - **Field name**
      - ``FIELD_NAME``
      - [string]
-       
+
        Default: 'AUTO'
      - Name of the field with autoincremental values
    * - **Start values at**
-       
+
        Optional
      - ``START``
      - [number]
-       
+
        Default: 0
      - Choose the initial number of the incremental count
    * - **Group values by**
-       
+
        Optional
      - ``GROUP_FIELDS``
      - [tablefield: any] [list]
@@ -64,7 +64,7 @@ Parameters
        for each value returned by the combination of these
        fields.
    * - **Sort expression**
-       
+
        Optional
      - ``SORT_EXPRESSION``
      - [expression]
@@ -73,7 +73,7 @@ Parameters
    * - **Sort ascending**
      - ``SORT_ASCENDING``
      - [boolean]
-       
+
        Default: True
      - When a ``sort expression`` is set, use this option
        to control the order in which features are assigned
@@ -81,7 +81,7 @@ Parameters
    * - **Sort nulls first**
      - ``SORT_NULLS_FIRST``
      - [boolean]
-       
+
        Default: False
      - When a ``sort expression`` is set, use this option
        to set whether *Null* values are counted first or
@@ -89,18 +89,15 @@ Parameters
    * - **Incremented**
      - ``OUTPUT``
      - [same as input]
-       
+
        Default: ``[Create temporary layer]``
      - Specify the output vector layer with the auto increment
        field.
        One of:
-      
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
-      
-       The file encoding can also be changed here.
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
 
 Outputs
 .......
@@ -191,13 +188,10 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specify the output vector layer.
        One of:
-       
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table......
-       
-       The file encoding can also be changed here.
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
 
 Outputs
 .......
@@ -293,7 +287,6 @@ Parameters
           :start-after: **layer_output_types_skip**
           :end-before: **end_layer_output_types_skip**
 
-
 Outputs
 .......
 
@@ -373,11 +366,8 @@ Parameters
        One of:
 
        .. include:: qgis_algs_include.rst
-          :start-after: **layer_output_types**
-          :end-before: **end_layer_output_types**
-
-.. warning: has append
-
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
 
 Outputs
 .......
@@ -492,7 +482,6 @@ Parameters
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
-
 Outputs
 .......
 
@@ -548,17 +537,14 @@ Parameters
    * - **Remaining fields**
      - ``OUTPUT``
      - [same as input]
-       
+
        Default: ``[Create temporary layer]``
      - Specify the output vector layer with the remaining fields.
        One of:
-       
-       * Create Temporary Layer
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table......
-       
-       The file encoding can also be changed here.
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
 
 Outputs
 .......
@@ -814,6 +800,10 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specification of the output layer.
 
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
+
 Outputs
 .......
 
@@ -933,8 +923,8 @@ Parameters
        One of:
        
        .. include:: qgis_algs_include.rst
-          :start-after: **layer_output_types**
-          :end-before: **end_layer_output_types**
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
 
 
 Outputs
@@ -1007,8 +997,8 @@ Parameters
        One of:
        
        .. include:: qgis_algs_include.rst
-          :start-after: **layer_output_types**
-          :end-before: **end_layer_output_types**
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
 
 
 Outputs
@@ -1079,8 +1069,8 @@ Parameters
      - Specify the output layer. One of:
        
        .. include:: qgis_algs_include.rst
-          :start-after: **layer_output_types**
-          :end-before: **end_layer_output_types**
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
 
 
 Outputs

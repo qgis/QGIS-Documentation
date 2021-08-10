@@ -540,7 +540,6 @@ Parameters
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
-
 Outputs
 .......
 

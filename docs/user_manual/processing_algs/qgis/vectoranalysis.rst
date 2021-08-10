@@ -326,7 +326,13 @@ Parameters
    * - **Count**
      - ``OUTPUT``
      - [vector: polygon]
-     - Specification of the output layer
+
+       Default: ``[Create temporary layer]``
+     - Specification of the output layer. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
 
 Outputs
 .......

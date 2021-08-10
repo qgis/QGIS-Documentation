@@ -200,9 +200,8 @@ Parameters
        The original features are also copied. One of:
 
        .. include:: qgis_algs_include.rst
-          :start-after: **layer_output_types**
-          :end-before: **end_layer_output_types**
-
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
 
 Outputs
 .......
