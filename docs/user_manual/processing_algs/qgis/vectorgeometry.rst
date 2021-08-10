@@ -5295,6 +5295,8 @@ Parameters
      - 
    * - **Non null geometries**
      - ``OUTPUT``
+
+       Optional
      - [same as input]
 
        Default: ``[Create temporary layer]``
@@ -5303,10 +5305,12 @@ Parameters
        One of:
 
        .. include:: qgis_algs_include.rst
-          :start-after: **layer_output_types**
-          :end-before: **end_layer_output_types**
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
 
    * - **Null geometries**
+
+       Optional
      - ``NULL_OUTPUT``
      - [same as input]
 
@@ -5317,7 +5321,6 @@ Parameters
        .. include:: qgis_algs_include.rst
           :start-after: **layer_output_types_skip**
           :end-before: **end_layer_output_types_skip**
-
 
 Outputs
 .......
@@ -7177,7 +7180,7 @@ line geometries as the diameter of the buffer at each vertex.
    Variable buffer example
 
 .. seealso:: :ref:`qgistaperedbuffer`, :ref:`qgisbuffer`,
-   :ref:`qgissetmvalue`
+   :ref:`qgissetmvalue`, :ref:`qgisvariabledistancebuffer`
 
 Parameters
 ..........
@@ -7293,8 +7296,6 @@ Parameters
        .. include:: qgis_algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
-
-
 
 Outputs
 .......

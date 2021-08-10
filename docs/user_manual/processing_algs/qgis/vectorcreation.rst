@@ -326,7 +326,6 @@ Parameters
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
-
 Outputs
 .......
 
@@ -418,7 +417,6 @@ Parameters
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
-
 Outputs
 .......
 
@@ -489,7 +487,6 @@ Parameters
        .. include:: qgis_algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
-
 
 Outputs
 .......
@@ -562,7 +559,6 @@ Parameters
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
-
 Outputs
 .......
 
@@ -628,6 +624,8 @@ Parameters
        Default: False
      - If checked, the folder and its subfolders will be scanned
    * - **Photos**
+
+       Optional
      - ``OUTPUT``
      - [vector: point]
 
@@ -636,8 +634,8 @@ Parameters
        One of:
 
        .. include:: qgis_algs_include.rst
-          :start-after: **layer_output_types**
-          :end-before: **end_layer_output_types**
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
 
    * - **Invalid photos table**
 
@@ -652,7 +650,6 @@ Parameters
        .. include:: qgis_algs_include.rst
           :start-after: **layer_output_types_skip**
           :end-before: **end_layer_output_types_skip**
-
 
 Outputs
 .......
@@ -776,7 +773,6 @@ Parameters
           :start-after: **directory_output_types_skip**
           :end-before: **end_directory_output_types_skip**
 
-
 Outputs
 .......
 
@@ -879,7 +875,6 @@ Parameters
        .. include:: qgis_algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
-
 
 Outputs
 .......
@@ -1047,7 +1042,6 @@ Parameters
        .. include:: qgis_algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
-
 
 Outputs
 .......
@@ -1311,7 +1305,6 @@ Parameters
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
-
 Outputs
 .......
 
@@ -1486,7 +1479,7 @@ Outputs
      - [number]
      - Not including features with empty or no geometry
    * - **Total number of points generated**
-     - ``OUTPUT_POINTS``
+     - ``POINTS_GENERATED``
      - [number]
      - 
    * - **Number of missed points**
@@ -1552,7 +1545,6 @@ Parameters
        .. include:: qgis_algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
-
 
 Outputs
 .......
@@ -1627,7 +1619,6 @@ Parameters
        .. include:: qgis_algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
-
 
 Outputs
 .......
@@ -1731,7 +1722,6 @@ Parameters
        .. include:: qgis_algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
-
 
 Outputs
 .......

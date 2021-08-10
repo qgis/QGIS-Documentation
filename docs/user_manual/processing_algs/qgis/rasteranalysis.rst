@@ -1411,13 +1411,10 @@ Parameters
        Default: ``[Skip output]``
      - Specification of the table for unique values:
 
-       * Skip Output
-       * Create Temporary Layer
-       * Save to File...
-       * Save to GeoPackage...
-       * Save to PostGIS Table......
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......

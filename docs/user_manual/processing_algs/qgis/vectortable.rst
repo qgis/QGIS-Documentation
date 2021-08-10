@@ -965,8 +965,8 @@ Python code
 
 .. _qgisrenametablefield:
 
-Rename vector field
--------------------
+Rename field
+------------
 Renames an existing field from a vector layer.
 
 The original layer is not modified. A new layer is generated where
