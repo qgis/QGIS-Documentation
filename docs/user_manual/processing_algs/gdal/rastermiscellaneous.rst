@@ -1178,11 +1178,9 @@ Parameters
      -
        One of:
 
-       * Skip Output
-       * Save to a Temporary File
-       * Save to File...
-
-       The file encoding can also be changed here.
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **file_output_types_skip**
+          :end-before: **end_file_output_types_skip**
 
 Outputs
 .......

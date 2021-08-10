@@ -1293,11 +1293,9 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specification of the output file:
 
-       * Skip Output
-       * Save to a Temporary File
-       * Save to File...
-
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types_skip**
+          :end-before: **end_file_output_types_skip**
 
 Outputs
 .......
@@ -1402,11 +1400,10 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specification of the output file:
 
-       * Skip Output
-       * Save to a Temporary File
-       * Save to File...
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types_skip**
+          :end-before: **end_file_output_types_skip**
 
-       The file encoding can also be changed here.
    * - **Unique values table**
      - ``OUTPUT_TABLE``
      - [table]
