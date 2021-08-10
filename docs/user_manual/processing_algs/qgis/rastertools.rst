@@ -316,11 +316,10 @@ Parameters
        Default: ``[Save to temporary folder]``
      - Specification of the output raster. One of:
 
-       * Skip Output
-       * Save to a Temporary Directory
-       * Save to Directory...
+       .. include:: qgis_algs_include.rst
+          :start-after: **directory_output_types_skip**
+          :end-before: **end_directory_output_types_skip**
 
-       The file encoding can also be changed here.
    * - **Output html (Leaflet)**
      - ``OUTPUT_HTML``
      - [html]
