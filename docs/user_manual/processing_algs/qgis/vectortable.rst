@@ -380,12 +380,12 @@ Parameters
      - Specify the output layer.
        One of:
 
-       * Create Temporary Layer
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
-       The file encoding can also be changed here.
+.. warning: has append
+
 
 Outputs
 .......
@@ -496,12 +496,10 @@ Parameters
      - Specify the vector layer with the new calculated
        field. One of:
        
-       * Create Temporary Layer
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table......
-       
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+
 
 Outputs
 .......
@@ -652,12 +650,9 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specify the output vector layer. One of:
        
-       * Create Temporary Layer
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table......
-       
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
 Outputs
 .......
@@ -720,14 +715,13 @@ Parameters
    * - **Destination folder**
      - ``FOLDER``
      - [folder]
-       
-       Default: ``[Save to a temporary folder]``
-     - Folder in which to store the output files.  One of:
-       
-       * Save to a Temporary Directory
-       * Save to Directory...
-       
-       The file encoding can also be changed here.
+
+       Default: ``[Save to temporary folder]``
+     - Folder in which to store the output files. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **directory_output_types**
+          :end-before: **end_directory_output_types**
 
 Outputs
 .......
@@ -946,12 +940,10 @@ Parameters
      - Specification of the output layer.
        One of:
        
-       * Create Temporary Layer
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table......
-       
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+
 
 Outputs
 .......
@@ -1022,12 +1014,10 @@ Parameters
      - Specification of the output layer.
        One of:
        
-       * Create Temporary Layer
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table......
-       
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+
 
 Outputs
 .......
@@ -1096,12 +1086,10 @@ Parameters
        Default: ``[Create Temporary Layer]``
      - Specify the output layer. One of:
        
-       * Create Temporary Layer
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table......
-       
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+
 
 Outputs
 .......

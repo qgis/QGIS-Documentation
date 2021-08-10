@@ -73,12 +73,10 @@ Parameters
        that are inside the overlay (clipping) layer.
        One of:
 
-       * Create Temporary Layer
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table......
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -166,12 +164,10 @@ Parameters
        input layer that are not inside the overlay layer.
        One of:
 
-       * Create Temporary Layer
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table......
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -248,12 +244,10 @@ Parameters
        that are inside the clip extent.
        One of:
 
-       * Create Temporary Layer
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table......
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -363,12 +357,10 @@ Parameters
        overlay layer.
        One of:
 
-       * Create Temporary Layer
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table......
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -466,12 +458,10 @@ Parameters
        lines from the input and overlay layers.
        One of:
 
-       * Create Temporary Layer
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table......
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -546,12 +536,10 @@ Parameters
        from the input layer.
        One of:
 
-       * Create Temporary Layer
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table......
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -642,12 +630,10 @@ Parameters
        the other layer.
        One of:
 
-       * Create Temporary Layer
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table......
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -757,12 +743,10 @@ Parameters
        features from the input layer and the overlay layer.
        One of:
 
-       * Create Temporary Layer
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table......
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......
