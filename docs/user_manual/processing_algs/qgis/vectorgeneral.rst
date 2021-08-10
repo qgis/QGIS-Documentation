@@ -619,13 +619,10 @@ Parameters
      - Specify the output layer containing only the duplicates.
        One of:
 
-       * Skip output
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
 
-       The file encoding can also be changed here.
 
 Outputs
 ..........
@@ -1323,13 +1320,10 @@ Parameters
        features from first layer.
        One of:
 
-       * Skip output
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
 
-       The file encoding can also be changed here.
 
 Outputs
 ..........
@@ -1483,13 +1477,10 @@ Parameters
        features from first layer.
        One of:
 
-       * Skip output
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
 
-       The file encoding can also be changed here.
 
 Outputs
 ..........
@@ -1752,13 +1743,10 @@ Parameters
      - Specify the vector layer containing the features that could
        not be joined. One of:
 
-       * Skip output
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......

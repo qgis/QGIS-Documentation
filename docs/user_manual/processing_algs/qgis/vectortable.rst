@@ -275,14 +275,11 @@ Parameters
        Default: ``[Create temporary layer]``
      - Vector layer with the numeric field containing indexes.
        One of:
-      
-       * Skip Output
-       * Create Temporary Layer
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table......
-       
-       The file encoding can also be changed here.
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
+
    * - **Class summary**
      - ``SUMMARY_OUTPUT``
      - [table]
@@ -291,14 +288,11 @@ Parameters
      - Specify the table to contain the summary of the class field
        mapped to the corresponding unique value.
        One of:
-      
-       * Skip Output
-       * Create Temporary Layer
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table......
-       
-       The file encoding can also be changed here.
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
+
 
 Outputs
 .......

@@ -1693,13 +1693,10 @@ Parameters
        Default: ``[Skip output]``
      - Specification of the output table. One of:
 
-       * Skip output
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......

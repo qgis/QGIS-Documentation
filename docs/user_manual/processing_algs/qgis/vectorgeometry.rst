@@ -841,13 +841,10 @@ Parameters
      - Specify the vector layer to contain a copy of the valid
        features of the source layer. One of:
 
-       * Skip output
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
 
-       The file encoding can also be changed here.
    * - **Invalid output**
      - ``INVALID_OUTPUT``
      - [same as input]
@@ -857,13 +854,10 @@ Parameters
        the source layer with the field  ``_errors`` listing the
        summary of the error(s) found. One of:
 
-       * Skip output
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
 
-       The file encoding can also be changed here.
    * - **Error output**
      - ``ERROR_OUTPUT``
      - [vector: point]
@@ -873,13 +867,10 @@ Parameters
        problems detected with the ``message`` field describing
        the error(s) found. One of:
 
-       * Skip output
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -5323,13 +5314,10 @@ Parameters
      - Specify the output vector layer for the NULL (and empty) geometries.
        One of:
 
-       * Skip Output
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......
