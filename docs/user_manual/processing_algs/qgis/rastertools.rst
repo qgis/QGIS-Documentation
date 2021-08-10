@@ -85,11 +85,10 @@ Parameters
        
        Default: Save to temporary file
      - Specification of the output raster. One of:
-       
-       * Save to a Temporary File
-       * Save to File...
-       
-       The file encoding can also be changed here.
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -167,11 +166,10 @@ Parameters
      - ``OUTPUT``
      - [raster]
      - Specification of the output raster. One of:
-       
-       * Save to a Temporary File
-       * Save to File...
-       
-       The file encoding can also be changed here.
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......

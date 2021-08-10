@@ -662,8 +662,9 @@ Parameters
        Default: [Save to temporary file]
      - Name (including path) of the output file. One of:
 
-       * Save to a Temporary File
-       * Save to File...
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -751,8 +752,9 @@ Parameters
        Default: [Save to temporary file]
      - Name (including path) of the output file. One of:
 
-       * Save to a Temporary File
-       * Save to File...
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -871,8 +873,9 @@ Parameters
        Default: [Save to temporary file]
      - Name (including path) of the output file. One of:
 
-       * Save to a Temporary File
-       * Save to File...
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......

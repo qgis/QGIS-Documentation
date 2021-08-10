@@ -145,10 +145,10 @@ Parameters
      - Specify the output raster layer with kernel density values.
        One of:
 
-       * Save to a Temporary File
-       * Save to File...
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -349,10 +349,10 @@ Parameters
      - Raster layer of interpolated values.
        One of:
 
-       * Save to a Temporary File
-       * Save to File...
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -441,10 +441,11 @@ Parameters
        Default: ``[Save to temporary file]``
      - The output as a raster layer. One of:
 
-       * Save to a Temporary File
-       * Save to File...
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
-       The file encoding can also be changed here.
+
 
 
 Outputs
@@ -575,10 +576,10 @@ Parameters
        Default: ``[Save to temporary file]``
      - The output TIN interpolation as a raster layer. One of:
 
-       * Save to a Temporary File
-       * Save to File...
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
-       The file encoding can also be changed here.
    * - **Triangulation**
      - ``TRIANGULATION``
      - [vector: line]

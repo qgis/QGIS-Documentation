@@ -51,10 +51,10 @@ Parameters
      - Specify the output layer containing only the duplicates.
        One of:
 
-       * Save to a Temporary File
-       * Save to File...
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
-       The file encoding can also be changed here.
 
 Outputs
 ..........
@@ -138,10 +138,9 @@ Parameters
      - Specification of the output layer.
        One of:
 
-       * Save to a Temporary File
-       * Save to File...
-
-       The file encoding can also be changed here.
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
        For ``Save to File``, the output format has to be specified.
        All GDAL vector formats are supported.
@@ -874,10 +873,10 @@ Parameters
      - Specify the output HTML file that includes the file
        information. One of:
 
-       * Save to a Temporary File
-       * Save to File...
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
-       The file encoding can also be changed here.
        If no HTML-file is defined the output will be written
        to a temporary file
 
