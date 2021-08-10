@@ -406,6 +406,9 @@ Creates point features where the lines from the two layers intersect.
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -441,14 +444,6 @@ Parameters
        Default: None
      - Field(s) of the intersect layer to keep in the output.
        If no fields are chosen all fields are taken.
-   * - **Intersect fields prefix**
-       
-       Optional
-     - ``OVERLAY_FIELDS_PREFIX``
-     - [string]
-     - Prefix to add to the field names of the intersect
-       layer's fields to avoid name collisions with fields
-       in the input layer.
    * - **Intersection**
      - ``OUTPUT``
      - [vector: point]
@@ -462,6 +457,26 @@ Parameters
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Intersect fields prefix**
+
+       Optional
+     - ``INTERSECT_FIELDS_PREFIX``
+     - [string]
+     - Prefix to add to the field names of the intersect
+       layer's fields to avoid name collisions with fields
+       in the input layer.
 
 Outputs
 .......
@@ -594,6 +609,9 @@ Attributes are not modified (see :ref:`warning <warning_difference>`).
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -611,18 +629,10 @@ Parameters
      - [vector: any]
      - Second layer to extract (parts of) features from.
        Ideally the geometry type should be the same as input layer.
-   * - **Overlay fields prefix**
-       
-       Optional
-     - ``OVERLAY_FIELDS_PREFIX``
-     - [string]
-     - Prefix to add to the field names of the overlay
-       layer's fields to avoid name collisions with fields
-       in the input layer.
    * - **Symmetrical difference**
      - ``OUTPUT``
      - [same as input]
-       
+
        Default: ``[Create temporary layer]``
      - Specify the layer to contain (the parts of) the features from
        the input and overlay layers that do not overlap features from
@@ -633,6 +643,26 @@ Parameters
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Overlay fields prefix**
+
+       Optional
+     - ``OVERLAY_FIELDS_PREFIX``
+     - [string]
+     - Prefix to add to the field names of the overlay
+       layer's fields to avoid name collisions with fields
+       in the input layer.
 
 Outputs
 .......
@@ -706,6 +736,9 @@ attribute values from both layers for overlapping features.
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -719,24 +752,16 @@ Parameters
      - [vector: any]
      - Input vector layer to split at any intersections.
    * - **Overlay layer**
-       
+
        Optional
      - ``OVERLAY``
      - [vector: any]
      - Layer that will be combined to the first one.
        Ideally the geometry type should be the same as input layer.
-   * - **Overlay fields prefix**
-       
-       Optional
-     - ``OVERLAY_FIELDS_PREFIX``
-     - [string]
-     - Prefix to add to the field names of the overlay
-       layer's fields to avoid name collisions with fields
-       in the input layer.
    * - **Union**
      - ``OUTPUT``
      - [same as input]
-       
+
        Default: ``[Create temporary layer]``
      - Specify the layer to contain the (split and duplicated)
        features from the input layer and the overlay layer.
@@ -746,6 +771,26 @@ Parameters
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Overlay fields prefix**
+
+       Optional
+     - ``OVERLAY_FIELDS_PREFIX``
+     - [string]
+     - Prefix to add to the field names of the overlay
+       layer's fields to avoid name collisions with fields
+       in the input layer.
 
 Outputs
 .......
