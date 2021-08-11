@@ -44,9 +44,17 @@ Parameters
      - [tablefield: any]
      - Any supported table field to calculate the statistics
    * - **Statistics**
+
+       Optional
      - ``OUTPUT_HTML_FILE``
      - [html]
-     - HTML file for the calculated statistics
+
+       Default: ``[Save to temporary file]``
+     - Specification of the file for the calculated statistics. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types_skip**
+          :end-before: **end_file_output_types_skip**
 
 Outputs
 .......
@@ -191,7 +199,13 @@ Parameters
    * - **Climb layer**
      - ``OUTPUT``
      - [vector: line]
-     - The output (line) layer
+
+       Default: ``[Create temporary layer]``
+     - Specification of the output (line) layer. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
 Outputs
 .......
@@ -312,7 +326,13 @@ Parameters
    * - **Count**
      - ``OUTPUT``
      - [vector: polygon]
-     - Specification of the output layer
+
+       Default: ``[Create temporary layer]``
+     - Specification of the output layer. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
 
 Outputs
 .......
@@ -500,7 +520,13 @@ Parameters
    * - **Distance matrix**
      - ``OUTPUT``
      - [vector: point]
-     -
+
+       Default: ``[Create temporary layer]``
+     - Specification of the output vector layer. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
 Outputs
 .......
@@ -591,7 +617,14 @@ Parameters
    * - **Hub distance**
      - ``OUTPUT``
      - [vector: line]
-     - Line vector layer for the distance matrix output
+
+       Default: ``[Create temporary layer]``
+     - Specify the output line vector layer connecting the matching points.
+       One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
 Outputs
 .......
@@ -676,7 +709,14 @@ Parameters
    * - **Hub distance**
      - ``OUTPUT``
      - [vector: point]
-     - Point vector layer for the distance matrix output.
+
+       Default: ``[Create temporary layer]``
+     - Specify the output point vector layer with the nearest hub.
+       One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
 Outputs
 .......
@@ -692,8 +732,8 @@ Outputs
    * - **Hub distance**
      - ``OUTPUT``
      - [vector: point]
-     - Point vector layer with the attributes of the
-       input features, the identifier of their closest
+     - Point vector layer representing the center of the source features
+       with their attributes, the identifier of their closest
        feature and the calculated distance.
 
 Python code
@@ -816,7 +856,7 @@ Outputs
    * - **Hub lines**
      - ``OUTPUT``
      - [vector: line]
-     - The resulting line layer
+     - The resulting line layer connecting matching points in input layers
 
 Python code
 ...........
@@ -898,7 +938,7 @@ Outputs
      - ``OUTPUT``
      - [vector: any]
      - Vector layer containing the original features with
-       a field specifying the cluster they belong to
+       fields specifying the cluster they belong to and their number in it
 
 Python code
 ...........
@@ -939,14 +979,31 @@ Parameters
      - [tablefield: any]
      - Field to analyze
    * - **Unique values**
+
+       Optional
      - ``OUTPUT``
      - [table]
-     - Summary table layer with unique values
+
+       Default:``[Create temporary layer]``
+     - Specify the summary table layer with unique values. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
+
    * - **HTML report**
+
+       Optional
      - ``OUTPUT_HTML_FILE``
      - [html]
+
+       Default:``[Save to temporary file]``
      - HTML report of unique values in the
-       :menuselection:`Processing --> Results viewer`
+       :menuselection:`Processing --> Results viewer`. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types_skip**
+          :end-before: **end_file_output_types_skip**
 
 Outputs
 .......
@@ -1035,7 +1092,13 @@ Parameters
    * - **Mean coordinates**
      - ``OUTPUT``
      - [vector: point]
-     - The (point vector) layer for the result
+
+       Default:``[Create temporary layer]``
+     - Specify the (point vector) layer for the result. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
 Outputs
 .......
@@ -1107,10 +1170,18 @@ Parameters
      - [vector: point]
      - Point vector layer to calculate the statistics on
    * - **Nearest neighbour**
+
+       Optional
      - ``OUTPUT_HTML_FILE``
      - [html]
-     - HTML file for the computed statistics
 
+       Default:``[Save to temporary file]``
+     - Specification of the HTML file for the computed statistics.
+       One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types_skip**
+          :end-before: **end_file_output_types_skip**
 
 Outputs
 .......
@@ -1196,12 +1267,9 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specify the output vector layer. One of:
 
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
-
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
 Outputs
 .......
@@ -1266,7 +1334,13 @@ Parameters
    * - **Statistics by category**
      - ``OUTPUT``
      - [table]
-     - Table for the generated statistics
+
+       Default: ``[Create temporary layer]``
+     - Specify the output table for the generated statistics. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
 Outputs
 .......
@@ -1435,7 +1509,13 @@ Parameters
    * - **Line length**
      - ``OUTPUT``
      - [vector: polygon]
-     - The output polygon vector layer
+
+       Default: ``[Create temporary layer]``
+     - Specify the output polygon layer with generated statistics. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
 Outputs
 .......

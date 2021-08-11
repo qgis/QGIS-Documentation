@@ -74,12 +74,10 @@ Parameters
      - Specify the output vector layer for matching features.
        One of:
 
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
-       The file encoding can also be changed here.
    * - **Extracted (non-matching)**
      - ``FAIL_OUTPUT``
      - [same as input]
@@ -89,11 +87,9 @@ Parameters
        features.
        One of:
 
-       * Skip Output
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
 
 Outputs
 .......
@@ -169,12 +165,10 @@ Parameters
      - Specify the output vector layer for matching features.
        One of:
 
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
-       The file encoding can also be changed here.
    * - **Non-matching**
      - ``FAIL_OUTPUT``
      - [same as input]
@@ -184,11 +178,9 @@ Parameters
        features.
        One of:
 
-       * Skip Output
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
 
 Outputs
 .......
@@ -289,10 +281,9 @@ Parameters
        features in the comparison layer.
        One of:
 
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
 Outputs
 .......
@@ -376,12 +367,9 @@ Parameters
        selected features.
        One of:
 
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
-
-       Vector layer containing randomly selected features
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
 Outputs
 .......
@@ -471,12 +459,10 @@ Parameters
        selected features.
        One of:
 
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......

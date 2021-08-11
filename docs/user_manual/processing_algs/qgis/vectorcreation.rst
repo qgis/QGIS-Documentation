@@ -90,12 +90,10 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specify the output line layer with offset features. One of:
 
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -201,12 +199,9 @@ Parameters
        of the features.
        The original features are also copied. One of:
 
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
-
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
 
 Outputs
 .......
@@ -326,12 +321,9 @@ Parameters
        Default: ``[Create temporary layer]``
      - Resulting vector grid layer. One of:
 
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
-
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
 Outputs
 .......
@@ -420,12 +412,9 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specify the resulting point layer. One of:
 
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
-
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
 Outputs
 .......
@@ -494,12 +483,9 @@ Parameters
        Default: ``[Create temporary layer]``
      - Resulting point layer with pixel centroids. One of:
 
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
-
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
 Outputs
 .......
@@ -568,12 +554,9 @@ Parameters
        Default: ``[Create temporary layer]``
      - Resulting point layer of pixel centroids. One of:
 
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
-
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
 Outputs
 .......
@@ -640,6 +623,8 @@ Parameters
        Default: False
      - If checked, the folder and its subfolders will be scanned
    * - **Photos**
+
+       Optional
      - ``OUTPUT``
      - [vector: point]
 
@@ -647,12 +632,10 @@ Parameters
      - Specify the point vector layer for the geotagged photos.
        One of:
 
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
 
-       The file encoding can also be changed here.
    * - **Invalid photos table**
 
        Optional
@@ -663,13 +646,9 @@ Parameters
      - Specify the table of unreadable or non-geotagged photos.
        One of:
 
-       * Skip Output
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
-
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
 
 Outputs
 .......
@@ -775,12 +754,10 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specify the line vector layer of the path. One of:
 
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
-       The file encoding can also be changed here.
    * - **Directory for text output**
 
        Optional
@@ -791,12 +768,9 @@ Parameters
      - Specify the directory that will contain the description
        files of points and paths. One of:
 
-       * Skip Output
-       * Save to a Temporary Directory
-       * Save to Directory...
-
-       The file encoding can also be changed here.
-
+       .. include:: qgis_algs_include.rst
+          :start-after: **directory_output_types_skip**
+          :end-before: **end_directory_output_types_skip**
 
 Outputs
 .......
@@ -897,12 +871,9 @@ Parameters
        Default: ``[Create temporary layer]``
      - The output random points. One of:
 
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
-
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
 Outputs
 .......
@@ -990,12 +961,10 @@ Parameters
        Default: ``[Create temporary layer]``
      - The output random points. One of:
 
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -1069,12 +1038,9 @@ Parameters
        Default: ``[Create temporary layer]``
      - The output random points. One of:
 
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
-
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
 Outputs
 .......
@@ -1220,12 +1186,10 @@ Parameters
        Default: ``[Create temporary layer]``
      - The output random points. One of:
 
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -1336,12 +1300,9 @@ Parameters
        Default: ``[Create temporary layer]``
      - The output random points. One of:
 
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
-
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
 Outputs
 .......
@@ -1487,12 +1448,10 @@ Parameters
        Default: ``[Create temporary layer]``
      - The output random points. One of:
 
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -1519,7 +1478,7 @@ Outputs
      - [number]
      - Not including features with empty or no geometry
    * - **Total number of points generated**
-     - ``OUTPUT_POINTS``
+     - ``POINTS_GENERATED``
      - [number]
      - 
    * - **Number of missed points**
@@ -1582,12 +1541,9 @@ Parameters
      - Specify the resulting point layer of pixels centroids.
        One of:
 
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
-
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
 Outputs
 .......
@@ -1659,12 +1615,9 @@ Parameters
      - Specify the resulting polygon layer of pixel extents.
        One of:
 
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
-
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
 Outputs
 .......
@@ -1765,12 +1718,9 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specify the output regular point layer. One of:
 
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
-
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
 Outputs
 .......

@@ -433,3 +433,88 @@ See :ref:`processing_console` for details on how to run processing algorithms
 from the Python console.
 
 **end_algorithm_code_section**
+
+
+Algorithm Output Types
+......................
+
+.. The following describes the different options for algorithm outputs,
+ with variants including the "skip output" and the "append" options
+
+Directory
+^^^^^^^^^
+
+**directory_output_types**
+
+* Save to a Temporary Directory
+* Save to Directory
+
+**end_directory_output_types**
+
+
+**directory_output_types_skip**
+
+* Skip Output
+* Save to a Temporary Directory
+* Save to Directory
+
+**end_directory_output_types_skip**
+
+File
+^^^^
+
+**file_output_types**
+
+* Save to a Temporary File
+* Save to File...
+
+**end_file_output_types**
+
+
+**file_output_types_skip**
+
+* Skip Output
+* Save to a Temporary File
+* Save to File...
+
+**end_file_output_types_skip**
+
+Layer
+^^^^^
+
+**layer_output_types**
+
+* Create Temporary Layer (``TEMPORARY_OUTPUT``)
+* Save to File...
+* Save to Geopackage...
+* Save to Database Table...
+
+The file encoding can also be changed here.
+
+**end_layer_output_types**
+
+
+**layer_output_types_append**
+
+* Create Temporary Layer (``TEMPORARY_OUTPUT``)
+* Save to File...
+* Save to Geopackage...
+* Save to Database Table...
+* Append to Layer...
+
+The file encoding can also be changed here.
+
+**end_layer_output_types_append**
+
+
+**layer_output_types_skip**
+
+* Skip Output
+* Create Temporary Layer (``TEMPORARY_OUTPUT``)
+* Save to File...
+* Save to Geopackage...
+* Save to Database Table...
+
+The file encoding can also be changed here.
+
+**end_layer_output_types_skip**

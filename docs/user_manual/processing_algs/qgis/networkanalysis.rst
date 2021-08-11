@@ -83,13 +83,10 @@ Parameters
      - Specify the output line layer for the service area.
        One of:
 
-       * Skip output
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
 
-       The file encoding can also be changed here.
    * - **Service area (boundary nodes)**
      - ``OUTPUT``
      - [vector: point]
@@ -98,13 +95,10 @@ Parameters
      - Specify the output point layer for the service area
        boundary nodes. One of:
 
-       * Skip output
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -203,13 +197,10 @@ Parameters
      - Specify the output line layer for the service area.
        One of:
 
-       * Skip output
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
 
-       The file encoding can also be changed here.
    * - **Service area (boundary nodes)**
      - ``OUTPUT``
      - [vector: point]
@@ -218,13 +209,10 @@ Parameters
      - Specify the output point layer for the service area
        boundary nodes. One of:
 
-       * Skip output
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
 
-       The file encoding can also be changed here.
 
 .. include:: qgis_algs_include.rst
   :start-after: **network_advanced_parameters_service_area**
@@ -409,12 +397,10 @@ Parameters
      - Specify the output line layer for the shortest paths.
        One of:
 
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -581,12 +567,10 @@ Parameters
      - Specify the output line layer for the shortest paths.
        One of:
 
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -767,12 +751,10 @@ Parameters
      - Specify the output line layer for the shortest paths.
        One of:
 
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......

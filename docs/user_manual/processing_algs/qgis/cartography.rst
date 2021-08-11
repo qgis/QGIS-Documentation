@@ -270,13 +270,10 @@ Parameters
      - Output table for categories which do not match any symbol in
        the database. One of:
 
-       * Skip output
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
 
-       The file encoding can also be changed here.
    * - **Non-matching symbol names**
 
        Optional
@@ -287,13 +284,10 @@ Parameters
      - Output table for symbols from the provided style database which
        do not match any category. One of:
 
-       * Skip output
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -662,8 +656,9 @@ Parameters
        Default: [Save to temporary file]
      - Name (including path) of the output file. One of:
 
-       * Save to a Temporary File
-       * Save to File...
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -751,8 +746,9 @@ Parameters
        Default: [Save to temporary file]
      - Name (including path) of the output file. One of:
 
-       * Save to a Temporary File
-       * Save to File...
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -871,8 +867,9 @@ Parameters
        Default: [Save to temporary file]
      - Name (including path) of the output file. One of:
 
-       * Save to a Temporary File
-       * Save to File...
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -955,12 +952,10 @@ the original map item CRS will be used.
        Default: ``[Create temporary layer]``
      - Specify the output vector layer for the extent(s). One of:
 
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -1147,12 +1142,10 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specify the output layer. One of:
 
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......

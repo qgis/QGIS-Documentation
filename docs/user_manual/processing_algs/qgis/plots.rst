@@ -45,10 +45,9 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specify the HTML file for the plot. One of:
 
-       * Save to a Temporary File
-       * Save to File...
-
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -126,10 +125,9 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specify the HTML file for the plot. One of:
 
-       * Save to a Temporary File
-       * Save to File...
-
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -195,10 +193,9 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specify the HTML file for the plot. One of:
 
-       * Save to a Temporary File
-       * Save to File...
-
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -267,10 +264,9 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specify the HTML file for the plot. One of:
 
-       * Save to a Temporary File
-       * Save to File...
-
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -338,10 +334,9 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specify the HTML file for the plot. One of:
 
-       * Save to a Temporary File
-       * Save to File...
-
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -411,10 +406,9 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specify the HTML file for the plot. One of:
 
-       * Save to a Temporary File
-       * Save to File...
-
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -480,10 +474,9 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specify the HTML file for the plot. One of:
 
-       * Save to a Temporary File
-       * Save to File...
-
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -553,10 +546,9 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specify the HTML file for the plot. One of:
 
-       * Save to a Temporary File
-       * Save to File...
-
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......

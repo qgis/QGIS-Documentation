@@ -294,14 +294,14 @@ Parameters
      - ``OUTPUT``
      - [raster]
 
-       Default: '[Save to temporary file]'
+       Default: ``[Save to temporary file]``
      - Specification of the output raster layer.
        One of:
 
-       * Save to a Temporary File
-       * Save to File...
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......

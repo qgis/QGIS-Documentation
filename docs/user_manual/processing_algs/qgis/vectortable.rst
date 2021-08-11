@@ -43,19 +43,19 @@ Parameters
    * - **Field name**
      - ``FIELD_NAME``
      - [string]
-       
+
        Default: 'AUTO'
      - Name of the field with autoincremental values
    * - **Start values at**
-       
+
        Optional
      - ``START``
      - [number]
-       
+
        Default: 0
      - Choose the initial number of the incremental count
    * - **Group values by**
-       
+
        Optional
      - ``GROUP_FIELDS``
      - [tablefield: any] [list]
@@ -64,7 +64,7 @@ Parameters
        for each value returned by the combination of these
        fields.
    * - **Sort expression**
-       
+
        Optional
      - ``SORT_EXPRESSION``
      - [expression]
@@ -73,7 +73,7 @@ Parameters
    * - **Sort ascending**
      - ``SORT_ASCENDING``
      - [boolean]
-       
+
        Default: True
      - When a ``sort expression`` is set, use this option
        to control the order in which features are assigned
@@ -81,7 +81,7 @@ Parameters
    * - **Sort nulls first**
      - ``SORT_NULLS_FIRST``
      - [boolean]
-       
+
        Default: False
      - When a ``sort expression`` is set, use this option
        to set whether *Null* values are counted first or
@@ -89,18 +89,15 @@ Parameters
    * - **Incremented**
      - ``OUTPUT``
      - [same as input]
-       
+
        Default: ``[Create temporary layer]``
      - Specify the output vector layer with the auto increment
        field.
        One of:
-      
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
-      
-       The file encoding can also be changed here.
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
 
 Outputs
 .......
@@ -191,13 +188,10 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specify the output vector layer.
        One of:
-       
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table......
-       
-       The file encoding can also be changed here.
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
 
 Outputs
 .......
@@ -275,14 +269,11 @@ Parameters
        Default: ``[Create temporary layer]``
      - Vector layer with the numeric field containing indexes.
        One of:
-      
-       * Skip Output
-       * Create Temporary Layer
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table......
-       
-       The file encoding can also be changed here.
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
+
    * - **Class summary**
      - ``SUMMARY_OUTPUT``
      - [table]
@@ -291,14 +282,10 @@ Parameters
      - Specify the table to contain the summary of the class field
        mapped to the corresponding unique value.
        One of:
-      
-       * Skip Output
-       * Create Temporary Layer
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table......
-       
-       The file encoding can also be changed here.
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
 
 Outputs
 .......
@@ -318,8 +305,6 @@ Outputs
    * - **Class summary**
      - ``SUMMARY_OUTPUT``
      - [table]
-       
-       Default: ``[Skip Output]``
      - Table with summary of the class field mapped to the
        corresponding unique value.  
 
@@ -380,12 +365,9 @@ Parameters
      - Specify the output layer.
        One of:
 
-       * Create Temporary Layer
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
-
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
 
 Outputs
 .......
@@ -496,12 +478,9 @@ Parameters
      - Specify the vector layer with the new calculated
        field. One of:
        
-       * Create Temporary Layer
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table......
-       
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
 Outputs
 .......
@@ -558,17 +537,14 @@ Parameters
    * - **Remaining fields**
      - ``OUTPUT``
      - [same as input]
-       
+
        Default: ``[Create temporary layer]``
      - Specify the output vector layer with the remaining fields.
        One of:
-       
-       * Create Temporary Layer
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table......
-       
-       The file encoding can also be changed here.
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
 
 Outputs
 .......
@@ -652,12 +628,9 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specify the output vector layer. One of:
        
-       * Create Temporary Layer
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table......
-       
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
 Outputs
 .......
@@ -720,14 +693,13 @@ Parameters
    * - **Destination folder**
      - ``FOLDER``
      - [folder]
-       
-       Default: ``[Save to a temporary folder]``
-     - Folder in which to store the output files.  One of:
-       
-       * Save to a Temporary Directory
-       * Save to Directory...
-       
-       The file encoding can also be changed here.
+
+       Default: ``[Save to temporary folder]``
+     - Folder in which to store the output files. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **directory_output_types**
+          :end-before: **end_directory_output_types**
 
 Outputs
 .......
@@ -825,8 +797,12 @@ Parameters
      - ``OUTPUT``
      - [vector: any]
        
-       Default: ``[Save to temporary file]``
+       Default: ``[Create temporary layer]``
      - Specification of the output layer.
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
 
 Outputs
 .......
@@ -946,12 +922,10 @@ Parameters
      - Specification of the output layer.
        One of:
        
-       * Create Temporary Layer
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table......
-       
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
+
 
 Outputs
 .......
@@ -981,8 +955,8 @@ Python code
 
 .. _qgisrenametablefield:
 
-Rename vector field
--------------------
+Rename field
+------------
 Renames an existing field from a vector layer.
 
 The original layer is not modified. A new layer is generated where
@@ -1022,12 +996,10 @@ Parameters
      - Specification of the output layer.
        One of:
        
-       * Create Temporary Layer
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table......
-       
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
+
 
 Outputs
 .......
@@ -1096,12 +1068,10 @@ Parameters
        Default: ``[Create Temporary Layer]``
      - Specify the output layer. One of:
        
-       * Create Temporary Layer
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table......
-       
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
+
 
 Outputs
 .......

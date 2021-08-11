@@ -80,10 +80,10 @@ Parameters
         Default: ``[Save to temporary file]``
       - Specify the output buffer layer. One of:
 
-        * Save to a Temporary File
-        * Save to File...
+        .. include:: ../qgis/qgis_algs_include.rst
+           :start-after: **file_output_types**
+           :end-before: **end_file_output_types**
 
-        The file encoding can also be changed here.
 
 Outputs
 .......
@@ -156,10 +156,10 @@ Parameters
         Default: ``[Save to temporary file]``
       - Specify the output (clipped) layer. One of:
 
-        * Save to a Temporary File
-        * Save to File...
+        .. include:: ../qgis/qgis_algs_include.rst
+           :start-after: **file_output_types**
+           :end-before: **end_file_output_types**
 
-        The file encoding can also be changed here.
 
 Outputs
 .......
@@ -232,10 +232,10 @@ Parameters
         Default: ``[Save to temporary file]``
       - The output (masked) layer. One of:
 
-        * Save to a Temporary File
-        * Save to File...
+        .. include:: ../qgis/qgis_algs_include.rst
+           :start-after: **file_output_types**
+           :end-before: **end_file_output_types**
 
-        The file encoding can also be changed here.
 
 Outputs
 .......
@@ -358,10 +358,10 @@ Parameters
         Default: ``[Save to temporary file]``
       - Specify the output layer. One of:
 
-        * Save to a Temporary File
-        * Save to File...
+        .. include:: ../qgis/qgis_algs_include.rst
+           :start-after: **file_output_types**
+           :end-before: **end_file_output_types**
 
-        The file encoding can also be changed here.
 
 Outputs
 .......
@@ -441,10 +441,10 @@ Parameters
         Default: ``[Save to temporary file]``
       - Specify the output line layer. One of:
 
-        * Save to a Temporary File
-        * Save to File...
+        .. include:: ../qgis/qgis_algs_include.rst
+           :start-after: **file_output_types**
+           :end-before: **end_file_output_types**
 
-        The file encoding can also be changed here.
 
 Outputs
 .......
@@ -555,10 +555,10 @@ Parameters
         Default: ``[Save to temporary file]``
       - Specify the output buffer layer. One of:
 
-        * Save to a Temporary File
-        * Save to File...
+        .. include:: ../qgis/qgis_algs_include.rst
+           :start-after: **file_output_types**
+           :end-before: **end_file_output_types**
 
-        The file encoding can also be changed here.
 
 Outputs
 .......
@@ -639,10 +639,10 @@ Parameters
       - Specify the output point layer.
         One of:
 
-        * Save to a Temporary File
-        * Save to File...
+        .. include:: ../qgis/qgis_algs_include.rst
+           :start-after: **file_output_types**
+           :end-before: **end_file_output_types**
 
-        The file encoding can also be changed here.
 
 Outputs
 .......
