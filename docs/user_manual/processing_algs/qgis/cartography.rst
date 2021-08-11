@@ -74,12 +74,9 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specify the rotated output vector layer. One of:
 
-       * Save to a Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to GeoPackage...
-       * Save to Database Table...
-
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
 Outputs
 .......
@@ -153,10 +150,9 @@ Parameters
      - Output :file:`.XML` file combining the selected style items.
        One of:
 
-       * Save to a Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -288,7 +284,6 @@ Parameters
           :start-after: **layer_output_types_skip**
           :end-before: **end_layer_output_types_skip**
 
-
 Outputs
 .......
 
@@ -375,10 +370,9 @@ Parameters
      - Specify the output :file:`.XML` file for the selected style items.
        One of:
 
-       * Save to a Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -435,6 +429,9 @@ sort by expression will turn those settings off.
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -480,6 +477,18 @@ Parameters
      - ``FOLDER``
      - [folder]
      - Destination folder where the images will be generated
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Map layers to assign to unlocked map item(s)**
 
        Optional
@@ -559,6 +568,9 @@ sort by expression will turn those settings off.
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -594,6 +606,18 @@ Parameters
      - [boolean]
      - Determines if sorting should be inverted.
        Used when a sort expression is provided.
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Map layers to assign to unlocked map item(s)**
 
        Optional
@@ -695,6 +719,9 @@ Exports a print layout as an image file (e.g. PNG or JPEG images)
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -707,6 +734,28 @@ Parameters
      - ``LAYOUT``
      - [layout]
      - Layout to export
+   * - **Image file**
+     - ``OUTPUT``
+     - [file]
+
+       Default: [Save to temporary file]
+     - Name (including path) of the output file. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Map layers to assign to unlocked map item(s)**
 
        Optional
@@ -739,16 +788,6 @@ Parameters
 
        Default: True
      - Determines if antialiasing should be enabled
-   * - **Image file**
-     - ``OUTPUT``
-     - [file]
-
-       Default: [Save to temporary file]
-     - Name (including path) of the output file. One of:
-
-       .. include:: qgis_algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -785,6 +824,9 @@ Exports a print layout as a PDF file.
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -797,6 +839,28 @@ Parameters
      - ``LAYOUT``
      - [layout]
      - Layout to export
+   * - **PDF file**
+     - ``OUTPUT``
+     - [file]
+
+       Default: [Save to temporary file]
+     - Name (including path) of the output file. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Map layers to assign to unlocked map item(s)**
 
        Optional
@@ -860,16 +924,6 @@ Parameters
      - If True, then a separate PDF file will be created per layer per map item in the
        layout. Additionally, separate PDF files may be created for other complex layout items,
        resulting in a set of PDF files which contain logical atomic components of the layout.
-   * - **PDF file**
-     - ``OUTPUT``
-     - [file]
-
-       Default: [Save to temporary file]
-     - Name (including path) of the output file. One of:
-
-       .. include:: qgis_algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -912,6 +966,12 @@ be exported. If it is not specified, all map extents from the layout will be exp
 Optionally, a specific output CRS can be specified. If it is not specified,
 the original map item CRS will be used.
 
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -935,16 +995,6 @@ the original map item CRS will be used.
        extract.
        If none is provided then all the map items
        are processed.
-   * - **Overrride CRS**
-
-       Optional
-     - ``CRS``
-     - [crs]
-
-       Default: *The layout CRS*
-     - Select the CRS for the layer in which the information
-       will be reported.
-
    * - **Extent**
      - ``OUTPUT``
      - [vector: polygon]
@@ -956,6 +1006,26 @@ the original map item CRS will be used.
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Overrride CRS**
+
+       Optional
+     - ``CRS``
+     - [crs]
+
+       Default: *The layout CRS*
+     - Select the CRS for the layer in which the information
+       will be reported.
 
 Outputs
 .......
@@ -1145,7 +1215,6 @@ Parameters
        .. include:: qgis_algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
-
 
 Outputs
 .......
