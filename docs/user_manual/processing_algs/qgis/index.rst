@@ -17,6 +17,7 @@ algorithms.
      cartography
      database
      filetools
+     gps
      interpolation
      layertools
      mesh
