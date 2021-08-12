@@ -4749,7 +4749,7 @@ Parameters
      - ``INPUT``
      - [vector: line]
      - Input line vector layer
-   * - **Keep table structure of line layer**
+   * - **Keep fields from the input layer**
 
        Optional
      - ``KEEP_FIELDS``

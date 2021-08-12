@@ -41,7 +41,6 @@ Parameters
        .. include:: qgis_algs_include.rst
           :start-after: **file_output_types_skip**
           :end-before: **end_file_output_types_skip**
-       
 
 Outputs
 .......
@@ -67,5 +66,4 @@ Python code
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
-
 

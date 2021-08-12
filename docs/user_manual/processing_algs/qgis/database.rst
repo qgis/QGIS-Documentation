@@ -340,7 +340,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:package``
+**Algorithm ID**: ``native:package``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -480,7 +480,7 @@ The SQL query is executed in place.
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:postgisexecutesql``
+**Algorithm ID**: ``native:postgisexecutesql``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -492,8 +492,7 @@ Python code
 SpatiaLite execute SQL
 ----------------------
 
-Allows a SQL database query to be performed on a SpatiaLite database
-connected to QGIS.
+Allows a SQL database query to be performed on a SpatiaLite database.
 The algorithm **won't** create a new layer: it is designed to run
 queries on the layer itself.
 
@@ -517,8 +516,6 @@ Parameters
    * - **File Database**
      - ``DATABASE``
      - [vector]
-       
-       Default: not set
      - The SQLite/SpatiaLite database file to connect to
    * - **SQL query**
      - ``SQL``
@@ -537,7 +534,64 @@ The SQL query is executed in place.
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:spatialiteexecutesql``
+**Algorithm ID**: ``native:spatialiteexecutesql``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgisspatialiteexecutesqlregistered:
+
+SpatiaLite execute SQL (registered DB)
+--------------------------------------
+
+Allows a SQL database query to be performed on a SpatiaLite database
+connected to QGIS.
+The algorithm **won't** create a new layer: it is designed to run
+queries on the layer itself.
+
+.. seealso:: :ref:`qgispostgisexecutesql`, :ref:`qgisexecutesql`
+
+ For some SQL query examples see :ref:`PostGIS SQL Query Examples
+ <qgis_postgis_execute_sql_example>`.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+
+   * - **Database**
+     - ``DATABASE``
+     - [enumeration]
+       
+       Default: not set
+     - Select a SQLite/SpatiaLite database connected to the current session
+   * - **SQL query**
+     - ``SQL``
+     - [string]
+       
+       Default: ''
+     - Defines the SQL query, for example
+       ``'UPDATE my_table SET field=10'``.
+
+Outputs
+.......
+
+No output is created.
+The SQL query is executed in place.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:spatialiteexecutesqlregistered``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
