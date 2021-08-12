@@ -2255,6 +2255,7 @@ Default values
   could be handy to save values like last user that modifies data, last time it
   was changed...
 
+.. _constraints:
 
 Constraints
 ^^^^^^^^^^^

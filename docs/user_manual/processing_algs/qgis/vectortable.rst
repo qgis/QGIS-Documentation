@@ -842,7 +842,14 @@ The original layer is not modified. A new layer is generated, which
 contains a modified attribute table, according to the provided fields
 mapping.
 
-Refactor layer fields allows to:
+.. note:: When using a template layer with :ref:`constraints <constraints>`
+  on fields, the information is displayed in the widget with a coloured
+  background and tooltip. Treat this information as a hint during configuration.
+  No constraints will be added on an output layer nor will they be checked
+  or enforced by the algorithm.
+
+
+The Refactor fields algorithm allows to:
 
 * Change field names and types
 * Add and remove fields
@@ -889,22 +896,14 @@ Parameters
 
        :guilabel:`Source expression` (``expression``) [expression]
          Field or expression from the input layer.
-     
+
        :guilabel:`Field name` (``name``) [string]
          Name of the field in the output layer.
          By default input field name is kept.
 
        :guilabel:`Type` (``type``) [enumeration]
          Data type of the output field.
-         One of:
-         
-         * Date (14)
-         * DateTime (16)
-         * Double (6)
-         * Integer (2)
-         * Integer64 (4)
-         * String (10)
-         * Boolean (1)
+         Available types depend on the output layer provider.
 
        :guilabel:`Length` (``length``) [number]
          Length of the output field.
@@ -912,20 +911,26 @@ Parameters
        :guilabel:`Precision` (``precision``) [number]
          Precision of the output field.
 
-       Fields from another layer can be loaded into the field list
-       in :guilabel:`Load fields from layer`.
+       :guilabel:`Constraints` (``constraints``) [string]
+         When using a template layer, indicates whether there are constraints
+         applied to the template field. Hover over the cell to display the constraints.
+
+       :guilabel:`Load fields from template layer`
+         Allows to select a layer from the current project as a template
+         and (with :guilabel:`Load fields`) fill the above "Fields mapping" options
+         with its fields and their definitions.
+
    * - **Refactored**
      - ``OUTPUT``
      - [vector: any]
-       
+
        Default: ``[Create temporary layer]``
      - Specification of the output layer.
        One of:
-       
+
        .. include:: qgis_algs_include.rst
           :start-after: **layer_output_types_append**
           :end-before: **end_layer_output_types_append**
-
 
 Outputs
 .......
