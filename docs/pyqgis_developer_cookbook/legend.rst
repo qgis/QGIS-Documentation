@@ -134,7 +134,7 @@ We can retrieve one of the children:
 
 .. testoutput:: legend
 
-    <qgis._core.QgsLayerTreeLayer object at 0x7f1e1ea54168>
+    <QgsLayerTreeLayer: countries>
 
 Layers can also be retrieved using their (unique) ``id``:
 
@@ -200,7 +200,7 @@ You can switch between :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` and
 
 .. testoutput:: legend
 
-    Layer node: <qgis._core.QgsLayerTreeLayer object at 0x7f24423175e0>
+    Layer node: <QgsLayerTreeLayer: countries>
     Map layer: <QgsVectorLayer: 'countries' (ogr)>
 
 
