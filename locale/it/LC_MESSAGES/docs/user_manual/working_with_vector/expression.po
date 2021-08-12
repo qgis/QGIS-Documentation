@@ -69,6 +69,10 @@ msgstr ""
 msgid "clicking the |expression| button;"
 msgstr "facendo click sul pulsante |expression|;"
 
+#: ../../docs/user_manual/working_with_vector/expression.rst:412
+msgid "expression"
+msgstr "expression"
+
 #: ../../docs/user_manual/working_with_vector/expression.rst:33
 msgid ""
 ":ref:`selecting features <sec_selection>` with the |expressionSelect| "
@@ -76,6 +80,10 @@ msgid ""
 msgstr ""
 ":ref:`selecting features <sec_selection>` con lo strumento "
 "|expressionSelect| :sup:`Seleziona con espressione...`;"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:414
+msgid "expressionSelect"
+msgstr "expressionSelect"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:35
 msgid ""
@@ -85,6 +93,10 @@ msgstr ""
 ":ref:`Modifica attributi <calculate_fields_values>` per esempio con il "
 "|calculateField| :sup:`Calcolatore di campi` ;"
 
+#: ../../docs/user_manual/working_with_vector/expression.rst:404
+msgid "calculateField"
+msgstr "calculateField"
+
 #: ../../docs/user_manual/working_with_vector/expression.rst:37
 msgid ""
 "manipulating symbology, label or layout item parameters with the "
@@ -93,6 +105,10 @@ msgstr ""
 "nella manipolazione dei parametri di simbologia, di etichetta o del layout "
 "con lo strumento |dataDefined| :sup:`Sovrascrittura definita dai dati` (vedi"
 " :ref:`data_defined`); "
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:408
+msgid "dataDefined"
+msgstr "dataDefined"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:39
 msgid ""
@@ -214,6 +230,10 @@ msgstr "Sopra l'editor di espressioni, una serie di strumenti ti aiutano:"
 msgid "|fileNew|:sup:`Clear the expression editor`"
 msgstr "|fileNew|:sup:`Cancella l'editor espressione`"
 
+#: ../../docs/user_manual/working_with_vector/expression.rst:416
+msgid "fileNew"
+msgstr "fileNew"
+
 #: ../../docs/user_manual/working_with_vector/expression.rst:112
 msgid "create and manage :ref:`user expressions <user_expressions_functions>`"
 msgstr ""
@@ -320,6 +340,10 @@ msgstr ""
 "riferimento). Inoltre, puoi filtrare questa lista con |checkbox| "
 ":guilabel:`Mostra solo i valori in uso` nel campo corrente."
 
+#: ../../docs/user_manual/working_with_vector/expression.rst:406
+msgid "checkbox"
+msgstr "checkbox"
+
 #: ../../docs/user_manual/working_with_vector/expression.rst:152
 msgid ""
 "Double-clicking a field value in the widget adds it to the expression "
@@ -374,11 +398,27 @@ msgid ""
 "only information you need to provide in the expression text widget, e.g. "
 "type ``\"height\" > 20`` to select buildings that are higher than 20."
 msgstr ""
-"Premendo lo strumento |expressionSelect|:sup:`Seleziona per espressione` "
-"significa che vuoi \"selezionare gle elementi dagli edifici\". La "
+"Usando lo strumento |expressionSelect|:sup:`Seleziona per espressione` "
+"significa che vuoi \"selezionare gli elementi dagli edifici\". La "
 "**condizione** è l'unica informazione che devi fornire nel widget di testo "
 "dell'espressione, ad esempio scrivi ``\"height\" > 20`` per selezionare gli "
 "edifici che sono più alti di 20."
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:178
+msgid ""
+"with this selection made, pressing the |calculateField| :sup:`Field "
+"calculator` button and choosing \"height\" as :guilabel:`Update existing "
+"field`, you already provide the command \"update buildings set height = ??? "
+"where height > 20\". The only remaining bits you have to provide in this "
+"case is the **new value**, e.g. just enter ``50`` to set the height of the "
+"previously selected buildings."
+msgstr ""
+"con questa selezione fatta, premendo il pulsante |calculateField| "
+":sup:`Calcolatore di Campi` e scegliendo \"height\" come :guilabel:`Aggiorna"
+" campo esistente`, fornisci già il comando \"update buildings set height = "
+"??? where height > 20\". L'unico dato rimanente che devi fornire in questo "
+"caso è il **nuovo valore**, per esempio inserisci semplicemente ``50`` per "
+"impostare l'altezza degli edifici precedentemente selezionati."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:184
 msgid ""
@@ -405,9 +445,46 @@ msgstr ""
 msgid "And not::"
 msgstr "e non:"
 
+#: ../../docs/user_manual/working_with_vector/expression.rst:205
+msgid "**Use named parameters to ease expression reading**"
+msgstr ""
+"**Usare i parametri in modo esplicito per facilitare la lettura delle "
+"espressioni**"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:207
+msgid ""
+"Some functions require many parameters to be set. The expression engine "
+"supports the use of named parameters. This means that instead of writing the"
+" cryptic expression ``clamp( 1, 2, 9)``, you can use ``clamp( min:=1, "
+"value:=2, max:=9)``. This also allows arguments to be switched, e.g. "
+"``clamp( value:=2, max:=9, min:=1)``. Using named parameters helps clarify "
+"what the arguments for an expression function refer to, which is helpful "
+"when you are trying to interpret an expression later!"
+msgstr ""
+"Alcune funzioni richiedono l'impostazione di molti parametri. Il motore "
+"delle espressioni supporta l'uso di parametri con nomi espliciti. Questo "
+"significa che invece di scrivere la criptica espressione ``clamp( 1, 2, "
+"9)``, puoi usare ``clamp( min:=1, value:=2, max:=9)``. Questo permette anche"
+" di cambiare ordine agli argomenti, ad esempio ``clamp( value:=2, max:=9, "
+"min:=1)``. L'uso di parametri con nome aiuta a chiarire a cosa si "
+"riferiscono gli argomenti di una funzione di espressione, il che è utile "
+"quando si cerca di interpretare un'espressione in seguito!"
+
 #: ../../docs/user_manual/working_with_vector/expression.rst:215
 msgid "Some use cases of expressions"
 msgstr "Alcuni casi di uso di espressioni"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:217
+msgid ""
+"From the Field Calculator, calculate a \"pop_density\" field using the "
+"existing \"total_pop\" and \"area_km2\" fields::"
+msgstr ""
+"Dal calcolatore di campi, calcola un campo \"pop_density\" usando i campi "
+"esistenti \"total_pop\" e \"area_km2\":"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:222
+msgid "Label or categorize features based on their area::"
+msgstr "Etichetta o categorizza gli elementi in base alla loro area:"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:226
 msgid ""
@@ -436,9 +513,62 @@ msgstr ""
 "tutte le geometrie che rappresentano aree di \"Alta densità di popolazione\""
 " e il cui prezzo medio di casa è superiore a 10000€ per metro quadrato:"
 
+#: ../../docs/user_manual/working_with_vector/expression.rst:244
+msgid ""
+"The previous expression could also be used to define which features to label"
+" or show on the map."
+msgstr ""
+"L'espressione precedente potrebbe anche essere usata per definire quali "
+"elementi etichettare o mostrare sulla mappa."
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:247
+msgid ""
+"Create a different symbol (type) for the layer, using the geometry "
+"generator::"
+msgstr ""
+"Creare un simbolo diverso (tipo) per il layer, usando il generatore di "
+"geometrie:"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:251
+msgid ""
+"Given a point feature, generate a closed line (using ``make_line``) around "
+"its geometry::"
+msgstr ""
+"Dato un elemento puntuale, genera una linea chiusa (usando ``make_line``) "
+"intorno alla sua geometria:"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:264
+msgid ""
+"In a print layout label, display the name of the \"airports\" features that "
+"are within the layout \"Map 1\" item::"
+msgstr ""
+"In un'etichetta del layout di stampa, visualizzare il nome degli elementi \""
+" airports\" che si trovano all'interno dell'elemento \" Map 1 \" del layout:"
+
 #: ../../docs/user_manual/working_with_vector/expression.rst:278
 msgid "Saving Expressions"
 msgstr "Salvare le Espressioni"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:280
+msgid ""
+"Using the |fileSave| :sup:`Add current expression to user expressions` "
+"button above the expression editor frame, you can save important expressions"
+" you want to have quick access to. These are available from the **User "
+"expressions** group in the middle panel. They are saved under the user "
+"profile (:file:`<userprofile>/QGIS/QGIS3.ini` file) and available in all "
+"expression dialogs inside all projects of the current user profile."
+msgstr ""
+"Usando il pulsante |fileSave| :sup: `Aggiungi l'espressione corrente alle "
+"espressioni utente` sopra il riquadro dell'editor di espressioni, puoi "
+"salvare le espressioni importanti a cui vuoi avere accesso rapido. Queste "
+"sono disponibili nel gruppo **Espressioni utente** nel pannello centrale. "
+"Sono salvate sotto il profilo dell'utente (file "
+":file:`<userprofile>/QGIS/QGIS3.ini`) e disponibili in tutte le finestre di "
+"dialogo delle espressioni in tutti i progetti del profilo utente corrente."
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:418
+msgid "fileSave"
+msgstr "fileSave"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:288
 msgid ""
@@ -447,6 +577,63 @@ msgid ""
 msgstr ""
 "Un insieme di strumenti disponibili sopra la cornice dell'editor di "
 "espressioni ti aiuta a gestire le espressioni utente:"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:291
+msgid ""
+"|fileSave|:sup:`Add the current expression to user expressions`: store the "
+"expression in the user profile. A label and a help text can be added for "
+"easy identification."
+msgstr ""
+"|fileSave|:sup: `Aggiungi l'espressione corrente alle espressioni "
+"dell'utente`: memorizza l'espressione nel profilo dell'utente. Un'etichetta "
+"e un testo di aiuto possono essere aggiunti per una facile interpretazione."
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:294
+msgid ""
+"|symbologyEdit| :sup:`Edit selected expression from user expressions`, as "
+"well as their help and label"
+msgstr ""
+"|symbologyEdit| :sup:`Modifica l'espressione selezionata dalle espressioni "
+"utente`, così come il relativo testo di aiuto e l'etichetta"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:430
+msgid "symbologyEdit"
+msgstr "symbologyEdit"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:296
+msgid ""
+"|deleteSelected| :sup:`Remove selected expression from user expressions`"
+msgstr ""
+"|deleteSelected| :sup:`Rimuovi l'espressione selezionata dalle espressioni "
+"utente`"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:410
+msgid "deleteSelected"
+msgstr "deleteSelected"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:297
+msgid ""
+"|sharingImport| :sup:`Import user expressions` from a ``.json`` file into "
+"the active user profile folder"
+msgstr ""
+"|sharingImport| :sup:`Importa le espressioni utente` da un file ``.json`` "
+"nella cartella del profilo utente attivo"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:422
+msgid "sharingImport"
+msgstr "sharingImport"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:299
+msgid ""
+"|sharingExport| :sup:`Export user expressions` as a ``.json`` file; all the "
+"user expressions in the user profile :file:`QGIS3.ini` file are shared"
+msgstr ""
+"|sharingExport| :sup:`Esporta Espressioni Utente` come file ``.json``; tutte"
+" le espressioni utente sono condivise nel profilo utente :file:`QGIS3.ini` "
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:420
+msgid "sharingExport"
+msgstr "sharingExport"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:308
 msgid "Function Editor"
@@ -475,6 +662,10 @@ msgstr "Per creare una nuova funzione:"
 #: ../../docs/user_manual/working_with_vector/expression.rst:323
 msgid "Press the |signPlus| :sup:`New File` button."
 msgstr "Premi il pulsante |signPlus| :sup:`New File`."
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:426
+msgid "signPlus"
+msgstr "signPlus"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:324
 msgid "Enter a name to use in the form that pops up and press :guilabel:`OK`."
@@ -512,6 +703,10 @@ msgstr ""
 "Premi il pulsante |start| :guilabel:`Salva e Carica Funzioni`. La funzione "
 "scritta viene aggiunta all'albero delle funzioni nella scheda "
 ":guilabel:`Espressione`, di default nel gruppo ``Custom``."
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:428
+msgid "start"
+msgstr "start"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:335
 msgid "Enjoy your new function."
@@ -567,6 +762,10 @@ msgstr ""
 "Premere il |signMinus| :sup:`Rimuove il file funzioni selezionato`. La "
 "funzione viene rimossa dalla lista e il file ``.py`` corrispondente viene "
 "eliminato dalla cartella del profilo utente."
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:424
+msgid "signMinus"
+msgstr "signMinus"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:356
 msgid "**Example**"
