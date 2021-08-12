@@ -362,7 +362,7 @@ spatial clustering of applications with noise (DBSCAN) algorithm.
 The algorithm requires two parameters, a minimum cluster size,
 and the maximum distance allowed between clustered points.
 
-.. seealso:: :ref:`qgiskmeansclustering`
+.. seealso:: :ref:`qgisstdbscanclustering`, :ref:`qgiskmeansclustering`
 
 Parameters
 ..........
@@ -888,7 +888,7 @@ the centroid of the feature.
 
   A five class point clusters
 
-.. seealso:: :ref:`qgisdbscanclustering`
+.. seealso:: :ref:`qgisdbscanclustering`, :ref:`qgisstdbscanclustering`
 
 Parameters
 ..........
@@ -1299,6 +1299,141 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _qgisstdbscanclustering:
+
+ST-DBSCAN clustering
+--------------------
+|322|
+
+Clusters point features based on a 2D implementation of spatiotemporal
+Density-based clustering of applications with noise (ST-DBSCAN) algorithm.
+
+.. seealso:: :ref:`qgisdbscanclustering`, :ref:`qgiskmeansclustering`
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: point]
+     - Layer to analyze
+   * - **Date/time field**
+     - ``DATETIME_FIELD``
+     - [tablefield: date]
+     - Field containing the temporal information
+   * - **Minimum cluster size**
+     - ``MIN_SIZE``
+     - [number]
+
+       Default: 5
+     - Minimum number of features to generate a cluster
+   * - **Maximum distance between clustered points**
+     - ``EPS``
+     - [number]
+
+       Default: 1.0
+     - Distance beyond which two features can not belong
+       to the same cluster (eps)
+   * - **Maximum time duration between clustered points**
+     - ``EPS2``
+     - [number]
+
+       Default: 0.0 (days)
+     - Time duration beyond which two features can not belong
+       to the same cluster (eps2).
+       Available time units are milliseconds, seconds, minutes,
+       hours, days and weeks.
+   * - **Clusters**
+     - ``OUTPUT``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - Specify the vector layer for the result of the clustering. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Treat border points as noise (DBSCAN\*)**
+
+       Optional
+     - ``DBSCAN*``
+     - [boolean]
+
+       Default: False
+     - If checked, points on the border of a cluster are
+       themselves treated as unclustered points, and only
+       points in the interior of a cluster are tagged as
+       clustered.
+   * - **Cluster field name**
+     - ``FIELD_NAME``
+     - [string]
+
+       Default: 'CLUSTER_ID'
+     - Name of the field where the associated cluster number
+       shall be stored
+   * - **Cluster size field name**
+     - ``SIZE_FIELD_NAME``
+     - [string]
+
+       Default: 'CLUSTER_SIZE'
+     - Name of the field with the count of features in the same cluster
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Clusters**
+     - ``OUTPUT``
+     - [vector: point]
+     - Vector layer containing the original features with a
+       field setting the cluster they belong to
+   * - **Number of clusters**
+     - ``NUM_CLUSTERS``
+     - [number]
+     - The number of clusters discovered
+
+Python code
+...........
+
+**Algorithm ID**: ``native:stdbscanclustering``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgisstatisticsbycategories:
 
 Statistics by categories
@@ -1550,5 +1685,6 @@ Python code
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |322| replace:: ``NEW in 3.22``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
