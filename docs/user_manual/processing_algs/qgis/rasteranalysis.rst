@@ -1031,6 +1031,142 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _qgishighestpositioninrasterstack:
+
+Highest position in raster stack
+--------------------------------
+
+Evaluates on a cell-by-cell basis the position of the raster with the highest value
+in a stack of rasters. Position counts start with 1 and range to the total number
+of input rasters. The order of the input rasters is relevant for the algorithm.
+If multiple rasters feature the highest value, the first raster will be used for
+the position value.
+
+If multiband rasters are used in the data raster stack, the algorithm will
+always perform the analysis on the first band of the rasters - use GDAL to use
+other bands in the analysis.
+Any NoData cells in the raster layer stack will result in a NoData cell
+in the output raster unless the "ignore NoData" parameter is checked.
+The output NoData value can be set manually. The output rasters extent and
+resolution is defined by a reference raster layer and is always of ``Int32`` type.
+
+.. figure:: img/highestposition.png
+  :align: center
+
+.. seealso:: :ref:`qgislowestpositioninrasterstack`
+
+.. **positionparams**
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input raster layers**
+     - ``INPUT_RASTERS``
+     - [raster] [list]
+     - List of raster layers to compare with
+   * - **Reference layer**
+     - ``REFERENCE_LAYER``
+     - [raster]
+     - The reference layer for the output layer creation
+       (extent, CRS, pixel dimensions)
+   * - **Ignore NoData values**
+     - ``IGNORE_NODATA``
+     - [boolean]
+
+       Default: False
+     - If unchecked, any NoData cells in the data layer stack
+       will result in a NoData cell in the output raster
+   * - **Output layer**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster containing the result.
+       One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output no data value**
+     - ``OUTPUT_NODATA_VALUE``
+     - [number]
+
+       Default: -9999.0
+     - Value to use for nodata in the output layer
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output layer**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster layer containing the result
+   * - **CRS authority identifier**
+     - ``CRS_AUTHID``
+     - [string]
+     - The coordinate reference system of the output raster layer
+   * - **Extent**
+     - ``EXTENT``
+     - [string]
+     - The spatial extent of the output raster layer
+   * - **Width in pixels**
+     - ``WIDTH_IN_PIXELS``
+     - [integer]
+     - The number of columns in the output raster layer
+   * - **Height in pixels**
+     - ``HEIGHT_IN_PIXELS``
+     - [integer]
+     - The number of rows in the output raster layer
+   * - **Total pixel count**
+     - ``TOTAL_PIXEL_COUNT``
+     - [integer]
+     - The count of pixels in the output raster layer
+
+.. **endpositionparams**
+
+Python code
+...........
+
+**Algorithm ID**: ``native:highestpositioninrasterstack``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgislessthanfrequency:
 
 Less than frequency
@@ -1065,6 +1201,46 @@ Python code
 ...........
 
 **Algorithm ID**: ``native:lessthanfrequency``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgislowestpositioninrasterstack:
+
+Lowest position in raster stack
+-------------------------------
+
+Evaluates on a cell-by-cell basis the position of the raster with the lowest value
+in a stack of rasters. Position counts start with 1 and range to the total number
+of input rasters. The order of the input rasters is relevant for the algorithm.
+If multiple rasters feature the highest value, the first raster will be used for
+the position value.
+
+If multiband rasters are used in the data raster stack, the algorithm will
+always perform the analysis on the first band of the rasters - use GDAL to use
+other bands in the analysis.
+Any NoData cells in the raster layer stack will result in a NoData cell
+in the output raster unless the "ignore NoData" parameter is checked.
+The output NoData value can be set manually. The output rasters extent and
+resolution is defined by a reference raster layer and is always of ``Int32`` type.
+
+.. figure:: img/lowestposition.png
+  :align: center
+
+.. seealso:: :ref:`qgishighestpositioninrasterstack`
+
+.. The params description comes from the "Highest position" algorithm
+
+.. include:: ./rasteranalysis.rst
+  :start-after: .. **positionparams**
+  :end-before: .. **endpositionparams**
+
+Python code
+...........
+
+**Algorithm ID**: ``native:lowestpositioninrasterstack``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
