@@ -7,6 +7,497 @@ Raster analysis
       :local:
       :depth: 1
 
+
+.. _qgiscellstackpercentrankfromvalue:
+
+Cell stack percent rank from value
+----------------------------------
+
+Calculates the cell-wise percentrank value of a stack of rasters based on
+a single input value and writes them to an output raster.
+
+At each cell location, the specified value is ranked among the respective values
+in the stack of all overlaid and sorted cell values from the input rasters.
+For values outside of the stack value distribution, the algorithm returns NoData
+because the value cannot be ranked among the cell values.
+
+There are two methods for percentile calculation:
+
+* Inclusive linear interpolation (PERCENTRANK.INC)
+* Exclusive linear interpolation (PERCENTRANK.EXC)
+
+The linear interpolation method return the unique percent rank for different values.
+Both interpolation methods follow their counterpart methods implemented
+by `LibreOffice <https://help.libreoffice.org/latest/en-US/text/scalc/01/04060184.html?DbPAR=CALC#bm_id3148807>`_
+or Microsoft Excel.
+
+The output raster's extent and resolution is defined by a reference raster.
+Input raster layers that do not match the cell size of the reference
+raster layer will be resampled using nearest neighbor resampling.
+NoData values in any of the input layers will result in a NoData cell output
+if the "Ignore NoData values" parameter is not set.
+The output raster data type will always be ``Float32``.
+
+.. figure:: img/percentrankfromvalue.png
+  :align: center
+
+  Percent ranking Value = 1. ``NoData`` cells (grey) are ignored.
+
+.. seealso:: :ref:`qgiscellstackpercentile`, :ref:`qgiscellstackpercentrankfromrasterlayer`
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layers**
+     - ``INPUT``
+     - [raster] [list]
+     - Raster layers to evaluate.
+       If multiband rasters are used in the data raster stack, the algorithm
+       will always perform the analysis on the first band of the rasters
+   * - **Method**
+     - ``METHOD``
+     - [enumeration]
+
+       Default: 0
+     - Method for percentile calculation:
+
+       * 0 --- Inclusive linear interpolation (PERCENTRANK.INC)
+       * 1 --- Exclusive linear interpolation (PERCENTRANK.EXC)
+   * - **Value**
+     - ``VALUE``
+     - [number]
+
+       Default: 10.0
+     - Value to rank among the respective values in the stack of all overlaid
+       and sorted cell values from the input rasters
+   * - **Ignore NoData values**
+     - ``IGNORE_NODATA``
+     - [boolean]
+
+       Default: True
+     - If unchecked, any NoData cells in the input layers will result in a NoData
+       cell in the output raster
+   * - **Reference layer**
+     - ``REFERENCE_LAYER``
+     - [raster]
+     - The reference layer for the output layer creation
+       (extent, CRS, pixel dimensions)
+   * - **Output layer**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output no data value**
+     - ``OUTPUT_NODATA_VALUE``
+     - [number]
+
+       Default: -9999.0
+     - Value to use for nodata in the output layer
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output layer**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster layer containing the result
+   * - **CRS authority identifier**
+     - ``CRS_AUTHID``
+     - [string]
+     - The coordinate reference system of the output raster layer
+   * - **Extent**
+     - ``EXTENT``
+     - [string]
+     - The spatial extent of the output raster layer
+   * - **Width in pixels**
+     - ``WIDTH_IN_PIXELS``
+     - [integer]
+     - The number of columns in the output raster layer
+   * - **Height in pixels**
+     - ``HEIGHT_IN_PIXELS``
+     - [integer]
+     - The number of rows in the output raster layer
+   * - **Total pixel count**
+     - ``TOTAL_PIXEL_COUNT``
+     - [integer]
+     - The count of pixels in the output raster layer
+
+Python code
+...........
+
+**Algorithm ID**: ``native:cellstackpercentrankfromvalue``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgiscellstackpercentile:
+
+Cell stack percentile
+---------------------
+
+Calculates the cell-wise percentile value of a stack of rasters
+and writes the results to an output raster. The percentile to return
+is determined by the percentile input value (ranges between 0 and 1).
+At each cell location, the specified percentile is obtained using the respective
+value from the stack of all overlaid and sorted cell values of the input rasters.
+
+There are three methods for percentile calculation:
+
+* Nearest rank: returns the value that is nearest to the specified percentile
+* Inclusive linear interpolation (PERCENTRANK.INC)
+* Exclusive linear interpolation (PERCENTRANK.EXC)
+
+The linear interpolation methods return the unique values for different percentiles.
+Both interpolation methods follow their counterpart methods implemented
+by `LibreOffice <https://help.libreoffice.org/latest/en-US/text/scalc/01/04060184.html?DbPAR=CALC#bm_id3148807>`_
+or Microsoft Excel.
+
+The output raster's extent and resolution is defined by a reference raster.
+Input raster layers that do not match the cell size of the reference
+raster layer will be resampled using nearest neighbor resampling.
+NoData values in any of the input layers will result in a NoData cell output
+if the "Ignore NoData values" parameter is not set.
+The output raster data type will always be ``Float32``.
+
+.. figure:: img/percentile.png
+  :align: center
+
+  Percentile = 0.25. ``NoData`` cells (grey) are ignored.
+
+.. seealso:: :ref:`qgiscellstackpercentile`, :ref:`qgiscellstackpercentrankfromrasterlayer`
+
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layers**
+     - ``INPUT``
+     - [raster] [list]
+     - Raster layers to evaluate.
+       If multiband rasters are used in the data raster stack, the algorithm
+       will always perform the analysis on the first band of the rasters
+   * - **Method**
+     - ``METHOD``
+     - [enumeration]
+
+       Default: 0
+     - Method for percentile calculation:
+
+       * 0 --- Nearest rank: returns the value that is nearest to the specified percentile
+       * 1 --- Inclusive linear interpolation (PERCENTILE.INC)
+       * 2 --- Exclusive linear interpolation (PERCENTILE.EXC)
+   * - **Percentile**
+     - ``VALUE``
+     - [number]
+
+       Default: 0.25
+     - Value to rank among the respective values in the stack of all overlaid
+       and sorted cell values from the input rasters. Between 0 and 1.
+   * - **Ignore NoData values**
+     - ``IGNORE_NODATA``
+     - [boolean]
+
+       Default: True
+     - If unchecked, any NoData cells in the input layers will result in a NoData
+       cell in the output raster
+   * - **Reference layer**
+     - ``REFERENCE_LAYER``
+     - [raster]
+     - The reference layer for the output layer creation
+       (extent, CRS, pixel dimensions)
+   * - **Output layer**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output no data value**
+     - ``OUTPUT_NODATA_VALUE``
+     - [number]
+
+       Default: -9999.0
+     - Value to use for nodata in the output layer
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output layer**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster layer containing the result
+   * - **CRS authority identifier**
+     - ``CRS_AUTHID``
+     - [string]
+     - The coordinate reference system of the output raster layer
+   * - **Extent**
+     - ``EXTENT``
+     - [string]
+     - The spatial extent of the output raster layer
+   * - **Width in pixels**
+     - ``WIDTH_IN_PIXELS``
+     - [integer]
+     - The number of columns in the output raster layer
+   * - **Height in pixels**
+     - ``HEIGHT_IN_PIXELS``
+     - [integer]
+     - The number of rows in the output raster layer
+   * - **Total pixel count**
+     - ``TOTAL_PIXEL_COUNT``
+     - [integer]
+     - The count of pixels in the output raster layer
+
+Python code
+...........
+
+**Algorithm ID**: ``native:cellstackpercentile``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgiscellstackpercentrankfromrasterlayer:
+
+cell stack percentrank from raster layer
+----------------------------------------
+
+Calculates the cell-wise percentrank value of a stack of rasters based
+on an input value raster and writes them to an output raster.
+
+At each cell location, the current value of the value raster is ranked among
+the respective values in the stack of all overlaid and sorted cell values of
+the input rasters. For values outside of the the stack value distribution,
+the algorithm returns NoData because the value cannot be ranked among the cell values.
+
+There are two methods for percentile calculation:
+
+* Inclusive linear interpolation (PERCENTRANK.INC)
+* Exclusive linear interpolation (PERCENTRANK.EXC)
+
+The linear interpolation methods return the unique values for different percentiles.
+Both interpolation methods follow their counterpart methods implemented
+by `LibreOffice <https://help.libreoffice.org/latest/en-US/text/scalc/01/04060184.html?DbPAR=CALC#bm_id3148807>`_
+or Microsoft Excel.
+
+The output raster's extent and resolution is defined by a reference raster.
+Input raster layers that do not match the cell size of the reference
+raster layer will be resampled using nearest neighbor resampling.
+NoData values in any of the input layers will result in a NoData cell output
+if the "Ignore NoData values" parameter is not set.
+The output raster data type will always be ``Float32``.
+
+.. figure:: img/percentrankfromrasterlayer.png
+  :align: center
+
+  Ranking the value raster layer cells. ``NoData`` cells (grey) are ignored.
+
+.. seealso:: :ref:`qgiscellstackpercentile`, :ref:`qgiscellstackpercentrankfromvalue`
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layers**
+     - ``INPUT``
+     - [raster] [list]
+     - Raster layers to evaluate.
+       If multiband rasters are used in the data raster stack, the algorithm
+       will always perform the analysis on the first band of the rasters
+   * - **Value raster layer**
+     - ``INPUT_VALUE_RASTER``
+     - [raster]
+     - The layer to rank the values among the stack of all overlaid layers
+   * - **Value raster band**
+     - ``VALUE_RASTER_BAND``
+     - [integer]
+
+       Default: 1
+     - Band of the "value raster layer" to compare to
+   * - **Method**
+     - ``METHOD``
+     - [enumeration]
+
+       Default: 0
+     - Method for percentile calculation:
+
+       * 0 --- Inclusive linear interpolation (PERCENTRANK.INC)
+       * 1 --- Exclusive linear interpolation (PERCENTRANK.EXC)
+   * - **Ignore NoData values**
+     - ``IGNORE_NODATA``
+     - [boolean]
+
+       Default: True
+     - If unchecked, any NoData cells in the input layers will result in a NoData
+       cell in the output raster
+   * - **Reference layer**
+     - ``REFERENCE_LAYER``
+     - [raster]
+     - The reference layer for the output layer creation
+       (extent, CRS, pixel dimensions)
+   * - **Output layer**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output no data value**
+     - ``OUTPUT_NODATA_VALUE``
+     - [number]
+
+       Default: -9999.0
+     - Value to use for nodata in the output layer
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output layer**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster layer containing the result
+   * - **CRS authority identifier**
+     - ``CRS_AUTHID``
+     - [string]
+     - The coordinate reference system of the output raster layer
+   * - **Extent**
+     - ``EXTENT``
+     - [string]
+     - The spatial extent of the output raster layer
+   * - **Width in pixels**
+     - ``WIDTH_IN_PIXELS``
+     - [integer]
+     - The number of columns in the output raster layer
+   * - **Height in pixels**
+     - ``HEIGHT_IN_PIXELS``
+     - [integer]
+     - The number of rows in the output raster layer
+   * - **Total pixel count**
+     - ``TOTAL_PIXEL_COUNT``
+     - [integer]
+     - The count of pixels in the output raster layer
+
+Python code
+...........
+
+**Algorithm ID**: ``native:cellstackpercentrankfromrasterlayer``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgiscellstatistics:
 
 Cell statistics
