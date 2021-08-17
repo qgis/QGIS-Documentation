@@ -193,6 +193,8 @@ You can fine tune MetaSearch with the following :guilabel:`Settings`:
 * :guilabel:`Server Timeout`: when searching metadata catalogs, the
   number of seconds for blocking connection attempt.
   Default value is 10.
+* :guilable:`Disable SSL verification`: option to switch off ssl 
+  verification.
 * :guilabel:`Results paging`: when searching metadata catalogs, the
   number of results to show per page. Default value is 10.
 
