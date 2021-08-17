@@ -55,6 +55,9 @@ and ``Variety`` (data type is always ``Int32``).
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -97,6 +100,29 @@ Parameters
      - [raster]
      - The reference layer to create the output layer
        from (extent, CRS, pixel dimensions)
+   * - **Output layer**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Output no data value**
 
        Optional
@@ -105,16 +131,6 @@ Parameters
 
        Default: -9999.0
      - Value to use for nodata in the output layer
-   * - **Output layer**
-     - ``OUTPUT``
-     - [same as input]
-     - Specification of the output raster. One of:
-
-       .. include:: qgis_algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
-
-
 
 Outputs
 .......
@@ -138,7 +154,7 @@ Outputs
   * - **Height in pixels**
     - ``HEIGHT_IN_PIXELS``
     - [integer]
-    - The height in pixels of the output raster layer
+    - The number of rows in the output raster layer
   * - **Output raster**
     - ``OUTPUT``
     - [raster]
@@ -150,12 +166,12 @@ Outputs
   * - **Width in pixels**
     - ``WIDTH_IN_PIXELS``
     - [integer]
-    - The width in pixels of the output raster layer
+    - The number of columns in the output raster layer
 
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:cellstatistics``
+**Algorithm ID**: ``native:cellstatistics``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -225,13 +241,13 @@ Parameters
    * - **Fuzzified raster**
      - ``OUTPUT``
      - [same as input]
+
+       Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
        .. include:: qgis_algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
-
-
 
 Outputs
 .......
@@ -248,7 +264,6 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - Output raster layer containing the result
-
    * - **CRS authority identifier**
      - ``CRS_AUTHID``
      - [crs]
@@ -260,11 +275,11 @@ Outputs
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
      - [integer]
-     - The width in pixels of the output raster layer
+     - The number of columns in the output raster layer
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
      - [integer]
-     - The height in pixels of the output raster layer
+     - The number of rows in the output raster layer
    * - **Total pixel count**
      - ``TOTAL_PIXEL_COUNT``
      - [integer]
@@ -273,7 +288,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:fuzzifyrastergaussianmembership``
+**Algorithm ID**: ``native:fuzzifyrastergaussianmembership``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -336,13 +351,13 @@ Parameters
    * - **Fuzzified raster**
      - ``OUTPUT``
      - [same as input]
+
+       Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
        .. include:: qgis_algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
-
-
 
 Outputs
 .......
@@ -371,11 +386,11 @@ Outputs
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
      - [integer]
-     - The width in pixels of the output raster layer
+     - The number of columns in the output raster layer
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
      - [integer]
-     - The height in pixels of the output raster layer
+     - The number of rows in the output raster layer
    * - **Total pixel count**
      - ``TOTAL_PIXEL_COUNT``
      - [integer]
@@ -384,7 +399,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:fuzzifyrasterlargemembership``
+**Algorithm ID**: ``native:fuzzifyrasterlargemembership``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -452,12 +467,13 @@ Parameters
    * - **Fuzzified raster**
      - ``OUTPUT``
      - [same as input]
+
+       Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
        .. include:: qgis_algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
-
 
 Outputs
 .......
@@ -485,11 +501,11 @@ Outputs
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
      - [integer]
-     - The width in pixels of the output raster layer
+     - The number of columns in the output raster layer
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
      - [integer]
-     - The height in pixels of the output raster layer
+     - The number of rows in the output raster layer
    * - **Total pixel count**
      - ``TOTAL_PIXEL_COUNT``
      - [integer]
@@ -498,7 +514,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgisfuzzifyrasterlinearmembership``
+**Algorithm ID**: ``native:fuzzifyrasterlinearmembership``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -561,6 +577,8 @@ Parameters
    * - **Fuzzified raster**
      - ``OUTPUT``
      - [same as input]
+
+       Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
        .. include:: qgis_algs_include.rst
@@ -593,11 +611,11 @@ Outputs
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
      - [integer]
-     - The width in pixels of the output raster layer
+     - The number of columns in the output raster layer
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
      - [integer]
-     - The height in pixels of the output raster layer
+     - The number of rows in the output raster layer
    * - **Total pixel count**
      - ``TOTAL_PIXEL_COUNT``
      - [integer]
@@ -606,7 +624,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:fuzzifyrasternearmembership``
+**Algorithm ID**: ``native:fuzzifyrasternearmembership``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -678,6 +696,8 @@ Parameters
    * - **Fuzzified raster**
      - ``OUTPUT``
      - [same as input]
+
+       Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
        .. include:: qgis_algs_include.rst
@@ -710,11 +730,11 @@ Outputs
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
      - [integer]
-     - The width in pixels of the output raster layer
+     - The number of columns in the output raster layer
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
      - [integer]
-     - The height in pixels of the output raster layer
+     - The number of rows in the output raster layer
    * - **Total pixel count**
      - ``TOTAL_PIXEL_COUNT``
      - [integer]
@@ -723,7 +743,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgisfuzzifyrasterpowermembership``
+**Algorithm ID**: ``native:fuzzifyrasterpowermembership``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -786,6 +806,8 @@ Parameters
    * - **Fuzzified raster**
      - ``OUTPUT``
      - [same as input]
+
+       Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
        .. include:: qgis_algs_include.rst
@@ -818,11 +840,11 @@ Outputs
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
      - [integer]
-     - The width in pixels of the output raster layer
+     - The number of columns in the output raster layer
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
      - [integer]
-     - The height in pixels of the output raster layer
+     - The number of rows in the output raster layer
    * - **Total pixel count**
      - ``TOTAL_PIXEL_COUNT``
      - [integer]
@@ -831,7 +853,11 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgisfuzzifyrastersmallmembership``
+**Algorithm ID**: ``native:fuzzifyrastersmallmembership``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -863,6 +889,9 @@ then nodata inputs will be treated the same as a ``0`` input value.
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -888,6 +917,30 @@ Parameters
        Default: False
      - Treat nodata values in the input files as 0 when performing the
        operation
+   * - **Output layer**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster containing the result.
+       One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Output no data value**
      - ``NO_DATA``
      - [number]
@@ -913,11 +966,6 @@ Parameters
        * 9 --- CFloat32
        * 10 --- CFloat64
 
-   * - **Output layer**
-     - ``OUTPUT``
-     - [raster]
-     - Output raster layer
-
 Outputs
 .......
 
@@ -941,11 +989,11 @@ Outputs
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
      - [integer]
-     - The width in pixels of the output raster layer
+     - The number of columns in the output raster layer
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
      - [integer]
-     - The height in pixels of the output raster layer
+     - The number of rows in the output raster layer
    * - **Total pixel count**
      - ``TOTAL_PIXEL_COUNT``
      - [integer]
@@ -971,7 +1019,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:rasterbooleanand``
+**Algorithm ID**: ``native:rasterbooleanand``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1003,6 +1051,9 @@ then nodata inputs will be treated the same as a ``0`` input value.
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -1028,6 +1079,30 @@ Parameters
        Default: False
      - Treat nodata values in the input files as 0 when performing the
        operation
+   * - **Output layer**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster containing the result.
+       One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Output no data value**
      - ``NO_DATA``
      - [number]
@@ -1053,11 +1128,6 @@ Parameters
        * 9 --- CFloat32
        * 10 --- CFloat64
 
-   * - **Output layer**
-     - ``OUTPUT``
-     - [raster]
-     - Output raster layer
-
 Outputs
 .......
 
@@ -1081,11 +1151,11 @@ Outputs
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
      - [integer]
-     - The width in pixels of the output raster layer
+     - The number of columns in the output raster layer
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
      - [integer]
-     - The height in pixels of the output raster layer
+     - The number of rows in the output raster layer
    * - **Total pixel count**
      - ``TOTAL_PIXEL_COUNT``
      - [integer]
@@ -1110,7 +1180,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:rasterbooleanor``
+**Algorithm ID**: ``native:rasterbooleanor``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1202,12 +1272,12 @@ Parameters
        If the cell size is not specified, the minimum cell size of
        the selected reference layer(s) will be used.
        The cell size will be the same for the X and Y axes.
-   * - **Output extent (xmin, xmax, ymin, ymax)**
+   * - **Output extent**
 
        Optional
      - ``EXTENT``
      - [extent]
-     - Extent of the output raster layer.
+     - Extent (xmin, xmax, ymin, ymax) of the output raster layer.
        If the extent is not specified, the minimum extent that covers
        all the selected reference layers will be used.
    * - **Output CRS**
@@ -1286,7 +1356,7 @@ Parameters
        Default: The first band of the input layer
      - If the raster is multiband, choose the band you want to get
        statistics for.
-   * - **Output**
+   * - **Statistics**
      - ``OUTPUT_HTML_FILE``
      - [html]
 
@@ -1321,7 +1391,7 @@ Outputs
      - ``MIN``
      - [number]
      -
-   * - **Output**
+   * - **Statistics**
      - ``OUTPUT_HTML_FILE``
      - [html]
      - The output file contains the following information:
@@ -1367,8 +1437,7 @@ Python code
 
 Raster layer unique values report
 ---------------------------------
-Returns the count and area of each unique value in a given raster
-layer.
+Returns the count and area of each unique value in a given raster layer.
 
 Parameters
 ..........
@@ -1414,7 +1483,6 @@ Parameters
        .. include:: qgis_algs_include.rst
           :start-after: **layer_output_types_skip**
           :end-before: **end_layer_output_types_skip**
-
 
 Outputs
 .......
@@ -1478,7 +1546,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:rasterlayeruniquevaluesreport``
+**Algorithm ID**: ``native:rasterlayeruniquevaluesreport``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1496,6 +1564,9 @@ zones defined in another raster layer.
 
 Parameters
 ..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -1530,6 +1601,29 @@ Parameters
        Default: The first band of the raster layer
      - If the raster is multiband, choose the band that defines
        the zones
+   * - **Statistics**
+     - ``OUTPUT_TABLE``
+     - [table]
+
+       Default: ``[Create temporary layer]``
+     - Specification of the output report. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Reference layer**
 
        Optional
@@ -1541,13 +1635,10 @@ Parameters
        used as reference when determining the zones in the output
        layer. One of:
 
-       * 0 --- Input layer
-       * 1 --- Zones layer
-
-   * - **Statistics**
-     - ``OUTPUT_TABLE``
-     - [table]
-     - Table with the calculated statistics
+       * 0 --- Input layer: zones are determined by sampling the zone raster
+         layer value at the centroid of each pixel from the source raster layer
+       * 1 --- Zones layer: the input raster layer will be sampled at the centroid
+         of each pixel from the zones raster layer
 
 Outputs
 .......
@@ -1601,7 +1692,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:rasterlayerzonalstats``
+**Algorithm ID**: ``native:rasterlayerzonalstats``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1675,11 +1766,10 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specification of the output HTML report. One of:
 
-       * Skip output
-       * Save to Temporary File
-       * Save to File...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
 
-       The file encoding can also be changed here.
    * - **Surface volume table**
      - ``OUTPUT_TABLE``
      - [table]
@@ -1690,7 +1780,6 @@ Parameters
        .. include:: qgis_algs_include.rst
           :start-after: **layer_output_types_skip**
           :end-before: **end_layer_output_types_skip**
-
 
 Outputs
 .......
@@ -1729,7 +1818,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:rastersurfacevolume``
+**Algorithm ID**: ``native:rastersurfacevolume``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1745,6 +1834,9 @@ ranges specified in a vector table.
 
 Parameters
 ..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -1784,6 +1876,29 @@ Parameters
      - Field with the value that will be assigned to the pixels that
        fall in the class (between the corresponding min and max
        values).
+   * - **Reclassified raster**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Output no data value**
      - ``NO_DATA``
      - [number]
@@ -1802,21 +1917,20 @@ Parameters
        * 1 --- min <= value < max
        * 2 --- min <= value <= max
        * 3 --- min < value < max
-
    * - **Use no data when no range matches value**
      - ``NODATA_FOR_MISSING``
      - [boolean]
 
        Default: False
-     - Values that do not belong to a class will result in the no data
-       value.
+     - Applies the no data value to band values that do not fall in
+       any class.
        If False, the original value is kept.
    * - **Output data type**
      - ``DATA_TYPE``
      - [enumeration]
 
        Default: 5
-     - Defines the data type of the output raster file.
+     - Defines the format of the output raster file.
        Options:
 
        * 0 --- Byte
@@ -1830,17 +1944,6 @@ Parameters
        * 8 --- CInt32
        * 9 --- CFloat32
        * 10 --- CFloat64
-
-   * - **Reclassified raster**
-     - ``OUTPUT``
-     - [raster]
-
-       Default: ``[Save to temporary file]``
-     - Specification of the output raster. One of:
-
-       .. include:: qgis_algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -1861,7 +1964,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:reclassifybylayer``
+**Algorithm ID**: ``native:reclassifybylayer``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1877,6 +1980,9 @@ ranges specified in a fixed table.
 
 Parameters
 ..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -1903,6 +2009,30 @@ Parameters
      - A 3-columns table to fill with the values to set the boundaries
        of each class (``Minimum`` and ``Maximum``) and the new
        ``Value`` to assign to the band values that fall in the class.
+   * - **Reclassified raster**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster layer.
+       One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Output no data value**
      - ``NO_DATA``
      - [number]
@@ -1921,7 +2051,6 @@ Parameters
        * 1 --- min <= value < max
        * 2 --- min <= value <= max
        * 3 --- min < value < max
-
    * - **Use no data when no range matches value**
      - ``NODATA_FOR_MISSING``
      - [boolean]
@@ -1936,7 +2065,6 @@ Parameters
 
        Default: 5
      - Defines the format of the output raster file.
-
        Options:
 
        * 0 --- Byte
@@ -1950,18 +2078,6 @@ Parameters
        * 8 --- CInt32
        * 9 --- CFloat32
        * 10 --- CFloat64
-
-   * - **Reclassified raster**
-     - ``OUTPUT``
-     - [raster]
-
-       Default: ``[Save to temporary file]``
-     - Specification of the output raster layer.
-       One of:
-
-       .. include:: qgis_algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -1982,7 +2098,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:reclassifybytable``
+**Algorithm ID**: ``native:reclassifybytable``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -2038,7 +2154,6 @@ Parameters
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
-
 Outputs
 .......
 
@@ -2058,7 +2173,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:rastersampling``
+**Algorithm ID**: ``native:rastersampling``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -2125,7 +2240,6 @@ Parameters
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
-
 Outputs
 .......
 
@@ -2145,7 +2259,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:zonalhistogram``
+**Algorithm ID**: ``native:zonalhistogram``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -2219,13 +2333,9 @@ Parameters
      - Specify the output vector polygon layer.
        One of:
 
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to GeoPackage...
-       * Save to PostGIS Table...
-       * Append to Layer...
-
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
 
 Outputs
 .......
@@ -2246,7 +2356,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:zonalstatisticsfb``
+**Algorithm ID**: ``native:zonalstatisticsfb``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
