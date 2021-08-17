@@ -1989,6 +1989,129 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _qgisroundrastervalues:
+
+Round raster
+------------
+
+Rounds the cell values of a raster dataset according to the specified number of decimals.
+
+Alternatively, a negative number of decimal places may be used to round values
+to powers of a base n. For example, with a Base value n of 10 and Decimal places
+of -1, the algorithm rounds cell values to multiples of 10,
+-2 rounds to multiples of 100, and so on.
+Arbitrary base values may be chosen, the algorithm applies the same multiplicative
+principle. Rounding cell values to multiples of a base n may be used to generalize
+raster layers.
+
+The algorithm preserves the data type of the input raster. Therefore byte/integer
+rasters can only be rounded to multiples of a base n, otherwise a warning is raised
+and the raster gets copied as byte/integer raster.
+
+.. figure:: img/roundraster.png
+  :align: center
+
+  Rounding values of a raster
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input raster**
+     - ``INPUT``
+     - [raster]
+     - The raster to process.
+   * - **Band number**
+     - ``BAND``
+     - [number]
+
+       Default: 1
+     - The band of the raster
+   * - **Rounding direction**
+     - ``ROUNDING_DIRECTION``
+     - [list]
+
+       Default: 1
+     - How to choose the target rounded value. Options are:
+
+       0 - Round up
+       1 - Round to nearest
+       2 - Round down
+   * - **Number of decimals places**
+     - ``DECIMAL_PLACES``
+     - [number]
+
+       Default: 2
+     - Number of decimals places to round to.
+       Use negative values to round cell values to a multiple of a base n
+   * - **Output raster**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output file. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Base n for rounding to multiples of n**
+     - ``BASE_N``
+     - [number]
+
+       Default: 10
+     - When the ``DECIMAL_PLACES`` parameter is negative,
+       raster values are rounded to multiples of the base n value
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output raster**
+     - ``OUTPUT``
+     - [raster]
+     - The output raster layer with values rounded for the selected band.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:roundrastervalues``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+  
+  
 .. _qgisrastersampling:
 
 Sample raster values
@@ -2037,7 +2160,6 @@ Parameters
        .. include:: qgis_algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
-
 
 Outputs
 .......
@@ -2124,7 +2246,6 @@ Parameters
        .. include:: qgis_algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
-
 
 Outputs
 .......
@@ -2219,13 +2340,9 @@ Parameters
      - Specify the output vector polygon layer.
        One of:
 
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to GeoPackage...
-       * Save to PostGIS Table...
-       * Append to Layer...
-
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
 
 Outputs
 .......
