@@ -116,6 +116,81 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _qgisfillnodata:
+
+Fill NoData cells
+-----------------
+
+Resets the NoData values in the input raster to a chosen value, resulting in
+raster dataset with no NoData pixels.
+
+The algorithm respects the input raster data type, e.g. a floating point
+fill value will be truncated when applied to an integer raster.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input raster**
+     - ``INPUT``
+     - [raster]
+     - The raster to process.
+   * - **Band number**
+     - ``BAND``
+     - [number]
+
+       Default: 1
+     - The band of the raster
+   * - **Fill value**
+     - ``FILL_VALUE``
+     - [number]
+
+       Default: 1.0
+     - Set the value to use for the NoData pixels
+   * - **Output raster**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output raster**
+     - ``OUTPUT``
+     - [raster]
+     - The output raster layer with filled data cells.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:fillnodata``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgistilesxyzdirectory:
 
 Generate XYZ tiles (Directory)
