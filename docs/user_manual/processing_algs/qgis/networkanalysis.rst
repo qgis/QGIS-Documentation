@@ -56,7 +56,7 @@ Parameters
        Default: 0
      - The value is estimated as a distance (in the network
        layer units) when looking for the *Shortest* path and
-       as time (in seconds) for the *Fastest* path.
+       as time (in hours) for the *Fastest* path.
 
 .. include:: qgis_algs_include.rst
   :start-after: **network_advanced_parameters_table**
@@ -184,7 +184,7 @@ Parameters
        Default: 0
      - The value is estimated as a distance (in the network
        layer units) when looking for the *Shortest* path and
-       as time (in seconds) for the *Fastest* path.
+       as time (in hours) for the *Fastest* path.
    * - **Advanced parameters**
      - GUI only
      - 
