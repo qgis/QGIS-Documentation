@@ -1266,7 +1266,7 @@ size in pixels and dimensions of pixels (in map units), number of bands,
 and no data value.
 
 This algorithm is intended for use as a means of extracting these useful properties
-to use as the input values to other algorithms in a model - eg to allow to pass
+to use as the input values to other algorithms in a model - e.g. to allow to pass
 an existing raster's pixel sizes over to a GDAL raster algorithm.
 
 Parameters
@@ -1291,7 +1291,8 @@ Parameters
      - [raster band]
 
        Default: Not set
-     - If specified, the noData value for the selected band is also returned.
+     - Whether to also return properties of a specific band.
+       If a band is specified, the noData value for the selected band is also returned.
 
 Outputs
 .......
@@ -1307,7 +1308,7 @@ Outputs
    * - **Number of bands in raster**
      - ``BAND_COUNT``
      - [number]
-     -
+     - The number of bands in the raster
    * - **CRS authority identifier**
      - ``CRS_AUTHID``
      - [string]
@@ -1315,31 +1316,32 @@ Outputs
    * - **Extent**
      - ``EXTENT``
      - [string]
-     -
-   * - **Band has a no data value set**
+     - The raster layer extent in the CRS
+   * - **Band has a NoData value set**
      - ``HAS_NODATA_VALUE``
      - [Boolean]
-     -
+     - Indicates whether the raster layer has a value set for NODATA pixels
+       in the selected band
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
      - [number]
-     -
-   * - **Band no data value**
+     - The number of columns in the raster layer
+   * - **Band NoData value**
      - ``NODATA_VALUE``
      - [number]
-     -
+     - The value (if set) of the NoData pixels in the selected band
    * - **Pixel size (height) in map units**
      - ``PIXEL_HEIGHT``
      - [number]
-     -
+     - Vertical size in map units of the pixel
    * - **Pixel size (width) in map units**
      - ``PIXEL_WIDTH``
      - [number]
-     -
+     - Horizontal size in map units of the pixel
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
      - [number]
-     -
+     - The number of rows in the raster layer
    * - **Maximum x-coordinate**
      - ``X_MAX``
      - [number]
