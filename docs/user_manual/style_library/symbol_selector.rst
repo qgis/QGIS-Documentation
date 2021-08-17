@@ -187,6 +187,20 @@ Appropriate for point geometry features, marker symbols have several
 
      Designing a Simple Marker Symbol
 
+  The simple marker symbol layer type has the following properties:
+
+  * :guilabel:`Size` in various supported units
+  * :guilabel:`Fill color`
+  * :guilabel:`Stroke color`, :guilabel:`Stroke style` from a predefined
+    list and :guilabel:`Stroke size`
+  * :guilabel:`Join style`: it can be **Bevel**, **Miter** or **Round**
+  * :guilabel:`Cap style`: it can be **Square**, **Flat** or **Round**
+  * :guilabel:`Rotation`
+  * :guilabel:`Offset` in :guilabel:`X` and :guilabel:`Y` directions
+    from the feature
+  * :guilabel:`Anchor point`: defining the quadrant point on the symbol to settle
+    as placement origin. This is the point the :guilabel:`Offset` is applied on.
+
 * **Ellipse marker**: a simple marker symbol layer, with customizable width and
   height
 * **Filled marker**: similar to the simple marker symbol layer, except that it
@@ -256,7 +270,7 @@ layer types:
 
 .. _simple_line_symbol:
 
-* **Simple line** (default): available settings are:
+* **Simple line** (default)
 
   .. _figure_simple_line_symbol:
 
@@ -268,9 +282,11 @@ layer types:
   The simple line symbol layer type has many of the same properties as the
   :ref:`simple marker symbol <simple_marker_symbol>`, and in addition:
 
-  * :guilabel:`Cap style`
   * |checkbox| :guilabel:`Use custom dash pattern`: overrides the
     :guilabel:`Stroke style` setting with a custom dash.
+  * :guilabel:`Pattern offset`: the positioning of the dashes/spaces in the line
+    can be tweaked, so that they can be placed at nicer positions to account for corners
+    in the line (also can be used potentially to "align" adjacent dash pattern borders)
   * |checkbox| :guilabel:`Align dash pattern to line length`: the dash pattern
     length will be adjusted so that the line will end with a complete dash 
     element, instead of a gap.
@@ -278,7 +294,14 @@ layer types:
     adjusts the dash pattern placement so that sharp corners are represented
     by a full dash element coming into and out of the sharp corner.
     Dependent on :guilabel:`Align dash pattern to line length`.
-  * |checkbox| :guilabel:`Draw line only inside polygon`
+  * :guilabel:`Trim lines` from :guilabel:`Start` and/or :guilabel:`End`:
+    allows for the line rendering to trim off the first x mm and last y mm
+    from the actual line string when drawing the line.
+    It can be used e.g. when creating complex symbols where a line layer should
+    not overlap marker symbol layers placed at the start and end of the line.
+    The start/end trim distance supports a range of :ref:`units  <unit_selector>`,
+    including percentage of the overall line length, and can be data defined for
+    extra control.
 
 .. _arrow_symbol:
 
@@ -336,7 +359,6 @@ layer types:
 
   * :guilabel:`Hash length`
   * :guilabel:`Hash rotation`
-  * |checkbox| :guilabel:`Rotate hash to follow line direction`
 
   .. _figure_hashed_line_symbol:
 
@@ -374,8 +396,8 @@ symbol layer types:
   
   You can:
   
-  * :guilabel:`Force point inside polygon`
-  * :guilabel:`Draw point on every part of multi-part feature` or place
+  * :guilabel:`Force placement of markers inside polygons`
+  * :guilabel:`Draw markers on every part of multi-part features` or place
     the point only on its biggest part
   * display the marker symbol(s) in whole or in part, keeping parts overlapping
     the current feature geometry (:guilabel:`Clip markers to polygon boundary`)
