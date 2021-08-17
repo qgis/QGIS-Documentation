@@ -241,10 +241,10 @@ Parameters
      - Specification of the output raster layer.
        One of:
 
-       * Save to a Temporary File
-       * Save to File...
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -575,10 +575,10 @@ Parameters
      - Specification of the output raster layer.
        One of:
 
-       * Save to a Temporary File
-       * Save to File...
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -680,10 +680,10 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specify the output (sharpened) raster layer. One of:
 
-       * Save to a Temporary File
-       * Save to File...
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -889,10 +889,10 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specify the output (calculated) raster layer. One of:
 
-       * Save to a Temporary File
-       * Save to File...
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -991,10 +991,10 @@ Parameters
      - Specify the HTML file for output.
        One of:
 
-       * Save to a Temporary File
-       * Save to File...
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -1166,23 +1166,20 @@ Parameters
      - Specify the output folder for the tiles.
        One of:
 
-       * Save to Temporary Directory
-       * Save to Directory...
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **directory_output_types**
+          :end-before: **end_directory_output_types**
 
-       The file encoding can also be changed here.
    * - **CSV file containing the tile(s) georeferencing information**
      - ``OUTPUT_CSV``
      - [file]
 
        Default: ``[Skip output]``
-     -
-       One of:
+     - Specify the output file for the tiles. One of:
 
-       * Skip Output
-       * Save to a Temporary File
-       * Save to File...
-
-       The file encoding can also be changed here.
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **file_output_types_skip**
+          :end-before: **end_file_output_types_skip**
 
 Outputs
 .......
@@ -1303,10 +1300,10 @@ Parameters
      - Specify the polygon vector layer to write the index to.
        One of:
 
-       * Save to a Temporary File
-       * Save to File
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......

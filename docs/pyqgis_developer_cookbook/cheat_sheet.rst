@@ -482,7 +482,7 @@ Advanced TOC
    :hide:
 
    <qgis._core.QgsLayerTree object at 0x7f068bbc0c18>
-   [<qgis._core.QgsLayerTreeGroup object at 0x7f068bbc01f8>]
+   [<QgsLayerTreeGroup: My Group>]
 
 **Access the first child node**
 
@@ -540,7 +540,7 @@ Advanced TOC
 
 .. testoutput:: cheat_sheet
 
-    <qgis._core.QgsLayerTreeGroup object at 0x7fd75560cee8>
+    <QgsLayerTreeGroup: My Group>
 
 **Find layer by id**
 
@@ -550,7 +550,7 @@ Advanced TOC
 
 .. testoutput:: cheat_sheet
 
-    <qgis._core.QgsLayerTreeLayer object at 0x7f56087af288>
+    <QgsLayerTreeLayer: layer name you like>
 
 **Add layer**
 

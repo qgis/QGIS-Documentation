@@ -82,14 +82,13 @@ Parameters
    * - **Output layer**
      - ``OUTPUT``
      - [raster]
-       
-       Default: Save to temporary file
+
+       Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
-       
-       * Save to a Temporary File
-       * Save to File...
-       
-       The file encoding can also be changed here.
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -167,11 +166,10 @@ Parameters
      - ``OUTPUT``
      - [raster]
      - Specification of the output raster. One of:
-       
-       * Save to a Temporary File
-       * Save to File...
-       
-       The file encoding can also be changed here.
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -318,11 +316,10 @@ Parameters
        Default: ``[Save to temporary folder]``
      - Specification of the output raster. One of:
 
-       * Skip Output
-       * Save to a Temporary Directory
-       * Save to Directory...
+       .. include:: qgis_algs_include.rst
+          :start-after: **directory_output_types_skip**
+          :end-before: **end_directory_output_types_skip**
 
-       The file encoding can also be changed here.
    * - **Output html (Leaflet)**
      - ``OUTPUT_HTML``
      - [html]
@@ -330,9 +327,9 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specification of the output HTML file. One of:
 
-       * Skip Output
-       * Save to a Temporary File
-       * Save to File...
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types_skip**
+          :end-before: **end_file_output_types_skip**
 
 Outputs
 .......
@@ -458,11 +455,10 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specification of the output file. One of:
 
-       * Skip Output
-       * Save to a Temporary File
-       * Save to File...
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types_skip**
+          :end-before: **end_file_output_types_skip**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......

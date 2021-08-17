@@ -110,10 +110,11 @@ Parameters
      - [same as input]
      - Specification of the output raster. One of:
 
-       * Save to a Temporary File
-       * Save to File...
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
-       The file encoding can also be changed here.
+
 
 Outputs
 .......
@@ -226,10 +227,11 @@ Parameters
      - [same as input]
      - Specification of the output raster. One of:
 
-       * Save to a Temporary File
-       * Save to File...
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
-       The file encoding can also be changed here.
+
 
 Outputs
 .......
@@ -336,10 +338,11 @@ Parameters
      - [same as input]
      - Specification of the output raster. One of:
 
-       * Save to a Temporary File
-       * Save to File...
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
-       The file encoding can also be changed here.
+
 
 Outputs
 .......
@@ -451,10 +454,10 @@ Parameters
      - [same as input]
      - Specification of the output raster. One of:
 
-       * Save to a Temporary File
-       * Save to File...
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -560,10 +563,9 @@ Parameters
      - [same as input]
      - Specification of the output raster. One of:
 
-       * Save to a Temporary File
-       * Save to File...
-
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -678,10 +680,9 @@ Parameters
      - [same as input]
      - Specification of the output raster. One of:
 
-       * Save to a Temporary File
-       * Save to File...
-
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -787,10 +788,9 @@ Parameters
      - [same as input]
      - Specification of the output raster. One of:
 
-       * Save to a Temporary File
-       * Save to File...
-
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -1225,10 +1225,9 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
-       * Save to a Temporary File
-       * Save to File...
-
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -1294,11 +1293,9 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specification of the output file:
 
-       * Skip Output
-       * Save to a Temporary File
-       * Save to File...
-
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types_skip**
+          :end-before: **end_file_output_types_skip**
 
 Outputs
 .......
@@ -1403,11 +1400,10 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specification of the output file:
 
-       * Skip Output
-       * Save to a Temporary File
-       * Save to File...
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types_skip**
+          :end-before: **end_file_output_types_skip**
 
-       The file encoding can also be changed here.
    * - **Unique values table**
      - ``OUTPUT_TABLE``
      - [table]
@@ -1415,13 +1411,10 @@ Parameters
        Default: ``[Skip output]``
      - Specification of the table for unique values:
 
-       * Skip Output
-       * Create Temporary Layer
-       * Save to File...
-       * Save to GeoPackage...
-       * Save to PostGIS Table......
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -1694,13 +1687,10 @@ Parameters
        Default: ``[Skip output]``
      - Specification of the output table. One of:
 
-       * Skip output
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -1844,12 +1834,13 @@ Parameters
    * - **Reclassified raster**
      - ``OUTPUT``
      - [raster]
+
+       Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
-       * Save to a Temporary File
-       * Save to File...
-
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -1964,14 +1955,13 @@ Parameters
      - ``OUTPUT``
      - [raster]
 
-       Default: '[Save to temporary file]'
+       Default: ``[Save to temporary file]``
      - Specification of the output raster layer.
        One of:
 
-       * Save to a Temporary File
-       * Save to File...
-
-       The file encoding can also be changed here
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -1987,9 +1977,7 @@ Outputs
    * - **Reclassified raster**
      - ``OUTPUT``
      - [raster]
-
-       Default: '[Save to temporary file]'
-     - The output raster layer.
+     - Output raster layer with reclassified band values
 
 Python code
 ...........
@@ -2022,11 +2010,11 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Input Point Layer**
+   * - **Input Layer**
      - ``INPUT``
      - [vector: point]
      - Point vector layer to use for  sampling
-   * - **Raster Layer to sample**
+   * - **Raster Layer**
      - ``RASTERCOPY``
      - [raster]
      - Raster layer to sample at the given point locations.
@@ -2034,9 +2022,9 @@ Parameters
      - ``COLUMN_PREFIX``
      - [string]
 
-       Default: 'rvalue'
+       Default: 'SAMPLE\_'
      - Prefix for the names of the added columns.
-   * - **Sampled Points**
+   * - **Sampled**
 
        Optional
      - ``OUTPUT``
@@ -2046,12 +2034,10 @@ Parameters
      - Specify the output layer containing the sampled values.
        One of:
 
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to GeoPackage...
-       * Save to PostGIS Table...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -2064,9 +2050,7 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Sampled Points**
-
-       Optional
+   * - **Sampled**
      - ``OUTPUT``
      - [vector: point]
      - The output layer containing the sampled values.
@@ -2137,12 +2121,10 @@ Parameters
      - Specify the output vector polygon layer.
        One of:
 
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to GeoPackage...
-       * Save to PostGIS Table...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
-       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -2156,12 +2138,8 @@ Outputs
      - Type
      - Description
    * - **Output zones**
-
-       Optional
      - ``OUTPUT``
      - [vector: polygon]
-
-       Default: ``[Create temporary layer]``
      - The output vector polygon layer.
 
 Python code

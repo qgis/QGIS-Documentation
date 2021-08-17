@@ -6,7 +6,7 @@
 Statistics of translation
 ===========================
 
-*(last update: 2021-08-03)*
+*(last update: 2021-08-17)*
 
 .. list-table::
    :widths: auto
@@ -14,9 +14,9 @@ Statistics of translation
    * - Number of strings
      - Number of target languages
      - Overall Translation ratio
-   * - **31795**
-     - **57**
-     - **11.39%**
+   * - **31797**
+     - **58**
+     - **11.24%**
 
 
 
@@ -46,7 +46,7 @@ Statistics of translation
      - Catalan
      - 1.54
      - Chinese Simplified
-     - 1.77
+     - 1.83
    * - Chinese Traditional
      - 0.7
      - Croatian
@@ -62,13 +62,13 @@ Statistics of translation
    * - Finnish
      - 1.84
      - French
-     - 99.69
+     - 99.63
      - Galician
      - 0.6
    * - Georgian
      - 0.11
      - German
-     - 21.29
+     - 21.46
      - Greek
      - 0.38
    * - Hebrew
@@ -82,66 +82,72 @@ Statistics of translation
      - Indonesian
      - 2.82
      - Italian
-     - 56.54
+     - 58.48
    * - Japanese
-     - 51.28
+     - 51.72
      - Kabyle
      - 0.11
      - Korean
-     - 85.06
-   * - Lithuanian
+     - 85.15
+   * - Lao
+     - 0.0
+     - Lithuanian
      - 1.19
      - Macedonian
      - 0.13
-     - Malay
+   * - Malay
      - 0.05
-   * - Malayalam
+     - Malayalam
      - 0.1
      - Marathi
      - 0.19
-     - Mongolian
+   * - Mongolian
      - 0.12
-   * - N'ko
+     - N'ko
      - 1.85
      - Norwegian Bokmål
      - 3.39
-     - Persian
+   * - Persian
      - 0.48
-   * - Polish
+     - Polish
      - 1.89
      - Portuguese (Brazil)
      - 37.65
-     - Portuguese (Portugal)
+   * - Portuguese (Portugal)
      - 8.65
-   * - Romanian
+     - Romanian
      - 30.91
      - Russian
      - 15.22
-     - Serbian
+   * - Serbian
      - 0.12
-   * - Slovak
+     - Slovak
      - 0.8
      - Slovenian
      - 3.25
-     - Spanish
-     - 92.82
-   * - Swedish
+   * - Spanish
+     - 92.85
+     - Swedish
      - 1.17
      - Tagalog
      - 0.1
-     - Tamil
+   * - Tamil
      - 0.53
-   * - Telugu
+     - Telugu
      - 0.03
      - Thai
      - 0.12
-     - Turkish
+   * - Turkish
      - 2.87
-   * - Ukrainian
+     - Ukrainian
      - 2.41
      - Urdu
      - 0.0
-     - Vietnamese
+   * - Vietnamese
      - 0.34
+     -
+     -
+     -
+     -
 
 

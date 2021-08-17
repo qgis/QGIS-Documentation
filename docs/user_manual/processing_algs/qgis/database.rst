@@ -304,7 +304,7 @@ Parameters
    * - **Save only selected features**
      - ``SELECTED_FEATURES_ONLY``
      - [boolean]
-     
+
        Default: False
      - If a layer has a selection, setting this option to ``True``
        will result in only selected features being saved. For
@@ -312,8 +312,13 @@ Parameters
    * - **Destination GeoPackage**
      - ``OUTPUT``
      - [file]
-     - If not specified the GeoPackage will be saved in the
-       temporary folder.
+
+       Default: ``[Save to temporary file]``
+     - Specify where to store the GeoPackage file. One of
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
