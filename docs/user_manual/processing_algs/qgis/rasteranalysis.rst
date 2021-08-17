@@ -1255,6 +1255,118 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _qgisrasterlayerproperties:
+
+Raster layer properties
+-----------------------
+|320|
+
+Returns basic properties of the given raster layer, including the extent,
+size in pixels and dimensions of pixels (in map units), number of bands,
+and no data value.
+
+This algorithm is intended for use as a means of extracting these useful properties
+to use as the input values to other algorithms in a model - eg to allow to pass
+an existing raster's pixel sizes over to a GDAL raster algorithm.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Input raster layer
+   * - **Band number**
+
+       Optional
+     - ``BAND``
+     - [raster band]
+
+       Default: Not set
+     - If specified, the noData value for the selected band is also returned.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Number of bands in raster**
+     - ``BAND_COUNT``
+     - [number]
+     -
+   * - **CRS authority identifier**
+     - ``CRS_AUTHID``
+     - [string]
+     -
+   * - **Extent**
+     - ``EXTENT``
+     - [string]
+     -
+   * - **Band has a no data value set**
+     - ``HAS_NODATA_VALUE``
+     - [Boolean]
+     -
+   * - **Height in pixels**
+     - ``HEIGHT_IN_PIXELS``
+     - [number]
+     -
+   * - **Band no data value**
+     - ``NODATA_VALUE``
+     - [number]
+     -
+   * - **Pixel size (height) in map units**
+     - ``PIXEL_HEIGHT``
+     - [number]
+     -
+   * - **Pixel size (width) in map units**
+     - ``PIXEL_WIDTH``
+     - [number]
+     -
+   * - **Width in pixels**
+     - ``WIDTH_IN_PIXELS``
+     - [number]
+     -
+   * - **Maximum x-coordinate**
+     - ``X_MAX``
+     - [number]
+     -
+   * - **Minimum x-coordinate**
+     - ``X_MIN``
+     - [number]
+     -
+   * - **Maximum y-coordinate**
+     - ``Y_MAX``
+     - [number]
+     -
+   * - **Minimum y-coordinate**
+     - ``Y_MIN``
+     - [number]
+     -
+
+Python code
+...........
+
+**Algorithm ID**: ``native:rasterlayerproperties``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgisrasterlayerstatistics:
 
 Raster layer statistics
@@ -2265,3 +2377,12 @@ Python code
    :height: 4.4em
 .. |small_formula| image:: img/fuzzy_small_formula.png
    :height: 3.2em
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |320| replace:: ``NEW in 3.20``
