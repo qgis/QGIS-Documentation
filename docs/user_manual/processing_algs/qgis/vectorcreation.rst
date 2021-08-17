@@ -31,6 +31,9 @@ distances will offset them to the right.
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -56,6 +59,29 @@ Parameters
 
        Default: 1.0
      - Distance between two consecutive offset copies
+   * - **Offset lines**
+     - ``OUTPUT``
+     - [vector: line]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output line layer with offset features. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Segments**
      - ``SEGMENTS``
      - [number]
@@ -83,17 +109,6 @@ Parameters
      - Only applicable for mitered join styles, and controls
        the maximum distance from the offset curve to use when
        creating a mitered join.
-   * - **Offset lines**
-     - ``OUTPUT``
-     - [vector: line]
-
-       Default: ``[Create temporary layer]``
-     - Specify the output line layer with offset features. One of:
-
-       .. include:: qgis_algs_include.rst
-          :start-after: **layer_output_types**
-          :end-before: **end_layer_output_types**
-
 
 Outputs
 .......
@@ -918,6 +933,9 @@ be increased.
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -948,12 +966,6 @@ Parameters
 
        Default: *Project CRS*
      - CRS of the random points layer
-   * - **Maximum number of search attempts given the minimum distance**
-     - ``MAX_ATTEMPTS``
-     - [number]
-
-       Default: 200
-     - Maximum number of attempts to place the points
    * - **Random points**
      - ``OUTPUT``
      - [vector: point]
@@ -965,6 +977,24 @@ Parameters
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Maximum number of search attempts given the minimum distance**
+     - ``MAX_ATTEMPTS``
+     - [number]
+
+       Default: 200
+     - Maximum number of attempts to place the points
 
 Outputs
 .......
@@ -1117,6 +1147,9 @@ the polygon feature geometry.
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -1144,6 +1177,29 @@ Parameters
 
        Default: 0.0
      - The minimum distance between points within one polygon feature
+   * - **Random points in polygons**
+     - ``OUTPUT``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - The output random points. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Global minimum distance between points**
 
        Optional
@@ -1179,17 +1235,6 @@ Parameters
        Default: True
      - If set, a point will get the attributes from the line on
        which it is placed.
-   * - **Random points in polygons**
-     - ``OUTPUT``
-     - [vector: point]
-
-       Default: ``[Create temporary layer]``
-     - The output random points. One of:
-
-       .. include:: qgis_algs_include.rst
-          :start-after: **layer_output_types**
-          :end-before: **end_layer_output_types**
-
 
 Outputs
 .......
@@ -1379,6 +1424,9 @@ the line feature geometry.
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -1406,6 +1454,29 @@ Parameters
 
        Default: 0.0
      - The minimum distance between points within one line feature
+   * - **Random points on lines**
+     - ``OUTPUT``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - The output random points. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Global minimum distance between points**
 
        Optional
@@ -1441,17 +1512,6 @@ Parameters
        Default: True
      - If set, a point will get the attributes from the line on
        which it is placed.
-   * - **Random points on lines**
-     - ``OUTPUT``
-     - [vector: point]
-
-       Default: ``[Create temporary layer]``
-     - The output random points. One of:
-
-       .. include:: qgis_algs_include.rst
-          :start-after: **layer_output_types**
-          :end-before: **end_layer_output_types**
-
 
 Outputs
 .......
