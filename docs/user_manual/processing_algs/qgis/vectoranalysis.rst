@@ -351,6 +351,15 @@ Outputs
      - Resulting layer with the attribute table containing the
        new column with the points count
 
+Python code
+...........
+
+**Algorithm ID**: ``native:countpointsinpolygon``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisdbscanclustering:
 
@@ -468,7 +477,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:dbscanclustering``
+**Algorithm ID**: ``native:dbscanclustering``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -911,7 +920,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:hublines``
+**Algorithm ID**: ``native:hublines``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1019,7 +1028,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:kmeansclustering``
+**Algorithm ID**: ``native:kmeansclustering``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1195,7 +1204,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:meancoordinates``
+**Algorithm ID**: ``native:meancoordinates``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1298,7 +1307,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:nearestneighbouranalysis``
+**Algorithm ID**: ``native:nearestneighbouranalysis``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1368,7 +1377,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:calculatevectoroverlaps``
+**Algorithm ID**: ``native:calculatevectoroverlaps``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1748,7 +1757,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:sumlinelengths``
+**Algorithm ID**: ``native:sumlinelengths``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**

@@ -8,6 +8,70 @@ Layer tools
       :depth: 1
 
 
+.. _qgisexportlayersinformation:
+
+Export layer(s) information
+---------------------------
+|318|
+
+Creates a polygon layer with features corresponding to the extent of selected layer(s).
+
+Additional layer details (CRS, provider name, file path, layer name, subset filter,
+abstract and attribution) are attached as attributes to each feature.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layers**
+     - ``LAYERS``
+     - [vector: any][list]
+     - Input vector layers to get information on.
+   * - **Output**
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Create temporary layer]``
+     - Specification of the output layer with information. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - Polygon vector layer showing extent of input layers and associated information
+       in attributes.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:exportlayersinformation``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgisexporttospreadsheet:
 
 Export to spreadsheet
@@ -29,7 +93,7 @@ Parameters
      - Description
    * - **Input layers**
      - ``LAYERS``
-     - [vector: any]
+     - [vector: any][list]
      - Input vector layers. The output spreadsheet will consist of a sheet,
        for each layer, that contains the attributes of this layer.
    * - **Use field aliases as column headings**
@@ -57,12 +121,12 @@ Parameters
      - ``OUTPUT``
      - [file]
 
-       Default: ``[Create temporary layer]``
+       Default: ``[Save to temporary file]``
      - Output spreadsheet with a sheet for every layer. One of:
 
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File…
-
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -163,3 +227,13 @@ Python code
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |318| replace:: `NEW in 3.18`
+

@@ -229,7 +229,7 @@ additional layer.
    :start-after: **geometric_predicates**
    :end-before: **end_geometric_predicates**
 
-.. seealso:: :ref:`qgisselectbylocation`
+.. seealso:: :ref:`qgisselectbylocation`, :ref:`qgisextractwithindistance`
 
 Parameters
 ..........
@@ -307,6 +307,97 @@ Python code
 ...........
 
 **Algorithm ID**: ``qgis:extractbylocation``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgisextractwithindistance:
+
+Extract within distance
+-----------------------
+|322|
+
+Creates a new vector layer that only contains matching features from an
+input layer. Features are copied wherever they are within
+the specified maximum distance from the features in an additional reference layer.
+
+.. seealso:: :ref:`qgisselectwithindistance`, :ref:`qgisextractbylocation`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Extract features from**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer to copy features from
+   * - **By comparing to the features from**
+     - ``REFERENCE``
+     - [vector: any]
+     - Vector layer whose features closeness is used
+   * - **Where the features are within**
+     - ``DISTANCE``
+     - [number]
+
+       Default: 100
+     - The maximum distance around reference features
+       to select input features within
+   * - **Modify current selection by**
+     - ``METHOD``
+     - [enumeration]
+
+       Default: 0
+     - How the selection of the algorithm should be managed.
+       One of:
+
+       * 0 --- creating new selection
+       * 1 --- adding to current selection
+       * 2 --- selecting within current selection
+       * 3 --- removing from current selection
+   * - **Extracted (location)**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer for the features that
+       are within the set distance from reference features.
+       One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Extracted (location)**
+     - ``OUTPUT``
+     - [same as input]
+     - Vector layer with features from the input layer matching
+       the condition of distance from reference features
+
+Python code
+...........
+
+**Algorithm ID**: ``native:extractwithindistance``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -462,7 +553,6 @@ Parameters
        .. include:: qgis_algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
-
 
 Outputs
 .......
@@ -830,7 +920,7 @@ layer.
 
 **Default menu**: :menuselection:`Vector --> Research Tools`
 
-.. seealso:: :ref:`qgisextractbylocation`
+.. seealso:: :ref:`qgisextractbylocation`, :ref:`qgisselectwithindistance`
 
 Parameters
 ..........
@@ -909,3 +999,90 @@ Python code
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+
+
+.. _qgisselectwithindistance:
+
+Select within distance
+----------------------
+|322|
+
+creates a selection in a vector layer.
+Features are selected wherever they are within the specified maximum
+distance from the features in an additional reference layer.
+
+.. seealso:: :ref:`qgisextractwithindistance`, :ref:`qgisselectbylocation`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Select features from**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer to select features from
+   * - **By comparing to the features from**
+     - ``REFERENCE``
+     - [vector: any]
+     - Vector layer whose features closeness is used
+   * - **Where the features are within**
+     - ``DISTANCE``
+     - [number]
+
+       Default: 100
+     - The maximum distance around reference features
+       to select input features
+   * - **Modify current selection by**
+     - ``METHOD``
+     - [enumeration]
+
+       Default: 0
+     - How the selection of the algorithm should be managed.
+       One of:
+
+       * 0 --- creating new selection
+       * 1 --- adding to current selection
+       * 2 --- selecting within current selection
+       * 3 --- removing from current selection
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [same as input]
+     - The input layer with features selected
+
+Python code
+...........
+
+**Algorithm ID**: ``native:selectwithindistance``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |322| replace:: `NEW in 3.22`
