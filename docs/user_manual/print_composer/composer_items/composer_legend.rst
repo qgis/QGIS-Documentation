@@ -207,6 +207,8 @@ configures the size of symbols displayed next to the legend labels.
 You can:
 
 * Set the :guilabel:`Symbol width` and :guilabel:`Symbol height`
+* Set the :guilabel:`Min symbol size` and :guilabel:`Max symbol size`: 0.00mm 
+  means there is no value set.
 * |checkbox| :guilabel:`Draw stroke for raster symbols`: this adds an outline
   to the symbol representing the band color of the raster layer; you can set
   both the :guilabel:`Stroke color` and :guilabel:`Tickness`.
