@@ -1579,9 +1579,9 @@ different providers.
 If not all these sub-menus are available, enable the Processing plugin
 in :menuselection:`Plugins --> Manage and Install Plugins...`.
 
-Note that the list of the :guilabel:`Vector` menu tools can be extended
-with any Processing algorithms or some external
-:ref:`plugins <plugins>`.
+Note that the list of algorithms and their menu can be modified/extended
+with any Processing algorithms (read :ref:`processing.options`) or
+some external :ref:`plugins <plugins>`.
 
 
 Raster
@@ -1757,9 +1757,9 @@ If not all these sub-menus are available, enable the Processing
 plugin in
 :menuselection:`Plugins --> Manage and Install Plugins...`.
 
-Note that the list of the :guilabel:`Raster` menu tools can be
-extended with any Processing algorithms or some external
-:ref:`plugins <plugins>`.
+Note that the list of algorithms and their menu can be modified/extended
+with any Processing algorithms (read :ref:`processing.options`) or
+some external :ref:`plugins <plugins>`.
 
 
 Database
@@ -2013,6 +2013,7 @@ Available toolbars are:
    ":guilabel:`Map Navigation`", ":ref:`working_canvas`"
    ":guilabel:`Plugins`", ":ref:`plugins.index`"
    ":guilabel:`Project`", ":ref:`project_files`, :ref:`label_printlayout`, :ref:`vector_symbol_library`"
+   ":guilabel:`Processing Algorithms`", ":ref:`processing.options`"
    ":guilabel:`Raster`", ":ref:`plugins.index`"
    ":guilabel:`Selection`",":ref:`sec_selection`"
    ":guilabel:`Shape digitizing`", ":ref:`shape_edit`"
