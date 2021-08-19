@@ -8,7 +8,7 @@
 
    .. contents::
       :local:
-      
+
 The Processing Options menu (:menuselection:`Settings--> Options -->`
 :guilabel:`Processing` tab) allows you to configure how algorithms work.
 Configuration parameters are structured in separate blocks that you can
@@ -18,14 +18,34 @@ The :guilabel:`General` block contains a number of interesting parameters.
 
 * :guilabel:`Default output raster layer extension` is by default ``tif``
 * :guilabel:`Default output vector layer extension` is by default ``gpkg``
-* :guilabel:`Invalid features filtering`
+* :guilabel:`Invalid features filtering` when executing algorithm:
+
+  * :guilabel:`Do not filter (better performance)`: all the features
+    (with valid and invalid geometries) are processed, but the result may be
+    erroneous depending on how the geometry invalidity affects the operations
+  * :guilabel:`Skip (ignore) features with invalid geometries`, meaning
+    that only a subset of your dataset (the valid geometry features) will
+    be processed
+  * :guilabel:`Stop algorithm execution when a geometry is invalid`:
+    you'll need to track and fix the invalid geometries if you want the algorithm
+    to process the whole layer. Algorithms like :ref:`qgischeckvalidity` or
+    :ref:`qgisfixgeometries` can help you achieve this.
+
+  The :guilabel:`Invalid features filtering` setting can be overridden
+  on a per-input basis, at algorithm runtime.
 * :guilabel:`Keep dialog open after running algorithm`. Once an algorithm
   has finished execution and its output layers are loaded into the QGIS
   project, the algorithm dialog is closed. If you want to keep it open
   (to run the algorithm again with different parameters, or to better
   check the output that is written to the log tab), check this option.
 * :guilabel:`Max Threads`
-* :guilabel:`Output folder`
+* :guilabel:`Output folder` for non temporary outputs: If no folder path
+  is provided for the Processing execution outputs, this is the folder in which
+  they will be saved. Default is :file:`processing/outputs` under the active
+  :ref:`user profile <user_profiles>` directory.
+* :guilabel:`Override temporary output folder path`: Temporary outputs are
+  saved by default in the :file:`tmp` folder on the machine.
+  This option helps you set a different place for storage.
 * :guilabel:`Pre-execution script` and :guilabel:`Post-execution script`.
   These parameters point to files that contain scripts written using the
   processing scripting functionality, explained in the section covering
@@ -46,13 +66,16 @@ The :guilabel:`General` block contains a number of interesting parameters.
   If you want to obtain all processing result layers in a group in the
   :guilabel:`Layers` panel, set a group name for this parameter. The group
   may exist already or not. QGIS will add all output layers to such a group.
-  By default, this parameter is empty, so all output layers are added to 
+  By default, this parameter is empty, so all output layers are added to
   different places in the :guilabel:`Layers` panel, depending on the item
   that is active when running an algorithm.
-  Note that output layers will be loaded to the :guilabel:`Layers` panel 
-  only if :guilabel:`Open output file after running algorithm` is checked 
+  Note that output layers will be loaded to the :guilabel:`Layers` panel
+  only if :guilabel:`Open output file after running algorithm` is checked
   in the algorithm dialog.
-* :guilabel:`Show algorithms with known issues`
+* :guilabel:`Show algorithms with known issues`: By default, QGIS avoids
+  display of broken algorithms (generally from third-party providers).
+  If checked, they will be available in the Processing toolbox, with a warning
+  icon and a tooltip explaining they have issues. Use at your own risks.
 * :guilabel:`Show layer CRS definition in selection boxes`
 * :guilabel:`Show tooltip when there are disabled providers`
 * :guilabel:`Style for line layers`, :guilabel:`Style for point layers`,
@@ -65,7 +88,7 @@ The :guilabel:`General` block contains a number of interesting parameters.
   it.
   Whenever a layer is loaded by Processing and added to the QGIS canvas,
   it will be rendered with that style.
-  
+
   Rendering styles can be configured individually for each algorithm and
   each one of its outputs.
   Just right-click on the name of the algorithm in the toolbox and
@@ -81,11 +104,28 @@ The :guilabel:`General` block contains a number of interesting parameters.
 
   Select the style file (:file:`.qml`) that you want for each output
   and press :guilabel:`OK`.
-* :guilabel:`Temporary output folder path`
 * :guilabel:`Warn before executing if parameter CRS's do not match`
 
+The :guilabel:`Menus` block controls whether an algorithm, script or
+model (built-in or provided by plugins) should be made available through
+a dedicated menu or toolbar (along with the Processing Toolbox).
+For each item of each provider, you can:
+
+* :guilabel:`Add button in toolbar`, making it available in the
+  :guilabel:`Processing Algorithms` toolbar
+* assign an :guilabel:`Icon` to the algorithm
+* set a :guilabel:`Menu path`: the algorithm will then be available through
+  an existing or a custom menu, e.g. ``Vect&or/MyTopAlgorithms``
+
+Restart QGIS to apply the settings.
+At any time, your changes can be :guilabel:`Reset to defaults`.
+
+In the :guilabel:`Models` and :guilabel:`Scripts` blocks, you can set
+a default folder to store, and look for models and scripts respectively.
+
 You will also find a block for algorithm :guilabel:`Providers`.
-Each entry in this block contains an :guilabel:`Activate` item that you
-can use to make algorithms appear or not in the toolbox.
+This is the place installed providers expose their settings.
+For example, built-in providers contain an :guilabel:`Activate` item
+that you can use to make their algorithms appear or not in the toolbox.
 Some algorithm providers have their own configuration items, which will
 be explained when covering particular algorithm providers.
