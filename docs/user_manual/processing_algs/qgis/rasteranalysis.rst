@@ -2026,7 +2026,9 @@ Parameters
    * - **New minimum value**
      - ``MINIMUM``
      - [number]
-     - Default value: 0
+
+       Default value: 0.0
+     - Minimum pixel value to use in the rescaled layer
    * - **New maximum value**
      - ``MAXIMUM``
      - [number]
