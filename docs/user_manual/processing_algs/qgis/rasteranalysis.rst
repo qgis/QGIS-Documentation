@@ -2030,7 +2030,9 @@ Parameters
    * - **New maximum value**
      - ``MAXIMUM``
      - [number]
-     - Default value: 255
+
+       Default value: 255.0
+     - Maximum pixel value to use in the rescaled layer
    * - **New NODATA value**
    
        Optional
