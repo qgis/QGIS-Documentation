@@ -345,6 +345,9 @@ Advanced parameters
        compression...).
        For convenience, you can rely on predefined profiles (see
        :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       For Batch Process: separate mulitple options with a pipe 
+       character ('|').
    * - **Output data type**
      - ``DATA_TYPE``
      - [enumeration]
@@ -558,6 +561,9 @@ Advanced parameters
        compression...).
        For convenience, you can rely on predefined profiles (see
        :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       For Batch Process: separate mulitple options with a pipe 
+       character ('|').
    * - **Additional command-line parameters**
 
        Optional

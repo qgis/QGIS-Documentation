@@ -86,6 +86,9 @@ Parameters
        compression...).
        For convenience, you can rely on predefined profiles (see
        :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       For Batch Process: separate mulitple options with a pipe 
+       character ('|').
    * - **Additional command-line parameters**
 
        Optional
@@ -201,6 +204,9 @@ Parameters
        compression...).
        For convenience, you can rely on predefined profiles (see
        :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       For Batch Process: separate mulitple options with a pipe 
+       character ('|').
    * - **Additional command-line parameters**
 
        Optional
@@ -327,6 +333,9 @@ Parameters
        compression...).
        For convenience, you can rely on predefined profiles (see
        :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       For Batch Process: separate mulitple options with a pipe 
+       character ('|').
    * - **Additional command-line parameters**
 
        Optional
@@ -481,6 +490,9 @@ Parameters
        compression...).
        For convenience, you can rely on predefined profiles (see
        :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       For Batch Process: separate mulitple options with a pipe 
+       character ('|').
    * - **Additional command-line parameters**
 
        Optional
@@ -635,6 +647,9 @@ Parameters
        compression...).
        For convenience, you can rely on predefined profiles (see
        :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       For Batch Process: separate mulitple options with a pipe 
+       character ('|').
    * - **Additional command-line parameters**
 
        Optional
@@ -809,6 +824,9 @@ Parameters
        compression...).
        For convenience, you can rely on predefined profiles (see
        :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       For Batch Process: separate mulitple options with a pipe 
+       character ('|').
    * - **Additional command-line parameters**
 
        Optional
@@ -941,6 +959,9 @@ Parameters
        compression...).
        For convenience, you can rely on predefined profiles (see
        :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       For Batch Process: separate mulitple options with a pipe 
+       character ('|').
    * - **Additional command-line parameters**
 
        Optional
@@ -1098,6 +1119,9 @@ Parameters
        compression...).
        For convenience, you can rely on predefined profiles (see
        :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       For Batch Process: separate mulitple options with a pipe 
+       character ('|').
    * - **Additional command-line parameters**
 
        Optional
@@ -1242,6 +1266,9 @@ Parameters
        compression...).
        For convenience, you can rely on predefined profiles (see
        :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       For Batch Process: separate mulitple options with a pipe 
+       character ('|').
    * - **Additional command-line parameters**
 
        Optional
@@ -1412,6 +1439,9 @@ Parameters
        compression...).
        For convenience, you can rely on predefined profiles (see
        :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       For Batch Process: separate mulitple options with a pipe 
+       character ('|').
    * - **Additional command-line parameters**
 
        Optional
@@ -1519,6 +1549,9 @@ Parameters
        compression...).
        For convenience, you can rely on predefined profiles (see
        :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       For Batch Process: separate mulitple options with a pipe 
+       character ('|').
    * - **Additional command-line parameters**
 
        Optional
@@ -1671,6 +1704,9 @@ Parameters
        compression...).
        For convenience, you can rely on predefined profiles (see
        :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       For Batch Process: separate mulitple options with a pipe 
+       character ('|').
    * - **Additional command-line parameters**
 
        Optional
@@ -1794,6 +1830,9 @@ Parameters
        compression...).
        For convenience, you can rely on predefined profiles (see
        :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       For Batch Process: separate mulitple options with a pipe 
+       character ('|').
    * - **Roughness**
      - ``OUTPUT``
      - [raster]    
@@ -2007,6 +2046,9 @@ Parameters
        compression...).
        For convenience, you can rely on predefined profiles (see
        :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       For Batch Process: separate mulitple options with a pipe 
+       character ('|').
    * - **Additional command-line parameters**
 
        Optional
@@ -2108,6 +2150,9 @@ Parameters
        compression...).
        For convenience, you can rely on predefined profiles (see
        :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       For Batch Process: separate mulitple options with a pipe 
+       character ('|').
    * - **Terrain Ruggedness Index**
      - ``OUTPUT``
      - [raster]    
@@ -2201,6 +2246,9 @@ Parameters
        compression...).
        For convenience, you can rely on predefined profiles (see
        :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       For Batch Process: separate mulitple options with a pipe 
+       character ('|').
    * - **Terrain Ruggedness Index**
      - ``OUTPUT``
      - [raster]    
