@@ -2050,6 +2050,7 @@ Parameters
 
        .. include:: qgis_algs_include.rst
           :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
