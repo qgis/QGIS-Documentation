@@ -2031,10 +2031,15 @@ Parameters
      - ``MAXIMUM``
      - [number]
      - Default value: 255
-   * - **New NODATA value [optional]**
+   * - **New NODATA value**
+   
+       Optional
      - ``NODATA``
      - [number]
-     - Default value: Not set
+     
+       Default value: Not set
+     - Value to assign to the NODATA pixels.
+       If unset, original NODATA values are preserved.
    * - **Rescaled**
      - ``OUTPUT``
      - [raster]
