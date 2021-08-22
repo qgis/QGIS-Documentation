@@ -2008,7 +2008,7 @@ The algorithm preserves the data type of the input raster. Therefore byte/intege
 rasters can only be rounded to multiples of a base n, otherwise a warning is raised
 and the raster gets copied as byte/integer raster.
 
-.. figure:: img/roundraster.png
+.. figure:: img/round_raster.png
   :align: center
 
   Rounding values of a raster
