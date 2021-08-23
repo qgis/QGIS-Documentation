@@ -7,6 +7,497 @@ Raster analysis
       :local:
       :depth: 1
 
+
+.. _qgiscellstackpercentrankfromvalue:
+
+Cell stack percent rank from value
+----------------------------------
+
+Calculates the cell-wise percentrank value of a stack of rasters based on
+a single input value and writes them to an output raster.
+
+At each cell location, the specified value is ranked among the respective values
+in the stack of all overlaid and sorted cell values from the input rasters.
+For values outside of the stack value distribution, the algorithm returns NoData
+because the value cannot be ranked among the cell values.
+
+There are two methods for percentile calculation:
+
+* Inclusive linear interpolation (PERCENTRANK.INC)
+* Exclusive linear interpolation (PERCENTRANK.EXC)
+
+The linear interpolation method return the unique percent rank for different values.
+Both interpolation methods follow their counterpart methods implemented
+by `LibreOffice <https://help.libreoffice.org/latest/en-US/text/scalc/01/04060184.html?DbPAR=CALC#bm_id3148807>`_
+or Microsoft Excel.
+
+The output raster's extent and resolution is defined by a reference raster.
+Input raster layers that do not match the cell size of the reference
+raster layer will be resampled using nearest neighbor resampling.
+NoData values in any of the input layers will result in a NoData cell output
+if the "Ignore NoData values" parameter is not set.
+The output raster data type will always be ``Float32``.
+
+.. figure:: img/percentrankfromvalue.png
+  :align: center
+
+  Percent ranking Value = 1. ``NoData`` cells (grey) are ignored.
+
+.. seealso:: :ref:`qgiscellstackpercentile`, :ref:`qgiscellstackpercentrankfromrasterlayer`
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layers**
+     - ``INPUT``
+     - [raster] [list]
+     - Raster layers to evaluate.
+       If multiband rasters are used in the data raster stack, the algorithm
+       will always perform the analysis on the first band of the rasters
+   * - **Method**
+     - ``METHOD``
+     - [enumeration]
+
+       Default: 0
+     - Method for percentile calculation:
+
+       * 0 --- Inclusive linear interpolation (PERCENTRANK.INC)
+       * 1 --- Exclusive linear interpolation (PERCENTRANK.EXC)
+   * - **Value**
+     - ``VALUE``
+     - [number]
+
+       Default: 10.0
+     - Value to rank among the respective values in the stack of all overlaid
+       and sorted cell values from the input rasters
+   * - **Ignore NoData values**
+     - ``IGNORE_NODATA``
+     - [boolean]
+
+       Default: True
+     - If unchecked, any NoData cells in the input layers will result in a NoData
+       cell in the output raster
+   * - **Reference layer**
+     - ``REFERENCE_LAYER``
+     - [raster]
+     - The reference layer for the output layer creation
+       (extent, CRS, pixel dimensions)
+   * - **Output layer**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output no data value**
+     - ``OUTPUT_NODATA_VALUE``
+     - [number]
+
+       Default: -9999.0
+     - Value to use for nodata in the output layer
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output layer**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster layer containing the result
+   * - **CRS authority identifier**
+     - ``CRS_AUTHID``
+     - [string]
+     - The coordinate reference system of the output raster layer
+   * - **Extent**
+     - ``EXTENT``
+     - [string]
+     - The spatial extent of the output raster layer
+   * - **Width in pixels**
+     - ``WIDTH_IN_PIXELS``
+     - [integer]
+     - The number of columns in the output raster layer
+   * - **Height in pixels**
+     - ``HEIGHT_IN_PIXELS``
+     - [integer]
+     - The number of rows in the output raster layer
+   * - **Total pixel count**
+     - ``TOTAL_PIXEL_COUNT``
+     - [integer]
+     - The count of pixels in the output raster layer
+
+Python code
+...........
+
+**Algorithm ID**: ``native:cellstackpercentrankfromvalue``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgiscellstackpercentile:
+
+Cell stack percentile
+---------------------
+
+Calculates the cell-wise percentile value of a stack of rasters
+and writes the results to an output raster. The percentile to return
+is determined by the percentile input value (ranges between 0 and 1).
+At each cell location, the specified percentile is obtained using the respective
+value from the stack of all overlaid and sorted cell values of the input rasters.
+
+There are three methods for percentile calculation:
+
+* Nearest rank: returns the value that is nearest to the specified percentile
+* Inclusive linear interpolation (PERCENTRANK.INC)
+* Exclusive linear interpolation (PERCENTRANK.EXC)
+
+The linear interpolation methods return the unique values for different percentiles.
+Both interpolation methods follow their counterpart methods implemented
+by `LibreOffice <https://help.libreoffice.org/latest/en-US/text/scalc/01/04060184.html?DbPAR=CALC#bm_id3148807>`_
+or Microsoft Excel.
+
+The output raster's extent and resolution is defined by a reference raster.
+Input raster layers that do not match the cell size of the reference
+raster layer will be resampled using nearest neighbor resampling.
+NoData values in any of the input layers will result in a NoData cell output
+if the "Ignore NoData values" parameter is not set.
+The output raster data type will always be ``Float32``.
+
+.. figure:: img/percentile.png
+  :align: center
+
+  Percentile = 0.25. ``NoData`` cells (grey) are ignored.
+
+.. seealso:: :ref:`qgiscellstackpercentile`, :ref:`qgiscellstackpercentrankfromrasterlayer`
+
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layers**
+     - ``INPUT``
+     - [raster] [list]
+     - Raster layers to evaluate.
+       If multiband rasters are used in the data raster stack, the algorithm
+       will always perform the analysis on the first band of the rasters
+   * - **Method**
+     - ``METHOD``
+     - [enumeration]
+
+       Default: 0
+     - Method for percentile calculation:
+
+       * 0 --- Nearest rank: returns the value that is nearest to the specified percentile
+       * 1 --- Inclusive linear interpolation (PERCENTILE.INC)
+       * 2 --- Exclusive linear interpolation (PERCENTILE.EXC)
+   * - **Percentile**
+     - ``VALUE``
+     - [number]
+
+       Default: 0.25
+     - Value to rank among the respective values in the stack of all overlaid
+       and sorted cell values from the input rasters. Between 0 and 1.
+   * - **Ignore NoData values**
+     - ``IGNORE_NODATA``
+     - [boolean]
+
+       Default: True
+     - If unchecked, any NoData cells in the input layers will result in a NoData
+       cell in the output raster
+   * - **Reference layer**
+     - ``REFERENCE_LAYER``
+     - [raster]
+     - The reference layer for the output layer creation
+       (extent, CRS, pixel dimensions)
+   * - **Output layer**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output no data value**
+     - ``OUTPUT_NODATA_VALUE``
+     - [number]
+
+       Default: -9999.0
+     - Value to use for nodata in the output layer
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output layer**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster layer containing the result
+   * - **CRS authority identifier**
+     - ``CRS_AUTHID``
+     - [string]
+     - The coordinate reference system of the output raster layer
+   * - **Extent**
+     - ``EXTENT``
+     - [string]
+     - The spatial extent of the output raster layer
+   * - **Width in pixels**
+     - ``WIDTH_IN_PIXELS``
+     - [integer]
+     - The number of columns in the output raster layer
+   * - **Height in pixels**
+     - ``HEIGHT_IN_PIXELS``
+     - [integer]
+     - The number of rows in the output raster layer
+   * - **Total pixel count**
+     - ``TOTAL_PIXEL_COUNT``
+     - [integer]
+     - The count of pixels in the output raster layer
+
+Python code
+...........
+
+**Algorithm ID**: ``native:cellstackpercentile``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgiscellstackpercentrankfromrasterlayer:
+
+cell stack percentrank from raster layer
+----------------------------------------
+
+Calculates the cell-wise percentrank value of a stack of rasters based
+on an input value raster and writes them to an output raster.
+
+At each cell location, the current value of the value raster is ranked among
+the respective values in the stack of all overlaid and sorted cell values of
+the input rasters. For values outside of the the stack value distribution,
+the algorithm returns NoData because the value cannot be ranked among the cell values.
+
+There are two methods for percentile calculation:
+
+* Inclusive linear interpolation (PERCENTRANK.INC)
+* Exclusive linear interpolation (PERCENTRANK.EXC)
+
+The linear interpolation methods return the unique values for different percentiles.
+Both interpolation methods follow their counterpart methods implemented
+by `LibreOffice <https://help.libreoffice.org/latest/en-US/text/scalc/01/04060184.html?DbPAR=CALC#bm_id3148807>`_
+or Microsoft Excel.
+
+The output raster's extent and resolution is defined by a reference raster.
+Input raster layers that do not match the cell size of the reference
+raster layer will be resampled using nearest neighbor resampling.
+NoData values in any of the input layers will result in a NoData cell output
+if the "Ignore NoData values" parameter is not set.
+The output raster data type will always be ``Float32``.
+
+.. figure:: img/percentrankfromrasterlayer.png
+  :align: center
+
+  Ranking the value raster layer cells. ``NoData`` cells (grey) are ignored.
+
+.. seealso:: :ref:`qgiscellstackpercentile`, :ref:`qgiscellstackpercentrankfromvalue`
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layers**
+     - ``INPUT``
+     - [raster] [list]
+     - Raster layers to evaluate.
+       If multiband rasters are used in the data raster stack, the algorithm
+       will always perform the analysis on the first band of the rasters
+   * - **Value raster layer**
+     - ``INPUT_VALUE_RASTER``
+     - [raster]
+     - The layer to rank the values among the stack of all overlaid layers
+   * - **Value raster band**
+     - ``VALUE_RASTER_BAND``
+     - [integer]
+
+       Default: 1
+     - Band of the "value raster layer" to compare to
+   * - **Method**
+     - ``METHOD``
+     - [enumeration]
+
+       Default: 0
+     - Method for percentile calculation:
+
+       * 0 --- Inclusive linear interpolation (PERCENTRANK.INC)
+       * 1 --- Exclusive linear interpolation (PERCENTRANK.EXC)
+   * - **Ignore NoData values**
+     - ``IGNORE_NODATA``
+     - [boolean]
+
+       Default: True
+     - If unchecked, any NoData cells in the input layers will result in a NoData
+       cell in the output raster
+   * - **Reference layer**
+     - ``REFERENCE_LAYER``
+     - [raster]
+     - The reference layer for the output layer creation
+       (extent, CRS, pixel dimensions)
+   * - **Output layer**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output no data value**
+     - ``OUTPUT_NODATA_VALUE``
+     - [number]
+
+       Default: -9999.0
+     - Value to use for nodata in the output layer
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output layer**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster layer containing the result
+   * - **CRS authority identifier**
+     - ``CRS_AUTHID``
+     - [string]
+     - The coordinate reference system of the output raster layer
+   * - **Extent**
+     - ``EXTENT``
+     - [string]
+     - The spatial extent of the output raster layer
+   * - **Width in pixels**
+     - ``WIDTH_IN_PIXELS``
+     - [integer]
+     - The number of columns in the output raster layer
+   * - **Height in pixels**
+     - ``HEIGHT_IN_PIXELS``
+     - [integer]
+     - The number of rows in the output raster layer
+   * - **Total pixel count**
+     - ``TOTAL_PIXEL_COUNT``
+     - [integer]
+     - The count of pixels in the output raster layer
+
+Python code
+...........
+
+**Algorithm ID**: ``native:cellstackpercentrankfromrasterlayer``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgiscellstatistics:
 
 Cell statistics
@@ -55,6 +546,9 @@ and ``Variety`` (data type is always ``Int32``).
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -97,6 +591,29 @@ Parameters
      - [raster]
      - The reference layer to create the output layer
        from (extent, CRS, pixel dimensions)
+   * - **Output layer**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Output no data value**
 
        Optional
@@ -105,16 +622,6 @@ Parameters
 
        Default: -9999.0
      - Value to use for nodata in the output layer
-   * - **Output layer**
-     - ``OUTPUT``
-     - [same as input]
-     - Specification of the output raster. One of:
-
-       .. include:: qgis_algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
-
-
 
 Outputs
 .......
@@ -138,7 +645,7 @@ Outputs
   * - **Height in pixels**
     - ``HEIGHT_IN_PIXELS``
     - [integer]
-    - The height in pixels of the output raster layer
+    - The number of rows in the output raster layer
   * - **Output raster**
     - ``OUTPUT``
     - [raster]
@@ -150,12 +657,169 @@ Outputs
   * - **Width in pixels**
     - ``WIDTH_IN_PIXELS``
     - [integer]
-    - The width in pixels of the output raster layer
+    - The number of columns in the output raster layer
 
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:cellstatistics``
+**Algorithm ID**: ``native:cellstatistics``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgisequaltofrequency:
+
+Equal to frequency
+------------------
+
+Evaluates on a cell-by-cell basis the frequency (number of times) the values
+of an input stack of rasters are equal to the value of a value layer.
+The output raster extent and resolution are defined by the input raster layer
+and is always of ``Int32`` type.
+
+If multiband rasters are used in the data raster stack, the algorithm will always
+perform the analysis on the first band of the rasters - use GDAL to use other bands
+in the analysis.
+The output NoData value can be set manually.
+
+.. figure:: img/equaltofrequency.png
+  :align: center
+
+  For each cell in the output raster, the value represents the number of times
+  that the corresponding cells in the list of rasters are the same as the value raster.
+  ``NoData`` cells (grey) are taken into account.
+
+.. seealso:: :ref:`qgisgreaterthanfrequency`, :ref:`qgislessthanfrequency`
+
+.. **frequencyparams**
+.. FYI, the next params description is shared with Greater/Less than frequency algorithms
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input value raster**
+     - ``INPUT_VALUE_RASTER``
+     - [raster]
+     - The input value layer serves as reference layer for the sample layers
+   * - **Value raster band**
+     - ``INPUT_VALUE_RASTER_BAND``
+     - [raster band]
+
+       Default: The first band of the raster layer
+     - Select the band you want to use as sample
+   * - **Input raster layers**
+     - ``INPUT_RASTERS``
+     - [raster] [list]
+     - Raster layers to evaluate.
+       If multiband rasters are used in the data raster stack, the algorithm
+       will always perform the analysis on the first band of the rasters
+   * - **Ignore NoData values**
+     - ``IGNORE_NODATA``
+     - [boolean]
+
+       Default: False
+     - If unchecked, any NoData cells in the value raster or the data layer stack
+       will result in a NoData cell in the output raster
+   * - **Output layer**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output no data value**
+
+       Optional
+     - ``OUTPUT_NO_DATA_VALUE``
+     - [number]
+
+       Default: -9999.0
+     - Value to use for nodata in the output layer
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output layer**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster layer containing the result
+   * - **CRS authority identifier**
+     - ``CRS_AUTHID``
+     - [string]
+     - The coordinate reference system of the output raster layer
+   * - **Extent**
+     - ``EXTENT``
+     - [string]
+     - The spatial extent of the output raster layer
+   * - **Count of cells with equal value occurrences**
+     - ``FOUND_LOCATIONS_COUNT``
+     - [number]
+     -
+   * - **Height in pixels**
+     - ``HEIGHT_IN_PIXELS``
+     - [number]
+     - The number of rows in the output raster layer
+   * - **Total pixel count**
+     - ``TOTAL_PIXEL_COUNT``
+     - [integer]
+     - The count of pixels in the output raster layer
+   * - **Mean frequency at valid cell locations**
+     - ``MEAN_FREQUENCY_PER_LOCATION``
+     - [number]
+     -
+   * - **Count of value occurrences**
+     - ``OCCURRENCE_COUNT``
+     - [number]
+     -
+   * - **Width in pixels**
+     - ``WIDTH_IN_PIXELS``
+     - [integer]
+     - The number of columns in the output raster layer
+
+.. **endfrequencyparams**
+
+Python code
+...........
+
+**Algorithm ID**: ``native:equaltofrequency``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -225,13 +889,13 @@ Parameters
    * - **Fuzzified raster**
      - ``OUTPUT``
      - [same as input]
+
+       Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
        .. include:: qgis_algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
-
-
 
 Outputs
 .......
@@ -248,7 +912,6 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - Output raster layer containing the result
-
    * - **CRS authority identifier**
      - ``CRS_AUTHID``
      - [crs]
@@ -260,11 +923,11 @@ Outputs
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
      - [integer]
-     - The width in pixels of the output raster layer
+     - The number of columns in the output raster layer
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
      - [integer]
-     - The height in pixels of the output raster layer
+     - The number of rows in the output raster layer
    * - **Total pixel count**
      - ``TOTAL_PIXEL_COUNT``
      - [integer]
@@ -273,7 +936,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:fuzzifyrastergaussianmembership``
+**Algorithm ID**: ``native:fuzzifyrastergaussianmembership``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -336,13 +999,13 @@ Parameters
    * - **Fuzzified raster**
      - ``OUTPUT``
      - [same as input]
+
+       Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
        .. include:: qgis_algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
-
-
 
 Outputs
 .......
@@ -371,11 +1034,11 @@ Outputs
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
      - [integer]
-     - The width in pixels of the output raster layer
+     - The number of columns in the output raster layer
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
      - [integer]
-     - The height in pixels of the output raster layer
+     - The number of rows in the output raster layer
    * - **Total pixel count**
      - ``TOTAL_PIXEL_COUNT``
      - [integer]
@@ -384,7 +1047,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:fuzzifyrasterlargemembership``
+**Algorithm ID**: ``native:fuzzifyrasterlargemembership``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -452,12 +1115,13 @@ Parameters
    * - **Fuzzified raster**
      - ``OUTPUT``
      - [same as input]
+
+       Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
        .. include:: qgis_algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
-
 
 Outputs
 .......
@@ -485,11 +1149,11 @@ Outputs
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
      - [integer]
-     - The width in pixels of the output raster layer
+     - The number of columns in the output raster layer
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
      - [integer]
-     - The height in pixels of the output raster layer
+     - The number of rows in the output raster layer
    * - **Total pixel count**
      - ``TOTAL_PIXEL_COUNT``
      - [integer]
@@ -498,7 +1162,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgisfuzzifyrasterlinearmembership``
+**Algorithm ID**: ``native:fuzzifyrasterlinearmembership``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -561,6 +1225,8 @@ Parameters
    * - **Fuzzified raster**
      - ``OUTPUT``
      - [same as input]
+
+       Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
        .. include:: qgis_algs_include.rst
@@ -593,11 +1259,11 @@ Outputs
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
      - [integer]
-     - The width in pixels of the output raster layer
+     - The number of columns in the output raster layer
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
      - [integer]
-     - The height in pixels of the output raster layer
+     - The number of rows in the output raster layer
    * - **Total pixel count**
      - ``TOTAL_PIXEL_COUNT``
      - [integer]
@@ -606,7 +1272,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:fuzzifyrasternearmembership``
+**Algorithm ID**: ``native:fuzzifyrasternearmembership``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -678,6 +1344,8 @@ Parameters
    * - **Fuzzified raster**
      - ``OUTPUT``
      - [same as input]
+
+       Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
        .. include:: qgis_algs_include.rst
@@ -710,11 +1378,11 @@ Outputs
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
      - [integer]
-     - The width in pixels of the output raster layer
+     - The number of columns in the output raster layer
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
      - [integer]
-     - The height in pixels of the output raster layer
+     - The number of rows in the output raster layer
    * - **Total pixel count**
      - ``TOTAL_PIXEL_COUNT``
      - [integer]
@@ -723,7 +1391,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgisfuzzifyrasterpowermembership``
+**Algorithm ID**: ``native:fuzzifyrasterpowermembership``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -786,6 +1454,8 @@ Parameters
    * - **Fuzzified raster**
      - ``OUTPUT``
      - [same as input]
+
+       Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
        .. include:: qgis_algs_include.rst
@@ -818,11 +1488,11 @@ Outputs
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
      - [integer]
-     - The width in pixels of the output raster layer
+     - The number of columns in the output raster layer
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
      - [integer]
-     - The height in pixels of the output raster layer
+     - The number of rows in the output raster layer
    * - **Total pixel count**
      - ``TOTAL_PIXEL_COUNT``
      - [integer]
@@ -831,7 +1501,263 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgisfuzzifyrastersmallmembership``
+**Algorithm ID**: ``native:fuzzifyrastersmallmembership``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgisgreaterthanfrequency:
+
+Greater than frequency
+----------------------
+
+Evaluates on a cell-by-cell basis the frequency (number of times) the values
+of an input stack of rasters are equal to the value of a value raster.
+The output raster extent and resolution is defined by the input raster layer
+and is always of ``Int32`` type.
+
+If multiband rasters are used in the data raster stack, the algorithm will always
+perform the analysis on the first band of the rasters - use GDAL to use other bands
+in the analysis.
+The output NoData value can be set manually.
+
+.. figure:: img/greaterthanfrequency.png
+  :align: center
+
+  For each cell in the output raster, the value represents the number of times
+  that the corresponding cells in the list of rasters are greater than the value raster.
+  ``NoData`` cells (grey) are taken into account.
+
+.. seealso:: :ref:`qgisequaltofrequency`, :ref:`qgislessthanfrequency`
+
+.. The params description comes from the "Equal to frequency" algorithm
+
+.. include:: ./rasteranalysis.rst
+  :start-after: .. **frequencyparams**
+  :end-before: .. **endfrequencyparams**
+
+Python code
+...........
+
+**Algorithm ID**: ``native:greaterthanfrequency``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgishighestpositioninrasterstack:
+
+Highest position in raster stack
+--------------------------------
+
+Evaluates on a cell-by-cell basis the position of the raster with the highest value
+in a stack of rasters. Position counts start with 1 and range to the total number
+of input rasters. The order of the input rasters is relevant for the algorithm.
+If multiple rasters feature the highest value, the first raster will be used for
+the position value.
+
+If multiband rasters are used in the data raster stack, the algorithm will
+always perform the analysis on the first band of the rasters - use GDAL to use
+other bands in the analysis.
+Any NoData cells in the raster layer stack will result in a NoData cell
+in the output raster unless the "ignore NoData" parameter is checked.
+The output NoData value can be set manually. The output rasters extent and
+resolution is defined by a reference raster layer and is always of ``Int32`` type.
+
+.. figure:: img/highestposition.png
+  :align: center
+
+.. seealso:: :ref:`qgislowestpositioninrasterstack`
+
+.. **positionparams**
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input raster layers**
+     - ``INPUT_RASTERS``
+     - [raster] [list]
+     - List of raster layers to compare with
+   * - **Reference layer**
+     - ``REFERENCE_LAYER``
+     - [raster]
+     - The reference layer for the output layer creation
+       (extent, CRS, pixel dimensions)
+   * - **Ignore NoData values**
+     - ``IGNORE_NODATA``
+     - [boolean]
+
+       Default: False
+     - If unchecked, any NoData cells in the data layer stack
+       will result in a NoData cell in the output raster
+   * - **Output layer**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster containing the result.
+       One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output no data value**
+     - ``OUTPUT_NODATA_VALUE``
+     - [number]
+
+       Default: -9999.0
+     - Value to use for nodata in the output layer
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output layer**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster layer containing the result
+   * - **CRS authority identifier**
+     - ``CRS_AUTHID``
+     - [string]
+     - The coordinate reference system of the output raster layer
+   * - **Extent**
+     - ``EXTENT``
+     - [string]
+     - The spatial extent of the output raster layer
+   * - **Width in pixels**
+     - ``WIDTH_IN_PIXELS``
+     - [integer]
+     - The number of columns in the output raster layer
+   * - **Height in pixels**
+     - ``HEIGHT_IN_PIXELS``
+     - [integer]
+     - The number of rows in the output raster layer
+   * - **Total pixel count**
+     - ``TOTAL_PIXEL_COUNT``
+     - [integer]
+     - The count of pixels in the output raster layer
+
+.. **endpositionparams**
+
+Python code
+...........
+
+**Algorithm ID**: ``native:highestpositioninrasterstack``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgislessthanfrequency:
+
+Less than frequency
+-------------------
+
+Evaluates on a cell-by-cell basis the frequency (number of times) the values
+of an input stack of rasters are less than the value of a value raster.
+The output raster extent and resolution is defined by the input raster layer
+and is always of ``Int32`` type.
+
+If multiband rasters are used in the data raster stack, the algorithm will always
+perform the analysis on the first band of the rasters - use GDAL to use other bands
+in the analysis.
+The output NoData value can be set manually.
+
+.. figure:: img/lessthanfrequency.png
+  :align: center
+
+  For each cell in the output raster, the value represents the number of times
+  that the corresponding cells in the list of rasters are less than the value raster.
+  ``NoData`` cells (grey) are taken into account.
+
+.. seealso:: :ref:`qgisequaltofrequency`, :ref:`qgisgreaterthanfrequency`
+
+.. The params description comes from the "Equal to frequency" algorithm
+
+.. include:: ./rasteranalysis.rst
+  :start-after: .. **frequencyparams**
+  :end-before: .. **endfrequencyparams**
+
+Python code
+...........
+
+**Algorithm ID**: ``native:lessthanfrequency``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgislowestpositioninrasterstack:
+
+Lowest position in raster stack
+-------------------------------
+
+Evaluates on a cell-by-cell basis the position of the raster with the lowest value
+in a stack of rasters. Position counts start with 1 and range to the total number
+of input rasters. The order of the input rasters is relevant for the algorithm.
+If multiple rasters feature the highest value, the first raster will be used for
+the position value.
+
+If multiband rasters are used in the data raster stack, the algorithm will
+always perform the analysis on the first band of the rasters - use GDAL to use
+other bands in the analysis.
+Any NoData cells in the raster layer stack will result in a NoData cell
+in the output raster unless the "ignore NoData" parameter is checked.
+The output NoData value can be set manually. The output rasters extent and
+resolution is defined by a reference raster layer and is always of ``Int32`` type.
+
+.. figure:: img/lowestposition.png
+  :align: center
+
+.. seealso:: :ref:`qgishighestpositioninrasterstack`
+
+.. The params description comes from the "Highest position" algorithm
+
+.. include:: ./rasteranalysis.rst
+  :start-after: .. **positionparams**
+  :end-before: .. **endpositionparams**
+
+Python code
+...........
+
+**Algorithm ID**: ``native:lowestpositioninrasterstack``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -863,6 +1789,9 @@ then nodata inputs will be treated the same as a ``0`` input value.
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -888,6 +1817,30 @@ Parameters
        Default: False
      - Treat nodata values in the input files as 0 when performing the
        operation
+   * - **Output layer**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster containing the result.
+       One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Output no data value**
      - ``NO_DATA``
      - [number]
@@ -913,11 +1866,6 @@ Parameters
        * 9 --- CFloat32
        * 10 --- CFloat64
 
-   * - **Output layer**
-     - ``OUTPUT``
-     - [raster]
-     - Output raster layer
-
 Outputs
 .......
 
@@ -941,11 +1889,11 @@ Outputs
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
      - [integer]
-     - The width in pixels of the output raster layer
+     - The number of columns in the output raster layer
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
      - [integer]
-     - The height in pixels of the output raster layer
+     - The number of rows in the output raster layer
    * - **Total pixel count**
      - ``TOTAL_PIXEL_COUNT``
      - [integer]
@@ -971,7 +1919,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:rasterbooleanand``
+**Algorithm ID**: ``native:rasterbooleanand``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1003,6 +1951,9 @@ then nodata inputs will be treated the same as a ``0`` input value.
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -1028,6 +1979,30 @@ Parameters
        Default: False
      - Treat nodata values in the input files as 0 when performing the
        operation
+   * - **Output layer**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster containing the result.
+       One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Output no data value**
      - ``NO_DATA``
      - [number]
@@ -1053,11 +2028,6 @@ Parameters
        * 9 --- CFloat32
        * 10 --- CFloat64
 
-   * - **Output layer**
-     - ``OUTPUT``
-     - [raster]
-     - Output raster layer
-
 Outputs
 .......
 
@@ -1081,11 +2051,11 @@ Outputs
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
      - [integer]
-     - The width in pixels of the output raster layer
+     - The number of columns in the output raster layer
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
      - [integer]
-     - The height in pixels of the output raster layer
+     - The number of rows in the output raster layer
    * - **Total pixel count**
      - ``TOTAL_PIXEL_COUNT``
      - [integer]
@@ -1110,7 +2080,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:rasterbooleanor``
+**Algorithm ID**: ``native:rasterbooleanor``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1202,12 +2172,12 @@ Parameters
        If the cell size is not specified, the minimum cell size of
        the selected reference layer(s) will be used.
        The cell size will be the same for the X and Y axes.
-   * - **Output extent (xmin, xmax, ymin, ymax)**
+   * - **Output extent**
 
        Optional
      - ``EXTENT``
      - [extent]
-     - Extent of the output raster layer.
+     - Extent (xmin, xmax, ymin, ymax) of the output raster layer.
        If the extent is not specified, the minimum extent that covers
        all the selected reference layers will be used.
    * - **Output CRS**
@@ -1255,6 +2225,120 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _qgisrasterlayerproperties:
+
+Raster layer properties
+-----------------------
+|320|
+
+Returns basic properties of the given raster layer, including the extent,
+size in pixels and dimensions of pixels (in map units), number of bands,
+and no data value.
+
+This algorithm is intended for use as a means of extracting these useful properties
+to use as the input values to other algorithms in a model - e.g. to allow to pass
+an existing raster's pixel sizes over to a GDAL raster algorithm.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Input raster layer
+   * - **Band number**
+
+       Optional
+     - ``BAND``
+     - [raster band]
+
+       Default: Not set
+     - Whether to also return properties of a specific band.
+       If a band is specified, the noData value for the selected band is also returned.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Number of bands in raster**
+     - ``BAND_COUNT``
+     - [number]
+     - The number of bands in the raster
+   * - **CRS authority identifier**
+     - ``CRS_AUTHID``
+     - [string]
+     -
+   * - **Extent**
+     - ``EXTENT``
+     - [string]
+     - The raster layer extent in the CRS
+   * - **Band has a NoData value set**
+     - ``HAS_NODATA_VALUE``
+     - [Boolean]
+     - Indicates whether the raster layer has a value set for NODATA pixels
+       in the selected band
+   * - **Height in pixels**
+     - ``HEIGHT_IN_PIXELS``
+     - [number]
+     - The number of columns in the raster layer
+   * - **Band NoData value**
+     - ``NODATA_VALUE``
+     - [number]
+     - The value (if set) of the NoData pixels in the selected band
+   * - **Pixel size (height) in map units**
+     - ``PIXEL_HEIGHT``
+     - [number]
+     - Vertical size in map units of the pixel
+   * - **Pixel size (width) in map units**
+     - ``PIXEL_WIDTH``
+     - [number]
+     - Horizontal size in map units of the pixel
+   * - **Width in pixels**
+     - ``WIDTH_IN_PIXELS``
+     - [number]
+     - The number of rows in the raster layer
+   * - **Maximum x-coordinate**
+     - ``X_MAX``
+     - [number]
+     -
+   * - **Minimum x-coordinate**
+     - ``X_MIN``
+     - [number]
+     -
+   * - **Maximum y-coordinate**
+     - ``Y_MAX``
+     - [number]
+     -
+   * - **Minimum y-coordinate**
+     - ``Y_MIN``
+     - [number]
+     -
+
+Python code
+...........
+
+**Algorithm ID**: ``native:rasterlayerproperties``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgisrasterlayerstatistics:
 
 Raster layer statistics
@@ -1286,7 +2370,7 @@ Parameters
        Default: The first band of the input layer
      - If the raster is multiband, choose the band you want to get
        statistics for.
-   * - **Output**
+   * - **Statistics**
      - ``OUTPUT_HTML_FILE``
      - [html]
 
@@ -1321,7 +2405,7 @@ Outputs
      - ``MIN``
      - [number]
      -
-   * - **Output**
+   * - **Statistics**
      - ``OUTPUT_HTML_FILE``
      - [html]
      - The output file contains the following information:
@@ -1367,8 +2451,7 @@ Python code
 
 Raster layer unique values report
 ---------------------------------
-Returns the count and area of each unique value in a given raster
-layer.
+Returns the count and area of each unique value in a given raster layer.
 
 Parameters
 ..........
@@ -1414,7 +2497,6 @@ Parameters
        .. include:: qgis_algs_include.rst
           :start-after: **layer_output_types_skip**
           :end-before: **end_layer_output_types_skip**
-
 
 Outputs
 .......
@@ -1478,7 +2560,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:rasterlayeruniquevaluesreport``
+**Algorithm ID**: ``native:rasterlayeruniquevaluesreport``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1496,6 +2578,9 @@ zones defined in another raster layer.
 
 Parameters
 ..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -1530,6 +2615,29 @@ Parameters
        Default: The first band of the raster layer
      - If the raster is multiband, choose the band that defines
        the zones
+   * - **Statistics**
+     - ``OUTPUT_TABLE``
+     - [table]
+
+       Default: ``[Create temporary layer]``
+     - Specification of the output report. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Reference layer**
 
        Optional
@@ -1541,13 +2649,10 @@ Parameters
        used as reference when determining the zones in the output
        layer. One of:
 
-       * 0 --- Input layer
-       * 1 --- Zones layer
-
-   * - **Statistics**
-     - ``OUTPUT_TABLE``
-     - [table]
-     - Table with the calculated statistics
+       * 0 --- Input layer: zones are determined by sampling the zone raster
+         layer value at the centroid of each pixel from the source raster layer
+       * 1 --- Zones layer: the input raster layer will be sampled at the centroid
+         of each pixel from the zones raster layer
 
 Outputs
 .......
@@ -1601,7 +2706,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:rasterlayerzonalstats``
+**Algorithm ID**: ``native:rasterlayerzonalstats``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1675,11 +2780,10 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specification of the output HTML report. One of:
 
-       * Skip output
-       * Save to Temporary File
-       * Save to File...
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
 
-       The file encoding can also be changed here.
    * - **Surface volume table**
      - ``OUTPUT_TABLE``
      - [table]
@@ -1690,7 +2794,6 @@ Parameters
        .. include:: qgis_algs_include.rst
           :start-after: **layer_output_types_skip**
           :end-before: **end_layer_output_types_skip**
-
 
 Outputs
 .......
@@ -1729,7 +2832,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:rastersurfacevolume``
+**Algorithm ID**: ``native:rastersurfacevolume``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1745,6 +2848,9 @@ ranges specified in a vector table.
 
 Parameters
 ..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -1784,6 +2890,29 @@ Parameters
      - Field with the value that will be assigned to the pixels that
        fall in the class (between the corresponding min and max
        values).
+   * - **Reclassified raster**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Output no data value**
      - ``NO_DATA``
      - [number]
@@ -1802,21 +2931,20 @@ Parameters
        * 1 --- min <= value < max
        * 2 --- min <= value <= max
        * 3 --- min < value < max
-
    * - **Use no data when no range matches value**
      - ``NODATA_FOR_MISSING``
      - [boolean]
 
        Default: False
-     - Values that do not belong to a class will result in the no data
-       value.
+     - Applies the no data value to band values that do not fall in
+       any class.
        If False, the original value is kept.
    * - **Output data type**
      - ``DATA_TYPE``
      - [enumeration]
 
        Default: 5
-     - Defines the data type of the output raster file.
+     - Defines the format of the output raster file.
        Options:
 
        * 0 --- Byte
@@ -1830,17 +2958,6 @@ Parameters
        * 8 --- CInt32
        * 9 --- CFloat32
        * 10 --- CFloat64
-
-   * - **Reclassified raster**
-     - ``OUTPUT``
-     - [raster]
-
-       Default: ``[Save to temporary file]``
-     - Specification of the output raster. One of:
-
-       .. include:: qgis_algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -1861,7 +2978,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:reclassifybylayer``
+**Algorithm ID**: ``native:reclassifybylayer``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1877,6 +2994,9 @@ ranges specified in a fixed table.
 
 Parameters
 ..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -1903,6 +3023,30 @@ Parameters
      - A 3-columns table to fill with the values to set the boundaries
        of each class (``Minimum`` and ``Maximum``) and the new
        ``Value`` to assign to the band values that fall in the class.
+   * - **Reclassified raster**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster layer.
+       One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Output no data value**
      - ``NO_DATA``
      - [number]
@@ -1921,7 +3065,6 @@ Parameters
        * 1 --- min <= value < max
        * 2 --- min <= value <= max
        * 3 --- min < value < max
-
    * - **Use no data when no range matches value**
      - ``NODATA_FOR_MISSING``
      - [boolean]
@@ -1936,7 +3079,6 @@ Parameters
 
        Default: 5
      - Defines the format of the output raster file.
-
        Options:
 
        * 0 --- Byte
@@ -1950,18 +3092,6 @@ Parameters
        * 8 --- CInt32
        * 9 --- CFloat32
        * 10 --- CFloat64
-
-   * - **Reclassified raster**
-     - ``OUTPUT``
-     - [raster]
-
-       Default: ``[Save to temporary file]``
-     - Specification of the output raster layer.
-       One of:
-
-       .. include:: qgis_algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -1982,7 +3112,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:reclassifybytable``
+**Algorithm ID**: ``native:reclassifybytable``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -2082,6 +3212,129 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _qgisroundrastervalues:
+
+Round raster
+------------
+
+Rounds the cell values of a raster dataset according to the specified number of decimals.
+
+Alternatively, a negative number of decimal places may be used to round values
+to powers of a base n. For example, with a Base value n of 10 and Decimal places
+of -1, the algorithm rounds cell values to multiples of 10,
+-2 rounds to multiples of 100, and so on.
+Arbitrary base values may be chosen, the algorithm applies the same multiplicative
+principle. Rounding cell values to multiples of a base n may be used to generalize
+raster layers.
+
+The algorithm preserves the data type of the input raster. Therefore byte/integer
+rasters can only be rounded to multiples of a base n, otherwise a warning is raised
+and the raster gets copied as byte/integer raster.
+
+.. figure:: img/round_raster.png
+  :align: center
+
+  Rounding values of a raster
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input raster**
+     - ``INPUT``
+     - [raster]
+     - The raster to process.
+   * - **Band number**
+     - ``BAND``
+     - [number]
+
+       Default: 1
+     - The band of the raster
+   * - **Rounding direction**
+     - ``ROUNDING_DIRECTION``
+     - [list]
+
+       Default: 1
+     - How to choose the target rounded value. Options are:
+
+       0 - Round up
+       1 - Round to nearest
+       2 - Round down
+   * - **Number of decimals places**
+     - ``DECIMAL_PLACES``
+     - [number]
+
+       Default: 2
+     - Number of decimals places to round to.
+       Use negative values to round cell values to a multiple of a base n
+   * - **Output raster**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output file. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Base n for rounding to multiples of n**
+     - ``BASE_N``
+     - [number]
+
+       Default: 10
+     - When the ``DECIMAL_PLACES`` parameter is negative,
+       raster values are rounded to multiples of the base n value
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output raster**
+     - ``OUTPUT``
+     - [raster]
+     - The output raster layer with values rounded for the selected band.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:roundrastervalues``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgisrastersampling:
 
 Sample raster values
@@ -2131,7 +3384,6 @@ Parameters
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
-
 Outputs
 .......
 
@@ -2151,7 +3403,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:rastersampling``
+**Algorithm ID**: ``native:rastersampling``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -2218,7 +3470,6 @@ Parameters
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
-
 Outputs
 .......
 
@@ -2238,7 +3489,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:zonalhistogram``
+**Algorithm ID**: ``native:zonalhistogram``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -2312,13 +3563,9 @@ Parameters
      - Specify the output vector polygon layer.
        One of:
 
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to GeoPackage...
-       * Save to PostGIS Table...
-       * Append to Layer...
-
-       The file encoding can also be changed here.
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
 
 Outputs
 .......
@@ -2339,7 +3586,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:zonalstatisticsfb``
+**Algorithm ID**: ``native:zonalstatisticsfb``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -2358,3 +3605,12 @@ Python code
    :height: 4.4em
 .. |small_formula| image:: img/fuzzy_small_formula.png
    :height: 3.2em
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |320| replace:: ``NEW in 3.20``

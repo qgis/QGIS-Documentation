@@ -116,11 +116,16 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
-.. _qgiscreateconstantrasterlayer:
+.. _qgisfillnodata:
 
-Create constant raster layer
-----------------------------
-Generates a raster layer where all pixels have the same value.
+Fill NoData cells
+-----------------
+
+Resets the NoData values in the input raster to a chosen value, resulting in
+raster dataset with no NoData pixels.
+
+The algorithm respects the input raster data type, e.g. a floating point
+fill value will be truncated when applied to an integer raster.
 
 Parameters
 ..........
@@ -133,38 +138,27 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Desired extent (xmin, xmax, ymin, ymax)**
-     - ``EXTENT``
-     - [extent]
-     - Specify the extent of the output raster layer.
-       One of:
-       
-       * Use Canvas Extent
-       * Select Extent on Canvas
-       * Use Layer Extent...
-       
-       It will internally be extended to a multiple of the tile size.
-   * - **Target CRS**
-     - ``TARGET_CRS``
-     - [crs]
-       
-       Default: Project CRS
-     - CRS for the output raster layer
-   * - **Pixel size**
-     - ``PIXEL_SIZE``
+   * - **Input raster**
+     - ``INPUT``
+     - [raster]
+     - The raster to process.
+   * - **Band number**
+     - ``BAND``
      - [number]
-       
-       Default: 0.1
-     - Pixel size (X=Y) in map units. Minimum value: 0.01
-   * - **Constant value**
-     - ``NUMBER``
-     - [number]
-       
+
        Default: 1
-     - Constant pixel value for the output raster layer.
-   * - **Constant**
+     - The band of the raster
+   * - **Fill value**
+     - ``FILL_VALUE``
+     - [number]
+
+       Default: 1.0
+     - Set the value to use for the NoData pixels
+   * - **Output raster**
      - ``OUTPUT``
      - [raster]
+
+       Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
        .. include:: qgis_algs_include.rst
@@ -182,16 +176,15 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Constant**
+   * - **Output raster**
      - ``OUTPUT``
      - [raster]
-     - Raster covering the desired extent with the specified pixel
-       size and value.
+     - The output raster layer with filled data cells.
 
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:createconstantrasterlayer``
+**Algorithm ID**: ``native:fillnodata``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**

@@ -54,6 +54,15 @@ Parameters
 
        Default: 0
      - Choose the initial number of the incremental count
+   * - **Modulus value** |322|
+       
+       Optional
+     - ``MODULUS``
+     - [number]
+       
+       Default: 0
+     - Specifying an optional modulus value will restart the count to START
+       whenever the field value reaches the modulus value. ``0`` means no restart.
    * - **Group values by**
 
        Optional
@@ -118,7 +127,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:addautoincrementalfield``
+**Algorithm ID**: ``native:addautoincrementalfield``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -212,7 +221,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:addfieldtoattributestable``
+**Algorithm ID**: ``native:addfieldtoattributestable``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -311,7 +320,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:adduniquevalueindexfield``
+**Algorithm ID**: ``native:adduniquevalueindexfield``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -389,7 +398,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:addxyfieldstolayer``
+**Algorithm ID**: ``native:addxyfieldstolayer``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -515,6 +524,8 @@ Drop field(s)
 Takes a vector layer and generates a new one that has the same
 features but without the selected columns.
 
+.. seealso:: :ref:`qgisretainfields`
+
 Parameters
 ..........
 
@@ -565,7 +576,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:deletecolumn``
+**Algorithm ID**: ``native:deletecolumn``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -651,7 +662,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:explodehstorefield``
+**Algorithm ID**: ``native:explodehstorefield``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -720,7 +731,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:extractbinary``
+**Algorithm ID**: ``native:extractbinary``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -823,7 +834,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:fieldcalculator``
+**Algorithm ID**: ``native:fieldcalculator``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -842,7 +853,14 @@ The original layer is not modified. A new layer is generated, which
 contains a modified attribute table, according to the provided fields
 mapping.
 
-Refactor layer fields allows to:
+.. note:: When using a template layer with :ref:`constraints <constraints>`
+  on fields, the information is displayed in the widget with a coloured
+  background and tooltip. Treat this information as a hint during configuration.
+  No constraints will be added on an output layer nor will they be checked
+  or enforced by the algorithm.
+
+
+The Refactor fields algorithm allows to:
 
 * Change field names and types
 * Add and remove fields
@@ -889,22 +907,14 @@ Parameters
 
        :guilabel:`Source expression` (``expression``) [expression]
          Field or expression from the input layer.
-     
+
        :guilabel:`Field name` (``name``) [string]
          Name of the field in the output layer.
          By default input field name is kept.
 
        :guilabel:`Type` (``type``) [enumeration]
          Data type of the output field.
-         One of:
-         
-         * Date (14)
-         * DateTime (16)
-         * Double (6)
-         * Integer (2)
-         * Integer64 (4)
-         * String (10)
-         * Boolean (1)
+         Available types depend on the output layer provider.
 
        :guilabel:`Length` (``length``) [number]
          Length of the output field.
@@ -912,20 +922,26 @@ Parameters
        :guilabel:`Precision` (``precision``) [number]
          Precision of the output field.
 
-       Fields from another layer can be loaded into the field list
-       in :guilabel:`Load fields from layer`.
+       :guilabel:`Constraints` (``constraints``) [string]
+         When using a template layer, indicates whether there are constraints
+         applied to the template field. Hover over the cell to display the constraints.
+
+       :guilabel:`Load fields from template layer`
+         Allows to select a layer from the current project as a template
+         and (with :guilabel:`Load fields`) fill the above "Fields mapping" options
+         with its fields and their definitions.
+
    * - **Refactored**
      - ``OUTPUT``
      - [vector: any]
-       
+
        Default: ``[Create temporary layer]``
      - Specification of the output layer.
        One of:
-       
+
        .. include:: qgis_algs_include.rst
           :start-after: **layer_output_types_append**
           :end-before: **end_layer_output_types_append**
-
 
 Outputs
 .......
@@ -946,7 +962,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:refactorfields``
+**Algorithm ID**: ``native:refactorfields``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -982,7 +998,7 @@ Parameters
      - The input vector layer
    * - **Field to rename**
      - ``FIELD``
-     - [string]
+     - [tablefield: any]
      - The field to be altered
    * - **New field name**
      - ``NEW_NAME``
@@ -991,15 +1007,14 @@ Parameters
    * - **Renamed**
      - ``OUTPUT``
      - [vector: same as input]
-       
+
        Default: ``[Create temporary layer]``
      - Specification of the output layer.
        One of:
-       
+
        .. include:: qgis_algs_include.rst
           :start-after: **layer_output_types_append**
           :end-before: **end_layer_output_types_append**
-
 
 Outputs
 .......
@@ -1021,6 +1036,75 @@ Python code
 ...........
 
 **Algorithm ID**: ``qgis:renametablefield``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgisretainfields:
+
+Retain fields
+-------------
+|318|
+
+Takes a vector layer and generates a new one that retains only the selected fields.
+All other fields will be dropped.
+
+.. seealso:: :ref:`qgisdeletecolumn`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - The input vector layer
+   * - **Fields to retain**
+     - ``FIELDS``
+     - [tablefield: any][list]
+     - List of fields to keep in the layer
+   * - **Retained fields**
+     - ``OUTPUT``
+     - [vector: same as input]
+
+       Default: ``[Create temporary layer]``
+     - Specification of the output layer.
+       One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Retained fields**
+     - ``OUTPUT``
+     - [vector: same as input]
+     - Output layer with the retained fields
+
+Python code
+...........
+
+**Algorithm ID**: ``native:retainfields``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1064,14 +1148,13 @@ Parameters
    * - **Float from text**
      - ``OUTPUT``
      - [same as input]
-       
+
        Default: ``[Create Temporary Layer]``
      - Specify the output layer. One of:
-       
+
        .. include:: qgis_algs_include.rst
           :start-after: **layer_output_types_append**
           :end-before: **end_layer_output_types_append**
-
 
 Outputs
 .......
@@ -1106,6 +1189,8 @@ Python code
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |318| replace:: `NEW in 3.18`
+.. |322| replace:: `NEW in 3.22`
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png

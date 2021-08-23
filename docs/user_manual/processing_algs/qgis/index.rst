@@ -23,6 +23,7 @@ algorithms.
      networkanalysis
      plots
      rasteranalysis
+     rastercreation
      rasterterrainanalysis
      rastertools
      vectoranalysis
