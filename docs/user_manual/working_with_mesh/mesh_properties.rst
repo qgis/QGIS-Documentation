@@ -167,11 +167,21 @@ Datasets
 The tab |general| :sup:`Datasets` is the main place to control and set which
 datasets will be used for the layer. It presents the following items:
 
-* :guilabel:`Groups` available in the mesh dataset, with whether they provide
-  scalar and/or vector dataset. Click on the icon next to the dataset name to
-  select the data to represent.
-* metadata (mesh and data type, whether vector or scalar, and name) of the
-  of dataset(s) in selected group(s)
+* :guilabel:`Groups` available in the mesh dataset, with whether they provide:
+
+  * |meshcontoursoff| scalar dataset
+  * or |meshvectorsoff| vector dataset: by default, each vector dataset has
+    a scalar dataset representing its magnitude automatically generated.
+
+  Click on the icon next to the dataset name to select the group and type of
+  data to represent.
+* :guilabel:`Selected dataset group(s) metadata`, with details on:
+
+  * the mesh type: edges or faces
+  * the data type: vertices, edges, faces or volume
+  * whether it's of vector type or not
+  * the original name in the mesh layer
+  * the unit, if applicable
 * :ref:`blending mode <blend-modes>` available for the selected datasets.
 
 .. _figure_mesh_symbology_datasets:
@@ -181,24 +191,6 @@ datasets will be used for the layer. It presents the following items:
 
    Mesh Layer Datasets
 
-
-The slider |slider|, the combo box |selectString| and the :guilabel:`|<`,
-:guilabel:`<`, :guilabel:`>`, :guilabel:`>|` buttons
-allow to explore another dimension of the data, if available.
-As the slider moves, the metadata is presented accordingly.
-See the figure :ref:`Mesh groups <figure_mesh_groups>` below as an example.
-The map canvas will display the selected dataset group as well.
-
-.. _figure_mesh_groups:
-
-.. figure:: img/mesh_groups.png
-   :align: center
-
-   Dataset in Selected Group(s)
-
-.. Is the widget described just above still available? I can't find it but I'm
- conscious that the mesh layer I'm testing does not cover all the possibilities
- of mesh layer properties. So does this feature still exist?
 
 You can apply symbology to the selected vector and/or scalar group using
 the next tabs.
@@ -253,17 +245,18 @@ visualization options of vectors for the selected group, as shown in
 
 Mesh vector dataset can be styled using various types of :guilabel:`Symbology`:
 
-* **Arrows**: ???
+* **Arrows**: vectors are represented with arrows at the same place as they are
+  defined in the raw dataset (i.e. on the nodes or centre of elements) or on
+  a user-defined grid (hence, they are evenly distributed).
+  The arrow length is proportional to the magnitude of the arrow as defined
+  in the raw data but can be scaled by various methods.
 * **Streamlines**: vectors are represented with streamlines seeded from start
   points. The seeding points can start from the vertices of the mesh, from
   a user grid or randomly.
-* **Traces**: ???
-
-.. a one-line description for the items above would be nice
+* **Traces**: a nicer animation of the streamlines, the kind of effect you get
+  when you randomly throws sand in the water and see where the sand items flows.
 
 Available properties depend on the selected symbology as shown in the following table.
-
-.. I assumed below that "magnitude" means vector data in mesh world. Right?
 
 +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
 | Label                                  | Description and Properties                                                                | Arrow      | Streamlines | Traces     |
@@ -274,11 +267,11 @@ Available properties depend on the selected symbology as shown in the following 
 |                                        | * or a variable color based on vectors magnitude, using a                                 |            |             |            |
 |                                        |   :ref:`Color ramp shader <color_ramp_shader>`                                            |            |             |            |
 +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
-| :guilabel:`Filter by magnitude`        | Only vectors whose value for the selected dataset falls between a :guilabel:`Min`         | |checkbox| | |checkbox|  |            |
+| :guilabel:`Filter by magnitude`        | Only vectors whose length for the selected dataset falls between a :guilabel:`Min`        | |checkbox| | |checkbox|  |            |
 |                                        | and :guilabel:`Max` range are displayed                                                   |            |             |            |
 +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
 | :guilabel:`Display on user grid`       | Places the vector on a grid with custom :guilabel:`X spacing` and :guilabel:`Y spacing`   | |checkbox| | |checkbox|  |            |
-|                                        | and interpolates the values based on neighbours                                           |            |             |            |
+|                                        | and interpolates their length based on neighbours                                         |            |             |            |
 +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
 | :guilabel:`Head options`               | :guilabel:`Length` and :guilabel:`Width` of the arrow head, as a percentage of its shaft  | |checkbox| |             |            |
 |                                        | length                                                                                    |            |             |            |
@@ -291,9 +284,9 @@ Available properties depend on the selected symbology as shown in the following 
 | :guilabel:`Streamlines seeding method` | * **On mesh/grid**: relies on the user grid to display the vectors                        |            | |checkbox|  |            |
 |                                        | * **Randomly**: vector placement is randomly done with respect to a certain density       |            |             |            |
 +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
-| :guilabel:`Particles count`            | ???                                                                                       |            |             | |checkbox| |
+| :guilabel:`Particles count`            | The amount of "sand" you want to throw into visualisation                                 |            |             | |checkbox| |
 +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
-| :guilabel:`Max tail length`            | ???                                                                                       |            |             | |checkbox| |
+| :guilabel:`Max tail length`            | The time until the particle fades out                                                     |            |             | |checkbox| |
 +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
 
 
@@ -360,6 +353,8 @@ See :ref:`metadatamenu` for more information.
 .. |meshframe| image:: /static/common/meshframe.png
    :width: 1.5em
 .. |meshvectors| image:: /static/common/meshvectors.png
+   :width: 1.5em
+.. |meshvectorsoff| image:: /static/common/meshvectorsoff.png
    :width: 1.5em
 .. |refresh| image:: /static/common/mActionRefresh.png
    :width: 1.5em
