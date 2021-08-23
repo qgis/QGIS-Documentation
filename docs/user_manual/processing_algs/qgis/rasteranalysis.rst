@@ -2001,6 +2001,99 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _qgisrescaleraster:
+
+Rescale raster
+--------------
+Rescales raster layer to a new value range, while preserving the shape 
+(distribution) of the raster's histogram (pixel values). Input values 
+are mapped using a linear interpolation from the source raster's 
+minimum and maximum pixel values to the destination minimum and miximum 
+pixel range.
+
+By default the algorithm preserves the original NODATA value, but there 
+is an option to override it.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30 20 20 30
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input Raster**
+     - ``INPUT``
+     - [raster]
+     - Raster layer to use for rescaling
+   * - **Band number**
+     - ``Band``
+     - [raster band]
+
+       Default: The first band of the input layer
+     - If the raster is multiband, choose a band.
+   * - **New minimum value**
+     - ``MINIMUM``
+     - [number]
+
+       Default value: 0.0
+     - Minimum pixel value to use in the rescaled layer
+   * - **New maximum value**
+     - ``MAXIMUM``
+     - [number]
+
+       Default value: 255.0
+     - Maximum pixel value to use in the rescaled layer
+   * - **New NODATA value**
+   
+       Optional
+     - ``NODATA``
+     - [number]
+     
+       Default value: Not set
+     - Value to assign to the NODATA pixels.
+       If unset, original NODATA values are preserved.
+   * - **Rescaled**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster layer.
+       One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Rescaled**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster layer with rescaled band values
+
+Python code
+...........
+
+**Algorithm ID**: ``native:rescaleraster``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgisroundrastervalues:
 
 Round raster
