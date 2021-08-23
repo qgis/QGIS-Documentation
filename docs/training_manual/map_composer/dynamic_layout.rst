@@ -149,7 +149,7 @@ Also, the date of creation will adapt dynamically.
    In the :guilabel:`Main Properties` of the
    :guilabel:`Items Properties` Panel enter the expression::
 
-     [%@project title%]
+     [%@project_title%]
 
    Set the position of the label.
 
