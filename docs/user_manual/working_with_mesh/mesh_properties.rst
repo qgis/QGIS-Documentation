@@ -308,9 +308,6 @@ The line width and color can be changed in this dialog, and both the grid render
 Stacked mesh averaging method
 .............................
 
-.. Should this tab be active only if a 3D layered dataset group (is that volume?)
- is enabled for rendering?
-
 3D layered meshes consist of multiple stacked 2D unstructured meshes each
 extruded in the vertical direction (``levels``) by means of a vertical
 coordinate. The vertices and faces have the same topology in each vertical level.
