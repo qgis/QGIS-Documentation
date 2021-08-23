@@ -1323,11 +1323,15 @@ Convert geometry type
 Generates a new layer based on an existing one, with a different type
 of geometry.
 
-Not all conversions are possible. For instance, a line can be
-converted to a point, but a point cannot be converted to a
-line. A line can also be converted to a polygon.
+The attribute table of the output layer is the same as the one of
+the input layer.
 
-.. seealso:: :ref:`qgispolygonize`, :ref:`qgislinestopolygons`
+Not all conversions are possible. For instance, a line layer
+can be converted to a point layer, but a point layer cannot
+be converted to a line layer.
+
+.. seealso:: :ref:`qgispolygonize`, :ref:`qgislinestopolygons`, :ref:`qgispolygonstolines`,
+   :ref:`qgispointstopath`
 
 Parameters
 ..........
@@ -3734,12 +3738,12 @@ Lines to polygons
 Generates a polygon layer using as polygon rings the lines from an
 input line layer.
 
-The attribute table of the output layer is the same as the one from of
-the input line layer.
+The attribute table of the output layer is the same as the one of
+the input layer.
 
 **Default menu**: :menuselection:`Vector --> Geometry Tools`
 
-.. seealso:: :ref:`qgispolygonstolines`, :ref:`qgispolygonize`
+.. seealso:: :ref:`qgispolygonstolines`, :ref:`qgispolygonize`, :ref:`qgisconvertgeometrytype`
 
 Parameters
 ..........
@@ -4811,7 +4815,7 @@ line layer of **closed** features.
 .. note:: The line layer must have closed shapes in order to be
    transformed into a polygon.
 
-.. seealso:: :ref:`qgispolygonstolines`
+.. seealso:: :ref:`qgispolygonstolines`, :ref:`qgislinestopolygons`, :ref:`qgisconvertgeometrytype`
 
 Parameters
 ..........
@@ -4835,7 +4839,7 @@ Parameters
      - [boolean]
 
        Default: False
-     - Check to copy the original attributes of the input layer
+     - Check to keep the fields (only the table structure, not the values) of the input layer
    * - **Polygons from lines**
      - ``OUTPUT``
      - [vector: polygon]
@@ -4880,6 +4884,9 @@ Polygons to lines
 Takes a polygon layer and creates a line layer, with lines
 representing the boundaries of the polygons in the input layer.
 
+The attribute table of the output layer is the same as the one of
+the input layer.
+
 .. figure:: img/polygon_to_lines.png
    :align: center
 
@@ -4887,7 +4894,7 @@ representing the boundaries of the polygons in the input layer.
 
 **Default menu**: :menuselection:`Vector --> Geometry Tools`
 
-.. seealso:: :ref:`qgispolygonize`
+.. seealso:: :ref:`qgislinestopolygons`, :ref:`qgispolygonize`, :ref:`qgisconvertgeometrytype`
 
 Parameters
 ..........
