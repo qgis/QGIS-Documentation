@@ -1365,6 +1365,7 @@ can be converted to a point layer, but a point layer cannot
 be converted to a line layer.
 
 .. seealso:: :ref:`qgispolygonize`, :ref:`qgislinestopolygons`, :ref:`qgispolygonstolines`
+  :ref:`qgispointstopath`
 
 Parameters
 ..........
