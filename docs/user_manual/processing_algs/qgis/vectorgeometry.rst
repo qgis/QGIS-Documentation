@@ -1360,9 +1360,9 @@ of geometry.
 The attribute table of the output layer is the same as the one of
 the input layer.
 
-Not all conversions are possible. For instance, a line can be
-converted to a point, but a point cannot be converted to a
-line. A line can also be converted to a polygon.
+Not all conversions are possible. For instance, a line layer
+can be converted to a point layer, but a point layer cannot
+be converted to a line layer.
 
 .. seealso:: :ref:`qgispolygonize`, :ref:`qgislinestopolygons`, :ref:`qgispolygonstolines`
 
