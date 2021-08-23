@@ -3132,6 +3132,11 @@ pixel range.
 By default the algorithm preserves the original NODATA value, but there 
 is an option to override it.
 
+.. figure:: img/rescale_raster.png
+  :align: center
+
+  Rescaling values of a raster layer from [0 - 50] to [100 - 1000]
+
 Parameters
 ..........
 
