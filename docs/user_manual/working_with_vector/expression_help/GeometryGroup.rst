@@ -586,7 +586,7 @@ Returns an extruded version of the input (Multi-)Curve or (Multi-)Linestring geo
    * - Syntax
      - extrude(geometry, x, y)
    * - Arguments
-     - * **geometry** - a polygon geometry
+     - * **geometry** - a curve or linestring geometry
        * **x** - x extension, numeric value
        * **y** - y extension, numeric value
    * - Examples
@@ -2485,6 +2485,27 @@ Returns the first node from a geometry.
 
 
 .. end_start_point_section
+
+.. _expression_function_GeometryGroup_straight_distance_2d:
+
+straight_distance_2d
+....................
+
+Returns the direct/euclidean distance between the first and last vertex of a geometry. The geometry must be a curve (circularstring, linestring).
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - straight_distance_2d(geometry)
+   * - Arguments
+     - * **geometry** - The geometry.
+   * - Examples
+     - * ``straight_distance_2d(geom_from_wkt('LINESTRING(1 0, 1 1)'))`` → 1
+       * ``round(straight_distance_2d(geom_from_wkt('LINESTRING(1 4, 3 5, 5 0)')), 3)`` → 5.657
+
+
+.. end_straight_distance_2d_section
 
 .. _expression_function_GeometryGroup_sym_difference:
 
