@@ -57,7 +57,6 @@ Parameters
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
-  
 Outputs
 .......
 
@@ -137,7 +136,6 @@ Parameters
        .. include:: ../qgis/qgis_algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
-
   
 Outputs
 .......
@@ -181,6 +179,9 @@ This algorithm is derived from the
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -216,14 +217,6 @@ Parameters
        considered connected (*4-connected*).
        If set, touching raster cells are also considered connected
        (*8-connected*).
-   * - **Additional command-line parameters**
-
-       Optional
-     - ``EXTRA``
-     - [string]   
-
-       Default: None
-     - Add extra GDAL command line options
    * - **Vectorized**
      - ``OUTPUT``
      - [vector: polygon]
@@ -236,7 +229,26 @@ Parameters
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
-  
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Additional command-line parameters**
+
+       Optional
+     - ``EXTRA``
+     - [string]
+
+       Default: None
+     - Add extra GDAL command line options
+
 Outputs
 .......
 
@@ -277,6 +289,9 @@ This algorithm is derived from the
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -296,6 +311,28 @@ Parameters
 
        Default: None
      - Ordered list of the bands to use to create the new raster
+   * - **Converted**
+     - ``OUTPUT``
+     - [raster]
+
+       Default:  ``[Save to temporary file]``
+     - Specification of the output raster. One of:
+
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Additional creation options**
 
        Optional
@@ -329,18 +366,6 @@ Parameters
        * 10 --- CFloat32
        * 11 --- CFloat64
 
-   * - **Converted**
-     - ``OUTPUT``
-     - [raster]
-
-       Default:  ``[Save to temporary file]``
-     - Specification of the output raster. One of:
-
-       .. include:: ../qgis/qgis_algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
-
-  
 Outputs
 .......
 
@@ -421,7 +446,6 @@ Parameters
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
-
 Outputs
 .......
 
@@ -463,6 +487,9 @@ This algorithm is derived from the
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -496,6 +523,29 @@ Parameters
 
        Default: False
      - Create individual files for subdatasets
+   * - **Converted**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output (translated) raster layer.
+       One of:
+
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Additional creation options**
 
        Optional
@@ -536,19 +586,6 @@ Parameters
        * 9 --- CInt32
        * 10 --- CFloat32
        * 11 --- CFloat64
-
-   * - **Converted**
-     - ``OUTPUT``
-     - [raster]
-
-       Default: ``[Save to temporary file]``
-     - Specification of the output (translated) raster layer.
-       One of:
-
-       .. include:: ../qgis/qgis_algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
-
 
 Outputs
 .......

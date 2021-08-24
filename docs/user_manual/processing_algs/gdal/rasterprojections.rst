@@ -153,6 +153,9 @@ This algorithm is derived from the
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -200,7 +203,6 @@ Parameters
        * 9 --- Median
        * 10 --- First quartile
        * 11 --- Third quartile
-
    * - **Nodata value for output bands**
 
        Optional
@@ -219,6 +221,30 @@ Parameters
 
        Default: None
      - Defines the output file resolution of reprojection result
+   * - **Reprojected**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster layer.
+       One of:
+
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Additional creation options**
 
        Optional
@@ -237,9 +263,8 @@ Parameters
 
        Default: 0
      - Defines the format of the output raster file.
-
        Options:
-       
+
        * 0 --- Use input layer data type
        * 1 --- Byte
        * 2 --- Int16
@@ -252,7 +277,6 @@ Parameters
        * 9 --- CInt32
        * 10 --- CFloat32
        * 11 --- CFloat64
-       
    * - **Georeferenced extents of output file to be created**
 
        Optional
@@ -290,18 +314,6 @@ Parameters
 
        Default: None
      - Add extra GDAL command line options.
-   * - **Reprojected**
-     - ``OUTPUT``
-     - [raster]
-
-       Default: ``[Save to temporary file]``
-     - Specification of the output raster layer.
-       One of:
-
-       .. include:: ../qgis/qgis_algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
-
 
 Outputs
 .......

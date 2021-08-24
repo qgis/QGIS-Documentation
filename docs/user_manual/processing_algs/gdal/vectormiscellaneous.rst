@@ -96,6 +96,9 @@ This algorithm is derived from the
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -119,19 +122,11 @@ Parameters
      - [enumeration]
 
        Default: 0
-     - SQL dialect to use.  One of:
+     - SQL dialect to use. One of:
 
        * 0 --- None
        * 1 --- OGR SQL
        * 2 --- SQLite
-   * - **Additional creation options**
-
-       Optional
-     - ``OPTIONS``
-     - [string]
-
-       Default: '' (no additional options)
-     - Additional GDAL creation options.
    * - **SQL result**
      - ``OUTPUT``
      - [vector: any]
@@ -146,6 +141,26 @@ Parameters
        All GDAL vector formats are supported.
        For ``Save to a Temporary File`` the default output vector
        layer format will be used.
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Additional creation options**
+
+       Optional
+     - ``OPTIONS``
+     - [string]
+
+       Default: '' (no additional options)
+     - Additional GDAL creation options.
 
 Outputs
 .......

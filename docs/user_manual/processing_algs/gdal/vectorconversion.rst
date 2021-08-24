@@ -21,6 +21,9 @@ This algorithm is derived from the
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -33,14 +36,6 @@ Parameters
      - ``INPUT``
      - [vector: any]
      - Input vector layer
-   * - **Additional creation options**
-
-       Optional
-     - ``OPTIONS``
-     - [string]
-
-       Default: '' (no additional options)
-     - Additional GDAL creation options.
    * - **Converted**
      - ``OUTPUT``
      - [same as input]
@@ -55,6 +50,26 @@ Parameters
        All GDAL vector formats are supported.
        For ``Save to a Temporary File`` the QGIS default vector format
        will be used.
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Additional creation options**
+
+       Optional
+     - ``OPTIONS``
+     - [string]
+
+       Default: '' (no additional options)
+     - Additional GDAL creation options.
 
 Outputs
 .......
@@ -96,6 +111,9 @@ This algorithm is derived from the
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -119,6 +137,18 @@ Parameters
       - ``FIELD``
       - [tablefield: numeric]
       - Defines the attribute field to use to set the pixels values
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
    *  - **Add burn in values to existing raster values**
       - ``ADD``
       - [boolean]
@@ -176,6 +206,9 @@ This algorithm is derived from the
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -199,6 +232,18 @@ Parameters
 
         Default: 0.0
       - The value to burn
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
    *  - **Add burn in values to existing raster values**
       - ``ADD``
       - [boolean]
@@ -256,6 +301,9 @@ This algorithm is derived from the
 
 Parameters
 ..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -336,6 +384,34 @@ Parameters
 
        Default: 0.0
      - Assigns a specified nodata value to output bands
+   * - **Rasterized**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster layer.
+       One of:
+
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+       For ``Save to File``, the output format has to be specified.
+       All GDAL raster formats are supported.
+       For ``Save to a Temporary File`` the QGIS default raster format
+       will be used.
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Additional creation options**
 
        Optional
@@ -385,22 +461,6 @@ Parameters
      - Burns the fixed burn value, or the burn value associated
        with the first feature into all parts of the image not
        inside the provided polygon.
-   * - **Rasterized**
-     - ``OUTPUT``
-     - [raster]
-
-       Default: ``[Save to temporary file]``
-     - Specification of the output raster layer.
-       One of:
-
-       .. include:: ../qgis/qgis_algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
-
-       For ``Save to File``, the output format has to be specified.
-       All GDAL raster formats are supported.
-       For ``Save to a Temporary File`` the QGIS default raster format
-       will be used.
 
 Outputs
 .......
