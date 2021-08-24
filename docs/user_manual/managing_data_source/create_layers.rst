@@ -228,23 +228,29 @@ The :guilabel:`New Mesh Layer` dialog will be displayed as shown in
 
    Creating a New Mesh layer dialog
 
-#. The first step is to provide:
-
-   * the :guilabel:`Layer name`, i.e. the name the layer is displayed with
-     in the :guilabel:`Layers` panel
-   * the file path and name: this can be done by pressing the :guilabel:`...`
-     button to the right of the :guilabel:`File name` field and select an
-     existing Mesh file or create a new one.
-     Currently supported file formats are ``2DM Mesh file``, ``Selafin fie``
-     and ``UGRID Results``.
-
-     .. do these formats have anything particular/common that explains why
-      only them are supported and is worth a mention in the docs?
-
-   * the Coordinate Reference System to assign to the dataset
-#. Then you can initialize the layer, i.e. populate the new layer with
-   faces and vertices from a mesh layer loaded in the project` or
-   from a file. Datasets of the indicated layers are not copied.
+#. The first step is to indicate the mesh file location. This can be done
+   by pressing the :guilabel:`...` button to the right of the
+   :guilabel:`File name` field and select an existing mesh file
+   or create a new one. QGIS will automatically add the right extension to
+   the name you provide.
+#. Provide a name (:guilabel:`Layer name`), i.e. the name the layer is
+   displayed with in the :guilabel:`Layers` panel
+#. Select the :guilabel:`File format`: currently supported mesh file formats
+   are ``2DM Mesh File (*.2dm)``, ``Selafin File (*.slf)`` and ``UGRID (*.nc)``.
+#. Indicate the :ref:`Coordinate Reference System <crs_selector>` to assign
+   to the dataset
+#. The above steps will generate an empty layer you can work with.
+   It's however possible to initialize the layer with an existing dataset,
+   i.e. populate the new layer with faces and vertices from another mesh layer.
+   To do so:
+   
+   #. Check |checkbox| :guilabel:`Initialize Mesh using`
+   #. and select either a :guilabel:`Mesh from the current project`
+      or :guilabel:`Mesh from a file`. Informations on the selected mesh file
+      are displayed for checkup.
+      
+   Note that only the structure of the mesh layer is transferred to the new layer;
+   their datasets are not copied.
 
 
 .. index:: New Temporary Scratch layer
