@@ -219,37 +219,58 @@ each level of the dataset tree.
 |               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
 |               | :guilabel:`Load Connections…`              |              |              | |checkbox| | |checkbox| | |checkbox| |            |
 +---------------+--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
-| Connection    | :guilabel:`Refresh` a connection           | |checkbox|   |              | |checkbox| | |checkbox| | |checkbox| |            |
+| Connection    | :guilabel:`Refresh` a connection           |              |              | |checkbox| | |checkbox| | |checkbox| |            |
 | / Database    +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
 |               | :guilabel:`Edit Connection…` settings      |              |              | |checkbox| | |checkbox| | |checkbox| |            |
 |               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
-|               | :guilabel:`Delete Connection…`             | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| | |checkbox| |            |
+|               | :guilabel:`Delete Connection`              | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| | |checkbox| |            |
 |               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
-|               | :guilabel:`Delete` the database            | |checkbox|   | |checkbox|   |            |            |            |            |
+|               | :guilabel:`Delete <database_name>`         | |checkbox|   | |checkbox|   |            |            |            |            |
 |               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
 |               | :guilabel:`Compact Database (VACUUM)`      | |checkbox|   |              |            |            |            |            |
 |               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
 |               | Create a :guilabel:`New Schema…`           |              |              | |checkbox| | |checkbox| | |checkbox| |            |
 |               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
-|               | Create a :guilabel:`New Table…`            | |checkbox|   |              | |checkbox| | |checkbox| |            |            |
+|               | Create a :guilabel:`New Table…`            | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| |            |            |
+|               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
+|               | :guilabel:`Execute SQL…` query             | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| |            |            |
 +---------------+--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
 | Schema        | :guilabel:`Refresh` a schema               |              |              | |checkbox| | |checkbox| | |checkbox| |            |
 |               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
-|               | :guilabel:`Rename Schema…`                 |              |              | |checkbox| | |checkbox| | |checkbox| |            |
+|               | :menuselection:`Schema Operations -->      |              |              |            |            |            |            |
+|               | Rename Schema…`                            |              |              | |checkbox| | |checkbox| | |checkbox| |            |
 |               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
-|               | :guilabel:`Delete Schema…`                 |              |              | |checkbox| | |checkbox| | |checkbox| |            |
+|               | :menuselection:`Schema Operations -->      |              |              |            |            |            |            |
+|               | Delete Schema…`                            |              |              | |checkbox| | |checkbox| | |checkbox| |            |
 |               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
 |               | Create a :guilabel:`New Table…`            |              |              | |checkbox| | |checkbox| |            |            |
+|               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
+|               | :guilabel:`Execute SQL…` query             |              |              | |checkbox| | |checkbox| |            |            |
 +---------------+--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
-| Table / Layer | :guilabel:`Rename Table…`                  | |checkbox|   |              | |checkbox| | |checkbox| | |checkbox| |            |
+| Table / Layer | :menuselection:`Table Operations -->       |              |              |            |            |            |            |
+|               | Rename Table…`                             |              |              | |checkbox| | |checkbox| | |checkbox| |            |
 |               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
-|               | :guilabel:`Truncate Table…`                |              |              | |checkbox| |            | |checkbox| |            |
+|               | :menuselection:`Table Operations -->       |              |              |            |            |            |            |
+|               | Truncate Table…`                           |              |              | |checkbox| |            | |checkbox| |            |
 |               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
-|               | :menuselection:`Export Layer --> To file`  | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| | |checkbox| |            |
+|               | :guilabel:`Execute SQL…` query             | |checkbox|   | |checkbox|   | |checkbox| |            |            |            |
 |               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
-|               | :guilabel:`Add Layer to Project`           | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| | |checkbox| |            |
+|               | :menuselection:`Export Layer --> To file…` | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| | |checkbox| |            |
 |               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
-|               | :guilabel:`Delete Layer` from the database | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| | |checkbox| |            |
+|               | :menuselection:`Manage -->                 |              |              |            |            |            |            |
+|               | Rename Layer <layer_name>…`                | |checkbox|   | |checkbox|   |            |            |            |            |
+|               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
+|               | :menuselection:`Manage -->                 |              |              |            |            |            |            |
+|               | Delete Layer <layer_name>…`                | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| | |checkbox| |            |
+|               |                                            |              |              |            |            |            |            |
+|               | :menuselection:`Manage -->                 |              |              |            |            |            |            |
+|               | Delete Selected Layers`                    |              |              |            |            |            |            |
+|               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
+|               | :menuselection:`Manage -->                 | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| | |checkbox| |            |
+|               | Add Selected Layers to Project`            |              |              |            |            |            |            |
+|               |                                            |              |              |            |            |            |            |
+|               | :menuselection:`Manage -->                 |              |              |            |            |            |            |
+|               | Add Selected Layers to Project`            |              |              |            |            |            |            |
 |               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
 |               | Open :guilabel:`Layer Properties…` dialog  | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| | |checkbox| |            |
 |               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
