@@ -17,73 +17,88 @@ Create buffers around the features of a vector layer.
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
    :class: longtable
 
-   *  - Label
-      - Name
-      - Type
-      - Description
-   *  - **Input layer**
-      - ``INPUT``
-      - [vector: any]
-      - The input vector layer
-   *  - **Geometry column name**
-      - ``GEOMETRY``
-      - [string]
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - The input vector layer
+   * - **Geometry column name**
+     - ``GEOMETRY``
+     - [string]
 
-        Default: 'geometry'
-      - The name of the input layer geometry column to use
-   *  - **Buffer distance**
-      - ``DISTANCE``
-      - [number]
+       Default: 'geometry'
+     - The name of the input layer geometry column to use
+   * - **Buffer distance**
+     - ``DISTANCE``
+     - [number]
 
-        Default: 10.0
-      - Minimum: 0.0
-   *  - **Dissolve by attribute**
+       Default: 10.0
+     - Minimum: 0.0
+   * - **Dissolve by attribute**
 
-        Optional
-      - ``FIELD``
-      - [tablefield: any]
+       Optional
+     - ``FIELD``
+     - [tablefield: any]
 
-        Default: None
-      - Field to use for dissolving
-   *  - **Dissolve results**
-      - ``DISSOLVE``
-      - [boolean]
+       Default: None
+     - Field to use for dissolving
+   * - **Dissolve results**
+     - ``DISSOLVE``
+     - [boolean]
 
-        Default: False
-      - If set, the result is dissolved.
-	If no field is set for dissolving, all the buffers are
-	dissolved into one feature.
-   *  - **Produce one feature for each geometry in any kind of
-        geometry collection in the source file**
-      - ``EXPLODE_COLLECTIONS``
-      - [boolean]
+       Default: False
+     - If set, the result is dissolved.
+	    If no field is set for dissolving, all the buffers are
+	    dissolved into one feature.
+   * - **Produce one feature for each geometry in any kind of
+       geometry collection in the source file**
+     - ``EXPLODE_COLLECTIONS``
+     - [boolean]
 
-        Default: False
-      - 
-   *  - **Additional creation options**
+       Default: False
+     -
+   * - **Buffer**
+     - ``OUTPUT``
+     - [vector: polygon]
 
-        Optional
-      - ``OPTIONS``
-      - [string]
+       Default: ``[Save to temporary file]``
+     - Specify the output buffer layer. One of:
 
-        Default: '' (no additional options)
-      - Additional GDAL creation options.
-   *  - **Buffer**
-      - ``OUTPUT``
-      - [vector: polygon]
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
-        Default: ``[Save to temporary file]``
-      - Specify the output buffer layer. One of:
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
 
-        .. include:: ../qgis/qgis_algs_include.rst
-           :start-after: **file_output_types**
-           :end-before: **end_file_output_types**
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
 
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Additional creation options**
+
+       Optional
+     - ``OPTIONS``
+     - [string]
+
+       Default: '' (no additional options)
+     - Additional GDAL creation options.
 
 Outputs
 .......
@@ -92,14 +107,14 @@ Outputs
    :header-rows: 1
    :widths: 20 20 20 40
 
-   *  - Label
-      - Name
-      - Type
-      - Description
-   *  - **Buffer**
-      - ``OUTPUT``
-      - [vector: polygon]
-      - The output buffer layer
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Buffer**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - The output buffer layer
 
 Python code
 ...........
@@ -123,43 +138,58 @@ This algorithm is derived from the
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - The input vector layer
+   * - **Clip extent**
+     - ``EXTENT``
+     - [extent]
+     - Defines the bounding box that should be used for the
+       output vector file.
+       It has to be defined in target CRS coordinates.
+   * - **Clipped (extent)**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output (clipped) layer. One of:
+
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
 
-   *  - Label
-      - Name
-      - Type
-      - Description
-   *  - **Input layer**
-      - ``INPUT``
-      - [vector: any]
-      - The input vector layer
-   *  - **Clip extent**
-      - ``EXTENT``
-      - [extent]
-      - Defines the bounding box that should be used for the
-        output vector file.
-        It has to be defined in target CRS coordinates.
-   *  - **Additional creation options**
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Additional creation options**
 
-        Optional
-      - ``OPTIONS``
-      - [string]
+       Optional
+     - ``OPTIONS``
+     - [string]
 
-        Default: '' (no additional options)
-      - Additional GDAL creation options.
-   *  - **Clipped (extent)**
-      - ``OUTPUT``
-      - [same as input]
-
-        Default: ``[Save to temporary file]``
-      - Specify the output (clipped) layer. One of:
-
-        .. include:: ../qgis/qgis_algs_include.rst
-           :start-after: **file_output_types**
-           :end-before: **end_file_output_types**
-
+       Default: '' (no additional options)
+     - Additional GDAL creation options.
 
 Outputs
 .......
@@ -168,15 +198,15 @@ Outputs
    :header-rows: 1
    :widths: 20 20 20 40
 
-   *  - Label
-      - Name
-      - Type
-      - Description
-   *  - **Clipped (extent)**
-      - ``OUTPUT``
-      - [same as input]
-      - The output (clipped) layer.
-        The default format is "ESRI Shapefile".
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Clipped (extent)**
+     - ``OUTPUT``
+     - [same as input]
+     - The output (clipped) layer.
+       The default format is "ESRI Shapefile".
 
 Python code
 ...........
@@ -200,42 +230,55 @@ This algorithm is derived from the `GDAL ogr2ogr utility
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
 
-   *  - Label
-      - Name
-      - Type
-      - Description
-   *  - **Input layer**
-      - ``INPUT``
-      - [vector: any]
-      - The input vector layer
-   *  - **Mask layer**
-      - ``MASK``
-      - [vector: polygon]
-      - Layer to be used as clipping extent for the input vector
-	layer.
-   *  - **Additional creation options**
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - The input vector layer
+   * - **Mask layer**
+     - ``MASK``
+     - [vector: polygon]
+     - Layer to be used as clipping extent for the input vector layer.
+   * - **Clipped (mask)**
+     - ``OUTPUT``
+     - [same as input]
 
-        Optional
-      - ``OPTIONS``
-      - [string]
+       Default: ``[Save to temporary file]``
+     - The output (masked) layer. One of:
 
-        Default: '' (no additional options)
-      - Additional GDAL creation options.
-   *  - **Clipped (mask)**
-      - ``OUTPUT``
-      - [same as input]
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
-        Default: ``[Save to temporary file]``
-      - The output (masked) layer. One of:
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
 
-        .. include:: ../qgis/qgis_algs_include.rst
-           :start-after: **file_output_types**
-           :end-before: **end_file_output_types**
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
 
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Additional creation options**
+
+       Optional
+     - ``OPTIONS``
+     - [string]
+
+       Default: '' (no additional options)
+     - Additional GDAL creation options.
 
 Outputs
 .......
@@ -244,15 +287,15 @@ Outputs
    :header-rows: 1
    :widths: 20 20 20 40
 
-   *  - Label
-      - Name
-      - Type
-      - Description
-   *  - **Clipped (mask)**
-      - ``OUTPUT``
-      - [same as input]
-      - The output (masked) layer.
-        The default format is "ESRI Shapefile".
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Clipped (mask)**
+     - ``OUTPUT``
+     - [same as input]
+     - The output (masked) layer.
+       The default format is "ESRI Shapefile".
 
 Python code
 ...........
@@ -276,92 +319,107 @@ The output geometries are multipart.
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
    :class: longtable
 
-   *  - Label
-      - Name
-      - Type
-      - Description
-   *  - **Input layer**
-      - ``INPUT``
-      - [vector: any]
-      - The input layer to dissolve
-   *  - **Dissolve field**
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - The input layer to dissolve
+   * - **Dissolve field**
 
-        Optional
-      - ``FIELD``
-      - [tablefield: any]
-      - The field of the input layer to use for dissolving
-   *  - **Geometry column name**
-      - ``GEOMETRY``
-      - [string]
+       Optional
+     - ``FIELD``
+     - [tablefield: any]
+     - The field of the input layer to use for dissolving
+   * - **Geometry column name**
+     - ``GEOMETRY``
+     - [string]
 
-        Default: 'geometry'
-      - The name of the input layer geometry column to use
-        for dissolving.
-   *  - **Produce one feature for each geometry in any kind of
-        geometry collection in the source file**
-      - ``EXPLODE_COLLECTIONS``
-      - [boolean]
+       Default: 'geometry'
+     - The name of the input layer geometry column to use
+       for dissolving.
+   * - **Dissolved**
+     - ``OUTPUT``
+     - [same as input]
 
-        Default: False
-      - Produce one feature for each geometry in any kind of geometry
-        collection in the source file
-   *  - **Keep input attributes**
-      - ``KEEP_ATTRIBUTES``
-      - [boolean]
+       Default: ``[Save to temporary file]``
+     - Specify the output layer. One of:
 
-        Default: False
-      - Keep all attributes from the input layer
-   *  - **Count dissolved features**
-      - ``COUNT_FEATURES``
-      - [boolean]
+       .. include:: ../qgis/qgis_algs_include.rst
+         :start-after: **file_output_types**
+         :end-before: **end_file_output_types**
 
-        Default: False
-      - Count the dissolved features and include it in the output
-        layer.
-   *  - **Compute area and perimeter of dissolved features**
-      - ``COMPUTE_AREA``
-      - [boolean]
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
 
-        Default: False
-      - Compute the area and perimeter of dissolved features and
-	include them in the output layer
-   *  - **Compute min/max/sum/mean for attribute**
-      - ``COMPUTE_STATISTICS``
-      - [boolean]
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
 
-        Default: False
-      - Calculate statistics (min, max, sum and mean) for the numeric
-        attribute specified and include them in the output layer
-   *  - **Numeric attribute to calculate statistics on**
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Produce one feature for each geometry in any kind of
+       geometry collection in the source file**
+     - ``EXPLODE_COLLECTIONS``
+     - [boolean]
 
-        Optional
-      - ``STATISTICS_ATTRIBUTE``
-      - [tablefield: numeric]
-      - The numeric attribute to calculate statistics on
-   *  - **Additional creation options**
+       Default: False
+     - Produce one feature for each geometry in any kind of geometry
+       collection in the source file
+   * - **Keep input attributes**
+     - ``KEEP_ATTRIBUTES``
+     - [boolean]
 
-        Optional
-      - ``OPTIONS``
-      - [string]
+       Default: False
+     - Keep all attributes from the input layer
+   * - **Count dissolved features**
+     - ``COUNT_FEATURES``
+     - [boolean]
 
-        Default: '' (no additional options)
-      - Additional GDAL creation options.
-   *  - **Dissolved**
-      - ``OUTPUT``
-      - [same as input]
+       Default: False
+     - Count the dissolved features and include it in the output
+       layer.
+   * - **Compute area and perimeter of dissolved features**
+     - ``COMPUTE_AREA``
+     - [boolean]
 
-        Default: ``[Save to temporary file]``
-      - Specify the output layer. One of:
+       Default: False
+     - Compute the area and perimeter of dissolved features and
+	   include them in the output layer
+   * - **Compute min/max/sum/mean for attribute**
+     - ``COMPUTE_STATISTICS``
+     - [boolean]
 
-        .. include:: ../qgis/qgis_algs_include.rst
-           :start-after: **file_output_types**
-           :end-before: **end_file_output_types**
+       Default: False
+     - Calculate statistics (min, max, sum and mean) for the numeric
+       attribute specified and include them in the output layer
+   * - **Numeric attribute to calculate statistics on**
 
+       Optional
+     - ``STATISTICS_ATTRIBUTE``
+     - [tablefield: numeric]
+     - The numeric attribute to calculate statistics on
+   * - **Additional creation options**
+
+       Optional
+     - ``OPTIONS``
+     - [string]
+
+       Default: '' (no additional options)
+     - Additional GDAL creation options.
 
 Outputs
 .......
@@ -370,15 +428,15 @@ Outputs
    :header-rows: 1
    :widths: 20 20 20 40
 
-   *  - Label
-      - Name
-      - Type
-      - Description
-   *  - **Dissolved**
-      - ``OUTPUT``
-      - [same as input]
-      - The output multipart geometry layer (with dissolved
-	geometries)
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Dissolved**
+     - ``OUTPUT``
+     - [same as input]
+     - The output multipart geometry layer (with dissolved
+	   geometries)
 
 Python code
 ...........
@@ -401,50 +459,64 @@ distances will offset them to the right.
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
    :class: longtable
 
-   *  - Label
-      - Name
-      - Type
-      - Description
-   *  - **Input layer**
-      - ``INPUT``
-      - [vector: line]
-      - The input line layer
-   *  - **Geometry column name**
-      - ``GEOMETRY``
-      - [string]
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line]
+     - The input line layer
+   * - **Geometry column name**
+     - ``GEOMETRY``
+     - [string]
 
-        Default: 'geometry'
-      - The name of the input layer geometry column to use
-   *  - **Offset distance (left-sided: positive, right-sided: negative)**
-      - ``DISTANCE``
-      - [number]
+       Default: 'geometry'
+     - The name of the input layer geometry column to use
+   * - **Offset distance (left-sided: positive, right-sided: negative)**
+     - ``DISTANCE``
+     - [number]
 
-        Default: 10.0
-      - 
-   *  - **Additional creation options**
+       Default: 10.0
+     -
+   * - **Offset curve**
+     - ``OUTPUT``
+     - [vector: line]
 
-        Optional
-      - ``OPTIONS``
-      - [string]
+       Default: ``[Save to temporary file]``
+     - Specify the output line layer. One of:
 
-        Default: '' (no additional options)
-      - Additional GDAL creation options.
-   *  - **Offset curve**
-      - ``OUTPUT``
-      - [vector: line]
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
-        Default: ``[Save to temporary file]``
-      - Specify the output line layer. One of:
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
 
-        .. include:: ../qgis/qgis_algs_include.rst
-           :start-after: **file_output_types**
-           :end-before: **end_file_output_types**
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
 
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Additional creation options**
+
+       Optional
+     - ``OPTIONS``
+     - [string]
+
+       Default: '' (no additional options)
+     - Additional GDAL creation options.
 
 Outputs
 .......
@@ -453,14 +525,14 @@ Outputs
    :header-rows: 1
    :widths: 20 20 20 40
 
-   *  - Label
-      - Name
-      - Type
-      - Description
-   *  - **Offset curve**
-      - ``OUTPUT``
-      - [vector: line]
-      - The output offset curve layer
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Offset curve**
+     - ``OUTPUT``
+     - [vector: line]
+     - The output offset curve layer
 
 Python code
 ...........
@@ -482,83 +554,96 @@ vector layer.
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
    :class: longtable
 
-   *  - Label
-      - Name
-      - Type
-      - Description
-   *  - **Input layer**
-      - ``INPUT``
-      - [vector: line]
-      - The input line layer
-   *  - **Geometry column name**
-      - ``GEOMETRY``
-      - [string]
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line]
+     - The input line layer
+   * - **Geometry column name**
+     - ``GEOMETRY``
+     - [string]
 
-        Default: 'geometry'
-      - The name of the input layer geometry column to use
-   *  - **Buffer distance**
-      - ``DISTANCE``
-      - [number]
+       Default: 'geometry'
+     - The name of the input layer geometry column to use
+   * - **Buffer distance**
+     - ``DISTANCE``
+     - [number]
 
-        Default: 10.0
-      - 
-   *  - **Buffer side**
-      - ``BUFFER_SIDE``
-      - [enumeration]
+       Default: 10.0
+     -
+   * - **Buffer side**
+     - ``BUFFER_SIDE``
+     - [enumeration]
 
-        Default: 0
-      - One of:
+       Default: 0
+     - One of:
 
-        * 0 --- Right
-        * 1 --- Left
+       * 0 --- Right
+       * 1 --- Left
+   * - **Dissolve by attribute**
 
-   *  - **Dissolve by attribute**
+       Optional
+     - ``FIELD``
+     - [tablefield: any]
 
-        Optional
-      - ``FIELD``
-      - [tablefield: any]
+       Default: None
+     - Field to use for dissolving
+   * - **Dissolve all results**
+     - ``DISSOLVE``
+     - [boolean]
 
-        Default: None
-      - Field to use for dissolving
-   *  - **Dissolve all results**
-      - ``DISSOLVE``
-      - [boolean]
-
-        Default: False
-      - If set, the result is dissolved.
+       Default: False
+     - If set, the result is dissolved.
 	If no field is set for dissolving, all the buffers are
 	dissolved into one feature.
-   *  - **Produce one feature for each geometry in any kind of
-        geometry collection in the source file**
-      - ``EXPLODE_COLLECTIONS``
-      - [boolean]
+   * - **Produce one feature for each geometry in any kind of
+       geometry collection in the source file**
+     - ``EXPLODE_COLLECTIONS``
+     - [boolean]
 
-        Default: False
-      - 
-   *  - **Additional creation options**
+       Default: False
+     -
+   * - **One-sided buffer**
+     - ``OUTPUT``
+     - [vector: polygon]
 
-        Optional
-      - ``OPTIONS``
-      - [string]
+       Default: ``[Save to temporary file]``
+     - Specify the output buffer layer. One of:
 
-        Default: '' (no additional options)
-      - Additional GDAL creation options.
-   *  - **One-sided buffer**
-      - ``OUTPUT``
-      - [vector: polygon]
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
-        Default: ``[Save to temporary file]``
-      - Specify the output buffer layer. One of:
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
 
-        .. include:: ../qgis/qgis_algs_include.rst
-           :start-after: **file_output_types**
-           :end-before: **end_file_output_types**
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
 
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Additional creation options**
+
+       Optional
+     - ``OPTIONS``
+     - [string]
+
+       Default: '' (no additional options)
+     - Additional GDAL creation options.
 
 Outputs
 .......
@@ -567,14 +652,14 @@ Outputs
    :header-rows: 1
    :widths: 20 20 20 40
 
-   *  - Label
-      - Name
-      - Type
-      - Description
-   *  - **One-sided buffer**
-      - ``OUTPUT``
-      - [vector: polygon]
-      - The output buffer layer
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **One-sided buffer**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - The output buffer layer
 
 Python code
 ...........
@@ -597,52 +682,65 @@ The distance is provided as a fraction of the line length.
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
    :class: longtable
 
-   *  - Label
-      - Name
-      - Type
-      - Description
-   *  - **Input layer**
-      - ``INPUT``
-      - [vector: line]
-      - The input line layer
-   *  - **Geometry column name**
-      - ``GEOMETRY``
-      - [string]
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line]
+     - The input line layer
+   * - **Geometry column name**
+     - ``GEOMETRY``
+     - [string]
 
-        Default: 'geometry'
-      - The name of the input layer geometry column to use
-   *  - **Distance from line start represented as a fraction of line
-        length**
-      - ``DISTANCE``
-      - [number]
+       Default: 'geometry'
+     - The name of the input layer geometry column to use
+   * - **Distance from line start represented as a fraction of line length**
+     - ``DISTANCE``
+     - [number]
 
-        Default: 0.5 (middle of the line)
-      - 
-   *  - **Additional creation options**
+       Default: 0.5 (middle of the line)
+     -
+   * - **Points along lines**
+     - ``OUTPUT``
+     - [vector: point]
 
-        Optional
-      - ``OPTIONS``
-      - [string]
+       Default: ``[Save to temporary file]``
+     - Specify the output point layer.
+       One of:
 
-        Default: '' (no additional options)
-      - Additional GDAL creation options.
-   *  - **Points along line**
-      - ``OUTPUT``
-      - [vector: point]
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
-        Default: ``[Save to temporary file]``
-      - Specify the output point layer.
-        One of:
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
 
-        .. include:: ../qgis/qgis_algs_include.rst
-           :start-after: **file_output_types**
-           :end-before: **end_file_output_types**
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
 
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Additional creation options**
+
+       Optional
+     - ``OPTIONS``
+     - [string]
+
+       Default: '' (no additional options)
+     - Additional GDAL creation options.
 
 Outputs
 .......
@@ -651,14 +749,14 @@ Outputs
    :header-rows: 1
    :widths: 20 20 20 40
 
-   *  - Label
-      - Name
-      - Type
-      - Description
-   *  - **Points along line**
-      - ``OUTPUT``
-      - [vector: point]
-      - The output point layer
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Points along line**
+     - ``OUTPUT``
+     - [vector: point]
+     - The output point layer
 
 Python code
 ...........

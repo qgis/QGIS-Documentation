@@ -22,6 +22,9 @@ This algorithm is derived from the
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -56,6 +59,29 @@ Parameters
        Default: None
      - Defines a value that should be inserted for the nodata
        values in the output raster
+   * - **Clipped (extent)**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster layer.
+       One of:
+
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Additional creation options**
 
        Optional
@@ -98,17 +124,6 @@ Parameters
 
        Default: None
      - Add extra GDAL command line options
-   * - **Clipped (extent)**
-     - ``OUTPUT``
-     - [raster]
-
-       Default: ``[Save to temporary file]``
-     - Specification of the output raster layer.
-       One of:
-
-       .. include:: ../qgis/qgis_algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -149,6 +164,9 @@ This algorithm is derived from the
 
 Parameters
 ..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -233,6 +251,28 @@ Parameters
      - Two threads will be used to process chunks of image
        and perform input/output operation simultaneously.
        Note that computation is not multithreaded itself.
+   * - **Clipped (mask)**
+     - ``OUTPUT``
+     - [raster]
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster layer.
+       One of:
+
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Additional creation options**
 
        Optional
@@ -275,16 +315,6 @@ Parameters
 
        Default: None
      - Add extra GDAL command line options
-   * - **Clipped (mask)**
-     - ``OUTPUT``
-     - [raster]
-       Default: ``[Save to temporary file]``
-     - Specification of the output raster layer.
-       One of:
-
-       .. include:: ../qgis/qgis_algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -326,6 +356,9 @@ This algorithm is derived from the
 
 Parameters
 ..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -369,6 +402,29 @@ Parameters
 
        Default: 0.0
      -
+   * - **Contours**
+     - ``OUTPUT``
+     - [vector: line]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output vector layer.
+       One of:
+
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Produce 3D vector**
      - ``CREATE_3D``
      - [boolean]
@@ -400,18 +456,6 @@ Parameters
        Default: None
      - Add extra GDAL command line options.
        Refer to the corresponding GDAL utility documentation.
-   * - **Contours**
-     - ``OUTPUT``
-     - [vector: line]
-
-       Default: ``[Save to temporary file]``
-     - Specification of the output vector layer.
-       One of:
-
-       .. include:: ../qgis/qgis_algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
-
 
 Outputs
 .......
@@ -451,6 +495,9 @@ This algorithm is derived from the
 
 Parameters
 ..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -506,6 +553,29 @@ Parameters
      - Provides a name for the attribute in which to put the maximum elevation
        of contour polygon. If not provided no maximum elevation attribute
        is attached.
+   * - **Contours**
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output vector layer.
+       One of:
+
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Produce 3D vector**
      - ``CREATE_3D``
      - [boolean]
@@ -537,18 +607,6 @@ Parameters
        Default: None
      - Add extra GDAL command line options.
        Refer to the corresponding GDAL utility documentation.
-   * - **Contours**
-     - ``OUTPUT``
-     - [vector: polygon]
-
-       Default: ``[Save to temporary file]``
-     - Specification of the output vector layer.
-       One of:
-
-       .. include:: ../qgis/qgis_algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
-
 
 Outputs
 .......
