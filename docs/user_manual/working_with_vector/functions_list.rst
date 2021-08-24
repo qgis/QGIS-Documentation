@@ -390,6 +390,12 @@ Further reading: :ref:`expression_function_GeometryGroup_overlay_intersects`
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_intersects_section
+   :end-before: .. end_length_section
+
+Further reading: :ref:`expression_function_GeometryGroup_straight_distance_2d`
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_length_section
    :end-before: .. end_line_interpolate_point_section
 
 Further reading: :ref:`qgisinterpolatepoint` algorithm
@@ -554,6 +560,12 @@ Further reading: :ref:`qgisextractspecificvertices` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_start_point_section
+   :end-before: .. end_straight_distance_2d_section
+
+Further reading: :ref:`expression_function_GeometryGroup_length`
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_straight_distance_2d_section
    :end-before: .. end_sym_difference_section
 
 Further reading: :ref:`qgissymmetricaldifference` algorithm
