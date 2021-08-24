@@ -1237,6 +1237,7 @@ Below are displayed options to customize the labels, under various tabs:
 * |text| :ref:`Text <labels_text>`
 * |labelformatting| :ref:`Formatting <labels_formatting>`
 * |labelbuffer| :ref:`Buffer <labels_buffer>`
+* |labelmask| :ref:`Mask <labels_mask>`
 * |labelbackground| :ref:`Background <labels_background>`
 * |labelshadow| :ref:`Shadow <labels_shadow>`
 * |labelcallout| :ref:`Callouts <labels_callouts>`
