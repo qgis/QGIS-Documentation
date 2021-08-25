@@ -231,18 +231,18 @@ The :guilabel:`New Mesh Layer` dialog will be displayed as shown in
 #. The first step is to indicate the mesh file location. This can be done
    by pressing the :guilabel:`...` button to the right of the
    :guilabel:`File name` field and select an existing mesh file
-   or create a new one. QGIS will automatically add the right extension to
-   the name you provide.
+   or create a new one.
 #. Provide a name (:guilabel:`Layer name`), i.e. the name the layer is
    displayed with in the :guilabel:`Layers` panel
 #. Select the :guilabel:`File format`: currently supported mesh file formats
    are ``2DM Mesh File (*.2dm)``, ``Selafin File (*.slf)`` and ``UGRID (*.nc)``.
 #. Indicate the :ref:`Coordinate Reference System <crs_selector>` to assign
    to the dataset
-#. The above steps will generate an empty layer you can work with.
-   It's however possible to initialize the layer with an existing dataset,
-   i.e. populate the new layer with faces and vertices from another mesh layer.
-   To do so:
+#. The above steps will generate an empty layer that you can afterwards
+   digitize vertices and add dataset groups to.
+   It's however also possible to initialize the layer with an existing dataset,
+   i.e. populate the new layer with vertices, edges or faces from another
+   mesh layer. To do so:
    
    #. Check |checkbox| :guilabel:`Initialize Mesh using`
    #. and select either a :guilabel:`Mesh from the current project`
@@ -252,6 +252,11 @@ The :guilabel:`New Mesh Layer` dialog will be displayed as shown in
    Note that only the structure of the mesh layer is transferred to the new layer;
    their datasets are not copied.
 
+.. Is "structure" the correct word? it also takes crs, extent,,, right?
+ And TBH I'm unsure of what is copied; the layer I create from a template has
+ a "bed elevation" dataset group, full of 0 values. That group was not in the template.
+ I don't know what it is. So feedback from somene that knows what really happens
+ here is required.
 
 .. index:: New Temporary Scratch layer
 .. _vector_new_scratch_layer:
