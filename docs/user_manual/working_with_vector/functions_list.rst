@@ -687,6 +687,19 @@ This group contains math functions (e.g., square root, sin and cos).
    :start-after: :orphan:
 
 
+Meshes Functions
+----------------
+
+This group contains functions which calculate or return mesh related values.
+
+.. contents::
+   :local:
+   :class: toc_columns
+
+.. include:: expression_help/Meshes.rst
+   :start-after: :orphan:
+
+
 Operators
 ----------
 
