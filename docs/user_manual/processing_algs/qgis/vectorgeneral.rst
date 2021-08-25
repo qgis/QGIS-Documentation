@@ -2646,6 +2646,6 @@ Python code
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |318| replace:: `NEW in 3.18`
+.. |318| replace:: ``NEW in 3.18``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
