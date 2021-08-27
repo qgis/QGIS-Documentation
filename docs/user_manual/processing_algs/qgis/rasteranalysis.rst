@@ -3273,9 +3273,9 @@ Basic parameters
        Default: 1
      - How to choose the target rounded value. Options are:
 
-       0 - Round up
-       1 - Round to nearest
-       2 - Round down
+       * 0 --- Round up
+       * 1 --- Round to nearest
+       * 2 --- Round down
    * - **Number of decimals places**
      - ``DECIMAL_PLACES``
      - [number]
