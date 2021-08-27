@@ -240,23 +240,18 @@ The :guilabel:`New Mesh Layer` dialog will be displayed as shown in
    to the dataset
 #. The above steps will generate an empty layer that you can afterwards
    digitize vertices and add dataset groups to.
-   It's however also possible to initialize the layer with an existing dataset,
-   i.e. populate the new layer with vertices, edges or faces from another
-   mesh layer. To do so:
-   
+   It's however also possible to initialize the layer with an existing mesh layer,
+   i.e. populate the new layer with vertices or faces from the other.
+   To do so:
+
    #. Check |checkbox| :guilabel:`Initialize Mesh using`
    #. and select either a :guilabel:`Mesh from the current project`
       or :guilabel:`Mesh from a file`. Informations on the selected mesh file
       are displayed for checkup.
-      
-   Note that only the structure of the mesh layer is transferred to the new layer;
+
+   Note that only the frame of the mesh layer is transferred to the new layer;
    their datasets are not copied.
 
-.. Is "structure" the correct word? it also takes crs, extent,,, right?
- And TBH I'm unsure of what is copied; the layer I create from a template has
- a "bed elevation" dataset group, full of 0 values. That group was not in the template.
- I don't know what it is. So feedback from somene that knows what really happens
- here is required.
 
 .. index:: New Temporary Scratch layer
 .. _vector_new_scratch_layer:
