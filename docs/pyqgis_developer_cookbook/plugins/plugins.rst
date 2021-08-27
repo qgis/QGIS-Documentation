@@ -347,6 +347,31 @@ custom menu group directly to the menu bar, as the next example demonstrates:
 Don't forget to set :class:`QAction` and :class:`QMenu` ``objectName`` to a name
 specific to your plugin so that it can be customized.
 
+If your plugin only implements a processing provider and does not need
+additional ui menu, you are encouraged to insert your help and about actions in
+QGIS main :menuselection:`Help --> Plugins` menu. This can be done using the
+:meth:`pluginHelpMenu() <qgis.gui.QgisInterface.pluginHelpMenu>` method.
+
+.. testcode:: plugins
+
+    def initGui(self):
+
+        self.help_action = QAction(
+            QIcon(":/plugins/testplug/icon.png"),
+            self.tr("Test Plugin..."),
+            self.iface.mainWindow()
+        )
+        # Add the action to the Help menu
+        self.iface.pluginHelpMenu().addAction(self.help_action)
+
+        self.help_action.triggered.connect(self.showHelp)
+
+    def unload(self):
+
+        self.iface.pluginHelpMenu().removeAction(self.help_action)
+        del self.help_action
+
+
 .. index:: Plugins; Resource file, resources.qrc
 
 Resource File
