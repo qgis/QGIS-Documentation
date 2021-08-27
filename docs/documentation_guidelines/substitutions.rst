@@ -92,7 +92,7 @@ Icon                            Substitution                        Icon        
 |addWcsLayer|                   ``|addWcsLayer|``                   |addWfsLayer|                   ``|addWfsLayer|``
 |newVectorLayer|                ``|newVectorLayer|``                |newSpatiaLiteLayer|            ``|newSpatiaLiteLayer|``
 |newGeoPackageLayer|            ``|newGeoPackageLayer|``            |createMemory|                  ``|createMemory|``
-|newVirtualLayer|               ``|newVirtualLayer|``
+|newVirtualLayer|               ``|newVirtualLayer|``               |newMeshLayer|                  ``|newMeshLayer|``
 |dbManager|                     ``|dbManager|``                     |gdal|                          ``|gdal|``
 |geoPackage|                    ``|geoPackage|``                    |spatialite|                    ``|spatialite|``
 |virtualLayer|                  ``|virtualLayer|``                  |wms|                           ``|wms|``
@@ -1067,6 +1067,8 @@ Icon                            Substitution                        Icon        
 .. |newLayout| image:: /static/common/mActionNewLayout.png
    :width: 1.5em
 .. |newMap| image:: /static/common/mActionNewMap.png
+   :width: 1.5em
+.. |newMeshLayer| image:: /static/common/mActionNewMeshLayer.png
    :width: 1.5em
 .. |newPage| image:: /static/common/mActionNewPage.png
    :width: 1.5em

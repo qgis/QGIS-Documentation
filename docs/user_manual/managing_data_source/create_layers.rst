@@ -208,6 +208,51 @@ Three new layers are added to the :guilabel:`Layers Panel`:
 ``waypoints``, ``routes`` and ``tracks``.
 
 
+.. index:: New Mesh layer
+.. _vector_create_mesh:
+
+Creating a new Mesh layer
+--------------------------
+
+To create a new Mesh layer, press the |newMeshLayer|
+:menuselection:`New Mesh Layer...` button in the
+:menuselection:`Layer --> Create Layer -->` menu or from the
+:guilabel:`Data Source Manager` toolbar.
+The :guilabel:`New Mesh Layer` dialog will be displayed as shown in
+:numref:`figure_create_mesh`.
+
+.. _figure_create_mesh:
+
+.. figure:: img/editNewMesh.png
+   :align: center
+
+   Creating a New Mesh layer dialog
+
+#. The first step is to indicate the mesh file location. This can be done
+   by pressing the :guilabel:`...` button to the right of the
+   :guilabel:`File name` field and select an existing mesh file
+   or create a new one.
+#. Provide a name (:guilabel:`Layer name`), i.e. the name the layer is
+   displayed with in the :guilabel:`Layers` panel
+#. Select the :guilabel:`File format`: currently supported mesh file formats
+   are ``2DM Mesh File (*.2dm)``, ``Selafin File (*.slf)`` and ``UGRID (*.nc)``.
+#. Indicate the :ref:`Coordinate Reference System <crs_selector>` to assign
+   to the dataset
+#. The above steps will generate an empty layer that you can afterwards
+   digitize vertices and add dataset groups to.
+   It's however also possible to initialize the layer with an existing mesh layer,
+   i.e. populate the new layer with vertices or faces from the other.
+   To do so:
+
+   #. Check |checkbox| :guilabel:`Initialize Mesh using`
+   #. and select either a :guilabel:`Mesh from the current project`
+      or :guilabel:`Mesh from a file`. Informations on the selected mesh file
+      are displayed for checkup.
+
+   Note that only the frame of the mesh layer is transferred to the new layer;
+   their datasets are not copied.
+
+
 .. index:: New Temporary Scratch layer
 .. _vector_new_scratch_layer:
 
@@ -706,6 +751,8 @@ when used in conjunction with this spatial index syntax.
 .. |newAttribute| image:: /static/common/mActionNewAttribute.png
    :width: 1.5em
 .. |newGeoPackageLayer| image:: /static/common/mActionNewGeoPackageLayer.png
+   :width: 1.5em
+.. |newMeshLayer| image:: /static/common/mActionNewMeshLayer.png
    :width: 1.5em
 .. |newSpatiaLiteLayer| image:: /static/common/mActionNewSpatiaLiteLayer.png
    :width: 1.5em
