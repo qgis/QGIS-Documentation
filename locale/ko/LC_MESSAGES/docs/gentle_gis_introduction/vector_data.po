@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2021
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-12 02:37+0000\n"
 "PO-Revision-Date: 2020-12-24 10:24+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2021\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,17 +32,199 @@ msgstr "벡터 데이터"
 msgid "|gentleLogo|"
 msgstr "|gentleLogo|"
 
+#: ../../docs/gentle_gis_introduction/vector_data.rst:449
+msgid "gentleLogo"
+msgstr "gentleLogo"
+
 #: ../../docs/gentle_gis_introduction/vector_data.rst:8
 msgid "Objectives:"
 msgstr "목적"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:8
+msgid "Understanding of vector data models as used in GIS."
+msgstr "GIS에서 사용되는 벡터 데이터 모델 이해하기"
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:10
 msgid "Keywords:"
 msgstr "키워드"
 
+#: ../../docs/gentle_gis_introduction/vector_data.rst:10
+msgid ""
+"Vector, Point, Polyline, Polygon, Vertex, Geometry, Scale, Data Quality, "
+"Symbology, Data Sources"
+msgstr "벡터, 포인트, 폴리라인, 폴리곤, 꼭짓점, 도형, 축척, 데이터 품질, 심볼, 데이터소스"
+
 #: ../../docs/gentle_gis_introduction/vector_data.rst:14
 msgid "Overview"
 msgstr "개관"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:16
+msgid ""
+"**Vector** data provide a way to represent real world **features** within "
+"the GIS environment. A feature is anything you can see on the landscape. "
+"Imagine you are standing on the top of a hill. Looking down you can see "
+"houses, roads, trees, rivers, and so on (see "
+":numref:`figure_vector_landscape`). Each one of these things would be a "
+"**feature** when we represent them in a GIS Application. Vector features "
+"have **attributes**, which consist of text or numerical information that "
+"**describe** the features."
+msgstr ""
+"**벡터** 데이터는 GIS 환경 내에서 실제 세계의 **객체(feature)** 를 표현하는 방법 가운데 하나입니다. 객체란 풍경에서 "
+"볼 수 있는 무언가를 말합니다. 언덕 꼭대기에 서 있다고 상상해보십시오. 아래를 바라보면 집, 도로, 나무, 하천 등등을 볼 수 있을 "
+"겁니다. (:numref:`figure_vector_landscape` 을 참조하세요.) GIS 응용 프로그램에 표현되는 경우 이런 "
+"사물들 하나하나가 **객체** 가 될 것입니다. 벡터 객체는 **속성(attribute)** 을 가지고 있는데, 이 속성은 객체를 "
+"**설명(describe)** 하는 텍스트 또는 숫자 정보로 이루어집니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:30
+msgid ""
+"Looking over a landscape you can see the main features, such as roads, "
+"houses and trees."
+msgstr "풍경을 바라보면 도로, 집, 나무 같은 주요 객체들을 볼 수 있습니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:33
+msgid ""
+"A vector feature has its shape represented using **geometry**. The geometry "
+"is made up of one or more interconnected **vertices**. A vertex describes a "
+"position in space using an **X**, **Y** and optionally **Z** axis. "
+"Geometries which have vertices with a ``Z`` axis are often referred to as "
+"**2.5D** since they describe height or depth at each vertex, but not both."
+msgstr ""
+"벡터 객체는 **도형(geometry)** 을 사용해서 그 형태를 표현합니다. 도형은 하나 이상의 상호연결된 **꼭짓점(vertex)**"
+" 으로 이루어집니다. **X**, **Y** 및 선택적으로 **Z** 축을 사용해서 공간에서 꼭짓점의 위치를 설명합니다. ``Z`` 축을"
+" 가진 꼭짓점을 포함하는 도형은 **2.5D** 로 불리는 경우가 많습니다. 각 꼭짓점의 높이 또는 깊이를 설명하지만, 동시에 둘 다는 "
+"아니기 때문입니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:39
+msgid ""
+"When a feature's geometry consists of only a single vertex, it is referred "
+"to as a **point** feature (see illustration "
+":numref:`figure_geometry_point`). Where the geometry consists of two or more"
+" vertices and the first and last vertex are not equal, a **polyline** "
+"feature is formed (see illustration :numref:`figure_geometry_polyline`). "
+"Where three or more vertices are present, and the last vertex is equal to "
+"the first, an enclosed **polygon** feature is formed (see illustration "
+":numref:`figure_geometry_polygon`)."
+msgstr ""
+"객체의 도형이 단일 꼭짓점만으로 이루어져 있는 경우, 이를 **포인트(point)** "
+"객체(:numref:`figure_geometry_point` 참조)라 합니다. 도형이 2개 이상의 꼭짓점으로 이루어져 있고 첫 번째와 "
+"마지막 꼭짓점이 동일하지 않은 경우, **폴리라인(polyline)** "
+"객체(:numref:`figure_geometry_polyline` 참조)가 형성됩니다. 꼭짓점이 3개 이상이고 첫 번째와 마지막 "
+"꼭짓점이 동일한 경우, 닫힌 **폴리곤(polygon)** 객체(:numref:`figure_geometry_polygon` 참조)가 "
+"형성됩니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:52
+msgid ""
+"A point feature is described by its X, Y and optionally Z coordinate. The "
+"point attributes describe the point e.g. if it is a tree or a lamp post."
+msgstr ""
+"X, Y 및 선택적으로 Z 좌표로 포인트 객체를 설명합니다. 포인트 속성은 포인트를, 예를 들어 나무인지 또는 가로등인지를 설명합니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:61
+msgid ""
+"A polyline is a sequence of joined vertices. Each vertex has an X, Y (and "
+"optionally Z) coordinate. Attributes describe the polyline."
+msgstr ""
+"폴리라인은 일련의 결합된 꼭짓점들입니다. 각 꼭짓점은 X, Y (및 선택적으로 Z) 좌표를 가집니다. 속성은 폴리라인을 설명합니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:70
+msgid ""
+"A polygon, like a polyline, is a sequence of vertices. However in a polygon,"
+" the first and last vertices are always at the same position."
+msgstr ""
+"폴리곤은 폴리라인과 마찬가지로 일련의 꼭짓점들입니다. 하지만 폴리곤의 경우 첫 번째와 마지막 꼭짓점이 언제나 동일한 위치에 있습니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:73
+msgid ""
+"Looking back at the picture of a landscape we showed you further up, you "
+"should be able to see the different types of features in the way that a GIS "
+"represents them now (see illustration :numref:`figure_geometry_landscape`)."
+msgstr ""
+"앞에서 본 풍경 사진을 다시 보면, 이제 서로 다른 객체 유형을 GIS가 표현하는 대로 구분할 수 있을 겁니다. "
+"(:numref:`figure_geometry_landscape` 을 참조하세요.)"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:83
+msgid ""
+"Landscape features as we would present them in a GIS. Rivers (blue) and "
+"roads (green) can be represented as lines, trees as points (red) and houses "
+"as polygons (white)."
+msgstr ""
+"GIS에 표현될 풍경 객체들. 하천(파란색)과 도로(초록색)는 라인으로, 나무는 포인트(빨간색)로, 집은 폴리곤(하얀색)으로 표현될 수 "
+"있습니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:88
+msgid "Point features in detail"
+msgstr "포인트 객체를 더 자세히"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:90
+msgid ""
+"The first thing we need to realise when talking about point features is that"
+" what we describe as a point in GIS is a matter of opinion, and often "
+"dependent on scale. let's look at cities for example. If you have a small "
+"scale map (which covers a large area), it may make sense to represent a city"
+" using a point feature. However as you zoom in to the map, moving towards a "
+"larger scale, it makes more sense to show the city limits as a polygon."
+msgstr ""
+"포인트 객체를 논할 때 가장 먼저 알아야 할 점은 GIS에서 포인트라고 묘사하는 것은 견해 상의 문제일 뿐이며, 축척에 따라 달라질 때가"
+" 많다는 사실입니다. 도시를 예로 들어봅시다. (넓은 지역을 보여주는) 소축척 맵의 경우 포인트 객체로 도시를 표현하는 것이 일리가 있을"
+" 수도 있습니다. 하지만 맵을 더 대축척으로 확대해 들어가면, 도시 경계를 폴리곤으로 표시하는 편이 더 말이 되겠죠."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:97
+msgid ""
+"When you choose to use points to represent a feature is mostly a matter of "
+"scale (how far away are you from the feature), convenience (it takes less "
+"time and effort to create point features than polygon features), and the "
+"type of feature (some things like telephone poles just don't make sense to "
+"be stored as polygons)."
+msgstr ""
+"객체를 표현하기 위해 포인트를 사용하도록 선택하는 것은 대부분의 경우 (객체를 얼마나 멀리서 보는가 하는) 축척, (폴리곤 객체를 "
+"생성하는 것보다 포인트 객체를 생성하는 편이 더 빠르기 때문에) 편의성 그리고 (전신주 같은 물체를 굳이 폴리곤으로 저장하는 건 말이 안"
+" 되기 때문에) 객체 유형의 문제입니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:102
+msgid ""
+"As we show in illustration :numref:`figure_geometry_point`, a point feature "
+"has an X, Y and optionally, Z value. The X and Y values will depend on the "
+"**Coordinate Reference System** (CRS) being used. We are going to go into "
+"more detail about Coordinate Reference Systems in a later tutorial. For now "
+"let's simply say that a CRS is a way to accurately describe where a "
+"particular place is on the earth's surface. One of the most common reference"
+" systems is **Longitude and Latitude**. Lines of Longitude run from the "
+"North Pole to the South Pole. Lines of Latitude run from the East to West. "
+"You can describe precisely where you are at any place on the earth by giving"
+" someone your Longitude (X) and Latitude (Y). If you make a similar "
+"measurement for a tree or a telephone pole and marked it on a map, you will "
+"have created a point feature."
+msgstr ""
+":numref:`figure_geometry_point` 에서 볼 수 있듯이, 포인트 객체는 X, Y 및 선택적으로 Z 값을 가집니다. "
+"X와 Y 값은 사용 중인 **좌표계(CRS)** 에 따라 달라집니다. 좌표계에 대한 자세한 내용은 다음 기회에 다룰 것입니다. 지금은 "
+"그저 CRS가 지구 표면 상에 있는 특정 위치를 정확하게 설명할 수 있는 방법이라고만 해두죠. 가장 일반적인 좌표계 가운데 하나가 "
+"**경도 및 위도** 입니다. 경도(longitude) 선은 북극에서 남극까지 이어집니다.  위도(latitude) 선은 동쪽에서 "
+"서쪽으로 이어집니다. 다른 사람에게 자신의 경도(X)와 위도(Y)를 알려주면, 자신이 지구 상 어디에 있는지 정확히 설명할 수 있는 "
+"겁니다. 이와 같이 나무 또는 전신주의 위치를 측정해서 맵 상에 표시하면 포인트 객체를 생성하게 되는 것이죠."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:114
+msgid ""
+"Since we know the earth is not flat, it is often useful to add a Z value to "
+"a point feature. This describes how high above sea level you are."
+msgstr ""
+"우리는 지구가 평평하지 않다는 사실을 알고 있으므로, 포인트 객체에 Z 값을 추가하는 편이 더 유용할 경우가 많습니다. Z 값은 "
+"해수면에서 얼마나 떨어져 있는지를 설명해줍니다."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:118
+msgid "Polyline features in detail"
+msgstr "폴리라인 객체를 더 자세히"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:120
+msgid ""
+"Where a point feature is a single vertex, **a polyline has two or more "
+"vertices**. The polyline is a continuous path drawn through each vertex, as "
+"shown in :numref:`figure_geometry_polyline`. When two vertices are joined, a"
+" line is created. When more than two are joined, they form a 'line of "
+"lines', or **polyline**."
+msgstr ""
+"포인트 객체가 단일 꼭짓점이라면, **폴리라인은 2개 이상의 꼭짓점을 가집니다**. 폴리라인(polyline)은 "
+":numref:`figure_geometry_polyline` 에 나타난 바와 같이 각 꼭짓점을 이으면서 연결되는 경로입니다. 두 "
+"꼭짓점을 연결하면 라인이 생성됩니다. 2개 이상의 꼭짓점을 연결하면, '라인들의 라인' 즉 **폴리라인** 을 형성합니다."
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:243
 msgid "Symbology"
@@ -49,28 +232,28 @@ msgstr "심볼"
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:347
 msgid "What have we learned?"
-msgstr "우리는 무엇을 익혔습니까?"
+msgstr "무엇을 배웠나요?"
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:349
 msgid "Let's wrap up what we covered in this worksheet:"
-msgstr "자 우리는 작업지 포함된  작업을 마무리 짓으십다."
+msgstr "이제 이번 단원에서 배운 내용을 정리해볼까요:"
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:383
 msgid "Now you try!"
-msgstr "도전해 보십다"
+msgstr "도전해봅시다!"
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:385
 msgid "Here are some ideas for you to try with your learners:"
-msgstr "여기에 학생들과 함께 당신을위한 시도 할만한 몇 가지 아이디어가 있습니다 :"
+msgstr "강사와 학생들이 함께 시도해볼 만한 몇 가지 아이디어가 있습니다:"
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:425
 msgid "Something to think about"
-msgstr "생각할점"
+msgstr "생각해볼 점"
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:431
 msgid "Further reading"
-msgstr "참고문헌"
+msgstr "더 읽어볼 거리"
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:437
 msgid "What's next?"
-msgstr "다음 내용은 무엇 입니까?"
+msgstr "다음 단원은?"

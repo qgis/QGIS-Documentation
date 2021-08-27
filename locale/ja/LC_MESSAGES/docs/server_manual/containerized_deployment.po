@@ -1,24 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
-# fairtommy <fairtommy@gmail.com>, 2020
+# Harrissou Sant-anna, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation testing\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-22 21:43+0200\n"
-"PO-Revision-Date: 2020-09-22 19:51+0000\n"
-"Last-Translator: fairtommy <fairtommy@gmail.com>, 2020\n"
+"POT-Creation-Date: 2021-07-21 02:13+0000\n"
+"PO-Revision-Date: 2020-12-24 12:02+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -51,7 +52,7 @@ msgid ""
 msgstr ""
 "Dockerは、パッケージ化されたアプリケーション（別名イメージ）を実行します。これは、ビルドするソース（Dockerfileおよびリソース）として取得するか、レジストリ（プライベートまたはパブリック）から既にビルドできます。"
 
-#: ../../docs/server_manual/containerized_deployment.rst:28
+#: ../../docs/server_manual/containerized_deployment.rst:32
 msgid ""
 "As the docker image does not exist in a public registry. you will need to "
 "build it. To do so create a directory :file:`qgis-server` and within its "
@@ -60,7 +61,7 @@ msgstr ""
 "Dockerイメージがパブリックレジストリに存在しないため。ビルドする必要があります。そのためには、ディレクトリ :file:`qgis-server`"
 " をそのディレクトリ内に作成します。"
 
-#: ../../docs/server_manual/containerized_deployment.rst:105
+#: ../../docs/server_manual/containerized_deployment.rst:112
 msgid ""
 "To do so, create a directory :file:`data` within the directory :file:`qgis-"
 "server` and copy your file in it. To comply with the following explanations,"
@@ -69,7 +70,7 @@ msgstr ""
 "これを行うには、ディレクトリ :file:`qgis-server` 内にディレクトリ :file:`data` "
 "を作成し、その中にファイルをコピーします。以下の説明に準拠するため、名前を :file:`osm.qgs` に変更します。"
 
-#: ../../docs/server_manual/containerized_deployment.rst:195
+#: ../../docs/server_manual/containerized_deployment.rst:211
 msgid ""
 "To work with a docker image set you could use a docker stack managed by an "
 "orchestrator. In a stack, the images are working in the same private "
@@ -79,7 +80,7 @@ msgid ""
 msgstr ""
 "Dockerイメージセットを操作するには、オーケストレーターが管理するDockerスタックを使用できます。スタックでは、イメージは同じプライベートネットワークで動作しており、スタック全体を開始/停止したり、スタックを他のワーカーに配備したりできます。たとえば、Swarm、Kubernetes、Mesosなど、多くのオーケストレーターがいます。"
 
-#: ../../docs/server_manual/containerized_deployment.rst:209
+#: ../../docs/server_manual/containerized_deployment.rst:225
 msgid ""
 "Docker now has its own orchestrator: Swarm (compatible with docker-compose "
 "files). You have to `enable it <https://docs.docker.com/get-"
@@ -90,20 +91,11 @@ msgstr ""
 "`有効にする<https://docs.docker.com/get-started/orchestration/#enable-docker-"
 "swarm>`_ 必要があります（MacバージョンはLinuxでも動作します）。"
 
-#: ../../docs/server_manual/containerized_deployment.rst:287
+#: ../../docs/server_manual/containerized_deployment.rst:303
 msgid "Installation"
 msgstr "インストール"
 
-#: ../../docs/server_manual/containerized_deployment.rst:298
-msgid ""
-"As Kubernetes installation can be really complex, we will only focus on "
-"aspects used by this demo. For further / deeper information, check the "
-"`official documentation <https://Kubernetes.io/docs/home/>`_."
-msgstr ""
-"Kubernetesのインストールは非常に複雑になる可能性があるため、このデモで使用される側面のみに焦点を当てます。詳細は `公式文書 "
-"<https://Kubernetes.io/docs/home/>`_ をご確認ください。"
-
-#: ../../docs/server_manual/containerized_deployment.rst:306
+#: ../../docs/server_manual/containerized_deployment.rst:322
 msgid ""
 "microk8s needs extra steps: you have to enable the registry and tag the "
 "qgis-server image in order to have Kubernetes to find the created images."
@@ -111,7 +103,7 @@ msgstr ""
 "microk8sでは追加の手順が必要です。Kubernetesで作成されたイメージを検出するには、レジストリを有効にしてqgis-"
 "serverイメージにタグを付ける必要があります。"
 
-#: ../../docs/server_manual/containerized_deployment.rst:337
+#: ../../docs/server_manual/containerized_deployment.rst:353
 msgid ""
 "Kubernetes describes the objects to deploy in yaml manifests. There are many"
 " different kinds, but we will only use deployments (handle pods, i.e. docker"

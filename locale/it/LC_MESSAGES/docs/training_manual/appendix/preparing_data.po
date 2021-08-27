@@ -81,6 +81,10 @@ msgstr ""
 msgid "|hard| |TY|  Create OSM based vector Files"
 msgstr "|hard| |TY|  20.1 - Crea File Vettoriali basati su OSM"
 
+#: ../../docs/training_manual/appendix/preparing_data.rst:246
+msgid "hard"
+msgstr "hard"
+
 #: ../../docs/training_manual/appendix/preparing_data.rst:27
 msgid ""
 "If you wish to replace the default data set with localised data for your "
@@ -249,6 +253,10 @@ msgstr ""
 "Questo processo aggiunge i layer come file temporanei (indicati dall'icona "
 "|indicatorMemory| accanto al loro nome)."
 
+#: ../../docs/training_manual/appendix/preparing_data.rst:247
+msgid "indicatorMemory"
+msgstr "indicatorMemory"
+
 #: ../../docs/training_manual/appendix/preparing_data.rst:95
 msgid ""
 "You can sample the data your region contains in order to see what kind of "
@@ -293,15 +301,135 @@ msgstr ""
 ":guilabel:`Aggiungi il file salvato alla mappa` sia selezionata. Questo "
 "aggiunge un nuovo layer."
 
+#: ../../docs/training_manual/appendix/preparing_data.rst:112
+msgid "Select the :guilabel:`ESRI Shapefile` format"
+msgstr "Seleziona il formato :guilabel:`ESRI Shapefile`"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:113
+msgid ""
+"Use the :guilabel:`...` button to browse to the "
+":file:`exercise_data/shapefile/` folder and save the file as "
+":file:`places.shp`."
+msgstr ""
+"Usa il pulsante :guilabel:`...` per navigare nella cartella "
+":file:`exercise_data/shapefile/` e salva il file come :file:`places.shp`."
+
 #: ../../docs/training_manual/appendix/preparing_data.rst:119
 #: ../../docs/training_manual/appendix/preparing_data.rst:150
 #: ../../docs/training_manual/appendix/preparing_data.rst:166
 msgid "Press :guilabel:`OK`"
 msgstr "Premi :guilabel:`OK`"
 
+#: ../../docs/training_manual/appendix/preparing_data.rst:128
+msgid "Repeat the process for other layers, renaming them as follows:"
+msgstr "Ripeti il processo per gli altri layer, rinominandali come segue:"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:130
+msgid "``natural_water`` into ``water``"
+msgstr "``natural_water`` in ``water``"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:131
+msgid "``waterway_river`` into ``rivers``"
+msgstr "``waterway_river`` in ``rivers``"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:132
+msgid "``boundary_protected_area`` into ``protected_areas``"
+msgstr "``boundary_protected_area`` in ``protected_areas``"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:134
+msgid ""
+"Each resulting data set should be saved in the "
+":file:`exercise_data/shapefile/` directory."
+msgstr ""
+"Tutti i data set risultati devono essere salvati nella cartella  "
+":file:`exercise_data/shapefile/`."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:137
+msgid ""
+"The next step is to create a GeoPackage file from the :guilabel:`building` "
+"layer to use during the course:"
+msgstr ""
+" Il prossimo passo è creare un file GeoPackage dal layer "
+":guilabel:`building` da usare durante il corso:"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:140
+msgid ""
+"Click the |indicatorMemory| icon next to the :guilabel:`building` layer"
+msgstr ""
+"Clicca sull'icona |indicatorMemory| accanto al layer :guilabel:`building`"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:141
+msgid "Select the :guilabel:`GeoPackage` format"
+msgstr "Seleziona il formato :guilabel:`GeoPackage` "
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:144
+msgid ""
+"By default, the :guilabel:`Layer name` is filled as the file name. Replace "
+"it with ``buildings``."
+msgstr ""
+"Per impostazione predefinita, il :guilabel:`Layer name` è  riempito con il "
+"nome del file.  Sostituiscilo con ``buildings``."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:151
+msgid "Rename the layer in its properties dialog"
+msgstr "Rinomina il layer nella sua finestra di dialogo Proprietà "
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:152
+msgid ""
+"Repeat the process with the :guilabel:`highway` layer, saving it as "
+"``roads`` in the same GeoPackage database."
+msgstr ""
+"Ripeti il processo con il layer :guilabel:`highway`, salvandolo come "
+"``roads`` nello stesso database GeoPackage."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:157
+msgid "Click the |indicatorMemory| icon next to the :guilabel:`landuse` layer"
+msgstr ""
+"Fai clic sull'icona |indicatorMemory| vicina al layer :guilabel:`landuse` "
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:158
+msgid "Select the :guilabel:`SpatiaLite` format"
+msgstr "Seleziona il formato :guilabel:`SpatiaLite` "
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:159
+msgid ""
+"Save the file as :file:`landuse.sqlite` under the :file:`exercise_data/` "
+"folder. By default, the :guilabel:`Layer name` is filled as the file name. "
+"Do not change it."
+msgstr ""
+"Salva il file come :file:`landuse.sqlite` nella cartella  "
+":file:`exercise_data/`. Per opzione predefinita, il :guilabel:`Layer name` "
+"viene definito com il nome del file . Non cambiarlo."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:175
+msgid ""
+"The important thing is that you have 7 vector layers matching those shown "
+"above and that all those layers have some data."
+msgstr ""
+"L'importante è che tu abbia 7 layer vettoriali corrispondenti a quelli "
+"mostrati sopra e che tutti questi layer abbiano dei dati."
+
 #: ../../docs/training_manual/appendix/preparing_data.rst:179
 msgid "|hard| |TY| Create SRTM DEM tiff Files"
 msgstr "|hard| |TY| Crea un DEM SRTM tiff"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:181
+msgid ""
+"For modules :ref:`tm_create_vector_data` and :ref:`tm_rasters`, you'll also "
+"need raster images (SRTM DEM) which cover the region you have selected for "
+"your course."
+msgstr ""
+"Il programma successivo Per i moduli :ref:`tm_create_vector_data` e "
+":ref:`tm_rasters`, avrai anche bisogno di immagini raster (SRTM DEM) che "
+"coprano la regione che hai selezionato per il tuo corso."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:250
+msgid "zoomToLayer"
+msgstr "zoomToLayer"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:244
+msgid "extents"
+msgstr "extents"
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:195
 msgid ""
@@ -320,6 +448,16 @@ msgstr "|hard| |TY| Crea un Files tiff di immagine"
 msgid "|basic| |TY| Replace Tokens"
 msgstr "|basic| |TY| Sostituisci gli Emblemi"
 
+#: ../../docs/training_manual/appendix/preparing_data.rst:218
+msgid ""
+"Having created your localised dataset, the final step is to replace the "
+"tokens in the :file:`substitutions.txt` file so that the appropriate names "
+"will appear in your localised version of the Training Manual."
+msgstr ""
+"Avendo creato il tuo dataset in ividualizzato, il passo finale è quello di "
+"sostituire i token nel file :file:`substitutions.txt` in modo che i nomi "
+"appropriati appaiano nella tua versione tradotta del Training Manual."
+
 #: ../../docs/training_manual/appendix/preparing_data.rst:222
 msgid "The tokens you need to replace are as follows:"
-msgstr "Gli emblemi che hai bisogno di sostituire sono i seguenti:"
+msgstr "I token che devi sostituire sono i seguenti:"

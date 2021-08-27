@@ -24,6 +24,36 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:14
+msgid "Assign projection"
+msgstr "Assegnare proiezione"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:15
+msgid "Assigns a new projection to a vector layer."
+msgstr "Assegna una nuova proiezione ad un layer vettoriale."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:17
+msgid ""
+"It creates a new layer with the exact same features and geometries as the "
+"input one, but assigned to a new CRS. The geometries are **not** "
+"reprojected, they are just assigned to a different CRS."
+msgstr ""
+"Crea un nuovo layer con le stesse identiche caratteristiche e geometrie di "
+"quello in ingresso, ma assegnato a un nuovo SR. Le geometrie **non** sono "
+"riproiettate, sono solo assegnate a un diverso SR."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:21
+msgid ""
+"This algorithm can be used to repair layers which have been assigned an "
+"incorrect projection."
+msgstr ""
+"Questo algoritmo può essere usato per aggiustare i layer ai quali è stata "
+"assegnata una proiezione errata."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:24
+msgid "Attributes are not modified by this algorithm."
+msgstr "Gli attributi non vengono modificati da questo algoritmo."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:26
 msgid ""
 ":ref:`qgisdefinecurrentprojection`, :ref:`qgisfindprojection`, "
@@ -367,6 +397,10 @@ msgstr "[crs]"
 msgid "Default: ``EPSG:4326 - WGS84``"
 msgstr "Default: ``EPSG:4326 - WGS84``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:49
+msgid "Select the new CRS to assign to the vector layer"
+msgstr "Seleziona il nuovo SR da assegnare al layer vettoriale"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:52
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:547
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:577
@@ -490,6 +524,11 @@ msgstr "[lo stesso del livello in ingresso]"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2035
 msgid "Default: ``[Create temporary layer]``"
 msgstr "Predefinito: ``[Crea layer temporaneo]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:57
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:552
+msgid "Specify the output layer containing only the duplicates. One of:"
+msgstr "Specifica il layer di uscita che contiene solo i duplicati. Uno di:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:60
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:205
@@ -688,6 +727,15 @@ msgstr "Codice Python"
 msgid "**Algorithm ID**: ``qgis:assignprojection``"
 msgstr "**ID Algoritmo**: ``qgis:assignprojection``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:113
+msgid "[vector: line, polygon]"
+msgstr "[vector: line, polygon]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:114
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:778
+msgid "The input vector layer"
+msgstr "Il layer del vettore in ingresso"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:117
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:654
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:879
@@ -700,6 +748,20 @@ msgstr "[numero]"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:881
 msgid "Default: 0"
 msgstr "Predefinito: 0"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:126
+msgid "``NAME_EXPRESSION``"
+msgstr "``NAME_EXPRESSION``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:127
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:132
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1882
+msgid "[expression]"
+msgstr "[expression]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:131
+msgid "``GROUP_EXPRESSION``"
+msgstr "``GROUP_EXPRESSION``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:149
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:474
@@ -719,14 +781,42 @@ msgstr "Predefinito: 0"
 msgid "[number]"
 msgstr "[numero]"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:155
+msgid "**Algorithm ID**: ``qgis:layertobookmarks``"
+msgstr "**Algorithm ID**: ``qgis:layertobookmarks``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:184
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1368
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1525
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1549
+msgid "[enumeration] [list]"
+msgstr "[enumeration] [list]"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:198
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:223
 msgid "**Output**"
 msgstr "**Output**"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:200
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:225
+msgid "[vector: polygon]"
+msgstr "[vector: polygon]"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:231
 msgid "**Algorithm ID**: ``qgis:bookmarkstolayer``"
 msgstr "**ID Algoritmo**: ``qgis:bookmarkstolayer``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:267
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1207
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1215
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2103
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2190
+msgid "[tablefield: any]"
+msgstr "[tablefield: any]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:290
+msgid "**Algorithm ID**: ``qgis:createattributeindex``"
+msgstr "**Algorithm ID**: ``qgis:createattributeindex``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:324
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2100
@@ -756,6 +846,14 @@ msgstr "**SR**"
 msgid "**Algorithm ID**: ``qgis:definecurrentprojection``"
 msgstr "**ID Algoritmo**: ``qgis:definecurrentprojection``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:421
+msgid "Delete duplicate geometries"
+msgstr "Cancella le geometrie duplicate"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:422
+msgid "Finds and removes duplicated geometries."
+msgstr "Trova e rimuove le geometrie duplicate."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:428
 msgid ""
 ":ref:`qgisdropgeometries`, :ref:`qgisremovenullgeometries`, "
@@ -763,6 +861,26 @@ msgid ""
 msgstr ""
 ":ref:`qgisdropgeometries`, :ref:`qgisremovenullgeometries`, "
 ":ref:`qgisdeleteduplicatesbyattribute`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:473
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:586
+msgid "``DUPLICATE_COUNT``"
+msgstr "``DUPLICATE_COUNT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:480
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:593
+msgid "**Count of retained records**"
+msgstr "**Conteggio dei record mantenuti**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:481
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:594
+msgid "``RETAINED_COUNT``"
+msgstr "``RETAINED_COUNT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:483
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:596
+msgid "Count of unique records"
+msgstr "Conteggio dei record univoci"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:488
 msgid "**Algorithm ID**: ``qgis:deleteduplicategeometries``"
@@ -772,13 +890,45 @@ msgstr "**ID Algoritmo**: ``qgis:deleteduplicategeometries``"
 msgid ":ref:`qgisdeleteduplicategeometries`"
 msgstr ":ref:`qgisdeleteduplicategeometries`"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:527
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:647
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1223
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1385
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1542
+msgid "[tablefield: any] [list]"
+msgstr "[tablefield: any] [list]"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:601
 msgid "**Algorithm ID**: ``qgis:deleteduplicatesbyattribute``"
 msgstr "**ID Algoritmo**: ``qgis:deleteduplicatesbyattribute``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:646
+msgid "``COMPARE_ATTRIBUTES``"
+msgstr "``COMPARE_ATTRIBUTES``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:653
+msgid "``MATCH_TYPE``"
+msgstr "``MATCH_TYPE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:726
+msgid "``UNCHANGED_COUNT``"
+msgstr "``UNCHANGED_COUNT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:730
+msgid "``ADDED_COUNT``"
+msgstr "``ADDED_COUNT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:734
+msgid "``DELETED_COUNT``"
+msgstr "``DELETED_COUNT``"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:741
 msgid "**Algorithm ID**: ``qgis:detectdatasetchanges``"
 msgstr "**ID Algoritmo**: ``qgis:detectdatasetchanges``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:751
+msgid "Drop geometries"
+msgstr "Geometrie eliminate"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:759
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1994
@@ -787,9 +937,29 @@ msgid ""
 "<processing_inplace_edit>`"
 msgstr "|checkbox| Permette :ref:`features in-place modification 1`"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2292
+msgid "checkbox"
+msgstr "checkbox"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:761
 msgid ":ref:`qgisdeleteduplicategeometries`, :ref:`qgisremovenullgeometries`"
 msgstr ":ref:`qgisdeleteduplicategeometries`, :ref:`qgisremovenullgeometries`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:779
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:802
+msgid "**Dropped geometries**"
+msgstr "**Geometrie Eliminate**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:781
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:804
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1056
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1082
+msgid "[table]"
+msgstr "[table]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:782
+msgid "Specify the output geometryless layer. One of:"
+msgstr "Specifica il layer di uscita senza geometria. Uno di:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:811
 msgid "**Algorithm ID**: ``qgis:dropgeometries``"
@@ -798,6 +968,19 @@ msgstr "**ID Algoritmo**: ``qgis:dropgeometries``"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:836
 msgid ":ref:`qgisspatialiteexecutesql`, :ref:`qgispostgisexecutesql`"
 msgstr ":ref:`qgisspatialiteexecutesql`, :ref:`qgispostgisexecutesql`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:852
+msgid "``INPUT_DATASOURCES``"
+msgstr "``INPUT_DATASOURCES``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:853
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1802
+msgid "[vector: any] [list]"
+msgstr "[vector: any] [list]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:859
+msgid "``INPUT_QUERY``"
+msgstr "``INPUT_QUERY``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:860
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:867
@@ -809,6 +992,22 @@ msgstr ":ref:`qgisspatialiteexecutesql`, :ref:`qgispostgisexecutesql`"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2107
 msgid "[string]"
 msgstr "[stringa]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:866
+msgid "``INPUT_UID_FIELD``"
+msgstr "``INPUT_UID_FIELD``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:872
+msgid "``INPUT_GEOMETRY_FIELD``"
+msgstr "``INPUT_GEOMETRY_FIELD``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:878
+msgid "``INPUT_GEOMETRY_TYPE``"
+msgstr "``INPUT_GEOMETRY_TYPE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:898
+msgid "``INPUT_GEOMETRY_CRS``"
+msgstr "``INPUT_GEOMETRY_CRS``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:934
 msgid "**Algorithm ID**: ``qgis:executesql``"
@@ -826,6 +1025,10 @@ msgstr ""
 ":ref:`qgisassignprojection`, :ref:`qgisdefinecurrentprojection`, "
 ":ref:`qgisreprojectlayer`"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1043
+msgid "``TARGET_AREA``"
+msgstr "``TARGET_AREA``"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1044
 msgid "[extent]"
 msgstr "[estensione]"
@@ -842,6 +1045,57 @@ msgstr "**ID Algoritmo**: ``native:flattenrelationships``"
 msgid ":ref:`qgisjoinbynearest`, :ref:`qgisjoinattributesbylocation`"
 msgstr ":ref:`qgisjoinbynearest`, :ref:`qgisjoinattributesbylocation`"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1210
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1659
+msgid "``INPUT_2``"
+msgstr "``INPUT_2``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1214
+msgid "``FIELD_2``"
+msgstr "``FIELD_2``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1222
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1663
+msgid "``FIELDS_TO_COPY``"
+msgstr "``FIELDS_TO_COPY``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1239
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1401
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1576
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1668
+msgid "``DISCARD_NONMATCHING``"
+msgstr "``DISCARD_NONMATCHING``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1240
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1402
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1577
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1669
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1886
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1893
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2111
+msgid "[boolean]"
+msgstr "[boolean]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1267
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1301
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1429
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1463
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1703
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1735
+msgid "``NON_MATCHING``"
+msgstr "``NON_MATCHING``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1295
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1457
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1740
+msgid "``JOINED_COUNT``"
+msgstr "``JOINED_COUNT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1311
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1745
+msgid "``UNJOINABLE_COUNT``"
+msgstr "``UNJOINABLE_COUNT``"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1318
 msgid "**Algorithm ID**: ``qgis:joinattributestable``"
 msgstr "**ID Algoritmo**: ``qgis:joinattributestable``"
@@ -853,6 +1107,11 @@ msgid ""
 msgstr ""
 ":ref:`qgisjoinbynearest`, :ref:`qgisjoinattributestable`, "
 ":ref:`qgisjoinbylocationsummary`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1384
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1541
+msgid "``JOIN_FIELDS``"
+msgstr "``JOIN_FIELDS``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1474
 msgid "**Algorithm ID**: ``qgis:joinattributesbylocation``"
@@ -874,6 +1133,18 @@ msgstr ""
 ":ref:`qgisnearestneighbouranalysis`, :ref:`qgisjoinattributestable`, "
 ":ref:`qgisjoinattributesbylocation`, :ref:`qgisdistancematrix`"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1664
+msgid "[fields]"
+msgstr "[fields]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1685
+msgid "``MAX_DISTANCE``"
+msgstr "``MAX_DISTANCE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1753
+msgid "**Algorithm ID**: ``qgis:joinbynearest``"
+msgstr "**Algorithm ID**: ``qgis:joinbynearest``"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1787
 msgid ":ref:`qgissplitvectorlayer`"
 msgstr ":ref:`qgissplitvectorlayer`"
@@ -886,9 +1157,25 @@ msgstr "**ID Algoritmo**: ``qgis:mergevectorlayers``"
 msgid "**Algorithm ID**: ``qgis:orderbyexpression``"
 msgstr "**ID Algoritmo**: ``qgis:orderbyexpression``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1957
+msgid "[file]"
+msgstr "[file]"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1980
 msgid "**Algorithm ID**: ``qgis:repairshapefile``"
 msgstr "**ID Algoritmo**: ``qgis:repairshapefile``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1996
+msgid ""
+":ref:`qgisassignprojection`, :ref:`qgisdefinecurrentprojection`, "
+":ref:`qgisfindprojection`"
+msgstr ""
+":ref:`qgisassignprojection`, :ref:`qgisdefinecurrentprojection`, "
+":ref:`qgisfindprojection`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2015
+msgid "``TARGET_CRS``"
+msgstr "``TARGET_CRS``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2064
 msgid "**Algorithm ID**: ``qgis:reprojectlayer``"
@@ -905,6 +1192,12 @@ msgstr "**ID Algoritmo**: ``qgis:splitfeaturesbycharacter``"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2171
 msgid ":ref:`qgismergevectorlayers`"
 msgstr ":ref:`qgismergevectorlayers`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2194
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2218
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2273
+msgid "[folder]"
+msgstr "[folder]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2197
 msgid "Specify the directory for the output layers. One of:"
@@ -929,6 +1222,10 @@ msgstr "**Layer in uscita**"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2221
 msgid "``OUTPUT_LAYERS``"
 msgstr "``OUTPUT_LAYERS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2222
+msgid "[same as input] [list]"
+msgstr "[same as input] [list]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2228
 msgid "**Algorithm ID**: ``qgis:splitvectorlayer``"

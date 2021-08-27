@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2021
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-12 02:37+0000\n"
 "PO-Revision-Date: 2020-12-24 12:02+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2021\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,13 +32,17 @@ msgstr "래스터 데이터"
 msgid "|gentleLogo|"
 msgstr "|gentleLogo|"
 
+#: ../../docs/gentle_gis_introduction/raster_data.rst:369
+msgid "gentleLogo"
+msgstr "gentleLogo"
+
 #: ../../docs/gentle_gis_introduction/raster_data.rst:7
 msgid "Objectives:"
 msgstr "목적:"
 
 #: ../../docs/gentle_gis_introduction/raster_data.rst:7
 msgid "Understand what raster data is and how it can be used in a GIS."
-msgstr "래스터 데이터 가 어떤 데이터인지 이해하며 GIS 에서 어떻게 쓰이는 지를 알게 하는 데 그 목적을 둡니다."
+msgstr "래스터 데이터란 무엇인지 그리고 GIS에서 어떻게 쓰이는지 이해하기."
 
 #: ../../docs/gentle_gis_introduction/raster_data.rst:9
 msgid "Keywords:"
@@ -51,6 +56,22 @@ msgstr "래스터, 픽셀, 원격탐사, 위성, 이미지, 지오레퍼런스"
 msgid "Overview"
 msgstr "개요"
 
+#: ../../docs/gentle_gis_introduction/raster_data.rst:15
+msgid ""
+"In the previous topics we have taken a closer look at vector data. While "
+"vector features use geometry (points, polylines and polygons) to represent "
+"the real world, raster data takes a different approach. Rasters are made up "
+"of a matrix of pixels (also called cells), each containing a value that "
+"represents the conditions for the area covered by that cell (see "
+":numref:`figure_raster`). In this topic we are going to take a closer look "
+"at raster data, when it is useful and when it makes more sense to use vector"
+" data."
+msgstr ""
+"이전 단원에서는 벡터 데이터를 자세히 살펴보았습니다. 벡터 객체가 실세계를 표현하기 위해 도형(포인트, 폴리라인, 폴리곤)을 사용하는 "
+"반면, 래스터 데이터는 접근 방법부터 다릅니다. 래스터는 격자형의 (셀이라고도 하는) 픽셀들로 이루어지며, 각 셀은 해당 셀이 커버하는 "
+"영역의 상태를 나타내는 값을 담고 있습니다. (:numref:`figure_raster` 를 참조하세요.) 이번 단원에서는 언제 래스터 "
+"데이터를 사용하면 유용한지 그리고 언제 벡터 데이터를 사용하는 편이 더 나은지에 대해 래스터 데이터를 자세히 살펴보겠습니다."
+
 #: ../../docs/gentle_gis_introduction/raster_data.rst:29
 msgid ""
 "A raster dataset is composed of rows (running across) and columns (running "
@@ -58,8 +79,8 @@ msgid ""
 "region, and the value in that pixel represents some characteristic of that "
 "region."
 msgstr ""
-"래스터 데이터셋은  열(가로를 가로지르는)과 행(세로로 가로지르는)으로 이루어진 격자(셀로 알려진)로 구성 됩니다. 각각의 개별 격자들은"
-" 지리적인 영역을 나타내며 , 이들 개별적인 격자들은 각각 지리적 특성을 갖는 값을 나타냅니다."
+"래스터 데이터셋은 (셀이라고도 하는) 픽셀의 (가로) 열과 (세로) 행으로 이루어져 있습니다. 각 픽셀은 지리 영역을 나타내며, 픽셀이 "
+"가진 값은 해당 지역의 몇몇 특성을 나타냅니다."
 
 #: ../../docs/gentle_gis_introduction/raster_data.rst:35
 msgid "Raster data in detail"
@@ -390,11 +411,11 @@ msgstr "우리가 이미 언급했듯이 고해상도 래스터 데이터는 컴
 
 #: ../../docs/gentle_gis_introduction/raster_data.rst:293
 msgid "What have we learned?"
-msgstr "우리는 무엇을 익혔습니까?"
+msgstr "무엇을 배웠나요?"
 
 #: ../../docs/gentle_gis_introduction/raster_data.rst:295
 msgid "Let's wrap up what we covered in this worksheet:"
-msgstr "자 우리는 작업지 포함된  작업을 마무리 짓으십다."
+msgstr "이제 이번 단원에서 배운 내용을 정리해볼까요:"
 
 #: ../../docs/gentle_gis_introduction/raster_data.rst:297
 msgid "Raster data are a grid of regularly sized **pixels.**"
@@ -442,11 +463,11 @@ msgstr "래스터 이미지들은 저장공간을 많이 차지 합니다."
 
 #: ../../docs/gentle_gis_introduction/raster_data.rst:311
 msgid "Now you try!"
-msgstr "도전해 보십다"
+msgstr "도전해봅시다!"
 
 #: ../../docs/gentle_gis_introduction/raster_data.rst:313
 msgid "Here are some ideas for you to try with your learners:"
-msgstr "여기에 학생들과 함께 당신을위한 시도 할만한 몇 가지 아이디어가 있습니다 :"
+msgstr "강사와 학생들이 함께 시도해볼 만한 몇 가지 아이디어가 있습니다:"
 
 #: ../../docs/gentle_gis_introduction/raster_data.rst:315
 msgid ""
@@ -471,7 +492,7 @@ msgstr ""
 
 #: ../../docs/gentle_gis_introduction/raster_data.rst:328
 msgid "Something to think about"
-msgstr "생각할점"
+msgstr "생각해볼 점"
 
 #: ../../docs/gentle_gis_introduction/raster_data.rst:330
 msgid ""
@@ -491,7 +512,7 @@ msgstr ""
 
 #: ../../docs/gentle_gis_introduction/raster_data.rst:341
 msgid "Further reading"
-msgstr "참고문헌"
+msgstr "더 읽어볼 거리"
 
 #: ../../docs/gentle_gis_introduction/raster_data.rst:343
 msgid "**Book**:"
@@ -521,7 +542,7 @@ msgstr "QGIS 사용자 가이드에는 QGIS에서 래스터 정보를 활용하�
 
 #: ../../docs/gentle_gis_introduction/raster_data.rst:356
 msgid "What's next?"
-msgstr "다음 내용은 무엇 입니까?"
+msgstr "다음 단원은?"
 
 #: ../../docs/gentle_gis_introduction/raster_data.rst:358
 msgid ""
