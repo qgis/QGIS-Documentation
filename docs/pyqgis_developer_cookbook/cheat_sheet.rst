@@ -613,7 +613,7 @@ Advanced TOC
 .. testcode:: cheat_sheet
 
   root = QgsProject.instance().layerTreeRoot()
-  node = root.findLayer(iface.activeLayer().id())
+  node = root.findLayer(layer.id())
   new_state = Qt.Checked if node.isVisible() == Qt.Unchecked else Qt.Unchecked
   node.setItemVisibilityChecked(new_state)
 
@@ -656,7 +656,7 @@ Advanced TOC
     root = QgsProject.instance().layerTreeRoot()
 
     layer = QgsProject.instance().mapLayersByName('layer name you like')[0]
-    node = root.findLayer( layer.id())
+    node = root.findLayer(layer.id())
 
     index = model.node2index( node )
     ltv.setRowHidden( index.row(), index.parent(), True )
