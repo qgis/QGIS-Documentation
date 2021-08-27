@@ -606,12 +606,17 @@ Advanced TOC
     myGroup.insertChildNode(0, myLayer)
     parent.removeChildNode(myOriginalLayer)
 
-**Changing visibility**
+.. index:: Toggle layers
+
+**Toggling active layer visibility**
 
 .. testcode:: cheat_sheet
 
-    myGroup.setItemVisibilityChecked(False)
-    myLayer.setItemVisibilityChecked(False)
+  root = QgsProject.instance().layerTreeRoot()
+  node = root.findLayer(iface.activeLayer().id())
+  new_state = Qt.Checked if node.isVisible() == Qt.Unchecked else Qt.Unchecked
+  node.setItemVisibilityChecked(new_state)
+
 
 **Is group selected**
 
