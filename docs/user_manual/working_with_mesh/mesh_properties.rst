@@ -130,7 +130,7 @@ The mesh :guilabel:`Layer Properties` dialog provides the following sections:
    * - |metadata| :ref:`Information <meshinformation>`
      - |system| :ref:`Source <meshsource>`
      - |symbology| :ref:`Symbology <meshsymbology>`:sup:`[1]`
-   * - |3d| :ref:`3D View <mesh3d>`:sup:`[1]`
+   * - |3d| :ref:`3D View <mesh3dview>`:sup:`[1]`
      - |temporal| :ref:`Temporal <meshtemporal>`
      - |rendering| :ref:`Rendering <meshrendering>`
    * - |editMetadata| :ref:`Metadata <meshmetadata>`
@@ -424,9 +424,9 @@ https://fvwiki.tuflow.com/index.php?title=Depth_Averaging_Results.
 
 
 .. index:: 3D
-.. _mesh3d:
+.. _mesh3dview:
 
-3D Properties
+3D View Properties
 -------------------
 
 Mesh layers can be used as :ref:`terrain in a 3D map view <scene_configuration>`
@@ -448,14 +448,17 @@ properties:
 
 * Under :guilabel:`Triangle settings`
 
-  * :guilabel:`Smooth triangles`: ???
+  * :guilabel:`Smooth triangles`: Angles between consecutive triangles are
+    smoothed for a better 3D rendering
   * :guilabel:`Show wireframe` whose you can set the :guilabel:`Line width`
     and :guilabel:`Color`
-  * :guilabel:`Level of detail`: ???
 
-  .. no idea what this slider represents and how one can play with it once
-   simplification is enabled
+  .. _levelofdetail:
 
+  * :guilabel:`Level of detail`: Controls how :ref:`simplified <meshrendering>`
+    the mesh layer to render should be. On the far right, it is the base mesh,
+    and the more you go left, the more the layer is simplified and is rendered
+    with less details.
 * :guilabel:`Vertical settings` to control what to display
 
   * :guilabel:`Dataset group for vertical value`: the dataset group that will
@@ -470,8 +473,8 @@ properties:
   (:guilabel:`2D contour color ramp shader`) or as a :guilabel:`Single color`
   with an associated :guilabel:`Mesh color`
 * :guilabel:`Show arrows`: displays arrows on mesh layer dataset 3D entity,
-  depending on the same vector dataset used in the :ref:`vector 2D rendering
-  <mesh_symbology_vectors>`. They are also displayed using the 2D color setting.
+  based on the same vector dataset group used in the :ref:`vector 2D rendering
+  <mesh_symbology_vectors>`. They are displayed using the 2D color setting.
   It's also possible to define the :guilabel:`Arrow spacing` and, if it's of a
   :guilabel:`Fixed size` or scaled on magnitude. This spacing setting defines
   also the max size of arrows because arrows can't overlap.
@@ -486,15 +489,20 @@ Rendering Properties
 As mesh layers can have millions of triangles, their rendering can sometimes
 be very slow, especially when all the triangles are displayed in the view
 whereas they are too small to be viewed.
-You can simplify the mesh layer, resulting in one or more meshes representing
-different levels of detail. When rendering the mesh, QGIS will actually
-render the level of detail whose resolution corresponds to the current view.
+To speed up the rendering, you can simplify the mesh layer, resulting in one
+or more meshes representing different :ref:`levels of detail <levelofdetail>`
+and select at which level of detail you would like QGIS to render the mesh layer.
 
-From the |rendering| tab, check |checkbox| :guilabel:`Simplify mesh` and set:
+From the |rendering| :guilabel:`Rendering` tab, check |checkbox|
+:guilabel:`Simplify mesh` and set:
 
-* a :guilabel:`Reduction factor`: divides the number of triangles, from one
-  level of detail to the next one (while zooming out), generating triangles
-  of bigger size
+* a :guilabel:`Reduction factor`: Controls generation of successive levels of
+  simplified meshes.
+  For example, if the base mesh has 5M faces, and the reduction factor is 10,
+  the first simplified mesh will have approximately 500 000 faces,
+  the second 50 000 faces, the third 5000,...
+  If a higher reduction factor leads quickly to simpler meshes (i.e. with triangles
+  of bigger size), it produces also fewer levels of detail.
 * :guilabel:`Maximal mesh resolution`: the average size (in pixels)
   of the triangles that is permitted to display. If the average size of the
   mesh is lesser than this value, the rendering of a lower level of details
