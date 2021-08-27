@@ -31,6 +31,7 @@ Code Snippets
 
     from qgis.core import (
         QgsProject,
+        QgsApplication,
     )
 
     from qgis.gui import (
@@ -75,6 +76,27 @@ The method that is called when CTRL+I is pressed
 
   def key_action_triggered(self):
     QMessageBox.information(self.iface.mainWindow(),"Ok", "You pressed Ctrl+I")
+
+
+How to reuse QGIS icons
+-----------------------
+
+Because they are well-known and convey a clear message to the users, you may want
+sometimes to reuse QGIS icons in your plugin instead of drawing and setting a new one.
+Use the :meth:`iconPath() <qgis.core.QgsApplication.iconPath>` method.
+
+For example, to reuse the |fileOpen| icon available at
+:source:`images/themes/default/mActionFileOpen.svg`, you can do:
+
+.. testcode:: plugin_snippets
+
+    # e.g. somewhere in the initGui
+    self.fileOpen_action = QAction(
+        QIcon(QgsApplication.iconPath("mActionFileOpen.svg")),
+        self.tr("Select a File..."),
+        self.iface.mainWindow()
+    )
+    self.iface.addPluginToMenu("MyPlugin", self.fileOpen_action)
 
 
 .. index:: Plugins; Customization
@@ -149,5 +171,16 @@ Finally we are adding the imports and modifying the ``__init__`` function:
 .. tip:: **Add custom tabs to a vector layer properties dialog**
 
     You can apply a similar logic to add the plugin custom option to the layer
-    properties dialog using the classes :class:`QgsMapLayerConfigWidgetFactory <qgis.gui.QgsMapLayerConfigWidgetFactory>` 
+    properties dialog using the classes
+    :class:`QgsMapLayerConfigWidgetFactory <qgis.gui.QgsMapLayerConfigWidgetFactory>`
     and :class:`QgsMapLayerConfigWidget <qgis.gui.QgsMapLayerConfigWidget>`.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |fileOpen| image:: /static/common/mActionFileOpen.png
+   :width: 1.5em
