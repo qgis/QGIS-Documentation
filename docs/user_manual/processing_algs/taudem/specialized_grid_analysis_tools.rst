@@ -74,7 +74,7 @@ Python code
 
 **Algorithm ID**: ``taudem:d8hdisttostrm``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -234,7 +234,7 @@ Python code
 
 **Algorithm ID**: ``taudem:dinfavalanche``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -380,7 +380,7 @@ Python code
 
 **Algorithm ID**: ``taudem:dinfconclimaccum``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -491,7 +491,7 @@ Python code
 
 **Algorithm ID**: ``taudem:dinfdecayaccum``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -628,7 +628,7 @@ Python code
 
 **Algorithm ID**: ``taudem:dinfdistdown``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -762,7 +762,7 @@ Python code
 
 **Algorithm ID**: ``taudem:dinfdistup``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -838,7 +838,7 @@ Python code
 
 **Algorithm ID**: ``taudem:dinfrevaccum``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -991,7 +991,7 @@ Python code
 
 **Algorithm ID**: unknown
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1132,7 +1132,7 @@ Python code
 
 **Algorithm ID**: ``taudem:dinftranslimaccum``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1207,7 +1207,7 @@ Python code
 
 **Algorithm ID**: ``taudem:dinfupdependence``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1274,7 +1274,7 @@ Python code
 
 **Algorithm ID**: ``taudem:slopeavedown``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1335,7 +1335,7 @@ Python code
 
 **Algorithm ID**: ``taudem:slopearearatio``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1390,7 +1390,7 @@ Python code
 
 **Algorithm ID**: ``taudem:twi``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 

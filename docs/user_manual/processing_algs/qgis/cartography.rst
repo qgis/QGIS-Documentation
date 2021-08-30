@@ -74,7 +74,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specify the rotated output vector layer. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -101,7 +101,7 @@ Python code
 
 **Algorithm ID**: ``native:angletonearest``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -150,7 +150,7 @@ Parameters
      - Output :file:`.XML` file combining the selected style items.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -191,7 +191,7 @@ Python code
 
 **Algorithm ID**: ``native:combinestyles``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -266,7 +266,7 @@ Parameters
      - Output table for categories which do not match any symbol in
        the database. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
           :end-before: **end_layer_output_types_skip**
 
@@ -280,7 +280,7 @@ Parameters
      - Output table for symbols from the provided style database which
        do not match any category. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
           :end-before: **end_layer_output_types_skip**
 
@@ -316,7 +316,7 @@ Python code
 
 **Algorithm ID**: ``native:categorizeusingstyle``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -370,7 +370,7 @@ Parameters
      - Specify the output :file:`.XML` file for the selected style items.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -411,7 +411,7 @@ Python code
 
 **Algorithm ID**: ``native:stylefromproject``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -550,7 +550,7 @@ Python code
 
 **Algorithm ID**: ``native:atlaslayouttoimage``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -680,7 +680,7 @@ Advanced parameters
        Default: [Save to temporary file]
      - Name (including path) of the output file. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -705,7 +705,7 @@ Python code
 
 **Algorithm ID**: ``native:atlaslayouttopdf``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -741,7 +741,7 @@ Basic parameters
        Default: [Save to temporary file]
      - Name (including path) of the output file. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -810,7 +810,7 @@ Python code
 
 **Algorithm ID**: ``native:printlayouttoimage``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -846,7 +846,7 @@ Basic parameters
        Default: [Save to temporary file]
      - Name (including path) of the output file. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -946,7 +946,7 @@ Python code
 
 **Algorithm ID**: ``native:printlayouttopdf``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1002,7 +1002,7 @@ Basic parameters
        Default: ``[Create temporary layer]``
      - Specify the output vector layer for the extent(s). One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -1065,7 +1065,7 @@ Python code
 
 **Algorithm ID**: ``native:printlayoutmapextenttolayer``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1121,7 +1121,7 @@ Python code
 
 **Algorithm ID**: ``native:setlayerstyle``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1212,7 +1212,7 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specify the output layer. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -1237,7 +1237,7 @@ Python code
 
 **Algorithm ID**: ``qgis:topologicalcoloring``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 

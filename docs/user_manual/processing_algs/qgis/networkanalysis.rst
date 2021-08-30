@@ -67,7 +67,7 @@ Basic parameters
      - Specify the output line layer for the service area.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
           :end-before: **end_layer_output_types_skip**
 
@@ -79,7 +79,7 @@ Basic parameters
      - Specify the output point layer for the service area
        boundary nodes. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
           :end-before: **end_layer_output_types_skip**
 
@@ -226,7 +226,7 @@ Python code
 
 **Algorithm ID**: ``qgis:serviceareafromlayer``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -292,7 +292,7 @@ Basic parameters
      - Specify the output line layer for the service area.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
           :end-before: **end_layer_output_types_skip**
 
@@ -304,7 +304,7 @@ Basic parameters
      - Specify the output point layer for the service area
        boundary nodes. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
           :end-before: **end_layer_output_types_skip**
 
@@ -355,7 +355,7 @@ Python code
 
 **Algorithm ID**: ``native:serviceareafrompoint``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -410,7 +410,7 @@ Basic parameters
      - Specify the output line layer for the shortest paths.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -443,7 +443,7 @@ Python code
 
 **Algorithm ID**: ``native:shortestpathlayertopoint``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -498,7 +498,7 @@ Basic parameters
      - Specify the output line layer for the shortest paths.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -531,7 +531,7 @@ Python code
 
 **Algorithm ID**: ``native:shortestpathpointtolayer``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -585,7 +585,7 @@ Basic parameters
      - Specify the output line layer for the shortest paths.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -618,6 +618,6 @@ Python code
 
 **Algorithm ID**: ``native:shortestpathpointtopoint``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**

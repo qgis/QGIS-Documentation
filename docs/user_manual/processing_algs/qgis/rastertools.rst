@@ -86,7 +86,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -111,7 +111,7 @@ Python code
 
 **Algorithm ID**: ``qgis:rasterize``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -166,7 +166,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -191,7 +191,7 @@ Python code
 
 **Algorithm ID**: ``native:fillnodata``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -314,7 +314,7 @@ Parameters
        Default: ``[Save to temporary folder]``
      - Specification of the output raster. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **directory_output_types_skip**
           :end-before: **end_directory_output_types_skip**
 
@@ -325,7 +325,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specification of the output HTML file. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types_skip**
           :end-before: **end_file_output_types_skip**
 
@@ -354,7 +354,7 @@ Python code
 
 **Algorithm ID**: ``qgis:tilesxyzdirectory``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -453,7 +453,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specification of the output file. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types_skip**
           :end-before: **end_file_output_types_skip**
 
@@ -479,6 +479,6 @@ Python code
 
 **Algorithm ID**: ``qgis:tilesxyzmbtiles``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**

@@ -104,7 +104,7 @@ Parameters
        field.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types_append**
           :end-before: **end_layer_output_types_append**
 
@@ -129,7 +129,7 @@ Python code
 
 **Algorithm ID**: ``native:addautoincrementalfield``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -198,7 +198,7 @@ Parameters
      - Specify the output vector layer.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types_append**
           :end-before: **end_layer_output_types_append**
 
@@ -223,7 +223,7 @@ Python code
 
 **Algorithm ID**: ``native:addfieldtoattributestable``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -279,7 +279,7 @@ Parameters
      - Vector layer with the numeric field containing indexes.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
           :end-before: **end_layer_output_types_skip**
 
@@ -292,7 +292,7 @@ Parameters
        mapped to the corresponding unique value.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
           :end-before: **end_layer_output_types_skip**
 
@@ -322,7 +322,7 @@ Python code
 
 **Algorithm ID**: ``native:adduniquevalueindexfield``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -374,7 +374,7 @@ Parameters
      - Specify the output layer.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types_append**
           :end-before: **end_layer_output_types_append**
 
@@ -400,7 +400,7 @@ Python code
 
 **Algorithm ID**: ``native:addxyfieldstolayer``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -487,7 +487,7 @@ Parameters
      - Specify the vector layer with the new calculated
        field. One of:
        
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -512,7 +512,7 @@ Python code
 
 **Algorithm ID**: ``qgis:advancedpythonfieldcalculator``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -553,7 +553,7 @@ Parameters
      - Specify the output vector layer with the remaining fields.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types_append**
           :end-before: **end_layer_output_types_append**
 
@@ -578,7 +578,7 @@ Python code
 
 **Algorithm ID**: ``native:deletecolumn``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -639,7 +639,7 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specify the output vector layer. One of:
        
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -664,7 +664,7 @@ Python code
 
 **Algorithm ID**: ``native:explodehstorefield``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -708,7 +708,7 @@ Parameters
        Default: ``[Save to temporary folder]``
      - Folder in which to store the output files. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **directory_output_types**
           :end-before: **end_directory_output_types**
 
@@ -733,7 +733,7 @@ Python code
 
 **Algorithm ID**: ``native:extractbinary``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -811,7 +811,7 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specification of the output layer.
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types_append**
           :end-before: **end_layer_output_types_append**
 
@@ -836,7 +836,7 @@ Python code
 
 **Algorithm ID**: ``native:fieldcalculator``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -939,7 +939,7 @@ Parameters
      - Specification of the output layer.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types_append**
           :end-before: **end_layer_output_types_append**
 
@@ -964,7 +964,7 @@ Python code
 
 **Algorithm ID**: ``native:refactorfields``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1012,7 +1012,7 @@ Parameters
      - Specification of the output layer.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types_append**
           :end-before: **end_layer_output_types_append**
 
@@ -1037,7 +1037,7 @@ Python code
 
 **Algorithm ID**: ``qgis:renametablefield``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1081,7 +1081,7 @@ Parameters
      - Specification of the output layer.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types_append**
           :end-before: **end_layer_output_types_append**
 
@@ -1106,7 +1106,7 @@ Python code
 
 **Algorithm ID**: ``native:retainfields``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1152,7 +1152,7 @@ Parameters
        Default: ``[Create Temporary Layer]``
      - Specify the output layer. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types_append**
           :end-before: **end_layer_output_types_append**
 
@@ -1178,7 +1178,7 @@ Python code
 
 **Algorithm ID**: ``qgis:texttofloat``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 

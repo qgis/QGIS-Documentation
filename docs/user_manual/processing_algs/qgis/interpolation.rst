@@ -145,7 +145,7 @@ Parameters
      - Specify the output raster layer with kernel density values.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -243,7 +243,7 @@ Python code
 
 **Algorithm ID**: ``qgis:heatmapkerneldensityestimation``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -348,7 +348,7 @@ Parameters
      - Raster layer of interpolated values.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -374,7 +374,7 @@ Python code
 
 **Algorithm ID**: ``qgis:idwinterpolation``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -439,7 +439,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - The output as a raster layer. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -465,7 +465,7 @@ Python code
 
 **Algorithm ID**: ``qgis:linedensity``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -571,7 +571,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - The output TIN interpolation as a raster layer. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -582,7 +582,7 @@ Parameters
        Default: ``[Skip output]``
      - The output TIN as a vector layer. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
           :end-before: **end_layer_output_types_skip**
 
@@ -612,7 +612,7 @@ Python code
 
 **Algorithm ID**: ``qgis:tininterpolation``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 

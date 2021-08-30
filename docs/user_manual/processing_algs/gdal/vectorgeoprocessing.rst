@@ -75,7 +75,7 @@ Basic parameters
        Default: ``[Save to temporary file]``
      - Specify the output buffer layer. One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -121,7 +121,7 @@ Python code
 
 **Algorithm ID**: ``gdal:buffervectors``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -167,7 +167,7 @@ Basic parameters
        Default: ``[Save to temporary file]``
      - Specify the output (clipped) layer. One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -213,7 +213,7 @@ Python code
 
 **Algorithm ID**: ``gdal:clipvectorbyextent``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -256,7 +256,7 @@ Basic parameters
        Default: ``[Save to temporary file]``
      - The output (masked) layer. One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -302,7 +302,7 @@ Python code
 
 **Algorithm ID**: ``gdal:clipvectorbypolygon``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -355,7 +355,7 @@ Basic parameters
        Default: ``[Save to temporary file]``
      - Specify the output layer. One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
          :start-after: **file_output_types**
          :end-before: **end_file_output_types**
 
@@ -443,7 +443,7 @@ Python code
 
 **Algorithm ID**: ``gdal:dissolve``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -494,7 +494,7 @@ Basic parameters
        Default: ``[Save to temporary file]``
      - Specify the output line layer. One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -539,7 +539,7 @@ Python code
 
 **Algorithm ID**: ``gdal:offsetcurve``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -621,7 +621,7 @@ Basic parameters
        Default: ``[Save to temporary file]``
      - Specify the output buffer layer. One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -666,7 +666,7 @@ Python code
 
 **Algorithm ID**: ``gdal:onesidebuffer``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -718,7 +718,7 @@ Basic parameters
      - Specify the output point layer.
        One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -763,6 +763,6 @@ Python code
 
 **Algorithm ID**: ``gdal:pointsalonglines``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**

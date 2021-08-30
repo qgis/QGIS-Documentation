@@ -81,7 +81,7 @@ Python code
 
 **Algorithm ID**: ``taudem:connectdown``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -176,7 +176,7 @@ Python code
 
 **Algorithm ID**: ``taudem:d8flowpathextremeup``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -247,7 +247,7 @@ Python code
 
 **Algorithm ID**: ``taudem:gagewatershed``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -337,7 +337,7 @@ Python code
 
 **Algorithm ID**: ``taudem:lengtharea``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -434,7 +434,7 @@ Python code
 
 **Algorithm ID**: ``taudem:moveoutletstostreams``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -517,7 +517,7 @@ Python code
 
 **Algorithm ID**: ``taudem:peukerdouglas``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -591,7 +591,7 @@ Python code
 
 **Algorithm ID**: ``taudem:peukerdouglasstreamdef``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -666,7 +666,7 @@ Python code
 
 **Algorithm ID**: ``taudem:slopearea``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -805,7 +805,7 @@ Python code
 
 **Algorithm ID**: ``taudem:slopeareastreamdef``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -890,7 +890,7 @@ Python code
 
 **Algorithm ID**: ``taudem:threshold``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -922,7 +922,7 @@ Python code
 
 **Algorithm ID**: ``taudem:streamdefdropanalysis``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1084,7 +1084,7 @@ Python code
 
 **Algorithm ID**: ``taudem:dropanalysis``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1314,7 +1314,7 @@ Python code
 
 **Algorithm ID**: ``taudem:streamnet``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 

@@ -51,7 +51,7 @@ Parameters
      - Specify the output layer containing only the duplicates.
        One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -77,7 +77,7 @@ Python code
 
 **Algorithm ID**: ``gdal:buildvirtualvector``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -133,7 +133,7 @@ Basic parameters
      - Specification of the output layer.
        One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -183,7 +183,7 @@ Python code
 
 **Algorithm ID**: ``gdal:executesql``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -487,7 +487,7 @@ Python code
 
 **Algorithm ID**: ``gdal:importvectorintopostgisdatabaseavailableconnections``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -829,7 +829,7 @@ Python code
 
 **Algorithm ID**: ``gdal:importvectorintopostgisdatabasenewconnection``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -888,7 +888,7 @@ Parameters
      - Specify the output HTML file that includes the file
        information. One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -917,6 +917,6 @@ Python code
 
 **Algorithm ID**: ``gdal:ogrinfo``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**

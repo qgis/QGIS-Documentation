@@ -131,7 +131,7 @@ Python code
 
 **Algorithm ID**: ``gdal:overviews``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -204,7 +204,7 @@ Basic parameters
      - Specification of the output raster layer.
        One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -287,7 +287,7 @@ Python code
 
 **Algorithm ID**: ``gdal:buildvirtualraster``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -498,7 +498,7 @@ Python code
 
 **Algorithm ID**: ``gdal:gdal2tiles``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -576,7 +576,7 @@ Basic parameters
      - Specification of the output raster layer.
        One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -647,7 +647,7 @@ Python code
 
 **Algorithm ID**: ``gdal:merge``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -692,7 +692,7 @@ Basic parameters
        Default: ``[Save to temporary file]``
      - Specify the output (sharpened) raster layer. One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -764,7 +764,7 @@ Python code
 
 **Algorithm ID**: ``gdal:pansharp``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -929,7 +929,7 @@ Basic parameters
        Default: ``[Save to temporary file]``
      - Specify the output (calculated) raster layer. One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -988,7 +988,7 @@ Python code
 
 **Algorithm ID**: ``gdal:rastercalculator``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1061,7 +1061,7 @@ Basic parameters
      - Specify the HTML file for output.
        One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -1108,7 +1108,7 @@ Python code
 
 **Algorithm ID**: ``gdal:gdalinfo``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1176,7 +1176,7 @@ Basic parameters
      - Specify the output folder for the tiles.
        One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **directory_output_types**
           :end-before: **end_directory_output_types**
 
@@ -1187,7 +1187,7 @@ Basic parameters
        Default: ``[Skip output]``
      - Specify the output file for the tiles. One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types_skip**
           :end-before: **end_file_output_types_skip**
 
@@ -1313,7 +1313,7 @@ Python code
 
 **Algorithm ID**: ``gdal:retile``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1384,7 +1384,7 @@ Basic parameters
      - Specify the polygon vector layer to write the index to.
        One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -1448,7 +1448,7 @@ Python code
 
 **Algorithm ID**: ``gdal:tileindex``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 

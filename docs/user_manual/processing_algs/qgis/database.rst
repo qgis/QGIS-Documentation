@@ -134,7 +134,7 @@ Python code
 
 **Algorithm ID**: ``qgis:importintopostgis``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -251,7 +251,7 @@ Python code
 
 **Algorithm ID**: ``qgis:importintospatialite``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -316,7 +316,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specify where to store the GeoPackage file. One of
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -341,7 +341,7 @@ Python code
 
 **Algorithm ID**: ``native:package``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -447,7 +447,7 @@ Python code
 
 **Algorithm ID**: ``qgis:postgisexecuteandloadsql``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -502,7 +502,7 @@ Python code
 
 **Algorithm ID**: ``native:postgisexecutesql``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -555,7 +555,7 @@ Python code
 
 **Algorithm ID**: ``native:spatialiteexecutesql``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -612,6 +612,6 @@ Python code
 
 **Algorithm ID**: ``native:spatialiteexecutesqlregistered``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**

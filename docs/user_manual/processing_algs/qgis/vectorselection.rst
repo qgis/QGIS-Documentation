@@ -74,7 +74,7 @@ Parameters
      - Specify the output vector layer for matching features.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -87,7 +87,7 @@ Parameters
        features.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
           :end-before: **end_layer_output_types_skip**
 
@@ -118,7 +118,7 @@ Python code
 
 **Algorithm ID**: ``qgis:extractbyattribute``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -165,7 +165,7 @@ Parameters
      - Specify the output vector layer for matching features.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -178,7 +178,7 @@ Parameters
        features.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
           :end-before: **end_layer_output_types_skip**
 
@@ -209,7 +209,7 @@ Python code
 
 **Algorithm ID**: ``qgis:extractbyexpression``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -225,7 +225,7 @@ The criteria for adding features to the resulting layer is based on
 the spatial relationship between each feature and the features in an
 additional layer.
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
    :start-after: **geometric_predicates**
    :end-before: **end_geometric_predicates**
 
@@ -281,7 +281,7 @@ Parameters
        features in the comparison layer.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -308,7 +308,7 @@ Python code
 
 **Algorithm ID**: ``qgis:extractbylocation``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -373,7 +373,7 @@ Parameters
        are within the set distance from reference features.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -399,7 +399,7 @@ Python code
 
 **Algorithm ID**: ``native:extractwithindistance``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -458,7 +458,7 @@ Parameters
        selected features.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -484,7 +484,7 @@ Python code
 
 **Algorithm ID**: ``qgis:randomextract``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -550,7 +550,7 @@ Parameters
        selected features.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -576,7 +576,7 @@ Python code
 
 **Algorithm ID**: ``qgis:randomextractwithinsubsets``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -649,7 +649,7 @@ Python code
 
 **Algorithm ID**: ``qgis:randomselection``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -734,7 +734,7 @@ Python code
 
 **Algorithm ID**: ``qgis:randomselectionwithinsubsets``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -829,7 +829,7 @@ Python code
 
 **Algorithm ID**: ``qgis:selectbyattribute``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -899,7 +899,7 @@ Python code
 
 **Algorithm ID**: ``qgis:selectbyexpression``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -914,7 +914,7 @@ The criteria for selecting features is based on the spatial
 relationship between each feature and the features in an additional
 layer.
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
    :start-after: **geometric_predicates**
    :end-before: **end_geometric_predicates**
 
@@ -996,7 +996,7 @@ Python code
 
 **Algorithm ID**: ``qgis:selectbylocation``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1074,7 +1074,7 @@ Python code
 
 **Algorithm ID**: ``native:selectwithindistance``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 

@@ -57,7 +57,7 @@ Parameters
      - Specify the output layer containing only the duplicates.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -83,7 +83,7 @@ Python code
 
 **Algorithm ID**: ``native:assignprojection``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -158,7 +158,7 @@ Python code
 
 **Algorithm ID**: ``native:batchnominatimgeocoder``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -227,7 +227,7 @@ Python code
 
 **Algorithm ID**: ``native:layertobookmarks``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -275,7 +275,7 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specify the output layer. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -301,7 +301,7 @@ Python code
 
 **Algorithm ID**: ``native:bookmarkstolayer``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -360,7 +360,7 @@ Python code
 
 **Algorithm ID**: ``native:createattributeindex``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -415,7 +415,7 @@ Python code
 
 **Algorithm ID**: ``native:createspatialindex``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -481,7 +481,7 @@ Python code
 
 **Algorithm ID**: ``qgis:definecurrentprojection``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -522,7 +522,7 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specify the output layer. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -555,7 +555,7 @@ Python code
 
 **Algorithm ID**: ``native:deleteduplicategeometries``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -604,7 +604,7 @@ Parameters
      - Specify the output layer containing the unique features.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -618,7 +618,7 @@ Parameters
      - Specify the output layer containing only the duplicates.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
           :end-before: **end_layer_output_types_skip**
 
@@ -662,7 +662,7 @@ Python code
 
 **Algorithm ID**: ``native:deleteduplicatesbyattribute``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -729,7 +729,7 @@ Parameters
      - Specify the output vector layer containing the unchanged
        features. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -739,7 +739,7 @@ Parameters
      - Specify the output vector layer containing the added features.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -749,7 +749,7 @@ Parameters
      - Specify the output vector layer containing the deleted
        features. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -795,7 +795,7 @@ Python code
 
 **Algorithm ID**: ``native:detectdatasetchanges``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -836,7 +836,7 @@ Parameters
      - [table]
      - Specify the output geometryless layer. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -862,7 +862,7 @@ Python code
 
 **Algorithm ID**: ``native:dropgeometries``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -957,7 +957,7 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specify the output layer created by the query. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -982,7 +982,7 @@ Python code
 
 **Algorithm ID**: ``qgis:executesql``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1065,7 +1065,7 @@ Parameters
      - Specification of the output DXF file.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -1090,7 +1090,7 @@ Python code
 
 **Algorithm ID**: ``native:dxfexport``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1127,7 +1127,7 @@ Parameters
      - Specify the vector layer for the selected features.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -1153,7 +1153,7 @@ Python code
 
 **Algorithm ID**: ``native:saveselectedfeatures``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1213,7 +1213,7 @@ Python code
 
 **Algorithm ID**: ``native:shpencodinginfo``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1273,7 +1273,7 @@ Parameters
      - Specify the table (geometryless layer) for the CRS
        suggestions (EPSG codes). One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -1299,7 +1299,7 @@ Python code
 
 **Algorithm ID**: ``qgis:findprojection``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1346,7 +1346,7 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specify the output (flattened) layer. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -1372,7 +1372,7 @@ Python code
 
 **Algorithm ID**: ``native:flattenrelationships``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
   
@@ -1465,7 +1465,7 @@ Parameters
      - Specify the output vector layer for the join.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -1478,7 +1478,7 @@ Parameters
        features from first layer.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
           :end-before: **end_layer_output_types_skip**
 
@@ -1519,7 +1519,7 @@ Python code
 
 **Algorithm ID**: ``native:joinattributestable``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1621,7 +1621,7 @@ Parameters
      - Specify the output vector layer for the join.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -1634,7 +1634,7 @@ Parameters
        features from first layer.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
           :end-before: **end_layer_output_types_skip**
 
@@ -1669,7 +1669,7 @@ Python code
 
 **Algorithm ID**: ``native:joinattributesbylocation``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1782,7 +1782,7 @@ Parameters
      - Specify the output vector layer for the join.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -1807,7 +1807,7 @@ Python code
 
 **Algorithm ID**: ``qgis:joinbylocationsummary``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1886,7 +1886,7 @@ Parameters
      - Specify the vector layer containing the joined features.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -1898,7 +1898,7 @@ Parameters
      - Specify the vector layer containing the features that could
        not be joined. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
           :end-before: **end_layer_output_types_skip**
 
@@ -1939,7 +1939,7 @@ Python code
 
 **Algorithm ID**: ``native:joinbynearest``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -2005,7 +2005,7 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specify the output vector layer. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -2031,7 +2031,7 @@ Python code
 
 **Algorithm ID**: ``native:mergevectorlayers``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -2085,7 +2085,7 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specify the output vector layer. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -2110,7 +2110,7 @@ Python code
 
 **Algorithm ID**: ``native:orderbyexpression``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -2160,7 +2160,7 @@ Python code
 
 **Algorithm ID**: ``native:repairshapefile``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -2216,7 +2216,7 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specify the output vector layer. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -2241,7 +2241,7 @@ Python code
 
 **Algorithm ID**: ``native:reprojectlayer``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -2283,7 +2283,7 @@ Basic parameters
        Default: ``[Save to temporary file]``
      - Specify the file to save the features to. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -2348,7 +2348,7 @@ Python code
 
 **Algorithm ID**: ``native:savefeatures``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -2405,7 +2405,7 @@ Python code
 
 **Algorithm ID**: ``native:setlayerencoding``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -2461,7 +2461,7 @@ Parameters
        Default: ``Create temporary layer``
      - Specify output vector layer. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -2486,7 +2486,7 @@ Python code
 
 **Algorithm ID**: ``native:splitfeaturesbycharacter``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -2539,7 +2539,7 @@ Basic parameters
      - Specify the directory for the output layers.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **directory_output_types**
           :end-before: **end_directory_output_types**
 
@@ -2584,7 +2584,7 @@ Python code
 
 **Algorithm ID**: ``native:splitvectorlayer``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -2635,7 +2635,7 @@ Python code
 
 **Algorithm ID**: ``native:truncatetable``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 

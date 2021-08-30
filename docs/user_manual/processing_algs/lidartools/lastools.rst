@@ -180,7 +180,7 @@ Python code
 
 **Algorithm ID**: ``lastools:blast2dem``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -314,7 +314,7 @@ Python code
 
 **Algorithm ID**: ``lastools:blast2iso``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -498,7 +498,7 @@ Python code
 
 **Algorithm ID**: ``lastools:las2dem``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -639,7 +639,7 @@ Python code
 
 **Algorithm ID**: ``lastools:las2iso``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -890,7 +890,7 @@ Python code
 
 **Algorithm ID**: ``lastools:las2las_filter``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1541,7 +1541,7 @@ Python code
 
 **Algorithm ID**: ``lastools:las2las_project``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1786,7 +1786,7 @@ Python code
 
 **Algorithm ID**: ``lastools:las2las_transform``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1885,7 +1885,7 @@ Python code
 
 **Algorithm ID**: ``lastools:las2txt``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1969,7 +1969,7 @@ Python code
 
 **Algorithm ID**: ``lastools:lasindex``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -2146,7 +2146,7 @@ Python code
 
 **Algorithm ID**: ``lastools:lasgrid``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -2345,7 +2345,7 @@ Python code
 
 **Algorithm ID**: ``lastools:lasinfo``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -2484,7 +2484,7 @@ Python code
 
 **Algorithm ID**: ``lastools:lasmerge``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -2566,7 +2566,7 @@ Python code
 
 **Algorithm ID**: ``lastools:lasprecision``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -2631,7 +2631,7 @@ Python code
 
 **Algorithm ID**: ``lastools:lasquery``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -2705,7 +2705,7 @@ Python code
 
 **Algorithm ID**: ``lastools:lasvalidate``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -2813,7 +2813,7 @@ Python code
 
 **Algorithm ID**: ``lastools:laszip``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -3218,6 +3218,6 @@ Python code
 
 **Algorithm ID**: ``lastools:txt2las``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**

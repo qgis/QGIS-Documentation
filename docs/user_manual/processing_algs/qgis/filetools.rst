@@ -38,7 +38,7 @@ Parameters
      - Specification of the file destination.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types_skip**
           :end-before: **end_file_output_types_skip**
 
@@ -63,7 +63,7 @@ Python code
 
 **Algorithm ID**: ``qgis:filedownloader``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 

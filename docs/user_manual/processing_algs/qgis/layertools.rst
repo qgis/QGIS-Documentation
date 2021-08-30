@@ -41,7 +41,7 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specification of the output layer with information. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -67,7 +67,7 @@ Python code
 
 **Algorithm ID**: ``native:exportlayersinformation``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -124,7 +124,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Output spreadsheet with a sheet for every layer. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -153,7 +153,7 @@ Python code
 
 **Algorithm ID**: ``native:exporttospreadsheet``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -199,7 +199,7 @@ Parameters
      - Specify the polygon vector layer for the output extent.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -224,7 +224,7 @@ Python code
 
 **Algorithm ID**: ``qgis:polygonfromlayerextent``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
