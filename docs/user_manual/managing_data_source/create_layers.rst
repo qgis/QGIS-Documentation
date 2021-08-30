@@ -189,29 +189,6 @@ Further management of SpatiaLite layers can be done with :ref:`DB Manager
 <dbmanager>`.
 
 
-.. index:: New GPX layer
-.. _vector_create_gpx:
-
-Creating a new GPX layer
--------------------------
-
-To create a new GPX file:
-
-#. Select :menuselection:`Create Layer -->` |createGPX|
-   :menuselection:`Create new GPX Layer...` from the :menuselection:`Layer` menu.
-#. In the dialog, choose where to save the new file, name it and press :guilabel:`Save`.
-#. Three new layers are added to the :guilabel:`Layers Panel`:
-
-   * a point layer to digitize locations (``waypoints``) with fields storing
-     the name, elevation, comment, description, source, url and url name
-   * a line layer to digitize sequences of locations that make up a planned
-     route (``routes``) with fields storing the name, symbol, number, comment,
-     description, source, url, url name
-   * and a line layer to track the receiver’s movement over time (``tracks``)
-     with fields storing the name, symbol, number, comment, description, source,
-     url, url name.
-#. You can now edit any of them as described in section :ref:`sec_edit_existing_layer`.
-
 
 .. index:: New Mesh layer
 .. _vector_create_mesh:
@@ -257,6 +234,29 @@ The :guilabel:`New Mesh Layer` dialog will be displayed as shown in
    Note that only the frame of the mesh layer is transferred to the new layer;
    their datasets are not copied.
 
+
+.. index:: New GPX layer
+.. _vector_create_gpx:
+
+Creating a new GPX layer
+-------------------------
+
+To create a new GPX file:
+
+#. Select :menuselection:`Create Layer -->` |createGPX|
+   :menuselection:`New GPX Layer...` from the :menuselection:`Layer` menu.
+#. In the dialog, choose where to save the new file, name it and press :guilabel:`Save`.
+#. Three new layers are added to the :guilabel:`Layers Panel`:
+
+   * a point layer to digitize locations (``waypoints``) with fields storing
+     the name, elevation, comment, description, source, url and url name
+   * a line layer to digitize sequences of locations that make up a planned
+     route (``routes``) with fields storing the name, symbol, number, comment,
+     description, source, url, url name
+   * and a line layer to track the receiver’s movement over time (``tracks``)
+     with fields storing the name, symbol, number, comment, description, source,
+     url, url name.
+#. You can now edit any of them as described in section :ref:`sec_edit_existing_layer`.
 
 .. index:: New Temporary Scratch layer
 .. _vector_new_scratch_layer:
