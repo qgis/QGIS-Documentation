@@ -3132,6 +3132,11 @@ pixel range.
 By default the algorithm preserves the original NODATA value, but there 
 is an option to override it.
 
+.. figure:: img/rescale_raster.png
+  :align: center
+
+  Rescaling values of a raster layer from [0 - 50] to [100 - 1000]
+
 Parameters
 ..........
 
@@ -3268,9 +3273,9 @@ Basic parameters
        Default: 1
      - How to choose the target rounded value. Options are:
 
-       0 - Round up
-       1 - Round to nearest
-       2 - Round down
+       * 0 --- Round up
+       * 1 --- Round to nearest
+       * 2 --- Round down
    * - **Number of decimals places**
      - ``DECIMAL_PLACES``
      - [number]

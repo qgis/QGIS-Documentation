@@ -422,6 +422,11 @@ on the:
   :guilabel:`Apply` button of the layer properties dialog in order
   to display the actual min and max values in the widgets.
 
+.. _color_ramp_shader:
+
+Color ramp shader classification
+................................
+
 
 Color rendering
 ---------------

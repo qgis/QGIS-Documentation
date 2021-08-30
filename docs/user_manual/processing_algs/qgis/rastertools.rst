@@ -127,6 +127,11 @@ raster dataset with no NoData pixels.
 The algorithm respects the input raster data type, e.g. a floating point
 fill value will be truncated when applied to an integer raster.
 
+.. figure:: img/fill_nodata.png
+  :align: center
+
+  Filling NoData values (in grey) of a raster
+
 Parameters
 ..........
 

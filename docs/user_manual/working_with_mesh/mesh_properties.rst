@@ -151,54 +151,50 @@ to the current mesh layer.
 Symbology Properties
 --------------------
 
-Click the |symbology| :guilabel:`Symbology` button to activate the dialog
-as shown in the following image:
+Click the |symbology| :guilabel:`Symbology` button to activate the dialog.
+Symbology properties are divided into several tabs:
 
-
-.. _figure_mesh_symbology:
-
-.. figure:: img/mesh_symbology.png
-   :align: center
-
-   Mesh Layer Symbology
-
-Symbology properties are divided in several tabs:
-
-* :ref:`General <mesh_symbology_general>`
-* :ref:`Contours Symbology <mesh_symbology_contours>`
-* :ref:`Vectors Symbology <mesh_symbology_vectors>`
+* :ref:`Datasets <mesh_symbology_datasets>`
+* :ref:`Contours <mesh_symbology_contours>`
+* :ref:`Vectors <mesh_symbology_vectors>`
 * :ref:`Rendering <mesh_symbology_rendering>`
+* :ref:`Stacked mesh averaging method <mesh_stacked_averaging>`
 
-.. _mesh_symbology_general:
+.. _mesh_symbology_datasets:
 
-General 
-.......
+Datasets
+........
 
-The tab |general| presents the following items:
+The tab |general| :sup:`Datasets` is the main place to control and set which
+datasets will be used for the layer. It presents the following items:
 
-* groups available in the mesh dataset
-* dataset in the selected group(s), for example, if the layer has a temporal dimension
-* metadata if available
-* :ref:`blending mode <blend-modes>` available for the selected dataset.
+* :guilabel:`Groups` available in the mesh dataset, with whether they provide:
 
+  * |meshcontoursoff| scalar dataset
+  * or |meshvectorsoff| vector dataset: by default, each vector dataset has
+    a scalar dataset representing its magnitude automatically generated.
 
-The slider |slider|, the combo box |selectString| and the :guilabel:`|<`,
-:guilabel:`<`, :guilabel:`>`, :guilabel:`>|` buttons
-allow to explore another dimension of the data, if available.
-As the slider moves, the metadata is presented accordingly.
-See the figure :ref:`Mesh groups <figure_mesh_groups>` below as an example.
-The map canvas will display the selected dataset group as well.
+  Click on the icon next to the dataset name to select the group and type of
+  data to represent.
+* :guilabel:`Selected dataset group(s) metadata`, with details on:
 
-.. _figure_mesh_groups:
+  * the mesh type: edges or faces
+  * the data type: vertices, edges, faces or volume
+  * whether it's of vector type or not
+  * the original name in the mesh layer
+  * the unit, if applicable
+* :ref:`blending mode <blend-modes>` available for the selected datasets.
 
-.. figure:: img/mesh_groups.png
+.. _figure_mesh_symbology_datasets:
+
+.. figure:: img/mesh_symbology_datasets.png
    :align: center
 
-   Dataset in Selected Group(s)
+   Mesh Layer Datasets
 
 
-
-You can apply symbology to each group using the tabs.
+You can apply symbology to the selected vector and/or scalar group using
+the next tabs.
 
 
 .. _mesh_symbology_contours:
@@ -206,11 +202,11 @@ You can apply symbology to each group using the tabs.
 Contours Symbology
 ..................
 
-Under :guilabel:`Groups`, click on |meshcontoursoff| to show contours with
-default visualization parameters.
+.. note:: The |meshcontours| :sup:`Contours` tab can be activated only if a
+  scalar dataset has been selected in the |general| :guilabel:`Datasets` tab.
 
-In the tab |meshcontours| you can see and change the current visualization
-options of contours for the selected group, as shown in
+In the |meshcontours| :sup:`Contours` tab you can see and change the current
+visualization options of contours for the selected group, as shown in
 :numref:`figure_mesh_symbology_contours` below:
 
 .. _figure_mesh_symbology_contours:
@@ -220,27 +216,13 @@ options of contours for the selected group, as shown in
 
    Styling Contours in a Mesh Layer
 
-Use the slide bar or combo box to set the opacity of the current group.
-
-Use :guilabel:`Load` to adjust the min and max values of the current group.
-
-The :guilabel:`Interpolation` list contains three options to render contours:
-:guilabel:`Linear`, :guilabel:`Discrete` and :guilabel:`Exact`.
-
-The :guilabel:`Color ramp` widget opens the :ref:`color ramp drop-down shortcut <color_ramp_widget>`.
-
-The :guilabel:`Label unit suffix` is a label added after the value in the legend.
-
-By selecting :guilabel:`Continuous` in the classification :guilabel:`Mode`,
-QGIS creates classes automatically considering the :guilabel:`Min` and
-:guilabel:`Max` values. With ‘Equal interval’, you only need to select the number of classes
-using the combo box :guilabel:`Classes` and press the button :guilabel:`Classify`.
-
-The button |signPlus| :sup:`Add values manually` adds a value
-to the individual color table. The button |signMinus| :sup:`Remove selected row`
-deletes a value from the individual color table. Double clicking on the value column
-lets you insert a specific value. Double clicking on the color column opens the dialog
-:guilabel:`Change color`, where you can select a color to apply on that value.
+* Use the slider or the spinbox to set the :guilabel:`Opacity` of the current
+  group.
+* Use |refresh| :sup:`Load` to adjust the min and max values of the current group
+  or enter custom values if you want to exclude some.
+* Select the :guilabel:`Resampling method`
+* Classify the dataset using the :ref:`color ramp shader <color_ramp_shader>`
+  classification.
 
 
 .. _mesh_symbology_vectors:
@@ -248,37 +230,66 @@ lets you insert a specific value. Double clicking on the color column opens the 
 Vectors Symbology
 .................
 
-In the tab |general|, click on |meshcontoursoff| to display vectors if available.
-The map canvas will display the vectors in the selected group with default parameters.
-Click on the tab |meshvectors| to change the visualization parameters for vectors
-as shown in the image below:
+.. note:: The |meshvectors| :sup:`Vectors` tab can be activated only if a
+  vector dataset has been selected in the |general| :guilabel:`Datasets` tab.
 
-.. _figure_mesh_symbology_vector:
+In the |meshcontours| :sup:`Vectors` tab you can see and change the current
+visualization options of vectors for the selected group, as shown in
+:numref:`figure_mesh_symbology_vectors`:
 
-.. figure:: img/mesh_symbology_vector.png
+.. _figure_mesh_symbology_vectors:
+
+.. figure:: img/mesh_symbology_vectors.png
    :align: center
 
-   Styling Vectors in a Mesh Layer
+   Styling Vectors in a Mesh Layer with arrows
 
-The line width can be set using the combo box or typing the value.
-The color widget opens the dialog :guilabel:`Change color`,
-where you can select a color to apply to vectors.
+Mesh vector dataset can be styled using various types of :guilabel:`Symbology`:
 
-Enter values for :guilabel:`Min` and :guilabel:`Max` to filter vectors according to their magnitude.
+* **Arrows**: vectors are represented with arrows at the same place as they are
+  defined in the raw dataset (i.e. on the nodes or centre of elements) or on
+  a user-defined grid (hence, they are evenly distributed).
+  The arrow length is proportional to the magnitude of the arrow as defined
+  in the raw data but can be scaled by various methods.
+* **Streamlines**: vectors are represented with streamlines seeded from start
+  points. The seeding points can start from the vertices of the mesh, from
+  a user grid or randomly.
+* **Traces**: a nicer animation of the streamlines, the kind of effect you get
+  when you randomly throws sand in the water and see where the sand items flows.
 
-Check on the box |checkbox| :guilabel:`Display Vectors on User Grid` and specify
-the :guilabel:`X spacing` and the :guilabel:`Y spacing`,
-QGIS will render the vector considering the given spacing.
+Available properties depend on the selected symbology as shown in the following table.
 
-With the Head Options :guilabel:`Head Options`, QGIS allows the shape of the arrow
-head to be set by specifying width and length (in percentage).
++----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
+| Label                                  | Description and Properties                                                                | Arrow      | Streamlines | Traces     |
++========================================+===========================================================================================+============+=============+============+
+| :guilabel:`Line width`                 | Width of the vector representation                                                        | |checkbox| | |checkbox|  | |checkbox| |
++----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
+| :guilabel:`Coloring method`            | * a :guilabel:`Single color` assigned to all vectors                                      | |checkbox| | |checkbox|  | |checkbox| |
+|                                        | * or a variable color based on vectors magnitude, using a                                 |            |             |            |
+|                                        |   :ref:`Color ramp shader <color_ramp_shader>`                                            |            |             |            |
++----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
+| :guilabel:`Filter by magnitude`        | Only vectors whose length for the selected dataset falls between a :guilabel:`Min`        | |checkbox| | |checkbox|  |            |
+|                                        | and :guilabel:`Max` range are displayed                                                   |            |             |            |
++----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
+| :guilabel:`Display on user grid`       | Places the vector on a grid with custom :guilabel:`X spacing` and :guilabel:`Y spacing`   | |checkbox| | |checkbox|  |            |
+|                                        | and interpolates their length based on neighbours                                         |            |             |            |
++----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
+| :guilabel:`Head options`               | :guilabel:`Length` and :guilabel:`Width` of the arrow head, as a percentage of its shaft  | |checkbox| |             |            |
+|                                        | length                                                                                    |            |             |            |
++----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
+| :guilabel:`Arrow length`               | * **Defined by Min and Max**: You specify the minimum and maximum length for the arrows,  | |checkbox| |             |            |
+|                                        |   QGIS will interpolate their size based on the underlying vector's magnitude             |            |             |            |
+|                                        | * **Scale to magnitude**: arrow length is proportional to their vector's magnitude        |            |             |            |
+|                                        | * **Fixed**: all the vectors are shown with the same length                               |            |             |            |
++----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
+| :guilabel:`Streamlines seeding method` | * **On mesh/grid**: relies on the user grid to display the vectors                        |            | |checkbox|  |            |
+|                                        | * **Randomly**: vector placement is randomly done with respect to a certain density       |            |             |            |
++----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
+| :guilabel:`Particles count`            | The amount of "sand" you want to throw into visualisation                                 |            |             | |checkbox| |
++----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
+| :guilabel:`Max tail length`            | The time until the particle fades out                                                     |            |             | |checkbox| |
++----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
 
-Vector's :guilabel:`Arrow length` can be rendered in QGIS in three different ways:
-
-* Defined by Min and Max: You specify the minimum and maximum length for the vectors,
-  QGIS will adjust their visualization accordingly
-* Scale to magnitude: You specify the (multiplying) factor to use
-* Fixed: all the vectors are shown with the same length
 
 .. _mesh_symbology_rendering:
 
@@ -301,6 +312,25 @@ as shown in :numref:`figure_mesh_symbology_grid`:
    
    
 The line width and color can be changed in this dialog, and both the grid renderings can be turned off.
+
+.. _mesh_stacked_averaging:
+
+Stacked mesh averaging method
+.............................
+
+3D layered meshes consist of multiple stacked 2D unstructured meshes each
+extruded in the vertical direction (``levels``) by means of a vertical
+coordinate. The vertices and faces have the same topology in each vertical level.
+Values are usually stored on the volumes that are regularly stacked over
+base 2d mesh. In order to visualise them on 2D canvas, you need to convert
+values on volumes (3d) to values on faces (2d) that can be shown in mesh layer.
+The |meshAveraging| :sup:`Stacked mesh averaging method` provides different
+averaging/interpolation methods to handle this.
+
+You can select the method to derive the 2D datasets and corresponding parameters
+(level index, depth or height values). For each method, an example of application
+is shown in the dialog but you can read more on the methods at
+https://fvwiki.tuflow.com/index.php?title=Depth_Averaging_Results.
 
 
 .. index:: Metadata, Metadata editor, Keyword
@@ -336,6 +366,8 @@ See :ref:`metadatamenu` for more information.
    :width: 1.5em
 .. |general| image:: /static/common/general.png
    :width: 1.5em
+.. |meshaveraging| image:: /static/common/meshaveraging.png
+   :width: 1.5em
 .. |meshcontours| image:: /static/common/meshcontours.png
    :width: 1.5em
 .. |meshcontoursoff| image:: /static/common/meshcontoursoff.png
@@ -343,6 +375,8 @@ See :ref:`metadatamenu` for more information.
 .. |meshframe| image:: /static/common/meshframe.png
    :width: 1.5em
 .. |meshvectors| image:: /static/common/meshvectors.png
+   :width: 1.5em
+.. |meshvectorsoff| image:: /static/common/meshvectorsoff.png
    :width: 1.5em
 .. |refresh| image:: /static/common/mActionRefresh.png
    :width: 1.5em

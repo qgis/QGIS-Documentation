@@ -92,7 +92,7 @@ Icon                            Substitution                        Icon        
 |addWcsLayer|                   ``|addWcsLayer|``                   |addWfsLayer|                   ``|addWfsLayer|``
 |newVectorLayer|                ``|newVectorLayer|``                |newSpatiaLiteLayer|            ``|newSpatiaLiteLayer|``
 |newGeoPackageLayer|            ``|newGeoPackageLayer|``            |createMemory|                  ``|createMemory|``
-|newVirtualLayer|               ``|newVirtualLayer|``
+|newVirtualLayer|               ``|newVirtualLayer|``               |newMeshLayer|                  ``|newMeshLayer|``
 |dbManager|                     ``|dbManager|``                     |gdal|                          ``|gdal|``
 |geoPackage|                    ``|geoPackage|``                    |spatialite|                    ``|spatialite|``
 |virtualLayer|                  ``|virtualLayer|``                  |wms|                           ``|wms|``
@@ -422,7 +422,7 @@ Icon                                Substitution                            Icon
 |pointDisplacementSymbol|           ``|pointDisplacementSymbol|``           |pointClusterSymbol|           ``|pointClusterSymbol|``
 |meshcontours|                      ``|meshcontours|``                      |meshcontoursoff|              ``|meshcontoursoff|``
 |meshvectors|                       ``|meshvectors|``                       |meshvectorsoff|               ``|meshvectorsoff|``
-|meshframe|                         ``|meshframe|``
+|meshframe|                         ``|meshframe|``                         |meshaveraging|                ``|meshaveraging|``
 |sum|                               ``|sum|``                               |sort|                         ``|sort|``
 |paintEffects|                      ``|paintEffects|``                      |mapIdentification|            ``|mapIdentification|``
 |styleManager|                      ``|styleManager|``                      |iconView|                     ``|iconView|``
@@ -1020,6 +1020,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |mergeFeatures| image:: /static/common/mActionMergeFeatures.png
    :width: 1.5em
+.. |meshaveraging| image:: /static/common/meshaveraging.png
+   :width: 1.5em
 .. |meshcontours| image:: /static/common/meshcontours.png
    :width: 1.5em
 .. |meshcontoursoff| image:: /static/common/meshcontoursoff.png
@@ -1067,6 +1069,8 @@ Icon                            Substitution                        Icon        
 .. |newLayout| image:: /static/common/mActionNewLayout.png
    :width: 1.5em
 .. |newMap| image:: /static/common/mActionNewMap.png
+   :width: 1.5em
+.. |newMeshLayer| image:: /static/common/mActionNewMeshLayer.png
    :width: 1.5em
 .. |newPage| image:: /static/common/mActionNewPage.png
    :width: 1.5em

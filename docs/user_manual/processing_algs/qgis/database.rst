@@ -40,7 +40,7 @@ Parameters
      - Name of the database connection (not the database name).
        Existing connections will be shown in the combobox.
    * - **Schema (schema name)**
-       
+
        Optional
      - ``SCHEMA``
      - [string]
@@ -69,7 +69,7 @@ Parameters
    * - **Geometry column**
      - ``GEOMETRY_COLUMN``
      - [string]
-       
+
        Default: 'geom'
      - Defines the name of the geometry column in the
        new PostGIS table.
@@ -80,13 +80,13 @@ Parameters
        Optional
      - ``ENCODING``
      - [string]
-       
+
        Default: 'UTF-8'
      - Defines the encoding of the output layer
    * - **Overwrite**
      - ``OVERWRITE``
      - [boolean]
-       
+
        Default: True
      - If the specified table exists, setting this option to
        ``True`` will make sure that it is deleted and a new
@@ -97,27 +97,27 @@ Parameters
    * - **Create spatial index**
      - ``CREATEINDEX``
      - [boolean]
-       
+
        Default: True
      - Specifies whether to create a spatial index or not
    * - **Convert field names to lowercase**
      - ``LOWERCASE_NAMES``
      - [boolean]
-       
+
        Default: True
      - Converts the field names of the input vector layer
        to lowercase
    * - **Drop length constraint on character fields**
      - ``DROP_STRING_LENGTH``
      - [boolean]
-       
+
        Default: False
      - Should length constraints on character fields be
        dropped or not
    * - **Create single-part geometries instead of multi-part**
      - ``FORCE_SINGLEPART``
      - [boolean]
-       
+
        Default: False
      - Should the features of the output layer be
        single-part instead of multi-part.
@@ -185,7 +185,7 @@ Parameters
    * - **Geometry column**
      - ``GEOMETRY_COLUMN``
      - [string]
-       
+
        Default: 'geom'
      - Defines the name of the geometry column in the new
        SpatiaLite table.
@@ -196,13 +196,13 @@ Parameters
        Optional
      - ``ENCODING``
      - [string]
-       
+
        Default: 'UTF-8'
      - Defines the encoding of the output layer
    * - **Overwrite**
      - ``OVERWRITE``
      - [boolean]
-       
+
        Default: True
      - If the specified table exists, setting this option to
        ``True`` will make sure that it is deleted and a new
@@ -220,21 +220,21 @@ Parameters
    * - **Convert field names to lowercase**
      - ``LOWERCASE_NAMES``
      - [boolean]
-       
+
        Default: True
      - Convert the field names of the input vector layer
        to lowercase
    * - **Drop length constraint on character fields**
      - ``DROP_STRING_LENGTH``
      - [boolean]
-       
+
        Default: False
      - Should length constraints on character fields be
        dropped or not
    * - **Create single-part geometries instead of multi-part**
      - ``FORCE_SINGLEPART``
      - [boolean]
-       
+
        Default: False
      - Should the features of the output layer be
        single-part instead of multi-part.
@@ -289,7 +289,7 @@ Parameters
    * - **Overwrite existing GeoPackage**
      - ``OVERWRITE``
      - [boolean]
-     
+
        Default: False
      - If the specified GeoPackage exists, setting this option to
        ``True`` will make sure that it is deleted and a new one
@@ -298,7 +298,7 @@ Parameters
    * - **Save layer styles into GeoPackage**
      - ``SAVE_STYLES``
      - [boolean]
-     
+
        Default: True
      - Save the layer styles
    * - **Save only selected features**
@@ -331,7 +331,6 @@ Outputs
      - Name
      - Type
      - Description
-
    * - **Layers within new package**
      - ``OUTPUT_LAYERS``
      - [string] [list]
@@ -359,9 +358,34 @@ queries on the layer itself.
 
 .. _qgis_postgis_execute_sql_example:
 
-.. include:: qgis_algs_include.rst
-   :start-after: **postgisexecutesqlexample**
-   :end-before: **end_postgisexecutesqlexample**
+.. **postgisexecutesqlexample**
+
+.. The following section is included in database algorithms such as
+ qgispostgisexecutesql, qgispostgisexecuteandloadsql
+
+**Example**
+
+#. Set all the values of an existing field to a fixed value. The SQL query string
+   will be:
+
+   .. code-block:: sql
+
+    UPDATE your_table SET field_to_update=20;
+
+   In the example above, the values of the field ``field_to_update`` of the table
+   ``your_table`` will be all set to ``20``.
+
+#. Create a new ``area`` column and calculate the area of each feature with the
+   ``ST_AREA`` PostGIS function.
+
+   .. code-block:: sql
+
+    -- Create the new column "area" on the table your_table"
+    ALTER TABLE your_table ADD COLUMN area double precision;
+    -- Update the "area" column and calculate the area of each feature:
+    UPDATE your_table SET area=ST_AREA(geom);
+
+.. **end_postgisexecutesqlexample**
 
 .. seealso:: :ref:`qgispostgisexecutesql`, :ref:`qgisexecutesql`,
  :ref:`qgisspatialiteexecutesql`
@@ -377,7 +401,6 @@ Parameters
      - Name
      - Type
      - Description
-
    * - **Database (connection name)**
      - ``DATABASE``
      - [string]
@@ -391,7 +414,7 @@ Parameters
    * - **Unique ID field name**
      - ``ID_FIELD``
      - [string]
-       
+
        Default: id
      - Sets the primary key field (a column in the result table)
    * - **Geometry field name**
@@ -399,7 +422,7 @@ Parameters
        Optional
      - ``GEOMETRY_FIELD``
      - [string]
-       
+
        Default: 'geom'
      - Name of the geometry column (a column in the result table)
 
@@ -414,7 +437,6 @@ Outputs
      - Name
      - Type
      - Description
-
    * - **SQL layer**
      - ``OUTPUT``
      - [vector: any]
@@ -440,13 +462,12 @@ connected to QGIS.
 The algorithm **won't** create a new layer: it is designed to run
 queries on the layer itself.
 
-.. include:: qgis_algs_include.rst
-   :start-after: **postgisexecutesqlexample**
-   :end-before: **end_postgisexecutesqlexample**
+.. include:: ./database.rst
+   :start-after: .. **postgisexecutesqlexample**
+   :end-before: .. **end_postgisexecutesqlexample**
 
 .. seealso:: :ref:`qgispostgisexecuteandloadsql`,
    :ref:`qgisexecutesql`, :ref:`qgisspatialiteexecutesql`
-
 
 Parameters
 ..........
@@ -459,7 +480,6 @@ Parameters
      - Name
      - Type
      - Description
-
    * - **Database (connection name)**
      - ``DATABASE``
      - [string]
@@ -512,7 +532,6 @@ Parameters
      - Name
      - Type
      - Description
-
    * - **File Database**
      - ``DATABASE``
      - [vector]
@@ -520,7 +539,7 @@ Parameters
    * - **SQL query**
      - ``SQL``
      - [string]
-       
+
        Default: ''
      - Defines the SQL query, for example
        ``'UPDATE my_table SET field=10'``.
@@ -577,7 +596,7 @@ Parameters
    * - **SQL query**
      - ``SQL``
      - [string]
-       
+
        Default: ''
      - Defines the SQL query, for example
        ``'UPDATE my_table SET field=10'``.

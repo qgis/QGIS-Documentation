@@ -361,9 +361,11 @@ Symbol levels also work for classified layers (i.e., layers having multiple
 symbols). Since we haven't covered classification yet, you will work with some
 rudimentary pre-classified data.
 
-#. Create a new map and add only the :guilabel:`roads` dataset.
-#. Load the style file :file:`advanced_levels_demo.qml` provided in
-   :file:`exercise_data/styles`.
+#. Create a new project and add only the :guilabel:`roads` dataset.
+#. Apply the style file :file:`advanced_levels_demo.qml` provided in
+   :file:`exercise_data/styles` to the layer. This can be done through the
+   :menuselection:`Style --> Load Style...` combobox at the bottom of the
+   :guilabel:`Layer Properties` dialog.
 #. Zoom in to the |majorUrbanName| area.
 #. Using symbol layers, ensure that the outlines of layers flow into one another
    as per the image below:
