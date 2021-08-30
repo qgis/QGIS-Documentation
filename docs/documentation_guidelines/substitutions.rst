@@ -422,7 +422,7 @@ Icon                                Substitution                            Icon
 |pointDisplacementSymbol|           ``|pointDisplacementSymbol|``           |pointClusterSymbol|           ``|pointClusterSymbol|``
 |meshcontours|                      ``|meshcontours|``                      |meshcontoursoff|              ``|meshcontoursoff|``
 |meshvectors|                       ``|meshvectors|``                       |meshvectorsoff|               ``|meshvectorsoff|``
-|meshframe|                         ``|meshframe|``
+|meshframe|                         ``|meshframe|``                         |meshaveraging|                ``|meshaveraging|``
 |sum|                               ``|sum|``                               |sort|                         ``|sort|``
 |paintEffects|                      ``|paintEffects|``                      |mapIdentification|            ``|mapIdentification|``
 |styleManager|                      ``|styleManager|``                      |iconView|                     ``|iconView|``
@@ -1019,6 +1019,8 @@ Icon                            Substitution                        Icon        
 .. |mergeFeatAttributes| image:: /static/common/mActionMergeFeatureAttributes.png
    :width: 1.5em
 .. |mergeFeatures| image:: /static/common/mActionMergeFeatures.png
+   :width: 1.5em
+.. |meshaveraging| image:: /static/common/meshaveraging.png
    :width: 1.5em
 .. |meshcontours| image:: /static/common/meshcontours.png
    :width: 1.5em
