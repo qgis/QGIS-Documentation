@@ -1082,6 +1082,11 @@ copy or paste layer properties (style, scale, CRS...).
      -
      - :guilabel:`Data Source Manager`
      - :ref:`vector_create_mesh`
+   * - :menuselection:`-->` |createGPX|
+       :guilabel:`New GPX Layer...`
+     -
+     - :guilabel:`Data Source Manager`
+     - :ref:`vector_create_gpx`
    * - :menuselection:`-->` |newVirtualLayer|
        :guilabel:`New Virtual Layer...`
      -
@@ -2851,6 +2856,8 @@ Click the icon to open the Plugin Manager dialog.
 .. |circularStringRadius| image:: /static/common/mActionCircularStringRadius.png
    :width: 1.5em
 .. |copyrightLabel| image:: /static/common/copyright_label.png
+   :width: 1.5em
+.. |createGPX| image:: /static/common/create_gpx.png
    :width: 1.5em
 .. |createMemory| image:: /static/common/mActionCreateMemory.png
    :width: 1.5em
