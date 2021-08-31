@@ -50,7 +50,7 @@ Python code
 
 **Algorithm ID**: ``native:condition``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -101,7 +101,7 @@ Python code
 
 **Algorithm ID**: ``native:createdirectory``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -162,7 +162,7 @@ Python code
 
 **Algorithm ID**: ``native:filter``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -231,7 +231,7 @@ Python code
 
 **Algorithm ID**: ``native:filterbygeometry``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -289,7 +289,7 @@ Python code
 
 **Algorithm ID**: ``native:filterlayersbytype``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -341,7 +341,7 @@ Python code
 
 **Algorithm ID**: ``native:loadlayer``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -386,7 +386,7 @@ Python code
 
 **Algorithm ID**: ``native:raiseexception``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -431,7 +431,7 @@ Python code
 
 **Algorithm ID**: ``native:raisewarning``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -483,7 +483,7 @@ Python code
 
 **Algorithm ID**: ``native:renamelayer``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -534,7 +534,7 @@ Python code
 
 **Algorithm ID**: ``native:savelog``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -574,7 +574,7 @@ Python code
 
 **Algorithm ID**: ``native:setprojectvariable``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -626,7 +626,7 @@ Python code
 
 **Algorithm ID**: ``native:stringconcatenation``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -730,7 +730,7 @@ Python code
 
 **Algorithm ID**: ``qgis:variabledistancebuffer``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 

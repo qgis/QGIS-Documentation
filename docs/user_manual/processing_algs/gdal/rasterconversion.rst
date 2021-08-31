@@ -53,7 +53,7 @@ Parameters
      - Specification of the output file.
        One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -78,7 +78,7 @@ Python code
 
 **Algorithm ID**: ``gdal:gdal2xyz``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -133,7 +133,7 @@ Parameters
      - Specification of the output file.
        One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
   
@@ -158,7 +158,7 @@ Python code
 
 **Algorithm ID**: ``gdal:pcttorgb``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -225,7 +225,7 @@ Basic parameters
      - Specification of the output (polygon) vector layer.
        One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -270,7 +270,7 @@ Python code
 
 **Algorithm ID**: ``gdal:polygonize``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -318,7 +318,7 @@ Basic parameters
        Default:  ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -387,7 +387,7 @@ Python code
 
 **Algorithm ID**: ``gdal:rearrange_bands``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -442,7 +442,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -467,7 +467,7 @@ Python code
 
 **Algorithm ID**: ``gdal:rgbtopct``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -531,7 +531,7 @@ Basic parameters
      - Specification of the output (translated) raster layer.
        One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -608,6 +608,6 @@ Python code
 
 **Algorithm ID**: ``gdal:translate``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**

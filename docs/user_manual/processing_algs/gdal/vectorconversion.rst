@@ -42,7 +42,7 @@ Basic parameters
      - Specification of the output vector layer.
        One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -92,7 +92,7 @@ Python code
 
 **Algorithm ID**: ``gdal:convertformat``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -187,7 +187,7 @@ Python code
 
 **Algorithm ID**: ``gdal:rasterize_over``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -282,7 +282,7 @@ Python code
 
 **Algorithm ID**: ``gdal:rasterize_over_fixed_value``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -392,7 +392,7 @@ Basic parameters
      - Specification of the output raster layer.
        One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -483,7 +483,7 @@ Python code
 
 **Algorithm ID**: ``gdal:rasterize``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 

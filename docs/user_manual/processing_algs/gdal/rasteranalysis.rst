@@ -101,7 +101,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Output raster layer. One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -127,7 +127,7 @@ Python code
 
 **Algorithm ID**: ``gdal:aspect``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -216,7 +216,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Output raster layer. One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -242,7 +242,7 @@ Python code
 
 **Algorithm ID**: ``gdal:colorrelief``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -342,7 +342,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specification of the output raster layer. One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -368,7 +368,7 @@ Python code
 
 **Algorithm ID**: ``gdal:fillnodata``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -517,7 +517,7 @@ Parameters
      - Specify the output raster layer with interpolated values.
        One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -543,7 +543,7 @@ Python code
 
 **Algorithm ID**: ``gdal:griddatametrics``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -671,7 +671,7 @@ Parameters
      - Specify the output raster layer with interpolated values.
        One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -697,7 +697,7 @@ Python code
 
 **Algorithm ID**: ``gdal:gridinversedistancenearestneighbor``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -845,7 +845,7 @@ Parameters
      - Specify the output raster layer with interpolated values.
        One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -871,7 +871,7 @@ Python code
 
 **Algorithm ID**: ``gdal:gridinversedistance``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -977,7 +977,7 @@ Parameters
      - Specify the output raster layer with interpolated values.
        One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -1003,7 +1003,7 @@ Python code
 
 **Algorithm ID**: ``gdal:gridlinear``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1133,7 +1133,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specify the output raster layer. One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -1159,7 +1159,7 @@ Python code
 
 **Algorithm ID**: ``gdal:gridaverage``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1278,7 +1278,7 @@ Parameters
      - Specify the output raster layer with interpolated values.
        One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -1304,7 +1304,7 @@ Python code
 
 **Algorithm ID**: ``gdal:gridnearestneighbor``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1428,7 +1428,7 @@ Parameters
      - Specify the output raster layer with interpolated values.
        One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -1454,7 +1454,7 @@ Python code
 
 **Algorithm ID**: ``gdal:hillshade``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1534,7 +1534,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specify the output raster layer. One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -1560,7 +1560,7 @@ Python code
 
 **Algorithm ID**: ``gdal:nearblack``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1706,7 +1706,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specify the output raster layer. One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -1732,7 +1732,7 @@ Python code
 
 **Algorithm ID**: ``gdal:proximity``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1801,7 +1801,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specify the output raster layer. One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -1828,7 +1828,7 @@ Python code
 
 **Algorithm ID**: ``gdal:roughness``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1904,7 +1904,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specify the output raster layer. One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -1930,7 +1930,7 @@ Python code
 
 **Algorithm ID**: ``gdal:sieve``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -2022,7 +2022,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specify the output raster layer. One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -2048,7 +2048,7 @@ Python code
 
 **Algorithm ID**: ``gdal:slope``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -2115,7 +2115,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specify the output raster layer. One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -2142,7 +2142,7 @@ Python code
 
 **Algorithm ID**: ``gdal:triterrainruggednessindex``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -2208,7 +2208,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specify the output raster layer. One of:
 
-       .. include:: ../qgis/qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -2234,6 +2234,6 @@ Python code
 
 **Algorithm ID**: ``gdal:tpitopographicpositionindex``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**

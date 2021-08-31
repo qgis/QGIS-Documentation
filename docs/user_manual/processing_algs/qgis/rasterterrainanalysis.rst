@@ -87,7 +87,7 @@ Python code
 
 **Algorithm ID**: ``qgis:aspect``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -201,7 +201,7 @@ Python code
 
 **Algorithm ID**: ``qgis:hillshade``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -297,7 +297,7 @@ Python code
 
 **Algorithm ID**: ``qgis:hypsometriccurves``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -422,7 +422,7 @@ Python code
 
 **Algorithm ID**: ``qgis:relief``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -504,7 +504,7 @@ Python code
 
 **Algorithm ID**: ``qgis:ruggednessindex``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -584,6 +584,6 @@ Python code
 
 **Algorithm ID**: ``qgis:slope``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**

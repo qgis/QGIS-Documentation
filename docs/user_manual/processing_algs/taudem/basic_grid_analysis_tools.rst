@@ -163,7 +163,7 @@ Outputs
 
 **Algorithm ID**: ``taudem:areadinf``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -309,7 +309,7 @@ Outputs
 
 **Algorithm ID**: ``taudem:dinfflowdir``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -434,7 +434,7 @@ Outputs
 
 **Algorithm ID**: ``taudem:aread8``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -556,7 +556,7 @@ Outputs
 
 **Algorithm ID**: ``taudem:d8flowdir``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -733,7 +733,7 @@ Outputs
 
 **Algorithm ID**: ``taudem:gridnet``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -816,7 +816,7 @@ Outputs
 
 **Algorithm ID**: ``taudem:pitremove``
 
-.. include:: ../qgis/qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 

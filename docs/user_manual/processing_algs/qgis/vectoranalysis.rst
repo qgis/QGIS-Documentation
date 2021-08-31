@@ -52,7 +52,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specification of the file for the calculated statistics. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types_skip**
           :end-before: **end_file_output_types_skip**
 
@@ -158,7 +158,7 @@ Python code
 
 **Algorithm ID**: ``qgis:basicstatisticsforfields``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -203,7 +203,7 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specification of the output (line) layer. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -249,7 +249,7 @@ Python code
 
 **Algorithm ID**: ``qgis:climbalongline``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -330,7 +330,7 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specification of the output layer. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types_append**
           :end-before: **end_layer_output_types_append**
 
@@ -356,7 +356,7 @@ Python code
 
 **Algorithm ID**: ``native:countpointsinpolygon``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -412,7 +412,7 @@ Basic parameters
        Default: ``[Create temporary layer]``
      - Specify the vector layer for the result of the clustering. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -479,7 +479,7 @@ Python code
 
 **Algorithm ID**: ``native:dbscanclustering``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -561,7 +561,7 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specification of the output vector layer. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -590,7 +590,7 @@ Python code
 
 **Algorithm ID**: ``qgis:distancematrix``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -659,7 +659,7 @@ Parameters
      - Specify the output line vector layer connecting the matching points.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -686,7 +686,7 @@ Python code
 
 **Algorithm ID**: ``qgis:distancetonearesthublinetohub``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -751,7 +751,7 @@ Parameters
      - Specify the output point vector layer with the nearest hub.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -778,7 +778,7 @@ Python code
 
 **Algorithm ID**: ``qgis:distancetonearesthubpoints``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -870,7 +870,7 @@ Basic parameters
        Default: ``[Create temporary layer]``
      - Specify the output hub line vector layer. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -922,7 +922,7 @@ Python code
 
 **Algorithm ID**: ``native:hublines``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -978,7 +978,7 @@ Parameters
      - Specify the output vector layer for generated the clusters.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -1030,7 +1030,7 @@ Python code
 
 **Algorithm ID**: ``native:kmeansclustering``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1072,7 +1072,7 @@ Parameters
        Default:``[Create temporary layer]``
      - Specify the summary table layer with unique values. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
           :end-before: **end_layer_output_types_skip**
 
@@ -1086,7 +1086,7 @@ Parameters
      - HTML report of unique values in the
        :menuselection:`Processing --> Results viewer`. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types_skip**
           :end-before: **end_file_output_types_skip**
 
@@ -1125,7 +1125,7 @@ Python code
 
 **Algorithm ID**: ``qgis:listuniquevalues``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1181,7 +1181,7 @@ Parameters
        Default:``[Create temporary layer]``
      - Specify the (point vector) layer for the result. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -1206,7 +1206,7 @@ Python code
 
 **Algorithm ID**: ``native:meancoordinates``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1264,7 +1264,7 @@ Parameters
      - Specification of the HTML file for the computed statistics.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types_skip**
           :end-before: **end_file_output_types_skip**
 
@@ -1309,7 +1309,7 @@ Python code
 
 **Algorithm ID**: ``native:nearestneighbouranalysis``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1352,7 +1352,7 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specify the output vector layer. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -1379,7 +1379,7 @@ Python code
 
 **Algorithm ID**: ``native:calculatevectoroverlaps``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1447,7 +1447,7 @@ Basic parameters
        Default: ``[Create temporary layer]``
      - Specify the vector layer for the result of the clustering. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -1514,7 +1514,7 @@ Python code
 
 **Algorithm ID**: ``native:stdbscanclustering``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1558,7 +1558,7 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specify the output table for the generated statistics. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -1676,7 +1676,7 @@ Python code
 
 **Algorithm ID**: ``qgis:statisticsbycategories``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1733,7 +1733,7 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specify the output polygon layer with generated statistics. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -1759,7 +1759,7 @@ Python code
 
 **Algorithm ID**: ``native:sumlinelengths``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 

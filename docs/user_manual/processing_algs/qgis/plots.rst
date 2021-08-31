@@ -45,7 +45,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specify the HTML file for the plot. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -71,7 +71,7 @@ Python code
 
 **Algorithm ID**: ``qgis:barplot``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -125,7 +125,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specify the HTML file for the plot. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -151,7 +151,7 @@ Python code
 
 **Algorithm ID**: ``qgis:boxplot``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -193,7 +193,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specify the HTML file for the plot. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -219,7 +219,7 @@ Python code
 
 **Algorithm ID**: ``qgis:meanandstandarddeviationplot``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -264,7 +264,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specify the HTML file for the plot. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -290,7 +290,7 @@ Python code
 
 **Algorithm ID**: ``qgis:polarplot``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -334,7 +334,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specify the HTML file for the plot. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -360,7 +360,7 @@ Python code
 
 **Algorithm ID**: ``qgis:rasterlayerhistogram``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -406,7 +406,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specify the HTML file for the plot. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -432,7 +432,7 @@ Python code
 
 **Algorithm ID**: ``qgis:vectorlayerhistogram``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -474,7 +474,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specify the HTML file for the plot. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -500,7 +500,7 @@ Python code
 
 **Algorithm ID**: ``qgis:vectorlayerscatterplot``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -546,7 +546,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specify the HTML file for the plot. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -572,6 +572,6 @@ Python code
 
 **Algorithm ID**: ``qgis:scatter3dplot``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**

@@ -101,7 +101,7 @@ Basic parameters
        Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -165,7 +165,7 @@ Python code
 
 **Algorithm ID**: ``native:cellstackpercentrankfromvalue``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -264,7 +264,7 @@ Basic parameters
        Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -328,7 +328,7 @@ Python code
 
 **Algorithm ID**: ``native:cellstackpercentile``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -429,7 +429,7 @@ Basic parameters
        Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -493,7 +493,7 @@ Python code
 
 **Algorithm ID**: ``native:cellstackpercentrankfromrasterlayer``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -598,7 +598,7 @@ Basic parameters
        Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -664,7 +664,7 @@ Python code
 
 **Algorithm ID**: ``native:cellstatistics``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -741,7 +741,7 @@ Basic parameters
        Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -821,7 +821,7 @@ Python code
 
 **Algorithm ID**: ``native:equaltofrequency``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -893,7 +893,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -938,7 +938,7 @@ Python code
 
 **Algorithm ID**: ``native:fuzzifyrastergaussianmembership``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1003,7 +1003,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -1049,7 +1049,7 @@ Python code
 
 **Algorithm ID**: ``native:fuzzifyrasterlargemembership``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1119,7 +1119,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -1164,7 +1164,7 @@ Python code
 
 **Algorithm ID**: ``native:fuzzifyrasterlinearmembership``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1229,7 +1229,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -1274,7 +1274,7 @@ Python code
 
 **Algorithm ID**: ``native:fuzzifyrasternearmembership``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1348,7 +1348,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -1393,7 +1393,7 @@ Python code
 
 **Algorithm ID**: ``native:fuzzifyrasterpowermembership``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1458,7 +1458,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -1503,7 +1503,7 @@ Python code
 
 **Algorithm ID**: ``native:fuzzifyrastersmallmembership``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1543,7 +1543,7 @@ Python code
 
 **Algorithm ID**: ``native:greaterthanfrequency``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1613,7 +1613,7 @@ Basic parameters
      - Specification of the output raster containing the result.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -1679,7 +1679,7 @@ Python code
 
 **Algorithm ID**: ``native:highestpositioninrasterstack``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1719,7 +1719,7 @@ Python code
 
 **Algorithm ID**: ``native:lessthanfrequency``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1759,7 +1759,7 @@ Python code
 
 **Algorithm ID**: ``native:lowestpositioninrasterstack``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1825,7 +1825,7 @@ Basic parameters
      - Specification of the output raster containing the result.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -1921,7 +1921,7 @@ Python code
 
 **Algorithm ID**: ``native:rasterbooleanand``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1987,7 +1987,7 @@ Basic parameters
      - Specification of the output raster containing the result.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -2082,7 +2082,7 @@ Python code
 
 **Algorithm ID**: ``native:rasterbooleanor``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -2195,7 +2195,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -2220,7 +2220,7 @@ Python code
 
 **Algorithm ID**: ``qgis:rastercalculator``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -2334,7 +2334,7 @@ Python code
 
 **Algorithm ID**: ``native:rasterlayerproperties``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -2377,7 +2377,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specification of the output file:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types_skip**
           :end-before: **end_file_output_types_skip**
 
@@ -2442,7 +2442,7 @@ Python code
 
 **Algorithm ID**: ``qgis:rasterlayerstatistics``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -2483,7 +2483,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specification of the output file:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types_skip**
           :end-before: **end_file_output_types_skip**
 
@@ -2494,7 +2494,7 @@ Parameters
        Default: ``[Skip output]``
      - Specification of the table for unique values:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
           :end-before: **end_layer_output_types_skip**
 
@@ -2562,7 +2562,7 @@ Python code
 
 **Algorithm ID**: ``native:rasterlayeruniquevaluesreport``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -2622,7 +2622,7 @@ Basic parameters
        Default: ``[Create temporary layer]``
      - Specification of the output report. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -2708,7 +2708,7 @@ Python code
 
 **Algorithm ID**: ``native:rasterlayerzonalstats``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -2780,7 +2780,7 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specification of the output HTML report. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
           :end-before: **end_layer_output_types_skip**
 
@@ -2791,7 +2791,7 @@ Parameters
        Default: ``[Skip output]``
      - Specification of the output table. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
           :end-before: **end_layer_output_types_skip**
 
@@ -2834,7 +2834,7 @@ Python code
 
 **Algorithm ID**: ``native:rastersurfacevolume``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -2897,7 +2897,7 @@ Basic parameters
        Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -2980,7 +2980,7 @@ Python code
 
 **Algorithm ID**: ``native:reclassifybylayer``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -3031,7 +3031,7 @@ Basic parameters
      - Specification of the output raster layer.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -3114,7 +3114,7 @@ Python code
 
 **Algorithm ID**: ``native:reclassifybytable``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -3187,7 +3187,7 @@ Parameters
      - Specification of the output raster layer.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -3212,7 +3212,7 @@ Python code
 
 **Algorithm ID**: ``native:rescaleraster``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -3290,7 +3290,7 @@ Basic parameters
        Default: ``[Save to temporary file]``
      - Specification of the output file. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -3335,7 +3335,7 @@ Python code
 
 **Algorithm ID**: ``native:roundrastervalues``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -3385,7 +3385,7 @@ Parameters
      - Specify the output layer containing the sampled values.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -3410,7 +3410,7 @@ Python code
 
 **Algorithm ID**: ``native:rastersampling``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -3471,7 +3471,7 @@ Parameters
      - Specify the output vector polygon layer.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -3496,7 +3496,7 @@ Python code
 
 **Algorithm ID**: ``native:zonalhistogram``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -3568,7 +3568,7 @@ Parameters
      - Specify the output vector polygon layer.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types_append**
           :end-before: **end_layer_output_types_append**
 
@@ -3593,7 +3593,7 @@ Python code
 
 **Algorithm ID**: ``native:zonalstatisticsfb``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 

@@ -66,7 +66,7 @@ Basic parameters
        Default: ``[Create temporary layer]``
      - Specify the output line layer with offset features. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types_append**
           :end-before: **end_layer_output_types_append**
 
@@ -132,7 +132,7 @@ Python code
 
 **Algorithm ID**: ``native:arrayoffsetlines``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -214,7 +214,7 @@ Parameters
        of the features.
        The original features are also copied. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types_append**
           :end-before: **end_layer_output_types_append**
 
@@ -241,7 +241,7 @@ Python code
 
 **Algorithm ID**: ``native:arraytranslatedfeatures``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -336,7 +336,7 @@ Parameters
        Default: ``[Create temporary layer]``
      - Resulting vector grid layer. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -362,7 +362,7 @@ Python code
 
 **Algorithm ID**: ``native:creategrid``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -427,7 +427,7 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specify the resulting point layer. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -452,7 +452,7 @@ Python code
 
 **Algorithm ID**: ``native:createpointslayerfromtable``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -498,7 +498,7 @@ Parameters
        Default: ``[Create temporary layer]``
      - Resulting point layer with pixel centroids. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -523,7 +523,7 @@ Python code
 
 **Algorithm ID**: ``qgis:generatepointspixelcentroidsalongline``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -569,7 +569,7 @@ Parameters
        Default: ``[Create temporary layer]``
      - Resulting point layer of pixel centroids. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -594,7 +594,7 @@ Python code
 
 **Algorithm ID**: ``native:generatepointspixelcentroidsinsidepolygons``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -647,7 +647,7 @@ Parameters
      - Specify the point vector layer for the geotagged photos.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
           :end-before: **end_layer_output_types_skip**
 
@@ -661,7 +661,7 @@ Parameters
      - Specify the table of unreadable or non-geotagged photos.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
           :end-before: **end_layer_output_types_skip**
 
@@ -695,7 +695,7 @@ Python code
 
 **Algorithm ID**: ``native:importphotos``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -769,7 +769,7 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specify the line vector layer of the path. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -783,7 +783,7 @@ Parameters
      - Specify the directory that will contain the description
        files of points and paths. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **directory_output_types_skip**
           :end-before: **end_directory_output_types_skip**
 
@@ -812,7 +812,7 @@ Python code
 
 **Algorithm ID**: ``native:pointstopath``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -886,7 +886,7 @@ Parameters
        Default: ``[Create temporary layer]``
      - The output random points. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -911,7 +911,7 @@ Python code
 
 **Algorithm ID**: ``qgis:qgisrandompointsalongline``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -973,7 +973,7 @@ Basic parameters
        Default: ``[Create temporary layer]``
      - The output random points. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -1017,7 +1017,7 @@ Python code
 
 **Algorithm ID**: ``native:randompointsinextent``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1068,7 +1068,7 @@ Parameters
        Default: ``[Create temporary layer]``
      - The output random points. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -1093,7 +1093,7 @@ Python code
 
 **Algorithm ID**: ``qgis:randompointsinlayerbounds``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1184,7 +1184,7 @@ Basic parameters
        Default: ``[Create temporary layer]``
      - The output random points. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -1275,7 +1275,7 @@ Python code
 
 **Algorithm ID**: ``native:randompointsinpolygons``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1345,7 +1345,7 @@ Parameters
        Default: ``[Create temporary layer]``
      - The output random points. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -1370,7 +1370,7 @@ Python code
 
 **Algorithm ID**: ``qgis:randompointsinsidepolygons``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1461,7 +1461,7 @@ Basic parameters
        Default: ``[Create temporary layer]``
      - The output random points. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -1552,7 +1552,7 @@ Python code
 
 **Algorithm ID**: ``native:randompointsonlines``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1601,7 +1601,7 @@ Parameters
      - Specify the resulting point layer of pixels centroids.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -1626,7 +1626,7 @@ Python code
 
 **Algorithm ID**: ``native:pixelstopoints``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1675,7 +1675,7 @@ Parameters
      - Specify the resulting polygon layer of pixel extents.
        One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -1700,7 +1700,7 @@ Python code
 
 **Algorithm ID**: ``native:pixelstopolygons``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1778,7 +1778,7 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specify the output regular point layer. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
@@ -1803,7 +1803,7 @@ Python code
 
 **Algorithm ID**: ``qgis:regularpoints``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 

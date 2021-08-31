@@ -70,7 +70,7 @@ Basic parameters
        Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -122,7 +122,7 @@ Python code
 
 **Algorithm ID**: ``native:createconstantrasterlayer``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -185,7 +185,7 @@ Basic parameters
        Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -248,7 +248,7 @@ Python code
 
 **Algorithm ID**: ``native:createrandombinomialrasterlayer``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -310,7 +310,7 @@ Basic parameters
        Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -363,7 +363,7 @@ Python code
 
 **Algorithm ID**: ``native:createrandomexponentialrasterlayer``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -425,7 +425,7 @@ Basic parameters
        Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -484,7 +484,7 @@ Python code
 
 **Algorithm ID**: ``native:createrandomgammarasterlayer``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -547,7 +547,7 @@ Basic parameters
        Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -604,7 +604,7 @@ Python code
 
 **Algorithm ID**: ``native:createrandomgeometricrasterlayer``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -667,7 +667,7 @@ Basic parameters
        Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -730,7 +730,7 @@ Python code
 
 **Algorithm ID**: ``native:createrandomnegativebinomialrasterlayer``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -792,7 +792,7 @@ Basic parameters
        Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -851,7 +851,7 @@ Python code
 
 **Algorithm ID**: ``native:createrandomnormalrasterlayer``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -914,7 +914,7 @@ Basic parameters
        Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -971,7 +971,7 @@ Python code
 
 **Algorithm ID**: ``native:createrandompoissonrasterlayer``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1035,7 +1035,7 @@ Basic parameters
        Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -1099,7 +1099,7 @@ Python code
 
 **Algorithm ID**: ``native:createrandomuniformrasterlayer``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
