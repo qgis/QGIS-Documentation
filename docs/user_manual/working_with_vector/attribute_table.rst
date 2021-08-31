@@ -1154,6 +1154,94 @@ The example above uses the following database schema:
       CONSTRAINT documents_pkey PRIMARY KEY (fid)
    );
 
+.. index:: External Storage, WebDAV
+.. _external_storage:
+
+Storing and fetching an external ressource
+==========================================
+
+|322|
+
+A field may target a ressource stored on an external storage system. Attribute forms can be configured
+so they act as a client to an external storage system in order to store and fetch those ressources, on
+users demand, directly from the forms.
+
+.. _external_storage_configuration:
+
+Configuring an external storage
+-------------------------------
+
+In order to setup an external storage, user has to first configure it from the vector
+:ref:`attribute form properties<edit_widgets>` and select the :guilabel:`Attachment` widget.
+
+.. _figure_external_storage_configuration:
+
+.. figure:: img/external_storage_configuration.png
+   :align: center
+
+   Editing a WebDAV external storage for a given field
+
+From the :guilabel:`Attachment` widget, user has to first select the attachment type among these options:
+
+* :guilabel:`Select Existing File` : The ressource is already existing. When
+  user selects a ressource, no store operation is achieved, only the
+  URL is updated.
+
+* :guilabel:`Simple Copy` : The ressource is copied on a file disk destination (which could be a local
+  or network shared file system)
+  
+* :guilabel:`WebDAV External Storage` : The ressource is pushed on an HTTP server supporting the
+  `WebDAV <https://en.wikipedia.org/wiki/WebDAV>`_ protocol. (`Nextcloud <https://nextcloud.com/>`_,
+  `Pydio <https://pydio.com/>`_ or others file hosting software supports this protocol).
+
+Then, he has to set up the :guilabel:`Store URL` parameter, which provides the URL to be used when a new
+ressource needs to be stored. It's possible to set up an expression using the
+:ref:`data defined override widget<data_defined>` in order to have specific values according to
+feature attributes.
+
+The special value **@selected_file_path** could be used in that expression and represent the absolute
+file path of the user selected file (using the file selector or drag'n drop).
+   
+.. note::
+
+   Using the **WebDAV** external storage, if the URL ends with a "/", it is considered as a folder and
+   the selected file name will be appended to get the final URL.
+
+
+If the external storage system needs to, it's possible to configure an
+:ref:`authentication <authentication>`.
+ 
+.. _external_storage_use:
+
+Using an external storage
+-------------------------
+
+Once configured, use can select a local file using the button :guilabel:`...`. According to
+what has been configured as :ref:`Type <external_storage_configuration>`, the file
+will be stored on the external storage system (except if :guilabel:`Select existing file` has been
+selected) and the field will be updated with the new resource URL.
+
+.. _figure_external_storage_store:
+
+.. figure:: img/external_storage_store.png
+   :align: center
+
+   Storing a file to a WebDAV external storage
+
+Using the |cancel| :sup:`Cancel` button, user can cancel the storing process.
+
+It's possible to configure a viewer so the ressource will be automatically fetched from the external
+storage system and displayed directly below the URL.
+
+.. note::
+
+   User can also achieve the same result it he drags'n drops a file on the whole attachment
+   widget.
+
+
+|warning| :sup:`Warning` Icon indicates that the ressource cannot be fetched from the external
+storage system. In that case, more details might appear in the :ref:`log_message_panel`.
+
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -1161,11 +1249,14 @@ The example above uses the following database schema:
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |322| replace:: ``NEW in 3.22``
 .. |actionRun| image:: /static/common/mAction.png
    :width: 1.5em
 .. |addPart| image:: /static/common/mActionAddPart.png
    :width: 1.5em
 .. |calculateField| image:: /static/common/mActionCalculateField.png
+   :width: 1.5em
+.. |cancel| image:: /static/common/mTaskCancel.png
    :width: 1.5em
 .. |capturePoint| image:: /static/common/mActionCapturePoint.png
    :width: 1.5em
@@ -1250,6 +1341,8 @@ The example above uses the following database schema:
 .. |undo| image:: /static/common/mActionUndo.png
    :width: 1.5em
 .. |unlink| image:: /static/common/mActionUnlink.png
+   :width: 1.5em
+.. |warning| image:: /static/common/mIconWarning.png
    :width: 1.5em
 .. |zoomToSelected| image:: /static/common/mActionZoomToSelected.png
    :width: 1.5em

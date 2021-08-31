@@ -324,7 +324,7 @@ coordinate. The vertices and faces have the same topology in each vertical level
 Values are usually stored on the volumes that are regularly stacked over
 base 2d mesh. In order to visualise them on 2D canvas, you need to convert
 values on volumes (3d) to values on faces (2d) that can be shown in mesh layer.
-The |meshAveraging| :sup:`Stacked mesh averaging method` provides different
+The |meshaveraging| :sup:`Stacked mesh averaging method` provides different
 averaging/interpolation methods to handle this.
 
 You can select the method to derive the 2D datasets and corresponding parameters
@@ -350,20 +350,12 @@ See :ref:`metadatamenu` for more information.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |3d| image:: /static/common/3d.png
-   :width: 1.5em
-.. |add| image:: /static/common/mActionAdd.png
-   :width: 1.5em
 .. |addMeshLayer| image:: /static/common/mActionAddMeshLayer.png
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |collapseTree| image:: /static/common/mActionCollapseTree.png
-   :width: 1.5em
 .. |editMetadata| image:: /static/common/editmetadata.png
    :width: 1.2em
-.. |expandTree| image:: /static/common/mActionExpandTree.png
-   :width: 1.5em
 .. |general| image:: /static/common/general.png
    :width: 1.5em
 .. |meshaveraging| image:: /static/common/meshaveraging.png
@@ -380,18 +372,7 @@ See :ref:`metadatamenu` for more information.
    :width: 1.5em
 .. |refresh| image:: /static/common/mActionRefresh.png
    :width: 1.5em
-.. |rendering| image:: /static/common/rendering.png
-   :width: 1.5em
-.. |selectString| image:: /static/common/selectstring.png
-   :width: 2.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
-.. |signMinus| image:: /static/common/symbologyRemove.png
-   :width: 1.5em
-.. |signPlus| image:: /static/common/symbologyAdd.png
-   :width: 1.5em
-.. |slider| image:: /static/common/slider.png
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
-.. |unchecked| image:: /static/common/checkbox_unchecked.png
-   :width: 1.3em

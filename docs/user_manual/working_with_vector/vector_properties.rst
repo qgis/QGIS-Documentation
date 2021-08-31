@@ -2310,8 +2310,9 @@ with the field type. The available widgets are:
   database. This is currently only supported by the PostgreSQL provider, for
   fields of ``enum`` type.
 * **Attachment**: Uses a "Open file" dialog to store file path in a
-  relative or absolute mode. It can also be used to display a hyperlink (to
-  document path), a picture or a web page.
+  relative or absolute mode. It can be used to display a hyperlink (to
+  document path), a picture or a web page. User can also configure an
+  :ref:`external storage system<external_storage>` used to fetch/store ressources.
 * **Hidden**: A hidden attribute column is invisible. The user is not able
   to see its contents.
 * **Key/Value**: Displays a two-columns table to store sets of key/value
@@ -3309,6 +3310,7 @@ To do so:
 
 .. |25dSymbol| image:: /static/common/renderer25dSymbol.png
    :width: 1.5em
+.. |322| replace:: ``NEW in 3.22``
 .. |3d| image:: /static/common/3d.png
    :width: 1.5em
 .. |action| image:: /static/common/action.png
