@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2020
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-12 02:37+0000\n"
 "PO-Revision-Date: 2020-12-24 12:01+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2021\n"
 "Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -47,6 +48,22 @@ msgstr ""
 msgid "|moderate| |TY|"
 msgstr "|moderate| |TY|"
 
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:90
+msgid "moderate"
+msgstr "moderate"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:13
+msgid "Save your current map (:file:`raster_analysis.qgs`)."
+msgstr "Salva la tua mappa attuale (:file:`raster_analysis.qgs`)."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:14
+msgid ""
+"Open the map which you created during the vector analysis earlier (you "
+"should have saved the file as :file:`analysis.qgs`)."
+msgstr ""
+"Apri la mappa che hai creato prima durante l'analisi vettoriale (dovresti "
+"aver salvato il file come :file:`analysis.qgs`)."
+
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:16
 msgid "In the :guilabel:`Layers` panel, enable these layers:"
 msgstr "Nel pannello :guilabel:`Layers`, abilita questi layer:"
@@ -58,6 +75,36 @@ msgstr ":guilabel:`hillshade`,"
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:19
 msgid ":guilabel:`solution` (or :guilabel:`buildings_over_100`)"
 msgstr ":guilabel:`solution` (o :guilabel:`buildings_over_100`)"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:21
+msgid ""
+"In addition to these layers, which should already be loaded in the map from "
+"when you worked on it before, also add the :file:`suitable_terrain.shp` "
+"dataset."
+msgstr ""
+"Oltre a questi layer, che dovrebbero essere già caricati nella mappa da "
+"quando ci hai lavorato prima, aggiungi anche l'insieme dei dati "
+":file:`suitable_terrain.shp`."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:24
+msgid ""
+"If you are missing some layers, you should find them in "
+":file:`exercise_data/residential_development/`"
+msgstr ""
+"Se ti mancano alcuni layer, dovresti trovarli in "
+":file:`exercise_data/residential_development/`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:26
+msgid ""
+"Use the :guilabel:`Intersection` tool (:menuselection:`Vector --> "
+"Geoprocessing Tools`) to create a new vector layer called "
+":file:`new_solution.shp` which contains only those buildings which intersect"
+" the :guilabel:`suitable_terrain` layer."
+msgstr ""
+"Usa lo strumento :guilabel:`Intersezione...` (:menuselection:`Vettore --> "
+"Strumenti di Geoprocessing`) per creare un nuovo layer vettoriale chiamato "
+":file:`new_solution.shp` che contiene solo gli edifici che intersecano il "
+"layer :guilabel:`suitable_terrain`."
 
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:30
 msgid ""
@@ -89,7 +136,7 @@ msgstr ""
 
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:49
 msgid ":ref:`Check your results <complete-analysis-2>`"
-msgstr ":ref:`Controlla i risultati <complete-analysis-2>`"
+msgstr ":ref:`Check your results <complete-analysis-2>`"
 
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:55
 msgid "|moderate| |TY| Refining the Analysis"
@@ -103,9 +150,22 @@ msgstr ""
 "Puoi vedere dai risultati che alcuni edifici sono stati inclusi ma non sono "
 "veramente adatti, quindi possiamo affinare l'analisi."
 
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:60
+msgid ""
+"We want to ensure that our analysis returns only those buildings which fall "
+"entirely within the :guilabel:`suitable_terrain` layer. How would you "
+"achieve this? Use one or more Vector Analysis tools and remember that our "
+"buildings are all over 100m squared in size."
+msgstr ""
+"Vogliamo assicurarci che la nostra analisi restituisca solo gli edifici che "
+"rientrano interamente nel layer :guilabel:`suitable_terrain`. Come si può "
+"ottenere questo risultato? Utilizza uno o più strumenti di Analisi "
+"Vettoriale e ricorda che i nostri edifici sono tutti di dimensioni superiori"
+" a 100m quadrati."
+
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:65
 msgid ":ref:`Check your results <complete-analysis-3>`"
-msgstr ":ref:`Controlla i risultati <complete-analysis-3>`"
+msgstr ":ref:`Check your results <complete-analysis-3>`"
 
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:68
 msgid "|IC|"
