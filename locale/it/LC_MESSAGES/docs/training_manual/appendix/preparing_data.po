@@ -26,7 +26,7 @@ msgstr ""
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:4
 msgid "Preparing Exercise Data"
-msgstr "Preparazione di dati per esercitazioni"
+msgstr "Preparazione dei dati per le esercitazioni"
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:6
 msgid ""
@@ -320,6 +320,26 @@ msgstr ""
 msgid "Press :guilabel:`OK`"
 msgstr "Premi :guilabel:`OK`"
 
+#: ../../docs/training_manual/appendix/preparing_data.rst:121
+msgid ""
+"In the :guilabel:`Layers` panel, the temporary :guilabel:`place` layer is "
+"replaced with the saved :guilabel:`places` shapefile layer and the temporary"
+" icon next to it removed."
+msgstr ""
+"Nel pannello :guilabel:`Layer`, il layer temporaneo :guilabel:`place` viene "
+"sostituito con il layer shapefile salvato :guilabel:`places` e l'icona "
+"temporanea accanto ad esso viene rimossa."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:124
+msgid ""
+"Double-click the layer to open its :menuselection:`Layer Properties --> "
+"Source` tab and update the :guilabel:`Layer name` property to match the file"
+" name."
+msgstr ""
+"Fai doppio clic sul layer per aprire la sua scheda :menuselection: "
+"`Proprietà Layer --> Sorgente` e aggiorna la proprietà :guilabel:`Nome "
+"layer` per farla corrispondere al nome del file."
+
 #: ../../docs/training_manual/appendix/preparing_data.rst:128
 msgid "Repeat the process for other layers, renaming them as follows:"
 msgstr "Ripeti il processo per gli altri layer, rinominandali come segue:"
@@ -362,6 +382,14 @@ msgstr ""
 msgid "Select the :guilabel:`GeoPackage` format"
 msgstr "Seleziona il formato :guilabel:`GeoPackage` "
 
+#: ../../docs/training_manual/appendix/preparing_data.rst:142
+msgid ""
+"Save the file as :file:`training_data.gpkg` under the :file:`exercise_data/`"
+" folder"
+msgstr ""
+"Salva il file come :file:`training_data.gpkg` nella cartella "
+":file:`exercise_data/`"
+
 #: ../../docs/training_manual/appendix/preparing_data.rst:144
 msgid ""
 "By default, the :guilabel:`Layer name` is filled as the file name. Replace "
@@ -382,6 +410,13 @@ msgstr ""
 "Ripeti il processo con il layer :guilabel:`highway`, salvandolo come "
 "``roads`` nello stesso database GeoPackage."
 
+#: ../../docs/training_manual/appendix/preparing_data.rst:155
+msgid ""
+"The last step is to save the remaining temporary file as a SpatiaLite file."
+msgstr ""
+"L'ultimo punto è salvare il file temporaneo ancora rimasto come file "
+"SpatiaLite."
+
 #: ../../docs/training_manual/appendix/preparing_data.rst:157
 msgid "Click the |indicatorMemory| icon next to the :guilabel:`landuse` layer"
 msgstr ""
@@ -400,6 +435,16 @@ msgstr ""
 "Salva il file come :file:`landuse.sqlite` nella cartella  "
 ":file:`exercise_data/`. Per opzione predefinita, il :guilabel:`Layer name` "
 "viene definito com il nome del file . Non cambiarlo."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:168
+msgid ""
+"You should now have a map which looks something like this (the symbology "
+"will certainly be very different, because QGIS randomly assigns colors when "
+"layers are added to the map):"
+msgstr ""
+"Ora dovresti avere una mappa che assomiglia a questa (la simbologia sarà "
+"certamente molto diversa, perché QGIS assegna casualmente i colori quando i "
+"layer vengono aggiunti alla mappa):"
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:175
 msgid ""
@@ -423,6 +468,30 @@ msgstr ""
 ":ref:`tm_rasters`, avrai anche bisogno di immagini raster (SRTM DEM) che "
 "coprano la regione che hai selezionato per il tuo corso."
 
+#: ../../docs/training_manual/appendix/preparing_data.rst:185
+msgid ""
+"The `CGIAR-CGI <https://srtm.csi.cgiar.org/>`_ provides some SRTM DEM you "
+"can download from https://srtm.csi.cgiar.org/srtmdata/."
+msgstr ""
+"Il `CGIAR-CGI <https://srtm.csi.cgiar.org/>`_ fornisce alcuni DEM SRTM che "
+"puoi scaricare da https://srtm.csi.cgiar.org/srtmdata/."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:188
+msgid ""
+"You'll need images which cover the entire region you have chosen to use. To "
+"find the extent coordinates, in QGIS , |zoomToLayer| zoom to the extent of "
+"the largest layer and pick the values in the |extents| :guilabel:`Extents` "
+"box of the status bar. Keep the :file:`GeoTiff` format. Once the form is "
+"filled, click on the :guilabel:`Click here to Begin Search >>` button and "
+"download the file(s)."
+msgstr ""
+"Avrai bisogno di immagini che coprano l'intera regione che hai scelto di "
+"utilizzare. Per trovare le coordinate di estensione, in QGIS , |zoomToLayer|"
+" zooma sull'estensione del layer più grande e prendi i valori nella casella "
+"|extents| :guilabel:`Estensione` della barra di stato. Mantieni il formato "
+":file:`GeoTiff`. Una volta compilato il modulo, clicca sul pulsante "
+":guilabel:`Clicca qui per iniziare la ricerca >>` e scarica il file(i)."
+
 #: ../../docs/training_manual/appendix/preparing_data.rst:250
 msgid "zoomToLayer"
 msgstr "zoomToLayer"
@@ -444,9 +513,34 @@ msgstr ""
 msgid "|hard| |TY| Create imagery tiff Files"
 msgstr "|hard| |TY| Crea un Files tiff di immagine"
 
+#: ../../docs/training_manual/appendix/preparing_data.rst:202
+msgid ""
+"In Module :ref:`tm_create_vector_data`, :ref:`tm_datasources` lesson shows "
+"close-up images of three school sports fields which students are asked to "
+"digitize. You'll therefore need to reproduce these images using your new "
+"SRTM DEM tiff file(s). There is no obligation to use school sports fields: "
+"any three school land-use types can be used (e.g. different school "
+"buildings, playgrounds or car parks)."
+msgstr ""
+"Nel modulo :ref:`tm_create_vector_data`, la lezione :ref:`tm_datasources` "
+"mostra immagini ravvicinate di tre campi sportivi scolastici che gli "
+"studenti devono digitalizzare. Avrai quindi bisogno di riprodurre queste "
+"immagini usando il tuo nuovo file(i) tiff SRTM DEM. Non c'è l'obbligo di "
+"usare i campi sportivi scolastici: qualsiasi tipo di uso del suolo "
+"scolastico può essere usato (per esempio diversi edifici scolastici, campi "
+"da gioco o parcheggi)."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:209
+msgid "For reference, the image in the example data is:"
+msgstr "Per riferimento, l'immagine nei dati di esempio è:"
+
 #: ../../docs/training_manual/appendix/preparing_data.rst:216
 msgid "|basic| |TY| Replace Tokens"
 msgstr "|basic| |TY| Sostituisci gli Emblemi"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:243
+msgid "basic"
+msgstr "basic"
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:218
 msgid ""
@@ -461,3 +555,45 @@ msgstr ""
 #: ../../docs/training_manual/appendix/preparing_data.rst:222
 msgid "The tokens you need to replace are as follows:"
 msgstr "I token che devi sostituire sono i seguenti:"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:224
+msgid ""
+"``majorUrbanName``: this defaults to \"Swellendam\". Replace with the name "
+"of the major town in your region."
+msgstr ""
+"``majorUrbanName``: il valore predefinito è \"Swellendam\". Sostituiscilo "
+"con il nome della città principale della tua regione."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:226
+msgid ""
+"``schoolAreaType1``: this defaults to \"athletics field\". Replace with the "
+"name of the largest school area type in your region."
+msgstr ""
+"``schoolAreaType1``: questo è di default \"campo di atletica\". "
+"Sostituiscilo con il nome del tipo di area scolastica più grande della tua "
+"regione."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:228
+msgid ""
+"``largeLandUseArea``: this defaults to \"Bontebok National Park\". Replace "
+"with the name of a large landuse polygon in your region."
+msgstr ""
+"``largeLandUseArea``: il valore predefinito è \"Bontebok National Park\". "
+"Sostituiscilo con il nome di un grande poligono uso del suolo nella tua "
+"regione."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:230
+msgid ""
+"``srtmFileName``: this defaults to :file:`srtm_41_19.tif`. Replace this with"
+" the filename of your SRTM DEM file."
+msgstr ""
+"``srtmFileName``: questo è di default :file:`srtm_41_19.tif`. Sostituiscilo "
+"con il nome del tuo file SRTM DEM."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:232
+msgid ""
+"``localCRS``: this defaults to ``WGS 84 / UTM 34S``. You should replace this"
+" with the correct CRS for your region."
+msgstr ""
+"``localCRS``: questo è predefinito in ``WGS 84 / UTM 34S``. Dovresti "
+"sostituirlo con il SR corretto per la tua regione."
