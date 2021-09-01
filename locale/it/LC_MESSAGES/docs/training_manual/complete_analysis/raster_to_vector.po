@@ -6,15 +6,16 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2020
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
+"POT-Creation-Date: 2021-05-26 03:18+0000\n"
 "PO-Revision-Date: 2020-12-24 10:23+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2021\n"
 "Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -63,6 +64,10 @@ msgstr ""
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:18
 msgid "|moderate| |FA| The :guilabel:`Raster to Vector` Tool"
 msgstr "|moderate| |FA| Lo strumento :guilabel:`Da Raster a Vettore`"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:111
+msgid "moderate"
+msgstr "moderate"
 
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:20
 msgid ""
@@ -122,6 +127,22 @@ msgstr "|moderate| |TY|"
 msgid "Refer back to the module on vector analysis."
 msgstr "Riferendoti al modulo sull'analisi vettoriale."
 
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:48
+msgid ""
+"Create a new vector file that contains only the polygons where "
+":guilabel:`suitable` has the value of ``1``."
+msgstr ""
+"Crea un nuovo file vettoriale che contiene solo i poligoni dove "
+":guilabel:`suitable` ha il valore di ``1``."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:50
+msgid ""
+"Save the new file under :file:`exercise_data/residential_development/` as "
+":file:`suitable_terrain.shp`."
+msgstr ""
+"Salva il nuovo file sotto :file:`exercise_data/residential_development/` "
+"come :file:`suitable_terrain.shp`."
+
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:53
 msgid ":ref:`Check your results <complete-analysis-1>`"
 msgstr ":ref:`Controlla i risultati <complete-analysis-1>`"
@@ -129,6 +150,16 @@ msgstr ":ref:`Controlla i risultati <complete-analysis-1>`"
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:56
 msgid "|moderate| |FA| The :guilabel:`Vector to Raster` Tool"
 msgstr "|moderate| |FA| Lo strumento :guilabel:`Da Vettore a Raster`"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:58
+msgid ""
+"Although unnecessary for our current problem, it's useful to know about the "
+"opposite conversion from the one performed above. Convert to raster the "
+":file:`suitable_terrain.shp` vector file you just created in previous step."
+msgstr ""
+"Anche se non è necessario per il nostro problema attuale, è utile conoscere "
+"la conversione opposta a quella eseguita sopra. Convertire in raster il file"
+" vettoriale :file:`suitable_terrain.shp` appena creato nel passo precedente."
 
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:62
 msgid ""
@@ -140,16 +171,17 @@ msgstr ""
 "seguente:"
 
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:68
-msgid ":guilabel:`Input file` is :guilabel:`all_terrain`."
-msgstr ":guilabel:`File in ingresso` è :guilabel:`all_terrain`."
+msgid ":guilabel:`Input layer` is :guilabel:`all_terrain`."
+msgstr ":guilabel:`Layer in ingresso` è :guilabel:`all_terrain`."
 
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:69
-msgid ""
-":guilabel:`Output file...` is "
-":file:`exercise_data/residential_development/raster_conversion.tif`."
+msgid "Field name is :guilabel:`suitable`."
+msgstr "Il nome campo è :guilabel:`suitable`."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:70
+msgid ":guilabel:`Output raster size units` is :guilabel:`Pixels`."
 msgstr ""
-":guilabel:`Rasterizzato` è "
-":file:`exercise_data/residential_development/raster_conversion.tif`."
+":guilabel:`Unità di misura del raster in uscita` è :guilabel:`Pixels`."
 
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:71
 msgid ""
@@ -159,7 +191,22 @@ msgstr ""
 ":guilabel:`Larghezza` e :guilabel:`Altezza` sono ``837`` e ``661``, "
 "rispettivamente."
 
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:73
+msgid ""
+"Get the :guilabel:`Output extent` from the :guilabel:`all_terrain` layer."
+msgstr ""
+"Ricava l' :guilabel:`Estensione risultato` dal layer "
+":guilabel:`all_terrain`."
+
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:74
+msgid ""
+"Set output file :guilabel:`Rasterized` to "
+":file:`exercise_data/residential_development/raster_conversion.tif`."
+msgstr ""
+"Imposta il file in uscita :guilabel: `Rasterizzato` a "
+":file:`exercise_data/residential_development/raster_conversion.tif`."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:77
 msgid ""
 "The size of the output image is specified here to be the same as the "
 "original raster which was vectorized. To view the dimensions of an image, "
@@ -171,11 +218,11 @@ msgstr ""
 "un'immagine, apri i suoi metadati (scheda guilabel:`Metadata` in "
 ":guilabel:`Proprietà Layer`)."
 
-#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:79
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:82
 msgid "Click :guilabel:`OK` on the dialog to begin the conversion process."
 msgstr "Clicca :guilabel:`OK` sul dialogo per iniziare la conversione."
 
-#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:80
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:83
 msgid ""
 "When it is complete, gauge its success by comparing the new raster with the "
 "original one.  They should match up exactly, pixel for pixel."
@@ -183,11 +230,11 @@ msgstr ""
 "Quando è completata verifica la validità confrontando il nuovo raster con "
 "quello originale. Devono coincidere perfettamente, pixel per pixel."
 
-#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:84
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:87
 msgid "|IC|"
 msgstr "|IC|"
 
-#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:86
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:89
 msgid ""
 "Converting between raster and vector formats allows you to widen the "
 "applicability of data, and need not lead to data degradation."
@@ -195,11 +242,11 @@ msgstr ""
 "La conversione fra i formati raster e vettoriali permette di ampliare le "
 "applicazioni dei dati, senza andare verso un degrado degli stessi."
 
-#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:90
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:93
 msgid "|WN|"
 msgstr "|WN|"
 
-#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:92
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:95
 msgid ""
 "Now that we have the results of the terrain analysis available in vector "
 "format, they can be used to solve the problem of which buildings we should "
