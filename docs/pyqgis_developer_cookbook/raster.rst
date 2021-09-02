@@ -320,7 +320,7 @@ class. For example, to create a 2x2 raster block with one byte per pixel:
     block = QgsRasterBlock(Qgis.Byte, 2, 2)
     block.setData(b'\xaa\xbb\xcc\xdd')
 
-Raster pixels can be overwritten thanks to the :meth:`writeBolock()
+Raster pixels can be overwritten thanks to the :meth:`writeBlock()
 <qgis.core.QgsRasterDataProvider.writeBlock>` method.
 To overwrite existing raster data at position 0,0 by the 2x2 block:
 
