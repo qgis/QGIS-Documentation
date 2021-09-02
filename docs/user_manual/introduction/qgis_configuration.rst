@@ -58,6 +58,13 @@ The tabs where you can customize your options are described below.
 General Settings
 ----------------
 
+.. _figure_general_settings:
+
+.. figure:: img/options_general.png
+   :align: center
+
+   General Settings in QGIS
+
 .. index:: Overwrite language
 .. _locale_options:
 
@@ -132,6 +139,9 @@ displayed at the bottom of the frame.
   macros that are written to perform an action on project events. You can
   choose between 'Never', 'Ask', 'For this session only' and
   'Always (not recommended)'.
+* :guilabel:`Default paths`: defines whether paths to files and layers used
+  in new projects are stored as 'Absolute' or 'Relative' to the project file.
+  This setting can be overwritten at the project level.
 * :guilabel:`Default project file format`
 
   * |radioButtonOn| :guilabel:`QGZ Archive file format, embeds auxiliary data`
