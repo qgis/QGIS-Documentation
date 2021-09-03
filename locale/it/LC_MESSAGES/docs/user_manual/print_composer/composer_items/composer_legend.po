@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2020
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-12 02:37+0000\n"
 "PO-Revision-Date: 2020-12-24 10:26+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2021\n"
 "Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -42,6 +43,23 @@ msgstr ""
 ":ref:`items creation instructions <create_layout_item>` e manipolarla come "
 "esposto in :ref:`interact_layout_item`."
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:256
+msgid "addLegend"
+msgstr "addLegend"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:19
+msgid ""
+"By default, the legend item displays all available layers and can be refined"
+" using its :guilabel:`Item Properties` panel. Other than the :ref:`items "
+"common properties <item_common_properties>`, this feature has the following "
+"functionalities (see :numref:`figure_layout_legend`):"
+msgstr ""
+"Per impostazione predefinita, l'oggetto legenda visualizza tutti i layer "
+"disponibili e può essere raffinato usando il suo pannello :guilabel: "
+"`Proprietà dell'oggetto`. Oltre alle :ref:`items common properties "
+"<item_common_properties>`, questa opzione ha le seguenti funzionalità (vedi "
+":numref:`figure_layout_legend`):"
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:32
 msgid "Legend Item Properties Panel"
 msgstr "Pannello Proprietà Oggetto Legenda"
@@ -49,6 +67,16 @@ msgstr "Pannello Proprietà Oggetto Legenda"
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:35
 msgid "Main properties"
 msgstr "Proprietà principali"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:37
+msgid ""
+"The :guilabel:`Main properties` group of the legend :guilabel:`Item "
+"Properties` panel provides the following functionalities (see "
+":numref:`figure_layout_legend_ppt`):"
+msgstr ""
+"Il gruppo :guilabel:`Proprietà principali` del pannello :guilabel:`Proprietà"
+" dell'oggetto` prevede le seguenti funzionalità (vedi "
+":numref:`figure_layout_legend_ppt`):"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:45
 msgid "Legend Main properties group"
@@ -58,13 +86,104 @@ msgstr "Legenda gruppo Proprietà principali"
 msgid "In Main properties you can:"
 msgstr "Nelle proprietà principali puoi:"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:49
+msgid ""
+"Change the :guilabel:`Title` of the legend. It can be made dynamic using the"
+" :ref:`data-defined override <data_defined>` setting, useful for example "
+"when generating an atlas;"
+msgstr ""
+"Cambia il :guilabel:`Titolo` della legenda. Può essere reso dinamico usando "
+"l'impostazione :ref:`data-defined override <data_defined>`, utile per "
+"esempio quando si genera un atlante;"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:52
+msgid ""
+"Choose which :guilabel:`Map` item the current legend will refer to. By "
+"default, the map over which the legend item is drawn is picked. If none, "
+"then it falls back to the :ref:`reference map <reference_map>`."
+msgstr ""
+"Scegli a quale elemento della :guilabel:`Map` si riferirà la legenda "
+"corrente. Per impostazione predefinita, viene scelta la mappa su cui è "
+"disegnato l'elemento della legenda. Se non ce n'è nessuno, allora si ricade "
+"nella :ref:`mappa di riferimento <reference_map>`."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:56
+msgid ""
+":ref:`Variables <expression_variables>` of the linked map item (@map_id, "
+"@map_scale, @map_extent...) are also accessible from data-defined properties"
+" of the legend."
+msgstr ""
+":ref:`Variabili <expression_variables>` dell'elemento della mappa collegata "
+"(@map_id, @map_scale, @map_extent...) sono anche accessibili dalle proprietà"
+" definite dai dati della legenda."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:60
+msgid ""
+"Wrap the text of the legend on a given character: each time the character "
+"appears, it's replaced with a line break;"
+msgstr ""
+"Impacchetta il testo della legenda su un dato carattere: ogni volta che il "
+"carattere appare, viene sostituito da un'interruzione di riga;"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:62
+msgid ""
+"Set the symbols and text placement in the legend: the "
+":guilabel:`Arrangement` can be :guilabel:`Symbols on left` or "
+":guilabel:`Symbols on right`. The default value depends on the locale in use"
+" (right-to-left based or not)."
+msgstr ""
+"Imposta la disposizione dei simboli e del testo nella legenda: la "
+":guilabel:`Disposizione` può essere :guilabel:`Simboli sulla Sinistra` o "
+":guilabel:`Simboli sulla Destra`. Il valore predefinito dipende dal sistema "
+"locale in uso (basato su destra-sinistra o meno)."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:65
+msgid ""
+"Use |checkbox| :guilabel:`Resize to fit contents` to control whether or not "
+"a legend should be automatically resized to fit its contents. If unchecked, "
+"then the legend will never resize and instead just stick to whatever size "
+"the user has set. Any content which doesn't fit the size is cropped out."
+msgstr ""
+"Usa |checkbox| :guilabel:`Ridimensiona per adattare i contenuti` per "
+"controllare se una legenda debba essere automaticamente ridimensionata per "
+"adattarsi al suo contenuto. Se non è selezionato, la legenda non si "
+"ridimensionerà mai e si atterrà a qualsiasi dimensione impostata "
+"dall'utente. Qualsiasi contenuto che non si adatta alla dimensione viene "
+"tagliato fuori."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:262
+msgid "checkbox"
+msgstr "checkbox"
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:72
 msgid "Legend items"
 msgstr "Oggetti della Legenda"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:74
+msgid ""
+"The :guilabel:`Legend items` group of the legend :guilabel:`Item Properties`"
+" panel provides the following functionalities (see "
+":numref:`figure_layout_legend_items`):"
+msgstr ""
+"Il gruppo :guilabel:`Oggetti Legenda` del pannello :guilabel:`Proprietà "
+"dell'oggetto` della legenda fornisce le seguenti funzionalità (vedi "
+":numref:`figure_layout_legend_items`):"
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:82
 msgid "Legend Items group"
 msgstr "Gruppo Oggetti della Legenda"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:84
+msgid ""
+"The legend will be updated automatically if |checkbox| :guilabel:`Auto "
+"update` is checked. When :guilabel:`Auto update` is unchecked this will give"
+" you more control over the legend items. All the icons below the legend "
+"items list will be activated."
+msgstr ""
+"La legenda sarà aggiornata automaticamente se |checkbox| :guilabel:`Aggiorna"
+" automaticamente` è selezionato. Quando :guilabel:`Aggiorna automaticamente`"
+" è deselezionato questo ti darà più controllo sugli elementi della legenda. "
+"Tutte le icone sotto la lista degli elementi della legenda saranno attivate."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:88
 msgid ""
@@ -87,9 +206,21 @@ msgstr ""
 "|arrowUp| e |arrowDown|, oppure con la funzionalità 'drag-and-drop'. "
 "L'ordine non può essere modificato per le legende WMS."
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:260
+msgid "arrowUp"
+msgstr "arrowUp"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:258
+msgid "arrowDown"
+msgstr "arrowDown"
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:95
 msgid "Use the |addGroup| button to add a legend group."
 msgstr "Utilizza il pulsante |addGroup| per aggiungere un gruppo  legenda."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:254
+msgid "addGroup"
+msgstr "addGroup"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:96
 msgid ""
@@ -99,11 +230,51 @@ msgstr ""
 "Utilizza il pulsante |signPlus| per aggiungere layer e il pulsante "
 "|signMinus| per rimuovere gruppi, layer o classi di simboli."
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:272
+msgid "signPlus"
+msgstr "signPlus"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:270
+msgid "signMinus"
+msgstr "signMinus"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:98
+msgid ""
+"The |symbologyEdit| button is used to edit the layer, group name or title. "
+"First you need to select the legend item. Double-clicking the item also "
+"opens the text box to rename it."
+msgstr ""
+"Il pulsante |symbologyEdit| è usato per modificare il nome del layer, del "
+"gruppo o del titolo. Prima è necessario selezionare l'elemento della "
+"legenda. Facendo doppio clic sull'elemento si apre anche la casella di testo"
+" per rinominarlo."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:276
+msgid "symbologyEdit"
+msgstr "symbologyEdit"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:101
+msgid ""
+"The |expression| button uses expressions to customize each symbol label of "
+"the selected layer (see :ref:`legend_items_data_defined`)"
+msgstr ""
+"Il pulsante |expression| usa le espressioni per personalizzare ogni "
+"etichetta di simbolo del layer selezionato (vedi "
+":ref:`legend_items_data_defined`)"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:264
+msgid "expression"
+msgstr "expression"
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:103
 msgid "The |sum| button adds a feature count for each class of vector layer."
 msgstr ""
 "Il pulsante |sum| aggiunge il conteggio delle ricorrenze per ogni tipo di "
 "layer vettoriale."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:274
+msgid "sum"
+msgstr "sum"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:104
 msgid ""
@@ -123,6 +294,27 @@ msgstr ""
 "gli elementi sono comunque conservati e mostrati nell'oggetto della mappa "
 "del layout."
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:266
+msgid "expressionFilter"
+msgstr "expressionFilter"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:111
+msgid ""
+"While the default behavior of the legend item is to mimic the "
+":guilabel:`Layers` panel tree, displaying the same groups, layers and "
+"classes of symbology, right-click any item offers you options to hide "
+"layer's name or raise it as a group or subgroup. In case you have made some "
+"changes to a layer, you can revert them by choosing :guilabel:`Reset to "
+"defaults` from the contextual menu of the legend entry."
+msgstr ""
+"Mentre il comportamento predefinito della voce di legenda è quello di "
+"imitare l'albero del pannello :guilabel:`Layer`, visualizzando gli stessi "
+"gruppi, livelli e classi di simbologia, facendo clic con il tasto destro del"
+" mouse su qualsiasi voce ti offre opzioni per nascondere il nome del layer o"
+" elevarlo come gruppo o sottogruppo. Nel caso tu abbia fatto delle modifiche"
+" a un layer, puoi riprenderle scegliendo :guilabel:`Aggiorna "
+"automaticamente` dal menu contestuale della voce della legenda."
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:118
 msgid ""
 "After changing the symbology in the QGIS main window, you can click on "
@@ -132,6 +324,17 @@ msgstr ""
 "Dopo aver modificato la simbologia nella finestra principale di QGIS, puoi "
 "fare click su :guilabel:`Aggiorna tutto` per adottare le modifiche "
 "nell'oggetto legenda del layout di stampa."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:122
+msgid ""
+"With the |checkbox| :guilabel:`Only show items inside linked map`, only the "
+"legend items visible in the linked map will be listed in the legend. This "
+"tool remains available when |checkbox| :guilabel:`Auto-update` is active"
+msgstr ""
+"Con la |checkbox| :guilabel: `Mostra solamente oggetti all'interno della "
+"mappa collegata`, solo gli oggetti della legenda visibili nella mappa "
+"collegata saranno elencati nella legenda. Questo strumento rimane "
+"disponibile quando |checkbox| :guilabel:`Aggiorna automaticamente` è attivo"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:125
 msgid ""
@@ -145,9 +348,130 @@ msgstr ""
 ":guilabel:`Mostra solamente elementi all'interno della geometria "
 "dell'atlante`."
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:132
+msgid "Data-define the legend labels"
+msgstr "Etichette della legenda definite dai dati"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:134
+msgid ""
+"|expression| allows you to add :ref:`expressions <vector_expressions>` to "
+"each symbol label of a given layer. New variables (``@symbol_label``, "
+"``@symbol_id`` and ``@symbol_count``) help you interact with the legend "
+"entry."
+msgstr ""
+"|expression| permette di aggiungere :ref:`expressions <vector_expressions>` "
+"ad ogni etichetta di simbolo di un dato layer. Nuove variabili "
+"(``@symbol_label``, ``@symbol_id`` e ``@symbol_count``) ti aiutano ad "
+"interagire con la voce della legenda."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:138
+msgid ""
+"For example, given a ``regions`` layer categorized by its ``type`` field, "
+"you can append to each class in the legend their number of features and "
+"total area, e.g. ``Borough (3) - 850ha``:"
+msgstr ""
+"Per esempio, dato un layer ``regions`` categorizzato dal suo campo ``type``,"
+" puoi aggiungere ad ogni classe nella legenda il loro numero di elementi e "
+"l'area totale, per esempio ``Borough (3) - 850ha``:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:142
+msgid "Select the layer entry in the legend tree"
+msgstr "Seleziona la voce del layer nell'albero della legenda"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:143
+msgid ""
+"Press the |expression| button, opening the :guilabel:`Expression String "
+"Builder` dialog"
+msgstr ""
+"Premi il pulsante |expression|, aprendo la finestra di dialogo "
+":guilabel:`Costruttore stringhe espressione`"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:145
+msgid ""
+"Enter the following expression (*assuming symbol labels have not been "
+"edited*)::"
+msgstr ""
+"Inserisci la seguente espressione (*assumendo che le etichette dei simboli "
+"non siano state modificate*):"
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:153
 msgid "Press :guilabel:`OK`"
 msgstr "Premi :guilabel:`OK`"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:157
+msgid "Fonts"
+msgstr "Caratteri"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:159
+msgid ""
+"The :guilabel:`Fonts` group of the legend :guilabel:`Item Properties` panel "
+"provides the following functionalities:"
+msgstr ""
+"Il gruppo :guilabel:`Caratteri e Testo` del pannello :guilabel:`Proprietà "
+"dell'oggetto` della legenda fornisce le seguenti funzionalità:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:167
+msgid "Legend Fonts properties"
+msgstr "Proprietà Caratteri e Testo della Legenda"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:169
+msgid ""
+"You can change the font of the legend title, group, subgroup and item "
+"(feature) in the legend item using the :ref:`font selector <font_selector>` "
+"widget"
+msgstr ""
+"Puoi cambiare il carattere del titolo della legenda, del gruppo, del "
+"sottogruppo e dell'etichetta (elemento) nell'oggetto legenda usando il "
+"widget :ref:`font selector <font_selector>`"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:171
+msgid ""
+"For each of these levels you can set the text :guilabel:`Alignment`: it can "
+"be :guilabel:`Left` (default for left-to-right based locales), "
+":guilabel:`Center` or :guilabel:`Right` (default for right-to-left based "
+"locales)."
+msgstr ""
+"Per ognuno di questi livelli puoi impostare l' :guilabel:`Allineamento` del "
+"testo: può essere :guilabel:`Sinistra` (predefinito per paesi basati su "
+"sinistra-destra), :guilabel:`Centro` o :guilabel:`Destra` (predefinito per "
+"paesi basati su destra-sinistra)."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:175
+msgid ""
+"You set the :guilabel:`Color` of the labels using the :ref:`color selector "
+"<color-selector>` widget. The selected color will apply to all the font "
+"items in the legend."
+msgstr ""
+"Si imposta il :guilabel:`Colore carattere` delle etichette usando il widget "
+":ref:`color selector <color-selector>`. Il colore selezionato verrà "
+"applicato a tutti i caratteri degli elementi nella legenda."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:181
+msgid "Columns"
+msgstr "Colonne"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:183
+msgid ""
+"Under the :guilabel:`Columns` group of the legend :guilabel:`Item "
+"Properties` panel, legend items can be arranged over several columns:"
+msgstr ""
+"Sotto il gruppo :guilabel: `Colonne` del pannello :guilabel: `Proprietà "
+"dell'oggetto` della legenda, gli elementi della legenda possono essere "
+"disposti su più colonne:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:186
+msgid ""
+"Set the number of columns in the :guilabel:`Count` |selectNumber| field. "
+"This value can be made dynamic e.g., following atlas features, legend "
+"contents, the frame size..."
+msgstr ""
+"Imposta il numero di colonne nel campo :guilabel:`Numero` |selectNumber|. "
+"Questo valore può essere reso dinamico, ad esempio, seguendo le proprietà "
+"dell'atlante, i contenuti della legenda, la dimensione della cornice..."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:268
+msgid "selectNumber"
+msgstr "selectNumber"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:189
 msgid ""
@@ -165,9 +489,56 @@ msgstr ""
 "L'opzione |checkbox| :guilabel:`Dividi i layer` consente di dividere le "
 "colonne della legenda per layer categorizzati o graduati."
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:199
+msgid "Legend Columns settings"
+msgstr "Impostazioni delle colonne della legenda"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:203
+msgid "Symbol"
+msgstr "Simbolo"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:205
+msgid ""
+"The :guilabel:`Symbol` group of the legend :guilabel:`Item Properties` panel"
+" configures the size of symbols displayed next to the legend labels. You "
+"can:"
+msgstr ""
+"Il gruppo :guilabel:`Simbolo` del pannello :guilabel: `Proprietà "
+"dell'oggetto` della legenda configura la dimensione dei simboli visualizzati"
+" accanto alle etichette della legenda. Puoi:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:209
+msgid "Set the :guilabel:`Symbol width` and :guilabel:`Symbol height`"
+msgstr ""
+"Imposta la :guilabel:`Larghezza simbolo` e :guilabel:`Altezza simbolo`."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:210
+msgid ""
+"|checkbox| :guilabel:`Draw stroke for raster symbols`: this adds an outline "
+"to the symbol representing the band color of the raster layer; you can set "
+"both the :guilabel:`Stroke color` and :guilabel:`Tickness`."
+msgstr ""
+"|checkbox| :guilabel:`Disegna tratto per simbolo raster`: questo aggiunge un"
+" contorno al simbolo che rappresenta il colore della banda del layer raster;"
+" puoi impostare sia il :guilabel:`Colore tratto` che :guilabel:`Spessore`."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:219
+msgid "Legend Symbol configuration"
+msgstr "Configurazione dei simboli della legenda"
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:223
 msgid "WMS LegendGraphic and Spacing"
 msgstr "Legenda WMS e Spaziatura"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:225
+msgid ""
+"The :guilabel:`WMS LegendGraphic` and :guilabel:`Spacing` groups of the "
+"legend :guilabel:`Item Properties` panel provide the following "
+"functionalities (see :numref:`figure_layout_legend_wms`):"
+msgstr ""
+"I gruppi :guilabel:`Legenda WMS` e :guilabel:`Spaziatura` del pannello "
+":guilabel:`Proprietà dell'oggetto` forniscono le seguenti funzionalità (vedi"
+" :numref:`figure_layout_legend_wms`):"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:234
 msgid "WMS LegendGraphic and Spacing groups"
@@ -195,3 +566,12 @@ msgstr ""
 ":guilabel:`Legenda WMS` consente di regolare la :guilabel:`Larghezza "
 "legenda` e la :guilabel:`Altezza legenda` dell'immagine raster della legenda"
 " WMS."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:244
+msgid ""
+":guilabel:`Spacing` around title, groups, subgroups, symbols, labels, boxes,"
+" columns and lines can be customized through this dialog."
+msgstr ""
+":guilabel:`Spaziatura` intorno a titolo, gruppi, sottogruppi, simboli, "
+"etichette, caselle, colonne e linee può essere personalizzata attraverso "
+"questa finestra di dialogo."
