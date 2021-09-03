@@ -6,6 +6,39 @@
    in the resources/function_help/json/ folder in the
    qgis/QGIS repository.
 
+.. _expression_function_GeometryGroup_affine_transform:
+
+affine_transform
+................
+
+Returns the geometry after an affine transformation. Calculations are in the Spatial Reference System of this geometry. The operations are performed in a scale, rotation, translation order. If there is a Z or M offset but the coordinate is not present in the geometry, it will be added.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - affine_transform(geometry, deltaX, deltaY, rotationZ, scaleX, scaleY, [deltaZ=0], [deltaM=0], [scaleZ=1], [scaleM=1])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **geometry** - a geometry
+       * **deltaX** - x-axis translation
+       * **deltaY** - y-axis translation
+       * **rotationZ** - rotation around z-axis in degrees counter-clockwise
+       * **scaleX** - x-axis scale factor
+       * **scaleY** - y-axis scale factor
+       * **deltaZ** - z-axis translation
+       * **deltaM** - m-axis translation
+       * **scaleZ** - z-axis scale factor
+       * **scaleM** - m-axis scale factor
+   * - Examples
+     - * ``geom_to_wkt(affine_transform(geom_from_wkt('LINESTRING(1 1, 2 2)'), 2, 2, 0, 1, 1))`` → 'LineString (3 3, 4 4)'
+       * ``geom_to_wkt(affine_transform(geom_from_wkt('POLYGON((0 0, 0 3, 2 2, 0 0))'), 0, 0, -90, 1, 2))`` → 'Polygon ((0 0, 6 0, 4 -2, 0 0))'
+       * ``geom_to_wkt(affine_transform(geom_from_wkt('POINT(3 1)'), 0, 0, 0, 1, 1, 5, 0))`` → 'PointZ (3 1 5)'
+
+
+.. end_affine_transform_section
+
 .. _expression_function_GeometryGroup_angle_at_vertex:
 
 angle_at_vertex
@@ -2885,6 +2918,24 @@ Returns the minimum y coordinate of a geometry. Calculations are in the spatial 
 
 
 .. end_y_min_section
+
+.. _expression_function_GeometryGroup_$z:
+
+$z
+..
+
+Returns the z value of the current point feature if it is 3D. If the feature is a multipoint feature, then the z value of the first point will be returned.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - $z
+   * - Examples
+     - * ``$z`` → 123
+
+
+.. end_$z_section
 
 .. _expression_function_GeometryGroup_z:
 
