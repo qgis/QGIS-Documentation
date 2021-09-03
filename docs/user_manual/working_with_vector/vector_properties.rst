@@ -2053,8 +2053,10 @@ The drag and drop designer
 ..........................
 
 The drag and drop designer allows you to create a form with several containers
-(tabs or groups) to present the attribute fields, as shown for example
-in :numref:`figure_fields_form`.
+(tabs or groups) to present the attribute fields or other widgets that are not
+directly linked to a particular field (like the HTML/QML widgets or the
+:ref:`actions_menu` defined for the layer), as shown for example in
+:numref:`figure_fields_form`.
 
 .. _figure_fields_form:
 
@@ -2079,7 +2081,7 @@ in :numref:`figure_fields_form`.
    #. The first step is to use the |signPlus| icon to create a tab in which
       fields and groups will be displayed
    #. Then set the properties of the container, ie:
-   
+
       * the name
       * the type, ie a :guilabel:`tab` or a :guilabel:`group in container`
         (a group inside a tab or another group)
@@ -2099,7 +2101,7 @@ in :numref:`figure_fields_form`.
       * hide or show the container's label
       * display the container as a group box (only available for tabs).
       * rename the container
-      * set the number of columns 
+      * set the number of columns
       * enter an expression to control the container's visibility.
         The expression will be re-evaluated every time values in the form change,
         and the tab or group box shown/hidden accordingly
@@ -2113,7 +2115,7 @@ in :numref:`figure_fields_form`.
 #. :ref:`Customize the widget <configure_field>` of the fields in use
 #. In case the layer is involved in a :ref:`one or many to many relation
    <vector_relations>`, drag-and-drop the relation name from the
-   :guilabel:`Available widgets` panel to the :guilabel:`Form Layout` panel.
+   :guilabel:`Available Widgets` panel to the :guilabel:`Form Layout` panel.
    The associated layer attribute form will be embedded at the chosen place
    in the current layer's form. As for the other items, select the relation label
    to configure some properties:
@@ -2125,6 +2127,9 @@ in :numref:`figure_fields_form`.
 #. Apply the layer's properties dialog
 #. Open a feature attribute form (eg, using the |identify| :sup:`Identify features`
    tool) and it should display the new form.
+
+.. note:: The list of available :guilabel:`Actions` only contains the :ref:`actions_menu` defined
+    for the layer that are enabled for ``Layer`` or ``Feature`` scope.
 
 
 .. _provide_ui_file:
@@ -2318,9 +2323,9 @@ with the field type. The available widgets are:
   pairs within a single field. This is currently supported by the PostgreSQL
   provider, for fields of ``hstore`` type.
 * **JSON View**: Displays JSON data in a syntax highlighted text edit or in
-  tree view. This widget is currently read only. Several options are available 
+  tree view. This widget is currently read only. Several options are available
   to change how the data is displayed. 'Default view' specify if the widget should
-  appear in Text or Tree mode. 'Format JSON' has three options which are related 
+  appear in Text or Tree mode. 'Format JSON' has three options which are related
   to the tree view only:
 
   * Indented: Display data in a human readable form with newlines and four space characters for indentation.
