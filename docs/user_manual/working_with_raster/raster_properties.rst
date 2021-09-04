@@ -108,6 +108,12 @@ the selected raster, including:
 Symbology Properties
 ====================
 
+The raster layer symbology tab is made of three different sections:
+
+* The :guilabel:`Band rendering` where you can control the renderer type to use
+* The :guilabel:`Color rendering` to apply effects on rendered data
+* The :guilabel:`Resampling` methods to optimize rendering on map
+
 Band rendering
 --------------
 
@@ -443,18 +449,21 @@ Color ramp shader classification
 Color rendering
 ---------------
 
-For all kinds of :guilabel:`Band rendering`, the
-:guilabel:`Color rendering` set.
+Over the symbology type applied to the layer band(s), you can
+achieve special rendering effects for the whole raster file(s):
 
-You can achieve special rendering effects for your raster file(s)
-by using one of the blending modes (see :ref:`blend-modes`).
+* Use one of the blending modes (see :ref:`blend-modes`)
+* Set custom :guilabel:`Brightness`, :guilabel:`Saturation`,
+  :guilabel:`Gamma` and :guilabel:`Contrast` to colors.
+* With the |checkbox|:guilabel:`Invert colors`, the layer is rendered with
+  opposite colors. Handy, for example, to switch out-of-the box OpenStreetMap
+  tiles to dark mode.
+* Turn the layer to :guilabel:`Grayscale` option either 'By lightness',
+  'By luminosity' or 'By average'.
+* :guilabel:`Colorize` and adjust the :guilabel:`Strength` of
+  :guilabel:`Hue` in the color table
 
-Further settings can be made by modifying the :guilabel:`Brightness`,
-:guilabel:`Saturation`, :guilabel:`Gamma` and :guilabel:`Contrast`.
-You can also use a :guilabel:`Grayscale` option, where you can choose
-between 'Off', 'By lightness', 'By luminosity' and 'By average'.
-For one :guilabel:`Hue` in the color table, you can modify the
-'Strength'.
+Press :guilabel:`Reset` to remove any custom changes to the color rendering.
 
 Resampling
 ----------
@@ -481,9 +490,6 @@ The effect is a smoother image.
 This method can be applied to for instance digital topographic
 raster maps.
 
-At the bottom of the :guilabel:`Symbology` tab, you can see a
-thumbnail of the layer, its legend symbol, and the palette.
-
 
 .. index:: Transparency
 .. _raster_transparency:
@@ -491,14 +497,18 @@ thumbnail of the layer, its legend symbol, and the palette.
 Transparency Properties
 =======================
 
-|transparency| QGIS has the ability to set the transparency level
+|transparency| QGIS provides capabilities to set the transparency level
 of a raster layer.
-Use the transparency slider |slider| to set to what extent the
+
+Use the :guilabel:`Global opacity` slider to set to what extent the
 underlying layers (if any) should be visible through the current
 raster layer.
 This is very useful if you overlay raster layers (e.g., a shaded
 relief map overlayed by a classified raster map).
 This will make the look of the map more three dimensional.
+The opacity of the raster can be data-defined, and vary e.g. depending on
+the visibility of another layer, by temporal variables, on different pages
+of an atlas, ...
 
 .. _figure_raster_transparency:
 
@@ -507,8 +517,12 @@ This will make the look of the map more three dimensional.
 
    Raster Transparency
 
+With |checkbox| :guilabel:`No data value` QGIS reports the original source
+no data value (if defined) which you can consider as is in the rendering.
 Additionally, you can enter a raster value that should be treated as
 an :guilabel:`Additional no data value`.
+The :guilabel:`Display no data as` color selector allows you to applied
+a custom color to no data pixels, instead of the default transparent rendering.
 
 An even more flexible way to customize the transparency is available
 in the :guilabel:`Custom transparency options` section:
@@ -681,15 +695,25 @@ See :ref:`metadatamenu` for more information.
 Legend Properties
 =================
 
-The |legend| :guilabel:`Legend` tab provides you with a list of
-widgets you can embed within the layer tree in the Layers panel.
-The idea is to have a way to quickly access some actions that are
-often used with the layer (setup transparency, filtering, selection,
-style or other stuff...).
+The |legend| :guilabel:`Legend` tab provides you with advanced
+settings for the :ref:`Layers panel <label_legend>` and/or the :ref:`print
+layout legend <layout_legend_item>`. These options include:
 
-By default, QGIS provides a transparency widget but this can be
-extended by plugins that register their own widgets and assign
-custom actions to layers they manage.
+* Depending on the symbology applied to the layer, you may end up with several
+  entries in the legend, not necessarily readable/useful to display.
+  The :guilabel:`Legend placeholder image` helps you :ref:`select an image
+  <embedded_file_selector>` for replacement, displayed both in the
+  :guilabel:`Layers` panel and the print layout legend.
+* The |legend| :guilabel:`Embedded widgets in Legend` provides you with a list
+  of widgets you can embed within the layer tree in the Layers panel.
+  The idea is to have a way to quickly access some actions that are
+  often used with the layer (setup transparency, filtering, selection,
+  style or other stuff...).
+
+  By default, QGIS provides a transparency widget but this can be
+  extended by plugins that register their own widgets and assign
+  custom actions to layers they manage.
+
 
 .. _figure_raster_legend:
 
