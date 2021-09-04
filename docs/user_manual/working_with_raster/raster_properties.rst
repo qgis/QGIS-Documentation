@@ -208,7 +208,7 @@ contextual menu to:
    Raster Symbology - Paletted unique value rendering
 
 The pulldown menu, that opens when clicking the :guilabel:`...`
-(:guilabel:`Advanced options`) button below the color map to the
+(:sup:`Advanced options`) button below the color map to the
 right, offers color map loading
 (:guilabel:`Load Color Map from File...`) and exporting
 (:guilabel:`Export Color Map to File...`), and loading of classes
@@ -219,7 +219,7 @@ right, offers color map loading
 Singleband gray
 ...............
 
-This renderer allows you to render a single band layer with a
+This renderer allows you to render a layer using only one band with a
 :guilabel:`Color gradient`: 'Black to white' or 'White to black'.
 You can change the range of values to color (:guilabel:`Min` and
 :guilabel:`Max`) in the
@@ -251,7 +251,7 @@ Singleband pseudocolor
 
 This is a render option for single-band files that include a
 continuous palette.
-You can also create color maps for a bands of a multiband raster.
+You can also create color maps for a band of a multiband raster.
 
 .. _figure_raster_pseudocolor:
 
@@ -261,55 +261,9 @@ You can also create color maps for a bands of a multiband raster.
    Raster Symbology - Singleband pseudocolor rendering
 
 
-Using a :guilabel:`Band` of the layer and a
-:ref:`values range <minmaxvalues>`, three types of color
-:guilabel:`Interpolation` are available:
-
-* Discrete (a ``<=`` symbol appears in the header of the
-  :guilabel:`Value` column)
-* Linear
-* Exact (an ``=`` symbol appears in the header of the
-  :guilabel:`Value` column)
-
-The :guilabel:`Color ramp` drop down lists the available color ramps.
-You can create a new one and edit or save the currently selected one.
-The name of the color ramp will be saved in the configuration and in
-the QML file.
-
-The :guilabel:`Label unit suffix` is a label added after the value in
-the legend.
-
-For classification :guilabel:`Mode` |selectString| 'Equal interval',
-you only need to select the :guilabel:`number of classes`
-|selectNumber| and press the button :guilabel:`Classify`.
-For :guilabel:`Mode` |selectString| 'Continuous', QGIS creates
-classes automatically depending on :guilabel:`Min` and
-:guilabel:`Max`.
-
-The button |signPlus| :sup:`Add values manually` adds a value
-to the table.
-The button |signMinus| :sup:`Remove selected row` deletes a value from
-the table.
-Double clicking in the :guilabel:`Value` column lets you insert a
-specific value.
-Double clicking in the :guilabel:`Color` column opens the dialog
-:guilabel:`Change color`, where you can select a color to apply for
-that value.
-Further, you can also add labels for each color, but this value won't
-be displayed when you use the identify feature tool.
-
-Right-clicking over selected rows in the color table shows a
-contextual menu to:
-
-* :guilabel:`Change Color...` for the selection
-* :guilabel:`Change Opacity...` for the selection
-
-You can use the buttons |fileOpen| :sup:`Load color map from file`
-or |fileSaveAs| :sup:`Export color map to file` to load an existing
-color table or to save the color table for later use.
-
-The |checkbox| :guilabel:`Clip out of range values` allows QGIS to
-not render pixel greater than the :guilabel:`Max` value.
+Using a :guilabel:`Band` of the layer and a :ref:`values range <minmaxvalues>`,
+you can now interpolate and assign representation color to pixels within classes.
+More at :ref:`color_ramp_shader`.
 
 Pixels are assigned a color based on the selected color ramp and the
 layer's legend (in the :guilabel:`Layers` panel and the layout :ref:`legend
@@ -438,6 +392,84 @@ on the:
 
 Color ramp shader classification
 ................................
+
+This method can be used to classify and represent scalar dataset (raster or
+mesh contour) based on their values.
+Given a :ref:`color ramp <color-ramp>` and a number of classes, it generates
+intermediate color map entries for class limits. Each color is mapped with a
+value interpolated from a range of values and according to a classification mode.
+The scalar dataset elements are then assigned their color based on their class.
+
+.. _figure_raster_colorrampshader:
+
+.. figure:: img/color_ramp_shader.png
+   :align: center
+
+   Classifying a dataset with a color ramp shader
+
+#. A :guilabel:`Min` and :guilabel:`Max` values must be defined and used to
+   interpolate classes bounds. By default QGIS detects them from the dataset
+   but they can be modified.
+#. The :guilabel:`Interpolation` entry defines how scalar elements are assigned
+   their color :
+
+   * :guilabel:`Discrete` (a ``<=`` symbol appears in the header of the
+     :guilabel:`Value` column): The color is taken from the closest color mapl
+     entry with equa or higher value
+   * :guilabel:`Linear`: The color is linearly interpolated from the color map
+     entries above and below the pixel value, meaning that to each dataset
+     value corresponds a unique color
+   * :guilabel:`Exact` (a ``=`` symbol appears in the header of the
+     :guilabel:`Value` column): Only pixels with value equal to a color map
+     entry are applied a color; others are not rendered.
+#. The :guilabel:`Color ramp` widget helps you select the color ramp to assign
+   to the dataset. As usual with :ref:`this widget <color_ramp_widget>`,
+   you can create a new one and edit or save the currently selected one.
+   The name of the color ramp will be saved in the configuration.
+#. The :guilabel:`Label unit suffix` adds a label after the value in
+   the legend, and the :guilabel:`Label precision` controls the number of
+   decimals to display.
+#. The classification :guilabel:`Mode` helps you define how values are
+   distributed across the classes:
+
+   * :guilabel:`Equal interval`: Provided the :guilabel:`Number of classes`,
+     limits values are defined so that the classes all have the same magnitude.
+   * :guilabel:`Continuous`: Classes number and color are fetched from
+     the color ramp stops; limits values are set following stops distribution
+     in the color ramp.
+   * :guilabel:`Quantile`: Provided the :guilabel:`Number of classes`, limits
+     values are defined so that the classes have the same number of elements.
+     Not available with :ref:`mesh layers <mesh_symbology_contours>`.
+#. You can then :guilabel:`Classify` or tweak the classes:
+
+   * The button |signPlus| :sup:`Add values manually` adds a value to the table.
+   * The button |signMinus| :sup:`Remove selected row` deletes selected values
+     from the table.
+   * Double clicking in the :guilabel:`Value` lets you modify the class value.
+   * Double clicking in the :guilabel:`Color` column opens the dialog
+     :guilabel:`Change color`, where you can select a color to apply for
+     that value.
+   * Double clicking in the :guilabel:`Label` column to modify the label of
+     the class, but this value won't be displayed when you use the identify
+     feature tool.
+   * Right-clicking over selected rows in the color table shows a contextual
+     menu to :guilabel:`Change Color...` and :guilabel:`Change Opacity...`
+     for the selection.
+
+   You can use the buttons |fileOpen| :sup:`Load color map from file`
+   or |fileSaveAs| :sup:`Export color map to file` to load an existing
+   color table or to save the color table for later use.
+
+#. With linear :guilabel:`Interpolation`, you can also configure:
+
+   * |checkbox| :guilabel:`Clip out of range values`: By default, the linear
+     method assigns the first class (respectively the last class) color to
+     values in the dataset that are lower than the set :guilabel:`Min`
+     (respectively greater than the set :guilabel:`Max`) value.
+     Check this setting if you do not want to render those values.
+   * :guilabel:`Legend settings`, for display in the :guilabel:`Layers`
+     panel and the layout :ref:`legend item <layout_legend_item>`.
+     More details at :ref:`raster_legend_settings`.
 
 
 Color rendering
