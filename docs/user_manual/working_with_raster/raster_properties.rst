@@ -111,7 +111,7 @@ Symbology Properties
 The raster layer symbology tab is made of three different sections:
 
 * The :guilabel:`Band rendering` where you can control the renderer type to use
-* The :guilabel:`Color rendering` to apply effects on rendered data
+* The :guilabel:`Layer rendering` to apply effects on rendered data
 * The :guilabel:`Resampling` methods to optimize rendering on map
 
 Band rendering
@@ -446,7 +446,7 @@ Color ramp shader classification
 ................................
 
 
-Color rendering
+Layer rendering
 ---------------
 
 Over the symbology type applied to the layer band(s), you can
@@ -463,7 +463,7 @@ achieve special rendering effects for the whole raster file(s):
 * :guilabel:`Colorize` and adjust the :guilabel:`Strength` of
   :guilabel:`Hue` in the color table
 
-Press :guilabel:`Reset` to remove any custom changes to the color rendering.
+Press :guilabel:`Reset` to remove any custom changes to the layer rendering.
 
 Resampling
 ----------
