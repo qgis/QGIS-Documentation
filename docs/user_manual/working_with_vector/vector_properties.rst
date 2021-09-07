@@ -2055,7 +2055,7 @@ The drag and drop designer
 The drag and drop designer allows you to create a form with several containers
 (tabs or groups) to present the attribute fields or other widgets that are not
 directly linked to a particular field (like the HTML/QML widgets or the
-:ref:`actions_menu` defined for the layer), as shown for example in
+:ref:`actions <actions_menu>` defined for the layer), as shown for example in
 :numref:`figure_fields_form`.
 
 .. _figure_fields_form:
@@ -2128,8 +2128,10 @@ directly linked to a particular field (like the HTML/QML widgets or the
 #. Open a feature attribute form (eg, using the |identify| :sup:`Identify features`
    tool) and it should display the new form.
 
-.. note:: The list of available :guilabel:`Actions` only contains the :ref:`actions_menu` defined
-    for the layer that are enabled for ``Layer`` or ``Feature`` scope.
+.. note:: 
+   
+   The list of available :guilabel:`Actions` only contains the :ref:`actions_menu` defined
+   for the layer that are enabled for ``Layer`` or ``Feature`` scope.
 
 
 .. _provide_ui_file:
