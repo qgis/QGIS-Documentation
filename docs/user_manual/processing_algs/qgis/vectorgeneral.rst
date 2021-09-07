@@ -1537,6 +1537,10 @@ vector layer.
 A spatial criteria is applied to select the values from the second
 layer that are added to each feature from the first layer.
 
+.. include:: ../algs_include.rst
+   :start-after: **geometric_predicates**
+   :end-before: **end_geometric_predicates**
+
 **Default menu**: :menuselection:`Vector --> Data Management Tools`
 
 .. seealso:: :ref:`qgisjoinbynearest`,
@@ -1686,6 +1690,10 @@ The additional attributes and their values are taken from a second
 vector layer.
 A spatial criteria is applied to select the values from the second
 layer that are added to each feature from the first layer.
+
+.. include:: ../algs_include.rst
+   :start-after: **geometric_predicates**
+   :end-before: **end_geometric_predicates**
 
 The algorithm calculates a statistical summary for the values from
 matching features in the second layer (e.g. maximum value, mean value,
