@@ -2123,7 +2123,7 @@ directly linked to a particular field (like the HTML/QML widgets or the
    * hide or show the relation label
    * show the link button
    * show the unlink button
-#. In case the layer has one or more :ref:`actions_menu` enabled for
+#. In case the layer has one or more :ref:`actions <actions_menu>` enabled for
    ``Layer`` or ``Feature`` scope, the actions will be listed under :guilabel:`Actions`
    and you can drag and drop them as with the other fields.
    The associated action will be embedded at the chosen place
