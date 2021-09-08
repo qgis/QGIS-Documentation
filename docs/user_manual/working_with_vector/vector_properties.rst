@@ -2124,9 +2124,9 @@ directly linked to a particular field (like the HTML/QML widgets or the
    * show the link button
    * show the unlink button
 #. In case the layer has one or more :ref:`actions_menu` enabled for
-   ``Layer`` or ``Feature`` scope the actions will be listed under :guilabel:`Actions`
+   ``Layer`` or ``Feature`` scope, the actions will be listed under :guilabel:`Actions`
    and you can drag and drop them as with the other fields.
-   The associated action will be embedded  at the chosen place
+   The associated action will be embedded at the chosen place
    in the current layer's form.
 #. Apply the layer's properties dialog
 #. Open a feature attribute form (eg, using the |identify| :sup:`Identify features`
