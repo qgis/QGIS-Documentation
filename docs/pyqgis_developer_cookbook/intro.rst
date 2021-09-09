@@ -12,6 +12,17 @@ This document is intended to be both a tutorial and a reference
 guide. While it does not list all possible use cases, it should
 give a good overview of the principal functionality.
 
+
+Permission is granted to copy, distribute and/or modify this document under the
+terms of the GNU Free Documentation License, Version 1.2 or any later version
+published by the Free Software Foundation; with no Invariant Sections, no
+Front-Cover Texts, and no Back-Cover Texts.
+
+A copy of the license is included in the section :ref:`gnu_fdl`.
+
+This license also applies to all code snippets in this document.
+
+
 .. only:: html
 
    .. contents::
