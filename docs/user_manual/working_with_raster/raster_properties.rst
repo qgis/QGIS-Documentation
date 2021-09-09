@@ -553,7 +553,7 @@ With |checkbox| :guilabel:`No data value` QGIS reports the original source
 no data value (if defined) which you can consider as is in the rendering.
 Additionally, you can enter a raster value that should be treated as
 an :guilabel:`Additional no data value`.
-The :guilabel:`Display no data as` color selector allows you to applied
+The :guilabel:`Display no data as` color selector allows you to apply
 a custom color to no data pixels, instead of the default transparent rendering.
 
 An even more flexible way to customize the transparency is available
