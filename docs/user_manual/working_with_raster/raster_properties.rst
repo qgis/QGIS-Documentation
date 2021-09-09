@@ -497,6 +497,14 @@ achieve special rendering effects for the whole raster file(s):
 
 Press :guilabel:`Reset` to remove any custom changes to the layer rendering.
 
+.. _figure_raster_resampling:
+
+.. figure:: img/rasterRenderAndResampling.png
+   :align: center
+
+   Raster Symbology - Layer rendering and Resampling settings
+
+
 Resampling
 ----------
 
@@ -505,14 +513,6 @@ of an image.
 Resampling modes can optimize the appearance of the map.
 They calculate a new gray value matrix through a geometric
 transformation.
-
-.. _figure_raster_resampling:
-
-.. figure:: img/rasterRenderAndResampling.png
-   :align: center
-
-   Raster Symbology - Color rendering and Resampling settings
-
 
 When applying the 'Nearest neighbour' method, the map can get a
 pixelated structure when zooming in.
