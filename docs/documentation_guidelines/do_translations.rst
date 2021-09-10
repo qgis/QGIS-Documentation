@@ -27,27 +27,29 @@ In order to provide translations:
 
 #. A prebuild script creates translation files named :file:`.po` files for the
    English language in the folder :file:`/QGIS-Documentation/locale/en`.
-#. These "originals" are then copied by the script to the :file:`locale` folders for
-   other languages.
 #. The sentences in the :file:`.po` files are pushed to the Transifex web platform,
    and made available for translators who can begin to translate from English to their
    language with the editor.
-#. At the end of the day, a script pulls back all validated translations
-#. At the next build of the documentation (which occurs at least once a day), a
-   script reuses the sentences to create translated output
-#. When afterwards an :file:`.rst` document is updated a new :file:`.po` file is
-   created in the English part. The contents of this new file will be merged
-   with already existing :file:`.po` files for each language. This means that
-   when a new line is added to an :file:`.rst` document that was already
-   translated, only the new/updated sentences are added in the translated
-   :file:`.po` file and needs to be translated. The amount of work for updating
-   translations for next release should be relatively small.
+#. When a file is translated at 100%, the translated strings are automatically
+   pulled back to the documentation repository, under :file:`/QGIS-Documentation/locale/<language>`.
+#. At the next build of the documentation (which occurs at least once a day -- see time at the bottom of the page),
+   a script reuses the sentences to create translated output.
+#. For files not fully translated, a script pulls every two weeks translated strings
+   from Transifex to Github and these are as well published at the next build.
+#. Whenever an :file:`.rst` file is updated, the English :file:`.po` file is
+   updated and the changes are pushed to the corresponding file in Transifex.
+   This means that when a new paragraph is added to an :file:`.rst` document that was already translated,
+   only the new/updated sentences are added to the translated :file:`.po` file
+   and needs to be translated.
 
-.. note:: The process above is the same followed to translate QGIS website, QGIS
- Desktop and QGIS Server. The difference with the applications is that instead
- of :file:`.po` files, all the translatable strings in the :file:`.py`,
- :file:`.cpp`, :file:`.yaml` and others... files that shape the application are
- pushed to and pulled from transifex as a single :file:`.ts` file.
+.. note:: Translating QGIS Desktop specificities
+
+ The main difference with translating QGIS applications is that instead of :file:`.po` files,
+ all the translatable strings in the :file:`.py`, :file:`.cpp`, :file:`.yaml` files
+ that shape a particular version of the application are pushed to and pulled from Transifex
+ as a single :file:`.ts` file (e.g. ``qgis-application/qgis_en.ts (branch release-3_30)`` ).
+ Translations are pulled to Github in development branch (daily),
+ and at release time (for every released versions).
  
 Two different tools are currently used to do translations in QGIS:
 

@@ -4,16 +4,17 @@
 Documentation Guidelines
 ========================
 
-QGIS Documentation will be built automatically on the server at 0, 8am, 4pm
-US/Pacific (Pacific Time). The current status is available at
-https://docs.qgis.org.
+QGIS Documentation is available at https://docs.qgis.org.
+As the writing process is going on, a build is automatically run every day (see bottom of the page for exact time)
+for all `supported versions <https://qgis.org/en/site/getinvolved/development/roadmap.html#release-schedule>`
+(testing, Long Term Release (LTR) and next-to-be LTR).
 
 QGIS Documentation source files are available at https://github.com/qgis/QGIS-Documentation.
-They are mainly written using the reStructuredText (reST) format syntax, coupled
-with some scripts from the Sphinx toolset to post-process the HTML output.
-For general information on these tools, see
-https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html or
-https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html.
+They are mainly written using the reStructuredText (reST) format syntax,
+coupled with some scripts from the Sphinx toolset to post-process the HTML output.
+For general information on these tools,
+see https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html
+or https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html.
 
 The following chapters will guide you through learning:
 
