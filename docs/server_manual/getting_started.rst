@@ -242,11 +242,11 @@ Replace ``127.0.0.1`` with the IP of your server.
    need to start your text editor with administrator privileges before opening
    the hosts file.
 
-QGIS Server is now available at http://localhost/qgisserver. To check, type in a browser, as in the simple case:
+QGIS Server is now available at http://qgis.demo. To check, type in a browser, as in the simple case:
 
 ::
 
- http://localhost/qgisserver/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+ http://qgis.demo/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
 
 .. index:: nginx, spawn-fcgi, fcgiwrap
 
