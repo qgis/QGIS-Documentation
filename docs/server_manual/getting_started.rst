@@ -770,10 +770,12 @@ like this in your web browser to retrieve the *countries* layer:
     MAP=/home/qgis/projects/world.qgs&
     LAYERS=countries&
     SERVICE=WMS&
+    VERSION=1.3.0&
     REQUEST=GetMap&
     CRS=EPSG:4326&
     WIDTH=400&
-    HEIGHT=200
+    HEIGHT=200&
+    BBOX=-90,-180,90,180
 
 If you obtain the next image, then QGIS Server is running correctly:
 
