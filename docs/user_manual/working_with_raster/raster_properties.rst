@@ -477,6 +477,50 @@ The scalar dataset elements are then assigned their color based on their class.
      panel and the layout :ref:`legend item <layout_legend_item>`.
      More details at :ref:`raster_legend_settings`.
 
+.. _raster_legend_settings:
+
+Customize raster legend
+.......................
+
+When applying a color ramp to a raster or a mesh layer, you may want to display
+a legend showing the classification. By default, QGIS displays a continuous
+color ramp with min and max values in the :guilabel:`Layers` panel and the
+layout :ref:`legend item <layout_legend_item>`. This can be customized using
+the :guilabel:`Legend settings` button in the classification widget.
+
+.. _figure_raster_legend_settings:
+
+.. figure:: img/raster_legend_settings.png
+   :align: center
+
+   Modifying a raster legend
+
+In this dialog, you can set whether to |checkbox|:guilabel:`Use continuous
+legend`: if unchecked, the legend displays separated colors corresponding to
+the different classes applied. This option is not available for raster
+:ref:`singleband gray <singleband_gray>` symbology.
+
+Checking the :guilabel:`Use continuous legend` allows you to configure both
+the labels and layout properties of the legend.
+
+**Labels**
+
+* Add a :guilabel:`Prefix` and a :guilabel:`Suffix` to the labels
+* Modify the :guilabel:`Minimum` and a :guilabel:`Maximum` values to show in
+  the legend
+* :ref:`Customize <number_formatting>` the :guilabel:`Number format`
+* :ref:`Customize <text_format>` the :guilabel:`Text format` to use in the
+  print layout legend.
+
+**Layout**
+
+* Control the :guilabel:`Orientation` of the legend color ramp; it can be
+  **Vertical** or **Horizontal**
+* Control the :guilabel:`Direction` of the values depending on the orientation:
+
+  * If vertical, you can display the **Maximum on top** or the **Minimum on top**
+  * If horizontal, you can display the **Maximum on right** or the **Minimum on right**
+
 
 Layer rendering
 ---------------
