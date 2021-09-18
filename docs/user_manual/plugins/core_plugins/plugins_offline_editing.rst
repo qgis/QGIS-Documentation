@@ -11,14 +11,15 @@ persons are working simultaneously on the same datasets, it is difficult to
 merge the edits by hand, even if people don’t change the same features.
 
 The |offlineEditingCopy| :sup:`Offline Editing` Plugin automates the
-synchronisation by copying the content of a datasource (usually PostGIS or WFS-T)
+synchronisation by copying the content of the datasource
 to a SpatiaLite or GeoPackage database and storing the offline edits to dedicated
 tables. After being connected to the network again, it is possible to apply the
 offline edits to the master dataset.
 
 To use the plugin:
 
-#. Open a project with some vector layers (e.g., from a PostGIS or WFS-T datasource).
+#. Open a project with some vector layers (e.g., from an Esri Shapefile, PostGIS
+   or WFS-T datasource).
 #. Assuming you have already enabled the plugin (see :ref:`core_and_external_plugins`)
    go to :menuselection:`Database --> Offline Editing -->` |offlineEditingCopy|
    :guilabel:`Convert to offline project`. The eponym dialog opens.
@@ -29,6 +30,19 @@ To use the plugin:
    one to create.
 #. In the :guilabel:`Select remote layers` section, check the layers you'd like to
    save. The content of the layers is saved to database tables.
+
+   note::
+     Since target database formats do not have native list support, the offline
+     editing plugin transforms {string, number} list fields into string fields where
+     values are separated by commas. This allows reading and edit of the contents
+     of those fields when offline.
+
+     If you would like to handle both the field from the original layer and
+     the offline layer, you can rely on the :ref:`try() <expression_function_Conditionals_try>`
+     and :ref:`array <array_functions>` expression functions, e.g.::
+
+      try(array_contains("field",1),array_contains(string_to_array("field"),1))
+
 #. You can check |checkbox| :guilabel:`Only synchronize selected features if a
    selection is present` allowing to only save and work on a
    subset. It can be invaluable in case of large layers.
