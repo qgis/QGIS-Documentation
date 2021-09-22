@@ -1160,8 +1160,6 @@ The example above uses the following database schema:
 Storing and fetching an external ressource
 ==========================================
 
-|322|
-
 A field may target a ressource stored on an external storage system. Attribute forms can be configured
 so they act as a client to an external storage system in order to store and fetch those ressources, on
 users demand, directly from the forms.
