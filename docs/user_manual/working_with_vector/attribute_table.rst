@@ -1170,7 +1170,7 @@ Configuring an external storage
 -------------------------------
 
 In order to setup an external storage, user has to first configure it from the vector
-:ref:`attribute form properties<edit_widgets>` and select the :guilabel:`Attachment` widget.
+:ref:`attribute form properties <edit_widgets>` and select the :guilabel:`Attachment` widget.
 
 .. _figure_external_storage_configuration:
 
