@@ -1184,8 +1184,9 @@ From the :guilabel:`Attachment` widget, you have to first select the :guilabel:`
 * :guilabel:`Select Existing File`: The target URL already exists. When
   you select a resource, no store operation is achieved, the field is simply updated with the URL.
 
-* :guilabel:`Simple Copy`: The resource is copied on a file disk destination (which could be a local
-  or network shared file system)
+* :guilabel:`Simple Copy`: Stores a copy of the resource on a file disk destination
+  (which could be a local or network shared file system) and the field is updated with the path to
+  the copy.
   
 * :guilabel:`WebDAV External Storage`: The resource is pushed on an HTTP server supporting the
   `WebDAV <https://en.wikipedia.org/wiki/WebDAV>`_ protocol. (`Nextcloud <https://nextcloud.com/>`_,
