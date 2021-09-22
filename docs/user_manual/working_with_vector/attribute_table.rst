@@ -1193,9 +1193,9 @@ From the :guilabel:`Attachment` widget, you have to first select the :guilabel:`
   its URL. `Nextcloud <https://nextcloud.com/>`_, `Pydio <https://pydio.com/>`_ 
   or other file hosting software support this protocol.
   
-Then, he has to set up the :guilabel:`Store URL` parameter, which provides the URL to be used when a new
+Then, you have to set up the :guilabel:`Store URL` parameter, which provides the URL to be used when a new
 resource needs to be stored. It's possible to set up an expression using the
-:ref:`data defined override widget<data_defined>` in order to have specific values according to
+:ref:`data defined override widget <data_defined>` in order to have specific values according to
 feature attributes.
 
 The variable **@selected_file_path** could be used in that expression and represent the absolute
