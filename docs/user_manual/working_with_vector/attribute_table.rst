@@ -1214,8 +1214,8 @@ If the external storage system needs to, it's possible to configure an
 Using an external storage
 -------------------------
 
-Once configured, use can select a local file using the button :guilabel:`...`. According to
-what has been configured as :ref:`Type <external_storage_configuration>`, the file
+Once configured, you can select a local file using the button :guilabel:`...` when editing a feature's attribute.
+Depending on the configured :ref:`storage type <external_storage_configuration>`, the file
 will be stored on the external storage system (except if :guilabel:`Select existing file` has been
 selected) and the field will be updated with the new resource URL.
 
