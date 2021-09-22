@@ -1234,12 +1234,11 @@ selected) and the field will be updated with the new resource URL.
 
 Using the |cancel| :sup:`Cancel` button, user can cancel the storing process.
 
-It's possible to configure a viewer using the :guilabel:`Integrated document viewer` so the resource will be automatically fetched from the external
-storage system and displayed directly below the URL.
-
-
 |warning| :sup:`Warning` Icon indicates that the resource cannot be fetched from the external
 storage system. In that case, more details might appear in the :ref:`log_message_panel`.
+
+It's possible to configure a viewer using the :guilabel:`Integrated document viewer` so the resource will be automatically fetched from the external
+storage system and displayed directly below the URL.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
