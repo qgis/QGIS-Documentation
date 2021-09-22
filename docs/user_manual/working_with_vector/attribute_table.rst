@@ -1197,7 +1197,7 @@ ressource needs to be stored. It's possible to set up an expression using the
 :ref:`data defined override widget<data_defined>` in order to have specific values according to
 feature attributes.
 
-The special value **@selected_file_path** could be used in that expression and represent the absolute
+The variable **@selected_file_path** could be used in that expression and represent the absolute
 file path of the user selected file (using the file selector or drag'n drop).
    
 .. note::
