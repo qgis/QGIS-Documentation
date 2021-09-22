@@ -1179,7 +1179,7 @@ In order to setup an external storage, you have to first configure it from the v
 
    Editing a WebDAV external storage for a given field
 
-From the :guilabel:`Attachment` widget, user has to first select the attachment type among these options:
+From the :guilabel:`Attachment` widget, you have to first select the :guilabel:`Storage type`:
 
 * :guilabel:`Select Existing File` : The ressource is already existing. When
   user selects a ressource, no store operation is achieved, only the
