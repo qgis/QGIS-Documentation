@@ -1181,14 +1181,13 @@ In order to setup an external storage, you have to first configure it from the v
 
 From the :guilabel:`Attachment` widget, you have to first select the :guilabel:`Storage type`:
 
-* :guilabel:`Select Existing File` : The resource is already existing. When
-  user selects a resource, no store operation is achieved, only the
-  URL is updated.
+* :guilabel:`Select Existing File`: The target URL already exists. When
+  you select a resource, no store operation is achieved, the field is simply updated with the URL.
 
-* :guilabel:`Simple Copy` : The resource is copied on a file disk destination (which could be a local
+* :guilabel:`Simple Copy`: The resource is copied on a file disk destination (which could be a local
   or network shared file system)
   
-* :guilabel:`WebDAV External Storage` : The resource is pushed on an HTTP server supporting the
+* :guilabel:`WebDAV External Storage`: The resource is pushed on an HTTP server supporting the
   `WebDAV <https://en.wikipedia.org/wiki/WebDAV>`_ protocol. (`Nextcloud <https://nextcloud.com/>`_,
   `Pydio <https://pydio.com/>`_ or others file hosting software supports this protocol).
 
