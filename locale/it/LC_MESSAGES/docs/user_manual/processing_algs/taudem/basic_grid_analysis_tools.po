@@ -1,26 +1,36 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
-# Marco Tagliabue <mark.taglia@gmail.com>, 2020
+# Harrissou Sant-anna, 2020
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:28+0000\n"
-"Last-Translator: Marco Tagliabue <mark.taglia@gmail.com>, 2020\n"
+"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"PO-Revision-Date: 2020-12-24 10:21+0000\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2021\n"
 "Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:2
+msgid "Basic Grid Analysis"
+msgstr "Analisi di base della rete"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:11
+msgid "D-Infinity Contributing Area"
+msgstr "Area di Contribuzione D-Infinity"
 
 #: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:14
 #: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:72
@@ -42,6 +52,107 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:828
 msgid "Description"
 msgstr "Descrizione"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:16
+msgid ""
+"Calculates a grid of specific catchment area which is the contributing area "
+"per unit contour length using the multiple flow direction D-infinity "
+"approach. D-infinity flow direction is defined as steepest downward slope on"
+" planar triangular facets on a block centered grid. The contribution at each"
+" grid cell is taken as the grid cell length (or when the optional weight "
+"grid input is used, from the weight grid). The contributing area of each "
+"grid cell is then taken as its own contribution plus the contribution from "
+"upslope neighbors that have some fraction draining to it according to the "
+"D-infinity flow model. The flow from each cell either all drains to one "
+"neighbor, if the angle falls along a cardinal (0, π/2, π, 3π/2) or ordinal "
+"(π/4, 3π/4, 5π/4, 7π/4) direction, or is on an angle falling between the "
+"direct angle to two adjacent neighbors. In the latter case the flow is "
+"proportioned between these two neighbor cells according to how close the "
+"flow direction angle is to the direct angle to those cells. The contour "
+"length used here is the grid cell size. The resulting units of the specific "
+"catchment area are length units the same as those of the grid cell size."
+msgstr ""
+"Calcola una griglia di uno specifico bacino che è l'area di contribuzione "
+"per unità di lunghezza del contorno usando l'approccio D-infinity a "
+"direzione di flusso multipla. La direzione di flusso D-infinito è definita "
+"come la più ripida pendenza verso il basso su sfaccettature triangolari "
+"planari su una griglia centrata sul blocco. Il contributo ad ogni cella "
+"della griglia viene preso come la lunghezza della cella della griglia (o "
+"quando viene usato un ingresso opzionale per la griglia, dal peso griglia). "
+"L'area contribuente di ogni cella della griglia è quindi presa come il suo "
+"contributo più il contributo dei vicini a monte che hanno qualche frazione "
+"che drena ad essa secondo il modello di flusso D-infinito. Il flusso da ogni"
+" cella o drena tutto ad un vicino, se l'angolo cade lungo una direzione "
+"cardinale (0, π/2, π, 3π/2) o ordinale (π/4, 3π/4, 5π/4, 7π/4), o è su un "
+"angolo che cade tra l'angolo diretto a due vicini adiacenti. In quest'ultimo"
+" caso il flusso è proporzionato tra queste due celle vicine in base a quanto"
+" l'angolo della direzione del flusso è vicino all'angolo diretto a queste "
+"celle. La lunghezza del contorno usata qui è la dimensione della cella della"
+" griglia. Le unità risultanti del bacino specifico sono unità di lunghezza "
+"uguali a quelle della dimensione della cella della griglia."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:35
+msgid ""
+"When the optional weight grid is not used, the result is reported in terms "
+"of specific catchment area, the upslope area per unit contour length, taken "
+"here as the number of cells times grid cell length (cell area divided by "
+"cell length). This assumes that grid cell length is the effective contour "
+"length, in the definition of specific catchment area and does not "
+"distinguish any difference in contour length dependent upon the flow "
+"direction. When the optional weight grid is used, the result is reported "
+"directly as a summation of weights, without any scaling."
+msgstr ""
+"Quando la griglia opzionale non viene utilizzata, il risultato viene "
+"riportato in termini di area specifica del bacino idrografico, l'area in "
+"pendenza per unità di lunghezza della curva di livello, presa qui come il "
+"numero di celle per la lunghezza della cella della griglia (area della cella"
+" divisa per la lunghezza della cella). Questo presuppone che la lunghezza "
+"delle celle della griglia sia la lunghezza effettiva del contorno, nella "
+"definizione dell'area specifica del bacino e non distingue alcuna differenza"
+" nella lunghezza del contorno dipendente dalla direzione del flusso. Quando "
+"si usa la griglia opzionale dei pesi, il risultato viene riportato "
+"direttamente come sommatoria dei pesi, senza alcuna correzione in scala."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:44
+msgid ""
+"If the optional outlet point shapefile is used, only the outlet cells and "
+"the cells upslope (by the D-infinity flow model) of them are in the domain "
+"to be evaluated."
+msgstr ""
+"Se viene utilizzato lo shapefile opzionale del punto di efflusso, solo le "
+"celle di efflusso e le celle a monte (per il modello di flusso D-infinity) "
+"di esse sono nel dominio da valutare."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:48
+msgid ""
+"By default, the tool checks for edge contamination. This is defined as the "
+"possibility that a contributing area value may be underestimated due to grid"
+" cells outside of the domain not being counted. This occurs when drainage is"
+" inwards from the boundaries or areas with \"no data\" values for elevation."
+" The algorithm recognizes this and reports \"no data\" for the contributing "
+"area. It is common to see streaks of \"no data\" values extending inwards "
+"from boundaries along flow paths that enter the domain at a boundary. This "
+"is the desired effect and indicates that contributing area for these grid "
+"cells is unknown due to it being dependent on terrain outside of the domain "
+"of data available. Edge contamination checking may be turned off in cases "
+"where you know it is not an issue or want to ignore these problems, if for "
+"example, the DEM has been clipped along a watershed outline."
+msgstr ""
+"Per impostazione predefinita, lo strumento controlla la contaminazione dei "
+"bordi. Questo è definito come la possibilità che un valore di un'area "
+"contributiva possa essere sottostimato a causa di celle della griglia al di "
+"fuori del dominio che non vengono contate. Questo si verifica quando il "
+"drenaggio è verso l'interno dei confini o delle aree con valori di "
+"elevazione \"n data\". L'algoritmo lo riconosce e riporta \"nessun dato\" "
+"per l'area contribuente. È comune vedere strisce di valori \"no data\" che "
+"si estendono verso l'interno dai confini lungo i percorsi di flusso che "
+"entrano nel dominio da un confine. Questo è l'effetto desiderato e indica "
+"che l'area contributiva per queste celle della griglia è sconosciuta a causa"
+" della sua dipendenza dal terreno al di fuori del dominio dei dati "
+"disponibili. Il controllo della contaminazione dei bordi può essere "
+"disattivato nei casi in cui sai che non è un problema o vuoi ignorare questi"
+" problemi, se per esempio, il DEM è stato ritagliato lungo il contorno di "
+"uno spartiacque."
 
 #: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:62
 #: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:221
@@ -97,11 +208,222 @@ msgstr "Nome"
 msgid "Type"
 msgstr "Tipo"
 
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:73
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:254
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:291
+msgid "**D-infinity flow directions**"
+msgstr "**Direzioni di flusso D-infinity**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:74
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:255
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:292
+msgid "``DINF_FLOWDIR``"
+msgstr "``DINF_FLOWDIR``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:75
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:99
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:135
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:158
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:234
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:256
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:268
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:293
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:307
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:365
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:384
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:416
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:439
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:501
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:523
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:535
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:559
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:565
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:627
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:637
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:667
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:680
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:692
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:718
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:725
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:732
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:790
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:797
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:807
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:831
+msgid "[raster]"
+msgstr "[raster]"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:76
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:294
+msgid ""
+"A grid of flow directions based on the D-infinity flow method using the "
+"steepest slope of a triangular facet. Flow direction is determined as the "
+"direction of the steepest downward slope on the 8 triangular facets of a 3x3"
+" block centered grid. Flow direction is encoded as an angle in radians, "
+"counter-clockwise from east as a continuous (floating point) quantity "
+"between 0 and 2π. The resulting flow in a grid is then usually interpreted "
+"as being proportioned between the two neighboring cells that define the "
+"triangular facet with the steepest downward slope."
+msgstr ""
+"Una griglia di direzioni di flusso basata sul metodo del flusso D-infinito "
+"usando la pendenza più ripida di una sfaccettatura triangolare. La direzione"
+" del flusso è determinata come la direzione della pendenza più ripida verso "
+"il basso sulle 8 sfaccettature triangolari di una griglia centrata su un "
+"blocco 3x3. La direzione del flusso è codificata come un angolo in radianti,"
+" in senso antiorario da est come una quantità continua (in virgola mobile) "
+"tra 0 e 2π. Il flusso risultante in una griglia è quindi solitamente "
+"interpretato come proporzionato tra le due celle vicine che definiscono la "
+"sfaccettatura triangolare con la pendenza più ripida verso il basso."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:87
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:371
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:656
+msgid "**Outlets**"
+msgstr "**Uscite**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:89
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:97
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:373
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:382
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:635
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:648
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:658
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:795
+msgid "Optional"
+msgstr "Opzionale"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:90
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:374
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:659
+msgid "``OUTLETS``"
+msgstr "``OUTLETS``"
+
 #: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:91
 #: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:375
 #: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:660
 msgid "[vector: point]"
-msgstr "[vettore: punto]"
+msgstr "[vector: point]"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:92
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:376
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:661
+msgid ""
+"A point shapefile defining the outlets of interest. If this input file is "
+"used, only the cells upslope of these outlet cells are considered to be "
+"within the domain being evaluated."
+msgstr ""
+"Uno shapefile di punti che definisce gli sbocchi di interesse. Se è usato "
+"questo file in ingresso, solo le celle a monte di queste celle di uscita "
+"sono considerate all'interno del dominio da valutare."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:95
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:380
+msgid "**Weight grid**"
+msgstr "**Peso griglia**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:98
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:383
+msgid "``WEIGHT_GRID``"
+msgstr "``WEIGHT_GRID``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:100
+msgid ""
+"A grid giving contribution to flow for each cell. These contributions (also "
+"sometimes referred to as weights or loadings) are used in the contributing "
+"area accumulation. If this input file is not used, the result is reported in"
+" terms of specific catchment area (the upslope area per unit contour length)"
+" taken as the number of cells times grid cell length (cell area divided by "
+"cell length)."
+msgstr ""
+"Una griglia che dà il contributo al flusso per ogni cella. Questi contributi"
+" (a volte indicati anche come pesi o carichi) sono usati nell'accumulo "
+"dell'area contribuente. Se questo file di input non viene utilizzato, il "
+"risultato viene riportato in termini di area specifica del bacino (l'area di"
+" versante per unità di lunghezza della curva di livello) presa come il "
+"numero di celle per la lunghezza della cella della griglia (area della cella"
+" divisa per la lunghezza della cella)."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:108
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:390
+msgid "**Check for edge contamination**"
+msgstr "**Verifica contaminazione dei bordi**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:109
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:391
+msgid "``EDGE_CONTAMINATION``"
+msgstr "``EDGE_CONTAMINATION``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:110
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:392
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:801
+msgid "[boolean]"
+msgstr "[boolean]"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:112
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:394
+msgid "Default: True"
+msgstr "Predefinito: True"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:113
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:395
+msgid ""
+"A flag that indicates whether the tool should check for edge contamination. "
+"Edge contamination is defined as the possibility that a contributing area "
+"value may be underestimated due to the fact that grid cells outside of the "
+"domain have not been evaluated. This occurs when drainage is inwards from "
+"the boundaries or areas with NODATA values for elevation. The algorithm "
+"recognizes this and reports NODATA for the impated cells. It is common to "
+"see streaks of NODATA values extending inwards from boundaries along flow "
+"paths that enter the domain at a boundary. This is the desired effect and "
+"indicates that contributing area for these grid cells is unknown due to it "
+"being dependent on terrain outside of the domain of available data. Edge "
+"contamination checking may be turned off in cases where you know this is not"
+" an issue, or want to ignore these problems, if for example, the DEM has "
+"been clipped along a watershed outline."
+msgstr ""
+"Un flag che indica se lo strumento deve controllare la contaminazione dei "
+"bordi. La contaminazione dei bordi è definita come la possibilità che un "
+"valore dell'area contributiva possa essere sottostimato a causa del fatto "
+"che le celle della griglia al di fuori del dominio non sono state valutate. "
+"Questo si verifica quando il drenaggio è verso l'interno dei confini o delle"
+" aree con valori NODATA per la quota. L'algoritmo riconosce questo e riporta"
+" NODATA per le celle impattate. È comune vedere strisce di valori NODATA che"
+" si estendono verso l'interno dai confini lungo i percorsi di flusso che "
+"entrano nel dominio da un confine. Questo è l'effetto desiderato e indica "
+"che l'area che contribuisce a queste celle della griglia è sconosciuta a "
+"causa del fatto che dipende dal terreno al di fuori del dominio dei dati "
+"disponibili. Il controllo della contaminazione dei bordi può essere "
+"disattivato nei casi in cui sai che questo non è un problema, o vuoi "
+"ignorare questi problemi, se per esempio, il DEM è stato tagliato lungo il "
+"contorno di un bacino idrografico. "
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:133
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:156
+msgid "**D-infinity specific catchment area**"
+msgstr "**Bacino di raccolta specifico D-infinity**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:134
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:157
+msgid "``DINF_CONTRIB_AREA``"
+msgstr "``DINF_CONTRIB_AREA``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:137
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:258
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:270
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:418
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:525
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:537
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:669
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:682
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:694
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:809
+msgid "Default: ``[Save to temporary file]``"
+msgstr "Predefinito: ``[Save to temporary file]``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:138
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:419
+msgid "Specification of the output raster. One of:"
+msgstr "Indicazione del raster in uscita. Uno di:"
 
 #: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:140
 #: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:262
@@ -151,10 +473,776 @@ msgstr "La codifica del file può anche essere cambiata qui."
 msgid "Outputs"
 msgstr "In uscita:"
 
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:159
+msgid ""
+"A grid of specific catchment area which is the contributing area per unit "
+"contour length using the multiple flow direction D-infinity approach. The "
+"contributing area of each grid cell is then taken as its own contribution "
+"plus the contribution from upslope neighbors that have some fraction "
+"draining to it according to the D-infinity flow model."
+msgstr ""
+"Una griglia di area specifica del bacino idrografico che è l'area "
+"contributiva per unità di lunghezza delle curve di livello utilizzando "
+"l'approccio D-infinity a direzione di flusso multipla. L'area contributiva "
+"di ogni cella della griglia è quindi presa come il suo proprio contributo "
+"più il contributo dei vicini a monte che hanno qualche frazione che drena ad"
+" essa secondo il modello di flusso D-infinity."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:167
+msgid "**Algorithm ID**: ``taudem:areadinf``"
+msgstr "**ID Algoritmo**: ``taudem:areadinf``"
+
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+msgid ""
+"The *algorithm id* is displayed when you hover over the algorithm in the "
+"Processing Toolbox. The *parameter dictionary* provides the parameter NAMEs "
+"and values. See :ref:`processing_console` for details on how to run "
+"processing algorithms from the Python console."
+msgstr ""
+"L' *id algoritmo* viene visualizzato quando si passa il mouse sull'algoritmo"
+" nella finestra degli strumenti di Processing. Il *dizionario dei parametri*"
+" fornisce i Nomi e i valori dei parametri. Vedi :ref:`processing_console` "
+"per dettagli su come eseguire algoritmi di processing dalla console Python."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:175
+msgid "D-Infinity Flow Directions"
+msgstr "Direzioni di flusso D-Infinity"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:180
+msgid ""
+"Assigns a flow direction based on the D-infinity flow method using the "
+"steepest slope of a triangular facet (Tarboton, 1997, \"A New Method for the"
+" Determination of Flow Directions and Contributing Areas in Grid Digital "
+"Elevation Models\", Water Resources Research, 33(2): 309-319). Flow "
+"direction is defined as steepest downward slope on planar triangular facets "
+"on a block centered grid. Flow direction is encoded as an angle in radians "
+"counter-clockwise from east as a continuous (floating point) quantity "
+"between 0 and 2π. The flow direction angle is determined as the direction of"
+" the steepest downward slope on the eight triangular facets formed in a 3 x "
+"3 grid cell window centered on the grid cell of interest. The resulting flow"
+" in a grid is then usually interpreted as being proportioned between the two"
+" neighboring cells that define the triangular facet with the steepest "
+"downward slope."
+msgstr ""
+"Assegna una direzione di flusso basata sul metodo del flusso D-infinity "
+"usando la pendenza più ripida di una sfaccettatura triangolare (Tarboton, "
+"1997, \"A New Method for the Determination of Flow Directions and "
+"Contributing Areas in Grid Digital Elevation Models\", Water Resources "
+"Research, 33(2): 309-319). La direzione del flusso è definita come la più "
+"ripida pendenza verso il basso su sfaccettature triangolari planari su una "
+"griglia centrata a blocchi. La direzione del flusso è codificata come un "
+"angolo in radianti in senso antiorario da est come una quantità continua (in"
+" virgola mobile) tra 0 e 2π. L'angolo di direzione del flusso è determinato "
+"come la direzione della più ripida pendenza verso il basso sulle otto "
+"sfaccettature triangolari formate in una finestra di 3 x 3 celle della "
+"griglia centrata sulla cella della griglia di interesse. Il flusso "
+"risultante in una griglia è quindi solitamente interpretato come "
+"proporzionato tra le due celle vicine che definiscono la sfaccettatura "
+"triangolare con la pendenza più ripida verso il basso."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:196
+msgid ""
+"A block-centered representation is used with each elevation value taken to "
+"represent the elevation of the center of the corresponding grid cell. Eight "
+"planar triangular facets are formed between each grid cell and its eight "
+"neighbors. Each of these has a downslope vector which when drawn outwards "
+"from the center may be at an angle that lies within or outside the 45 degree"
+" (π/4 radian) angle range of the facet at the center point. If the slope "
+"vector angle is within the facet angle, it represents the steepest flow "
+"direction on that facet. If the slope vector angle is outside a facet, the "
+"steepest flow direction associated with that facet is taken along the "
+"steepest edge. The slope and flow direction associated with the grid cell is"
+" taken as the magnitude and direction of the steepest downslope vector from "
+"all eight facets. Slope is measured as drop/distance, i.e. tan of the slope "
+"angle."
+msgstr ""
+"Una rappresentazione centrata sul blocco è usata con ogni valore di "
+"elevazione preso per rappresentare l'elevazione del centro della cella della"
+" griglia corrispondente. Otto sfaccettature triangolari planari sono formate"
+" tra ogni cella della griglia e i suoi otto vicini. Ognuno di questi ha un "
+"vettore di pendenza che quando viene disegnato verso l'esterno dal centro "
+"può essere ad un angolo che si trova all'interno o all'esterno della gamma "
+"di angoli di 45 gradi (π/4 radianti) della sfaccettatura nel punto centrale."
+" Se l'angolo del vettore di pendenza è all'interno dell'angolo della "
+"sfaccettatura, rappresenta la direzione più ripida del flusso su quella "
+"sfaccettatura. Se l'angolo del vettore pendenza è fuori da una "
+"sfaccettatura, la direzione del flusso più ripida associata a quella "
+"sfaccettatura è presa lungo il bordo più ripido. La pendenza e la direzione "
+"del flusso associate alla cella della griglia sono prese come la grandezza e"
+" la direzione del vettore più ripido verso il basso da tutte le otto "
+"sfaccettature. La pendenza è misurata come caduta/distanza, ad esempio tan "
+"dell'angolo di pendenza."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:209
+msgid ""
+"In the case where no slope vectors are positive (downslope), the flow "
+"direction is set using the method of Garbrecht and Martz (1997) for the "
+"determination of flow across flat areas. This makes flat areas drain away "
+"from high ground and towards low ground. The flow path grid to enforce "
+"drainage along existing streams is an optional input, and if used, takes "
+"precedence over elevations for the setting of flow directions."
+msgstr ""
+"Nel caso in cui nessun vettore di pendenza sia positivo (downslope), la "
+"direzione del flusso è impostata utilizzando il metodo di Garbrecht e Martz "
+"(1997) per la determinazione del flusso attraverso aree piane. Questo fa sì "
+"che le aree pianeggianti drenino lontano dall'alto e verso il basso. La "
+"griglia del percorso del flusso per imporre il drenaggio lungo i corsi "
+"d'acqua esistenti è un input opzionale e, se usato, ha la precedenza sulle "
+"quote per l'impostazione delle direzioni del flusso."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:216
+msgid ""
+"The D-infinity flow direction algorithm may be applied to a DEM that has not"
+" had its pits filled, but it will then result in \"no data\" values for the "
+"D-infinity flow direction and slope associated with the lowest point of the "
+"pit."
+msgstr ""
+"L'algoritmo della direzione di flusso D-infinito può essere applicato a un "
+"DEM che non ha avuto i suoi buchi riempiti, ma risulterà poi in valori \"no "
+"data\" per la direzione di flusso D-infinito e la pendenza associata al "
+"punto più basso del buco."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:232
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:499
+msgid "**Pit filled elevation**"
+msgstr "**Elevazione piena di fosse**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:233
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:500
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:806
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:830
+msgid "``PIT_FILLED``"
+msgstr "``PIT_FILLED``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:235
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:502
+msgid ""
+"A grid of elevation values. This is usually the output of the **\"Pit "
+"Remove\"** tool, in which case it is elevations with pits removed. Pits are "
+"low elevation areas in digital elevation models (DEMs) that are completely "
+"surrounded by higher terrain. They are generally taken to be artifacts of "
+"the digitation process that interfere with the processing of flow across "
+"DEMs. So they are removed by raising their elevation to the point where they"
+" just drain off the domain. This step is not essential if you have reason to"
+" believe that the pits in your DEM are real. If a few pits actually exist "
+"and so should not be removed, while at the same time others are believed to "
+"be artifacts that need to be removed, the actual pits should have NODATA "
+"elevation values inserted at their lowest point. NODATA values serve to "
+"define edges of the domain in the flow field, and elevations are only raised"
+" to where flow is off an edge, so an internal NODATA value will stop a pit "
+"from being removed, if necessary."
+msgstr ""
+"Una griglia di valori di elevazione. Questo è di solito l'output dello "
+"strumento **\"Pit Remove \"**, nel qual caso si tratta di quote con buche "
+"rimosse. Le buche sono aree a bassa quota nei modelli digitali di elevazione"
+" (DEM) che sono completamente circondate da terreno più alto. Sono "
+"generalmente considerati artefatti del processo di digitalizzazione che "
+"interferiscono con l'elaborazione del flusso attraverso i DEM. Quindi "
+"vengono rimossi aumentando la loro elevazione fino al punto in cui si "
+"allontanano dal dominio. Questo passo non è essenziale se hai ragione di "
+"credere che le buche nel tuo DEM siano reali. Se alcune buche esistono "
+"realmente e quindi non dovrebbero essere rimosse, mentre allo stesso tempo "
+"si ritiene che altre siano artefatti che devono essere rimossi, le buche "
+"reali dovrebbero avere valori di elevazione NODATA inseriti nel loro punto "
+"più basso. I valori NODATA servono a definire i bordi del dominio nel campo "
+"del flusso, e le elevazioni sono sollevate solo dove il flusso è fuori da un"
+" bordo, quindi un valore NODATA interno impedirà la rimozione di una buca, "
+"se necessario."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:259
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:526
+msgid "Specification of the output flow direction raster. One of:"
+msgstr "Indicazione del raster della direzione del flusso in uscita. Uno di:"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:266
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:305
+msgid "**D-infinity slope**"
+msgstr "**Pendenza D-infinity**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:267
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:306
+msgid "``DINF_SLOPE``"
+msgstr "``DINF_SLOPE``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:271
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:538
+msgid "Specification of the output slope raster. One of:"
+msgstr "Indicazione del raster della pendenza in uscita. Uno di:"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:308
+msgid ""
+"A grid of slope evaluated using the D-infinity method described in Tarboton,"
+" D. G., (1997), \"A New Method for the Determination of Flow Directions and "
+"Contributing Areas in Grid Digital Elevation Models\", Water Resources "
+"Research, 33(2): 309-319. This is the steepest outwards slope on one of "
+"eight triangular facets centered at each grid cell, measured as "
+"drop/distance, i.e. tan of the slope angle."
+msgstr ""
+"Un grigliato di pendenza valutato usando il metodo D-infinito descritto in "
+"Tarboton, D. G., (1997), \"A New Method for the Determination of Flow "
+"Directions and Contributing Areas in Grid Digital Elevation Models\", Water "
+"Resources Research, 33(2): 309-319. Questa è la pendenza più ripida verso "
+"l'esterno su una delle otto sfaccettature triangolari centrate in ogni cella"
+" della griglia, misurata come dislivello/distanza, cioè tan dell'angolo di "
+"inclinazione."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:316
+msgid "**Algorithm ID**: ``taudem:dinfflowdir``"
+msgstr "**ID Algoritmo**: ``taudem:dinfflowdir``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:324
+msgid "D8 Contributing Area"
+msgstr "D8 Area di contribuzione"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:329
+msgid ""
+"Calculates a grid of contributing areas using the single direction D8 flow "
+"model. The contribution of each grid cell is taken as one (or when the "
+"optional weight grid is used, the value from the weight grid). The "
+"contributing area for each grid cell is taken as its own contribution plus "
+"the contribution from upslope neighbors that drain in to it according to the"
+" D8 flow model."
+msgstr ""
+"Calcola una griglia di aree contribuenti usando il modello di flusso D8 a "
+"direzione singola. Il contributo di ogni cella della griglia è preso come "
+"uno (o quando si usa la griglia opzionale dei pesi, il valore della griglia "
+"dei pesi). L'area contributiva per ogni cella della griglia è considerata "
+"come il proprio contributo più il contributo dei vicini a monte che drenano "
+"in essa secondo il modello di flusso D8."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:335
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:610
+msgid ""
+"If the optional outlet point shapefile is used, only the outlet cells and "
+"the cells upslope (by the D8 flow model) of them are in the domain to be "
+"evaluated."
+msgstr ""
+"Se viene utilizzato lo shapefile opzionale del punto di uscita, solo le "
+"celle di uscita e le celle a monte (dal modello di flusso D8) di esse sono "
+"nel dominio da valutare."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:338
+msgid ""
+"By default, the tool checks for edge contamination. This is defined as the "
+"possibility that a contributing area value may be underestimated due to grid"
+" cells outside of the domain not being counted. This occurs when drainage is"
+" inwards from the boundaries or areas with \"no data\" values for elevation."
+" The algorithm recognizes this and reports \"no data\" for the contributing "
+"area. It is common to see streaks of \"no data\" values extending inwards "
+"from boundaries along flow paths that enter the domain at a boundary. This "
+"is the desired effect and indicates that contributing area for these grid "
+"cells is unknown due to it being dependent on terrain outside of the domain "
+"of data available. Edge contamination checking may be turned off in cases "
+"where you know this is not an issue or want to ignore these problems, if for"
+" example, the DEM has been clipped along a watershed outline."
+msgstr ""
+"Per impostazione predefinita, lo strumento controlla la contaminazione dei "
+"bordi. Questo è definito come la possibilità che un valore di un'area "
+"contributiva possa essere sottostimato a causa di celle della griglia al di "
+"fuori del dominio che non vengono contate. Questo si verifica quando il "
+"drenaggio è verso l'interno dei confini o delle aree con valori di "
+"elevazione \"senza dati\". L'algoritmo lo riconosce e riporta \"no data\" "
+"per l'area contribuente. È comune vedere strisce di valori \"no data\" che "
+"si estendono verso l'interno dai confini lungo i percorsi di flusso che "
+"entrano nel dominio da un confine. Questo è l'effetto desiderato e indica "
+"che l'area contributiva per queste celle della griglia è sconosciuta a causa"
+" della sua dipendenza dal terreno al di fuori del dominio dei dati "
+"disponibili. Il controllo della contaminazione dei bordi può essere "
+"disattivato nei casi in cui sai che questo non è un problema o vuoi ignorare"
+" questi problemi, se per esempio, il DEM è stato ritagliato lungo il "
+"contorno di uno spartiacque."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:363
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:521
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:557
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:625
+msgid "**D8 flow directions**"
+msgstr "**D8 direzioni di flusso**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:364
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:522
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:558
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:626
+msgid "``D8_FLOWDIR``"
+msgstr "``D8_FLOWDIR``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:366
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:628
+msgid ""
+"A grid of D8 flow directions which are defined, for each cell, as the "
+"direction of the one of its eight adjacent or diagonal neighbors with the "
+"steepest downward slope. This grid can be obtained as the output of the "
+"**\"D8 Flow Directions\"** tool."
+msgstr ""
+"Una griglia di direzioni di flusso D8 che sono definite, per ogni cella, "
+"come la direzione di uno dei suoi otto vicini adiacenti o diagonali con la "
+"pendenza più ripida verso il basso. Questa griglia può essere ottenuta come "
+"risultato dello strumento **\"D8 Flow Directions \"**."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:385
+msgid ""
+"A grid giving contribution to flow for each cell. These contributions (also "
+"sometimes referred to as weights or loadings) are used in the contributing "
+"area accumulation. If this input file is not used, the contribution to flow "
+"will assumed to be one for each grid cell."
+msgstr ""
+"Una griglia che dà il contributo al flusso per ogni cella. Questi contributi"
+" (a volte indicati anche come pesi o carichi) sono usati nell'accumulo "
+"dell'area contribuente. Se questo file in ingresso non viene utilizzato, il "
+"contributo al flusso sarà assunto come uno per ogni cella della griglia."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:414
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:437
+msgid "**D8 specific catchment area**"
+msgstr "**D8 bacino di utenza specifico**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:415
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:438
+msgid "``D8_CONTRIB_AREA``"
+msgstr "``D8_CONTRIB_AREA``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:440
+msgid ""
+"A grid of contributing area values calculated as the cells own contribution "
+"plus the contribution from upslope neighbors that drain in to it according "
+"to the D8 flow model."
+msgstr ""
+"Una griglia di valori di area contribuente calcolata come il contributo "
+"proprio della cella più il contributo dei vicini a monte che drenano in essa"
+" secondo il modello di flusso D8."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:444
+msgid "**Algorithm ID**: ``taudem:aread8``"
+msgstr "**ID Algoritmo**: ``taudem:aread8``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:452
+msgid "D8 Flow Directions"
+msgstr "D8 Direzioni di flusso"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:457
+msgid ""
+"Creates 2 grids. The first contains the flow direction from each grid cell "
+"to one of its adjacent or diagonal neighbors, calculated using the direction"
+" of steepest descent. The second contain the slope, as evaluated in the "
+"direction of steepest descent, and is reported as drop/distance, i.e. tan of"
+" the angle. Flow direction is reported as NODATA for any grid cell adjacent "
+"to the edge of the DEM domain, or adjacent to a NODATA value in the DEM. In "
+"flat areas, flow directions are assigned away from higher ground and towards"
+" lower ground using the method of Garbrecht and Martz (1997). The D8 flow "
+"direction algorithm may be applied to a DEM that has not had its pits "
+"filled, but it will then result in NODATA values for flow direction and "
+"slope at the lowest point of each pit."
+msgstr ""
+"Crea 2 griglie. La prima contiene la direzione del flusso da ogni cella "
+"della griglia a uno dei suoi vicini adiacenti o diagonali, calcolata usando "
+"la direzione della discesa più ripida. La seconda contiene la pendenza, "
+"valutata nella direzione della discesa più ripida, ed è riportata come "
+"caduta/distanza, cioè tan dell'angolo. La direzione del flusso è riportata "
+"come NODATA per ogni cella della griglia adiacente al bordo del dominio DEM,"
+" o adiacente a un valore NODATA nel DEM. Nelle aree pianeggianti, le "
+"direzioni del flusso sono assegnate lontano dal terreno più alto e verso il "
+"terreno più basso usando il metodo di Garbrecht e Martz (1997). L'algoritmo "
+"di direzione del flusso D8 può essere applicato a un DEM che non ha avuto i "
+"suoi buchi riempiti, ma risulterà in valori NODATA per la direzione del "
+"flusso e la pendenza nel punto più basso di ogni buco."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:468
+msgid "D8 Flow Direction Coding:"
+msgstr "D8 Codifica della direzione del flusso:"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:470
+msgid "1 --- East"
+msgstr "1 --- Est"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:471
+msgid "2 --- Northeast"
+msgstr "2 --- Nord Est"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:472
+msgid "3 --- North"
+msgstr "3 --- Nord"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:473
+msgid "4 --- Northwest"
+msgstr "4 --- Nord Ovest"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:474
+msgid "5 --- West"
+msgstr "5 --- Ovest"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:475
+msgid "6 --- Southwest"
+msgstr "6 --- Sud Ovest"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:476
+msgid "7 --- South"
+msgstr "7 --- Sud"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:477
+msgid "8 --- Southeast"
+msgstr "8 --- Sud Est"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:482
+msgid ""
+"The flow direction routing across flat areas is performed according to the "
+"method described by Garbrecht, J. and L. W. Martz, (1997), \"The Assignment "
+"of Drainage Direction Over Flat Surfaces in Raster Digital Elevation "
+"Models\", Journal of Hydrology, 193: 204-213."
+msgstr ""
+"L'instradamento della direzione del flusso attraverso le aree piane viene "
+"eseguito secondo il metodo descritto da Garbrecht, J. e L. W. Martz, (1997),"
+" \"The Assignment of Drainage Direction Over Flat Surfaces in Raster Digital"
+" Elevation Models\", Journal of Hydrology, 193: 204-213."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:533
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:563
+msgid "**D8 slope**"
+msgstr "**D8 pendenza**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:534
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:564
+msgid "``D8_SLOPE``"
+msgstr "``D8_SLOPE``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:560
+msgid ""
+"A grid of D8 flow directions which are defined, for each cell, as the "
+"direction of the one of its eight adjacent or diagonal neighbors with the "
+"steepest downward slope."
+msgstr ""
+"Una griglia di direzioni di flusso D8 che sono definite, per ogni cella, "
+"come la direzione di uno delle sue otto celle adiacenti o in diagonale con "
+"la pendenza più ripida verso il basso."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:566
+msgid ""
+"A grid giving slope in the D8 flow direction. This is measured as "
+"drop/distance."
+msgstr ""
+"Una griglia che dà la pendenza nella direzione del flusso D8. Questo è "
+"misurato come caduta/distanza."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:569
+msgid "**Algorithm ID**: ``taudem:d8flowdir``"
+msgstr "**ID Algoritmo**: ``taudem:d8flowdir``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:577
+msgid "Grid Network"
+msgstr "Griglia della rete"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:582
+msgid ""
+"Creates 3 grids that contain for each grid cell: 1) the longest path, 2) the"
+" total path, and 3) the Strahler order number. These values are derived from"
+" the network defined by the D8 flow model."
+msgstr ""
+"Crea 3 griglie che contengono per ogni cella della griglia 1) il percorso "
+"più lungo, 2) il percorso totale, e 3) il numero d'ordine di Strahler. "
+"Questi valori sono derivati dalla rete definita dal modello di flusso D8."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:586
+msgid ""
+"The longest upslope length is the length of the flow path from the furthest "
+"cell that drains to each cell. The total upslope path length is the length "
+"of the entire grid network upslope of each grid cell. Lengths are measured "
+"between cell centers taking into account cell size and whether the direction"
+" is adjacent or diagonal."
+msgstr ""
+"La lunghezza più lunga del percorso a monte è la lunghezza del percorso del "
+"flusso dalla cella più lontana che drena in ogni cella. La lunghezza totale "
+"del percorso a monte è la lunghezza dell'intera rete a griglia a monte di "
+"ogni cella della griglia. Le lunghezze sono misurate tra i centri delle "
+"celle tenendo conto delle dimensioni delle celle e del fatto che la "
+"direzione sia adiacente o diagonale."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:592
+msgid ""
+"Strahler order is defined as follows: A network of flow paths is defined by "
+"the D8 Flow Direction grid. Source flow paths have a Strahler order number "
+"of one. When two flow paths of different order join the order of the "
+"downstream flow path is the order of the highest incoming flow path. When "
+"two flow paths of equal order join the downstream flow path order is "
+"increased by 1. When more than two flow paths join the downstream flow path "
+"order is calculated as the maximum of the highest incoming flow path order "
+"or the second highest incoming flow path order + 1. This generalizes the "
+"common definition to cases where more than two flow paths join at a point."
+msgstr ""
+"L'ordine di Strahler è definito come segue: Una rete di percorsi di flusso è"
+" definita dalla griglia D8 Flow Direction. I percorsi di flusso sorgente "
+"hanno un numero d'ordine Strahler di uno. Quando due percorsi di flusso di "
+"ordine diverso si uniscono, l'ordine del percorso di flusso a valle è "
+"l'ordine del percorso di flusso in entrata più alto. Quando due percorsi di "
+"flusso di ordine uguale si uniscono, l'ordine del percorso di flusso a valle"
+" è aumentato di 1. Quando più di due percorsi di flusso si uniscono, "
+"l'ordine del percorso di flusso a valle è calcolato come il massimo "
+"dell'ordine del percorso di flusso in entrata più alto o il secondo ordine "
+"del percorso di flusso in entrata più alto + 1. Questo generalizza la "
+"definizione comune ai casi in cui più di due percorsi di flusso si uniscono "
+"in un punto."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:602
+msgid ""
+"Where the optional mask grid and threshold value are input, the function is "
+"evaluated only considering grid cells that lie in the domain with mask grid "
+"value greater than or equal to the threshold value. Source (first order) "
+"grid cells are taken as those that do not have any other grid cells from "
+"inside the domain draining in to them, and only when two of these flow paths"
+" join is order propagated according to the ordering rules. Lengths are also "
+"only evaluated counting paths within the domain greater than or equal to the"
+" threshold."
+msgstr ""
+"Quando sono inseriti in ingresso la griglia maschera opzionale e il valore "
+"di soglia, la funzione viene valutata solo considerando le celle della "
+"griglia che si trovano nel dominio con un valore della griglia della "
+"maschera maggiore o uguale al valore di soglia. Le celle della griglia di "
+"origine (primo ordine) sono prese come quelle che non hanno altre celle "
+"della griglia dall'interno del dominio che drenano in esse, e solo quando "
+"due di questi percorsi di flusso si uniscono viene propagato l'ordine "
+"secondo le regole di ordinamento. Le lunghezze sono anche valutate solo "
+"contando i percorsi all'interno del dominio maggiori o uguali alla soglia."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:633
+msgid "**Mask Grid**"
+msgstr "**Griglia maschera**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:636
+msgid "``MASK_GRID``"
+msgstr "``MASK_GRID``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:638
+msgid ""
+"A grid that is used to determine the domain do be analyzed. If the mask grid"
+" value >= mask threshold (see below), then the cell will be included in the "
+"domain. While this tool does not have an edge contamination flag, if edge "
+"contamination analysis is needed, then a mask grid from a function like "
+"**\"D8 Contributing Area\"** that does support edge contamination can be "
+"used to achieve the same result."
+msgstr ""
+"Una griglia che viene utilizzata per determinare il dominio da analizzare. "
+"Se il valore della griglia della maschera >= soglia della maschera (vedi "
+"sotto), allora la cella sarà inclusa nel dominio. Mentre questo strumento "
+"non ha un flag di contaminazione dei bordi, se l'analisi della "
+"contaminazione dei bordi è necessaria, allora una griglia di maschera da una"
+" funzione come **\"D8 Contributing Area \"** che supporta la contaminazione "
+"dei bordi può essere utilizzata per ottenere lo stesso risultato."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:646
+msgid "**Mask threshold**"
+msgstr "**Maschera soglia**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:649
+msgid "``THRESHOLD``"
+msgstr "``THRESHOLD``"
+
 #: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:650
 msgid "[number]"
-msgstr "[numero]"
+msgstr "[number]"
 
 #: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:652
 msgid "Default: 100.0"
 msgstr "Predefinito: 100.0"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:653
+msgid ""
+"This input parameter is used in the calculation mask grid value >= mask "
+"threshold to determine if the grid cell is in the domain to be analyzed."
+msgstr ""
+"Questo parametro in ingresso è usato nel calcolo valore della griglia della "
+"maschera >= soglia della maschera per determinare se la cella della griglia "
+"è nel dominio da analizzare."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:665
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:716
+msgid "**Longest upslope length**"
+msgstr "**Lunghezza di pendenza più lunga**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:666
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:717
+msgid "``LONGEST_PATH``"
+msgstr "``LONGEST_PATH``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:670
+msgid "Specification of the output raster with total upslope lengths. One of:"
+msgstr ""
+"Indicazione del raster in uscita con le lunghezze totali di pendenza. Uno "
+"di:"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:678
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:723
+msgid "**Total upslope length**"
+msgstr "**Lunghezza totale pendenza**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:679
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:724
+msgid "``TOTAL_PATH``"
+msgstr "``TOTAL_PATH``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:683
+msgid "Specification of the output raster with upslope lengths. One of:"
+msgstr ""
+"Indicazione del raster in uscita con le lunghezze di pendenza. Uno di:"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:690
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:730
+msgid "**Strahler network order**"
+msgstr "**Ordine rete Strahler**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:691
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:731
+msgid "``STRAHLER_ORDER``"
+msgstr "``STRAHLER_ORDER``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:695
+msgid ""
+"Specification of the output raster with Strahler network order. One of:"
+msgstr ""
+"Indicazione del raster in uscita con l'ordine della rete di Strahler. Uno "
+"di:"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:719
+msgid ""
+"A grid that gives the length of the longest upslope D8 flow path terminating"
+" at each grid cell. Lengths are measured between cell centers taking into "
+"account cell size and whether the direction is adjacent or diagonal."
+msgstr ""
+"Una griglia che fornisce la lunghezza del più lungo percorso di flusso D8 a "
+"monte che termina in ogni cella della griglia. Le lunghezze sono misurate "
+"tra i centri delle celle tenendo conto delle dimensioni delle celle e del "
+"fatto che la direzione sia adiacente o diagonale."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:726
+msgid ""
+"The total upslope path length is the length of the entire D8 flow grid "
+"network upslope of each grid cell. Lengths are measured between cell centers"
+" taking into account cell size and whether the direction is adjacent or "
+"diagonal."
+msgstr ""
+"La lunghezza totale del percorso in pendenza è la lunghezza dell'intera rete"
+" della griglia di flusso D8 a monte di ogni cella della griglia. Le "
+"lunghezze sono misurate tra i centri delle celle tenendo conto delle "
+"dimensioni della cella e del fatto che la direzione sia adiacente o "
+"diagonale."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:733
+msgid ""
+"A grid giving the Strahler order number for each cell. A network of flow "
+"paths is defined by the D8 Flow Direction grid. Source flow paths have a "
+"Strahler order number of one. When two flow paths of different order join "
+"the order of the downstream flow path is the order of the highest incoming "
+"flow path. When two flow paths of equal order join the downstream flow path "
+"order is increased by 1. When more than two flow paths join the downstream "
+"flow path order is calculated as the maximum of the highest incoming flow "
+"path order or the second highest incoming flow path order + 1. This "
+"generalizes the common definition to cases where more than two flow paths "
+"join at a point."
+msgstr ""
+"Una griglia che dà il numero d'ordine Strahler per ogni cella. Una rete di "
+"percorsi di flusso è definita dalla griglia D8 Flow Direction. I percorsi di"
+" flusso sorgente hanno un numero d'ordine Strahler di uno. Quando due "
+"percorsi di flusso di ordine diverso si uniscono, l'ordine del percorso di "
+"flusso a valle è l'ordine del più alto percorso di flusso in entrata. Quando"
+" due percorsi di flusso di ordine uguale si uniscono, l'ordine del percorso "
+"di flusso a valle è aumentato di 1. Quando più di due percorsi di flusso si "
+"uniscono, l'ordine del percorso di flusso a valle è calcolato come il "
+"massimo dell'ordine del percorso di flusso in entrata più alto o il secondo "
+"ordine del percorso di flusso in entrata più alto + 1. Questo generalizza la"
+" definizione comune ai casi in cui più di due percorsi di flusso si uniscono"
+" in un punto."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:749
+msgid "**Algorithm ID**: ``taudem:gridnet``"
+msgstr "**ID Algoritmo**: ``taudem:gridnet``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:757
+msgid "Pit Remove"
+msgstr "Rimuovere buca"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:762
+msgid ""
+"Identifies all pits in the DEM and raises their elevation to the level of "
+"the lowest pour point around their edge. Pits are low elevation areas in "
+"digital elevation models (DEMs) that are completely surrounded by higher "
+"terrain. They are generally taken to be artifacts that interfere with the "
+"routing of flow across DEMs, so are removed by raising their elevation to "
+"the point where they drain off the edge of the domain. The pour point is the"
+" lowest point on the boundary of the \"watershed\" draining to the pit. This"
+" step is not essential if you have reason to believe that the pits in your "
+"DEM are real. If a few pits actually exist and so should not be removed, "
+"while at the same time others are believed to be artifacts that need to be "
+"removed, the actual pits should have NODATA elevation values inserted at "
+"their lowest point. NODATA values serve to define edges in the domain, and "
+"elevations are only raised to where flow is off an edge, so an internal "
+"NODATA value will stop a pit from being removed, if necessary."
+msgstr ""
+"Identifica tutte le buche nel DEM e alza la loro quota al livello del punto "
+"di versamento più basso intorno al loro bordo. Le buche sono aree a bassa "
+"quota nei modelli digitali di elevazione (DEM) che sono completamente "
+"circondate da terreno più alto. Sono generalmente considerati artefatti che "
+"interferiscono con il percorso del flusso attraverso i DEM, quindi vengono "
+"rimossi alzando la loro elevazione fino al punto in cui drenano dal bordo "
+"del dominio. Il punto di versamento è il punto più basso sul confine dello "
+"\"spartiacque\" che drena alla fossa. Questo passo non è essenziale se avete"
+" ragione di credere che le fosse nel vostro DEM siano reali. Se alcune buche"
+" esistono davvero e quindi non dovrebbero essere rimosse, mentre allo stesso"
+" tempo si ritiene che altre siano artefatti che devono essere rimossi, le "
+"buche reali dovrebbero avere valori di elevazione NODATA inseriti nel loro "
+"punto più basso. I valori NODATA servono a definire i bordi nel dominio, e "
+"le elevazioni sono sollevate solo dove il flusso è fuori da un bordo, quindi"
+" un valore NODATA interno impedirà la rimozione di una buca, se necessario."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:788
+msgid "**Elevation**"
+msgstr "**Elevazione**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:789
+msgid "``ELEVATION``"
+msgstr "``ELEVATION``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:791
+msgid ""
+"A digital elevation model (DEM) grid to serve as the base input for the "
+"terrain analysis and stream delineation."
+msgstr ""
+"Una griglia del modello di elevazione digitale (DEM) per servire come input "
+"di base per l'analisi geomorfologica e la delineazione dei flussi."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:793
+msgid "**Depression mask**"
+msgstr "**Maschera di depressione**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:796
+msgid "``DEPRESSION_MASK``"
+msgstr "``DEPRESSION_MASK``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:799
+msgid "**Consider only 4 way neighbors**"
+msgstr "**Considera i vicini solo a 4 vie**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:800
+msgid "``FOUR_NEIGHBOURS``"
+msgstr "``FOUR_NEIGHBOURS``"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:803
+msgid "Default: False"
+msgstr "Predefinito: False"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:805
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:829
+msgid "**Pit removed elevation**"
+msgstr "**Elevazione buca rimossa**"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:810
+msgid "Specification of the (pit filled) output raster. One of:"
+msgstr "Indicazione del raster in uscita (buche riempite). Uno di:"
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:832
+msgid ""
+"A grid of elevation values with pits removed so that flow is routed off of "
+"the domain."
+msgstr ""
+"Una griglia di valori di elevazione con buche rimosse in modo che il flusso "
+"sia instradato fuori dal dominio."
+
+#: ../../docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:835
+msgid "**Algorithm ID**: ``taudem:pitremove``"
+msgstr "**ID Algoritmo**: ``taudem:pitremove``"
