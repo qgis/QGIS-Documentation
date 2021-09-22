@@ -1032,6 +1032,7 @@ To use these variables in an expression, they should be preceded by the
    "snapping_results", "Gives access to snapping results while digitizing a
    feature (only available in add feature)"
    "scale_value", "The current scale bar distance value"
+   "selected_file_path", "Selected file path from file widget selector when uploading a file with an external storage system"
    "symbol_angle", "The angle of the symbol used to render the feature
    (valid for marker symbols only)"
    "symbol_color", "The color of the symbol used to render the feature"
