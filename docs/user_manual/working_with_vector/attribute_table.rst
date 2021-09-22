@@ -1182,16 +1182,17 @@ In order to setup an external storage, you have to first configure it from the v
 From the :guilabel:`Attachment` widget, you have to first select the :guilabel:`Storage type`:
 
 * :guilabel:`Select Existing File`: The target URL already exists. When
-  you select a resource, no store operation is achieved, the field is simply updated with the URL.
+  you select a resource, no store operation is achieved, the attribute is simply updated with the URL.
 
 * :guilabel:`Simple Copy`: Stores a copy of the resource on a file disk destination
-  (which could be a local or network shared file system) and the field is updated with the path to
+  (which could be a local or network shared file system) and the attribute is updated with the path to
   the copy.
   
-* :guilabel:`WebDAV External Storage`: The resource is pushed on an HTTP server supporting the
-  `WebDAV <https://en.wikipedia.org/wiki/WebDAV>`_ protocol. (`Nextcloud <https://nextcloud.com/>`_,
-  `Pydio <https://pydio.com/>`_ or others file hosting software supports this protocol).
-
+* :guilabel:`WebDAV Storage`: The resource is pushed to a HTTP server supporting the
+  `WebDAV <https://en.wikipedia.org/wiki/WebDAV>`_ protocol and the attribute is updated with
+  its URL. `Nextcloud <https://nextcloud.com/>`_, `Pydio <https://pydio.com/>`_ 
+  or other file hosting software support this protocol.
+  
 Then, he has to set up the :guilabel:`Store URL` parameter, which provides the URL to be used when a new
 resource needs to be stored. It's possible to set up an expression using the
 :ref:`data defined override widget<data_defined>` in order to have specific values according to
