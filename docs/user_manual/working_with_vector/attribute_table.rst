@@ -1157,11 +1157,11 @@ The example above uses the following database schema:
 .. index:: External Storage, WebDAV
 .. _external_storage:
 
-Storing and fetching an external ressource
+Storing and fetching an external resource
 ==========================================
 
-A field may target a ressource stored on an external storage system. Attribute forms can be configured
-so they act as a client to an external storage system in order to store and fetch those ressources, on
+A field may target a resource stored on an external storage system. Attribute forms can be configured
+so they act as a client to an external storage system in order to store and fetch those resources, on
 users demand, directly from the forms.
 
 .. _external_storage_configuration:
@@ -1181,19 +1181,19 @@ In order to setup an external storage, you have to first configure it from the v
 
 From the :guilabel:`Attachment` widget, you have to first select the :guilabel:`Storage type`:
 
-* :guilabel:`Select Existing File` : The ressource is already existing. When
-  user selects a ressource, no store operation is achieved, only the
+* :guilabel:`Select Existing File` : The resource is already existing. When
+  user selects a resource, no store operation is achieved, only the
   URL is updated.
 
-* :guilabel:`Simple Copy` : The ressource is copied on a file disk destination (which could be a local
+* :guilabel:`Simple Copy` : The resource is copied on a file disk destination (which could be a local
   or network shared file system)
   
-* :guilabel:`WebDAV External Storage` : The ressource is pushed on an HTTP server supporting the
+* :guilabel:`WebDAV External Storage` : The resource is pushed on an HTTP server supporting the
   `WebDAV <https://en.wikipedia.org/wiki/WebDAV>`_ protocol. (`Nextcloud <https://nextcloud.com/>`_,
   `Pydio <https://pydio.com/>`_ or others file hosting software supports this protocol).
 
 Then, he has to set up the :guilabel:`Store URL` parameter, which provides the URL to be used when a new
-ressource needs to be stored. It's possible to set up an expression using the
+resource needs to be stored. It's possible to set up an expression using the
 :ref:`data defined override widget<data_defined>` in order to have specific values according to
 feature attributes.
 
@@ -1228,7 +1228,7 @@ selected) and the field will be updated with the new resource URL.
 
 Using the |cancel| :sup:`Cancel` button, user can cancel the storing process.
 
-It's possible to configure a viewer so the ressource will be automatically fetched from the external
+It's possible to configure a viewer so the resource will be automatically fetched from the external
 storage system and displayed directly below the URL.
 
 .. note::
@@ -1237,7 +1237,7 @@ storage system and displayed directly below the URL.
    widget.
 
 
-|warning| :sup:`Warning` Icon indicates that the ressource cannot be fetched from the external
+|warning| :sup:`Warning` Icon indicates that the resource cannot be fetched from the external
 storage system. In that case, more details might appear in the :ref:`log_message_panel`.
 
 
