@@ -1226,15 +1226,15 @@ selected) and the field will be updated with the new resource URL.
 
    Storing a file to a WebDAV external storage
 
-Using the |cancel| :sup:`Cancel` button, user can cancel the storing process.
-
-It's possible to configure a viewer so the resource will be automatically fetched from the external
-storage system and displayed directly below the URL.
-
 .. note::
 
-   User can also achieve the same result it he drags'n drops a file on the whole attachment
+   User can also achieve the same result if he drags and drops a file on the whole attachment
    widget.
+
+Using the |cancel| :sup:`Cancel` button, user can cancel the storing process.
+
+It's possible to configure a viewer using the :guilabel:`Integrated document viewer` so the resource will be automatically fetched from the external
+storage system and displayed directly below the URL.
 
 
 |warning| :sup:`Warning` Icon indicates that the resource cannot be fetched from the external
