@@ -854,6 +854,7 @@ URL example:
   &MAP=/home/qgis/projects/world.qgs
   &CRS=EPSG:4326
   &FORMAT=png
+  &TEMPLATE=Layout%201
   &map0:EXTENT=-180,-90,180,90
   &map0:LAYERS=mylayer1,mylayer2,mylayer3
   &map0:OPACITIES=125,200,125
