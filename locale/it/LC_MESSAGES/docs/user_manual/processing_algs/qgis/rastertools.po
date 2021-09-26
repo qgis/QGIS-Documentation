@@ -36,6 +36,30 @@ msgstr "Convertire la mappa in raster"
 msgid "Creates a raster image of map canvas content."
 msgstr "Crea un'immagine raster del contenuto della mappa."
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:17
+msgid ""
+"A :ref:`map theme <map_themes>` can be selected to render a predetermined "
+"set of layers with a defined style for each layer."
+msgstr ""
+"Un :ref:`map theme <map_themes>` può essere selezionato per visualizzare un "
+"insieme prestabilito di layer con uno stile definito per ogni layer."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:20
+msgid "Alternatively, a single layer can be selected if no map theme is set."
+msgstr ""
+"In alternativa, un singolo layer può essere selezionato se non è impostato "
+"alcun tema per la mappa."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:22
+msgid ""
+"If neither map theme nor layer is set, the current map content will be "
+"rendered. The minimum extent entered will internally be extended to be a "
+"multiple of the tile size."
+msgstr ""
+"Se non è impostato né il tema per la mappa né il layer, verrà visualizzato "
+"il contenuto corrente della mappa. L'estensione minima inserita sarà "
+"internamente estesa per essere un multiplo della dimensione del tassello."
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:28
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:127
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:212
@@ -87,6 +111,10 @@ msgstr "Tipo"
 msgid "Description"
 msgstr "Descrizione"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:39
+msgid "**Minimum extent to render (xmin, xmax, ymin, ymax)**"
+msgstr "**Minima estensione da visualizzare (xmin, xmax, ymin, ymax)**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:40
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:138
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:224
@@ -100,6 +128,11 @@ msgstr "``EXTENT``"
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:389
 msgid "[extent]"
 msgstr "[extent]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:42
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:140
+msgid "Specify the extent of the output raster layer. One of:"
+msgstr "Indicare l'estensione del layer raster in uscita. Uno di:"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:45
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:143
@@ -121,6 +154,17 @@ msgstr "Seleziona l'estensione sulla mappa"
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:395
 msgid "Use Layer Extent..."
 msgstr "Usa l'estensione del layer..."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:49
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:147
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:233
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:397
+msgid "It will internally be extended to a multiple of the tile size."
+msgstr "Sarà internamente esteso a un multiplo della dimensione del tassello."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:50
+msgid "**Tile size**"
+msgstr "**Dimensione Tassello**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:51
 msgid "``TILE_SIZE``"
@@ -149,6 +193,15 @@ msgstr "[number]"
 msgid "Default: 1024"
 msgstr "Predefinito: 1024"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:55
+msgid "Size of the tile of the output raster layer. Minimum value: 64."
+msgstr ""
+"Dimensione del tassello del layer raster in uscita. Valore minimo: 64."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:56
+msgid "**Map units per pixel**"
+msgstr "**Unità di mappa per pixel**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:57
 msgid "``MAP_UNITS_PER_PIXEL``"
 msgstr "``MAP_UNITS_PER_PIXEL``"
@@ -172,12 +225,24 @@ msgstr "``MAKE_BACKGROUND_TRANSPARENT``"
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:64
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:310
 msgid "[boolean]"
-msgstr "[booleano]"
+msgstr "[boolean]"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:66
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:312
 msgid "Default: False"
 msgstr "Predefinito: False"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:67
+msgid ""
+"Allows exporting the map with a transparent background. Outputs an RGBA "
+"(instead of RGB) image if set to ``True``."
+msgstr ""
+"Permette di esportare la mappa con uno sfondo trasparente. Emette "
+"un'immagine RGBA (invece di RGB) se impostata su ``True``."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:69
+msgid "**Map theme to render**"
+msgstr "**Tema Mappa tema da visualizzare**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:71
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:78
@@ -203,6 +268,16 @@ msgstr "``MAP_THEME``"
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:426
 msgid "[enumeration]"
 msgstr "[enumeration]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:74
+msgid "Use an existing :ref:`map theme <map_themes>` for the rendering."
+msgstr ""
+"Utilizzare un :ref:`map theme <map_themes>` esistente per la "
+"visualizzazione."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:76
+msgid "**Single layer to render**"
+msgstr "**Singolo layer da visualizzare**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:79
 msgid "``LAYER``"
@@ -234,6 +309,12 @@ msgstr "[raster]"
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:86
 msgid "Default: Save to temporary file"
 msgstr "Predefinito: Salva in file temporaneo"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:87
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:169
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:319
+msgid "Specification of the output raster. One of:"
+msgstr "Indicazione del raster in uscita. Uno di:"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:89
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:171
@@ -278,9 +359,29 @@ msgstr "Codice Python"
 msgid "**Algorithm ID**: ``qgis:rasterize``"
 msgstr "**ID algoritmo**: ``qgis:rasterize``"
 
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+msgid ""
+"The *algorithm id* is displayed when you hover over the algorithm in the "
+"Processing Toolbox. The *parameter dictionary* provides the parameter NAMEs "
+"and values. See :ref:`processing_console` for details on how to run "
+"processing algorithms from the Python console."
+msgstr ""
+"L' *id algoritmo* viene visualizzato quando passi il mouse sopra l'algoritmo"
+" nella finestra degli strumenti di Processing. Il *dizionario dei parametri*"
+" fornisce i Nomi e i valori dei parametri. Vedi :ref:`processing_console` "
+"per dettagli su come eseguire algoritmi di processing dalla console Python."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:123
+msgid "Create constant raster layer"
+msgstr "Creare un layer raster uniforme"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:124
 msgid "Generates a raster layer where all pixels have the same value."
 msgstr "Genera un layer raster in cui tutti i pixel hanno lo stesso valore."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:137
+msgid "**Desired extent (xmin, xmax, ymin, ymax)**"
+msgstr "**Estensione voluta (xmin, xmax, ymin, ymax)**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:148
 msgid "**Target CRS**"
@@ -298,6 +399,10 @@ msgstr "[sr]"
 msgid "Default: Project CRS"
 msgstr "Predefinito: SR del Progetto"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:153
+msgid "CRS for the output raster layer"
+msgstr "SR per il layer raster in uscita"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:154
 msgid "**Pixel size**"
 msgstr "**Dimensione del Pixel**"
@@ -310,6 +415,14 @@ msgstr "``PIXEL_SIZE``"
 msgid "Default: 0.1"
 msgstr "Predefinito: 0.1"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:159
+msgid "Pixel size (X=Y) in map units. Minimum value: 0.01"
+msgstr "Dimensione del pixel (X=Y) in unità di mappa. Valore minimo: 0,01"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:160
+msgid "**Constant value**"
+msgstr "**Valore costante**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:161
 msgid "``NUMBER``"
 msgstr "``NUMBER``"
@@ -318,14 +431,47 @@ msgstr "``NUMBER``"
 msgid "Default: 1"
 msgstr "Predefinito: 1"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:165
+msgid "Constant pixel value for the output raster layer."
+msgstr "Valore costante del pixel per il layer raster in uscita."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:166
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:187
+msgid "**Constant**"
+msgstr "**Costante**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:190
+msgid ""
+"Raster covering the desired extent with the specified pixel size and value."
+msgstr ""
+"Raster che copre l'estensione desiderata con la dimensione e il valore dei "
+"pixel specificati."
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:196
 msgid "**Algorithm ID**: ``qgis:createconstantrasterlayer``"
 msgstr "**ID algoritmo**: ``qgis:createconstantrasterlayer``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:206
+msgid "Generate XYZ tiles (Directory)"
+msgstr "Generare tasselli XYZ (Cartella)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:208
+msgid ""
+"Generates raster “XYZ” tiles using the current QGIS project as individual "
+"images to a directory structure."
+msgstr ""
+"Genera tasselli raster \"XYZ\" utilizzando il progetto QGIS corrente come "
+"immagini separate in una gerarchia di cartelle."
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:223
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:387
 msgid "**Extent (xmin, xmax, ymin, ymax)**"
 msgstr "**Estensione (xmin, xmax, ymin, ymax)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:226
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:390
+msgid "Specify the extent of the tiles. One of:"
+msgstr "Specificare l'estensione dei tasselli. Uno di:"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:234
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:398
@@ -401,6 +547,11 @@ msgstr "[color]"
 msgid "Default: QColor(0, 0, 0, 0)"
 msgstr "Predefinito: QColor(0, 0, 0, 0)"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:259
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:423
+msgid "Choose the background color for the tiles"
+msgstr "Scegliere il colore di sfondo per i tasselli"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:260
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:424
 msgid "**Tile format**"
@@ -451,6 +602,11 @@ msgstr "Predefinito: 75"
 msgid "Minimum 1, maximum 100."
 msgstr "Minimo 1, massimo 100."
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:278
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:442
+msgid "**Metatile size**"
+msgstr "**Dimensione Meta tassello**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:281
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:445
 msgid "``METATILESIZE``"
@@ -460,6 +616,19 @@ msgstr "``METATILESIZE``"
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:448
 msgid "Default: 4"
 msgstr "Predefinito: 4"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:285
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:449
+msgid ""
+"Specify a custom metatile size when generating XYZ tiles. Larger values may "
+"speed up the rendering of tiles and provide better labelling (fewer gaps "
+"without labels) at the expense of using more memory. Minimum 1, maximum 20."
+msgstr ""
+"Specificare una dimensione meta tassello personalizzata quando si generano "
+"tasselli XYZ. Valori più grandi possono accelerare il processo di "
+"visualizzazione dei tasselli e fornire una migliore etichettatura (meno "
+"spazi vuoti senza etichette) a scapito dell'utilizzo di più memoria. Minimo "
+"1, massimo 20."
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:290
 msgid "**Tile width**"
@@ -487,9 +656,18 @@ msgstr "**Altezza tassello**"
 msgid "``TILE_HEIGHT``"
 msgstr "``TILE_HEIGHT``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:306
+msgid "**Use inverted tile Y axis (TMS conventions)**"
+msgstr "**Utilizzare l'asse Y invertito per i tasselli (convenzioni TMS)**."
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:309
 msgid "``TMS_CONVENTION``"
 msgstr "``TMS_CONVENTION``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:314
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:348
+msgid "**Output directory**"
+msgstr "**Cartella in uscita**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:315
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:349
@@ -499,11 +677,30 @@ msgstr "``OUTPUT_DIRECTORY``"
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:316
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:350
 msgid "[folder]"
-msgstr "[cartella]"
+msgstr "[folder]"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:318
 msgid "Default: ``[Save to temporary folder]``"
 msgstr "Predefinito: ``[Salva in cartella temporanea]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:321
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:333
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:461
+msgid "Skip Output"
+msgstr "Tralascia il risultato"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:322
+msgid "Save to a Temporary Directory"
+msgstr "Salva in una Cartella Temoranea"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:323
+msgid "Save to Directory..."
+msgstr "Salva in una Cartella..."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:326
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:352
+msgid "**Output html (Leaflet)**"
+msgstr "**Output html (Leaflet)**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:327
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:353
@@ -520,9 +717,38 @@ msgstr "[html]"
 msgid "Default: ``[Save to temporary file]``"
 msgstr "Predefinito: ``[Save to temporary file]``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:331
+msgid "Specification of the output HTML file. One of:"
+msgstr "Indicazione del file HTML in uscita. Uno di:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:351
+msgid "Output directory (for the tiles)"
+msgstr "Cartella in uscita (per i tasselli)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:355
+msgid "The output HTML (Leaflet) file"
+msgstr "Il file HTML (Leaflet) in uscita"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:360
 msgid "**Algorithm ID**: ``qgis:tilesxyzdirectory``"
 msgstr "**ID algoritmo**: ``qgis:tilesxyzdirectory``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:370
+msgid "Generate XYZ tiles (MBTiles)"
+msgstr "Generare tasselli XYZ (MBTiles)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:372
+msgid ""
+"Generates raster “XYZ” tiles using the current QGIS project as a single file"
+" in the “MBTiles” format."
+msgstr ""
+"Genera tasselli raster \"XYZ\" usando il progetto QGIS corrente come un "
+"singolo file nel formato \"MBTiles\"."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:454
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:478
+msgid "**Output file (for MBTiles)**"
+msgstr "**File in uscita (per MBTiles)**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:455
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:479
@@ -533,6 +759,10 @@ msgstr "``OUTPUT_FILE``"
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:480
 msgid "[file]"
 msgstr "[file]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:459
+msgid "Specification of the output file. One of:"
+msgstr "Specifica del file in uscita. Uno di:"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:481
 msgid "The output file."
