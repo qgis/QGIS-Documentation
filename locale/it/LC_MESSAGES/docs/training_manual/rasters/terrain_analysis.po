@@ -54,6 +54,10 @@ msgstr ""
 msgid "|basic| |FA| Calculating a Hillshade"
 msgstr "|basic| |FA| Calcolare un'ombreggiatura"
 
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:531
+msgid "basic"
+msgstr "basic"
+
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:18
 msgid ""
 "We are going to use the same DEM layer as in the previous lesson. If you are"
@@ -84,12 +88,47 @@ msgid ""
 "We are going to use algorithms in the :menuselection:`Raster --> Raster "
 "terrain analysis` menu."
 msgstr ""
-"Useremo gli algoritmi nel menu :menuselection:`Raster --> Raster terrain "
-"analysis`."
+"Useremo gli algoritmi nel menu :menuselection:`Raster --> Analisi Raster`."
 
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:34
 msgid "Click on the :menuselection:`Hillshade` menu"
 msgstr "Clicca sul menu :menuselection:`Ombreggiatura`"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:35
+msgid ""
+"The algorithm allows you to specify the position of the light source: "
+":guilabel:`Azimuth` has values from 0 (North) through 90 (East), 180 (South)"
+" and 270 (West), while the :guilabel:`Vertical angle` sets how high the "
+"light source is (0 to 90 degrees)."
+msgstr ""
+"L'algoritmo permette di specificare la posizione della sorgente di luce: "
+":guilabel:`Azimut della luce` ha valori da 0 a 360 gradi (Nord) a 90 (Est), "
+"180 (Sud) e 270 (Ovest), mentre :guilabel:`Altitudine della luce` imposta "
+"quanto in alto si trova la sorgente di luce (da 0 a 90 gradi)."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:40
+msgid "We will use the following values:"
+msgstr "Useremo i seguenti valori:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:42
+msgid ":guilabel:`Z factor` at ``1.0``"
+msgstr ":guilabel:`Fattore Z` a ``1.0``"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:43
+msgid ":guilabel:`Azimuth (horizontal angle)` at ``300.0``\\°"
+msgstr ":guilabel:`Azimut della luce (angolo orizzontale)` a ``300.0``\\°"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:44
+msgid ":guilabel:`Vertical angle` at ``40.0``\\°"
+msgstr ":guilabel:`Altitudine della luce` a ``40.0``\\°"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:49
+msgid ""
+"Save the file in a new folder :file:`exercise_data/raster_analysis/` with "
+"the name ``hillshade``"
+msgstr ""
+"Salva il file in una nuova cartella :file:`exercise_data/raster_analysis/` "
+"con il nome ``hillshade``."
 
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:51
 msgid "Finally click on :guilabel:`Run`"
@@ -195,9 +234,67 @@ msgstr ""
 msgid "Remember to save the project when you are done."
 msgstr "Ricorda di salvare il progetto quando hai fatto."
 
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:99
+msgid "|FA| Finding the best areas"
+msgstr "|FA| Trovare le zone migliori"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:101
+msgid ""
+"Think back to the estate agent problem, which we last addressed in the "
+"*Vector Analysis* lesson. Let us imagine that the buyers now wish to "
+"purchase a building and build a smaller cottage on the property. In the "
+"Southern Hemisphere, we know that an ideal plot for development needs to "
+"have areas on it that:"
+msgstr ""
+"Ripensiamo al problema dell'agente immobiliare, che abbiamo affrontato "
+"l'ultima volta nella lezione *Analisi vettoriale*. Immaginiamo che gli "
+"acquirenti vogliano ora acquistare un edificio e costruire un piccolo "
+"cottage sulla proprietà. Nell'emisfero sud, sappiamo che un terreno ideale "
+"per lo sviluppo deve avere aree che:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:108
+msgid "are north-facing"
+msgstr "sono esposte a nord"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:109
+msgid "with a slope of less than 5 degrees"
+msgstr "con una pendenza inferiore a 5 gradi"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:110
+msgid ""
+"But if the slope is less than 2 degrees, then the aspect doesn't matter."
+msgstr ""
+"Ma se la pendenza è inferiore a 2 gradi, allora l'esposizione non ha "
+"importanza."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:112
+msgid "Let's find the best areas for them."
+msgstr "Troviamo le zone migliori per loro."
+
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:115
 msgid "|moderate| |FA| Calculating the Slope"
 msgstr "|moderate| |FA| Calcolare la pendenza"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:534
+msgid "moderate"
+msgstr "moderate"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:117
+msgid ""
+"*Slope* informs about how steep the terrain is. If, for example, you want to"
+" build houses on the land there, then you need land that is relatively flat."
+msgstr ""
+"La *Pendenza* informa su quanto è ripido il terreno. Se, per esempio, vuoi "
+"costruire case sul terreno, allora hai bisogno di un terreno che sia "
+"relativamente piatto."
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:121
+msgid ""
+"To calculate the slope, you need to use the :menuselection:`Slope` algorithm"
+" of the :menuselection:`Processing --> Raster terrain analysis`."
+msgstr ""
+"Per calcolare la pendenza, devi usare l'algoritmo :menuselection:`Slope` di "
+":menuselection:`Processing --> Analisi raster --> Pendenza`."
 
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:124
 msgid "Open the algorithm"
@@ -206,6 +303,10 @@ msgstr "Apri l'algoritmo"
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:125
 msgid "Choose :guilabel:`srtm_41_19` as the :guilabel:`Elevation layer`"
 msgstr "Scegli :guilabel:`srtm_41_19` come :guilabel:`Elevation layer`"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:126
+msgid "Keep the :guilabel:`Z factor` at ``1.0``"
+msgstr "Mantieni il :guilabel: `Fattore Z` a ``1.0``."
 
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:127
 msgid ""
@@ -219,6 +320,16 @@ msgstr ""
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:404
 msgid "Click on :guilabel:`Run`"
 msgstr "Clicca su :guilabel:`Esegui`"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:131
+msgid ""
+"Now you'll see the slope of the terrain, each pixel holding the "
+"corresponding slope value. Black pixels show flat terrain and white pixels, "
+"steep terrain:"
+msgstr ""
+"Ora vedrai la pendenza del terreno, ogni pixel contiene il valore di "
+"pendenza corrispondente. I pixel neri mostrano un terreno piatto e quelli "
+"bianchi un terreno ripido:"
 
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:140
 msgid "|moderate| |TY| Calculating the aspect"
@@ -244,9 +355,33 @@ msgstr ""
 "dovrebbero idealmente essere costruite su una pendenza rivolta verso Nord in"
 " modo che rimangano alla luce del sole."
 
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:150
+msgid ""
+"Use the :guilabel:`Aspect` algorithm of the :menuselection:`Processing --> "
+"Raster terrain analysis` to get the ``aspect`` layer saved along with the "
+"``slope``."
+msgstr ""
+"Usa l'algoritmo :guilabel:`Esposizione` del :menuselection:`Processing --> "
+"Analisi Raster--> Esposizione` per ottenere il layer ``esposizione`` salvato"
+" insieme alla ``pendenza``."
+
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:154
 msgid ":ref:`Check your results <raster-analysis-1>`"
-msgstr ":ref:`Controlla i risultati <raster-analysis-1>`"
+msgstr ":ref:`Check your results <raster-analysis-1>`"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:157
+msgid "|moderate| |FA| Finding the north-facing aspect"
+msgstr "|moderate| |FA| Trovare l'esposizione rivolta a nord"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:159
+msgid ""
+"Now, you have rasters showing you the slope as well as the aspect, but you "
+"have no way of knowing where ideal conditions are satisfied at once. How "
+"could this analysis be done?"
+msgstr ""
+"Ora, hai dei raster che ti mostrano la pendenza e l'esposizione, ma non hai "
+"modo di sapere dove le condizioni ideali sono soddisfatte "
+"contemporaneamente. Come si potrebbe fare questa analisi?"
 
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:164
 msgid "The answer lies with the :guilabel:`Raster calculator`."
@@ -314,6 +449,16 @@ msgstr ""
 "momento di pensare al raster come un'immagine. Dovresti vederlo come una "
 "matrice 2D piena di numeri."
 
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:190
+msgid ""
+"North is at 0 (zero) degrees, so for the terrain to face north, its aspect "
+"needs to be greater than 270 degrees or less than 90 degrees. Therefore the "
+"formula is::"
+msgstr ""
+"Il nord si trova a 0 (zero) gradi, quindi perché il terreno sia rivolto a "
+"nord, la sua esposizione deve essere maggiore di 270 gradi o minore di 90 "
+"gradi. Quindi la formula è:"
+
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:197
 msgid ""
 "Now you have to set up the raster details, like the cell size, extent and "
@@ -349,6 +494,17 @@ msgstr "Infine clicca su :guilabel:`Esegui`."
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:214
 msgid "Your result will be this:"
 msgstr "Il risultato dovrebbe essere questo:"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:219
+msgid ""
+"The output values are ``0`` or ``1``. What does it mean? For each pixel in "
+"the raster, the formula we wrote returns whether it matches the conditions "
+"or not. Therefore the final result will be **False** (0) and **True** (1)."
+msgstr ""
+"I valori in uscita sono ``0`` o ``1``. Cosa significa? Per ogni pixel nel "
+"raster, la formula che abbiamo scritto restituisce se corrisponde alle "
+"condizioni o meno. Quindi il risultato finale sarà **Falso** (0) e **Vero** "
+"(1)."
 
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:229
 msgid "|moderate| |TY| More criteria"
@@ -405,6 +561,17 @@ msgstr ":guilabel:`slope_lte2`: pendenza minore o uguale a 2 gradi"
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:251
 msgid ":guilabel:`slope_lte5`: slope equal to or below 5 degrees"
 msgstr ":guilabel:`slope_lte5`: pendenza minore o uguale a 5 gradi"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:253
+msgid ""
+"Where the condition is met, the pixel value is ``1``. Elsewhere, it is "
+"``0``. Therefore, if you multiply these rasters, the pixels that have a "
+"value of ``1`` for all of them will get a value of ``1`` (the rest will get "
+"``0``)."
+msgstr ""
+"Dove la condizione è soddisfatta, il valore del pixel è ``1``. Altrove, è "
+"``0``. Quindi, se moltiplichi questi raster, i pixel che hanno un valore di "
+"``1`` per tutti loro avranno un valore di ``1`` (il resto avrà ``0``)."
 
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:259
 msgid "The conditions to be met are:"
@@ -470,9 +637,29 @@ msgstr "Clicca :guilabel:`Esegui`"
 msgid "The result:"
 msgstr "Il risultato:"
 
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:288
+msgid ""
+"The previous steps could have been simplified using the following command::"
+msgstr ""
+"I passi precedenti avrebbero potuto essere semplificati utilizzando il "
+"seguente comando:"
+
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:295
 msgid "|moderate| |FA| Simplifying the Raster"
 msgstr "|moderate| |FA| Semplificare il raster"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:297
+msgid ""
+"As you can see from the image above, the combined analysis has left us with "
+"many, very small areas where the conditions are met (in white). But these "
+"aren't really useful for our analysis, since they are too small to build "
+"anything on. Let us get rid of all these tiny unusable areas."
+msgstr ""
+"Come puoi vedere dall'immagine qui sopra, l'analisi combinata ci ha lasciato"
+" molte aree molto piccole in cui le condizioni sono soddisfatte (in bianco)."
+" Ma queste non sono davvero utili per la nostra analisi, poiché sono troppo "
+"piccole per costruirci sopra qualcosa. Sbarazziamoci di tutte queste piccole"
+" aree inutilizzabili."
 
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:303
 msgid ""
@@ -657,6 +844,14 @@ msgstr ""
 "Il metodo utilizzato dall'algoritmo per gestire i valori soglia di ogni "
 "classe è definito da :guilabel:`Limiti intervallo`."
 
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:398
+msgid ""
+"Save the layer as :file:`reclassified.tif` in the "
+":file:`exercise_data/raster_analysis/` folder"
+msgstr ""
+"Salva il layer come :file:`reclassified.tif` nella cartella "
+":file:`exercise_data/raster_analysis/`"
+
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:406
 msgid ""
 "If you compare the native :guilabel:`aspect` layer with the "
@@ -738,6 +933,10 @@ msgid ""
 msgstr ""
 "Come possiamo interrogare il layer per avere il valore di un pixel? Possiamo"
 " usare il pulsante :sup:`Informazioni elementi`!"
+
+#: ../../docs/training_manual/rasters/terrain_analysis.rst:532
+msgid "identify"
+msgstr "identify"
 
 #: ../../docs/training_manual/rasters/terrain_analysis.rst:447
 msgid "Select the tool from the Attributes toolbar."
