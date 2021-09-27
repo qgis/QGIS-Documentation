@@ -448,6 +448,20 @@ msgstr "[boolean]"
 msgid "Default: True"
 msgstr "Predefinito: True"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:94
+msgid ""
+"Calculate statistics also for all cells stacks, ignoring NoData occurrence."
+msgstr ""
+"Calcolare le statistiche anche per tutte le celle, ignorando le occorrenze "
+"di NoData."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:95
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:879
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1019
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1538
+msgid "**Reference layer**"
+msgstr "**Layer di riferimento**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:96
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:880
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1020
@@ -487,6 +501,36 @@ msgstr "``REF_LAYER``"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2204
 msgid "[raster]"
 msgstr "[raster]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:98
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:882
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1022
+msgid ""
+"The reference layer to create the output layer from (extent, CRS, pixel "
+"dimensions)"
+msgstr ""
+"Il layer di riferimento da cui creare il layer in uscita (estensione, SR, "
+"dimensioni dei pixel)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:100
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:891
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1031
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1795
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1913
+msgid "**Output no data value**"
+msgstr "**In uscita nessun valore di dati**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:102
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1186
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1198
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1213
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1540
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2039
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2067
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2125
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2158
+msgid "Optional"
+msgstr "Opzionale"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:103
 msgid "``OUTPUT_NO_DATA_VALUE``"
@@ -540,6 +584,12 @@ msgstr "[number]"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1917
 msgid "Default: -9999.0"
 msgstr "Predefinito: -9999.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:107
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:896
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1036
+msgid "Value to use for nodata in the output layer"
+msgstr "Valore da usare per i nodata nel layer in uscita"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:108
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:916
@@ -686,7 +736,7 @@ msgstr "La codifica del file può anche essere cambiata qui."
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2146
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2255
 msgid "Outputs"
-msgstr "In uscita:"
+msgstr "In uscita"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:129
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:250
@@ -786,7 +836,7 @@ msgstr "``EXTENT``"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1442
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1575
 msgid "[extent]"
-msgstr "[estensione]"
+msgstr "[extent]"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:136
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:257
@@ -1009,6 +1059,27 @@ msgstr ""
 ":ref:`processing_console` per dettagli su come eseguire algoritmi di "
 "elaborazione dalla console Python."
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:167
+msgid "Fuzzify raster (gaussian membership)"
+msgstr "Fuzzify raster (appartenenza gaussiana)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:169
+msgid ""
+"Transforms an input raster to a fuzzified raster by assigning a membership "
+"value to each pixel, using a Gaussian membership function. Membership values"
+" range from 0 to 1. In the fuzzified raster, a value of 0 implies no "
+"membership of the defined fuzzy set, whereas a value of 1 means full "
+"membership. The gaussian membership function is defined as "
+"|gaussian_formula|, where *f1* is the spread and *f2* the midpoint."
+msgstr ""
+"Trasforma un raster in ingresso in un raster fuzzificato assegnando un "
+"valore di appartenenza ad ogni pixel, usando una funzione di appartenenza "
+"gaussiana. I valori di appartenenza vanno da 0 a 1. Nel raster fuzzificato, "
+"un valore di 0 implica nessuna appartenenza all'insieme fuzzy definito, "
+"mentre un valore di 1 significa piena appartenenza. La funzione di "
+"appartenenza gaussiana è definita come |gaussian_formula|, dove *f1* è la "
+"diffusione e *f2* il punto medio."
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2281
 msgid "gaussian_formula"
 msgstr "gaussian_formula"
@@ -1117,6 +1188,13 @@ msgstr "Predefinito: La prima banda del layer raster"
 msgid "If the raster is multiband, choose the band that you want to fuzzify."
 msgstr "Se il raster è multibanda, scegli la banda che vuoi rendere fuzzy."
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:212
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:322
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:546
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:773
+msgid "**Function midpoint**"
+msgstr "**Funzione punto centrale**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:213
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:323
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:547
@@ -1132,6 +1210,13 @@ msgstr "Predefinito: 10"
 msgid "Midpoint of the gaussian function"
 msgstr "Punto medio della funzione gaussiana"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:218
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:328
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:552
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:779
+msgid "**Function spread**"
+msgstr "**Funzione di diffusione**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:219
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:329
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:553
@@ -1144,9 +1229,49 @@ msgstr "``FUZZYSPREAD``"
 msgid "Default: 0.01"
 msgstr "Predefinito: 0.01"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:223
+msgid "Spread of the gaussian function"
+msgstr "Diffusione della funzione gaussiana"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:224
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:245
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:334
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:355
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:449
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:470
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:558
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:579
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:676
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:697
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:785
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:806
+msgid "**Fuzzified raster**"
+msgstr "**Raster fuzzificato**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:274
 msgid "**Algorithm ID**: ``qgis:fuzzifyrastergaussianmembership``"
 msgstr "**ID Algoritmo**: ``qgis:fuzzifyrastergaussianmembership``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:284
+msgid "Fuzzify raster (large membership)"
+msgstr "Raster fuzzificato (grande adesione)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:286
+msgid ""
+"Transforms an input raster to a fuzzified raster by assigning a membership "
+"value to each pixel, using a Large membership function. Membership values "
+"range from 0 to 1. In the fuzzified raster, a value of 0 implies no "
+"membership of the defined fuzzy set, whereas a value of 1 means full "
+"membership. The large membership function is defined as "
+"|fuzzy_large_formula|, where *f1* is the spread and *f2* the midpoint."
+msgstr ""
+"Trasforma un raster in ingresso in un raster fuzzificato assegnando un "
+"valore di appartenenza ad ogni pixel, usando una funzione di appartenenza "
+"grande. I valori di appartenenza vanno da 0 a 1. Nel raster fuzzificato, un "
+"valore di 0 implica nessuna appartenenza all'insieme fuzzy definito, mentre "
+"un valore di 1 significa piena appartenenza. La funzione di appartenenza "
+"grande è definita come |fuzzy_large_formula|, dove *f1* è la diffusione e "
+"*f2* il punto medio."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2283
 msgid "fuzzy_large_formula"
@@ -1172,6 +1297,10 @@ msgstr ""
 msgid "Default: 50"
 msgstr "Predefinito: 50"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:327
+msgid "Midpoint of the large function"
+msgstr "Punto centrale della funzione grande"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:332
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:783
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:901
@@ -1181,9 +1310,41 @@ msgstr "Predefinito: 50"
 msgid "Default: 5"
 msgstr "Predefinito: 5"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:333
+msgid "Spread of the large function"
+msgstr "Diffusione della grande funzione"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:384
 msgid "**Algorithm ID**: ``qgis:fuzzifyrasterlargemembership``"
 msgstr "**ID Algoritmo**: ``qgis:fuzzifyrasterlargemembership``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:394
+msgid "Fuzzify raster (linear membership)"
+msgstr "Raster fuzzificato (appartenenza lineare)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:396
+msgid ""
+"Transforms an input raster to a fuzzified raster by assigning a membership "
+"value to each pixel, using a Linear membership function. Membership values "
+"range from 0 to 1. In the fuzzified raster, a value of 0 implies no "
+"membership of the defined fuzzy set, whereas a value of 1 means full "
+"membership. The linear function is defined as |fuzzy_linear_formula|, where "
+"*a* is the low bound and *b* the high bound. This equation assigns "
+"membership values using a linear transformation for pixel values between the"
+" low and high bounds. Pixels values smaller than the low bound are given 0 "
+"membership whereas pixel values greater than the high bound are given 1 "
+"membership."
+msgstr ""
+"Trasforma un raster in ingresso in un raster fuzzificato assegnando un "
+"valore di appartenenza ad ogni pixel, usando una funzione di appartenenza "
+"lineare. I valori di appartenenza vanno da 0 a 1. Nel raster fuzzificato, un"
+" valore di 0 implica nessuna appartenenza all'insieme fuzzy definito, mentre"
+" un valore di 1 significa piena appartenenza. La funzione lineare è definita"
+" come |fuzzy_linear_formula|, dove *a* è il limite basso e *b* il limite "
+"alto. Questa equazione assegna i valori di appartenenza usando una "
+"trasformazione lineare per i valori dei pixel tra il limite basso e quello "
+"alto. I valori dei pixel più piccoli del limite inferiore sono dati 0, "
+"mentre i valori dei pixel più grandi del limite superiore sono dati 1."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2285
 msgid "fuzzy_linear_formula"
@@ -1203,10 +1364,25 @@ msgstr ""
 ":ref:`qgisfuzzifyrasterpowermembership`, "
 ":ref:`qgisfuzzifyrastersmallmembership`"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:437
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:658
+msgid "**Low fuzzy membership bound**"
+msgstr "**Bassa appartenenza fuzzy**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:438
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:659
 msgid "``FUZZYLOWBOUND``"
 msgstr "``FUZZYLOWBOUND``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:442
+msgid "Low bound of the linear function"
+msgstr "Basso limite della funzione lineare"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:443
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:664
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:670
+msgid "**High fuzzy membership bound**"
+msgstr "**Alta appartenenza fuzzy**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:444
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:665
@@ -1219,9 +1395,34 @@ msgstr "``FUZZYHIGHBOUND``"
 msgid "Default: 1"
 msgstr "Predefinito: 1"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:448
+msgid "High bound of the linear function"
+msgstr "Alto limite della funzione lineare"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:498
 msgid "**Algorithm ID**: ``qgisfuzzifyrasterlinearmembership``"
 msgstr "**ID Algoritmo**: ``qgisfuzzifyrasterlinearmembership``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:508
+msgid "Fuzzify raster (near membership)"
+msgstr "Fuzzificare raster (vicino all'appartenenza)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:510
+msgid ""
+"Transforms an input raster to a fuzzified raster by assigning a membership "
+"value to each pixel, using a Near membership function. Membership values "
+"range from 0 to 1. In the fuzzified raster, a value of 0 implies no "
+"membership of the defined fuzzy set, whereas a value of 1 means full "
+"membership. The near membership function is defined as |near_formula|, where"
+" *f1* is the spread and *f2* the midpoint."
+msgstr ""
+"Trasforma un raster in ingresso in un raster fuzzificato assegnando un "
+"valore di appartenenza ad ogni pixel, usando una funzione di appartenenza "
+"Near. I valori di appartenenza vanno da 0 a 1. Nel raster fuzzificato, un "
+"valore di 0 implica nessuna appartenenza all'insieme fuzzy definito, mentre "
+"un valore di 1 significa piena appartenenza. La funzione di appartenenza "
+"near è definita come |near_formula|, dove *f1* è la diffusione e *f2* il "
+"punto medio."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2287
 msgid "near_formula"
@@ -1241,9 +1442,46 @@ msgstr ""
 ":ref:`qgisfuzzifyrasterpowermembership`, "
 ":ref:`qgisfuzzifyrastersmallmembership`"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:551
+msgid "Midpoint of the near function"
+msgstr "Punto centrale della funzione near"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:557
+msgid "Spread of the near function"
+msgstr "Diffusione della funzione near"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:607
 msgid "**Algorithm ID**: ``qgis:fuzzifyrasternearmembership``"
 msgstr "**ID Algoritmo**: ``qgis:fuzzifyrasternearmembership``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:617
+msgid "Fuzzify raster (power membership)"
+msgstr "Fuzzificare raster (appartenenza power)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:619
+msgid ""
+"Transforms an input raster to a fuzzified raster by assigning a membership "
+"value to each pixel, using a Power membership function. Membership values "
+"range from 0 to 1. In the fuzzified raster, a value of 0 implies no "
+"membership of the defined fuzzy set, whereas a value of 1 means full "
+"membership. The power function is defined as |power_formula|, where *a* is "
+"the low bound, *b* is the high bound, and *f1* the exponent. This equation "
+"assigns membership values using the power transformation for pixel values "
+"between the low and high bounds. Pixels values smaller than the low bound "
+"are given 0 membership whereas pixel values greater than the high bound are "
+"given 1 membership."
+msgstr ""
+"Trasforma un raster in ingresso in un raster fuzzificato assegnando un "
+"valore di appartenenza ad ogni pixel, usando una funzione di appartenenza "
+"Power. I valori di appartenenza vanno da 0 a 1. Nel raster fuzzificato, un "
+"valore di 0 implica nessuna appartenenza all'insieme fuzzy definito, mentre "
+"un valore di 1 significa piena appartenenza. La funzione di potenza è "
+"definita come |power_formula|, dove *a* è il limite basso, *b* è il limite "
+"alto, e *f1* l'esponente. Questa equazione assegna i valori di appartenenza "
+"usando la trasformazione di potenza per i valori dei pixel tra il limite "
+"basso e quello alto. I valori dei pixel più piccoli del limite inferiore "
+"sono dati 0, mentre i valori dei pixel più grandi del limite superiore sono "
+"dati 1."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2289
 msgid "power_formula"
@@ -1263,6 +1501,14 @@ msgstr ""
 ":ref:`qgisfuzzifyrasternearmembership`, "
 ":ref:`qgisfuzzifyrastersmallmembership`"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:663
+msgid "Low bound of the power function"
+msgstr "Limite basso della funzione di potenza"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:669
+msgid "High bound of the power function"
+msgstr "Limite alto della funzione di potenza"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:671
 msgid "``FUZZYEXPONENT``"
 msgstr "``FUZZYEXPONENT``"
@@ -1278,6 +1524,27 @@ msgstr "Esponente della funzione di elevazione a potenza"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:725
 msgid "**Algorithm ID**: ``qgisfuzzifyrasterpowermembership``"
 msgstr "**ID Algoritmo**: ``qgisfuzzifyrasterpowermembership``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:735
+msgid "Fuzzify raster (small membership)"
+msgstr "Fuzzificare raster (appartenenza small)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:737
+msgid ""
+"Transforms an input raster to a fuzzified raster by assigning a membership "
+"value to each pixel, using a Small membership function. Membership values "
+"range from 0 to 1. In the fuzzified raster, a value of 0 implies no "
+"membership of the defined fuzzy set, whereas a value of 1 means full "
+"membership. The small membership function is defined as |small_formula|, "
+"where *f1* is the spread and *f2* the midpoint."
+msgstr ""
+"Trasforma un raster in ingresso in un raster fuzzificato assegnando un "
+"valore di appartenenza ad ogni pixel, usando una funzione di appartenenza "
+"Small. I valori di appartenenza vanno da 0 a 1. Nel raster fuzzificato, un "
+"valore di 0 implica nessuna appartenenza all'insieme fuzzy definito, mentre "
+"un valore di 1 significa piena appartenenza. La funzione di appartenenza "
+"piccola è definita come |small_formula|, dove *f1* è la diffusione e *f2* il"
+" punto centrale."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2291
 msgid "small_formula"
@@ -1297,6 +1564,14 @@ msgstr ""
 ":ref:`qgisfuzzifyrasternearmembership`, "
 ":ref:`qgisfuzzifyrasterpowermembership`"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:778
+msgid "Midpoint of the small function"
+msgstr "Punto centrale della funzione piccola"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:784
+msgid "Spread of the small function"
+msgstr "Diffusione della piccola funzione"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:834
 msgid "**Algorithm ID**: ``qgisfuzzifyrastersmallmembership``"
 msgstr "**ID Algoritmo**: ``qgisfuzzifyrastersmallmembership``"
@@ -1304,6 +1579,43 @@ msgstr "**ID Algoritmo**: ``qgisfuzzifyrastersmallmembership``"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:844
 msgid "Raster boolean AND"
 msgstr "Booleano AND sui raster"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:845
+msgid ""
+"Calculates the boolean ``AND`` for a set of input rasters. If all of the "
+"input rasters have a non-zero value for a pixel, that pixel will be set to "
+"``1`` in the output raster. If any of the input rasters have ``0`` values "
+"for the pixel it will be set to ``0`` in the output raster."
+msgstr ""
+"Calcola il booleano ``AND``` per un insieme di raster in ingresso. Se tutti "
+"i raster in ingresso hanno un valore diverso da zero per un pixel, quel "
+"pixel sarà impostato a ``1`` nel raster in uscita. Se uno qualsiasi dei "
+"raster in ingresso ha valori ``0`` per il pixel, questo sarà impostato a "
+"``0`` nel raster in uscita."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:851
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:991
+msgid ""
+"The reference layer parameter specifies an existing raster layer to use as a"
+" reference when creating the output raster. The output raster will have the "
+"same extent, CRS, and pixel dimensions as this layer."
+msgstr ""
+"Il parametro layer di riferimento specifica un layer raster esistente da "
+"usare come riferimento quando si crea il raster in uscita. Il raster di "
+"uscita avrà la stessa estensione, SR e dimensioni in pixel di questo layer."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:856
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:996
+msgid ""
+"By default, a nodata pixel in ANY of the input layers will result in a "
+"nodata pixel in the output raster. If the :guilabel:`Treat nodata values as "
+"false` option is checked, then nodata inputs will be treated the same as a "
+"``0`` input value."
+msgstr ""
+"Per impostazione predefinita, un pixel nodata in QUALSIASI dei layer in "
+"ingresso risulterà in un pixel nodata nel raster in uscita. Se l'opzione "
+":guilabel:`Tratta i valori nodata come falsi` è selezionata, allora i nodata"
+" in ingresso saranno trattati come un valore in ingresso ``0``."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:861
 msgid ":ref:`qgisrasterbooleanor`"
@@ -1331,6 +1643,14 @@ msgstr "``NODATA_AS_FALSE``"
 msgid "Default: False"
 msgstr "Predefinito: False"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:889
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1029
+msgid ""
+"Treat nodata values in the input files as 0 when performing the operation"
+msgstr ""
+"Considera i valori di nodata nei file in ingresso come 0 quando si esegue "
+"l'operazione"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:892
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1032
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1796
@@ -1351,6 +1671,11 @@ msgstr "**Tipo dei dati in uscita**"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1941
 msgid "``DATA_TYPE``"
 msgstr "``DATA_TYPE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:902
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1042
+msgid "Output raster data type. Options:"
+msgstr "Tipo di dati raster in uscita. Opzioni:"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:904
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1044
@@ -1432,7 +1757,12 @@ msgstr "10 --- CFloat64"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:919
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1059
 msgid "Output raster layer"
-msgstr "Livello raster in uscita"
+msgstr "Layer raster in uscita"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:936
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1076
+msgid "The extent of the output raster layer"
+msgstr "L'estensione del layer raster in uscita"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:953
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1093
@@ -1448,15 +1778,40 @@ msgstr "**Conteggio pixel NODATA**"
 msgid "``NODATA_PIXEL_COUNT``"
 msgstr "``NODATA_PIXEL_COUNT``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:956
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1096
+msgid "The count of nodata pixels in the output raster layer"
+msgstr "Il conteggio dei pixel nodata nel layer raster in uscita"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:957
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1097
+msgid "**True pixel count**"
+msgstr "**Conteggio dei pixel True**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:958
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1098
 msgid "``TRUE_PIXEL_COUNT``"
 msgstr "``TRUE_PIXEL_COUNT``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:960
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1100
+msgid "The count of True pixels (value = 1) in the output raster layer"
+msgstr "Il conteggio dei pixel True (valore = 1) nel layer raster in uscita"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:961
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1101
+msgid "**False pixel count**"
+msgstr "**Conteggio dei pixel False**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:962
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1102
 msgid "``FALSE_PIXEL_COUNT``"
 msgstr "``FALSE_PIXEL_COUNT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:964
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1104
+msgid "The count of False pixels (value = 0) in the output raster layer"
+msgstr "Il conteggio dei pixel False (valore = 0) nel layer raster in uscita"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:974
 msgid "**Algorithm ID**: ``qgis:rasterbooleanand``"
@@ -1465,6 +1820,19 @@ msgstr "**ID Algoritmo**: ``qgis:rasterbooleanand``"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:984
 msgid "Raster boolean OR"
 msgstr "Booleano OR sui raster"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:985
+msgid ""
+"Calculates the boolean ``OR`` for a set of input rasters. If all of the "
+"input rasters have a zero value for a pixel, that pixel will be set to ``0``"
+" in the output raster. If any of the input rasters have ``1`` values for the"
+" pixel it will be set to ``1`` in the output raster."
+msgstr ""
+"Calcola il booleano ``OR`` per un insieme di raster in ingresso. Se tutti i "
+"raster in ingresso hanno un valore zero per un pixel, quel pixel sarà "
+"impostato a ``0`` nel raster in uscita. Se uno qualsiasi dei raster in "
+"ingresso ha valori ``1`` per il pixel, questo sarà impostato su ``1`` nel "
+"raster in uscita."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1001
 msgid ":ref:`qgisrasterbooleanand`"
@@ -1482,6 +1850,30 @@ msgstr "Calculatore raster"
 msgid "Performs algebraic operations using raster layers."
 msgstr "Esegue operazioni algebriche sui layer raster."
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1126
+msgid ""
+"The resulting layer will have its values computed according to an "
+"expression. The expression can contain numerical values, operators and "
+"references to any of the layers in the current project."
+msgstr ""
+"Il layer risultante avrà i suoi valori calcolati secondo un'espressione. "
+"L'espressione può contenere valori numerici, operatori e riferimenti a "
+"qualsiasi layer del progetto corrente."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1131
+msgid ""
+"When using the calculator in :ref:`processing_batch` or from the "
+":ref:`console` the files to use have to be specified. The corresponding "
+"layers are referred using the base name of the file (without the full path)."
+" For instance, if using a layer at ``path/to/my/rasterfile.tif``, the first "
+"band of that layer will be referred as ``rasterfile.tif@1``."
+msgstr ""
+"Quando si usa il calcolatore in :ref:`processing_batch` o dalla "
+":ref:`console` bisogna specificare i file da usare. I layer corrispondenti "
+"sono riferiti usando il nome base del file (senza il percorso completo). Per"
+" esempio, se si usa un layer in ``path/to/my/rasterfile.tif``, la prima "
+"banda di quel layer sarà riferita come ``rasterfile.tif@1``."
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1139
 msgid ":ref:`label_raster_calc`"
 msgstr ":ref:`label_raster_calc`"
@@ -1496,9 +1888,31 @@ msgstr "**Layer**"
 msgid "GUI only"
 msgstr "Solo GUI"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1156
+msgid ""
+"Shows the list of all raster layers loaded in the legend. These can be used "
+"to fill the expression box (double click to add). Raster layers are referred"
+" by their name and the number of the band: ``layer_name@band_number``. For "
+"instance, the first band from a layer named ``DEM`` will be referred as "
+"``DEM@1``."
+msgstr ""
+"Mostra l'elenco di tutti i layer raster caricati nella legenda. Questi "
+"possono essere usati per riempire la casella di espressione (doppio click "
+"per aggiungere). I layer raster sono indicati dal loro nome e dal numero "
+"della banda: ``nome_layer@numero_banda``. Per esempio, la prima banda di un "
+"layer chiamato ``DEM`` sarà indicata come ``DEM@1``."
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1163
 msgid "**Operators**"
 msgstr "**Operatori**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1166
+msgid ""
+"Contains some calculator like buttons that can be used to fill the "
+"expression box."
+msgstr ""
+"Contiene alcuni pulsanti simili a quelli del calcolatore che possono essere "
+"utilizzati per riempire la casella di espressione."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1168
 msgid "**Expression**"
@@ -1513,23 +1927,91 @@ msgstr "``EXPRESSION``"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2126
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2214
 msgid "[string]"
-msgstr "[stringa]"
+msgstr "[string]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1171
+msgid ""
+"Expression that will be used to calculate the output raster layer. You can "
+"use the operator buttons provided to type directly the expression in this "
+"box."
+msgstr ""
+"Espressione che verrà usata per calcolare il layer raster in uscita. Puoi "
+"usare i pulsanti operatore forniti per digitare direttamente l'espressione "
+"in questa casella."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1175
 msgid "**Predefined expressions**"
 msgstr "**Espressioni predefinite**"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1178
+msgid ""
+"You can use the predefined ``NDVI`` expression or you can define new "
+"expressions for calculations. The :guilabel:`Add...` button loads a defined "
+"expression (and lets you set the parameters). The :guilabel:`Save...` button"
+" lets you define a new expression."
+msgstr ""
+"Puoi usare l'espressione predefinita ``NDVI`` o puoi definire nuove "
+"espressioni per i calcoli. Il pulsante :guilabel:`Aggiungere...` carica "
+"un'espressione definita (e ti permette di impostare i parametri). Il "
+"pulsante :guilabel:`Salvare...` ti permette di definire una nuova "
+"espressione."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1184
+msgid "**Reference layer(s) (used for automated extent, cellsize, and CRS)**"
+msgstr ""
+"**Layer di riferimento (usato(i) per l'estensione automatica, la dimensione "
+"delle celle e il SR)**."
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1187
 msgid "``LAYERS``"
 msgstr "``LAYERS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1189
+msgid ""
+"Layer(s) that will be used to fetch extent, cell size and CRS. By choosing "
+"the layer in this box you avoid filling in all the other parameters by hand."
+" Raster layers are referred by their name and the number of the band: "
+"``layer_name@band_number``. For instance, the first band from a layer named "
+"``DEM`` will be referred as ``DEM@1``."
+msgstr ""
+"Layer che sarà utilizzato(i) per ottenere l'estensione, la dimensione delle "
+"celle e il SR. Scegliendo il layer in questa casella si evita di riempire a "
+"mano tutti gli altri parametri. I layer raster sono indicati dal loro nome e"
+" dal numero della banda: ``nome_layer@numero_banda``. Per esempio, la prima "
+"banda di un livello chiamato ``DEM`` sarà indicata come ``DEM@1``."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1196
+msgid "**Cell size (use 0 or empty to set it automatically)**"
+msgstr ""
+"**Dimensione della cella (usare 0 o vuoto per impostarla automaticamente)**."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1199
 msgid "``CELLSIZE``"
 msgstr "``CELLSIZE``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1201
+msgid ""
+"Cell size of the output raster layer. If the cell size is not specified, the"
+" minimum cell size of the selected reference layer(s) will be used. The cell"
+" size will be the same for the X and Y axes."
+msgstr ""
+"Dimensione delle celle del layer raster in uscita. Se la dimensione delle "
+"celle non è specificata, verrà utilizzata la dimensione minima delle celle "
+"del(i) layer di riferimento selezionato. La dimensione della cella sarà la "
+"stessa per gli assi X e Y."
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1205
 msgid "**Output extent (xmin, xmax, ymin, ymax)**"
 msgstr "**Estensione in uscita (xmin, xmax, ymin, ymax)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1208
+msgid ""
+"Extent of the output raster layer. If the extent is not specified, the "
+"minimum extent that covers all the selected reference layers will be used."
+msgstr ""
+"Estensione del layer raster in uscita. Se l'estensione non è specificata, "
+"verrà usata l'estensione minima che copre tutti i layer di riferimento "
+"selezionati."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1211
 msgid "**Output CRS**"
@@ -1538,6 +2020,14 @@ msgstr "**SR in uscita**"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1214
 msgid "``CRS``"
 msgstr "``SR``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1216
+msgid ""
+"CRS of the output raster layer. If the output CRS is not specified, the CRS "
+"of the first reference layer will be used."
+msgstr ""
+"SR del layer raster in uscita. Se il SR in uscita non è specificato, verrà "
+"usato il SR del primo layer di riferimento."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1219
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1242
@@ -1553,9 +2043,27 @@ msgstr "**In uscita**"
 msgid "Default: ``[Save to temporary file]``"
 msgstr "Predefinito: ``[Salva su file temporaneo]``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1245
+msgid "Output raster file with the calculated values."
+msgstr "File raster in uscita con i valori calcolati."
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1250
 msgid "**Algorithm ID**: ``qgis:rastercalculator``"
 msgstr "**ID Algoritmo**: ``qgis:rastercalculator``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1260
+msgid "Raster layer statistics"
+msgstr "Statistiche sui layer raster"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1261
+msgid ""
+"Calculates basic statistics from the values in a given band of the raster "
+"layer. The output is loaded in the :menuselection:`Processing --> Results "
+"viewer` menu."
+msgstr ""
+"Calcola le statistiche di base dai valori in una data banda del layer "
+"raster. Il risultato viene caricato nel menu :menuselection:`Processing --> "
+"Visualizzatore Risultati`."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1277
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1386
@@ -1580,6 +2088,14 @@ msgstr "**Numero banda**"
 msgid "Default: The first band of the input layer"
 msgstr "Predefinito: La prima banda del layer in ingresso"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1286
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1395
+msgid ""
+"If the raster is multiband, choose the band you want to get statistics for."
+msgstr ""
+"Se il raster è multibanda, scegli la banda per la quale vuoi ottenere le "
+"statistiche."
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1289
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1326
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1398
@@ -1596,6 +2112,11 @@ msgstr "``OUTPUT_HTML_FILE``"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1728
 msgid "[html]"
 msgstr "[html]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1293
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1402
+msgid "Specification of the output file:"
+msgstr "Indicazione del file in uscita:"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1295
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1404
@@ -1630,6 +2151,42 @@ msgstr "``MIN``"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1328
 msgid "The output file contains the following information:"
 msgstr "Il file in uscita contiene le seguenti informazioni:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1330
+msgid "Analyzed file: path of the raster layer"
+msgstr "File analizzato: percorso del layer raster"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1331
+msgid "Minimum value: minimum value of the raster"
+msgstr "Valore minimo: valore minimo del raster"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1332
+msgid "Maximum value: maximum value of the raster"
+msgstr "Valore massimo: valore massimo del raster"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1333
+msgid "Range: difference between the maximum and minimum values"
+msgstr "Intervallo: differenza tra i valori massimo e minimo"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1334
+msgid "Sum: total sum of the values"
+msgstr "Sum: totale somma dei valori"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1335
+msgid "Mean value: mean of the values"
+msgstr "Valore medio: media dei valori"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1336
+msgid "Standard deviation: standard deviation of the values"
+msgstr "Deviazione standard: deviazione standard dei valori"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1337
+msgid ""
+"Sum of the squares: sum of the squared differences of each observation from "
+"the overall mean"
+msgstr ""
+"Somma dei quadrati: somma delle differenze al quadrato di ogni osservazione "
+"dalla media generale"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1340
 msgid "**Range**"
@@ -1667,9 +2224,30 @@ msgstr "``SUM_OF_SQUARES``"
 msgid "**Algorithm ID**: ``qgis:rasterlayerstatistics``"
 msgstr "**ID Algoritmo**: ``qgis:rasterlayerstatistics``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1370
+msgid "Raster layer unique values report"
+msgstr "Report valori univoci del layer raster"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1371
+msgid ""
+"Returns the count and area of each unique value in a given raster layer."
+msgstr ""
+"Restituisce il conteggio e l'area di ogni valore univoco in un dato layer "
+"raster."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1397
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1456
+msgid "**Unique values report**"
+msgstr "**Report valori univoci**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1399
 msgid "[file]"
 msgstr "[file]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1409
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1468
+msgid "**Unique values table**"
+msgstr "**Tabella valori univoci**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1410
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1469
@@ -1688,20 +2266,97 @@ msgstr "``OUTPUT_TABLE``"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1733
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1909
 msgid "[table]"
-msgstr "[tabella]"
+msgstr "[table]"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1413
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1692
 msgid "Default: ``[Skip output]``"
 msgstr "Predefinito: ``[Skip output]``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1414
+msgid "Specification of the table for unique values:"
+msgstr "Indicazione della tabella per i valori univoci"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1417
+msgid "Create Temporary Layer"
+msgstr "Crea Layer Temporaneo"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1419
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2049
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2140
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2248
+msgid "Save to GeoPackage..."
+msgstr "Salva in GeoPackage..."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1420
+msgid "Save to PostGIS Table......"
+msgstr "Salva nella Tabella PostGIS......"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1459
+msgid "The output HTML file contains the following information:"
+msgstr "Il file HTML in uscita contiene le seguenti informazioni:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1461
+msgid "Analyzed file: the path of the raster layer"
+msgstr "File analizzato: il percorso del layer raster"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1462
+msgid "Extent: xmin, ymin, xmax, ymax coordinates of the extent"
+msgstr "Estensione: xmin, ymin, xmax, ymax coordinate dell'estensione"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1463
+msgid "Projection: projection of the layer"
+msgstr "Proiezione: proiezione del layer"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1464
+msgid "Width in pixels: number of columns and pixel width size"
+msgstr ""
+"Larghezza in pixel: numero di colonne e dimensione della larghezza dei pixel"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1465
+msgid "Height in pixels: number of rows and pixel width size"
+msgstr "Altezza in pixel: numero di righe e dimensione dell'altezza dei pixel"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1466
+msgid "Total pixel count: count of all the pixels"
+msgstr "Conteggio totale dei pixel: conteggio di tutti i pixel"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1467
+msgid "NODATA pixel count: count of pixels with NODATA value"
+msgstr "Conteggio pixel NODATA: conteggio dei pixel con valore NODATA"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1471
 msgid "A table with three columns:"
 msgstr "Una tabella con tre colonne:"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1473
+msgid "*value*: pixel value"
+msgstr "*value*: valore pixel"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1474
+msgid "*count*: count of pixels with this value"
+msgstr "*count*: conteggio dei pixel con questo valore"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1475
+msgid "*m*\\ :sup:`2`: total area in square meters of pixels with this value."
+msgstr ""
+"*m*\\ :sup:`2`: area totale in metri quadrati dei pixel con questo valore."
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1486
 msgid "**Algorithm ID**: ``qgis:rasterlayeruniquevaluesreport``"
 msgstr "**ID Algoritmo**: ``qgis:rasterlayeruniquevaluesreport``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1496
+msgid "Raster layer zonal statistics"
+msgstr "Statistiche zonali del layer raster"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1497
+msgid ""
+"Calculates statistics for a raster layer's values, categorized by zones "
+"defined in another raster layer."
+msgstr ""
+"Calcola le statistiche per i valori di un layer raster, classificati per "
+"zone definite in un altro layer raster."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1500
 msgid ":ref:`qgiszonalstatisticsfb`"
@@ -1711,26 +2366,130 @@ msgstr ":ref:`qgiszonalstatisticsfb`"
 msgid "**Input Layer**"
 msgstr "**Layer in ingresso**"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1523
+msgid ""
+"If the raster is multiband choose the band for which you want to calculate "
+"the statistics."
+msgstr ""
+"Se il raster è multibanda scegli la banda per la quale vuoi calcolare le "
+"statistiche."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1525
+msgid "**Zones layer**"
+msgstr "**Zone Layer**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1526
 msgid "``ZONES``"
 msgstr "``ZONES``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1528
+msgid ""
+"Raster layer defining zones. Zones are given by contiguous pixels having the"
+" same pixel value."
+msgstr ""
+"Layer raster che definisce le zone. Le zone sono date da pixel contigui che "
+"hanno lo stesso valore di pixel."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1531
+msgid "**Zones band number**"
+msgstr "**Numero di banda delle zone**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1532
 msgid "``ZONES_BAND``"
 msgstr "``ZONES_BAND``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1536
+msgid "If the raster is multiband, choose the band that defines the zones"
+msgstr "Se il raster è multibanda, scegli la banda che definisce le zone"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1545
+msgid ""
+"Raster layer used to calculate the centroids that will be used as reference "
+"when determining the zones in the output layer. One of:"
+msgstr ""
+"Layer raster usato per calcolare i centroidi che saranno usati come "
+"riferimento per determinare le zone nel layer in uscita. Uno di:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1549
+msgid "0 --- Input layer"
+msgstr "0 --- Layer in ingresso"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1550
+msgid "1 --- Zones layer"
+msgstr "1 --- Zone layer"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1552
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1585
 msgid "**Statistics**"
 msgstr "**Statistiche**"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1555
+msgid "Table with the calculated statistics"
+msgstr "Tabella con le statistiche calcolate"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1588
+msgid "The output layer contains the following information **for each zone**:"
+msgstr ""
+"Il layer in uscita contiene le seguenti informazioni **per ogni zona**:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1591
+msgid "Area: the area in square raster units in the zone;"
+msgstr "Area: l'area in unità raster quadrate nella zona;"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1592
+msgid "Sum: the total sum of the pixel values in the zone;"
+msgstr "Sum: la somma totale dei valori dei pixel nella zona;"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1593
+msgid "Count: the number of pixels in the zone;"
+msgstr "Count: il numero di pixel nella zona;"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1594
+msgid "Min: the minimum pixel value in the zone;"
+msgstr "Min: il valore minimo del pixel nella zona;"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1595
+msgid "Max: the maximum pixel value in the zone;"
+msgstr "Max: il valore massimo del pixel nella zona;"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1596
+msgid "Mean: the mean of the pixel values in the zone;"
+msgstr "Mean: la media dei valori dei pixel nella zona;"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1609
 msgid "**Algorithm ID**: ``qgis:rasterlayerzonalstats``"
 msgstr "**ID Algoritmo**: ``qgis:rasterlayerzonalstats``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1619
+msgid "Raster surface volume"
+msgstr "Volume della superficie raster"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1620
+msgid ""
+"Calculates the volume under a raster surface relative to a given base level."
+" This is mainly useful for Digital Elevation Models (DEM)."
+msgstr ""
+"Calcola il volume sotto una superficie raster rispetto ad un dato livello di"
+" base. Questo è utile soprattutto per i modelli digitali di elevazione "
+"(DEM)."
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1635
 msgid "**INPUT layer**"
 msgstr "**Layer in ingresso**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1638
+msgid "Input raster, representing a surface"
+msgstr "Raster in ingresso, rappresentante una superficie"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1644
+msgid ""
+"If the raster is multiband, choose the band that shall define the surface."
+msgstr ""
+"Se il raster è multibanda, scegli la banda che deve definire la superficie."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1646
+msgid "**Base level**"
+msgstr "**Livello Base**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1647
 msgid "``LEVEL``"
@@ -1740,6 +2499,14 @@ msgstr "``LEVEL``"
 msgid "Default: 0.0"
 msgstr "Predefinito: 0.0"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1651
+msgid ""
+"Define a base or reference value. This base is used in the volume "
+"calculation according to the ``Method`` parameter (see below)."
+msgstr ""
+"Definisci una base o un valore di riferimento. Questa base è usata nel "
+"calcolo del volume secondo il parametro ``Method`` (vedi sotto)."
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1654
 msgid "**Method**"
 msgstr "**Metodo**"
@@ -1748,10 +2515,78 @@ msgstr "**Metodo**"
 msgid "``METHOD``"
 msgstr "``METHOD``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1659
+msgid ""
+"Define the method for the volume calculation given by the difference between"
+" the raster pixel value and the ``Base level``. Options:"
+msgstr ""
+"Definisce il metodo per il calcolo del volume dato dalla differenza tra il "
+"valore del pixel del raster e il ``Livello base``. Opzioni:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1664
+msgid ""
+"0 --- Count Only Above Base Level: only pixels above the base level will add"
+" to the volume."
+msgstr ""
+"0 --- Count Only Above Base Level: solo i pixel sopra il livello di base "
+"saranno aggiunti al volume."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1666
+msgid ""
+"1 --- Count Only Below Base Level: only pixels below the base level will add"
+" to the volume."
+msgstr ""
+"1 --- Count Only Below Base Level: solo i pixel sotto il livello di base si "
+"aggiungono al volume."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1668
+msgid ""
+"2 --- Subtract Volumes Below Base level: pixels above the base level will "
+"add to the volume, pixels below the base level will subtract from the "
+"volume."
+msgstr ""
+"2 --- Subtract Volumes Below Base level: i pixel sopra il livello di base si"
+" aggiungono al volume, i pixel sotto il livello di base si sottraggono dal "
+"volume."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1671
+msgid ""
+"3 --- Add Volumes Below Base level: Add the volume regardless whether the "
+"pixel is above or below the base level. This is equivalent to sum the "
+"absolute values of the difference between the pixel value and the base "
+"level."
+msgstr ""
+"3 ---Add Volumes Below Base level: Aggiungere il volume indipendentemente "
+"dal fatto che il pixel sia sopra o sotto il livello di base. Questo equivale"
+" a sommare i valori assoluti della differenza tra il valore del pixel e il "
+"livello di base."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1676
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1726
+msgid "**Surface volume report**"
+msgstr "**Report volume della superficie**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1681
+msgid "Specification of the output HTML report. One of:"
+msgstr "Indicazione del report HTML in uscita. Uno di:"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1683
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1695
 msgid "Skip output"
 msgstr "Ignora risultato"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1684
+msgid "Save to Temporary File"
+msgstr "Salva in un File Temporaneo"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1688
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1731
+msgid "**Surface volume table**"
+msgstr "**Tabella del volume della superficie**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1693
+msgid "Specification of the output table. One of:"
+msgstr "Indicazione della tabella in uscita Uno di:"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1696
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2047
@@ -1791,13 +2626,55 @@ msgstr "**Area**"
 msgid "``AREA``"
 msgstr "``AREA``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1721
+msgid "The area in square map units"
+msgstr "L'area in unità di mappa al quadrato"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1722
+msgid "**Pixel_count**"
+msgstr "**Pixel_count**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1723
 msgid "``PIXEL_COUNT``"
 msgstr "``PIXEL_COUNT``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1725
+msgid "The total number of pixels that have been analyzed"
+msgstr "Il numero totale di pixel che sono stati analizzati"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1729
+msgid ""
+"The output report (containing volume, area and pixel count) in HTML format"
+msgstr ""
+"Il report in uscita (contenente volume, area e conteggio dei pixel) in "
+"formato HTML"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1734
+msgid "The output table (containing volume, area and pixel count)"
+msgstr "La tabella in uscita (contenente volume, area e numero di pixel)"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1740
 msgid "**Algorithm ID**: ``qgis:rastersurfacevolume``"
 msgstr "**ID Algoritmo**: ``qgis:rastersurfacevolume``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1750
+msgid "Reclassify by layer"
+msgstr "Riclassificare in base al layer"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1751
+msgid ""
+"Reclassifies a raster band by assigning new class values based on the ranges"
+" specified in a vector table."
+msgstr ""
+"Riclassifica una banda raster assegnando nuove classi di valori basati sugli"
+" intervalli specificati in una tabella vettoriale."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1766
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1897
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2108
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2202
+msgid "**Raster layer**"
+msgstr "**Layer Raster**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1767
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1898
@@ -1818,6 +2695,14 @@ msgstr "Layer raster da riclassificare"
 msgid "``RASTER_BAND``"
 msgstr "``RASTER_BAND``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1775
+msgid "If the raster is multiband, choose the band you want to reclassify."
+msgstr "Se il raster è multibanda, scegli la banda che vuoi riclassificare."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1777
+msgid "**Layer containing class breaks**"
+msgstr "**Layer contenente le discontinuità di classe**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1778
 msgid "``INPUT_TABLE``"
 msgstr "``INPUT_TABLE``"
@@ -1825,6 +2710,15 @@ msgstr "``INPUT_TABLE``"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1779
 msgid "[vector: any]"
 msgstr "[vector: any]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1780
+msgid "Vector layer containing the values to use for classification."
+msgstr ""
+"Layer vettoriale contenente i valori da utilizzare per la classificazione."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1781
+msgid "**Minimum class value field**"
+msgstr "**Campo valore minimo della classe**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1782
 msgid "``MIN_FIELD``"
@@ -1836,27 +2730,130 @@ msgstr "``MIN_FIELD``"
 msgid "[tablefield: numeric]"
 msgstr "[tablefield: numeric]"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1784
+msgid "Field with the minimum value of the range for the class."
+msgstr "Campo con il valore minimo dell'intervallo per la classe."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1785
+msgid "**Maximum class value field**"
+msgstr "**Campo valore massimo della classe**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1786
 msgid "``MAX_FIELD``"
 msgstr "``MAX_FIELD``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1788
+msgid "Field with the maximum value of the range for the class."
+msgstr "Campo con il valore massimo dell'intervallo per la classe."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1789
+msgid "**Output value field**"
+msgstr "**Campo valore in uscita**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1790
 msgid "``VALUE_FIELD``"
 msgstr "``VALUE_FIELD``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1792
+msgid ""
+"Field with the value that will be assigned to the pixels that fall in the "
+"class (between the corresponding min and max values)."
+msgstr ""
+"Campo con il valore che sarà assegnato ai pixel che rientrano nella classe "
+"(tra i valori min e max corrispondenti)."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1800
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1918
+msgid "Value to apply to no data values."
+msgstr "Valore da applicare ai valori no data."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1801
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1919
+msgid "**Range boundaries**"
+msgstr "**Limiti dell'intervallo**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1802
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1920
 msgid "``RANGE_BOUNDARIES``"
 msgstr "``RANGE_BOUNDARIES``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1806
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1924
+msgid "Defines comparison rules for the classification. Options:"
+msgstr "Definisce le regole di confronto per la classificazione. Opzioni:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1809
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1927
+msgid "0 --- min < value <= max"
+msgstr "0 --- min < value <= max"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1810
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1928
+msgid "1 --- min <= value < max"
+msgstr "1 --- min <= value < max"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1811
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1929
+msgid "2 --- min <= value <= max"
+msgstr "2 --- min <= value <= max"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1812
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1930
+msgid "3 --- min < value < max"
+msgstr "3 --- min < value < max"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1814
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1932
+msgid "**Use no data when no range matches value**"
+msgstr "**Usa no data quando nessun intervallo corrisponde al valore**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1815
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1933
 msgid "``NODATA_FOR_MISSING``"
 msgstr "``NODATA_FOR_MISSING``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1819
+msgid ""
+"Values that do not belong to a class will result in the no data value. If "
+"False, the original value is kept."
+msgstr ""
+"I valori che non appartengono a una classe avranno il valore no data. Se "
+"False, viene mantenuto il valore originale."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1827
+msgid "Defines the data type of the output raster file. Options:"
+msgstr "Definisce il tipo di dati del file raster in uscita. Opzioni:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1842
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1863
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1961
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1985
+msgid "**Reclassified raster**"
+msgstr "**Raster riclassificato**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1866
+msgid "Output raster layer with reclassified band values"
+msgstr "Layer raster in uscita con valori di banda riclassificati"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1871
 msgid "**Algorithm ID**: ``qgis:reclassifybylayer``"
 msgstr "**ID Algoritmo**: ``qgis:reclassifybylayer``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1881
+msgid "Reclassify by table"
+msgstr "Riclassificare in base a tabella"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1882
+msgid ""
+"Reclassifies a raster band by assigning new class values based on the ranges"
+" specified in a fixed table."
+msgstr ""
+"Riclassifica una banda raster assegnando nuovi valori di classe basati sugli"
+" intervalli specificati in una fissata tabella."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1906
+msgid "Raster band for which you want to recalculate values."
+msgstr "Banda raster per la quale vuoi ricalcolare i valori."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1907
 msgid "**Reclassification table**"
@@ -1865,6 +2862,24 @@ msgstr "**Tabella di riclassificazione**"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1908
 msgid "``TABLE``"
 msgstr "``TABLE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1910
+msgid ""
+"A 3-columns table to fill with the values to set the boundaries of each "
+"class (``Minimum`` and ``Maximum``) and the new ``Value`` to assign to the "
+"band values that fall in the class."
+msgstr ""
+"Una tabella a 3 colonne da riempire con i valori per impostare i limiti di "
+"ogni classe (``Minimo`` e ``Massimo``) e il nuovo ``Valore`` da assegnare ai"
+" valori della banda che rientrano nella classe."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1937
+msgid ""
+"Applies the no data value to band values that do not fall in any class. If "
+"False, the original value is kept."
+msgstr ""
+"Applica il valore no data ai valori di banda che non rientrano in nessuna "
+"classe. Se False, viene mantenuto il valore originale."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1945
 msgid "Defines the format of the output raster file."
@@ -1879,9 +2894,45 @@ msgstr "Opzioni:"
 msgid "Default: '[Save to temporary file]'"
 msgstr "Predefinito: '[Save to temporary file]'"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1966
+msgid "Specification of the output raster layer. One of:"
+msgstr "Specifica del layer raster in uscita. Uno di:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1972
+msgid "The file encoding can also be changed here"
+msgstr "La codifica del file può anche essere cambiata qui"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1990
+msgid "The output raster layer."
+msgstr "Il layer raster in uscita."
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1995
 msgid "**Algorithm ID**: ``qgis:reclassifybytable``"
 msgstr "**ID Algoritmo**: ``qgis:reclassifybytable``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2005
+msgid "Sample raster values"
+msgstr "Raster valori campione"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2006
+msgid ""
+"Extracts raster values at the point locations. If the raster layer is "
+"multiband, each band is sampled."
+msgstr ""
+"Estrae i valori raster nelle posizioni dei punti. Se il layer raster è "
+"multibanda, ogni banda viene campionata."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2009
+msgid ""
+"The attribute table of the resulting layer will have as many new columns as "
+"the raster layer band count."
+msgstr ""
+"La tabella degli attributi del layer risultante avrà tante nuove colonne "
+"quante sono le bande del layer raster."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2023
+msgid "**Input Point Layer**"
+msgstr "**Layer di punti in ingresso**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2025
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2041
@@ -1889,9 +2940,27 @@ msgstr "**ID Algoritmo**: ``qgis:reclassifybytable``"
 msgid "[vector: point]"
 msgstr "[vector: point]"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2026
+msgid "Point vector layer to use for  sampling"
+msgstr "Layer vettoriale puntuale da usare per il campionamento"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2027
+msgid "**Raster Layer to sample**"
+msgstr "**Layer raster da campionare**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2028
 msgid "``RASTERCOPY``"
 msgstr "``RASTERCOPY``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2030
+msgid "Raster layer to sample at the given point locations."
+msgstr "Layer raster da campionare nelle posizioni dei punti indicati."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2031
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2122
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2212
+msgid "**Output column prefix**"
+msgstr "**Prefisso colonna in uscita**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2032
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2123
@@ -1903,6 +2972,15 @@ msgstr "``COLUMN_PREFIX``"
 msgid "Default: 'rvalue'"
 msgstr "Predefinito: 'rvalue'"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2036
+msgid "Prefix for the names of the added columns."
+msgstr "Prefisso per i nomi delle colonne aggiunte."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2037
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2065
+msgid "**Sampled Points**"
+msgstr "**Punti Campionati**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2043
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2134
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2162
@@ -1910,9 +2988,55 @@ msgstr "Predefinito: 'rvalue'"
 msgid "Default: ``[Create temporary layer]``"
 msgstr "Predefinito: ``[Create temporary layer]``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2044
+msgid "Specify the output layer containing the sampled values. One of:"
+msgstr ""
+"Specificare il layer in uscita che contiene i valori campionati. Uno di:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2070
+msgid "The output layer containing the sampled values."
+msgstr "Il layer in uscita che contiene i valori campionati."
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2075
 msgid "**Algorithm ID**: ``qgis:rastersampling``"
 msgstr "**ID Algoritmo**: ``qgis:rastersampling``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2085
+msgid "Zonal histogram"
+msgstr "Istogramma zonale"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2086
+msgid ""
+"Appends fields representing counts of each unique value from a raster layer "
+"contained within polygon features."
+msgstr ""
+"Aggiunge campi che rappresentano i conteggi di ogni valore univoco da un "
+"layer raster contenuto negli elementi poligonali."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2089
+msgid ""
+"The output layer attribute table will have as many fields as the unique "
+"values of the raster layer that intersects the polygon(s)."
+msgstr ""
+"La tabella degli attributi del layer in uscita avrà tanti campi quanti sono "
+"i valori univoci del layer raster che interseca il poligono(i)."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2095
+msgid "Raster layer histogram example"
+msgstr "Esempio di istogramma di layer raster"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2111
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2205
+msgid "Input raster layer."
+msgstr "Layer raster in ingresso."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2117
+msgid "If the raster is multiband, choose a band."
+msgstr "Se il raster è multibanda, scegli una banda."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2118
+msgid "**Vector layer containing zones**"
+msgstr "**Layer vettoriale contenente zone**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2119
 msgid "``INPUT_VECTOR``"
@@ -1927,17 +3051,77 @@ msgstr "``INPUT_VECTOR``"
 msgid "[vector: polygon]"
 msgstr "[vector: polygon]"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2121
+msgid "Vector polygon layer that defines the zones."
+msgstr "Vettore poligonale che definisce le zone."
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2128
 msgid "Default: 'HISTO\\_'"
 msgstr "Predefinito: 'HISTO\\_'"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2129
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2217
+msgid "Prefix for the output columns names."
+msgstr "Prefisso per i nomi delle colonne in uscita."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2130
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2156
+msgid "**Output zones**"
+msgstr "**Zone in uscita**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2135
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2243
+msgid "Specify the output vector polygon layer. One of:"
+msgstr "Specifica il layer del vettore poligonale in uscita. Uno di:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2163
+msgid "The output vector polygon layer."
+msgstr "Il vettore poligonale in uscita."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2168
 msgid "**Algorithm ID**: ``qgis:zonalhistogram``"
 msgstr "**ID Algoritmo**: ``qgis:zonalhistogram``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2179
+msgid "Zonal statistics"
+msgstr "Statistiche zonali"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2180
+msgid ""
+"Calculates statistics of a raster layer for each feature of an overlapping "
+"polygon vector layer."
+msgstr ""
+"Calcola le statistiche di un layer raster per ogni elemento di un vettore "
+"poligonale sovrapposto."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2183
+msgid ""
+"Prior to QGIS 3.16, the algorithm edited the layer in-place, adding the new "
+"statistics fields to it. Now, it outputs a new layer with these statistics."
+msgstr ""
+"Prima di QGIS 3.16, l'algoritmo modificava il layer in-place, aggiungendovi "
+"i nuovi campi delle statistiche. Ora, produce un nuovo layer con queste "
+"statistiche."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2201
+msgid "Vector polygon layer that contains the zones."
+msgstr "Vettore poligonale che contiene le zone."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2206
+msgid "**Raster band**"
+msgstr "**Banda raster**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2211
+msgid "If the raster is multiband, choose a band for the statistics."
+msgstr "Se il raster è multibanda, scegli una banda per le statistiche."
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2216
 msgid "Default: '_'"
 msgstr "Predefinito: '_'"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2218
+msgid "**Statistics to calculate**"
+msgstr "**Statistiche da calcolare**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2219
 msgid "``STATISTICS``"
@@ -1950,6 +3134,63 @@ msgstr "[enumeration] [list]"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2222
 msgid "Default: [0,1,2]"
 msgstr "Predefinito: [0,1,2]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2223
+msgid "List of statistical operator for the output. Options:"
+msgstr "Elenco degli operatori statistici per il risultato. Opzioni:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2226
+msgid "0 --- Count"
+msgstr "0 --- Conteggio"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2227
+msgid "1 --- Sum"
+msgstr "1 --- Somma"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2230
+msgid "4 --- St. dev."
+msgstr "4 --- Deviazione Standard"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2231
+msgid "5 --- Minimum"
+msgstr "5 --- Minimo"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2232
+msgid "6 --- Maximum"
+msgstr "6 --- Massimo"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2233
+msgid "7 --- Range"
+msgstr "7 --- Intervallo"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2234
+msgid "8 --- Minority"
+msgstr "8 --- Minoranza"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2235
+msgid "9 --- Majority"
+msgstr "9 --- Maggioranza"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2236
+msgid "10 --- Variety"
+msgstr "10 --- Varietà"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2237
+msgid "11 --- Variance"
+msgstr "11 --- Varianza"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2238
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2265
+msgid "**Zonal Statistics** |316|"
+msgstr "**Statistiche zonali** |316|"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2250
+msgid "Append to Layer..."
+msgstr "Aggiungere al Layer..."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2268
+msgid "The zone vector layer with added statistics."
+msgstr "Il layer vettoriale della zona con l'aggiunta di statistiche."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2273
 msgid "**Algorithm ID**: ``qgis:zonalstatisticsfb``"
