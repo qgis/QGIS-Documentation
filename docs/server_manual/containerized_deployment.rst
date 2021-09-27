@@ -93,7 +93,7 @@ it. To do so create a directory :file:`qgis-server` and within its directory:
   
   [[ $DEBUG == "1" ]] && env
   
-  exec /usr/bin/xvfb-run --auto-servernum --server-num=1 /usr/bin/spawn-fcgi -p 5555 -n -d /home/qgis -- /usr/lib/cgi-bin/qgis_mapserv.fcgi
+  exec /usr/bin/xvfb-run --auto-servernum --server-num=1 /usr/bin/spawn-fcgi -p 5555 -n -d /data -- /usr/lib/cgi-bin/qgis_mapserv.fcgi
 
 
 * build the image with:
