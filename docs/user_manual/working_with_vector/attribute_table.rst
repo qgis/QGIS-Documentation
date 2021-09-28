@@ -1233,11 +1233,12 @@ selected) and the field will be updated with the new resource URL.
    widget.
 
 Use the |cancel| :sup:`Cancel` button to abort the storing process.
-|warning| :sup:`Warning` Icon indicates that the resource cannot be fetched from the external
-storage system. In that case, more details might appear in the :ref:`log_message_panel`.
-
-It's possible to configure a viewer using the :guilabel:`Integrated document viewer` so the resource will be automatically fetched from the external
-storage system and displayed directly below the URL.
+It's possible to configure a viewer using the :guilabel:`Integrated document viewer`
+so the resource will be automatically fetched from the external storage system and
+displayed directly below the URL.
+The above |warning| icon indicates that the resource cannot be fetched
+from the external storage system. In that case, more details might appear in the
+:ref:`log_message_panel`.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
