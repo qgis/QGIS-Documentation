@@ -1232,8 +1232,7 @@ selected) and the field will be updated with the new resource URL.
    User can also achieve the same result if he drags and drops a file on the whole attachment
    widget.
 
-Using the |cancel| :sup:`Cancel` button, user can cancel the storing process.
-
+Use the |cancel| :sup:`Cancel` button to abort the storing process.
 |warning| :sup:`Warning` Icon indicates that the resource cannot be fetched from the external
 storage system. In that case, more details might appear in the :ref:`log_message_panel`.
 
