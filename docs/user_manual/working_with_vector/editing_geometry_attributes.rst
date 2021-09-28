@@ -409,28 +409,29 @@ functions:
 
 .. _table_editing:
 
-+------------------------------+-----------------------------------+--------------------------+----------------------------------+
-| Icon                         | Purpose                           | Icon                     | Purpose                          |
-+==============================+===================================+==========================+==================================+
-| |allEdits|                   | Current edits                     | |toggleEditing|          | Toggle editing                   |
-+------------------------------+-----------------------------------+--------------------------+----------------------------------+
-| |saveEdits|                  | Save layer edits                  |                          |                                  |
-+------------------------------+-----------------------------------+--------------------------+----------------------------------+
-| |newTableRow|                | Add new record                    | |capturePoint|           | Add Feature: Capture Point       |
-+------------------------------+-----------------------------------+--------------------------+----------------------------------+
-| |captureLine|                | Add Feature: Capture Line         | |capturePolygon|         | Add Feature: Capture Polygon     |
-+------------------------------+-----------------------------------+--------------------------+----------------------------------+
-| |vertexTool|                 | Vertex Tool (All Layers)          | |vertexToolActiveLayer|  | Vertex Tool (Current Layer)      |
-+------------------------------+-----------------------------------+--------------------------+----------------------------------+
-| |multiEdit|                  | Modify the attributes of all      |                          |                                  |
-|                              | selected features simultaneously  |                          |                                  |
-+------------------------------+-----------------------------------+--------------------------+----------------------------------+
-| |deleteSelectedFeatures|     | Delete Selected                   ||editCut|                 | Cut Features                     |
-+------------------------------+-----------------------------------+--------------------------+----------------------------------+
-| |editCopy|                   | Copy Features                     | |editPaste|              | Paste Features                   |
-+------------------------------+-----------------------------------+--------------------------+----------------------------------+
-| |undo|                       | Undo                              | |redo|                   | Redo                             |
-+------------------------------+-----------------------------------+--------------------------+----------------------------------+
++------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
+| Icon                         | Purpose                                        | Icon                     | Purpose                                   |
++==============================+================================================+==========================+===========================================+
+| |allEdits|                   | Access to save, rollback or cancel changes     | |toggleEditing|          | Turn on or off edit status of selected    |
+|                              | in all or selected layers simultaneously       |                          | layer(s) based on the active layer status |
++------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
+| |saveEdits|                  | Save edits to the active layer                 |                          |                                           |
++------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
+| |newTableRow|                | Add new record                                 | |capturePoint|           | Add Feature: Capture Point                |
++------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
+| |captureLine|                | Add Feature: Capture Line                      | |capturePolygon|         | Add Feature: Capture Polygon              |
++------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
+| |vertexTool|                 | Vertex Tool (All Layers)                       | |vertexToolActiveLayer|  | Vertex Tool (Current Layer)               |
++------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
+| |multiEdit|                  | Modify the attributes of all                   |                          |                                           |
+|                              | selected features simultaneously               |                          |                                           |
++------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
+| |deleteSelectedFeatures|     | Delete Selected features from the active layer | |editCut|                | Cut Features from the active layer        |
++------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
+| |editCopy|                   | Copy selected Features from the active layer   | |editPaste|              | Paste Features into the active layer      |
++------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
+| |undo|                       | Undo changes in the active layer               | |redo|                   | Redo changes in active layer              |
++------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
 
 Table Editing: Vector layer basic editing toolbar
 
@@ -441,7 +442,7 @@ focus on the tool.
 All editing sessions start by choosing the |toggleEditing|
 :sup:`Toggle editing` option found in the context menu of a given layer,
 from the attribute table dialog, the digitizing toolbar or the
-:menuselection:`Edit` menu.
+:menuselection:`Layer` menu.
 
 Once the layer is in edit mode, additional tool buttons on the editing
 toolbar will become available and markers will appear at the vertices
