@@ -129,7 +129,7 @@ Continuing on the same layer, we will test the |simplifyFeatures|
 
 The advantage of this tool is that it provides you with a simple and
 intuitive interface for generalization.
-But notice what the tool ruins topology.
+But notice that the tool ruins topology.
 The simplified polygon no longer shares boundaries with its adjacent
 polygons, as it should.
 So this tool is better suited for stand-alone features.
