@@ -344,6 +344,71 @@ to create and edit a metadata report on your layer.
 See :ref:`metadatamenu` for more information.
 
 
+.. _mesh_calculator:
+
+Mesh Calculator
+===============
+
+The :guilabel:`Mesh Calculator` tool from the top :menuselection:`Mesh` menu
+allows you to perform arithmetic and logical calculations on existing dataset
+groups to generate a new mesh layer (see :numref:`figure_mesh_calculator`).
+
+.. _figure_mesh_calculator:
+
+.. figure:: img/mesh_calculator.png
+   :align: center
+
+   Mesh Calculator
+
+The :guilabel:`Datasets` list contains all dataset groups in loaded mesh layers
+that can be used. To use a dataset in an expression, double click its name in
+the list and it will be added to the :guilabel:`Mesh calculator expression` field.
+You can then use the operators to construct calculation expressions,
+or you can just type them into the box.
+
+The :guilabel:`Result Layer` helps you configure properties of the output layer:
+
+* The :guilabel:`Output Dataset` can be:
+
+  * :guilabel:`On file`, meaning that the output is stored on disk as a new
+    plain file. An :guilabel:`Output File` path and :guilabel:`Output Format`
+    are required. Currently supported formats are ``DAT``, ``Flo2D``,
+    ``Selafin File`` and ``Binary DAT``.
+  * or :guilabel:`Virtual`: a new dataset group is added to the mesh layer.
+    Values of the dataset group are not stored in memory but each dataset
+    is calculated when needed with the formula entered in the mesh calculator.
+    Those virtual dataset groups are saved with the project, and if needed,
+    they can be removed or made persistent in files from the layer
+    :guilabel:`Source` properties tab.
+
+* :guilabel:`Group Name`: Name of the generated dataset group
+* The :guilabel:`Spatial extent` to consider for calculation can be:
+
+  * a :guilabel:`Custom extent`, manually filled with the :guilabel:`X min`,
+    :guilabel:`X max`, :guilabel:`Y min` and :guilabel:`Y max` coordinate,
+    or extracted from an existing dataset group (select it in the list and
+    press :guilabel:`Use selected layer extent` to fill the abovementioned
+    coordinate fields)
+  * defined by a polygon layer (:guilabel:`Mask layer`) of the project:
+    the polygon features geometry are used to clip the mesh layer datasets
+
+* The :guilabel:`Temporal extent` to take into account for datasets can be set
+  with the :guilabel:`Start time` and :guilabel:`End time` options, selected
+  from the existing dataset groups timesteps. They can also be filled using the
+  :guilabel:`Use all selected dataset times` button to take the whole range.
+
+The :guilabel:`Operators` section contains all available operators. To add an operator
+to the raster calculator expression box, click the appropriate button. Mathematical
+calculations (``+``, ``-``, ``*``, ... ) and statistical functions (``min``,
+``max``, ``sum (aggr)``, ``average (aggr)``, ... ) are available.
+Conditional expressions (``=``, ``!=``, ``<``, ``>=``, ``IF``, ``AND``, ``NOT``, ... )
+return either 0 for false and 1 for true, and therefore can be used with other operators
+and functions. The ``NODATA`` value can also be used in the expressions.
+
+The :guilabel:`Mesh Calculator Expression` widget shows and lets you edit
+the expression to execute.
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
