@@ -52,6 +52,12 @@ is irrelevant and values are identified by their keys.
 
 .. include:: expression_help/Arrays.rst
    :start-after: :orphan:
+   :end-before: .. end_array_get_section
+
+Further reading: :ref:`expression_function_Operators_index`
+
+.. include:: expression_help/Arrays.rst
+   :start-after: end_array_get_section
 
 
 Color Functions
@@ -672,6 +678,12 @@ and values are identified by their keys.
 
 .. include:: expression_help/Maps.rst
    :start-after: :orphan:
+   :end-before: .. end_map_get_section
+
+Further reading: :ref:`expression_function_Operators_index`
+
+.. include:: expression_help/Maps.rst
+   :start-after: .. end_map_get_section
 
 
 Mathematical Functions
@@ -720,6 +732,13 @@ Further reading: :ref:`expression_function_String_concat`,
 
 .. include:: expression_help/Operators.rst
    :start-after: end_+_section
+   :end-before: end_[]_section
+
+Further reading: :ref:`expression_function_Arrays_array_get`,
+:ref:`expression_function_Maps_map_get`
+
+.. include:: expression_help/Operators.rst
+   :start-after: end_[]_section
    :end-before: end_||_section
 
 Further reading: :ref:`expression_function_String_concat`,
