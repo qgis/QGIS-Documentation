@@ -489,7 +489,7 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
-.. _qgis:createrandomgeometricrasterlayer:
+.. _qgiscreaterandomgeometricrasterlayer:
 
 Create random raster layer (geometric distribution)
 ---------------------------------------------------
@@ -609,7 +609,7 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
-.. _qgis:createrandomnegativebinomialrasterlayer:
+.. _qgiscreaterandomnegativebinomialrasterlayer:
 
 Create random raster layer (negative binomial distribution)
 -----------------------------------------------------------
@@ -735,7 +735,7 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
-.. _qgis:createrandomnormalrasterlayer:
+.. _qgiscreaterandomnormalrasterlayer:
 
 Create random raster layer (normal distribution)
 ------------------------------------------------
@@ -856,7 +856,7 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
-.. _qgis:createrandompoissonrasterlayer:
+.. _qgiscreaterandompoissonrasterlayer:
 
 Create random raster layer (poisson distribution)
 -------------------------------------------------
@@ -976,7 +976,7 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
-.. _qgis:createrandomuniformrasterlayer:
+.. _qgiscreaterandomuniformrasterlayer:
 
 Create random raster layer (uniform distribution)
 -------------------------------------------------
