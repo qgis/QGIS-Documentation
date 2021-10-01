@@ -351,7 +351,7 @@ Mesh Calculator
 
 The :guilabel:`Mesh Calculator` tool from the top :menuselection:`Mesh` menu
 allows you to perform arithmetic and logical calculations on existing dataset
-groups to generate a new mesh layer (see :numref:`figure_mesh_calculator`).
+groups to generate a new dataset group (see :numref:`figure_mesh_calculator`).
 
 .. _figure_mesh_calculator:
 
