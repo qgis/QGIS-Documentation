@@ -537,16 +537,6 @@ geometry then enter its attributes. To digitize the geometry:
 Vertex tool
 -----------
 
-.. note:: **QGIS 3 major changes**
-
-    In QGIS 3, the node tool has been fully redesigned and renamed to *vertex tool*.
-    It was previously
-    working with "click and drag" ergonomy, and now uses a "click - click"
-    workflow. This allows major improvements like taking profit of the advanced
-    digitizing panel with the vertex tool while digitizing or editing objects of
-    multiple layers at the same time.
-
-
 For any editable vector layer, the
 |vertexToolActiveLayer| :sup:`Vertex tool (Current Layer)` provides manipulation
 capabilities of
@@ -565,7 +555,7 @@ not be able to tell which vertex is being edited and will display a warning.
 
 .. tip:: **Vertex Markers**
 
-   The current version of QGIS supports three kinds of vertex markers:
+   QGIS supports different kinds of vertex markers:
    'Semi-transparent circle', 'Cross' and 'None'. To change the marker style,
    choose |options| :menuselection:`Options` from the
    :menuselection:`Settings` menu, click on the :guilabel:`Digitizing`
@@ -672,20 +662,6 @@ in the map canvas, and vice versa.
 Simply change a coordinate in the table and your vertex position is
 updated.
 You can also select multiple rows and delete them altogether.
-
-.. note:: **Changed behavior in QGIS 3.4**
-
-   Right click on a feature will immediately show the vertex editor and
-   lock this feature, thus disabling the editing of any other features.
-   While being locked, a feature is exclusive for editing: Selecting
-   and moving of vertices and segments by clicking or dragging is only
-   possible for this feature.
-   New vertices can only be added to the locked feature.
-   Also, the vertex editor panel now opens itself automatically upon
-   activating the vertex tool, and its position/docked state remembered
-   across uses.
-
-
 
 .. _figure_edit_vertex:
 
