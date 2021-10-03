@@ -62,11 +62,16 @@ At the top of the Layers panel, a toolbar allows you to:
 * |addGroup| :sup:`Add new group`
 * |showMapTheme| :sup:`Manage Map Themes`: control visibility of layers and
   arrange them in different map themes.
-* |filterMap| :sup:`Filter Legend by Map Content`: only the layers that are set
-  visible and whose features intersect the current map canvas have their style
-  rendered in the layers panel. Otherwise, a generic NULL symbol is applied to
-  the layer. Based on the layer symbology, this is a convenient way to identify
-  which kind of features from which layers cover your area of interest.
+* |filterMap| filter layers in the legend tree:
+
+  * :guilabel:`Filter Legend by Map Content`: only the layers that are set
+    visible and whose features intersect the current map canvas have their style
+    rendered in the layers panel. Otherwise, a generic NULL symbol is applied to
+    the layer. Based on the layer symbology, this is a convenient way to identify
+    which kind of features from which layers cover your area of interest.
+  * :guilabel:`Show Private Layers`: a convenient shortcut to display and
+    interact with :ref:`private layers <project_layer_capabilities>`
+    in the :guilabel:`Layers` panel without modifying the project settings.
 * |expressionFilter| :sup:`Filter Legend by Expression`: apply an
   expression to remove styles from the selected layer tree that have no feature
   satisfying the condition. This can be used to highlight features
