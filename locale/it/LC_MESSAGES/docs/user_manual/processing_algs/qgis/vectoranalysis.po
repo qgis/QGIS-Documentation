@@ -48,6 +48,24 @@ msgstr "Sono supportati i campi numerici, data, ora e stringa."
 msgid "The statistics returned will depend on the field type."
 msgstr "Le statistiche che vengono restituite dipendono dal tipo di campo."
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:22
+msgid ""
+"Statistics are generated as an HTML file and are available in the "
+":menuselection:`Processing --> Results viewer`."
+msgstr ""
+"Le statistiche sono generate come file HTML e sono disponibili in : "
+"menuselection:`Processing --> Visualizzatore Risultati`."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:25
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:437
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:920
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1007
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1090
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1401
+msgid "**Default menu**: :menuselection:`Vector --> Analysis Tools`"
+msgstr ""
+"**Menu predefinito**: :menuselection:`Vettorer --> Strumenti di Analisi...`"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:28
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:177
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:267
@@ -415,6 +433,10 @@ msgstr "**Lunghezza massima**"
 msgid "``MAX_LENGTH``"
 msgstr "``MAX_LENGTH``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:99
+msgid "**Mean length**"
+msgstr "**Lunghezza Media**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:100
 msgid "``MEAN_LENGTH``"
 msgstr "``MEAN_LENGTH``"
@@ -499,6 +521,10 @@ msgstr "**Terzo quartile**"
 msgid "``THIRDQUARTILE``"
 msgstr "``THIRDQUARTILE``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:143
+msgid "**Interquartile Range (IQR)**"
+msgstr "**Intervallo Interquartile Range (IQR)**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:144
 msgid "``IQR``"
 msgstr "``IQR``"
@@ -523,6 +549,34 @@ msgstr "Codice Python"
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:151
 msgid "**Algorithm ID**: ``qgis:basicstatisticsforfields``"
 msgstr "**ID Algoritmo**: ``qgis:basicstatisticsforfields``"
+
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+msgid ""
+"The *algorithm id* is displayed when you hover over the algorithm in the "
+"Processing Toolbox. The *parameter dictionary* provides the parameter NAMEs "
+"and values. See :ref:`processing_console` for details on how to run "
+"processing algorithms from the Python console."
+msgstr ""
+"L' *id algoritmo* viene visualizzato quando si passa il mouse sull'algoritmo"
+" nella finestra degli strumenti di Processing. Il *dizionario dei parametri*"
+" fornisce i Nomi e i valori dei parametri. Vedi :ref:`processing_console` "
+"per dettagli su come eseguire algoritmi di Processing dalla console Python."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:161
+msgid "Climb along line"
+msgstr "Salita lungo la linea"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:163
+msgid ""
+"Calculates the total climb and descent along line geometries. The input "
+"layer must have Z values present. If Z values are not available, the  "
+":ref:`qgissetzfromraster` algorithm may be used to add Z values from a DEM "
+"layer."
+msgstr ""
+"Calcola la salita e la discesa totale lungo le geometrie lineari. Il layer "
+"in ingresso deve avere valori Z presenti. Se i valori Z non sono "
+"disponibili, l'algoritmo :ref:`qgissetzfromraster` può essere usato per "
+"aggiungere valori Z da un layer DEM."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:168
 msgid ""
@@ -557,7 +611,7 @@ msgstr "**Vettore lineare**"
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1185
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1253
 msgid "``INPUT``"
-msgstr "``IN INGRESSO``"
+msgstr "``INPUT``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:189
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:193
@@ -569,6 +623,15 @@ msgstr "``IN INGRESSO``"
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1417
 msgid "[vector: line]"
 msgstr "[vector: line]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:190
+msgid "Line layer to calculate the climb for. Must have Z values"
+msgstr "Vettore lineare su cui calcolare la salita. Deve avere valori Z"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:191
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:207
+msgid "**Climb layer**"
+msgstr "**Salita Layer**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:192
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:208
@@ -597,11 +660,19 @@ msgstr "[vector: line]"
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1436
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1452
 msgid "``OUTPUT``"
-msgstr "``IN USCITA``"
+msgstr "``OUTPUT``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:194
 msgid "The output (line) layer"
 msgstr "Il layer in uscita (linea)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:210
+msgid ""
+"Line layer containing new attributes with the results from climb "
+"calculations."
+msgstr ""
+"Vettore lineare contenente nuovi attributi con i risultati dei conteggi "
+"delle salite."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:212
 msgid "**Total climb**"
@@ -610,6 +681,15 @@ msgstr "**Totale salita**"
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:213
 msgid "``TOTALCLIMB``"
 msgstr "``TOTALCLIMB``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:215
+msgid "The sum of the climb for all the line geometries in the input layer"
+msgstr ""
+"La somma delle salite di tutte le geometrie lineari nel layer in ingresso"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:217
+msgid "**Total descent**"
+msgstr "**Totale discesa**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:218
 msgid "``TOTALDESCENT``"
@@ -631,11 +711,19 @@ msgstr "``MINELEVATION``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:225
 msgid "The minimum elevation for the geometries in the layer"
-msgstr "La quota minima per le geometrie nel layer"
+msgstr "L'elevazione minima delle geometrie nel layer"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:227
 msgid "**Maximum elevation**"
 msgstr "**Elevazione massima**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:228
+msgid "``MAXELEVATION``"
+msgstr "``MAXELEVATION``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:230
+msgid "The maximum elevation for the geometries in the layer"
+msgstr "L'elevazione massima delle geometrie nel layer"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:236
 msgid "**Algorithm ID**: ``qgis:climbalongline``"
@@ -645,19 +733,44 @@ msgstr "**ID Algoritmo**: ``qgis:climbalongline``"
 msgid "Count points in polygon"
 msgstr "Conta i punti nel poligono"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:247
+msgid ""
+"Takes a point and a polygon layer and counts the number of points from the "
+"point layer in each of the polygons of the polygon layer."
+msgstr ""
+"Utilizza un layer di punti e un vettore poligonale e conta il numero di "
+"punti del layer di punti in ciascuno dei poligoni del vettore poligonale."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:250
 msgid ""
 "A new polygon layer is generated, with the exact same content as the input "
 "polygon layer, but containing an additional field with the points count "
 "corresponding to each polygon."
 msgstr ""
-"Viene generato un nuovo layer di poligoni, con lo stesso identico contenuto "
-"del layer di poligoni in ingresso, ma contenente un campo addizionale con il"
-" conteggio dei punti corrispondenti ad ogni poligono."
+"Viene generato un nuovo vettore poligonale, con lo stesso identico contenuto"
+" del vettore poligonale in ingresso, ma contenente un campo addizionale con "
+"il conteggio dei punti corrispondenti ad ogni poligono."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:257
 msgid "The labels in the polygons show the point count"
 msgstr "Le etichette nei poligoni mostrano il conteggio dei punti"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:259
+msgid ""
+"An optional weight field can be used to assign weights to each point. "
+"Alternatively, a unique class field can be specified. If both options are "
+"used, the weight field will take precedence and the unique class field will "
+"be ignored."
+msgstr ""
+"Un campo peso opzionale può essere usato per assegnare dei pesi ad ogni "
+"punto. In alternativa, può essere specificato un campo classe univoca. Se "
+"entrambe le opzioni sono usate, il campo peso avrà la precedenza e il campo "
+"classe univoca sarà ignorato."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:264
+msgid "``Default menu``: :menuselection:`Vector --> Analysis Tools`"
+msgstr ""
+"``Menu predefinito``: :menuselection:`Vettore --> Strumenti di Analisi`"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:278
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1419
@@ -677,6 +790,14 @@ msgstr "``POLYGONS``"
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1453
 msgid "[vector: polygon]"
 msgstr "[vector: polygon]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:281
+msgid ""
+"Polygon layer whose features are associated with the count of points they "
+"contain"
+msgstr ""
+"Vettore poligonale i cui elementi sono associati al numero di punti che "
+"contengono"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:283
 msgid "**Points**"
@@ -700,7 +821,11 @@ msgstr "``POINTS``"
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1053
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1107
 msgid "[vector: point]"
-msgstr "[vettore: punto]"
+msgstr "[vector: point]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:286
+msgid "Point layer with features to count"
+msgstr "Layer punto con elementi da contare"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:287
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1024
@@ -722,13 +847,45 @@ msgstr "Opzionale"
 msgid "``WEIGHT``"
 msgstr "``WEIGHT``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:292
+msgid ""
+"A field from the point layer. The count generated will be the sum of the "
+"weight field of the points contained by the polygon. If the weight field is "
+"not numeric, the count will be ``0``."
+msgstr ""
+"Un campo del layer puntuale. Il conteggio generato sarà la somma del campo "
+"peso dei punti contenuti nel poligono. Se il campo peso non è numerico, il "
+"conteggio sarà ``0``."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:296
+msgid "**Class field**"
+msgstr "**Campo Classe**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:299
 msgid "``CLASSFIELD``"
 msgstr "``CLASSFIELD``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:301
+msgid ""
+"Points are classified based on the selected attribute and if several points "
+"with the same attribute value are within the polygon, only one of them is "
+"counted. The final count of the points in a polygon is, therefore, the count"
+" of different classes that are found in it."
+msgstr ""
+"I punti sono classificati in base all'attributo selezionato e se più punti "
+"con lo stesso valore di attributo sono all'interno del poligono, solo uno di"
+" loro viene contato. Il conteggio finale dei punti in un poligono è, quindi,"
+" il conteggio delle diverse classi che si trovano in esso."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:306
 msgid "**Count field name**"
 msgstr "**Nome campo per il conteggio**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:307
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:573
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:658
+msgid "``FIELD``"
+msgstr "``FIELD``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:308
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:378
@@ -742,6 +899,43 @@ msgstr "[stringa]"
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:310
 msgid "Default: 'NUMPOINTS'"
 msgstr "Predefinito: 'NUMPOINTS'"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:311
+msgid "The name of the field to store the count of points"
+msgstr "Il nome del campo per memorizzare il conteggio dei punti"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:315
+msgid "Specification of the output layer"
+msgstr "Indicazione del layer in uscita"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:331
+msgid ""
+"Resulting layer with the attribute table containing the new column with the "
+"points count"
+msgstr ""
+"Layer risultante con la tabella degli attributi contenente la nuova colonna "
+"con il conteggio dei punti"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:338
+msgid "DBSCAN clustering"
+msgstr "Clustering DBSCAN"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:339
+msgid ""
+"Clusters point features based on a 2D implementation of Density-based "
+"spatial clustering of applications with noise (DBSCAN) algorithm."
+msgstr ""
+"Raggruppa gli elementi puntuali basati su un'implementazione 2D "
+"dell'algoritmo Density-based spatial clustering of applications with noise "
+"(DBSCAN)."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:342
+msgid ""
+"The algorithm requires two parameters, a minimum cluster size, and the "
+"maximum distance allowed between clustered points."
+msgstr ""
+"L'algoritmo richiede due parametri, una dimensione minima dei cluster e la "
+"distanza massima consentita tra i punti raggruppati."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:345
 msgid ":ref:`qgiskmeansclustering`"
@@ -762,6 +956,10 @@ msgstr "**Layer di input**"
 msgid "Layer to analyze"
 msgstr "Layer da analizzare"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:363
+msgid "**Minimum cluster size**"
+msgstr "**Dimensione minima del cluster**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:364
 msgid "``MIN_SIZE``"
 msgstr "``MIN_SIZE``"
@@ -770,6 +968,14 @@ msgstr "``MIN_SIZE``"
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:872
 msgid "Default: 5"
 msgstr "Predefinito: 5"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:368
+msgid "Minimum number of features to generate a cluster"
+msgstr "Numero minimo di elementi per formare un cluster"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:369
+msgid "**Maximum distance between clustered points**"
+msgstr "**Distanza massima tra i punti raggruppati**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:370
 msgid "``EPS``"
@@ -796,6 +1002,15 @@ msgstr "**Nome campo per il cluster**"
 msgid "Default: 'CLUSTER_ID'"
 msgstr "Predefinito: 'CLUSTER_ID'"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:381
+msgid "Name of the field where the associated cluster number shall be stored"
+msgstr ""
+"Nome del campo in cui deve essere memorizzato il numero di cluster associato"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:383
+msgid "**Treat border points as noise (DBSCAN\\*)**"
+msgstr "**Tratta i punti di confine come rumore (DBSCAN\\*)**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:386
 msgid "``DBSCAN*``"
 msgstr "``DBSCAN*``"
@@ -812,9 +1027,63 @@ msgstr "[boolean]"
 msgid "Default: False"
 msgstr "Predefinito: False"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:390
+msgid ""
+"If checked, points on the border of a cluster are themselves treated as "
+"unclustered points, and only points in the interior of a cluster are tagged "
+"as clustered."
+msgstr ""
+"Se spuntato, i punti sul confine di un cluster sono trattati come punti non "
+"raggruppati, e solo i punti all'interno di un cluster sono etichettati come "
+"raggruppati."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:394
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:410
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:880
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:897
+msgid "**Clusters**"
+msgstr "**Cluster**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:397
+msgid "Vector layer for the result of the clustering"
+msgstr "Layer vettoriale per il risultato del clustering"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:413
+msgid ""
+"Vector layer containing the original features with a field setting the "
+"cluster they belong to"
+msgstr ""
+"Layer vettoriale contenente gli elementi originali con un campo che imposta "
+"il cluster a cui appartengono"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:415
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:868
+msgid "**Number of clusters**"
+msgstr "**Numero di cluster**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:416
+msgid "``NUM_CLUSTERS``"
+msgstr "``NUM_CLUSTERS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:418
+msgid "The number of clusters discovered"
+msgstr "Il numero di cluster trovati"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:423
 msgid "**Algorithm ID**: ``qgis:dbscanclustering``"
 msgstr "**ID Algoritmo**: ``qgis:dbscanclustering``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:433
+msgid "Distance matrix"
+msgstr "Matrice di distanze"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:434
+msgid ""
+"Calculates for point features distances to their nearest features in the "
+"same layer or in another layer."
+msgstr ""
+"Calcola per gli elementi punto le distanze dai loro elementi più vicini "
+"nello stesso layer o in un altro layer."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:439
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1092
@@ -825,6 +1094,12 @@ msgstr ":ref:`qgisjoinbynearest`"
 msgid "**Input point layer**"
 msgstr "**Layer di pinti in ingresso**"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:456
+msgid ""
+"Point layer for which the distance matrix is calculated (**from** points)"
+msgstr ""
+"Layer punto per cui viene calcolata la matrice di distanze (**dai** punti)"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:458
 msgid "**Input unique ID field**"
 msgstr "**Campo ID univoco in ingresso**"
@@ -833,9 +1108,46 @@ msgstr "**Campo ID univoco in ingresso**"
 msgid "``INPUT_FIELD``"
 msgstr "``INPUT_FIELD``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:461
+msgid ""
+"Field to use to uniquely identify features of the input layer. Used in the "
+"output attribute table."
+msgstr ""
+"Campo da usare per identificare univocamente gli elementi del layer in "
+"ingresso. Usato nella tabella degli attributi del risultato."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:463
+msgid "**Target point layer**"
+msgstr "**Layer punto obiettivo**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:464
+msgid "``TARGET``"
+msgstr "``TARGET``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:466
+msgid "Point layer containing the nearest point(s) to search (**to** points)"
+msgstr ""
+"Layer punto contenente il punto(i) più vicino da cercare (**ai** punti)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:468
+msgid "**Target unique ID field**"
+msgstr "**Campo ID univoco dell'obiettivo**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:469
 msgid "``TARGET_FIELD``"
 msgstr "``TARGET_FIELD``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:471
+msgid ""
+"Field to use to uniquely identify features of the target layer. Used in the "
+"output attribute table."
+msgstr ""
+"Campo da usare per identificare univocamente gli elementi del layer "
+"obiettivo. Usato nella tabella degli attributi in uscita."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:474
+msgid "**Output matrix type**"
+msgstr "**Tipo di matrice in uscita**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:475
 msgid "``MATRIX_TYPE``"
@@ -854,13 +1166,76 @@ msgstr "[enumeration]"
 msgid "Default: 0"
 msgstr "Predefinito: 0"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:479
+msgid "Different types of calculation are available:"
+msgstr "Sono disponibili diversi tipi di calcolo:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:481
+msgid ""
+"0 --- Linear (N * *k* x 3) distance matrix: for each input point, reports "
+"the distance to each of the *k* nearest target points. The output matrix "
+"consists of up to *k* rows per input point, and each row has three columns: "
+"*InputID*, *TargetID* and *Distance*."
+msgstr ""
+"0 --- Matrice di distanze lineare (N * *k* x 3): per ogni punto in ingresso,"
+" riporta la distanza da ciascuno dei *k* punti obiettivo più vicini. La "
+"matrice in uscita consiste di un massimo di *k* righe per punto in ingresso,"
+" e ogni riga ha tre colonne: *InputID*, *TargetID* e *Distance*."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:487
+msgid "1 --- Standard (N x T) distance matrix"
+msgstr "1 --- Matrice di distanze standard (N x T)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:488
+msgid ""
+"2 --- Summary distance matrix (mean, std. dev., min, max): for each input "
+"point, reports statistics on the distances to its target points."
+msgstr ""
+"2 --- Matrice di distanze riassuntiva (media, dev. std., min, max): per ogni"
+" punto in ingresso, riporta le statistiche sulle distanze dai suoi punti di "
+"destinazione."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:491
+msgid "**Use only the nearest (k) target points**"
+msgstr "**Usa solo i punti di destinazione più vicini (k)**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:492
 msgid "``NEAREST_POINTS``"
 msgstr "``NEAREST_POINTS``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:496
+msgid ""
+"You can choose to calculate the distance to all the points in the target "
+"layer (*0*) or limit to a number (*k*) of closest features."
+msgstr ""
+"Puoi scegliere di calcolare la distanza di tutti i punti nel layer di "
+"destinazione (*0*) o limitarti a un numero (*k*) di elementi più vicini."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:500
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:516
+msgid "**Distance matrix**"
+msgstr "**Matrice di distanze**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:519
+msgid ""
+"Point (or MultiPoint for the \"Linear (N * *k* x 3)\" case) vector layer "
+"containing the distance calculation for each input feature. Its features and"
+" attribute table depend on the selected output matrix type."
+msgstr ""
+"Layer vettoriale punto (o multipunto per il caso \"Linear (N * *k* x 3)\") "
+"contenente il calcolo della distanza per ogni elemento in ingresso. I suoi "
+"elementi e la tabella degli attributi dipendono dal tipo di matrice di "
+"uscita selezionata."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:528
 msgid "**Algorithm ID**: ``qgis:distancematrix``"
 msgstr "**ID Algoritmo**: ``qgis:distancematrix``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:538
+msgid "Distance to nearest hub (line to hub)"
+msgstr ""
+"Distanza dall'punto centrale più vicino (linea di collegamento con il punto "
+"centrale)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:539
 msgid ""
@@ -871,6 +1246,25 @@ msgstr ""
 "Crea linee che uniscono ogni elemento di un vettore in ingresso all'elemento"
 " più vicino in un layer di destinazione. Le distanze sono calcolate in base "
 "al :ref:`center <qgispointonsurface>` di ogni elemento."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:548
+msgid "Display the nearest hub for the red input features"
+msgstr ""
+"Visualizza l'hub più vicino per gli elementi in ingresso di colore rosso"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:550
+msgid ":ref:`qgisdistancetonearesthubpoints`, :ref:`qgisjoinbynearest`"
+msgstr ":ref:`qgisdistancetonearesthubpoints`, :ref:`qgisjoinbynearest`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:564
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:649
+msgid "**Source points layer**"
+msgstr "**Layer punto di origine**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:567
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:652
+msgid "Vector layer for which the nearest feature is searched"
+msgstr "Layer vettoriale per il quale si cerca l'elemento più vicino"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:568
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:653
@@ -888,10 +1282,34 @@ msgstr "``HUBS``"
 msgid "Vector layer containing the features to search for"
 msgstr "Vettore che contiene gli elementi da cercare"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:572
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:657
+msgid "**Hub layer name attribute**"
+msgstr "**Nome dell'attributo del layer dell'hub**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:575
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:660
+msgid ""
+"Field to use to uniquely identify features of the destination layer. Used in"
+" the output attribute table"
+msgstr ""
+"Campo da usare per identificare univocamente gli elementi del layer di "
+"destinazione. Usato nella tabella degli attributi in uscita"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:578
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:663
+msgid "**Measurement unit**"
+msgstr "**Unità di misura**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:579
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:664
 msgid "``UNIT``"
 msgstr "``UNIT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:583
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:668
+msgid "Units in which to report the distance to the closest feature:"
+msgstr "Unità in cui riportare la distanza dall'elemento più vicino:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:586
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:671
@@ -918,21 +1336,199 @@ msgstr "3 --- Chilometri"
 msgid "4 --- Layer units"
 msgstr "4 --- Unità  layer"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:591
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:607
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:676
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:692
+msgid "**Hub distance**"
+msgstr "**Distanza dall'Hub**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:594
+msgid "Line vector layer for the distance matrix output"
+msgstr "Layer vettoriale linea in uscita per la matrice di distanze"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:610
+msgid ""
+"Line vector layer with the attributes of the input features, the identifier "
+"of their closest feature and the calculated distance."
+msgstr ""
+"Layer vettoriale linea con gli attributi degli elementi in ingresso, "
+"l'identificatore dell'elemento più vicino e la distanza calcolata."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:617
 msgid "**Algorithm ID**: ``qgis:distancetonearesthublinetohub``"
 msgstr "**ID Algoritmo**: ``qgis:distancetonearesthublinetohub``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:627
+msgid "Distance to nearest hub (points)"
+msgstr "Distanza dall'hub più vicino (punti)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:628
+msgid ""
+"Creates a point layer representing the :ref:`center <qgispointonsurface>` of"
+" the input features with the addition of two fields containing the "
+"identifier of the nearest feature (based on its center point) and the "
+"distance between the points."
+msgstr ""
+"Crea un layer punto che rappresenta il :ref:`center <qgispointonsurface>` "
+"degli elementi in ingresso con l'aggiunta di due campi contenenti "
+"l'identificatore dell'elemento più vicino (basato sul suo punto centrale) e "
+"la distanza tra i punti."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:634
+msgid ":ref:`qgisdistancetonearesthublinetohub`, :ref:`qgisjoinbynearest`"
+msgstr ":ref:`qgisdistancetonearesthublinetohub`, :ref:`qgisjoinbynearest`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:679
+msgid "Point vector layer for the distance matrix output."
+msgstr "Layer vettoriale punto in uscita per la matrice di distanze."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:695
+msgid ""
+"Point vector layer with the attributes of the input features, the identifier"
+" of their closest feature and the calculated distance."
+msgstr ""
+"Layer vettoriale punto con gli attributi degli elementi in ingresso, "
+"l'identificatore dell'elemento più vicino e la distanza calcolata."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:702
 msgid "**Algorithm ID**: ``qgis:distancetonearesthubpoints``"
 msgstr "**ID Algoritmo**: ``qgis:distancetonearesthubpoints``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:712
+msgid "Join by lines (hub lines)"
+msgstr "Collegare tramite linee (linee centrali)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:713
+msgid ""
+"Creates hub and spoke diagrams by connecting lines from points on the Spoke "
+"layer to matching points in the Hub layer."
+msgstr ""
+"Crea diagrammi punti centrali e punti remoti collegando linee da punti sul "
+"layer remoto a punti che si trovano nel layer centrale."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:716
+msgid ""
+"Determination of which hub goes with each point is based on a match between "
+"the Hub ID field on the hub points and the Spoke ID field on the spoke "
+"points."
+msgstr ""
+"La scelta di quale punto centrale sia associato a ciascun punto si basa su "
+"una corrispondenza tra il campo ID Hub dei punti centrali e il campo ID "
+"Spoke ID dei punti remoti."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:720
+msgid ""
+"If input layers are not point layers, a point on the surface of the "
+"geometries will be taken as the connecting location."
+msgstr ""
+"Se i layer in ingresso non sono layer puntuali, un punto sulla superficie "
+"delle geometrie sarà preso come posizione di connessione."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:723
+msgid ""
+"Optionally, geodesic lines can be created, which represent the shortest path"
+" on the surface of an ellipsoid. When geodesic mode is used, it is possible "
+"to split the created lines at the antimeridian (±180 degrees longitude), "
+"which can improve rendering of the lines. Additionally, the distance between"
+" vertices can be specified. A smaller distance results in a denser, more "
+"accurate line."
+msgstr ""
+"Opzionalmente, possono essere create linee geodetiche, che rappresentano il "
+"percorso più breve sulla superficie di un ellissoide. Quando si usa la "
+"modalità geodetica, è possibile dividere le linee create all'antimeridiano "
+"(±180 gradi di longitudine), il che può migliorare la visualizzazione delle "
+"linee. Inoltre, la distanza tra i vertici può essere specificata. Una "
+"distanza minore risulta in una linea più densa e accurata."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:735
+msgid "Join points based on a common field / attribute"
+msgstr "Unire punti sulla base di un campo/attributo comune"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:749
+msgid "**Hub layer**"
+msgstr "**Hub layer**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:752
+msgid "Input layer"
+msgstr "Layer in ingresso"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:753
+msgid "**Hub ID field**"
+msgstr "**ID campo Hub**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:754
 msgid "``HUB_FIELD``"
 msgstr "``HUB_FIELD``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:756
+msgid "Field of the hub layer with ID to join"
+msgstr "Campo del layer hub con ID da unire"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:757
+msgid "**Hub layer fields to copy (leave empty to copy all fields)**"
+msgstr ""
+"**Campi del layer Hub da copiare (lasciare vuoto per copiare tutti i "
+"campi)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:760
+msgid "``HUB_FIELDS``"
+msgstr "``HUB_FIELDS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:761
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:776
+msgid "[tablefield: any] [list]"
+msgstr "[tablefield: any] [list]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:762
+msgid ""
+"The field(s) of the hub layer to be copied. If no field(s) are chosen all "
+"fields are taken."
+msgstr ""
+"Il campo(i) del layer hub da copiare. Se non viene scelto alcun campo(i), "
+"vengono presi tutti i campi."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:764
+msgid "**Spoke layer**"
+msgstr "**Spoke layer**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:765
+msgid "``SPOKES``"
+msgstr "``SPOKES``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:767
+msgid "Additional spoke point layer"
+msgstr "Layer aggiuntivo punto spoke"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:768
+msgid "**Spoke ID field**"
+msgstr "**ID campo spoke**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:769
+msgid "``SPOKE_FIELD``"
+msgstr "``SPOKE_FIELD``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:771
+msgid "Field of the spoke layer with ID to join"
+msgstr "Campo del layer spoke con ID da unire"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:772
+msgid "**Spoke layer fields to copy (leave empty to copy all fields)**"
+msgstr ""
+"**Campi del layer spoke da copiare (lasciare vuoto per copiare tutti i "
+"campi)**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:775
 msgid "``SPOKE_FIELDS``"
 msgstr "``SPOKE_FIELDS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:777
+msgid ""
+"Field(s) of the spoke layer to be copied. If no fields are chosen all fields"
+" are taken."
+msgstr ""
+"Campo(i) del layer spoke da copiare. Se non viene scelto nessun campo, "
+"vengono presi tutti i campi."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:779
 msgid "**Create geodesic lines**"
@@ -949,6 +1545,14 @@ msgstr ""
 "Creare linee geodetiche (il percorso più breve sulla superficie di un "
 "ellissoide)"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:786
+msgid "**Distance between vertices (geodesic lines only)**"
+msgstr "**Distanza tra i vertici (solo linee geodetiche)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:787
+msgid "``GEODESIC_DISTANCE``"
+msgstr "``GEODESIC_DISTANCE``"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:790
 msgid "Default: 1000.0 (kilometers)"
 msgstr "Predefinito: 1000.0 (chilometri)"
@@ -961,17 +1565,115 @@ msgstr ""
 "Distanza tra vertici consecutivi (in chilometri). Una distanza minore ha "
 "come risultato una linea più densa e accurata"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:793
+msgid "**Split lines at antimeridian (±180 degrees longitude)**"
+msgstr "**Linee suddivise all'antimeridiano (±180 gradi di longitudine)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:794
+msgid "``ANTIMERIDIAN_SPLIT``"
+msgstr "``ANTIMERIDIAN_SPLIT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:798
+msgid ""
+"Split lines at ±180 degrees longitude (to improve rendering of the lines)"
+msgstr ""
+"Linee suddivise a ±180 gradi di longitudine (per migliorare la "
+"visualizzazione delle linee)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:800
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:816
+msgid "**Hub lines**"
+msgstr "**Hub linee**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:803
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:819
+msgid "The resulting line layer"
+msgstr "Il vettore lineare risultante"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:824
 msgid "**Algorithm ID**: ``qgis:hublines``"
 msgstr "**ID Algoritmo**: ``qgis:hublines``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:834
+msgid "K-means clustering"
+msgstr "K-means clustering"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:835
+msgid ""
+"Calculates the 2D distance based k-means cluster number for each input "
+"feature."
+msgstr ""
+"Calcola il numero di cluster k-means basato sulla distanza 2D per ogni "
+"elemento in ingresso."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:838
+msgid ""
+"K-means clustering aims to partition the features into k clusters in which "
+"each feature belongs to the cluster with the nearest mean. The mean point is"
+" represented by the barycenter of the clustered features."
+msgstr ""
+"Il clustering K-means mira a partizionare gli elementi in k cluster in cui "
+"ogni elemento appartiene al cluster con la media più vicina. Il punto medio "
+"è rappresentato dal baricentro degli elementi raggruppati."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:843
+msgid ""
+"If input geometries are lines or polygons, the clustering is based on the "
+"centroid of the feature."
+msgstr ""
+"Se le geometrie in ingresso sono linee o poligoni, il clustering è basato "
+"sul centroide dell' elemento."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:849
+msgid "A five class point clusters"
+msgstr "Un gruppo di cinque classi punto"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:851
 msgid ":ref:`qgisdbscanclustering`"
 msgstr ":ref:`qgisdbscanclustering`"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:869
+msgid "``CLUSTERS``"
+msgstr "``CLUSTERS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:873
+msgid "Number of clusters to create with the features"
+msgstr "Numero di cluster da creare con gli elementi"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:879
+msgid "Name of the cluster number field"
+msgstr "Nome del campo del numero del cluster"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:883
+msgid "Vector layer for generated the clusters"
+msgstr "Layer vettoriale per generare i cluster"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:900
+msgid ""
+"Vector layer containing the original features with a field specifying the "
+"cluster they belong to"
+msgstr ""
+"Layer vettoriale contenente gli elementi originali con un campo che "
+"specifica il cluster a cui appartengono"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:906
 msgid "**Algorithm ID**: ``qgis:kmeansclustering``"
 msgstr "**ID Algoritmo**: ``qgis:kmeansclustering``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:916
+msgid "List unique values"
+msgstr "Elenco dei valori univoci"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:917
+msgid ""
+"Lists unique values of an attribute table field and counts their number."
+msgstr ""
+"Elenca i valori univoci di un campo della tabella degli attributi e conta il"
+" loro numero."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:937
+msgid "**Target field(s)**"
+msgstr "**Campo(i) di destinazione**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:938
 msgid "``FIELDS``"
@@ -993,17 +1695,67 @@ msgstr "**Valori univoci**"
 msgid "[table]"
 msgstr "[table]"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:944
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:965
+msgid "Summary table layer with unique values"
+msgstr "Layer tabella riassuntiva con valori univoci"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:945
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:966
+msgid "**HTML report**"
+msgstr "**Report HTML**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:948
+msgid ""
+"HTML report of unique values in the :menuselection:`Processing --> Results "
+"viewer`"
+msgstr ""
+"HTML report of unique values in the :menuselection:`Processing --> "
+"Visualizzatore Risultati`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:969
+msgid ""
+"HTML report of unique values. Can be opened from the "
+":menuselection:`Processing --> Results viewer`"
+msgstr ""
+"Report HTML dei valori univoci. Può essere aperto da "
+":menuselection:`Processing --> Visualizzatore Risultati`."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:971
+msgid "**Total unique values**"
+msgstr "**Totale valori univoci**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:972
 msgid "``TOTAL_VALUES``"
 msgstr "``TOTAL_VALUES``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:974
+msgid "The number of uniqe values in the input field"
+msgstr "Il numero di valori univoci nel campo di input"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:975
 msgid "**UNIQUE_VALUES**"
 msgstr "**UNIQUE_VALUES**"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:976
+msgid "``Unique values``"
+msgstr "``Valori univoci''."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:978
+msgid ""
+"A string with the comma separated list of unique values found in the input "
+"field"
+msgstr ""
+"Una stringa con la lista separata da virgole dei valori univoci trovati nel "
+"campo in ingresso."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:984
 msgid "**Algorithm ID**: ``qgis:listuniquevalues``"
 msgstr "**ID Algoritmo**: ``qgis:listuniquevalues``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:994
+msgid "Mean coordinate(s)"
+msgstr "Coordinata(e) media"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:995
 msgid ""
@@ -1012,6 +1764,26 @@ msgid ""
 msgstr ""
 "Calcolare un layer di punti con il centro di massa delle geometrie in un "
 "layer in ingresso."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:998
+msgid ""
+"An attribute can be specified as containing weights to be applied to each "
+"feature when computing the center of mass."
+msgstr ""
+"Un attributo può essere specificato come contenente i pesi da applicare ad "
+"ogni elemento quando si calcola il centro di massa."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1001
+msgid ""
+"If an attribute is selected in the parameter, features will be grouped "
+"according to values in this field. Instead of a single point with the center"
+" of mass of the whole layer, the output layer will contain a center of mass "
+"for the features in each category."
+msgstr ""
+"Se un attributo è selezionato nel parametro, gli elementi saranno "
+"raggruppati secondo i valori in questo campo. Invece di un singolo punto con"
+" il centro di massa dell'intero layer, il layer in uscita conterrà un centro"
+" di massa per gli elementi di ogni categoria."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1023
 msgid "Input vector layer"
@@ -1022,21 +1794,127 @@ msgstr "Layer vettoriale in input"
 msgid "[tablefield: numeric]"
 msgstr "[tablefield: numeric]"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1029
+msgid "Field to use if you want to perform a weighted mean"
+msgstr "Campo univoco su cui verrà effettuato il calcolo della media pesata"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1030
+msgid "**Unique ID field**"
+msgstr "**Campo ID univoco**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1031
 msgid "``UID``"
 msgstr "``UID``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1033
+msgid "Unique field on which the calculation of the mean will be made"
+msgstr "Campo univoco su cui verrà effettuato il calcolo della media"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1035
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1051
+msgid "**Mean coordinates**"
+msgstr "**Coordinate medie**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1038
+msgid "The (point vector) layer for the result"
+msgstr "Il layer (vettore punto) per il risultato"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1054
+msgid "Resulting point(s) layer"
+msgstr "Layer punto(i) risultante"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1059
 msgid "**Algorithm ID**: ``qgis:meancoordinates``"
 msgstr "**ID Algoritmo**: ``qgis:meancoordinates``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1069
+msgid "Nearest neighbour analysis"
+msgstr "Analisi del vicino più vicino"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1070
+msgid ""
+"Performs nearest neighbor analysis for a point layer. The output tells you "
+"how your data are distributed (clustered, randomly or distributed)."
+msgstr ""
+"Esegue l'analisi del vicino più vicino per un layer punto. Il risultato ti "
+"dice come sono distribuiti i tuoi dati (raggruppati, casuali o distribuiti)."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1073
+msgid ""
+"Output is generated as an HTML file with the computed statistical values:"
+msgstr ""
+"Il risultato viene generato come un file HTML con i valori statistici "
+"calcolati:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1076
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1133
+msgid "Observed mean distance"
+msgstr "Distanza media osservata"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1077
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1137
+msgid "Expected mean distance"
+msgstr "Distanza media prevista"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1078
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1141
+msgid "Nearest neighbour index"
+msgstr "Indice del vicino più vicino"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1079
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1145
+msgid "Number of points"
+msgstr "Numero di punti"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1080
+msgid ""
+"Z-Score: Comparing the Z-Score with the normal distribution tells you how "
+"your data are distributed. A low Z-Score means that the data are unlikely to"
+" be the result of a spatially random process, while a high Z-Score means "
+"that your data are likely to be a result of a spatially random process."
+msgstr ""
+"Z-Score: Confrontando lo Z-Score con la distribuzione normale si capisce "
+"come sono distribuiti i dati. Un basso Z-Score significa che è improbabile "
+"che i dati siano il risultato di un processo spazialmente casuale, mentre un"
+" alto Z-Score significa che i tuoi dati sono probabilmente il risultato di "
+"un processo spazialmente casuale."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1108
+msgid "Point vector layer to calculate the statistics on"
+msgstr "Layer vettoriale puntuale su cui calcolare le statistiche"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1109
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1126
+msgid "**Nearest neighbour**"
+msgstr "**Vicino più vicino**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1112
+msgid "HTML file for the computed statistics"
+msgstr "file HTML per le statistiche calcolate"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1129
+msgid "HTML file with the computed statistics"
+msgstr "file HTML con le statistiche calcolate"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1130
+msgid "**Observed mean distance**"
+msgstr "**Distanza media osservata**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1131
 msgid "``OBSERVED_MD``"
 msgstr "``OBSERVED_MD``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1134
+msgid "**Expected mean distance**"
+msgstr "**Distanza media prevista**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1135
 msgid "``EXPECTED_MD``"
 msgstr "``EXPECTED_MD``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1138
+msgid "**Nearest neighbour index**"
+msgstr "**Indice del vicino più vicino**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1139
 msgid "``NN_INDEX``"
@@ -1065,6 +1943,29 @@ msgstr "Z-Score"
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1154
 msgid "**Algorithm ID**: ``qgis:nearestneighbouranalysis``"
 msgstr "**ID Algoritmo**: ``qgis:nearestneighbouranalysis``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1164
+msgid "Overlap analysis"
+msgstr "Analisi sovrapposizione"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1165
+msgid ""
+"Calculates the area and percentage cover by which features from an input "
+"layer are overlapped by features from a selection of overlay layers."
+msgstr ""
+"Calcola l'area e la percentuale di copertura con cui gli elementi di un "
+"layer in ingresso sono sovrapposti agli elementi di una selezione di layer "
+"sovrapposti."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1169
+msgid ""
+"New attributes are added to the output layer reporting the total area of "
+"overlap and percentage of the input feature overlapped by each of the "
+"selected overlay layers."
+msgstr ""
+"Vengono aggiunti nuovi attributi al layer in uscita che riportano l'area "
+"totale di sovrapposizione e la percentuale dell' elemento in ingresso "
+"sovrapposto a ciascuno dei layer di sovrapposizione selezionati."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1187
 msgid "The input layer."
@@ -1096,6 +1997,10 @@ msgstr "**Layer in uscita**"
 msgid "Default: ``[Create temporary layer]``"
 msgstr "Predefinito: ``[Crea livello temporaneo]``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1197
+msgid "Specify the output vector layer. One of:"
+msgstr "Indicare il layer vettoriale in uscita. Uno di:"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1199
 msgid "Create Temporary Layer (``TEMPORARY_OUTPUT``)"
 msgstr "Crea Layer Temporaneo (``TEMPORARY_OUTPUT``)"
@@ -1116,6 +2021,16 @@ msgstr "Salva su Tabella PostGIS..."
 msgid "The file encoding can also be changed here."
 msgstr "La codifica del file può anche essere cambiata qui."
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1220
+msgid ""
+"The output layer with additional fields reporting the overlap (in map units "
+"and percentage) of the input feature overlapped by each of the selected "
+"layers."
+msgstr ""
+"Il layer in uscita con campi aggiuntivi che riportano la sovrapposizione (in"
+" unità di mappa e percentuale) dell'elemento in ingresso sovrapposto a "
+"ciascuno dei layer selezionati."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1227
 msgid "**Algorithm ID**: ``qgis:calculatevectoroverlaps``"
 msgstr "**ID Algoritmo**: ``qgis:calculatevectoroverlaps``"
@@ -1123,6 +2038,14 @@ msgstr "**ID Algoritmo**: ``qgis:calculatevectoroverlaps``"
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1237
 msgid "Statistics by categories"
 msgstr "Statistiche per categorie "
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1238
+msgid ""
+"Calculates statistics of a field depending on a parent class. The parent "
+"class is a combination of values from other fields."
+msgstr ""
+"Calcola le statistiche di un campo in funzione di una classe padre. La "
+"classe padre è una combinazione di valori di altri campi."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1252
 msgid "**Input vector layer**"
@@ -1132,9 +2055,53 @@ msgstr "**Layer vettoriale in ingresso**"
 msgid "Input vector layer with unique classes and values"
 msgstr "Layer vettoriale in ingresso con classi e valori univoci"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1256
+msgid ""
+"**Field to calculate statistics on (if empty, only count is calculated)**"
+msgstr ""
+"**Campo su cui calcolare le statistiche (se vuoto, viene considerato solo il"
+" conteggio) **"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1259
 msgid "``VALUES_FIELD_NAME``"
 msgstr "``VALUES_FIELD_NAME``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1261
+msgid "If empty only the count will be calculated"
+msgstr "Se vuoto, sarà calcolato solo il conteggio"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1262
+msgid "**Field(s) with categories**"
+msgstr "**Campo(i) con le categorie**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1263
+msgid "``CATEGORIES_FIELD_NAME``"
+msgstr "``CATEGORIES_FIELD_NAME``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1265
+msgid "The fields that (combined) define the categories"
+msgstr "I campi che (combinati) definiscono le categorie"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1266
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1282
+msgid "**Statistics by category**"
+msgstr "**Statistiche per categoria**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1269
+msgid "Table for the generated statistics"
+msgstr "Tabella per le statistiche generate"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1285
+msgid "Table containing the statistics"
+msgstr "Tabella contenente le statistiche"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1287
+msgid ""
+"Depending on the type of the field being analyzed, the following statistics "
+"are returned for each grouped value:"
+msgstr ""
+"A seconda del tipo di campo analizzato, vengono restituite le seguenti "
+"statistiche per ogni valore aggregato:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1295
 msgid "Statistics"
@@ -1236,6 +2203,18 @@ msgstr "Deviazione Standard (``STD_DEV``)"
 msgid "Coefficient of variation (``CV``)"
 msgstr "Coefficiente di variazione (``CV``)"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1347
+msgid "Minority (rarest occurring value - ``MINORITY``)"
+msgstr "Minoranza (valore più raro - ``MINORITY``)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1351
+msgid "Majority (most frequently occurring value - ``MAJORITY``)"
+msgstr "Maggioranza (valore più frequente - ``MAJORITY``)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1355
+msgid "First Quartile (``FIRSTQUARTILE``)"
+msgstr "Primo Quartile (``FIRSTQUARTILE``)"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1359
 msgid "Third Quartile (``THIRDQUARTILE``)"
 msgstr "Terzo Quartile (``THIRDQUARTILE``)"
@@ -1264,6 +2243,25 @@ msgstr "**ID Algoritmo**: ``qgis:statisticsbycategories``"
 msgid "Sum line lengths"
 msgstr "Somma delle lunghezze delle linee"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1394
+msgid ""
+"Takes a polygon layer and a line layer and measures the total length of "
+"lines and the total number of them that cross each polygon."
+msgstr ""
+"Utilizza un vettore poligonale e un vettore lineare e misura la lunghezza "
+"totale delle linee e il numero totale di esse che attraversano ogni "
+"poligono."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1397
+msgid ""
+"The resulting layer has the same features as the input polygon layer, but "
+"with two additional attributes containing the length and count of the lines "
+"across each polygon."
+msgstr ""
+"Il layer risultante ha gli stessi elementi del vettore poligonale in "
+"ingresso, ma con due attributi aggiuntivi che contengono la lunghezza e il "
+"conteggio delle linee che attraversano ogni poligono."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1415
 msgid "**Lines**"
 msgstr "**Linee**"
@@ -1276,6 +2274,10 @@ msgstr "``LINES``"
 msgid "Input vector line layer"
 msgstr "Vettore lineare in ingresso"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1422
+msgid "Polygon vector layer"
+msgstr "Layer vettoriale poligonale"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1423
 msgid "**Lines length field name**"
 msgstr "**Nome campo lunghezza delle linee**"
@@ -1287,6 +2289,14 @@ msgstr "``LEN_FIELD``"
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1427
 msgid "Default: 'LENGTH'"
 msgstr "Predefinito: 'LENGTH'"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1428
+msgid "Name of the field for the lines length"
+msgstr "Nome del campo per la lunghezza delle linee"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1429
+msgid "**Lines count field name**"
+msgstr "**Nome del campo per il conteggio delle linee**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1430
 msgid "``COUNT_FIELD``"
