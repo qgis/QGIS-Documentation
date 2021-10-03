@@ -1517,11 +1517,20 @@ In the :guilabel:`Data Sources` tab, you can:
     :ref:`locator widget <locator_options>`. By default, layers are set searchable.
   * Define which layers are defined as ``required``. Checked layers in this list
     are protected from inadvertent removal from the project.
+  * Define which layers are ``private``, i.e. hidden from the :guilabel:`Layers`
+    panel. This is meant for accessory layers (basemap, join, lookups for
+    value-relations, most probably aspatial layers, ...) that you still need
+    in a project but you don't want them to pollute the legend tree and other
+    layer selection tools. If set visible, they are still displayed in the map
+    canvas and rendered in the print layout legend. Use the |filterMap|
+    :menuselection:`Filter legend --> Show private layers` option in the
+    :guilabel:`Layers` panel top toolbar to temporarily turned them on
+    for any interaction.
 
   The :guilabel:`Layers Capabilities` table provides some convenient tools to:
 
-  * Select multiple cells and press :guilabel:`Toggle Selection` to have them change their
-    checkbox state;
+  * Select multiple cells and press :guilabel:`Toggle Selection` to have them change
+    their checkbox state;
   * |unchecked| :guilabel:`Show spatial layers only`, filtering out non-spatial
     layers from the layers list;
   * |search| :guilabel:`Filter layers...` and quickly find a particular layer to
@@ -2068,6 +2077,8 @@ in the QGIS user profile.
 .. |fileOpen| image:: /static/common/mActionFileOpen.png
    :width: 1.5em
 .. |fileSave| image:: /static/common/mActionFileSave.png
+   :width: 1.5em
+.. |filterMap| image:: /static/common/mActionFilterMap.png
    :width: 1.5em
 .. |indicatorLowAccuracy| image:: /static/common/mIndicatorLowAccuracy.png
    :width: 1.5em
