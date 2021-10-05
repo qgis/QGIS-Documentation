@@ -380,6 +380,12 @@ msgstr "``OUTPUT_VALUE``"
 msgid "Default: *Raw*"
 msgstr "Predefinito: *Grezzo*"
 
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:134
+msgid "Allow to change the values of the output heatmap raster. One of:"
+msgstr ""
+"Permette di cambiare i valori della mappa di concentrazione raster in "
+"uscita. Uno dei seguenti:"
+
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:137
 msgid "0 --- Raw"
 msgstr "0 --- Grezzo"
@@ -491,9 +497,48 @@ msgstr ""
 msgid "Airports of Alaska"
 msgstr "Aeroporti di Alaska"
 
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:188
+msgid ""
+"Open the :guilabel:`Heatmap (Kernel Density Estimation)` algorithm from the "
+"QGIS :guilabel:`Interpolation` group"
+msgstr ""
+"Open the :guilabel:`Heatmap (Kernel Density Estimation)` algorithm from the "
+"QGIS :guilabel:`Interpolation` group"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:190
+msgid ""
+"In the :guilabel:`Point layer` |selectString| field, select ``airports`` "
+"from the list of point layers loaded in the current project."
+msgstr ""
+"Nel campo :guilabel:`Vettore puntuale` |selectString|, seleziona "
+"``airports`` dalla lista dei vettori puntuali caricati nel progetto "
+"corrente."
+
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:632
 msgid "selectString"
 msgstr "selectString"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:193
+msgid "Change the :guilabel:`Radius` to ``1000000`` meters."
+msgstr "Cambia il :guilabel:`Raggio` a ``1000000`` metri."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:194
+msgid ""
+"Change the :guilabel:`Pixel size X` to ``1000``. The :guilabel:`Pixel size "
+"Y`, :guilabel:`Rows` and :guilabel:`Columns` will be automatically updated."
+msgstr ""
+"Cambia :guilabel:`Dimensione X del pixel` a ``1000``. Le "
+":guilabel:`Dimensione Y del pixel`, :guilabel:`Righe` e :guilabel:`Colonne` "
+"saranno aggiornate automaticamente."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:197
+msgid ""
+"Click on :guilabel:`Run` to create and load the airports heatmap (see "
+":numref:`Figure_Heatmap_created_processing`)."
+msgstr ""
+"Clicca su :guilabel:`Esegui` per creare e caricare la mappa di "
+"concentrazione degli aeroporti (vedi "
+":numref:`Figure_Heatmap_created_processing`)."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:205
 msgid "The Heatmap Dialog"
@@ -518,9 +563,39 @@ msgstr ""
 "La mappa di concentrazione dopo il caricamento appare come una superficie "
 "grigia"
 
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:220
+msgid ""
+"Open the properties dialog of the ``heatmap_airports`` layer (select the "
+"layer ``heatmap_airports``, open the context menu with the right mouse "
+"button and select :guilabel:`Properties`)."
+msgstr ""
+"Apri la finestra di dialogo delle proprietà del layer ``heatmap_airports`` "
+"(seleziona il layer ``heatmap_airports``, apri il menu contestuale con il "
+"tasto destro del mouse e seleziona :guilabel:`Proprietà``)."
+
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:223
 msgid "Select the :guilabel:`Symbology` tab."
 msgstr "Seleziona la scheda :guilabel:`Simbologia`."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:224
+msgid ""
+"Change the :guilabel:`Render type` |selectString| to 'Singleband "
+"pseudocolor'."
+msgstr ""
+"Cambia la :guilabel: `Tipo di Renderizzazione` |selectString| a "
+"'Pseudocolore a banda singola'."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:226
+msgid ""
+"Select a suitable :guilabel:`Color ramp` |selectString|, for instance "
+"``YlOrRd``."
+msgstr ""
+"Seleziona una :guilabel:`Scala di colori` |selectString|| adatta, per "
+"esempio ``YlOrRd``."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:228
+msgid "Click the :guilabel:`Classify` button."
+msgstr "Fai clic sul pulsante :guilabel: `Classifica`"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:229
 msgid "Press :guilabel:`OK` to update the layer."
@@ -533,6 +608,10 @@ msgstr ""
 "Il risultato finale viene mostrato in "
 ":numref:`Figure_Heatmap_styled_processing`."
 
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:238
+msgid "Styled heatmap of airports of Alaska"
+msgstr "Mappa di cancentrazione stilizzata degli aeroporti dell'Alaska"
+
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:243
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:375
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:468
@@ -543,6 +622,18 @@ msgstr "Codice Python"
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:245
 msgid "**Algorithm ID**: ``qgis:heatmapkerneldensityestimation``"
 msgstr "**ID Algoritmo**: ``qgis:heatmapkerneldensityestimation``"
+
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+msgid ""
+"The *algorithm id* is displayed when you hover over the algorithm in the "
+"Processing Toolbox. The *parameter dictionary* provides the parameter NAMEs "
+"and values. See :ref:`processing_console` for details on how to run "
+"processing algorithms from the Python console."
+msgstr ""
+"L' *id algoritmo* viene visualizzato quando passi il mouse sopra l'algoritmo"
+" nella finestra degli strumenti di Processing. Il *dizionario dei parametri*"
+" fornisce i Nomi e i valori dei parametri. Vedi :ref:`processing_console` "
+"per dettagli su come eseguire algoritmi di processing dalla console Python."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:255
 msgid "IDW Interpolation"
@@ -609,20 +700,78 @@ msgid ""
 "details)."
 msgstr ""
 "Layer vettoriale(i)i e campo(i) da usare per l'interpolazione, codificati in"
-" una stringa (vedere la classe ``ParameterInterpolationData`` in "
+" una stringa (vedi la classe ``ParameterInterpolationData`` in "
 ":source:`InterpolationWidgets "
 "<python/plugins/processing/algs/qgis/ui/InterpolationWidgets.py>` per "
 "maggiori dettagli)."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:292
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:516
+msgid ""
+"The following GUI elements are provided to compose the interpolation data "
+"string:"
+msgstr ""
+"I seguenti elementi della GUI vengono forniti per comporre la stringa di "
+"dati di interpolazione:"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:295
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:519
 msgid "**Vector layer** [vector: any]"
 msgstr "**Layer vettoriale** [vector: any]"
 
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:296
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:520
+msgid ""
+"**Interpolation attribute** [tablefield: numeric]: Attribute to use in the "
+"interpolation"
+msgstr ""
+"**Attributo per l'interpolazione** [tablefield: numeric]: Attributo da usare"
+" nell'interpolazione"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:298
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:522
+msgid ""
+"**Use Z-coordinate for interpolation** [boolean]: Uses the layer's stored Z "
+"values (Default: False)"
+msgstr ""
+"**Usa le coordinate Z per l'interpolazione** [boolean]: Utilizza i valori Z "
+"memorizzati del layer (predefinito: False)"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:301
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:525
+msgid "For each of the added layer-field combinations, a type can be chosen:"
+msgstr ""
+"Per ciascuna delle combinazioni layer-campo aggiunte, si può scegliere un "
+"tipo:"
+
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:304
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:528
 msgid ":guilabel:`Points`"
 msgstr ":guilabel:`Puntii`"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:305
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:529
+msgid ":guilabel:`Structured lines`"
+msgstr ":guilabel:`Linee strutturate`"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:306
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:530
+msgid ":guilabel:`Break lines`"
+msgstr ":guilabel:`Break lines`"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:308
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:532
+msgid ""
+"In the string, the layer-field elements are separated by ``'::|::'``. The "
+"sub-elements of the layer-field elements are separated by ``'::~::'``."
+msgstr ""
+"Nella stringa, gli elementi del campo del layer sono separati da ``'::|:'``."
+" I sotto-elementi degli elementi del campo del layer sono separati da "
+"``'::~:'``."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:312
+msgid "**Distance coefficient P**"
+msgstr "**Coefficiente di distance P**"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:313
 msgid "``DISTANCE_COEFFICIENT``"
@@ -631,6 +780,14 @@ msgstr "``DISTANCE_COEFFICIENT``"
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:316
 msgid "Default: 2.0"
 msgstr "Predefinito: 2.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:317
+msgid ""
+"Sets the distance coefficient for the interpolation. Minimum: 0.0, maximum: "
+"100.0."
+msgstr ""
+"Imposta il coefficiente di distanza per l'interpolazione. Minimo: 0.0, "
+"massimo: 100.0."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:319
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:546
@@ -647,6 +804,28 @@ msgstr "``EXTENT``"
 msgid "[extent]"
 msgstr "[extent]"
 
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:322
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:549
+msgid ""
+"Extent of the output raster layer. You have to declare the output extent by "
+"either choosing it from the map canvas, selecting it from another layer or "
+"type it manually."
+msgstr ""
+"Estensione del layer raster in uscita. Devi dichiarare l'estensione in "
+"uscita scegliendola dall'area di rappresentazione della mappa, "
+"selezionandola da un altro layer o digitandola manualmente."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:344
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:369
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:571
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:607
+msgid "**Interpolated**"
+msgstr "**Interpolato**"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:349
+msgid "Raster layer of interpolated values. One of:"
+msgstr "Layer raster di valori interpolati. Uno di:"
+
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:372
 msgid "Raster layer of interpolated values"
 msgstr "Layer raster di valori interpolati"
@@ -655,22 +834,89 @@ msgstr "Layer raster di valori interpolati"
 msgid "**Algorithm ID**: ``qgis:idwinterpolation``"
 msgstr "**ID Algoritmo**: ``qgis:idwinterpolation``"
 
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:387
+msgid "Line Density"
+msgstr "Linea Densità"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:389
+msgid ""
+"Calculates for each raster cell, the density measure of linear features "
+"within a circular neighbourhood. This measure is obtained by summing all the"
+" line segments intersecting the circular neighbourhood and dividing this sum"
+" by the area of such neighbourhood. A weighting factor can be applied to the"
+" line segments."
+msgstr ""
+"Calcola per ogni cella raster, la misura della densità degli elementi "
+"lineari all'interno di un intorno circolare. Questa misura si ottiene "
+"sommando tutti i segmenti di linea che intersecano l'intorno circolare e "
+"dividendo questa somma per l'area di tale intorno. Un fattore di "
+"ponderazione può essere applicato ai segmenti linea."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:398
+msgid ""
+"Line density example. Input layer source: Roads Overijssel - The Netherlands"
+" (OSM)."
+msgstr ""
+"Esempio di densità linea. Fonte del layer in ingresso: Strade Overijssel - "
+"Paesi Bassi (OSM)."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:414
+msgid "**Input line layer**"
+msgstr "**Layer linea in ingresso**"
+
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:416
 msgid "[vector: any]"
 msgstr "[vector: any]"
 
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:417
+msgid "Input vector layer containing line features"
+msgstr "Layer vettoriale in ingresso contenente gli elementi linea"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:418
+msgid "**Weight field**"
+msgstr "**Campo peso**"
+
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:419
 msgid "``WEIGHT``"
 msgstr "``WEIGHT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:421
+msgid ""
+"Field of the layer containing the weight factor to use during the "
+"calculation"
+msgstr ""
+"Campo del layer che contiene il fattore di peso da usare durante il calcolo"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:423
+msgid "**Search Radius**"
+msgstr "**Raggio di ricerca**"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:427
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:434
 msgid "Default: 10"
 msgstr "Predefinito: 10"
 
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:428
+msgid "Radius of the circular neighbourhood. Units can be specified here."
+msgstr ""
+"Raggio dell'intorno circolare. Le unità possono essere specificate qui."
+
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:430
 msgid "**Pixel size**"
 msgstr "**Dimensione Pixel**"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:435
+msgid ""
+"Pixel size of the output raster layer in layer units. The raster has square "
+"pixels."
+msgstr ""
+"Dimensione dei pixel del layer raster in uscita in unità layer. Il raster ha"
+" pixel quadrati."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:437
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:462
+msgid "**Line density raster**"
+msgstr "**Linea densità raster**"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:442
 msgid "The output as a raster layer. One of:"
