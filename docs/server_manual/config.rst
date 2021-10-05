@@ -121,14 +121,14 @@ several ways to define these variables. This is fully described in
 
        QGIS_SERVER_LANDING_PAGE_PROJECTS_DIRECTORIES
      - Directories used by the landing page service to find .qgs and .qgz projects
-     - /qgis/server_projects_directories
+     - ""
      - All
 
    * - .. _qgis_server_landing_page_projects_pg_connections:
 
        QGIS_SERVER_LANDING_PAGE_PROJECTS_PG_CONNECTIONS
      - PostgreSQL connection strings used by the landing page service to find projects
-     - /qgis/server_projects_pg_connections
+     - ""
      - All
 
    * - .. _qgis_server_log_file:
@@ -158,7 +158,7 @@ several ways to define these variables. This is fully described in
 
        QGIS_SERVER_LOG_PROFILE
      - Add detailed profile information to the logs, only effective when QGIS_SERVER_LOG_LEVEL=0
-     - /qgis/server_log_profile
+     - false
      - All
 
    * - .. _qgis_server_log_stderr:
@@ -234,7 +234,7 @@ several ways to define these variables. This is fully described in
        .. code-block:: bash
 
         PGSERVICEFILE=/etc/pg_service.conf \
-	QUERY_STRING="MAP=/home/qgis/projects/world.qgs&SERVICE=WMS&REQUEST=GetCapabilities" \
+	QUERY_STRING="MAP=/home/projects/world.qgs&SERVICE=WMS&REQUEST=GetCapabilities" \
 	/usr/lib/cgi-bin/qgis_mapserv.fcgi
 
        The result should be either the content of the GetCapabilities response or,
