@@ -494,6 +494,19 @@ The file encoding can also be changed here.
 **end_layer_output_types**
 
 
+**layer_output_types_append**
+
+* Create Temporary Layer (``TEMPORARY_OUTPUT``)
+* Save to File…
+* Save to Geopackage…
+* Save to Database Table…
+* Append to Layer…
+
+The file encoding can also be changed here.
+
+**end_layer_output_types_append**
+
+
 **layer_output_types_skip**
 
 * Skip Output
