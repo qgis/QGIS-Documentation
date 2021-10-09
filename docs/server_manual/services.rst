@@ -999,6 +999,10 @@ Several additional parameters are available to change the size of the
 legend elements:
 
 * **BOXSPACE** space between legend frame and content (mm)
+* **FORMAT**, ``image/jpeg``, ``image/png`` or ``application/json``.
+  For JSON, symbols are encoded with Base64 and most other options related to
+  layout or fonts are not taken into account because the legend must be built
+  on the client side.
 * **LAYERSPACE** vertical space between layers (mm)
 * **LAYERTITLESPACE** vertical space between layer title and items
   following (mm)
