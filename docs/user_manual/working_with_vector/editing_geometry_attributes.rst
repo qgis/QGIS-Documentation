@@ -537,13 +537,22 @@ geometry then enter its attributes. To digitize the geometry:
 Vertex tool
 -----------
 
-For any editable vector layer, the
-|vertexToolActiveLayer| :sup:`Vertex tool (Current Layer)` provides manipulation
+QGIS provides two tools to interact with vector features vertices:
+
+* |vertexToolActiveLayer| :sup:`Vertex Tool (Current Layer)`: only
+  overlaid features in the active layer (in the :guilabel:`Layers`
+  panel) are affected
+* |vertexTool| :sup:`Vertex Tool (All Layers)`: any overlaid features
+  in all editable layers are affected. This allows you to edit features
+  without switching the active layer or edit multiple layers at once
+  (e.g., country and their regions boundaries)
+
+For any editable vector layer, the vertex tools provide manipulation
 capabilities of
-feature vertices similar to CAD programs. It is possible to simply select
+feature vertices similar to CAD programs. It is possible to select
 multiple vertices at once and to move, add or delete them altogether.
-The vertex tool also supports
-the topological editing feature. This tool is selection persistent, so when some
+The vertex tools also support the topological editing feature.
+They are selection persistent, so when some
 operation is done, selection stays active for this feature and tool.
 
 It is important to set the property :menuselection:`Settings -->` |options|
