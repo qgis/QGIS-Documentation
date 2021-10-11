@@ -657,19 +657,23 @@ On-the-fly projection is also supported, and the vertex tool provides
 tooltips to identify a vertex by hovering the pointer over it.
 
 .. index:: Vertex editor panel
+.. _vertex_editor_panel:
 
 The Vertex Editor Panel
 .......................
 
-When using the :guilabel:`Vertex tool` on a feature, it is possible to
-right click to open the :guilabel:`Vertex Editor` panel listing all the
+With enabling a vertex tool, you also open the :guilabel:`Vertex Editor` panel.
+Right-clicking over a feature fills the panel with the list of all the
 vertices of the feature with their :guilabel:`x`, :guilabel:`y`
 (:guilabel:`z`, :guilabel:`m` if applicable) coordinates and
 :guilabel:`r` (for the radius, in case of circular geometry).
-Simply select a row in the table does select the corresponding vertex
+The feature is also made exclusive for editing, meaning that the edit of
+any other features is disabled: new vertices can only be added to the bound
+feature, selecting and moving of vertices and segments
+by clicking or dragging the map canvas is only possible for that feature.
+Also, select a row in the table does select the corresponding vertex
 in the map canvas, and vice versa.
-Simply change a coordinate in the table and your vertex position is
-updated.
+Change a coordinate in the table and the vertex position is updated.
 You can also select multiple rows and delete them altogether.
 
 .. _figure_edit_vertex:
