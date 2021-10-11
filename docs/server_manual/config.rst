@@ -138,7 +138,7 @@ several ways to define these variables. This is fully described in
        writing to file. File should be created automatically, just send some requests
        to server. If it's not there, check permissions.
 
-       .. warning:: QGIS_SERVER_LOG_FILE is deprecated since QGIS 3.4.
+       .. warning:: QGIS_SERVER_LOG_FILE is deprecated since QGIS 3.4, use QGIS_SERVER_LOG_STDERR instead.
          File logging support will be removed in QGIS 4.0.
      - ''
      - All
