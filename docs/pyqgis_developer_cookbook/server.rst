@@ -207,7 +207,7 @@ and can manipulate all its properties (input/output) and
 raise exceptions (while in a quite particular way as we’ll see below).
 
 All these methods return a boolean value indicating if the call should be propagated the subsequent
-filters. If one of these method returns ``False`` then the chain stop, otherwise the call will propagate
+filters. If one of these method returns :const:`False` then the chain stop, otherwise the call will propagate
 to the next filter. 
 
 Here is the pseudo code showing how the server handles a typical request and when the
@@ -251,17 +251,19 @@ much sense though).
 onSendResponse
 ^^^^^^^^^^^^^^
 
-This is called whenever any partial output is flushed from response buffer (i.e  to **FCGI** ``stdout`` 
+This is called whenever any partial output is flushed from response buffer (i.e to **FCGI** ``stdout`` 
 if the fcgi server is used) and from there, to the client. 
 This occurs when huge content is streamed (like WFS GetFeature). In this case
 :meth:`onSendResponse() <qgis.server.QgsServerFilter.onSendResponse>` may be called multiple times.
 
 Note that if the response is not streamed, then :meth:`onSendResponse() <qgis.server.QgsServerFilter.onSendResponse>` will not be called at all. 
 
-In all case, the last (or unique) chunk will be sent to client after a call to :meth:`onResponseComplete() <qgis.server.QgsServerFilter.onResponseComplete>`.
+In all case, the last (or unique) chunk will be sent to client after a call to
+:meth:`onResponseComplete() <qgis.server.QgsServerFilter.onResponseComplete>`.
 
-Returning ``False`` will prevent flushing of data to the client. This is desirable when a plugin
-wants to collect all chunks from a response and examine or change the response in  :meth:`onResponseComplete() <qgis.server.QgsServerFilter.onResponseComplete>`.
+Returning :const:`False` will prevent flushing of data to the client. This is desirable when a plugin
+wants to collect all chunks from a response and examine or change the response in
+:meth:`onResponseComplete() <qgis.server.QgsServerFilter.onResponseComplete>`.
 
 
 onResponseComplete
@@ -278,7 +280,9 @@ ideal place to provide new services implementation
 (WPS or custom services) and to perform direct manipulation of the output coming
 from core services (for example to add a watermark upon a WMS image).
 
-Note that returning ``False`` will prevent the next plugins to execute :meth:`onResponseComplete() <qgis.server.QgsServerFilter.onResponseComplete>` but, in any case, prevent response to be sent to the client.
+Note that returning :const:`False` will prevent the next plugins to execute
+:meth:`onResponseComplete() <qgis.server.QgsServerFilter.onResponseComplete>`
+but, in any case, prevent response to be sent to the client.
 
 
 Raising exceptions from a plugin
