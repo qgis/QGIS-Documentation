@@ -127,8 +127,7 @@ formats. You also have a counter with the number of total errors and fixed ones.
 You can select a row to see the location of the error. You can change this
 behavior by selecting another action between |radioButtonOn| :guilabel:`Error`
 (default), |radioButtonOff| :guilabel:`Feature`, |radioButtonOff|
-:guilabel:`Don't move`, and |checkbox| :guilabel:`Highlight contour of selected
-features`.
+:guilabel:`Don't move`, and |checkbox| :guilabel:`Highlight selected features`.
 
 Below the zoom action when clicking on the table row, you can:
 
