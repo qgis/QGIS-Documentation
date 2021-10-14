@@ -17,20 +17,20 @@ Returns the geometry after an affine transformation. Calculations are in the Spa
    :widths: 15 85
 
    * - Syntax
-     - affine_transform(geometry, deltaX, deltaY, rotationZ, scaleX, scaleY, [deltaZ=0], [deltaM=0], [scaleZ=1], [scaleM=1])
+     - affine_transform(geometry, delta_x, delta_y, rotation_z, scale_x, scale_y, [delta_z=0], [delta_m=0], [scale_z=1], [scale_m=1])
 
        [] marks optional arguments
    * - Arguments
      - * **geometry** - a geometry
-       * **deltaX** - x-axis translation
-       * **deltaY** - y-axis translation
-       * **rotationZ** - rotation around z-axis in degrees counter-clockwise
-       * **scaleX** - x-axis scale factor
-       * **scaleY** - y-axis scale factor
-       * **deltaZ** - z-axis translation
-       * **deltaM** - m-axis translation
-       * **scaleZ** - z-axis scale factor
-       * **scaleM** - m-axis scale factor
+       * **delta_x** - x-axis translation
+       * **delta_y** - y-axis translation
+       * **rotation_z** - rotation around z-axis in degrees counter-clockwise
+       * **scale_x** - x-axis scale factor
+       * **scale_y** - y-axis scale factor
+       * **delta_z** - z-axis translation
+       * **delta_m** - m-axis translation
+       * **scale_z** - z-axis scale factor
+       * **scale_m** - m-axis scale factor
    * - Examples
      - * ``geom_to_wkt(affine_transform(geom_from_wkt('LINESTRING(1 1, 2 2)'), 2, 2, 0, 1, 1))`` → 'LineString (3 3, 4 4)'
        * ``geom_to_wkt(affine_transform(geom_from_wkt('POLYGON((0 0, 0 3, 2 2, 0 0))'), 0, 0, -90, 1, 2))`` → 'Polygon ((0 0, 6 0, 4 -2, 0 0))'
@@ -215,13 +215,16 @@ Returns a geometry that represents all points whose distance from this geometry 
    :widths: 15 85
 
    * - Syntax
-     - buffer(geometry, distance, [segments=8])
+     - buffer(geometry, distance, [segments=8], [cap=8], [join='round'], [miter_limit=2])
 
        [] marks optional arguments
    * - Arguments
      - * **geometry** - a geometry
        * **distance** - buffer distance in layer units
        * **segments** - number of segments to use to represent a quarter circle when a round join style is used. A larger number results in a smoother buffer with more nodes.
+       * **cap** - end cap style for buffer. Valid values are 'round', 'flat' or 'square'
+       * **join** - join style for buffer. Valid values are 'round', 'bevel' or 'miter'.
+       * **miter_limit** - miter distance limit, for use when the join style is set to 'miter'
    * - Examples
      - * ``buffer($geometry, 10.5)`` → polygon of the current feature's geometry buffered by 10.5 units
 
@@ -1343,7 +1346,7 @@ Returns the minimum m (measure) value of a geometry.
 main_angle
 ..........
 
-Returns the main angle of a geometry (clockwise, in degrees from North), which represents the angle of the oriented minimal bounding rectangle which completely covers the geometry.
+Returns the angle of the long axis (clockwise, in degrees from North) of the oriented minimal bounding rectangle, which completely covers the geometry.
 
 .. list-table::
    :widths: 15 85
