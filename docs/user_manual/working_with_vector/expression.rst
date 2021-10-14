@@ -355,7 +355,8 @@ To delete a custom function:
 
 **Example**
 
-Here's a short example on how to create your own functions:
+Here's a short example on how to create your own ``my_sum`` function that
+will operate with two values.
 
 .. code-block:: python
 
@@ -375,13 +376,23 @@ Here's a short example on how to create your own functions:
        return value1 + value2
 
 
-The short example creates a function ``my_sum`` that will give you a function
-with two values.
 When using the ``args='auto'`` function argument the number of function
 arguments required will be calculated by the number of arguments the function
 has been defined with in Python (minus 2 - ``feature``, and ``parent``).
+The ``group='Custom'`` argument indicates the group in which the function
+should be listed in the Expression dialog.
 
-This function can then be used in expressions:
+It is also possible to add keywords arguments like:
+
+* ``usesgeometry=True`` if the expression requires access to the features geometry.
+  By default :const:`False`.
+* ``handlesnull=True`` if the expression has custom handling for NULL values.
+  If :const:`False` (default), the result will always be NULL as soon as
+  any parameter is NULL.
+* ``referenced_columns=[list]``: An array of attribute names that are required to
+  the function. Defaults to ``[QgsFeatureRequest.ALL_ATTRIBUTES]``.
+
+The previous example function can then be used in expressions:
 
 .. _figure_expression_custom_function:
 
