@@ -17,32 +17,23 @@ We will give a short and simple installation how-to for
 a minimal working configuration on Debian based systems (including Ubuntu and derivatives). However, many other
 distributions and OSs provide packages for QGIS Server.
 
-Requirements and steps to add official QGIS repositories to install current QGIS Server on a Debian based system are
-provided in `QGIS installers page <https://qgis.org/en/site/forusers/alldownloads.html>`_.
-
 .. note:: In Ubuntu you can use your regular user, prepending ``sudo`` to
   commands requiring admin permissions. In Debian you can work as admin (``root``),
   without using ``sudo``.
 
-We strongly suggest installing the LTR version.
-
-Once the chosen repository is configured, installation is simply done with:
-
-.. code-block:: bash
-
- apt install qgis-server --no-install-recommends --no-install-suggests
- # if you want to install server Python plugins, also:
- apt install python-qgis
-
-To test the installation, run:
+Requirements and steps to add official QGIS repositories to install QGIS Server on a Debian based system are
+provided in `QGIS installers page <https://qgis.org/en/site/forusers/alldownloads.html>`_.
+Once the target version repository is configured and QGIS Server installed,
+you can test the installation with:
 
 .. code-block:: bash
 
     /usr/lib/cgi-bin/qgis_mapserv.fcgi
  
-If you get the following output, the server is correctly installed
+If you get the following output, the server is correctly installed.
 
-.. note:: Depending on the version of QGIS, you might see slightly different output reported when you run ``qgis_mapserv.fcgi``
+.. note:: Depending on the version of QGIS, you might see slightly different output
+ reported when you run ``qgis_mapserv.fcgi``.
 
 .. code-block::
 
@@ -91,10 +82,10 @@ Let's add a sample project. You can use your own, or one from
   
     mkdir /home/qgis/projects/
     cd /home/qgis/projects/
-    wget https://github.com/qgis/QGIS-Training-Data/archive/v2.0.zip
-    unzip v2.0.zip
-    mv QGIS-Training-Data-2.0/exercise_data/qgis-server-tutorial-data/world.qgs .
-    mv QGIS-Training-Data-2.0/exercise_data/qgis-server-tutorial-data/naturalearth.sqlite .
+    wget https://github.com/qgis/QGIS-Training-Data/archive/release_3.16.zip
+    unzip release_3.16.zip
+    mv QGIS-Training-Data-release_3.16/exercise_data/qgis-server-tutorial-data/world.qgs .
+    mv QGIS-Training-Data-release_3.16/exercise_data/qgis-server-tutorial-data/naturalearth.sqlite .
   
 Of course, you can use your favorite GIS software to open this file and
 take a look at the configuration and available layers.
@@ -108,7 +99,7 @@ To properly deploy QGIS server you need a HTTP server. Recommended choices are *
 Apache HTTP Server
 ------------------
 
-.. note:: In the following, please replace ``localhost`` with the name or IP address of your server.
+.. note:: In the following, please replace ``qgis.demo`` with the name or IP address of your server.
 
 Install Apache and  `mod_fcgid <https://httpd.apache.org/mod_fcgid/mod/mod_fcgid.html>`_:
 
