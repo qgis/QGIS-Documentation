@@ -651,38 +651,38 @@ web server) package available, so this must be installed by other means.
 
 A simple procedure is the following:
 
-* Download the XAMPP installer (https://www.apachefriends.org/download.html)
-  for Windows and install Apache
+#. Download the XAMPP installer (https://www.apachefriends.org/download.html)
+   for Windows and install Apache
 
-.. figure:: img/qgis_server_windows1.png
-  :align: center
+   .. figure:: img/qgis_server_windows1.png
+     :align: center
   
-* Download the OSGeo4W installer, follow the "Advanced Install" and install
-  both the QGIS Desktop and QGIS Server packages
+#. Download the OSGeo4W installer, follow the "Advanced Install" and install
+   both the QGIS Desktop and QGIS Server packages
   
-.. figure:: img/qgis_server_windows2.png
-  :align: center
+   .. figure:: img/qgis_server_windows2.png
+     :align: center
   
-* Edit the httpd.conf file (:file:`C:\\xampp\\apache\\conf\\httpd.conf`
-  if the default installation paths have been used) and make the following changes:
+#. Edit the httpd.conf file (:file:`C:\\xampp\\apache\\conf\\httpd.conf`
+   if the default installation paths have been used) and make the following changes:
 
-From:
+   From:
 
-.. code-block:: apache
+   .. code-block:: apache
 
     ScriptAlias /cgi-bin/ "C:/xampp/cgi-bin/"
 
 
-To:
+   To:
 
-.. code-block:: apache
+   .. code-block:: apache
 
     ScriptAlias /cgi-bin/ "C:/OSGeo4W64/apps/qgis/bin/"
 
 
-From:
+   From:
 
-.. code-block:: apache
+   .. code-block:: apache
 
     <Directory "C:/xampp/cgi-bin">
         AllowOverride None
@@ -691,9 +691,9 @@ From:
     </Directory>
 
 
-To:
+   To:
 
-.. code-block:: apache
+   .. code-block:: apache
 
     <Directory "C:/OSGeo4W64/apps/qgis/bin">
         SetHandler cgi-script
@@ -705,23 +705,23 @@ To:
     </Directory>
 
 
-From:
+   From:
 
-.. code-block:: apache
+   .. code-block:: apache
 
     AddHandler cgi-script .cgi .pl .asp
 
 
-To:
+   To:
 
-.. code-block:: apache
+   .. code-block:: apache
 
     AddHandler cgi-script .cgi .pl .asp .exe
 
 
-Then at the bottom of httpd.conf add:
+#. Then at the bottom of httpd.conf add:
 
-.. code-block:: apache
+   .. code-block:: apache
 
     SetEnv GDAL_DATA "C:\OSGeo4W64\share\gdal"
     SetEnv QGIS_AUTH_DB_DIR_PATH "C:\OSGeo4W64\apps\qgis\resources"
@@ -731,12 +731,12 @@ Then at the bottom of httpd.conf add:
     SetEnv QT_PLUGIN_PATH "C:\OSGeo4W64\apps\qgis\qtplugins;C:\OSGeo4W64\apps\Qt5\plugins"
 
 
-Restart the Apache web server from the XAMPP Control Panel and open browser window to testing
-a GetCapabilities request to QGIS Server
+#. Restart the Apache web server from the XAMPP Control Panel and open browser window to testing
+   a GetCapabilities request to QGIS Server
 
-::
+   ::
 
- http://localhost/cgi-bin/qgis_mapserv.fcgi.exe?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+    http://localhost/cgi-bin/qgis_mapserv.fcgi.exe?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
 
 
 Serve a project
