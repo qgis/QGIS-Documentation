@@ -1,29 +1,47 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
+# Harrissou Sant-anna, 2020
+# tomoyuki arai <tarai.3367@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:29+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"PO-Revision-Date: 2020-12-24 10:26+0000\n"
+"Last-Translator: tomoyuki arai <tarai.3367@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:2
 msgid "Database"
 msgstr "データベース"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:13
+msgid "Export to PostgreSQL"
+msgstr "PostGISへエクスポート"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:14
+msgid ""
+"Exports a vector layer to a PostgreSQL database, creating a new relation. If"
+" a relation with the same name exists, it can be removed before the new "
+"relation is created. Prior to this a connection between QGIS and the "
+"PostgreSQL database has to be created (see eg "
+":ref:`vector_create_stored_connection`)."
+msgstr ""
+"ベクタレイヤをPostgreSQLデータベースにインポートし、テーブルを作成します。同じ名前のテーブルがある場合には、新たなテーブルを作成する前に、このテーブルは削除されます。これを使用する前に、QGISとPostgreSQLデータベース間の接続を作成（"
+" :ref:`vector_create_stored_connection` 参照）しておく必要があります。"
 
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:22
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:151
@@ -32,7 +50,7 @@ msgstr "データベース"
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:439
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:493
 msgid "Parameters"
-msgstr "パラメーター"
+msgstr "パラメータ"
 
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:29
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:158
@@ -65,7 +83,7 @@ msgstr "名前"
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:447
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:501
 msgid "Type"
-msgstr "タイプ"
+msgstr "データ型"
 
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:32
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:161
@@ -78,11 +96,296 @@ msgstr "タイプ"
 msgid "Description"
 msgstr "説明"
 
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:33
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:162
+msgid "**Layer to import**"
+msgstr "**インポートするレイヤ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:34
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:163
+msgid "``INPUT``"
+msgstr "``INPUT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:35
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:164
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:168
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:407
+msgid "[vector: any]"
+msgstr "[ベクタ：任意]"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:36
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:165
+msgid "Vector layer to add to the database"
+msgstr "データベースに追加したいベクタレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:37
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:368
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:450
+msgid "**Database (connection name)**"
+msgstr "**データベース（接続名）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:38
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:167
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:369
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:451
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:505
+msgid "``DATABASE``"
+msgstr "``DATABASE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:39
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:46
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:55
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:71
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:82
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:174
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:187
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:198
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:370
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:375
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:380
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:388
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:452
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:457
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:512
+msgid "[string]"
+msgstr "[文字列]"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:40
+msgid ""
+"Name of the database connection (not the database name). Existing "
+"connections will be shown in the combobox."
+msgstr "データベース接続の名前（データベース名ではありません）。既存の接続がコンボボックスに表示されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:42
+msgid "**Schema (schema name)**"
+msgstr "**スキーマ（スキーマ名）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:44
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:53
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:62
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:80
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:172
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:181
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:196
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:386
+msgid "Optional"
+msgstr "オプション"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:45
+msgid "``SCHEMA``"
+msgstr "``SCHEMA``"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:48
+msgid "Default: 'public'"
+msgstr "デフォルト： 'public'"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:49
+msgid ""
+"Name of the schema to store the data. It can be a new one or already exist."
+msgstr "データを保存するスキーマの名前。新しいスキーマ、既存のスキーマのいずれも可能です。"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:51
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:170
+msgid "**Table to import to (leave blank to use layer name)**"
+msgstr "**インポートするテーブル（空白の場合、レイヤ名が使われます）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:54
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:173
+msgid "``TABLENAME``"
+msgstr "``TABLENAME``"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:57
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:176
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:514
+msgid "Default: ''"
+msgstr "デフォルト： ''"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:58
+msgid ""
+"Defines a table name for the imported vector file. If nothing is added, the "
+"layer name will be used."
+msgstr "インポートするベクタファイルのテーブル名を定義します。何も指定しない場合は、レイヤ名が使用されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:60
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:179
+msgid "**Primary key field**"
+msgstr "**主キーの属性（フィールド）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:63
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:182
+msgid "``PRIMARY_KEY``"
+msgstr "``PRIMARY_KEY``"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:64
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:183
+msgid "[tablefield: any]"
+msgstr "[テーブルのフィールド：任意]"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:65
+msgid ""
+"Sets the primary key field from an existing field in the vector layer. A "
+"column with **unique** values can be used as Primary key for the database."
+msgstr ""
+"ベクタレイヤの既存のフィールドから、主キーのフィールドを設定します。 **一意な** "
+"値を持つカラムが、データベースの主キーとして使用することができます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:69
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:185
+msgid "**Geometry column**"
+msgstr "**ジオメトリのカラム**"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:70
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:186
+msgid "``GEOMETRY_COLUMN``"
+msgstr "``GEOMETRY_COLUMN``"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:73
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:189
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:390
+msgid "Default: 'geom'"
+msgstr "デフォルト： 'geom'"
+
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:74
 msgid ""
 "Defines the name of the geometry column in the new PostGIS table. Geometry "
 "information for the features is stored in this column."
-msgstr "新しいPostGISのテーブルのジオメトリ列の名前を定義します。地物のジオメトリ情報は、この列に格納されています。"
+msgstr "新しいPostGISのテーブルのジオメトリカラムの名前を定義します。地物のジオメトリ情報は、このカラムに格納されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:78
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:194
+msgid "**Encoding**"
+msgstr "**文字コード**"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:81
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:197
+msgid "``ENCODING``"
+msgstr "``ENCODING``"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:84
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:200
+msgid "Default: 'UTF-8'"
+msgstr "デフォルト： 'UTF-8'"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:85
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:201
+msgid "Defines the encoding of the output layer"
+msgstr "出力レイヤの文字コードを定義します"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:86
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:202
+msgid "**Overwrite**"
+msgstr "**上書き**"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:87
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:203
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:290
+msgid "``OVERWRITE``"
+msgstr "``OVERWRITE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:88
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:99
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:105
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:112
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:119
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:204
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:216
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:222
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:229
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:236
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:291
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:300
+msgid "[boolean]"
+msgstr "[ブール値]"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:90
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:101
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:107
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:206
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:218
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:224
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:302
+msgid "Default: True"
+msgstr "デフォルト： True"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:91
+msgid ""
+"If the specified table exists, setting this option to ``True`` will make "
+"sure that it is deleted and a new table will be created before the features "
+"are added. If this option is ``False`` and the table exists, the algorithm "
+"will throw an exception (\"relation already exists\")."
+msgstr ""
+"指定されたテーブルが存在する場合、このオプションを ``True`` "
+"とすると、そのテーブルは削除され、地物を追加する前に新しいテーブルが作成されます。このオプションが ``False`` "
+"でテーブルが既に存在する場合、このアルゴリズムは例外（\"relation already exists\"）を投げます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:97
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:214
+msgid "**Create spatial index**"
+msgstr "**空間インデックスを作成**"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:98
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:215
+msgid "``CREATEINDEX``"
+msgstr "``CREATEINDEX``"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:102
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:219
+msgid "Specifies whether to create a spatial index or not"
+msgstr "空間インデックスを作成するかどうかを指定します"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:103
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:220
+msgid "**Convert field names to lowercase**"
+msgstr "**フィールド名を小文字に変換**"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:104
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:221
+msgid "``LOWERCASE_NAMES``"
+msgstr "``LOWERCASE_NAMES``"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:108
+msgid "Converts the field names of the input vector layer to lowercase"
+msgstr "入力ベクタレイヤのフィールド名を小文字に変換します"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:110
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:227
+msgid "**Drop length constraint on character fields**"
+msgstr "**文字フィールドの長さ制約を解く**"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:111
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:228
+msgid "``DROP_STRING_LENGTH``"
+msgstr "``DROP_STRING_LENGTH``"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:114
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:121
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:231
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:238
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:293
+msgid "Default: False"
+msgstr "デフォルト： False"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:115
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:232
+msgid "Should length constraints on character fields be dropped or not"
+msgstr "文字フィールドの長さ制限をなくすべきかどうか"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:117
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:234
+msgid "**Create single-part geometries instead of multi-part**"
+msgstr "**マルチパートの代わりにシングルパートのジオメトリを作る**"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:118
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:235
+msgid "``FORCE_SINGLEPART``"
+msgstr "``FORCE_SINGLEPART``"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:122
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:239
+msgid ""
+"Should the features of the output layer be single-part instead of multi-"
+"part. By default the existing geometries information are preserved."
+msgstr "出力レイヤの地物をマルチパートではなくシングルパートとするかどうか。デフォルトでは、既存のジオメトリ情報が保持されます。"
 
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:128
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:245
@@ -92,3 +395,372 @@ msgstr "新しいPostGISのテーブルのジオメトリ列の名前を定義�
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:519
 msgid "Outputs"
 msgstr "出力"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:130
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:247
+msgid "The algorithm has no output."
+msgstr "このアルゴリズムには出力はありません。"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:133
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:250
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:328
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:411
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:468
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:525
+msgid "Python code"
+msgstr "Python コード"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:135
+msgid "**Algorithm ID**: ``qgis:importintopostgis``"
+msgstr "**アルゴリズムID**: ``qgis:importintopostgis``"
+
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+msgid ""
+"The *algorithm id* is displayed when you hover over the algorithm in the "
+"Processing Toolbox. The *parameter dictionary* provides the parameter NAMEs "
+"and values. See :ref:`processing_console` for details on how to run "
+"processing algorithms from the Python console."
+msgstr ""
+"*algorithm id* は、プロセシングツールボックス内でアルゴリズムにマウスカーソルを乗せた際に表示されるIDです。 *parameter "
+"dictionary* は、パラメータの「名前」とその値を指定するマッピング型です。Python "
+"コンソールからプロセシングアルゴリズムを実行する方法の詳細については、 :ref:`processing_console` を参照してください。"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:145
+msgid "Export to SpatiaLite"
+msgstr "SpatiaLiteへエクスポート"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:146
+msgid ""
+"Exports a vector layer to a SpatiaLite database. Prior to this a connection "
+"between QGIS and the SpatiaLite database has to be created (see eg "
+":ref:`label_spatialite`)."
+msgstr ""
+"ベクタレイヤをSpatiaLiteデータベースにインポートします。これを使用する前に、QGISとSpatiaLiteデータベース間の接続を作成（ "
+":ref:`label_spatialite` 参照）しておく必要があります。"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:166
+msgid "**File database**"
+msgstr "**データベースのファイル**"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:169
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:509
+msgid "The SQLite/SpatiaLite database file to connect to"
+msgstr "接続するSQLiteまたはSpatiaLiteデータベースファイル"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:177
+msgid ""
+"Defines the table name for the imported vector file. If nothing is "
+"specified, the layer name will be used."
+msgstr "インポートするベクタファイルのテーブル名を定義します。何も指定しない場合は、レイヤ名が使用されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:184
+msgid "Use a field in the input vector layer as the primary key"
+msgstr "入力ベクタレイヤのフィールドを主キーとして使用します"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:190
+msgid ""
+"Defines the name of the geometry column in the new SpatiaLite table. "
+"Geometry information for the features is stored in this column."
+msgstr "新しいSpatiaLiteのテーブルのジオメトリカラムの名前を定義します。地物のジオメトリ情報は、このカラムに格納されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:207
+msgid ""
+"If the specified table exists, setting this option to ``True`` will make "
+"sure that it is deleted and a new table will be created before the features "
+"of the layer is added. If this option is ``False`` and the table exists, the"
+" algorithm will throw an exception (\"table already exists\")."
+msgstr ""
+"指定されたテーブルが存在する場合、このオプションを ``True`` "
+"とすると、そのテーブルは削除され、地物のレイヤを追加する前に新しいテーブルが作成されます。このオプションが ``False`` "
+"でテーブルが既に存在する場合、このアルゴリズムは例外（\"table already exists\"）を投げます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:225
+msgid "Convert the field names of the input vector layer to lowercase"
+msgstr "入力ベクタレイヤのフィールド名を小文字に変換します"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:252
+msgid "**Algorithm ID**: ``qgis:importintospatialite``"
+msgstr "**アルゴリズムID**: ``qgis:importintospatialite``"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:262
+msgid "Package layers"
+msgstr "レイヤをGeoPackage化"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:263
+msgid "Adds layers to a GeoPackage."
+msgstr "レイヤをGeoPackageに追加します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:265
+msgid ""
+"If the GeoPackage exists and ``Overwrite existing GeoPackage`` is checked, "
+"it will be overwritten (removed and recreated). If the GeoPackage exists and"
+" ``Overwrite existing GeoPackage`` is not checked, the layer will be "
+"appended."
+msgstr ""
+"GeoPackageが既に存在し、 ``既存のGeoPackageを上書きする`` "
+"にチェックを入れている場合には、これを上書き（削除してから再度作成）します。GeoPackageが既に存在し、 "
+"``既存のGeoPackageを上書きする`` にチェックを入れていない場合には、レイヤが追加されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:281
+msgid "**Input layers**"
+msgstr "**入力レイヤ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:282
+msgid "``LAYERS``"
+msgstr "``LAYERS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:283
+msgid "[vector: any] [list]"
+msgstr "[ベクタ：任意] [リスト]"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:284
+msgid ""
+"The (vector) layers to import into the GeoPackage. Raster layers are not "
+"supported. If a raster layer is added, a :class:`QgsProcessingException "
+"<qgis.core.QgsProcessingException>` will be thrown."
+msgstr ""
+"GeoPackageにインポートする（ベクタ）レイヤ。ラスタレイヤはサポートしていません。ラスタレイヤを追加した場合には、 "
+":class:`QgsProcessingException <qgis.core.QgsProcessingException>` 例外が発生します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:289
+msgid "**Overwrite existing GeoPackage**"
+msgstr "**既存のGeoPackageを上書きする**"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:294
+msgid ""
+"If the specified GeoPackage exists, setting this option to ``True`` will "
+"make sure that it is deleted and a new one will be created before the layers"
+" are added. If set to ``False``, layers will be appended."
+msgstr ""
+"指定されたGeoPackageが存在する場合、このオプションを ``True`` "
+"とすると、そのGeoPackageは削除され、レイヤを追加する前に新しいGeoPackageが作成されます。オプションを ``False`` "
+"に設定した場合、レイヤは追加されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:298
+msgid "**Save layer styles into GeoPackage**"
+msgstr "**レイヤスタイルをGeoPackageに保存**"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:299
+msgid "``SAVE_STYLES``"
+msgstr "``SAVE_STYLES``"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:303
+msgid "Save the layer styles"
+msgstr "レイヤのスタイルを保存します"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:304
+msgid "**Destination GeoPackage**"
+msgstr "**GeoPackageのファイル名**"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:305
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:406
+msgid "``OUTPUT``"
+msgstr "``OUTPUT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:306
+msgid "[file]"
+msgstr "[ファイル]"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:307
+msgid "If not specified the GeoPackage will be saved in the temporary folder."
+msgstr "指定しない場合、GeoPackageは一時ファイルに保存されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:322
+msgid "**Layers within new package**"
+msgstr "**新しいGeoPackageのレイヤ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:323
+msgid "``OUTPUT_LAYERS``"
+msgstr "``OUTPUT_LAYERS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:324
+msgid "[string] [list]"
+msgstr "[文字列] [リスト]"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:325
+msgid "The list of layers added to the GeoPackage."
+msgstr "GeoPackageに追加されたレイヤのリスト"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:330
+msgid "**Algorithm ID**: ``qgis:package``"
+msgstr "**アルゴリズムID**: ``qgis:package``"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:340
+msgid "PostgreSQL execute and load SQL"
+msgstr "PostGISから読み込み"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:342
+msgid ""
+"Allows a SQL database query to be performed on a PostgreSQL database "
+"connected to QGIS and loads the result. The algorithm **won't** create a new"
+" layer: it is designed to run queries on the layer itself."
+msgstr ""
+"QGISに接続するPostgreSQLデータベース上でSQLデータベースクエリを実行し、結果をロードします。このアルゴリズムは、新しいレイヤを作成 "
+"**しません** 。レイヤ自体に対してクエリを実行するように設計されています。"
+
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:6
+msgid "**Example**"
+msgstr "**例**"
+
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:8
+msgid ""
+"Set all the values of an existing field to a fixed value. The SQL query "
+"string will be:"
+msgstr "ある既存のフィールドのすべての値を固定値に設定します。SQLクエリ文字列は次のようになります："
+
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:15
+msgid ""
+"In the example above, the values of the field ``field_to_update`` of the "
+"table ``your_table`` will be all set to ``20``."
+msgstr ""
+"上の例では、 ``your_table`` テーブルの ``field_to_update`` フィールドの値が全て ``20`` に設定されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:18
+msgid ""
+"Create a new ``area`` column and calculate the area of each feature with the"
+" ``ST_AREA`` PostGIS function."
+msgstr "新しい ``area`` カラムを作成し、PostGIS関数の ``ST_AREA`` を使用して各地物の面積を計算します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:353
+msgid ""
+":ref:`qgispostgisexecutesql`, :ref:`qgisexecutesql`, "
+":ref:`qgisspatialiteexecutesql`"
+msgstr ""
+":ref:`qgispostgisexecutesql` 、 :ref:`qgisexecutesql` 、 "
+":ref:`qgisspatialiteexecutesql`"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:371
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:453
+msgid ""
+"The database connection (not the database name). Existing connections will "
+"be shown in the combobox."
+msgstr "データベース接続の名前（データベース名ではありません）。既存の接続がコンボボックスに表示されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:373
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:455
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:510
+msgid "**SQL query**"
+msgstr "**SQLクエリ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:374
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:456
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:511
+msgid "``SQL``"
+msgstr "``SQL``"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:376
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:458
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:515
+msgid "Defines the SQL query, for example ``'UPDATE my_table SET field=10'``."
+msgstr "例えば、 ``'UPDATE my_table SET field=10'`` のようにSQLクエリを定義します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:378
+msgid "**Unique ID field name**"
+msgstr "**一意のIDのフィールド名**"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:379
+msgid "``ID_FIELD``"
+msgstr "``ID_FIELD``"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:382
+msgid "Default: id"
+msgstr "デフォルト： id"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:383
+msgid "Sets the primary key field (a column in the result table)"
+msgstr "主キーのフィールド（結果のテーブルのカラム）を設定します"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:384
+msgid "**Geometry field name**"
+msgstr "**ジオメトリのフィールド名**"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:387
+msgid "``GEOMETRY_FIELD``"
+msgstr "``GEOMETRY_FIELD``"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:391
+msgid "Name of the geometry column (a column in the result table)"
+msgstr "ジオメトリカラムの名前（結果テーブルのカラム）"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:405
+msgid "**SQL layer**"
+msgstr "**SQLレイヤ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:408
+msgid "The resulting vector layer to be loaded into QGIS."
+msgstr "QGISに読み込まれるベクタレイヤの結果"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:413
+msgid "**Algorithm ID**: ``qgis:postgisexecuteandloadsql``"
+msgstr "**アルゴリズムID**: ``qgis:postgisexecuteandloadsql``"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:423
+msgid "PostgreSQL execute SQL"
+msgstr "PostgreSQLでSQLを実行"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:425
+msgid ""
+"Allows a SQL database query to be performed on a PostgreSQL database "
+"connected to QGIS. The algorithm **won't** create a new layer: it is "
+"designed to run queries on the layer itself."
+msgstr ""
+"QGISに接続するPostgreSQLデータベース上でSQLデータベースクエリを実行します。このアルゴリズムは、新しいレイヤを作成 **しません** "
+"。レイヤ自体に対してクエリを実行するように設計されています。"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:434
+msgid ""
+":ref:`qgispostgisexecuteandloadsql`, :ref:`qgisexecutesql`, "
+":ref:`qgisspatialiteexecutesql`"
+msgstr ""
+":ref:`qgispostgisexecuteandloadsql` 、 :ref:`qgisexecutesql` 、 "
+":ref:`qgisspatialiteexecutesql`"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:464
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:521
+msgid "No output is created. The SQL query is executed in place."
+msgstr "出力は作成されません。SQLクエリがテーブルに対して実行されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:470
+msgid "**Algorithm ID**: ``qgis:postgisexecutesql``"
+msgstr "**アルゴリズムID**: ``qgis:postgisexecutesql``"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:480
+msgid "SpatiaLite execute SQL"
+msgstr "SpatiaLiteでSQLを実行"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:482
+msgid ""
+"Allows a SQL database query to be performed on a SpatiaLite database "
+"connected to QGIS. The algorithm **won't** create a new layer: it is "
+"designed to run queries on the layer itself."
+msgstr ""
+"QGISに接続するSpatiaLiteデータベース上でSQLデータベースクエリを実行します。このアルゴリズムは、新しいレイヤを作成 **しません** "
+"。レイヤ自体に対してクエリを実行するように設計されています。"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:487
+msgid ":ref:`qgispostgisexecutesql`, :ref:`qgisexecutesql`"
+msgstr ":ref:`qgispostgisexecutesql` 、 :ref:`qgisexecutesql`"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:489
+msgid ""
+"For some SQL query examples see :ref:`PostGIS SQL Query Examples "
+"<qgis_postgis_execute_sql_example>`."
+msgstr ""
+"SQLクエリの例については、 :ref:`PostGISにおけるSQLクエリの例 <qgis_postgis_execute_sql_example>`"
+" を参照してください。"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:504
+msgid "**File Database**"
+msgstr "**データベースのファイル**"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:506
+msgid "[vector]"
+msgstr "[ベクタ]"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:508
+msgid "Default: not set"
+msgstr "デフォルト：未設定"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:527
+msgid "**Algorithm ID**: ``qgis:spatialiteexecutesql``"
+msgstr "**アルゴリズムID**: ``qgis:spatialiteexecutesql``"
