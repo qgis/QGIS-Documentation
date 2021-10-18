@@ -3215,6 +3215,8 @@ to ensure the quality of digitized geometries.
 
    The QGIS Digitizing tab in the vector layers properties dialog
 
+.. _snap_to_grid:
+
 Automatic Fixes
 ---------------
 
@@ -3226,6 +3228,13 @@ If the :guilabel:`Geometry precision` is set, all vertices will be rounded to
 the closest multiple of the configured geometry precision. The rounding will
 happen in the layer coordinate reference system. Z and M values are not
 rounded. With many map tools, a grid is shown on the canvas while digitizing.
+
+.. _figure_snap_to_grid:
+
+.. figure:: img/vertex_snap_to_grid.png
+   :align: center
+
+   Moving the top vertex snaps all the vertices to the grid
 
 Geometry Checks
 ---------------

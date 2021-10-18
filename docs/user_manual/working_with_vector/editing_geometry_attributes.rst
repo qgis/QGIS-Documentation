@@ -470,24 +470,26 @@ features into the current layer.
 
 To add a geometryless feature, click on the |newTableRow| :sup:`Add Record`
 button and you can enter attributes in the feature form that opens.
+
 To create features with the spatially enabled tools, you first digitize the
 geometry then enter its attributes. To digitize the geometry:
 
 #. Left-click on the map area to create the first point of your new feature.
    For point features, this should be enough and trigger, if required,
-   the feature form to fill in their attributes. Having set the
-   :ref:`geometry precision <digitizingmenu>` in the layer properties
-   you can use :ref:`snap to grid <snap_to_grid>` here to create features
-   based on a regular distance.
+   the feature form to fill in their attributes.
 #. For line or polygon geometries, keep on left-clicking for each additional
-   point you wish to capture or use :ref:`automatic tracing <tracing>`
-   capability to accelerate the digitization.
-   This will create consecutive straight lines between the vertices you
-   place.
+   point you wish to capture.
+   You can rely on the :ref:`snapping to features <snapping_options>` options,
+   the :ref:`snap-to-grid <snap_to_grid>` or the :ref:`advanced digitizing
+   <advanced_digitizing_panel>` panel to accurately position each vertex.
 
-   Along with placing nodes clik by click, lines and polygons can be free-hand
-   digitized, pressing :kbd:`R` or activating |streamingDigitize|
-   :sup:`Stream digitizing` in the :guilabel:`Advanced Digitizing Toolbar`.
+   Along with placing nodes clik by click, lines and polygons can be:
+
+   * :ref:`traced automatically <tracing>`, accelerating the digitization.
+     This will create consecutive straight lines between the vertices you
+     place.
+   * free-hand digitized, pressing :kbd:`R` or activating |streamingDigitize|
+     :sup:`Stream digitizing` in the :guilabel:`Advanced Digitizing Toolbar`.
 
    .. note::
     Pressing :kbd:`Delete` or :kbd:`Backspace` key reverts the last
@@ -513,9 +515,9 @@ geometry then enter its attributes. To digitize the geometry:
 #. For line feature pressing :kbd:`Shift` + right-click will close the line automatically.
 
 #. The attribute window will appear, allowing you to enter the information for
-   the new feature. :numref:`Figure_edit_values` shows setting attributes for a fictitious
-   new river in Alaska. However, in the :guilabel:`Digitizing` menu under the
-   :menuselection:`Settings --> Options` menu, you can also activate:
+   the new feature. :numref:`Figure_edit_values` shows setting attributes for
+   a fictitious new river. However, in the :guilabel:`Digitizing` menu under the
+   :menuselection:`Settings --> Options` menu, you can also:
 
    * |checkbox| :guilabel:`Suppress attributes pop-up windows after
      each created feature` to avoid the form opening;
@@ -537,23 +539,22 @@ geometry then enter its attributes. To digitize the geometry:
 Vertex tool
 -----------
 
-.. note:: **QGIS 3 major changes**
+QGIS provides two tools to interact with vector features vertices:
 
-    In QGIS 3, the node tool has been fully redesigned and renamed to *vertex tool*.
-    It was previously
-    working with "click and drag" ergonomy, and now uses a "click - click"
-    workflow. This allows major improvements like taking profit of the advanced
-    digitizing panel with the vertex tool while digitizing or editing objects of
-    multiple layers at the same time.
+* |vertexToolActiveLayer| :sup:`Vertex Tool (Current Layer)`: only
+  overlaid features in the active layer (in the :guilabel:`Layers`
+  panel) are affected
+* |vertexTool| :sup:`Vertex Tool (All Layers)`: any overlaid features
+  in all editable layers are affected. This allows you to edit features
+  without switching the active layer or edit multiple layers at once
+  (e.g., country and their regions boundaries)
 
-
-For any editable vector layer, the
-|vertexToolActiveLayer| :sup:`Vertex tool (Current Layer)` provides manipulation
+For any editable vector layer, the vertex tools provide manipulation
 capabilities of
-feature vertices similar to CAD programs. It is possible to simply select
+feature vertices similar to CAD programs. It is possible to select
 multiple vertices at once and to move, add or delete them altogether.
-The vertex tool also supports
-the topological editing feature. This tool is selection persistent, so when some
+The vertex tools also support the topological editing feature.
+They are selection persistent, so when some
 operation is done, selection stays active for this feature and tool.
 
 It is important to set the property :menuselection:`Settings -->` |options|
@@ -565,7 +566,7 @@ not be able to tell which vertex is being edited and will display a warning.
 
 .. tip:: **Vertex Markers**
 
-   The current version of QGIS supports three kinds of vertex markers:
+   QGIS supports different kinds of vertex markers:
    'Semi-transparent circle', 'Cross' and 'None'. To change the marker style,
    choose |options| :menuselection:`Options` from the
    :menuselection:`Settings` menu, click on the :guilabel:`Digitizing`
@@ -576,15 +577,37 @@ Basic operations
 
 .. index:: Nodes, Vertices, Vertex, Geometryless feature
 
-Start by activating the |vertexToolActiveLayer| :sup:`Vertex Tool (Current Layer)`.
+Given a layer in edit mode, start by activating the vertex tool.
 Red circles will appear when hovering vertices.
 
-* **Selecting vertices**: You can select vertices by clicking on them one
-  at a time holding :kbd:`Shift` key pressed, or by clicking and dragging a
-  rectangle around some vertices. When a vertex is selected, its color changes
-  to blue. To add more vertices to the current selection, hold down
-  the :kbd:`Shift` key while clicking. To remove vertices from the selection,
-  hold down :kbd:`Ctrl`.
+* **Selecting vertices**: You can select vertices by:
+
+  * Clicking on them one at a time holding :kbd:`Shift` key pressed
+  * Click-and-dragging a rectangle surrounding the target vertices
+  * Drawing a polygon surrounding the target vertices: Hold :kbd:`Alt`
+    and click using the vertex tool to start digitizing a polygon.
+    Each subsequent click adds a new vertex to the rubberband polygon.
+    :kbd:`Backspace` or :kbd:`Delete` removes last added rubberband vertex.
+    :kbd:`Esc` cancels the polygon selection mode, as also does
+    backspacing/deleting all of the rubberband's vertices.
+    Right click finalizes the polygon digitizing and selects all vertices
+    within the rubberband polygon.
+
+  When a vertex is selected, its color changes to blue.
+  To add more vertices to the current selection, hold down
+  the :kbd:`Shift` key while proceeding as above.
+  To remove vertices from the selection, hold down :kbd:`Ctrl`.
+
+  .. tip:: **Feature selection bounds vertex tool**
+
+    Vertices can be selected accross different features (or layers).
+    If you are looking for vertices of a specific feature in a crowded place,
+    first select that feature. Then draw the rectangle or polygon selector
+    with the vertex tool around the vertices: only the selected feature's
+    vertices are selected.
+
+    This is also the case if you display the feature in the
+    :ref:`vertex editor <vertex_editor_panel>` panel.
 
 * **Batch vertex selection mode**:
   The batch selection mode can be activated by pressing :kbd:`Shift+R`.
@@ -605,15 +628,14 @@ Red circles will appear when hovering vertices.
   Ending your node selection with a second click, or pressing :kbd:`Esc`
   will escape the batch mode.
 
-* **Adding vertices**: To add a vertex, a virtual new node appears on
-  the segment center.
-  Simply grab it to add a new vertex.
-  A double-click on any location of the boundary also creates a new
-  node.
-  For lines, a virtual node is also proposed at both extremities of a
-  line to extend it. When adding a node at the end of a line the function
-  will remain active until a right-click. This allows to easily extend an
-  existing line.
+* **Adding vertices**: To add a vertex to a line or polygon geometry,
+  hold :kbd:`Shift` and double-click the place on the segment.
+
+  When hovering a segment, a virtual new node appears on the center.
+  Click on it, move the cursor to a new location and click again to add a new vertex.
+  For lines, a virtual node is also proposed at both extremities: click on it,
+  do subsequent clicks and finish with a right-click; this allows
+  to easily extend an existing line.
 
   .. _figure_vertex_add_node:
 
@@ -631,61 +653,49 @@ Red circles will appear when hovering vertices.
   :sup:`Delete Selected` tool.
 
 * **Moving vertices**: Select all the vertices you want to move, click
-  on a selected vertex or edge, and click again on the desired new
-  location.
-  All the selected vertices will move together. If snapping is enabled,
-  the whole selection can jump to the nearest vertex or line.
-  You can use Advanced Digitizing Panel constraints for distance,
-  angles, exact X Y location before the second click.
+  on a selected vertex or edge, and click on the desired new location.
+  You can use the :ref:`snapping to feature capabilities <snapping_options>`
+  and the :ref:`Advanced Digitizing Panel <advanced_digitizing_panel>`
+  constraints for distance, angles, exact X and Y location before
+  the second click. All the selected vertices will be translated.
 
-  .. _snap_to_grid:
-
-  Here you can use the snap-to-grid feature. Having set a value for the
-  :ref:`geometry precision <digitizingmenu>` in the layer properties,
-  a grid appears on a zoom level according to the Geometry precision.
+  However, if the :ref:`snap-to-grid <snap_to_grid>` option is enabled,
+  selected vertices are snapped to the closest grid intersection to their
+  translated position.
+  Unselected vertices are also moved to their closest grid intersection.
+  There is no simple translation.
 
   .. _figure_vertex_snap_to_grid:
 
   .. figure:: img/vertex_snap_to_grid.png
      :align: center
 
-     Selecting a vertex and moving the vertices to grid
+     Moving the top vertex snaps all the vertices to the grid
 
-Each change made with the vertex  is stored as a separate entry in the
+Each change made with the vertex tool is stored as a separate entry in the
 :guilabel:`Undo` dialog. Remember that all operations support
 topological editing when this is turned on.
-On-the-fly projection is also supported, and the vertex tool provides
-tooltips to identify a vertex by hovering the pointer over it.
+On-the-fly projection is also supported.
 
 .. index:: Vertex editor panel
+.. _vertex_editor_panel:
 
 The Vertex Editor Panel
 .......................
 
-When using the :guilabel:`Vertex tool` on a feature, it is possible to
-right click to open the :guilabel:`Vertex Editor` panel listing all the
+With enabling a vertex tool, you also open the :guilabel:`Vertex Editor` panel.
+Right-clicking over a feature fills the panel with the list of all the
 vertices of the feature with their :guilabel:`x`, :guilabel:`y`
 (:guilabel:`z`, :guilabel:`m` if applicable) coordinates and
 :guilabel:`r` (for the radius, in case of circular geometry).
-Simply select a row in the table does select the corresponding vertex
+The feature is also made exclusive for editing, meaning that the edit of
+any other features is disabled: new vertices can only be added to the bound
+feature, selecting and moving of vertices and segments
+by clicking or dragging the map canvas is only possible for that feature.
+Also, select a row in the table does select the corresponding vertex
 in the map canvas, and vice versa.
-Simply change a coordinate in the table and your vertex position is
-updated.
+Change a coordinate in the table and the vertex position is updated.
 You can also select multiple rows and delete them altogether.
-
-.. note:: **Changed behavior in QGIS 3.4**
-
-   Right click on a feature will immediately show the vertex editor and
-   lock this feature, thus disabling the editing of any other features.
-   While being locked, a feature is exclusive for editing: Selecting
-   and moving of vertices and segments by clicking or dragging is only
-   possible for this feature.
-   New vertices can only be added to the locked feature.
-   Also, the vertex editor panel now opens itself automatically upon
-   activating the vertex tool, and its position/docked state remembered
-   across uses.
-
-
 
 .. _figure_edit_vertex:
 
