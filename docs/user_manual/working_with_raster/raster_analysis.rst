@@ -29,26 +29,43 @@ The results are written to a new raster layer in a GDAL-supported format.
    Raster Calculator
 
 
-The **Raster bands** list contains all loaded raster layers that can be used.
+The :guilabel:`Raster bands` list contains all loaded raster layers that can be used.
 To add a raster to the raster calculator expression field, double
 click its name in the Fields list. You can then use the operators to construct
 calculation expressions, or you can just type them into the box.
 
-In the **Result layer** section, you will need to define an output layer. You can
-then define the extent of the calculation area based on an input raster layer, or
-based on X,Y coordinates and on columns and rows, to set the resolution of the
-output layer. If the input layer has a different resolution, the values will be
-resampled with the nearest neighbor algorithm.
+In the :guilabel:`Result layer` section, you will need to define an output layer.
+You can:
 
-The **Operators** section contains all available operators. To add an operator
+* |checkbox| :guilabel:`Create on-the-fly raster instead of writing layer to disk`:
+
+  * If unchecked, the output is stored on the disk as a new plain file.
+    An :guilabel:`Output layer` path and an :guilabel:`Output format` are required.
+  * If checked, a virtual raster layer, i.e. a raster layer defined by its URI and
+    whose pixels are calculated on-the-fly, is created. It's not a new file on disk;
+    the virtual layer is still connected to the rasters used in the calculation
+    meaning that deleting or moving these rasters would break it.
+    A :guilabel:`Layer name` can be provided, otherwise the calculation expression
+    is used as such. Removing the virtual layer from the project deletes it,
+    and it can be made persistent in file using the layer
+    :menuselection:`Export --> Save as...` contextual menu.
+
+* Define the :guilabel:`Spatial extent` of the calculation based on an input
+  raster layer extent, or on custom X,Y coordinates
+* Set the :guilabel:`Resolution` of the layer using columns and rows number.
+  If the input layer has a different resolution, the values will be
+  resampled with the nearest neighbor algorithm.
+* With the |checkbox| :guilabel:`Add result to project` checkbox, the result layer
+  will automatically be added to the legend area and can be visualized.
+  Checked by default for virtual rasters.
+
+The :guilabel:`Operators` section contains all available operators. To add an operator
 to the raster calculator expression box, click the appropriate button. Mathematical
 calculations (``+``, ``-``, ``*``, ... ) and trigonometric functions (``sin``,
 ``cos``, ``tan``, ... ) are available. Conditional expressions (``=``, ``!=``,
 ``<``, ``>=``, ... ) return either 0 for false or 1 for true, and therefore can be
 used with other operators and functions.
 
-With the |checkbox| :guilabel:`Add result to project` checkbox, the result layer
-will automatically be added to the legend area and can be visualized.
 
 .. hint:: See also the :ref:`qgisrastercalculator` algorithm.
 
