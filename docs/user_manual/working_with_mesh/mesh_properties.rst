@@ -360,28 +360,28 @@ groups to generate a new dataset group (see :numref:`figure_mesh_calculator`).
 
    Mesh Calculator
 
-The :guilabel:`Datasets` list contains all dataset groups in loaded mesh layers
-that can be used. To use a dataset in an expression, double click its name in
+The :guilabel:`Datasets` list contains all dataset groups in the active mesh layer.
+To use a dataset group in an expression, double click its name in
 the list and it will be added to the :guilabel:`Mesh calculator expression` field.
 You can then use the operators to construct calculation expressions,
 or you can just type them into the box.
 
 The :guilabel:`Result Layer` helps you configure properties of the output layer:
 
-* The :guilabel:`Output Dataset` can be:
+* |checkbox| :guilabel:`Create on-the-fly dataset group instead of writing layer
+  to disk`:
 
-  * :guilabel:`On file`, meaning that the output is stored on disk as a new
-    plain file. An :guilabel:`Output File` path and :guilabel:`Output Format`
-    are required. Currently supported formats are ``DAT``, ``Flo2D``,
-    ``Selafin File`` and ``Binary DAT``.
-  * or :guilabel:`Virtual`: a new dataset group is added to the mesh layer.
+  * If unchecked, the output is stored on disk as a new plain file.
+    An :guilabel:`Output File` path and an :guilabel:`Output Format` are required.
+  * If checked, a new dataset group will be added to the mesh layer.
     Values of the dataset group are not stored in memory but each dataset
     is calculated when needed with the formula entered in the mesh calculator.
-    Those virtual dataset groups are saved with the project, and if needed,
-    they can be removed or made persistent in files from the layer
+    That virtual dataset group is saved with the project, and if needed,
+    it can be removed or made persistent in file from the layer
     :guilabel:`Source` properties tab.
 
-* :guilabel:`Group Name`: Name of the generated dataset group
+  In either case, you should provide a :guilabel:`Group Name` for the output
+  dataset group.
 * The :guilabel:`Spatial extent` to consider for calculation can be:
 
   * a :guilabel:`Custom extent`, manually filled with the :guilabel:`X min`,
