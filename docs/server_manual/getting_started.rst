@@ -17,30 +17,25 @@ We will give a short and simple installation how-to for
 a minimal working configuration on Debian based systems (including Ubuntu and derivatives). However, many other
 distributions and OSs provide packages for QGIS Server.
 
-Requirements and steps to add official QGIS repositories to install current QGIS Server on a Debian based system are
-provided in `QGIS installers page <https://qgis.org/en/site/forusers/alldownloads.html>`_.
-
 .. note:: In Ubuntu you can use your regular user, prepending ``sudo`` to
   commands requiring admin permissions. In Debian you can work as admin (``root``),
   without using ``sudo``.
 
-We strongly suggest installing the LTR version.
+Requirements and steps to add official QGIS repositories to install QGIS Server on a Debian based system are
+provided in `QGIS installers page <https://qgis.org/en/site/forusers/alldownloads.html>`_.
+You may want to install at least the latest Long Term Release.
 
-Once the chosen repository is configured, installation is simply done with:
-
-.. code-block:: bash
-
- apt install qgis-server --no-install-recommends --no-install-suggests
- # if you want to install server Python plugins, also:
- apt install python-qgis
-
-To test the installation, run:
+Once the target version repository is configured and QGIS Server installed,
+you can test the installation with:
 
 .. code-block:: bash
 
     /usr/lib/cgi-bin/qgis_mapserv.fcgi
  
-If you get the following output, the server is correctly installed
+If you get the following output, the server is correctly installed.
+
+.. note:: Depending on the version of QGIS, you might see slightly different output
+ reported when you run ``qgis_mapserv.fcgi``.
 
 .. code-block::
 
@@ -57,6 +52,31 @@ If you get the following output, the server is correctly installed
      <ServiceException code="Service configuration error">Service unknown or unsupported</ServiceException>
     </ServiceExceptionReport>
 
+.. note:: As seen below, QGIS reports a Status 400 code, which correctly
+  identifies the request has failed because there is no active http session.
+  This is not a bug and indicates the server is functioning properly.
+
+.. code-block::
+
+    Application path not initialized
+    Application path not initialized
+    Warning 1: Unable to find driver ECW to unload from GDAL_SKIP environment variable.
+    Warning 1: Unable to find driver ECW to unload from GDAL_SKIP environment variable.
+    Warning 1: Unable to find driver JP2ECW to unload from GDAL_SKIP environment variable.
+    "Loading native module /usr/lib/qgis/server/libdummy.so"
+    "Loading native module /usr/lib/qgis/server/liblandingpage.so"
+    "Loading native module /usr/lib/qgis/server/libwcs.so"
+    "Loading native module /usr/lib/qgis/server/libwfs.so"
+    "Loading native module /usr/lib/qgis/server/libwfs3.so"
+    "Loading native module /usr/lib/qgis/server/libwms.so"
+    "Loading native module /usr/lib/qgis/server/libwmts.so"
+    QFSFileEngine::open: No file name specified
+    Content-Length: 102
+    Content-Type: application/json
+    Server:  QGIS FCGI server - QGIS version 3.16.6-Hannover
+    Status:  400
+    [{"code":"Bad request error","description":"Requested URI does not match any registered API handler"}]
+
 Let's add a sample project. You can use your own, or one from
 `Training demo data <https://github.com/qgis/QGIS-Training-Data/>`_:
 
@@ -64,10 +84,10 @@ Let's add a sample project. You can use your own, or one from
   
     mkdir /home/qgis/projects/
     cd /home/qgis/projects/
-    wget https://github.com/qgis/QGIS-Training-Data/archive/v2.0.zip
-    unzip v2.0.zip
-    mv QGIS-Training-Data-2.0/exercise_data/qgis-server-tutorial-data/world.qgs .
-    mv QGIS-Training-Data-2.0/exercise_data/qgis-server-tutorial-data/naturalearth.sqlite .
+    wget https://github.com/qgis/QGIS-Training-Data/archive/release_3.16.zip
+    unzip release_3.16.zip
+    mv QGIS-Training-Data-release_3.16/exercise_data/qgis-server-tutorial-data/world.qgs .
+    mv QGIS-Training-Data-release_3.16/exercise_data/qgis-server-tutorial-data/naturalearth.sqlite .
   
 Of course, you can use your favorite GIS software to open this file and
 take a look at the configuration and available layers.
@@ -81,7 +101,7 @@ To properly deploy QGIS server you need a HTTP server. Recommended choices are *
 Apache HTTP Server
 ------------------
 
-.. note:: In the following, please replace ``localhost`` with the name or IP address of your server.
+.. note:: In the following, please replace ``qgis.demo`` with the name or IP address of your server.
 
 Install Apache and  `mod_fcgid <https://httpd.apache.org/mod_fcgid/mod/mod_fcgid.html>`_:
 
@@ -203,7 +223,7 @@ Replace ``127.0.0.1`` with the IP of your server.
 
 .. note::
 
-   Remember that both the :file:`myhost.conf` and :file:`/etc/hosts` files should
+   Remember that both the :file:`qgis.demo.conf` and :file:`/etc/hosts` files should
    be configured for your setup to work.
    You can also test the access to your QGIS Server from other clients on the
    network (e.g. Windows or macOS machines) by going to their :file:`/etc/hosts`
@@ -226,7 +246,7 @@ QGIS Server is now available at http://qgis.demo. To check, type in a browser, a
 NGINX HTTP Server
 -----------------
 
-.. note:: In the following, please replace ``localhost`` with the name or IP address of your server.
+.. note:: In the following, please replace ``qgis.demo`` with the name or IP address of your server.
 
 You can also use QGIS Server with `NGINX <https://nginx.org/>`_. Unlike Apache,
 NGINX does not automatically spawn FastCGI processes. The FastCGI processes are
@@ -348,7 +368,7 @@ have to manually start QGIS Server in your terminal:
                  -U www-data -G www-data -n \
                  /usr/lib/cgi-bin/qgis_mapserv.fcgi
 
-QGIS Server is now available at http://localhost/qgisserver.
+QGIS Server is now available at http://qgis.demo/qgisserver.
 
 .. note::
 
@@ -421,7 +441,7 @@ Finally, restart NGINX and **fcgiwrap** to take into account the new configurati
  systemctl restart nginx
  systemctl restart fcgiwrap
 
-QGIS Server is now available at http://localhost/qgisserver.
+QGIS Server is now available at http://qgis.demo/qgisserver.
 
 
 
@@ -709,7 +729,7 @@ A simple procedure is the following:
 
    ::
 
-    http://localhost/cgi-bin/qgis_mapserv.fcgi.exe?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+    http://qgis.demo/cgi-bin/qgis_mapserv.fcgi.exe?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
 
 
 Serve a project
@@ -739,7 +759,7 @@ like this in your web browser to retrieve the *countries* layer:
 
 .. code-block:: bash
 
-  http://localhost/qgisserver?
+  http://qgis.demo/qgisserver?
     MAP=/home/qgis/projects/world.qgs&
     LAYERS=countries&
     SERVICE=WMS&
