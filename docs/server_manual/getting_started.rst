@@ -23,6 +23,8 @@ distributions and OSs provide packages for QGIS Server.
 
 Requirements and steps to add official QGIS repositories to install QGIS Server on a Debian based system are
 provided in `QGIS installers page <https://qgis.org/en/site/forusers/alldownloads.html>`_.
+You may want to install at least the latest Long Term Release.
+
 Once the target version repository is configured and QGIS Server installed,
 you can test the installation with:
 
@@ -221,7 +223,7 @@ Replace ``127.0.0.1`` with the IP of your server.
 
 .. note::
 
-   Remember that both the :file:`myhost.conf` and :file:`/etc/hosts` files should
+   Remember that both the :file:`qgis.demo.conf` and :file:`/etc/hosts` files should
    be configured for your setup to work.
    You can also test the access to your QGIS Server from other clients on the
    network (e.g. Windows or macOS machines) by going to their :file:`/etc/hosts`
@@ -244,7 +246,7 @@ QGIS Server is now available at http://qgis.demo. To check, type in a browser, a
 NGINX HTTP Server
 -----------------
 
-.. note:: In the following, please replace ``localhost`` with the name or IP address of your server.
+.. note:: In the following, please replace ``qgis.demo`` with the name or IP address of your server.
 
 You can also use QGIS Server with `NGINX <https://nginx.org/>`_. Unlike Apache,
 NGINX does not automatically spawn FastCGI processes. The FastCGI processes are
@@ -366,7 +368,7 @@ have to manually start QGIS Server in your terminal:
                  -U www-data -G www-data -n \
                  /usr/lib/cgi-bin/qgis_mapserv.fcgi
 
-QGIS Server is now available at http://localhost/qgisserver.
+QGIS Server is now available at http://qgis.demo/qgisserver.
 
 .. note::
 
@@ -439,7 +441,7 @@ Finally, restart NGINX and **fcgiwrap** to take into account the new configurati
  systemctl restart nginx
  systemctl restart fcgiwrap
 
-QGIS Server is now available at http://localhost/qgisserver.
+QGIS Server is now available at http://qgis.demo/qgisserver.
 
 
 
@@ -727,7 +729,7 @@ a GetCapabilities request to QGIS Server
 
 ::
 
- http://localhost/cgi-bin/qgis_mapserv.fcgi.exe?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+ http://qgis.demo/cgi-bin/qgis_mapserv.fcgi.exe?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
 
 
 Serve a project
@@ -757,7 +759,7 @@ like this in your web browser to retrieve the *countries* layer:
 
 .. code-block:: bash
 
-  http://localhost/qgisserver?
+  http://qgis.demo/qgisserver?
     MAP=/home/qgis/projects/world.qgs&
     LAYERS=countries&
     SERVICE=WMS&
