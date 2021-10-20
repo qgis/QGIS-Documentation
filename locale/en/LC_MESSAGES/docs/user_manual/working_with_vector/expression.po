@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
+"POT-Creation-Date: 2021-10-20 02:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,7 +53,7 @@ msgstr ""
 msgid "clicking the |expression| button;"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:412
+#: ../../docs/user_manual/working_with_vector/expression.rst:423
 msgid "expression"
 msgstr ""
 
@@ -63,7 +63,7 @@ msgid ""
 ":sup:`Select By Expression...` tool;"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:414
+#: ../../docs/user_manual/working_with_vector/expression.rst:425
 msgid "expressionSelect"
 msgstr ""
 
@@ -73,7 +73,7 @@ msgid ""
 "|calculateField| :sup:`Field calculator` tool;"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:404
+#: ../../docs/user_manual/working_with_vector/expression.rst:415
 msgid "calculateField"
 msgstr ""
 
@@ -84,7 +84,7 @@ msgid ""
 ":ref:`data_defined`);"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:408
+#: ../../docs/user_manual/working_with_vector/expression.rst:419
 msgid "dataDefined"
 msgstr ""
 
@@ -181,7 +181,7 @@ msgstr ""
 msgid "|fileNew|:sup:`Clear the expression editor`"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:416
+#: ../../docs/user_manual/working_with_vector/expression.rst:427
 msgid "fileNew"
 msgstr ""
 
@@ -263,7 +263,7 @@ msgid ""
 "use` in the current field."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:406
+#: ../../docs/user_manual/working_with_vector/expression.rst:417
 msgid "checkbox"
 msgstr ""
 
@@ -423,7 +423,7 @@ msgid ""
 "user profile."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:418
+#: ../../docs/user_manual/working_with_vector/expression.rst:429
 msgid "fileSave"
 msgstr ""
 
@@ -446,7 +446,7 @@ msgid ""
 " well as their help and label"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:430
+#: ../../docs/user_manual/working_with_vector/expression.rst:441
 msgid "symbologyEdit"
 msgstr ""
 
@@ -454,7 +454,7 @@ msgstr ""
 msgid "|deleteSelected| :sup:`Remove selected expression from user expressions`"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:410
+#: ../../docs/user_manual/working_with_vector/expression.rst:421
 msgid "deleteSelected"
 msgstr ""
 
@@ -464,7 +464,7 @@ msgid ""
 " the active user profile folder"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:422
+#: ../../docs/user_manual/working_with_vector/expression.rst:433
 msgid "sharingImport"
 msgstr ""
 
@@ -475,7 +475,7 @@ msgid ""
 "shared"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:420
+#: ../../docs/user_manual/working_with_vector/expression.rst:431
 msgid "sharingExport"
 msgstr ""
 
@@ -503,7 +503,7 @@ msgstr ""
 msgid "Press the |signPlus| :sup:`New File` button."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:426
+#: ../../docs/user_manual/working_with_vector/expression.rst:437
 msgid "signPlus"
 msgstr ""
 
@@ -532,7 +532,7 @@ msgid ""
 ":guilabel:`Expression` tab, by default under the ``Custom`` group."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:428
+#: ../../docs/user_manual/working_with_vector/expression.rst:439
 msgid "start"
 msgstr ""
 
@@ -578,7 +578,7 @@ msgid ""
 " user profile folder."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:424
+#: ../../docs/user_manual/working_with_vector/expression.rst:435
 msgid "signMinus"
 msgstr ""
 
@@ -587,27 +587,53 @@ msgid "**Example**"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:358
-msgid "Here's a short example on how to create your own functions:"
-msgstr ""
-
-#: ../../docs/user_manual/working_with_vector/expression.rst:378
 msgid ""
-"The short example creates a function ``my_sum`` that will give you a "
-"function with two values. When using the ``args='auto'`` function "
-"argument the number of function arguments required will be calculated by "
-"the number of arguments the function has been defined with in Python "
-"(minus 2 - ``feature``, and ``parent``)."
+"Here's a short example on how to create your own ``my_sum`` function that"
+" will operate with two values."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:384
-msgid "This function can then be used in expressions:"
+#: ../../docs/user_manual/working_with_vector/expression.rst:379
+msgid ""
+"When using the ``args='auto'`` function argument the number of function "
+"arguments required will be calculated by the number of arguments the "
+"function has been defined with in Python (minus 2 - ``feature``, and "
+"``parent``). The ``group='Custom'`` argument indicates the group in which"
+" the function should be listed in the Expression dialog."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:391
+#: ../../docs/user_manual/working_with_vector/expression.rst:385
+msgid "It is also possible to add keywords arguments like:"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:387
+msgid ""
+"``usesgeometry=True`` if the expression requires access to the features "
+"geometry. By default :const:`False`."
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:389
+msgid ""
+"``handlesnull=True`` if the expression has custom handling for NULL "
+"values. If :const:`False` (default), the result will always be NULL as "
+"soon as any parameter is NULL."
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:392
+msgid ""
+"``referenced_columns=[list]``: An array of attribute names that are "
+"required to the function. Defaults to "
+"``[QgsFeatureRequest.ALL_ATTRIBUTES]``."
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:395
+msgid "The previous example function can then be used in expressions:"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:402
 msgid "Custom Function added to the Expression tab"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:394
+#: ../../docs/user_manual/working_with_vector/expression.rst:405
 msgid ""
 "Further information about creating Python code can be found in the :ref"
 ":`PyQGIS-Developer-Cookbook`."
