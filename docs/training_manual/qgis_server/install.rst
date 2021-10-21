@@ -39,27 +39,24 @@ been installed by running ``find / -name 'qgis_mapserv.fcgi'`` which
 should output something like ``/usr/lib/cgi-bin/qgis_mapserv.fcgi``.
 
 Optionally, if you want to do a command line test at this time you can run the
-``/usr/lib/cgi-bin/qgis_mapserv.fcgi`` command which should output something
+``/usr/lib/cgi-bin/qgis_mapserv.fcgi --version`` command which should output something
 like:
 
 ::
 
- QFSFileEngine::open: No file name specified
- Warning 1: Unable to find driver ECW to unload from GDAL_SKIP environment variable.
- Warning 1: Unable to find driver ECW to unload from GDAL_SKIP environment variable.
- Warning 1: Unable to find driver JP2ECW to unload from GDAL_SKIP environment variable.
- Warning 1: Unable to find driver ECW to unload from GDAL_SKIP environment variable.
- Warning 1: Unable to find driver JP2ECW to unload from GDAL_SKIP environment variable.
- Content-Length: 206
- Content-Type: text/xml; charset=utf-8
+ QGIS 3.21.0-Master 'Master' (1c70953f1e)
+ QGIS code revision 1c70953f1e
+ Qt version 5.15.2
+ Python version 3.9.5
+ GDAL/OGR version 3.2.2
+ PROJ version 7.2.1
+ EPSG Registry database version v10.008 (2020-12-16)
+ GEOS version 3.9.0-CAPI-1.16.2
+ SQLite version 3.34.1
+ OS Ubuntu 21.04
 
- <ServiceExceptionReport version="1.3.0" xmlns="https://www.opengis.net/ogc">
-  <ServiceException code="Service configuration error">Service unknown or unsupported</ServiceException>
- </ServiceExceptionReport>
 
-This is a good thing, it tells you we're on the right track as the server is
-saying that we haven't asked for a supported service. We'll see later on
-how to make WMS requests.
+We'll see later on how to make WMS requests.
 
 |hard| HTTP Server Configuration
 -------------------------------------------------------------------------------
