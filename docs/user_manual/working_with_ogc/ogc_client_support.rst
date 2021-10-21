@@ -304,9 +304,14 @@ You can define:
 * The :guilabel:`Feature limit for GetFeatureInfo` defines the maximum number
   of GetFeatureInfo results from the server.
 
-* If you select a WMS from the list, a field with the default projection provided
-  by the web server appears. Press the :guilabel:`Change...` button to replace
-  the default projection of the WMS with another CRS supported by the WMS server.
+* Each WMS layer can be presented in multiple CRSs, depending on the capability of
+  the WMS server. If you select a WMS from the list, a field with the default projection 
+  provided by the web server appears. Press the : |setProjection| :sup:`Select CRS` widget
+  to replace the default projection of the WMS with another CRS supported by the WMS server.
+
+* A dialog similar to the one shown in :numref:`figure_projection_custom` will appear.
+  The main difference with the WMS version of the dialog is that only
+  those CRSs supported by the WMS server will be shown.
 
 * Finally you can activate |checkbox| :guilabel:`Use contextual WMS Legend` if the
   WMS Server supports this feature. Then only the relevant legend for your current
@@ -343,27 +348,6 @@ The :guilabel:`Global transparency` setting from the
 .. index::
    single: WMS; Layer transparency
 
-.. tip:: **WMS Layer Transparency**
-
-  The availability of WMS image transparency depends on the image encoding
-  used: PNG and GIF support transparency, whilst JPEG leaves it unsupported.
-
-**Coordinate Reference System**
-
-
-.. index:: SRS (Spatial Reference System), CRS (Coordinate Reference System)
-
-A coordinate reference system (CRS) is the OGC terminology for a QGIS projection.
-
-Each WMS layer can be presented in multiple CRSs, depending on the capability of
-the WMS server.
-To choose a CRS, click |setProjection| :sup:`Select CRS` widget. A dialog similar to
-the one shown in :numref:`figure_projection_custom` will appear.
-The main difference with the WMS version of the dialog is that only
-those CRSs supported by the WMS server will be shown.
-
-
-.. _`tilesets`:
 
 Tilesets
 --------
