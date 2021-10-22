@@ -246,6 +246,7 @@ Appropriate for point geometry features, marker symbols have several
   also be adapted. The image can be a file on the disk, a remote URL or
   embedded in the style database (:ref:`more details <embedded_file_selector>`).
 
+  The symbol can also be set with :guilabel:`Dynamic SVG parameters`.
   See :ref:`svg_symbol` section to parametrize an SVG symbol.
 
   .. note:: SVG version requirements
@@ -329,10 +330,11 @@ layer types:
 * **Marker line**: repeats a :ref:`marker symbol
   <vector_marker_symbols>` over the length of a line.
 
-  * The markers placement can be at a regular distance or based on the line
-    geometry: first, last or each vertex, on the central point of the line
+  * The :guilabel:`Marker placement` can be at a regular distance or based on the
+    line geometry: first, last or each vertex, on the central point of the line
     or of each segment, or on every curve point.
-  * The markers placement can also be given an offset along the line
+  * :guilabel:`Offset along the line`: the markers placement can also be given
+    an offset from the start, along the line
   * The |checkbox| :guilabel:`Rotate marker to follow line direction` option
     sets whether each marker symbol should be oriented relative to the line
     direction or not.
@@ -346,7 +348,8 @@ layer types:
     This has the effect of smoothing (or removing) any tiny local deviations
     from the overall line direction, resulting in much nicer visual orientations
     of the marker line symbols.
-  * The marker line can also be offset from the line itself.
+  * :guilabel:`Line offset`: the marker symbols can also be offset from the line
+    feature.
 
 .. _hashed_line_symbol:
 
@@ -437,7 +440,8 @@ symbol layer types:
   Options include (data defined) opacity, image width, coordinate mode (object
   or viewport), rotation and offset. The image width can be set using any of the
   :ref:`common units <unit_selector>` or as a percentage of the original size.
-* **SVG fill**: fills the polygon using :ref:`SVG markers <svg_marker>`;
+* **SVG fill**: fills the polygon using :ref:`SVG markers <svg_marker>`
+  of a given size (:guilabel:`Texture width`);
 * **Shapeburst fill**: buffers a gradient fill, where a gradient
   is drawn from the boundary of a polygon towards the polygon's centre.
   Configurable parameters include distance from the boundary to shade, use of
@@ -445,22 +449,22 @@ symbol layer types:
   offsets;
 * **Outline: Arrow**: uses a line :ref:`arrow symbol <arrow_symbol>` layer to
   represent the polygon boundary. The settings for the outline arrow are the same
-  as for line symbols.
+  as for arrow line symbols.
 * **Outline: Hashed line**: uses a :ref:`hash line symbol <hashed_line_symbol>`
-  layer to represent the polygon boundary (the interior rings, the
-  exterior ring or all the rings). The settings for the outline hashed line are the
-  same as for line symbols.
+  layer to represent the polygon boundary (:guilabel:`Rings`) which can be the
+  interior rings only, the exterior ring only or all the rings).
+  The other settings for the outline hashed line are the same as for hashed line symbols.
 * **Outline: Marker line**: uses a :ref:`marker line symbol <marker_line_symbol>`
-  layer to represent the
-  polygon boundary (the interior rings, the exterior ring or all the rings).
-  The settings for the outline marker line are same as for line symbols.
+  layer to represent the polygon boundary (:guilabel:`Rings`) which can be the
+  interior rings only, the exterior ring only or all the rings).
+  The other settings for the outline marker line are same as for marker line symbols.
 * **Outline: simple line**: uses a :ref:`simple line symbol <simple_line_symbol>`
-  layer to represent the
-  polygon boundary (the interior rings, the exterior ring or all the rings).
-  The settings for the outline simple line are the same as for line symbols.
+  layer to represent the polygon boundary (:guilabel:`Rings`) which can be the
+  interior rings only, the exterior ring only or all the rings).
   The :guilabel:`Draw line only inside polygon` option displays the
   polygon borders inside the polygon and can be useful to clearly represent
   adjacent polygon boundaries.
+  The other settings for the outline simple line are the same as for simple line symbols.
 
 .. note::
 
@@ -512,8 +516,12 @@ The Geometry Generator
 Available with all types of symbols, the :guilabel:`geometry generator` symbol
 layer allows to use :ref:`expression syntax <functions_list>` to generate a
 geometry on the fly during the rendering process. The resulting geometry does
-not have to match with the original geometry type and you can add several
-differently modified symbol layers on top of each other.
+not have to match with the original :guilabel:`Geometry type` and you can add
+several differently modified symbol layers on top of each other.
+
+A :guilabel:`Units` property can be set: when the geometry generator symbol
+is not applied to a layer (e.g., it is used on a layout item), this allows
+more control over the generated output.
 
 Some examples:
 
