@@ -69,7 +69,7 @@ exclude_patterns = [
     'venv',
     'README.rst',
     'readme_old.rst',
-    'docs/user_manual/working_with_vector/expression_help/*'
+    'docs/user_manual/expressions/expression_help/*'
 ]
 
 # -- Internationalisation ----------------------------------------------------

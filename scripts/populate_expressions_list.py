@@ -19,7 +19,7 @@ else:
     qgis_repo_path = path.join(path.dirname(__file__), '..', '..', 'QGIS')
 help_folder = path.join(qgis_repo_path, 'resources/function_help/json')
 # expression help folder
-output_folder = path.join(path.dirname(__file__), '..', 'docs/user_manual/working_with_vector/expression_help')
+output_folder = path.join(path.dirname(__file__), '..', 'docs/user_manual/expressions/expression_help')
 
 def sphynxify_html(text, base_indent=0):
     filler = base_indent * ' '
