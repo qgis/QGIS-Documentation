@@ -324,6 +324,26 @@ layer types:
   shapeburst to render the arrow body. Combined with the geometry generator,
   this type of layer symbol helps you representing flow maps.
 * **Geometry generator** (see :ref:`geometry_generator_symbol`)
+* **Interpolated line**: allows to render a line whose :guilabel:`Stroke width`
+  and/or :guilabel:`Color` may be constant (given a :guilabel:`Width` and
+  :guilabel:`Color` parameters) or vary along the road.
+  When varying, the width and color of the line are interpolated along the
+  geometry using feature attributes (or an expression) with a range of values.
+  Necessary inputs are:
+
+  * :guilabel:`Start value` and :guilabel:`End value`: XXX
+  * :guilabel:`Min. value` and :guilabel:`Max. value`: XXX
+    Press the |refresh| :sup:`Load` button to automatically fill them based
+    on start or end values expressions.
+  * Only available for the stroke option:
+
+    * :guilabel:`Min. width` and :guilabel:`Max. width`: define how wide
+      the line can be, linearly scaling the range of values onto XXX.
+      A :ref:`unit <unit_selector>` can be associated.
+    * |checkbox| :guilabel:`Use absolute value`: XXX
+    * |checkbox| :guilabel:`Ignore out of range`: XXX
+  * and for varying color, the :ref:`method of color ramp classification
+    <color_ramp_shader>`
 
 .. _marker_line_symbol:
 
@@ -617,6 +637,8 @@ viewing the field.
    :width: 1.3em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
+.. |refresh| image:: /static/common/mActionRefresh.png
+   :width: 1.5em
 .. |duplicateLayer| image:: /static/common/mActionDuplicateLayer.png
    :width: 1.5em
 .. |iconView| image:: /static/common/mActionIconView.png
@@ -628,6 +650,8 @@ viewing the field.
 .. |openTable| image:: /static/common/mActionOpenTable.png
    :width: 1.5em
 .. |paintEffects| image:: /static/common/mIconPaintEffects.png
+   :width: 1.5em
+.. |refresh| image:: /static/common/mActionRefresh.png
    :width: 1.5em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
