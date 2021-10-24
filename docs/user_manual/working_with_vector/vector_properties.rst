@@ -3096,6 +3096,17 @@ visible. Out of this range, they are hidden. The |mapIdentification|
 canvas scale as boundary of the range visibility.
 See :ref:`label_scaledepend` for more information.
 
+
+Use Scale Reference
+-------------------
+
+This variable forces the rendering to be displayed as if the layer was 
+at the provided scale, regardless of the scale of the map extent.
+
+In the case where the reference scale is set at 1:1000 and
+use a width of 1mm to render a line. If the map is at a scale of 1: 10 000
+the line will have a width of 0.1mm.
+
 Simplify geometry
 -----------------
 
