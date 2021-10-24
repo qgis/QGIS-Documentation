@@ -109,6 +109,12 @@ Polygon Layers
 * You can define |checkbox|:guilabel:`Edges` by :guilabel:`Width` and :guilabel:`Color`.
 
 
+.. _shading_texture:
+
+Shading the texture
+=================== 
+
+
 Application example
 ===================
 
