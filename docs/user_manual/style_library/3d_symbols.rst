@@ -32,25 +32,37 @@ Point Layers
 
    Properties of a 3D point symbol
 
-* You can define different simple 3D shapes like :guilabel:`Sphere`, :guilabel:`Cylinder`,
-  :guilabel:`Cube`, :guilabel:`Cone`, :guilabel:`Plane` and :guilabel:`Torus`
-  defined by their :guilabel:`Radius`, :guilabel:`Size` or :guilabel:`Length`.
-  The unit of size of the 3D shapes refers to the CRS of the project.
-* The shading of the 3D shapes can be defined by the menus :guilabel:`Diffuse`,
-  :guilabel:`Ambient`, :guilabel:`Specular` and :guilabel:`Shininess`
-  (see https://en.wikipedia.org/wiki/Phong_reflection_model#Description)
-* If you choose :guilabel:`3D Model`, the location will be determined
-  by a simple point coordinate.
-* For visualizing 3D point clouds you can use :guilabel:`Billboard` Shapes
-  defined by the :guilabel:`Billboard Height`, :guilabel:`Billboard symbol` and
-  :guilabel:`Altitude clamping`. The symbol will have a stable size.
-* :guilabel:`Altitude clamping` can be set to :guilabel:`Absolute`, :guilabel:`Relative`
-  or :guilabel:`Terrain`. The :guilabel:`Absolute` setting can be used when height values
-  of the 3d vectors are provided as absolute measures from 0. :guilabel:`Relative` and
-  :guilabel:`Terrain` add given elevation values to the underlying terrain elevation.
-* :guilabel:`Translation` can be used to move objects in x, y and z axis.
-* You can define a :guilabel:`Scale factor` for the 3D shape as well as a
-  :guilabel:`Rotation` around the x-, y- and z-axis.
+* You can define different types of 3D :guilabel:`Shape` to use for point symbols.
+  They are mainly defined by their dimensions whose unit refers to the CRS of the
+  project. Available types are:
+
+  * :guilabel:`Sphere` defined by a :guilabel:`Radius`
+  * :guilabel:`Cylinder` defined by a :guilabel:`Radius` and :guilabel:`Length`
+  * :guilabel:`Cube` defined by a :guilabel:`Size`
+  * :guilabel:`Cone` defined by a :guilabel:`Top radius`, a :guilabel:`Bottom radius`
+    and a :guilabel:`Length`
+  * :guilabel:`Plane` defined by a :guilabel:`Size`
+  * :guilabel:`Torus` defined by a :guilabel:`Radius` and a :guilabel:`Minor radius`
+  * :guilabel:`3D Model`, using a 3D model file (several formats are supported)
+    that can be a file on disk, a remote URL or :ref:`embedded in the project
+    <embedded_file_selector>`.
+  * :guilabel:`Billboard`, defined by the :guilabel:`Billboard height` and
+    the :guilabel:`Billboard symbol` (usually based on a :ref:`marker symbol
+    <vector_marker_symbols>`). The symbol will have a stable size.
+    Convenient for visualizing 3D point clouds Shapes.
+* The :guilabel:`Altitude clamping` can be set to :guilabel:`Absolute`,
+  :guilabel:`Relative` or :guilabel:`Terrain`. The :guilabel:`Absolute` setting
+  can be used when height values of the 3d vectors are provided as absolute
+  measures from 0. :guilabel:`Relative` and :guilabel:`Terrain` add given
+  elevation values to the underlying terrain elevation.
+* The :ref:`shading <shading_texture>` can be defined.
+* Under the :guilabel:`Transformations` frame, you can apply affine transformation
+  to the symbol:
+
+  * :guilabel:`Translation` to move objects in x, y and z axis.
+  * :guilabel:`Scale` to resize the 3D shapes
+  * :guilabel:`Rotation` around the x-, y- and z-axis.
+
 
 .. _`3d_linelayers`:
 
