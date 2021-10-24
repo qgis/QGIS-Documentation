@@ -1288,6 +1288,11 @@ You can select an attribute column to use for labeling. By default, the
 :ref:`display field <maptips>` is used. Click |expression| if you want to define
 labels based on expressions - See :ref:`labeling_with_expressions`.
 
+.. note::
+
+   Labels can also be displayed as symbols in the legend, by enabling them in the
+   Legend tab. 
+
 Below are displayed options to customize the labels, under various tabs:
 
 * |text| :ref:`Text <labels_text>`
@@ -3255,6 +3260,8 @@ layout legend <layout_legend_item>`. These options include:
   The :guilabel:`Legend placeholder image` helps you :ref:`select an image
   <embedded_file_selector>` for replacement, displayed both in the
   :guilabel:`Layers` panel and the print layout legend.
+* |checkbox| :guilabel:`Sow label legend`: Displays the label entries as their
+  own entries in the legend. The font style is previewed along with the description. 
 * |checkbox| :guilabel:`Text on symbols`: In some cases it can be useful to add
   extra information to the symbols in the legend. With this frame, you can
   affect to any of the symbols used in the layer symbology a text that is
