@@ -937,6 +937,19 @@ This rendering mode is only available for polygons and lines.
 This renderig mode is similar to the inverted polygon renderer.
 
 
+.. index:: Classes
+   single: Symbology; Embedded renderer
+.. _categorized_renderer:
+
+Embedded Renderer
+....................
+
+The |enbeddedSymbol| :guilabel:`embedded` renderer allows to display the 'native' 
+symbology of a provided data-source. This is mostly the case with KML and TAB 
+dataset that have predefined symbology.
+
+
+
 Layer rendering
 ---------------
 
