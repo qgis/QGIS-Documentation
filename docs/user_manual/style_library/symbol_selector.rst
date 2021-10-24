@@ -606,8 +606,6 @@ viewing the field.
    :width: 1.3em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
-.. |refresh| image:: /static/common/mActionRefresh.png
-   :width: 1.5em
 .. |duplicateLayer| image:: /static/common/mActionDuplicateLayer.png
    :width: 1.5em
 .. |iconView| image:: /static/common/mActionIconView.png
