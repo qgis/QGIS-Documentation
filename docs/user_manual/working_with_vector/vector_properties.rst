@@ -920,6 +920,23 @@ units).
 .. index:: Layer rendering, Sort features, Z-level
 .. _layer_rendering:
 
+
+.. index:: Classes
+   single: Symbology; Merged Features renderer
+.. _categorized_renderer:
+
+Merged Features Renderer
+....................
+
+The |mergedFeaturesSymbol| :guilabel:`Merged Features` renderer is a meta-renderer.
+This mode perform a union of connected features that are part of the same sub-render,
+either single symbol, categorized or graduated rule-based.
+
+This rendering mode is only available for polygons and lines. 
+
+This renderig mode is similar to the inverted polygon renderer.
+
+
 Layer rendering
 ---------------
 
