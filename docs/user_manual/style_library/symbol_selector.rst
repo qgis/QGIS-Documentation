@@ -441,6 +441,11 @@ layer types:
 
      Examples of lineburst lines
 
+.. _interpolated_line_symbol:
+
+* **InterPolated Line**: The interpolated line symbol allows to define ways to control
+the changes of witdth and/or color of a line along its trajectory from a set of parameters.
+Those parameter may be feature-specific or static.
 
 .. _vector_fill_symbols:
 
