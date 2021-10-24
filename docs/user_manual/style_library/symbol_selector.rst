@@ -494,8 +494,18 @@ symbol layer types:
   spacing between lines and an offset from the feature boundary.
 * **Point pattern fill**: fills the polygon with a hatching pattern of 
   :ref:`marker symbol layer <vector_marker_symbols>`. You can set the distance
-  and a displacement between rows of markers, an offset from the
-  feature boundary and the angle of the pattern.
+  and a displacement between rows of markers, and an offset from the
+  feature boundary. Clipping options of the pattern can also be set.
+  The existing modes are:
+  
+  * Clip to shape: Will clip the symbols to prevent them from extending 
+    beyond the edge of the shape.
+  * Marker centroid within shape: Will only display makers wich have their
+    centroid within the extent of the shape. The marker can go beyond the edge.
+  * Marker completely within shape:Will only display marker thare are completely
+    within the extent of the feature.
+  * No clipping: Will cover the feature with marker, markers will go beyond the
+    edge of the feature, depending on their size, and will not be clipped.
 * **Random marker fill**: fills the polygon with a :ref:`marker symbol 
   <vector_marker_symbols>` placed at random locations within the polygon
   boundary. You can set:
