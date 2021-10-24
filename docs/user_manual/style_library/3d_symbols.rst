@@ -131,7 +131,7 @@ on the geometry type of the symbol:
 * :guilabel:`Realistic Textured (Phong)`: same as the :guilabel:`Realistic (Phong)`
   except that an image is used as :guilabel:`Diffuse Texture`.
   The image can be a file on disk, a remote URL or :ref:`embedded in the project
-    <embedded_file_selector>`.
+  <embedded_file_selector>`.
   The :guilabel:`Texture scale` and :guilabel:`Texture rotation` are required.
 * :guilabel:`CAD (Gooch)`: this technique allows shading to occur only in mid-tones
   so that edge lines and highlights remain visually prominent. Along with the
