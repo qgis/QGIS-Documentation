@@ -104,9 +104,25 @@ Polygon Layers
 
 * The :guilabel:`Altitude clamping`, :guilabel:`Altitude binding` can be defined
   as explained above.
-* There is an additional option to |checkbox|:guilabel:`Add back faces`
-  and |checkbox|:guilabel:`Invert normals`.
-* You can define |checkbox|:guilabel:`Edges` by :guilabel:`Width` and :guilabel:`Color`.
+* The :guilabel:`Culling mode` to apply to the symbol; it can be:
+
+  * :guilabel:`No Culling`: this can help to avoid seemingly missing surfaces
+    when polygonZ/multipatch data do not have consistent ordering of vertices
+    (e.g. all clock-wise or counter clock-wise)
+  * :guilabel:`Front`
+  * or :guilabel:`Back`
+* The :guilabel:`Rendered facade` determines the faces to display. Possible values
+  are :guilabel:`No facades`, :guilabel:`Walls`, :guilabel:`Roofs`, or
+  :guilabel:`Walls and roofs`
+* |checkbox| :guilabel:`Add back faces`: for each triangle, creates both front and
+  back face with correct normals - at the expense of increased number of vertex data.
+  This option can be used to fix shading issues (e.g., due to data with inconsistent
+  order of vertices).
+* |checkbox| :guilabel:`Invert normals (experimental)`: can be useful for fixing
+  clockwise/counter-clockwise face vertex orders
+* The :ref:`shading <shading_texture>` can be defined.
+* Display of the |checkbox| :guilabel:`Edges` of the symbols can be enabled
+  and assigned a :guilabel:`Width` and :guilabel:`Color`.
 
 
 .. _shading_texture:
