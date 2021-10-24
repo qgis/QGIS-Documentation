@@ -608,6 +608,10 @@ A :guilabel:`Units` property can be set: when the geometry generator symbol
 is not applied to a layer (e.g., it is used on a layout item), this allows
 more control over the generated output.
 
+The rendering of the geometry may also be done in different reference system by
+changing the units used. By default map units are used, but drawing units, such as:
+mm, pixels, inches and points can also be used to render the features.
+
 Some examples:
 
 ::
