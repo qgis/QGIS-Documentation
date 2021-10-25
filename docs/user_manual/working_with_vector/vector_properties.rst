@@ -40,7 +40,7 @@ The vector :guilabel:`Layer Properties` dialog provides the following sections:
      - |action| :ref:`Actions <actions_menu>`
    * - |display| :ref:`Display <maptips>`
      - |rendering| :ref:`Rendering <vectorrenderingmenu>`
-     - |temporal| :guilabel:`Temporal`
+     - |temporal| :ref:`Temporal <vectortemporalmenu>`
    * - |expression| :ref:`Variables <vectorvariablesmenu>`
      - |editMetadata| :ref:`Metadata <vectormetadatamenu>`
      - |dependencies| :ref:`Dependencies <vectordependenciesmenu>`
@@ -3108,6 +3108,59 @@ QGIS when changes are applied to the data source, out of QGIS. Use the |checkbox
 :guilabel:`Refresh layer on notification` option to trigger an update.
 You can also limit the layer refresh to a specific message set in the |checkbox|
 :guilabel:`Only if message is` text box.
+
+
+.. index:: Temporal
+.. _vectortemporalmenu:
+
+Temporal Properties
+===================
+
+The |temporal| :guilabel:`Temporal` tab provides options to control
+the rendering of the layer over time. Such dynamic rendering requires the
+temporal navigation to be enabled over the map canvas.
+
+.. TODO: Add link to temporal animation once it's merged
+
+.. _figure_temporalvector:
+
+.. figure:: img/vector_temporal.png
+   :align: center
+
+   Vector layer temporal properties dialog
+
+Check the |checkbox| :guilabel:`Dynamic Temporal Control` option to
+configure the vector layer temporal rendering.
+Depending on the structure of your dataset, you may want to use one of the
+provided :guilabel:`Configuration` options:
+
+* :guilabel:`Fixed time range`: all the features are rendered if the
+  map canvas temporal frame overlaps the given :guilabel:`Start date` and
+  :guilabel:`End date` range.
+* :guilabel:`Single field with date/time`: features are rendered if their
+  :guilabel:`Field`'s value falls within the map canvas temporal frame.
+  An :guilabel:`Event duration` can be set.
+  With checking the :guilabel:`Accumulate features over time` option,
+  all features which occur before or within the map's temporal range will
+  continue to be rendered. The event duration is thus ignored.
+* :guilabel:`Separate fields for start and end date/time`: features are rendered
+  if the range specified by their :guilabel:`Start field` and :guilabel:`End field`
+  values overlaps the map canvas temporal.
+* :guilabel:`Separate fields for start and event duration`: features are rendered
+  if the range defined by their :guilabel:`Start field` and :guilabel:`Event duration field`
+  values overlaps the map canvas temporal.
+* :guilabel:`Sart and end date/time from expressions`: features are rendered
+  if the time range specified by the :guilabel:`Start expression` and
+  :guilabel:`End expression` overlaps the map canvas temporal.
+* :guilabel:`Redraw layer only`: the layer is redrawn at each new animation
+  frame but no time-based filtering is applied to the features.
+  It's useful when the layer uses time-based expression values for renderer
+  settings (e.g. data-defined symbology).
+
+It is also possible to set the :guilabel:`Limits` of the features time range as:
+
+* :guilabel:`Include start, exclude end`
+* :guilabel:`Include start, include end`
 
 
 .. index:: Variables
