@@ -226,6 +226,11 @@ Parameters
      - ``EXTENT``
      - [extent]
      - Extent for clipping.
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
    * - **Clip features to extent**
      - ``CLIP``
      - [boolean]

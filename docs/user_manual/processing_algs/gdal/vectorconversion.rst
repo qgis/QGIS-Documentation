@@ -376,6 +376,11 @@ Basic parameters
      - Extent of the output raster layer.
        If the extent is not specified, the minimum extent that covers
        the selected reference layer(s) will be used.
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
    * - **Assign a specified nodata value to output bands**
 
        Optional

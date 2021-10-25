@@ -1257,14 +1257,11 @@ Parameters
      - ``TARGET_AREA``
      - [extent]
      - The area that the layer covers.
-       The options for specifying the extent are:
 
-       * Use Canvas Extent
-       * Select Extent on Canvas
-       * Use Layer Extent
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
 
-       It is also possible to provide the extent
-       coordinates directly (xmin, xmax, ymin, ymax).
    * - **CRS candidates**
      - ``OUTPUT``
      - [table]

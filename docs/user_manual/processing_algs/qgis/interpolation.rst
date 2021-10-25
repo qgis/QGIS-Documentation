@@ -319,9 +319,11 @@ Parameters
      - ``EXTENT``
      - [extent]
      - Extent of the output raster layer.
-       You have to declare the output extent by either choosing it
-       from the map canvas, selecting it from another layer or type it
-       manually.
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
    * - **Output raster size**
      - ``PIXEL_SIZE``
      - [number]
@@ -543,9 +545,11 @@ Parameters
      - ``EXTENT``
      - [extent]
      - Extent of the output raster layer.
-       You have to declare the output extent by either choosing it
-       from the map canvas, selecting it from another layer or type it
-       manually.
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
    * - **Output raster size**
      - ``PIXEL_SIZE``
      - [number]

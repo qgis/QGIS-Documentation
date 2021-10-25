@@ -44,6 +44,11 @@ Basic parameters
      - Extent that should be used for the output raster.
        Only pixels within the specified bounding box will be
        included in the output.
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
    * - **Override the projection for the output file** |318|
      - ``OVERCRS``
      - [boolean]

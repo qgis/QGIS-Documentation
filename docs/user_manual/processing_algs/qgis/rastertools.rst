@@ -40,13 +40,12 @@ Parameters
      - ``EXTENT``
      - [extent]
      - Specify the extent of the output raster layer.
-       One of:
-       
-       * Use Canvas Extent
-       * Select Extent on Canvas
-       * Use Layer Extent...
-       
        It will internally be extended to a multiple of the tile size.
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
    * - **Tile size**
      - ``TILE_SIZE``
      - [number]
@@ -220,13 +219,12 @@ Parameters
      - ``EXTENT``
      - [extent]
      - Specify the extent of the tiles.
-       One of:
-
-       * Use Canvas Extent
-       * Select Extent on Canvas
-       * Use Layer Extent...
-
        It will internally be extended to a multiple of the tile size.
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
    * - **Minimum zoom**
      - ``ZOOM_MIN``
      - [number]
@@ -383,13 +381,12 @@ Parameters
      - ``EXTENT``
      - [extent]
      - Specify the extent of the tiles.
-       One of:
-
-       * Use Canvas Extent
-       * Select Extent on Canvas
-       * Use Layer Extent...
-
        It will internally be extended to a multiple of the tile size.
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
    * - **Minimum zoom**
      - ``ZOOM_MIN``
      - [number]

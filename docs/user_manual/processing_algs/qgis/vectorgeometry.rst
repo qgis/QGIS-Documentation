@@ -1583,6 +1583,11 @@ Parameters
      - ``INPUT``
      - [extent]
      - Input extent
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
    * - **Extent**
      - ``OUTPUT``
      - [vector: polygon]

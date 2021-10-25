@@ -2177,9 +2177,14 @@ Parameters
        Optional
      - ``EXTENT``
      - [extent]
-     - Extent (xmin, xmax, ymin, ymax) of the output raster layer.
+     - Specify the spatial extent of the output raster layer.
        If the extent is not specified, the minimum extent that covers
        all the selected reference layers will be used.
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
    * - **Output CRS**
 
        Optional
