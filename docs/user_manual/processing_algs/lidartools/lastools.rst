@@ -2612,7 +2612,12 @@ Parameters
    * - **area of interest**
      - ``AOI``
      - [extent]
-     - The extent
+     - The spatial extent to process the data in.
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
    * - **additional command line parameter(s)**
 
        Optional

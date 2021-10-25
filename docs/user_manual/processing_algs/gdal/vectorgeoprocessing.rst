@@ -160,6 +160,11 @@ Basic parameters
      - Defines the bounding box that should be used for the
        output vector file.
        It has to be defined in target CRS coordinates.
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
    * - **Clipped (extent)**
      - ``OUTPUT``
      - [same as input]

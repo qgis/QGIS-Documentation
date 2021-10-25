@@ -297,6 +297,11 @@ Parameters
      - ``EXTENT``
      - [extent]
      - Extent of the grid
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
    * - **Horizontal spacing**
      - ``HSPACING``
      - [number]
@@ -948,6 +953,11 @@ Basic parameters
      - ``EXTENT``
      - [extent]
      - Map extent for the random points
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
    * - **Number of points**
      - ``POINTS_NUMBER``
      - [number]
@@ -1739,6 +1749,11 @@ Parameters
      - ``EXTENT``
      - [extent]
      - Map extent for the random points
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
    * - **Point spacing/count**
      - ``SPACING``
      - [number]

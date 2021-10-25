@@ -37,14 +37,13 @@ Basic parameters
    * - **Desired extent**
      - ``EXTENT``
      - [extent]
-     - Specify the extent (xmin, xmax, ymin, ymax) of the output raster layer.
-       One of:
-
-       * Use Canvas Extent
-       * Select Extent on Canvas
-       * Use Layer Extent...
-
+     - Specify the spatial extent of the output raster layer.
        It will internally be extended to a multiple of the tile size.
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
    * - **Target CRS**
      - ``TARGET_CRS``
      - [crs]
@@ -158,14 +157,13 @@ Basic parameters
    * - **Desired extent**
      - ``EXTENT``
      - [extent]
-     - Specify the extent (xmin, xmax, ymin, ymax) of the output raster layer.
-       One of:
-
-       * Use Canvas Extent
-       * Select Extent on Canvas
-       * Use Layer Extent...
-
+     - Specify the spatial extent of the output raster layer.
        It will internally be extended to a multiple of the tile size.
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
    * - **Target CRS**
      - ``TARGET_CRS``
      - [crs]
@@ -283,14 +281,13 @@ Basic parameters
    * - **Desired extent**
      - ``EXTENT``
      - [extent]
-     - Specify the extent (xmin, xmax, ymin, ymax) of the output raster layer.
-       One of:
-
-       * Use Canvas Extent
-       * Select Extent on Canvas
-       * Use Layer Extent...
-
+     - Specify the spatial extent of the output raster layer.
        It will internally be extended to a multiple of the tile size.
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
    * - **Target CRS**
      - ``TARGET_CRS``
      - [crs]
@@ -398,14 +395,13 @@ Basic parameters
    * - **Desired extent**
      - ``EXTENT``
      - [extent]
-     - Specify the extent (xmin, xmax, ymin, ymax) of the output raster layer.
-       One of:
-
-       * Use Canvas Extent
-       * Select Extent on Canvas
-       * Use Layer Extent...
-
+     - Specify the spatial extent of the output raster layer.
        It will internally be extended to a multiple of the tile size.
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
    * - **Target CRS**
      - ``TARGET_CRS``
      - [crs]
@@ -520,14 +516,13 @@ Basic parameters
    * - **Desired extent**
      - ``EXTENT``
      - [extent]
-     - Specify the extent (xmin, xmax, ymin, ymax) of the output raster layer.
-       One of:
-
-       * Use Canvas Extent
-       * Select Extent on Canvas
-       * Use Layer Extent...
-
+     - Specify the spatial extent of the output raster layer.
        It will internally be extended to a multiple of the tile size.
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
    * - **Target CRS**
      - ``TARGET_CRS``
      - [crs]
@@ -640,14 +635,13 @@ Basic parameters
    * - **Desired extent**
      - ``EXTENT``
      - [extent]
-     - Specify the extent (xmin, xmax, ymin, ymax) of the output raster layer.
-       One of:
-
-       * Use Canvas Extent
-       * Select Extent on Canvas
-       * Use Layer Extent...
-
+     - Specify the spatial extent of the output raster layer.
        It will internally be extended to a multiple of the tile size.
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
    * - **Target CRS**
      - ``TARGET_CRS``
      - [crs]
@@ -765,14 +759,13 @@ Basic parameters
    * - **Desired extent**
      - ``EXTENT``
      - [extent]
-     - Specify the extent (xmin, xmax, ymin, ymax) of the output raster layer.
-       One of:
-
-       * Use Canvas Extent
-       * Select Extent on Canvas
-       * Use Layer Extent...
-
+     - Specify the spatial extent of the output raster layer.
        It will internally be extended to a multiple of the tile size.
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
    * - **Target CRS**
      - ``TARGET_CRS``
      - [crs]
@@ -887,14 +880,13 @@ Basic parameters
    * - **Desired extent**
      - ``EXTENT``
      - [extent]
-     - Specify the extent (xmin, xmax, ymin, ymax) of the output raster layer.
-       One of:
-
-       * Use Canvas Extent
-       * Select Extent on Canvas
-       * Use Layer Extent...
-
+     - Specify the spatial extent of the output raster layer.
        It will internally be extended to a multiple of the tile size.
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
    * - **Target CRS**
      - ``TARGET_CRS``
      - [crs]
@@ -1008,14 +1000,13 @@ Basic parameters
    * - **Desired extent**
      - ``EXTENT``
      - [extent]
-     - Specify the extent (xmin, xmax, ymin, ymax) of the output raster layer.
-       One of:
-
-       * Use Canvas Extent
-       * Select Extent on Canvas
-       * Use Layer Extent...
-
+     - Specify the spatial extent of the output raster layer.
        It will internally be extended to a multiple of the tile size.
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
    * - **Target CRS**
      - ``TARGET_CRS``
      - [crs]

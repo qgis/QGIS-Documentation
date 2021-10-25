@@ -119,6 +119,23 @@ The file encoding can also be changed here.
 **end_layer_output_types_skip**
 
 
+Extent Dropdown
+===============
+
+The following refers to the extent selector widget in the algorithms GUI
+
+**extent_options**
+
+Available methods are:
+
+* Calculate from layer…: uses extent of a layer loaded in the current project
+* Use map canvas extent
+* Draw on canvas
+* Enter the coordinates as ``xmin, xmax, ymin, ymax``
+
+**end_extent_options**
+
+
 Geometric predicates
 ====================
 

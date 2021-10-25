@@ -363,6 +363,11 @@ Parameters
        Default: None
      - You can select features from a given extent that will be in
        the output table.
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
    * - **Clip the input layer using the above (rectangle) extent**
 
        Optional
@@ -696,6 +701,11 @@ Parameters
        Default: None
      - You can select features from a given extent that will be in
        the output table.
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
    * - **Clip the input layer using the above (rectangle) extent**
 
        Optional

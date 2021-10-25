@@ -640,7 +640,7 @@ Outputs
     - The coordinate reference system of the output raster layer
   * - **Extent**
     - ``EXTENT``
-    - [extent]
+    - [string]
     - The spatial extent of the output raster layer
   * - **Height in pixels**
     - ``HEIGHT_IN_PIXELS``
@@ -918,7 +918,7 @@ Outputs
      - The coordinate reference system of the output raster layer
    * - **Extent**
      - ``EXTENT``
-     - [extent]
+     - [string]
      - The spatial extent of the output raster layer
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
@@ -1029,7 +1029,7 @@ Outputs
      - The coordinate reference system of the output raster layer
    * - **Extent**
      - ``EXTENT``
-     - [extent]
+     - [string]
      - The spatial extent of the output raster layer
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
@@ -1144,7 +1144,7 @@ Outputs
      - The coordinate reference system of the output raster layer
    * - **Extent**
      - ``EXTENT``
-     - [extent]
+     - [string]
      - The spatial extent of the output raster layer
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
@@ -1254,7 +1254,7 @@ Outputs
      - The coordinate reference system of the output raster layer
    * - **Extent**
      - ``EXTENT``
-     - [extent]
+     - [string]
      - The spatial extent of the output raster layer
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
@@ -1373,7 +1373,7 @@ Outputs
      - The coordinate reference system of the output raster layer
    * - **Extent**
      - ``EXTENT``
-     - [extent]
+     - [string]
      - The spatial extent of the output raster layer
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
@@ -1483,7 +1483,7 @@ Outputs
      - The coordinate reference system of the output raster layer
    * - **Extent**
      - ``EXTENT``
-     - [extent]
+     - [string]
      - The spatial extent of the output raster layer
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
@@ -1880,8 +1880,8 @@ Outputs
      - Description
    * - **Extent**
      - ``EXTENT``
-     - [extent]
-     - The extent of the output raster layer
+     - [string]
+     - The spatial extent of the output raster layer
    * - **CRS authority identifier**
      - ``CRS_AUTHID``
      - [crs]
@@ -2042,8 +2042,8 @@ Outputs
      - Description
    * - **Extent**
      - ``EXTENT``
-     - [extent]
-     - The extent of the output raster layer
+     - [string]
+     - The spatial extent of the output raster layer
    * - **CRS authority identifier**
      - ``CRS_AUTHID``
      - [crs]
@@ -2177,9 +2177,14 @@ Parameters
        Optional
      - ``EXTENT``
      - [extent]
-     - Extent (xmin, xmax, ymin, ymax) of the output raster layer.
+     - Specify the spatial extent of the output raster layer.
        If the extent is not specified, the minimum extent that covers
        all the selected reference layers will be used.
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
    * - **Output CRS**
 
        Optional
@@ -2282,7 +2287,7 @@ Outputs
    * - **CRS authority identifier**
      - ``CRS_AUTHID``
      - [string]
-     -
+     - The coordinate reference system of the output raster layer
    * - **Extent**
      - ``EXTENT``
      - [string]
@@ -2294,7 +2299,7 @@ Outputs
        in the selected band
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
-     - [number]
+     - [integer]
      - The number of columns in the raster layer
    * - **Band NoData value**
      - ``NODATA_VALUE``
@@ -2302,15 +2307,15 @@ Outputs
      - The value (if set) of the NoData pixels in the selected band
    * - **Pixel size (height) in map units**
      - ``PIXEL_HEIGHT``
-     - [number]
+     - [integer]
      - Vertical size in map units of the pixel
    * - **Pixel size (width) in map units**
      - ``PIXEL_WIDTH``
-     - [number]
+     - [integer]
      - Horizontal size in map units of the pixel
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
-     - [number]
+     - [integer]
      - The number of rows in the raster layer
    * - **Maximum x-coordinate**
      - ``X_MAX``
@@ -2512,24 +2517,24 @@ Outputs
      - Description
    * - **CRS authority identifier**
      - ``CRS_AUTHID``
-     - [crs]
-     -
+     - [string]
+     - The coordinate reference system of the output raster layer
    * - **Extent**
      - ``EXTENT``
-     - [extent]
-     -
+     - [string]
+     - The spatial extent of the output raster layer
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
-     - [number]
-     -
+     - [integer]
+     - The number of rows in the output raster layer
    * - **NODATA pixel count**
      - ``NODATA_PIXEL_COUNT``
      - [number]
-     -
+     - The number of NODATA pixels in the output raster layer
    * - **Total pixel count**
      - ``TOTAL_PIXEL_COUNT``
-     - [number]
-     -
+     - [integer]
+     - The count of pixels in the output raster layer
    * - **Unique values report**
      - ``OUTPUT_HTML_FILE``
      - [html]
@@ -2554,8 +2559,8 @@ Outputs
 
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
-     - [number]
-     -
+     - [integer]
+     - The number of columns in the output raster layer
 
 Python code
 ...........
@@ -2668,20 +2673,20 @@ Outputs
      - Description
    * - **CRS authority identifier**
      - ``CRS_AUTHID``
-     - [crs]
-     -
+     - [string]
+     - The coordinate reference system of the output raster layer
    * - **Extent**
      - ``EXTENT``
-     - [extent]
-     -
+     - [string]
+     - The spatial extent of the output raster layer
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
-     - [number]
-     -
+     - [integer]
+     - The number of rows in the output raster layer
    * - **NODATA pixel count**
      - ``NODATA_PIXEL_COUNT``
      - [number]
-     -
+     - The number of NODATA pixels in the output raster layer
    * - **Statistics**
      - ``OUTPUT_TABLE``
      - [table]
@@ -2697,11 +2702,11 @@ Outputs
    * - **Total pixel count**
      - ``TOTAL_PIXEL_COUNT``
      - [number]
-     -
+     - The count of pixels in the output raster layer
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
      - [number]
-     -
+     - The number of columns in the output raster layer
 
 Python code
 ...........

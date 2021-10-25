@@ -289,6 +289,11 @@ Advanced parameters
        created (in the :guilabel:`Target CRS` by default.
        In the :guilabel:`CRS of the target raster extent`, if
        specified).
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
    * - **CRS of the target raster extent**
 
        Optional
