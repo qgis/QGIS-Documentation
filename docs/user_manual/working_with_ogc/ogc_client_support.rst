@@ -301,15 +301,14 @@ You can define:
 * :guilabel:`Tile size` if you want to set tile sizes (e.g., 256x256)
   to split up the WMS request into multiple requests.
 * The :guilabel:`Request step size`
-* The :guilabel:`Feature limit for GetFeatureInfo` defines the maximum number
-  of GetFeatureInfo results from the server.
+* The :guilabel:`Maximum number of GetFeatureInfo results` from the server
 
 * Each WMS layer can be presented in multiple CRSs, depending on the capability of
   the WMS server. If you select a WMS from the list, a field with the default projection 
   provided by the web server appears. Press the : |setProjection| :sup:`Select CRS` widget
   to replace the default projection of the WMS with another CRS supported by the WMS server.
 
-* A dialog similar to the one shown in :numref:`figure_projection_custom` will appear.
+  A dialog similar to the one shown in :numref:`figure_projection_custom` will appear.
   The main difference with the WMS version of the dialog is that only
   those CRSs supported by the WMS server will be shown.
 
@@ -345,9 +344,9 @@ and :guilabel:`Down` buttons of the :guilabel:`Layer Order` tab.
 The :guilabel:`Global transparency` setting from the
 :guilabel:`Layer Properties` is hard coded to be always on, where available.
 
-.. index::
-   single: WMS; Layer transparency
 
+
+.. _tilesets:
 
 Tilesets
 --------
