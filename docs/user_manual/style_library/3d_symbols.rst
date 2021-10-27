@@ -109,6 +109,41 @@ Polygon Layers
 * You can define |checkbox|:guilabel:`Edges` by :guilabel:`Width` and :guilabel:`Color`.
 
 
+.. _shading_texture:
+
+Shading the texture
+===================
+
+Shading helps you reveal 3d details of objects which may otherwise be hidden
+due to the scene's lighting. Ultimately, it's an easier material to work with
+as you don't need to worry about setting up appropriate scene lighting
+in order to visualise features.
+
+Various techniques of shading are used in QGIS and their availability depends
+on the geometry type of the symbol:
+
+* :guilabel:`Realistic (Phong)`: describes the way a surface reflects light as
+  a combination of the :guilabel:`Diffuse` reflection of rough surfaces with
+  the :guilabel:`Specular` reflection of shiny surfaces (:guilabel:`Shininess`).
+  It also includes an :guilabel:`Ambient` option to account for the small amount
+  of light that is scattered about the entire scene.
+  Read more at https://en.wikipedia.org/wiki/Phong_reflection_model#Description
+* :guilabel:`Realistic Textured (Phong)`: same as the :guilabel:`Realistic (Phong)`
+  except that an image is used as :guilabel:`Diffuse Texture`.
+  The image can be a file on disk, a remote URL or :ref:`embedded in the project
+  <embedded_file_selector>`.
+  The :guilabel:`Texture scale` and :guilabel:`Texture rotation` are required.
+* :guilabel:`CAD (Gooch)`: this technique allows shading to occur only in mid-tones
+  so that edge lines and highlights remain visually prominent. Along with the
+  :guilabel:`Diffuse`, :guilabel:`Specular`, :guilabel:`Shininess` options,
+  you need to provide a :guilabel:`Warm` color (for surface facing toward the light)
+  and a :guilabel:`Cool` color (for the ones facing away).
+  Also, the relative contributions to the cool and warm colors by the diffuse color
+  are controlled by :guilabel:`Alpha` and :guilabel:`Beta` properties respectively.
+  See also https://en.wikipedia.org/wiki/Gooch_shading
+* :guilabel:`Embedded Textures` with 3D models shape
+
+
 Application example
 ===================
 
