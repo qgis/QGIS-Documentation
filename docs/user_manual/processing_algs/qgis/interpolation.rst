@@ -467,7 +467,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:linedensity``
+**Algorithm ID**: ``native:linedensity``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
