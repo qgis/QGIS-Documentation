@@ -1,24 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
-# mnamihdk, 2020
+# Harrissou Sant-anna, 2020
+# fairtommy <fairtommy@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:31+0000\n"
-"Last-Translator: mnamihdk, 2020\n"
+"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"PO-Revision-Date: 2020-12-24 10:22+0000\n"
+"Last-Translator: fairtommy <fairtommy@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -29,6 +31,16 @@ msgstr "バッチ処理インターフェイス"
 #: ../../docs/user_manual/processing/batch.rst:12
 msgid "Introduction"
 msgstr "はじめに"
+
+#: ../../docs/user_manual/processing/batch.rst:14
+msgid ""
+"All algorithms (including models) can be executed as a batch process. That "
+"is, they can be executed using not just a single set of inputs, but several "
+"of them, executing the algorithm as many times as needed. This is useful "
+"when processing large amounts of data, since it is not necessary to launch "
+"the algorithm many times from the toolbox."
+msgstr ""
+"すべてのアルゴリズム（モデルを含む）はバッチ処理として実行できます。つまりアルゴリズムは、必要な回数を繰り返し実行することで、一つの入力セットだけでなく複数の入力セットを使用して実行できます。大量のデータを処理する際にツールボックスからアルゴリズムを何回も起動する必要がないので、これは便利です。"
 
 #: ../../docs/user_manual/processing/batch.rst:20
 msgid ""
@@ -107,6 +119,23 @@ msgid ""
 msgstr ""
 "たいていのパラメーターで、その値を設定するのは些細なことです.値を直接入力するか、パラメータタイプに応じて,利用可能なオプションのリストから選択するだけです。"
 
+#: ../../docs/user_manual/processing/batch.rst:75
+msgid ""
+"Filenames for input data objects are introduced directly typing or, more "
+"conveniently, clicking on the :guilabel:`...` button on the right hand of "
+"the cell, which will show a context menu with two option: one for selecting "
+"from the layers currently opened and another to select from the filesystem. "
+"This second option, when selected, shows a typical file chooser dialog. "
+"Multiple files can be selected at once. If the input parameter represents a "
+"single data object and several files are selected, each one of them will be "
+"put in a separate row, adding new ones if needed. If the parameter "
+"represents a multiple input, all the selected files will be added to a "
+"single cell, separated by semicolons (``;``)."
+msgstr ""
+"入力データオブジェクトのファイル名は、直接入力するか、より便利には、セルの右側にある :guilabel:`...` "
+"ボタンをクリックすることで取り込まれます。このボタンをクリックすると2つのオプションを持つコンテキストメニューが表示されます：1つめは現在開いているレイヤーとから選択するための、２つめはファイルシステムから選択するための。この2つめのオプションを選択すると、一般的なファイル選択ダイアログが表示されます。複数のファイルを一度に選択できます。入力パラメータは、一つのデータオブジェクトを表し、複数のファイルが選択されている場合は、それらの一つ一つは、必要に応じて新しいものを追加し、別の行に置かれます。パラメータが複数の入力を表している場合、選択されたすべてのファイルがセミコロン（"
+" `;` ）で区切られて一つのセルに追加されます。"
+
 #: ../../docs/user_manual/processing/batch.rst:86
 msgid ""
 "Layer identifiers can be directly typed in the parameter text box. You can "
@@ -163,3 +192,12 @@ msgstr "バッチ処理ファイルパス"
 #: ../../docs/user_manual/processing/batch.rst:126
 msgid "Executing the batch process"
 msgstr "バッチ処理を実行する"
+
+#: ../../docs/user_manual/processing/batch.rst:128
+msgid ""
+"To execute the batch process once you have introduced all the necessary "
+"values, just click on :guilabel:`OK`. Progress of the global batch task will"
+" be shown in the progress bar in the lower part of the dialog."
+msgstr ""
+"いったん必要な値を取り込んだら、 :guilabel:`OK` "
+"をクリックするだけでバッチ処理は実行されます。バッチタスク全体の進捗はダイアログの下部にあるプログレスバーに表示されます。"
