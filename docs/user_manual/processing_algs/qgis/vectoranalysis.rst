@@ -1388,7 +1388,6 @@ Python code
 
 ST-DBSCAN clustering
 --------------------
-|322|
 
 Clusters point features based on a 2D implementation of spatiotemporal
 Density-based clustering of applications with noise (ST-DBSCAN) algorithm.
@@ -1770,6 +1769,5 @@ Python code
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |322| replace:: ``NEW in 3.22``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em

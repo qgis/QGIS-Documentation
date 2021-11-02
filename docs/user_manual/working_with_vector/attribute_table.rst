@@ -1247,7 +1247,6 @@ from the external storage system. In that case, more details might appear in the
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |322| replace:: ``NEW in 3.22``
 .. |actionRun| image:: /static/common/mAction.png
    :width: 1.5em
 .. |addPart| image:: /static/common/mActionAddPart.png

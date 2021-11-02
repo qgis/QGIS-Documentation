@@ -743,14 +743,14 @@ Parameters
        Default: False
      - If checked, the first and last points of the line will be connected
        and close the generated path
-   * - **Order expression** |318|
+   * - **Order expression**
 
        Optional
      - ``ORDER_EXPRESSION``
      - [expression]
      - Field or expression providing the order to connect the points in the path.
        If not set, the feature ID (``$id``) is used.
-   * - **Sort text containing numbers naturally** |318|
+   * - **Sort text containing numbers naturally**
 
        Optional
      - ``NATURAL_SORT``
@@ -1829,7 +1829,6 @@ Python code
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |318| replace:: ``NEW in 3.18``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png

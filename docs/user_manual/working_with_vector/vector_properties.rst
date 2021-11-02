@@ -3331,7 +3331,6 @@ To do so:
 
 .. |25dSymbol| image:: /static/common/renderer25dSymbol.png
    :width: 1.5em
-.. |322| replace:: ``NEW in 3.22``
 .. |3d| image:: /static/common/3d.png
    :width: 1.5em
 .. |action| image:: /static/common/action.png

@@ -991,7 +991,6 @@ Python code
 
 Export layers to DXF
 --------------------
-|318|
 
 Exports layers to DXF file. For each layer, you can choose a field whose values
 are used to split features in generated destination layers in DXF output.
@@ -2643,6 +2642,5 @@ Python code
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |318| replace:: ``NEW in 3.18``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
