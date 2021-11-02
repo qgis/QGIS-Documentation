@@ -5,6 +5,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
+# Roberta Castelli <crcastelli@tiscali.it>, 2021
 # Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2021
 # 
 #, fuzzy
@@ -23,12 +24,38 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: ../../docs/developers_guide/unittesting.rst:6
+msgid "Unit Testing"
+msgstr "Effettuare Unit Test"
+
+#: ../../docs/developers_guide/unittesting.rst:11
+msgid ""
+"As of November 2007 we require all new features going into master to be "
+"accompanied with a unit test. Initially we have limited this requirement to "
+"qgis_core, and we will extend this requirement to other parts of the code "
+"base once people are familiar with the procedures for unit testing explained"
+" in the sections that follow."
+msgstr ""
+".Da novembre 2007 richiediamo che tutte le nuove funzionalità che vanno in "
+"master siano accompagnate da un test unitario. Attualmente abbiamo limitato "
+"questo requisito a qgis_core, ed estenderemo questo requisito ad altre parti"
+" del codice base una volta che le persone avranno familiarizzato con le "
+"procedure per i test unitari spiegate nelle sezioni che seguono."
+
+#: ../../docs/developers_guide/unittesting.rst:70
+msgid "Creating a unit test"
+msgstr "Creare un unit test"
+
 #: ../../docs/developers_guide/unittesting.rst:200
 msgid ""
 "We opened a bug report (`ticket #832 <https://issues.qgis.org/issues/832>`_)"
 msgstr ""
 "Abbiamo aperto una segnalazione di bug (`ticket #832 "
 "<https://issues.qgis.org/issues/832>`_)"
+
+#: ../../docs/developers_guide/unittesting.rst:313
+msgid "QCOMPARE ( *actual, expected* )"
+msgstr "QCOMPARE ( *actual, expected* )"
 
 #: ../../docs/developers_guide/unittesting.rst:314
 msgid "QEXPECT_FAIL ( *dataIndex, comment, mode* )"
@@ -74,9 +101,73 @@ msgstr "QWARN ( *message* )"
 msgid "E.g."
 msgstr "Per esempio"
 
+#: ../../docs/developers_guide/unittesting.rst:573
+msgid ""
+"Finally the above uses ``ADD_TEST`` to register the test with cmake / ctest."
+" Here is where the best magic happens - we register the class with ctest. If"
+" you recall in the overview we gave in the beginning of this section, we are"
+" using both QtTest and CTest together. To recap, QtTest adds a main method "
+"to your test unit and handles calling your test methods within the class. It"
+" also provides some macros like ``QVERIFY`` that you can use as to test for "
+"failure of the tests using conditions. The output from a QtTest unit test is"
+" an executable which you can run from the command line. However when you "
+"have a suite of tests and you want to run each executable in turn, and "
+"better yet integrate running tests into the build process, the CTest is what"
+" we use."
+msgstr ""
+"Infine il precedente usa ``ADD_TEST`` per registrare il test con cmake / "
+"ctest. Qui è dove avviene la magia migliore - registriamo la classe con "
+"ctest. Se ti ricordi nella panoramica che abbiamo dato all'inizio di questa "
+"sezione, stiamo usando sia QtTest che CTest insieme. Per ricapitolare, "
+"QtTest aggiunge un metodo principale alla tua unità di test e gestisce le "
+"chiamate ai tuoi metodi di test all'interno della classe. Fornisce anche "
+"alcune macro come ``QVERIFY`` che puoi usare per verificare il fallimento "
+"dei test usando delle condizioni. L'output di un test unitario di QtTest è "
+"un eseguibile che puoi eseguire dalla linea di comando. Tuttavia quando hai "
+"una suite di test e vuoi eseguire ogni eseguibile a turno, e meglio ancora "
+"integrare l'esecuzione dei test nel processo di compilazione, il CTest è ciò"
+" che usiamo."
+
+#: ../../docs/developers_guide/unittesting.rst:586
+msgid "Building your unit test"
+msgstr "Realizzare il tuo test unitario"
+
+#: ../../docs/developers_guide/unittesting.rst:588
+msgid ""
+"To build the unit test you need only to make sure that ``ENABLE_TESTS=true``"
+" in the cmake configuration. There are two ways to do this:"
+msgstr ""
+"Per costruire unit test devi solo assicurarti che sia ``ENABLE_TESTS=true`` "
+"nella configurazione di cmake. Ci sono due modi per farlo:"
+
+#: ../../docs/developers_guide/unittesting.rst:599
+msgid "Run your tests"
+msgstr "Eseguire i tuoi test"
+
+#: ../../docs/developers_guide/unittesting.rst:602
+msgid ""
+"The simplest way to run the tests is as part of your normal build process:"
+msgstr ""
+"Il modo più semplice per eseguire i test è di farlo come parte del tuo "
+"normale processo di compilazione:"
+
+#: ../../docs/developers_guide/unittesting.rst:733
+msgid "Variable"
+msgstr "Variabile"
+
+#: ../../docs/developers_guide/unittesting.rst:733
+msgid "Value"
+msgstr "Valore"
+
 #: ../../docs/developers_guide/unittesting.rst:735
 msgid "PYTHONPATH"
 msgstr "PYTHONPATH"
+
+#: ../../docs/developers_guide/unittesting.rst:735
+msgid ""
+"[build]/output/python/:[build]/output/python/plugins:[source]/tests/src/python"
+msgstr ""
+"[build]/output/python/:[build]/output/python/plugins:[source]/tests/src/python"
 
 #: ../../docs/developers_guide/unittesting.rst:737
 msgid "QGIS_PREFIX_PATH"
@@ -93,3 +184,22 @@ msgstr "LD_LIBRARY_PATH"
 #: ../../docs/developers_guide/unittesting.rst:739
 msgid "[build]/output/lib"
 msgstr "[build]/output/lib"
+
+#: ../../docs/developers_guide/unittesting.rst:746
+msgid "Have fun"
+msgstr "Buon divertimento "
+
+#: ../../docs/developers_guide/unittesting.rst:748
+msgid ""
+"Well that concludes this section on writing unit tests in QGIS. We hope you "
+"will get into the habit of writing test to test new functionality and to "
+"check for regressions. Some aspects of the test system (in particular the "
+":file:`CMakeLists.txt` parts) are still being worked on so that the testing "
+"framework works in a truly platform independent way."
+msgstr ""
+"Bene, questo conclude questa sezione sulla scrittura di unit test in QGIS. "
+"Speriamo che tu prenda l'abitudine di scrivere test per collaudare nuove "
+"funzionalità e per controllare le eventuali rettifiche. Alcuni aspetti del "
+"sistema di test (in particolare le parti :file:`CMakeLists.txt`) sono ancora"
+" in fase di lavorazione in modo che il framework di test funzioni in modo "
+"veramente indipendente dalla piattaforma."
