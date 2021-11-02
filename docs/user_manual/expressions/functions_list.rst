@@ -403,9 +403,25 @@ Further reading: :ref:`qgisswapxy` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_flip_coordinates_section
+   :end-before: .. end_force_polygon_ccw_section
+
+Further reading: :ref:`expression_function_GeometryGroup_force_polygon_cw`,
+:ref:`expression_function_GeometryGroup_force_rhr`
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_force_polygon_ccw_section
+   :end-before: .. end_force_polygon_cw_section
+
+Further reading: :ref:`expression_function_GeometryGroup_force_polygon_ccw`,
+:ref:`expression_function_GeometryGroup_force_rhr`
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_force_polygon_cw_section
    :end-before: .. end_force_rhr_section
 
-Further reading: :ref:`qgisforcerhr` algorithm
+Further reading: :ref:`qgisforcerhr` algorithm,
+:ref:`expression_function_GeometryGroup_force_polygon_ccw`,
+:ref:`expression_function_GeometryGroup_force_polygon_cw`
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_force_rhr_section
