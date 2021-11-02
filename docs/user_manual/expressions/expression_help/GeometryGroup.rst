@@ -60,6 +60,34 @@ Returns the bisector angle (average angle) to the geometry for a specified verte
 
 .. end_angle_at_vertex_section
 
+.. _expression_function_GeometryGroup_apply_dash_pattern:
+
+apply_dash_pattern
+..................
+
+Applies a dash pattern to a geometry, returning a MultiLineString geometry which is the input geometry stroked along each line/ring with the specified pattern.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - apply_dash_pattern(geometry, pattern, [start_rule=no_rule], [end_rule=no_rule], [adjustment=both], [pattern_offset=0])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **geometry** - a geometry (accepts (multi)linestrings or (multi)polygons).
+       * **pattern** - dash pattern, as an array of numbers representing dash and gap lengths. Must contain an even number of elements.
+       * **start_rule** - optional rule for constraining the start of the pattern. Valid values are 'no_rule', 'full_dash', 'half_dash', 'full_gap', 'half_gap'.
+       * **end_rule** - optional rule for constraining the end of the pattern. Valid values are 'no_rule', 'full_dash', 'half_dash', 'full_gap', 'half_gap'.
+       * **adjustment** - optional rule for specifying which part of patterns are adjusted to fit the desired pattern rules. Valid values are 'both', 'dash', 'gap'.
+       * **pattern_offset** - Optional distance specifying a specific distance along the pattern to commence at.
+   * - Examples
+     - * ``geom_to_wkt(apply_dash_pattern(geom_from_wkt('LINESTRING(1 1, 10 1)'), array(3, 1)))`` → MultiLineString ((1 1, 4 1),(5 1, 8 1),(9 1, 10 1, 10 1))
+       * ``geom_to_wkt(apply_dash_pattern(geom_from_wkt('LINESTRING(1 1, 10 1)'), array(3, 1), start_rule:='half_dash'))`` → MultiLineString ((1 1, 2.5 1),(3.5 1, 6.5 1),(7.5 1, 10 1, 10 1))
+
+
+.. end_apply_dash_pattern_section
+
 .. _expression_function_GeometryGroup_$area:
 
 $area
@@ -652,12 +680,52 @@ Returns a copy of the geometry with the x and y coordinates swapped. Useful for 
 
 .. end_flip_coordinates_section
 
+.. _expression_function_GeometryGroup_force_polygon_ccw:
+
+force_polygon_ccw
+.................
+
+Forces a geometry to respect the convention where exterior rings are counter-clockwise, interior rings are clockwise.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - force_polygon_ccw(geometry)
+   * - Arguments
+     - * **geometry** - a geometry. Any non-polygon geometries are returned unchanged.
+   * - Examples
+     - * ``geom_to_wkt(force_polygon_ccw(geometry:=geom_from_wkt('Polygon ((-1 -1, 0 2, 4 2, 4 0, -1 -1)))')))`` → 'Polygon ((-1 -1, 4 0, 4 2, 0 2, -1 -1))'
+
+
+.. end_force_polygon_ccw_section
+
+.. _expression_function_GeometryGroup_force_polygon_cw:
+
+force_polygon_cw
+................
+
+Forces a geometry to respect the convention where exterior rings are clockwise, interior rings are counter-clockwise.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - force_polygon_cw(geometry)
+   * - Arguments
+     - * **geometry** - a geometry. Any non-polygon geometries are returned unchanged.
+   * - Examples
+     - * ``geom_to_wkt(force_polygon_cw(geometry:=geom_from_wkt('POLYGON((-1 -1, 4 0, 4 2, 0 2, -1 -1))')))`` → 'Polygon ((-1 -1, 0 2, 4 2, 4 0, -1 -1))'
+
+
+.. end_force_polygon_cw_section
+
 .. _expression_function_GeometryGroup_force_rhr:
 
 force_rhr
 .........
 
-Forces a geometry to respect the Right-Hand-Rule, in which the area that is bounded by a polygon is to the right of the boundary. In particular, the exterior ring is oriented in a clockwise direction and the interior rings in a counter-clockwise direction.
+Forces a geometry to respect the Right-Hand-Rule, in which the area that is bounded by a polygon is to the right of the boundary. In particular, the exterior ring is oriented in a clockwise direction and the interior rings in a counter-clockwise direction. Due to the inconsistency in the definition of the Right-Hand-Rule in some contexts it is recommended to use the explicit force_polygon_cw function instead.
 
 .. list-table::
    :widths: 15 85
@@ -2329,19 +2397,46 @@ Returns a rotated version of a geometry. Calculations are in the Spatial Referen
    :widths: 15 85
 
    * - Syntax
-     - rotate(geometry, rotation, [center])
+     - rotate(geometry, rotation, [center=NULL], [per_part=false])
 
        [] marks optional arguments
    * - Arguments
      - * **geometry** - a geometry
        * **rotation** - clockwise rotation in degrees
        * **center** - rotation center point. If not specified, the center of the geometry's bounding box is used.
+       * **per_part** - apply rotation per part. If true, then rotation will apply around the center of each part's bounding box when the input geometry is multipart and an explicit rotation center point is not specified.
    * - Examples
      - * ``rotate($geometry, 45, make_point(4, 5))`` → geometry rotated 45 degrees clockwise around the (4, 5) point
        * ``rotate($geometry, 45)`` → geometry rotated 45 degrees clockwise around the center of its bounding box
 
 
 .. end_rotate_section
+
+.. _expression_function_GeometryGroup_scale:
+
+scale
+.....
+
+Returns a scaled version of a geometry. Calculations are in the Spatial Reference System of this geometry.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - scale(geometry, x_scale, y_scale, [center])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **geometry** - a geometry
+       * **x_scale** - x-axis scaling factor
+       * **y_scale** - y-axis scaling factor
+       * **center** - scaling center point. If not specified, the center of the geometry's bounding box is used.
+   * - Examples
+     - * ``scale($geometry, 2, 0.5, make_point(4, 5))`` → geometry scaled twice horizontally and halved vertically, around the (4, 5) point
+       * ``scale($geometry, 2, 0.5)`` → geometry twice horizontally and halved vertically, around the center of its bounding box
+
+
+.. end_scale_section
 
 .. _expression_function_GeometryGroup_segments_to_lines:
 
@@ -2502,6 +2597,58 @@ Smooths a geometry by adding extra nodes which round off corners in the geometry
 
 .. end_smooth_section
 
+.. _expression_function_GeometryGroup_square_wave:
+
+square_wave
+...........
+
+Constructs square/rectangular waves along the boundary of a geometry.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - square_wave(geometry, wavelength, amplitude, [strict=False])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **geometry** - a geometry
+       * **wavelength** - wavelength of square waveform
+       * **amplitude** - amplitude of square waveform
+       * **strict** - By default the wavelength argument is treated as a "maximum wavelength", where the actual wavelength will be dynamically adjusted so that an exact number of square waves are created along the boundaries of the geometry. If the strict argument is set to true then the wavelength will be used exactly and an incomplete pattern may be used for the final waveform.
+   * - Examples
+     - * ``square_wave(geom_from_wkt('LineString(0 0, 10 0)'), 3, 1)`` → Square waves with wavelength 3 and amplitude 1 along the linestring
+
+
+.. end_square_wave_section
+
+.. _expression_function_GeometryGroup_square_wave_randomized:
+
+square_wave_randomized
+......................
+
+Constructs randomized square/rectangular waves along the boundary of a geometry.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - square_wave_randomized(geometry, min_wavelength, max_wavelength, min_amplitude, max_amplitude, [seed=0])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **geometry** - a geometry
+       * **min_wavelength** - minimum wavelength of waves
+       * **max_wavelength** - maximum wavelength of waves
+       * **min_amplitude** - minimum amplitude of waves
+       * **max_amplitude** - maximum amplitude of waves
+       * **seed** - specifies a random seed for generating waves. If the seed is 0, then a completely random set of waves will be generated.
+   * - Examples
+     - * ``square_wave_randomized(geom_from_wkt('LineString(0 0, 10 0)'), 2, 3, 0.1, 0.2)`` → Randomly sized square waves with wavelengths between 2 and 3 and amplitudes between 0.1 and 0.2 along the linestring
+
+
+.. end_square_wave_randomized_section
+
 .. _expression_function_GeometryGroup_start_point:
 
 start_point
@@ -2655,6 +2802,58 @@ Returns a translated version of a geometry. Calculations are in the Spatial Refe
 
 .. end_translate_section
 
+.. _expression_function_GeometryGroup_triangular_wave:
+
+triangular_wave
+...............
+
+Constructs triangular waves along the boundary of a geometry.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - triangular_wave(geometry, wavelength, amplitude, [strict=False])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **geometry** - a geometry
+       * **wavelength** - wavelength of triangular waveform
+       * **amplitude** - amplitude of triangular waveform
+       * **strict** - By default the wavelength argument is treated as a "maximum wavelength", where the actual wavelength will be dynamically adjusted so that an exact number of triangular waves are created along the boundaries of the geometry. If the strict argument is set to true then the wavelength will be used exactly and an incomplete pattern may be used for the final waveform.
+   * - Examples
+     - * ``triangular_wave(geom_from_wkt('LineString(0 0, 10 0)'), 3, 1)`` → Triangular waves with wavelength 3 and amplitude 1 along the linestring
+
+
+.. end_triangular_wave_section
+
+.. _expression_function_GeometryGroup_triangular_wave_randomized:
+
+triangular_wave_randomized
+..........................
+
+Constructs randomized triangular waves along the boundary of a geometry.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - triangular_wave_randomized(geometry, min_wavelength, max_wavelength, min_amplitude, max_amplitude, [seed=0])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **geometry** - a geometry
+       * **min_wavelength** - minimum wavelength of waves
+       * **max_wavelength** - maximum wavelength of waves
+       * **min_amplitude** - minimum amplitude of waves
+       * **max_amplitude** - maximum amplitude of waves
+       * **seed** - specifies a random seed for generating waves. If the seed is 0, then a completely random set of waves will be generated.
+   * - Examples
+     - * ``triangular_wave_randomized(geom_from_wkt('LineString(0 0, 10 0)'), 2, 3, 0.1, 0.2)`` → Randomly sized triangular waves with wavelengths between 2 and 3 and amplitudes between 0.1 and 0.2 along the linestring
+
+
+.. end_triangular_wave_randomized_section
+
 .. _expression_function_GeometryGroup_union:
 
 union
@@ -2675,6 +2874,58 @@ Returns a geometry that represents the point set union of the geometries.
 
 
 .. end_union_section
+
+.. _expression_function_GeometryGroup_wave:
+
+wave
+....
+
+Constructs rounded (sine-like) waves along the boundary of a geometry.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - wave(geometry, wavelength, amplitude, [strict=False])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **geometry** - a geometry
+       * **wavelength** - wavelength of sine-like waveform
+       * **amplitude** - amplitude of sine-like waveform
+       * **strict** - By default the wavelength argument is treated as a "maximum wavelength", where the actual wavelength will be dynamically adjusted so that an exact number of waves are created along the boundaries of the geometry. If the strict argument is set to true then the wavelength will be used exactly and an incomplete pattern may be used for the final waveform.
+   * - Examples
+     - * ``wave(geom_from_wkt('LineString(0 0, 10 0)'), 3, 1)`` → Sine-like waves with wavelength 3 and amplitude 1 along the linestring
+
+
+.. end_wave_section
+
+.. _expression_function_GeometryGroup_wave_randomized:
+
+wave_randomized
+...............
+
+Constructs randomized curved (sine-like) waves along the boundary of a geometry.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - wave_randomized(geometry, min_wavelength, max_wavelength, min_amplitude, max_amplitude, [seed=0])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **geometry** - a geometry
+       * **min_wavelength** - minimum wavelength of waves
+       * **max_wavelength** - maximum wavelength of waves
+       * **min_amplitude** - minimum amplitude of waves
+       * **max_amplitude** - maximum amplitude of waves
+       * **seed** - specifies a random seed for generating waves. If the seed is 0, then a completely random set of waves will be generated.
+   * - Examples
+     - * ``wave_randomized(geom_from_wkt('LineString(0 0, 10 0)'), 2, 3, 0.1, 0.2)`` → Randomly sized curved waves with wavelengths between 2 and 3 and amplitudes between 0.1 and 0.2 along the linestring
+
+
+.. end_wave_randomized_section
 
 .. _expression_function_GeometryGroup_wedge_buffer:
 
