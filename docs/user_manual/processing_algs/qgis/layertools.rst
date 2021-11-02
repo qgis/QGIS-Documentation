@@ -12,7 +12,6 @@ Layer tools
 
 Export layer(s) information
 ---------------------------
-|318|
 
 Creates a polygon layer with features corresponding to the extent of selected layer(s).
 
@@ -227,12 +226,3 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |318| replace:: ``NEW in 3.18``

@@ -988,7 +988,7 @@ To use these variables in an expression, they should be preceded by the
    "item_id", "The layout item user ID (not necessarily unique)"
    "item_uuid", "The layout item unique ID"
    "layer", "The current layer"
-   "layer_crs |318|", "The Coordinate Reference System Authority ID of the current layer"
+   "layer_crs", "The Coordinate Reference System Authority ID of the current layer"
    "layer_id", "The ID of current layer"
    "layer_ids", "The IDs of all the map layers in the current project as a list"
    "layer_name", "The name of current layer"
@@ -1021,7 +1021,7 @@ To use these variables in an expression, they should be preceded by the
    Coordinate reference system of the current map"
    "map_crs_proj4", "The Proj4 definition of the Coordinate
    reference system of the current map"
-   "map_crs_projection |320|", "The descriptive name of the projection method used
+   "map_crs_projection", "The descriptive name of the projection method used
    by the Coordinate reference system of the map (e.g. 'Albers Equal Area')"
    "map_crs_wkt", "The WKT definition of the Coordinate reference
    system of the current map"
@@ -1155,8 +1155,6 @@ This makes it easy to quickly retrieve and reapply previously used expressions.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |318| replace:: ``NEW in 3.18``
-.. |320| replace:: ``NEW in 3.20``
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
 .. |expressionSelect| image:: /static/common/mIconExpressionSelect.png
