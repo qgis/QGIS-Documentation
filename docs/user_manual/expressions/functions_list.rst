@@ -58,7 +58,8 @@ is irrelevant and values are identified by their keys.
    :start-after: :orphan:
    :end-before: .. end_array_get_section
 
-Further reading: :ref:`expression_function_Operators_index`
+.. hint:: You can also use the :ref:`index operator ([])
+  <expression_function_Operators_index>` to get a value from an array. 
 
 .. include:: expression_help/Arrays.rst
    :start-after: end_array_get_section
@@ -745,7 +746,8 @@ and values are identified by their keys.
    :start-after: :orphan:
    :end-before: .. end_map_get_section
 
-Further reading: :ref:`expression_function_Operators_index`
+.. hint:: You can also use the :ref:`index operator ([])
+  <expression_function_Operators_index>` to get a value from a map. 
 
 .. include:: expression_help/Maps.rst
    :start-after: .. end_map_get_section
