@@ -247,12 +247,13 @@ layers.
 Interact with groups and layers
 ...............................
 
-Layers in the legend window can be organized into groups. There are two ways to
+Layers in the legend window can be organized into groups. There are different ways to
 do this:
 
 #. Press the |folder| icon to add a new group. Type in a name for
    the group and press :kbd:`Enter`. Now click on an existing layer and
    drag it onto the group.
+#. Select more than one layer, then press the |folder| icon. The selected layers are automatically inserted into the new group.
 #. Select some layers, right-click in the legend window and choose
    :guilabel:`Group Selected`. The selected layers will automatically be placed
    in a new group.
