@@ -54,7 +54,7 @@ Parameters
 
        Default: 0
      - Choose the initial number of the incremental count
-   * - **Modulus value** |322|
+   * - **Modulus value**
        
        Optional
      - ``MODULUS``
@@ -1046,7 +1046,6 @@ Python code
 
 Retain fields
 -------------
-|318|
 
 Takes a vector layer and generates a new one that retains only the selected fields.
 All other fields will be dropped.
@@ -1189,8 +1188,6 @@ Python code
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |318| replace:: ``NEW in 3.18``
-.. |322| replace:: ``NEW in 3.22``
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png

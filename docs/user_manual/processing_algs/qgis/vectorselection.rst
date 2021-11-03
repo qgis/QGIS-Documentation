@@ -317,7 +317,6 @@ Python code
 
 Extract within distance
 -----------------------
-|322|
 
 Creates a new vector layer that only contains matching features from an
 input layer. Features are copied wherever they are within
@@ -1005,7 +1004,6 @@ Python code
 
 Select within distance
 ----------------------
-|322|
 
 creates a selection in a vector layer.
 Features are selected wherever they are within the specified maximum
@@ -1077,12 +1075,3 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |322| replace:: ``NEW in 3.22``
