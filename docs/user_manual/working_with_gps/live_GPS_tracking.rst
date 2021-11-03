@@ -13,7 +13,7 @@ To activate live GPS tracking in QGIS, you need to select :menuselection:`View
 --> Panels` |checkbox| :guilabel:`GPS Information Panel` or press :kbd:`Ctrl+0`.
 You will get a new docked window on the left side of the canvas.
 
-There are four possible screens in this GPS tracking window:
+There are three possible screens in this GPS tracking window:
 
 * |metadata| GPS position coordinates and an interface for manually entering
   vertices and features
@@ -26,10 +26,18 @@ on :guilabel:`Disconnect`) disconnects the GPS receiver from your computer. For 
 gpsd support is integrated to support connection to most GPS receivers. Therefore,
 you first have to configure gpsd properly to connect QGIS to it.
 
+With the :guilabel:`Recenter` button the map will jump to the current GPS position.
+
 .. warning::
    If you want to record your position to the canvas, you have to create a new
    vector layer first and switch it to editable status to be able to record your
    track.
+
+When a GPS device is connected and the user moves the cursor over the map canvas, a live status bar message displays the distance and bearing from the cursor to the GPS position. Project distance and bearing settings are respected in this display.
+
+.. tip:: **Touch Screen Devices**
+ On a touch screen device use a tap-and-hold event to trigger the live status bar
+ message.
 
 Position and additional attributes
 ----------------------------------
@@ -62,16 +70,6 @@ are receiving signals from.
 GPS options
 -----------
 
-|options| In case of connection problems, you can switch between:
-
-* |radioButtonOn| :guilabel:`Autodetect`
-* |radioButtonOff| :guilabel:`Internal`
-* |radioButtonOff| :guilabel:`Serial device`
-* |radioButtonOff| :guilabel:`gpsd` (selecting the Host, Port and Device your
-  GPS is connected to)
-
-A click on :guilabel:`Connect` again initiates the connection to the GPS receiver.
-
 .. _figure_gps_options:
 
 .. figure:: img/gpstrack_options.png
@@ -79,22 +77,57 @@ A click on :guilabel:`Connect` again initiates the connection to the GPS receive
 
    GPS tracking options window
 
+Connection
+..........
+
+|options| In case of connection problems, you can switch between:
+
+* |radioButtonOn| :guilabel:`Autodetect`
+* |radioButtonOff| :guilabel:`Serial device` (reload required if a new GPS Device is connected)
+* |radioButtonOff| :guilabel:`gpsd` (selecting the Host, Port and Device your
+  GPS is connected to)
+
+A click on :guilabel:`Connect` again initiates the connection to the GPS receiver.
+
+Digitizing
+..........
+
 You can activate |checkbox| :menuselection:`Automatically save added features`
 when you are in editing mode. Or you can activate |checkbox|
 :guilabel:`Automatically add points` to the map canvas with a certain width
 and color.
 
+The :guilabel:`Calculate bearing from travel direction` can be used if the device reports faulty bearing measurements and it will calculate the GPS bearing based on the previous two recorded locations.
+
+Cursor
+......
+
 Activating |checkbox| :guilabel:`Cursor`, you can use a slider |slider| to shrink
 and grow the position cursor on the canvas.
+
+Filtering
+.........
 
 You can also set an :guilabel:`Acquisition interval (seconds)` and a
 :guilabel:`Distance threshold (meters)` parameters to keep the cursor still
 active when the receiver is in static conditions.
 
+Map Centering and Rotation
+..........................
+
 Activating |radioButtonOn| :guilabel:`Map centering` allows you to decide in which
 way the canvas will be updated. This includes 'always', 'when leaving', if your
 recorded coordinates start to move out of the canvas, or 'never', to keep map
 extent.
+Activating :guilabel:`Rotate map to match GPS direction` will automatically rotate the map canvas so that it is oriented in the same direction as the GPS bearing.
+
+Show Bearing Line
+.................
+
+Activating :guilabel:`Show Bearing Line` will show a line from the GPS location pointing in current path direction of the GPS.
+
+Log File
+........
 
 Finally, you can activate |checkbox| :guilabel:`Log file` and define a path
 and a file where log messages about the GPS tracking are logged.
