@@ -1388,8 +1388,8 @@ the project map canvas. You can:
   extent of all layers when zooming to full map extent (|zoomFullExtent|).
   It's useful when a project contains web layers/national layers/global layers
   yet the actual area of interest for the project is a smaller geographic area.
-  The project full extent coordinates can be derived from an existing layer,
-  based on the current map canvas extent or defined by the user.
+  The project full extent coordinates can be set with the :ref:`extent selector
+  <extent_selector>` widget.
 
 CRS Properties
 --------------
