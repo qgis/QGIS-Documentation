@@ -914,7 +914,7 @@ actions like:
    * - :menuselection:`--> Temporal Controller`
      -
      -
-     -
+     - :ref:`temporal_controller`
    * - :menuselection:`--> Tile Scale`
      -
      -
@@ -2088,7 +2088,7 @@ Below is a list of the default panels provided by QGIS:
 * the :guilabel:`Result Viewer Panel`
 * the :ref:`Spatial Bookmark Manager Panel <sec_bookmarks>`
 * the :ref:`Statistics Panel <statistical_summary>`
-* the :guilabel:`Temporal Controller`
+* the :ref:`Temporal Controller <temporal_controller>`
 * the :ref:`Tile Scale Panel <tilesets>`
 * the :ref:`Undo/Redo Panel <undo_redo_panel>`
 
@@ -2204,6 +2204,146 @@ capabilities:
     they are set in the displayed layers' properties
   * :guilabel:`Change map CRS...`
   * :guilabel:`Rename view...`
+
+
+.. _maptimecontrol:
+
+Time-based control on the map canvas
+------------------------------------
+
+QGIS can handle temporal control on loaded layers, i.e. modify the map canvas
+rendering based on a time variation. To achieve this, you need:
+
+#. Layers that have dynamic temporal properties set.
+   QGIS supports temporal control for different data providers, with custom
+   settings.
+   It's mainly about setting the time range in which the layer would display:
+
+   * raster layers: controls whether to display or not the layer.
+
+   .. This option might need some tweak: I think WMS-T and Postgis raster layers
+    enable more options and behaviour so, if someone can provide a better summary
+    of the temporal setting on rasters, it is very welcome!
+
+   * vector layers: features are filtered based on time values associated to
+      their attributes
+   * mesh layers: displays dynamically the active dataset groups values
+
+   .. TODO: Link the layers above to their temporal properties description
+    when merged: raster_temporal, vectortemporalmenu and mesh_temporal
+
+   When dynamic temporal options are enabled for a layer, an |indicatorTemporal|
+   icon is displayed next to the layer in the :guilabel:`Layers` panel to remind
+   you that the layer is temporally controlled.
+   Click the icon to update the temporal settings.
+
+#. Enable the temporal navigation of the map canvas using the :ref:`Temporal
+   controller panel <temporal_controller>`. The panel is activated:
+
+   * using the |temporal| :sup:`Temporal controller panel` icon located in the
+     :guilabel:`Map Navigation` toolbar
+   * or from the :menuselection:`View --> Panels --> Temporal controller panel`
+     menu
+
+.. _temporal_controller:
+
+The temporal controller panel
+.............................
+
+The :guilabel:`Temporal controller` panel has the following modes:
+
+.. figure:: img/temporal_controller_panel.png
+   :align: center
+
+   Temporal Controller Panel in navigation mode
+
+* |temporalNavigationOff| :sup:`Turn off temporal navigation`: all the
+  temporal settings are disabled and visible layers are rendered as usual
+* |temporalNavigationFixedRange| :sup:`Fixed range temporal navigation`:
+  a time range is set and only layers (or features) whose temporal range
+  overlaps with this range are displayed on the map.
+* |temporalNavigationAnimated| :sup:`Animated temporal navigation`:
+  a time range is set, split into steps, and only layers (or features)
+  whose temporal range overlaps with each frame are displayed on the map
+* |settings| :sup:`Settings` for general control of the animation
+
+  * :guilabel:`Frames rate`: number of image frames per second
+
+  .. what is this option for?
+
+  * |unchecked| :guilabel:`Cumulative range`: all animation frames will
+    have the same start date-time but different end dates and times.
+    This is useful is you wish to accumulate data in your temporal
+    visualisation instead of showing a ‘moving time window’ across your data.
+
+.. _`create_temporal_animation`:
+
+Animating a temporal navigation
+...............................
+
+An animation is based on a varying set of visible layers at particular times
+within a time range.
+To create a temporal animation:
+
+#. Toggle on the |temporalNavigationAnimated| :sup:`Animated temporal
+   navigation`, displaying the animation player widget
+#. Enter the :guilabel:`Time range` to consider. Using the close |refresh|
+   button, this can be defined as:
+
+   * :guilabel:`Set to full range` of all the time enabled layers
+   * :guilabel:`Set to preset project range` as defined in the :ref:`project
+     properties <project_temporal>`
+   * :guilabel:`Set to single layer's range` taken from a time-enabled layer
+#. Fill in the time :guilabel:`Step` to split the time range.
+   Different units are supported, from ``seconds`` to ``centuries``.
+   A ``source timestamps`` option is also available as step: when selected,
+   this causes the temporal navigation to step between all available time ranges
+   from layers in the project. It’s useful when a project contains layers with
+   non-contiguous available times, such as a WMS-T service which provides images
+   that are available at irregular dates. This option will allow you to only step
+   between time ranges where the next available image is shown.
+
+#. Click the |play| button to preview the animation.
+   QGIS will generate scenes using the layers rendering at the set times.
+   Layers display depends on whether they overlap any individual time frame.
+
+   .. figure:: img/map_navigation.gif
+      :align: center
+
+      Temporal navigation through a layer
+
+   The animation can also be previewed by moving the time slider.
+   Keeping the |refresh| :sup:`Loop` button pressed will repeatedly run the
+   animation while clicking |play| stops a running animation.
+   A full set of video player buttons is available.
+
+   Horizontal scrolling using the mouse wheel (where supported) with the
+   cursor on the map canvas will also allow you to navigate, or “scrub”,
+   the temporal navigation slider backwards and forwards.
+
+#. Click the |fileSave| :sup:`Export animation` button if you want to generate
+   a series of images representing the scene. They can be later combined in a
+   video editor software:
+
+   .. figure:: img/saveTimeAnimation.png
+      :align: center
+
+      Exporting map canvas animation scenes to images
+
+   * The filename :guilabel:`Template`: the ``####`` are replaced with frame
+     sequence number
+   * The :guilabel:`Output directory`
+   * Under :guilabel:`Map settings`, you can:
+
+     * redefine the :ref:`spatial extent <extent_selector>` to use
+     * control the :guilabel:`Resolution` of the image
+       (:guilabel:`Output width` and :guilabel:`Output height`)
+     * :guilabel:`Draw active decorations`: whether active :ref:`decorations
+       <decorations>` should be kept in the output
+   * Under :guilabel:`Temporal settings`, you can redefine:
+
+     * the time :guilabel:`Range` for the animation
+     * the :guilabel:`Step (frame length)` in the unit of your choice
 
 
 .. _`exportingmapcanvas`:
@@ -2621,13 +2761,8 @@ To create an animation:
    https://doc.qt.io/qt-5/qeasingcurve.html#EasingFunction-typedef).
 
    The animation can also be previewed by moving the time slider.
-   Keeping the |refresh| :sup:`Repeat` button pressed will repeatedly run the
+   Keeping the :guilabel:`Loop` button checked will repeatedly run the
    animation while clicking |play| stops a running animation.
-
-It is possible to browse the different views of the camera, using the
-:guilabel:`Keyframe` list. Whenever a time is active, changing the map view
-will automatically update the associated position. You can also |symbologyEdit|
-:sup:`Edit keyframe` (time only) or |signMinus| :sup:`Remove keyframe`.
 
 Click |fileSave| :sup:`Export animation frames` to generate a series of images
 representing the scene. Other than the filename :guilabel:`Template` and the
@@ -2952,6 +3087,8 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |inOverview| image:: /static/common/mActionInOverview.png
    :width: 1.5em
+.. |indicatorTemporal| image:: /static/common/mIndicatorTemporal.png
+   :width: 1.5em
 .. |interfaceCustomization| image:: /static/common/mActionInterfaceCustomization.png
    :width: 1.5em
 .. |invertSelection| image:: /static/common/mActionInvertSelection.png
@@ -3124,6 +3261,8 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |selectRectangle| image:: /static/common/mActionSelectRectangle.png
    :width: 1.5em
+.. |settings| image:: /static/common/settings.png
+   :width: 1.5em
 .. |showAllLayers| image:: /static/common/mActionShowAllLayers.png
    :width: 1.5em
 .. |showBookmarks| image:: /static/common/mActionShowBookmarks.png
@@ -3157,6 +3296,14 @@ Click the icon to open the Plugin Manager dialog.
 .. |svgAnnotation| image:: /static/common/mActionSvgAnnotation.png
    :width: 1.5em
 .. |symbologyEdit| image:: /static/common/symbologyEdit.png
+   :width: 1.5em
+.. |temporal| image:: /static/common/temporal.png
+   :width: 1.5em
+.. |temporalNavigationAnimated| image:: /static/common/mTemporalNavigationAnimated.png
+   :width: 1.5em
+.. |temporalNavigationFixedRange| image:: /static/common/mTemporalNavigationFixedRange.png
+   :width: 1.5em
+.. |temporalNavigationOff| image:: /static/common/mTemporalNavigationOff.png
    :width: 1.5em
 .. |textAnnotation| image:: /static/common/mActionTextAnnotation.png
    :width: 1.5em
