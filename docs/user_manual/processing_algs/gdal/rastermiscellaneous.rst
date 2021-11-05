@@ -551,7 +551,7 @@ Basic parameters
    * - **Output data type**
      - ``DATA_TYPE``
      - [enumeration]
-       
+
        Default: 5
      - Defines the format of the output raster file.
        Options:
@@ -1459,6 +1459,134 @@ Python code
 ...........
 
 **Algorithm ID**: ``gdal:tileindex``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _gdalviewshed:
+
+Viewshed
+--------
+
+Calculates a viewshed raster from an input raster DEM using method defined in
+`Wang2000 <https://gdal.org/programs/gdal_viewshed.html#wang2000>`_ for a user
+defined point.
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Input elevation raster layer
+   * - **Band number**
+     - ``BAND``
+     - [raster band]
+
+       Default: 1
+     - The number of the band to use as elevation
+   * - **Observer location**
+     - ``OBSERVER``
+     - [point]
+     - The location of the observer
+   * - **Observer height**
+     - ``OBSERVER_HEIGHT``
+     - [number]
+
+       Default: 1.0
+     - The altitude of the observer, in the DEM units
+   * - **Target height**
+     - ``TARGET_HEIGHT``
+     - [number]
+
+       Default: 1.0
+     - The altitude of the target element, in the DEM units
+   * - **Maximum distance from observer to compute visibility**
+     - ``MAX_DISTANCE``
+     - [number]
+
+       Default: 100.0
+     - Maximum distance from observer to compute visibility,
+       in the DEM units
+   * - **Output**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Output raster layer. One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Additional creation options**
+
+       Optional
+     - ``OPTIONS``
+     - [string]
+
+       Default: ''
+     - For adding one or more creation options that control the
+       raster to be created (colors, block size, file
+       compression...).
+       For convenience, you can rely on predefined profiles (see
+       :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       For Batch Process: separate multiple options with a pipe
+       character (``|``).
+   * - **Additional command-line parameters**
+     - ``EXTRA``
+     - [string]
+
+       Default: None
+     - Add extra GDAL command line options
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output**
+     - ``OUTPUT``
+     - [raster]
+     - The raster layer displaying the viewshed.
+
+Python code
+...........
+
+**Algorithm ID**: ``gdal:viewshed``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
