@@ -18,6 +18,9 @@ In other words you can copy/paste a URL and download the file.
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -31,6 +34,8 @@ Parameters
      - [string]
      - The URL of the file to download.
    * - **File destination**
+
+       Optional
      - ``OUTPUT``
      - [string]
 
@@ -41,6 +46,33 @@ Parameters
        .. include:: ../algs_include.rst
           :start-after: **file_output_types_skip**
           :end-before: **end_file_output_types_skip**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Method**
+     - ``METHOD``
+     - [enumeration]
+
+       Default: 0
+     - The HTTP method to use for the request. Options are:
+
+       * 0 --- GET
+       * 1 --- POST
+   * - **Data**
+
+       Optional
+     - ``DATA``
+     - [string]
+     - The data to add in the body if the request is a POST.
 
 Outputs
 .......
