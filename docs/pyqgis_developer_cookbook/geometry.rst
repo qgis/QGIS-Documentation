@@ -303,10 +303,10 @@ The following code assumes ``layer`` is a :class:`QgsVectorLayer <qgis.core.QgsV
 .. testoutput:: geometry
 
     Zambia
-    Area:  62.822790653431205
+    Area:  62.822790653431014
     Perimeter:  50.65232014052552
     Zimbabwe
-    Area:  33.41113559136521
+    Area:  33.41113559136511
     Perimeter:  26.608288555013935
 
 Now you have calculated and printed the areas and perimeters of the geometries.
