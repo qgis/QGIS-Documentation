@@ -252,8 +252,8 @@ Parameters
      - [enumeration] [list]
 
        Default: [0]
-     - Spatial condition for the selection.
-       One or more of:
+     - Type of spatial relation the input feature should have with an intersect
+       feature so that it could be selected. One or more of:
 
        * 0 --- intersect
        * 1 --- contain
@@ -942,8 +942,8 @@ Parameters
      - [enumeration] [list]
 
        Default: [0]
-     - Spatial condition for the selection.
-       One or more of:
+     - Type of spatial relation the input feature should have with an intersect
+       feature so that it could be selected. One or more of:
 
        * 0 --- intersect
        * 1 --- contain
