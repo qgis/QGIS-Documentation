@@ -59,6 +59,79 @@ common to all lists:
 * Use period ( ``.`` ) as punctuation for list items that consist of several
   sentences or a single compound sentence
 
+Indentation
+-----------
+
+Indentation in ReStructuredText should be aligned with the list or markup *marker*. It is
+also possible to create block quotes with indentation. See the
+`Specification <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#indentation>`__
+
+.. code-block::
+
+   #. Three shall be the number of the spaces
+      and the number of the spaces shall be three
+   #. There can or cannot be whitelines
+
+   #. Between list items
+
+      * And nested lists
+      * Are also possible
+      * Just make sure
+      * That they have a whiteline
+      * above as well as below
+
+      And now we can write more
+
+   However, if there is an unindented paragraph, this will reset the numbering:
+
+   #. This item starts at 1 again
+
+      But you can have *indented* paragraphs, that do not reset the numbering.
+
+   #. This is now item 2.
+
+      .. admontion:: Conclusion
+         
+         :3 spaces: numbered lists (``#.``, ``1.``) and markup (``..``)
+         :2 spaces: bullet lists ``*``
+         :n spaces: There are other things such as option lists
+                    where it is preferred to also align the indentation
+                    to the marker.
+            
+         
+         and any combination of spaces when these are combined
+
+
+#. Three shall be the number of the spaces
+   and the number of the spaces shall be three
+#. There can or cannot be whitelines
+
+#. Between list items
+
+   * And nested lists
+   * Are also possible
+   * Just make sure
+   * That they have a whiteline
+   * above as well as below
+
+   And now we can write more
+
+However, if there is an unindented paragraph, this will reset the numbering:
+
+#. This item starts at 1 again
+
+   But you can have *indented* paragraphs, that do not reset the numbering.
+
+
+#. This is now item 2.
+
+      .. admonition:: Conclusion
+         
+         :3 spaces: numbered lists (``#.``, ``1.``) and markup (``..``)
+         :2 spaces: bullet lists ``*``
+
+         and any combination of spaces when these are combined
+
 Inline Tags
 -----------
 
