@@ -810,8 +810,9 @@ Returns a feature's geometry.
    * - Arguments
      - * **feature** - a feature object
    * - Examples
-     - * ``geom_to_wkt( geometry( get_feature( layer, attributeField, value ) ) )`` → 'POINT(6 50)'
-       * ``intersects( $geometry, geometry( get_feature( layer, attributeField, value ) ) )`` → true
+     - * `` geometry( $currentfeature )`` → the geometry of the current feature. Prefer using $geometry.
+       * ``geom_to_wkt( geometry( get_feature_by_id( 'streets', 1 ) ) )`` → the geometry in WKT of the feature with the id 1 on the layer "streets", e.g. 'POINT(6 50)'
+       * ``intersects( $geometry, geometry( get_feature( 'streets', 'name', 'Main St.' ) ) )`` → true if the current feature spatially intersects the 'Main St.' named feature in the "streets" layer
 
 
 .. end_geometry_section
