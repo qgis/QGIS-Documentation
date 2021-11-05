@@ -1551,38 +1551,42 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Input Layer**
+   * - **Join to features in**
      - ``INPUT``
      - [vector: any]
      - Input vector layer. The output layer will consist of
        the features of this layer with attributes from
        matching features in the second layer.
-   * - **Join layer**
-     - ``JOIN``
-     - [vector: any]
-     - The attributes of this vector layer will be **added**
-       to the source layer attribute table.
-   * - **Geometric predicate**
+   * - **Where the features**
      - ``PREDICATE``
      - [enumeration] [list]
 
        Default: [0]
-     - Select the geometric criteria. One or more of:
+     - Type of spatial relation the source feature should have with the target
+       feature so that they could be joined. One or more of:
 
-       * 0 --- intersects
-       * 1 --- contains
-       * 2 --- equals
-       * 3 --- touches
-       * 4 --- overlaps
-       * 5 --- within
-       * 6 --- crosses
+       * 0 --- intersect
+       * 1 --- contain
+       * 2 --- equal
+       * 3 --- touch
+       * 4 --- overlap
+       * 5 --- are within
+       * 6 --- cross
 
+       If more than one condition is chosen, at least one
+       of them (OR operation) has to be met for a feature
+       to be extracted.
+   * - **By comparing to**
+     - ``JOIN``
+     - [vector: any]
+     - The join layer. Features of this vector layer will **add** their attributes
+       to the source layer attribute table if they satisfy the spatial relationship.
    * - **Fields to add (leave empty to use all fields)**
 
        Optional
      - ``JOIN_FIELDS``
      - [tablefield: any] [list]
-     - Select the specific fields you want to add.
+     - Select the specific fields you want to add from the join layer.
        By default all the fields are added.
    * - **Join type**
      - ``METHOD``
@@ -1601,7 +1605,7 @@ Parameters
      - [boolean]
      
        Default: False
-     - Remove from the output the input layer records which could not
+     - Remove from the output the input layer's features which could not
        be joined
    * - **Joined field prefix**
 
@@ -1702,38 +1706,43 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Input Layer**
+   * - **Join to features in**
      - ``INPUT``
      - [vector: any]
      - Input vector layer. The output layer will consist of
        the features of this layer with attributes from
        matching features in the second layer.
-   * - **Join layer**
-     - ``JOIN``
-     - [vector: any]
-     - The attributes of this vector layer will be **added**
-       to the source layer attribute table.
-   * - **Geometric predicate**
+   * - **Where the features**
      - ``PREDICATE``
      - [enumeration] [list]
 
        Default: [0]
-     - Select the geometric criteria. One or more of:
+     - Type of spatial relation the source feature should have with the target
+       feature so that they could be joined. One or more of:
 
-       * 0 --- intersects
-       * 1 --- contains
-       * 2 --- equals
-       * 3 --- touches
-       * 4 --- overlaps
-       * 5 --- within
-       * 6 --- crosses
+       * 0 --- intersect
+       * 1 --- contain
+       * 2 --- equal
+       * 3 --- touch
+       * 4 --- overlap
+       * 5 --- are within
+       * 6 --- cross
 
+       If more than one condition is chosen, at least one
+       of them (OR operation) has to be met for a feature
+       to be extracted.
+   * - **By comparing to**
+     - ``JOIN``
+     - [vector: any]
+     - The join layer. Features of this vector layer will **add** summaries
+       of their attributes to the source layer attribute table if
+       they satisfy the spatial relationship.
    * - **Fields to summarize (leave empty to use all fields)**
 
        Optional
      - ``JOIN_FIELDS``
      - [tablefield: any] [list]
-     - Select the specific fields you want to add and summarize.
+     - Select the specific fields you want to add from the join layer.
        By default all the fields are added.
    * - **Summaries to calculate (leave empty to use all fields)**
 
@@ -1742,8 +1751,8 @@ Parameters
      - [enumeration] [list]
 
        Default: []
-     - Choose which type of summary you want to add to
-       each field and for each feature. One or more of:
+     - For each input feature, statistics are calculated on joined fields of
+       their matching features. One or more of:
 
        * 0 --- count
        * 1 --- unique
@@ -1770,7 +1779,7 @@ Parameters
      - [boolean]
      
        Default: False
-     - Remove from the output the input layer records which could not be joined
+     - Remove from the output the input layer's features which could not be joined
    * - **Joined layer**
      - ``OUTPUT``
      - [same as input]
