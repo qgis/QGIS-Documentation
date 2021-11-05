@@ -74,6 +74,29 @@ Parameters
 
        Default: False
      - Activates Zevenbergen&Thorne formula for smooth landscapes
+   * - **Aspect**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Output raster layer. One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Additional creation options**
 
        Optional
@@ -93,21 +116,10 @@ Parameters
 
        Optional
      - ``EXTRA``
-     - [string]   
+     - [string]
 
        Default: None
      - Add extra GDAL command line options
-   * - **Aspect**
-     - ``OUTPUT``
-     - [raster]    
-
-       Default: ``[Save to temporary file]``
-     - Output raster layer. One of:
-
-       .. include:: ../algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
-
 
 Outputs
 .......
@@ -211,13 +223,13 @@ Parameters
 
        Optional
      - ``EXTRA``
-     - [string]   
+     - [string]
 
        Default: None
      - Add extra GDAL command line options
    * - **Color relief**
      - ``OUTPUT``
-     - [raster]    
+     - [raster]
 
        Default: ``[Save to temporary file]``
      - Output raster layer. One of:
@@ -277,10 +289,18 @@ This algorithm is derived from the
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
    :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
 
    * - Label
      - Name
@@ -321,6 +341,29 @@ Parameters
      - ``MASK_LAYER``
      - [raster]
      - A raster layer that defines the areas to fill.
+   * - **Filled**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster layer. One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Additional creation options**
 
        Optional
@@ -340,21 +383,10 @@ Parameters
 
        Optional
      - ``EXTRA``
-     - [string]   
+     - [string]
 
        Default: None
      - Add extra GDAL command line options
-   * - **Filled**
-     - ``OUTPUT``
-     - [raster]    
-
-       Default: ``[Save to temporary file]``
-     - Specification of the output raster layer. One of:
-
-       .. include:: ../algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
-
 
 Outputs
 .......
@@ -398,6 +430,9 @@ This algorithm is derived from the
 
 Parameters
 ..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -472,6 +507,30 @@ Parameters
 
        Default: 0.0
      - No data marker to fill empty points
+   * - **Interpolated (data metrics)**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output raster layer with interpolated values.
+       One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Z value from field**
 
        Optional
@@ -497,7 +556,7 @@ Parameters
 
        Optional
      - ``EXTRA``
-     - [string]   
+     - [string]
 
        Default: None
      - Add extra GDAL command line options
@@ -520,19 +579,6 @@ Parameters
        * 8 --- CInt32
        * 9 --- CFloat32
        * 10 --- CFloat64
-
-   * - **Interpolated (data metrics)**
-     - ``OUTPUT``
-     - [raster]
-
-       Default: ``[Save to temporary file]``
-     - Specify the output raster layer with interpolated values.
-       One of:
-
-       .. include:: ../algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
-
 
 Outputs
 .......
@@ -629,6 +675,30 @@ Parameters
 
        Default: 0.0
      - No data marker to fill empty points
+   * - **Interpolated (IDW with NN search)**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output raster layer with interpolated values.
+       One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Z value from field**
 
        Optional
@@ -654,7 +724,7 @@ Parameters
 
        Optional
      - ``EXTRA``
-     - [string]   
+     - [string]
 
        Default: None
      - Add extra GDAL command line options
@@ -677,19 +747,6 @@ Parameters
        * 8 --- CInt32
        * 9 --- CFloat32
        * 10 --- CFloat64
-
-   * - **Interpolated (IDW with NN search)**
-     - ``OUTPUT``
-     - [raster]
-
-       Default: ``[Save to temporary file]``
-     - Specify the output raster layer with interpolated values.
-       One of:
-
-       .. include:: ../algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
-
 
 Outputs
 .......
@@ -738,6 +795,9 @@ This algorithm is derived from the
 
 Parameters
 ..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -806,6 +866,30 @@ Parameters
 
        Default: 0.0
      - No data marker to fill empty points
+   * - **Interpolated (IDW)**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output raster layer with interpolated values.
+       One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Z value from field**
 
        Optional
@@ -831,7 +915,7 @@ Parameters
 
        Optional
      - ``EXTRA``
-     - [string]   
+     - [string]
 
        Default: None
      - Add extra GDAL command line options
@@ -854,19 +938,6 @@ Parameters
        * 8 --- CInt32
        * 9 --- CFloat32
        * 10 --- CFloat64
-
-   * - **Interpolated (IDW)**
-     - ``OUTPUT``
-     - [raster]
-
-       Default: ``[Save to temporary file]``
-     - Specify the output raster layer with interpolated values.
-       One of:
-
-       .. include:: ../algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
-
 
 Outputs
 .......
@@ -911,6 +982,9 @@ This algorithm is derived from the
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -941,6 +1015,30 @@ Parameters
 
        Default: 0.0
      - No data marker to fill empty points
+   * - **Interpolated (Linear)**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output raster layer with interpolated values.
+       One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Z value from field**
 
        Optional
@@ -966,7 +1064,7 @@ Parameters
 
        Optional
      - ``EXTRA``
-     - [string]   
+     - [string]
 
        Default: None
      - Add extra GDAL command line options
@@ -989,19 +1087,6 @@ Parameters
        * 8 --- CInt32
        * 9 --- CFloat32
        * 10 --- CFloat64
-
-   * - **Interpolated (Linear)**
-     - ``OUTPUT``
-     - [raster]
-
-       Default: ``[Save to temporary file]``
-     - Specify the output raster layer with interpolated values.
-       One of:
-
-       .. include:: ../algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
-
 
 Outputs
 .......
@@ -1052,6 +1137,9 @@ This algorithm is derived from the
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -1101,6 +1189,29 @@ Parameters
 
        Default: 0.0
      - No data marker to fill empty points
+   * - **Interpolated (moving average)**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output raster layer. One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Z value from field**
 
        Optional
@@ -1126,7 +1237,7 @@ Parameters
 
        Optional
      - ``EXTRA``
-     - [string]   
+     - [string]
 
        Default: None
      - Add extra GDAL command line options
@@ -1149,18 +1260,6 @@ Parameters
        * 8 --- CInt32
        * 9 --- CFloat32
        * 10 --- CFloat64
-
-   * - **Interpolated (moving average)**
-     - ``OUTPUT``
-     - [raster] 
-
-       Default: ``[Save to temporary file]``
-     - Specify the output raster layer. One of:
-
-       .. include:: ../algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
-
 
 Outputs
 .......
@@ -1208,6 +1307,9 @@ This algorithm is derived from the
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -1248,6 +1350,30 @@ Parameters
 
        Default: 0.0
      - No data marker to fill empty points
+   * - **Interpolated (Nearest neighbour)**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output raster layer with interpolated values.
+       One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Z value from field**
 
        Optional
@@ -1273,7 +1399,7 @@ Parameters
 
        Optional
      - ``EXTRA``
-     - [string]   
+     - [string]
 
        Default: None
      - Add extra GDAL command line options
@@ -1296,19 +1422,6 @@ Parameters
        * 8 --- CInt32
        * 9 --- CFloat32
        * 10 --- CFloat64
-
-   * - **Interpolated (Nearest neighbour)**
-     - ``OUTPUT``
-     - [raster]
-
-       Default: ``[Save to temporary file]``
-     - Specify the output raster layer with interpolated values.
-       One of:
-
-       .. include:: ../algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
-
 
 Outputs
 .......
@@ -1353,6 +1466,9 @@ This algorithm is derived from the
 
 Parameters
 ..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -1427,6 +1543,30 @@ Parameters
 
        Default: False
      - 
+   * - **Hillshade**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output raster layer with interpolated values.
+       One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Additional creation options**
 
        Optional
@@ -1446,22 +1586,10 @@ Parameters
 
        Optional
      - ``EXTRA``
-     - [string]   
+     - [string]
 
        Default: None
      - Add extra GDAL command line options
-   * - **Hillshade**
-     - ``OUTPUT``
-     - [raster]
-
-       Default: ``[Save to temporary file]``
-     - Specify the output raster layer with interpolated values.
-       One of:
-
-       .. include:: ../algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
-
 
 Outputs
 .......
@@ -1509,6 +1637,9 @@ This algorithm is derived from the
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -1537,6 +1668,29 @@ Parameters
        Default: False
      - Search for nearly white (255) pixels instead of nearly black
        pixels
+   * - **Nearblack**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output raster layer. One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Additional creation options**
 
        Optional
@@ -1556,21 +1710,10 @@ Parameters
 
        Optional
      - ``EXTRA``
-     - [string]   
+     - [string]
 
        Default: None
      - Add extra GDAL command line options
-   * - **Nearblack**
-     - ``OUTPUT``
-     - [raster]
-
-       Default: ``[Save to temporary file]``
-     - Specify the output raster layer. One of:
-
-       .. include:: ../algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
-
 
 Outputs
 .......
@@ -1615,6 +1758,9 @@ This algorithm is derived from the
 
 Parameters
 ..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -1692,6 +1838,29 @@ Parameters
 
        Default: 0.0
      - Specify the nodata value to use for the output raster
+   * - **Proximity map**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output raster layer. One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Additional creation options**
 
        Optional
@@ -1711,7 +1880,7 @@ Parameters
 
        Optional
      - ``EXTRA``
-     - [string]   
+     - [string]
 
        Default: None
      - Add extra GDAL command line options
@@ -1734,18 +1903,6 @@ Parameters
        * 8 --- CInt32
        * 9 --- CFloat32
        * 10 --- CFloat64
-
-   * - **Proximity map**
-     - ``OUTPUT``
-     - [raster]
-
-       Default: ``[Save to temporary file]``
-     - Specify the output raster layer. One of:
-
-       .. include:: ../algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
-
 
 Outputs
 .......
@@ -1793,6 +1950,9 @@ This algorithm is derived from the
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -1818,6 +1978,29 @@ Parameters
 
        Default: False
      - Generates edges from the elevation raster
+   * - **Roughness**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output raster layer. One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Additional creation options**
 
        Optional
@@ -1833,17 +2016,6 @@ Parameters
 
        For Batch Process: separate multiple options with a pipe
        character (``|``).
-   * - **Roughness**
-     - ``OUTPUT``
-     - [raster]    
-
-       Default: ``[Save to temporary file]``
-     - Specify the output raster layer. One of:
-
-       .. include:: ../algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
-
 
 Outputs
 .......
@@ -1890,6 +2062,9 @@ This algorithm is derived from the
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -1928,17 +2103,9 @@ Parameters
      - ``MASK_LAYER``
      - [raster]
      - Validity mask to use instead of the default
-   * - **Additional command-line parameters**
-
-       Optional
-     - ``EXTRA``
-     - [string]   
-
-       Default: None
-     - Add extra GDAL command line options
    * - **Sieved**
      - ``OUTPUT``
-     - [raster]    
+     - [raster]
 
        Default: ``[Save to temporary file]``
      - Specify the output raster layer. One of:
@@ -1947,6 +2114,26 @@ Parameters
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Additional command-line parameters**
+
+       Optional
+     - ``EXTRA``
+     - [string]
+
+       Default: None
+     - Add extra GDAL command line options
 
 Outputs
 .......
@@ -1991,6 +2178,9 @@ This algorithm is derived from the
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -2034,6 +2224,29 @@ Parameters
 
        Default: False
      - Activates Zevenbergen&Thorne formula for smooth landscapes
+   * - **Slope**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output raster layer. One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Additional creation options**
 
        Optional
@@ -2053,21 +2266,10 @@ Parameters
 
        Optional
      - ``EXTRA``
-     - [string]   
+     - [string]
 
        Default: None
      - Add extra GDAL command line options
-   * - **Slope**
-     - ``OUTPUT``
-     - [raster]
-
-       Default: ``[Save to temporary file]``
-     - Specify the output raster layer. One of:
-
-       .. include:: ../algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
-
 
 Outputs
 .......
@@ -2113,6 +2315,9 @@ This algorithm is derived from the
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -2138,6 +2343,29 @@ Parameters
 
        Default: False
      - Generates edges from the elevation raster
+   * - **Terrain Ruggedness Index**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output raster layer. One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Additional creation options**
 
        Optional
@@ -2153,17 +2381,6 @@ Parameters
 
        For Batch Process: separate multiple options with a pipe
        character (``|``).
-   * - **Terrain Ruggedness Index**
-     - ``OUTPUT``
-     - [raster]    
-
-       Default: ``[Save to temporary file]``
-     - Specify the output raster layer. One of:
-
-       .. include:: ../algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
-
 
 Outputs
 .......
@@ -2209,6 +2426,9 @@ This algorithm is derived from the
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -2234,6 +2454,29 @@ Parameters
 
        Default: False
      - Generates edges from the elevation raster
+   * - **Terrain Ruggedness Index**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output raster layer. One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Additional creation options**
 
        Optional
@@ -2249,17 +2492,6 @@ Parameters
 
        For Batch Process: separate multiple options with a pipe
        character (``|``).
-   * - **Terrain Ruggedness Index**
-     - ``OUTPUT``
-     - [raster]    
-
-       Default: ``[Save to temporary file]``
-     - Specify the output raster layer. One of:
-
-       .. include:: ../algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
-
 
 Outputs
 .......
