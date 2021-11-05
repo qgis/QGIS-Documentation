@@ -48,7 +48,7 @@ Returns a string representation of a color based on its cyan, magenta, yellow, b
        * **black** - black component of the color, as a percentage integer value from 0 to 100
        * **alpha** - alpha component as an integer value from 0 (completely transparent) to 255 (opaque).
    * - Examples
-     - * ``color_cmyk(100,50,0,10,200)`` → '0,115,230,200'
+     - * ``color_cmyka(100,50,0,10,200)`` → '0,115,230,200'
 
 
 .. end_color_cmyka_section
