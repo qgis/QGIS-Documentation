@@ -373,6 +373,18 @@ Further reading: :ref:`expression_function_GeometryGroup_overlay_crosses`
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_crosses_section
+   :end-before: .. end_densify_by_count_section
+
+Further reading: :ref:`qgisdensifygeometries` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_densify_by_count_section
+   :end-before: .. end_densify_by_distance_section
+
+Further reading: :ref:`qgisdensifygeometriesgivenaninterval` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_densify_by_distance_section
    :end-before: .. end_difference_section
 
 Further reading: :ref:`qgisdifference` algorithm
@@ -571,6 +583,12 @@ Further reading: :ref:`qgisreverselinedirection` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_reverse_section
+   :end-before: .. end_roundness_section
+
+.. TODO: Further reading: :ref:`qgisroundness` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_roundness_section
    :end-before: .. end_segments_to_lines_section
 
 Further reading: :ref:`qgisexplodelines` algorithm

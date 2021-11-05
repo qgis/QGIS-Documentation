@@ -469,6 +469,48 @@ Tests whether a geometry crosses another. Returns true if the supplied geometrie
 
 .. end_crosses_section
 
+.. _expression_function_GeometryGroup_densify_by_count:
+
+densify_by_count
+................
+
+Takes a polygon or line layer geometry and generates a new one in which the geometries have a larger number of vertices than the original one.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - densify_by_count(geometry, vertices)
+   * - Arguments
+     - * **geometry** - a geometry (accepts (multi)linestrings or (multi)polygons).
+       * **vertices** - number of vertices to add (per segment)
+   * - Examples
+     - * ``geom_to_wkt(densify_by_count(geom_from_wkt('LINESTRING(1 1, 10 1)'), 3))`` → LineString (1 1, 3.25 1, 5.5 1, 7.75 1, 10 1)
+
+
+.. end_densify_by_count_section
+
+.. _expression_function_GeometryGroup_densify_by_distance:
+
+densify_by_distance
+...................
+
+Takes a polygon or line layer geometry and generates a new one in which the geometries are densified by adding additional vertices on edges that have a maximum distance of the specified interval distance.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - densify_by_distance(geometry, distance)
+   * - Arguments
+     - * **geometry** - a geometry (accepts (multi)linestrings or (multi)polygons).
+       * **distance** - maximum interval distance between vertices in output geometry
+   * - Examples
+     - * ``geom_to_wkt(densify_by_distance(geom_from_wkt('LINESTRING(1 1, 10 1)'), 4))`` → LineString (1 1, 4 1, 7 1, 10 1)
+
+
+.. end_densify_by_distance_section
+
 .. _expression_function_GeometryGroup_difference:
 
 difference
@@ -878,8 +920,9 @@ Returns a feature's geometry.
    * - Arguments
      - * **feature** - a feature object
    * - Examples
-     - * ``geom_to_wkt( geometry( get_feature( layer, attributeField, value ) ) )`` → 'POINT(6 50)'
-       * ``intersects( $geometry, geometry( get_feature( layer, attributeField, value ) ) )`` → true
+     - * `` geometry( $currentfeature )`` → the geometry of the current feature. Prefer using $geometry.
+       * ``geom_to_wkt( geometry( get_feature_by_id( 'streets', 1 ) ) )`` → the geometry in WKT of the feature with the id 1 on the layer "streets", e.g. 'POINT(6 50)'
+       * ``intersects( $geometry, geometry( get_feature( 'streets', 'name', 'Main St.' ) ) )`` → true if the current feature spatially intersects the 'Main St.' named feature in the "streets" layer
 
 
 .. end_geometry_section
@@ -2411,6 +2454,27 @@ Returns a rotated version of a geometry. Calculations are in the Spatial Referen
 
 
 .. end_rotate_section
+
+.. _expression_function_GeometryGroup_roundness:
+
+roundness
+.........
+
+Calculates how close a polygon shape is to a circle. The function returns 1 when the polygon shape is a perfect circle and 0 when it is completely flat.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - roundness(geometry)
+   * - Arguments
+     - * **geometry** - a polygon
+   * - Examples
+     - * ``round(roundness(geom_from_wkt('POLYGON(( 0 0, 0 1, 1 1, 1 0, 0 0))')), 3)`` → 0.785
+       * ``round(roundness(geom_from_wkt('POLYGON(( 0 0, 0 0.1, 1 0.1, 1 0, 0 0))')), 3)`` → 0.260
+
+
+.. end_roundness_section
 
 .. _expression_function_GeometryGroup_scale:
 
