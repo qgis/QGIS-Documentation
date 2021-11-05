@@ -499,6 +499,7 @@ Rounds a number to number of decimal places.
    * - Examples
      - * ``round(1234.567, 2)`` → 1234.57
        * ``round(1234.567)`` → 1235
+       * ``round(1234.567, -1)`` → 1230
 
 
 .. end_round_section

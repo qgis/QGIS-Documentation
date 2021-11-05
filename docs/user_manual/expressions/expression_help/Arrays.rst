@@ -22,6 +22,7 @@ Returns an array containing all the values passed as parameter.
      - * **value** - a value
    * - Examples
      - * ``array(2,10)`` → [ 2, 10 ]
+       * ``array(2,10)[0]`` → 2
 
 
 .. end_array_section
@@ -181,7 +182,7 @@ Returns an array with only the items for which the expression evaluates to true.
 array_find
 ..........
 
-Returns the index (0 for the first one) of a value within an array. Returns -1 if the value is not found.
+Returns the lowest index (0 for the first one) of a value within an array. Returns -1 if the value is not found.
 
 .. list-table::
    :widths: 15 85
@@ -192,7 +193,8 @@ Returns the index (0 for the first one) of a value within an array. Returns -1 i
      - * **array** - an array
        * **value** - the value to search
    * - Examples
-     - * ``array_find(array(1,2,3),2)`` → 1
+     - * ``array_find(array('a', 'b', 'c'), 'b')`` → 1
+       * ``array_find(array('a', 'b', 'c', 'b'), 'b')`` → 1
 
 
 .. end_array_find_section

@@ -64,6 +64,7 @@ Returns a map containing all the keys and values passed as pair of parameters.
        * **value** - a value
    * - Examples
      - * ``map('1','one','2', 'two')`` → { '1': 'one', '2': 'two' }
+       * ``map('1','one','2', 'two')['1']`` → 'one'
 
 
 .. end_map_section
