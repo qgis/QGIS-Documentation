@@ -923,10 +923,10 @@ units).
 
 .. index:: Classes
    single: Symbology; Merged Features renderer
-.. _categorized_renderer:
+.. _merged_renderer:
 
 Merged Features Renderer
-....................
+........................
 
 The |mergedFeaturesSymbol| :guilabel:`Merged Features` renderer is a meta-renderer.
 This mode perform a union of connected features that are part of the same sub-render,
@@ -939,14 +939,14 @@ This renderig mode is similar to the inverted polygon renderer.
 
 .. index:: Classes
    single: Symbology; Embedded renderer
-.. _categorized_renderer:
+.. _embedded_renderer:
 
 Embedded Renderer
 ....................
 
-The |enbeddedSymbol| :guilabel:`embedded` renderer allows to display the 'native' 
-symbology of a provided data-source. This is mostly the case with KML and TAB 
-dataset that have predefined symbology.
+The |embeddedSymbol| :guilabel:`Embedded Symbols` renderer allows to display the 'native' 
+symbology of a provided datasource. This is mostly the case with :file:`KML`
+and :file:`TAB` datasets that have predefined symbology.
 
 
 
@@ -3271,7 +3271,7 @@ layout legend <layout_legend_item>`. These options include:
   The :guilabel:`Legend placeholder image` helps you :ref:`select an image
   <embedded_file_selector>` for replacement, displayed both in the
   :guilabel:`Layers` panel and the print layout legend.
-* |checkbox| :guilabel:`Sow label legend`: Displays the label entries as their
+* |checkbox| :guilabel:`Show label legend`: Displays the label entries as their
   own entries in the legend. The font style is previewed along with the description. 
 * |checkbox| :guilabel:`Text on symbols`: In some cases it can be useful to add
   extra information to the symbols in the legend. With this frame, you can
