@@ -334,12 +334,18 @@ is shown in the dialog but you can read more on the methods at
 https://fvwiki.tuflow.com/index.php?title=Depth_Averaging_Results.
 
 
+.. index:: Temporal
 .. _mesh_temporal:
 
 Temporal Properties
 -------------------
 
-The |temporal| :guilabel:`Temporal` tab controls ....
+The |temporal| :guilabel:`Temporal` tab provides options to control
+the rendering of the layer over time. It allows to dynamically display
+temporal values of the enabled dataset groups. Such a dynamic rendering
+requires the temporal navigation to be enabled over the map canvas.
+
+.. TODO: Add link to temporal animation once it's merged
 
 .. _figure_mesh_temporal:
 
@@ -351,28 +357,26 @@ The |temporal| :guilabel:`Temporal` tab controls ....
 **Layer temporal settings**
 
 * :guilabel:`Reference time` of the dataset group, as an absolute date time.
-  It is set from the data provider, from the project or the current time.
-  It can also be user defined, or reset with |refresh| :sup:`Reload from provider`.
+  By default, QGIS parses the source layer and returns the first valid reference
+  time in the layer's dataset group. If unavailable, the value will be set by
+  the project time range or fell back to the current date.
+  The :guilabel:`Start time` and :guilabel:`End time` to  consider
+  are then calculated based on the internal timestamp step of the dataset.
 
-.. are the different ways to set reference time still true?
-
-* :guilabel:`Start time`
-* :guilabel:`End time`
-* :guilabel:`Dataset matching method`: determines the dataset to display
-  at the given time. Options are :guilabel:`Find closest dataset before requested time`
-  or :guilabel:`Find closest dataset from requested time (after or before)`
-
-.. I couldn't succeed in triggering the start and end time. They are always grayed.
- Any idea?
+  It is possible to set a custom :guilabel:`Reference time` (and then the time
+  range), and revert the changes using the |refresh| :sup:`Reload from provider`
+  button.
+* :guilabel:`Dataset matching method`: determines the dataset to display at the
+  given time. Options are :guilabel:`Find closest dataset before requested time`
+  or :guilabel:`Find closest dataset from requested time (after or before)`.
 
 **Provider time settings**
 
 * :guilabel:`Time unit` extracted from the raw data, or user defined.
+  This can be used to align the speed of the mesh layer with other layers
+  in the project during map time navigation.
   Supported units are :guilabel:`Seconds`, :guilabel:`Minutes`, :guilabel:`Hours`
   and :guilabel:`Days`.
-
-.. refs https://github.com/qgis/QGIS/commit/c252a3ad4cc7230d8fabb930ae4e927a9fb08787
- but what happens if I change the unit, using a wrong one?
 
 
 .. index:: Metadata, Metadata editor, Keyword
