@@ -152,7 +152,9 @@ including:
   Use this process only if the CRS applied to the layer is wrong or
   if none was applied.
 * The :guilabel:`Available datasets` frame lists all the dataset groups (and
-  subitems) in the mesh layer, with their type and description in a tree view.
+  subgroups) in the mesh layer, with their type and description in a tree view.
+  Both regular datasets (i.e. their data is stored in the file) and virtual
+  datasets (which are :ref:`calculated on the fly <mesh_calculator>`) are listed.
 
   * Use the |add| :guilabel:`Assign extra dataset to mesh` button to add more
     groups to the current mesh layer.
@@ -163,19 +165,19 @@ including:
   * Double-click over a name and you can rename the dataset.
   * |refresh| :guilabel:`Reset to defaults`, removing additional groups
     or renames.
-* |unchecked| :guilabel:`Always treat as static dataset, regardless of temporal
-  properties`
-* :guilabel:`Static dataset`: each active dataset (as selected in |symbology|
-  :menuselection:`Symbology -->` |general| :guilabel:`Datasets` tab) can be
-  assigned a date and will render independently of QGIS time controller.
-  Select ``None`` in the combobox if you wish to keep a dynamic dataset.
+* Checking the |unchecked| :guilabel:`Treat as static dataset` group allows
+  to ignore the map temporal navigation properties while rendering the mesh
+  layer. For each active dataset group (as selected in |symbology|
+  :menuselection:`Symbology -->` |general| :guilabel:`Datasets` tab), you can:
 
-  .. I am not really sure of this because depending on the dataset I use,
-   I also find 'display dataset' in the combobox. Not sure what it means.
+  .. TODO: insert map temporal navigation reference here also
 
-.. Are the last two points not related? Isn't the last point a subitem of the previous one?
- if so, the GUI is confusing (I'd expect the subitem deactivated in some cases) and
- visualize this hierarchy (eg, via a group box).
+  * set to :guilabel:`None`: the dataset group is not displayed at all
+  * :guilabel:`Display dataset`: eg, for the "bed elevation" dataset which is
+    not time aware
+  * extract a particular date time: the dataset matching the provided time
+    is rendered and stay fixed during map navigation.
+
 
 Symbology Properties
 --------------------
@@ -328,8 +330,9 @@ Rendering
 In the tab |meshframe| :sup:`Rendering` tab, QGIS offers possibilities to
 display the grid, as shown in :numref:`figure_mesh_symbology_grid`:
 
-* ``Native Mesh Rendering`` that shows quadrants
-* ``Triangular Mesh Rendering`` that display triangles
+* ``Native Mesh Rendering`` that shows original faces and edges from the layer
+* ``Triangular Mesh Rendering`` that adds more edges and displays the faces as
+  triangles
 
 
 .. _figure_mesh_symbology_grid:
