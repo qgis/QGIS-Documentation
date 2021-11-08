@@ -1090,12 +1090,12 @@ from the newly appeared dropdown.
    foreign key` button to add as many pairs as necessary.
 
 * **Layer Field** is the field in the referencing table that stores the result of the evaluated
-   layer expression which is the referencing table that this feature belongs to. In our example,
-   this would be the ``referenced_layer`` field.
+  layer expression which is the referencing table that this feature belongs to. In our example,
+  this would be the ``referenced_layer`` field.
 
 * **Layer expression** evaluates to a unique identifier of the layer. This can be the layer name
-   ``@layer_name``, the layer id ``@layer_id``, the layer's table name ``decode_uri(@layer, 'table')``
-   or anything that can uniquely identifies a layer.
+  ``@layer_name``, the layer id ``@layer_id``, the layer's table name ``decode_uri(@layer, 'table')``
+  or anything that can uniquely identifies a layer.
 
 * **Relationship strength** sets the strength of the generated relations between the parent
   and the child layer. The default :guilabel:`Association` type means that
