@@ -657,6 +657,57 @@ msgstr "signMinus"
 msgid "**Example**"
 msgstr "**例**"
 
+#: ../../docs/user_manual/working_with_vector/expression.rst:358
+msgid ""
+"Here's a short example on how to create your own ``my_sum`` function that "
+"will operate with two values."
+msgstr "これは、2つの値を操作する独自の ``my_sum`` 関数を作成する簡単な例です。"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:379
+msgid ""
+"When using the ``args='auto'`` function argument the number of function "
+"arguments required will be calculated by the number of arguments the "
+"function has been defined with in Python (minus 2 - ``feature``, and "
+"``parent``). The ``group='Custom'`` argument indicates the group in which "
+"the function should be listed in the Expression dialog."
+msgstr ""
+"関数デコレータの引数に ``args='auto'`` "
+"を使用した場合、その関数で必須となる引数の数は、Pythonで定義された関数の引数の個数から2を引いた数（ ``feature`` と "
+"``parent`` を引いた数）になります。 ``group='Custom'`` "
+"引数は、この関数が式ダイアログでどのグループにリストされるかを指定します。"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:385
+msgid "It is also possible to add keywords arguments like:"
+msgstr "次のようになキーワード引数を追加することも可能です："
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:387
+msgid ""
+"``usesgeometry=True`` if the expression requires access to the features "
+"geometry. By default :const:`False`."
+msgstr ""
+"``usesgeometry=True`` ：式が地物のジオメトリにアクセスする必要があるかどうか。デフォルトは :const:`False` です。"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:389
+msgid ""
+"``handlesnull=True`` if the expression has custom handling for NULL values. "
+"If :const:`False` (default), the result will always be NULL as soon as any "
+"parameter is NULL."
+msgstr ""
+"``handlesnull=True`` ：式がNULL値のカスタム処理を持つかどうか。 :const:`False` "
+"（デフォルト）の場合、任意のパラメータがNULLであるときには常に即座に結果がNULLとなります。"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:392
+msgid ""
+"``referenced_columns=[list]``: An array of attribute names that are required"
+" to the function. Defaults to ``[QgsFeatureRequest.ALL_ATTRIBUTES]``."
+msgstr ""
+"``referenced_columns=[list]`` ：この関数が必要とする属性名の配列。デフォルトは "
+"``[QgsFeatureRequest.ALL_ATTRIBUTES]`` です。"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:395
+msgid "The previous example function can then be used in expressions:"
+msgstr "上記の例の関数は、次のように式中で使うことができます。"
+
 #: ../../docs/user_manual/working_with_vector/expression.rst:402
 msgid "Custom Function added to the Expression tab"
 msgstr "式タブに追加されたカスタム関数"
