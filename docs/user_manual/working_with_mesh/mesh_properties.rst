@@ -113,23 +113,26 @@ Mesh Dataset Properties
 Information Properties
 ----------------------
 
-The :guilabel:`Information` tab is read-only and represents an interesting
-place to quickly grab summarized information and metadata on the current layer.
-Provided information are:
-
-* based on the provider of the layer: name, path, extent, vertex, face, edges
-  and/or dataset groups count
-* the Coordinate Reference System: name, units, method, accuracy, reference
-  (i.e. whether it's static or dynamic)
-* extracted from filled :ref:`metadata <meshmetadata>`: access, extents,
-  links, contacts, history...
-
 .. _figure_mesh_info_properties:
 
 .. figure:: img/mesh_info_properties.png
    :align: center
 
    Mesh Layer Properties
+
+The |metadata| :guilabel:`Information` tab is read-only and represents an interesting
+place to quickly grab summarized information and metadata on the current layer.
+Provided information are:
+
+* general such as  name in the project, source path, list of auxiliary files,
+  last save time and size, the used provider
+* based on the provider of the layer: extent, vertex, face, edges
+  and/or dataset groups count
+* the Coordinate Reference System: name, units, method, accuracy, reference
+  (i.e. whether it's static or dynamic)
+* extracted from filled :ref:`metadata <meshmetadata>`: access, extents,
+  links, contacts, history...
+
 
 Source Properties
 -----------------
