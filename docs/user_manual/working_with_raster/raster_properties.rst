@@ -63,7 +63,10 @@ an interesting place to quickly grab summarized information and
 metadata for the current layer.
 Provided information are:
 
-* based on the provider of the layer: name, path;
+* general such as name in the project, source path, list of auxiliary files,
+  last save time and size, the used provider
+* based on the provider of the layer: extent, width and height, data type,
+  GDAL driver, bands statistics
 * the Coordinate Reference System: name, units, method, accuracy, reference
   (i.e. whether it's static or dynamic)
 * read from layer properties: data type, extent, width/height, compression,
