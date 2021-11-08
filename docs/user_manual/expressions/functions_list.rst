@@ -725,7 +725,7 @@ It also provides some convenient functions to manipulate layers.
    :end-before: .. end_layer_property_section
 
 Further reading: :ref:`vector <vectorinformationmenu>`, :ref:`raster <raster_information>`
-and :ref:`mesh <mesh_information>` layer properties
+and :ref:`mesh <meshinformation>` layer properties
 
 .. include:: expression_help/Map_Layers.rst
    :start-after: .. end_layer_property_section

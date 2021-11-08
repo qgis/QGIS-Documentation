@@ -108,7 +108,40 @@ more details.
 Mesh Dataset Properties
 =======================
 
-.. _mesh_information:
+The :guilabel:`Layer Properties` dialog for a mesh layer provides general
+settings to manage dataset groups of the layer and theirrendering
+(active dataset groups, symbology, 2D and 3D rendering).
+It also provides information about the layer.
+
+To access the :guilabel:`Layer Properties` dialog:
+
+* In the :guilabel:`Layers` panel, double-click the layer or right-click
+  and select :guilabel:`Properties...` from the pop-up menu;
+* Go to :menuselection:`Layer --> Layer Properties...` menu when the layer
+  is selected.
+
+The mesh :guilabel:`Layer Properties` dialog provides the following sections:
+
+.. list-table::
+
+   * - |metadata| :ref:`Information <meshinformation>`
+     - |system| :ref:`Source <meshsource>`
+     - |symbology| :ref:`Symbology <meshsymbology>`:sup:`[1]`
+   * - |3d| :guilabel:`3D View`:sup:`[1]`
+     - |temporal| :ref:`Temporal <meshtemporal>`
+     - |rendering| :guilabel:`Rendering`
+   * - |editMetadata| :ref:`Metadata <meshmetadata>`
+     -
+     -
+
+:sup:`[1]` Also available in the :ref:`Layer styling panel <layer_styling_panel>`
+
+.. note:: Most of the properties of a mesh layer can be saved to or loaded from
+ a :file:`.qml` using the :guilabel:`Style` menu at the bottom of the dialog.
+ More details at :ref:`manage_custom_style`.
+
+
+.. _meshinformation:
 
 Information Properties
 ----------------------
@@ -118,7 +151,7 @@ Information Properties
 .. figure:: img/mesh_info_properties.png
    :align: center
 
-   Mesh Layer Properties
+   Mesh Layer Information Properties
 
 The |metadata| :guilabel:`Information` tab is read-only and represents an interesting
 place to quickly grab summarized information and metadata on the current layer.
@@ -134,11 +167,13 @@ Provided information are:
   links, contacts, history...
 
 
+.. _meshsource:
+
 Source Properties
 -----------------
 
-The :guilabel:`Source` tab displays basic information about the selected mesh,
-including:
+The |system| :guilabel:`Source` tab displays basic information about
+the selected mesh, including:
 
 .. _figure_mesh_source:
 
@@ -186,6 +221,8 @@ including:
   * extract a particular date time: the dataset matching the provided time
     is rendered and stay fixed during map navigation.
 
+
+.. _meshsymbology:
 
 Symbology Properties
 --------------------
@@ -354,9 +391,6 @@ display the grid, as shown in :numref:`figure_mesh_symbology_grid`:
 The lines width and color can be changed in this dialog, and both the grid
 renderings can be turned off.
 
-   
-   
-
 
 .. _mesh_stacked_averaging:
 
@@ -379,7 +413,7 @@ https://fvwiki.tuflow.com/index.php?title=Depth_Averaging_Results.
 
 
 .. index:: Temporal
-.. _mesh_temporal:
+.. _meshtemporal:
 
 Temporal Properties
 -------------------
@@ -550,6 +584,8 @@ the expression to execute.
 .. |slider| image:: /static/common/slider.png
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
+.. |system| image:: /static/common/system.png
+   :width: 1.5em
 .. |temporal| image:: /static/common/temporal.png
    :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
