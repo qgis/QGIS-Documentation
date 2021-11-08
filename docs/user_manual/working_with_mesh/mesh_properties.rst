@@ -349,6 +349,7 @@ renderings can be turned off.
    
    
 
+
 .. _mesh_stacked_averaging:
 
 Stacked mesh averaging method
@@ -367,6 +368,51 @@ You can select the method to derive the 2D datasets and corresponding parameters
 (level index, depth or height values). For each method, an example of application
 is shown in the dialog but you can read more on the methods at
 https://fvwiki.tuflow.com/index.php?title=Depth_Averaging_Results.
+
+
+.. index:: Temporal
+.. _mesh_temporal:
+
+Temporal Properties
+-------------------
+
+The |temporal| :guilabel:`Temporal` tab provides options to control
+the rendering of the layer over time. It allows to dynamically display
+temporal values of the enabled dataset groups. Such a dynamic rendering
+requires the temporal navigation to be enabled over the map canvas.
+
+.. TODO: Add link to temporal animation once it's merged
+
+.. _figure_mesh_temporal:
+
+.. figure:: img/mesh_temporal.png
+   :align: center
+
+   Mesh Temporal properties
+
+**Layer temporal settings**
+
+* :guilabel:`Reference time` of the dataset group, as an absolute date time.
+  By default, QGIS parses the source layer and returns the first valid reference
+  time in the layer's dataset group. If unavailable, the value will be set by
+  the project time range or fell back to the current date.
+  The :guilabel:`Start time` and :guilabel:`End time` to  consider
+  are then calculated based on the internal timestamp step of the dataset.
+
+  It is possible to set a custom :guilabel:`Reference time` (and then the time
+  range), and revert the changes using the |refresh| :sup:`Reload from provider`
+  button.
+* :guilabel:`Dataset matching method`: determines the dataset to display at the
+  given time. Options are :guilabel:`Find closest dataset before requested time`
+  or :guilabel:`Find closest dataset from requested time (after or before)`.
+
+**Provider time settings**
+
+* :guilabel:`Time unit` extracted from the raw data, or user defined.
+  This can be used to align the speed of the mesh layer with other layers
+  in the project during map time navigation.
+  Supported units are :guilabel:`Seconds`, :guilabel:`Minutes`, :guilabel:`Hours`
+  and :guilabel:`Days`.
 
 
 .. index:: Metadata, Metadata editor, Keyword
@@ -494,5 +540,7 @@ the expression to execute.
 .. |slider| image:: /static/common/slider.png
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
+.. |temporal| image:: /static/common/temporal.png
+   :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
