@@ -113,13 +113,6 @@ Mesh Dataset Properties
 Information Properties
 ----------------------
 
-.. _figure_mesh_info_properties:
-
-.. figure:: img/mesh_info_properties.png
-   :align: center
-
-   Mesh Layer Properties
-
 The :guilabel:`Information` tab is read-only and represents an interesting
 place to quickly grab summarized information and metadata on the current layer.
 Provided information are:
@@ -131,22 +124,60 @@ Provided information are:
 * extracted from filled :ref:`metadata <meshmetadata>`: access, extents,
   links, contacts, history...
 
+.. _figure_mesh_info_properties:
+
+.. figure:: img/mesh_info_properties.png
+   :align: center
+
+   Mesh Layer Properties
+
 Source Properties
 -----------------
 
 The :guilabel:`Source` tab displays basic information about the selected mesh,
 including:
 
-* the Layer name to display in the :guilabel:`Layers` panel
+.. _figure_mesh_source:
+
+.. figure:: img/mesh_source.png
+   :align: center
+
+   Mesh Layer Source Properties
+
+* the layer name to display in the :guilabel:`Layers` panel
 * setting the Coordinate Reference System: Displays the layer’s
-  :ref:`Coordinate Reference System (CRS) <layer_crs>`. You can change the layer’s CRS by
-  selecting a recently used one in the drop-down list or clicking on |setProjection|
-  :guilabel:`Select CRS` button (see :ref:`crs_selector`).
+  :ref:`Assigned Coordinate Reference System (CRS) <layer_crs>`. You can change
+  the layer’s CRS by selecting a recently used one in the drop-down list or
+  clicking on |setProjection| :guilabel:`Select CRS` button (see :ref:`crs_selector`).
   Use this process only if the CRS applied to the layer is wrong or
   if none was applied.
+* The :guilabel:`Available datasets` frame lists all the dataset groups (and
+  subgroups) in the mesh layer, with their type and description in a tree view.
+  Both regular datasets (i.e. their data is stored in the file) and virtual
+  datasets (which are :ref:`calculated on the fly <mesh_calculator>`) are listed.
 
-Use the :guilabel:`Assign Extra Dataset to Mesh` button to add more groups
-to the current mesh layer.
+  * Use the |add| :guilabel:`Assign extra dataset to mesh` button to add more
+    groups to the current mesh layer.
+  * |collapseTree| :guilabel:`Collapse all` and |expandTree| :guilabel:`Expand
+    all` the dataset tree, in case of embedded groups
+  * If you are interested in few datasets, you can uncheck the others and
+    make them unavailable in the project
+  * Double-click over a name and you can rename the dataset.
+  * |refresh| :guilabel:`Reset to defaults`, removing additional groups
+    or renames.
+* Checking the |unchecked| :guilabel:`Treat as static dataset` group allows
+  to ignore the map temporal navigation properties while rendering the mesh
+  layer. For each active dataset group (as selected in |symbology|
+  :menuselection:`Symbology -->` |general| :guilabel:`Datasets` tab), you can:
+
+  .. TODO: insert map temporal navigation reference here also
+
+  * set to :guilabel:`None`: the dataset group is not displayed at all
+  * :guilabel:`Display dataset`: eg, for the "bed elevation" dataset which is
+    not time aware
+  * extract a particular date time: the dataset matching the provided time
+    is rendered and stay fixed during map navigation.
+
 
 Symbology Properties
 --------------------
@@ -296,22 +327,27 @@ Available properties depend on the selected symbology as shown in the following 
 Rendering
 .........
 
-In the tab |meshframe|,  QGIS offers two possibilities to display the grid,
-as shown in :numref:`figure_mesh_symbology_grid`:
+In the tab |meshframe| :sup:`Rendering` tab, QGIS offers possibilities to
+display the grid, as shown in :numref:`figure_mesh_symbology_grid`:
 
-*	``Native Mesh Rendering`` that shows quadrants
-*	``Triangular Mesh Rendering`` that display triangles
+* ``Native Mesh Rendering`` that shows original faces and edges from the layer
+* ``Triangular Mesh Rendering`` that adds more edges and displays the faces as
+  triangles
 
 
 .. _figure_mesh_symbology_grid:
 
 .. figure:: img/mesh_symbology_grid.png
    :align: center
-   
+
    Mesh Rendering
+
+
+The lines width and color can be changed in this dialog, and both the grid
+renderings can be turned off.
+
    
    
-The line width and color can be changed in this dialog, and both the grid renderings can be turned off.
 
 .. _mesh_stacked_averaging:
 
