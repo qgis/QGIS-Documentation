@@ -528,6 +528,8 @@ the expression to execute.
    :width: 1.5em
 .. |meshvectorsoff| image:: /static/common/meshvectorsoff.png
    :width: 1.5em
+.. |metadata| image:: /static/common/metadata.png
+   :width: 1.5em
 .. |refresh| image:: /static/common/mActionRefresh.png
    :width: 1.5em
 .. |rendering| image:: /static/common/rendering.png
