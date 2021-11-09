@@ -197,10 +197,11 @@ following functionalities (see :numref:`figure_layout_map_extents`):
 The **Extents** area displays ``X`` and ``Y`` coordinates of the area shown
 in the map item. Each of these values can be manually replaced, modifying the
 map canvas area displayed and/or map item size.
-Clicking the :guilabel:`Set to Map Canvas Extent` button sets the extent of the
-layout map item to the extent of the main map canvas.
-The button :guilabel:`View Extent in Map Canvas` does exactly the opposite; it
-updates the extent of the main map canvas to the extent of the layout map item.
+The extent can also be modified using tools at the top of the map item panel
+such as:
+
+* |setToCanvasExtent| :sup:`Set map canvas to match main canvas extent`
+* |setToCanvasScale| :sup:`Set map scale to match main canvas scale`
 
 You can also alter a map item extent using the |moveItemContent| :sup:`Move
 item content` tool: click-and-drag within the map item to modify its current
