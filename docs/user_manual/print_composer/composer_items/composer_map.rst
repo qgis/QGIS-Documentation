@@ -208,6 +208,24 @@ view, keeping the same scale. With the |moveItemContent| tool enabled, use the
 mouse wheel to zoom in or out, modifying the scale of the shown map. Combine
 the movement with :kbd:`Ctrl` key pressed to have a smaller zoom.
 
+.. index:: Temporal, Print layout
+.. _mapitem_temporalrange:
+
+Temporal range
+--------------
+
+The :guilabel:`Temporal range` group of the map item properties panel provides the
+options to control layers rendering in the map item based on a temporal range.
+Only layers whose temporal properties overlap with the time range set by the
+:guilabel:`Start` and :guilabel:`End` dates are displayed in the map item.
+
+The associated data-defined widgets help make the time range dynamic, and
+allow outputting temporal :ref:`atlases <atlas_generation>`, i.e. automated maps
+with fixed spatial extent and whose contents vary based on time. For example,
+using as coverage layer a csv file with a start and end pair of fields and
+a number of rows representing date ranges, enable both the temporal range
+and control by atlas in the map item properties and hit atlas export.
+
 .. index:: Atlas
 .. _controlled_atlas:
 
