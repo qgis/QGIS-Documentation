@@ -68,69 +68,22 @@ also possible to create block quotes with indentation. See the
 
 .. code-block::
 
-   #. Three shall be the number of the spaces
-      and the number of the spaces shall be three
-   #. There can or cannot be whitelines
+   #. In a numbered list, there should be 
+      three spaces when you break lines
+   #. And next items directly follow
 
-   #. Between list items
-
-      * And nested lists
+      * Nested lists
       * Are also possible
-      * Just make sure
-      * That they have a whiteline
-      * above as well as below
-
-      And now we can write more
+      * And when they also have
+        a line that is too long,
+        the text should be naturally
+        aligned
+      * and be in their own paragraph
 
    However, if there is an unindented paragraph, this will reset the numbering:
 
    #. This item starts at 1 again
 
-      But you can have *indented* paragraphs, that do not reset the numbering.
-
-   #. This is now item 2.
-
-      .. admontion:: Conclusion
-         
-         :3 spaces: numbered lists (``#.``, ``1.``) and markup (``..``)
-         :2 spaces: bullet lists ``*``
-         :n spaces: There are other things such as option lists
-                    where it is preferred to also align the indentation
-                    to the marker.
-            
-         
-         and any combination of spaces when these are combined
-
-
-#. Three shall be the number of the spaces
-   and the number of the spaces shall be three
-#. There can or cannot be whitelines
-
-#. Between list items
-
-   * And nested lists
-   * Are also possible
-   * Just make sure
-   * That they have a whiteline
-   * above as well as below
-
-   And now we can write more
-
-However, if there is an unindented paragraph, this will reset the numbering:
-
-#. This item starts at 1 again
-
-   But you can have *indented* paragraphs, that do not reset the numbering.
-
-
-#. This is now item 2.
-
-      .. admonition:: Conclusion
-         
-         :3 spaces: numbered lists (``#.``, ``1.``) and markup (``..``)
-         :2 spaces: bullet lists ``*``
-
-         and any combination of spaces when these are combined
 
 Inline Tags
 -----------
