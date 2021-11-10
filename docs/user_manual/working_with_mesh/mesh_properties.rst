@@ -166,8 +166,13 @@ including:
   * If you are interested in few datasets, you can uncheck the others and
     make them unavailable in the project
   * Double-click over a name and you can rename the dataset.
-  * |refresh| :guilabel:`Reset to defaults`, removing additional groups
-    or renames.
+  * |refresh| :guilabel:`Reset to defaults`: checks all the groups and
+    renames them back to their original name in the provider.
+  * Right-click over a virtual dataset group and you can:
+
+    * :guilabel:`Remove dataset group` from the project
+    * :guilabel:`Save dataset group as...` a file on disk, to any supported format.
+      The new file is kept assigned to the current mesh layer in the project.
 * Checking the |unchecked| :guilabel:`Treat as static dataset` group allows
   to ignore the map temporal navigation properties while rendering the mesh
   layer. For each active dataset group (as selected in |symbology|
