@@ -167,7 +167,7 @@ including:
     make them unavailable in the project
   * Double-click over a name and you can rename the dataset.
   * |refresh| :guilabel:`Reset to defaults`: checks all the groups and
-    rename back to their original name in the provider.
+    renames them back to their original name in the provider.
   * Right-click over a virtual dataset group and you can:
 
     * :guilabel:`Remove dataset group` from the project
