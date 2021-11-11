@@ -462,19 +462,19 @@ details).
      - :ref:`sec_annotations`
    * - :menuselection:`-->` |textAnnotation| :menuselection:`Text Annotation`
      -
-     - :guilabel:`Attributes`
+     - :guilabel:`Annotations`
      - :ref:`sec_annotations`
    * - :menuselection:`-->` |formAnnotation| :menuselection:`Form Annotation`
      -
-     - :guilabel:`Attributes`
+     - :guilabel:`Annotations`
      - :ref:`sec_annotations`
    * - :menuselection:`-->` |htmlAnnotation| :menuselection:`HTML Annotation`
      -
-     - :guilabel:`Attributes`
+     - :guilabel:`Annotations`
      - :ref:`sec_annotations`
    * - :menuselection:`-->` |svgAnnotation| :menuselection:`SVG Annotation`
      -
-     - :guilabel:`Attributes`
+     - :guilabel:`Annotations`
      - :ref:`sec_annotations`
    * - :menuselection:`Edit Attributes -->`
      -
@@ -931,6 +931,10 @@ actions like:
      -
      -
      - :ref:`sec_advanced_edit`
+   * - :menuselection:`--> Annotations Toolbar`
+     -
+     -
+     -
    * - :menuselection:`--> Attributes Toolbar`
      -
      -
@@ -960,6 +964,10 @@ actions like:
      -
      - :ref:`manage_data_source`
    * - :menuselection:`--> Map Navigation Toolbar`
+     -
+     -
+     -
+   * - :menuselection:`--> Mesh Digitizing Toolbar`
      -
      -
      -
@@ -2013,6 +2021,7 @@ Available toolbars are:
    :widths: auto
 
    ":guilabel:`Advanced Digitizing Toolbar`", ":ref:`sec_advanced_edit`"
+   ":guilabel:`Annotations Toolbar`"
    ":guilabel:`Attributes`", ":ref:`sec_attribute_table`, :ref:`general_tools`"
    ":guilabel:`Data Source Manager`", ":ref:`manage_data_source`"
    ":guilabel:`Database`", ":ref:`dbmanager`"
@@ -2021,6 +2030,7 @@ Available toolbars are:
    ":guilabel:`Label`", ":ref:`label_toolbar`"
    ":guilabel:`Manage Layers`", ":ref:`opening_data`"
    ":guilabel:`Map Navigation`", ":ref:`working_canvas`"
+   ":guilabel:`Mesh Digitizing Toolbar`"
    ":guilabel:`Plugins`", ":ref:`plugins.index`"
    ":guilabel:`Project`", ":ref:`project_files`, :ref:`label_printlayout`, :ref:`vector_symbol_library`"
    ":guilabel:`Raster`", ":ref:`plugins.index`"
