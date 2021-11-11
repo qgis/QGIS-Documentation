@@ -1317,7 +1317,7 @@ Annotation Tools
 
 Annotations are information added to the map canvas and shown within a
 balloon. This information can be of different types and annotations are
-added using the corresponding tools in the :guilabel:`Attributes Toolbar`:
+added using the corresponding tools in the :guilabel:`Annotations Toolbar`:
 
 * |textAnnotation| :sup:`Text Annotation` for custom formatted text
 * |htmlAnnotation| :sup:`HTML Annotation` to place the content of an :file:`html`
