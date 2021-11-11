@@ -601,13 +601,6 @@ unfold the :guilabel:`Advanced` drop-down list at the bottom of the main dialog 
 the :guilabel:`Symbology` tab and select **Data-defined size legend...** to
 configure the legend items (see :ref:`data_defined_size_legend` for details).
 
-.. _figure_symbology_proportional:
-
-.. figure:: img/proportional_symbols.png
-   :align: center
-
-   Scaling airports size based on elevation of the airport
-
 **Creating multivariate analysis**
 
 A multivariate analysis rendering helps you evaluate the relationship between
@@ -1020,17 +1013,21 @@ The dialog provides the following options to:
   |radioButtonOff| :guilabel:`Separated legend items` and |radioButtonOff|
   :guilabel:`Collapsed legend`. For the latter option, you can select whether
   the legend items are aligned at the **Bottom** or at the **Center**;
-* set the :ref:`symbol to use <symbol-selector>` for legend representation;
+* preview the :ref:`symbol to use <symbol-selector>` for legend representation;
 * insert the title in the legend;
 * resize the classes to use: by default, QGIS provides you with a legend of
   five classes (based on natural pretty breaks) but you can apply your own
   classification using the |checkbox| :guilabel:`Manual size classes` option.
   Use the |signPlus| and |signMinus| buttons to set your custom classes
   values and labels.
+* For collapsed legend, it's possible to:
+
+  * :guilabel:`Align symbols` in the center or the bottom
+  * configure the horizontal leader :guilabel:`Line symbol` from the symbol
+    to the corresponding legend text.
 
 A preview of the legend is displayed in the right panel of the dialog and
-updated as you set the parameters. For collapsed legend, a leader line from
-the horizontal center of the symbol to the corresponding legend text is drawn.
+updated as you set the parameters.
 
 .. _figure_size_legend:
 
