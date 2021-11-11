@@ -3170,22 +3170,23 @@ QGIS Server Properties
 ======================
 
 |overlay| The :guilabel:`QGIS Server` tab consists of :guilabel:`Description`,
-:guilabel:`Attribution`, :guilabel:`MetadataURL`, and :guilabel:`LegendUrl` sections.
+:guilabel:`Attribution`, :guilabel:`Metadata URL`, and :guilabel:`Legend URL`
+sections.
 
-From the :guilabel:`Description` section, you can change the :guilabel:`Short name` used to
-reference the layer in requests (to learn more about short names, read
+From the :guilabel:`Description` section, you can change the :guilabel:`Short name`
+used to reference the layer in requests (to learn more about short names, read
 :ref:`server_short_name`). You can also add or edit a :guilabel:`Title` and
 :guilabel:`Abstract` for the layer, or define a :guilabel:`Keyword list` here. These
 keyword lists can be used in a metadata catalog. If you want to use a title from an
-XML metadata file, you have to fill in a link in the :guilabel:`DataUrl` field.
+XML metadata file, you have to fill in a link in the :guilabel:`Data URL` field.
 
 Use :guilabel:`Attribution` to get attribute data from an XML metadata catalog.
 
-In :guilabel:`MetadataUrl`, you can define the general path to the XML metadata
+In :guilabel:`Metadata URL`, you can add the general paths to the XML metadata
 catalog. This information will be saved in the QGIS project file for subsequent
-sessions and will be used for QGIS server.
+sessions and will be used for QGIS Server.
 
-In the :guilabel:`LegendUrl` section, you can provide the url of a legend image
+In the :guilabel:`Legend URL` section, you can provide the url of a legend image
 in the url field. You can use the Format drop-down option to apply the appropriate
 format of the image. Currently png, jpg and jpeg image formats are supported.
 

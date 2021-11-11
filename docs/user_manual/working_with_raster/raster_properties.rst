@@ -810,7 +810,7 @@ QGIS Server Properties
 
 From the |overlay| :guilabel:`QGIS Server` tab, information can
 be provided for :guilabel:`Description`, :guilabel:`Attribution`,
-:guilabel:`MetadataUrl` and :guilabel:`LegendUrl`.
+:guilabel:`Metadata URL` and :guilabel:`Legend URL`.
 
 .. _figure_raster_server:
 
