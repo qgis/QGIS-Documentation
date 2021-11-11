@@ -59,6 +59,32 @@ common to all lists:
 * Use period ( ``.`` ) as punctuation for list items that consist of several
   sentences or a single compound sentence
 
+Indentation
+-----------
+
+Indentation in ReStructuredText should be aligned with the list or markup *marker*. It is
+also possible to create block quotes with indentation. See the
+`Specification <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#indentation>`__
+
+.. code-block::
+
+   #. In a numbered list, there should be 
+      three spaces when you break lines
+   #. And next items directly follow
+
+      * Nested lists
+      * Are also possible
+      * And when they also have
+        a line that is too long,
+        the text should be naturally
+        aligned
+      * and be in their own paragraph
+
+   However, if there is an unindented paragraph, this will reset the numbering:
+
+   #. This item starts at 1 again
+
+
 Inline Tags
 -----------
 
