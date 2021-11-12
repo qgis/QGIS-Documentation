@@ -601,13 +601,6 @@ unfold the :guilabel:`Advanced` drop-down list at the bottom of the main dialog 
 the :guilabel:`Symbology` tab and select **Data-defined size legend...** to
 configure the legend items (see :ref:`data_defined_size_legend` for details).
 
-.. _figure_symbology_proportional:
-
-.. figure:: img/proportional_symbols.png
-   :align: center
-
-   Scaling airports size based on elevation of the airport
-
 **Creating multivariate analysis**
 
 A multivariate analysis rendering helps you evaluate the relationship between
@@ -1020,17 +1013,21 @@ The dialog provides the following options to:
   |radioButtonOff| :guilabel:`Separated legend items` and |radioButtonOff|
   :guilabel:`Collapsed legend`. For the latter option, you can select whether
   the legend items are aligned at the **Bottom** or at the **Center**;
-* set the :ref:`symbol to use <symbol-selector>` for legend representation;
+* preview the :ref:`symbol to use <symbol-selector>` for legend representation;
 * insert the title in the legend;
 * resize the classes to use: by default, QGIS provides you with a legend of
   five classes (based on natural pretty breaks) but you can apply your own
   classification using the |checkbox| :guilabel:`Manual size classes` option.
   Use the |signPlus| and |signMinus| buttons to set your custom classes
   values and labels.
+* For collapsed legend, it's possible to:
+
+  * :guilabel:`Align symbols` in the center or the bottom
+  * configure the horizontal leader :guilabel:`Line symbol` from the symbol
+    to the corresponding legend text.
 
 A preview of the legend is displayed in the right panel of the dialog and
-updated as you set the parameters. For collapsed legend, a leader line from
-the horizontal center of the symbol to the corresponding legend text is drawn.
+updated as you set the parameters.
 
 .. _figure_size_legend:
 
@@ -3173,22 +3170,23 @@ QGIS Server Properties
 ======================
 
 |overlay| The :guilabel:`QGIS Server` tab consists of :guilabel:`Description`,
-:guilabel:`Attribution`, :guilabel:`MetadataURL`, and :guilabel:`LegendUrl` sections.
+:guilabel:`Attribution`, :guilabel:`Metadata URL`, and :guilabel:`Legend URL`
+sections.
 
-From the :guilabel:`Description` section, you can change the :guilabel:`Short name` used to
-reference the layer in requests (to learn more about short names, read
+From the :guilabel:`Description` section, you can change the :guilabel:`Short name`
+used to reference the layer in requests (to learn more about short names, read
 :ref:`server_short_name`). You can also add or edit a :guilabel:`Title` and
 :guilabel:`Abstract` for the layer, or define a :guilabel:`Keyword list` here. These
 keyword lists can be used in a metadata catalog. If you want to use a title from an
-XML metadata file, you have to fill in a link in the :guilabel:`DataUrl` field.
+XML metadata file, you have to fill in a link in the :guilabel:`Data URL` field.
 
 Use :guilabel:`Attribution` to get attribute data from an XML metadata catalog.
 
-In :guilabel:`MetadataUrl`, you can define the general path to the XML metadata
+In :guilabel:`Metadata URL`, you can add the general paths to the XML metadata
 catalog. This information will be saved in the QGIS project file for subsequent
-sessions and will be used for QGIS server.
+sessions and will be used for QGIS Server.
 
-In the :guilabel:`LegendUrl` section, you can provide the url of a legend image
+In the :guilabel:`Legend URL` section, you can provide the url of a legend image
 in the url field. You can use the Format drop-down option to apply the appropriate
 format of the image. Currently png, jpg and jpeg image formats are supported.
 
