@@ -2667,18 +2667,18 @@ Using the data-defined assistant interface
 ..........................................
 
 When the |dataDefined| :sup:`Data-defined override` button is associated with a
-numeric or color parameter, it has an :guilabel:`Assistant...` option that
-allows you to change how the data is applied to the parameter for each
+size, a rotation, an opacity or a color property, it has an :guilabel:`Assistant...`
+option that helps you change how the data is applied to the parameter for each
 feature. The assistant allows you to:
 
 * Define the :guilabel:`Input` data, ie:
 
-  * the attribute to represent, using the Field listbox or the |expression|
-    :sup:`Set column expression` function (see :ref:`vector_expressions`)
+  * :guilabel:`Source`: the attribute to represent, using a field or an |expression|
+    :ref:`expression <vector_expressions>`
   * the range of values to represent: you can manually enter the values or use
     the |refresh| :sup:`Fetch value range from layer` button to fill
-    these fields automatically with the minimum and maximum values returned by the chosen
-    attribute or the expression applied to your data
+    these fields automatically with the minimum and maximum values returned by
+    the :guilabel:`Source` expression applied to your data
 * |unchecked| :guilabel:`Apply transform curve`: by default, output values (see
   below for setting) are applied to input features following a linear scale.
   You can override this logic: enable the transform option, click on the
@@ -2687,14 +2687,15 @@ feature. The assistant allows you to:
 * Define the :guilabel:`Output` values: the options vary according to the
   parameter to define. You can globally set:
 
-  * the minimum and maximum values to apply to the selected property (n case
-    of a color setting, you'll need to provide a :ref:`color ramp
-    <color-ramp>`)
-  * the :guilabel:`Scale method` of representation which can be **Flannery**,
-    **Exponential**, **Surface** or **Radius**
-  * the :guilabel:`Exponent` to use for data scaling
-  * the output value or :ref:`color <color-selector>` to represent features
-    with NULL values
+  * for a color setting, the :ref:`color ramp <color-ramp>` to apply to values
+    and the single color to use for NULL values
+  * for the others, the minimum and maximum values to apply to the selected
+    property as well as the size/angle/opacity value for ignored or NULL source
+    features
+  * for size properties, the :guilabel:`Scale method` of representation which can
+    be **Flannery**, **Exponential**, **Surface**, **Radius** or **Linear**
+  * the :guilabel:`Exponent` to use for data scaling when the :guilabel:`Scale
+    method` is of exponential type or when tweaking the opacity
 
 When compatible with the property, a live-update preview is displayed in the
 right-hand side of the dialog to help you control the value scaling.
@@ -2704,13 +2705,14 @@ right-hand side of the dialog to help you control the value scaling.
 .. figure:: img/varying_size_assistant.png
    :align: center
 
-   The data-defined size assistant
+   Scaling feature size based on passengers field's value
 
 The values presented in the varying size assistant above will set the size
 'Data-defined override' with:
+
 ::
 
- coalesce(scale_exp(Importance, 1, 20, 2, 10, 0.57), 1)
+ coalesce(scale_exp("passengers", 9, 2000, 1, 10, 0.57), 0)
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
