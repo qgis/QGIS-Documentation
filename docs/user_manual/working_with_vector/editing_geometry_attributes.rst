@@ -936,18 +936,15 @@ Table Advanced Editing: Vector layer advanced editing toolbar
 Straight, curve and stream digitizing
 -------------------------------------
 
-To view both the Digitize with Curve and the Stream Digitizing tools requires that the
-Advanced Digitizing Toolbar is enabled.
-
 The |digitizeWithCurve| :sup:`Digitize with Curve` tool allows you to draw curves in layers with
 geometries that support curves. Digitizing a curve requires to provide three points along the curve
-(start, point along the arc, end) which defines it.
+(start, point along the arc, end) which define it.
 
 The |streamingDigitize| :sup:`Stream Digitizing` tool allows you to activate and deactivate stream 
 digitizing which allows to create features in freehand mode. 
 
-The streaming tolerance affects the spacing between each created vertex, currently the only supported
-unit is in pixels (px)
+The streaming tolerance affects the spacing between consecutive vertices.
+Currently, the only supported unit is pixels (``px``).
 
 .. index::
    single: Digitizing tools; Move feature
