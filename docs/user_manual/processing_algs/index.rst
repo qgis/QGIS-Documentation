@@ -12,6 +12,4 @@ are documented here.
 
      qgis/index
      gdal/index
-     lidartools/lastools
-     taudem/index
      otb
