@@ -24,38 +24,65 @@ When using |addImage| :sup:`Add Picture`, the picture item will be a
 blank frame that you can customize using its
 :guilabel:`Item Properties` panel.
 Other than the :ref:`items common properties <item_common_properties>`,
-this feature has the following functionalities (see
-:numref:`figure_layout_image`):
+this feature has the following functionalities:
+
+Main properties
+...............
 
 .. _figure_layout_image:
 
-.. figure:: img/image_mainproperties.png
+.. figure:: img/picture_mainproperties.png
    :align: center
 
    Picture Item Properties panel
 
+The picture item supports two types of images:
 
-There are several ways to set the :guilabel:`Image source` (to select
-the image you want to display):
+* :guilabel:`Raster Image`: a file selector widget can be used to fetch
+  the data. Use the :guilabel:`...` :sup:`Browse` button to select a file
+  on your computer or enter the path directly in the text field.
+  You can even provide a remote URL that points to a picture.
+  The associated image can also be :ref:`embedded <embedded_file_selector>`
+  in the layout.
 
-#. In the :guilabel:`Main properties` group, use the :guilabel:`...`
-   :sup:`Browse` button of :guilabel:`image source` to
-   select a file on your computer. The browser will start in the
-   SVG-libraries provided with QGIS. You can also select other image
-   formats (like :file:`.png` or :file:`.jpg`).
-#. You can enter the source directly in the :guilabel:`Image source` text field.
-   You can even provide a remote URL that points to a picture.
-#. From the :guilabel:`Search directories` area you can select an
-   image from the loaded previews to set the image source.
-   These images are by default provided by folders set in
-   :menuselection:`Settings --> Options --> System --> SVG Paths`.
-#. Use the |dataDefined| :sup:`data defined override` button to set
-   the image source from a feature attribute or using a regular
-   expression.
+  Use the |dataDefined| :sup:`data defined override` button to set
+  the image source from a feature attribute or using a regular expression.
+* :guilabel:`SVG Image`: using by default the SVG libraries provided in
+  :menuselection:`Settings --> Options --> System --> SVG Paths`.
+  You can however use any other file, and the file selection follows the same
+  rules as for the raster image. The SVG parameters can as well be set dynamic.
 
-.. note:: In the :guilabel:`Search directories` group, you can use
-   the :guilabel:`Add` and :guilabel:`Remove` buttons to customize
-   the list of folders to fetch and preview images from.
+  .. _parameterized_svg:
+
+  The QGIS provided (default) :file:`.SVG` files are customizable,
+  meaning that you can easily apply other :guilabel:`Fill color`,
+  :guilabel:`Stroke color` (including opacity) and
+  :guilabel:`Stroke width` than the original, using their
+  corresponding feature in the :guilabel:`SVG Parameters` group.
+  These properties can also be :ref:`data-defined <data_defined>`.
+
+  If you add an :file:`.SVG` file that does not enable these properties,
+  you may need to add the following tags to the file in order to add
+  support e.g. for transparency:
+
+  * `fill-opacity="param(fill-opacity)"`
+  * `stroke-opacity="param(outline-opacity)"`
+
+  More details at :ref:`svg_symbol`.
+
+.. note:: Drag-and-drop an image file (raster or SVG) into the layout page
+ will create a layout picture item with corresponding settings.
+
+
+Size and placement
+...................
+
+.. _figure_layout_picture_sizeplacement:
+
+.. figure:: img/picture_sizeplacement.png
+   :align: center
+
+   Layout pictures size and placement properties
 
 With the :guilabel:`Resize mode` option, you can set how the image is
 displayed when the frame is resized:
@@ -77,40 +104,33 @@ Depending on the selected :guilabel:`Resize mode`, the
 :guilabel:`Placement` and :guilabel:`Image rotation` options may be
 disabled.
 :guilabel:`Placement` lets you select the position of the image
-inside its frame.
+inside its frame (top/middle/bottom and left/center/right).
 
-.. _parameterized_svg:
+.. _layout_images_rotation:
 
-The QGIS provided (default) :file:`.SVG` files are customizable,
-meaning that you can easily apply other :guilabel:`Fill color`,
-:guilabel:`Stroke color` (including opacity) and
-:guilabel:`Stroke width` than the original, using their
-corresponding feature in the :guilabel:`SVG Parameters` group.
-These properties can also be :ref:`data-defined <data_defined>`.
-
-If you add an :file:`.SVG` file that does not enable these properties,
-you may need to add the following tags to the file in order to add
-support e.g. for transparency:
-
-* `fill-opacity="param(fill-opacity)"`
-* `stroke-opacity="param(outline-opacity)"`
-
-You can read this `blog post
-<https://blog.sourcepole.ch/2011/06/30/svg-symbols-in-qgis-with-modifiable-colors/>`_
-to see an example.
+Image rotation
+...............
 
 Images can be rotated with the :guilabel:`Image rotation` field.
 Activating the |checkbox| :guilabel:`Sync with map` checkbox
-synchronizes the rotation of the image with the rotation applied to a
+synchronizes the rotation of the image with the rotation applied to the
 selected map item.
-This is a convenient feature for north arrows that you can align with
-either:
+This is a convenient feature to make any picture behave as a north arrow.
+The :guilabel:`North alignment` can be:
 
 * **Grid north**: the direction of a grid line which is parallel to
   the central meridian of the national/local grid
 * **True north**: direction of a meridian of longitude.
 
 You can also apply a declination :guilabel:`Offset` to the picture rotation.
+
+.. _figure_layout_picture_imagerotation:
+
+.. figure:: img/picture_imagerotation.png
+   :align: center
+
+   Layout pictures image rotation properties
+
 
 .. index:: North arrow
 .. _layout_northarrow_item:
