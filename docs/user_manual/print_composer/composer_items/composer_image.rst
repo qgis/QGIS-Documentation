@@ -1,11 +1,24 @@
 .. index:: Image, Picture, Layout; Image item, Layout; North arrow
 
-The Picture and the North Arrow Items
+The Marker, Picture and North Arrow Items
 ======================================================================
 
-The :guilabel:`Picture` item is a tool that helps decorate your map with
-pictures, logos... It can also be used to add north arrows, despite the
-dedicated :ref:`North arrow <layout_northarrow_item>` tool.
+.. only:: html
+
+.. contents::
+   :local:
+
+Along with the map or legend items in the print layout, you may want to
+decorate your realization with images or annotations.
+QGIS provides different tools to achieve this:
+
+* the :ref:`picture item <layout_picture_item>`: decorates the layout with
+  an image raster or SVG file (e.g. logos, pictures, north arrows, ...)
+* the :ref:`north arrow item <layout_northarrow_item>`: a picture item
+  predefined with a north arrow image
+* the :ref:`marker item <layout_marker_item>`: decorates the layout with
+  QGIS vector :ref:`symbols <symbol-selector>`. It can be used to place
+  markers over a map item or for creation of advanced custom legends.
 
 .. _layout_picture_item:
 
@@ -168,6 +181,34 @@ The main differences are:
 
    North arrows available for selection in provided SVG library
 
+.. _layout_marker_item:
+
+The Marker Item
+----------------
+
+To add a marker item, select the |addMarker| :sup:`Add Marker` button,
+and click on the page. A default point marker symbol is added.
+Then you can manipulate it, as explained in :ref:`interact_layout_item`.
+But note that unlike most of the other items, you resize the item
+given that its size is controlled by the embedded symbols properties.
+
+The marker item can be customized from the :guilabel:`Item Properties` panel.
+Other than the :ref:`items common properties <item_common_properties>`, you
+can also:
+
+* modify the :guilabel:`Symbol`, relying on all the symbol :ref:`widget
+  capabilities <symbol-selector>`
+* sync the marker item rotation with the map's (see :ref:`layout_images_rotation`),
+  acting as a north arrow. The map rotation is added to any existing marker symbol
+  level rotation (so .e.g if you have to rotate the triangle marker 90° to get it
+  pointing straight up, it will still work nicely in north arrow mode!)
+
+.. _figure_layout_marker:
+
+.. figure:: img/marker_mainproperties.png
+   :align: center
+
+   The marker item custom properties
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -176,6 +217,8 @@ The main differences are:
    source folder.
 
 .. |addImage| image:: /static/common/mActionAddImage.png
+   :width: 1.5em
+.. |addMarker| image:: /static/common/mActionAddMarker.png
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
