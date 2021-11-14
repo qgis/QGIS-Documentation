@@ -2158,8 +2158,8 @@ Storing values in Variables
 In QGIS, you can use variables to store useful recurrent values (e.g. the
 project's title, or the user's full name) that can be used in expressions.
 Variables can be defined at the application's global level, project level,
-layer level, layout level, and layout item's level. Just like CSS
-cascading rules, variables can be overwritten - e.g., a project level
+layer level, processing modeler level, layout level, and layout item's level.
+Just like CSS cascading rules, variables can be overwritten - e.g., a project level
 variable will overwrite any application global level variables set with
 the same name. You can use these variables to build text strings or other
 custom expressions using the ``@`` character before the variable name. For
@@ -2182,6 +2182,8 @@ manage:
   :ref:`project_properties`)
 * **vector layer variables** from the :guilabel:`Layer Properties` dialog
   (see :ref:`vector_properties_dialog`);
+* **modeler variables** from the :guilabel:`Graphical Modeler` dialog
+  (see :ref:`processing.modeler`);
 * **layout variables** from the :guilabel:`Layout` panel in the
   Print layout (see :ref:`layout_panel`);
 * and **layout item variables** from the :guilabel:`Item Properties`
