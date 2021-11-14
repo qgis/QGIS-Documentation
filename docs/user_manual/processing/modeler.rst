@@ -508,6 +508,33 @@ and the modeler dialog closed, to allow the toolbox to refresh its
 contents.
 
 
+Documenting your model
+......................
+
+You need to document your model, and this can be done from the modeler itself.
+Click on the |processingHelp|:sup:`Edit model help` button, and a
+dialog like the one shown next will appear.
+
+.. _figure_help_edition:
+
+.. figure:: img/help_edition.png
+   :align: center
+
+   Editing Help
+
+On the right-hand side, you will see a simple HTML page, created using
+the description of the input parameters and outputs of the algorithm,
+along with some additional items like a general description of the
+model or its author.
+The first time you open the help editor, all these descriptions are
+empty, but you can edit them using the elements on the left-hand side
+of the dialog.
+Select an element on the upper part and then write its description in
+the text box below.
+
+Model help is saved as part of the model itself.
+
+
 Saving and loading models
 -------------------------
 
@@ -623,32 +650,6 @@ will be displayed in grey and will not be executed as part of the model.
 When right-clicking on an algorithm that is not active, you will
 see a :guilabel:`Activate` menu option that you can use to reactivate
 it.
-
-Editing model help files and meta-information
----------------------------------------------
-
-You can document your models from the modeler itself.
-Click on the |processingHelp|:sup:`Edit model help` button, and a 
-dialog like the one shown next will appear.
-
-.. _figure_help_edition:
-
-.. figure:: img/help_edition.png
-   :align: center
-
-   Editing Help
-
-On the right-hand side, you will see a simple HTML page, created using
-the description of the input parameters and outputs of the algorithm,
-along with some additional items like a general description of the
-model or its author.
-The first time you open the help editor, all these descriptions are
-empty, but you can edit them using the elements on the left-hand side
-of the dialog.
-Select an element on the upper part and then write its description in
-the text box below.
-
-Model help is saved as part of the model itself.
 
 
 Exporting a model as a Python script
