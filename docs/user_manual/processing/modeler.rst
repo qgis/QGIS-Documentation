@@ -62,45 +62,54 @@ The first step is to define the inputs for the model.
 The following elements are found in the :guilabel:`Inputs` panel on
 the left side of the modeler window:
 
-* Authentication Configuration
-* Boolean
-* Color
-* Connection Name
-* Coordinate Operation
-* CRS
-* Database Schema
-* Database Table
-* Datetime
-* Distance
-* DXF Layers
-* Enum
-* Expression
-* Extent
-* Field Aggregates
-* Fields Mapper
-* File/Folder
-* Geometry
-* Map Layer
-* Map Theme
-* Matrix
-* Mesh Dataset Groups
-* Mesh Dataset Time
-* Mesh Layer
-* Multiple Input
-* Number
-* Point
-* Print Layout
-* Print Layout Item
-* Range
-* Raster Band
-* Raster Layer
-* Scale
-* String
-* TIN Creation Layers 
-* Vector Features
-* Vector Field
-* Vector Layer
-* Vector Tile Writer Layers
+.. list-table:: List of parameter types for model building
+   :class: longtable
+
+   * - :class:`Annotation Layer <qgis.core.QgsProcessingParameterAnnotationLayer>`
+     - :class:`Authentication Configuration <qgis.core.QgsProcessingParameterAuthConfig>`
+     - :class:`Boolean <qgis.core.QgsProcessingParameterBoolean>`
+     - :class:`Color <qgis.core.QgsProcessingParameterColor>`
+     - :class:`Connection Name <qgis.core.QgsProcessingParameterProviderConnection>`
+   * - :class:`Coordinate Operation <qgis.core.QgsProcessingParameterCoordinateOperation>`
+     - :class:`CRS <qgis.core.QgsProcessingParameterCrs>`
+     - :class:`Database Schema <qgis.core.QgsProcessingParameterDatabaseSchema>`
+     - :class:`Database Table <qgis.core.QgsProcessingParameterDatabaseTable>`
+     - :class:`Datetime <qgis.core.QgsProcessingParameterDateTime>`
+   * - :class:`Distance <qgis.core.QgsProcessingParameterDistance>`
+     - :class:`Duration <qgis.core.QgsProcessingParameterDuration>`
+     - :class:`DXF Layers <qgis.core.QgsProcessingParameterDxfLayers>`
+     - :class:`Enum <qgis.core.QgsProcessingParameterEnum>`
+     - :class:`Expression <qgis.core.QgsProcessingParameterExpression>`
+   * - :class:`Extent <qgis.core.QgsProcessingParameterExtent>`
+     - :class:`Field Aggregates <qgis.core.QgsProcessingParameterAggregate>`
+     - :class:`Fields Mapper <qgis.core.QgsProcessingParameterFieldMapping>`
+     - :class:`File/Folder <qgis.core.QgsProcessingParameterFile>`
+     - :class:`Geometry <qgis.core.QgsProcessingParameterGeometry>`
+   * - :class:`Map Layer <qgis.core.QgsProcessingParameterMapLayer>`
+     - :class:`Map Theme <qgis.core.QgsProcessingParameterMapTheme>`
+     - :class:`Matrix <qgis.core.QgsProcessingParameterMatrix>`
+     - :class:`Mesh Dataset Groups <qgis.core.QgsProcessingParameterMeshDatasetGroups>`
+     - :class:`Mesh Dataset Time <qgis.core.QgsProcessingParameterMeshDatasetTime>`
+   * - :class:`Mesh Layer <qgis.core.QgsProcessingParameterMeshLayer>`
+     - :class:`Multiple Input <qgis.core.QgsProcessingParameterMultipleLayers>`
+     - :class:`Number <qgis.core.QgsProcessingParameterNumber>`
+     - :class:`Point <qgis.core.QgsProcessingParameterPoint>`
+     - :class:`Point Cloud Layer <qgis.core.QgsProcessingParameterPointCloudLayer>`
+   * - :class:`Print Layout <qgis.core.QgsProcessingParameterLayout>`
+     - :class:`Print Layout Item <qgis.core.QgsProcessingParameterLayoutItem>`
+     - :class:`Range <qgis.core.QgsProcessingParameterRange>`
+     - :class:`Raster Band <qgis.core.QgsProcessingParameterBand>`
+     - :class:`Raster Layer <qgis.core.QgsProcessingParameterRasterLayer>`
+   * - :class:`Scale <qgis.core.QgsProcessingParameterScale>`
+     - :class:`String <qgis.core.QgsProcessingParameterString>`
+     - :class:`TIN Creation Layers <qgis.core.QgsProcessingParameterTinInputLayers>`
+     - :class:`Vector Features <qgis.core.QgsProcessingParameterFeatureSource>`
+     - :class:`Vector Field <qgis.core.QgsProcessingParameterField>`
+   * - :class:`Vector Layer <qgis.core.QgsProcessingParameterVectorLayer>`
+     - :class:`Vector Tile Writer Layers <qgis.core.QgsProcessingParameterVectorTileWriterLayers>`
+     -
+     -
+     -
 
 .. note:: Hovering with the mouse over the inputs will show a tooltip with 
   additional information.
