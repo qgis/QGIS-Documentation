@@ -21,19 +21,8 @@ model is executed as a single algorithm, saving time and effort.
 The graphical modeler can be opened from the Processing menu
 (:menuselection:`Processing --> Graphical Modeler`).
 
-The modeler has a working canvas where the structure of the model and
-the workflow it represents are shown.
-The left part of the window is a section with five panels that can be used
-to add new elements to the model:
-
-#. ``Model Properties``: you can specify the name of the model and the group that
-   will contain it
-#. ``Inputs``: all the inputs that will shape your model
-#. ``Algorithms``: the Processing algorithms available
-#. ``Variables``: you can also define variables that will only be available in
-   the Processing Modeler
-#. ``Undo History``: this panel will register everything that happens in the 
-   modeler, making it easy to cancel things you did wrong.
+The graphical modeler interface
+-------------------------------
 
 .. _figure_modeler:
 
@@ -41,6 +30,196 @@ to add new elements to the model:
    :align: center
 
    Modeler
+
+In its main part, the modeler has a working canvas where the structure
+of the model and the workflow it represents can be constructed.
+
+At the top of the dialog, different menus and the :guilabel:`Navigation`
+toolbar give access to a variety of tools.
+
+Model menu
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 12 12 50
+
+   * - Label
+     - Shortcut
+     - Navigation Toolbar
+     - Description
+   * - |success| :guilabel:`Validate Model`
+     -
+     -
+     - Checks whether the algorithms and inputs used in the model exist.
+       Convenient before releasing a model.
+   * - |play| :guilabel:`Run Model...`
+     - :kbd:`F5`
+     - |checkbox|
+     - Executes the model
+   * - :guilabel:`Reorder Model Inputs...`
+     -
+     -
+     - Sets the order in which inputs are presented to the user in the algorithm dialog.
+   * - |fileOpen| :guilabel:`Open Model...`
+     - :kbd:`Ctrl+O`
+     - |checkbox|
+     - Opens a :file:`.model3` file for edit or execution
+   * - |fileSave| :guilabel:`Save Model`
+     - :kbd:`Ctrl+S`
+     - |checkbox|
+     - Saves the model to disk as a :file:`.model3` file
+   * - |fileSaveAs| :guilabel:`Save Model as...`
+     - :kbd:`Ctrl+Shift+S`
+     - |checkbox|
+     - Saves the model to disk as a new :file:`.model3` file
+   * - |fileSave| :guilabel:`Save Model in project`
+     -
+     - |checkbox|
+     - Embeds the model file in the project file, making it available when sharing the project file.
+   * - |helpContents| :guilabel:`Edit Model Help...`
+     -
+     - |checkbox|
+     - An interface to document the model, the algorithms, the parameters and outputs,
+       as well as the author and versioning
+   * - :menuselection:`Export -->`
+     -
+     -
+     -
+   * - |saveMapAsImage| :menuselection:`--> Export as Image...`
+     -
+     - |checkbox|
+     - Saves the model's graphical design to an image file format (for illustration purpose)
+   * - |saveAsPDF|:menuselection:`--> Export as PDF...`
+     -
+     -
+     - Saves the model's graphical design to a :file:`PDF` file format (for illustration purpose)
+   * - |saveAsSVG|:menuselection:`--> Export as SVG...`
+     -
+     -
+     - Saves the model's graphical design to an :file:`SVG` file format (for illustration purpose)
+   * - |fileSave|:menuselection:`--> Export as Script Algorithm...`
+     -
+     - |checkbox|
+     - Generates a python script file including the model's instructions
+
+Edit menu
+.........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 12 12 50
+
+   * - Label
+     - Shortcut
+     - Navigation Toolbar
+     - Description
+   * - |selectAll| :guilabel:`Select All`
+     - :kbd:`Ctrl+A`
+     -
+     - Selects all the model components in the designer
+   * - :guilabel:`Snap selected components to Grid`
+     -
+     -
+     - snaps and aligns the elements into a grid
+   * - |redo| :guilabel:`Redo`
+     - :kbd:`Ctrl+Y`
+     - |checkbox|
+     - Rollback the latest canceled action. See also the :guilabel:`Undo/Redo` panel.
+   * - |undo| :guilabel:`Undo`
+     - :kbd:`Ctrl+Z`
+     - |checkbox|
+     - Cancel the previous change. See also the :guilabel:`Undo/Redo` panel.
+   * - |editCut| :guilabel:`Cut`
+     - :kbd:`Ctrl+X`
+     -
+     - Cuts a selection of components from the model.
+   * - |editCopy| :guilabel:`Copy`
+     - :kbd:`Ctrl+C`
+     -
+     - Copies a selection of components from the model.
+   * - |editPaste| :guilabel:`Paste`
+     - :kbd:`Ctrl+V`
+     -
+     - Pastes a cut or copied selection of components from a model to another
+       or within the same model.
+       The selected components keep their original properties and comments.
+   * - |deleteSelected| :guilabel:`Delete selected components`
+     - :kbd:`Del`
+     -
+     - Removes a component from the model.
+   * - :guilabel:`Add Group Box`
+     -
+     -
+     - Adds a box at the background of related components in order to visually
+       group them. Particularly useful in big models to keep the workflow clean.
+
+View menu
+.........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 12 12 50
+
+   * - Label
+     - Shortcut
+     - Navigation Toolbar
+     - Description
+   * - :menuselection:`Zoom To -->`
+     -
+     -
+     - Zooms to the selected group box extent
+   * - |zoomIn| :guilabel:`Zoom In`
+     - :kbd:`Ctrl++`
+     - |checkbox|
+     -
+   * - |zoomOut| :guilabel:`Zoom Out`
+     - :kbd:`Ctrl+-`
+     - |checkbox|
+     -
+   * - |zoomActual| :guilabel:`Zoom to 100%`
+     - :kbd:`Ctrl+1`
+     - |checkbox|
+     -
+   * - |zoomFullExtent| :guilabel:`Zoom Full`
+     - :kbd:`Ctrl+0`
+     - |checkbox|
+     - Displays all the components in the designer current canvas
+   * - |checkbox| :guilabel:`Show Comments`
+     -
+     -
+     - Displays comments associated to every algorithm or input in the graphical designer
+   * - |unchecked| :guilabel:`Enable Snapping`
+     -
+     -
+     -
+   * - |unchecked| :guilabel:`Toggle Panel Visibility`
+     - :kbd:`Ctrl+Tab`
+     -
+     - Switches ON or OFF the :ref:`panels <modelerpanels>` in the designer
+
+
+.. _modelerpanels:
+
+Panels
+......
+
+The left part of the window is a section with five panels that can be used
+to add new elements to the model:
+
+#. :guilabel:`Model Properties`: specify the name (required) of the model and
+   the group in which it will be displayed in the :ref:`Processing Toolbox <processing.toolbox>`
+#. :guilabel:`Inputs`: all the :ref:`input parameters <processing_inputs>` that could shape
+   your model
+#. :guilabel:`Algorithms`: the available :ref:`Processing algorithms <processing_algs>`
+#. :guilabel:`Variables`: Models can contain dedicated :ref:`variables
+   <general_tools_variables>` that are unique and only available to them.
+   These variables can be accessed by any expression used within the model.
+   They are useful to control algorithms within a model and control multiple
+   aspects of the model by changing a single variable.
+   The variables can be viewed and modified in the :guilabel:`Variables` panel.
+#. :guilabel:`Undo History`: this panel will register everything that happens in the
+   modeler, making it easy to cancel things you did wrong.
 
 Creating a model involves two basic steps:
 
@@ -54,6 +233,8 @@ Creating a model involves two basic steps:
    Using the input data of the model, the workflow is defined by
    adding algorithms and selecting how they use the defined inputs
    or the outputs generated by other algorithms in the model.
+
+.. _processing_inputs:
 
 Definition of inputs
 --------------------
@@ -275,15 +456,6 @@ contents.
 When using the editor to execute a model, any non-default values will be 
 saved in the inputs. This means that executing the model at a later time from
 the editor will have the dialog prefilled with those values on any subsequent run.
-
-Definition of Model Variables
------------------------------
-
-Model can contain dedicated variables that are unique to them.
-These variables can be accessed by any expression used within the model.
-These variables can be useful to control algorithms within a model and 
-control multiple aspects of the model by changing a single variable.
-The variables can be viewed and modified in the :guilabel:`Variables` widget.
 
 Interacting with the canvas and elements
 ----------------------------------------
@@ -551,7 +723,13 @@ Those algorithms are located within the group 'Modeler Tools'.
    :width: 1.5em
 .. |fileSave| image:: /static/common/mActionFileSave.png
    :width: 1.5em
+.. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
+   :width: 1.5em
+.. |helpContents| image:: /static/common/mActionHelpContents.png
+   :width: 1.5em
 .. |integer| image:: /static/common/mIconFieldInteger.png
+   :width: 1.5em
+.. |play| image:: /static/common/mActionPlay.png
    :width: 1.5em
 .. |processing| image:: /static/common/processingAlgorithm.png
    :width: 1.5em
