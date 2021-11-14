@@ -221,6 +221,21 @@ to add new elements to the model:
 #. :guilabel:`Undo History`: this panel will register everything that happens in the
    modeler, making it easy to cancel things you did wrong.
 
+About available algorithms
+..........................
+
+Some algorithms that can be executed from the toolbox do not appear
+in the list of available algorithms when you are designing a model.
+To be included in a model, an algorithm must have the correct
+semantic.
+If an algorithm does not have such a well-defined semantic (for
+instance, if the number of output layers cannot be known in advance),
+then it is not possible to use it within a model, and it will not
+appear in the list of algorithms that you can find in the modeler
+dialog.
+On the other hand some algorithms are specific to the modeler.
+Those algorithms are located within the group 'Modeler Tools'.
+
 Creating a model involves two basic steps:
 
 #. *Definition of necessary inputs*.
@@ -682,22 +697,6 @@ To do so, click on the |saveAsPython|:sup:`Export as Script Algorithm...`
 in the modeler canvas or right click on the name of the model in the Processing
 Toolbox and choose |saveAsPython|:sup:`Export Model as Python Algorithm...`.
 
-
-About available algorithms
---------------------------
-
-You might notice that some algorithms that can be executed from the
-toolbox do not appear in the list of available algorithms when you are
-designing a model.
-To be included in a model, an algorithm must have the correct
-semantic.
-If an algorithm does not have such a well-defined semantic (for
-instance, if the number of output layers cannot be known in advance),
-then it is not possible to use it within a model, and it will not
-appear in the list of algorithms that you can find in the modeler
-dialog.
-On the other hand some algorithms are specific to the modeler.
-Those algorithms are located within the group 'Modeler Tools'.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
