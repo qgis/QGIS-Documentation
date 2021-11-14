@@ -538,6 +538,9 @@ Model help is saved as part of the model itself.
 Saving and loading models
 -------------------------
 
+Saving models
+.............
+
 Use the |fileSave|:sup:`Save model` button to save the current model and the
 |fileOpen|:sup:`Open Model` button to open a previously saved model.
 Models are saved with the :file:`.model3` extension.
@@ -575,14 +578,27 @@ tab of the modeler window.
 That means that you can incorporate a model as a part of a bigger model,
 just like other algorithms.
 
-Models will show up in the :ref:`Browser <browser_panel>` panel and can be run 
+Models will show up in the :ref:`Browser <browser_panel>` panel and can be run
 from there.
+
+Exporting a model as a Python script
+....................................
+
+As we will see in a later chapter, Processing algorithms can be called
+from the QGIS Python console, and new Processing algorithms can be
+created using Python.
+A quick way to create such a Python script is to create a model and
+then export it as a Python file.
+
+To do so, click on the |saveAsPython|:sup:`Export as Script Algorithm...`
+in the modeler canvas or right click on the name of the model in the Processing
+Toolbox and choose |saveAsPython|:sup:`Export Model as Python Algorithm...`.
 
 Exporting a model as an image, PDF or SVG
 .........................................
 
 A model can also be exported as an image, SVG or PDF (for illustration
-purposes) by clicking |saveMapAsImage|:sup:`Export as image`, 
+purposes) by clicking |saveMapAsImage|:sup:`Export as image`,
 |saveAsPDF|:sup:`Export as PDF` or |saveAsSVG|:sup:`Export as SVG`.
 
 
@@ -650,20 +666,6 @@ will be displayed in grey and will not be executed as part of the model.
 When right-clicking on an algorithm that is not active, you will
 see a :guilabel:`Activate` menu option that you can use to reactivate
 it.
-
-
-Exporting a model as a Python script
---------------------------------------
-
-As we will see in a later chapter, Processing algorithms can be called
-from the QGIS Python console, and new Processing algorithms can be
-created using Python.
-A quick way to create such a Python script is to create a model and
-then export it as a Python file.
-
-To do so, click on the |saveAsPython|:sup:`Export as Script Algorithm...`
-in the modeler canvas or right click on the name of the model in the Processing
-Toolbox and choose |saveAsPython|:sup:`Export Model as Python Algorithm...`.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
