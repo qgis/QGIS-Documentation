@@ -672,9 +672,9 @@ Further reading: :ref:`qgiswedgebuffers` algorithm
 
 Further reading: :ref:`expression_function_GeometryGroup_overlay_within`
 
-
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_within_section
+
 
 Layout Functions
 ----------------
@@ -695,6 +695,13 @@ Further reading: List of default :ref:`variables <expression_variables>`
 
 .. include:: expression_help/Layout.rst
    :start-after: .. end_item_variables_section
+   :end-before: .. end_map_credits_section
+
+This function requires the :ref:`Access metadata properties
+<metadatamenu>` of the layers to have been filled.
+
+.. include:: expression_help/Layout.rst
+   :start-after: .. end_map_credits_section
 
 
 Map Layers
