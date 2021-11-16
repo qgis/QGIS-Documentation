@@ -808,25 +808,26 @@ a table. And there are also some buttons available. Let's review them shortly:
   toggles the edit mode of the airport layer, although we are in the feature
   form of a feature from the region layer. But the table is representing
   features of the airport layer.
-* The |saveEdits| button is for saving all the edits.
-* The |newTableRow| button will add a new record to the airport layer attribute table.
-  And it will assign the new airport to the current region by default.
-* The |capturePoint| is the same as |newTableRow| but lets you digitize the
-  airport geometry in the map canvas beforehand. Note that the icon will change according
-  to geometry type.
-* The |duplicateFeature| button allows you to copy one or more child features.
-* The |deleteSelectedFeatures| button will delete the selected airport
-  permanently.
-* The |link| symbol will open a new dialog where you can select any existing
+* The |saveEdits| button is for saving all the edits in the child layer (airport).
+* The |capturePoint| lets you digitize the airport geometry in the map canvas and
+  assigns the new feature to the current region by default.
+  Note that the icon will change according to the geometry type.
+* The |newTableRow| button adds a new record to the airport layer attribute table
+  and assigns the new feature to the current region by default. The geometry can
+  be drawn later with the :guilabel:`Add part` digitizing tool.
+* The |duplicateFeature| button allows you to copy and paste one or more child
+  features within the child layer. They can later be assigned to a different
+  parent feature or have their attributes modified.
+* The |deleteSelectedFeatures| button deletes the selected airport(s) permanently.
+* The |link| symbol opens a new dialog where you can select any existing
   airport which will then be assigned to the current region. This may be handy
   if you created the airport on the wrong region by accident.
-* The |unlink| symbol will unlink the selected airport from the current region,
+* The |unlink| symbol unlinks the selected airport(s) from the current region,
   leaving them unassigned (the foreign key is set to NULL) effectively.
 * With the |zoomToSelected| button you can zoom the map to the selected child
   features.
-* The two buttons |formView| and |openTable| to the right switch between table
-  view and form view where the later let's you view all the airports in their
-  respective form.
+* The two buttons |formView| and |openTable| to the right switch between the :ref:`table
+  view and form view <attribute_table_view>` of the related child features.
 
 In the above example the referencing layer has geometries (so it isn't just
 an alphanumeric table) so the above steps will create an entry in the layer
