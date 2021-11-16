@@ -118,6 +118,9 @@ QGIS provides two view modes to easily manipulate data in the attribute table:
 
 * The |openTable| :sup:`Table view`, displays values of multiple features in a
   tabular mode, each row representing a feature and each column a field.
+  A right-click on the column header allows you to :ref:`configure the table
+  display <configure_table_columns>` while a right-click on a cell provides
+  :ref:`interaction with the feature <interacting_features_table>`.
 * The |formView| :sup:`Form view` shows :ref:`feature identifiers
   <maptips>` in a first panel and displays only the attributes of the clicked
   identifier in the second one.
@@ -127,12 +130,16 @@ QGIS provides two view modes to easily manipulate data in the attribute table:
   The pull-down also includes the last 10 expressions for re-use.
   Form view uses the layer fields configuration
   (see :ref:`vector_attributes_menu`).
+
   You can browse through the feature identifiers with the arrows on the bottom
-  of the first panel. Once you markered the feature in yellow in the list it
-  is selected in yellow on the canvas. Use the |zoomToSelected| on top of the
-  attribute table to zoom to the feature. Clicking on an entry in the list 
-  (without using the rectangles) makes a feature flash in red color once so you
-  can see where it is situated.
+  of the first panel. The features attributes update in the second panel as you
+  go. It's also possible to identify or move to the active feature in the map
+  canvas with pushing down any of the button at the bottom:
+
+  * |highlightFeature| :sup:`Highlight current feature` if visible in the
+    map canvas
+  * |panTo| :sup:`Automatically pan to current feature`
+  * |zoomTo| :sup:`Zoom to current feature`
 
 You can switch from one mode to the other by clicking the corresponding icon at
 the bottom right of the dialog.
@@ -256,6 +263,7 @@ Adding new rule opens a form to define:
 
 .. index::
    pair: Attributes; Selection
+.. _interacting_features_table:
 
 Interacting with features in an attribute table
 ===============================================
@@ -1291,6 +1299,8 @@ from the external storage system. In that case, more details might appear in the
    :width: 1.5em
 .. |handleStoreFilterExpressionUnchecked| image:: /static/common/mActionHandleStoreFilterExpressionUnchecked.png
    :width: 1.5em
+.. |highlightFeature| image:: /static/common/mActionHighlightFeature.png
+   :width: 1.5em
 .. |invertSelection| image:: /static/common/mActionInvertSelection.png
    :width: 1.5em
 .. |link| image:: /static/common/mActionLink.png
@@ -1314,6 +1324,8 @@ from the external storage system. In that case, more details might appear in the
 .. |openTableSelected| image:: /static/common/mActionOpenTableSelected.png
    :width: 1.5em
 .. |openTableVisible| image:: /static/common/mActionOpenTableVisible.png
+   :width: 1.5em
+.. |panTo| image:: /static/common/mActionPanTo.png
    :width: 1.5em
 .. |panToSelected| image:: /static/common/mActionPanToSelected.png
    :width: 1.5em
@@ -1340,6 +1352,8 @@ from the external storage system. In that case, more details might appear in the
 .. |unlink| image:: /static/common/mActionUnlink.png
    :width: 1.5em
 .. |warning| image:: /static/common/mIconWarning.png
+   :width: 1.5em
+.. |zoomTo| image:: /static/common/mActionZoomTo.png
    :width: 1.5em
 .. |zoomToSelected| image:: /static/common/mActionZoomToSelected.png
    :width: 1.5em
