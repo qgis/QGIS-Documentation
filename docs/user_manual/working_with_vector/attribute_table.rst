@@ -94,6 +94,7 @@ following functionality:
    "|zoomToSelected|", "Zoom map to the selected rows", "", ":kbd:`Ctrl+J`"
    "|newAttribute|", "New field", "Add a new field to the data source", ":kbd:`Ctrl+W`"
    "|deleteAttribute|", "Delete field", "Remove a field from the data source"
+   "|editTable|", "Organize columns", "Show/hide fields from the attribute table"
    "|calculateField|", "Open field calculator", "Update field for many features in a row", ":kbd:`Ctrl+I`"
    "|conditionalFormatting|", "Conditional formatting", "Enable table formatting"
    "|dock|", "Dock attribute table", "Allows to dock/undock the attribute table"
@@ -164,23 +165,13 @@ Configuring the columns
 -----------------------
 
 Right-click in a column header when in table view to have access to tools that
-help you configure what can be displayed in the attribute table and how.
+help you control:
 
-Hiding and organizing columns and enabling actions
-..................................................
+* the :ref:`column(s) size <resize_columns>`
+* the :ref:`column(s) visibility and order <organize_columns>`
+* the :ref:`sort order of the data <sort_columns>`
 
-By right-clicking in a column header, you can choose to hide it from the
-attribute table. To change several columns behavior at once, unhide a column or
-change the order of the columns, choose :guilabel:`Organize columns ...`.
-In the new dialog, you can:
-
-* check/uncheck columns you want to show or hide
-* drag-and-drop items to reorder the columns in the attribute table. Note that
-  this change is for the table rendering and does not alter the fields order in
-  the layer datasource
-* enable a new virtual :guilabel:`Actions` column that displays in each row a
-  drop-down box or button list of actions for each row, see :ref:`actions_menu`
-  for more information about actions.
+.. _resize_columns:
 
 Resizing columns widths
 .......................
@@ -190,11 +181,37 @@ select either:
 
 * :guilabel:`Set width...` to enter the desired value. By default, the current
   value is displayed in the widget
+* :guilabel:`Set all column widths...` to the same value
 * :guilabel:`Autosize` to resize at the best fit the column.
+* :guilabel:`Autosize all columns`
 
-It can also be changed by dragging the boundary on the right of the column
+A column size can also be changed by dragging the boundary on the right of its
 heading. The new size of the column is maintained for the layer, and restored at
 the next opening of the attribute table.
+
+.. _organize_columns:
+
+Hiding and organizing columns and enabling actions
+..................................................
+
+By right-clicking in a column header, you can choose to :guilabel:`Hide column`
+from the attribute table (in "table view" mode).
+For more advanced controls, press the |editTable| :sup:`Organize columns...`
+button from the dialog toolbar or choose :guilabel:`Organize columns...`
+in a column header contextual menu.
+In the new dialog, you can:
+
+* check/uncheck columns you want to show or hide: a hidden column will
+  disappear from every instances of the attribute table dialog until it is
+  actively restored.
+* drag-and-drop items to reorder the columns in the attribute table. Note that
+  this change is for the table rendering and does not alter the fields order in
+  the layer datasource
+* add a new virtual :guilabel:`Actions` column that displays in each row a
+  drop-down box or a button list of enabled actions.
+  See :ref:`actions_menu` for more information about actions.
+
+.. _sort_columns:
 
 Sorting columns
 ...............
@@ -203,8 +220,8 @@ The table can be sorted by any column, by clicking on the column header. A
 small arrow indicates the sort order (downward pointing means descending
 values from the top row down, upward pointing means ascending values from
 the top row down).
-You can also choose to sort the rows with the :guilabel:`sort` option of the
-column header context menu and write an expression, e.g. to sort the row
+You can also choose to sort the rows with the :guilabel:`Sort...` option of the
+column header context menu and write an expression. E.g. to sort the rows
 using multiple columns you can write ``concat(col0, col1)``.
 
 In form view, features identifier can be sorted using the |sort| :guilabel:`Sort
@@ -1284,6 +1301,8 @@ from the external storage system. In that case, more details might appear in the
 .. |editCut| image:: /static/common/mActionEditCut.png
    :width: 1.5em
 .. |editPaste| image:: /static/common/mActionEditPaste.png
+   :width: 1.5em
+.. |editTable| image:: /static/common/mActionEditTable.png
    :width: 1.5em
 .. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
