@@ -400,7 +400,7 @@ and selecting modes.
 
     Attribute table filtered by the filter form
 
-When selecting / filtering features from the attribute table, there is a :guilabel:`Filter features` 
+When selecting / filtering features from the attribute table, there is a :guilabel:`Filter features`
 button that allows defining and refining filters. Its use triggers the
 :guilabel:`Advanced filter (Expression)` option and displays the corresponding
 filter expression in an editable text widget at the bottom of the form.
@@ -850,7 +850,7 @@ Moreover if you toggle the editing mode of the airport layer, the ``fk_region``
 field has also an autocompleter function: while typing you will see all the
 values of the ``id`` field of the region layer.
 Here it is possible to digitize a polygon for the region layer using the |signPlus| button
-if you chose the option ``Allow adding new features`` in the 
+if you chose the option ``Allow adding new features`` in the
 :menuselection:`Properties --> Attributes Form` menu of the airport layer.
 
 The child layer can also be used in the :ref:`select_by_value` tool in
@@ -858,7 +858,7 @@ order to select features of the parent layer based on attributes of their childr
 
 In :numref:`figure_select_by_value`, all the regions where the mean
 altitude of the airports is greater than 500 meters above sea level
-are selected. 
+are selected.
 
 You will find that many different aggregation functions are available in the form.
 
@@ -881,19 +881,19 @@ N-M relations are many-to-many relations between two tables. For instance, the
 companies and an airline company flies to several airports.
 
 This SQL code creates the three tables we need for an N-M relationship in
-a PostgreSQL/PostGIS schema named *locations*. You can run the code using the 
+a PostgreSQL/PostGIS schema named *locations*. You can run the code using the
 :menuselection:`Database --> DB Manager…` for PostGIS or external tools such as `pgAdmin
-<https://www.pgadmin.org>`_. The airports table stores the ``airports`` layer and the airlines 
-table stores the ``airlines`` layer. In both tables few fields are used for 
+<https://www.pgadmin.org>`_. The airports table stores the ``airports`` layer and the airlines
+table stores the ``airlines`` layer. In both tables few fields are used for
 clarity. The *tricky* part is the ``airports_airlines`` table. We need it to list all
-airlines for all airports (or vice versa). This kind of table is known 
-as a *pivot table*. The *constraints* in this table force that an airport can be 
+airlines for all airports (or vice versa). This kind of table is known
+as a *pivot table*. The *constraints* in this table force that an airport can be
 associated with an airline only if both already exist in their layers.
 
 .. code-block:: sql
 
    CREATE SCHEMA locations;
-   
+
    CREATE TABLE locations.airports
    (
       id serial NOT NULL,
@@ -932,13 +932,14 @@ associated with an airline only if both already exist in their layers.
          DEFERRABLE INITIALLY DEFERRED
     );
 
-Instead of PostgreSQL you can also use GeoPackage. In this case, the three tables 
-can be created manually using the :menuselection:`Database --> DB Manager…`. In 
+Instead of PostgreSQL you can also use GeoPackage. In this case, the three tables
+can be created manually using the :menuselection:`Database --> DB Manager…`. In
 GeoPackage there are no schemas so the *locations* prefix is not needed.
 
-Foreign key constraints in ``airports_airlines`` table can´t be created using :menuselection:`Table --> Create Table…` 
-or :menuselection:`Table --> Edit Table…` so they should be created using :menuselection:`Database --> SQL Window…`.
-GeoPackage doesn't support *ADD CONSTRAINT* statements so the ``airports_airlines`` 
+Foreign key constraints in ``airports_airlines`` table can´t be created using
+:menuselection:`Table --> Create Table…` or :menuselection:`Table --> Edit Table…`
+so they should be created using :menuselection:`Database --> SQL Window…`.
+GeoPackage doesn't support *ADD CONSTRAINT* statements so the ``airports_airlines``
 table should be created in two steps:
 
 #. Set up the table only with the ``id`` field using :menuselection:`Table --> Create Table…`
@@ -948,12 +949,12 @@ table should be created in two steps:
 
       ALTER TABLE airports_airlines
          ADD COLUMN airport_fk INTEGER
-         REFERENCES airports (id) 
-         ON DELETE CASCADE 
-         ON UPDATE CASCADE 
+         REFERENCES airports (id)
+         ON DELETE CASCADE
+         ON UPDATE CASCADE
          DEFERRABLE INITIALLY DEFERRED;
-   
-      ALTER TABLE airports_airlines 
+
+      ALTER TABLE airports_airlines
          ADD COLUMN airline_fk INTEGER
          REFERENCES airlines (id)
          ON DELETE CASCADE
@@ -966,9 +967,9 @@ as explained above:
 * a relation between ``airlines`` table and the pivot table;
 * and a second one between ``airports`` table and the pivot table.
 
-An easier way to do it (only for PostgreSQL) is using the :guilabel:`Discover Relations` 
+An easier way to do it (only for PostgreSQL) is using the :guilabel:`Discover Relations`
 in :menuselection:`Project --> Properties --> Relations`. QGIS will automatically read
-all relations in your database and you only have to select the two you need. Remember 
+all relations in your database and you only have to select the two you need. Remember
 to load the three tables in the QGIS project first.
 
 .. _figure_setup_relations:
@@ -980,7 +981,7 @@ to load the three tables in the QGIS project first.
 
 In case you want to remove an ``airport`` or an ``airline``, QGIS won't remove
 the associated record(s) in ``airports_airlines`` table. This task will be made by
-the database if we specify the right *constraints* in the pivot table creation as 
+the database if we specify the right *constraints* in the pivot table creation as
 in the current example.
 
 .. note:: **Combining N-M relation with automatic transaction group**
@@ -989,9 +990,9 @@ in the current example.
   --> Data Sources -->` when working on such context. QGIS should be able to
   add or update row(s) in all tables (airlines, airports and the pivot tables).
 
-Finally we have to select the right cardinalilty in the 
-:menuselection:`Layer Properties --> Attributes Form` for the ``airports`` and 
-``airlines`` layers. For the first one we should choose the **airlines (id)** option 
+Finally we have to select the right cardinality in the
+:menuselection:`Layer Properties --> Attributes Form` for the ``airports`` and
+``airlines`` layers. For the first one we should choose the **airlines (id)** option
 and for the second one the **airports (id)** option.
 
 .. _figure_cardinality:
@@ -1002,8 +1003,8 @@ and for the second one the **airports (id)** option.
    Set relationship cardinality
 
 Now you can associate an airport with an airline (or an airline with an airport)
-using :guilabel:`Add child feature` or :guilabel:`Link existing child feature` 
-in the subforms. A record will automatically be inserted in the ``airports_airlines`` 
+using :guilabel:`Add child feature` or :guilabel:`Link existing child feature`
+in the subforms. A record will automatically be inserted in the ``airports_airlines``
 table.
 
 .. _figure_relationship_working:
@@ -1015,16 +1016,16 @@ table.
 
 .. note:: Using **Many to one relation** cardinality
 
-  Sometimes hiding the pivot table in an N-M relationship is not 
-  desirable. Mainly because there are attributes in the relationship that can only 
+  Sometimes hiding the pivot table in an N-M relationship is not
+  desirable. Mainly because there are attributes in the relationship that can only
   have values when a relationship is established. If your tables are layers (have
-  a geometry field) it could be interesting to activate the :guilabel:`On map identification` 
-  option (:menuselection:`Layer Properties --> Attributes Form --> Available widgets --> Fields`) 
+  a geometry field) it could be interesting to activate the :guilabel:`On map identification`
+  option (:menuselection:`Layer Properties --> Attributes Form --> Available widgets --> Fields`)
   for the foreign key fields in the pivot table.
 
 .. note:: **Pivot table primary key**
 
-  Avoid using multiple fields in the primary key in a pivot table. QGIS assumes a single 
+  Avoid using multiple fields in the primary key in a pivot table. QGIS assumes a single
   primary key so a constraint like ``constraint airports_airlines_pkey primary key (airport_fk, airline_fk)``
   will not work.
 
@@ -1035,24 +1036,24 @@ table.
 Introducing polymorphic relations
 ---------------------------------
 
-Polymorphic relations are special case of 1-N relations, where a single referencing (document) layer contains 
-the features for multiple referenced layers. This differs from normal relations which require different 
-referencing layer for each referenced layer. A single referencing (document) layer is achieved by adding an adiditonal 
-``layer_field`` column in the referencing (document) layer that stores information to identify the referenced layer. In 
-its most simple form, the referencing (document) layer will just insert the layer name of the referenced layer into 
+Polymorphic relations are special case of 1-N relations, where a single referencing (document) layer contains
+the features for multiple referenced layers. This differs from normal relations which require different
+referencing layer for each referenced layer. A single referencing (document) layer is achieved by adding an adiditonal
+``layer_field`` column in the referencing (document) layer that stores information to identify the referenced layer. In
+its most simple form, the referencing (document) layer will just insert the layer name of the referenced layer into
 this field.
 
-To be more precise, a polymorphic relation is a set of normal relations having the same referencing 
-layer but having the referenced layer dynamically defined. The polymorphic setting of the layer is solved by using 
+To be more precise, a polymorphic relation is a set of normal relations having the same referencing
+layer but having the referenced layer dynamically defined. The polymorphic setting of the layer is solved by using
 an expression which has to match some properties of the referenced layer like the table name, layer id, layer name.
 
-Imagine we are going to the park and want to take pictures of different species of ``plants`` and ``animals`` 
-we see there. Each plant or animal has multiple pictures associated with it, so if we use the normal 1:N 
+Imagine we are going to the park and want to take pictures of different species of ``plants`` and ``animals``
+we see there. Each plant or animal has multiple pictures associated with it, so if we use the normal 1:N
 relations to store pictures, we would need two separate tables, ``animal_images`` and ``plant_images``.
 This might not be a problem for 2 tables, but imagine if we want to take separate pictures for mushrooms, birds etc.
 
-Polymorphic relations solve this problem as all the referencing features are stored in the same table ``documents``. 
-For each feature the referenced layer is stored in the ``referenced_layer`` field and the referenced 
+Polymorphic relations solve this problem as all the referencing features are stored in the same table ``documents``.
+For each feature the referenced layer is stored in the ``referenced_layer`` field and the referenced
 feature id in the ``referenced_fk``.
 
 
@@ -1187,12 +1188,12 @@ From the :guilabel:`Attachment` widget, you have to first select the :guilabel:`
 * :guilabel:`Simple Copy`: Stores a copy of the resource on a file disk destination
   (which could be a local or network shared file system) and the attribute is updated with the path to
   the copy.
-  
+
 * :guilabel:`WebDAV Storage`: The resource is pushed to a HTTP server supporting the
   `WebDAV <https://en.wikipedia.org/wiki/WebDAV>`_ protocol and the attribute is updated with
-  its URL. `Nextcloud <https://nextcloud.com/>`_, `Pydio <https://pydio.com/>`_ 
+  its URL. `Nextcloud <https://nextcloud.com/>`_, `Pydio <https://pydio.com/>`_
   or other file hosting software support this protocol.
-  
+
 Then, you have to set up the :guilabel:`Store URL` parameter, which provides the URL to be used when a new
 resource needs to be stored. It's possible to set up an expression using the
 :ref:`data defined override widget <data_defined>` in order to have specific values according to
@@ -1200,7 +1201,7 @@ feature attributes.
 
 The variable **@selected_file_path** could be used in that expression and represent the absolute
 file path of the user selected file (using the file selector or drag'n drop).
-   
+
 .. note::
 
    Using the **WebDAV** external storage, if the URL ends with a "/", it is considered as a folder and
@@ -1209,7 +1210,7 @@ file path of the user selected file (using the file selector or drag'n drop).
 
 If the external storage system needs to, it's possible to configure an
 :ref:`authentication <authentication>`.
- 
+
 .. _external_storage_use:
 
 Using an external storage
