@@ -206,6 +206,13 @@ should be surrounded by ``[%`` and ``%]`` in the :guilabel:`Main properties` fra
     '\n' -- converts the list to string separated by breaklines
    )
 
+* Display the list of layers with their license strings (usage rights) in a layout ``Map 1`` item.
+  You need to fill the layers' :ref:`Access metadata <metadatamenu>` properties first.
+
+  ::
+
+   array_to_string( map_credits( 'Map 1', true ) )
+
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
