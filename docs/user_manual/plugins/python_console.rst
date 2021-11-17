@@ -112,7 +112,7 @@ share the code via codepad.org and much more). Main features are:
   * osgeo-gdal-ogr
 
 * :kbd:`Ctrl+Space` to view the auto-completion list.
-* Sharing code snippets via codepad.org.
+* Sharing code snippets via gist.
 * :kbd:`Ctrl+4` Syntax check.
 * Search bar (open it with the default Desktop Environment shortcut, usually
   :kbd:`Ctrl+F`):
@@ -148,6 +148,18 @@ share the code via codepad.org and much more). Main features are:
    To save the state of console's widgets you have to close the Python
    Console from the close button. This allows you to save the geometry to be
    restored to the next start.
+
+Using Gist
+----------
+
+ To share code snippets via gist you have to generate a personal access token
+ from developer settings on the github profile settings. The generated token
+ must be set in the general console settings.
+
+.. tip:: **Creating a personal access token**
+
+   The documentation on how to create a personal access token can be found
+   `here <https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token>`_.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
