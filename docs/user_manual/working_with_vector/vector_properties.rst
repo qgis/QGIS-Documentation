@@ -2070,8 +2070,10 @@ directly linked to a particular field (like the HTML/QML widgets or the
    The selected field displays its :ref:`properties <configure_field>` in a third
    panel.
 #. Select fields you do not want to use in your :guilabel:`Form Layout`
-   panel and hit the |signMinus| button to remove them. Drag and drop fields
-   from the other panel to re-add them. The same field can be added multiple times.
+   panel and hit the |signMinus| button to remove them. You can also toggle the
+   selection with the |invertSelection| :sup:`Invert selection` button
+#. Drag and drop fields from the first panel to the :guilabel`Form Layout` one
+   to re-add them. The same field can be added multiple times.
 #. Drag and drop fields within the :guilabel:`Form Layout` panel to reorder
    their position.
 #. Add containers (tab or group frames) to associate fields that belong to
@@ -3390,6 +3392,8 @@ To do so:
 .. |indicatorFilter| image:: /static/common/mIndicatorFilter.png
    :width: 1.5em
 .. |invertedSymbol| image:: /static/common/rendererInvertedSymbol.png
+   :width: 1.5em
+.. |invertSelection| image:: /static/common/mActionInvertSelection.png
    :width: 1.5em
 .. |join| image:: /static/common/join.png
    :width: 2em
