@@ -707,9 +707,21 @@ QGIS also supports editable views in SpatiaLite.
 GPS
 ---
 
-Loading GPS data in QGIS can be done using the core plugin ``GPS Tools``.
-Instructions are found in section :ref:`plugin_gps`.
+There are dozens of different file formats for storing GPS data. The format
+that QGIS uses is called GPX (GPS eXchange format), which is a standard
+interchange format that can contain any number of waypoints, routes and tracks
+in the same file.
 
+Use the :guilabel:`...` :sup:`Browse` button to select the GPX file, then use the checkboxes
+to select the feature types you want to load from that GPX file.
+Each feature type will be loaded in a separate layer.
+
+.. _figure_gps_datasource_manager:
+
+.. figure:: img/gps_datasource.png
+   :align: center
+
+   Loading GPS Data dialog
 
 GRASS
 -----
