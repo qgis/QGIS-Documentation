@@ -94,6 +94,7 @@ following functionality:
    "|zoomToSelected|", "Zoom map to the selected rows", "", ":kbd:`Ctrl+J`"
    "|newAttribute|", "New field", "Add a new field to the data source", ":kbd:`Ctrl+W`"
    "|deleteAttribute|", "Delete field", "Remove a field from the data source"
+   "|editTable|", "Organize columns", "Show/hide fields from the attribute table"
    "|calculateField|", "Open field calculator", "Update field for many features in a row", ":kbd:`Ctrl+I`"
    "|conditionalFormatting|", "Conditional formatting", "Enable table formatting"
    "|dock|", "Dock attribute table", "Allows to dock/undock the attribute table"
@@ -118,6 +119,9 @@ QGIS provides two view modes to easily manipulate data in the attribute table:
 
 * The |openTable| :sup:`Table view`, displays values of multiple features in a
   tabular mode, each row representing a feature and each column a field.
+  A right-click on the column header allows you to :ref:`configure the table
+  display <configure_table_columns>` while a right-click on a cell provides
+  :ref:`interaction with the feature <interacting_features_table>`.
 * The |formView| :sup:`Form view` shows :ref:`feature identifiers
   <maptips>` in a first panel and displays only the attributes of the clicked
   identifier in the second one.
@@ -127,12 +131,16 @@ QGIS provides two view modes to easily manipulate data in the attribute table:
   The pull-down also includes the last 10 expressions for re-use.
   Form view uses the layer fields configuration
   (see :ref:`vector_attributes_menu`).
+
   You can browse through the feature identifiers with the arrows on the bottom
-  of the first panel. Once you markered the feature in yellow in the list it
-  is selected in yellow on the canvas. Use the |zoomToSelected| on top of the
-  attribute table to zoom to the feature. Clicking on an entry in the list 
-  (without using the rectangles) makes a feature flash in red color once so you
-  can see where it is situated.
+  of the first panel. The features attributes update in the second panel as you
+  go. It's also possible to identify or move to the active feature in the map
+  canvas with pushing down any of the button at the bottom:
+
+  * |highlightFeature| :sup:`Highlight current feature` if visible in the
+    map canvas
+  * |panTo| :sup:`Automatically pan to current feature`
+  * |zoomTo| :sup:`Zoom to current feature`
 
 You can switch from one mode to the other by clicking the corresponding icon at
 the bottom right of the dialog.
@@ -157,23 +165,13 @@ Configuring the columns
 -----------------------
 
 Right-click in a column header when in table view to have access to tools that
-help you configure what can be displayed in the attribute table and how.
+help you control:
 
-Hiding and organizing columns and enabling actions
-..................................................
+* the :ref:`column(s) size <resize_columns>`
+* the :ref:`column(s) visibility and order <organize_columns>`
+* the :ref:`sort order of the data <sort_columns>`
 
-By right-clicking in a column header, you can choose to hide it from the
-attribute table. To change several columns behavior at once, unhide a column or
-change the order of the columns, choose :guilabel:`Organize columns ...`.
-In the new dialog, you can:
-
-* check/uncheck columns you want to show or hide
-* drag-and-drop items to reorder the columns in the attribute table. Note that
-  this change is for the table rendering and does not alter the fields order in
-  the layer datasource
-* enable a new virtual :guilabel:`Actions` column that displays in each row a
-  drop-down box or button list of actions for each row, see :ref:`actions_menu`
-  for more information about actions.
+.. _resize_columns:
 
 Resizing columns widths
 .......................
@@ -183,11 +181,37 @@ select either:
 
 * :guilabel:`Set width...` to enter the desired value. By default, the current
   value is displayed in the widget
+* :guilabel:`Set all column widths...` to the same value
 * :guilabel:`Autosize` to resize at the best fit the column.
+* :guilabel:`Autosize all columns`
 
-It can also be changed by dragging the boundary on the right of the column
+A column size can also be changed by dragging the boundary on the right of its
 heading. The new size of the column is maintained for the layer, and restored at
 the next opening of the attribute table.
+
+.. _organize_columns:
+
+Hiding and organizing columns and enabling actions
+..................................................
+
+By right-clicking in a column header, you can choose to :guilabel:`Hide column`
+from the attribute table (in "table view" mode).
+For more advanced controls, press the |editTable| :sup:`Organize columns...`
+button from the dialog toolbar or choose :guilabel:`Organize columns...`
+in a column header contextual menu.
+In the new dialog, you can:
+
+* check/uncheck columns you want to show or hide: a hidden column will
+  disappear from every instances of the attribute table dialog until it is
+  actively restored.
+* drag-and-drop items to reorder the columns in the attribute table. Note that
+  this change is for the table rendering and does not alter the fields order in
+  the layer datasource
+* add a new virtual :guilabel:`Actions` column that displays in each row a
+  drop-down box or a button list of enabled actions.
+  See :ref:`actions_menu` for more information about actions.
+
+.. _sort_columns:
 
 Sorting columns
 ...............
@@ -196,8 +220,8 @@ The table can be sorted by any column, by clicking on the column header. A
 small arrow indicates the sort order (downward pointing means descending
 values from the top row down, upward pointing means ascending values from
 the top row down).
-You can also choose to sort the rows with the :guilabel:`sort` option of the
-column header context menu and write an expression, e.g. to sort the row
+You can also choose to sort the rows with the :guilabel:`Sort...` option of the
+column header context menu and write an expression. E.g. to sort the rows
 using multiple columns you can write ``concat(col0, col1)``.
 
 In form view, features identifier can be sorted using the |sort| :guilabel:`Sort
@@ -256,6 +280,7 @@ Adding new rule opens a form to define:
 
 .. index::
    pair: Attributes; Selection
+.. _interacting_features_table:
 
 Interacting with features in an attribute table
 ===============================================
@@ -783,25 +808,26 @@ a table. And there are also some buttons available. Let's review them shortly:
   toggles the edit mode of the airport layer, although we are in the feature
   form of a feature from the region layer. But the table is representing
   features of the airport layer.
-* The |saveEdits| button is for saving all the edits.
-* The |newTableRow| button will add a new record to the airport layer attribute table.
-  And it will assign the new airport to the current region by default.
-* The |capturePoint| is the same as |newTableRow| but lets you digitize the
-  airport geometry in the map canvas beforehand. Note that the icon will change according
-  to geometry type.
-* The |duplicateFeature| button allows you to copy one or more child features.
-* The |deleteSelectedFeatures| button will delete the selected airport
-  permanently.
-* The |link| symbol will open a new dialog where you can select any existing
+* The |saveEdits| button is for saving all the edits in the child layer (airport).
+* The |capturePoint| lets you digitize the airport geometry in the map canvas and
+  assigns the new feature to the current region by default.
+  Note that the icon will change according to the geometry type.
+* The |newTableRow| button adds a new record to the airport layer attribute table
+  and assigns the new feature to the current region by default. The geometry can
+  be drawn later with the :guilabel:`Add part` digitizing tool.
+* The |duplicateFeature| button allows you to copy and paste one or more child
+  features within the child layer. They can later be assigned to a different
+  parent feature or have their attributes modified.
+* The |deleteSelectedFeatures| button deletes the selected airport(s) permanently.
+* The |link| symbol opens a new dialog where you can select any existing
   airport which will then be assigned to the current region. This may be handy
   if you created the airport on the wrong region by accident.
-* The |unlink| symbol will unlink the selected airport from the current region,
+* The |unlink| symbol unlinks the selected airport(s) from the current region,
   leaving them unassigned (the foreign key is set to NULL) effectively.
 * With the |zoomToSelected| button you can zoom the map to the selected child
   features.
-* The two buttons |formView| and |openTable| to the right switch between table
-  view and form view where the later let's you view all the airports in their
-  respective form.
+* The two buttons |formView| and |openTable| to the right switch between the :ref:`table
+  view and form view <attribute_table_view>` of the related child features.
 
 In the above example the referencing layer has geometries (so it isn't just
 an alphanumeric table) so the above steps will create an entry in the layer
@@ -1279,6 +1305,8 @@ from the external storage system. In that case, more details might appear in the
    :width: 1.5em
 .. |editPaste| image:: /static/common/mActionEditPaste.png
    :width: 1.5em
+.. |editTable| image:: /static/common/mActionEditTable.png
+   :width: 1.5em
 .. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
 .. |expressionSelect| image:: /static/common/mIconExpressionSelect.png
@@ -1292,6 +1320,8 @@ from the external storage system. In that case, more details might appear in the
 .. |handleStoreFilterExpressionChecked| image:: /static/common/mActionHandleStoreFilterExpressionChecked.png
    :width: 1.5em
 .. |handleStoreFilterExpressionUnchecked| image:: /static/common/mActionHandleStoreFilterExpressionUnchecked.png
+   :width: 1.5em
+.. |highlightFeature| image:: /static/common/mActionHighlightFeature.png
    :width: 1.5em
 .. |invertSelection| image:: /static/common/mActionInvertSelection.png
    :width: 1.5em
@@ -1316,6 +1346,8 @@ from the external storage system. In that case, more details might appear in the
 .. |openTableSelected| image:: /static/common/mActionOpenTableSelected.png
    :width: 1.5em
 .. |openTableVisible| image:: /static/common/mActionOpenTableVisible.png
+   :width: 1.5em
+.. |panTo| image:: /static/common/mActionPanTo.png
    :width: 1.5em
 .. |panToSelected| image:: /static/common/mActionPanToSelected.png
    :width: 1.5em
@@ -1342,6 +1374,8 @@ from the external storage system. In that case, more details might appear in the
 .. |unlink| image:: /static/common/mActionUnlink.png
    :width: 1.5em
 .. |warning| image:: /static/common/mIconWarning.png
+   :width: 1.5em
+.. |zoomTo| image:: /static/common/mActionZoomTo.png
    :width: 1.5em
 .. |zoomToSelected| image:: /static/common/mActionZoomToSelected.png
    :width: 1.5em

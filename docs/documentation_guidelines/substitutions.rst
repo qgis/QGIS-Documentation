@@ -330,11 +330,12 @@ Icon                                       Substitution                         
 |copySelected|                             ``|copySelected|``                            |editPaste|                ``|editPaste|``
 |expressionSelect|                         ``|expressionSelect|``                        |deleteSelectedFeatures|   ``|deleteSelectedFeatures|``
 |newAttribute|                             ``|newAttribute|``                            |deleteAttribute|          ``|deleteAttribute|``
+|editTable|                                ``|editTable|``
 |newTableRow|                              ``|newTableRow|``                             |calculateField|           ``|calculateField|``
 |refresh|                                  ``|refresh|``                                 |formView|                 ``|formView|``
 |conditionalFormatting|                    ``|conditionalFormatting|``                   |multiEdit|                ``|multiEdit|``
 |dock|                                     ``|dock|``                                    |actionRun|                ``|actionRun|``
-|duplicateFeature|                         ``|duplicateFeature|``
+|duplicateFeature|                         ``|duplicateFeature|``                        |zoomTo|                   ``|zoomTo|``
 |panTo|                                    ``|panTo|``                                   |highlightFeature|         ``|highlightFeature|``
 |handleStoreFilterExpressionChecked|       ``|handleStoreFilterExpressionChecked|``
 |handleStoreFilterExpressionUnchecked|     ``|handleStoreFilterExpressionUnchecked|``
@@ -768,6 +769,8 @@ Icon                            Substitution                        Icon        
 .. |editNodesShape| image:: /static/common/mActionEditNodesShape.png
    :width: 1.5em
 .. |editPaste| image:: /static/common/mActionEditPaste.png
+   :width: 1.5em
+.. |editTable| image:: /static/common/mActionEditTable.png
    :width: 1.5em
 .. |editableEdits| image:: /static/common/mIconEditableEdits.png
    :width: 1em
@@ -1418,6 +1421,8 @@ Icon                            Substitution                        Icon        
 .. |zoomNext| image:: /static/common/mActionZoomNext.png
    :width: 1.5em
 .. |zoomOut| image:: /static/common/mActionZoomOut.png
+   :width: 1.5em
+.. |zoomTo| image:: /static/common/mActionZoomTo.png
    :width: 1.5em
 .. |zoomToLayer| image:: /static/common/mActionZoomToLayer.png
    :width: 1.5em
