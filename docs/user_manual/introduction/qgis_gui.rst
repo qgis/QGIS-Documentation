@@ -2119,7 +2119,8 @@ Click on the map view and you should be able to interact with it:
 * it can be panned, shifting the display to another region of the map:
   this is performed using the |pan| :sup:`Pan Map` tool, the arrow keys,
   moving the mouse while any of the :kbd:`Space` key, the middle mouse
-  button or the mouse wheel is held down. When the mouse is used, the distance and direction of the pan action is shown in the status bar at the bottom.
+  button or the mouse wheel is held down. When the mouse is used, the distance
+  and direction of the pan action are shown in the status bar at the bottom.
 * it can be zoomed in and out, with the dedicated |zoomIn| :sup:`Zoom In`
   and |zoomIn| :sup:`Zoom Out` tools. Hold the :kbd:`Alt` key to switch from
   one tool to the other. Zooming is also performed by rolling
