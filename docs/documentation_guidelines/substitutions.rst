@@ -55,7 +55,6 @@ Icon        Substitution     Icon        Substitution
 ==========  ===============  ==========  ===============
 
 
-
 Menu Items
 ..........
 
@@ -191,6 +190,18 @@ Icon                             Substitution                          Icon     
 |allowIntersections|             ``|allowIntersections|``              |avoidIntersectionsCurrentLayer|  ``|avoidIntersectionsCurrentLayer|``
 |avoidIntersectionsLayers|       ``|avoidIntersectionsLayers|``        |snappingSelf|                    ``|snappingSelf|``
 ===============================  ====================================  ================================  =================================
+
+Mesh
+..................................
+
+================================  ====================================  ================================  ====================================
+Icon                              Substitution                          Icon                              Substitution
+================================  ====================================  ================================  ====================================
+|meshDigitizing|                  ``|meshDigitizing|``                  |meshreindex|                     ``|meshreindex|``
+|meshSelectExpression|            ``|meshSelectExpression|``            |meshSelectPolygon|               ``|meshSelectPolygon|``
+|meshTransformByExpression|       ``|meshTransformByExpression|``       |meshEditForceByVectorLines|      ``|meshEditForceByVectorLines|``
+================================  ====================================  ================================  ====================================
+
 
 
 Map Navigation and attributes
@@ -1023,6 +1034,16 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |mergeFeatures| image:: /static/common/mActionMergeFeatures.png
    :width: 1.5em
+.. |meshDigitizing| image:: /static/common/mActionMeshDigitizing.png
+   :width: 1.5em
+.. |meshEditForceByVectorLines| image:: /static/common/mActionMeshEditForceByVectorLines.png
+   :width: 1.5em
+.. |meshSelectExpression| image:: /static/common/mActionMeshSelectExpression.png
+   :width: 1.5em
+.. |meshSelectPolygon| image:: /static/common/mActionMeshSelectPolygon.png
+   :width: 1.5em
+.. |meshTransformByExpression| image:: /static/common/mActionMeshTransformByExpression.png
+   :width: 1.5em
 .. |meshaveraging| image:: /static/common/meshaveraging.png
    :width: 1.5em
 .. |meshcontours| image:: /static/common/meshcontours.png
@@ -1030,6 +1051,8 @@ Icon                            Substitution                        Icon        
 .. |meshcontoursoff| image:: /static/common/meshcontoursoff.png
    :width: 1.5em
 .. |meshframe| image:: /static/common/meshframe.png
+   :width: 1.5em
+.. |meshreindex| image:: /static/common/mActionMeshReindex.png
    :width: 1.5em
 .. |meshvectors| image:: /static/common/meshvectors.png
    :width: 1.5em
