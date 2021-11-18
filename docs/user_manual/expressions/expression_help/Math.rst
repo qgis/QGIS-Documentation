@@ -107,28 +107,6 @@ Returns the inverse tangent of dy/dx by using the signs of the two arguments to 
 
 .. end_atan2_section
 
-.. _expression_function_Math_azimuth:
-
-azimuth
-.......
-
-Returns the north-based azimuth as the angle in radians measured clockwise from the vertical on point_a to point_b.
-
-.. list-table::
-   :widths: 15 85
-
-   * - Syntax
-     - azimuth(point_a, point_b)
-   * - Arguments
-     - * **point_a** - point geometry
-       * **point_b** - point geometry
-   * - Examples
-     - * ``degrees( azimuth( make_point(25, 45), make_point(75, 100) ) )`` → 42.273689
-       * ``degrees( azimuth( make_point(75, 100), make_point(25,45) ) )`` → 222.273689
-
-
-.. end_azimuth_section
-
 .. _expression_function_Math_ceil:
 
 ceil
@@ -261,30 +239,6 @@ Rounds a number downwards.
 
 
 .. end_floor_section
-
-.. _expression_function_Math_inclination:
-
-inclination
-...........
-
-Returns the inclination measured from the zenith (0) to the nadir (180) on point_a to point_b.
-
-.. list-table::
-   :widths: 15 85
-
-   * - Syntax
-     - inclination(point_a, point_b)
-   * - Arguments
-     - * **point_a** - point geometry
-       * **point_b** - point geometry
-   * - Examples
-     - * ``inclination( make_point( 5, 10, 0 ), make_point( 5, 10, 5 ) )`` → 0.0
-       * ``inclination( make_point( 5, 10, 0 ), make_point( 5, 10, 0 ) )`` → 90.0
-       * ``inclination( make_point( 5, 10, 0 ), make_point( 50, 100, 0 ) )`` → 90.0
-       * ``inclination( make_point( 5, 10, 0 ), make_point( 5, 10, -5 ) )`` → 180.0
-
-
-.. end_inclination_section
 
 .. _expression_function_Math_ln:
 
