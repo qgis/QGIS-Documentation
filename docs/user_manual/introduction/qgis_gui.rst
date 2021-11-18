@@ -1871,6 +1871,10 @@ The :menuselection:`Mesh` menu provides tools needed to manipulate
      -
      -
      -
+   * - |meshreindex| :menuselection:`Reindex Faces and Vertices`
+     -
+     -
+     -
 
 
 Processing
@@ -2972,6 +2976,8 @@ Click the icon to open the Plugin Manager dialog.
 .. |mergeFeatAttributes| image:: /static/common/mActionMergeFeatureAttributes.png
    :width: 1.5em
 .. |mergeFeatures| image:: /static/common/mActionMergeFeatures.png
+   :width: 1.5em
+.. |meshreindex| image:: /static/common/mActionMeshReindex.png
    :width: 1.5em
 .. |messageLog| image:: /static/common/mMessageLog.png
    :width: 1.5em
