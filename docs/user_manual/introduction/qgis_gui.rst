@@ -510,7 +510,7 @@ details).
    * - :menuselection:`-->` |scaleFeature| :guilabel:`Scale Feature(s)`
      -
      - :guilabel:`Advanced Digitizing`
-     -
+     - :ref:`scale_feature`
    * - :menuselection:`-->` |simplifyFeatures| :guilabel:`Simplify Feature`
      -
      - :guilabel:`Advanced Digitizing`
@@ -1178,7 +1178,7 @@ copy or paste layer properties (style, scale, CRS...).
        :guilabel:`Add Vector Tile Layer...`
      -
      -
-     -
+     - :ref:`vector_tiles`
    * - :guilabel:`Embed Layers and Groups...`
      -
      -
