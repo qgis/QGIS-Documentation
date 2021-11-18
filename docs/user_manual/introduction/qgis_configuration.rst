@@ -1154,10 +1154,12 @@ For :guilabel:`APIs` you can specify:
   ``*.pap`` file will be used for code completion. To generate a prepared API
   file you have to load at least one ``*.api`` file and then compile it by
   clicking the :guilabel:`Compile APIs...` button.
-* Under :guilabel:`GitHub access token`, you can generate a personal token
-  allowing you to share code snippets from within the Python code editor.
-  More details on `GitHub authentication
-  <https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token>`_
+
+Under :guilabel:`GitHub access token`, you can generate a personal token
+allowing you to share code snippets from within the Python code editor.
+More details on `GitHub authentication
+<https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token>`_
+
 
 .. _code_editor_options:
 
