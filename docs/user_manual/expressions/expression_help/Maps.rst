@@ -216,6 +216,27 @@ Returns a map with an added key/value. If the key already exists, its value is o
 
 .. end_map_insert_section
 
+.. _expression_function_Maps_map_prefix_keys:
+
+map_prefix_keys
+...............
+
+Returns a map with all keys prefixed by a given string.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - map_prefix_keys(map, prefix)
+   * - Arguments
+     - * **map** - a map
+       * **prefix** - a string
+   * - Examples
+     - * ``map_prefix_keys(map('1','one','2','two'), 'prefix-')`` → { 'prefix-1': 'one', 'prefix-2': 'two' }
+
+
+.. end_map_prefix_keys_section
+
 .. _expression_function_Maps_map_to_hstore:
 
 map_to_hstore
