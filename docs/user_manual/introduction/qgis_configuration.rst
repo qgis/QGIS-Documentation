@@ -1712,8 +1712,9 @@ to find a particular action, select it from the list and click on :
 
 Proceed as above for any other tools you wish to customize. Once you have
 finished your configuration, simply :guilabel:`Close` the dialog to have your changes
-applied. You can also :guilabel:`Save` the changes as an :file:`.XML` file
-and :guilabel:`Load` them into another QGIS installation.
+applied. You can also :guilabel:`Save` the changes either as an :file:`.XML` file
+with only the User Shortcuts or with all Shortcuts or as an :file:`.PDF` file with
+all Shortcuts and :guilabel:`Load` them into another QGIS installation.
 
 .. index:: Command line options
 .. _`label_commandline`:
