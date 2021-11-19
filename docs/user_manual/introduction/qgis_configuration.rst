@@ -1890,9 +1890,10 @@ only the first found file will be used:
 
 * path specified by the commandline parameter
 * path defined by the environment variable
-* the :ref:`AppData location <>`, folder managed by the user or system administrator
-  which is not touched by installer and does not require any additional setup
-  like passing commandline parameters or settings environment variable, i.e.:
+* the AppDataLocation folder, where persistent application data can be stored;
+  it is managed by the user or system administrator and is not touched by installer
+  and does not require any additional setup like passing commandline parameters
+  or settings environment variable. Depending on the OS, it is:
 
   * |nix| :file:`$HOME/.local/share/QGIS/QGIS3/`
   * |win| :file:`C:\\Users\\<username>\\%AppData%\\Roaming\\QGIS\\QGIS3\\`
