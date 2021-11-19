@@ -208,7 +208,7 @@ Icon                            Substitution                        Icon        
 |identify|                      ``|identify|``                      |mapTips|                       ``|mapTips|``
 |showBookmarks|                 ``|showBookmarks|``                 |newBookmark|                   ``|newBookmark|``
 |measure|                       ``|measure|``                       |measureArea|                   ``|measureArea|``
-|measureAngle|                  ``|measureAngle|``
+|measureBearing|                ``|measureBearing|``                  |measureAngle|                  ``|measureAngle|``
 |newMap|                        ``|newMap|``                        |new3DMap|                      ``|new3DMap|``
 |tiltUp|                        ``|tiltUp|``                        |tiltDown|                      ``|tiltDown|``
 |3dNavigation|                  ``|3dNavigation|``                  |play|                          ``|play|``
@@ -1018,6 +1018,8 @@ Icon                            Substitution                        Icon        
 .. |measureAngle| image:: /static/common/mActionMeasureAngle.png
    :width: 1.5em
 .. |measureArea| image:: /static/common/mActionMeasureArea.png
+   :width: 1.5em
+.. |measureBearing| image:: /static/common/mActionMeasureBearing.png
    :width: 1.5em
 .. |mergeFeatAttributes| image:: /static/common/mActionMergeFeatureAttributes.png
    :width: 1.5em
