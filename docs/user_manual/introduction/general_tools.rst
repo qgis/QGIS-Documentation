@@ -1427,12 +1427,12 @@ to use the vector analysis tool: :menuselection:`Vector --> Geometry Tools -->
 Add Geometry Attributes...`. Here, measurement is planimetric, unless
 you choose the ellipsoidal measurement.
 
-Measure length, areas and angles interactively
-..............................................
+Measure length, areas, bearings and angles interactively
+........................................................
 
 Click the |measure| icon in the Attribute toolbar to begin measurements.
 The down arrow near the icon switches between
-|measure| length, |measureArea| area or |measureAngle| angle.
+|measure| length, |measureArea| area, |measureBearing| bearing or |measureAngle| angle.
 The default unit used in the dialog is the one set in :menuselection:`Project -->
 Properties... --> General` menu.
 
@@ -1499,6 +1499,18 @@ different area units ('Square meters', 'Square kilometers', 'Square feet', 'Squa
    :align: center
 
    Measure Area
+
+|measureBearing| :sup:`Measure Bearing`: You can also measure bearings. The
+cursor becomes cross-shaped. Click to draw the first point of the bearing,
+then move the cursor to draw the second point. The measurement
+is displayed in a pop-up dialog.
+
+.. _figure_measure_bearing:
+
+.. figure:: img/measure_bearing.png
+   :align: center
+
+   Measure Bearing
 
 |measureAngle| :sup:`Measure Angle`: You can also measure angles. The
 cursor becomes cross-shaped. Click to draw the first segment of the angle you
@@ -2857,6 +2869,8 @@ The values presented in the varying size assistant above will set the size
 .. |measureAngle| image:: /static/common/mActionMeasureAngle.png
    :width: 1.5em
 .. |measureArea| image:: /static/common/mActionMeasureArea.png
+   :width: 1.5em
+.. |measureBearing| image:: /static/common/mActionMeasureBearing.png
    :width: 1.5em
 .. |messageLog| image:: /static/common/mMessageLog.png
    :width: 1.5em
