@@ -174,7 +174,8 @@ To add fields to the layer you are creating:
 
 #. Enter the :guilabel:`Name` of the field
 #. Select the data :guilabel:`Type`. Supported types are :guilabel:`Text data`,
-   :guilabel:`Whole number` and :guilabel:`Decimal number`.
+   :guilabel:`Whole number`, :guilabel:`Decimal number`, :guilabel:`Date` and
+   :guilabel:`Date time`.
 #. Click on the |newAttribute| :guilabel:`Add to Fields List` button
 #. Reproduce the steps above for each field you need to add
 #. Once you are happy with the attributes, click :guilabel:`OK`.
@@ -187,7 +188,6 @@ the :guilabel:`Geometry column` (``geometry`` by default).
 
 Further management of SpatiaLite layers can be done with :ref:`DB Manager
 <dbmanager>`.
-
 
 
 .. index:: New Mesh layer
