@@ -1253,11 +1253,11 @@ But you can create as many user profiles as you want:
    under :file:`~/<UserProfiles>/` where:
 
    * ``~`` represents the **HOME** directory, which on |win| Windows is usually
-     something like :file:`C:\\Users\\(user)`.
+     something like :file:`C:\\Users\\<username>`.
    * and ``<UserProfiles>`` represents the main profiles folder, i.e.:
 
      * |nix| :file:`.local/share/QGIS/QGIS3/profiles/`
-     * |win| :file:`AppData\\Roaming\\QGIS\\QGIS3\\profiles\\`
+     * |win| :file:`%AppData%\\Roaming\\QGIS\\QGIS3\\profiles\\`
      * |osx| :file:`Library/Application Support/QGIS/QGIS3/profiles/`
 
    The user profile folder can be opened from within QGIS using the
@@ -1881,11 +1881,26 @@ will be used at startup.
 ``--globalsettingsfile``
 ........................
 
+The equivalent environment variable is ``QGIS_GLOBAL_SETTINGS_FILE``.
+
 Using this option, you can specify the path for a Global Settings
 file (``.ini``), also known as the Default Settings. The settings in the specified
 file replace the original inline default ones, but the user profiles'
-settings will be set on top of those. The default global settings is located in
-:file:`your_QGIS_PKG_path/resources/qgis_global_settings.ini`.
+settings will be set on top of those.
+
+QGIS looks for the default global settings file in the following order and
+only the first found file will be used:
+
+* path specified by the commandline parameter
+* path defined by the environment variable
+* the :ref:`AppData location <>`, folder managed by the user or system administrator
+  which is not touched by installer and does not require any additional setup
+  like passing commandline parameters or settings environment variable, i.e.:
+
+  * |nix| :file:`$HOME/.local/share/QGIS/QGIS3/`
+  * |win| :file:`C:\\Users\\<username>\\%AppData%\\Roaming\\QGIS\\QGIS3\\`
+  * |osx| :file:`$HOME/Library/Application Support/QGIS/QGIS3/`
+* the installation directory, i.e. :file:`your_QGIS_package_path/resources/qgis_global_settings.ini`.
 
 Presently, there's no way to specify a file to write settings to; therefore,
 you can create a copy of an original settings file, rename, and adapt it.
@@ -1893,8 +1908,6 @@ you can create a copy of an original settings file, rename, and adapt it.
 Setting the :file:`qgis_global_setting.ini` file path to a network shared
 folder, allows a system administrator to change global settings and defaults in
 several machines by only editing one file.
-
-The equivalent environment variable is ``QGIS_GLOBAL_SETTINGS_FILE``.
 
 ``--authdbdirectory``
 .....................
@@ -2014,7 +2027,7 @@ Deploying QGIS within an organization
 
 If you need to deploy QGIS within an organization with a custom configuration file,
 first you need to copy/paste the content of the default settings file located in
-:file:`your_QGIS_PKG_path/resources/qgis_global_settings.ini`. This file already
+:file:`your_QGIS_package_path/resources/qgis_global_settings.ini`. This file already
 contains some default sections identified by a block starting with ``[]``.
 We recommend that you keep these defaults values and add your own sections at the bottom
 of the file. If a section is duplicated in the file, QGIS will take the last
