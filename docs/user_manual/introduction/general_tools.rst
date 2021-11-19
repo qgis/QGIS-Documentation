@@ -59,7 +59,7 @@ At the top of the Layers panel, a toolbar allows you to:
 
 * |symbology| :sup:`Open the layer styling dock (F7)`: toggle the layer styling
   panel on and off.
-* |addGroup| :sup:`Add new group`: see :ref:`<group_layers_interact>`
+* |addGroup| :sup:`Add new group`: see :ref:`group_layers_interact`
 * |showMapTheme| :sup:`Manage Map Themes`: control visibility of layers and
   arrange them in different map themes.
 * |filterMap| filter layers in the legend tree:
