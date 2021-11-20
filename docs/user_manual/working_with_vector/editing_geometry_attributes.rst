@@ -1685,10 +1685,18 @@ shortcuts available:
 +----------+-------------------+-------------------------------+---------------------------------------+
 | :kbd:`Y` | Set Y coordinate  | Lock Y coordinate             | Toggle relative Y to last vertex      |
 +----------+-------------------+-------------------------------+---------------------------------------+
+| :kbd:`Z` | Set Z coordinate  | Lock Z coordinate             | Toggle relative Z to last vertex      |
++----------+-------------------+-------------------------------+---------------------------------------+
+| :kbd:`M` | Set M value       | Lock M value                  | Toggle relative M to last vertex      |
++----------+-------------------+-------------------------------+---------------------------------------+
 | :kbd:`C` | Toggle construction mode                                                                  |
 +----------+-------------------------------------------------------------------------------------------+
 | :kbd:`P` | Toggle perpendicular and parallel modes                                                   |
 +----------+-------------------------------------------------------------------------------------------+
+
+.. note:: Z coordinate and M value options are available only if
+  compatible with the layer geometry dimension.
+
 
 Absolute reference digitizing
 -----------------------------
@@ -1754,17 +1762,17 @@ text box (or press :kbd:`Shift+A`) to toggle relative angles to the previous
 segment. With that option on, angles are measured between the last segment
 and the mouse pointer.
 
-For coordinates, click the |delta| buttons to the left of the :guilabel:`x` or
-:guilabel:`y` text boxes (or press :kbd:`Shift+X` or :kbd:`Shift+Y`) to
-toggle relative coordinates to the previous vertex. With these options on,
-coordinates measurement will consider the last vertex to be the X and Y axes
-origin.
+For coordinates, click the |delta| buttons to the left of the :guilabel:`x`,
+:guilabel:`y`, :guilabel:`z` or :guilabel:`m` text boxes (or press :kbd:`Shift+<key>`)
+to toggle relative coordinates to the previous vertex. With these options on,
+coordinates measurement will consider the last vertex to be the origin of
+the set coordinates.
 
 Continuous lock
 ---------------
 
-Both in absolute or relative reference digitizing, angle, distance, X and Y
-constraints can be locked continuously by clicking the |lockedRepeat|
+Both in absolute or relative reference digitizing, angle, distance, X, Y, Z
+and M constraints can be locked continuously by clicking the |lockedRepeat|
 :guilabel:`Continuous lock` buttons. Using continuous lock allows you to
 digitize several points or vertexes using the same constraints.
 
@@ -1807,7 +1815,7 @@ You can enable and disable *construction* mode by clicking on the
 |cadConstruction| :sup:`Construction` icon or with the :kbd:`C` keyboard
 shortcut. While in construction mode, clicking the map canvas won't add new
 vertexes, but will capture the clicks' positions so that you can use them as
-reference points to then lock distance, angle or X and Y relative values.
+reference points to then lock distance, angle or X, Y, Z, M relative values.
 
 As an example, the construction mode can be used to draw some point
 at an exact distance from an existing point.
