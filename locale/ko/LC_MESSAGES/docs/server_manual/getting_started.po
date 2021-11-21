@@ -50,6 +50,43 @@ msgstr ""
 "우분투에서는 운영자(admin) 권한이 필요한 명령어 앞에 ``sudo`` 를 추가하면 일반 사용자도 설치할 수 있습니다. 데비안에서는 "
 "``sudo`` 를 추가할 필요없는 운영자(``root``)로 작업하면 됩니다."
 
+#: ../../docs/server_manual/getting_started.rst:24
+msgid ""
+"Requirements and steps to add official QGIS repositories to install QGIS "
+"Server on a Debian based system are provided in `QGIS installers page "
+"<https://qgis.org/en/site/forusers/alldownloads.html>`_. You may want to "
+"install at least the latest Long Term Release."
+msgstr ""
+"데비안 기반 시스템에 QGIS 서버를 설치하기 위해 공식 QGIS 저장소를 추가하기 위한 요구 사항 및 각 단계는 `QGIS 설치관리자 "
+"페이지 <https://qgis.org/en/site/forusers/alldownloads.html>`_ 를 참고하십시오. 적어도 최신"
+" 장기 지원 버전(Long Term Release) 정도는 설치해야 할 겁니다."
+
+#: ../../docs/server_manual/getting_started.rst:28
+msgid ""
+"Once the target version repository is configured and QGIS Server installed, "
+"you can test the installation with:"
+msgstr ""
+"대상 버전의 저장소를 환경설정하고 QGIS 서버를 설치하고 나면, 다음과 같은 방법으로 제대로 설치됐는지 테스트할 수 있습니다:"
+
+#: ../../docs/server_manual/getting_started.rst:35
+msgid "If you get the following output, the server is correctly installed."
+msgstr "다음과 같이 출력됐다면, 서버가 정확히 설치된 것입니다."
+
+#: ../../docs/server_manual/getting_started.rst:37
+msgid ""
+"Depending on the version of QGIS, you might see slightly different output "
+"reported when you run ``qgis_mapserv.fcgi``."
+msgstr "``qgis_mapserv.fcgi`` 를 실행했을 때 QGIS 버전에 따라 살짝 다른 내용이 출력될 수도 있습니다."
+
+#: ../../docs/server_manual/getting_started.rst:55
+msgid ""
+"As seen below, QGIS reports a Status 400 code, which correctly identifies "
+"the request has failed because there is no active http session. This is not "
+"a bug and indicates the server is functioning properly."
+msgstr ""
+"다음 화면에 보이듯이, QGIS가 Status 400 코드를 출력합니다. 이는 활성화된 HTTP 세션이 없기 때문에 요청이 실패했다는 "
+"것을 정확하게 식별한 것입니다. 이 코드는 버그가 아니며, 서버가 제대로 동작하고 있다는 것을 의미합니다."
+
 #: ../../docs/server_manual/getting_started.rst:80
 msgid ""
 "Let's add a sample project. You can use your own, or one from `Training demo"
@@ -73,6 +110,13 @@ msgstr "QGIS 서버를 제대로 실행하려면 HTTP 웹서버가 필요합니�
 #: ../../docs/server_manual/getting_started.rst:102
 msgid "Apache HTTP Server"
 msgstr "아파치 HTTP 서버"
+
+#: ../../docs/server_manual/getting_started.rst:104
+#: ../../docs/server_manual/getting_started.rst:249
+msgid ""
+"In the following, please replace ``qgis.demo`` with the name or IP address "
+"of your server."
+msgstr "다음 예시에서, ``qgis.demo`` 를 사용자 서버의 명칭 또는 IP 주소로 대체해주십시오."
 
 #: ../../docs/server_manual/getting_started.rst:106
 msgid ""
@@ -167,6 +211,28 @@ msgstr ""
 "<https://en.wikipedia.org/wiki/Hosts_%28file%29>`_ 에 ``127.0.0.1 qgis.demo``"
 " 한 줄을 추가하면 됩니다. ``sh -c \"echo '127.0.0.1 qgis.demo' >> /etc/hosts\"`` 명령어로 "
 "처리할 수 있습니다. 이때 ``127.0.0.1`` 을 사용자 서버 IP로 치환하십시오."
+
+#: ../../docs/server_manual/getting_started.rst:226
+msgid ""
+"Remember that both the :file:`qgis.demo.conf` and :file:`/etc/hosts` files "
+"should be configured for your setup to work. You can also test the access to"
+" your QGIS Server from other clients on the network (e.g. Windows or macOS "
+"machines) by going to their :file:`/etc/hosts` file and point the ``myhost``"
+" name to whatever IP the server machine has on the network (not "
+"``127.0.0.1`` as it is the local IP, only accessible from the local "
+"machine).  On ``*nix`` machines the :file:`hosts` file is located in "
+":file:`/etc`, while on Windows it's under the "
+":file:`C:\\\\Windows\\\\System32\\\\drivers\\\\etc` directory. Under Windows"
+" you need to start your text editor with administrator privileges before "
+"opening the hosts file."
+msgstr ""
+":file:`qgis.demo.conf` 와 :file:`/etc/hosts` 두 파일 모두 환경 설정돼 있어야 사용자 설정이 작동한다는"
+" 사실을 기억하십시오. 네트워크 상에 있는 다른 클라이언트(예: 윈도우 또는 맥OS 컴퓨터)에서 사용자의 QGIS 서버에 접근할 수 "
+"있는지 점검하려면 다른 클라이언트의 :file:`/etc/hosts` 파일을 찾아 ``myhost`` 이름을 서버의 네트워크 IP를 "
+"가리키도록 변경하십시오. (``127.0.0.1`` 는 로컬 IP이기 때문에 오직 로컬 컴퓨터에서만 접근할 수 있습니다.) ``*닉스``"
+" 컴퓨터의 :file:`hosts` 파일은 :file:`/etc` 디렉터리에 있으며, 윈도우에서는 "
+":file:`C:\\\\Windows\\\\System32\\\\drivers\\\\etc` 에 있습니다. 윈도우 컴퓨터의 경우 호스트 "
+"파일을 열기 전에 사용자 텍스트 편집기를 관리자 권한으로 실행해야 합니다."
 
 #: ../../docs/server_manual/getting_started.rst:238
 msgid ""
@@ -287,6 +353,11 @@ msgid ""
 "you have to manually start QGIS Server in your terminal:"
 msgstr ""
 "마지막으로, 'spawn-fcgi' 용 기본 서비스 파일이 없다는 점을 고려해서 사용자 터미널에서 QGIS 서버를 직접 시작해야 합니다:"
+
+#: ../../docs/server_manual/getting_started.rst:371
+#: ../../docs/server_manual/getting_started.rst:444
+msgid "QGIS Server is now available at http://qgis.demo/qgisserver."
+msgstr "이제 QGIS 서버가 http://qgis.demo/qgisserver 주소에서 실행되고 있습니다."
 
 #: ../../docs/server_manual/getting_started.rst:375
 msgid ""
