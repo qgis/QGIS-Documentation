@@ -104,6 +104,8 @@ A lot can be accomplished in the Browser panel
   Examples: HTML files, spreadsheets, images, PDFs, text files, ...
 * Copy entries
 * Rename and delete (multiple) layers (context menu: :menuselection:`Manage -->`)
+* Open a file explorer window and directly select the file 
+  :guilabel:`Show in Files`
 
 Resource specific actions are listed for the different resource groups
 sorted under the top-level entries listed below.
