@@ -1,3 +1,6 @@
+.. index:: OrfeoToolbox
+.. _`otb_provider`:
+
 *************************
 OTB applications provider
 *************************
