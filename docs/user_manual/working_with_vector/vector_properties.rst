@@ -639,19 +639,20 @@ both representation are also available in the print layout legend item.
 Rule-based Renderer
 ....................
 
-The |ruleBasedSymbol| :guilabel:`Rule-based` renderer is used to render
-all the features from a layer,
-using rule-based symbols whose aspect reflects the assignment of a selected
-feature's attribute to a class. The rules are based on SQL statements and can
-be nested.
-The dialog allows rule grouping by filter or scale, and you can decide
-if you want to enable symbol levels or use only the first-matched rule.
+Rules are QGIS :ref:`expressions <vector_expressions>` used to discriminate
+features according to their attributes or properties in order to apply specific
+rendering settings to them. Rules can be nested, and features belong to a class
+if they belong to all the upper nesting level(s).
+
+The |ruleBasedSymbol| :guilabel:`Rule-based` renderer is thus designed
+to render all the features from a layer, using symbols whose aspect
+reflects the assignment of a selected feature to a fine-grained class.
 
 To create a rule:
 
 #. Activate an existing row by double-clicking it (by default, QGIS adds a
    symbol without a rule when the rendering mode is enabled) or click the
-   |projectProperties| :sup:`Edit rule` or |signPlus| :sup:`Add rule` button.
+   |symbologyEdit| :sup:`Edit rule` or |signPlus| :sup:`Add rule` button.
 #. In the :guilabel:`Edit Rule` dialog that opens, you can define a label
    to help you identify each rule. This is the label that will be displayed
    in the :guilabel:`Layers Panel` and also in the print composer legend.
@@ -672,16 +673,33 @@ You can create as many rules as necessary following the steps above or copy
 pasting an existing rule. Drag-and-drop the rules on top of each other to nest
 them and refine the upper rule features in subclasses.
 
-Selecting a rule, you can also organize its features in subclasses using the
-:guilabel:`Refine selected rules` drop-down menu. Automated rule refinement can be
-based on:
+.. _refine_selected_rule:
 
-* **scales**;
-* **categories**: applying a :ref:`categorized renderer <categorized_renderer>`;
-* or **ranges**: applying a :ref:`graduated renderer <graduated_renderer>`.
+The rule-based renderer can be combined with categorized or graduated renderers.
+Selecting a rule, you can organize its features in subclasses using the
+:guilabel:`Refine selected rules` drop-down menu. Refined classes appear like
+sub-items of the rule, in a tree hierarchy and like their parent, you can set
+the symbology and the rule of each class.
+Automated rule refinement can be based on:
+
+* **scales**: given a list of scales, this option creates a set of classes
+  to which the different user-defined scale ranges apply. Each new scale-based
+  class can have its own symbology and expression of definition.
+  This can e.g. be a convenient way to display the same features with various
+  symbols at different scales, or display only a set of features depending on
+  the scale (e.g. local airports at large scale vs international airports at
+  small scale).
+* **categories**: applies a :ref:`categorized renderer <categorized_renderer>`
+  to the features falling in the selected rule.
+* or **ranges**: applies a :ref:`graduated renderer <graduated_renderer>`
+  to the features falling in the selected rule.
 
 Refined classes appear like sub-items of the rule, in a tree hierarchy and like
 above, you can set symbology of each class.
+Symbols of the nested rules are stacked on top of each other so be careful in
+choosing them. It is also possible to uncheck |unchecked| :guilabel:`Symbols`
+in the :guilabel:`Edit rule` dialog to avoid rendering a particular symbol
+in the stack.
 
 In the :guilabel:`Edit rule` dialog, you can avoid writing all the rules and
 make use of the |radioButtonOff| :guilabel:`Else` option to catch all the
@@ -702,13 +720,15 @@ Right-clicking over selected item(s) shows a contextual menu to:
 * :guilabel:`Change Size...` of the selected point symbol(s)
 * :guilabel:`Change Angle...` of the selected point symbol(s)
 * :guilabel:`Refine Current Rule`: open a submenu that allows to
-  refine the current rule with **scales**, **categories** (categorized renderer)
-  or **Ranges** (graduated renderer).
+  refine the current rule with **scales**, **categories** or **Ranges**.
+  Same as selecting the :ref:`corresponding menu <refine_selected_rule>`
+  at the bottom of the dialog.
+
+Unchecking a row in the rule-based renderer dialog hides in the map canvas
+the features of the specific rule and the nested ones.
 
 The created rules also appear in a tree hierarchy in the map legend.
-Double-click the rules in the map legend and the Symbology tab of the layer
-properties appears showing the rule that is the background for the symbol in
-the tree.
+Double-click an entry in the map legend to edit the assigned symbol.
 
 The example in :numref:`figure_rule_based_symbology` shows the rule-based rendering
 dialog for the rivers layer of the QGIS sample dataset.
@@ -1346,7 +1366,7 @@ seen beforehand.
 A summary of existing rules is shown in the main dialog (see :numref:`figure_labels_rule_based`).
 You can add multiple rules, reorder or imbricate them with a drag-and-drop.
 You can as well remove them with the |signMinus| button or edit them with
-|projectProperties| button or a double-click.
+|symbologyEdit| button or a double-click.
 
 .. _figure_labels_rule_based:
 
@@ -3455,8 +3475,6 @@ To do so:
    :width: 1.5em
 .. |pointDisplacementSymbol| image:: /static/common/rendererPointDisplacementSymbol.png
    :width: 1.5em
-.. |projectProperties| image:: /static/common/mActionProjectProperties.png
-   :width: 1.5em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
    :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
@@ -3495,6 +3513,8 @@ To do so:
 .. |stackedBar| image:: /static/common/stacked-bar.png
    :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
+   :width: 2em
+.. |symbologyEdit| image:: /static/common/symbologyEdit.png
    :width: 2em
 .. |system| image:: /static/common/system.png
    :width: 1.5em
