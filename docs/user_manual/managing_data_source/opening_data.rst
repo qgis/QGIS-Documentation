@@ -205,10 +205,12 @@ menu will have supporting entries.
 For example, for non-database, non-service-based vector, raster and
 mesh data sources:
 
-* :guilabel:`Delete File "<name of file>"...`
 * :guilabel:`Export Layer` --> :guilabel:`To File...`
 * :guilabel:`Add Layer to Project`
 * :guilabel:`Layer Properties`
+* :guilabel:`Manage` --> :guilabel:`Rename "<name of file>"...` or
+  :guilabel:`Delete "<name of file>"...`
+* :guilabel:`Show in Files`
 * :guilabel:`File Properties`
 
 In the :guilabel:`Layer properties` entry, you will find (similar

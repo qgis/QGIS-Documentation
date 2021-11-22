@@ -102,6 +102,8 @@ A lot can be accomplished in the Browser panel
 * Open files with their default applications
   (:guilabel:`Open <file type> Externally...` in the context menu).
   Examples: HTML files, spreadsheets, images, PDFs, text files, ...
+* Open a file explorer window and directly select the file 
+  :guilabel:`Show in Files`
 * Copy entries 
 
 Resource specific actions are listed for the different resource groups
