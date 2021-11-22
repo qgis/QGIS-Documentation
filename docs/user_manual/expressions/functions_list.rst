@@ -948,7 +948,7 @@ operators, with some special characteristics:
 
     'My feature id is: ' + NULL ==> NULL 
     'My feature id is: ' || NULL => NULL 
-    concat('My feature id is: ', NULL) => My feature's id is 
+    concat('My feature id is: ', NULL) => 'My feature id is: '
 
 further reading: :ref:`expression_function_Operators_concat`,
 :ref:`expression_function_Operators_plus`
