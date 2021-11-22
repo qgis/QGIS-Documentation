@@ -169,7 +169,7 @@ Writing an expression in QGIS follows some rules:
    or *update layer set field = new_value where condition*.
    A QGIS expression also needs all these information but the tool you use
    to open the expression builder dialog provides parts of them.
-   For example, giving a layer (building) with a field (height):
+   For example, giving a layer (``buildings``) with a field (``height``):
 
    * pressing the |expressionSelect|:sup:`Select by expression` tool means that
      you want to "select features from buildings". The **condition** is the
@@ -179,7 +179,8 @@ Writing an expression in QGIS follows some rules:
      button and choosing "height" as :guilabel:`Update existing field`, you already
      provide the command "update buildings set height = ??? where height > 20".
      The only remaining bits you have to provide in this case is the **new value**,
-     e.g. just enter ``50`` to set the height of the previously selected buildings.
+     e.g. just enter ``50`` in the expression editor textbox to set the height
+     of the previously selected buildings.
 
 #. **Pay attention to quotes**: single quotes return a literal, so a
    text placed between single quotes (``'145'``) is interpreted as a string.
@@ -281,10 +282,9 @@ Saving Expressions
 Using the |fileSave| :sup:`Add current expression to user expressions` button
 above the expression editor frame, you can save important expressions you want
 to have quick access to. These are available from the **User expressions** group
-in the middle panel.
-They are saved under the user profile (:file:`<userprofile>/QGIS/QGIS3.ini`
-file) and available in all expression dialogs inside all projects of the
-current user profile.
+in the middle panel. They are saved under the :ref:`user profile <user_profiles>`
+(:file:`<userprofile>/QGIS/QGIS3.ini` file) and available in all expression
+dialogs inside all projects of the current user profile.
 
 A set of tools available above the expression editor frame helps you manage
 the user expressions:
