@@ -427,7 +427,7 @@ the result layer.
 
 .. seealso:: :ref:`qgisdropgeometries`,
    :ref:`qgisremovenullgeometries`,
-   :ref:`qgisdeleteduplicatesbyattribute`
+   :ref:`qgisremoveduplicatesbyattribute`
 
 Parameters
 ..........
@@ -492,7 +492,7 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
-.. _qgisdeleteduplicatesbyattribute:
+.. _qgisremoveduplicatesbyattribute:
 
 Delete duplicates by attribute
 -----------------------------------
@@ -598,7 +598,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``native:deleteduplicatesbyattribute``
+**Algorithm ID**: ``native:removeduplicatesbyattribute``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
