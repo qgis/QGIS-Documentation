@@ -6,7 +6,7 @@
 Statistics of translation
 ===========================
 
-*(last update: 2021-11-16)*
+*(last update: 2021-11-23)*
 
 .. list-table::
    :widths: auto
@@ -82,13 +82,13 @@ Statistics of translation
      - Indonesian
      - 2.8
      - Italian
-     - 89.85
+     - 90.01
    * - Japanese
-     - 62.97
+     - 62.98
      - Kabyle
      - 0.11
      - Korean
-     - 85.59
+     - 85.68
    * - Lao
      - 0.0
      - Lithuanian
