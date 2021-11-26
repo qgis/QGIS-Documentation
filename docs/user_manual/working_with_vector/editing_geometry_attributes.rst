@@ -210,6 +210,8 @@ Please note that the minimum and maximum scales follow the QGIS convention:
 minimum scale is the most "zoomed out" scale while maximum scale is the most "zoomed in".
 A minimum or maximum scale that is set to "0" or "not set" is considered not limiting.
 
+.. _self_snapping:
+
 Self-snapping
 -------------
 
@@ -1641,9 +1643,6 @@ digitizing tools` button to activate the set of tools.
 
 .. note:: The tools are not enabled if the map view is in geographic coordinates.
 
-Concepts
---------
-
 The aim of the Advanced Digitizing tool is to lock coordinates, lengths, and angles
 when moving the mouse during the digitalizing in the map canvas.
 
@@ -1651,22 +1650,31 @@ You can also create constraints with relative or absolute reference. Relative
 reference means that the next vertex constraints' values will be relative to the
 previous vertex or segment.
 
-Snapping Settings
------------------
+The toolbar
+-----------
 
-Click the |settings| button to set the Advanced Digitizing Tool snapping settings.
-You can make the tool snap to common angles. The options are:
+At the top of the :guilabel:`Digitizing panel`, you find the following buttons:
 
-- :guilabel:`Do not snap to common angles`
-- :guilabel:`Snap to 30º angles`
-- :guilabel:`Snap to 45º angles`
-- :guilabel:`Snap to 90º angles`
+* |cad| :sup:`Enable advanced digitizing tools`
+* |cadConstruction| :sup:`Construction mode`: allows to capture the clicks'
+  positions to reuse as reference points to lock distance, angle, X, Y, Z or M
+  relative values. More details at :ref:`construction_mode`.
+* |cadParallel| :sup:`Parallel` to draw a line parallel to an existing one
+  (more at :ref:`parallel_or_perpendicular`)
+* |cadPerpendicular| :sup:`Perpendicular` to draw a line perpendicular to an
+  existing one (more at :ref:`parallel_or_perpendicular`)
+* |settings| :sup:`Snap to common angles`: when moving the cursor,
+  displays a virtual line that you can snap to to add the next vertex.
+  The snapping line is defined by the last added vertex and an (absolute or
+  relative to previous segment) angle from a preset list
+  (following steps of 5°, 10°, 15°, 18°, 22.5°, 30°, 45° or 90°).
+  Choose :guilabel:`Do not snap to common angles` to disable this feature.
+* |floater| :sup:`Floater`: displays a live preview of the coordinates
+  right next to the cursor. The values can be accessed and edited using
+  the :ref:`panel's shortcuts <digitizing_panel_shortcuts>`.
 
-You can also control the snapping to features. The options are:
 
-- :guilabel:`Do not snap to vertices or segments`
-- :guilabel:`Snap according to project configuration`
-- :guilabel:`Snap to all layers`
+.. _digitizing_panel_shortcuts:
 
 Keyboard shortcuts
 ------------------
@@ -1768,6 +1776,7 @@ constraints can be locked continuously by clicking the |lockedRepeat|
 :guilabel:`Continuous lock` buttons. Using continuous lock allows you to
 digitize several points or vertexes using the same constraints.
 
+.. _parallel_or_perpendicular:
 
 Parallel and perpendicular lines
 --------------------------------
@@ -1799,6 +1808,8 @@ the segment you want to use as reference and start drawing your feature:
 
 These two tools just find the right angle of the perpendicular and
 parallel angle and lock this parameter during your editing.
+
+.. _construction_mode:
 
 Construction mode
 -----------------
@@ -1855,12 +1866,6 @@ and angle entered. Repeating the process, several points can be added.
 
    Points at given distance and angle
 
-
-Information Floater
--------------------
-
-As an additional tool, the |floater| :sup:`Floater` can also be activated.
-This allows to display and edit the values in the panel right next to the cursor.
 
 .. index:: Edit in place
 .. _processing_inplace_edit:
