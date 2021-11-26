@@ -605,7 +605,7 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
-.. _qgisdetectdatasetchanges:
+.. _qgisdetectvectorchanges:
 
 Detect dataset changes
 ----------------------
@@ -738,7 +738,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``native:detectdatasetchanges``
+**Algorithm ID**: ``native:detectvectorchanges``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
