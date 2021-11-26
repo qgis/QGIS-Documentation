@@ -1784,22 +1784,27 @@ Parallel and perpendicular lines
 All the tools described above can be combined with the |cadPerpendicular|
 :sup:`Perpendicular` and |cadParallel| :sup:`Parallel` tools. These two tools
 allow drawing segments perfectly perpendicular or parallel to another segment.
+The target segment can be on another layer, another feature within the layer or
+the feature being digitized (requires :ref:`self-snapping option <self_snapping>`).
 
-To draw a *perpendicular* segment, during the editing click the
-|cadPerpendicular| :sup:`Perpendicular` icon (keyboard shortcut :kbd:`P`) to
-activate it. Before drawing the perpendicular line,
-click on the segment of an existing feature that you want to be perpendicular
-to (the line of the existing feature will be colored in light orange); you
-should see a blue dotted line where your feature will be snapped:
+To draw a *perpendicular* segment:
 
-.. figure:: img/advanced_digitizing_perpendicular.png
-   :align: center
+#. First add one of the segment vertices.
+#. Click the |cadPerpendicular| :sup:`Perpendicular` icon
+   (keyboard shortcut :kbd:`P`) to activate it.
+#. Click on the segment that you want to be perpendicular to.
+#. A virtual dotted line perpendicular to the segment through the previous
+   vertex appears. The angle property is locked, constraining the next vertex
+   on that line and, a cross indicates the projected position of the cursor on the line.
+   Click to place the new vertex.
 
-   Perpendicular digitizing
+   .. figure:: img/advanced_digitizing_perpendicular.png
+      :align: center
 
-To draw a *parallel* feature, the steps are the same: click on the
-|cadParallel| :sup:`Parallel` icon (keyboard shortcut :kbd:`P` twice), click on
-the segment you want to use as reference and start drawing your feature:
+      Perpendicular digitizing
+
+To draw a *parallel* segment, the steps are the same except that you need to
+click on the |cadParallel| :sup:`Parallel` icon (keyboard shortcut :kbd:`P` twice).
 
 .. figure:: img/advanced_digitizing_parallel.png
    :align: center
@@ -1808,14 +1813,15 @@ the segment you want to use as reference and start drawing your feature:
 
 These two tools just find the right angle of the perpendicular and
 parallel angle and lock this parameter during your editing.
+Unlock the angle parameter to cancel their use in the middle of the process.
 
 .. _construction_mode:
 
 Construction mode
 -----------------
 
-You can enable and disable *construction* mode by clicking on the
-|cadConstruction| :sup:`Construction` icon or with the :kbd:`C` keyboard
+You can enable and disable *construction mode* by clicking on the
+|cadConstruction| :sup:`Construction mode` icon or with the :kbd:`C` keyboard
 shortcut. While in construction mode, clicking the map canvas won't add new
 vertexes, but will capture the clicks' positions so that you can use them as
 reference points to then lock distance, angle or X and Y relative values.
@@ -1826,7 +1832,7 @@ at an exact distance from an existing point.
 With an existing point in the map canvas and the snapping mode correctly
 activated, you can easily draw other points at given distances and angles from
 it. In addition to the |cad| button, you have to activate also the
-*construction* mode by clicking the |cadConstruction| :sup:`Construction`
+*construction mode* by clicking the |cadConstruction| :sup:`Construction mode`
 icon or with the :kbd:`C` keyboard shortcut.
 
 Click next to the point from which you want to calculate the distance and click
@@ -1844,7 +1850,7 @@ the distance entered.
 
 You can also use the angle constraint to, for example, create another point at
 the same distance of the original one, but at a particular angle from the newly
-added point. Click the |cadConstruction| :sup:`Construction` icon or with the
+added point. Click the |cadConstruction| :sup:`Construction mode` icon or with the
 :kbd:`C` keyboard shortcut to enter construction mode. Click the recently added
 point, and then the other one to set a direction segment. Then, click on the
 :guilabel:`d` text box (:kbd:`D` shortcut) type the desired distance and press
