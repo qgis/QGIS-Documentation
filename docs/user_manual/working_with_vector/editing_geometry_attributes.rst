@@ -1705,51 +1705,68 @@ When drawing a new geometry from scratch, it is very useful to have the
 possibility to start digitizing vertexes at given coordinates.
 
 For example, to add a new feature to a polygonal layer, click the
-|capturePolygon| button. You can choose the X and Y coordinates where you want
-to start editing the feature, then:
+|capturePolygon| button. You can enter the exact coordinates where you want
+to start editing the feature, i.e.:
 
-- Click the :guilabel:`x` text box (or use the :kbd:`X` keyboard shortcut).
-- Type the X coordinate value you want and press :kbd:`Enter` or click the
-  |locked| button to their right to lock the mouse to the X axis on the map
-  canvas.
-- Click the :guilabel:`y` text box (or use the :kbd:`Y` keyboard shortcut).
-- Type the Y coordinate value you want and press :kbd:`Enter` or click the
-  |locked| button to their right to lock the mouse to the Y axis on the map
-  canvas.
+#. Click the :guilabel:`x` text box (or use the :kbd:`X` keyboard shortcut).
+#. Type the X coordinate value you want and press :kbd:`Enter` or click the
+   |locked| button to their right to lock the mouse to the X axis on the map
+   canvas.
+#. Click the :guilabel:`y` text box (or use the :kbd:`Y` keyboard shortcut).
+#. Type the Y coordinate value you want and press :kbd:`Enter` or click the
+   |locked| button to their right to lock the mouse to the Y axis on the map
+   canvas.
+#. If available and relevant, proceed as above to add the Z coordinate and
+   M value (respectively :guilabel:`z` or :guilabel:`m` text box).
 
-Two blue dotted lines and a green cross identify the exact coordinates you
-entered. Start digitizing by clicking on the map canvas; the mouse position is
-locked at the green cross.
+   Two blue dotted lines and a green cross identify the exact coordinates you
+   entered.
+#. Start digitizing by clicking on the map canvas; a vertex is added at
+   the green cross position.
 
-.. figure:: img/advanced_digitizing_coordinates.png
-   :align: center
+   .. figure:: img/advanced_digitizing_coordinates.png
+      :align: center
 
-   Start drawing at given coordinates
+      Start drawing at given coordinates
 
-You can continue digitizing by free hand, adding a new pair of coordinates, or
-you can type the segment's **length** (distance) and **angle**.
+#. You can continue digitizing by free hand, adding a new set of coordinates,
+   or you can type the segment's **length** (distance) and **angle**.
 
-If you want to draw a segment of a given length, click the :guilabel:`d
-(distance)` text box (keyboard shortcut :kbd:`D`), type the distance value (in
-map units) and press :kbd:`Enter` or click the |locked| button on the right to
-lock the mouse in the map canvas to the length of the segment.
-In the map canvas, the clicked point is surrounded by a circle whose radius is
-the value entered in the distance text box.
+#. If you want to draw a segment of a given length:
 
-.. figure:: img/advanced_digitizing_distance.png
-   :align: center
+   #. Click the :guilabel:`d (distance)` text box (keyboard shortcut :kbd:`D`)
+   #. Type the distance value (in map units)
+   #. Press :kbd:`Enter` or click the |locked| button on the right to
+      lock the mouse in the map canvas to the length of the segment.
+      In the map canvas, the latest vertex is surrounded by a circle whose
+      radius is the value entered in the distance text box.
+      A cross on the circle shows the position of the next vertex if you click.
 
-   Fixed length segment
+   .. figure:: img/advanced_digitizing_distance.png
+      :align: center
 
-Finally, you can also choose the angle of the segment. As described before ,
-click the :guilabel:`a (angle)` text box (keyboard shortcut :kbd:`A`), type the
-angle value (in degrees), and press :kbd:`Enter` or click the |locked| buttons
-on the right to lock it. In this way the segment will follow the desired angle:
+      Fixed length segment
 
-.. figure:: img/advanced_digitizing_angle.png
-   :align: center
+#. You can also constrain the vertex position, setting the angle of the segment.
+   As described before:
 
-   Fixed angle segment
+   #. Click the :guilabel:`a (angle)` text box (keyboard shortcut :kbd:`A`)
+   #. Type the angle value (in degrees)
+   #. Press :kbd:`Enter` or click the |locked| button on the right to lock it.
+      A line going through the latest vertex and rotated based on the set angle
+      appears in the map canvas and a cross on it shows the next vertex
+      position if you click.
+
+   .. figure:: img/advanced_digitizing_angle.png
+      :align: center
+
+      Fixed angle segment
+
+.. hint:: Pressing :kbd:`Ctrl+<key>` or :kbd:`Alt+<key>` automatically locks
+ the target property and puts its value into edit. Modify, press :kbd:`Enter`
+ and you are done. Combined with the |floater| :sup:`Toggle floater`,
+ this can be a real time saver, with keyboard digitizing.
+
 
 Relative reference digitizing
 -----------------------------
