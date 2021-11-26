@@ -297,7 +297,7 @@ Returns 1 if the first parameter matches case-insensitive the supplied pattern. 
      - string/number ILIKE pattern
    * - Arguments
      - * **string/number** - string to search
-       * **pattern** - pattern to find, you can use '%' as a wildcard, '_' as a single char and '\\' to escape.
+       * **pattern** - pattern to find, you can use '%' as a wildcard, '_' as a single char and '\\\\' to escape these special characters.
    * - Examples
      - * ``'A' ILIKE 'A'`` → 1
        * ``'A' ILIKE 'a'`` → 1
@@ -312,6 +312,8 @@ Returns 1 if the first parameter matches case-insensitive the supplied pattern. 
        * ``'ABCD' ILIKE '_B%'`` → 1
        * ``'ABCD' ILIKE '%b%'`` → 1
        * ``'ABCD' ILIKE '%B%'`` → 1
+       * ``'ABCD%' ILIKE 'abcd\\%'`` → 1
+       * ``'ABCD' ILIKE '%B\\%'`` → 0
 
 
 .. end_ILIKE_section
@@ -401,7 +403,7 @@ Returns 1 if the first parameter matches the supplied pattern. Works with number
      - string/number LIKE pattern
    * - Arguments
      - * **string/number** - value
-       * **pattern** - pattern to compare value with, you can use '%' as a wildcard, '_' as a single char and '\\' to escape.
+       * **pattern** - pattern to compare value with, you can use '%' as a wildcard, '_' as a single char and '\\\\' to escape these special characters.
    * - Examples
      - * ``'A' LIKE 'A'`` → 1
        * ``'A' LIKE 'a'`` → 0
@@ -411,8 +413,8 @@ Returns 1 if the first parameter matches the supplied pattern. Works with number
        * ``'ABCD' LIKE '_B_'`` → 0
        * ``'ABCD' LIKE '_B%'`` → 1
        * ``'ABCD' LIKE '%B%'`` → 1
-       * ``'1%' LIKE '1\%'`` → 1
-       * ``'1_' LIKE '1\%'`` → 0
+       * ``'1%' LIKE '1\\%'`` → 1
+       * ``'1_' LIKE '1\\%'`` → 0
 
 
 .. end_LIKE_section
