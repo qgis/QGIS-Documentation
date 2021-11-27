@@ -39,7 +39,9 @@ with the following line:
 
 ::
 
-    >>> from qgis import processing
+    >>> from processing.core.Processing import Processing
+    >>> proc = Processing()
+    >>> proc.initialize()
 
 Now, there is basically just one (interesting) thing you can do with
 that from the console: execute an algorithm. That is done using the
