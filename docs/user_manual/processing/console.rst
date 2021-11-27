@@ -39,6 +39,10 @@ with the following line:
 
 ::
 
+    >>> from qgis import processing
+
+And if you are running a custom application, this is the import. Also, need to `initialize()` Processing.
+
     >>> from processing.core.Processing import Processing
     >>> proc = Processing()
     >>> proc.initialize()
