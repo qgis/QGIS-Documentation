@@ -380,3 +380,16 @@ The reason for using SIP instead of the more widely used SWIG is that the
 QGIS code depends on Qt libraries. Python bindings for Qt (PyQt) are
 done using SIP and this allows seamless integration of PyQGIS with
 PyQt.
+
+
+Running Python with clean environment variables
+---------------------------
+
+Go to the location you installed OSGeo4W (default to ``C:\OSGeo4W``) and 
+execute the .bat file in there, ``<OSGeo4W>\OSGeo4W.bat``. This .bat 
+calls other .bat files located in ``<OSGeo4W>\etc\ini`` which cleans up
+you system enviroment variables. For example, your python.exe will be
+``<OSGeo4W>\bin\python.exe``. But running this python still throws error
+when importing qgis.core. Before running python, set the PYTHONPATH to
+
+```SET PYTHONPATH=%OSGEO4W_ROOT%\apps\<qgisversion>\python;%OSGEO4W_ROOT%\apps\<qgisversion>\python\plugins```
