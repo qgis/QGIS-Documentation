@@ -1693,10 +1693,18 @@ shortcuts available:
 +----------+-------------------+-------------------------------+---------------------------------------+
 | :kbd:`Y` | Set Y coordinate  | Lock Y coordinate             | Toggle relative Y to last vertex      |
 +----------+-------------------+-------------------------------+---------------------------------------+
+| :kbd:`Z` | Set Z coordinate  | Lock Z coordinate             | Toggle relative Z to last vertex      |
++----------+-------------------+-------------------------------+---------------------------------------+
+| :kbd:`M` | Set M value       | Lock M value                  | Toggle relative M to last vertex      |
++----------+-------------------+-------------------------------+---------------------------------------+
 | :kbd:`C` | Toggle construction mode                                                                  |
 +----------+-------------------------------------------------------------------------------------------+
 | :kbd:`P` | Toggle perpendicular and parallel modes                                                   |
 +----------+-------------------------------------------------------------------------------------------+
+
+.. note:: Z coordinate and M value options are available only if
+  compatible with the layer geometry dimension.
+
 
 Absolute reference digitizing
 -----------------------------
@@ -1705,51 +1713,68 @@ When drawing a new geometry from scratch, it is very useful to have the
 possibility to start digitizing vertexes at given coordinates.
 
 For example, to add a new feature to a polygonal layer, click the
-|capturePolygon| button. You can choose the X and Y coordinates where you want
-to start editing the feature, then:
+|capturePolygon| button. You can enter the exact coordinates where you want
+to start editing the feature, i.e.:
 
-- Click the :guilabel:`x` text box (or use the :kbd:`X` keyboard shortcut).
-- Type the X coordinate value you want and press :kbd:`Enter` or click the
-  |locked| button to their right to lock the mouse to the X axis on the map
-  canvas.
-- Click the :guilabel:`y` text box (or use the :kbd:`Y` keyboard shortcut).
-- Type the Y coordinate value you want and press :kbd:`Enter` or click the
-  |locked| button to their right to lock the mouse to the Y axis on the map
-  canvas.
+#. Click the :guilabel:`x` text box (or use the :kbd:`X` keyboard shortcut).
+#. Type the X coordinate value you want and press :kbd:`Enter` or click the
+   |locked| button to their right to lock the mouse to the X axis on the map
+   canvas.
+#. Click the :guilabel:`y` text box (or use the :kbd:`Y` keyboard shortcut).
+#. Type the Y coordinate value you want and press :kbd:`Enter` or click the
+   |locked| button to their right to lock the mouse to the Y axis on the map
+   canvas.
+#. If available and relevant, proceed as above to add the Z coordinate and
+   M value (respectively :guilabel:`z` or :guilabel:`m` text box).
 
-Two blue dotted lines and a green cross identify the exact coordinates you
-entered. Start digitizing by clicking on the map canvas; the mouse position is
-locked at the green cross.
+   Two blue dotted lines and a green cross identify the exact coordinates you
+   entered.
+#. Start digitizing by clicking on the map canvas; a vertex is added at
+   the green cross position.
 
-.. figure:: img/advanced_digitizing_coordinates.png
-   :align: center
+   .. figure:: img/advanced_digitizing_coordinates.png
+      :align: center
 
-   Start drawing at given coordinates
+      Start drawing at given coordinates
 
-You can continue digitizing by free hand, adding a new pair of coordinates, or
-you can type the segment's **length** (distance) and **angle**.
+#. You can continue digitizing by free hand, adding a new set of coordinates,
+   or you can type the segment's **length** (distance) and **angle**.
 
-If you want to draw a segment of a given length, click the :guilabel:`d
-(distance)` text box (keyboard shortcut :kbd:`D`), type the distance value (in
-map units) and press :kbd:`Enter` or click the |locked| button on the right to
-lock the mouse in the map canvas to the length of the segment.
-In the map canvas, the clicked point is surrounded by a circle whose radius is
-the value entered in the distance text box.
+#. If you want to draw a segment of a given length:
 
-.. figure:: img/advanced_digitizing_distance.png
-   :align: center
+   #. Click the :guilabel:`d (distance)` text box (keyboard shortcut :kbd:`D`)
+   #. Type the distance value (in map units)
+   #. Press :kbd:`Enter` or click the |locked| button on the right to
+      lock the mouse in the map canvas to the length of the segment.
+      In the map canvas, the latest vertex is surrounded by a circle whose
+      radius is the value entered in the distance text box.
+      A cross on the circle shows the position of the next vertex if you click.
 
-   Fixed length segment
+   .. figure:: img/advanced_digitizing_distance.png
+      :align: center
 
-Finally, you can also choose the angle of the segment. As described before ,
-click the :guilabel:`a (angle)` text box (keyboard shortcut :kbd:`A`), type the
-angle value (in degrees), and press :kbd:`Enter` or click the |locked| buttons
-on the right to lock it. In this way the segment will follow the desired angle:
+      Fixed length segment
 
-.. figure:: img/advanced_digitizing_angle.png
-   :align: center
+#. You can also constrain the vertex position, setting the angle of the segment.
+   As described before:
 
-   Fixed angle segment
+   #. Click the :guilabel:`a (angle)` text box (keyboard shortcut :kbd:`A`)
+   #. Type the angle value (in degrees)
+   #. Press :kbd:`Enter` or click the |locked| button on the right to lock it.
+      A line going through the latest vertex and rotated based on the set angle
+      appears in the map canvas and a cross on it shows the next vertex
+      position if you click.
+
+   .. figure:: img/advanced_digitizing_angle.png
+      :align: center
+
+      Fixed angle segment
+
+.. hint:: Pressing :kbd:`Ctrl+<key>` or :kbd:`Alt+<key>` automatically locks
+ the target property and puts its value into edit. Modify, press :kbd:`Enter`
+ and you are done. Combined with the |floater| :sup:`Toggle floater`,
+ this can be a real time saver, with keyboard digitizing.
+
 
 Relative reference digitizing
 -----------------------------
@@ -1762,17 +1787,17 @@ text box (or press :kbd:`Shift+A`) to toggle relative angles to the previous
 segment. With that option on, angles are measured between the last segment
 and the mouse pointer.
 
-For coordinates, click the |delta| buttons to the left of the :guilabel:`x` or
-:guilabel:`y` text boxes (or press :kbd:`Shift+X` or :kbd:`Shift+Y`) to
-toggle relative coordinates to the previous vertex. With these options on,
-coordinates measurement will consider the last vertex to be the X and Y axes
-origin.
+For coordinates, click the |delta| buttons to the left of the :guilabel:`x`,
+:guilabel:`y`, :guilabel:`z` or :guilabel:`m` text boxes (or press :kbd:`Shift+<key>`)
+to toggle relative coordinates to the previous vertex. With these options on,
+coordinates measurement will consider the last vertex to be the origin of
+the set coordinates.
 
 Continuous lock
 ---------------
 
-Both in absolute or relative reference digitizing, angle, distance, X and Y
-constraints can be locked continuously by clicking the |lockedRepeat|
+Both in absolute or relative reference digitizing, angle, distance, X, Y, Z
+and M constraints can be locked continuously by clicking the |lockedRepeat|
 :guilabel:`Continuous lock` buttons. Using continuous lock allows you to
 digitize several points or vertexes using the same constraints.
 
@@ -1824,7 +1849,7 @@ You can enable and disable *construction mode* by clicking on the
 |cadConstruction| :sup:`Construction mode` icon or with the :kbd:`C` keyboard
 shortcut. While in construction mode, clicking the map canvas won't add new
 vertexes, but will capture the clicks' positions so that you can use them as
-reference points to then lock distance, angle or X and Y relative values.
+reference points to then lock distance, angle or X, Y, Z, M relative values.
 
 As an example, the construction mode can be used to draw some point
 at an exact distance from an existing point.
