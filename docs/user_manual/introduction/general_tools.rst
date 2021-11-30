@@ -51,6 +51,7 @@ manage their visibility. You can show or hide it by pressing :kbd:`Ctrl+1`.
 A layer can be selected and dragged up or down in the
 legend to change the Z-ordering. Z-ordering means that layers listed nearer the
 top of the legend are drawn over layers listed lower down in the legend.
+Also a layer or a group of layers can be dragged across several QGIS instances.
 
 .. note:: The Z-ordering behavior can be overridden by the
    :ref:`Layer Order <layer_order>` panel.
