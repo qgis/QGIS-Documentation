@@ -102,7 +102,8 @@ A lot can be accomplished in the Browser panel
 * Open files with their default applications
   (:guilabel:`Open <file type> Externally...` in the context menu).
   Examples: HTML files, spreadsheets, images, PDFs, text files, ...
-* Copy entries 
+* Copy entries
+* Rename and delete (multiple) layers (context menu: :menuselection:`Manage -->`)
 
 Resource specific actions are listed for the different resource groups
 sorted under the top-level entries listed below.
