@@ -1859,7 +1859,7 @@ combo boxes.
 :guilabel:`Mode` defines from which layers features should be identified:
 
 * **Current layer**: only features from the selected layers are identified.
-  Current layer can also be a group or multiple selected layers. If there is no
+  If a group is selected, features from its visible layers are identified. If there is no
   selection then only the current layer is identified.
 * **Top down, stop at first**: only features from the upper visible layer.
 * **Top down**: all features from the visible layers. The results are shown in
