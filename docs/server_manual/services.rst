@@ -2275,6 +2275,12 @@ To override the templates you can copy the whole tree to another location
 and point ``QGIS_SERVER_API_RESOURCES_DIRECTORY`` to the new location.
 
 
+.. include:: services/wms.rst
+.. include:: services/wfs.rst
+.. include:: services/wmts.rst
+.. include:: services/ogcapif.rst
+
+
 .. _`extra-getmap-parameters`:
 
 Extra parameters supported by all request types
