@@ -210,6 +210,8 @@ Please note that the minimum and maximum scales follow the QGIS convention:
 minimum scale is the most "zoomed out" scale while maximum scale is the most "zoomed in".
 A minimum or maximum scale that is set to "0" or "not set" is considered not limiting.
 
+.. _self_snapping:
+
 Self-snapping
 -------------
 
@@ -1641,9 +1643,6 @@ digitizing tools` button to activate the set of tools.
 
 .. note:: The tools are not enabled if the map view is in geographic coordinates.
 
-Concepts
---------
-
 The aim of the Advanced Digitizing tool is to lock coordinates, lengths, and angles
 when moving the mouse during the digitalizing in the map canvas.
 
@@ -1651,22 +1650,31 @@ You can also create constraints with relative or absolute reference. Relative
 reference means that the next vertex constraints' values will be relative to the
 previous vertex or segment.
 
-Snapping Settings
------------------
+The toolbar
+-----------
 
-Click the |settings| button to set the Advanced Digitizing Tool snapping settings.
-You can make the tool snap to common angles. The options are:
+At the top of the :guilabel:`Digitizing panel`, you find the following buttons:
 
-- :guilabel:`Do not snap to common angles`
-- :guilabel:`Snap to 30º angles`
-- :guilabel:`Snap to 45º angles`
-- :guilabel:`Snap to 90º angles`
+* |cad| :sup:`Enable advanced digitizing tools`
+* |cadConstruction| :sup:`Construction mode`: allows to capture the clicks'
+  positions to reuse as reference points to lock distance, angle, X, Y, Z or M
+  relative values. More details at :ref:`construction_mode`.
+* |cadParallel| :sup:`Parallel` to draw a line parallel to an existing one
+  (more at :ref:`parallel_or_perpendicular`)
+* |cadPerpendicular| :sup:`Perpendicular` to draw a line perpendicular to an
+  existing one (more at :ref:`parallel_or_perpendicular`)
+* |settings| :sup:`Snap to common angles`: when moving the cursor,
+  displays a virtual line that you can snap to to add the next vertex.
+  The snapping line is defined by the last added vertex and an (absolute or
+  relative to previous segment) angle from a preset list
+  (following steps of 5°, 10°, 15°, 18°, 22.5°, 30°, 45° or 90°).
+  Choose :guilabel:`Do not snap to common angles` to disable this feature.
+* |floater| :sup:`Floater`: displays a live preview of the coordinates
+  right next to the cursor. The values can be accessed and edited using
+  the :ref:`panel's shortcuts <digitizing_panel_shortcuts>`.
 
-You can also control the snapping to features. The options are:
 
-- :guilabel:`Do not snap to vertices or segments`
-- :guilabel:`Snap according to project configuration`
-- :guilabel:`Snap to all layers`
+.. _digitizing_panel_shortcuts:
 
 Keyboard shortcuts
 ------------------
@@ -1768,6 +1776,7 @@ constraints can be locked continuously by clicking the |lockedRepeat|
 :guilabel:`Continuous lock` buttons. Using continuous lock allows you to
 digitize several points or vertexes using the same constraints.
 
+.. _parallel_or_perpendicular:
 
 Parallel and perpendicular lines
 --------------------------------
@@ -1775,22 +1784,27 @@ Parallel and perpendicular lines
 All the tools described above can be combined with the |cadPerpendicular|
 :sup:`Perpendicular` and |cadParallel| :sup:`Parallel` tools. These two tools
 allow drawing segments perfectly perpendicular or parallel to another segment.
+The target segment can be on another layer, another feature within the layer or
+the feature being digitized (requires :ref:`self-snapping option <self_snapping>`).
 
-To draw a *perpendicular* segment, during the editing click the
-|cadPerpendicular| :sup:`Perpendicular` icon (keyboard shortcut :kbd:`P`) to
-activate it. Before drawing the perpendicular line,
-click on the segment of an existing feature that you want to be perpendicular
-to (the line of the existing feature will be colored in light orange); you
-should see a blue dotted line where your feature will be snapped:
+To draw a *perpendicular* segment:
 
-.. figure:: img/advanced_digitizing_perpendicular.png
-   :align: center
+#. First add one of the segment vertices.
+#. Click the |cadPerpendicular| :sup:`Perpendicular` icon
+   (keyboard shortcut :kbd:`P`) to activate it.
+#. Click on the segment that you want to be perpendicular to.
+#. A virtual dotted line perpendicular to the segment through the previous
+   vertex appears. The angle property is locked, constraining the next vertex
+   on that line and, a cross indicates the projected position of the cursor on the line.
+   Click to place the new vertex.
 
-   Perpendicular digitizing
+   .. figure:: img/advanced_digitizing_perpendicular.png
+      :align: center
 
-To draw a *parallel* feature, the steps are the same: click on the
-|cadParallel| :sup:`Parallel` icon (keyboard shortcut :kbd:`P` twice), click on
-the segment you want to use as reference and start drawing your feature:
+      Perpendicular digitizing
+
+To draw a *parallel* segment, the steps are the same except that you need to
+click on the |cadParallel| :sup:`Parallel` icon (keyboard shortcut :kbd:`P` twice).
 
 .. figure:: img/advanced_digitizing_parallel.png
    :align: center
@@ -1799,12 +1813,15 @@ the segment you want to use as reference and start drawing your feature:
 
 These two tools just find the right angle of the perpendicular and
 parallel angle and lock this parameter during your editing.
+Unlock the angle parameter to cancel their use in the middle of the process.
+
+.. _construction_mode:
 
 Construction mode
 -----------------
 
-You can enable and disable *construction* mode by clicking on the
-|cadConstruction| :sup:`Construction` icon or with the :kbd:`C` keyboard
+You can enable and disable *construction mode* by clicking on the
+|cadConstruction| :sup:`Construction mode` icon or with the :kbd:`C` keyboard
 shortcut. While in construction mode, clicking the map canvas won't add new
 vertexes, but will capture the clicks' positions so that you can use them as
 reference points to then lock distance, angle or X and Y relative values.
@@ -1815,7 +1832,7 @@ at an exact distance from an existing point.
 With an existing point in the map canvas and the snapping mode correctly
 activated, you can easily draw other points at given distances and angles from
 it. In addition to the |cad| button, you have to activate also the
-*construction* mode by clicking the |cadConstruction| :sup:`Construction`
+*construction mode* by clicking the |cadConstruction| :sup:`Construction mode`
 icon or with the :kbd:`C` keyboard shortcut.
 
 Click next to the point from which you want to calculate the distance and click
@@ -1833,7 +1850,7 @@ the distance entered.
 
 You can also use the angle constraint to, for example, create another point at
 the same distance of the original one, but at a particular angle from the newly
-added point. Click the |cadConstruction| :sup:`Construction` icon or with the
+added point. Click the |cadConstruction| :sup:`Construction mode` icon or with the
 :kbd:`C` keyboard shortcut to enter construction mode. Click the recently added
 point, and then the other one to set a direction segment. Then, click on the
 :guilabel:`d` text box (:kbd:`D` shortcut) type the desired distance and press
@@ -1855,12 +1872,6 @@ and angle entered. Repeating the process, several points can be added.
 
    Points at given distance and angle
 
-
-Information Floater
--------------------
-
-As an additional tool, the |floater| :sup:`Floater` can also be activated.
-This allows to display and edit the values in the panel right next to the cursor.
 
 .. index:: Edit in place
 .. _processing_inplace_edit:
