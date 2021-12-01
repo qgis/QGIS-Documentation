@@ -413,14 +413,14 @@ symbol layer types:
   <color-ramp>` to fill polygons. The gradient can be rotated and applied on
   a single feature basis or across the whole map extent. Also start and end
   points can be set via coordinates or using the centroid (of feature or map).
-  A data-defined offset can be defined;
+  A data-defined offset can be defined.
 * **Line pattern fill**: fills the polygon with a hatching pattern of
   :ref:`line symbol layer <vector_line_symbols>`. You can set a rotation, the
-  spacing between lines and an offset from the feature boundary;
+  spacing between lines and an offset from the feature boundary.
 * **Point pattern fill**: fills the polygon with a hatching pattern of 
   :ref:`marker symbol layer <vector_marker_symbols>`. You can set the distance
-  and a displacement between rows of markers, and an offset from the
-  feature boundary; 
+  and a displacement between rows of markers, an offset from the
+  feature boundary and the angle of the pattern.
 * **Random marker fill**: fills the polygon with a :ref:`marker symbol 
   <vector_marker_symbols>` placed at random locations within the polygon
   boundary. You can set:
@@ -441,12 +441,12 @@ symbol layer types:
   or viewport), rotation and offset. The image width can be set using any of the
   :ref:`common units <unit_selector>` or as a percentage of the original size.
 * **SVG fill**: fills the polygon using :ref:`SVG markers <svg_marker>`
-  of a given size (:guilabel:`Texture width`);
+  of a given size (:guilabel:`Texture width`).
 * **Shapeburst fill**: buffers a gradient fill, where a gradient
   is drawn from the boundary of a polygon towards the polygon's centre.
   Configurable parameters include distance from the boundary to shade, use of
   color ramps or simple two color gradients, optional blurring of the fill and
-  offsets;
+  offsets.
 * **Outline: Arrow**: uses a line :ref:`arrow symbol <arrow_symbol>` layer to
   represent the polygon boundary. The settings for the outline arrow are the same
   as for arrow line symbols.
