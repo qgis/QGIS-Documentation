@@ -567,7 +567,8 @@ Models saved using this method won't be written as :file:`.model3` files
 on the disk but will be embedded in the project file.
 
 Project models are available in the
-|qgsProjectFile|:guilabel:`Project models` menu of the toolbox.
+|qgsProjectFile|:guilabel:`Project models` menu of the toolbox and in
+the :menuselection:`Project --> Models` menu item.
 
 The models folder can be set from the Processing configuration dialog,
 under the :guilabel:`Modeler` group.
