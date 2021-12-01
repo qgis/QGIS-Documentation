@@ -547,6 +547,8 @@ Some other convenient options can be used for data recognition:
 * |checkbox|:guilabel:`Trim fields`: allows you to trim leading and trailing
   spaces from fields.
 * |checkbox|:guilabel:`Discard empty fields`.
+* :guilabel:`Custom boolean literals`: allows you to add a custom couple of
+  string representations for True/False.
 
 As you set the parser properties, a sample data preview updates at the bottom
 of the dialog.
@@ -592,6 +594,15 @@ and behaves like any other map layer in QGIS.
 This layer is the result of a query on the :file:`.csv` source file
 (hence, linked to it) and would require
 :ref:`to be saved <general_saveas>` in order to get a spatial layer on disk.
+
+Sample Data
+...........
+
+As you set the parser properties, the sample data preview updates regarding to
+the applied settings.
+
+Also in the Sample Data Table it is possible to override the automatically
+determined column types.
 
 
 .. _import_dxfdwg:

@@ -184,8 +184,10 @@ First check that the file meets the following requirements:
 #. The X and Y coordinates fields (if geometry is defined by 
    coordinates) must be specified as numbers.
    The coordinate system is not important.
-#. If you have a CSV file with non-string columns, you must have an
-   accompanying CSVT file (see section :ref:`csvt_files`).
+#. If you have a CSV file with non-string columns, you can have an
+   accompanying CSVT file (see section :ref:`csvt_files`), use the
+   automatic field type detection or select the field types yourself
+   in the sample data table.
 
 The elevation point data file :file:`elevp.csv` in the QGIS sample
 dataset (see section :ref:`label_sampledata`) is an example of a
@@ -254,10 +256,16 @@ different columns:
     :header: "Type", "Name", "Example"
 
     "Whole number", "Integer", 4
+    "Boolean", "Integer(Boolean)", true
     "Decimal number", "Real", 3.456
     "Date", "Date (YYYY-MM-DD)", 2016-07-28
     "Time", "Time (HH:MM:SS+nn)", 18:33:12+00
     "Date & Time", "DateTime (YYYY-MM-DD HH:MM:SS+nn)", 2016-07-28 18:33:12+00
+    "CoordX", "CoordX", 8.8249
+    "CoordY", "CoordY", 47.2274
+    "Point(X)", "Point(X)", 8.8249
+    "Point(Y)", "Point(Y)", 47.2274
+    "WKT", "WKT", POINT(15 20)
 
 The CSVT file is a **ONE line** plain text file with the data types in
 quotes and separated by commas, e.g.::
@@ -273,6 +281,14 @@ the same name, but :file:`.csvt` as the extension.
 
 *You can find more information at*
 `GDAL CSV Driver <https://gdal.org/drivers/vector/csv.html>`_.
+
+.. _tip_detect_field_types:
+
+.. tip:: **Detect Field Types**
+
+   Instead of using a CSVT file to tell the data types, QGIS provides the
+   possibility to automatically detect the field types and to change the
+   assumed field types.
 
 
 .. index:: PostGIS, PostgreSQL
