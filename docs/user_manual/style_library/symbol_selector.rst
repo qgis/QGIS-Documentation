@@ -371,6 +371,37 @@ layer types:
 
      Examples of hashed lines
 
+.. _raster_line_symbol:
+
+* **Raster line**: renders and repeats a raster image following the length 
+  of a line feature shape. The :guilabel:`Stroke width`, :guilabel:`Offset`,
+  :guilabel:`Join style`, :guilabel:`Cap style` and :guilabel:`Opacity`
+  can be adjusted.
+
+  .. _figure_raster_line_symbol:
+
+  .. figure:: img/rasterLineSymbol.png
+     :align: center
+     :width: 100%
+
+     Examples of raster lines
+
+.. _lineburst_symbol:
+
+* **Lineburst**: renders a gradient along the width of a line.
+  You can choose between :guilabel:`Two color` or :guilabel:`Color ramp` and
+  the :guilabel:`Stroke width`, :guilabel:`Offset`,
+  :guilabel:`Join style`, :guilabel:`Cap style` and :guilabel:`Opacity`
+  can be adjusted.
+
+  .. _figure_lineburst_symbol:
+
+  .. figure:: img/lineburstSymbol.png
+     :align: center
+     :width: 100%
+
+     Examples of lineburst lines
+
 
 .. _vector_fill_symbols:
 
