@@ -205,6 +205,10 @@ The :menuselection:`Project` menu provides access and exit points for
      -
      -
      - :ref:`label_printlayout`
+   * - :menuselection:`Models -->`
+     -
+     -
+     - :ref:`processing.modeler`
    * - |fileExit| :guilabel:`Exit QGIS`
      - :kbd:`Ctrl+Q`
      -
