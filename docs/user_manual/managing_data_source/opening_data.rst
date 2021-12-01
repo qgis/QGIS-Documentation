@@ -375,12 +375,12 @@ To load a layer from a file:
    in the pull-down menu).
 #. Press :guilabel:`Open` to load the selected file into :guilabel:`Data
    Source Manager` dialog
-   
+
    .. _figure_vector_layer_open_options:
-   
+
    .. figure:: img/openoptionsvectorlayer.png
       :align: center
-      
+
       Loading a Shapefile with open options
 
 #. Press :guilabel:`Add` to load the file in QGIS and display them in the map view.
@@ -392,7 +392,7 @@ To load a layer from a file:
       :align: center
 
       QGIS with Shapefile of Alaska loaded
-      
+
 .. note::
 
  For loading vector files the GDAL driver offers to define open actions. These will
@@ -526,6 +526,31 @@ You can specify a delimiter by choosing between:
 * |radioButtonOff|:guilabel:`Custom delimiters`, choosing among some predefined
   delimiters like ``comma``, ``space``, ``tab``, ``semicolon``, ... .
 
+
+Field type detection
+....................
+
+QGIS tries to detect the field types automatically (unless
+|checkbox|:guilabel:`Detect field types` is not checked) by examining
+the content of an optional sidecar CSVT file (see:
+`GeoCSV specification <https://giswiki.hsr.ch/GeoCSV#CSVT_file_format_specification>`_)
+and by scanning the whole file to make sure that all values can actually
+be converted without errors, the fall-back field type is text.
+
+The detected field type appears under the field name in sample data preview table
+and can be manually changed if necessary.
+
+The following field types are supported:
+
+* `Boolean` case-insensitive literal couples that are interpreted as boolean values are `1`/`0`, `true`/`false`, `t`/`f`, `yes`/`no`
+* `Whole Number (integer)`
+* `Whole Number (integer - 64 bit)`
+* `Decimal Number`: double precision floating point number
+* `Date`
+* `Time`
+* `Date and Time`
+* `Text`
+
 Records and fields
 ..................
 
@@ -544,6 +569,7 @@ Some other convenient options can be used for data recognition:
 * |checkbox|:guilabel:`Trim fields`: allows you to trim leading and trailing
   spaces from fields.
 * |checkbox|:guilabel:`Discard empty fields`.
+* :guilabel:`Custom boolean literals`: a user defined couple of literals that will be detected as boolean values can be specified here.
 
 As you set the parser properties, a sample data preview updates at the bottom
 of the dialog.
@@ -1249,7 +1275,7 @@ MapTiler planet Vector Tiles service configuration.
 
 .. figure:: img/vector_tiles_maptilerplanet.png
    :align: center
-   
+
    Vector Tiles - Maptiler Planet configuration
 
 Configurations can be saved to :file:`.XML` file (:guilabel:`Save Connections`)
