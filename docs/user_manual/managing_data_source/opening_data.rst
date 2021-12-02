@@ -208,7 +208,7 @@ mesh data sources:
 * :guilabel:`Export Layer` --> :guilabel:`To File...`
 * :guilabel:`Add Layer to Project`
 * :guilabel:`Layer Properties`
-* :guilabel:`Manage` --> :guilabel:`Rename "<name of file>"...` or
+* :menuselection:`Manage --> Rename "<name of file>"...` or
   :guilabel:`Delete "<name of file>"...`
 * :guilabel:`Show in Files`
 * :guilabel:`File Properties`
