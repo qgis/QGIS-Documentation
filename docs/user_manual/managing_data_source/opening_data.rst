@@ -1312,8 +1312,8 @@ The XML file for OpenStreetMap looks like this:
   <!DOCTYPE connections>
   <qgsXYZTilesConnections version="1.0">
     <xyztiles url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
-     zmin="0" zmax="19" password="" name="OpenStreetMap" username=""
-     authcfg="" referer=""/>
+     zmin="0" zmax="19" tilePixelRatio="0" password="" name="OpenStreetMap" 
+     username="" authcfg="" referer=""/>
   </qgsXYZTilesConnections>
 
 Once a connection to a XYZ tile service is set, it's possible to:
