@@ -205,7 +205,7 @@ menu will have supporting entries.
 For example, for non-database, non-service-based vector, raster and
 mesh data sources:
 
-* :guilabel:`Export Layer` --> :guilabel:`To File...`
+* :menuselection:`Export Layer --> To File...`
 * :guilabel:`Add Layer to Project`
 * :guilabel:`Layer Properties`
 * :menuselection:`Manage --> Rename "<name of file>"...` or
