@@ -717,7 +717,7 @@ or an expression to set:
   * the text :guilabel:`Vertical`: it can be **Bottom**, **Base**, **Half**,
     **Cap** or **Top**
 * the text :guilabel:`Rotation`. Different units can be defined for the
-  labelling rotation (e.g. ``deegres``, ``minutes of arc``, ``turns``).
+  labeling rotation (e.g. ``degrees``, ``minutes of arc``, ``turns``).
   Check the :guilabel:`Preserve data rotation values` entry if you want to keep
   the rotation value in the associated field and apply it to the label, whether
   the label is pinned or not. If unchecked, unpinning the label rotation is
