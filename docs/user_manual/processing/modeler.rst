@@ -493,9 +493,9 @@ allowing you to change the order of the inputs:
 
 Comments can also be added to inputs or algorithms present in the modeler.
 This can be done by going in the :guilabel:`Comment` tab of the item or with
-a right-click.
-Comments are visible only in the modeler canvas and not in the
-final algorithm dialog; they can be hidden by deactivating
+a right-click. In the same tab a color can be set manual for individual
+model comments. Comments are visible only in the modeler canvas and not
+in the final algorithm dialog; they can be hidden by deactivating
 :menuselection:`View --> Show Comments`.
 
 You can run your algorithm any time by clicking on the |start| :sup:`Run model` button.
