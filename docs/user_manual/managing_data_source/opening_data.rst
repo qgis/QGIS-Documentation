@@ -1344,12 +1344,68 @@ Examples of XYZ Tile services:
   :guilabel:`Min. Zoom Level`: 0, :guilabel:`Max. Zoom Level`: 19.
 
 
+.. index:: ArcGIS REST Servers
+.. _arcgis_rest:
+
+Using ArcGIS REST Servers
+-------------------------
+
+ArcGIS REST Servers can be added via the
+|addAfsLayer| :guilabel:`ArcGIS REST Server` tab of the 
+:guilabel:`Data Source Manager` dialog or the contextual menu of the
+:guilabel:`ArcGIS REST Servers` entry in the :guilabel:`Browser` panel.
+Press :guilabel:`New` (respectively :guilabel:`New Connection`) and provide:
+
+* a :guilabel:`Name`
+* the :guilabel:`URL`
+* a :guilabel:`Community endpoint URL`
+* a :guilabel:`Content endpoint URL`
+* the :ref:`authentication <authentication_index>` configuration if necessary
+* a :guilabel:`Referer`
+
+Configurations can be saved to :file:`.XML` file (:guilabel:`Save Connections`)
+through the :guilabel:`ArcGIS REST Server` entry in
+:guilabel:`Data Source Manager` dialog. Likewise, they can be added from
+a file (:guilabel:`Load Connections`).
+
+Once a connection to a ArcGIS REST Server is set, it's possible to:
+
+* :guilabel:`Edit` the ArcGIS REST Server connection settings
+* :guilabel:`Remove` the connection
+* :guilabel:`Refresh` the connection
+* use a filter for the available layers
+* choose from a list of available layers with the option to
+  |checkbox|:guilabel:`Only request features overlapping the current view extent`
+
+* From the :guilabel:`Browser` panel, right-click over the connection entry
+  and you can:
+
+  * :guilabel:`Refresh`
+  * :guilabel:`Edit connection...`
+  * :guilabel:`Delete connection...`
+  * :guilabel:`View Service Info` which will open the default webbrowser
+    and display the Service Info.
+
+* Right-click over the layer entry and you can also:
+
+  * :guilabel:`View Service Info` which will open the default webbrowser
+    and display the Service Info.
+  * :menuselection:`Export layer... --> To File`
+  * :guilabel:`Add layer to project`: a double-click also adds the layer
+  * View the :guilabel:`Layer Properties...` and get access to metadata and
+    a preview of the data provided by the service.
+    More settings are available when the layer has been loaded into the
+    project.
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |addAfsLayer| image:: /static/common/mActionAddAfsLayer.png
+   :width: 1.5em
 .. |addDelimitedTextLayer| image:: /static/common/mActionAddDelimitedTextLayer.png
    :width: 1.5em
 .. |addHanaLayer| image:: /static/common/mActionAddHanaLayer.png
