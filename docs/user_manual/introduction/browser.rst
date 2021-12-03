@@ -305,17 +305,21 @@ Tiles and Web Services
 |               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+------------+
 |               | :guilabel:`Load Connections…`                | |checkbox| | |checkbox|        | |checkbox| | |checkbox| | |checkbox|     | |checkbox|  | |checkbox| |
 +---------------+----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+------------+
-| Connection    | :guilabel:`Refresh` connection               | |checkbox| |                   | |checkbox| | |checkbox| | |checkbox|     |             | |checkbox| |
+| Connection    | :guilabel:`Refresh` connection               | |checkbox| |                   | |checkbox| | |checkbox| | |checkbox|     | |checkbox|  | |checkbox| |
 |               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+------------+
-|               | :guilabel:`Edit…` connection settings        | |checkbox| | |checkbox|        | |checkbox| | |checkbox| | |checkbox|     |             | |checkbox| |
+|               | :guilabel:`Edit…` connection settings        | |checkbox| | |checkbox|        | |checkbox| | |checkbox| | |checkbox|     | |checkbox|  | |checkbox| |
 |               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+------------+
-|               | :guilabel:`Delete` connection                | |checkbox| | |checkbox|        | |checkbox| | |checkbox| | |checkbox|     |             | |checkbox| |
+|               | :guilabel:`Delete` connection                | |checkbox| | |checkbox|        | |checkbox| | |checkbox| | |checkbox|     | |checkbox|  | |checkbox| |
+|               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+------------+
+|               | :guilabel:`View Service Info` in Webbrowser  |            |                   |            |            |                | |checkbox|  |            |
 +---------------+----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+------------+
-| Table / Layer | :menuselection:`Export Layer --> To File...` | |checkbox| |                   | |checkbox| | |checkbox| | |checkbox|     |             | |checkbox| |
+| Table / Layer | :menuselection:`Export Layer --> To File...` | |checkbox| |                   | |checkbox| | |checkbox| | |checkbox|     | |checkbox|  | |checkbox| |
 |               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+------------+
-|               | :guilabel:`Add layer to Project`             | |checkbox| | |checkbox|        | |checkbox| | |checkbox| | |checkbox|     |             | |checkbox| |
+|               | :guilabel:`Add layer to Project`             | |checkbox| | |checkbox|        | |checkbox| | |checkbox| | |checkbox|     | |checkbox|  | |checkbox| |
 |               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+------------+
-|               | Open :guilabel:`Layer properties…` dialog    | |checkbox| | |checkbox|        | |checkbox| | |checkbox| | |checkbox|     |             | |checkbox| |
+|               | Open :guilabel:`Layer properties…` dialog    | |checkbox| | |checkbox|        | |checkbox| | |checkbox| | |checkbox|     | |checkbox|  | |checkbox| |
+|               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+------------+
+|               | :guilabel:`View Service Info` in Webbrowser  |            |                   |            |            |                | |checkbox|  |            |
 +---------------+----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+------------+
 
 
