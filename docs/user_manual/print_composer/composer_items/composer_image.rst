@@ -26,8 +26,9 @@ The Picture Item
 ----------------
 
 You can add a picture by dragging it from your file manager onto the
-canvas, or by using the |addImage| :sup:`Add Picture`, following
-:ref:`items creation instructions <create_layout_item>`.
+canvas, pasting it directly into the layout by using :kbd:`Ctrl+V` or
+:menuselection:`Edit --> Paste` and by using the |addImage| :sup:`Add Picture`,
+following :ref:`items creation instructions <create_layout_item>`.
 Then you can manipulate it, as explained in
 :ref:`interact_layout_item`.
 
