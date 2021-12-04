@@ -1986,19 +1986,29 @@ If set in the underlying data source or in the :ref:`forms properties
 readable field name you can use in the feature form or the attribute table.
 Aliases are saved in the project file.
 
+Other than the fields contained in the dataset, :ref:`virtual fields <virtual_field>`
+and :ref:`Auxiliary Storage <vector_auxiliary_storage>` included, the
+:guilabel:`Fields` tab also lists fields from any :ref:`joined layers <sec_joins>`.
+Depending on the origin of the field, a different background color is applied to it.
+
+For each listed field, the dialog also lists read-only characteristics such as
+its :guilabel:`Type`, :guilabel:`Type name`, :guilabel:`Length` and
+:guilabel:`Precision``.
+
 Depending on the data provider, you can associate a comment with a field, for
 example at its creation. This information is retrieved and shown in the
 :guilabel:`Comment` column and is later displayed when hovering over the
 field label in a feature form.
 
-Other than the fields contained in the dataset, virtual fields and
-:ref:`Auxiliary Storage <vector_auxiliary_storage>` included, the
-:guilabel:`Fields` tab also lists fields from any :ref:`joined layers <sec_joins>`.
-Depending on the origin of the field, a different background color is applied to it.
+Under the :guilabel:`Configuration` column, you can set how the field should
+behave in certain circumstances:
 
-For each listed field, the dialog also lists read-only characteristics such as
-its ``type``, ``type name``, ``length`` and ``precision``. When serving the
-layer as ``WMS`` or ``WFS``, you can also check here which fields could be retrieved.
+* ``Not searchable``: check this option if you do not want this field to be
+  queried by the :ref:`search locator bar <locator_bar>`
+* ``Do not expose via WMS``: check this option if you do not want to display
+  this field if the layer is served as WMS from QGIS server
+* ``Do not expose via WFS``: check this option if you do not want to display
+  this field if the layer is served as WFS from QGIS server
 
 .. _figure_fields_tab:
 
