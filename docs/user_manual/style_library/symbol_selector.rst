@@ -325,23 +325,25 @@ layer types:
   this type of layer symbol helps you representing flow maps.
 * **Geometry generator** (see :ref:`geometry_generator_symbol`)
 * **Interpolated line**: allows to render a line whose :guilabel:`Stroke width`
-  and/or :guilabel:`Color` may be constant (given a :guilabel:`Width` and
-  :guilabel:`Color` parameters) or vary along the road.
-  When varying, the width and color of the line are interpolated along the
-  geometry using feature attributes (or an expression) with a range of values.
-  Necessary inputs are:
+  and/or :guilabel:`Color` may be constant (given a :guilabel:`Fixed width` and
+  :guilabel:`Single color` parameters) or vary along the geometry.
+  When varying, necessary inputs are:
 
-  * :guilabel:`Start value` and :guilabel:`End value`: XXX
-  * :guilabel:`Min. value` and :guilabel:`Max. value`: XXX
+  * :guilabel:`Start value` and :guilabel:`End value`: Values that will be used
+    for interpolation at the extremities of the features geometry. They can be
+    fixed values, an attribute value of the feature or based on an expression.
+  * :guilabel:`Min. value` and :guilabel:`Max. value`: Values between which the interpolation is performed
     Press the |refresh| :sup:`Load` button to automatically fill them based
-    on start or end values expressions.
+    on start and end values expressions.
   * Only available for the stroke option:
 
-    * :guilabel:`Min. width` and :guilabel:`Max. width`: define how wide
-      the line can be, linearly scaling the range of values onto XXX.
+    * :guilabel:`Min. width` and :guilabel:`Max. width`: define the range of
+      the varying width. :guilabel:`Min. Width` corresponds to :guilabel:`Min. Value`
+      and :guilabel:`Max. Width` corresponds to :guilabel:`Max. Value`
       A :ref:`unit <unit_selector>` can be associated.
-    * |checkbox| :guilabel:`Use absolute value`: XXX
-    * |checkbox| :guilabel:`Ignore out of range`: XXX
+    * |checkbox| :guilabel:`Use absolute value`: only consider absolute value
+      for interpolation (negative value are used as positive).
+    * |checkbox| :guilabel:`Ignore out of range`: value out of the range `Min. Value`/`Max. Value` are not rendered.
   * and for varying color, the :ref:`method of color ramp classification
     <color_ramp_shader>`
 
