@@ -330,22 +330,36 @@ layer types:
   When varying, necessary inputs are:
 
   * :guilabel:`Start value` and :guilabel:`End value`: Values that will be used
-    for interpolation at the extremities of the features geometry. They can be
-    fixed values, an attribute value of the feature or based on an expression.
-  * :guilabel:`Min. value` and :guilabel:`Max. value`: Values between which the interpolation is performed
+    for interpolation at the extremities of the features geometry.
+    They can be fixed values, feature's attributes or based on an expression.
+  * :guilabel:`Min. value` and :guilabel:`Max. value`: Values between which
+    the interpolation is performed.
     Press the |refresh| :sup:`Load` button to automatically fill them based
-    on start and end values expressions.
+    on the minimum and maximum start/end values applied to the layer.
   * Only available for the stroke option:
 
     * :guilabel:`Min. width` and :guilabel:`Max. width`: define the range of
-      the varying width. :guilabel:`Min. Width` corresponds to :guilabel:`Min. Value`
-      and :guilabel:`Max. Width` corresponds to :guilabel:`Max. Value`
+      the varying width. :guilabel:`Min. width` is assigned to the
+      :guilabel:`Min. value` and :guilabel:`Max. width` to the
+      :guilabel:`Max. value`.
       A :ref:`unit <unit_selector>` can be associated.
     * |checkbox| :guilabel:`Use absolute value`: only consider absolute value
-      for interpolation (negative value are used as positive).
-    * |checkbox| :guilabel:`Ignore out of range`: value out of the range `Min. Value`/`Max. Value` are not rendered.
-  * and for varying color, the :ref:`method of color ramp classification
-    <color_ramp_shader>`
+      for interpolation (negative values are used as positive).
+    * |checkbox| :guilabel:`Ignore out of range`: by default, when
+      the ``[start value - end value]`` range of a feature is not included in
+      the ``[min. value - max. value]`` range, the out-of-bounds parts of
+      the feature's geometry are rendered with the min or max width.
+      Check this option to not render them at all.
+  * For varying color, you can use any of the interpolation methods of
+    :ref:`color ramp classification <color_ramp_shader>`
+
+  .. _figure_interpolated_line_symbol:
+
+  .. figure:: img/interpolatedLineSymbol.png
+     :align: center
+     :width: 100%
+
+     Examples of interpolated lines
 
 .. _marker_line_symbol:
 
