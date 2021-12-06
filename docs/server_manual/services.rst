@@ -59,6 +59,7 @@ Vendor requests provided by QGIS Server:
 
    ":ref:`GetPrint <server_wms_getprint>`", "Returns a QGIS composition"
    ":ref:`GetProjectSettings <server_wms_getprojectsettings>`", "Returns specific information about QGIS Server"
+   ":ref:`GetSchemaExtension <server_wms_getschemaextension>`", "Returns XML metadata about optional extended capabilities"
 
 
 .. _`qgisserver_wms_getcapabilities`:
@@ -1140,6 +1141,43 @@ information which is not available in the GetCapabilities output:
 * information about layer order and drawing order
 * list of layers published in WFS
 * show if a group in the layer tree is :ref:`mutually exclusive <group_layers_interact>`
+
+
+.. _server_wms_getschemaextension:
+
+GetSchemaExtension
+------------------
+
+The **GetSchemaExtension** request allows to retrieve optional extended
+capabilities and operations of the WMS service such as implemented by QGIS
+Server.
+
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: auto
+
+   ":ref:`SERVICE <wms-service>`", "Yes", "Name of the service (**WMS**)"
+   ":ref:`REQUEST <wms-getschemaextension-request>`", "Yes", "Name of the request (**GetSchemaExtension**)"
+
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetSchemaExtension
+
+
+The XML document looks like:
+
+.. code-block:: xml
+
+  <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wms="http://www.opengis.net/wms" xmlns:qgs="http://www.qgis.org/wms" targetNamespace="http://www.qgis.org/wms" elementFormDefault="qualified" version="1.0.0">
+      <import namespace="http://www.opengis.net/wms" schemaLocation="http://schemas.opengis.net/wms/1.3.0/capabilities_1_3_0.xsd"/>
+      <element name="GetPrint" type="wms:OperationType" substitutionGroup="wms:_ExtendedOperation"/>
+      <element name="GetStyles" type="wms:OperationType" substitutionGroup="wms:_ExtendedOperation"/>
+  </schema>
 
 
 Web Feature Service (WFS)
