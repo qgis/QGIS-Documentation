@@ -1389,7 +1389,7 @@ Once a connection to a ArcGIS REST Server is set, it's possible to:
 
 * Right-click over the layer entry and you can also:
 
-  * :guilabel:`View Service Info` which will open the default webbrowser
+  * :guilabel:`View Service Info` which will open the default web browser
     and display the Service Info.
   * :menuselection:`Export layer... --> To File`
   * :guilabel:`Add layer to project`: a double-click also adds the layer
