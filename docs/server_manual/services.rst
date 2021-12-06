@@ -609,27 +609,11 @@ to the OGC WMS 1.1.1 specifications:
    :widths: auto
 
    ":ref:`SERVICE <wms-service>`", "Yes", "Name of the service (**WMS**)"
-   ":ref:`REQUEST <wms-getfeatureinfo-request>`", "Yes", "Name of the request (**GetStyle** or (**GetStyles**)"
+   ":ref:`REQUEST <wms-getstyle-request>`", "Yes", "Name of the request (**GetStyle** or **GetStyles**)"
    ":ref:`LAYERS <wms-layers>`", "Yes", "Layers to query"
 
 
-SERVICE
-^^^^^^^
-
-This parameter has to be ``WMS``.
-
-
-REQUEST
-^^^^^^^
-
-This parameter is ``GetStyle`` or ``GetStyles``.
-
-
-LAYERS
-^^^^^^
-
-This parameter allows to specify the layers to query. Names have to be
-separated by a comma. More information are available :ref:`here <wms-layers>`.
+URL example:
 
 .. code-block:: none
 
@@ -637,6 +621,13 @@ separated by a comma. More information are available :ref:`here <wms-layers>`.
   SERVICE=WMS
   &REQUEST=GetStyles
   &LAYERS=mylayer1,mylayer2
+
+.. _`wms-getstyle-request`:
+
+REQUEST
+^^^^^^^
+
+This parameter is ``GetStyle`` or ``GetStyles``.
 
 
 .. _server_wms_getfeatureinfo:
