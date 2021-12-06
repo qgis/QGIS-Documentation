@@ -75,7 +75,7 @@ WMS 1.1.1 and 1.3.0 specifications:
 
    ":ref:`SERVICE <wms-service>`", "Yes", "Name of the service (**WMS**)"
    ":ref:`VERSION <wms-version>`", "No", "Version of the service"
-   ":ref:`REQUEST <wms-getmap-request>`", "Yes", "Name of the request (**GetCapabilities**)"
+   ":ref:`REQUEST <wms-getcapabilities-request>`", "Yes", "Name of the request (**GetCapabilities**)"
 
 URL example:
 
@@ -87,31 +87,14 @@ URL example:
   &REQUEST=GetCapabilities
 
 
-SERVICE
+.. _`wms-getcapabilities-request`:
+
+REQUEST
 ^^^^^^^
 
-This parameter has to be ``WMS``.
+This parameter is ``GetCapabilities`` in case of the **GetCapabilities**
+request.
 
-For example:
-
-.. code-block:: none
-
-  http://localhost/qgisserver?
-  SERVICE=WMS
-  &...
-
-
-VERSION
-^^^^^^^
-
-This parameter allows to specify the version of the service to use.
-Available values for the ``VERSION`` parameter are:
-
-- ``1.1.1``
-- ``1.3.0``
-
-According to the version number, slight differences have to be expected
-in the XML document.
 
 
 .. _`qgisserver-wms-getmap`:
