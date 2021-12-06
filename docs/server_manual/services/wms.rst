@@ -520,7 +520,7 @@ and **Romania** they're highlighted in yellow.
 
 .. _figure_server_selection:
 
-.. figure:: img/server_selection_parameter.png
+.. figure:: ../img/server_selection_parameter.png
   :align: center
 
   Server response to a GetMap request with SELECTION parameter
@@ -1022,7 +1022,7 @@ implementation:
 * **SHOWFEATURECOUNT** if set to ``TRUE`` adds in the legend the
   feature count of the features like in the following image:
 
-  .. figure:: img/getfeaturecount_legend.png
+  .. figure:: ../img/getfeaturecount_legend.png
     :align: center
 
 * **RULE** set it to a given rule name to get only the named rule symbol

@@ -115,7 +115,7 @@ The **Landing Page** must provide links to
 
 .. _figure_server_wfs3_landing_page:
 
-.. figure:: img/server_wfs3_landing_page.png
+.. figure:: ../img/server_wfs3_landing_page.png
    :align: center
 
    Server WFS3 landing page
@@ -152,7 +152,7 @@ The path of this endpoint is ``/collections/``.
 
 .. _figure_server_wfs3_collections:
 
-.. figure:: img/server_wfs3_collections.png
+.. figure:: ../img/server_wfs3_collections.png
    :align: center
 
    Server WFS3 collections list page
@@ -173,7 +173,7 @@ available features.
 
 .. _figure_server_wfs3_collection:
 
-.. figure:: img/server_wfs3_collection.png
+.. figure:: ../img/server_wfs3_collection.png
    :align: center
 
    Server WFS3 collection detail page
@@ -199,7 +199,7 @@ available features.
 
 .. _figure_server_wfs3_features:
 
-.. figure:: img/server_wfs3_features.png
+.. figure:: ../img/server_wfs3_features.png
    :align: center
 
    Server WFS3 features list page
@@ -219,7 +219,7 @@ feature geometry.
 
 .. _figure_server_wfs3_feature:
 
-.. figure:: img/server_wfs3_feature.png
+.. figure:: ../img/server_wfs3_feature.png
    :align: center
 
    Server WFS3 feature detail page
