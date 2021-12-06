@@ -49,6 +49,7 @@ Standard requests provided by QGIS Server:
    ":ref:`GetFeatureInfo <server_wms_getfeatureinfo>`", "Retrieves data (geometry and values) for a pixel location"
    ":ref:`GetLegendGraphics <server_wms_getlegendgraphics>`", "Returns legend symbols"
    ":ref:`GetStyle(s) <server_wms_getstyle>`", "Returns XML document with style description in SLD"
+   ":ref:`DescribeLayer <server_wms_describelayer>`", "Returns information about WFS and WCS availability respectively for vector and raster layers"
 
 
 Vendor requests provided by QGIS Server:
@@ -874,6 +875,73 @@ Available values are (not case sensitive):
 
 - ``TRUE``
 - ``FALSE``
+
+
+.. _server_wms_describelayer:
+
+DescribeLayer
+-------------
+
+Standard parameters for the **DescribeLayer** request according to the OGC WMS
+1.1.1 and 1.3.0 specifications:
+
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: auto
+
+   ":ref:`SERVICE <wms-service>`", "Yes", "Name of the service (**WMS**)"
+   ":ref:`REQUEST <wms-describelayer-request>`", "Yes", "Name of the request (**DescribeLayer**)"
+   ":ref:`LAYERS <wms-layers>`", "Yes", "Layers to describe"
+   ":ref:`SLD_VERSION <wms-describelayer-sldversion>`", "Yes", "SLD version"
+
+
+.. _`wms-describelayer-request`:
+
+REQUEST
+^^^^^^^
+
+This parameter is ``DescribeLayer``.
+
+
+.. _`wms-describelayer-sldversion`:
+
+SLD_VERSION
+^^^^^^^^^^^
+
+This parameter allows to specify the version of SLD. Only the value ``1.1.0``
+is available.
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=DescribeLayer
+  &SLD_VERSION=1.1.0
+  &LAYERS=mylayer1
+
+The XML document loks like:
+
+.. code-block:: xml
+
+   <DescribeLayerResponse xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ows="http://www.opengis.net/ows" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:se="http://www.opengis.net/se" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/DescribeLayer.xsd">
+       <Version>1.1.0</Version>
+       <LayerDescription>
+           <owsType>wfs</owsType>
+           <se:OnlineResource xlink:href="http://localhost/qgis_server" xlink:type="simple"/>
+           <TypeName>
+               <se:FeatureTypeName>my_vector_layer</se:FeatureTypeName>
+           </TypeName>
+       </LayerDescription>
+       <LayerDescription>
+           <owsType>wcs</owsType>
+           <se:OnlineResource xlink:href="http://localhost/qgis_server" xlink:type="simple"/>
+           <TypeName>
+               <se:FeatureTypeName>my_raster_layer</se:FeatureTypeName>
+           </TypeName>
+       </LayerDescription>
+   </DescribeLayerResponse>
 
 
 .. _server_wms_getprint:
