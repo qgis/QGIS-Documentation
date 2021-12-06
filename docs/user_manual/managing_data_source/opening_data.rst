@@ -1369,7 +1369,7 @@ through the :guilabel:`ArcGIS REST Server` entry in
 :guilabel:`Data Source Manager` dialog. Likewise, they can be added from
 a file (:guilabel:`Load Connections`).
 
-Once a connection to a ArcGIS REST Server is set, it's possible to:
+Once a connection to an ArcGIS REST Server is set, it's possible to:
 
 * :guilabel:`Edit` the ArcGIS REST Server connection settings
 * :guilabel:`Remove` the connection
