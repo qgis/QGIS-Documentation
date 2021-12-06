@@ -2,11 +2,17 @@
 Services
 ********
 
-.. only:: html
+.. toctree::
+   :maxdepth: 2
 
-  .. contents::
-    :local:
-    :depth: 2
+   services/wms.rst
+   services/wfs.rst
+   services/wmts.rst
+   services/ogcapif.rst
+   services/extra_parameters.rst
+   services/redlining.rst
+   services/external_wms.rst
+   services/catalog.rst
 
 
 QGIS Server is able to serve data according to standard protocols as described
