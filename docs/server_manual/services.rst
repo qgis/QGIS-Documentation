@@ -894,23 +894,6 @@ Standard parameters for the **DescribeLayer** request according to the OGC WMS
    ":ref:`LAYERS <wms-layers>`", "Yes", "Layers to describe"
    ":ref:`SLD_VERSION <wms-describelayer-sldversion>`", "Yes", "SLD version"
 
-
-.. _`wms-describelayer-request`:
-
-REQUEST
-^^^^^^^
-
-This parameter is ``DescribeLayer``.
-
-
-.. _`wms-describelayer-sldversion`:
-
-SLD_VERSION
-^^^^^^^^^^^
-
-This parameter allows to specify the version of SLD. Only the value ``1.1.0``
-is available.
-
 URL example:
 
 .. code-block:: none
@@ -921,7 +904,7 @@ URL example:
   &SLD_VERSION=1.1.0
   &LAYERS=mylayer1
 
-The XML document loks like:
+The XML document looks like:
 
 .. code-block:: xml
 
@@ -942,6 +925,22 @@ The XML document loks like:
            </TypeName>
        </LayerDescription>
    </DescribeLayerResponse>
+
+.. _`wms-describelayer-request`:
+
+REQUEST
+^^^^^^^
+
+This parameter is ``DescribeLayer`` in case of the **DescribeLayer** request.
+
+
+.. _`wms-describelayer-sldversion`:
+
+SLD_VERSION
+^^^^^^^^^^^
+
+This parameter allows to specify the version of SLD. Only the value ``1.1.0``
+is available.
 
 
 .. _server_wms_getprint:
