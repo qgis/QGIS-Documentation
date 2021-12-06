@@ -1363,6 +1363,17 @@ Press :guilabel:`New` (respectively :guilabel:`New Connection`) and provide:
 * the :ref:`authentication <authentication_index>` configuration if necessary
 * a :guilabel:`Referer`
 
+.. note::
+
+   ArcGIS Feature Service connections which have their corresponding Portal 
+   endpoint URLS set can be explored by content groups in the browser panel.
+
+   If a connection has the Portal endpoints set, then expanding out the connection
+   in the browser will show a “Groups” and “Services” folder, instead of the full
+   list of services usually shown. Expanding out the groups folder will show a list
+   of all content groups that the user is a member of, each of which can be
+   expanded to show the service items belonging to that group.
+
 Configurations can be saved to :file:`.XML` file (:guilabel:`Save Connections`)
 through the :guilabel:`ArcGIS REST Server` entry in
 :guilabel:`Data Source Manager` dialog. Likewise, they can be added from
