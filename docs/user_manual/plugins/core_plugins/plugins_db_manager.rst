@@ -44,6 +44,11 @@ support to a table.
 Finally, you can :guilabel:`Import Layer/File...` and
 :guilabel:`Export to File...`.
 
+.. note::
+
+   Using the DB Manager it is possible to add comments for tables and
+   columns of a PostgreSQL Database.
+
 The :guilabel:`Providers` window lists all existing databases
 supported by QGIS.
 With a double-click, you can connect to the database.
