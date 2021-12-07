@@ -97,8 +97,9 @@ WMS 1.1.1 and 1.3.0 specifications:
    "SLD_BODY", "No", "In-line SLD (XML) to be used for styling"
 
 
-In addition to the standard ones, QGIS Server supports the following
-extra parameters:
+In addition to the standard ones, QGIS Server supports :ref:`redlining
+<qgisserver-redlining>`, :ref:`external WMS layers <qgisserver-external-wms>`
+as well as the following extra parameters:
 
 
 .. csv-table::
@@ -985,13 +986,14 @@ is available.
 GetPrint
 --------
 
-QGIS Server has the capability to create print layout output in pdf or
-pixel format.
-Print layout windows in the published project are used as templates.
+QGIS Server has the capability to create print layout output in pdf or pixel
+format. Print layout windows in the published project are used as templates.
 In the **GetPrint** request, the client has the possibility to specify
 parameters of the contained layout maps and labels.
 
-Parameters for the **GetPrint** request:
+The **GetPrint** request supports :ref:`redlining <qgisserver-redlining>`,
+:ref:`external WMS layers <qgisserver-external-wms>` as well as the following
+parameters:
 
 .. csv-table::
    :header: "Parameter", "Required", "Description"
@@ -1182,6 +1184,8 @@ information which is not available in the GetCapabilities output:
 * show if a group in the layer tree is :ref:`mutually exclusive <group_layers_interact>`
 
 
+.. _`qgisserver-external-wms`:
+
 External WMS layers
 -------------------
 
@@ -1236,14 +1240,13 @@ Similarly, external layers can be used in GetPrint requests:
 Redlining
 ---------
 
-This feature is available and can be used with ``GetMap`` and
-``GetPrint`` requests.
+This feature is available and can be used with ``GetMap`` and ``GetPrint``
+requests.
 
-The redlining feature can be used to pass geometries and labels in the
-request which are overlapped by the server over the standard returned
-image (map).
-This permits the user to put emphasis or maybe add some comments (labels)
-to some areas, locations etc. that are not in the standard map.
+The redlining feature can be used to pass geometries and labels in the request
+which are overlapped by the server over the standard returned image (map). This
+permits the user to put emphasis or maybe add some comments (labels) to some
+areas, locations etc. that are not in the standard map.
 
 The ``GetMap`` request is in the format::
 
