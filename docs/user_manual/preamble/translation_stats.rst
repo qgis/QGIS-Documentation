@@ -6,7 +6,7 @@
 Statistics of translation
 ===========================
 
-*(last update: 2021-11-30)*
+*(last update: 2021-12-07)*
 
 .. list-table::
    :widths: auto
@@ -16,7 +16,7 @@ Statistics of translation
      - Overall Translation ratio
    * - **32018**
      - **58**
-     - **12.03%**
+     - **12.04%**
 
 
 
@@ -56,13 +56,13 @@ Statistics of translation
    * - Danish
      - 0.67
      - Dutch
-     - 99.97
+     - 100.0
      - Estonian
      - 1.32
    * - Finnish
      - 1.83
      - French
-     - 98.95
+     - 99.16
      - Galician
      - 0.6
    * - Georgian
@@ -82,13 +82,13 @@ Statistics of translation
      - Indonesian
      - 2.8
      - Italian
-     - 90.03
+     - 89.96
    * - Japanese
-     - 62.98
+     - 63.46
      - Kabyle
      - 0.11
      - Korean
-     - 85.82
+     - 85.96
    * - Lao
      - 0.0
      - Lithuanian
@@ -116,7 +116,7 @@ Statistics of translation
    * - Portuguese (Portugal)
      - 8.59
      - Romanian
-     - 30.74
+     - 30.68
      - Russian
      - 15.1
    * - Serbian
@@ -126,7 +126,7 @@ Statistics of translation
      - Slovenian
      - 3.23
    * - Spanish
-     - 92.12
+     - 92.06
      - Swedish
      - 1.16
      - Tagalog
