@@ -48,6 +48,7 @@ Standard requests provided by QGIS Server:
    ":ref:`GetMap <qgisserver-wms-getmap>`", "Returns a map"
    ":ref:`GetFeatureInfo <server_wms_getfeatureinfo>`", "Retrieves data (geometry and values) for a pixel location"
    ":ref:`GetLegendGraphics <server_wms_getlegendgraphics>`", "Returns legend symbols"
+   ":ref:`GetStyle(s) <server_wms_getstyle>`", "Returns XML document with style description in SLD"
 
 
 Vendor requests provided by QGIS Server:
@@ -593,6 +594,41 @@ configured in the QGIS project, features outside the tile extent are
 drawn to avoid cut symbols at tile boundaries.
 
 ``TILED`` defaults to ``FALSE``.
+
+
+.. _server_wms_getstyle:
+
+GetStyle(s)
+-----------
+
+Standard parameters for the **GetStyle** (or **GetStyles**) request according
+to the OGC WMS 1.1.1 specifications:
+
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: auto
+
+   ":ref:`SERVICE <wms-service>`", "Yes", "Name of the service (**WMS**)"
+   ":ref:`REQUEST <wms-getstyle-request>`", "Yes", "Name of the request (**GetStyle** or **GetStyles**)"
+   ":ref:`LAYERS <wms-layers>`", "Yes", "Layers to query"
+
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetStyles
+  &LAYERS=mylayer1,mylayer2
+
+.. _`wms-getstyle-request`:
+
+REQUEST
+^^^^^^^
+
+This parameter is ``GetStyle`` or ``GetStyles``.
+
 
 .. _server_wms_getfeatureinfo:
 
