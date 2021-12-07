@@ -337,7 +337,7 @@ As for table, a checkbox **Select at id** is activated by default
 (see above for the meaning of the checkbox).
 It can make sense to disable this option when you use expensive views.
 
-.. tip:: **PostgreSQL foreign table**
+.. note:: **PostgreSQL foreign table**
 
    PostgreSQL foreign tables are not explicitely supported by the PostgreSQL
    provider and will be handled like a view.
