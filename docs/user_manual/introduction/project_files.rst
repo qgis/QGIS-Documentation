@@ -48,7 +48,9 @@ At startup, a list of :guilabel:`Project Templates` and
 names and file paths (for up to ten projects).
 The :guilabel:`Recent Projects` list is handy to access recently used
 projects.
-Double-click an entry to open the project or project template.
+Double-click an entry to open the project or project template. Right-click
+an entry to :guilabel:`Pin to List`, :guilabel:`Open Directory...` or
+:guilabel:`Remove from List`.
 You can also add a layer to create a new project automatically.
 The lists will then disappear, giving way to the map canvas.
 
