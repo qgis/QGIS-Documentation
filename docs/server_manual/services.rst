@@ -1179,6 +1179,14 @@ The XML document looks like:
       <element name="GetStyles" type="wms:OperationType" substitutionGroup="wms:_ExtendedOperation"/>
   </schema>
 
+.. _`wms-getschemaextension-request`:
+
+REQUEST
+^^^^^^^
+
+This parameter is ``GetSchemaExtension`` in case of the **GetSchemaExtension** request.
+
+
 
 Web Feature Service (WFS)
 =========================
