@@ -19,10 +19,11 @@ Standard requests provided by QGIS Server:
    :header: "Request", "Description"
    :widths: auto
 
-   "GetCapabilities", "Returns XML metadata with information about the server"
+   ":ref:`GetCapabilities <qgisserver_wms_getcapabilities>`", "Returns XML metadata with information about the server"
    ":ref:`GetMap <qgisserver-wms-getmap>`", "Returns a map"
    ":ref:`GetFeatureInfo <server_wms_getfeatureinfo>`", "Retrieves data (geometry and values) for a pixel location"
    ":ref:`GetLegendGraphics <server_wms_getlegendgraphics>`", "Returns legend symbols"
+   ":ref:`GetStyle(s) <server_wms_getstyle>`", "Returns XML document with style description in SLD"
 
 
 Vendor requests provided by QGIS Server:
@@ -35,6 +36,39 @@ Vendor requests provided by QGIS Server:
    ":ref:`GetProjectSettings <server_wms_getprojectsettings>`", "Returns specific information about QGIS Server"
 
 
+.. _`qgisserver_wms_getcapabilities`:
+
+GetCapabilities
+---------------
+
+Standard parameters for the **GetCapabilities** request according to the OGC
+WMS 1.1.1 and 1.3.0 specifications:
+
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: auto
+
+   ":ref:`SERVICE <wms-service>`", "Yes", "Name of the service (**WMS**)"
+   ":ref:`VERSION <wms-version>`", "No", "Version of the service"
+   ":ref:`REQUEST <wms-getcapabilities-request>`", "Yes", "Name of the request (**GetCapabilities**)"
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMS
+  &VERSION=1.3.0
+  &REQUEST=GetCapabilities
+
+
+.. _`wms-getcapabilities-request`:
+
+REQUEST
+^^^^^^^
+
+This parameter is ``GetCapabilities`` in case of the **GetCapabilities**
+request.
 .. _`qgisserver-wms-getmap`:
 
 GetMap
@@ -569,6 +603,7 @@ drawn to avoid cut symbols at tile boundaries.
 
 ``TILED`` defaults to ``FALSE``.
 
+
 .. _server_wms_getfeatureinfo:
 
 GetFeatureInfo
@@ -779,6 +814,105 @@ Available values are (not case sensitive):
 - ``FALSE``
 
 
+
+.. _server_wms_getlegendgraphics:
+
+GetLegendGraphics
+-----------------
+
+Several additional parameters are available to change the size of the
+legend elements:
+
+* **BOXSPACE** space between legend frame and content (mm)
+* **FORMAT**, ``image/jpeg``, ``image/png`` or ``application/json``.
+  For JSON, symbols are encoded with Base64 and most other options related to
+  layout or fonts are not taken into account because the legend must be built
+  on the client side.
+* **LAYERSPACE** vertical space between layers (mm)
+* **LAYERTITLESPACE** vertical space between layer title and items
+  following (mm)
+* **SYMBOLSPACE** vertical space between symbol and item following
+  (mm)
+* **ICONLABELSPACE** horizontal space between symbol and label text
+  (mm)
+* **SYMBOLWIDTH** width of the symbol preview (mm)
+* **SYMBOLHEIGHT** height of the symbol preview (mm)
+
+These parameters change the font properties for layer titles and item
+labels:
+
+* **LAYERFONTFAMILY / ITEMFONTFAMILY** font family for layer
+  title / item text
+* **LAYERFONTBOLD / ITEMFONTBOLD** ``TRUE`` to use a bold font
+* **LAYERFONTSIZE / ITEMFONTSIZE** Font size in point
+* **LAYERFONTITALIC / ITEMFONTITALIC** ``TRUE`` to use italic font
+* **LAYERFONTCOLOR / ITEMFONTCOLOR** Hex color code (e.g. ``#FF0000``
+  for red)
+* **LAYERTITLE** ``FALSE`` to get only the legend graphics without layer title
+* **RULELABEL**:
+
+  * ``FALSE`` legend graphics without item labels
+  * ``AUTO`` hide item label for layers with :guilabel:`Single symbol` rendering
+
+Content based legend. These parameters let the client request a legend
+showing only the symbols for the features falling into the requested
+area:
+
+* **BBOX** the geographical area for which the legend should be built
+* **CRS / SRS** the coordinate reference system adopted to define the
+  BBOX coordinates
+* **SRCWIDTH / SRCHEIGHT** if set these should match the WIDTH and HEIGHT
+  parameters of the GetMap request, to let QGIS Server scale symbols according
+  to the map view image size.
+
+Content based legend features are based on the `UMN MapServer
+implementation:
+<https://www.mapserver.org/development/rfc/ms-rfc-101.html>`_
+
+* **SHOWFEATURECOUNT** if set to ``TRUE`` adds in the legend the
+  feature count of the features like in the following image:
+
+  .. figure:: ../img/getfeaturecount_legend.png
+    :align: center
+
+* **RULE** set it to a given rule name to get only the named rule symbol
+* **WIDTH/HEIGHT** the generated legend image size if the **RULE** parameter is set
+
+
+.. _server_wms_getstyle:
+
+GetStyle(s)
+-----------
+
+Standard parameters for the **GetStyle** (or **GetStyles**) request according
+to the OGC WMS 1.1.1 specifications:
+
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: auto
+
+   ":ref:`SERVICE <wms-service>`", "Yes", "Name of the service (**WMS**)"
+   ":ref:`REQUEST <wms-getstyle-request>`", "Yes", "Name of the request (**GetStyle** or **GetStyles**)"
+   ":ref:`LAYERS <wms-layers>`", "Yes", "Layers to query"
+
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetStyles
+  &LAYERS=mylayer1,mylayer2
+
+.. _`wms-getstyle-request`:
+
+REQUEST
+^^^^^^^
+
+This parameter is ``GetStyle`` or ``GetStyles``.
+
+
 .. _server_wms_getprint:
 
 GetPrint
@@ -963,70 +1097,6 @@ This parameter specifies the layers' styles defined in a specific
 layout map item.
 See :ref:`GetMap Styles <wms-styles>` for more information on
 this parameter.
-
-
-.. _server_wms_getlegendgraphics:
-
-GetLegendGraphics
------------------
-
-Several additional parameters are available to change the size of the
-legend elements:
-
-* **BOXSPACE** space between legend frame and content (mm)
-* **FORMAT**, ``image/jpeg``, ``image/png`` or ``application/json``.
-  For JSON, symbols are encoded with Base64 and most other options related to
-  layout or fonts are not taken into account because the legend must be built
-  on the client side.
-* **LAYERSPACE** vertical space between layers (mm)
-* **LAYERTITLESPACE** vertical space between layer title and items
-  following (mm)
-* **SYMBOLSPACE** vertical space between symbol and item following
-  (mm)
-* **ICONLABELSPACE** horizontal space between symbol and label text
-  (mm)
-* **SYMBOLWIDTH** width of the symbol preview (mm)
-* **SYMBOLHEIGHT** height of the symbol preview (mm)
-
-These parameters change the font properties for layer titles and item
-labels:
-
-* **LAYERFONTFAMILY / ITEMFONTFAMILY** font family for layer
-  title / item text
-* **LAYERFONTBOLD / ITEMFONTBOLD** ``TRUE`` to use a bold font
-* **LAYERFONTSIZE / ITEMFONTSIZE** Font size in point
-* **LAYERFONTITALIC / ITEMFONTITALIC** ``TRUE`` to use italic font
-* **LAYERFONTCOLOR / ITEMFONTCOLOR** Hex color code (e.g. ``#FF0000``
-  for red)
-* **LAYERTITLE** ``FALSE`` to get only the legend graphics without layer title
-* **RULELABEL**:
-
-  * ``FALSE`` legend graphics without item labels
-  * ``AUTO`` hide item label for layers with :guilabel:`Single symbol` rendering
-
-Content based legend. These parameters let the client request a legend
-showing only the symbols for the features falling into the requested
-area:
-
-* **BBOX** the geographical area for which the legend should be built
-* **CRS / SRS** the coordinate reference system adopted to define the
-  BBOX coordinates
-* **SRCWIDTH / SRCHEIGHT** if set these should match the WIDTH and HEIGHT
-  parameters of the GetMap request, to let QGIS Server scale symbols according
-  to the map view image size.
-
-Content based legend features are based on the `UMN MapServer
-implementation:
-<https://www.mapserver.org/development/rfc/ms-rfc-101.html>`_
-
-* **SHOWFEATURECOUNT** if set to ``TRUE`` adds in the legend the
-  feature count of the features like in the following image:
-
-  .. figure:: ../img/getfeaturecount_legend.png
-    :align: center
-
-* **RULE** set it to a given rule name to get only the named rule symbol
-* **WIDTH/HEIGHT** the generated legend image size if the **RULE** parameter is set
 
 
 .. _server_wms_getprojectsettings:
