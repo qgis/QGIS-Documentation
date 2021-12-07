@@ -44,7 +44,7 @@ Standard requests provided by QGIS Server:
    :header: "Request", "Description"
    :widths: auto
 
-   "GetCapabilities", "Returns XML metadata with information about the server"
+   ":ref:`GetCapabilities <qgisserver_wms_getcapabilities>`", "Returns XML metadata with information about the server"
    ":ref:`GetMap <qgisserver-wms-getmap>`", "Returns a map"
    ":ref:`GetFeatureInfo <server_wms_getfeatureinfo>`", "Retrieves data (geometry and values) for a pixel location"
    ":ref:`GetLegendGraphics <server_wms_getlegendgraphics>`", "Returns legend symbols"
@@ -59,6 +59,42 @@ Vendor requests provided by QGIS Server:
 
    ":ref:`GetPrint <server_wms_getprint>`", "Returns a QGIS composition"
    ":ref:`GetProjectSettings <server_wms_getprojectsettings>`", "Returns specific information about QGIS Server"
+
+
+.. _`qgisserver_wms_getcapabilities`:
+
+GetCapabilities
+---------------
+
+Standard parameters for the **GetCapabilities** request according to the OGC
+WMS 1.1.1 and 1.3.0 specifications:
+
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: auto
+
+   ":ref:`SERVICE <wms-service>`", "Yes", "Name of the service (**WMS**)"
+   ":ref:`VERSION <wms-version>`", "No", "Version of the service"
+   ":ref:`REQUEST <wms-getcapabilities-request>`", "Yes", "Name of the request (**GetCapabilities**)"
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMS
+  &VERSION=1.3.0
+  &REQUEST=GetCapabilities
+
+
+.. _`wms-getcapabilities-request`:
+
+REQUEST
+^^^^^^^
+
+This parameter is ``GetCapabilities`` in case of the **GetCapabilities**
+request.
+
 
 
 .. _`qgisserver-wms-getmap`:
