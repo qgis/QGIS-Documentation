@@ -139,59 +139,65 @@ Available methods are:
 Geometric predicates
 ====================
 
+The following section is included in vector selection algorithms such as
+qgisselectbylocation, qgisextractbylocation and vector general algorithms
+such as qgisjoinattributesbylocation and qgisjoinbylocationsummary
+
 **geometric_predicates**
 
-.. The following section is included in vector selection algorithms such as
- qgisselectbylocation, qgisextractbylocation
+Geometric predicates are boolean functions used to determine the spatial
+relation a feature has with another by comparing whether and how
+their geometries share a portion of space.
 
 .. figure:: /docs/user_manual/processing_algs/img/selectbylocation.png
    :align: center
 
-   In this example, the dataset from which we want to select (the *source
-   vector layer*) consists of the green circles, the orange rectangle is the
-   dataset that it is being compared to (the *intersection vector layer*).
+   Looking for spatial relations between layers
 
+Using the figure above, we are looking for the green circles by spatially
+comparing them to the orange rectangle feature.
 Available geometric predicates are:
 
 *Intersect*
   Tests whether a geometry intersects another. Returns 1 (true) if the
   geometries spatially intersect (share any portion of space - overlap or touch) and 0 if they
-  don’t. In the picture above, this will select circles 1, 2 and 3.
+  don’t. In the picture above, this will return circles 1, 2 and 3.
 
 *Contain*
   Returns 1 (true) if and only if no points of b lie in the exterior of a,
   and at least one point of the interior of b lies in the interior of a.
-  In the picture, no circle is selected, but the rectangle would be if you
-  would select it the other way around, as it contains a circle completely.
+  In the picture, no circle is returned, but the rectangle would be if you
+  would look for it the other way around, as it contains circle 1 completely.
   This is the opposite of *are within*.
 
 *Disjoint*
   Returns 1 (true) if the geometries do not share any portion of space (no overlap, not touching).
-  Only circle 4 is selected.
+  Only circle 4 is returned.
 
 *Equal*
   Returns 1 (true) if and only if geometries are exactly the same.
-  No circles will be selected.
+  No circles will be returned.
 
 *Touch*
   Tests whether a geometry touches another. Returns 1 (true) if the geometries
   have at least one point in common, but their interiors do not intersect.
-  Only circle 3 is selected.
+  Only circle 3 is returned.
 
 *Overlap*
   Tests whether a geometry overlaps another. Returns 1 (true) if the geometries
   share space, are of the same dimension, but are not completely contained by
-  each other. Only circle 2 is selected.
+  each other. Only circle 2 is returned.
 
 *Are within*
   Tests whether a geometry is within another. Returns 1 (true) if geometry a
-  is completely inside geometry b. Only circle 1 is selected.
+  is completely inside geometry b. Only circle 1 is returned.
 
 *Cross*
   Returns 1 (true) if the supplied geometries have some, but not all, interior
   points in common and the actual crossing is of a lower dimension than the
   highest supplied geometry. For example, a line crossing a polygon will cross
-  as a line (selected). Two lines crossing will cross as a point (selected).
-  Two polygons cross as a polygon (not selected).
+  as a line (true). Two lines crossing will cross as a point (true).
+  Two polygons cross as a polygon (false).
+  In the picture, no circles will be returned.
 
 **end_geometric_predicates**
