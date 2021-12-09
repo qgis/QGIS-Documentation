@@ -15,7 +15,8 @@ Introduction
 ------------
 
 MetaSearch is a QGIS plugin to interact with metadata catalog services,
-supporting the OGC Catalog Service for the Web (CSW) standard.
+supporting both the OGC API - Records and OGC Catalog Service for the
+Web (CSW) standards.
 
 MetaSearch provides an easy and intuitive approach and user-friendly
 interface to searching metadata catalogs within QGIS.
@@ -33,6 +34,12 @@ Working with Metadata Catalogs in QGIS
 
 MetaSearch is included by default in QGIS, with all of its dependencies,
 and can be enabled from the QGIS Plugin Manager.
+
+OGC API - Records
+.................
+
+`OGC API - Records`_ is an `OGC (Open Geospatial Consortium)`_ standard
+for the discovery of geospatial resources on the Web.
 
 CSW (Catalog Service for the Web)
 ...................................
@@ -73,8 +80,10 @@ To add a Catalog Service entry:
 #. Click the :guilabel:`New` button
 #. Enter a :guilabel:`Name` for the service, as well as the
    :guilabel:`URL` (endpoint).
-   Note that only the base URL is required (not a full GetCapabilities URL).
-#. If the CSW requires authentication, enter the appropriate
+   Note that for OGC CSW 2.0.2 Catalogs, only the base URL is
+   required (not a full GetCapabilities URL).  For OGC API - Records
+   Catalogs, the URL should be the path to the collection endpoint
+#. If the Catalog requires authentication, enter the appropriate
    :guilabel:`User name` and :guilabel:`Password` credentials.
 #. Click :guilabel:`OK` to add the service to the list of entries.
 
@@ -97,14 +106,14 @@ Below is an example of the XML file format.
 
   <?xml version="1.0" encoding="UTF-8"?>
   <qgsCSWConnections version="1.0">
-      <csw name="Data.gov CSW" url="https://catalog.data.gov/csw-all"/>
-      <csw name="Geonorge - National CSW service for Norway" url="https://www.geonorge.no/geonetwork/srv/eng/csw"/>
-      <csw name="Geoportale Nazionale - Servizio di ricerca Italiano" url="http://www.pcn.minambiente.it/geoportal/csw"/>
-      <csw name="LINZ Data Service" url="http://data.linz.govt.nz/feeds/csw"/>
-      <csw name="Nationaal Georegister (Nederland)" url="http://www.nationaalgeoregister.nl/geonetwork/srv/eng/csw"/>
-      <csw name="RNDT - Repertorio Nazionale dei Dati Territoriali - Servizio di ricerca" url="http://www.rndt.gov.it/RNDT/CSW"/>
-      <csw name="UK Location Catalogue Publishing Service" url="http://csw.data.gov.uk/geonetwork/srv/en/csw"/>
-      <csw name="UNEP/GRID-Geneva Metadata Catalog" url="http://metadata.grid.unep.ch:8080/geonetwork/srv/eng/csw"/>
+      <csw type="OGC CSW 2.0.2" name="Data.gov CSW" url="https://catalog.data.gov/csw-all"/>
+      <csw type="OGC CSW 2.0.2" name="Geonorge - National CSW service for Norway" url="https://www.geonorge.no/geonetwork/srv/eng/csw"/>
+      <csw type="OGC CSW 2.0.2" name="Geoportale Nazionale - Servizio di ricerca Italiano" url="http://www.pcn.minambiente.it/geoportal/csw"/>
+      <csw type="OGC CSW 2.0.2" name="LINZ Data Service" url="http://data.linz.govt.nz/feeds/csw"/>
+      <csw type="OGC CSW 2.0.2" name="Nationaal Georegister (Nederland)" url="http://www.nationaalgeoregister.nl/geonetwork/srv/eng/csw"/>
+      <csw type="OGC CSW 2.0.2" name="RNDT - Repertorio Nazionale dei Dati Territoriali - Servizio di ricerca" url="http://www.rndt.gov.it/RNDT/CSW"/>
+      <csw type="OGC CSW 2.0.2" name="UK Location Catalogue Publishing Service" url="http://csw.data.gov.uk/geonetwork/srv/en/csw"/>
+      <csw type="OGC CSW 2.0.2" name="UNEP/GRID-Geneva Metadata Catalog" url="http://metadata.grid.unep.ch:8080/geonetwork/srv/eng/csw"/>
   </qgsCSWConnections>
 
 
@@ -120,9 +129,10 @@ To load a list of entries:
 Click the :guilabel:`Service Info` button to display information about
 the selected Catalog Service such as service identification, service
 provider and contact information.
-If you would like to view the raw XML response, click the
-:guilabel:`GetCapabilities Response` button.
-A separate window will open displaying the Capabilities XML.
+If you would like to view the raw API response, click the
+:guilabel:`Raw API Response` button.
+A separate window will open displaying server information in raw JSON
+or XML format.
 
 Searching Catalog Services
 ..........................
@@ -156,8 +166,8 @@ below the search results.
 
 Select a result and:
 
-* Click the :guilabel:`View Search Results as XML` button to open a
-  window with the service response in raw XML format.
+* Click the :guilabel:`View Raw API Response` button to open a
+  window with the service response in raw JSON or XML format.
 * If the metadata record has an associated bounding box, a footprint
   of the bounding box will be displayed on the map.
 * Double-click the record to display the record metadata with any
@@ -198,20 +208,21 @@ You can fine tune MetaSearch with the following :guilabel:`Settings`:
 * :guilabel:`Results paging`: when searching metadata catalogs, the
   number of results to show per page. Default value is 10.
 
-CSW Server Errors
------------------
+Catalog Server Errors
+---------------------
 
-In some cases, the CSW will work in a web browser, but not in MetaSearch.
-This may be due to the CSW server's configuration/setup.
-CSW server providers should ensure URLs are consistent and up to date in
+In some cases, the Catalog will work in a web browser, but not in MetaSearch.
+This may be due to the Catalog server's configuration/setup.
+Catalog server providers should ensure URLs are consistent and up to date in
 their configuration (this is common in HTTP -> HTTPS redirection scenarios).
 Please see the `pycsw FAQ item`_ for a deeper explanation of the issue and fix.
 Although the FAQ item is pycsw specific it can also apply in general to other
-CSW servers.
+Catalog servers.
 
 
-.. _`CSW (Catalog Service for the Web)`: https://www.opengeospatial.org/standards/cat
-.. _`OGC (Open Geospatial Consortium)`: https://www.opengeospatial.org
+.. _`OGC API - Records`: https://ogcapi.ogc.org/records
+.. _`CSW (Catalog Service for the Web)`: https://www.ogc.org/standards/cat
+.. _`OGC (Open Geospatial Consortium)`: https://www.ogc.org
 .. _`pycsw FAQ item`: https://pycsw.org/faq/#my-pycsw-install-doesnt-work-at-all-with-qgis
 
 
