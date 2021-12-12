@@ -165,6 +165,10 @@ get_feature
 
 Returns the first feature of a layer matching a given attribute value.
 
+**Single value variant**
+
+Along with the layer ID, a single column and value are specified.
+
 .. list-table::
    :widths: 15 85
 
@@ -172,10 +176,26 @@ Returns the first feature of a layer matching a given attribute value.
      - get_feature(layer, attribute, value)
    * - Arguments
      - * **layer** - layer name or ID
-       * **attribute** - attribute name
+       * **attribute** - attribute name to use for the match
        * **value** - attribute value to match
    * - Examples
      - * ``get_feature('streets','name','main st')`` → first feature found in "streets" layer with "main st" value in the "name" field
+
+
+**Map variant**
+
+Along with the layer ID, a map containing the columns (key) and their respective value to be used.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - get_feature(layer, map)
+   * - Arguments
+     - * **layer** - layer name or ID
+       * **map** - Map containing the column and value pairs to use
+   * - Examples
+     - * ``get_feature('streets',map('name','main st','lane_num','4'))`` → first feature found in "streets" layer with "main st" value in the "name" field and  "4" value in the "lane_num" field
 
 
 .. end_get_feature_section
