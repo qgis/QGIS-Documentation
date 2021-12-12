@@ -278,3 +278,25 @@ Create a JSON formatted string from a map, array or other value.
 
 .. end_to_json_section
 
+.. _expression_function_Maps_url_encode:
+
+url_encode
+..........
+
+Returns an URL encoded string from a map. Transforms all characters in their properly-encoded form producing a fully-compliant query string.
+
+Note that the plus sign '+' is not converted.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - url_encode(map)
+   * - Arguments
+     - * **map** - a map.
+   * - Examples
+     - * ``url_encode(map('a&+b', 'a and plus b', 'a=b', 'a equals b'))`` → 'a%26+b=a%20and%20plus%20b&a%3Db=a%20equals%20b'
+
+
+.. end_url_encode_section
+
