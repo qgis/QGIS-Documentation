@@ -13,6 +13,7 @@ QGIS Server Guide/Manual
   introduction
   getting_started
   services
+  catalog
   plugins
   config
   development_server
