@@ -24,25 +24,249 @@ msgstr ""
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:5
+msgid "Vector Attribute Data"
+msgstr "벡터 속성 데이터"
+
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:8
 msgid "|gentleLogo|"
 msgstr "|gentleLogo|"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:515
+msgid "gentleLogo"
+msgstr "gentleLogo"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:8
 msgid "Objectives:"
 msgstr "목적"
 
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:8
+msgid ""
+"In this topic we describe how attribute data are associated with vector "
+"features and can be used to symbolise data."
+msgstr "이 단원에서는 속성 데이터가 벡터 객체와 어떻게 엮이는지 그리고 데이터를 심볼화하기 위해 어떻게 쓰일 수 있는지 설명합니다."
+
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:10
 msgid "Keywords:"
 msgstr "키워드"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:10
+msgid "Attribute, database, fields, data, vector, symbology"
+msgstr "속성, 데이터베이스, 필드, 데이터, 벡터, 심볼"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:14
 msgid "Overview"
 msgstr "개관"
 
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:16
+msgid ""
+"If every line on a map was the same colour, width, thickness, and had the "
+"same label, it would be very hard to make out what was going on. The map "
+"would also give us very little information. Take a look at "
+":numref:`figure_map_attributes` for example."
+msgstr ""
+"지도 상에 있는 모든 선이 동일한 색상, 너비, 두께, 그리고 동일한 라벨을 가지고 있다면, 지도를 이해하기가 아주 어려워질 겁니다. "
+"그런 지도를 보고 어떤 정보를 얻기도 힘들겠죠. :numref:`figure_map_attributes` 이 그 예시입니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:26
+msgid ""
+"Maps come to life when colour and different symbols are used to help you to "
+"tell one type of feature from the next. Can you tell the difference between "
+"rivers, roads and contours using the map on the left? Using the map on the "
+"right it is much easier to see the different features."
+msgstr ""
+"지도는 어떤 객체 유형을 다른 유형과 구분하기 위해 서로 다른 색상과 심볼을 사용할 때에야 쓸모가 있습니다. 왼쪽 지도를 보고 하천, "
+"도로 및 등고선의 차이를 구분할 수 있을까요? 오른쪽 지도를 보면 서로 다른 객체들을 훨씬 쉽게 구별할 수 있습니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:31
+msgid ""
+"In this topic we will look at how attribute data can help us to make "
+"interesting and informative maps. In the previous topic on vector data, we "
+"briefly explained that **attribute data** are used to **describe vector "
+"features**. Take a look at the house pictures in :numref:`figure_house`."
+msgstr ""
+"이 단원에서는 속성 데이터가 지도를 어떻게 재미있고 이해하기 쉽게 만들 수 있는지를 살펴볼 것입니다. 벡터 데이터에 대한 앞 단원에서는 "
+"**벡터 객체를 설명하기 위해 속성 데이터(attribute data)를 사용** 한다고 간단히 설명했습니다. "
+":numref:`figure_house` 에 있는 집 사진들을 살펴보세요."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:42
+msgid ""
+"Every feature has characteristics that we can describe. These can be visible"
+" things, or things we know about the feature (e.g. year built)."
+msgstr ""
+"모든 객체는 설명 가능한 특징들을 가지고 있습니다. 눈으로 볼 수 있는 특징일 수도 있고 객체에 대해 알고 있는 특징(예: 건축 연도)일"
+" 수도 있죠."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:45
+msgid ""
+"The geometry of these house features is a polygon (based on the floor plan "
+"of the house), the attributes we have recorded are roof colour, whether "
+"there is a balcony, and the year the house was built. Note that attributes "
+"don't have to be visible things --– they can describe things we know about "
+"the feature such as the year it was built. In a GIS Application, we can "
+"represent this feature type in a houses polygon layer, and the attributes in"
+" an attribute table (see :numref:`figure_house_gis`)."
+msgstr ""
+"이런 가옥 객체의 도형은 (가옥의 평면도를 토대로 한) 폴리곤이며, 기록된 속성은 지붕 색상, 발코니 유무 여부, 그리고 해당 가옥이 "
+"건축된 연도입니다. 속성이 꼭 눈에 보이는 특징일 필요는 없다는 사실을 기억하세요. 건축 연도처럼 객체에 대해 알려진 사실을 설명하는 "
+"내용일 수도 있습니다. GIS 응용 프로그램은 가옥 폴리곤 레이어에 이런 객체 유형을, 그리고 속성 테이블에 이런 속성을 표현할 수 "
+"있습니다. (:numref:`figure_house_gis` 참조)"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:58
+msgid ""
+"A houses layer. House features have attributes that describe the houses’ "
+"roof colour and other properties. The attribute table (lower image) lists "
+"the attributes for the house areas shown on the map. When a feature is "
+"highlighted in the table, it will appear as a yellow polygon on the map."
+msgstr ""
+"가옥 레이어입니다. 가옥 객체는 가옥의 지붕 색상 및 기타 속성을 설명하는 속성들을 가지고 있습니다. 속성 테이블은 (아래 그림) 맵 "
+"상에 표시된 가옥들에 대한 속성들을 나열합니다. 표에서 어떤 객체를 강조(선택)하면, 맵 상에서 노란색 폴리곤으로 표시될 것입니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:63
+msgid ""
+"The fact that features have attributes as well geometry in a GIS Application"
+" opens up many possibilities. For example we can use the attribute values to"
+" tell the GIS what colours and style to use when drawing features (see "
+":numref:`figure_style_by_attribute`). The process of setting colours and "
+"drawing styles is often referred to as setting feature **symbology**."
+msgstr ""
+"객체가 도형은 물론 속성도 가지고 있다는 사실은 GIS 응용 프로그램에 수많은 가능성을 열어줍니다. 예를 들어 속성 값을 사용해서 "
+"GIS가 객체를 그릴 때 어떤 색상과 스타일을 사용할지 지정할 수 있습니다. "
+"(:numref:`figure_style_by_attribute` 참조) 색상 및 그리기 스타일을 설정하는 과정을 흔히 객체 "
+"**심볼(symbology)** 설정하기라고 부르곤 합니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:75
+msgid ""
+"In a GIS Application, we can draw features differently depending on their "
+"attributes. On the left we have drawn house polygons with the same colour as"
+" the roof attribute. On the right we colour coded houses according to "
+"whether they have a balcony or not."
+msgstr ""
+"GIS 응용 프로그램에서, 객체를 해당 객체의 속성에 따라 서로 다르게 그릴 수 있습니다. 왼쪽 그림에서는 가옥 폴리곤을 지붕 색상 "
+"속성과 동일한 색상으로 그렸습니다. 오른쪽 그림에서는 가옥에 발코니가 있는지 없는지 여부에 따라 색상을 구별했습니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:80
+msgid ""
+"Attribute data can also be useful when creating **map labels**. Most GIS "
+"Applications will have a facility to select an attribute that should be used"
+" to label each feature."
+msgstr ""
+"**맵 라벨** 을 생성할 때에도 속성 데이터를 유용하게 쓸 수 있습니다. GIS 응용 프로그램 대부분은 각 객체에 라벨을 붙일 때 "
+"사용해야 할 속성을 선택할 수 있는 기능을 가지고 있을 겁니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:84
+msgid ""
+"If you have ever **searched a map** for a place name or a specific feature, "
+"you will know how time consuming it can be. Having attribute data can make "
+"searching for a specific feature quick and easy. In "
+":numref:`figure_search_by_attribute` you can see an example of an attribute "
+"search in a GIS."
+msgstr ""
+"여러분이 어떤 장소의 이름 또는 특정 객체를 찾기 위해 **지도를 뒤져본** 적이 있다면, 그게 얼마나 시간을 잡아먹는지도 알 겁니다. "
+"속성 데이터가 있다면 특정 객체를 빠르고 쉽게 찾을 수 있습니다. :numref:`figure_search_by_attribute` 에서"
+" GIS에서의 속성 검색의 예를 볼 수 있습니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:95
+msgid ""
+"In a GIS Application, we can also search for features based on their "
+"attributes. Here we see a search for houses with black roofs. Results are "
+"shown in yellow in the map, turquoise on the table."
+msgstr ""
+"GIS 응용 프로그램에서는 객체의 속성을 기반으로 객체를 검색할 수도 있습니다. 이 그림은 검은색 지붕을 가진 집들을 검색한 결과입니다."
+" 검색 결과는 맵 상에서 노란색, 속성 테이블에서 청록색으로 표시됩니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:99
+msgid ""
+"Finally, attribute data can be very useful in carrying out **spatial "
+"analysis**. Spatial analysis combines the spatial information stored in the "
+"geometry of features with their attribute information. This allows us to "
+"study features and how they relate to each other. There are many types of "
+"spatial analysis that can be carried out, for example, you could use GIS to "
+"find out how many red roofed houses occur in a particular area. If you have "
+"tree features, you could use GIS to try to find out which species might be "
+"affected if a piece of land is developed. We can use the attributes stored "
+"for water samples along a river course to understand where pollution is "
+"entering into the stream. The possibilities are endless! In a later topic we"
+" will be exploring spatial analysis in more detail."
+msgstr ""
+"마지막으로, 속성 데이터는 **공간 분석** 을 수행하는 데에도 매우 유용합니다. 공간 분석은 객체의 도형에 저장된 공간 정보를 객체의 "
+"속성 정보와 결합합니다. 이런 방식으로 객체는 물론 객체들이 서로 어떻게 관계를 맺고 있는지를 연구할 수 있습니다. 공간 분석을 여러 "
+"가지 유형으로 수행할 수 있는데, 예를 들면 GIS를 이용해서 특정 지역에 빨간색 지붕을 가진 집이 얼마나 자주 나타나는지 알 수도 "
+"있습니다. 수목 객체가 있다면, GIS를 이용해서 어느 토지가 개발되는 경우 어떤 수종이 영향을 받게 되는지 연구해볼 수도 있겠죠. "
+"하천의 흐름을 따라 채취한 강물 샘플에 대한 정보를 저장한 속성을 이용해서 오염수가 어디에서 하천으로 흘러드는지 알 수도 있습니다. 그 "
+"어떤 것도 가능합니다! 다른 단원에서 공간 분석에 대해 더 자세히 살펴보겠습니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:110
+msgid ""
+"Before we move on to attribute data in more detail, let's take a quick "
+"recap."
+msgstr "속성 데이터에 대해 더 자세히 알아보기 전에, 간단히 정리하겠습니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:112
+msgid ""
+"Features are real world things such as roads, property boundaries, "
+"electrical substation sites and so on. A **feature** has a **geometry** "
+"(which determines if it is a **point**, **polyline** or **polygon**) and "
+"**attributes** (which describe the feature). This is shown in "
+":numref:`figure_features_at_glance`."
+msgstr ""
+"객체란 도로, 지적(地籍) 경계, 변전소 부지 등등 실재하는 사물을 말합니다. **객체** 는 (객체가 **포인트** 인지 "
+"**폴리라인** 인지 **폴리곤** 인지 결정하는) **도형** 과 (객체에 대해 설명하는) **속성** 을 가집니다. "
+":numref:`figure_features_at_glance` 이 이를 보여주고 있습니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:123
+msgid "Vector features at a glance."
+msgstr "한눈에 보는 벡터 객체"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:126
+msgid "Attributes in detail"
+msgstr "속성을 더 자세히"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:128
+msgid ""
+"Attributes for a vector feature are stored in a **table**. A table is like a"
+" spreadsheet. Each column in the table is called a **field**. Each row in "
+"the table is a **record**. Table table_house_attributes_ shows a simple "
+"example of how an attribute table looks in a GIS. The records in the "
+"attribute table in a GIS each correspond to one feature. Usually the "
+"information in the attribute table is stored in some kind of database. The "
+"GIS application links the attribute records with the feature geometry so "
+"that you can find records in the table by selecting features on the map, and"
+" find features on the map by selecting features in the table."
+msgstr ""
+"벡터 객체용 속성은 **테이블** 에 저장됩니다. 테이블이란 스프레드시트와 비슷합니다. 테이블의 각 열을 **필드(field)** 라 "
+"하고, 각 행을 **레코드(record)** 라고 부릅니다. numref:`table_house_attributes` 은 GIS에서 속성"
+" 테이블이 어떻게 보이는지에 대한 간단한 예시입니다. GIS에서 속성 테이블에 있는 레코드들은 각각 하나의 객체에 대응합니다. 보통 속성"
+" 테이블의 정보는 일종의 데이터베이스에 저장됩니다. 여러분이 맵 상에서 객체를 선택해서 테이블에 있는 레코드를 찾거나, 테이블에서 객체를"
+" 선택해서 맵 상에 있는 객체를 찾을 수 있도록 GIS 응용 프로그램이 속성 레코드를 객체 도형과 연결시킵니다."
+
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:141
 msgid "Attribute Table"
 msgstr "속성 테이블"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:141
+msgid "Field 1 : YearBuilt"
+msgstr "Field 1 : YearBuilt"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:141
+msgid "Field 2: RoofColour"
+msgstr "Field 2: RoofColour"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:141
+msgid "Field 3: Balcony"
+msgstr "Field 3: Balcony"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:143
+msgid "Record 1"
+msgstr "Record 1"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:143
+msgid "1998"
+msgstr "1998"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:143
+msgid "Red"
+msgstr "Red"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:143
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:147
@@ -50,8 +274,103 @@ msgid "Yes"
 msgstr "○"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:145
+msgid "Record 2"
+msgstr "Record 2"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:145
+msgid "2000"
+msgstr "2000"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:145
+msgid "Black"
+msgstr "Black"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:145
 msgid "No"
 msgstr "Ｘ"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:147
+msgid "Record 3"
+msgstr "Record 3"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:147
+msgid "2001"
+msgstr "2001"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:147
+msgid "Silver"
+msgstr "Silver"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:150
+msgid ""
+"Table House Attributes: An attribute table has fields (columns) and records "
+"(in rows)."
+msgstr "가옥 속성 테이블: 속성 테이블은 필드(열)와 (행에 있는) 레코드를 가집니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:153
+msgid ""
+"Each field in the attribute table contains contains a specific type of data "
+"–-- text, numeric or date. Deciding what attributes to use for a feature "
+"requires some thought and planning. In our house example earlier on in this "
+"topic, we chose roof colour, presence of a balcony and month of construction"
+" as attributes of interest. We could just as easily have chosen other "
+"aspects of a house such as:"
+msgstr ""
+"속성 테이블의 각 필드는 특정 유형의 데이터를 (텍스트, 숫자, 또는 날짜를) 담고 있습니다. 어떤 객체에 대해 어떤 속성을 사용할지 "
+"결정하기 위해서는 약간의 생각과 계획이 필요합니다. 앞에 있는 가옥 예시에서는 우리가 관심을 가질 속성으로 지붕 색깔, 발코니의 유무, "
+"그리고 건축 연도를 선택했습니다. 물론 다음과 같은 가옥의 다른 측면도 똑같이 쉽게 선택할 수 있었을 겁니다:"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:159
+msgid "number of levels"
+msgstr "층수"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:160
+msgid "number of rooms"
+msgstr "방의 개수"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:161
+msgid "number of occupants"
+msgstr "거주자의 명수"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:162
+msgid "type of dwelling (RDP House, block of flats, shack, brick house, etc)"
+msgstr "거주지 유형 (공공임대주택, 단독주택, 판자촌, 벽돌집 등등)"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:163
+msgid "year the house was built"
+msgstr "건축 연도"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:164
+msgid "area of floor space in the house"
+msgstr "가옥의 건면적"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:165
+msgid "and so on...."
+msgstr "기타 등등..."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:167
+msgid ""
+"With so many options, how do we make a good choice as to what attributes are"
+" needed for a feature? It usually boils down to what you plan to do with the"
+" data. If you want to produce a colour coded map showing houses by age, it "
+"will make sense to have a 'Year Built' attribute for your feature. If you "
+"know for sure you will never use this type of map, it is better to not store"
+" the information. Collecting and storing unneeded information is a bad idea "
+"because of the cost and time required to research and capture the "
+"information. Very often we obtain vector data from companies, friends or the"
+" government. In these cases it is usually not possible to request specific "
+"attributes and we have to make do with what we get."
+msgstr ""
+"이렇게 많은 옵션들 가운데, 어떤 객체에 어떤 속성이 필요할지 어떻게 잘 선택할 수 있을까요? 이 질문의 답은 보통 여러분이 데이터를 "
+"가지고 어떤 작업을 할 계획인지에 달려 있습니다. 가옥을 건축물 연령에 따라 다른 색상으로 표현한 맵을 생산하고 싶다면, 객체에 대해 "
+"'건축 연도' 속성을 선택하는 것이 적합할 것입니다. 아니면 그런 맵을 절대 사용할 일이 없을 거라고 확신한다면, 해당 정보를 빼는 편이"
+" 낫겠죠. 필요하지도 않은 정보를 수집하고 저장하는 것은, 그 정보를 조사하고 획득하는 데 필요한 비용 및 시간을 고려할 때, 좋지 않은"
+" 생각입니다. 회사, 동료 또는 정부로부터 벡터 데이터를 받는 경우가 매우 많기 때문에, 특정 속성을 요구할 수 없는 경우가 태반이라 "
+"우리는 받은 데이터의 한계 안에서 작업해야만 합니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:179
+msgid "Single Symbols"
+msgstr "단일 심볼"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:260
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:297
