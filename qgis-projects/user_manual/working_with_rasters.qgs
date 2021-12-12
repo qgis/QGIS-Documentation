@@ -1,4 +1,4 @@
-<qgis projectname="" saveDateTime="2021-11-20T09:46:08" saveUser="delazj" saveUserFull="DelazJ" version="3.22.0-Białowieża">
+<qgis projectname="" saveDateTime="2021-12-13T00:03:30" saveUser="delazj" saveUserFull="DelazJ" version="3.22.1-Białowieża">
   <homePath path=""></homePath>
   <title></title>
   <autotransaction active="0"></autotransaction>
@@ -92,33 +92,8 @@
   </legend>
   <mapViewDocks></mapViewDocks>
   <mapViewDocks3D></mapViewDocks3D>
-  <mapcanvas annotationsVisible="1" name="mAreaCanvas">
-    <units>feet</units>
-    <extent>
-      <xmin>-5493610.65535192284733057</xmin>
-      <ymin>-1166453.2444174624979496</ymin>
-      <xmax>7732289.21049975138157606</xmax>
-      <ymax>9344894.76755359396338463</ymax>
-    </extent>
-    <rotation>0</rotation>
-    <destinationsrs>
-      <spatialrefsys>
-        <wkt>PROJCRS["NAD27 / Alaska Albers",BASEGEOGCRS["NAD27",DATUM["North American Datum 1927",ELLIPSOID["Clarke 1866",6378206.4,294.978698213898,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4267]],CONVERSION["Alaska Albers",METHOD["Albers Equal Area",ID["EPSG",9822]],PARAMETER["Latitude of false origin",50,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8821]],PARAMETER["Longitude of false origin",-154,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8822]],PARAMETER["Latitude of 1st standard parallel",55,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8823]],PARAMETER["Latitude of 2nd standard parallel",65,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8824]],PARAMETER["Easting at false origin",0,LENGTHUNIT["US survey foot",0.304800609601219],ID["EPSG",8826]],PARAMETER["Northing at false origin",0,LENGTHUNIT["US survey foot",0.304800609601219],ID["EPSG",8827]]],CS[Cartesian,2],AXIS["easting (X)",east,ORDER[1],LENGTHUNIT["US survey foot",0.304800609601219]],AXIS["northing (Y)",north,ORDER[2],LENGTHUNIT["US survey foot",0.304800609601219]],USAGE[SCOPE["unknown"],AREA["USA - Alaska"],BBOX[51.3,172.42,71.4,-129.99]],ID["EPSG",2964]]</wkt>
-        <proj4>+proj=aea +lat_0=50 +lon_0=-154 +lat_1=55 +lat_2=65 +x_0=0 +y_0=0 +datum=NAD27 +units=us-ft +no_defs</proj4>
-        <srsid>932</srsid>
-        <srid>2964</srid>
-        <authid>EPSG:2964</authid>
-        <description>NAD27 / Alaska Albers</description>
-        <projectionacronym>aea</projectionacronym>
-        <ellipsoidacronym>EPSG:7008</ellipsoidacronym>
-        <geographicflag>false</geographicflag>
-      </spatialrefsys>
-    </destinationsrs>
-    <rendermaptile>0</rendermaptile>
-    <expressionContextScope></expressionContextScope>
-  </mapcanvas>
   <main-annotation-layer autoRefreshEnabled="0" autoRefreshTime="0" legendPlaceholderImage="" refreshOnNotifyEnabled="0" refreshOnNotifyMessage="" type="annotation">
-    <id>Annotations_5f8579b4_932d_4832_84ef_4ba2b50d3def</id>
+    <id>Annotations_42af4397_eea7_4e79_8bff_8c741f6beb9a</id>
     <datasource></datasource>
     <keywordList>
       <value></value>
@@ -432,7 +407,7 @@
       </pipe>
       <blendMode>0</blendMode>
     </maplayer>
-    <maplayer autoRefreshEnabled="0" autoRefreshTime="0" hasScaleBasedVisibilityFlag="0" legendPlaceholderImage="" maxScale="inf" minScale="1e+08" refreshOnNotifyEnabled="0" refreshOnNotifyMessage="" styleCategories="AllStyleCategories" type="raster">
+    <maplayer autoRefreshEnabled="0" autoRefreshTime="0" hasScaleBasedVisibilityFlag="0" legendPlaceholderImage="" maxScale="1000" minScale="1e+08" refreshOnNotifyEnabled="0" refreshOnNotifyMessage="" styleCategories="AllStyleCategories" type="raster">
       <extent>
         <xmin>-7117600</xmin>
         <ymin>1367760</ymin>
@@ -475,6 +450,15 @@
         <type></type>
         <title></title>
         <abstract></abstract>
+        <contact>
+          <name></name>
+          <organization></organization>
+          <position></position>
+          <voice></voice>
+          <fax></fax>
+          <email></email>
+          <role></role>
+        </contact>
         <links></links>
         <fees></fees>
         <encoding></encoding>
@@ -491,7 +475,15 @@
             <geographicflag>false</geographicflag>
           </spatialrefsys>
         </crs>
-        <extent></extent>
+        <extent>
+          <spatial crs="" dimensions="2" maxx="0" maxy="0" maxz="0" minx="0" miny="0" minz="0"></spatial>
+          <temporal>
+            <period>
+              <start></start>
+              <end></end>
+            </period>
+          </temporal>
+        </extent>
       </resourceMetadata>
       <provider>gdal</provider>
       <noData>
@@ -507,14 +499,16 @@
         <Searchable>1</Searchable>
         <Private>0</Private>
       </flags>
-      <temporal enabled="0" fetchMode="0" mode="0">
+      <temporal enabled="1" fetchMode="0" mode="0">
         <fixedRange>
-          <start></start>
-          <end></end>
+          <start>1980-11-01T23:00:00Z</start>
+          <end>2020-12-31T23:00:00Z</end>
         </fixedRange>
       </temporal>
       <customproperties>
         <Option type="Map">
+          <Option name="WMSBackgroundLayer" type="bool" value="false"></Option>
+          <Option name="WMSPublishDataSourceUrl" type="bool" value="false"></Option>
           <Option name="embeddedWidgets/count" type="QString" value="0"></Option>
           <Option name="identify/format" type="QString" value="Value"></Option>
         </Option>
@@ -530,7 +524,7 @@
         <provider>
           <resampling enabled="false" maxOversampling="2" zoomedInResamplingMethod="nearestNeighbour" zoomedOutResamplingMethod="nearestNeighbour"></resampling>
         </provider>
-        <rasterrenderer alphaBand="0" band="1" nodataColor="" opacity="1" type="paletted">
+        <rasterrenderer alphaBand="-1" band="1" nodataColor="" opacity="1" type="paletted">
           <rasterTransparency>
             <singleValuePixelList>
               <pixelListEntry max="0" min="0" percentTransparent="20"></pixelListEntry>
@@ -706,7 +700,7 @@
   <Bookmarks></Bookmarks>
   <ProjectViewSettings UseProjectScales="0">
     <Scales></Scales>
-    <DefaultViewExtent xmax="7732289.21049975138157606" xmin="-5493610.65535192284733057" ymax="9588626.4392594899982214" ymin="-1410184.91612335853278637">
+    <DefaultViewExtent xmax="7732289.21049975138157606" xmin="-5493610.65535192284733057" ymax="9466417.42419968172907829" ymin="-1287975.90106354933232069">
       <spatialrefsys>
         <wkt>PROJCRS["NAD27 / Alaska Albers",BASEGEOGCRS["NAD27",DATUM["North American Datum 1927",ELLIPSOID["Clarke 1866",6378206.4,294.978698213898,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4267]],CONVERSION["Alaska Albers",METHOD["Albers Equal Area",ID["EPSG",9822]],PARAMETER["Latitude of false origin",50,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8821]],PARAMETER["Longitude of false origin",-154,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8822]],PARAMETER["Latitude of 1st standard parallel",55,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8823]],PARAMETER["Latitude of 2nd standard parallel",65,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8824]],PARAMETER["Easting at false origin",0,LENGTHUNIT["US survey foot",0.304800609601219],ID["EPSG",8826]],PARAMETER["Northing at false origin",0,LENGTHUNIT["US survey foot",0.304800609601219],ID["EPSG",8827]]],CS[Cartesian,2],AXIS["easting (X)",east,ORDER[1],LENGTHUNIT["US survey foot",0.304800609601219]],AXIS["northing (Y)",north,ORDER[2],LENGTHUNIT["US survey foot",0.304800609601219]],USAGE[SCOPE["unknown"],AREA["USA - Alaska"],BBOX[51.3,172.42,71.4,-129.99]],ID["EPSG",2964]]</wkt>
         <proj4>+proj=aea +lat_0=50 +lon_0=-154 +lat_1=55 +lat_2=65 +x_0=0 +y_0=0 +datum=NAD27 +units=us-ft +no_defs</proj4>
