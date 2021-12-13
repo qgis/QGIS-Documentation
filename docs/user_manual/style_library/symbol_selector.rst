@@ -324,6 +324,9 @@ layer types:
   shapeburst to render the arrow body. Combined with the geometry generator,
   this type of layer symbol helps you representing flow maps.
 * **Geometry generator** (see :ref:`geometry_generator_symbol`)
+
+.. _interpolated_line_symbol:
+
 * **Interpolated line**: allows to render a line whose :guilabel:`Stroke width`
   and/or :guilabel:`Color` may be constant (given a :guilabel:`Fixed width` and
   :guilabel:`Single color` parameters) or vary along the geometry.
