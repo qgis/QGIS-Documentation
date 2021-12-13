@@ -303,9 +303,9 @@ visualization options of contours for the selected group, as shown in
 * Enter the range of values you want to represent on the current group:
   use |refresh| :sup:`Load` to fetch the min and max values of the current group
   or enter custom values if you want to exclude some.
-* Select the :guilabel:`Resampling method` to interpolate the values on
-  the surrounding vertices to the faces (or from the surrounding faces to
-  the vertices) using the :guilabel:`Neighbour average` method. Depending on
+* For 2D/3D meshes, select the :guilabel:`Resampling method` to interpolate the
+  values on the surrounding vertices to the faces (or from the surrounding faces
+  to the vertices) using the :guilabel:`Neighbour average` method. Depending on
   whether the dataset is defined on the vertices (respectively on the faces),
   QGIS defaults this setting to :guilabel:`None` (respectively :guilabel:`Neighbour average`)
   method in order to use values on vertices and keep the default rendering smooth.
