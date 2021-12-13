@@ -296,7 +296,12 @@ visualization options of contours for the selected group, as shown in
   group.
 * Use |refresh| :sup:`Load` to adjust the min and max values of the current group
   or enter custom values if you want to exclude some.
-* Select the :guilabel:`Resampling method`
+* Select the :guilabel:`Resampling method` to interpolate the values on
+  the surrounding vertices to the faces (or from the surrounding faces to
+  the vertices) using the :guilabel:`Neighbour average` method. Depending on
+  whether the dataset is defined on the vertices (respectively on the faces),
+  QGIS defaults this setting to :guilabel:`None` (respectively :guilabel:`Neighbour average`)
+  method in order to use values on vertices and keep the default rendering smooth.
 * Classify the dataset using the :ref:`color ramp shader <color_ramp_shader>`
   classification.
 
