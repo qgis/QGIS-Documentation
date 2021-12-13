@@ -225,11 +225,14 @@ The criteria for adding features to the resulting layer is based on
 the spatial relationship between each feature and the features in an
 additional layer.
 
+.. seealso:: :ref:`qgisselectbylocation`, :ref:`qgisextractwithindistance`
+
+Exploring spatial relations
+...........................
+
 .. include:: ../algs_include.rst
    :start-after: **geometric_predicates**
    :end-before: **end_geometric_predicates**
-
-.. seealso:: :ref:`qgisselectbylocation`, :ref:`qgisextractwithindistance`
 
 Parameters
 ..........
@@ -914,13 +917,16 @@ The criteria for selecting features is based on the spatial
 relationship between each feature and the features in an additional
 layer.
 
-.. include:: ../algs_include.rst
-   :start-after: **geometric_predicates**
-   :end-before: **end_geometric_predicates**
-
 **Default menu**: :menuselection:`Vector --> Research Tools`
 
 .. seealso:: :ref:`qgisextractbylocation`, :ref:`qgisselectwithindistance`
+
+Exploring spatial relations
+...........................
+
+.. include:: ../algs_include.rst
+   :start-after: **geometric_predicates**
+   :end-before: **end_geometric_predicates**
 
 Parameters
 ..........
