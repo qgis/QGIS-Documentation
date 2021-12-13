@@ -1538,6 +1538,13 @@ layer that are added to each feature from the first layer.
 .. seealso:: :ref:`qgisjoinbynearest`,
    :ref:`qgisjoinattributestable`, :ref:`qgisjoinbylocationsummary`
 
+Exploring spatial relations
+...........................
+
+.. include:: ../algs_include.rst
+   :start-after: **geometric_predicates**
+   :end-before: **end_geometric_predicates**
+
 Parameters
 ..........
 
@@ -1692,6 +1699,13 @@ matching features in the second layer (e.g. maximum value, mean value,
 etc).
 
 .. seealso:: :ref:`qgisjoinattributesbylocation`
+
+Exploring spatial relations
+...........................
+
+.. include:: ../algs_include.rst
+   :start-after: **geometric_predicates**
+   :end-before: **end_geometric_predicates**
 
 Parameters
 ..........
