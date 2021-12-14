@@ -112,7 +112,7 @@ Mesh Dataset Properties
 =======================
 
 The :guilabel:`Layer Properties` dialog for a mesh layer provides general
-settings to manage dataset groups of the layer and theirrendering
+settings to manage dataset groups of the layer and their rendering
 (active dataset groups, symbology, 2D and 3D rendering).
 It also provides information about the layer.
 
@@ -295,9 +295,13 @@ visualization options of contours for the selected group, as shown in
 
    Styling Contours in a Mesh Layer
 
+* For 1D mesh, set the :guilabel:`Stroke width` of the edges. This can be
+  a fixed size for the whole dataset, or vary along the geometry (more details
+  with the :ref:`interpolated line renderer <interpolated_line_symbol>`)
 * Use the slider or the spinbox to set the :guilabel:`Opacity` of the current
-  group.
-* Use |refresh| :sup:`Load` to adjust the min and max values of the current group
+  group, if of a 2D mesh type.
+* Enter the range of values you want to represent on the current group:
+  use |refresh| :sup:`Load` to fetch the min and max values of the current group
   or enter custom values if you want to exclude some.
 * Select the :guilabel:`Resampling method`
 * Classify the dataset using the :ref:`color ramp shader <color_ramp_shader>`
@@ -376,23 +380,22 @@ Rendering
 .........
 
 In the tab |meshframe| :sup:`Rendering` tab, QGIS offers possibilities to
-display the grid, as shown in :numref:`figure_mesh_symbology_grid`:
+display and customize the mesh structure. :guilabel:`Line width` and
+:guilabel:`Line color` can be set to represent:
 
-* ``Native Mesh Rendering`` that shows original faces and edges from the layer
-* ``Triangular Mesh Rendering`` that adds more edges and displays the faces as
-  triangles
+* the edges for 1D meshes
+* For 2D meshes:
 
+  * :guilabel:`Native mesh rendering`: shows original faces and edges from the layer
+  * :guilabel:`Triangular mesh rendering`: adds more edges and displays the faces as
+    triangles
 
 .. _figure_mesh_symbology_grid:
 
 .. figure:: img/mesh_symbology_grid.png
    :align: center
 
-   Mesh Rendering
-
-
-The lines width and color can be changed in this dialog, and both the grid
-renderings can be turned off.
+   2D Mesh Rendering
 
 
 .. _mesh_stacked_averaging:
