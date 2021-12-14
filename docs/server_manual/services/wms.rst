@@ -71,6 +71,8 @@ REQUEST
 
 This parameter is ``GetCapabilities`` in case of the **GetCapabilities**
 request.
+
+
 .. _`qgisserver-wms-getmap`:
 
 GetMap
