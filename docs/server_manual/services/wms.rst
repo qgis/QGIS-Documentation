@@ -66,8 +66,7 @@ URL example:
 
 .. _`wms-getcapabilities-request`:
 
-REQUEST
-^^^^^^^
+**REQUEST**
 
 This parameter is ``GetCapabilities`` in case of the **GetCapabilities**
 request.
