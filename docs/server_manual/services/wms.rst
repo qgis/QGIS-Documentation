@@ -839,11 +839,11 @@ WMS 1.1.1 and 1.3.0 specifications:
    ":ref:`LAYERS <wms-layers>` ", "Yes", "Layers to display"
    ":ref:`STYLES <wms-styles>`", "No", "Layers' style"
    ":ref:`SRS / CRS <wms-srs>`", "No", "Coordinate reference system"
-   ":ref:`BBOX <wms-bbox>`", "No", "Map extent"
-   ":ref:`WIDTH <wms-width>`", "No", "Width of the image in pixels"
-   ":ref:`HEIGHT <wms-height>`", "No", "Height of the image in pixels"
-   ":ref:`FORMAT <wms-getmap-format>`", "No", "Legend format"
-   ":ref:`TRANSPARENT <wms-transparent>`", "No", "Transparent background"
+   ":ref:`BBOX <wms-getlegendgraphics-bbox>`", "No", "Map extent"
+   ":ref:`WIDTH <wms-getlegendgraphics-width>`", "No", "Width of the image in pixels"
+   ":ref:`HEIGHT <wms-getlegendgraphics-height>`", "No", "Height of the image in pixels"
+   ":ref:`FORMAT <wms-getlegendgraphics-format>`", "No", "Legend format"
+   ":ref:`TRANSPARENT <wms-getlegendgraphics-transparent>`", "No", "Transparent background"
 
 In addition to the standard ones, QGIS Server supports extra parameters to
 change the size of the legend elements:
@@ -866,7 +866,6 @@ or the font properties for layer titles and item labels:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`RULELABEL <wms-getlegendgraphics-rulelabel>`", "No", ""
    ":ref:`LAYERTITLE <wms-getlegendgraphics-layertitle>`", "No", ""
    ":ref:`LAYERFONTFAMILY <wms-getlegendgraphics-layerfontfamily>`", "No", ""
    ":ref:`LAYERFONTBOLD <wms-getlegendgraphics-layerfontbold>`", "No", ""
@@ -878,35 +877,145 @@ or the font properties for layer titles and item labels:
    ":ref:`ITEMFONTSIZE <wms-getlegendgraphics-itemfontsize>`", "No", ""
    ":ref:`ITEMFONTITALIC <wms-getlegendgraphics-itemfontitalic>`", "No", ""
    ":ref:`ITEMFONTCOLOR <wms-getlegendgraphics-itemfontcolor>`", "No", ""
+   ":ref:`RULELABEL <wms-getlegendgraphics-rulelabel>`", "No", ""
 
-* **BOXSPACE** space between legend frame and content (mm)
-* **FORMAT**, ``image/jpeg``, ``image/png`` or ``application/json``.
-  For JSON, symbols are encoded with Base64 and most other options related to
-  layout or fonts are not taken into account because the legend must be built
-  on the client side.
-* **LAYERSPACE** vertical space between layers (mm)
-* **LAYERTITLESPACE** vertical space between layer title and items
-  following (mm)
-* **SYMBOLSPACE** vertical space between symbol and item following
-  (mm)
-* **ICONLABELSPACE** horizontal space between symbol and label text
-  (mm)
-* **SYMBOLWIDTH** width of the symbol preview (mm)
-* **SYMBOLHEIGHT** height of the symbol preview (mm)
+.. _`wms-getlegendgraphics-request`:
+
+REQUEST
+^^^^^^^
+
+This parameter is ``GetLegendGraphics`` in case of the **GetLegendGraphics** request.
 
 
-* **LAYERFONTFAMILY / ITEMFONTFAMILY** font family for layer
-  title / item text
-* **LAYERFONTBOLD / ITEMFONTBOLD** ``TRUE`` to use a bold font
-* **LAYERFONTSIZE / ITEMFONTSIZE** Font size in point
-* **LAYERFONTITALIC / ITEMFONTITALIC** ``TRUE`` to use italic font
-* **LAYERFONTCOLOR / ITEMFONTCOLOR** Hex color code (e.g. ``#FF0000``
+BBOX
+^^^^
+
+
+WIDTH
+^^^^^
+
+
+HEIGHT
+^^^^^^
+
+FORMAT
+^^^^^^
+
+
+TRANSPARENT
+^^^^^^^^^^^
+
+
+BOXSPACE
+^^^^^^^^
+
+Space between legend frame and content (mm).
+
+
+FORMAT
+^^^^^^
+
+``image/jpeg``, ``image/png`` or ``application/json``.
+For JSON, symbols are encoded with Base64 and most other options related to
+layout or fonts are not taken into account because the legend must be built
+on the client side.
+
+
+LAYERSPACE
+^^^^^^^^^^
+
+Vertical space between layers (mm)
+
+
+LAYERTITLESPACE
+^^^^^^^^^^^^^^^
+
+Vertical space between layer title and items following (mm)
+
+
+SYMBOLSPACE
+^^^^^^^^^^^
+
+Vertical space between symbol and item following (mm)
+
+
+ICONLABELSPACE
+^^^^^^^^^^^^^^
+
+Horizontal space between symbol and label text (mm)
+
+
+SYMBOLWIDTH
+^^^^^^^^^^^
+
+Width of the symbol preview (mm).
+
+
+SYMBOLHEIGHT
+^^^^^^^^^^^^
+
+Height of the symbol preview (mm).
+
+
+LAYERTITLE
+^^^^^^^^^^
+
+``FALSE`` to get only the legend graphics without layer title
+
+
+LAYERFONTFAMILY
+^^^^^^^^^^^^^^^
+
+
+LAYERFONTBOLD
+^^^^^^^^^^^^^
+
+LAYERFONTSIZE
+^^^^^^^^^^^^^
+
+LAYERFONTITALIC
+^^^^^^^^^^^^^^^
+
+LAYERFONTCOLOR
+^^^^^^^^^^^^^^
+
+ITEMFONTFAMILY
+^^^^^^^^^^^^^^
+
+font family for layer title / item text
+
+
+ITEMFONTBOLD
+^^^^^^^^^^^^
+
+``TRUE`` to use a bold font
+
+
+ITEMFONTSIZE
+^^^^^^^^^^^^
+
+Font size in point
+
+
+ITEMFONTITALIC
+^^^^^^^^^^^^^^
+
+``TRUE`` to use italic font
+
+
+ITEMFONTCOLOR
+^^^^^^^^^^^^^
+
+Hex color code (e.g. ``#FF0000``
   for red)
-* **LAYERTITLE** ``FALSE`` to get only the legend graphics without layer title
-* **RULELABEL**:
+
+
+RULELABEL
+^^^^^^^^^
 
   * ``FALSE`` legend graphics without item labels
   * ``AUTO`` hide item label for layers with :guilabel:`Single symbol` rendering
+
 
 Content based legend. These parameters let the client request a legend
 showing only the symbols for the features falling into the requested
