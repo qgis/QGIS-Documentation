@@ -826,8 +826,58 @@ Available values are (not case sensitive):
 GetLegendGraphics
 -----------------
 
-Several additional parameters are available to change the size of the
-legend elements:
+Standard parameters for the **GetLegendGraphics** request according to the OGC
+WMS 1.1.1 and 1.3.0 specifications:
+
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: auto
+
+   ":ref:`SERVICE <wms-service>`", "Yes", "Name of the service (**WMS**)"
+   ":ref:`VERSION <wms-version>`", "No", "Version of the service"
+   ":ref:`REQUEST <wms-getlegendgraphics-request>`", "Yes", "Name of the request (**GetLegendGraphics**)"
+   ":ref:`LAYERS <wms-layers>` ", "Yes", "Layers to display"
+   ":ref:`STYLES <wms-styles>`", "No", "Layers' style"
+   ":ref:`SRS / CRS <wms-srs>`", "No", "Coordinate reference system"
+   ":ref:`BBOX <wms-bbox>`", "No", "Map extent"
+   ":ref:`WIDTH <wms-width>`", "No", "Width of the image in pixels"
+   ":ref:`HEIGHT <wms-height>`", "No", "Height of the image in pixels"
+   ":ref:`FORMAT <wms-getmap-format>`", "No", "Legend format"
+   ":ref:`TRANSPARENT <wms-transparent>`", "No", "Transparent background"
+
+In addition to the standard ones, QGIS Server supports extra parameters to
+change the size of the legend elements:
+
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: auto
+
+   ":ref:`BOXSPACE <wms-getlegendgraphics-boxspace>`", "No", "Space between legend frame and content (mm)"
+   ":ref:`LAYERSPACE <wms-getlegendgraphics-layerspace>`", "No", "Vertical space between layers (mm)"
+   ":ref:`LAYERTITLESPACE <wms-getlegendgraphics-layerspace>`", "No", "Vertical space between layer title and items (mm)"
+   ":ref:`SYMBOLSPACE <wms-getlegendgraphics-symbolspace>`", "No", "Vertical space between symbol and items (mm)"
+   ":ref:`ICONLABELSPACE <wms-getlegendgraphics-iconlabelspace>`", "No", "Horizontal space between symbol and label (mm)"
+   ":ref:`SYMBOLWIDTH <wms-getlegendgraphics-symbolwidth>`", "No", "Width of the symbol preview (mm)"
+   ":ref:`SYMBOLHEIGHT <wms-getlegendgraphics-symbolheight>`", "No", "Height of the symbol preview (mm)"
+
+or the font properties for layer titles and item labels:
+
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: auto
+
+   ":ref:`RULELABEL <wms-getlegendgraphics-rulelabel>`", "No", ""
+   ":ref:`LAYERTITLE <wms-getlegendgraphics-layertitle>`", "No", ""
+   ":ref:`LAYERFONTFAMILY <wms-getlegendgraphics-layerfontfamily>`", "No", ""
+   ":ref:`LAYERFONTBOLD <wms-getlegendgraphics-layerfontbold>`", "No", ""
+   ":ref:`LAYERFONTSIZE <wms-getlegendgraphics-layerfontsize>`", "No", ""
+   ":ref:`LAYERFONTITALIC <wms-getlegendgraphics-layerfontitalic>`", "No", ""
+   ":ref:`LAYERFONTCOLOR <wms-getlegendgraphics-layerfontcolor>`", "No", ""
+   ":ref:`ITEMFONTFAMILY <wms-getlegendgraphics-itemfontfamily>`", "No", ""
+   ":ref:`ITEMFONTBOLD <wms-getlegendgraphics-itemfontbold>`", "No", ""
+   ":ref:`ITEMFONTSIZE <wms-getlegendgraphics-itemfontsize>`", "No", ""
+   ":ref:`ITEMFONTITALIC <wms-getlegendgraphics-itemfontitalic>`", "No", ""
+   ":ref:`ITEMFONTCOLOR <wms-getlegendgraphics-itemfontcolor>`", "No", ""
 
 * **BOXSPACE** space between legend frame and content (mm)
 * **FORMAT**, ``image/jpeg``, ``image/png`` or ``application/json``.
@@ -844,8 +894,6 @@ legend elements:
 * **SYMBOLWIDTH** width of the symbol preview (mm)
 * **SYMBOLHEIGHT** height of the symbol preview (mm)
 
-These parameters change the font properties for layer titles and item
-labels:
 
 * **LAYERFONTFAMILY / ITEMFONTFAMILY** font family for layer
   title / item text
