@@ -121,6 +121,21 @@ particularly useful for naming output data objects according to input ones.
 
    Batch Processing File Path
 
+If the batch processing has more options than just input and output layers
+there are additional :guilabel:`Autofill...` options available:
+
+* :guilabel:`Fill Down` will take the input for the first process and enter
+  it for all other processes.
+* :guilabel:`Calculate by Expression...` will set the input value in regard
+  to the chosen expression. 
+* :guilabel:`Add Values by Expression...` will add new rows using the values
+  from an expression.
+
+.. tip:: **Add Values by Expression...**
+
+  The intended use case for :guilabel:`Add Values by Expression...` is to
+  populate the batch dialog using complex numeric series, e.g. those
+  created by the "generate_series" expression function. 
 
 Executing the batch process
 ---------------------------
