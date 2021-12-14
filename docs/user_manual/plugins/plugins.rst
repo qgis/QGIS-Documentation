@@ -87,7 +87,9 @@ You can use the following options:
   'once a day', 'every 3 days', 'every week', 'every 2 weeks' or 'every month'.
 * |checkbox| :guilabel:`Show also experimental plugins`. QGIS will show you
   plugins in early stages of development, which are generally unsuitable for
-  production use.
+  production use. Besides the possibility to choose an experimental plugin,
+  you will now have the selection between the the stable and the experimental
+  version if the plugin provides both.
 * |checkbox| :guilabel:`Show also deprecated plugins`. Because they use
   functions that are no longer available in QGIS, these plugins are set
   deprecated and generally unsuitable for production use. They appear among
@@ -124,7 +126,12 @@ plugins. Use :guilabel:`Upgrade All` to look for new versions of the plugins.
 Furthermore, you can use :guilabel:`Install Plugin` if a plugin is listed but not
 installed, :guilabel:`Uninstall Plugin` as well as :guilabel:`Reinstall Plugin` if a plugin
 is installed. An installed plugin can be temporarily de/activated using the
-checkbox.
+checkbox. If the |checkbox| :guilabel:`Show also experimental plugins` is
+set, for plugins with an experimental version, there is the additional option to
+:guilabel:`Install Experimental Plugin`, if the experimental version is
+installed you can :guilabel:`Downgrade Plugin` to the stable version and
+:guilabel:`Reinstall Experimental Plugin` or if the stable version is
+installed :guilabel:`Upgrade Experimental Plugin`.
 
 .. _figure_plugins_all:
 
@@ -141,7 +148,13 @@ In the |pluginInstalled| :guilabel:`Installed` tab, you'll find listed the Core
 plugins, that you can not uninstall. You can extend this list with external
 plugins that can be uninstalled and reinstalled any time, using the
 :guilabel:`Uninstall Plugin` and :guilabel:`Reinstall Plugin` buttons.
-You can :guilabel:`Upgrade All` the plugins here as well.
+You can :guilabel:`Upgrade All` the plugins here as well. If the
+|checkbox| :guilabel:`Show also experimental plugins` is set, for plugins
+with an experimental version, there is the additional option to
+:guilabel:`Install Experimental Plugin`, if the experimental version is
+installed you can :guilabel:`Downgrade Plugin` to the stable version and
+:guilabel:`Reinstall Experimental Plugin` or if the stable version is
+installed :guilabel:`Upgrade Experimental Plugin`.
 
 .. _figure_plugins_installed:
 
@@ -156,6 +169,9 @@ The Not installed tab
 The |plugin| :guilabel:`Not installed` tab lists all plugins available that
 are not installed.
 You can use the :guilabel:`Install Plugin` button to implement a plugin into QGIS.
+If the |checkbox| :guilabel:`Show also experimental plugins` is set, for
+plugins with an experimental version, there is the additional option to
+:guilabel:`Install Experimental Plugin`
 
 .. _figure_plugins_not_installed:
 
