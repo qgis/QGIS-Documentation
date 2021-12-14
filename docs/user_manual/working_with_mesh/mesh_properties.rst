@@ -13,7 +13,7 @@ What's a mesh?
 ==============
 
 A mesh is an unstructured grid usually with temporal and other components.
-The spatial component contains a collection of vertices, edges and faces
+The spatial component contains a collection of vertices, edges and/or faces,
 in 2D or 3D space:
 
 * **vertices** - XY(Z) points (in the layer's coordinate reference system)
@@ -21,6 +21,17 @@ in 2D or 3D space:
 * **faces** - a face is a set of edges forming a closed shape - typically
   a triangle or a quadrilateral (quad), rarely polygons with more vertices
 
+Relying on the above, mesh layers can thus have different types of structure:
+
+* 1D Meshes: consist of vertices and edges. An edge connects two vertices and
+  can have assigned data (scalars or vectors) on it. The 1D mesh network can
+  be for example used for modelling of an urban drainage system.
+* 2D meshes: consist of faces with triangles, regular or unstructured quads.
+* 3D layered meshes: consist of multiple stacked 2D unstructured meshes each
+  extruded in the vertical direction (levels) by means of a vertical coordinate.
+  The vertices and faces have the same topology in each vertical level.
+  The mesh definition (vertical level extrusion) could in general change in time.
+  The data is usually defined in volume centres or by some parametric function.
 
 .. _figure_mesh_grid_types:
 
@@ -28,8 +39,6 @@ in 2D or 3D space:
    :align: center
 
    Different mesh types
-
-QGIS can currently render mesh data using triangles or regular quads.
 
 Mesh provides information about the spatial structure.
 In addition, the mesh can have datasets (groups) that assign a value to every vertex.
@@ -87,16 +96,10 @@ For such quantities it is desirable to display arrows indicating the directions.
 Supported formats
 =================
 
-QGIS accesses mesh data using the `MDAL drivers <https://github.com/lutraconsulting/MDAL>`_.
-Hence, the natively supported formats are:
-
-* ``NetCDF``: Generic format for scientific data
-* ``GRIB``: Format commonly used in meteorology
-* ``XMDF``: As an example, hydraulic outputs from TUFLOW modelling package
-* ``DAT``: Outputs of various hydrodynamic modelling packages (e.g. BASEMENT, HYDRO_AS-2D, TUFLOW)
-* ``3Di``: 3Di modelling package format based on Climate and Forecast Conventions (http://cfconventions.org/)
-* Some examples of mesh datasets can be found at https://apps.ecmwf.int/datasets/data/interim-full-daily/levtype=sfc/
-
+QGIS accesses mesh data using the `MDAL drivers <https://github.com/lutraconsulting/MDAL>`_,
+and natively supports a `variety of formats <https://github.com/lutraconsulting/MDAL#supported-formats>`_.
+Whether QGIS can edit a mesh layer depends on the format and the mesh
+structure type.
 
 To load a mesh dataset into QGIS, use the |addMeshLayer| :guilabel:`Mesh` tab
 in the :guilabel:`Data Source Manager` dialog. Read :ref:`mesh_loading` for
