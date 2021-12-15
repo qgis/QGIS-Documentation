@@ -1193,7 +1193,7 @@ This parameter specifies the font size for rendering layer title in point.
 .. figure:: ../img/wms_getlegendgraphics_layerfontsize.png
    :align: center
 
-   Legend with ``LAYERFONTSIZE=30``
+   Legend with ``LAYERFONTSIZE=20``
 
 
 .. _`wms-getlegendgraphics-layerfontitalic`:
@@ -1225,7 +1225,7 @@ This parameter specifies the layer title color. The color may be literal
 .. figure:: ../img/wms_getlegendgraphics_layerfontcolor.png
    :align: center
 
-   Legend with ``LAYERFONTCOLOR=0xFF0000``
+   Legend with ``LAYERFONTCOLOR=0x5f9930``
 
 
 .. _`wms-getlegendgraphics-itemfontfamily`:
@@ -1303,7 +1303,7 @@ This parameter specifies the item label color. The color may be literal
 .. figure:: ../img/wms_getlegendgraphics_itemfontcolor.png
    :align: center
 
-   Legend with ``ITEMFONTCOLOR=0xFF0000``
+   Legend with ``ITEMFONTCOLOR=0x0x5f9930``
 
 
 .. _server_wms_getstyle:
