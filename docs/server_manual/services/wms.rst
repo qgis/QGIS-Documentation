@@ -416,7 +416,7 @@ As mentioned in :ref:`GetMap parameters table <qgisserver-wms-getmap>`,
 actually work.
 However, the ``QGIS_PROJECT_FILE`` environment variable may be used to
 define a default QGIS project.
-In this specific case, ``MAP`` is not longer a required parameter.
+In this specific case, ``MAP`` is no longer a required parameter.
 For further information you may refer to :ref:`server_env_variables`.
 
 
@@ -1038,10 +1038,18 @@ area:
 * **WIDTH/HEIGHT** the generated legend image size if the **RULE** parameter is set
 
 
+.. _`wms-getlegendgraphics-boxspace`:
+
 BOXSPACE
 ^^^^^^^^
 
-Space between legend frame and content (mm).
+This parameter allows to specify the space between legend frame and content in
+millimeters.
+
+.. figure:: ../img/wms_getlegendgraphics_boxspace.png
+   :align: center
+
+   To the left ``BOXSPACE=0`` and to the right ``BOXSPACE=15``
 
 
 
