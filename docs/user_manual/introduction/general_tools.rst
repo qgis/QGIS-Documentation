@@ -2058,6 +2058,9 @@ saved in it, with name and description.
   You may encounter issues restoring the :file:`layer_styles` table from a
   PostgreSQL database backup. Follow :ref:`layer_style_backup` to fix that.
 
+.. index:: Layer Definition File, qlr file
+.. _layer_definition_file:
+
 Layer definition file
 ---------------------
 
