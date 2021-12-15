@@ -852,6 +852,8 @@ and item labels:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
+   ":ref:`SRCWIDTH <wms-getlegendgraphics-srcwidth>`", "No", "Map width"
+   ":ref:`SRCHEIGHT <wms-getlegendgraphics-srcheight>`", "No", "Map height"
    ":ref:`SHOWFEATURECOUNT <wms-getlegendgraphics-showfeaturecount>`", "No", "Add feature count of features"
    ":ref:`RULE <wms-getlegendgraphics-rule>`", "No", ""
    ":ref:`RULELABEL <wms-getlegendgraphics-rulelabel>`", "No", "Item labels rendering"
@@ -889,8 +891,9 @@ BBOX
 ^^^^
 
 This parameter can be used to specify the geographical area for which the
-legend should be built (its format is described :ref:`here <wms-bbox>`). In
-this case, the ``SRS``/``CRS`` parameter is mandatory.
+legend should be built (its format is described :ref:`here <wms-bbox>`) but
+cannot be combined with the ``RULE`` parameter. The ``SRS``/``CRS`` parameter
+becomes mandatory when using the ``BBOX`` parameter.
 
 URL example:
 
@@ -903,20 +906,51 @@ URL example:
   &BBOX=43.20,-2.93,49.35,8.32
   &CRS=EPSG:4326
 
+.. note::
+
+  When the ``BBOX`` parameter is defined, the legend is referred to as a
+  *content based legend*.
+
 
 .. _`wms-getlegendgraphics-width`:
 
 WIDTH
 ^^^^^
 
-TODO
+This parameter is not used by default but becomes mandatory when the ``RULE``
+parameter is set. In this case it allows to specify the width in pixels of the
+output image.
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYER=testlayer%20%C3%A8%C3%A9
+  &RULE=rule1
+  &WIDTH=30
+  &HEIGHT=30
+
 
 .. _`wms-getlegendgraphics-height`:
 
 HEIGHT
 ^^^^^^
 
-TODO
+This parameter is not used by default but becomes mandatory when the ``RULE``
+parameter is set. In this case it allows to specify the height in pixels of the
+output image.
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYER=testlayer%20%C3%A8%C3%A9
+  &RULE=rule1
+  &WIDTH=30
+  &HEIGHT=30
+
 
 .. _`wms-getlegendgraphics-format`:
 
@@ -932,7 +966,7 @@ values are:
 
 For JSON, symbols are encoded with Base64 and most other options related to
 layout or fonts are not taken into account because the legend must be built on
-the client side.
+the client side. The ``RULE`` parameter cannot be combined with this format.
 
 URL example with the corresponding JSON output:
 
@@ -960,6 +994,28 @@ And the corresponding JSON output:
   }
 
 
+.. _`wms-getlegendgraphics-srcwidth`:
+
+SRCWIDTH
+^^^^^^^^
+
+This parameter may de defined when the ``RULE`` parameter is set. In this case,
+the ``SRCWIDTH`` value is forwarded to the underlying ``GetMap`` request as the
+``WIDTH`` parameter while the ``WIDTH`` parameter of ``GetegendGraphics`` is
+used for the image legend size.
+
+
+.. _`wms-getlegendgraphics-srcheight`:
+
+SRCHEIGHT
+^^^^^^^^^
+
+This parameter may de defined when the ``RULE`` parameter is set. In this case,
+the ``SRCHEIGHT`` value is forwarded to the underlying ``GetMap`` request as
+the ``HEIGHT`` parameter while the ``HEIGHT`` parameter of ``GetegendGraphics``
+is used for the image legend size.
+
+
 .. _`wms-getlegendgraphics-showfeaturecount`:
 
 SHOWFEATURECOUNT
@@ -983,7 +1039,8 @@ RULE
 ^^^^
 
 This parameter is available on layers with :guilabel:`Rule-based` rendering and
-allows to build a legend with only the named rule symbol.
+allows to build a legend with only the named rule symbol. It cannot be combined
+with ``BBOX`` parameter nor the JSON format.
 
 URL example:
 
@@ -1026,16 +1083,6 @@ URL example:
 
    Legend rendering without label for single symbol layers
 
-
-Content based legend. These parameters let the client request a legend
-showing only the symbols for the features falling into the requested
-area:
-
-* **SRCWIDTH / SRCHEIGHT** if set these should match the WIDTH and HEIGHT
-  parameters of the GetMap request, to let QGIS Server scale symbols according
-  to the map view image size.
-
-* **WIDTH/HEIGHT** the generated legend image size if the **RULE** parameter is set
 
 
 .. _`wms-getlegendgraphics-boxspace`:
