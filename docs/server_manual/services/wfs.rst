@@ -73,7 +73,7 @@ request.
 
 For example:
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgisserver?
   SERVICE=WFS
@@ -94,7 +94,7 @@ default.
 
 URL example:
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgisserver?
   SERVICE=WFS
@@ -110,7 +110,7 @@ request.
 
 URL example:
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgisserver?
   SERVICE=WFS
@@ -130,7 +130,7 @@ Available values are:
 
 URL example:
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgisserver?
   SERVICE=WFS
@@ -148,11 +148,11 @@ for features. Available values are:
 
 - ``extent``
 - ``centroid``
-- ``none``
+- ``bash``
 
 URL example:
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgisserver?
   SERVICE=WFS
@@ -174,7 +174,7 @@ through results.
 
 URL example:
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgisserver?
   SERVICE=WFS
