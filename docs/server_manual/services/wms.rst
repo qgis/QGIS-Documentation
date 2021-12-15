@@ -369,9 +369,8 @@ Available values are:
 * ``image/png; mode=1bit``
 * ``image/png; mode=8bit``
 * ``image/png; mode=16bit``
-* ``application/dxf``
-  Only layers that have read access in the WFS service are exported in
-  the DXF format.
+* ``application/dxf``: only layers that have read access in the WFS service are
+  exported in the DXF format
 
   URL example:
 
@@ -843,7 +842,7 @@ WMS 1.1.1 and 1.3.0 specifications:
    ":ref:`WIDTH <wms-getlegendgraphics-width>`", "No", "Width of the image in pixels"
    ":ref:`HEIGHT <wms-getlegendgraphics-height>`", "No", "Height of the image in pixels"
    ":ref:`FORMAT <wms-getlegendgraphics-format>`", "No", "Legend format"
-   ":ref:`TRANSPARENT <wms-getlegendgraphics-transparent>`", "No", "Transparent background"
+   ":ref:`TRANSPARENT <wms-transparent>`", "No", "Transparent background"
 
 In addition to the standard ones, QGIS Server supports extra parameters to
 change the size of the legend elements or the font properties for layer titles
@@ -924,14 +923,42 @@ TODO
 FORMAT
 ^^^^^^
 
-TODO
+This parameter may be used to specify the format of legend image. Available
+values are:
 
-.. _`wms-getlegendgraphics-transparent`:
+* ``image/jpeg``
+* ``image/png``
+* ``application/json``
 
-TRANSPARENT
-^^^^^^^^^^^
+For JSON, symbols are encoded with Base64 and most other options related to
+layout or fonts are not taken into account because the legend must be built on
+the client side.
 
-TODO
+URL example with the corresponding JSON output:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS&
+  REQUEST=GetLegendGraphics&
+  LAYERS=airports&
+  FORMAT=application/json
+
+And the corresponding JSON output:
+
+.. code-block:: json
+
+  {
+    "nodes":[
+      {
+        "icon":"<base64 icon>",
+        "title":"airports",
+        "type":"layer"
+      }
+    ],
+    "title":""
+  }
+
 
 .. _`wms-getlegendgraphics-showfeaturecount`:
 
@@ -950,11 +977,26 @@ For example:
     :align: center
 
 
+.. _`wms-getlegendgraphics-rule`:
+
 RULE
 ^^^^
 
-* **RULE** set it to a given rule name to get only the named rule symbol
+This parameter is available on layers with :guilabel:`Rule-based` rendering and
+allows to build a legend with only the named rule symbol.
 
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=mylayer,
+  &RULE=myrulename
+
+
+.. _`wms-getlegendgraphics-rulelabel`:
 
 RULELABEL
 ^^^^^^^^^
@@ -964,7 +1006,7 @@ This parameter allows to control the item label rendering. Available values are
 
 - ``TRUE``: display item label
 - ``FALSE``: hide item label
-- ``AUTO``: hide item label for layers with :guilabl:`Single symbol` rendering
+- ``AUTO``: hide item label for layers with :guilabel:`Single symbol` rendering
 
 URL example:
 
@@ -1001,14 +1043,6 @@ BOXSPACE
 
 Space between legend frame and content (mm).
 
-
-FORMAT
-^^^^^^
-
-``image/jpeg``, ``image/png`` or ``application/json``.
-For JSON, symbols are encoded with Base64 and most other options related to
-layout or fonts are not taken into account because the legend must be built
-on the client side.
 
 
 LAYERSPACE
