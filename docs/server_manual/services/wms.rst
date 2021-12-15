@@ -56,7 +56,7 @@ WMS 1.1.1 and 1.3.0 specifications:
 
 URL example:
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgis_server?
   SERVICE=WMS
@@ -126,7 +126,7 @@ as well as the following extra parameters:
 
 URL example:
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgis_server?
   SERVICE=WMS
@@ -154,7 +154,7 @@ This parameter has to be ``WMS``.
 
 For example:
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgisserver?
   SERVICE=WMS
@@ -205,7 +205,7 @@ The short name of a layer may be configured through
 If the short name is defined, then it's used by default instead of the
 layer's name:
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgisserver?
   SERVICE=WMS
@@ -219,7 +219,7 @@ id in :menuselection:`OWS Server --> WMS capabilities` menu of the
 To activate this option, the checkbox
 :guilabel:`Use layer ids as names` has to be selected.
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgisserver?
   SERVICE=WMS
@@ -258,7 +258,7 @@ parameter which is decisive.
 In the next case, the ``SRS`` parameter is kept whatever the
 ``VERSION`` parameter because ``CRS`` is not indicated:
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgisserver?
   SERVICE=WMS
@@ -270,7 +270,7 @@ In the next case, the ``SRS`` parameter is kept whatever the
 In the next case, the ``SRS`` parameter is kept instead of ``CRS``
 because of the ``VERSION`` parameter:
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgisserver?
   SERVICE=WMS
@@ -283,7 +283,7 @@ because of the ``VERSION`` parameter:
 In the next case, the ``CRS`` parameter is kept instead of ``SRS``
 because of the ``VERSION`` parameter:
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgisserver?
   SERVICE=WMS
@@ -312,7 +312,7 @@ parameter:
 For example in case of ``EPSG:4326`` and WMS **1.1.1**, ``a`` is the longitude
 (east) and ``b`` the latitude (north), leading to a request like:
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgisserver?
   SERVICE=WMS
@@ -325,7 +325,7 @@ For example in case of ``EPSG:4326`` and WMS **1.1.1**, ``a`` is the longitude
 But in case of WMS **1.3.0**, the axis ordering defined in the EPSG database is
 north/east so ``a`` is the latitude and ``b`` the longitude:
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgisserver?
   SERVICE=WMS
@@ -375,18 +375,19 @@ Available values are:
 
   URL example:
 
-  .. code-block:: none
+  .. code-block:: bash
 
    http://localhost/qgisserver?
    SERVICE=WMS&VERSION=1.3.0
    &REQUEST=GetMap
    &FORMAT=application/dxf
    &LAYERS=Haltungen,Normschacht,Spezialbauwerke
-   &STYLES=
-   &CRS=EPSG%3A21781&BBOX=696136.28844801,245797.12108743,696318.91114315,245939.25832905
+   &CRS=EPSG%3A21781
+   &BBOX=696136.28844801,245797.12108743,696318.91114315,245939.25832905
    &WIDTH=1042
    &HEIGHT=811
-   &FORMAT_OPTIONS=MODE:SYMBOLLAYERSYMBOLOGY;SCALE:250&FILE_NAME=plan.dxf
+   &FORMAT_OPTIONS=MODE:SYMBOLLAYERSYMBOLOGY;SCALE:250
+   &FILE_NAME=plan.dxf
 
 .. _`wms-transparent`:
 
@@ -432,7 +433,7 @@ in hexadecimal notation.
 
 URL example with the literal notation:
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgisserver?
   SERVICE=WMS
@@ -443,7 +444,7 @@ URL example with the literal notation:
 
 URL example with the hexadecimal notation:
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgisserver?
   SERVICE=WMS
@@ -498,7 +499,7 @@ databases via QGIS Server.
 If a dangerous string is found in the parameter, QGIS Server will
 return the next error:
 
-.. code-block:: none
+.. code-block:: bash
 
   <ServiceExceptionReport>
     <ServiceException code="Security">The filter string XXXXXXXXX has been rejected because of security reasons.
@@ -510,7 +511,7 @@ return the next error:
 
 URL example:
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgisserver?
   SERVICE=WMS
@@ -541,7 +542,7 @@ layers.
 Vector features can be selected by passing comma separated lists with
 feature ids.
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgisserver?
   SERVICE=WMS
@@ -663,7 +664,7 @@ extra parameters:
 
 URL example:
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgisserver?
   SERVICE=WMS
@@ -903,7 +904,7 @@ to the OGC WMS 1.1.1 specifications:
 
 URL example:
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgisserver?
   SERVICE=WMS
@@ -937,7 +938,7 @@ Standard parameters for the **DescribeLayer** request according to the OGC WMS
 
 URL example:
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgisserver?
   SERVICE=WMS
@@ -1026,7 +1027,7 @@ parameters:
 
 URL example:
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgisserver?
   SERVICE=WMS
@@ -1206,7 +1207,7 @@ Server.
 
 URL example:
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgisserver?
   SERVICE=WMS
@@ -1250,7 +1251,7 @@ dpiMode, crs, layers, styles) can later be given as service
 parameters <layername>:<parameter>.
 In a GetMap request, this might look like this:
 
-.. code-block:: none
+.. code-block:: bash
 
    http://localhost/qgisserver?
    SERVICE=WMS&REQUEST=GetMap
@@ -1266,7 +1267,7 @@ In a GetMap request, this might look like this:
 
 Similarly, external layers can be used in GetPrint requests:
 
-.. code-block:: none
+.. code-block:: bash
 
    http://localhost/qgisserver?
    SERVICE=WMS
@@ -1295,11 +1296,14 @@ which are overlapped by the server over the standard returned image (map). This
 permits the user to put emphasis or maybe add some comments (labels) to some
 areas, locations etc. that are not in the standard map.
 
-The ``GetMap`` request is in the format::
+The ``GetMap`` request is in the format:
 
- http://qgisplatform.demo/cgi-bin/qgis_mapserv.fcgi?map=/world.qgs&SERVICE=WMS&VERSION=1.3.0&
- REQUEST=GetMap
- ...
+.. code-block:: bash
+
+ http://localhost/qgisserver?
+ SERVICE=WMS
+ &VERSION=1.3.0
+ &REQUEST=GetMap
  &HIGHLIGHT_GEOM=POLYGON((590000 5647000, 590000 6110620, 2500000 6110620, 2500000 5647000, 590000 5647000))
  &HIGHLIGHT_SYMBOL=<StyledLayerDescriptor><UserStyle><Name>Highlight</Name><FeatureTypeStyle><Rule><Name>Symbol</Name><LineSymbolizer><Stroke><SvgParameter name="stroke">%23ea1173</SvgParameter><SvgParameter name="stroke-opacity">1</SvgParameter><SvgParameter name="stroke-width">1.6</SvgParameter></Stroke></LineSymbolizer></Rule></FeatureTypeStyle></UserStyle></StyledLayerDescriptor>
  &HIGHLIGHT_LABELSTRING=Write label here
@@ -1308,11 +1312,16 @@ The ``GetMap`` request is in the format::
  &HIGHLIGHT_LABELBUFFERCOLOR=%23FFFFFF
  &HIGHLIGHT_LABELBUFFERSIZE=1.5
 
-The ``GetPrint`` equivalent is in the format (note that ``mapX:`` parameter is added to tell which map has redlining)::
 
- http://qgisplatform.demo/cgi-bin/qgis_mapserv.fcgi?map=/world.qgs&SERVICE=WMS&VERSION=1.3.0&
- REQUEST=GetPrint
- ...
+The ``GetPrint`` equivalent is in the format (note that ``mapX:`` parameter is
+added to tell which map has redlining):
+
+.. code-block:: bash
+
+ http://localhost/qgisserver?
+ SERVICE=WMS
+ &VERSION=1.3.0
+ &REQUEST=GetPrint
  &map0:HIGHLIGHT_GEOM=POLYGON((590000 5647000, 590000 6110620, 2500000 6110620, 2500000 5647000, 590000 5647000))
  &map0:HIGHLIGHT_SYMBOL=<StyledLayerDescriptor><UserStyle><Name>Highlight</Name><FeatureTypeStyle><Rule><Name>Symbol</Name><LineSymbolizer><Stroke><SvgParameter name="stroke">%23ea1173</SvgParameter><SvgParameter name="stroke-opacity">1</SvgParameter><SvgParameter name="stroke-width">1.6</SvgParameter></Stroke></LineSymbolizer></Rule></FeatureTypeStyle></UserStyle></StyledLayerDescriptor>
  &map0:HIGHLIGHT_LABELSTRING=Write label here

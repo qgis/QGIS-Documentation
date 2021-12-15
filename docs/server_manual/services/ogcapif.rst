@@ -236,7 +236,7 @@ parameters.
 
 URL example:
 
-.. code-block:: none
+.. code-block:: bash
 
     http://localhost/qgisserver/wfs3/collection_one/items.json?offset=10&limit=10
 
@@ -272,21 +272,21 @@ URL examples:
 
 Returns only the features with date dimension matching ``2019-01-01``
 
-.. code-block:: none
+.. code-block:: bash
 
     http://localhost/qgisserver/wfs3/collection_one/items.json?datetime=2019-01-01
 
 Returns only the features with datetime dimension matching
 ``2019-01-01T01:01:01``
 
-.. code-block:: none
+.. code-block:: bash
 
     http://localhost/qgisserver/wfs3/collection_one/items.json?datetime=2019-01-01T01:01:01
 
 Returns only the features with datetime dimension in the range
 ``2019-01-01T01:01:01`` - ``2019-01-01T12:00:00``
 
-.. code-block:: none
+.. code-block:: bash
 
     http://localhost/qgisserver/wfs3/collection_one/items.json?datetime=2019-01-01T01:01:01/2019-01-01T12:00:00
 
@@ -311,7 +311,7 @@ The order of the comma separated elements is:
 
 URL example:
 
-.. code-block:: none
+.. code-block:: bash
 
     http://localhost/qgisserver/wfs3/collection_one/items.json?bbox=-180,-90,180,90
 
@@ -323,7 +323,7 @@ The CRS format identifier must be in the
 
 URL example:
 
-.. code-block:: none
+.. code-block:: bash
 
     http://localhost/qgisserver/wfs3/collection_one/items.json?bbox=913191,5606014,913234,5606029&bbox-crs=http://www.opengis.net/def/crs/EPSG/9.6.2/3857
 
@@ -339,7 +339,7 @@ URL example:
 
 filters all features where attribute ``name`` equals "my value"
 
-.. code-block:: none
+.. code-block:: bash
 
     http://localhost/qgisserver/wfs3/collection_one/items.json?attribute_one=my%20value
 
@@ -350,7 +350,7 @@ URL example:
 
 filters all features where attribute ``name`` ends with "value"
 
-.. code-block:: none
+.. code-block:: bash
 
     http://localhost/qgisserver/wfs3/collection_one/items.json?attribute_one=*value
 
@@ -363,7 +363,7 @@ query parameter.
 The results are sorted in ascending order by default.
 To sort the results in descending order, a boolean flag (``sortdesc``) can be set:
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgisserver/wfs3/collection_one/items.json?sortby=name&sortdesc=1
 
@@ -379,7 +379,7 @@ URL example:
 
 returns only the ``name`` attribute
 
-.. code-block:: none
+.. code-block:: bash
 
     http://localhost/qgisserver/wfs3/collection_one/items.json?properties=name
 
