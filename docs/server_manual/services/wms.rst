@@ -846,12 +846,16 @@ WMS 1.1.1 and 1.3.0 specifications:
    ":ref:`TRANSPARENT <wms-getlegendgraphics-transparent>`", "No", "Transparent background"
 
 In addition to the standard ones, QGIS Server supports extra parameters to
-change the size of the legend elements:
+change the size of the legend elements or the font properties for layer titles
+and item labels:
 
 .. csv-table::
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
+   ":ref:`SHOWFEATURECOUNT <wms-getlegendgraphics-showfeaturecount>`", "No", "Add feature count of features"
+   ":ref:`RULE <wms-getlegendgraphics-rule>`", "No", ""
+   ":ref:`RULELABEL <wms-getlegendgraphics-rulelabel>`", "No", "Item labels rendering"
    ":ref:`BOXSPACE <wms-getlegendgraphics-boxspace>`", "No", "Space between legend frame and content (mm)"
    ":ref:`LAYERSPACE <wms-getlegendgraphics-layerspace>`", "No", "Vertical space between layers (mm)"
    ":ref:`LAYERTITLESPACE <wms-getlegendgraphics-layerspace>`", "No", "Vertical space between layer title and items (mm)"
@@ -859,13 +863,6 @@ change the size of the legend elements:
    ":ref:`ICONLABELSPACE <wms-getlegendgraphics-iconlabelspace>`", "No", "Horizontal space between symbol and label (mm)"
    ":ref:`SYMBOLWIDTH <wms-getlegendgraphics-symbolwidth>`", "No", "Width of the symbol preview (mm)"
    ":ref:`SYMBOLHEIGHT <wms-getlegendgraphics-symbolheight>`", "No", "Height of the symbol preview (mm)"
-
-or the font properties for layer titles and item labels:
-
-.. csv-table::
-   :header: "Parameter", "Required", "Description"
-   :widths: auto
-
    ":ref:`LAYERTITLE <wms-getlegendgraphics-layertitle>`", "No", ""
    ":ref:`LAYERFONTFAMILY <wms-getlegendgraphics-layerfontfamily>`", "No", ""
    ":ref:`LAYERFONTBOLD <wms-getlegendgraphics-layerfontbold>`", "No", ""
@@ -877,7 +874,7 @@ or the font properties for layer titles and item labels:
    ":ref:`ITEMFONTSIZE <wms-getlegendgraphics-itemfontsize>`", "No", ""
    ":ref:`ITEMFONTITALIC <wms-getlegendgraphics-itemfontitalic>`", "No", ""
    ":ref:`ITEMFONTCOLOR <wms-getlegendgraphics-itemfontcolor>`", "No", ""
-   ":ref:`RULELABEL <wms-getlegendgraphics-rulelabel>`", "No", ""
+
 
 .. _`wms-getlegendgraphics-request`:
 
@@ -887,23 +884,116 @@ REQUEST
 This parameter is ``GetLegendGraphics`` in case of the **GetLegendGraphics** request.
 
 
+.. _`wms-getlegendgraphics-bbox`:
+
 BBOX
 ^^^^
 
+This parameter can be used to specify the geographical area for which the
+legend should be built (its format is described :ref:`here <wms-bbox>`). In
+this case, the ``SRS``/``CRS`` parameter is mandatory.
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=countries,airports
+  &BBOX=43.20,-2.93,49.35,8.32
+  &CRS=EPSG:4326
+
+
+.. _`wms-getlegendgraphics-width`:
 
 WIDTH
 ^^^^^
 
+TODO
+
+.. _`wms-getlegendgraphics-height`:
 
 HEIGHT
 ^^^^^^
 
+TODO
+
+.. _`wms-getlegendgraphics-format`:
+
 FORMAT
 ^^^^^^
 
+TODO
+
+.. _`wms-getlegendgraphics-transparent`:
 
 TRANSPARENT
 ^^^^^^^^^^^
+
+TODO
+
+.. _`wms-getlegendgraphics-showfeaturecount`:
+
+SHOWFEATURECOUNT
+^^^^^^^^^^^^^^^^
+
+This parameter can be used to activate feature count in the legend. Available
+values are (not case sensitive):
+
+- ``TRUE``
+- ``FALSE``
+
+For example:
+
+  .. figure:: ../img/getfeaturecount_legend.png
+    :align: center
+
+
+RULE
+^^^^
+
+* **RULE** set it to a given rule name to get only the named rule symbol
+
+
+RULELABEL
+^^^^^^^^^
+
+This parameter allows to control the item label rendering. Available values are
+(not case sensitive):
+
+- ``TRUE``: display item label
+- ``FALSE``: hide item label
+- ``AUTO``: hide item label for layers with :guilabl:`Single symbol` rendering
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=countries,airports
+  &BBOX=43.20,-2.93,49.35,8.32
+  &CRS=EPSG:4326
+  &RULELABEL=AUTO
+
+
+.. figure:: ../img/wms_getlegendgraphics_rulelabel.png
+   :align: center
+
+   Legend rendering without label for single symbol layers
+
+
+Content based legend. These parameters let the client request a legend
+showing only the symbols for the features falling into the requested
+area:
+
+* **SRCWIDTH / SRCHEIGHT** if set these should match the WIDTH and HEIGHT
+  parameters of the GetMap request, to let QGIS Server scale symbols according
+  to the map view image size.
+
+* **WIDTH/HEIGHT** the generated legend image size if the **RULE** parameter is set
 
 
 BOXSPACE
@@ -1008,38 +1098,6 @@ ITEMFONTCOLOR
 
 Hex color code (e.g. ``#FF0000``
   for red)
-
-
-RULELABEL
-^^^^^^^^^
-
-  * ``FALSE`` legend graphics without item labels
-  * ``AUTO`` hide item label for layers with :guilabel:`Single symbol` rendering
-
-
-Content based legend. These parameters let the client request a legend
-showing only the symbols for the features falling into the requested
-area:
-
-* **BBOX** the geographical area for which the legend should be built
-* **CRS / SRS** the coordinate reference system adopted to define the
-  BBOX coordinates
-* **SRCWIDTH / SRCHEIGHT** if set these should match the WIDTH and HEIGHT
-  parameters of the GetMap request, to let QGIS Server scale symbols according
-  to the map view image size.
-
-Content based legend features are based on the `UMN MapServer
-implementation:
-<https://www.mapserver.org/development/rfc/ms-rfc-101.html>`_
-
-* **SHOWFEATURECOUNT** if set to ``TRUE`` adds in the legend the
-  feature count of the features like in the following image:
-
-  .. figure:: ../img/getfeaturecount_legend.png
-    :align: center
-
-* **RULE** set it to a given rule name to get only the named rule symbol
-* **WIDTH/HEIGHT** the generated legend image size if the **RULE** parameter is set
 
 
 .. _server_wms_getstyle:
