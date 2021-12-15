@@ -1196,11 +1196,37 @@ This parameter specifies the font size for rendering layer title.
    Legend with ``LAYERFONTSIZE=30``
 
 
+.. _`wms-getlegendgraphics-layerfontitalic`:
+
 LAYERFONTITALIC
 ^^^^^^^^^^^^^^^
 
+This parameter specifies whether the layer title is rendered in italic.
+Available values are (not case sensitive):
+
+- ``TRUE``
+- ``FALSE``
+
+.. figure:: ../img/wms_getlegendgraphics_layerfontitalic.png
+   :align: center
+
+   Legend with ``LAYERFONTITALIC=TRUE``
+
+
+.. _`wms-getlegendgraphics-layerfontcolor`:
+
 LAYERFONTCOLOR
 ^^^^^^^^^^^^^^
+
+This parameter specifies the layer title color. The color may be literal
+(``red``, ``green``, ..) or in hexadecimal notation (``0xFF0000``,
+``0x00FF00``, ...).
+
+.. figure:: ../img/wms_getlegendgraphics_layerfontcolor.png
+   :align: center
+
+   Legend with ``LAYERFONTCOLOR=0xFF0000``
+
 
 ITEMFONTFAMILY
 ^^^^^^^^^^^^^^
