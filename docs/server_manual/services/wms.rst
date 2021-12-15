@@ -1188,7 +1188,7 @@ values are (not case sensitive):
 LAYERFONTSIZE
 ^^^^^^^^^^^^^
 
-This parameter specifies the font size for rendering layer title.
+This parameter specifies the font size for rendering layer title in point.
 
 .. figure:: ../img/wms_getlegendgraphics_layerfontsize.png
    :align: center
@@ -1228,29 +1228,61 @@ This parameter specifies the layer title color. The color may be literal
    Legend with ``LAYERFONTCOLOR=0xFF0000``
 
 
+.. _`wms-getlegendgraphics-itemfontfamily`:
+
 ITEMFONTFAMILY
 ^^^^^^^^^^^^^^
 
-font family for layer title / item text
+This parameter specifies the font family to use for rendering item label.
 
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=countries
+  &ITEMFONTFAMILY=monospace
+
+
+.. _`wms-getlegendgraphics-itemfontbold`:
 
 ITEMFONTBOLD
 ^^^^^^^^^^^^
 
-``TRUE`` to use a bold font
+This parameter specifies whether the item label is rendered in bold. Available
+values are (not case sensitive):
 
+- ``TRUE``
+- ``FALSE``
+
+.. figure:: ../img/wms_getlegendgraphics_itemfontbold.png
+   :align: center
+
+   Legend with ``ITEMFONTBOLD=TRUE``
+
+
+.. _`wms-getlegendgraphics-itemfontsize`:
 
 ITEMFONTSIZE
 ^^^^^^^^^^^^
 
-Font size in point
+This parameter specifies the font size for rendering layer title in point.
 
+.. figure:: ../img/wms_getlegendgraphics_itemfontsize.png
+   :align: center
+
+   Legend with ``ITEMFONTSIZE=30``
+
+
+.. _`wms-getlegendgraphics-itemfontitalic`:
 
 ITEMFONTITALIC
 ^^^^^^^^^^^^^^
 
 ``TRUE`` to use italic font
 
+
+.. _`wms-getlegendgraphics-itemfontcolor`:
 
 ITEMFONTCOLOR
 ^^^^^^^^^^^^^
