@@ -1279,7 +1279,16 @@ This parameter specifies the font size for rendering layer title in point.
 ITEMFONTITALIC
 ^^^^^^^^^^^^^^
 
-``TRUE`` to use italic font
+This parameter specifies whether the item label is rendered in italic.
+Available values are (not case sensitive):
+
+- ``TRUE``
+- ``FALSE``
+
+.. figure:: ../img/wms_getlegendgraphics_itemfontitalic.png
+   :align: center
+
+   Legend with ``ITEMFONTITALIC=TRUE``
 
 
 .. _`wms-getlegendgraphics-itemfontcolor`:
@@ -1287,8 +1296,14 @@ ITEMFONTITALIC
 ITEMFONTCOLOR
 ^^^^^^^^^^^^^
 
-Hex color code (e.g. ``#FF0000``
-  for red)
+This parameter specifies the item label color. The color may be literal
+(``red``, ``green``, ..) or in hexadecimal notation (``0xFF0000``,
+``0x00FF00``, ...).
+
+.. figure:: ../img/wms_getlegendgraphics_itemfontcolor.png
+   :align: center
+
+   Legend with ``ITEMFONTCOLOR=0xFF0000``
 
 
 .. _server_wms_getstyle:
