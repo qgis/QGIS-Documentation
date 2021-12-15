@@ -50,7 +50,7 @@ parameters:
 
 URL example:
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgisserver?
   SERVICE=WMTS
@@ -113,7 +113,7 @@ extra parameters:
 
 URL example:
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgisserver?
   SERVICE=WMTS
@@ -153,7 +153,7 @@ The short name of a layer may be configured through
 :menuselection:`Properties --> Metadata` in layer menu. If the short
 name is defined, then it's used by default instead of the layer's name:
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgisserver?
   SERVICE=WMTS
@@ -167,7 +167,7 @@ id in :menuselection:`OWS Server --> WMS capabilities` menu of the
 this option, the checkbox :guilabel:`Use layer ids as names` has to be
 selected.
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgisserver?
   SERVICE=WMTS
@@ -269,7 +269,7 @@ extra parameters:
 
 URL example:
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgisserver?
   SERVICE=WMTS
@@ -324,7 +324,7 @@ The short name of a layer may be configured through
 name is defined, then it's used by default instead of the layer's
 name:
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgisserver?
   SERVICE=WMTS
@@ -338,7 +338,7 @@ id in :menuselection:`OWS Server --> WMS capabilities` menu of the
 this option, the checkbox :guilabel:`Use layer ids as names` has to be
 selected.
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgisserver?
   SERVICE=WMTS
