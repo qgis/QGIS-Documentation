@@ -857,7 +857,7 @@ and item labels:
    ":ref:`RULELABEL <wms-getlegendgraphics-rulelabel>`", "No", "Item labels rendering"
    ":ref:`BOXSPACE <wms-getlegendgraphics-boxspace>`", "No", "Space between legend frame and content (mm)"
    ":ref:`LAYERSPACE <wms-getlegendgraphics-layerspace>`", "No", "Vertical space between layers (mm)"
-   ":ref:`LAYERTITLESPACE <wms-getlegendgraphics-layerspace>`", "No", "Vertical space between layer title and items (mm)"
+   ":ref:`LAYERTITLESPACE <wms-getlegendgraphics-layertitlespace>`", "No", "Vertical space between layer title and items (mm)"
    ":ref:`SYMBOLSPACE <wms-getlegendgraphics-symbolspace>`", "No", "Vertical space between symbol and items (mm)"
    ":ref:`ICONLABELSPACE <wms-getlegendgraphics-iconlabelspace>`", "No", "Horizontal space between symbol and label (mm)"
    ":ref:`SYMBOLWIDTH <wms-getlegendgraphics-symbolwidth>`", "No", "Width of the symbol preview (mm)"
@@ -1044,7 +1044,7 @@ BOXSPACE
 ^^^^^^^^
 
 This parameter allows to specify the space between legend frame and content in
-millimeters.
+millimeters. By default, the space value is ``2`` mm.
 
 .. figure:: ../img/wms_getlegendgraphics_boxspace.png
    :align: center
@@ -1053,16 +1053,32 @@ millimeters.
 
 
 
+.. _`wms-getlegendgraphics-layerspace`:
+
 LAYERSPACE
 ^^^^^^^^^^
 
-Vertical space between layers (mm)
+This parameter allows to specify the vertical space between layers in
+millimeters. By default, the space value is ``3`` mm.
 
+.. figure:: ../img/wms_getlegendgraphics_layerspace.png
+   :align: center
+
+   To the left ``LAYERSPACE=0`` and to the right ``LAYERSPACE=10``
+
+
+.. _`wms-getlegendgraphics-layertitlespace`:
 
 LAYERTITLESPACE
 ^^^^^^^^^^^^^^^
 
-Vertical space between layer title and items following (mm)
+This parameter allows to specify the vertical space between layer title and
+items following in millimeters. By default the space value is ``3`` mm.
+
+.. figure:: ../img/wms_getlegendgraphics_layertitlespace.png
+   :align: center
+
+   To the left ``LAYERTITLESPACE=0`` and to the right ``LAYERTITLESPACE=10``
 
 
 SYMBOLSPACE
