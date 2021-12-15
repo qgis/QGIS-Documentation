@@ -1137,21 +1137,64 @@ millimeters. By default the height value is ``4`` mm.
    To the left ``SYMBOLHEIGHT=2`` and to the right ``SYMBOLHEIGHT=6``
 
 
+.. _`wms-getlegendgraphics-layertitle`:
+
 LAYERTITLE
 ^^^^^^^^^^
 
-``FALSE`` to get only the legend graphics without layer title
+This parameter specifies whether to render layer title.
 
+Available values are (not case sensitive):
+
+- ``TRUE`` (default value)
+- ``FALSE``
+
+
+.. _`wms-getlegendgraphics-layerfontfamily`:
 
 LAYERFONTFAMILY
 ^^^^^^^^^^^^^^^
 
+This parameter specifies the font family to use for rendering layer title.
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=countries
+  &LAYERFONTFAMILY=monospace
+
+
+.. _`wms-getlegendgraphics-layerfontbold`:
 
 LAYERFONTBOLD
 ^^^^^^^^^^^^^
 
+This parameter specifies whether the layer title is rendered in bold. Available
+values are (not case sensitive):
+
+- ``TRUE``
+- ``FALSE``
+
+.. figure:: ../img/wms_getlegendgraphics_layerfontbold.png
+   :align: center
+
+   Legend with ``LAYERFONTBOLD=TRUE``
+
+
+.. _`wms-getlegendgraphics-layerfontsize`:
+
 LAYERFONTSIZE
 ^^^^^^^^^^^^^
+
+This parameter specifies the font size for rendering layer title.
+
+.. figure:: ../img/wms_getlegendgraphics_layerfontsize.png
+   :align: center
+
+   Legend with ``LAYERFONTSIZE=30``
+
 
 LAYERFONTITALIC
 ^^^^^^^^^^^^^^^
