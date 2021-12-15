@@ -1081,16 +1081,32 @@ items following in millimeters. By default the space value is ``3`` mm.
    To the left ``LAYERTITLESPACE=0`` and to the right ``LAYERTITLESPACE=10``
 
 
+.. _`wms-getlegendgraphics-symbolspace`:
+
 SYMBOLSPACE
 ^^^^^^^^^^^
 
-Vertical space between symbol and item following (mm)
+This parameter allows to specify the vertical space between symbol and item
+following in millimeters. By default the space value is ``2`` mm.
 
+.. figure:: ../img/wms_getlegendgraphics_symbolspace.png
+   :align: center
+
+   To the left ``SYMBOLSPACE=0`` and to the right ``SYMBOLSPACE=5``
+
+
+.. _`wms-getlegendgraphics-iconlabelspace`:
 
 ICONLABELSPACE
 ^^^^^^^^^^^^^^
 
-Horizontal space between symbol and label text (mm)
+This parameter allows to specify the horizontal space between symbol and label
+text in millimeters. By default the space value is ``2`` mm.
+
+.. figure:: ../img/wms_getlegendgraphics_iconlabelspace.png
+   :align: center
+
+   To the left ``ICONLABELSPACE=0`` and to the right ``ICONLABELSPACE=10``
 
 
 SYMBOLWIDTH
