@@ -1109,16 +1109,32 @@ text in millimeters. By default the space value is ``2`` mm.
    To the left ``ICONLABELSPACE=0`` and to the right ``ICONLABELSPACE=10``
 
 
+.. _`wms-getlegendgraphics-symbolwidth`:
+
 SYMBOLWIDTH
 ^^^^^^^^^^^
 
-Width of the symbol preview (mm).
+This parameter allows to specify the width of the symbol preview in
+millimeters. By default the width value is ``7`` mm.
 
+.. figure:: ../img/wms_getlegendgraphics_symbolwidth.png
+   :align: center
+
+   To the left ``SYMBOLWIDTH=2`` and to the right ``SYMBOLWIDTH=20``
+
+
+.. _`wms-getlegendgraphics-symbolheight`:
 
 SYMBOLHEIGHT
 ^^^^^^^^^^^^
 
-Height of the symbol preview (mm).
+This parameter allows to specify the height of the symbol preview in
+millimeters. By default the height value is ``4`` mm.
+
+.. figure:: ../img/wms_getlegendgraphics_symbolheight.png
+   :align: center
+
+   To the left ``SYMBOLHEIGHT=2`` and to the right ``SYMBOLHEIGHT=6``
 
 
 LAYERTITLE
