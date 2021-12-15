@@ -852,6 +852,7 @@ and item labels:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
+   ":ref:`MAP <wms-map>`", "Yes", "Specify the QGIS project file"
    ":ref:`SRCWIDTH <wms-getlegendgraphics-srcwidth>`", "No", "Map width"
    ":ref:`SRCHEIGHT <wms-getlegendgraphics-srcheight>`", "No", "Map height"
    ":ref:`SHOWFEATURECOUNT <wms-getlegendgraphics-showfeaturecount>`", "No", "Add feature count of features"
