@@ -296,4 +296,10 @@ HEIGHT
 ^^^^^^
 
 This parameter allows to specify the height in pixels of the output
-image.
+image. The resolution of the response image depends on this value.
+
+
+.. figure:: ../img/server_wcs_getcoverage_width_height.png
+  :align: center
+
+  From left to right: ``WIDTH=&HEIGHT=20``, ``WIDTH=50&HEIGHT=50``, ``WIDTH=100&HEIGHT=100``
