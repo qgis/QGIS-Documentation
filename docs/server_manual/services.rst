@@ -8,7 +8,7 @@ by the **Open Geospatial Consortium (OGC)**:
 - WMS 1.1.1 and 1.3.0
 - WFS 1.0.0 and 1.1.0
 - OGC API - Features (WFS3)
-- WCS 1.1.1
+- WCS 1.0.0 and 1.1.1
 - WMTS 1.0.0
 
 Extra vendor parameters and requests are supported in addition to the
