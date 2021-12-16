@@ -33,7 +33,7 @@ WCS 1.1.1 specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`MAP <wms-map>`", "Yes", "Name of the service (**WCS**)"
+   ":ref:`MAP <wms-map>`", "Yes", "Specify the QGIS project file"
    ":ref:`SERVICE <wcs_service>`", "Yes", "Name of the service (**WCS**)"
    ":ref:`VERSION <wcs_version>`", "No", "Version of the service"
    ":ref:`REQUEST <wcs_getcapabilities_request>`", "Yes", "Name of the request (**GetCapabilities**)"
@@ -113,8 +113,12 @@ specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`COVERAGE <wcs_describecoverage_coverage>`", "No", "Specify coverage layers"
-   ":ref:`IDENTIFIER <wcs_describecoverage_identifier>`", "No", ""
+   ":ref:`MAP <wms-map>`", "Yes", "Specify the QGIS project file"
+   ":ref:`SERVICE <wcs_service>`", "Yes", "Name of the service (**WCS**)"
+   ":ref:`VERSION <wcs_version>`", "No", "Version of the service"
+   ":ref:`REQUEST <wcs_getcapabilities_request>`", "Yes", "Name of the request (**GetCapabilities**)"
+   ":ref:`COVERAGE <wcs_describecoverage_coverage>`", "No", "Specify coverage layers (WCS 1.0)"
+   ":ref:`IDENTIFIER <wcs_describecoverage_identifier>`", "No", "Specify coverage layers (WCS 1.1)"
 
 
 The XML document for a 3 bands GeoTIFF raster layer looks like:
@@ -163,7 +167,7 @@ The XML document for a 3 bands GeoTIFF raster layer looks like:
 COVERAGE
 ^^^^^^^^
 
-This parameter, defined in WCS ``1.0.0``, allows to specify the layers to query
+This parameter, defined in WCS ``1.0``, allows to specify the layers to query
 for additional information. Names have to be separated by a comma.
 
 In addition, QGIS Server introduced an option to select layers by its short
@@ -179,14 +183,23 @@ defined, then it's used by default instead of the layer's name:
   &COVERAGE=mylayer1name,mylayer2shortname
 
 
+.. note::
+
+  ``COVERAGE`` is mandatory if ``IDENTIFIER`` is not set.
+
+
 .. _`wcs_describecoverage_identifier`:
 
 IDENTIFIER
 ^^^^^^^^^^
 
 This parameter replaces the :ref:`COVERAGE <wcs_describecoverage_coverage>`
-parameter in WCS ``1.1.1``. But QGIS Server does not filter according to the
+parameter in WCS ``1.1``. But QGIS Server does not filter according to the
 ``VERSION`` parameter so ``IDENTIFIER`` and ``COVERAGE`` have the same effect.
+
+.. note::
+
+  ``IDENTIFIER`` is mandatory if ``COVERAGE`` is not set.
 
 .. note::
 
@@ -199,4 +212,36 @@ parameter in WCS ``1.1.1``. But QGIS Server does not filter according to the
 GetCoverage
 -----------
 
+This request allows to retrieve additional information about coverages like the
+format of the underlying datasource, the number of bands, ... Standard
+parameters for the **DescribeCoverage** request according to the OGC WCS 1.1.1
+specifications:
+
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: auto
+
+   ":ref:`MAP <wms-map>`", "Yes", "Specify the QGIS project file"
+   ":ref:`SERVICE <wcs_service>`", "Yes", "Name of the service (**WCS**)"
+   ":ref:`VERSION <wcs_version>`", "No", "Version of the service"
+   ":ref:`REQUEST <wcs_getcoverage_request>`", "Yes", "Name of the request (**GetCoverage**)"
+   ":ref:`COVERAGE <wcs_describecoverage_coverage>`", "No", "Specify coverage layers (WCS 1.0)"
+   ":ref:`IDENTIFIER <wcs_describecoverage_identifier>`", "No", "Specify coverage layers (WCS 1.1)"
+   ":ref:`BBOX <wcs_getcoverage_bbox>`", "Yes", "Extent"
+
+
+.. _`wcs_getcoverage_request`:
+
+REQUEST
+^^^^^^^
+
+This parameter is ``GetCoverage`` in case of the **GetCoverage** request.
+
+
+.. _`wcs_getcoverage_bbox`:
+
+BBOX
+^^^^
+
 TODO
+
