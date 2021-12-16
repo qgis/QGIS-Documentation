@@ -16,9 +16,9 @@ Standard requests provided by QGIS Server:
    :header: "Request", "Description"
    :widths: auto
 
-   "GetCapabilities", "Returns XML metadata with information about the server"
-   "GetTile", "Returns a tile"
-   "GetFeatureInfo", "Retrieves data (geometry and values) for a pixel location"
+   ":ref:`GetCapabilities <qgisserver-wmts-getcapabilities>`", "Returns XML metadata with information about the server"
+   ":ref:`GetTile <qgisserver-wmts-gettile>`", "Returns a tile"
+   ":ref:`GetFeatureInfo <qgisserver-wmts-getfeatureinfo>`", "Retrieves data (geometry and values) for a pixel location"
 
 
 .. _`qgisserver-wmts-getcapabilities`:
@@ -33,8 +33,8 @@ the OGC WMTS 1.0.0 specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   "SERVICE", "Yes", "Name of the service (WMTS)"
-   "REQUEST", "Yes", "Name of the request (GetCapabilities)"
+   ":ref:`SERVICE <qgisserver-wmts-service>`", "Yes", "Name of the service (**WMTS**)"
+   ":ref:`REQUEST <qgisserver-wmts-getcapabilities-request>`", "Yes", "Name of the request (**GetCapabilities**)"
 
 
 In addition to the standard ones, QGIS Server supports the following extra
@@ -45,7 +45,7 @@ parameters:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   "MAP", "Yes", "Specify the QGIS project file"
+   ":ref:`MAP <qgisserver-wmts-map>`", "Yes", "Specify the QGIS project file"
 
 
 URL example:
@@ -58,12 +58,15 @@ URL example:
   &MAP=/home/qgis/projects/world.qgs
 
 
+.. _`qgisserver-wmts-service`:
+
 SERVICE
 ^^^^^^^
 
-This parameter has to be ``WMTS`` in case of the **GetCapabilities**
-request.
+This parameter has to be ``WMTS`` in case of the **WMTS** service.
 
+
+.. _`qgisserver-wmts-getcapabilities-request`:
 
 REQUEST
 ^^^^^^^
@@ -71,11 +74,16 @@ REQUEST
 This parameter is ``GetCapabilities`` in case of the
 **GetCapabilities** request.
 
+.. _`qgisserver-wmts-map`:
 
 MAP
 ^^^
 
-This parameter allows to define the QGIS project file to use.
+This parameter allows to define the QGIS project file to use and is mandatory
+because a request needs a QGIS project to actually work.  However, the
+``QGIS_PROJECT_FILE`` environment variable may be used to define a default QGIS
+project.  In this specific case, ``MAP`` is not longer a required parameter.
+For further information you may refer to :ref:`server_env_variables`.
 
 
 .. _`qgisserver-wmts-gettile`:
