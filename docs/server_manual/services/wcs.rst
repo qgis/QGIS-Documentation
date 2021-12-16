@@ -212,10 +212,9 @@ parameter in WCS ``1.1``. But QGIS Server does not filter according to the
 GetCoverage
 -----------
 
-This request allows to retrieve additional information about coverages like the
-format of the underlying datasource, the number of bands, ... Standard
-parameters for the **DescribeCoverage** request according to the OGC WCS 1.1.1
-specifications:
+This request allows to retrieve the coverage according to specific constraints
+like the extent or the CRS. Standard parameters for the **DescribeCoverage**
+request according to the OGC WCS 1.1.1 specifications:
 
 .. csv-table::
    :header: "Parameter", "Required", "Description"
@@ -227,7 +226,11 @@ specifications:
    ":ref:`REQUEST <wcs_getcoverage_request>`", "Yes", "Name of the request (**GetCoverage**)"
    ":ref:`COVERAGE <wcs_describecoverage_coverage>`", "No", "Specify coverage layers (WCS 1.0)"
    ":ref:`IDENTIFIER <wcs_describecoverage_identifier>`", "No", "Specify coverage layers (WCS 1.1)"
+   ":ref:`WIDTH <wcs_getcoverage_width>`", "Yes", "Width of the response in pixels"
+   ":ref:`HEIGHT <wcs_getcoverage_height>`", "Yes", "Height of the response in pixels"
    ":ref:`BBOX <wcs_getcoverage_bbox>`", "Yes", "Extent"
+   ":ref:`CRS <wcs_getcoverage_crs>`", "Yes", "Coordinate reference systemof the extent"
+   ":ref:`RESPONSE_CRS <wcs_getcoverage_responsecrs>`", "No", "Coordinate reference system of the response"
 
 
 .. _`wcs_getcoverage_request`:
@@ -243,5 +246,54 @@ This parameter is ``GetCoverage`` in case of the **GetCoverage** request.
 BBOX
 ^^^^
 
-TODO
+This parameter allows to specify the map extent with units according to the
+current CRS. Coordinates have to be separated by a comma. The ``BBOX``
+parameter is formed like ``minx,miny,maxx,maxy``.
 
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WCS
+  &REQUEST=GetCoverage
+  &IDENTIFIER=T20QPD_20171123T144719_TCI
+  &BBOX=647533,1805950,660987,1813940
+  &CRS=EPSG:32620
+
+
+.. _`wcs_getcoverage_crs`:
+
+CRS
+^^^
+
+This parameter allows to indicate the  Spatial Reference System of the ``BBOX``
+parameter and has to be formed like ``EPSG:XXXX``.
+
+
+.. _`wcs_getcoverage_responsecrs`:
+
+RESPONSE_CRS
+^^^^^^^^^^^^
+
+This parameter allows to indicate the output response Spatial Reference System
+and has to be formed like ``EPSG:XXXX``. The CRS of the corresponding coverage
+layer is used by default.
+
+
+.. _`wcs_getcoverage_width`:
+
+WIDTH
+^^^^^
+
+This parameter allows to specify the width in pixels of the output
+image. The resolution of the response image depends on this value.
+
+
+.. _`wcs_getcoverage_height`:
+
+HEIGHT
+^^^^^^
+
+This parameter allows to specify the height in pixels of the output
+image.
