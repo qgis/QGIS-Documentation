@@ -33,10 +33,18 @@ WCS 1.1.1 specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`MAP <wms-map>`", "Yes", "Specify the QGIS project file"
    ":ref:`SERVICE <wcs_service>`", "Yes", "Name of the service (**WCS**)"
    ":ref:`VERSION <wcs_version>`", "No", "Version of the service"
    ":ref:`REQUEST <wcs_getcapabilities_request>`", "Yes", "Name of the request (**GetCapabilities**)"
+
+In addition to the standard ones, QGIS Server supports the following extra
+parameters:
+
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: auto
+
+   ":ref:`MAP <wms-map>`", "Yes", "Specify the QGIS project file"
 
 URL example:
 
@@ -113,13 +121,20 @@ specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`MAP <wms-map>`", "Yes", "Specify the QGIS project file"
    ":ref:`SERVICE <wcs_service>`", "Yes", "Name of the service (**WCS**)"
    ":ref:`VERSION <wcs_version>`", "No", "Version of the service"
    ":ref:`REQUEST <wcs_getcapabilities_request>`", "Yes", "Name of the request (**GetCapabilities**)"
    ":ref:`COVERAGE <wcs_describecoverage_coverage>`", "No", "Specify coverage layers (WCS 1.0)"
    ":ref:`IDENTIFIER <wcs_describecoverage_identifier>`", "No", "Specify coverage layers (WCS 1.1)"
 
+In addition to the standard ones, QGIS Server supports the following extra
+parameters:
+
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: auto
+
+   ":ref:`MAP <wms-map>`", "Yes", "Specify the QGIS project file"
 
 The XML document for a 3 bands GeoTIFF raster layer looks like:
 
@@ -220,7 +235,6 @@ request according to the OGC WCS 1.1.1 specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`MAP <wms-map>`", "Yes", "Specify the QGIS project file"
    ":ref:`SERVICE <wcs_service>`", "Yes", "Name of the service (**WCS**)"
    ":ref:`VERSION <wcs_version>`", "No", "Version of the service"
    ":ref:`REQUEST <wcs_getcoverage_request>`", "Yes", "Name of the request (**GetCoverage**)"
@@ -231,6 +245,15 @@ request according to the OGC WCS 1.1.1 specifications:
    ":ref:`BBOX <wcs_getcoverage_bbox>`", "Yes", "Extent"
    ":ref:`CRS <wcs_getcoverage_crs>`", "Yes", "Coordinate reference systemof the extent"
    ":ref:`RESPONSE_CRS <wcs_getcoverage_responsecrs>`", "No", "Coordinate reference system of the response"
+
+In addition to the standard ones, QGIS Server supports the following extra
+parameters:
+
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: auto
+
+   ":ref:`MAP <wms-map>`", "Yes", "Specify the QGIS project file"
 
 
 .. _`wcs_getcoverage_request`:
