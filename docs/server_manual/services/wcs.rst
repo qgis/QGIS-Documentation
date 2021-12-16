@@ -1,12 +1,13 @@
 Web Coverage Service (WCS)
 ==========================
 
-The **1.1.1** WCS standards implemented in QGIS Server provides a HTTP
-interface to access raster data, referred to as *coverage*, coming from a QGIS
-project.
+The **1.0.0** and **1.1.1** WCS standards implemented in QGIS Server provides a
+HTTP interface to access raster data, referred to as *coverage*, coming from a
+QGIS project.
 
 Specifications:
 
+- `WCS 1.0.0 <http://docs.opengeospatial.org/is/16-083r2/16-083r2.html>`_
 - `WCS 1.1.1 <http://docs.opengeospatial.org/is/09-146r8/09-146r8.html>`_
 
 Standard requests provided by QGIS Server:
@@ -95,7 +96,7 @@ VERSION
 ^^^^^^^
 
 This parameter allows to specify the version of the service to use. Currently,
-only the ``1.1.1`` value is supported.
+the version values is not internally used and always fallback to ``1.1.1``.
 
 
 .. _`qgisserver_wcs_describecoverage`:
@@ -112,8 +113,8 @@ specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`COVERAGE <wcs-describecoverage-coverage>`", "No", "Specify coverage layers"
-   ":ref:`IDENTIFIER <wcs-describecoverage-identifier>`", "No", ""
+   ":ref:`COVERAGE <wcs_describecoverage_coverage>`", "No", "Specify coverage layers"
+   ":ref:`IDENTIFIER <wcs_describecoverage_identifier>`", "No", ""
 
 
 The XML document for a 3 bands GeoTIFF raster layer looks like:
@@ -157,13 +158,13 @@ The XML document for a 3 bands GeoTIFF raster layer looks like:
   </CoverageDescription>
 
 
-.. _`wcs-describecoverage-coverage`:
+.. _`wcs_describecoverage_coverage`:
 
 COVERAGE
 ^^^^^^^^
 
-This parameter allows to specify the layers to query for additional
-information. Names have to be separated by a comma.
+This parameter, defined in WCS ``1.0.0``, allows to specify the layers to query
+for additional information. Names have to be separated by a comma.
 
 In addition, QGIS Server introduced an option to select layers by its short
 name.  The short name of a layer may be configured through
@@ -178,12 +179,19 @@ defined, then it's used by default instead of the layer's name:
   &COVERAGE=mylayer1name,mylayer2shortname
 
 
-.. _`wcs-describecoverage-identifier`:
+.. _`wcs_describecoverage_identifier`:
 
 IDENTIFIER
 ^^^^^^^^^^
 
-TODO
+This parameter replaces the :ref:`COVERAGE <wcs_describecoverage_coverage>`
+parameter in WCS ``1.1.1``. But QGIS Server does not filter according to the
+``VERSION`` parameter so ``IDENTIFIER`` and ``COVERAGE`` have the same effect.
+
+.. note::
+
+  If both ``IDENTIFIER`` and ``COVERAGE`` parameters are defined,
+  ``COVERAGE`` is always used in priority.
 
 
 .. _`qgisserver_wcs_getcoverage`:
