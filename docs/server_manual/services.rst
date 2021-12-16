@@ -20,6 +20,7 @@ behavior thanks to the QGIS rendering engine.
 
    services/wms.rst
    services/wfs.rst
+   services/wcs.rst
    services/wmts.rst
    services/ogcapif.rst
    services/extra_parameters.rst
