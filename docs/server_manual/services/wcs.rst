@@ -1,7 +1,7 @@
 Web Coverage Service (WCS)
 ==========================
 
-The **1.0.0** and **1.1.1** WCS standards implemented in QGIS Server provides a
+The **1.0.0** and **1.1.1** WCS standards implemented in QGIS Server provide a
 HTTP interface to access raster data, referred to as *coverage*, coming from a
 QGIS project.
 
@@ -18,7 +18,7 @@ Standard requests provided by QGIS Server:
 
    ":ref:`GetCapabilities <qgisserver_wcs_getcapabilities>`", "Returns XML metadata with information about the server"
    ":ref:`DescribeCoverage <qgisserver_wcs_describecoverage>`", "Retrieves XML document about additional information about coverages"
-   ":ref:`GetCoverage <qgisserver_wcs_getcoverage>`", ""
+   ":ref:`GetCoverage <qgisserver_wcs_getcoverage>`", "Retrieves coverage"
 
 
 .. _`qgisserver_wcs_getcapabilities`:
