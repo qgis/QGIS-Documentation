@@ -38,6 +38,17 @@ OGC WFS 1.0.0 and 1.1.0 specifications:
 
    ":ref:`SERVICE <qgisserver-wfs-service>`", "Yes", "Name of the service (**WFS**)"
    ":ref:`VERSION <qgisserver-wfs-version>`", "No", "Version of the service"
+   ":ref:`REQUEST <qgisserver-wfs-getcapabilities-request>`", "Yes", "Name of the request"
+
+In addition to the standard ones, QGIS Server supports the following
+extra parameters:
+
+
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: auto
+
+   ":ref:`MAP <qgisserver-wfs-map>`", "Yes", "Specify the QGIS project file"
 
 
 .. _`qgisserver-wfs-service`:
@@ -80,6 +91,29 @@ URL example:
   &...
 
 
+.. _`qgisserver-wfs-getcapabilities-request`:
+
+REQUEST
+^^^^^^^
+
+This parameter is ``GetCapabilities`` in case of the **GetCapabilities**
+request.
+
+
+.. _`qgisserver-wfs-map`:
+
+MAP
+^^^
+
+This parameter allows to define the QGIS project file to use and is mandatory
+because a request needs a QGIS project to actually work.
+
+However, the ``QGIS_PROJECT_FILE`` environment variable may be used to define a
+default QGIS project.  In this specific case, ``MAP`` is not longer a required
+parameter.  For further information you may refer to
+:ref:`server_env_variables`.
+
+
 .. _`qgisserver-wfs-getfeature`:
 
 GetFeature
@@ -94,7 +128,7 @@ OGC WFS 1.0.0 and 1.1.0 specifications:
 
    ":ref:`SERVICE <qgisserver-wfs-service>`", "Yes", "Name of the service (**WFS**)"
    ":ref:`VERSION <qgisserver-wfs-version>`", "No", "Version of the service"
-   "REQUEST", "Yes", "Name of the request"
+   ":ref:`REQUEST <qgisserver-wfs-getfeature-request>`", "Yes", "Name of the request"
    "TYPENAME", "No", "Name of layers"
    "OUTPUTFORMAT", "No", "Output Format"
    "RESULTTYPE", "No", "Type of the result"
@@ -115,7 +149,7 @@ extra parameters:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   "MAP", "Yes", "Specify the QGIS project file"
+   ":ref:`MAP <qgisserver-wfs-map>`", "Yes", "Specify the QGIS project file"
    "STARTINDEX", "No", "Paging"
    "GEOMETRYNAME", "No", "Type of geometry to return"
    "EXP_FILTER", "No", "Expression filtering"
