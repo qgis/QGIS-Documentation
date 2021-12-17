@@ -124,8 +124,8 @@ specifications:
    ":ref:`SERVICE <wcs_service>`", "Yes", "Name of the service (**WCS**)"
    ":ref:`VERSION <wcs_version>`", "No", "Version of the service"
    ":ref:`REQUEST <wcs_getcapabilities_request>`", "Yes", "Name of the request (**GetCapabilities**)"
-   ":ref:`COVERAGE <wcs_describecoverage_coverage>`", "No", "Specify coverage layers (WCS 1.0)"
-   ":ref:`IDENTIFIER <wcs_describecoverage_identifier>`", "No", "Specify coverage layers (WCS 1.1)"
+   ":ref:`COVERAGE <wcs_describecoverage_coverage>`", "No", "Specify coverage layers (WCS 1.0.0)"
+   ":ref:`IDENTIFIER <wcs_describecoverage_identifier>`", "No", "Specify coverage layers (WCS 1.1.1)"
 
 In addition to the standard ones, QGIS Server supports the following extra
 parameters:
@@ -182,7 +182,7 @@ The XML document for a 3 bands GeoTIFF raster layer looks like:
 COVERAGE
 ^^^^^^^^
 
-This parameter, defined in WCS ``1.0``, allows to specify the layers to query
+This parameter, defined in WCS ``1.0.0``, allows to specify the layers to query
 for additional information. Names have to be separated by a comma.
 
 In addition, QGIS Server introduced an option to select layers by its short
@@ -209,17 +209,14 @@ IDENTIFIER
 ^^^^^^^^^^
 
 This parameter replaces the :ref:`COVERAGE <wcs_describecoverage_coverage>`
-parameter in WCS ``1.1``. But QGIS Server does not filter according to the
+parameter in WCS ``1.1.1``. But QGIS Server does not filter according to the
 ``VERSION`` parameter so ``IDENTIFIER`` and ``COVERAGE`` have the same effect.
 
 .. note::
 
-  ``IDENTIFIER`` is mandatory if ``COVERAGE`` is not set.
-
-.. note::
-
-  If both ``IDENTIFIER`` and ``COVERAGE`` parameters are defined,
-  ``COVERAGE`` is always used in priority.
+  ``IDENTIFIER`` is mandatory if ``COVERAGE`` is not set. If both
+  ``IDENTIFIER`` and ``COVERAGE`` parameters are defined, ``COVERAGE`` is
+  always used in priority.
 
 
 .. _`qgisserver_wcs_getcoverage`:
@@ -238,8 +235,8 @@ request according to the OGC WCS 1.1.1 specifications:
    ":ref:`SERVICE <wcs_service>`", "Yes", "Name of the service (**WCS**)"
    ":ref:`VERSION <wcs_version>`", "No", "Version of the service"
    ":ref:`REQUEST <wcs_getcoverage_request>`", "Yes", "Name of the request (**GetCoverage**)"
-   ":ref:`COVERAGE <wcs_describecoverage_coverage>`", "No", "Specify coverage layers (WCS 1.0)"
-   ":ref:`IDENTIFIER <wcs_describecoverage_identifier>`", "No", "Specify coverage layers (WCS 1.1)"
+   ":ref:`COVERAGE <wcs_describecoverage_coverage>`", "No", "Specify coverage layers (WCS 1.0.0)"
+   ":ref:`IDENTIFIER <wcs_describecoverage_identifier>`", "No", "Specify coverage layers (WCS 1.1.1)"
    ":ref:`WIDTH <wcs_getcoverage_width>`", "Yes", "Width of the response in pixels"
    ":ref:`HEIGHT <wcs_getcoverage_height>`", "Yes", "Height of the response in pixels"
    ":ref:`BBOX <wcs_getcoverage_bbox>`", "Yes", "Extent"
@@ -269,9 +266,9 @@ This parameter is ``GetCoverage`` in case of the **GetCoverage** request.
 BBOX
 ^^^^
 
-This parameter allows to specify the map extent with units according to the
-current CRS. Coordinates have to be separated by a comma. The ``BBOX``
-parameter is formed like ``minx,miny,maxx,maxy``.
+This parameter allows to specify the map extent in the units of the current
+CRS. Coordinates have to be separated by a comma. The ``BBOX`` parameter is
+formed like ``minx,miny,maxx,maxy``.
 
 URL example:
 
@@ -309,8 +306,8 @@ layer is used by default.
 WIDTH
 ^^^^^
 
-This parameter allows to specify the width in pixels of the output
-image. The resolution of the response image depends on this value.
+This parameter allows to specify the width in pixels of the output image. The
+resolution of the response image depends on this value.
 
 
 .. _`wcs_getcoverage_height`:
@@ -318,11 +315,11 @@ image. The resolution of the response image depends on this value.
 HEIGHT
 ^^^^^^
 
-This parameter allows to specify the height in pixels of the output
-image. The resolution of the response image depends on this value.
+This parameter allows to specify the height in pixels of the output image. The
+resolution of the response image depends on this value.
 
 
 .. figure:: ../img/server_wcs_getcoverage_width_height.png
   :align: center
 
-  From left to right: ``WIDTH=&HEIGHT=20``, ``WIDTH=50&HEIGHT=50``, ``WIDTH=100&HEIGHT=100``
+  From left to right: ``WIDTH=20&HEIGHT=20``, ``WIDTH=50&HEIGHT=50``, ``WIDTH=100&HEIGHT=100``
