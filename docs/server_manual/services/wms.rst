@@ -1076,6 +1076,7 @@ URL example:
   &LAYERS=countries,airports
   &BBOX=43.20,-2.93,49.35,8.32
   &CRS=EPSG:4326
+  &TRANSPARENT=TRUE
   &RULELABEL=AUTO
 
 
