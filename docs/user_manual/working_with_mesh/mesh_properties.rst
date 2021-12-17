@@ -13,7 +13,7 @@ What's a mesh?
 ==============
 
 A mesh is an unstructured grid usually with temporal and other components.
-The spatial component contains a collection of vertices, edges and faces
+The spatial component contains a collection of vertices, edges and/or faces,
 in 2D or 3D space:
 
 * **vertices** - XY(Z) points (in the layer's coordinate reference system)
@@ -21,6 +21,17 @@ in 2D or 3D space:
 * **faces** - a face is a set of edges forming a closed shape - typically
   a triangle or a quadrilateral (quad), rarely polygons with more vertices
 
+Relying on the above, mesh layers can thus have different types of structure:
+
+* 1D Meshes: consist of vertices and edges. An edge connects two vertices and
+  can have assigned data (scalars or vectors) on it. The 1D mesh network can
+  be for example used for modelling of an urban drainage system.
+* 2D meshes: consist of faces with triangles, regular or unstructured quads.
+* 3D layered meshes: consist of multiple stacked 2D unstructured meshes each
+  extruded in the vertical direction (levels) by means of a vertical coordinate.
+  The vertices and faces have the same topology in each vertical level.
+  The mesh definition (vertical level extrusion) could in general change in time.
+  The data is usually defined in volume centres or by some parametric function.
 
 .. _figure_mesh_grid_types:
 
@@ -28,8 +39,6 @@ in 2D or 3D space:
    :align: center
 
    Different mesh types
-
-QGIS can currently render mesh data using triangles or regular quads.
 
 Mesh provides information about the spatial structure.
 In addition, the mesh can have datasets (groups) that assign a value to every vertex.
@@ -87,16 +96,10 @@ For such quantities it is desirable to display arrows indicating the directions.
 Supported formats
 =================
 
-QGIS accesses mesh data using the `MDAL drivers <https://github.com/lutraconsulting/MDAL>`_.
-Hence, the natively supported formats are:
-
-* ``NetCDF``: Generic format for scientific data
-* ``GRIB``: Format commonly used in meteorology
-* ``XMDF``: As an example, hydraulic outputs from TUFLOW modelling package
-* ``DAT``: Outputs of various hydrodynamic modelling packages (e.g. BASEMENT, HYDRO_AS-2D, TUFLOW)
-* ``3Di``: 3Di modelling package format based on Climate and Forecast Conventions (http://cfconventions.org/)
-* Some examples of mesh datasets can be found at https://apps.ecmwf.int/datasets/data/interim-full-daily/levtype=sfc/
-
+QGIS accesses mesh data using the `MDAL drivers <https://github.com/lutraconsulting/MDAL>`_,
+and natively supports a `variety of formats <https://github.com/lutraconsulting/MDAL#supported-formats>`_.
+Whether QGIS can edit a mesh layer depends on the format and the mesh
+structure type.
 
 To load a mesh dataset into QGIS, use the |addMeshLayer| :guilabel:`Mesh` tab
 in the :guilabel:`Data Source Manager` dialog. Read :ref:`mesh_loading` for
@@ -109,7 +112,7 @@ Mesh Dataset Properties
 =======================
 
 The :guilabel:`Layer Properties` dialog for a mesh layer provides general
-settings to manage dataset groups of the layer and theirrendering
+settings to manage dataset groups of the layer and their rendering
 (active dataset groups, symbology, 2D and 3D rendering).
 It also provides information about the layer.
 
@@ -292,9 +295,13 @@ visualization options of contours for the selected group, as shown in
 
    Styling Contours in a Mesh Layer
 
+* For 1D mesh, set the :guilabel:`Stroke width` of the edges. This can be
+  a fixed size for the whole dataset, or vary along the geometry (more details
+  with the :ref:`interpolated line renderer <interpolated_line_symbol>`)
 * Use the slider or the spinbox to set the :guilabel:`Opacity` of the current
-  group.
-* Use |refresh| :sup:`Load` to adjust the min and max values of the current group
+  group, if of a 2D mesh type.
+* Enter the range of values you want to represent on the current group:
+  use |refresh| :sup:`Load` to fetch the min and max values of the current group
   or enter custom values if you want to exclude some.
 * Select the :guilabel:`Resampling method`
 * Classify the dataset using the :ref:`color ramp shader <color_ramp_shader>`
@@ -373,23 +380,22 @@ Rendering
 .........
 
 In the tab |meshframe| :sup:`Rendering` tab, QGIS offers possibilities to
-display the grid, as shown in :numref:`figure_mesh_symbology_grid`:
+display and customize the mesh structure. :guilabel:`Line width` and
+:guilabel:`Line color` can be set to represent:
 
-* ``Native Mesh Rendering`` that shows original faces and edges from the layer
-* ``Triangular Mesh Rendering`` that adds more edges and displays the faces as
-  triangles
+* the edges for 1D meshes
+* For 2D meshes:
 
+  * :guilabel:`Native mesh rendering`: shows original faces and edges from the layer
+  * :guilabel:`Triangular mesh rendering`: adds more edges and displays the faces as
+    triangles
 
 .. _figure_mesh_symbology_grid:
 
 .. figure:: img/mesh_symbology_grid.png
    :align: center
 
-   Mesh Rendering
-
-
-The lines width and color can be changed in this dialog, and both the grid
-renderings can be turned off.
+   2D Mesh Rendering
 
 
 .. _mesh_stacked_averaging:
