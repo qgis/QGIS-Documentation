@@ -449,7 +449,61 @@ result in an exception:
 SORTBY
 ^^^^^^
 
-TODO
+This parameter allows to sort resulting features according to property values
+and has to be formed like ``propertyname SORTRULE``.
+
+Available values for ``SORTRULE`` in case of descending sorting:
+
+- ``D``
+- ``+D``
+- ``DESC``
+- ``+DESC``
+
+
+Available values for ``SORTRULE`` in case of ascending sorting:
+
+- ``A``
+- ``+A``
+- ``ASC``
+- ``+ASC``
+
+
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WFS
+  &REQUEST=GetFeature
+  &TYPENAME=places
+  &PROPERTYNAME=name
+  &MAXFEATURES=3
+  &SORTBY=name DESC
+
+The corresponding result:
+
+.. code-block:: xml
+
+  <wfs:FeatureCollection xmlns:wfs="http://www.opengis.net/wfs" xmlns:ogc="http://www.opengis.net/ogc" xmlns:gml="http://www.opengis.net/gml" xmlns:ows="http://www.opengis.net/ows" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:qgs="http://www.qgis.org/gml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wfs http://schemas.opengis.net/wfs/1.1.0/wfs.xsd http://www.qgis.org/gml http://192.168.1.15/qgisserver?SERVICE=WFS&VERSION=1.1.0&REQUEST=DescribeFeatureType&TYPENAME=places&OUTPUTFORMAT=text/xml; subtype%3Dgml/3.1.1">
+      <gml:boundedBy>
+          ...
+      </gml:boundedBy>
+      <gml:featureMember>
+          <qgs:places gml:id="places.90">
+              <qgs:name>Zagreb</qgs:name>
+          </qgs:places>
+      </gml:featureMember>
+      <gml:featureMember>
+          <qgs:places gml:id="places.113">
+              <qgs:name>Yerevan</qgs:name>
+          </qgs:places>
+      </gml:featureMember>
+      <gml:featureMember>
+          <qgs:places gml:id="places.111">
+              <qgs:name>Yaounde</qgs:name>
+          </qgs:places>
+      </gml:featureMember>
+  </wfs:FeatureCollection>
 
 
 .. _`qgisserver-wfs-getfeature-geometryname`:
@@ -505,4 +559,14 @@ URL example:
 EXP_FILTER
 ^^^^^^^^^^
 
-TODO
+This parameter allows to filter the response with QGIS expressions.
+
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WFS&
+  REQUEST=GetFeature&
+  TYPENAME=places&
+  FILTER="name"='Paris'
