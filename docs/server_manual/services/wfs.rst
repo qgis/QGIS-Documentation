@@ -150,9 +150,9 @@ extra parameters:
    :widths: auto
 
    ":ref:`MAP <qgisserver-wfs-map>`", "Yes", "Specify the QGIS project file"
-   "STARTINDEX <qgisserver-wfs-getfeature-startindex>`", "No", "Paging"
-   "GEOMETRYNAME <qgisserver-wfs-getfeature-geometryname>`", "No", "Type of geometry to return"
-   "EXP_FILTER <qgisserver-wfs-getfeature-expfilter>`", "No", "Expression filtering"
+   ":ref:`STARTINDEX <qgisserver-wfs-getfeature-startindex>`", "No", "Paging"
+   ":ref:`GEOMETRYNAME <qgisserver-wfs-getfeature-geometryname>`", "No", "Type of geometry to return"
+   ":ref:`EXP_FILTER <qgisserver-wfs-getfeature-expfilter>`", "No", "Expression filtering"
 
 
 .. _`qgisserver-wfs-getfeature-request`:
@@ -182,13 +182,54 @@ TYPENAME
 This parameter allows to specify layer names and is mandatory if ``FEATUREID``
 is not set.
 
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WFS
+  &VERSION=1.1.0
+  &REQUEST=GetFeature
+  &TYPENAME=countries
+
 
 .. _`qgisserver-wfs-getfeature-featureid`:
 
 FEATUREID
 ^^^^^^^^^
 
-TODO
+This parameter allows to specify the ID of a specific feature and is formed
+like ``typename.fid,typename.fid,...``.
+
+URL example:
+
+.. code-block:: bash
+
+   http://localhost/qgisserver?
+   SERVICE=WFS
+   &REQUEST=GetFeature
+   &FEATUREID=countries.0,places.1
+
+
+XML response:
+
+.. code-block:: xml
+
+  <wfs:FeatureCollection xmlns:wfs="http://www.opengis.net/wfs" xmlns:ogc="http://www.opengis.net/ogc" xmlns:gml="http://www.opengis.net/gml" xmlns:ows="http://www.opengis.net/ows" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:qgs="http://www.qgis.org/gml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wfs http://schemas.opengis.net/wfs/1.1.0/wfs.xsd http://www.qgis.org/gml http://192.168.1.15/qgisserver?SERVICE=WFS&VERSION=1.1.0&REQUEST=DescribeFeatureType&TYPENAME=countries,places&OUTPUTFORMAT=text/xml; subtype%3Dgml/3.1.1">
+    <gml:boundedBy>
+      ...
+    </gml:boundedBy>
+    <gml:featureMember>
+      <qgs:countries gml:id="countries.1">
+        ...
+      </qgs:countries>
+    </gml:featureMember>
+    <gml:featureMember>
+      <qgs:places gml:id="places.1">
+        ...
+      </qgs:places>
+    </gml:featureMember>
+  </wfs:FeatureCollection>
 
 
 .. _`qgisserver-wfs-getfeature-outputformat`:
@@ -196,8 +237,51 @@ TODO
 OUTPUTFORMAT
 ^^^^^^^^^^^^
 
-TODO
 
+This parameter may be used to specify the format of the response. If
+``VERSION`` is greater or equal than ``1.1.0``, GML3 is the default format.
+Otherwise GML2 is used instead.
+
+Available values are:
+
+- ``gml2``
+-  ``text/xml; subtype=gml/2.1.2``
+- ``gml3``
+- ``text/xml; subtype=gml/3.1.1``
+- ``geojson``
+- ``application/vnd.geo+json``,
+- ``application/vnd.geo json``
+- ``application/geo+json``
+- ``application/geo json``
+- ``application/json``
+
+
+URL example:
+
+.. code-block:: bash
+
+   http://localhost/qgisserver?
+   SERVICE=WFS
+   &REQUEST=GetFeature
+   &FEATUREID=countries.0
+   &OUTPUTFORMAT=geojson
+
+
+GeoJSON response:
+
+.. code-block:: json
+
+  {
+      "type":"FeatureCollection",
+      "bbox":[
+          -180,
+          -90,
+          180,
+          83.6236
+      ],
+      "features":[
+      ]
+  }
 
 .. _`qgisserver-wfs-getfeature-resulttype`:
 
