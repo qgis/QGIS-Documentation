@@ -400,8 +400,8 @@ Available values are (not case sensitive):
 - ``TRUE``
 - ``FALSE``
 
-However, this parameter is ignored if the format of the map image
-indicated with ``FORMAT`` is different from PNG.
+However, this parameter is ignored if the format of the image indicated with
+``FORMAT`` is different from PNG.
 
 
 .. _`wms-map`:
@@ -898,7 +898,7 @@ becomes mandatory when using the ``BBOX`` parameter.
 
 URL example:
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgisserver?
   SERVICE=WMS
@@ -1045,7 +1045,7 @@ with ``BBOX`` parameter nor the JSON format.
 
 URL example:
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgisserver?
   SERVICE=WMS
@@ -1068,7 +1068,7 @@ This parameter allows to control the item label rendering. Available values are
 
 URL example:
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgisserver?
   SERVICE=WMS
@@ -1094,6 +1094,19 @@ BOXSPACE
 This parameter allows to specify the space between legend frame and content in
 millimeters. By default, the space value is ``2`` mm.
 
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=airports
+  &BBOX=43.20,-2.93,49.35,8.32
+  &CRS=EPSG:4326
+  &TRANSPARENT=TRUE
+  &BOXSPACE=0
+
 .. figure:: ../img/wms_getlegendgraphics_boxspace.png
    :align: center
 
@@ -1109,6 +1122,19 @@ LAYERSPACE
 This parameter allows to specify the vertical space between layers in
 millimeters. By default, the space value is ``3`` mm.
 
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=airports,places
+  &BBOX=43.20,-2.93,49.35,8.32
+  &CRS=EPSG:4326
+  &TRANSPARENT=TRUE
+  &LAYERSPACE=0
+
 .. figure:: ../img/wms_getlegendgraphics_layerspace.png
    :align: center
 
@@ -1122,6 +1148,19 @@ LAYERTITLESPACE
 
 This parameter allows to specify the vertical space between layer title and
 items following in millimeters. By default the space value is ``3`` mm.
+
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=airports,places
+  &BBOX=43.20,-2.93,49.35,8.32
+  &CRS=EPSG:4326
+  &TRANSPARENT=TRUE
+  &LAYERTITLESPACE=0
 
 .. figure:: ../img/wms_getlegendgraphics_layertitlespace.png
    :align: center
@@ -1137,6 +1176,19 @@ SYMBOLSPACE
 This parameter allows to specify the vertical space between symbol and item
 following in millimeters. By default the space value is ``2`` mm.
 
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=countries
+  &BBOX=43.20,-2.93,49.35,8.32
+  &CRS=EPSG:4326
+  &TRANSPARENT=TRUE
+  &SYMBOLSPACE=0
+
 .. figure:: ../img/wms_getlegendgraphics_symbolspace.png
    :align: center
 
@@ -1150,6 +1202,19 @@ ICONLABELSPACE
 
 This parameter allows to specify the horizontal space between symbol and label
 text in millimeters. By default the space value is ``2`` mm.
+
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=countries,
+  &BBOX=43.20,-2.93,49.35,8.32
+  &CRS=EPSG:4326
+  &TRANSPARENT=TRUE
+  &ICONLABELSPACE=0
 
 .. figure:: ../img/wms_getlegendgraphics_iconlabelspace.png
    :align: center
@@ -1165,6 +1230,19 @@ SYMBOLWIDTH
 This parameter allows to specify the width of the symbol preview in
 millimeters. By default the width value is ``7`` mm.
 
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=countries,
+  &BBOX=43.20,-2.93,49.35,8.32
+  &CRS=EPSG:4326
+  &TRANSPARENT=TRUE
+  &SYMBOLWIDTH=2
+
 .. figure:: ../img/wms_getlegendgraphics_symbolwidth.png
    :align: center
 
@@ -1178,6 +1256,19 @@ SYMBOLHEIGHT
 
 This parameter allows to specify the height of the symbol preview in
 millimeters. By default the height value is ``4`` mm.
+
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=countries,
+  &BBOX=43.20,-2.93,49.35,8.32
+  &CRS=EPSG:4326
+  &TRANSPARENT=TRUE
+  &SYMBOLHEIGHT=2
 
 .. figure:: ../img/wms_getlegendgraphics_symbolheight.png
    :align: center
@@ -1225,6 +1316,19 @@ values are (not case sensitive):
 - ``TRUE``
 - ``FALSE``
 
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=airports,places
+  &BBOX=43.20,-2.93,49.35,8.32
+  &CRS=EPSG:4326
+  &TRANSPARENT=TRUE
+  &LAYERFONTBOLD=TRUE
+
 .. figure:: ../img/wms_getlegendgraphics_layerfontbold.png
    :align: center
 
@@ -1237,6 +1341,19 @@ LAYERFONTSIZE
 ^^^^^^^^^^^^^
 
 This parameter specifies the font size for rendering layer title in point.
+
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=airports,places
+  &BBOX=43.20,-2.93,49.35,8.32
+  &CRS=EPSG:4326
+  &TRANSPARENT=TRUE
+  &LAYERFONTSIZE=20
 
 .. figure:: ../img/wms_getlegendgraphics_layerfontsize.png
    :align: center
@@ -1255,6 +1372,19 @@ Available values are (not case sensitive):
 - ``TRUE``
 - ``FALSE``
 
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=airports,places
+  &BBOX=43.20,-2.93,49.35,8.32
+  &CRS=EPSG:4326
+  &TRANSPARENT=TRUE
+  &LAYERFONTITALIC=TRUE
+
 .. figure:: ../img/wms_getlegendgraphics_layerfontitalic.png
    :align: center
 
@@ -1269,6 +1399,19 @@ LAYERFONTCOLOR
 This parameter specifies the layer title color. The color may be literal
 (``red``, ``green``, ..) or in hexadecimal notation (``0xFF0000``,
 ``0x00FF00``, ...).
+
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=airports,places
+  &BBOX=43.20,-2.93,49.35,8.32
+  &CRS=EPSG:4326
+  &TRANSPARENT=TRUE
+  &LAYERFONTCOLOR=0x5f9930
 
 .. figure:: ../img/wms_getlegendgraphics_layerfontcolor.png
    :align: center
@@ -1303,6 +1446,19 @@ values are (not case sensitive):
 - ``TRUE``
 - ``FALSE``
 
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=airports,places
+  &BBOX=43.20,-2.93,49.35,8.32
+  &CRS=EPSG:4326
+  &TRANSPARENT=TRUE
+  &ITEMFONTBOLD=TRUE
+
 .. figure:: ../img/wms_getlegendgraphics_itemfontbold.png
    :align: center
 
@@ -1315,6 +1471,19 @@ ITEMFONTSIZE
 ^^^^^^^^^^^^
 
 This parameter specifies the font size for rendering layer title in point.
+
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=airports,places
+  &BBOX=43.20,-2.93,49.35,8.32
+  &CRS=EPSG:4326
+  &TRANSPARENT=TRUE
+  &ITEMFONTSIZE=20
 
 .. figure:: ../img/wms_getlegendgraphics_itemfontsize.png
    :align: center
@@ -1333,6 +1502,19 @@ Available values are (not case sensitive):
 - ``TRUE``
 - ``FALSE``
 
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=airports,places
+  &BBOX=43.20,-2.93,49.35,8.32
+  &CRS=EPSG:4326
+  &TRANSPARENT=TRUE
+  &ITEMFONTITALIC=TRUE
+
 .. figure:: ../img/wms_getlegendgraphics_itemfontitalic.png
    :align: center
 
@@ -1348,10 +1530,23 @@ This parameter specifies the item label color. The color may be literal
 (``red``, ``green``, ..) or in hexadecimal notation (``0xFF0000``,
 ``0x00FF00``, ...).
 
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=airports,places
+  &BBOX=43.20,-2.93,49.35,8.32
+  &CRS=EPSG:4326
+  &TRANSPARENT=TRUE
+  &ITEMFONTCOLOR=0x5f9930
+
 .. figure:: ../img/wms_getlegendgraphics_itemfontcolor.png
    :align: center
 
-   Legend with ``ITEMFONTCOLOR=0x0x5f9930``
+   Legend with ``ITEMFONTCOLOR=0x5f9930``
 
 
 .. _server_wms_getstyle:
