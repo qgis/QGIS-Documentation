@@ -129,13 +129,13 @@ OGC WFS 1.0.0 and 1.1.0 specifications:
    ":ref:`SERVICE <qgisserver-wfs-service>`", "Yes", "Name of the service (**WFS**)"
    ":ref:`VERSION <qgisserver-wfs-version>`", "No", "Version of the service"
    ":ref:`REQUEST <qgisserver-wfs-getfeature-request>`", "Yes", "Name of the request"
-   "TYPENAME", "No", "Name of layers"
+   ":ref:`TYPENAME <qgisserver-wfs-getfeature-typename>`", "No", "Name of layers"
+   ":ref:`FEATUREID <qgisserver-wfs-getfeature-featureid>`", "No", "Filter the features by ids"
    "OUTPUTFORMAT", "No", "Output Format"
    "RESULTTYPE", "No", "Type of the result"
    "PROPERTYNAME", "No", "Name of properties to return"
    "MAXFEATURES", "No", "Maximum number of features to return"
    "SRSNAME", "No", "Coordinate reference system"
-   "FEATUREID", "No", "Filter the features by ids"
    "FILTER", "No", "OGC Filter Encoding"
    "BBOX", "No", "Map Extent"
    "SORTBY", "No", "Sort the results"
@@ -207,6 +207,22 @@ URL example:
   &VERSION=1.1.0
   &REQUEST=GetFeature
   &...
+
+
+.. _`qgisserver-wfs-getfeature-typename`:
+
+TYPENAME
+^^^^^^^^
+
+This parameter allows to specify layer names.
+
+
+.. _`qgisserver-wfs-getfeature-featureid`:
+
+FEATUREID
+^^^^^^^^^
+
+TODO
 
 
 RESULTTYPE
