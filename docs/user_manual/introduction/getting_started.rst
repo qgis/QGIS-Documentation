@@ -172,7 +172,7 @@ Where :file:`qgis_sample_data` represents the path to the unzipped dataset.
 
          Select the Coordinate Reference System of data
 
-   #. Select the :guilabel:`NAD27 / Alaska Alberts` entry
+   #. Select the :guilabel:`NAD27 / Alaska Albers` entry
    #. Click :guilabel:`OK`
    #. Close the Data Source Manager window
 
