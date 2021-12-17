@@ -367,7 +367,12 @@ On the contrary, the next URL will return an exception:
 MAXFEATURES
 ^^^^^^^^^^^
 
-TODO
+This parameter allows to limit the number of features returned by the request.
+
+.. note::
+
+  This parameter may be useful to improve performances when underlying vector
+  layers are heavy.
 
 
 .. _`qgisserver-wfs-getfeature-srsname`:
@@ -375,7 +380,16 @@ TODO
 SRSNAME
 ^^^^^^^
 
-TODO
+This parameter allows to indicate the response output Spatial Reference System
+as well as the ``BBOX`` CRS and has to be formed like ``EPSG:XXXX``.
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WFS
+  &REQUEST=GetFeature
+  &TYPENAME=places
+  &SRSNAME=EPSG:32620
 
 
 .. _`qgisserver-wfs-getfeature-filter`:
@@ -383,7 +397,19 @@ TODO
 FILTER
 ^^^^^^
 
-TODO
+This parameter allows to filter the response with the **Filter Encoding**
+language defined by the
+`OGC Filter Encoding standard <https://www.ogc.org/standards/filter>`_.
+
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WFS&
+  REQUEST=GetFeature&
+  TYPENAME=places&
+  FILTER=<Filter><PropertyIsEqualTo><PropertyName>name</PropertyName><Literal>Paris</Literal></PropertyIsEqualTo></Filter>
 
 
 .. _`qgisserver-wfs-getfeature-bbox`:
@@ -391,7 +417,31 @@ TODO
 BBOX
 ^^^^
 
-TODO
+This parameter allows to specify the map extent with units according
+to the current CRS. Coordinates have to be separated by a comma.
+
+The ``SRSNAME`` parameter may specified the CRS of the extent. If not
+specified, the CRS of the layer is used by default.
+
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WFS
+  &REQUEST=GetFeature
+  &TYPENAME=places
+  &BBOX=-11.84,42.53,8.46,50.98
+
+
+The ``FEATUREID`` parameter cannot be used with the ``BBOX``. Any attempt will
+result in an exception:
+
+.. code-block:: xml
+
+  <ServiceExceptionReport xmlns="http://www.opengis.net/ogc" version="1.2.0">
+    <ServiceException code="RequestNotWellFormed">FEATUREID FILTER and BBOX parameters are mutually exclusive</ServiceException>
+  </ServiceExceptionReport>
 
 
 .. _`qgisserver-wfs-getfeature-sortby`:
