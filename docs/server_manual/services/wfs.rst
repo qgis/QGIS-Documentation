@@ -1,4 +1,4 @@
-Web Feature Service (WFS)
+RRb Feature Service (WFS)
 =========================
 
 The **1.0.0** and **1.1.0** WFS standards implemented in QGIS Server
@@ -131,14 +131,14 @@ OGC WFS 1.0.0 and 1.1.0 specifications:
    ":ref:`REQUEST <qgisserver-wfs-getfeature-request>`", "Yes", "Name of the request"
    ":ref:`TYPENAME <qgisserver-wfs-getfeature-typename>`", "No", "Name of layers"
    ":ref:`FEATUREID <qgisserver-wfs-getfeature-featureid>`", "No", "Filter the features by ids"
-   "OUTPUTFORMAT", "No", "Output Format"
-   "RESULTTYPE", "No", "Type of the result"
-   "PROPERTYNAME", "No", "Name of properties to return"
-   "MAXFEATURES", "No", "Maximum number of features to return"
-   "SRSNAME", "No", "Coordinate reference system"
-   "FILTER", "No", "OGC Filter Encoding"
-   "BBOX", "No", "Map Extent"
-   "SORTBY", "No", "Sort the results"
+   ":ref:`OUTPUTFORMAT <qgisserver-wfs-getfeature-outputformat>`", "No", "Output Format"
+   ":ref:`RESULTTYPE <qgisserver-wfs-getfeature-resulttype>`", "No", "Type of the result"
+   ":ref:`PROPERTYNAME <qgisserver-wfs-getfeature-propertyname>`", "No", "Name of properties to return"
+   ":ref:`MAXFEATURES <qgisserver-wfs-getfeature-maxfeatures>`", "No", "Maximum number of features to return"
+   ":ref:`SRSNAME <qgisserver-wfs-getfeature-srsname>`", "No", "Coordinate reference system"
+   ":ref:`FILTER <qgisserver-wfs-getfeature-filter>`", "No", "OGC Filter Encoding"
+   ":ref:`BBOX <qgisserver-wfs-getfeature-bbox>`", "No", "Map Extent"
+   ":ref:`SORTBY <qgisserver-wfs-getfeature-sortby>`", "No", "Sort the results"
 
 
 In addition to the standard ones, QGIS Server supports the following
@@ -150,47 +150,12 @@ extra parameters:
    :widths: auto
 
    ":ref:`MAP <qgisserver-wfs-map>`", "Yes", "Specify the QGIS project file"
-   "STARTINDEX", "No", "Paging"
-   "GEOMETRYNAME", "No", "Type of geometry to return"
-   "EXP_FILTER", "No", "Expression filtering"
+   "STARTINDEX <qgisserver-wfs-getfeature-startindex>`", "No", "Paging"
+   "GEOMETRYNAME <qgisserver-wfs-getfeature-geometryname>`", "No", "Type of geometry to return"
+   "EXP_FILTER <qgisserver-wfs-getfeature-expfilter>`", "No", "Expression filtering"
 
 
-SERVICE
-^^^^^^^
-
-This parameter has to be ``WFS`` in case of the **GetFeature**
-request.
-
-For example:
-
-.. code-block:: bash
-
-  http://localhost/qgisserver?
-  SERVICE=WFS
-  &...
-
-
-VERSION
-^^^^^^^
-
-This parameter allows to specify the version of the service to use.
-Available values for the ``VERSION`` parameter are:
-
-- ``1.0.0``
-- ``1.1.0``
-
-If no version is indicated in the request, then ``1.1.0`` is used by
-default.
-
-URL example:
-
-.. code-block:: bash
-
-  http://localhost/qgisserver?
-  SERVICE=WFS
-  &VERSION=1.1.0
-  &...
-
+.. _`qgisserver-wfs-getfeature-request`:
 
 REQUEST
 ^^^^^^^
@@ -214,7 +179,8 @@ URL example:
 TYPENAME
 ^^^^^^^^
 
-This parameter allows to specify layer names.
+This parameter allows to specify layer names and is mandatory if ``FEATUREID``
+is not set.
 
 
 .. _`qgisserver-wfs-getfeature-featureid`:
@@ -224,6 +190,16 @@ FEATUREID
 
 TODO
 
+
+.. _`qgisserver-wfs-getfeature-outputformat`:
+
+OUTPUTFORMAT
+^^^^^^^^^^^^
+
+TODO
+
+
+.. _`qgisserver-wfs-getfeature-resulttype`:
 
 RESULTTYPE
 ^^^^^^^^^^
@@ -245,6 +221,56 @@ URL example:
   &RESULTTYPE=hits
   &...
 
+
+.. _`qgisserver-wfs-getfeature-propertyname`:
+
+PROPERTYNAME
+^^^^^^^^^^^^
+
+TODO
+
+
+.. _`qgisserver-wfs-getfeature-maxfeatures`:
+
+MAXFEATURES
+^^^^^^^^^^^
+
+TODO
+
+
+.. _`qgisserver-wfs-getfeature-srsname`:
+
+SRSNAME
+^^^^^^^
+
+TODO
+
+
+.. _`qgisserver-wfs-getfeature-filter`:
+
+FILTER
+^^^^^^
+
+TODO
+
+
+.. _`qgisserver-wfs-getfeature-bbox`:
+
+BBOX
+^^^^
+
+TODO
+
+
+.. _`qgisserver-wfs-getfeature-sortby`:
+
+SORTBY
+^^^^^^
+
+TODO
+
+
+.. _`qgisserver-wfs-getfeature-geometryname`:
 
 GEOMETRYNAME
 ^^^^^^^^^^^^
@@ -268,12 +294,14 @@ URL example:
   &...
 
 
+.. _`qgisserver-wfs-getfeature-startindex`:
 
 STARTINDEX
 ^^^^^^^^^^
 
 This parameter is standard in WFS 2.0, but it's an extension for WFS
 1.0.0.
+
 Actually, it can be used to skip some features in the result set and
 in combination with ``MAXFEATURES``, it provides the ability to page
 through results.
@@ -288,3 +316,11 @@ URL example:
   &REQUEST=GetFeature
   &STARTINDEX=2
   &...
+
+
+.. _`qgisserver-wfs-getfeature-expfilter`:
+
+EXP_FILTER
+^^^^^^^^^^
+
+TODO
