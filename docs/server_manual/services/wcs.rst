@@ -44,7 +44,7 @@ parameters:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`MAP <wms-map>`", "Yes", "Specify the QGIS project file"
+   ":ref:`MAP <wcs-map>`", "Yes", "Specify the QGIS project file"
 
 URL example:
 
@@ -107,6 +107,18 @@ This parameter allows to specify the version of the service to use. Currently,
 the version values is not internally used and always fallback to ``1.1.1``.
 
 
+.. _`wcs-map`:
+
+MAP
+^^^
+
+This parameter allows to define the QGIS project file to use and is mandatory
+because a request needs a QGIS project to actually work.  However, the
+``QGIS_PROJECT_FILE`` environment variable may be used to define a default QGIS
+project. In this specific case, ``MAP`` is not longer a required parameter.
+For further information you may refer to :ref:`server_env_variables`.
+
+
 .. _`qgisserver_wcs_describecoverage`:
 
 DescribeCoverage
@@ -134,7 +146,7 @@ parameters:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`MAP <wms-map>`", "Yes", "Specify the QGIS project file"
+   ":ref:`MAP <wcs-map>`", "Yes", "Specify the QGIS project file"
 
 The XML document for a 3 bands GeoTIFF raster layer looks like:
 
@@ -186,8 +198,8 @@ This parameter, defined in WCS ``1.0.0``, allows to specify the layers to query
 for additional information. Names have to be separated by a comma.
 
 In addition, QGIS Server introduced an option to select layers by its short
-name.  The short name of a layer may be configured through
-:menuselection:`Properties --> Metadata` in layer menu.  If the short name is
+name. The short name of a layer may be configured through
+:menuselection:`Properties --> Metadata` in layer menu. If the short name is
 defined, then it's used by default instead of the layer's name:
 
 .. code-block:: bash
@@ -239,8 +251,8 @@ request according to the OGC WCS 1.1.1 specifications:
    ":ref:`IDENTIFIER <wcs_describecoverage_identifier>`", "No", "Specify coverage layers (WCS 1.1.1)"
    ":ref:`WIDTH <wcs_getcoverage_width>`", "Yes", "Width of the response in pixels"
    ":ref:`HEIGHT <wcs_getcoverage_height>`", "Yes", "Height of the response in pixels"
-   ":ref:`BBOX <wcs_getcoverage_bbox>`", "Yes", "Extent"
-   ":ref:`CRS <wcs_getcoverage_crs>`", "Yes", "Coordinate reference systemof the extent"
+   ":ref:`BBOX <wcs_getcoverage_bbox>`", "Yes", "Map extent in CRS units"
+   ":ref:`CRS <wcs_getcoverage_crs>`", "Yes", "Coordinate reference system of the extent"
    ":ref:`RESPONSE_CRS <wcs_getcoverage_responsecrs>`", "No", "Coordinate reference system of the response"
 
 In addition to the standard ones, QGIS Server supports the following extra
@@ -250,7 +262,7 @@ parameters:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`MAP <wms-map>`", "Yes", "Specify the QGIS project file"
+   ":ref:`MAP <wcs-map>`", "Yes", "Specify the QGIS project file"
 
 
 .. _`wcs_getcoverage_request`:
