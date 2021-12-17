@@ -1,4 +1,4 @@
-RRb Feature Service (WFS)
+Web Feature Service (WFS)
 =========================
 
 The **1.0.0** and **1.1.0** WFS standards implemented in QGIS Server
@@ -60,7 +60,7 @@ This parameter has to be ``WFS`` in case of the **WFS** service.
 
 For example:
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgisserver?
   SERVICE=WFS
@@ -83,7 +83,7 @@ default.
 
 URL example:
 
-.. code-block:: none
+.. code-block:: bash
 
   http://localhost/qgisserver?
   SERVICE=WFS
@@ -280,8 +280,29 @@ GeoJSON response:
           83.6236
       ],
       "features":[
+          {
+              "bbox":[
+                  -61.891113,
+                  16.989719,
+                  -61.666389,
+                  17.724998
+              ],
+              "geometry":{
+                  "coordinates":[
+                      "..."
+                  ],
+                  "type":"MultiPolygon"
+              },
+              "id":"countries.1",
+              "properties":{
+                  "id":1,
+                  "name":"Antigua and Barbuda"
+              },
+              "type":"Feature"
+          }
       ]
   }
+
 
 .. _`qgisserver-wfs-getfeature-resulttype`:
 
@@ -311,7 +332,34 @@ URL example:
 PROPERTYNAME
 ^^^^^^^^^^^^
 
-TODO
+This parameter may be used to specify a specific property to return. A property
+needs to be mapped with a ``TYPENAME`` or a ``FEATUREID``:
+
+Valid URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WFS
+  &REQUEST=GetFeature
+  &PROPERTYNAME=name
+  &TYPENAME=places
+
+On the contrary, the next URL will return an exception:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WFS
+  &REQUEST=GetFeature
+  &PROPERTYNAME=name
+  &TYPENAME=places,countries
+
+.. code-block:: xml
+
+  <ServiceExceptionReport xmlns="http://www.opengis.net/ogc" version="1.2.0">
+      <ServiceException code="RequestNotWellFormed">There has to be a 1:1 mapping between each element in a TYPENAME and the PROPERTYNAME list</ServiceException>
+  </ServiceExceptionReport>
 
 
 .. _`qgisserver-wfs-getfeature-maxfeatures`:
