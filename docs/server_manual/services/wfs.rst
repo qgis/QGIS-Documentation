@@ -18,10 +18,66 @@ Standard requests provided by QGIS Server:
    :header: "Request", "Description"
    :widths: auto
 
-   "GetCapabilities", "Returns XML metadata with information about the server"
-   "GetFeature", "Returns a selection of features"
+   ":ref:`GetCapabilities <qgisserver-wfs-getcapabilities>`", "Returns XML metadata with information about the server"
+   ":ref:`GetFeature <qgisserver-wfs-getfeature>`", "Returns a selection of features"
    "DescribeFeatureType", "Returns a description of feature types and properties"
    "Transaction", "Allows features to be inserted, updated or deleted"
+
+
+.. _`qgisserver-wfs-getcapabilities`:
+
+GetCapabilities
+---------------
+
+Standard parameters for the **GetFeature** request according to the
+OGC WFS 1.0.0 and 1.1.0 specifications:
+
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: auto
+
+   ":ref:`SERVICE <qgisserver-wfs-service>`", "Yes", "Name of the service (**WFS**)"
+   ":ref:`VERSION <qgisserver-wfs-version>`", "No", "Version of the service"
+
+
+.. _`qgisserver-wfs-service`:
+
+SERVICE
+^^^^^^^
+
+This parameter has to be ``WFS`` in case of the **WFS** service.
+
+For example:
+
+.. code-block:: none
+
+  http://localhost/qgisserver?
+  SERVICE=WFS
+  &...
+
+
+.. _`qgisserver-wfs-version`:
+
+VERSION
+^^^^^^^
+
+This parameter allows to specify the version of the service to use.
+Available values for the ``VERSION`` parameter are:
+
+- ``1.0.0``
+- ``1.1.0``
+
+If no version is indicated in the request, then ``1.1.0`` is used by
+default.
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgisserver?
+  SERVICE=WFS
+  &VERSION=1.1.0
+  &...
 
 
 .. _`qgisserver-wfs-getfeature`:
@@ -36,8 +92,8 @@ OGC WFS 1.0.0 and 1.1.0 specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   "SERVICE", "Yes", "Name of the service"
-   "VERSION", "No", "Version of the service"
+   ":ref:`SERVICE <qgisserver-wfs-service>`", "Yes", "Name of the service (**WFS**)"
+   ":ref:`VERSION <qgisserver-wfs-version>`", "No", "Version of the service"
    "REQUEST", "Yes", "Name of the request"
    "TYPENAME", "No", "Name of layers"
    "OUTPUTFORMAT", "No", "Output Format"
