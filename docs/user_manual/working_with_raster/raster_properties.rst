@@ -336,7 +336,7 @@ Options:
   lines and generally labeled with a value along its course.
 * :guilabel:`Index contour symbol`: the symbol to apply to the index contour lines
 * :guilabel:`Input downscaling`: Indicates by how much the renderer will scale
-  down the request to the data provider. Default is ``1.0``, meaning no downscaling.
+  down the request to the data provider (default is ``4.0``).
 
   For example, if you generate contour lines on input raster block with the
   same size as the output raster block, the generated lines would contain too
