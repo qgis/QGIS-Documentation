@@ -109,8 +109,8 @@ This parameter allows to define the QGIS project file to use and is mandatory
 because a request needs a QGIS project to actually work.
 
 However, the ``QGIS_PROJECT_FILE`` environment variable may be used to define a
-default QGIS project.  In this specific case, ``MAP`` is not longer a required
-parameter.  For further information you may refer to
+default QGIS project. In this specific case, ``MAP`` is no longer a required
+parameter. For further information you may refer to
 :ref:`server_env_variables`.
 
 
