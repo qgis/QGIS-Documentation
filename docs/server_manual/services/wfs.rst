@@ -240,7 +240,7 @@ OUTPUTFORMAT
 
 This parameter may be used to specify the format of the response. If
 ``VERSION`` is greater or equal than ``1.1.0``, GML3 is the default format.
-Otherwise GML2 is used instead.
+Otherwise GML2 is used.
 
 Available values are:
 
