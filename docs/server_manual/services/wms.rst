@@ -1002,7 +1002,7 @@ SRCWIDTH
 
 This parameter may de defined when the ``RULE`` parameter is set. In this case,
 the ``SRCWIDTH`` value is forwarded to the underlying ``GetMap`` request as the
-``WIDTH`` parameter while the ``WIDTH`` parameter of ``GetegendGraphics`` is
+``WIDTH`` parameter while the ``WIDTH`` parameter of ``GetLegendGraphics`` is
 used for the image legend size.
 
 
