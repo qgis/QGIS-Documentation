@@ -29,7 +29,7 @@ Standard requests provided by QGIS Server:
 GetCapabilities
 ---------------
 
-Standard parameters for the **GetFeature** request according to the
+Standard parameters for the **GetCapabilities** request according to the
 OGC WFS 1.0.0 and 1.1.0 specifications:
 
 .. csv-table::
