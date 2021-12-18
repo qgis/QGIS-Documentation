@@ -420,8 +420,8 @@ BBOX
 This parameter allows to specify the map extent with units according
 to the current CRS. Coordinates have to be separated by a comma.
 
-The ``SRSNAME`` parameter may specified the CRS of the extent. If not
-specified, the CRS of the layer is used by default.
+The ``SRSNAME`` parameter may specify the CRS of the extent. If not
+specified, the CRS of the layer is used.
 
 URL example:
 
