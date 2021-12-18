@@ -1013,7 +1013,7 @@ SRCHEIGHT
 
 This parameter may de defined when the ``RULE`` parameter is set. In this case,
 the ``SRCHEIGHT`` value is forwarded to the underlying ``GetMap`` request as
-the ``HEIGHT`` parameter while the ``HEIGHT`` parameter of ``GetegendGraphics``
+the ``HEIGHT`` parameter while the ``HEIGHT`` parameter of ``GetLegendGraphics``
 is used for the image legend size.
 
 
