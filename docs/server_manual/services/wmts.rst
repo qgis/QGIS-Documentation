@@ -82,7 +82,7 @@ MAP
 This parameter allows to define the QGIS project file to use and is mandatory
 because a request needs a QGIS project to actually work.  However, the
 ``QGIS_PROJECT_FILE`` environment variable may be used to define a default QGIS
-project.  In this specific case, ``MAP`` is not longer a required parameter.
+project.  In this specific case, ``MAP`` is no longer a required parameter.
 For further information you may refer to :ref:`server_env_variables`.
 
 
@@ -98,7 +98,7 @@ OGC WMTS 1.0.0 specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`SERVICE <qgisserver-wmts-service>`", "Yes", "Name of the service (WMTS)"
+   ":ref:`SERVICE <qgisserver-wmts-service>`", "Yes", "Name of the service (**WMTS**)"
    ":ref:`REQUEST <qgisserver-wmts-gettile-request>`", "Yes", "Name of the request (**GetTile**)"
    ":ref:`LAYER <qgisserver-wmts-gettile-layer>`", "Yes", "Layer identifier"
    ":ref:`FORMAT <qgisserver-wmts-gettile-format>`", "Yes", "Output format of the tile"
@@ -247,16 +247,16 @@ the OGC WMTS 1.0.0 specification:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   "ref:`SERVICE <qgisserver-wmts-service>`", "Yes", "Name of the service (**WMTS**)"
-   "ref:`REQUEST <qgisserver-wmts-getfeaureinfo-request>`", "Yes", "Name of the request (**GetFeatureInfo**)"
-   "ref:`LAYER <qgisserver-wmts-getfeaureinfo-layer>`", "Yes", "Layer identifier"
-   "ref:`INFOFORMAT <qgisserver-wmts-getfeaureinfo-infoformat>`", "No", "Output format"
-   "ref:`I <qgisserver-wmts-getfeaureinfo-i>`", "No", "X coordinate of a pixel"
-   "ref:`J <qgisserver-wmts-getfeaureinfo-j>`", "No", "Y coordinate of a pixel"
-   "ref:`TILEMATRIXSET <qgisserver-wmts-getfeaureinfo-tilematrixset>`", "Yes", ":ref:`See GetTile <qgisserver-wmts-gettile>`"
-   "ref:`TILEMATRIX <qgisserver-wmts-getfeaureinfo-tilematrix>`", "Yes", ":ref:`See GetTile <qgisserver-wmts-gettile>`"
-   "ref:`TILEROW <qgisserver-wmts-getfeaureinfo-tilerow>`", "Yes", ":ref:`See GetTile <qgisserver-wmts-gettile>`"
-   "ref:`TILECOL <qgisserver-wmts-getfeaureinfo-tilecol>`", "Yes", ":ref:`See GetTile <qgisserver-wmts-gettile>`"
+   ":ref:`SERVICE <qgisserver-wmts-service>`", "Yes", "Name of the service (**WMTS**)"
+   ":ref:`REQUEST <qgisserver-wmts-getfeatureinfo-request>`", "Yes", "Name of the request (**GetFeatureInfo**)"
+   ":ref:`LAYER <qgisserver-wmts-getfeatureinfo-layer>`", "Yes", "Layer identifier"
+   ":ref:`INFOFORMAT <qgisserver-wmts-getfeatureinfo-infoformat>`", "No", "Output format"
+   ":ref:`I <qgisserver-wmts-getfeatureinfo-i>`", "No", "X coordinate of a pixel"
+   ":ref:`J <qgisserver-wmts-getfeatureinfo-j>`", "No", "Y coordinate of a pixel"
+   ":ref:`TILEMATRIXSET <qgisserver-wmts-gettile-tilematrixset>`", "Yes", "Name of the pyramid"
+   ":ref:`TILEMATRIX <qgisserver-wmts-gettile-tilematrix>`", "Meshing"
+   ":ref:`TILEROW <qgisserver-wmts-gettile-tilerow>`", "Yes", "Row coordinate in the mesh"
+   ":ref:`TILECOL <qgisserver-wmts-gettile-tilecol>`", "Yes", "Column coordinate in the mesh"
 
 
 In addition to the standard ones, QGIS Server supports the following
