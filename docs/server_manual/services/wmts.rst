@@ -247,16 +247,16 @@ the OGC WMTS 1.0.0 specification:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   "SERVICE", "Yes", "Name of the service (WMTS)"
-   "REQUEST", "Yes", "Name of the request (GetFeatureInfo)"
-   "LAYER", "Yes", "Layer identifier"
-   "INFOFORMAT", "No", "Output format"
-   "I", "No", "X coordinate of a pixel"
-   "J", "No", "Y coordinate of a pixel"
-   "TILEMATRIXSET", "Yes", ":ref:`See GetTile <qgisserver-wmts-gettile>`"
-   "TILEMATRIX", "Yes", ":ref:`See GetTile <qgisserver-wmts-gettile>`"
-   "TILEROW", "Yes", ":ref:`See GetTile <qgisserver-wmts-gettile>`"
-   "TILECOL", "Yes", ":ref:`See GetTile <qgisserver-wmts-gettile>`"
+   "ref:`SERVICE <qgisserver-wmts-service>`", "Yes", "Name of the service (**WMTS**)"
+   "ref:`REQUEST <qgisserver-wmts-getfeaureinfo-request>`", "Yes", "Name of the request (**GetFeatureInfo**)"
+   "ref:`LAYER <qgisserver-wmts-getfeaureinfo-layer>`", "Yes", "Layer identifier"
+   "ref:`INFOFORMAT <qgisserver-wmts-getfeaureinfo-infoformat>`", "No", "Output format"
+   "ref:`I <qgisserver-wmts-getfeaureinfo-i>`", "No", "X coordinate of a pixel"
+   "ref:`J <qgisserver-wmts-getfeaureinfo-j>`", "No", "Y coordinate of a pixel"
+   "ref:`TILEMATRIXSET <qgisserver-wmts-getfeaureinfo-tilematrixset>`", "Yes", ":ref:`See GetTile <qgisserver-wmts-gettile>`"
+   "ref:`TILEMATRIX <qgisserver-wmts-getfeaureinfo-tilematrix>`", "Yes", ":ref:`See GetTile <qgisserver-wmts-gettile>`"
+   "ref:`TILEROW <qgisserver-wmts-getfeaureinfo-tilerow>`", "Yes", ":ref:`See GetTile <qgisserver-wmts-gettile>`"
+   "ref:`TILECOL <qgisserver-wmts-getfeaureinfo-tilecol>`", "Yes", ":ref:`See GetTile <qgisserver-wmts-gettile>`"
 
 
 In addition to the standard ones, QGIS Server supports the following
@@ -267,7 +267,7 @@ extra parameters:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   "MAP", "Yes", "Specify the QGIS project file"
+   ":ref:`MAP <qgisserver-wmts-map>`", "Yes", "Specify the QGIS project file"
 
 
 URL example:
@@ -284,33 +284,15 @@ URL example:
   &J=5
 
 
-SERVICE
-^^^^^^^
-
-This parameter has to be ``WMTS`` in case of the **GetFeatureInfo**
-request.
-
+.. _`qgisserver-wmts-getfeatureinfo-request`:
 
 REQUEST
 ^^^^^^^
 
-This parameter is ``GetFeatureInfo`` in case of the
-**GetFeatureInfo** request.
+This parameter is ``GetFeatureInfo`` in case of the **GetFeatureInfo** request.
 
 
-MAP
-^^^
-
-This parameter allows to define the QGIS project file to use.
-
-As mentioned in :ref:`GetMap parameters table <qgisserver-wms-getmap>`,
-``MAP`` is mandatory because a request needs a QGIS project to
-actually work.
-However, the ``QGIS_PROJECT_FILE`` environment variable may be used to
-define a default QGIS project.
-In this specific case, ``MAP`` is not longer a required parameter.
-For further information you may refer to :ref:`server_env_variables`.
-
+.. _`qgisserver-wmts-getfeatureinfo-layer`:
 
 LAYER
 ^^^^^
@@ -350,6 +332,8 @@ selected.
   &...
 
 
+.. _`qgisserver-wmts-getfeatureinfo-infoformat`:
+
 INFOFORMAT
 ^^^^^^^^^^
 
@@ -364,12 +348,16 @@ Available values are:
 The default value is ``text/plain``.
 
 
+.. _`qgisserver-wmts-getfeatureinfo-i`:
+
 I
 ^
 
 This parameter allows to define the X coordinate of the pixel for
 which we want to retrieve underlying information.
 
+
+.. _`qgisserver-wmts-getfeatureinfo-j`:
 
 J
 ^
