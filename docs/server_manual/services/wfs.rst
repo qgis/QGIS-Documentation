@@ -569,4 +569,4 @@ URL example:
   SERVICE=WFS&
   REQUEST=GetFeature&
   TYPENAME=places&
-  FILTER="name"='Paris'
+  EXP_FILTER="name"='Paris'
