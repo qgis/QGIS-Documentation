@@ -648,4 +648,82 @@ Output response:
       </complexContent>
     </complexType>
   </schema>
->>>>>>> 7326e88eb (Add some doc for DescribeFeatureType)
+
+
+.. _`qgisserver-wfs-transaction`:
+
+Transaction
+-----------
+
+The ``TRANSACTION`` request allows to update, delete or add one or several
+features thanks to a XML document. The **delete** action may be achieved with a
+POST document as well as with the ``OPERATION`` parameter while the **add** and
+the **update** operations may be achieved through POST request only.
+
+Standard parameters for the **Transaction** request according to the OGC WFS
+1.0.0 and 1.1.0 specifications:
+
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: auto
+
+   ":ref:`SERVICE <qgisserver-wfs-service>`", "Yes", "Name of the service (**WFS**)"
+   ":ref:`VERSION <qgisserver-wfs-version>`", "No", "Version of the service"
+   ":ref:`REQUEST <qgisserver-wfs-transaction-request>`", "Yes", "Name of the request (**Transaction**)"
+   ":ref:`TYPENAME <qgisserver-wfs-describefeaturetype-typename>`", "No", "Name of layer"
+
+
+In addition to the standard ones, QGIS Server supports the following
+extra parameters:
+
+
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: auto
+
+   ":ref:`MAP <qgisserver-wfs-map>`", "Yes", "Specify the QGIS project file"
+   ":ref:`OPERATION <qgisserver-wfs-transaction-operation>`", "Yes", "Specify the operation"
+
+ADD
+^^^
+
+POST request:
+
+.. code-block:: bash
+
+  wget --post-file=add.xml "http://localhost/qgisserver?SERVICE=WFS&REQUEST=TRANSACTION"
+
+
+with the *add.xml* document:
+
+.. code-block:: xml
+
+  <?xml version="1.0" encoding="UTF-8"?>
+  <wfs:Transaction service="WFS" version="1.0.0" xmlns:wfs="http://www.opengis.net/wfs" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ogc="http://www.opengis.net/ogc" xmlns="http://www.opengis.net/wfs" updateSequence="0" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.opengis.net/wfs http://schemas.opengis.net/wfs/1.0.0/WFS-capabilities.xsd" xmlns:gml="http://www.opengis.net/gml"  xmlns:ows="http://www.opengis.net/ows">
+    <wfs:Insert idgen="GenerateNew">
+      <qgs:places>
+        <qgs:geometry>
+          <gml:Point srsDimension="2" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+            <gml:coordinates decimal="." cs="," ts=" ">-4.6167,48.3833</gml:coordinates>
+          </gml:Point>
+        </qgs:geometry>
+        <qgs:name>Locmaria-Plouzané</qgs:name>
+      </qgs:places>
+    </wfs:Insert>
+  </wfs:Transaction>
+
+The XML response indicates that the new place has been added with success to
+the underlying dataset:
+
+.. code-block:: xml
+
+  <WFS_TransactionResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wfs http://schemas.opengis.net/wfs/1.0.0/wfs.xsd" xmlns="http://www.opengis.net/wfs" version="1.0.0" xmlns:ogc="http://www.opengis.net/ogc">
+      <InsertResult>
+          <ogc:FeatureId fid="places."/>
+      </InsertResult>
+      <TransactionResult>
+          <Status>
+              <SUCCESS/>
+           </Status>
+      </TransactionResult>
+  </WFS_TransactionResponse>
