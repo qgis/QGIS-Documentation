@@ -20,8 +20,8 @@ Standard requests provided by QGIS Server:
 
    ":ref:`GetCapabilities <qgisserver-wfs-getcapabilities>`", "Returns XML metadata with information about the server"
    ":ref:`GetFeature <qgisserver-wfs-getfeature>`", "Returns a selection of features"
-   "DescribeFeatureType", "Returns a description of feature types and properties"
-   "Transaction", "Allows features to be inserted, updated or deleted"
+   ":ref:`DescribeFeatureType <qgisserver-wfs-describefeaturetype>`", "Returns a description of feature types and properties"
+   ":ref:`Transaction <qgisserver-wfs-transaction>`", "Allows features to be inserted, updated or deleted"
 
 
 .. _`qgisserver-wfs-getcapabilities`:
@@ -570,3 +570,82 @@ URL example:
   REQUEST=GetFeature&
   TYPENAME=places&
   EXP_FILTER="name"='Paris'
+
+
+.. _`qgisserver-wfs-describefeaturetype`:
+
+DescribeFeatureType
+-------------------
+
+Standard parameters for the **DescribeFeatureType** request according to the
+OGC WFS 1.0.0 and 1.1.0 specifications:
+
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: auto
+
+   ":ref:`SERVICE <qgisserver-wfs-service>`", "Yes", "Name of the service (**WFS**)"
+   ":ref:`VERSION <qgisserver-wfs-version>`", "No", "Version of the service"
+   ":ref:`REQUEST <qgisserver-wfs-describefeaturetype-request>`", "Yes", "Name of the request (**DescribeFeatureType**)"
+   ":ref:`OUTPUTFORMAT <qgisserver-wfs-getfeature-outputformat>`", "No", "Format of the response"
+   ":ref:`TYPENAME <qgisserver-wfs-describefeaturetype-typename>`", "No", "Name of layer"
+
+
+In addition to the standard ones, QGIS Server supports the following
+extra parameters:
+
+
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: auto
+
+   ":ref:`MAP <qgisserver-wfs-map>`", "Yes", "Specify the QGIS project file"
+
+
+.. _`qgisserver-wfs-describefeaturetype-request`:
+
+REQUEST
+^^^^^^^
+
+This parameter is ``DescribeFeatureType`` in case of the
+**DescribeFeatureType** request.
+
+
+.. _`qgisserver-wfs-describefeaturetype-typename`:
+
+TYPENAME
+^^^^^^^^
+
+This parameter allows to specify layer names. Names have to be separated by a
+comma.
+
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WFS
+  &VERSION=1.1.0
+  &REQUEST=DescribeFeatureType
+  &TYPENAME=countries
+
+Output response:
+
+.. code-block:: xml
+
+  <schema xmlns:ogc="http://www.opengis.net/ogc" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:qgs="http://www.qgis.org/gml" xmlns:gml="http://www.opengis.net/gml" targetNamespace="http://www.qgis.org/gml" version="1.0" elementFormDefault="qualified">
+    <import schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd" namespace="http://www.opengis.net/gml"/>
+    <element type="qgs:countriesType" substitutionGroup="gml:_Feature" name="countries"/>
+    <complexType name="countriesType">
+      <complexContent>
+        <extension base="gml:AbstractFeatureType">
+          <sequence>
+            <element minOccurs="0" type="gml:MultiPolygonPropertyType" maxOccurs="1" name="geometry"/>
+            <element type="long" name="id"/>
+            <element nillable="true" type="string" name="name"/>
+          </sequence>
+        </extension>
+      </complexContent>
+    </complexType>
+  </schema>
+>>>>>>> 7326e88eb (Add some doc for DescribeFeatureType)
