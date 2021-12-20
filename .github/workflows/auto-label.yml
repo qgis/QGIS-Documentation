@@ -11,31 +11,25 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: Naturalclar/issue-action@v1.0.0
-        with:
-          keywords: '["QGIS Version: 3.16"]'
-          labels: '["3.16"]'
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
-
-      - uses: Naturalclar/issue-action@v1.0.0
+      - uses: Naturalclar/issue-action@v2.0.2
         with:
           keywords: '["QGIS Version: 3.22"]'
           labels: '["3.22"]'
           github-token: "${{ secrets.GITHUB_TOKEN }}"
 
-      - uses: Naturalclar/issue-action@v1.0.0
+      - uses: Naturalclar/issue-action@v2.0.2
         with:
           keywords: '["QGIS Version: 3.24"]'
           labels: '["3.24"]'
           github-token: "${{ secrets.GITHUB_TOKEN }}"
 
-      - uses: Naturalclar/issue-action@v1.0.0
+      - uses: Naturalclar/issue-action@v2.0.2
         with:
           keywords: '["QGIS Version: 3.26"]'
           labels: '["3.26"]'
           github-token: "${{ secrets.GITHUB_TOKEN }}"
 
-      - uses: Naturalclar/issue-action@v1.0.0
+      - uses: Naturalclar/issue-action@v2.0.2
         with:
           keywords: '["QGIS Version: 3.28"]'
           labels: '["3.28"]'
