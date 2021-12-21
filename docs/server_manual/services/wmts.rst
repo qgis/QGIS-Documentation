@@ -16,9 +16,9 @@ Standard requests provided by QGIS Server:
    :header: "Request", "Description"
    :widths: auto
 
-   "GetCapabilities", "Returns XML metadata with information about the server"
-   "GetTile", "Returns a tile"
-   "GetFeatureInfo", "Retrieves data (geometry and values) for a pixel location"
+   ":ref:`GetCapabilities <qgisserver-wmts-getcapabilities>`", "Returns XML metadata with information about the server"
+   ":ref:`GetTile <qgisserver-wmts-gettile>`", "Returns a tile"
+   ":ref:`GetFeatureInfo <qgisserver-wmts-getfeatureinfo>`", "Retrieves data (geometry and values) for a pixel location"
 
 
 .. _`qgisserver-wmts-getcapabilities`:
@@ -33,8 +33,8 @@ the OGC WMTS 1.0.0 specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   "SERVICE", "Yes", "Name of the service (WMTS)"
-   "REQUEST", "Yes", "Name of the request (GetCapabilities)"
+   ":ref:`SERVICE <qgisserver-wmts-service>`", "Yes", "Name of the service (**WMTS**)"
+   ":ref:`REQUEST <qgisserver-wmts-getcapabilities-request>`", "Yes", "Name of the request (**GetCapabilities**)"
 
 
 In addition to the standard ones, QGIS Server supports the following extra
@@ -45,7 +45,7 @@ parameters:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   "MAP", "Yes", "Specify the QGIS project file"
+   ":ref:`MAP <qgisserver-wmts-map>`", "Yes", "Specify the QGIS project file"
 
 
 URL example:
@@ -58,12 +58,15 @@ URL example:
   &MAP=/home/qgis/projects/world.qgs
 
 
+.. _`qgisserver-wmts-service`:
+
 SERVICE
 ^^^^^^^
 
-This parameter has to be ``WMTS`` in case of the **GetCapabilities**
-request.
+This parameter has to be ``WMTS`` in case of the **WMTS** service.
 
+
+.. _`qgisserver-wmts-getcapabilities-request`:
 
 REQUEST
 ^^^^^^^
@@ -71,11 +74,16 @@ REQUEST
 This parameter is ``GetCapabilities`` in case of the
 **GetCapabilities** request.
 
+.. _`qgisserver-wmts-map`:
 
 MAP
 ^^^
 
-This parameter allows to define the QGIS project file to use.
+This parameter allows to define the QGIS project file to use and is mandatory
+because a request needs a QGIS project to actually work.  However, the
+``QGIS_PROJECT_FILE`` environment variable may be used to define a default QGIS
+project.  In this specific case, ``MAP`` is no longer a required parameter.
+For further information you may refer to :ref:`server_env_variables`.
 
 
 .. _`qgisserver-wmts-gettile`:
@@ -90,14 +98,14 @@ OGC WMTS 1.0.0 specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   "SERVICE", "Yes", "Name of the service (WMTS)"
-   "REQUEST", "Yes", "Name of the request (GetTile)"
-   "LAYER", "Yes", "Layer identifier"
-   "FORMAT", "Yes", "Output format of the tile"
-   "TILEMATRIXSET", "Yes", "Name of the pyramid"
-   "TILEMATRIX", "Yes", "Meshing"
-   "TILEROW", "Yes", "Row coordinate in the mesh"
-   "TILECOL", "Yes", "Column coordinate in the mesh"
+   ":ref:`SERVICE <qgisserver-wmts-service>`", "Yes", "Name of the service (**WMTS**)"
+   ":ref:`REQUEST <qgisserver-wmts-gettile-request>`", "Yes", "Name of the request (**GetTile**)"
+   ":ref:`LAYER <qgisserver-wmts-gettile-layer>`", "Yes", "Layer identifier"
+   ":ref:`FORMAT <qgisserver-wmts-gettile-format>`", "Yes", "Output format of the tile"
+   ":ref:`TILEMATRIXSET <qgisserver-wmts-gettile-tilematrixset>`", "Yes", "Name of the pyramid"
+   ":ref:`TILEMATRIX <qgisserver-wmts-gettile-tilematrix>`", "Yes", "Meshing"
+   ":ref:`TILEROW <qgisserver-wmts-gettile-tilerow>`", "Yes", "Row coordinate in the mesh"
+   ":ref:`TILECOL <qgisserver-wmts-gettile-tilecol>`", "Yes", "Column coordinate in the mesh"
 
 
 In addition to the standard ones, QGIS Server supports the following
@@ -108,7 +116,7 @@ extra parameters:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   "MAP", "Yes", "Specify the QGIS project file"
+   ":ref:`MAP <qgisserver-wmts-map>`", "Yes", "Specify the QGIS project file"
 
 
 URL example:
@@ -126,17 +134,15 @@ URL example:
   &TILECOL=0
 
 
-SERVICE
-^^^^^^^
-
-This parameter has to be ``WMTS`` in case of the **GetTile** request.
-
+.. _`qgisserver-wmts-gettile-request`:
 
 REQUEST
 ^^^^^^^
 
 This parameter is ``GetTile`` in case of the **GetTile** request.
 
+
+.. _`qgisserver-wmts-gettile-layer`:
 
 LAYER
 ^^^^^
@@ -176,6 +182,8 @@ selected.
   &...
 
 
+.. _`qgisserver-wmts-gettile-format`:
+
 FORMAT
 ^^^^^^
 
@@ -191,6 +199,8 @@ If the ``FORMAT`` parameter is different from one of these values, then
 the default format PNG is used instead.
 
 
+.. _`qgisserver-wmts-gettile-tilematrixset`:
+
 TILEMATRIXSET
 ^^^^^^^^^^^^^
 
@@ -198,11 +208,15 @@ This parameter defines the CRS to use when computing the underlying
 pyramid. Format: ``EPSG:XXXX``.
 
 
+.. _`qgisserver-wmts-gettile-tilematrix`:
+
 TILEMATRIX
 ^^^^^^^^^^
 
 This parameter allows to define the matrix to use for the output tile.
 
+
+.. _`qgisserver-wmts-gettile-tilerow`:
 
 TILEROW
 ^^^^^^^
@@ -211,25 +225,14 @@ This parameter allows to select the row of the tile to get within the
 matrix.
 
 
+.. _`qgisserver-wmts-gettile-tilecol`:
+
 TILECOL
 ^^^^^^^
 
 This parameter allows to select the column of the tile to get within
 the matrix.
 
-
-MAP
-^^^
-
-This parameter allows to define the QGIS project file to use.
-
-As mentioned in :ref:`GetMap parameters table <qgisserver-wms-getmap>`,
-``MAP`` is mandatory because a request needs a QGIS project to
-actually work.
-However, the ``QGIS_PROJECT_FILE`` environment variable may be used to
-define a default QGIS project.
-In this specific case, ``MAP`` is not longer a required parameter.
-For further information you may refer to :ref:`server_env_variables`.
 
 
 .. _`qgisserver-wmts-getfeatureinfo`:
@@ -244,16 +247,16 @@ the OGC WMTS 1.0.0 specification:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   "SERVICE", "Yes", "Name of the service (WMTS)"
-   "REQUEST", "Yes", "Name of the request (GetFeatureInfo)"
-   "LAYER", "Yes", "Layer identifier"
-   "INFOFORMAT", "No", "Output format"
-   "I", "No", "X coordinate of a pixel"
-   "J", "No", "Y coordinate of a pixel"
-   "TILEMATRIXSET", "Yes", ":ref:`See GetTile <qgisserver-wmts-gettile>`"
-   "TILEMATRIX", "Yes", ":ref:`See GetTile <qgisserver-wmts-gettile>`"
-   "TILEROW", "Yes", ":ref:`See GetTile <qgisserver-wmts-gettile>`"
-   "TILECOL", "Yes", ":ref:`See GetTile <qgisserver-wmts-gettile>`"
+   ":ref:`SERVICE <qgisserver-wmts-service>`", "Yes", "Name of the service (**WMTS**)"
+   ":ref:`REQUEST <qgisserver-wmts-getfeatureinfo-request>`", "Yes", "Name of the request (**GetFeatureInfo**)"
+   ":ref:`LAYER <qgisserver-wmts-getfeatureinfo-layer>`", "Yes", "Layer identifier"
+   ":ref:`INFOFORMAT <qgisserver-wmts-getfeatureinfo-infoformat>`", "No", "Output format"
+   ":ref:`I <qgisserver-wmts-getfeatureinfo-i>`", "No", "X coordinate of a pixel"
+   ":ref:`J <qgisserver-wmts-getfeatureinfo-j>`", "No", "Y coordinate of a pixel"
+   ":ref:`TILEMATRIXSET <qgisserver-wmts-gettile-tilematrixset>`", "Yes", "Name of the pyramid"
+   ":ref:`TILEMATRIX <qgisserver-wmts-gettile-tilematrix>`", "Meshing"
+   ":ref:`TILEROW <qgisserver-wmts-gettile-tilerow>`", "Yes", "Row coordinate in the mesh"
+   ":ref:`TILECOL <qgisserver-wmts-gettile-tilecol>`", "Yes", "Column coordinate in the mesh"
 
 
 In addition to the standard ones, QGIS Server supports the following
@@ -264,7 +267,7 @@ extra parameters:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   "MAP", "Yes", "Specify the QGIS project file"
+   ":ref:`MAP <qgisserver-wmts-map>`", "Yes", "Specify the QGIS project file"
 
 
 URL example:
@@ -281,33 +284,15 @@ URL example:
   &J=5
 
 
-SERVICE
-^^^^^^^
-
-This parameter has to be ``WMTS`` in case of the **GetFeatureInfo**
-request.
-
+.. _`qgisserver-wmts-getfeatureinfo-request`:
 
 REQUEST
 ^^^^^^^
 
-This parameter is ``GetFeatureInfo`` in case of the
-**GetFeatureInfo** request.
+This parameter is ``GetFeatureInfo`` in case of the **GetFeatureInfo** request.
 
 
-MAP
-^^^
-
-This parameter allows to define the QGIS project file to use.
-
-As mentioned in :ref:`GetMap parameters table <qgisserver-wms-getmap>`,
-``MAP`` is mandatory because a request needs a QGIS project to
-actually work.
-However, the ``QGIS_PROJECT_FILE`` environment variable may be used to
-define a default QGIS project.
-In this specific case, ``MAP`` is not longer a required parameter.
-For further information you may refer to :ref:`server_env_variables`.
-
+.. _`qgisserver-wmts-getfeatureinfo-layer`:
 
 LAYER
 ^^^^^
@@ -347,6 +332,8 @@ selected.
   &...
 
 
+.. _`qgisserver-wmts-getfeatureinfo-infoformat`:
+
 INFOFORMAT
 ^^^^^^^^^^
 
@@ -361,12 +348,16 @@ Available values are:
 The default value is ``text/plain``.
 
 
+.. _`qgisserver-wmts-getfeatureinfo-i`:
+
 I
 ^
 
 This parameter allows to define the X coordinate of the pixel for
 which we want to retrieve underlying information.
 
+
+.. _`qgisserver-wmts-getfeatureinfo-j`:
 
 J
 ^
