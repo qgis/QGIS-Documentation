@@ -655,10 +655,13 @@ Output response:
 Transaction
 -----------
 
-The ``TRANSACTION`` request allows to update, delete or add one or several
-features thanks to a XML document. The **delete** action may be achieved with a
-POST document as well as with the ``OPERATION`` parameter while the **add** and
-the **update** operations may be achieved through POST request only.
+This request allows to update, delete or add one or several features thanks to
+a XML document. The
+:ref:`delete <qgisserver-wfs-transaction-delete>` action may be achieved with a POST
+request as well as with the :ref:`OPERATION <qgisserver-wfs-transaction-operation>`
+parameter while the :ref:`add <qgisserver-wfs-transaction-add>` and the
+:ref:`update <qgisserver-wfs-transaction-update>` operations may be achieved through
+POST request only.
 
 Standard parameters for the **Transaction** request according to the OGC WFS
 1.0.0 and 1.1.0 specifications:
@@ -670,8 +673,10 @@ Standard parameters for the **Transaction** request according to the OGC WFS
    ":ref:`SERVICE <qgisserver-wfs-service>`", "Yes", "Name of the service (**WFS**)"
    ":ref:`VERSION <qgisserver-wfs-version>`", "No", "Version of the service"
    ":ref:`REQUEST <qgisserver-wfs-transaction-request>`", "Yes", "Name of the request (**Transaction**)"
-   ":ref:`TYPENAME <qgisserver-wfs-describefeaturetype-typename>`", "No", "Name of layer"
-
+   ":ref:`FILTER <qgisserver-wfs-getfeature-filter>`", "No", "OGC Filter Encoding"
+   ":ref:`BBOX <qgisserver-wfs-getfeature-bbox>`", "No", "Map Extent"
+   ":ref:`FEATUREID <qgisserver-wfs-getfeature-featureid>`", "No", "Filter the features by ids"
+   ":ref:`TYPENAME <qgisserver-wfs-getfeature-typename>`", "No", "Name of layers"
 
 In addition to the standard ones, QGIS Server supports the following
 extra parameters:
@@ -682,16 +687,51 @@ extra parameters:
    :widths: auto
 
    ":ref:`MAP <qgisserver-wfs-map>`", "Yes", "Specify the QGIS project file"
-   ":ref:`OPERATION <qgisserver-wfs-transaction-operation>`", "Yes", "Specify the operation"
+   ":ref:`OPERATION <qgisserver-wfs-transaction-operation>`", "No", "Specify the operation"
+   ":ref:`EXP_FILTER <qgisserver-wfs-getfeature-expfilter>`", "No", "Expression filtering"
 
-ADD
-^^^
 
-POST request:
+.. _`qgisserver-wfs-transaction-request`:
+
+REQUEST
+^^^^^^^
+
+This parameter is ``Transaction`` in case of the **Transaction** request.
+
+
+.. _`qgisserver-wfs-transaction-operation`:
+
+OPERATION
+^^^^^^^^^
+
+This parameter allows to delete a feature without using a POST requests with a
+dedicated XML document.
+
+URL example:
 
 .. code-block:: bash
 
-  wget --post-file=add.xml "http://localhost/qgisserver?SERVICE=WFS&REQUEST=TRANSACTION"
+  http://localhost/qgisserver?
+  SERVICE=WFS
+  &VERSION=1.1.0
+  &REQUEST=Transaction
+  &OPERATION=DELETE
+  &FEATUREID=24
+
+.. note::
+
+  ``FEATUREID``, ``FILTER`` and ``BBOX`` parameters are mutually exclusive.
+
+.. _`qgisserver-wfs-transaction-add`:
+
+Add features
+^^^^^^^^^^^^
+
+POST request example:
+
+.. code-block:: bash
+
+  wget --post-file=add.xml "http://localhost/qgisserver?SERVICE=WFS&REQUEST=Transaction"
 
 
 with the *add.xml* document:
@@ -712,18 +752,59 @@ with the *add.xml* document:
     </wfs:Insert>
   </wfs:Transaction>
 
-The XML response indicates that the new place has been added with success to
-the underlying dataset:
+
+
+.. _`qgisserver-wfs-transaction-update`:
+
+Update features
+^^^^^^^^^^^^^^^
+
+POST request example:
+
+.. code-block:: bash
+
+  wget --post-file=update.xml "http://localhost/qgisserver?SERVICE=WFS&REQUEST=Transaction"
+
+
+with the *update.xml* document:
 
 .. code-block:: xml
 
-  <WFS_TransactionResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wfs http://schemas.opengis.net/wfs/1.0.0/wfs.xsd" xmlns="http://www.opengis.net/wfs" version="1.0.0" xmlns:ogc="http://www.opengis.net/ogc">
-      <InsertResult>
-          <ogc:FeatureId fid="places."/>
-      </InsertResult>
-      <TransactionResult>
-          <Status>
-              <SUCCESS/>
-           </Status>
-      </TransactionResult>
-  </WFS_TransactionResponse>
+  <?xml version="1.0" encoding="UTF-8"?>
+  <wfs:Transaction service="WFS" version="1.0.0" xmlns:wfs="http://www.opengis.net/wfs" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ogc="http://www.opengis.net/ogc" xmlns="http://www.opengis.net/wfs" updateSequence="0" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.opengis.net/wfs http://schemas.opengis.net/wfs/1.0.0/WFS-capabilities.xsd" xmlns:gml="http://www.opengis.net/gml"  xmlns:ows="http://www.opengis.net/ows">
+      <wfs:Update typeName="places">
+        <wfs:Property>
+            <wfs:Name>name</wfs:Name>
+            <wfs:Value>Lutece</wfs:Value>
+        </wfs:Property>
+        <ogc:Filter>
+            <ogc:FeatureId fid="24"/>
+        </ogc:Filter>
+      </wfs:Update>
+  </wfs:Transaction>
+
+
+.. _`qgisserver-wfs-transaction-delete`:
+
+Delete features
+^^^^^^^^^^^^^^^
+
+POST request example:
+
+.. code-block:: bash
+
+  wget --post-file=delete.xml "http://localhost/qgisserver?SERVICE=WFS&REQUEST=Transaction"
+
+
+with the *delete.xml* document:
+
+.. code-block:: xml
+
+  <?xml version="1.0" encoding="UTF-8"?>
+  <wfs:Transaction service="WFS" version="1.0.0" xmlns:wfs="http://www.opengis.net/wfs" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ogc="http://www.opengis.net/ogc" xmlns="http://www.opengis.net/wfs" updateSequence="0" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.opengis.net/wfs http://schemas.opengis.net/wfs/1.0.0/WFS-capabilities.xsd" xmlns:gml="http://www.opengis.net/gml"  xmlns:ows="http://www.opengis.net/ows">
+      <wfs:Delete typeName="places">
+          <ogc:Filter>
+              <ogc:FeatureId fid="24"/>
+          </ogc:Filter>
+      </wfs:Delete>
+  </wfs:Transaction>
