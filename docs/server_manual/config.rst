@@ -288,42 +288,6 @@ The corresponding entries in the ini file are **/qgis/max_threads** and
 **/qgis/parallel_rendering** and their values are **true** and **4** threads.
 
 
-.. _server_short_name:
-
-Short name for layers, groups and project
-=========================================
-
-A number of elements have both a ``<Name>`` and a ``<Title>``.
-The **Name** is a text string used for machine-to-machine
-communication while the **Title** is for the benefit of humans.
-
-For example, a dataset might have the descriptive Title
-“Maximum Atmospheric Temperature” and be requested using the abbreviated
-**Name** “ATMAX”. The user can set the title for layers, groups and projects.
-
-OWS name is based on the name used in the layer tree. This name is more a label
-for humans than a name for machine-to-machine communication. You can set a
-**Short name** for layers, groups or projects, to be used by QGIS Server as
-the layer identification name (in :ref:`LAYERS <wms-layers>` parameter for instance ).
-
-You can set title, short name and abstract for:
-
-* **Layers**: right-click on a layer and choose
-  :menuselection:`Properties... --> QGIS Server --> Description`.
-
-* **Groups**: right-click on a group and select :guilabel:`Set Group WMS data`
-
-  .. _figure_group_wms_data:
-
-  .. figure:: img/set_group_wms_data.png
-     :align: center
-
-     Set group WMS data dialog
-
-* **Project**: go to :menuselection:`Project --> Properties... --> QGIS Server -->
-  Service Capabilities`.
-
-
 Connection to service file
 ==========================
 

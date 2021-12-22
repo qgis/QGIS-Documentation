@@ -52,7 +52,17 @@ WMS 1.1.1 and 1.3.0 specifications:
 
    ":ref:`SERVICE <wms_service>`", "Yes", "Name of the service (**WMS**)"
    ":ref:`VERSION <wms_version>`", "No", "Version of the service"
-   ":ref:`REQUEST <wms_getcapabilities-request>`", "Yes", "Name of the request (**GetCapabilities**)"
+   ":ref:`REQUEST <wms_getcapabilities_request>`", "Yes", "Name of the request (**GetCapabilities**)"
+
+In addition to the standard ones, QGIS Server supports as well as the following
+extra parameters:
+
+
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: 20, 10, 65
+
+   ":ref:`MAP <wms_map>`", "Yes", "Specify the QGIS project file"
 
 URL example:
 
@@ -64,13 +74,28 @@ URL example:
   &REQUEST=GetCapabilities
 
 
-.. _`wms_getcapabilities-request`:
+.. _`wms_getcapabilities_request`:
 
 REQUEST
 ^^^^^^^
 
 This parameter is ``GetCapabilities`` in case of the **GetCapabilities**
 request.
+
+
+.. _`wms_map`:
+
+MAP
+^^^
+
+This parameter allows to define the QGIS project file to use.
+
+``MAP`` is mandatory because a request needs a QGIS project to actually work.
+However, the ``QGIS_PROJECT_FILE`` environment variable may be used to define a
+default QGIS project.  In this specific case, ``MAP`` is no longer a required
+parameter.  For further information you may refer to
+:ref:`server_env_variables`.
+
 
 
 .. _`wms_getmap`:
@@ -87,7 +112,7 @@ WMS 1.1.1 and 1.3.0 specifications:
 
    ":ref:`SERVICE <wms_service>`", "Yes", "Name of the service (**WMS**)"
    ":ref:`VERSION <wms_version>`", "Yes", "Version of the service"
-   ":ref:`REQUEST <wms_getmap-request>`", "Yes", "Name of the request (**GetMap**)"
+   ":ref:`REQUEST <wms_getmap_request>`", "Yes", "Name of the request (**GetMap**)"
    ":ref:`LAYERS <wms_layers>` ", "No", "Layers to display"
    ":ref:`STYLES <wms_styles>`", "No", "Layers' style"
    ":ref:`SRS / CRS <wms_srs>`", "Yes", "Coordinate reference system"
@@ -101,7 +126,7 @@ WMS 1.1.1 and 1.3.0 specifications:
 
 
 In addition to the standard ones, QGIS Server supports :ref:`redlining
-<redlining>`, :ref:`external WMS layers <external-wms>`
+<redlining>`, :ref:`external WMS layers <external_wms>`
 as well as the following extra parameters:
 
 
@@ -179,7 +204,7 @@ as explained later for the next parameters:
 - ``BBOX``
 
 
-.. _`wms_getmap-request`:
+.. _`wms_getmap_request`:
 
 REQUEST
 ^^^^^^^
@@ -404,22 +429,6 @@ However, this parameter is ignored if the format of the image indicated with
 ``FORMAT`` is different from PNG.
 
 
-.. _`wms_map`:
-
-MAP
-^^^
-
-This parameter allows to define the QGIS project file to use.
-
-As mentioned in :ref:`GetMap parameters table <wms_getmap>`,
-``MAP`` is mandatory because a request needs a QGIS project to
-actually work.
-However, the ``QGIS_PROJECT_FILE`` environment variable may be used to
-define a default QGIS project.
-In this specific case, ``MAP`` is no longer a required parameter.
-For further information you may refer to :ref:`server_env_variables`.
-
-
 .. _`wms_bgcolor`:
 
 BGCOLOR
@@ -623,7 +632,7 @@ the OGC WMS 1.1.1 and 1.3.0 specifications:
 
    ":ref:`SERVICE <wms_service>`", "Yes", "Name of the service (**WMS**)"
    ":ref:`VERSION <wms_version>`", "No", "Version of the service"
-   ":ref:`REQUEST <wms_getfeatureinfo-request>`", "Yes", "Name of the request (**GetFeatureInfo**)"
+   ":ref:`REQUEST <wms_getfeatureinfo_request>`", "Yes", "Name of the request (**GetFeatureInfo**)"
    ":ref:`QUERY_LAYERS <wms_querylayers>`", "Yes", "Layers to query"
    ":ref:`LAYERS <wms_layers>`", "Yes", "Layers to display (identical to `QUERY_LAYERS`)"
    ":ref:`STYLES <wms_styles>`", "No", "Layers' style"
@@ -682,7 +691,7 @@ URL example:
   &J=250
 
 
-.. _`wms_getfeatureinfo-request`:
+.. _`wms_getfeatureinfo_request`:
 
 REQUEST
 ^^^^^^^
@@ -834,7 +843,7 @@ WMS 1.1.1 and 1.3.0 specifications:
 
    ":ref:`SERVICE <wms_service>`", "Yes", "Name of the service (**WMS**)"
    ":ref:`VERSION <wms_version>`", "No", "Version of the service"
-   ":ref:`REQUEST <wms_getlegendgraphics-request>`", "Yes", "Name of the request (**GetLegendGraphics**)"
+   ":ref:`REQUEST <wms_getlegendgraphics_request>`", "Yes", "Name of the request (**GetLegendGraphics**)"
    ":ref:`LAYERS <wms_layers>` ", "Yes", "Layers to display"
    ":ref:`STYLES <wms_styles>`", "No", "Layers' style"
    ":ref:`SRS / CRS <wms_srs>`", "No", "Coordinate reference system"
@@ -878,7 +887,7 @@ and item labels:
    ":ref:`ITEMFONTCOLOR <wms_getlegendgraphics-itemfontcolor>`", "No", "Item label color"
 
 
-.. _`wms_getlegendgraphics-request`:
+.. _`wms_getlegendgraphics_request`:
 
 REQUEST
 ^^^^^^^
@@ -1563,7 +1572,7 @@ to the OGC WMS 1.1.1 specifications:
    :widths: auto
 
    ":ref:`SERVICE <wms_service>`", "Yes", "Name of the service (**WMS**)"
-   ":ref:`REQUEST <wms_getstyle-request>`", "Yes", "Name of the request (**GetStyle** or **GetStyles**)"
+   ":ref:`REQUEST <wms_getstyle_request>`", "Yes", "Name of the request (**GetStyle** or **GetStyles**)"
    ":ref:`LAYERS <wms_layers>`", "Yes", "Layers to query"
 
 
@@ -1576,7 +1585,7 @@ URL example:
   &REQUEST=GetStyles
   &LAYERS=mylayer1,mylayer2
 
-.. _`wms_getstyle-request`:
+.. _`wms_getstyle_request`:
 
 REQUEST
 ^^^^^^^
@@ -1597,7 +1606,7 @@ Standard parameters for the **DescribeLayer** request according to the OGC WMS
    :widths: auto
 
    ":ref:`SERVICE <wms_service>`", "Yes", "Name of the service (**WMS**)"
-   ":ref:`REQUEST <wms_describelayer-request>`", "Yes", "Name of the request (**DescribeLayer**)"
+   ":ref:`REQUEST <wms_describelayer_request>`", "Yes", "Name of the request (**DescribeLayer**)"
    ":ref:`LAYERS <wms_layers>`", "Yes", "Layers to describe"
    ":ref:`SLD_VERSION <wms_describelayer-sldversion>`", "Yes", "SLD version"
 
@@ -1633,7 +1642,7 @@ The XML document looks like:
        </LayerDescription>
    </DescribeLayerResponse>
 
-.. _`wms_describelayer-request`:
+.. _`wms_describelayer_request`:
 
 REQUEST
 ^^^^^^^
@@ -1661,7 +1670,7 @@ In the **GetPrint** request, the client has the possibility to specify
 parameters of the contained layout maps and labels.
 
 The **GetPrint** request supports :ref:`redlining <redlining>`,
-:ref:`external WMS layers <external-wms>` as well as the following
+:ref:`external WMS layers <external_wms>` as well as the following
 parameters:
 
 .. csv-table::
@@ -1671,7 +1680,7 @@ parameters:
    ":ref:`MAP <wms_map>`", "Yes", "Specify the QGIS project file"
    ":ref:`SERVICE <wms_service>`", "Yes", "Name of the service (**WMS**)"
    ":ref:`VERSION <wms_version>`", "No", "Version of the service"
-   ":ref:`REQUEST <wms_getprint-request>`", "Yes", "Name of the request (**GetPrint**)"
+   ":ref:`REQUEST <wms_getprint_request>`", "Yes", "Name of the request (**GetPrint**)"
    ":ref:`LAYERS <wms_layers>`", "No", "Layers to display"
    ":ref:`TEMPLATE <wms_template>`", "Yes", "Layout template to use"
    ":ref:`SRS / CRS <wms_srs>`", "Yes", "Coordinate reference system"
@@ -1727,7 +1736,7 @@ For example:
     </WMS_Capabilities>
 
 
-.. _`wms_getprint-request`:
+.. _`wms_getprint_request`:
 
 REQUEST
 ^^^^^^^
@@ -1867,7 +1876,7 @@ Server.
    :widths: auto
 
    ":ref:`SERVICE <wms_service>`", "Yes", "Name of the service (**WMS**)"
-   ":ref:`REQUEST <wms_getschemaextension-request>`", "Yes", "Name of the request (**GetSchemaExtension**)"
+   ":ref:`REQUEST <wms_getschemaextension_request>`", "Yes", "Name of the request (**GetSchemaExtension**)"
 
 
 URL example:
@@ -1889,7 +1898,7 @@ The XML document looks like:
       <element name="GetStyles" type="wms:OperationType" substitutionGroup="wms:_ExtendedOperation"/>
   </schema>
 
-.. _`wms_getschemaextension-request`:
+.. _`wms_getschemaextension_request`:
 
 REQUEST
 ^^^^^^^
@@ -1897,7 +1906,7 @@ REQUEST
 This parameter is ``GetSchemaExtension`` in case of the **GetSchemaExtension** request.
 
 
-.. _`external-wms`:
+.. _`external_wms`:
 
 External WMS layers
 -------------------
