@@ -369,9 +369,8 @@ Available values are:
 * ``image/png; mode=1bit``
 * ``image/png; mode=8bit``
 * ``image/png; mode=16bit``
-* ``application/dxf``
-  Only layers that have read access in the WFS service are exported in
-  the DXF format.
+* ``application/dxf``: only layers that have read access in the WFS service are
+  exported in the DXF format
 
   URL example:
 
@@ -401,8 +400,8 @@ Available values are (not case sensitive):
 - ``TRUE``
 - ``FALSE``
 
-However, this parameter is ignored if the format of the map image
-indicated with ``FORMAT`` is different from PNG.
+However, this parameter is ignored if the format of the image indicated with
+``FORMAT`` is different from PNG.
 
 
 .. _`wms-map`:
@@ -417,7 +416,7 @@ As mentioned in :ref:`GetMap parameters table <qgisserver-wms-getmap>`,
 actually work.
 However, the ``QGIS_PROJECT_FILE`` environment variable may be used to
 define a default QGIS project.
-In this specific case, ``MAP`` is not longer a required parameter.
+In this specific case, ``MAP`` is no longer a required parameter.
 For further information you may refer to :ref:`server_env_variables`.
 
 
@@ -826,63 +825,729 @@ Available values are (not case sensitive):
 GetLegendGraphics
 -----------------
 
-Several additional parameters are available to change the size of the
-legend elements:
+Standard parameters for the **GetLegendGraphics** request according to the OGC
+WMS 1.1.1 and 1.3.0 specifications:
 
-* **BOXSPACE** space between legend frame and content (mm)
-* **FORMAT**, ``image/jpeg``, ``image/png`` or ``application/json``.
-  For JSON, symbols are encoded with Base64 and most other options related to
-  layout or fonts are not taken into account because the legend must be built
-  on the client side.
-* **LAYERSPACE** vertical space between layers (mm)
-* **LAYERTITLESPACE** vertical space between layer title and items
-  following (mm)
-* **SYMBOLSPACE** vertical space between symbol and item following
-  (mm)
-* **ICONLABELSPACE** horizontal space between symbol and label text
-  (mm)
-* **SYMBOLWIDTH** width of the symbol preview (mm)
-* **SYMBOLHEIGHT** height of the symbol preview (mm)
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: auto
 
-These parameters change the font properties for layer titles and item
-labels:
+   ":ref:`SERVICE <wms-service>`", "Yes", "Name of the service (**WMS**)"
+   ":ref:`VERSION <wms-version>`", "No", "Version of the service"
+   ":ref:`REQUEST <wms-getlegendgraphics-request>`", "Yes", "Name of the request (**GetLegendGraphics**)"
+   ":ref:`LAYERS <wms-layers>` ", "Yes", "Layers to display"
+   ":ref:`STYLES <wms-styles>`", "No", "Layers' style"
+   ":ref:`SRS / CRS <wms-srs>`", "No", "Coordinate reference system"
+   ":ref:`BBOX <wms-getlegendgraphics-bbox>`", "No", "Map extent"
+   ":ref:`WIDTH <wms-getlegendgraphics-width>`", "No", "Width of the image in pixels"
+   ":ref:`HEIGHT <wms-getlegendgraphics-height>`", "No", "Height of the image in pixels"
+   ":ref:`FORMAT <wms-getlegendgraphics-format>`", "No", "Legend format"
+   ":ref:`TRANSPARENT <wms-transparent>`", "No", "Transparent background"
 
-* **LAYERFONTFAMILY / ITEMFONTFAMILY** font family for layer
-  title / item text
-* **LAYERFONTBOLD / ITEMFONTBOLD** ``TRUE`` to use a bold font
-* **LAYERFONTSIZE / ITEMFONTSIZE** Font size in point
-* **LAYERFONTITALIC / ITEMFONTITALIC** ``TRUE`` to use italic font
-* **LAYERFONTCOLOR / ITEMFONTCOLOR** Hex color code (e.g. ``#FF0000``
-  for red)
-* **LAYERTITLE** ``FALSE`` to get only the legend graphics without layer title
-* **RULELABEL**:
+In addition to the standard ones, QGIS Server supports extra parameters to
+change the size of the legend elements or the font properties for layer titles
+and item labels:
 
-  * ``FALSE`` legend graphics without item labels
-  * ``AUTO`` hide item label for layers with :guilabel:`Single symbol` rendering
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: auto
 
-Content based legend. These parameters let the client request a legend
-showing only the symbols for the features falling into the requested
-area:
+   ":ref:`MAP <wms-map>`", "Yes", "Specify the QGIS project file"
+   ":ref:`SRCWIDTH <wms-getlegendgraphics-srcwidth>`", "No", "Map width"
+   ":ref:`SRCHEIGHT <wms-getlegendgraphics-srcheight>`", "No", "Map height"
+   ":ref:`SHOWFEATURECOUNT <wms-getlegendgraphics-showfeaturecount>`", "No", "Add feature count of features"
+   ":ref:`RULE <wms-getlegendgraphics-rule>`", "No", ""
+   ":ref:`RULELABEL <wms-getlegendgraphics-rulelabel>`", "No", "Item labels rendering"
+   ":ref:`BOXSPACE <wms-getlegendgraphics-boxspace>`", "No", "Space between legend frame and content (mm)"
+   ":ref:`LAYERSPACE <wms-getlegendgraphics-layerspace>`", "No", "Vertical space between layers (mm)"
+   ":ref:`LAYERTITLESPACE <wms-getlegendgraphics-layertitlespace>`", "No", "Vertical space between layer title and items (mm)"
+   ":ref:`SYMBOLSPACE <wms-getlegendgraphics-symbolspace>`", "No", "Vertical space between symbol and items (mm)"
+   ":ref:`ICONLABELSPACE <wms-getlegendgraphics-iconlabelspace>`", "No", "Horizontal space between symbol and label (mm)"
+   ":ref:`SYMBOLWIDTH <wms-getlegendgraphics-symbolwidth>`", "No", "Width of the symbol preview (mm)"
+   ":ref:`SYMBOLHEIGHT <wms-getlegendgraphics-symbolheight>`", "No", "Height of the symbol preview (mm)"
+   ":ref:`LAYERTITLE <wms-getlegendgraphics-layertitle>`", "No", "Layer title rendering"
+   ":ref:`LAYERFONTFAMILY <wms-getlegendgraphics-layerfontfamily>`", "No", "Layer font family"
+   ":ref:`LAYERFONTBOLD <wms-getlegendgraphics-layerfontbold>`", "No", "Layer title bold rendering"
+   ":ref:`LAYERFONTSIZE <wms-getlegendgraphics-layerfontsize>`", "No", "Layer title font size (pt)"
+   ":ref:`LAYERFONTITALIC <wms-getlegendgraphics-layerfontitalic>`", "No", "Layer title italic rendering"
+   ":ref:`LAYERFONTCOLOR <wms-getlegendgraphics-layerfontcolor>`", "No", "Layer title color"
+   ":ref:`ITEMFONTFAMILY <wms-getlegendgraphics-itemfontfamily>`", "No", "Item font family"
+   ":ref:`ITEMFONTBOLD <wms-getlegendgraphics-itemfontbold>`", "No", "Item label bold rendering"
+   ":ref:`ITEMFONTSIZE <wms-getlegendgraphics-itemfontsize>`", "No", "Item label font size (pt)"
+   ":ref:`ITEMFONTITALIC <wms-getlegendgraphics-itemfontitalic>`", "No", "Item label italic rendering"
+   ":ref:`ITEMFONTCOLOR <wms-getlegendgraphics-itemfontcolor>`", "No", "Item label color"
 
-* **BBOX** the geographical area for which the legend should be built
-* **CRS / SRS** the coordinate reference system adopted to define the
-  BBOX coordinates
-* **SRCWIDTH / SRCHEIGHT** if set these should match the WIDTH and HEIGHT
-  parameters of the GetMap request, to let QGIS Server scale symbols according
-  to the map view image size.
 
-Content based legend features are based on the `UMN MapServer
-implementation:
-<https://www.mapserver.org/development/rfc/ms-rfc-101.html>`_
+.. _`wms-getlegendgraphics-request`:
 
-* **SHOWFEATURECOUNT** if set to ``TRUE`` adds in the legend the
-  feature count of the features like in the following image:
+REQUEST
+^^^^^^^
+
+This parameter is ``GetLegendGraphics`` in case of the **GetLegendGraphics** request.
+
+
+.. _`wms-getlegendgraphics-bbox`:
+
+BBOX
+^^^^
+
+This parameter can be used to specify the geographical area for which the
+legend should be built (its format is described :ref:`here <wms-bbox>`) but
+cannot be combined with the ``RULE`` parameter. The ``SRS``/``CRS`` parameter
+becomes mandatory when using the ``BBOX`` parameter.
+
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=countries,airports
+  &BBOX=43.20,-2.93,49.35,8.32
+  &CRS=EPSG:4326
+
+.. note::
+
+  When the ``BBOX`` parameter is defined, the legend is referred to as a
+  *content based legend*.
+
+
+.. _`wms-getlegendgraphics-width`:
+
+WIDTH
+^^^^^
+
+This parameter is not used by default but becomes mandatory when the ``RULE``
+parameter is set. In this case it allows to specify the width in pixels of the
+output image.
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYER=testlayer%20%C3%A8%C3%A9
+  &RULE=rule1
+  &WIDTH=30
+  &HEIGHT=30
+
+
+.. _`wms-getlegendgraphics-height`:
+
+HEIGHT
+^^^^^^
+
+This parameter is not used by default but becomes mandatory when the ``RULE``
+parameter is set. In this case it allows to specify the height in pixels of the
+output image.
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYER=testlayer%20%C3%A8%C3%A9
+  &RULE=rule1
+  &WIDTH=30
+  &HEIGHT=30
+
+
+.. _`wms-getlegendgraphics-format`:
+
+FORMAT
+^^^^^^
+
+This parameter may be used to specify the format of legend image. Available
+values are:
+
+* ``image/jpeg``
+* ``image/png``
+* ``application/json``
+
+For JSON, symbols are encoded with Base64 and most other options related to
+layout or fonts are not taken into account because the legend must be built on
+the client side. The ``RULE`` parameter cannot be combined with this format.
+
+URL example with the corresponding JSON output:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS&
+  REQUEST=GetLegendGraphics&
+  LAYERS=airports&
+  FORMAT=application/json
+
+And the corresponding JSON output:
+
+.. code-block:: json
+
+  {
+    "nodes":[
+      {
+        "icon":"<base64 icon>",
+        "title":"airports",
+        "type":"layer"
+      }
+    ],
+    "title":""
+  }
+
+
+.. _`wms-getlegendgraphics-srcwidth`:
+
+SRCWIDTH
+^^^^^^^^
+
+This parameter may de defined when the ``RULE`` parameter is set. In this case,
+the ``SRCWIDTH`` value is forwarded to the underlying ``GetMap`` request as the
+``WIDTH`` parameter while the ``WIDTH`` parameter of ``GetLegendGraphics`` is
+used for the image legend size.
+
+
+.. _`wms-getlegendgraphics-srcheight`:
+
+SRCHEIGHT
+^^^^^^^^^
+
+This parameter may de defined when the ``RULE`` parameter is set. In this case,
+the ``SRCHEIGHT`` value is forwarded to the underlying ``GetMap`` request as
+the ``HEIGHT`` parameter while the ``HEIGHT`` parameter of ``GetLegendGraphics``
+is used for the image legend size.
+
+
+.. _`wms-getlegendgraphics-showfeaturecount`:
+
+SHOWFEATURECOUNT
+^^^^^^^^^^^^^^^^
+
+This parameter can be used to activate feature count in the legend. Available
+values are (not case sensitive):
+
+- ``TRUE``
+- ``FALSE``
+
+For example:
 
   .. figure:: ../img/getfeaturecount_legend.png
     :align: center
 
-* **RULE** set it to a given rule name to get only the named rule symbol
-* **WIDTH/HEIGHT** the generated legend image size if the **RULE** parameter is set
+
+.. _`wms-getlegendgraphics-rule`:
+
+RULE
+^^^^
+
+This parameter is available on layers with :guilabel:`Rule-based` rendering and
+allows to build a legend with only the named rule symbol. It cannot be combined
+with ``BBOX`` parameter nor the JSON format.
+
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=mylayer,
+  &RULE=myrulename
+
+
+.. _`wms-getlegendgraphics-rulelabel`:
+
+RULELABEL
+^^^^^^^^^
+
+This parameter allows to control the item label rendering. Available values are
+(not case sensitive):
+
+- ``TRUE``: display item label
+- ``FALSE``: hide item label
+- ``AUTO``: hide item label for layers with :guilabel:`Single symbol` rendering
+
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=countries,airports
+  &BBOX=43.20,-2.93,49.35,8.32
+  &CRS=EPSG:4326
+  &TRANSPARENT=TRUE
+  &RULELABEL=AUTO
+
+
+.. figure:: ../img/wms_getlegendgraphics_rulelabel.png
+   :align: center
+
+   Legend rendering without label for single symbol layers
+
+
+
+.. _`wms-getlegendgraphics-boxspace`:
+
+BOXSPACE
+^^^^^^^^
+
+This parameter allows to specify the space between legend frame and content in
+millimeters. By default, the space value is ``2`` mm.
+
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=airports
+  &BBOX=43.20,-2.93,49.35,8.32
+  &CRS=EPSG:4326
+  &TRANSPARENT=TRUE
+  &BOXSPACE=0
+
+.. figure:: ../img/wms_getlegendgraphics_boxspace.png
+   :align: center
+
+   To the left ``BOXSPACE=0`` and to the right ``BOXSPACE=15``
+
+
+
+.. _`wms-getlegendgraphics-layerspace`:
+
+LAYERSPACE
+^^^^^^^^^^
+
+This parameter allows to specify the vertical space between layers in
+millimeters. By default, the space value is ``3`` mm.
+
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=airports,places
+  &BBOX=43.20,-2.93,49.35,8.32
+  &CRS=EPSG:4326
+  &TRANSPARENT=TRUE
+  &LAYERSPACE=0
+
+.. figure:: ../img/wms_getlegendgraphics_layerspace.png
+   :align: center
+
+   To the left ``LAYERSPACE=0`` and to the right ``LAYERSPACE=10``
+
+
+.. _`wms-getlegendgraphics-layertitlespace`:
+
+LAYERTITLESPACE
+^^^^^^^^^^^^^^^
+
+This parameter allows to specify the vertical space between layer title and
+items following in millimeters. By default the space value is ``3`` mm.
+
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=airports,places
+  &BBOX=43.20,-2.93,49.35,8.32
+  &CRS=EPSG:4326
+  &TRANSPARENT=TRUE
+  &LAYERTITLESPACE=0
+
+.. figure:: ../img/wms_getlegendgraphics_layertitlespace.png
+   :align: center
+
+   To the left ``LAYERTITLESPACE=0`` and to the right ``LAYERTITLESPACE=10``
+
+
+.. _`wms-getlegendgraphics-symbolspace`:
+
+SYMBOLSPACE
+^^^^^^^^^^^
+
+This parameter allows to specify the vertical space between symbol and item
+following in millimeters. By default the space value is ``2`` mm.
+
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=countries
+  &BBOX=43.20,-2.93,49.35,8.32
+  &CRS=EPSG:4326
+  &TRANSPARENT=TRUE
+  &SYMBOLSPACE=0
+
+.. figure:: ../img/wms_getlegendgraphics_symbolspace.png
+   :align: center
+
+   To the left ``SYMBOLSPACE=0`` and to the right ``SYMBOLSPACE=5``
+
+
+.. _`wms-getlegendgraphics-iconlabelspace`:
+
+ICONLABELSPACE
+^^^^^^^^^^^^^^
+
+This parameter allows to specify the horizontal space between symbol and label
+text in millimeters. By default the space value is ``2`` mm.
+
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=countries,
+  &BBOX=43.20,-2.93,49.35,8.32
+  &CRS=EPSG:4326
+  &TRANSPARENT=TRUE
+  &ICONLABELSPACE=0
+
+.. figure:: ../img/wms_getlegendgraphics_iconlabelspace.png
+   :align: center
+
+   To the left ``ICONLABELSPACE=0`` and to the right ``ICONLABELSPACE=10``
+
+
+.. _`wms-getlegendgraphics-symbolwidth`:
+
+SYMBOLWIDTH
+^^^^^^^^^^^
+
+This parameter allows to specify the width of the symbol preview in
+millimeters. By default the width value is ``7`` mm.
+
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=countries,
+  &BBOX=43.20,-2.93,49.35,8.32
+  &CRS=EPSG:4326
+  &TRANSPARENT=TRUE
+  &SYMBOLWIDTH=2
+
+.. figure:: ../img/wms_getlegendgraphics_symbolwidth.png
+   :align: center
+
+   To the left ``SYMBOLWIDTH=2`` and to the right ``SYMBOLWIDTH=20``
+
+
+.. _`wms-getlegendgraphics-symbolheight`:
+
+SYMBOLHEIGHT
+^^^^^^^^^^^^
+
+This parameter allows to specify the height of the symbol preview in
+millimeters. By default the height value is ``4`` mm.
+
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=countries,
+  &BBOX=43.20,-2.93,49.35,8.32
+  &CRS=EPSG:4326
+  &TRANSPARENT=TRUE
+  &SYMBOLHEIGHT=2
+
+.. figure:: ../img/wms_getlegendgraphics_symbolheight.png
+   :align: center
+
+   To the left ``SYMBOLHEIGHT=2`` and to the right ``SYMBOLHEIGHT=6``
+
+
+.. _`wms-getlegendgraphics-layertitle`:
+
+LAYERTITLE
+^^^^^^^^^^
+
+This parameter specifies whether to render layer title.
+
+Available values are (not case sensitive):
+
+- ``TRUE`` (default value)
+- ``FALSE``
+
+
+.. _`wms-getlegendgraphics-layerfontfamily`:
+
+LAYERFONTFAMILY
+^^^^^^^^^^^^^^^
+
+This parameter specifies the font family to use for rendering layer title.
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=countries
+  &LAYERFONTFAMILY=monospace
+
+
+.. _`wms-getlegendgraphics-layerfontbold`:
+
+LAYERFONTBOLD
+^^^^^^^^^^^^^
+
+This parameter specifies whether the layer title is rendered in bold. Available
+values are (not case sensitive):
+
+- ``TRUE``
+- ``FALSE``
+
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=airports,places
+  &BBOX=43.20,-2.93,49.35,8.32
+  &CRS=EPSG:4326
+  &TRANSPARENT=TRUE
+  &LAYERFONTBOLD=TRUE
+
+.. figure:: ../img/wms_getlegendgraphics_layerfontbold.png
+   :align: center
+
+   Legend with ``LAYERFONTBOLD=TRUE``
+
+
+.. _`wms-getlegendgraphics-layerfontsize`:
+
+LAYERFONTSIZE
+^^^^^^^^^^^^^
+
+This parameter specifies the font size for rendering layer title in point.
+
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=airports,places
+  &BBOX=43.20,-2.93,49.35,8.32
+  &CRS=EPSG:4326
+  &TRANSPARENT=TRUE
+  &LAYERFONTSIZE=20
+
+.. figure:: ../img/wms_getlegendgraphics_layerfontsize.png
+   :align: center
+
+   Legend with ``LAYERFONTSIZE=20``
+
+
+.. _`wms-getlegendgraphics-layerfontitalic`:
+
+LAYERFONTITALIC
+^^^^^^^^^^^^^^^
+
+This parameter specifies whether the layer title is rendered in italic.
+Available values are (not case sensitive):
+
+- ``TRUE``
+- ``FALSE``
+
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=airports,places
+  &BBOX=43.20,-2.93,49.35,8.32
+  &CRS=EPSG:4326
+  &TRANSPARENT=TRUE
+  &LAYERFONTITALIC=TRUE
+
+.. figure:: ../img/wms_getlegendgraphics_layerfontitalic.png
+   :align: center
+
+   Legend with ``LAYERFONTITALIC=TRUE``
+
+
+.. _`wms-getlegendgraphics-layerfontcolor`:
+
+LAYERFONTCOLOR
+^^^^^^^^^^^^^^
+
+This parameter specifies the layer title color. The color may be literal
+(``red``, ``green``, ..) or in hexadecimal notation (``0xFF0000``,
+``0x00FF00``, ...).
+
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=airports,places
+  &BBOX=43.20,-2.93,49.35,8.32
+  &CRS=EPSG:4326
+  &TRANSPARENT=TRUE
+  &LAYERFONTCOLOR=0x5f9930
+
+.. figure:: ../img/wms_getlegendgraphics_layerfontcolor.png
+   :align: center
+
+   Legend with ``LAYERFONTCOLOR=0x5f9930``
+
+
+.. _`wms-getlegendgraphics-itemfontfamily`:
+
+ITEMFONTFAMILY
+^^^^^^^^^^^^^^
+
+This parameter specifies the font family to use for rendering item label.
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=countries
+  &ITEMFONTFAMILY=monospace
+
+
+.. _`wms-getlegendgraphics-itemfontbold`:
+
+ITEMFONTBOLD
+^^^^^^^^^^^^
+
+This parameter specifies whether the item label is rendered in bold. Available
+values are (not case sensitive):
+
+- ``TRUE``
+- ``FALSE``
+
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=airports,places
+  &BBOX=43.20,-2.93,49.35,8.32
+  &CRS=EPSG:4326
+  &TRANSPARENT=TRUE
+  &ITEMFONTBOLD=TRUE
+
+.. figure:: ../img/wms_getlegendgraphics_itemfontbold.png
+   :align: center
+
+   Legend with ``ITEMFONTBOLD=TRUE``
+
+
+.. _`wms-getlegendgraphics-itemfontsize`:
+
+ITEMFONTSIZE
+^^^^^^^^^^^^
+
+This parameter specifies the font size for rendering layer title in point.
+
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=airports,places
+  &BBOX=43.20,-2.93,49.35,8.32
+  &CRS=EPSG:4326
+  &TRANSPARENT=TRUE
+  &ITEMFONTSIZE=20
+
+.. figure:: ../img/wms_getlegendgraphics_itemfontsize.png
+   :align: center
+
+   Legend with ``ITEMFONTSIZE=30``
+
+
+.. _`wms-getlegendgraphics-itemfontitalic`:
+
+ITEMFONTITALIC
+^^^^^^^^^^^^^^
+
+This parameter specifies whether the item label is rendered in italic.
+Available values are (not case sensitive):
+
+- ``TRUE``
+- ``FALSE``
+
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=airports,places
+  &BBOX=43.20,-2.93,49.35,8.32
+  &CRS=EPSG:4326
+  &TRANSPARENT=TRUE
+  &ITEMFONTITALIC=TRUE
+
+.. figure:: ../img/wms_getlegendgraphics_itemfontitalic.png
+   :align: center
+
+   Legend with ``ITEMFONTITALIC=TRUE``
+
+
+.. _`wms-getlegendgraphics-itemfontcolor`:
+
+ITEMFONTCOLOR
+^^^^^^^^^^^^^
+
+This parameter specifies the item label color. The color may be literal
+(``red``, ``green``, ..) or in hexadecimal notation (``0xFF0000``,
+``0x00FF00``, ...).
+
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetLegendGraphics
+  &LAYERS=airports,places
+  &BBOX=43.20,-2.93,49.35,8.32
+  &CRS=EPSG:4326
+  &TRANSPARENT=TRUE
+  &ITEMFONTCOLOR=0x5f9930
+
+.. figure:: ../img/wms_getlegendgraphics_itemfontcolor.png
+   :align: center
+
+   Legend with ``ITEMFONTCOLOR=0x5f9930``
 
 
 .. _server_wms_getstyle:
