@@ -50,9 +50,9 @@ WMS 1.1.1 and 1.3.0 specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`SERVICE <wms_service>`", "Yes", "Name of the service (**WMS**)"
+   ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMS**)"
+   ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetCapabilities**)"
    ":ref:`VERSION <wms_version>`", "No", "Version of the service"
-   ":ref:`REQUEST <wms_getcapabilities_request>`", "Yes", "Name of the request (**GetCapabilities**)"
 
 In addition to the standard ones, QGIS Server supports as well as the following
 extra parameters:
@@ -62,7 +62,7 @@ extra parameters:
    :header: "Parameter", "Required", "Description"
    :widths: 20, 10, 65
 
-   ":ref:`MAP <wms_map>`", "Yes", "Specify the QGIS project file"
+   ":ref:`MAP <services_basics_map>`", "Yes", "QGIS project file"
 
 URL example:
 
@@ -74,27 +74,22 @@ URL example:
   &REQUEST=GetCapabilities
 
 
-.. _`wms_getcapabilities_request`:
+.. _`wms_version`:
 
-REQUEST
+VERSION
 ^^^^^^^
 
-This parameter is ``GetCapabilities`` in case of the **GetCapabilities**
-request.
+This parameter allows to specify the version of the service to use.
+Available values for the ``VERSION`` parameter are:
 
+- ``1.1.1``
+- ``1.3.0``
 
-.. _`wms_map`:
+According to the version number, slight differences have to be expected
+as explained later for the next parameters:
 
-MAP
-^^^
-
-This parameter allows to define the QGIS project file to use.
-
-``MAP`` is mandatory because a request needs a QGIS project to actually work.
-However, the ``QGIS_PROJECT_FILE`` environment variable may be used to define a
-default QGIS project.  In this specific case, ``MAP`` is no longer a required
-parameter.  For further information you may refer to
-:ref:`server_env_variables`.
+- ``CRS`` / ``SRS``
+- ``BBOX``
 
 
 
@@ -110,9 +105,9 @@ WMS 1.1.1 and 1.3.0 specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`SERVICE <wms_service>`", "Yes", "Name of the service (**WMS**)"
+   ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMS**)"
+   ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetMap**)"
    ":ref:`VERSION <wms_version>`", "Yes", "Version of the service"
-   ":ref:`REQUEST <wms_getmap_request>`", "Yes", "Name of the request (**GetMap**)"
    ":ref:`LAYERS <wms_layers>` ", "No", "Layers to display"
    ":ref:`STYLES <wms_styles>`", "No", "Layers' style"
    ":ref:`SRS / CRS <wms_srs>`", "Yes", "Coordinate reference system"
@@ -134,9 +129,9 @@ as well as the following extra parameters:
    :header: "Parameter", "Required", "Description"
    :widths: 20, 10, 65
 
-   ":ref:`MAP <wms_map>`", "Yes", "Specify the QGIS project file"
-   ":ref:`BGCOLOR <wms_bgcolor>`", "No", "Specify the background color"
-   ":ref:`DPI <wms_dpi>`", "No", "Specify the output resolution"
+   ":ref:`MAP <services_basics_map>`", "Yes", "QGIS project file"
+   ":ref:`BGCOLOR <wms_bgcolor>`", "No", "Background color"
+   ":ref:`DPI <wms_dpi>`", "No", "Output resolution"
    ":ref:`IMAGE_QUALITY <wms_imagequality>`", "No", "JPEG compression"
    ":ref:`OPACITIES <wms_opacities>`", "No", "Opacity for layer or group"
    ":ref:`FILTER <wms_filter>`", "No", "Subset of features"
@@ -170,48 +165,6 @@ URL example:
   &TILED=TRUE
 
 
-.. _`wms_service`:
-
-SERVICE
-^^^^^^^
-
-This parameter has to be ``WMS``.
-
-For example:
-
-.. code-block:: bash
-
-  http://localhost/qgisserver?
-  SERVICE=WMS
-  &...
-
-
-.. _`wms_version`:
-
-VERSION
-^^^^^^^
-
-This parameter allows to specify the version of the service to use.
-Available values for the ``VERSION`` parameter are:
-
-- ``1.1.1``
-- ``1.3.0``
-
-According to the version number, slight differences have to be expected
-as explained later for the next parameters:
-
-- ``CRS`` / ``SRS``
-- ``BBOX``
-
-
-.. _`wms_getmap_request`:
-
-REQUEST
-^^^^^^^
-
-This parameter is ``GetMap`` in case of the **GetMap** request.
-
-
 .. _`wms_layers`:
 
 LAYERS
@@ -222,27 +175,13 @@ Names have to be separated by a comma.
 
 In addition, QGIS Server introduced some options to select layers by:
 
-* a short name
+* a :ref:`short name <services_basics_short_name>`
 * the layer id
 
-The short name of a layer may be configured through
-:menuselection:`Properties --> Metadata` in layer menu.
-If the short name is defined, then it's used by default instead of the
-layer's name:
-
-.. code-block:: bash
-
-  http://localhost/qgisserver?
-  SERVICE=WMS
-  &REQUEST=GetMap
-  &LAYERS=mynickname1,mynickname2
-  &...
-
-Moreover, there's a project option allowing to select layers by their
-id in :menuselection:`OWS Server --> WMS capabilities` menu of the
-:menuselection:`Project --> Properties...` dialog.
-To activate this option, the checkbox
-:guilabel:`Use layer ids as names` has to be selected.
+Indeed, a project option allows to select layers by their id in
+:menuselection:`OWS Server --> WMS capabilities` menu of the
+:menuselection:`Project --> Properties...` dialog.  To activate this option,
+the checkbox :guilabel:`Use layer ids as names` has to be selected.
 
 .. code-block:: bash
 
@@ -630,9 +569,9 @@ the OGC WMS 1.1.1 and 1.3.0 specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`SERVICE <wms_service>`", "Yes", "Name of the service (**WMS**)"
+   ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMS**)"
+   ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetFeatureInfo**)"
    ":ref:`VERSION <wms_version>`", "No", "Version of the service"
-   ":ref:`REQUEST <wms_getfeatureinfo_request>`", "Yes", "Name of the request (**GetFeatureInfo**)"
    ":ref:`QUERY_LAYERS <wms_querylayers>`", "Yes", "Layers to query"
    ":ref:`LAYERS <wms_layers>`", "Yes", "Layers to display (identical to `QUERY_LAYERS`)"
    ":ref:`STYLES <wms_styles>`", "No", "Layers' style"
@@ -660,7 +599,7 @@ extra parameters:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`MAP <wms_map>`", "Yes", "Specify the QGIS project file"
+   ":ref:`MAP <services_basics_map>`", "Yes", "QGIS project file"
    ":ref:`FILTER <wms_filter>`", "No", "Subset of features"
    ":ref:`FI_POINT_TOLERANCE <wms_fipointtolerance>`", "No", "Tolerance in pixels for point layers"
    ":ref:`FI_LINE_TOLERANCE <wms_filinetolerance>`", "No", "Tolerance in pixels for line layers"
@@ -690,13 +629,6 @@ URL example:
   &I=250
   &J=250
 
-
-.. _`wms_getfeatureinfo_request`:
-
-REQUEST
-^^^^^^^
-
-This parameter is ``GetFeatureInfo`` in case of the **GetFeatureInfo** request.
 
 .. _`wms_infoformat`:
 
@@ -841,9 +773,9 @@ WMS 1.1.1 and 1.3.0 specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`SERVICE <wms_service>`", "Yes", "Name of the service (**WMS**)"
+   ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMS**)"
+   ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetLegendGraphics**)"
    ":ref:`VERSION <wms_version>`", "No", "Version of the service"
-   ":ref:`REQUEST <wms_getlegendgraphics_request>`", "Yes", "Name of the request (**GetLegendGraphics**)"
    ":ref:`LAYERS <wms_layers>` ", "Yes", "Layers to display"
    ":ref:`STYLES <wms_styles>`", "No", "Layers' style"
    ":ref:`SRS / CRS <wms_srs>`", "No", "Coordinate reference system"
@@ -861,7 +793,7 @@ and item labels:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`MAP <wms_map>`", "Yes", "Specify the QGIS project file"
+   ":ref:`MAP <services_basics_map>`", "Yes", "QGIS project file"
    ":ref:`SRCWIDTH <wms_getlegendgraphics-srcwidth>`", "No", "Map width"
    ":ref:`SRCHEIGHT <wms_getlegendgraphics-srcheight>`", "No", "Map height"
    ":ref:`SHOWFEATURECOUNT <wms_getlegendgraphics-showfeaturecount>`", "No", "Add feature count of features"
@@ -885,14 +817,6 @@ and item labels:
    ":ref:`ITEMFONTSIZE <wms_getlegendgraphics-itemfontsize>`", "No", "Item label font size (pt)"
    ":ref:`ITEMFONTITALIC <wms_getlegendgraphics-itemfontitalic>`", "No", "Item label italic rendering"
    ":ref:`ITEMFONTCOLOR <wms_getlegendgraphics-itemfontcolor>`", "No", "Item label color"
-
-
-.. _`wms_getlegendgraphics_request`:
-
-REQUEST
-^^^^^^^
-
-This parameter is ``GetLegendGraphics`` in case of the **GetLegendGraphics** request.
 
 
 .. _`wms_getlegendgraphics-bbox`:
@@ -1571,10 +1495,19 @@ to the OGC WMS 1.1.1 specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`SERVICE <wms_service>`", "Yes", "Name of the service (**WMS**)"
-   ":ref:`REQUEST <wms_getstyle_request>`", "Yes", "Name of the request (**GetStyle** or **GetStyles**)"
+   ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMS**)"
+   ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetStyle** or **GetStyles**)"
    ":ref:`LAYERS <wms_layers>`", "Yes", "Layers to query"
 
+In addition to the standard ones, QGIS Server supports as well as the following
+extra parameters:
+
+
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: 20, 10, 65
+
+   ":ref:`MAP <services_basics_map>`", "Yes", "QGIS project file"
 
 URL example:
 
@@ -1584,13 +1517,6 @@ URL example:
   SERVICE=WMS
   &REQUEST=GetStyles
   &LAYERS=mylayer1,mylayer2
-
-.. _`wms_getstyle_request`:
-
-REQUEST
-^^^^^^^
-
-This parameter is ``GetStyle`` or ``GetStyles``.
 
 
 .. _wms_describelayer:
@@ -1605,10 +1531,20 @@ Standard parameters for the **DescribeLayer** request according to the OGC WMS
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`SERVICE <wms_service>`", "Yes", "Name of the service (**WMS**)"
-   ":ref:`REQUEST <wms_describelayer_request>`", "Yes", "Name of the request (**DescribeLayer**)"
+   ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMS**)"
+   ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**DescribeLayer**)"
    ":ref:`LAYERS <wms_layers>`", "Yes", "Layers to describe"
    ":ref:`SLD_VERSION <wms_describelayer-sldversion>`", "Yes", "SLD version"
+
+In addition to the standard ones, QGIS Server supports as well as the following
+extra parameters:
+
+
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: 20, 10, 65
+
+   ":ref:`MAP <services_basics_map>`", "Yes", "QGIS project file"
 
 URL example:
 
@@ -1642,13 +1578,6 @@ The XML document looks like:
        </LayerDescription>
    </DescribeLayerResponse>
 
-.. _`wms_describelayer_request`:
-
-REQUEST
-^^^^^^^
-
-This parameter is ``DescribeLayer`` in case of the **DescribeLayer** request.
-
 
 .. _`wms_describelayer-sldversion`:
 
@@ -1666,10 +1595,10 @@ GetPrint
 
 QGIS Server has the capability to create print layout output in pdf or pixel
 format. Print layout windows in the published project are used as templates.
-In the **GetPrint** request, the client has the possibility to specify
+In the ``GetPrint`` request, the client has the possibility to specify
 parameters of the contained layout maps and labels.
 
-The **GetPrint** request supports :ref:`redlining <redlining>`,
+The ``GetPrint`` request supports :ref:`redlining <redlining>`,
 :ref:`external WMS layers <external_wms>` as well as the following
 parameters:
 
@@ -1677,10 +1606,10 @@ parameters:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`MAP <wms_map>`", "Yes", "Specify the QGIS project file"
-   ":ref:`SERVICE <wms_service>`", "Yes", "Name of the service (**WMS**)"
+   ":ref:`MAP <services_basics_map>`", "Yes", "QGIS project file"
+   ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMS**)"
    ":ref:`VERSION <wms_version>`", "No", "Version of the service"
-   ":ref:`REQUEST <wms_getprint_request>`", "Yes", "Name of the request (**GetPrint**)"
+   ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetPrint**)"
    ":ref:`LAYERS <wms_layers>`", "No", "Layers to display"
    ":ref:`TEMPLATE <wms_template>`", "Yes", "Layout template to use"
    ":ref:`SRS / CRS <wms_srs>`", "Yes", "Coordinate reference system"
@@ -1690,13 +1619,13 @@ parameters:
    ":ref:`TRANSPARENT <wms_transparent>`", "No", "Transparent background"
    ":ref:`OPACITIES <wms_opacities>`", "No", "Opacity for layer or group"
    ":ref:`SELECTION <wms_selection>`", "No", "Highlight features"
-   ":ref:`mapX:EXTENT <wms_mapextent>`", "No", "Extent of the map 'X'"
-   ":ref:`mapX:LAYERS <wms_maplayers>`", "No", "Layers of the map 'X'"
-   ":ref:`mapX:STYLES <wms_mapstyles>`", "No", "Layers' style of the map 'X'"
-   ":ref:`mapX:SCALE <wms_mapscale>`", "No", "Layers' scale of the map 'X'"
-   ":ref:`mapX:ROTATION <wms_maprotation>`", "No", "Rotation  of the map 'X'"
-   ":ref:`mapX:GRID_INTERVAL_X <wms_mapgridintervalx>`", "No", "Grid interval on x axis of the map 'X'"
-   ":ref:`mapX:GRID_INTERVAL_Y <wms_mapgridintervaly>`", "No", "Grid interval on y axis of the map 'X'"
+   ":ref:`mapX:EXTENT <services_basics_mapextent>`", "No", "Extent of the map 'X'"
+   ":ref:`mapX:LAYERS <services_basics_maplayers>`", "No", "Layers of the map 'X'"
+   ":ref:`mapX:STYLES <services_basics_mapstyles>`", "No", "Layers' style of the map 'X'"
+   ":ref:`mapX:SCALE <services_basics_mapscale>`", "No", "Layers' scale of the map 'X'"
+   ":ref:`mapX:ROTATION <services_basics_maprotation>`", "No", "Rotation  of the map 'X'"
+   ":ref:`mapX:GRID_INTERVAL_X <services_basics_mapgridintervalx>`", "No", "Grid interval on x axis of the map 'X'"
+   ":ref:`mapX:GRID_INTERVAL_Y <services_basics_mapgridintervaly>`", "No", "Grid interval on y axis of the map 'X'"
 
 
 URL example:
@@ -1735,13 +1664,6 @@ For example:
     ...
     </WMS_Capabilities>
 
-
-.. _`wms_getprint_request`:
-
-REQUEST
-^^^^^^^
-
-This parameter has to be ``GetPrint`` for the **GetPrint** request.
 
 .. _`wms_template`:
 
@@ -1787,7 +1709,7 @@ When ``FORMAT`` is ``pdf``, a single PDF document combining the feature
 pages is returned.
 For all other formats, a single page is returned.
 
-.. _`wms_mapextent`:
+.. _`services_basics_mapextent`:
 
 mapX:EXTENT
 ^^^^^^^^^^^
@@ -1795,28 +1717,28 @@ mapX:EXTENT
 This parameter specifies the extent for a layout map item as
 xmin,ymin,xmax,ymax.
 
-.. _`wms_maprotation`:
+.. _`services_basics_maprotation`:
 
 mapX:ROTATION
 ^^^^^^^^^^^^^
 
 This parameter specifies the map rotation in degrees.
 
-.. _`wms_mapgridintervalx`:
+.. _`services_basics_mapgridintervalx`:
 
 mapX:GRID_INTERVAL_X
 ^^^^^^^^^^^^^^^^^^^^
 
 This parameter specifies the grid line density in the X direction.
 
-.. _`wms_mapgridintervaly`:
+.. _`services_basics_mapgridintervaly`:
 
 mapX:GRID_INTERVAL_Y
 ^^^^^^^^^^^^^^^^^^^^
 
 This parameter specifies the grid line density in the Y direction.
 
-.. _`wms_mapscale`:
+.. _`services_basics_mapscale`:
 
 mapX:SCALE
 ^^^^^^^^^^
@@ -1826,7 +1748,7 @@ This is useful to ensure scale based visibility of layers and
 labels even if client and server may have different algorithms to
 calculate the scale denominator.
 
-.. _`wms_maplayers`:
+.. _`services_basics_maplayers`:
 
 mapX:LAYERS
 ^^^^^^^^^^^
@@ -1835,7 +1757,7 @@ This parameter specifies the layers for a layout map item. See
 :ref:`GetMap Layers <wms_layers>` for more information on
 this parameter.
 
-.. _`wms_mapstyles`:
+.. _`services_basics_mapstyles`:
 
 mapX:STYLES
 ^^^^^^^^^^^
@@ -1851,15 +1773,32 @@ this parameter.
 GetProjectSettings
 ------------------
 
-This request type works similar to **GetCapabilities**, but it is more
-specific to QGIS Server and allows a client to read additional
-information which is not available in the GetCapabilities output:
+This request type works similar to ``GetCapabilities``, but it is more specific
+to QGIS Server and allows a client to read additional information:
 
 * initial visibility of layers
 * information about vector attributes and their edit types
 * information about layer order and drawing order
 * list of layers published in WFS
 * show if a group in the layer tree is :ref:`mutually exclusive <group_layers_interact>`
+
+The ``GetProjectSettings`` request supports the following parameters:
+
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: auto
+
+   ":ref:`MAP <services_basics_map>`", "Yes", "QGIS project file"
+   ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMS**)"
+   ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetPrint**)"
+
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetProjectSettings
 
 
 .. _wms_getschemaextension:
@@ -1875,8 +1814,9 @@ Server.
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`SERVICE <wms_service>`", "Yes", "Name of the service (**WMS**)"
-   ":ref:`REQUEST <wms_getschemaextension_request>`", "Yes", "Name of the request (**GetSchemaExtension**)"
+   ":ref:`MAP <services_basics_map>`", "Yes", "QGIS project file"
+   ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMS**)"
+   ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetSchemaExtension**)"
 
 
 URL example:
@@ -1897,13 +1837,6 @@ The XML document looks like:
       <element name="GetPrint" type="wms:OperationType" substitutionGroup="wms:_ExtendedOperation"/>
       <element name="GetStyles" type="wms:OperationType" substitutionGroup="wms:_ExtendedOperation"/>
   </schema>
-
-.. _`wms_getschemaextension_request`:
-
-REQUEST
-^^^^^^^
-
-This parameter is ``GetSchemaExtension`` in case of the **GetSchemaExtension** request.
 
 
 .. _`external_wms`:

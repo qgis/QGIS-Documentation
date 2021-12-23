@@ -13,8 +13,8 @@ Standard concepts:
    :header: "Concept", "Description"
    :widths: auto
 
-   ":ref:`SERVICE <services_basics_service>`", "Specifies the name of the service"
-   ":ref:`REQUEST <services_basics_request>`", "Specifies the name of the request"
+   ":ref:`SERVICE <services_basics_service>`", "Name of the service"
+   ":ref:`REQUEST <services_basics_request>`", "Name of the request"
 
 
 Vendor concepts:
@@ -23,9 +23,9 @@ Vendor concepts:
    :header: "Concept", "Description"
    :widths: auto
 
-   ":ref:`MAP <services_basics_map>`", "Specifies the QGIS project file"
-   ":ref:`FILE_NAME <services_basics_file_name>`", "Specifies an output file"
-   ":ref:`Short name <services_basics_short_name>`", "Specifies a short name"
+   ":ref:`MAP <services_basics_map>`", "QGIS project file"
+   ":ref:`FILE_NAME <services_basics_file_name>`", "Output file"
+   ":ref:`Short name <services_basics_short_name>`", "Short name definition"
 
 
 .. _`services_basics_service`:
