@@ -54,7 +54,7 @@ WMS 1.1.1 and 1.3.0 specifications:
    ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetCapabilities**)"
    ":ref:`VERSION <wms_version>`", "No", "Version of the service"
 
-In addition to the standard ones, QGIS Server supports as well as the following
+In addition to the standard ones, QGIS Server supports as well the following
 extra parameters:
 
 
@@ -1502,7 +1502,7 @@ to the OGC WMS 1.1.1 specifications:
    ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetStyle** or **GetStyles**)"
    ":ref:`LAYERS <wms_layers>`", "Yes", "Layers to query"
 
-In addition to the standard ones, QGIS Server supports as well as the following
+In addition to the standard ones, QGIS Server supports as well the following
 extra parameters:
 
 
@@ -1540,7 +1540,7 @@ Standard parameters for the **DescribeLayer** request according to the OGC WMS
    ":ref:`LAYERS <wms_layers>`", "Yes", "Layers to describe"
    ":ref:`SLD_VERSION <wms_describelayer-sldversion>`", "Yes", "SLD version"
 
-In addition to the standard ones, QGIS Server supports as well as the following
+In addition to the standard ones, QGIS Server supports as well the following
 extra parameters:
 
 
