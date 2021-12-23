@@ -235,10 +235,10 @@ msgid ""
 " find features on the map by selecting features in the table."
 msgstr ""
 "벡터 객체용 속성은 **테이블** 에 저장됩니다. 테이블이란 스프레드시트와 비슷합니다. 테이블의 각 열을 **필드(field)** 라 "
-"하고, 각 행을 **레코드(record)** 라고 부릅니다. numref:`table_house_attributes` 은 GIS에서 속성"
-" 테이블이 어떻게 보이는지에 대한 간단한 예시입니다. GIS에서 속성 테이블에 있는 레코드들은 각각 하나의 객체에 대응합니다. 보통 속성"
-" 테이블의 정보는 일종의 데이터베이스에 저장됩니다. 여러분이 맵 상에서 객체를 선택해서 테이블에 있는 레코드를 찾거나, 테이블에서 객체를"
-" 선택해서 맵 상에 있는 객체를 찾을 수 있도록 GIS 응용 프로그램이 속성 레코드를 객체 도형과 연결시킵니다."
+"하고, 각 행을 **레코드(record)** 라고 부릅니다. :numref:`table_house_attributes` 은 GIS에서 "
+"속성 테이블이 어떻게 보이는지에 대한 간단한 예시입니다. GIS에서 속성 테이블에 있는 레코드들은 각각 하나의 객체에 대응합니다. 보통 "
+"속성 테이블의 정보는 일종의 데이터베이스에 저장됩니다. 여러분이 맵 상에서 객체를 선택해서 테이블에 있는 레코드를 찾거나, 테이블에서 "
+"객체를 선택해서 맵 상에 있는 객체를 찾을 수 있도록 GIS 응용 프로그램이 속성 레코드를 객체 도형과 연결시킵니다."
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:141
 msgid "Attribute Table"
@@ -372,10 +372,127 @@ msgstr ""
 msgid "Single Symbols"
 msgstr "단일 심볼"
 
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:181
+msgid ""
+"If a feature is symbolised without using any attribute table data, it can "
+"only be drawn in a simple way. For example with point features you can set "
+"the colour and **marker** (circle, square, star etc.) but that is all. You "
+"cannot tell the GIS to draw the features based on one of its properties in "
+"the attribute table. In order to do that, you need to use either a "
+"**graduated**, **continuous** or **unique value** symbol. These are "
+"described in detail in the sections that follow."
+msgstr ""
+"어떤 속성 테이블 데이터도 사용하지 않은 채 객체에 심볼을 지정한다면 심볼을 단순하게 그릴 수밖에 없습니다. 예를 들면 포인트 객체의 "
+"경우 색상과 **마커(marker)** (원, 정사각형, 별 등등)를 설정할 수 있지만 그게 다입니다. GIS에 객체의 속성 테이블에 "
+"있는 객체 속성 가운데 하나를 바탕으로 객체를 그리라고 명령할 수는 없죠. 그러려면 **등급(graduated)**, "
+"**연속(continuous)** 또는 **유일값(unique value)** 심볼 가운데 하나를 사용해야 합니다. 이제부터 이 심볼들에"
+" 대해 자세히 설명하겠습니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:189
+msgid ""
+"A GIS application will normally allow you to set the symbology of a layer "
+"using a **dialog box** such as the one shown in in "
+":numref:`figure_single_symbol`. In this dialog box you can choose colours "
+"and symbol styles. Depending on the geometry type of a layer, different "
+"options may be shown. For example with point layers you can choose a "
+"**marker style**. With line and polygon layers there is no marker style "
+"option, but instead you can select a **line style** and **colour** such as "
+"dashed orange for gravel roads, solid orange for minor roads, and so on (as "
+"shown in :numref:`figure_single_symbol_poly`). With polygon layers you also "
+"have the option of setting a **fill style** and color."
+msgstr ""
+"GIS 응용 프로그램은 보통 :numref:`figure_single_symbol` 에 보이는 것과 같은 **대화창(dialog "
+"box)** 을 통해 레이어의 심볼을 설정할 수 있습니다. 이 대화창에서 심볼의 색상과 스타일을 선택할 수 있습니다. 레이어의 도형 "
+"유형에 따라 서로 다른 옵션이 나올 수도 있습니다. 예를 들어 포인트 레이어라면 **마커 스타일** 을 선택할 수 있겠죠. 라인 및 "
+"폴리곤 레이어의 경우 마커 스타일 옵션은 사라지고 그 대신 (:numref:`figure_single_symbol_poly` 처럼) "
+"자갈길은 주황색 점선(dashed orange), 소도로는 주황색 실선(solid orange) 같은 식으로 **라인 스타일** 및 "
+"**색상** 을 선택할 수 있습니다. 폴리곤 레이어라면 **채우기(fill) 스타일** 및 색상을 설정할 수 있는 옵션도 나타납니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:205
+msgid ""
+"When using simple symbols, the feature is drawn without using an attribute "
+"to control how it looks. This is the dialog for point features."
+msgstr ""
+"단순한 심볼을 사용하는 경우, 심볼 모양을 제어할 수 있는 어떤 속성도 사용하지 않은 채 객체를 그립니다. 이 그림은 포인트 객체용 "
+"대화창입니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:214
+msgid ""
+"There are different options when defining simple symbols for polyline and "
+"polygon features."
+msgstr "폴리라인 객체와 폴리곤 객체의 단순한 심볼을 정의할 때 볼 수 있는 옵션은 서로 다릅니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:218
+msgid "Graduated Symbols"
+msgstr "등급 심볼"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:220
+msgid ""
+"Sometimes vector features represent things with a changing numerical value. "
+"Contour lines are a good example of this. Each contour usually has an "
+"attribute value called 'height' that contains information about what height "
+"that contour represents. In  earlier in this topic we showed contours all "
+"drawn with the same colour. Adding colour to the contours can help us to "
+"interpret the meanings of contours. For example we can draw low lying areas "
+"with one colour, mid-altitude areas with another and high-altitude areas "
+"with a third."
+msgstr ""
+"벡터 객체가 변화하는 숫자값을 가진 사물을 표현할 때가 있습니다. 등고선이 좋은 예죠. 각 등고선은 보통 해당 등고선이 표현하는 높이에 "
+"관한 정보를 담고 있는 'height' 이라고 하는 속성값을 가지고 있습니다. 이 단원의 처음에서 모두 동일한 색상으로 그려진 등고선 "
+"그림을 보았습니다. 등고선에 색상을 넣으면 등고선이 의미하는 바를 이해하기 쉬워집니다. 예를 들면 저지대를 어떤 색상으로, 중지대를 다른"
+" 색상으로, 고지대를 또다른 색상으로 그릴 수 있겠죠."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:234
+msgid ""
+"The height attribute of contours can be used to separate the contours into 3"
+" classes. Contours between 980 m and 1120 m will be drawn in brown, those "
+"between 1120 m and 1240 m in green and those between 1240 m and 1500 m in "
+"purple."
+msgstr ""
+"등고선의 표고 속성을 이용해서 등고선을 3개 범주(class)로 나누었습니다. 980m에서 1120m까지의 등고선은 갈색으로, "
+"1120m에서 1240m까지는 녹색으로, 1240m에서 1500m까지는 보라색으로 그릴 것입니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:245
+msgid "Our map after setting graduated colours for our contours."
+msgstr "등고선을 범주별 색상으로 설정한 지도입니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:247
+msgid ""
+"Setting colours based on discrete groups of attribute values is called "
+"Graduated Symbology in QGIS. The process is shown in Illustrations "
+":numref:`figure_graduated_symbol` and :numref:`figure_graduated_symbol_map`."
+" **Graduated symbols** are most useful when you want to show clear "
+"differences between features with attribute values in different value "
+"ranges. The GIS Application will analyse the attribute data (e.g. height) "
+"and, based on the number of classes you request, create groupings for you. "
+"This process is illustrated in table_graduated_."
+msgstr ""
+"속성값의 개별 그룹들을 바탕으로 색상을 설정하는 작업을 QGIS에서는 등급 심볼이라 부릅니다. "
+":numref:`figure_graduated_symbol` 와 :numref:`figure_graduated_symbol_map` 에서"
+" 그 과정을 보여주고 있습니다. **등급 심볼** 이 가장 유용한 경우는 서로 다른 범위의 속성값을 가진 객체들이 어떤 차이가 있는지 "
+"분명히 보여주려 하는 경우입니다. GIS 응용 프로그램은 속성 데이터를 (예를 들면 표고를) 분석한 다음, 여러분이 요청한 범주 개수를 "
+"바탕으로 그룹들을 분류, 생성할 것입니다. 다음 :numref:`table_graduated` 는 그런 과정을 표현한 것입니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:258
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:295
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:367
+msgid "Attribute Value"
+msgstr "속성값"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:258
+msgid "Class and Colour"
+msgstr "등급 및 색상"
+
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:260
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:297
 msgid "1"
 msgstr "1"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:260
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:262
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:264
+msgid "Class 1"
+msgstr "Class 1"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:262
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:299
@@ -392,25 +509,228 @@ msgstr "3"
 msgid "4"
 msgstr "4"
 
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:266
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:268
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:270
+msgid "Class 2"
+msgstr "Class 2"
+
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:268
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:305
 msgid "5"
 msgstr "5"
 
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:270
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:307
+msgid "6"
+msgstr "6"
+
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:272
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:309
 msgid "7"
-msgstr "6"
+msgstr "7"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:272
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:274
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:276
+msgid "Class 3"
+msgstr "Class 3"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:274
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:311
 msgid "8"
-msgstr "7"
+msgstr "8"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:276
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:313
 msgid "9"
-msgstr "8"
+msgstr "9"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:279
+msgid ""
+"Table Graduated: Graduated colour breaks up the attribute value ranges into "
+"the number of classes you select. Each class is represented by a different "
+"colour."
+msgstr ""
+"등급 테이블: 등급 색상이 속성값의 범위를 여러분이 선택한 범주 개수대로 나눕니다. 각 등급은 서로 다른 색상으로 표현됩니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:283
+msgid "Continuous Colour Symbols"
+msgstr "연속 색상 심볼"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:285
+msgid ""
+"In the previous section on Graduated Colour symbols we saw that we can draw "
+"features in discrete groups or classes. Sometimes it is useful to draw "
+"features in a **colour range** from one colour to another. The GIS "
+"Application will use a numerical attribute value from a feature (e.g. "
+"contour heights or pollution levels in a stream) to decide which colour to "
+"use. Table table_continuous_ shows how the attribute value is used to define"
+" a continuous range of colours."
+msgstr ""
+"등급 색상 심볼에 대한 앞 절에서 객체를 개별 그룹 또는 등급에 맞춰 그릴 수 있다는 사실을 배웠습니다. 때로는 객체를 어떤 색상에서 "
+"다른 색상으로 변화하는 **색상 범위(color range)** 에 맞춰 그리는 것이 유용한 경우가 있습니다. GIS 응용 프로그램은 "
+"객체가 가진 숫자 속성값을 (예를 들어 등고선 표고 또는 하천의 오염 수준을) 이용해서 어떤 색상을 사용할지 결정합니다. "
+":numref:`table_continuous` 에서 어떻게 색상의 연속 범위를 속성값을 사용해서 정의할 수 있는지 볼 수 있습니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:295
+msgid "Colour (no classes or grouping)"
+msgstr "색상 (등급 또는 그룹 분류 없음)"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:316
+msgid ""
+"Table Continuous: Continuous colour symbology uses a start colour (e.g. "
+"light orange shown here) and an end colour (e.g. dark brown shown here) and "
+"creates a series of shades between those colours."
+msgstr ""
+"연속 테이블: 연속 색상 심볼은 시작 색상(예를 들어 다음 그림과 같은 연한 주황색) 및 종단 색상(예를 들면 다음 그림과 같은 "
+"진갈색)을 이용해서 두 색상 사이에 있는 일련의 색조를 생성합니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:320
+msgid ""
+"Using the same contours example we used in the previous section, let's see "
+"how a map with continuous colour symbology is defined and looks. The process"
+" starts by setting the layers properties to continuous colour using a dialog"
+" like the one shown in :numref:`figure_continuous_symbol`."
+msgstr ""
+"앞 절에서 사용했던 등고선 예시를 재활용해서, 연속 색상 심볼이 맵 상에서 어떻게 정의되고 어떻게 보이는지 살펴봅시다. 이 과정은 "
+":numref:`figure_continuous_symbol` 에서 볼 수 있는 것 같은 대화창을 사용해서 레이어 속성에 연속 색상을 "
+"설정하는 것으로 시작합니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:331
+msgid ""
+"Setting up continuous colour symbology. The contour height attribute is used"
+" to determine colour values. Colours are defined for the minimum and maximum"
+" values. The GIS Application will then create a gradient of colours for "
+"drawing the features based on their heights."
+msgstr ""
+"연속 색상 심볼 설정하기. 등고선 표고 속성을 사용해서 색상값을 결정합니다. 최소값과 최대값에 대한 색상을 정의하면, GIS 응용 "
+"프로그램이 표고를 바탕으로 객체들을 그리기 위한 색상 증감(gradient)을 생성할 것입니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:336
+msgid ""
+"After defining the minimum and maximum colours in the colour range, the "
+"colour features are drawn in will depend on where the attribute lies in the "
+"range between minimum and maximum. For example if you have contour features "
+"with values starting at 1000 m and ending at 1400 m, the value range is 1000"
+" to 1400. If the colour set for the minimum value is set to orange and the "
+"colour for the maximum value is black, contours with a value of close to "
+"1400 m will be drawn close to black. On the other hand contours with a value"
+" near to 1000 m will be drawn close to orange (see "
+":numref:`figure_continuous_symbol_map`)."
+msgstr ""
+"색상 범위에서 최소값 및 최대값의 색상을 정의한 다음 객체를 그릴 색상은 해당 객체의 속성이 최대값과 최소값 사이 어디쯤에 있느냐에 따라"
+" 달라질 것입니다. 예를 들면 표고값이 1000m에서 시작해서 1400m에서 끝나는 등고선 객체들이 있다고 할 때, 값의 범위는 "
+"1000에서 1400까지입니다. 최소값의 색상을 주황색으로 설정하고 최대값의 색상을 검정색으로 설정했다고 하면 1400m에 가까운 값을 "
+"가진 등고선은 검정색에 가까운 색으로 그려질 것입니다. 한편 1000m에 가까운 값을 가진 등고선은 주황색에 가까운 색으로 그려지겠죠. "
+"(:numref:`figure_continuous_symbol_map` 를 참조하세요.)"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:351
+msgid "A contour map drawn using continuous colour symbology"
+msgstr "연속 색상 심볼을 사용해서 그린 등고선 맵"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:354
+msgid "Unique Value Symbols"
+msgstr "유일값 심볼"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:356
+msgid ""
+"Sometimes the attributes of features are not numeric, but instead "
+"**strings** are used. 'String' is a computer term meaning a group of "
+"letters, numbers and other writing symbols. Strings attributes are often "
+"used to classify things by name. We can tell the GIS Application to give "
+"each unique string or number its own colour and symbol. Road features may "
+"have different classes (e.g. 'street', 'secondary road', 'main road' etc.), "
+"each drawn in the map view of the GIS with different colours or symbols. "
+"This is illustrated in table_unique_."
+msgstr ""
+"때로 객체의 속성이 숫자가 아니라 **문자열(string)** 인 경우가 있습니다. '문자열' 이란 문자, 숫자, 그리고 기타 기호들의 "
+"집합을 뜻하는 컴퓨터 용어입니다. 문자열 속성은 사물을 이름으로 범주화하는 데 자주 쓰입니다. GIS 응용 프로그램은 유일한 문자열 또는"
+" 숫자 각각에 고유한 색상과 심볼을 적용할 수 있습니다. 도로 객체는 ('street', 'secondary road', 'main "
+"road' 등과 같은) 서로 다른 범주들을 가질 수 있는데, 각 범주는 GIS의 맵뷰에서 서로 다른 색상 및 심볼로 그려집니다. "
+":numref:`table_unique` 가 그 예시입니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:367
+msgid "Colour class and symbol"
+msgstr "색상 범주 및 심볼"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:369
+msgid "Arterial route"
+msgstr "Arterial route"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:371
+msgid "Main road"
+msgstr "Main road"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:373
+msgid "Secondary road"
+msgstr "Secondary road"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:375
+msgid "Street"
+msgstr "Street"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:378
+msgid ""
+"Table Unique: Unique attribute values for a feature type (e.g. roads) can "
+"each have their own symbol."
+msgstr "유일값 테이블: 어떤 (예: 도로) 객체의 유일 속성값들은 각각 고유한 심볼을 가질 수 있습니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:381
+msgid ""
+"Within the GIS Application we can open/choose to use Unique Value symbology "
+"for a layer. The GIS will scan through all the different string values in "
+"the attribute field and build a list of unique strings or numbers. Each "
+"unique value can then be assigned a colour and style. This is shown in "
+":numref:`figure_unique_symbol`."
+msgstr ""
+"GIS 응용 프로그램 안에서 우리는 어떤 레이어에 대해 유일값 심볼을 사용하도록 선택하거나, 유일값 심볼을 사용하는 레이어를 열 수 "
+"있습니다. GIS가 속성 필드에 있는 서로 다른 모든 문자열 값들을 스캔한 다음 유일 문자열 또는 숫자들의 목록을 작성할 것입니다. "
+"그러면 각 유일값에 색상 및 심볼을 할당할 수 있습니다. :numref:`figure_unique_symbol` 이 그 예시입니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:392
+msgid "Defining unique value symbology for roads based on the road type."
+msgstr "도로 유형을 바탕으로 도로에 대한 유일값 심볼을 정의합니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:394
+msgid ""
+"When the GIS draws the layer, it will look at the attributes of each feature"
+" before drawing it to the screen. Based on the value in the chosen field in "
+"the attribute table, the road line will be drawn with suitable colour and "
+"line style (and fill style if its a polygon feature). This is shown in "
+":numref:`figure_unique_symbol_map`."
+msgstr ""
+"GIS가 레이어를 그릴 때, 스크린에 레이어를 그리기 전에 각 객체의 속성을 읽을 것입니다. 속성 테이블에서 선택된 필드의 값을 바탕으로"
+" 한 어울리는 색상과 라인 스타일로 (그리고 폴리곤 객체의 경우 채우기 스타일로) 도로 라인을 그릴 것입니다. "
+":numref:`figure_unique_symbol_map` 가 그 예시입니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:405
+msgid "A roads vector layer symbolised using a unique value per road type."
+msgstr "도로 유형별로 유일값을 이용해서 심볼화된 도로 벡터 레이어"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:408
+msgid "Things to be aware of"
+msgstr "조심해야 할 점들"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:410
+msgid ""
+"Deciding which attributes and symbology to use requires some planning. "
+"Before you start collecting any **GeoSpatial** data, you should ensure you "
+"know what attributes are needed and how it will be symbolised. It is very "
+"difficult to go back and re-collect data if you plan poorly the first time "
+"around. Remember also that the goal of collecting attribute data is to allow"
+" you to analyse and interpret spatial information. How you do this depends "
+"on the questions you are trying to answer. Symbology is a visual language "
+"that allows people to see and understand your attribute data based on the "
+"colours and symbols you use. Because of this you should put a lot of thought"
+" into how you symbolise your maps in order to make them easy to understand."
+msgstr ""
+"어떤 속성과 심볼을 사용해야 할지 결정하는 일에는 계획이 필수입니다. **지리공간(GeoSpatial)** 데이터 수집을 시작하기 전에 "
+"어떤 속성이 필요한지 그리고 어떻게 심볼화할 것인지 먼저 알고 있어야 합니다. 첫 시도에서 제대로 된 계획이 없을 경우 다시 현장에 "
+"돌아가서 데이터를 재수집하기란 아주 힘들기 때문이죠. 또한 속성 데이터 수집의 목표는 여러분이 공간 정보를 분석하고 해석할 수 있게 하기"
+" 위해서라는 점을 기억하세요. 여러분이 답을 구하는 질문에 따라 어떤 데이터를 수집하느냐가 달라집니다. 심볼은 사람들이 여러분이 사용하는"
+" 색상과 심볼을 바탕으로 여러분의 속성 데이터를 눈으로 보고 이해하도록 하기 위한 시각 언어입니다. 때문에 여러분의 맵을 이해하기 쉽게 "
+"만들려면 맵을 어떻게 심볼화할 것인지에 대해 충분히 고민해야 할 것입니다."
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:422
 msgid "What have we learned?"
@@ -420,6 +740,69 @@ msgstr "무엇을 배웠나요?"
 msgid "Let's wrap up what we covered in this worksheet:"
 msgstr "이제 이번 단원에서 배운 내용을 정리해볼까요:"
 
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:426
+msgid "Vector features have **attributes**"
+msgstr "벡터 객체는 **속성(attribute)** 을 가지고 있습니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:427
+msgid "Attributes **describe** the **properties** of the feature"
+msgstr "속성(attribute)은 객체의 **속성(property)을 설명합니다**."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:428
+msgid "The attributes are stored in a **table**"
+msgstr "속성은 **테이블** 에 저장됩니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:429
+msgid "Rows in the table are called **records**"
+msgstr "테이블의 행을 **레코드** 라고 합니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:430
+msgid "There is **one record per feature** in the vector layer"
+msgstr "벡터 레이어는 **한 객체마다 레코드 하나** 라는 규칙을 따릅니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:431
+msgid "Columns in the table are called **fields**"
+msgstr "테이블의 열을 **필드(field)** 라고 합니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:432
+msgid ""
+"Fields represent **properties** of the feature e.g. height, roof colour etc."
+msgstr "필드는 표고, 지붕 색깔 같은 객체의 **속성(property)** 을 나타냅니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:433
+msgid ""
+"Fields can contain **numerical**, **string** (any text) and **date** "
+"information"
+msgstr "필드는 **숫자**, **문자열** (모든 텍스트) 그리고 **날짜** 정보를 담을 수 있습니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:434
+msgid ""
+"The attribute data for a feature can be used to determine how it is "
+"**symbolised**"
+msgstr "객체의 속성(attribute) 데이터를 사용해서 객체를 어떻게 **심볼화** 할 것인지 결정할 수 있습니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:435
+msgid "**Graduated colour** symbology groups the data into discrete classes"
+msgstr "**등급 색상** 심볼은 데이터를 개별 범주로 그룹화합니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:436
+msgid ""
+"**Continuous colour** symbology assigns colours from a colour range to the "
+"features based on their attributes"
+msgstr "**연속 색상** 심볼은 객체에 색상 범위 안의 색상을 객체 속성을 바탕으로 할당합니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:438
+msgid ""
+"**Unique value** symbology associates each different value in the chosen "
+"attribute column with a different symbol (colour and style)"
+msgstr "**유일값** 심볼은 선택한 속성 열에 있는 서로 다른 값 각각에 서로 다른 (색상 및 스타일의) 심볼을 설정합니다."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:440
+msgid ""
+"If the attribute of a vector layer is not used to determine its symbology, "
+"it is drawn using a **single symbol** only"
+msgstr "벡터 레이어의 심볼을 결정하는 데 레이어 속성을 사용하지 않는 경우, 오직 **단일 심볼** 만으로 레이어를 그립니다."
+
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:444
 msgid "Now you try!"
 msgstr "도전해봅시다!"
@@ -428,10 +811,65 @@ msgstr "도전해봅시다!"
 msgid "Here are some ideas for you to try with your learners:"
 msgstr "강사와 학생들이 함께 시도해볼 만한 몇 가지 아이디어가 있습니다:"
 
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:448
+msgid ""
+"Using the table that you created in the last topic, add a new column for the"
+" symbology type you would use for each feature type and have the learners "
+"identify which symbology type they would use (see table_example_symbols_ for"
+" an example)."
+msgstr ""
+"이전 강의에서 만들었던 표를 활용해서 각 객체 유형에 사용하고자 하는 심볼 유형을 위한 새 열을 추가한 다음 학생들에게 스스로 사용하고 "
+"싶은 심볼 유형을 식별해보도록 하십시오. (예시가 필요하다면 :numref:`table_example_symbols` 를 참조하세요.)"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:452
+msgid ""
+"Try to identify which symbology types you would use for the following types "
+"of vector features:"
+msgstr "다음과 같은 벡터 객체들에 대해 어떤 심볼 유형을 사용하고 싶은지 식별해보십시오:"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:455
+msgid "points showing pH level of soil samples taken around your school"
+msgstr "여러분의 학교 주변에서 채취한 토양 샘플들의 산성도(pH)를 보여주는 포인트들"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:456
+msgid "lines showing a road network in a city"
+msgstr "도시의 도로망을 보여주는 라인들"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:457
+msgid ""
+"polygons for houses with an attribute that shows whether it is made of "
+"brick, wood or 'other' material."
+msgstr "가옥이 벽돌, 목재, 또는 '기타' 재료들 가운데 어떤 것으로 지어졌는지를 보여주는 속성을 가진 가옥 폴리곤들"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:463
+msgid "Real world feature"
+msgstr "실재 객체"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:463
+msgid "Geometry Type"
+msgstr "도형 유형"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:463
+msgid "Symbology Type"
+msgstr "심볼 유형"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:465
+msgid "The school flagpole"
+msgstr "국기 게양대"
+
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:465
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:471
 msgid "Point"
 msgstr "포인트"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:465
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:467
+msgid "Single Symbol"
+msgstr "단일 심볼"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:467
+msgid "The soccer field"
+msgstr "축구장"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:467
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:473
@@ -440,18 +878,109 @@ msgid "Polygon"
 msgstr "폴리곤"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:469
+msgid "The footpaths in and around the school"
+msgstr "학교 내부 및 주변의 보행로"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:469
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:475
 msgid "Polyline"
 msgstr "폴리라인"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:469
+msgid ""
+"Have your learners count the number of learners using each footpath in the "
+"hour before school and then use **graduated symbols** to show the popularity"
+" of each footpath"
+msgstr ""
+"학생들에게 등교하기 전에 각 보행로를 사용하는 학생의 수를 세도록 한 다음 **등급 심볼** 을 이용해서 각 보행로의 사용도를 보여주게 "
+"하십시오."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:471
+msgid "Places where taps are located"
+msgstr "수도꼭지가 있는 위치들"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:471
+msgid "Single symbol"
+msgstr "단일 심볼"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:473
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:477
+msgid "Classrooms"
+msgstr "교실들"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:473
+msgid "**Unique value** based on the grade of the learners in the classroom"
+msgstr "교실에 있는 학생들의 학년을 바탕으로 한 **유일값**"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:475
+msgid "Fence"
+msgstr "울타리"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:475
+msgid ""
+"Have your learners rate the condition of the fence around your school by "
+"separating it into sections and grading each section on a scale of 1\\-9 "
+"based on its condition. Use **graduated symbols** to classify the condition "
+"attribute."
+msgstr ""
+"학생들에게 학교를 둘러싼 울타리를 각 구역으로 나누고 각 구역의 울타리를 울타리 상태에 따라 1에서 9까지의 등급으로 평가하게 한 다음,"
+" 상태 속성을 범주화할 수 있는 **등급 심볼** 을 사용하도록 하십시오."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:477
+msgid ""
+"Count the number of learners in each classroom and use a **continuous colour"
+" symbol** to define a range of colours from red to blue."
+msgstr ""
+"각 교실에 있는 학생들의 수를 센 다음 빨강에서 파랑으로 가는 색상 범위를 정의할 수 있는 **연속 색상 심볼** 을 사용하도록 "
+"하십시오."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:480
+msgid ""
+"Table Example Symbols: An example of a table that defines the feature types "
+"and the kind of symbology you would use for each."
+msgstr "테이블 예시 심볼: 각 객체에 대해 사용하고자 하는 객체 및 심볼 유형을 정의하는 테이블의 예시입니다."
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:484
 msgid "Something to think about"
 msgstr "생각해볼 점"
 
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:486
+msgid ""
+"If you don't have a computer available, you can use transparency sheets and "
+"a 1:50 000 map sheet to experiment with different symbology types. For "
+"example place a transparency sheet over the map and using different coloured"
+" koki pens, draw in red all contour lines below 900 m (or similar) and in "
+"green all lines above or equal to 900 m. Can you think of how to reproduce "
+"other symbology types using the same technique?"
+msgstr ""
+"사용할 수 있는 컴퓨터가 없는데 서로 다른 심볼 유형들을 다루어보고 싶다면, 투명지와 1:50,000 지형도를 이용하면 됩니다. 예를 "
+"들어 지도 위에 투명지를 올려놓고 여러 색상의 마커를 사용하는 거죠. 900m(또는 다른 높이) 미만의 등고선을 모두 빨간색으로 칠하고 "
+"900m(또는 다른 높이) 이상의 모든 등고선을 녹색으로 칠해보는 겁니다. 다른 심볼 유형들을 같은 방법을 사용해서 어떻게 재현할 수 "
+"있는지 생각해낼 수 있나요?"
+
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:494
 msgid "Further reading"
 msgstr "더 읽어볼 거리"
 
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:496
+msgid "**Website:** https://en.wikipedia.org/wiki/Cartography"
+msgstr "**웹사이트:** https://en.wikipedia.org/wiki/Cartography"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:498
+msgid ""
+"The QGIS User Guide also has more detailed information on working with "
+"attribute data and symbology in QGIS."
+msgstr "QGIS 사용자 지침서도 QGIS에서 어떻게 속성 데이터와 심볼을 작업하는지에 대한 보다 상세한 정보를 수록하고 있습니다."
+
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:502
 msgid "What's next?"
 msgstr "다음 단원은?"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:504
+msgid ""
+"In the section that follows we will take a closer look at **data capture.** "
+"We will put the things we have learned about vector data and attributes into"
+" practice by creating new data."
+msgstr ""
+"다음 단원에서는 *데이터 획득(data capture)** 에 대해 자세히 살펴볼 것입니다. 벡터 데이터와 속성에 대해 배운 내용들을 "
+"실제로 활용해서 새 데이터를 생성해볼 것입니다."
