@@ -63,6 +63,7 @@ extra parameters:
    :widths: 20, 10, 65
 
    ":ref:`MAP <services_basics_map>`", "Yes", "QGIS project file"
+   ":ref:`FILE_NAME <services_basics_file_name>`", "No", "File name of the downloaded file"
 
 URL example:
 
@@ -130,15 +131,15 @@ as well as the following extra parameters:
    :widths: 20, 10, 65
 
    ":ref:`MAP <services_basics_map>`", "Yes", "QGIS project file"
+   ":ref:`FILE_NAME <services_basics_file_name>`", "No", "File name of the downloaded file
+
+   Only for ``FORMAT=application/dxf``"
    ":ref:`BGCOLOR <wms_bgcolor>`", "No", "Background color"
    ":ref:`DPI <wms_dpi>`", "No", "Output resolution"
    ":ref:`IMAGE_QUALITY <wms_imagequality>`", "No", "JPEG compression"
    ":ref:`OPACITIES <wms_opacities>`", "No", "Opacity for layer or group"
    ":ref:`FILTER <wms_filter>`", "No", "Subset of features"
    ":ref:`SELECTION <wms_selection>`", "No", "Highlight features"
-   "FILE_NAME", "No", "File name of the downloaded file
-
-   Only for ``FORMAT=application/dxf``"
    ":ref:`FORMAT_OPTIONS <wms_formatoptions>`", "No", "Options of the specified file format
 
    Only for ``FORMAT=application/dxf``"
@@ -600,6 +601,7 @@ extra parameters:
    :widths: auto
 
    ":ref:`MAP <services_basics_map>`", "Yes", "QGIS project file"
+   ":ref:`FILE_NAME <services_basics_file_name>`", "No", "File name of the downloaded file"
    ":ref:`FILTER <wms_filter>`", "No", "Subset of features"
    ":ref:`FI_POINT_TOLERANCE <wms_fipointtolerance>`", "No", "Tolerance in pixels for point layers"
    ":ref:`FI_LINE_TOLERANCE <wms_filinetolerance>`", "No", "Tolerance in pixels for line layers"
@@ -794,6 +796,7 @@ and item labels:
    :widths: auto
 
    ":ref:`MAP <services_basics_map>`", "Yes", "QGIS project file"
+   ":ref:`FILE_NAME <services_basics_file_name>`", "No", "File name of the downloaded file"
    ":ref:`SRCWIDTH <wms_getlegendgraphics-srcwidth>`", "No", "Map width"
    ":ref:`SRCHEIGHT <wms_getlegendgraphics-srcheight>`", "No", "Map height"
    ":ref:`SHOWFEATURECOUNT <wms_getlegendgraphics-showfeaturecount>`", "No", "Add feature count of features"
@@ -1508,6 +1511,7 @@ extra parameters:
    :widths: 20, 10, 65
 
    ":ref:`MAP <services_basics_map>`", "Yes", "QGIS project file"
+   ":ref:`FILE_NAME <services_basics_file_name>`", "No", "File name of the downloaded file"
 
 URL example:
 
@@ -1545,6 +1549,7 @@ extra parameters:
    :widths: 20, 10, 65
 
    ":ref:`MAP <services_basics_map>`", "Yes", "QGIS project file"
+   ":ref:`FILE_NAME <services_basics_file_name>`", "No", "File name of the downloaded file"
 
 URL example:
 
@@ -1608,8 +1613,8 @@ parameters:
 
    ":ref:`MAP <services_basics_map>`", "Yes", "QGIS project file"
    ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMS**)"
-   ":ref:`VERSION <wms_version>`", "No", "Version of the service"
    ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetPrint**)"
+   ":ref:`VERSION <wms_version>`", "No", "Version of the service"
    ":ref:`LAYERS <wms_layers>`", "No", "Layers to display"
    ":ref:`TEMPLATE <wms_template>`", "Yes", "Layout template to use"
    ":ref:`SRS / CRS <wms_srs>`", "Yes", "Coordinate reference system"
@@ -1773,8 +1778,9 @@ this parameter.
 GetProjectSettings
 ------------------
 
-This request type works similar to ``GetCapabilities``, but it is more specific
-to QGIS Server and allows a client to read additional information:
+This request type works similar to :ref:`GetCapabilities
+<wms_getcapabilities>`, but it is more specific to QGIS Server and allows a
+client to read additional information:
 
 * initial visibility of layers
 * information about vector attributes and their edit types
@@ -1791,6 +1797,7 @@ The ``GetProjectSettings`` request supports the following parameters:
    ":ref:`MAP <services_basics_map>`", "Yes", "QGIS project file"
    ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMS**)"
    ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetPrint**)"
+   ":ref:`FILE_NAME <services_basics_file_name>`", "No", "File name of the downloaded file"
 
 URL example:
 
@@ -1806,7 +1813,7 @@ URL example:
 GetSchemaExtension
 ------------------
 
-The **GetSchemaExtension** request allows to retrieve optional extended
+The ``GetSchemaExtension`` request allows to retrieve optional extended
 capabilities and operations of the WMS service such as implemented by QGIS
 Server.
 
@@ -1817,6 +1824,7 @@ Server.
    ":ref:`MAP <services_basics_map>`", "Yes", "QGIS project file"
    ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMS**)"
    ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetSchemaExtension**)"
+   ":ref:`FILE_NAME <services_basics_file_name>`", "No", "File name of the downloaded file"
 
 
 URL example:
@@ -1857,15 +1865,14 @@ External layers can be added to the ``LAYERS`` parameter as
 url, format, dpi mode, crs, layers, styles) can later be given as service
 parameters ``<layername>:<parameter>``.
 
-In a ``GetMap`` request, this might look like this:
+In a :ref:`GetMap <wms_getmap>` request, this might look like this:
 
 .. code-block:: bash
 
    http://localhost/qgisserver?
-   SERVICE=WMS&REQUEST=GetMap
-   ...
+   SERVICE=WMS
+   &REQUEST=GetMap
    &LAYERS=EXTERNAL_WMS:basemap,layer1,layer2
-   &STYLES=,,
    &basemap:url=http://externalserver.com/wms.fcgi
    &basemap:format=image/jpeg
    &basemap:dpiMode=7
@@ -1873,14 +1880,15 @@ In a ``GetMap`` request, this might look like this:
    &basemap:layers=orthofoto
    &basemap:styles=default
 
-Similarly, external layers can be used in GetPrint requests:
+Similarly, external layers can be used in :ref:`GetPrint <wms_getprint>`
+requests:
 
 .. code-block:: bash
 
    http://localhost/qgisserver?
    SERVICE=WMS
-   ...
-   &REQUEST=GetPrint&TEMPLATE=A4
+   &REQUEST=GetPrint
+   &TEMPLATE=A4
    &map0:layers=EXTERNAL_WMS:basemap,layer1,layer2
    &map0:EXTENT=<minx,miny,maxx,maxy>
    &basemap:url=http://externalserver.com/wms.fcgi
@@ -1896,15 +1904,15 @@ Similarly, external layers can be used in GetPrint requests:
 Redlining
 ---------
 
-This feature is available and can be used with ``GetMap`` and ``GetPrint``
-requests.
+This feature is available and can be used with :ref:`GetMap <wms_getmap>` and
+:ref:`GetPrint <wms_getprint>` requests.
 
 The redlining feature can be used to pass geometries and labels in the request
 which are overlapped by the server over the standard returned image (map). This
 permits the user to put emphasis or maybe add some comments (labels) to some
 areas, locations etc. that are not in the standard map.
 
-The ``GetMap`` request is in the format:
+The :ref:`GetMap <wms_getmap>` request is in the format:
 
 .. code-block:: bash
 
@@ -1921,8 +1929,8 @@ The ``GetMap`` request is in the format:
  &HIGHLIGHT_LABELBUFFERSIZE=1.5
 
 
-The ``GetPrint`` equivalent is in the format (note that ``mapX:`` parameter is
-added to tell which map has redlining):
+The :ref:`GetPrint <wms_getprint>` equivalent is in the format (note that
+``mapX:`` parameter is added to tell which map has redlining):
 
 .. code-block:: bash
 

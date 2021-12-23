@@ -24,7 +24,7 @@ Vendor concepts:
    :widths: auto
 
    ":ref:`MAP <services_basics_map>`", "QGIS project file"
-   ":ref:`FILE_NAME <services_basics_file_name>`", "Output file"
+   ":ref:`FILE_NAME <services_basics_file_name>`", "File name of the downloaded file"
    ":ref:`Short name <services_basics_short_name>`", "Short name definition"
 
 
