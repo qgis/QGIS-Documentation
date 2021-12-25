@@ -50,9 +50,9 @@ WMS 1.1.1 and 1.3.0 specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`SERVICE <wms_service>`", "Yes", "Name of the service (**WMS**)"
+   ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMS**)"
+   ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetCapabilities**)"
    ":ref:`VERSION <wms_version>`", "No", "Version of the service"
-   ":ref:`REQUEST <wms_getcapabilities_request>`", "Yes", "Name of the request (**GetCapabilities**)"
 
 URL example:
 
@@ -62,15 +62,6 @@ URL example:
   SERVICE=WMS
   &VERSION=1.3.0
   &REQUEST=GetCapabilities
-
-
-.. _wms_getcapabilities_request:
-
-REQUEST
-^^^^^^^
-
-This parameter is ``GetCapabilities`` in case of the **GetCapabilities**
-request.
 
 
 .. _wms_getmap:
@@ -85,9 +76,9 @@ WMS 1.1.1 and 1.3.0 specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`SERVICE <wms_service>`", "Yes", "Name of the service (**WMS**)"
+   ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMS**)"
+   ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetMap**)"
    ":ref:`VERSION <wms_version>`", "Yes", "Version of the service"
-   ":ref:`REQUEST <wms_getmap_request>`", "Yes", "Name of the request (**GetMap**)"
    ":ref:`LAYERS <wms_layers>` ", "No", "Layers to display"
    ":ref:`STYLES <wms_styles>`", "No", "Layers' style"
    ":ref:`SRS / CRS <wms_srs>`", "Yes", "Coordinate reference system"
@@ -145,22 +136,6 @@ URL example:
   &TILED=TRUE
 
 
-.. _wms_service:
-
-SERVICE
-^^^^^^^
-
-This parameter has to be ``WMS``.
-
-For example:
-
-.. code-block:: bash
-
-  http://localhost/qgisserver?
-  SERVICE=WMS
-  &...
-
-
 .. _wms_version:
 
 VERSION
@@ -177,14 +152,6 @@ as explained later for the next parameters:
 
 - ``CRS`` / ``SRS``
 - ``BBOX``
-
-
-.. _wms_getmap_request:
-
-REQUEST
-^^^^^^^
-
-This parameter is ``GetMap`` in case of the **GetMap** request.
 
 
 .. _wms_layers:
@@ -621,9 +588,9 @@ the OGC WMS 1.1.1 and 1.3.0 specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`SERVICE <wms_service>`", "Yes", "Name of the service (**WMS**)"
+   ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMS**)"
+   ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetFeatureInfo**)"
    ":ref:`VERSION <wms_version>`", "No", "Version of the service"
-   ":ref:`REQUEST <wms_getfeatureinfo_request>`", "Yes", "Name of the request (**GetFeatureInfo**)"
    ":ref:`QUERY_LAYERS <wms_querylayers>`", "Yes", "Layers to query"
    ":ref:`LAYERS <wms_layers>`", "Yes", "Layers to display (identical to `QUERY_LAYERS`)"
    ":ref:`STYLES <wms_styles>`", "No", "Layers' style"
@@ -681,13 +648,6 @@ URL example:
   &I=250
   &J=250
 
-
-.. _wms_getfeatureinfo_request:
-
-REQUEST
-^^^^^^^
-
-This parameter is ``GetFeatureInfo`` in case of the **GetFeatureInfo** request.
 
 .. _wms_infoformat:
 
@@ -832,9 +792,9 @@ WMS 1.1.1 and 1.3.0 specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`SERVICE <wms_service>`", "Yes", "Name of the service (**WMS**)"
+   ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMS**)"
+   ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetLegendGraphics**)"
    ":ref:`VERSION <wms_version>`", "No", "Version of the service"
-   ":ref:`REQUEST <wms_getlegendgraphics_request>`", "Yes", "Name of the request (**GetLegendGraphics**)"
    ":ref:`LAYERS <wms_layers>` ", "Yes", "Layers to display"
    ":ref:`STYLES <wms_styles>`", "No", "Layers' style"
    ":ref:`SRS / CRS <wms_srs>`", "No", "Coordinate reference system"
@@ -876,14 +836,6 @@ and item labels:
    ":ref:`ITEMFONTSIZE <wms_getlegendgraphics_itemfontsize>`", "No", "Item label font size (pt)"
    ":ref:`ITEMFONTITALIC <wms_getlegendgraphics_itemfontitalic>`", "No", "Item label italic rendering"
    ":ref:`ITEMFONTCOLOR <wms_getlegendgraphics_itemfontcolor>`", "No", "Item label color"
-
-
-.. _wms_getlegendgraphics_request:
-
-REQUEST
-^^^^^^^
-
-This parameter is ``GetLegendGraphics`` in case of the **GetLegendGraphics** request.
 
 
 .. _wms_getlegendgraphics_bbox:
@@ -1562,8 +1514,8 @@ to the OGC WMS 1.1.1 specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`SERVICE <wms_service>`", "Yes", "Name of the service (**WMS**)"
-   ":ref:`REQUEST <wms_getstyle_request>`", "Yes", "Name of the request (**GetStyle** or **GetStyles**)"
+   ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMS**)"
+   ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetStyle** or **GetStyles**)"
    ":ref:`LAYERS <wms_layers>`", "Yes", "Layers to query"
 
 
@@ -1575,13 +1527,6 @@ URL example:
   SERVICE=WMS
   &REQUEST=GetStyles
   &LAYERS=mylayer1,mylayer2
-
-.. _wms_getstyle_request:
-
-REQUEST
-^^^^^^^
-
-This parameter is ``GetStyle`` or ``GetStyles``.
 
 
 .. _wms_describelayer:
@@ -1596,8 +1541,8 @@ Standard parameters for the **DescribeLayer** request according to the OGC WMS
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`SERVICE <wms_service>`", "Yes", "Name of the service (**WMS**)"
-   ":ref:`REQUEST <wms_describelayer_request>`", "Yes", "Name of the request (**DescribeLayer**)"
+   ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMS**)"
+   ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**DescribeLayer**)"
    ":ref:`LAYERS <wms_layers>`", "Yes", "Layers to describe"
    ":ref:`SLD_VERSION <wms_describelayer_sldversion>`", "Yes", "SLD version"
 
@@ -1633,13 +1578,6 @@ The XML document looks like:
        </LayerDescription>
    </DescribeLayerResponse>
 
-.. _wms_describelayer_request:
-
-REQUEST
-^^^^^^^
-
-This parameter is ``DescribeLayer`` in case of the **DescribeLayer** request.
-
 
 .. _wms_describelayer_sldversion:
 
@@ -1669,9 +1607,9 @@ parameters:
    :widths: auto
 
    ":ref:`MAP <wms_map>`", "Yes", "Specify the QGIS project file"
-   ":ref:`SERVICE <wms_service>`", "Yes", "Name of the service (**WMS**)"
+   ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMS**)"
+   ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetPrint**)"
    ":ref:`VERSION <wms_version>`", "No", "Version of the service"
-   ":ref:`REQUEST <wms_getprint_request>`", "Yes", "Name of the request (**GetPrint**)"
    ":ref:`LAYERS <wms_layers>`", "No", "Layers to display"
    ":ref:`TEMPLATE <wms_template>`", "Yes", "Layout template to use"
    ":ref:`SRS / CRS <wms_srs>`", "Yes", "Coordinate reference system"
@@ -1726,13 +1664,6 @@ For example:
     ...
     </WMS_Capabilities>
 
-
-.. _wms_getprint_request:
-
-REQUEST
-^^^^^^^
-
-This parameter has to be ``GetPrint`` for the **GetPrint** request.
 
 .. _wms_template:
 
@@ -1866,8 +1797,8 @@ Server.
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`SERVICE <wms_service>`", "Yes", "Name of the service (**WMS**)"
-   ":ref:`REQUEST <wms_getschemaextension_request>`", "Yes", "Name of the request (**GetSchemaExtension**)"
+   ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMS**)"
+   ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetSchemaExtension**)"
 
 
 URL example:
@@ -1888,13 +1819,6 @@ The XML document looks like:
       <element name="GetPrint" type="wms:OperationType" substitutionGroup="wms:_ExtendedOperation"/>
       <element name="GetStyles" type="wms:OperationType" substitutionGroup="wms:_ExtendedOperation"/>
   </schema>
-
-.. _wms_getschemaextension_request:
-
-REQUEST
-^^^^^^^
-
-This parameter is ``GetSchemaExtension`` in case of the **GetSchemaExtension** request.
 
 
 .. _wms_external:
@@ -1919,8 +1843,8 @@ In a GetMap request, this might look like this:
 .. code-block:: bash
 
    http://localhost/qgisserver?
-   SERVICE=WMS&REQUEST=GetMap
-   ...
+   SERVICE=WMS
+   &REQUEST=GetMap
    &LAYERS=EXTERNAL_WMS:basemap,layer1,layer2
    &STYLES=,,
    &basemap:url=http://externalserver.com/wms.fcgi
@@ -1936,8 +1860,8 @@ Similarly, external layers can be used in GetPrint requests:
 
    http://localhost/qgisserver?
    SERVICE=WMS
-   ...
-   &REQUEST=GetPrint&TEMPLATE=A4
+   &REQUEST=GetPrint
+   &TEMPLATE=A4
    &map0:layers=EXTERNAL_WMS:basemap,layer1,layer2
    &map0:EXTENT=<minx,miny,maxx,maxy>
    &basemap:url=http://externalserver.com/wms.fcgi
