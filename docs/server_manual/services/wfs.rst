@@ -588,7 +588,7 @@ OGC WFS 1.0.0 and 1.1.0 specifications:
    ":ref:`VERSION <wfs_version>`", "No", "Version of the service"
    ":ref:`REQUEST <wfs_describefeaturetype_request>`", "Yes", "Name of the request (**DescribeFeatureType**)"
    ":ref:`OUTPUTFORMAT <wfs_getfeature_outputformat>`", "No", "Format of the response"
-   ":ref:`TYPENAME <wfs_describefeaturetype-typename>`", "No", "Name of layer"
+   ":ref:`TYPENAME <wfs_describefeaturetype_typename>`", "No", "Name of layer"
 
 
 In addition to the standard ones, QGIS Server supports the following
@@ -611,7 +611,7 @@ This parameter is ``DescribeFeatureType`` in case of the
 **DescribeFeatureType** request.
 
 
-.. _`wfs_describefeaturetype-typename`:
+.. _`wfs_describefeaturetype_typename`:
 
 TYPENAME
 ^^^^^^^^
@@ -657,10 +657,10 @@ Transaction
 
 This request allows to update, delete or add one or several features thanks to
 a XML document. The
-:ref:`delete <wfs_transaction-delete>` action may be achieved with a POST
+:ref:`delete <wfs_transaction_delete>` action may be achieved with a POST
 request as well as with the :ref:`OPERATION <wfs_transaction_operation>`
 parameter while the :ref:`add <wfs_transaction_add>` and the
-:ref:`update <wfs_transaction-update>` operations may be achieved through
+:ref:`update <wfs_transaction_update>` operations may be achieved through
 POST request only.
 
 Standard parameters for the **Transaction** request according to the OGC WFS
@@ -754,7 +754,7 @@ with the *add.xml* document:
 
 
 
-.. _`wfs_transaction-update`:
+.. _`wfs_transaction_update`:
 
 Update features
 ^^^^^^^^^^^^^^^
@@ -784,7 +784,7 @@ with the *update.xml* document:
   </wfs:Transaction>
 
 
-.. _`wfs_transaction-delete`:
+.. _`wfs_transaction_delete`:
 
 Delete features
 ^^^^^^^^^^^^^^^

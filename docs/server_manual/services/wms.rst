@@ -38,7 +38,7 @@ Vendor requests provided by QGIS Server:
    ":ref:`GetSchemaExtension <wms_getschemaextension>`", "Returns XML metadata about optional extended capabilities"
 
 
-.. _`wms_getcapabilities`:
+.. _wms_getcapabilities:
 
 GetCapabilities
 ---------------
@@ -64,7 +64,7 @@ URL example:
   &REQUEST=GetCapabilities
 
 
-.. _`wms_getcapabilities_request`:
+.. _wms_getcapabilities_request:
 
 REQUEST
 ^^^^^^^
@@ -73,7 +73,7 @@ This parameter is ``GetCapabilities`` in case of the **GetCapabilities**
 request.
 
 
-.. _`wms_getmap`:
+.. _wms_getmap:
 
 GetMap
 ------
@@ -101,7 +101,7 @@ WMS 1.1.1 and 1.3.0 specifications:
 
 
 In addition to the standard ones, QGIS Server supports :ref:`redlining
-<redlining>`, :ref:`external WMS layers <external_wms>`
+<wms_redlining>`, :ref:`external WMS layers <wms_external>`
 as well as the following extra parameters:
 
 
@@ -145,7 +145,7 @@ URL example:
   &TILED=TRUE
 
 
-.. _`wms_service`:
+.. _wms_service:
 
 SERVICE
 ^^^^^^^
@@ -161,7 +161,7 @@ For example:
   &...
 
 
-.. _`wms_version`:
+.. _wms_version:
 
 VERSION
 ^^^^^^^
@@ -179,7 +179,7 @@ as explained later for the next parameters:
 - ``BBOX``
 
 
-.. _`wms_getmap_request`:
+.. _wms_getmap_request:
 
 REQUEST
 ^^^^^^^
@@ -187,7 +187,7 @@ REQUEST
 This parameter is ``GetMap`` in case of the **GetMap** request.
 
 
-.. _`wms_layers`:
+.. _wms_layers:
 
 LAYERS
 ^^^^^^
@@ -228,7 +228,7 @@ To activate this option, the checkbox
   &...
 
 
-.. _`wms_styles`:
+.. _wms_styles:
 
 STYLES
 ^^^^^^
@@ -239,7 +239,7 @@ Styles have to be separated by a comma. The name of the default style
 is ``default``.
 
 
-.. _`wms_srs`:
+.. _wms_srs:
 
 SRS / CRS
 ^^^^^^^^^
@@ -294,7 +294,7 @@ because of the ``VERSION`` parameter:
   &...
 
 
-.. _`wms_bbox`:
+.. _wms_bbox:
 
 BBOX
 ^^^^
@@ -336,7 +336,7 @@ north/east so ``a`` is the latitude and ``b`` the longitude:
   &...
 
 
-.. _`wms_width`:
+.. _wms_width:
 
 WIDTH
 ^^^^^
@@ -345,7 +345,7 @@ This parameter allows to specify the width in pixels of the output
 image.
 
 
-.. _`wms_height`:
+.. _wms_height:
 
 HEIGHT
 ^^^^^^
@@ -354,7 +354,7 @@ This parameter allows to specify the height in pixels of the output
 image.
 
 
-.. _`wms_getmap_format`:
+.. _wms_getmap_format:
 
 FORMAT
 ^^^^^^
@@ -388,7 +388,7 @@ Available values are:
    &FORMAT_OPTIONS=MODE:SYMBOLLAYERSYMBOLOGY;SCALE:250
    &FILE_NAME=plan.dxf
 
-.. _`wms_transparent`:
+.. _wms_transparent:
 
 TRANSPARENT
 ^^^^^^^^^^^
@@ -404,7 +404,7 @@ However, this parameter is ignored if the format of the image indicated with
 ``FORMAT`` is different from PNG.
 
 
-.. _`wms_map`:
+.. _wms_map:
 
 MAP
 ^^^
@@ -420,7 +420,7 @@ In this specific case, ``MAP`` is no longer a required parameter.
 For further information you may refer to :ref:`server_env_variables`.
 
 
-.. _`wms_bgcolor`:
+.. _wms_bgcolor:
 
 BGCOLOR
 ^^^^^^^
@@ -453,7 +453,7 @@ URL example with the hexadecimal notation:
   &...
 
 
-.. _`wms_dpi`:
+.. _wms_dpi:
 
 DPI
 ^^^
@@ -461,7 +461,7 @@ DPI
 This parameter can be used to specify the requested output resolution.
 
 
-.. _`wms_imagequality`:
+.. _wms_imagequality:
 
 IMAGE_QUALITY
 ^^^^^^^^^^^^^
@@ -476,7 +476,7 @@ If you want to override it in a ``GetMap`` request you can do it using
 the ``IMAGE_QUALITY`` parameter.
 
 
-.. _`wms_opacities`:
+.. _wms_opacities:
 
 OPACITIES
 ^^^^^^^^^
@@ -486,7 +486,7 @@ Opacity can be set on layer or group level. Allowed values range from
 0 (fully transparent) to 255 (fully opaque).
 
 
-.. _`wms_filter`:
+.. _wms_filter:
 
 FILTER
 ^^^^^^
@@ -531,7 +531,7 @@ the filter on ``col1`` is only applied to ``mylayer1``.
   the XML output.
 
 
-.. _`wms_selection`:
+.. _wms_selection:
 
 SELECTION
 ^^^^^^^^^
@@ -564,7 +564,7 @@ and **Romania** they're highlighted in yellow.
 
   Server response to a GetMap request with SELECTION parameter
 
-.. _`wms_formatoptions`:
+.. _wms_formatoptions:
 
 FORMAT-OPTIONS
 ^^^^^^^^^^^^^^
@@ -587,7 +587,7 @@ A list of key:value pairs separated by semicolon:
 * NO_MTEXT: Use TEXT instead of MTEXT for labels.
 * FORCE_2D: Force 2D output. This is required for polyline width.
 
-.. _`wms_tiled`:
+.. _wms_tiled:
 
 TILED
 ^^^^^
@@ -682,14 +682,14 @@ URL example:
   &J=250
 
 
-.. _`wms_getfeatureinfo_request`:
+.. _wms_getfeatureinfo_request:
 
 REQUEST
 ^^^^^^^
 
 This parameter is ``GetFeatureInfo`` in case of the **GetFeatureInfo** request.
 
-.. _`wms_infoformat`:
+.. _wms_infoformat:
 
 INFO_FORMAT
 ^^^^^^^^^^^
@@ -703,7 +703,7 @@ Available values are:
 - ``application/vnd.ogc.gml``
 - ``application/json``
 
-.. _`wms_querylayers`:
+.. _wms_querylayers:
 
 QUERY_LAYERS
 ^^^^^^^^^^^^
@@ -719,7 +719,7 @@ In addition, QGIS Server introduces options to select layers by:
 See the ``LAYERS`` parameter defined in
 :ref:`GetMap <wms_layers>` for more information.
 
-.. _`wms_featurecount`:
+.. _wms_featurecount:
 
 FEATURE_COUNT
 ^^^^^^^^^^^^^
@@ -733,7 +733,7 @@ Likewise a maximun of 3 features from layer2 will be returned.
 
 By default, only 1 feature per layer is returned.
 
-.. _`wms_i`:
+.. _wms_i:
 
 I
 ^
@@ -741,14 +741,14 @@ I
 This parameter, defined in WMS 1.3.0, allows you to specify the pixel
 column of the query point.
 
-.. _`wms_x`:
+.. _wms_x:
 
 X
 ^
 
 Same parameter as ``I``, but defined in WMS 1.1.1.
 
-.. _`wms_j`:
+.. _wms_j:
 
 J
 ^
@@ -756,35 +756,35 @@ J
 This parameter, defined in WMS 1.3.0, allows you to specify the pixel
 row of the query point.
 
-.. _`wms_y`:
+.. _wms_y:
 
 Y
 ^
 
 Same parameter as ``J``, but defined in WMS 1.1.1.
 
-.. _`wms_fipointtolerance`:
+.. _wms_fipointtolerance:
 
 FI_POINT_TOLERANCE
 ^^^^^^^^^^^^^^^^^^
 
 This parameter specifies the tolerance in pixels for point layers.
 
-.. _`wms_filinetolerance`:
+.. _wms_filinetolerance:
 
 FI_LINE_TOLERANCE
 ^^^^^^^^^^^^^^^^^
 
 This parameter specifies the tolerance in pixels for line layers.
 
-.. _`wms_fipolygontolerance`:
+.. _wms_fipolygontolerance:
 
 FI_POLYGON_TOLERANCE
 ^^^^^^^^^^^^^^^^^^^^
 
 This parameter specifies the tolerance in pixels for polygon layers.
 
-.. _`wms_filtergeom`:
+.. _wms_filtergeom:
 
 FILTER_GEOM
 ^^^^^^^^^^^
@@ -792,7 +792,7 @@ FILTER_GEOM
 This parameter specifies a WKT geometry with which features have to
 intersect.
 
-.. _`wms_withmaptip`:
+.. _wms_withmaptip:
 
 WITH_MAPTIP
 ^^^^^^^^^^^
@@ -804,7 +804,7 @@ Available values are (not case sensitive):
 - ``TRUE``
 - ``FALSE``
 
-.. _`wms_withgeometry`:
+.. _wms_withgeometry:
 
 WITH_GEOMETRY
 ^^^^^^^^^^^^^
@@ -878,7 +878,7 @@ and item labels:
    ":ref:`ITEMFONTCOLOR <wms_getlegendgraphics_itemfontcolor>`", "No", "Item label color"
 
 
-.. _`wms_getlegendgraphics_request`:
+.. _wms_getlegendgraphics_request:
 
 REQUEST
 ^^^^^^^
@@ -886,7 +886,7 @@ REQUEST
 This parameter is ``GetLegendGraphics`` in case of the **GetLegendGraphics** request.
 
 
-.. _`wms_getlegendgraphics_bbox`:
+.. _wms_getlegendgraphics_bbox:
 
 BBOX
 ^^^^
@@ -913,7 +913,7 @@ URL example:
   *content based legend*.
 
 
-.. _`wms_getlegendgraphics_width`:
+.. _wms_getlegendgraphics_width:
 
 WIDTH
 ^^^^^
@@ -933,7 +933,7 @@ output image.
   &HEIGHT=30
 
 
-.. _`wms_getlegendgraphics-height`:
+.. _wms_getlegendgraphics-height:
 
 HEIGHT
 ^^^^^^
@@ -953,7 +953,7 @@ output image.
   &HEIGHT=30
 
 
-.. _`wms_getlegendgraphics_format`:
+.. _wms_getlegendgraphics_format:
 
 FORMAT
 ^^^^^^
@@ -995,7 +995,7 @@ And the corresponding JSON output:
   }
 
 
-.. _`wms_getlegendgraphics_srcwidth`:
+.. _wms_getlegendgraphics_srcwidth:
 
 SRCWIDTH
 ^^^^^^^^
@@ -1006,7 +1006,7 @@ the ``SRCWIDTH`` value is forwarded to the underlying ``GetMap`` request as the
 used for the image legend size.
 
 
-.. _`wms_getlegendgraphics_srcheight`:
+.. _wms_getlegendgraphics_srcheight:
 
 SRCHEIGHT
 ^^^^^^^^^
@@ -1017,7 +1017,7 @@ the ``HEIGHT`` parameter while the ``HEIGHT`` parameter of ``GetLegendGraphics``
 is used for the image legend size.
 
 
-.. _`wms_getlegendgraphics_showfeaturecount`:
+.. _wms_getlegendgraphics_showfeaturecount:
 
 SHOWFEATURECOUNT
 ^^^^^^^^^^^^^^^^
@@ -1034,7 +1034,7 @@ For example:
     :align: center
 
 
-.. _`wms_getlegendgraphics_rule`:
+.. _wms_getlegendgraphics_rule:
 
 RULE
 ^^^^
@@ -1054,7 +1054,7 @@ URL example:
   &RULE=myrulename
 
 
-.. _`wms_getlegendgraphics_rulelabel`:
+.. _wms_getlegendgraphics_rulelabel:
 
 RULELABEL
 ^^^^^^^^^
@@ -1087,7 +1087,7 @@ URL example:
 
 
 
-.. _`wms_getlegendgraphics_boxspace`:
+.. _wms_getlegendgraphics_boxspace:
 
 BOXSPACE
 ^^^^^^^^
@@ -1115,7 +1115,7 @@ URL example:
 
 
 
-.. _`wms_getlegendgraphics_layerspace`:
+.. _wms_getlegendgraphics_layerspace:
 
 LAYERSPACE
 ^^^^^^^^^^
@@ -1142,7 +1142,7 @@ URL example:
    To the left ``LAYERSPACE=0`` and to the right ``LAYERSPACE=10``
 
 
-.. _`wms_getlegendgraphics_layertitlespace`:
+.. _wms_getlegendgraphics_layertitlespace:
 
 LAYERTITLESPACE
 ^^^^^^^^^^^^^^^
@@ -1169,7 +1169,7 @@ URL example:
    To the left ``LAYERTITLESPACE=0`` and to the right ``LAYERTITLESPACE=10``
 
 
-.. _`wms_getlegendgraphics_symbolspace`:
+.. _wms_getlegendgraphics_symbolspace:
 
 SYMBOLSPACE
 ^^^^^^^^^^^
@@ -1196,7 +1196,7 @@ URL example:
    To the left ``SYMBOLSPACE=0`` and to the right ``SYMBOLSPACE=5``
 
 
-.. _`wms_getlegendgraphics-iconlabelspace`:
+.. _wms_getlegendgraphics-iconlabelspace:
 
 ICONLABELSPACE
 ^^^^^^^^^^^^^^
@@ -1223,7 +1223,7 @@ URL example:
    To the left ``ICONLABELSPACE=0`` and to the right ``ICONLABELSPACE=10``
 
 
-.. _`wms_getlegendgraphics_symbolwidth`:
+.. _wms_getlegendgraphics_symbolwidth:
 
 SYMBOLWIDTH
 ^^^^^^^^^^^
@@ -1250,7 +1250,7 @@ URL example:
    To the left ``SYMBOLWIDTH=2`` and to the right ``SYMBOLWIDTH=20``
 
 
-.. _`wms_getlegendgraphics_symbolheight`:
+.. _wms_getlegendgraphics_symbolheight:
 
 SYMBOLHEIGHT
 ^^^^^^^^^^^^
@@ -1277,7 +1277,7 @@ URL example:
    To the left ``SYMBOLHEIGHT=2`` and to the right ``SYMBOLHEIGHT=6``
 
 
-.. _`wms_getlegendgraphics_layertitle`:
+.. _wms_getlegendgraphics_layertitle:
 
 LAYERTITLE
 ^^^^^^^^^^
@@ -1290,7 +1290,7 @@ Available values are (not case sensitive):
 - ``FALSE``
 
 
-.. _`wms_getlegendgraphics_layerfontfamily`:
+.. _wms_getlegendgraphics_layerfontfamily:
 
 LAYERFONTFAMILY
 ^^^^^^^^^^^^^^^
@@ -1306,7 +1306,7 @@ This parameter specifies the font family to use for rendering layer title.
   &LAYERFONTFAMILY=monospace
 
 
-.. _`wms_getlegendgraphics_layerfontbold`:
+.. _wms_getlegendgraphics_layerfontbold:
 
 LAYERFONTBOLD
 ^^^^^^^^^^^^^
@@ -1336,7 +1336,7 @@ URL example:
    Legend with ``LAYERFONTBOLD=TRUE``
 
 
-.. _`wms_getlegendgraphics_layerfontsize`:
+.. _wms_getlegendgraphics_layerfontsize:
 
 LAYERFONTSIZE
 ^^^^^^^^^^^^^
@@ -1362,7 +1362,7 @@ URL example:
    Legend with ``LAYERFONTSIZE=20``
 
 
-.. _`wms_getlegendgraphics_layerfontitalic`:
+.. _wms_getlegendgraphics_layerfontitalic:
 
 LAYERFONTITALIC
 ^^^^^^^^^^^^^^^
@@ -1392,7 +1392,7 @@ URL example:
    Legend with ``LAYERFONTITALIC=TRUE``
 
 
-.. _`wms_getlegendgraphics_layerfontcolor`:
+.. _wms_getlegendgraphics_layerfontcolor:
 
 LAYERFONTCOLOR
 ^^^^^^^^^^^^^^
@@ -1420,7 +1420,7 @@ URL example:
    Legend with ``LAYERFONTCOLOR=0x5f9930``
 
 
-.. _`wms_getlegendgraphics_itemfontfamily`:
+.. _wms_getlegendgraphics_itemfontfamily:
 
 ITEMFONTFAMILY
 ^^^^^^^^^^^^^^
@@ -1436,7 +1436,7 @@ This parameter specifies the font family to use for rendering item label.
   &ITEMFONTFAMILY=monospace
 
 
-.. _`wms_getlegendgraphics_itemfontbold`:
+.. _wms_getlegendgraphics_itemfontbold:
 
 ITEMFONTBOLD
 ^^^^^^^^^^^^
@@ -1466,7 +1466,7 @@ URL example:
    Legend with ``ITEMFONTBOLD=TRUE``
 
 
-.. _`wms_getlegendgraphics_itemfontsize`:
+.. _wms_getlegendgraphics_itemfontsize:
 
 ITEMFONTSIZE
 ^^^^^^^^^^^^
@@ -1492,7 +1492,7 @@ URL example:
    Legend with ``ITEMFONTSIZE=30``
 
 
-.. _`wms_getlegendgraphics_itemfontitalic`:
+.. _wms_getlegendgraphics_itemfontitalic:
 
 ITEMFONTITALIC
 ^^^^^^^^^^^^^^
@@ -1522,7 +1522,7 @@ URL example:
    Legend with ``ITEMFONTITALIC=TRUE``
 
 
-.. _`wms_getlegendgraphics_itemfontcolor`:
+.. _wms_getlegendgraphics_itemfontcolor:
 
 ITEMFONTCOLOR
 ^^^^^^^^^^^^^
@@ -1576,7 +1576,7 @@ URL example:
   &REQUEST=GetStyles
   &LAYERS=mylayer1,mylayer2
 
-.. _`wms_getstyle_request`:
+.. _wms_getstyle_request:
 
 REQUEST
 ^^^^^^^
@@ -1633,7 +1633,7 @@ The XML document looks like:
        </LayerDescription>
    </DescribeLayerResponse>
 
-.. _`wms_describelayer_request`:
+.. _wms_describelayer_request:
 
 REQUEST
 ^^^^^^^
@@ -1641,7 +1641,7 @@ REQUEST
 This parameter is ``DescribeLayer`` in case of the **DescribeLayer** request.
 
 
-.. _`wms_describelayer_sldversion`:
+.. _wms_describelayer_sldversion:
 
 SLD_VERSION
 ^^^^^^^^^^^
@@ -1660,8 +1660,8 @@ format. Print layout windows in the published project are used as templates.
 In the **GetPrint** request, the client has the possibility to specify
 parameters of the contained layout maps and labels.
 
-The **GetPrint** request supports :ref:`redlining <redlining>`,
-:ref:`external WMS layers <external_wms>` as well as the following
+The **GetPrint** request supports :ref:`redlining <wms_redlining>`,
+:ref:`external WMS layers <wms_external>` as well as the following
 parameters:
 
 .. csv-table::
@@ -1727,14 +1727,14 @@ For example:
     </WMS_Capabilities>
 
 
-.. _`wms_getprint_request`:
+.. _wms_getprint_request:
 
 REQUEST
 ^^^^^^^
 
 This parameter has to be ``GetPrint`` for the **GetPrint** request.
 
-.. _`wms_template`:
+.. _wms_template:
 
 TEMPLATE
 ^^^^^^^^
@@ -1742,7 +1742,7 @@ TEMPLATE
 This parameter can be used to specify the name of a layout template
 to use for printing.
 
-.. _`wms_getprint_format`:
+.. _wms_getprint_format:
 
 FORMAT
 ^^^^^^
@@ -1763,7 +1763,7 @@ This parameter specifies the format of map image. Available values are:
 If the ``FORMAT`` parameter is different from one of these values,
 then an exception is returned.
 
-.. _`wms_atlaspk`:
+.. _wms_atlaspk:
 
 ATLAS_PK
 ^^^^^^^^
@@ -1778,7 +1778,7 @@ When ``FORMAT`` is ``pdf``, a single PDF document combining the feature
 pages is returned.
 For all other formats, a single page is returned.
 
-.. _`wms_mapextent`:
+.. _wms_mapextent:
 
 mapX:EXTENT
 ^^^^^^^^^^^
@@ -1786,28 +1786,28 @@ mapX:EXTENT
 This parameter specifies the extent for a layout map item as
 xmin,ymin,xmax,ymax.
 
-.. _`wms_maprotation`:
+.. _wms_maprotation:
 
 mapX:ROTATION
 ^^^^^^^^^^^^^
 
 This parameter specifies the map rotation in degrees.
 
-.. _`wms_mapgridintervalx`:
+.. _wms_mapgridintervalx:
 
 mapX:GRID_INTERVAL_X
 ^^^^^^^^^^^^^^^^^^^^
 
 This parameter specifies the grid line density in the X direction.
 
-.. _`wms_mapgridintervaly`:
+.. _wms_mapgridintervaly:
 
 mapX:GRID_INTERVAL_Y
 ^^^^^^^^^^^^^^^^^^^^
 
 This parameter specifies the grid line density in the Y direction.
 
-.. _`wms_mapscale`:
+.. _wms_mapscale:
 
 mapX:SCALE
 ^^^^^^^^^^
@@ -1817,7 +1817,7 @@ This is useful to ensure scale based visibility of layers and
 labels even if client and server may have different algorithms to
 calculate the scale denominator.
 
-.. _`wms_maplayers`:
+.. _wms_maplayers:
 
 mapX:LAYERS
 ^^^^^^^^^^^
@@ -1826,7 +1826,7 @@ This parameter specifies the layers for a layout map item. See
 :ref:`GetMap Layers <wms_layers>` for more information on
 this parameter.
 
-.. _`wms_mapstyles`:
+.. _wms_mapstyles:
 
 mapX:STYLES
 ^^^^^^^^^^^
@@ -1889,7 +1889,7 @@ The XML document looks like:
       <element name="GetStyles" type="wms:OperationType" substitutionGroup="wms:_ExtendedOperation"/>
   </schema>
 
-.. _`wms_getschemaextension_request`:
+.. _wms_getschemaextension_request:
 
 REQUEST
 ^^^^^^^
@@ -1897,7 +1897,7 @@ REQUEST
 This parameter is ``GetSchemaExtension`` in case of the **GetSchemaExtension** request.
 
 
-.. _`external_wms`:
+.. _wms_external:
 
 External WMS layers
 -------------------
@@ -1948,7 +1948,7 @@ Similarly, external layers can be used in GetPrint requests:
    &basemap:styles=default
 
 
-.. _`redlining`:
+.. _wms_redlining:
 
 Redlining
 ---------
