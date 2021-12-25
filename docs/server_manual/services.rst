@@ -18,9 +18,9 @@ behavior thanks to the QGIS rendering engine.
 .. toctree::
    :maxdepth: 2
 
+   services/basics.rst
    services/wms.rst
    services/wfs.rst
    services/wcs.rst
    services/wmts.rst
    services/ogcapif.rst
-   services/extra_parameters.rst
