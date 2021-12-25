@@ -173,24 +173,11 @@ Names have to be separated by a comma.
 
 In addition, QGIS Server introduced some options to select layers by:
 
-* a short name
+* a :ref:`short name <services_basics_short_name>`
 * the layer id
 
-The short name of a layer may be configured through
-:menuselection:`Properties --> Metadata` in layer menu.
-If the short name is defined, then it's used by default instead of the
-layer's name:
-
-.. code-block:: bash
-
-  http://localhost/qgisserver?
-  SERVICE=WMS
-  &REQUEST=GetMap
-  &LAYERS=mynickname1,mynickname2
-  &...
-
-Moreover, there's a project option allowing to select layers by their
-id in :menuselection:`OWS Server --> WMS capabilities` menu of the
+The project option allowing to select layers by their
+id is in :menuselection:`OWS Server --> WMS capabilities` menu of the
 :menuselection:`Project --> Properties...` dialog.
 To activate this option, the checkbox
 :guilabel:`Use layer ids as names` has to be selected.
