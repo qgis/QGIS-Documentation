@@ -33,8 +33,8 @@ the OGC WMTS 1.0.0 specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`SERVICE <wmts_service>`", "Yes", "Name of the service (**WMTS**)"
-   ":ref:`REQUEST <wmts_getcapabilities_request>`", "Yes", "Name of the request (**GetCapabilities**)"
+   ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMTS**)"
+   ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetCapabilities**)"
 
 
 In addition to the standard ones, QGIS Server supports the following extra
@@ -45,7 +45,7 @@ parameters:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`MAP <wmts_map>`", "Yes", "Specify the QGIS project file"
+   ":ref:`MAP <services_basics_map>`", "Yes", "QGIS project file"
 
 
 URL example:
@@ -56,34 +56,6 @@ URL example:
   SERVICE=WMTS
   &REQUEST=GetCapabilities
   &MAP=/home/qgis/projects/world.qgs
-
-
-.. _wmts_service:
-
-SERVICE
-^^^^^^^
-
-This parameter has to be ``WMTS`` in case of the **WMTS** service.
-
-
-.. _wmts_getcapabilities_request:
-
-REQUEST
-^^^^^^^
-
-This parameter is ``GetCapabilities`` in case of the
-**GetCapabilities** request.
-
-.. _wmts_map:
-
-MAP
-^^^
-
-This parameter allows to define the QGIS project file to use and is mandatory
-because a request needs a QGIS project to actually work.  However, the
-``QGIS_PROJECT_FILE`` environment variable may be used to define a default QGIS
-project.  In this specific case, ``MAP`` is no longer a required parameter.
-For further information you may refer to :ref:`server_env_variables`.
 
 
 .. _wmts_gettile:
@@ -98,9 +70,9 @@ OGC WMTS 1.0.0 specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`SERVICE <wmts_service>`", "Yes", "Name of the service (**WMTS**)"
-   ":ref:`REQUEST <wmts_gettile_request>`", "Yes", "Name of the request (**GetTile**)"
-   ":ref:`LAYER <wmts_gettile_layer>`", "Yes", "Layer identifier"
+   ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMTS**)"
+   ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetTile**)"
+   ":ref:`LAYER <wms_layers>`", "Yes", "Layer identifier"
    ":ref:`FORMAT <wmts_gettile_format>`", "Yes", "Output format of the tile"
    ":ref:`TILEMATRIXSET <wmts_gettile_tilematrixset>`", "Yes", "Name of the pyramid"
    ":ref:`TILEMATRIX <wmts_gettile_tilematrix>`", "Yes", "Meshing"
@@ -116,7 +88,7 @@ extra parameters:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`MAP <wmts_map>`", "Yes", "Specify the QGIS project file"
+   ":ref:`MAP <services_basics_map>`", "Yes", "QGIS project file"
 
 
 URL example:
@@ -132,54 +104,6 @@ URL example:
   &TILEMATRIXSET=EPSG:4326
   &TILEROW=0
   &TILECOL=0
-
-
-.. _wmts_gettile_request:
-
-REQUEST
-^^^^^^^
-
-This parameter is ``GetTile`` in case of the **GetTile** request.
-
-
-.. _wmts_gettile_layer:
-
-LAYER
-^^^^^
-
-This parameter allows to specify the layer to display on the tile.
-
-In addition, QGIS Server introduced some options to select a layer
-by:
-
-* a short name
-* the layer id
-
-The short name of a layer may be configured through
-:menuselection:`Properties --> Metadata` in layer menu. If the short
-name is defined, then it's used by default instead of the layer's name:
-
-.. code-block:: bash
-
-  http://localhost/?
-  SERVICE=WMTS
-  &REQUEST=GetTile
-  &LAYER=mynickname
-  &...
-
-Moreover, there's a project option allowing to select layers by their
-id in :menuselection:`OWS Server --> WMS capabilities` menu of the
-:menuselection:`Project --> Project Properties` dialog. To activate
-this option, the checkbox :guilabel:`Use layer ids as names` has to be
-selected.
-
-.. code-block:: bash
-
-  http://localhost/?
-  SERVICE=WMTS
-  &REQUEST=GetTile
-  &LAYER=mylayerid1
-  &...
 
 
 .. _wmts_gettile_format:
@@ -247,9 +171,9 @@ the OGC WMTS 1.0.0 specification:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`SERVICE <wmts_service>`", "Yes", "Name of the service (**WMTS**)"
-   ":ref:`REQUEST <wmts_getfeatureinfo_request>`", "Yes", "Name of the request (**GetFeatureInfo**)"
-   ":ref:`LAYER <wmts_getfeatureinfo_layer>`", "Yes", "Layer identifier"
+   ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMTS**)"
+   ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetFeatureInfo**)"
+   ":ref:`LAYER <wms_layers>`", "Yes", "Layer identifier"
    ":ref:`INFOFORMAT <wmts_getfeatureinfo_infoformat>`", "No", "Output format"
    ":ref:`I <wmts_getfeatureinfo_i>`", "No", "X coordinate of a pixel"
    ":ref:`J <wmts_getfeatureinfo_j>`", "No", "Y coordinate of a pixel"
@@ -267,7 +191,7 @@ extra parameters:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`MAP <wmts_map>`", "Yes", "Specify the QGIS project file"
+   ":ref:`MAP <services_basics_map>`", "Yes", "QGIS project file"
 
 
 URL example:
@@ -282,54 +206,6 @@ URL example:
   &INFOFORMAT=image/html
   &I=10
   &J=5
-
-
-.. _wmts_getfeatureinfo_request:
-
-REQUEST
-^^^^^^^
-
-This parameter is ``GetFeatureInfo`` in case of the **GetFeatureInfo** request.
-
-
-.. _wmts_getfeatureinfo_layer:
-
-LAYER
-^^^^^
-
-This parameter allows to specify the layer to display on the tile.
-
-In addition, QGIS Server introduced some options to select a layer by:
-
-* a short name
-* the layer id
-
-The short name of a layer may be configured through
-:menuselection:`Properties --> Metadata` in layer menu. If the short
-name is defined, then it's used by default instead of the layer's
-name:
-
-.. code-block:: bash
-
-  http://localhost/?
-  SERVICE=WMTS
-  &REQUEST=GetFeatureInfo
-  &LAYER=mynickname
-  &...
-
-Moreover, there's a project option allowing to select layers by their
-id in :menuselection:`OWS Server --> WMS capabilities` menu of the
-:menuselection:`Project --> Project Properties` dialog. To activate
-this option, the checkbox :guilabel:`Use layer ids as names` has to be
-selected.
-
-.. code-block:: bash
-
-  http://localhost/?
-  SERVICE=WMTS
-  &REQUEST=GetFeatureInfo
-  &LAYER=mylayerid1
-  &...
 
 
 .. _wmts_getfeatureinfo_infoformat:

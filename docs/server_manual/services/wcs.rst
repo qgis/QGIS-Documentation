@@ -33,9 +33,9 @@ WCS 1.1.1 specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`SERVICE <wcs_service>`", "Yes", "Name of the service (**WCS**)"
+   ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WCS**)"
+   ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetCapabilities**)"
    ":ref:`VERSION <wcs_version>`", "No", "Version of the service"
-   ":ref:`REQUEST <wcs_getcapabilities_request>`", "Yes", "Name of the request (**GetCapabilities**)"
 
 In addition to the standard ones, QGIS Server supports the following extra
 parameters:
@@ -44,7 +44,7 @@ parameters:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`MAP <wcs-map>`", "Yes", "Specify the QGIS project file"
+   ":ref:`MAP <services_basics_map>`", "Yes", "QGIS project file"
 
 URL example:
 
@@ -81,23 +81,6 @@ service:
   </WCS_Capabilities>
 
 
-.. _wcs_service:
-
-SERVICE
-^^^^^^^
-
-This parameter has to be ``WCS``.
-
-
-.. _wcs_getcapabilities_request:
-
-REQUEST
-^^^^^^^
-
-This parameter is ``GetCapabilities`` in case of the **GetCapabilities**
-request.
-
-
 .. _wcs_version:
 
 VERSION
@@ -105,18 +88,6 @@ VERSION
 
 This parameter allows to specify the version of the service to use. Currently,
 the version values is not internally used and always fallback to ``1.1.1``.
-
-
-.. _wcs-map:
-
-MAP
-^^^
-
-This parameter allows to define the QGIS project file to use and is mandatory
-because a request needs a QGIS project to actually work.  However, the
-``QGIS_PROJECT_FILE`` environment variable may be used to define a default QGIS
-project. In this specific case, ``MAP`` is not longer a required parameter.
-For further information you may refer to :ref:`server_env_variables`.
 
 
 .. _wcs_describecoverage:
@@ -133,9 +104,9 @@ specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`SERVICE <wcs_service>`", "Yes", "Name of the service (**WCS**)"
+   ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WCS**)"
+   ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**DescribeCoverage**)"
    ":ref:`VERSION <wcs_version>`", "No", "Version of the service"
-   ":ref:`REQUEST <wcs_getcapabilities_request>`", "Yes", "Name of the request (**GetCapabilities**)"
    ":ref:`COVERAGE <wcs_describecoverage_coverage>`", "No", "Specify coverage layers (WCS 1.0.0)"
    ":ref:`IDENTIFIER <wcs_describecoverage_identifier>`", "No", "Specify coverage layers (WCS 1.1.1)"
 
@@ -146,7 +117,7 @@ parameters:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`MAP <wcs-map>`", "Yes", "Specify the QGIS project file"
+   ":ref:`MAP <services_basics_map>`", "Yes", "QGIS project file"
 
 The XML document for a 3 bands GeoTIFF raster layer looks like:
 
@@ -244,9 +215,9 @@ request according to the OGC WCS 1.1.1 specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`SERVICE <wcs_service>`", "Yes", "Name of the service (**WCS**)"
+   ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WCS**)"
+   ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetCoverage**)"
    ":ref:`VERSION <wcs_version>`", "No", "Version of the service"
-   ":ref:`REQUEST <wcs_getcoverage_request>`", "Yes", "Name of the request (**GetCoverage**)"
    ":ref:`COVERAGE <wcs_describecoverage_coverage>`", "No", "Specify coverage layers (WCS 1.0.0)"
    ":ref:`IDENTIFIER <wcs_describecoverage_identifier>`", "No", "Specify coverage layers (WCS 1.1.1)"
    ":ref:`WIDTH <wcs_getcoverage_width>`", "Yes", "Width of the response in pixels"
@@ -262,15 +233,7 @@ parameters:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`MAP <wcs-map>`", "Yes", "Specify the QGIS project file"
-
-
-.. _wcs_getcoverage_request:
-
-REQUEST
-^^^^^^^
-
-This parameter is ``GetCoverage`` in case of the **GetCoverage** request.
+   ":ref:`MAP <services_basics_map>`", "Yes", "QGIS project file"
 
 
 .. _wcs_getcoverage_bbox:
