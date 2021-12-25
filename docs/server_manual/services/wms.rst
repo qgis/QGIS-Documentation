@@ -1834,9 +1834,10 @@ The XML document looks like:
 External WMS layers
 -------------------
 
-QGIS Server allows including layers from external WMS servers in WMS GetMap
-and WMS GetPrint requests. This is especially useful if a web client uses an
-external background layer in the web map.
+QGIS Server allows including layers from external WMS servers in WMS
+:ref:`GetMap <wms_getmap>` and WMS :ref:`GetPrint <wms_getprint>` requests.
+This is especially useful if a web client uses an external background layer in
+the web map.
 For performance reasons, such layers should be directly requested by the web
 client (not cascaded via QGIS server). For printing however, these layers
 should be cascaded via QGIS server in order to appear in the printed map.
@@ -1846,7 +1847,7 @@ EXTERNAL_WMS:<layername>.
 The parameters for the external WMS layers (e.g. url, format,
 dpiMode, crs, layers, styles) can later be given as service
 parameters <layername>:<parameter>.
-In a GetMap request, this might look like this:
+In a :ref:`GetMap <wms_getmap>` request, this might look like this:
 
 .. code-block:: bash
 
@@ -1862,7 +1863,8 @@ In a GetMap request, this might look like this:
    &basemap:layers=orthofoto
    &basemap:styles=default
 
-Similarly, external layers can be used in GetPrint requests:
+Similarly, external layers can be used in :ref:`GetPrint <wms_getprint>`
+requests:
 
 .. code-block:: bash
 
@@ -1885,15 +1887,15 @@ Similarly, external layers can be used in GetPrint requests:
 Redlining
 ---------
 
-This feature is available and can be used with ``GetMap`` and ``GetPrint``
-requests.
+This feature is available and can be used with :ref:`GetMap <wms_getmap>` and
+:ref:`GetPrint <wms_getprint>` requests.
 
 The redlining feature can be used to pass geometries and labels in the request
 which are overlapped by the server over the standard returned image (map). This
 permits the user to put emphasis or maybe add some comments (labels) to some
 areas, locations etc. that are not in the standard map.
 
-The ``GetMap`` request is in the format:
+The :ref:`GetMap <wms_getmap>` request is in the format:
 
 .. code-block:: bash
 
@@ -1910,8 +1912,8 @@ The ``GetMap`` request is in the format:
  &HIGHLIGHT_LABELBUFFERSIZE=1.5
 
 
-The ``GetPrint`` equivalent is in the format (note that ``mapX:`` parameter is
-added to tell which map has redlining):
+The :ref:`GetPrint <wms_getprint>` equivalent is in the format (note that
+``mapX:`` parameter is added to tell which map has redlining):
 
 .. code-block:: bash
 
