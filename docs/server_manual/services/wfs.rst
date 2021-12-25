@@ -644,7 +644,8 @@ URL example:
 
 .. note::
 
-  ``FEATUREID``, ``FILTER`` and ``BBOX`` parameters are mutually exclusive.
+  ``FEATUREID``, ``BBOX`` and ``FILTER`` parameters are mutually exclusive and
+  prioritized in this order.
 
 .. _wfs_transaction_add:
 
