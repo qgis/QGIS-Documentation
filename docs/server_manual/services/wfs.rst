@@ -704,7 +704,7 @@ This parameter is ``Transaction`` in case of the **Transaction** request.
 OPERATION
 ^^^^^^^^^
 
-This parameter allows to delete a feature without using a POST requests with a
+This parameter allows to delete a feature without using a POST request with a
 dedicated XML document.
 
 URL example:
