@@ -24,7 +24,7 @@ Standard requests provided by QGIS Server:
    ":ref:`Transaction <wfs_transaction>`", "Allows features to be inserted, updated or deleted"
 
 
-.. _`wfs_getcapabilities`:
+.. _wfs_getcapabilities:
 
 GetCapabilities
 ---------------
@@ -51,7 +51,7 @@ extra parameters:
    ":ref:`MAP <wfs_map>`", "Yes", "Specify the QGIS project file"
 
 
-.. _`wfs_service`:
+.. _wfs_service:
 
 SERVICE
 ^^^^^^^
@@ -67,7 +67,7 @@ For example:
   &...
 
 
-.. _`wfs_version`:
+.. _wfs_version:
 
 VERSION
 ^^^^^^^
@@ -91,7 +91,7 @@ URL example:
   &...
 
 
-.. _`wfs_getcapabilities_request`:
+.. _wfs_getcapabilities_request:
 
 REQUEST
 ^^^^^^^
@@ -100,7 +100,7 @@ This parameter is ``GetCapabilities`` in case of the **GetCapabilities**
 request.
 
 
-.. _`wfs_map`:
+.. _wfs_map:
 
 MAP
 ^^^
@@ -114,7 +114,7 @@ parameter. For further information you may refer to
 :ref:`server_env_variables`.
 
 
-.. _`wfs_getfeature`:
+.. _wfs_getfeature:
 
 GetFeature
 ----------
@@ -155,7 +155,7 @@ extra parameters:
    ":ref:`EXP_FILTER <wfs_getfeature_expfilter>`", "No", "Expression filtering"
 
 
-.. _`wfs_getfeature_request`:
+.. _wfs_getfeature_request:
 
 REQUEST
 ^^^^^^^
@@ -174,7 +174,7 @@ URL example:
   &...
 
 
-.. _`wfs_getfeature_typename`:
+.. _wfs_getfeature_typename:
 
 TYPENAME
 ^^^^^^^^
@@ -193,7 +193,7 @@ URL example:
   &TYPENAME=countries
 
 
-.. _`wfs_getfeature_featureid`:
+.. _wfs_getfeature_featureid:
 
 FEATUREID
 ^^^^^^^^^
@@ -232,7 +232,7 @@ XML response:
   </wfs:FeatureCollection>
 
 
-.. _`wfs_getfeature_outputformat`:
+.. _wfs_getfeature_outputformat:
 
 OUTPUTFORMAT
 ^^^^^^^^^^^^
@@ -304,7 +304,7 @@ GeoJSON response:
   }
 
 
-.. _`wfs_getfeature_resulttype`:
+.. _wfs_getfeature_resulttype:
 
 RESULTTYPE
 ^^^^^^^^^^
@@ -327,7 +327,7 @@ URL example:
   &...
 
 
-.. _`wfs_getfeature_propertyname`:
+.. _wfs_getfeature_propertyname:
 
 PROPERTYNAME
 ^^^^^^^^^^^^
@@ -362,7 +362,7 @@ On the contrary, the next URL will return an exception:
   </ServiceExceptionReport>
 
 
-.. _`wfs_getfeature_maxfeatures`:
+.. _wfs_getfeature_maxfeatures:
 
 MAXFEATURES
 ^^^^^^^^^^^
@@ -375,7 +375,7 @@ This parameter allows to limit the number of features returned by the request.
   layers are heavy.
 
 
-.. _`wfs_getfeature_srsname`:
+.. _wfs_getfeature_srsname:
 
 SRSNAME
 ^^^^^^^
@@ -392,7 +392,7 @@ as well as the ``BBOX`` CRS and has to be formed like ``EPSG:XXXX``.
   &SRSNAME=EPSG:32620
 
 
-.. _`wfs_getfeature_filter`:
+.. _wfs_getfeature_filter:
 
 FILTER
 ^^^^^^
@@ -412,7 +412,7 @@ URL example:
   FILTER=<Filter><PropertyIsEqualTo><PropertyName>name</PropertyName><Literal>Paris</Literal></PropertyIsEqualTo></Filter>
 
 
-.. _`wfs_getfeature_bbox`:
+.. _wfs_getfeature_bbox:
 
 BBOX
 ^^^^
@@ -444,7 +444,7 @@ result in an exception:
   </ServiceExceptionReport>
 
 
-.. _`wfs_getfeature_sortby`:
+.. _wfs_getfeature_sortby:
 
 SORTBY
 ^^^^^^
@@ -506,7 +506,7 @@ The corresponding result:
   </wfs:FeatureCollection>
 
 
-.. _`wfs_getfeature_geometryname`:
+.. _wfs_getfeature_geometryname:
 
 GEOMETRYNAME
 ^^^^^^^^^^^^
@@ -530,7 +530,7 @@ URL example:
   &...
 
 
-.. _`wfs_getfeature_startindex`:
+.. _wfs_getfeature_startindex:
 
 STARTINDEX
 ^^^^^^^^^^
@@ -554,7 +554,7 @@ URL example:
   &...
 
 
-.. _`wfs_getfeature_expfilter`:
+.. _wfs_getfeature_expfilter:
 
 EXP_FILTER
 ^^^^^^^^^^
@@ -572,7 +572,7 @@ URL example:
   EXP_FILTER="name"='Paris'
 
 
-.. _`wfs_describefeaturetype`:
+.. _wfs_describefeaturetype:
 
 DescribeFeatureType
 -------------------
@@ -602,7 +602,7 @@ extra parameters:
    ":ref:`MAP <wfs_map>`", "Yes", "Specify the QGIS project file"
 
 
-.. _`wfs_describefeaturetype_request`:
+.. _wfs_describefeaturetype_request:
 
 REQUEST
 ^^^^^^^
@@ -611,7 +611,7 @@ This parameter is ``DescribeFeatureType`` in case of the
 **DescribeFeatureType** request.
 
 
-.. _`wfs_describefeaturetype_typename`:
+.. _wfs_describefeaturetype_typename:
 
 TYPENAME
 ^^^^^^^^
@@ -650,7 +650,7 @@ Output response:
   </schema>
 
 
-.. _`wfs_transaction`:
+.. _wfs_transaction:
 
 Transaction
 -----------
@@ -691,7 +691,7 @@ extra parameters:
    ":ref:`EXP_FILTER <wfs_getfeature_expfilter>`", "No", "Expression filtering"
 
 
-.. _`wfs_transaction_request`:
+.. _wfs_transaction_request:
 
 REQUEST
 ^^^^^^^
@@ -699,7 +699,7 @@ REQUEST
 This parameter is ``Transaction`` in case of the **Transaction** request.
 
 
-.. _`wfs_transaction_operation`:
+.. _wfs_transaction_operation:
 
 OPERATION
 ^^^^^^^^^
@@ -722,7 +722,7 @@ URL example:
 
   ``FEATUREID``, ``FILTER`` and ``BBOX`` parameters are mutually exclusive.
 
-.. _`wfs_transaction_add`:
+.. _wfs_transaction_add:
 
 Add features
 ^^^^^^^^^^^^
@@ -754,7 +754,7 @@ with the *add.xml* document:
 
 
 
-.. _`wfs_transaction_update`:
+.. _wfs_transaction_update:
 
 Update features
 ^^^^^^^^^^^^^^^
@@ -784,7 +784,7 @@ with the *update.xml* document:
   </wfs:Transaction>
 
 
-.. _`wfs_transaction_delete`:
+.. _wfs_transaction_delete:
 
 Delete features
 ^^^^^^^^^^^^^^^
