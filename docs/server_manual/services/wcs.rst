@@ -16,12 +16,12 @@ Standard requests provided by QGIS Server:
    :header: "Request", "Description"
    :widths: auto
 
-   ":ref:`GetCapabilities <qgisserver_wcs_getcapabilities>`", "Returns XML metadata with information about the server"
-   ":ref:`DescribeCoverage <qgisserver_wcs_describecoverage>`", "Retrieves XML document about additional information about coverages"
-   ":ref:`GetCoverage <qgisserver_wcs_getcoverage>`", "Retrieves coverage"
+   ":ref:`GetCapabilities <wcs_getcapabilities>`", "Returns XML metadata with information about the server"
+   ":ref:`DescribeCoverage <wcs_describecoverage>`", "Retrieves XML document about additional information about coverages"
+   ":ref:`GetCoverage <wcs_getcoverage>`", "Retrieves coverage"
 
 
-.. _`qgisserver_wcs_getcapabilities`:
+.. _`wcs_getcapabilities`:
 
 GetCapabilities
 ---------------
@@ -119,7 +119,7 @@ project. In this specific case, ``MAP`` is not longer a required parameter.
 For further information you may refer to :ref:`server_env_variables`.
 
 
-.. _`qgisserver_wcs_describecoverage`:
+.. _`wcs_describecoverage`:
 
 DescribeCoverage
 ----------------
@@ -231,7 +231,7 @@ parameter in WCS ``1.1.1``. But QGIS Server does not filter according to the
   always used in priority.
 
 
-.. _`qgisserver_wcs_getcoverage`:
+.. _`wcs_getcoverage`:
 
 GetCoverage
 -----------

@@ -18,13 +18,13 @@ Standard requests provided by QGIS Server:
    :header: "Request", "Description"
    :widths: auto
 
-   ":ref:`GetCapabilities <qgisserver-wfs-getcapabilities>`", "Returns XML metadata with information about the server"
-   ":ref:`GetFeature <qgisserver-wfs-getfeature>`", "Returns a selection of features"
-   ":ref:`DescribeFeatureType <qgisserver-wfs-describefeaturetype>`", "Returns a description of feature types and properties"
-   ":ref:`Transaction <qgisserver-wfs-transaction>`", "Allows features to be inserted, updated or deleted"
+   ":ref:`GetCapabilities <wfs_getcapabilities>`", "Returns XML metadata with information about the server"
+   ":ref:`GetFeature <wfs_getfeature>`", "Returns a selection of features"
+   ":ref:`DescribeFeatureType <wfs_describefeaturetype>`", "Returns a description of feature types and properties"
+   ":ref:`Transaction <wfs_transaction>`", "Allows features to be inserted, updated or deleted"
 
 
-.. _`qgisserver-wfs-getcapabilities`:
+.. _`wfs_getcapabilities`:
 
 GetCapabilities
 ---------------
@@ -36,9 +36,9 @@ OGC WFS 1.0.0 and 1.1.0 specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`SERVICE <qgisserver-wfs-service>`", "Yes", "Name of the service (**WFS**)"
-   ":ref:`VERSION <qgisserver-wfs-version>`", "No", "Version of the service"
-   ":ref:`REQUEST <qgisserver-wfs-getcapabilities-request>`", "Yes", "Name of the request"
+   ":ref:`SERVICE <wfs_service>`", "Yes", "Name of the service (**WFS**)"
+   ":ref:`VERSION <wfs_version>`", "No", "Version of the service"
+   ":ref:`REQUEST <wfs_getcapabilities_request>`", "Yes", "Name of the request"
 
 In addition to the standard ones, QGIS Server supports the following
 extra parameters:
@@ -48,10 +48,10 @@ extra parameters:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`MAP <qgisserver-wfs-map>`", "Yes", "Specify the QGIS project file"
+   ":ref:`MAP <wfs_map>`", "Yes", "Specify the QGIS project file"
 
 
-.. _`qgisserver-wfs-service`:
+.. _`wfs_service`:
 
 SERVICE
 ^^^^^^^
@@ -67,7 +67,7 @@ For example:
   &...
 
 
-.. _`qgisserver-wfs-version`:
+.. _`wfs_version`:
 
 VERSION
 ^^^^^^^
@@ -91,7 +91,7 @@ URL example:
   &...
 
 
-.. _`qgisserver-wfs-getcapabilities-request`:
+.. _`wfs_getcapabilities_request`:
 
 REQUEST
 ^^^^^^^
@@ -100,7 +100,7 @@ This parameter is ``GetCapabilities`` in case of the **GetCapabilities**
 request.
 
 
-.. _`qgisserver-wfs-map`:
+.. _`wfs_map`:
 
 MAP
 ^^^
@@ -114,7 +114,7 @@ parameter. For further information you may refer to
 :ref:`server_env_variables`.
 
 
-.. _`qgisserver-wfs-getfeature`:
+.. _`wfs_getfeature`:
 
 GetFeature
 ----------
@@ -126,19 +126,19 @@ OGC WFS 1.0.0 and 1.1.0 specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`SERVICE <qgisserver-wfs-service>`", "Yes", "Name of the service (**WFS**)"
-   ":ref:`VERSION <qgisserver-wfs-version>`", "No", "Version of the service"
-   ":ref:`REQUEST <qgisserver-wfs-getfeature-request>`", "Yes", "Name of the request"
-   ":ref:`TYPENAME <qgisserver-wfs-getfeature-typename>`", "No", "Name of layers"
-   ":ref:`FEATUREID <qgisserver-wfs-getfeature-featureid>`", "No", "Filter the features by ids"
-   ":ref:`OUTPUTFORMAT <qgisserver-wfs-getfeature-outputformat>`", "No", "Output Format"
-   ":ref:`RESULTTYPE <qgisserver-wfs-getfeature-resulttype>`", "No", "Type of the result"
-   ":ref:`PROPERTYNAME <qgisserver-wfs-getfeature-propertyname>`", "No", "Name of properties to return"
-   ":ref:`MAXFEATURES <qgisserver-wfs-getfeature-maxfeatures>`", "No", "Maximum number of features to return"
-   ":ref:`SRSNAME <qgisserver-wfs-getfeature-srsname>`", "No", "Coordinate reference system"
-   ":ref:`FILTER <qgisserver-wfs-getfeature-filter>`", "No", "OGC Filter Encoding"
-   ":ref:`BBOX <qgisserver-wfs-getfeature-bbox>`", "No", "Map Extent"
-   ":ref:`SORTBY <qgisserver-wfs-getfeature-sortby>`", "No", "Sort the results"
+   ":ref:`SERVICE <wfs_service>`", "Yes", "Name of the service (**WFS**)"
+   ":ref:`VERSION <wfs_version>`", "No", "Version of the service"
+   ":ref:`REQUEST <wfs_getfeature_request>`", "Yes", "Name of the request"
+   ":ref:`TYPENAME <wfs_getfeature_typename>`", "No", "Name of layers"
+   ":ref:`FEATUREID <wfs_getfeature_featureid>`", "No", "Filter the features by ids"
+   ":ref:`OUTPUTFORMAT <wfs_getfeature_outputformat>`", "No", "Output Format"
+   ":ref:`RESULTTYPE <wfs_getfeature_resulttype>`", "No", "Type of the result"
+   ":ref:`PROPERTYNAME <wfs_getfeature_propertyname>`", "No", "Name of properties to return"
+   ":ref:`MAXFEATURES <wfs_getfeature_maxfeatures>`", "No", "Maximum number of features to return"
+   ":ref:`SRSNAME <wfs_getfeature_srsname>`", "No", "Coordinate reference system"
+   ":ref:`FILTER <wfs_getfeature_filter>`", "No", "OGC Filter Encoding"
+   ":ref:`BBOX <wfs_getfeature_bbox>`", "No", "Map Extent"
+   ":ref:`SORTBY <wfs_getfeature_sortby>`", "No", "Sort the results"
 
 
 In addition to the standard ones, QGIS Server supports the following
@@ -149,13 +149,13 @@ extra parameters:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`MAP <qgisserver-wfs-map>`", "Yes", "Specify the QGIS project file"
-   ":ref:`STARTINDEX <qgisserver-wfs-getfeature-startindex>`", "No", "Paging"
-   ":ref:`GEOMETRYNAME <qgisserver-wfs-getfeature-geometryname>`", "No", "Type of geometry to return"
-   ":ref:`EXP_FILTER <qgisserver-wfs-getfeature-expfilter>`", "No", "Expression filtering"
+   ":ref:`MAP <wfs_map>`", "Yes", "Specify the QGIS project file"
+   ":ref:`STARTINDEX <wfs_getfeature_startindex>`", "No", "Paging"
+   ":ref:`GEOMETRYNAME <wfs_getfeature_geometryname>`", "No", "Type of geometry to return"
+   ":ref:`EXP_FILTER <wfs_getfeature_expfilter>`", "No", "Expression filtering"
 
 
-.. _`qgisserver-wfs-getfeature-request`:
+.. _`wfs_getfeature_request`:
 
 REQUEST
 ^^^^^^^
@@ -174,7 +174,7 @@ URL example:
   &...
 
 
-.. _`qgisserver-wfs-getfeature-typename`:
+.. _`wfs_getfeature_typename`:
 
 TYPENAME
 ^^^^^^^^
@@ -193,7 +193,7 @@ URL example:
   &TYPENAME=countries
 
 
-.. _`qgisserver-wfs-getfeature-featureid`:
+.. _`wfs_getfeature_featureid`:
 
 FEATUREID
 ^^^^^^^^^
@@ -232,7 +232,7 @@ XML response:
   </wfs:FeatureCollection>
 
 
-.. _`qgisserver-wfs-getfeature-outputformat`:
+.. _`wfs_getfeature_outputformat`:
 
 OUTPUTFORMAT
 ^^^^^^^^^^^^
@@ -304,7 +304,7 @@ GeoJSON response:
   }
 
 
-.. _`qgisserver-wfs-getfeature-resulttype`:
+.. _`wfs_getfeature_resulttype`:
 
 RESULTTYPE
 ^^^^^^^^^^
@@ -327,7 +327,7 @@ URL example:
   &...
 
 
-.. _`qgisserver-wfs-getfeature-propertyname`:
+.. _`wfs_getfeature_propertyname`:
 
 PROPERTYNAME
 ^^^^^^^^^^^^
@@ -362,7 +362,7 @@ On the contrary, the next URL will return an exception:
   </ServiceExceptionReport>
 
 
-.. _`qgisserver-wfs-getfeature-maxfeatures`:
+.. _`wfs_getfeature_maxfeatures`:
 
 MAXFEATURES
 ^^^^^^^^^^^
@@ -375,7 +375,7 @@ This parameter allows to limit the number of features returned by the request.
   layers are heavy.
 
 
-.. _`qgisserver-wfs-getfeature-srsname`:
+.. _`wfs_getfeature_srsname`:
 
 SRSNAME
 ^^^^^^^
@@ -392,7 +392,7 @@ as well as the ``BBOX`` CRS and has to be formed like ``EPSG:XXXX``.
   &SRSNAME=EPSG:32620
 
 
-.. _`qgisserver-wfs-getfeature-filter`:
+.. _`wfs_getfeature_filter`:
 
 FILTER
 ^^^^^^
@@ -412,7 +412,7 @@ URL example:
   FILTER=<Filter><PropertyIsEqualTo><PropertyName>name</PropertyName><Literal>Paris</Literal></PropertyIsEqualTo></Filter>
 
 
-.. _`qgisserver-wfs-getfeature-bbox`:
+.. _`wfs_getfeature_bbox`:
 
 BBOX
 ^^^^
@@ -444,7 +444,7 @@ result in an exception:
   </ServiceExceptionReport>
 
 
-.. _`qgisserver-wfs-getfeature-sortby`:
+.. _`wfs_getfeature_sortby`:
 
 SORTBY
 ^^^^^^
@@ -506,7 +506,7 @@ The corresponding result:
   </wfs:FeatureCollection>
 
 
-.. _`qgisserver-wfs-getfeature-geometryname`:
+.. _`wfs_getfeature_geometryname`:
 
 GEOMETRYNAME
 ^^^^^^^^^^^^
@@ -530,7 +530,7 @@ URL example:
   &...
 
 
-.. _`qgisserver-wfs-getfeature-startindex`:
+.. _`wfs_getfeature_startindex`:
 
 STARTINDEX
 ^^^^^^^^^^
@@ -554,7 +554,7 @@ URL example:
   &...
 
 
-.. _`qgisserver-wfs-getfeature-expfilter`:
+.. _`wfs_getfeature_expfilter`:
 
 EXP_FILTER
 ^^^^^^^^^^
@@ -572,7 +572,7 @@ URL example:
   EXP_FILTER="name"='Paris'
 
 
-.. _`qgisserver-wfs-describefeaturetype`:
+.. _`wfs_describefeaturetype`:
 
 DescribeFeatureType
 -------------------
@@ -584,11 +584,11 @@ OGC WFS 1.0.0 and 1.1.0 specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`SERVICE <qgisserver-wfs-service>`", "Yes", "Name of the service (**WFS**)"
-   ":ref:`VERSION <qgisserver-wfs-version>`", "No", "Version of the service"
-   ":ref:`REQUEST <qgisserver-wfs-describefeaturetype-request>`", "Yes", "Name of the request (**DescribeFeatureType**)"
-   ":ref:`OUTPUTFORMAT <qgisserver-wfs-getfeature-outputformat>`", "No", "Format of the response"
-   ":ref:`TYPENAME <qgisserver-wfs-describefeaturetype-typename>`", "No", "Name of layer"
+   ":ref:`SERVICE <wfs_service>`", "Yes", "Name of the service (**WFS**)"
+   ":ref:`VERSION <wfs_version>`", "No", "Version of the service"
+   ":ref:`REQUEST <wfs_describefeaturetype_request>`", "Yes", "Name of the request (**DescribeFeatureType**)"
+   ":ref:`OUTPUTFORMAT <wfs_getfeature_outputformat>`", "No", "Format of the response"
+   ":ref:`TYPENAME <wfs_describefeaturetype-typename>`", "No", "Name of layer"
 
 
 In addition to the standard ones, QGIS Server supports the following
@@ -599,10 +599,10 @@ extra parameters:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`MAP <qgisserver-wfs-map>`", "Yes", "Specify the QGIS project file"
+   ":ref:`MAP <wfs_map>`", "Yes", "Specify the QGIS project file"
 
 
-.. _`qgisserver-wfs-describefeaturetype-request`:
+.. _`wfs_describefeaturetype_request`:
 
 REQUEST
 ^^^^^^^
@@ -611,7 +611,7 @@ This parameter is ``DescribeFeatureType`` in case of the
 **DescribeFeatureType** request.
 
 
-.. _`qgisserver-wfs-describefeaturetype-typename`:
+.. _`wfs_describefeaturetype-typename`:
 
 TYPENAME
 ^^^^^^^^
@@ -650,17 +650,17 @@ Output response:
   </schema>
 
 
-.. _`qgisserver-wfs-transaction`:
+.. _`wfs_transaction`:
 
 Transaction
 -----------
 
 This request allows to update, delete or add one or several features thanks to
 a XML document. The
-:ref:`delete <qgisserver-wfs-transaction-delete>` action may be achieved with a POST
-request as well as with the :ref:`OPERATION <qgisserver-wfs-transaction-operation>`
-parameter while the :ref:`add <qgisserver-wfs-transaction-add>` and the
-:ref:`update <qgisserver-wfs-transaction-update>` operations may be achieved through
+:ref:`delete <wfs_transaction-delete>` action may be achieved with a POST
+request as well as with the :ref:`OPERATION <wfs_transaction_operation>`
+parameter while the :ref:`add <wfs_transaction_add>` and the
+:ref:`update <wfs_transaction-update>` operations may be achieved through
 POST request only.
 
 Standard parameters for the **Transaction** request according to the OGC WFS
@@ -670,13 +670,13 @@ Standard parameters for the **Transaction** request according to the OGC WFS
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`SERVICE <qgisserver-wfs-service>`", "Yes", "Name of the service (**WFS**)"
-   ":ref:`VERSION <qgisserver-wfs-version>`", "No", "Version of the service"
-   ":ref:`REQUEST <qgisserver-wfs-transaction-request>`", "Yes", "Name of the request (**Transaction**)"
-   ":ref:`FILTER <qgisserver-wfs-getfeature-filter>`", "No", "OGC Filter Encoding"
-   ":ref:`BBOX <qgisserver-wfs-getfeature-bbox>`", "No", "Map Extent"
-   ":ref:`FEATUREID <qgisserver-wfs-getfeature-featureid>`", "No", "Filter the features by ids"
-   ":ref:`TYPENAME <qgisserver-wfs-getfeature-typename>`", "No", "Name of layers"
+   ":ref:`SERVICE <wfs_service>`", "Yes", "Name of the service (**WFS**)"
+   ":ref:`VERSION <wfs_version>`", "No", "Version of the service"
+   ":ref:`REQUEST <wfs_transaction_request>`", "Yes", "Name of the request (**Transaction**)"
+   ":ref:`FILTER <wfs_getfeature_filter>`", "No", "OGC Filter Encoding"
+   ":ref:`BBOX <wfs_getfeature_bbox>`", "No", "Map Extent"
+   ":ref:`FEATUREID <wfs_getfeature_featureid>`", "No", "Filter the features by ids"
+   ":ref:`TYPENAME <wfs_getfeature_typename>`", "No", "Name of layers"
 
 In addition to the standard ones, QGIS Server supports the following
 extra parameters:
@@ -686,12 +686,12 @@ extra parameters:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`MAP <qgisserver-wfs-map>`", "Yes", "Specify the QGIS project file"
-   ":ref:`OPERATION <qgisserver-wfs-transaction-operation>`", "No", "Specify the operation"
-   ":ref:`EXP_FILTER <qgisserver-wfs-getfeature-expfilter>`", "No", "Expression filtering"
+   ":ref:`MAP <wfs_map>`", "Yes", "Specify the QGIS project file"
+   ":ref:`OPERATION <wfs_transaction_operation>`", "No", "Specify the operation"
+   ":ref:`EXP_FILTER <wfs_getfeature_expfilter>`", "No", "Expression filtering"
 
 
-.. _`qgisserver-wfs-transaction-request`:
+.. _`wfs_transaction_request`:
 
 REQUEST
 ^^^^^^^
@@ -699,7 +699,7 @@ REQUEST
 This parameter is ``Transaction`` in case of the **Transaction** request.
 
 
-.. _`qgisserver-wfs-transaction-operation`:
+.. _`wfs_transaction_operation`:
 
 OPERATION
 ^^^^^^^^^
@@ -722,7 +722,7 @@ URL example:
 
   ``FEATUREID``, ``FILTER`` and ``BBOX`` parameters are mutually exclusive.
 
-.. _`qgisserver-wfs-transaction-add`:
+.. _`wfs_transaction_add`:
 
 Add features
 ^^^^^^^^^^^^
@@ -754,7 +754,7 @@ with the *add.xml* document:
 
 
 
-.. _`qgisserver-wfs-transaction-update`:
+.. _`wfs_transaction-update`:
 
 Update features
 ^^^^^^^^^^^^^^^
@@ -784,7 +784,7 @@ with the *update.xml* document:
   </wfs:Transaction>
 
 
-.. _`qgisserver-wfs-transaction-delete`:
+.. _`wfs_transaction-delete`:
 
 Delete features
 ^^^^^^^^^^^^^^^
