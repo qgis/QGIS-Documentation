@@ -45,6 +45,11 @@ URL example for the **WMS** service:
   SERVICE=WMS
   &...
 
+.. note::
+
+  Not available for REST based services like :ref:`WFS3 (OGC API Features)
+  <ogc_api_features>`.
+
 
 .. _services_basics_request:
 
