@@ -36,9 +36,9 @@ OGC WFS 1.0.0 and 1.1.0 specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`SERVICE <wfs_service>`", "Yes", "Name of the service (**WFS**)"
+   ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WFS**)"
+   ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetCapabilities**)"
    ":ref:`VERSION <wfs_version>`", "No", "Version of the service"
-   ":ref:`REQUEST <wfs_getcapabilities_request>`", "Yes", "Name of the request"
 
 In addition to the standard ones, QGIS Server supports the following
 extra parameters:
@@ -48,23 +48,7 @@ extra parameters:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`MAP <wfs_map>`", "Yes", "Specify the QGIS project file"
-
-
-.. _wfs_service:
-
-SERVICE
-^^^^^^^
-
-This parameter has to be ``WFS`` in case of the **WFS** service.
-
-For example:
-
-.. code-block:: bash
-
-  http://localhost/qgisserver?
-  SERVICE=WFS
-  &...
+   ":ref:`MAP <services_basics_map>`", "Yes", "QGIS project file"
 
 
 .. _wfs_version:
@@ -91,29 +75,6 @@ URL example:
   &...
 
 
-.. _wfs_getcapabilities_request:
-
-REQUEST
-^^^^^^^
-
-This parameter is ``GetCapabilities`` in case of the **GetCapabilities**
-request.
-
-
-.. _wfs_map:
-
-MAP
-^^^
-
-This parameter allows to define the QGIS project file to use and is mandatory
-because a request needs a QGIS project to actually work.
-
-However, the ``QGIS_PROJECT_FILE`` environment variable may be used to define a
-default QGIS project. In this specific case, ``MAP`` is no longer a required
-parameter. For further information you may refer to
-:ref:`server_env_variables`.
-
-
 .. _wfs_getfeature:
 
 GetFeature
@@ -126,9 +87,9 @@ OGC WFS 1.0.0 and 1.1.0 specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`SERVICE <wfs_service>`", "Yes", "Name of the service (**WFS**)"
+   ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WFS**)"
+   ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetFeature**)"
    ":ref:`VERSION <wfs_version>`", "No", "Version of the service"
-   ":ref:`REQUEST <wfs_getfeature_request>`", "Yes", "Name of the request"
    ":ref:`TYPENAME <wfs_getfeature_typename>`", "No", "Name of layers"
    ":ref:`FEATUREID <wfs_getfeature_featureid>`", "No", "Filter the features by ids"
    ":ref:`OUTPUTFORMAT <wfs_getfeature_outputformat>`", "No", "Output Format"
@@ -149,29 +110,10 @@ extra parameters:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`MAP <wfs_map>`", "Yes", "Specify the QGIS project file"
+   ":ref:`MAP <services_basics_map>`", "Yes", "QGIS project file"
    ":ref:`STARTINDEX <wfs_getfeature_startindex>`", "No", "Paging"
    ":ref:`GEOMETRYNAME <wfs_getfeature_geometryname>`", "No", "Type of geometry to return"
    ":ref:`EXP_FILTER <wfs_getfeature_expfilter>`", "No", "Expression filtering"
-
-
-.. _wfs_getfeature_request:
-
-REQUEST
-^^^^^^^
-
-This parameter is ``GetFeature`` in case of the **GetFeature**
-request.
-
-URL example:
-
-.. code-block:: bash
-
-  http://localhost/qgisserver?
-  SERVICE=WFS
-  &VERSION=1.1.0
-  &REQUEST=GetFeature
-  &...
 
 
 .. _wfs_getfeature_typename:
@@ -584,9 +526,9 @@ OGC WFS 1.0.0 and 1.1.0 specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`SERVICE <wfs_service>`", "Yes", "Name of the service (**WFS**)"
+   ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WFS**)"
+   ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**DescribeFeatureType**)"
    ":ref:`VERSION <wfs_version>`", "No", "Version of the service"
-   ":ref:`REQUEST <wfs_describefeaturetype_request>`", "Yes", "Name of the request (**DescribeFeatureType**)"
    ":ref:`OUTPUTFORMAT <wfs_getfeature_outputformat>`", "No", "Format of the response"
    ":ref:`TYPENAME <wfs_describefeaturetype_typename>`", "No", "Name of layer"
 
@@ -594,21 +536,11 @@ OGC WFS 1.0.0 and 1.1.0 specifications:
 In addition to the standard ones, QGIS Server supports the following
 extra parameters:
 
-
 .. csv-table::
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`MAP <wfs_map>`", "Yes", "Specify the QGIS project file"
-
-
-.. _wfs_describefeaturetype_request:
-
-REQUEST
-^^^^^^^
-
-This parameter is ``DescribeFeatureType`` in case of the
-**DescribeFeatureType** request.
+   ":ref:`MAP <services_basics_map>`", "Yes", "QGIS project file"
 
 
 .. _wfs_describefeaturetype_typename:
@@ -670,9 +602,9 @@ Standard parameters for the **Transaction** request according to the OGC WFS
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`SERVICE <wfs_service>`", "Yes", "Name of the service (**WFS**)"
+   ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WFS**)"
+   ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**Transaction**)"
    ":ref:`VERSION <wfs_version>`", "No", "Version of the service"
-   ":ref:`REQUEST <wfs_transaction_request>`", "Yes", "Name of the request (**Transaction**)"
    ":ref:`FILTER <wfs_getfeature_filter>`", "No", "OGC Filter Encoding"
    ":ref:`BBOX <wfs_getfeature_bbox>`", "No", "Map Extent"
    ":ref:`FEATUREID <wfs_getfeature_featureid>`", "No", "Filter the features by ids"
@@ -686,17 +618,9 @@ extra parameters:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`MAP <wfs_map>`", "Yes", "Specify the QGIS project file"
+   ":ref:`MAP <services_basics_map>`", "Yes", "QGIS project file"
    ":ref:`OPERATION <wfs_transaction_operation>`", "No", "Specify the operation"
    ":ref:`EXP_FILTER <wfs_getfeature_expfilter>`", "No", "Expression filtering"
-
-
-.. _wfs_transaction_request:
-
-REQUEST
-^^^^^^^
-
-This parameter is ``Transaction`` in case of the **Transaction** request.
 
 
 .. _wfs_transaction_operation:
