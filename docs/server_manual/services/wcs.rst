@@ -21,7 +21,7 @@ Standard requests provided by QGIS Server:
    ":ref:`GetCoverage <wcs_getcoverage>`", "Retrieves coverage"
 
 
-.. _`wcs_getcapabilities`:
+.. _wcs_getcapabilities:
 
 GetCapabilities
 ---------------
@@ -81,7 +81,7 @@ service:
   </WCS_Capabilities>
 
 
-.. _`wcs_service`:
+.. _wcs_service:
 
 SERVICE
 ^^^^^^^
@@ -89,7 +89,7 @@ SERVICE
 This parameter has to be ``WCS``.
 
 
-.. _`wcs_getcapabilities_request`:
+.. _wcs_getcapabilities_request:
 
 REQUEST
 ^^^^^^^
@@ -98,7 +98,7 @@ This parameter is ``GetCapabilities`` in case of the **GetCapabilities**
 request.
 
 
-.. _`wcs_version`:
+.. _wcs_version:
 
 VERSION
 ^^^^^^^
@@ -107,7 +107,7 @@ This parameter allows to specify the version of the service to use. Currently,
 the version values is not internally used and always fallback to ``1.1.1``.
 
 
-.. _`wcs-map`:
+.. _wcs-map:
 
 MAP
 ^^^
@@ -119,7 +119,7 @@ project. In this specific case, ``MAP`` is not longer a required parameter.
 For further information you may refer to :ref:`server_env_variables`.
 
 
-.. _`wcs_describecoverage`:
+.. _wcs_describecoverage:
 
 DescribeCoverage
 ----------------
@@ -189,7 +189,7 @@ The XML document for a 3 bands GeoTIFF raster layer looks like:
   </CoverageDescription>
 
 
-.. _`wcs_describecoverage_coverage`:
+.. _wcs_describecoverage_coverage:
 
 COVERAGE
 ^^^^^^^^
@@ -215,7 +215,7 @@ defined, then it's used by default instead of the layer's name:
   ``COVERAGE`` is mandatory if ``IDENTIFIER`` is not set.
 
 
-.. _`wcs_describecoverage_identifier`:
+.. _wcs_describecoverage_identifier:
 
 IDENTIFIER
 ^^^^^^^^^^
@@ -231,7 +231,7 @@ parameter in WCS ``1.1.1``. But QGIS Server does not filter according to the
   always used in priority.
 
 
-.. _`wcs_getcoverage`:
+.. _wcs_getcoverage:
 
 GetCoverage
 -----------
@@ -265,7 +265,7 @@ parameters:
    ":ref:`MAP <wcs-map>`", "Yes", "Specify the QGIS project file"
 
 
-.. _`wcs_getcoverage_request`:
+.. _wcs_getcoverage_request:
 
 REQUEST
 ^^^^^^^
@@ -273,7 +273,7 @@ REQUEST
 This parameter is ``GetCoverage`` in case of the **GetCoverage** request.
 
 
-.. _`wcs_getcoverage_bbox`:
+.. _wcs_getcoverage_bbox:
 
 BBOX
 ^^^^
@@ -294,7 +294,7 @@ URL example:
   &CRS=EPSG:32620
 
 
-.. _`wcs_getcoverage_crs`:
+.. _wcs_getcoverage_crs:
 
 CRS
 ^^^
@@ -303,7 +303,7 @@ This parameter allows to indicate the  Spatial Reference System of the ``BBOX``
 parameter and has to be formed like ``EPSG:XXXX``.
 
 
-.. _`wcs_getcoverage_responsecrs`:
+.. _wcs_getcoverage_responsecrs:
 
 RESPONSE_CRS
 ^^^^^^^^^^^^
@@ -313,7 +313,7 @@ and has to be formed like ``EPSG:XXXX``. The CRS of the corresponding coverage
 layer is used by default.
 
 
-.. _`wcs_getcoverage_width`:
+.. _wcs_getcoverage_width:
 
 WIDTH
 ^^^^^
@@ -322,7 +322,7 @@ This parameter allows to specify the width in pixels of the output image. The
 resolution of the response image depends on this value.
 
 
-.. _`wcs_getcoverage_height`:
+.. _wcs_getcoverage_height:
 
 HEIGHT
 ^^^^^^

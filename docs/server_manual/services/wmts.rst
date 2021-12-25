@@ -16,12 +16,12 @@ Standard requests provided by QGIS Server:
    :header: "Request", "Description"
    :widths: auto
 
-   ":ref:`GetCapabilities <qgisserver-wmts-getcapabilities>`", "Returns XML metadata with information about the server"
-   ":ref:`GetTile <qgisserver-wmts-gettile>`", "Returns a tile"
-   ":ref:`GetFeatureInfo <qgisserver-wmts-getfeatureinfo>`", "Retrieves data (geometry and values) for a pixel location"
+   ":ref:`GetCapabilities <wmts_getcapabilities>`", "Returns XML metadata with information about the server"
+   ":ref:`GetTile <wmts_gettile>`", "Returns a tile"
+   ":ref:`GetFeatureInfo <wmts_getfeatureinfo>`", "Retrieves data (geometry and values) for a pixel location"
 
 
-.. _`qgisserver-wmts-getcapabilities`:
+.. _wmts_getcapabilities:
 
 GetCapabilities
 ---------------
@@ -33,8 +33,8 @@ the OGC WMTS 1.0.0 specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`SERVICE <qgisserver-wmts-service>`", "Yes", "Name of the service (**WMTS**)"
-   ":ref:`REQUEST <qgisserver-wmts-getcapabilities-request>`", "Yes", "Name of the request (**GetCapabilities**)"
+   ":ref:`SERVICE <wmts_service>`", "Yes", "Name of the service (**WMTS**)"
+   ":ref:`REQUEST <wmts_getcapabilities_request>`", "Yes", "Name of the request (**GetCapabilities**)"
 
 
 In addition to the standard ones, QGIS Server supports the following extra
@@ -45,20 +45,20 @@ parameters:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`MAP <qgisserver-wmts-map>`", "Yes", "Specify the QGIS project file"
+   ":ref:`MAP <wmts_map>`", "Yes", "Specify the QGIS project file"
 
 
 URL example:
 
 .. code-block:: bash
 
-  http://localhost/qgisserver?
+  http://localhost/?
   SERVICE=WMTS
   &REQUEST=GetCapabilities
   &MAP=/home/qgis/projects/world.qgs
 
 
-.. _`qgisserver-wmts-service`:
+.. _wmts_service:
 
 SERVICE
 ^^^^^^^
@@ -66,7 +66,7 @@ SERVICE
 This parameter has to be ``WMTS`` in case of the **WMTS** service.
 
 
-.. _`qgisserver-wmts-getcapabilities-request`:
+.. _wmts_getcapabilities_request:
 
 REQUEST
 ^^^^^^^
@@ -74,7 +74,7 @@ REQUEST
 This parameter is ``GetCapabilities`` in case of the
 **GetCapabilities** request.
 
-.. _`qgisserver-wmts-map`:
+.. _wmts_map:
 
 MAP
 ^^^
@@ -86,7 +86,7 @@ project.  In this specific case, ``MAP`` is no longer a required parameter.
 For further information you may refer to :ref:`server_env_variables`.
 
 
-.. _`qgisserver-wmts-gettile`:
+.. _wmts_gettile:
 
 GetTile
 -------
@@ -98,14 +98,14 @@ OGC WMTS 1.0.0 specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`SERVICE <qgisserver-wmts-service>`", "Yes", "Name of the service (**WMTS**)"
-   ":ref:`REQUEST <qgisserver-wmts-gettile-request>`", "Yes", "Name of the request (**GetTile**)"
-   ":ref:`LAYER <qgisserver-wmts-gettile-layer>`", "Yes", "Layer identifier"
-   ":ref:`FORMAT <qgisserver-wmts-gettile-format>`", "Yes", "Output format of the tile"
-   ":ref:`TILEMATRIXSET <qgisserver-wmts-gettile-tilematrixset>`", "Yes", "Name of the pyramid"
-   ":ref:`TILEMATRIX <qgisserver-wmts-gettile-tilematrix>`", "Yes", "Meshing"
-   ":ref:`TILEROW <qgisserver-wmts-gettile-tilerow>`", "Yes", "Row coordinate in the mesh"
-   ":ref:`TILECOL <qgisserver-wmts-gettile-tilecol>`", "Yes", "Column coordinate in the mesh"
+   ":ref:`SERVICE <wmts_service>`", "Yes", "Name of the service (**WMTS**)"
+   ":ref:`REQUEST <wmts_gettile_request>`", "Yes", "Name of the request (**GetTile**)"
+   ":ref:`LAYER <wmts_gettile_layer>`", "Yes", "Layer identifier"
+   ":ref:`FORMAT <wmts_gettile_format>`", "Yes", "Output format of the tile"
+   ":ref:`TILEMATRIXSET <wmts_gettile_tilematrixset>`", "Yes", "Name of the pyramid"
+   ":ref:`TILEMATRIX <wmts_gettile_tilematrix>`", "Yes", "Meshing"
+   ":ref:`TILEROW <wmts_gettile_tilerow>`", "Yes", "Row coordinate in the mesh"
+   ":ref:`TILECOL <wmts_gettile_tilecol>`", "Yes", "Column coordinate in the mesh"
 
 
 In addition to the standard ones, QGIS Server supports the following
@@ -116,14 +116,14 @@ extra parameters:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`MAP <qgisserver-wmts-map>`", "Yes", "Specify the QGIS project file"
+   ":ref:`MAP <wmts_map>`", "Yes", "Specify the QGIS project file"
 
 
 URL example:
 
 .. code-block:: bash
 
-  http://localhost/qgisserver?
+  http://localhost/?
   SERVICE=WMTS
   &REQUEST=GetTile
   &MAP=/home/qgis/projects/world.qgs
@@ -134,7 +134,7 @@ URL example:
   &TILECOL=0
 
 
-.. _`qgisserver-wmts-gettile-request`:
+.. _wmts_gettile_request:
 
 REQUEST
 ^^^^^^^
@@ -142,7 +142,7 @@ REQUEST
 This parameter is ``GetTile`` in case of the **GetTile** request.
 
 
-.. _`qgisserver-wmts-gettile-layer`:
+.. _wmts_gettile_layer:
 
 LAYER
 ^^^^^
@@ -161,7 +161,7 @@ name is defined, then it's used by default instead of the layer's name:
 
 .. code-block:: bash
 
-  http://localhost/qgisserver?
+  http://localhost/?
   SERVICE=WMTS
   &REQUEST=GetTile
   &LAYER=mynickname
@@ -175,14 +175,14 @@ selected.
 
 .. code-block:: bash
 
-  http://localhost/qgisserver?
+  http://localhost/?
   SERVICE=WMTS
   &REQUEST=GetTile
   &LAYER=mylayerid1
   &...
 
 
-.. _`qgisserver-wmts-gettile-format`:
+.. _wmts_gettile_format:
 
 FORMAT
 ^^^^^^
@@ -199,7 +199,7 @@ If the ``FORMAT`` parameter is different from one of these values, then
 the default format PNG is used instead.
 
 
-.. _`qgisserver-wmts-gettile-tilematrixset`:
+.. _wmts_gettile_tilematrixset:
 
 TILEMATRIXSET
 ^^^^^^^^^^^^^
@@ -208,7 +208,7 @@ This parameter defines the CRS to use when computing the underlying
 pyramid. Format: ``EPSG:XXXX``.
 
 
-.. _`qgisserver-wmts-gettile-tilematrix`:
+.. _wmts_gettile_tilematrix:
 
 TILEMATRIX
 ^^^^^^^^^^
@@ -216,7 +216,7 @@ TILEMATRIX
 This parameter allows to define the matrix to use for the output tile.
 
 
-.. _`qgisserver-wmts-gettile-tilerow`:
+.. _wmts_gettile_tilerow:
 
 TILEROW
 ^^^^^^^
@@ -225,7 +225,7 @@ This parameter allows to select the row of the tile to get within the
 matrix.
 
 
-.. _`qgisserver-wmts-gettile-tilecol`:
+.. _wmts_gettile_tilecol:
 
 TILECOL
 ^^^^^^^
@@ -235,7 +235,7 @@ the matrix.
 
 
 
-.. _`qgisserver-wmts-getfeatureinfo`:
+.. _wmts_getfeatureinfo:
 
 GetFeatureInfo
 --------------
@@ -247,16 +247,16 @@ the OGC WMTS 1.0.0 specification:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`SERVICE <qgisserver-wmts-service>`", "Yes", "Name of the service (**WMTS**)"
-   ":ref:`REQUEST <qgisserver-wmts-getfeatureinfo-request>`", "Yes", "Name of the request (**GetFeatureInfo**)"
-   ":ref:`LAYER <qgisserver-wmts-getfeatureinfo-layer>`", "Yes", "Layer identifier"
-   ":ref:`INFOFORMAT <qgisserver-wmts-getfeatureinfo-infoformat>`", "No", "Output format"
-   ":ref:`I <qgisserver-wmts-getfeatureinfo-i>`", "No", "X coordinate of a pixel"
-   ":ref:`J <qgisserver-wmts-getfeatureinfo-j>`", "No", "Y coordinate of a pixel"
-   ":ref:`TILEMATRIXSET <qgisserver-wmts-gettile-tilematrixset>`", "Yes", "Name of the pyramid"
-   ":ref:`TILEMATRIX <qgisserver-wmts-gettile-tilematrix>`", "Meshing"
-   ":ref:`TILEROW <qgisserver-wmts-gettile-tilerow>`", "Yes", "Row coordinate in the mesh"
-   ":ref:`TILECOL <qgisserver-wmts-gettile-tilecol>`", "Yes", "Column coordinate in the mesh"
+   ":ref:`SERVICE <wmts_service>`", "Yes", "Name of the service (**WMTS**)"
+   ":ref:`REQUEST <wmts_getfeatureinfo_request>`", "Yes", "Name of the request (**GetFeatureInfo**)"
+   ":ref:`LAYER <wmts_getfeatureinfo_layer>`", "Yes", "Layer identifier"
+   ":ref:`INFOFORMAT <wmts_getfeatureinfo_infoformat>`", "No", "Output format"
+   ":ref:`I <wmts_getfeatureinfo_i>`", "No", "X coordinate of a pixel"
+   ":ref:`J <wmts_getfeatureinfo_j>`", "No", "Y coordinate of a pixel"
+   ":ref:`TILEMATRIXSET <wmts_gettile_tilematrixset>`", "Yes", "Name of the pyramid"
+   ":ref:`TILEMATRIX <wmts_gettile_tilematrix>`", "Meshing"
+   ":ref:`TILEROW <wmts_gettile_tilerow>`", "Yes", "Row coordinate in the mesh"
+   ":ref:`TILECOL <wmts_gettile_tilecol>`", "Yes", "Column coordinate in the mesh"
 
 
 In addition to the standard ones, QGIS Server supports the following
@@ -267,14 +267,14 @@ extra parameters:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`MAP <qgisserver-wmts-map>`", "Yes", "Specify the QGIS project file"
+   ":ref:`MAP <wmts_map>`", "Yes", "Specify the QGIS project file"
 
 
 URL example:
 
 .. code-block:: bash
 
-  http://localhost/qgisserver?
+  http://localhost/?
   SERVICE=WMTS
   &REQUEST=GetFeatureInfo
   &MAP=/home/qgis/projects/world.qgs
@@ -284,7 +284,7 @@ URL example:
   &J=5
 
 
-.. _`qgisserver-wmts-getfeatureinfo-request`:
+.. _wmts_getfeatureinfo_request:
 
 REQUEST
 ^^^^^^^
@@ -292,7 +292,7 @@ REQUEST
 This parameter is ``GetFeatureInfo`` in case of the **GetFeatureInfo** request.
 
 
-.. _`qgisserver-wmts-getfeatureinfo-layer`:
+.. _wmts_getfeatureinfo_layer:
 
 LAYER
 ^^^^^
@@ -311,7 +311,7 @@ name:
 
 .. code-block:: bash
 
-  http://localhost/qgisserver?
+  http://localhost/?
   SERVICE=WMTS
   &REQUEST=GetFeatureInfo
   &LAYER=mynickname
@@ -325,14 +325,14 @@ selected.
 
 .. code-block:: bash
 
-  http://localhost/qgisserver?
+  http://localhost/?
   SERVICE=WMTS
   &REQUEST=GetFeatureInfo
   &LAYER=mylayerid1
   &...
 
 
-.. _`qgisserver-wmts-getfeatureinfo-infoformat`:
+.. _wmts_getfeatureinfo_infoformat:
 
 INFOFORMAT
 ^^^^^^^^^^
@@ -348,7 +348,7 @@ Available values are:
 The default value is ``text/plain``.
 
 
-.. _`qgisserver-wmts-getfeatureinfo-i`:
+.. _wmts_getfeatureinfo_i:
 
 I
 ^
@@ -357,7 +357,7 @@ This parameter allows to define the X coordinate of the pixel for
 which we want to retrieve underlying information.
 
 
-.. _`qgisserver-wmts-getfeatureinfo-j`:
+.. _wmts_getfeatureinfo_j:
 
 J
 ^
