@@ -33,7 +33,7 @@ Vendor requests provided by QGIS Server:
    :header: "Request", "Description"
    :widths: auto
 
-   ":ref:`GetPrint <wms_getprint>`", "Returns a QGIS composition"
+   ":ref:`GetPrint <wms_getprint>`", "Returns a QGIS layout"
    ":ref:`GetProjectSettings <wms_getprojectsettings>`", "Returns specific information about QGIS Server"
    ":ref:`GetSchemaExtension <wms_getschemaextension>`", "Returns XML metadata about optional extended capabilities"
 
