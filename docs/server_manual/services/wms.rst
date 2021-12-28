@@ -1770,7 +1770,7 @@ GetProjectSettings
 
 This request type works similar to :ref:`GetCapabilities
 <wms_getcapabilities>`, but it is more specific to QGIS Server and allows a
-client to read additional information which is not available in the
+client to read additional information which are not available in the
 :ref:`GetCapabilities <wms_getcapabilities>` output:
 
 * initial visibility of layers
