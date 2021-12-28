@@ -815,7 +815,7 @@ and item labels:
    ":ref:`SRCWIDTH <wms_getlegendgraphics_srcwidth>`", "No", "Map width"
    ":ref:`SRCHEIGHT <wms_getlegendgraphics_srcheight>`", "No", "Map height"
    ":ref:`SHOWFEATURECOUNT <wms_getlegendgraphics_showfeaturecount>`", "No", "Add feature count of features"
-   ":ref:`RULE <wms_getlegendgraphics_rule>`", "No", ""
+   ":ref:`RULE <wms_getlegendgraphics_rule>`", "No", "Rule symbol to render"
    ":ref:`RULELABEL <wms_getlegendgraphics_rulelabel>`", "No", "Item labels rendering"
    ":ref:`BOXSPACE <wms_getlegendgraphics_boxspace>`", "No", "Space between legend frame and content (mm)"
    ":ref:`LAYERSPACE <wms_getlegendgraphics_layerspace>`", "No", "Vertical space between layers (mm)"
