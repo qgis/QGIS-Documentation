@@ -112,6 +112,7 @@ URL example to save an XML **GetCapabilities** document:
   SERVICE=WMS
   &REQUEST=GetCapabilities
   &FILE_FORMAT=wms_capabilities.xml
+  &...
 
 
 .. note::
