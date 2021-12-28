@@ -11,7 +11,7 @@ steps to easily and efficiently contribute to QGIS code.
 
 .. toctree::
     :maxdepth: 1
-    :numbered:
+    :numbered: 3
 
     codingstandards
     hig
