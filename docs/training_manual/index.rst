@@ -7,7 +7,7 @@ QGIS Training Manual
 
 .. toctree::
    :maxdepth: 2
-   :numbered:
+   :numbered: 3
 
    foreword/index
    basic_map/index
