@@ -243,7 +243,7 @@ Returns a geometry that represents all points whose distance from this geometry 
    :widths: 15 85
 
    * - Syntax
-     - buffer(geometry, distance, [segments=8], [cap=8], [join='round'], [miter_limit=2])
+     - buffer(geometry, distance, [segments=8], [cap='round'], [join='round'], [miter_limit=2])
 
        [] marks optional arguments
    * - Arguments

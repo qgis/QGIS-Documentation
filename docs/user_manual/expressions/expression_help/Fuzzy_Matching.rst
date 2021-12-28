@@ -25,6 +25,7 @@ Returns the Hamming distance between two strings. This equates to the number of 
      - * ``hamming_distance('abc','xec')`` → 2
        * ``hamming_distance('abc','ABc')`` → 2
        * ``hamming_distance(upper('abc'),upper('ABC'))`` → 0
+       * ``hamming_distance('abc','abcd')`` → NULL
 
 
 .. end_hamming_distance_section
