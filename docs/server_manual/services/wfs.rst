@@ -530,7 +530,7 @@ OGC WFS 1.0.0 and 1.1.0 specifications:
    ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**DescribeFeatureType**)"
    ":ref:`VERSION <wfs_version>`", "No", "Version of the service"
    ":ref:`OUTPUTFORMAT <wfs_getfeature_outputformat>`", "No", "Format of the response"
-   ":ref:`TYPENAME <wfs_describefeaturetype_typename>`", "No", "Name of layer"
+   ":ref:`TYPENAME <wfs_getfeature_typename>`", "No", "Name of layers"
 
 
 In addition to the standard ones, QGIS Server supports the following
@@ -542,14 +542,6 @@ extra parameters:
 
    ":ref:`MAP <services_basics_map>`", "Yes", "QGIS project file"
 
-
-.. _wfs_describefeaturetype_typename:
-
-TYPENAME
-^^^^^^^^
-
-This parameter allows to specify layer names. Names have to be separated by a
-comma.
 
 URL example:
 
