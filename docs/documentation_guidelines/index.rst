@@ -29,7 +29,7 @@ project, you may find help at `Get Involved in the QGIS Community
 
 .. toctree::
    :maxdepth: 2
-   :numbered:
+   :numbered: 3
 
    first_contribution
    writing
