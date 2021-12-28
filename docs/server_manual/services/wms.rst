@@ -429,8 +429,28 @@ OPACITIES
 
 Comma separated list of opacity values.
 Opacity can be set on layer or group level. Allowed values range from
-0 (fully transparent) to 255 (fully opaque).
+``0`` (fully transparent) to ``255`` (fully opaque).
 
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WMS
+  &REQUEST=GetMap
+  &VERSION=1.3.0
+  &WIDTH=400
+  &HEIGHT=200
+  &CRS=EPSG:4326
+  &LAYERS=countries,places
+  &BBOX=42,-6,52,15
+  &OPACITIES=255,0
+
+
+.. figure:: ../img/wms_getmap_opacities.png
+  :align: center
+
+  To the left ``OPACITIES=255,0`` and to the right ``OPACITIES=255,255``
 
 .. _wms_filter:
 
