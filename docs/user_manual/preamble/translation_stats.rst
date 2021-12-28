@@ -6,7 +6,7 @@
 Statistics of translation
 ===========================
 
-*(last update: 2021-12-21)*
+*(last update: 2021-12-28)*
 
 .. list-table::
    :widths: auto
@@ -15,8 +15,8 @@ Statistics of translation
      - Number of target languages
      - Overall Translation ratio
    * - **32018**
-     - **58**
-     - **12.12%**
+     - **59**
+     - **11.93%**
 
 
 
@@ -46,7 +46,7 @@ Statistics of translation
      - Catalan
      - 1.53
      - Chinese Simplified
-     - 1.82
+     - 1.81
    * - Chinese Traditional
      - 0.69
      - Croatian
@@ -58,11 +58,11 @@ Statistics of translation
      - Dutch
      - 100.0
      - Estonian
-     - 1.32
+     - 1.31
    * - Finnish
      - 1.83
      - French
-     - 99.1
+     - 99.09
      - Galician
      - 0.6
    * - Georgian
@@ -76,19 +76,19 @@ Statistics of translation
      - Hindi
      - 0.31
      - Hungarian
-     - 3.64
+     - 4.3
    * - Igbo
      - 0.01
      - Indonesian
      - 2.8
      - Italian
-     - 89.96
+     - 89.95
    * - Japanese
      - 64.99
      - Kabyle
      - 0.11
      - Korean
-     - 86.35
+     - 86.66
    * - Lao
      - 0.0
      - Lithuanian
@@ -107,46 +107,46 @@ Statistics of translation
      - 1.84
      - Norwegian Bokmål
      - 3.36
-   * - Persian
+   * - Panjabi (Punjabi)
+     - 0.0
+     - Persian
      - 0.48
      - Polish
      - 1.87
-     - Portuguese (Brazil)
-     - 37.38
-   * - Portuguese (Portugal)
+   * - Portuguese (Brazil)
+     - 37.37
+     - Portuguese (Portugal)
      - 8.59
      - Romanian
      - 30.68
-     - Russian
+   * - Russian
      - 15.1
-   * - Serbian
+     - Serbian
      - 0.12
      - Slovak
      - 0.84
-     - Slovenian
+   * - Slovenian
      - 3.23
-   * - Spanish
+     - Spanish
      - 92.05
      - Swedish
      - 1.16
-     - Tagalog
+   * - Tagalog
      - 0.1
-   * - Tamil
+     - Tamil
      - 0.52
      - Telugu
      - 0.03
-     - Thai
+   * - Thai
      - 0.12
-   * - Turkish
+     - Turkish
      - 2.85
      - Ukrainian
-     - 2.4
-     - Urdu
+     - 2.39
+   * - Urdu
      - 0.0
-   * - Vietnamese
+     - Vietnamese
      - 0.34
-     -
-     -
      -
      -
 
