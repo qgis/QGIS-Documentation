@@ -1,4 +1,4 @@
-|LS| Serving WMS
+RRc| Serving WMS
 ===============================================================================
 
 The data used for this exercise are available in the :file:`qgis-server-tutorial-data`
@@ -166,8 +166,8 @@ returned image type to ``image/png``.
 |moderate| |FA| Use Filter, Opacities and Styles parameters
 -------------------------------------------------------------------------------
 
-Let's do another request that adds another layer, some of the
-:ref:`basics parameters <services_basics>`, **FILTER** and **OPACITIES**, but also
+Let's do another request that adds another layer, some
+:ref:`basic parameters <services_basics>`, **FILTER** and **OPACITIES**, but also
 uses the standard STYLES parameter.
 
 .. code-block:: bash
@@ -200,9 +200,9 @@ to render only **Germany** and **Italy** from the countries layer.
 |moderate| |FA| Use Redlining
 -------------------------------------------------------------------------------
 
-Let's do another GetMap request that makes use of the :ref:`wms_redlining`
-feature and of the **SELECTION** parameter detailed in the
-:ref:`services_basics` section:
+Let's do another GetMap request that makes use of the :ref:`redlining
+<wms_redlining>` feature and of the **SELECTION** parameter detailed in the
+:ref:`Basics <services_basics>` section:
 
 .. code-block:: bash
 
