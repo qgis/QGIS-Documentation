@@ -179,7 +179,7 @@ In addition, QGIS Server introduced some options to select layers by:
 The project option allowing to select layers by their
 id is in :menuselection:`OWS Server --> WMS capabilities` menu of the
 :menuselection:`Project --> Properties...` dialog.
-To activate this option, the checkbox
+Check the :guilabel:`Use layer ids as names` checkbox to activate this option.
 :guilabel:`Use layer ids as names` has to be selected.
 
 .. code-block:: bash
