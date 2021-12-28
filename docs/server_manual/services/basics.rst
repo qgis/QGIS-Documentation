@@ -104,7 +104,7 @@ FILE_NAME
 If this vendor parameter is set, the server response will be sent to the client
 as a file attachment with the specified file name.
 
-URL example to save a XML **GetCapabilities** document:
+URL example to save an XML **GetCapabilities** document:
 
 .. code-block:: bash
 
