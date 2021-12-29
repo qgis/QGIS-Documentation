@@ -136,6 +136,15 @@ Polygon Layers
 * Display of the |checkbox| :guilabel:`Edges` of the symbols can be enabled
   and assigned a :guilabel:`Width` and :guilabel:`Color`.
 
+.. hint:: **Combination for best rendering of 3D data**
+
+ :guilabel:`Culling mode`, :guilabel:`Add back faces` and :guilabel:`Invert normals`
+ are all meant to fix the look of 3D data if it does not look right. 
+ Typically when loading some data, it is best to first try ``culling mode=back``
+ and ``add back faces=disabled`` - it is the most efficient.
+ If the rendering does not look correct, try ``add back faces=enabled`` and
+ keep ``culling mode=no culling``. Other combinations are more advanced and
+ useful only in some scenarios based on how mixed up is the input dataset.
 
 .. _shading_texture:
 
