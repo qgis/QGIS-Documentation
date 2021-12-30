@@ -126,11 +126,12 @@ URL example to save an XML **GetCapabilities** document:
 Short name
 ----------
 
-A number of elements have both a ``<Name>`` and a ``<Title>``.  The **Name** is
-a text string used for machine-to-machine communication while the **Title** is
+A number of elements have both a **short name** and a **title**. The short name
+is a text string used for machine-to-machine communication while the title is
 for the benefit of humans. For example, a dataset might have the descriptive
 title *“Maximum Atmospheric Temperature”* and be requested using the
-abbreviated name *“ATMAX”*. You can set title, short name and abstract for:
+abbreviated short name *“ATMAX”*. You can set title, short name and abstract
+for:
 
 * **Layers**: right-click on a layer and choose
   :menuselection:`Properties... --> QGIS Server --> Description`.
@@ -160,5 +161,3 @@ QGIS Server. For example with the standard ``LAYERS`` parameter:
   &REQUEST=GetMap
   &LAYERS=shortname1,shortname2
   &...
-
-
