@@ -1,4 +1,4 @@
-RRc| Serving WMS
+|LS| Serving WMS
 ===============================================================================
 
 The data used for this exercise are available in the :file:`qgis-server-tutorial-data`
