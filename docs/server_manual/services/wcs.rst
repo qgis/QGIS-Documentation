@@ -16,12 +16,12 @@ Standard requests provided by QGIS Server:
    :header: "Request", "Description"
    :widths: auto
 
-   ":ref:`GetCapabilities <qgisserver_wcs_getcapabilities>`", "Returns XML metadata with information about the server"
-   ":ref:`DescribeCoverage <qgisserver_wcs_describecoverage>`", "Retrieves XML document about additional information about coverages"
-   ":ref:`GetCoverage <qgisserver_wcs_getcoverage>`", "Retrieves coverage"
+   ":ref:`GetCapabilities <wcs_getcapabilities>`", "Returns XML metadata with information about the server"
+   ":ref:`DescribeCoverage <wcs_describecoverage>`", "Retrieves XML document about additional information about coverages"
+   ":ref:`GetCoverage <wcs_getcoverage>`", "Retrieves coverage"
 
 
-.. _`qgisserver_wcs_getcapabilities`:
+.. _wcs_getcapabilities:
 
 GetCapabilities
 ---------------
@@ -33,9 +33,9 @@ WCS 1.1.1 specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`SERVICE <wcs_service>`", "Yes", "Name of the service (**WCS**)"
+   ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WCS**)"
+   ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetCapabilities**)"
    ":ref:`VERSION <wcs_version>`", "No", "Version of the service"
-   ":ref:`REQUEST <wcs_getcapabilities_request>`", "Yes", "Name of the request (**GetCapabilities**)"
 
 In addition to the standard ones, QGIS Server supports the following extra
 parameters:
@@ -44,7 +44,7 @@ parameters:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`MAP <wcs-map>`", "Yes", "Specify the QGIS project file"
+   ":ref:`MAP <services_basics_map>`", "Yes", "QGIS project file"
 
 URL example:
 
@@ -81,24 +81,7 @@ service:
   </WCS_Capabilities>
 
 
-.. _`wcs_service`:
-
-SERVICE
-^^^^^^^
-
-This parameter has to be ``WCS``.
-
-
-.. _`wcs_getcapabilities_request`:
-
-REQUEST
-^^^^^^^
-
-This parameter is ``GetCapabilities`` in case of the **GetCapabilities**
-request.
-
-
-.. _`wcs_version`:
+.. _wcs_version:
 
 VERSION
 ^^^^^^^
@@ -107,19 +90,7 @@ This parameter allows to specify the version of the service to use. Currently,
 the version values is not internally used and always fallback to ``1.1.1``.
 
 
-.. _`wcs-map`:
-
-MAP
-^^^
-
-This parameter allows to define the QGIS project file to use and is mandatory
-because a request needs a QGIS project to actually work.  However, the
-``QGIS_PROJECT_FILE`` environment variable may be used to define a default QGIS
-project. In this specific case, ``MAP`` is not longer a required parameter.
-For further information you may refer to :ref:`server_env_variables`.
-
-
-.. _`qgisserver_wcs_describecoverage`:
+.. _wcs_describecoverage:
 
 DescribeCoverage
 ----------------
@@ -133,9 +104,9 @@ specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`SERVICE <wcs_service>`", "Yes", "Name of the service (**WCS**)"
+   ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WCS**)"
+   ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**DescribeCoverage**)"
    ":ref:`VERSION <wcs_version>`", "No", "Version of the service"
-   ":ref:`REQUEST <wcs_getcapabilities_request>`", "Yes", "Name of the request (**GetCapabilities**)"
    ":ref:`COVERAGE <wcs_describecoverage_coverage>`", "No", "Specify coverage layers (WCS 1.0.0)"
    ":ref:`IDENTIFIER <wcs_describecoverage_identifier>`", "No", "Specify coverage layers (WCS 1.1.1)"
 
@@ -146,7 +117,7 @@ parameters:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`MAP <wcs-map>`", "Yes", "Specify the QGIS project file"
+   ":ref:`MAP <services_basics_map>`", "Yes", "QGIS project file"
 
 The XML document for a 3 bands GeoTIFF raster layer looks like:
 
@@ -189,7 +160,7 @@ The XML document for a 3 bands GeoTIFF raster layer looks like:
   </CoverageDescription>
 
 
-.. _`wcs_describecoverage_coverage`:
+.. _wcs_describecoverage_coverage:
 
 COVERAGE
 ^^^^^^^^
@@ -215,7 +186,7 @@ defined, then it's used by default instead of the layer's name:
   ``COVERAGE`` is mandatory if ``IDENTIFIER`` is not set.
 
 
-.. _`wcs_describecoverage_identifier`:
+.. _wcs_describecoverage_identifier:
 
 IDENTIFIER
 ^^^^^^^^^^
@@ -231,7 +202,7 @@ parameter in WCS ``1.1.1``. But QGIS Server does not filter according to the
   always used in priority.
 
 
-.. _`qgisserver_wcs_getcoverage`:
+.. _wcs_getcoverage:
 
 GetCoverage
 -----------
@@ -244,9 +215,9 @@ request according to the OGC WCS 1.1.1 specifications:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`SERVICE <wcs_service>`", "Yes", "Name of the service (**WCS**)"
+   ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WCS**)"
+   ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetCoverage**)"
    ":ref:`VERSION <wcs_version>`", "No", "Version of the service"
-   ":ref:`REQUEST <wcs_getcoverage_request>`", "Yes", "Name of the request (**GetCoverage**)"
    ":ref:`COVERAGE <wcs_describecoverage_coverage>`", "No", "Specify coverage layers (WCS 1.0.0)"
    ":ref:`IDENTIFIER <wcs_describecoverage_identifier>`", "No", "Specify coverage layers (WCS 1.1.1)"
    ":ref:`WIDTH <wcs_getcoverage_width>`", "Yes", "Width of the response in pixels"
@@ -262,18 +233,10 @@ parameters:
    :header: "Parameter", "Required", "Description"
    :widths: auto
 
-   ":ref:`MAP <wcs-map>`", "Yes", "Specify the QGIS project file"
+   ":ref:`MAP <services_basics_map>`", "Yes", "QGIS project file"
 
 
-.. _`wcs_getcoverage_request`:
-
-REQUEST
-^^^^^^^
-
-This parameter is ``GetCoverage`` in case of the **GetCoverage** request.
-
-
-.. _`wcs_getcoverage_bbox`:
+.. _wcs_getcoverage_bbox:
 
 BBOX
 ^^^^
@@ -294,7 +257,7 @@ URL example:
   &CRS=EPSG:32620
 
 
-.. _`wcs_getcoverage_crs`:
+.. _wcs_getcoverage_crs:
 
 CRS
 ^^^
@@ -303,7 +266,7 @@ This parameter allows to indicate the  Spatial Reference System of the ``BBOX``
 parameter and has to be formed like ``EPSG:XXXX``.
 
 
-.. _`wcs_getcoverage_responsecrs`:
+.. _wcs_getcoverage_responsecrs:
 
 RESPONSE_CRS
 ^^^^^^^^^^^^
@@ -313,7 +276,7 @@ and has to be formed like ``EPSG:XXXX``. The CRS of the corresponding coverage
 layer is used by default.
 
 
-.. _`wcs_getcoverage_width`:
+.. _wcs_getcoverage_width:
 
 WIDTH
 ^^^^^
@@ -322,7 +285,7 @@ This parameter allows to specify the width in pixels of the output image. The
 resolution of the response image depends on this value.
 
 
-.. _`wcs_getcoverage_height`:
+.. _wcs_getcoverage_height:
 
 HEIGHT
 ^^^^^^

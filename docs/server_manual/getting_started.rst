@@ -31,7 +31,7 @@ you can test the installation with:
 .. code-block:: bash
 
     /usr/lib/cgi-bin/qgis_mapserv.fcgi
- 
+
 If you get the following output, the server is correctly installed.
 
 .. note:: Depending on the version of QGIS, you might see slightly different output
@@ -47,7 +47,7 @@ If you get the following output, the server is correctly installed.
     Warning 1: Unable to find driver JP2ECW to unload from GDAL_SKIP environment variable.
     Content-Length: 206
     Content-Type: text/xml; charset=utf-8
-    
+
     <ServiceExceptionReport version="1.3.0" xmlns="https://www.opengis.net/ogc">
      <ServiceException code="Service configuration error">Service unknown or unsupported</ServiceException>
     </ServiceExceptionReport>
@@ -81,14 +81,14 @@ Let's add a sample project. You can use your own, or one from
 `Training demo data <https://github.com/qgis/QGIS-Training-Data/>`_:
 
 .. code-block:: bash
-  
+
     mkdir /home/qgis/projects/
     cd /home/qgis/projects/
     wget https://github.com/qgis/QGIS-Training-Data/archive/release_3.16.zip
     unzip release_3.16.zip
     mv QGIS-Training-Data-release_3.16/exercise_data/qgis-server-tutorial-data/world.qgs .
     mv QGIS-Training-Data-release_3.16/exercise_data/qgis-server-tutorial-data/naturalearth.sqlite .
-  
+
 Of course, you can use your favorite GIS software to open this file and
 take a look at the configuration and available layers.
 
@@ -172,7 +172,7 @@ Further readings:
 
 * :ref:`QGIS Server logging <qgis-server-logging>`
 * :ref:`pg-service-file in QGIS Server <pg-service-file>`
-	
+
 You can do the above in a linux Desktop system by pasting and saving the above
 configuration after doing:
 
@@ -212,7 +212,7 @@ Now restart Apache for the new configuration to be taken into account:
 
 .. code-block:: bash
 
- systemctl restart apache2 
+ systemctl restart apache2
 
 Now that Apache knows that he should answer requests to http://qgis.demo
 we also need to setup the client system so that it knows who ``qgis.demo``
@@ -227,10 +227,10 @@ Replace ``127.0.0.1`` with the IP of your server.
    be configured for your setup to work.
    You can also test the access to your QGIS Server from other clients on the
    network (e.g. Windows or macOS machines) by going to their :file:`/etc/hosts`
-   file and point the ``myhost`` name to whatever IP the server machine has on the 
+   file and point the ``myhost`` name to whatever IP the server machine has on the
    network (not ``127.0.0.1`` as it is the local IP, only accessible from the
    local machine).  On ``*nix`` machines the
-   :file:`hosts` file is located in :file:`/etc`, while on Windows it's under 
+   :file:`hosts` file is located in :file:`/etc`, while on Windows it's under
    the :file:`C:\\Windows\\System32\\drivers\\etc` directory. Under Windows you
    need to start your text editor with administrator privileges before opening
    the hosts file.
@@ -468,14 +468,14 @@ a template:
 
  [Unit]
  Description=QGIS Server Listen Socket (instance %i)
- 
+
  [Socket]
  Accept=false
  ListenStream=/var/run/qgis-server-%i.sock
  SocketUser=www-data
  SocketGroup=www-data
  SocketMode=0600
- 
+
  [Install]
  WantedBy=sockets.target
 
@@ -495,7 +495,7 @@ configuration located in :file:`/etc/systemd/system/qgis-server@.service`:
 
  [Unit]
  Description=QGIS Server Service (instance %i)
- 
+
  [Service]
  User=www-data
  Group=www-data
@@ -504,7 +504,7 @@ configuration located in :file:`/etc/systemd/system/qgis-server@.service`:
  StandardInput=socket
  ExecStart=/usr/lib/cgi-bin/qgis_mapserv.fcgi
  EnvironmentFile=/etc/qgis-server/env
- 
+
  [Install]
  WantedBy=multi-user.target
 
@@ -512,7 +512,7 @@ configuration located in :file:`/etc/systemd/system/qgis-server@.service`:
  The QGIS Server :ref:`environment variables <qgis-server-envvar>`
  are defined in a separate file, :file:`/etc/qgis-server/env`.
  It could look like this:
- 
+
  .. code-block:: make
 
    QGIS_PROJECT_FILE=/etc/qgis/myproject.qgs
@@ -535,10 +535,10 @@ Finally, for the NGINX HTTP server, lets introduce the configuration for this se
     server unix:/var/run/qgis-server-3.sock;
     server unix:/var/run/qgis-server-4.sock;
  }
- 
+
  server {
     …
- 
+
     location /qgis-server {
         gzip off;
         include fastcgi_params;
@@ -552,7 +552,7 @@ Now restart NGINX for the new configuration to be taken into account:
 
  systemctl restart nginx
 
-Thanks to Oslandia for sharing `their tutorial <https://oslandia.com/en/2018/11/23/deploying-qgis-server-with-systemd/>`_. 
+Thanks to Oslandia for sharing `their tutorial <https://oslandia.com/en/2018/11/23/deploying-qgis-server-with-systemd/>`_.
 
 .. _xvfb:
 
@@ -621,15 +621,15 @@ Then you can directly use **xvfb-run** or configure the **DISPLAY** parameter.
 * With spawn-fcgi using ``xvfb-run``:
 
   .. code-block:: bash
-  
+
    xvfb-run /usr/bin/spawn-fcgi -f /usr/lib/cgi-bin/qgis_mapserv.fcgi \
                                 -s /tmp/qgisserver.socket \
                                 -G www-data -U www-data -n
 
-* With the **DISPLAY** environment variable in the HTTP server configuration. 
+* With the **DISPLAY** environment variable in the HTTP server configuration.
 
   .. code-block:: nginx
-  
+
    fastcgi_param  DISPLAY       ":99";
 
 Installation on Windows
@@ -638,7 +638,7 @@ Installation on Windows
 .. index:: Windows
 
 QGIS Server can also be installed on Windows systems. While the QGIS Server
-package is available in the 64 bit version of the OSGeo4W network installer 
+package is available in the 64 bit version of the OSGeo4W network installer
 (https://qgis.org/en/site/forusers/download.html) there is no Apache (or other
 web server) package available, so this must be installed by other means.
 
@@ -649,13 +649,13 @@ A simple procedure is the following:
 
    .. figure:: img/qgis_server_windows1.png
      :align: center
-  
+
 #. Download the OSGeo4W installer, follow the "Advanced Install" and install
    both the QGIS Desktop and QGIS Server packages
-  
+
    .. figure:: img/qgis_server_windows2.png
      :align: center
-  
+
 #. Edit the httpd.conf file (:file:`C:\\xampp\\apache\\conf\\httpd.conf`
    if the default installation paths have been used) and make the following changes:
 
@@ -858,11 +858,11 @@ is used.
 
 You can receive requested GetFeatureInfo as plain text, XML and GML. The default is XML.
 
-.. _`addGeometryToFeatureResponse` : 
+.. _`addGeometryToFeatureResponse` :
 
 If you wish, you can check |checkbox| :guilabel:`Add geometry to feature response`.
 This will include the bounding box for each feature in the GetFeatureInfo response.
-See also the :ref:`WITH_GEOMETRY <server_wms_getfeatureinfo>` parameter.
+See also the :ref:`WITH_GEOMETRY <wms_getfeatureinfo>` parameter.
 
 As many web clients can’t display circular arcs in geometries you have the option
 to segmentize the geometry before sending it to the client in a GetFeatureInfo
@@ -888,7 +888,7 @@ in the range 0 to 100. Specify 0 for maximum compression, 100 for no compression
 You can change the limit for atlas features to be printed in one request by setting the
 :guilabel:`Maximum features for Atlas print requests` field.
 
-When QGIS Server is used in tiled mode (see :ref:`TILED parameter <wms-tiled>`), you can set the
+When QGIS Server is used in tiled mode (see :ref:`TILED parameter <wms_tiled>`), you can set the
 :guilabel:`Tile buffer in pixels`. The recommended value is the size of the largest
 symbol or line width in your QGIS project.
 

@@ -166,8 +166,8 @@ returned image type to ``image/png``.
 |moderate| |FA| Use Filter, Opacities and Styles parameters
 -------------------------------------------------------------------------------
 
-Let's do another request that adds another layer, some of the
-:ref:`extra-getmap-parameters`, **FILTER** and **OPACITIES**, but also
+Let's do another request that adds another layer, some
+:ref:`basic parameters <services_basics>`, **FILTER** and **OPACITIES**, but also
 uses the standard STYLES parameter.
 
 .. code-block:: bash
@@ -200,9 +200,9 @@ to render only **Germany** and **Italy** from the countries layer.
 |moderate| |FA| Use Redlining
 -------------------------------------------------------------------------------
 
-Let's do another GetMap request that makes use of the :ref:`qgisserver-redlining`
-feature and of the **SELECTION** parameter detailed in the
-:ref:`extra-getmap-parameters` section:
+Let's do another GetMap request that makes use of the :ref:`redlining
+<wms_redlining>` feature and of the **SELECTION** parameter detailed in the
+:ref:`Basics <services_basics>` section:
 
 .. code-block:: bash
 
@@ -242,7 +242,7 @@ GetPrint requests
 -----------------
 
 One very nice feature of QGIS Server is that it makes use of the QGIS Desktop
-print layouts. You can learn about it in the :ref:`server_wms_getprint` section.
+print layouts. You can learn about it in the :ref:`wms_getprint` section.
 
 If you open the :file:`world.qgs` project with QGIS Desktop you will find a
 print layout named ``Population distribution``. A simplified ``GetPrint``
