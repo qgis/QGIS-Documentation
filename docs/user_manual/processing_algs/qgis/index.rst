@@ -33,3 +33,4 @@ algorithms.
      vectoroverlay
      vectorselection
      vectortable
+     vectortiles
