@@ -86,13 +86,14 @@ Parameters
        Optional
      - ``META_TYPE``
      - [string]
-     -
+     - Type of tileset. Possible values are ``overlay`` or ``baselayer``.
    * - **Metadata: Center**
 
        Optional
      - ``META_CENTER``
      - [string]
-     - 
+     - The center (string of comma-separated numbers: the longitude, latitude, and zoom level)
+       of the default view of the map. Example: ``-122.1906,37.7599,11``
    * - **Destination MBTiles**
      - ``OUTPUT``
      - [vector tiles]
