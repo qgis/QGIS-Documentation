@@ -101,7 +101,7 @@ Parameters
        Default: [Save to temporary file]
      - Specification of the output MBTiles file. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
@@ -126,7 +126,7 @@ Python code
 
 **Algorithm ID**: ``native:writevectortiles_mbtiles``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -190,7 +190,7 @@ Parameters
        Default: [Save to temporary folder]
      - Specification of the output vector tiles folder. One of:
 
-       .. include:: qgis_algs_include.rst
+       .. include:: ../algs_include.rst
           :start-after: **directory_output_types**
           :end-before: **end_directory_output_types**
 
@@ -216,6 +216,6 @@ Python code
 
 **Algorithm ID**: ``native:writevectortiles_xyz``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
