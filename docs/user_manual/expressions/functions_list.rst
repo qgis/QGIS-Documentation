@@ -887,9 +887,16 @@ Further reading: :ref:`expression_function_Record_and_Attributes_$id`
 
 .. include:: expression_help/Record_and_Attributes.rst
    :start-after: .. end_get_feature_by_id_section
+   :end-before: .. end_represent_attributes_section
+
+Further reading: :ref:`expression_function_Record_and_Attributes_represent_value`
+
+.. include:: expression_help/Record_and_Attributes.rst
+   :start-after: .. end_represent_attributes_section
    :end-before: .. end_represent_value_section
 
-Further reading: :ref:`widget types <edit_widgets>` 
+Further reading: :ref:`widget types <edit_widgets>`,
+:ref:`expression_function_Record_and_Attributes_represent_attributes`
 
 .. include:: expression_help/Record_and_Attributes.rst
    :start-after: .. end_represent_value_section

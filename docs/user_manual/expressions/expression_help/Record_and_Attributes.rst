@@ -375,6 +375,59 @@ Returns the number of selected features on a given layer. By default works on th
 
 .. end_num_selected_section
 
+.. _expression_function_Record_and_Attributes_represent_attributes:
+
+represent_attributes
+....................
+
+Returns a map with the attribute names as keys and the configured representation values as values. The representation value for the attributes depends on the configured widget type for each attribute.  Can be used with zero, one or more arguments, see below for details.
+
+**No parameters**
+
+If called with no parameters, the function will return the representation of the attributes of the current feature in the current layer.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - represent_attributes()
+   * - Examples
+     - * ``represent_attributes()`` → The representation of the attributes for the current feature.
+
+
+**One 'feature' parameter**
+
+If called with a 'feature' parameter only, the function will return the representation of the attributes of the specified feature from the current layer.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - represent_attributes(feature)
+   * - Arguments
+     - * **feature** - The feature which should be evaluated.
+   * - Examples
+     - * ``represent_attributes(@atlas_feature)`` → The representation of the attributes for the specified feature from the current layer.
+
+
+**Layer and feature parameters**
+
+If called with a 'layer' and a 'feature' parameter, the function will return the representation of the attributes of the specified feature from the specified layer.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - represent_attributes(layer, feature)
+   * - Arguments
+     - * **layer** - The layer (or its ID or name).
+       * **feature** - The feature which should be evaluated.
+   * - Examples
+     - * ``represent_attributes('atlas_layer', @atlas_feature)`` → The representation of the attributes for the specified feature from the specified layer.
+
+
+.. end_represent_attributes_section
+
 .. _expression_function_Record_and_Attributes_represent_value:
 
 represent_value
