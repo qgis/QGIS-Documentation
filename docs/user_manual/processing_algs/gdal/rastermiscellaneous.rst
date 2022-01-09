@@ -24,6 +24,9 @@ This algorithm is derived from the
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -37,6 +40,25 @@ Parameters
      - ``INPUT``
      - [raster]
      - Input raster layer
+   * - **Remove all existing overviews**
+     - ``CLEAN``
+     - [boolean]
+
+       Default: False
+     - Removes existing overviews from the raster.
+       By default these are not removed.
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Overview levels**
      - ``LEVELS``
      - [string]
@@ -45,13 +67,6 @@ Parameters
      - Defines the number of overview levels calculated by the
        original resolution of the input raster layer.
        By default 4 levels will be taken into consideration.
-   * - **Remove all existing overviews**
-     - ``CLEAN``
-     - [boolean]
-
-       Default: False
-     - Removes existing overviews from the raster.
-       By default these are not removed.
    * - **Resampling method**
 
        Optional
@@ -71,7 +86,6 @@ Parameters
        * 6 -- Average MP (``average_mp``)
        * 7 -- Average in Mag/Phase Space (``average_magphase``)
        * 8 -- Mode (``mode``)
-
    * - **Overviews format**
 
        Optional
@@ -87,7 +101,6 @@ Parameters
        * 0 -- Internal (if possible)
        * 1 -- External (GTiff .ovr)
        * 2 -- External (ERDAS Imagine .aux)
-
    * - **Additional command-line parameters**
 
        Optional
@@ -96,10 +109,6 @@ Parameters
 
        Default: None
      - Add extra GDAL command line options
-   * - **Pyramidized**
-     - ``OUTPUT``
-     - [raster]
-     - Output raster layer
 
 Outputs
 .......
@@ -143,6 +152,9 @@ This algorithm is derived from the
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -170,12 +182,11 @@ Parameters
        * 0 --- Average (``average``)
        * 1 --- Highest (``highest``)
        * 2 --- Lowest (``lowest``)
-
    * - **Place each input file into a separate band**
      - ``SEPARATE``
      - [boolean]
 
-       Default: True
+       Default: False
      - With 'True' you can define that each raster file goes into
        a separated stacked band in the VRT band.
    * - **Allow projection difference**
@@ -185,6 +196,29 @@ Parameters
        Default: False
      - Allows that the output bands have different projections
        derived from the projection of the input raster layers.
+   * - **Virtual**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster layer.
+       One of:
+
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Add alpha mask band to VRT when source raster has none**
      - ``ADD_ALPHA``
      - [boolean]
@@ -201,14 +235,12 @@ Parameters
        Default: None
      - Overrides the projection for the output file.
        No reprojection is done.
-
    * - **Resampling algorithm**
      - ``RESAMPLING``
      - [enumeration]
 
        Default: 0
      - The resampling algorithm to be used
-
        Options:
 
        * 0 --- Nearest Neighbour (``nearest``)
@@ -218,7 +250,6 @@ Parameters
        * 4 --- Lanczos Windowed Sinc (``lanczos``)
        * 5 --- Average (``average``)
        * 6 --- Mode (``mode``)
-
    * - **Nodata value(s) for input bands (space separated)**
 
        Optional
@@ -233,18 +264,6 @@ Parameters
 
        Default: None
      - Add extra GDAL command line options
-   * - **Virtual**
-     - ``OUTPUT``
-     - [raster]
-
-       Default: ``[Save to temporary file]``
-     - Specification of the output raster layer.
-       One of:
-
-       * Save to a Temporary File
-       * Save to File...
-
-       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -301,6 +320,9 @@ This algorithm is derived from the
 
 Parameters
 ..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -361,13 +383,35 @@ Parameters
 
        Default: ''
      -
+
+   * - **Output directory**
+     - ``OUTPUT``
+     - [folder]
+
+       Default: ``[Save to temporary folder]``
+     - Specify the output folder for the tiles. One of:
+
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **directory_output_types**
+          :end-before: **end_directory_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Resampling method**
      - ``RESAMPLING``
      - [enumeration]
 
        Default: 0
      - The resampling algorithm to be used
-
        Options:
 
        * 0 --- Average (``average``)
@@ -436,12 +480,6 @@ Parameters
 
        Default: False
      -
-   * - **Output directory**
-     - ``OUTPUT``
-     - [folder]
-
-       Default: ``[Save to temporary file]``
-     - Specify the output folder for the tiles.
 
 Outputs
 .......
@@ -454,7 +492,6 @@ Outputs
      - Name
      - Type
      - Description
-
    * - **Output directory**
      - ``OUTPUT``
      - [folder]
@@ -486,6 +523,9 @@ This algorithm is derived from the
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -515,10 +555,9 @@ Parameters
    * - **Output data type**
      - ``DATA_TYPE``
      - [enumeration]
-       
+
        Default: 5
      - Defines the format of the output raster file.
-
        Options:
 
        * 0 --- Byte
@@ -533,6 +572,29 @@ Parameters
        * 9 --- CFloat32
        * 10 --- CFloat64
 
+   * - **Merged**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster layer.
+       One of:
+
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Input pixel value to treat as "nodata"**
 
        Optional
@@ -570,18 +632,6 @@ Parameters
 
        Default: None
      - Add extra GDAL command line options
-   * - **Merged**
-     - ``OUTPUT``
-     - [raster]
-
-       Default: ``[Save to temporary file]``
-     - Specification of the output raster layer.
-       One of:
-
-       * Save to a Temporary File
-       * Save to File...
-
-       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -617,11 +667,13 @@ Performs a pan-sharpening operation.
 It can create a "classic" output dataset (such as GeoTIFF),
 or a VRT dataset describing the pan-sharpening operation.
 
-See
-`GDAL Pansharpen <https://gdal.org/programs/gdal_pansharpen.html>`_.
+See `GDAL Pansharpen <https://gdal.org/programs/gdal_pansharpen.html>`_.
 
 Parameters
 ..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -640,13 +692,34 @@ Parameters
      - ``PANCHROMATIC``
      - [raster]
      - Input (panchromatic) raster layer
+   * - **Output**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output (sharpened) raster layer. One of:
+
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Resampling algorithm**
      - ``RESAMPLING``
      - [enumeration]
 
        Default: 2
      - The resampling algorithm to be used
-
        Options:
 
        * 0 --- Nearest Neighbour (``nearest``)
@@ -679,17 +752,6 @@ Parameters
 
        Default: None
      - Add extra GDAL command line options
-   * - **Output**
-     - ``OUTPUT``
-     - [raster]
-
-       Default: ``[Save to temporary file]``
-     - Specify the output (sharpened) raster layer. One of:
-
-       * Save to a Temporary File
-       * Save to File...
-
-       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -735,6 +797,9 @@ See the
 
 Parameters
 ..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -857,7 +922,6 @@ Parameters
 
        Default: 5
      - Defines the format of the output raster file.
-
        Options:
 
        * 0 --- Byte
@@ -868,6 +932,29 @@ Parameters
        * 5 --- Float32
        * 6 --- Float64
 
+   * - **Calculated**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output (calculated) raster layer. One of:
+
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Additional creation options**
 
        Optional
@@ -891,17 +978,7 @@ Parameters
 
        Default: ''
      - Add extra GDAL command line options
-   * - **Calculated**
-     - ``OUTPUT``
-     - [raster]
 
-       Default: ``[Save to temporary file]``
-     - Specify the output (calculated) raster layer. One of:
-
-       * Save to a Temporary File
-       * Save to File...
-
-       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -943,6 +1020,9 @@ This algorithm is derived from the
 
 Parameters
 ..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -986,12 +1066,6 @@ Parameters
        Default: False
      - Suppresses metadata printing.
        Some datasets may contain a lot of metadata strings.
-   * - **Additional command-line parameters**
-     - ``EXTRA``
-     - [string]
-
-       Default: None
-     - Add extra GDAL command line options
    * - **Layer information**
      - ``OUTPUT``
      - [html]
@@ -1000,10 +1074,30 @@ Parameters
      - Specify the HTML file for output.
        One of:
 
-       * Save to a Temporary File
-       * Save to File...
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
-       The file encoding can also be changed here.
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Additional command-line parameters**
+
+       Optional
+     - ``EXTRA``
+     - [string]
+
+       Default: None
+     - Add extra GDAL command line options
 
 Outputs
 .......
@@ -1047,6 +1141,9 @@ This algorithm is derived from the
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -1084,7 +1181,44 @@ Parameters
 
        Default: 1
      - Minimum: 0
+   * - **Output directory**
+     - ``OUTPUT``
+     - [folder]
+
+       Default: ``[Save to temporary folder]``
+     - Specify the output folder for the tiles.
+       One of:
+
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **directory_output_types**
+          :end-before: **end_directory_output_types**
+
+   * - **CSV file containing the tile(s) georeferencing information**
+     - ``OUTPUT_CSV``
+     - [file]
+
+       Default: ``[Skip output]``
+     - Specify the output file for the tiles. One of:
+
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **file_output_types_skip**
+          :end-before: **end_file_output_types_skip**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Source coordinate reference system**
+
+       Optional
      - ``SOURCE_CRS``
      - [crs]
 
@@ -1096,7 +1230,6 @@ Parameters
 
        Default: 0
      - The resampling algorithm to be used
-
        Options:
 
        * 0 --- Nearest Neighbour (``nearest``)
@@ -1143,7 +1276,6 @@ Parameters
 
        Default: 5
      - Defines the format of the output raster file.
-
        Options:
 
        * 0 --- Byte
@@ -1170,31 +1302,7 @@ Parameters
 
        Default: False
      -
-   * - **Output directory**
-     - ``OUTPUT``
-     - [folder]
 
-       Default: ``[Save to temporary folder]``
-     - Specify the output folder for the tiles.
-       One of:
-
-       * Save to Temporary Directory
-       * Save to Directory...
-
-       The file encoding can also be changed here.
-   * - **CSV file containing the tile(s) georeferencing information**
-     - ``OUTPUT_CSV``
-     - [file]
-
-       Default: ``[Skip output]``
-     -
-       One of:
-
-       * Skip Output
-       * Save to a Temporary File
-       * Save to File...
-
-       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -1243,6 +1351,9 @@ This algorithm is derived from the
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -1281,6 +1392,30 @@ Parameters
      - Only files with same projection as files already inserted
        in the tile index will be inserted.
        Default does not check projection and accepts all inputs.
+   * - **Tile index**
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Save to temporary file]``
+     - Specify the polygon vector layer to write the index to.
+       One of:
+
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Transform geometries to the given CRS**
 
        Optional
@@ -1299,6 +1434,7 @@ Parameters
    * - **The format in which the CRS of each tile must be written**
      - ``CRS_FORMAT``
      - [enumeration]
+
        Default: 0
      - Format for the CRS. One of:
 
@@ -1306,19 +1442,6 @@ Parameters
        * 1 -- Well-known text (``WKT``)
        * 2 -- EPSG (``EPSG``)
        * 3 -- Proj.4 (``PROJ``)
-
-   * - **Tile index**
-     - ``OUTPUT``
-     - [vector: polygon]
-
-       Default: ``[Save to temporary file]``
-     - Specify the polygon vector layer to write the index to.
-       One of:
-
-       * Save to a Temporary File
-       * Save to File
-
-       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -1340,6 +1463,134 @@ Python code
 ...........
 
 **Algorithm ID**: ``gdal:tileindex``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _gdalviewshed:
+
+Viewshed
+--------
+
+Calculates a viewshed raster from an input raster DEM using method defined in
+`Wang2000 <https://gdal.org/programs/gdal_viewshed.html#wang2000>`_ for a user
+defined point.
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Input elevation raster layer
+   * - **Band number**
+     - ``BAND``
+     - [raster band]
+
+       Default: 1
+     - The number of the band to use as elevation
+   * - **Observer location**
+     - ``OBSERVER``
+     - [point]
+     - The location of the observer
+   * - **Observer height**
+     - ``OBSERVER_HEIGHT``
+     - [number]
+
+       Default: 1.0
+     - The altitude of the observer, in the DEM units
+   * - **Target height**
+     - ``TARGET_HEIGHT``
+     - [number]
+
+       Default: 1.0
+     - The altitude of the target element, in the DEM units
+   * - **Maximum distance from observer to compute visibility**
+     - ``MAX_DISTANCE``
+     - [number]
+
+       Default: 100.0
+     - Maximum distance from observer to compute visibility,
+       in the DEM units
+   * - **Output**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Output raster layer. One of:
+
+       .. include:: ../qgis/qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Additional creation options**
+
+       Optional
+     - ``OPTIONS``
+     - [string]
+
+       Default: ''
+     - For adding one or more creation options that control the
+       raster to be created (colors, block size, file
+       compression...).
+       For convenience, you can rely on predefined profiles (see
+       :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       For Batch Process: separate multiple options with a pipe
+       character (``|``).
+   * - **Additional command-line parameters**
+     - ``EXTRA``
+     - [string]
+
+       Default: None
+     - Add extra GDAL command line options
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output**
+     - ``OUTPUT``
+     - [raster]
+     - The raster layer displaying the viewshed.
+
+Python code
+...........
+
+**Algorithm ID**: ``gdal:viewshed``
 
 .. include:: ../qgis/qgis_algs_include.rst
   :start-after: **algorithm_code_section**

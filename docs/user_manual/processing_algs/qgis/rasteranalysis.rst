@@ -161,6 +161,163 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _qgisequaltofrequency:
+
+Equal to frequency
+------------------
+
+Evaluates on a cell-by-cell basis the frequency (number of times) the values
+of an input stack of rasters are equal to the value of a value layer.
+The output raster extent and resolution are defined by the input raster layer
+and is always of ``Int32`` type.
+
+If multiband rasters are used in the data raster stack, the algorithm will always
+perform the analysis on the first band of the rasters - use GDAL to use other bands
+in the analysis.
+The output NoData value can be set manually.
+
+.. figure:: img/equaltofrequency.png
+  :align: center
+
+  For each cell in the output raster, the value represents the number of times
+  that the corresponding cells in the list of rasters are the same as the value raster.
+  ``NoData`` cells (grey) are taken into account.
+
+.. seealso:: :ref:`qgisgreaterthanfrequency`, :ref:`qgislessthanfrequency`
+
+.. **frequencyparams**
+.. FYI, the next params description is shared with Greater/Less than frequency algorithms
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input value raster**
+     - ``INPUT_VALUE_RASTER``
+     - [raster]
+     - The input value layer serves as reference layer for the sample layers
+   * - **Value raster band**
+     - ``INPUT_VALUE_RASTER_BAND``
+     - [raster band]
+
+       Default: The first band of the raster layer
+     - Select the band you want to use as sample
+   * - **Input raster layers**
+     - ``INPUT_RASTERS``
+     - [raster] [list]
+     - Raster layers to evaluate.
+       If multiband rasters are used in the data raster stack, the algorithm
+       will always perform the analysis on the first band of the rasters
+   * - **Ignore NoData values**
+     - ``IGNORE_NODATA``
+     - [boolean]
+
+       Default: False
+     - If unchecked, any NoData cells in the value raster or the data layer stack
+       will result in a NoData cell in the output raster
+   * - **Output layer**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output no data value**
+
+       Optional
+     - ``OUTPUT_NO_DATA_VALUE``
+     - [number]
+
+       Default: -9999.0
+     - Value to use for nodata in the output layer
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output layer**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster layer containing the result
+   * - **CRS authority identifier**
+     - ``CRS_AUTHID``
+     - [string]
+     - The coordinate reference system of the output raster layer
+   * - **Extent**
+     - ``EXTENT``
+     - [string]
+     - The spatial extent of the output raster layer
+   * - **Count of cells with equal value occurrences**
+     - ``FOUND_LOCATIONS_COUNT``
+     - [number]
+     -
+   * - **Height in pixels**
+     - ``HEIGHT_IN_PIXELS``
+     - [number]
+     - The number of rows in the output raster layer
+   * - **Total pixel count**
+     - ``TOTAL_PIXEL_COUNT``
+     - [integer]
+     - The count of pixels in the output raster layer
+   * - **Mean frequency at valid cell locations**
+     - ``MEAN_FREQUENCY_PER_LOCATION``
+     - [number]
+     -
+   * - **Count of value occurrences**
+     - ``OCCURRENCE_COUNT``
+     - [number]
+     -
+   * - **Width in pixels**
+     - ``WIDTH_IN_PIXELS``
+     - [integer]
+     - The number of columns in the output raster layer
+
+.. **endfrequencyparams**
+
+Python code
+...........
+
+**Algorithm ID**: ``native:equaltofrequency``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgisfuzzifyrastergaussianmembership:
 
 Fuzzify raster (gaussian membership)
@@ -832,6 +989,262 @@ Python code
 ...........
 
 **Algorithm ID**: ``qgisfuzzifyrastersmallmembership``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgisgreaterthanfrequency:
+
+Greater than frequency
+----------------------
+
+Evaluates on a cell-by-cell basis the frequency (number of times) the values
+of an input stack of rasters are equal to the value of a value raster.
+The output raster extent and resolution is defined by the input raster layer
+and is always of ``Int32`` type.
+
+If multiband rasters are used in the data raster stack, the algorithm will always
+perform the analysis on the first band of the rasters - use GDAL to use other bands
+in the analysis.
+The output NoData value can be set manually.
+
+.. figure:: img/greaterthanfrequency.png
+  :align: center
+
+  For each cell in the output raster, the value represents the number of times
+  that the corresponding cells in the list of rasters are greater than the value raster.
+  ``NoData`` cells (grey) are taken into account.
+
+.. seealso:: :ref:`qgisequaltofrequency`, :ref:`qgislessthanfrequency`
+
+.. The params description comes from the "Equal to frequency" algorithm
+
+.. include:: ./rasteranalysis.rst
+  :start-after: .. **frequencyparams**
+  :end-before: .. **endfrequencyparams**
+
+Python code
+...........
+
+**Algorithm ID**: ``native:greaterthanfrequency``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgishighestpositioninrasterstack:
+
+Highest position in raster stack
+--------------------------------
+
+Evaluates on a cell-by-cell basis the position of the raster with the highest value
+in a stack of rasters. Position counts start with 1 and range to the total number
+of input rasters. The order of the input rasters is relevant for the algorithm.
+If multiple rasters feature the highest value, the first raster will be used for
+the position value.
+
+If multiband rasters are used in the data raster stack, the algorithm will
+always perform the analysis on the first band of the rasters - use GDAL to use
+other bands in the analysis.
+Any NoData cells in the raster layer stack will result in a NoData cell
+in the output raster unless the "ignore NoData" parameter is checked.
+The output NoData value can be set manually. The output rasters extent and
+resolution is defined by a reference raster layer and is always of ``Int32`` type.
+
+.. figure:: img/highestposition.png
+  :align: center
+
+.. seealso:: :ref:`qgislowestpositioninrasterstack`
+
+.. **positionparams**
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input raster layers**
+     - ``INPUT_RASTERS``
+     - [raster] [list]
+     - List of raster layers to compare with
+   * - **Reference layer**
+     - ``REFERENCE_LAYER``
+     - [raster]
+     - The reference layer for the output layer creation
+       (extent, CRS, pixel dimensions)
+   * - **Ignore NoData values**
+     - ``IGNORE_NODATA``
+     - [boolean]
+
+       Default: False
+     - If unchecked, any NoData cells in the data layer stack
+       will result in a NoData cell in the output raster
+   * - **Output layer**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster containing the result.
+       One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output no data value**
+     - ``OUTPUT_NODATA_VALUE``
+     - [number]
+
+       Default: -9999.0
+     - Value to use for nodata in the output layer
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output layer**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster layer containing the result
+   * - **CRS authority identifier**
+     - ``CRS_AUTHID``
+     - [string]
+     - The coordinate reference system of the output raster layer
+   * - **Extent**
+     - ``EXTENT``
+     - [string]
+     - The spatial extent of the output raster layer
+   * - **Width in pixels**
+     - ``WIDTH_IN_PIXELS``
+     - [integer]
+     - The number of columns in the output raster layer
+   * - **Height in pixels**
+     - ``HEIGHT_IN_PIXELS``
+     - [integer]
+     - The number of rows in the output raster layer
+   * - **Total pixel count**
+     - ``TOTAL_PIXEL_COUNT``
+     - [integer]
+     - The count of pixels in the output raster layer
+
+.. **endpositionparams**
+
+Python code
+...........
+
+**Algorithm ID**: ``native:highestpositioninrasterstack``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgislessthanfrequency:
+
+Less than frequency
+-------------------
+
+Evaluates on a cell-by-cell basis the frequency (number of times) the values
+of an input stack of rasters are less than the value of a value raster.
+The output raster extent and resolution is defined by the input raster layer
+and is always of ``Int32`` type.
+
+If multiband rasters are used in the data raster stack, the algorithm will always
+perform the analysis on the first band of the rasters - use GDAL to use other bands
+in the analysis.
+The output NoData value can be set manually.
+
+.. figure:: img/lessthanfrequency.png
+  :align: center
+
+  For each cell in the output raster, the value represents the number of times
+  that the corresponding cells in the list of rasters are less than the value raster.
+  ``NoData`` cells (grey) are taken into account.
+
+.. seealso:: :ref:`qgisequaltofrequency`, :ref:`qgisgreaterthanfrequency`
+
+.. The params description comes from the "Equal to frequency" algorithm
+
+.. include:: ./rasteranalysis.rst
+  :start-after: .. **frequencyparams**
+  :end-before: .. **endfrequencyparams**
+
+Python code
+...........
+
+**Algorithm ID**: ``native:lessthanfrequency``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgislowestpositioninrasterstack:
+
+Lowest position in raster stack
+-------------------------------
+
+Evaluates on a cell-by-cell basis the position of the raster with the lowest value
+in a stack of rasters. Position counts start with 1 and range to the total number
+of input rasters. The order of the input rasters is relevant for the algorithm.
+If multiple rasters feature the highest value, the first raster will be used for
+the position value.
+
+If multiband rasters are used in the data raster stack, the algorithm will
+always perform the analysis on the first band of the rasters - use GDAL to use
+other bands in the analysis.
+Any NoData cells in the raster layer stack will result in a NoData cell
+in the output raster unless the "ignore NoData" parameter is checked.
+The output NoData value can be set manually. The output rasters extent and
+resolution is defined by a reference raster layer and is always of ``Int32`` type.
+
+.. figure:: img/lowestposition.png
+  :align: center
+
+.. seealso:: :ref:`qgishighestpositioninrasterstack`
+
+.. The params description comes from the "Highest position" algorithm
+
+.. include:: ./rasteranalysis.rst
+  :start-after: .. **positionparams**
+  :end-before: .. **endpositionparams**
+
+Python code
+...........
+
+**Algorithm ID**: ``native:lowestpositioninrasterstack``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**

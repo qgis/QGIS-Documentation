@@ -1004,6 +1004,66 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _qgisshpencodinginfo:
+
+Extract Shapefile encoding
+--------------------------
+
+Extracts the attribute encoding information embedded in a Shapefile.
+Both the encoding specified by an optional :file:`.cpg` file and
+any encoding details present in the :file:`.dbf` LDID header block are considered.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input Layer**
+     - ``INPUT``
+     - [vector: any]
+     - ESRI Shapefile (:file:`.SHP`) Layer to extract the encoding information.
+
+Outputs
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Shapefile encoding**
+     - ``ENCODING``
+     - [string]
+     - Encoding information specified in the input file
+   * - **CPG encoding**
+     - ``CPG_ENCODING``
+     - [string]
+     - Encoding information specified in any optional :file:`.CPG` file
+   * - **LDID encoding**
+     - ``LDID_ENCODING``
+     - [string]
+     - Encoding information specified in :file:`.dbf` LDID header block
+
+Python code
+...........
+
+**Algorithm ID**: ``native:shpencodinginfo``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgisfindprojection:
 
 Find projection
@@ -2062,6 +2122,170 @@ Python code
 ...........
 
 **Algorithm ID**: ``native:reprojectlayer``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgissavefeatures:
+
+Save vector features to file
+----------------------------
+
+Saves vector features to a specified file dataset.
+
+For dataset formats supporting layers, an optional layer name parameter
+can be used to specify a custom string. Optional GDAL-defined dataset and
+layer options can be specified. For more information on this, read the online
+`GDAL documentation <https://gdal.org/drivers/vector/index.html>`_ on the format.
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Vector features**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer.
+   * - **Saved features**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Save to temporary file]``
+     - Specify the file to save the features to. One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Layer name**
+
+       Optional
+     - ``LAYER_NAME``
+     - [string]
+     - Name to use for the output layer
+   * - **GDAL dataset options**
+
+       Optional
+     - ``DATASOURCE_OPTIONS``
+     - [string]
+     - GDAL dataset creation options of the output format.
+       Separate individual options with semicolons.
+   * - **GDAL layer options**
+
+       Optional
+     - ``LAYER_OPTIONS``
+     - [string]
+     - GDAL layer creation options of the output format.
+       Separate individual options with semicolons.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Saved features**
+     - ``OUTPUT``
+     - [same as input]
+     - Vector layer with the saved features.
+   * - **File name and path**
+     - ``FILE_PATH``
+     - [string]
+     - Output file name and path.
+   * - **Layer name**
+     - ``LAYER_NAME``
+     - [string]
+     - Name of the layer, if any.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:savefeatures``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgissetlayerencoding:
+
+Set layer encoding
+------------------
+
+Sets the encoding used for reading a layer's attributes.
+No permanent changes are made to the layer, rather it affects only
+how the layer is read during the current session.
+
+.. note:: Changing the encoding is only supported for some vector layer data sources.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Saved features**
+     - ``INPUT``
+     - [vector: any]
+     - Vector layer to set the encoding.
+   * - **Encoding**
+     - ``ENCODING``
+     - [string]
+     - Text encoding to assign to the layer in the current QGIS session.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output layer**
+     - ``OUTPUT``
+     - [same as input]
+     - Input vector layer with the set encoding.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:setlayerencoding``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**

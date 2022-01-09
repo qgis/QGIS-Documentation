@@ -1437,6 +1437,85 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _qgisconverttocurves:
+
+Convert to curved geometries
+----------------------------
+
+Converts a geometry into its curved geometry equivalent.
+
+Already curved geometries will be retained without change.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line or polygon]
+     - Input vector layer
+   * - **Maximum distance tolerance**
+     - ``DISTANCE``
+     - [number]
+
+       Default: 0.000001
+     - The maximum distance allowed between the original location of vertices
+       and where they would fall on the converted curved geometries
+   * - **Maximum angle tolerance**
+     - ``ANGLE``
+     - [number]
+
+       Default: 0.000001
+     - Segments are considered as suitable for replacing with an arc
+       if the points are all regularly spaced on the candidate arc.
+       This parameter specifies the maximum angular deviation (in degrees)
+       allowed when testing for regular point spacing. Between 0 and 45\°.
+   * - **Curves**
+     - ``OUTPUT``
+     - [vector: compoundcurve or curvepolygon]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer.
+       One of:
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Curves**
+     - ``OUTPUT``
+     - [vector: compoundcurve or curvepolygon]
+     - Output vector layer with curved geometries
+
+Python code
+...........
+
+**Algorithm ID**: ``native:converttocurves``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgisconvexhull:
 
 Convex hull

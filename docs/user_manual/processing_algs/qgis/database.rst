@@ -40,7 +40,7 @@ Parameters
      - Name of the database connection (not the database name).
        Existing connections will be shown in the combobox.
    * - **Schema (schema name)**
-       
+
        Optional
      - ``SCHEMA``
      - [string]
@@ -69,7 +69,7 @@ Parameters
    * - **Geometry column**
      - ``GEOMETRY_COLUMN``
      - [string]
-       
+
        Default: 'geom'
      - Defines the name of the geometry column in the
        new PostGIS table.
@@ -80,13 +80,13 @@ Parameters
        Optional
      - ``ENCODING``
      - [string]
-       
+
        Default: 'UTF-8'
      - Defines the encoding of the output layer
    * - **Overwrite**
      - ``OVERWRITE``
      - [boolean]
-       
+
        Default: True
      - If the specified table exists, setting this option to
        ``True`` will make sure that it is deleted and a new
@@ -97,27 +97,27 @@ Parameters
    * - **Create spatial index**
      - ``CREATEINDEX``
      - [boolean]
-       
+
        Default: True
      - Specifies whether to create a spatial index or not
    * - **Convert field names to lowercase**
      - ``LOWERCASE_NAMES``
      - [boolean]
-       
+
        Default: True
      - Converts the field names of the input vector layer
        to lowercase
    * - **Drop length constraint on character fields**
      - ``DROP_STRING_LENGTH``
      - [boolean]
-       
+
        Default: False
      - Should length constraints on character fields be
        dropped or not
    * - **Create single-part geometries instead of multi-part**
      - ``FORCE_SINGLEPART``
      - [boolean]
-       
+
        Default: False
      - Should the features of the output layer be
        single-part instead of multi-part.
@@ -185,7 +185,7 @@ Parameters
    * - **Geometry column**
      - ``GEOMETRY_COLUMN``
      - [string]
-       
+
        Default: 'geom'
      - Defines the name of the geometry column in the new
        SpatiaLite table.
@@ -196,13 +196,13 @@ Parameters
        Optional
      - ``ENCODING``
      - [string]
-       
+
        Default: 'UTF-8'
      - Defines the encoding of the output layer
    * - **Overwrite**
      - ``OVERWRITE``
      - [boolean]
-       
+
        Default: True
      - If the specified table exists, setting this option to
        ``True`` will make sure that it is deleted and a new
@@ -220,21 +220,21 @@ Parameters
    * - **Convert field names to lowercase**
      - ``LOWERCASE_NAMES``
      - [boolean]
-       
+
        Default: True
      - Convert the field names of the input vector layer
        to lowercase
    * - **Drop length constraint on character fields**
      - ``DROP_STRING_LENGTH``
      - [boolean]
-       
+
        Default: False
      - Should length constraints on character fields be
        dropped or not
    * - **Create single-part geometries instead of multi-part**
      - ``FORCE_SINGLEPART``
      - [boolean]
-       
+
        Default: False
      - Should the features of the output layer be
        single-part instead of multi-part.
@@ -289,7 +289,7 @@ Parameters
    * - **Overwrite existing GeoPackage**
      - ``OVERWRITE``
      - [boolean]
-     
+
        Default: False
      - If the specified GeoPackage exists, setting this option to
        ``True`` will make sure that it is deleted and a new one
@@ -298,14 +298,19 @@ Parameters
    * - **Save layer styles into GeoPackage**
      - ``SAVE_STYLES``
      - [boolean]
-     
+
        Default: True
      - Save the layer styles
    * - **Destination GeoPackage**
      - ``OUTPUT``
      - [file]
-     - If not specified the GeoPackage will be saved in the
-       temporary folder.
+
+       Default: ``[Save to temporary file]``
+     - Specify where to store the GeoPackage file. One of
+
+       .. include:: qgis_algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -318,7 +323,6 @@ Outputs
      - Name
      - Type
      - Description
-
    * - **Layers within new package**
      - ``OUTPUT_LAYERS``
      - [string] [list]
@@ -327,7 +331,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:package``
+**Algorithm ID**: ``native:package``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -364,7 +368,6 @@ Parameters
      - Name
      - Type
      - Description
-
    * - **Database (connection name)**
      - ``DATABASE``
      - [string]
@@ -378,7 +381,7 @@ Parameters
    * - **Unique ID field name**
      - ``ID_FIELD``
      - [string]
-       
+
        Default: id
      - Sets the primary key field (a column in the result table)
    * - **Geometry field name**
@@ -386,7 +389,7 @@ Parameters
        Optional
      - ``GEOMETRY_FIELD``
      - [string]
-       
+
        Default: 'geom'
      - Name of the geometry column (a column in the result table)
 
@@ -401,7 +404,6 @@ Outputs
      - Name
      - Type
      - Description
-
    * - **SQL layer**
      - ``OUTPUT``
      - [vector: any]
@@ -434,7 +436,6 @@ queries on the layer itself.
 .. seealso:: :ref:`qgispostgisexecuteandloadsql`,
    :ref:`qgisexecutesql`, :ref:`qgisspatialiteexecutesql`
 
-
 Parameters
 ..........
 
@@ -446,7 +447,6 @@ Parameters
      - Name
      - Type
      - Description
-
    * - **Database (connection name)**
      - ``DATABASE``
      - [string]
@@ -467,7 +467,7 @@ The SQL query is executed in place.
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:postgisexecutesql``
+**Algorithm ID**: ``native:postgisexecutesql``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -478,6 +478,59 @@ Python code
 
 SpatiaLite execute SQL
 ----------------------
+
+Allows a SQL database query to be performed on a SpatiaLite database.
+The algorithm **won't** create a new layer: it is designed to run
+queries on the layer itself.
+
+.. seealso:: :ref:`qgispostgisexecutesql`, :ref:`qgisexecutesql`
+
+ For some SQL query examples see :ref:`PostGIS SQL Query Examples
+ <qgis_postgis_execute_sql_example>`.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **File Database**
+     - ``DATABASE``
+     - [vector]
+     - The SQLite/SpatiaLite database file to connect to
+   * - **SQL query**
+     - ``SQL``
+     - [string]
+
+       Default: ''
+     - Defines the SQL query, for example
+       ``'UPDATE my_table SET field=10'``.
+
+Outputs
+.......
+
+No output is created.
+The SQL query is executed in place.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:spatialiteexecutesql``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgisspatialiteexecutesqlregistered:
+
+SpatiaLite execute SQL (registered DB)
+--------------------------------------
 
 Allows a SQL database query to be performed on a SpatiaLite database
 connected to QGIS.
@@ -501,16 +554,16 @@ Parameters
      - Type
      - Description
 
-   * - **File Database**
+   * - **Database**
      - ``DATABASE``
-     - [vector]
+     - [enumeration]
        
        Default: not set
-     - The SQLite/SpatiaLite database file to connect to
+     - Select a SQLite/SpatiaLite database connected to the current session
    * - **SQL query**
      - ``SQL``
      - [string]
-       
+
        Default: ''
      - Defines the SQL query, for example
        ``'UPDATE my_table SET field=10'``.
@@ -524,7 +577,7 @@ The SQL query is executed in place.
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:spatialiteexecutesql``
+**Algorithm ID**: ``native:spatialiteexecutesqlregistered``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
