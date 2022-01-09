@@ -114,7 +114,7 @@ you should also create a batch file and use it to start Eclipse:
 
      call "C:\OSGeo4W\bin\o4w_env.bat"
      set PATH=%PATH%;C:\path\to\your\qgis_core.dll\parent\folder
-     C:\path\to\your\eclipse.exe
+     start /B C:\path\to\your\eclipse.exe
 
 Setting up Eclipse
 ------------------
