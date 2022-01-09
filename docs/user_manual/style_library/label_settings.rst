@@ -681,7 +681,7 @@ or to convert it to another geometry (type).
 
 In order to use the geometry generator:
 
-#. Check the |checkbox| : guilabel:`Geometry generator` option
+#. Check the |checkbox| :guilabel:`Geometry generator` option
 #. Enter the expression generating the geometry to rely on
 #. If relevant, select the geometry type of the expression output:
    the label geometry-based settings such as placement or rendering
