@@ -459,13 +459,16 @@ properties:
     the mesh layer to render should be. On the far right, it is the base mesh,
     and the more you go left, the more the layer is simplified and is rendered
     with less details.
-* :guilabel:`Vertical settings` to control what to display
+    This option is only available if the :guilabel:`Simplify mesh` option under
+    the :guilabel:`Rendering` tab is activated.
+* :guilabel:`Vertical settings` to control behavior of the vertical component
+   of vertices of rendered triangles
 
   * :guilabel:`Dataset group for vertical value`: the dataset group that will
     be used for the vertical component of the mesh
   * |unchecked|:guilabel:`Dataset value relative to vertices Z value`: whether
     to consider the dataset values as absolute Z coordinate or relative to
-    the vertices Z value
+    the vertices native Z value
   * :guilabel:`Vertical scale`: the scale factor to apply to the dataset Z
     values
 * :guilabel:`Rendering color settings` with a :guilabel:`Rendering style`
@@ -486,12 +489,13 @@ properties:
 Rendering Properties
 --------------------
 
-As mesh layers can have millions of triangles, their rendering can sometimes
-be very slow, especially when all the triangles are displayed in the view
+As mesh layers can have millions of faces, their rendering can sometimes
+be very slow, especially when all the faces are displayed in the view
 whereas they are too small to be viewed.
 To speed up the rendering, you can simplify the mesh layer, resulting in one
 or more meshes representing different :ref:`levels of detail <levelofdetail>`
 and select at which level of detail you would like QGIS to render the mesh layer.
+Note that the simplify mesh contains only triangular faces.
 
 From the |rendering| :guilabel:`Rendering` tab, check |checkbox|
 :guilabel:`Simplify mesh` and set:
@@ -503,13 +507,11 @@ From the |rendering| :guilabel:`Rendering` tab, check |checkbox|
   the second 50 000 faces, the third 5000,...
   If a higher reduction factor leads quickly to simpler meshes (i.e. with triangles
   of bigger size), it produces also fewer levels of detail.
-* :guilabel:`Maximal mesh resolution`: the average size (in pixels)
+* :guilabel:`Minimum triangle size`: the average size (in pixels)
   of the triangles that is permitted to display. If the average size of the
   mesh is lesser than this value, the rendering of a lower level of details
   mesh is triggered.
 
-  .. I tried to reformulate simply https://github.com/qgis/QGIS-Documentation/issues/4937.
-   Hope that I caught the idea.
 
 .. index:: Temporal
 .. _meshtemporal:
