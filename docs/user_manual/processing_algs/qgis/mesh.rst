@@ -50,7 +50,7 @@ Parameters
      - [number]
 
        Default: *Not set*
-     - 
+     - Interval between generated levels.
    * - **Minimum contour level**
 
        Optional
@@ -58,7 +58,7 @@ Parameters
      - [number]
 
        Default: *Not set*
-     - 
+     - Starting level values of contours.
    * - **Maximum contour level**
 
        Optional
@@ -66,7 +66,7 @@ Parameters
      - [number]
 
        Default: *Not set*
-     - 
+     - Maximum values of contours, i.e. no generated levels will be greater than this value.
    * - **List of contours level**
 
        Optional
@@ -74,7 +74,8 @@ Parameters
      - [number]
 
        Default: *Not set*
-     - 
+     - List of wanted levels of contours (separated by commas).
+       If filled, the increment, minimum, and maximum fields will not be considered.
    * - **Output coordinate system**
 
        Optional
@@ -177,11 +178,12 @@ Parameters
    * - **Lines for data export**
      - ``INPUT_LINES``
      - [vector: line]
-     -
+     - Lines where the data will be extracted from the dataset mesh
    * - **Line segmentation resolution**
      - ``RESOLUTION``
      - [number]
-     -
+     - The distance between points on the lines where the data
+       will be extracted from the dataset mesh.
 
        Default: 10.0
    * - **Digits count for dataset value**
@@ -272,7 +274,7 @@ Parameters
    * - **Export vector option**
      - ``VECTOR_OPTION``
      - [enumeration]
-     -
+     - Coordinate type of vector value exportation.
 
        * 0 --- Cartesian (x,y)
        * 1 --- Polar (magnitude, degree)
@@ -661,8 +663,7 @@ Parameters
      - ``INPUT_POINTS``
      - [vector: point]
 
-       Default: 2
-     -
+     - Vector layer containing points where the data will be extracted from the dataset mesh
    * - **Digits count for coordinates**
      - ``COORDINATES_DIGITS``
      - [number]
@@ -768,7 +769,7 @@ Parameters
      - [number]
 
        Default: 1.0
-     -
+     - Pixel size of the output raster layer.
    * - **Output coordinate system**
 
        Optional
@@ -819,6 +820,7 @@ TIN mesh creation
 -----------------
 
 Creates a TIN mesh layer from vector layers.
+The TIN mesh is created using a Delaunay triangulation.
 
 Parameters
 ..........
@@ -850,7 +852,9 @@ Parameters
      - [boolean]
 
        Default: False
-     -
+     - If checked, the Z value of vector layer points or polygons/lines vertices
+       will be used to assign the Z value of the vertex mesh layer.
+       Only available if the input layers are 3D.
    * - **Output format**
      - ``MESH_FORMAT``
      - [enumeration]
