@@ -130,9 +130,9 @@ The mesh :guilabel:`Layer Properties` dialog provides the following sections:
    * - |metadata| :ref:`Information <meshinformation>`
      - |system| :ref:`Source <meshsource>`
      - |symbology| :ref:`Symbology <meshsymbology>`:sup:`[1]`
-   * - |3d| :guilabel:`3D View`:sup:`[1]`
+   * - |3d| :ref:`3D View <mesh3dview>`:sup:`[1]`
      - |temporal| :ref:`Temporal <meshtemporal>`
-     - |rendering| :guilabel:`Rendering`
+     - |rendering| :ref:`Rendering <meshrendering>`
    * - |editMetadata| :ref:`Metadata <meshmetadata>`
      -
      -
@@ -421,6 +421,96 @@ You can select the method to derive the 2D datasets and corresponding parameters
 (level index, depth or height values). For each method, an example of application
 is shown in the dialog but you can read more on the methods at
 https://fvwiki.tuflow.com/index.php?title=Depth_Averaging_Results.
+
+
+.. index:: 3D
+.. _mesh3dview:
+
+3D View Properties
+-------------------
+
+Mesh layers can be used as :ref:`terrain in a 3D map view <scene_configuration>`
+based on their vertices Z values. From the |3d| :guilabel:`3D` properties tab,
+it's also possible to render the mesh layer's dataset in the same 3D view.
+Therefore, the vertical component of the vertices can be set equal to dataset
+values (for example, level of water surface) and the texture of the mesh can
+be set to render other dataset values with color shading (for example velocity).
+
+.. _figure_mesh_3d:
+
+.. figure:: img/mesh_3d.png
+   :align: center
+
+   Mesh dataset 3D properties
+
+Check |checkbox| :guilabel:`Enable 3D Renderer` and you can edit following
+properties:
+
+* Under :guilabel:`Triangle settings`
+
+  * :guilabel:`Smooth triangles`: Angles between consecutive triangles are
+    smoothed for a better 3D rendering
+  * :guilabel:`Show wireframe` whose you can set the :guilabel:`Line width`
+    and :guilabel:`Color`
+
+  .. _levelofdetail:
+
+  * :guilabel:`Level of detail`: Controls how :ref:`simplified <meshrendering>`
+    the mesh layer to render should be. On the far right, it is the base mesh,
+    and the more you go left, the more the layer is simplified and is rendered
+    with less details.
+    This option is only available if the :guilabel:`Simplify mesh` option under
+    the :guilabel:`Rendering` tab is activated.
+* :guilabel:`Vertical settings` to control behavior of the vertical component
+   of vertices of rendered triangles
+
+  * :guilabel:`Dataset group for vertical value`: the dataset group that will
+    be used for the vertical component of the mesh
+  * |unchecked|:guilabel:`Dataset value relative to vertices Z value`: whether
+    to consider the dataset values as absolute Z coordinate or relative to
+    the vertices native Z value
+  * :guilabel:`Vertical scale`: the scale factor to apply to the dataset Z
+    values
+* :guilabel:`Rendering color settings` with a :guilabel:`Rendering style`
+  that can be based on the color ramp shader set in :ref:`mesh_symbology_contours`
+  (:guilabel:`2D contour color ramp shader`) or as a :guilabel:`Single color`
+  with an associated :guilabel:`Mesh color`
+* :guilabel:`Show arrows`: displays arrows on mesh layer dataset 3D entity,
+  based on the same vector dataset group used in the :ref:`vector 2D rendering
+  <mesh_symbology_vectors>`. They are displayed using the 2D color setting.
+  It's also possible to define the :guilabel:`Arrow spacing` and, if it's of a
+  :guilabel:`Fixed size` or scaled on magnitude. This spacing setting defines
+  also the max size of arrows because arrows can't overlap.
+
+
+.. index:: Rendering
+.. _meshrendering:
+
+Rendering Properties
+--------------------
+
+As mesh layers can have millions of faces, their rendering can sometimes
+be very slow, especially when all the faces are displayed in the view
+whereas they are too small to be viewed.
+To speed up the rendering, you can simplify the mesh layer, resulting in one
+or more meshes representing different :ref:`levels of detail <levelofdetail>`
+and select at which level of detail you would like QGIS to render the mesh layer.
+Note that the simplify mesh contains only triangular faces.
+
+From the |rendering| :guilabel:`Rendering` tab, check |checkbox|
+:guilabel:`Simplify mesh` and set:
+
+* a :guilabel:`Reduction factor`: Controls generation of successive levels of
+  simplified meshes.
+  For example, if the base mesh has 5M faces, and the reduction factor is 10,
+  the first simplified mesh will have approximately 500 000 faces,
+  the second 50 000 faces, the third 5000,...
+  If a higher reduction factor leads quickly to simpler meshes (i.e. with triangles
+  of bigger size), it produces also fewer levels of detail.
+* :guilabel:`Minimum triangle size`: the average size (in pixels)
+  of the triangles that is permitted to display. If the average size of the
+  mesh is lesser than this value, the rendering of a lower level of details
+  mesh is triggered.
 
 
 .. index:: Temporal
