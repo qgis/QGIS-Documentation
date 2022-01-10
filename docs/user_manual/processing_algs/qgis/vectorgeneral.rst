@@ -2322,7 +2322,7 @@ Advanced parameters
        Optional
      - ``LAYER_NAME``
      - [string]
-     - Name to use for the output layer 
+     - Name to use for the output layer
    * - **GDAL dataset options**
 
        Optional
