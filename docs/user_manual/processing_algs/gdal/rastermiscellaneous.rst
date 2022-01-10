@@ -388,8 +388,12 @@ Basic parameters
      - ``OUTPUT``
      - [folder]
 
-       Default: ``[Save to temporary file]``
-     - Specify the output folder for the tiles.
+       Default: ``[Save to temporary folder]``
+     - Specify the output folder for the tiles. One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **directory_output_types**
+          :end-before: **end_directory_output_types**
 
 Advanced parameters
 ^^^^^^^^^^^^^^^^^^^
