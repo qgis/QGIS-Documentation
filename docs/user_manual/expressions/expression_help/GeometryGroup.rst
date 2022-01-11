@@ -215,7 +215,7 @@ Returns a geometry that represents all points whose distance from this geometry 
    :widths: 15 85
 
    * - Syntax
-     - buffer(geometry, distance, [segments=8], [cap=8], [join='round'], [miter_limit=2])
+     - buffer(geometry, distance, [segments=8], [cap='round'], [join='round'], [miter_limit=2])
 
        [] marks optional arguments
    * - Arguments
@@ -837,6 +837,29 @@ Returns a specific geometry from a geometry collection, or NULL if the input geo
 
 
 .. end_geometry_n_section
+
+.. _expression_function_GeometryGroup_geometry_type:
+
+geometry_type
+.............
+
+Returns a string value describing the type of a geometry (Point, Line or Polygon)
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - geometry_type(geometry)
+   * - Arguments
+     - * **geometry** - a geometry
+   * - Examples
+     - * ``geometry_type( geom_from_wkt( 'LINESTRING(2 5, 3 6, 4 8)') )`` → 'Line'
+       * ``geometry_type( geom_from_wkt( 'MULTILINESTRING((2 5, 3 6, 4 8), (1 1, 0 0))') )`` → 'Line'
+       * ``geometry_type( geom_from_wkt( 'POINT(2 5)') )`` → 'Point'
+       * ``geometry_type( geom_from_wkt( 'POLYGON((-1 -1, 4 0, 4 2, 0 2, -1 -1))') )`` → 'Polygon'
+
+
+.. end_geometry_type_section
 
 .. _expression_function_GeometryGroup_hausdorff_distance:
 
