@@ -443,9 +443,6 @@ layer types:
 
 .. _interpolated_line_symbol:
 
-* **InterPolated Line**: The interpolated line symbol allows to define ways to control
-the changes of witdth and/or color of a line along its trajectory from a set of parameters.
-Those parameter may be feature-specific or static.
 
 .. _vector_fill_symbols:
 
@@ -598,9 +595,6 @@ A :guilabel:`Units` property can be set: when the geometry generator symbol
 is not applied to a layer (e.g., it is used on a layout item), this allows
 more control over the generated output.
 
-The rendering of the geometry may also be done in different reference system by
-changing the units used. By default map units are used, but drawing units, such as:
-mm, pixels, inches and points can also be used to render the features.
 
 Some examples:
 
