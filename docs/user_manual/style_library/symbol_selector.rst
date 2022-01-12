@@ -443,7 +443,6 @@ layer types:
 
 .. _interpolated_line_symbol:
 
-
 .. _vector_fill_symbols:
 
 Fill Symbols
@@ -594,7 +593,6 @@ several differently modified symbol layers on top of each other.
 A :guilabel:`Units` property can be set: when the geometry generator symbol
 is not applied to a layer (e.g., it is used on a layout item), this allows
 more control over the generated output.
-
 
 Some examples:
 
