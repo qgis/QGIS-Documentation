@@ -836,6 +836,18 @@ From the main dialog, you can:
  :ref:`qgisdbscanclustering` algorithm if you want to create cluster-based
  features.
 
+.. index:: Classes
+   single: Symbology; Merged Features renderer
+.. _merged_renderer:
+
+Merged Features Renderer
+........................
+
+The |mergedFeaturesSymbol| :guilabel:`Merged Features` renderer allows area and line
+features to be “dissolved” into a single object prior to rendering to ensure that 
+complex symbols or overlapping features are represented by a uniform and 
+contiguous cartographic symbol.
+
 .. index::
    single: Symbology; Inverted polygon renderer
 .. _inverted_polygon_renderer:
@@ -917,25 +929,6 @@ units).
    The 2.5D height and angle values are saved in the layer's variables,
    so you can edit it afterwards in the variables tab of the layer's properties dialog.
 
-.. index:: Layer rendering, Sort features, Z-level
-.. _layer_rendering:
-
-
-.. index:: Classes
-   single: Symbology; Merged Features renderer
-.. _merged_renderer:
-
-Merged Features Renderer
-........................
-
-The |mergedFeaturesSymbol| :guilabel:`Merged Features` renderer is a meta-renderer.
-This mode perform a union of connected features that are part of the same sub-render,
-either single symbol, categorized or graduated rule-based.
-
-This rendering mode is only available for polygons and lines. 
-
-This renderig mode is similar to the inverted polygon renderer.
-
 
 .. index:: Classes
    single: Symbology; Embedded renderer
@@ -948,6 +941,9 @@ The |embeddedSymbol| :guilabel:`Embedded Symbols` renderer allows to display the
 symbology of a provided datasource. This is mostly the case with :file:`KML`
 and :file:`TAB` datasets that have predefined symbology.
 
+
+.. index:: Layer rendering, Sort features, Z-level
+.. _layer_rendering:
 
 
 Layer rendering
@@ -3097,16 +3093,6 @@ canvas scale as boundary of the range visibility.
 See :ref:`label_scaledepend` for more information.
 
 
-Use Scale Reference
--------------------
-
-This variable forces the rendering to be displayed as if the layer was 
-at the provided scale, regardless of the scale of the map extent.
-
-In the case where the reference scale is set at 1:1000 and
-use a width of 1mm to render a line. If the map is at a scale of 1: 10 000
-the line will have a width of 0.1mm.
-
 Simplify geometry
 -----------------
 
@@ -3155,6 +3141,16 @@ QGIS when changes are applied to the data source, out of QGIS. Use the |checkbox
 You can also limit the layer refresh to a specific message set in the |checkbox|
 :guilabel:`Only if message is` text box.
 
+Use Scale Reference
+-------------------
+
+If set, the reference scale indicates the map scale at which symbology and 
+labeling sizes which uses paper-based units (such as millimeters or points) 
+relate to. The sizes will be scaled accordingly whenever the map is viewed at
+a differentscale.
+
+For instance, a line layer using a 2mm wide line with a 1:2000 reference scale
+set will be rendered using 4mm wide lines when the map is viewed at 1:1000.
 
 .. index:: Temporal
 .. _vectortemporalmenu:
