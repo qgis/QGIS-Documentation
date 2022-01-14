@@ -48,6 +48,10 @@ To georeference the map:
 
 #. Open the georeference tool, :menuselection:`Raster -->` |georefRun|
    :menuselection:`Georeferencer...`.
+
+   .. figure:: img/georeferencer.png
+      :align: center
+
 #. Add the map image file, :file:`rautjarvi_map.tif`, as the image to georeference,
    :menuselection:`File --> Open raster`.
 #. Click :guilabel:`OK`.
@@ -58,7 +62,7 @@ Next you should define the transformation settings for georeferencing the map:
 #. Set the :guilabel:`Transformation type` to ``Linear`` and
    the :guilabel:`Resampling method` to ``Nearest neighbour``.
 #. Press the |setProjection| :sup:`Select CRS` button next to
-   the :guilabel:`Target SRS`option and select the ``EPSG:2392 - KKJ / Finland zone 2`` CRS;
+   the :guilabel:`Target SRS` option and select the ``EPSG:2392 - KKJ / Finland zone 2`` CRS;
    it is the CRS that was used in Finland back in 1994 when this map was created.
 #. Click the icon next to the :guilabel:`Output raster` box, go to the folder and
    create the folder :file:`exercise_data\\forestry\\digitizing` and name the file
@@ -83,7 +87,12 @@ Georeferencer's window.
 #. Select the :guilabel:`Add point` tool and click in the intersection of the
    cross-hairs (pan and zoom as needed).
 #. In the :guilabel:`Enter map coordinates` dialogue write the coordinates that
-   appear in the map (X: 2557000 and Y: 6786000).
+   appear in the map (X: 2557000 and Y: 6786000) and their CRS
+   (``EPSG:2392 - KKJ / Finland zone 2``)
+
+   .. figure:: img/fillcoordinates.png
+      :align: center
+
 #. Click :guilabel:`OK`.
 
    The first coordinate for the georeferencing is now ready.
@@ -123,7 +132,8 @@ Finally, georeference your map:
 
    Now you can see the map in QGIS project as a georeferenced raster.
    Note that the raster seems to be slightly rotated, but that is simply because
-   the data is ``KKJ / Finland zone 2`` and your project is in ``ETRS89 / ETRS-TM35FIN(E,N)``.
+   the data is in ``KKJ / Finland zone 2`` and your project is in
+   ``ETRS89 / ETRS-TM35FIN(E,N)``.
 
 #. To check that your data is properly georeferenced, you can
 
