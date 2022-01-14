@@ -360,7 +360,7 @@ Among the common parameters for raster and vector are:
   example database-like formats such as GeoPackage, SpatiaLite or Open Document
   Spreadsheets).
 * :guilabel:`CRS`: can be changed to reproject the data
-* :guilabel:`Extent` of the output layer using the :ref:`extent_selector
+* :guilabel:`Extent` restrict the extent of the input that is to be exported using the :ref:`extent_selector
   <extent_selector>` widget
 * :guilabel:`Add saved file to map`: to add the new layer to the canvas
 
