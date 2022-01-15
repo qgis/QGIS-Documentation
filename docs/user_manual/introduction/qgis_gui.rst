@@ -2267,9 +2267,7 @@ The :guilabel:`Temporal controller` panel has the following modes:
   whose temporal range overlaps with each frame are displayed on the map
 * |settings| :sup:`Settings` for general control of the animation
 
-  * :guilabel:`Frames rate`: number of image frames per second
-
-  .. what is this option for?
+  * :guilabel:`Frames rate`: number of steps that are shown per second
 
   * |unchecked| :guilabel:`Cumulative range`: all animation frames will
     have the same start date-time but different end dates and times.
