@@ -671,6 +671,31 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+**Usage Example**
+
+Sample scripts on how to use the buffer algorithm, if a parameter is optional it can be omitted but the default value may be used to provide an output
+
+´´´
+myresult = processing.run("native:buffer", {'INPUT': '/data/lines.shp',
+              'DISTANCE': 100.0,
+              'SEGMENTS': 10,
+              'DISSOLVE': True,
+              'END_CAP_STYLE': 0,
+              'JOIN_STYLE': 0,
+              'MITER_LIMIT': 10,
+              'OUTPUT': '/data/buffers.shp'})
+myresult['OUTPUT']
+´´´
+
+
+´´´
+myresult = processing.run("native:buffer", {'INPUT': '/data/lines.shp',
+              'DISTANCE': 100.0,
+              'SEGMENTS': 10,
+              'DISSOLVE': True,
+              'OUTPUT': '/data/buffers.shp'})
+myresult['OUTPUT']
+´´´
 
 .. _qgiscentroids:
 
