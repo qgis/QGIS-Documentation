@@ -33,7 +33,9 @@ With the :guilabel:`Recenter` button the map will jump to the current GPS positi
    vector layer first and switch it to editable status to be able to record your
    track.
 
-When a GPS device is connected and the user moves the cursor over the map canvas, a live status bar message displays the distance and bearing from the cursor to the GPS position. Project distance and bearing settings are respected in this display.
+When a GPS device is connected and the user moves the cursor over the map canvas,
+a live status bar message displays the distance and bearing from the cursor to
+the GPS position. Project distance and bearing settings are respected in this display.
 
 .. tip:: **Touch Screen Devices**
  On a touch screen device use a tap-and-hold event to trigger the live status bar
