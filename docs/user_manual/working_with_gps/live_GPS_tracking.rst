@@ -100,7 +100,9 @@ when you are in editing mode. Or you can activate |checkbox|
 :guilabel:`Automatically add points` to the map canvas with a certain width
 and color.
 
-The :guilabel:`Calculate bearing from travel direction` can be used if the device reports faulty bearing measurements and it will calculate the GPS bearing based on the previous two recorded locations.
+The :guilabel:`Calculate bearing from travel direction` can be used
+if the device reports faulty bearing measurements and it will calculate the GPS
+bearing based on the previous two recorded locations.
 
 Cursor
 ......
