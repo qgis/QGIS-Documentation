@@ -38,6 +38,7 @@ a live status bar message displays the distance and bearing from the cursor to
 the GPS position. Project distance and bearing settings are respected in this display.
 
 .. tip:: **Touch Screen Devices**
+
  On a touch screen device use a tap-and-hold event to trigger the live status bar
  message.
 
