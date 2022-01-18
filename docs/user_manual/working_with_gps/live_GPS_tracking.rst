@@ -119,7 +119,9 @@ Activating |radioButtonOn| :guilabel:`Map centering` allows you to decide in whi
 way the canvas will be updated. This includes 'always', 'when leaving', if your
 recorded coordinates start to move out of the canvas, or 'never', to keep map
 extent.
-Activating :guilabel:`Rotate map to match GPS direction` will automatically rotate the map canvas so that it is oriented in the same direction as the GPS bearing.
+
+Activating :guilabel:`Rotate map to match GPS direction` will automatically
+rotate the map canvas so that it is oriented in the same direction as the GPS bearing.
 
 Show Bearing Line
 .................
