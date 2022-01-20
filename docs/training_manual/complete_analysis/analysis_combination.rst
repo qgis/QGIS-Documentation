@@ -66,6 +66,7 @@ Use one or more Vector Analysis tools and remember that our buildings are all
 over 100m squared in size.
 
 .. admonition:: Answer
+   :class: dropdown
 
    At the moment, your analysis should look something like this:
    
