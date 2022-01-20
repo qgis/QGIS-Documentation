@@ -39,8 +39,7 @@ Installing from source
 
 If you need to build QGIS from source, please refer to the installation
 instructions. They are distributed with the QGIS source code in a file
-called :file:`INSTALL`. You can also find them online at
-https://github.com/qgis/QGIS/blob/master/INSTALL.md.
+called :file:`INSTALL`. You can also find them online at :source:`INSTALL.md`.
 
 
 If you want to build a particular release and not the version in development,
