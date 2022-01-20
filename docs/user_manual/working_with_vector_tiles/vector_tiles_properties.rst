@@ -49,6 +49,11 @@ To load a vector tiles dataset into QGIS, use the |addVectorTileLayer| :guilabel
 in the :guilabel:`Data Source Manager` dialog. Read :ref:`vector_tiles` for
 more details.
 
+For the import of styles, there is support for:
+
+* :guilabel:`QML` files (:ref:`qgisstylefile`)
+* :guilabel:`MapBox GL Json` style configuration files
+
 Vector Tiles Dataset Properties
 ===============================
 
@@ -66,8 +71,8 @@ Provided information are:
 * picked from the :ref:`filled metadata <vectortilesmetadatamenu>`: access,
   extents, links, contacts, history...
 
-Symbology Properties
---------------------
+Symbology and Label Properties
+------------------------------
 
 .. _figure_vector_tile_symbology:
 
