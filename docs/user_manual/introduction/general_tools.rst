@@ -566,6 +566,61 @@ The statistical summary can be:
     Show statistics on a field
 
 
+.. index:: Debugging/Development Tools Panel
+.. _debug_dev_tools:
+
+Debugging/Development Tools Panel
+---------------------------------
+
+The :guilabel:`Debugging/Development Tools` panel (:kbd:`F12`) provides a
+:guilabel:`Network Logger` and a :guilabel:`Profiler`.
+
+Network Logger
+..............
+
+The |networkAndProxy| :guilabel:`Network Logger` provides a list of ongoing
+and completed network requests, along with a whole load of useful detail
+like request and reply status, header, errors, SSL configuration errors,
+timeouts, cache status, etc.
+
+It also allows you to:
+
+* |record| :guilabel:`Record Log` which will start or stop the logging.
+* |deleteSelected| :guilabel:`Clear Log` will clear the log history.
+* |fileSave| :guilabel:`Save Log...` will first show a big warning that
+  the log is sensitive and should be treated as confidential and than
+  allow you to save the log.
+* |options| :guilabel:`Settings` will allow you to
+  :guilabel:`Show Successful Requests` and :guilabel:`Show Timeouts`.
+* |checkbox| :guilabel:`Disable cache` will disable the cache so that
+  every request has to be performed.
+* |search| :guilabel:`Filter requests`
+
+By right clicking on a request you can: 
+
+ * :guilabel:`Open URL` which will open the URL in your defaul browser.
+ * :guilabel:`Copy URL`
+ * :guilabel:`Copy As cURL` to use it in the terminal.
+ * :guilabel:`Copy as JSON` will copy the whole log from one request.
+
+
+.. figure:: img/network_logger.png
+
+   Network Logger output for GET Request
+
+
+Profiler
+........
+
+The :guilabel:`Profiler` allows to get load times for the Categorys 
+:guilabel:`Startup` and :guilabel:`Project Load`, to identify causes of slow
+load times.
+
+.. figure:: img/profiler.png
+
+   Profiler for QGIS Startup
+
+
 .. index:: Nesting projects, Embed layers and groups
 .. _nesting_projects:
 
@@ -2814,6 +2869,8 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |filePrint| image:: /static/common/mActionFilePrint.png
    :width: 1.5em
+.. |fileSave| image:: /static/common/mActionFileSave.png
+   :width: 1.5em
 .. |filterMap| image:: /static/common/mActionFilterMap.png
    :width: 1.5em
 .. |folder| image:: /static/common/mActionFolder.png
@@ -2884,6 +2941,8 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |messageLog| image:: /static/common/mMessageLog.png
    :width: 1.5em
+.. |networkAndProxy| image:: /static/common/network_and_proxy.png
+   :width: 1.5em
 .. |newBookmark| image:: /static/common/mActionNewBookmark.png
    :width: 1.5em
 .. |northArrow| image:: /static/common/north_arrow.png
@@ -2900,11 +2959,15 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |rasterHistogram| image:: /static/common/rasterHistogram.png
    :width: 1.5em
+.. |record| image:: /static/common/mActionRecord.png
+   :width: 1.5em
 .. |refresh| image:: /static/common/mActionRefresh.png
    :width: 1.5em
 .. |removeLayer| image:: /static/common/mActionRemoveLayer.png
    :width: 1.5em
 .. |scaleBar| image:: /static/common/mActionScaleBar.png
+   :width: 1.5em
+.. |search| image:: /static/common/search.png
    :width: 1.5em
 .. |selectAll| image:: /static/common/mActionSelectAll.png
    :width: 1.5em
