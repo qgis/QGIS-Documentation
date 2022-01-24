@@ -598,7 +598,7 @@ It also allows you to:
 
 By right clicking on a request you can: 
 
- * :guilabel:`Open URL` which will open the URL in your defaul browser.
+ * :guilabel:`Open URL` which will open the URL in your default browser.
  * :guilabel:`Copy URL`
  * :guilabel:`Copy As cURL` to use it in the terminal.
  * :guilabel:`Copy as JSON` will copy the whole log from one request.
