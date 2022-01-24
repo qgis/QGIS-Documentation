@@ -481,13 +481,24 @@ URL example:
   http://localhost/qgisserver?
   SERVICE=WMS
   &REQUEST=GetMap
-  &LAYERS=mylayer1,mylayer2,mylayer3
-  &FILTER=mylayer1:"col1";mylayer1,mylayer2:"col2" = 'blabla'
-  &...
+  &VERSION=1.3.0
+  &WIDTH=400
+  &HEIGHT=300
+  &CRS=EPSG:4326
+  &BBOX=41,-6,52,10
+  &LAYERS=countries_shapeburst,countries,places
+  &FILTER=countries_shapeburst,countries:"name" = 'France';places: "name" = 'Paris'
 
-In this example, the same filter (field ``col2`` equals the string
-``blabla``) is applied to layers ``mylayer1`` and ``mylayer2``, while
-the filter on ``col1`` is only applied to ``mylayer1``.
+
+.. figure:: ../img/wms_getmap_filter.png
+  :align: center
+
+  Server response to a GetMap request with FILTER parameter
+
+
+In this example, the same filter ``"name" = 'France'`` is applied to layers
+``countries`` and ``countries_shapeburst``, while the filter ``"name" =
+'Paris'`` is only applied to ``places``.
 
 .. note::
 
