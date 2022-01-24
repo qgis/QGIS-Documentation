@@ -1157,10 +1157,14 @@ To use these variables in an expression, they should be preceded by the
    "user_account_name", "The current user's operating system account name"
    "user_full_name", "The current user's operating system user name"
    "value", "The current value"
+   "vector_tile_zoom", "Exact vector tile zoom level of the map that is being rendered
+   (derived from the current map scale). Normally in interval [0, 20]. Unlike @zoom_level,
+   this variable is a floating point value which can be used to interpolate values
+   between two integer zoom levels."
    "with_variable", "Allows setting a variable for usage within an expression
    and avoid recalculating the same value repeatedly"
-   "zoom_level", "Zoom level of the tile that is being rendered (derived from the current
-   map scale). Normally in interval [0, 20]."
+   "zoom_level", "Vector tile zoom level of the map that is being rendered
+   (derived from the current map scale). Normally in interval [0, 20]."
 
 **Some examples:**
 
