@@ -611,7 +611,7 @@ By right clicking on a request you can:
 Profiler
 ........
 
-The :guilabel:`Profiler` allows to get load times for the Categorys 
+The :guilabel:`Profiler` allows to get load times for the Categories 
 :guilabel:`Startup` and :guilabel:`Project Load`, to identify causes of slow
 load times.
 
