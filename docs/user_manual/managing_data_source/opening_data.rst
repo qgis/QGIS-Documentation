@@ -395,10 +395,11 @@ To load a layer from a file:
       
 .. note::
 
- For loading vector files the GDAL driver offers to define open actions. These will
- be shown when the vector file is selected. Options are described in detail on
- https://gdal.org/drivers/vector/ .
-
+ For loading vector and raster files the GDAL driver offers to define open
+ actions. These will be shown when a file is selected. Options are described
+ in detail on https://gdal.org/drivers/vector/, https://gdal.org/drivers/raster
+ and if a file is selected in QGIS, a text with hyperlink will directly
+ lead to the documentation of the selected file type.
 .. note::
 
  Because some formats like MapInfo (e.g., :file:`.tab`) or Autocad (:file:`.dxf`)
