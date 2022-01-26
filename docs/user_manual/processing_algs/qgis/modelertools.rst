@@ -1,14 +1,16 @@
 Modeler tools
 =============
 
+.. warning::
+
+ These tools are only available in the Graphical Modeler.
+ They are not available in the Processing Toolbox.
+
 .. only:: html
 
    .. contents::
       :local:
       :depth: 1
-
-These tools are only available in the Graphical Modeler.
-They are not available in the Processing Toolbox.
 
 
 .. _qgiscondition:
@@ -635,6 +637,10 @@ Python code
 
 Variable distance buffer
 --------------------------------------------------
+
+.. warning:: This algorithm is deprecated and can be removed
+  anytime. Prefer using :ref:`qgisbuffer` algorithm instead.
+
 Computes a buffer area for all the features in an input layer.
 
 The size of the buffer for a given feature is defined by an
