@@ -69,6 +69,10 @@ previewed items organized into tabs:
   <3dsymbols>` (extrusion, shading, altitude, ...) for the features to render
   in a :ref:`3D Map view <label_3dmapview>`
 
+You can arange the Styles in |iconView| :guilabel:`Icon View` or in
+|openTable| :guilabel:`List View` on the bottom right side. In both views
+the tooltip shows a larger instance of the style.
+
 For each family of items, you can organize the elements into different categories,
 listed in the panel on the left:
 
