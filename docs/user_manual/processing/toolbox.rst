@@ -93,6 +93,12 @@ Although the number and type of parameters depend on the characteristics of the
 algorithm, the structure is similar for all of them. The parameters found in the
 table can be of one of the following types.
 
+.. note::
+
+ Layers can be dragged directly from the :guilabel:`Layers Panel` into the
+ processing dialog. Does work for :guilabel:`Input layer` and for other
+ layer related inputs.
+
 * A **raster layer**, to select from a list of all such layers available
   (currently opened) in QGIS. The selector contains as well a button on its
   right-hand side, to let you select filenames that represent layers currently
