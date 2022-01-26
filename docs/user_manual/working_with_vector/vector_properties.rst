@@ -2393,7 +2393,7 @@ with the field type. The available widgets are:
   a drop-down list or a line edit field when completer checkbox is enabled.
 
   If a layer that is stored in PostgreSQL, GeoPackage or SpatiaLite is
-  configurated to use a value relation widget, but the required layer is
+  configured to use a value relation widget, but the required layer is
   not already loaded into the project, QGIS will automatically search for
   the layer in the same connection (first same schema, then also in other
   schemas).
