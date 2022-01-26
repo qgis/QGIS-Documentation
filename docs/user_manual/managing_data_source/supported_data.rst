@@ -306,7 +306,7 @@ have trouble loading a PostgreSQL table into QGIS, the information below may
 help you understand QGIS messages and give you directions for modifying
 the PostgreSQL table or view definition to allow QGIS to load it.
 
-.. tip:: **Store QGIS Projects in PostgreSQL database**
+.. note::
 
    A PostgreSQL database can also store QGIS projects.
 
