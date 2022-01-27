@@ -69,7 +69,7 @@ previewed items organized into tabs:
   <3dsymbols>` (extrusion, shading, altitude, ...) for the features to render
   in a :ref:`3D Map view <label_3dmapview>`
 
-You can arange the Styles in |iconView| :guilabel:`Icon View` or in
+You can arrange the Styles in |iconView| :guilabel:`Icon View` or in
 |openTable| :guilabel:`List View` on the bottom right side. In both views
 the tooltip shows a larger instance of the style.
 
@@ -337,9 +337,13 @@ choose the ramp type:
    :width: 1.5em
 .. |fileSave| image:: /static/common/mActionFileSave.png
    :width: 1.5em
+.. |iconView| image:: /static/common/mActionIconView.png
+   :width: 1.5em
 .. |labeling| image:: /static/common/labelingSingle.png
    :width: 1.5em
 .. |lineLayer| image:: /static/common/mIconLineLayer.png
+   :width: 1.5em
+.. |openTable| image:: /static/common/mActionOpenTable.png
    :width: 1.5em
 .. |pointLayer| image:: /static/common/mIconPointLayer.png
    :width: 1.5em
