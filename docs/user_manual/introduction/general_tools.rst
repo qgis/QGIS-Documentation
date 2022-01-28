@@ -1492,6 +1492,10 @@ The down arrow near the icon switches between
 The default unit used in the dialog is the one set in :menuselection:`Project -->
 Properties... --> General` menu.
 
+For the :guilabel:`Measure Line` and the :guilabel:`Measure Area` the
+measurements can be done in |radioButtonOn| :guilabel:`Cartesian` or
+|radioButtonOn| :guilabel:`Ellipsoidal` measure.
+
 .. note:: **Configuring the measure tool**
 
    While measuring length or area, clicking the :guilabel:`Configuration` button
@@ -1514,8 +1518,7 @@ tools, each mouse click (within the tolerance setting) will snap to that layer.
    single: Measure; Areas
    single: Measure; Angles
 
-By default, |measure| :sup:`Measure Line` measures real distances
-between given points according to a defined ellipsoid.
+The |measure| :sup:`Measure Line` measures distances between given points.
 The tool then allows you to click points on the map. Each segment length,
 as well as the total, shows up in the measure window.
 To stop measuring, click the right mouse button. Now it is possible
@@ -2955,6 +2958,8 @@ The values presented in the varying size assistant above will set the size
 .. |pan| image:: /static/common/mActionPan.png
    :width: 1.5em
 .. |panToSelected| image:: /static/common/mActionPanToSelected.png
+   :width: 1.5em
+.. |radioButtonOn| image:: /static/common/radiobuttonon.png
    :width: 1.5em
 .. |rasterHistogram| image:: /static/common/rasterHistogram.png
    :width: 1.5em
