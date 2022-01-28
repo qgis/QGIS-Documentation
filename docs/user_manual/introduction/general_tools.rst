@@ -1492,6 +1492,10 @@ The down arrow near the icon switches between
 The default unit used in the dialog is the one set in :menuselection:`Project -->
 Properties... --> General` menu.
 
+For the :guilabel:`Measure Line` and the :guilabel:`Measure Area` the
+measurements can be done in |radioButtonOn| :guilabel:`Cartesian` or
+|radioButtonOn| :guilabel:`Ellipsoidal` measure.
+
 .. note:: **Configuring the measure tool**
 
    While measuring length or area, clicking the :guilabel:`Configuration` button
@@ -1502,10 +1506,6 @@ Properties... --> General` menu.
    overridden in the current project by the selection made in the
    :menuselection:`Project --> Properties... --> General` menu, and by the
    selection made in the measurement widget.
-
-For the :guilabel:`Measure Line` and the :guilabel:`Measure Area` the
-measurements can be done in |radioButtonOn| Cartesian or |radioButtonOn|
-Ellipsoidal measure.
 
 All measuring modules use the snapping settings from the digitizing module (see
 section :ref:`snapping_tolerance`). So, if you want
