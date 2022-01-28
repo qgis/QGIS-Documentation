@@ -2395,8 +2395,7 @@ with the field type. The available widgets are:
   If a layer that is stored in PostgreSQL, GeoPackage or SpatiaLite is
   configured to use a value relation widget, but the required layer is
   not already loaded into the project, QGIS will automatically search for
-  the layer in the same database/connection (first same schema, then also in other
-  schemas).
+  the layer in the same database/connection.
 
 
 .. tip:: **Relative Path in Attachment widget**
