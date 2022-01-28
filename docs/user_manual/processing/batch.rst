@@ -126,16 +126,28 @@ there are additional :guilabel:`Autofill...` options available:
 
 * :guilabel:`Fill Down` will take the input for the first process and enter
   it for all other processes.
-* :guilabel:`Calculate by Expression...` will set the input value in regard
-  to the chosen expression. 
+* :guilabel:`Calculate by Expression...` will allow you to create a new
+  QGIS expression to use to update all existing values within that column.
+  Existing paramter values (including those from other columns) are
+  available for use inside the expression via `@variables`. E.g. setting
+  output file names to complex expressions like:
+
+ .. testcode:: expression
+
+   '/home/me/stuff/buffer_' || left(@input, 30) || '_' || @distance || '.shp'
+
 * :guilabel:`Add Values by Expression...` will add new rows using the values
-  from an expression.
+  from an expression which returns an array. (As opposed to "Calculate by
+  Expression", which works only on existing rows). The intended use case is
+  to allow populating the batch dialog using complex numeric series. E.g.
+  those created by the generate_series expression function. For example,
+  adding rows for a batch buffer using the expression
+  generate_series(100, 1000, 50) results in new rows with values
+  100, 150, 200, .... 1000.
+* :guilabel:`Add Files by Pattern...` adds new rows to the table for matching
+  files found using a file pattern and folder, with the option to |checkbox|
+  :guilabel:`Search recursively`. E.g. *.shp.
 
-.. tip:: **Add Values by Expression...**
-
-  The intended use case for :guilabel:`Add Values by Expression...` is to
-  populate the batch dialog using complex numeric series, e.g. those
-  created by the "generate_series" expression function. 
 
 Executing the batch process
 ---------------------------
@@ -143,3 +155,13 @@ Executing the batch process
 To execute the batch process once you have introduced all the necessary values,
 just click on :guilabel:`OK`. Progress of the global batch task will be shown in the
 progress bar in the lower part of the dialog.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
