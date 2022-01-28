@@ -87,7 +87,7 @@ panel provides the following functionalities (see :numref:`figure_layout_legend_
   be activated.
 * The legend items window lists all legend items and allows you to change item
   order, group layers, remove and restore items in the list, edit layer names
-  and add a filter.
+  and symbology and add a filter.
 
   * The item order can be changed using the |arrowUp| and |arrowDown| buttons or
     with 'drag-and-drop' functionality. The order can not be changed for WMS
