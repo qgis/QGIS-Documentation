@@ -65,6 +65,9 @@ previewed items organized into tabs:
 * |labeling| :guilabel:`Label settings` to manage :ref:`label settings
   <showlabels>`, which include the text formats and some layer-type specific
   settings such as label placement, priority, callouts, rendering...
+* |legend| :guilabel:`Legend Patch Shapes` to manage custom legend patch
+  shapes, which include :guilabel:`Marker`, :guilabel:`Line` and
+  :guilabel:`Fill` geometries.
 * |3d| :guilabel:`3D Symbols` to configure symbols with :ref:`3D properties
   <3dsymbols>` (extrusion, shading, altitude, ...) for the features to render
   in a :ref:`3D Map view <label_3dmapview>`
@@ -341,6 +344,8 @@ choose the ramp type:
    :width: 1.5em
 .. |labeling| image:: /static/common/labelingSingle.png
    :width: 1.5em
+.. |legend| image:: /static/common/legend.png
+   :width: 1.2em
 .. |lineLayer| image:: /static/common/mIconLineLayer.png
    :width: 1.5em
 .. |openTable| image:: /static/common/mActionOpenTable.png
