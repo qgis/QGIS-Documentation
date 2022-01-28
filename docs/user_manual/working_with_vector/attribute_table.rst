@@ -769,8 +769,8 @@ Open the :guilabel:`Relations` tab and click on |signPlus| :guilabel:`Add Relati
   the parent layer is *simply* linked to the child one while the
   :guilabel:`Composition` type allows you to duplicate also the child features
   when duplicating the parent ones and on deleting a feature the children are
-  deleted as well, resulting in cascade over all levels (means childrenchildren
-  and childrenchildrenchildren are deleted as well).
+  deleted as well, resulting in cascade over all levels (means children of children
+  of... are deleted as well).
 
 .. _figure_relations_manager:
 
