@@ -1219,7 +1219,7 @@ Lowest position in raster stack
 Evaluates on a cell-by-cell basis the position of the raster with the lowest value
 in a stack of rasters. Position counts start with 1 and range to the total number
 of input rasters. The order of the input rasters is relevant for the algorithm.
-If multiple rasters feature the highest value, the first raster will be used for
+If multiple rasters feature the lowest value, the first raster will be used for
 the position value.
 
 If multiband rasters are used in the data raster stack, the algorithm will
