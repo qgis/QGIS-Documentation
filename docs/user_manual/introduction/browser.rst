@@ -9,8 +9,8 @@ The Browser panel
 
 
 .. contents::
-      :local:
-      :depth: 2
+   :local:
+   :depth: 2
 
 The QGIS Browser panel is a great tool for browsing, searching,
 inspecting, copying and loading QGIS resources.
@@ -263,14 +263,14 @@ each level of the dataset tree.
 |               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
 |               | :menuselection:`Manage -->                 |              |              |            |            |            |            |
 |               | Delete Layer <layer_name>…`                | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| | |checkbox| |            |
-|               |                                            |              |              |            |            |            |            |
-|               | :menuselection:`Manage -->                 |              |              |            |            |            |            |
+|               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
+|               | :menuselection:`Manage -->                 | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| | |checkbox| |            |
 |               | Delete Selected Layers`                    |              |              |            |            |            |            |
 |               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
 |               | :menuselection:`Manage -->                 | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| | |checkbox| |            |
-|               | Add Selected Layers to Project`            |              |              |            |            |            |            |
-|               |                                            |              |              |            |            |            |            |
-|               | :menuselection:`Manage -->                 |              |              |            |            |            |            |
+|               | Add Layer to Project`                      |              |              |            |            |            |            |
+|               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
+|               | :menuselection:`Manage -->                 | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| | |checkbox| |            |
 |               | Add Selected Layers to Project`            |              |              |            |            |            |            |
 |               +--------------------------------------------+--------------+--------------+------------+------------+------------+------------+
 |               | Open :guilabel:`Layer Properties…` dialog  | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| | |checkbox| |            |
@@ -290,7 +290,7 @@ Tiles and Web Services
 | Level         | Context menu                                 |                                               Type of services                                       |
 |               |                                              +------------+-------------------+------------+------------+----------------+-------------+------------+
 |               |                                              | |wms|      | |vectorTileLayer| | |xyz|      | |wcs|      | |wfs|          | |afs|       | |geonode|  |
-|               |                                              | WMS/WMTS   | Vector Tiles      | XYZ Tiles  | WCS        | WFS / OGC      | ArcGIS REST | GeoNode    |
+|               |                                              | WMS / WMTS | Vector Tiles      | XYZ Tiles  | WCS        | WFS / OGC      | ArcGIS REST | GeoNode    |
 |               |                                              |            |                   |            |            | API - Features | Servers     |            |
 +===============+==============================================+============+===================+============+============+================+=============+============+
 | Top menu      | Create a :guilabel:`New Connection…`         | |checkbox| |                   | |checkbox| | |checkbox| | |checkbox|     | |checkbox|  | |checkbox| |
