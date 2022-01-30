@@ -1608,18 +1608,24 @@ available in section :ref:`Creatingwmsfromproject` and subsequent.
 
    QGIS Server settings tab
 
+.. index:: Temporal; Project time range
+.. _project_temporal:
+
 Temporal Properties
 -------------------
 
 The tab :guilabel:`Temporal` is used to set the temporal range of your project, 
-either by using manual input or by calculating it from the current project temporal layers.
+either by using manual :guilabel:`Start date` and :guilabel:`End date` inputs
+or by calculating it from the current project temporal layers.
+The project time range can then be used in the :guilabel:`temporal controller
+panel` to manage the map canvas :ref:`temporal navigation <maptimecontrol>`.
 
 .. _figure_temporal_tab:
 
 .. figure:: img/project_temporal.png
    :align: center
 
-   QGIS Temporal tab
+   Project Temporal tab
 
 .. index:: Customization
 .. _sec_customization:
