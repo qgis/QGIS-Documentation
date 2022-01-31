@@ -937,7 +937,7 @@ units).
 Embedded Renderer
 ....................
 
-The |embeddedSymbol| :guilabel:`Embedded Symbols` renderer allows to display the 'native' 
+The :guilabel:`Embedded Symbols` renderer allows to display the 'native' 
 symbology of a provided datasource. This is mostly the case with :file:`KML`
 and :file:`TAB` datasets that have predefined symbology.
 
@@ -3561,6 +3561,8 @@ To do so:
 .. |mapIdentification| image:: /static/common/mActionMapIdentification.png
    :width: 1.5em
 .. |mapTips| image:: /static/common/mActionMapTips.png
+   :width: 1.5em
+.. |mergedFeaturesSymbol| image:: /static/common/rendererMergedFeatures.svg
    :width: 1.5em
 .. |metadata| image:: /static/common/metadata.png
    :width: 1.5em
