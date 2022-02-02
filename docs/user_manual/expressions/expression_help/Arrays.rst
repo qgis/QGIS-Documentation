@@ -573,7 +573,7 @@ Returns an array with all the entries of the given value removed.
 array_remove_at
 ...............
 
-Returns an array with the given index removed.
+Returns an array with the item at the given index removed. Supports positive (0 for the first element) and negative (the last -Nth value, -1 for the last element) index.
 
 .. list-table::
    :widths: 15 85
@@ -584,7 +584,8 @@ Returns an array with the given index removed.
      - * **array** - an array
        * **pos** - the position to remove (0 based)
    * - Examples
-     - * ``array_remove_at(array(1,2,3),1)`` → [ 1, 3 ]
+     - * ``array_remove_at(array(1, 2, 3), 1)`` → [1, 3 ]
+       * ``array_remove_at(array(1, 2, 3), -1)`` → [1, 2 ]
 
 
 .. end_array_remove_at_section

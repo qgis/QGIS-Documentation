@@ -2138,7 +2138,7 @@ Read more on the underlying GEOS "Intersects" predicate, as described in PostGIS
    :widths: 15 85
 
    * - Syntax
-     - overlay_intersects(layer, [expression], [filter], [limit], [cache=false], [min_overlap], [min_inscribed_circle_radius])
+     - overlay_intersects(layer, [expression], [filter], [limit], [cache=false], [min_overlap], [min_inscribed_circle_radius], [return_details], [sort_by_intersection_size])
 
        [] marks optional arguments
    * - Arguments
@@ -2153,6 +2153,8 @@ Read more on the underlying GEOS "Intersects" predicate, as described in PostGIS
          Read more on the underlying GEOS predicate, as described in PostGIS `ST_MaximumInscribedCircle <https://postgis.net/docs/ST_MaximumInscribedCircle.html>`_ function.
 
          This argument requires GEOS >= 3.9.
+       * **return_details** - Set this to true to return a list of maps containing (key names in quotes) the feature 'id', the expression 'result' and the 'overlap' value. The 'radius' of the maximum inscribed circle is also returned when the target layer is a polygon. Only valid when used with the expression parameter
+       * **sort_by_intersection_size** - only valid when used with an expression, set this to 'des' to return the results ordered by the overlap value in descending order or set this to 'asc' for ascending order.
    * - Examples
      - * ``overlay_intersects('regions')`` → true if the current feature spatially intersects a region
        * ``overlay_intersects('regions', filter:= population > 10000)`` → true if the current feature spatially intersects a region with a population greater than 10000
@@ -2162,6 +2164,8 @@ Read more on the underlying GEOS "Intersects" predicate, as described in PostGIS
        * ``overlay_intersects(layer:='regions', expression:= geom_to_wkt($geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions intersected by the current feature
        * ``overlay_intersects(layer:='regions', min_overlap:=0.54)`` → true if the current feature spatially intersects a region and the intersection area (of at least one of the parts in case of multipolygons) is greater or equal to 0.54
        * ``overlay_intersects(layer:='regions', min_inscribed_circle_radius:=0.54)`` → true if the current feature spatially intersects a region and the intersection area maximum inscribed circle's radius (of at least one of the parts in case of multipart) is greater or equal to the 0.54
+       * ``overlay_intersects(layer:='regions', expression:= geom_to_wkt($geometry), return_details:=true)`` → an array of maps containing 'id', 'result', 'overlap' and 'radius'
+       * ``overlay_intersects(layer:='regions', expression:= geom_to_wkt($geometry), sort_by_intersection_size:='des')`` → an array of geometries (in WKT) ordered by the overlap value in descending order
 
 
 .. end_overlay_intersects_section
