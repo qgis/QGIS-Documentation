@@ -341,9 +341,8 @@ FILTER
 
 This parameter allows to filter the response with the **Filter Encoding**
 language defined by the
-`OGC Filter Encoding standard <https://www.ogc.org/standards/filter>`_.
-
-URL example:
+`OGC Filter Encoding standard <https://www.ogc.org/standards/filter>`_. For
+example:
 
 .. code-block:: bash
 
@@ -352,6 +351,17 @@ URL example:
   REQUEST=GetFeature&
   TYPENAME=places&
   FILTER=<Filter><PropertyIsEqualTo><PropertyName>name</PropertyName><Literal>Paris</Literal></PropertyIsEqualTo></Filter>
+
+
+In case of multiple typenames, filters have to be enclosed in parentheses:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WFS
+  &REQUEST=GetFeature
+  &TYPENAME=places,countries
+  &FILTER=(<Filter><PropertyIsEqualTo><PropertyName>name</PropertyName><Literal>Paris</Literal></PropertyIsEqualTo></Filter>)(<Filter><PropertyIsEqualTo><PropertyName>name</PropertyName><Literal>France</Literal></PropertyIsEqualTo></Filter>)
 
 
 .. _wfs_getfeature_bbox:
@@ -501,17 +511,18 @@ URL example:
 EXP_FILTER
 ^^^^^^^^^^
 
-This parameter allows to filter the response with QGIS expressions.
+This parameter allows to filter the response with QGIS expressions. The ``;``
+character is used to separate filters in case of multiple typenames.
 
 URL example:
 
 .. code-block:: bash
 
   http://localhost/qgisserver?
-  SERVICE=WFS&
-  REQUEST=GetFeature&
-  TYPENAME=places&
-  EXP_FILTER="name"='Paris'
+  SERVICE=WFS
+  &REQUEST=GetFeature
+  &TYPENAME=places,countries
+  &EXP_FILTER="name"='Paris';"name"='France'
 
 
 .. _wfs_describefeaturetype:
