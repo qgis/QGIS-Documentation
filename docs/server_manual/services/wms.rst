@@ -91,7 +91,7 @@ WMS 1.1.1 and 1.3.0 specifications:
    ":ref:`LAYERS <wms_layers>` ", "No", "Layers to display"
    ":ref:`STYLES <wms_styles>`", "No", "Layers' style"
    ":ref:`SRS / CRS <wms_srs>`", "Yes", "Coordinate reference system"
-   ":ref:`BBOX <wms_bbox>`", "No", "Map extent"
+   ":ref:`BBOX <wms_bbox>`", "Yes", "Map extent"
    ":ref:`WIDTH <wms_width>`", "Yes", "Width of the image in pixels"
    ":ref:`HEIGHT <wms_height>`", "Yes", "Height of the image in pixels"
    ":ref:`FORMAT <wms_getmap_format>`", "No", "Image format"
