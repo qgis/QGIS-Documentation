@@ -190,8 +190,8 @@ context = {
     'display_github': not html_context['outdated'], # Do not display for outdated releases
     'github_user': 'qgis',
     'github_repo': 'QGIS-Documentation',
-    'github_version': 'master/',
-    'github_url':'https://github.com/qgis/QGIS-Documentation/edit/master',
+    'github_version': 'release_3.16/',
+    'github_url':'https://github.com/qgis/QGIS-Documentation/edit/release_3.16',
     'transifex_url': 'https://www.transifex.com/qgis/qgis-documentation/translate',
 
     'pyqgis_version': pyqgis_version,
