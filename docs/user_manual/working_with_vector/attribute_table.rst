@@ -1131,8 +1131,8 @@ from the newly appeared dropdown.
   the parent layer is *simply* linked to the child one while the
   :guilabel:`Composition` type allows you to duplicate also the child features
   when duplicating the parent ones and on deleting a feature the children are
-  deleted as well, resulting in cascade over all levels (means childrenchildren
-  and childrenchildrenchildren are deleted as well).
+  deleted as well, resulting in cascade over all levels (means children of children
+  of... are deleted as well).
 
 * **Referenced Layers** also considered as parent layers, are those with
   the primary key, pointed to, so here they would be ``plants`` and ``animals`` layers. You need to define
