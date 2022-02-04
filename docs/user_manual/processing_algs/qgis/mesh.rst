@@ -37,7 +37,7 @@ Parameters
      - The dataset groups 
    * - **Dataset time**
      - ``DATASET_TIME``
-     - 
+     - [datetime]
      - The time range to take into account
 
        * 0 --- Current canvas time
@@ -70,7 +70,7 @@ Parameters
    * - **List of contours level**
 
        Optional
-     - ``MINIMUM``
+     - ``CONTOUR_LEVEL_LIST``
      - [number]
 
        Default: *Not set*
@@ -91,8 +91,8 @@ Parameters
        of the mesh layer. One of:
 
        .. include:: ../algs_include.rst
-          :start-after: **layer_output_types_append**
-          :end-before: **end_layer_output_types_append**
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
    * - **Exported contour polygons**
      - ``OUTPUT_POLYGONS``
@@ -103,8 +103,8 @@ Parameters
        of the mesh layer. One of:
 
        .. include:: ../algs_include.rst
-          :start-after: **layer_output_types_append**
-          :end-before: **end_layer_output_types_append**
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
 Outputs
 .......
@@ -169,7 +169,7 @@ Parameters
      - The dataset groups 
    * - **Dataset time**
      - ``DATASET_TIME``
-     -
+     - [datetime]
      - The time range to take into account
 
        * 0 --- Current canvas time
@@ -182,16 +182,16 @@ Parameters
    * - **Line segmentation resolution**
      - ``RESOLUTION``
      - [number]
-     - The distance between points on the lines where the data
-       will be extracted from the dataset mesh.
 
        Default: 10.0
+     - The distance between points on the lines where the data
+       will be extracted from the dataset mesh.
    * - **Digits count for dataset value**
      - ``DATASET_DIGITS``
      - [number]
-     -
 
        Default: 2
+     - Number of digits to round dataset values
    * - **Exported data CSV file**
      - ``OUTPUT``
      - [file]
@@ -259,7 +259,7 @@ Parameters
      - The dataset groups 
    * - **Dataset time**
      - ``DATASET_TIME``
-     - 
+     - [datetime]
      - The time range to take into account
 
        * 0 --- Current canvas time
@@ -347,7 +347,7 @@ Parameters
      - The dataset groups 
    * - **Dataset time**
      - ``DATASET_TIME``
-     -
+     - [datetime]
      - The time range to take into account
 
        * 0 --- Current canvas time
@@ -362,7 +362,7 @@ Parameters
    * - **Export vector option**
      - ``VECTOR_OPTION``
      - [enumeration]
-     -
+     - Coordinate type of vector value exportation.
 
        * 0 --- Cartesian (x,y)
        * 1 --- Polar (magnitude, degree)
@@ -440,7 +440,7 @@ Parameters
      - The dataset groups 
    * - **Dataset time**
      - ``DATASET_TIME``
-     -
+     - [datetime]
      - The time range to take into account
 
        * 0 --- Current canvas time
@@ -474,7 +474,7 @@ Parameters
    * - **Export vector option**
      - ``VECTOR_OPTION``
      - [enumeration]
-     -
+     - Coordinate type of vector value exportation.
 
        * 0 --- Cartesian (x,y)
        * 1 --- Polar (magnitude, degree)
@@ -547,7 +547,7 @@ Parameters
      - The dataset groups 
    * - **Dataset time**
      - ``DATASET_TIME``
-     -
+     - [datetime]
      - The time range to take into account
 
        * 0 --- Current canvas time
@@ -562,7 +562,7 @@ Parameters
    * - **Export vector option**
      - ``VECTOR_OPTION``
      - [enumeration]
-     -
+     - Coordinate type of vector value exportation.
 
        * 0 --- Cartesian (x,y)
        * 1 --- Polar (magnitude, degree)
@@ -637,7 +637,7 @@ Parameters
      - The dataset groups 
    * - **Starting time**
      - ``STARTING_TIME``
-     -
+     - [datetime]
      - The start of the time range to take into account
 
        * 0 --- Current canvas time
@@ -645,7 +645,7 @@ Parameters
        * 2 --- Dataset group time step
    * - **Finishing time**
      - ``FINISHING_TIME``
-     -
+     - [datetime]
      - The end of the time range to take into account
 
        * 0 --- Current canvas time
@@ -657,8 +657,9 @@ Parameters
      - ``TIME_STEP``
      - [number]
 
-       Default: 2
-     -
+       Default: 0
+     - Time between two consecutive steps to extract.
+       Keep ``0`` to use time step of the first selected dataset group.
    * - **Points for data export**
      - ``INPUT_POINTS``
      - [vector: point]
@@ -667,7 +668,7 @@ Parameters
    * - **Digits count for coordinates**
      - ``COORDINATES_DIGITS``
      - [number]
-     -
+     - Number of digits to round coordinate values
 
        Default: 2
    * - **Digits count for dataset value**
@@ -675,7 +676,7 @@ Parameters
      - [number]
 
        Default: 2
-     -
+     - Number of digits to round dataset values
    * - **Exported data CSV file**
      - ``OUTPUT``
      - [file]
@@ -701,7 +702,8 @@ Outputs
    * - **Exported data CSV file**
      - ``OUTPUT``
      - [file]
-     -
+     - :file:`.CSV` file containing the mesh dataset time series values
+       at the overlaying point features
 
 Python code
 ...........
@@ -747,7 +749,7 @@ Parameters
      - The dataset groups 
    * - **Dataset time**
      - ``DATASET_TIME``
-     -
+     - [datetime]
      - The time range to take into account
 
        * 0 --- Current canvas time
