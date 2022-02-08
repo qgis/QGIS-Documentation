@@ -327,7 +327,8 @@ URL like in the following snippet:
 .. testoutput:: auth
     :hide:
 
-    WMS(1): Download of capabilities failed: network request update failed for authentication config
+    WMS(1): Download of capabilities failed:
+    network request update failed for authentication config
 
 In the upper case, the ``wms`` provider will take care to expand ``authcfg``
 URI parameter with credential just before setting the HTTP connection.
@@ -350,7 +351,8 @@ class, is used to set a data source in the following way:
 .. testoutput:: auth
     :hide:
 
-    WMS(1): Download of capabilities failed: network request update failed for authentication config
+    WMS(1): Download of capabilities failed:
+    network request update failed for authentication config
 
 .. note::
 
