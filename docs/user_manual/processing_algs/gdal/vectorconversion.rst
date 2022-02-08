@@ -371,6 +371,8 @@ Basic parameters
        resolution (if size units is "Georeferenced units") of the
        output raster.
    * - **Output extent**
+
+       Optional
      - ``EXTENT``
      - [extent]
      - Extent of the output raster layer.
