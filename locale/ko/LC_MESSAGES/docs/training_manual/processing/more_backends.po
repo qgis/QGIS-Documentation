@@ -1,24 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
-# 정윤호 <yunhoc@gmail.com>, 2020
+# Harrissou Sant-anna, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:23+0000\n"
-"Last-Translator: 정윤호 <yunhoc@gmail.com>, 2020\n"
+"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"PO-Revision-Date: 2020-12-24 10:28+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2022\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -74,6 +76,15 @@ msgid ""
 msgstr ""
 "`R <http://www.r-project.org/>`_ 은 통계 계산 및 도표를 위한 무료 오픈소스 소프트웨어 환경입니다."
 
+#: ../../docs/training_manual/processing/more_backends.rst:20
+msgid ""
+"It has to be installed separately, together with a few necessary libraries "
+"(**LIST**). To enable the use of R in QGIS, the *Processing R Provider* "
+"plugin must also be installed."
+msgstr ""
+"R은 필수 라이브러리(**LIST**) 몇 개와 함께 개별적으로 설치되어야 합니다. QGIS에서 R을 사용하려면 *Processing R"
+" Provider* 플러그인도 설치해야만 합니다."
+
 #: ../../docs/training_manual/processing/more_backends.rst:23
 msgid ""
 "The beauty of Processing implementation is that you can add your own "
@@ -111,8 +122,8 @@ msgstr "추가적인 플러그인을 통해 사용할 수 있는 다음과 같�
 #: ../../docs/training_manual/processing/more_backends.rst:34
 msgid "LecoS_:  a suite for land cover statistics and landscape ecology"
 msgstr ""
-"`LecoS <https://conservationecology.wordpress.com/qgis-plugins-and-scripts"
-"/lecos-land-cover-statistics/>`_ : 토지 피복 통계 및 경관 생태학을 위한 묶음입니다."
+"`LecoS <https://conservationecology.wordpress.com/qgis-plugins-and-"
+"scripts/lecos-land-cover-statistics/>`_ : 토지 피복 통계 및 경관 생태학을 위한 묶음입니다."
 
 #: ../../docs/training_manual/processing/more_backends.rst:35
 msgid ""
@@ -205,6 +216,18 @@ msgstr ""
 ":menuselection:`SAGA --> Shapes to Grid --> COUNT` 를 통해 동일한 작업을 하십시오. (결과물 "
 "맵은 6개에서 60개 사이입니다.)"
 
+#: ../../docs/training_manual/processing/more_backends.rst:62
+msgid ""
+"then, :menuselection:`proximity` (value= 1 for GRASS, a list of rivers ID "
+"for SAGA), :menuselection:`r.buffer` with parameters 1000,2000,3000, "
+":menuselection:`r.grow.distance` (the first of the two maps; the second will"
+" show the areas pertaining to each river, if done on the SAGA raster)."
+msgstr ""
+"마지막으로 (GRASS에서는 :guilabel:`value` = :kbd:`1`, SAGA에서는 :guilabel:`rivers` ID "
+"목록으로) :menuselection:`proximity` 를, 파라미터 값 1000, 2000, 3000으로 "
+":menuselection:`r.buffer` 를, (두 맵 가운데 첫 번째 맵으로. SAGA 래스터 상에서 실행된 경우 두 번째 맵은 "
+"각 하천에 부속된 면적을 보여줄 것입니다) :menuselection:`r.grow.distance` 를 실행해보십시오."
+
 #: ../../docs/training_manual/processing/more_backends.rst:65
 msgid "Dissolve"
 msgstr "디졸브"
@@ -225,6 +248,12 @@ msgid ":menuselection:`QGIS --> Dissolve` ``municipalities.shp`` on PROVINCIA"
 msgstr ""
 "``municipalities.shp`` 의 PROVINCIA 속성에 대해 :menuselection:`QGIS --> Dissolve`"
 " 를 실행하십시오."
+
+#: ../../docs/training_manual/processing/more_backends.rst:71
+msgid ":menuselection:`OGR --> Dissolve` ``municipalities.shp`` on PROVINCIA"
+msgstr ""
+"``municipalities.shp`` 의 PROVINCIA 속성에 대해 :menuselection:`OGR --> Dissolve` "
+"를 실행하십시오."
 
 #: ../../docs/training_manual/processing/more_backends.rst:72
 msgid ""
