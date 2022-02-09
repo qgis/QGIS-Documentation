@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2022
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-12 02:37+0000\n"
 "PO-Revision-Date: 2020-12-24 11:58+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2022\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -76,9 +77,34 @@ msgstr ""
 "삼림을 목록화하는 아주 정확한 방법 가운데 하나는 삼림에 직접 들어가서 모든 나무의 수종과 그 특성을 목록화하는 것입니다. 이것은 면적이"
 " 작은 지역이나 특별한 상황을 제외하면 일반적으로 적용할 수 있는 방법이 아니라는 것을 쉽게 알 수 있겠죠."
 
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:28
+msgid ""
+"The most common way to find out about a forest is by sampling it, that is, "
+"taking measurements in different locations at the forest and generalizing "
+"that information to the whole forest. These measurements are often made in "
+"*sample plots* that are smaller forest areas that can be easily measured. "
+"The sample plots can be of any size (for ex. 50 m2, 0.5 ha) and form (for "
+"ex. circular, rectangular, variable size), and can be located in the forest "
+"in different ways (for ex. randomly, systematically, along lines). The size,"
+" form and location of the sample plots are usually decided following "
+"statistical, economical and practical considerations. If you have no "
+"forestry knowledge, you might be interested in reading `this Wikipedia "
+"article <https://en.wikipedia.org/wiki/Forest_inventory>`_."
+msgstr ""
+"삼림의 정보를 알아내는 가장 일반적인 방법은 삼림 곳곳에서 측정한 표본을 만들어 전체 삼림으로 정보를 일반화하는 것입니다. 대부분의 경우"
+" 이러한 측정은 손쉽게 측정할 수 있는 작은 삼림 지역인 *표본 조사구* 에서 이뤄집니다. 표본 조사구는 어떤 크기(예를 들어 50 "
+"제곱미터, 0.5 헥타르 등)도 될 수 있고 어떤 형태(다양한 크기의 원형, 사각형 등)도 될 수 있으며, 그 위치도 다양한 "
+"방법(임의적, 체계적, 선형 등)으로 선정할 수 있습니다.  표본 조사구의 크기, 형태 그리고 위치는 일반적으로 통계적, 경제적 그리고 "
+"실질적인 사항을 고려하여 결정됩니다. 만약 여러분들이 삼림관리에 대한 지식이 없다면 `이 위키피디아 내용 "
+"<https://en.wikipedia.org/wiki/Forest_inventory>`_ 을 읽어보시기 바랍니다."
+
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:40
 msgid "|basic| |FA| Implementing a Systematic Sampling Plot Design"
 msgstr "|basic| |FA| 체계적인 표본 조사구 설계 시행"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:203
+msgid "basic"
+msgstr "basic"
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:42
 msgid ""
@@ -330,6 +356,22 @@ msgstr ""
 msgid "|basic| |FA| Exporting Sample Plots as GPX format"
 msgstr "|basic| |FA| 표본 조사구를 GPX 형식으로 내보내기"
 
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:142
+msgid ""
+"The field teams will be probably using a GPS device to locate the sample "
+"plots you planned. The next step is to export the points you created to a "
+"format that your GPS can read. QGIS allows you to save your point and line "
+"vector data in `GPS eXchange Format "
+"(GPX)<https://en.wikipedia.org/wiki/GPS_Exchange_Format>`, which is an "
+"standard GPS data format that can be read by most of the specialized "
+"software. You need to be careful with selecting the CRS when you save your "
+"data:"
+msgstr ""
+"현장 조사팀은 아마도 GPS 기기를 이용해서 여러분이 지정한 표본 조사구의 위치를 찾을 것입니다. 다음 단계는 여러분이 생성한 포인트를 "
+"GPS 기기가 읽을 수 있는 형식으로 내보내는 것입니다. QGIS는 포인트 및 라인 벡터 데이터를 `GPS eXchange Format "
+"(GPX) <https://ko.wikipedia.org/wiki/GPX>`_ 라는 형식으로 저장할 수 있는데, 이 형식은 표준 GPS "
+"데이터 형식으로 대부분의 전문 소프트웨어가 읽어낼 수 있습니다. 다만 데이터를 저장할 때 CRS 설정에 주의해야 합니다. "
+
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:150
 msgid ""
 "Right click :kbd:`systematic_plots_clip` and select :guilabel:`Save as`."
@@ -352,11 +394,37 @@ msgstr ":guilabel:`CRS` 에서 :guilabel:`Selected CRS` 를 선택합니다."
 msgid "Browse for :kbd:`WGS 84 (EPSG:4326)`."
 msgstr ":kbd:`WGS 84 (EPSG:4326)` 항목을 찾으십시오."
 
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:156
+msgid ""
+"The :kbd:`GPX` format accepts only this CRS, if you select a different one, "
+"QGIS will give no error but you will get an empty file."
+msgstr ""
+":kbd:`GPX` 형식은 이 CRS만 사용할 수 있습니다. 만약 다른 CRS를 선택하면 QGIS가 오류를 경고하지는 않지만 빈 파일을 "
+"얻게 될 것입니다. "
+
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:160
 msgid ""
 "In the dialog that opens, select only the :kbd:`waypoints` layer (the rest "
 "of the layers are empty)."
 msgstr "대화창이 열리면 :kbd:`waypoints` 레이어만 선택하십시오. (다른 레이어들은 비어 있습니다.)"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:166
+msgid ""
+"The inventory sample plots are now in a standard format that can be managed "
+"by most of the GPS software. The field teams can now upload the locations of"
+" the sample plots to their devices. That would be done by using the specific"
+" devices own software and the :kbd:`plots_wgs84.gpx` file you just saved. "
+"Other option would be to use the :guilabel:`GPS Tools` plugin but it would "
+"most likely involve setting the tool to work with your specific GPS device. "
+"If you are working with your own data and want to see how the tool works you"
+" can find out information about it in the section :ref:`working_gps` in the "
+"**QGIS User Manual**."
+msgstr ""
+"이제 표본 조사구 목록이 대부분의 GPS 소프트웨어가 관리할 수 있는 표준 형식으로 저장되었습니다. 이제 현장 조사팀이 현장 조사구의 "
+"위치를 GPS 기기에 업로드할 수 있게 되었습니다. 여러분이 방금 저장한 :kbd:`plots_wgs84.gpx` 파일과 특정 기기의 "
+"소프트웨어를 통해서 말이죠. :guilabel:`GPS Tools` 플러그인을 사용할 수도 있지만, 특정 GPS 기기에 맞춰 도구를 따로"
+" 설정해줘야 할 것입니다. 여러분 자신의 데이터를 사용해서 이 도구가 어떻게 동작하는지 알고 싶다면, **QGIS 사용자 매뉴얼** 의 "
+":ref:`working_gps` 에서 관련 정보를 찾을 수 있습니다."
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:175
 msgid "Save your QGIS project now."
