@@ -206,7 +206,7 @@ All filters have access to the request/response object
 and can manipulate all its properties (input/output) and
 raise exceptions (while in a quite particular way as we’ll see below).
 
-All these methods return a boolean value indicating if the call should be propagated the subsequent
+All these methods return a boolean value indicating if the call should be propagated to the subsequent
 filters. If one of these method returns :const:`False` then the chain stop, otherwise the call will propagate
 to the next filter. 
 
@@ -273,7 +273,7 @@ This is called once when core services (if hit) finish their process and the
 request is ready to be sent to the client.
 As discussed above, this method will be called before the last (or unique) chunk of
 data is sent to the client. 
-For streaming services, multiple calls to :meth:`onSendResponse() <qgis.server.QgsServerFilter.onSendResponse>` migth have been called.
+For streaming services, multiple calls to :meth:`onSendResponse() <qgis.server.QgsServerFilter.onSendResponse>` might have been called.
 
 :meth:`onResponseComplete() <qgis.server.QgsServerFilter.onResponseComplete>` is the
 ideal place to provide new services implementation
