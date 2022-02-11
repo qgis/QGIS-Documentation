@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2022
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-12 02:37+0000\n"
 "PO-Revision-Date: 2020-12-24 11:58+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2022\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -55,6 +56,21 @@ msgstr ""
 msgid "|basic| |FA| Installing Lastools"
 msgstr "|basic| |FA| LAStools 설치"
 
+#: ../../docs/training_manual/forestry/basic_lidar.rst:200
+msgid "basic"
+msgstr "basic"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:18
+msgid ""
+"Managing LiDAR data within QGIS is possible using the Processing framework "
+"and the algorithms provided by `LAStools "
+"<https://rapidlasso.com/2013/09/29/how-to-install-lastools-toolbox-in-"
+"qgis>`_."
+msgstr ""
+"`LAStools <https://rapidlasso.com/2013/09/29/how-to-install-lastools-"
+"toolbox-in-qgis>`_ 가 제공하는 공간처리 프레임워크와 알고리듬을 이용하면 QGIS에서 LiDAR 데이터를 다룰 수 있게 "
+"됩니다."
+
 #: ../../docs/training_manual/forestry/basic_lidar.rst:21
 msgid ""
 "You can obtain a digital elevation model (DEM) from a LiDAR point cloud and "
@@ -85,6 +101,40 @@ msgid ""
 "installations of QGIS 2.2 and 2.4."
 msgstr ""
 ":kbd:`lidar` 라는 이름의 폴더가 있다면 삭제하십시오. QGIS 2.2 및 2.4 버전 설치본에서 사용되는 폴더입니다."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:35
+msgid ""
+"Go to the :file:`exercise_data\\\\forestry\\\\lidar\\\\` folder, there you "
+"can find the file :file:`QGIS_2_2_toolbox.zip`. Open it and extract the "
+":kbd:`lidar` folder to replace the one you just deleted."
+msgstr ""
+":file:`exercise_data\\\\forestry\\\\lidar\\\\` 폴더로 이동하면 "
+":file:`QGIS_2_2_toolbox.zip` 파일을 찾을 수 있습니다. 해당 파일을 열고 :kbd:`lidar` 폴더를 압축 "
+"해제해서 방금 삭제한 폴더 대신 설치하십시오."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:38
+msgid ""
+"If you are using a different QGIS version, you can see more installation "
+"instructions in `this tutorial <https://rapidlasso.com/2013/09/29/how-to-"
+"install-lastools-toolbox-in-qgis/>`_."
+msgstr ""
+"다른 QGIS 버전을 사용하고 있다면, `이 교재 <https://rapidlasso.com/2013/09/29/how-to-"
+"install-lastools-toolbox-in-qgis/>`_ 에서 더 자세한 설치 지침을 찾아볼 수 있습니다."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:41
+msgid ""
+"Now you need to install the LAStools to your computer. Get the newest "
+"*lastools* version `here "
+"<https://lastools.github.io/download/LAStools.zip>`_ and extract the content"
+" of the :file:`lastools.zip` file into a folder in your system, for example,"
+" :file:`C:\\\\lastools\\\\`. The path to the :file:`lastools` folder cannot "
+"have spaces or special characters."
+msgstr ""
+"이제 여러분의 컴퓨터에 LAStools를 설치해야 합니다. `여기 "
+"<https://lastools.github.io/download/LAStools.zip>`_ 에서 최신 *LAStools* 버전을 "
+"다운로드한 다음 :file:`lastools.zip` 파일의 내용물을 여러분의 시스템에, 예를 들어 "
+":file:`C:\\\\lastools\\\\` 폴더에 압축 해제하십시오. :file:`lastools` 폴더의 경로명에 공백이나 특수 "
+"문자를 사용해서는 안 됩니다."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:47
 msgid ""
@@ -188,6 +238,16 @@ msgid ""
 "it to open."
 msgstr ":guilabel:`lasview` 알고리듬이 보일 때까지 스크롤한 뒤, 해당 알고리듬을 더블클릭하십시오."
 
+#: ../../docs/training_manual/forestry/basic_lidar.rst:87
+msgid ""
+"At :guilabel:`Input LAS/LAZ file`, browse to "
+":file:`exercise_data\\\\forestry\\\\lidar\\\\` and select the "
+":file:`rautjarvi_lidar.laz` file."
+msgstr ""
+":guilabel:`Input LAS/LAZ file` 에서 "
+":file:`exercise_data\\\\forestry\\\\lidar\\\\` 폴더로 이동, "
+":file:`rautjarvi_lidar.laz` 파일을 선택하십시오."
+
 #: ../../docs/training_manual/forestry/basic_lidar.rst:93
 msgid "Click :guilabel:`Run`."
 msgstr ":guilabel:`Run` 을 클릭합니다."
@@ -207,6 +267,17 @@ msgid ""
 msgstr ""
 "이 뷰어 안에서 할 수 있는 작업은 많지만, 지금은 뷰어 상에서 LiDAR 데이터 클라우드를 클릭&드래그해서 이동시키면서 어떻게 이루어져"
 " 있는지 살펴보십시오."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:103
+msgid ""
+"If you want to know further details on how the LAStools work, you can read "
+"the :file:`README` text files about each of the tools, in the "
+":file:`C:\\\\lastools\\\\bin\\\\` folder. Tutorials and other materials are "
+"available at the `Rapidlasso webpage <https://rapidlasso.com/>`_."
+msgstr ""
+"LAStools 사용법에 대해 더 자세히 알고 싶다면, :file:`C:\\\\lastools\\\\bin\\\\` 폴더에 있는 각 "
+"도구에 대한 :file:`README` 텍스트 파일을 읽어보십시오. 실습 예제 및 다른 자료는 `Rapidlasso 웹페이지 "
+"<https://rapidlasso.com/>`_ 에서 찾을 수 있습니다."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:107
 msgid "Close the viewer when you are ready."
@@ -235,9 +306,36 @@ msgid ""
 "this image:"
 msgstr "더블클릭해서 :guilabel:`lasground` 도구를 열고 다음 그림처럼 설정하십시오."
 
+#: ../../docs/training_manual/forestry/basic_lidar.rst:120
+msgid ""
+"The output file is saved to the same folder where the "
+":file:`rautjarvi_lidar.laz` is located and it is named "
+":file:`rautjarvi_lidar_1.las`."
+msgstr ""
+"산출물 파일을 저장할 위치를 :file:`rautjarvi_lidar.laz` 파일이 있던 폴더로, 파일명은 "
+":file:`rautjarvi_lidar_1.las` 로 설정하십시오."
+
 #: ../../docs/training_manual/forestry/basic_lidar.rst:123
 msgid "You can open it with :guilabel:`lasview` if you want to check it."
 msgstr "산출물을 확인하고 싶을 경우 :guilabel:`lasview` 로 열어볼 수 있습니다."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:128
+msgid ""
+"The brown points are the points classified as ground and the gray ones are "
+"the rest, you can click the letter :kbd:`g` to visualize only the ground "
+"points or the letter :kbd:`u` to see only the unclassified points. Click the"
+" letter :kbd:`a` to see all the points again. Check the "
+":file:`lasview_README.txt` file for more commands. If you are interested, "
+"also this `tutorial <https://rapidlasso.com/2014/03/02/tutorial-manual-"
+"lidar-editing/>`_ about editing LiDAR points manually will show you "
+"different operations within the viewer."
+msgstr ""
+":kbd:`ground` 로 분류된 포인트가 갈색, 나머지는 회색 포인트로 보일 것입니다. :kbd:`g` 문자를 클릭해서 지상 포인트만"
+" 보이도록 할 수도 있고, :kbd:`u` 문자를 클릭해서 분류되지 않은 포인트만 보이도록 할 수도 있습니다. :kbd:`a` 문자를 "
+"클릭하면 다시 모든 포인트가 보이게 됩니다. :file:`lasview_README.txt` 파일을 살펴보면 더 많은 명령어를 알 수 "
+"있습니다. 관심이 있다면 LiDAR 포인트를 수작업으로 편집하는 이 `실습 예제 "
+"<https://rapidlasso.com/2014/03/02/tutorial-manual-lidar-editing/>`_ 를 통해 뷰어"
+" 안에서 어떤 다른 작업을 수행할 수 있는지 알 수 있습니다."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:137
 msgid "Close the viewer again."
@@ -270,10 +368,28 @@ msgstr ""
 msgid "|basic| |FA| Creating a Terrain Hillshade"
 msgstr "|basic| |FA| 지형 음영기복도 생성"
 
+#: ../../docs/training_manual/forestry/basic_lidar.rst:154
+msgid ""
+"For visualization purposes, a hillshade generated from a DEM gives a better"
+msgstr "시각화가 목적이라면, DEM으로부터 생성한 음영기복도가 해당 지형을"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:154
+msgid "visualization of the terrain:"
+msgstr "더 잘 시각화할 수 있습니다:"
+
 #: ../../docs/training_manual/forestry/basic_lidar.rst:156
 msgid "Open :menuselection:`Raster --> Terrain analysis --> Hillshade`."
 msgstr ""
 "메뉴에서 :menuselection:`Raster --> Terrain analysis --> Hillshade` 를 클릭하십시오."
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:157
+msgid ""
+"As the :guilabel:`Output layer`, browse to "
+":file:`exercise_data\\\\forestry\\\\lidar\\\\` and name the file "
+":file:`hillshade.tif`."
+msgstr ""
+":guilabel:`Output layer` 에서 :file:`exercise_data\\\\forestry\\\\lidar\\\\` "
+"폴더를 찾은 다음 파일명을 :file:`hillshade.tif` 로 입력하십시오."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:159
 msgid "Leave the rest of parameters with the default settings."
@@ -295,6 +411,19 @@ msgstr ""
 #: ../../docs/training_manual/forestry/basic_lidar.rst:175
 msgid "|IC|"
 msgstr "|IC|"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:177
+msgid ""
+"Using LiDAR data to get a DEM, specially in forested areas, gives good "
+"results with not much effort. You could also use ready LiDAR derived DEMs or"
+" other sources like the `SRTM 9m resolution DEMs "
+"<https://srtm.csi.cgiar.org/srtmdata/>`_. Either way, you can use them to "
+"create a hillshade raster to use in your map presentations."
+msgstr ""
+"DEM 추출에 LiDAR 데이터를, 특히 삼림 지역에서, 사용하면 큰 수고를 들이지 않고 훌륭한 결과물을 얻을 수 있습니다. 또는 "
+"`SRTM 9m resolution DEMs <https://srtm.csi.cgiar.org/srtmdata/>`_ 와 같은 기존 "
+"LiDAR 기반 DEM이나 다른 소스를 사용할 수도 있습니다. 어떤 소스를 쓰던 간에, DEM을 이용해서 맵 프리젠테이션에 사용할 "
+"음영기복도를 생성할 수 있습니다."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:184
 msgid "|WN|"
