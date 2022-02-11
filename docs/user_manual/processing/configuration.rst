@@ -39,13 +39,7 @@ The :guilabel:`General` block contains a number of interesting parameters.
   (to run the algorithm again with different parameters, or to better
   check the output that is written to the log tab), check this option.
 * :guilabel:`Max Threads`
-* :guilabel:`Output folder` for non temporary outputs: If no folder path
-  is provided for the Processing execution outputs, this is the folder in which
-  they will be saved. Default is :file:`processing/outputs` under the active
-  :ref:`user profile <user_profiles>` directory.
-* :guilabel:`Override temporary output folder path`: Temporary outputs are
-  saved by default in the :file:`tmp` folder on the machine.
-  This option helps you set a different place for storage.
+* :guilabel:`Output folder`
 * :guilabel:`Pre-execution script` and :guilabel:`Post-execution script`.
   These parameters point to files that contain scripts written using the
   processing scripting functionality, explained in the section covering
