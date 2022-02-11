@@ -1,23 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
+# Harrissou Sant-anna, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-14 22:11+0200\n"
-"PO-Revision-Date: 2020-03-16 19:22+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"PO-Revision-Date: 2020-12-24 10:25+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2022\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -41,6 +44,22 @@ msgstr ""
 "필요한 모든 설정을 끝내고 외부 알고리듬을 사용할 수 있으므로, 공간 분석을 수행할 수 있는 강력한 도구를 갖게 되었습니다. 이제 실재 "
 "세계의 데이터를 써서 광범위한 예제를 풀어볼 때가 되었습니다."
 
+#: ../../docs/training_manual/processing/john_snow.rst:9
+msgid ""
+"We will be using the well-known dataset that John Snow used in 1854, in his "
+"groundbreaking work "
+"(https://en.wikipedia.org/wiki/John_Snow_%28physician%29), and we will get "
+"some interesting results. The analysis of this dataset is pretty obvious and"
+" there is no need for sophisticated GIS techniques to end up with good "
+"results and conclusions, but it is a good way of showing how these spatial "
+"problems can be analyzed and solved by using different processing tools."
+msgstr ""
+"존 스노우(John Snow)가 1854년 자신의 `획기적인 작업 "
+"<https://ko.wikipedia.org/wiki/%EC%A1%B4_%EC%8A%A4%EB%85%B8_(%EC%9D%98%EC%82%AC)>`_"
+" 에 사용했던 유명한 데이터셋을 이용해서 흥미로운 결과를 얻을 것입니다. 이 데이터셋을 분석하는 작업은 꽤 명확한 편으로 제대로 된 "
+"결과물 및 결론을 얻는 데 복잡한 GIS 기술이 필요하지는 않지만, 이 공간 문제들을 서로 다른 처리 과정 도구들을 써서 어떻게 분석하고"
+" 해결할 수 있는지 알 수 있는 훌륭한 방법입니다."
+
 #: ../../docs/training_manual/processing/john_snow.rst:11
 msgid ""
 "The dataset contains shapefiles with cholera deaths and pump locations, and "
@@ -49,6 +68,16 @@ msgid ""
 msgstr ""
 "이 데이터셋은 콜레라에 의한 사망자 수 및 펌프 위치를 담고 있는 shapefile과 TIFF 포맷으로 렌더링된 OSM 맵을 포함합니다."
 " 이 강의에 해당하는 QGIS 프로젝트를 여십시오."
+
+#: ../../docs/training_manual/processing/john_snow.rst:15
+msgid ""
+"The first thing to do is to calculate the Voronoi diagram (a.k.a. Thiessen "
+"polygons) of the pumps layer, to get the influence zone of each pump. The "
+"*Voronoi Diagram* algorithm can be used for that."
+msgstr ""
+"먼저 :guilabel:`Pumps` 레이어의 보로노이 다이어그램(Voronoi diagram, 일명 티센(Thiessen) 폴리곤)을 "
+"계산해서 각 펌프의 영향 범위를 계산해야 합니다. 이 작업에 :guilabel:`Voronoi Diagram` 알고리듬을 사용할 수 "
+"있습니다."
 
 #: ../../docs/training_manual/processing/john_snow.rst:22
 msgid "Pretty easy, but it will already give us interesting information."
@@ -80,6 +109,17 @@ msgstr ""
 "새 필드에 :guilabel:`DEATHS` 라는 명칭을 부여하고, 가중치 항목에 :guilabel:`COUNTS` 필드를 이용합니다. "
 "그 결과 생성되는 테이블은 첫 번째 펌프에 해당하는 폴리곤에서의 사망자 수가 다른 폴리곤들보다 훨씬 많다는 사실을 분명히 반영하고 "
 "있습니다."
+
+#: ../../docs/training_manual/processing/john_snow.rst:36
+msgid ""
+"Another good way of visualizing the dependence of each point in the "
+"``Cholera_deaths`` layer with a point in the ``Pumps`` layer is to draw a "
+"line to the closest one. This can be done with the *Distance to nearest hub*"
+" tool, and using the configuration shown next."
+msgstr ""
+":kbd:`Cholera_deaths` 레이어의 각 포인트와 :kbd:`Pumps` 레이어의 포인트 사이의 의존성을 시각화하는 또다른 "
+"훌륭한 방법은 각 :kbd:`Cholera_deaths` 포인트에서 가장 근접한 :kbd:`Pumps` 포인트로 라인을 그려보는 "
+"것입니다. :guilabel:`Distance to closest hub` 도구를 다음과 같이 설정해서 이 작업을 할 수 있습니다."
 
 #: ../../docs/training_manual/processing/john_snow.rst:40
 msgid "The result looks like this:"
