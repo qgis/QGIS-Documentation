@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2022
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-12 02:37+0000\n"
 "PO-Revision-Date: 2020-12-24 10:27+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2022\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -62,6 +63,10 @@ msgstr ""
 msgid "|TY| |moderate|"
 msgstr "|TY| |moderate| 중급"
 
+#: ../../docs/training_manual/spatial_databases/geometry.rst:279
+msgid "moderate"
+msgstr "moderate"
+
 #: ../../docs/training_manual/spatial_databases/geometry.rst:25
 msgid ""
 "Modify the :kbd:`streets` table so that it has a geometry column of type "
@@ -87,6 +92,12 @@ msgstr "새 도형 열에 공간 인덱스를 생성하십시오."
 msgid ":ref:`Check your results <geometry-1>`"
 msgstr ":ref:`결과 확인 <geometry-1>`"
 
+#: ../../docs/training_manual/spatial_databases/geometry.rst:35
+msgid ""
+"Now let's insert a linestring into our streets table. In this case we will "
+"update an existing street record:"
+msgstr "이제 'streets' 테이블에 라인스트링을 인서트해봅시다. 이 경우, 다음과 같이 기존 도로 레코드를 업데이트할 것입니다:"
+
 #: ../../docs/training_manual/spatial_databases/geometry.rst:44
 msgid ""
 "Take a look at the results in QGIS. (You may need to right-click on the "
@@ -104,6 +115,15 @@ msgstr "이제 QGIS에서 그리고 커맨드 입력 창에서 더 많은 도로
 #: ../../docs/training_manual/spatial_databases/geometry.rst:52
 msgid "Creating Polygons"
 msgstr "폴리곤 생성"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:54
+msgid ""
+"Creating polygons is just as easy. One thing to remember is that by "
+"definition, polygons have at least four vertices, with the last and first "
+"being co-located:"
+msgstr ""
+"폴리곤 생성 작업도 아주 쉽습니다. 다만 한 가지, 폴리곤은 정의상 적어도 네 꼭짓점을 가지며, 첫 번째와 마지막 꼭짓점이 동일한 위치에"
+" 있다는 사실을 기억해야 합니다:"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:62
 msgid ""
@@ -151,6 +171,10 @@ msgid ""
 "associated street and city."
 msgstr "SQL을 이용해서 새 인물 레코드를 몇 개 인서트하고, 각 레코드가 관련 도로 및 도시 정보를 갖고 있는지 확인하십시오."
 
+#: ../../docs/training_manual/spatial_databases/geometry.rst:92
+msgid "Your updated people schema should look something like this:"
+msgstr "사용자가 업데이트한 'people' 스키마가 다음과 비슷해야 합니다:"
+
 #: ../../docs/training_manual/spatial_databases/geometry.rst:120
 msgid ":ref:`Check your results <geometry-2>`"
 msgstr ":ref:`결과 확인 <geometry-2>`"
@@ -166,6 +190,10 @@ msgstr "이 시점에서 사용자의 스키마가 이렇게 보여야 합니다
 #: ../../docs/training_manual/spatial_databases/geometry.rst:133
 msgid "|TY| |hard|"
 msgstr "|TY| |hard| 고급"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:278
+msgid "hard"
+msgstr "hard"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:135
 msgid ""
@@ -189,6 +217,14 @@ msgstr ""
 "SFS 모델 기능을 통해 SFS 도형의 하위 오브젝트에 접근할 수 있는 광범위한 옵션을 쓸 수 있습니다. 'myPolygonTable' "
 "테이블의 모든 폴리곤 도형의 첫 번째 꼭짓점을 선택하고 싶다면, 다음과 같은 방법을 사용해야 합니다."
 
+#: ../../docs/training_manual/spatial_databases/geometry.rst:147
+msgid "Transform the polygon boundary to a linestring:"
+msgstr "폴리곤 경계선을 라인스트링으로 변환하십시오:"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:154
+msgid "Select the first vertex point of the resultant linestring:"
+msgstr "그 결과 생성된 라인스트링의 첫 번째 꼭짓점을 선택하십시오:"
+
 #: ../../docs/training_manual/spatial_databases/geometry.rst:165
 msgid "Data Processing"
 msgstr "데이터 처리"
@@ -204,6 +240,14 @@ msgstr ""
 msgid "Clipping"
 msgstr "클리핑"
 
+#: ../../docs/training_manual/spatial_databases/geometry.rst:173
+msgid ""
+"To clip a subpart of your data you can use the ``ST_INTERSECT()`` function. "
+"To avoid empty geometries, use:"
+msgstr ""
+":kbd:`ST_INTERSECT()` 기능을 사용해서 사용자 데이터의 하위 부분을 오려낼 수 있습니다. 비어 있는 도형을 오려내지 "
+"않으려면 다음 조건문을 사용하십시오:"
+
 #: ../../docs/training_manual/spatial_databases/geometry.rst:194
 msgid "Building Geometries from Other Geometries"
 msgstr "다른 도형에서 도형 생성"
@@ -218,6 +262,12 @@ msgstr ""
 "어떤 주어진 포인트 테이블에서 라인스트링을 생성하고자 합니다. 포인트의 순서는 :kbd:`id` 로 정의됩니다. 또다른 배열 방법으로, "
 "GPS 수신기로 웨이포인트를 캡처할 때 얻게 되는 것과 같은 타임스탬프를 쓸 수도 있습니다."
 
+#: ../../docs/training_manual/spatial_databases/geometry.rst:204
+msgid ""
+"To create a linestring from a new point layer called 'points', you can run "
+"the following command:"
+msgstr "'points' 라는 새 포인트 레이어에서 라인스트링을 생성하려면, 다음 명령어를 실행하면 됩니다:"
+
 #: ../../docs/training_manual/spatial_databases/geometry.rst:216
 msgid ""
 "To see how it works without creating a new layer, you could also run this "
@@ -231,9 +281,25 @@ msgstr ""
 msgid "Geometry Cleaning"
 msgstr "도형 청소"
 
+#: ../../docs/training_manual/spatial_databases/geometry.rst:226
+msgid ""
+"You can get more information for this topic in `this blog entry "
+"<https://gisforthought.com/projects/postgis_tutorial/validity.html>`_."
+msgstr ""
+"이 주제에 대해 `이 블로그 포스트 "
+"<https://gisforthought.com/projects/postgis_tutorial/validity.html>`_ 에서 더 "
+"자세한 정보를 얻을 수 있습니다."
+
 #: ../../docs/training_manual/spatial_databases/geometry.rst:230
 msgid "Differences between tables"
 msgstr "테이블 사이의 차이점"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:232
+msgid ""
+"To detect the difference between two tables with the same structure, you can"
+" use the PostgreSQL keyword ``EXCEPT``:"
+msgstr ""
+"동일한 구조를 가진 두 테이블 간의 차이점을 알아내려면 PostgreSQL 키워드인 :kbd:`EXCEPT` 를 사용하면 됩니다:"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:241
 msgid ""
@@ -244,6 +310,12 @@ msgstr "이렇게 하면 table_a의 레코드 가운데 table_b에는 없는 모
 #: ../../docs/training_manual/spatial_databases/geometry.rst:245
 msgid "Tablespaces"
 msgstr "테이블스페이스"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:247
+msgid ""
+"You can define where postgres should store its data on disk by creating "
+"tablespaces:"
+msgstr "사용자가 테이블스페이스를 생성해서 PostgreSQL이 디스크 어디에 데이터를 저장해야 하는지 정의할 수 있습니다:"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:254
 msgid ""
