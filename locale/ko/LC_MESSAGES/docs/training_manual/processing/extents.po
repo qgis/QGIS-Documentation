@@ -1,23 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
+# Harrissou Sant-anna, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-14 22:11+0200\n"
-"PO-Revision-Date: 2020-03-16 19:21+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"POT-Creation-Date: 2020-12-13 09:01+0100\n"
+"PO-Revision-Date: 2020-12-24 11:59+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2022\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -49,6 +52,28 @@ msgid ""
 msgstr ""
 "범위가 필요할 경우, 범위를 정의하는 값 4개(min X, min Y, max X, max Y)를 직접 입력해서 정의할 수 있지만, 좀 "
 "더 실용적이고 재미있는 방식으로 정의할 수도 있습니다. 이번 강의에서 그 모든 방식을 다룰 것입니다."
+
+#: ../../docs/training_manual/processing/extents.rst:15
+msgid ""
+"First, let's open an algorithm that requires an extent to be defined. Open "
+"the *Rasterize* algorithm, which creates a raster layer from a vector layer."
+msgstr ""
+"먼저 범위를 정의해야 하는 알고리듬을 선택해봅시다. 벡터 레이어에서 래스터 레이어를 생성하는 :guilabel:`Rasterize` "
+"알고리듬을 실행하십시오."
+
+#: ../../docs/training_manual/processing/extents.rst:20
+msgid ""
+"All the parameters, except for the last two ones, are used to define which "
+"layer is to be rasterized, and configure how the rasterization process "
+"should work. The two last parameters, on the other hand, define the "
+"characteristics of the output layer. That means that they define the area "
+"that is covered (which is not necessarily the same area covered by the input"
+" vector layer), and the resolution/cellsize (which cannot be inferred from "
+"the vector layer, since vector layers do not have a cellsize)."
+msgstr ""
+"마지막 2개를 제외한 모든 파라미터는 어떤 레이어를 래스터화할지 정의하고, 래스터화 과정을 어떻게 작업할지 설정하는 데 쓰입니다. 그러나"
+" 마지막 파라미터 2개는 산출 레이어의 특성을 정의합니다. 다시 말해 (입력 벡터 레이어가 커버하는 영역과 일치하지 않을 수도 있는) "
+"커버할 영역과, (벡터 레이어에는 셀이 없기 때문에 벡터 레이어에서 가져올 수 없는) 해상도/셀 크기를 정의합니다."
 
 #: ../../docs/training_manual/processing/extents.rst:28
 msgid ""
@@ -126,6 +151,15 @@ msgstr "래스터화 알고리듬을 실행하는 데 이 마지막 방식을 �
 #: ../../docs/training_manual/processing/extents.rst:71
 msgid "Fill the parameters dialog as shown next, and press *OK*."
 msgstr "파라미터 대화 창을 다음과 같이 설정한 다음, :guilabel:`OK` 를 클릭하십시오."
+
+#: ../../docs/training_manual/processing/extents.rst:75
+msgid ""
+"In this case, better use an *Integer (1 byte)* instead of a *Floating point "
+"(4 byte)*, since the *NAME* is an integer with maximum value=64. This will "
+"result in a smaller file size and faster computations."
+msgstr ""
+"이번 예제에서는 *Floating point (4 byte)* 보다 *Integer (1 byte)* 형식을 사용하는 편이 낫습니다. "
+"*NAME* 이 최대값=64인 정수이기 때문입니다. 이렇게 설정하면 파일 용량도 줄어들고 처리 시간도 빨리집니다."
 
 #: ../../docs/training_manual/processing/extents.rst:79
 msgid ""
