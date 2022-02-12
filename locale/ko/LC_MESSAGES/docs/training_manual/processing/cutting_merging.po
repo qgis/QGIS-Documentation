@@ -1,23 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
+# Harrissou Sant-anna, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:21+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"POT-Creation-Date: 2021-02-10 02:04+0000\n"
+"PO-Revision-Date: 2020-12-24 10:27+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2022\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -30,7 +33,7 @@ msgid ""
 "In this lesson we will see another example of spatial data preparation, to "
 "continue using geoalgorithms in real-world scenarios."
 msgstr ""
-"이 강의에서는 계속 실재 세상의 시나리오 안에서 공간 알고리듬을 사용해서 공간 데이터를 준비하는 또다른 예제를 풀어볼 것입니다."
+"이 강의에서는 계속 실재 세상의 시나리오 안에서 공간 알고리즘을 사용해서 공간 데이터를 준비하는 또다른 예제를 풀어볼 것입니다."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:7
 msgid ""
@@ -65,7 +68,7 @@ msgstr ""
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:23
 msgid "Both of them are easily solvable with the appropriate geoalgorithms."
-msgstr "적합한 알고리듬을 사용한다면 두 문제점 모두 쉽게 해결할 수 있습니다."
+msgstr "적합한 알고리즘을 사용한다면 두 문제점 모두 쉽게 해결할 수 있습니다."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:25
 msgid ""
@@ -81,15 +84,20 @@ msgstr ""
 msgid ""
 "To calculate the bounding box , we can use the *Polygon from layer extent* "
 "algorithm"
-msgstr "경계 범위를 계산하는 데 :guilabel:`Polygon from layer extent` 알고리듬을 사용할 수 있습니다."
+msgstr "경계 범위를 계산하는 데 :guilabel:`Polygon from layer extent` 알고리즘을 사용할 수 있습니다."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:34
 msgid ""
 "To buffer it, we use the *Fixed distance buffer* algorithm, with the "
 "following parameter values."
 msgstr ""
-"버퍼를 부여하려면 :guilabel:`Fixed distance buffer` 알고리듬을 실행하고 다음과 같이 파라미터 값을 "
+"버퍼를 부여하려면 :guilabel:`Fixed distance buffer` 알고리즘을 실행하고 다음과 같이 파라미터 값을 "
 "설정하십시오."
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:38
+msgid ""
+"Syntax changed in recent versions; set both Distance and Arc vertex to .25"
+msgstr "최근 버전에서 문법이 바뀌었습니다. 거리와 원호 꼭짓점 모두 0.25로 설정하세요."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:40
 msgid ""
@@ -103,7 +111,7 @@ msgid ""
 " have buffered the city limits first, and then calculate the extent "
 "rectangle, saving one step."
 msgstr ""
-"모서리가 둥근 사각형이지만, 이 레이어에 :guilabel:`Polygon from layer extent` 알고리듬을 실행해서 동등한 "
+"모서리가 둥근 사각형이지만, 이 레이어에 :guilabel:`Polygon from layer extent` 알고리즘을 실행해서 동등한 "
 "직각 사각형 경계 범위를 쉽게 얻을 수 있습니다. 먼저 도시 범위에 버퍼를 부여한 다음 범위 사각형을 계산해서 한 단계를 생략할 수도 "
 "있습니다."
 
@@ -116,11 +124,27 @@ msgstr ""
 "래스터와 벡터의 투영체가 다르다는 사실을 알 수 있을 것입니다. 따라서 다음 단계를 진행하기 전에 :guilabel:`Warp "
 "(reproject)` 도구를 이용, 재투영해야 합니다."
 
+#: ../../docs/training_manual/processing/cutting_merging.rst:56
+msgid ""
+"Recent versions have a more complex interface. Make sure at least one "
+"compression method is selected."
+msgstr "최근 버전의 인터페이스는 좀 더 복잡합니다. 적어도 하나 이상의 압축 방법을 선택했는지 확인하세요."
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:59
+msgid ""
+"With this layer that contains the bounding box of the raster layer that we "
+"want to obtain, we can crop both of the raster layers, using the *Clip "
+"raster with polygon* algorithm."
+msgstr ""
+"우리가 얻고자 하는 래스터 레이어의 경계 범위를 담고 있는 레이어를 써서 두 래스터 레이어를 잘라낼 수 있습니다. "
+":guilabel:`Clip Raster with Polygons` 알고리즘을 이용하십시오."
+
 #: ../../docs/training_manual/processing/cutting_merging.rst:65
 msgid ""
-"Once the layers have been cropped, they can be merged using the GDAL *Merge*"
-" algorithm."
-msgstr "레이어를 잘라낸 다음, GDAL *Merge* 알고리듬을 써서 두 레이어를 합칠 수 있습니다."
+"Once the layers have been cropped, they can be merged using the SAGA *Mosaic"
+" raster layers* algorithm."
+msgstr ""
+"레이어를 잘라낸 다음, :guilabel:`Mosaic raster layers` 알고리즘을 써서 두 레이어를 합칠 수 있습니다."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:69
 msgid ""
@@ -133,8 +157,8 @@ msgid ""
 "automate that operation. In this example, we just have two layers, so you "
 "shouldn't worry about that now."
 msgstr ""
-"합치기를 먼저 하고 자르기를 하면 클리핑 알고리듬을 두 번 호출할 필요가 없어 시간을 절약할 수 있습니다. 하지만 합쳐야 할 레이어가 두"
-" 개 이상인데 용량이 큰 편일 경우, 합치기를 먼저 하면 나중에 처리하기 어려워질 수가 있습니다. 이런 경우 클리핑 알고리듬을 몇 번 "
+"합치기를 먼저 하고 자르기를 하면 클리핑 알고리즘을 두 번 호출할 필요가 없어 시간을 절약할 수 있습니다. 하지만 합쳐야 할 레이어가 두"
+" 개 이상인데 용량이 큰 편일 경우, 합치기를 먼저 하면 나중에 처리하기 어려워질 수가 있습니다. 이런 경우 클리핑 알고리즘을 몇 번 "
 "호출해야만 해서 시간이 걸릴 수도 있지만, 곧 이런 작업을 자동화할 수 있는 추가 도구들을 소개할 것이므로 걱정하지 마십시오. 이 "
 "예제에서는 레이어 두 개뿐이므로 이런 상황에 대해 걱정할 필요는 없습니다."
 
@@ -156,10 +180,10 @@ msgid ""
 "again. We reproject into a CRS with meters as units (e.g. 3857), so we can "
 "then correctly calculate the slope, with either SAGA or GDAL."
 msgstr ""
-":guilabel:`Slope, Aspect, Curvature` 알고리듬으로 경사도 레이어를 계산할 수 있지만, 이 마지막 단계에서 "
+":guilabel:`Slope, Aspect, Curvature` 알고리즘으로 경사도 레이어를 계산할 수 있지만, 이 마지막 단계에서 "
 "얻은 DEM의 표고 값은 미터 단위인데 셀 크기가 미터 단위가 아니기 때문에 (해당 레이어는 지리 좌표를 쓰는 CRS를 사용합니다) 입력"
 " 레이어로 적합하지 않습니다. 즉 재투영해야 합니다. 래스터 레이어를 재투영하는데에도 :guilabel:`Warp (reproject)`"
-" 알고리듬을 쓸 수 있습니다. SAGA 또는 GDAL을 통해 미터 단위를 쓰는 (3857 같은) CRS로 재투영해서 경사를 정확하게 "
+" 알고리즘을 쓸 수 있습니다. SAGA 또는 GDAL을 통해 미터 단위를 쓰는 (3857 같은) CRS로 재투영해서 경사를 정확하게 "
 "계산할 수 있습니다."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:91
@@ -169,6 +193,19 @@ msgstr "이 새 DEM을 써서 경사를 계산할 수 있습니다."
 #: ../../docs/training_manual/processing/cutting_merging.rst:95
 msgid "And here is the resulting slope layer."
 msgstr "다음이 결과물인 경사도 레이어입니다."
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:99
+msgid ""
+"The slope produced by the *Slope, Aspect, Curvature* algorithm can be "
+"expressed in degrees or radians; degrees are a more practical and common "
+"unit. In case you calculated it in radians, the *Metric conversions* "
+"algorithm will help us to do the conversion (but in case you didn't know "
+"that algorithm existed, you could use the raster calculator that we have "
+"already used)."
+msgstr ""
+":guilabel:`Slope, Aspect, Curvature` 알고리즘이 생산한 경사는 도 또는 라디안 단위를 선택할 수 있으나, 도"
+" 단위가 더 실용적이고 자주 쓰입니다. 라디안 단위로 계산한 경우, :guilabel:`Metric conversions` 알고리즘으로 "
+"단위를 변환할 수 있습니다. (다만 이 알고리즘의 존재를 모를 경우, 이전에 사용했던 래스터 계산기를 사용하면 됩니다.)"
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:107
 msgid ""
@@ -181,3 +218,12 @@ msgstr ""
 #: ../../docs/training_manual/processing/cutting_merging.rst:110
 msgid "todo: Add image"
 msgstr "할 일 : 이미지 추가"
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:112
+msgid ""
+"The reprojection processes might have caused the final layer to contain data"
+" outside the bounding box that we calculated in one of the first steps. This"
+" can be solved by clipping it again, as we did to obtain the base DEM."
+msgstr ""
+"재투영 과정에서 최종 레이어가 초기 단계에서 계산했던 경계 범위 바깥의 값을 가지게 될 수도 있습니다. 기본 DEM을 얻기 위해 했던 "
+"것과 동일한 방법으로 다시 클리핑하면 이 문제를 해결할 수 있습니다."
