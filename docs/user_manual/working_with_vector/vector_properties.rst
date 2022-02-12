@@ -3118,9 +3118,7 @@ Temporal Properties
 
 The |temporal| :guilabel:`Temporal` tab provides options to control
 the rendering of the layer over time. Such dynamic rendering requires the
-temporal navigation to be enabled over the map canvas.
-
-.. TODO: Add link to temporal animation once it's merged
+:ref:`temporal navigation <maptimecontrol>` to be enabled over the map canvas.
 
 .. _figure_temporalvector:
 
@@ -3162,6 +3160,7 @@ It is also possible to set the :guilabel:`Limits` of the features time range as:
 * :guilabel:`Include start, exclude end`
 * :guilabel:`Include start, include end`
 
+.. TODO: Provide meaning of what these Limits options actually refer to
 
 .. index:: Variables
 .. _vectorvariablesmenu:
