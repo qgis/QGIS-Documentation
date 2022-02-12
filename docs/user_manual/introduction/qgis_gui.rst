@@ -2230,12 +2230,10 @@ rendering based on a time variation. To achieve this, you need:
     enable more options and behaviour so, if someone can provide a better summary
     of the temporal setting on rasters, it is very welcome!
 
-   * vector layers: features are filtered based on time values associated to
-      their attributes
-   * mesh layers: displays dynamically the active dataset groups values
-
-   .. TODO: Link the layers above to their temporal properties description
-    when merged: raster_temporal, vectortemporalmenu and mesh_temporal
+   * :ref:`vector layers <vectortemporalmenu>`: features are filtered based
+     on time values associated to their attributes
+   * :ref:`mesh layers <meshtemporal>`: displays dynamically the active dataset
+     groups values
 
    When dynamic temporal options are enabled for a layer, an |indicatorTemporal|
    icon is displayed next to the layer in the :guilabel:`Layers` panel to remind
