@@ -522,9 +522,8 @@ Temporal Properties
 The |temporal| :guilabel:`Temporal` tab provides options to control
 the rendering of the layer over time. It allows to dynamically display
 temporal values of the enabled dataset groups. Such a dynamic rendering
-requires the temporal navigation to be enabled over the map canvas.
-
-.. TODO: Add link to temporal animation once it's merged
+requires the :ref:`temporal navigation <maptimecontrol>` to be enabled
+over the map canvas.
 
 .. _figure_mesh_temporal:
 
