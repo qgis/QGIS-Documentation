@@ -2224,11 +2224,13 @@ rendering based on a time variation. To achieve this, you need:
    settings.
    It's mainly about setting the time range in which the layer would display:
 
-   * raster layers: controls whether to display or not the layer.
+   * :ref:`raster layers <raster_temporal>`: controls whether to display or
+     not the layer.
 
-   .. This option might need some tweak: I think WMS-T and Postgis raster layers
+   .. Todo: This option might need some tweak: I think WMS-T and Postgis raster layers
     enable more options and behaviour so, if someone can provide a better summary
-    of the temporal setting on rasters, it is very welcome!
+    of the temporal setting on rasters and as well describe those in raster properties,
+    it'd be very welcome!
 
    * vector layers: features are filtered based on time values associated to
       their attributes

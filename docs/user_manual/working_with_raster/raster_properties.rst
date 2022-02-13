@@ -704,9 +704,7 @@ Temporal Properties
 
 The |temporal| :guilabel:`Temporal` tab provides options to control
 the rendering of the layer over time. Such dynamic rendering requires the
-temporal navigation to be enabled over the map canvas.
-
-.. TODO: Add link to temporal animation once it's merged
+:ref:`temporal navigation <maptimecontrol>` to be enabled over the map canvas.
 
 .. _figure_raster_temporal:
 
