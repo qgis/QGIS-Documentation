@@ -1378,20 +1378,33 @@ With rule-based labeling multiple label configurations can be defined
 and applied selectively on the base of expression filters and scale range, as in
 :ref:`Rule-based rendering <rule_based_rendering>`.
 
-To create a rule, select the |labelingRuleBased| **Rule-based labeling** option in the main
-drop-down list from the :guilabel:`Labels` tab and click the |symbologyAdd| button
-at the bottom  of the dialog. Then fill the new dialog with a description and an
-expression to filter features. You can also set a :ref:`scale range
-<label_scaledepend>` in which the label rule should be applied. The other
-options available in this dialog are the :ref:`common settings <showlabels>`
-seen beforehand.
+To create a rule:
 
-.. _figure_labels_rule_settings:
+#. Select the |labelingRuleBased| **Rule-based labeling** option in the main
+   drop-down list from the :guilabel:`Labels` tab
+#. Click the |symbologyAdd| :sup:`Add rule` button at the bottom of the dialog.
+#. Fill the new dialog with:
 
-.. figure:: img/label_rule_settings.png
-   :align: center
+   * :guilabel:`Description`: a text used to identify the rule in the
+     :guilabel:`Labels` tab and as a :ref:`label legend entry <vectorlegendmenu>`
+     in the print layout legend
+   * :guilabel:`Filter`: an expression to select the features to apply the label
+     settings to
+   * If there are rules already set, the :guilabel:`Else` option can be
+     used to select all the features not matching any filter of the rules
+     in the same group.
+#. You can set a :ref:`scale range <label_scaledepend>` in which the label
+   rule should be applied.
+#. The options available under the :guilabel:`Labels` group box are
+   the usual :ref:`label settings <showlabels>`. Configure them and press
+   :guilabel:`OK`.
 
-   Rule settings
+   .. _figure_labels_rule_settings:
+
+   .. figure:: img/label_rule_settings.png
+      :align: center
+
+      Rule settings
 
 A summary of existing rules is shown in the main dialog (see :numref:`figure_labels_rule_based`).
 You can add multiple rules, reorder or imbricate them with a drag-and-drop.
