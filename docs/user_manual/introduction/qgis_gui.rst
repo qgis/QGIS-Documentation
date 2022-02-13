@@ -332,7 +332,7 @@ details).
      - :kbd:`Ctrl+.`
      - :guilabel:`Digitizing`
      - :ref:`add_feature`
-   * - |capturePoint| :guilabel:`Add Line Feature`
+   * - |captureLine| :guilabel:`Add Line Feature`
      - :kbd:`Ctrl+.`
      - :guilabel:`Digitizing`
      - :ref:`add_feature`
@@ -856,9 +856,9 @@ actions like:
      -
      - :ref:`browser_panel`
    * - :menuselection:`--> Debugging/Development Tools`
+     - :kbd:`F12`
      -
-     -
-     -
+     - :ref:`debug_dev_tools`
    * - :menuselection:`--> Geometry Validation`
      -
      -
@@ -2076,7 +2076,7 @@ Below is a list of the default panels provided by QGIS:
 
 * the :ref:`Advanced Digitizing Panel <advanced_digitizing_panel>`
 * the :ref:`Browser Panel <browser_panel>`
-* the :guilabel:`Debugging/Development Tools`
+* the :ref:`Debugging/Development Tools <debug_dev_tools>`
 * the :ref:`Geometry Validation Panel <geometry_validation_panel>`
 * the :ref:`GPS Information Panel <sec_gpstracking>`
 * the :ref:`Identify Panel <identify>`
@@ -2986,6 +2986,8 @@ Click the icon to open the Plugin Manager dialog.
 .. |addXyzLayer| image:: /static/common/mActionAddXyzLayer.png
    :width: 1.5em
 .. |allEdits| image:: /static/common/mActionAllEdits.png
+   :width: 1.5em
+.. |captureLine| image:: /static/common/mActionCaptureLine.png
    :width: 1.5em
 .. |capturePoint| image:: /static/common/mActionCapturePoint.png
    :width: 1.5em
