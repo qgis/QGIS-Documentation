@@ -25,7 +25,7 @@ There are several tabs in the dialog:
   * - |transparency| :ref:`Transparency <raster_transparency>`:sup:`[1]`
     - |rasterHistogram| :ref:`Histogram <raster_histogram>`:sup:`[1]`
     - |rendering| :ref:`Rendering <raster_rendering>`
-  * - |temporal| :guilabel:`Temporal`
+  * - |temporal| :ref:`Temporal <raster_temporal>`
     - |pyramids| :ref:`Pyramids <raster_pyramids>`
     - |editMetadata| :ref:`Metadata <raster_metadata>`
   * - |legend| :ref:`Legend <raster_server>`
@@ -693,7 +693,42 @@ In the |rendering| :guilabel:`Rendering` tab, it's possible to:
 .. figure:: img/rasterRendering.png
    :align: center
 
-   Raster Rendering
+   Raster Rendering Properties
+
+
+.. index:: Temporal
+.. _raster_temporal:
+
+Temporal Properties
+===================
+
+The |temporal| :guilabel:`Temporal` tab provides options to control
+the rendering of the layer over time. Such dynamic rendering requires the
+:ref:`temporal navigation <maptimecontrol>` to be enabled over the map canvas.
+
+.. _figure_raster_temporal:
+
+.. figure:: img/rasterTemporal.png
+   :align: center
+
+   Raster Temporal Properties
+
+Check the |checkbox| :guilabel:`Dynamic Temporal Control` option and
+set whether the layer redraw should be:
+
+* :guilabel:`Automatic`: the rendering is controlled by the underlying
+  data provider if it suppports temporal data handling. E.g. this can be used
+  with WMS-T layers or PostGIS rasters.
+
+  .. A bit more info on this automatic option would be necessary.
+   I guess it has to do with wms-t that I don't use so precision welcome
+
+* :guilabel:`Fixed time range`: only show the raster layer if the animation
+  time is within a :guilabel:`Start date` and :guilabel:`End date` range
+* :guilabel:`Redraw layer only`: the layer is redrawn at each new animation
+  frame. It's useful when the layer uses time-based expression values for
+  renderer settings (e.g. data-defined renderer opacity, to fade in/out
+  a raster layer).
 
 
 .. index:: Pyramids
