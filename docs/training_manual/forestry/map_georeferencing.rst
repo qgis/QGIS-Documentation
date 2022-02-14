@@ -34,7 +34,7 @@ For this exercise you will use a previously scanned map, you can find it as
 |basic| |FA| Georeferencing the scanned map
 -------------------------------------------------------------------------------
 
-#. Open QGIS and set the project's CRS to ``EPSG:3067 - ETRS89 / ETRS-TM35FIN(E,N)``
+#. Open QGIS and set the project's CRS to ``EPSG:3067 - ETRS89 / TM35FIN(E,N)``
    in :menuselection:`Project --> Properties --> CRS`, which is the currently
    used CRS in Finland.
 
@@ -133,7 +133,7 @@ Finally, georeference your map:
    Now you can see the map in QGIS project as a georeferenced raster.
    Note that the raster seems to be slightly rotated, but that is simply because
    the data is in ``KKJ / Finland zone 2`` and your project is in
-   ``ETRS89 / ETRS-TM35FIN(E,N)``.
+   ``ETRS89 / TM35FIN(E,N)``.
 
 #. To check that your data is properly georeferenced, you can
 
