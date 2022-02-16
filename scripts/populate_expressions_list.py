@@ -30,10 +30,10 @@ def sphynxify_html(text, base_indent=0):
     text = re.sub(r"<br\s?\/?>", '\n\n'+ filler, text)
 
     # Format unsorted lists
-    text = text.replace('<ul>', '\n\n'+ filler)
+    text = text.replace('<ul>', '\n\n')
     text = text.replace('</ul>', '\n')
-    text = text.replace('<li>', '* ')
-    text = text.replace('</li>', '\n' + filler)
+    text = text.replace('<li>', filler + '* ')
+    text = text.replace('</li>', '\n')
 
     # Format bold and italic
     text = re.sub(r"<\/?b>", '**', text)
