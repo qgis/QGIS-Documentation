@@ -71,7 +71,7 @@ Returns a matching layer property or metadata value.
          * geometry_type: geometry type, e.g., Point (vector layers only)
          * feature_count: approximate feature count for layer (vector layers only)
          * path: File path to the layer data source. Only available for file based layers.
-         
+
 
    * - Examples
      - * ``layer_property('streets','title')`` → 'Basemap Streets'

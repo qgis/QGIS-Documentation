@@ -48,7 +48,7 @@ Returns an aggregate value calculated using features from another layer.
          * concatenate_unique: join unique strings with a concatenator
          * collect: create an aggregated multipart geometry
          * array_agg: create an array of aggregated values
-         
+
 
        * **expression** - sub expression or field name to aggregate
        * **filter** - optional filter expression to limit the features used for calculating the aggregate. Fields and geometry are from the features on the joined layer. The source feature can be accessed with the variable @parent.
@@ -570,7 +570,7 @@ Returns an aggregate value calculated using all matching child features from a l
          * concatenate_unique: join unique strings with a concatenator
          * collect: create an aggregated multipart geometry
          * array_agg: create an array of aggregated values
-         
+
 
        * **expression** - sub expression or field name to aggregate
        * **concatenator** - optional string to use to join values for 'concatenate' aggregate

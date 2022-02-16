@@ -217,7 +217,7 @@ Returns a specific component from a color string, e.g., the red component or alp
          * magenta: CMYK magenta component (0-100)
          * yellow: CMYK yellow component (0-100)
          * black: CMYK black component (0-100)
-         
+
 
    * - Examples
      - * ``color_part('200,10,30','green')`` → 10
@@ -312,7 +312,7 @@ Returns a darker (or lighter) color string
          * if the factor is greater than 100, this function returns a darker color (e.g., setting factor to 200 returns a color that is half the brightness);
          * if the factor is less than 100, the return color is lighter, but using the lighter() function for this purpose is recommended;
          * if the factor is 0 or negative, the return value is unspecified.
-         
+
 
    * - Examples
      - * ``darker('200,10,30', 200)`` → '100,5,15,255'
@@ -339,7 +339,7 @@ Returns a lighter (or darker) color string
          * if the factor is greater than 100, this function returns a lighter color (e.g., setting factor to 150 returns a color that is 50% brighter);
          * if the factor is less than 100, the return color is darker, but using the darker() function for this purpose is recommended;
          * if the factor is 0 or negative, the return value is unspecified.
-         
+
 
    * - Examples
      - * ``lighter('200,10,30', 200)`` → '255,158,168,255'
@@ -442,7 +442,7 @@ Sets a specific color component for a color string, e.g., the red component or a
          * magenta: CMYK magenta component (0-100)
          * yellow: CMYK yellow component (0-100)
          * black: CMYK black component (0-100)
-         
+
 
        * **value** - new value for color component, respecting the ranges listed above
    * - Examples
