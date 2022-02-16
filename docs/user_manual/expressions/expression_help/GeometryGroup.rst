@@ -559,7 +559,7 @@ Tests whether geometries do not spatially intersect. Returns true if the geometr
 distance
 ........
 
-Returns the minimum distance (based on spatial ref) between two geometries in projected units.
+Returns the minimum distance (based on spatial reference) between two geometries in projected units.
 
 .. list-table::
    :widths: 15 85
@@ -629,7 +629,7 @@ Creates a point geometry from the exif geotags of an image file.
    * - Syntax
      - exif_geotag(path)
    * - Arguments
-     - * **path** - An image file path.
+     - * **path** - An image file path or a map layer value. If a map layer value is specified then the file source of the layer will be used.
    * - Examples
      - * ``geom_to_wkt(exif_geotag('/my/photo.jpg'))`` → 'Point (2 4)'
 
@@ -1418,7 +1418,7 @@ Returns the portion of a line (or curve) geometry which falls between the specif
 m
 .
 
-Returns the m value of a point geometry.
+Returns the m (measure) value of a point geometry.
 
 .. list-table::
    :widths: 15 85

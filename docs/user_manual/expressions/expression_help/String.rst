@@ -548,7 +548,7 @@ Removes all leading and trailing whitespace (spaces, tabs, etc) from a string.
    * - Arguments
      - * **string** - string to trim
    * - Examples
-     - * ``trim('   hello world    ')`` → 'hello world'
+     - * ``trim('   hello world  ')`` → 'hello world'
 
 
 .. end_trim_section
