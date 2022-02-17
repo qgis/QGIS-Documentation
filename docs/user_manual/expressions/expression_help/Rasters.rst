@@ -31,7 +31,7 @@ Returns statistics from a raster layer.
          * stdev: standard deviation of values
          * range: range of values (max - min)
          * sum: sum of all values from raster
-         
+
 
    * - Examples
      - * ``raster_statistic('lc',1,'avg')`` → Average value from band 1 from 'lc' raster layer

@@ -370,7 +370,7 @@ Returns the most common values in an array.
          * any: Returns one of the most common values.
          * median: Returns the median of the most common values. Non arithmetic values are ignored.
          * real_majority: Returns the value which occurs more than half the size of the array.
-         
+
 
    * - Examples
      - * ``array_majority(array(0,1,42,42,43), 'all')`` → [ 42 ]
@@ -490,7 +490,7 @@ Returns the less common values in an array.
          * any: Returns one of the less common values.
          * median: Returns the median of the less common values. Non arithmetic values are ignored.
          * real_minority: Returns values which occur less than half the size of the array.
-         
+
 
    * - Examples
      - * ``array_minority(array(0,42,42), 'all')`` → [ 0 ]
