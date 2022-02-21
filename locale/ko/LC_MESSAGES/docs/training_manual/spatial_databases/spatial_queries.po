@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2022
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-12 02:37+0000\n"
 "PO-Revision-Date: 2020-12-24 11:58+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2022\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -86,9 +87,21 @@ msgstr ":ref:`결과 확인 <spatial-queries-1>`"
 msgid "Spatial Indexes"
 msgstr "공간 인덱스"
 
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:48
+msgid ""
+"We also can define spatial indexes. A spatial index makes your spatial "
+"queries much faster. To create a spatial index on the geometry column use:"
+msgstr ""
+"사용자가 공간 인덱스도 정의할 수 있습니다. 공간 인덱스는 사용자의 공간 쿼리를 더 빠르게 해줍니다. 도형 열에 대해 공간 인덱스를 "
+"생성하려면 다음 선언문을 이용하십시오:"
+
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:86
 msgid "|TY| |moderate|"
 msgstr "|TY| |moderate| 중급"
+
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:382
+msgid "moderate"
+msgstr "moderate"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:87
 msgid "Modify the cities table so its geometry column is spatially indexed."
@@ -107,6 +120,26 @@ msgid ""
 "In order to demo PostGIS spatial functions, we'll create a new database "
 "containing some (fictional) data."
 msgstr "PostGIS의 공간 기능을 시연하기 위해, 몇몇 (가상) 데이터를 담고 있는 새 데이터베이스를 생성하겠습니다."
+
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:98
+msgid "To start, create a new database (exit the psql shell first):"
+msgstr "첫 번째로, 새 데이터베이스를 생성하십시오 (먼저 psql 셸에서 나오십시오):"
+
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:104
+msgid "Remember to install the postgis extensions:"
+msgstr "PostGIS 확장 프로그램을 설치하는 것을 잊지 마십시오:"
+
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:110
+msgid ""
+"Next, import the data provided in the :kbd:`exercise_data/postgis/` "
+"directory. Refer back to the previous lesson for instructions, but remember "
+"that you'll need to create a new PostGIS connection to the new database. You"
+" can import from the terminal or via DB Manager. Import the files into the "
+"following database tables:"
+msgstr ""
+"두 번째로, :kbd:`exercise_data/postgis/` 디렉터리에서 제공하는 데이터를 가져오십시오. 이전 강의에서 배운 "
+"내용대로 하되, 새 데이터베이스에는 새 PostGIS 연결을 생성해야 한다는 것을 기억하십시오. 터미널에서 또는 데이터베이스 관리자를 "
+"통해 가져올 수 있습니다. 다음 데이터베이스 테이블에 파일을 가져오십시오:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:116
 msgid ":kbd:`points.shp` into :kbd:`building`"
@@ -149,18 +182,45 @@ msgstr "다음 선택된 선언문들을 시연해서 뷰를 생성하겠습니�
 msgid "Select by location"
 msgstr "위치에 따른 선택"
 
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:136
+msgid "Get all the buildings in the KwaZulu region:"
+msgstr "KwaZulu 지역에 있는 모든 건물을 가져오십시오:"
+
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:158
+msgid "Or, if we create a view from it:"
+msgstr "또는, 다음과 같이 뷰를 생성할 경우:"
+
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:168
 msgid "Add the view as a layer and view it in QGIS:"
-msgstr "QGIS에 뷰를 레이어로 추가해서 볼 수 있습니다."
+msgstr "QGIS에 뷰를 레이어로 추가해서 볼 수 있습니다:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:174
 msgid "Select neighbors"
 msgstr "인접 검색"
 
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:176
+msgid "Show a list of all the names of regions adjoining the Hokkaido region:"
+msgstr "Hokkaido 지역에 붙어 있는 모든 지역들의 명칭 목록을 가져오십시오:"
+
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:196
+msgid "As a view:"
+msgstr "뷰 생성:"
+
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:206
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:251
 msgid "In QGIS:"
-msgstr "QGIS에서 뷰를 봅니다."
+msgstr "QGIS에서 뷰를 봅니다:"
+
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:211
+msgid ""
+"Note the missing region (Queensland). This may be due to a topology error. "
+"Artifacts such as this can alert us to potential problems in the data. To "
+"solve this enigma without getting caught up in the anomalies the data may "
+"have, we could use a buffer intersect instead:"
+msgstr ""
+"오류 지역(Queensland)이 보이십니까? 위상 오류 때문일지도 모릅니다. 이런 오류는 데이터 안에 어떤 잠재적인 문제가 있다고 "
+"경고해주는 것일 수 있습니다. 데이터에 있을지도 모르는 이상을 피해 이 수수께끼를 풀려면, 대신 버퍼 교차(buffer "
+"intersect)를 이용할 수 있습니다:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:223
 msgid "This creates a buffer of 100 meters around the region Hokkaido."
@@ -168,7 +228,11 @@ msgstr "Hokkaido 지역 주변에 100m의 버퍼를 생성했습니다."
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:225
 msgid "The darker area is the buffer:"
-msgstr "어두운 영역이 버퍼입니다."
+msgstr "어두운 영역이 버퍼입니다:"
+
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:230
+msgid "Select using the buffer:"
+msgstr "이 버퍼를 써서 선택합니다:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:245
 msgid ""
@@ -183,6 +247,12 @@ msgstr ""
 " 교차하는 모든 폴리곤을 선택했습니다. 그러나 Hokkaido 자체는 이 선택 선언문에서 제외되었습니다. 해당 지역이 아니라 인접한 "
 "지역만을 원하기 때문입니다."
 
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:256
+msgid ""
+"It is also possible to select all objects within a given distance, without "
+"the extra step of creating a buffer:"
+msgstr "버퍼 생성이라는 추가적인 단계 없이 어떤 주어진 거리 안에 있는 모든 객체를 선택할 수도 있습니다:"
+
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:268
 msgid ""
 "This achieves the same result, without need for the interim buffer step:"
@@ -191,6 +261,11 @@ msgstr "이렇게 하면 임시적인 버퍼 단계 없이도 동일한 결과�
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:275
 msgid "Select unique values"
 msgstr "유일 값 선택"
+
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:277
+msgid ""
+"Show a list of unique town names for all buildings in the Queensland region:"
+msgstr "Queensland 지역에 있는 모든 건물들에 대해 유일한 도시 이름 목록을 가져오십시오:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:299
 msgid "Further examples ..."
