@@ -434,6 +434,7 @@ Icon                                Substitution                            Icon
 |25dSymbol|                         ``|25dSymbol|``                         |ruleBasedSymbol|              ``|ruleBasedSymbol|``
 |invertedSymbol|                    ``|invertedSymbol|``                    |heatmapSymbol|                ``|heatmapSymbol|``
 |pointDisplacementSymbol|           ``|pointDisplacementSymbol|``           |pointClusterSymbol|           ``|pointClusterSymbol|``
+|mergedFeatures|                    ``|mergedFeatures|``
 |meshcontours|                      ``|meshcontours|``                      |meshcontoursoff|              ``|meshcontoursoff|``
 |meshvectors|                       ``|meshvectors|``                       |meshvectorsoff|               ``|meshvectorsoff|``
 |meshframe|                         ``|meshframe|``                         |meshaveraging|                ``|meshaveraging|``
@@ -472,7 +473,8 @@ Icon                            Substitution                        Icon        
 |delaunay|                      ``|delaunay|``                      |centroids|                     ``|centroids|``
 |toLines|                       ``|toLines|``                       |extractNodes|                  ``|extractNodes|``
 |splitLayer|                    ``|splitLayer|``                    |heatmap|                       ``|heatmap|``
-|showRasterCalculator|          ``|showRasterCalculator|``          |showMeshCalculator|            ``|showMeshCalculator|``  
+|showRasterCalculator|          ``|showRasterCalculator|``          |showMeshCalculator|            ``|showMeshCalculator|``
+|regularPoints|                 ``|regularPoints|``
 ==============================  ==================================  ==============================  ==================================
 
 Various Core Plugins
@@ -1038,6 +1040,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |mergeFeatures| image:: /static/common/mActionMergeFeatures.png
    :width: 1.5em
+.. |mergedFeatures| image:: /static/common/rendererMergedFeatures.png
+   :width: 1.5em
 .. |meshDigitizing| image:: /static/common/mActionMeshDigitizing.png
    :width: 1.5em
 .. |meshEditForceByVectorLines| image:: /static/common/mActionMeshEditForceByVectorLines.png
@@ -1213,6 +1217,8 @@ Icon                            Substitution                        Icon        
 .. |redo| image:: /static/common/mActionRedo.png
    :width: 1.5em
 .. |refresh| image:: /static/common/mActionRefresh.png
+   :width: 1.5em
+.. |regularPoints| image:: /static/common/mAlgorithmRegularPoints.png
    :width: 1.5em
 .. |regularPolygon2Points| image:: /static/common/mActionRegularPolygon2Points.png
    :width: 1.5em
