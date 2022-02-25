@@ -434,6 +434,7 @@ Icon                                Substitution                            Icon
 |25dSymbol|                         ``|25dSymbol|``                         |ruleBasedSymbol|              ``|ruleBasedSymbol|``
 |invertedSymbol|                    ``|invertedSymbol|``                    |heatmapSymbol|                ``|heatmapSymbol|``
 |pointDisplacementSymbol|           ``|pointDisplacementSymbol|``           |pointClusterSymbol|           ``|pointClusterSymbol|``
+|mergedFeatures|                    ``|mergedFeatures|``
 |meshcontours|                      ``|meshcontours|``                      |meshcontoursoff|              ``|meshcontoursoff|``
 |meshvectors|                       ``|meshvectors|``                       |meshvectorsoff|               ``|meshvectorsoff|``
 |meshframe|                         ``|meshframe|``                         |meshaveraging|                ``|meshaveraging|``
@@ -472,7 +473,8 @@ Icon                            Substitution                        Icon        
 |delaunay|                      ``|delaunay|``                      |centroids|                     ``|centroids|``
 |toLines|                       ``|toLines|``                       |extractNodes|                  ``|extractNodes|``
 |splitLayer|                    ``|splitLayer|``                    |heatmap|                       ``|heatmap|``
-|showRasterCalculator|          ``|showRasterCalculator|``          |showMeshCalculator|            ``|showMeshCalculator|``  
+|showRasterCalculator|          ``|showRasterCalculator|``          |showMeshCalculator|            ``|showMeshCalculator|``
+|regularPoints|                 ``|regularPoints|``
 ==============================  ==================================  ==============================  ==================================
 
 Various Core Plugins
@@ -643,7 +645,7 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |browserExpand| image:: /static/common/browser_expand.png
    :width: 1.5em
-.. |buffer| image:: /static/common/buffer.png
+.. |buffer| image:: /static/common/mAlgorithmBuffer.png
    :width: 1.5em
 .. |cad| image:: /static/common/cad.png
    :width: 1.5em
@@ -663,11 +665,11 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |categorizedSymbol| image:: /static/common/rendererCategorizedSymbol.png
    :width: 1.5em
-.. |centroids| image:: /static/common/centroids.png
+.. |centroids| image:: /static/common/mAlgorithmCentroids.png
    :width: 1.5em
 .. |changeLabelProperties| image:: /static/common/mActionChangeLabelProperties.png
    :width: 1.5em
-.. |checkGeometry| image:: /static/common/check_geometry.png
+.. |checkGeometry| image:: /static/common/mAlgorithmCheckGeometry.png
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
@@ -687,7 +689,7 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |clearConsole| image:: /static/common/iconClearConsole.png
    :width: 1.5em
-.. |clip| image:: /static/common/clip.png
+.. |clip| image:: /static/common/mAlgorithmClip.png
    :width: 1.5em
 .. |codeEditor| image:: /static/common/mIconCodeEditor.png
    :width: 1.5em
@@ -705,7 +707,7 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |contextHelp| image:: /static/common/mActionContextHelp.png
    :width: 1.5em
-.. |convexHull| image:: /static/common/convex_hull.png
+.. |convexHull| image:: /static/common/mAlgorithmConvexHull.png
    :width: 1.5em
 .. |copySelected| image:: /static/common/mActionCopySelected.png
    :width: 1.5em
@@ -735,7 +737,7 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |degrees| unicode:: 0x00B0
    :ltrim:
-.. |delaunay| image:: /static/common/delaunay.png
+.. |delaunay| image:: /static/common/mAlgorithmDelaunay.png
    :width: 1.5em
 .. |deleteAttribute| image:: /static/common/mActionDeleteAttribute.png
    :width: 1.5em
@@ -757,7 +759,7 @@ Icon                            Substitution                        Icon        
    :width: 2em
 .. |diagramNone| image:: /static/common/diagramNone.png
    :width: 1.5em
-.. |difference| image:: /static/common/difference.png
+.. |difference| image:: /static/common/mAlgorithmDifference.png
    :width: 1.5em
 .. |digitizeWithCurve| image:: /static/common/mActionDigitizeWithCurve.png
    :width: 1.5em
@@ -765,7 +767,7 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |display| image:: /static/common/display.png
    :width: 1.5em
-.. |dissolve| image:: /static/common/dissolve.png
+.. |dissolve| image:: /static/common/mAlgorithmDissolve.png
    :width: 1.5em
 .. |dock| image:: /static/common/dock.png
    :width: 1.5em
@@ -948,7 +950,7 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |interpolation| image:: /static/common/interpolation.png
    :width: 1.5em
-.. |intersect| image:: /static/common/intersect.png
+.. |intersect| image:: /static/common/mAlgorithmIntersect.png
    :width: 1.5em
 .. |invertSelection| image:: /static/common/mActionInvertSelection.png
    :width: 1.5em
@@ -1037,6 +1039,8 @@ Icon                            Substitution                        Icon        
 .. |mergeFeatAttributes| image:: /static/common/mActionMergeFeatureAttributes.png
    :width: 1.5em
 .. |mergeFeatures| image:: /static/common/mActionMergeFeatures.png
+   :width: 1.5em
+.. |mergedFeatures| image:: /static/common/rendererMergedFeatures.png
    :width: 1.5em
 .. |meshDigitizing| image:: /static/common/mActionMeshDigitizing.png
    :width: 1.5em
@@ -1214,6 +1218,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |refresh| image:: /static/common/mActionRefresh.png
    :width: 1.5em
+.. |regularPoints| image:: /static/common/mAlgorithmRegularPoints.png
+   :width: 1.5em
 .. |regularPolygon2Points| image:: /static/common/mActionRegularPolygon2Points.png
    :width: 1.5em
 .. |regularPolygonCenterCorner| image:: /static/common/mActionRegularPolygonCenterCorner.png
@@ -1345,7 +1351,7 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |splitFeatures| image:: /static/common/mActionSplitFeatures.png
    :width: 1.5em
-.. |splitLayer| image:: /static/common/split_layer.png
+.. |splitLayer| image:: /static/common/mAlgorithmSplitLayer.png
    :width: 1.5em
 .. |splitParts| image:: /static/common/mActionSplitParts.png
    :width: 1.5em
@@ -1417,7 +1423,7 @@ Icon                            Substitution                        Icon        
    :width: 1.3em
 .. |undo| image:: /static/common/mActionUndo.png
    :width: 1.5em
-.. |union| image:: /static/common/union.png
+.. |union| image:: /static/common/mAlgorithmUnion.png
    :width: 1.5em
 .. |unlockAll| image:: /static/common/mActionUnlockAll.png
    :width: 1.5em
