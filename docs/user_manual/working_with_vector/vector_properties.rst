@@ -843,7 +843,7 @@ From the main dialog, you can:
 Merged Features Renderer
 ........................
 
-The |mergedFeaturesSymbol| :guilabel:`Merged Features` renderer allows area and line
+The |mergedFeatures| :guilabel:`Merged Features` renderer allows area and line
 features to be “dissolved” into a single object prior to rendering to ensure that 
 complex symbols or overlapping features are represented by a uniform and 
 contiguous cartographic symbol.
@@ -1286,8 +1286,8 @@ labels based on expressions - See :ref:`labeling_with_expressions`.
 
 .. note::
 
-   Labels can also be displayed as symbols in the legend, by enabling them in the
-   Legend tab. 
+   Labels with their formatting can be displayed as entries in the legends,
+   if enabled in the :ref:`Legend <vectorlegendmenu>` tab. 
 
 Below are displayed options to customize the labels, under various tabs:
 
@@ -3147,7 +3147,7 @@ Use Scale Reference
 If set, the reference scale indicates the map scale at which symbology and 
 labeling sizes which uses paper-based units (such as millimeters or points) 
 relate to. The sizes will be scaled accordingly whenever the map is viewed at
-a differentscale.
+a different scale.
 
 For instance, a line layer using a 2mm wide line with a 1:2000 reference scale
 set will be rendered using 4mm wide lines when the map is viewed at 1:1000.
@@ -3267,8 +3267,9 @@ layout legend <layout_legend_item>`. These options include:
   The :guilabel:`Legend placeholder image` helps you :ref:`select an image
   <embedded_file_selector>` for replacement, displayed both in the
   :guilabel:`Layers` panel and the print layout legend.
-* |checkbox| :guilabel:`Show label legend`: Displays the label entries as their
-  own entries in the legend. The font style is previewed along with the description. 
+* |checkbox| :guilabel:`Show label legend`: Displays overviews of the different
+  label settings as entries in the legends.
+  The :ref:`label style <showlabels>` is previewed along with the description. 
 * |checkbox| :guilabel:`Text on symbols`: In some cases it can be useful to add
   extra information to the symbols in the legend. With this frame, you can
   affect to any of the symbols used in the layer symbology a text that is
@@ -3562,7 +3563,7 @@ To do so:
    :width: 1.5em
 .. |mapTips| image:: /static/common/mActionMapTips.png
    :width: 1.5em
-.. |mergedFeaturesSymbol| image:: /static/common/rendererMergedFeatures.svg
+.. |mergedFeatures| image:: /static/common/rendererMergedFeatures.png
    :width: 1.5em
 .. |metadata| image:: /static/common/metadata.png
    :width: 1.5em
