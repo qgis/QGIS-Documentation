@@ -441,7 +441,6 @@ layer types:
 
      Examples of lineburst lines
 
-.. _interpolated_line_symbol:
 
 .. _vector_fill_symbols:
 
