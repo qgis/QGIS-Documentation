@@ -459,7 +459,7 @@ symbol layer types:
 * **Point pattern fill**: fills the polygon with a hatching pattern of 
   :ref:`marker symbol layer <vector_marker_symbols>`. You can set the distance
   and a displacement between rows of markers, and an offset from the
-  feature boundary; 
+  feature boundary;
 * **Random marker fill**: fills the polygon with a :ref:`marker symbol 
   <vector_marker_symbols>` placed at random locations within the polygon
   boundary. You can set:
