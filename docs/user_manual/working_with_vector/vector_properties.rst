@@ -836,6 +836,18 @@ From the main dialog, you can:
  :ref:`qgisdbscanclustering` algorithm if you want to create cluster-based
  features.
 
+.. index:: Classes
+   single: Symbology; Merged Features renderer
+.. _merged_renderer:
+
+Merged Features Renderer
+........................
+
+The |mergedFeatures| :guilabel:`Merged Features` renderer allows area and line
+features to be “dissolved” into a single object prior to rendering to ensure that 
+complex symbols or overlapping features are represented by a uniform and 
+contiguous cartographic symbol.
+
 .. index::
    single: Symbology; Inverted polygon renderer
 .. _inverted_polygon_renderer:
@@ -916,6 +928,19 @@ units).
    :menuselection:`Advanced --> Symbol levels...`).
    The 2.5D height and angle values are saved in the layer's variables,
    so you can edit it afterwards in the variables tab of the layer's properties dialog.
+
+
+.. index:: Classes
+   single: Symbology; Embedded renderer
+.. _embedded_renderer:
+
+Embedded Renderer
+....................
+
+The :guilabel:`Embedded Symbols` renderer allows to display the 'native' 
+symbology of a provided datasource. This is mostly the case with :file:`KML`
+and :file:`TAB` datasets that have predefined symbology.
+
 
 .. index:: Layer rendering, Sort features, Z-level
 .. _layer_rendering:
@@ -1257,6 +1282,11 @@ At the top of the dialog, a :guilabel:`Value` drop-down list is enabled.
 You can select an attribute column to use for labeling. By default, the
 :ref:`display field <maptips>` is used. Click |expression| if you want to define
 labels based on expressions - See :ref:`labeling_with_expressions`.
+
+.. note::
+
+   Labels with their formatting can be displayed as entries in the legends,
+   if enabled in the :ref:`Legend <vectorlegendmenu>` tab. 
 
 Below are displayed options to customize the labels, under various tabs:
 
@@ -3109,6 +3139,16 @@ QGIS when changes are applied to the data source, out of QGIS. Use the |checkbox
 You can also limit the layer refresh to a specific message set in the |checkbox|
 :guilabel:`Only if message is` text box.
 
+Use Scale Reference
+-------------------
+
+If set, the reference scale indicates the map scale at which symbology and 
+labeling sizes which uses paper-based units (such as millimeters or points) 
+relate to. The sizes will be scaled accordingly whenever the map is viewed at
+a different scale.
+
+For instance, a line layer using a 2mm wide line with a 1:2000 reference scale
+set will be rendered using 4mm wide lines when the map is viewed at 1:1000.
 
 .. index:: Temporal
 .. _vectortemporalmenu:
@@ -3225,6 +3265,9 @@ layout legend <layout_legend_item>`. These options include:
   The :guilabel:`Legend placeholder image` helps you :ref:`select an image
   <embedded_file_selector>` for replacement, displayed both in the
   :guilabel:`Layers` panel and the print layout legend.
+* |checkbox| :guilabel:`Show label legend`: Displays overviews of the different
+  label settings as entries in the legends.
+  The :ref:`label style <showlabels>` is previewed along with the description. 
 * |checkbox| :guilabel:`Text on symbols`: In some cases it can be useful to add
   extra information to the symbols in the legend. With this frame, you can
   affect to any of the symbols used in the layer symbology a text that is
@@ -3518,6 +3561,8 @@ To do so:
 .. |mapIdentification| image:: /static/common/mActionMapIdentification.png
    :width: 1.5em
 .. |mapTips| image:: /static/common/mActionMapTips.png
+   :width: 1.5em
+.. |mergedFeatures| image:: /static/common/rendererMergedFeatures.png
    :width: 1.5em
 .. |metadata| image:: /static/common/metadata.png
    :width: 1.5em
