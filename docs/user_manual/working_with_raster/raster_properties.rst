@@ -893,17 +893,12 @@ be provided for :guilabel:`Description`, :guilabel:`Attribution`,
    :width: 1.5em
 .. |rendering| image:: /static/common/rendering.png
    :width: 1.5em
-.. |selectNumber| image:: /static/common/selectnumber.png
-   :width: 2.8em
-.. |selectString| image:: /static/common/selectstring.png
-   :width: 2.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
 .. |signMinus| image:: /static/common/symbologyRemove.png
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
-.. |slider| image:: /static/common/slider.png
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
 .. |system| image:: /static/common/system.png

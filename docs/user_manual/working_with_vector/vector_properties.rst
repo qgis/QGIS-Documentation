@@ -3523,9 +3523,9 @@ To do so:
    :width: 1.5em
 .. |indicatorFilter| image:: /static/common/mIndicatorFilter.png
    :width: 1.5em
-.. |invertedSymbol| image:: /static/common/rendererInvertedSymbol.png
-   :width: 1.5em
 .. |invertSelection| image:: /static/common/mActionInvertSelection.png
+   :width: 1.5em
+.. |invertedSymbol| image:: /static/common/rendererInvertedSymbol.png
    :width: 1.5em
 .. |join| image:: /static/common/join.png
    :width: 2em
@@ -3629,7 +3629,7 @@ To do so:
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
 .. |symbologyEdit| image:: /static/common/symbologyEdit.png
-   :width: 2em
+   :width: 1.5em
 .. |system| image:: /static/common/system.png
    :width: 1.5em
 .. |temporal| image:: /static/common/temporal.png
