@@ -3463,7 +3463,6 @@ To do so:
 
 .. |25dSymbol| image:: /static/common/renderer25dSymbol.png
    :width: 1.5em
-.. |322| replace:: ``NEW in 3.22``
 .. |3d| image:: /static/common/3d.png
    :width: 1.5em
 .. |action| image:: /static/common/action.png
@@ -3522,9 +3521,9 @@ To do so:
    :width: 1.5em
 .. |indicatorFilter| image:: /static/common/mIndicatorFilter.png
    :width: 1.5em
-.. |invertedSymbol| image:: /static/common/rendererInvertedSymbol.png
-   :width: 1.5em
 .. |invertSelection| image:: /static/common/mActionInvertSelection.png
+   :width: 1.5em
+.. |invertedSymbol| image:: /static/common/rendererInvertedSymbol.png
    :width: 1.5em
 .. |join| image:: /static/common/join.png
    :width: 2em
@@ -3628,7 +3627,7 @@ To do so:
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
 .. |symbologyEdit| image:: /static/common/symbologyEdit.png
-   :width: 2em
+   :width: 1.5em
 .. |system| image:: /static/common/system.png
    :width: 1.5em
 .. |temporal| image:: /static/common/temporal.png

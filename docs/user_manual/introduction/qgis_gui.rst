@@ -3278,8 +3278,6 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |showSelectedLayers| image:: /static/common/mActionShowSelectedLayers.png
    :width: 1.5em
-.. |signMinus| image:: /static/common/symbologyRemove.png
-   :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |simplifyFeatures| image:: /static/common/mActionSimplify.png
@@ -3295,8 +3293,6 @@ Click the icon to open the Plugin Manager dialog.
 .. |sum| image:: /static/common/mActionSum.png
    :width: 1.2em
 .. |svgAnnotation| image:: /static/common/mActionSvgAnnotation.png
-   :width: 1.5em
-.. |symbologyEdit| image:: /static/common/symbologyEdit.png
    :width: 1.5em
 .. |temporal| image:: /static/common/temporal.png
    :width: 1.5em

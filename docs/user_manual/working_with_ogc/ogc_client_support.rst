@@ -715,10 +715,10 @@ features and view the attribute table.
    :width: 1.5em
 .. |search| image:: /static/common/search.png
    :width: 1.5em
-.. |setProjection| image:: /static/common/mActionSetProjection.png
-   :width: 1.5em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
+.. |setProjection| image:: /static/common/mActionSetProjection.png
+   :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
 .. |wcs| image:: /static/common/mIconWcs.png
