@@ -2310,10 +2310,12 @@ To create a temporal animation:
    QGIS will generate scenes using the layers rendering at the set times.
    Layers display depends on whether they overlap any individual time frame.
 
-   .. figure:: img/map_navigation.gif
-      :align: center
+   .. only:: html
 
-      Temporal navigation through a layer
+      .. figure:: img/map_navigation.gif
+         :align: center
+
+         Temporal navigation through a layer
 
    The animation can also be previewed by moving the time slider.
    Keeping the |refresh| :sup:`Loop` button pressed will repeatedly run the
