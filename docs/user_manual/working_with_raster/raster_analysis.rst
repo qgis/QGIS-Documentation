@@ -96,6 +96,7 @@ evaluates to 1, which keeps the original value by multiplying it by 1.
 Otherwise the conditional expression evaluates to 0, which sets the raster value to 0.
 This creates the mask on the fly.
 
+**Classify a Raster**
 
 If you want to classify a raster -- say, for instance into two elevation classes,
 you can use the following expression to create a raster with two values 1 and 2
@@ -107,6 +108,12 @@ in one step.
 
 In other words, for every cell less than 50 set its value to 1. For every cell
 greater than or equal 50 set its value to 2.
+
+Or you can use the ``IF`` operator. 
+
+::
+
+  if ( elevation@1 < 50 , 1 , 2 )
 
 .. index::
    single: Raster; Align Raster
