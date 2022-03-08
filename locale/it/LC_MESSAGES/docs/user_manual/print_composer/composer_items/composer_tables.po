@@ -7,7 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2020
 # Korto <gifattor@libero.it>, 2021
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2021
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2022
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-12 02:37+0000\n"
 "PO-Revision-Date: 2020-12-25 08:46+0000\n"
-"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2021\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2022\n"
 "Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -52,7 +52,7 @@ msgstr ""
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:22
 msgid "The attribute table item"
-msgstr "L'oggetto tabella degli attributi"
+msgstr "L'oggetto Tabella Attributi"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:24
 msgid ""
@@ -116,8 +116,8 @@ msgid ""
 "the project."
 msgstr ""
 "In :guilabel:`Sorgente` per impostazione predefinita puoi solo selezionare "
-"**Etichetta le geometrie** che consente di selezionare un "
-":guilabel:`Vettore` dai layer vettoriali caricati nel progetto."
+"**Elementi Layer** che consente di selezionare un :guilabel:`Layer` dai "
+"layer vettoriali caricati nel progetto."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:60
 msgid ""
@@ -325,7 +325,7 @@ msgid ""
 ":guilabel:`Attribute` column and set the :guilabel:`Sort order` to "
 "**Ascending** or **Descending**."
 msgstr ""
-"Aggiungi un attributo con cui ordinare la tabella: premi il pulsante "
+"Aggiungere un attributo con cui ordinare la tabella: premi il pulsante "
 "|signPlus| e viene aggiunta una nuova riga vuota. Inserisci un campo o "
 "un'espressione nella colonna :guilabel:`Attributo` e imposta :guilabel:`Tipo"
 " Ordinamento` in **Crescente** o **Decrescente**."
@@ -337,21 +337,21 @@ msgid ""
 ":guilabel:`Sort Order` column helps you change the sorting order of the "
 "attribute field."
 msgstr ""
-"Seleziona una riga nell'elenco e usa i pulsanti |arrowUp| e |arrowDown| per "
-"cambiare la priorità di ordinamento a livello di attributo. Selezionando una"
-" cella nella colonna :guilabel:`Tipo Ordinamento` ti aiuta a cambiare "
+"Selezionare una riga nell'elenco e usa i pulsanti |arrowUp| e |arrowDown| "
+"per cambiare la priorità di ordinamento a livello di attributo. Selezionando"
+" una cella nella colonna :guilabel:`Tipo Ordinamento` ti aiuta a cambiare "
 "l'ordine di ordinamento per il campo attributo."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:143
 msgid ""
 "Use the |signMinus| button to remove an attribute from the sorting list."
 msgstr ""
-"Usa il pulsante |signMinus| per rimuovere un attributo dalla lista di "
+"Usare il pulsante |signMinus| per rimuovere un attributo dalla lista di "
 "ordinamento."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:147
 msgid "Feature filtering"
-msgstr "Filtro delle geometrie"
+msgstr "Filtro degli Elementi"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:149
 msgid ""
@@ -364,7 +364,7 @@ msgstr ""
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:157
 msgid "Attribute table Feature filtering Group"
-msgstr "Gruppo Filtro Geometrie della Tabella degli Attributi"
+msgstr "Gruppo Filtro degli Elementi della Tabella degli Attributi"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:159
 msgid "You can:"
@@ -388,9 +388,9 @@ msgid ""
 "select the corresponding :guilabel:`Linked map` whose visible features "
 "attributes will be displayed."
 msgstr ""
-"Attivare |checkbox| :guilabel:`Mostra solo le geometrie visibili nella "
-"mappa` e seleziona la corrispondente :guilabel:`Mappa collegata` i cui "
-"attributi delle geometrie visibili saranno mostrati. "
+"Attivare |checkbox| :guilabel:`Mostra solo elementi visibili nella mappa` e "
+"seleziona la corrispondente :guilabel:`Mappa collegata` i cui attributi "
+"delle geometrie visibili saranno mostrati. "
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:165
 msgid ""
@@ -399,10 +399,10 @@ msgid ""
 "activated. When activated it will show a table with only the features which "
 "intersect the current atlas feature."
 msgstr ""
-"Attivare |checkbox| :guilabel:`Mostra solo le geometrie che intersecano le "
-"geometrie dell'Atlante` è disponibile solo quando è attivato |checkbox| "
+"Attivare |checkbox| :guilabel:`Mostra solo gli elementi che intersecano "
+"l’elemento Atlante` è disponibile solo quando è attivato |checkbox| "
 ":guilabel:`Genere un atlante`. Quando attivato, mostrerà una tabella con "
-"solo le geometrie che intersecano la geometria corrente dell'atlante. "
+"solo gli elementi che intersecano l'elemento corrente dell'atlante. "
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:168
 msgid ""
@@ -568,14 +568,14 @@ msgid ""
 "override other cell background color settings such as alternating row "
 "colors."
 msgstr ""
-"|checkbox| :guilabel:`Applica i colori dello stile condizionale del "
-"livello`: la :ref:`conditional table formatting <conditional_formatting>` "
-"presente nel vettore viene applicata all'interno della tabella degli "
-"attributi del layout (* solo i colori di sfondo e primo piano sono "
-"attualmente supportati *). Le regole di formattazione condizionale hanno la "
-"precedenza sulle altre impostazioni di formattazione della tabella di "
-"layout, ad es. sovrascriveranno altre impostazioni del colore di sfondo "
-"delle celle, come i colori delle righe alternate.casella di controllo"
+"|checkbox| :guilabel:`Applica i colori dello stile condizionale del layer`: "
+"la :ref:`conditional table formatting <conditional_formatting>` presente nel"
+" vettore viene applicata all'interno della tabella degli attributi del "
+"layout (*solo i colori di sfondo e primo piano sono attualmente "
+"supportati*). Le regole di formattazione condizionale hanno la precedenza "
+"sulle altre impostazioni di formattazione della tabella di layout, ad es. "
+"sovrascriveranno altre impostazioni del colore di sfondo delle celle, come i"
+" colori alternati per le righe."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:231
 msgid ""
@@ -627,6 +627,32 @@ msgstr ""
 msgid "addManualTable"
 msgstr "addManualTable"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:250
+msgid ""
+"By default, an empty table with two minimized columns and rows appears in "
+"the map layout. You have to customize the table in the :guilabel:`Item "
+"Properties` panel. Other than the :ref:`items common properties "
+"<item_common_properties>`, this feature has the following functionalities:"
+msgstr ""
+"Per impostazione predefinita, una tabella vuota con due colonne e righe "
+"minimizzate appare nel layout della mappa. Devi personalizzare la tabella "
+"nel pannello :guilabel:`Proprietà dell'oggetto`. Oltre alle :ref:`items "
+"common properties <item_common_properties>`, questa opzione ha le seguenti "
+"funzionalità:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:263
+msgid "Fixed table Item Properties Panel with Table designer"
+msgstr "Pannello Proprietà oggetto Tabella fissata con Progettazione Tabella"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:265
+msgid ""
+"In :guilabel:`Main properties` you can work with the :guilabel:`Table "
+"designer` when clicking the :guilabel:`Edit table ...`:"
+msgstr ""
+"In :guilabel:`Proprietà principali` puoi lavorare con il "
+":guilabel:`Progettazione Tabella` quando clicchi su :guilabel:`Modifica "
+"Tabella ...`:"
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:268
 msgid "You can click into the table and insert texts manually."
 msgstr "Puoi cliccare nella tabella e inserire il testo manualmente."
@@ -635,9 +661,134 @@ msgstr "Puoi cliccare nella tabella e inserire il testo manualmente."
 msgid "Through the menus on top it is possible to:"
 msgstr "Attraverso i menu in alto è possibile:"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:271
+msgid ""
+":guilabel:`Import Content From Clipboard` by going to :guilabel:`File` (it "
+"overrides given inputs)."
+msgstr ""
+":guilabel:`Importa Contenuto dagli Appunti` andando su :guilabel:`File` "
+"(sovrascrive i dati esistenti)."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:273
+msgid ""
+"work with selection functionalities for rows and columns by going to "
+":guilabel:`Edit`."
+msgstr ""
+"lavorare con le funzionalità di selezione per righe e colonne andando su "
+":guilabel:`Modifica`."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:275
+msgid ""
+":guilabel:`Insert rows`, :guilabel:`Insert columns`, :guilabel:`Delete "
+"Rows`, :guilabel:`Delete Columns` as well as using the option to |checkbox| "
+":guilabel:`Include Header Row`."
+msgstr ""
+":guilabel:`Inserisci righe`, :guilabel:`Inserisci colonne`, "
+":guilabel:`Elimina righe`, :guilabel:`Elimina colonne` così come usare "
+"l'opzione di |checkbox| :guilabel:`Includi riga intestazione`."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:279
+msgid ""
+"You can work with the :guilabel:`Cell Contents` section on the right and:"
+msgstr ""
+"Puoi lavorare con la sezione :guilabel: `Contenuti cella` sulla destra e:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:281
+msgid "Define the text format of selected cells in :guilabel:`Formatting`"
+msgstr ""
+"Definire il formato del testo delle celle selezionate in "
+":guilabel:`Formattazione`."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:283
+msgid ""
+"by clicking on the given |expression| expression button and using a regular "
+"expression for the input of the cell"
+msgstr ""
+"cliccando sul pulsante |expression| espressione e usando un'espressione "
+"regolare per la cella in ingresso"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:285
+msgid "by choosing the :guilabel:`Text format`"
+msgstr "scegliendo il :guilabel:`Formato testo`."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:286
+msgid ""
+"by |checkbox| :guilabel:`Format as number` (several formats are available)"
+msgstr ""
+"da |checkbox| :guilabel:`Formato come numero` (sono disponibili diversi "
+"formati)"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:287
+msgid ""
+"by defining the :guilabel:`Horizontal alignment` and the :guilabel:`Vertical"
+" alignment`"
+msgstr ""
+"definendo l' :guilabel:`Allineamento orizzontale` e l' "
+":guilabel:`Allineamento verticale`."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:289
+msgid "by choosing a :guilabel:`Background color`"
+msgstr "scegliendo un :guilabel:`Colore di sfondo`."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:291
+msgid ""
+"Define the :guilabel:`Cell Size` with :guilabel:`Row height` and "
+":guilabel:`Column width`."
+msgstr ""
+"Definire la :guilabel:`Dimensione Cella` con :guilabel:`Altezza della riga` "
+"e :guilabel:`Larghezza della colonna`."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:297
+msgid ""
+"The :guilabel:`Appearance` group of the fixed table provides the following "
+"functionalities:"
+msgstr ""
+"Il gruppo :guilabel:`Aspetto` della tabella fissata fornisce le seguenti "
+"funzionalità:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:299
+msgid ""
+"Click |checkbox| :guilabel:`Show empty rows` to fill the attribute table "
+"with empty cells."
+msgstr ""
+"Fai clic su |checkbox| :guilabel:`Mostra righe vuote` per riempire la "
+"tabella degli attributi con celle vuote."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:303
+msgid ""
+"With :guilabel:`Background color` you can set the background color of the "
+"table using the :ref:`color selector <color-selector>` widget. The "
+":guilabel:`Advanced customization` option helps you define different "
+"background colors for each cell."
+msgstr ""
+"Con :guilabel:`Colore di sfondo` puoi impostare il colore di sfondo della "
+"tabella usando il widget :ref:`color selector <color-selector>`. L'opzione "
+":guilabel:`Personalizzazioni Avanzate...` ti aiuta a definire colori diversi"
+" di sfondo per ogni cella."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:310
+msgid ""
+"More properties of the fixed table item are described in the "
+":ref:`tables_common_properties` section."
+msgstr ""
+"Altre proprietà della tabella fissata sono descritte nella sezione "
+":ref:`tables_common_properties`."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:316
+msgid "Tables common functionalities"
+msgstr "Funzionalità comuni tabelle"
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:319
 msgid "Show grid"
 msgstr "Visualizza reticolo"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:321
+msgid ""
+"The :guilabel:`Show grid` group of the table items provides the following "
+"functionalities (see :numref:`figure_layout_table_grid`):"
+msgstr ""
+"Il gruppo :guilabel:`Visualizza Reticolo` degli oggetti della tabella "
+"fornisce le seguenti funzionalità (vedi :numref:`figure_layout_table_grid`):"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:329
 msgid "Attribute table Show grid Group"
@@ -675,13 +826,64 @@ msgstr ""
 msgid "Fonts and text styling"
 msgstr "Caratteri e stile testo"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:341
+msgid ""
+"The :guilabel:`Fonts and text styling` group of the table items provides the"
+" following functionalities (see :numref:`figure_layout_table_fonts`):"
+msgstr ""
+"Il gruppo :guilabel:`Caratteri e Stile Testo` degli oggetti della tabella "
+"fornisce le seguenti funzionalità (vedi "
+":numref:`figure_layout_table_fonts`):"
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:349
 msgid "Attribute table Fonts and text styling Group"
 msgstr "Gruppo Caratteri e Stile Testo della Tabella degli Attributi "
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:351
+msgid ""
+"You can define :guilabel:`Font` properties for :guilabel:`Table heading` and"
+" :guilabel:`Table contents`, using the advanced :ref:`text settings "
+"<text_format>` widget (with buffer, shadow, paint effects, transparence, "
+"background, coloring, ...). Note that these changes do not affect the cells "
+"that have custom font assigned, either from the :guilabel:`Appearance` "
+"section or the :guilabel:`Table Designer` dialog. Only cells with the "
+"default rendering are overwritten."
+msgstr ""
+"Puoi definire le proprietà di :guilabel:`Carattere` per "
+":guilabel:`Intestazione Tabella` e :guilabel:`Contenuti Tabella`, usando il "
+"widget avanzato :ref:`text settings <text_format>` (con buffer, sfumatura, "
+"effetto colore, trasparenza, sfondo, colori, ...). Nota che queste modifiche"
+" non influenzano le celle a cui è stato assegnato un carattere "
+"personalizzato, sia dalla sezione :guilabel:`Aspetto` che dal dialogo "
+":guilabel:`Table Designer`. Solo le celle con il formato predefinito vengono"
+" sovrascritte."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:357
+msgid ""
+"For :guilabel:`Table heading` you can additionally set the "
+":guilabel:`Alignment` to ``Follow column alignment`` or override this "
+"setting by choosing ``Left``, ``Center`` or ``Right``. The column alignment "
+"is set using the :guilabel:`Select Attributes` dialog (see "
+":numref:`figure_layout_table_select` )."
+msgstr ""
+"Per :guilabel: `Intestazione tabella` puoi anche impostare :guilabel: "
+"`Allineamento` a ``Segui l'Allineamento della Colonna`` o sovrascrivere "
+"questa impostazione scegliendo ``Sinistra``, ``Centro`` o ``Destra``. "
+"L'allineamento della colonna è impostato usando il dialogo "
+":guilabel:`Seleziona attributi` (vedi :numref:`figure_layout_table_select` "
+")."
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:364
 msgid "Frames"
 msgstr "Cornici"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:366
+msgid ""
+"The :guilabel:`Frames` group of the table item properties provides the "
+"following functionalities (see :numref:`figure_layout_table_frames`):"
+msgstr ""
+"Il gruppo :guilabel:`Cornici` delle proprietà dell'oggetto tabella fornisce "
+"le seguenti funzionalità (vedi :numref:`figure_layout_table_frames`):"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:374
 msgid "Attribute table Frames Group"
@@ -733,7 +935,7 @@ msgid ""
 "frame will continue in the next frame when you use the Resize mode ``Use "
 "existing frames``."
 msgstr ""
-"Usa il pulsante :guilabel:`Aggiungi cornice` per aggiungere un altra cornice"
+"Usa il pulsante :guilabel:`Aggiungi Cornice` per aggiungere un altra cornice"
 " con le stesse dimensioni della cornice selezionata. Il risultato della "
 "tabella che non rientra nella prima cornice continuerà nella cornice "
 "successiva quando si utilizza la modalità di ridimensionamento ``Usa cornici"

@@ -6,6 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2020
+# Jochen Schwarze <jochen.schwarze@live.unigis.net>, 2021
+# Bernhard Ströbl <b.stroebl@stroweb.de>, 2022
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-12 02:37+0000\n"
 "PO-Revision-Date: 2020-12-24 10:21+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"Last-Translator: Bernhard Ströbl <b.stroebl@stroweb.de>, 2022\n"
 "Language-Team: German (https://www.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,6 +28,14 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:5
 msgid "Editing"
 msgstr "Editierfunktionen"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:12
+msgid ""
+"QGIS has various capabilities for editing OGR, SpatiaLite, PostGIS, MSSQL "
+"Spatial and Oracle Spatial vector layers and tables."
+msgstr ""
+"QGIS bietet verschiedene Möglichkeiten um OGR-, SpatiaLite-, PostGIS-, MSSQL"
+" Spatial- und Oracle Spatial Vektorlayer und -tabellen zu editieren."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:16
 msgid ""
@@ -39,13 +49,47 @@ msgstr ""
 msgid "**Concurrent Edits**"
 msgstr "**Zeitgleiches Editieren**"
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:23
+msgid ""
+"This version of QGIS does not track if somebody else is editing the same "
+"feature at the same time as you are. The last person to save the edits wins."
+msgstr ""
+"Diese Version von QGIS kontrolliert nicht, ob noch jemand ein Objekt zur "
+"gleichen Zeit editiert wie Sie. Die zuletzt schreibende Person gewinnt."
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:34
 msgid "Setting the Snapping Tolerance and Search Radius"
 msgstr "Einstellen der Fangtoleranz und des Suchradius"
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:36
+msgid ""
+"For optimal and accurate editing of vector layer geometries, we need to set "
+"an appropriate value of snapping tolerance and search radius for features "
+"vertices."
+msgstr ""
+"Für eine optimale und genaue Bearbeitung von Vektor-Layer-Geometrien müssen "
+"wir einen geeigneten Wert für die Fangtoleranz und den Suchradius für "
+"Feature-Stützpunkte festlegen."
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:43
 msgid "Snapping tolerance"
 msgstr "Fangtoleranz "
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:45
+msgid ""
+"When you add a new vertex or move an existing one, the snapping tolerance is"
+" the distance QGIS uses to search for the closest vertex or segment you are "
+"trying to connect to. If you are not within the snapping tolerance, QGIS "
+"will leave the vertex where you release the mouse button, instead of "
+"snapping it to an existing vertex or segment."
+msgstr ""
+"Wenn Sie einen neuen Stützpunkt hinzufügen oder einen bestehenden "
+"verschieben, ist die Fangtoleranz die Distanz, die QGIS verwendet, um nach "
+"dem nächstgelegenen Stützpunkt oder Segment zu suchen, mit dem Sie eine "
+"Verbindung herstellen möchten. Wenn Sie sich nicht innerhalb der "
+"Fangtoleranz befinden, lässt QGIS den Stützpunkt dort, wo Sie die Maustaste "
+"loslassen, anstatt ihn an einem bestehenden Stützpunkt oder Segment "
+"einzurasten."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:52
 msgid ""
@@ -54,11 +98,103 @@ msgstr ""
 "Die Fangtoleranz Einstellungen betreffen alle Werkzeuge die mit Toleranz "
 "arbeiten. "
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:54
+msgid ""
+"You can enable / disable snapping by using the |snapping| :sup:`Enable "
+"snapping` button on the :guilabel:`Snapping Toolbar` or pressing :kbd:`s`. "
+"The snapping mode, tolerance value, and units can also be configured in this"
+" toolbar."
+msgstr ""
+"Sie können das Einrasten aktivieren / deaktivieren, indem Sie die "
+"Schaltfläche |snapping| :sup:`Einrasten einschalten` auf der "
+":guilabel:`Einrastwerkzeugleiste` benutzen oder die Taste :kbd:`S` drücken. "
+"Über diese Werkzeugleiste werden auch Einrastmodus, die Einrasttoleranz und "
+"die Einrasteinheiten konfiguriert.zu verstellen. "
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1950
+msgid "snapping"
+msgstr "Fangen / Einrasten"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:59
+msgid ""
+"The snapping configuration can also be set in :menuselection:`Project --> "
+"Snapping Options...`."
+msgstr ""
+"Die Einrasteinstellungen können Sie auch über :menuselection:`Projekt --> "
+"Einrastoptionen...` vornehmen."
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:62
 msgid "There are three options to select the layer(s) to snap to:"
 msgstr ""
 "Sie haben drei Möglichkeiten, um die Layer, auf die eingrastet werden soll, "
 "auszuwählen:"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:64
+msgid ""
+":guilabel:`All layers`: quick setting for all visible layers in the project "
+"so that the pointer snaps to all vertices and/or segments. In most cases, it"
+" is sufficient to use this snapping mode, but beware when using it for "
+"projects with many vector layers, as it may affect performance."
+msgstr ""
+":guilabel:`Alle Layer`: eine schnelle und einfache Einstellung für alle "
+"sichtbaren Layer im Projekt, so dass der Zeiger alle Stützpunkte und/oder "
+"Segmente fängt. In den meisten Fällen reicht es aus, diesen Fangmodus zu "
+"verwenden; passen Sie aber auf, wenn Sie diesen Modus in Projekten mit "
+"vielen Vektorlayern benutzen, weil es die Anwendung deutlich verlangsamen "
+"kann."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:69
+msgid ""
+":guilabel:`Current layer`: only the active layer is used, a convenient way "
+"to ensure topological consistency within the layer being edited."
+msgstr ""
+":guilabel:`Aktueller Layer`: nur der aktuelle Layer wird genutzt, eine "
+"praktische Möglichkeit die Topologie des Layers abzusichern, der bearbeitet "
+"wird."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:71
+msgid ""
+":guilabel:`Advanced Configuration`: allows you to enable and adjust snapping"
+" mode and tolerance on a layer basis (see :numref:`figure_edit_snapping`). "
+"If you need to edit a layer and snap its vertices to another, make sure that"
+" the target layer is checked and increase the snapping tolerance to a higher"
+" value. Snapping will not occur to a layer that is not checked in the "
+"snapping options dialog."
+msgstr ""
+"Mit :guilabel:`Erweiterte Konfiguration` schalten Sie Einrastmodus und "
+"Einrasttoleranz layerbasier ein und konfigurieren sie (siehe "
+"figure_edit_snapping_). Wenn Sie einen Layer bearbeiten und seine "
+"Stützpunkte auf einen anderen einrasten möchten, stellen Sie sicher, dass "
+"der Einrastlayer angehakt ist und erhöhen Sie die Einrasttoleranz. Sie "
+"können nicht auf einen Layer einrasten, der in den Einrasteinstellungen "
+"nicht angehakt ist."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:79
+msgid ""
+"As for snapping mode, you can choose between ``To vertex``, ``To segment``, "
+"and ``To vertex and segment``."
+msgstr ""
+"Für den Einrastmodus können Sie zwischen ``Stützpunkt``, ``Segment``, und "
+"``Stützpunkt und Segment`` auswählen."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:82
+msgid ""
+"The tolerance values can be set either in the project's ``map units`` or in "
+"``pixels``. The advantage of choosing ``pixels`` is that it keeps the "
+"snapping constant at different map scales. 10 to 12 pixels is normally a "
+"good value, but it depends on the DPI of your screen. Using map units allows"
+" the tolerance to be related to real ground distances. For example, if you "
+"have a minimum distance between elements, this option can be useful to "
+"ensure that you don’t add vertices too close to each other."
+msgstr ""
+"Die Toleranz können Sie entweder in ``Karteneinheiten`` des Projekts oder in"
+" ``Pixel`` einstellen. Der Vorteil von ``Pixel`` ist, dass damit der "
+"Fangradius bei unterschiedlichen Kartenmassstäben konstant bleibt. 10 bis 12"
+" px ist normalerweise ein guter Wert, der aber von der DPI-Zahl Ihres "
+"Bildschirms abhängig ist. Mit Karteneinheiten benutzen Sie für die Toleranz "
+"Realwelteinheiten. Wenn Sie z.B. eine Mindestdistanz zwischen Ihren "
+"Elementen sicherstellen wollen, hilft Ihnen diese Einstellung dabei, die "
+"Stützpunkte nicht zu dicht beieinander zu setzen."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:99
 msgid "Snapping options (Advanced Configuration mode)"
@@ -78,6 +214,10 @@ msgstr ""
 "Objekte durch Anhaken von |unchecked| :guilabel:`Einrasten auf verborgene "
 "Objekte aktivieren` unter :menuselection:`Einstellungen-->` |options| "
 ":menuselection:`Optionen--> Digitalisierung` anschalten."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1966
+msgid "unchecked"
+msgstr "nicht angehakt"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:109
 msgid "**Enable snapping by default**"
@@ -112,26 +252,235 @@ msgstr ""
 " Schnittpunkte der Geometrien von Layern einrasten, für die Einrasten "
 "aktiviert ist, selbst wenn es keinen Stützpunkt auf dem Schnittpunkt gibt."
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1952
+msgid "snappingIntersection"
+msgstr "Einrasten auf Schnittpunkte"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:128
+msgid "Snapping icons"
+msgstr "fangbare Punkte"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:130
+msgid "QGIS will show different *snap* icons depending on the kind of *snap*:"
+msgstr ""
+"QGIS wird die fangbaren Punkte unterschiedlich darstellen, je nachdem "
+"welcher Einrastmodus aktiv ist:"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:137
+msgid "Snapping to a vertex: box icon"
+msgstr "Einrasten auf einen Stützpunkt: Quadrat"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:138
+msgid "Snapping to a segment: hourglass icon"
+msgstr "Einrasten auf Segment: Sanduhr"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:139
+msgid "Snapping to an intersection: cross icon"
+msgstr "Einrasten auf Schnittpunkte: Kreuz"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:142
+msgid ""
+"Note that it is possible to change the color of these icons in the "
+":guilabel:`Digitizing` part of your settings."
+msgstr ""
+"Sie können die Farbe dieser Icons in den :guilabel:`Digitalisieren` "
+"Einstellungen ändern."
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:149
 msgid "Search radius"
 msgstr "Suchradius"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:151
+msgid ""
+":guilabel:`Search radius for vertex edits` is the distance QGIS uses to "
+"``search`` for the vertex to select when you click on the map. If you are "
+"not within the search radius, QGIS will not find and select any vertex for "
+"editing. The search radius for vertex edits can be defined under the "
+":menuselection:`Settings -->` |options| :menuselection:`Options --> "
+"Digitizing` tab (this is where you define the snapping default values)."
+msgstr ""
+"Der Suchradius ist der Abstand, den QGIS verwendet, um nach dem nächsten "
+"Stützpunkt zu ``suchen``, den Sie auswählen würden, wenn Sie in die Karte "
+"klicken. Wenn Sie sich außerhalb des Suchradius befinden, wird QGIS keinen "
+"Stützpunkt für das Bearbeiten finden und auswählen. Der Suchradius für "
+"Stützpunktbearbeitung kann unter dem Reiter:menuselection:`Einstellungen "
+"-->` |options| :menuselection:`Optionen --> Digitalisierung` eingestellt "
+"werden, an genau der selben Stelle, an der Sie die voreingestellte "
+"Einrasttoleranz einstellen."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1910
+msgid "options"
+msgstr "Optionen"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:160
+msgid ""
+"Snap tolerance and search radius are set in ``map units`` or ``pixels``. You"
+" may need to experiment to get them right. If you specify a too big "
+"tolerance, QGIS may snap to the wrong vertex, especially if you are dealing "
+"with a large number of vertices in close proximity. The smaller the search "
+"radius, the more difficult it will be to hit what you want to move."
+msgstr ""
+"Einrasttoleranz und Suchradius stellen Sie in ``Karteneinheiten`` oder "
+"``Pixeln`` ein, so dass Sie vielleicht experimentieren müssen, um sie "
+"passend einzustellen. Wenn Sie eine zu große Toleranz angeben, fängt QGIS "
+"vielleicht den falschen Stützpunkt, besonders wenn Sie es mit einer großen "
+"Anzahl von Stützpunkten innerhalb kurzer Distanz zu tun haben. Stellen Sie "
+"den Suchradius zu klein ein, wird nichts zum Verschieben gefunden. "
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:172
+msgid "Limit snapping to a scale range"
+msgstr "Maßstabsabhängiges Einrasten setzen"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:174
+msgid ""
+"In some cases snapping can become very slow. This is often caused by the "
+"amount of features in some layers that require a heavy index to compute and "
+"maintain. Some parameters exist to enable snapping only when the map view is"
+" inside a relevant scale range. This allows to only do the costly index "
+"computation related to snapping at a scale where drawing is relevant."
+msgstr ""
+"In einigen Fällen kann das Einrasten sehr langsam werden. Dies wird häufig "
+"durch die Menge an Features in einigen Layern verursacht, für deren "
+"Berechnung und Verwaltung ein umfangreicher Index erforderlich ist. Einige "
+"Parameter sind vorhanden, um das Fangen nur zu ermöglichen, wenn sich die "
+"Kartenansicht innerhalb eines relevanten Maßstabsbereichs befindet. Dies "
+"erlaubt, die kostspielige Indexberechnung im Zusammenhang mit dem Fangen nur"
+" in einem Maßstab durchzuführen, der für das Zeichnen relevant ist."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:180
+msgid ""
+"Scale limit to snapping is configured in :menuselection:`Project --> "
+"Snapping Options...`. Limiting snapping to scale is only available in "
+":guilabel:`Advanced Configuration` mode."
+msgstr ""
+"Sie können die Maßstabsabhängigkeit beim Einrasten in  "
+":menuselection:`Projekt --> Einrastoptionen...` setzen. Die "
+"Maßstabsabhängigkeit st nur in der :guilabel:`Erweiterten Konfiguration` "
+"möglich."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:185
+msgid "To limit snapping to a scale range you have three modes available:"
+msgstr ""
+"Es stehen drei Modi für die Maßstabsabhängigkeit beim Einrasten zur "
+"Verfügung:"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:187
+msgid ""
+":guilabel:`Disabled`: Snapping is enabled whatever the current map scale is."
+" This is the default mode."
+msgstr ""
+":guilabel:`deaktiviert`: Das Einrasten ist aktiv, unabhängig davon, wie der "
+"aktuelle Kartenmaßstab ist. Dies ist die Voreinstellung."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:189
+msgid ""
+":guilabel:`Global`: Snapping is limited and only enabled when the current "
+"scale of the map is between a global minimum and a global maximum value. "
+"When selecting this mode two widgets become available to configure the range"
+" of scales in which snapping is enabled."
+msgstr ""
+":guilabel:`Global`: Das Einrasten ist beschränkt und nur aktiv wenn der "
+"aktuelle Kartenmaßstab zwischen einem globalen Minimal- und Maximalwert "
+"liegt. Wenn Sie diesen Modus auswählen, werden zwei Eingabefelder aktiv, mit"
+" denen Sie die Maßstabsbereiche, in denen das Einrasten aktiv ist, "
+"konfigurieren können."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:193
+msgid ""
+":guilabel:`Per layer`: The snapping scale range limit is defined for each "
+"layer. When selecting this mode two columns become available to configure "
+"the minimum and maximum scales for each layer."
+msgstr ""
+":guilabel:`Je Layer`: Legen Sie den Maßstabsbereich für das Einrasten für "
+"jeden Layer einzeln fest. Wenn Sie diesen Modus auswählen, werden zwei "
+"Spalten aktiv, mit denen Sie die Maßstabsbereiche für jeden Layer einzeln "
+"konfigurieren können."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:199
+msgid ""
+"Please note that the minimum and maximum scales follow the QGIS convention: "
+"minimum scale is the most \"zoomed out\" scale while maximum scale is the "
+"most \"zoomed in\". A minimum or maximum scale that is set to \"0\" or \"not"
+" set\" is considered not limiting."
+msgstr ""
+"Bitte beachten Sie, dass der Minimal- und der Maximalmaßstab den QGIS-"
+"Konventionen folgt: Der Minimalmaßstab ist am weitesten \"rausgezoomt\", "
+"während der Maximalmaßstab am weitesten \"reingezoomt\" ist. Sollten Sie den"
+" Minmal- oder Maximalmaßstab auf \"0\" oder \"nicht gesetzt\" einstellen, "
+"wird die Einstellung nicht beachtet."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:207
 msgid "Topological editing"
 msgstr "Topologisches Editieren"
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:209
+msgid ""
+"In addition to these snapping options, the :guilabel:`Snapping options...` "
+"dialog (:menuselection:`Project --> Snapping options`) and the "
+":guilabel:`Snapping` toolbar allow you to enable / disable some other "
+"topological functionalities."
+msgstr ""
+"Im Dialog :guilabel:`Einrasteinstellungen...`` (:menuselection:`Projekt --> "
+"Einrastoptionen`) und in der :guilabel:`Einrastwerkzeugleiste` können Sie "
+"einige topolgische Funktionalitäten ein- und ausschalten."
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:219
 msgid "Enable topological editing"
-msgstr "Topologisches Editieren ermöglichen"
+msgstr "Topologisches Editieren aktivieren"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:221
+msgid ""
+"The |topopologicalEditing| :sup:`Topological editing` button helps when "
+"editing and maintaining features with common boundaries. With this option "
+"enabled, QGIS 'detects' shared boundaries. When you move common "
+"vertices/segments, QGIS will also move them in the geometries of the "
+"neighboring features."
+msgstr ""
+"Die Schaltfläche |topopologicalEditing| :sup:`Topologisches Editieren "
+"aktivieren` unterstützt Sie beim Editieren und Pflegen von Objekten mit "
+"gemeinsamen Grenzen. Wenn diese Option eingeschaltet ist, 'erkennt' QGIS "
+"gemeinsame Objektgrenzen; wenn Sie gemeinsame Stützpunkte oder Segmente "
+"verschieben, wird QGIS sie auch in den benachbarten Objektgeometrien "
+"verschieben."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:227
 msgid ""
 "Topological editing works with features from different layers, as long as "
 "the layers are visible and in editing mode."
 msgstr ""
-"Das topologische Editieren funktioniert mit Objekten aus unterschiedlichen "
+"Das topologische Editieren funktioniert mit Objekten aus verschiedenen "
 "Layern, solange die Layer sichtbar sind und sich im Bearbeitungsmodus "
 "befinden."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:235
+msgid "Avoid overlap of new polygons"
+msgstr "Überschneidung neuer Polygone vermeiden"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:237
+msgid ""
+"When the snapping mode is set to ``Advanced configuration``, for polygon "
+"layers, there's an option called |checkbox| :guilabel:`Avoid overlap`. This "
+"option prevents you from drawing new features that overlap existing ones in "
+"the selected layer, speeding up digitizing of adjacent polygons."
+msgstr ""
+"Haben Sie den Einrastmodus auf ``Erweiterte Konfiguration`` eingestellt, "
+"gibt es für Polygonlayer eine Option |checkbox| :guilabel:`Schnittpunkte "
+"vermeiden`. Diese verhindert, dass Sie neue Objekte zeichen, die die in "
+"diesem Layer bereits vorhandenen Objekte überlappen, wodurch der "
+"Digitalisiervorgang für aneinander angrenzende Polygone beschleunigt wird."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:242
+msgid ""
+"With avoid overlap enabled, if you already have one polygon, you can "
+"digitize a second one such that they intersect. QGIS will then cut the "
+"second polygon to the boundary of the existing one. The advantage is that "
+"you don't have to digitize all vertices of the common boundary."
+msgstr ""
+"Wenn Schnittpunkte vermeiden aktiviert ist und Sie bereits ein Polygon "
+"haben, können Sie ein zweites so digitalisieren, dass sich die beiden "
+"überschneiden. QGIS wird das zweite an der Grenze des vorhandenen "
+"abschneiden. Dies hat den Vorteil, dass Sie nicht alle Stützpunkte entlang "
+"der gemeinsamen Grenze einzeln digitalisieren müssen."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:247
 msgid ""
@@ -187,13 +536,33 @@ msgstr ""
 "Mit der automatischen Spurverfolgung können Sie den Digitalisierprozess "
 "beschleunigen, weil sie nicht mehr jeden Stützpunkt manuell setzen müssen:"
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:278
+msgid ""
+"Enable the |tracing| :sup:`Tracing` tool (in the :guilabel:`Snapping` "
+"toolbar) by pushing the icon or pressing :kbd:`T` key."
+msgstr ""
+"Schalten Sie das Werkzeug |tracing| :sup:`Spurverfolgung` über die "
+"Schaltfläche ein oder drücken Sie die Taste :kbd:`T`."
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:281
 msgid ""
 ":ref:`Snap to <snapping_tolerance>` a vertex or segment of a feature you "
 "want to trace along."
 msgstr ""
-":ref:`Snap to <snapping_tolerance>` Sie einen Stützpunkt oder ein Segment "
-"des Objekts, an dessen Grenze entlang Sie digitalisieren wollen."
+":ref:`Fangen <snapping_tolerance>` Sie einen Stützpunkt oder ein Segment des"
+" Objekts, an dessen Grenze entlang Sie digitalisieren wollen."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:283
+msgid ""
+"Move the mouse over another vertex or segment you'd like to snap and, "
+"instead of the usual straight line, the digitizing rubber band represents a "
+"path from the last point you snapped to the current position. The tool also "
+"works with curved geometries."
+msgstr ""
+"Bewegen Sie die Maus über einen andern Stützpunkt oder ein anderes Segment, "
+"das sie fangen möchten. Anstelle der geraden Linie, die Sie überlicherweise "
+"erhalten, folgt das Gummiband dem Weg vom letztgefangenen Punkt bis zur "
+"aktuellen Mausposition."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:288
 msgid ""
@@ -220,6 +589,20 @@ msgid ""
 msgstr ""
 "Wenn Sie klicken, plaziert QGIS alle Zwischenstützpunkte entlang des "
 "dargestellten Weges."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:299
+msgid ""
+"Unfold the |tracing| :sup:`Enable Tracing` icon and set the "
+":guilabel:`Offset` option to digitize a path parallel to the features "
+"instead of tracing along them. A positive value shifts the new drawing to "
+"the left side of the tracing direction and a negative value does the "
+"opposite."
+msgstr ""
+"Klappen Sie die |tracing| :sup:`Spurverfolgung einschalten` Schaltfläche auf"
+" und setzen Sie die :guilabel:`Offset`-Option, um einen Weg parallel zu den "
+"Objekten zu digitalisieren anstatt auf ihrer Grenze; ein positiver Wert "
+"verschiebt die neue Linie in Spurverfolgungsrichtung nach links und ein "
+"negativer Wert nach rechts."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:305
 msgid "**Adjust map scale or snapping settings for an optimal tracing**"
@@ -262,6 +645,23 @@ msgstr ""
 "**Schalten Sie die automatische Spurverfolgung schnell an oder aus, indem "
 "Sie** :kbd:`T` **drücken**"
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:321
+msgid ""
+"By pressing the :kbd:`T` key, tracing can be enabled/disabled anytime (even "
+"while digitizing a feature), so it is possible to digitize parts of the "
+"feature with tracing enabled and other parts with tracing disabled. Tools "
+"behave as usual when tracing is disabled."
+msgstr ""
+"Durch Drücken der :kbd:`T` Taste, können Sie die Spurverfolgung jederzeit "
+"an- und ausschalten, sogar während Sie ein Objekt digitalisieren. Damit ist "
+"es möglich, einige Teile eines Objekts mit aktivierter Spurverfolgung zu "
+"digitalisieren und andere nicht. Alle Werkzeuge verhalten sich normal, wenn "
+"die Spurverfolgung ausgeschaltet ist."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:327
+msgid "**Convert tracing to curved geometries**"
+msgstr "**Die Spurverfolgung in Kurvengeometrien umwandeln**"
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:341
 msgid "Digitizing an existing layer"
 msgstr "Einen vorhandenen Layer editieren"
@@ -284,6 +684,44 @@ msgstr ""
 msgid "**Restrict edit permission on layers within a project**"
 msgstr ""
 "**Beschränkung der Editierbarkeit von Layern innerhalb eines Projekts**"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:351
+msgid ""
+"From the :menuselection:`Project --> Properties... --> Data Sources --> "
+"Layers Capabilities` table, you can choose to set any layer read-only "
+"regardless the provider permission. This can be a handy way, in a multi-"
+"users environment to avoid unauthorized users to mistakenly edit layers "
+"(e.g., Shapefile), hence potentially corrupt data. Note that this setting "
+"only applies inside the current project."
+msgstr ""
+"Sie können jeden Layer in der Tabelle :menuselection:`Projekt --> "
+"Eigenschaften... --> Datenquellen --> Layereigenschaften` unabhängig vom "
+"Datenanbieter auf schreibgeschützt setzen. In einer Mehrbennutzerumgebung "
+"kann das praktisch sein, um zu verhindern, dass Nutzer fälschlicherweise "
+"einen Layer (z.B. eine Shapedatei) editieren, und damit die Daten "
+"möglicherweise beschädigen. Beachten Sie aber, dass die Einstellung nur im "
+"aktuellen Projekt gültig ist."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:360
+msgid ""
+"In general, tools for editing vector layers are divided into a digitizing "
+"and an advanced digitizing toolbar, described in section "
+":ref:`sec_advanced_edit`. You can select and unselect both under "
+":menuselection:`View --> Toolbars -->`."
+msgstr ""
+"Die Werkzeuge zum Bearbeiten von Vektorlayern sind in die beiden "
+"Werkzeugleisten Digitalisierung und Erweiterte Digitalisierung, die im "
+"Abschnitt :ref:`sec_advanced_edit` beschrieben wird, aufgeteilt. Sie können "
+"beides unter :menuselection:`Ansicht --> Werkzeugkästen -->` an- oder "
+"abwählen. Wenn Sie die Digitalisierungswerkzeugleiste verwenden, können Sie "
+"folgende Funktionen ausführen:"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:366
+msgid ""
+"Using the basic digitizing tools, you can perform the following functions:"
+msgstr ""
+"In den grundlegenden Digitalisierfunktionen sind folgende Funktionen "
+"verfügbar:"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:372
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:838
@@ -373,7 +811,7 @@ msgstr "|multiEdit|"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:384
 msgid "Modify the attributes of all selected features simultaneously"
-msgstr "Attribute von allen gewählten Objekten gleichzeitig ändern"
+msgstr "Attribute aller gewählten Objekten gleichzeitig ändern"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:387
 msgid "|deleteSelectedFeatures|"
@@ -582,6 +1020,20 @@ msgstr ""
 "auch die Verwendung des Gummibands vermeiden :guilabel:`Don't update rubber "
 "band during node editing`."
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:467
+msgid ""
+"The attribute window will appear, allowing you to enter the information for "
+"the new feature. :numref:`Figure_edit_values` shows setting attributes for a"
+" fictitious new river in Alaska. However, in the :guilabel:`Digitizing` menu"
+" under the :menuselection:`Settings --> Options` menu, you can also "
+"activate:"
+msgstr ""
+"Das Attributfenster wird erscheinen in dem Sie Informationen für das neue "
+"Objekt eingeben können. Figure_edit_2_ zeigt die Eingabe von Attributen für "
+"einen fiktiven neuen Fluss in Alaska. In dem Menü "
+":guilabel:`Digitalisierung` unter :menuselection:`Einstellungen --> "
+"Optionen` können Sie auch Folgendes aktivieren:"
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:472
 msgid ""
 "|checkbox| :guilabel:`Suppress attributes pop-up windows after each created "
@@ -611,7 +1063,41 @@ msgstr "Knotenwerkzeug"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:492
 msgid "**QGIS 3 major changes**"
-msgstr "**Tiefgreifende Änderungen in QGIS 3**"
+msgstr "**Wesentliche Änderungen in QGIS 3**"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:494
+msgid ""
+"In QGIS 3, the node tool has been fully redesigned and renamed to *vertex "
+"tool*. It was previously working with \"click and drag\" ergonomy, and now "
+"uses a \"click - click\" workflow. This allows major improvements like "
+"taking profit of the advanced digitizing panel with the vertex tool while "
+"digitizing or editing objects of multiple layers at the same time."
+msgstr ""
+"Das Knotenwerkzeug wurde für QGIS 3 komplett überarbeitet und umbenannt. "
+"Vorher arbeitete es nach der \"klicken und ziehen\"-Methode während es jetzt"
+" dem Ansatz \"klick - klick\" folgt. Das ermöglicht erhebliche "
+"Verbesserungen wie die Nutzung des Bedienfelds erweiterte Digitalisierung "
+"beim Arbeiten mit dem Knotenwerkzeug während man gleichzeitig Objekte "
+"mehrerer Layer digitalsieren bzw. editieren kann."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:502
+msgid ""
+"For any editable vector layer, the |vertexToolActiveLayer| :sup:`Vertex tool"
+" (Current Layer)` provides manipulation capabilities of feature vertices "
+"similar to CAD programs. It is possible to simply select multiple vertices "
+"at once and to move, add or delete them altogether. The vertex tool also "
+"supports the topological editing feature. This tool is selection persistent,"
+" so when some operation is done, selection stays active for this feature and"
+" tool."
+msgstr ""
+"Das Werkzeug |vertexToolActiveLayer| :sup:`Knotenwerkzeug (aktueller Layer)`"
+" stellt Bearbeitungsfunktionen für Stützpunkte bereit, ähnlich wie in CAD-"
+"Programmen. Es ist einfach möglich, mehrere Stützpunkte gemeinsam "
+"auszuwählen und sie zu verschieben oder zu löschen. Das Knotenwerkzeug "
+"arbeitet auch wenn die Spontanreprojektion angeschaltet ist und unterstützt "
+"das topologische Editieren. Das Werkzeug erhält die Objektauswahl; falls "
+"eine Operation beendet ist, bleibt die vorhandene Auswahl im Layer bestehen."
+" "
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:511
 msgid ""
@@ -702,9 +1188,38 @@ msgstr ""
 " Stapelbetrieb wird mit einem zweiten Klick abgeschlossen, oder mit "
 ":kbd:`Esc` abgebrochen."
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:560
+msgid ""
+"**Adding vertices**: To add a vertex, a virtual new node appears on the "
+"segment center. Simply grab it to add a new vertex. A double-click on any "
+"location of the boundary also creates a new node. For lines, a virtual node "
+"is also proposed at both extremities of a line to extend it."
+msgstr ""
+"**Stützpunkte hinzufügen**: Ein Stützpunkt kann erzeugt werden, indem der "
+"virtuelle Knoten, der auf dem Mittelpunkt eines Segments erscheint, "
+"angeklickt wird. Weiterhin kann irgendwo auf einer Grenzlinie mit einem "
+"Doppelklick ein neuer Stützpunkt erzeugt werden. Bei Linienobjekten wird ein"
+" virtueller Knoten in Verlängerung der Linie an ihren beiden Enden "
+"angezeigt, mit dem die Linie verlängert werden kann."
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:573
 msgid "Virtual nodes for adding vertices"
 msgstr "Virtuelle Knoten um Stützpunkte hinzuzufügen"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:575
+msgid ""
+"**Deleting vertices**: Select the vertices and click the :kbd:`Delete` key. "
+"Deleting all the vertices of a feature generates, if compatible with the "
+"datasource, a geometryless feature. Note that this doesn't delete the "
+"complete feature, just the geometry part. To delete a complete feature use "
+"the |deleteSelectedFeatures| :sup:`Delete Selected` tool."
+msgstr ""
+"**Stützpunkte löschen**: Wählen Sie die Stützpunkte und klicken Sie die "
+":kbd:`Entfernen` Taste. Das Löschen aller Stützpunkte erzeugt ein "
+"geometrieloses Objekt, sofern das mit der Datenquelle vereinbar ist. "
+"Beachten Sie, dass das nicht das gesamte Objekt löscht, sondern nur den "
+"Geometrieteil; um ein Objekt in Gänze zu löschen, müssen Sie das "
+"|deleteSelected| :sup:`Ausgewähltes löschen` Werkzeug benutzen."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:583
 msgid ""
@@ -737,6 +1252,21 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:602
 msgid "Selecting a vertex and moving the vertices to grid"
 msgstr "Einen Stützpunkt auswählen und auf das Gitter verschieben"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:604
+msgid ""
+"Each change made with the vertex  is stored as a separate entry in the "
+":guilabel:`Undo` dialog. Remember that all operations support topological "
+"editing when this is turned on. On-the-fly projection is also supported, and"
+" the vertex tool provides tooltips to identify a vertex by hovering the "
+"pointer over it."
+msgstr ""
+"Jede Veränderung die mit dem Stützpunkt gemacht wird, wird als separater "
+"Eintrag im :guilabel:`Rückgängig` Dialog eingetragen. Beachten Sie dass alle"
+" Operationen topologisches Bearbeiten unterstützen, wenn dies eingeschaltet "
+"ist. Spontanreprojektion wird auch unterstützt und das Knotenwerkzeug stellt"
+" Tooltips bereit, um einen Stützpunkt ausfindig zu machen wenn man mit dem "
+"Mauszeiger darübergeht."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:613
 msgid "The Vertex Editor Panel"
@@ -2004,6 +2534,24 @@ msgstr ""
 "``Gewählte Objekte verschmelzen``, außer dass die ausgewählten Objekte mit "
 "ihrer Geometrie bestehen bleiben, während einige ihrer Attributwerte "
 "identisch werden."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1278
+msgid ""
+"The |rotatePointSymbols| :sup:`Rotate Point Symbols` allows you to "
+"individually change the rotation of point symbols in the map canvas."
+msgstr ""
+"Das Werkzeug |rotatePointSymbols| :sup:`Punktsymbole drehen` ermöglicht es "
+"Ihnen, den Drehwinkel eines Punktsymbols im Kartenfenster zu ändern."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1281
+msgid ""
+"First, you need to indicate the field to store the rotation value in. This "
+"is made by assigning a field to the symbol :ref:`data-defined "
+"<data_defined>` rotation property:"
+msgstr ""
+"Zuerst müssen Sie das Feld angeben, in dem der Rotationswert gespeichert "
+"werden soll. Dies geschieht, indem dem Symbol :ref:`data-defined <data-"
+"defined>` rotation property: ein Feld zugewiesen wir:"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1285
 msgid ""
