@@ -1,0 +1,186 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-14 22:11+0200\n"
+"PO-Revision-Date: 2020-03-16 19:21+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../docs/training_manual/processing/extents.rst:2
+msgid "Defining extents"
+msgstr "Definindo as medidas"
+
+#: ../../docs/training_manual/processing/extents.rst:4
+msgid ""
+"In this lesson we will see how to define extents, which are needed by some "
+"algorithms, especially raster ones."
+msgstr ""
+"Nesta lição,  verificaremos como definir as medidas, que são necessárias em "
+"alguns algoritmos, especialmente uma imagem."
+
+#: ../../docs/training_manual/processing/extents.rst:7
+msgid ""
+"Some algorithms require an extent to define the area to be covered by the "
+"analysis they perform, and usually to define the extent of the resulting "
+"layer."
+msgstr ""
+"Alguns algoritmos requerem uma medida para definir a área a ser coberta pela"
+" análise,  que desempenham geralmente para definir a extensão da camada "
+"resultante. "
+
+#: ../../docs/training_manual/processing/extents.rst:10
+msgid ""
+"When an extent is required, it can be defined manually by entering the four "
+"values that define it (min X, min Y, max X, max Y), but there are other more"
+" practical and more interesting ways of doing it as well. We will see all of"
+" them in this lesson."
+msgstr ""
+"Quando a medida for necessária,  ela pode ser definida manualmente, "
+"digitando os quatro valores que definem (X mínimo, Y mínimo, X máximo, Y "
+"máximo), mas existem outros mais práticos e formas mais interessantes de "
+"fazer. Vamos ver todos nesta lição. "
+
+#: ../../docs/training_manual/processing/extents.rst:28
+msgid ""
+"The first thing you can do is to type the 4 defining values explained "
+"before, separated by commas."
+msgstr ""
+"Primeiro você pode operar o tipo 4 definindo os valores explicados antes, "
+"separados por vírgulas."
+
+#: ../../docs/training_manual/processing/extents.rst:33
+msgid ""
+"That doesn't need any extra explanation. While this is the most flexible "
+"option, it is also the less practical in some cases, and that's why other "
+"options are implemented. To access them, you have to click on the button on "
+"the right--hand side of the extent text box."
+msgstr ""
+"Não necessita de mais explicações. Enquanto esta é a opção mais flexível, é "
+"também o menos prático em alguns casos, é por isso que outras opções sejam "
+"implementadas. Para acessá-las, você dá um clique no botão direito--lado a "
+"lado da medida na caixa de texto."
+
+#: ../../docs/training_manual/processing/extents.rst:40
+msgid "Let's see what each one of them does."
+msgstr "Verificar o que cada um deles faz."
+
+#: ../../docs/training_manual/processing/extents.rst:42
+msgid ""
+"The first option is *Use layer/canvas extent*, which will show the selection"
+" dialog shown below."
+msgstr ""
+"A primeira opção é * Use a camada/ tela de medida*, que irá mostrar a caixa "
+"de diálogo de seleção, exibida abaixo,"
+
+#: ../../docs/training_manual/processing/extents.rst:47
+msgid ""
+"Here you can select the extent of the canvas (the extent covered by the "
+"current zoom), or the extension any of the available layers. Select it and "
+"click on *OK*, and the text box will be automatically filled with the "
+"corresponding values."
+msgstr ""
+"Aqui você pode selecionar a medida da tela (a memida abrangida pelo zoom "
+"atual), ou a extensão dos níveis disponíveis. Selecione-o e cliquem em *OK*,"
+" e a caixa de texto será preenchida automaticamente  com os valores "
+"correspondentes."
+
+#: ../../docs/training_manual/processing/extents.rst:51
+msgid ""
+"The second option is *Select extent on canvas*. In this case, the algorithm "
+"dialog disappears and you can click and drag on the QGIS canvas to define "
+"the desired extent."
+msgstr ""
+"A segunda opção é *Selecione medida em tela*. Neste caso, o algoritmo de "
+"diálogo desaparecerá e você pode clicar e arrastar sobre a tela QGIS para "
+"definir a medida desejada."
+
+#: ../../docs/training_manual/processing/extents.rst:57
+msgid ""
+"Once you release the mouse button, the dialog will reappear and the text box"
+" will already have the values corresponding to the defined extent."
+msgstr ""
+"Assim que você soltar o botão do mouse, a caixa de diálogo aparecerá e a "
+"caixa de texto terá os valores correspondentes à medida."
+
+#: ../../docs/training_manual/processing/extents.rst:60
+msgid ""
+"The last option is *Use min covering extent from input layers*, which is the"
+" default option. This will compute the min covering extent of all layers "
+"used to run the algorithm, and there is no need to enter any value in the "
+"text box. In the case of a single input layer, as in the algorithm we are "
+"running, the same extent can be obtained by selecting that same input layer "
+"in the *Use layer/canvas extent* that we already saw. However, when there "
+"are several input layers, the min covering extent does not correspond to any"
+" of the input layer extent, since it is computed from all of them together."
+msgstr ""
+"A última opção é *Usar o mínimo abrindo a parte da entrada das camadas*, que"
+" á a opção padrão. Este irá calcular a parte mínima cobrindo todas as "
+"camadas usadas para executar o algoritmo, e não há necessidade de digitar "
+"qualquer valor na caixa de texto. No caso de uma entrada na única camada, "
+"como no algoritmo que estamos trabalhando, a mesma medida pode ser obtida na"
+" entrada pela seleção na mesma camada na *Use a camada/medida da tela* que "
+"já exibimos.  No entanto, quando existem várias camadas, a entrada mínima da"
+" medida não corresponde a qualquer camada de entrada, uma vez que é "
+"calculado a partir de todos em conjunto."
+
+#: ../../docs/training_manual/processing/extents.rst:69
+msgid "We will use this last method to execute our rasterization algorithm."
+msgstr ""
+"Verificar e  utilizar este método para executar o nosso algoritmo ou uma "
+"rasterização."
+
+#: ../../docs/training_manual/processing/extents.rst:71
+msgid "Fill the parameters dialog as shown next, and press *OK*."
+msgstr ""
+"Preencha a caixa de diálogo dos parâmetros como mostra ao lado, e pressione "
+"*OK*."
+
+#: ../../docs/training_manual/processing/extents.rst:79
+msgid ""
+"You will get a rasterized layer that covers exactly the area covered by the "
+"original vector layer."
+msgstr ""
+"Você apresentará uma camada rasterizada, que cobre exatamente a área coberta"
+" pela camada vetorial original."
+
+#: ../../docs/training_manual/processing/extents.rst:84
+msgid ""
+"In some cases, the last option, *Use min covering extent from input layers*,"
+" might not be available. This will happen in those algorithm that do not "
+"have input layers, but just parameters of other types. In that case, you "
+"will have to enter the value manually or use any of the other options."
+msgstr ""
+"Em alguns casos, a última opção, pode não está disponível *Usar o mínimo "
+"cobrindo a parte da camada de entrada*. O que irá acontecer com os "
+"algoritmos que não tem camada de entrada, mas apenas os outros tipos de  "
+"parâmetros. Neste caso, você terá que inserir o valor manualmente ou usar "
+"qualquer uma das outras opções."
+
+#: ../../docs/training_manual/processing/extents.rst:89
+msgid ""
+"Notice that, when a selection exist, the extent of the layer is that of the "
+"whole set of features, and the selection is not used to compute the extent, "
+"even though the rasterization is executed on the selected items only. In "
+"that case, you might want to actually create a new layer from the selection,"
+" and then use it as input."
+msgstr ""
+"Observe que, quando existe uma seleção, é que a medida do nível de todo "
+"conjunto de recursos, não é usada a seleção para calcular a medida, mesmo "
+"que a rasterização é somente executada os itens selecionados. Nesse caso, "
+"você pode criar uma nova camada, e querer a partir da seleção, e em seguida,"
+" usá-lo como entrada."

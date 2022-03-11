@@ -1,0 +1,195 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# DiGro, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:22+0000\n"
+"Last-Translator: DiGro, 2020\n"
+"Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/training_manual/processing/modeler_only.rst:2
+msgid "Using modeler-only tools for creating a model"
+msgstr "Specifiek modelleergereedschap gebruiken om een model te maken"
+
+#: ../../docs/training_manual/processing/modeler_only.rst:4
+msgid ""
+"This lesson shows how to use some algorithms that are only available in the "
+"modeler, to provide additional functionality to models."
+msgstr ""
+"Deze les laat zien hoe enkele algoritmen te gebruiken die alleen beschikbaar"
+" zijn in Grafische modellen bouwen, om aanvullende functionaliteiten te "
+"verschaffen aan modellen."
+
+#: ../../docs/training_manual/processing/modeler_only.rst:6
+msgid ""
+"The goal of this lesson is to use the modeler to create an interpolation "
+"algorithm that takes into account the current selection, not just to use "
+"only selected features, but to use the extent of that selection to create "
+"the interpolated raster layer."
+msgstr ""
+"Het doel van deze les is om Grafische modellen bouwen te gebruiken om een "
+"algoritme voor interpolatie te maken dat rekening houdt met de huidige "
+"selectie, niet slechts om alleen de geselecteerde objecten te gebruiken, "
+"maar om het bereik van die selectie te gebruiken om de geïnterpoleerde "
+"rasterlaag te maken."
+
+#: ../../docs/training_manual/processing/modeler_only.rst:8
+msgid ""
+"The interpolation process involves two steps, as it has been already "
+"explained in previous lessons: rasterizing the points layer and fill the no-"
+"data values that appear in the rasterized layer. In case the points layer "
+"has a selection, only selected points will be used, but if the output extent"
+" is set to be automatically adjusted, the full extent of the layer will be "
+"used. That is, the extent of the layer is always considered to be the full "
+"extent of all features, not the one computed from just the selected ones. We"
+" will try to fix that by using some additional tools into our model."
+msgstr ""
+"Het proces voor interpolatie omvat twee stappen, zoals al eerder is "
+"uitgelegd in eerdere lessen: rasteriseren van de puntenlaag en de waarden "
+"geen gegevens vullen die in die gerasteriseerde laag verschijnen. In het "
+"geval dat de puntenlaag een selectie heeft, zullen alleen de geselecteerde "
+"punten worden gebruikt, maar als het uitvoerbereik is ingesteld op "
+"automatisch aanpassen, zal het volledige bereik van de laag worden gebruikt."
+" Dat is, het bereik van de laag wordt altijd beschouwd als het volledige "
+"bereik van alle objecten, niet die welke slechts zijn berekend uit de "
+"geselecteerde. We zullen dat proberen te repareren door enkele aanvullende "
+"gereedschappen te gebruiken in ons model."
+
+#: ../../docs/training_manual/processing/modeler_only.rst:10
+msgid ""
+"Open the modeler and start the model by adding the required inputs. In this "
+"case we need a vector layer (restricted to points) and an attribute from it,"
+" with the values that we will use for rasterizing."
+msgstr ""
+"Open Grafische modellen bouwen en start het model door de vereiste invoer "
+"toe te voegen. In dit geval hebben we een vectorlaag nodig (beperkt tot "
+"punten) en een attribuut ervan, met de waarden die we zullen gebruiken voor "
+"het rasteriseren."
+
+#: ../../docs/training_manual/processing/modeler_only.rst:14
+msgid ""
+"The next step is to compute the extent of the selected features. That's "
+"where we can use the model-only tool called *Vector layer bounds*. First, we"
+" will have to create a layer that has the extent of those selected features."
+" Then, we can use this tool on that layer."
+msgstr ""
+"De volgende stap is om het bereik van de geselecteerde objecten te "
+"berekenen. Dat is waar we het Specifiek modelleergereedschap, genaamd "
+"*Vectorlaag-extent* kunnen gebruiken. Eerst zullen we ene laag moeten maken "
+"die het bereik van die geselecteerde objecten heeft. Daarna kunnen we dit "
+"gereedschap op die laag gebruiken."
+
+#: ../../docs/training_manual/processing/modeler_only.rst:16
+msgid ""
+"An easy way of creating a layer with the extent of the selected features is "
+"to compute a convex hull of the input points layer. It will use only the "
+"selected point, so the convex hull will have the same bounding box as the "
+"selection. Then we can add the *Vector layer bounds* algorithm, and use the "
+"convex hull layer as input. It should look this in the modeler canvas:"
+msgstr ""
+"Een gemakkelijke manier om een laag te maken met het bereik van de "
+"geselecteerde objecten is om een convex hull te berekenen van de puntenlaag "
+"voor de invoer. Dat zal alleen de geselecteerde punten gebruiken, dus zal de"
+" convex hull hetzelfde begrenzingsvak hebben als de selectie. Daarna kunnen "
+"we het algoritme *Vectorlaag-extent* toevoegen, en de laag van de convex "
+"hull gebruiken als invoer. Het zou er in het venster van Grafische modellen "
+"bouwen zo uit moeten zien:"
+
+#: ../../docs/training_manual/processing/modeler_only.rst:20
+msgid ""
+"The result from the *Vector layer bounds* is a set of four numeric values "
+"and a extent object. We will use both the numeric outputs and the extent for"
+" this exercise."
+msgstr ""
+"Het resultaat van *Vectorlaag-extent* is een verzameling van vier numerieke "
+"waarden en een object Bereik. We zullen zowel de numerieke uitvoer als het "
+"bereik voor deze oefening gebruiken."
+
+#: ../../docs/training_manual/processing/modeler_only.rst:24
+msgid ""
+"We can now add the algorithm that rasterizes the vector layer, using the "
+"extent from the *Vector layer bounds* algorithm as input."
+msgstr ""
+"We kunnen nu het algoritme toevoegen dat de vectorlaag rasteriseert, met "
+"behulp van het bereik van het algoritme *Vectorlaag-extent*  als invoer."
+
+#: ../../docs/training_manual/processing/modeler_only.rst:26
+msgid "Fill the parameters of the algorithm as shown next:"
+msgstr "Vul de parameters van het algoritme in zoals hieronder weergegeven:"
+
+#: ../../docs/training_manual/processing/modeler_only.rst:30
+msgid "The canvas should now look like."
+msgstr "Het venster zou er nu zo uit moeten zien."
+
+#: ../../docs/training_manual/processing/modeler_only.rst:34
+msgid ""
+"Finally, fill the no-data values of the raster layer using the *Close gaps* "
+"algorithm."
+msgstr ""
+"Vul tenslotte de waarden Geen gegevens van de rasterlaag met behulp van het "
+"algoritme *Close gaps*."
+
+#: ../../docs/training_manual/processing/modeler_only.rst:38
+msgid ""
+"The algorithm is now ready to be saved and added to the toolbox. You can run"
+" it and it will generate a raster layer from interpolating the selected "
+"points in the input layer, and the layer will have the same extent as the "
+"selection."
+msgstr ""
+"Het algoritme is nu klaar om te worden opgeslagen en om te worden toegevoegd"
+" aan de Toolbox. U kunt het uitvoeren en het zal een rasterlaag genereren "
+"middels het interpoleren van de geselecteerde punten in de invoerlaag, en de"
+" laag zal hetzelfde bereik hebben als de selectie."
+
+#: ../../docs/training_manual/processing/modeler_only.rst:40
+msgid ""
+"Here's an improvement to the algorithm. We have used a harcoded value for "
+"the cellsize when rasterizing. This value is fine for our test input layer, "
+"but might not be for other cases. We could add a new parameter, so the user "
+"enters the desired value, but a much better approach would be to have that "
+"value automatically computed."
+msgstr ""
+"Hier is een verbetering voor het algoritme. We hebben een hard gecodeerde "
+"waarde gebruikt voor de grootte van de cel bij het rasteriseren. Deze waarde"
+" is prima voor onze test-invoerlaag, maar dat zou niet zo hoeven zijn in "
+"andere gevallen. We zouden een nieuwe parameter kunnen toevoegen, zodat de "
+"gebruiker de gewenste waarde kan invullen, maar een betere benadering zou "
+"zijn om die waarde automatisch te laten berekenen."
+
+#: ../../docs/training_manual/processing/modeler_only.rst:42
+msgid ""
+"We can use the modeler-only calculator, and compute that value from the "
+"extent coordinates. For instance, to create a layer with a fixed width of "
+"100 pixels, we can use the following formula in the calculator."
+msgstr ""
+"We kunnen het Specifiek modelleergereedschap Calculator gebruiken, en die "
+"waarde laten berekenen uit de coördinaten van het bereik. We kunnen, om "
+"bijvoorbeeld een laag te maken met een vaste breedte van 100 pixels, de "
+"volgende formule in de Calculator gebruiken."
+
+#: ../../docs/training_manual/processing/modeler_only.rst:46
+msgid ""
+"Now we have to edit the rasterize algorithm, so it uses the output of the "
+"calculator instead of the hardcoded value."
+msgstr ""
+"Nu moeten we het algoritme voor het rasteriseren bewerken, zodat het de "
+"uitvoer van de Calculator gebruikt in plaats van de hard gecodeerde waarde."
+
+#: ../../docs/training_manual/processing/modeler_only.rst:48
+msgid "The final algorithm should look like this:"
+msgstr "Het uiteindelijke algoritme zou er als volgt uit moeten zien::"

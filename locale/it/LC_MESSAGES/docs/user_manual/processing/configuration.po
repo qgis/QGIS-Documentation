@@ -1,0 +1,229 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# 
+# Translators:
+# Harrissou Sant-anna, 2020
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.16\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-30 02:15+0000\n"
+"PO-Revision-Date: 2020-12-24 10:22+0000\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2021\n"
+"Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/user_manual/processing/configuration.rst:5
+msgid "Configuring the Processing Framework"
+msgstr "Configurare l'ambiente Processing"
+
+#: ../../docs/user_manual/processing/configuration.rst:12
+msgid ""
+"The Processing Options menu (:menuselection:`Settings--> Options -->` "
+":guilabel:`Processing` tab) allows you to configure how algorithms work. "
+"Configuration parameters are structured in separate blocks that you can "
+"select on the left-hand side of the dialog."
+msgstr ""
+"Il menu Opzioni - Processing (:menuselection:`Impostazioni--> Opzioni -->` "
+":guilabel:`Processing`) ti permette di configurare il funzionamento degli "
+"algoritmi. I parametri di configurazione sono strutturati in blocchi "
+"separati che puoi selezionare sul lato sinistro della finestra di dialogo."
+
+#: ../../docs/user_manual/processing/configuration.rst:17
+msgid ""
+"The :guilabel:`General` block contains a number of interesting parameters."
+msgstr ""
+"Il blocco :guilabel:`Generale` contiene una serie di parametri interessanti."
+
+#: ../../docs/user_manual/processing/configuration.rst:19
+msgid ""
+":guilabel:`Default output raster layer extension` is by default ``tif``"
+msgstr ""
+":guilabel:`Estensione predefinita del raster in uscita` per impostazione "
+"predefinita è ``tif``."
+
+#: ../../docs/user_manual/processing/configuration.rst:20
+msgid ""
+":guilabel:`Default output vector layer extension` is by default ``gpkg``"
+msgstr ""
+":guilabel:`Estensione predefinita del vettore in uscita` per impostazione "
+"predefinita è ``gpkg``"
+
+#: ../../docs/user_manual/processing/configuration.rst:21
+msgid ":guilabel:`Invalid features filtering`"
+msgstr ":guilabel:`Filtra elementi non validi`"
+
+#: ../../docs/user_manual/processing/configuration.rst:22
+msgid ""
+":guilabel:`Keep dialog open after running algorithm`. Once an algorithm has "
+"finished execution and its output layers are loaded into the QGIS project, "
+"the algorithm dialog is closed. If you want to keep it open (to run the "
+"algorithm again with different parameters, or to better check the output "
+"that is written to the log tab), check this option."
+msgstr ""
+":guilabel:`Mantieni la finestra aperta dopo l'esecuzione dell'algoritmo`. "
+"Una volta che un algoritmo ha terminato l'esecuzione e i suoi layer di "
+"output sono caricati nel progetto QGIS, la finestra di dialogo "
+"dell'algoritmo viene chiusa. Se vuoi tenerla aperta (per eseguire nuovamente"
+" l'algoritmo con parametri diversi, o per controllare meglio l'output che "
+"viene scritto nella scheda log), seleziona questa opzione."
+
+#: ../../docs/user_manual/processing/configuration.rst:27
+msgid ":guilabel:`Max Threads`"
+msgstr ":guilabel:`Thread Massimi`"
+
+#: ../../docs/user_manual/processing/configuration.rst:28
+msgid ":guilabel:`Output folder`"
+msgstr ":guilabel:`Cartella dei risultati`"
+
+#: ../../docs/user_manual/processing/configuration.rst:29
+msgid ""
+":guilabel:`Pre-execution script` and :guilabel:`Post-execution script`. "
+"These parameters point to files that contain scripts written using the "
+"processing scripting functionality, explained in the section covering "
+"scripting and the console."
+msgstr ""
+":guilabel:`Script pre-esecuzione` e :guilabel:`Script post-esecuzione`. "
+"Questi parametri puntano a file che contengono script scritti utilizzando la"
+" funzionalità di scripting di processing, spiegata nella sezione che copre "
+"lo scripting e la console."
+
+#: ../../docs/user_manual/processing/configuration.rst:33
+msgid ""
+":guilabel:`Prefer output filename for layer names`. The name of each "
+"resulting layer created by an algorithm is defined by the algorithm itself. "
+"In some cases, a fixed name might be used, meaning that the same output name"
+" will be used, no matter which input layer is used. In other cases, the name"
+" might depend on the name of the input layer or some of the parameters used "
+"to run the algorithm. If this checkbox is checked, the name will be taken "
+"from the output filename instead. Notice that, if the output is saved to a "
+"temporary file, the filename of this temporary file is usually a long and "
+"meaningless one intended to avoid collision with other already existing "
+"filenames."
+msgstr ""
+":guilabel:`Nome file in uscita preferito per i nomi dei layer`. Il nome di "
+"ogni layer risultante creato da un algoritmo è definito dall'algoritmo "
+"stesso. In alcuni casi, potrebbe essere usato un nome fisso, il che "
+"significa che verrà usato lo stesso nome in uscita, indipendentemente dal "
+"layer di ingresso utilizzato. In altri casi, il nome potrebbe dipendere dal "
+"nome del layer di input o da alcuni dei parametri usati per eseguire "
+"l'algoritmo. Se questa casella è selezionata, il nome verrà preso dal nome "
+"del file di output. Si noti che, se l'output viene salvato in un file "
+"temporaneo, il nome di questo file temporaneo è di solito un nome lungo e "
+"senza senso inteso ad evitare collisioni con altri nomi di file già "
+"esistenti."
+
+#: ../../docs/user_manual/processing/configuration.rst:45
+msgid ""
+":guilabel:`Results group name`. If you want to obtain all processing result "
+"layers in a group in the :guilabel:`Layers` panel, set a group name for this"
+" parameter. The group may exist already or not. QGIS will add all output "
+"layers to such a group. By default, this parameter is empty, so all output "
+"layers are added to different places in the :guilabel:`Layers` panel, "
+"depending on the item that is active when running an algorithm. Note that "
+"output layers will be loaded to the :guilabel:`Layers` panel only if "
+":guilabel:`Open output file after running algorithm` is checked in the "
+"algorithm dialog."
+msgstr ""
+":guilabel:`Nome del gruppo risultati`. Se vuoi ottenere tutti i layer dei "
+"risultati di processing in un gruppo nel pannello :guilabel:`Layer`, imposta"
+" un nome di gruppo per questo parametro. Il gruppo può esistere già oppure "
+"no. QGIS aggiungerà tutti i layer di output a tale gruppo. Per impostazione "
+"predefinita, questo parametro è vuoto, quindi tutti i layer di output "
+"vengono aggiunti in posti diversi nel pannello :guilabel:`Layer`, a seconda "
+"della voce che è attiva quando si esegue un algoritmo. Nota che i layer di "
+"output saranno caricati nel pannello :guilabel:`Layer` solo se "
+":guilabel:`Mantieni la finestra aperta dopo l'esecuzione dell'algoritmo` è "
+"selezionato nella finestra di dialogo dell'algoritmo."
+
+#: ../../docs/user_manual/processing/configuration.rst:55
+msgid ":guilabel:`Show algorithms with known issues`"
+msgstr ":guilabel:`Mostra algoritmi con problemi noti`"
+
+#: ../../docs/user_manual/processing/configuration.rst:56
+msgid ":guilabel:`Show layer CRS definition in selection boxes`"
+msgstr ":guilabel:`Mostra SR del layer nelle caselle di selezione`"
+
+#: ../../docs/user_manual/processing/configuration.rst:57
+msgid ":guilabel:`Show tooltip when there are disabled providers`"
+msgstr ":guilabel:`Mostra suggerimento quando ci sono sorgenti disabilitati`"
+
+#: ../../docs/user_manual/processing/configuration.rst:58
+msgid ""
+":guilabel:`Style for line layers`, :guilabel:`Style for point layers`, "
+":guilabel:`Style for polygons layers` and :guilabel:`Style for raster "
+"layers` are used for setting the default rendering style for output layers "
+"(that is, layers generated by processing algorithms). Just create the style "
+"you want using QGIS, save it to a file, and then enter the path to that file"
+" in the settings so the algorithms can use it. Whenever a layer is loaded by"
+" Processing and added to the QGIS canvas, it will be rendered with that "
+"style."
+msgstr ""
+":guilabel:`Stile per i layer lineari`, :guilabel:`Stile per i layer "
+"puntuali`, :guilabel:`Stile per i layer poligonali` e :guilabel:`Stile per i"
+" layer raster` sono usati per impostare lo stile di visualizzazione di "
+"default per i layer in uscita (cioè i layer generati dagli algoritmi di "
+"elaborazione). Crea lo stile che vuoi usando QGIS, salvalo in un file e poi "
+"inserisci il percorso di quel file nelle impostazioni in modo che gli "
+"algoritmi possano usarlo. Ogni volta che un layer viene caricato da "
+"Processing e aggiunto alla mappa di QGIS, sarà reso con quello stile."
+
+#: ../../docs/user_manual/processing/configuration.rst:69
+msgid ""
+"Rendering styles can be configured individually for each algorithm and each "
+"one of its outputs. Just right-click on the name of the algorithm in the "
+"toolbox and select :guilabel:`Edit rendering styles for outputs`. You will "
+"see a dialog like the one shown next."
+msgstr ""
+"Lo stile di rappresentazione può essere configurato individualmente per ogni"
+" algoritmo e per ognuno dei suoi livelli in uscita. Cliccando col tasto "
+"destro sul nome di un algoritmo nella toolbox e selezionando "
+":guilabel:`Modifica gli Stili di Visualizzazione per i Risultati...`, vedrai"
+" una finestra di dialogo come quella mostrata di seguito."
+
+#: ../../docs/user_manual/processing/configuration.rst:80
+msgid "Rendering Styles"
+msgstr "Stile di rappresentazione"
+
+#: ../../docs/user_manual/processing/configuration.rst:82
+msgid ""
+"Select the style file (:file:`.qml`) that you want for each output and press"
+" :guilabel:`OK`."
+msgstr ""
+"Seleziona il file di stile (:file:`.qml`) che vuoi per ogni livello in "
+"uscita e clicca :guilabel:`OK`."
+
+#: ../../docs/user_manual/processing/configuration.rst:84
+msgid ":guilabel:`Temporary output folder path`"
+msgstr ":guilabel:`Percorso della cartella di uscita temporanea`"
+
+#: ../../docs/user_manual/processing/configuration.rst:85
+msgid ":guilabel:`Warn before executing if parameter CRS's do not match`"
+msgstr ""
+":guilabel:`Avvisa prima dell'esecuzione se i parametri SR non "
+"corrispondono`."
+
+#: ../../docs/user_manual/processing/configuration.rst:87
+msgid ""
+"You will also find a block for algorithm :guilabel:`Providers`. Each entry "
+"in this block contains an :guilabel:`Activate` item that you can use to make"
+" algorithms appear or not in the toolbox. Some algorithm providers have "
+"their own configuration items, which will be explained when covering "
+"particular algorithm providers."
+msgstr ""
+"Troverai anche un blocco per gli algoritmi :guilabel:`Sorgenti dati`. Ogni "
+"voce in questo blocco contiene un elemento :guilabel:`Attiva` che puoi usare"
+" per far apparire o meno gli algoritmi nella casella degli strumenti. Alcuni"
+" fornitori di algoritmi hanno i loro propri elementi di configurazione, che "
+"saranno spiegati quando si tratterà di particolari fornitori di algoritmi."

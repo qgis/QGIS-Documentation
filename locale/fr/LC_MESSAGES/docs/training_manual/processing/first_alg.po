@@ -1,0 +1,217 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Francis Gasc <francisgasc@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:21+0000\n"
+"Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2020\n"
+"Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../docs/training_manual/processing/first_alg.rst:2
+msgid "Running our first algorithm. The  toolbox"
+msgstr "Lancement de notre premier algorithme. La boîte à outils"
+
+#: ../../docs/training_manual/processing/first_alg.rst:5
+msgid ""
+"In this lesson we will run our first algorithm, and get our first result "
+"from it."
+msgstr ""
+"Dans cette leçon, nous allons lancer notre premier algorithme, et obtenir "
+"notre premier résultat de cela."
+
+#: ../../docs/training_manual/processing/first_alg.rst:8
+msgid ""
+"As we have already mentioned, the processing framework can run algorithms "
+"from other applications, but it also contains native algorithms that need no"
+" external software to be run. To start exploring the processing framework, "
+"we are going to run one of those native algorithms. In particular, we are "
+"going to calculate the centroids of set of polygons."
+msgstr ""
+"Comme nous l'avons déjà mentionné, le module de traitement peut lancer les "
+"algorithmes d'autres applications, mais il contient également des "
+"algorithmes natifs qui ne nécessitent pas un logiciel externe pour être "
+"exécutés. Pour commencer l'exploration du module de traitement nous allons "
+"lancer un de ces algorithmes natifs. En particulier, nous allons calculer "
+"les centroïdes d'un jeu de polygones."
+
+#: ../../docs/training_manual/processing/first_alg.rst:14
+msgid ""
+"First, open the QGIS project corresponding to this lesson. It contains just "
+"a single layer with two polygons"
+msgstr ""
+"Ouvrez tout d'abord le projet QGIS correspondant à cette leçon. Il contient "
+"seulement une seule couche avec deux polygones."
+
+#: ../../docs/training_manual/processing/first_alg.rst:19
+msgid ""
+"Now go to the text box at the top of the toolbox. That is the search box, "
+"and if you type text in it, it will filter the list of algorithms so just "
+"those ones containing the entered text are shown. If there are algorithms "
+"that match your search but belong to a provider that is not active, an "
+"additional label will be shown in the lower part of the toolbox."
+msgstr ""
+"Rendez-vous maintenant à la zone de texte tout en haut de la boîte à outils."
+" C'est le champ de recherche, et si vous tapez du texte dedans, cela "
+"filtrera la liste des algorithmes de telle sorte que seuls les algorithmes "
+"contenant le texte saisi seront affichés. S'il existe des algorithmes qui "
+"correspondent à votre recherche mais qui appartiennent à un fournisseur "
+"désactivé, un message additionnel sera affiché dans la partie basse de la "
+"boîte à outils."
+
+#: ../../docs/training_manual/processing/first_alg.rst:25
+msgid "Type ``centroids`` and you should see something like this."
+msgstr ""
+"Saisissez ``centroïdes`` et vous devriez avoir quelque chose qui ressemble à"
+" ceci."
+
+#: ../../docs/training_manual/processing/first_alg.rst:29
+msgid ""
+"The search box is a very practical way of finding the algorithm you are "
+"looking for. At the bottom of the dialog, an additional label shows that "
+"there are algorithms that match your search but belong to a provider that is"
+" not active. If you click on the link in that label, the list of algorithms "
+"will also include results from those inactive providers, which will be shown"
+" in light gray. A link to activate each inactive provider is also shown. "
+"We'll see later how to activate other providers."
+msgstr ""
+"La zone de recherche est un moyen pratique de retrouver un algorithme. Au "
+"bas de la fenêtre, un message additionnel indique l'existence d'autres "
+"algorithmes correspondant à votre recherche mais appartenant à un "
+"fournisseur désactivé. Si vous cliquez sur le lien dans le message, ces "
+"algorithmes s'afficheront en grisé, dans la liste. De même un lien pour "
+"activer le fournisseur d'algorithmes est disponible. Nous verrons plus tard "
+"comment activer d'autres fournisseurs."
+
+#: ../../docs/training_manual/processing/first_alg.rst:39
+msgid ""
+"To execute an algorithm, you just have to double-click on its name in the "
+"toolbox. When you double-click on the *Polygon centroids* algorithm, you "
+"will see the following dialog."
+msgstr ""
+"Pour exécuter un algorithme, vous devez simplement double-cliquer sur son "
+"nom dans la boîte à outils. Lorsque vous double-cliquez sur l'algorithme "
+"*Centroïdes de Polygones*, vous verrez la boîte de dialogue suivante."
+
+#: ../../docs/training_manual/processing/first_alg.rst:45
+msgid ""
+"All algorithms have a similar interface, which basically contains input "
+"parameters that you have to fill, and outputs that you have to select where "
+"to store. In this case, the only input we have is a vector layer with "
+"polygons."
+msgstr ""
+"Tous les algorithmes ont une interface similaire qui contient "
+"essentiellement des paramètres d'entrée que vous avez à remplir, et de "
+"sortie dont vous devez choisir l'emplacement de stockage. Dans le cas "
+"présent, la seule donnée en entrée que nous avons est une couche vectorielle"
+" de polygones."
+
+#: ../../docs/training_manual/processing/first_alg.rst:49
+msgid ""
+"Select the *Polygons* layer as input. The algorithm has a single output, "
+"which is the centroids layer. There are two options to define where a data "
+"output is saved: enter a filepath or save it to a temporary filename"
+msgstr ""
+"Sélectionnez la couche de *Polygones* en entrée. L'algorithme a une seule "
+"sortie, qui est la couche des centroïdes. Il y a deux options pour définir "
+"où la sortie de données est sauvegardée : entrez un chemin de fichier ou "
+"sauvegardez-la dans un fichier temporaire"
+
+#: ../../docs/training_manual/processing/first_alg.rst:53
+msgid ""
+"In case you want to set a destination and not save the result in a temporary"
+" file, the format of the output is defined by the filename extension. To "
+"select a format, just select the corresponding file extension (or add it if "
+"you are directly typing the filepath instead). If the extension of the "
+"filepath you entered does not match any of the supported ones, a default "
+"extension (usually :file:`.dbf` for tables, :file:`.tif` for raster layers "
+"and :file:`.shp` for vector ones) will be appended to the filepath and the "
+"file format corresponding to that extension will be used to save the layer "
+"or table."
+msgstr ""
+"Dans le cas où vous voulez définir une destination et ne pas sauvegarder le "
+"résultat dans un fichier temporaire, le format de sortie est défini par "
+"l'extension du nom de fichier. Pour sélectionner un format, sélectionnez "
+"simplement l'extension du fichier correspondante (ou ajoutez-la si vous "
+"tapez directement le chemin du fichier à la place). Si l'extension du chemin"
+" de fichier que vous avez entrée ne correspond à aucun des formats pris en "
+"charge, une extension par défaut (habituellement :file:`.dbf` pour des "
+"tables, :file:`.tif` pour des couches rasters et :file:`.shp` pour des "
+"couches vectorielles) sera ajoutée au chemin du fichier et le format de "
+"fichier correspondant à cette extension sera utilisé pour sauvegarder la "
+"couche ou la table."
+
+#: ../../docs/training_manual/processing/first_alg.rst:62
+msgid ""
+"In all the exercises in this guide, we will be saving results to a temporary"
+" file, since there is no need to save them for a later use. Feel free to "
+"save them to a permanent location if you want to."
+msgstr ""
+"Dans tous les exercices de ce guide, nous enregistrerons les résultats dans "
+"un fichier temporaire, puisqu'il n'est pas nécessaire de les sauvegarder "
+"pour une utilisation ultérieure. N'hésitez pas à les sauvegarder dans un "
+"endroit permanent si vous le souhaitez."
+
+#: ../../docs/training_manual/processing/first_alg.rst:66
+msgid ""
+"Temporary files are deleted once you close QGIS. If you create a project "
+"with an output that was saved as a temporary output, QGIS will complain when"
+" you try to open back the project later, since that output file will not "
+"exist."
+msgstr ""
+"Notez que les fichiers temporaires sont supprimés une fois que vous fermez "
+"QGIS. Si vous créez un projet avec une sortie qui a été sauvegardée en tant "
+"que fichier temporaire, QGIS se plaindra lorsque vous essayerez de rouvrir "
+"le projet plus tard, car le fichier de sortie n'existera plus."
+
+#: ../../docs/training_manual/processing/first_alg.rst:71
+msgid ""
+"Once you have configured the algorithm dialog, press :guilabel:`Run` to run "
+"the algorithm."
+msgstr ""
+"Une fois que vous avez configuré la boîte de dialogue de l'algorithme, "
+"appuyez sur :guilabel:`Run` pour exécuter l'algorithme."
+
+#: ../../docs/training_manual/processing/first_alg.rst:74
+msgid "You will get the following output."
+msgstr "Vous obtiendrez le fichier de sortie suivant."
+
+#: ../../docs/training_manual/processing/first_alg.rst:78
+msgid ""
+"The output has the same CRS as the input. Geoalgorithms assumes all input "
+"layers share the same CRS and do not perform any reprojection. Except in the"
+" case of some special algorithms (for instance, reprojection ones), the "
+"outputs will also have that same CRS. We will see more about this soon."
+msgstr ""
+"Le fichier de sortie a le même SCR que celui d'entrée. Les géoalgorithmes "
+"supposent que toutes les couches d'entrée partagent le même SCR et ne font "
+"aucune reprojection. Sauf dans le cas de certains algorithmes spéciaux (par "
+"exemple ceux de reprojection), les fichiers de sortie auront aussi ce même "
+"SCR. Nous en verrons plus à propos de cela bientôt."
+
+#: ../../docs/training_manual/processing/first_alg.rst:83
+msgid ""
+"Try yourself saving it using different file formats (use, for instance, "
+":file:`shp` and :file:`geojson` as extensions). Also, if you do not want the"
+" layer to be loaded in QGIS after it is generated, you can check off the "
+"checkbox that is found below the output path box."
+msgstr ""
+"Essayez d'en enregistrer en utilisant différents formats de fichier "
+"(utilisez, par exemple, :file:`shp` et :file:`geojson` comme extensions). "
+"Aussi, si vous ne voulez pas que la couche soit chargée dans QGIS après "
+"avoir été générée, vous pouvez décochez la case qui se trouve en-dessous de "
+"la zone de saisie du fichier de sortie."

@@ -1,0 +1,271 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:16+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:6
+msgid "Writing code in the PyQGIS Cookbook"
+msgstr "Escribiendo código en el PyQGIS Cookbook"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:11
+msgid ""
+"If you are planning to add or update some chapters of the :ref:`PyQGIS-"
+"Developer-Cookbook`, then you should follow some rules to enable automatic "
+"testing of the code snippets."
+msgstr ""
+"Si está planeando agregar o actualizar algunos capítulos de :ref:`PyQGIS-"
+"Developer-Cookbook`, debe seguir algunas reglas para habilitar la prueba "
+"automática de los fragmentos de código."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:15
+msgid ""
+"Testing is really important because it allows automatic checking of the "
+"code. Code snippets with errors or code that uses outdated methods will fail"
+" and the notification will help you fix the problems."
+msgstr ""
+"La verificación es realmente importante porque permite la comprobación "
+"automática del código. Los fragmentos de código con errores o el código que "
+"utiliza métodos obsoletos fallarán y la notificación le ayudará a solucionar"
+" los problemas."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:19
+msgid ""
+"For testing, we use the `Sphinx doctest extension <https://www.sphinx-"
+"doc.org/en/master/usage/extensions/doctest.html>`_. Refer to the extension "
+"documentation for more detailed information."
+msgstr ""
+"Para verificación, usamos `Sphinx doctest extension <https://www.sphinx-"
+"doc.org/en/master/usage/extensions/doctest.html>`_. Consulte la "
+"documentación de la extensión para obtener información más detallada."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:25
+msgid "How to write testable code snippets"
+msgstr "Cómo escribir fragmentos de código comprobables"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:27
+msgid ""
+"Writing testable code snippets is not so different from the *old* method. "
+"Basically, you need to use a different Sphinx `directive`."
+msgstr ""
+"Escribir fragmentos de código comprobables no es tan diferente del método "
+"*antiguo*. Básicamente, necesitas usar una `directiva` Sphinx diferente."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:31
+msgid "Doctest sphinx directives"
+msgstr "Consignas Doctest sphinx"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:33
+msgid ""
+"Instead of embedding the code in a ``.. code-block:: python`` directive "
+"(which would highlight the code syntax automatically), you now need to embed"
+" it in a ``.. testcode::``. That is, instead of  this::"
+msgstr ""
+"En lugar de incrustar el código en una directiva ``.. code-block:: python`` "
+"(que resaltaría automáticamente la sintaxis del código), ahora necesita "
+"incrustarlo en un ``.. testcode::``. Es decir, en lugar de esto::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:42
+msgid "You now use this::"
+msgstr "Ahora utiliza esto::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:49
+msgid ""
+"After you wrote the example code, you should add some *assertion* that will "
+"evaluate the code and that will be run automatically."
+msgstr ""
+"Después de escribir el código de ejemplo, debe agregar alguna *afirmación* "
+"que evaluará el código y se ejecutará automáticamente."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:52
+msgid ""
+"In the above example, you are creating a crs and with ``assert "
+"crs.isValid()`` you **test** if it is valid. If the code has a wrong python "
+"syntax or the ``crs.isValid()`` returns ``False``, this code snippet will "
+"fail during testing."
+msgstr ""
+"En el ejemplo anterior, está creando un SRC y con ``assert crs.isValid()`` "
+"está **verificando** si es válido. Si el código posee una sintaxis python "
+"incorrecta o si `crs.isValid()`` devuelve  ``False``, este fragmento de "
+"código fallará durante la verificación."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:56
+msgid ""
+"To successfully run the tests on snippets, you must import all the classes "
+"and declare any variables used in the code snippets. You can include those "
+"in the code snippet itself (visible in the HTML pages) or you can add them "
+"to a ``.. testsetup::`` directive (hidden in the HTML pages). The ``.. "
+"testsetup::`` needs to be placed before the ``.. testcode::``::"
+msgstr ""
+"Para ejecutar con éxito las pruebas en los fragmentos de código, debe "
+"importar todas las clases y declarar cualquier variable utilizados en sus "
+"fragmentos de código. Puede incluirlos en el mismo fragmento de código "
+"(visible en las páginas HTML) o agregarlos a una directiva ``..testsetup::``"
+" (oculta en las páginas HTML). El ``..testsetup::`` se debe colocar antes "
+"del ``..testcode::``::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:71
+msgid ""
+"If the code snippet doesn't create objects (and therefore you cannot use "
+"something like ``assert object.isValid()``), you can test the code using the"
+" ``print()`` method, then add the expected results within a ``.. "
+"testoutput::`` directive to compare the expected output::"
+msgstr ""
+"Si el fragmento de código no crea objetos (y, por lo tanto, no puede usar "
+"algo así como ``assert object.isValid()``), puede probar el código usando el"
+" método ``print()``, luego agregue los resultados esperados dentro de una "
+"directiva ``..testoutput::`` para comparar el resultado esperado::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:86
+msgid ""
+"By default, the content of ``.. testoutput::`` is shown in the HTML output. "
+"To hide it from the HTML use the `:hide:` option::"
+msgstr ""
+"De manera predeterminada, el contenido de ``.. testoutput::`` es mostrado en"
+" la salida HTML. Para ocultarlo, use la opción  `:hide:`::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:97
+msgid ""
+"If the code snippet contains any print statements, you MUST add a "
+"``testoutput`` with the expected outputs; otherwise the test will fail."
+msgstr ""
+"Si el fragmento de código contiene declaraciones del tipo print, DEBE "
+"agregar un ``testoutput`` con los resultados esperados; de lo contrario la "
+"prueba fallará."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:101
+msgid "Grouping tests"
+msgstr "Agrupamiento de pruebas"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:103
+msgid ""
+"For each rst document, the code snippets are tested sequentially, which "
+"means you can use one ``.. testsetup::`` for all the following code snippets"
+" and that later snippets will have access to variables declared in earlier "
+"ones in the document."
+msgstr ""
+"Por cada documento rst, los fragmentos de código se prueban secuencialmente,"
+" lo que significa que puede usar un ``..testsetup::`` para todos los "
+"subsiguientes fragmentos de código y éstos tendrán acceso a las variables "
+"declaradas anteriormente en el documento."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:107
+msgid ""
+"Alternatively, you can use groups to break down the examples on the same "
+"page in different tests."
+msgstr ""
+"Alternativamente, puede usar grupos para desglosar los ejemplos en la misma "
+"página en diferentes pruebas."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:110
+msgid ""
+"You add the code snippet to groups by adding one or more group names "
+"(separated by commas) in the respective directive::"
+msgstr ""
+"Agregando el fragmento de código a los grupos sumando uno o más nombres de "
+"grupos (separados por comas) en el directorio respectivo::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:118
+msgid ""
+"The ``doctest`` will pick each group snippets and run them independently."
+msgstr ""
+"El ``doctest`` elegirá los fragmentos de código de cada grupo y los "
+"ejecutará independientemente uno de otro."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:122
+msgid ""
+"Use group names that make sense with the related content. Use something "
+"similar to <chapter>_<subchapter>, for example: crs_intro, crs_fromwkt. In "
+"case of failures, this will help identifying where the failures occur."
+msgstr ""
+"Utilice nombres de grupo que tengan sentido con el contenido relacionado. "
+"Use algo similar a <chapter>_<subchapter>, por ejemplo: crs_intro, "
+"crs_fromwkt. En caso de fallas, esto ayudará a identificar dónde ocurren las"
+" mismas."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:127
+msgid ""
+"If you don't declare any group, the code snippet will be added to a group "
+"named ``default``. If instead, you use ``*`` as a group name, the snippet "
+"will be used in all testing groups, something normally usefull to use in the"
+" test setup::"
+msgstr ""
+"Si no declara ningún grupo, el fragmento de código se agregará a un grupo "
+"llamado ``default``. Si, por el contrario, usa ``*`` como nombre de grupo, "
+"el fragmento de código se usará en todos los grupos de prueba, algo que "
+"normalmente es útil para usar en la configuración de la prueba::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:136
+msgid "How to test snippets on your local machine"
+msgstr "Cómo probar fragmentos de código en su máquina local"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:138
+msgid "Instructions are valid for Linux system."
+msgstr "Las instrucciones son válidas para el sistema Linux."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:140
+msgid ""
+"To test Python code snippets, you need a *QGIS* installation. For this, "
+"there are many options. You can:"
+msgstr ""
+"Para probar fragmentos de código de Python, necesita una instalación *QGIS*."
+" Para esto, hay muchas opciones. Usted puede:"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:143
+msgid ""
+"Use your system *QGIS* installation with *Sphinx* from a Python virtual "
+"environment::"
+msgstr ""
+"Utilice la instalación *QGIS* de su sistema con *Sphinx* desde un entorno "
+"virtual de Python::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:148
+msgid "Use a manually built installation of *QGIS*. You'd need to:"
+msgstr ""
+"Utilice una instalación compilada manualmente de *QGIS*. Necesitarías:"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:150
+msgid ""
+"Create a custom ``Makefile`` extension on top of the :file:`venv.mk` file, "
+"for example a :file:`user.mk` file with the following content::"
+msgstr ""
+"Crear un argumento personalizado ``Makefile`` en la parte superior del "
+"archivo :file:`venv.mk`, por ejemplo, un archivo :file:`user.mk` con el "
+"siguiente contenido::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:158
+msgid "Or ::"
+msgstr "O ::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:165
+msgid "Then, use it to run target ``doctest``::"
+msgstr "Luego, debes ejecutarlo apuntando a ``doctest``::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:169
+msgid "Run target ``doctest`` inside the official *QGIS* docker image::"
+msgstr "Ejecutar ``doctest`` desde la imagen docker oficial de *QGIS*::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:173
+msgid ""
+"You have to install `Docker <https://www.docker.com/>`_ first because this "
+"uses a docker image with QGIS in it."
+msgstr ""
+"Primero debe instalar `Docker <https://www.docker.com/>`_ porque esto "
+"utiliza una imagen de Docker con QGIS en esta."

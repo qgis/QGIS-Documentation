@@ -1,0 +1,231 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:21+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../docs/training_manual/processing/crs.rst:2
+msgid "CRSs. Reprojecting"
+msgstr "SRCs. Reprojetando"
+
+#: ../../docs/training_manual/processing/crs.rst:5
+msgid ""
+"In this lesson we will discuss how Processing uses CRSs. We will also see a "
+"very useful algorithm: reprojecting."
+msgstr ""
+"Nesta lição discutiremos como o processamento usa os Sistemas de Referências"
+" de coordenadas (SRCs). Também veremos um algoritmo muito útil: reproject."
+
+#: ../../docs/training_manual/processing/crs.rst:9
+msgid ""
+"CRS's are a great source of confusion for QGIS Processing users, so here are"
+" some general rules about how they are handled by geoalgorithms when "
+"creating a new layer."
+msgstr ""
+"SRCs são uma grande fonte de confusão para os usuários do processamento "
+"QGIS, então aqui estão algumas regras sobre como eles são manipulados por "
+"algoritmos quando criada uma nova camada."
+
+#: ../../docs/training_manual/processing/crs.rst:12
+msgid ""
+"If there are input layers, it will use the CRS of the first layer. This is "
+"assumed to be the CRS of all input layers, since they should have the same "
+"one. If you use layers with unmatching CRS's, QGIS will warn you about it. "
+"Notice that the CRS of input layers is shown along with its name in the "
+"parameters dialog."
+msgstr ""
+"Se houver camadas de entrada, será usado o SRC da primeira camada. Este é "
+"considerado como o SRC de todas as camadas de entrada, uma vez que todos "
+"devem ter o mesmo. Se você usar camadas com SRC diferentes entre si o QGIS "
+"irá avisá-lo sobre isso. Observe que o SRC de camadas de entrada é mostrada "
+"junto com o seu nome na caixa de diálogo de parâmetros."
+
+#: ../../docs/training_manual/processing/crs.rst:23
+msgid ""
+"Open the project corresponding to this lesson and you will see two layers "
+"named 23030 and 4326. They both contain the same points, but in different "
+"CRSs (EPSG:23030 and EPSG:4326). They appear in the same place because QGIS "
+"is reprojecting on the fly to the project CRS (EPSG:4326), but they are not "
+"actually the same layer."
+msgstr ""
+"Abra o projeto correspondente a esta lição e você vai ver duas camadas "
+"nomeadas 23030 e 4326. Ambas contêm os mesmos pontos, mas em diferentes SRC "
+"(EPSG: 23030 e EPSG: 4326). Elas aparecem no mesmo lugar porque o QGIS está "
+"reprojetando automaticamente para o CRS  do projeto(EPSG: 4326), mas elas "
+"não são realmente a mesma camada."
+
+#: ../../docs/training_manual/processing/crs.rst:29
+msgid "Open the *Export/Add geometry columns* algorithm."
+msgstr "Abra o algoritmo *Export/Add geometry columns*."
+
+#: ../../docs/training_manual/processing/crs.rst:33
+msgid ""
+"This algorithm add new columns to the attributes table of a vector layer. "
+"The content of the columns depend on the type of geometry of the layer. In "
+"the case of points, it adds new columns with the X and Y coordinates of each"
+" point."
+msgstr ""
+"Esse algoritmo adiciona novas colunas na tabela de atributos de uma camada "
+"vetorial. O conteúdo das colunas depende do tipo de geometria da camada. No "
+"caso de pontos, ele adiciona novas colunas com as coordenadas X e Y de cada "
+"ponto."
+
+#: ../../docs/training_manual/processing/crs.rst:38
+msgid ""
+"In the list of available layers that you will find in the input layer field,"
+" you will see each one with its corresponding CRS. That means that, although"
+" they appear in the same place in your canvas, they will be treated "
+"differently. Select the 4326 layer."
+msgstr ""
+"Na lista de camadas disponíveis que você vai encontrar no campo de camada de"
+" entrada, você verá cada um com seu SRC correspondente. Isso significa que, "
+"apesar de aparecerem no mesmo lugar em sua tela, eles serão tratados de "
+"forma diferente. Selecione a camada 4326."
+
+#: ../../docs/training_manual/processing/crs.rst:43
+msgid ""
+"The other parameter of the algorithm allows to set how the algorithm uses "
+"coordinates to calculate the new value that it will add to the resulting "
+"layers. Most algorithms do not have an option like that, and just use the "
+"coordinates directly. Select the *Layer CRS* option to just use coordinates "
+"as they are. This is how almost all geoalgorithms work."
+msgstr ""
+"O outro parâmetro permite definir a forma como o algoritmo usa coordenadas "
+"para calcular o novo valor que irá adicionar às camadas resultantes. A "
+"maioria dos algoritmos não têm uma opção assim e só usam as coordenadas "
+"diretamente. Selecione a opção *Layer CRS* para apenas usar coordenadas como"
+" coordenadas. Essa é a forma como quase todos os geoalgoritmos trabalham."
+
+#: ../../docs/training_manual/processing/crs.rst:49
+msgid ""
+"You should get a new layer with exactly the same points as the other two "
+"layers. If you right click on the name of the layer and open its properties,"
+" you will see that it shares the same CRS of the input layer, that is, "
+"EPSG:4326. When the layer is loaded into QGIS, you will not be asked to "
+"enter the CRS of the layer, since QGIS already knows about it."
+msgstr ""
+"Você deve obter uma nova camada com exatamente os mesmos pontos que as "
+"outras duas camadas. Se você clicar com o botão direito sobre o nome da "
+"camada e abrir suas propriedades, você vai ver que ele compartilha o mesmo "
+"SRC da camada de entrada, ou seja, o EPSG:4326. Quando a camada é carregado "
+"no QGIS, você não será solicitado a inserir o SRC da camada, uma vez que "
+"QGIS já sabe qual é."
+
+#: ../../docs/training_manual/processing/crs.rst:55
+msgid ""
+"If you open the attributes table of the new layer you will see that it "
+"contains two new fields with the X and Y coordinates of each point."
+msgstr ""
+"Se você abrir a tabela de atributos da nova camada, irá ver que ela contém "
+"dois novos campos com as coordenadas X e Y de cada ponto."
+
+#: ../../docs/training_manual/processing/crs.rst:68
+msgid ""
+"Now do the same calculation using the other layer. You should find the "
+"resulting layer rendered exactly in the same place as the other ones, and it"
+" will have the EPSG:23030 CRS, since that was the one of the input layer."
+msgstr ""
+"Agora faça o mesmo cálculo usando a outra camada. Você deve encontrar a "
+"camada resultante renderizada exatamente no mesmo lugar das outras, e ela "
+"terá o SRC EPSG:23030, uma vez que era o da camada de entrada."
+
+#: ../../docs/training_manual/processing/crs.rst:72
+msgid ""
+"If you go to its attribute table, you will see values that are different to "
+"the ones in the first layer that we created."
+msgstr ""
+"Se você for para a tabela de atributos da camada resultante, você verá "
+"valores diferentes dos da primeira camada que criamos."
+
+#: ../../docs/training_manual/processing/crs.rst:77
+msgid ""
+"This is because the original data is different (it uses a different CRS), "
+"and those coordinates are taken from it."
+msgstr ""
+"Isto é porque o dado original é diferente (utiliza um outro SRC) e essas "
+"coordenadas são geradas a partir dele."
+
+#: ../../docs/training_manual/processing/crs.rst:80
+msgid ""
+"What should you learn from this? The main idea behind these examples is that"
+" geoalgorithms use the layer as it is in its original data source, and "
+"completely ignore the reprojections that QGIS might be doing before "
+"rendering. In other words, do not trust what you see in the canvas, but "
+"always have in mind that the original data will be used. That is not so "
+"important in this case, since we are just using one single layer at a time, "
+"but in an algorithm that needs several of them (such as a clip algorithm), "
+"layers that appear to match or overlay might be very far one from each "
+"other, since they might have different CRSs."
+msgstr ""
+"O que você deve aprender com isso? A principal ideia por trás desses "
+"exemplos é que geoalgoritmos usam a camada como ela é em sua fonte de dados "
+"original e ignoram completamente os reprojeções que o QGIS pode estar "
+"fazendo antes da renderização. Em outras palavras, não confie no que você vê"
+" na tela e sempre tenha em mente que os dados originais serão utilizados. "
+"Isso não é tão importante neste caso, uma vez que estamos usando apenas uma "
+"única camada de cada vez, mas em um algoritmo que precisa de várias delas "
+"(como um algoritmo de corte), camadas que parecem coincidir ou se sobrepor "
+"podem estar muito longe uma das outras, uma vez que elas podem ter "
+"diferentes SRCs."
+
+#: ../../docs/training_manual/processing/crs.rst:89
+msgid ""
+"Algorithms performs no reprojection (except in the reprojection algorithm "
+"that we will see next), so it is up to you to make sure that layers have "
+"matching CRS's."
+msgstr ""
+"Algoritmos não executam nenhuma reprojeção (exceto o algoritmo reprojection "
+"que veremos a seguir), por isso você é que deve certificar-se de que as "
+"camadas têm SRCs que combinem."
+
+#: ../../docs/training_manual/processing/crs.rst:93
+msgid ""
+"An interesting module that deals with CRS's is the reprojection one. It "
+"represents a particular case, since it has an input layer (the one to "
+"reproject), but it will not use its CRS for the output one."
+msgstr ""
+"Um módulo interessante que lida com SRCs é o da reprojeção. Ele representa "
+"um caso particular, uma vez que tem uma camada de entrada (que será "
+"reprojetada), mas não usará o SRC dela para a saída."
+
+#: ../../docs/training_manual/processing/crs.rst:97
+msgid "Open the *Reproject layer* algorithm."
+msgstr "Ara o algoritmo *Reproject layer*."
+
+#: ../../docs/training_manual/processing/crs.rst:101
+msgid ""
+"Select any of the layers as input, and select EPSG:23029 as the destination "
+"CRS. Run the algorithm and you will get a new layer, identical to the input "
+"one, but with a different CRS. It will appear on the same region of the "
+"canvas, like the other ones, since QGIS will reproject it on the fly, but "
+"its original coordinates are different. You can see that by running the "
+"*Export/Add geometry columns* algorithm using this new layer as input, and "
+"veryfing that the added coordinates are different to the ones in the "
+"attribute tables of both of the two layers that we had computed before."
+msgstr ""
+"Selecione qualquer uma das camadas como entrada e selecione o EPSG: 23029 "
+"como o SRC de destino. Execute o algoritmo e você terá uma nova camada, "
+"idêntica a da entrada, mas com outro SRC. Ela aparecerá na mesma região da "
+"tela, como as outras, uma vez que o QGIS irá reprojetá-la dinamicamente, mas"
+" suas coordenadas originais serão diferentes. Você pode ver isso executando "
+"o algoritmo *Export/Add geometry columns* usando essa nova camada como "
+"entrada e verificando que as coordenadas adicionadas são diferentes das que "
+"estão nas tabelas de atributos de ambas as camadas que havíamos processado "
+"anteriormente."

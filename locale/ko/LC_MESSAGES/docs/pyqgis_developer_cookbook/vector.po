@@ -1,0 +1,441 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-27 06:22+0100\n"
+"PO-Revision-Date: 2020-03-16 19:23+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:53
+msgid "Using Vector Layers"
+msgstr "벡터 레이어 사용"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:58
+msgid ""
+"This section summarizes various actions that can be done with vector layers."
+msgstr "이 장에서는 벡터 레이어에 대해 할 수 있는 여러 가지 작업들을 소개합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:112
+msgid "Iterating over Vector Layer"
+msgstr "벡터 레이어 상의 반복 작업"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:173
+msgid "Selecting features"
+msgstr "피처 선택"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:230
+msgid "Accessing attributes"
+msgstr "속성에 접근하기"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:256
+msgid "Iterating over selected features"
+msgstr "선택된 피처에 대한 반복 작업"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:270
+msgid "Iterating over a subset of features"
+msgstr "피처 부분 집합에 대한 반복 작업"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:324
+msgid ""
+"The request can be used to define the data retrieved for each feature, so "
+"the iterator returns all features, but returns partial data for each of "
+"them."
+msgstr ""
+"request를 각 피처에서 검색된 데이터를 정의하는 데 사용할 수 있기에, 반복 작업자가 모든 피처를 순회하긴 하지만, 각 피처에 대한"
+" 부분적인 데이터를 반환합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:349
+msgid "Modifying Vector Layers"
+msgstr "벡터 레이어 수정"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:384
+msgid ""
+"By using any of the following methods for vector layer editing, the changes "
+"are directly committed to the underlying data store (a file, database etc). "
+"In case you would like to do only temporary changes, skip to the next "
+"section that explains how to do :ref:`modifications with editing buffer "
+"<editing-buffer>`."
+msgstr ""
+"벡터 레이어 편집을 위한 다음 방법 가운데 어떤 것을 사용하든, 변경 사항은 기저 데이터 저장소(파일, 데이터베이스 등등)에 직접 "
+"반영됩니다. 일시적으로만 변경하고자 할 경우, :ref:`편집 버퍼로 수정 <editing-buffer>` 하는 방법을 설명하는 다음 "
+"단계로 넘어가십시오."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:407
+msgid "Add Features"
+msgstr "피처 추가"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:432
+msgid "Delete Features"
+msgstr "피처 삭제"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:442
+msgid "Modify Features"
+msgstr "피처 수정"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:470
+msgid "Modifying Vector Layers with an Editing Buffer"
+msgstr "편집 버퍼로 벡터 레이어 수정"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:571
+msgid "Adding and Removing Fields"
+msgstr "항목 추가 및 제거"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:573
+msgid ""
+"To add fields (attributes), you need to specify a list of field definitions."
+" For deletion of fields just provide a list of field indexes."
+msgstr "필드(속성)를 추가하려면, 필드를 정의한 리스트를 지정해야 합니다. 필드를 삭제하려면 필드 인덱스 목록만 넘겨주면 됩니다."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:604
+msgid ""
+"After adding or removing fields in the data provider the layer's fields need"
+" to be updated because the changes are not automatically propagated."
+msgstr ""
+"데이터 제공자에서 필드를 추가 또는 제거한 다음 레이어의 필드를 업데이트해야 합니다. 이는 변경 사항이 자동적으로 반영되지 않기 "
+"때문입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:621
+msgid "Using Spatial Index"
+msgstr "공간 인덱스 사용"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:623
+msgid ""
+"Spatial indexes can dramatically improve the performance of your code if you"
+" need to do frequent queries to a vector layer. Imagine, for instance, that "
+"you are writing an interpolation algorithm, and that for a given location "
+"you need to know the 10 closest points from a points layer, in order to use "
+"those point for calculating the interpolated value. Without a spatial index,"
+" the only way for QGIS to find those 10 points is to compute the distance "
+"from each and every point to the specified location and then compare those "
+"distances. This can be a very time consuming task, especially if it needs to"
+" be repeated for several locations. If a spatial index exists for the layer,"
+" the operation is much more effective."
+msgstr ""
+"벡터 레이어에 대해 자주 쿼리를 해야 할 경우 공간 인덱스를 사용하면 코드 실행 속도를 획기적으로 향상시킬 수 있습니다. 여러분이 보간 "
+"알고리듬을 작성하는데, 보간값을 계산하기 위해 주어진 위치에서 가장 가까운 포인트 레이어의 포인트 10개를 알아내야 한다고 한번 "
+"상상해보십시오. 공간 인덱스가 없다면, QGIS가 그 포인트 10개를 찾는 유일한 방법은 해당 위치에서 모든 포인트까지의 거리를 각각 "
+"계산한 다음 그 거리들을 비교하는 것입니다. 특히 이 작업을 몇 군데의 위치에 대해 반복해야 할 경우 시간이 아주 오래 걸릴 수 "
+"있습니다. 레이어가 공간 인덱스를 가지고 있다면, 훨씬 효율적으로 작업할 수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:634
+msgid ""
+"Think of a layer without a spatial index as a telephone book in which "
+"telephone numbers are not ordered or indexed. The only way to find the "
+"telephone number of a given person is to read from the beginning until you "
+"find it."
+msgstr ""
+"공간 인덱스가 없는 레이어를 전화번호가 정렬되지도 색인되지도 않은 전화번호부라고 생각해보십시오. 어떤 사람의 전화번호를 찾으려면 처음부터"
+" 그 번호를 찾을 때까지 읽을 수밖에 없습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:663
+msgid "once spatial index is filled with some values, you can do some queries"
+msgstr "공간 인덱스가 채워지면 쿼리를 해보십시오."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:877
+msgid "The provider supports string, int and double fields."
+msgstr "이 제공자는 문자열(string), 정수(int), 더블형 실수(double) 유형의 필드를 지원합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:893
+msgid ""
+"The URI can also specify the coordinate reference system, fields, and "
+"indexing of the memory provider in the URI. The syntax is:"
+msgstr "이 URI로 좌표계, 항목, 메모리기반 제공자의 인덱스 작업도 설정할 수 있습니다. 문법은 다음과 같습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:899
+msgid "crs=definition"
+msgstr "crs=definition"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:902
+msgid "index=yes"
+msgstr "index=yes"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:902
+msgid "Specifies that the provider will use a spatial index"
+msgstr "제공자가 공간 인덱스를 사용하도록 설정합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:907
+msgid "field=name:type(length,precision)"
+msgstr "field=name:type(length,precision)"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:905
+msgid ""
+"Specifies an attribute of the layer.  The attribute has a name, and "
+"optionally a type (integer, double, or string), length, and precision. There"
+" may be multiple field definitions."
+msgstr ""
+"레이어의 속성을 설정합니다. 속성의 명칭은 필수적이며, 선택적으로 유형(정수, 더블형 실수, 문자 스트링), 길이 및 정밀도를 설정할 수"
+" 있습니다. 여러 개의 속성 항목을 정의할 수도 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:909
+msgid "The following example of a URI incorporates all these options"
+msgstr "다음은 이 모든 옵션들을 포함하는 URI의 예시입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:915
+msgid ""
+"The following example code illustrates creating and populating a memory "
+"provider"
+msgstr "다음은 메모리기반 제공자를 생성하고 값을 채우는 코드의 예시입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:941
+msgid "Finally, let's check whether everything went well"
+msgstr "마지막으로, 모든 작업이 성공적이었는지 확인해봅시다."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:966
+msgid "Appearance (Symbology) of Vector Layers"
+msgstr "벡터 레이어의 표현(심볼)"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:968
+msgid ""
+"When a vector layer is being rendered, the appearance of the data is given "
+"by **renderer** and **symbols** associated with the layer.  Symbols are "
+"classes which take care of drawing of visual representation of features, "
+"while renderers determine what symbol will be used for a particular feature."
+msgstr ""
+"벡터 레이어를 렌더링할 때, 레이어와 관련된 **렌더러** 와 **심볼** 이 데이터의 표현을 결정합니다. 심볼은 피처의 시각적 표현을 "
+"그리는 일을 담당하는 클래스이며, 렌더러는 특정 피처에 대해 어떤 심볼을 적용할지 결정합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:979
+msgid "And with that reference, let us explore it a bit"
+msgstr "그리고 이를 참고해 조금 더 나가봅시다."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:992
+msgid "Type"
+msgstr "유형"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:992
+msgid "Class"
+msgstr "클래스"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:992
+msgid "Description"
+msgstr "설명"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:994
+msgid "singleSymbol"
+msgstr "singleSymbol"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:994
+msgid "Renders all features with the same symbol"
+msgstr "모든 피처를 동일한 심볼로 렌더링합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:995
+msgid "categorizedSymbol"
+msgstr "categorizedSymbol"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:995
+msgid "Renders features using a different symbol for each category"
+msgstr "피처를 각 카테고리에 대해 서로 다른 심볼로 렌더링합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:996
+msgid "graduatedSymbol"
+msgstr "graduatedSymbol"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:996
+msgid "Renders features using a different symbol for each range of values"
+msgstr "피처를 값의 범위에 따라 서로 다른 심볼로 렌더링합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1011
+msgid ""
+"It is possible to obtain a dump of a renderer contents in text form --- can "
+"be useful for debugging"
+msgstr "텍스트 형식으로 렌더러의 내용을 덤프받을 수도 있습니다. 디버깅 작업에 유용할 수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1025
+msgid "Single Symbol Renderer"
+msgstr "단일 심볼 렌더러"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1052
+msgid ""
+"``name`` indicates the shape of the marker, and can be any of the following:"
+msgstr "``name`` 은 마커의 형태를 의미하며, 다음 중 어느 것이라도 가능합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1054
+msgid "``circle``"
+msgstr "``circle``"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1055
+msgid "``square``"
+msgstr "``square``"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1057
+msgid "``rectangle``"
+msgstr "``rectangle``"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1058
+msgid "``diamond``"
+msgstr "``diamond``"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1059
+msgid "``pentagon``"
+msgstr "``pentagon``"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1060
+msgid "``triangle``"
+msgstr "``triangle``"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1061
+msgid "``equilateral_triangle``"
+msgstr "``equilateral_triangle``"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1062
+msgid "``star``"
+msgstr "``star``"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1063
+msgid "``regular_star``"
+msgstr "``regular_star``"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1064
+msgid "``arrow``"
+msgstr "``arrow``"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1065
+msgid "``filled_arrowhead``"
+msgstr "``filled_arrowhead``"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1099
+msgid "Categorized Symbol Renderer"
+msgstr "카테고리 심볼 렌더러"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1104
+msgid "To get a list of categories"
+msgstr "카테고리 목록을 얻는 방법은 다음과 같습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1135
+msgid "Graduated Symbol Renderer"
+msgstr "등급 심볼 렌더러"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1137
+msgid ""
+"This renderer is very similar to the categorized symbol renderer described "
+"above, but instead of one attribute value per class it works with ranges of "
+"values and thus can be used only with numerical attributes."
+msgstr ""
+"이 렌더러는 앞에서 설명한 카테고리 심볼 렌더러와 매우 비슷하지만, 범주 당 하나의 속성을 할당하는 대신 값의 범위에 따라 할당하기 "
+"때문에 숫자 속성에만 사용할 수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1141
+msgid "To find out more about ranges used in the renderer"
+msgstr "이 렌더러가 사용하는 범위에 대해 상세히 조회하려면 다음과 같은 방법을 사용합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1173
+msgid ""
+"If you wish to create your own graduated symbol renderer you can do so as "
+"illustrated in the example snippet below (which creates a simple two class "
+"arrangement)"
+msgstr ""
+"사용자 정의 등급 심볼 렌더러를 생성하고자 할 경우 다음 예시에서처럼 하면 됩니다. (이 예시에서는 범주 2개인 간단한 배열을 "
+"생성합니다.)"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1217
+msgid "Working with Symbols"
+msgstr "심볼 다루기"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1252
+msgid "Size and width are in millimeters by default, angles are in degrees."
+msgstr "기본적으로 크기 및 두께는 밀리미터 단위이며, 각도는 도 단위입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1257
+msgid "Working with Symbol Layers"
+msgstr "심볼 레이어 다루기"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1303
+msgid "Creating Custom Symbol Layer Types"
+msgstr "사용자 지정 심볼 레이어 유형 생성"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1305
+msgid ""
+"Imagine you would like to customize the way how the data gets rendered. You "
+"can create your own symbol layer class that will draw the features exactly "
+"as you wish. Here is an example of a marker that draws red circles with "
+"specified radius"
+msgstr ""
+"데이터를 어떻게 렌더링할지 사용자 지정하고 싶다고 상상해보십시오. 사용자가 원하는 방식대로 피처를 그리는, 자신만의 심볼 레이어 클래스를"
+" 생성할 수 있습니다. 다음은 지정된 반지름으로 빨간색 원을 그리는 마커의 예시 코드입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1365
+msgid ""
+"Usually it is convenient to add a GUI for setting attributes of the symbol "
+"layer type to allow users to customize the appearance: in case of our "
+"example above we can let user set circle radius. The following code "
+"implements such widget"
+msgstr ""
+"일반적으로 사용자가 표현을 변경할 수 있도록 심볼 레이어 유형의 속성을 설정하기 위한 GUI를 추가하는 것이 편리합니다. 앞의 예시에서 "
+"사용자가 원의 반경을 설정하도록 할 수 있습니다. 다음은 그런 위젯을 구현하는 예시 코드입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1417
+msgid ""
+"Now we are missing only the final glue: to make QGIS aware of these new "
+"classes. This is done by adding the symbol layer to registry. It is possible"
+" to use the symbol layer also without adding it to the registry, but some "
+"functionality will not work: e.g. loading of project files with the custom "
+"symbol layers or inability to edit the layer's attributes in GUI."
+msgstr ""
+"이제 마지막 단계만 남았습니다. QGIS가 이 새 클래스들을 인식하도록 만드는 일입니다. 심볼 레이어를 레지스트리에 추가하면 됩니다. "
+"레지스트리에 추가하지 않고 심볼 레이어를 사용할 수도 있지만, 예를 들어 사용자 지정 심볼 레이어를 담고 있는 프로젝트 파일을 "
+"불러온다든가 GUI에서 레이어 속성을 편집할 수 없는 등 몇몇 기능들을 사용할 수 없게 됩니다."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1423
+msgid "We will have to create metadata for the symbol layer"
+msgstr "심볼 레이어에 대한 메타데이터도 생성해야 합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1448
+msgid ""
+"The last step is to add this symbol layer to the registry --- and we are "
+"done."
+msgstr "마지막 단계는 이 심볼 레이어를 레지스트리에 추가하는 일입니다. 이제 모두 끝났습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1454
+msgid "Creating Custom Renderers"
+msgstr "사용자 정의 렌더러 생성"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1456
+msgid ""
+"It might be useful to create a new renderer implementation if you would like"
+" to customize the rules how to select symbols for rendering of features. "
+"Some use cases where you would want to do it: symbol is determined from a "
+"combination of fields, size of symbols changes depending on current scale "
+"etc."
+msgstr ""
+"피처를 렌더링하는 데 어떻게 심볼을 선택할지에 대한 규칙을 마음대로 지정하고 싶을 경우 새로운 렌더러를 만드는 것이 유용할 수도 "
+"있습니다. 여러 항목을 조합해서 심볼을 결정해야 하거나, 현재 축척에 따라 심볼 크기를 변경해야 하는 등의 경우에 새로운 렌더러를 만들면"
+" 좋습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1461
+msgid ""
+"The following code shows a simple custom renderer that creates two marker "
+"symbols and chooses randomly one of them for every feature"
+msgstr "다음 예시 코드는 마커 심볼 2개를 생성해서 각 피처마다 임의로 2개 중 1개를 선택하는 간단한 사용자 지정 렌더러입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1552
+msgid ""
+"The last missing bit is the renderer metadata and registration in registry, "
+"otherwise loading of layers with the renderer will not work and user will "
+"not be able to select it from the list of renderers. Let us finish our "
+"RandomRenderer example"
+msgstr ""
+"마지막으로 렌더러의 메타데이터를 생성하고 레지스트리에 렌더러를 등록해야 합니다. 이렇게 하지 않으면 렌더러와 함께 레이어를 불러올 수 "
+"없고, 사용자가 렌더러 목록에서 렌더러를 선택할 수 없습니다. 이제 :class:`RandomRenderer` 예시 코드를 완성해봅시다."
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1609
+msgid "Further Topics"
+msgstr "남은 이야기들"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1612
+msgid "**TODO:**"
+msgstr "**TODO:**"

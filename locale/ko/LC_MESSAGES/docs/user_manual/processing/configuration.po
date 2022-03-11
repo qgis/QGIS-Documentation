@@ -1,0 +1,210 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# 
+# Translators:
+# Harrissou Sant-anna, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.16\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-30 02:15+0000\n"
+"PO-Revision-Date: 2020-12-24 10:22+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2021\n"
+"Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/user_manual/processing/configuration.rst:5
+msgid "Configuring the Processing Framework"
+msgstr "공간 처리 프레임워크 환경 설정"
+
+#: ../../docs/user_manual/processing/configuration.rst:12
+msgid ""
+"The Processing Options menu (:menuselection:`Settings--> Options -->` "
+":guilabel:`Processing` tab) allows you to configure how algorithms work. "
+"Configuration parameters are structured in separate blocks that you can "
+"select on the left-hand side of the dialog."
+msgstr ""
+"공간 처리 옵션 메뉴(:menuselection:`Settings--> Options -->` :guilabel:`Processing` "
+"탭)에서 알고리즘 작동 방식을 환경 설정할 수 있습니다. 환경 설정 파라미터들은 대화창의 왼쪽에서 선택할 수 있는 개별 그룹으로 구분돼 "
+"있습니다."
+
+#: ../../docs/user_manual/processing/configuration.rst:17
+msgid ""
+"The :guilabel:`General` block contains a number of interesting parameters."
+msgstr ":guilabel:`General` 그룹에 몇 가지 흥미로운 파라미터가 있습니다."
+
+#: ../../docs/user_manual/processing/configuration.rst:19
+msgid ""
+":guilabel:`Default output raster layer extension` is by default ``tif``"
+msgstr ""
+":guilabel:`Default output raster layer extension`: 기본 산출 래스터 확장자의 기본값은 "
+"``tif`` 입니다."
+
+#: ../../docs/user_manual/processing/configuration.rst:20
+msgid ""
+":guilabel:`Default output vector layer extension` is by default ``gpkg``"
+msgstr ""
+":guilabel:`Default output vector layer extension`: 기본 산출 벡터 레이어 확장자의 기본값은 "
+"``gpkg`` 입니다."
+
+#: ../../docs/user_manual/processing/configuration.rst:21
+msgid ":guilabel:`Invalid features filtering`"
+msgstr ":guilabel:`Invalid features filtering`: 유효하지 않은 객체를 필터링합니다."
+
+#: ../../docs/user_manual/processing/configuration.rst:22
+msgid ""
+":guilabel:`Keep dialog open after running algorithm`. Once an algorithm has "
+"finished execution and its output layers are loaded into the QGIS project, "
+"the algorithm dialog is closed. If you want to keep it open (to run the "
+"algorithm again with different parameters, or to better check the output "
+"that is written to the log tab), check this option."
+msgstr ""
+":guilabel:`Keep dialog open after running algorithm`: 알고리즘 실행이 완료되어 그 산출 "
+"레이어를 QGIS 프로젝트로 불러오고 나면, 알고리즘 대화창이 닫힙니다. 대화창이 (알고리즘을 다른 파라미터 값으로 다시 실행하기 위해,"
+" 또는 로그 탭에 작성된 산출물을 좀 더 자세히 확인하기 위해) 계속 열려 있기를 바란다면, 이 옵션을 활성화하십시오."
+
+#: ../../docs/user_manual/processing/configuration.rst:27
+msgid ":guilabel:`Max Threads`"
+msgstr ":guilabel:`Max Threads`: 스레드 최대 개수를 설정합니다."
+
+#: ../../docs/user_manual/processing/configuration.rst:28
+msgid ":guilabel:`Output folder`"
+msgstr ":guilabel:`Output folder`: 산출물을 저장할 폴더를 설정합니다."
+
+#: ../../docs/user_manual/processing/configuration.rst:29
+msgid ""
+":guilabel:`Pre-execution script` and :guilabel:`Post-execution script`. "
+"These parameters point to files that contain scripts written using the "
+"processing scripting functionality, explained in the section covering "
+"scripting and the console."
+msgstr ""
+":guilabel:`Pre-execution script` 및 :guilabel:`Post-execution script`: 이 "
+"파라미터들은 공간 처리 스크립트 작업 기능을 통해 작성된 스크립트를 가리킵니다. 스크립트 작업 및 콘솔에 관한 부분에서 이 옵션들을 "
+"설명하고 있습니다."
+
+#: ../../docs/user_manual/processing/configuration.rst:33
+msgid ""
+":guilabel:`Prefer output filename for layer names`. The name of each "
+"resulting layer created by an algorithm is defined by the algorithm itself. "
+"In some cases, a fixed name might be used, meaning that the same output name"
+" will be used, no matter which input layer is used. In other cases, the name"
+" might depend on the name of the input layer or some of the parameters used "
+"to run the algorithm. If this checkbox is checked, the name will be taken "
+"from the output filename instead. Notice that, if the output is saved to a "
+"temporary file, the filename of this temporary file is usually a long and "
+"meaningless one intended to avoid collision with other already existing "
+"filenames."
+msgstr ""
+":guilabel:`Prefer output filename for layer names`: 알고리즘 자체가 해당 알고리즘이 생성하는 각"
+" 산출 레이어의 명칭을 정의합니다. 몇몇 경우 고정된 명칭을 사용할 수도 있는데, 어떤 입력 레이어를 사용하든 상관없이 동일한 산출 "
+"레이어 명칭을 사용할 것이라는 뜻입니다. 다른 경우엔 입력 레이어의 명칭 또는 알고리즘 실행에 사용되는 몇몇 파라미터에 따라 산출 레이어"
+" 명칭이 달라지기도 합니다. 이 옵션을 활성화하면 대신 산출 파일명에서 레이어 명칭을 가져올 것입니다. 산출물이 임시 파일로 저장되는 "
+"경우, 이 임시 파일의 명칭은 다른 기존 임시 파일과의 충돌을 피하려는 목적으로 아주 길고 의미도 없다는 점을 기억해두십시오."
+
+#: ../../docs/user_manual/processing/configuration.rst:45
+msgid ""
+":guilabel:`Results group name`. If you want to obtain all processing result "
+"layers in a group in the :guilabel:`Layers` panel, set a group name for this"
+" parameter. The group may exist already or not. QGIS will add all output "
+"layers to such a group. By default, this parameter is empty, so all output "
+"layers are added to different places in the :guilabel:`Layers` panel, "
+"depending on the item that is active when running an algorithm. Note that "
+"output layers will be loaded to the :guilabel:`Layers` panel only if "
+":guilabel:`Open output file after running algorithm` is checked in the "
+"algorithm dialog."
+msgstr ""
+":guilabel:`Results group name`: :guilabel:`Layers` 패널에서 모든 공간 처리 결과 레이어들을 한 "
+"그룹으로 모으고 싶다면, 이 파라미터에 그룹명을 설정하십시오. 기존 그룹을 사용해도 됩니다. 설정한 그룹에 QGIS가 모든 산출 레이어를"
+" 추가할 것입니다. 이 파라미터는 기본적으로 비어 있기 때문에, 모든 산출 레이어가 :guilabel:`Layers` 패널에서 알고리즘 "
+"실행시 활성화돼 있는 항목에 따라 서로 다른 위치에 추가됩니다. 알고리즘 대화창에서 :guilabel:`Open output file "
+"after running algorithm` 옵션을 체크한 경우 :guilabel:`Layers` 패널에만 산출 레이어를 불러올 것이라는"
+" 점을 기억하십시오."
+
+#: ../../docs/user_manual/processing/configuration.rst:55
+msgid ":guilabel:`Show algorithms with known issues`"
+msgstr ""
+":guilabel:`Show algorithms with known issues`: 알려진 문제가 있는 알고리즘을 표시합니다."
+
+#: ../../docs/user_manual/processing/configuration.rst:56
+msgid ":guilabel:`Show layer CRS definition in selection boxes`"
+msgstr ""
+":guilabel:`Show layer CRS definition in selection boxes`: 콤보 박스에 레이어 좌표계 정의를"
+" 표출합니다."
+
+#: ../../docs/user_manual/processing/configuration.rst:57
+msgid ":guilabel:`Show tooltip when there are disabled providers`"
+msgstr ""
+":guilabel:`Show tooltip when there are disabled providers`: 비활성화된 제공자가 있는 경우"
+" 툴팁을 표출합니다."
+
+#: ../../docs/user_manual/processing/configuration.rst:58
+msgid ""
+":guilabel:`Style for line layers`, :guilabel:`Style for point layers`, "
+":guilabel:`Style for polygons layers` and :guilabel:`Style for raster "
+"layers` are used for setting the default rendering style for output layers "
+"(that is, layers generated by processing algorithms). Just create the style "
+"you want using QGIS, save it to a file, and then enter the path to that file"
+" in the settings so the algorithms can use it. Whenever a layer is loaded by"
+" Processing and added to the QGIS canvas, it will be rendered with that "
+"style."
+msgstr ""
+":guilabel:`Style for line layers`, :guilabel:`Style for point layers`, "
+":guilabel:`Style for polygons layers` 및 :guilabel:`Style for raster layers` "
+"옵션은 산출 레이어의 (그러니까 공간 처리 알고리즘이 생성한 레이어의) 기본 렌더링 스타일을 설정하는 데 사용됩니다. QGIS를 통해 "
+"사용자가 원하는 스타일을 생성하고 파일로 저장한 다음, 알고리즘이 사용할 수 있도록 설정에서 해당 파일을 가리키는 경로를 입력하기만 하면"
+" 됩니다. 공간 처리 프레임워크가 레이어를 불러와서 QGIS 맵 캔버스에 추가할 때마다 해당 스타일로 렌더링할 것입니다."
+
+#: ../../docs/user_manual/processing/configuration.rst:69
+msgid ""
+"Rendering styles can be configured individually for each algorithm and each "
+"one of its outputs. Just right-click on the name of the algorithm in the "
+"toolbox and select :guilabel:`Edit rendering styles for outputs`. You will "
+"see a dialog like the one shown next."
+msgstr ""
+"각 알고리즘별로 그리고 해당 알고리즘의 각 산출물별로 렌더링 스타일을 개별적으로 환경 설정할 수 있습니다. 툴박스에서 알고리즘 명을 "
+"오른쪽 클릭한 다음 :guilabel:`Edit rendering styles for outputs` 메뉴 옵션을 선택하십시오. 다음 "
+"그림과 같은 대화창이 열릴 겁니다."
+
+#: ../../docs/user_manual/processing/configuration.rst:80
+msgid "Rendering Styles"
+msgstr "렌더링 스타일"
+
+#: ../../docs/user_manual/processing/configuration.rst:82
+msgid ""
+"Select the style file (:file:`.qml`) that you want for each output and press"
+" :guilabel:`OK`."
+msgstr ""
+"각 산출물별로 사용자가 원하는 스타일 파일(:file:`.qml`)을 선택한 다음 :guilabel:`OK` 버튼을 클릭하십시오. "
+
+#: ../../docs/user_manual/processing/configuration.rst:84
+msgid ":guilabel:`Temporary output folder path`"
+msgstr ":guilabel:`Temporary output folder path`: 임시 산출물 폴더 경로를 무시합니다."
+
+#: ../../docs/user_manual/processing/configuration.rst:85
+msgid ":guilabel:`Warn before executing if parameter CRS's do not match`"
+msgstr ""
+":guilabel:`Warn before executing if parameter CRS's do not match`: 파라미터 좌표계가"
+" 일치하지 않을 경우 실행 전에 경고합니다."
+
+#: ../../docs/user_manual/processing/configuration.rst:87
+msgid ""
+"You will also find a block for algorithm :guilabel:`Providers`. Each entry "
+"in this block contains an :guilabel:`Activate` item that you can use to make"
+" algorithms appear or not in the toolbox. Some algorithm providers have "
+"their own configuration items, which will be explained when covering "
+"particular algorithm providers."
+msgstr ""
+"설정 대화창에는 알고리즘 제공자 :guilabel:`Providers` 그룹도 있습니다. 이 그룹의 각 항목은 해당 알고리즘을 툴박스에 "
+"표시할지 말지를 설정하는 :guilabel:`Activate` 옵션을 담고 있습니다. 또 알고리즘 제공자 가운데 일부는 고유의 환경 설정"
+" 옵션을 가지고 있는데, 이후 특정 알고리즘 제공자를 설명하는 부분에서 이 고유 옵션에 관해 설명하겠습니다."

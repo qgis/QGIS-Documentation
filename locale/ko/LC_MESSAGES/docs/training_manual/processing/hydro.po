@@ -1,0 +1,173 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:21+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/processing/hydro.rst:2
+msgid "Hydrological analysis"
+msgstr "수문학적 분석"
+
+#: ../../docs/training_manual/processing/hydro.rst:5
+msgid ""
+"In this lesson we will perform some hydrological analysis. This analysis "
+"will be used in some of the following lessons, as it constitutes a very good"
+" example of an analysis workflow, and we will use it to demonstrate some "
+"advanced features."
+msgstr ""
+"이 강의에서는 수문학적 분석을 수행할 것입니다. 이 분석은 분석 작업 흐름에 대한 매우 훌륭한 예이기 때문에, 이어지는 강의들에서도 "
+"사용될 것입니다. 이 분석을 통해 몇몇 고급 기능들도 소개하겠습니다."
+
+#: ../../docs/training_manual/processing/hydro.rst:10
+msgid ""
+"In this lesson, we are going to do some hydrological analysis. Starting with"
+" a DEM, we are going to extract a channel network, delineate watersheds and "
+"calculate some statistics."
+msgstr ""
+"이 강의에서는 수문학적 분석을 수행하겠습니다. DEM으로부터 시작, 하계망(河系網, channel network)을 추출하고 유역을 "
+"묘사한 다음 몇 가지 통계를 계산할 것입니다."
+
+#: ../../docs/training_manual/processing/hydro.rst:13
+msgid ""
+"The first thing is to load the project with the lesson data, which just "
+"contains a DEM."
+msgstr "먼저 이 강의에 해당하는 프로젝트를 불러오십시오. DEM 하나만을 담고 있습니다."
+
+#: ../../docs/training_manual/processing/hydro.rst:21
+msgid ""
+"Select the DEM in the *Elevation* field, and leave the default values for "
+"the rest of parameters."
+msgstr ":guilabel:`Elevation` 항목에 DEM을 선택하고, 나머지 파라미터는 기본값을 유지하십시오."
+
+#: ../../docs/training_manual/processing/hydro.rst:25
+msgid ""
+"Some algorithms calculate many layers, but the *Catchment Area* one is the "
+"only one we will be using."
+msgstr "여러 레이어를 계산하는 알고리듬도 있지만, *Catchment Area* 라는 레이어만을 사용할 것입니다."
+
+#: ../../docs/training_manual/processing/hydro.rst:27
+msgid "You can get rid of the other ones if you want."
+msgstr "원한다면 다른 레이어들을 삭제해도 됩니다."
+
+#: ../../docs/training_manual/processing/hydro.rst:29
+msgid "The rendering of the layer is not very informative."
+msgstr "이 레이어의 렌더링에서 그렇게 많은 정보를 알 수가 없습니다."
+
+#: ../../docs/training_manual/processing/hydro.rst:41
+msgid ""
+"The catchment area (also known as flow accumulation), can be used to set a "
+"threshold for channel initiation. This can be done using the *Channel "
+"network* algorithm. Here is how you have to set it up (note the *Initiation "
+"threshold* *Greater than* 10.000.000)."
+msgstr ""
+"집수 지역(또는 누적 유량)을 하천 형성의 임계점을 설정하는 데에도 쓸 수 있습니다. :guilabel:`Channel network` "
+"알고리듬을 사용하면 됩니다. 다음과 같이 파라미터를 설정하십시오. (*하천 형성의 임계점* 이 10,000,000 *보다 크다는* 점을 "
+"기억하십시오.)"
+
+#: ../../docs/training_manual/processing/hydro.rst:48
+msgid ""
+"Use the original catchment area layer, not the logarithm one. That one was "
+"just for rendering purposes."
+msgstr "로그 값이 아닌 원래 집수 지역 레이어를 사용하십시오. 로그 값을 계산한 것은 렌더링 때문이었습니다."
+
+#: ../../docs/training_manual/processing/hydro.rst:51
+msgid ""
+"If you increase the *Initiation threshold* value, you will get a more sparse"
+" channel network. If you decrease it, you will get a denser one. With the "
+"proposed value, this is what you get."
+msgstr ""
+":guilabel:`Initiation Threshold` 값을 증가시킬 경우, 더 밀도가 낮은 하계망을 얻게 됩니다. 감소시킬 경우 "
+"밀도가 높아집니다. 앞의 그림에 나온 값으로 계산하면, 다음과 같은 레이어를 얻게 됩니다."
+
+#: ../../docs/training_manual/processing/hydro.rst:58
+msgid ""
+"The image above shows just the resulting vector layer and the DEM, but there"
+" should be also a raster one with the same channel network. That raster one "
+"will be, in fact, the one we will be using."
+msgstr ""
+"이 그림은 결과물 벡터 레이어와 DEM만을 보여주지만, 동일한 하계망을 담고 있는 래스터 레이어도 있을 것입니다. 사실 우리가 사용할 "
+"것이 바로 그 래스터 레이어입니다."
+
+#: ../../docs/training_manual/processing/hydro.rst:62
+msgid ""
+"Now, we will use the *Watersheds basins* algorithm to delineate the "
+"subbasins corresponding to that channel network, using as outlet points all "
+"the junctions in it. Here is how you have to set the corresponding "
+"parameters dialog."
+msgstr ""
+"이제 :guilabel:`Watersheds Basins` 알고리듬을 써서, 해당 하계망이 가진 모든 분기들을 발산점(outlet "
+"point)으로 이용하여 하계망에 대응하는 소분지(subbasin)를 묘사할 것입니다. 이 알고리듬의 파라미터 대화 창을 다음과 같이 "
+"설정하십시오."
+
+#: ../../docs/training_manual/processing/hydro.rst:69
+msgid "And this is what you will get."
+msgstr "다음이 그 결과입니다."
+
+#: ../../docs/training_manual/processing/hydro.rst:73
+msgid ""
+"This is a raster result. You can vectorise it using the *Vectorising grid "
+"classes* algorithm."
+msgstr "이 결과물은 래스터입니다. *Vectorising grid classes* 알고리듬을 통해 벡터화할 수 있습니다."
+
+#: ../../docs/training_manual/processing/hydro.rst:80
+msgid ""
+"Now, let's try to compute statistics about the elevation values in one of "
+"the subbasins. The idea is to have a layer that just represents the "
+"elevation within that subbasin and then pass it to the module that "
+"calculates those statistics."
+msgstr ""
+"이제 이 소분지들 가운데 하나가 담고 있는 표고 값들에 대한 통계를 계산해봅시다. 해당 소분지 안의 표고만을 나타내는 레이어를 생성한 "
+"다음 해당 통계를 계산하는 알고리듬에 넘겨주면 됩니다."
+
+#: ../../docs/training_manual/processing/hydro.rst:89
+msgid "Select a polygon,"
+msgstr "폴리곤 하나를 선택한 다음,"
+
+#: ../../docs/training_manual/processing/hydro.rst:93
+msgid "and call the clipping algorithm with the following parameters:"
+msgstr "클리핑 알고리듬을 호출하고 다음과 같이 설정하십시오."
+
+#: ../../docs/training_manual/processing/hydro.rst:97
+msgid ""
+"The element selected in the input field is, or course, the DEM we want to "
+"clip."
+msgstr ":guilabel:`Input` 항목에 선택된 요소는 물론 잘라내고자 하는 DEM입니다."
+
+#: ../../docs/training_manual/processing/hydro.rst:99
+msgid "You will get something like this."
+msgstr "다음과 같은 결과를 얻게 됩니다."
+
+#: ../../docs/training_manual/processing/hydro.rst:103
+msgid ""
+"This layer is ready to be used in the *Raster layer statistics* algorithm."
+msgstr ":guilabel:`Raster Layer Statistics` 알고리듬에 이 레이어를 그대로 사용할 수 있습니다."
+
+#: ../../docs/training_manual/processing/hydro.rst:107
+msgid "The resulting statistics are the following ones."
+msgstr "다음과 같은 통계를 산출할 것입니다."
+
+#: ../../docs/training_manual/processing/hydro.rst:111
+msgid ""
+"We will use both the basin calculations procedure and the statistics "
+"calculation in other lessons, to find out how other elements can help us "
+"automate both of them and work more effectively."
+msgstr ""
+"다른 강의에서도 분지 계산 과정 및 통계 계산을 -- 다른 요소들이 어떻게 이 두 계산을 자동화해서 좀 더 효율적으로 작업할 수 있는지 "
+"알아보기 위해 -- 모두 사용할 것입니다. "

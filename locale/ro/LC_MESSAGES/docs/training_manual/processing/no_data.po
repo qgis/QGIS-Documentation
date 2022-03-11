@@ -1,0 +1,147 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:22+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Romanian (https://www.transifex.com/qgis/teams/6144/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../docs/training_manual/processing/no_data.rst:2
+msgid "The raster calculator. No-data values"
+msgstr "Calculatorul raster. Valorile fără-date "
+
+#: ../../docs/training_manual/processing/no_data.rst:5
+msgid ""
+"In this lesson we will see how to use the raster calculator to perform some "
+"operations on raster layers. We will also explain what are no--data values "
+"and how the calculator and other algorithms deal with them"
+msgstr ""
+"În această lecție vom vedea cum se utilizează calculatorul raster pentru a "
+"efectua unele operații asupra straturilor raster. Vom explica, de asemenea, "
+"ce sunt valorile fără-date și modul în care lucrează cu ele calculatorul și "
+"alți algoritmi"
+
+#: ../../docs/training_manual/processing/no_data.rst:8
+msgid ""
+"The raster calculator is one of the most powerful algorithms that you will "
+"find. It's a very flexible and versatile algorithm that can be used for many"
+" different calculations, and one that will soon become an important part of "
+"your toolbox."
+msgstr ""
+"Calculatorul raster reprezintă unul dintre cei mai puternici algoritmi. Este"
+" un algoritm foarte flexibil și versatil, care poate fi folosit în diverse "
+"calcule, și care va deveni în curând o parte importantă a setului dvs. cu "
+"instrumente."
+
+#: ../../docs/training_manual/processing/no_data.rst:10
+msgid ""
+"In this lesson we will be performing some calculation with the raster "
+"calculator, most of them rather simple. This will let us see how it is used "
+"and how it deals with some particular situations that it might find. "
+"Understanding that is important to later get the expected results when using"
+" the calculator, and also to understand certain techniques that are commonly"
+" applied with it."
+msgstr ""
+"În această lecție vom efectua unele calcule, majoritatea simple, cu ajutorul"
+" calculatorului raster. Acest lucru ne va permite să observăm modul de "
+"gestionare a unor situații particulare cu care ne-am putea confrunta. "
+"Înțelegerea acestor aspecte este importantă pentru obținerea ulterioară a "
+"rezultatelor așteptate și, de asemenea, pentru deprinderea tehnicilor comune"
+" care se pot aplica."
+
+#: ../../docs/training_manual/processing/no_data.rst:12
+msgid ""
+"Open the QGIS project corresponding to this lesson and you will see that it "
+"contains several raster layers."
+msgstr ""
+"Deschideti proiectul QGIS corespunzător acestei lecții și veți vedea că ea "
+"conține mai multe straturi raster."
+
+#: ../../docs/training_manual/processing/no_data.rst:14
+msgid ""
+"Now open the toolbox and open the dialog corresponding to the raster "
+"calculator."
+msgstr ""
+"Acum deschideți caseta de instrumente și caseta de dialog corespunzătoare "
+"calculatorului raster."
+
+#: ../../docs/training_manual/processing/no_data.rst:18
+msgid "The interface is different in recent versions."
+msgstr "Interfața diferă pentru versiunile recente."
+
+#: ../../docs/training_manual/processing/no_data.rst:20
+msgid "The dialog contains 2 parameters."
+msgstr "Dialogul conține 2 parametri."
+
+#: ../../docs/training_manual/processing/no_data.rst:25
+msgid "The calculator is case sensitive."
+msgstr "Calculator ține cont de majuscule/minuscule."
+
+#: ../../docs/training_manual/processing/no_data.rst:27
+msgid ""
+"To start with, we will change the units of the DEM from meters to feet. The "
+"formula we need is the following one:"
+msgstr ""
+"Pentru a începe, vom schimba unitățile DEM-ului din metri în picioare. "
+"Formula de care avem nevoie este:"
+
+#: ../../docs/training_manual/processing/no_data.rst:33
+msgid ""
+"Select the DEM in the layers field and type ``a * 3.28084`` in the formula "
+"field."
+msgstr ""
+"Selectați DEM-ul din câmpul straturilor și introduceți ``a * 3.28084`` în "
+"câmpul formulei."
+
+#: ../../docs/training_manual/processing/no_data.rst:35
+msgid "For non English users: use always \".\", not \",\"."
+msgstr ""
+"Pentru utilizatorii care nu sunt englezi: folosiți întotdeauna \".\", nu "
+"\",\"."
+
+#: ../../docs/training_manual/processing/no_data.rst:43
+msgid "Here is the layer that you will get."
+msgstr "Acesta este stratul pe care îl veți obține."
+
+#: ../../docs/training_manual/processing/no_data.rst:59
+msgid "Here is the resulting layer."
+msgstr "Acesta este stratul rezultat."
+
+#: ../../docs/training_manual/processing/no_data.rst:75
+msgid ""
+"In this case, we do not have a layer to use as a mask, but we can create it "
+"using the calculator."
+msgstr ""
+"În acest caz, nu dispunem de un strat pentru a-l utiliza drept mască, dar îl"
+" putem crea cu ajutorul calculatorului."
+
+#: ../../docs/training_manual/processing/no_data.rst:77
+msgid ""
+"Run the calculator using the DEM as only input layer and the following "
+"formula"
+msgstr ""
+"Pornește calculatorul folosind DEM-ul doar ca pe un strat de intrare, și "
+"următoarea formulă"
+
+#: ../../docs/training_manual/processing/no_data.rst:85
+msgid ""
+"The result has a value of 1 inside the range we want to work with, and no-"
+"data in cells outside of it."
+msgstr ""
+"Rezultatul are o valoare de 1 în interiorul gamei în care dorim să lucrăm, "
+"și valori fără-date în celulele din exterior."

@@ -1,0 +1,3206 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# 
+# Translators:
+# Harrissou Sant-anna, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2022
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.16\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-19 02:10+0000\n"
+"PO-Revision-Date: 2020-12-24 10:22+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2022\n"
+"Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2
+msgid "Vector general"
+msgstr "벡터 일반"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:14
+msgid "Assign projection"
+msgstr "투영체 할당하기"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:15
+msgid "Assigns a new projection to a vector layer."
+msgstr "벡터 레이어에 새 투영체를 할당합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:17
+msgid ""
+"It creates a new layer with the exact same features and geometries as the "
+"input one, but assigned to a new CRS. The geometries are **not** "
+"reprojected, they are just assigned to a different CRS."
+msgstr ""
+"입력 레이어와 정확하게 동일한 피처 및 도형을 가지지만, 새 좌표계를 할당한 새 레이어를 생성합니다. 도형은 재투영되지 **않습니다**."
+" 그냥 다른 좌표계로 할당될 뿐입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:21
+msgid ""
+"This algorithm can be used to repair layers which have been assigned an "
+"incorrect projection."
+msgstr "이 알고리즘은 부정확한 투영체를 할당받은 레이어를 복구하는 데 쓰일 수 있습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:24
+msgid "Attributes are not modified by this algorithm."
+msgstr "이 알고리즘은 속성을 수정하지 않습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:26
+msgid ""
+":ref:`qgisdefinecurrentprojection`, :ref:`qgisfindprojection`, "
+":ref:`qgisreprojectlayer`"
+msgstr ""
+":ref:`qgisdefinecurrentprojection`, :ref:`qgisfindprojection`, "
+":ref:`qgisreprojectlayer`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:30
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:101
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:172
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:250
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:311
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:373
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:433
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:510
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:624
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:765
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:840
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:951
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1017
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1087
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1174
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1248
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1404
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1561
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1703
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1850
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1926
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2005
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2060
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2144
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2250
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2310
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2398
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2469
+msgid "Parameters"
+msgstr "파라미터"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:36
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:74
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:107
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:143
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:178
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:219
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:256
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:277
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:317
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:333
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:379
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:399
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:439
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:468
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:517
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:571
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:631
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:709
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:771
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:798
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:847
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:922
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:957
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:987
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1024
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1040
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1094
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1136
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1181
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1212
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1255
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1350
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1411
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1512
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1568
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1663
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1710
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1786
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1856
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1895
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1932
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1978
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2011
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2028
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2066
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2112
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2153
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2179
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2211
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2256
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2276
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2317
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2360
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2404
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2436
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2475
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2491
+msgid "Label"
+msgstr "라벨"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:37
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:75
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:108
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:144
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:179
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:220
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:257
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:278
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:318
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:334
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:380
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:400
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:440
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:469
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:518
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:572
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:632
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:710
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:772
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:799
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:848
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:923
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:958
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:988
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1025
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1041
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1095
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1137
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1182
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1213
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1256
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1351
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1412
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1513
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1569
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1664
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1711
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1787
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1857
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1896
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1933
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1979
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2012
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2029
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2067
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2113
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2154
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2180
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2212
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2257
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2277
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2318
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2361
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2405
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2437
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2476
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2492
+msgid "Name"
+msgstr "명칭"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:38
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:76
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:109
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:145
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:180
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:221
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:258
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:279
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:319
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:335
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:381
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:401
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:441
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:470
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:519
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:573
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:633
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:711
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:773
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:800
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:849
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:924
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:959
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:989
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1026
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1042
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1096
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1138
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1183
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1214
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1257
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1352
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1413
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1514
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1570
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1665
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1712
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1788
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1858
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1897
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1934
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1980
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2013
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2030
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2068
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2114
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2155
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2181
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2213
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2258
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2278
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2319
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2362
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2406
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2438
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2477
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2493
+msgid "Type"
+msgstr "유형"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:39
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:77
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:110
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:146
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:181
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:222
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:259
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:280
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:320
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:336
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:382
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:402
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:442
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:471
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:520
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:574
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:634
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:712
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:774
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:801
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:850
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:925
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:960
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:990
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1027
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1043
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1097
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1139
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1184
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1215
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1258
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1353
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1414
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1515
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1571
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1666
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1713
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1789
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1859
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1898
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1935
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1981
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2014
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2031
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2069
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2115
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2156
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2182
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2214
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2259
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2279
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2320
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2363
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2407
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2439
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2478
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2494
+msgid "Description"
+msgstr "설명"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:40
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:383
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:443
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:521
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:775
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1714
+msgid "**Input layer**"
+msgstr "**Input layer**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:41
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:112
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:261
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:322
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:384
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:404
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:444
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:522
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:776
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:962
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1029
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1099
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1186
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1260
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1416
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1573
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1715
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1937
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2016
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2071
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2158
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2261
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2322
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2409
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2480
+msgid "``INPUT``"
+msgstr "``INPUT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:42
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:262
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:323
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:385
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:445
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:523
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:637
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:641
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:777
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:903
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:928
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:963
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1030
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1100
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1187
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1261
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1271
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1417
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1423
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1574
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1580
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1716
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1720
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1938
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2034
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2072
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2159
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2262
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2323
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2410
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2481
+msgid "[vector: any]"
+msgstr "[vector: any]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:43
+msgid "Vector layer with wrong or missing CRS"
+msgstr "잘못된 좌표계를 가진 또는 좌표계가 없는 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:44
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:50
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:78
+msgid "**Assigned CRS**"
+msgstr "**Assigned CRS**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:45
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:193
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:388
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1869
+msgid "``CRS``"
+msgstr "``CRS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:46
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:194
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:389
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:899
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1870
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2076
+msgid "[crs]"
+msgstr "[crs]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:48
+msgid "Default: ``EPSG:4326 - WGS84``"
+msgstr "기본값: ``EPSG:4326 - WGS84``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:49
+msgid "Select the new CRS to assign to the vector layer"
+msgstr "벡터 레이어에 할당할 새 좌표계를 선택합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:52
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:547
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:577
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:645
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:652
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:865
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:871
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:877
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:897
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1191
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1281
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1307
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1360
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1370
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1443
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1469
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1522
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1600
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1607
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1868
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2082
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2185
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2191
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2198
+msgid "Optional"
+msgstr "부가적"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:53
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:79
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:199
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:224
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:282
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:338
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:448
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:477
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:532
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:590
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:780
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:803
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:902
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:927
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:966
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:992
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1115
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1141
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1192
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1217
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1313
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1365
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1475
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1527
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1642
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1668
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1749
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1791
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1875
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1900
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1958
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1983
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2033
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2092
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2117
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2162
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2216
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2281
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2340
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2365
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2417
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2441
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2496
+msgid "``OUTPUT``"
+msgstr "``OUTPUT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:54
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:80
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:283
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:339
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:405
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:449
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:478
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:533
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:549
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:579
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:591
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:967
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:993
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1193
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1218
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1314
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1328
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1362
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1366
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1476
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1490
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1524
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1528
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1643
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1669
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1750
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1764
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1792
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1796
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1876
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1901
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1959
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1984
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2093
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2118
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2163
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2217
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2282
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2341
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2366
+msgid "[same as input]"
+msgstr "[same as input]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:56
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:202
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:451
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:535
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:905
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:969
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1118
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1316
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1478
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1645
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1752
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1878
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1961
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2095
+msgid "Default: ``[Create temporary layer]``"
+msgstr "기본값: ``[Create temporary layer]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:57
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:552
+msgid "Specify the output layer containing only the duplicates. One of:"
+msgstr "복사본만 담고 있는 산출 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:60
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:205
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:454
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:539
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:556
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:670
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:682
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:694
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:784
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:908
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:973
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1122
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1320
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1336
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1482
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1498
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1649
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1756
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1771
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1881
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1964
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2098
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2346
+msgid "Create Temporary Layer (``TEMPORARY_OUTPUT``)"
+msgstr "임시 레이어 생성 (``TEMPORARY_OUTPUT``)"
+
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:4
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:61
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:206
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:455
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:540
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:557
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:671
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:683
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:695
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:785
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:909
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:974
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1123
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1199
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1321
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1337
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1483
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1499
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1650
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1757
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1772
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1882
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1965
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2099
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2347
+msgid "Save to File..."
+msgstr "파일로 저장"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:62
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:207
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:456
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:541
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:558
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:672
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:684
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:696
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:786
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:910
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:975
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1124
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1322
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1338
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1484
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1500
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1651
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1758
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1773
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1883
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1966
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2100
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2348
+msgid "Save to Geopackage..."
+msgstr "Geopackage로 저장"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:63
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:208
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:457
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:542
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:559
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:673
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:685
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:697
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:787
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:911
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:976
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1125
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1323
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1339
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1485
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1501
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1652
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1759
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1774
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1884
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1967
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2101
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2349
+msgid "Save to PostGIS Table..."
+msgstr "PostGIS 테이블로 저장"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:65
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:210
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:459
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:544
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:561
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:675
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:687
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:699
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:789
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:913
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:978
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1127
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1203
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1325
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1341
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1487
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1503
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1654
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1761
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1776
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1886
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1969
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2103
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2351
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2427
+msgid "The file encoding can also be changed here."
+msgstr "이 파라미터에서 파일 인코딩도 변경할 수 있습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:68
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:137
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:213
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:271
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:327
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:393
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:462
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:564
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:702
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:792
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:916
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:981
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1034
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1130
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1206
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1344
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1506
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1657
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1779
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1889
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1972
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2022
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2106
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2205
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2270
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2354
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2430
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2485
+msgid "Outputs"
+msgstr "산출물"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:81
+msgid "Vector layer with assigned projection"
+msgstr "할당된 투영체를 가진 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:84
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:153
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:229
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:288
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:343
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:409
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:486
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:599
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:739
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:809
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:932
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:998
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1058
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1147
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1223
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1376
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1532
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1673
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1811
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1906
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1988
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2038
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2122
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2229
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2286
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2370
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2450
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2501
+msgid "Python code"
+msgstr "파이썬 코드"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:86
+msgid "**Algorithm ID**: ``native:assignprojection``"
+msgstr "**알고리즘 ID**: ``native:assignprojection``"
+
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+msgid ""
+"The *algorithm id* is displayed when you hover over the algorithm in the "
+"Processing Toolbox. The *parameter dictionary* provides the parameter NAMEs "
+"and values. See :ref:`processing_console` for details on how to run "
+"processing algorithms from the Python console."
+msgstr ""
+"공간 처리 툴박스에 있는 알고리즘 위에 마우스를 가져가면 *알고리즘 ID* 를 표시합니다. *파라미터 목록(dictionary)* 은 "
+"파라미터 **명칭** 및 값을 제공합니다. 파이썬 콘솔에서 공간 처리 알고리즘을 어떻게 실행하는지 자세히 알고 싶다면 "
+":ref:`processing_console` 을 참조하세요."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:96
+msgid "Convert layer to spatial bookmarks"
+msgstr "레이어를 공간 북마크로 변환하기"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:97
+msgid ""
+"Creates spatial bookmarks corresponding to the extent of features contained "
+"in a layer."
+msgstr "레이어에 있는 피처의 범위에 대응하는 공간 북마크를 생성합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:111
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:260
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:321
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:961
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1028
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1098
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1185
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1259
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1415
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1572
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1936
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2070
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2321
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2408
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2479
+msgid "**Input Layer**"
+msgstr "**Input Layer**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:113
+msgid "[vector: line, polygon]"
+msgstr "[vector: line, polygon]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:114
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:778
+msgid "The input vector layer"
+msgstr "입력 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:115
+msgid "**Bookmark destination**"
+msgstr "**Bookmark destination**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:116
+msgid "``DESTINATION``"
+msgstr "``DESTINATION``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:117
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:654
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:879
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1288
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1450
+msgid "[enumeration]"
+msgstr "[enumeration]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:119
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:881
+msgid "Default: 0"
+msgstr "기본값: 0"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:120
+msgid "Select the destination for the bookmarks. One of:"
+msgstr "북마크의 위치를 선택합니다. 다음 가운데 하나를 선택할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:123
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:190
+msgid "0 --- Project bookmarks"
+msgstr "0 --- 프로젝트 북마크"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:124
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:191
+msgid "1 --- User bookmarks"
+msgstr "1 --- 사용자 북마크"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:125
+msgid "**Name field**"
+msgstr "**Name field**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:126
+msgid "``NAME_EXPRESSION``"
+msgstr "``NAME_EXPRESSION``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:127
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:132
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1942
+msgid "[expression]"
+msgstr "[expression]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:128
+msgid "Field or expression that will give names to the generated bookmarks"
+msgstr "생성된 북마크에 명칭을 부여할 필드 또는 표현식"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:130
+msgid "**Group field**"
+msgstr "**Group field**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:131
+msgid "``GROUP_EXPRESSION``"
+msgstr "``GROUP_EXPRESSION``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:133
+msgid ""
+"Field or expression that will provide groups for the generated bookmarks"
+msgstr "생성된 북마크를 위한 그룹을 제공할 필드 또는 표현식"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:147
+msgid "**Count of bookmarks added**"
+msgstr "**Count of bookmarks added**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:148
+msgid "``COUNT``"
+msgstr "``COUNT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:149
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:474
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:482
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:587
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:595
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:727
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:731
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:735
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1356
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1372
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1518
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1740
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1746
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1801
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1806
+msgid "[number]"
+msgstr "[number]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:155
+msgid "**Algorithm ID**: ``native:layertobookmarks``"
+msgstr "**알고리즘 ID**: ``native:layertobookmarks``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:165
+msgid "Convert spatial bookmarks to layer"
+msgstr "공간 북마크를 레이어로 변환하기"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:166
+msgid ""
+"Creates a new layer containing polygon features for stored spatial "
+"bookmarks. The export can be filtered to only bookmarks belonging to the "
+"current project, to all user bookmarks, or a combination of both."
+msgstr ""
+"저장된 공간 북마크에 대한 폴리곤 피처를 담고 있는 새 레이어를 생성합니다. 현재 프로젝트에 속한 북마크만 내보내도록 필터링할 수도 "
+"있고, 모든 사용자 북마크를 내보내도록 할 수도 있고, 또는 이 두 옵션을 조합할 수도 있습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:182
+msgid "**Bookmark source**"
+msgstr "**Bookmark source**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:183
+msgid "``SOURCE``"
+msgstr "``SOURCE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:184
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1428
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1585
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1609
+msgid "[enumeration] [list]"
+msgstr "[enumeration] [list]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:186
+msgid "Default: [0,1]"
+msgstr "기본값: [0,1]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:187
+msgid "Select the source(s) of the bookmarks. One or more of:"
+msgstr "북마크의 소스(들)을 선택합니다. 다음 가운데 하나 이상을 선택할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:192
+msgid "**Output CRS**"
+msgstr "**Output CRS**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:196
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2078
+msgid "Default: ``EPSG:4326 - WGS 84``"
+msgstr "기본값: ``EPSG:4326 - WGS84``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:197
+msgid "The CRS of the output layer"
+msgstr "산출 레이어의 좌표계"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:198
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:223
+msgid "**Output**"
+msgstr "**Output**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:200
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:225
+msgid "[vector: polygon]"
+msgstr "[vector: polygon]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:203
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:452
+msgid "Specify the output layer. One of:"
+msgstr "산출 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:226
+msgid "The output (bookmarks) vector layer"
+msgstr "산출 (북마크) 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:231
+msgid "**Algorithm ID**: ``native:bookmarkstolayer``"
+msgstr "**알고리즘 ID**: ``native:bookmarkstolayer``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:241
+msgid "Create attribute index"
+msgstr "속성 인덱스 생성하기"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:242
+msgid ""
+"Creates an index against a field of the attribute table to speed up queries."
+" The support for index creation depends on both the layer's data provider "
+"and the field type."
+msgstr ""
+"쿼리 속도를 높이기 위해 속성 테이블의 필드에 대해 인덱스를 생성합니다. 레이어의 데이터 제공자와 필드 유형에 따라 인덱스 생성 지원 "
+"여부가 달라집니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:247
+msgid "No outputs are created: the index is stored on the layer itself."
+msgstr "어떤 새 산출물도 생성하지 않습니다. 레이어 자체에 인덱스를 저장합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:263
+msgid "Select the vector layer you want to create an attribute index for"
+msgstr "속성 인덱스를 생성하려는 벡터 레이어를 선택합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:265
+msgid "**Attribute to index**"
+msgstr "**Attribute to index**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:266
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1266
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2326
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2413
+msgid "``FIELD``"
+msgstr "``FIELD``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:267
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1267
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1275
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2327
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2414
+msgid "[tablefield: any]"
+msgstr "[tablefield: any]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:268
+msgid "Field of the vector layer"
+msgstr "벡터 레이어의 필드"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:281
+msgid "**Indexed layer**"
+msgstr "**Indexed layer**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:284
+msgid "A copy of the input vector layer with an index for the specified field"
+msgstr "입력 벡터 레이어에 지정한 필드에 대한 인덱스를 추가한 복사본"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:290
+msgid "**Algorithm ID**: ``native:createattributeindex``"
+msgstr "**알고리즘 ID**: ``native:createattributeindex``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:300
+msgid "Create spatial index"
+msgstr "공간 인덱스 생성하기"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:301
+msgid ""
+"Creates an index to speed up access to the features in a layer based on "
+"their spatial location. Support for spatial index creation is dependent on "
+"the layer's data provider."
+msgstr ""
+"레이어에 있는 피처로의 접근 속도를 높이기 위해 피처의 공간적 위치를 바탕으로 인덱스를 생성합니다. 레이어의 데이터 제공자에 따라 공간 "
+"인덱스 생성 지원 여부가 달라집니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:306
+msgid "No new output layers are created."
+msgstr "어떤 새 산출물도 생성하지 않습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:308
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:367
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1398
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1845
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2393
+msgid "**Default menu**: :menuselection:`Vector --> Data Management Tools`"
+msgstr "**기본 메뉴**: :menuselection:`Vector --> Data Management Tools`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:324
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2324
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2411
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2482
+msgid "Input vector layer"
+msgstr "입력 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:337
+msgid "Indexed layer"
+msgstr "인덱스를 생성한 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:340
+msgid "A copy of the input vector layer with a spatial index"
+msgstr "입력 벡터 레이어에 공간 인덱스를 추가한 복사본"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:345
+msgid "**Algorithm ID**: ``native:createspatialindex``"
+msgstr "**알고리즘 ID**: ``native:createspatialindex``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:355
+msgid "Define Shapefile projection"
+msgstr "Shapefile 투영체 정의하기"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:356
+msgid ""
+"Sets the CRS (projection) of an existing Shapefile format dataset to the "
+"provided CRS. It is very useful when a Shapefile format dataset is missing "
+"the ``prj`` file and you know the correct projection."
+msgstr ""
+"기존 Shapefile 포맷 데이터셋의 좌표계(투영체)를 지정한 좌표계로 설정합니다. 이 알고리즘은 Shapefile 포맷 데이터셋에서 "
+"``prj`` 파일이 빠져 있는데, 사용자가 정확한 투영체를 알고 있는 경우 매우 유용합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:361
+msgid ""
+"Contrary to the :ref:`qgisassignprojection` algorithm, it modifies the "
+"current layer and will not output a new layer."
+msgstr ""
+":ref:`qgisassignprojection` 알고리즘과는 반대로 이 알고리즘은 현재 레이어를 수정하지, 새 레이어를 산출하지는 않을"
+" 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:364
+msgid ""
+"For Shapefile datasets, the ``.prj`` and ``.qpj`` files will be overwritten "
+"- or created if missing - to match the provided CRS."
+msgstr ""
+"Shapefile 포맷 데이터셋의 경우, 지정한 좌표계와 일치하도록 ``.prj`` 및 ``.qpj`` 파일을 덮어쓸 것입니다. 해당 "
+"파일이 없는 경우 생성할 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:369
+msgid ""
+":ref:`qgisassignprojection`, :ref:`qgisfindprojection`, "
+":ref:`qgisreprojectlayer`"
+msgstr ""
+":ref:`qgisassignprojection`, :ref:`qgisfindprojection`, "
+":ref:`qgisreprojectlayer`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:386
+msgid "Vector layer with missing projection information"
+msgstr "투영체 정보가 빠진 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:387
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:895
+msgid "**CRS**"
+msgstr "**CRS**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:390
+msgid "Select the CRS to assign to the vector layer"
+msgstr "벡터 레이어에 할당할 좌표계를 선택합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:406
+msgid "The input vector layer with the defined projection"
+msgstr "정의된 투영체를 가진 입력 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:411
+msgid "**Algorithm ID**: ``qgis:definecurrentprojection``"
+msgstr "**알고리즘 ID**: ``qgis:definecurrentprojection``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:421
+msgid "Delete duplicate geometries"
+msgstr "복제 도형 삭제하기"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:422
+msgid "Finds and removes duplicated geometries."
+msgstr "복제된 도형을 찾아서 제거합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:424
+msgid ""
+"Attributes are not checked, so in case two features have identical "
+"geometries but different attributes, only one of them will be added to the "
+"result layer."
+msgstr ""
+"속성까지 확인하지는 않기 때문에, 피처 2개가 동일한 도형을 가지고 있지만 속성은 다른 경우 둘 중 하나만 산출 레이어에 추가될 "
+"것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:428
+msgid ""
+":ref:`qgisdropgeometries`, :ref:`qgisremovenullgeometries`, "
+":ref:`qgisremoveduplicatesbyattribute`"
+msgstr ""
+":ref:`qgisdropgeometries`, :ref:`qgisremovenullgeometries`, "
+":ref:`qgisremoveduplicatesbyattribute`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:446
+msgid "The layer with duplicate geometries you want to clean"
+msgstr "사용자가 삭제하고 싶은 복제 도형이 담긴 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:447
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:476
+msgid "**Cleaned**"
+msgstr "**Cleaned**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:472
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:585
+msgid "**Count of discarded duplicate records**"
+msgstr "**Count of discarded duplicate records**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:473
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:586
+msgid "``DUPLICATE_COUNT``"
+msgstr "``DUPLICATE_COUNT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:475
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:588
+msgid "Count of discarded duplicate records"
+msgstr "삭제한 복제 레코드의 개수"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:479
+msgid "The output layer without any duplicated geometries"
+msgstr "복제 도형이 없는 산출 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:480
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:593
+msgid "**Count of retained records**"
+msgstr "**Count of retained records**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:481
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:594
+msgid "``RETAINED_COUNT``"
+msgstr "``RETAINED_COUNT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:483
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:596
+msgid "Count of unique records"
+msgstr "유일 레코드의 개수"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:488
+msgid "**Algorithm ID**: ``native:deleteduplicategeometries``"
+msgstr "**알고리즘 ID**: ``native:deleteduplicategeometries``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:498
+msgid "Delete duplicates by attribute"
+msgstr "속성으로 사본 삭제하기"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:499
+msgid ""
+"Deletes duplicate rows by only considering the specified field / fields. The"
+" first matching row will be retained, and duplicates will be discarded."
+msgstr "지정한 필드(들)만 고려해서 사본 행을 삭제합니다. 첫 번째로 일치하는 행을 유지하고, 사본은 삭제할 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:504
+msgid ""
+"Optionally, these duplicate records can be saved to a separate output for "
+"analysis."
+msgstr "이 복제 레코드를 분석을 위한 개별 산출물로 저장할 수 있는 옵션이 있습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:507
+msgid ":ref:`qgisdeleteduplicategeometries`"
+msgstr ":ref:`qgisdeleteduplicategeometries`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:524
+msgid "The input layer"
+msgstr "입력 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:525
+msgid "**Fields to match duplicates by**"
+msgstr "**Fields to match duplicates by**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:526
+msgid "``FIELDS``"
+msgstr "``FIELDS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:527
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:647
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1283
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1445
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1602
+msgid "[tablefield: any] [list]"
+msgstr "[tablefield: any] [list]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:528
+msgid ""
+"Fields defining duplicates. Features with identical values for all these "
+"fields are considered duplicates."
+msgstr "사본을 정의하는 필드입니다. 이 모든 필드에서 일치하는 값을 가진 피처를 사본으로 식별합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:531
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:589
+msgid "**Filtered (no duplicates)**"
+msgstr "**Filtered (no duplicates)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:536
+msgid "Specify the output layer containing the unique features. One of:"
+msgstr "유일 피처를 담고 있는 산출 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:545
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:575
+msgid "**Filtered (duplicates)**"
+msgstr "**Filtered (duplicates)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:548
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:578
+msgid "``DUPLICATES``"
+msgstr "``DUPLICATES``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:551
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:581
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1330
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1492
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1766
+msgid "Default: ``[Skip output]``"
+msgstr "기본값: ``[Skip output]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:555
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1335
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1497
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1770
+msgid "Skip output"
+msgstr "산출물 건너뛰기"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:582
+msgid ""
+"Vector layer containing the removed features. Will not be produced if not "
+"specified (left as ``[Skip output]``)."
+msgstr ""
+"제거한 피처를 담고 있는 벡터 레이어입니다. 따로 지정하지 않는 이상 (``[Skip output]`` 으로 내버려두면) 생성되지 않을 "
+"것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:592
+msgid "Vector layer containing the unique features."
+msgstr "유일 피처를 담고 있는 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:601
+msgid "**Algorithm ID**: ``native:removeduplicatesbyattribute``"
+msgstr "**알고리즘 ID**: ``native:removeduplicatesbyattribute``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:611
+msgid "Detect dataset changes"
+msgstr "데이터셋 변경 사항 탐지"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:613
+msgid ""
+"Compares two vector layers, and determines which features are unchanged, "
+"added or deleted between the two. It is designed for comparing two different"
+" versions of the same dataset."
+msgstr ""
+"두 벡터 레이어를 비교해서 두 레이어 사이에 어느 피처가 변경되지 않았는지, 추가되었는지, 또는 삭제되었는지 판별합니다. 이 알고리즘은 "
+"동일한 데이터셋의 서로 다른 두 버전을 비교하기 위해 설계되었습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:621
+msgid "Detect dataset change example"
+msgstr "데이터셋 변경 사항 탐지의 예"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:635
+msgid "**Original layer**"
+msgstr "**Original layer**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:636
+msgid "``ORIGINAL``"
+msgstr "``ORIGINAL``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:638
+msgid "The vector layer considered as the original version"
+msgstr "원본 버전으로 간주하는 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:639
+msgid "**Revised layer**"
+msgstr "**Revised layer**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:640
+msgid "``REVISED``"
+msgstr "``REVISED``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:642
+msgid "The revised or modified vector layer"
+msgstr "개정된 또는 수정된 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:643
+msgid "**Attributes to consider for match**"
+msgstr "**Attributes to consider for match**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:646
+msgid "``COMPARE_ATTRIBUTES``"
+msgstr "``COMPARE_ATTRIBUTES``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:648
+msgid ""
+"Attributes to consider for match. By default, all attributes are compared."
+msgstr "일치하는지 고려할 속성입니다. 기본적으로 모든 속성을 비교합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:650
+msgid "**Geometry comparison behavior**"
+msgstr "**Geometry comparison behavior**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:653
+msgid "``MATCH_TYPE``"
+msgstr "``MATCH_TYPE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:656
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1290
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1742
+msgid "Default: 1"
+msgstr "기본값: 1"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:657
+msgid "Defines the criteria for comparison. Options:"
+msgstr "비교 규칙을 정의합니다. 다음 옵션 가운데 선택할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:659
+msgid "0 --- Exact Match: includes the order and vertices count of geometries"
+msgstr "0 --- 완전 일치(Exact Match): 도형의 순서 및 꼭짓점 개수도 포함"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:661
+msgid ""
+"1 --- Tolerant Match (Topological Equality): geometries are considered equal"
+msgstr "1 --- 오차 허용 일치(Tolerant Match, 위상적 동등성): 도형을 동등한 것으로 간주합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:664
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:713
+msgid "**Unchanged features**"
+msgstr "**Unchanged features**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:665
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:714
+msgid "``UNCHANGED``"
+msgstr "``UNCHANGED``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:666
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:678
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:690
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:715
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:719
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:723
+msgid "[vector: same as Original layer]"
+msgstr "[vector: same as Original layer]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:667
+msgid ""
+"Specify the output vector layer containing the unchanged features. One of:"
+msgstr "변경되지 않은 피처를 담고 있는 산출 벡터 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:676
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:717
+msgid "**Added features**"
+msgstr "**Added features**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:677
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:718
+msgid "``ADDED``"
+msgstr "``ADDED``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:679
+msgid "Specify the output vector layer containing the added features. One of:"
+msgstr "추가된 피처를 담고 있는 산출 벡터 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:688
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:721
+msgid "**Deleted features**"
+msgstr "**Deleted features**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:689
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:722
+msgid "``DELETED``"
+msgstr "``DELETED``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:691
+msgid ""
+"Specify the output vector layer containing the deleted features. One of:"
+msgstr "삭제된 피처를 담고 있는 산출 벡터 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:716
+msgid "Vector layer containing the unchanged features."
+msgstr "변경되지 않은 피처를 담고 있는 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:720
+msgid "Vector layer containing the added features."
+msgstr "추가된 피처를 담고 있는 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:724
+msgid "Vector layer containing the deleted features."
+msgstr "삭제된 피처를 담고 있는 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:725
+msgid "**Count of unchanged features**"
+msgstr "**Count of unchanged features**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:726
+msgid "``UNCHANGED_COUNT``"
+msgstr "``UNCHANGED_COUNT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:728
+msgid "Count of unchanged features."
+msgstr "변경되지 않은 피처의 개수"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:729
+msgid "**Count of features added in revised layer**"
+msgstr "**Count of features added in revised layer**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:730
+msgid "``ADDED_COUNT``"
+msgstr "``ADDED_COUNT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:732
+msgid "Count of features added in revised layer."
+msgstr "개정 레이어에 추가된 피처의 개수"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:733
+msgid "**Count of features deleted from original layer**"
+msgstr "**Count of features deleted from original layer**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:734
+msgid "``DELETED_COUNT``"
+msgstr "``DELETED_COUNT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:736
+msgid "Count of features deleted from original layer."
+msgstr "원본 레이어에서 삭제된 피처의 개수"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:741
+msgid "**Algorithm ID**: ``native:detectvectorchanges``"
+msgstr "**알고리즘 ID**: ``native:detectvectorchanges``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:751
+msgid "Drop geometries"
+msgstr "도형 삭제"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:752
+msgid ""
+"Creates a simple *geometryless* copy of the input layer attribute table. It "
+"keeps the attribute table of the source layer."
+msgstr "입력 레이어 속성 테이블의 단순한 *무(無)도형* 복사본을 생성합니다. 소스 레이어의 속성 테이블은 그대로 유지합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:756
+msgid ""
+"If the file is saved in a local folder, you can choose between many file "
+"formats."
+msgstr "파일을 로컬 폴더에 저장하는 경우, 수많은 포맷 가운데 선택할 수 있습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:759
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2054
+msgid ""
+"|checkbox| Allows :ref:`features in-place modification "
+"<processing_inplace_edit>`"
+msgstr "|checkbox| :ref:`제자리 피처 수정 <processing_inplace_edit>` 옵션을 사용할 수 있습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2516
+msgid "checkbox"
+msgstr "checkbox"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:761
+msgid ":ref:`qgisdeleteduplicategeometries`, :ref:`qgisremovenullgeometries`"
+msgstr ":ref:`qgisdeleteduplicategeometries`, :ref:`qgisremovenullgeometries`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:779
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:802
+msgid "**Dropped geometries**"
+msgstr "**Dropped geometries**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:781
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:804
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1116
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1142
+msgid "[table]"
+msgstr "[table]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:782
+msgid "Specify the output geometryless layer. One of:"
+msgstr "산출 무(無)도형 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:805
+msgid "The output geometryless layer. A copy of the original attribute table."
+msgstr "산출 무(無)도형 레이어. 원본 속성 테이블의 복사본입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:811
+msgid "**Algorithm ID**: ``native:dropgeometries``"
+msgstr "**알고리즘 ID**: ``native:dropgeometries``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:821
+msgid "Execute SQL"
+msgstr "SQL 실행하기"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:822
+msgid ""
+"Runs a simple or complex query with ``SQL`` syntax on the source layer."
+msgstr "소스 레이어에 ``SQL`` 문법으로 된 단순 또는 복잡 쿼리를 실행합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:825
+msgid ""
+"Input datasources are identified with ``input1``, ``input2``... ``inputN`` "
+"and a simple query will look like ``SELECT * FROM input1``."
+msgstr ""
+"입력 데이터소스를 ``input1``, ``input2``, ..., ``inputN`` 으로 식별하므로, 단순 쿼리는 ``SELECT "
+"* FROM input1`` 과 같이 보일 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:828
+msgid ""
+"Beside a simple query, you can add expressions or variables within the ``SQL"
+" query`` parameter itself. This is particulary useful if this algorithm is "
+"executed within a Processing model and you want to use a model input as a "
+"parameter of the query. An example of a query will then be ``SELECT * FROM "
+"[% @table %]`` where ``@table`` is the variable that identifies the model "
+"input."
+msgstr ""
+"단순 쿼리 이외에, ``SQL query`` 파라미터 자체에 표현식 또는 변수를 추가할 수 있습니다. 이 알고리즘을 공간 처리 모델 "
+"내에서 실행하는데 모델 입력물을 쿼리의 파라미터로 받고자 할 때 매우 유용한 방법입니다. 이때 쿼리의 예를 들자면 ``SELECT * "
+"FROM [% @table %]`` 정도가 되는데, 여기서 ``@table`` 은 모델 입력물로 식별되는 변수입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:834
+msgid "The result of the query will be added as a new layer."
+msgstr "쿼리의 결과를 새 레이어로 추가할 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:836
+msgid ":ref:`qgisspatialiteexecutesql`, :ref:`qgispostgisexecutesql`"
+msgstr ":ref:`qgisspatialiteexecutesql`, :ref:`qgispostgisexecutesql`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:851
+msgid ""
+"**Additional input datasources (called input1, .., inputN in the query)**"
+msgstr ""
+"**Additional input datasources (called input1, .., inputN in the query)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:852
+msgid "``INPUT_DATASOURCES``"
+msgstr "``INPUT_DATASOURCES``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:853
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1862
+msgid "[vector: any] [list]"
+msgstr "[vector: any] [list]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:854
+msgid ""
+"List of layers to query. In the SQL editor you can refer these layers with "
+"their **real** name or also with **input1**, **input2**, **inputN** "
+"depending on how many layers have been chosen."
+msgstr ""
+"쿼리할 레이어의 목록입니다. SQL 편집기에서, 얼마나 많은 레이어를 선택했느냐에 따라 이 레이어들을 **실제** 명칭으로 참조할 수도 "
+"있고 또는 **input1**, **input2**, …, **inputN** 으로 참조할 수도 있습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:858
+msgid "**SQL query**"
+msgstr "**SQL query**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:859
+msgid "``INPUT_QUERY``"
+msgstr "``INPUT_QUERY``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:860
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:867
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:873
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1046
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1050
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1054
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1309
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1471
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1736
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2084
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2187
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2193
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2200
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2221
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2225
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2266
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2331
+msgid "[string]"
+msgstr "[string]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:861
+msgid "Type the string of your SQL query, e.g. ``SELECT * FROM input1``."
+msgstr "사용자 SQL 쿼리 문자열을, 예를 들어 ``SELECT * FROM input1`` 처럼 입력합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:863
+msgid "**Unique identifier field**"
+msgstr "**Unique identifier field**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:866
+msgid "``INPUT_UID_FIELD``"
+msgstr "``INPUT_UID_FIELD``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:868
+msgid "Specify the column with unique ID"
+msgstr "유일 ID를 가진 열을 지정합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:869
+msgid "**Geometry field**"
+msgstr "**Geometry field**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:872
+msgid "``INPUT_GEOMETRY_FIELD``"
+msgstr "``INPUT_GEOMETRY_FIELD``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:874
+msgid "Specify the geometry field"
+msgstr "도형 필드를 지정합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:875
+msgid "**Geometry type**"
+msgstr "**Geometry type**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:878
+msgid "``INPUT_GEOMETRY_TYPE``"
+msgstr "``INPUT_GEOMETRY_TYPE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:882
+msgid ""
+"Choose the geometry of the result. By default the algorithm will autodetect "
+"it. One of:"
+msgstr "산출되는 도형의 유형을 선택합니다. 기본적으로 알고리즘이 자동 탐지할 것입니다. 다음 가운데 하나로 선택할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:886
+msgid "0 --- Autodetect"
+msgstr "0 --- 자동 탐지(Autodetect)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:887
+msgid "1 --- No geometry"
+msgstr "1 --- 도형 없음"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:888
+msgid "2 --- Point"
+msgstr "2 --- 포인트"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:889
+msgid "3 --- LineString"
+msgstr "3 --- 라인스트링"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:890
+msgid "4 --- Polygon"
+msgstr "4 --- 폴리곤"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:891
+msgid "5 --- MultiPoint"
+msgstr "5 --- 멀티포인트"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:892
+msgid "6 --- MultiLineString"
+msgstr "6 --- 멀티라인스트링"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:893
+msgid "7 --- MultiPolygon"
+msgstr "7 --- 멀티폴리곤"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:898
+msgid "``INPUT_GEOMETRY_CRS``"
+msgstr "``INPUT_GEOMETRY_CRS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:900
+msgid "The CRS to assign to the output layer"
+msgstr "산출 레이어에 할당할 좌표계"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:901
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:926
+msgid "**SQL Output**"
+msgstr "**SQL Output**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:906
+msgid "Specify the output layer created by the query. One of:"
+msgstr "쿼리가 생성한 산출 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:929
+msgid "Vector layer created by the query"
+msgstr "쿼리가 생성한 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:934
+msgid "**Algorithm ID**: ``qgis:executesql``"
+msgstr "**알고리즘 ID**: ``qgis:executesql``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:944
+msgid "Extract selected features"
+msgstr "선택한 피처 추출하기"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:945
+msgid "Saves the selected features as a new layer."
+msgstr "선택한 피처를 새 레이어로 저장합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:947
+msgid ""
+"If the selected layer has no selected features, the newly created layer will"
+" be empty."
+msgstr "지정한 레이어에서 선택한 피처가 없는 경우, 빈 레이어를 생성할 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:964
+msgid "Layer to save the selection from"
+msgstr "저장할 피처를 선택한 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:965
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:991
+msgid "**Selected features**"
+msgstr "**Selected features**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:970
+msgid "Specify the vector layer for the selected features. One of:"
+msgstr "선택한 피처를 저장할 벡터 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:994
+msgid ""
+"Vector layer with only the selected features, or no feature if none was "
+"selected."
+msgstr "선택한 피처만 담은 벡터 레이어, 또는 아무 피처도 선택하지 않은 경우 피처가 없는 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1000
+msgid "**Algorithm ID**: ``native:saveselectedfeatures``"
+msgstr "**알고리즘 ID**: ``native:saveselectedfeatures``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1010
+msgid "Extract Shapefile encoding"
+msgstr "Shapefile 인코딩 정보 추출"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1012
+msgid ""
+"Extracts the attribute encoding information embedded in a Shapefile. Both "
+"the encoding specified by an optional :file:`.cpg` file and any encoding "
+"details present in the :file:`.dbf` LDID header block are considered."
+msgstr ""
+"이 알고리즘은 Shapefile에 내장된 속성 인코딩 정보를 추출합니다. 부가적인 :file:`.cpg` 파일로 지정된 인코딩과 "
+":file:`.dbf` LDID 헤더 블록에 있는 모든 인코딩 상세 사항을 모두 고려합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1031
+msgid ""
+"ESRI Shapefile (:file:`.SHP`) Layer to extract the encoding information."
+msgstr "인코딩 정보를 추출할 ESRI Shapefile (:file:`.SHP`) 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1044
+msgid "**Shapefile encoding**"
+msgstr "**Shapefile encoding**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1045
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2265
+msgid "``ENCODING``"
+msgstr "``ENCODING``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1047
+msgid "Encoding information specified in the input file"
+msgstr "입력 파일에 지정된 인코딩 정보"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1048
+msgid "**CPG encoding**"
+msgstr "**CPG encoding**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1049
+msgid "``CPG_ENCODING``"
+msgstr "``CPG_ENCODING``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1051
+msgid "Encoding information specified in any optional :file:`.CPG` file"
+msgstr "부가적인 :file:`.CPG` 파일에 지정된 인코딩 정보"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1052
+msgid "**LDID encoding**"
+msgstr "**LDID encoding**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1053
+msgid "``LDID_ENCODING``"
+msgstr "``LDID_ENCODING``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1055
+msgid "Encoding information specified in :file:`.dbf` LDID header block"
+msgstr ":file:`.dbf` LDID 헤더 블록에 지정된 인코딩 정보"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1060
+msgid "**Algorithm ID**: ``native:shpencodinginfo``"
+msgstr "**알고리즘 ID**: ``native:shpencodinginfo``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1070
+msgid "Find projection"
+msgstr "투영체 찾기"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1071
+msgid ""
+"Creates a shortlist of candidate coordinate reference systems, for instance "
+"for a layer with an unknown projection."
+msgstr "최종 후보 좌표계 목록을, 예를 들어 알 수 없는 투영체를 가진 레이어를 위해 생성합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1074
+msgid ""
+"The area that the layer is expected to cover must be specified via the "
+"target area parameter. The coordinate reference system for this target area "
+"must be known to QGIS."
+msgstr ""
+"대상 영역 파라미터를 통해 레이어가 커버하리라 기대되는 영역을 지정해야만 합니다. QGIS는 이 대상 영역의 좌표계를 알고 있어야만 "
+"합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1079
+msgid ""
+"The algorithm operates by testing the layer's extent in every known "
+"reference system and then listing any for which the bounds would be near the"
+" target area if the layer was in this projection."
+msgstr ""
+"이 알고리즘은 알려진 모든 좌표계에서 레이어의 범위를 테스트해보고, 레이어의 경계가 대상 영역에 근접하는 모든 투영체를 목록화합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1083
+msgid ""
+":ref:`qgisassignprojection`, :ref:`qgisdefinecurrentprojection`, "
+":ref:`qgisreprojectlayer`"
+msgstr ""
+":ref:`qgisassignprojection`, :ref:`qgisdefinecurrentprojection`, "
+":ref:`qgisreprojectlayer`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1101
+msgid "Layer with unknown projection"
+msgstr "알 수 없는 투영체를 가진 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1102
+msgid "**Target area for layer (xmin, xmax, ymin, ymax)**"
+msgstr "**Target area for layer (xmin, xmax, ymin, ymax)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1103
+msgid "``TARGET_AREA``"
+msgstr "``TARGET_AREA``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1104
+msgid "[extent]"
+msgstr "[extent]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1105
+msgid ""
+"The area that the layer covers. The options for specifying the extent are:"
+msgstr "레이어가 커버하는 영역. 범위를 지정하기 위한 옵션은 다음과 같습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1108
+msgid "Use Canvas Extent"
+msgstr "캔버스 범위 사용"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1109
+msgid "Select Extent on Canvas"
+msgstr "캔버스에서 범위 선택"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1110
+msgid "Use Layer Extent"
+msgstr "레이어 범위 사용"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1112
+msgid ""
+"It is also possible to provide the extent coordinates directly (xmin, xmax, "
+"ymin, ymax)."
+msgstr "범위 좌표를 직접 지정할 수도 있습니다. (xmin, xmax, ymin, ymax)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1114
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1140
+msgid "**CRS candidates**"
+msgstr "**CRS candidates**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1119
+msgid ""
+"Specify the table (geometryless layer) for the CRS suggestions (EPSG codes)."
+" One of:"
+msgstr "제안 좌표계(EPSG 코드)를 담을 테이블(무(無)도형 레이어)을 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1143
+msgid "A table with all the CRS (EPSG codes) of the matching criteria."
+msgstr "기준을 만족시키는 모든 좌표계(EPSG 코드)를 담은 테이블"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1149
+msgid "**Algorithm ID**: ``qgis:findprojection``"
+msgstr "**알고리즘 ID**: ``qgis:findprojection``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1159
+msgid "Flatten relationship"
+msgstr "관계 평탄화"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1161
+msgid ""
+"Flattens a :ref:`relationship <vector_relations>` for a vector layer, "
+"exporting a single layer containing one parent feature per related child "
+"feature. This master feature contains all the attributes for the related "
+"features. This allows to have the relation as a plain table that can be e.g."
+" exported to CSV."
+msgstr ""
+"관련 자식 피처 하나 당 부모 피처 하나를 담고 있는 단일 레이어를 내보내서 벡터 레이어에 대한 :ref:`관계 "
+"<vector_relations>` 를 평탄화(flatten)합니다. 이 마스터 피처는 관련 피처들에 대한 모든 속성을 담고 있습니다. "
+"이 알고리즘을 사용하면 관계를, 예를 들어 CSV와 같은 일반적인 테이블로 내보낼 수 있게 됩니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1171
+msgid ""
+"Form of a region with related children (left) - A duplicate region feature "
+"for each related child, with joined attributes (right)"
+msgstr "관련 자식을 가진 지역의 양식(왼쪽) - 각 관련 자식마다 결합된 속성을 가진 복제 지역 피처(오른쪽)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1188
+msgid "Layer with the relationship that should be de-normalized"
+msgstr "비정규화(de-normalize)해야 할 관계를 가진 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1189
+msgid "**Flattened Layer**"
+msgstr "**Flattened Layer**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1195
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2165
+msgid "Default: ``[Save to temporary file]``"
+msgstr "기본값: ``[Save to temporary file]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1196
+msgid "Specify the output (flattened) layer. One of:"
+msgstr "산출 (평탄화) 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:3
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1198
+msgid "Save to a Temporary File"
+msgstr "임시 파일로 저장"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1200
+msgid "Save To GeoPackage..."
+msgstr "Geopackage로 저장"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1201
+msgid "Save to Database Table..."
+msgstr "데이터베이스 테이블에 저장"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1216
+msgid "**Flattened layer**"
+msgstr "**Flattened layer**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1219
+msgid ""
+"A layer containing master features with all the attributes for the related "
+"features"
+msgstr "관련 피처들의 모든 속성을 가진 마스터 피처를 담고 있는 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1225
+msgid "**Algorithm ID**: ``native:flattenrelationships``"
+msgstr "**알고리즘 ID**: ``native:flattenrelationships``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1235
+msgid "Join attributes by field value"
+msgstr "필드값으로 속성 결합하기"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1236
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1389
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1545
+msgid ""
+"Takes an input vector layer and creates a new vector layer that is an "
+"extended version of the input one, with additional attributes in its "
+"attribute table."
+msgstr "입력 벡터 레이어를 받아 입력 레이어의 속성 테이블에 속성을 추가한 확장 버전인 새 벡터 레이어를 생성합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1240
+msgid ""
+"The additional attributes and their values are taken from a second vector "
+"layer. An attribute is selected in each of them to define the join criteria."
+msgstr "두 번째 벡터 레이어에서 추가 속성 및 그 값을 가져옵니다. 결합 기준을 정의하기 위해 각 레이어에서 속성을 선택합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1244
+msgid ":ref:`qgisjoinbynearest`, :ref:`qgisjoinattributesbylocation`"
+msgstr ":ref:`qgisjoinbynearest`, :ref:`qgisjoinattributesbylocation`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1262
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1418
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1575
+msgid ""
+"Input vector layer. The output layer will consist of the features of this "
+"layer with attributes from matching features in the second layer."
+msgstr "입력 벡터 레이어. 산출 레이어는 이 레이어의 피처와 두 번째 레이어에 있는 일치하는 피처의 속성으로 이루어질 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1265
+msgid "**Table field**"
+msgstr "**Table field**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1268
+msgid "Field of the source layer to use for the join"
+msgstr "결합을 위해 사용할 소스 레이어의 필드"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1269
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1718
+msgid "**Input layer 2**"
+msgstr "**Input layer 2**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1270
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1719
+msgid "``INPUT_2``"
+msgstr "``INPUT_2``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1272
+msgid "Layer with the attribute table to join"
+msgstr "결합할 속성 테이블을 가진 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1273
+msgid "**Table field 2**"
+msgstr "**Table field 2**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1274
+msgid "``FIELD_2``"
+msgstr "``FIELD_2``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1276
+msgid ""
+"Field of the second (join) layer to use for the join The type of the field "
+"must be equal to (or compatible with) the input table field type."
+msgstr ""
+"결합을 위해 사용할 두 번째 (결합) 레이어의 필드. 필드 유형은 입력 테이블의 필드 유형과 동일해야만 (또는 호환되어야만) 합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1279
+msgid "**Layer 2 fields to copy**"
+msgstr "**Layer 2 fields to copy**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1282
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1723
+msgid "``FIELDS_TO_COPY``"
+msgstr "``FIELDS_TO_COPY``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1284
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1446
+msgid ""
+"Select the specific fields you want to add. By default all the fields are "
+"added."
+msgstr "사용자가 추가하고자 하는 특정 필드를 선택합니다. 기본적으로 모든 필드를 추가합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1286
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1448
+msgid "**Join type**"
+msgstr "**Join type**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1287
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1449
+msgid "``METHOD``"
+msgstr "``METHOD``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1291
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1451
+msgid "The type of the final joined layer. One of:"
+msgstr "최종 결합 레이어의 유형을 지정합니다. 다음 가운데 하나를 선택할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1293
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1453
+msgid "0 --- Create separate feature for each matching feature (one-to-many)"
+msgstr "0 --- 일치하는 각 피처마다 개별 피처를 생성합니다. (1대다)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1295
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1455
+msgid "1 --- Take attributes of the first matching feature only (one-to-one)"
+msgstr "1 --- 처음으로 일치하는 피처의 속성만 가져옵니다. (1대1)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1298
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1460
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1635
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1727
+msgid "**Discard records which could not be joined**"
+msgstr "**Discard records which could not be joined**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1299
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1461
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1636
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1728
+msgid "``DISCARD_NONMATCHING``"
+msgstr "``DISCARD_NONMATCHING``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1300
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1462
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1637
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1729
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1946
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1953
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2335
+msgid "[boolean]"
+msgstr "[boolean]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1302
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1948
+msgid "Default: True"
+msgstr "기본값: True"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1303
+msgid "Check if you don't want to keep the features that could not be joined"
+msgstr "결합할 수 없는 피처를 유지하지 않으려면 이 파라미터를 활성화하십시오."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1305
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1467
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1734
+msgid "**Joined field prefix**"
+msgstr "**Joined field prefix**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1308
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1470
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1735
+msgid "``PREFIX``"
+msgstr "``PREFIX``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1310
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1472
+msgid ""
+"Add a prefix to joined fields in order to easily identify them and avoid "
+"field name collision"
+msgstr "결합된 필드명에 접두어를 추가합니다. 결합된 필드를 더 쉽게 식별하고 명칭의 충돌을 방지하기 위해서입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1312
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1364
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1474
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1526
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1641
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1667
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1748
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1790
+msgid "**Joined layer**"
+msgstr "**Joined layer**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1317
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1479
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1646
+msgid "Specify the output vector layer for the join. One of:"
+msgstr "결합된 속성을 저장할 산출 벡터 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1326
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1358
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1488
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1520
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1762
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1794
+msgid "**Unjoinable features from first layer**"
+msgstr "**Unjoinable features from first layer**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1327
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1361
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1489
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1523
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1763
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1795
+msgid "``NON_MATCHING``"
+msgstr "``NON_MATCHING``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1331
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1493
+msgid ""
+"Specify the output vector layer for unjoinable features from first layer. "
+"One of:"
+msgstr "첫 번째 레이어에서 결합할 수 없는 피처를 저장할 산출 벡터 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1354
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1516
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1799
+msgid "**Number of joined features from input table**"
+msgstr "**Number of joined features from input table**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1355
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1517
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1800
+msgid "``JOINED_COUNT``"
+msgstr "``JOINED_COUNT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1363
+msgid "Vector layer with the non-matched features"
+msgstr "일치하지 않는 피처를 담은 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1367
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1529
+msgid "Output vector layer with added attributes from the join"
+msgstr "결합으로 추가된 속성을 가진 산출 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1368
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1804
+msgid "**Number of unjoinable features from input table**"
+msgstr "**Number of unjoinable features from input table**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1371
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1805
+msgid "``UNJOINABLE_COUNT``"
+msgstr "``UNJOINABLE_COUNT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1378
+msgid "**Algorithm ID**: ``native:joinattributestable``"
+msgstr "**알고리즘 ID**: ``native:joinattributestable``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1388
+msgid "Join attributes by location"
+msgstr "위치로 속성 결합하기"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1393
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1549
+msgid ""
+"The additional attributes and their values are taken from a second vector "
+"layer. A spatial criteria is applied to select the values from the second "
+"layer that are added to each feature from the first layer."
+msgstr ""
+"두 번째 벡터 레이어에서 추가 속성 및 그 값을 가져옵니다. 첫 번째 레이어의 각 피처에 추가되는 두 번째 레이어의 값을 선택하기 위한 "
+"공간 기준을 적용합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1400
+msgid ""
+":ref:`qgisjoinbynearest`, :ref:`qgisjoinattributestable`, "
+":ref:`qgisjoinbylocationsummary`"
+msgstr ""
+":ref:`qgisjoinbynearest`, :ref:`qgisjoinattributestable`, "
+":ref:`qgisjoinbylocationsummary`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1421
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1578
+msgid "**Join layer**"
+msgstr "**Join layer**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1422
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1579
+msgid "``JOIN``"
+msgstr "``JOIN``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1424
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1581
+msgid ""
+"The attributes of this vector layer will be **added** to the source layer "
+"attribute table."
+msgstr "소스 레이어 속성 테이블에 이 벡터 레이어의 속성을 **추가** 할 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1426
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1583
+msgid "**Geometric predicate**"
+msgstr "**Geometric predicate**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1427
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1584
+msgid "``PREDICATE``"
+msgstr "``PREDICATE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1430
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1587
+msgid "Default: [0]"
+msgstr "기본값: [0]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1431
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1588
+msgid "Select the geometric criteria. One or more of:"
+msgstr "기하하적 기준을 선택합니다. 다음 가운데 하나 이상을 선택할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1433
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1590
+msgid "0 --- intersects"
+msgstr "0 --- 교차(intersect)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1434
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1591
+msgid "1 --- contains"
+msgstr "1 --- 포함(contain)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1435
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1592
+msgid "2 --- equals"
+msgstr "2 --- 동등(equal)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1436
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1593
+msgid "3 --- touches"
+msgstr "3 --- 접촉(touch)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1437
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1594
+msgid "4 --- overlaps"
+msgstr "4 --- 중첩(overlap)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1438
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1595
+msgid "5 --- within"
+msgstr "5 --- 내부(within)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1439
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1596
+msgid "6 --- crosses"
+msgstr "6 --- 공간 교차(cross)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1441
+msgid "**Fields to add (leave empty to use all fields)**"
+msgstr "**Fields to add (leave empty to use all fields)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1444
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1601
+msgid "``JOIN_FIELDS``"
+msgstr "``JOIN_FIELDS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1457
+msgid ""
+"2 --- Take attributes of the feature with largest overlap only (one-to-one)"
+msgstr "2 --- 최대 중첩 영역을 가진 피처의 속성만 가져오기 (1대1)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1464
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1639
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1731
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1955
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2337
+msgid "Default: False"
+msgstr "기본값: False"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1465
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1640
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1732
+msgid ""
+"Remove from the output the input layer records which could not be joined"
+msgstr "산출물에서 결합시킬 수 없는 입력 레이어 레코드를 제거합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1525
+msgid "Vector layer of the non-matched features"
+msgstr "일치하지 않는 피처를 담은 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1534
+msgid "**Algorithm ID**: ``native:joinattributesbylocation``"
+msgstr "**알고리즘 ID**: ``native:joinattributesbylocation``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1544
+msgid "Join attributes by location (summary)"
+msgstr "위치로 속성 결합하기 (요약)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1554
+msgid ""
+"The algorithm calculates a statistical summary for the values from matching "
+"features in the second layer (e.g. maximum value, mean value, etc)."
+msgstr "이 알고리즘은 두 번째 레이어에서 일치하는 피처의 값에 대한 통계 요약을 계산합니다. (예: 최대값, 평균값 등등)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1558
+msgid ":ref:`qgisjoinattributesbylocation`"
+msgstr ":ref:`qgisjoinattributesbylocation`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1598
+msgid "**Fields to summarize (leave empty to use all fields)**"
+msgstr "**Fields to summarize (leave empty to use all fields)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1603
+msgid ""
+"Select the specific fields you want to add and summarize. By default all the"
+" fields are added."
+msgstr "사용자가 추가하고 요약하고자 하는 특정 필드를 선택합니다. 기본적으로 모든 필드를 추가합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1605
+msgid "**Summaries to calculate (leave empty to use all fields)**"
+msgstr "**Summaries to calculate (leave empty to use all fields)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1608
+msgid "``SUMMARIES``"
+msgstr "``SUMMARIES``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1611
+msgid "Default: []"
+msgstr "기본값: []"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1612
+msgid ""
+"Choose which type of summary you want to add to each field and for each "
+"feature. One or more of:"
+msgstr "각 피처마다 각 필드에 추가하고자 하는 요약 유형을 선택합니다. 다음 가운데 하나 이상을 선택할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1615
+msgid "0 --- count"
+msgstr "0 --- 개수"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1616
+msgid "1 --- unique"
+msgstr "1 --- 유일값"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1617
+msgid "2 --- min"
+msgstr "2 --- 최소값"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1618
+msgid "3 --- max"
+msgstr "3 --- 최대값"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1619
+msgid "4 --- range"
+msgstr "4 --- 범위(range)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1620
+msgid "5 --- sum"
+msgstr "5 --- 합계"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1621
+msgid "6 --- mean"
+msgstr "6 --- 평균"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1622
+msgid "7 --- median"
+msgstr "7 --- 중간값"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1623
+msgid "8 --- stddev"
+msgstr "8 --- 표준 편차"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1624
+msgid "9 --- minority"
+msgstr "9 --- 희소값(minority)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1625
+msgid "10 --- majority"
+msgstr "10 --- 최빈값(majority)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1626
+msgid "11 --- q1"
+msgstr "11 --- 제1 사분위수"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1627
+msgid "12 --- q3"
+msgstr "12 --- 제3 사분위수"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1628
+msgid "13 --- iqr"
+msgstr "13 --- 사분위수의 범위"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1629
+msgid "14 --- empty"
+msgstr "14 --- 비어 있는 값"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1630
+msgid "15 --- filled"
+msgstr "15 --- 존재하는 값"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1631
+msgid "16 --- min_length"
+msgstr "16 --- 최단 거리"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1632
+msgid "17 --- max_length"
+msgstr "17 --- 최장 거리"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1633
+msgid "18 --- mean_length"
+msgstr "18 --- 평균 거리"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1670
+msgid "Output vector layer with summarized attributes from the join"
+msgstr "결합으로부터 나온 요약된 속성을 가진 산출 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1675
+msgid "**Algorithm ID**: ``qgis:joinbylocationsummary``"
+msgstr "**알고리즘 ID**: ``qgis:joinbylocationsummary``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1685
+msgid "Join attributes by nearest"
+msgstr "최근접으로 속성 결합하기"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1686
+msgid ""
+"Takes an input vector layer and creates a new vector layer with additional "
+"fields in its attribute table. The additional attributes and their values "
+"are taken from a second vector layer. Features are joined by finding the "
+"closest features from each layer."
+msgstr ""
+"입력 벡터 레이어를 받아 속성 테이블에 필드를 추가한 새 벡터 레이어를 생성합니다. 두 번째 벡터 레이어에서 추가 속성 및 그 값을 "
+"가져옵니다. 각 레이어에서 최근접 피처를 찾아 피처를 결합합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1692
+msgid ""
+"By default only the nearest feature is joined, but the join can also join to"
+" the k-nearest neighboring features."
+msgstr "기본적으로 최근접 피처들만 결합하지만, k-최근접 이웃한 피처도 결합할 수 있습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1695
+msgid ""
+"If a maximum distance is specified, only features which are closer than this"
+" distance will be matched."
+msgstr "최대 거리를 지정한 경우, 그 거리보다 가까운 피처만 결합할 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1698
+msgid ""
+":ref:`qgisnearestneighbouranalysis`, :ref:`qgisjoinattributestable`, "
+":ref:`qgisjoinattributesbylocation`, :ref:`qgisdistancematrix`"
+msgstr ""
+":ref:`qgisnearestneighbouranalysis`, :ref:`qgisjoinattributestable`, "
+":ref:`qgisjoinattributesbylocation`, :ref:`qgisdistancematrix`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1717
+msgid "The input layer."
+msgstr "입력 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1721
+msgid "The join layer."
+msgstr "결합 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1722
+msgid "**Layer 2 fields to copy (leave empty to copy all fields)**"
+msgstr "**Layer 2 fields to copy (leave empty to copy all fields)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1724
+msgid "[fields]"
+msgstr "[fields]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1725
+msgid "Join layer fields to copy (if empty, all fields will be copied)."
+msgstr "복사할 결합 레이어 필드 (비어 있을 경우, 모든 필드를 복사할 것입니다.)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1737
+msgid "Joined field prefix"
+msgstr "결합된 필드의 접두어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1738
+msgid "**Maximum nearest neighbors**"
+msgstr "**Maximum nearest neighbors**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1739
+msgid "``NEIGHBORS``"
+msgstr "``NEIGHBORS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1743
+msgid "Maximum number of nearest neighbors"
+msgstr "최근접 이웃의 최대 개수"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1744
+msgid "**Maximum distance**"
+msgstr "**Maximum distance**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1745
+msgid "``MAX_DISTANCE``"
+msgstr "``MAX_DISTANCE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1747
+msgid "Maximum search distance"
+msgstr "최대 검색 거리"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1753
+msgid "Specify the vector layer containing the joined features. One of:"
+msgstr "결합된 피처를 담고 있는 벡터 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1767
+msgid ""
+"Specify the vector layer containing the features that could not be joined. "
+"One of:"
+msgstr "결합할 수 없는 피처를 담고 있는 벡터 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1793
+msgid "The output joined layer."
+msgstr "산출 결합 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1797
+msgid ""
+"Layer containing the features from first layer that could not be joined to "
+"any features in the join layer."
+msgstr "첫 번째 레이어의 피처 가운데 결합 레이어의 어느 피처와도 결합할 수 없는 피처를 담고 있는 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1802
+msgid "Number of features from the input table that have been joined."
+msgstr "입력 테이블에서 나온 결합된 피처의 개수"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1807
+msgid "Number of features from the input table that could not be joined."
+msgstr "입력 테이블에서 나온 결합할 수 없는 피처의 개수"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1813
+msgid "**Algorithm ID**: ``native:joinbynearest``"
+msgstr "**알고리즘 ID**: ``native:joinbynearest``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1823
+msgid "Merge vector layers"
+msgstr "벡터 레이어 병합하기"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1824
+msgid ""
+"Combines multiple vector layers of the **same geometry** type into a single "
+"one."
+msgstr "**동일한 도형** 유형의 벡터 레이어 여러 개를 단일 레이어로 병합합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1827
+msgid ""
+"The attribute table of the resulting layer will contain the fields from all "
+"input layers. If fields with the same name but different types are found "
+"then the exported field will be automatically converted into a string type "
+"field. New fields storing the original layer name and source are also added."
+msgstr ""
+"산출되는 레이어의 속성 테이블은 모든 입력 레이어의 필드들을 담게 될 것입니다. 동일한 이름이지만 서로 다른 유형인 필드들이 있을 경우 "
+"필드를 자동적으로 문자열 유형 필드로 변환해서 내보낼 것입니다. 원본 레이어명 및 그 소스를 저장한 새 필드도 추가됩니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1832
+msgid ""
+"If any input layers contain Z or M values, then the output layer will also "
+"contain these values. Similarly, if any of the input layers are multi-part, "
+"the output layer will also be a multi-part layer."
+msgstr ""
+"입력 레이어 가운데 Z 또는 M 값을 가진 레이어가 하나라도 있을 경우, 산출 레이어도 그 값을 가질 것입니다. 이와 비슷하게, 입력 "
+"레이어 가운데 하나라도 다중 부분(multi-part) 유형인 경우 산출 레이어도 다중 부분 레이어일 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1837
+msgid ""
+"Optionally, the destination coordinate reference system (CRS) for the merged"
+" layer can be set. If it is not set, the CRS will be taken from the first "
+"input layer. All layers will be reprojected to match this CRS."
+msgstr ""
+"병합된 레이어의 대상 좌표계도 부가적으로 설정할 수 있습니다. 좌표계를 설정하지 않은 경우, 첫 번째 입력 레이어의 좌표계를 사용할 "
+"것입니다. 모든 레이어를 이 좌표계와 일치하도록 재투영할 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1847
+msgid ":ref:`qgissplitvectorlayer`"
+msgstr ":ref:`qgissplitvectorlayer`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1860
+msgid "**Input Layers**"
+msgstr "**Input Layers**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1861
+msgid "``LAYERS``"
+msgstr "``LAYERS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1863
+msgid ""
+"The layers that are to be merged into a single layer. Layers should be of "
+"the same geometry type."
+msgstr "단일 레이어로 병합할 레이어들. 동일한 도형 유형 레이어이어야 합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1866
+msgid "**Destination CRS**"
+msgstr "**Destination CRS**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1871
+msgid ""
+"Choose the CRS for the output layer. If not specified, the CRS of the first "
+"input layer is used."
+msgstr "산출 레이어의 좌표계를 선택합니다. 좌표계를 지정하지 않은 경우, 첫 번째 입력 레이어의 좌표계를 사용할 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1874
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1899
+msgid "**Merged**"
+msgstr "**Merged**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1879
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1962
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2096
+msgid "Specify the output vector layer. One of:"
+msgstr "산출 벡터 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1902
+msgid ""
+"Output vector layer containing all the features and attributes from the "
+"input layers."
+msgstr "입력 레이어들의 모든 피처와 속성을 담고 있는 산출 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1908
+msgid "**Algorithm ID**: ``native:mergevectorlayers``"
+msgstr "**알고리즘 ID**: ``native:mergevectorlayers``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1918
+msgid "Order by expression"
+msgstr "표현식으로 정렬하기"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1919
+msgid ""
+"Sorts a vector layer according to an expression: changes the feature index "
+"according to an expression."
+msgstr "표현식에 따라 벡터 레이어를 정렬합니다. 표현식에 따라 피처 인덱스를 변경한다는 뜻입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1922
+msgid ""
+"Be careful, it might not work as expected with some providers, the order "
+"might not be kept every time."
+msgstr "주의하십시오: 일부 제공자의 경우 기대와는 다르게 작동할 수도 있습니다. 매번 순서가 유지되지 않을 수도 있습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1939
+msgid "Input vector layer to sort"
+msgstr "정렬할 입력 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1940
+msgid "**Expression**"
+msgstr "**Expression**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1941
+msgid "``EXPRESSION``"
+msgstr "``EXPRESSION``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1943
+msgid "Expression to use for the sorting"
+msgstr "정렬 작업에 사용할 표현식"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1944
+msgid "**Sort ascending**"
+msgstr "**Sort ascending**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1945
+msgid "``ASCENDING``"
+msgstr "``ASCENDING``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1949
+msgid "If checked the vector layer will be sorted from small to large values."
+msgstr "이 파라미터를 활성화하면 벡터 레이어를 작은 값에서 큰 값으로 정렬할 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1951
+msgid "**Sort nulls first**"
+msgstr "**Sort nulls first**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1952
+msgid "``NULLS_FIRST``"
+msgstr "``NULLS_FIRST``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1956
+msgid "If checked, Null values are placed first"
+msgstr "이 파라미터를 활성화하면 NULL 값을 처음에 배치합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1957
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1982
+msgid "**Ordered**"
+msgstr "**Ordered**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1985
+msgid "Output (sorted) vector layer"
+msgstr "산출 (정렬된) 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1990
+msgid "**Algorithm ID**: ``native:orderbyexpression``"
+msgstr "**알고리즘 ID**: ``native:orderbyexpression``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2000
+msgid "Repair Shapefile"
+msgstr "Shapefile 수리하기"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2002
+msgid "Repairs a broken ESRI Shapefile dataset by (re)creating the SHX file."
+msgstr "SHX 파일을 (재)생성해서 망가진 Shapefile 데이터셋을 수리합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2015
+msgid "**Input Shapefile**"
+msgstr "**Input Shapefile**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2017
+msgid "[file]"
+msgstr "[file]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2018
+msgid ""
+"Full path to the ESRI Shapefile dataset with a missing or broken SHX file"
+msgstr "없거나 깨진 SHX 파일을 가진 ESRI Shapefile 데이터셋을 가리키는 전체 경로"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2032
+msgid "**Repaired layer**"
+msgstr "**Repaired layer**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2035
+msgid "The input vector layer with the SHX file repaired"
+msgstr "SHX 파일을 수리한 입력 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2040
+msgid "**Algorithm ID**: ``native:repairshapefile``"
+msgstr "**알고리즘 ID**: ``native:repairshapefile``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2050
+msgid "Reproject layer"
+msgstr "레이어 재투영하기"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2051
+msgid ""
+"Reprojects a vector layer in a different CRS. The reprojected layer will "
+"have the same features and attributes of the input layer."
+msgstr "벡터 레이어를 다른 좌표계로 재투영합니다. 재투영된 레이어는 입력 레이어와 동일한 피처 및 속성을 가질 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2056
+msgid ""
+":ref:`qgisassignprojection`, :ref:`qgisdefinecurrentprojection`, "
+":ref:`qgisfindprojection`"
+msgstr ""
+":ref:`qgisassignprojection`, :ref:`qgisdefinecurrentprojection`, "
+":ref:`qgisfindprojection`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2073
+msgid "Input vector layer to reproject"
+msgstr "재투영할 입력 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2074
+msgid "**Target CRS**"
+msgstr "**Target CRS**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2075
+msgid "``TARGET_CRS``"
+msgstr "``TARGET_CRS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2079
+msgid "Destination coordinate reference system"
+msgstr "대상 좌표계"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2080
+msgid "**Coordinate Operation**"
+msgstr "**Coordinate Operation**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2083
+msgid "``OPERATION``"
+msgstr "``OPERATION``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2085
+msgid ""
+"Specific operation to use for a particular reprojection task, instead of "
+"always forcing use of the current project's transformation settings. Useful "
+"when reprojecting a particular layer and control over the exact "
+"transformation pipeline is required. Requires proj version >= 6."
+msgstr ""
+"언제나 현재 프로젝트의 변형 설정을 사용하도록 강제하는 대신, 특정 재투영 작업을 위해 사용할 방법을 지정합니다. 특정 레이어를 "
+"재투영하는 데 정확한 변형 경로(pipeline)를 제어해야만 하는 경우 유용한 옵션입니다. PROJ 6 이상 버전이 필요합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2090
+msgid "Read more at :ref:`datum_transformation`."
+msgstr ":ref:`datum_transformation` 을 읽어보십시오."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2091
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2116
+msgid "**Reprojected**"
+msgstr "**Reprojected**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2119
+msgid "Output (reprojected) vector layer"
+msgstr "산출 (재투영된) 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2124
+msgid "**Algorithm ID**: ``native:reprojectlayer``"
+msgstr "**알고리즘 ID**: ``native:reprojectlayer``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2134
+msgid "Save vector features to file"
+msgstr "벡터 피처를 파일로 저장"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2136
+msgid "Saves vector features to a specified file dataset."
+msgstr "이 알고리즘은 벡터 피처를 지정한 파일 데이터셋으로 저장합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2138
+msgid ""
+"For dataset formats supporting layers, an optional layer name parameter can "
+"be used to specify a custom string. Optional GDAL-defined dataset and layer "
+"options can be specified. For more information on this, read the online "
+"`GDAL documentation <https://gdal.org/drivers/vector/index.html>`_ on the "
+"format."
+msgstr ""
+"레이어를 지원하는 데이터셋 포맷에 대해, 부가적인 레이어명 파라미터를 이용해서 사용자 지정 문자열을 지정할 수 있습니다. GDAL이 "
+"정의하는 데이터셋과 레이어 옵션들도 선택적으로 지정할 수 있습니다. 이 알고리즘에 대한 더 자세한 정보를 원한다면, 포맷 관련 온라인 "
+"`GDAL 문서 <https://gdal.org/drivers/vector/index.html>`_ 를 읽어보세요."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2147
+msgid "Basic parameters"
+msgstr "기본 파라미터"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2157
+msgid "**Vector features**"
+msgstr "**Vector features**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2160
+msgid "Input vector layer."
+msgstr "입력 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2161
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2215
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2260
+msgid "**Saved features**"
+msgstr "**Saved features**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2166
+msgid "Specify the file to save the features to. One of:"
+msgstr "피처를 저장할 파일을 지정합니다. 다음 가운데 하나를 선택할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2173
+msgid "Advanced parameters"
+msgstr "고급 파라미터"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2183
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2223
+msgid "**Layer name**"
+msgstr "**Layer name**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2186
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2224
+msgid "``LAYER_NAME``"
+msgstr "``LAYER_NAME``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2188
+msgid "Name to use for the output layer"
+msgstr "산출 레이어에 사용할 이름"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2189
+msgid "**GDAL dataset options**"
+msgstr "**GDAL dataset options**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2192
+msgid "``DATASOURCE_OPTIONS``"
+msgstr "``DATASOURCE_OPTIONS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2194
+msgid ""
+"GDAL dataset creation options of the output format. Separate individual "
+"options with semicolons."
+msgstr "산출 포맷의 GDAL 데이터셋 생성 옵션입니다. 개별 옵션을 쌍반점으로 구분하십시오."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2196
+msgid "**GDAL layer options**"
+msgstr "**GDAL layer options**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2199
+msgid "``LAYER_OPTIONS``"
+msgstr "``LAYER_OPTIONS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2201
+msgid ""
+"GDAL layer creation options of the output format. Separate individual "
+"options with semicolons."
+msgstr "산출 포맷의 GDAL 레이어 생성 옵션입니다. 개별 옵션을 쌍반점으로 구분하십시오."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2218
+msgid "Vector layer with the saved features."
+msgstr "저장된 피처를 담은 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2219
+msgid "**File name and path**"
+msgstr "**File name and path**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2220
+msgid "``FILE_PATH``"
+msgstr "``FILE_PATH``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2222
+msgid "Output file name and path."
+msgstr "산출 파일명과 경로"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2226
+msgid "Name of the layer, if any."
+msgstr "(지정한 경우) 레이어명"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2231
+msgid "**Algorithm ID**: ``native:savefeatures``"
+msgstr "**알고리즘 ID**: ``native:savefeatures``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2241
+msgid "Set layer encoding"
+msgstr "레이어 인코딩 설정"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2243
+msgid ""
+"Sets the encoding used for reading a layer's attributes. No permanent "
+"changes are made to the layer, rather it affects only how the layer is read "
+"during the current session."
+msgstr ""
+"이 알고리즘은 레이어의 속성을 읽어오는 데 쓰이는 인코딩을 설정합니다. 레이어에 항구적인 변경 사항을 남기지는 않고, 현재 세션 동안 "
+"어떻게 레이어를 읽어올지에 대해서만 영향을 줍니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2247
+msgid ""
+"Changing the encoding is only supported for some vector layer data sources."
+msgstr "인코딩 변경을 지원하는 것은 일부 벡터 레이어 데이터소스뿐입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2263
+msgid "Vector layer to set the encoding."
+msgstr "인코딩을 설정할 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2264
+msgid "**Encoding**"
+msgstr "**Encoding**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2267
+msgid "Text encoding to assign to the layer in the current QGIS session."
+msgstr "현재 QGIS 세션에서 레이어에 할당할 텍스트 인코딩"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2280
+msgid "**Output layer**"
+msgstr "**Output layer**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2283
+msgid "Input vector layer with the set encoding."
+msgstr "설정한 인코딩을 가진 입력 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2288
+msgid "**Algorithm ID**: ``native:setlayerencoding``"
+msgstr "**알고리즘 ID**: ``native:setlayerencoding``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2298
+msgid "Split features by character"
+msgstr "문자로 피처 분할하기"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2299
+msgid ""
+"Features are split into multiple output features by splitting a field's "
+"value at a specified character. For instance, if a layer contains features "
+"with multiple comma separated values contained in a single field, this "
+"algorithm can be used to split these values up across multiple output "
+"features. Geometries and other attributes remain unchanged in the output. "
+"Optionally, the separator string can be a regular expression for added "
+"flexibility."
+msgstr ""
+"지정한 문자 위치에서 필드 값을 분할해서 피처를 여러 산출 피처로 분할합니다. 예를 들면, 레이어가 단일 필드에 쉼표로 구분된 여러 값을"
+" 가지고 있는 피처를 담고 있는 경우 이 알고리즘을 사용해서 해당 값들을 분할시켜 산출 피처 여러 개를 생성할 수 있습니다. 산출물에서 "
+"도형 및 기타 속성은 그대로 유지됩니다. 유연성을 위해 정규 표현식을 구분자 문자열로 사용할 수도 있습니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2325
+msgid "**Split using values in the field**"
+msgstr "**Split using values in the field**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2328
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2415
+msgid "Field to use for splitting"
+msgstr "분할 작업에 사용할 필드"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2329
+msgid "**Split value using character**"
+msgstr "**Split value using character**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2330
+msgid "``CHAR``"
+msgstr "``CHAR``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2332
+msgid "Character to use for splitting"
+msgstr "분할 작업에 사용할 문자"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2333
+msgid "**Use regular expression separator**"
+msgstr "**Use regular expression separator**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2334
+msgid "``REGEX``"
+msgstr "``REGEX``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2339
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2364
+msgid "**Split**"
+msgstr "**Split**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2343
+msgid "Default: ``Create temporary layer``"
+msgstr "기본값: ``Create temporary layer``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2344
+msgid "Specify output vector layer. One of:"
+msgstr "산출 벡터 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2367
+msgid "The output vector layer."
+msgstr "산출 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2372
+msgid "**Algorithm ID**: ``native:splitfeaturesbycharacter``"
+msgstr "**알고리즘 ID**: ``native:splitfeaturesbycharacter``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2382
+msgid "Split vector layer"
+msgstr "벡터 레이어 분할하기"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2383
+msgid ""
+"Creates a set of vectors in an output folder based on an input layer and an "
+"attribute. The output folder will contain as many layers as the unique "
+"values found in the desired field."
+msgstr ""
+"입력 레이어와 속성을 바탕으로 산출물 폴더에 벡터 집합을 생성합니다. 산출물 폴더는 원하는 필드에서 발견된 유일 값 개수만큼 많은 "
+"레이어를 담을 것입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2388
+msgid ""
+"The number of files generated is equal to the number of different values "
+"found for the specified attribute."
+msgstr "생성되는 파일의 개수는 지정한 속성에서 발견된 서로 다른 값들의 개수와 동일합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2391
+msgid "It is the opposite operation of *merging*."
+msgstr "*병합* 과는 정반대 작업입니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2395
+msgid ":ref:`qgismergevectorlayers`"
+msgstr ":ref:`qgismergevectorlayers`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2412
+msgid "**Unique ID field**"
+msgstr "**Unique ID field**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2416
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2440
+msgid "**Output directory**"
+msgstr "**Output directory**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2418
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2442
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2497
+msgid "[folder]"
+msgstr "[folder]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2420
+msgid "Default: ``[Save to temporary folder]``"
+msgstr "기본값: ``[Save to temporary folder]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2421
+msgid "Specify the directory for the output layers. One of:"
+msgstr "산출 레이어를 저장할 디렉터리를 지정합니다. 다음 가운데 하나로 선택할 수 있습니다:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2424
+msgid "Save to a Temporary Directory"
+msgstr "임시 디렉터리에 저장"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2425
+msgid "Save to Directory..."
+msgstr "디렉터리에 저장"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2443
+msgid "The directory for the output layers"
+msgstr "산출 레이어를 저장할 디렉터리"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2444
+msgid "**Output layers**"
+msgstr "**Output layers**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2445
+msgid "``OUTPUT_LAYERS``"
+msgstr "``OUTPUT_LAYERS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2446
+msgid "[same as input] [list]"
+msgstr "[same as input] [list]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2447
+msgid "The output vector layers resulting from the split."
+msgstr "분할로 산출된 벡터 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2452
+msgid "**Algorithm ID**: ``native:splitvectorlayer``"
+msgstr "**알고리즘 ID**: ``native:splitvectorlayer``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2462
+msgid "Truncate table"
+msgstr "테이블 절단하기"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2463
+msgid "Truncates a layer, by deleting all features from within the layer."
+msgstr "레이어 내부에 있는 모든 피처를 삭제해서 레이어를 절단(truncate)합니다."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2465
+msgid ""
+"This algorithm modifies the layer in place, and deleted features cannot be "
+"restored!"
+msgstr "이 알고리즘은 제자리에서 레이어를 수정하기 때문에, 삭제한 피처를 복구할 수 없습니다!"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2495
+msgid "**Truncated layer**"
+msgstr "**Truncated layer**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2498
+msgid "The truncated (empty) layer"
+msgstr "절단된 (비어 있는) 레이어"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2503
+msgid "**Algorithm ID**: ``native:truncatetable``"
+msgstr "**알고리즘 ID**: ``native:truncatetable``"

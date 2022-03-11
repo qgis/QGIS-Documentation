@@ -1,0 +1,3495 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# 
+# Translators:
+# Harrissou Sant-anna, 2020
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.16\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-16 02:18+0000\n"
+"PO-Revision-Date: 2020-12-24 12:03+0000\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2021\n"
+"Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/server_manual/services.rst:3
+msgid "Services"
+msgstr "Servizi"
+
+#: ../../docs/server_manual/services.rst:12
+msgid ""
+"QGIS Server is able to serve data according to standard protocols as "
+"described by the **Open Geospatial Consortium (OGC)**:"
+msgstr ""
+"QGIS è in grado di gestire i dati secondo i protocolli standard come "
+"descritto da **Open Geospatial Consortium (OGC)**:"
+
+#: ../../docs/server_manual/services.rst:15
+msgid "WMS 1.1.1 and 1.3.0"
+msgstr "WMS 1.1.1 e 1.3.0"
+
+#: ../../docs/server_manual/services.rst:16
+msgid "WFS 1.0.0 and 1.1.0"
+msgstr "WFS 1.0.0 e 1.1.0"
+
+#: ../../docs/server_manual/services.rst:17
+msgid "OGC API - Features (WFS3)"
+msgstr "OGC API - Features (WFS3)"
+
+#: ../../docs/server_manual/services.rst:18
+msgid "WCS 1.1.1"
+msgstr "WCS 1.1.1"
+
+#: ../../docs/server_manual/services.rst:19
+msgid "WMTS 1.0.0"
+msgstr "WMTS 1.0.0"
+
+#: ../../docs/server_manual/services.rst:21
+msgid ""
+"Extra vendor parameters and requests are supported in addition to the "
+"original standard that greatly enhance the possibilities of customizing its "
+"behavior thanks to the QGIS rendering engine."
+msgstr ""
+"Ulteriori parametri e richieste sono supportati in aggiunta allo standard "
+"originale che migliora notevolmente le possibilità di personalizzazione "
+"grazie al motore di visualizzazione QGIS."
+
+#: ../../docs/server_manual/services.rst:27
+msgid "Web Map Service (WMS)"
+msgstr "Web Map Service (WMS)"
+
+#: ../../docs/server_manual/services.rst:29
+msgid ""
+"The **1.1.1** and **1.3.0** WMS standards implemented in QGIS Server provide"
+" a HTTP interface to request map or legend images generated from a QGIS "
+"project. A typical WMS request defines the QGIS project to use, the layers "
+"to render as well as the image format to generate. Basic support is also "
+"available for **Styled Layer Descriptor (SLD)**."
+msgstr ""
+"Gli standard **1.1.1** e **1.3.0** WMS implementati in QGIS Server "
+"forniscono un'interfaccia HTTP per richiedere immagini di mappe o legende "
+"generate da un progetto QGIS. Una tipica richiesta WMS definisce il progetto"
+" QGIS da usare, i layer da visualizzare e il formato dell'immagine da "
+"generare. Il supporto di base è disponibile anche per **Styled Layer "
+"Descriptor (SLD)**."
+
+#: ../../docs/server_manual/services.rst:35
+msgid "Specifications:"
+msgstr "Specifiche:"
+
+#: ../../docs/server_manual/services.rst:37
+msgid ""
+"`WMS 1.1.1 "
+"<https://portal.ogc.org/files/?artifact_id=1081&amp;version=1&amp;format=pdf>`_"
+msgstr ""
+"`WMS 1.1.1 "
+"<https://portal.ogc.org/files/?artifact_id=1081&amp;version=1&amp;format=pdf>`_"
+
+#: ../../docs/server_manual/services.rst:38
+msgid ""
+"`WMS 1.3.0 "
+"<https://portal.opengeospatial.org/files/?artifact_id=14416&format=pdf>`_"
+msgstr ""
+"`WMS 1.3.0 "
+"<https://portal.opengeospatial.org/files/?artifact_id=14416&format=pdf>`_"
+
+#: ../../docs/server_manual/services.rst:39
+msgid ""
+"`SLD 1.1.0 WMS profile "
+"<http://portal.opengeospatial.org/files/?artifact_id=22364&format=pdf>`_"
+msgstr ""
+"`SLD 1.1.0 WMS profile "
+"<http://portal.opengeospatial.org/files/?artifact_id=22364&format=pdf>`_"
+
+#: ../../docs/server_manual/services.rst:41
+#: ../../docs/server_manual/services.rst:1082
+#: ../../docs/server_manual/services.rst:1266
+msgid "Standard requests provided by QGIS Server:"
+msgstr "Richieste standard fornite da QGIS Server:"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Request"
+msgstr "Request"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Description"
+msgstr "Descrizione"
+
+#: ../../docs/server_manual/services.rst:1
+#: ../../docs/server_manual/services.rst:1280
+msgid "GetCapabilities"
+msgstr "GetCapabilities"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Returns XML metadata with information about the server"
+msgstr "Restituisce metadati XML con informazioni sul server"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`GetMap <qgisserver-wms-getmap>`"
+msgstr ":ref:`GetMap <qgisserver-wms-getmap>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Returns a map"
+msgstr "Restituisce una mappa"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`GetFeatureInfo <server_wms_getfeatureinfo>`"
+msgstr ":ref:`GetFeatureInfo <server_wms_getfeatureinfo>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Retrieves data (geometry and values) for a pixel location"
+msgstr "Recupera i dati (geometria e valori) per una posizione di pixel"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`GetLegendGraphics <server_wms_getlegendgraphics>`"
+msgstr ":ref:`GetLegendGraphics <server_wms_getlegendgraphics>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Returns legend symbols"
+msgstr "Restituisce i simboli della legenda"
+
+#: ../../docs/server_manual/services.rst:53
+msgid "Vendor requests provided by QGIS Server:"
+msgstr "Richieste del fornitore date da QGIS Server:"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`GetPrint <server_wms_getprint>`"
+msgstr ":ref:`GetPrint <server_wms_getprint>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Returns a QGIS composition"
+msgstr "Restituisce una composizione QGIS"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`GetProjectSettings <server_wms_getprojectsettings>`"
+msgstr ":ref:`GetProjectSettings <server_wms_getprojectsettings>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Returns specific information about QGIS Server"
+msgstr "Restituisce informazioni specifiche su QGIS Server"
+
+#: ../../docs/server_manual/services.rst:66
+msgid "GetMap"
+msgstr "GetMap"
+
+#: ../../docs/server_manual/services.rst:68
+msgid ""
+"Standard parameters for the **GetMap** request according to the OGC WMS "
+"1.1.1 and 1.3.0 specifications:"
+msgstr ""
+"Parametri standard per la richiesta **GetMap** secondo le specifiche OGC WMS"
+" 1.1.1 e 1.3.0:"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Parameter"
+msgstr "Parametro"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Required"
+msgstr "Richiesto"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`SERVICE <wms-service>`"
+msgstr ":ref:`SERVICE <wms-service>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Yes"
+msgstr "Sì"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Name of the service (**WMS**)"
+msgstr "Nome del servizio (**WMS**)"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`VERSION <wms-version>`"
+msgstr ":ref:`VERSION <wms-version>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Version of the service"
+msgstr "Versione del servizio"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`REQUEST <wms-getmap-request>`"
+msgstr ":ref:`REQUEST <wms-getmap-request>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Name of the request (**GetMap**)"
+msgstr "Nome della richiesta (**GetMap**)"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`LAYERS <wms-layers>`"
+msgstr ":ref:`LAYERS <wms-layers>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "No"
+msgstr "No"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Layers to display"
+msgstr "Layer da visualizzare"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`STYLES <wms-styles>`"
+msgstr ":ref:`STYLES <wms-styles>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Layers' style"
+msgstr "Stile del layers"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`SRS / CRS <wms-srs>`"
+msgstr ":ref:`SRS / CRS <wms-srs>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Coordinate reference system"
+msgstr "Sistema di riferimento delle Coordinate"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`BBOX <wms-bbox>`"
+msgstr ":ref:`BBOX <wms-bbox>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Map extent"
+msgstr "Estensione Mappa"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`WIDTH <wms-width>`"
+msgstr ":ref:`WIDTH <wms-width>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Width of the image in pixels"
+msgstr "Larghezza dell'immagine in pixel"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`HEIGHT <wms-height>`"
+msgstr ":ref:`HEIGHT <wms-height>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Height of the image in pixels"
+msgstr "Altezza dell'immagine in pixel"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`FORMAT <wms-getmap-format>`"
+msgstr ":ref:`FORMAT <wms-getmap-format>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Image format"
+msgstr "Formato immagine"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`TRANSPARENT <wms-transparent>`"
+msgstr ":ref:`TRANSPARENT <wms-transparent>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Transparent background"
+msgstr "Sfondo trasparente"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "SLD"
+msgstr "SLD"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "URL of an SLD to be used for styling"
+msgstr "URL di un SLD da usare per lo stile"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "SLD_BODY"
+msgstr "SLD_BODY"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "In-line SLD (XML) to be used for styling"
+msgstr "SLD in linea (XML) da usare per lo stile"
+
+#: ../../docs/server_manual/services.rst:90
+#: ../../docs/server_manual/services.rst:631
+#: ../../docs/server_manual/services.rst:1121
+#: ../../docs/server_manual/services.rst:1293
+#: ../../docs/server_manual/services.rst:1356
+#: ../../docs/server_manual/services.rst:1512
+msgid ""
+"In addition to the standard ones, QGIS Server supports the following extra "
+"parameters:"
+msgstr ""
+"Oltre a quelli standard, QGIS Server supporta i seguenti parametri extra:"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`MAP <wms-map>`"
+msgstr ":ref:`MAP <wms-map>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Specify the QGIS project file"
+msgstr "Specifica del file di progetto QGIS"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`BGCOLOR <wms-bgcolor>`"
+msgstr ":ref:`BGCOLOR <wms-bgcolor>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Specify the background color"
+msgstr "Specifica del colore di sfondo"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`DPI <wms-dpi>`"
+msgstr ":ref:`DPI <wms-dpi>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Specify the output resolution"
+msgstr "Specifica della risoluzione in uscita"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`IMAGE_QUALITY <wms-imagequality>`"
+msgstr ":ref:`IMAGE_QUALITY <wms-imagequality>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "JPEG compression"
+msgstr "Compressione JPEG"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`OPACITIES <wms-opacities>`"
+msgstr ":ref:`OPACITIES <wms-opacities>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Opacity for layer or group"
+msgstr "Opacità per il layer o il gruppo"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`FILTER <wms-filter>`"
+msgstr ":ref:`FILTER <wms-filter>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Subset of features"
+msgstr "Sottoinsieme di elementi"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`SELECTION <wms-selection>`"
+msgstr ":ref:`SELECTION <wms-selection>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Highlight features"
+msgstr "Elementi principali"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "FILE_NAME"
+msgstr "FILE_NAME"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "File name of the downloaded file"
+msgstr "Nome del file scaricato"
+
+#: ../../docs/server_manual/services.rst:3
+msgid "Only for ``FORMAT=application/dxf``"
+msgstr "Solo per ``FORMAT=application/dxf``"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`FORMAT_OPTIONS <wms-formatoptions>`"
+msgstr ":ref:`FORMAT_OPTIONS <wms-formatoptions>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Options of the specified file format"
+msgstr "Opzioni del formato di file specificato"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`TILED <wms-tiled>`"
+msgstr ":ref:`TILED <wms-tiled>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Working in *tiled mode*"
+msgstr "Lavorare in *modalità tassellata*"
+
+#: ../../docs/server_manual/services.rst:113
+#: ../../docs/server_manual/services.rst:362
+#: ../../docs/server_manual/services.rst:497
+#: ../../docs/server_manual/services.rst:649
+#: ../../docs/server_manual/services.rst:846
+#: ../../docs/server_manual/services.rst:1162
+#: ../../docs/server_manual/services.rst:1178
+#: ../../docs/server_manual/services.rst:1198
+#: ../../docs/server_manual/services.rst:1220
+#: ../../docs/server_manual/services.rst:1242
+#: ../../docs/server_manual/services.rst:1304
+#: ../../docs/server_manual/services.rst:1367
+#: ../../docs/server_manual/services.rst:1523
+#: ../../docs/server_manual/services.rst:1867
+#: ../../docs/server_manual/services.rst:1942
+#: ../../docs/server_manual/services.rst:1954
+#: ../../docs/server_manual/services.rst:1968
+#: ../../docs/server_manual/services.rst:1979
+#: ../../docs/server_manual/services.rst:2008
+msgid "URL example:"
+msgstr "Esempio di URL:"
+
+#: ../../docs/server_manual/services.rst:1
+#: ../../docs/server_manual/services.rst:137
+#: ../../docs/server_manual/services.rst:1136
+#: ../../docs/server_manual/services.rst:1315
+#: ../../docs/server_manual/services.rst:1383
+#: ../../docs/server_manual/services.rst:1538
+msgid "SERVICE"
+msgstr "SERVICE"
+
+#: ../../docs/server_manual/services.rst:139
+msgid "This parameter has to be ``WMS``."
+msgstr "Questo parametro deve essere ``WMS``."
+
+#: ../../docs/server_manual/services.rst:141
+#: ../../docs/server_manual/services.rst:867
+#: ../../docs/server_manual/services.rst:1141
+msgid "For example:"
+msgstr "Per esempio:"
+
+#: ../../docs/server_manual/services.rst:1
+#: ../../docs/server_manual/services.rst:153
+#: ../../docs/server_manual/services.rst:1151
+msgid "VERSION"
+msgstr "VERSION"
+
+#: ../../docs/server_manual/services.rst:155
+#: ../../docs/server_manual/services.rst:1153
+msgid ""
+"This parameter allows to specify the version of the service to use. "
+"Available values for the ``VERSION`` parameter are:"
+msgstr ""
+"Questo parametro permette di specificare la versione del servizio da "
+"utilizzare. I valori disponibili per il parametro ``VERSION`` sono:"
+
+#: ../../docs/server_manual/services.rst:158
+msgid "``1.1.1``"
+msgstr "``1.1.1``"
+
+#: ../../docs/server_manual/services.rst:159
+msgid "``1.3.0``"
+msgstr "``1.3.0``"
+
+#: ../../docs/server_manual/services.rst:161
+msgid ""
+"According to the version number, slight differences have to be expected as "
+"explained later for the next parameters:"
+msgstr ""
+"A seconda del numero di versione, ci si devono aspettare leggere differenze "
+"come spiegato più avanti per i prossimi parametri:"
+
+#: ../../docs/server_manual/services.rst:164
+msgid "``CRS`` / ``SRS``"
+msgstr "``CRS`` / ``SRS``"
+
+#: ../../docs/server_manual/services.rst:165
+msgid "``BBOX``"
+msgstr "``BBOX``"
+
+#: ../../docs/server_manual/services.rst:1
+#: ../../docs/server_manual/services.rst:171
+#: ../../docs/server_manual/services.rst:673
+#: ../../docs/server_manual/services.rst:885
+#: ../../docs/server_manual/services.rst:1173
+#: ../../docs/server_manual/services.rst:1322
+#: ../../docs/server_manual/services.rst:1389
+#: ../../docs/server_manual/services.rst:1545
+msgid "REQUEST"
+msgstr "REQUEST"
+
+#: ../../docs/server_manual/services.rst:173
+msgid "This parameter is ``GetMap`` in case of the **GetMap** request."
+msgstr "Questo parametro è ``GetMap`` nel caso della richiesta **GetMap**."
+
+#: ../../docs/server_manual/services.rst:179
+msgid "LAYERS"
+msgstr "LAYERS"
+
+#: ../../docs/server_manual/services.rst:181
+msgid ""
+"This parameter allows to specify the layers to display on the map. Names "
+"have to be separated by a comma."
+msgstr ""
+"Questo parametro permette di specificare i layer da visualizzare sulla "
+"mappa. I nomi devono essere separati da una virgola."
+
+#: ../../docs/server_manual/services.rst:184
+msgid "In addition, QGIS Server introduced some options to select layers by:"
+msgstr ""
+"Inoltre, QGIS Server ha introdotto alcune opzioni per selezionare i layer:"
+
+#: ../../docs/server_manual/services.rst:186
+#: ../../docs/server_manual/services.rst:1402
+#: ../../docs/server_manual/services.rst:1572
+msgid "a short name"
+msgstr "un nome breve"
+
+#: ../../docs/server_manual/services.rst:187
+#: ../../docs/server_manual/services.rst:1403
+#: ../../docs/server_manual/services.rst:1573
+msgid "the layer id"
+msgstr "il layer id"
+
+#: ../../docs/server_manual/services.rst:189
+#: ../../docs/server_manual/services.rst:1405
+#: ../../docs/server_manual/services.rst:1575
+msgid ""
+"The short name of a layer may be configured through "
+":menuselection:`Properties --> Metadata` in layer menu. If the short name is"
+" defined, then it's used by default instead of the layer's name:"
+msgstr ""
+"Il nome breve di un layer può essere configurato attraverso :menuselection: "
+"`Proprietà --> Metadati` nel menu del layer. Se il nome breve è definito, "
+"allora viene usato come predefinito al posto del nome del layer:"
+
+#: ../../docs/server_manual/services.rst:202
+msgid ""
+"Moreover, there's a project option allowing to select layers by their id in "
+":menuselection:`OWS Server --> WMS capabilities` menu of the "
+":menuselection:`Project --> Properties...` dialog. To activate this option, "
+"the checkbox :guilabel:`Use layer ids as names` has to be selected."
+msgstr ""
+"Inoltre, c'è un'opzione del progetto che permette di selezionare i layer in "
+"base al loro id nel menu :menuselection:`OWS Server --> WMS capabilities` "
+"della finestra di dialogo :menuselection: `Progetto --> Proprietà...`. Per "
+"attivare questa opzione, la casella di controllo :guilabel:`Usa gli id del "
+"layer come nomi` deve essere selezionata."
+
+#: ../../docs/server_manual/services.rst:220
+msgid "STYLES"
+msgstr "STYLES"
+
+#: ../../docs/server_manual/services.rst:222
+msgid ""
+"This parameter can be used to specify a layer's style for the rendering "
+"step. Styles have to be separated by a comma. The name of the default style "
+"is ``default``."
+msgstr ""
+"Questo parametro può essere usato per specificare lo stile di un layer per "
+"il processo di visualizzazione. Gli stili devono essere separati da una "
+"virgola. Il nome dello stile predefinito è ``default``."
+
+#: ../../docs/server_manual/services.rst:231
+msgid "SRS / CRS"
+msgstr "SRS / CRS"
+
+#: ../../docs/server_manual/services.rst:233
+msgid ""
+"This parameter allows to indicate the map output Spatial Reference System in"
+" WMS **1.1.1** and has to be formed like ``EPSG:XXXX``. Note that ``CRS`` is"
+" also supported if current version is **1.1.1**."
+msgstr ""
+"Questo parametro permette di indicare il sistema di riferimento spaziale in "
+"uscita dalla mappa in WMS **1.1.1** e deve essere formulato come "
+"``EPSG:XXXX``. Nota che ``SR`` è supportato anche se la versione corrente è "
+"**1.1.1**."
+
+#: ../../docs/server_manual/services.rst:237
+msgid ""
+"For WMS **1.3.0**, ``CRS`` parameter is preferable but ``SRS`` is also "
+"supported."
+msgstr ""
+"Per WMS **1.3.0**, il parametro ``SR`` è preferibile ma è supportato anche "
+"``SRS``."
+
+#: ../../docs/server_manual/services.rst:240
+msgid ""
+"Note that if both ``CRS`` and ``SRS`` parameters are indicated in the "
+"request, then it's the current version indicated in ``VERSION`` parameter "
+"which is decisive."
+msgstr ""
+"Nota che se entrambi i parametri ``SR`` e ``SRS`` sono indicati nella "
+"richiesta, allora è la versione corrente indicata nel parametro ``VERSION`` "
+"che è decisiva."
+
+#: ../../docs/server_manual/services.rst:244
+msgid ""
+"In the next case, the ``SRS`` parameter is kept whatever the ``VERSION`` "
+"parameter because ``CRS`` is not indicated:"
+msgstr ""
+"Nel prossimo caso, il parametro ``SRS`` è mantenuto qualunque sia il "
+"parametro ``VERSION`` perché ``SR`` non è indicato:"
+
+#: ../../docs/server_manual/services.rst:256
+msgid ""
+"In the next case, the ``SRS`` parameter is kept instead of ``CRS`` because "
+"of the ``VERSION`` parameter:"
+msgstr ""
+"Nel prossimo caso, il parametro ``SRS`` viene tenuto al posto di ``SR`` a "
+"causa del parametro ``VERSION``:"
+
+#: ../../docs/server_manual/services.rst:269
+msgid ""
+"In the next case, the ``CRS`` parameter is kept instead of ``SRS`` because "
+"of the ``VERSION`` parameter:"
+msgstr ""
+"Nel prossimo caso, il parametro ``SR`` viene tenuto al posto di ``SRS`` a "
+"causa del parametro ``VERSION``:"
+
+#: ../../docs/server_manual/services.rst:1
+#: ../../docs/server_manual/services.rst:286
+msgid "BBOX"
+msgstr "BBOX"
+
+#: ../../docs/server_manual/services.rst:288
+msgid ""
+"This parameter allows to specify the map extent with units according to the "
+"current CRS. Coordinates have to be separated by a comma."
+msgstr ""
+"Questo parametro permette di specificare l'estensione della mappa con unità "
+"secondo il SR corrente. Le coordinate devono essere separate da una virgola."
+
+#: ../../docs/server_manual/services.rst:291
+msgid ""
+"The ``BBOX`` parameter is formed like ``min_a,min_b,max_a,max_b`` but ``a`` "
+"and ``b`` axis definition is different according to the current ``VERSION`` "
+"parameter:"
+msgstr ""
+"Il parametro ``BBOX`` è formato come ``min_a,min_b,max_a,max_b`` ma la "
+"definizione degli assi ``a`` e ``b`` è diversa secondo il parametro corrente"
+" ``VERSION``:"
+
+#: ../../docs/server_manual/services.rst:295
+msgid "in WMS **1.1.1**, the axis ordering is always east/north"
+msgstr "in WMS **1.1.1**, la disposizione degli assi è sempre est/nord"
+
+#: ../../docs/server_manual/services.rst:296
+msgid "in WMS **1.3.0**, the axis ordering depends on the CRS authority"
+msgstr ""
+"in WMS **1.3.0**, la disposizione degli assi dipende dall'autorità del SR"
+
+#: ../../docs/server_manual/services.rst:298
+msgid ""
+"For example in case of ``EPSG:4326`` and WMS **1.1.1**, ``a`` is the "
+"longitude (east) and ``b`` the latitude (north), leading to a request like:"
+msgstr ""
+"Per esempio nel caso di ``EPSG:4326`` e WMS **1.1.1**, ``a`` è la "
+"longitudine (est) e ``b``` la latitudine (nord), portando a una richiesta "
+"come:"
+
+#: ../../docs/server_manual/services.rst:311
+msgid ""
+"But in case of WMS **1.3.0**, the axis ordering defined in the EPSG database"
+" is north/east so ``a`` is the latitude and ``b`` the longitude:"
+msgstr ""
+"Ma nel caso di WMS **1.3.0**, l'ordine degli assi definito nel database EPSG"
+" è nord/est quindi ``a`` è la latitudine e ``b``` la longitudine:"
+
+#: ../../docs/server_manual/services.rst:328
+msgid "WIDTH"
+msgstr "WIDTH"
+
+#: ../../docs/server_manual/services.rst:330
+msgid ""
+"This parameter allows to specify the width in pixels of the output image."
+msgstr ""
+"Questo parametro permette di specificare la larghezza in pixel dell'immagine"
+" in uscita."
+
+#: ../../docs/server_manual/services.rst:337
+msgid "HEIGHT"
+msgstr "HEIGHT"
+
+#: ../../docs/server_manual/services.rst:339
+msgid ""
+"This parameter allows to specify the height in pixels of the output image."
+msgstr ""
+"Questo parametro permette di specificare l'altezza in pixel dell'immagine in"
+" uscita."
+
+#: ../../docs/server_manual/services.rst:1
+#: ../../docs/server_manual/services.rst:346
+#: ../../docs/server_manual/services.rst:900
+#: ../../docs/server_manual/services.rst:1433
+msgid "FORMAT"
+msgstr "FORMAT"
+
+#: ../../docs/server_manual/services.rst:348
+msgid ""
+"This parameter may be used to specify the format of map image. Available "
+"values are:"
+msgstr ""
+"Questo parametro può essere usato per specificare il formato dell'immagine "
+"della mappa. I valori disponibili sono:"
+
+#: ../../docs/server_manual/services.rst:351
+#: ../../docs/server_manual/services.rst:906
+#: ../../docs/server_manual/services.rst:1438
+msgid "``jpg``"
+msgstr "``jpg``"
+
+#: ../../docs/server_manual/services.rst:352
+#: ../../docs/server_manual/services.rst:907
+#: ../../docs/server_manual/services.rst:1439
+msgid "``jpeg``"
+msgstr "``jpeg``"
+
+#: ../../docs/server_manual/services.rst:353
+#: ../../docs/server_manual/services.rst:908
+#: ../../docs/server_manual/services.rst:1440
+msgid "``image/jpeg``"
+msgstr "``image/jpeg``"
+
+#: ../../docs/server_manual/services.rst:354
+#: ../../docs/server_manual/services.rst:905
+#: ../../docs/server_manual/services.rst:1441
+msgid "``image/png``"
+msgstr "``image/png``"
+
+#: ../../docs/server_manual/services.rst:355
+msgid "``image/png; mode=1bit``"
+msgstr "``image/png; mode=1bit``"
+
+#: ../../docs/server_manual/services.rst:356
+msgid "``image/png; mode=8bit``"
+msgstr "``image/png; mode=8bit``"
+
+#: ../../docs/server_manual/services.rst:357
+msgid "``image/png; mode=16bit``"
+msgstr "``image/png; mode=16bit``"
+
+#: ../../docs/server_manual/services.rst:358
+msgid ""
+"``application/dxf`` Only layers that have read access in the WFS service are"
+" exported in the DXF format."
+msgstr ""
+"``application/dxf``` Solo i layer che hanno accesso in lettura nel servizio "
+"WFS sono esportati nel formato DXF."
+
+#: ../../docs/server_manual/services.rst:380
+msgid "TRANSPARENT"
+msgstr "TRANSPARENT"
+
+#: ../../docs/server_manual/services.rst:382
+msgid ""
+"This boolean parameter can be used to specify the background transparency. "
+"Available values are (not case sensitive):"
+msgstr ""
+"Questo parametro booleano può essere usato per specificare la trasparenza "
+"dello sfondo. I valori disponibili sono (non sensibili alle maiuscole):"
+
+#: ../../docs/server_manual/services.rst:386
+#: ../../docs/server_manual/services.rst:789
+#: ../../docs/server_manual/services.rst:803
+msgid "``TRUE``"
+msgstr "``TRUE``"
+
+#: ../../docs/server_manual/services.rst:387
+#: ../../docs/server_manual/services.rst:790
+#: ../../docs/server_manual/services.rst:804
+msgid "``FALSE``"
+msgstr "``FALSE``"
+
+#: ../../docs/server_manual/services.rst:389
+msgid ""
+"However, this parameter is ignored if the format of the map image indicated "
+"with ``FORMAT`` is different from PNG."
+msgstr ""
+"Tuttavia, questo parametro viene ignorato se il formato dell'immagine della "
+"mappa indicato con ``FORMAT`` è diverso da PNG."
+
+#: ../../docs/server_manual/services.rst:1
+#: ../../docs/server_manual/services.rst:396
+#: ../../docs/server_manual/services.rst:1329
+#: ../../docs/server_manual/services.rst:1475
+#: ../../docs/server_manual/services.rst:1552
+msgid "MAP"
+msgstr "MAP"
+
+#: ../../docs/server_manual/services.rst:398
+#: ../../docs/server_manual/services.rst:1331
+#: ../../docs/server_manual/services.rst:1477
+#: ../../docs/server_manual/services.rst:1554
+msgid "This parameter allows to define the QGIS project file to use."
+msgstr ""
+"Questo parametro permette di definire il file di progetto QGIS da "
+"utilizzare."
+
+#: ../../docs/server_manual/services.rst:400
+#: ../../docs/server_manual/services.rst:1479
+#: ../../docs/server_manual/services.rst:1556
+msgid ""
+"As mentioned in :ref:`GetMap parameters table <qgisserver-wms-getmap>`, "
+"``MAP`` is mandatory because a request needs a QGIS project to actually "
+"work. However, the ``QGIS_PROJECT_FILE`` environment variable may be used to"
+" define a default QGIS project. In this specific case, ``MAP`` is not longer"
+" a required parameter. For further information you may refer to "
+":ref:`server_env_variables`."
+msgstr ""
+"Come menzionato in :ref:`GetMap parameters table <qgisserver-wms-getmap>`, "
+"``MAP`` è obbligatorio perché una richiesta ha bisogno di un progetto QGIS "
+"per funzionare effettivamente. Tuttavia, la variabile d'ambiente "
+"``QGIS_PROJECT_FILE`` può essere usata per definire un progetto QGIS "
+"predefinito. In questo caso specifico, ``MAP`` non è più un parametro "
+"richiesto. Per ulteriori informazioni puoi fare riferimento a "
+":ref:`server_env_variables`."
+
+#: ../../docs/server_manual/services.rst:412
+msgid "BGCOLOR"
+msgstr "BGCOLOR"
+
+#: ../../docs/server_manual/services.rst:414
+msgid ""
+"This parameter allows to indicate a background color for the map image. "
+"However it cannot be combined with ``TRANSPARENT`` parameter in case of PNG "
+"images (transparency takes priority). The colour may be literal or in "
+"hexadecimal notation."
+msgstr ""
+"Questo parametro permette di indicare un colore di sfondo per l'immagine "
+"della mappa. Tuttavia non può essere combinato con il parametro "
+"``TRANSPARENT`` in caso di immagini PNG (la trasparenza ha la priorità). Il "
+"colore può essere letterale o in notazione esadecimale."
+
+#: ../../docs/server_manual/services.rst:419
+msgid "URL example with the literal notation:"
+msgstr "Esempio di URL con la notazione letterale:"
+
+#: ../../docs/server_manual/services.rst:430
+msgid "URL example with the hexadecimal notation:"
+msgstr "Esempio di URL con la notazione esadecimale:"
+
+#: ../../docs/server_manual/services.rst:445
+msgid "DPI"
+msgstr "DPI"
+
+#: ../../docs/server_manual/services.rst:447
+msgid "This parameter can be used to specify the requested output resolution."
+msgstr ""
+"Questo parametro può essere usato per specificare la risoluzione in uscita "
+"richiesta."
+
+#: ../../docs/server_manual/services.rst:453
+msgid "IMAGE_QUALITY"
+msgstr "IMAGE_QUALITY"
+
+#: ../../docs/server_manual/services.rst:455
+msgid ""
+"This parameter is only used for JPEG images. By default, the JPEG "
+"compression is ``-1``."
+msgstr ""
+"Questo parametro è usato solo per le immagini JPEG. Per impostazione "
+"predefinita, la compressione JPEG è ``-1``."
+
+#: ../../docs/server_manual/services.rst:458
+msgid ""
+"You can change the default per QGIS project in the :menuselection:`OWS "
+"Server --> WMS capabilities` menu of the :menuselection:`Project --> "
+"Properties...` dialog. If you want to override it in a ``GetMap`` request "
+"you can do it using the ``IMAGE_QUALITY`` parameter."
+msgstr ""
+"Puoi cambiare il default per ogni progetto QGIS nel menu :menuselection:`OWS"
+" Server --> WMS capabilities` della finestra di dialogo "
+":menuselection:`Progetto --> Proprietà...`. Se vuoi sovrascriverlo in una "
+"richiesta ``GetMap`` puoi farlo usando il parametro ``IMAGE_QUALITY``."
+
+#: ../../docs/server_manual/services.rst:468
+msgid "OPACITIES"
+msgstr "OPACITIES"
+
+#: ../../docs/server_manual/services.rst:470
+msgid ""
+"Comma separated list of opacity values. Opacity can be set on layer or group"
+" level. Allowed values range from 0 (fully transparent) to 255 (fully "
+"opaque)."
+msgstr ""
+"Lista separata da virgole di valori di opacità. L'opacità può essere "
+"impostata a livello di layer o di gruppo. I valori consentiti vanno da 0 "
+"(completamente trasparente) a 255 (completamente opaco)."
+
+#: ../../docs/server_manual/services.rst:1
+#: ../../docs/server_manual/services.rst:478
+msgid "FILTER"
+msgstr "FILTER"
+
+#: ../../docs/server_manual/services.rst:480
+msgid ""
+"A subset of layers can be selected with the ``FILTER`` parameter. The syntax"
+" is basically the same as for the QGIS subset string. However, there are "
+"some restrictions to avoid SQL injections into databases via QGIS Server. If"
+" a dangerous string is found in the parameter, QGIS Server will return the "
+"next error:"
+msgstr ""
+"Un sottoinsieme di layer può essere selezionato con il parametro ``FILTER``."
+" La sintassi è fondamentalmente la stessa della stringa del sottoinsieme di "
+"QGIS. Tuttavia, ci sono alcune restrizioni per evitare introduzioni SQL nei "
+"database tramite QGIS Server. Se viene trovata una stringa pericolosa nel "
+"parametro, QGIS Server restituirà l'errore successivo:"
+
+#: ../../docs/server_manual/services.rst:508
+msgid ""
+"In this example, the same filter (field ``col2`` equals the string "
+"``blabla``) is applied to layers ``mylayer1`` and ``mylayer2``, while the "
+"filter on ``col1`` is only applied to ``mylayer1``."
+msgstr ""
+"In questo esempio, lo stesso filtro (il campo ``col2`` è uguale alla stringa"
+" ``blabla``) è applicato ai layer ``mylayer1`` e ``mylayer2``, mentre il "
+"filtro su ``col1`` è applicato solo a ``mylayer1``."
+
+#: ../../docs/server_manual/services.rst:514
+msgid ""
+"It is possible to make attribute searches via GetFeatureInfo and omit the "
+"X/Y parameter if a FILTER is there. QGIS Server then returns info about the "
+"matching features and generates a combined bounding box in the XML output."
+msgstr ""
+"È possibile fare ricerche di attributi tramite GetFeatureInfo e omettere il "
+"parametro X/Y se c'è un FILTER. QGIS Server restituisce quindi le "
+"informazioni sugli elementi corrispondenti e genera un perimetro di "
+"delimitazione combinato nell'XML in uscita."
+
+#: ../../docs/server_manual/services.rst:523
+msgid "SELECTION"
+msgstr "SELECTION"
+
+#: ../../docs/server_manual/services.rst:525
+msgid ""
+"The ``SELECTION`` parameter can highlight features from one or more layers. "
+"Vector features can be selected by passing comma separated lists with "
+"feature ids."
+msgstr ""
+"Il parametro ``SELECTION`` può evidenziare elementi da uno o più layer. Gli "
+"elementi vettoriali possono essere selezionati passandogli liste separate da"
+" virgole con gli id degli elementi."
+
+#: ../../docs/server_manual/services.rst:539
+msgid ""
+"The following image presents the response from a GetMap request using the "
+"``SELECTION`` option e.g. "
+"``http://myserver.com/...&SELECTION=countries:171,65``."
+msgstr ""
+"L'immagine seguente presenta la risposta di una richiesta GetMap utilizzando"
+" l'opzione ``SELECTION``, ad esempio "
+"``http://myserver.com/...&SELECTION=countries:171,65``."
+
+#: ../../docs/server_manual/services.rst:543
+msgid ""
+"As those features id's correspond in the source dataset to **France** and "
+"**Romania** they're highlighted in yellow."
+msgstr ""
+"Poiché questi id degli elementi corrispondono nell'insieme dei dati di "
+"origine a **France** e **Romania** sono evidenziati in giallo."
+
+#: ../../docs/server_manual/services.rst:551
+msgid "Server response to a GetMap request with SELECTION parameter"
+msgstr "Risposta del server a una richiesta GetMap con il parametro SELECTION"
+
+#: ../../docs/server_manual/services.rst:556
+msgid "FORMAT-OPTIONS"
+msgstr "FORMAT-OPTIONS"
+
+#: ../../docs/server_manual/services.rst:558
+msgid ""
+"This parameter can be used to specify options for the selected format. Only "
+"for ``FORMAT=application/dxf``. A list of key:value pairs separated by "
+"semicolon:"
+msgstr ""
+"Questo parametro può essere usato per specificare le opzioni per il formato "
+"selezionato. Solo per ``FORMAT=application/dxf``. Una lista di coppie "
+"chiave:valore separate da punto e virgola:"
+
+#: ../../docs/server_manual/services.rst:562
+msgid ""
+"SCALE: to be used for symbology rules, filters and styles (not actual "
+"scaling of the data - data remains in the original scale)."
+msgstr ""
+"SCALE: da usare per le regole della simbologia, i filtri e gli stili (non la"
+" scalatura effettiva dei dati - i dati rimangono nella scala originale)."
+
+#: ../../docs/server_manual/services.rst:564
+msgid ""
+"MODE: corresponds to the export options offered in the QGIS Desktop DXF "
+"export dialog. Possible values are ``NOSYMBOLOGY``, ``FEATURESYMBOLOGY`` and"
+" ``SYMBOLLAYERSYMBOLOGY``."
+msgstr ""
+"MODE: corrisponde alle opzioni di esportazione offerte nella finestra di "
+"dialogo di esportazione DXF di QGIS Desktop. I valori possibili sono "
+"``NOSYMBOLOGY``, ``FEATURESYMBOLOGY`` e ``SYMBOLLAYERSYMBOLOGY``."
+
+#: ../../docs/server_manual/services.rst:567
+msgid ""
+"LAYERSATTRIBUTES: specify a field that contains values for DXF layer names -"
+" if not specified, the original QGIS layer names are used."
+msgstr ""
+"LAYERSATTRIBUTES: specifica un campo che contiene valori per i nomi dei "
+"layer DXF - se non specificato, vengono usati i nomi originali dei layer "
+"QGIS."
+
+#: ../../docs/server_manual/services.rst:569
+msgid ""
+"USE_TITLE_AS_LAYERNAME: if enabled, the title of the layer will be used as "
+"layer name."
+msgstr ""
+"USE_TITLE_AS_LAYERNAME: se abilitato, il titolo del layer sarà usato come "
+"nome del layer."
+
+#: ../../docs/server_manual/services.rst:571
+msgid ""
+"CODEC: specify a codec to be used for encoding. Default is ``ISO-8859-1`` "
+"check the QGIS desktop DXF export dialog for valid values."
+msgstr ""
+"CODEC: specifica un codec da usare per la codifica. Il valore predefinito è "
+"``ISO-8859-1``, verificare la finestra di dialogo di esportazione DXF di "
+"QGIS desktop per i valori validi."
+
+#: ../../docs/server_manual/services.rst:573
+msgid "NO_MTEXT: Use TEXT instead of MTEXT for labels."
+msgstr "NO_MTEXT: usa TEXT invece di MTEXT per le etichette."
+
+#: ../../docs/server_manual/services.rst:574
+msgid "FORCE_2D: Force 2D output. This is required for polyline width."
+msgstr ""
+"FORCE_2D: Forza il risultato in 2D. Questo è richiesto per la larghezza "
+"della polilinea."
+
+#: ../../docs/server_manual/services.rst:579
+msgid "TILED"
+msgstr "TILED"
+
+#: ../../docs/server_manual/services.rst:581
+msgid ""
+"For performance reasons, QGIS Server can be used in tiled mode. In this "
+"mode, the client requests several small fixed size tiles, and assembles them"
+" to form the whole map. Doing this, symbols at or near the boundary between "
+"two tiles may appeared cut, because they are only present in one of the "
+"tile."
+msgstr ""
+"Per ragioni di performance, QGIS Server può essere usato in modalità tiled. "
+"In questa modalità, il client richiede diverse piccoli tasselli di "
+"dimensioni fisse, e le assembla per formare l'intera mappa. Facendo questo, "
+"i simboli al o vicino al confine tra due tasselli possono apparire tagliati,"
+" perché sono presenti solo in uno dei tasselli."
+
+#: ../../docs/server_manual/services.rst:587
+msgid ""
+"Set the ``TILED`` parameter to ``TRUE`` to tell QGIS Server to work in "
+"*tiled* mode, and to apply the *Tile buffer* configured in the QGIS project "
+"(see :ref:`Creatingwmsfromproject`)."
+msgstr ""
+"Imposta il parametro ``TILED`` a ``TRUE`` per dire a QGIS Server di lavorare"
+" in modalità *tiled*, e di applicare il *Tassello buffer* configurato nel "
+"progetto QGIS (vedi :ref:`Creatingwmsfromproject`)."
+
+#: ../../docs/server_manual/services.rst:591
+msgid ""
+"When ``TILED`` is ``TRUE`` and when a non-zero Tile buffer is configured in "
+"the QGIS project, features outside the tile extent are drawn to avoid cut "
+"symbols at tile boundaries."
+msgstr ""
+"Quando ``TILED`` è ``TRUE`` e quando un Tassello buffer non nullo è "
+"configurato nel progetto QGIS, gli elementi al di fuori dell'estensione del "
+"tassello sono disegnati per evitare simboli di taglio ai confini del "
+"tassello."
+
+#: ../../docs/server_manual/services.rst:595
+msgid "``TILED`` defaults to ``FALSE``."
+msgstr "Per default, ``TILED`` è impostato su ``FALSE``."
+
+#: ../../docs/server_manual/services.rst:1
+#: ../../docs/server_manual/services.rst:600
+#: ../../docs/server_manual/services.rst:1491
+msgid "GetFeatureInfo"
+msgstr "GetFeatureInfo"
+
+#: ../../docs/server_manual/services.rst:602
+msgid ""
+"Standard parameters for the **GetFeatureInfo** request according to the OGC "
+"WMS 1.1.1 and 1.3.0 specifications:"
+msgstr ""
+"Parametri standard per la richiesta **GetFeatureInfo** secondo le specifiche"
+" OGC WMS 1.1.1 e 1.3.0:"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`REQUEST <wms-getfeatureinfo-request>`"
+msgstr ":ref:`REQUEST <wms-getfeatureinfo-request>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Name of the request (**GetFeatureInfo**)"
+msgstr "Nome della richiesta (**GetFeatureInfo**)"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`QUERY_LAYERS <wms-querylayers>`"
+msgstr ":ref:`QUERY_LAYERS <wms-querylayers>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Layers to query"
+msgstr "Layer su cui fare la query"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Layers to display (identical to `QUERY_LAYERS`)"
+msgstr "Layer da visualizzare (identico a `QUERY_LAYERS`)"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`INFO_FORMAT <wms-infoformat>`"
+msgstr ":ref:`INFO_FORMAT <wms-infoformat>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Output format"
+msgstr "Formato in uscita"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`FEATURE_COUNT <wms-featurecount>`"
+msgstr ":ref:`FEATURE_COUNT <wms-featurecount>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Maximum number of features to return"
+msgstr "Numero massimo di elementi da restituire"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`I <wms-i>`"
+msgstr ":ref:`I <wms-i>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Pixel column of the point to query"
+msgstr "Colonna pixel del punto da interrogare"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`X <wms-x>`"
+msgstr ":ref:`X <wms-x>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Same as `I` parameter, but in WMS 1.1.1"
+msgstr "Come il parametro `I`, ma in WMS 1.1.1"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`J <wms-j>`"
+msgstr ":ref:`J <wms-j>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Pixel row of the point to query"
+msgstr "Riga pixel del punto da interrogare"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`Y <wms-y>`"
+msgstr ":ref:`Y <wms-y>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Same as `J` parameter, but in WMS 1.1.1"
+msgstr "Come il parametro `J`, ma in WMS 1.1.1"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "WMS_PRECISION"
+msgstr "WMS_PRECISION"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ""
+"The precision (number of digits) to be used when returning geometry (see "
+":ref:`how to add geometry to feature response "
+"<addGeometryToFeatureResponse>`). The default value is ``-1`` meaning that "
+"the precision defined in the project is used."
+msgstr ""
+"La precisione (numero di cifre) da usare quando si restituisce la geometria "
+"(vedi :ref:`how to add geometry to feature response "
+"<addGeometryToFeatureResponse>`). Il valore predefinito è ``-1`` che "
+"significa che viene usata la precisione definita nel progetto."
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`FI_POINT_TOLERANCE <wms-fipointtolerance>`"
+msgstr ":ref:`FI_POINT_TOLERANCE <wms-fipointtolerance>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Tolerance in pixels for point layers"
+msgstr "Tolleranza in pixel per i layer punto"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`FI_LINE_TOLERANCE <wms-filinetolerance>`"
+msgstr ":ref:`FI_LINE_TOLERANCE <wms-filinetolerance>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Tolerance in pixels for line layers"
+msgstr "Tolleranza in pixel per i layer linea"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`FI_POLYGON_TOLERANCE <wms-fipolygontolerance>`"
+msgstr ":ref:`FI_POLYGON_TOLERANCE <wms-fipolygontolerance>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Tolerance in pixels for polygon layers"
+msgstr "Tolleranza in pixel per i layer poligono"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`FILTER_GEOM <wms-filtergeom>`"
+msgstr ":ref:`FILTER_GEOM <wms-filtergeom>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Geometry filtering"
+msgstr "Filtrare geometria"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`WITH_MAPTIP <wms-withmaptip>`"
+msgstr ":ref:`WITH_MAPTIP <wms-withmaptip>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Add map tips to the output"
+msgstr "Aggiungere suggerimenti mappa al risultato"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`WITH_GEOMETRY <wms-withgeometry>`"
+msgstr ":ref:`WITH_GEOMETRY <wms-withgeometry>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Add geometry to the output"
+msgstr "Aggiungere la geometria al risultato"
+
+#: ../../docs/server_manual/services.rst:675
+#: ../../docs/server_manual/services.rst:1547
+msgid ""
+"This parameter is ``GetFeatureInfo`` in case of the **GetFeatureInfo** "
+"request."
+msgstr ""
+"Questo parametro è ``GetFeatureInfo`` nel caso della richiesta "
+"**GetFeatureInfo**."
+
+#: ../../docs/server_manual/services.rst:680
+msgid "INFO_FORMAT"
+msgstr "INFO_FORMAT"
+
+#: ../../docs/server_manual/services.rst:682
+msgid ""
+"This parameter may be used to specify the format of the result. Available "
+"values are:"
+msgstr ""
+"Questo parametro può essere usato per specificare il formato del risultato. "
+"I valori disponibili sono:"
+
+#: ../../docs/server_manual/services.rst:685
+#: ../../docs/server_manual/services.rst:1609
+msgid "``text/xml``"
+msgstr "``text/xml``"
+
+#: ../../docs/server_manual/services.rst:686
+#: ../../docs/server_manual/services.rst:1610
+msgid "``text/html``"
+msgstr "``text/html``"
+
+#: ../../docs/server_manual/services.rst:687
+#: ../../docs/server_manual/services.rst:1611
+msgid "``text/plain``"
+msgstr "``text/plain``"
+
+#: ../../docs/server_manual/services.rst:688
+#: ../../docs/server_manual/services.rst:1612
+msgid "``application/vnd.ogc.gml``"
+msgstr "``application/vnd.ogc.gml``"
+
+#: ../../docs/server_manual/services.rst:689
+msgid "``application/json``"
+msgstr "``application/json``"
+
+#: ../../docs/server_manual/services.rst:694
+msgid "QUERY_LAYERS"
+msgstr "QUERY_LAYERS"
+
+#: ../../docs/server_manual/services.rst:696
+msgid ""
+"This parameter specifies the layers to display on the map. Names are "
+"separated by a comma."
+msgstr ""
+"Questo parametro specifica i layer da visualizzare sulla mappa. I nomi sono "
+"separati da una virgola."
+
+#: ../../docs/server_manual/services.rst:699
+msgid "In addition, QGIS Server introduces options to select layers by:"
+msgstr ""
+"Inoltre, QGIS Server introduce opzioni per selezionare i layer in base a:"
+
+#: ../../docs/server_manual/services.rst:701
+msgid "short name"
+msgstr "nome breve"
+
+#: ../../docs/server_manual/services.rst:702
+msgid "layer id"
+msgstr "layer id"
+
+#: ../../docs/server_manual/services.rst:704
+msgid ""
+"See the ``LAYERS`` parameter defined in :ref:`GetMap <wms-layers>` for more "
+"information."
+msgstr ""
+"Vedi il parametro ``LAYERS`` definito in :ref:`GetMap <wms-layers>` per "
+"maggiori informazioni."
+
+#: ../../docs/server_manual/services.rst:710
+msgid "FEATURE_COUNT"
+msgstr "FEATURE_COUNT"
+
+#: ../../docs/server_manual/services.rst:712
+msgid ""
+"This parameter specifies the maximum number of features per layer to return."
+" For example if ``QUERY_LAYERS`` is set to ``layer1,layer2`` and "
+"``FEATURE_COUNT`` is set to ``3`` then a maximum of 3 features from layer1 "
+"will be returned. Likewise a maximun of 3 features from layer2 will be "
+"returned."
+msgstr ""
+"Questo parametro specifica il numero massimo di elementi per layer da "
+"restituire. Per esempio se ``QUERY_LAYERS`` è impostato su ``layer1,layer2``"
+" e ``FEATURE_COUNT`` è impostato su ``3`` allora saranno restituite un "
+"massimo di 3 elementi dal layer1. Allo stesso modo verrà restituito un "
+"massimo di 3 elementi dal layer2."
+
+#: ../../docs/server_manual/services.rst:719
+msgid "By default, only 1 feature per layer is returned."
+msgstr ""
+"Per impostazione predefinita, viene restituito solo 1 elemento per layer."
+
+#: ../../docs/server_manual/services.rst:1
+#: ../../docs/server_manual/services.rst:724
+#: ../../docs/server_manual/services.rst:1618
+msgid "I"
+msgstr "I"
+
+#: ../../docs/server_manual/services.rst:726
+msgid ""
+"This parameter, defined in WMS 1.3.0, allows you to specify the pixel column"
+" of the query point."
+msgstr ""
+"Questo parametro, definito in WMS 1.3.0, permette di specificare la colonna "
+"pixel del punto di interrogazione."
+
+#: ../../docs/server_manual/services.rst:732
+msgid "X"
+msgstr "X"
+
+#: ../../docs/server_manual/services.rst:734
+msgid "Same parameter as ``I``, but defined in WMS 1.1.1."
+msgstr "Stesso parametro di ``I``, ma definito in WMS 1.1.1."
+
+#: ../../docs/server_manual/services.rst:1
+#: ../../docs/server_manual/services.rst:739
+#: ../../docs/server_manual/services.rst:1625
+msgid "J"
+msgstr "J"
+
+#: ../../docs/server_manual/services.rst:741
+msgid ""
+"This parameter, defined in WMS 1.3.0, allows you to specify the pixel row of"
+" the query point."
+msgstr ""
+"Questo parametro, definito in WMS 1.3.0, permette di specificare la riga "
+"pixel del punto di interrogazione."
+
+#: ../../docs/server_manual/services.rst:747
+msgid "Y"
+msgstr "Y"
+
+#: ../../docs/server_manual/services.rst:749
+msgid "Same parameter as ``J``, but defined in WMS 1.1.1."
+msgstr "Stesso parametro di ``J``, ma definito in WMS 1.1.1."
+
+#: ../../docs/server_manual/services.rst:754
+msgid "FI_POINT_TOLERANCE"
+msgstr "FI_POINT_TOLERANCE"
+
+#: ../../docs/server_manual/services.rst:756
+msgid "This parameter specifies the tolerance in pixels for point layers."
+msgstr "Questo parametro specifica la tolleranza in pixel per i layer punto."
+
+#: ../../docs/server_manual/services.rst:761
+msgid "FI_LINE_TOLERANCE"
+msgstr "FI_LINE_TOLERANCE"
+
+#: ../../docs/server_manual/services.rst:763
+msgid "This parameter specifies the tolerance in pixels for line layers."
+msgstr "Questo parametro specifica la tolleranza in pixel per i layer linea."
+
+#: ../../docs/server_manual/services.rst:768
+msgid "FI_POLYGON_TOLERANCE"
+msgstr "FI_POLYGON_TOLERANCE"
+
+#: ../../docs/server_manual/services.rst:770
+msgid "This parameter specifies the tolerance in pixels for polygon layers."
+msgstr ""
+"Questo parametro specifica la tolleranza in pixel per i layer poligono."
+
+#: ../../docs/server_manual/services.rst:775
+msgid "FILTER_GEOM"
+msgstr "FILTER_GEOM"
+
+#: ../../docs/server_manual/services.rst:777
+msgid ""
+"This parameter specifies a WKT geometry with which features have to "
+"intersect."
+msgstr ""
+"Questo parametro specifica una geometria WKT con cui gli elementi devono "
+"intersecarsi."
+
+#: ../../docs/server_manual/services.rst:783
+msgid "WITH_MAPTIP"
+msgstr "WITH_MAPTIP"
+
+#: ../../docs/server_manual/services.rst:785
+msgid "This parameter specifies whether to add map tips to the output."
+msgstr ""
+"Questo parametro specifica se aggiungere suggerimenti mappa al risultato."
+
+#: ../../docs/server_manual/services.rst:787
+#: ../../docs/server_manual/services.rst:801
+msgid "Available values are (not case sensitive):"
+msgstr "I valori disponibili sono (non sensibili alle maiuscole):"
+
+#: ../../docs/server_manual/services.rst:795
+msgid "WITH_GEOMETRY"
+msgstr "WITH_GEOMETRY"
+
+#: ../../docs/server_manual/services.rst:797
+msgid ""
+"This parameter specifies whether to add geometries to the output. To use "
+"this feature you must first enable the :guilabel:`Add geometry to feature "
+"response` option in the QGIS project. See :ref:`Configure your project "
+"<Creatingwmsfromproject>`."
+msgstr ""
+"Questo parametro specifica se aggiungere geometrie al risultato. Per usare "
+"questa funzione devi prima abilitare l'opzione :guilabel:`Aggiungi la "
+"geometria alla risposta dell'oggetto` nel progetto QGIS. Vedi "
+":ref:`Configure your project <Creatingwmsfromproject>`."
+
+#: ../../docs/server_manual/services.rst:810
+msgid "GetPrint"
+msgstr "GetPrint"
+
+#: ../../docs/server_manual/services.rst:812
+msgid ""
+"QGIS Server has the capability to create print layout output in pdf or pixel"
+" format. Print layout windows in the published project are used as "
+"templates. In the **GetPrint** request, the client has the possibility to "
+"specify parameters of the contained layout maps and labels."
+msgstr ""
+"QGIS Server ha la capacità di creare output di layout di stampa in formato "
+"pdf o pixel. Le finestre di layout di stampa nel progetto pubblicato sono "
+"usate come modelli. Nella richiesta **GetPrint**, il client ha la "
+"possibilità di specificare i parametri delle mappe e delle etichette del "
+"layout contenuto."
+
+#: ../../docs/server_manual/services.rst:818
+msgid "Parameters for the **GetPrint** request:"
+msgstr "Parametri per la richiesta **GetPrint**:"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`REQUEST <wms-getprint-request>`"
+msgstr ":ref:`REQUEST <wms-getprint-request>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Name of the request (**GetPrint**)"
+msgstr "Nome della richiesta (**GetPrint**)"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`TEMPLATE <wms-template>`"
+msgstr ":ref:`TEMPLATE <wms-template>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Layout template to use"
+msgstr "Modello di layout da utilizzare"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`FORMAT <wms-getprint-format>`"
+msgstr ":ref:`FORMAT <wms-getprint-format>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`ATLAS_PK <wms-atlaspk>`"
+msgstr ":ref:`ATLAS_PK <wms-atlaspk>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Atlas features"
+msgstr "Caratteristiche dell'Atlante"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`mapX:EXTENT <wms-mapextent>`"
+msgstr ":ref:`mapX:EXTENT <wms-mapextent>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Extent of the map 'X'"
+msgstr "Estensione della mappa 'X'"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`mapX:LAYERS <wms-maplayers>`"
+msgstr ":ref:`mapX:LAYERS <wms-maplayers>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Layers of the map 'X'"
+msgstr "Layer della mappa 'X'"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`mapX:STYLES <wms-mapstyles>`"
+msgstr ":ref:`mapX:STYLES <wms-mapstyles>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Layers' style of the map 'X'"
+msgstr "Stile dei layer della mappa 'X'"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`mapX:SCALE <wms-mapscale>`"
+msgstr ":ref:`mapX:SCALE <wms-mapscale>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Layers' scale of the map 'X'"
+msgstr "Scala dei layer della mappa 'X'"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`mapX:ROTATION <wms-maprotation>`"
+msgstr ":ref:`mapX:ROTATION <wms-maprotation>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Rotation  of the map 'X'"
+msgstr "Rotazione della mappa 'X'"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`mapX:GRID_INTERVAL_X <wms-mapgridintervalx>`"
+msgstr ":ref:`mapX:GRID_INTERVAL_X <wms-mapgridintervalx>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Grid interval on x axis of the map 'X'"
+msgstr "Intervallo del reticolo sull'asse x della mappa 'X'"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`mapX:GRID_INTERVAL_Y <wms-mapgridintervaly>`"
+msgstr ":ref:`mapX:GRID_INTERVAL_Y <wms-mapgridintervaly>`"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Grid interval on y axis of the map 'X'"
+msgstr "Intervallo del reticolo sull'asse y della mappa 'Y'"
+
+#: ../../docs/server_manual/services.rst:862
+msgid ""
+"Note that the layout template may contain more than one map. In this way, if"
+" you want to configure a specific map, you have to use ``mapX:`` parameters "
+"where ``X`` is a positive number that you can retrieve thanks to the "
+"**GetProjectSettings** request."
+msgstr ""
+"Nota che il modello di layout può contenere più di una mappa. In questo "
+"modo, se vuoi configurare una mappa specifica, devi usare i parametri "
+"``mappaX:`` dove ``X`` è un numero positivo che puoi recuperare grazie alla "
+"richiesta **GetProjectSettings**."
+
+#: ../../docs/server_manual/services.rst:887
+msgid "This parameter has to be ``GetPrint`` for the **GetPrint** request."
+msgstr ""
+"Questo parametro deve essere ``GetPrint`` per la richiesta **GetPrint**."
+
+#: ../../docs/server_manual/services.rst:892
+msgid "TEMPLATE"
+msgstr "TEMPLATE"
+
+#: ../../docs/server_manual/services.rst:894
+msgid ""
+"This parameter can be used to specify the name of a layout template to use "
+"for printing."
+msgstr ""
+"Questo parametro può essere utilizzato per specificare il nome di un modello"
+" di layout da utilizzare per la stampa."
+
+#: ../../docs/server_manual/services.rst:902
+msgid ""
+"This parameter specifies the format of map image. Available values are:"
+msgstr ""
+"Questo parametro specifica il formato dell'immagine della mappa. I valori "
+"disponibili sono:"
+
+#: ../../docs/server_manual/services.rst:904
+msgid "``png`` (default value)"
+msgstr "``png`` (default value)"
+
+#: ../../docs/server_manual/services.rst:909
+msgid "``svg``"
+msgstr "``svg``"
+
+#: ../../docs/server_manual/services.rst:910
+msgid "``image/svg``"
+msgstr "``image/svg``"
+
+#: ../../docs/server_manual/services.rst:911
+msgid "``image/svg+xml``"
+msgstr "``image/svg+xml``"
+
+#: ../../docs/server_manual/services.rst:912
+msgid "``pdf``"
+msgstr "``pdf``"
+
+#: ../../docs/server_manual/services.rst:913
+msgid "``application/pdf``"
+msgstr "``application/pdf``"
+
+#: ../../docs/server_manual/services.rst:915
+msgid ""
+"If the ``FORMAT`` parameter is different from one of these values, then an "
+"exception is returned."
+msgstr ""
+"Se il parametro ``FORMAT`` è diverso da uno di questi valori, allora viene "
+"restituita una eccezione."
+
+#: ../../docs/server_manual/services.rst:921
+msgid "ATLAS_PK"
+msgstr "ATLAS_PK"
+
+#: ../../docs/server_manual/services.rst:923
+msgid ""
+"This parameter allows activation of Atlas rendering by indicating which "
+"features we want to print. In order to retrieve an atlas with all features, "
+"the ``*`` symbol may be used (according to the maximum number of features "
+"allowed in the project configuration)."
+msgstr ""
+"Questo parametro permette di attivare la visualizzazione dell'atlante "
+"indicando quali caratteristiche vogliamo stampare. Per ottenere un atlante "
+"con tutte gli elementi, si può usare il simbolo ``*`` (secondo il numero "
+"massimo di elementi consentito nella configurazione del progetto)."
+
+#: ../../docs/server_manual/services.rst:929
+msgid ""
+"When ``FORMAT`` is ``pdf``, a single PDF document combining the feature "
+"pages is returned. For all other formats, a single page is returned."
+msgstr ""
+"Quando il ``FORMAT`` è ``pdf``, viene restituito un singolo documento PDF "
+"che combina le pagine degli elementi. Per tutti gli altri formati, viene "
+"restituita una singola pagina."
+
+#: ../../docs/server_manual/services.rst:936
+msgid "mapX:EXTENT"
+msgstr "mapX:EXTENT"
+
+#: ../../docs/server_manual/services.rst:938
+msgid ""
+"This parameter specifies the extent for a layout map item as "
+"xmin,ymin,xmax,ymax."
+msgstr ""
+"Questo parametro specifica l'estensione per un oggetto della mappa di layout"
+" come xmin,ymin,xmax,ymax."
+
+#: ../../docs/server_manual/services.rst:944
+msgid "mapX:ROTATION"
+msgstr "mapX:ROTATION"
+
+#: ../../docs/server_manual/services.rst:946
+msgid "This parameter specifies the map rotation in degrees."
+msgstr "Questo parametro specifica la rotazione della mappa in gradi."
+
+#: ../../docs/server_manual/services.rst:951
+msgid "mapX:GRID_INTERVAL_X"
+msgstr "mapX:GRID_INTERVAL_X"
+
+#: ../../docs/server_manual/services.rst:953
+msgid "This parameter specifies the grid line density in the X direction."
+msgstr ""
+"Questo parametro specifica la densità delle linee del reticolo nella "
+"direzione X."
+
+#: ../../docs/server_manual/services.rst:958
+msgid "mapX:GRID_INTERVAL_Y"
+msgstr "mapX:GRID_INTERVAL_Y"
+
+#: ../../docs/server_manual/services.rst:960
+msgid "This parameter specifies the grid line density in the Y direction."
+msgstr ""
+"Questo parametro specifica la densità delle linee del reticolo nella "
+"direzione Y."
+
+#: ../../docs/server_manual/services.rst:965
+msgid "mapX:SCALE"
+msgstr "mapX:SCALE"
+
+#: ../../docs/server_manual/services.rst:967
+msgid ""
+"This parameter specifies the map scale for a layout map item. This is useful"
+" to ensure scale based visibility of layers and labels even if client and "
+"server may have different algorithms to calculate the scale denominator."
+msgstr ""
+"Questo parametro specifica la scala della mappa per un oggetto mappa del "
+"layout. Questo è utile per assicurare la visibilità dei layer e delle "
+"etichette in base alla scala, anche se client e server possono avere "
+"algoritmi diversi per calcolare il denominatore della scala."
+
+#: ../../docs/server_manual/services.rst:975
+msgid "mapX:LAYERS"
+msgstr "mapX:LAYERS"
+
+#: ../../docs/server_manual/services.rst:977
+msgid ""
+"This parameter specifies the layers for a layout map item. See :ref:`GetMap "
+"Layers <wms-layers>` for more information on this parameter."
+msgstr ""
+"Questo parametro specifica i layer per un elemento della mappa del layout. "
+"Vedi :ref:`GetMap Layers <wms-layers>` per maggiori informazioni su questo "
+"parametro."
+
+#: ../../docs/server_manual/services.rst:984
+msgid "mapX:STYLES"
+msgstr "mapX:STYLES"
+
+#: ../../docs/server_manual/services.rst:986
+msgid ""
+"This parameter specifies the layers' styles defined in a specific layout map"
+" item. See :ref:`GetMap Styles <wms-styles>` for more information on this "
+"parameter."
+msgstr ""
+"Questo parametro specifica gli stili dei layer definiti in uno specifico "
+"oggetto della mappa di layout. Vedi :ref:`GetMap Styles <wms-styles>` per "
+"maggiori informazioni su questo parametro."
+
+#: ../../docs/server_manual/services.rst:995
+msgid "GetLegendGraphics"
+msgstr "GetLegendGraphics"
+
+#: ../../docs/server_manual/services.rst:997
+msgid ""
+"Several additional parameters are available to change the size of the legend"
+" elements:"
+msgstr ""
+"Sono disponibili diversi parametri aggiuntivi per cambiare la dimensione "
+"degli elementi della legenda:"
+
+#: ../../docs/server_manual/services.rst:1000
+msgid "**BOXSPACE** space between legend frame and content (mm)"
+msgstr "**BOXSPACE** spazio tra la cornice della legenda e il contenuto (mm)"
+
+#: ../../docs/server_manual/services.rst:1001
+msgid "**LAYERSPACE** vertical space between layers (mm)"
+msgstr "**LAYERSPACE** spazio verticale tra i layer (mm)"
+
+#: ../../docs/server_manual/services.rst:1002
+msgid ""
+"**LAYERTITLESPACE** vertical space between layer title and items following "
+"(mm)"
+msgstr ""
+"**LAYERTITLESPACE** spazio verticale tra il titolo del layer e le voci "
+"seguenti (mm)"
+
+#: ../../docs/server_manual/services.rst:1004
+msgid "**SYMBOLSPACE** vertical space between symbol and item following (mm)"
+msgstr ""
+"**SYMBOLSPACE** spazio verticale tra il simbolo e la voce seguente (mm)"
+
+#: ../../docs/server_manual/services.rst:1006
+msgid "**ICONLABELSPACE** horizontal space between symbol and label text (mm)"
+msgstr ""
+"**ICONLABELSPACE** Spazio orizzontale tra il simbolo e il testo "
+"dell'etichetta (mm)"
+
+#: ../../docs/server_manual/services.rst:1008
+msgid "**SYMBOLWIDTH** width of the symbol preview (mm)"
+msgstr "**SYMBOLWIDTH** larghezza dell'anteprima del simbolo (mm)"
+
+#: ../../docs/server_manual/services.rst:1009
+msgid "**SYMBOLHEIGHT** height of the symbol preview (mm)"
+msgstr "**SYMBOLHEIGHT** altezza dell'anteprima del simbolo (mm)"
+
+#: ../../docs/server_manual/services.rst:1011
+msgid ""
+"These parameters change the font properties for layer titles and item "
+"labels:"
+msgstr ""
+"Questi parametri cambiano le proprietà del carattere per i titoli dei layer "
+"e le etichette degli oggetti:"
+
+#: ../../docs/server_manual/services.rst:1014
+msgid ""
+"**LAYERFONTFAMILY / ITEMFONTFAMILY** font family for layer title / item text"
+msgstr ""
+"**LAYERFONTFAMILY / ITEMFONTFAMILY** famiglia di caratteri per il titolo del"
+" layer / testo dell'articolo"
+
+#: ../../docs/server_manual/services.rst:1016
+msgid "**LAYERFONTBOLD / ITEMFONTBOLD** ``TRUE`` to use a bold font"
+msgstr ""
+"**LAYERFONTBOLD / ITEMFONTBOLD** ``TRUE`` per usare un carattere in "
+"grassetto"
+
+#: ../../docs/server_manual/services.rst:1017
+msgid "**LAYERFONTSIZE / ITEMFONTSIZE** Font size in point"
+msgstr "**LAYERFONTSIZE / ITEMFONTSIZE** Dimensione carattere in punti"
+
+#: ../../docs/server_manual/services.rst:1018
+msgid "**LAYERFONTITALIC / ITEMFONTITALIC** ``TRUE`` to use italic font"
+msgstr ""
+"**LAYERFONTITALIC / ITEMFONTITALIC** ``TRUE`` per usare il carattere corsivo"
+
+#: ../../docs/server_manual/services.rst:1019
+msgid ""
+"**LAYERFONTCOLOR / ITEMFONTCOLOR** Hex color code (e.g. ``#FF0000`` for red)"
+msgstr ""
+"**LAYERFONTCOLOR / ITEMFONTCOLOR** Codice colore esadecimale (ad esempio "
+"``#FF0000`` per il rosso)"
+
+#: ../../docs/server_manual/services.rst:1021
+msgid ""
+"**LAYERTITLE** ``FALSE`` to get only the legend graphics without layer title"
+msgstr ""
+"**LAYERTITLE** ``FALSE`` per ottenere solo la grafica della legenda senza il"
+" titolo del layer."
+
+#: ../../docs/server_manual/services.rst:1022
+msgid "**RULELABEL**:"
+msgstr "**RULELABEL**:"
+
+#: ../../docs/server_manual/services.rst:1024
+msgid "``FALSE`` legend graphics without item labels"
+msgstr "``FALSE`` grafica della legenda senza etichette degli elementi"
+
+#: ../../docs/server_manual/services.rst:1025
+msgid ""
+"``AUTO`` hide item label for layers with :guilabel:`Single symbol` rendering"
+msgstr ""
+"``AUTO`` nasconde l'etichetta dell'elemento per i layer con rappresentazione"
+" :guilabel:`Simbolo singolo``"
+
+#: ../../docs/server_manual/services.rst:1027
+msgid ""
+"Content based legend. These parameters let the client request a legend "
+"showing only the symbols for the features falling into the requested area:"
+msgstr ""
+"Legenda basata sul contenuto. Questi parametri permettono al client di "
+"richiedere una legenda che mostri solo i simboli degli elementi che "
+"rientrano nell'area richiesta:"
+
+#: ../../docs/server_manual/services.rst:1031
+msgid "**BBOX** the geographical area for which the legend should be built"
+msgstr ""
+"**BBOX** l'area geografica per la quale la legenda dovrebbe essere costruita"
+
+#: ../../docs/server_manual/services.rst:1032
+msgid ""
+"**CRS / SRS** the coordinate reference system adopted to define the BBOX "
+"coordinates"
+msgstr ""
+"**CRS / SRS** il sistema di riferimento delle coordinate adottato per "
+"definire le coordinate della BBOX"
+
+#: ../../docs/server_manual/services.rst:1034
+msgid ""
+"**SRCWIDTH / SRCHEIGHT** if set these should match the WIDTH and HEIGHT "
+"parameters of the GetMap request, to let QGIS Server scale symbols according"
+" to the map view image size."
+msgstr ""
+"**SRCWIDTH / SRCHEIGHT** se impostati dovrebbero corrispondere ai parametri "
+"WIDTH e HEIGHT della richiesta GetMap, per permettere a QGIS Server di "
+"scalare i simboli secondo le dimensioni dell'immagine della mappa."
+
+#: ../../docs/server_manual/services.rst:1038
+msgid ""
+"Content based legend features are based on the `UMN MapServer "
+"implementation: <https://www.mapserver.org/development/rfc/ms-"
+"rfc-101.html>`_"
+msgstr ""
+"Gli elementi delle legende basate sul contenuto sono basate "
+"sull'implementazione di `UMN MapServer: "
+"<https://www.mapserver.org/development/rfc/ms-rfc-101.html>`_"
+
+#: ../../docs/server_manual/services.rst:1042
+msgid ""
+"**SHOWFEATURECOUNT** if set to ``TRUE`` adds in the legend the feature count"
+" of the features like in the following image:"
+msgstr ""
+"**SHOWFEATURECOUNT** se impostato a ``TRUE`` aggiunge nella legenda il "
+"conteggio degli elementi come nell'immagine seguente:"
+
+#: ../../docs/server_manual/services.rst:1048
+msgid "**RULE** set it to a given rule name to get only the named rule symbol"
+msgstr ""
+"**RULE** impostarlo su un dato nome di regola per ottenere solo il simbolo "
+"della regola nominata"
+
+#: ../../docs/server_manual/services.rst:1049
+msgid ""
+"**WIDTH/HEIGHT** the generated legend image size if the **RULE** parameter "
+"is set"
+msgstr ""
+"**WIDTH/HEIGHT** la dimensione dell'immagine della legenda generata se il "
+"parametro **RULE** è impostato"
+
+#: ../../docs/server_manual/services.rst:1055
+msgid "GetProjectSettings"
+msgstr "GetProjectSettings"
+
+#: ../../docs/server_manual/services.rst:1057
+msgid ""
+"This request type works similar to **GetCapabilities**, but it is more "
+"specific to QGIS Server and allows a client to read additional information "
+"which is not available in the GetCapabilities output:"
+msgstr ""
+"Questo tipo di richiesta funziona in modo simile a **GetCapabilities**, ma è"
+" più specifico per QGIS Server e permette ad un client di leggere "
+"informazioni aggiuntive che non sono disponibili nell'output di "
+"GetCapabilities:"
+
+#: ../../docs/server_manual/services.rst:1061
+msgid "initial visibility of layers"
+msgstr "visibilità iniziale dei layer"
+
+#: ../../docs/server_manual/services.rst:1062
+msgid "information about vector attributes and their edit types"
+msgstr "informazione sugli attributi vettoriali e i loro tipi di edit"
+
+#: ../../docs/server_manual/services.rst:1063
+msgid "information about layer order and drawing order"
+msgstr "informazione sull'ordine dei layer e l'ordine di rappresentazione"
+
+#: ../../docs/server_manual/services.rst:1064
+msgid "list of layers published in WFS"
+msgstr "elenco dei layer pubblicati in WFS"
+
+#: ../../docs/server_manual/services.rst:1065
+msgid ""
+"show if a group in the layer tree is :ref:`mutually exclusive "
+"<group_layers_interact>`"
+msgstr ""
+"mostra se un gruppo nell'albero dei layer è :ref:`mutually exclusive "
+"<group_layers_interact>`"
+
+#: ../../docs/server_manual/services.rst:1069
+msgid "Web Feature Service (WFS)"
+msgstr "Web Feature Service (WFS)"
+
+#: ../../docs/server_manual/services.rst:1071
+msgid ""
+"The **1.0.0** and **1.1.0** WFS standards implemented in QGIS Server provide"
+" a HTTP interface to query geographic features from a QGIS project. A "
+"typical WFS request defines the QGIS project to use and the layer to query."
+msgstr ""
+"Gli standard **1.0.0** e **1.1.0** WFS implementati in QGIS Server "
+"forniscono un'interfaccia HTTP per interrogare gli elementi geografici da un"
+" progetto QGIS. Una tipica richiesta WFS definisce il progetto QGIS da usare"
+" e il layer da interrogare."
+
+#: ../../docs/server_manual/services.rst:1077
+msgid ""
+"Specifications document according to the version number of the service:"
+msgstr ""
+"Documento delle specifiche secondo il numero di versione del servizio:"
+
+#: ../../docs/server_manual/services.rst:1079
+msgid ""
+"`WFS 1.0.0 <http://portal.opengeospatial.org/files/?artifact_id=7176>`_"
+msgstr ""
+"`WFS 1.0.0 <http://portal.opengeospatial.org/files/?artifact_id=7176>`_"
+
+#: ../../docs/server_manual/services.rst:1080
+msgid ""
+"`WFS 1.1.0 <http://portal.opengeospatial.org/files/?artifact_id=8339>`_"
+msgstr ""
+"`WFS 1.1.0 <http://portal.opengeospatial.org/files/?artifact_id=8339>`_"
+
+#: ../../docs/server_manual/services.rst:1
+#: ../../docs/server_manual/services.rst:1097
+msgid "GetFeature"
+msgstr "GetFeature"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Returns a selection of features"
+msgstr "Restituisce una selezione di elementi"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "DescribeFeatureType"
+msgstr "DescribeFeatureType"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Returns a description of feature types and properties"
+msgstr "Restituisce una descrizione dei tipi di elementi e delle proprietà"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Transaction"
+msgstr "Transazione"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Allows features to be inserted, updated or deleted"
+msgstr ""
+"Permette l'inserimento, l'aggiornamento o la cancellazione di elementi"
+
+#: ../../docs/server_manual/services.rst:1099
+msgid ""
+"Standard parameters for the **GetFeature** request according to the OGC WFS "
+"1.0.0 and 1.1.0 specifications:"
+msgstr ""
+"Parametri standard per la richiesta **GetFeature** secondo le specifiche OGC"
+" WFS 1.0.0 e 1.1.0:"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Name of the service"
+msgstr "Nome del servizio"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Name of the request"
+msgstr "Nome della richiesta"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "TYPENAME"
+msgstr "TYPENAME"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Name of layers"
+msgstr "Nome dei layer"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "OUTPUTFORMAT"
+msgstr "OUTPUTFORMAT"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Output Format"
+msgstr "Formato risultato"
+
+#: ../../docs/server_manual/services.rst:1
+#: ../../docs/server_manual/services.rst:1190
+msgid "RESULTTYPE"
+msgstr "RESULTTYPE"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Type of the result"
+msgstr "Tipo di risultato"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "PROPERTYNAME"
+msgstr "PROPERTYNAME"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Name of properties to return"
+msgstr "Nome delle proprietà da restituire"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "MAXFEATURES"
+msgstr "MAXFEATURES"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "SRSNAME"
+msgstr "SRSNAME"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "FEATUREID"
+msgstr "FEATUREID"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Filter the features by ids"
+msgstr "Filtrare gli elementi per id"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "OGC Filter Encoding"
+msgstr "Codifica filtro OGC"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Map Extent"
+msgstr "Estensione mappa"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "SORTBY"
+msgstr "SORTBY"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Sort the results"
+msgstr "Ordinare i risultati"
+
+#: ../../docs/server_manual/services.rst:1
+#: ../../docs/server_manual/services.rst:1234
+msgid "STARTINDEX"
+msgstr "STARTINDEX"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Paging"
+msgstr "Paginazione"
+
+#: ../../docs/server_manual/services.rst:1
+#: ../../docs/server_manual/services.rst:1211
+msgid "GEOMETRYNAME"
+msgstr "GEOMETRYNAME"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Type of geometry to return"
+msgstr "Tipo di geometria da restituire"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "EXP_FILTER"
+msgstr "EXP_FILTER"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Expression filtering"
+msgstr "Espressione di filtraggio"
+
+#: ../../docs/server_manual/services.rst:1138
+msgid ""
+"This parameter has to be ``WFS`` in case of the **GetFeature** request."
+msgstr ""
+"Questo parametro deve essere ``WFS`` nel caso della richiesta "
+"**GetFeature**."
+
+#: ../../docs/server_manual/services.rst:1156
+msgid "``1.0.0``"
+msgstr "``1.0.0``"
+
+#: ../../docs/server_manual/services.rst:1157
+msgid "``1.1.0``"
+msgstr "``1.1.0``"
+
+#: ../../docs/server_manual/services.rst:1159
+msgid ""
+"If no version is indicated in the request, then ``1.1.0`` is used by "
+"default."
+msgstr ""
+"Se nessuna versione è indicata nella richiesta, allora ``1.1.0`` è usato per"
+" default."
+
+#: ../../docs/server_manual/services.rst:1175
+msgid ""
+"This parameter is ``GetFeature`` in case of the **GetFeature** request."
+msgstr ""
+"Questo parametro è ``GetFeature`` nel caso della richiesta **GetFeature**."
+
+#: ../../docs/server_manual/services.rst:1192
+msgid ""
+"This parameter may be used to specify the kind of result to return. "
+"Available values are:"
+msgstr ""
+"Questo parametro può essere usato per specificare il tipo di risultato da "
+"restituire. I valori disponibili sono:"
+
+#: ../../docs/server_manual/services.rst:1195
+msgid "``results``: the default behavior"
+msgstr "``results``: il risultato predefinito"
+
+#: ../../docs/server_manual/services.rst:1196
+msgid "``hits``: returns only a feature count"
+msgstr "``hits``: restituisce solo un conteggio degli elementi"
+
+#: ../../docs/server_manual/services.rst:1213
+msgid ""
+"This parameter can be used to specify the kind of geometry to return for "
+"features. Available values are:"
+msgstr ""
+"Questo parametro può essere usato per specificare il tipo di geometria da "
+"restituire per gli elementi. I valori disponibili sono:"
+
+#: ../../docs/server_manual/services.rst:1216
+msgid "``extent``"
+msgstr "``extent``"
+
+#: ../../docs/server_manual/services.rst:1217
+msgid "``centroid``"
+msgstr "``centroid``"
+
+#: ../../docs/server_manual/services.rst:1218
+msgid "``none``"
+msgstr "``none``"
+
+#: ../../docs/server_manual/services.rst:1236
+msgid ""
+"This parameter is standard in WFS 2.0, but it's an extension for WFS 1.0.0. "
+"Actually, it can be used to skip some features in the result set and in "
+"combination with ``MAXFEATURES``, it provides the ability to page through "
+"results."
+msgstr ""
+"Questo parametro è standard in WFS 2.0, ma è un'estensione per WFS 1.0.0. "
+"Attualmente, può essere usato per ignorare alcuni elementi nell'insieme dei "
+"risultati e in combinazione con ``MAXFEATURES``, fornisce la possibilità di "
+"sfogliare i risultati."
+
+#: ../../docs/server_manual/services.rst:1255
+msgid "Web Map Tile Service (WMTS)"
+msgstr "Web Map Tile Service (WMTS)"
+
+#: ../../docs/server_manual/services.rst:1257
+msgid ""
+"The **1.0.0** WMTS standard implemented in QGIS Server provides a HTTP "
+"interface to request tiled map images generated from a QGIS project. A "
+"typical WMTS request defined the QGIS project to use, some WMS parameters "
+"like layers to render, as well as tile parameters."
+msgstr ""
+"Lo standard **1.0.0** WMTS implementato in QGIS Server fornisce "
+"un'interfaccia HTTP per richiedere immagini di mappe tassellate generate da "
+"un progetto QGIS. Una tipica richiesta WMTS definisce il progetto QGIS da "
+"usare, alcuni parametri WMS come i layer da rappresentare, così come i "
+"parametri dei tasselli."
+
+#: ../../docs/server_manual/services.rst:1262
+msgid "Specifications document of the service:"
+msgstr "Documento di specifiche del servizio:"
+
+#: ../../docs/server_manual/services.rst:1264
+msgid ""
+"`WMTS 1.0.0 <http://portal.opengeospatial.org/files/?artifact_id=35326>`_"
+msgstr ""
+"`WMTS 1.0.0 <http://portal.opengeospatial.org/files/?artifact_id=35326>`_"
+
+#: ../../docs/server_manual/services.rst:1
+#: ../../docs/server_manual/services.rst:1337
+msgid "GetTile"
+msgstr "GetTile"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Returns a tile"
+msgstr "Restituisce un tassello"
+
+#: ../../docs/server_manual/services.rst:1282
+msgid ""
+"Standard parameters for the **GetCapabilities** request according to the OGC"
+" WMTS 1.0.0 specifications:"
+msgstr ""
+"Parametri standard per la richiesta **GetCapabilities** secondo le "
+"specifiche OGC WMTS 1.0.0:"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Name of the service (WMTS)"
+msgstr "Nome del servizio (WMTS)"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Name of the request (GetCapabilities)"
+msgstr "Nome della richiesta (GetCapabilities)"
+
+#: ../../docs/server_manual/services.rst:1317
+msgid ""
+"This parameter has to be ``WMTS`` in case of the **GetCapabilities** "
+"request."
+msgstr ""
+"Questo parametro deve essere ``WMTS`` nel caso della richiesta "
+"**GetCapabilities**."
+
+#: ../../docs/server_manual/services.rst:1324
+msgid ""
+"This parameter is ``GetCapabilities`` in case of the **GetCapabilities** "
+"request."
+msgstr ""
+"Questo parametro è ``GetCapabilities`` nel caso della richiesta "
+"**GetCapabilities**."
+
+#: ../../docs/server_manual/services.rst:1339
+msgid ""
+"Standard parameters for the **GetTile** request according to the OGC WMTS "
+"1.0.0 specifications:"
+msgstr ""
+"Parametri standard per la richiesta **GetTile** secondo le specifiche OGC "
+"WMTS 1.0.0:"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Name of the request (GetTile)"
+msgstr "Nome della richiesta (GetTile)"
+
+#: ../../docs/server_manual/services.rst:1
+#: ../../docs/server_manual/services.rst:1395
+#: ../../docs/server_manual/services.rst:1566
+msgid "LAYER"
+msgstr "LAYER"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Layer identifier"
+msgstr "Identificatore layer"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Output format of the tile"
+msgstr "Formato in uscita del tassello"
+
+#: ../../docs/server_manual/services.rst:1
+#: ../../docs/server_manual/services.rst:1448
+msgid "TILEMATRIXSET"
+msgstr "TILEMATRIXSET"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Name of the pyramid"
+msgstr "Nome della piramide"
+
+#: ../../docs/server_manual/services.rst:1
+#: ../../docs/server_manual/services.rst:1455
+msgid "TILEMATRIX"
+msgstr "TILEMATRIX"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Meshing"
+msgstr "Meshing"
+
+#: ../../docs/server_manual/services.rst:1
+#: ../../docs/server_manual/services.rst:1461
+msgid "TILEROW"
+msgstr "TILEROW"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Row coordinate in the mesh"
+msgstr "Coordinata riga nella mesh"
+
+#: ../../docs/server_manual/services.rst:1
+#: ../../docs/server_manual/services.rst:1468
+msgid "TILECOL"
+msgstr "TILECOL"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Column coordinate in the mesh"
+msgstr "Coordinata colonna nella mesh"
+
+#: ../../docs/server_manual/services.rst:1385
+msgid "This parameter has to be ``WMTS`` in case of the **GetTile** request."
+msgstr ""
+"Questo parametro deve essere ``WMTS`` nel caso della richiesta **GetTile**."
+
+#: ../../docs/server_manual/services.rst:1391
+msgid "This parameter is ``GetTile`` in case of the **GetTile** request."
+msgstr "Questo parametro è ``GetTile`` nel caso della richiesta **GetTile**."
+
+#: ../../docs/server_manual/services.rst:1397
+#: ../../docs/server_manual/services.rst:1568
+msgid "This parameter allows to specify the layer to display on the tile."
+msgstr ""
+"Questo parametro permette di specificare il layer da visualizzare sul "
+"tassello"
+
+#: ../../docs/server_manual/services.rst:1399
+#: ../../docs/server_manual/services.rst:1570
+msgid "In addition, QGIS Server introduced some options to select a layer by:"
+msgstr ""
+"Inoltre, QGIS Server ha introdotto alcune opzioni per selezionare un layer:"
+
+#: ../../docs/server_manual/services.rst:1417
+#: ../../docs/server_manual/services.rst:1588
+msgid ""
+"Moreover, there's a project option allowing to select layers by their id in "
+":menuselection:`OWS Server --> WMS capabilities` menu of the "
+":menuselection:`Project --> Project Properties` dialog. To activate this "
+"option, the checkbox :guilabel:`Use layer ids as names` has to be selected."
+msgstr ""
+"Inoltre, c'è un'opzione del progetto che permette di selezionare i layer in "
+"base al loro id nel menu :menuselection:`OWS Server --> WMS capabilities del"
+" servizio` della finestra di dialogo :menuselection:`Progetto --> "
+"Proprietà...`. Per attivare questa opzione, la casella di controllo "
+":guilabel:`Usa gli id del livello come nomi` deve essere selezionata. "
+
+#: ../../docs/server_manual/services.rst:1435
+msgid ""
+"This parameter may be used to specify the format of tile image. Available "
+"values are:"
+msgstr ""
+"Questo parametro può essere usato per specificare il formato dell'immagine "
+"del tassello. I valori disponibili sono:"
+
+#: ../../docs/server_manual/services.rst:1443
+msgid ""
+"If the ``FORMAT`` parameter is different from one of these values, then the "
+"default format PNG is used instead."
+msgstr ""
+"Se il parametro ``FORMAT`` è diverso da uno di questi valori, allora viene "
+"usato il formato predefinito PNG."
+
+#: ../../docs/server_manual/services.rst:1450
+msgid ""
+"This parameter defines the CRS to use when computing the underlying pyramid."
+" Format: ``EPSG:XXXX``."
+msgstr ""
+"Questo parametro definisce il SR da utilizzare nel calcolo della piramide "
+"sottostante. Formato: ``EPSG:XXXX``."
+
+#: ../../docs/server_manual/services.rst:1457
+msgid "This parameter allows to define the matrix to use for the output tile."
+msgstr ""
+"Questo parametro permette di definire la matrice da utilizzare per il "
+"tassello in uscita."
+
+#: ../../docs/server_manual/services.rst:1463
+msgid ""
+"This parameter allows to select the row of the tile to get within the "
+"matrix."
+msgstr ""
+"Questo parametro permette di selezionare la riga del tassello da ottenere "
+"all'interno della matrice."
+
+#: ../../docs/server_manual/services.rst:1470
+msgid ""
+"This parameter allows to select the column of the tile to get within the "
+"matrix."
+msgstr ""
+"Questo parametro permette di selezionare la colonna del tassello da ottenere"
+" all'interno della matrice."
+
+#: ../../docs/server_manual/services.rst:1493
+msgid ""
+"Standard parameters for the **GetFeatureInfo** request according to the OGC "
+"WMTS 1.0.0 specification:"
+msgstr ""
+"Parametri standard per la richiesta **GetFeatureInfo** secondo la specifica "
+"OGC WMTS 1.0.0:"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Name of the request (GetFeatureInfo)"
+msgstr "Nome della richiesta (GetFeatureInfo)"
+
+#: ../../docs/server_manual/services.rst:1
+#: ../../docs/server_manual/services.rst:1604
+msgid "INFOFORMAT"
+msgstr "INFOFORMAT"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "X coordinate of a pixel"
+msgstr "Coordinata X di un pixel"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Y coordinate of a pixel"
+msgstr "Coordinata Y di un pixel"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ":ref:`See GetTile <qgisserver-wmts-gettile>`"
+msgstr ":ref:`See GetTile <qgisserver-wmts-gettile>`"
+
+#: ../../docs/server_manual/services.rst:1540
+msgid ""
+"This parameter has to be ``WMTS`` in case of the **GetFeatureInfo** request."
+msgstr ""
+"Questo parametro deve essere ``WMTS`` nel caso della richiesta "
+"**GetFeatureInfo**."
+
+#: ../../docs/server_manual/services.rst:1606
+msgid ""
+"This parameter allows to define the output format of the result. Available "
+"values are:"
+msgstr ""
+"Questo parametro permette di definire il formato in uscita del risultato. I "
+"valori disponibili sono:"
+
+#: ../../docs/server_manual/services.rst:1614
+msgid "The default value is ``text/plain``."
+msgstr "Il valore predefinito è ``text/plain``."
+
+#: ../../docs/server_manual/services.rst:1620
+msgid ""
+"This parameter allows to define the X coordinate of the pixel for which we "
+"want to retrieve underlying information."
+msgstr ""
+"Questo parametro permette di definire la coordinata X del pixel per il quale"
+" vogliamo recuperare l'informazione sottostante."
+
+#: ../../docs/server_manual/services.rst:1627
+msgid ""
+"This parameter allows to define the Y coordinate of the pixel for which we "
+"want to retrieve underlying information."
+msgstr ""
+"Questo parametro permette di definire la coordinata Y del pixel per il quale"
+" vogliamo recuperare l'informazione sottostante."
+
+#: ../../docs/server_manual/services.rst:1634
+msgid "WFS3 (OGC API Features)"
+msgstr "WFS3 (funzioni API OGC)"
+
+#: ../../docs/server_manual/services.rst:1636
+msgid ""
+"WFS3 is the first implementation of the new generation of OGC protocols. It "
+"is described by the `OGC API - Features - Part 1: Core "
+"<http://docs.opengeospatial.org/is/17-069r3/17-069r3.html>`_ document."
+msgstr ""
+"WFS3 è la prima implementazione della nuova generazione di protocolli OGC. È"
+" descritto dal documento `OGC API - Features - Part 1: Core "
+"<http://docs.opengeospatial.org/is/17-069r3/17-069r3.html>`_ "
+
+#: ../../docs/server_manual/services.rst:1641
+msgid ""
+"Here is a quick informal summary of the most important differences between "
+"the well known WFS protocol and WFS3:"
+msgstr ""
+"Di seguito un rapido riassunto informale delle differenze più importanti tra"
+" il ben noto protocollo WFS e WFS3:"
+
+#: ../../docs/server_manual/services.rst:1644
+msgid ""
+"WFS3 is based on a `REST "
+"<https://en.wikipedia.org/wiki/Representational_state_transfer>`_ API"
+msgstr ""
+"WFS3 è basato su un'API `REST "
+"<https://en.wikipedia.org/wiki/Representational_state_transfer>`_"
+
+#: ../../docs/server_manual/services.rst:1647
+msgid ""
+"WFS3 API must follow the `OPENAPI "
+"<https://en.wikipedia.org/wiki/OpenAPI_Specification>`_ specifications"
+msgstr ""
+"WFS3 API deve seguire le specifiche `OPENAPI "
+"<https://en.wikipedia.org/wiki/OpenAPI_Specification>`_"
+
+#: ../../docs/server_manual/services.rst:1650
+msgid ""
+"WFS3 supports multiple output formats but it does not dictate any (only "
+"GeoJSON and HTML are currently available in QGIS WFS3) and it uses `content "
+"negotiation <https://en.wikipedia.org/wiki/Content_negotiation>`_ to "
+"determine which format is to be served to the client"
+msgstr ""
+"WFS3 supporta più formati di output ma non ne impone nessuno (solo GeoJSON e"
+" HTML sono attualmente disponibili in QGIS WFS3) e usa la `negoziazione dei "
+"contenuti <https://en.wikipedia.org/wiki/Content_negotiation>`_ per "
+"determinare quale formato deve essere servito al client"
+
+#: ../../docs/server_manual/services.rst:1655
+msgid "JSON and HTML are first class citizens in WFS3"
+msgstr "JSON e HTML sono cittadini di prima classe in WFS3"
+
+#: ../../docs/server_manual/services.rst:1656
+msgid "WFS3 is self-documenting (through the ``/api`` endpoint)"
+msgstr "WFS3 è autodocumentato (attraverso l'endpoint ``/api``)"
+
+#: ../../docs/server_manual/services.rst:1657
+msgid "WFS3 is fully navigable (through links) and browsable"
+msgstr "WFS3 è completamente navigabile (tramite link) e consultabile."
+
+#: ../../docs/server_manual/services.rst:1661
+msgid ""
+"While the WFS3 implementation in QGIS can make use of the ``MAP`` parameter "
+"to specify the project file, no extra query parameters are allowed by the "
+"OPENAPI specification. For this reason it is strongly recommended that "
+"``MAP`` is not exposed in the URL and the project file is specified in the "
+"environment by other means (i.e. setting ``QGIS_PROJECT_FILE`` in the "
+"environment through a web server rewrite rule)."
+msgstr ""
+"Mentre l'implementazione WFS3 in QGIS può fare uso del parametro ``MAP`` per"
+" specificare il file di progetto, la specifica OPENAPI non consente "
+"parametri di query aggiuntivi. Per questo motivo si raccomanda vivamente che"
+" ``MAP`` non sia esposto nell'URL e che il file di progetto sia specificato "
+"nell'ambiente con altri mezzi (ad esempio impostando ``QGIS_PROJECT_FILE`` "
+"nell'ambiente tramite una regola di riscrittura del server web)."
+
+#: ../../docs/server_manual/services.rst:1672
+msgid ""
+"The **API** endpoint provides comprehensive documentation of all supported "
+"parameters and output formats of your service. The following paragraphs will"
+" only describe the most important ones."
+msgstr ""
+"L'endpoint **API** fornisce una documentazione completa di tutti i parametri"
+" supportati e dei formati in uscita del tuo servizio. I paragrafi seguenti "
+"descriveranno solo i più importanti."
+
+#: ../../docs/server_manual/services.rst:1678
+msgid "Resource representation"
+msgstr "Rappresentazione risorse"
+
+#: ../../docs/server_manual/services.rst:1680
+msgid ""
+"The QGIS Server WFS3 implementation currently supports the following "
+"resource representation (output) formats:"
+msgstr ""
+"L'implementazione di QGIS Server WFS3 attualmente supporta i seguenti "
+"formati di rappresentazione delle risorse (output):"
+
+#: ../../docs/server_manual/services.rst:1683
+msgid "HTML"
+msgstr "HTML"
+
+#: ../../docs/server_manual/services.rst:1684
+msgid "JSON"
+msgstr "JSON"
+
+#: ../../docs/server_manual/services.rst:1686
+msgid ""
+"The format that is actually served will depend on content negotiation, but a"
+" specific format can be explicitly requested by appending a format specifier"
+" to the endpoints."
+msgstr ""
+"Il formato che viene effettivamente reso dipenderà dalla negoziazione del "
+"contenuto, ma un formato specifico può essere richiesto esplicitamente "
+"aggiungendo uno specifico formato agli endpoint."
+
+#: ../../docs/server_manual/services.rst:1690
+msgid "Supported format specifier extensions are:"
+msgstr "Le estensioni di specifica del formato supportate sono:"
+
+#: ../../docs/server_manual/services.rst:1692
+msgid "``.json``"
+msgstr "``.json``"
+
+#: ../../docs/server_manual/services.rst:1693
+msgid "``.html``"
+msgstr "``.html``"
+
+#: ../../docs/server_manual/services.rst:1695
+msgid ""
+"Additional format specifier aliases may be defined by specific endpoints:"
+msgstr ""
+"Ulteriori alias di specifica di formato possono essere definiti da endpoint "
+"specifici:"
+
+#: ../../docs/server_manual/services.rst:1698
+msgid "``.openapi``: alias for ``.json`` supported by the **API** endpoint"
+msgstr "``.openapi``: alias per ``.json`` supportato dall'endpoint **API**"
+
+#: ../../docs/server_manual/services.rst:1699
+msgid ""
+"``.geojson``: alias for ``.json`` supported by the **Features** and "
+"**Feature** endpoints"
+msgstr ""
+"``.geojson``: alias per ``.json`` supportato dagli endpoint **Features** e "
+"**Feature**"
+
+#: ../../docs/server_manual/services.rst:1705
+msgid "Endpoints"
+msgstr "Endpoint"
+
+#: ../../docs/server_manual/services.rst:1707
+msgid ""
+"The API provides a list of endpoints that the clients can retrieve. The "
+"system is designed in such a way that every response provides a set of links"
+" to navigate through all the provided resources."
+msgstr ""
+"L'API fornisce una lista di endpoint che i client possono richiamare. Il "
+"sistema è progettato in modo tale che ogni risposta fornisce un insieme di "
+"link per navigare attraverso tutte le risorse fornite."
+
+#: ../../docs/server_manual/services.rst:1711
+msgid "Endpoints points provided by the QGIS implementation are:"
+msgstr "Punti endpoint forniti dall'implementazione di QGIS sono:"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Name"
+msgstr "Nome"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Path"
+msgstr "Percorso"
+
+#: ../../docs/server_manual/services.rst:1
+#: ../../docs/server_manual/services.rst:1734
+msgid "Landing Page"
+msgstr "Pagina di destinazione"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "``/``"
+msgstr "``/``"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ""
+"General information about the service and provides links to all available "
+"endpoints"
+msgstr ""
+"Informazioni generali sul servizio e fornisce collegamenti a tutti gli "
+"endpoint disponibili"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Conformance"
+msgstr "Conformità"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "``/conformance``"
+msgstr "``/conformance``"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Information about the conformance of the service to the standards"
+msgstr "Informazioni sulla conformità del servizio agli standard"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "API"
+msgstr "API"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "``/api``"
+msgstr "``/api``"
+
+#: ../../docs/server_manual/services.rst:1
+msgid ""
+"Full description of the endpoints provided by the service and the returned "
+"documents structure"
+msgstr ""
+"Descrizione completa degli endpoint forniti dal servizio e della struttura "
+"dei documenti restituiti"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Collections"
+msgstr "Collezioni"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "``/collections``"
+msgstr "``/collections``"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "List of all collections (i.e. 'vector layers') provided by the service"
+msgstr ""
+"Elenco di tutte le collezioni (cioè \" layer vettoriali\") fornite dal "
+"servizio"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Collection"
+msgstr "Collezione"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "``/collections/{collectionId}``"
+msgstr "``/collections/{collectionId}``"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Information about a collection (name, metadata, extent etc.)"
+msgstr "Informazioni su una collezione (nome, metadati, estensione ecc.)"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Features"
+msgstr "Caratteristiche"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "``/collections/{collectionId}/items``"
+msgstr "``/collections/{collectionId}/items``"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "List of the features provided by the collection"
+msgstr "Elenco degli elementi forniti dalla collezione"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Feature"
+msgstr "Elemento"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "``/collections/{collectionId}/items/{featureId}``"
+msgstr "``/collections/{collectionId}/items/{featureId}``"
+
+#: ../../docs/server_manual/services.rst:1
+msgid "Information about a single feature"
+msgstr "Informazioni su un singolo elemento"
+
+#: ../../docs/server_manual/services.rst:1736
+msgid ""
+"The main endpoint is the **Landing Page**. From that page it is possible to "
+"navigate to all the available service endpoints. The **Landing Page** must "
+"provide links to"
+msgstr ""
+"L'endpoint principale è la **Landing Page**. Da questa pagina è possibile "
+"navigare verso tutti gli endpoint di servizio disponibili. La **Landing "
+"Page** deve fornire collegamenti a"
+
+#: ../../docs/server_manual/services.rst:1740
+msgid ""
+"the API definition (path ``/api`` link relations ``service-desc`` and "
+"``service-doc``),"
+msgstr ""
+"la definizione dell'API (percorso ``/api`` link delle relazioni ``service-"
+"desc`` e ``service-doc``),"
+
+#: ../../docs/server_manual/services.rst:1742
+msgid ""
+"the Conformance declaration (path ``/conformance``, link relation "
+"``conformance``), and"
+msgstr ""
+"la dichiarazione di Conformità (percorso ``/conformance``, relazione di "
+"collegamento ``conformance``), e"
+
+#: ../../docs/server_manual/services.rst:1744
+msgid "the Collections (path ``/collections``, link relation ``data``)."
+msgstr ""
+"le Collezioni (percorso ``/collections``, relazione di collegamento "
+"``data``)."
+
+#: ../../docs/server_manual/services.rst:1751
+msgid "Server WFS3 landing page"
+msgstr "Landing page del server WFS3"
+
+#: ../../docs/server_manual/services.rst:1756
+msgid "API Definition"
+msgstr "Definizione API"
+
+#: ../../docs/server_manual/services.rst:1758
+msgid ""
+"The **API Definition** is an OPENAPI-compliant description of the API "
+"provided by the service. In its HTML representation it is a browsable page "
+"where all the endpoints and their response formats are accurately listed and"
+" documented. The path of this endpoint is ``/api``."
+msgstr ""
+"La **Definizione dell'API** è una descrizione conforme a OPENAPI dell'API "
+"fornita dal servizio. Nella sua rappresentazione HTML è una pagina "
+"navigabile dove tutti gli endpoint e i loro formati di risposta sono "
+"accuratamente elencati e documentati. Il percorso di questo endpoint è "
+"``/api``."
+
+#: ../../docs/server_manual/services.rst:1765
+msgid ""
+"The API definition provides a comprehensive and authoritative documentation "
+"of the service, including all supported parameters and returned formats."
+msgstr ""
+"La definizione API fornisce una documentazione completa e autorevole del "
+"servizio, compresi tutti i parametri supportati e i formati restituiti."
+
+#: ../../docs/server_manual/services.rst:1771
+msgid "This endpoint is analogue to WFS's ``GetCapabilities``"
+msgstr "Questo endpoint è analogo a ``GetCapabilities`` di WFS"
+
+#: ../../docs/server_manual/services.rst:1774
+msgid "Collections list"
+msgstr "Lista Collezioni"
+
+#: ../../docs/server_manual/services.rst:1776
+msgid ""
+"The collections endpoint provides a list of all the collections available in"
+" the service. Since the service \"serves\" a single QGIS project the "
+"collections are the vector layers from the current project (if they were "
+"published as WFS in the project properties). The path of this endpoint is "
+"``/collections/``."
+msgstr ""
+"L'endpoint collezioni fornisce una lista di tutte le collezioni disponibili "
+"nel servizio. Poiché il servizio \"serve\" un singolo progetto QGIS, le "
+"collezioni sono i layer vettoriali del progetto corrente (se sono stati "
+"pubblicati come WFS nelle proprietà del progetto). Il percorso di questo "
+"endpoint è ``/collections/``."
+
+#: ../../docs/server_manual/services.rst:1788
+msgid "Server WFS3 collections list page"
+msgstr "Pagina dell'elenco delle collezioni del server WFS3"
+
+#: ../../docs/server_manual/services.rst:1792
+msgid "Collection detail"
+msgstr "Dettaglio collezione"
+
+#: ../../docs/server_manual/services.rst:1794
+msgid ""
+"While the collections endpoint does not provide detailed information about "
+"each available collection, that information is available in the "
+"``/collections/{collectionId}`` endpoints. Typical information includes the "
+"extent, a description, CRSs and other metadata."
+msgstr ""
+"Mentre l'endpoint delle collezioni non fornisce informazioni dettagliate su "
+"ogni collezione disponibile, queste informazioni sono disponibili negli "
+"endpoint ``/collections/{collectionId}``. Le informazioni tipiche includono "
+"l'estensione, una descrizione, i SR e altri metadati."
+
+#: ../../docs/server_manual/services.rst:1800
+#: ../../docs/server_manual/services.rst:1821
+msgid ""
+"The HTML representation also provides a browsable map with the available "
+"features."
+msgstr ""
+"La rappresentazione HTML fornisce anche una mappa navigabile con gli "
+"elementi disponibili."
+
+#: ../../docs/server_manual/services.rst:1809
+msgid "Server WFS3 collection detail page"
+msgstr "Pagina di dettaglio della collezione WFS3 del server"
+
+#: ../../docs/server_manual/services.rst:1815
+msgid "Features list"
+msgstr "Lista elementi"
+
+#: ../../docs/server_manual/services.rst:1817
+msgid ""
+"This endpoint provides a list of all features in a collection knowing the "
+"collection ID. The path of this endpoint is "
+"``/collections/{collectionId}/items``."
+msgstr ""
+"Questo endpoint fornisce un elenco di tutti gli elementi in una collezione "
+"conoscendo l'ID della collezione. Il percorso di questo endpoint è "
+"``/collections/{collectionId}/items``."
+
+#: ../../docs/server_manual/services.rst:1827
+msgid "This endpoint is analogue to ``GetFeature`` in  WFS 1 and WFS 2."
+msgstr "Questo endpoint è analogo a ``GetFeature`` in WFS 1 e WFS 2."
+
+#: ../../docs/server_manual/services.rst:1835
+msgid "Server WFS3 features list page"
+msgstr "Pagina dell'elenco degli elementi del server WFS3"
+
+#: ../../docs/server_manual/services.rst:1839
+msgid "Feature detail"
+msgstr "Dettaglio elemento"
+
+#: ../../docs/server_manual/services.rst:1841
+msgid ""
+"This endpoint provides all the available information about a single feature,"
+" including the feature attributes and its geometry. The path of this "
+"endpoint is ``/collections/{collectionId}/items/{itemId}``."
+msgstr ""
+"Questo endpoint fornisce tutte le informazioni disponibili su un singolo "
+"elemento, compresi gli attributi dell'elemento e la sua geometria. Il "
+"percorso di questo endpoint è "
+"``/collections/{collectionId}/items/{itemId}``."
+
+#: ../../docs/server_manual/services.rst:1846
+msgid ""
+"The HTML representation also provides a browsable map with the feature "
+"geometry."
+msgstr ""
+"La rappresentazione HTML fornisce anche una mappa navigabile con la "
+"geometria degli elementi."
+
+#: ../../docs/server_manual/services.rst:1855
+msgid "Server WFS3 feature detail page"
+msgstr "Pagina di dettaglio elementi server WFS3"
+
+#: ../../docs/server_manual/services.rst:1860
+msgid "Pagination"
+msgstr "Paginazione"
+
+#: ../../docs/server_manual/services.rst:1862
+msgid ""
+"Pagination of a long list of features is implemented in the OGC API through "
+"``next`` and ``prev`` links, QGIS server constructs these links by appending"
+" ``limit`` and ``offset`` as query string parameters."
+msgstr ""
+"La paginazione di una lunga lista di elementi è implementata nell'API OGC "
+"attraverso i link ``next``` e ``prev``, il server QGIS costruisce questi "
+"link aggiungendo ``limit`` e ``offset`` come parametri della query string."
+
+#: ../../docs/server_manual/services.rst:1875
+msgid ""
+"The maximum acceptable value for ``limit`` can be configured with the "
+"``QGIS_SERVER_API_WFS3_MAX_LIMIT`` server configuration setting (see: :ref"
+":`qgis-server-envvar`)."
+msgstr ""
+"Il valore massimo accettabile per ``limit`` può essere configurato con "
+"l'impostazione di configurazione del server "
+"``QGIS_SERVER_API_WFS3_MAX_LIMIT`` (vedi: :ref:`qgis-server-envvar``)."
+
+#: ../../docs/server_manual/services.rst:1881
+msgid "Feature filtering"
+msgstr "Filtro delle geometrie"
+
+#: ../../docs/server_manual/services.rst:1883
+msgid ""
+"The features available in a collection can be filtered/searched by "
+"specifying one or more filters."
+msgstr ""
+"Gli elementi disponibili in una collezione possono essere filtrati/ricercati"
+" specificando uno o più filtri."
+
+#: ../../docs/server_manual/services.rst:1888
+msgid "Date and time filter"
+msgstr "Filtro data e ora"
+
+#: ../../docs/server_manual/services.rst:1889
+msgid ""
+"Collections with date and/or datetime attributes can be filtered by "
+"specifying a ``datetime`` argument in the query string. By default the first"
+" date/datetime field is used for filtering. This behavior can be configured "
+"by setting a \"Date\" or \"Time\" dimension in the :menuselection:`QGIS "
+"Server --> Dimension` section of the layer properties dialog."
+msgstr ""
+"Le collezioni con attributi data e/o datetime possono essere filtrate "
+"specificando un argomento ``datetime`` nella stringa della query. Per "
+"impostazione predefinita, il primo campo data/ora è usato per il filtraggio."
+" Questo comportamento può essere configurato impostando una dimensione "
+"\"Date\" o \"Time\" nella sezione :menuselection:`QGIS Server --> Dimension`"
+" della finestra di dialogo delle proprietà del layer."
+
+#: ../../docs/server_manual/services.rst:1896
+msgid ""
+"The date and time filtering syntax is fully described in the "
+":ref:`ogc_api_features_api_definition` and also supports ranges (begin and "
+"end values are included) in addition to single values."
+msgstr ""
+"La sintassi del filtraggio di data e ora è completamente descritta nella "
+":ref:`ogc_api_features_api_definition` e supporta anche intervalli (i valori"
+" iniziali e finali sono inclusi) oltre a valori singoli."
+
+#: ../../docs/server_manual/services.rst:1901
+msgid "URL examples:"
+msgstr "Esempi URL:"
+
+#: ../../docs/server_manual/services.rst:1903
+msgid "Returns only the features with date dimension matching ``2019-01-01``"
+msgstr ""
+"Restituisce solo gli elementi con una dimensione di data corrispondente a "
+"``2019-01-01``."
+
+#: ../../docs/server_manual/services.rst:1909
+msgid ""
+"Returns only the features with datetime dimension matching "
+"``2019-01-01T01:01:01``"
+msgstr ""
+"Restituisce solo gli elementi con dimensione datetime che corrisponde a "
+"``2019-01-01T01:01:01``."
+
+#: ../../docs/server_manual/services.rst:1916
+msgid ""
+"Returns only the features with datetime dimension in the range "
+"``2019-01-01T01:01:01`` - ``2019-01-01T12:00:00``"
+msgstr ""
+"Restituisce solo gli elementi con dimensione datetime nell'intervallo "
+"``2019-01-01T01:01:01`` - ``2019-01-01T12:00:00``."
+
+#: ../../docs/server_manual/services.rst:1925
+msgid "Bounding box filter"
+msgstr "Filtro rettangolo di delimitazione"
+
+#: ../../docs/server_manual/services.rst:1927
+msgid ""
+"A bounding box spatial filter can be specified with the ``bbox`` parameter:"
+msgstr ""
+"Un filtro spaziale bounding box può essere specificato con il parametro "
+"``bbox``:"
+
+#: ../../docs/server_manual/services.rst:1929
+msgid "The order of the comma separated elements is:"
+msgstr "L'ordine degli elementi separati da virgola è:"
+
+#: ../../docs/server_manual/services.rst:1931
+msgid "Lower left corner, WGS 84 longitude"
+msgstr "Angolo inferiore sinistro, longitudine WGS 84"
+
+#: ../../docs/server_manual/services.rst:1932
+msgid "Lower left corner, WGS 84 latitude"
+msgstr "Angolo inferiore sinistro, latitudine WGS 84"
+
+#: ../../docs/server_manual/services.rst:1933
+msgid "Upper right corner, WGS 84 longitude"
+msgstr "Angolo superiore destro, longitudine WGS 84"
+
+#: ../../docs/server_manual/services.rst:1934
+msgid "Upper right corner, WGS 84 latitude"
+msgstr "Angolo superiore destro, latitudine WGS 84"
+
+#: ../../docs/server_manual/services.rst:1937
+msgid ""
+"The OGC specifications also allow a 6 item bbox specifier where the third "
+"and sixth items are the Z components, this is not yet supported by QGIS "
+"server."
+msgstr ""
+"Le specifiche OGC permettono anche uno specifico bbox a 6 elementi dove il "
+"terzo e il sesto elemento sono i componenti Z, questo non è ancora "
+"supportato dal server QGIS."
+
+#: ../../docs/server_manual/services.rst:1948
+msgid ""
+"If the *CRS* of the bounding box is not `WGS 84 "
+"<https://www.opengis.net/def/crs/OGC/1.3/CRS84>`_, a different CRS can be "
+"specified by using the optional parameter ``bbox-crs``. The CRS format "
+"identifier must be in the `OGC URI <https://www.opengis.net/def/crs/>`_ "
+"format:"
+msgstr ""
+"Se il *SR* del riquadro di delimitazione non è `WGS 84 "
+"<https://www.opengis.net/def/crs/OGC/1.3/CRS84>`_, un CRS diverso può essere"
+" specificato usando il parametro opzionale ``bbox-crs``. L'identificatore "
+"del formato SR deve essere nel formato `OGC URI "
+"<https://www.opengis.net/def/crs/>`_:"
+
+#: ../../docs/server_manual/services.rst:1962
+msgid "Attribute filters"
+msgstr "Filtro Attributo"
+
+#: ../../docs/server_manual/services.rst:1964
+msgid ""
+"Attribute filters can be combined with the bounding box filter and they are "
+"in the general form: ``<attribute name>=<attribute value>``. Multiple "
+"filters can be combined using the ``AND`` operator."
+msgstr ""
+"I filtri degli attributi possono essere combinati con il filtro bounding box"
+" e sono nella forma generale: ``<attribute name>=<attribute value>``. Filtri"
+" multipli possono essere combinati usando l'operatore ``AND```."
+
+#: ../../docs/server_manual/services.rst:1970
+msgid "filters all features where attribute ``name`` equals \"my value\""
+msgstr ""
+"filtra tutti gli elementi in cui l'attributo ``name`` è uguale a \"my "
+"value\""
+
+#: ../../docs/server_manual/services.rst:1977
+msgid "Partial matches are also supported by using a ``*`` (\"star\") operator:"
+msgstr ""
+"Le corrispondenze parziali sono supportate anche usando un operatore ``*`` "
+"(\"star\"):"
+
+#: ../../docs/server_manual/services.rst:1981
+msgid "filters all features where attribute ``name`` ends with \"value\""
+msgstr ""
+"filtra tutti gli elementi in cui l'attributo ``name`` finisce con \"value\""
+
+#: ../../docs/server_manual/services.rst:1988
+msgid "Feature sorting"
+msgstr "Ordinamento elemento"
+
+#: ../../docs/server_manual/services.rst:1990
+msgid ""
+"It is possible to order the result set by field value using the ``sortby`` "
+"query parameter."
+msgstr ""
+"È possibile ordinare l'insieme dei risultati per valore di campo usando il "
+"parametro della query ``sortby``."
+
+#: ../../docs/server_manual/services.rst:1993
+msgid ""
+"The results are sorted in ascending order by default. To sort the results in"
+" descending order, a boolean flag (``sortdesc``) can be set:"
+msgstr ""
+"I risultati sono ordinati in ordine crescente per impostazione predefinita. "
+"Per ordinare i risultati in ordine decrescente, si può impostare un flag "
+"booleano (``sortdesc``):"
+
+#: ../../docs/server_manual/services.rst:2002
+msgid "Attribute selection"
+msgstr "Selezione attributo"
+
+#: ../../docs/server_manual/services.rst:2004
+msgid ""
+"The feature attributes returned by a :ref:`ogc_api_features_features_list` "
+"call can be limited by adding a comma separated list of attribute names in "
+"the optional ``properties`` query string argument."
+msgstr ""
+"Gli attributi elemenelementi restituiti da una chiamata "
+":ref:`ogc_api_features_features_list` possono essere limitati aggiungendo "
+"una lista separata da virgole di nomi di attributi nell'argomento opzionale "
+"``properties`` della query string."
+
+#: ../../docs/server_manual/services.rst:2010
+msgid "returns only the ``name`` attribute"
+msgstr "restituisce solo l'attributo ``name``."
+
+#: ../../docs/server_manual/services.rst:2018
+msgid "Customize the HTML pages"
+msgstr "Personalizzare le pagine HTML"
+
+#: ../../docs/server_manual/services.rst:2020
+msgid ""
+"The HTML representation uses a set of HTML templates to generate the "
+"response. The template is parsed by a template engine called `inja "
+"<https://github.com/pantor/inja/>`_. The templates can be customized by "
+"overriding them (see: :ref:`server_wfs3_template_override`). The template "
+"has access to the same data that are available to the ``JSON`` "
+"representation and a few additional functions are available to the template:"
+msgstr ""
+"La rappresentazione HTML usa un insieme di modelli HTML per generare la "
+"risposta. Il template viene analizzato da un motore di template chiamato "
+"`inja <https://github.com/pantor/inja/>`_. I template possono essere "
+"personalizzati sovrascrivendoli (vedi: "
+":ref:`server_wfs3_template_override`). Il template ha accesso agli stessi "
+"dati che sono disponibili alla rappresentazione ``JSON`` e alcune funzioni "
+"aggiuntive sono disponibili al template:"
+
+#: ../../docs/server_manual/services.rst:2032
+msgid "Custom template functions"
+msgstr "Funzioni personalizzate modello"
+
+#: ../../docs/server_manual/services.rst:2034
+msgid "``path_append( path )``: appends a directory path to the current url"
+msgstr ""
+"``path_append( path )``: aggiunge un percorso di cartella all'url corrente"
+
+#: ../../docs/server_manual/services.rst:2035
+msgid ""
+"``path_chomp( n )``: removes the specified number \"n\" of directory "
+"components from the current url path"
+msgstr ""
+"``path_chomp( n )``: rimuove il numero specificato \"n\" di componenti di "
+"cartella dal percorso url corrente"
+
+#: ../../docs/server_manual/services.rst:2037
+msgid "``json_dump( )``: prints the JSON data passed to the template"
+msgstr "``json_dump( )``: stampa i dati JSON passati al modello"
+
+#: ../../docs/server_manual/services.rst:2038
+msgid ""
+"``static( path )``: returns the full URL to the specified static path. For "
+"example: \"static( \"/style/black.css\" )\" with a root path "
+"\"http://localhost/qgisserver/wfs3\" will return "
+"\"http://localhost/qgisserver/wfs3/static/style/black.css\"."
+msgstr ""
+"``static( path )``: restituisce l'URL completo del percorso statico "
+"specificato. Per esempio: \"static( \"/style/black.css\" )\" con un percorso"
+" radice \"http://localhost/qgisserver/wfs3\" restituirà "
+"\"http://localhost/qgisserver/wfs3/static/style/black.css\"."
+
+#: ../../docs/server_manual/services.rst:2042
+msgid ""
+"``links_filter( links, key, value )``: Returns filtered links from a link "
+"list"
+msgstr ""
+"``links_filter( links, key, value )``: Restituisce i link filtrati da un "
+"elenco di link"
+
+#: ../../docs/server_manual/services.rst:2044
+msgid ""
+"``content_type_name( content_type )``: Returns a short name from a content "
+"type, for example \"text/html\" will return \"HTML\""
+msgstr ""
+"``content_type_name( content_type )``: Restituisce un nome breve di un tipo "
+"di contenuto, per esempio \"text/html\" restituirà \"HTML\""
+
+#: ../../docs/server_manual/services.rst:2051
+msgid "Template overrides"
+msgstr "Sovrascritture modello"
+
+#: ../../docs/server_manual/services.rst:2053
+msgid ""
+"Templates and static assets are stored in subdirectories of the QGIS server "
+"default API resource directory "
+"(:file:`/usr/share/qgis/resources/server/api/` on a Linux system), the base "
+"directory can be customized by changing the environment variable "
+"``QGIS_SERVER_API_RESOURCES_DIRECTORY``."
+msgstr ""
+"I modelli e le risorse statiche sono memorizzati nelle sottocartelle della "
+"cartella delle risorse API di default del server QGIS "
+"(:file:`/usr/share/qgis/resources/server/api/` su un sistema Linux), la "
+"cartella di base può essere personalizzata cambiando la variabile di "
+"ambiente ``QGIS_SERVER_API_RESOURCES_DIRECTORY``."
+
+#: ../../docs/server_manual/services.rst:2059
+msgid "A typical Linux installation will have the following directory tree:"
+msgstr ""
+"Una tipica installazione di Linux avrà il seguente albero di cartelle:"
+
+#: ../../docs/server_manual/services.rst:2084
+msgid ""
+"To override the templates you can copy the whole tree to another location "
+"and point ``QGIS_SERVER_API_RESOURCES_DIRECTORY`` to the new location."
+msgstr ""
+"Per sovrascrivere i modelli puoi copiare l'intero albero in un'altra "
+"posizione e assegnare ``QGIS_SERVER_API_RESOURCES_DIRECTORY`` alla nuova "
+"posizione."
+
+#: ../../docs/server_manual/services.rst:2091
+msgid "Extra parameters supported by all request types"
+msgstr "Parametri extra supportati da tutti i tipi di richiesta"
+
+#: ../../docs/server_manual/services.rst:2093
+msgid "The following extra parameters are supported by all protocols."
+msgstr "I seguenti parametri extra sono supportati da tutti i protocolli."
+
+#: ../../docs/server_manual/services.rst:2095
+msgid ""
+"**FILE_NAME**: if set, the server response will be sent to the client as a "
+"file attachment with the specified file name."
+msgstr ""
+"**FILE_NAME**: se impostato, la risposta del server sarà inviata al client "
+"come un file allegato con il nome del file specificato."
+
+#: ../../docs/server_manual/services.rst:2100
+msgid "Not available for WFS3."
+msgstr "Non disponibile per WFS3."
+
+#: ../../docs/server_manual/services.rst:2102
+msgid ""
+"**MAP**: Similar to MapServer, the ``MAP`` parameter can be used to specify "
+"the path to the QGIS project file. You can specify an absolute path or a "
+"path relative to the location of the server executable "
+"(:file:`qgis_mapserv.fcgi`). If not specified, QGIS Server searches for .qgs"
+" files in the directory where the server executable is located."
+msgstr ""
+"**MAP**: Analogamente a MapServer, il parametro ``MAP`` può essere usato per"
+" specificare il percorso del file del progetto QGIS. Puoi specificare un "
+"percorso assoluto o un percorso relativo per la posizione dell'eseguibile "
+"del server (:file:`qgis_mapserv.fcgi`). Se non specificato, QGIS Server "
+"cerca i file .qgs nella cartella dove si trova l'eseguibile del server."
+
+#: ../../docs/server_manual/services.rst:2109
+msgid "Example::"
+msgstr "Esempio:"
+
+#: ../../docs/server_manual/services.rst:2116
+msgid ""
+"You can define a **QGIS_PROJECT_FILE** as an environment variable to tell "
+"the server executable where to find the QGIS project file. This variable "
+"will be the location where QGIS will look for the project file. If not "
+"defined it will use the MAP parameter in the request and finally look at the"
+" server executable directory."
+msgstr ""
+"Puoi definire un **QGIS_PROJECT_FILE** come variabile d'ambiente per dire "
+"all'eseguibile del server dove trovare il file di progetto QGIS. Questa "
+"variabile sarà la posizione in cui QGIS cercherà il file di progetto. Se non"
+" è definita, userà il parametro MAP nella richiesta e infine cercherà la "
+"cartella eseguibile del server."
+
+#: ../../docs/server_manual/services.rst:2127
+msgid "REDLINING"
+msgstr "REDLINING"
+
+#: ../../docs/server_manual/services.rst:2129
+msgid ""
+"This feature is available and can be used with ``GetMap`` and ``GetPrint`` "
+"requests."
+msgstr ""
+"Questa funzione è disponibile e può essere usata con le richieste ``GetMap``"
+" e ``GetPrint``."
+
+#: ../../docs/server_manual/services.rst:2132
+msgid ""
+"The redlining feature can be used to pass geometries and labels in the "
+"request which are overlapped by the server over the standard returned image "
+"(map). This permits the user to put emphasis or maybe add some comments "
+"(labels) to some areas, locations etc. that are not in the standard map."
+msgstr ""
+"La funzione redlining può essere usata per passare geometrie ed etichette "
+"nella richiesta che vengono sovrapposte dal server sull'immagine standard "
+"restituita (mappa). Questo permette all'utente di mettere l'accento o magari"
+" aggiungere dei commenti (etichette) ad alcune aree, luoghi ecc. che non "
+"sono nella mappa standard."
+
+#: ../../docs/server_manual/services.rst:2138
+msgid "The ``GetMap`` request is in the format::"
+msgstr "La richiesta ``GetMap`` è nel formato:"
+
+#: ../../docs/server_manual/services.rst:2151
+msgid ""
+"The ``GetPrint`` equivalent is in the format (note that ``mapX:`` parameter "
+"is added to tell which map has redlining)::"
+msgstr ""
+"L'equivalente di ``GetPrint`` è nel formato (si noti che il parametro "
+"``mappaX:`` è aggiunto per dire quale mappa ha il redlining):"
+
+#: ../../docs/server_manual/services.rst:2164
+msgid ""
+"Here is the image outputed by the above request in which a polygon and a "
+"label are drawn on top of the normal map:"
+msgstr ""
+"Ecco l'immagine prodotta dalla richiesta di cui sopra in cui un poligono e "
+"un'etichetta sono disegnati sopra la mappa normale:"
+
+#: ../../docs/server_manual/services.rst:2172
+msgid "Server response to a GetMap request with redlining parameters"
+msgstr "Risposta del server a una richiesta GetMap con parametri di redlining"
+
+#: ../../docs/server_manual/services.rst:2174
+msgid "You can see there are several parameters in this request:"
+msgstr "Puoi vedere che ci sono diversi parametri in questa richiesta:"
+
+#: ../../docs/server_manual/services.rst:2176
+msgid ""
+"**HIGHLIGHT_GEOM**: You can add POINT, MULTILINESTRING, POLYGON etc. It "
+"supports multipart geometries. Here is an example: "
+"``HIGHLIGHT_GEOM=MULTILINESTRING((0 0, 0 1, 1 1))``. The coordinates should "
+"be in the CRS of the GetMap/GetPrint request."
+msgstr ""
+"**HIGHLIGHT_GEOM**: Puoi aggiungere POINT, MULTILINESTRING, POLYGON ecc. "
+"Supporta le geometrie multiparte. Ecco un esempio: "
+"``HIGHLIGHT_GEOM=MULTILINESTRING((0 0 0, 0 1, 1 1))``. Le coordinate "
+"dovrebbero essere nel SR della richiesta GetMap/GetPrint."
+
+#: ../../docs/server_manual/services.rst:2181
+msgid ""
+"**HIGHLIGHT_SYMBOL**: This controls how the geometry is outlined and you can"
+" change the stroke width, color and opacity."
+msgstr ""
+"**HIGHLIGHT_SYMBOL**: Questo controlla come la geometria è evidenziata e si "
+"può cambiare la larghezza del tratto, il colore e l'opacità."
+
+#: ../../docs/server_manual/services.rst:2184
+msgid ""
+"**HIGHLIGHT_LABELSTRING**: You can pass your labeling text to this "
+"parameter."
+msgstr ""
+"**HIGHLIGHT_LABELSTRING**: Puoi passare il tuo testo di etichettatura a "
+"questo parametro."
+
+#: ../../docs/server_manual/services.rst:2187
+msgid ""
+"**HIGHLIGHT_LABELSIZE**: This parameter controls the size of the label."
+msgstr ""
+"**HIGHLIGHT_LABELSIZE**: Questo parametro controlla la dimensione "
+"dell'etichetta."
+
+#: ../../docs/server_manual/services.rst:2190
+msgid ""
+"**HIGHLIGHT_LABELFONT**: This parameter controls the font of the label (e.g."
+" Arial)"
+msgstr ""
+"**HIGHLIGHT_LABELFONT**: Questo parametro controlla il carattere "
+"dell'etichetta (ad esempio Arial)"
+
+#: ../../docs/server_manual/services.rst:2193
+msgid "**HIGHLIGHT_LABELCOLOR**: This parameter controls the label color."
+msgstr ""
+"**HIGHLIGHT_LABELCOLOR**: Questo parametro controlla il colore "
+"dell'etichetta."
+
+#: ../../docs/server_manual/services.rst:2195
+msgid ""
+"**HIGHLIGHT_LABELBUFFERCOLOR**: This parameter controls the label buffer "
+"color."
+msgstr ""
+"**HIGHLIGHT_LABELBUFFERCOLOR**: Questo parametro controlla il colore del "
+"buffer dell' etichetta."
+
+#: ../../docs/server_manual/services.rst:2198
+msgid ""
+"**HIGHLIGHT_LABELBUFFERSIZE**: This parameter controls the label buffer "
+"size."
+msgstr ""
+"**HIGHLIGHT_LABELBUFFERSIZE**: Questo parametro controlla la dimensione del "
+"buffer dell'etichetta."
+
+#: ../../docs/server_manual/services.rst:2202
+msgid "External WMS layers"
+msgstr "Layer WMS esterni"
+
+#: ../../docs/server_manual/services.rst:2204
+msgid ""
+"QGIS Server allows including layers from external WMS servers in WMS GetMap "
+"and WMS GetPrint requests. This is especially useful if a web client uses an"
+" external background layer in the web map. For performance reasons, such "
+"layers should be directly requested by the web client (not cascaded via QGIS"
+" server). For printing however, these layers should be cascaded via QGIS "
+"server in order to appear in the printed map."
+msgstr ""
+"QGIS Server permette di includere layer da server WMS esterni nelle "
+"richieste WMS GetMap e WMS GetPrint. Questo è particolarmente utile se un "
+"client web usa un livello di sfondo esterno nella mappa web. Per ragioni di "
+"prestazioni, tali livelli dovrebbero essere richiesti direttamente dal "
+"client web (non in cascata attraverso il server QGIS). Per la stampa, "
+"invece, questi livelli dovrebbero essere collegati in cascata attraverso il "
+"server QGIS per apparire nella mappa stampata."
+
+#: ../../docs/server_manual/services.rst:2211
+msgid ""
+"External layers can be added to the LAYERS parameter as "
+"EXTERNAL_WMS:<layername>. The parameters for the external WMS layers (e.g. "
+"url, format, dpiMode, crs, layers, styles) can later be given as service "
+"parameters <layername>:<parameter>. In a GetMap request, this might look "
+"like this:"
+msgstr ""
+"I layer esterni possono essere aggiunti al parametro LAYERS come "
+"EXTERNAL_WMS:1. I parametri per i layer WMS esterni (ad esempio url, format,"
+" dpiMode, crs, layers, styles) possono essere dati successivamente come "
+"parametri di servizio <layername>:<parameter>. In una richiesta GetMap, "
+"questo potrebbe apparire così:"
+
+#: ../../docs/server_manual/services.rst:2232
+msgid "Similarly, external layers can be used in GetPrint requests:"
+msgstr ""
+"Analogamente, i layer esterni possono essere usati nelle richieste GetPrint:"
+
+#: ../../docs/server_manual/services.rst:2250
+msgid "QGIS Server catalog"
+msgstr "QGIS Server catalog"
+
+#: ../../docs/server_manual/services.rst:2252
+msgid ""
+"The QGIS Server Catalog is a simple catalog that shows the list of QGIS "
+"projects served by the QGIS Server. It provides a user-friendly fully "
+"browsable website with basic mapping capabilities to quickly browse the "
+"datasets exposed through those QGIS projects."
+msgstr ""
+"Il QGIS Server Catalog è un semplice catalogo che mostra l'elenco dei "
+"progetti QGIS forniti dal QGIS Server. Fornisce un sito web user-friendly "
+"completamente navigabile con capacità di mappatura di base per sfogliare "
+"rapidamente i dataset presenti in quei progetti QGIS."
+
+#: ../../docs/server_manual/services.rst:2257
+msgid ""
+"The QGIS Server catalog uses the variables "
+"QGIS_SERVER_LANDING_PAGE_PROJECTS_DIRECTORIES and  "
+"QGIS_SERVER_LANDING_PAGE_PROJECTS_PG_CONNECTIONS (see :ref:`qgis-server-"
+"envvar`)"
+msgstr ""
+"Il QGIS Server catalog usa le variabili "
+"QGIS_SERVER_LANDING_PAGE_PROJECTS_DIRECTORIES e "
+"QGIS_SERVER_LANDING_PAGE_PROJECTS_PG_CONNECTIONS (vedi :ref:`qgis-server-"
+"envvar`)"
+
+#: ../../docs/server_manual/services.rst:2265
+msgid "Server Catalog project list page"
+msgstr "Pagina dell'elenco dei progetti del Server Catalog"
+
+#: ../../docs/server_manual/services.rst:2267
+msgid ""
+"You can consult the metadata associated to a project and the services that "
+"it provides. Links to those services are also given."
+msgstr ""
+"Puoi consultare i metadati associati a un progetto e i servizi che fornisce."
+" Vengono forniti anche i link a questi servizi."
+
+#: ../../docs/server_manual/services.rst:2275
+msgid ""
+"Server Catalog, metadata associated to a project and services (links to) "
+"that it provides."
+msgstr ""
+"Server Catalog, metadati associati a un progetto e servizi (link a) che "
+"fornisce."
+
+#: ../../docs/server_manual/services.rst:2277
+msgid "By browsing a project, it is listed the dataset that it serves."
+msgstr "Sfogliando un progetto, viene elencato il dataset che serve."
+
+#: ../../docs/server_manual/services.rst:2284
+msgid "Browsing a dataset served by a project in the Server Catalog"
+msgstr "Sfogliare un dataset fornito da un progetto nel catalogo del server"
+
+#: ../../docs/server_manual/services.rst:2286
+msgid ""
+"Use Right click on a layer to display the attribute table associated to it."
+msgstr ""
+"Usa il clic destro su un layer per visualizzare la tabella degli attributi "
+"ad esso associati."
+
+#: ../../docs/server_manual/services.rst:2293
+msgid "Attribute table associated to a layer"
+msgstr "Tabella degli attributi associati a un layer"
+
+#: ../../docs/server_manual/services.rst:2295
+msgid ""
+"It is possible to consult information of the elements in the map as shown in"
+" the image below:"
+msgstr ""
+"È possibile consultare le informazioni degli elementi nella mappa come "
+"mostrato nell'immagine qui sotto:"
+
+#: ../../docs/server_manual/services.rst:2302
+msgid "Consulting information of a map element"
+msgstr "Consultazione delle informazioni di un elemento della mappa"

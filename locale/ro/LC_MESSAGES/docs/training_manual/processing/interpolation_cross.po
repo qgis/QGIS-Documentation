@@ -1,0 +1,112 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:23+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Romanian (https://www.transifex.com/qgis/teams/6144/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../docs/training_manual/processing/interpolation_cross.rst:2
+msgid "More interpolation"
+msgstr "Mai multe despre interpolare"
+
+#: ../../docs/training_manual/processing/interpolation_cross.rst:4
+msgid ""
+"This chapter shows another practical case where interpolation algorithms are"
+" used."
+msgstr ""
+"Acest capitol prezintă alte cazuri practice de folosire a algoritmilor de "
+"interpolare."
+
+#: ../../docs/training_manual/processing/interpolation_cross.rst:6
+msgid ""
+"Interpolation is a common technique, and it can be used to demonstrate "
+"several techniques that can be applied using the QGIS processing framework. "
+"This lesson uses some interpolation algorithms that were already introduced,"
+" but has a different approach."
+msgstr ""
+"Interpolarea este o tehnică obișnuită, acesta putând fi folosită pentru a "
+"demonstra mai multe tehnici care pot fi aplicate cu ajutorul cadrului de "
+"lucru Processing din QGIS. Această lecție utilizează unii algoritmi de "
+"interpolare care au fost deja prezentați, dar care utilizează o abordare "
+"diferită."
+
+#: ../../docs/training_manual/processing/interpolation_cross.rst:8
+msgid ""
+"The data for this lesson contains also a points layer, in this case with "
+"elevation data. We are going to interpolate it much in the same way as we "
+"did in the previous lesson, but this time we will save part of the original "
+"data to use it for assessing the quality of the interpolation process."
+msgstr ""
+"Datele pentru această lecție conțin, de asemenea, un strat de puncte, în "
+"acest caz, cu date de elevație. În general, îl vom interpola în același mod "
+"ca și în lecția anterioară, însă, de data aceasta, vom salva o parte din "
+"datele originale, pe care o vom utiliza în evaluarea calității procesului de"
+" interpolare."
+
+#: ../../docs/training_manual/processing/interpolation_cross.rst:14
+msgid "That will select 90% of the points in the layer to rasterize"
+msgstr "Se vor selecta 90% dintre punctele din stratul de rasterizat"
+
+#: ../../docs/training_manual/processing/interpolation_cross.rst:18
+msgid ""
+"The selection is random, so your selection might differ from the selection "
+"shown in the above image."
+msgstr ""
+"Selecția este aleatoare, astfel încât selecția dvs. ar putea diferi de "
+"selecția arătată în imaginea de mai sus."
+
+#: ../../docs/training_manual/processing/interpolation_cross.rst:26
+msgid ""
+"Since we are going to use the points that are not selected, first, let's "
+"invert the selection."
+msgstr ""
+"Din moment ce vom folosi punctele care nu sunt selectate, în primul rând, "
+"haideți să inversăm selecția."
+
+#: ../../docs/training_manual/processing/interpolation_cross.rst:36
+msgid ""
+"Now we have a vector layer that contains both values, with points that were "
+"not used for the interpolation."
+msgstr ""
+"Acum avem un strat vectorial care conține ambele valori, cu punctele care nu"
+" au fost utilizate pentru interpolare."
+
+#: ../../docs/training_manual/processing/interpolation_cross.rst:40
+msgid ""
+"Now, we will use the fields calculator for this task. Open the *Field "
+"calculator* algorithm and run it with the following parameters."
+msgstr ""
+"Acum, vom folosi calculatorul de câmpuri pentru această sarcină. Deschideți "
+"algoritmul *Calculatorului de câmpuri* și-l vom rula cu următorii parametri."
+
+#: ../../docs/training_manual/processing/interpolation_cross.rst:46
+msgid ""
+"Representing that layer according to that value will give us a first idea of"
+" where the largest discrepancies are found."
+msgstr ""
+"Reprezentând stratul în conformitate cu acea valoare, vom avea o primă idee "
+"despre locația celor mai mari discrepanțe."
+
+#: ../../docs/training_manual/processing/interpolation_cross.rst:50
+msgid ""
+"Interpolating that layer will get you a raster layer with the estimated "
+"error in all points of the interpolated area."
+msgstr ""
+"Interpolând acel strat veți obține un strat raster cu eroarea estimată în "
+"toate punctele din zona interpolată."

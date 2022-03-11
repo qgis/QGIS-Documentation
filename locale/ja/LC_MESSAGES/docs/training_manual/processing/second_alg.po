@@ -1,0 +1,228 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:21+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/processing/second_alg.rst:2
+msgid "More algorithms and data types"
+msgstr "さらなるアルゴリズムとデータタイプ"
+
+#: ../../docs/training_manual/processing/second_alg.rst:5
+msgid ""
+"In this lesson we will run three more algorithms, learn how to use other "
+"input types, and configure outputs to be saved to a given folder "
+"automatically."
+msgstr ""
+"このレッスンでは、さらに3つのアルゴリズムを実行し、他の入力タイプを使用する方法を学習し、自動的に指定したフォルダに保存されるように出力を設定します。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:7
+msgid ""
+"For this lessons we will need a table and a polygons layer. We are going to "
+"create a points layer based on coordinates in the table, and then count the "
+"number of points in each polygon. If you open the QGIS project corresponding"
+" to this lesson, you will find a table with X and Y coordinates, but you "
+"will find no polygons layer. Don't worry, we will create it using a "
+"processing geoalgorithm."
+msgstr ""
+"このレッスンのためには、テーブルとポリゴンレイヤーが必要になります。テーブル内の座標に基づいてポイントレイヤーを作成し、各ポリゴン内のポイントの数をカウントしていきます。このレッスンに対応するQGISプロジェクトを開くと、XとY座標を持つテーブルがありますが、ポリゴンレイヤーは何も見つかりません。心配しないで、これからプロセッシング・ジオアルゴリズムを使用して作成していきます。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:9
+msgid ""
+"The first thing we are going to do is to create a points layer from the "
+"coordinates in the table, using the *Points layer from table* algorithm. You"
+" now know how to use the search box, so it should not be hard for you to "
+"find it. Double--click on it to run it and get to its following dialog."
+msgstr ""
+"まずやることは、 *テーブルからポイントレイヤー* "
+"アルゴリズムを使用して、テーブル内の座標からポイントレイヤを作成することです。これで、検索ボックスを使用する方法を知っているので、それを見つけることは難しいことではありません。それを実行し、その次のダイアログを取得し、それをダブル"
+" - クリックしてください。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:11
+msgid ""
+"This algorithm, like the one from the previous lesson, just generates a "
+"single output, and it has three inputs:"
+msgstr "このアルゴリズムは、前のレッスンから1のように、ただ1つの出力を生成し、それは3つの入力を持っています："
+
+#: ../../docs/training_manual/processing/second_alg.rst:13
+msgid ""
+"*Table*: the table with the coordinates. You should select here the table "
+"from the lesson data."
+msgstr "*表* ：座標を持つテーブル。ここで授業のデータからテーブルを選択する必要があります。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:14
+msgid ""
+"*X and Y fields*: these two parameters are linked to the first one. The "
+"corresponding selector will show the name of those fields that are available"
+" in the selected table. Select the *XCOORD* field for the *X* parameter, and"
+" the *YYCOORD* field for the *Y* parameter."
+msgstr ""
+"*XとYのフィールド* "
+"：これら2つのパラメーターは、最初の1にリンクされています。対応するセレクタは、選択されたテーブルで利用可能なこれらのフィールドの名前が表示されます。 "
+"*Y* パラメーターのための *X* パラメーター、及び *YYCOORD* フィールドに *XCOORD* フィールドを選択します。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:15
+msgid ""
+"*CRS*: Since this algorithm takes no input layers, it cannot assign a CRS to"
+" the output layer based on them. Instead, it asks you to manually select the"
+" CRS that the coordinates in the table use. Click on the button on the left"
+"--hand side to open the QGIS CRS selector, and select EPSG:4326 as the "
+"output CRS. We are using this CRS because the coordinates in the table are "
+"in that CRS."
+msgstr ""
+"*CRS* "
+"：このアルゴリズムでは何も入力レイヤーをとらないので、それに基づいて出力レイヤーへCRSを割り当てることはできません。代わりに、手動でテーブルの使用中の座標というCRSを選択するように求められます。左-手側のボタンをクリックして"
+" QGIS CRSセレクタを開き、選択するために出力CRSとしてEPSG:4326を。表中の座標はそのCRSにあるのでこのCRSを使用しています。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:17
+msgid "Your dialog should look like this."
+msgstr "ダイアログは次のようになります。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:21
+msgid ""
+"Now press the *Run* button to get the following layer (you may need to zoom "
+"full to reenter the map around the newly created points):"
+msgstr ""
+"今、次のレイヤーを得るために *実行* ボタンを押します（新たに作成されたポイント周辺の地図を再入力するフルズームする必要があるかもしれません）。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:25
+msgid ""
+"The next thing we need is the polygon layer. We are going to create a "
+"regular grid of polygons using the *Create grid* algorithm, which has the "
+"following parameters dialog."
+msgstr ""
+"必要とする次のものはポリゴンレイヤーです。次のパラメーター]ダイアログボックスを持っている *グリッドを作成* "
+"アルゴリズムを使用して、ポリゴンの規則的グリッドを作成していきます。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:29
+msgid ""
+"The options are simpler in recent versions of QGIS; you just need to enter "
+"min and max for X and Y (suggested values: "
+"-5.696226,-5.695122,40.24742,40.248171)"
+msgstr ""
+"オプションは、QGISの最近のバージョンでは単純です。XとYのための最小値と最大値を入力する必要があるだけです（推奨値：-5.696226, "
+"-5.695122, 40.24742, 40.248171）"
+
+#: ../../docs/training_manual/processing/second_alg.rst:31
+msgid ""
+"The inputs required to create the grid are all numbers. When you have to "
+"enter a numerical value, you have two options: typing it directly on the "
+"corresponding box or clicking the button on the right--hand side to get to a"
+" dialog like the one shown next."
+msgstr ""
+"グリッドを作成するために必要な入力はすべて数値です。 - "
+"右側次の図のようなダイアログボックスに取得するには、対応するボックスに直接入力するか、右側のボタンをクリック：数値を入力する必要がある場合、次の2つのオプションがあります。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:35
+msgid ""
+"The dialog contains a simple calculator, so you can type expressions such as"
+" ``11 * 34.7 + 4.6``, and the result will be computed and put in the "
+"corresponding text box in the parameters dialog. Also, it contains constants"
+" that you can use, and values from other layers available."
+msgstr ""
+"ダイアログには簡単な計算機が含まれているので、 ``11 * 34.7 + 4.6`` "
+"のような式を入力でき、その結果が計算され、パラメーターダイアログに対応するテキストボックスに入ります。また、それには使用できる定数が含まれており、他のレイヤーからの値が入手できます。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:37
+msgid ""
+"In this case, we want to create a grid that covers the extent of the input "
+"points layer, so we should use its coordinates to calculate the center "
+"coordinate of the grid and its width and height, since those are the "
+"parameters that the algorithm takes to create the grid. With a little bit of"
+" math, try to do that yourself using the calculator dialog and the constants"
+" from the input points layer."
+msgstr ""
+"この場合、入力ポイントレイヤーの範囲をカバーするグリッドを作成したいので、これらはアルゴリズムがグリッドを作成するのに要するパラメーターであるので、グリッドとその幅と高さの中心座標を計算するためにその座標を使用する必要があります。数学の少しで、計算機ダイアログと入力ポイントレイヤーからの定数を使用して自分でやってみましょう。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:39
+msgid "Select *Rectangles (polygons)* in the *Type* field."
+msgstr "*タイプ* フィールドに *長方形（ポリゴン）* を選択します。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:41
+msgid ""
+"As in the case of the last algorithm, we have to enter the CRS here as well."
+" Select EPSG:4326 as the target CRS, as we did before."
+msgstr ""
+"最後のアルゴリズムの場合のように、私たちはここにもCRSを入力する必要があります。私たちは前に行ったように、ターゲットCRSとして4326：EPSGを選択します。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:43
+msgid "In the end, you should have a parameters dialog like this:"
+msgstr "最後には、このようなダイアログのパラメーターを持っているはずです："
+
+#: ../../docs/training_manual/processing/second_alg.rst:47
+msgid ""
+"(Better add one spacing on the width and height: Horizontal spacing: 0.0001,"
+" Vertical spacing: 0.0001, Width: 0.001004, Height: 0.000651, Center X: "
+"-5.695674, Center Y: 40.2477955) The case of X center is a bit tricky, see: "
+"-5.696126+(( -5.695222+ 5.696126)/2)"
+msgstr ""
+"（幅と高さ上の一点の間隔を追加すると良い：水平間隔：0.0001、垂直間隔：0.0001、幅：0.001004、高さ：0.000651、中心X：-5.695674、中心Y：40.2477955）X中心の場合は少しトリッキーであり、参照：-5.696126"
+" +（（-5.695222+ 5.696126）/ 2）"
+
+#: ../../docs/training_manual/processing/second_alg.rst:50
+msgid "Press *Run* and you will get the graticule layer."
+msgstr "*実行* を押すと目盛レイヤーが得られるでしょう。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:54
+msgid ""
+"The last step is to count the points in each one of the rectangles of that "
+"graticule. We will use the *Count points in polygons* algorithm."
+msgstr "最後のステップは、その目盛の長方形の各長方形の中の点を数えることです。 *ポリゴンでポイントをカウント* アルゴリズムを使用します。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:58
+msgid "Now we have the result we were looking for."
+msgstr "これで探していた結果が得られました。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:60
+msgid ""
+"Before finishing this lesson, here is a quick tip to make your life easier "
+"in case you want to persistently save your data. If you want all your output"
+" files to be saved in a given folder, you do not have to type the folder "
+"name each time. Instead, go to the processing menu and select the *Options "
+"and configuration* item. It will open the configuration dialog."
+msgstr ""
+"このレッスンを終了する前に、データを永続的に保存したい場合にあなたの人生を楽にするための簡単なヒントを。すべての出力ファイルを指定したフォルダに保存したい場合は、フォルダ名を毎回入力する必要はありません。代わりに、処理メニューに移動し、"
+" *オプションと設定* 項目を選択します。これは、設定ダイアログを開きます。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:64
+msgid ""
+"In the *Output folder* entry that you will find in the *General* group, type"
+" the path to your destination folder."
+msgstr "*一般* グループで見つける *出力フォルダ* エントリでは、保存先フォルダへのパスを入力します。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:68
+msgid ""
+"Now when you run an algorithm, just use the filename instead of the full "
+"path. For instance, with the configuration shown above, if you enter "
+"``graticule.shp`` as the output path for the algorithm that we have just "
+"used, the result will be saved in ``D:\\processing_output\\graticule.shp``. "
+"You can still enter a full path in case you want a result to be saved in a "
+"different folder."
+msgstr ""
+"さてアルゴリズムを実行するときは、完全パスではなくファイル名だけ使用してください。ちょうど今使用しているアルゴリズムの出力パスとして "
+"``graticule.shp`` を入力した場合例えば、上記のような構成で、結果は "
+"``D:\\processing_output\\graticule.shp`` "
+"に保存されます。それでも結果を別のフォルダに保存したい場合、完全パスを入力できます。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:71
+msgid ""
+"Try yourself the *Create grid* algorithm with different grid sizes, and also"
+" with different types of grids."
+msgstr "*グリッドを作成* アルゴリズムを異なるグリッドサイズで、またグリッドの異なる種類で自分で試してみてください。"

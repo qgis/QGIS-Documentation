@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# Aline Furlanetto Viero <afviero@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 01:57+0200\n"
+"PO-Revision-Date: 2020-03-16 19:23+0000\n"
+"Last-Translator: Aline Furlanetto Viero <afviero@gmail.com>, 2020\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:6
+msgid ""
+"The code snippets on this page need the following imports if you're outside "
+"the pyqgis console:"
+msgstr ""
+"Os trechos de código desta página precisam das seguintes importações se você"
+" estiver fora do console do pyqgis:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:35
+msgid "Loading Projects"
+msgstr "Carregando projetos"
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:37
+msgid ""
+"Sometimes you need to load an existing project from a plugin or (more often)"
+" when developing a standalone QGIS Python application (see: "
+":ref:`pythonapplications`)."
+msgstr ""
+"Às vezes, você precisa carregar um projeto existente a partir de um "
+"complemento ou (com mais frequência) ao desenvolver um aplicativo QGIS "
+"Python independente (veja: :ref:`pythonapplications`)."
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:44
+msgid ""
+"To load a project into the current QGIS application you need to create an "
+"instance of the :class:`QgsProject <qgis.core.QgsProject>` class. This is a "
+"singleton class, so you must use its :meth:`instance() "
+"<qgis.core.QgsProject.instance>` method to do it. You can call its "
+":meth:`read() <qgis.core.QgsProject.read>` method, passing the path of the "
+"project to be loaded:"
+msgstr ""
+"Para carregar um projeto no aplicativo QGIS atual, você precisa criar uma "
+"instância da classe :class:`QgsProject <qgis.core.QgsProject>`. Esta é uma "
+"classe singleton, portanto você deve usar o método :meth:`instance() "
+"<qgis.core.QgsProject.instance>` para fazer isso. Você pode chamar o método "
+":meth:`read() <qgis.core.QgsProject.read>`, passando o caminho do projeto a "
+"ser carregado:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:75
+msgid ""
+"If you need to make modifications to the project (for example to add or "
+"remove some layers) and save your changes, call the :meth:`write() "
+"<qgis.core.QgsProject.write>` method of your project instance. The "
+":meth:`write() <qgis.core.QgsProject.write>` method also accepts an optional"
+" path for saving the project to a new location:"
+msgstr ""
+"Se você precisar fazer modificações no projeto (por exemplo, adicionar ou "
+"remover algumas camadas) e salvar suas alterações, chame o método "
+":meth:`write() <qgis.core.QgsProject.write>` da sua instância do projeto. O "
+"método :meth:`write() <qgis.core.QgsProject.write>` também aceita um caminho"
+" opcional para salvar o projeto em um novo local:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:87
+msgid ""
+"Both :meth:`read() <qgis.core.QgsProject.read>` and :meth:`write() "
+"<qgis.core.QgsProject.write>` functions return a boolean value that you can "
+"use to check if the operation was successful."
+msgstr ""
+"Ambas as funções :meth:`read() <qgis.core.QgsProject.read>` e :meth:`write()"
+" <qgis.core.QgsProject.write>` retornam um valor booleano que você pode usar"
+" para verificar se a operação foi bem sucedida."
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:93
+msgid ""
+"If you are writing a QGIS standalone application, in order to synchronise "
+"the loaded project with the canvas you need to instantiate a "
+":class:`QgsLayerTreeMapCanvasBridge <qgis.gui.QgsLayerTreeMapCanvasBridge>` "
+"as in the example below:"
+msgstr ""
+"Se você estiver escrevendo um aplicativo independente do QGIS, para "
+"sincronizar o projeto carregado com a tela, é necessário instanciar uma "
+":class:QgsLayerTreeMapCanvasBridge <qgis.gui.QgsLayerTreeMapCanvasBridge> "
+"`como no exemplo abaixo:"
