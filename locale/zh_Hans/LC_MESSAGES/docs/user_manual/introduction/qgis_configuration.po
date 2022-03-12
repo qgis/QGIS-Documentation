@@ -623,7 +623,7 @@ msgstr "|checkbox| :guilabel:`存在多个时询问基准面变换`"
 msgid ""
 "a predefined list of datum transformations to apply by default. See "
 ":ref:`datum_transformation` for more details."
-msgstr "默认情况下要应用的预定义基准变换列表。有关详细信息，请参见 :ref:`datum_transformation` 。"
+msgstr "默认情况下要应用的预定义基准变换列表。更多信息，请参阅 :ref:`datum_transformation` 。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:308
 msgid "Data Sources Settings"
@@ -1232,8 +1232,7 @@ msgid ""
 ":guilabel:`Project colors`, a set of colors specific to the current project "
 "(see :ref:`default_styles_properties` for more details)"
 msgstr ""
-":guilabel:`工程颜色`, 特定于当前工程的一组颜色 (更多详细信息，请参阅 :ref:`default_styles_properties` "
-")"
+":guilabel:`工程颜色`, 特定于当前工程的一组颜色 (更多信息，请参阅 :ref:`default_styles_properties` )"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:615
 msgid ""
@@ -1501,3 +1500,1194 @@ msgid ""
 "You can define the :guilabel:`Default font` used within the :ref:`print "
 "layout <label_printlayout>`."
 msgstr "您可以定义在 :ref:`打印布局 <label_printlayout>` 中使用的 :guilabel:`默认字体` 。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:738
+msgid "**Grid appearance**"
+msgstr "**网格外观**"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:740
+msgid ""
+"Define the :guilabel:`Grid style` |selectString| ('Solid', 'Dots', "
+"'Crosses')"
+msgstr "定义 :guilabel:`网格样式` |selectString| ('实线', '点', '十字')"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:741
+msgid "Define the :guilabel:`Grid color`"
+msgstr "定义 :guilabel:`网格颜色`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:743
+msgid "**Grid and guide defaults**"
+msgstr "**网格和参考线默认值**"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:745
+msgid "Define the :guilabel:`Grid spacing` |selectNumber|"
+msgstr "定义 :guilabel:`网格间距` |selectNumber|"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:746
+msgid "Define the :guilabel:`Grid offset` |selectNumber| for X and Y"
+msgstr "定义X和Y的 :guilabel:`网格偏移` |selectNumber|"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:747
+msgid "Define the :guilabel:`Snap tolerance` |selectNumber|"
+msgstr "定义 :guilabel:`捕捉容差` |selectNumber|"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:750
+msgid "**Layout Paths**"
+msgstr "**布局路径**"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:752
+msgid ""
+"Define :guilabel:`Path(s) to search for extra print templates`: a list of "
+"folders with custom layout templates to use while creating new one."
+msgstr "定义 :guilabel:`附加打印模板的搜索路径`: 包含自定义布局模板的文件夹列表，可在创建新模板时使用。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:759
+msgid "GDAL Settings"
+msgstr "GDAL设置"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:761
+msgid ""
+"`GDAL <https://gdal.org>`_ is a data exchange library for geospatial data "
+"that supports a large number of vector and raster formats. It provides "
+"drivers to read and (often) write data in these formats. The "
+":guilabel:`GDAL` tab exposes the drivers for raster and vector formats with "
+"their capabilities."
+msgstr ""
+"`GDAL <https://gdal.org>`_ 是一个支持大量矢量和栅格格式的地理空间数据的数据交换库。它提供了以这些格式读取和 (通常) "
+"写入数据的驱动程序。  :guilabel:`GDAL` 选项卡显示了栅格和矢量格式的驱动程序及其功能。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:768
+msgid "Raster driver options"
+msgstr "栅格驱动选项"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:770
+msgid ""
+"This frame provides ways to customize the behavior of raster drivers that "
+"support read and write access:"
+msgstr "此框架提供了自定义支持读写访问的栅格驱动程序行为的方法："
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:775
+msgid ""
+":guilabel:`Edit create options`: allows you to edit or add different "
+"profiles of file transformation, i.e. a set of predefined combinations of "
+"parameters (type and level of compression, blocks size, overview, "
+"colorimetry, alpha...) to use when outputting raster files. The parameters "
+"depend on the driver."
+msgstr ""
+":guilabel:`编辑创建选项`: 允许您编辑或添加不同的文件转换配置文件，即在输出栅格文件时使用一组预定义的参数组合 "
+"(压缩类型和层级、块大小、概述、色度、透明度…)。参数取决于驱动程序。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:785
+msgid "Sample of create options profile (for GeoTiff)"
+msgstr "创建选项配置文件示例 (适用于GeoTiff)"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:787
+msgid ""
+"The upper part of the dialog lists the current profile(s) and allows you to "
+"add new ones or remove any of them. You can also reset the profile to its "
+"default parameters if you have changed them. Some drivers (eg, GeoTiff) have"
+" some sample of profiles you can work with."
+msgstr ""
+"对话框的上半部分列出了当前配置文件，并允许您添加新配置文件或删除其中任何一个。如果您更改了配置文件的默认参数，也可以将其重置为默认参数。一些驱动程序 "
+"(例如GeoTiff) 有一些可以使用的配置文件样本。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:792
+msgid "At the bottom of the dialog:"
+msgstr "在对话框底部："
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:794
+msgid ""
+"The |signPlus| button lets you add rows to fill with the parameter name and "
+"value"
+msgstr "|signPlus| 按钮允许您添加行以填充参数名称和值"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:795
+msgid "The |signMinus| button deletes the selected parameter"
+msgstr "|signMinus| 按钮删除所选参数"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:796
+msgid ""
+"Click the :guilabel:`Validate` button to check that the creation options "
+"entered for the given format are valid"
+msgstr "单击 :guilabel:`验证` 按钮，检查为给定格式输入的创建选项是否有效"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:798
+msgid ""
+"Use the :guilabel:`Help` button to find the parameters to use, or refer to "
+"the `GDAL raster drivers documentation "
+"<https://gdal.org/drivers/raster/index.html>`_."
+msgstr ""
+"使用 :guilabel:`帮助` 按钮查找要使用的参数，或参考 `GDAL栅格驱动程序文档 "
+"<https://gdal.org/drivers/raster/index.html>`_ 。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:804
+msgid ":guilabel:`Edit Pyramids Options`"
+msgstr ":guilabel:`编辑金字塔选项`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:811
+msgid "Sample of Pyramids profile"
+msgstr "金字塔配置文件示例"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:814
+msgid "GDAL raster and vector drivers"
+msgstr "GDAL栅格和矢量驱动"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:816
+msgid ""
+"The :guilabel:`Raster Drivers` and :guilabel:`Vector Drivers` (in a "
+"separated tab) allow you to define which GDAL driver is enabled to read "
+"and/or write files, as in some cases more than one GDAL driver is available."
+msgstr ""
+":guilabel:`栅格驱动` 和 :guilabel:`矢量驱动` (在单独的选项卡中) "
+"允许您定义哪个GDAL驱动能够读取和/或写入文件，因为在某些情况下，有多个GDAL驱动可用。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:824
+msgid "GDAL Settings in QGIS - Raster drivers"
+msgstr "QGIS中的GDAL设置 - 栅格驱动"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:826
+msgid ""
+"Double-click a raster driver that allows read and write access (``rw+(v)``) "
+"opens the :ref:`Edit Create options <gdal_createoptions>` dialog for "
+"customization."
+msgstr ""
+"双击允许读写访问的栅格驱动 (``rw+(v)``) 打开 :ref:`编辑创建选项 <gdal_createoptions>` 对话框进行自定义编辑。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:834
+msgid "Variables Settings"
+msgstr "变量设置"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:836
+msgid ""
+"The :guilabel:`Variables` tab lists all the variables available at the "
+"global-level."
+msgstr ":guilabel:`变量` 选项卡列出了全局级别的所有可用变量。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:839
+msgid ""
+"It also allows the user to manage global-level variables. Click the "
+"|signPlus| button to add a new custom global-level variable. Likewise, "
+"select a custom global-level variable from the list and click the "
+"|signMinus| button to remove it."
+msgstr ""
+"它还允许用户管理全局级别的变量。单击 |signPlus| 按钮添加新的自定义全局级别变量；同样，从列表中选择一个自定义全局级别变量，然后单击 "
+"|signMinus| 按钮将其删除。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:844
+msgid ""
+"More information about variables in the :ref:`general_tools_variables` "
+"section."
+msgstr "有关变量的更多信息，请参见 :ref:`general_tools_variables` 章节。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:853
+msgid "Variables Settings in QGIS"
+msgstr "QGIS中的变量设置"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:860
+msgid "Authentication Settings"
+msgstr "认证设置"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:862
+msgid ""
+"In the :guilabel:`Authentication` tab you can set authentication "
+"configurations and manage PKI certificates. See :ref:`authentication_index` "
+"for more details."
+msgstr ""
+"在 :guilabel:`认证` 选项卡中，可以设置认证配置和管理PKI证书。更多信息，请参阅 :ref:`authentication_index` "
+"。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:872
+msgid "Authentication Settings in QGIS"
+msgstr "QGIS中的认证设置"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:879
+msgid "Network Settings"
+msgstr "网络设置"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:881
+msgid "**General**"
+msgstr "**通用**"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:883
+msgid ""
+"Define :guilabel:`Timeout for network requests (ms)` - default is 60000"
+msgstr "定义 :guilabel:`网络请求超时 (毫秒)` - 默认是 60000"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:884
+msgid ""
+"Define :guilabel:`Default expiration period for WMS Capabilities (hours)` - "
+"default is 24"
+msgstr "定义 :guilabel:`WMS功能描述的默认有效期 (小时)` - 默认是 24"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:886
+msgid ""
+"Define :guilabel:`Default expiration period for WMS-C/WMTS tiles (hours)` - "
+"default is 24"
+msgstr "定义 :guilabel:`WMS-C/WMTS瓦片的默认过期时间 (小时)` - 默认是 24"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:888
+msgid "Define :guilabel:`Max retry in case of tile or feature request errors`"
+msgstr "定义 :guilabel:`瓦片或要素请求遇到错误时的最大重试次数`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:889
+msgid "Define :guilabel:`User-Agent`"
+msgstr "定义 :guilabel:`用户代理`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:896
+msgid "Proxy-settings in QGIS"
+msgstr "QGIS中的代理设置"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:898
+msgid "**Cache settings**"
+msgstr "**缓存设置**"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:900
+msgid ""
+"Defines the :guilabel:`Directory` and a :guilabel:`Size` for the cache. Also"
+" offers tools to :guilabel:`automatically clear the connection "
+"authentication cache on SSL errors (recommended)`."
+msgstr ""
+"定义缓存的 :guilabel:`目录` 和 :guilabel:`大小`, 还提供了 :guilabel:`发生SSL错误时自动清除连接认证缓存 "
+"(推荐)` 的工具。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:904
+msgid "**Proxy for web access**"
+msgstr "**Web访问代理**"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:906
+msgid "|checkbox| :guilabel:`Use proxy for web access`"
+msgstr "|checkbox| :guilabel:`Web访问使用代理`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:907
+msgid ""
+"Set the :guilabel:`Proxy type` |selectString| according to your needs and "
+"define 'Host' and 'Port'. Available proxy types are:"
+msgstr "根据需要设置 :guilabel:`代理类型` |selectString|, 并定义 \"主机\" 和 \"端口\"。可用的代理类型包括："
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:910
+msgid ""
+":menuselection:`Default Proxy`: Proxy is determined based on system's proxy"
+msgstr ":menuselection:`默认代理`: 代理根据系统的代理确定"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:911
+msgid ""
+":menuselection:`Socks5Proxy`: Generic proxy for any kind of connection. "
+"Supports TCP, UDP, binding to a port (incoming connections) and "
+"authentication."
+msgstr ":menuselection:`Socks5Proxy`: 任何类型连接的通用代理，支持TCP、UDP、绑定到端口 (传入连接) 和认证。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:913
+msgid ""
+":menuselection:`HttpProxy`: Implemented using the \"CONNECT\" command, "
+"supports only outgoing TCP connections; supports authentication."
+msgstr ":menuselection:`HttpProxy`: 使用 \"CONNECT\" 命令实现，只支持传出TCP连接；支持认证。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:915
+msgid ""
+":menuselection:`HttpCachingProxy`: Implemented using normal HTTP commands, "
+"it is useful only in the context of HTTP requests."
+msgstr ":menuselection:`HttpCachingProxy`: 使用普通的HTTP命令实现，仅在HTTP请求的上下文中有用。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:917
+msgid ""
+":menuselection:`FtpCachingProxy`: Implemented using an FTP proxy, it is "
+"useful only in the context of FTP requests."
+msgstr ":menuselection:`FtpCachingProxy`: 使用FTP代理实现，仅在FTP请求的上下文中有用。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:920
+msgid ""
+"Credentials of proxy are set using the :ref:`authentication widget "
+"<authentication>`."
+msgstr "使用 :ref:`认证控件 <authentication>` 设置代理的凭据。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:922
+msgid ""
+"Excluding some URLs can be added to the text box below the proxy settings "
+"(see :numref:`Figure_Network_Tab`). No proxy will be used if the target url "
+"starts with one of the string listed in this text box."
+msgstr ""
+"排除部分URL可以添加到代理设置下方的文本框中 (请参阅 :numref:`Figure_Network_Tab`). "
+"如果目标URL以此文本框中列出的字符串之一开头，则不会使用代理。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:926
+msgid ""
+"If you need more detailed information about the different proxy settings, "
+"please refer to the manual of the underlying QT library documentation at "
+"https://doc.qt.io/qt-5.9/qnetworkproxy.html#ProxyType-enum"
+msgstr ""
+"如果需要有关不同代理设置的更多信息，请参阅底层QT库文档手册: "
+"https://doc.qt.io/qt-5.9/qnetworkproxy.html#ProxyType-enum"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:930
+msgid "**Using Proxies**"
+msgstr "**使用代理**"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:932
+msgid ""
+"Using proxies can sometimes be tricky. It is useful to proceed by 'trial and"
+" error' with the above proxy types, to check if they succeed in your case."
+msgstr "使用代理有时会很棘手，通过对上述代理类型进行 \"反复试验\" 来检查它们在您的实例中是否成功，是很必要的。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:939
+msgid "Locator Settings"
+msgstr "搜索设置"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:941
+msgid ""
+"|search| The :guilabel:`Locator` tab lets you configure the :ref:`Locator "
+"bar <locator_bar>`, a quick search widget available on the status bar to "
+"help you perform searches in the application. It provides some default "
+"filters (with prefix) to use:"
+msgstr ""
+"|search| The :guilabel:`搜索` 选项卡允许您配置 :ref:`搜索栏 <locator_bar>`, "
+"这是状态栏上的一个快速搜索控件，可帮助您在应用程序中执行搜索。它提供了一些默认过滤 (带有前缀) 供使用："
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1993
+msgid "search"
+msgstr " 搜索"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:951
+msgid "Locator Settings in QGIS"
+msgstr "QGIS中的搜索设置"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:954
+msgid ""
+"Project layers (``l``): finds and selects a layer in the :guilabel:`Layers` "
+"panel."
+msgstr "工程图层 (``l``): 在 :guilabel:`图层` 面板中查找并选择图层。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:956
+msgid "Project layouts (``pl``): finds and opens a print layout."
+msgstr "工程布局 (``pl``): 查找并打开打印布局。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:957
+msgid ""
+"Actions (``.``): finds and executes a QGIS action; actions can be any tool "
+"or menu in QGIS, opening a panel..."
+msgstr "动作 (``.``): 查找并执行QGIS动作；动作可以是QGIS中的任何工具或菜单、打开面板..."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:959
+msgid ""
+"Active layer features (``f``): searches for matching attributes in any field"
+" from the current active layer and zooms to the selected feature. Press "
+"|settings| to configure the maximum number of results."
+msgstr "活动图层要素 (``f``): 在当前活动图层的任何字段中搜索匹配的属性，并缩放到选中的要素。按 |settings| 配置最大结果数。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2003
+msgid "settings"
+msgstr "settings"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:962
+msgid ""
+"Features in all layers (``af``): searches for matching attributes in the "
+":ref:`display name <maptips>` of each :ref:`searchable layers "
+"<project_layer_capabilities>` and zooms to the selected feature. Press "
+"|settings| to configure the maximum number of results and the maximum number"
+" of results per layer."
+msgstr ""
+"所有图层中的要素 (``af``): 在每个 :ref:`可搜索图层 <project_layer_capabilities>` 的 "
+":ref:`显示名称 <maptips>` 中搜索匹配的属性，并缩放到选中的要素。按 |settings| 可配置 \"每个图层最大结果数\" 和 "
+"\"最大结果数\"。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:967
+msgid ""
+"Calculator (``=``): allows evaluation of any QGIS expression and, if valid, "
+"gives an option to copy the result to the clipboard."
+msgstr "计算器 (``=``): 允许计算任何QGIS表达式，如果有效，则提供将结果复制到剪贴板的选项。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:969
+msgid "Spatial bookmarks (``b``): finds and zooms to the bookmark extent."
+msgstr "空间书签 (``b``): 查找并缩放到书签范围。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:970
+msgid ""
+"Settings (``set``): browses and opens project and application-wide "
+"properties dialogs."
+msgstr "设置 (``set``): 浏览并打开工程和应用程序范围内的属性对话框。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:972
+msgid ""
+"Go to coordinate (``go``): pans the map canvas to a location defined by a "
+"comma or space separated pair of x and y coordinates or a formatted URL "
+"(e.g., OpenStreetMap, Leaflet, OpenLayer, Google Maps, ...). The coordinate "
+"is expected in WGS 84 (``epsg:4326``) and/or map canvas CRS."
+msgstr ""
+"前往坐标 (``go``): 将地图画布平移到由逗号或空格分隔的x和y坐标对或格式化URL "
+"(例如OpenStreetMap、Leaflet、OpenLayer、谷歌地图等) 定义的位置。坐标应位于 WGS 84 (``epsg:4326``)"
+" 和/或地图画布CRS中。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:976
+msgid ""
+"Processing algorithms (``a``): searches and opens a Processing algorithm "
+"dialog."
+msgstr "处理算法 (``a``): 搜索并打开处理算法对话框。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:977
+msgid ""
+"Edit selected features (``ef``): gives quick access and runs a compatible "
+":ref:`modify-in-place <processing_inplace_edit>` Processing algorithm on the"
+" active layer."
+msgstr ""
+"编辑选中的要素 (``ef``): 提供快速访问，并在活动图层上运行兼容的 :ref:`modify-in-place "
+"<processing_inplace_edit>` 处理算法。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:981
+msgid "In the dialog, you can:"
+msgstr "在对话框中，您可以："
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:983
+msgid ""
+"customize the filter :guilabel:`Prefix`, i.e. the keyword to use to trigger "
+"the filter"
+msgstr "自定义过滤 :guilabel:`前缀`, 即用于触发过滤的关键字"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:985
+msgid ""
+"set whether the filter is :guilabel:`Enabled`: the filter can be used in the"
+" searches and a shortcut is available in the locator bar menu"
+msgstr "设置是否 :guilabel:`启用` 过滤：可以在搜索中使用过滤，并在搜索栏菜单中提供快捷键"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:987
+msgid ""
+"set whether the filter is :guilabel:`Default`: a search not using a filter "
+"returns results from only the default filters categories."
+msgstr "设置过滤是否为 :guilabel:`默认`: 不使用过滤的搜索只返回默认过滤类别的结果。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:989
+msgid ""
+"Some filters provide a way to configure the number of results in a  search."
+msgstr "一些过滤提供了配置搜索结果数量的方法。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:991
+msgid ""
+"The set of default locator filters can be extended by plugins, eg for OSM "
+"nominatim searches, direct database searching, layer catalog searches, ..."
+msgstr "默认搜索过滤集可以通过插件进行扩展，例如用于 OSM Nominatim 搜索、直接数据库搜索、图层目录搜索等"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:998
+msgid "Advanced Settings"
+msgstr "高级设置"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1005
+msgid "Advanced Settings tab in QGIS"
+msgstr "QGIS中的高级设置选项卡"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1007
+msgid ""
+"All the settings related to QGIS (UI, tools, data providers, Processing "
+"configurations, default values and paths, plugins options, expressions, "
+"geometry checks...) are saved in a :file:`QGIS/QGIS3.ini` file under the "
+"active :ref:`user profile <user_profiles>` directory. Configurations can be "
+"shared by copying this file to other installations."
+msgstr ""
+"所有与QGIS相关的设置 (UI、工具、数据提供程序、处理配置、默认值和路径、插件选项、表达式、几何图形检查…) 都保存在当前 :ref:`用户配置 "
+"<user_profiles>` 目录下的 :file:`QGIS/QGIS3.ini` 文件中。通过将此文件复制到其他设备，可以共享配置。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1013
+msgid ""
+"From within QGIS, the :guilabel:`Advanced` tab offers a way to manage these "
+"settings through the :guilabel:`Advanced Settings Editor`. After you promise"
+" to be careful, the widget is populated with a tree of all the existing "
+"settings, and you can edit their value. Right-click over a setting or a "
+"group and you can delete it (to add a setting or group, you have to edit the"
+" :file:`QGIS3.ini` file). Changes are automatically saved in the "
+":file:`QGIS3.ini` file."
+msgstr ""
+"在QGIS中,  :guilabel:`高级` 选项卡提供了通过 :guilabel:`高级设置编辑器` "
+"管理这些设置的方法。在您保证要小心之后，这个控件将被一个包含所有现有设置的树所填充，您可以编辑它们的值。右键单击设置或组，可以将其删除 "
+"(要添加设置或组，必须编辑 :file:`QGIS3.ini` 文件)。所做更改会自动保存在 :file:`QGIS3.ini` 文件中。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1021
+msgid "**Avoid using the Advanced tab settings blindly**"
+msgstr "**避免盲目使用高级选项卡设置**"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1023
+msgid ""
+"Be careful while modifying items in this dialog given that changes are "
+"automatically applied. Doing changes without knowledge can break your QGIS "
+"installation in various ways."
+msgstr "鉴于更改会自动应用，因此修改此对话框中的项时一定要小心。在不知情的情况下进行更改可能会以各种方式破坏QGIS设置。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1029
+msgid "Acceleration Settings"
+msgstr "加速设置"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1030
+msgid "OpenCL acceleration settings."
+msgstr "OpenCL加速设置。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1037
+msgid "Acceleration tab"
+msgstr "加速选项卡"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1039
+msgid ""
+"Depending on your hardware and software, you may have to install additional "
+"libraries to enable OpenCL acceleration."
+msgstr "根据您的硬件和软件情况，可能需要安装其他库来启用OpenCL加速。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1044
+msgid "Processing Settings"
+msgstr "数据处理设置"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1046
+msgid ""
+"The |processing| :guilabel:`Processing` tab provides you with general "
+"settings of tools and data providers that are used in the QGIS Processing "
+"framework. More information at :ref:`label_processing`."
+msgstr ""
+"|processing| :guilabel:`数据处理` 选项卡为您提供QGIS处理框架中使用的工具和数据提供程序的常规设置。更多信息请访问 "
+":ref:`label_processing` 。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1985
+msgid "processing"
+msgstr "processing"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1060
+msgid "Processing Settings tab in QGIS"
+msgstr "QGIS中的数据处理设置选项卡"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1065
+msgid "Python Console Settings"
+msgstr "Python控制台设置"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1067
+msgid ""
+"The |runConsole| :guilabel:`Python Console` settings help you manage and "
+"control the behavior of the Python editors (:ref:`interactive console "
+"<interactive_console>`, :ref:`code editor <console_editor>`, :ref:`project "
+"macros <project_macros>`, :ref:`custom expressions <function_editor>`, ...)."
+" It can also be accessed using the |options| :sup:`Options...` button from:"
+msgstr ""
+"|runConsole| :guilabel:`Python控制台` 设置可帮助您管理和控制Python编辑器 (:ref:`交互式控制台 "
+"<interactive_console>`, :ref:`代码编辑器 <console_editor>`, :ref:`工程宏 "
+"<project_macros>`, :ref:`自定义表达式 <function_editor>`, ...) 的行为，也可以使用以下 "
+"|options| :sup:`选项...` 按钮进行访问："
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1991
+msgid "runConsole"
+msgstr "runConsole"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1073
+msgid "the :guilabel:`Python console` toolbar"
+msgstr ":guilabel:`Python控制台` 工具栏"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1074
+msgid "the contextual menu of the :guilabel:`Python console` widget"
+msgstr ":guilabel:`Python控制台` 控件的上下文菜单"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1075
+msgid "and the contextual menu of the code editor."
+msgstr "以及代码编辑器的上下文菜单。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1082
+msgid "Python Console Settings tab"
+msgstr "Python控制台设置选项卡"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1084
+msgid "You can specify:"
+msgstr "您可以指定："
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1086
+msgid ""
+"|unchecked| :guilabel:`Autocompletion`: Enables code completion. You can get"
+" autocompletion from the current document, the installed API files or both."
+msgstr ""
+"|unchecked| :guilabel:`自动补全`: 启用代码自动完成。您可以从当前文档、已安装的API文件或两者中获取自动补全阈值。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1089
+msgid ""
+":guilabel:`Autocompletion threshold`: Sets the threshold for displaying the "
+"autocompletion list (in characters)"
+msgstr ":guilabel:`自动补全阈值`: 设置显示自动补全列表的阈值 (以字符为单位)"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1092
+msgid "under :guilabel:`Typing`"
+msgstr "在 :guilabel:`键盘输入` 下面"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1094
+msgid ""
+"|unchecked| :guilabel:`Automatic parentheses insertion`: Enables autoclosing"
+" for parentheses"
+msgstr "|unchecked| :guilabel:`自动插入括号`: 启用括号的自动关闭功能"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1096
+msgid ""
+"|checkbox| :guilabel:`Automatic insertion of the 'import' string on 'from "
+"xxx'`: Enables insertion of 'import' when specifying imports"
+msgstr ""
+"|checkbox| :guilabel:`遇到 'from xxx' 字符串时自动插入 'import'`: 在指定导入时允许插入 'import' "
+"字符"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1099
+msgid "under :guilabel:`Run and Debug`"
+msgstr "在 :guilabel:`运行和调试` 下面"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1101
+msgid ""
+"|unchecked| :guilabel:`Enable Object Inspector (switching between tabs may "
+"be slow)`: Enable the object inspector."
+msgstr "|unchecked| :guilabel:`启用对象检查器 (标签页间切换时可能会较慢)`: 启用对象检查器。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1103
+msgid ""
+"|unchecked| :guilabel:`Auto-save script before running`: Saves the script "
+"automatically when executed. This action will store a temporary file (in the"
+" temporary system directory) that will be deleted automatically after "
+"running."
+msgstr ""
+"|unchecked| :guilabel:`运行之前自动保存的脚本`: 执行时自动保存脚本。此操作将储存一个临时文件 "
+"(在临时系统目录中)，该文件将在运行后自动删除。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1107
+msgid "For :guilabel:`APIs` you can specify:"
+msgstr "对于 :guilabel:`API` 您可以指定："
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1109
+msgid ""
+"|checkbox| :guilabel:`Using preloaded APIs file`: You can choose if you "
+"would like to use the preloaded API files.  If this is not checked you can "
+"add API files and you can also choose if you would like to use prepared API "
+"files (see next option)."
+msgstr ""
+"|checkbox| :guilabel:`使用预加载的API文件`: "
+"您可以选择是否要使用预加载的API文件。如果未勾选此选项，可以添加API文件，还可以选择是否使用准备好的API文件 (请参见下一选项)。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1113
+msgid ""
+"|unchecked| :guilabel:`Using prepared APIs file`: If checked, the chosen "
+"``*.pap`` file will be used for code completion. To generate a prepared API "
+"file you have to load at least one ``*.api`` file and then compile it by "
+"clicking the :guilabel:`Compile APIs...` button."
+msgstr ""
+"|unchecked| :guilabel:`使用预备的API文件`: 如果勾选，所选 ``*.pap`` "
+"文件将用于代码完成。要生成预备的API文件，必须至少加载一个 ``*.api`` 文件，然后通过单击 :guilabel:`编译API...` "
+"按钮对其进行编译。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1117
+msgid ""
+"Under :guilabel:`GitHub access token`, you can generate a personal token "
+"allowing you to share code snippets from within the Python code editor. More"
+" details on `GitHub authentication <https://docs.github.com/en/free-pro-"
+"team@latest/github/authenticating-to-github/creating-a-personal-access-"
+"token>`_"
+msgstr ""
+"在 :guilabel:`GitHub访问令牌` 下，您可以生成个人令牌，允许您在Python代码编辑器中共享代码片段。更多信息，请参阅 "
+"`GitHub认证 <https://docs.github.com/en/free-pro-"
+"team@latest/github/authenticating-to-github/creating-a-personal-access-"
+"token>`_"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1125
+msgid "Code Editor Settings"
+msgstr "代码编辑器设置"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1127
+msgid ""
+"In the |codeEditor| :guilabel:`Code Editor` tab, you can control the "
+"appearance and behaviour of code editor widgets (Python interactive console "
+"and editor, expression widget and function editor, ...)."
+msgstr ""
+"在 |codeEditor| :guilabel:`代码编辑器` 选项卡，可以控制代码编辑器控件 "
+"(Python交互式控制台和编辑器、表达式控件和函数编辑器等) 的外观和行为。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1955
+msgid "codeEditor"
+msgstr "codeEditor"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1136
+msgid "Code Editor Settings tab"
+msgstr "代码编辑器设置选项卡"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1138
+msgid ""
+"At the top of the dialog, a widget provides a live preview of the current "
+"settings, in various coding languages (Python, QGIS expression, HTML, SQL, "
+"JavaScript). A convenient way to adjust settings."
+msgstr ""
+"在对话框顶部，控件以各种编码语言 (Python, QGIS表达式, HTML, SQL, JavaScript) "
+"提供当前设置的实时预览。调整设置的个性化方法如下："
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1142
+msgid ""
+"Check |unchecked| :guilabel:`Override code editor font` to modify the "
+"default :guilabel:`Font` family and :guilabel:`Size`."
+msgstr ""
+"勾选 |unchecked| :guilabel:`更换代码编辑器默认字体` 可以修改默认 :guilabel:`字体` 和 "
+":guilabel:`字号` 。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1145
+msgid "Under the :guilabel:`Colors` group, you can:"
+msgstr "在 :guilabel:`颜色` 组下，您可以："
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1147
+msgid ""
+"select a :guilabel:`Color scheme`: predefined settings are ``Default``, "
+"``Solarized Dark`` and ``Solarized Light``. A ``Custom`` scheme is triggered"
+" as soon as you modify a color and can be reset with selecting a predefined "
+"scheme."
+msgstr ""
+"选择 :guilabel:`颜色方案`: 预定义方案的设置为 ``默认``, ``曝光暗`` 和 ``曝光亮`` 。一旦修改颜色，就会触发 "
+"``自定义`` 方案，并且可以通过选择预定义方案进行重置。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1151
+msgid ""
+"change the :ref:`color <color_widget>` of each element in code writing, such"
+" as the colors to use for comments, quotes, functions, background, ..."
+msgstr "在编写代码时更改每个元素的 :ref:`颜色 <color_widget>`, 例如用于注释、引号、函数、背景等的颜色。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1159
+msgid "Working with User Profiles"
+msgstr "使用用户配置文件"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1161
+msgid ""
+"The :menuselection:`Settings --> User Profiles` menu provides functions to "
+"set and access user profiles. A user profile is a unified application "
+"configuration that allows to store in a single folder:"
+msgstr ""
+":menuselection:`设置 --> 用户配置` "
+"菜单提供设置和访问用户配置文件的功能。用户配置文件是统一的应用程序配置，允许在单个文件夹中储存："
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1165
+msgid ""
+"all the :ref:`global settings <gui_options>`, including locale, projections,"
+" authentication settings, color palettes, shortcuts..."
+msgstr "所有 :ref:`全局设置 <gui_options>`, 包括语言环境、投影、认证设置、调色板、快捷键等"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1167
+msgid "GUI configurations and :ref:`customization <sec_customization>`"
+msgstr "GUI配置和 :ref:`定制 <sec_customization>`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1168
+msgid ""
+"grid files and other proj helper files installed for datum transformation"
+msgstr "为基准变换而安装的网格文件和其他Proj辅助文件"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1169
+msgid "installed :ref:`plugins <plugins>` and their configurations"
+msgstr "已安装的 :ref:`插件 <plugins>` 及其配置"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1170
+msgid ""
+"project templates and history of saved project with their image preview"
+msgstr "工程模板和保存工程的历史记录及其图像预览"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1171
+msgid ":ref:`processing settings <label_processing>`, logs, scripts, models."
+msgstr ":ref:`数据处理设置 <label_processing>` 、日志、脚本和模型。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1173
+msgid ""
+"By default, a QGIS installation contains a single user profile named "
+"``default``. But you can create as many user profiles as you want:"
+msgstr "默认情况下，QGIS安装包含一个名为 ``default`` 的单用户配置文件夹。但您可以创建任意数量的用户配置文件夹："
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1176
+msgid "Click the :guilabel:`New profile...` entry."
+msgstr "单击 :guilabel:`新建配置...` 条目。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1177
+msgid ""
+"You'll be prompted to provide a profile name, creating a folder of the same "
+"name under :file:`~/<UserProfiles>/` where:"
+msgstr "系统将提示您提供配置文件名，并在 :file:`~/<UserProfiles>/` 下创建同名文件夹，其中："
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1180
+msgid ""
+"``~`` represents the **HOME** directory, which on |win| Windows is usually "
+"something like :file:`C:\\\\Users\\\\(user)`."
+msgstr "``~`` 表示 **主** 目录，在 |win| Windows 上的主目录通常类似于 :file:`C:\\\\Users\\\\(user)` 。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2015
+msgid "win"
+msgstr "win"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1182
+msgid "and ``<UserProfiles>`` represents the main profiles folder, i.e.:"
+msgstr "和 ``<UserProfiles>`` 表示主配置文件夹，即："
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1184
+msgid "|nix| :file:`.local/share/QGIS/QGIS3/profiles/`"
+msgstr "|nix| :file:`.local/share/QGIS/QGIS3/profiles/`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1977
+msgid "nix"
+msgstr "nix"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1185
+msgid "|win| :file:`AppData\\\\Roaming\\\\QGIS\\\\QGIS3\\\\profiles\\\\`"
+msgstr "|win| :file:`AppData\\\\Roaming\\\\QGIS\\\\QGIS3\\\\profiles\\\\`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1186
+msgid "|osx| :file:`Library/Application Support/QGIS/QGIS3/profiles/`"
+msgstr "|osx| :file:`Library/Application Support/QGIS/QGIS3/profiles/`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1983
+msgid "osx"
+msgstr "osx"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1188
+msgid ""
+"The user profile folder can be opened from within QGIS using the "
+":guilabel:`Open Active Profile Folder`."
+msgstr "可以使用 :guilabel:`打开当前配置文件夹` 从QGIS打开用户配置文件夹。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1190
+msgid ""
+"A new instance of QGIS is started, using a clean configuration. You can then"
+" set your custom configurations."
+msgstr "使用原始的配置启动QGIS新实例，之后您可以设置自定义配置。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1193
+msgid ""
+"If you have more than one profile in your QGIS installation, the name of the"
+" active profile is shown in the application title bar between square "
+"brackets."
+msgstr "如果您的QGIS设置中有多个配置文件，当前配置文件的名称将显示在应用程序标题栏的方括号之间。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1196
+msgid ""
+"As each user profile contains isolated settings, plugins and history they "
+"can be great for different workflows, demos, users of the same machine, or "
+"testing settings, etc. And you can switch from one to the other by selecting"
+" them in the :menuselection:`Settings --> User Profiles` menu. You can also "
+"run QGIS with a specific user profile from the :ref:`command line "
+"<label_commandline>`."
+msgstr ""
+"由于每位用户配置文件都包含独立的设置、插件和历史记录，因此非常适合不同的工作流、演示、同一台计算机的用户或测试设置等。您可以通过 "
+":menuselection:`设置 --> 用户配置` 菜单，或从 :ref:`命令行 <label_commandline>` "
+"使用特定用户的配置文件运行QGIS。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1202
+msgid ""
+"Unless changed, the profile of the last closed QGIS session will be used in "
+"the following QGIS sessions."
+msgstr "除非更改，否则最后关闭QGIS会话的配置文件将用于之后的QGIS会话。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1205
+msgid "**Run QGIS under a new user profile to check for bug persistence**"
+msgstr "**在新用户配置文件下运行QGIS，以检查Bug的持久性**"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1207
+msgid ""
+"When you encounter weird behavior with some functions in QGIS, create a new "
+"user profile and run the commands again. Sometimes, bugs are related to some"
+" leftovers in the current user profile and creating a new one may fix them "
+"as it restarts QGIS with the new (clean) profile."
+msgstr ""
+"当您在QGIS遇到某些功能有奇怪的行为时，请创建一个新的用户配置文件，然后再次运行这些命令。有时，Bug与当前用户配置文件中的一些遗留问题有关，创建一个新用户配置文件可能会进行修复，因为现在使用新的"
+" (原始) 配置文件重新启动QGIS。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1220
+msgid "Project Properties"
+msgstr "工程属性"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1222
+msgid ""
+"In the properties window for the project under :menuselection:`Project --> "
+"Project Properties`, you can set project-specific options. The project-"
+"specific options overwrite their equivalent in the :guilabel:`Options` "
+"dialog described above."
+msgstr ""
+"在 :menuselection:`工程 --> 工程属性` 下的工程属性窗口中，可以设置工程特定的选项。特定于工程的选项将重写上述 "
+":guilabel:`选项` 对话框中的等效选项。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1228
+msgid "General Properties"
+msgstr "通用属性"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1230
+msgid ""
+"In the :guilabel:`General` tab, the :guilabel:`General settings` let you:"
+msgstr "在 :guilabel:`通用` 选项卡的 :guilabel:`通用设置` 中允许您："
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1232
+msgid "see the location of the project file"
+msgstr "查看工程文件的位置"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1233
+msgid ""
+"set the folder for the project home (available in the ``Project Home`` item "
+"in the browser). The path can be relative to the folder of the project file "
+"(type it in) or absolute. The project home can be used for storing data and "
+"other content that is useful for the project."
+msgstr ""
+"设置工程主目录的文件夹 (可在浏览器的 ``工程主目录`` 项中找到)。路径可以是相对于工程文件的文件夹 (type it in) "
+"或绝对路径。工程主目录可用于存储对工程有用的数据和其他内容。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1238
+msgid "give a title to the project beside the project file path"
+msgstr "在工程文件路径旁边指定工程的标题"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1239
+msgid "choose the color to use for features when they are selected"
+msgstr "选择要素被选中时要使用的颜色"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1240
+msgid "choose the background color: the color to use for the map canvas"
+msgstr "选择背景色：用于地图画布的颜色"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1241
+msgid ""
+"set whether the path to layers in the project should be saved as absolute "
+"(full) or as relative to the project file location. You may prefer relative "
+"path when both layers and project files can be moved or shared or if the "
+"project is accessed from computers on different platforms."
+msgstr ""
+"设置工程中图层的路径应保存为绝对 (完整) "
+"还是相对于工程文件位置。当图层和工程文件都可以移动或共享，或从不同平台的计算机访问工程时，您可能更喜欢相对路径。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1245
+msgid ""
+"choose to avoid artifacts when project is rendered as map tiles. Note that "
+"checking this option can lead to performance degradation."
+msgstr "选择在工程渲染为地图瓦片时避免伪影。请注意，勾选此选项可能会导致性能下降。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1248
+msgid ""
+"Calculating areas and distances is a common need in GIS. However, these "
+"values are really tied to the underlying projection settings. The "
+":guilabel:`Measurements` frame lets you control these parameters. You can "
+"indeed choose:"
+msgstr ""
+"计算面积和距离是GIS中的常见需求。但是，这些值实际与基础投影设置有关。 :guilabel:`计量` 框架允许您控制这些参数，您可以选择："
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1252
+msgid ""
+"the :guilabel:`Ellipsoid`, on which distance and area calculations are "
+"entirely based; it can be:"
+msgstr ":guilabel:`椭球体`, 距离和面积的计算完全基于此，可以是："
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1255
+msgid ""
+"**None/Planimetric**: returned values are in this case cartesian "
+"measurements."
+msgstr "**无/平面**: 这种情况下，返回的值是笛卡尔测量值。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1256
+msgid ""
+"a **Custom** one: you'll need to set values of the semi-major and semi-minor"
+" axes."
+msgstr "**自定义** : 您需要设置长半轴和短半轴的值。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1257
+msgid ""
+"or an existing one from a predefined list (Clarke 1866, Clarke 1880 IGN, New"
+" International 1967, WGS 84...)."
+msgstr ""
+"或预定义列表中的现有椭球体 (Clarke 1866, Clarke 1880 IGN, New International 1967, WGS "
+"84...)。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1259
+msgid ""
+"the :guilabel:`units for distance measurements` for length and perimeter and"
+" the :guilabel:`units for area measurements`. These settings, which default "
+"to the units set in QGIS options but then overrides it for the current "
+"project, are used in:"
+msgstr ""
+"长度和周长的 :guilabel:`距离计量单位` 和 :guilabel:`面积计量单位` "
+"。这些设置默认为QGIS选项中设置的单位，但随后会重写当前工程中的单位，用于："
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1264
+msgid "Attribute table field update bar"
+msgstr "属性表字段更新栏"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1265
+msgid "Field calculator calculations"
+msgstr "字段计算器的计算"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1266
+msgid "Identify tool derived length, perimeter and area values"
+msgstr "识别工具得到的长度、周长和面积值"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1267
+msgid "Default unit shown in measure dialog"
+msgstr "测量对话框显示的默认单位"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1269
+msgid ""
+"The :guilabel:`Coordinate and Bearing display` allows you to choose and "
+"customize the bearing format and the format of units to use to display the "
+"mouse coordinate in the status bar and the derived coordinates shown via the"
+" identify tool."
+msgstr ""
+":guilabel:`坐标和方位角显示` 允许您选择和自定义用于在状态栏显示鼠标坐标的方位角格式和单位格式，以及通过识别工具显示的衍生坐标。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1273
+msgid ""
+"Finally, you can set a :guilabel:`Project predefined scales` list, which "
+"overrides the global predefined scales."
+msgstr "最后，可以设置 :guilabel:`工程预定义比例` 列表，该列表将重写全局预定义比例。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1281
+msgid "General tab of the Project Properties dialog"
+msgstr "工程属性对话框的通用选项卡"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1286
+msgid "Metadata Properties"
+msgstr "元数据属性"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1288
+msgid ""
+"The :guilabel:`Metadata` tab allows detailed metadata to be defined, "
+"including (among the others): author, creation date, language, abstracts, "
+"categories, keywords, contact details, links, history. There is also a "
+"validation functionality that checks if specific fields were filled, anyway "
+"this is not enforced. See :ref:`vector layer metadata properties "
+"<vectormetadatamenu>` for some details."
+msgstr ""
+":guilabel:`元数据` 选项卡允许定义详细的元数据，包括 "
+"(除其他外)：作者、创建日期、语言、摘要、类别、关键字、联系方式、链接、历史。还有一个验证功能，可以检查特定字段是否已填充，但无论如何，这并不强制执行。有关详细信息，请参阅"
+" :ref:`矢量图层元数据属性 <vectormetadatamenu>` 。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1296
+msgid "CRS Properties"
+msgstr "CRS属性"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1298
+msgid ""
+"For more information on how QGIS handles project projection, please read the"
+" dedicated section at :ref:`label_projections`."
+msgstr "有关QGIS如何处理工程投影的更多信息，请阅读 :ref:`label_projections` 专用章节。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1301
+msgid ""
+"The |crs| :guilabel:`CRS` tab helps you set the coordinate reference system "
+"to use in this project. It can be:"
+msgstr "|crs| :guilabel:`CRS` 选项卡可帮助您设置要在此工程中使用的坐标参照系。它可以是："
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1957
+msgid "crs"
+msgstr "crs"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1304
+msgid ""
+"|checkbox| :guilabel:`No CRS (or unknown/non-Earth projection)`: layers are "
+"drawn based on their raw coordinates"
+msgstr "|checkbox| :guilabel:`无CRS (或未知/非地球投影)`: 图层是根据其原始坐标绘制的"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1306
+msgid ""
+"or an existing coordinate reference system that can be *geographic*, "
+"*projected* or *user-defined*. Layers added to the project are translated "
+"on-the-fly to this CRS in order to overlay them regardless their original "
+"CRS."
+msgstr ""
+"或者现有坐标参照系，可以是 *地理*, *投影* 或 *用户自定义* 。添加到工程中的图层会动态转换到此CRS，以便叠加它们，而不考虑其原始CRS。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1311
+msgid "Transformations Properties"
+msgstr "变换属性"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1313
+msgid ""
+"The |transformation| :guilabel:`Transformations` tab  helps you control the "
+"layers reprojection settings by configuring the datum transformation "
+"preferences to apply in the current project. As usual, these override any "
+"corresponding global settings. See :ref:`datum_transformation` for more "
+"details."
+msgstr ""
+"|transformation| :guilabel:`变换` "
+"选项卡通过配置要应用于当前工程的基准面变换首选项，帮助您控制图层重投影设置。照例，这些设置会覆盖任何相应的全局设置。更多信息，请参阅 "
+":ref:`datum_transformation` 。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1321
+msgid "Default Styles Properties"
+msgstr "默认样式属性"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1323
+msgid ""
+"The :guilabel:`Default Styles` tab lets you control how new layers will be "
+"drawn in the project when they do not have an existing :file:`.qml` style "
+"defined. You can:"
+msgstr ":guilabel:`默认样式` 选项卡，允许您控制在没有现存 :file:`.qml` 样式定义时，如何在工程中绘制新图层。您可以："
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1327
+msgid ""
+"Set default symbols (:guilabel:`Marker`, :guilabel:`Line`, :guilabel:`Fill`)"
+" to apply depending on the layer geometry type as well as a default "
+":guilabel:`Color Ramp`"
+msgstr ""
+"根据图层几何图形类型以及默认 :guilabel:`颜色渐变` ，设置要应用的默认符号 (:guilabel:`标记`, :guilabel:`线`, "
+":guilabel:`填充`)"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1330
+msgid "Apply a default :guilabel:`Opacity` to new layers"
+msgstr "将默认 :guilabel:`不透明度` 应用于新建图层"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1331
+msgid ""
+"|checkbox| :guilabel:`Assign random colors to symbols`, modifying the "
+"symbols fill colors, hence avoiding same rendering for all layers."
+msgstr "|checkbox| :guilabel:`给符号指派随机颜色`, 修改符号填充颜色，从而避免对所有图层进行相同的渲染。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1339
+msgid "Default Styles tab"
+msgstr "默认样式选项卡"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1341
+msgid ""
+"Using the |styleManager| :guilabel:`Style Manager` button, you can also "
+"quickly access the :ref:`Style Manager <vector_style_manager>` dialog and "
+"configure symbols and color ramps."
+msgstr ""
+"使用 |styleManager| :guilabel:`样式管理器` 按钮，还可以快速访问 :ref:`样式管理器 "
+"<vector_style_manager>` 对话框，并配置符号和颜色渐变。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1347
+msgid ""
+"There is also an additional section where you can define specific colors for"
+" the running project. Like the :ref:`global colors <colors_options>`, you "
+"can:"
+msgstr "还有附加部件，您可以在其中为正在运行的工程定义指定的颜色。与 :ref:`全局颜色 <colors_options>` 一样，您可以："
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1359
+msgid ""
+"These colors are identified as :guilabel:`Project colors` and listed as part"
+" of :ref:`color widgets <color-selector>`."
+msgstr "这些颜色被认定为 :guilabel:`工程颜色` ，并作为 :ref:`颜色控件 <color-selector>` 的一部分列出。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1362
+msgid "**Use project colors to quickly assign and update color widgets**"
+msgstr "**使用工程颜色快速分配和更新颜色控件**"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1364
+msgid ""
+"Project colors can be refered to using their label and the color widgets "
+"they are used in are bound to them. This means that instead of repeatedly "
+"setting the same color for many properties and, to avoid a cumbersome update"
+" you can:"
+msgstr "工程颜色可以使用其标注来引用，并且所使用的颜色控件与之绑定。这意味着您不必为许多属性设置相同的颜色而重复替换，为了避免繁琐的更新，您可以："
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1369
+msgid "Define the color as a project color"
+msgstr "将颜色定义为工程颜色"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1370
+msgid ""
+"Click the :ref:`data defined override widget <data_defined>` next to the "
+"color property you want to set"
+msgstr "单击要设置颜色属性旁边的 :ref:`数据定义重写控件 <data_defined>`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1372
+msgid ""
+"Hover over the :guilabel:`Color` menu and select the project color. The "
+"property is then assigned the expression ``project_color('color_label')`` "
+"and the color widget reflects that color."
+msgstr ""
+"将鼠标悬停在 :guilabel:`颜色` 菜单上并选择工程颜色。然后，属性被指定表达式 "
+"``project_color('color_label')`` ，颜色控件反映该颜色。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1375
+msgid "Repeat steps 2 and 3 as much as needed"
+msgstr "根据需要重复步骤 2 和 3"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1376
+msgid ""
+"Update the project color once and the change is reflected EVERYWHERE it's in"
+" use."
+msgstr "每次更新工程颜色，所做的更改就会反映在使用工程颜色的任何地方。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1382
+msgid "Data Sources Properties"
+msgstr "数据源属性"

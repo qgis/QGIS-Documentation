@@ -5,10 +5,11 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# MarieSilvestre, 2021
 # Francis Gasc <francisgasc@gmail.com>, 2021
 # Michel Zevort <michel.zevort@developpement-durable.gouv.fr>, 2021
 # Harrissou Sant-anna, 2021
+# MarieSilvestre, 2022
+# Romain Bazile <gromain_baz@hotmail.com>, 2022
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-19 02:10+0000\n"
 "PO-Revision-Date: 2020-12-24 10:26+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2021\n"
+"Last-Translator: Romain Bazile <gromain_baz@hotmail.com>, 2022\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,6 +30,31 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:2
 msgid "Cartography"
 msgstr "Cartographie"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:13
+msgid "Align points to features"
+msgstr "Aligner les points sur les entités"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:15
+msgid ""
+"Calculates the rotation required to align point features with their nearest "
+"feature from another reference layer. A new field is added to the output "
+"layer which is filled with the angle (in degrees, clockwise) to the nearest "
+"reference feature."
+msgstr ""
+"Calcule la rotation nécessaire pour aligner les éléments ponctuels avec "
+"l'élément le plus proche d'une autre couche de référence. Un nouveau champ "
+"est ajouté à la couche de sortie, qui est rempli avec l'angle (en degrés, "
+"dans le sens des aiguilles d'une montre) par rapport à l'élément de "
+"référence le plus proche."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:25
+msgid ""
+"This algorithm is designed for use cases like aligning building point "
+"symbols to follow the nearest road direction."
+msgstr ""
+"Cet algorithme est conçu pour des usages tels que l'alignement des symboles "
+"de bâtiment ponctuel sur la direction de la route la plus proche."
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:28
 msgid ""
@@ -197,6 +223,10 @@ msgstr "``INPUT``"
 msgid "[vector: point]"
 msgstr "[vecteur: point]"
 
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:44
+msgid "Point features to calculate the rotation for"
+msgstr "Entité ponctuelle pour laquelle la rotation doit être calculée"
+
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:45
 msgid "**Reference layer**"
 msgstr "**Couche de référence**"
@@ -211,6 +241,10 @@ msgstr "``REFERENCE_LAYER``"
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:590
 msgid "[vector: any]"
 msgstr "[vector: any]"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:49
+msgid "**Maximum distance to consider**"
+msgstr "**Distance maximale à prendre en compte**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:51
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:261
@@ -261,6 +295,18 @@ msgstr "``MAX_DISTANCE``"
 msgid "[number]"
 msgstr "[number]"
 
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:55
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:510
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:632
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:770
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:875
+msgid "Default: Not set"
+msgstr "Par défaut: Non paramétré"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:58
+msgid "**Angle field name**"
+msgstr "**Nom du champ d'angle**"
+
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:59
 msgid "``FIELD_NAME``"
 msgstr "``FIELD_NAME``"
@@ -268,6 +314,14 @@ msgstr "``FIELD_NAME``"
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:60
 msgid "[string]"
 msgstr "[Chaîne de caractères]"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:62
+msgid "Default: 'rotation'"
+msgstr "Par défaut : 'rotation'"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:64
+msgid "**Automatically apply symbology**"
+msgstr "**Appliquer automatiquement la symbologie**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:65
 msgid "``APPLY_SYMBOLOGY``"
@@ -297,6 +351,27 @@ msgstr "``APPLY_SYMBOLOGY``"
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:921
 msgid "[boolean]"
 msgstr "[boolean]"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:68
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:517
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:523
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:529
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:645
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:651
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:663
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:777
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:783
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:789
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:888
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:894
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:906
+msgid "Default: True"
+msgstr "Par défaut : Vrai"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:70
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:92
+msgid "**Aligned layer**"
+msgstr "**Couche alignée**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:71
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:93
@@ -373,6 +448,10 @@ msgstr "Sorties"
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1236
 msgid "Python code"
 msgstr "Code Python"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:102
+msgid "**Algorithm ID**: ``native:angletonearest``"
+msgstr "**ID de l'algorithme** : ``native:angletonearest``"
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
 msgid ""
@@ -490,6 +569,10 @@ msgid "Output :file:`.XML` file combining the selected style items. One of:"
 msgstr ""
 "Sortie :file:`.XML` combinant les éléments de style sélectionnés parmi :"
 
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:3
+msgid "Save to a Temporary File"
+msgstr "Enregistrer dans un fichier temporaire"
+
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:168
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:388
 msgid "**Color ramp count**"
@@ -533,6 +616,10 @@ msgstr "**Nombre de formats de texte**"
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:405
 msgid "``TEXTFORMATS``"
 msgstr "``TEXTFORMATS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:192
+msgid "**Algorithm ID**: ``native:combinestyles``"
+msgstr "**ID de l'algorithme** : ``native:combinestyles``"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:202
 msgid "Create categorized renderer from styles"
@@ -699,6 +786,10 @@ msgstr ""
 "Table de sortie pour les catégories qui ne correspondent à aucun symbole de "
 "la base de données. Un des:"
 
+#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:3
+msgid "Skip Output"
+msgstr "Passer la sortie"
+
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:273
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:303
 msgid "**Non-matching symbol names**"
@@ -749,6 +840,10 @@ msgid ""
 msgstr ""
 "La couche vecteur d'entrée avec le style catégorisé appliqué. Aucune "
 "nouvelle couche n'est sortie."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:317
+msgid "**Algorithm ID**: ``native:categorizeusingstyle``"
+msgstr "**ID de l'algorithme** : ``native:categorizeusingstyle``"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:327
 msgid "Create style database from project"
@@ -823,6 +918,27 @@ msgstr "Nombre de symboles"
 msgid "Number of text formats"
 msgstr "Nombre de formats de texte"
 
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:412
+msgid "**Algorithm ID**: ``native:stylefromproject``"
+msgstr "**ID de l'algorithme** : ``native:stylefromproject``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:422
+msgid "Export atlas layout as image"
+msgstr "Exporter la mise en page atlas au format image"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:433
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:572
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:723
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:828
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:973
+msgid "Basic parameters"
+msgstr "Paramètres basiques"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:443
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:582
+msgid "**Atlas layout**"
+msgstr "**Mise en page atlas**"
+
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:444
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:583
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:734
@@ -831,16 +947,145 @@ msgstr "Nombre de formats de texte"
 msgid "``LAYOUT``"
 msgstr "``LAYOUT``"
 
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:445
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:584
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:735
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:840
+msgid "[layout]"
+msgstr "[mise en page]"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:446
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:585
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:736
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:841
+msgid "Layout to export"
+msgstr "Mise en page à exporter"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:447
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:586
+msgid "**Coverage layer**"
+msgstr "**Couche de couverture**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:450
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:589
+msgid "``COVERAGE_LAYER``"
+msgstr "``COVERAGE_LAYER``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:454
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:593
+msgid "``FILTER_EXPRESSION``"
+msgstr "``FILTER_EXPRESSION``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:460
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:599
+msgid "``SORTBY_EXPRESSION``"
+msgstr "``SORTBY_EXPRESSION``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:463
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:602
+msgid "**Reverse sort order**"
+msgstr "**Ordre de tri inversé**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:466
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:605
+msgid "``SORTBY_REVERSE``"
+msgstr "``SORTBY_REVERSE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:471
+msgid "``FILENAME_EXPRESSION``"
+msgstr "``FILENAME_EXPRESSION``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:477
+msgid "``FOLDER``"
+msgstr "``FOLDER``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:495
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:624
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:762
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:867
+msgid "``LAYERS``"
+msgstr "``LAYERS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:499
+msgid "``EXTENSION``"
+msgstr "``EXTENSION``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:508
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:630
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:768
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:873
+msgid "``DPI``"
+msgstr "``DPI``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:514
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:642
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:774
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:885
+msgid "``GEOREFERENCE``"
+msgstr "``GEOREFERENCE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:520
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:648
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:780
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:891
+msgid "``INCLUDE_METADATA``"
+msgstr "``INCLUDE_METADATA``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:526
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:786
+msgid "``ANTIALIAS``"
+msgstr "``ANTIALIAS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:551
+msgid "**Algorithm ID**: ``native:atlaslayouttoimage``"
+msgstr "**ID de l'algorithme** : ``native:atlaslayouttoimage``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:636
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:879
+msgid "``FORCE_VECTOR``"
+msgstr "``FORCE_VECTOR``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:654
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:897
+msgid "``DISABLE_TILED``"
+msgstr "``DISABLE_TILED``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:660
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:903
+msgid "``SIMPLIFY``"
+msgstr "``SIMPLIFY``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:666
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:909
+msgid "``TEXT_FORMAT``"
+msgstr "``TEXT_FORMAT``"
+
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:669
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:912
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1184
 msgid "Default: 0"
 msgstr "Par défaut : 0"
 
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:706
+msgid "**Algorithm ID**: ``native:atlaslayouttopdf``"
+msgstr "**ID de l'algorithme** : ``native:atlaslayouttopdf``"
+
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:733
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:983
 msgid "**Print layout**"
 msgstr "**Mise en page d'impression**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:811
+msgid "**Algorithm ID**: ``native:printlayouttoimage``"
+msgstr "**ID de l'algorithme** : ``native:printlayouttoimage``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:920
+msgid "``SEPARATE_LAYERS``"
+msgstr "``SEPARATE_LAYERS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:947
+msgid "**Algorithm ID**: ``native:printlayouttopdf``"
+msgstr "**ID de l'algorithme** : ``native:printlayouttopdf``"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:957
 msgid "Print layout map extent to layer"
@@ -991,6 +1236,10 @@ msgstr "**Largeur de la carte**"
 msgid "``WIDTH``"
 msgstr "``WIDTH``"
 
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1066
+msgid "**Algorithm ID**: ``native:printlayoutmapextenttolayer``"
+msgstr "**ID de l'algorithme** : ``native:printlayoutmapextenttolayer``"
+
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1076
 msgid "Set layer style"
 msgstr "Définir le style de la couche"
@@ -1035,6 +1284,10 @@ msgid "The input layer with the new style assigned. No new layer is created."
 msgstr ""
 "La couche d'entrée avec le nouveau style attribué. Aucune nouvelle couche "
 "n'est créée."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1122
+msgid "**Algorithm ID**: ``native:setlayerstyle``"
+msgstr "**ID de l'algorithme** : ``native:setlayerstyle``"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1132
 msgid "Topological coloring"
