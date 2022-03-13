@@ -41,7 +41,7 @@ https://grass.osgeo.org/download/sample-data/.
 Loading GRASS raster and vector layers
 ======================================
 
-If the provider is loaded in QGIS, the location item with GRASS |grass|
+If the provider is loaded in QGIS, the location item with GRASS |grassLogo|
 icon is added in the browser tree under each folder item which contains GRASS location.
 Go to the folder :file:`grassdata` and expand location :file:`alaska` and
 mapset :file:`demo`.
@@ -890,7 +890,7 @@ https://qgis.org/en/site/getinvolved/development/addinggrasstools.html.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |CURRENT| replace:: 3.16
+.. |CURRENT| replace:: 3.22
 .. |captureBoundary| image:: /static/common/mActionCaptureBoundary.png
    :width: 1.5em
 .. |captureCentroid| image:: /static/common/mActionCaptureCentroid.png
@@ -905,9 +905,9 @@ https://qgis.org/en/site/getinvolved/development/addinggrasstools.html.
    :width: 1.3em
 .. |general| image:: /static/common/general.png
    :width: 1.5em
-.. |grass| image:: /static/common/grasslogo.png
-   :width: 1.5em
 .. |grassCloseMapset| image:: /static/common/grass_close_mapset.png
+   :width: 1.5em
+.. |grassLogo| image:: /static/common/grasslogo.png
    :width: 1.5em
 .. |grassNewMapset| image:: /static/common/grass_new_mapset.png
    :width: 1.5em

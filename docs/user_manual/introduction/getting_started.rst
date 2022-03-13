@@ -198,7 +198,7 @@ Let's do some customization on the lakes layer.
 #. To display the name of the lakes:
 
    #. Reopen the :file:`lakes` layer :guilabel:`Properties` dialog
-   #. Click on the |labeling| :guilabel:`Labels` tab
+   #. Click on the |labelingSingle| :guilabel:`Labels` tab
    #. Select :guilabel:`Single labels` in the drop-down menu to enable labeling.
    #. From the :guilabel:`Label with` list, choose the ``NAMES`` field.
 
@@ -259,7 +259,7 @@ features and settings, and how to use them.
    :width: 1.5em
 .. |fileSave| image:: /static/common/mActionFileSave.png
    :width: 1.5em
-.. |labeling| image:: /static/common/labelingSingle.png
+.. |labelingSingle| image:: /static/common/labelingSingle.png
    :width: 1.5em
 .. |nix| image:: /static/common/nix.png
    :width: 1em

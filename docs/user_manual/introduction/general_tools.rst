@@ -61,7 +61,7 @@ At the top of the Layers panel, a toolbar allows you to:
 * |symbology| :sup:`Open the layer styling dock (F7)`: toggle the layer styling
   panel on and off.
 * |addGroup| :sup:`Add new group`: see :ref:`group_layers_interact`
-* |showMapTheme| :sup:`Manage Map Themes`: control visibility of layers and
+* |showPresets| :sup:`Manage Map Themes`: control visibility of layers and
   arrange them in different map themes.
 * |filterMap| filter layers in the legend tree:
 
@@ -99,7 +99,7 @@ At the top of the Layers panel, a toolbar allows you to:
 Configuring map themes
 ......................
 
-The |showMapTheme| :sup:`Manage Map Themes` drop-down button provides access to
+The |showPresets| :sup:`Manage Map Themes` drop-down button provides access to
 convenient shortcuts to manipulate visibility of the layers in the :guilabel:`Layers`
 panel:
 
@@ -115,7 +115,7 @@ panel:
 * |hideDeselectedLayers| :guilabel:`Hide Deselected Layers`
 
 Beyond the simple control of layer visibility,
-the |showMapTheme| :sup:`Manage Map Themes` menu allows you to configure
+the |showPresets| :sup:`Manage Map Themes` menu allows you to configure
 **Map Themes** in the legend and switch from one map theme to another.
 A map theme is a **snapshot** of the current map legend that records:
 
@@ -145,11 +145,11 @@ To create a map theme:
 #. Repeat the previous steps as necessary for the other layers
 #. If applicable, expand or collapse groups or visible layer nodes in the
    :guilabel:`Layers` panel
-#. Click on the |showMapTheme| :sup:`Manage Map Themes` button on top of the panel,
+#. Click on the |showPresets| :sup:`Manage Map Themes` button on top of the panel,
    and :guilabel:`Add Theme...`
 #. Enter the map theme's name and click :guilabel:`OK`
 
-The new theme is listed in the lower part of the |showMapTheme| drop-down menu.
+The new theme is listed in the lower part of the |showPresets| drop-down menu.
 
 You can create as many map themes as you need: whenever the current combination
 in the map legend (visible layers, their active style, the map legend nodes)
@@ -183,7 +183,7 @@ Option                                                             Vector Layer 
 |zoomToLayer| :guilabel:`Zoom to Selection`                        |checkbox|          \                  \
 |inOverview| :guilabel:`Show in Overview`                          |checkbox|          |checkbox|         \
 :guilabel:`Show Feature Count`                                     |checkbox|          \                  \
-|labeling| :guilabel:`Show Label`                                  |checkbox|          \                  \
+|labelingSingle| :guilabel:`Show Label`                                  |checkbox|          \                  \
 :guilabel:`Copy Layer/Group`                                       |checkbox|          |checkbox|         |checkbox|
 :guilabel:`Rename Layer/Group`                                     |checkbox|          |checkbox|         |checkbox|
 |zoomActual| :guilabel:`Zoom to Native Resolution (100%)`          \                   |checkbox|         \
@@ -402,7 +402,7 @@ From a drop-down list of current layers in the layer panel, select an item and:
   * |symbology| :guilabel:`Symbology`, |transparency| :guilabel:`Transparency`,
     and |rasterHistogram| :guilabel:`Histogram` properties for raster layer.
     These options are the same as in the :ref:`raster_properties_dialog`.
-  * |symbology| :guilabel:`Symbology`, |labeling| :guilabel:`Labels`, |labelmask|
+  * |symbology| :guilabel:`Symbology`, |labelingSingle| :guilabel:`Labels`, |labelmask|
     :guilabel:`Mask` and |3d| :guilabel:`3D View` properties for vector layer.
     These options are the same as in the :ref:`vector_properties_dialog`
     and can be extended by custom properties introduced by third-party plugins.
@@ -1675,7 +1675,7 @@ be selected on the map canvas too):
   features in the current layer
 * |invertSelection| :sup:`Invert Feature Selection` to invert the selection in
   the current layer
-* |algorithmSelectLocation| :sup:`Select by Location` to select the features
+* |selectLocation| :sup:`Select by Location` to select the features
   based on their spatial relationship with other features (in the same or
   another layer - see :ref:`qgisselectbylocation`)
 
@@ -2337,7 +2337,7 @@ apply your choice to the item.
 In the |colorSwatches| :sup:`Color swatches` tab, you can choose from a
 list of color palettes (see :ref:`colors_options` for details).
 All but the :guilabel:`Recent colors` palette can be modified with the
-|signPlus| :sup:`Add current color` and |signMinus| :sup:`Remove selected color`
+|symbologyAdd| :sup:`Add current color` and |symbologyRemove| :sup:`Remove selected color`
 buttons at the bottom of the frame.
 
 The :guilabel:`...` button next to the palette combo box also offers several
@@ -2697,7 +2697,7 @@ Data defined override setup
 ---------------------------
 
 Next to many options in the vector layer properties dialog or settings in the print
-layout, you will find a |dataDefined| :sup:`Data defined override` icon.
+layout, you will find a |dataDefine| :sup:`Data defined override` icon.
 Using :ref:`expressions <vector_expressions>` based on layer attributes or item
 settings, prebuilt or custom functions and :ref:`variables <general_tools_variables>`,
 this tool allows you to set dynamic values for parameters. When enabled,
@@ -2707,7 +2707,7 @@ value (checkbox, textbox, slider...).
 The data defined override widget
 ................................
 
-Clicking the |dataDefined| :sup:`Data defined override` icon shows the following entries:
+Clicking the |dataDefine| :sup:`Data defined override` icon shows the following entries:
 
 * :guilabel:`Description...` that indicates if the option is enabled, which input is
   expected, the valid input type and the current definition. Hovering over the
@@ -2737,7 +2737,7 @@ Clicking the |dataDefined| :sup:`Data defined override` icon shows the following
  icon is yellow |dataDefineOn| or |dataDefineExpressionOn|. If it is broken,
  the icon is red |dataDefineError| or |dataDefineExpressionError|.
 
- You can enable or disable a configured |dataDefined| :sup:`data-defined
+ You can enable or disable a configured |dataDefine| :sup:`Data-defined
  override` button by simply clicking the widget with the right mouse button.
 
 .. _data_defined_assistant:
@@ -2745,7 +2745,7 @@ Clicking the |dataDefined| :sup:`Data defined override` icon shows the following
 Using the data-defined assistant interface
 ..........................................
 
-When the |dataDefined| :sup:`Data-defined override` button is associated with a
+When the |dataDefine| :sup:`Data-defined override` button is associated with a
 size, a rotation, an opacity or a color property, it has an :guilabel:`Assistant...`
 option that helps you change how the data is applied to the parameter for each
 feature. The assistant allows you to:
@@ -2810,8 +2810,6 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |addMap| image:: /static/common/mActionAddMap.png
    :width: 1.5em
-.. |algorithmSelectLocation| image:: /static/common/mAlgorithmSelectLocation.png
-   :width: 1.5em
 .. |allEdits| image:: /static/common/mActionAllEdits.png
    :width: 1.5em
 .. |annotation| image:: /static/common/mActionAnnotation.png
@@ -2834,6 +2832,8 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |copyrightLabel| image:: /static/common/copyright_label.png
    :width: 1.5em
+.. |dataDefine| image:: /static/common/mIconDataDefine.png
+   :width: 1.5em
 .. |dataDefineError| image:: /static/common/mIconDataDefineError.png
    :width: 1.5em
 .. |dataDefineExpressionError| image:: /static/common/mIconDataDefineExpressionError.png
@@ -2841,8 +2841,6 @@ The values presented in the varying size assistant above will set the size
 .. |dataDefineExpressionOn| image:: /static/common/mIconDataDefineExpressionOn.png
    :width: 1.5em
 .. |dataDefineOn| image:: /static/common/mIconDataDefineOn.png
-   :width: 1.5em
-.. |dataDefined| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
 .. |dbManager| image:: /static/common/dbmanager.png
    :width: 1.5em
@@ -2928,7 +2926,7 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |invertSelection| image:: /static/common/mActionInvertSelection.png
    :width: 1.5em
-.. |labeling| image:: /static/common/labelingSingle.png
+.. |labelingSingle| image:: /static/common/labelingSingle.png
    :width: 1.5em
 .. |labelmask| image:: /static/common/labelmask.png
    :width: 1.5em
@@ -2980,6 +2978,8 @@ The values presented in the varying size assistant above will set the size
 .. |selectColorRamp| image:: /static/common/selectcolorramp.png
 .. |selectFreehand| image:: /static/common/mActionSelectFreehand.png
    :width: 1.5em
+.. |selectLocation| image:: /static/common/mAlgorithmSelectLocation.png
+   :width: 1.5em
 .. |selectNumber| image:: /static/common/selectnumber.png
    :width: 2.8em
 .. |selectPolygon| image:: /static/common/mActionSelectPolygon.png
@@ -3000,13 +3000,9 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |showBookmarks| image:: /static/common/mActionShowBookmarks.png
    :width: 1.5em
-.. |showMapTheme| image:: /static/common/mActionShowPresets.png
+.. |showPresets| image:: /static/common/mActionShowPresets.png
    :width: 1.5em
 .. |showSelectedLayers| image:: /static/common/mActionShowSelectedLayers.png
-   :width: 1.5em
-.. |signMinus| image:: /static/common/symbologyRemove.png
-   :width: 1.5em
-.. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |stylePreset| image:: /static/common/stylepreset.png
    :width: 1.5em
@@ -3014,6 +3010,10 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |symbologyRemove| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
 .. |textAnnotation| image:: /static/common/mActionTextAnnotation.png
    :width: 1.5em
 .. |titleLabel| image:: /static/common/title_label.png
@@ -3026,7 +3026,7 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |transparency| image:: /static/common/transparency.png
    :width: 1.5em
-.. |unchecked| image:: /static/common/checkbox_unchecked.png
+.. |unchecked| image:: /static/common/unchecked.png
    :width: 1.3em
 .. |zoomActual| image:: /static/common/mActionZoomActual.png
    :width: 1.5em

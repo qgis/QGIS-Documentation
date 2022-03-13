@@ -57,7 +57,7 @@ following functionalities (see :numref:`figure_layout_table_ppt`):
   allowing you to select a :guilabel:`Layer` from the vector layers loaded in
   the project.
 
-  The |dataDefined| :sup:`data-defined override` button near the layer list
+  The |dataDefine| :sup:`Data-defined override` button near the layer list
   allows you to dynamically change the layer which is used to populate the table,
   e.g. you could fill the attribute table with different layer attributes per
   atlas page.
@@ -116,10 +116,10 @@ following functionalities (see :numref:`figure_layout_table_ppt`):
   * Move attributes up or down the list by selecting the rows and then using the
     |arrowUp| and |arrowDown| buttons to shift the rows. Multiple rows can
     be selected and moved at any one time.
-  * Add an attribute with the |signPlus| button. This will add an empty row at
+  * Add an attribute with the |symbologyAdd| button. This will add an empty row at
     the bottom of the table where you can select a field to be the attribute
     value or create an attribute via a regular expression.
-  * Remove an attribute with the |signMinus| button. Multiple rows can be
+  * Remove an attribute with the |symbologyRemove| button. Multiple rows can be
     selected and removed at any one time.
   * Reset the attribute table back to its default state with the :guilabel:`Reset` button.
   * Clear the table using the :guilabel:`Clear` button. This is useful when you have a
@@ -133,14 +133,14 @@ following functionalities (see :numref:`figure_layout_table_ppt`):
 
   In the :guilabel:`Sorting` section you can:
 
-  * Add an attribute to sort the table with: press the |signPlus| button and a new empty
+  * Add an attribute to sort the table with: press the |symbologyAdd| button and a new empty
     row is added. Insert a field or an expression in the :guilabel:`Attribute` column and
     set the :guilabel:`Sort order` to **Ascending** or **Descending**.
   * Select a row in the list and use the |arrowUp| and |arrowDown| buttons to
     change the sort priority on attribute level. Selecting a cell in the
     :guilabel:`Sort Order` column helps you change the sorting order of the
     attribute field.
-  * Use the |signMinus| button to remove an attribute from the sorting list.
+  * Use the |symbologyRemove| button to remove an attribute from the sorting list.
 
 
 Feature filtering
@@ -411,11 +411,11 @@ the following functionalities (see :numref:`figure_layout_table_frames`):
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |dataDefined| image:: /static/common/mIconDataDefine.png
+.. |dataDefine| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
 .. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
-.. |signMinus| image:: /static/common/symbologyRemove.png
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em
-.. |signPlus| image:: /static/common/symbologyAdd.png
+.. |symbologyRemove| image:: /static/common/symbologyRemove.png
    :width: 1.5em

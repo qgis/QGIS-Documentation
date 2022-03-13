@@ -75,7 +75,7 @@ property yet. First we will create a field for this purpose.
 
 #. Open the :guilabel:`Actions` tab for the
    :guilabel:`school_property` layer, and click on the
-   |signPlus| :sup:`Add a new action` button.
+   |symbologyAdd| :sup:`Add a new action` button.
 
    .. figure:: img/layer_actions.png
       :align: center
@@ -164,7 +164,7 @@ let's tell QGIS to do that automatically for us!
 #. Click on the :guilabel:`Create Default Actions` button to add a
    number of pre-defined actions.
 #. Remove all the actions but the :guilabel:`Open URL` action with
-   the short name :guilabel:`Search Web` using the |signMinus|
+   the short name :guilabel:`Search Web` using the |symbologyRemove|
    :sup:`Remove the selected action` button below.
 #. Double-click on the remaining action to edit it
 #. Change the :guilabel:`Description` to ``Google Search``, and
@@ -355,7 +355,7 @@ That is the topic of the next module.
 .. |basic| image:: /static/common/basic.png
 .. |hard| image:: /static/common/hard.png
 .. |moderate| image:: /static/common/moderate.png
-.. |signMinus| image:: /static/common/symbologyRemove.png
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em
-.. |signPlus| image:: /static/common/symbologyAdd.png
+.. |symbologyRemove| image:: /static/common/symbologyRemove.png
    :width: 1.5em

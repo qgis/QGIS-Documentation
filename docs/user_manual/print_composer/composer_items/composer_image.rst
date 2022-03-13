@@ -59,7 +59,7 @@ The picture item supports two types of images:
   The associated image can also be :ref:`embedded <embedded_file_selector>`
   in the layout.
 
-  Use the |dataDefined| :sup:`data defined override` button to set
+  Use the |dataDefine| :sup:`data defined override` button to set
   the image source from a feature attribute or using a regular expression.
 * :guilabel:`SVG Image`: using by default the SVG libraries provided in
   :menuselection:`Settings --> Options --> System --> SVG Paths`.
@@ -223,7 +223,7 @@ can also:
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |dataDefined| image:: /static/common/mIconDataDefine.png
+.. |dataDefine| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
 .. |northArrow| image:: /static/common/north_arrow.png
    :width: 1.5em

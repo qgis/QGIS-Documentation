@@ -206,7 +206,7 @@ Background, Item ID, Variables and Rendering (See :numref:`figure_layout_common`
 
 .. note::
 
-   The |dataDefined| :sup:`Data defined override` icon next to most of the
+   The |dataDefine| :sup:`Data defined override` icon next to most of the
    options means that you can associate that property with a layer, features
    attributes, geometry or with any other layout item's property, using
    :ref:`expressions <vector_expressions>` or :ref:`variables
@@ -300,8 +300,8 @@ composition's variables). Map items also include Map settings variables that
 provide easy access to values like the map's scale, extent, and so on.
 
 In :guilabel:`Variables`, it's also possible to manage item-level variables.
-Click the |signPlus| button to add a new custom variable. Likewise, select any
-custom item-level variable from the list and click the |signMinus| button to
+Click the |symbologyAdd| button to add a new custom variable. Likewise, select any
+custom item-level variable from the list and click the |symbologyRemove| button to
 remove it.
 
 More information on variables usage in the :ref:`general_tools_variables` section.
@@ -327,7 +327,7 @@ More information on variables usage in the :ref:`general_tools_variables` sectio
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |dataDefined| image:: /static/common/mIconDataDefine.png
+.. |dataDefine| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
 .. |groupItems| image:: /static/common/mActionGroupItems.png
    :width: 1.5em
@@ -349,8 +349,8 @@ More information on variables usage in the :ref:`general_tools_variables` sectio
    :width: 1.5em
 .. |select| image:: /static/common/mActionSelect.png
    :width: 1.5em
-.. |signMinus| image:: /static/common/symbologyRemove.png
-   :width: 1.5em
-.. |signPlus| image:: /static/common/symbologyAdd.png
-   :width: 1.5em
 .. |slider| image:: /static/common/slider.png
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |symbologyRemove| image:: /static/common/symbologyRemove.png
+   :width: 1.5em

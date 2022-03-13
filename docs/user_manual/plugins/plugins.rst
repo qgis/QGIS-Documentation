@@ -187,7 +187,7 @@ Plugin` or :guilabel:`Upgrade All` buttons.
 The Invalid tab
 ---------------
 
-The |pluginInvalid| :guilabel:`Invalid` tab lists all installed plugins that are
+The |pluginIncompatible| :guilabel:`Invalid` tab lists all installed plugins that are
 currently broken for any reason (missing dependency, errors while loading,
 incompatible functions with QGIS version...). 
 You can try the :guilabel:`Reinstall Plugin` button to fix an invalidated plugin but
@@ -199,7 +199,7 @@ another compatible plugin or help to upgrade the broken one).
 .. figure:: img/plugins_invalid.png
    :align: center
 
-   The |pluginInvalid| :guilabel:`Invalid` tab
+   The |pluginIncompatible| :guilabel:`Invalid` tab
 
 The Install from ZIP tab
 ------------------------
@@ -231,9 +231,9 @@ directly from their repository.
    :width: 1.5em
 .. |plugin-upgrade| image:: /static/common/plugin-upgrade.png
    :width: 1.5em
-.. |pluginInstalled| image:: /static/common/plugin-installed.png
+.. |pluginIncompatible| image:: /static/common/plugin-incompatible.png
    :width: 1.5em
-.. |pluginInvalid| image:: /static/common/plugin-incompatible.png
+.. |pluginInstalled| image:: /static/common/plugin-installed.png
    :width: 1.5em
 .. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
    :width: 1.5em

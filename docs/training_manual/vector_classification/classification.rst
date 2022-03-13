@@ -307,12 +307,12 @@ and from the other types of landuse (based on their area).
       :align: center
 
 #. Click and drag to select all the rules
-#. Use the |signMinus| :sup:`Remove selected rules` button to remove
+#. Use the |symbologyRemove| :sup:`Remove selected rules` button to remove
    all of the existing rules
 
 Let's now add our custom rules.
 
-#. Click the |signPlus| :sup:`Add rule` button
+#. Click the |symbologyAdd| :sup:`Add rule` button
 #. The :guilabel:`Edit rule` dialog then appears
 #. Enter ``Swellendam city`` as :guilabel:`Label`
 #. Click the |expression| button next to the :guilabel:`Filter` text
@@ -415,9 +415,9 @@ QGIS and into a format we can print out, or make into an image or PDF? That's th
    :width: 1.5em
 .. |saveEdits| image:: /static/common/mActionSaveEdits.png
    :width: 1.5em
-.. |signMinus| image:: /static/common/symbologyRemove.png
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em
-.. |signPlus| image:: /static/common/symbologyAdd.png
+.. |symbologyRemove| image:: /static/common/symbologyRemove.png
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em

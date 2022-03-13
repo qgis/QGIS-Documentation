@@ -133,7 +133,7 @@ that means:
 All rasters will be saved in another files.
 
 First, open the tools from :menuselection:`Raster --> Align Raster...` and click
-on the |signPlus| :sup:`Add new raster` button to choose one existing raster in
+on the |symbologyAdd| :sup:`Add new raster` button to choose one existing raster in
 QGIS. Select an output file to save the raster after the alignment, the
 resampling method and if the tools need to :guilabel:`Rescale values according
 to the cell size`. The resampling method can be (see :numref:`figure_raster_align_edit`):
@@ -156,7 +156,7 @@ to the cell size`. The resampling method can be (see :numref:`figure_raster_alig
    Select Raster Resampling Options
 
 In the main :guilabel:`Align raster` dialog, you can still |symbologyEdit| :sup:`Edit
-file settings` or |signMinus| :sup:`Remove an existing file` from the list of raster
+file settings` or |symbologyRemove| :sup:`Remove an existing file` from the list of raster
 layers. You can also choose one or more other options (see :numref:`figure_raster_align`):
 
 * Select the :guilabel:`Reference Layer`,
@@ -183,9 +183,9 @@ layers. You can also choose one or more other options (see :numref:`figure_raste
 
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |signMinus| image:: /static/common/symbologyRemove.png
-   :width: 1.5em
-.. |signPlus| image:: /static/common/symbologyAdd.png
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |symbologyEdit| image:: /static/common/symbologyEdit.png
+   :width: 1.5em
+.. |symbologyRemove| image:: /static/common/symbologyRemove.png
    :width: 1.5em

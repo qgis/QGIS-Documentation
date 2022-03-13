@@ -31,10 +31,10 @@ Also, the date of creation will adapt dynamically.
    Go to the :guilabel:`Layout` panel and scroll down to the
    :guilabel:`Variables` section.
    The first variable will define the margin.
-   Press the |signPlus| button and type in the name
+   Press the |symbologyAdd| button and type in the name
    ``sw_layout_margin``.
    Set the value to ``7.5``.
-   Press the |signPlus| button again and type in the name
+   Press the |symbologyAdd| button again and type in the name
    ``sw_layout_height_header``.
    Set the value to ``36``.
 #. Now you are ready to create the position and the size of the map
@@ -69,7 +69,7 @@ Also, the date of creation will adapt dynamically.
    canvas map extent.
    Go to :guilabel:`Item Properties` again and choose the
    :guilabel:`Grids` section.
-   Insert a grid by clicking the |signPlus| button.
+   Insert a grid by clicking the |symbologyAdd| button.
    Click on :guilabel:`Modify grid ...` and set the
    :guilabel:`Interval` for :guilabel:`X`, :guilabel:`Y` and
    :guilabel:`Offset` according to the map scale you chose in the
@@ -144,7 +144,7 @@ Also, the date of creation will adapt dynamically.
 
 #. The title of your QGIS project can be included automatically.
    The title is set in the :guilabel:`Project Properties`.
-   Insert a label with the |addLabel| :sup:`Add Label` button and
+   Insert a label with the |label| :sup:`Add Label` button and
    enter the name ``project title (variable)``.
    In the :guilabel:`Main Properties` of the
    :guilabel:`Items Properties` Panel enter the expression::
@@ -193,7 +193,7 @@ Also, the date of creation will adapt dynamically.
 #. The third label will include information about your organisation.
    First we will create some variables in the :guilabel:`Variables`
    menu of the :guilabel:`Item Properties`.
-   Go to the :guilabel:`Layout` menu, click the |signPlus| button
+   Go to the :guilabel:`Layout` menu, click the |symbologyAdd| button
    each time and enter the names ``o_department``, ``o_name`` ,
    ``o_adress`` and ``o_postcode``.
    In the second row enter the information about your organisation.
@@ -227,7 +227,7 @@ Also, the date of creation will adapt dynamically.
 |moderate| |FA| Adding pictures to the dynamic header
 ---------------------------------------------------------------------------------------
 
-#. Use the |addNewImage| :sup:`Add Picture` button to place a picture
+#. Use the |addImage| :sup:`Add Picture` button to place a picture
    above your label ``organisation information``.
    After entering the name ``organisation logo`` define the position
    and size of the logo:
@@ -267,7 +267,7 @@ Also, the date of creation will adapt dynamically.
 ----------------------------------------------------------------------
 
 #. To insert a scalebar in the header click on
-   |addScalebar| :sup:`Add Scale Bar` and place it in the rectangle
+   |scaleBar| :sup:`Add Scale Bar` and place it in the rectangle
    above the north arrow.
    In :guilabel:`Map` under the :guilabel:`Main Properties` choose
    your ``main map(Map 1)``.
@@ -321,15 +321,13 @@ far.
 .. |WN| replace:: What's Next?
 .. |addBasicShape| image:: /static/common/mActionAddBasicShape.png
    :width: 1.5em
-.. |addLabel| image:: /static/common/mActionLabel.png
-   :width: 1.5em
-.. |addNewImage| image:: /static/common/mActionAddImage.png
+.. |addImage| image:: /static/common/mActionAddImage.png
    :width: 1.5em
 .. |addNodesShape| image:: /static/common/mActionAddNodesShape.png
    :width: 1.5em
-.. |addScalebar| image:: /static/common/mActionScaleBar.png
-   :width: 1.5em
 .. |dataDefineExpressionOn| image:: /static/common/mIconDataDefineExpressionOn.png
+   :width: 1.5em
+.. |label| image:: /static/common/mActionLabel.png
    :width: 1.5em
 .. |moderate| image:: /static/common/moderate.png
 .. |newLayout| image:: /static/common/mActionNewLayout.png
@@ -338,5 +336,7 @@ far.
    :width: 1.5em
 .. |refresh| image:: /static/common/mActionRefresh.png
    :width: 1.5em
-.. |signPlus| image:: /static/common/symbologyAdd.png
+.. |scaleBar| image:: /static/common/mActionScaleBar.png
+   :width: 1.5em
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em

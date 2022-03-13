@@ -121,7 +121,7 @@ our header and footer:
    :align: center
 
 Let us make things more interesting.
-By hitting the |signPlus| :sup:`Add Section` button in the
+By hitting the |symbologyAdd| :sup:`Add Section` button in the
 :guilabel:`Report Organizer`, we are given a choice of new sections to
 add to our report.
 
@@ -200,7 +200,7 @@ So more or less an atlas, but with a header and footer page.
 Let us make things more interesting by adding a subsection to our
 state group.
 We do this by first selecting the *Admin Level 1* field group in the
-organizer, then hitting the |signPlus| :sup:`Add Field` button
+organizer, then hitting the |symbologyAdd| :sup:`Add Field` button
 and adding a new :guilabel:`Field Group Section`:
 
 .. figure:: img/subsection.png
@@ -283,7 +283,7 @@ For dynamic pictures, you first add a picture to the body part
 of the group, as usual.
 In the :guilabel:`Item properties` of the picture, you set the
 :guilabel:`Image Source` using the
-|dataDefined| :sup:`Data defined override` button, and either
+|dataDefine| :sup:`Data defined override` button, and either
 select an attribute that contains the absolute path of the
 images or :guilabel:`Edit...` (to enter an expression that
 generates the absolute image path).
@@ -371,7 +371,7 @@ As you see, reports in QGIS are extremely powerful and flexible!
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |dataDefined| image:: /static/common/mIconDataDefine.png
+.. |dataDefine| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
-.. |signPlus| image:: /static/common/symbologyAdd.png
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em

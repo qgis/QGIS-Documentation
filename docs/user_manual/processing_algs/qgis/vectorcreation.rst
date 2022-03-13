@@ -49,13 +49,13 @@ Basic parameters
      - Input line vector layer to use for the offsets.
    * - **Number of features to create**
      - ``COUNT``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 10
      - Number of offset copies to generate for each feature
    * - **Offset step distance**
      - ``OFFSET``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 1.0
      - Distance between two consecutive offset copies
@@ -177,31 +177,31 @@ Parameters
      - Input vector layer to translate
    * - **Number of features to create**
      - ``COUNT``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 10
      - Number of copies to generate for each feature
    * - **Step distance (x-axis)**
      - ``DELTA_X``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 0.0
      - Displacement to apply on the X axis
    * - **Step distance (y-axis)**
      - ``DELTA_Y``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 0.0
      - Displacement to apply on the Y axis
    * - **Step distance (z-axis)**
      - ``DELTA_Z``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 0.0
      - Displacement to apply on the Z axis
    * - **Step distance (m values)**
      - ``DELTA_M``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 0.0
      - Displacement to apply on M
@@ -1175,7 +1175,7 @@ Basic parameters
      - Input polygon vector layer
    * - **Number of points for each feature**
      - ``POINTS_NUMBER``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 1
      - Number of points to create
@@ -1183,7 +1183,7 @@ Basic parameters
 
        Optional
      - ``MIN_DISTANCE``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 0.0
      - The minimum distance between points within one polygon feature
@@ -1214,7 +1214,7 @@ Advanced parameters
 
        Optional
      - ``MIN_DISTANCE_GLOBAL``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 0.0
      - The global minimum distance between points.
@@ -1224,7 +1224,7 @@ Advanced parameters
 
        Optional
      - ``MAX_TRIES_PER_POINT``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 10
      - The maximum number of tries per point.
@@ -1337,7 +1337,7 @@ Parameters
 
    * - **Point count or density**
      - ``VALUE``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 1.0
      - The number or density of points, depending on the chosen
@@ -1452,7 +1452,7 @@ Basic parameters
      - Input line vector layer
    * - **Number of points for each feature**
      - ``POINTS_NUMBER``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 1
      - Number of points to create
@@ -1460,7 +1460,7 @@ Basic parameters
 
        Optional
      - ``MIN_DISTANCE``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 0.0
      - The minimum distance between points within one line feature
@@ -1491,7 +1491,7 @@ Advanced parameters
 
        Optional
      - ``MIN_DISTANCE_GLOBAL``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 0.0
      - The global minimum distance between points.
@@ -1501,7 +1501,7 @@ Advanced parameters
 
        Optional
      - ``MAX_TRIES_PER_POINT``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 10
      - The maximum number of tries per point.
@@ -1831,5 +1831,5 @@ Python code
 
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |dataDefined| image:: /static/common/mIconDataDefine.png
+.. |dataDefine| image:: /static/common/mIconDataDefine.png
    :width: 1.5em

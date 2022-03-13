@@ -29,7 +29,7 @@ The vector :guilabel:`Layer Properties` dialog provides the following sections:
    * - |metadata| :ref:`Information <vectorinformationmenu>`
      - |system| :ref:`Source <vectorsourcemenu>`
      - |symbology| :ref:`Symbology <vector_style_menu>`:sup:`[1]`
-   * - |labeling| :ref:`Labels <vector_labels_tab>`:sup:`[1]`
+   * - |labelingSingle| :ref:`Labels <vector_labels_tab>`:sup:`[1]`
      - |labelmask| :ref:`Mask <vector_mask_menu>`:sup:`[1]`
      - |3d| :ref:`3D View <sec_3_d_view>`:sup:`[1]`
    * - |diagram| :ref:`Diagrams <sec_diagram>`
@@ -411,7 +411,7 @@ To use categorized symbology for a layer:
 
 Further tweaks can be done to the default classification:
 
-* You can |signPlus| :sup:`Add` new categories, |signMinus| :sup:`Remove`
+* You can |symbologyAdd| :sup:`Add` new categories, |symbologyRemove| :sup:`Remove`
   selected categories or :guilabel:`Delete All` of them.
 * A class can be disabled by unchecking the checkbox to the left of the
   class name; the corresponding features are hidden on the map.
@@ -584,14 +584,14 @@ To apply a proportional rendering:
    <single_symbol_renderer>`.
 #. Then set the symbol to apply to the features.
 #. Select the item at the upper level of the symbol tree, and use the
-   |dataDefined| :sup:`Data-defined override` :ref:`button <data_defined>` next
+   |dataDefine| :sup:`Data-defined override` :ref:`button <data_defined>` next
    to the :guilabel:`Size` (for point layer) or :guilabel:`Width` (for line
    layer) option.
 #. Select a field or enter an expression, and for each feature, QGIS will apply
    the output value to the property and proportionally resize the symbol in the
    map canvas.
 
-   If need be, use the :guilabel:`Size assistant...` option of the |dataDefined|
+   If need be, use the :guilabel:`Size assistant...` option of the |dataDefine|
    menu to apply some transformation (exponential, flannery...) to the symbol
    size rescaling (see :ref:`data_defined_assistant` for more details).
 
@@ -615,7 +615,7 @@ The simplest way to create multivariate analysis in QGIS is to:
 
    #. Click on the :guilabel:`Change` button above the classification frame:
       you get the :ref:`symbol-selector` dialog.
-   #. Rescale the size or width of the symbol layer using the |dataDefined|
+   #. Rescale the size or width of the symbol layer using the |dataDefine|
       :ref:`data defined override <data_defined>` widget as seen above.
 
 Like the proportional symbol, the scaled symbology can be added to the layer
@@ -652,7 +652,7 @@ To create a rule:
 
 #. Activate an existing row by double-clicking it (by default, QGIS adds a
    symbol without a rule when the rendering mode is enabled) or click the
-   |symbologyEdit| :sup:`Edit rule` or |signPlus| :sup:`Add rule` button.
+   |symbologyEdit| :sup:`Edit rule` or |symbologyAdd| :sup:`Add rule` button.
 #. In the :guilabel:`Edit Rule` dialog that opens, you can define a label
    to help you identify each rule. This is the label that will be displayed
    in the :guilabel:`Layers Panel` and also in the print composer legend.
@@ -1064,7 +1064,7 @@ The dialog provides the following options to:
 * resize the classes to use: by default, QGIS provides you with a legend of
   five classes (based on natural pretty breaks) but you can apply your own
   classification using the |checkbox| :guilabel:`Manual size classes` option.
-  Use the |signPlus| and |signMinus| buttons to set your custom classes
+  Use the |symbologyAdd| and |symbologyRemove| buttons to set your custom classes
   values and labels.
 * For collapsed legend, it's possible to:
 
@@ -1223,8 +1223,8 @@ One or more effect types can be used at the same time. You (de)activate an effec
 using its checkbox in the effects list. You can change the selected effect type by
 using the |selectString| :guilabel:`Effect type` option. You can reorder the effects
 using |arrowUp| :sup:`Move up` and |arrowDown| :sup:`Move down`
-buttons, and also add/remove effects using the |signPlus| :sup:`Add new effect`
-and |signMinus| :sup:`Remove effect` buttons.
+buttons, and also add/remove effects using the |symbologyAdd| :sup:`Add new effect`
+and |symbologyRemove| :sup:`Remove effect` buttons.
 
 There are some common options available for all draw effect types.
 :guilabel:`Opacity` and :guilabel:`Blend mode` options work similar
@@ -1253,23 +1253,23 @@ symbol, following some rules:
 Labels Properties
 =================
 
-The |labeling| :guilabel:`Labels` properties provides you with all the needed
+The |labelingSingle| :guilabel:`Labels` properties provides you with all the needed
 and appropriate capabilities to configure smart labeling on vector layers. This
 dialog can also be accessed from the :guilabel:`Layer Styling` panel, or using
-the |labeling| :sup:`Layer Labeling Options` button of the **Labels toolbar**.
+the |labelingSingle| :sup:`Layer Labeling Options` button of the **Labels toolbar**.
 
 The first step is to choose the labeling method from the drop-down list.
 Available methods are:
 
 * |labelingNone| :guilabel:`No labels`: the default value, showing no labels
   from the layer
-* |labeling| :guilabel:`Single labels`: Show labels on the map using a single
+* |labelingSingle| :guilabel:`Single labels`: Show labels on the map using a single
   attribute or an expression
 * |labelingRuleBased| :ref:`Rule-based labeling <rule_based_labeling>`
 * and |labelingObstacle| :guilabel:`Blocking`: allows to set a layer as just an
   obstacle for other layer's labels without rendering any labels of its own.
 
-The next steps assume you select the |labeling| :guilabel:`Single labels`
+The next steps assume you select the |labelingSingle| :guilabel:`Single labels`
 option, opening the following dialog.
 
 .. _figure_labels:
@@ -1311,7 +1311,7 @@ Setting the automated placement engine
 
 You can use the automated placement settings to configure a project-level
 automated behavior of the labels. In the top right corner of the
-:guilabel:`Labels` tab, click the |autoPlacement| :sup:`Automated placement
+:guilabel:`Labels` tab, click the |autoPlacementSettings| :sup:`Automated placement
 settings (applies to all layers)` button, opening a dialog with the following
 options:
 
@@ -1380,7 +1380,7 @@ and applied selectively on the base of expression filters and scale range, as in
 :ref:`Rule-based rendering <rule_based_rendering>`.
 
 To create a rule, select the |labelingRuleBased| **Rule-based labeling** option in the main
-drop-down list from the :guilabel:`Labels` tab and click the |signPlus| button
+drop-down list from the :guilabel:`Labels` tab and click the |symbologyAdd| button
 at the bottom  of the dialog. Then fill the new dialog with a description and an
 expression to filter features. You can also set a :ref:`scale range
 <label_scaledepend>` in which the label rule should be applied. The other
@@ -1396,7 +1396,7 @@ seen beforehand.
 
 A summary of existing rules is shown in the main dialog (see :numref:`figure_labels_rule_based`).
 You can add multiple rules, reorder or imbricate them with a drag-and-drop.
-You can as well remove them with the |signMinus| button or edit them with
+You can as well remove them with the |symbologyRemove| button or edit them with
 |symbologyEdit| button or a double-click.
 
 .. _figure_labels_rule_based:
@@ -1419,7 +1419,7 @@ expressions to label features.
 
 Assuming you are using the :guilabel:`Single labels` method, click the
 |expression| button near the :guilabel:`Value` drop-down list in the
-|labeling| :guilabel:`Labels` tab of the properties dialog.
+|labelingSingle| :guilabel:`Labels` tab of the properties dialog.
 
 In :numref:`figure_labels_expression`, you see a sample expression to label the alaska
 trees layer with tree type and area, based on the field 'VEGDESC', some
@@ -1539,7 +1539,7 @@ to create simple and very complex expressions to label your data in QGIS. See
 Using data-defined override for labeling
 ----------------------------------------
 
-With the |dataDefined| :sup:`Data defined override` function, the settings for
+With the |dataDefine| :sup:`Data defined override` function, the settings for
 the labeling are overridden by entries in the attribute table or expressions
 based on them. This feature can be used to
 set values for most of the labeling options described above.
@@ -1555,7 +1555,7 @@ To do this, after you enabled the labeling on the ``NAME`` field of the layer
 (see :ref:`showlabels`):
 
 #. Activate the :guilabel:`Text` tab.
-#. Click on the |dataDefined| icon next to the :guilabel:`Size` property.
+#. Click on the |dataDefine| icon next to the :guilabel:`Size` property.
 #. Select :guilabel:`Edit...` and type::
 
     CASE
@@ -1564,7 +1564,7 @@ To do this, after you enabled the labeling on the ``NAME`` field of the layer
       ELSE 10
     END
 
-#. Press :guilabel:`OK` to validate. The dialog closes and the |dataDefined| button
+#. Press :guilabel:`OK` to validate. The dialog closes and the |dataDefine| button
    becomes |dataDefineExpressionOn| meaning that an rule is being run.
 #. Then click the button next to the color property, type the expression below
    and validate::
@@ -1575,7 +1575,7 @@ To do this, after you enabled the labeling on the ``NAME`` field of the layer
     END
 
 Likewise, you can customize any other property of the label, the way you want.
-See more details on the |dataDefined| :sup:`Data-define override` widget's
+See more details on the |dataDefine| :sup:`Data-define override` widget's
 description and manipulation in :ref:`data_defined` section.
 
 .. _figure_labels_attribute_data_defined:
@@ -1589,7 +1589,7 @@ description and manipulation in :ref:`data_defined` section.
 
    There is an option to set the labeling for multi-part features independently from
    your label properties. Choose the  |render| :ref:`Rendering <labels_rendering>`,
-   ``Feature options``, go to the |dataDefined| :sup:`Data-define override` button
+   ``Feature options``, go to the |dataDefine| :sup:`Data-define override` button
    next to the checkbox |unchecked| :guilabel:`Label every part of multipart-features`
    and define the labels as described in :ref:`data_defined`.
 
@@ -1599,7 +1599,7 @@ description and manipulation in :ref:`data_defined` section.
 The Label Toolbar
 .................
 
-The :guilabel:`Label Toolbar` provides some tools to manipulate |labeling|
+The :guilabel:`Label Toolbar` provides some tools to manipulate |labelingSingle|
 :ref:`label <vector_labels_tab>` (including their :ref:`callout <labels_callouts>`)
 or |diagram| :ref:`diagram <sec_diagram>` properties:
 
@@ -1663,7 +1663,7 @@ We now describe an example using the data-defined override function for the
 #. Import :file:`lakes.shp` from the QGIS sample dataset.
 #. Double-click the layer to open the Layer Properties. Click on :guilabel:`Labels`
    and :guilabel:`Placement`. Select |radioButtonOn| :guilabel:`Offset from centroid`.
-#. Look for the :guilabel:`Data defined` entries. Click the |dataDefined| icon
+#. Look for the :guilabel:`Data defined` entries. Click the |dataDefine| icon
    to define the field type for the :guilabel:`Coordinate`. Choose ``xlabel``
    for X and ``ylabel`` for Y. The icons are now highlighted in yellow.
 
@@ -1726,7 +1726,7 @@ The current core implementation of diagrams provides support for:
 * |stackedBar| :guilabel:`Stacked bars`, Stacks bars of varying colors for each
   attribute on top of each other vertically or horizontally
 
-In the top right corner of the :guilabel:`Diagrams` tab, the |autoPlacement|
+In the top right corner of the :guilabel:`Diagrams` tab, the |autoPlacementSettings|
 :sup:`Automated placement settings (applies to all layers)` button provides
 means to control diagram :ref:`labels placement <automated_placement>` on the
 map canvas.
@@ -1752,7 +1752,7 @@ Attributes
 ----------
 
 :guilabel:`Attributes` defines which variables to display in the diagram.
-Use |signPlus| :sup:`add item` button to select the desired fields into
+Use |symbologyAdd| :sup:`add item` button to select the desired fields into
 the 'Assigned Attributes' panel. Generated attributes with :ref:`vector_expressions`
 can also be used.
 
@@ -2131,7 +2131,7 @@ directly linked to a particular field (like the HTML/QML widgets or the
    The selected field displays its :ref:`properties <configure_field>` in a third
    panel.
 #. Select fields you do not want to use in your :guilabel:`Form Layout`
-   panel and hit the |signMinus| button to remove them. You can also toggle the
+   panel and hit the |symbologyRemove| button to remove them. You can also toggle the
    selection with the |invertSelection| :sup:`Invert selection` button
 #. Drag and drop fields from the first panel to the :guilabel`Form Layout` one
    to re-add them. The same field can be added multiple times.
@@ -2140,7 +2140,7 @@ directly linked to a particular field (like the HTML/QML widgets or the
 #. Add containers (tab or group frames) to associate fields that belong to
    the same category and better structure the form.
 
-   #. The first step is to use the |signPlus| icon to create a tab in which
+   #. The first step is to use the |symbologyAdd| icon to create a tab in which
       fields and groups will be displayed
    #. Then set the properties of the container, ie:
 
@@ -2169,7 +2169,7 @@ directly linked to a particular field (like the HTML/QML widgets or the
         and the tab or group box shown/hidden accordingly
       * add a background color
    #. You can create as many containers as you want; press
-      the |signPlus| icon again to create another tab or a group frame under
+      the |symbologyAdd| icon again to create another tab or a group frame under
       an existing tab.
 
 #. The next step is to assign the relevant fields to each container,
@@ -2451,7 +2451,7 @@ should be of the same type.
 
 To create a join:
 
-#. Click the |signPlus| :sup:`Add new join` button. The :guilabel:`Add vector
+#. Click the |symbologyAdd| :sup:`Add new join` button. The :guilabel:`Add vector
    join` dialog appears.
 #. Select the :guilabel:`Join layer` you want to connect with the target vector
    layer
@@ -2600,7 +2600,7 @@ correctly:
 
 Otherwise, there's another way to create an auxiliary field for a
 specific property thanks to the
-|dataDefined| :sup:`data-defined override` button.
+|dataDefine| :sup:`Data-defined override` button.
 By clicking on :guilabel:`Store data in the project`, an auxiliary
 field is automatically created for the :guilabel:`Opacity` field.
 If you click on this button and the auxiliary layer is not created
@@ -2613,7 +2613,7 @@ Symbology
 
 Like the method described above for customizing labels, auxiliary fields can
 also be used to stylize symbols and diagrams. To do this, click on
-|dataDefined| :sup:`Data-defined override` and select :guilabel:`Store data in
+|dataDefine| :sup:`Data-defined override` and select :guilabel:`Store data in
 the project` for a specific property. For example, the :guilabel:`Fill
 color` field:
 
@@ -2768,7 +2768,7 @@ Defining Actions
 
 To define an attribute action, open the vector :guilabel:`Layer
 Properties` dialog and click on the :guilabel:`Actions` tab. In the
-:guilabel:`Actions` tab, click the |signPlus| :sup:`Add a new action`
+:guilabel:`Actions` tab, click the |symbologyAdd| :sup:`Add a new action`
 to open the :guilabel:`Edit Action` dialog.
 
 Select the action :guilabel:`Type` and provide a descriptive name
@@ -2896,7 +2896,7 @@ where ``QGIS`` is the search term. Armed with this information, we can proceed:
    layer in the legend, or right-click and choose :menuselection:`Properties`
    from the pop-up menu.
 #. Click on the :guilabel:`Actions` tab.
-#. Click |signPlus| :sup:`Add a new action`.
+#. Click |symbologyAdd| :sup:`Add a new action`.
 #. Choose the :guilabel:`Open` action type,
 #. Enter a name for the action, for example ``Google Search``.
 #. Additionally you can add a :guilabel:`Short Name` or even an :guilabel:`Icon`.
@@ -3213,9 +3213,9 @@ Variables Properties
 |expression| The :guilabel:`Variables` tab lists all the variables available at
 the layer's level (which includes all global and project's variables).
 
-It also allows the user to manage layer-level variables. Click the |signPlus|
+It also allows the user to manage layer-level variables. Click the |symbologyAdd|
 button to add a new custom layer-level variable. Likewise, select a custom
-layer-level variable from the list and click the |signMinus| button to remove
+layer-level variable from the list and click the |symbologyRemove| button to remove
 it.
 
 More information on variables usage in the General Tools
@@ -3475,7 +3475,7 @@ To do so:
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png
    :width: 1.5em
-.. |autoPlacement| image:: /static/common/mIconAutoPlacementSettings.png
+.. |autoPlacementSettings| image:: /static/common/mIconAutoPlacementSettings.png
    :width: 1.5em
 .. |auxiliaryStorage| image:: /static/common/mIconAuxiliaryStorage.png
    :width: 1.5em
@@ -3485,11 +3485,11 @@ To do so:
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+.. |dataDefine| image:: /static/common/mIconDataDefine.png
+   :width: 1.5em
 .. |dataDefineExpressionOn| image:: /static/common/mIconDataDefineExpressionOn.png
    :width: 1.5em
 .. |dataDefineOn| image:: /static/common/mIconDataDefineOn.png
-   :width: 1.5em
-.. |dataDefined| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
 .. |degrees| unicode:: 0x00B0
    :ltrim:
@@ -3543,13 +3543,13 @@ To do so:
    :width: 1.5em
 .. |labelformatting| image:: /static/common/labelformatting.png
    :width: 1.5em
-.. |labeling| image:: /static/common/labelingSingle.png
-   :width: 1.5em
 .. |labelingNone| image:: /static/common/labelingNone.png
    :width: 1.5em
 .. |labelingObstacle| image:: /static/common/labelingObstacle.png
    :width: 1.5em
 .. |labelingRuleBased| image:: /static/common/labelingRuleBased.png
+   :width: 1.5em
+.. |labelingSingle| image:: /static/common/labelingSingle.png
    :width: 1.5em
 .. |labelmask| image:: /static/common/labelmask.png
    :width: 1.5em
@@ -3613,10 +3613,6 @@ To do so:
    :width: 1.5em
 .. |showUnplacedLabel| image:: /static/common/mActionShowUnplacedLabel.png
    :width: 1.5em
-.. |signMinus| image:: /static/common/symbologyRemove.png
-   :width: 1.5em
-.. |signPlus| image:: /static/common/symbologyAdd.png
-   :width: 1.5em
 .. |singleSymbol| image:: /static/common/rendererSingleSymbol.png
    :width: 1.5em
 .. |slider| image:: /static/common/slider.png
@@ -3628,7 +3624,11 @@ To do so:
    :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
 .. |symbologyEdit| image:: /static/common/symbologyEdit.png
+   :width: 1.5em
+.. |symbologyRemove| image:: /static/common/symbologyRemove.png
    :width: 1.5em
 .. |system| image:: /static/common/system.png
    :width: 1.5em
@@ -3640,7 +3640,7 @@ To do so:
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
-.. |unchecked| image:: /static/common/checkbox_unchecked.png
+.. |unchecked| image:: /static/common/unchecked.png
    :width: 1.3em
 .. |zoomToLayer| image:: /static/common/mActionZoomToLayer.png
    :width: 1.5em

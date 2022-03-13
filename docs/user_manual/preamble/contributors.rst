@@ -127,4 +127,4 @@ Efforts of translation for QGIS |CURRENT| Long Term Release are provided below.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |CURRENT| replace:: 3.16
+.. |CURRENT| replace:: 3.22

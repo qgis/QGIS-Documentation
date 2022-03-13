@@ -145,7 +145,7 @@ To set these pixels as transparent, go to
 :guilabel:`Custom Transparency Options` in the
 :guilabel:`Transparency` tab.
 
-* By clicking on the |signPlus| :sup:`Add values manually` button,
+* By clicking on the |symbologyAdd| :sup:`Add values manually` button,
   you can add a range of values and set their transparency percentage
 * For single values the |contextHelp| :sup:`Add values from display`
   button is more useful
@@ -203,7 +203,7 @@ analyze it further.
 .. |basic| image:: /static/common/basic.png
 .. |contextHelp| image:: /static/common/mActionContextHelp.png
    :width: 1.5em
-.. |signPlus| image:: /static/common/symbologyAdd.png
-   :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
+   :width: 1.5em

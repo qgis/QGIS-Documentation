@@ -609,8 +609,8 @@ This tab offers some options regarding the behavior of the :ref:`Identify tool <
 **Predefined scales**
 
 Here, you find a list of predefined scales to display in the status
-bar :guilabel:`Scale` drop-down widget, for quick zoom. With the |signPlus|
-and |signMinus| buttons you can add or remove your personal scales.
+bar :guilabel:`Scale` drop-down widget, for quick zoom. With the |symbologyAdd|
+and |symbologyRemove| buttons you can add or remove your personal scales.
 You can also import or export scales from/to a ``.XML`` file. Note that you
 still have the possibility to remove your changes and reset to the predefined
 list.
@@ -695,7 +695,7 @@ thanks to the :guilabel:`Show in Color Buttons` option.
 For any of the palettes, you can manage the list of colors using the set of
 tools next to the frame, ie:
 
-* |signPlus| :guilabel:`Add` or |signMinus| :guilabel:`Remove` color
+* |symbologyAdd| :guilabel:`Add` or |symbologyRemove| :guilabel:`Remove` color
 * |editCopy| :guilabel:`Copy` or |editPaste| :guilabel:`Paste` color
 * |fileOpen| :guilabel:`Import` or |fileSave| :guilabel:`Export` the set of colors
   from/to :file:`.gpl` file.
@@ -879,8 +879,8 @@ support read and write access:
 
   At the bottom of the dialog:
 
-  * The |signPlus| button lets you add rows to fill with the parameter name and value
-  * The |signMinus| button deletes the selected parameter
+  * The |symbologyAdd| button lets you add rows to fill with the parameter name and value
+  * The |symbologyRemove| button deletes the selected parameter
   * Click the :guilabel:`Validate` button to check that the creation options
     entered for the given format are valid
   * Use the :guilabel:`Help` button to find the parameters to use, or refer
@@ -907,9 +907,9 @@ Variables Settings
 The :guilabel:`Variables` tab lists all the variables available at the
 global-level.
 
-It also allows the user to manage global-level variables. Click the |signPlus|
+It also allows the user to manage global-level variables. Click the |symbologyAdd|
 button to add a new custom global-level variable. Likewise, select a custom
-global-level variable from the list and click the |signMinus| button to remove
+global-level variable from the list and click the |symbologyRemove| button to remove
 it.
 
 More information about variables in the :ref:`general_tools_variables`
@@ -1083,7 +1083,7 @@ libraries to enable OpenCL acceleration.
 Processing Settings
 -------------------
 
-The |processing| :guilabel:`Processing` tab provides you with general settings
+The |processingAlgorithm| :guilabel:`Processing` tab provides you with general settings
 of tools and data providers that are used in the QGIS Processing framework.
 More information at :ref:`label_processing`.
 
@@ -1448,7 +1448,7 @@ symbols and color ramps.
 There is also an additional section where you can define specific colors for the
 running project. Like the :ref:`global colors <colors_options>`, you can:
 
-* |signPlus| :guilabel:`Add` or |signMinus| :guilabel:`Remove` color
+* |symbologyAdd| :guilabel:`Add` or |symbologyRemove| :guilabel:`Remove` color
 * |editCopy| :guilabel:`Copy` or |editPaste| :guilabel:`Paste` color
 * |fileOpen| :guilabel:`Import` or |fileSave| :guilabel:`Export` the set of colors
   from/to :file:`.gpl` file.
@@ -1569,9 +1569,9 @@ Variables Properties
 
 The :guilabel:`Variables` tab lists all the variables available at
 the project's level (which includes all global variables). Besides, it
-also allows the user to manage project-level variables. Click the |signPlus|
+also allows the user to manage project-level variables. Click the |symbologyAdd|
 button to add a new custom project-level variable. Likewise, select a custom
-project-level variable from the list and click the |signMinus| button to
+project-level variable from the list and click the |symbologyRemove| button to
 remove it.
 More information on variables usage in the General Tools
 :ref:`general_tools_variables` section.
@@ -2121,7 +2121,7 @@ in the QGIS user profile.
    :width: 1em
 .. |overlay| image:: /static/common/overlay.png
    :width: 1.5em
-.. |processing| image:: /static/common/processingAlgorithm.png
+.. |processingAlgorithm| image:: /static/common/processingAlgorithm.png
    :width: 1.5em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
    :width: 1.5em
@@ -2141,15 +2141,15 @@ in the QGIS user profile.
    :width: 2.5em
 .. |settings| image:: /static/common/settings.png
    :width: 1.5em
-.. |signMinus| image:: /static/common/symbologyRemove.png
-   :width: 1.5em
-.. |signPlus| image:: /static/common/symbologyAdd.png
-   :width: 1.5em
 .. |styleManager| image:: /static/common/mActionStyleManager.png
+   :width: 1.5em
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |symbologyRemove| image:: /static/common/symbologyRemove.png
    :width: 1.5em
 .. |transformation| image:: /static/common/transformation.png
    :width: 1.5em
-.. |unchecked| image:: /static/common/checkbox_unchecked.png
+.. |unchecked| image:: /static/common/unchecked.png
    :width: 1.3em
 .. |win| image:: /static/common/win.png
    :width: 1em

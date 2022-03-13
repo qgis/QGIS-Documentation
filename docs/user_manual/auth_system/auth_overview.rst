@@ -105,7 +105,7 @@ the :guilabel:`Authentication` tab of the QGIS Options dialog
 
    Configurations editor
 
-Use the |signPlus| button to add a new configuration, the |signMinus| button
+Use the |symbologyAdd| button to add a new configuration, the |symbologyRemove| button
 to remove configurations, and the |symbologyEdit| button to modify existing ones.
 
 .. _figure_authconfigeditor_add:
@@ -314,9 +314,9 @@ See :ref:`authentication_security_considerations` concerning Python access.
 
 .. |options| image:: /static/common/mActionOptions.png
    :width: 1em
-.. |signMinus| image:: /static/common/symbologyRemove.png
-   :width: 1.5em
-.. |signPlus| image:: /static/common/symbologyAdd.png
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |symbologyEdit| image:: /static/common/symbologyEdit.png
+   :width: 1.5em
+.. |symbologyRemove| image:: /static/common/symbologyRemove.png
    :width: 1.5em

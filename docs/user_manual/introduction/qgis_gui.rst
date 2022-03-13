@@ -489,7 +489,7 @@ details).
      -
      - :guilabel:`Digitizing`
      - :ref:`calculate_fields_values`
-   * - :menuselection:`-->` |mergeFeatAttributes|
+   * - :menuselection:`-->` |mergeFeatureAttributes|
        :guilabel:`Merge Attributes of Selected Features`
      -
      - :guilabel:`Advanced Digitizing`
@@ -515,7 +515,7 @@ details).
      -
      - :guilabel:`Advanced Digitizing`
      - :ref:`scale_feature`
-   * - :menuselection:`-->` |simplifyFeatures| :guilabel:`Simplify Feature`
+   * - :menuselection:`-->` |simplify| :guilabel:`Simplify Feature`
      -
      - :guilabel:`Advanced Digitizing`
      - :ref:`simplify_feature`
@@ -1301,7 +1301,7 @@ copy or paste layer properties (style, scale, CRS...).
      - :kbd:`Ctrl+F`
      -
      - :ref:`vector_query_builder`
-   * - |labeling| :guilabel:`Labeling`
+   * - |labelingSingle| :guilabel:`Labeling`
      -
      -
      - :ref:`vector_labels_tab`
@@ -1313,7 +1313,7 @@ copy or paste layer properties (style, scale, CRS...).
      -
      -
      - :ref:`overview_panels`
-   * - |removeAllOVerview| :guilabel:`Hide All from Overview`
+   * - |removeAllFromOverview| :guilabel:`Hide All from Overview`
      -
      -
      - :ref:`overview_panels`
@@ -1892,7 +1892,7 @@ Processing
      - Shortcut
      - Toolbar
      - Reference
-   * - |processing| :guilabel:`Toolbox`
+   * - |processingAlgorithm| :guilabel:`Toolbox`
      - :kbd:`Ctrl+Alt+T`
      -
      - :ref:`processing.toolbox`
@@ -2185,7 +2185,7 @@ capabilities:
 
 * |zoomFullExtent| :sup:`Zoom Full`, |zoomToSelected| :sup:`Zoom to Selection`
   and |zoomToLayer| :sup:`Zoom to Layer(s)` to navigate within the view
-* |showMapTheme| :sup:`Set View Theme` to select the :ref:`map theme <map_themes>`
+* |showPresets| :sup:`Set View Theme` to select the :ref:`map theme <map_themes>`
   to display in the map view. If set to ``(none)``, the view will follow
   the :guilabel:`Layers` panel changes.
 * |options| :sup:`View settings` to configure the map view:
@@ -2514,7 +2514,7 @@ The following tools are provided at the top of the 3D map view panel:
   * |checkbox| :guilabel:`Smooth edges`
   * |checkbox| :guilabel:`Export normals`
   * |checkbox| :guilabel:`Export textures`
-* |showMapTheme| :sup:`Set View Theme`: Allows you to select the set of layers to
+* |showPresets| :sup:`Set View Theme`: Allows you to select the set of layers to
   display in the map view from predefined :ref:`map themes <map_themes>`.
 * |options| :sup:`Configure` the map view :ref:`settings <scene_configuration>`
 
@@ -2605,7 +2605,7 @@ Terrain
 Lights
 ......
 
-From the :guilabel:`Lights` tab, press the |signPlus| menu to add
+From the :guilabel:`Lights` tab, press the |symbologyAdd| menu to add
 
 * up to eight :guilabel:`Point lights`: emits light in all directions, like a
   sphere of light filling an area. Objects closer to the light will be brighter,
@@ -2754,7 +2754,7 @@ To create an animation:
 
 #. Toggle on the |play| :sup:`Animations` tool, displaying the animation player
    widget
-#. Click the |signPlus| :sup:`Add keyframe` button and enter a :guilabel:`Keyframe
+#. Click the |symbologyAdd| :sup:`Add keyframe` button and enter a :guilabel:`Keyframe
    time` in seconds. The :guilabel:`Keyframe` combo box now displays the time set.
 #. Using the navigation tools, move the camera to the position to associate with
    the current keyframe time.
@@ -3104,7 +3104,7 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |keyboardShortcuts| image:: /static/common/mActionKeyboardShortcuts.png
    :width: 1.5em
-.. |labeling| image:: /static/common/labelingSingle.png
+.. |labelingSingle| image:: /static/common/labelingSingle.png
    :width: 1.5em
 .. |layoutManager| image:: /static/common/mActionLayoutManager.png
    :width: 1.5em
@@ -3120,7 +3120,7 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |measureArea| image:: /static/common/mActionMeasureArea.png
    :width: 1.5em
-.. |mergeFeatAttributes| image:: /static/common/mActionMergeFeatureAttributes.png
+.. |mergeFeatureAttributes| image:: /static/common/mActionMergeFeatureAttributes.png
    :width: 1.5em
 .. |mergeFeatures| image:: /static/common/mActionMergeFeatures.png
    :width: 1.5em
@@ -3200,7 +3200,7 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |processSelected| image:: /static/common/mActionProcessSelected.png
    :width: 1.5em
-.. |processing| image:: /static/common/processingAlgorithm.png
+.. |processingAlgorithm| image:: /static/common/processingAlgorithm.png
    :width: 1.5em
 .. |processingHistory| image:: /static/common/history.png
    :width: 1.5em
@@ -3236,7 +3236,7 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |regularPolygonCenterPoint| image:: /static/common/mActionRegularPolygonCenterPoint.png
    :width: 1.5em
-.. |removeAllOVerview| image:: /static/common/mActionRemoveAllFromOverview.png
+.. |removeAllFromOverview| image:: /static/common/mActionRemoveAllFromOverview.png
    :width: 1.5em
 .. |removeLayer| image:: /static/common/mActionRemoveLayer.png
    :width: 1.5em
@@ -3274,19 +3274,17 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |showBookmarks| image:: /static/common/mActionShowBookmarks.png
    :width: 1.5em
-.. |showMapTheme| image:: /static/common/mActionShowPresets.png
-   :width: 1.5em
 .. |showMeshCalculator| image:: /static/common/mActionShowMeshCalculator.png
    :width: 1.5em
 .. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
+   :width: 1.5em
+.. |showPresets| image:: /static/common/mActionShowPresets.png
    :width: 1.5em
 .. |showRasterCalculator| image:: /static/common/mActionShowRasterCalculator.png
    :width: 1.5em
 .. |showSelectedLayers| image:: /static/common/mActionShowSelectedLayers.png
    :width: 1.5em
-.. |signPlus| image:: /static/common/symbologyAdd.png
-   :width: 1.5em
-.. |simplifyFeatures| image:: /static/common/mActionSimplify.png
+.. |simplify| image:: /static/common/mActionSimplify.png
    :width: 1.5em
 .. |splitFeatures| image:: /static/common/mActionSplitFeatures.png
    :width: 1.5em
@@ -3299,6 +3297,8 @@ Click the icon to open the Plugin Manager dialog.
 .. |sum| image:: /static/common/mActionSum.png
    :width: 1.2em
 .. |svgAnnotation| image:: /static/common/mActionSvgAnnotation.png
+   :width: 1.5em
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |temporal| image:: /static/common/temporal.png
    :width: 1.5em
@@ -3326,7 +3326,7 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |trimExtend| image:: /static/common/mActionTrimExtend.png
    :width: 1.5em
-.. |unchecked| image:: /static/common/checkbox_unchecked.png
+.. |unchecked| image:: /static/common/unchecked.png
    :width: 1.3em
 .. |undo| image:: /static/common/mActionUndo.png
    :width: 1.5em

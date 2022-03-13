@@ -395,7 +395,7 @@ generated atlas::
 Explore Data-defined override buttons with atlas
 ------------------------------------------------
 
-There are several places where you can use a |dataDefined|
+There are several places where you can use a |dataDefine|
 :sup:`Data defined override` button to override the selected setting.
 This is particularly useful with atlas generation.
 See :ref:`data_defined` for more details on this widget.
@@ -409,12 +409,12 @@ a label item.
 When the height (north-south) of a region extent is greater than its
 width (east-west), you should use *Portrait* instead of *Landscape*
 orientation to optimize the use of paper.
-With a |dataDefined| :sup:`Data Defined Override` button you can
+With a |dataDefine| :sup:`Data Defined Override` button you can
 dynamically set the paper orientation.
 
 Right-click on the page and select :guilabel:`Page Properties` to open the
 panel. We want to set the orientation dynamically, using an expression
-depending on the region geometry, so press the |dataDefined| button of
+depending on the region geometry, so press the |dataDefine| button of
 field :guilabel:`Orientation`, select :guilabel:`Edit...` to open the
 :guilabel:`Expression string builder` dialog and enter the following
 expression:
@@ -427,14 +427,14 @@ expression:
 Now if you :ref:`preview the atlas <atlas_preview>`, the paper orients itself
 automatically, but item placements may not be ideal. For each Region you need to
 reposition the location of the layout items as well. For the map item you can
-use the |dataDefined| button of its :guilabel:`Width` property to set it
+use the |dataDefine| button of its :guilabel:`Width` property to set it
 dynamic using the following expression:
 
 .. code::
 
    @layout_pagewidth - 20
 
-Likewise, use the |dataDefined| button of the :guilabel:`Height` property to
+Likewise, use the |dataDefine| button of the :guilabel:`Height` property to
 provide the following expression to constrain map item size:
 
 .. code::
@@ -619,7 +619,7 @@ the related child features following the parent's identifier.
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |dataDefined| image:: /static/common/mIconDataDefine.png
+.. |dataDefine| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
 .. |filePrint| image:: /static/common/mActionFilePrint.png
    :width: 1.5em
@@ -633,5 +633,5 @@ the related child features following the parent's identifier.
    :width: 1.5em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
-.. |unchecked| image:: /static/common/checkbox_unchecked.png
+.. |unchecked| image:: /static/common/unchecked.png
    :width: 1.3em

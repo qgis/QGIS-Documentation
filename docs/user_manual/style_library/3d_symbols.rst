@@ -12,7 +12,7 @@
 The :guilabel:`Style Manager` helps you create and store 3D symbols for every geometry type
 to render in the :ref:`3D map view <label_3dmapview>`.
 
-As of the other items, enable the |3d| :guilabel:`3D Symbols` tab and expand the |signPlus|
+As of the other items, enable the |3d| :guilabel:`3D Symbols` tab and expand the |symbologyAdd|
 button menu to create:
 
 * :ref:`3D point symbols <3d_pointlayers>`
@@ -102,11 +102,11 @@ Polygon Layers
    Properties of a 3D polygon symbol
 
 * As for the other ones, :guilabel:`Height` can be defined in CRS units. You can
-  also use the |dataDefined| button to overwrite the value with a custom
+  also use the |dataDefine| button to overwrite the value with a custom
   expression, a variable or an entry of the attribute table
 
 * Again, :guilabel:`Extrusion` is possible for missing z-values. Also for the
-  extrusion you can use the |dataDefined| button in order to use the values of
+  extrusion you can use the |dataDefine| button in order to use the values of
   the vector layer and have different results for each polygon:
 
   .. figure:: img/3d_extrusion.png
@@ -198,7 +198,7 @@ https://public.cloudmergin.com/projects/saber/luxembourg/tree.
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |dataDefined| image:: /static/common/mIconDataDefine.png
+.. |dataDefine| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
-.. |signPlus| image:: /static/common/symbologyAdd.png
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em
