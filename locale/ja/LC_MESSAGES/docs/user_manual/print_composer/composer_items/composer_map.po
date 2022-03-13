@@ -132,10 +132,10 @@ msgstr "moveItemContent"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:49
 msgid ""
-"|labeling| :sup:`Labeling settings`: control feature label behaviour "
+"|labelingSingle| :sup:`Labeling settings`: control feature label behaviour "
 "(placement, visibility...) in the layout map item extent:"
 msgstr ""
-"|labeling| :sup:`ラベルの設定` ：レイアウトのマップアイテム範囲における地物ラベルの動作（配置、可視性など）を制御します："
+"|labelingSingle| :sup:`ラベルの設定` ：レイアウトのマップアイテム範囲における地物ラベルの動作（配置、可視性など）を制御します："
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:446
 msgid "labeling"
@@ -386,7 +386,7 @@ msgstr ""
 msgid ""
 "Instead of using the current map canvas, you can also lock the layers of the"
 " map item to those of an existing map theme: select a map theme from the "
-"|showMapTheme| :sup:`Set layer list from a map theme` drop-down button, and "
+"|showPresets| :sup:`Set layer list from a map theme` drop-down button, and "
 "the |checkbox| :guilabel:`Lock layers` is activated. The set of visible "
 "layers in the map theme is from now on used for the map item until you "
 "select another map theme or uncheck the |checkbox| :guilabel:`Lock layers` "
@@ -394,7 +394,7 @@ msgid ""
 ":sup:`Refresh view` button of the :guilabel:`Navigation` toolbar or the "
 ":guilabel:`Update Preview` button seen above."
 msgstr ""
-"現在のマップキャンバスを使用する代わりに、地図アイテムのレイヤを既存の地図テーマのレイヤでロックすることもできます。 |showMapTheme| "
+"現在のマップキャンバスを使用する代わりに、地図アイテムのレイヤを既存の地図テーマのレイヤでロックすることもできます。 |showPresets| "
 ":sup:`地図テーマからレイヤリストを設定する` ドロップダウンボタンから地図テーマを選択し、 |checkbox| "
 ":guilabel:`レイヤのロック` を有効にします。他の地図テーマを選択するか |checkbox| :guilabel:`レイヤのロック` "
 "オプションのチェックを外すまでは、地図テーマ内で表示されているレイヤの組み合わせが使用されます。 :guilabel:`ナビゲーション` ツールバーの "
@@ -402,8 +402,8 @@ msgstr ""
 "ボタンを使用して、ビューを更新する必要があるかもしれません。"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:462
-msgid "showMapTheme"
-msgstr "showMapTheme"
+msgid "showPresets"
+msgstr "showPresets"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:169
 msgid ""
@@ -418,19 +418,19 @@ msgstr ""
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:174
 msgid ""
 "Locked layers in the map item can also be :ref:`data-defined "
-"<data_defined>`, using the |dataDefined| icon beside the option. When used, "
+"<data_defined>`, using the |dataDefine| icon beside the option. When used, "
 "this overrides the selection set in the drop-down list. You need to pass a "
 "list of layers separated by ``|`` character. The following example locks the"
 " map item to use only layers ``layer 1`` and ``layer 2``::"
 msgstr ""
-"地図アイテムでロックされるレイヤは、オプションの横にある |dataDefined| アイコンを使用して、 :ref:`データによって定義 "
+"地図アイテムでロックされるレイヤは、オプションの横にある |dataDefine| アイコンを使用して、 :ref:`データによって定義 "
 "<data_defined>` することもできます。これを使用すると、ドロップダウンリストで設定された選択を上書きします。 ``|`` "
 "文字で区切ったレイヤのリストを渡す必要があります。以下の例は、地図アイテムに ``layer 1`` と ``layer 2`` "
 "レイヤのみを使用するようにロックします::"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:444
-msgid "dataDefined"
-msgstr "dataDefined"
+msgid "dataDefine"
+msgstr "dataDefine"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:185
 msgid "Extents"
@@ -540,17 +540,17 @@ msgstr ""
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:245
 msgid ""
-"With the |signPlus| and |signMinus| buttons you can add or remove a selected"
+"With the |symbologyAdd| and |symbologyRemove| buttons you can add or remove a selected"
 " grid;"
-msgstr "|signPlus| と |signMinus| ボタンを使用して、グリッドを追加したり、選択したグリッドを削除したりできます。"
+msgstr "|symbologyAdd| と |symbologyRemove| ボタンを使用して、グリッドを追加したり、選択したグリッドを削除したりできます。"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:466
-msgid "signPlus"
-msgstr "signPlus"
+msgid "symbologyAdd"
+msgstr "symbologyAdd"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:464
-msgid "signMinus"
-msgstr "signMinus"
+msgid "symbologyRemove"
+msgstr "symbologyRemove"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:247
 msgid ""
@@ -789,11 +789,11 @@ msgstr "地図の全体図グループ"
 msgid ""
 "To create an overview, select the map item on which you want to show the "
 "other map item's extent and expand the :guilabel:`Overviews` option in the "
-":guilabel:`Item Properties` panel. Then press the |signPlus| button to add "
+":guilabel:`Item Properties` panel. Then press the |symbologyAdd| button to add "
 "an overview."
 msgstr ""
 "全体図を作成するには、他の地図アイテムの範囲をその上に表示したい地図アイテムを選択し、 :guilabel:`アイテムプロパティ` パネルの "
-":guilabel:`全体図` オプションを展開します。次に |signPlus| ボタンを押して、全体図を追加します。"
+":guilabel:`全体図` オプションを展開します。次に |symbologyAdd| ボタンを押して、全体図を追加します。"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:383
 msgid ""
@@ -808,8 +808,8 @@ msgid "Rename it with a double-click"
 msgstr "ダブルクリックして名前を変更する"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:387
-msgid "With the |signPlus| and |signMinus| buttons, add or remove overviews"
-msgstr "|signPlus| と |signMinus| ボタンを使用して、全体図を追加・削除する"
+msgid "With the |symbologyAdd| and |symbologyRemove| buttons, add or remove overviews"
+msgstr "|symbologyAdd| と |symbologyRemove| ボタンを使用して、全体図を追加・削除する"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:388
 msgid ""

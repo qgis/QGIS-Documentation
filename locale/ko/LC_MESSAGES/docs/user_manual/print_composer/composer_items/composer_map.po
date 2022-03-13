@@ -141,10 +141,10 @@ msgstr "moveItemContent"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:49
 msgid ""
-"|labeling| :sup:`Labeling settings`: control feature label behaviour "
+"|labelingSingle| :sup:`Labeling settings`: control feature label behaviour "
 "(placement, visibility...) in the layout map item extent:"
 msgstr ""
-"|labeling| :sup:`Labeling settings`: 조판기 맵 항목 범위에서 (배치, 가시화 등의) 피처 라벨 습성을 "
+"|labelingSingle| :sup:`Labeling settings`: 조판기 맵 항목 범위에서 (배치, 가시화 등의) 피처 라벨 습성을 "
 "제어합니다:"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:446
@@ -403,7 +403,7 @@ msgstr ""
 msgid ""
 "Instead of using the current map canvas, you can also lock the layers of the"
 " map item to those of an existing map theme: select a map theme from the "
-"|showMapTheme| :sup:`Set layer list from a map theme` drop-down button, and "
+"|showPresets| :sup:`Set layer list from a map theme` drop-down button, and "
 "the |checkbox| :guilabel:`Lock layers` is activated. The set of visible "
 "layers in the map theme is from now on used for the map item until you "
 "select another map theme or uncheck the |checkbox| :guilabel:`Lock layers` "
@@ -411,7 +411,7 @@ msgid ""
 ":sup:`Refresh view` button of the :guilabel:`Navigation` toolbar or the "
 ":guilabel:`Update Preview` button seen above."
 msgstr ""
-"현재 맵 캔버스를 사용하는 대신, 맵 항목의 레이어를 기존 맵 테마로도 고정할 수 있습니다. |showMapTheme| :sup:`Set"
+"현재 맵 캔버스를 사용하는 대신, 맵 항목의 레이어를 기존 맵 테마로도 고정할 수 있습니다. |showPresets| :sup:`Set"
 " layer list from a map theme` 버튼의 드롭다운 목록에서 맵 테마를 선택하면, |checkbox| "
 ":guilabel:`Lock layers` 옵션이 활성화됩니다. 이제 사용자가 또다른 맵 테마를 선택하거나 |checkbox| "
 ":guilabel:`Lock layers` 옵션을 체크 해제할 때까지 맵 항목에 맵 테마의 가시 레이어 집합을 적용합니다. 그 다음 "
@@ -419,8 +419,8 @@ msgstr ""
 ":guilabel:`Update Preview` 버튼을 사용해서 뷰를 새로고침해야 할 수도 있습니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:462
-msgid "showMapTheme"
-msgstr "showMapTheme"
+msgid "showPresets"
+msgstr "showPresets"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:169
 msgid ""
@@ -436,19 +436,19 @@ msgstr ""
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:174
 msgid ""
 "Locked layers in the map item can also be :ref:`data-defined "
-"<data_defined>`, using the |dataDefined| icon beside the option. When used, "
+"<data_defined>`, using the |dataDefine| icon beside the option. When used, "
 "this overrides the selection set in the drop-down list. You need to pass a "
 "list of layers separated by ``|`` character. The following example locks the"
 " map item to use only layers ``layer 1`` and ``layer 2``::"
 msgstr ""
-"옵션 옆에 있는 |dataDefined| 아이콘을 이용하면, 맵 항목에서 고정된 레이어도 :ref:`데이터로 정의 "
+"옵션 옆에 있는 |dataDefine| 아이콘을 이용하면, 맵 항목에서 고정된 레이어도 :ref:`데이터로 정의 "
 "<data_defined>` 할 수 있습니다. 이 아이콘을 이용할 경우, 드롭다운 목록에서 선택한 집합을 무시합니다. 대신 ``|`` "
 "문자로 구분된 레이어 목록을 전송해야 합니다. 다음은 맵 항목이 ``layer 1`` 및 ``layer 2`` 레이어만 사용하도록 "
 "고정하는 예시입니다:"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:444
-msgid "dataDefined"
-msgstr "dataDefined"
+msgid "dataDefine"
+msgstr "dataDefine"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:185
 msgid "Extents"
@@ -556,17 +556,17 @@ msgstr ""
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:245
 msgid ""
-"With the |signPlus| and |signMinus| buttons you can add or remove a selected"
+"With the |symbologyAdd| and |symbologyRemove| buttons you can add or remove a selected"
 " grid;"
-msgstr "|signPlus| 및 |signMinus| 버튼으로 선택한 그리드를 추가 또는 제거할 수 있습니다."
+msgstr "|symbologyAdd| 및 |symbologyRemove| 버튼으로 선택한 그리드를 추가 또는 제거할 수 있습니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:466
-msgid "signPlus"
-msgstr "signPlus"
+msgid "symbologyAdd"
+msgstr "symbologyAdd"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:464
-msgid "signMinus"
-msgstr "signMinus"
+msgid "symbologyRemove"
+msgstr "symbologyRemove"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:247
 msgid ""
@@ -815,11 +815,11 @@ msgstr "맵 오버뷰 그룹"
 msgid ""
 "To create an overview, select the map item on which you want to show the "
 "other map item's extent and expand the :guilabel:`Overviews` option in the "
-":guilabel:`Item Properties` panel. Then press the |signPlus| button to add "
+":guilabel:`Item Properties` panel. Then press the |symbologyAdd| button to add "
 "an overview."
 msgstr ""
 "오버뷰를 생성하려면, 해당 맵 위에 다른 맵의 범위를 표시하고자 하는 맵을 선택한 다음 :guilabel:`Item Properties`"
-" 패널에서 :guilabel:`Overviews` 옵션을 펼치십시오. 그리고 |signPlus| 버튼을 클릭해서 오버뷰를 추가하십시오."
+" 패널에서 :guilabel:`Overviews` 옵션을 펼치십시오. 그리고 |symbologyAdd| 버튼을 클릭해서 오버뷰를 추가하십시오."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:383
 msgid ""
@@ -834,8 +834,8 @@ msgid "Rename it with a double-click"
 msgstr "더블클릭하면 다른 명칭으로 변경할 수 있습니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:387
-msgid "With the |signPlus| and |signMinus| buttons, add or remove overviews"
-msgstr "|signPlus| 및 |signMinus| 버튼을 이용해서 오버뷰를 추가하거나 제거할 수 있습니다."
+msgid "With the |symbologyAdd| and |symbologyRemove| buttons, add or remove overviews"
+msgstr "|symbologyAdd| 및 |symbologyRemove| 버튼을 이용해서 오버뷰를 추가하거나 제거할 수 있습니다."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:388
 msgid ""

@@ -369,19 +369,19 @@ msgstr "위상 편집 활성화"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:221
 msgid ""
-"The |topopologicalEditing| :sup:`Topological editing` button helps when "
+"The |topologicalEditing| :sup:`Topological editing` button helps when "
 "editing and maintaining features with common boundaries. With this option "
 "enabled, QGIS 'detects' shared boundaries. When you move common "
 "vertices/segments, QGIS will also move them in the geometries of the "
 "neighboring features."
 msgstr ""
-"|topopologicalEditing| :sup:`Topological editing` 버튼은 공통 경계선을 공유하는 피처를 편집하고 "
+"|topologicalEditing| :sup:`Topological editing` 버튼은 공통 경계선을 공유하는 피처를 편집하고 "
 "유지보수할 수 있게 해줍니다. 이 옵션을 활성화하면, QGIS가 피처들이 공유하는 경계선을 '탐지' 합니다. 공통 꼭짓점/선분을 "
 "이동시키면, QGIS가 인접 피처 도형의 꼭짓점/선분도 이동시킬 것입니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1960
-msgid "topopologicalEditing"
-msgstr "topopologicalEditing"
+msgid "topologicalEditing"
+msgstr "topologicalEditing"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:227
 msgid ""
@@ -1639,12 +1639,12 @@ msgid "Rotate Feature(s)"
 msgstr "피처(들) 회전"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:846
-msgid "|simplifyFeatures|"
-msgstr "|simplifyFeatures|"
+msgid "|simplify|"
+msgstr "|simplify|"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1948
-msgid "simplifyFeatures"
-msgstr "simplifyFeatures"
+msgid "simplify"
+msgstr "simplify"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:846
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:945
@@ -1779,12 +1779,12 @@ msgid "Split Features"
 msgstr "피처 분할"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:858
-msgid "|mergeFeatAttributes|"
-msgstr "|mergeFeatAttributes|"
+msgid "|mergeFeatureAttributes|"
+msgstr "|mergeFeatureAttributes|"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1886
-msgid "mergeFeatAttributes"
-msgstr "mergeFeatAttributes"
+msgid "mergeFeatureAttributes"
+msgstr "mergeFeatureAttributes"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:858
 msgid "Merge Attributes of Selected Features"
@@ -1997,16 +1997,16 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:947
 msgid ""
-"The |simplifyFeatures| :sup:`Simplify Feature` tool allows you to "
+"The |simplify| :sup:`Simplify Feature` tool allows you to "
 "interactively reshape a line or polygon geometry by reducing or densifying "
 "the number of vertices, as long as the geometry remains valid:"
 msgstr ""
-"|simplifyFeatures| :sup:`Simplify Feature` 도구는 도형의 유효성이 유지되는 한 꼭짓점 개수를 줄이거나 "
+"|simplify| :sup:`Simplify Feature` 도구는 도형의 유효성이 유지되는 한 꼭짓점 개수를 줄이거나 "
 "밀도를 높여서 라인 또는 폴리곤 도형의 형태를 대화형 작업으로 변형시킬 수 있습니다:"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:951
-msgid "Select the |simplifyFeatures| :sup:`Simplify Feature` tool."
-msgstr "|simplifyFeatures| :sup:`Simplify Feature` 도구를 선택하십시오."
+msgid "Select the |simplify| :sup:`Simplify Feature` tool."
+msgstr "|simplify| :sup:`Simplify Feature` 도구를 선택하십시오."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:952
 msgid "Click on the feature or drag a rectangle over the features."
@@ -2080,11 +2080,11 @@ msgstr ""
 msgid ""
 "Unlike the feature simplification option in :menuselection:`Settings --> "
 "Options --> Rendering` menu which simplifies the geometry just for "
-"rendering, the |simplifyFeatures| :sup:`Simplify Feature` tool permanently "
+"rendering, the |simplify| :sup:`Simplify Feature` tool permanently "
 "modifies feature's geometry in data source."
 msgstr ""
 "렌더링만을 위해 도형을 단순화하는 :menuselection:`Settings --> Options --> Rendering` 메뉴의 "
-"피처 단순화 옵션과는 달리, |simplifyFeatures| :sup:`Simplify Feature` 도구는 데이터소스에 있는 피처의"
+"피처 단순화 옵션과는 달리, |simplify| :sup:`Simplify Feature` 도구는 데이터소스에 있는 피처의"
 " 도형을 영구히 변경합니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1000
@@ -2465,13 +2465,13 @@ msgstr "선택한 피처의 속성 병합"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1264
 msgid ""
-"The |mergeFeatAttributes| :sup:`Merge Attributes of Selected Features` tool "
+"The |mergeFeatureAttributes| :sup:`Merge Attributes of Selected Features` tool "
 "allows you to apply same attributes to features without merging their "
 "boundaries. The dialog is the same as the ``Merge Selected Features`` tool's"
 " except that unlike that tool, selected objects are kept with their geometry"
 " while some of their attributes are made identical."
 msgstr ""
-"|mergeFeatAttributes| :sup:`Merge Attributes of Selected Features` 도구는 피처들의 "
+"|mergeFeatureAttributes| :sup:`Merge Attributes of Selected Features` 도구는 피처들의 "
 "경계를 병합하지 않고서도 피처에 동일한 속성을 적용할 수 있게 해줍니다. 이 도구의 대화창은 :guilabel:`Merge "
 "Selected Features` 도구의 대화창과 동일합니다. 다만 선택한 개체들의 속성은 동일하게 변하지만, 개체 도형은 그대로 "
 "유지된다는 점이 다릅니다."
@@ -2502,16 +2502,16 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1287
 msgid ""
-"Click the |dataDefined| :guilabel:`Data-defined override` widget near the "
+"Click the |dataDefine| :guilabel:`Data-defined override` widget near the "
 ":guilabel:`Rotation` option of the top :guilabel:`Marker` level (preferably)"
 " of the symbol layers."
 msgstr ""
 "심볼 레이어의 (되도록) 최상위 :guilabel:`Marker` 심볼의 :guilabel:`Rotation` 옵션 옆에 있는 "
-"|dataDefined| :guilabel:`Data-defined override` 위젯을 클릭하십시오."
+"|dataDefine| :guilabel:`Data-defined override` 위젯을 클릭하십시오."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1852
-msgid "dataDefined"
-msgstr "dataDefined"
+msgid "dataDefine"
+msgstr "dataDefine"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1290
 msgid ""
@@ -3374,17 +3374,17 @@ msgstr "지속 고정"
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1666
 msgid ""
 "Both in absolute or relative reference digitizing, angle, distance, X and Y "
-"constraints can be locked continuously by clicking the |lockedRepeat| "
+"constraints can be locked continuously by clicking the |lockRepeating| "
 ":guilabel:`Continuous lock` buttons. Using continuous lock allows you to "
 "digitize several points or vertexes using the same constraints."
 msgstr ""
-"|lockedRepeat| :guilabel:`Continuous lock` 버튼을 클릭하면 디지타이즈 작업, 각도, 거리, X 및 Y "
+"|lockRepeating| :guilabel:`Continuous lock` 버튼을 클릭하면 디지타이즈 작업, 각도, 거리, X 및 Y "
 "좌표에 대한 절대 또는 상대 참조 제약 조건 모두 지속적으로 고정시킬 수 있습니다. 지속 고정을 사용하면 여러 포인트 또는 꼭짓점을 "
 "동일한 제약 조건으로 디지타이즈할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1884
-msgid "lockedRepeat"
-msgstr "lockedRepeat"
+msgid "lockRepeating"
+msgstr "lockRepeating"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1673
 msgid "Parallel and perpendicular lines"

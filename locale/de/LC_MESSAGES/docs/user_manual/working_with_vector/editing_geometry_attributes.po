@@ -430,13 +430,13 @@ msgstr "Topologisches Editieren aktivieren"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:221
 msgid ""
-"The |topopologicalEditing| :sup:`Topological editing` button helps when "
+"The |topologicalEditing| :sup:`Topological editing` button helps when "
 "editing and maintaining features with common boundaries. With this option "
 "enabled, QGIS 'detects' shared boundaries. When you move common "
 "vertices/segments, QGIS will also move them in the geometries of the "
 "neighboring features."
 msgstr ""
-"Die Schaltfläche |topopologicalEditing| :sup:`Topologisches Editieren "
+"Die Schaltfläche |topologicalEditing| :sup:`Topologisches Editieren "
 "aktivieren` unterstützt Sie beim Editieren und Pflegen von Objekten mit "
 "gemeinsamen Grenzen. Wenn diese Option eingeschaltet ist, 'erkennt' QGIS "
 "gemeinsame Objektgrenzen; wenn Sie gemeinsame Stützpunkte oder Segmente "
@@ -1737,8 +1737,8 @@ msgid "Rotate Feature(s)"
 msgstr "Objekt(e) drehen"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:846
-msgid "|simplifyFeatures|"
-msgstr "|simplifyFeatures|"
+msgid "|simplify|"
+msgstr "|simplify|"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:846
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:945
@@ -1833,8 +1833,8 @@ msgid "Split Features"
 msgstr "Objekte trennen"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:858
-msgid "|mergeFeatAttributes|"
-msgstr "|mergeFeatAttributes|"
+msgid "|mergeFeatureAttributes|"
+msgstr "|mergeFeatureAttributes|"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:858
 msgid "Merge Attributes of Selected Features"
@@ -2049,19 +2049,19 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:947
 msgid ""
-"The |simplifyFeatures| :sup:`Simplify Feature` tool allows you to "
+"The |simplify| :sup:`Simplify Feature` tool allows you to "
 "interactively reshape a line or polygon geometry by reducing or densifying "
 "the number of vertices, as long as the geometry remains valid:"
 msgstr ""
-"Mit dem Werkzeug |simplifyFeatures| :sup:`Objekt vereinfachen` können Sie "
+"Mit dem Werkzeug |simplify| :sup:`Objekt vereinfachen` können Sie "
 "die Form einer Linie oder eines Polygons interaktiv verändern, indem Sie die"
 " Anzahl der Stützpunkte verringern oder verdichten, so lange die Geometrie "
 "dabei gültig bleibt:"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:951
-msgid "Select the |simplifyFeatures| :sup:`Simplify Feature` tool."
+msgid "Select the |simplify| :sup:`Simplify Feature` tool."
 msgstr ""
-"Wählen Sie das Werkzeug |simplifyFeatures| :sup:`Objekt vereinfachen`."
+"Wählen Sie das Werkzeug |simplify| :sup:`Objekt vereinfachen`."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:952
 msgid "Click on the feature or drag a rectangle over the features."
@@ -2153,12 +2153,12 @@ msgstr ""
 msgid ""
 "Unlike the feature simplification option in :menuselection:`Settings --> "
 "Options --> Rendering` menu which simplifies the geometry just for "
-"rendering, the |simplifyFeatures| :sup:`Simplify Feature` tool permanently "
+"rendering, the |simplify| :sup:`Simplify Feature` tool permanently "
 "modifies feature's geometry in data source."
 msgstr ""
 "im Gegensatz zur Objektvereinfachung im Menü :menuselection:`Einstellungen "
 "--> Optionen --> Darstellung`, welches die Geometrie nur zur Darstellung "
-"vereinfacht, bearbeitet das Werkzeug |simplifyFeatures| :sup:`Objekt "
+"vereinfacht, bearbeitet das Werkzeug |simplify| :sup:`Objekt "
 "vereinfachen` die Geometrie in der Datenquelle."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1000
@@ -2607,13 +2607,13 @@ msgstr "Attribute gewählter Objekte vereinen"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1264
 msgid ""
-"The |mergeFeatAttributes| :sup:`Merge Attributes of Selected Features` tool "
+"The |mergeFeatureAttributes| :sup:`Merge Attributes of Selected Features` tool "
 "allows you to apply same attributes to features without merging their "
 "boundaries. The dialog is the same as the ``Merge Selected Features`` tool's"
 " except that unlike that tool, selected objects are kept with their geometry"
 " while some of their attributes are made identical."
 msgstr ""
-"Mit dem Werkzeug |mergeFeatAttributes| :sup:`Attribute gewählter Objekte "
+"Mit dem Werkzeug |mergeFeatureAttributes| :sup:`Attribute gewählter Objekte "
 "vereinen` können Sie die selben Attribute in Objekte speichern, ohne ihre "
 "Grenzen zu vereinen. Die Eingabemaske ist die selbe wie beim Werkzeug "
 "``Gewählte Objekte verschmelzen``, außer dass die ausgewählten Objekte mit "
@@ -2648,11 +2648,11 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1287
 msgid ""
-"Click the |dataDefined| :guilabel:`Data-defined override` widget near the "
+"Click the |dataDefine| :guilabel:`Data-defined override` widget near the "
 ":guilabel:`Rotation` option of the top :guilabel:`Marker` level (preferably)"
 " of the symbol layers."
 msgstr ""
-"Klicken Sie auf die Schaltfläche |dataDefined| :guilabel:`Datendefinierte "
+"Klicken Sie auf die Schaltfläche |dataDefine| :guilabel:`Datendefinierte "
 "Übersteuerung` neben der Einstellung :guilabel:`Drehung` (bevorzugt) in der "
 "obersten Ebene :guilabel:`Markierung` der Symbolebenen."
 
@@ -3419,13 +3419,13 @@ msgstr "Laufendes Beibehalten"
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1666
 msgid ""
 "Both in absolute or relative reference digitizing, angle, distance, X and Y "
-"constraints can be locked continuously by clicking the |lockedRepeat| "
+"constraints can be locked continuously by clicking the |lockRepeating| "
 ":guilabel:`Continuous lock` buttons. Using continuous lock allows you to "
 "digitize several points or vertexes using the same constraints."
 msgstr ""
 "Sie können sowohl beim Digitalisieren mit absoluter als auch mit relativer "
 "Referenz Winkel, Abstand sowie die X- und Y-Festlegungen laufend "
-"beibehalten, indem Sie auf die Schaltflächen |lockedRepeat| "
+"beibehalten, indem Sie auf die Schaltflächen |lockRepeating| "
 ":guilabel:`Laufend beibehalten` klicken. Laufendes Beibehalten ermöglicht es"
 " Ihnen mehrere Punkte oder Stützpunkte mit den selben Festlegungen zu "
 "digitalisieren."
