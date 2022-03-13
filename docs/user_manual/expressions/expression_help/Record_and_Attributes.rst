@@ -190,10 +190,10 @@ Along with the layer ID, a map containing the columns (key) and their respective
    :widths: 15 85
 
    * - Syntax
-     - get_feature(layer, map)
+     - get_feature(layer, attribute)
    * - Arguments
      - * **layer** - layer name or ID
-       * **map** - Map containing the column and value pairs to use
+       * **attribute** - Map containing the column and value pairs to use
    * - Examples
      - * ``get_feature('streets',map('name','main st','lane_num','4'))`` → first feature found in "streets" layer with "main st" value in the "name" field and  "4" value in the "lane_num" field
 

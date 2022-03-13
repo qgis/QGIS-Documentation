@@ -2147,8 +2147,13 @@ Read more on the underlying GEOS "Intersects" predicate, as described in PostGIS
        * **filter** - an optional expression to filter the target features to check. If not set, all the features will be checked.
        * **limit** - an optional integer to limit the number of matching features. If not set, all the matching features will be returned.
        * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
-       * **min_overlap** - defines an optional exclusion filter: for polygons a minimum area in current feature squared units for the intersection (if the intersection results in multiple polygons the intersection will be returned if at least one of the polygons has an area greater or equal to the value), for lines a minimum length in current feature units (if the intersection results in multiple lines the intersection will be returned if at least one of the lines has a length greater or equal to the value).
-       * **min_inscribed_circle_radius** - defines an optional exclusion filter (for polygons only): minimum radius in current feature units for the maximum inscribed circle of the intersection (if the intersection results in multiple polygons the intersection will be returned if at least one of the polygons has a radius for the maximum inscribed circle greater or equal to the value).
+       * **min_overlap** - defines an optional exclusion filter:
+
+         * for polygons, a minimum area in current feature squared units for the intersection. If the intersection results in multiple polygons the intersection will be returned if at least one of the polygons has an area greater or equal to the value
+         * for lines, a minimum length in current feature units. If the intersection results in multiple lines the intersection will be returned if at least one of the lines has a length greater or equal to the value.
+
+
+       * **min_inscribed_circle_radius** - defines an optional exclusion filter (for polygons only): minimum radius in current feature units for the maximum inscribed circle of the intersection. If the intersection results in multiple polygons the intersection will be returned if at least one of the polygons has a radius for the maximum inscribed circle greater or equal to the value.
 
          Read more on the underlying GEOS predicate, as described in PostGIS `ST_MaximumInscribedCircle <https://postgis.net/docs/ST_MaximumInscribedCircle.html>`_ function.
 
@@ -2163,7 +2168,7 @@ Read more on the underlying GEOS "Intersects" predicate, as described in PostGIS
        * ``array_sort(overlay_intersects(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions intersected by the current feature and with a population greater than 10000
        * ``overlay_intersects(layer:='regions', expression:= geom_to_wkt($geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions intersected by the current feature
        * ``overlay_intersects(layer:='regions', min_overlap:=0.54)`` → true if the current feature spatially intersects a region and the intersection area (of at least one of the parts in case of multipolygons) is greater or equal to 0.54
-       * ``overlay_intersects(layer:='regions', min_inscribed_circle_radius:=0.54)`` → true if the current feature spatially intersects a region and the intersection area maximum inscribed circle's radius (of at least one of the parts in case of multipart) is greater or equal to the 0.54
+       * ``overlay_intersects(layer:='regions', min_inscribed_circle_radius:=0.54)`` → true if the current feature spatially intersects a region and the intersection area maximum inscribed circle's radius (of at least one of the parts in case of multipart) is greater or equal to 0.54
        * ``overlay_intersects(layer:='regions', expression:= geom_to_wkt($geometry), return_details:=true)`` → an array of maps containing 'id', 'result', 'overlap' and 'radius'
        * ``overlay_intersects(layer:='regions', expression:= geom_to_wkt($geometry), sort_by_intersection_size:='des')`` → an array of geometries (in WKT) ordered by the overlap value in descending order
 
