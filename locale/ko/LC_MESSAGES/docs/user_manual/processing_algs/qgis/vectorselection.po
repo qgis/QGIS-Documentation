@@ -516,7 +516,7 @@ msgstr "파이썬 코드"
 msgid "**Algorithm ID**: ``qgis:extractbyattribute``"
 msgstr "**알고리즘 ID**: ``qgis:extractbyattribute``"
 
-#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:10
+#: ../../docs/user_manual/processing_algs/algs_include.rst:10
 msgid ""
 "The *algorithm id* is displayed when you hover over the algorithm in the "
 "Processing Toolbox. The *parameter dictionary* provides the parameter NAMEs "
@@ -601,7 +601,7 @@ msgid ""
 "layer."
 msgstr "산출 레이어에 피처를 추가하는 기준은 입력 레이어의 각 피처와 추가 레이어의 피처들 사이의 공간 관계를 바탕으로 합니다."
 
-#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:9
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
 msgid ""
 "In this example, the dataset from which we want to select (the *source "
 "vector layer*) consists of the green circles, the orange rectangle is the "
@@ -610,15 +610,15 @@ msgstr ""
 "이 예시에서, 피처를 선택하고자 하는 데이터셋(*소스 벡터 레이어*)은 녹색 원으로 이루어져 있고, 주황색 직사각형은 이를 비교할 "
 "데이터셋(*교차 벡터 레이어*)입니다."
 
-#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:13
+#: ../../docs/user_manual/processing_algs/algs_include.rst:13
 msgid "Available geometric predicates are:"
 msgstr "다음과 같은 기하학적 술어(predicate)를 사용할 수 있습니다:"
 
-#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:18
+#: ../../docs/user_manual/processing_algs/algs_include.rst:18
 msgid "*Intersect*"
 msgstr "*Intersect*"
 
-#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:16
+#: ../../docs/user_manual/processing_algs/algs_include.rst:16
 msgid ""
 "Tests whether a geometry intersects another. Returns 1 (true) if the "
 "geometries spatially intersect (share any portion of space - overlap or "
@@ -628,11 +628,11 @@ msgstr ""
 "도형이 다른 도형과 교차하는지 검증합니다. 도형들이 공간적으로 교차하는 (공간의 어떤 부분이라도 공유 ─ 중첩 또는 접촉하는) 경우 "
 "1(참)을 반환하고, 교차하지 않는 경우 0(거짓)을 반환합니다. 앞의 그림에서, 이 조건은 원 1, 2, 3을 선택할 것입니다."
 
-#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:25
+#: ../../docs/user_manual/processing_algs/algs_include.rst:25
 msgid "*Contain*"
 msgstr "*Contain*"
 
-#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:21
+#: ../../docs/user_manual/processing_algs/algs_include.rst:21
 msgid ""
 "Returns 1 (true) if and only if no points of b lie in the exterior of a, and"
 " at least one point of the interior of b lies in the interior of a. In the "
@@ -644,11 +644,11 @@ msgstr ""
 " 있는 경우에만 1(참)을 반환합니다. 앞의 그림에서 이 조건은 어떤 원도 선택하지 않지만, a와 b의 순서를 바꿀 경우 직사각형이 원을"
 " 완전하게 포함하기 때문에 직사각형을 선택할 것입니다. 이 조건은 *are within* 조건의 정반대입니다."
 
-#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:29
+#: ../../docs/user_manual/processing_algs/algs_include.rst:29
 msgid "*Disjoint*"
 msgstr "*Disjoint*"
 
-#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:28
+#: ../../docs/user_manual/processing_algs/algs_include.rst:28
 msgid ""
 "Returns 1 (true) if the geometries do not share any portion of space (no "
 "overlap, not touching). Only circle 4 is selected."
@@ -656,21 +656,21 @@ msgstr ""
 "도형들이 공간의 어떤 부분도 함께 공유하지 않는 (중첩하지도, 접촉하지도 않는) 경우 1(참)을 반환합니다. 이 조건은 원 4만 "
 "선택합니다."
 
-#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:33
+#: ../../docs/user_manual/processing_algs/algs_include.rst:33
 msgid "*Equal*"
 msgstr "*Equal*"
 
-#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:32
+#: ../../docs/user_manual/processing_algs/algs_include.rst:32
 msgid ""
 "Returns 1 (true) if and only if geometries are exactly the same. No circles "
 "will be selected."
 msgstr "도형이 정확하게 동일한 경우에만 1(참)을 반환합니다. 이 조건은 아무 원도 선택하지 않을 것입니다."
 
-#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:38
+#: ../../docs/user_manual/processing_algs/algs_include.rst:38
 msgid "*Touch*"
 msgstr "*Touch*"
 
-#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:36
+#: ../../docs/user_manual/processing_algs/algs_include.rst:36
 msgid ""
 "Tests whether a geometry touches another. Returns 1 (true) if the geometries"
 " have at least one point in common, but their interiors do not intersect. "
@@ -679,11 +679,11 @@ msgstr ""
 "도형이 다른 도형과 접하는지 검증합니다.도형들이 최소한 포인트 1개를 공유하지만 각 도형의 내부가 교차하지 않는 경우 1(참)을 "
 "반환합니다. 이 조건은 원 3만 선택합니다."
 
-#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:43
+#: ../../docs/user_manual/processing_algs/algs_include.rst:43
 msgid "*Overlap*"
 msgstr "*Overlap*"
 
-#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:41
+#: ../../docs/user_manual/processing_algs/algs_include.rst:41
 msgid ""
 "Tests whether a geometry overlaps another. Returns 1 (true) if the "
 "geometries share space, are of the same dimension, but are not completely "
@@ -692,11 +692,11 @@ msgstr ""
 "도형이 다른 도형과 중첩하는지 검증합니다. 도형들이 동일한 차원이며 공간을 공유하지만 서로를 완전히 담고 있지 않은 경우 1(참)을 "
 "반환합니다. 이 조건은 원 2만 선택합니다."
 
-#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:47
+#: ../../docs/user_manual/processing_algs/algs_include.rst:47
 msgid "*Are within*"
 msgstr "*Are within*"
 
-#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:46
+#: ../../docs/user_manual/processing_algs/algs_include.rst:46
 msgid ""
 "Tests whether a geometry is within another. Returns 1 (true) if geometry a "
 "is completely inside geometry b. Only circle 1 is selected."
@@ -704,11 +704,11 @@ msgstr ""
 "도형이 다른 도형 내부에 있는지 검증합니다. 도형 a가 도형 b 내부에 완전히 들어가 있는 경우 1(참)을 반환합니다. 이 조건은 원 "
 "1만 선택합니다."
 
-#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:55
+#: ../../docs/user_manual/processing_algs/algs_include.rst:55
 msgid "*Cross*"
 msgstr "*Cross*"
 
-#: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:50
+#: ../../docs/user_manual/processing_algs/algs_include.rst:50
 msgid ""
 "Returns 1 (true) if the supplied geometries have some, but not all, interior"
 " points in common and the actual crossing is of a lower dimension than the "
