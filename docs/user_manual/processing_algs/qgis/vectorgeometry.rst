@@ -134,55 +134,55 @@ Parameters
      - Input vector layer
    * - **Translation (x-axis)**
      - ``DELTA_X``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 0
      - Displacement to apply on the X axis.
    * - **Translation (y-axis)**
      - ``DELTA_Y``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 0
      - Displacement to apply on the Y axis.
    * - **Translation (z-axis)**
      - ``DELTA_Z``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 0
      - Displacement to apply on the Z axis.
    * - **Translation (m-values)**
      - ``DELTA_M``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 0
      - Offset to apply on m values.
    * - **Scale factor (x-axis)**
      - ``SCALE_X``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 1
      - Scaling value (expansion or contraction) to apply on the X axis. 
    * - **Scale factor (y-axis)**
      - ``SCALE_Y``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 1
      - Scaling value (expansion or contraction) to apply on the Y axis.
    * - **Scale factor (z-axis)**
      - ``SCALE_Z``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 1
      - Scaling value (expansion or contraction) to apply on the Z axis.
    * - **Scale factor (m-values)**
      - ``SCALE_M``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 1
      - Scaling value (expansion or contraction) to apply on m values.
    * - **Rotation around z-axis (degrees counter-clockwise)**
      - ``ROTATION_Z``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 0
      - Angle of the rotation in degrees.	
@@ -567,7 +567,7 @@ Parameters
      - Input vector layer
    * - **Distance**
      - ``DISTANCE``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 10.0
      - Buffer distance (from the boundary of each feature).
@@ -716,7 +716,7 @@ Parameters
      - Input vector layer
    * - **Create centroid for each part**
      - ``ALL_PARTS``
-     - [boolean |dataDefined|]
+     - [boolean |dataDefine|]
 
        Default: False
      - If True (checked), a centroid will be created for each part
@@ -1732,13 +1732,13 @@ Parameters
      - Input point vector layer
    * - **Azimuth (degrees from North)**
      - ``AZIMUTH``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 0.0
      - Angle (in degrees) as the middle value of the wedge
    * - **Wedge width (in degrees)**
      - ``WIDTH``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 45.0
      - Width (in degrees) of the buffer.
@@ -1752,7 +1752,7 @@ Parameters
 
    * - **Outer radius**
      - ``OUTER_RADIUS``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 1.0
      - The outer *size* (length) of the wedge:
@@ -1762,7 +1762,7 @@ Parameters
 
        Optional
      - ``INNER_RADIUS``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 0.0
      - Inner radius value.
@@ -1911,7 +1911,7 @@ Parameters
 
        Optional
      - ``MIN_AREA``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 0.0
      - Only holes with an area less than this threshold will be
@@ -2086,7 +2086,7 @@ Parameters
      - Input line or polygon vector layer
    * - **Interval between vertices to add**
      - ``INTERVAL``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 1.0
      - Maximum distance between two consecutive vertices
@@ -2264,14 +2264,14 @@ Parameters
      - The raster band to take the Z values from
    * - **Value for nodata or non-intersecting vertices**
      - ``NODATA``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 0
      - Value to use in case the vertex does not intersect
        (a valid pixel of) the raster
    * - **Scale factor**
      - ``SCALE``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 1.0
      - Scaling value: the band values are multiplied
@@ -2584,12 +2584,12 @@ Parameters
      - Input line vector layer
    * - **Start distance**
      - ``START_DISTANCE``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
      - Distance by which to extend the first segment of the line
        (starting point)
    * - **End distance**
      - ``END_DISTANCE``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
      - Distance by which to extend the last segment of the line
        (ending point)
    * - **Extended**
@@ -3040,7 +3040,7 @@ Parameters
 
        Optional
      - ``MIN``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: *Not set*
      - Minimum of M values allowed
@@ -3048,7 +3048,7 @@ Parameters
 
        Optional
      - ``MAX``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: *Not set*
      - Maximum of M values allowed
@@ -3138,7 +3138,7 @@ Parameters
 
        Optional
      - ``MIN``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: *Not set*
      - Minimum of Z values allowed
@@ -3146,7 +3146,7 @@ Parameters
 
        Optional
      - ``MAX``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: *Not set*
      - Maximum of Z values allowed
@@ -3534,7 +3534,7 @@ Parameters
      - Input line or polygon vector layer
    * - **Distance**
      - ``DISTANCE``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 0.0
      - Distance from the beginning of the line
@@ -3691,12 +3691,12 @@ Parameters
      - Input line vector layer
    * - **Start distance**
      - ``START_DISTANCE``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
      - Distance along the input line to the start point of
        the output feature
    * - **End distance**
      - ``END_DISTANCE``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
      - Distance along the input line to the end point of
        the output feature
    * - **Substring**
@@ -4081,7 +4081,7 @@ Parameters
      - Input vector layer
    * - **Number of rings**
      - ``RINGS``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 1
      - The number of rings.
@@ -4090,7 +4090,7 @@ Parameters
        rings depends on feature values).
    * - **Distance between rings**
      - ``DISTANCE``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 1.0
      - Distance between the rings.
@@ -4246,7 +4246,7 @@ Parameters
      - Input line vector layer
    * - **Distance**
      - ``DISTANCE``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 10.0
      - Offset distance.
@@ -4509,7 +4509,7 @@ Parameters
      - Input vector layer
    * - **Create point on surface for each part**
      - ``ANGLE_TOLERANCE``
-     - [boolean |dataDefined|]
+     - [boolean |dataDefine|]
      - If checked, a point will be created for each part of the
        geometry.
    * - **Point**
@@ -4586,20 +4586,20 @@ Parameters
      - Input line or polygon vector layer
    * - **Distance**
      - ``DISTANCE``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 1.0
      - Distance between two consecutive points along the line
    * - **Start offset**
      - ``START_OFFSET``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 0.0
      - Distance from the beginning of the input line, representing the
        position of the first point.
    * - **End offset**
      - ``END_OFFSET``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 0.0
      - Distance from the end of the input line, representing the
@@ -4980,13 +4980,13 @@ Parameters
      - Input point vector layer
    * - **Bearing (degrees from North)**
      - ``BEARING``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 0.0
      - Clockwise angle starting from North, in degree (°) unit
    * - **Distance**
      - ``DISTANCE``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 1.0
      - Distance to offset geometries, in layer units
@@ -5140,13 +5140,13 @@ Parameters
 
    * - **Width**
      - ``WIDTH``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 1.0
      - Width of the buffer shape
    * - **Height**
      - ``HEIGHT``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 1.0
      - Height of the buffer shape
@@ -5154,7 +5154,7 @@ Parameters
 
        Optional
      - ``ROTATION``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: None
      - Rotation of the buffer shape
@@ -5247,14 +5247,14 @@ Parameters
      - Input vector layer
    * - **Tolerance**
      - ``TOLERANCE``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 0.000001
      - Vertices closer than the specified distance are considered
        duplicates
    * - **Use Z value**
      - ``USE_Z_VALUE``
-     - [boolean |dataDefined|]
+     - [boolean |dataDefine|]
 
        Default: False
      - If the :guilabel:`Use Z Value` parameter is true, then the Z
@@ -5490,7 +5490,7 @@ Parameters
      - Input vector layer
    * - **Rotation (degrees clockwise)**
      - ``ANGLE``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 0.0
      - Angle of the rotation in degrees
@@ -5576,7 +5576,7 @@ Parameters
      - Input line or polygon vector layer
    * - **Maximum angle between vertices (degrees)**
      - ``ANGLE``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 5.0
      - Maximum allowed radius angle between vertices
@@ -5651,7 +5651,7 @@ Parameters
      - Input line or polygon vector layer
    * - **Maximum offset distance**
      - ``DISTANCE``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 1.0
      - Maximum allowed offset distance between the
@@ -5731,7 +5731,7 @@ Parameters
      - Input vector layer
    * - **M Value**
      - ``M_VALUE``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 0.0
      - M value to assign to the feature geometries
@@ -5818,13 +5818,13 @@ Parameters
      - The raster band from which the M values are taken
    * - **Value for nodata or non-intersecting vertices**
      - ``NODATA``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
        Default: 0.0
      - Value to use in case the vertex does not intersect
        (a valid pixel of) the raster
    * - **Scale factor**
      - ``SCALE``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 1.0
      - Scaling value: the band values are multiplied
@@ -5903,7 +5903,7 @@ Parameters
      - Input vector layer
    * - **Z Value**
      - ``Z_VALUE``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 0.0
      - Z value to assign to the feature geometries
@@ -5998,7 +5998,7 @@ Parameters
 
    * - **Tolerance**
      - ``TOLERANCE``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 1.0
      - Threshold tolerance (in units of the layer):
@@ -6213,21 +6213,21 @@ Parameters
      - Input line or polygon vector layer
    * - **Iterations**
      - ``ITERATIONS``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 1
      - Increasing the number of iterations will give smoother
        geometries (and more vertices).
    * - **Offset**
      - ``OFFSET``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 0.25
      - Increasing values will *move* the smoothed lines / boundaries
        further away from the input lines / boundaries.
    * - **Maximum node angle to smooth**
      - ``MAX_ANGLE``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 180.0
      - Every node below this value will be smoothed
@@ -6437,25 +6437,25 @@ Parameters
      - Input vector layer
    * - **X Grid Spacing**
      - ``HSPACING``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 1.0
      - Grid spacing on the X axis
    * - **Y Grid Spacing**
      - ``VSPACING``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 1.0
      - Grid spacing on the Y axis
    * - **Z Grid Spacing**
      - ``ZSPACING``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 0.0
      - Grid spacing on the Z axis
    * - **M Grid Spacing**
      - ``MSPACING``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 0.0
      - Grid spacing on the M axis
@@ -6523,7 +6523,7 @@ Parameters
      - The input line vector layer
    * - **Maximum line length**
      - ``LENGTH``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 10.0
      - The maximum length of a line in the output.
@@ -6613,7 +6613,7 @@ Parameters
      - The input vector layer
    * - **Maximum nodes in parts**
      - ``MAX_NODES``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 256
      - Maximum number of vertices each new
@@ -6760,21 +6760,21 @@ Parameters
      - Input line vector layer
    * - **Start width**
      - ``START_WIDTH``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 0.0
      - Represents the radius of the buffer applied
        at the start point of the line feature
    * - **End width**
      - ``END_WIDTH``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 0.0
      - Represents the radius of the buffer applied
        at the end point of the line feature.
    * - **Segments**
      - ``SEGMENTS``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 16
      - Controls the number of line segments to use to approximate
@@ -6932,13 +6932,13 @@ Parameters
      - Input line vector layer
    * - **Length of the transect**
      - ``LENGTH``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 5.0
      - Length in map unit of the transect
    * - **Angle in degrees from the original line at the vertices**
      - ``ANGLE``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 90.0
      - Change the angle of the transect
@@ -7027,25 +7027,25 @@ Parameters
      - Input vector layer
    * - **Offset distance (x-axis)**
      - ``DELTA_X``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 0.0
      - Displacement to apply on the X axis
    * - **Offset distance (y-axis)**
      - ``DELTA_Y``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 0.0
      - Displacement to apply on the Y axis
    * - **Offset distance (z-axis)**
      - ``DELTA_Z``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 0.0
      - Displacement to apply on the Z axis
    * - **Offset distance (m values)**
      - ``DELTA_M``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 0.0
      - Displacement to apply on the M axis
@@ -7119,7 +7119,7 @@ Parameters
      - Input line vector layer
    * - **Segments**
      - ``SEGMENTS``
-     - [number |dataDefined|]
+     - [number |dataDefine|]
 
        Default: 16
      - Number of the buffer segments per quarter circle.
@@ -7256,7 +7256,7 @@ Python code
    :width: 1.3em
 .. |clearText| image:: /static/common/mIconClearText.png
    :width: 1.5em
-.. |dataDefined| image:: /static/common/mIconDataDefine.png
+.. |dataDefine| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
 .. |deleteAttribute| image:: /static/common/mActionDeleteAttribute.png
    :width: 1.5em

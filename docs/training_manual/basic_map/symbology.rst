@@ -186,7 +186,7 @@ layers.
       :align: center
 
 #. Select the :guilabel:`Fill` level in the tree and click
-   the |signPlus| :sup:`Add symbol layer` button.
+   the |symbologyAdd| :sup:`Add symbol layer` button.
    The dialog will change to look something like this, with a new symbol layer
    added:
 
@@ -567,7 +567,7 @@ The final result should look like this:
 .. admonition:: Answer
    :class: dropdown
 
-   #. Click on the |signPlus| button to add another Symbol level.
+   #. Click on the |symbologyAdd| button to add another Symbol level.
    #. Move the new symbol at the bottom of the list clicking the |arrowDown| button.
    #. Choose a good color to fill the water polygons.
    #. Click on :guilabel:`Marker` of the Geometry generator symbology and change the
@@ -705,10 +705,10 @@ map.
 .. |moderate| image:: /static/common/moderate.png
 .. |rendering| image:: /static/common/rendering.png
    :width: 1.5em
-.. |signPlus| image:: /static/common/symbologyAdd.png
-   :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
 .. |zoomIn| image:: /static/common/mActionZoomIn.png
    :width: 1.5em
 .. |zoomOut| image:: /static/common/mActionZoomOut.png

@@ -451,8 +451,8 @@ The scalar dataset elements are then assigned their color based on their class.
      Not available with :ref:`mesh layers <mesh_symbology_contours>`.
 #. You can then :guilabel:`Classify` or tweak the classes:
 
-   * The button |signPlus| :sup:`Add values manually` adds a value to the table.
-   * The button |signMinus| :sup:`Remove selected row` deletes selected values
+   * The button |symbologyAdd| :sup:`Add values manually` adds a value to the table.
+   * The button |symbologyRemove| :sup:`Remove selected row` deletes selected values
      from the table.
    * Double clicking in the :guilabel:`Value` lets you modify the class value.
    * Double clicking in the :guilabel:`Color` column opens the dialog
@@ -611,7 +611,7 @@ in the :guilabel:`Custom transparency options` section:
 * Provide a list of pixels to make transparent with corresponding
   levels of transparency:
 
-  #. Click the |signPlus| :sup:`Add values manually` button.
+  #. Click the |symbologyAdd| :sup:`Add values manually` button.
      A new row will appear in the pixel list.
   #. Enter the **Red**, **Green** and **Blue** values of the pixel and
      adjust the **Percent Transparent** to apply.
@@ -895,12 +895,12 @@ be provided for :guilabel:`Description`, :guilabel:`Attribution`,
    :width: 1.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
-.. |signMinus| image:: /static/common/symbologyRemove.png
-   :width: 1.5em
-.. |signPlus| image:: /static/common/symbologyAdd.png
-   :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |symbologyRemove| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
 .. |system| image:: /static/common/system.png
    :width: 1.5em
 .. |temporal| image:: /static/common/temporal.png

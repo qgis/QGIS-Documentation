@@ -46,7 +46,7 @@ functionalities:
 * |moveItemContent| :sup:`Interactively edit map extent`: pan and
   zoom interactively
   within the map item
-* |labeling| :sup:`Labeling settings`: control feature label behaviour
+* |labelingSingle| :sup:`Labeling settings`: control feature label behaviour
   (placement, visibility...) in the layout map item extent:
 
   * set a :guilabel:`Margin from map edges`, a data definable distance from the
@@ -159,7 +159,7 @@ You can prevent this by using :guilabel:`Lock styles for layers`.
 
 Instead of using the current map canvas, you can also lock the layers of the
 map item to those of an existing map theme: select a map theme from the
-|showMapTheme| :sup:`Set layer list from a map theme` drop-down button, and the
+|showPresets| :sup:`Set layer list from a map theme` drop-down button, and the
 |checkbox| :guilabel:`Lock layers` is activated. The set of visible layers in
 the map theme is from now on used for the map item until you select another map
 theme or uncheck the |checkbox| :guilabel:`Lock layers` option. You then may
@@ -172,7 +172,7 @@ the map item will not be refreshed even if the map theme is updated (using the
 replace theme function) in QGIS' main window.
 
 Locked layers in the map item can also be :ref:`data-defined <data_defined>`,
-using the |dataDefined| icon beside the option. When used, this overrides the
+using the |dataDefine| icon beside the option. When used, this overrides the
 selection set in the drop-down list. You need to pass a list of layers
 separated by ``|`` character.
 The following example locks the map item to use only layers ``layer 1`` and
@@ -261,7 +261,7 @@ coordinates, either in the map item projection or a different one. The
 :guilabel:`Grids` group provides the possibility to add several grids to a
 map item.
 
-* With the |signPlus| and |signMinus| buttons you can add or remove a selected
+* With the |symbologyAdd| and |symbologyRemove| buttons you can add or remove a selected
   grid;
 * With the |arrowUp| and |arrowDown| buttons you can move up and down a grid in
   the list, hence move it on top or bottom of another one, over the map item.
@@ -396,14 +396,14 @@ between two different maps extent and provides the following functionalities:
 
 To create an overview, select the map item on which you want to show the other
 map item's extent and expand the :guilabel:`Overviews` option in the
-:guilabel:`Item Properties` panel. Then press the |signPlus| button to add
+:guilabel:`Item Properties` panel. Then press the |symbologyAdd| button to add
 an overview.
 
 Initially this overview is named 'Overview 1' (see :numref:`Figure_layout_map_overview`).
 You can:
 
 * Rename it with a double-click
-* With the |signPlus| and |signMinus| buttons, add or remove overviews
+* With the |symbologyAdd| and |symbologyRemove| buttons, add or remove overviews
 * With the |arrowUp| and |arrowDown| buttons, move an overview up and down in
   the list, placing it above or below other overviews in the map item
   (when they are at the same :ref:`stack position <overview_stack_position>`).
@@ -460,9 +460,9 @@ of the overview on the selected map frame. You can customize it with:
    :width: 1.3em
 .. |clip| image:: /static/common/mAlgorithmClip.png
    :width: 1.5em
-.. |dataDefined| image:: /static/common/mIconDataDefine.png
+.. |dataDefine| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
-.. |labeling| image:: /static/common/labelingSingle.png
+.. |labelingSingle| image:: /static/common/labelingSingle.png
    :width: 1.5em
 .. |moveItemContent| image:: /static/common/mActionMoveItemContent.png
    :width: 1.5em
@@ -478,13 +478,13 @@ of the overview on the selected map frame. You can customize it with:
    :width: 1.5em
 .. |showBookmarks| image:: /static/common/mActionShowBookmarks.png
    :width: 1.5em
-.. |showMapTheme| image:: /static/common/mActionShowPresets.png
+.. |showPresets| image:: /static/common/mActionShowPresets.png
    :width: 1.5em
-.. |signMinus| image:: /static/common/symbologyRemove.png
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em
-.. |signPlus| image:: /static/common/symbologyAdd.png
+.. |symbologyRemove| image:: /static/common/symbologyRemove.png
    :width: 1.5em
-.. |unchecked| image:: /static/common/checkbox_unchecked.png
+.. |unchecked| image:: /static/common/unchecked.png
    :width: 1.3em
 .. |viewExtentInCanvas| image:: /static/common/mActionViewExtentInCanvas.png
    :width: 1.5em

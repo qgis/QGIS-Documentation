@@ -264,7 +264,7 @@ only two parameters to define a user CRS:
 
 To create a new CRS:
 
-#. Click the |signPlus| :sup:`Add new CRS` button
+#. Click the |symbologyAdd| :sup:`Add new CRS` button
 #. Enter a descriptive name
 #. Select the format: it can be :guilabel:`Proj String` or :guilabel:`WKT`
 #. Add the CRS :guilabel:`Parameters`.
@@ -351,7 +351,7 @@ This customization is done in the :menuselection:`Settings -->` |options|
 * or defining a list of appropriate datum transformations to use as defaults
   when loading a layer to a project or reprojecting a layer.
 
-  Use the |signPlus| button to open the :guilabel:`Select Datum Transformations`
+  Use the |symbologyAdd| button to open the :guilabel:`Select Datum Transformations`
   dialog. Then:
 
   #. Choose the :guilabel:`Source CRS` of the layer, using the drop-down menu
@@ -388,7 +388,7 @@ This customization is done in the :menuselection:`Settings -->` |options|
 
   From now, QGIS automatically uses the selected datum transformations for
   further transformation between these two CRSs until you remove
-  it (|signMinus|) from the list or change the entry (|toggleEditing|) in
+  it (|symbologyRemove|) from the list or change the entry (|toggleEditing|) in
   the list.
 
 Datum transformations set in the :menuselection:`Settings -->` |options|
@@ -420,11 +420,11 @@ to the current project only.
    :width: 1.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
-.. |signMinus| image:: /static/common/symbologyRemove.png
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em
-.. |signPlus| image:: /static/common/symbologyAdd.png
+.. |symbologyRemove| image:: /static/common/symbologyRemove.png
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
-.. |unchecked| image:: /static/common/checkbox_unchecked.png
+.. |unchecked| image:: /static/common/unchecked.png
    :width: 1.3em

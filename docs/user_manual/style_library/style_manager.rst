@@ -62,7 +62,7 @@ previewed items organized into tabs:
   which store the font, color, buffers, shadows, and backgrounds of texts
   (i.e. all the formatting parts of the label settings, which for instance can
   be used in layouts);
-* |labeling| :guilabel:`Label settings` to manage :ref:`label settings
+* |labelingSingle| :guilabel:`Label settings` to manage :ref:`label settings
   <showlabels>`, which include the text formats and some layer-type specific
   settings such as label placement, priority, callouts, rendering...
 * |3d| :guilabel:`3D Symbols` to configure symbols with :ref:`3D properties
@@ -83,7 +83,7 @@ listed in the panel on the left:
   An item can be tagged more than once. Select a tag in the list and the tabs
   are updated to show only their items that belong to it.
   To create a new tag you could later attach to a set of items, use the
-  :guilabel:`Add Tag...` button or select the |signPlus| :guilabel:`Add Tag...`
+  :guilabel:`Add Tag...` button or select the |symbologyAdd| :guilabel:`Add Tag...`
   from any tag contextual menu;
 * **Smart Group**: a smart group dynamically fetches its symbols according to
   conditions set (see eg, :numref:`figure_smart_group`). Click the :guilabel:`Add Smart Group...`
@@ -117,7 +117,7 @@ categories, you can either:
   Editor` dialog.
   This option is also available in the contextual menu of the smart group.
 
-To remove a tag or a smart group, right-click on it and select the |signMinus|
+To remove a tag or a smart group, right-click on it and select the |symbologyRemove|
 :guilabel:`Remove` button. Note that this does not delete the items grouped in the
 category.
 
@@ -128,13 +128,13 @@ As seen earlier, style elements are listed under different tabs whose
 contents depend on the active category (tag, smart group, favorites...).
 When a tab is enabled, you can:
 
-* Add new items: press the |signPlus| :sup:`Add item` button and configure the
+* Add new items: press the |symbologyAdd| :sup:`Add item` button and configure the
   item following :ref:`symbols <symbol-selector>`, :ref:`color ramps
   <color-ramp>` or :ref:`text format and label <showlabels>` builder description.
 * Modify an existing item: select an item and press |symbologyEdit| :sup:`Edit
   item` button and configure as mentioned above. 
 * Delete existing items: to delete an element you no longer need, select it and
-  click |signMinus| :sup:`Remove item` (also available through right-click).
+  click |symbologyRemove| :sup:`Remove item` (also available through right-click).
   The item will be deleted from the local database.
 
 Note that the :guilabel:`All` tab provides access to these options for every type
@@ -282,7 +282,7 @@ The Color ramp tab in the :guilabel:`Style Manager` dialog helps you preview
 different color ramps based on the category selected in the left panel.
 
 To create a custom color ramp, activate the Color ramp tab and click the
-|signPlus| :sup:`Add item` button. The button reveals a drop-down list to
+|symbologyAdd| :sup:`Add item` button. The button reveals a drop-down list to
 choose the ramp type:
 
 * :guilabel:`Gradient`: given a start and end colors, generate a color ramp which
@@ -339,7 +339,7 @@ choose the ramp type:
    :width: 1.5em
 .. |iconView| image:: /static/common/mActionIconView.png
    :width: 1.5em
-.. |labeling| image:: /static/common/labelingSingle.png
+.. |labelingSingle| image:: /static/common/labelingSingle.png
    :width: 1.5em
 .. |lineLayer| image:: /static/common/mIconLineLayer.png
    :width: 1.5em
@@ -353,15 +353,15 @@ choose the ramp type:
    :width: 1.5em
 .. |sharing| image:: /static/common/mActionSharing.png
    :width: 1.5em
-.. |signMinus| image:: /static/common/symbologyRemove.png
-   :width: 1.5em
-.. |signPlus| image:: /static/common/symbologyAdd.png
-   :width: 1.5em
 .. |styleManager| image:: /static/common/mActionStyleManager.png
+   :width: 1.5em
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |symbologyEdit| image:: /static/common/symbologyEdit.png
    :width: 1.5em
+.. |symbologyRemove| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
 .. |text| image:: /static/common/text.png
    :width: 1.5em
-.. |unchecked| image:: /static/common/checkbox_unchecked.png
+.. |unchecked| image:: /static/common/unchecked.png
    :width: 1.3em

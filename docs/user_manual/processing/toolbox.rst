@@ -137,7 +137,7 @@ table can be of one of the following types.
 * An **option**, to choose from a selection list of possible options.
 * A **numerical value**, to be introduced in a spin box. In some contexts (when
   the parameter applies at the feature level and not at the layer's), you will
-  find a |dataDefined| :sup:`Data-defined override` button by its side, allowing
+  find a |dataDefine| :sup:`Data-defined override` button by its side, allowing
   you to open the :ref:`expression builder <vector_expressions>` and enter a
   mathematical expression to generate variable values for the parameter. Some useful
   variables related to data loaded into QGIS can be added to your expression, so
@@ -382,7 +382,7 @@ to a temporary file and deleted once you exit QGIS).
 
 .. |clearConsole| image:: /static/common/iconClearConsole.png
    :width: 1.5em
-.. |dataDefined| image:: /static/common/mIconDataDefine.png
+.. |dataDefine| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em

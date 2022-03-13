@@ -34,7 +34,7 @@ is available from many parts in QGIS and, can particularly be accessed when:
   :sup:`Select By Expression...` tool;
 * :ref:`editing attributes <calculate_fields_values>` with e.g. the
   |calculateField| :sup:`Field calculator` tool;
-* manipulating symbology, label or layout item parameters with the |dataDefined|
+* manipulating symbology, label or layout item parameters with the |dataDefine|
   :sup:`Data defined override` tool (see :ref:`data_defined`);
 * building a :ref:`geometry generator <geometry_generator_symbol>` symbol layer;
 * doing some :ref:`geoprocessing <label_processing>`.
@@ -321,7 +321,7 @@ particular needs that would not be covered by the predefined functions.
 
 To create a new function:
 
-#. Press the |signPlus| :sup:`New File` button.
+#. Press the |symbologyAdd| :sup:`New File` button.
 #. Enter a name to use in the form that pops up and press :guilabel:`OK`.
 
    A new item of the name you provide is added in the left panel of the
@@ -350,7 +350,7 @@ To delete a custom function:
 
 #. Enable the :guilabel:`Function Editor` tab
 #. Select the function in the list
-#. Press the |signMinus| :sup:`Remove selected function`. The function is
+#. Press the |symbologyRemove| :sup:`Remove selected function`. The function is
    removed from the list and the corresponding ``.py`` file deleted from
    the user profile folder.
 
@@ -417,7 +417,7 @@ Further information about creating Python code can be found in the
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |dataDefined| image:: /static/common/mIconDataDefine.png
+.. |dataDefine| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
 .. |deleteSelected| image:: /static/common/mActionDeleteSelected.png
    :width: 1.5em
@@ -433,11 +433,11 @@ Further information about creating Python code can be found in the
    :width: 1.5em
 .. |sharingImport| image:: /static/common/mActionSharingImport.png
    :width: 1.5em
-.. |signMinus| image:: /static/common/symbologyRemove.png
-   :width: 1.5em
-.. |signPlus| image:: /static/common/symbologyAdd.png
-   :width: 1.5em
 .. |start| image:: /static/common/mActionStart.png
    :width: 1.5em
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
 .. |symbologyEdit| image:: /static/common/symbologyEdit.png
+   :width: 1.5em
+.. |symbologyRemove| image:: /static/common/symbologyRemove.png
    :width: 1.5em

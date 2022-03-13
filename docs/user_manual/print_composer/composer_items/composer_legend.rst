@@ -93,7 +93,7 @@ panel provides the following functionalities (see :numref:`figure_layout_legend_
     with 'drag-and-drop' functionality. The order can not be changed for WMS
     legend graphics.
   * Use the |addGroup| button to add a legend group.
-  * Use the |signPlus| button to add layers and |signMinus| button to remove
+  * Use the |symbologyAdd| button to add layers and |symbologyRemove| button to remove
     groups, layers or symbol classes.
   * The |symbologyEdit| button is used to edit the layer, group name or title.
     First you need to select the legend item. Double-clicking the item also
@@ -326,11 +326,11 @@ and lines can be customized through this dialog.
    :width: 1.5em
 .. |selectNumber| image:: /static/common/selectnumber.png
    :width: 2.8em
-.. |signMinus| image:: /static/common/symbologyRemove.png
-   :width: 1.5em
-.. |signPlus| image:: /static/common/symbologyAdd.png
-   :width: 1.5em
 .. |sum| image:: /static/common/mActionSum.png
    :width: 1.2em
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
 .. |symbologyEdit| image:: /static/common/symbologyEdit.png
+   :width: 1.5em
+.. |symbologyRemove| image:: /static/common/symbologyRemove.png
    :width: 1.5em

@@ -827,7 +827,7 @@ By checking |checkbox| :guilabel:`CRS restrictions`, you can restrict
 in which coordinate reference systems (CRS) QGIS Server will offer
 to render maps. It is recommended that you restrict the offered CRS as this
 reduces the size of the WMS GetCapabilities response.
-Use the |signPlus| button below to select those CRSs
+Use the |symbologyAdd| button below to select those CRSs
 from the Coordinate Reference System Selector, or click :guilabel:`Used`
 to add the CRSs used in the QGIS project to the list.
 
@@ -837,13 +837,13 @@ create prints, using one of the print layouts as a template.
 This is a QGIS-specific extension to the WMS 1.3.0 specification.
 If you want to exclude any print layout from being published by the WMS,
 check |checkbox| :guilabel:`Exclude layouts` and click the
-|signPlus| button below.
+|symbologyAdd| button below.
 Then, select a print layout from the :guilabel:`Select print layout` dialog
 in order to add it to the excluded layouts list.
 
 If you want to exclude any layer or layer group from being published by the
 WMS, check |checkbox| :guilabel:`Exclude Layers` and click the
-|signPlus| button below.
+|symbologyAdd| button below.
 This opens the :guilabel:`Select restricted layers and groups` dialog, which
 allows you to choose the layers and groups that you don't want to be published.
 Use the :kbd:`Shift` or :kbd:`Ctrl` key if you want to select multiple entries.
@@ -985,5 +985,5 @@ print service, the full list is available is this `repository
 
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |signPlus| image:: /static/common/symbologyAdd.png
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em

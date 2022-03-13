@@ -831,7 +831,7 @@ For the other database types, see their differences at
 
 * :guilabel:`Authentication`, configurations.
   Choose an authentication configuration. You can add configurations using
-  the |signPlus| button. Choices are:
+  the |symbologyAdd| button. Choices are:
 
   * Basic authentication
   * PKI PKCS#12 authentication
@@ -1486,9 +1486,9 @@ Once a connection to an ArcGIS REST Server is set, it's possible to:
    :width: 1.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
-.. |signPlus| image:: /static/common/symbologyAdd.png
-   :width: 1.5em
 .. |spatialite| image:: /static/common/mIconSpatialite.png
+   :width: 1.5em
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |vectorTileLayer| image:: /static/common/mIconVectorTileLayer.png
    :width: 1.5em

@@ -107,7 +107,7 @@ going to use the *Vertex Tool* to edit and join existing polygons.
 |moderate| |FA| Tool: Simplify Feature
 ----------------------------------------------------------------------
 
-Continuing on the same layer, we will test the |simplifyFeatures|
+Continuing on the same layer, we will test the |simplify|
 :sup:`Simplify Feature` tool:
 
 #. Click on it to activate it.
@@ -294,7 +294,7 @@ Now we will re-join the feature you just split out to the remaining
 part of the polygon:
 
 #. Experiment with  the |mergeFeatures|:sup:`Merge Selected Features`
-   and |mergeFeatAttributes|
+   and |mergeFeatureAttributes|
    :sup:`Merge Attributes of Selected Features` tools.
 #. Note the differences.
 
@@ -358,7 +358,7 @@ simpler and more effective.
    :width: 2em
 .. |hard| image:: /static/common/hard.png
 .. |largeLandUseArea| replace:: Bontebok National Park
-.. |mergeFeatAttributes| image:: /static/common/mActionMergeFeatureAttributes.png
+.. |mergeFeatureAttributes| image:: /static/common/mActionMergeFeatureAttributes.png
    :width: 1.5em
 .. |mergeFeatures| image:: /static/common/mActionMergeFeatures.png
    :width: 1.5em
@@ -369,7 +369,7 @@ simpler and more effective.
    :width: 1.5em
 .. |selectRectangle| image:: /static/common/mActionSelectRectangle.png
    :width: 1.5em
-.. |simplifyFeatures| image:: /static/common/mActionSimplify.png
+.. |simplify| image:: /static/common/mActionSimplify.png
    :width: 1.5em
 .. |snapping| image:: /static/common/mIconSnapping.png
    :width: 1.5em

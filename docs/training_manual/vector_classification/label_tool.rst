@@ -12,17 +12,17 @@ layer.
 |basic| |FA| Using Labels
 -------------------------------------------------------------------------------
 
-First, ensure that the |labeling| button is visible in the GUI:
+First, ensure that the |labelingSingle| button is visible in the GUI:
 
 #. Go to the menu item :menuselection:`View --> Toolbars`
 #. Ensure that the :guilabel:`Label Toolbar` item has a check mark next to it.
    If it doesn't, click on the :guilabel:`Label Toolbar` item to activate it.
 #. Click on the ``places`` layer in the :guilabel:`Layers` panel so that
    it is highlighted
-#. Click on the |labeling| toolbar button to open the
+#. Click on the |labelingSingle| toolbar button to open the
    :guilabel:`Labels` tab of the :guilabel:`Layer Styling` panel
 
-#. Switch from :guilabel:`No Labels` to |labeling| :guilabel:`Single Labels`
+#. Switch from :guilabel:`No Labels` to |labelingSingle| :guilabel:`Single Labels`
 
    You'll need to choose which field in the attributes will be used for the
    labels. In the previous lesson, you decided that the ``name`` field was the
@@ -48,7 +48,7 @@ Depending on the styles you chose for your map in earlier lessons, you might
 find that the labels are not appropriately formatted and either overlap or
 are too far away from their point markers.
 
-.. note::  Above, you used the |labeling| button in the
+.. note::  Above, you used the |labelingSingle| button in the
    :guilabel:`Label Toolbar` to open the :guilabel:`Layer Styling` panel. As
    with :guilabel:`Symbology`, the same label options are available via both
    the :guilabel:`Layer Styling` panel and the :guilabel:`Layer Properties`
@@ -56,7 +56,7 @@ are too far away from their point markers.
 
 #. Open the :guilabel:`Layer Properties` dialog by double-clicking on the
    ``places`` layer
-#. Select the |labeling| :guilabel:`Labels` tab
+#. Select the |labelingSingle| :guilabel:`Labels` tab
 #. Make sure :guilabel:`Text` is selected in the left-hand options list, then
    update the text formatting options to match those shown here:
 
@@ -119,7 +119,7 @@ the point symbols and replace them completely with labels.
 In QGIS, you can do this by changing the position of the labels to be rendered
 directly over the points they refer to.
 
-#. Open the |labeling| :guilabel:`Labels` tab of the
+#. Open the |labelingSingle| :guilabel:`Labels` tab of the
    :guilabel:`Layer Properties` dialog for the ``places`` layer
 #. Select the :guilabel:`Placement` option from the options list
 #. Click on the :guilabel:`Offset from point` button
@@ -210,7 +210,7 @@ We will now reformat the ``roads`` layer labels so that they are easy to
 understand.
 
 #. Hide the ``places`` layer so that it doesn't distract you
-#. Activate |labeling| :guilabel:`Single Labels` for the ``roads``
+#. Activate |labelingSingle| :guilabel:`Single Labels` for the ``roads``
    layer as you did above for ``places``
 #. Set the font :guilabel:`Size` to ``10`` so that you can see more labels
 #. Zoom in on the |majorUrbanName| town area
@@ -282,7 +282,7 @@ looks better.
 
 #. Navigate to the :guilabel:`Text` panel in the ``places``
    :guilabel:`Labels` panel
-#. Click the |dataDefined| button next to the Italic text button beneath
+#. Click the |dataDefine| button next to the Italic text button beneath
    :guilabel:`Style` and select :menuselection:`Edit...` to open the
    :guilabel:`Expression String Builder`:
 
@@ -337,7 +337,7 @@ field matches ``town`` are displayed in italics.
    #. Remember to save changes and exit edit mode
    #. Return to the :guilabel:`Text` formatting options for the ``places``
       layer and select ``FONT_SIZE`` in the :guilabel:`Attribute field` of the
-      font size |dataDefined| data defined override dropdown:
+      font size |dataDefine| data defined override dropdown:
 
       .. figure:: img/font_size_override.png
          :align: center
@@ -359,7 +359,7 @@ position, and other properties of a label (if you have attribute fields
 allocated for the purpose), then edit these properties using the tools adjacent
 to the main :guilabel:`Layer Labeling Options` button:
 
-|labeling| |showPinnedLabels| |pinLabels|
+|labelingSingle| |showPinnedLabels| |pinLabels|
 |showHideLabels| |moveLabel| |rotateLabel|
 |changeLabelProperties|
 
@@ -398,10 +398,10 @@ topic for the next lesson!
 .. |basic| image:: /static/common/basic.png
 .. |changeLabelProperties| image:: /static/common/mActionChangeLabelProperties.png
    :width: 1.5em
-.. |dataDefined| image:: /static/common/mIconDataDefine.png
+.. |dataDefine| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
 .. |hard| image:: /static/common/hard.png
-.. |labeling| image:: /static/common/labelingSingle.png
+.. |labelingSingle| image:: /static/common/labelingSingle.png
    :width: 1.5em
 .. |majorUrbanName| replace:: Swellendam
 .. |moderate| image:: /static/common/moderate.png

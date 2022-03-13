@@ -160,7 +160,7 @@ You can also create your own projections.
    .. figure:: img/custom_crs.png
       :align: center
 
-#. Click on the |signPlus| :sup:`Add new CRS` button to create a new
+#. Click on the |symbologyAdd| :sup:`Add new CRS` button to create a new
    projection
 #. An interesting projection to use is called ``Van der Grinten I``.
    Enter its name in the :guilabel:`Name` field.
@@ -254,5 +254,5 @@ QGIS' various vector analysis tools.
    :width: 1.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
-.. |signPlus| image:: /static/common/symbologyAdd.png
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em

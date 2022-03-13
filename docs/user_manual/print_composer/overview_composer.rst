@@ -598,9 +598,9 @@ The :guilabel:`Variables` lists all the variables available at
 the layout's level (which includes all global and project's variables).
 
 It also allows the user to manage layout-level variables. Click the
-|signPlus| button to add a new custom layout-level variable. Likewise,
+|symbologyAdd| button to add a new custom layout-level variable. Likewise,
 select a custom layout-level variable from the list and click the
-|signMinus| button to remove it.
+|symbologyRemove| button to remove it.
 
 More information on variables usage in the
 :ref:`General Tools <general_tools_variables>` section.
@@ -709,7 +709,7 @@ The :guilabel:`Guides` panel allows creation of snap lines at specific
 locations:
 
 #. Select the :guilabel:`Page` you'd like to add the guides to
-#. Click the |signPlus| :sup:`Add new guide` button and enter the coordinates
+#. Click the |symbologyAdd| :sup:`Add new guide` button and enter the coordinates
    of the horizontal or vertical line. The origin is at the top left corner.
    Different units are available for this.
 
@@ -719,7 +719,7 @@ locations:
    It allows creation or removal of guides only in the current page.
    However, you can use the :guilabel:`Apply to All Pages` button to replicate
    the guide configuration of the current page to the other pages in the layout.
-#. To delete a guide, select it and press the |signMinus| :sup:`Remove selected
+#. To delete a guide, select it and press the |symbologyRemove| :sup:`Remove selected
    guide` button. Use :guilabel:`Clear All Guides` to remove all the guides
    in the current page.
 
@@ -914,11 +914,11 @@ the actions done after the selected one will be removed.
    :width: 1.5em
 .. |showAllLayers| image:: /static/common/mActionShowAllLayers.png
    :width: 1.5em
-.. |signMinus| image:: /static/common/symbologyRemove.png
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em
-.. |signPlus| image:: /static/common/symbologyAdd.png
+.. |symbologyRemove| image:: /static/common/symbologyRemove.png
    :width: 1.5em
-.. |unchecked| image:: /static/common/checkbox_unchecked.png
+.. |unchecked| image:: /static/common/unchecked.png
    :width: 1.3em
 .. |undo| image:: /static/common/mActionUndo.png
    :width: 1.5em

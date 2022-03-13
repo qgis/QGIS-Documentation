@@ -40,8 +40,8 @@ symbol properties change.
 Depending on the level selected in the symbol tree items, various tools are
 made available to help you manage the tree:
 
-* |signPlus| add new symbol layer: you can stack as many symbols as you want
-* |signMinus| remove the selected symbol layer
+* |symbologyAdd| add new symbol layer: you can stack as many symbols as you want
+* |symbologyRemove| remove the selected symbol layer
 * lock colors of symbol layer: a |locked| locked color stays unchanged when
   user changes the color at the global (or upper) symbol level
 * |duplicateLayer| duplicate a (group of) symbol layer(s)
@@ -148,7 +148,7 @@ regardless it's of marker, line or fill sub-type:
 * :guilabel:`Units`: it can be **Millimeters**, **Points**, **Pixels**,
   **Meters at Scale**, **Map units** or **Inches** (see :ref:`unit_selector`
   for more details)
-* the |dataDefined| :sup:`data-defined override` widget near almost all options,
+* the |dataDefine| :sup:`Data-defined override` widget near almost all options,
   extending capabilities of customizing each symbol (see :ref:`data_defined` for
   more information)
 * the |checkbox| :guilabel:`Enable symbol layer` option controls the symbol layer's
@@ -623,7 +623,7 @@ viewing the field.
 
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |dataDefined| image:: /static/common/mIconDataDefine.png
+.. |dataDefine| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
 .. |duplicateLayer| image:: /static/common/mActionDuplicateLayer.png
    :width: 1.5em
@@ -641,9 +641,9 @@ viewing the field.
    :width: 1.5em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
-.. |signMinus| image:: /static/common/symbologyRemove.png
-   :width: 1.5em
-.. |signPlus| image:: /static/common/symbologyAdd.png
-   :width: 1.5em
 .. |styleManager| image:: /static/common/mActionStyleManager.png
+   :width: 1.5em
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |symbologyRemove| image:: /static/common/symbologyRemove.png
    :width: 1.5em

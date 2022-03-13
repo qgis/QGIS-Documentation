@@ -741,7 +741,7 @@ Defining 1-N relations
 
 The first thing we are going to do is to let QGIS know about the relations
 between the layers. This is done in :menuselection:`Project --> Properties...`.
-Open the :guilabel:`Relations` tab and click on |signPlus| :guilabel:`Add Relation`.
+Open the :guilabel:`Relations` tab and click on |symbologyAdd| :guilabel:`Add Relation`.
 
 * **Name** is going to be used as a title. It should be a human readable string,
   describing, what the relation is used for. We will just call say **airport_relation**
@@ -757,7 +757,7 @@ Open the :guilabel:`Relations` tab and click on |signPlus| :guilabel:`Add Relati
   .. note:: Sometimes, you need more than a single field to uniquely identify
    features in a layer. Creating a relation with such a layer requires
    a **composite key**, ie more than a single pair of matching
-   fields. Use the |signPlus| :sup:`Add new field pair as part of a composite
+   fields. Use the |symbologyAdd| :sup:`Add new field pair as part of a composite
    foreign key` button to add as many pairs as necessary.
 
 * **Id** will be used for internal purposes and has to be unique. You may need
@@ -779,7 +779,7 @@ Open the :guilabel:`Relations` tab and click on |signPlus| :guilabel:`Add Relati
 
    Adding a relation between regions and airports layers
 
-From the :guilabel:`Relations` tab, you can also press the |signPlus|
+From the :guilabel:`Relations` tab, you can also press the |symbologyAdd|
 :guilabel:`Discover Relation` button to fetch the relations available from
 the providers of the loaded layers. This is possible for layers stored in
 data providers like PostgreSQL or SpatiaLite.
@@ -877,7 +877,7 @@ you to assign the current airport to another region.
 Moreover if you toggle the editing mode of the airport layer, the ``fk_region``
 field has also an autocompleter function: while typing you will see all the
 values of the ``id`` field of the region layer.
-Here it is possible to digitize a polygon for the region layer using the |signPlus| button
+Here it is possible to digitize a polygon for the region layer using the |symbologyAdd| button
 if you chose the option ``Allow adding new features`` in the
 :menuselection:`Properties --> Attributes Form` menu of the airport layer.
 
@@ -1090,7 +1090,7 @@ Defining polymorphic relations
 
 First, let QGIS know about the polymorphic relations between the layers. This is
 done in :menuselection:`Project --> Properties...`.
-Open the :guilabel:`Relations` tab and click on the little down arrow next to the |signPlus|
+Open the :guilabel:`Relations` tab and click on the little down arrow next to the |symbologyAdd|
 :guilabel:`Add Relation` button, so you can select the :guilabel:`Add Polymorphic Relation` option
 from the newly appeared dropdown.
 
@@ -1115,7 +1115,7 @@ from the newly appeared dropdown.
   .. note:: Sometimes, you need more than a single field to uniquely identify
    features in a layer. Creating a relation with such a layer requires
    a **composite key**, ie more than a single pair of matching
-   fields. Use the |signPlus| :sup:`Add new field pair as part of a composite
+   fields. Use the |symbologyAdd| :sup:`Add new field pair as part of a composite
    foreign key` button to add as many pairs as necessary.
 
 * **Layer Field** is the field in the referencing table that stores the result of the evaluated
@@ -1263,7 +1263,7 @@ selected) and the field will be updated with the new resource URL.
    User can also achieve the same result if he drags and drops a file on the whole attachment
    widget.
 
-Use the |cancel| :sup:`Cancel` button to abort the storing process.
+Use the |taskCancel| :sup:`Cancel` button to abort the storing process.
 It's possible to configure a viewer using the :guilabel:`Integrated document viewer`
 so the resource will be automatically fetched from the external storage system and
 displayed directly below the URL.
@@ -1283,8 +1283,6 @@ from the external storage system. In that case, more details might appear in the
 .. |addPart| image:: /static/common/mActionAddPart.png
    :width: 1.5em
 .. |calculateField| image:: /static/common/mActionCalculateField.png
-   :width: 1.5em
-.. |cancel| image:: /static/common/mTaskCancel.png
    :width: 1.5em
 .. |capturePoint| image:: /static/common/mActionCapturePoint.png
    :width: 1.5em
@@ -1366,9 +1364,11 @@ from the external storage system. In that case, more details might appear in the
    :width: 1.5em
 .. |selectedToTop| image:: /static/common/mActionSelectedToTop.png
    :width: 1.5em
-.. |signPlus| image:: /static/common/symbologyAdd.png
-   :width: 1.5em
 .. |sort| image:: /static/common/sort.png
+   :width: 1.5em
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |taskCancel| image:: /static/common/mTaskCancel.png
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em

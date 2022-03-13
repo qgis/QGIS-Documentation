@@ -414,7 +414,7 @@ coordinate. The vertices and faces have the same topology in each vertical level
 Values are usually stored on the volumes that are regularly stacked over
 base 2d mesh. In order to visualise them on 2D canvas, you need to convert
 values on volumes (3d) to values on faces (2d) that can be shown in mesh layer.
-The |meshAveraging| :sup:`Stacked mesh averaging method` provides different
+The |meshaveraging| :sup:`Stacked mesh averaging method` provides different
 averaging/interpolation methods to handle this.
 
 You can select the method to derive the 2D datasets and corresponding parameters
@@ -681,5 +681,5 @@ the expression to execute.
    :width: 1.5em
 .. |temporal| image:: /static/common/temporal.png
    :width: 1.5em
-.. |unchecked| image:: /static/common/checkbox_unchecked.png
+.. |unchecked| image:: /static/common/unchecked.png
    :width: 1.3em

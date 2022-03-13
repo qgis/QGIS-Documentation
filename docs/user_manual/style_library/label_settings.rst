@@ -33,7 +33,7 @@ Two types of text-related items are available in QGIS:
 
         Text formats in Style Manager dialog
 
-  #. Press the |signPlus| :sup:`Add item` button. The :guilabel:`Text Format`
+  #. Press the |symbologyAdd| :sup:`Add item` button. The :guilabel:`Text Format`
      dialog opens for :ref:`configuration <text_format>`.
      As usual, these properties are :ref:`data-definable <data_defined>`.
 
@@ -43,8 +43,8 @@ Two types of text-related items are available in QGIS:
   :ref:`overlay, scale visibility <labels_rendering>`, mask ...).
 
   They are used to configure smart labelling for vector layers through the
-  |labeling| :guilabel:`Labels` tab of the vector :guilabel:`Layer Properties`
-  dialog or :guilabel:`Layer Styling` panel or using the |labeling| :sup:`Layer
+  |labelingSingle| :guilabel:`Labels` tab of the vector :guilabel:`Layer Properties`
+  dialog or :guilabel:`Layer Styling` panel or using the |labelingSingle| :sup:`Layer
   Labeling Options` button of the :ref:`Label toolbar <label_toolbar>`.
 
   To create a :guilabel:`Label Settings` item:
@@ -59,7 +59,7 @@ Two types of text-related items are available in QGIS:
 
         Label Settings in Style Manager dialog
 
-  #. Press the |signPlus| :sup:`Add item` menu and select the entry corresponding
+  #. Press the |symbologyAdd| :sup:`Add item` menu and select the entry corresponding
      to the geometry type of the features you want to label.
 
   The :guilabel:`Label Settings` dialog opens with the following properties.
@@ -761,7 +761,7 @@ or diagrams. This can be controlled from the :guilabel:`Obstacles` section:
    any label and diagram (including items from other features in the same layer).
 
    Instead of the whole layer, you can select a subset of features to use as
-   obstacles, using the |dataDefined| :sup:`data-defined override` control next
+   obstacles, using the |dataDefine| :sup:`Data-defined override` control next
    to the option.
 
 #. Use the :guilabel:`Settings` button to tweak the obstacle's weighting.
@@ -857,7 +857,7 @@ Under :guilabel:`Feature options`:
 
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |dataDefined| image:: /static/common/mIconDataDefine.png
+.. |dataDefine| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
 .. |labelAnchorCenter| image:: /static/common/mActionLabelAnchorCenter.png
    :width: 1.5em
@@ -875,7 +875,7 @@ Under :guilabel:`Feature options`:
    :width: 1.5em
 .. |labelformatting| image:: /static/common/labelformatting.png
    :width: 1.5em
-.. |labeling| image:: /static/common/labelingSingle.png
+.. |labelingSingle| image:: /static/common/labelingSingle.png
    :width: 1.5em
 .. |labelmask| image:: /static/common/labelmask.png
    :width: 1.5em
@@ -889,11 +889,11 @@ Under :guilabel:`Feature options`:
    :width: 1.5em
 .. |render| image:: /static/common/render.png
    :width: 1.5em
-.. |signPlus| image:: /static/common/symbologyAdd.png
-   :width: 1.5em
 .. |styleManager| image:: /static/common/mActionStyleManager.png
+   :width: 1.5em
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |text| image:: /static/common/text.png
    :width: 1.5em
-.. |unchecked| image:: /static/common/checkbox_unchecked.png
+.. |unchecked| image:: /static/common/unchecked.png
    :width: 1.3em

@@ -44,7 +44,7 @@ panel provides the following functionalities (see :numref:`figure_layout_html_pp
 
 * In :guilabel:`URL` you can enter the URL of a webpage you copied from your
   Internet browser or select an HTML file using the :guilabel:`...` :sup:`Browse`
-  button. There is also the option to use the |dataDefined| :sup:`Data-defined
+  button. There is also the option to use the |dataDefine| :sup:`Data-defined
   override` button, to provide a URL from the contents of an attribute field of
   a table or using a regular expression.
 * In :guilabel:`Source` you can enter text in the textbox with some HTML tags or
@@ -148,5 +148,5 @@ following functionalities (see :numref:`figure_layout_html_breaks`):
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |dataDefined| image:: /static/common/mIconDataDefine.png
+.. |dataDefine| image:: /static/common/mIconDataDefine.png
    :width: 1.5em

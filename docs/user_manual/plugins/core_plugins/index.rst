@@ -27,7 +27,7 @@ Icon                    Plugin                        Description               
 |dbManager|             DB Manager                    Manage your databases within QGIS                       :ref:`dbmanager`
 |geometryChecker|       Geometry Checker              Check and repair errors in vector geometries            :ref:`geometry_checker`
 |grassTools|            GRASS 7                       GRASS functionality                                     :ref:`sec_grass`
-|grass|                 GRASS GIS provider            GRASS GIS Processing functionality                      :ref:`sec_grass`
+|grassLogo|                 GRASS GIS provider            GRASS GIS Processing functionality                      :ref:`sec_grass`
 |metasearch|            MetaSearch Catalog Client     Interact with metadata catalog services (CSW)           :ref:`metasearch`
 |offlineEditingCopy|    Offline Editing               Offline editing and synchronizing with database         :ref:`offlinedit`
 |otb|                   OrfeoToolbox provider         OrfeoToolbox Processing provider                        :ref:`otb_provider`
@@ -38,7 +38,7 @@ Icon                    Plugin                        Description               
 
 .. note::
 
-   To use the Core Plugins |grassTools| GRASS 7, |grass| GRASS GIS provider,
+   To use the Core Plugins |grassTools| GRASS 7, |grassLogo| GRASS GIS provider,
    |otb| OrfeoToolbox provider or |saga| SAGA GIS provider they have to be 
    configured. Informations can be found :ref:`here <processing.results>`.
 
@@ -54,7 +54,7 @@ Icon                    Plugin                        Description               
    :width: 1.5em
 .. |geoprocessing| image:: /static/common/geoprocessing.png
    :width: 1.5em
-.. |grass| image:: /static/common/grasslogo.png
+.. |grassLogo| image:: /static/common/grasslogo.png
    :width: 1.5em
 .. |grassTools| image:: /static/common/grass_tools.png
    :width: 1.5em

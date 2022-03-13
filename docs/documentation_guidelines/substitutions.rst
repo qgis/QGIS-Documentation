@@ -98,9 +98,9 @@ Icon                            Substitution                        Icon        
 |wcs|                           ``|wcs|``                           |wfs|                           ``|wfs|``
 |dbSchema|                      ``|dbSchema|``
 |inOverview|                    ``|inOverview|``                    |addAllToOverview|              ``|addAllToOverview|``
-|removeAllOVerview|             ``|removeAllOVerview|``             |removeLayer|                   ``|removeLayer|``
+|removeAllFromOverview|         ``|removeAllFromOverview|``         |removeLayer|                   ``|removeLayer|``
 |showAllLayers|                 ``|showAllLayers|``                 |hideAllLayers|                 ``|hideAllLayers|``
-|showMapTheme|                  ``|showMapTheme|``                  |showSelectedLayers|            ``|showSelectedLayers|``
+|showPresets|                   ``|showPresets|``                   |showSelectedLayers|            ``|showSelectedLayers|``
 |hideSelectedLayers|            ``|hideSelectedLayers|``            |hideDeselectedLayers|          ``|hideDeselectedLayers|``
 |toggleAllLayers|               ``|toggleAllLayers|``               |toggleSelectedLayers|          ``|toggleSelectedLayers|``
 |addLayer|                      ``|addLayer|``
@@ -180,11 +180,11 @@ Icon                             Substitution                          Icon     
 |rotateFeature|                  ``|rotateFeature|``                   |rotatePointSymbols|              ``|rotatePointSymbols|``
 |scaleFeature|                   ``|scaleFeature|``
 |offsetCurve|                    ``|offsetCurve|``                     |offsetPointSymbols|              ``|offsetPointSymbols|``
-|simplifyFeatures|               ``|simplifyFeatures|``                |reshape|                         ``|reshape|``
+|simplify|                       ``|simplify|``                        |reshape|                         ``|reshape|``
 |addRing|                        ``|addRing|``                         |addPart|                         ``|addPart|``
 |fillRing|                       ``|fillRing|``
 |deleteRing|                     ``|deleteRing|``                      |deletePart|                      ``|deletePart|``
-|mergeFeatures|                  ``|mergeFeatures|``                   |mergeFeatAttributes|             ``|mergeFeatAttributes|``
+|mergeFeatures|                  ``|mergeFeatures|``                   |mergeFeatureAttributes|          ``|mergeFeatureAttributes|``
 |splitFeatures|                  ``|splitFeatures|``                   |splitParts|                      ``|splitParts|``
 |reverseLine|                    ``|reverseLine|``
 |allowIntersections|             ``|allowIntersections|``              |avoidIntersectionsCurrentLayer|  ``|avoidIntersectionsCurrentLayer|``
@@ -219,7 +219,7 @@ Icon                            Substitution                        Icon        
 |identify|                      ``|identify|``                      |mapTips|                       ``|mapTips|``
 |showBookmarks|                 ``|showBookmarks|``                 |newBookmark|                   ``|newBookmark|``
 |measure|                       ``|measure|``                       |measureArea|                   ``|measureArea|``
-|measureBearing|                ``|measureBearing|``                  |measureAngle|                  ``|measureAngle|``
+|measureBearing|                ``|measureBearing|``                |measureAngle|                  ``|measureAngle|``
 |newMap|                        ``|newMap|``                        |new3DMap|                      ``|new3DMap|``
 |tiltUp|                        ``|tiltUp|``                        |tiltDown|                      ``|tiltDown|``
 |3dNavigation|                  ``|3dNavigation|``                  |play|                          ``|play|``
@@ -237,9 +237,9 @@ Icon                            Substitution                        Icon        
 |selectFreehand|                ``|selectFreehand|``                |selectRadius|                  ``|selectRadius|``
 |selectAll|                     ``|selectAll|``                     |deselectAll|                   ``|deselectAll|``
 |invertSelection|               ``|invertSelection|``               |expressionSelect|              ``|expressionSelect|``
-|deselectActiveLayer|           ``|deselectActiveLayer|``           |algorithmSelectLocation|       ``|algorithmSelectLocation|``
+|deselectActiveLayer|           ``|deselectActiveLayer|``           |selectLocation|                ``|selectLocation|``
 |selectAllTree|                 ``|selectAllTree|``                 |select|                        ``|select|``
-|formSelect|                    ``|formSelect|``                    |dataDefined|                   ``|dataDefined|``
+|formSelect|                    ``|formSelect|``                    |dataDefine|                    ``|dataDefine|``
 |expression|                    ``|expression|``                    |dataDefineOn|                  ``|dataDefineOn|``
 |dataDefineExpressionOn|        ``|dataDefineExpressionOn|``        |dataDefineError|               ``|dataDefineError|``
 |dataDefineExpressionError|     ``|dataDefineExpressionError|``
@@ -254,14 +254,14 @@ Labels and Diagrams
 =======================  ===========================  =======================  ===========================
 Icon                     Substitution                 Icon                     Substitution
 =======================  ===========================  =======================  ===========================
-|labeling|               ``|labeling|``               |labelingNone|           ``|labelingNone|``
+|labelingSingle|         ``|labelingSingle|``         |labelingNone|           ``|labelingNone|``
 |labelingRuleBased|      ``|labelingRuleBased|``      |labelingObstacle|       ``|labelingObstacle|``
 |piechart|               ``|piechart|``               |diagramNone|            ``|diagramNone|``
 |text|                   ``|text|``                   |histogram|              ``|histogram|``
 |stackedBar|             ``|stackedBar|``
 |annotation|             ``|annotation|``             |textAnnotation|         ``|textAnnotation|``
 |formAnnotation|         ``|formAnnotation|``         |htmlAnnotation|         ``|htmlAnnotation|``
-|svgAnnotation|          ``|svgAnnotation|``          |autoPlacement|          ``|autoPlacement|``
+|svgAnnotation|          ``|svgAnnotation|``          |autoPlacementSettings|  ``|autoPlacementSettings|``
 |labelbackground|        ``|labelbackground|``        |labelbuffer|            ``|labelbuffer|``
 |labelformatting|        ``|labelformatting|``        |labelplacement|         ``|labelplacement|``
 |labelshadow|            ``|labelshadow|``            |render|                 ``|render|``
@@ -315,7 +315,7 @@ Other basic icons
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
 |arrowDown|                     ``|arrowDown|``                     |arrowUp|                       ``|arrowUp|``
-|signPlus|                      ``|signPlus|``                      |signMinus|                     ``|signMinus|``
+|symbologyAdd|                  ``|symbologyAdd|``                  |symbologyRemove|               ``|symbologyRemove|``
 |projectProperties|             ``|projectProperties|``             |options|                       ``|options|``
 |interfaceCustomization|        ``|interfaceCustomization|``        |keyboardShortcuts|             ``|keyboardShortcuts|``
 |copyrightLabel|                ``|copyrightLabel|``                |northArrow|                    ``|northArrow|``
@@ -323,7 +323,7 @@ Icon                            Substitution                        Icon        
 |gpsImporter|                   ``|gpsImporter|``                   |gpsTrackBarChart|              ``|gpsTrackBarChart|``
 |folder|                        ``|folder|``                        |extents|                       ``|extents|``
 |settings|                      ``|settings|``                      |start|                         ``|start|``
-|3dconfigure|                   ``|3dconfigure|``                   |deleteSelected|                ``|deleteSelected|``
+|properties|                    ``|properties|``                    |deleteSelected|                ``|deleteSelected|``
 |browserExpand|                 ``|browserExpand|``                 |browserCollapse|               ``|browserCollapse|``
 |codeEditor|                    ``|codeEditor|``                    |add|                           ``|add|``
 ==============================  ==================================  ==============================  ==================================
@@ -406,7 +406,7 @@ Icon                     Substitution                 Icon                     S
 |resizeSquare|           ``|resizeSquare|``           \                        \
 |lockItems|              ``|lockItems|``              |unlockAll|              ``|unlockAll|``
 |locked|                 ``|locked|``                 |unlocked|               ``|unlocked|``
-|lockedRepeat|           ``|lockedRepeat|``           |lockedGray|             ``|lockedGray|``
+|lockRepeating|          ``|lockRepeating|``          |lockedGray|             ``|lockedGray|``
 |groupItems|             ``|groupItems|``             \                        \
 =======================  ===========================  =======================  ===========================
 
@@ -416,7 +416,7 @@ Layer Properties
 ==================================  ======================================  =============================  ================================
 Icon                                Substitution                            Icon                           Substitution
 ==================================  ======================================  =============================  ================================
-|symbology|                         ``|symbology|``                         |labeling|                     ``|labeling|``
+|symbology|                         ``|symbology|``                         |labelingSingle|               ``|labelingSingle|``
 |sourceFields|                      ``|sourceFields|``                      |general|                      ``|general|``
 |metadata|                          ``|metadata|``                          |action|                       ``|action|``
 |display|                           ``|display|``                           |rendering|                    ``|rendering|``
@@ -457,12 +457,12 @@ Processing
 ==============================  ==================================  ==============================  ==================================
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
-|processing|                    ``|processing|``                    |processingModel|               ``|processingModel|``
+|processingAlgorithm|           ``|processingAlgorithm|``           |processingModel|               ``|processingModel|``
 |processingHistory|             ``|processingHistory|``             |processingResult|              ``|processingResult|``
-|processSelected|               ``|processSelected|``               |processingHelp|                ``|processingHelp|``  
-|saveAsPython|                  ``|saveAsPython|``                  |processingOutput|              ``|processingOutput|``  
+|processSelected|               ``|processSelected|``               |editHelpContent|               ``|editHelpContent|``  
+|saveAsPython|                  ``|saveAsPython|``                  |modelOutput|                   ``|modelOutput|``  
 |qgsProjectFile|                ``|qgsProjectFile|``                |addToProject|                  ``|addToProject|``
-|integer|                       ``|integer|``
+|fieldInteger|                  ``|fieldInteger|``
 |mean|                          ``|mean|``                          |layerExtent|                   ``|layerExtent|``
 |randomSelection|               ``|randomSelection|``               |vectorGrid|                    ``|vectorGrid|``
 |convexHull|                    ``|convexHull|``                    |buffer|                        ``|buffer|``
@@ -501,7 +501,7 @@ Grass integration
 ==============================  ==================================  ==============================  ==================================
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
-|grass|                         ``|grass|``                         |grassRegion|                   ``|grassRegion|``
+|grassLogo|                     ``|grassLogo|``                     |grassRegion|                   ``|grassRegion|``
 |grassTools|                    ``|grassTools|``                    |grassNewMapset|                ``|grassNewMapset|``
 |grassOpenMapset|               ``|grassOpenMapset|``               |grassCloseMapset|              ``|grassCloseMapset|``
 ==============================  ==================================  ==============================  ==================================
@@ -518,8 +518,6 @@ Icon                            Substitution                        Icon        
 .. |3d| image:: /static/common/3d.png
    :width: 1.5em
 .. |3dNavigation| image:: /static/common/mAction3DNavigation.png
-   :width: 1.3em
-.. |3dconfigure| image:: /static/common/mIconProperties.png
    :width: 1.3em
 .. |action| image:: /static/common/action.png
    :width: 2em
@@ -605,8 +603,6 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |addXyzLayer| image:: /static/common/mActionAddXyzLayer.png
    :width: 1.5em
-.. |algorithmSelectLocation| image:: /static/common/mAlgorithmSelectLocation.png
-   :width: 1.5em
 .. |alignBottom| image:: /static/common/mActionAlignBottom.png
    :width: 1.5em
 .. |alignHCenter| image:: /static/common/mActionAlignHCenter.png
@@ -633,7 +629,7 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |atlasSettings| image:: /static/common/mActionAtlasSettings.png
    :width: 1.5em
-.. |autoPlacement| image:: /static/common/mIconAutoPlacementSettings.png
+.. |autoPlacementSettings| image:: /static/common/mIconAutoPlacementSettings.png
    :width: 1.5em
 .. |auxiliaryStorage| image:: /static/common/mIconAuxiliaryStorage.png
    :width: 1.5em
@@ -719,6 +715,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |customProjection| image:: /static/common/mActionCustomProjection.png
    :width: 1.5em
+.. |dataDefine| image:: /static/common/mIconDataDefine.png
+   :width: 1.5em
 .. |dataDefineError| image:: /static/common/mIconDataDefineError.png
    :width: 1.5em
 .. |dataDefineExpressionError| image:: /static/common/mIconDataDefineExpressionError.png
@@ -726,8 +724,6 @@ Icon                            Substitution                        Icon        
 .. |dataDefineExpressionOn| image:: /static/common/mIconDataDefineExpressionOn.png
    :width: 1.5em
 .. |dataDefineOn| image:: /static/common/mIconDataDefineOn.png
-   :width: 1.5em
-.. |dataDefined| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
    :width: 1.5em
@@ -779,6 +775,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |editCut| image:: /static/common/mActionEditCut.png
    :width: 1.5em
+.. |editHelpContent| image:: /static/common/mActionEditHelpContent.png
+   :width: 1.5em
 .. |editMetadata| image:: /static/common/editmetadata.png
    :width: 1.2em
 .. |editNodesShape| image:: /static/common/mActionEditNodesShape.png
@@ -814,6 +812,8 @@ Icon                            Substitution                        Icon        
 .. |extractNodes| image:: /static/common/extract_nodes.png
    :width: 1.5em
 .. |favourites| image:: /static/common/mIconFavourites.png
+   :width: 1.5em
+.. |fieldInteger| image:: /static/common/mIconFieldInteger.png
    :width: 1.5em
 .. |fileExit| image:: /static/common/mActionFileExit.png
 .. |fileNew| image:: /static/common/mActionFileNew.png
@@ -865,9 +865,9 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |graduatedSymbol| image:: /static/common/rendererGraduatedSymbol.png
    :width: 1.5em
-.. |grass| image:: /static/common/grasslogo.png
-   :width: 1.5em
 .. |grassCloseMapset| image:: /static/common/grass_close_mapset.png
+   :width: 1.5em
+.. |grassLogo| image:: /static/common/grasslogo.png
    :width: 1.5em
 .. |grassNewMapset| image:: /static/common/grass_new_mapset.png
    :width: 1.5em
@@ -944,8 +944,6 @@ Icon                            Substitution                        Icon        
 .. |inputText| image:: /static/common/inputtext.png
 .. |installPluginFromZip| image:: /static/common/mActionInstallPluginFromZip.png
    :width: 1.5em
-.. |integer| image:: /static/common/mIconFieldInteger.png
-   :width: 1.5em
 .. |interfaceCustomization| image:: /static/common/mActionInterfaceCustomization.png
    :width: 1.5em
 .. |interpolation| image:: /static/common/interpolation.png
@@ -986,13 +984,13 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |labelformatting| image:: /static/common/labelformatting.png
    :width: 1.5em
-.. |labeling| image:: /static/common/labelingSingle.png
-   :width: 1.5em
 .. |labelingNone| image:: /static/common/labelingNone.png
    :width: 1.5em
 .. |labelingObstacle| image:: /static/common/labelingObstacle.png
    :width: 1.5em
 .. |labelingRuleBased| image:: /static/common/labelingRuleBased.png
+   :width: 1.5em
+.. |labelingSingle| image:: /static/common/labelingSingle.png
    :width: 1.5em
 .. |labelmask| image:: /static/common/labelmask.png
    :width: 1.5em
@@ -1012,12 +1010,12 @@ Icon                            Substitution                        Icon        
    :width: 2.5em
 .. |lockItems| image:: /static/common/mActionLockItems.png
    :width: 1.5em
+.. |lockRepeating| image:: /static/common/lock_repeating.png
+   :width: 1.5em
 .. |locked| image:: /static/common/locked.png
    :width: 1.5em
 .. |lockedGray| image:: /static/common/lockedGray.png
    :width: 1.2em
-.. |lockedRepeat| image:: /static/common/lock_repeating.png
-   :width: 1.5em
 .. |logo| image:: /static/common/logo.png
    :width: 1.5em
 .. |lowerItems| image:: /static/common/mActionLowerItems.png
@@ -1036,7 +1034,7 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |measureBearing| image:: /static/common/mActionMeasureBearing.png
    :width: 1.5em
-.. |mergeFeatAttributes| image:: /static/common/mActionMergeFeatureAttributes.png
+.. |mergeFeatureAttributes| image:: /static/common/mActionMergeFeatureAttributes.png
    :width: 1.5em
 .. |mergeFeatures| image:: /static/common/mActionMergeFeatures.png
    :width: 1.5em
@@ -1069,6 +1067,8 @@ Icon                            Substitution                        Icon        
 .. |metadata| image:: /static/common/metadata.png
    :width: 1.5em
 .. |metasearch| image:: /static/common/MetaSearch.png
+   :width: 1.5em
+.. |modelOutput| image:: /static/common/mIconModelOutput.png
    :width: 1.5em
 .. |moveFeature| image:: /static/common/mActionMoveFeature.png
    :width: 1.5em
@@ -1170,15 +1170,11 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |processSelected| image:: /static/common/mActionProcessSelected.png
    :width: 1.5em
-.. |processing| image:: /static/common/processingAlgorithm.png
-   :width: 1.5em
-.. |processingHelp| image:: /static/common/mActionEditHelpContent.png
+.. |processingAlgorithm| image:: /static/common/processingAlgorithm.png
    :width: 1.5em
 .. |processingHistory| image:: /static/common/history.png
    :width: 1.5em
 .. |processingModel| image:: /static/common/processingModel.png
-   :width: 1.5em
-.. |processingOutput| image:: /static/common/mIconModelOutput.png
    :width: 1.5em
 .. |processingResult| image:: /static/common/processingResult.png
    :width: 1.5em
@@ -1188,6 +1184,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |projectionEnabled| image:: /static/common/mIconProjectionEnabled.png
    :width: 1.5em
+.. |properties| image:: /static/common/mIconProperties.png
+   :width: 1.3em
 .. |pyramids| image:: /static/common/pyramids.png
    :width: 1.5em
 .. |pythonFile| image:: /static/common/mIconPythonFile.png
@@ -1226,7 +1224,7 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |regularPolygonCenterPoint| image:: /static/common/mActionRegularPolygonCenterPoint.png
    :width: 1.5em
-.. |removeAllOVerview| image:: /static/common/mActionRemoveAllFromOverview.png
+.. |removeAllFromOverview| image:: /static/common/mActionRemoveAllFromOverview.png
    :width: 1.5em
 .. |removeLayer| image:: /static/common/mActionRemoveLayer.png
    :width: 1.5em
@@ -1284,6 +1282,8 @@ Icon                            Substitution                        Icon        
 .. |selectColorRamp| image:: /static/common/selectcolorramp.png
 .. |selectFreehand| image:: /static/common/mActionSelectFreehand.png
    :width: 1.5em
+.. |selectLocation| image:: /static/common/mAlgorithmSelectLocation.png
+   :width: 1.5em
 .. |selectNumber| image:: /static/common/selectnumber.png
    :width: 2.8em
 .. |selectPolygon| image:: /static/common/mActionSelectPolygon.png
@@ -1316,13 +1316,13 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |showHideLabels| image:: /static/common/mActionShowHideLabels.png
    :width: 1.5em
-.. |showMapTheme| image:: /static/common/mActionShowPresets.png
-   :width: 1.5em
 .. |showMeshCalculator| image:: /static/common/mActionShowMeshCalculator.png
    :width: 1.5em
 .. |showPinnedLabels| image:: /static/common/mActionShowPinnedLabels.png
    :width: 1.5em
 .. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
+   :width: 1.5em
+.. |showPresets| image:: /static/common/mActionShowPresets.png
    :width: 1.5em
 .. |showRasterCalculator| image:: /static/common/mActionShowRasterCalculator.png
    :width: 1.5em
@@ -1330,11 +1330,7 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |showUnplacedLabel| image:: /static/common/mActionShowUnplacedLabel.png
    :width: 1.5em
-.. |signMinus| image:: /static/common/symbologyRemove.png
-   :width: 1.5em
-.. |signPlus| image:: /static/common/symbologyAdd.png
-   :width: 1.5em
-.. |simplifyFeatures| image:: /static/common/mActionSimplify.png
+.. |simplify| image:: /static/common/mActionSimplify.png
    :width: 1.5em
 .. |singleSymbol| image:: /static/common/rendererSingleSymbol.png
    :width: 1.5em
@@ -1377,7 +1373,11 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
 .. |symbologyEdit| image:: /static/common/symbologyEdit.png
+   :width: 1.5em
+.. |symbologyRemove| image:: /static/common/symbologyRemove.png
    :width: 1.5em
 .. |system| image:: /static/common/system.png
    :width: 1.5em
@@ -1419,7 +1419,7 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |transparency| image:: /static/common/transparency.png
    :width: 1.5em
-.. |unchecked| image:: /static/common/checkbox_unchecked.png
+.. |unchecked| image:: /static/common/unchecked.png
    :width: 1.3em
 .. |undo| image:: /static/common/mActionUndo.png
    :width: 1.5em

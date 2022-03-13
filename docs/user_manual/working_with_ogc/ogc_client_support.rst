@@ -719,7 +719,7 @@ features and view the attribute table.
    :width: 2.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
-.. |unchecked| image:: /static/common/checkbox_unchecked.png
+.. |unchecked| image:: /static/common/unchecked.png
    :width: 1.3em
 .. |wcs| image:: /static/common/mIconWcs.png
    :width: 1.5em

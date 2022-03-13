@@ -262,7 +262,7 @@ topological functionalities.
 Enable topological editing
 --------------------------
 
-The |topopologicalEditing| :sup:`Topological editing` button helps
+The |topologicalEditing| :sup:`Topological editing` button helps
 when editing and maintaining features with common boundaries.
 With this option enabled, QGIS 'detects' shared boundaries.
 When you move common vertices/segments, QGIS will also move them in
@@ -907,7 +907,7 @@ Advanced digitizing
 | |moveFeatureLine|         |                                         | |moveFeatureCopyLine|  |                         |
 | |moveFeaturePoint|        |                                         | |moveFeatureCopyPoint| |                         |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
-| |rotateFeature|           | Rotate Feature(s)                       | |simplifyFeatures|     | Simplify Feature        |
+| |rotateFeature|           | Rotate Feature(s)                       | |simplify|             | Simplify Feature        |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
 | |scaleFeature|            | Scale Feature                           |                        |                         |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
@@ -921,7 +921,7 @@ Advanced digitizing
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
 | |splitParts|              | Split Parts                             | |splitFeatures|        | Split Features          |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
-| |mergeFeatAttributes|     | Merge Attributes of Selected Features   | |mergeFeatures|        | Merge Selected Features |
+| |mergeFeatureAttributes|  | Merge Attributes of Selected Features   | |mergeFeatures|        | Merge Selected Features |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
 | |rotatePointSymbols|      | Rotate Point Symbols                    | |offsetPointSymbols|   | Offset Point Symbols    |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
@@ -1041,11 +1041,11 @@ in the widget that appears in the upper corner of the canvas.
 Simplify Feature
 ----------------
 
-The |simplifyFeatures| :sup:`Simplify Feature` tool allows you to interactively
+The |simplify| :sup:`Simplify Feature` tool allows you to interactively
 reshape a line or polygon geometry by reducing or densifying the number of
 vertices, as long as the geometry remains valid:
 
-#. Select the |simplifyFeatures| :sup:`Simplify Feature` tool.
+#. Select the |simplify| :sup:`Simplify Feature` tool.
 #. Click on the feature or drag a rectangle over the features.
 #. A dialog pops up allowing you to define the :guilabel:`Method` to apply, ie
    whether you would like to:
@@ -1083,7 +1083,7 @@ vertices, as long as the geometry remains valid:
 
 .. note:: Unlike the feature simplification option in :menuselection:`Settings -->
    Options --> Rendering` menu which simplifies the geometry just for rendering,
-   the |simplifyFeatures| :sup:`Simplify Feature` tool permanently modifies
+   the |simplify| :sup:`Simplify Feature` tool permanently modifies
    feature's geometry in data source.
 
 
@@ -1361,7 +1361,7 @@ a multipolygon/multipolyline/multipoint feature is created.
 Merge attributes of selected features
 -------------------------------------
 
-The |mergeFeatAttributes| :sup:`Merge Attributes of Selected Features` tool
+The |mergeFeatureAttributes| :sup:`Merge Attributes of Selected Features` tool
 allows you to apply same attributes to features without merging their boundaries.
 The dialog is the same as the ``Merge Selected Features`` tool's except that
 unlike that tool, selected objects are kept with their geometry while some of their
@@ -1384,7 +1384,7 @@ change the rotation of point symbols in the map canvas.
 
    #. In the :menuselection:`Layer Properties --> Symbology` dialog, browse to
       the symbol editor dialog.
-   #. Click the |dataDefined| :guilabel:`Data-defined override` widget near the
+   #. Click the |dataDefine| :guilabel:`Data-defined override` widget near the
       :guilabel:`Rotation` option of the top :guilabel:`Marker` level (preferably)
       of the symbol layers.
    #. Choose a field in the :guilabel:`Field Type` combobox. Values of this
@@ -1797,7 +1797,7 @@ Continuous lock
 ---------------
 
 Both in absolute or relative reference digitizing, angle, distance, X, Y, Z
-and M constraints can be locked continuously by clicking the |lockedRepeat|
+and M constraints can be locked continuously by clicking the |lockRepeating|
 :guilabel:`Continuous lock` buttons. Using continuous lock allows you to
 digitize several points or vertexes using the same constraints.
 
@@ -1999,7 +1999,7 @@ To edit features in-place:
    :width: 1.5em
 .. |circularStringRadius| image:: /static/common/mActionCircularStringRadius.png
    :width: 1.5em
-.. |dataDefined| image:: /static/common/mIconDataDefine.png
+.. |dataDefine| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
 .. |deletePart| image:: /static/common/mActionDeletePart.png
    :width: 2em
@@ -2033,11 +2033,11 @@ To edit features in-place:
    :width: 1.5em
 .. |floater| image:: /static/common/floater.png
    :width: 1.5em
+.. |lockRepeating| image:: /static/common/lock_repeating.png
+   :width: 1.5em
 .. |locked| image:: /static/common/locked.png
    :width: 1.5em
-.. |lockedRepeat| image:: /static/common/lock_repeating.png
-   :width: 1.5em
-.. |mergeFeatAttributes| image:: /static/common/mActionMergeFeatureAttributes.png
+.. |mergeFeatureAttributes| image:: /static/common/mActionMergeFeatureAttributes.png
    :width: 1.5em
 .. |mergeFeatures| image:: /static/common/mActionMergeFeatures.png
    :width: 1.5em
@@ -2101,7 +2101,7 @@ To edit features in-place:
    :width: 1.5em
 .. |settings| image:: /static/common/settings.png
    :width: 1.5em
-.. |simplifyFeatures| image:: /static/common/mActionSimplify.png
+.. |simplify| image:: /static/common/mActionSimplify.png
    :width: 1.5em
 .. |snapping| image:: /static/common/mIconSnapping.png
    :width: 1.5em
@@ -2117,13 +2117,13 @@ To edit features in-place:
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
-.. |topopologicalEditing| image:: /static/common/mIconTopologicalEditing.png
+.. |topologicalEditing| image:: /static/common/mIconTopologicalEditing.png
    :width: 1.5em
 .. |tracing| image:: /static/common/mActionTracing.png
    :width: 1.5em
 .. |trimExtend| image:: /static/common/mActionTrimExtend.png
    :width: 1.5em
-.. |unchecked| image:: /static/common/checkbox_unchecked.png
+.. |unchecked| image:: /static/common/unchecked.png
    :width: 1.3em
 .. |undo| image:: /static/common/mActionUndo.png
    :width: 1.5em
