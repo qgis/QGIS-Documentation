@@ -3518,7 +3518,7 @@ msgstr "エラーメッセージの種類と意味"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:955
 msgid "If the GEOS method is used the following error messages can occur:"
-msgstr "GEOSの方法を使用する場合に起こりうるエラーメッセージ"
+msgstr "GEOSの方法を使用する場合に現れるエラーメッセージ"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:960
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1030
@@ -3534,6 +3534,150 @@ msgstr "説明"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1032
 msgid "Example"
 msgstr "例"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:964
+msgid "Repeated point"
+msgstr "重複点"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:965
+msgid "This error happens when a given vertex is repeated."
+msgstr "このエラーは、頂点が重なっている場合に発生します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:969
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1063
+msgid "Ring self-intersection"
+msgstr "リングの自己交差"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:970
+msgid ""
+"This error happens when a geometry touches itself and generates a ring."
+msgstr "このエラーは、ジオメトリが自身と交わってリングを生じる場合に発生します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:975
+msgid "Self-intersection"
+msgstr "自己交差"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:976
+msgid "This error happens when a geometry touches itself."
+msgstr "このエラーは、ジオメトリが自身と交わる場合に発生します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:980
+msgid "Topology validation error"
+msgstr "トポロジ検証エラー"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:984
+msgid "Hole lies outside shell"
+msgstr "孔が外側に飛び出ています"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:988
+msgid "Holes are nested"
+msgstr "孔が入れ子になっている"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:992
+msgid "Interior is disconnected"
+msgstr "内部が繋がっていません"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:996
+msgid "Nested shells"
+msgstr "外殻がネストしています"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:997
+msgid ""
+"This error happens when a polygon geometry is on top of another polygon "
+"geometry."
+msgstr "このエラーは、あるポリゴンジオメトリが別のポリゴンジオメトリ上にある場合に発生します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1002
+msgid "Duplicate rings"
+msgstr "リングの重複"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1003
+msgid ""
+"This error happens when two rings (exterior or interior) of a polygon "
+"geometry are identical"
+msgstr "このエラーは、ポリゴンジオメトリの2つのリング（外部または内部）が同一である場合に発生します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1009
+msgid "Too few points in geometry component"
+msgstr "頂点の数が少なすぎます"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1013
+msgid "Invalid coordinate"
+msgstr "不正な座標"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1014
+msgid ""
+"For a point geometry, this error happens when the geometry does not have a "
+"proper coordinate pair. The coordinate pair does not contain a latitude "
+"value and a longitude value in that order."
+msgstr ""
+"ポイントジオメトリの場合、このエラーはジオメトリが適切な座標ペアを持っていない場合に発生します。座標ペアには、経度値と緯度値がこの順番で含まれていない場合などです。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1020
+msgid "Ring is not closed"
+msgstr "リングが閉じていません"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1025
+msgid "If the QGIS method is used the following error messages can occur:"
+msgstr "QGISの方法を使用する場合に現れるエラーメッセージ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1034
+msgid ""
+"Segment %1 of ring %2 of polygon %3 intersects segment %4 of ring %5 of "
+"polygon %6 at %7"
+msgstr "ポリゴン %3 のリング %2 の線分 %1 は、ポリゴン %6 のリング %5 の線分 %4 と点 %7 で交差します"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1039
+msgid "Ring %1 with less than four points"
+msgstr "%1 のリングは4個未満の点で構成されています"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1043
+msgid "Ring %1 not closed"
+msgstr "%1 のリングは閉じていません"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1047
+msgid "Line %1 with less than two points"
+msgstr "%1 のラインは2点未満の点で構成されています"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1051
+msgid "Line %1 contains %n duplicate node(s) at %2"
+msgstr "%1 の線は、点 %2 に重複ノードを %n 個持っています"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1052
+msgid ""
+"This error happens when consecutive points on a line have the same "
+"coordinates."
+msgstr "このエラーは、ラインの連続する頂点が同じ座標である場合に発生します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1057
+msgid "Segments %1 and %2 of line %3 intersect at %4"
+msgstr "線 %3 の線分 %1 と %2 は、 %4 で交差しています"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1058
+msgid ""
+"This error happens when a line self intersects (two segments of the line "
+"intersect each other)."
+msgstr "このエラーは、ラインが自己交差する（ラインの2つのセグメントが互いに交わる）場合に発生します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1064
+msgid ""
+"This error happens when an outer or inner (island) ring / boundary of a "
+"polygon geometry intersects itself."
+msgstr "このエラーは、ポリゴンジオメトリの外部境界または内部（島）リングが自分自身と交わる場合に発生します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1069
+msgid "Ring %1 of polygon %2 not in exterior ring"
+msgstr "ポリゴン%2 のリング%1 は外部リング内にありません"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1073
+msgid "Polygon %1 lies inside polygon %2"
+msgstr "ポリゴン %1 がポリゴン %2 の内側にあります"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1074
+msgid ""
+"This error happens when a part of a MultiPolygon geometry is inside a hole "
+"of a MultiPolygon geometry."
+msgstr "このエラーは、マルチポリゴンジオメトリのパートがマルチポリゴンジオメトリの孔の内部にある場合に発生します。"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1083
 msgid "Collect geometries"
@@ -7666,6 +7810,19 @@ msgstr "**アルゴリズムID**: ``native:snappointstogrid``"
 msgid "Split lines by maximum length"
 msgstr "最大長で線を切断"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6709
+msgid ""
+"Takes a line (or curve) layer and splits each feature into multiple parts, "
+"where each part is of a specified maximum length. Z and M values at the "
+"start and end of the new line substrings are linearly interpolated from "
+"existing values."
+msgstr ""
+"ライン（またはカーブ）を入力として、各地物を複数のパートに分割します。各パートの長さは、指定された最大長さです。分割された新しいラインのパートの始点と終点におけるZ値やM値は、既存の値から線形補間されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6728
+msgid "The input line vector layer"
+msgstr "入力ラインベクタレイヤ"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6729
 msgid "**Maximum line length**"
 msgstr "**線の最大長**"
@@ -7675,6 +7832,16 @@ msgstr "**線の最大長**"
 msgid "``LENGTH``"
 msgstr "``LENGTH``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6734
+msgid "The maximum length of a line in the output."
+msgstr "出力結果のラインの最大長さ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6765
+msgid ""
+"The new line vector layer - the length of the feature geometries is less "
+"than or equal to the length specified in the LENGTH parameter."
+msgstr "新しいラインベクタレイヤ。各地物ジオメトリの長さは、LENGTH パラメータで指定した長さ以下です。"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6772
 msgid "**Algorithm ID**: ``native:splitlinesbylength``"
 msgstr "**アルゴリズムID**: ``native:splitlinesbylength``"
@@ -7682,6 +7849,34 @@ msgstr "**アルゴリズムID**: ``native:splitlinesbylength``"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6782
 msgid "Subdivide"
 msgstr "ジオメトリの空間分割"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6783
+msgid ""
+"Subdivides the geometry. The returned geometry will be a collection "
+"containing subdivided parts from the original geometry, where no part has "
+"more than the specified maximum number of nodes."
+msgstr ""
+"ジオメトリを空間的に分割します。返されるジオメトリは、元のジオメトリを分割したものを含むコレクションとなり、各部分は指定した最大頂点数以下となります。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6787
+msgid ""
+"This is useful for dividing a complex geometry into less complex parts, "
+"easier to spatially index and faster to perform spatial operations. Curved "
+"geometries will be segmentized before subdivision."
+msgstr ""
+"このアルゴリズムは、ある複雑なジオメトリをより単純な部分に分割する際に役立ちます。これにより空間インデックスが簡単になり、空間演算をより高速に実行できます。カーブジオメトリは、空間分割の前にセグメント化されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6795
+msgid ""
+"Left the input layer, middle maximum nodes value is 100 and right maximum "
+"value is 200"
+msgstr "左：入力レイヤ、中：最大頂点数100、右：最大頂点数200"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6798
+msgid ""
+"Subdividing a geometry can generate geometry parts that may not be valid and"
+" may contain self-intersections."
+msgstr "ジオメトリの空間分割によって、無効なジオメトリパートが生成されたり、自己交差を含む場合があります。"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6804
 msgid ":ref:`qgisexplodelines`, :ref:`qgislinesubstring`"
@@ -7704,10 +7899,20 @@ msgstr "``MAX_NODES``"
 msgid "Default: 256"
 msgstr "デフォルト： 256"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6827
+msgid ""
+"Maximum number of vertices each new geometry part is allowed to have. Fewer "
+"*sub-parts* for higher values."
+msgstr "新しい各ジオメトリパートが持つことのできる最大頂点数。値を大きくすると、 *ジオメトリパート* の数は少なくなります。"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6830
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6857
 msgid "**Subdivided**"
 msgstr "**出力レイヤ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6835
+msgid "Specify the output (subdivided) vector layer. One of:"
+msgstr "（空間分割された）出力ベクタレイヤを指定します。次のいずれかです："
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6860
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7304
@@ -7722,6 +7927,16 @@ msgstr "**アルゴリズムID**: ``native:subdivide``"
 msgid "Swap X and Y coordinates"
 msgstr "座標のXY入れ替え"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6876
+msgid "Switches the X and Y coordinate values in input geometries."
+msgstr "入力ジオメトリのX座標とY座標の値を入れ替えます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6878
+msgid ""
+"It can be used to repair geometries which have accidentally had their "
+"latitude and longitude values reversed."
+msgstr "このアルゴリズムは、誤って緯度と経度の値を逆にしてしまったジオメトリの修復に使えます。"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6884
 msgid ":ref:`qgistranslategeometry`, :ref:`qgisrotatefeatures`"
 msgstr ":ref:`qgistranslategeometry` 、 :ref:`qgisrotatefeatures`"
@@ -7731,6 +7946,10 @@ msgstr ":ref:`qgistranslategeometry` 、 :ref:`qgisrotatefeatures`"
 msgid "**Swapped**"
 msgstr "**出力レイヤ**"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6932
+msgid "Output (swapped) vector layer"
+msgstr "（座標のXYを入れ替えた）出力ベクタレイヤ"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6937
 msgid "**Algorithm ID**: ``native:swapxy``"
 msgstr "**アルゴリズムID**: ``native:swapxy``"
@@ -7738,6 +7957,12 @@ msgstr "**アルゴリズムID**: ``native:swapxy``"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6947
 msgid "Tapered buffers"
 msgstr "テイパードバッファ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6948
+msgid ""
+"Creates tapered buffer along line geometries, using a specified start and "
+"end buffer diameter."
+msgstr "指定された始点と終点のバッファ直径を使用して、ラインジオメトリに沿って幅が変化するバッファを作成します。"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6954
 msgid "Tapered buffer example"
@@ -7755,6 +7980,12 @@ msgstr "**始点における直径**"
 msgid "``START_WIDTH``"
 msgstr "``START_WIDTH``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6980
+msgid ""
+"Represents the radius of the buffer applied at the start point of the line "
+"feature"
+msgstr "ライン地物の始点におけるバッファの直径"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6982
 msgid "**End width**"
 msgstr "**終点における直径**"
@@ -7762,6 +7993,12 @@ msgstr "**終点における直径**"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6983
 msgid "``END_WIDTH``"
 msgstr "``END_WIDTH``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6987
+msgid ""
+"Represents the radius of the buffer applied at the end point of the line "
+"feature."
+msgstr "ライン地物の終点におけるバッファの直径"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6993
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7453
@@ -7776,10 +8013,30 @@ msgstr "**アルゴリズムID**: ``native:taperedbuffer``"
 msgid "Tessellate"
 msgstr "テッセレーション"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7041
+msgid ""
+"Tessellates a polygon geometry layer, dividing the geometries into "
+"triangular components."
+msgstr "ポリゴンジオメトリのレイヤをテッセレーションし、三角形の構成要素に分割します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7044
+msgid ""
+"The output layer consists of multipolygon geometries for each input feature,"
+" with each multipolygon consisting of multiple triangle component polygons."
+msgstr "出力レイヤは、各入力地物に関するマルチポリゴンジオメトリのレイヤです。各マルチポリゴンは、複数の三角形ポリゴン要素で構成されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7051
+msgid "Tessellated polygon (right)"
+msgstr "テッセレーションされたポリゴン（右）"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7071
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7097
 msgid "**Tesselated**"
 msgstr "**出力レイヤ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7100
+msgid "Output multipolygonZ layer"
+msgstr "出力のマルチポリゴン（MultiPolygonZ）レイヤ"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7105
 msgid "**Algorithm ID**: ``3d:tessellate``"
@@ -7789,9 +8046,58 @@ msgstr "**アルゴリズムID**: ``3d:tessellate``"
 msgid "Transect"
 msgstr "トランセクト"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7116
+msgid "Creates transects on vertices for (multi)linestring."
+msgstr "（マルチ）ラインストリングの頂点にトランセクトを作成します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7118
+msgid ""
+"A transect is a line oriented from an angle (by default perpendicular) to "
+"the input polylines (at vertices)."
+msgstr "トランセクトとは、入力されたポリライン（の頂点位置）に対してある角度（デフォルトでは垂直）を向いた線のことです。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7121
+msgid ""
+"Field(s) from feature(s) are returned in the transect with these new fields:"
+msgstr "入力地物のフィールドはトランセクトのフィールドにも引き継がれ、以下の新しいフィールドも追加されます："
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7124
+msgid "TR_FID: ID of the original feature"
+msgstr "TR_FID: 元の地物のID"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7125
+msgid "TR_ID: ID of the transect. Each transect have an unique ID"
+msgstr "TR_ID: トランセクトのID。各トランセクトは一意なIDを持ちます"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7126
+msgid "TR_SEGMENT: ID of the segment of the linestring"
+msgstr "TR_SEGMENT: ラインストリングのセグメントのID"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7127
+msgid "TR_ANGLE: Angle in degrees from the original line at the vertex"
+msgstr "TR_ANGLE: 頂点位置での元のラインからの角度（度単位）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7128
+msgid "TR_LENGTH: Total length of the transect returned"
+msgstr "TR_LENGTH: トランセクトの全長"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7129
+msgid ""
+"TR_ORIENT: Side of the transect (only on the left or right of the line, or "
+"both side)"
+msgstr "TR_ORIENT: トランセクトを作成する側（ラインの左、右または両側）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7135
+msgid "Dashed red lines represent the transect of the input line layer"
+msgstr "赤点線は入力ラインレイヤのトランセクト"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7153
 msgid "**Length of the transect**"
 msgstr "**トランセクトの長さ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7158
+msgid "Length in map unit of the transect"
+msgstr "マップ単位で表したトランセクトの長さ"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7159
 msgid "**Angle in degrees from the original line at the vertices**"
@@ -7801,9 +8107,17 @@ msgstr "**元の線との角度（度）**"
 msgid "Default: 90.0"
 msgstr "デフォルト： 90.0"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7164
+msgid "Change the angle of the transect"
+msgstr "トランセクトの角度が変更できます"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7165
 msgid "**Side to create the transect**"
 msgstr "**トランセクトを作成する側（線の進行方向から見て）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7168
+msgid "Choose the side of the transect. Available options are:"
+msgstr "トランセクトを作成する側。オプションは次のとおり："
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7170
 msgid "0 --- Left"
@@ -7822,6 +8136,10 @@ msgstr "2 --- 両側"
 msgid "**Transect**"
 msgstr "**トランセクト**"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7179
+msgid "Specify the output line layer. One of:"
+msgstr "出力ラインレイヤを指定します。次のいずれかです："
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7203
 msgid "Output line layer"
 msgstr "出力のラインレイヤ"
@@ -7833,6 +8151,20 @@ msgstr "**アルゴリズムID**: ``native:transect``"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7218
 msgid "Translate"
 msgstr "平行移動（translate）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7219
+msgid ""
+"Moves the geometries within a layer, by offsetting with a predefined X and Y"
+" displacement."
+msgstr "あらかじめ定義したX、Yの変位分だけオフセットすることで、レイヤ内のジオメトリを移動させます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7222
+msgid "Z and M values present in the geometry can also be translated."
+msgstr "ジオメトリにあるZ座標やM値も移動させることができます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7227
+msgid "Dashed lines represent the translated geometry of the input layer"
+msgstr "点線は入力レイヤのジオメトリを平行移動させたものを表す"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7232
 msgid ""
@@ -7846,17 +8178,33 @@ msgstr ""
 msgid "**Offset distance (x-axis)**"
 msgstr "**オフセット距離（X軸）**"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7256
+msgid "Displacement to apply on the X axis"
+msgstr "X軸方向に適用する移動量"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7257
 msgid "**Offset distance (y-axis)**"
 msgstr "**オフセット距離（Y軸）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7262
+msgid "Displacement to apply on the Y axis"
+msgstr "Y軸方向に適用する移動量"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7263
 msgid "**Offset distance (z-axis)**"
 msgstr "**オフセット距離（Z軸）**"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7268
+msgid "Displacement to apply on the Z axis"
+msgstr "Z軸方向に適用する移動量"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7269
 msgid "**Offset distance (m values)**"
 msgstr "**オフセット距離（M値）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7274
+msgid "Displacement to apply on the M axis"
+msgstr "M値に適用する移動量"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7275
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7301
@@ -7870,6 +8218,16 @@ msgstr "**アルゴリズムID**: ``native:translategeometry``"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7319
 msgid "Variable distance buffer"
 msgstr "可変距離バッファ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7320
+msgid "Computes a buffer area for all the features in an input layer."
+msgstr "入力レイヤ内のすべての地物について、バッファ領域を計算します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7322
+msgid ""
+"The size of the buffer for a given feature is defined by an attribute, so it"
+" allows different features to have different buffer sizes."
+msgstr "地物のバッファのサイズは属性値で定義するため、異なる地物で異なるバッファサイズを使用できます。"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7326
 msgid ""
@@ -7885,6 +8243,10 @@ msgstr "**距離の属性**"
 msgid "[tablefield: numeric]"
 msgstr "[テーブルのフィールド：数値]"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7350
+msgid "Attribute for the distance radius of the buffer"
+msgstr "バッファの半径距離の属性"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7355
 msgid "Default: *5*"
 msgstr "デフォルト： *5*"
@@ -7893,11 +8255,35 @@ msgstr "デフォルト： *5*"
 msgid "Default: *False*"
 msgstr "デフォルト： *False*"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7363
+msgid ""
+"Choose to dissolve the final buffer, resulting in a single feature covering "
+"all input features."
+msgstr "最終的なバッファをディゾルブするかを選択します。入力地物すべてをカバーする単一の地物が結果となります。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7369
+msgid "Normal and dissolved buffer"
+msgstr "通常のバッファとディゾルブしたバッファ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7373
+msgid "Controls how line endings are handled in the buffer."
+msgstr "ラインの端がバッファでどのように処理されるかを制御します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7382
+msgid ""
+"Specifies whether round, miter or beveled joins should be used when "
+"offsetting corners in a line."
+msgstr "ラインの角をオフセットするときの継ぎ目スタイルを指定します。"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7389
 msgid ""
 "Only applicable for mitered join styles, and controls the maximum distance "
 "from the offset curve to use when creating a mitered join."
-msgstr "マイター結合スタイルにのみ適用され、マイター結合を作成するときに使用するオフセット曲線からの最大距離を制御します。"
+msgstr "継ぎ目スタイルがMiterの場合にのみ適用され、Miter継ぎ目の作成時に使用するオフセット曲線からの最大距離を制御します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7407
+msgid "Buffer polygon vector layer."
+msgstr "バッファのポリゴンベクタレイヤ"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7412
 msgid "**Algorithm ID**: ``qgis:variabledistancebuffer``"
@@ -7907,6 +8293,12 @@ msgstr "**アルゴリズムID**: ``qgis:variabledistancebuffer``"
 msgid "Variable width buffer (by M value)"
 msgstr "可変幅バッファ（M値使用）"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7423
+msgid ""
+"Creates variable width buffers along lines, using the M value of the line "
+"geometries as the diameter of the buffer at each vertex."
+msgstr "ラインジオメトリのM値を各頂点におけるバッファの直径として使用した、ラインに沿って幅が変化するバッファを作成します。"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7429
 msgid "Variable buffer example"
 msgstr "可変幅バッファの例"
@@ -7914,6 +8306,18 @@ msgstr "可変幅バッファの例"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7431
 msgid ":ref:`qgistaperedbuffer`, :ref:`qgisbuffer`, :ref:`qgissetmvalue`"
 msgstr ":ref:`qgistaperedbuffer` 、 :ref:`qgisbuffer` 、 :ref:`qgissetmvalue`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7454
+msgid ""
+"Number of the buffer segments per quarter circle. It can be a unique value "
+"(same value for all the features), or it can be taken from features data "
+"(the value can depend on feature attributes)."
+msgstr ""
+"バッファの四分円のセグメント数。単一の値（すべての地物に対して同じ値）とすることもできますし、地物データから取得して設定する（値は地物の属性に依存する）こともできます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7487
+msgid "Variable buffer polygon layer"
+msgstr "可変幅バッファのポリゴンレイヤ"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7492
 msgid "**Algorithm ID**: ``native:bufferbym``"
@@ -7924,6 +8328,19 @@ msgstr "**アルゴリズムID**: ``native:bufferbym``"
 msgid "Voronoi polygons"
 msgstr "ボロノイ多角形"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7503
+msgid ""
+"Takes a point layer and generates a polygon layer containing the Voronoi "
+"polygons (known also as Thiessen polygons) corresponding to those input "
+"points."
+msgstr "ポイントレイヤを入力として、入力ポイントに対応するボロノイポリゴン（ティーセンポリゴンとも呼ばれる）のポリゴンレイヤを作成します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7507
+msgid ""
+"Any location within a Voronoi polygon is closer to the associated point than"
+" to any other point."
+msgstr "あるボロノイポリゴン内の任意の地点から最も近いポイントは、そのポリゴンに関連付けられたポイントです。"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7532
 #, python-format
 msgid "**Buffer region (% of extent)**"
@@ -7933,10 +8350,24 @@ msgstr "**バッファ領域（領域に対する%単位）**"
 msgid "``BUFFER``"
 msgstr "``BUFFER``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7537
+msgid ""
+"The extent of the output layer will be this much bigger than the extent of "
+"the input layer"
+msgstr "出力レイヤの範囲は入力レイヤの範囲よりもこの分だけ大きくなります"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7539
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7566
 msgid "**Voronoi polygons**"
 msgstr "**ボロノイ多角形**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7544
+msgid "Specify the output layer (with the Voronoi polygons). One of:"
+msgstr "（ボロノイポリゴンの）出力レイヤを指定します。次のいずれかです："
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7569
+msgid "Voronoi polygons of the input point vector layer"
+msgstr "入力ポイントベクタレイヤに対するボロノイポリゴン"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7574
 msgid "**Algorithm ID**: ``qgis:voronoipolygons``"
