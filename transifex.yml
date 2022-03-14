@@ -1,0 +1,14 @@
+git:
+  filters:
+    - filter_type: dir
+      # all supported i18n types: https://docs.transifex.com/formats
+      file_format: PO
+      source_file_extension: po
+      source_language: en
+      source_file_dir: locale/en/LC_MESSAGES/docs/
+      # path expression to translation files, must contain <lang> placeholder
+      translation_files_expression: 'locale/<lang>/LC_MESSAGES/docs/'
+  settings:
+    language_mapping:
+      zh-Hant : zh_Hant
+      zh-Hans : zh_Hans
