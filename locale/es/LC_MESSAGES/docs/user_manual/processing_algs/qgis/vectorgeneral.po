@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2020
 # Rodrigo Armesto Baztán <rodri_Armesto@hotmail.com>, 2021
+# Eric Armijo, 2022
 # Abigaíl García, 2022
 # 
 #, fuzzy
@@ -1578,6 +1579,10 @@ msgstr ""
 "|checkbox| Permite :ref:`modificación de entidades in-situ "
 "<processing_inplace_edit>`"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2516
+msgid "checkbox"
+msgstr "checkbox"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:761
 msgid ":ref:`qgisdeleteduplicategeometries`, :ref:`qgisremovenullgeometries`"
 msgstr ":ref:`qgisdeleteduplicategeometries`, :ref:`qgisremovenullgeometries`"
@@ -1849,6 +1854,72 @@ msgstr ""
 msgid "**Algorithm ID**: ``native:saveselectedfeatures``"
 msgstr "**Algoritmo ID**: ``native:saveselectedfeatures``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1010
+msgid "Extract Shapefile encoding"
+msgstr "Extraer codificación archivo shape"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1012
+msgid ""
+"Extracts the attribute encoding information embedded in a Shapefile. Both "
+"the encoding specified by an optional :file:`.cpg` file and any encoding "
+"details present in the :file:`.dbf` LDID header block are considered."
+msgstr ""
+"Extrae la información de codificación de atributos incrustada en un archivo "
+"shape. Se consideran tanto la codificación especificada por un archivo "
+":file:`.cpg` opcional como cualquier detalle de codificación presente en el "
+"bloque de encabezado LDID :file:`.dbf`."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1031
+msgid ""
+"ESRI Shapefile (:file:`.SHP`) Layer to extract the encoding information."
+msgstr ""
+"Archivo shape de ESRI (:file:`.SHP`) Capa para extraer la información de "
+"codificación."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1044
+msgid "**Shapefile encoding**"
+msgstr "**Codificación de archivo shape**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1045
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2265
+msgid "``ENCODING``"
+msgstr "``ENCODING``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1047
+msgid "Encoding information specified in the input file"
+msgstr "Información de codificación especificada en el archivo de entrada"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1048
+msgid "**CPG encoding**"
+msgstr "** Codificación CPG**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1049
+msgid "``CPG_ENCODING``"
+msgstr "``CPG_ENCODING``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1051
+msgid "Encoding information specified in any optional :file:`.CPG` file"
+msgstr ""
+"Codificar información especificada en cualquier archivo :file:`.CPG` "
+"opcional"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1052
+msgid "**LDID encoding**"
+msgstr "**Codificación LDID**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1053
+msgid "``LDID_ENCODING``"
+msgstr "``LDID_ENCODING``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1055
+msgid "Encoding information specified in :file:`.dbf` LDID header block"
+msgstr ""
+"Codificar información especificada en bloque encabezado :file:`.dbf` LDID"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1060
+msgid "**Algorithm ID**: ``native:shpencodinginfo``"
+msgstr "**ID Algoritmo**: ``native:shpencodinginfo``"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1070
 msgid "Find projection"
 msgstr "Encontrar proyección"
@@ -1957,6 +2028,30 @@ msgstr "**Algoritmo ID**: ``qgis:findprojection``"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1159
 msgid "Flatten relationship"
 msgstr "Emparejar Relación"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1161
+msgid ""
+"Flattens a :ref:`relationship <vector_relations>` for a vector layer, "
+"exporting a single layer containing one parent feature per related child "
+"feature. This master feature contains all the attributes for the related "
+"features. This allows to have the relation as a plain table that can be e.g."
+" exported to CSV."
+msgstr ""
+"Empareja una :ref:`relationship <vector_relations>`  para una capa "
+"vectorial, exportando una sola capa que contiene una característica "
+"principal por característica secundaria relacionada. Esta función principal "
+"contiene todos los atributos de las funciones relacionadas. Esto permite "
+"tener la relación como una tabla simple que puede ser p. Ej. exportado a "
+"CSV."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1171
+msgid ""
+"Form of a region with related children (left) - A duplicate region feature "
+"for each related child, with joined attributes (right)"
+msgstr ""
+"Forma de una región con elementos secundarios relacionados (izquierda )- una"
+" característica de región duplicada para cada elemento secundario "
+"relacionado, con atributos unidos (derecha)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1188
 msgid "Layer with the relationship that should be de-normalized"
@@ -2257,6 +2352,10 @@ msgstr "**Número de entidades que no se pueden unir de la capa de entrada**"
 msgid "``UNJOINABLE_COUNT``"
 msgstr "``UNJOINABLE_COUNT``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1378
+msgid "**Algorithm ID**: ``native:joinattributestable``"
+msgstr "*Algoritmo ID**: ``native:joinattributestable``"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1388
 msgid "Join attributes by location"
 msgstr "Unir atributos por localización"
@@ -2390,6 +2489,10 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1525
 msgid "Vector layer of the non-matched features"
 msgstr "Capa vectorial de las entidades no coincidentes"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1534
+msgid "**Algorithm ID**: ``native:joinattributesbylocation``"
+msgstr "**Algoritmo ID**: ``native:joinattributesbylocation``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1544
 msgid "Join attributes by location (summary)"
@@ -2648,6 +2751,10 @@ msgstr "Número de entidades de la tabla de entrada que se han unido."
 msgid "Number of features from the input table that could not be joined."
 msgstr "Número de entidades de la tabla de entrada que no se pudieron unir."
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1813
+msgid "**Algorithm ID**: ``native:joinbynearest``"
+msgstr "**Algoritmo ID**: ``native:joinbynearest``"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1823
 msgid "Merge vector layers"
 msgstr "Mezclar capas vectoriales"
@@ -2746,6 +2853,10 @@ msgstr ""
 "Capa de vector de salida que contiene todas las características y atributos "
 "de las capas de entrada."
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1908
+msgid "**Algorithm ID**: ``native:mergevectorlayers``"
+msgstr "**Algoritmo ID**: ``native:mergevectorlayers``"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1918
 msgid "Order by expression"
 msgstr "Ordenar por expresión"
@@ -2817,6 +2928,10 @@ msgstr "**Ordenado**"
 msgid "Output (sorted) vector layer"
 msgstr "Capa vectorial saliente (ordenada)"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1990
+msgid "**Algorithm ID**: ``native:orderbyexpression``"
+msgstr "**Algoritmo ID**: ``native:orderbyexpression``"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2000
 msgid "Repair Shapefile"
 msgstr "Repara Shapefile"
@@ -2849,6 +2964,10 @@ msgstr "**Capa reparada**"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2035
 msgid "The input vector layer with the SHX file repaired"
 msgstr "La capa vectorial entrante con el archivo SHX reparado"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2040
+msgid "**Algorithm ID**: ``native:repairshapefile``"
+msgstr "**Algoritmo ID**: ``native:repairshapefile``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2050
 msgid "Reproject layer"
@@ -2920,6 +3039,177 @@ msgstr "**Reproyectado**"
 msgid "Output (reprojected) vector layer"
 msgstr "Capa vectorial saliente (reproyectada)"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2124
+msgid "**Algorithm ID**: ``native:reprojectlayer``"
+msgstr "**Algoritmo ID**: ``native:reprojectlayer``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2134
+msgid "Save vector features to file"
+msgstr "Guardar objetos vectoriales en archivo"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2136
+msgid "Saves vector features to a specified file dataset."
+msgstr ""
+"Guarda características vectoriales en un conjunto de datos de un archivo "
+"especificado."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2138
+msgid ""
+"For dataset formats supporting layers, an optional layer name parameter can "
+"be used to specify a custom string. Optional GDAL-defined dataset and layer "
+"options can be specified. For more information on this, read the online "
+"`GDAL documentation <https://gdal.org/drivers/vector/index.html>`_ on the "
+"format."
+msgstr ""
+"Para formatos de conjuntos de datos compatibles con capas, se puede usar un "
+"parámetro de nombre de capa opcional para especificar una cadena "
+"personalizada. Se pueden especificar opciones de capas y conjuntos de datos "
+"opcionales definidos por GDAL. Para obtener más información al respecto, lea"
+" la `GDAL documentation <https://gdal.org/drivers/vector/index.html>`_  "
+"sobre el formato."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2147
+msgid "Basic parameters"
+msgstr "Parámetros básicos"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2157
+msgid "**Vector features**"
+msgstr "**Objetos espaciales vectoriales**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2160
+msgid "Input vector layer."
+msgstr "Capa vectorial de entrada."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2161
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2215
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2260
+msgid "**Saved features**"
+msgstr "**Objetos espaciales guardados**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2166
+msgid "Specify the file to save the features to. One of:"
+msgstr "Especifique el archivo para guardar las características. Uno de:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2173
+msgid "Advanced parameters"
+msgstr "Parámetros avanzados"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2183
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2223
+msgid "**Layer name**"
+msgstr "**Nombre de la capa**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2186
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2224
+msgid "``LAYER_NAME``"
+msgstr "``LAYER_NAME``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2188
+msgid "Name to use for the output layer"
+msgstr "Nombre a usar para la capa de salida"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2189
+msgid "**GDAL dataset options**"
+msgstr "**Opciones de conjunto de datos GDAL**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2192
+msgid "``DATASOURCE_OPTIONS``"
+msgstr "``DATASOURCE_OPTIONS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2194
+msgid ""
+"GDAL dataset creation options of the output format. Separate individual "
+"options with semicolons."
+msgstr ""
+"Opciones de creación de conjuntos de datos GDAL del formato de salida. "
+"Separe las opciones individuales con punto y coma."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2196
+msgid "**GDAL layer options**"
+msgstr "**Opciones de capa GDAL**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2199
+msgid "``LAYER_OPTIONS``"
+msgstr "``LAYER_OPTIONS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2201
+msgid ""
+"GDAL layer creation options of the output format. Separate individual "
+"options with semicolons."
+msgstr ""
+"Opciones de creación de capas GDAL del formato de salida. Separe las "
+"opciones individuales con punto y coma."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2218
+msgid "Vector layer with the saved features."
+msgstr "Capa vectorial con los objetos espaciales guardados."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2219
+msgid "**File name and path**"
+msgstr "**Nombre y ruta de archivo**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2220
+msgid "``FILE_PATH``"
+msgstr "``FILE_PATH``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2222
+msgid "Output file name and path."
+msgstr "Nombre y ruta de archivo de salida"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2226
+msgid "Name of the layer, if any."
+msgstr "Nombre de la capa, si existe."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2231
+msgid "**Algorithm ID**: ``native:savefeatures``"
+msgstr "**Algoritmo ID**: ``native:savefeatures``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2241
+msgid "Set layer encoding"
+msgstr "Definir codificación de capa"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2243
+msgid ""
+"Sets the encoding used for reading a layer's attributes. No permanent "
+"changes are made to the layer, rather it affects only how the layer is read "
+"during the current session."
+msgstr ""
+"Establece la codificación utilizada para leer los atributos de una capa. No "
+"se realizan cambios permanentes en la capa, sino que solo afecta cómo se lee"
+" la capa durante la sesión actual."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2247
+msgid ""
+"Changing the encoding is only supported for some vector layer data sources."
+msgstr ""
+"El cambio de codificación solo se admite para algunas fuentes de datos de la"
+" capa vectorial."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2263
+msgid "Vector layer to set the encoding."
+msgstr "Capa vectorial para definir la codificación"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2264
+msgid "**Encoding**"
+msgstr "**Codificación**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2267
+msgid "Text encoding to assign to the layer in the current QGIS session."
+msgstr ""
+"Codificación de texto para asignar a la capa en la sesión QGIS actual."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2280
+msgid "**Output layer**"
+msgstr "**Capa de salida**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2283
+msgid "Input vector layer with the set encoding."
+msgstr "Capa vectorial de entrada con la codificación del conjunto."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2288
+msgid "**Algorithm ID**: ``native:setlayerencoding``"
+msgstr "**ID Algoritmo**: ``native:setlayerencoding``"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2298
 msgid "Split features by character"
 msgstr "Dividir entidades por carácter"
@@ -2987,6 +3277,10 @@ msgstr "Especifica la capa vectorial saliente. Una de:"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2367
 msgid "The output vector layer."
 msgstr "La capa vectorial saliente."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2372
+msgid "**Algorithm ID**: ``native:splitfeaturesbycharacter``"
+msgstr "**ID Algoritmo**: ``native:splitfeaturesbycharacter``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2382
 msgid "Split vector layer"
@@ -3069,6 +3363,10 @@ msgstr "[misma que la entrada] [lista]"
 msgid "The output vector layers resulting from the split."
 msgstr "Las capas vectoriales salientes resultantes de la división."
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2452
+msgid "**Algorithm ID**: ``native:splitvectorlayer``"
+msgstr "**ID Algoritmo**: ``native:splitvectorlayer``"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2462
 msgid "Truncate table"
 msgstr "Truncar tabla"
@@ -3092,3 +3390,7 @@ msgstr "**Capa truncada**"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2498
 msgid "The truncated (empty) layer"
 msgstr "La capa truncada (vacía)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2503
+msgid "**Algorithm ID**: ``native:truncatetable``"
+msgstr "**ID Algoritmo**: ``native:truncatetable``"
