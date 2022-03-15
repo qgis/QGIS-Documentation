@@ -173,13 +173,10 @@ our translation efforts. To be part of the translation team, please follow
 [becoming a translator](https://www.qgis.org/en/site/getinvolved/translate.html#becoming-a-translator).
 
 The process is automated using some custom scripts and GitHub integration:
-* [create_transifex_resources](scripts/create_transifex_resources.sh):
-creates/updates the [.tx/config](.tx/config) file with references of the English
-source files and their translation in the GitHub repository and link them to
-the resources in Transifex.
-This may only be necessary when releasing a new branch, to push local strings to Transifex.
-* [pofiles action](.github/workflows/pofiles.yml): update English `*.po` files
-with recent changes in the source files 
+* The [transifex.yml](transifex.yml) configuration file:
+  provides way to retrieve the English source files and where to locate the translated ones.
+* The [pofiles action](.github/workflows/pofiles.yml): creates/updates English `*.po` files
+  with recent changes in the source `*.rst` files
 * The [Transifex GitHub integration](https://docs.transifex.com/integrations/transifex-github-integration):
   manages pulls and pushes of the strings, in other words:
   - Tracks any changes of the English `*.po` resource files in GitHub
@@ -195,8 +192,8 @@ the instructions in earlier sections:
 make html LANG=yourlanguage
 ```
 
-You may however want to pull unfinished translated resources to build.
-To do so, you need to manually pull the translations from Transifex to your local repository:
+Sometimes, you may want to build the docs with new strings in a partially translated file.
+In this case, you need to manually pull the translations from Transifex to your local repository:
 
 1. Checkout locally the repository and target branch in git
 1. Prepare the environment
@@ -204,11 +201,6 @@ To do so, you need to manually pull the translations from Transifex to your loca
    python3 -m venv venv
    source ./venv/bin/activate
    pip install -r REQUIREMENTS.txt
-   ```
-1. Update resources references in the config file.
-   This is necessary to catch any new or removed files.
-   ```
-   ./scripts/create_transifex_resources.sh
    ```
 1. Download the translated strings using the [minimize_translation script](scripts/minimize_translation.sh).
    By default this pulls all the languages.
