@@ -17,6 +17,7 @@ The latest documentation is available at <https://docs.qgis.org/latest>
    * [Build on Windows](#build-on-windows)
    * [Build PDFs](#build-pdfs)
 * [Translating](#translating)
+* [Testing Python snippets](#testing-python-snippets)
 
 # Building the documentation
 
@@ -236,3 +237,57 @@ To do so, you need to manually pull the translations from Transifex to your loca
    ```
 1. Share the changes by opening a pull-request, allowing us to integrate
    the new strings for the pulled language(s)
+
+# Testing Python snippets
+
+To test Python code snippets in the PyQGIS Cookbook, you need a *QGIS* installation.
+For this there are many options:
+
+* You can use your system *QGIS* installation with *Sphinx* from Python virtual environment:
+
+  ```
+  make -f venv.mk doctest
+  ```
+* You can use a manually built installation of *QGIS*. To do so, you need to:
+  1. Create a custom ``Makefile`` extension on top of the ``venv.mk`` file,
+     for example a ``user.mk`` file with the following content:
+
+     ```
+     # Root installation folder
+     QGIS_PREFIX_PATH = /home/user/apps/qgis-master
+
+     # Or build output folder
+     QGIS_PREFIX_PATH = /home/user/dev/QGIS-build-master/output
+
+     include venv.mk
+     ```
+
+  1. Then use it to run target ``doctest``:
+
+     ```
+     make -f user.mk doctest
+     ```
+* Or you can run target ``doctest`` inside the official *QGIS* docker image:
+
+  ```
+  make -f docker.mk doctest
+  ```
+
+Note that only code blocks with directive ``testcode`` are tested and it is possible to run tests setup code
+which does not appear in documentation with directive ``testsetup``, for example:
+
+```
+ .. testsetup::
+
+     from qgis.core import QgsCoordinateReferenceSystem
+
+ .. testcode::
+
+     # SRID 4326 is allocated for WGS84
+     crs = QgsCoordinateReferenceSystem("EPSG:4326")
+     assert crs.isValid()
+```
+
+For more information see *Sphinx* doctest extension documentation:
+https://www.sphinx-doc.org/en/master/usage/extensions/doctest.html
+
