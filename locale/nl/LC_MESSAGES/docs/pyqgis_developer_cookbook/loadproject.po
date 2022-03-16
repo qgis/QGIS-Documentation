@@ -1,28 +1,34 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
-# DiGro, 2020
+# Harrissou Sant-anna, 2022
+# DiGro, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:23+0000\n"
-"Last-Translator: DiGro, 2020\n"
+"POT-Creation-Date: 2022-03-12 00:23+0100\n"
+"PO-Revision-Date: 2022-03-14 05:11+0000\n"
+"Last-Translator: DiGro, 2022\n"
 "Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
 "Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:6
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:14
+msgid "Loading Projects"
+msgstr "Projecten laden "
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:16
 msgid ""
 "The code snippets on this page need the following imports if you're outside "
 "the pyqgis console:"
@@ -30,11 +36,7 @@ msgstr ""
 "De codesnippers op deze pagina hebben de volgende import nodig als u buiten "
 "de console van PyQGIS bent:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:35
-msgid "Loading Projects"
-msgstr "Projecten laden "
-
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:37
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:34
 msgid ""
 "Sometimes you need to load an existing project from a plugin or (more often)"
 " when developing a standalone QGIS Python application (see: "
@@ -44,7 +46,7 @@ msgstr ""
 "het ontwikkelen van een zelfstandige toepassing in Python voor QGIS (zie: "
 ":ref:`pythonapplications`)."
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:44
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:41
 msgid ""
 "To load a project into the current QGIS application you need to create an "
 "instance of the :class:`QgsProject <qgis.core.QgsProject>` class. This is a "
@@ -60,7 +62,7 @@ msgstr ""
 " doen. U kunt de methode :meth:`read() <qgis.core.QgsProject.read>` ervan "
 "aanroepen, waarin het pad van het te laden project wordt doorgegeven:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:75
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:66
 msgid ""
 "If you need to make modifications to the project (for example to add or "
 "remove some layers) and save your changes, call the :meth:`write() "
@@ -75,7 +77,7 @@ msgstr ""
 "accepteert ook een optioneel pad voor het opslaan van het project op een "
 "nieuwe locatie:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:87
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:78
 msgid ""
 "Both :meth:`read() <qgis.core.QgsProject.read>` and :meth:`write() "
 "<qgis.core.QgsProject.write>` functions return a boolean value that you can "
@@ -85,7 +87,7 @@ msgstr ""
 "<qgis.core.QgsProject.write>` geven een Booleaanse waarde terug die u kunt "
 "gebruiken om te controleren of de bewerking succesvol was."
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:93
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:84
 msgid ""
 "If you are writing a QGIS standalone application, in order to synchronise "
 "the loaded project with the canvas you need to instantiate a "
@@ -97,63 +99,90 @@ msgstr ""
 "te instantiëren zoals in het voorbeeld hieronder om het geladen project te "
 "synchroniseren met het kaartvenster:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:109
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:96
 msgid "Resolving bad paths"
 msgstr "Slechte paden oplossen"
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:111
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:98
 msgid ""
 "It can happen that layers loaded in the project are moved to another "
-"location. When the project is loaded again all the layer paths are broken."
+"location. When the project is loaded again all the layer paths are broken. "
+"The :class:`QgsPathResolver <qgis.core.QgsPathResolver>` class helps you "
+"rewrite layers path within the project."
 msgstr ""
-"Het kan voorkomen dat lagen, die zijn geladen in het project, worden "
-"verplaatst naar een andere locatie. Wanneer het project opnieuw wordt "
-"geladen, zijn alle paden foutief."
+"Het kan gebeuren dat lagen die zijn geladen in het project worden verplaatst"
+" naar een andere locatie. Wanneer het project opnieuw wordt geladen zijn "
+"alle paden naar lagen verbroken. De klasse :class:`QgsPathResolver "
+"<qgis.core.QgsPathResolver>` helpt u het pad naar de lagen in het project "
+"opnieuw te schrijven."
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:114
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:103
 msgid ""
-"The :class:`QgsPathResolver <qgis.core.QgsPathResolver>` class with the "
-":meth:`setPathPreprocessor() "
-"<qgis.core.QgsPathResolver.setPathPreprocessor>` allows setting a custom "
-"path pre-processor function, which allows for manipulation of paths and data"
-" sources prior to resolving them to file references or layer sources."
+"Its :meth:`setPathPreprocessor() "
+"<qgis.core.QgsPathResolver.setPathPreprocessor>` method allows setting a "
+"custom path pre-processor function to manipulate paths and data sources "
+"prior to resolving them to file references or layer sources."
 msgstr ""
-"De klasse :class:`QgsPathResolver <qgis.core.QgsPathResolver>`  met de "
-"methode :meth:`setPathPreprocessor() "
-"<qgis.core.QgsPathResolver.setPathPreprocessor>` maakt het mogelijk een pre-"
-"processor functie voor aangepaste paden in te stellen, die het mogelijk "
-"maakt paden en databronnen voorafgaand te bewerken om bestandsverwijzingen "
-"of laagbronnen te repareren."
+"Zijn methode :meth:`setPathPreprocessor() "
+"<qgis.core.QgsPathResolver.setPathPreprocessor>` stelt u in staat een "
+"aangepaste functie pre-processor in te stellen voor het bewerken van paden "
+"en gegevensbronnen, voordat worden verbonden aan bestandsverwijzingen of "
+"bronnen van lagen."
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:120
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:108
 msgid ""
 "The processor function must accept a single string argument (representing "
 "the original file path or data source) and return a processed version of "
-"this path."
+"this path. The path pre-processor function is called **before** any bad "
+"layer handler. If multiple preprocessors are set, they will be called in "
+"sequence based on the order in which they were originally set."
 msgstr ""
-"De processorfunctie moet een argument van één enkele tekenreeks accepteren "
-"(die het originele bestandspad of databron weergeeft) en geeft een verwerkte"
-" versie van dat pad terug."
+"De processor-functie moet één enkel argument tekenreeks accepteren (die het "
+"originele bestandspad of databron weergeeft) en geeft een verwerkte versie "
+"van dit pad terug. De functie pre-processor voor het pad wordt aangeroepen "
+"**voor** enige afhandeling van een slechts laag. Als meerdere pre-processors"
+" zijn ingesteld, zullen zij in een reeks worden aangeroepen, gebaseerd op de"
+" volgorde waarin zij origineel werden ingesteld."
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:123
-msgid ""
-"The path pre-processor function is called **before** any bad layer handler."
-msgstr ""
-"De pre-processorfunctie voor het pad wordt aangeroepen **vóór** enige "
-"afhandeling van slechte paden."
-
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:125
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:114
 msgid "Some use cases:"
 msgstr "Enkele gebruiksgevallen:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:127
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:116
 msgid "replace an outdated path:"
 msgstr "een verouderd pad vervangen:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:136
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:125
 msgid "replace a database host address with a new one:"
 msgstr "het hostadres van een database vervangen door een nieuw:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:145
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:134
 msgid "replace stored database credentials with new ones:"
 msgstr "opgeslagen inloggegevens voor een database vervangen door nieuwe:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:145
+msgid ""
+"Likewise, a :meth:`setPathWriter() "
+"<qgis.core.QgsPathResolver.setPathWriter>` method is available for a path "
+"writer function."
+msgstr ""
+"Op dezelfde wijze is een methode :meth:`setPathWriter() "
+"<qgis.core.QgsPathResolver.setPathWriter>` beschikbaar als een functie om "
+"het pad te schrijven."
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:148
+msgid "An example to replace the path with a variable:"
+msgstr "Een voorbeeld om het pad te vervangen met een variabele:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:157
+msgid ""
+"Both methods return an ``id`` that can be used to remove the pre-processor "
+"or writer they added. See :meth:`removePathPreprocessor() "
+"<qgis.core.QgsPathResolver.removePathPreprocessor>` and "
+":meth:`removePathWriter() <qgis.core.QgsPathResolver.removePathWriter>`."
+msgstr ""
+"Beide methoden geven een ``id`` terug die kan worden gebruikt om de pre-"
+"processor of schrijver die zij hebben toegevoegd, te verwijderen Bekijk "
+":meth:`removePathPreprocessor() "
+"<qgis.core.QgsPathResolver.removePathPreprocessor>` en "
+":meth:`removePathWriter() <qgis.core.QgsPathResolver.removePathWriter>`."
