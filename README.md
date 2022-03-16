@@ -172,18 +172,37 @@ We rely on the [Transifex platform](https://transifex.com) to store and coordina
 our translation efforts. To be part of the translation team, please follow
 [becoming a translator](https://www.qgis.org/en/site/getinvolved/translate.html#becoming-a-translator).
 
-The process is automated using some custom scripts and GitHub integration:
+The process is automated using the [Transifex - GitHub integration system](https://docs.transifex.com/integrations/transifex-github-integration)
+and some custom scripts:
+
 * The [transifex.yml](transifex.yml) configuration file:
   provides way to retrieve the English source files and where to locate the translated ones.
-* The [pofiles action](.github/workflows/pofiles.yml): creates/updates English `*.po` files
-  with recent changes in the source `*.rst` files
-* The [Transifex GitHub integration](https://docs.transifex.com/integrations/transifex-github-integration):
+
+  ---
+   **Note to Transifex administrators**
+
+   If after the integration system is setup for a new release, the translation strings fail to
+   (fully) upload to Transifex:
+
+   1. Run the [create_transifex_resources](scripts/create_transifex_resources.sh) script:
+      creates/updates the [.tx/config](.tx/config) file with formatted references of the English
+      source files and their translation in the GitHub repository and link them to
+      the resources in Transifex.
+   1. Force-push the translation files to Transifex
+      ```
+       tx push -f -t --no-interactive
+      ```
+  ---
+
+* The transifex integration bot: 
   manages pulls and pushes of the strings, in other words:
   - Tracks any changes of the English `*.po` resource files in GitHub
     and automatically sends them to the Transifex platform
-  - Each language translator can begin translating the new strings
   - When a resource is 100% translated, automatically sends back
     the translated `*.po` file to GitHub, for build.
+* The [pofiles action](.github/workflows/pofiles.yml): creates/updates English `*.po` files
+  with recent changes in the source `*.rst` files. Feeds the transifex bot.
+
 
 Based on the above, translated strings are automatically available in released
 branch so building the docs in any translated locale is possible following
