@@ -6,7 +6,7 @@
 Statistics of translation
 ===========================
 
-*(last update: 2021-10-26)*
+*(last update: 2022-03-16)*
 
 .. list-table::
    :widths: auto
@@ -14,9 +14,9 @@ Statistics of translation
    * - Number of strings
      - Number of target languages
      - Overall Translation ratio
-   * - **32018**
-     - **58**
-     - **11.99%**
+   * - **31189**
+     - **57**
+     - **11.47%**
 
 
 
@@ -30,124 +30,118 @@ Statistics of translation
      - Language
      - Translation ratio (%)
    * - Albanian
-     - 0.24
+     - 0.23
      - Arabic
-     - 4.06
+     - 4.01
      - Azerbaijani
      - 0.02
    * - Basque
-     - 1.44
+     - 0.89
      - Bengali
-     - 0.19
+     - 0.17
      - Bulgarian
-     - 2.61
+     - 2.53
    * - Burmese
-     - 0.1
+     - 0.09
      - Catalan
-     - 1.53
+     - 1.49
      - Chinese Simplified
-     - 1.82
+     - 7.35
    * - Chinese Traditional
-     - 0.69
+     - 0.63
      - Croatian
-     - 0.12
+     - 0.11
      - Czech
-     - 6.07
+     - 5.84
    * - Danish
      - 0.67
      - Dutch
-     - 100.0
+     - 88.52
      - Estonian
-     - 1.32
+     - 1.35
    * - Finnish
-     - 1.83
+     - 1.79
      - French
-     - 98.94
+     - 86.74
      - Galician
-     - 0.6
+     - 0.46
    * - Georgian
-     - 0.11
+     - 0.1
      - German
-     - 21.43
+     - 20.22
      - Greek
      - 0.38
    * - Hebrew
-     - 0.75
+     - 0.76
      - Hindi
-     - 0.31
+     - 0.3
      - Hungarian
-     - 0.99
+     - 7.95
    * - Igbo
      - 0.01
      - Indonesian
-     - 2.8
+     - 2.83
      - Italian
-     - 89.77
+     - 77.61
    * - Japanese
-     - 61.21
+     - 65.71
      - Kabyle
-     - 0.11
-     - Korean
-     - 85.62
-   * - Lao
-     - 0.0
-     - Lithuanian
-     - 6.13
-     - Macedonian
-     - 0.13
-   * - Malay
-     - 0.05
-     - Malayalam
      - 0.1
-     - Marathi
-     - 0.19
-   * - Mongolian
+     - Korean
+     - 77.66
+   * - Lithuanian
+     - 5.06
+     - Macedonian
      - 0.12
-     - N'ko
+     - Malay
+     - 0.05
+   * - Malayalam
+     - 0.09
+     - Marathi
+     - 0.2
+     - Mongolian
+     - 0.11
+   * - N'ko
      - 1.84
      - Norwegian Bokmål
-     - 3.36
-   * - Persian
-     - 0.48
-     - Polish
-     - 1.87
+     - 3.2
+     - Persian
+     - 0.42
+   * - Polish
+     - 1.81
      - Portuguese (Brazil)
-     - 37.38
-   * - Portuguese (Portugal)
-     - 8.59
-     - Romanian
-     - 30.74
+     - 35.1
+     - Portuguese (Portugal)
+     - 8.35
+   * - Romanian
+     - 27.71
      - Russian
-     - 15.1
-   * - Serbian
-     - 0.12
-     - Slovak
-     - 0.79
+     - 13.5
+     - Serbian
+     - 0.11
+   * - Slovak
+     - 1.3
      - Slovenian
-     - 3.23
-   * - Spanish
-     - 92.13
-     - Swedish
-     - 1.16
+     - 3.22
+     - Spanish
+     - 88.1
+   * - Swedish
+     - 1.03
      - Tagalog
-     - 0.1
-   * - Tamil
-     - 0.52
-     - Telugu
+     - 0.09
+     - Tamil
+     - 0.48
+   * - Telugu
      - 0.03
      - Thai
-     - 0.12
-   * - Turkish
-     - 2.85
-     - Ukrainian
-     - 2.4
+     - 0.11
+     - Turkish
+     - 2.89
+   * - Ukrainian
+     - 2.36
      - Urdu
      - 0.0
-   * - Vietnamese
-     - 0.34
-     -
-     -
-     -
-     -
+     - Vietnamese
+     - 0.24
 
 
