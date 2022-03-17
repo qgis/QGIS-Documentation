@@ -35,7 +35,7 @@ map, rather than needing to search for a specific street in the
    of the fields values and other general information about the
    clicked feature.
 #. At the top of the panel, check the :guilabel:`Auto open form for single feature results`
-   checkbox in the |options| sup:`Identify Settings` menu.
+   checkbox in the |options| :sup:`Identify Settings` menu.
 #. Now, click again on any street in the map. Along the previous
    :guilabel:`Identify Results` dialog, you'll see the now-familiar
    form:
