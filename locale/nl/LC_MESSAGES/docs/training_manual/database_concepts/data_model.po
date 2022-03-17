@@ -2,20 +2,20 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
-# DiGro, 2021
+# Harrissou Sant-anna, 2022
+# DiGro, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 10:18+0000\n"
-"Last-Translator: DiGro, 2021\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:13+0000\n"
+"Last-Translator: DiGro, 2022\n"
 "Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -52,14 +52,13 @@ msgstr "PostgreSQL installeren "
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:14
 msgid ""
-"You can find PostGreSQL packages and installation instructions for your "
+"You can find PostgreSQL packages and installation instructions for your "
 "operating system at https://www.postgresql.org/download/. Please note that "
 "the documentation will assume users are running QGIS under Ubuntu."
 msgstr ""
-"U kunt pakketten voor PostgreSQL en installatie-instructies voor uw "
-"besturingssysteem vinden op https://www.postgresql.org/download/. Onthoud "
-"dat de documentatie er van uitgaat dat gebruikers QGIS uitvoeren onder "
-"Ubuntu."
+"U vindt pakketten voor PostgreSQL en instructies voor het installeren voor "
+"uw besturingssysteem op https://www.postgresql.org/download/. Onthoud dat de"
+" documentatie er van uitgaat dat gebruikers QGIS uitvoeren onder Ubuntu."
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:19
 #: ../../docs/training_manual/database_concepts/data_model.rst:56
@@ -288,7 +287,7 @@ msgstr "Zoals u kunt zien is onze tabel momenteel leeg."
 msgid "|TY| |moderate|"
 msgstr "|TY| |moderate|"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:415
+#: ../../docs/training_manual/database_concepts/data_model.rst:448
 msgid "moderate"
 msgstr "moderate"
 
@@ -309,14 +308,28 @@ msgstr ""
 "hetzelfde datatype als hierboven."
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:256
-msgid ":ref:`Check your results <database-concepts-4>`"
-msgstr ":ref:`Controleer uw resultaten <database-concepts-4>`"
+#: ../../docs/training_manual/database_concepts/data_model.rst:385
+msgid "Answer"
+msgstr "Antwoord"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:261
+#: ../../docs/training_manual/database_concepts/data_model.rst:259
+msgid "The SQL required to create the correct people table is::"
+msgstr "De vereiste SQL om de juiste tabel people te maken is::"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:267
+msgid "The schema for the table (enter ``\\\\d people``) looks like this::"
+msgstr "Het schema voor de tabel (voer in ``\\\\d people``) ziet er zo uit::"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:282
+msgid ""
+"For illustration purposes, we have purposely omitted the fkey constraint."
+msgstr "Ter illustratie hebben we met opzet de beperking fkey weggelaten."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:285
 msgid "Create Keys in SQL"
 msgstr "Sleutels maken in SQL"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:263
+#: ../../docs/training_manual/database_concepts/data_model.rst:287
 msgid ""
 "The problem with our solution above is that the database doesn't know that "
 "people and streets have a logical relationship. To express this "
@@ -328,23 +341,23 @@ msgstr ""
 " relatie aan te geven, een vreemde sleutel definiëren die verwijst naar de "
 "primaire sleutel van de tabel streets."
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:271
+#: ../../docs/training_manual/database_concepts/data_model.rst:295
 msgid "There are two ways to do this:"
 msgstr "Er zijn twee manieren om dat te doen:"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:273
+#: ../../docs/training_manual/database_concepts/data_model.rst:297
 msgid "Add the key after the table has been created"
 msgstr "De sleutel toevoegen nadat de tabel is gemaakt"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:274
+#: ../../docs/training_manual/database_concepts/data_model.rst:298
 msgid "Define the key at time of table creation"
 msgstr "De sleutel definiëren bij het maken van de tabel"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:276
+#: ../../docs/training_manual/database_concepts/data_model.rst:300
 msgid "Our table has already been created, so let's do it the first way:"
 msgstr "Onze tabel is al gemaakt, dus doen we het op de eerste manier:"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:284
+#: ../../docs/training_manual/database_concepts/data_model.rst:308
 msgid ""
 "That tells the :kbd:`people` table that its :kbd:`street_id` fields must "
 "match a valid street :kbd:`id` from the :kbd:`streets` table."
@@ -353,7 +366,7 @@ msgstr ""
 "overeenkomen met een geldige :kbd:`id` voor street uit de tabel "
 ":kbd:`streets`."
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:287
+#: ../../docs/training_manual/database_concepts/data_model.rst:311
 msgid ""
 "The more usual way to create a constraint is to do it when you create the "
 "table:"
@@ -361,17 +374,17 @@ msgstr ""
 "De meest gebruikte manier om een beperking toe te voegen is om dat te doen "
 "wanneer u de tabel maakt:"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:299
+#: ../../docs/training_manual/database_concepts/data_model.rst:323
 msgid "After adding the constraint, our table schema looks like this now:"
 msgstr ""
 "Na het toevoegen van de beperking ziet ons schema voor de tabel er nu als "
 "volgt uit:"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:319
+#: ../../docs/training_manual/database_concepts/data_model.rst:343
 msgid "Create Indexes in SQL"
 msgstr "Indexen in SQL maken"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:321
+#: ../../docs/training_manual/database_concepts/data_model.rst:345
 msgid ""
 "We want lightning fast searches on peoples names. To provide for this, we "
 "can create an index on the name column of our people table:"
@@ -380,29 +393,51 @@ msgstr ""
 "kunnen een index op de kolom name van onze tabel people maken om dat "
 "mogelijk te maken:"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:330
+#: ../../docs/training_manual/database_concepts/data_model.rst:354
 msgid "Which results in:"
 msgstr "Wat resulteert in:"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:351
+#: ../../docs/training_manual/database_concepts/data_model.rst:375
 msgid "Dropping Tables in SQL"
 msgstr "Tabellen in SQL verwijderen"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:353
+#: ../../docs/training_manual/database_concepts/data_model.rst:377
 msgid "If you want to get rid of a table you can use the :kbd:`drop` command:"
 msgstr ""
 "Als u een tabel wilt verwijderen kunt u gebruk maken van de opdracht "
 ":kbd:`drop`:"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:360
-msgid ""
-"In our current example, the above command would not work. Why not? :ref:`See"
-" why <database-concepts-5>`"
+#: ../../docs/training_manual/database_concepts/data_model.rst:383
+msgid "In our current example, the above command would not work. Why not?"
 msgstr ""
 "In ons huidige voorbeeld zou de bovenstaande opdracht niet werken. Waarom "
-"niet? :ref:`Bekijk waarom <database-concepts-5>`"
+"niet?"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:365
+#: ../../docs/training_manual/database_concepts/data_model.rst:388
+msgid ""
+"The reason the DROP command would not work in this case is because the "
+"*people* table has a Foreign Key constraint to the *streets* table. This "
+"means that dropping (or deleting) the *streets* table would leave the "
+"*people* table with references to non-existent *streets* data."
+msgstr ""
+"De reden dat de opdracht DROP in dit geval niet zou werken is omdat de tabel"
+" *people* een beperking Foreign Key heeft voor de tabel *streets*. Dit "
+"betekent dat het verwijderen (of deleten) van de tabel *streets* de tabel "
+"*people* zou achterlaten met verwijzingen naar niet bestaande gegevens van "
+"*streets*."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:393
+msgid ""
+"It is possible to 'force' the *streets* table to be deleted by using the "
+"``CASCADE`` command, but this would also delete the *people* and any other "
+"table which had a relationship to the *streets* table. Use with caution!"
+msgstr ""
+"Het is mogelijk om te 'forceren' dat de tabel *streets* wordt verwijderd "
+"door de opdracht ``CASCADE`` te gebruiken, maar dat zou ook de tabel "
+"*people* en elke andere tabel die een relatie heeft met de tabel *streets* "
+"verwijderen. Gebruik het met voorzichtigheid!"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:398
 msgid ""
 "If you used the same :kbd:`drop table` command on the `people` table, it "
 "would be successful:"
@@ -410,7 +445,7 @@ msgstr ""
 "Als u dezelfde opdracht :kbd:`drop table` zou gebruiken op de tabel "
 "`people`, zou die met succes worden uitgevoerd:"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:373
+#: ../../docs/training_manual/database_concepts/data_model.rst:406
 msgid ""
 "If you actually did enter that command and dropped the :kbd:`people` table, "
 "now would be a good time to rebuild it, as you will need it in the next "
@@ -420,11 +455,11 @@ msgstr ""
 "nu een goed moment zijn om hem opnieuw te bouwen, omdat u het in de volgende"
 " oefeningen nodig heeft."
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:378
+#: ../../docs/training_manual/database_concepts/data_model.rst:411
 msgid "A word on pgAdmin III"
 msgstr "Een woord over pgAdmin III"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:380
+#: ../../docs/training_manual/database_concepts/data_model.rst:413
 msgid ""
 "We are showing you the SQL commands from the `psql` prompt because it's a "
 "very useful way to learn about databases. However, there are quicker and "
@@ -438,19 +473,19 @@ msgstr ""
 "pgAdmin III. Dit is een grafische tool waarmee tabellen kunnen worden "
 "gemaakt, verwijderd en gewijzigd met behulp van slepen en klikken."
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:385
+#: ../../docs/training_manual/database_concepts/data_model.rst:418
 msgid "Under Ubuntu, you can install it like this:"
 msgstr "Onder Ubuntu kunt u het op deze manier installeren:"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:391
+#: ../../docs/training_manual/database_concepts/data_model.rst:424
 msgid "pgAdmin III will be covered in more detail in another module."
 msgstr "pgAdmin III zal meer detail worden behandeld in een andere module."
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:394
+#: ../../docs/training_manual/database_concepts/data_model.rst:427
 msgid "|IC|"
 msgstr "|IC|"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:396
+#: ../../docs/training_manual/database_concepts/data_model.rst:429
 msgid ""
 "You have now seen how to create a brand new database, starting completely "
 "from scratch."
@@ -458,11 +493,11 @@ msgstr ""
 "U heeft nu gezien hoe u een nagelnieuwe database maakt, geheel vanaf niets "
 "beginnend."
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:400
+#: ../../docs/training_manual/database_concepts/data_model.rst:433
 msgid "|WN|"
 msgstr "|WN|"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:402
+#: ../../docs/training_manual/database_concepts/data_model.rst:435
 msgid "Next you'll learn how to use the DBMS to add new data."
 msgstr ""
 "Vervolgens zult u leren de DBMS te gebruiken om nieuwe gegevens toe te "
