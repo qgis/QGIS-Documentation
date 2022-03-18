@@ -887,24 +887,6 @@ Returns the Well-Known Text (WKT) representation of the geometry without SRID me
 
 .. end_geom_to_wkt_section
 
-.. _expression_function_GeometryGroup_$geometry:
-
-$geometry
-.........
-
-Returns the geometry of the current feature. Can be used for processing with other functions.
-
-.. list-table::
-   :widths: 15 85
-
-   * - Syntax
-     - $geometry
-   * - Examples
-     - * ``geom_to_wkt( $geometry )`` → 'POINT(6 50)'
-
-
-.. end_$geometry_section
-
 .. _expression_function_GeometryGroup_geometry:
 
 geometry
@@ -926,6 +908,24 @@ Returns a feature's geometry.
 
 
 .. end_geometry_section
+
+.. _expression_function_GeometryGroup_$geometry:
+
+$geometry
+.........
+
+Returns the geometry of the current feature. Can be used for processing with other functions.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - $geometry
+   * - Examples
+     - * ``geom_to_wkt( $geometry )`` → 'POINT(6 50)'
+
+
+.. end_$geometry_section
 
 .. _expression_function_GeometryGroup_geometry_n:
 
@@ -1230,24 +1230,6 @@ Returns true if a geometry is valid; if it is well-formed in 2D according to the
 
 .. end_is_valid_section
 
-.. _expression_function_GeometryGroup_$length:
-
-$length
-.......
-
-Returns the length of a linestring. If you need the length of a border of a polygon, use $perimeter instead. The length calculated by this function respects both the current project's ellipsoid setting and distance unit settings. For example, if an ellipsoid has been set for the project then the calculated length will be ellipsoidal, and if no ellipsoid is set then the calculated length will be planimetric.
-
-.. list-table::
-   :widths: 15 85
-
-   * - Syntax
-     - $length
-   * - Examples
-     - * ``$length`` → 42.4711
-
-
-.. end_$length_section
-
 .. _expression_function_GeometryGroup_length:
 
 length
@@ -1286,6 +1268,24 @@ Calculate the length of a geometry line object. Calculations are always planimet
 
 
 .. end_length_section
+
+.. _expression_function_GeometryGroup_$length:
+
+$length
+.......
+
+Returns the length of a linestring. If you need the length of a border of a polygon, use $perimeter instead. The length calculated by this function respects both the current project's ellipsoid setting and distance unit settings. For example, if an ellipsoid has been set for the project then the calculated length will be ellipsoidal, and if no ellipsoid is set then the calculated length will be planimetric.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - $length
+   * - Examples
+     - * ``$length`` → 42.4711
+
+
+.. end_$length_section
 
 .. _expression_function_GeometryGroup_length3D:
 
@@ -3178,24 +3178,6 @@ Returns the minimum x coordinate of a geometry. Calculations are in the spatial 
 
 .. end_x_min_section
 
-.. _expression_function_GeometryGroup_$y:
-
-$y
-..
-
-Returns the y coordinate of the current point feature. If the feature is a multipoint feature, then the y-coordinate of the first point will be returned.
-
-.. list-table::
-   :widths: 15 85
-
-   * - Syntax
-     - $y
-   * - Examples
-     - * ``$y`` → 42
-
-
-.. end_$y_section
-
 .. _expression_function_GeometryGroup_y:
 
 y
@@ -3216,6 +3198,24 @@ Returns the y coordinate of a point geometry, or the y coordinate of the centroi
 
 
 .. end_y_section
+
+.. _expression_function_GeometryGroup_$y:
+
+$y
+..
+
+Returns the y coordinate of the current point feature. If the feature is a multipoint feature, then the y-coordinate of the first point will be returned.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - $y
+   * - Examples
+     - * ``$y`` → 42
+
+
+.. end_$y_section
 
 .. _expression_function_GeometryGroup_$y_at:
 

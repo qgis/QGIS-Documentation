@@ -283,6 +283,27 @@ Returns 1 when condition a and b are true.
 
 .. end_AND_section
 
+.. _expression_function_Operators_BETWEEN:
+
+BETWEEN
+.......
+
+Returns TRUE if value is within the specified range. The range is considered inclusive of the bounds. To test for exclusion `NOT BETWEEN` can be used.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - BETWEEN lower_bound AND higher_bound
+   * - Arguments
+     - * **lower_bound AND higher_bound** - range bounds
+   * - Examples
+     - * ``'B' BETWEEN 'A' AND 'C'`` → TRUE
+       * ``2 BETWEEN 1 AND 3`` → TRUE
+
+
+.. end_BETWEEN_section
+
 .. _expression_function_Operators_ILIKE:
 
 ILIKE
@@ -439,6 +460,27 @@ Negates a condition.
 
 
 .. end_NOT_section
+
+.. _expression_function_Operators_NOT BETWEEN:
+
+NOT BETWEEN
+...........
+
+Returns TRUE if value is not within the specified range. The range is considered inclusive of the bounds.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - NOT BETWEEN lower_bound AND higher_bound
+   * - Arguments
+     - * **lower_bound AND higher_bound** - range bounds
+   * - Examples
+     - * ``'B' NOT BETWEEN 'A' AND 'C'`` → FALSE
+       * ``1.0 NOT BETWEEN 1.1 AND 1.2`` → TRUE
+
+
+.. end_NOT BETWEEN_section
 
 .. _expression_function_Operators_OR:
 
