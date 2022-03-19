@@ -1244,7 +1244,7 @@ To create a shift of a line layer, you must first go into editing mode
 and activate the |offsetCurve| :sup:`Offset Curve` tool.
 Then click on a feature to shift it.
 Move the mouse and click where wanted or enter the desired distance in
-the user input widget.
+the user input widget. Holding :kbd:`Ctrl` during the 2nd click will make an offset copy. 
 Your changes may then be saved with the |saveEdits|
 :sup:`Save Layer Edits` tool.
 
