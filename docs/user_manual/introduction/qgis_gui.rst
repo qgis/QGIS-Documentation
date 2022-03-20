@@ -2286,7 +2286,7 @@ To create a temporal animation:
 
 #. Toggle on the |temporalNavigationAnimated| :sup:`Animated temporal
    navigation`, displaying the animation player widget
-#. Enter the :guilabel:`Time range` to consider. Using the refresh |refresh|
+#. Enter the :guilabel:`Time range` to consider. Using the |refresh|
    button, this can be defined as:
 
    * :guilabel:`Set to full range` of all the time enabled layers
