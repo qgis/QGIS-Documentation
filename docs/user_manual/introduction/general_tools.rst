@@ -2602,7 +2602,14 @@ Numeric formatters allow formatting of numeric values for display, using
 a variety of different formatting techniques (for instance scientific notation,
 currency values, percentage values, etc). One use of this is to set
 text in a layout scale bar or fixed table.
- 
+
+.. _figure_number_formatting:
+
+.. figure:: img/number_formatting.png
+   :align: center
+
+   Formatting numeric value
+
 Different categories of formats are supported.
 For most of them, you can set part or all of the following numeric options:
 
