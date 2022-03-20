@@ -830,7 +830,7 @@ actions like:
      -
      -
      - :ref:`label_legend`
-   * - :menuselection:`-->` :guilabel:`Toogle Selected Layers Independently`
+   * - :menuselection:`-->` :guilabel:`Toggle Selected Layers Independently`
      -
      -
      - :ref:`label_legend`
@@ -2127,7 +2127,7 @@ Click on the map view and you should be able to interact with it:
   button or the mouse wheel is held down. When the mouse is used, the distance
   and direction of the pan action are shown in the status bar at the bottom.
 * it can be zoomed in and out, with the dedicated |zoomIn| :sup:`Zoom In`
-  and |zoomIn| :sup:`Zoom Out` tools. Hold the :kbd:`Alt` key to switch from
+  and |zoomOut| :sup:`Zoom Out` tools. Hold the :kbd:`Alt` key to switch from
   one tool to the other. Zooming is also performed by rolling
   the wheel forward to zoom in and backwards to zoom out.
   The zoom is centered on the mouse cursor position. You can customize the
@@ -2272,7 +2272,7 @@ The :guilabel:`Temporal controller` panel has the following modes:
 
   * |unchecked| :guilabel:`Cumulative range`: all animation frames will
     have the same start date-time but different end dates and times.
-    This is useful is you wish to accumulate data in your temporal
+    This is useful if you wish to accumulate data in your temporal
     visualisation instead of showing a ‘moving time window’ across your data.
 
 .. _`create_temporal_animation`:
@@ -2286,7 +2286,7 @@ To create a temporal animation:
 
 #. Toggle on the |temporalNavigationAnimated| :sup:`Animated temporal
    navigation`, displaying the animation player widget
-#. Enter the :guilabel:`Time range` to consider. Using the close |refresh|
+#. Enter the :guilabel:`Time range` to consider. Using the refresh |refresh|
    button, this can be defined as:
 
    * :guilabel:`Set to full range` of all the time enabled layers
@@ -2762,7 +2762,7 @@ To create an animation:
    https://doc.qt.io/qt-5/qeasingcurve.html#EasingFunction-typedef).
 
    The animation can also be previewed by moving the time slider.
-   Keeping the :guilabel:`Loop` button checked will repeatedly run the
+   Keeping the :guilabel:`Loop` box checked will repeatedly run the
    animation while clicking |play| stops a running animation.
 
 Click |fileSave| :sup:`Export animation frames` to generate a series of images
