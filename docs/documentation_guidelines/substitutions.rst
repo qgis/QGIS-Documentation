@@ -326,6 +326,7 @@ Icon                            Substitution                        Icon        
 |properties|                    ``|properties|``                    |deleteSelected|                ``|deleteSelected|``
 |browserExpand|                 ``|browserExpand|``                 |browserCollapse|               ``|browserCollapse|``
 |codeEditor|                    ``|codeEditor|``                    |add|                           ``|add|``
+|relations|                     ``|relations|``
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -1223,6 +1224,8 @@ Icon                            Substitution                        Icon        
 .. |regularPolygonCenterCorner| image:: /static/common/mActionRegularPolygonCenterCorner.png
    :width: 1.5em
 .. |regularPolygonCenterPoint| image:: /static/common/mActionRegularPolygonCenterPoint.png
+   :width: 1.5em
+.. |relations| image:: /static/common/relations.png
    :width: 1.5em
 .. |removeAllFromOverview| image:: /static/common/mActionRemoveAllFromOverview.png
    :width: 1.5em
