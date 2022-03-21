@@ -982,7 +982,7 @@ To create a bookmark:
 
    .. _figure_create_bookmarks:
 
-   .. figure:: img/bookmark_editor.png
+   .. figure:: img/bookmark_editor_project_bookmarks_default.png
       :align: center
 
       The Bookmark Editor Dialog
@@ -993,7 +993,8 @@ To create a bookmark:
    <extent_selector>` widget
 #. Indicate the :guilabel:`CRS` to use for the extent
 #. Select whether the bookmark will be :guilabel:`Saved in` :guilabel:`User
-   Bookmarks` or :guilabel:`Project Bookmarks`
+   Bookmarks` or :guilabel:`Project Bookmarks` (by default, this drop-down list 
+   is set to :guilabel:`Project Bookmarks`)
 #. Press :guilabel:`Save` to add the bookmark to the list
 
 Note that you can have multiple bookmarks with the same name.
