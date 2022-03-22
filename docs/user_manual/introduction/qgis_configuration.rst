@@ -1484,15 +1484,23 @@ Data Sources Properties
 
 In the |openTable| :guilabel:`Data Sources` tab, you can:
 
-* |unchecked| :guilabel:`Automatically create transaction groups where possible`:
-  When this mode is turned on, all
-  layers from the same database are synchronised in their edit state,
-  i.e. when one layer is put into edit state, all are, when one layer is committed
-  or one layer is rolled back, so are the others. Also, instead of buffering edit
-  changes locally, they are directly sent to a transaction in the database which
-  gets committed when the user clicks save layer.
-  Note that you can (de)activate this option only if no layer is being edited
-  in the project.
+* :guilabel:`Transaction mode`: define how edits are sent to the data provider```
+
+  * :guilabel:`Local Edit Buffer`: edits are buffered locally and sent to the provider 
+    when toggling layer editing mode or clicking :guilabel:`Save edits`.
+  * :guilabel:`Automatic Transaction Groups`:
+    on supported datasources (postgres and geopackage databases) the edit state 
+    of all tables that originate from the same database are synchronized and executed 
+    in a server side transaction. Also, instead of buffering edit changes locally, they 
+    are directly sent to a transaction in the database which gets committed when toggling 
+    layer editing mode or clicking :guilabel:`Save edits`.
+  * :guilabel:`Buffered Transaction Groups`:
+    all editable layers, disregarding from which provider, are toggled synchronously and 
+    all edits are saved in a local edit buffer. Saving changes is executed within a single 
+    transaction on all layers (per provider).
+
+  Note that you can change this option only if no layer is being edited in the project.
+
 * |unchecked| :guilabel:`Evaluate default values on provider side`: When adding
   new features in a PostgreSQL table, fields with default value constraint are
   evaluated and populated at the form opening, and not at the commit moment.
