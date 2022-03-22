@@ -134,6 +134,11 @@ From the top level context menu, you can create a bookmark
 :guilabel:`Import Spatial Bookmarks...` and
 :guilabel:`Export Spatial Bookmarks...`.
 
+For bookmark group entries you can :guilabel:`Export Spatial Bookmarks...`,
+create a bookmark (:guilabel:`New Spatial Bookmark...`),
+:guilabel:`Rename Bookmark Group`,
+and :guilabel:`Delete Bookmark Group`.
+
 For bookmark entries you can :guilabel:`Zoom to Bookmark`,
 :guilabel:`Edit Spatial Bookmark...` and
 :guilabel:`Delete Spatial Bookmark`
