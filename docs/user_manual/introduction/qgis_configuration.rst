@@ -1487,13 +1487,13 @@ In the :guilabel:`Data Sources` tab, you can:
 * :guilabel:`Transaction mode`:
 
   * :guilabel:`Local Edit Buffer`: edits are buffered locally and sent to the provider 
-    when toggling layer editing mode.
+    when toggling layer editing mode or clicking :guilabel:`Save edits`.
   * :guilabel:`Automatic Transaction Groups`:
     on supported datasources (postgres and geopackage databases) the edit state 
     of all tables that originate from the same database are synchronized and executed 
     in a server side transaction. Also, instead of buffering edit changes locally, they 
-    are directly sent to a transaction in the database which gets committed when the user 
-    clicks :guilabel:`Save edits`.
+    are directly sent to a transaction in the database which gets committed when toggling 
+    layer editing mode or clicking :guilabel:`Save edits`.
   * :guilabel:`Buffered Transaction Groups` Buffered transactional editing means that 
     all editable layers in the buffered transaction group are toggled synchronously and 
     all edits are saved in a local edit buffer. Saving changes is executed within a single 
