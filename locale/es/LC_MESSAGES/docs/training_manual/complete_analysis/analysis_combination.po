@@ -2,21 +2,20 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
-# Rodrigo Armesto Baztán <rodri_Armesto@hotmail.com>, 2021
-# vareli <ehespinosa@ya.com>, 2022
+# Harrissou Sant-anna, 2022
+# Abigaíl García, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 12:01+0000\n"
-"Last-Translator: vareli <ehespinosa@ya.com>, 2022\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:06+0000\n"
+"Last-Translator: Abigaíl García, 2022\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -49,9 +48,9 @@ msgstr ""
 msgid "|moderate| |TY|"
 msgstr "|moderate| |TY|"
 
-#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:90
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:161
 msgid "moderate"
-msgstr "moderar"
+msgstr "moderate"
 
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:13
 msgid "Save your current map (:file:`raster_analysis.qgs`)."
@@ -115,11 +114,11 @@ msgstr ""
 "Ahora deberías tener una capa mostrando ciertas construcciones como tu "
 "solución, por ejemplo:"
 
-#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:40
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:38
 msgid "|moderate| |TY| Inspecting the Results"
 msgstr "|moderate| |TY| Inspeccionando los Resultados"
 
-#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:42
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:40
 msgid ""
 "Look at each of the buildings in your :guilabel:`new_solution` layer. "
 "Compare them with the :guilabel:`suitable_terrain` layer by changing the "
@@ -135,15 +134,30 @@ msgstr ""
 "intersectan con la capa :guilabel:`suitable_terrain`? ¿O por qué no? ¿Cuáles"
 " dirías que no son adecuadas?"
 
-#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:49
-msgid ":ref:`Check your results <complete-analysis-2>`"
-msgstr ":ref:`Comprueba tus resultados <complete-analysis-2>`"
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:47
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:68
+msgid "Answer"
+msgstr "Respuesta"
 
-#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:55
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:50
+msgid ""
+"You may notice that some of the buildings in your :file:`new_solution` layer"
+" have been \"sliced\" by the :guilabel:`Intersection` tool. This shows that "
+"only part of the building - and therefore only part of the property - lies "
+"on suitable terrain. We can therefore sensibly eliminate those buildings "
+"from our dataset."
+msgstr ""
+"Puede notar que algunos de los edificios en su capa :file:`new_solution` han"
+" sido \"cortados\" por la herramienta :guilabel:`Intersección`. Esto muestra"
+" que solo una parte del edificio, y por lo tanto solo una parte de la "
+"propiedad, se encuentra en un terreno adecuado. Por lo tanto, podemos "
+"eliminar con sensatez esos edificios de nuestro conjunto de datos."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:58
 msgid "|moderate| |TY| Refining the Analysis"
 msgstr "|moderate| |TY| Refina el Análisis"
 
-#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:57
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:60
 msgid ""
 "You can see from the results that some buildings which were included were "
 "not really suitable, so we can now refine the analysis."
@@ -152,7 +166,7 @@ msgstr ""
 "incluidas no eran realmente adecuadas, así que ahora podemos refinar el "
 "análisis."
 
-#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:60
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:63
 msgid ""
 "We want to ensure that our analysis returns only those buildings which fall "
 "entirely within the :guilabel:`suitable_terrain` layer. How would you "
@@ -165,15 +179,134 @@ msgstr ""
 "herramientas de análisis vectorial y recuerde que nuestros edificios tienen "
 "un tamaño de más de 100 metros cuadrados."
 
-#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:65
-msgid ":ref:`Check your results <complete-analysis-3>`"
-msgstr ":ref:`Comprueba tus resultados <complete-analysis-3>`"
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:71
+msgid "At the moment, your analysis should look something like this:"
+msgstr "Por el momento, su análisis debería ser algo como esto:"
 
-#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:68
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:76
+msgid "Consider a circular area, continuous for 100 meters in all directions."
+msgstr ""
+"Considere un área circular, continua por 100 metros en todas las "
+"direcciones."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:81
+msgid ""
+"If it is greater than 100 meters in radius, then subtracting 100 meters from"
+" its size (from all directions) will result in a part of it being left in "
+"the middle."
+msgstr ""
+"Si tiene más de 100 metros de radio, restar 100 metros de su tamaño (desde "
+"todas las direcciones) dará como resultado que una parte quede en el medio."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:88
+msgid ""
+"Therefore, you can run an *interior buffer* of 100 meters on your existing "
+":guilabel:`suitable_terrain` vector layer. In the output of the buffer "
+"function, whatever remains of the original layer will represent areas where "
+"there is suitable terrain for 100 meters beyond."
+msgstr ""
+"Por lo tanto, puede ejecutar un *área de influencia interior* de 100 metros "
+"en su capa vectorial :guilabel:`suitable_terrain` existente. En la salida de"
+" la función de área de influencia, lo que quede de la capa original "
+"representará áreas donde hay terreno adecuado para 100 metros más allá."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:93
+msgid "To demonstrate:"
+msgstr "Demostrar:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:95
+msgid ""
+"Go to :menuselection:`Vector --> Geoprocessing Tools --> Buffer(s)` to open "
+"the Buffer(s) dialog."
+msgstr ""
+"Vaya a :menuselection:`Vector --> Herramientas de geoprocesamiento --> Área "
+"de influencia(s)` para abrir el cuadro de diálogo de Área(s) de influencia."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:97
+msgid "Set it up like this:"
+msgstr "Configura así:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:102
+msgid ""
+"Use the :guilabel:`suitable_terrain` layer with ``10`` segments and a buffer"
+" distance of ``-100``. (The distance is automatically in meters because your"
+" map is using a projected CRS.)"
+msgstr ""
+"Usa la capa :guilabel:`suitable_terrain` con ``10`` segmentos y una "
+"distancia de búfer de ``-100``. (La distancia se expresa automáticamente en "
+"metros porque su mapa utiliza un SRC proyectado)."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:105
+msgid ""
+"Save the output in :file:`exercise_data/residential_development/` as "
+":file:`suitable_terrain_continuous100m.shp`."
+msgstr ""
+"Guarde la salida en :file:`exercise_data/residential_development/` como "
+":file:`suitable_terrain_continuous100m.shp`."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:107
+msgid ""
+"If necessary, move the new layer above your original "
+":guilabel:`suitable_terrain` layer."
+msgstr ""
+"Si es necesario, mueva la nueva capa sobre su capa "
+":guilabel:`suitable_terrain` original."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:110
+msgid "Your results will look like something like this:"
+msgstr "Sus resultados se verán algo como esto:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:115
+msgid ""
+"Now use the :guilabel:`Select by Location` tool (:menuselection:`Vector --> "
+"Research Tools --> Select by location`)."
+msgstr ""
+"Ahora use la herramienta :guilabel:`Seleccionar por localización` "
+"(:menuselection:`Vector --> Herramientas de investigación --> Seleccionar "
+"por localización`)."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:117
+msgid "Set up like this:"
+msgstr "Configura así:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:122
+msgid ""
+"Select features in :guilabel:`new_solution` that intersect features in "
+":guilabel:`suitable_terrain_continuous100m.shp`."
+msgstr ""
+"Seleccione entidades en :guilabel:`new_solution` que intersecan entidades en"
+" :guilabel:`suitable_terrain_continuous100m.shp`."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:125
+msgid "This is the result:"
+msgstr "Este es el resultado:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:130
+msgid ""
+"The yellow buildings are selected. Although some of the buildings fall "
+"partly outside the new :guilabel:`suitable_terrain_continuous100m` layer, "
+"they lie well within the original :guilabel:`suitable_terrain` layer and "
+"therefore meet all of our requirements."
+msgstr ""
+"Se seleccionan los edificios amarillos. Aunque algunos de los edificios "
+"quedan parcialmente fuera de la nueva capa "
+":guilabel:`suitable_terrain_continuous100m`, se encuentran bien dentro de la"
+" capa :guilabel:`suitable_terrain` original y, por lo tanto, cumplen con "
+"todos nuestros requisitos."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:135
+msgid ""
+"Save the selection under :file:`exercise_data/residential_development/` as "
+":file:`final_answer.shp`."
+msgstr ""
+"Guarde la selección en :file:`exercise_data/residential_development/` como "
+":file:`final_answer.shp`."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:139
 msgid "|IC|"
 msgstr "|IC|"
 
-#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:70
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:141
 msgid ""
 "You have now answered the original research question, and can offer an "
 "opinion (with reasons, backed by analysis) for a recommendation regarding "
@@ -183,11 +316,11 @@ msgstr ""
 "una opinión (con razonamientos respaldados en el análisis) para una "
 "recomendación respecto a que propiedad desarrollar."
 
-#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:75
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:146
 msgid "|WN|"
 msgstr "|WN|"
 
-#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:77
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:148
 msgid "Next you will present these results as part of your second assignment."
 msgstr ""
 "Lo siguiente será presentar esos resultados como parte de tu segundo "
