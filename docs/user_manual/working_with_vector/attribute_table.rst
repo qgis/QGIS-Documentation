@@ -567,6 +567,19 @@ A short example illustrates how field calculator works when using the
    expression box and click :guilabel:`OK`.
 #. You can now find a new :guilabel:`length_km` field in the attribute table.
 
+Note that underneath the expression box, expression output preview text (up to 60 
+characters) is shown in real-time as the expression is assembled. To view expression 
+output preview text that exceeds 60 characters, you can hover your cursor over the 
+text to display a tooltip pop-up containing the entire preview text. Furthermore, you 
+may also right-click on the text to copy the entire preview text onto your clipboard.
+
+.. _figure_field_calculator_preview_right_click_copy:
+
+.. figure:: img/fieldcalculator_preview_right_click_copy.png
+   :align: center
+
+   Expression output preview text capabilities within Field Calculator
+
 .. _virtual_field:
 
 Creating a Virtual Field
