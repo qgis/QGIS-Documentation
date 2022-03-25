@@ -49,11 +49,6 @@ To load a vector tiles dataset into QGIS, use the |addVectorTileLayer| :guilabel
 in the :guilabel:`Data Source Manager` dialog. Read :ref:`vector_tiles` for
 more details.
 
-For the import of styles, there is support for:
-
-* :guilabel:`QML` files (:ref:`qgisstylefile`)
-* :guilabel:`MapBox GL Json` style configuration files
-
 Vector Tiles Dataset Properties
 ===============================
 
@@ -98,6 +93,11 @@ rules only` option to filter the list of rules to only those that are visible
 at the given zoom level. This makes it easier to work with complex vector styling
 and to locate troublesome rules. Style and labelling can be dependent on the
 zoom level.
+
+There is also the option to import styles. Those styles can be supplied as:
+
+* :guilabel:`QML` files (:ref:`qgisstylefile`)
+* :guilabel:`MapBox GL Json` style configuration files
 
 .. index:: Metadata, Metadata editor, Keyword
 .. _vectortilesmetadatamenu:
