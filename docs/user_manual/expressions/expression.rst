@@ -109,15 +109,19 @@ using functions, layer fields and values. It contains the following widgets:
 * Above the expression editor, a set of tools helps you:
 
   * |fileNew|:sup:`Clear the expression editor`
-  * create and manage :ref:`user expressions <user_expressions_functions>`
+  * Create and manage :ref:`user expressions <user_expressions_functions>`
 
 * Under the expression editor, you find:
 
-  * a set of basic operators to help you build the expression
-  * an indication of the expected format of output when you are data-defining
+  * A set of basic operators to help you build the expression
+  * An indication of the expected format of output when you are data-defining
     feature properties
-  * a live :guilabel:`Output preview` of the expression, evaluated
-    on the first feature of the Layer by default.
+  * A live :guilabel:`Output preview` of the expression (up to 60 characters), 
+    evaluated on the first feature of the Layer by default. To view output preview 
+    text exceeding 60 characters, you can hover your cursor over the text to display 
+    a tooltip pop-up containing the entire output preview. Furthermore, you may also 
+    right-click on the text to copy the entire output preview onto your clipboard. 
+    
     You can browse and evaluate other features of the layer using the
     :guilabel:`Feature` combobox (the values are taken from the
     :ref:`display name <maptips>` property of the layer).
