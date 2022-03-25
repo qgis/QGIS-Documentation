@@ -1302,7 +1302,7 @@ dialog described above.
 General Properties
 ------------------
 
-In the :guilabel:`General` tab, the :guilabel:`General settings` let you:
+In the |general| :guilabel:`General` tab, the :guilabel:`General settings` let you:
 
 * see the location of the project file
 * set the folder for the project home (available in the :guilabel:`Project home` item
@@ -1360,7 +1360,7 @@ shown via the identify tool.
 Metadata Properties
 -------------------
 
-The :guilabel:`Metadata` tab allows detailed metadata to be defined,
+The |editMetadata| :guilabel:`Metadata` tab allows detailed metadata to be defined,
 including (among the others): author, creation date, language, abstracts,
 categories, keywords, contact details, links, history. There is also a
 validation functionality that checks if specific fields were filled, anyway
@@ -1421,8 +1421,8 @@ global settings. See :ref:`datum_transformation` for more details.
 Default Styles Properties
 -------------------------
 
-The :guilabel:`Default Styles` tab lets you control how new layers will be
-drawn in the project when they do not have an existing :file:`.qml` style
+The |symbology| :guilabel:`Default Styles` tab lets you control how new layers
+will be drawn in the project when they do not have an existing :file:`.qml` style
 defined. You can:
 
 * Set default symbols (:guilabel:`Marker`, :guilabel:`Line`, :guilabel:`Fill`)
@@ -1482,17 +1482,25 @@ These colors are identified as :guilabel:`Project colors` and listed as part of
 Data Sources Properties
 -----------------------
 
-In the :guilabel:`Data Sources` tab, you can:
+In the |openTable| :guilabel:`Data Sources` tab, you can:
 
-* |unchecked| :guilabel:`Automatically create transaction groups where possible`:
-  When this mode is turned on, all
-  layers from the same database are synchronised in their edit state,
-  i.e. when one layer is put into edit state, all are, when one layer is committed
-  or one layer is rolled back, so are the others. Also, instead of buffering edit
-  changes locally, they are directly sent to a transaction in the database which
-  gets committed when the user clicks save layer.
-  Note that you can (de)activate this option only if no layer is being edited
-  in the project.
+* :guilabel:`Transaction mode`: define how edits are sent to the data provider```
+
+  * :guilabel:`Local Edit Buffer`: edits are buffered locally and sent to the provider 
+    when toggling layer editing mode or clicking :guilabel:`Save edits`.
+  * :guilabel:`Automatic Transaction Groups`:
+    on supported datasources (postgres and geopackage databases) the edit state 
+    of all tables that originate from the same database are synchronized and executed 
+    in a server side transaction. Also, instead of buffering edit changes locally, they 
+    are directly sent to a transaction in the database which gets committed when toggling 
+    layer editing mode or clicking :guilabel:`Save edits`.
+  * :guilabel:`Buffered Transaction Groups`:
+    all editable layers, disregarding from which provider, are toggled synchronously and 
+    all edits are saved in a local edit buffer. Saving changes is executed within a single 
+    transaction on all layers (per provider).
+
+  Note that you can change this option only if no layer is being edited in the project.
+
 * |unchecked| :guilabel:`Evaluate default values on provider side`: When adding
   new features in a PostgreSQL table, fields with default value constraint are
   evaluated and populated at the form opening, and not at the commit moment.
@@ -1550,7 +1558,8 @@ In the :guilabel:`Data Sources` tab, you can:
 Relations Properties
 --------------------
 
-The :guilabel:`Relations` tab is used to define 1:n relations and polymorphic relations. The relations
+The |relations| :guilabel:`Relations` tab is used to define 1:n relations and
+polymorphic relations. The relations
 are defined in the project properties dialog. Once relations exist for a layer,
 a new user interface element in the form view (e.g. when identifying a feature
 and opening its form) will list the related entities. This provides a powerful
@@ -1567,7 +1576,7 @@ You can find out more about 1:n relations support in Section :ref:`vector_relati
 Variables Properties
 --------------------
 
-The :guilabel:`Variables` tab lists all the variables available at
+The |expression| :guilabel:`Variables` tab lists all the variables available at
 the project's level (which includes all global variables). Besides, it
 also allows the user to manage project-level variables. Click the |symbologyAdd|
 button to add a new custom project-level variable. Likewise, select a custom
@@ -1581,9 +1590,9 @@ More information on variables usage in the General Tools
 Macros Properties
 -----------------
 
-The :guilabel:`Macros` tab is used to edit Python macros for projects. Currently,
-only three macros are available: ``openProject()``, ``saveProject()`` and
-``closeProject()``.
+The |action| :guilabel:`Macros` tab is used to edit Python macros for projects.
+Currently, only three macros are available: ``openProject()``, ``saveProject()``
+and ``closeProject()``.
 
 .. _figure_macro_tab:
 
@@ -1595,8 +1604,8 @@ only three macros are available: ``openProject()``, ``saveProject()`` and
 QGIS Server Properties
 ----------------------
 
-The tab :guilabel:`QGIS Server` allows you to configure your project in order
-to publish it online. Here you can define information about the QGIS
+The |overlay| :guilabel:`QGIS Server` tab allows you to configure your project
+in order to publish it online. Here you can define information about the QGIS
 Server WMS and WFS capabilities, extent and CRS restrictions. More information
 available in section :ref:`Creatingwmsfromproject` and subsequent.
 
@@ -1614,7 +1623,7 @@ available in section :ref:`Creatingwmsfromproject` and subsequent.
 Temporal Properties
 -------------------
 
-The tab :guilabel:`Temporal` is used to set the temporal range of your project, 
+The |temporal| :guilabel:`Temporal` tab is used to set the temporal range of your project,
 either by using manual :guilabel:`Start date` and :guilabel:`End date` inputs
 or by calculating it from the current project temporal layers.
 The project time range can then be used in the :guilabel:`Temporal controller
@@ -1633,7 +1642,7 @@ panel` to manage the map canvas :ref:`temporal navigation <maptimecontrol>`.
 Customization
 =============
 
-The customization dialog lets you (de)activate almost every element in the QGIS
+The guilabel:`Customization` dialog lets you (de)activate almost every element in the QGIS
 user interface. This can be very useful if you want to provide your end-users with a
 'light' version of QGIS, containing only the icons, menus or panels they need.
 
@@ -2083,6 +2092,8 @@ in the QGIS user profile.
 
 .. |3d| image:: /static/common/3d.png
    :width: 1.5em
+.. |action| image:: /static/common/action.png
+   :width: 2em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |codeEditor| image:: /static/common/mIconCodeEditor.png
@@ -2095,13 +2106,19 @@ in the QGIS user profile.
    :width: 1.5em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
+.. |editMetadata| image:: /static/common/editmetadata.png
+   :width: 1.2em
 .. |editPaste| image:: /static/common/mActionEditPaste.png
+   :width: 1.5em
+.. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
 .. |fileOpen| image:: /static/common/mActionFileOpen.png
    :width: 1.5em
 .. |fileSave| image:: /static/common/mActionFileSave.png
    :width: 1.5em
 .. |filterMap| image:: /static/common/mActionFilterMap.png
+   :width: 1.5em
+.. |general| image:: /static/common/general.png
    :width: 1.5em
 .. |indicatorLowAccuracy| image:: /static/common/mIndicatorLowAccuracy.png
    :width: 1.5em
@@ -2115,6 +2132,8 @@ in the QGIS user profile.
    :width: 1em
 .. |offsetCurve| image:: /static/common/mActionOffsetCurve.png
    :width: 1.5em
+.. |openTable| image:: /static/common/mActionOpenTable.png
+   :width: 1.5em
 .. |options| image:: /static/common/mActionOptions.png
    :width: 1em
 .. |osx| image:: /static/common/osx.png
@@ -2126,6 +2145,8 @@ in the QGIS user profile.
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
    :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
+   :width: 1.5em
+.. |relations| image:: /static/common/relations.png
    :width: 1.5em
 .. |runConsole| image:: /static/common/iconRunConsole.png
    :width: 1.5em
@@ -2143,9 +2164,13 @@ in the QGIS user profile.
    :width: 1.5em
 .. |styleManager| image:: /static/common/mActionStyleManager.png
    :width: 1.5em
+.. |symbology| image:: /static/common/symbology.png
+   :width: 2em
 .. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |symbologyRemove| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
+.. |temporal| image:: /static/common/temporal.png
    :width: 1.5em
 .. |transformation| image:: /static/common/transformation.png
    :width: 1.5em

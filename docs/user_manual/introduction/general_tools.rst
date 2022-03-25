@@ -993,7 +993,8 @@ To create a bookmark:
    <extent_selector>` widget
 #. Indicate the :guilabel:`CRS` to use for the extent
 #. Select whether the bookmark will be :guilabel:`Saved in` :guilabel:`User
-   Bookmarks` or :guilabel:`Project Bookmarks`
+   Bookmarks` or :guilabel:`Project Bookmarks` (by default, this drop-down list 
+   is set to :guilabel:`User Bookmarks`)
 #. Press :guilabel:`Save` to add the bookmark to the list
 
 Note that you can have multiple bookmarks with the same name.
@@ -2603,7 +2604,14 @@ Numeric formatters allow formatting of numeric values for display, using
 a variety of different formatting techniques (for instance scientific notation,
 currency values, percentage values, etc). One use of this is to set
 text in a layout scale bar or fixed table.
- 
+
+.. _figure_number_formatting:
+
+.. figure:: img/number_formatting.png
+   :align: center
+
+   Formatting numeric value
+
 Different categories of formats are supported.
 For most of them, you can set part or all of the following numeric options:
 
