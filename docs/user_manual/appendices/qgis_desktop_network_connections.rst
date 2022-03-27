@@ -27,13 +27,13 @@ from the user before they take place, others happen automatically.
      - Notify the user on new QGIS versions availability
      - Automatic
      - https://www.qgis.org
-     - IP, QGIS version
+     - IP, QGIS version, OS
      - IP in server log
    * - Python API help
      - Browser PyQGIS documentation
      - User initiated
      - https://qgis.org/pyqgis/%1/search.html?q=%2
-     - IP, QGIS version
+     - IP, QGIS version, OS
      - IP in server log
    * - **feed.qgis.org**
      -
@@ -45,7 +45,7 @@ from the user before they take place, others happen automatically.
      - Retrieve QGIS news from the feed
      - Automatic
      - https://feed.qgis.org
-     - IP, language code, last download timestamp
+     - IP, language code, last download timestamp, OS
      - IP in server log
    * - **plugins.qgis.org**
      -
@@ -57,25 +57,25 @@ from the user before they take place, others happen automatically.
      - Notify the user about plugin updates
      - User initiated/automatic (configurable)
      - https://plugins.qgis.org
-     - IP, QGIS version
+     - IP, QGIS version, OS
      - IP in server log
    * - Plugins list
      - Retrieve the list of plugins
      - User initiated
      - https://plugins.qgis.org
-     - IP, QGIS version
+     - IP, QGIS version, OS
      - IP in server log
    * - Plugin installation
      - Download and install a plugin package
      - User initiated
      - https://plugins.qgis.org
-     - IP, QGIS version
+     - IP, QGIS version, OS
      - Increase plugin download counter by one
    * - Styles
      - List user contributed styles
      - User initiated
      - https://plugins.qgis.org/styles
-     - IP, QGIS version
+     - IP, QGIS version, OS
      - Increase download counter by one
    * - **3rd party**
      -
@@ -87,19 +87,19 @@ from the user before they take place, others happen automatically.
      - Produce a DEM for 3D views
      - User initiated
      - https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png
-     - IP, QGIS version
+     - IP, QGIS version, OS
      - see Amazon TOS
    * - Google Map Geocoder
      - Geocoding services
      - User initiated
      - https://maps.googleapis.com/maps/api/geocode/json
-     - IP, QGIS version
+     - IP, QGIS version, OS
      - See google maps API TOS
    * - Nominatim Geocoder
      - Geocoding services
      - User initiated
      - https://nominatim.qgis.org/search
-     - IP, QGIS version
+     - IP, QGIS version, OS
      -
    * - Geodetic grid
      - Add a new PROJ grid
