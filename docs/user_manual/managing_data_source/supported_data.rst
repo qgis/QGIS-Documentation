@@ -672,7 +672,7 @@ Adding views
 ^^^^^^^^^^^^
 
 When adding a view as a layer, the SAP HANA provider cannot automatically
-indentify columns that unambiguously identify a feature. Furthermore, some views
+identify columns that unambiguously identify a feature. Furthermore, some views
 are read-only and cannot be edited.
 
 To have full feature editing support, the view must be updatable (check column
