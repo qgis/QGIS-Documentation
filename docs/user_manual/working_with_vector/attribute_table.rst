@@ -811,7 +811,7 @@ a table. And there are also some buttons available. Let's review them shortly:
   form of a feature from the region layer. But the table is representing
   features of the airport layer.
 * The |saveEdits| button is for saving all the edits in the child layer (airport).
-* The |capturePoint| lets you digitize the airport geometry in the map canvas and
+* The |capturePoint| button lets you digitize the airport geometry in the map canvas and
   assigns the new feature to the current region by default.
   Note that the icon will change according to the geometry type.
 * The |newTableRow| button adds a new record to the airport layer attribute table
@@ -1082,7 +1082,7 @@ This might not be a problem for 2 tables, but imagine if we want to take separat
 
 Polymorphic relations solve this problem as all the referencing features are stored in the same table ``documents``.
 For each feature the referenced layer is stored in the ``referenced_layer`` field and the referenced
-feature id in the ``referenced_fk``.
+feature id in the ``referenced_fk`` field.
 
 
 Defining polymorphic relations
