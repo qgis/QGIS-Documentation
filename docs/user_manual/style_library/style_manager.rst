@@ -327,6 +327,55 @@ choose the ramp type:
  stop` as well as :kbd:`DEL` key removes the selected color stop. 
 
 
+.. _legend_patch:
+
+Creating a Legend Patch Shape
+=============================
+
+To create a new Legend Patch Shape, activate the Legend Patch Shapes tab and
+click the |signPlus| :sup:`Add item` button. The button reveals a drop-down
+list to choose the geometry type:
+
+* :guilabel:`Marker Legend Patch Shape...`: to use with point geometries.
+* :guilabel:`Line Legend Patch Shape...`: to use with line geometries.
+* :guilabel:`Fill Legend Patch Shape...`: to use with polygon geometries.
+
+All three options will show the same dialog.
+
+.. _figure_legend_patch:
+
+.. figure:: img/createLegendPatchShape.png
+   :align: center
+
+   Dialog to create a new Legend Patch Shape
+
+Only the shape type and displayed legend patch shapes will differ regarding
+to the chosen geometry type. The following options will be available:
+
+* :guilabel:`Shape`: define the shape of the legend patch shape as a
+  WKT string. Single and multipart geometries may be used, but no
+  GeometryCollection.
+* |checkbox| :guilabel:`Preserve aspect ratio`
+* |iconView| :guilabel:`IconView` or |openTable| :guilabel:`ListView` of
+  available legend patch shapes, filtered by tags.
+
+When the new Shape is defined one can :guilabel:`Save Legend Patch Shape...`
+or :guilabel:`OK`, which will both lead to the same dialog.
+
+.. _figure_safe_legend_patch:
+
+.. figure:: img/safeLegendPatchShape.png
+   :align: center
+
+   Dialog to safe a new Legend Patch Shape
+
+Here one has to choose a name, tags to describe the shape and if it should
+be added to favorites.
+
+If one chose the :guilabel:`Save Legend Patch Shape...` one will be directed
+back to the new legend patch dialog to keep creating new shapes.
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -335,6 +384,8 @@ choose the ramp type:
 
 .. |3d| image:: /static/common/3d.png
    :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
 .. |color| image:: /static/common/color.png
 .. |fileOpen| image:: /static/common/mActionFileOpen.png
    :width: 1.5em
