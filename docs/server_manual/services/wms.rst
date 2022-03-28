@@ -177,7 +177,7 @@ In addition, QGIS Server introduced some options to select layers by:
 * the layer id
 
 The project option allowing to select layers by their
-id is in :menuselection:`QGIS Server --> WMS` tab of the
+id is in :menuselection:`QGIS Server --> WMS Capabilities` menu of the
 :menuselection:`Project --> Properties...` dialog.
 Check the :guilabel:`Use layer ids as names` checkbox to activate this option.
 
