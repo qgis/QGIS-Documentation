@@ -2,20 +2,20 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
-# DiGro, 2021
+# Harrissou Sant-anna, 2022
+# DiGro, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 11:58+0000\n"
-"Last-Translator: DiGro, 2021\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:06+0000\n"
+"Last-Translator: DiGro, 2022\n"
 "Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -122,7 +122,7 @@ msgid "|basic| |FA| Implementing a Systematic Sampling Plot Design"
 msgstr ""
 "|basic| |FA| Een systematisch ontwerp van monsterplaatsen implementeren "
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:203
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:213
 msgid "basic"
 msgstr "basic"
 
@@ -155,16 +155,17 @@ msgstr ""
 "punten, die later zullen worden gebruikt door de teams in het veld:"
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:53
-msgid "Open your :kbd:`digitizing_2012.qgs` project from the previous lesson."
-msgstr "Open uw project :kbd:`digitizing_2012.qgs` uit de vorige les."
+msgid ""
+"Open your :file:`digitizing_2012.qgs` project from the previous lesson."
+msgstr "Open uw project :file:`digitizing_2012.qgs` uit de vorige les."
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:54
-msgid "Remove all the layers except for :kbd:`forest_stands_2012`."
-msgstr "Verwijder alle lagen, met uitzondering van :kbd:`forest_stands_2012`."
+msgid "Remove all the layers except for :guilabel:`forest_stands_2012`."
+msgstr "Verwijder alle lagen, behalve :guilabel:`forest_stands_2012`."
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:55
-msgid "Save your project now as :kbd:`forest_inventory.qgs`"
-msgstr "Sla uw project nu op als :kbd:`forest_inventory.qgs`"
+msgid "Save your project now as :file:`forest_inventory.qgs`"
+msgstr "Sla uw project nu op als :file:`forest_inventory.qgs`."
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:57
 msgid ""
@@ -175,69 +176,77 @@ msgstr ""
 "liggen:"
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:59
-msgid "Open :menuselection:`Vector --> Research Tools --> Regular points`."
+msgid ""
+"Open :menuselection:`Vector --> Research Tools` |regularPoints| "
+":guilabel:`Regular points`."
 msgstr ""
-"Open :menuselection:`Vector --> Onderzoeks-gereedschap --> Regelmatige "
-"punten`."
+"Open :menuselection:`Vector --> Onderzoeks-gereedschap` |regularPoints| "
+":guilabel:`Regelmatige punten`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:222
+msgid "regularPoints"
+msgstr "regularPoints"
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:60
 msgid ""
-"In the :guilabel:`Area` definitions select :guilabel:`Input Boundary Layer`."
+"Press the drop-down button next to the :guilabel:`Input extent` field and "
+"from the :guilabel:`Calculate from Layer` menu, select "
+":guilabel:`forest_stands_2012`."
 msgstr ""
-"Selecteer :guilabel:`Invoer grenslaag` in de definities :guilabel:`Vlak`."
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:61
-msgid "And as input layer set the :kbd:`forest_stands_2012` layer."
-msgstr "En stel als invoerlaag de laag :kbd:`forest_stands_2012` in."
+"Druk op de keuzeknop naast het veld :guilabel:`Bereik invoer` en selecteer, "
+"uit het menu :guilabel:`Uit laag berekenen`, :guilabel:`forest_stands_2012`."
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:62
 msgid ""
-"In the :guilabel:`Grid Spacing` settings, select :guilabel:`Use this point "
-"spacing` and set it to :kbd:`80`."
+"In the :guilabel:`Point spacing/count` settings, enter ``80`` ``meters``."
 msgstr ""
-"Selecteer, in de instellingen :guilabel:`Tussenruimte raster`, "
-":guilabel:`Gebruik deze tussenruimte voor punten` en stel die in op "
-":kbd:`80`."
+"In de instelling :guilabel:`Punt afstand/aantal`, voer ``80`` ``meters`` in."
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:63
 msgid ""
-"Save the output as :kbd:`systematic_plots.shp` in the "
-":kbd:`forestry\\\\sampling\\\\` folder."
+"Check the :guilabel:`Use point spacing` box to indicate that the value "
+"represents the distance between the points."
 msgstr ""
-"Sla het uitvoerbestand op als :kbd:`systematic_plots.shp` in de map "
-":kbd:`forestry\\\\sampling\\\\`."
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:64
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:85
-msgid "Check :guilabel:`Add result to canvas`."
-msgstr "Selecteer :guilabel:`Resultaat aan kaartvenster toevoegen`."
+"Selecteer het vak :guilabel:`Punt afstand gebruiken` om aan te geven dat de "
+"waarde de afstand tussen de punten aangeeft."
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:65
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:86
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:103
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:129
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:159
-msgid "Click :guilabel:`OK`."
-msgstr "Klik op :guilabel:`OK`."
+msgid ""
+"Under :guilabel:`Regular points`, save the output as "
+":file:`systematic_plots.shp` in the :file:`forestry\\\\sampling\\\\` folder."
+msgstr ""
+"Onder :guilabel:`Regelmatige punten`, sla de uitvoer op als "
+":file:`systematic_plots.shp` in de map :file:`forestry\\\\sampling\\\\`."
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:67
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:90
+msgid "Check :guilabel:`Open output file after running algorithm`."
+msgstr ""
+"Selecteer :guilabel:`Uitvoerbestand openen na uitvoeren van algoritme`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:68
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:91
+msgid "Press :guilabel:`Run`."
+msgstr "Druk op :guilabel:`Uitvoeren`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:70
 msgid ""
 "The suggested :guilabel:`Regular points` creates the systematic points "
-"starting in the corner upper-left corner of the extent of the selected "
-"polygon layer. If you want to add some randomness to this regular points, "
-"you could use a randomly calculated number between 0 and 80 (80 is the "
-"distance between our points), and then write it as the :guilabel:`Initial "
-"inset from corner (LH side)` parameter in the tool's dialog."
+"starting in the upper-left corner of the extent of the selected polygon "
+"layer. If you want to add some randomness to this regular points, you could "
+"use a randomly calculated number between 0 and 80 (80 is the distance "
+"between our points), and then write it as the :guilabel:`Initial inset from "
+"corner (LH side)` parameter in the tool's dialog."
 msgstr ""
 "De voorgestelde :guilabel:`Regelmatige punten` maakt de systematische "
 "punten, beginnend in de linkerbovenhoek van het bereik van de geselecteerde "
-"polygoonlaag. Indien u enige willekeurigheid aan deze regelmatige punten "
+"polygoonlaag. Als u wat meer willekeurigheid aan deze regelmatige punten "
 "wilt toevoegen, zou u een willekeurig berekend getal tussen 0 en 80 (80 is "
-"de afstand tussen onze punten) kunnen gebruiken, en dan op te geven als de "
-"parameter :guilabel:`Beginwaarde voor hoek (LH kant)` in het dialoogvenster "
-"van het gereedschap."
+"de afstand tussen onze punten) kunnen gebruiken, en dat dan schrijven als de"
+" parameter :guilabel:`Beginwaarde voor hoek (LH kant)` in het dialoogvenster"
+" van het gereedschap."
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:74
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:77
 msgid ""
 "You notice that the tool has used the whole extent of your stands layer to "
 "generate a rectangular grid of points. But you are only interested on those "
@@ -248,23 +257,38 @@ msgstr ""
 "genereren. Maar u bent alleen geïnteresseerd in de punten die feitelijk "
 "binnen uw bosgebied liggen (bekijk de afbeeldingen hieronder):"
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:81
-msgid "Open :menuselection:`Vector --> Geoprocessing Tools --> Clip`."
-msgstr "Open :menuselection:`Vector --> Geoprocessing-gereedschap --> Clip`."
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:82
-msgid "Select :kbd:`systematic_plots` as :guilabel:`Input vector layer`."
-msgstr "Selecteer :kbd:`systematic_plots` als :guilabel:`Invoer vectorlaag`."
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:83
-msgid "Set :kbd:`forest_stands_2012` as the :guilabel:`Clip layer`."
-msgstr "Stel :kbd:`forest_stands_2012` in als de :guilabel:`Cliplaag`."
-
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:84
-msgid "Save the result as :kbd:`systematic_plots_clip.shp`."
-msgstr "Sla het resultaat op als :kbd:`systematic_plots_clip.shp`."
+msgid ""
+"From the Processing toolbox, open |gdal| :menuselection:`GDAL --> Vector "
+"geoprocessing --> Clip vector by mask layer`."
+msgstr ""
+"Vanuit de Toolbox van Processing, open |gdal| :menuselection:`GDAL --> "
+"Vector geoprocessing --> Vector op maskerlaag clippen`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:216
+msgid "gdal"
+msgstr "gdal"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:86
+msgid "Select :guilabel:`systematic_plots` as the :guilabel:`Input layer`."
+msgstr "Selecteer :guilabel:`systematic_plots` als de :guilabel:`Invoerlaag`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:87
+msgid "Set :guilabel:`forest_stands_2012` as the :guilabel:`Mask layer`."
+msgstr ""
+"Stel :guilabel:`forest_stands_2012` in als de :guilabel:`Maskeerlaag`."
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:88
+msgid ""
+"Save the :guilabel:`Clipped (mask)` result as "
+":file:`systematic_plots_clip.shp` in the :file:`forestry\\\\sampling\\\\` "
+"folder."
+msgstr ""
+"Sla het resultaat :guilabel:`Geclipt (masker)` op als "
+":file:`systematic_plots_clip.shp` in de map "
+":file:`forestry\\\\sampling\\\\`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:93
 msgid ""
 "You have now the points that the field teams will use to navigate to the "
 "designed sample plots locations. You can still prepare these points so that "
@@ -278,9 +302,9 @@ msgstr ""
 "zult tenminste betekenisvolle namen moeten toevoegen aan de punten en ze "
 "exporteren naar een indeling die kan worden gebruikt in hun GPS-apparaten."
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:93
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:98
 msgid ""
-"Lets start with the naming of the sample plots. If you check the "
+"Let's start with the naming of the sample plots. If you check the "
 ":guilabel:`Attribute table` for the plots inside the forest area, you can "
 "see that you have the default :guilabel:`id` field automatically generated "
 "by the :guilabel:`Regular points` tool. Label the points to see them in the "
@@ -288,35 +312,52 @@ msgid ""
 "naming:"
 msgstr ""
 "Laten we beginnen met het benoemen van de monsterplaatsen. Als u de "
-":guilabel:`Attributentabel` voor de monsterplaatsen binnen het bosgebied "
-"controleert, kunt u zien dat het standaard veld :guilabel:`id` automatisch "
-"is gegenereerd door het gereedschap :guilabel:`Regelmatige punten`. Label de"
-" punten om ze op de kaart te zien en overweeg of u deze nummers als deel "
-"voor de namen van uw monsterplaatsen kunt gebruiken:"
+":guilabel:`Attributentabel` van de plots binnen het bosgebied bekijkt, kunt "
+"u zien dat u het standaard veld :guilabel:`id` automatisch werd gemaakt door"
+" het gereedschap :guilabel:`Regelmatige punten`. Label de punten om ze op de"
+" kaart te zien en overweeg of u deze nummers als deel van de naamgeving voor"
+" uw monsterplaatsen kunt gebruiken:"
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:99
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:104
 msgid ""
-"Open the :guilabel:`Layer Properties --> Labels` for your "
-":kbd:`systematic_plots_clip`."
+"Open the :menuselection:`Layer Properties -->` |labelingSingle| "
+":guilabel:`Labels` for the ``systematic_plots_clip`` layer."
 msgstr ""
-"Open de :guilabel:`Laageigenschappen --> Labels` voor uw "
-":kbd:`systematic_plots_clip`."
+"Open de :menuselection:`Laageigenschappen -->` |labelingSingle| "
+":guilabel:`Labels` voor de laag ``systematic_plots_clip``."
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:100
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:220
+msgid "labelingSingle"
+msgstr "labelingSingle"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:106
+msgid "Turn the top menu into |labelingSingle| :guilabel:`Single Labels`."
+msgstr ""
+"Schakel het bovenste menu naar |labelingSingle| :guilabel:`Enkele labels`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:107
+msgid "For the :guilabel:`Value` entry, select the field ``id``."
+msgstr "Voor het item :guilabel:`Waarde`, selecteer het veld ``id``."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:108
 msgid ""
-"Check :guilabel:`Label this layer with` and select the field :kbd:`ID`."
+"Go to the |labelbuffer| :guilabel:`Buffer` tab, check the :guilabel:`Draw "
+"text buffer` and set the buffer :guilabel:`Size` to ``1``."
 msgstr ""
-"Selecteer :guilabel:`Deze laag labelen met` en selecteer het veld :kbd:`ID`."
+"Ga naar de tab |labelbuffer| :guilabel:`Buffer`, selecteer :guilabel:`Teken "
+"tekstbuffer` en stel de :guilabel:`Grootte` van de buffer in op ``1``."
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:101
-msgid ""
-"Go to the :guilabel:`Buffer` options and check the :guilabel:`Draw text "
-"buffer`, set the :guilabel:`Size` to :kbd:`1`."
-msgstr ""
-"Ga naar de opties :guilabel:`Buffer` en selecteer :guilabel:`Teken "
-"tekstbuffer`, stel :guilabel:`Grootte` in op :kbd:`1`."
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:218
+msgid "labelbuffer"
+msgstr "labelbuffer"
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:105
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:110
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:135
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:172
+msgid "Click :guilabel:`OK`."
+msgstr "Klik op :guilabel:`OK`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:112
 msgid ""
 "Now look at the labels on your map. You can see that the points have been "
 "created and numbered first West to East and then North to South. If you look"
@@ -329,177 +370,182 @@ msgstr ""
 "genummerd van Oost naar West en vervolgens van Noord naar Zuid. Als u "
 "opnieuw naar de attributentabel kijkt, zult u zien dat de volgorde in de "
 "tabel ook dat patroon volgt. Tenzij u een reden hebt om de monsterplaatsen "
-"een andere naam te geven, is het benoemen ervan op de wijze van West-Oost"
-"/Noord-Zuid een logische volgorde en is een goede optie."
+"een andere naam te geven, is het benoemen ervan op de wijze van West-"
+"Oost/Noord-Zuid een logische volgorde en is een goede optie."
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:112
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:119
 msgid ""
-"If you would like to order or name them in a different way, you could use a "
-"spreadsheet to be able to order and combine rows and columns in any "
-"different way."
+"Nevertheless, the number values in the ``id`` field are not so good. It "
+"would be better if the naming would be something like ``p_1, p_2...``. You "
+"can create a new column for the ``systematic_plots_clip`` layer:"
 msgstr ""
-"Als u ze in een andere volgorde of met een andere naam zou willen hebben, "
-"zou u een werkblad kunnen gebruiken om in staat te zijn rijen en kolommen op"
-" een andere manier te ordenen en te combineren."
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:116
-msgid ""
-"Nevertheless, the number values in the :kbd:`id` field are not so good. It "
-"would be better if the naming would be something like :kbd:`p_1, p_2...`. "
-"You can create a new column for the :kbd:`systematic_plots_clip` layer:"
-msgstr ""
-"Niettegenstaande dat zijn de nummerwaarden in het veld :kbd:`id` niet zo "
-"goed. Het zou beter zijn als de namen iets zouden zijn van :kbd:`p_1, "
-"p_2...`. U kunt een nieuwe kolom maken voor de laag "
-":kbd:`systematic_plots_clip`:"
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:120
-msgid ""
-"Go to the :guilabel:`Attribute table` for :kbd:`systematic_plots_clip`."
-msgstr ""
-"Ga naar de :guilabel:`Attributentabel` voor :kbd:`systematic_plots_clip`."
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:121
-msgid "Enable the edit mode."
-msgstr "Schakel de modus Bewerken in."
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:122
-msgid ""
-"Open the :guilabel:`Field calculator` and name the new column "
-":kbd:`Plot_id`."
-msgstr ""
-"Open de :guilabel:`Veldberekening` en noem de nieuwe kolom :kbd:`Plot_id`."
+"Niettegenstaande dat, de getalwaarden in het veld ``id`` zijn niet zo goed. "
+"Het zou beter zijn als de naamgeving iets zou zijn van ``p_1, p_2…``. U kunt"
+" een nieuwe kolom maken voor de laag ``systematic_plots_clip``:"
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:123
-msgid "Set the :guilabel:`Output field type`to :kbd:`Text (string)`."
-msgstr "Stel het :guilabel:`Type voor veld` in op :kbd:`Tekst (string)`."
+msgid "Go to the :guilabel:`Attribute table` for ``systematic_plots_clip``."
+msgstr "Ga naar de :guilabel:`Attributentabel` van ``systematic_plots_clip``."
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:124
-msgid ""
-"In the :guilabel:`Expression` field, write, copy or construct this formula "
-":kbd:`concat('P_', $rownum )`. Remember that you can also double click on "
-"the elements inside the :guilabel:`Function list`. The :kbd:`concat` "
-"function can be found under :guilabel:`String` and the :kbd:`$rownum` "
-"parameter can be found under :guilabel:`Record`."
-msgstr ""
-" Schrijf, kopieer of construeer deze formule in het veld "
-":guilabel:`Expressie` :kbd:`concat('P_', $rownum )`. Onthoud dat u ook kunt "
-"dubbelklikken op de elementen in de :guilabel:`Functielijst`. De functie "
-":kbd:`concat` vindt u onder :guilabel:`String` en de parameter "
-":kbd:`$rownum` onder :guilabel:`Record`."
+msgid "Enable the |toggleEditing| edit mode."
+msgstr "Schakel naar de |toggleEditing| modus Bewerken."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:224
+msgid "toggleEditing"
+msgstr "toggleEditing"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:125
+msgid "Open the |calculateField| :sup:`Field calculator`:"
+msgstr "Open de |calculateField| :sup:`Veldberekening`:"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:214
+msgid "calculateField"
+msgstr "calculateField"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:127
+msgid "Check :guilabel:`Create a new field`"
+msgstr "Selecteer :guilabel:`Nieuw veld aanmaken`"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:128
+msgid "Enter ``Plot_id`` as :guilabel:`Output field name`"
+msgstr "Voer ``Plot_id`` in als :guilabel:`Naam voor veld`"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:129
+msgid "Set the :guilabel:`Output field type` to :guilabel:`Text (string)`."
+msgstr "Stel het :guilabel:`Veldtype` in op :guilabel:`Tekst (string)`."
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:130
+msgid ""
+"In the :guilabel:`Expression` field, write, copy or construct this formula "
+"``concat('P_', @rownum )``. Remember that you can also double click on the "
+"elements inside the :guilabel:`Function list`. The ``concat`` function can "
+"be found under :guilabel:`String` and ``@rownum`` is under the "
+":guilabel:`Variables and values` group."
+msgstr ""
+"Schrijf, kopieer of construeer in het veld :guilabel:`Expressie`, deze "
+"formule ``concat('P_', @rownum )``. Onthoud dat u ook kunt dubbelklikken op "
+"de elementen binnen de :guilabel:`Functielijst`. De functie ``concat`` is te"
+" vinden onder :guilabel:`Tekenreeks` en ``@rownum`` staat in de groep "
+":guilabel:`Velden en waarden`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:136
 msgid "Disable the edit mode and save your changes."
 msgstr "Schakel de modus Bewerken uit en sla uw wijzigingen op."
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:132
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:138
 msgid ""
 "Now you have a new column with plot names that are meaningful to you. For "
-"the :kbd:`systematic_plots_clip` layer, change the field used for labeling "
-"to your new :kbd:`Plot_id` field."
+"the ``systematic_plots_clip`` layer, change the field used for labeling to "
+"your new ``Plot_id`` field."
 msgstr ""
-"Nu heeft u een nieuwe kolom met namen voor plaatsen die betekenis voor u "
-"hebben. Wijzig, voor de laag :kbd:`systematic_plots_clip`, het veld dat "
-"wordt gebruikt voor de labels naar uw nieuwe veld :kbd:`Plot_id`."
+"Nu heeft u een nieuwe kolom met namen voor monsterplaatsen die voor u een "
+"betekenis hebben. Wijzig, voor de laag ``systematic_plots_clip``, het veld "
+"dat wordt gebruikt voor het labelen naar uw nieuwe veld ``Plot_id``."
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:140
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:146
 msgid "|basic| |FA| Exporting Sample Plots as GPX format"
 msgstr "|basic| |FA| Monsterplaatsen in GPX-indeling exporteren"
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:142
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:148
 msgid ""
 "The field teams will be probably using a GPS device to locate the sample "
 "plots you planned. The next step is to export the points you created to a "
 "format that your GPS can read. QGIS allows you to save your point and line "
-"vector data in `GPS eXchange Format "
-"(GPX)<https://en.wikipedia.org/wiki/GPS_Exchange_Format>`, which is an "
-"standard GPS data format that can be read by most of the specialized "
-"software. You need to be careful with selecting the CRS when you save your "
-"data:"
+"vector data in `GPS eXchange Format (GPX) "
+"<https://en.wikipedia.org/wiki/GPS_Exchange_Format>`_, which is an standard "
+"GPS data format that can be read by most of the specialized software. You "
+"need to be careful with selecting the CRS when you save your data:"
 msgstr ""
-"De teams in het veld zullen waarschijnlijk een GPS-apparaat gebruiken om de "
-"monsterplaatsen te vinden die u heeft gepland. De volgende stap is om de "
-"punten die u gemaakt heeft te exporteren in een indeling die uw GPS kan "
-"lezen. QGIS stelt u in staat uw gegevens voor punt- en lijnvector te "
-"exporteren in `GPS eXchange Format "
-"(GPX)<https://en.wikipedia.org/wiki/GPS_Exchange_Format>`, wat een standaard"
-" GPS-gegevensindeling is die kan worden gelezen door de meeste "
-"gespecialiseerde software. U moet voorzichtig zijn bij het selecteren van "
-"het CRS wanneer u uw gegevens opslaat:"
+"De veldteams zullen waarschijnlijk een GPS-apparaat gebruiken om de door u "
+"geplande monsterplaatsen te lokaliseren. De volgende stap is om de punten "
+"die u hebt gemaakt te exporteren naar een indeling die uw GPS kan lezen. "
+"QGIS stelt u in staat uw punt- en lijn-vectorgegevens op te slaan in `GPS "
+"eXchange Format (GPX) <https://en.wikipedia.org/wiki/GPS_Exchange_Format>`_,"
+" dat een standaard GPS-gegevensindeling is die kan worden gelezen door de "
+"meeste gespecialiseerde software. U moet voorzichtig zijn met het selecteren"
+" van het CRS als u uw gegevens opslaat:"
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:150
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:156
 msgid ""
-"Right click :kbd:`systematic_plots_clip` and select :guilabel:`Save as`."
+"Right-click ``systematic_plots_clip`` layer and select "
+":menuselection:`Export --> Save features as...`."
 msgstr ""
-"Klik met rrechts op :kbd:`systematic_plots_clip` en selecteer "
-":guilabel:`Opslaan als`."
+"Klik  met rechts op de laag ``systematic_plots_clip`` en selecteer "
+":menuselection:`Exporteren --> Objecten opslaan als…`."
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:151
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:162
 msgid "In :guilabel:`Format` select :guilabel:`GPS eXchange Format [GPX]`."
 msgstr ""
 "Selecteer :guilabel:`GPS eXchange Format [GPX]` in :guilabel:`Formaat`."
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:152
-msgid "Save the output as :kbd:`plots_wgs84.gpx`."
-msgstr "Sla de uitvoer op als :kbd:`plots_wgs84.gpx`."
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:163
+msgid ""
+"Save the output :guilabel:`File name` as :file:`plots_wgs84.gpx` in the "
+":file:`forestry\\\\sampling\\\\` folder."
+msgstr ""
+"Sla de :guilabel:`Bestandsnaam` voor de uitvoer op als "
+":file:`plots_wgs84.gpx` in de map :file:`forestry\\\\sampling\\\\`."
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:153
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:165
 msgid "In :guilabel:`CRS` select :guilabel:`Selected CRS`."
 msgstr "Selecteer :guilabel:`Geselecteerd CRS` in :guilabel:`CRS`."
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:154
-msgid "Browse for :kbd:`WGS 84 (EPSG:4326)`."
-msgstr "Blader naar :kbd:`WGS 84 (EPSG:4326)`."
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:156
-msgid ""
-"The :kbd:`GPX` format accepts only this CRS, if you select a different one, "
-"QGIS will give no error but you will get an empty file."
-msgstr ""
-"De indeling :kbd:`GPX` accepteert alleen dit CRS. Als u een ander selecteert"
-" zal QGIS geen foutmelding geven, maar u krijgt een leeg bestand."
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:160
-msgid ""
-"In the dialog that opens, select only the :kbd:`waypoints` layer (the rest "
-"of the layers are empty)."
-msgstr ""
-"Selecteer, in het dialoogvenster dat opent, alleen de laag :kbd:`waypoints` "
-"(de rest van de lagen zijn leeg)."
-
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:166
+msgid "Browse for :guilabel:`EPSG:4326 - WGS 84`."
+msgstr "Blader naar :guilabel:`EPSG:4326 - WGS 84`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:168
+msgid ""
+"The `GPX <https://gdal.org/drivers/vector/gpx.html>`_ format accepts only "
+"this CRS, if you select a different one, QGIS will give no error but you "
+"will get an empty file."
+msgstr ""
+"De indeling `GPX <https://gdal.org/drivers/vector/gpx.html>`_ accepteert "
+"alleen dit CRS, wanneer u een ander selecteert zal QGIS geen foutmelding "
+"geven, maar u krijgt een leeg bestand."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:173
+msgid ""
+"In the dialog that opens, select only the ``waypoints`` layer (the rest of "
+"the layers are empty)."
+msgstr ""
+"In het dialoogvenster dat opent, selecteer alleen de laag ``waypoints`` (de "
+"rest van de lagen is leeg)."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:176
 msgid ""
 "The inventory sample plots are now in a standard format that can be managed "
 "by most of the GPS software. The field teams can now upload the locations of"
 " the sample plots to their devices. That would be done by using the specific"
-" devices own software and the :kbd:`plots_wgs84.gpx` file you just saved. "
+" devices own software and the :file:`plots_wgs84.gpx` file you just saved. "
 "Other option would be to use the :guilabel:`GPS Tools` plugin but it would "
 "most likely involve setting the tool to work with your specific GPS device. "
 "If you are working with your own data and want to see how the tool works you"
 " can find out information about it in the section :ref:`working_gps` in the "
 "**QGIS User Manual**."
 msgstr ""
-"De monsterplaatsen voor de inventarisatie staan nu in een standaardindeling "
-"die door de meeste GPS-software kan worden afgehandeld. De teams in het veld"
-" kunnen nu de locaties van de monsterplaatsen uploaden naar hun apparaten. "
-"Dat zou moeten worden gedaan met behulp van de eigen software voor de "
-"specifieke apparaten en het bestand :kbd:`plots_wgs84.gpx` dat u zojuist "
-"heeft opgeslagen. Een andere optie zou zijn om de plug-in :guilabel:`GPS-"
-"gereedschap` te gebruiken maar daarbij zou het zeer waarschijnlijk inhouden "
-"dat het gereedschap moet worden ingesteld om te werken met uw specifieke "
-"GPS-apparaat. Als u werkt met uw eigen gegevens en wilt zien hoe het "
-"gereedschap werkt, kunt u er meer informatie over vinden in het gedeelte "
-":ref:`working_gps` in de **QGIS Gebruikershandleiding**."
+"De monsterplaatsen voor de inventarisatie staan nu in een standaard indeling"
+" die kan worden beheerd door de meeste software voor GPS. De veldteams "
+"kunnen nu de locaties van de monsterplaatsen uploaden naar hun apparaten. "
+"Dat zou worden gedaan met de eigen software van de specifieke apparaten en "
+"het bestand :file:`plots_wgs84.gpx` dat u zojuist hebt opgeslagen. Een "
+"andere optie zou zijn om de plug-in :guilabel:`GPS Tools` te gebruiken, maar"
+" dat zou zeer waarschijnlijk inhouden om dat gereedschap in te stellen om te"
+" kunnen werken met uw specifieke GPS-apparaat. Als u alleen met uw eigen "
+"gegevens werkt en wilt zien hoe het gereedschap werkt, kunt u informatie "
+"erover vinden in het gedeelte :ref:`working_gps` in de **QGIS "
+"Gebruikershandleiding**."
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:175
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:185
 msgid "Save your QGIS project now."
 msgstr "Sla nu uw project van QGIS op."
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:178
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:188
 msgid "|IC|"
 msgstr "|IC|"
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:180
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:190
 msgid ""
 "You just saw how easily you can create a systematic sampling design to be "
 "used in a forest inventory. Creating other types of sampling designs will "
@@ -514,11 +560,11 @@ msgstr ""
 "scripten om de coördinaten van de monsterplaatsen te berekenen, maar het "
 "algemene idee blijft hetzelfde."
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:186
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:196
 msgid "|WN|"
 msgstr "|WN|"
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:188
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:198
 msgid ""
 "In the next lesson you will see how to use the Atlas capabilities in QGIS to"
 " automatically generate detailed maps that the field teams will be using to "
