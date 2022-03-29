@@ -215,9 +215,9 @@ can call :meth:`select() <qgis.core.QgsVectorLayer.select>` passing to it the li
  selected_fid = []
 
  # Get the first feature id from the layer
- for feature in layer.getFeatures():
+ feature = next(layer.getFeatures())
+ if feature :
      selected_fid.append(feature.id())
-     break
 
  # Add these features to the selected list
  layer.select(selected_fid)
