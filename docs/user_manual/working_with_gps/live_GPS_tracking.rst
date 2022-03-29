@@ -15,7 +15,7 @@ You will get a new docked window on the left side of the canvas.
 
 There are three possible screens in this GPS tracking window:
 
-* |metadata| GPS position coordinates and an interface for manually entering
+* |metadata| :sup:`Position`: GPS position coordinates and an interface for manually entering
   vertices and features
 * |gpsTrackBarChart| GPS signal strength of satellite connections
 * |options| GPS options screen (see :numref:`figure_gps_options`)
