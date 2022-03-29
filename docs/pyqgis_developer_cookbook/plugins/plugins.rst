@@ -134,7 +134,8 @@ icon                   False     a file name or a relative path (relative to
                                  the base folder of the plugin's compressed
                                  package) of a web friendly image (PNG, JPEG)
 category               False     one of ``Raster``, ``Vector``, ``Database`` and ``Web``
-plugin_dependencies    False     PIP-like comma separated list of other plugins to install
+plugin_dependencies    False     PIP-like comma separated list of other plugins to install, use
+                                 plugin names coming from their metadata's name field
 server                 False     boolean flag, :const:`True` or :const:`False`, determines if
                                  the plugin has a server interface
 hasProcessingProvider  False     boolean flag, :const:`True` or :const:`False`, determines if
@@ -214,7 +215,9 @@ An example for this metadata.txt
   ; Since QGIS 3.8, a comma separated list of plugins to be installed
   ; (or upgraded) can be specified.
   ; The example below will try to install (or upgrade) "MyOtherPlugin" version 1.12
-  ; and any version of "YetAnotherPlugin"
+  ; and any version of "YetAnotherPlugin".
+  ; Both "MyOtherPlugin" and "YetAnotherPlugin" names come from their own metadata's
+  ; name field
   plugin_dependencies=MyOtherPlugin==1.12,YetAnotherPlugin
 
 
