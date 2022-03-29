@@ -80,67 +80,58 @@ GPS options
 
    GPS tracking options window
 
-Connection
-..........
+Here you can specify: 
 
-|options| In case of connection problems, you can switch between:
+* :guilabel:`Connection`
 
-* |radioButtonOn| :guilabel:`Autodetect`
-* |radioButtonOff| :guilabel:`Serial device` (reload required if a new GPS Device is connected)
-* |radioButtonOff| :guilabel:`gpsd` (selecting the Host, Port and Device your
-  GPS is connected to)
+  * In case of connection problems, you can switch between:
 
-A click on :guilabel:`Connect` again initiates the connection to the GPS receiver.
+    * |radioButtonOn| :guilabel:`Autodetect`
+    * |radioButtonOff| :guilabel:`Serial device` (reload required if a new GPS Device is connected)
+    * |radioButtonOff| :guilabel:`gpsd` (selecting the Host, Port and Device your
+      GPS is connected to)
 
-Digitizing
-..........
+  * A click on :guilabel:`Connect` again initiates the connection to the GPS receiver.
 
-You can activate |checkbox| :menuselection:`Automatically save added features`
-when you are in editing mode. Or you can activate |checkbox|
-:guilabel:`Automatically add points` to the map canvas with a certain width
-and color.
+* :guilabel:`Digitizing`
 
-The :guilabel:`Calculate bearing from travel direction` can be used
-if the device reports faulty bearing measurements and it will calculate the GPS
-bearing based on the previous two recorded locations.
+  * You can activate |checkbox| :menuselection:`Automatically save added features`
+    when you are in editing mode. Or you can activate |checkbox|
+    :guilabel:`Automatically add points` to the map canvas with a certain width
+    and color.
+  * The :guilabel:`Calculate bearing from travel direction` can be used if the device
+    reports faulty bearing measurements and it will calculate the GPS bearing based
+    on the previous two recorded locations.
 
-Cursor
-......
+* :guilabel:`Cursor`
 
-Activating |checkbox| :guilabel:`Cursor`, you can use a slider |slider| to shrink
-and grow the position cursor on the canvas.
+  * Activating |checkbox| :guilabel:`Cursor`, you can use a slider |slider| to shrink
+    and grow the position cursor on the canvas.
 
-Filtering
-.........
+* :guilabel:`Filtering`
 
-You can also set an :guilabel:`Acquisition interval (seconds)` and a
-:guilabel:`Distance threshold (meters)` parameters to keep the cursor still
-active when the receiver is in static conditions.
+  * You can also set an :guilabel:`Acquisition interval (seconds)` and a
+    :guilabel:`Distance threshold (meters)` parameters to keep the cursor still
+    active when the receiver is in static conditions.
 
-Map Centering and Rotation
-..........................
+* :guilabel:`Map Centering and Rotation`
 
-Activating |radioButtonOn| :guilabel:`Map centering` allows you to decide in which
-way the canvas will be updated. This includes:
+  * Activating |radioButtonOn| :guilabel:`Map centering` allows you to decide in which
+    way the canvas will be updated. This includes 'always', 'when leaving', if your
+    recorded coordinates start to move out of the canvas, or 'never', to keep map
+    extent.
+    Activating :guilabel:`Rotate map to match GPS direction` will automatically
+    rotate the map canvas so that it is oriented in the same direction as the GPS bearing.
 
-* :guilabel:`Always`,
-* :guilabel:`When leaving`, if your recorded coordinates start to move out of
-  a set ratio of the canvas
-* :guilabel:`Never`, to keep map extent.
+* :guilabel:`Show Bearing Line`
 
-Activating :guilabel:`Rotate map to match GPS direction` will automatically
-rotate the map canvas so that it is oriented in the same direction as the GPS bearing.
+  * Activating :guilabel:`Show Bearing Line` will show a line from the GPS location
+    pointing in current path direction of the GPS.
 
-Show Bearing Line
-.................
+* :guilabel:`Log File`
 
-Activating :guilabel:`Show Bearing Line` will show a line from the GPS location pointing in current path direction of the GPS.
-
-Log File
-........
-
-Finally, you can activate |checkbox| :guilabel:`Log file` and define a path
-and a file where log messages about the GPS tracking are logged.
+  * Finally, you can activate |checkbox| :guilabel:`Log file` and define a path
+    and a file where log messages about the GPS tracking are logged.
 
 If you want to set a feature manually, you have to go back to |metadata|
 :sup:`Position` and click on :guilabel:`Add Point` or :guilabel:`Add Track Point`.
