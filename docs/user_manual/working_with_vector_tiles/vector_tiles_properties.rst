@@ -66,8 +66,8 @@ Provided information are:
 * picked from the :ref:`filled metadata <vectortilesmetadatamenu>`: access,
   extents, links, contacts, history...
 
-Symbology Properties
---------------------
+Symbology and Label Properties
+------------------------------
 
 .. _figure_vector_tile_symbology:
 
@@ -93,6 +93,11 @@ rules only` option to filter the list of rules to only those that are visible
 at the given zoom level. This makes it easier to work with complex vector styling
 and to locate troublesome rules. Style and labelling can be dependent on the
 zoom level.
+
+There is also the option to import styles. Those styles can be supplied as:
+
+* :guilabel:`QML` files (:ref:`qgisstylefile`)
+* :guilabel:`MapBox GL Json` style configuration files
 
 .. index:: Metadata, Metadata editor, Keyword
 .. _vectortilesmetadatamenu:
