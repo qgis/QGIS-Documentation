@@ -17,6 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
+from datetime import datetime
 import sphinx.ext.doctest as ext_doctest
 import re
 import doctest
@@ -25,7 +26,7 @@ import sys
 import os
 from sphinx.roles import MenuSelection
 project = 'QGIS Documentation'
-copyright = '2002-now, QGIS project'
+copyright = '2002-{}, QGIS project'.format(datetime.now().year)
 author = 'QGIS Authors'
 
 
