@@ -75,6 +75,7 @@ The current translations are made possible thanks to:
    "Bahasa Indonesia", "Emir Hartato, I Made Anombawa, Januar V. Simarmata,
    Muhammad Iqnaul Haq Siregar, Trias Aditya"
    "Chinese (Traditional)", "Calvin Ngei, Zhang Jun, Richard Xie"
+   "Chinese (Simplified)", "Xu Baocai"
    "Dutch", "Carlo van Rijswijk, Dick Groskamp, Diethard Jansen, Raymond Nijssen,
    Richard Duivenvoorde, Willem Hoffman"
    "Finnish", "Matti Mäntynen, Kari Mikkonen"
