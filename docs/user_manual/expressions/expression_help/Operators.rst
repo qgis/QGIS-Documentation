@@ -135,9 +135,9 @@ Compares two values and evaluates to 1 if the left value is less than the right 
      - * **a** - value
        * **b** - value
    * - Examples
-     - * ``5 < 4`` → 0
-       * ``5 < 5`` → 0
-       * ``4 < 5`` → 1
+     - * ``5 < 4`` → FALSE
+       * ``5 < 5`` → FALSE
+       * ``4 < 5`` → TRUE
 
 
 .. end_<_section
@@ -158,9 +158,9 @@ Compares two values and evaluates to 1 if the left value is less or equal than t
      - * **a** - value
        * **b** - value
    * - Examples
-     - * ``5 <= 4`` → 0
-       * ``5 <= 5`` → 1
-       * ``4 <= 5`` → 1
+     - * ``5 <= 4`` → FALSE
+       * ``5 <= 5`` → TRUE
+       * ``4 <= 5`` → TRUE
 
 
 .. end_<=_section
@@ -181,8 +181,8 @@ Compares two values and evaluates to 1 if they are not equal.
      - * **a** - value
        * **b** - value
    * - Examples
-     - * ``5 <> 4`` → 1
-       * ``4 <> 4`` → 0
+     - * ``5 <> 4`` → TRUE
+       * ``4 <> 4`` → FALSE
        * ``5 <> NULL`` → NULL
        * ``NULL <> NULL`` → NULL
 
@@ -205,8 +205,8 @@ Compares two values and evaluates to 1 if they are equal.
      - * **a** - value
        * **b** - value
    * - Examples
-     - * ``5 = 4`` → 0
-       * ``4 = 4`` → 1
+     - * ``5 = 4`` → FALSE
+       * ``4 = 4`` → TRUE
        * ``5 = NULL`` → NULL
        * ``NULL = NULL`` → NULL
 
@@ -229,9 +229,9 @@ Compares two values and evaluates to 1 if the left value is greater than the rig
      - * **a** - value
        * **b** - value
    * - Examples
-     - * ``5 > 4`` → 1
-       * ``5 > 5`` → 0
-       * ``4 > 5`` → 0
+     - * ``5 > 4`` → TRUE
+       * ``5 > 5`` → FALSE
+       * ``4 > 5`` → FALSE
 
 
 .. end_>_section
@@ -252,9 +252,9 @@ Compares two values and evaluates to 1 if the left value is greater or equal tha
      - * **a** - value
        * **b** - value
    * - Examples
-     - * ``5 >= 4`` → 1
-       * ``5 >= 5`` → 1
-       * ``4 >= 5`` → 0
+     - * ``5 >= 4`` → TRUE
+       * ``5 >= 5`` → TRUE
+       * ``4 >= 5`` → FALSE
 
 
 .. end_>=_section
@@ -264,7 +264,7 @@ Compares two values and evaluates to 1 if the left value is greater or equal tha
 AND
 ...
 
-Returns 1 when condition a and b are true.
+Returns TRUE when condition a and b are true.
 
 .. list-table::
    :widths: 15 85
@@ -275,10 +275,10 @@ Returns 1 when condition a and b are true.
      - * **a** - condition
        * **b** - condition
    * - Examples
-     - * ``TRUE AND TRUE`` → 1
-       * ``TRUE AND FALSE`` → 0
-       * ``4 = 2+2 AND 1 = 1`` → 1
-       * ``4 = 2+2 AND 1 = 2`` → 0
+     - * ``TRUE AND TRUE`` → TRUE
+       * ``TRUE AND FALSE`` → FALSE
+       * ``4 = 2+2 AND 1 = 1`` → TRUE
+       * ``4 = 2+2 AND 1 = 2`` → FALSE
 
 
 .. end_AND_section
@@ -309,7 +309,7 @@ Returns TRUE if value is within the specified range. The range is considered inc
 ILIKE
 .....
 
-Returns 1 if the first parameter matches case-insensitive the supplied pattern. LIKE can be used instead of ILIKE to make the match case-sensitive. Works with numbers also.
+Returns TRUE if the first parameter matches case-insensitive the supplied pattern. LIKE can be used instead of ILIKE to make the match case-sensitive. Works with numbers also.
 
 .. list-table::
    :widths: 15 85
@@ -320,21 +320,21 @@ Returns 1 if the first parameter matches case-insensitive the supplied pattern. 
      - * **string/number** - string to search
        * **pattern** - pattern to find, you can use '%' as a wildcard, '_' as a single char and '\\\\' to escape these special characters.
    * - Examples
-     - * ``'A' ILIKE 'A'`` → 1
-       * ``'A' ILIKE 'a'`` → 1
-       * ``'A' ILIKE 'B'`` → 0
-       * ``'ABC' ILIKE 'b'`` → 0
-       * ``'ABC' ILIKE 'B'`` → 0
-       * ``'ABC' ILIKE '_b_'`` → 1
-       * ``'ABC' ILIKE '_B_'`` → 1
-       * ``'ABCD' ILIKE '_b_'`` → 0
-       * ``'ABCD' ILIKE '_B_'`` → 0
-       * ``'ABCD' ILIKE '_b%'`` → 1
-       * ``'ABCD' ILIKE '_B%'`` → 1
-       * ``'ABCD' ILIKE '%b%'`` → 1
-       * ``'ABCD' ILIKE '%B%'`` → 1
-       * ``'ABCD%' ILIKE 'abcd\\%'`` → 1
-       * ``'ABCD' ILIKE '%B\\%'`` → 0
+     - * ``'A' ILIKE 'A'`` → TRUE
+       * ``'A' ILIKE 'a'`` → TRUE
+       * ``'A' ILIKE 'B'`` → FALSE
+       * ``'ABC' ILIKE 'b'`` → FALSE
+       * ``'ABC' ILIKE 'B'`` → FALSE
+       * ``'ABC' ILIKE '_b_'`` → TRUE
+       * ``'ABC' ILIKE '_B_'`` → TRUE
+       * ``'ABCD' ILIKE '_b_'`` → FALSE
+       * ``'ABCD' ILIKE '_B_'`` → FALSE
+       * ``'ABCD' ILIKE '_b%'`` → TRUE
+       * ``'ABCD' ILIKE '_B%'`` → TRUE
+       * ``'ABCD' ILIKE '%b%'`` → TRUE
+       * ``'ABCD' ILIKE '%B%'`` → TRUE
+       * ``'ABCD%' ILIKE 'abcd\\%'`` → TRUE
+       * ``'ABCD' ILIKE '%B\\%'`` → FALSE
 
 
 .. end_ILIKE_section
@@ -344,7 +344,7 @@ Returns 1 if the first parameter matches case-insensitive the supplied pattern. 
 IN
 ..
 
-Returns 1 if value is found within a list of values.
+Returns TRUE if value is found within a list of values.
 
 .. list-table::
    :widths: 15 85
@@ -355,8 +355,8 @@ Returns 1 if value is found within a list of values.
      - * **a** - value
        * **b** - list of values
    * - Examples
-     - * ``'A' IN ('A','B')`` → 1
-       * ``'A' IN ('C','B')`` → 0
+     - * ``'A' IN ('A','B')`` → TRUE
+       * ``'A' IN ('C','B')`` → FALSE
 
 
 .. end_IN_section
@@ -366,7 +366,7 @@ Returns 1 if value is found within a list of values.
 IS
 ..
 
-Returns 1 if a is the same as b.
+Returns TRUE if a is the same as b.
 
 .. list-table::
    :widths: 15 85
@@ -377,11 +377,11 @@ Returns 1 if a is the same as b.
      - * **a** - any value
        * **b** - any value
    * - Examples
-     - * ``'A' IS 'A'`` → 1
-       * ``'A' IS 'a'`` → 0
-       * ``4 IS 4`` → 1
-       * ``4 IS 2+2`` → 1
-       * ``4 IS 2`` → 0
+     - * ``'A' IS 'A'`` → TRUE
+       * ``'A' IS 'a'`` → FALSE
+       * ``4 IS 4`` → TRUE
+       * ``4 IS 2+2`` → TRUE
+       * ``4 IS 2`` → FALSE
        * ``$geometry IS NULL`` → 0, if your geometry is not NULL
 
 
@@ -392,7 +392,7 @@ Returns 1 if a is the same as b.
 IS NOT
 ......
 
-Returns 1 if a is not the same as b.
+Returns TRUE if a is not the same as b.
 
 .. list-table::
    :widths: 15 85
@@ -403,9 +403,9 @@ Returns 1 if a is not the same as b.
      - * **a** - value
        * **b** - value
    * - Examples
-     - * ``'a' IS NOT 'b'`` → 1
-       * ``'a' IS NOT 'a'`` → 0
-       * ``4 IS NOT 2+2`` → 0
+     - * ``'a' IS NOT 'b'`` → TRUE
+       * ``'a' IS NOT 'a'`` → FALSE
+       * ``4 IS NOT 2+2`` → FALSE
 
 
 .. end_IS NOT_section
@@ -415,7 +415,7 @@ Returns 1 if a is not the same as b.
 LIKE
 ....
 
-Returns 1 if the first parameter matches the supplied pattern. Works with numbers also.
+Returns TRUE if the first parameter matches the supplied pattern. Works with numbers also.
 
 .. list-table::
    :widths: 15 85
@@ -426,16 +426,16 @@ Returns 1 if the first parameter matches the supplied pattern. Works with number
      - * **string/number** - value
        * **pattern** - pattern to compare value with, you can use '%' as a wildcard, '_' as a single char and '\\\\' to escape these special characters.
    * - Examples
-     - * ``'A' LIKE 'A'`` → 1
-       * ``'A' LIKE 'a'`` → 0
-       * ``'A' LIKE 'B'`` → 0
-       * ``'ABC' LIKE 'B'`` → 0
-       * ``'ABC' LIKE '_B_'`` → 1
-       * ``'ABCD' LIKE '_B_'`` → 0
-       * ``'ABCD' LIKE '_B%'`` → 1
-       * ``'ABCD' LIKE '%B%'`` → 1
-       * ``'1%' LIKE '1\\%'`` → 1
-       * ``'1_' LIKE '1\\%'`` → 0
+     - * ``'A' LIKE 'A'`` → TRUE
+       * ``'A' LIKE 'a'`` → FALSE
+       * ``'A' LIKE 'B'`` → FALSE
+       * ``'ABC' LIKE 'B'`` → FALSE
+       * ``'ABC' LIKE '_B_'`` → TRUE
+       * ``'ABCD' LIKE '_B_'`` → FALSE
+       * ``'ABCD' LIKE '_B%'`` → TRUE
+       * ``'ABCD' LIKE '%B%'`` → TRUE
+       * ``'1%' LIKE '1\\%'`` → TRUE
+       * ``'1_' LIKE '1\\%'`` → FALSE
 
 
 .. end_LIKE_section
@@ -455,8 +455,8 @@ Negates a condition.
    * - Arguments
      - * **a** - condition
    * - Examples
-     - * ``NOT 1`` → 0
-       * ``NOT 0`` → 1
+     - * ``NOT 1`` → FALSE
+       * ``NOT 0`` → TRUE
 
 
 .. end_NOT_section
@@ -487,7 +487,7 @@ Returns TRUE if value is not within the specified range. The range is considered
 OR
 ..
 
-Returns 1 when condition a or b is true.
+Returns TRUE when condition a or b is true.
 
 .. list-table::
    :widths: 15 85
@@ -498,9 +498,9 @@ Returns 1 when condition a or b is true.
      - * **a** - condition
        * **b** - condition
    * - Examples
-     - * ``4 = 2+2 OR 1 = 1`` → 1
-       * ``4 = 2+2 OR 1 = 2`` → 1
-       * ``4 = 2   OR 1 = 2`` → 0
+     - * ``4 = 2+2 OR 1 = 1`` → TRUE
+       * ``4 = 2+2 OR 1 = 2`` → TRUE
+       * ``4 = 2   OR 1 = 2`` → FALSE
 
 
 .. end_OR_section
@@ -595,10 +595,10 @@ Performs a regular expression match on a string value. Backslash characters must
      - * **string** - A string value
        * **regex** - A regular expression. Slashes must be escaped, eg \\\\d.
    * - Examples
-     - * ``'hello' ~ 'll'`` → 1
-       * ``'hello' ~ '^ll'`` → 0
-       * ``'hello' ~ 'llo$'`` → 1
-       * ``'abc123' ~ '\\d+'`` → 1
+     - * ``'hello' ~ 'll'`` → TRUE
+       * ``'hello' ~ '^ll'`` → FALSE
+       * ``'hello' ~ 'llo$'`` → TRUE
+       * ``'abc123' ~ '\\d+'`` → TRUE
 
 
 .. end_~_section

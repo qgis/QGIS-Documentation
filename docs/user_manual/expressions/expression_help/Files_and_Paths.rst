@@ -54,7 +54,7 @@ Retrieves exif tag values from an image file.
 file_exists
 ...........
 
-Returns true if a file path exists.
+Returns TRUE if a file path exists.
 
 .. list-table::
    :widths: 15 85
@@ -154,7 +154,7 @@ Returns the file suffix (extension) from a file path.
 is_directory
 ............
 
-Returns true if a path corresponds to a directory.
+Returns TRUE if a path corresponds to a directory.
 
 .. list-table::
    :widths: 15 85
@@ -164,7 +164,7 @@ Returns true if a path corresponds to a directory.
    * - Arguments
      - * **path** - a file path or a map layer value. If a map layer value is specified then the file source of the layer will be used.
    * - Examples
-     - * ``is_directory('/home/qgis/data/country_boundaries.shp')`` → false
+     - * ``is_directory('/home/qgis/data/country_boundaries.shp')`` → FALSE
        * ``is_directory('/home/qgis/data/')`` → true
 
 
@@ -175,7 +175,7 @@ Returns true if a path corresponds to a directory.
 is_file
 .......
 
-Returns true if a path corresponds to a file.
+Returns TRUE if a path corresponds to a file.
 
 .. list-table::
    :widths: 15 85
@@ -186,7 +186,7 @@ Returns true if a path corresponds to a file.
      - * **path** - a file path or a map layer value. If a map layer value is specified then the file source of the layer will be used.
    * - Examples
      - * ``is_file('/home/qgis/data/country_boundaries.shp')`` → true
-       * ``is_file('/home/qgis/data/')`` → false
+       * ``is_file('/home/qgis/data/')`` → FALSE
 
 
 .. end_is_file_section

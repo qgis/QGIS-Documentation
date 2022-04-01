@@ -410,7 +410,7 @@ Returns the combination of two geometries.
 contains
 ........
 
-Tests whether a geometry contains another. Returns true if and only if no points of geometry2 lie in the exterior of geometry1, and at least one point of the interior of geometry2 lies in the interior of geometry1.
+Tests whether a geometry contains another. Returns TRUE if and only if no points of geometry2 lie in the exterior of geometry1, and at least one point of the interior of geometry2 lies in the interior of geometry1.
 
 .. list-table::
    :widths: 15 85
@@ -421,8 +421,8 @@ Tests whether a geometry contains another. Returns true if and only if no points
      - * **geometry1** - a geometry
        * **geometry2** - a geometry
    * - Examples
-     - * ``contains( geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))' ), geom_from_wkt( 'POINT(0.5 0.5 )' ) )`` → true
-       * ``contains( geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → false
+     - * ``contains( geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))' ), geom_from_wkt( 'POINT(0.5 0.5 )' ) )`` → TRUE
+       * ``contains( geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → FALSE
 
 
 .. end_contains_section
@@ -452,7 +452,7 @@ Returns the convex hull of a geometry. It represents the minimum convex geometry
 crosses
 .......
 
-Tests whether a geometry crosses another. Returns true if the supplied geometries have some, but not all, interior points in common.
+Tests whether a geometry crosses another. Returns TRUE if the supplied geometries have some, but not all, interior points in common.
 
 .. list-table::
    :widths: 15 85
@@ -464,7 +464,7 @@ Tests whether a geometry crosses another. Returns true if the supplied geometrie
        * **geometry2** - a geometry
    * - Examples
      - * ``crosses( geom_from_wkt( 'LINESTRING(3 5, 4 4, 5 3)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → true
-       * ``crosses( geom_from_wkt( 'POINT(4 5)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → false
+       * ``crosses( geom_from_wkt( 'POINT(4 5)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → FALSE
 
 
 .. end_crosses_section
@@ -537,7 +537,7 @@ Returns a geometry that represents that part of geometry1 that does not intersec
 disjoint
 ........
 
-Tests whether geometries do not spatially intersect. Returns true if the geometries do not share any space together.
+Tests whether geometries do not spatially intersect. Returns TRUE if the geometries do not share any space together.
 
 .. list-table::
    :widths: 15 85
@@ -549,7 +549,7 @@ Tests whether geometries do not spatially intersect. Returns true if the geometr
        * **geometry2** - a geometry
    * - Examples
      - * ``disjoint( geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0 ))' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → true
-       * ``disjoint( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ), geom_from_wkt( 'POINT(4 4)' ))`` → false
+       * ``disjoint( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ), geom_from_wkt( 'POINT(4 4)' ))`` → FALSE
 
 
 .. end_disjoint_section
@@ -887,6 +887,24 @@ Returns the Well-Known Text (WKT) representation of the geometry without SRID me
 
 .. end_geom_to_wkt_section
 
+.. _expression_function_GeometryGroup_$geometry:
+
+$geometry
+.........
+
+Returns the geometry of the current feature. Can be used for processing with other functions.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - $geometry
+   * - Examples
+     - * ``geom_to_wkt( $geometry )`` → 'POINT(6 50)'
+
+
+.. end_$geometry_section
+
 .. _expression_function_GeometryGroup_geometry:
 
 geometry
@@ -908,24 +926,6 @@ Returns a feature's geometry.
 
 
 .. end_geometry_section
-
-.. _expression_function_GeometryGroup_$geometry:
-
-$geometry
-.........
-
-Returns the geometry of the current feature. Can be used for processing with other functions.
-
-.. list-table::
-   :widths: 15 85
-
-   * - Syntax
-     - $geometry
-   * - Examples
-     - * ``geom_to_wkt( $geometry )`` → 'POINT(6 50)'
-
-
-.. end_$geometry_section
 
 .. _expression_function_GeometryGroup_geometry_n:
 
@@ -1081,7 +1081,7 @@ Returns a geometry that represents the shared portion of two geometries.
 intersects
 ..........
 
-Tests whether a geometry intersects another. Returns true if the geometries spatially intersect (share any portion of space) and false if they do not.
+Tests whether a geometry intersects another. Returns TRUE if the geometries spatially intersect (share any portion of space) and false if they do not.
 
 .. list-table::
    :widths: 15 85
@@ -1092,8 +1092,8 @@ Tests whether a geometry intersects another. Returns true if the geometries spat
      - * **geometry1** - a geometry
        * **geometry2** - a geometry
    * - Examples
-     - * ``intersects( geom_from_wkt( 'POINT(4 4)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → true
-       * ``intersects( geom_from_wkt( 'POINT(4 5)' ), geom_from_wkt( 'POINT(5 5)' ) )`` → false
+     - * ``intersects( geom_from_wkt( 'POINT(4 4)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → TRUE
+       * ``intersects( geom_from_wkt( 'POINT(4 5)' ), geom_from_wkt( 'POINT(5 5)' ) )`` → FALSE
 
 
 .. end_intersects_section
@@ -1103,7 +1103,7 @@ Tests whether a geometry intersects another. Returns true if the geometries spat
 intersects_bbox
 ...............
 
-Tests whether a geometry's bounding box overlaps another geometry's bounding box. Returns true if the geometries spatially intersect the bounding box defined and false if they do not.
+Tests whether a geometry's bounding box overlaps another geometry's bounding box. Returns TRUE if the geometries spatially intersect the bounding box defined and false if they do not.
 
 .. list-table::
    :widths: 15 85
@@ -1115,7 +1115,7 @@ Tests whether a geometry's bounding box overlaps another geometry's bounding box
        * **geometry2** - a geometry
    * - Examples
      - * ``intersects_bbox( geom_from_wkt( 'POINT(4 5)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → true
-       * ``intersects_bbox( geom_from_wkt( 'POINT(6 5)' ), geom_from_wkt( 'POLYGON((3 3, 4 4, 5 5, 3 3))' ) )`` → false
+       * ``intersects_bbox( geom_from_wkt( 'POINT(6 5)' ), geom_from_wkt( 'POLYGON((3 3, 4 4, 5 5, 3 3))' ) )`` → FALSE
 
 
 .. end_intersects_bbox_section
@@ -1125,7 +1125,7 @@ Tests whether a geometry's bounding box overlaps another geometry's bounding box
 is_closed
 .........
 
-Returns true if a line string is closed (start and end points are coincident), or false if a line string is not closed. If the geometry is not a line string then the result will be NULL.
+Returns TRUE if a line string is closed (start and end points are coincident), or false if a line string is not closed. If the geometry is not a line string then the result will be NULL.
 
 .. list-table::
    :widths: 15 85
@@ -1135,7 +1135,7 @@ Returns true if a line string is closed (start and end points are coincident), o
    * - Arguments
      - * **geometry** - a line string geometry
    * - Examples
-     - * ``is_closed(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)'))`` → false
+     - * ``is_closed(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)'))`` → FALSE
        * ``is_closed(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2, 0 0)'))`` → true
 
 
@@ -1146,7 +1146,7 @@ Returns true if a line string is closed (start and end points are coincident), o
 is_empty
 ........
 
-Returns true if a geometry is empty (without coordinates), false if the geometry is not empty and NULL if there is no geometry. See also is_empty_or_null.
+Returns TRUE if a geometry is empty (without coordinates), false if the geometry is not empty and NULL if there is no geometry. See also is_empty_or_null.
 
 .. list-table::
    :widths: 15 85
@@ -1156,9 +1156,9 @@ Returns true if a geometry is empty (without coordinates), false if the geometry
    * - Arguments
      - * **geometry** - a geometry
    * - Examples
-     - * ``is_empty(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)'))`` → false
+     - * ``is_empty(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)'))`` → FALSE
        * ``is_empty(geom_from_wkt('LINESTRING EMPTY'))`` → true
-       * ``is_empty(geom_from_wkt('POINT(7 4)'))`` → false
+       * ``is_empty(geom_from_wkt('POINT(7 4)'))`` → FALSE
        * ``is_empty(geom_from_wkt('POINT EMPTY'))`` → true
 
 
@@ -1169,7 +1169,7 @@ Returns true if a geometry is empty (without coordinates), false if the geometry
 is_empty_or_null
 ................
 
-Returns true if a geometry is NULL or empty (without coordinates) or false otherwise. This function is like the expression '$geometry IS NULL or is_empty($geometry)'
+Returns TRUE if a geometry is NULL or empty (without coordinates) or false otherwise. This function is like the expression '$geometry IS NULL or is_empty($geometry)'
 
 .. list-table::
    :widths: 15 85
@@ -1180,9 +1180,9 @@ Returns true if a geometry is NULL or empty (without coordinates) or false other
      - * **geometry** - a geometry
    * - Examples
      - * ``is_empty_or_null(NULL)`` → true
-       * ``is_empty_or_null(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)'))`` → false
+       * ``is_empty_or_null(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)'))`` → FALSE
        * ``is_empty_or_null(geom_from_wkt('LINESTRING EMPTY'))`` → true
-       * ``is_empty_or_null(geom_from_wkt('POINT(7 4)'))`` → false
+       * ``is_empty_or_null(geom_from_wkt('POINT(7 4)'))`` → FALSE
        * ``is_empty_or_null(geom_from_wkt('POINT EMPTY'))`` → true
 
 
@@ -1193,7 +1193,7 @@ Returns true if a geometry is NULL or empty (without coordinates) or false other
 is_multipart
 ............
 
-Returns true if the geometry is of Multi type.
+Returns TRUE if the geometry is of Multi type.
 
 .. list-table::
    :widths: 15 85
@@ -1204,7 +1204,7 @@ Returns true if the geometry is of Multi type.
      - * **geometry** - a geometry
    * - Examples
      - * ``is_multipart(geom_from_wkt('MULTIPOINT ((0 0),(1 1),(2 2))'))`` → true
-       * ``is_multipart(geom_from_wkt('POINT (0 0)'))`` → false
+       * ``is_multipart(geom_from_wkt('POINT (0 0)'))`` → FALSE
 
 
 .. end_is_multipart_section
@@ -1214,7 +1214,7 @@ Returns true if the geometry is of Multi type.
 is_valid
 ........
 
-Returns true if a geometry is valid; if it is well-formed in 2D according to the OGC rules.
+Returns TRUE if a geometry is valid; if it is well-formed in 2D according to the OGC rules.
 
 .. list-table::
    :widths: 15 85
@@ -1225,10 +1225,28 @@ Returns true if a geometry is valid; if it is well-formed in 2D according to the
      - * **geometry** - a geometry
    * - Examples
      - * ``is_valid(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2, 0 0)'))`` → true
-       * ``is_valid(geom_from_wkt('LINESTRING(0 0)'))`` → false
+       * ``is_valid(geom_from_wkt('LINESTRING(0 0)'))`` → FALSE
 
 
 .. end_is_valid_section
+
+.. _expression_function_GeometryGroup_$length:
+
+$length
+.......
+
+Returns the length of a linestring. If you need the length of a border of a polygon, use $perimeter instead. The length calculated by this function respects both the current project's ellipsoid setting and distance unit settings. For example, if an ellipsoid has been set for the project then the calculated length will be ellipsoidal, and if no ellipsoid is set then the calculated length will be planimetric.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - $length
+   * - Examples
+     - * ``$length`` → 42.4711
+
+
+.. end_$length_section
 
 .. _expression_function_GeometryGroup_length:
 
@@ -1268,24 +1286,6 @@ Calculate the length of a geometry line object. Calculations are always planimet
 
 
 .. end_length_section
-
-.. _expression_function_GeometryGroup_$length:
-
-$length
-.......
-
-Returns the length of a linestring. If you need the length of a border of a polygon, use $perimeter instead. The length calculated by this function respects both the current project's ellipsoid setting and distance unit settings. For example, if an ellipsoid has been set for the project then the calculated length will be ellipsoidal, and if no ellipsoid is set then the calculated length will be planimetric.
-
-.. list-table::
-   :widths: 15 85
-
-   * - Syntax
-     - $length
-   * - Examples
-     - * ``$length`` → 42.4711
-
-
-.. end_$length_section
 
 .. _expression_function_GeometryGroup_length3D:
 
@@ -1812,7 +1812,7 @@ Returns a multipoint geometry consisting of every node in the input geometry.
 num_geometries
 ..............
 
-Returns the number of geometries in a geometry collection, or NULL if the input geometry is not a collection.
+Returns the number of geometries in a geometry collection, or the number of parts in a multi-part geometry. The function returns NULL if the input geometry is not a collection.
 
 .. list-table::
    :widths: 15 85
@@ -1820,9 +1820,10 @@ Returns the number of geometries in a geometry collection, or NULL if the input 
    * - Syntax
      - num_geometries(geometry)
    * - Arguments
-     - * **geometry** - geometry collection
+     - * **geometry** - geometry collection or multi-part geometry
    * - Examples
      - * ``num_geometries(geom_from_wkt('GEOMETRYCOLLECTION(POINT(0 1), POINT(0 0), POINT(1 0), POINT(1 1))'))`` → 4
+       * ``num_geometries(geom_from_wkt('MULTIPOINT((0 1), (0 0), (1 0))'))`` → 3
 
 
 .. end_num_geometries_section
@@ -1966,7 +1967,7 @@ Returns a geometry which represents the minimal oriented bounding box of an inpu
 overlaps
 ........
 
-Tests whether a geometry overlaps another. Returns true if the geometries share space, are of the same dimension, but are not completely contained by each other.
+Tests whether a geometry overlaps another. Returns TRUE if the geometries share space, are of the same dimension, but are not completely contained by each other.
 
 .. list-table::
    :widths: 15 85
@@ -1978,7 +1979,7 @@ Tests whether a geometry overlaps another. Returns true if the geometries share 
        * **geometry2** - a geometry
    * - Examples
      - * ``overlaps( geom_from_wkt( 'LINESTRING(3 5, 4 4, 5 5, 5 3)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → true
-       * ``overlaps( geom_from_wkt( 'LINESTRING(0 0, 1 1)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → false
+       * ``overlaps( geom_from_wkt( 'LINESTRING(0 0, 1 1)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → FALSE
 
 
 .. end_overlaps_section
@@ -2500,7 +2501,7 @@ Returns a rotated version of a geometry. Calculations are in the Spatial Referen
 roundness
 .........
 
-Calculates how close a polygon shape is to a circle. The function returns 1 when the polygon shape is a perfect circle and 0 when it is completely flat.
+Calculates how close a polygon shape is to a circle. The function Returns TRUE when the polygon shape is a perfect circle and 0 when it is completely flat.
 
 .. list-table::
    :widths: 15 85
@@ -2845,7 +2846,7 @@ Creates a buffer along a line geometry where the buffer diameter varies evenly o
 touches
 .......
 
-Tests whether a geometry touches another. Returns true if the geometries have at least one point in common, but their interiors do not intersect.
+Tests whether a geometry touches another. Returns TRUE if the geometries have at least one point in common, but their interiors do not intersect.
 
 .. list-table::
    :widths: 15 85
@@ -2856,8 +2857,8 @@ Tests whether a geometry touches another. Returns true if the geometries have at
      - * **geometry1** - a geometry
        * **geometry2** - a geometry
    * - Examples
-     - * ``touches( geom_from_wkt( 'LINESTRING(5 3, 4 4)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → true
-       * ``touches( geom_from_wkt( 'POINT(4 4)' ), geom_from_wkt( 'POINT(5 5)' ) )`` → false
+     - * ``touches( geom_from_wkt( 'LINESTRING(5 3, 4 4)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → TRUE
+       * ``touches( geom_from_wkt( 'POINT(4 4)' ), geom_from_wkt( 'POINT(5 5)' ) )`` → FALSE
 
 
 .. end_touches_section
@@ -3062,7 +3063,7 @@ Returns a wedge shaped buffer originating from a point geometry.
 within
 ......
 
-Tests whether a geometry is within another. Returns true if the geometry1 is completely within geometry2.
+Tests whether a geometry is within another. Returns TRUE if the geometry1 is completely within geometry2.
 
 .. list-table::
    :widths: 15 85
@@ -3073,8 +3074,8 @@ Tests whether a geometry is within another. Returns true if the geometry1 is com
      - * **geometry1** - a geometry
        * **geometry2** - a geometry
    * - Examples
-     - * ``within( geom_from_wkt( 'POINT( 0.5 0.5)' ), geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))' ) )`` → true
-       * ``within( geom_from_wkt( 'POINT( 5 5 )' ), geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0 ))' ) )`` → false
+     - * ``within( geom_from_wkt( 'POINT( 0.5 0.5)' ), geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))' ) )`` → TRUE
+       * ``within( geom_from_wkt( 'POINT( 5 5 )' ), geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0 ))' ) )`` → FALSE
 
 
 .. end_within_section
@@ -3178,6 +3179,24 @@ Returns the minimum x coordinate of a geometry. Calculations are in the spatial 
 
 .. end_x_min_section
 
+.. _expression_function_GeometryGroup_$y:
+
+$y
+..
+
+Returns the y coordinate of the current point feature. If the feature is a multipoint feature, then the y-coordinate of the first point will be returned.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - $y
+   * - Examples
+     - * ``$y`` → 42
+
+
+.. end_$y_section
+
 .. _expression_function_GeometryGroup_y:
 
 y
@@ -3198,24 +3217,6 @@ Returns the y coordinate of a point geometry, or the y coordinate of the centroi
 
 
 .. end_y_section
-
-.. _expression_function_GeometryGroup_$y:
-
-$y
-..
-
-Returns the y coordinate of the current point feature. If the feature is a multipoint feature, then the y-coordinate of the first point will be returned.
-
-.. list-table::
-   :widths: 15 85
-
-   * - Syntax
-     - $y
-   * - Examples
-     - * ``$y`` → 42
-
-
-.. end_$y_section
 
 .. _expression_function_GeometryGroup_$y_at:
 

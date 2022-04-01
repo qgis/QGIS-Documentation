@@ -155,7 +155,7 @@ Returns a map with the given key and its corresponding value deleted.
 map_exist
 .........
 
-Returns true if the given key exists in the map.
+Returns TRUE if the given key exists in the map.
 
 .. list-table::
    :widths: 15 85
@@ -166,7 +166,7 @@ Returns true if the given key exists in the map.
      - * **map** - a map
        * **key** - the key to lookup
    * - Examples
-     - * ``map_exist(map('1','one','2','two'),'3')`` → false
+     - * ``map_exist(map('1','one','2','two'),'3')`` → FALSE
 
 
 .. end_map_exist_section
