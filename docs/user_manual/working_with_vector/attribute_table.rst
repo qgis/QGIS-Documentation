@@ -551,23 +551,23 @@ A short example illustrates how field calculator works when using the
 :guilabel:`Expression` tab. We want to calculate the length in km of the
 ``railroads`` layer from the QGIS sample dataset:
 
-#. Load the shapefile :file:`airports.shp` in QGIS and press |openTable|
+#. Load the shapefile :file:`railroads.shp` in QGIS and press |openTable|
    :sup:`Open Attribute Table`.
 #. Click on |toggleEditing| :sup:`Toggle editing mode` and open the
    |calculateField| :sup:`Field Calculator` dialog.
 #. Select the |checkbox| :guilabel:`Create a new field` checkbox to save the
    calculations into a new field.
-#. Set :guilabel:`Output field name` to  ``elev_ft``
+#. Set :guilabel:`Output field name` to  ``length_km``
 #. Select ``Decimal number (real)`` as :guilabel:`Output field type`
 #. Set the :guilabel:`Output field length` to ``10`` and the :guilabel:`Precision`
    to ``3``
-#. Double click on ``$ELEV`` in the :guilabel:`Fields and Values` group to add the elevation values
-   of the shapefile into the Field calculator expression box (you will begin to see
+#. Double click on ``$length`` in the :guilabel:`Geometry` group to add the length
+   of the geometry into the Field calculator expression box (you will begin to see
    a preview of the output, up to 60 characters, below the expression box updating 
    in real-time as the expression is assembled).
-#. Complete the expression by typing ``* 3.2808`` in the Field calculator
+#. Complete the expression by typing ``/ 1000`` in the Field calculator
    expression box and click :guilabel:`OK`.
-#. You can now find a new :guilabel:`elev_ft` field in the attribute table.
+#. You can now find a new :guilabel:`length_km` field in the attribute table.
 
 .. _virtual_field:
 
