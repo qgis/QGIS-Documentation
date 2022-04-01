@@ -15,8 +15,7 @@ fi
 touch running
 trap "rm $PWD/running" EXIT
 
-#TARGET=${1:-full}
-TARGET=${1:-html}
+TARGET=${1:-full}
 
 # throw away building artefacts
 git stash
@@ -39,8 +38,8 @@ for l in $langs
       echo "Build OK: syncing to web"
       # 20220317 sync to remote www2
       time rsync -hvrzc --delete --progress build/html/$l www2.qgis.org:/var/www/qgisdata/QGIS-Documentation-3.22/live/html
-#      time rsync -hvrzc --delete --progress build/pdf www2.qgis.org:/var/www/qgisdata/QGIS-Documentation-3.22/live/html
-#      time rsync -hvrzc --delete --progress build/zip www2.qgis.org:/var/www/qgisdata/QGIS-Documentation-3.22/live/html
+      time rsync -hvrzc --delete --progress build/pdf www2.qgis.org:/var/www/qgisdata/QGIS-Documentation-3.22/live/html
+      time rsync -hvrzc --delete --progress build/zip www2.qgis.org:/var/www/qgisdata/QGIS-Documentation-3.22/live/html
     else
       echo "Build FAILED: not syncing to web";
     fi
