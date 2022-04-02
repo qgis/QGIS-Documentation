@@ -25,7 +25,7 @@ git pull
 # AFTER the build, we are going to rsync everything to www2.qgis.org
 docker run -v $PWD:/build -v /var/www/qgisdata/QGIS-Documentation-3.16/live/html:/site -w="/build" --rm=true --name="qgis_docs_3.16_build" qgis/sphinx_pdf_3:latest make all
 # in one go: ALL languages, the zip's AND the pdf's:
-rsync -hrzc --delete --progress  /var/www/qgisdata/QGIS-Documentation-3.16/live/html www2.qgis.org:/var/www/qgisdata/QGIS-Documentation-3.16/live/html;
+rsync -hrzc --delete --progress  /var/www/qgisdata/QGIS-Documentation-3.16/live/html www2.qgis.org:/var/www/qgisdata/QGIS-Documentation-3.16/live/;
 
 now=`date`
 echo "Finished: $now"
