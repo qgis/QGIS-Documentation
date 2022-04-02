@@ -1338,7 +1338,7 @@ a multipolygon/multipolyline/multipoint feature is created.
    * selecting a row in the table and pressing :guilabel:`Take attributes from
      selected feature` to use the values of this initial feature;
    * pressing the :guilabel:`Take attributes from the largest geometry`
-     to use the attributes from the longest line feature
+     to use the attributes from the longest line feature,
      the largest polygon, or the multipoints with the most parts;
    * pressing :guilabel:`Skip all fields` to use empty attributes;
    * expanding the drop down menu at the top of the table, select any of the
