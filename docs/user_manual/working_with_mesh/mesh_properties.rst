@@ -321,7 +321,7 @@ Vectors Symbology
 .. note:: The |meshvectors| :sup:`Vectors` tab can be activated only if a
   vector dataset has been selected in the |general| :guilabel:`Datasets` tab.
 
-In the |meshcontours| :sup:`Vectors` tab you can see and change the current
+In the |meshvectors| :sup:`Vectors` tab you can see and change the current
 visualization options of vectors for the selected group, as shown in
 :numref:`figure_mesh_symbology_vectors`:
 
@@ -335,7 +335,7 @@ visualization options of vectors for the selected group, as shown in
 Mesh vector dataset can be styled using various types of :guilabel:`Symbology`:
 
 * **Arrows**: vectors are represented with arrows at the same place as they are
-  defined in the raw dataset (i.e. on the nodes or centre of elements) or on
+  defined in the raw dataset (i.e. on the nodes or center of elements) or on
   a user-defined grid (hence, they are evenly distributed).
   The arrow length is proportional to the magnitude of the arrow as defined
   in the raw data but can be scaled by various methods.
@@ -537,7 +537,7 @@ over the map canvas.
 * :guilabel:`Reference time` of the dataset group, as an absolute date time.
   By default, QGIS parses the source layer and returns the first valid reference
   time in the layer's dataset group. If unavailable, the value will be set by
-  the project time range or fell back to the current date.
+  the project time range or fall back to the current date.
   The :guilabel:`Start time` and :guilabel:`End time` to  consider
   are then calculated based on the internal timestamp step of the dataset.
 
@@ -622,7 +622,7 @@ The :guilabel:`Result Layer` helps you configure properties of the output layer:
   :guilabel:`Use all selected dataset times` button to take the whole range.
 
 The :guilabel:`Operators` section contains all available operators. To add an operator
-to the raster calculator expression box, click the appropriate button. Mathematical
+to the mesh calculator expression box, click the appropriate button. Mathematical
 calculations (``+``, ``-``, ``*``, ... ) and statistical functions (``min``,
 ``max``, ``sum (aggr)``, ``average (aggr)``, ... ) are available.
 Conditional expressions (``=``, ``!=``, ``<``, ``>=``, ``IF``, ``AND``, ``NOT``, ... )
