@@ -2,20 +2,20 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
-# DiGro, 2021
+# Harrissou Sant-anna, 2022
+# DiGro, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 12:03+0000\n"
-"Last-Translator: DiGro, 2021\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:12+0000\n"
+"Last-Translator: DiGro, 2022\n"
 "Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,22 +35,22 @@ msgstr "Wat zijn mazen?"
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:15
 msgid ""
 "A mesh is an unstructured grid usually with temporal and other components. "
-"The spatial component contains a collection of vertices, edges and faces in "
-"2D or 3D space:"
+"The spatial component contains a collection of vertices, edges and/or faces,"
+" in 2D or 3D space:"
 msgstr ""
-"Een laag met mazen ( mesh ) is een ongestructureerd raster, gewoonlijk met "
-"tijdelijke en andere componenten. De ruimtelijke component bevat een "
-"verzameling punten, randen en zijden in de ruimten 2D of 3D:"
+"Een laag met mazen is een ongestructureerd raster, gewoonlijk met tijd- en "
+"andere componenten. De ruimtelijke component bevat een collectie punten, "
+"randen en zijden in ruimte 2D of 3D:"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:19
 msgid ""
-"**vertices** - XY(Z) points (in the layer's coordinate reference system)"
+"**vertices** - XY(Z) points (in the layer's coordinate reference system)"
 msgstr ""
-"**punten** - XY(Z)-punten (in het coördinaten referentiesysteem van de laag)"
+"**punten** - XY(Z)-punten (in het coördinaten referentiesysteem van de laag)"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:20
-msgid "**edges** - connect pairs of vertices"
-msgstr "**randen** - verbonden paren van punten"
+msgid "**edges** - connect pairs of vertices"
+msgstr "**randen** - verbonden paren punten"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:21
 msgid ""
@@ -61,17 +61,54 @@ msgstr ""
 "gewoonlijk een driehoek of een vierhoek (quad), zelden polygonen met "
 "meerdere punten"
 
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:24
+msgid ""
+"Relying on the above, mesh layers can thus have different types of "
+"structure:"
+msgstr ""
+"Uitgaande van bovenstaande kunnen lagen met mazen dus verschillende typen "
+"structuur hebben:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:26
+msgid ""
+"1D Meshes: consist of vertices and edges. An edge connects two vertices and "
+"can have assigned data (scalars or vectors) on it. The 1D mesh network can "
+"be for example used for modelling of an urban drainage system."
+msgstr ""
+"1D-mazen: bestaan uit punten en randen. Een rand verbindt twee punten en kan"
+" gegevens (scalairen of vectoren) aan zich hebben toegewezen. Het netwerk "
+"van 1D-mazen kan bijvoorbeeld worden gebruikt voor het modelleren van een "
+"stedelijk drainagesysteem."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:29
+msgid ""
+"2D meshes: consist of faces with triangles, regular or unstructured quads."
+msgstr ""
+"2D-mazen: bestaan uit zijden met driehoeken, regelmatige of "
+"ongestructureerde vierkanten."
+
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:30
+msgid ""
+"3D layered meshes: consist of multiple stacked 2D unstructured meshes each "
+"extruded in the vertical direction (levels) by means of a vertical "
+"coordinate. The vertices and faces have the same topology in each vertical "
+"level. The mesh definition (vertical level extrusion) could in general "
+"change in time. The data is usually defined in volume centres or by some "
+"parametric function."
+msgstr ""
+"3D-gelaagde mazen: bestaan uit meerdere gestapelde 2d ongestructureerde "
+"mazen die elk zijn uitgetrokken in de verticale richting (niveaus) door "
+"middel van een verticale coördinaat. De punten en zijden hebben dezelfde "
+"topologie op elk verticaal niveau. De definitie van de mazen (uittrekking "
+"van verticaal niveau) zou in het algemeen kunnen wijzigen in tijd. De "
+"gegevens worden gewoonlijk gedefinieerd in volumecentra of door enige "
+"parametrische functie."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:41
 msgid "Different mesh types"
 msgstr "Verschillende typen mazen"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:32
-msgid "QGIS can currently render mesh data using triangles or regular quads."
-msgstr ""
-"QGIS kan momenteel gegevens met mazen die driehoeken of regelmatige "
-"vierhoeken gebruiken renderen."
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:34
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:43
 msgid ""
 "Mesh provides information about the spatial structure. In addition, the mesh"
 " can have datasets (groups) that assign a value to every vertex. For "
@@ -83,11 +120,11 @@ msgstr ""
 "toewijzen aan elk punt. Bijvoorbeeld driehoekige mazen hebben met genummerde"
 " punten, zoals weergegeven in de afbeelding hieronder:"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:43
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:52
 msgid "Triangular grid with numbered vertices"
 msgstr "Driehoekig raster met genummerde punten"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:45
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:54
 msgid ""
 "Each vertex can store different datasets (typically multiple quantities), "
 "and those datasets can also have a temporal dimension. Thus, a single file "
@@ -97,7 +134,7 @@ msgstr ""
 "kwantiteiten), en deze gegevenssets kunnen ook een tijdelijk dimensie "
 "hebben. Één enkel bestand kan dus meerdere gegevenssets bevatten."
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:49
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:58
 msgid ""
 "The following table gives an idea about the information that can be stored "
 "in mesh datasets. Table columns represent indices of mesh vertices, each row"
@@ -111,7 +148,7 @@ msgstr ""
 "verschillende gegevenstypen hebben. In dit geval slaat het de windsnelheid "
 "op 10 m op op bepaalde tijden (t1, t2, t3)."
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:55
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:64
 msgid ""
 "In a similar way, the mesh dataset can also store vector values for each "
 "vertex. For example, wind direction vector at the given time stamps:"
@@ -120,128 +157,128 @@ msgstr ""
 " voor elk punt. Bijvoorbeeld een vector voor de windrichting op de opgegeven"
 " tijdstippen:"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:59
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:68
 msgid "10 metre wind"
 msgstr "10 meter wind"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:59
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:68
 msgid "1"
 msgstr "1"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:59
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:68
 msgid "2"
 msgstr "2"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:59
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:68
 msgid "3"
 msgstr "3"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:59
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:61
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:62
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:63
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:64
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:65
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:66
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:67
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:68
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:70
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:71
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:72
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:73
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:74
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:75
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:76
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:77
 msgid "..."
 msgstr "..."
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:61
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:70
 msgid "10 metre speed at time=t1"
 msgstr "10 meter snelheid op tijd=t1"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:61
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:63
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:70
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:72
 msgid "17251"
 msgstr "17251"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:61
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:70
 msgid "24918"
 msgstr "24918"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:61
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:70
 msgid "32858"
 msgstr "32858"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:62
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:71
 msgid "10 metre speed at time=t2"
 msgstr "10 meter snelheid op tijd=t2"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:62
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:71
 msgid "19168"
 msgstr "19168"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:62
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:71
 msgid "23001"
 msgstr "23001"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:62
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:71
 msgid "36418"
 msgstr "36418"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:63
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:72
 msgid "10 metre speed at time=t3"
 msgstr "10 meter snelheid op tijd=t3"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:63
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:72
 msgid "21085"
 msgstr "21085"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:63
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:72
 msgid "30668"
 msgstr "30668"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:65
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:74
 msgid "10m wind direction time=t1"
 msgstr "10 m windrichting tijd=t1"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:65
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:74
 msgid "[20,2]"
 msgstr "[20,2]"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:65
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:74
 msgid "[20,3]"
 msgstr "[20,3]"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:65
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:74
 msgid "[20,4.5]"
 msgstr "[20,4.5]"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:66
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:75
 msgid "10m wind direction time=t2"
 msgstr "10 m windrichting tijd=t2"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:66
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:75
 msgid "[21,3]"
 msgstr "[21,3]"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:66
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:75
 msgid "[21,4]"
 msgstr "[21,4]"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:66
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:75
 msgid "[21,5.5]"
 msgstr "[21,5.5]"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:67
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:76
 msgid "10m wind direction time=t3"
 msgstr "10 m windrichting tijd=t3"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:67
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:76
 msgid "[22,4]"
 msgstr "[22,4]"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:67
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:76
 msgid "[22,5]"
 msgstr "[22,5]"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:67
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:76
 msgid "[22,6.5]"
 msgstr "[22,6.5]"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:71
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:80
 msgid ""
 "We can visualize the data by assigning colors to values (similarly to how it"
 " is done with :ref:`Singleband pseudocolor <label_colormaptab>` raster "
@@ -258,63 +295,30 @@ msgstr ""
 "scalaire waarden zijn (bijv. windrichting). Voor dergelijke kwantiteiten is "
 "het wenselijk om pijlen weer te geven die de richtingen aangeven."
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:83
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:92
 msgid "Possible visualisation of mesh data"
 msgstr "Mogelijke visualisatie van gegevens met mazen"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:88
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:97
 msgid "Supported formats"
 msgstr "Ondersteunde indelingen"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:90
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:99
 msgid ""
 "QGIS accesses mesh data using the `MDAL drivers "
-"<https://github.com/lutraconsulting/MDAL>`_. Hence, the natively supported "
-"formats are:"
+"<https://github.com/lutraconsulting/MDAL>`_, and natively supports a "
+"`variety of formats <https://github.com/lutraconsulting/MDAL#supported-"
+"formats>`_. Whether QGIS can edit a mesh layer depends on the format and the"
+" mesh structure type."
 msgstr ""
-"QGIS verkrijgt toegang tot gegevens met mazen met de `stuurprogramma's van "
-"MDAL <https://github.com/lutraconsulting/MDAL>`_. Daarom zijn de eigen "
-"ondersteunde indelingen:"
+"QGIS verkrijgt toegang tot de gegevens van mazen met de `MDAL drivers "
+"<https://github.com/lutraconsulting/MDAL>`_, en ondersteunt vanuit zichzelf "
+"een `variëteit aan indelingen "
+"<https://github.com/lutraconsulting/MDAL#supported-formats>`_. Of QGIS een "
+"laag met mazen kan bewerken is afhankelijk van de indeling en het "
+"structuurtype van de mazen."
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:93
-msgid "``NetCDF``: Generic format for scientific data"
-msgstr "``NetCDF``: Algemene indeling voor wetenschappelijke gegevens"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:94
-msgid "``GRIB``: Format commonly used in meteorology"
-msgstr "``GRIB``: Indeling die gewoonlijk wordt gebruikt in de meteorologie"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:95
-msgid ""
-"``XMDF``: As an example, hydraulic outputs from TUFLOW modelling package"
-msgstr ""
-"``XMDF``: Als een voorbeeld, hydraulische uitvoer uit TUFLOW modellen pakket"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:96
-msgid ""
-"``DAT``: Outputs of various hydrodynamic modelling packages (e.g. BASEMENT, "
-"HYDRO_AS-2D, TUFLOW)"
-msgstr ""
-"``DAT``: Uitvoer van verscheidene pakketten met hydrodynamische modellen "
-"(bijv. BASEMENT, HYDRO_AS-2D, TUFLOW)"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:97
-msgid ""
-"``3Di``: 3Di modelling package format based on Climate and Forecast "
-"Conventions (http://cfconventions.org/)"
-msgstr ""
-"``3Di``: 3Di pakket modellen, indeling gebaseerd op Climate and Forecast "
-"Conventions (http://cfconventions.org/)"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:98
-msgid ""
-"Some examples of mesh datasets can be found at "
-"https://apps.ecmwf.int/datasets/data/interim-full-daily/levtype=sfc/"
-msgstr ""
-"Enkele voorbeelden van gegevenssets met mazen zijn te vinden op "
-"https://apps.ecmwf.int/datasets/data/interim-full-daily/levtype=sfc/"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:101
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:104
 msgid ""
 "To load a mesh dataset into QGIS, use the |addMeshLayer| :guilabel:`Mesh` "
 "tab in the :guilabel:`Data Source Manager` dialog. Read :ref:`mesh_loading` "
@@ -324,420 +328,1337 @@ msgstr ""
 ":guilabel:`Databronnen beheren` om een gegevensset met mazen in QGIS te "
 "laden. Lees :ref:`mesh_loading` voor meer details."
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:308
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:646
 msgid "addMeshLayer"
 msgstr "addMeshLayer"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:109
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:112
 msgid "Mesh Dataset Properties"
 msgstr "Eigenschappen gegevensset met mazen"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:114
-msgid "Information Properties"
-msgstr "Eigenschappen Informatie"
+msgid ""
+"The :guilabel:`Layer Properties` dialog for a mesh layer provides general "
+"settings to manage dataset groups of the layer and their rendering (active "
+"dataset groups, symbology, 2D and 3D rendering). It also provides "
+"information about the layer."
+msgstr ""
+"Het dialoogvenster :guilabel:`Laageigenschappen` voor een laag met mazen "
+"verschaft algemene instellingen om de groepen van gegevenssets van de laag "
+"te beheren en het renderen ervan (actieve groepen van de gegevensset, "
+"symbologie, 2D en 3D renderen). Het verschaft ook informatie over de laag."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:119
+msgid "To access the :guilabel:`Layer Properties` dialog:"
+msgstr "Toegang tot het dialoogvenster :guilabel:`Laag-eigenschappen`:"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:121
-msgid "Mesh Layer Properties"
-msgstr "Eigenschappen laag met mazen"
+msgid ""
+"In the :guilabel:`Layers` panel, double-click the layer or right-click and "
+"select :guilabel:`Properties...` from the pop-up menu;"
+msgstr ""
+"In het paneel :guilabel:`Lagen`, dubbelklik op de laag of klik met rechts en"
+" selecteer :guilabel:`Eigenschappen…` uit het contextmenu;"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:123
 msgid ""
-"The :guilabel:`Information` tab is read-only and represents an interesting "
-"place to quickly grab summarized information and metadata on the current "
-"layer. Provided information are (based on the provider of the layer) uri, "
-"vertex count, face count and dataset groups count."
+"Go to :menuselection:`Layer --> Layer Properties...` menu when the layer is "
+"selected."
 msgstr ""
-"De tab :guilabel:`Informatie` is alleen-lezen en is een interessante plek om"
-" snel wat overzichtsinformatie en metadata voor de huidige laag op te "
-"pakken. Verschafte informatie is (gebaseerd op de provider van de laag) URI,"
-" aantal punten, aantal zijden en aantal groepen gegevensset."
+"Ga naar menu :menuselection:`Kaartlagen --> Laageigenschappen…` als de laag "
+"is geselecteerd."
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:129
-msgid "Source Properties"
-msgstr "Eigenschappen Bron"
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:126
+msgid ""
+"The mesh :guilabel:`Layer Properties` dialog provides the following "
+"sections:"
+msgstr ""
+"Het dialoogvenster voor mazen :guilabel:`Laageigenschappen` verschaft de "
+"volgende gedeelten:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:130
+msgid "|metadata| :ref:`Information <meshinformation>`"
+msgstr "|metadata| :ref:`Informatie <meshinformation>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:670
+msgid "metadata"
+msgstr "metadata"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:131
-msgid ""
-"The :guilabel:`Source` tab displays basic information about the selected "
-"mesh, including:"
-msgstr ""
-"De tab :guilabel:`Bron` geeft basisinformatie weer over de geselecteerde "
-"laag met mazen, inclusief:"
+msgid "|system| :ref:`Source <meshsource>`"
+msgstr "|system| :ref:`Bron <meshsource>`"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:134
-msgid "the Layer name to display in the :guilabel:`Layers` panel"
-msgstr "de Laagnaam om weer te geven in het paneel :guilabel:`Lagen`"
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:680
+msgid "system"
+msgstr "system"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:135
-msgid ""
-"setting the Coordinate Reference System: Displays the layer’s "
-":ref:`Coordinate Reference System (CRS) <layer_crs>`. You can change the "
-"layer’s CRS by selecting a recently used one in the drop-down list or "
-"clicking on |setProjection| :guilabel:`Select CRS` button (see "
-":ref:`crs_selector`). Use this process only if the CRS applied to the layer "
-"is wrong or if none was applied."
-msgstr ""
-"instellen van het Coördinaten ReferentieSysteem: geeft het :ref:`Coördinaten"
-" ReferentieSysteem (CRS) <layer_crs>` van de laag weer. U kunt het CRS van "
-"de laag wijzigen door een recent gebruikt te kiezen uit de keuzelijst of te "
-"klikken op de knop |setProjection| :guilabel:`CRS selecteren` (bekijk "
-":ref:`crs_selector`). Gebruik dit proces alleen als het op de laag "
-"toegepaste CRS verkeerd is of als er geen werd toegepast."
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:132
+msgid "|symbology| :ref:`Symbology <meshsymbology>`:sup:`[1]`"
+msgstr "|symbology| :ref:`Symbologie <meshsymbology>`:sup:`[1]`"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:324
-msgid "setProjection"
-msgstr "setProjection"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:142
-msgid ""
-"Use the :guilabel:`Assign Extra Dataset to Mesh` button to add more groups "
-"to the current mesh layer."
-msgstr ""
-"Gebruik de knop :guilabel:`Extra gegevensset aan mazen toevoegen` om meer "
-"groepen toe te voegen aan de huidige laag met mazen."
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:146
-msgid "Symbology Properties"
-msgstr "Eigenschappen Symbologie"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:148
-msgid ""
-"Click the |symbology| :guilabel:`Symbology` button to activate the dialog as"
-" shown in the following image:"
-msgstr ""
-"Klik op de knop |symbology| :guilabel:`Symbologie` om het dialoogvenster te "
-"activeren dat wordt weergegeven in de volgende afbeelding:"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:331
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:678
 msgid "symbology"
 msgstr "symbology"
 
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:133
+msgid "|3d| :ref:`3D View <mesh3dview>`:sup:`[1]`"
+msgstr "|3d| :ref:`3D-weergave <mesh3dview>`:sup:`[1]`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:642
+msgid "3d"
+msgstr "3d"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:134
+msgid "|temporal| :ref:`Temporal <meshtemporal>`"
+msgstr "|temporal| :ref:`Tijdbeheer <meshtemporal>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:682
+msgid "temporal"
+msgstr "temporal"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:135
+msgid "|rendering| :ref:`Rendering <meshrendering>`"
+msgstr "|rendering| :ref:`Renderen <meshrendering>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:674
+msgid "rendering"
+msgstr "rendering"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:136
+msgid "|editMetadata| :ref:`Metadata <meshmetadata>`"
+msgstr "|editMetadata| :ref:`Metadata <meshmetadata>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:652
+msgid "editMetadata"
+msgstr "editMetadata"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:140
+msgid ""
+":sup:`[1]` Also available in the :ref:`Layer styling panel "
+"<layer_styling_panel>`"
+msgstr ""
+":sup:`[1]` Ook beschikbaar in het :ref:`paneel Laag opmaken "
+"<layer_styling_panel>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:142
+msgid ""
+"Most of the properties of a mesh layer can be saved to or loaded from a "
+":file:`.qml` using the :guilabel:`Style` menu at the bottom of the dialog. "
+"More details at :ref:`manage_custom_style`."
+msgstr ""
+"De meeste eigenschappen van een laag met mazen kan worden opgeslagen naar of"
+" geladen uit een bestand :file:`.qml` met het menu :guilabel:`Stijl` aan de "
+"onderzijde van het dialoogvenster. Meer details in "
+":ref:`manage_custom_style`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:150
+msgid "Information Properties"
+msgstr "Eigenschappen Informatie"
+
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:157
-msgid "Mesh Layer Symbology"
-msgstr "Symbologie voor lagen met mazen"
+msgid "Mesh Layer Information Properties"
+msgstr "Laag met mazen eigenschappen Informatie"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:159
-msgid "Symbology properties are divided in several tabs:"
-msgstr "Eigenschappen voor Symbologie zijn opgedeeld in verscheidene tabs:"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:161
-msgid ":ref:`General <mesh_symbology_general>`"
-msgstr ":ref:`Algemeen<mesh_symbology_general>`"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:162
-msgid ":ref:`Contours Symbology <mesh_symbology_contours>`"
-msgstr ":ref:`symbologie Contouren <mesh_symbology_contours>`"
+msgid ""
+"The |metadata| :guilabel:`Information` tab is read-only and represents an "
+"interesting place to quickly grab summarized information and metadata on the"
+" current layer. Provided information are:"
+msgstr ""
+"De tab |metadata| :guilabel:`Informatie` is alleen-lezen en is een "
+"interessante plek om snel wat overzichtsinformatie en metadata over de "
+"huidige laag op te pakken. Verschafte informatie is:"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:163
-msgid ":ref:`Vectors Symbology <mesh_symbology_vectors>`"
-msgstr ":ref:`symbologie Vectors <mesh_symbology_vectors>`"
+msgid ""
+"general such as  name in the project, source path, list of auxiliary files, "
+"last save time and size, the used provider"
+msgstr ""
+"algemeen, zoals naam in het project, pad van de bron, lijst met aanvullende "
+"bestanden, laatste tijd en grootte van opslaan, de gebruikte provider"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:164
-msgid ":ref:`Rendering <mesh_symbology_rendering>`"
-msgstr ":ref:`Renderen <mesh_symbology_rendering>`"
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:165
+msgid ""
+"based on the provider of the layer: extent, vertex, face, edges and/or "
+"dataset groups count"
+msgstr ""
+"gebaseerd op de provider van de laag: bereik, punt, zijde, aantal randen "
+"en/of groepen gegevensset"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:167
+msgid ""
+"the Coordinate Reference System: name, units, method, accuracy, reference "
+"(i.e. whether it's static or dynamic)"
+msgstr ""
+"het Coördinaten ReferentieSysteem: naam, eenheden, methode, nauwkeurigheid, "
+"verwijzing (d.i. of het statisch of dynamisch is)"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:169
-msgid "General"
-msgstr "Algemeen"
+msgid ""
+"extracted from filled :ref:`metadata <meshmetadata>`: access, extents, "
+"links, contacts, history..."
+msgstr ""
+"opgehaald uit de gevulde :ref:`metadata <meshmetadata>`: toegang, bereiken, "
+"links, contacten, geschiedenis…"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:171
-msgid "The tab |general| presents the following items:"
-msgstr "De tab |general| geeft de volgende items weer:"
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:176
+msgid "Source Properties"
+msgstr "Eigenschappen Bron"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:312
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:178
+msgid ""
+"The |system| :guilabel:`Source` tab displays basic information about the "
+"selected mesh, including:"
+msgstr ""
+"De tab |system| :guilabel:`Bron` geeft basisinformatie weer over de "
+"geselecteerde laag met mazen, inclusief:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:186
+msgid "Mesh Layer Source Properties"
+msgstr "Laag met mazen eigenschappen Bron"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:188
+msgid "the layer name to display in the :guilabel:`Layers` panel"
+msgstr "de laagnaam om weer te geven in het paneel :guilabel:`Lagen`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:189
+msgid ""
+"setting the Coordinate Reference System: Displays the layer’s :ref:`Assigned"
+" Coordinate Reference System (CRS) <layer_crs>`. You can change the layer’s "
+"CRS by selecting a recently used one in the drop-down list or clicking on "
+"|setProjection| :guilabel:`Select CRS` button (see :ref:`crs_selector`). Use"
+" this process only if the CRS applied to the layer is wrong or if none was "
+"applied."
+msgstr ""
+"instellen van het Coördinaten ReferentieSysteem: Geeft het :ref:`toegewezen "
+"Coördinaten ReferentieSysteem (CRS) <layer_crs>` van de laag weer. U kunt "
+"het CRS van de laag wijzigen door een recent gebruikte te kiezen uit de "
+"keuzelijst of te klikken op de knop |setProjection| :guilabel:`CRS "
+"selecteren` (bekijk :ref:`crs_selector`). Gebruik dit proces alleen als het "
+"op de laag toegepaste CRS verkeerd is of als er geen werd gespecificeerd."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:676
+msgid "setProjection"
+msgstr "setProjection"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:195
+msgid ""
+"The :guilabel:`Available datasets` frame lists all the dataset groups (and "
+"subgroups) in the mesh layer, with their type and description in a tree "
+"view. Both regular datasets (i.e. their data is stored in the file) and "
+"virtual datasets (which are :ref:`calculated on the fly <mesh_calculator>`) "
+"are listed."
+msgstr ""
+"Het frame :guilabel:`Beschikbare gegevenssets` vermeldt alle groepen "
+"gegevenssets (en subgroepen) in de laag met mazen, met hun type en "
+"omschrijving in een boomweergave. Zowel gewone gegevenssets (d.i. hun "
+"gegevens zijn opgeslagen in het bestand) en virtuele gegevenssets (die "
+"direct worden :ref:`berekend <mesh_calculator>`) wordne vermeld."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:200
+msgid ""
+"Use the |add| :guilabel:`Assign extra dataset to mesh` button to add more "
+"groups to the current mesh layer."
+msgstr ""
+"Gebruik de knop |add| :guilabel:`Extra gegevensset aan mazen toevoegen` om "
+"meer groepen aan de huidige laag met mazen toe te voegen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:644
+msgid "add"
+msgstr "add"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:202
+msgid ""
+"|collapseTree| :guilabel:`Collapse all` and |expandTree| :guilabel:`Expand "
+"all` the dataset tree, in case of embedded groups"
+msgstr ""
+"|collapseTree| :guilabel:`Alles inklappen` en |expandTree| :guilabel:`Alles "
+"uitklappen` van de boom van de gegevensset, in het geval van ingebedde "
+"groepen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:650
+msgid "collapseTree"
+msgstr "collapseTree"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:654
+msgid "expandTree"
+msgstr "expandTree"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:204
+msgid ""
+"If you are interested in few datasets, you can uncheck the others and make "
+"them unavailable in the project"
+msgstr ""
+"Als u slechts geïnteresseerd bent in enkele gegevenssets kunt u de andere "
+"deselecteren en ze onbeschikbaar maken in het project"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:206
+msgid "Double-click over a name and you can rename the dataset."
+msgstr "Dubbelklik op een naam en u kunt de gegevensset hernoemen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:207
+msgid ""
+"|refresh| :guilabel:`Reset to defaults`: checks all the groups and renames "
+"them back to their original name in the provider."
+msgstr ""
+"|refresh| :guilabel:`Herstellen naar standaarden`: selecteert alle groepen "
+"en hernoemt ze terug naar hun originele naam in de provider."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:672
+msgid "refresh"
+msgstr "refresh"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:209
+msgid "Right-click over a virtual dataset group and you can:"
+msgstr "Klik met rechts op een virtuele groep gegevensset en u kunt:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:211
+msgid ":guilabel:`Remove dataset group` from the project"
+msgstr ":guilabel:`Groep gegevensset verwijderen` uit het project"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:212
+msgid ""
+":guilabel:`Save dataset group as...` a file on disk, to any supported "
+"format. The new file is kept assigned to the current mesh layer in the "
+"project."
+msgstr ""
+":guilabel:`Groep gegevensset opslaan als…` een bestand op schijf, naar elke "
+"ondersteunde indeling. Het nieuwe bestand blijft toegewezen aan d huidige "
+"laag met mazen in het project."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:214
+msgid ""
+"Checking the |unchecked| :guilabel:`Treat as static dataset` group allows to"
+" ignore the map temporal navigation properties while rendering the mesh "
+"layer. For each active dataset group (as selected in |symbology| "
+":menuselection:`Symbology -->` |general| :guilabel:`Datasets` tab), you can:"
+msgstr ""
+"Selecteren van de groep |unchecked| :guilabel:`Behandelen als statische "
+"gegevensset` maakt het mogelijk de eigenschappen voor navigatie van "
+"tijdbeheer voor de kaart te negeren bij het renderen van de laag met mazen. "
+"Voor elke actieve groep gegevensset (zoals geselecteerd in |symbology| "
+":menuselection:`Symbologie -->` tab |general| :guilabel:`Gegevenssets`), "
+"kunt u:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:684
+msgid "unchecked"
+msgstr "unchecked"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:656
 msgid "general"
 msgstr "general"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:173
-msgid "groups available in the mesh dataset"
-msgstr "beschikbare groepen in de gegevensset met mazen"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:174
-msgid ""
-"dataset in the selected group(s), for example, if the layer has a temporal "
-"dimension"
-msgstr ""
-"gegevensset in de geselecteerde groep(en), bijvoorbeeld als de laag een "
-"tijdelijke dimensie heeft"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:175
-msgid "metadata if available"
-msgstr "metadata, indien beschikbaar"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:176
-msgid ":ref:`blending mode <blend-modes>` available for the selected dataset."
-msgstr ""
-":ref:`Meng-modus <blend-modes>` beschikbaar voor de geselecteerde "
-"gegevensset."
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:179
-msgid ""
-"The slider |slider|, the combo box |selectString| and the :guilabel:`|<`, "
-":guilabel:`<`, :guilabel:`>`, :guilabel:`>|` buttons allow to explore "
-"another dimension of the data, if available. As the slider moves, the "
-"metadata is presented accordingly. See the figure :ref:`Mesh groups "
-"<figure_mesh_groups>` below as an example. The map canvas will display the "
-"selected dataset group as well."
-msgstr ""
-"De knoppen voor de schuifbalk |slider|, het combinatievak |selectString| en "
-"de knoppen :guilabel:`|<`, :guilabel:`<`, :guilabel:`>`, :guilabel:`>|` "
-"maken het mogelijk, indien beschikbaar, een andere dimensie van de gegevens "
-"te verkennen. Als de schuifbalk zich verplaatst wordt de metadata "
-"overeenkomstig gepresenteerd. Bekijk de afbeelding :ref:`groepen met mazen "
-"<figure_mesh_groups>` hieronder als een voorbeeld. Het kaartvenster zal de "
-"geselecteerde gegevensset ook weergeven."
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:330
-msgid "slider"
-msgstr "slider"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:322
-msgid "selectString"
-msgstr "selectString"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:191
-msgid "Dataset in Selected Group(s)"
-msgstr "Gegevensset in geselecteerde groep(en)"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:195
-msgid "You can apply symbology to each group using the tabs."
-msgstr "U kunt symbologie op elke groep toepassen met de tabs."
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:201
-msgid "Contours Symbology"
-msgstr "Symbologie Contouren"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:203
-msgid ""
-"Under :guilabel:`Groups`, click on |meshcontoursoff| to show contours with "
-"default visualization parameters."
-msgstr ""
-"Klik, onder :guilabel:`Groepen`, op |meshcontoursoff| om contouren weer te "
-"geven met de standaardparameters voor visualisatie."
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:316
-msgid "meshcontoursoff"
-msgstr "meshcontoursoff"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:206
-msgid ""
-"In the tab |meshcontours| you can see and change the current visualization "
-"options of contours for the selected group, as shown in "
-":numref:`figure_mesh_symbology_contours` below:"
-msgstr ""
-"Op de tab |meshcontours| kunt u de huidige opties voor visualisatie van "
-"contouren voor de geselecteerde groep zien en wijzigen, zoals weergegeven in"
-" :numref:`figure_mesh_symbology_contours` hieronder:"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:314
-msgid "meshcontours"
-msgstr "meshcontours"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:215
-msgid "Styling Contours in a Mesh Layer"
-msgstr "Contouren opmaken in een laag met mazen"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:217
-msgid ""
-"Use the slide bar or combo box to set the opacity of the current group."
-msgstr ""
-"Gebruik de schuifbalk of het combinatievak om de doorzichtbaarheid van de "
-"huidige groep in te stellen."
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:219
-msgid ""
-"Use :guilabel:`Load` to adjust the min and max values of the current group."
-msgstr ""
-"Gebruik :guilabel:`Laden` om de waarden min. en max. van de huidige groep "
-"aan te passen."
-
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:221
-msgid ""
-"The :guilabel:`Interpolation` list contains three options to render "
-"contours: :guilabel:`Linear`, :guilabel:`Discrete` and :guilabel:`Exact`."
+msgid "set to :guilabel:`None`: the dataset group is not displayed at all"
 msgstr ""
-"De lijst :guilabel:`Interpolatie` bevat drie opties om contouren te "
-"renderen: :guilabel:`Lineair`, :guilabel:`Afzonderlijk` en "
-":guilabel:`Exact`."
+"instellen op :guilabel:`Geen`: de groep gegevensset wordt helemaal niet "
+"weergegeven"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:222
+msgid ""
+":guilabel:`Display dataset`: eg, for the \"bed elevation\" dataset which is "
+"not time aware"
+msgstr ""
+":guilabel:`Gegevensset weergeven`: bijv, voor de gegevensset \"bed "
+"elevation\" die geen tijdsindeling heeft"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:224
 msgid ""
-"The :guilabel:`Color ramp` widget opens the :ref:`color ramp drop-down "
-"shortcut <color_ramp_widget>`."
+"extract a particular date time: the dataset matching the provided time is "
+"rendered and stay fixed during map navigation."
 msgstr ""
-"De widget :guilabel:`Kleurverloop` opent de :ref:`sneltoets voor keuzelijst "
-"Kleurverloop <color_ramp_widget>`."
+"een bepaalde datum/tijd uitnemen: de gegevensset die overeenkomt met de "
+"opgegeven tijd wordt gerenderd en blijft vast tijdens navigeren op de kaart."
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:226
-msgid ""
-"The :guilabel:`Label unit suffix` is a label added after the value in the "
-"legend."
-msgstr ""
-"De :guilabel:`Eenheid label achtervoegsel` is een label, toegevoegd achter "
-"de waarde in de legenda."
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:228
-msgid ""
-"By selecting :guilabel:`Continuous` in the classification :guilabel:`Mode`, "
-"QGIS creates classes automatically considering the :guilabel:`Min` and "
-":guilabel:`Max` values. With ‘Equal interval’, you only need to select the "
-"number of classes using the combo box :guilabel:`Classes` and press the "
-"button :guilabel:`Classify`."
-msgstr ""
-"Door :guilabel:`Doorgaand` te selecteren in de classificatie "
-":guilabel:`Modus`, maakt QGIS automatisch klassen met inachtneming van de "
-"waarden :guilabel:`Min` en :guilabel:`Max`. Met ‘Gelijke interval’ hoeft u "
-"slechts het aantal klassen te kiezen met het combinatievak "
-":guilabel:`Klassen` en te drukken op de knop :guilabel:`Classificeren`."
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:231
+msgid "Symbology Properties"
+msgstr "Eigenschappen Symbologie"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:233
 msgid ""
-"The button |symbologyAdd| :sup:`Add values manually` adds a value to the "
-"individual color table. The button |symbologyRemove| :sup:`Remove selected row` "
-"deletes a value from the individual color table. Double clicking on the "
-"value column lets you insert a specific value. Double clicking on the color "
-"column opens the dialog :guilabel:`Change color`, where you can select a "
-"color to apply on that value."
+"Click the |symbology| :guilabel:`Symbology` button to activate the dialog. "
+"Symbology properties are divided into several tabs:"
 msgstr ""
-"De knop |symbologyAdd| :sup:`Voeg handmatig waarden in` voegt een waarde toe aan"
-" de individuele kleurentabel. De knop |symbologyRemove| :sup:`Geselecteerde "
-"rij(en) verwijderen` verwijdert een waarde uit de individuele kleurentabel. "
-"Dubbelklikken op de kolom Waarde laat u een specifieke waarde invoegen. "
-"Dubbelklikken op de kolom Kleur opent het dialoogvenster :guilabel:`Kleur "
-"wijzigen`, waar u een kleur kunt selecteren om toe te passen op die waarde."
+"Klik op de knop |symbology| :guilabel:`Symbologie` om het dialoogvenster te "
+"activeren. Eigenschappen voor Symbologie zijn verdeeld over verschillende "
+"tabs:"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:328
-msgid "symbologyAdd"
-msgstr "symbologyAdd"
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:236
+msgid ":ref:`Datasets <mesh_symbology_datasets>`"
+msgstr ":ref:`Gegevenssets <mesh_symbology_datasets>`"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:326
-msgid "symbologyRemove"
-msgstr "symbologyRemove"
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:237
+msgid ":ref:`Contours <mesh_symbology_contours>`"
+msgstr ":ref:`Contouren <mesh_symbology_contours>`"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:243
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:238
+msgid ":ref:`Vectors <mesh_symbology_vectors>`"
+msgstr ":ref:`Vectoren <mesh_symbology_vectors>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:239
+msgid ":ref:`Rendering <mesh_symbology_rendering>`"
+msgstr ":ref:`Renderen <mesh_symbology_rendering>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:240
+msgid ":ref:`Stacked mesh averaging method <mesh_stacked_averaging>`"
+msgstr ""
+":ref:`Methode voor middelen van gestapelde mazen <mesh_stacked_averaging>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:245
+msgid "Datasets"
+msgstr "Gegevenssets"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:247
+msgid ""
+"The tab |general| :sup:`Datasets` is the main place to control and set which"
+" datasets will be used for the layer. It presents the following items:"
+msgstr ""
+"De tab |general| :sup:`Gegevenssets` is de belangrijkste plaats om te "
+"beheren en in te stellen welke gegevenssets zullen worden gebruikt voor de "
+"laag. Het geeft de volgende items weer:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:250
+msgid ""
+":guilabel:`Groups` available in the mesh dataset, with whether they provide:"
+msgstr ""
+":guilabel:`Groepen` beschikbaar in de gegevensset met mazen, en of zij "
+"verschaffen:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:252
+msgid "|meshcontoursoff| scalar dataset"
+msgstr "|meshcontoursoff| scalaire gegevensset"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:662
+msgid "meshcontoursoff"
+msgstr "meshcontoursoff"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:253
+msgid ""
+"or |meshvectorsoff| vector dataset: by default, each vector dataset has a "
+"scalar dataset representing its magnitude automatically generated."
+msgstr ""
+"of |meshvectorsoff| vector gegevensset: standaard heeft elke vector "
+"gegevensset een scalaire gegevensset die zijn automatisch gemaakte omvang "
+"weergeeft."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:668
+msgid "meshvectorsoff"
+msgstr "meshvectorsoff"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:256
+msgid ""
+"Click on the icon next to the dataset name to select the group and type of "
+"data to represent."
+msgstr ""
+"Klik op het pictogram naast de naam van de gegevensset om de groep en het "
+"type gegevens, dat moet worden weergegeven, te selecteren."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:258
+msgid ":guilabel:`Selected dataset group(s) metadata`, with details on:"
+msgstr ""
+":guilabel:`Metadata voor groep(en) van geselecteerde gegevensset`, met "
+"details over:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:260
+msgid "the mesh type: edges or faces"
+msgstr "het type mazen: randen of zijden"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:261
+msgid "the data type: vertices, edges, faces or volume"
+msgstr "het type gegevens: punten, randen, zijden of volume"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:262
+msgid "whether it's of vector type or not"
+msgstr "of het van het type vector is of niet"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:263
+msgid "the original name in the mesh layer"
+msgstr "de originele naam in de laag met mazen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:264
+msgid "the unit, if applicable"
+msgstr "de eenheid, indien van toepassing"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:265
+msgid ""
+":ref:`blending mode <blend-modes>` available for the selected datasets."
+msgstr ""
+":ref:`Meng-modus <blend-modes>` beschikbaar voor de geselecteerde "
+"gegevenssets."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:272
+msgid "Mesh Layer Datasets"
+msgstr "Laag met mazen Gegevenssets"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:275
+msgid ""
+"You can apply symbology to the selected vector and/or scalar group using the"
+" next tabs."
+msgstr ""
+"U kunt symbologie toepassen op de geselecteerde vector- en/of scalaire groep"
+" met de volgende tabs."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:282
+msgid "Contours Symbology"
+msgstr "Symbologie Contouren"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:284
+msgid ""
+"The |meshcontours| :sup:`Contours` tab can be activated only if a scalar "
+"dataset has been selected in the |general| :guilabel:`Datasets` tab."
+msgstr ""
+"De tab |meshcontours| :sup:`Contouren` kan alleen worden geactiveerd als een"
+" scalaire gegevensset is geselecteerd op de tab |general| "
+":guilabel:`Gegevenssets`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:660
+msgid "meshcontours"
+msgstr "meshcontours"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:287
+msgid ""
+"In the |meshcontours| :sup:`Contours` tab you can see and change the current"
+" visualization options of contours for the selected group, as shown in "
+":numref:`figure_mesh_symbology_contours` below:"
+msgstr ""
+"Op de tab |meshcontours| :sup:`Contouren` kunt u bekijken en wijzigen de "
+"huidige opties voor visualisatie van contouren voor de geselecteerde groep, "
+"zoals hieronder weergegeven in :numref:`figure_mesh_symbology_contours`:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:296
+msgid "Styling Contours in a Mesh Layer"
+msgstr "Contouren opmaken in een laag met mazen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:298
+msgid ""
+"For 1D mesh, set the :guilabel:`Stroke width` of the edges. This can be a "
+"fixed size for the whole dataset, or vary along the geometry (more details "
+"with the :ref:`interpolated line renderer <interpolated_line_symbol>`)"
+msgstr ""
+"Voor 1D-mazen, stel de :guilabel:`Lijndikte` van de randen in. Dit kan een "
+"vaste grootte zijn voor de gehele gegevensset, of variëren langs de "
+"geometrie (meer details bij de :ref:`renderer geïnterpoleerde lijn "
+"<interpolated_line_symbol>`)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:301
+msgid ""
+"Use the slider or the spinbox to set the :guilabel:`Opacity` of the current "
+"group, if of a 2D mesh type."
+msgstr ""
+"Gebruik de schuifbalk of draaiknop om de :guilabel:`Opaciteit` van de "
+"huidige groep in te stellen, indien van het type 2D-mazen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:303
+msgid ""
+"Enter the range of values you want to represent on the current group: use "
+"|refresh| :sup:`Load` to fetch the min and max values of the current group "
+"or enter custom values if you want to exclude some."
+msgstr ""
+"Voer het bereik aan waarden in die u wilt laten weergeven voor de huidige "
+"groep: gebruik |refresh| :sup:`Laden` om de minimum en maximum waarden van "
+"de huidige groep op te halen of voer aangepaste waarden in als u enkele wilt"
+" uitsluiten."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:306
+msgid ""
+"For 2D/3D meshes, select the :guilabel:`Resampling method` to interpolate "
+"the values on the surrounding vertices to the faces (or from the surrounding"
+" faces to the vertices) using the :guilabel:`Neighbour average` method. "
+"Depending on whether the dataset is defined on the vertices (respectively on"
+" the faces), QGIS defaults this setting to :guilabel:`None` (respectively "
+":guilabel:`Neighbour average`) method in order to use values on vertices and"
+" keep the default rendering smooth."
+msgstr ""
+"Voor 2D/3D-mazen, selecteer de :guilabel:`Hersampling methode` om de waarden"
+" van de omliggende punten te interpoleren naar de zijden (of vanuit de "
+"omliggende zijden naar de punten) met de methode :guilabel:`Gemiddelde "
+"buur`. Afhankelijk van of de gegevensset is gedefinieerd op de punten "
+"(respectievelijk op de zijden), stelt QGIS deze instelling standaard in op "
+"de methode :guilabel:`Geen` (respectievelijk :guilabel:`Gemiddelde buur`) om"
+" de waarden op punten te gebruiken en het standaard renderen glad te houden."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:312
+msgid ""
+"Classify the dataset using the :ref:`color ramp shader <color_ramp_shader>` "
+"classification."
+msgstr ""
+"Classificeer de gegevensset met de classificatie voor het :ref:`Kleurverloop"
+" <color_ramp_shader>`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:319
 msgid "Vectors Symbology"
 msgstr "Symbologie Vectors"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:245
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:321
 msgid ""
-"In the tab |general|, click on |meshcontoursoff| to display vectors if "
-"available. The map canvas will display the vectors in the selected group "
-"with default parameters. Click on the tab |meshvectors| to change the "
-"visualization parameters for vectors as shown in the image below:"
+"The |meshvectors| :sup:`Vectors` tab can be activated only if a vector "
+"dataset has been selected in the |general| :guilabel:`Datasets` tab."
 msgstr ""
-"Op de tab |general|, klik op |meshcontoursoff| om, indien beschikbaar, "
-"vectors weer te geven. Het kaartvenster zal de vectors in de geselecteerde "
-"groep weergeven met standaardparameters. Klik op de tab |meshvectors| om de "
-"parameters voor de visualisatie voor vectors te wijzigen, zoals weergegeven "
-"in de afbeelding hieronder:"
+"De tab |meshvectors| :sup:`Vectoren` kan alleen worden geactiveerd als een "
+"vector gegevensset is geselecteerd op de tab |general| "
+":guilabel:`Gegevenssets`."
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:320
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:666
 msgid "meshvectors"
 msgstr "meshvectors"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:255
-msgid "Styling Vectors in a Mesh Layer"
-msgstr "Vectors opmaken in een laag met mazen"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:257
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:324
 msgid ""
-"The line width can be set using the combo box or typing the value. The color"
-" widget opens the dialog :guilabel:`Change color`, where you can select a "
-"color to apply to vectors."
+"In the |meshcontours| :sup:`Vectors` tab you can see and change the current "
+"visualization options of vectors for the selected group, as shown in "
+":numref:`figure_mesh_symbology_vectors`:"
 msgstr ""
-"De lijnbreedte kan worden ingesteld met het combinatievak of door de waarde "
-"te typen. De widget voor kleuren opent het dialoogvenster :guilabel:`Kleur "
-"wijzigen`, waar u een kleur kunt selecteren om op vectors toe te passen."
+"Op de tab |meshvectors| :sup:`Vectoren` kunt u bekijken en wijzigen de "
+"huidige opties voor visualisatie van vectoren voor de geselecteerde groep, "
+"zoals hieronder weergegeven in :numref:`figure_mesh_symbology_vectors`:"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:261
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:333
+msgid "Styling Vectors in a Mesh Layer with arrows"
+msgstr "Vectoren opmaken in een laag met mazen met pijlen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:335
 msgid ""
-"Enter values for :guilabel:`Min` and :guilabel:`Max` to filter vectors "
-"according to their magnitude."
+"Mesh vector dataset can be styled using various types of "
+":guilabel:`Symbology`:"
 msgstr ""
-"Voer waarden in voor :guilabel:`Min` en :guilabel:`Max` om vectors te "
-"filteren overeenkomstig hun grootte."
+"Een vector gegevensset met mazen kan worden opgemaakt met verscheidene typen"
+" :guilabel:`Symbologie`:"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:263
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:337
 msgid ""
-"Check on the box |checkbox| :guilabel:`Display Vectors on User Grid` and "
-"specify the :guilabel:`X spacing` and the :guilabel:`Y spacing`, QGIS will "
-"render the vector considering the given spacing."
+"**Arrows**: vectors are represented with arrows at the same place as they "
+"are defined in the raw dataset (i.e. on the nodes or centre of elements) or "
+"on a user-defined grid (hence, they are evenly distributed). The arrow "
+"length is proportional to the magnitude of the arrow as defined in the raw "
+"data but can be scaled by various methods."
 msgstr ""
-"Selecteer het vak |checkbox| :guilabel:`Vectoren op gebruikersraster "
-"weergeven` en specificeer de :guilabel:`Afstand X` en de :guilabel:`Afstand "
-"Y`, QGIS zal de vector renderen en rekening houden met de opgegeven afstand."
+"**Pijlen**: vectoren worden weergegeven met pijlen op dezelfde plaats als "
+"die waarmee zij werden gedefinieerd in de ruwe gegevensset (d.i. op de "
+"knopen of midden van elementen) of op een gebruiker-gedefinieerd raster (dus"
+" worden zij evenredig verdeeld). D lengte van de pijl is proportioneel voor "
+"de omvang van de pijl zoals die is gedefinieerd in de ruwe gegevens, maar "
+"kan met verschillende methoden op schaal worden gebracht."
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:310
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:342
+msgid ""
+"**Streamlines**: vectors are represented with streamlines seeded from start "
+"points. The seeding points can start from the vertices of the mesh, from a "
+"user grid or randomly."
+msgstr ""
+"**Stroomlijnen**: vectoren worden weergegeven met stroomlijnen die beginnen "
+"vanuit het beginpunt. De beginpunten mogen beginnen vanuit de punten van de "
+"mazen, vanuit een gebruikers-raster of willekeurig."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:345
+msgid ""
+"**Traces**: a nicer animation of the streamlines, the kind of effect you get"
+" when you randomly throws sand in the water and see where the sand items "
+"flows."
+msgstr ""
+"**Sporen**: een nettere animatie van de stroomlijnen, het soort effect dat u"
+" krijgt wanneer u willekeurig zand in het water strooit en kijkt waar de "
+"zandkorrels naartoe vloeien."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:348
+msgid ""
+"Available properties depend on the selected symbology as shown in the "
+"following table."
+msgstr ""
+"Beschikbare eigenschappen zijn afhankelijk van de geselecteerde symbologie, "
+"zoals weergegeven in de volgende tabel."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:351
+msgid "Label"
+msgstr "Label"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:351
+msgid "Description and Properties"
+msgstr "Beschrijving en eigenschappen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:351
+msgid "Arrow"
+msgstr "Pijl"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:351
+msgid "Streamlines"
+msgstr "Stroomlijnen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:351
+msgid "Traces"
+msgstr "Sporen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:353
+msgid ":guilabel:`Line width`"
+msgstr ":guilabel:`Lijndikte`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:353
+msgid "Width of the vector representation"
+msgstr "Breedte van de weergave van de vector"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:353
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:355
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:359
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:362
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:365
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:368
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:373
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:376
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:378
+msgid "|checkbox|"
+msgstr "|checkbox|"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:648
 msgid "checkbox"
 msgstr "checkbox"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:267
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:355
+msgid ":guilabel:`Coloring method`"
+msgstr ":guilabel:`Kleurmethode`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:355
+msgid "a :guilabel:`Single color` assigned to all vectors"
+msgstr "een :guilabel:`Enkele kleur` toegewezen aan alle vectoren"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:356
 msgid ""
-"With the Head Options :guilabel:`Head Options`, QGIS allows the shape of the"
-" arrow head to be set by specifying width and length (in percentage)."
+"or a variable color based on vectors magnitude, using a :ref:`Color ramp "
+"shader <color_ramp_shader>`"
 msgstr ""
-"Met de opties voor het uiteinde, :guilabel:`Opties voor uiteinde`, maakt "
-"QGIS het mogelijk de vorm van het uiteinde van de pijl in te stellen met een"
-" gespecificeerde breedte en lengte (in percentage)."
+"of een variabele kleur, gebaseerd op de omvang van vectoren, met een "
+":ref:`Kleurverloop schaduw <color_ramp_shader>`"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:270
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:359
+msgid ":guilabel:`Filter by magnitude`"
+msgstr ":guilabel:`Op omvang filteren`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:359
 msgid ""
-"Vector's :guilabel:`Arrow length` can be rendered in QGIS in three different"
-" ways:"
+"Only vectors whose length for the selected dataset falls between a "
+":guilabel:`Min` and :guilabel:`Max` range are displayed"
 msgstr ""
-"De :guilabel:`Lengte pijl` van vectors kan in QGIS op drie verschillende "
-"manieren worden gerenderd :"
+"Alleen vectoren waarvan de lengte voor de geselecteerde gegevensset vallen "
+"binnen het bereik :guilabel:`Min` en :guilabel:`Max` worden weergegeven"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:272
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:362
+msgid ":guilabel:`Display on user grid`"
+msgstr ":guilabel:`Weergeven op raster gebruiker`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:362
 msgid ""
-"Defined by Min and Max: You specify the minimum and maximum length for the "
-"vectors, QGIS will adjust their visualization accordingly"
+"Places the vector on a grid with custom :guilabel:`X spacing` and "
+":guilabel:`Y spacing` and interpolates their length based on neighbours"
 msgstr ""
-"Gedefinieerd door Min en Max: U specificeert de minimale en maximale lengte "
-"voor de vectors, QGIS zal hun visualisatie overeenkomstig aanpassen"
+"Plaatst de vector op een raster met een aangepaste :guilabel:`Afstand X` en "
+":guilabel:`Afstand Y` en interpoleert hun lengte, gebaseerd op buren"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:274
-msgid "Scale to magnitude: You specify the (multiplying) factor to use"
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:365
+msgid ":guilabel:`Head options`"
+msgstr ":guilabel:`Opties voor uiteinde`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:365
+msgid ""
+":guilabel:`Length` and :guilabel:`Width` of the arrow head, as a percentage "
+"of its shaft length"
 msgstr ""
-"Op grootte schalen: U specificeert de te gebruiken "
-"(vermenigvuldigings)-factor"
+":guilabel:`Lengte` en :guilabel:`Breedte` van de pijlkop, als een percentage"
+" van de lengte van de schacht"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:275
-msgid "Fixed: all the vectors are shown with the same length"
-msgstr "Vast: alle vectors worden weergegeven met dezelfde lengte"
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:368
+msgid ":guilabel:`Arrow length`"
+msgstr ":guilabel:`Lengte pijl`"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:280
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:368
+msgid ""
+"**Defined by Min and Max**: You specify the minimum and maximum length for "
+"the arrows, QGIS will interpolate their size based on the underlying "
+"vector's magnitude"
+msgstr ""
+"**Gedefinieerd door Min en Max**: U specificeert de minimum en maximum "
+"lengte voor de pijlen, QGIS zal hun grootte interpoleren, gebaseerd op de "
+"onderliggende omvang van de vectoren"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:370
+msgid ""
+"**Scale to magnitude**: arrow length is proportional to their vector's "
+"magnitude"
+msgstr ""
+"**Op grootte schalen**: pijllengte is proportioneel aan de grootte van hun "
+"vector"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:371
+msgid "**Fixed**: all the vectors are shown with the same length"
+msgstr "**Vast**: alle vectoren worden weergegeven met dezelfde lengte"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:373
+msgid ":guilabel:`Streamlines seeding method`"
+msgstr ":guilabel:`Methode voor begin stroomlijnen`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:373
+msgid "**On mesh/grid**: relies on the user grid to display the vectors"
+msgstr ""
+"**Op mazen/raster**: vertrouwt op het raster van de gebruiker om de vectoren"
+" weer te geven"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:374
+msgid ""
+"**Randomly**: vector placement is randomly done with respect to a certain "
+"density"
+msgstr ""
+"**Willekeurig**: plaatsing van vectoren wordt willekeurig gedaan met "
+"inachtneming van een bepaalde dichtheid"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:376
+msgid ":guilabel:`Particles count`"
+msgstr ":guilabel:`Aantal deeltjes`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:376
+msgid "The amount of \"sand\" you want to throw into visualisation"
+msgstr "De hoeveelheid \"zand\" die u in de visualisatie wilt gooien"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:378
+msgid ":guilabel:`Max tail length`"
+msgstr ":guilabel:`Max. staartlengte`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:378
+msgid "The time until the particle fades out"
+msgstr "De tijd waarin de deeltjes zich verspreiden"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:385
 msgid "Rendering"
 msgstr "Renderen"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:282
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:387
 msgid ""
-"In the tab |meshframe|,  QGIS offers two possibilities to display the grid, "
-"as shown in :numref:`figure_mesh_symbology_grid`:"
+"In the tab |meshframe| :sup:`Rendering` tab, QGIS offers possibilities to "
+"display and customize the mesh structure. :guilabel:`Line width` and "
+":guilabel:`Line color` can be set to represent:"
 msgstr ""
-"Op de tab |meshframe| biedt QGIS twee mogelijkheden om het raster weer te "
-"geven, zoals weergegeven in :numref:`figure_mesh_symbology_grid`:"
+"Op de tab |meshframe| :sup:`Renderen` biedt QGIS mogelijkheden voor het "
+"weergeven en aanpassen van de structuur van mazen. :guilabel:`Lijndikte` en "
+":guilabel:`Lijnkleur` kunnen ook worden ingesteld om weer te geven:"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:318
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:664
 msgid "meshframe"
 msgstr "meshframe"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:285
-msgid "``Native Mesh Rendering`` that shows quadrants"
-msgstr "``Op eigen mazen renderen`` dat vierkanten weergeeft"
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:391
+msgid "the edges for 1D meshes"
+msgstr "de randen voor 1D-mazen"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:286
-msgid "``Triangular Mesh Rendering`` that display triangles"
-msgstr "``Als driehoekige mazen renderen`` dat driehoeken weergeeft"
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:392
+msgid "For 2D meshes:"
+msgstr "Voor 2D-mazen:"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:294
-msgid "Mesh Rendering"
-msgstr "Mazen renderen"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:297
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:394
 msgid ""
-"The line width and color can be changed in this dialog, and both the grid "
-"renderings can be turned off."
+":guilabel:`Native mesh rendering`: shows original faces and edges from the "
+"layer"
 msgstr ""
-"De lijnbreedte en kleur kunnen in dit dialoogvenster worden gewijzigd en "
-"beide renderers voor het raster kunnen worden uitgeschakeld."
+":guilabel:`Normale mazen renderen`: geeft originele zijden en randen van de "
+"laag weer"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:395
+msgid ""
+":guilabel:`Triangular mesh rendering`: adds more edges and displays the "
+"faces as triangles"
+msgstr ""
+":guilabel:`Driehoekige mazen renderen`: voegt meer randen toe en geeft de "
+"zijden als driehoeken weer"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:403
+msgid "2D Mesh Rendering"
+msgstr "2D-mazen renderen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:409
+msgid "Stacked mesh averaging method"
+msgstr "Methode voor middelen van gestapelde mazen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:411
+msgid ""
+"3D layered meshes consist of multiple stacked 2D unstructured meshes each "
+"extruded in the vertical direction (``levels``) by means of a vertical "
+"coordinate. The vertices and faces have the same topology in each vertical "
+"level. Values are usually stored on the volumes that are regularly stacked "
+"over base 2d mesh. In order to visualise them on 2D canvas, you need to "
+"convert values on volumes (3d) to values on faces (2d) that can be shown in "
+"mesh layer. The |meshaveraging| :sup:`Stacked mesh averaging method` "
+"provides different averaging/interpolation methods to handle this."
+msgstr ""
+"3D-gelaagde mazen bestaan uit meerdere gestapelde 2D ongestructureerde "
+"mazen, elk uitgetrokken in de verticale richting (``niveaus``) door middel "
+"van een verticale coördinaat. De punten en zijden hebben dezelfde topologie "
+"op elk verticaal niveau. Waarden worden gewoonlijk opgeslagen in de volumes "
+"die regelmatig zijn gestapeld over de basis 2D-mazen. Om ze te visualiseren "
+"in een 2D-kaartvenster moet u waarden op de volumes (3D) converteren naar "
+"waarden op zijden (2D) die in de laag met mazen kunnen worden weergegeven. "
+"De |meshaveraging| :sup:`Methode voor middelen van gestapelde mazen` "
+"verschaft verschillende methoden voor middelen/interpoleren om dit af t "
+"handelen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:658
+msgid "meshaveraging"
+msgstr "meshaveraging"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:420
+msgid ""
+"You can select the method to derive the 2D datasets and corresponding "
+"parameters (level index, depth or height values). For each method, an "
+"example of application is shown in the dialog but you can read more on the "
+"methods at "
+"https://fvwiki.tuflow.com/index.php?title=Depth_Averaging_Results."
+msgstr ""
+"U kunt de methode selecteren om de 2D-gegevenssets af te leiden en "
+"corresponderende parameters (index niveau, waarden diepte of hoogte). Voor "
+"elke methode wordt een voorbeeld voor het toepassen weergegeven in het "
+"dialoogvenster, maar u kunt meer over de methoden lezen op "
+"https://fvwiki.tuflow.com/index.php?title=Depth_Averaging_Results."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:430
+msgid "3D View Properties"
+msgstr "Eigenschappen 3D-weergave"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:432
+msgid ""
+"Mesh layers can be used as :ref:`terrain in a 3D map view "
+"<scene_configuration>` based on their vertices Z values. From the |3d| "
+":guilabel:`3D` properties tab, it's also possible to render the mesh layer's"
+" dataset in the same 3D view. Therefore, the vertical component of the "
+"vertices can be set equal to dataset values (for example, level of water "
+"surface) and the texture of the mesh can be set to render other dataset "
+"values with color shading (for example velocity)."
+msgstr ""
+"Lagen met mazen kunnen worden gebruikt als :ref:`terrein in een "
+"3D-kaartweergave <scene_configuration>`, gebaseerd op de waarden Z van hun "
+"punten. Op de tab voor eigenschappen van |3d| :guilabel:`3D` is het ook "
+"mogelijk om de gegevensset van de laag met mazen in dezelfde 3D-weergave te "
+"renderen Daarvoor kan de verticale component van de punten gelijk worden "
+"gesteld met de waarden van de gegevensset (bijvoorbeeld niveau van "
+"wateroppervlak) en de textuur van de mazen kan worden ingesteld om andere "
+"waarden van de gegevensset te renderen met kleurschaduw (bijvoorbeeld "
+"snelheid)."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:444
+msgid "Mesh dataset 3D properties"
+msgstr "Eigenschappen 3D gegevensset met mazen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:446
+msgid ""
+"Check |checkbox| :guilabel:`Enable 3D Renderer` and you can edit following "
+"properties:"
+msgstr ""
+"Selecteer |checkbox| :guilabel:`3D-renderer inschakelen` en u kunt de "
+"volgende eigenschappen bewerken:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:449
+msgid "Under :guilabel:`Triangle settings`"
+msgstr "Onder :guilabel:`Instellingen voor driehoeken`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:451
+msgid ""
+":guilabel:`Smooth triangles`: Angles between consecutive triangles are "
+"smoothed for a better 3D rendering"
+msgstr ""
+":guilabel:`Afgevlakte driehoeken`: Hoeken tussen opeenvolgende driehoeken "
+"worden afgevlakt voor beter renderen in 3D"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:453
+msgid ""
+":guilabel:`Show wireframe` whose you can set the :guilabel:`Line width` and "
+":guilabel:`Color`"
+msgstr ""
+":guilabel:`Draadmodel weergeven` waarvan u de :guilabel:`Lijndikte` en "
+":guilabel:`Keur` kunt instellen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:458
+msgid ""
+":guilabel:`Level of detail`: Controls how :ref:`simplified <meshrendering>` "
+"the mesh layer to render should be. On the far right, it is the base mesh, "
+"and the more you go left, the more the layer is simplified and is rendered "
+"with less details. This option is only available if the :guilabel:`Simplify "
+"mesh` option under the :guilabel:`Rendering` tab is activated."
+msgstr ""
+":guilabel:`Waarde van detail`: Beheert hoe :ref:`vereenvoudigd "
+"<meshrendering>` de te renderen laag met mazen zou moeten zijn. Aan de "
+"uiterste rechterzijde, is het de basis mazen, en hoe meer u naar links gaat,"
+" hoe meer de laag wordt vereenvoudigd en  wordt gerenderd met minder "
+"details. Deze optie is alleen beschikbaar als de optie :guilabel:`Mazen "
+"vereenvoudigen` op de tab :guilabel:`Renderen` is geactiveerd."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:465
+msgid ""
+":guilabel:`Vertical settings` to control behavior of the vertical component"
+msgstr ""
+":guilabel:`Verticale instellingen` om het gedrag van de verticale component "
+"te beheren"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:465
+msgid "of vertices of rendered triangles"
+msgstr "van punten van gerenderde driehoeken"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:467
+msgid ""
+":guilabel:`Dataset group for vertical value`: the dataset group that will be"
+" used for the vertical component of the mesh"
+msgstr ""
+":guilabel:`Groep gegevensset voor verticale waarde`: de groep van de "
+"gegevensset die zal worden gebruikt voor de verticale component van de mazen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:469
+msgid ""
+"|unchecked|:guilabel:`Dataset value relative to vertices Z value`: whether "
+"to consider the dataset values as absolute Z coordinate or relative to the "
+"vertices native Z value"
+msgstr ""
+"|unchecked|:guilabel:`Waarde gegevensset relatief ten opzichte van de waarde"
+" Z van punten`: of de waarden van de gegevensset moeten worden beschouwd als"
+" absolute coördinaat Z of relatief ten opzichte van eigen waarde Z van de "
+"punten"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:472
+msgid ""
+":guilabel:`Vertical scale`: the scale factor to apply to the dataset Z "
+"values"
+msgstr ""
+":guilabel:`Verticale schaal`: de schaalfactor om toe te passen op de waarden"
+" Z van de gegevensset"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:474
+msgid ""
+":guilabel:`Rendering color settings` with a :guilabel:`Rendering style` that"
+" can be based on the color ramp shader set in :ref:`mesh_symbology_contours`"
+" (:guilabel:`2D contour color ramp shader`) or as a :guilabel:`Single color`"
+" with an associated :guilabel:`Mesh color`"
+msgstr ""
+":guilabel:`Instellingen voor renderen van kleuren` met een "
+":guilabel:`Weergave-stijl` die kan worden gebaseerd op het kleurverloop "
+"schaduw ingesteld in :ref:`mesh_symbology_contours` (:guilabel:`2D contour "
+"kleurverloop schaduw`) of als een :guilabel:`Enkele kleur` met een "
+"geassocieerde :guilabel:`Kleur mazen`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:478
+msgid ""
+":guilabel:`Show arrows`: displays arrows on mesh layer dataset 3D entity, "
+"based on the same vector dataset group used in the :ref:`vector 2D rendering"
+" <mesh_symbology_vectors>`. They are displayed using the 2D color setting. "
+"It's also possible to define the :guilabel:`Arrow spacing` and, if it's of a"
+" :guilabel:`Fixed size` or scaled on magnitude. This spacing setting defines"
+" also the max size of arrows because arrows can't overlap."
+msgstr ""
+":guilabel:`Pijlen weergeven`: geeft pijlen weer op gegevensset laag met "
+"mazen 3D-entiteit, gebaseerd op dezelfde vector groep gegevensset, gebruikt "
+"in de :ref:`vector 2D-renderen <mesh_symbology_vectors>`. Zij worden "
+"weergegeven met de 2D kleurinstelling. Het is ook mogelijk de "
+":guilabel:`Tussenruimte pijlen` te definiëren en, of het van een "
+":guilabel:`Vaste grootte` of op schaal is gebracht naar zijn omvang. Deze "
+"instelling voor tussenruimte definieert ook de maximum grootte van pijlen "
+"omdat pijlen niet kunnen overlappen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:490
+msgid "Rendering Properties"
+msgstr "Eigenschappen Renderen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:492
+msgid ""
+"As mesh layers can have millions of faces, their rendering can sometimes be "
+"very slow, especially when all the faces are displayed in the view whereas "
+"they are too small to be viewed. To speed up the rendering, you can simplify"
+" the mesh layer, resulting in one or more meshes representing different "
+":ref:`levels of detail <levelofdetail>` and select at which level of detail "
+"you would like QGIS to render the mesh layer. Note that the simplify mesh "
+"contains only triangular faces."
+msgstr ""
+"Omdat lagen met mazen miljoenen zijden kunnen hebben, kan het renderen "
+"daarvan soms heel traag zijn, speciaal wanneer alle zijden worden "
+"weergegeven in de weergave hoewel zij te klein zijn om te worden "
+"weergegeven. U kunt, om het renderen te versnellen, de laag met mazen "
+"vereenvoudigen, wat er in resulteert dat één of meer mazen verschillende "
+":ref:`niveaus van detail <levelofdetail>` weergeven en selecteren op welk "
+"niveau u QGIS zou willen  de laag met mazen te renderen. Onthoud dat de "
+"vereenvoudigde laag met mazen alleen driehoekige mazen bevat."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:500
+msgid ""
+"From the |rendering| :guilabel:`Rendering` tab, check |checkbox| "
+":guilabel:`Simplify mesh` and set:"
+msgstr ""
+"Op de tab |rendering| :guilabel:`Renderen`, selecteer |checkbox| "
+":guilabel:`Mazen vereenvoudigen` en stel in:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:503
+msgid ""
+"a :guilabel:`Reduction factor`: Controls generation of successive levels of "
+"simplified meshes. For example, if the base mesh has 5M faces, and the "
+"reduction factor is 10, the first simplified mesh will have approximately "
+"500 000 faces, the second 50 000 faces, the third 5000,... If a higher "
+"reduction factor leads quickly to simpler meshes (i.e. with triangles of "
+"bigger size), it produces also fewer levels of detail."
+msgstr ""
+"een :guilabel:`Verkleiningsfactor`: Beheert het maken van opeenvolgende "
+"niveaus van vereenvoudigde mazen. Als bijvoorbeeld de basislaag met mazen 5 "
+"miljoen zijden heeft, en de verkleiningsfactor is 10, zal de eerste "
+"vereenvoudigde laag met mazen ongeveer 500.000 zijden hebben, de tweede "
+"50.000 zijden, de derde 5000,… Als een hogere verkleiningsfactor snel leidt "
+"tot eenvoudiger mazen (d.i. met driehoeken van een grotere omvang), "
+"produceert het ook minder niveaus van detail."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:510
+msgid ""
+":guilabel:`Minimum triangle size`: the average size (in pixels) of the "
+"triangles that is permitted to display. If the average size of the mesh is "
+"lesser than this value, the rendering of a lower level of details mesh is "
+"triggered."
+msgstr ""
+":guilabel:`Minimale grootte driehoek`: de gemiddelde grootte (in pixels) van"
+" de driehoeken die toegestaan is om te worden weergegeven. Als de gemiddelde"
+" grootte van de mazen minder is dan deze waarde, wordt het renderen van "
+"mazen met een lager niveau van details geactiveerd."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:520
+msgid "Temporal Properties"
+msgstr "Eigenschappen Tijdbeheer"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:522
+msgid ""
+"The |temporal| :guilabel:`Temporal` tab provides options to control the "
+"rendering of the layer over time. It allows to dynamically display temporal "
+"values of the enabled dataset groups. Such a dynamic rendering requires the "
+":ref:`temporal navigation <maptimecontrol>` to be enabled over the map "
+"canvas."
+msgstr ""
+"De tab |temporal| :guilabel:`Tijdbeheer` verschaft opties om het renderen "
+"van de laag in de tijd te beheren. Het maakt het mogelijk dynamisch "
+"tijdwaarden van de ingeschakelde groepen van gegevenssets weer te geven. "
+"Dergelijk dynamisch renderen vereist dat de :ref:`Navigatie voor Tijdbeheer "
+"<maptimecontrol>` is ingeschakeld in het kaartvenster."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:533
+msgid "Mesh Temporal properties"
+msgstr "Laag met mazen eigenschappen Tijdbeheer"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:535
+msgid "**Layer temporal settings**"
+msgstr "**Instellingen Tijdbeheer voor laag**"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:537
+msgid ""
+":guilabel:`Reference time` of the dataset group, as an absolute date time. "
+"By default, QGIS parses the source layer and returns the first valid "
+"reference time in the layer's dataset group. If unavailable, the value will "
+"be set by the project time range or fell back to the current date. The "
+":guilabel:`Start time` and :guilabel:`End time` to  consider are then "
+"calculated based on the internal timestamp step of the dataset."
+msgstr ""
+":guilabel:`Verwijzingstijd` van de groep van de gegevensset, als een "
+"absolute datum/tijd. Standaard parst QGIS de bronlaag en geeft de eerste "
+"geldige verwijzingstijd in de groep van de gegevensset van de laag. Indien "
+"niet beschikbaar zal de waarde worden ingesteld door het tijdbereik van het "
+"project of terugvallen naar de huidige datum. De :guilabel:`Starttijd` en "
+":guilabel:`Eindtijd` waarmee rekening moet worden gehouden, worden dan "
+"berekend, gebaseerd op de stap van het interne tijdstempel van de "
+"gegevensset."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:544
+msgid ""
+"It is possible to set a custom :guilabel:`Reference time` (and then the time"
+" range), and revert the changes using the |refresh| :sup:`Reload from "
+"provider` button."
+msgstr ""
+"Het is mogelijk een aangepaste :guilabel:`Verwijzingstijd` in te stellen (en"
+" dan de tijdsperiode), en de wijzigingen terugdraaien met de knop |refresh| "
+":sup:`Opnieuw laden vanaf provider`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:547
+msgid ""
+":guilabel:`Dataset matching method`: determines the dataset to display at "
+"the given time. Options are :guilabel:`Find closest dataset before requested"
+" time` or :guilabel:`Find closest dataset from requested time (after or "
+"before)`."
+msgstr ""
+":guilabel:`Gegevensset overeenkomende methode`: bepaalt de op en bepaalde "
+"tijd weer te geven gegevensset. Opties zijn :guilabel:`Zoek dichtstbijzijnde"
+" gegevensset vóór gevraagde tijd` of :guilabel:`Zoek dichtstbijzijnde "
+"gegevensset vanaf gevraagde tijd (na of voor)`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:551
+msgid "**Provider time settings**"
+msgstr "**Tijdinstelingen provider**"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:553
+msgid ""
+":guilabel:`Time unit` extracted from the raw data, or user defined. This can"
+" be used to align the speed of the mesh layer with other layers in the "
+"project during map time navigation. Supported units are :guilabel:`Seconds`,"
+" :guilabel:`Minutes`, :guilabel:`Hours` and :guilabel:`Days`."
+msgstr ""
+":guilabel:`Tijdseenheid` uitgenomen vanuit de ruwe gegevens, of gebruiker-"
+"gedefinieerd. Dit kan worden gebruikt om de snelheid van de laag met mazen "
+"uit te lijnen met andere lagen in het project gedurende navigeren door de "
+"tijd van de kaart. Ondersteunde eenheden zijn :guilabel:`Seconden`, "
+":guilabel:`Minuten`, :guilabel:`Uren` en :guilabel:`Dagen`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:564
+msgid "Metadata Properties"
+msgstr "Eigenschappen Metadata"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:566
+msgid ""
+"The |editMetadata| :guilabel:`Metadata` tab provides you with options to "
+"create and edit a metadata report on your layer. See :ref:`metadatamenu` for"
+" more information."
+msgstr ""
+"De tab |editMetadata| :guilabel:`Metadata` verschaft u opties om een rapport"
+" met metadata voor uw laag te maken en te bewerken. Bekijk "
+":ref:`metadatamenu` voor meer informatie."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:574
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:585
+msgid "Mesh Calculator"
+msgstr "Mazen berekenen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:576
+msgid ""
+"The :guilabel:`Mesh Calculator` tool from the top :menuselection:`Mesh` menu"
+" allows you to perform arithmetic and logical calculations on existing "
+"dataset groups to generate a new dataset group (see "
+":numref:`figure_mesh_calculator`)."
+msgstr ""
+"Het gereedschap :guilabel:`Mazen berekenen` uit het bovenste menu "
+":menuselection:`Mazen`  stelt u in staat rekenkundige en logische "
+"berekeningen uit te voeren op bestaande groepen gegevenssets om een nieuwe "
+"groep gegevensset te maken (bekijk :numref:`figure_mesh_calculator`)."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:587
+msgid ""
+"The :guilabel:`Datasets` list contains all dataset groups in the active mesh"
+" layer. To use a dataset group in an expression, double click its name in "
+"the list and it will be added to the :guilabel:`Mesh calculator expression` "
+"field. You can then use the operators to construct calculation expressions, "
+"or you can just type them into the box."
+msgstr ""
+"De lijst :guilabel:`Gegevenssets` bevat alle groepen gegevenssets in de "
+"actieve laag met mazen. Dubbelklik, om een groep gegevensset in een "
+"expressie te gebruiken, op de naam in de lijst en het zal worden toegevoegd "
+"aan het veld :guilabel:`Uitdrukking voor mazen berekenen`. U kunt dan de "
+"operatoren gebruiken om, expressies voor berekeningen te construeren, of u "
+"kunt ze eenvoudigweg in het vak typen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:593
+msgid ""
+"The :guilabel:`Result Layer` helps you configure properties of the output "
+"layer:"
+msgstr ""
+"De :guilabel:`Resultaatlaag` helpt u eigenschappen voor de uitvoerlaag te "
+"configureren:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:595
+msgid ""
+"|checkbox| :guilabel:`Create on-the-fly dataset group instead of writing "
+"layer to disk`:"
+msgstr ""
+"|checkbox| :guilabel:`Direct groep voor gegevensset maken in plaats van de "
+"laag naar schijf te schrijven`:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:598
+msgid ""
+"If unchecked, the output is stored on disk as a new plain file. An "
+":guilabel:`Output File` path and an :guilabel:`Output Format` are required."
+msgstr ""
+"Indien niet geselecteerd wordt de uitvoer opgeslagen op schijf als een nieuw"
+" gewoon bestand. Een pad voor :guilabel:`Uitvoerbestand` en een "
+":guilabel:`Indeling uitvoer` zijn vereist."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:600
+msgid ""
+"If checked, a new dataset group will be added to the mesh layer. Values of "
+"the dataset group are not stored in memory but each dataset is calculated "
+"when needed with the formula entered in the mesh calculator. That virtual "
+"dataset group is saved with the project, and if needed, it can be removed or"
+" made persistent in file from the layer :guilabel:`Source` properties tab."
+msgstr ""
+"Indien geselecteerd zal een nieuwe groep voor de gegevensset worden "
+"toegevoegd aan de laag met mazen. Waarden van de groep voor de gegevensset "
+"worden niet in het geheugen opgeslagen, maar elke gegevensset wordt berekend"
+" als die nodig is in de formule die is ingevoerd in Mazen berekenen. Die "
+"virtuele groep voor de gegevensset wordt met het project opgeslagen, en "
+"indien nodig, kan hij worden verwijderd of permanent worden gemaakt in het "
+"bestand vanaf de tab :guilabel:`Bron` in de Laageigenschappen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:607
+msgid ""
+"In either case, you should provide a :guilabel:`Group Name` for the output "
+"dataset group."
+msgstr ""
+"In beide gevallen zou u een :guilabel:`Groepsnaam` moeten opgeven voor de "
+"uitvoer groep voor de gegevensset."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:609
+msgid "The :guilabel:`Spatial extent` to consider for calculation can be:"
+msgstr ""
+"Het :guilabel:`Ruimtelijk bereik` waarmee rekening moet worden gehouden voor"
+" berekenen mag zijn:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:611
+msgid ""
+"a :guilabel:`Custom extent`, manually filled with the :guilabel:`X min`, "
+":guilabel:`X max`, :guilabel:`Y min` and :guilabel:`Y max` coordinate, or "
+"extracted from an existing dataset group (select it in the list and press "
+":guilabel:`Use selected layer extent` to fill the abovementioned coordinate "
+"fields)"
+msgstr ""
+"een :guilabel:`Aangepast bereikt`, handmatig gevuld met de coördinaten voor "
+":guilabel:`X min`, :guilabel:`X max`, :guilabel:`Y min` en :guilabel:`Y "
+"max`, of uitgenomen uit een bestaande groep voor de gegevensset (selecter "
+"hem in de lijst en druk op :guilabel:`Geselecteerd laagbereik gebruiken` om "
+"de bovengenoemde velden voor coördinaten te vullen)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:616
+msgid ""
+"defined by a polygon layer (:guilabel:`Mask layer`) of the project: the "
+"polygon features geometry are used to clip the mesh layer datasets"
+msgstr ""
+"gedefinieerd door een polygonenlaag (:guilabel:`Maskeerlaag`) van het "
+"project: de geometrie van de objecten polygoon worden gebruikt om de "
+"gegevenssets van de laag met mazen te clippen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:619
+msgid ""
+"The :guilabel:`Temporal extent` to take into account for datasets can be set"
+" with the :guilabel:`Start time` and :guilabel:`End time` options, selected "
+"from the existing dataset groups timesteps. They can also be filled using "
+"the :guilabel:`Use all selected dataset times` button to take the whole "
+"range."
+msgstr ""
+"De :guilabel:`Tijdsperiode` waarmee rekening moet worden gehouden voor "
+"gegevenssets kan worden ingesteld met de opties :guilabel:`Starttijd` en "
+":guilabel:`Eindtijd`, geselecteerd uit de bestaande tijdstappen van de "
+"groepen voor gegevenssets. Zij kunnen ook  worden gevuld met de knop "
+":guilabel:`Alle geselecteerde tijden van de gegevensset gebruiken` om de "
+"gehele periode te nemen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:624
+msgid ""
+"The :guilabel:`Operators` section contains all available operators. To add "
+"an operator to the raster calculator expression box, click the appropriate "
+"button. Mathematical calculations (``+``, ``-``, ``*``, ... ) and "
+"statistical functions (``min``, ``max``, ``sum (aggr)``, ``average (aggr)``,"
+" ... ) are available. Conditional expressions (``=``, ``!=``, ``<``, ``>=``,"
+" ``IF``, ``AND``, ``NOT``, ... ) return either 0 for false and 1 for true, "
+"and therefore can be used with other operators and functions. The ``NODATA``"
+" value can also be used in the expressions."
+msgstr ""
+"Het gedeelte :guilabel:`Operatoren` bevat alle beschikbare operatoren. Klik,"
+" om een operator toe te voegen aan het expressievak van Mazen berekenen, op "
+"de toepasselijke knop. Rekenkundige berekeningen (``+``, ``-``, ``*``, … ) "
+"en statistische functies (`min``, ``max``, ``sum (aggr)``, ``average "
+"(aggr)``, … ) zijn beschikbaar. Voorwaardelijke expressies (``=``, ``!=``, "
+"``<``, ``>=``, ``IF``, ``AND``, ``NOT``, … ) geven ofwel 0 voor false of 1 "
+"voor true terug, en kunnen daarom worden gebruikt met andere operatoren en "
+"functies. De waarde ``NODATA`` mag ook in de expressies worden gebruikt."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:632
+msgid ""
+"The :guilabel:`Mesh Calculator Expression` widget shows and lets you edit "
+"the expression to execute."
+msgstr ""
+"De widget :guilabel:`Uitdrukking voor mazen berekenen` geeft de expressie "
+"weer en laat u die bewerken om uit te voeren."
