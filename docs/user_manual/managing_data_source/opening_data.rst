@@ -1088,7 +1088,7 @@ The following parameters can be entered:
     identity of the server instead of the host name with which the connection
     was established. If you specify ``*`` as the host name, then the server's
     host name is not validated. Other wildcards are not permitted.
-  * :guilabel:`Key store file with public key`: Currently ignored. This
+  * :guilabel:`Key store file with private key`: Currently ignored. This
     parameter might allow to authenticate via certificate instead via user and
     password in future.
   * :guilabel:`Trust store file with public key`: Specifies the path to a trust
@@ -1263,7 +1263,7 @@ Once a connection to a vector tile service is set, it's possible to:
 * :guilabel:`Edit` the vector tile connection settings
 * :guilabel:`Remove` the connection
 * From the :guilabel:`Browser` panel, right-click over the entry
-  and you an also:
+  and you can also:
 
   * :guilabel:`Add layer to project`: a double-click also adds the layer
   * View the :guilabel:`Layer Properties...` and get access to metadata and
