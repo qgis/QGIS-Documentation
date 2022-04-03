@@ -216,10 +216,10 @@ can call :meth:`select() <qgis.core.QgsVectorLayer.select>` passing to it the li
 
  # Get the first feature id from the layer
  feature = next(layer.getFeatures())
- if feature :
+ if feature:
      selected_fid.append(feature.id())
 
- # Add these features to the selected list
+ # Add that features to the selected list
  layer.select(selected_fid)
 
 To clear the selection:
