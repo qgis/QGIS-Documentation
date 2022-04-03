@@ -119,16 +119,9 @@ using functions, layer fields and values. It contains the following widgets:
   * A live :guilabel:`Output preview` of the expression (up to 60 characters), 
     evaluated on the first feature of the Layer by default. To view output preview 
     text exceeding 60 characters, you can hover your cursor over the text to display 
-    a tooltip pop-up containing the entire output preview. To copy the output preview 
-    onto your clipboard, you must open the output preview context menu by
-    right-clicking on it, select 'Select All' to highlight the output preview, 
-    right-click again on the highlighted output preview to re-open the context menu,
-    and then select 'Copy'. If a hyperlink shows up within the the output preview,
-    you may right-click on the hyperlink and select "Copy Link Location" from the
-    context menu; this will add text onto your clipboard that refers to the link 
-    location (for example, right-clicking on the 'more info' hyperlink that opens the
-    'More Info on Expression Error' dialog window will add the text 'more' onto your
-    clipboard). 
+    a tooltip pop-up containing the entire output preview. To copy the output preview
+    text onto your clipboard, right-click on the output preview text to open the 
+    output preview context menu, and select 'Copy Expression Value'.
     
     You can browse and evaluate other features of the layer using the
     :guilabel:`Feature` combobox (the values are taken from the
