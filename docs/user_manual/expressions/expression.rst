@@ -426,6 +426,8 @@ Further information about creating Python code can be found in the
    :width: 1.5em
 .. |deleteSelected| image:: /static/common/mActionDeleteSelected.png
    :width: 1.5em
+.. |editCopy| image:: /static/common/mActionEditCopy.png
+   :width: 1.5em
 .. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
 .. |expressionSelect| image:: /static/common/mIconExpressionSelect.png
