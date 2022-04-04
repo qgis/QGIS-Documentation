@@ -562,7 +562,9 @@ A short example illustrates how field calculator works when using the
 #. Set the :guilabel:`Output field length` to ``10`` and the :guilabel:`Precision`
    to ``3``
 #. Double click on ``$length`` in the :guilabel:`Geometry` group to add the length
-   of the geometry into the Field calculator expression box.
+   of the geometry into the Field calculator expression box (you will begin to see
+   a preview of the output, up to 60 characters, below the expression box updating 
+   in real-time as the expression is assembled).
 #. Complete the expression by typing ``/ 1000`` in the Field calculator
    expression box and click :guilabel:`OK`.
 #. You can now find a new :guilabel:`length_km` field in the attribute table.
