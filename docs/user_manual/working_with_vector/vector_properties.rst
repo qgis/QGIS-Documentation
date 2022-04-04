@@ -3189,7 +3189,7 @@ provided :guilabel:`Configuration` options:
 * :guilabel:`Separate fields for start and event duration`: features are rendered
   if the range defined by their :guilabel:`Start field` and :guilabel:`Event duration field`
   values overlaps the map canvas temporal.
-* :guilabel:`Sart and end date/time from expressions`: features are rendered
+* :guilabel:`Start and end date/time from expressions`: features are rendered
   if the time range specified by the fields :guilabel:`Start expression` and
   :guilabel:`End expression` overlaps the map canvas temporal.
 * :guilabel:`Redraw layer only`: the layer is redrawn at each new animation
