@@ -120,8 +120,8 @@ using functions, layer fields and values. It contains the following widgets:
     evaluated on the first feature of the Layer by default. To view output preview 
     text exceeding 60 characters, you can hover your cursor over the text to display 
     a tooltip pop-up containing the entire output preview. To copy the output preview
-    text onto your clipboard, right-click on the output preview text to open the 
-    output preview context menu, and select 'Copy Expression Value'.
+    text onto your clipboard, right-click on the output preview text and select 
+    |editCopy| :guilabel:`Copy Expression Value`.
     
     You can browse and evaluate other features of the layer using the
     :guilabel:`Feature` combobox (the values are taken from the
