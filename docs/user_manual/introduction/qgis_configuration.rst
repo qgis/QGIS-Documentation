@@ -1310,7 +1310,7 @@ In the |general| :guilabel:`General` tab, the :guilabel:`General settings` let y
   The path can be relative to the folder of the project file (type it in) or absolute.
   The project home can be used for storing data and other content that is
   useful for the project. Convenient when dataset and project files are not stored
-  at the same place
+  at the same place.
   If not filled, the :guilabel:`Project home` defaults to the project file folder.
 * give a title to the project beside the project file path
 * choose the color to use for features when they are selected
@@ -1642,7 +1642,7 @@ panel` to manage the map canvas :ref:`temporal navigation <maptimecontrol>`.
 Customization
 =============
 
-The guilabel:`Customization` dialog lets you (de)activate almost every element in the QGIS
+The :guilabel:`Customization` dialog lets you (de)activate almost every element in the QGIS
 user interface. This can be very useful if you want to provide your end-users with a
 'light' version of QGIS, containing only the icons, menus or panels they need.
 
