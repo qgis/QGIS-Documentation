@@ -463,7 +463,7 @@ Tests whether a geometry crosses another. Returns TRUE if the supplied geometrie
      - * **geometry1** - a geometry
        * **geometry2** - a geometry
    * - Examples
-     - * ``crosses( geom_from_wkt( 'LINESTRING(3 5, 4 4, 5 3)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → true
+     - * ``crosses( geom_from_wkt( 'LINESTRING(3 5, 4 4, 5 3)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → TRUE
        * ``crosses( geom_from_wkt( 'POINT(4 5)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → FALSE
 
 
@@ -548,7 +548,7 @@ Tests whether geometries do not spatially intersect. Returns TRUE if the geometr
      - * **geometry1** - a geometry
        * **geometry2** - a geometry
    * - Examples
-     - * ``disjoint( geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0 ))' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → true
+     - * ``disjoint( geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0 ))' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → TRUE
        * ``disjoint( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ), geom_from_wkt( 'POINT(4 4)' ))`` → FALSE
 
 
@@ -922,7 +922,7 @@ Returns a feature's geometry.
    * - Examples
      - * `` geometry( $currentfeature )`` → the geometry of the current feature. Prefer using $geometry.
        * ``geom_to_wkt( geometry( get_feature_by_id( 'streets', 1 ) ) )`` → the geometry in WKT of the feature with the id 1 on the layer "streets", e.g. 'POINT(6 50)'
-       * ``intersects( $geometry, geometry( get_feature( 'streets', 'name', 'Main St.' ) ) )`` → true if the current feature spatially intersects the 'Main St.' named feature in the "streets" layer
+       * ``intersects( $geometry, geometry( get_feature( 'streets', 'name', 'Main St.' ) ) )`` → TRUE if the current feature spatially intersects the 'Main St.' named feature in the "streets" layer
 
 
 .. end_geometry_section
@@ -1114,7 +1114,7 @@ Tests whether a geometry's bounding box overlaps another geometry's bounding box
      - * **geometry1** - a geometry
        * **geometry2** - a geometry
    * - Examples
-     - * ``intersects_bbox( geom_from_wkt( 'POINT(4 5)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → true
+     - * ``intersects_bbox( geom_from_wkt( 'POINT(4 5)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → TRUE
        * ``intersects_bbox( geom_from_wkt( 'POINT(6 5)' ), geom_from_wkt( 'POLYGON((3 3, 4 4, 5 5, 3 3))' ) )`` → FALSE
 
 
@@ -1136,7 +1136,7 @@ Returns TRUE if a line string is closed (start and end points are coincident), o
      - * **geometry** - a line string geometry
    * - Examples
      - * ``is_closed(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)'))`` → FALSE
-       * ``is_closed(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2, 0 0)'))`` → true
+       * ``is_closed(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2, 0 0)'))`` → TRUE
 
 
 .. end_is_closed_section
@@ -1157,9 +1157,9 @@ Returns TRUE if a geometry is empty (without coordinates), false if the geometry
      - * **geometry** - a geometry
    * - Examples
      - * ``is_empty(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)'))`` → FALSE
-       * ``is_empty(geom_from_wkt('LINESTRING EMPTY'))`` → true
+       * ``is_empty(geom_from_wkt('LINESTRING EMPTY'))`` → TRUE
        * ``is_empty(geom_from_wkt('POINT(7 4)'))`` → FALSE
-       * ``is_empty(geom_from_wkt('POINT EMPTY'))`` → true
+       * ``is_empty(geom_from_wkt('POINT EMPTY'))`` → TRUE
 
 
 .. end_is_empty_section
@@ -1179,11 +1179,11 @@ Returns TRUE if a geometry is NULL or empty (without coordinates) or false other
    * - Arguments
      - * **geometry** - a geometry
    * - Examples
-     - * ``is_empty_or_null(NULL)`` → true
+     - * ``is_empty_or_null(NULL)`` → TRUE
        * ``is_empty_or_null(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)'))`` → FALSE
-       * ``is_empty_or_null(geom_from_wkt('LINESTRING EMPTY'))`` → true
+       * ``is_empty_or_null(geom_from_wkt('LINESTRING EMPTY'))`` → TRUE
        * ``is_empty_or_null(geom_from_wkt('POINT(7 4)'))`` → FALSE
-       * ``is_empty_or_null(geom_from_wkt('POINT EMPTY'))`` → true
+       * ``is_empty_or_null(geom_from_wkt('POINT EMPTY'))`` → TRUE
 
 
 .. end_is_empty_or_null_section
@@ -1203,7 +1203,7 @@ Returns TRUE if the geometry is of Multi type.
    * - Arguments
      - * **geometry** - a geometry
    * - Examples
-     - * ``is_multipart(geom_from_wkt('MULTIPOINT ((0 0),(1 1),(2 2))'))`` → true
+     - * ``is_multipart(geom_from_wkt('MULTIPOINT ((0 0),(1 1),(2 2))'))`` → TRUE
        * ``is_multipart(geom_from_wkt('POINT (0 0)'))`` → FALSE
 
 
@@ -1224,7 +1224,7 @@ Returns TRUE if a geometry is valid; if it is well-formed in 2D according to the
    * - Arguments
      - * **geometry** - a geometry
    * - Examples
-     - * ``is_valid(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2, 0 0)'))`` → true
+     - * ``is_valid(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2, 0 0)'))`` → TRUE
        * ``is_valid(geom_from_wkt('LINESTRING(0 0)'))`` → FALSE
 
 
@@ -1978,7 +1978,7 @@ Tests whether a geometry overlaps another. Returns TRUE if the geometries share 
      - * **geometry1** - a geometry
        * **geometry2** - a geometry
    * - Examples
-     - * ``overlaps( geom_from_wkt( 'LINESTRING(3 5, 4 4, 5 5, 5 3)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → true
+     - * ``overlaps( geom_from_wkt( 'LINESTRING(3 5, 4 4, 5 5, 5 3)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → TRUE
        * ``overlaps( geom_from_wkt( 'LINESTRING(0 0, 1 1)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → FALSE
 
 
@@ -2009,8 +2009,8 @@ Read more on the underlying GEOS "Contains" predicate, as described in PostGIS `
        * **limit** - an optional integer to limit the number of matching features. If not set, all the matching features will be returned.
        * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
    * - Examples
-     - * ``overlay_contains('regions')`` → true if the current feature spatially contains a region
-       * ``overlay_contains('regions', filter:= population > 10000)`` → true if the current feature spatially contains a region with a population greater than 10000
+     - * ``overlay_contains('regions')`` → TRUE if the current feature spatially contains a region
+       * ``overlay_contains('regions', filter:= population > 10000)`` → TRUE if the current feature spatially contains a region with a population greater than 10000
        * ``overlay_contains('regions', name)`` → an array of names, for the regions contained in the current feature
        * ``array_to_string(overlay_contains('regions', name))`` → a string as a comma separated list of names, for the regions contained in the current feature
        * ``array_sort(overlay_contains(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions contained in the current feature and with a population greater than 10000
@@ -2044,8 +2044,8 @@ Read more on the underlying GEOS "Crosses" predicate, as described in PostGIS `S
        * **limit** - an optional integer to limit the number of matching features. If not set, all the matching features will be returned.
        * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
    * - Examples
-     - * ``overlay_crosses('regions')`` → true if the current feature spatially crosses a region
-       * ``overlay_crosses('regions', filter:= population > 10000)`` → true if the current feature spatially crosses a region with a population greater than 10000
+     - * ``overlay_crosses('regions')`` → TRUE if the current feature spatially crosses a region
+       * ``overlay_crosses('regions', filter:= population > 10000)`` → TRUE if the current feature spatially crosses a region with a population greater than 10000
        * ``overlay_crosses('regions', name)`` → an array of names, for the regions crossed by the current feature
        * ``array_to_string(overlay_crosses('regions', name))`` → a string as a comma separated list of names, for the regions crossed by the current feature
        * ``array_sort(overlay_crosses(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions crossed by the current feature and with a population greater than 10000
@@ -2079,8 +2079,8 @@ Read more on the underlying GEOS "Disjoint" predicate, as described in PostGIS `
        * **limit** - an optional integer to limit the number of matching features. If not set, all the matching features will be returned.
        * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
    * - Examples
-     - * ``overlay_disjoint('regions')`` → true if the current feature is spatially disjoint from all the regions
-       * ``overlay_disjoint('regions', filter:= population > 10000)`` → true if the current feature is spatially disjoint from all the regions with a population greater than 10000
+     - * ``overlay_disjoint('regions')`` → TRUE if the current feature is spatially disjoint from all the regions
+       * ``overlay_disjoint('regions', filter:= population > 10000)`` → TRUE if the current feature is spatially disjoint from all the regions with a population greater than 10000
        * ``overlay_disjoint('regions', name)`` → an array of names, for the regions spatially disjoint from the current feature
        * ``array_to_string(overlay_disjoint('regions', name))`` → a string as a comma separated list of names, for the regions spatially disjoint from the current feature
        * ``array_sort(overlay_disjoint(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions spatially disjoint from the current feature and with a population greater than 10000
@@ -2114,8 +2114,8 @@ Read more on the underlying GEOS "Equals" predicate, as described in PostGIS `ST
        * **limit** - an optional integer to limit the number of matching features. If not set, all the matching features will be returned.
        * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
    * - Examples
-     - * ``overlay_equals('regions')`` → true if the current feature is spatially equal to a region
-       * ``overlay_equals('regions', filter:= population > 10000)`` → true if the current feature is spatially equal to a region with a population greater than 10000
+     - * ``overlay_equals('regions')`` → TRUE if the current feature is spatially equal to a region
+       * ``overlay_equals('regions', filter:= population > 10000)`` → TRUE if the current feature is spatially equal to a region with a population greater than 10000
        * ``overlay_equals('regions', name)`` → an array of names, for the regions spatially equal to the current feature
        * ``array_to_string(overlay_equals('regions', name))`` → a string as a comma separated list of names, for the regions spatially equal to the current feature
        * ``array_sort(overlay_equals(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions spatially equal to the current feature and with a population greater than 10000
@@ -2162,14 +2162,14 @@ Read more on the underlying GEOS "Intersects" predicate, as described in PostGIS
        * **return_details** - Set this to true to return a list of maps containing (key names in quotes) the feature 'id', the expression 'result' and the 'overlap' value. The 'radius' of the maximum inscribed circle is also returned when the target layer is a polygon. Only valid when used with the expression parameter
        * **sort_by_intersection_size** - only valid when used with an expression, set this to 'des' to return the results ordered by the overlap value in descending order or set this to 'asc' for ascending order.
    * - Examples
-     - * ``overlay_intersects('regions')`` → true if the current feature spatially intersects a region
-       * ``overlay_intersects('regions', filter:= population > 10000)`` → true if the current feature spatially intersects a region with a population greater than 10000
+     - * ``overlay_intersects('regions')`` → TRUE if the current feature spatially intersects a region
+       * ``overlay_intersects('regions', filter:= population > 10000)`` → TRUE if the current feature spatially intersects a region with a population greater than 10000
        * ``overlay_intersects('regions', name)`` → an array of names, for the regions intersected by the current feature
        * ``array_to_string(overlay_intersects('regions', name))`` → a string as a comma separated list of names, for the regions intersected by the current feature
        * ``array_sort(overlay_intersects(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions intersected by the current feature and with a population greater than 10000
        * ``overlay_intersects(layer:='regions', expression:= geom_to_wkt($geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions intersected by the current feature
-       * ``overlay_intersects(layer:='regions', min_overlap:=0.54)`` → true if the current feature spatially intersects a region and the intersection area (of at least one of the parts in case of multipolygons) is greater or equal to 0.54
-       * ``overlay_intersects(layer:='regions', min_inscribed_circle_radius:=0.54)`` → true if the current feature spatially intersects a region and the intersection area maximum inscribed circle's radius (of at least one of the parts in case of multipart) is greater or equal to 0.54
+       * ``overlay_intersects(layer:='regions', min_overlap:=0.54)`` → TRUE if the current feature spatially intersects a region and the intersection area (of at least one of the parts in case of multipolygons) is greater or equal to 0.54
+       * ``overlay_intersects(layer:='regions', min_inscribed_circle_radius:=0.54)`` → TRUE if the current feature spatially intersects a region and the intersection area maximum inscribed circle's radius (of at least one of the parts in case of multipart) is greater or equal to 0.54
        * ``overlay_intersects(layer:='regions', expression:= geom_to_wkt($geometry), return_details:=true)`` → an array of maps containing 'id', 'result', 'overlap' and 'radius'
        * ``overlay_intersects(layer:='regions', expression:= geom_to_wkt($geometry), sort_by_intersection_size:='des')`` → an array of geometries (in WKT) ordered by the overlap value in descending order
 
@@ -2202,8 +2202,8 @@ Note: This function can be slow and consume a lot of memory for large layers.
        * **max_distance** - an optional distance to limit the search of matching features. If not set, all the features in the target layer will be used.
        * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
    * - Examples
-     - * ``overlay_nearest('airports')`` → true if the "airports" layer has at least one feature
-       * ``overlay_nearest('airports', max_distance:= 5000)`` → true if there is an airport within a distance of 5000 map units from the current feature
+     - * ``overlay_nearest('airports')`` → TRUE if the "airports" layer has at least one feature
+       * ``overlay_nearest('airports', max_distance:= 5000)`` → TRUE if there is an airport within a distance of 5000 map units from the current feature
        * ``overlay_nearest('airports', name)`` → the name of the closest airport to the current feature, as an array
        * ``array_to_string(overlay_nearest('airports', name))`` → the name of the closest airport to the current feature, as a string
        * ``overlay_nearest(layer:='airports', expression:= name, max_distance:= 5000)`` → the name of the closest airport within a distance of 5000 map units from the current feature, as an array
@@ -2238,8 +2238,8 @@ Read more on the underlying GEOS "Touches" predicate, as described in PostGIS `S
        * **limit** - an optional integer to limit the number of matching features. If not set, all the matching features will be returned.
        * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
    * - Examples
-     - * ``overlay_touches('regions')`` → true if the current feature spatially touches a region
-       * ``overlay_touches('regions', filter:= population > 10000)`` → true if the current feature spatially touches a region with a population greater than 10000
+     - * ``overlay_touches('regions')`` → TRUE if the current feature spatially touches a region
+       * ``overlay_touches('regions', filter:= population > 10000)`` → TRUE if the current feature spatially touches a region with a population greater than 10000
        * ``overlay_touches('regions', name)`` → an array of names, for the regions touched by the current feature
        * ``string_to_array(overlay_touches('regions', name))`` → a string as a comma separated list of names, for the regions touched by the current feature
        * ``array_sort(overlay_touches(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions touched by the current feature and with a population greater than 10000
@@ -2273,8 +2273,8 @@ Read more on the underlying GEOS "Within" predicate, as described in PostGIS `ST
        * **limit** - an optional integer to limit the number of matching features. If not set, all the matching features will be returned.
        * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
    * - Examples
-     - * ``overlay_within('regions')`` → true if the current feature is spatially within a region
-       * ``overlay_within('regions', filter:= population > 10000)`` → true if the current feature is spatially within a region with a population greater than 10000
+     - * ``overlay_within('regions')`` → TRUE if the current feature is spatially within a region
+       * ``overlay_within('regions', filter:= population > 10000)`` → TRUE if the current feature is spatially within a region with a population greater than 10000
        * ``overlay_within('regions', name)`` → an array of names, for the regions containing the current feature
        * ``array_to_string(overlay_within('regions', name))`` → a string as a comma separated list of names, for the regions containing the current feature
        * ``array_sort(overlay_within(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions containing the current feature and with a population greater than 10000
@@ -2445,7 +2445,7 @@ Tests whether the DE-9IM relationship between two geometries matches a specified
        * **geometry** - a geometry
        * **pattern** - DE-9IM pattern to match
    * - Examples
-     - * ``relate( geom_from_wkt( 'LINESTRING(40 40,120 120)' ), geom_from_wkt( 'LINESTRING(40 40,60 120)' ), '**1F001**' )`` → True
+     - * ``relate( geom_from_wkt( 'LINESTRING(40 40,120 120)' ), geom_from_wkt( 'LINESTRING(40 40,60 120)' ), '**1F001**' )`` → TRUE
 
 
 .. end_relate_section

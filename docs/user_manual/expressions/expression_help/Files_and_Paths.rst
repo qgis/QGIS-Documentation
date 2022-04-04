@@ -64,7 +64,7 @@ Returns TRUE if a file path exists.
    * - Arguments
      - * **path** - a file path or a map layer value. If a map layer value is specified then the file source of the layer will be used.
    * - Examples
-     - * ``file_exists('/home/qgis/data/country_boundaries.shp')`` → true
+     - * ``file_exists('/home/qgis/data/country_boundaries.shp')`` → TRUE
 
 
 .. end_file_exists_section
@@ -165,7 +165,7 @@ Returns TRUE if a path corresponds to a directory.
      - * **path** - a file path or a map layer value. If a map layer value is specified then the file source of the layer will be used.
    * - Examples
      - * ``is_directory('/home/qgis/data/country_boundaries.shp')`` → FALSE
-       * ``is_directory('/home/qgis/data/')`` → true
+       * ``is_directory('/home/qgis/data/')`` → TRUE
 
 
 .. end_is_directory_section
@@ -185,7 +185,7 @@ Returns TRUE if a path corresponds to a file.
    * - Arguments
      - * **path** - a file path or a map layer value. If a map layer value is specified then the file source of the layer will be used.
    * - Examples
-     - * ``is_file('/home/qgis/data/country_boundaries.shp')`` → true
+     - * ``is_file('/home/qgis/data/country_boundaries.shp')`` → TRUE
        * ``is_file('/home/qgis/data/')`` → FALSE
 
 

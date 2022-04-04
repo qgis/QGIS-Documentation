@@ -43,7 +43,7 @@ Returns TRUE if an array contains all the values of a given array.
      - * **array_a** - an array
        * **array_b** - the array of values to search
    * - Examples
-     - * ``array_all(array(1,2,3),array(2,3))`` → true
+     - * ``array_all(array(1,2,3),array(2,3))`` → TRUE
        * ``array_all(array(1,2,3),array(1,2,4))`` → FALSE
 
 
@@ -106,7 +106,7 @@ Returns TRUE if an array contains the given value.
      - * **array** - an array
        * **value** - the value to search
    * - Examples
-     - * ``array_contains(array(1,2,3),2)`` → true
+     - * ``array_contains(array(1,2,3),2)`` → TRUE
 
 
 .. end_array_contains_section
