@@ -1088,7 +1088,7 @@ The following parameters can be entered:
     identity of the server instead of the host name with which the connection
     was established. If you specify ``*`` as the host name, then the server's
     host name is not validated. Other wildcards are not permitted.
-  * :guilabel:`Key store file with private key`: Currently ignored. This
+  * :guilabel:`Keystore file with private key`: Currently ignored. This
     parameter might allow to authenticate via certificate instead via user and
     password in future.
   * :guilabel:`Trust store file with public key`: Specifies the path to a trust
