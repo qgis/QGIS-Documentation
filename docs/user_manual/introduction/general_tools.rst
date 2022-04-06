@@ -1946,7 +1946,8 @@ example, from the context menu you can:
 * Toggle feature selection: Add identified feature to selection
 * Copy attribute value: Copy only the value of the attribute that you click on
 * Copy feature attributes: Copy the attributes of the feature
-* Select features by attribute value: Select all features in the layer that match the selected attribute
+* Select features by attribute value: Select all features in the layer
+  that match the selected attribute
 * Clear result: Remove results in the window
 * Clear highlights: Remove features highlighted on the map
 * Highlight all
