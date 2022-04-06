@@ -1506,8 +1506,8 @@ In the |openTable| :guilabel:`Data Sources` tab, you can:
   evaluated and populated at the form opening, and not at the commit moment.
   This means that instead of an expression like ``nextval('serial')``, the field
   in the :guilabel:`Add Feature` form will display expected value (e.g., ``25``).
-* |unchecked| :guilabel:`Remember editable layer status between sessions`: An 
-  opt-in, per-project setting that makes sure that all layers that are editable
+* |unchecked| :guilabel:`Remember editable layer status between sessions`:
+  makes sure that all layers that are editable
   in a project will be remembered as such when saving the project, as well as 
   making sure that those layers are immediately made editable whenever the project
   is restored.
@@ -1544,6 +1544,14 @@ In the |openTable| :guilabel:`Data Sources` tab, you can:
     layers from the layers list;
   * |search| :guilabel:`Filter layers...` and quickly find a particular layer to
     configure.
+
+* Under the :guilabel:`Advanced Settings` group, you can select
+  |unchecked| :guilabel:`Trust project when data source has no metadata`:
+  To speed up project loading by skipping data checks. Useful in QGIS Server context
+  or in projects with huge database views/materialized views. The extent of layers
+  will be read from the QGIS project file (instead of data sources) and when
+  using the PostgreSQL provider the primary key unicity will not be
+  checked for views and materialized views.
 
 .. _figure_datasources_tab:
 
@@ -2189,3 +2197,4 @@ in the QGIS user profile.
    :width: 1em
 .. |zoomFullExtent| image:: /static/common/mActionZoomFullExtent.png
    :width: 1.5em
+
