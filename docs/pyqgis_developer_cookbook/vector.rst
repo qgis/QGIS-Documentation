@@ -1328,6 +1328,7 @@ given symbol layer class with the following code:
 
 .. testoutput:: vectors
 
+    AnimatedMarker
     EllipseMarker
     FilledMarker
     FontMarker
