@@ -114,6 +114,9 @@ Z and M values (if present) can be translated and scaled.
 
    Vector point layer (green dots) before (left), and after (rigth) an affine transformation (translation). 
 
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
+
 .. seealso:: :ref:`qgistranslategeometry` 
 
 Parameters
@@ -1409,6 +1412,9 @@ Convert to curved geometries
 Converts a geometry into its curved geometry equivalent.
 
 Already curved geometries will be retained without change.
+
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 Parameters
 ..........
@@ -2753,6 +2759,9 @@ vertex’s part and its index within the part (as well as its ring for
 polygons), distance along the original geometry and bisector angle of
 vertex for the original geometry.
 
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
+
 .. seealso:: :ref:`qgisextractvertices`, :ref:`qgisfilterverticesbym`,
    :ref:`qgisfilterverticesbyz`
 
@@ -2837,6 +2846,9 @@ geometry and bisector angle of vertex for original geometry.
    Vertices extracted for line and polygon layer
 
 **Default menu**: :menuselection:`Vector --> Geometry Tools`
+
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgisextractspecificvertices`,
    :ref:`qgisfilterverticesbym`, :ref:`qgisfilterverticesbyz`
@@ -3266,6 +3278,9 @@ the area that is bounded by a polygon is to the right of the boundary.
 In particular, the exterior ring is oriented in a clockwise
 direction and any interior rings in a counter-clockwise direction.
 
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
+
 Parameters
 ..........
 
@@ -3339,6 +3354,9 @@ this breakpoint.
 
 If the input geometry contains M or Z values, these will be linearly
 interpolated for the new vertices created at the antimeridian.
+
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 Parameters
 ..........
@@ -6505,6 +6523,9 @@ Takes a line (or curve) layer and splits each feature into
 multiple parts, where each part is of a specified maximum length.
 Z and M values at the start and end of the new line substrings are
 linearly interpolated from existing values.
+
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 Parameters
 ..........
