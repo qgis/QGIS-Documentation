@@ -1506,8 +1506,8 @@ In the |openTable| :guilabel:`Data Sources` tab, you can:
   evaluated and populated at the form opening, and not at the commit moment.
   This means that instead of an expression like ``nextval('serial')``, the field
   in the :guilabel:`Add Feature` form will display expected value (e.g., ``25``).
-* |unchecked| :guilabel:`Remember editable layer status between sessions`:
-  An opt-in, per-project setting that makes sure that all layers that are editable
+* |unchecked| :guilabel:`Remember editable layer status between sessions`: An 
+  opt-in, per-project setting that makes sure that all layers that are editable
   in a project will be remembered as such when saving the project, as well as 
   making sure that those layers are immediately made editable whenever the project
   is restored.
