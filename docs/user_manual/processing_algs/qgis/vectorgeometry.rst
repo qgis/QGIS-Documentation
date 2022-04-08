@@ -115,7 +115,8 @@ Z and M values (if present) can be translated and scaled.
    Vector point layer (green dots) before (left), and after (rigth) an affine transformation (translation). 
 
 |checkbox| Allows
-:ref:`features in-place modification <processing_inplace_edit>`
+:ref:`features in-place modification <processing_inplace_edit>` 
+of point, line, and polygon features
 
 .. seealso:: :ref:`qgistranslategeometry` 
 
@@ -472,7 +473,8 @@ Polygon and line geometries are supported.
    Black lines represent the bounding boxes of each polygon feature
 
 |checkbox| Allows
-:ref:`features in-place modification <processing_inplace_edit>`
+:ref:`features in-place modification <processing_inplace_edit>` 
+of polygon features
 
 .. seealso:: :ref:`qgisminimumboundinggeometry`
 
@@ -545,7 +547,8 @@ In this case the buffer will result in a smaller polygon (setback).
    Buffer (in yellow) of points, line and polygon
 
 |checkbox| Allows
-:ref:`features in-place modification <processing_inplace_edit>`
+:ref:`features in-place modification <processing_inplace_edit>` 
+of polygon features
 
 **Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
 
@@ -697,6 +700,7 @@ as for the original features.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
+of multipoint features
 
 **Default menu**: :menuselection:`Vector --> Geometry Tools`
 
@@ -1415,6 +1419,7 @@ Already curved geometries will be retained without change.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
+of line and polygon features
 
 Parameters
 ..........
@@ -1503,6 +1508,7 @@ features.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
+of polygon features
 
 **Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
 
@@ -1897,6 +1903,7 @@ are smaller than a specified area threshold. Leaving this parameter at
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
+of polygon features
 
 Parameters
 ..........
@@ -1980,6 +1987,7 @@ input parameter.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
+of line and polygon features
 
 **Default menu**: :menuselection:`Vector --> Geometry Tools`
 
@@ -2072,6 +2080,7 @@ at 2.5 increments allows them to be evenly spaced over the segment.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
+of line and polygon features
 
 .. seealso:: :ref:`qgisdensifygeometries`
 
@@ -2239,6 +2248,10 @@ If Z values already exist in the layer, they will be overwritten with
 the new value.
 If no Z values exist, the geometry will be upgraded to include the Z
 dimension.
+
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
+of point, line, and polygon features with Z enabled
 
 .. seealso:: :ref:`qgissetmfromraster`, :ref:`qgissetzvalue`
 
@@ -2496,6 +2509,7 @@ point, with no intermediate vertices between them.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
+of line features
 
 .. seealso:: :ref:`qgissubdivide`, :ref:`qgislinesubstring`
 
@@ -2570,6 +2584,7 @@ the line.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
+of line features
 
 .. seealso:: :ref:`qgislinesubstring`
 
@@ -2761,6 +2776,7 @@ vertex for the original geometry.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
+of multipoint features
 
 .. seealso:: :ref:`qgisextractvertices`, :ref:`qgisfilterverticesbym`,
    :ref:`qgisfilterverticesbyz`
@@ -2849,6 +2865,7 @@ geometry and bisector angle of vertex for original geometry.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
+of multipoint features
 
 .. seealso:: :ref:`qgisextractspecificvertices`,
    :ref:`qgisfilterverticesbym`, :ref:`qgisfilterverticesbyz`
@@ -3028,6 +3045,10 @@ the minimum value is tested.
 .. note:: Depending on the input geometry attributes and the filters
    used, the resultant geometries created by this algorithm may no
    longer be valid.
+   
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
+of line and polygon features with M enabled
 
 .. seealso:: :ref:`qgisfilterverticesbyz`, :ref:`qgisextractvertices`,
  :ref:`qgisextractspecificvertices`
@@ -3126,6 +3147,10 @@ the minimum value is tested.
    longer be valid.
    You may need to run the :ref:`qgisfixgeometries` algorithm to
    ensure their validity.
+   
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
+of line and polygon features with Z enabled
 
 .. seealso:: :ref:`qgisfilterverticesbym`, :ref:`qgisextractvertices`,
  :ref:`qgisextractspecificvertices`
@@ -3213,6 +3238,7 @@ Always outputs multi-geometry layer.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
+of multipoint, line, and polygon features
 
 .. seealso:: :ref:`qgischeckvalidity`
 
@@ -3280,6 +3306,7 @@ direction and any interior rings in a counter-clockwise direction.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
+of polygon features
 
 Parameters
 ..........
@@ -3357,6 +3384,7 @@ interpolated for the new vertices created at the antimeridian.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
+of line features
 
 Parameters
 ..........
@@ -3689,6 +3717,7 @@ considered when calculating the substring.
    ending distance at 250 meters.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+of line features
 
 .. seealso:: :ref:`qgisextendlines`
 
@@ -3833,6 +3862,7 @@ any lines which could be merged and any non-connected line parts.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
+of line features
 
 Parameters
 ..........
@@ -3999,6 +4029,7 @@ layer.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
+of polygon features
 
 .. seealso:: :ref:`qgisminimumboundinggeometry`
 
@@ -4075,6 +4106,7 @@ input layer, using a fixed or dynamic distance and number of rings.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
+of polygon features
 
 .. seealso:: :ref:`qgisbuffer`,
    :ref:`qgisvariabledistancebuffer`,
@@ -4170,6 +4202,7 @@ but divided into single features.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
+of multipoint, multiline, and multipolygon features
 
 **Default menu**: :menuselection:`Vector --> Geometry Tools`
 
@@ -4242,6 +4275,7 @@ distances will offset them to the right.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
+of line features
 
 .. seealso:: :ref:`qgisarrayoffsetlines`, :ref:`qgistranslategeometry`
 
@@ -4353,6 +4387,7 @@ input layer.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
+of polygon features
 
 .. seealso:: :ref:`qgisminimumboundinggeometry`
 
@@ -4425,6 +4460,7 @@ every angle in the geometry either a right angle or a straight line.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
+of line and polygon features
 
 Parameters
 ..........
@@ -4507,6 +4543,7 @@ guaranteed to lie on the surface of the feature geometry.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
+of multipoint features
 
 .. seealso:: :ref:`qgiscentroids`
 
@@ -4979,6 +5016,7 @@ Projects point geometries by a specified distance and bearing (azimuth).
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
+of point features
 
 Parameters
 ..........
@@ -5061,6 +5099,7 @@ features.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
+of point, line, and polygon features
 
 .. seealso:: :ref:`qgisaggregate`, :ref:`qgiscollect`
 
@@ -5242,6 +5281,7 @@ will be maintained.
    overlapping points will not be changed by this method.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+of point, line, and polygon features
 
 .. seealso:: :ref:`qgisextractvertices`,
    :ref:`qgisextractspecificvertices`,
@@ -5424,6 +5464,7 @@ Inverts the direction of a line layer.
    Before and after the direction inversion
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+of line features
 
 Parameters
 ..........
@@ -5488,6 +5529,7 @@ around a unique preset point.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
+of point, line, and polygon features
 
 .. seealso:: :ref:`qgistranslategeometry`, :ref:`qgisswapxy`
 
@@ -5728,6 +5770,10 @@ geometries.
 .. tip:: Use the |identify|:sup:`Identify Features` button to check
    the added M value: the results are available in the
    :guilabel:`Identify Results` dialog.
+    
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
+of point, line, and polygon features with M enabled
 
 .. seealso:: :ref:`qgissetmfromraster`, :ref:`qgissetzvalue`,
    :ref:`qgisdropmzvalues`
@@ -5805,6 +5851,10 @@ If M values already exist in the layer, they will be overwritten with
 the new value.
 If no M values exist, the geometry will be upgraded to include M
 values.
+
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
+of point, line, and polygon features with M enabled
 
 .. seealso:: :ref:`qgissetzfromraster`, :ref:`qgissetmvalue`
 
@@ -5900,6 +5950,10 @@ geometries.
 .. tip:: Use the |identify|:sup:`Identify Features` button to check
  the added Z value: the results are available in the
  :guilabel:`Identify Results` dialog.
+ 
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
+of point, line, and polygon features with Z enabled
 
 .. seealso:: :ref:`qgissetzfromraster`, :ref:`qgissetmvalue`,
    :ref:`qgisdropmzvalues`
@@ -5981,6 +6035,7 @@ distance based (the "Douglas-Peucker" algorithm), area based
    simplification tolerances
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+of line and polygon features
 
 **Default menu**: :menuselection:`Vector --> Geometry Tools`
 
@@ -6208,6 +6263,7 @@ this will not be smoothed. For example, setting the maximum angle to
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
+of line and polygon features
 
 .. seealso:: :ref:`qgissimplifygeometries`,
    :ref:`qgisdensifygeometries`,
@@ -6297,6 +6353,10 @@ another layer, or to geometries within the same layer.
 Matching is done based on a tolerance distance, and vertices will be
 inserted or removed as required to make the geometries match the
 reference geometries.
+
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
+of point, line, and polygon features
 
 .. seealso:: :ref:`qgissnappointstogrid`
 
@@ -6434,6 +6494,7 @@ Snapping can be performed on the X, Y, Z or M axis. A grid spacing of
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
+of point, line, and polygon features
 
 .. seealso:: :ref:`qgissnapgeometries`
 
@@ -6526,6 +6587,7 @@ linearly interpolated from existing values.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
+of line features
 
 Parameters
 ..........
@@ -6612,7 +6674,8 @@ Curved geometries will be segmentized before subdivision.
    not be valid and may contain self-intersections.
 
 |checkbox| Allows
-:ref:`features in-place modification <processing_inplace_edit>`
+:ref:`features in-place modification <processing_inplace_edit>` 
+of multipoint, line, and polygon features
 
 .. seealso:: :ref:`qgisexplodelines`, :ref:`qgislinesubstring`
 
@@ -6690,6 +6753,7 @@ latitude and longitude values reversed.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
+of point, line, and polygon features
 
 .. seealso:: :ref:`qgistranslategeometry`, :ref:`qgisrotatefeatures`
 
@@ -6856,6 +6920,7 @@ component polygons.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
+of polygon features
 
 Parameters
 ..........
@@ -7026,6 +7091,7 @@ Z and M values present in the geometry can also be translated.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
+of point, line, and polygon features
 
 .. seealso:: :ref:`qgisarraytranslatedfeatures`,
    :ref:`qgisoffsetline`, :ref:`qgisrotatefeatures`, :ref:`qgisswapxy`
