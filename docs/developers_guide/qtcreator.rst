@@ -35,7 +35,7 @@ Setting up your project
 We assume you have already got a local QGIS clone containing the
 source code, and have installed all needed build dependencies etc. There are
 detailed instructions for :ref:`git access <git_access>` and `dependency installation
-<https://htmlpreview.github.io/?https://github.com/qgis/QGIS/blob/master/doc/INSTALL.html>`_.
+<https://github.com/qgis/QGIS/blob/master/INSTALL.md>`_.
 
 On our system we have checked out the code into ``$HOME/dev/cpp/QGIS`` and the
 rest of the article is written assuming that. You should update these paths as
