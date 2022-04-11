@@ -2776,7 +2776,7 @@ vertex for the original geometry.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
-of multipoint features
+of point features
 
 .. seealso:: :ref:`qgisextractvertices`, :ref:`qgisfilterverticesbym`,
    :ref:`qgisfilterverticesbyz`
@@ -2861,11 +2861,11 @@ geometry and bisector angle of vertex for original geometry.
 
    Vertices extracted for line and polygon layer
 
-**Default menu**: :menuselection:`Vector --> Geometry Tools`
-
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
-of multipoint features
+of point features
+
+**Default menu**: :menuselection:`Vector --> Geometry Tools`
 
 .. seealso:: :ref:`qgisextractspecificvertices`,
    :ref:`qgisfilterverticesbym`, :ref:`qgisfilterverticesbyz`
@@ -3041,14 +3041,14 @@ the minimum value is tested.
 
    The red line represents the black line with only vertices whose M
    value is <=10.
-
-.. note:: Depending on the input geometry attributes and the filters
-   used, the resultant geometries created by this algorithm may no
-   longer be valid.
    
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
 of line and polygon features with M enabled
+
+.. note:: Depending on the input geometry attributes and the filters
+   used, the resultant geometries created by this algorithm may no
+   longer be valid.
 
 .. seealso:: :ref:`qgisfilterverticesbyz`, :ref:`qgisextractvertices`,
  :ref:`qgisextractspecificvertices`
@@ -3141,16 +3141,16 @@ the minimum value is tested.
 
    The red line represents the black line with only vertices whose Z
    value is <=10.
+   
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
+of line and polygon features with Z enabled
 
 .. note:: Depending on the input geometry attributes and the filters
    used, the resultant geometries created by this algorithm may no
    longer be valid.
    You may need to run the :ref:`qgisfixgeometries` algorithm to
    ensure their validity.
-   
-|checkbox| Allows
-:ref:`features in-place modification <processing_inplace_edit>`
-of line and polygon features with Z enabled
 
 .. seealso:: :ref:`qgisfilterverticesbym`, :ref:`qgisextractvertices`,
  :ref:`qgisextractspecificvertices`
@@ -3234,11 +3234,11 @@ without losing any of the input vertices.
 Already valid geometries are returned without further intervention.
 Always outputs multi-geometry layer.
 
-.. note:: M values will be dropped from the output.
-
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
-of multipoint, line, and polygon features
+of point, line, and polygon features without M enabled
+
+.. note:: M values will be dropped from the output.
 
 .. seealso:: :ref:`qgischeckvalidity`
 
@@ -4202,7 +4202,7 @@ but divided into single features.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
-of multipoint, multiline, and multipolygon features
+of point, line, and polygon features
 
 **Default menu**: :menuselection:`Vector --> Geometry Tools`
 
@@ -4543,7 +4543,7 @@ guaranteed to lie on the surface of the feature geometry.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
-of multipoint features
+of point features
 
 .. seealso:: :ref:`qgiscentroids`
 
@@ -5276,12 +5276,12 @@ If the :guilabel:`Use Z Value` parameter is true, then the Z values
 are also tested and vertices with the same X and Y but different Z
 will be maintained.
 
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+of point, line, and polygon features
+
 .. note:: Duplicate vertices are not tested between different parts
    of a multipart geometry, e.g. a multipoint geometry with
    overlapping points will not be changed by this method.
-
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
-of point, line, and polygon features
 
 .. seealso:: :ref:`qgisextractvertices`,
    :ref:`qgisextractspecificvertices`,
@@ -5766,14 +5766,14 @@ with the new value.
 If no M values exist, the geometry will be upgraded to include M
 values and the specified value used as the initial M value for all
 geometries.
-
-.. tip:: Use the |identify|:sup:`Identify Features` button to check
-   the added M value: the results are available in the
-   :guilabel:`Identify Results` dialog.
     
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
 of point, line, and polygon features with M enabled
+
+.. tip:: Use the |identify|:sup:`Identify Features` button to check
+   the added M value: the results are available in the
+   :guilabel:`Identify Results` dialog.
 
 .. seealso:: :ref:`qgissetmfromraster`, :ref:`qgissetzvalue`,
    :ref:`qgisdropmzvalues`
@@ -5946,14 +5946,14 @@ with the new value.
 If no Z values exist, the geometry will be upgraded to include Z
 values and the specified value used as the initial Z value for all
 geometries.
-
-.. tip:: Use the |identify|:sup:`Identify Features` button to check
- the added Z value: the results are available in the
- :guilabel:`Identify Results` dialog.
  
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
 of point, line, and polygon features with Z enabled
+
+.. tip:: Use the |identify|:sup:`Identify Features` button to check
+ the added Z value: the results are available in the
+ :guilabel:`Identify Results` dialog.
 
 .. seealso:: :ref:`qgissetzfromraster`, :ref:`qgissetmvalue`,
    :ref:`qgisdropmzvalues`
@@ -6489,12 +6489,12 @@ the feature's geometry will be cleared.
 Snapping can be performed on the X, Y, Z or M axis. A grid spacing of
 0 for any axis will disable snapping for that axis.
 
-.. note:: Snapping to grid may generate an invalid geometry in some
-   corner cases.
-
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
 of point, line, and polygon features
+
+.. note:: Snapping to grid may generate an invalid geometry in some
+   corner cases.
 
 .. seealso:: :ref:`qgissnapgeometries`
 
@@ -6670,12 +6670,12 @@ Curved geometries will be segmentized before subdivision.
    Left the input layer, middle maximum nodes value is 100 and right
    maximum value is 200
 
-.. note:: Subdividing a geometry can generate geometry parts that may
-   not be valid and may contain self-intersections.
-
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>` 
-of multipoint, line, and polygon features
+of point, line, and polygon features
+
+.. note:: Subdividing a geometry can generate geometry parts that may
+   not be valid and may contain self-intersections.
 
 .. seealso:: :ref:`qgisexplodelines`, :ref:`qgislinesubstring`
 
