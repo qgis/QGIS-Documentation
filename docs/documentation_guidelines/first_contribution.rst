@@ -84,6 +84,8 @@ There are different ways to contribute to QGIS documentation. We show
 them separately below, but you can switch from one process to the other
 without any harm.
 
+.. _edit_on_github:
+
 Alternative 1: Use the ``Edit on GitHub`` shortcut
 ..................................................
 
@@ -124,13 +126,33 @@ Alternative 2: Create an ad hoc branch in your documentation repository
 
 You can edit files directly from your fork of the QGIS Documentation.
 
-Click on |githubBranch| in the upper left corner of your forked QGIS-
-Documentation repository and enter a unique name in the text field to create a
-new `branch <https://help.github.com/articles/about-branches/>`_ .
-The name of the new branch should relate to the problem you intend to fix. The
-|githubBranch| button should now say :guilabel:`Branch: branch_name`
+First, make sure that your ``master`` branch is up to date with ``qgis:master`` branch.
+To do so:
 
-.. tip:: **Do your changes in an ad hoc branch, never in the** ``master`` **branch**
+#. Go to the main page of your repository, i.e. ``https://github.com/<YourName>/QGIS-Documentation``.
+   The ``master`` branch should be active with a mention whether it is up to date
+   with ``qgis/QGIS-Documentation:master`` or not.
+
+   If it has commits ahead the upstream branch, you better use the previous
+   :ref:`shortcut button alternative <edit_on_github>` until you align your ``master`` branch.
+
+   If it only has commits behind:
+
+   #. Expand the :guilabel:`Fetch Upstream` drop-down menu on the right. You can
+
+      * :guilabel:`Compare` the branches and see new changes in the main repository
+      * :guilabel:`Fetch and merge`: takes changes from the upstream branch to yours.
+   #. Let's click :guilabel:`Fetch and merge`: after the process, your branch is
+      mentioned as up to date with ``qgis/QGIS-Documentation:master``.
+
+#. Click on |githubBranch| in the upper left corner of your forked
+   QGIS-Documentation repository and enter a unique name in the text field to create a
+   new `branch <https://help.github.com/articles/about-branches/>`_ .
+   The name of the new branch should relate to the problem you intend to fix. The
+   |githubBranch| button should now say :guilabel:`Branch: branch_name`
+#. You are ready to start new changes on top of it.
+
+.. attention:: **Do your changes in an ad hoc branch, never in the** ``master`` **branch**
 
    By convention, avoid making changes in your ``master`` branch except when
    you merge the modifications from the ``master`` branch of ``qgis/QGIS-Documentation``
