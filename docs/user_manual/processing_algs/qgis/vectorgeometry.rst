@@ -700,7 +700,7 @@ as for the original features.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
-of multipoint features
+of point features
 
 **Default menu**: :menuselection:`Vector --> Geometry Tools`
 
