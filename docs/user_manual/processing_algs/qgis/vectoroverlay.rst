@@ -40,6 +40,7 @@ contained by the mask geometry.
   clarity (right)
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+of point, line, and polygon features
 
 **Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
 
@@ -126,6 +127,7 @@ Attributes are not modified (see :ref:`warning <warning_difference>`).
   clarity (right)
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+of point, line, and polygon features
 
 **Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
 
@@ -526,6 +528,7 @@ Output will contain multi geometries for split features.
   Split lines
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+of line and polygon features
 
 Parameters
 ..........
