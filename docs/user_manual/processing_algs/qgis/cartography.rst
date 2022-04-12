@@ -26,6 +26,7 @@ to avoid aligning isolated points to distant features.
  point symbols to follow the nearest road direction.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+of point features
 
 Parameters
 ..........

@@ -336,6 +336,10 @@ The X/Y fields can be calculated in a different CRS to the layer
 (e.g. creating latitude/longitude fields for a layer in a projected
 CRS).
 
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>` 
+of point features
+
 Parameters
 ..........
 
