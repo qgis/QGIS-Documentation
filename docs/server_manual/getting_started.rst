@@ -181,7 +181,7 @@ configuration after doing:
   nano /etc/apache2/sites-available/qgis.demo.conf
 
 .. note:: Some of the configuration options are explained in the Server
- :ref:`environment variables <server_env_variables>` section.
+ :ref:`environment variables <server_env_variables>` section. If you want to change the URL to your .fcgi-file, the SCRIPTALIAS variable can be used, eg. SCRIPTALIAS qgisserver /usr/lib/cgi-bin/qgis_mapserv.fcgi . See https://httpd.apache.org/docs/2.4/howto/cgi.html for further details.
 
 Let's now create the directories that will store the QGIS Server logs and
 the authentication database:
