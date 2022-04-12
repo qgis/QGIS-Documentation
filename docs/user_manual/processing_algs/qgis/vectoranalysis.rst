@@ -275,6 +275,10 @@ Alternatively, a unique class field can be specified.
 If both options are used, the weight field will take precedence and
 the unique class field will be ignored.
 
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>` 
+of polygon features
+
 ``Default menu``: :menuselection:`Vector --> Analysis Tools`
 
 Parameters
@@ -1690,6 +1694,10 @@ of lines and the total number of them that cross each polygon.
 The resulting layer has the same features as the input polygon layer,
 but with two additional attributes containing the length and count of
 the lines across each polygon.
+
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>` 
+of polygon features
 
 **Default menu**: :menuselection:`Vector --> Analysis Tools`
 

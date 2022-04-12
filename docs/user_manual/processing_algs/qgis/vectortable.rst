@@ -336,6 +336,10 @@ The X/Y fields can be calculated in a different CRS to the layer
 (e.g. creating latitude/longitude fields for a layer in a projected
 CRS).
 
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>` 
+of point features
+
 Parameters
 ..........
 
@@ -1192,6 +1196,8 @@ Python code
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png
    :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
 .. |clearText| image:: /static/common/mIconClearText.png
    :width: 1.5em
 .. |deleteAttribute| image:: /static/common/mActionDeleteAttribute.png
