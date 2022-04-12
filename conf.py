@@ -155,7 +155,7 @@ if html_context['isTesting'] or html_context['outdated']:
 if html_context['isTesting']:
     tags.add('testing')
 
-supported_languages = cfg['supported_languages'].replace(' ', '').split(',')
+supported_languages = cfg['supported_languages'].split()
 version_list = cfg['version_list'].replace(' ', '').split(',')
 docs_url = 'https://docs.qgis.org/'
 
