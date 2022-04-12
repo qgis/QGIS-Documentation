@@ -1196,6 +1196,8 @@ Python code
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png
    :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
 .. |clearText| image:: /static/common/mIconClearText.png
    :width: 1.5em
 .. |deleteAttribute| image:: /static/common/mActionDeleteAttribute.png
