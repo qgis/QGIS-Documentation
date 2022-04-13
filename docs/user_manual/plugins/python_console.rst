@@ -112,7 +112,7 @@ share the code via codepad.org and much more). Main features are:
   * osgeo-gdal-ogr
 
 * :kbd:`Ctrl+Space` to view the auto-completion list.
-* Sharing code snippets via gist.
+* Sharing code snippets via GitHub
 * :kbd:`Ctrl+4` Syntax check.
 * Search bar (open it with the default Desktop Environment shortcut, usually
   :kbd:`Ctrl+F`):
