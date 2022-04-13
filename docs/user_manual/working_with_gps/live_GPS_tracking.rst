@@ -124,8 +124,8 @@ Here you can specify:
     rotate the map canvas so that it is oriented in the same direction as the GPS bearing.
 
 
-  * Activating :guilabel:`Show Bearing Line` will show a line from the GPS location
-    pointing in current path direction of the GPS.
+* Activating :guilabel:`Show Bearing Line` will show a line from the GPS location
+  pointing in current path direction of the GPS.
 
 * :guilabel:`Log File`
 
