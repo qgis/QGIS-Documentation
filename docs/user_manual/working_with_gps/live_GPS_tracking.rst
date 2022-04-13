@@ -103,10 +103,8 @@ Here you can specify:
     reports faulty bearing measurements and it will calculate the GPS bearing based
     on the previous two recorded locations.
 
-* :guilabel:`Cursor`
-
-  * Activating |checkbox| :guilabel:`Cursor`, you can use a slider |slider| to shrink
-    and grow the position cursor on the canvas.
+* :guilabel:`Cursor`: you can use a slider |slider| to shrink
+  and grow the position cursor on the canvas.
 
 * :guilabel:`Filtering`
 
