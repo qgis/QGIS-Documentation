@@ -106,11 +106,9 @@ Here you can specify:
 * :guilabel:`Cursor`: you can use a slider |slider| to shrink
   and grow the position cursor on the canvas.
 
-* :guilabel:`Filtering`
-
-  * You can also set an :guilabel:`Acquisition interval (seconds)` and a
-    :guilabel:`Distance threshold (meters)` parameters to keep the cursor still
-    active when the receiver is in static conditions.
+* :guilabel:`Filtering`: You can also set an :guilabel:`Acquisition interval (seconds)` 
+  and a :guilabel:`Distance threshold (meters)` parameters to keep the cursor still
+  active when the receiver is in static conditions.
 
 * :guilabel:`Map Centering and Rotation`
 
