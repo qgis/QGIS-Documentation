@@ -127,7 +127,6 @@ Here you can specify:
 * Activating :guilabel:`Show Bearing Line` will show a line from the GPS location
   pointing in current path direction of the GPS.
 
-* :guilabel:`Log File`
 
   * Finally, you can activate |checkbox| :guilabel:`Log file` and define a path
     and a file where log messages about the GPS tracking are logged.
