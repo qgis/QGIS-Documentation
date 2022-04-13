@@ -126,8 +126,8 @@ Here you can specify:
   pointing in current path direction of the GPS.
 
 
-  * Finally, you can activate |checkbox| :guilabel:`Log file` and define a path
-    and a file where log messages about the GPS tracking are logged.
+* Finally, you can activate |checkbox| :guilabel:`Log file` and define a path
+  and a file where log messages about the GPS tracking are logged.
 
 If you want to set a feature manually, you have to go back to |metadata|
 :sup:`Position` and click on :guilabel:`Add Point` or :guilabel:`Add Track Point`.
