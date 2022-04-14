@@ -637,99 +637,108 @@ Installation on Windows
 
 .. index:: Windows
 
-QGIS Server can also be installed on Windows systems. While the QGIS Server
-package is available in the 64 bit version of the OSGeo4W network installer
-(https://qgis.org/en/site/forusers/download.html) there is no Apache (or other
-web server) package available, so this must be installed by other means.
+QGIS Server can also be installed on Windows systems using the 64 bit version
+of the OSGeo4W network installer (https://qgis.org/en/site/forusers/download.html).
 
 A simple procedure is the following:
 
-#. Download the XAMPP installer (https://www.apachefriends.org/download.html)
-   for Windows and install Apache
-
-   .. figure:: img/qgis_server_windows1.png
-     :align: center
-
-#. Download the OSGeo4W installer, follow the "Advanced Install" and install
-   both the QGIS Desktop and QGIS Server packages
+#. Download and run the OSGeo4W installer
+#. Follow the "Advanced Install" and install the **QGIS Desktop**, **QGIS Server**
+   **apache** and **mod_fcgid** packages.
 
    .. figure:: img/qgis_server_windows2.png
      :align: center
 
-#. Edit the httpd.conf file (:file:`C:\\xampp\\apache\\conf\\httpd.conf`
-   if the default installation paths have been used) and make the following changes:
+#. Apache is not directly installed as a service on Windows. You need to:
 
-   From:
+   #. Right-click the :file:`OSGeo4W.bat` file at the root of the :file:`C:\\OSGeo4W64\\`
+      folder (if the default installation paths have been used) and select
+      :guilabel:`Run as administrator`
+   #. In the console, run ``apache-install.bat``, which will output
 
-   .. code-block:: apache
+      .. code-block:: bash
 
-    ScriptAlias /cgi-bin/ "C:/xampp/cgi-bin/"
+        > apache-install.bat
+        Installing the 'Apache OSGeo4W Web Server' service
+        The 'Apache OSGeo4W Web Server' service is successfully installed.
+        Testing httpd.conf....
+        Errors reported here must be corrected before the service can be started.
+        ...
 
-
-   To:
-
-   .. code-block:: apache
-
-    ScriptAlias /cgi-bin/ "C:/OSGeo4W64/apps/qgis/bin/"
-
-
-   From:
-
-   .. code-block:: apache
-
-    <Directory "C:/xampp/cgi-bin">
-        AllowOverride None
-        Options None
-        Require all granted
-    </Directory>
+      The service is started as you can notice in the report.
+      But the server may fail to run due to missing custom configuration.
+#. Edit the :file:`C:\\OSGeo4w64\\apps\\apache\\conf\\httpd.conf` file
+   with the following changes:
 
 
-   To:
+   .. list-table::
+      :header-rows: 1
 
-   .. code-block:: apache
+      * - Purpose
+        - Existing config
+        - Replacement
+      * - (Optional) Customize the address to listen to using an IP and/or port,
+          You can and add as many entries as you wish.
 
-    <Directory "C:/OSGeo4W64/apps/qgis/bin">
-        SetHandler cgi-script
-        AllowOverride None
-        Options ExecCGI
-        Order allow,deny
-        Allow from all
-        Require all granted
-    </Directory>
+        - .. code-block:: apache
 
+            Listen ${SRVPORT}
 
-   From:
+        - .. code-block:: apache
 
-   .. code-block:: apache
+            Listen localhost:8080
 
-    AddHandler cgi-script .cgi .pl .asp
+      * - Indicate where to find the script files
+        - .. code-block:: apache
 
+            ScriptAlias /cgi-bin/ "${SRVROOT}/cgi-bin/"
 
-   To:
+        - .. code-block:: apache
 
-   .. code-block:: apache
+            ScriptAlias /cgi-bin/ "C:/OSGeo4W64/apps/qgis/bin/"
 
-    AddHandler cgi-script .cgi .pl .asp .exe
+      * - Provide permissions on the script folder
+        - .. code-block:: apache
 
+            <Directory "${SRVROOT}/cgi-bin">
+                AllowOverride None
+                Options None
+                Require all granted
+            </Directory>
 
-#. Then at the bottom of httpd.conf add:
+        - .. code-block:: apache
 
-   .. code-block:: apache
+            <Directory "C:/OSGeo4W64/apps/qgis/bin">
+                SetHandler cgi-script
+                AllowOverride None
+                Options ExecCGI
+                Require all granted
+            </Directory>
 
-    SetEnv GDAL_DATA "C:\OSGeo4W64\share\gdal"
-    SetEnv QGIS_AUTH_DB_DIR_PATH "C:\OSGeo4W64\apps\qgis\resources"
-    SetEnv PYTHONHOME "C:\OSGeo4W64\apps\Python37"
-    SetEnv PATH "C:\OSGeo4W64\bin;C:\OSGeo4W64\apps\qgis\bin;C:\OSGeo4W64\apps\Qt5\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem"
-    SetEnv QGIS_PREFIX_PATH "C:\OSGeo4W64\apps\qgis"
-    SetEnv QT_PLUGIN_PATH "C:\OSGeo4W64\apps\qgis\qtplugins;C:\OSGeo4W64\apps\Qt5\plugins"
+      * - Enable file extensions to use for script files. Uncomment and complete
+        - .. code-block:: apache
 
+            #AddHandler cgi-script .cgi
 
-#. Restart the Apache web server from the XAMPP Control Panel and open browser window to testing
-   a GetCapabilities request to QGIS Server
+        - .. code-block:: apache
+
+            AddHandler cgi-script .cgi .exe
+
+#. Restart the Apache web server
 
    ::
 
-    http://qgis.demo/cgi-bin/qgis_mapserv.fcgi.exe?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+     > apache-restart.bat
+
+#. Open browser window to testing a GetCapabilities request to QGIS Server.
+   Replace ``localhost:8080`` with the IP and port you set to listen.
+
+   ::
+
+    http://localhost:8080/cgi-bin/qgis_mapserv.fcgi.exe?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+
+   A :file:`XML` file with the capabilities should be returned.
+   Your server is ready to use.
 
 
 Serve a project
