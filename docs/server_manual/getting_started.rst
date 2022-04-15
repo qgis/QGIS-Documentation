@@ -658,7 +658,7 @@ A simple procedure is the following:
       The service is started as you can notice in the report.
       But the server may fail to run due to missing custom configuration.
 #. Edit the :file:`C:\\OSGeo4w64\\apps\\apache\\conf\\httpd.conf` file
-   with the following changes:
+   with the following changes (various other combinations are possible):
 
 
    .. list-table::
@@ -729,6 +729,9 @@ A simple procedure is the following:
 
    A :file:`XML` file with the capabilities should be returned.
    Your server is ready to use.
+
+.. Todo: Document how to configure the server so that people could run
+ it as http://qgis.demo/qgisserver? (which is the kind of syntax most used in this file)
 
 
 Serve a project
@@ -972,7 +975,7 @@ Integration with QWC2
 `QWC2 <https://github.com/qgis/qwc2>`_ is a responsive web application dedicated to
 QGIS Server. It helps you to build a highly customized map viewer with layer
 selection, feature info, etc.. Also many plugins are available like authentication or
-print service, the full list is available is this `repository
+print service, the full list is available in this `repository
 <https://github.com/qwc-services>`_.
 
 
