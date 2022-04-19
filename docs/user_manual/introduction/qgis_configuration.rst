@@ -1752,22 +1752,23 @@ returns::
   QGIS is a user friendly Open Source Geographic Information System.
   Usage: /usr/bin/qgis.bin [OPTION] [FILE]
     OPTION:
-          [--version]     display version information and exit
-          [--snapshot filename]   emit snapshot of loaded datasets to given file
-          [--width width] width of snapshot to emit
-          [--height height]       height of snapshot to emit
-          [--lang language]       use language for interface text (changes existing override)
-          [--project projectfile] load the given QGIS project
-          [--extent xmin,ymin,xmax,ymax]  set initial map extent
-          [--nologo]      hide splash screen
-          [--noversioncheck]      don't check for new version of QGIS at startup
-          [--noplugins]   don't restore plugins on startup
-          [--nocustomization]     don't apply GUI customization
-          [--customizationfile path]      use the given ini file as GUI customization
-          [--globalsettingsfile path]     use the given ini file as Global Settings (defaults)
-          [--authdbdirectory path] use the given directory for authentication database
-          [--code path]   run the given python file on load
-          [--defaultui]   start by resetting user ui settings to default
+          [-v, --version]     display version information and exit
+          [-s, --snapshot filename]   emit snapshot of loaded datasets to given file
+          [-w, --width width] width of snapshot to emit
+          [-h, --height height]       height of snapshot to emit
+          [-l, --lang language]       use language for interface text (changes existing override)
+          [-p, --project projectfile] load the given QGIS project
+          [-e, --extent xmin,ymin,xmax,ymax]  set initial map extent
+          [-n, --nologo]      hide splash screen
+          [-V, --noversioncheck]      don't check for new version of QGIS at startup
+          [-P, --noplugins]   don't restore plugins on startup
+          [-B, --skipbadlayers]     don't prompt for missing layers
+          [-C, --nocustomization]     don't apply GUI customization
+          [-z, --customizationfile path]      use the given ini file as GUI customization
+          [-g, --globalsettingsfile path]     use the given ini file as Global Settings (defaults)
+          [-a, --authdbdirectory path] use the given directory for authentication database
+          [-f, --code path]   run the given python file on load
+          [-d, --defaultui]   start by resetting user ui settings to default
           [--hide-browser]        hide the browser widget
           [--dxf-export filename.dxf]     emit dxf output of loaded datasets to given file
           [--dxf-extent xmin,ymin,xmax,ymax]      set extent to export to dxf
@@ -1778,7 +1779,7 @@ returns::
           [--take-screenshots output_path]        take screen shots for the user documentation
           [--screenshots-categories categories]   specify the categories of screenshot to be used (see QgsAppScreenShots::Categories).
           [--profile name]        load a named profile from the user's profiles folder.
-          [--profiles-path path]  path to store user profile folders. Will create profiles inside a {path}\profiles folder
+          [-S, --profiles-path path]  path to store user profile folders. Will create profiles inside a {path}\profiles folder
           [--version-migration]   force the settings migration from older version if found
           [--openclprogramfolder]         path to the folder containing the sources for OpenCL programs.
           [--help]                this text
@@ -1884,6 +1885,15 @@ this option.
 
 This option is useful for temporarily allowing access to tools that have been
 removed by customization.
+
+.. _skipbadlayers:
+
+``--skipbadlayers``
+.......................
+
+Using this option, you can avoid QGIS prompting the :guilabel:`Handle Unavailable Layers`
+dialog at startup. The project file is loaded, with missing layers kept as unavailable.
+More details on the topic at :ref:`handle_broken_paths`.
 
 .. _custom_commandline:
 
