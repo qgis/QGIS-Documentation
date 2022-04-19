@@ -6,7 +6,7 @@
 Statistics of translation
 ===========================
 
-*(last update: 2022-04-05)*
+*(last update: 2022-04-19)*
 
 .. list-table::
    :widths: auto
@@ -14,9 +14,9 @@ Statistics of translation
    * - Number of strings
      - Number of target languages
      - Overall Translation ratio
-   * - **33273**
+   * - **33291**
      - **57**
-     - **11.72%**
+     - **11.98%**
 
 
 
@@ -32,7 +32,7 @@ Statistics of translation
    * - Albanian
      - 0.22
      - Arabic
-     - 3.76
+     - 3.75
      - Azerbaijani
      - 0.02
    * - Basque
@@ -46,49 +46,49 @@ Statistics of translation
      - Catalan
      - 1.4
      - Chinese Simplified
-     - 10.43
+     - 12.74
    * - Chinese Traditional
      - 0.59
      - Croatian
      - 0.1
      - Czech
-     - 5.48
+     - 5.47
    * - Danish
      - 0.63
      - Dutch
-     - 98.13
+     - 100.0
      - Estonian
      - 1.26
    * - Finnish
      - 1.68
      - French
-     - 81.64
+     - 82.55
      - Galician
      - 0.44
    * - Georgian
      - 0.1
      - German
-     - 18.95
+     - 18.94
      - Greek
      - 0.35
    * - Hebrew
-     - 0.72
+     - 0.71
      - Hindi
      - 0.29
      - Hungarian
-     - 9.01
+     - 8.92
    * - Igbo
      - 0.01
      - Indonesian
-     - 2.65
+     - 2.66
      - Italian
-     - 77.98
+     - 83.05
    * - Japanese
-     - 63.11
+     - 64.39
      - Kabyle
      - 0.09
      - Korean
-     - 73.74
+     - 74.35
    * - Lithuanian
      - 4.74
      - Macedonian
@@ -102,21 +102,21 @@ Statistics of translation
      - Mongolian
      - 0.1
    * - N'ko
-     - 1.73
+     - 1.72
      - Norwegian Bokmål
-     - 3.0
+     - 2.99
      - Persian
      - 0.39
    * - Polish
      - 1.69
      - Portuguese (Brazil)
-     - 34.03
+     - 36.23
      - Portuguese (Portugal)
-     - 7.83
+     - 7.85
    * - Romanian
-     - 39.88
+     - 39.68
      - Russian
-     - 12.65
+     - 12.64
      - Serbian
      - 0.1
    * - Slovak
@@ -124,7 +124,7 @@ Statistics of translation
      - Slovenian
      - 3.02
      - Spanish
-     - 94.25
+     - 95.15
    * - Swedish
      - 0.96
      - Tagalog
