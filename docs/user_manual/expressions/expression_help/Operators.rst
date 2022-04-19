@@ -264,7 +264,7 @@ Compares two values and evaluates to 1 if the left value is greater or equal tha
 AND
 ...
 
-Returns TRUE when condition a and b are true.
+Returns TRUE when conditions a and b are true.
 
 .. list-table::
    :widths: 15 85
