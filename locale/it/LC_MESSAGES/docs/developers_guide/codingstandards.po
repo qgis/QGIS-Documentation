@@ -2,25 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2021
+# Harrissou Sant-anna, 2022
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-13 09:01+0100\n"
-"PO-Revision-Date: 2020-12-24 12:01+0000\n"
-"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2021\n"
+"POT-Creation-Date: 2022-03-12 00:23+0100\n"
+"PO-Revision-Date: 2022-03-14 05:07+0000\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2022\n"
 "Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
+"Generated-By: Babel 2.9.0\n"
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -498,6 +498,14 @@ msgstr ""
 msgid "Editing"
 msgstr "Modifica"
 
+#: ../../docs/developers_guide/codingstandards.rst:327
+msgid ""
+"Any text editor/IDE can be used to edit QGIS code, providing the following "
+"requirements are met."
+msgstr ""
+"Qualsiasi editor di testo/IDE può essere usato per modificare il codice "
+"QGIS, a condizione che siano soddisfatti i seguenti requisiti."
+
 #: ../../docs/developers_guide/codingstandards.rst:331
 msgid "Tabs"
 msgstr "Schede"
@@ -514,9 +522,24 @@ msgstr ""
 msgid "Indentation"
 msgstr "Indentazione"
 
+#: ../../docs/developers_guide/codingstandards.rst:354
+msgid "Braces should start on the line following the expression:"
+msgstr "Le parentesi dovrebbero iniziare sulla linea che segue l'espressione:"
+
 #: ../../docs/developers_guide/codingstandards.rst:370
 msgid "API Compatibility"
 msgstr "Compatibilità API"
+
+#: ../../docs/developers_guide/codingstandards.rst:372
+msgid "There is :api:`API documentation <>` for C++."
+msgstr "C'è :api:`Documentazione API <>` per C++."
+
+#: ../../docs/developers_guide/codingstandards.rst:416
+msgid ""
+"Some of the SIP files are automatically generated using a dedicated script."
+msgstr ""
+"Alcuni dei file SIP sono generati automaticamente utilizzando uno script "
+"dedicato."
 
 #: ../../docs/developers_guide/codingstandards.rst:429
 msgid "Use ``SIP_SKIP`` to discard a line"
@@ -525,6 +548,22 @@ msgstr "Usare ``SIP_SKIP`` per cancellare una linea"
 #: ../../docs/developers_guide/codingstandards.rst:430
 msgid "The following annotations are handled:"
 msgstr "Le annotazioni che seguono sono gestite:"
+
+#: ../../docs/developers_guide/codingstandards.rst:432
+msgid "``SIP_FACTORY``: ``/Factory/``"
+msgstr "``SIP_FACTORY``: ``/Factory/``"
+
+#: ../../docs/developers_guide/codingstandards.rst:433
+msgid "``SIP_OUT``: ``/Out/``"
+msgstr "``SIP_OUT``: ``/Out/``"
+
+#: ../../docs/developers_guide/codingstandards.rst:434
+msgid "``SIP_INOUT``: ``/In,Out/``"
+msgstr "``SIP_INOUT``: ``/In,Out/``"
+
+#: ../../docs/developers_guide/codingstandards.rst:435
+msgid "``SIP_TRANSFER``: ``/Transfer/``"
+msgstr "``SIP_TRANSFER``: ``/Transfer/``"
 
 #: ../../docs/developers_guide/codingstandards.rst:436
 msgid "``SIP_PYNAME(name)``: ``/PyName=name/``"
@@ -549,6 +588,24 @@ msgid ""
 msgstr ""
 "le sezioni \"private\" non vengono visualizzate, a meno di usare, in questo "
 "blocco, il comando ``#ifdef SIP_RUN`` "
+
+#: ../../docs/developers_guide/codingstandards.rst:450
+msgid "A demo file can be found in :file:`tests/code_layout/sipifyheader.h`."
+msgstr ""
+"Un file demo può essere trovato in :file:`tests/code_layout/sipifyheader.h`."
+
+#: ../../docs/developers_guide/codingstandards.rst:455
+msgid "The SIP file can be generated using a dedicated script. For instance:"
+msgstr ""
+"Il file SIP può essere generato utilizzando uno script dedicato. Ad esempio:"
+
+#: ../../docs/developers_guide/codingstandards.rst:461
+msgid ""
+"To automatically generate the SIP file of a newly added C++ file "
+":file:`scripts/sip_include.sh` needs to be executed."
+msgstr ""
+"Per generare automaticamente il file SIP di un nuovo file C++ aggiunto deve "
+"essere eseguito :file:`scripts/sip_include.sh`."
 
 #: ../../docs/developers_guide/codingstandards.rst:482
 msgid "Coding Style"
@@ -599,3 +656,63 @@ msgstr ""
 #: ../../docs/developers_guide/codingstandards.rst:528
 msgid "or this:"
 msgstr "o questo:"
+
+#: ../../docs/developers_guide/codingstandards.rst:587
+msgid ""
+"`Effective Modern C++ <http://shop.oreilly.com/product/0636920033707.do>`_, "
+"Scott Meyers"
+msgstr ""
+"`Effective Modern C++ <http://shop.oreilly.com/product/0636920033707.do>`_, "
+"Scott Meyers"
+
+#: ../../docs/developers_guide/codingstandards.rst:588
+msgid ""
+"`More Effective C++ <https://www.informit.com/store/more-effective-c-plus-"
+"plus-35-new-ways-to-improve-your-9780201633719>`_, Scott Meyers"
+msgstr ""
+"`More Effective C++ <https://www.informit.com/store/more-effective-c-plus-"
+"plus-35-new-ways-to-improve-your-9780201633719>`_, Scott Meyers"
+
+#: ../../docs/developers_guide/codingstandards.rst:589
+msgid ""
+"`Effective STL <https://www.informit.com/store/effective-stl-50-specific-"
+"ways-to-improve-your-use-9780201749625>`_, Scott Meyers"
+msgstr ""
+"`Effective STL <https://www.informit.com/store/effective-stl-50-specific-"
+"ways-to-improve-your-use-9780201749625>`_, Scott Meyers"
+
+#: ../../docs/developers_guide/codingstandards.rst:590
+msgid ""
+"`Design Patterns <https://www.amazon.com/Design-Patterns-Elements-Reusable-"
+"Object-Oriented/dp/0201633612>`_, GoF"
+msgstr ""
+"`Design Patterns <https://www.amazon.com/Design-Patterns-Elements-Reusable-"
+"Object-Oriented/dp/0201633612>`_, GoF"
+
+#: ../../docs/developers_guide/codingstandards.rst:592
+msgid ""
+"You should also really read this article from Qt Quarterly on `designing Qt "
+"style (APIs) <https://doc.qt.io/archives/qq/qq13-apis.html>`_"
+msgstr ""
+"Dovresti anche leggere questo articolo di Qt Quarterly su `designing Qt "
+"style (APIs) <https://doc.qt.io/archives/qq/qq13-apis.html>`_"
+
+#: ../../docs/developers_guide/codingstandards.rst:597
+msgid "Credits for contributions"
+msgstr "Crediti per contributi"
+
+#: ../../docs/developers_guide/codingstandards.rst:608
+msgid ""
+"writing an article about the new feature on a blog, and add it to the QGIS "
+"planet https://plugins.qgis.org/planet/"
+msgstr ""
+"scrivendo un articolo sulla nuova funzione su un blog, e aggiungerlo al QGIS"
+" planet https://plugins.qgis.org/planet/"
+
+#: ../../docs/developers_guide/codingstandards.rst:612
+msgid ":source:`doc/CONTRIBUTORS`"
+msgstr ":source:`doc/CONTRIBUTORS`"
+
+#: ../../docs/developers_guide/codingstandards.rst:613
+msgid ":source:`doc/AUTHORS`"
+msgstr ":source:`doc/AUTHORS`"
