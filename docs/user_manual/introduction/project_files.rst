@@ -166,6 +166,8 @@ You can:
   to auto-fix those that have the same broken file path.
 * |deleteSelected| :guilabel:`Remove Unavailable Layers` from the project.
 
+Launching QGIS from command line using the :ref:`skipbadlayers` option can
+help you skip the :guilabel:`Handle Unavailable Layers` dialog at startup.
 
 .. _`sec_output`:
 
