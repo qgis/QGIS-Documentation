@@ -117,6 +117,11 @@ several ways to define these variables. This is fully described in
      - false
      - All
 
+   * - QGIS_SERVER_LANDING_PAGE_PREFIX
+     - Prefix of the path component of the landing page base URL
+     - ""
+     - All
+
    * - .. _qgis_server_landing_page_projects_directories:
 
        QGIS_SERVER_LANDING_PAGE_PROJECTS_DIRECTORIES
