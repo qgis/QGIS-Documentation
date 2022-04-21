@@ -93,7 +93,7 @@ Of course, you can use your favorite GIS software to open this file and
 take a look at the configuration and available layers.
 
 To properly deploy QGIS server you need a HTTP server. Recommended choices are
-`Apache <https://httpd.apache.org/docs/>`_ or `NGINX <https://nginx.org/en/docs/>`_.
+`Apache <https://httpd.apache.org/docs/>`_ or `NGINX <https://nginx.org/en/docs/>`__.
 
 .. index:: Apache, mod_fcgid
 
@@ -167,13 +167,9 @@ Apache HTTP Server
 
        </VirtualHost>
 
-      Further readings:
-
-      * :ref:`QGIS Server logging <qgis-server-logging>`
-      * :ref:`pg-service-file in QGIS Server <pg-service-file>`
-
-      .. note:: Some of the configuration options are explained in the Server
-       :ref:`environment variables <server_env_variables>` section.
+      .. note:: Some of the above configuration options are explained in the Server
+       :ref:`environment variables <server_env_variables>` and
+       :ref:`pg_service file <pg-service-file>` sections.
 
    #. Let's now create the directories that will store the QGIS Server logs and
       the authentication database:
@@ -242,7 +238,7 @@ NGINX HTTP Server
 
 .. note:: In the following, please replace ``qgis.demo`` with the name or IP address of your server.
 
-You can also use QGIS Server with `NGINX <https://nginx.org/>`_. Unlike Apache,
+You can also use QGIS Server with `NGINX <https://nginx.org/>`__. Unlike Apache,
 NGINX does not automatically spawn FastCGI processes. The FastCGI processes are
 to be started by something else.
 
