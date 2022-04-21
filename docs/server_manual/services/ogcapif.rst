@@ -438,7 +438,7 @@ A typical Linux installation will have the following directory tree:
         │   ├── jsonFormatter.min.js
         │   └── style.css
         └── templates
-            └── oapif
+            └── wfs3
                 ├── describeCollection.html
                 ├── describeCollections.html
                 ├── footer.html
