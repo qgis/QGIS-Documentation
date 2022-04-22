@@ -92,7 +92,8 @@ Let's add a sample project. You can use your own, or one from
 Of course, you can use your favorite GIS software to open this file and
 take a look at the configuration and available layers.
 
-To properly deploy QGIS server you need a HTTP server. Recommended choices are **Apache** or **NGINX**.
+To properly deploy QGIS server you need a HTTP server. Recommended choices are
+`Apache <https://httpd.apache.org/docs/>`_ or `NGINX <https://nginx.org/en/docs/>`__.
 
 .. index:: Apache, mod_fcgid
 
@@ -103,129 +104,120 @@ Apache HTTP Server
 
 .. note:: In the following, please replace ``qgis.demo`` with the name or IP address of your server.
 
-Install Apache and  `mod_fcgid <https://httpd.apache.org/mod_fcgid/mod/mod_fcgid.html>`_:
+#. Install Apache and `mod_fcgid <https://httpd.apache.org/mod_fcgid/mod/mod_fcgid.html>`_:
 
-.. code-block:: bash
+   .. code-block:: bash
 
- apt install apache2 libapache2-mod-fcgid
+    apt install apache2 libapache2-mod-fcgid
 
 
-You can run QGIS Server on your default website, or configure a virtualhost
-specifically for this, as follows.
+#. You can run QGIS Server on your default website, but let's configure a `virtualhost
+   <https://httpd.apache.org/docs/2.4/vhosts>`_ specifically for this, as follows.
 
-In the :file:`/etc/apache2/sites-available` directory let's create a file
-called :file:`qgis.demo.conf`, with this content:
+   #. In the :file:`/etc/apache2/sites-available` directory, create a file
+      called :file:`qgis.demo.conf`, with this content:
 
-.. code-block:: apacheconf
+      .. code-block:: apacheconf
 
- <VirtualHost *:80>
-   ServerAdmin webmaster@localhost
-   ServerName qgis.demo
+       <VirtualHost *:80>
+         ServerAdmin webmaster@localhost
+         ServerName qgis.demo
 
-   DocumentRoot /var/www/html
+         DocumentRoot /var/www/html
 
-   # Apache logs (different than QGIS Server log)
-   ErrorLog ${APACHE_LOG_DIR}/qgis.demo.error.log
-   CustomLog ${APACHE_LOG_DIR}/qgis.demo.access.log combined
+         # Apache logs (different than QGIS Server log)
+         ErrorLog ${APACHE_LOG_DIR}/qgis.demo.error.log
+         CustomLog ${APACHE_LOG_DIR}/qgis.demo.access.log combined
 
-   # Longer timeout for WPS... default = 40
-   FcgidIOTimeout 120
+         # Longer timeout for WPS... default = 40
+         FcgidIOTimeout 120
 
-   FcgidInitialEnv LC_ALL "en_US.UTF-8"
-   FcgidInitialEnv PYTHONIOENCODING UTF-8
-   FcgidInitialEnv LANG "en_US.UTF-8"
+         FcgidInitialEnv LC_ALL "en_US.UTF-8"
+         FcgidInitialEnv PYTHONIOENCODING UTF-8
+         FcgidInitialEnv LANG "en_US.UTF-8"
 
-   # QGIS log
-   FcgidInitialEnv QGIS_SERVER_LOG_STDERR 1
-   FcgidInitialEnv QGIS_SERVER_LOG_LEVEL 0
+         # QGIS log
+         FcgidInitialEnv QGIS_SERVER_LOG_STDERR 1
+         FcgidInitialEnv QGIS_SERVER_LOG_LEVEL 0
 
-   # default QGIS project
-   SetEnv QGIS_PROJECT_FILE /home/qgis/projects/world.qgs
+         # default QGIS project
+         SetEnv QGIS_PROJECT_FILE /home/qgis/projects/world.qgs
 
-   # QGIS_AUTH_DB_DIR_PATH must lead to a directory writeable by the Server's FCGI process user
-   FcgidInitialEnv QGIS_AUTH_DB_DIR_PATH "/home/qgis/qgisserverdb/"
-   FcgidInitialEnv QGIS_AUTH_PASSWORD_FILE "/home/qgis/qgisserverdb/qgis-auth.db"
+         # QGIS_AUTH_DB_DIR_PATH must lead to a directory writeable by the Server's FCGI process user
+         FcgidInitialEnv QGIS_AUTH_DB_DIR_PATH "/home/qgis/qgisserverdb/"
+         FcgidInitialEnv QGIS_AUTH_PASSWORD_FILE "/home/qgis/qgisserverdb/qgis-auth.db"
 
-   # Set pg access via pg_service file
-   SetEnv PGSERVICEFILE /home/qgis/.pg_service.conf
-   FcgidInitialEnv PGPASSFILE "/home/qgis/.pgpass"
+         # Set pg access via pg_service file
+         SetEnv PGSERVICEFILE /home/qgis/.pg_service.conf
+         FcgidInitialEnv PGPASSFILE "/home/qgis/.pgpass"
 
-   # if qgis-server is installed from packages in debian based distros this is usually /usr/lib/cgi-bin/
-   # run "locate qgis_mapserv.fcgi" if you don't know where qgis_mapserv.fcgi is
-   ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
-   <Directory "/usr/lib/cgi-bin/">
-     AllowOverride None
-     Options +ExecCGI -MultiViews -SymLinksIfOwnerMatch
-     Require all granted
-   </Directory>
+         # if qgis-server is installed from packages in debian based distros this is usually /usr/lib/cgi-bin/
+         # run "locate qgis_mapserv.fcgi" if you don't know where qgis_mapserv.fcgi is
+         ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
+         <Directory "/usr/lib/cgi-bin/">
+           AllowOverride None
+           Options +ExecCGI -MultiViews -SymLinksIfOwnerMatch
+           Require all granted
+         </Directory>
 
-  <IfModule mod_fcgid.c>
-  FcgidMaxRequestLen 26214400
-  FcgidConnectTimeout 60
-  </IfModule>
+         <IfModule mod_fcgid.c>
+         FcgidMaxRequestLen 26214400
+         FcgidConnectTimeout 60
+         </IfModule>
 
- </VirtualHost>
+       </VirtualHost>
 
-Further readings:
+      .. note:: Some of the above configuration options are explained in the Server
+       :ref:`environment variables <server_env_variables>` and
+       :ref:`pg_service file <pg-service-file>` sections.
 
-* :ref:`QGIS Server logging <qgis-server-logging>`
-* :ref:`pg-service-file in QGIS Server <pg-service-file>`
+   #. Let's now create the directories that will store the QGIS Server logs and
+      the authentication database:
 
-You can do the above in a linux Desktop system by pasting and saving the above
-configuration after doing:
+      .. code-block:: bash
 
-.. code-block:: bash
+       mkdir -p /var/log/qgis/
+       chown www-data:www-data /var/log/qgis
+       mkdir -p /home/qgis/qgisserverdb
+       chown www-data:www-data /home/qgis/qgisserverdb
 
-  nano /etc/apache2/sites-available/qgis.demo.conf
+      .. note::
 
-.. note:: Some of the configuration options are explained in the Server
- :ref:`environment variables <server_env_variables>` section.
+       ``www-data`` is the Apache user on Debian based systems and we need Apache
+       to have access to those locations or files.
+       The ``chown www-data...`` commands change the owner of the respective directories
+       and files to ``www-data``.
 
-Let's now create the directories that will store the QGIS Server logs and
-the authentication database:
+#. We can now enable the virtual host and the ``fcgid`` mod if it's not already done:
 
-.. code-block:: bash
+   .. code-block:: bash
 
- mkdir -p /var/log/qgis/
- chown www-data:www-data /var/log/qgis
- mkdir -p /home/qgis/qgisserverdb
- chown www-data:www-data /home/qgis/qgisserverdb
+    a2enmod fcgid
+    a2ensite qgis.demo
 
-.. note::
+#. Now restart Apache for the new configuration to be taken into account:
 
- ``www-data`` is the Apache user on Debian based systems and we need Apache to have access to
- those locations or files.
- The ``chown www-data...`` commands change the owner of the respective directories and files
- to ``www-data``.
+   .. code-block:: bash
 
-We can now enable the `virtual host <https://httpd.apache.org/docs/2.4/vhosts>`_,
-enable the ``fcgid`` mod if it's not already enabled:
+    systemctl restart apache2
 
-.. code-block:: bash
+#. Now that Apache knows that he should answer requests to http://qgis.demo
+   we also need to setup the client system so that it knows who ``qgis.demo``
+   is. We do that by adding ``127.0.0.1 qgis.demo`` in the
+   `hosts <https://en.wikipedia.org/wiki/Hosts_%28file%29>`_ file.
 
- a2enmod fcgid
- a2ensite qgis.demo
+   .. code-block:: bash
 
-Now restart Apache for the new configuration to be taken into account:
+     # Replace 127.0.0.1 with the IP of your server.
+     sh -c "echo '127.0.0.1 qgis.demo' >> /etc/hosts"``.
 
-.. code-block:: bash
-
- systemctl restart apache2
-
-Now that Apache knows that he should answer requests to http://qgis.demo
-we also need to setup the client system so that it knows who ``qgis.demo``
-is. We do that by adding ``127.0.0.1 qgis.demo`` in the
-`hosts <https://en.wikipedia.org/wiki/Hosts_%28file%29>`_ file. We can do it
-with ``sh -c "echo '127.0.0.1 qgis.demo' >> /etc/hosts"``.
-Replace ``127.0.0.1`` with the IP of your server.
-
-.. note::
+.. important::
 
    Remember that both the :file:`qgis.demo.conf` and :file:`/etc/hosts` files should
    be configured for your setup to work.
    You can also test the access to your QGIS Server from other clients on the
-   network (e.g. Windows or macOS machines) by going to their :file:`/etc/hosts`
-   file and point the ``myhost`` name to whatever IP the server machine has on the
+   network (e.g. Windows or macos machines) by going to their :file:`/etc/hosts`
+   file and point the ``qgis.demo`` name to whatever IP the server machine has on the
    network (not ``127.0.0.1`` as it is the local IP, only accessible from the
    local machine).  On ``*nix`` machines the
    :file:`hosts` file is located in :file:`/etc`, while on Windows it's under
@@ -246,7 +238,7 @@ NGINX HTTP Server
 
 .. note:: In the following, please replace ``qgis.demo`` with the name or IP address of your server.
 
-You can also use QGIS Server with `NGINX <https://nginx.org/>`_. Unlike Apache,
+You can also use QGIS Server with `NGINX <https://nginx.org/>`__. Unlike Apache,
 NGINX does not automatically spawn FastCGI processes. The FastCGI processes are
 to be started by something else.
 
