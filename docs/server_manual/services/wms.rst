@@ -1975,23 +1975,16 @@ You can see there are several parameters in this request:
   It supports multipart geometries. Here is an example:
   ``HIGHLIGHT_GEOM=MULTILINESTRING((0 0, 0 1, 1 1))``.
   The coordinates should be in the CRS of the GetMap/GetPrint request.
-
-* **HIGHLIGHT_SYMBOL**: This controls how the geometry is outlined and
-  you can change the stroke width, color and opacity.
-
-* **HIGHLIGHT_LABELSTRING**: You can pass your labeling text to this
-  parameter.
-
-* **HIGHLIGHT_LABELSIZE**: This parameter controls the size of the
-  label.
-
-* **HIGHLIGHT_LABELFONT**: This parameter controls the font of the
-  label (e.g. Arial)
-
-* **HIGHLIGHT_LABELCOLOR**: This parameter controls the label color.
-
 * **HIGHLIGHT_LABELBUFFERCOLOR**: This parameter controls the label
   buffer color.
-
 * **HIGHLIGHT_LABELBUFFERSIZE**: This parameter controls the label
   buffer size.
+* **HIGHLIGHT_LABELCOLOR**: This parameter controls the label color.
+* **HIGHLIGHT_LABELFONT**: This parameter controls the font of the
+  label (e.g. Arial)
+* **HIGHLIGHT_LABELSIZE**: This parameter controls the size of the
+  label.
+* **HIGHLIGHT_LABELSTRING**: You can pass your labeling text to this
+  parameter.
+* **HIGHLIGHT_SYMBOL**: This controls how the geometry is outlined and
+  you can change the stroke width, color and opacity.
