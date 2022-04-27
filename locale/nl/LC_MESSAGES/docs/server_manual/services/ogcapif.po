@@ -6,102 +6,104 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2022
+# DiGro, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-12 00:23+0100\n"
+"POT-Creation-Date: 2022-04-27 02:44+0000\n"
 "PO-Revision-Date: 2022-03-14 05:12+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2022\n"
-"Language-Team: Dutch (https://www.transifex.com/qgis/teams/110551/nl/)\n"
+"Last-Translator: DiGro, 2022\n"
+"Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.10.1\n"
 "Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../docs/server_manual/services/ogcapif.rst:4
-msgid "WFS3 (OGC API Features)"
-msgstr "WFS3 (OGC API Features)"
+msgid "OGC API Features"
+msgstr "OGC API Features"
 
 #: ../../docs/server_manual/services/ogcapif.rst:6
 msgid ""
-"WFS3 is the first implementation of the new generation of OGC protocols. It "
-"is described by the `OGC API - Features - Part 1: Core "
+"OGC API Features (OAPIF) is the first implementation of the new generation "
+"of OGC protocols. It is described by the `OGC API - Features - Part 1: Core "
 "<http://docs.opengeospatial.org/is/17-069r3/17-069r3.html>`_ document."
 msgstr ""
-"WFS3 is de eerste implementatie van de nieuwe generatie protocollen van OGC."
-" Het is beschreven in het document `OGC API - Features - Part 1: Core "
+"OGC API Features (OAPIF) is de eerste implementatie van de nieuwe generatie "
+"protocollen van OGC. Het wordt beschreven in het document `OGC API - "
+"Features - Part 1: Core "
 "<http://docs.opengeospatial.org/is/17-069r3/17-069r3.html>`_."
 
 #: ../../docs/server_manual/services/ogcapif.rst:11
 msgid ""
 "Here is a quick informal summary of the most important differences between "
-"the well known WFS protocol and WFS3:"
+"the well known WFS protocol and OAPIF:"
 msgstr ""
 "Hier is een snel informeel overzicht van de meest belangrijke verschillen "
-"tussen het welbekende protocol WFS en WFS3:"
+"tussen het welbekende protocol WFS en OAPIF:"
 
 #: ../../docs/server_manual/services/ogcapif.rst:14
 msgid ""
-"WFS3 is based on a `REST "
+"OAPIF is based on a `REST "
 "<https://en.wikipedia.org/wiki/Representational_state_transfer>`_ API"
 msgstr ""
-"WFS3 is gebaseerd op een `REST "
+"OAPIF is gebaseerd op een `REST "
 "<https://en.wikipedia.org/wiki/Representational_state_transfer>`_ API"
 
 #: ../../docs/server_manual/services/ogcapif.rst:17
 msgid ""
-"WFS3 API must follow the `OPENAPI "
+"OAPIF must follow the `OPENAPI "
 "<https://en.wikipedia.org/wiki/OpenAPI_Specification>`_ specifications"
 msgstr ""
-"WFS3 API moet de specificaties volgen van `OPENAPI "
+"OAPIF moet de specificaties volgen van `OPENAPI "
 "<https://en.wikipedia.org/wiki/OpenAPI_Specification>`_"
 
 #: ../../docs/server_manual/services/ogcapif.rst:20
 msgid ""
-"WFS3 supports multiple output formats but it does not dictate any (only "
-"GeoJSON and HTML are currently available in QGIS WFS3) and it uses `content "
-"negotiation <https://en.wikipedia.org/wiki/Content_negotiation>`_ to "
+"OAPIF supports multiple output formats but it does not dictate any (only "
+"GeoJSON and HTML are currently available in QGIS OAPIF) and it uses `content"
+" negotiation <https://en.wikipedia.org/wiki/Content_negotiation>`_ to "
 "determine which format is to be served to the client"
 msgstr ""
-"WFS3 ondersteunt meerdere indelingen voor uitvoer, maar legt er geen "
+"OAPIF ondersteunt meerdere indelingen voor uitvoer, maar legt er geen "
 "verplicht op (alleen GeoJSON en HTML zijn momenteel beschikbaar in QGIS "
-"WFS3) en het gebruikt `content negotiation "
+"OAPIF) en het gebruikt `content negotiation "
 "<https://en.wikipedia.org/wiki/Content_negotiation>`_ om te bepalen welke "
 "indeling aan de cliënt moet worden geserveerd"
 
 #: ../../docs/server_manual/services/ogcapif.rst:25
-msgid "JSON and HTML are first class citizens in WFS3"
-msgstr "JSON en HTML zijn eerste klas burgers in WFS3"
+msgid "JSON and HTML are first class citizens in OAPIF"
+msgstr "JSON en HTML zijn eerste klas burgers in OAPIF"
 
 #: ../../docs/server_manual/services/ogcapif.rst:26
-msgid "WFS3 is self-documenting (through the ``/api`` endpoint)"
-msgstr "WFS3 is zelf-gedocumenteerd (via het eindpunt ``/api``)"
+msgid "OAPIF is self-documenting (through the ``/api`` endpoint)"
+msgstr "OAPIF is zelf-gedocumenteerd (via het eindpunt ``/api``)"
 
 #: ../../docs/server_manual/services/ogcapif.rst:27
-msgid "WFS3 is fully navigable (through links) and browsable"
-msgstr "WFS3 is volledig te navigeren (via links) en door te bladeren"
+msgid "OAPIF is fully navigable (through links) and browsable"
+msgstr "OAPIF is volledig te navigeren (via links) en door te bladeren"
 
 #: ../../docs/server_manual/services/ogcapif.rst:31
 msgid ""
-"While the WFS3 implementation in QGIS can make use of the ``MAP`` parameter "
-"to specify the project file, no extra query parameters are allowed by the "
-"OPENAPI specification. For this reason it is strongly recommended that "
-"``MAP`` is not exposed in the URL and the project file is specified in the "
-"environment by other means (i.e. setting ``QGIS_PROJECT_FILE`` in the "
-"environment through a web server rewrite rule)."
+"While the OGC API Features implementation in QGIS can make use of the "
+"``MAP`` parameter to specify the project file, no extra query parameters are"
+" allowed by the OPENAPI specification. For this reason it is strongly "
+"recommended that ``MAP`` is not exposed in the URL and the project file is "
+"specified in the environment by other means (i.e. setting "
+"``QGIS_PROJECT_FILE`` in the environment through a web server rewrite rule)."
 msgstr ""
-"Hoewel de implementatie van WFS3 in QGIS gebruik kan maken van de parameter "
-"``MAP`` om het projectbestand te specificeren, zijn geen extra parameters "
-"voor query toegestaan door de specificatie van OPENAPI. Om deze reden wordt "
-"sterk aanbevolen dat ``MAP`` niet wordt weergegeven in de URL en dat het "
-"projectbestand in de omgeving op een andere wijze wordt gespecificeerd (d.i."
-" instellen van ``QGIS_PROJECT_FILE`` in de omgeving met een regel rewrite "
-"voor een webserver)."
+"Hoewel de implementatie van OGC API Features in QGIS gebruik kan maken van "
+"de parameter ``MAP`` om het projectbestand te specificeren, zijn geen extra "
+"parameters voor query toegestaan door de specificatie van OPENAPI. Om deze "
+"reden wordt sterk aanbevolen dat ``MAP`` niet wordt weergegeven in de URL en"
+" dat het projectbestand in de omgeving op een andere wijze wordt "
+"gespecificeerd (d.i. instellen van ``QGIS_PROJECT_FILE`` in de omgeving met "
+"een regel rewrite voor een webserver)."
 
 #: ../../docs/server_manual/services/ogcapif.rst:42
 msgid ""
@@ -119,11 +121,11 @@ msgstr "Weergavebronnen"
 
 #: ../../docs/server_manual/services/ogcapif.rst:50
 msgid ""
-"The QGIS Server WFS3 implementation currently supports the following "
-"resource representation (output) formats:"
+"The implementation of OGC API Features in QGIS Server currently supports the"
+" following resource representation (output) formats:"
 msgstr ""
-"De QGIS Server WFS3 implementatie ondersteunt momenteel de volgende "
-"weergavebronnen (uitvoer) indelingen:"
+"De implementatie van OGC API Features in QGIS Server ondersteunt momenteel "
+"de volgende weergavebronnen (uitvoer) indelingen:"
 
 #: ../../docs/server_manual/services/ogcapif.rst:53
 msgid "HTML"
@@ -331,8 +333,8 @@ msgid "the Collections (path ``/collections``, link relation ``data``)."
 msgstr "de Collecties (pad ``/collections``, linkrelatie ``data``)."
 
 #: ../../docs/server_manual/services/ogcapif.rst:121
-msgid "Server WFS3 landing page"
-msgstr "Server WFS3 startpagina"
+msgid "Server OAPIF landing page"
+msgstr "Server OAPIF startpagina"
 
 #: ../../docs/server_manual/services/ogcapif.rst:126
 msgid "API Definition"
@@ -383,8 +385,8 @@ msgstr ""
 "is ``/collections/``."
 
 #: ../../docs/server_manual/services/ogcapif.rst:158
-msgid "Server WFS3 collections list page"
-msgstr "Server WFS3 pagina met lijst van collecties"
+msgid "Server OAPIF collections list page"
+msgstr "Server OAPIF pagina met lijst van collecties"
 
 #: ../../docs/server_manual/services/ogcapif.rst:162
 msgid "Collection detail"
@@ -412,8 +414,8 @@ msgstr ""
 " objecten."
 
 #: ../../docs/server_manual/services/ogcapif.rst:179
-msgid "Server WFS3 collection detail page"
-msgstr "Server WFS3 pagina met detail collectie"
+msgid "Server OAPIF collection detail page"
+msgstr "Server OAPIF pagina met detail collectie"
 
 #: ../../docs/server_manual/services/ogcapif.rst:185
 msgid "Features list"
@@ -434,8 +436,8 @@ msgid "This endpoint is analogue to ``GetFeature`` in  WFS 1 and WFS 2."
 msgstr "Dit eindpunt is analoog aan ``GetFeature`` in WFS 1 en WFS 2."
 
 #: ../../docs/server_manual/services/ogcapif.rst:205
-msgid "Server WFS3 features list page"
-msgstr "Server WFS3 pagina met lijst met objecten"
+msgid "Server OAPIF features list page"
+msgstr "Server OAPIF pagina met lijst met objecten"
 
 #: ../../docs/server_manual/services/ogcapif.rst:209
 msgid "Feature detail"
@@ -460,8 +462,8 @@ msgstr ""
 "van het object."
 
 #: ../../docs/server_manual/services/ogcapif.rst:225
-msgid "Server WFS3 feature detail page"
-msgstr "Server WFS3 pagina detail object"
+msgid "Server OAPIF feature detail page"
+msgstr "Server OAPIF pagina detail object"
 
 #: ../../docs/server_manual/services/ogcapif.rst:230
 msgid "Pagination"
@@ -699,17 +701,17 @@ msgid ""
 "The HTML representation uses a set of HTML templates to generate the "
 "response. The template is parsed by a template engine called `inja "
 "<https://github.com/pantor/inja/>`_. The templates can be customized by "
-"overriding them (see: :ref:`server_wfs3_template_override`). The template "
+"overriding them (see: :ref:`server_oapif_template_override`). The template "
 "has access to the same data that are available to the ``JSON`` "
 "representation and a few additional functions are available to the template:"
 msgstr ""
 "De weergave HTML gebruikt een set sjablonen voor HTML om het antwoord te "
 "maken. De sjabloon wordt geparset door een sjabloonprogramma, genaamd `inja "
 "<https://github.com/pantor/inja>`_. De sjablonen kunnen worden aangepast "
-"door ze te overschrijven (zie: :ref:`server_wfs3_template_override`). De "
+"door ze te overschrijven (zie:  :ref:`server_oapif_template_override`). Het "
 "sjabloon heeft toegang tot dezelfde gegevens, als die welke beschikbaar zijn"
-" voor de weergave ``JSON``, en een aantal aanvullende functies zijn voor de "
-"sjabloon beschikbaar:"
+" voor de weergave ``JSON``, en een aantal aanvullende functies zijn voor het"
+" sjabloon beschikbaar:"
 
 #: ../../docs/server_manual/services/ogcapif.rst:402
 msgid "Custom template functions"
@@ -738,13 +740,13 @@ msgstr ""
 msgid ""
 "``static( path )``: returns the full URL to the specified static path. For "
 "example: \"static( \"/style/black.css\" )\" with a root path "
-"\"http://localhost/qgisserver/wfs3\" will return "
-"\"http://localhost/qgisserver/wfs3/static/style/black.css\"."
+"\"http://localhost/qgisserver/oapif\" will return "
+"\"http://localhost/qgisserver/oapif/static/style/black.css\"."
 msgstr ""
 "``static( path )``: geeft de volledige URL terug naar het gespecificeerde "
 "statische pad. Bijvoorbeeld: \"static( \"/style/black.css\" )\" met een "
-"bronpad \"http://localhost/qgisserver/wfs3\" zal teruggeven "
-"\"http://localhost/qgisserver/wfs3/static/style/black.css\"."
+"bronpad \"http://localhost/qgisserver/oapif\" zal teruggeven "
+"\"http://localhost/qgisserver/oapif/static/style/black.css\"."
 
 #: ../../docs/server_manual/services/ogcapif.rst:412
 msgid ""
