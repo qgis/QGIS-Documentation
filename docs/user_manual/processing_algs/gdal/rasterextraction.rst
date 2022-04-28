@@ -15,7 +15,7 @@ Clip raster by extent
 Clips any GDAL-supported raster file to a given extent.
 
 This algorithm is derived from the
-`GDAL warp utility <https://gdal.org/programs/gdalwarp.html>`_.
+`GDAL translate utility <https://gdal.org/programs/gdal_translate.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Extraction`
 
