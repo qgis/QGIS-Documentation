@@ -23,16 +23,22 @@ from the user before they take place, others happen automatically.
      -
      -
      -
-   * - New version check
-     - Notify the user on new QGIS versions availability
-     - Automatic
-     - https://www.qgis.org
-     - IP, QGIS version, OS
-     - IP in server log
    * - Python API help
      - Browser PyQGIS documentation
      - User initiated
      - https://qgis.org/pyqgis/%1/search.html?q=%2
+     - IP, QGIS version, OS
+     - IP in server log
+   * - **version.qgis.org**
+     -
+     -
+     -
+     -
+     -
+   * - New version check
+     - Notify the user on new QGIS versions availability
+     - Automatic
+     - https://version.qgis.org
      - IP, QGIS version, OS
      - IP in server log
    * - **feed.qgis.org**
@@ -45,8 +51,8 @@ from the user before they take place, others happen automatically.
      - Retrieve QGIS news from the feed
      - Automatic
      - https://feed.qgis.org
-     - IP, language code, last download timestamp, OS
-     - IP in server log
+     - IP, QGIS version, language code, last download timestamp, OS
+     - IP in server log; QGIS version, OS and IP are aggregated and used to collect some statistics
    * - **plugins.qgis.org**
      -
      -
