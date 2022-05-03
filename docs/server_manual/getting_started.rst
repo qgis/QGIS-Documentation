@@ -714,7 +714,6 @@ A simple procedure is the following:
                 Options ExecCGI
                 Require all granted
             </Directory>
-
       * - Enable file extensions to use for script files. Uncomment and complete
         - .. code-block:: apache
 
@@ -723,6 +722,18 @@ A simple procedure is the following:
         - .. code-block:: apache
 
             AddHandler cgi-script .cgi .exe
+      * - Add more OSGeo4W custom configuration variables
+        - .. code-block:: apache
+
+            # parse OSGeo4W apache conf files
+            IncludeOptional "C:/OSGeo4W64/httpd.d/httpd_*.conf"
+
+        - .. code-block:: apache
+
+            # parse OSGeo4W apache conf files
+            IncludeOptional "C:/OSGeo4W64/httpd.d/httpd_*.conf"
+            SetEnv GDAL_DATA "C:/OSGeo4W64/share/gdal"
+            SetEnv QGIS_AUTH_DB_DIR_PATH "C:/OSGeo4W64/apps/qgis/resources"
 
 #. Restart the Apache web server
 
