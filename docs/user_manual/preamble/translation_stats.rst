@@ -6,7 +6,7 @@
 Statistics of translation
 ===========================
 
-*(last update: 2022-04-26)*
+*(last update: 2022-05-03)*
 
 .. list-table::
    :widths: auto
@@ -14,9 +14,9 @@ Statistics of translation
    * - Number of strings
      - Number of target languages
      - Overall Translation ratio
-   * - **33301**
+   * - **33374**
      - **57**
-     - **12.04%**
+     - **12.07%**
 
 
 
@@ -46,13 +46,13 @@ Statistics of translation
      - Catalan
      - 1.4
      - Chinese Simplified
-     - 14.57
+     - 15.56
    * - Chinese Traditional
      - 0.59
      - Croatian
      - 0.1
      - Czech
-     - 5.47
+     - 5.46
    * - Danish
      - 0.63
      - Dutch
@@ -60,41 +60,41 @@ Statistics of translation
      - Estonian
      - 1.26
    * - Finnish
-     - 1.68
+     - 1.67
      - French
-     - 82.49
+     - 82.41
      - Galician
-     - 0.44
+     - 0.43
    * - Georgian
      - 0.1
      - German
-     - 18.92
+     - 18.88
      - Greek
      - 0.35
    * - Hebrew
      - 0.71
      - Hindi
-     - 0.29
+     - 0.28
      - Hungarian
-     - 8.99
+     - 8.97
    * - Igbo
      - 0.01
      - Indonesian
      - 2.65
      - Italian
-     - 83.33
+     - 84.5
    * - Japanese
-     - 64.42
+     - 64.26
      - Kabyle
      - 0.09
      - Korean
-     - 74.75
+     - 74.67
    * - Lithuanian
-     - 4.74
+     - 4.73
      - Macedonian
      - 0.11
      - Malay
-     - 0.05
+     - 0.04
    * - Malayalam
      - 0.09
      - Marathi
@@ -110,21 +110,21 @@ Statistics of translation
    * - Polish
      - 1.69
      - Portuguese (Brazil)
-     - 36.46
+     - 36.69
      - Portuguese (Portugal)
-     - 7.85
+     - 7.84
    * - Romanian
-     - 39.64
+     - 39.55
      - Russian
-     - 12.64
+     - 12.61
      - Serbian
      - 0.1
    * - Slovak
      - 1.23
      - Slovenian
-     - 3.02
+     - 3.01
      - Spanish
-     - 95.63
+     - 95.68
    * - Swedish
      - 0.96
      - Tagalog
@@ -142,6 +142,6 @@ Statistics of translation
      - Urdu
      - 0.01
      - Vietnamese
-     - 0.23
+     - 0.22
 
 
