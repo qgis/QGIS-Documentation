@@ -618,6 +618,11 @@ Parameters
        * 1 --- Miter
        * 2 --- Bevel
 
+       .. figure:: img/buffer_join_style.png
+          :align: center
+          :width: 100%
+
+          Round, miter, and bevel join styles
    * - **Miter limit**
      - ``MITER_LIMIT``
      - [number]
