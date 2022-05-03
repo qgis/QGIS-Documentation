@@ -1969,29 +1969,30 @@ a label are drawn on top of the normal map:
 
    Server response to a GetMap request with redlining parameters
 
-You can see there are several parameters in this request:
+You can see there are several parameters in this request to control
+the redlining feature. The full list includes:
 
 * **HIGHLIGHT_GEOM**: You can add POINT, MULTILINESTRING, POLYGON etc.
   It supports multipart geometries. Here is an example:
   ``HIGHLIGHT_GEOM=MULTILINESTRING((0 0, 0 1, 1 1))``.
   The coordinates should be in the CRS of the GetMap/GetPrint request.
-
-* **HIGHLIGHT_SYMBOL**: This controls how the geometry is outlined and
-  you can change the stroke width, color and opacity.
-
-* **HIGHLIGHT_LABELSTRING**: You can pass your labeling text to this
-  parameter.
-
-* **HIGHLIGHT_LABELSIZE**: This parameter controls the size of the
-  label.
-
-* **HIGHLIGHT_LABELFONT**: This parameter controls the font of the
-  label (e.g. Arial)
-
-* **HIGHLIGHT_LABELCOLOR**: This parameter controls the label color.
-
 * **HIGHLIGHT_LABELBUFFERCOLOR**: This parameter controls the label
   buffer color.
-
 * **HIGHLIGHT_LABELBUFFERSIZE**: This parameter controls the label
   buffer size.
+* **HIGHLIGHT_LABELCOLOR**: This parameter controls the label color.
+* **HIGHLIGHT_LABEL_DISTANCE**: controls the distance between feature
+  (e.g. point or line) and the label in mm
+* **HIGHLIGHT_LABELFONT**: This parameter controls the font of the
+  label (e.g. Arial)
+* **HIGHLIGHT_LABEL_HORIZONTAL_ALIGNMENT**: places the label horizontally
+  on a point using the specified alignment (e.g. 'left', 'center', 'right')
+* **HIGHLIGHT_LABEL_ROTATION**: controls the label rotation in degrees
+* **HIGHLIGHT_LABELSIZE**: This parameter controls the size of the
+  label.
+* **HIGHLIGHT_LABELSTRING**: You can pass your labeling text to this
+  parameter.
+* **HIGHLIGHT_LABEL_VERTICAL_ALIGNMENT**: places the label vertically
+  on a point using the specified alignment (e.g. 'top', 'half', 'bottom')
+* **HIGHLIGHT_SYMBOL**: This controls how the geometry is outlined and
+  you can change the stroke width, color and opacity.
