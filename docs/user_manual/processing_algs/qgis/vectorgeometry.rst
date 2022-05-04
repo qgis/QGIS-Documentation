@@ -6167,13 +6167,14 @@ Parameters
    * - **Side**
      - ``SIDE``
      - [enumeration]
+  
+       Default: 0
      - Which side to create the buffer on.
        One of:
 
        * 0 -- Left
        * 1 -- Right
 
-       Default: 0
    * - **Segments**
      - ``SEGMENTS``
      - [number]
