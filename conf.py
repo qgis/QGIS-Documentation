@@ -486,4 +486,3 @@ linkcheck_retries = 2
 # -- Redirection settings --------------------------------
 
 rediraffe_redirects = "redirects.txt"
-#rediraffe_branch = "release_3.4"
