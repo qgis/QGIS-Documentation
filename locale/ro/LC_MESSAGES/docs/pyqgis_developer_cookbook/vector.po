@@ -2,20 +2,20 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
-# Sorin Călinică <scalinica@gmail.com>, 2021
+# Harrissou Sant-anna, 2022
+# Sorin Călinică <scalinica@gmail.com>, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-24 02:24+0000\n"
-"PO-Revision-Date: 2020-12-24 10:19+0000\n"
-"Last-Translator: Sorin Călinică <scalinica@gmail.com>, 2021\n"
+"POT-Creation-Date: 2022-03-12 00:23+0100\n"
+"PO-Revision-Date: 2022-03-14 05:14+0000\n"
+"Last-Translator: Sorin Călinică <scalinica@gmail.com>, 2022\n"
 "Language-Team: Romanian (https://www.transifex.com/qgis/teams/6144/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,42 +24,50 @@ msgstr ""
 "Language: ro\n"
 "Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:54
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:14
 msgid "Using Vector Layers"
 msgstr "Utilizarea straturilor vectoriale"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:59
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:16
+msgid ""
+"The code snippets on this page need the following imports if you're outside "
+"the pyqgis console:"
+msgstr ""
+"Fragmentele de cod de pe această pagină necesită următoarele importuri, dacă"
+" vă aflați în afara consolei pyqgis:"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:60
 msgid ""
 "This section summarizes various actions that can be done with vector layers."
 msgstr ""
 "Această secțiune rezumă diferitele acțiuni care pot fi efectuate asupra "
 "straturilor vectoriale."
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:67
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:68
 msgid "Retrieving information about attributes"
 msgstr "Obținerea informaţiilor despre atribute"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:113
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:114
 msgid "Iterating over Vector Layer"
 msgstr "Iterații în straturile vectoriale"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:174
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:175
 msgid "Selecting features"
 msgstr "Selectarea entităților"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:231
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:232
 msgid "Accessing attributes"
 msgstr "Accesarea atributelor"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:257
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:258
 msgid "Iterating over selected features"
 msgstr "Parcurgerea entităților selectate"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:271
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:272
 msgid "Iterating over a subset of features"
 msgstr "Parcurgerea unui subset de entități"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:310
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:312
 msgid ""
 "If you need an attribute-based filter instead (or in addition) of a spatial "
 "one like shown in the examples above, you can build a :class:`QgsExpression "
@@ -73,7 +81,7 @@ msgstr ""
 "pe care să-l transmiteți constructorului :class:`QgsFeatureRequest "
 "<qgis.core.QgsFeatureRequest>`. Iată un exemplu:"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:325
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:327
 msgid ""
 "The request can be used to define the data retrieved for each feature, so "
 "the iterator returns all features, but returns partial data for each of "
@@ -83,11 +91,11 @@ msgstr ""
 "entitate, astfel încât iteratorul să întoarcă toate entitățile, dar să "
 "returneze datele parțiale pentru fiecare dintre ele."
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:350
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:352
 msgid "Modifying Vector Layers"
 msgstr "Modificarea straturilor vectoriale"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:385
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:387
 msgid ""
 "By using any of the following methods for vector layer editing, the changes "
 "are directly committed to the underlying data store (a file, database etc). "
@@ -101,23 +109,23 @@ msgstr ""
 "schimbări  temporare, treceți la secțiunea următoare, care explică "
 "efectuarea :ref:`modifications with editing buffer <editing-buffer>`."
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:408
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:410
 msgid "Add Features"
 msgstr "Adăugarea entităților"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:434
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:436
 msgid "Delete Features"
 msgstr "Ștergerea entităților"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:444
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:446
 msgid "Modify Features"
 msgstr "Modificarea entităților"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:472
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:474
 msgid "Modifying Vector Layers with an Editing Buffer"
 msgstr "Modificarea straturi vectoriale prin editarea unui tampon de memorie"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:556
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:558
 msgid ""
 "You can also use the :code:`with edit(layer)`-statement to wrap commit and "
 "rollback into a more semantic code block as shown in the example below:"
@@ -126,11 +134,11 @@ msgstr ""
 "încorpora într-un bloc de cod semantic, pentru commit și rollback, așa cum "
 "se arată în exemplul de mai jos:"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:573
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:575
 msgid "Adding and Removing Fields"
 msgstr "Adăugarea și eliminarea câmpurilor"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:575
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:577
 msgid ""
 "To add fields (attributes), you need to specify a list of field definitions."
 " For deletion of fields just provide a list of field indexes."
@@ -139,7 +147,7 @@ msgstr ""
 "definiții pentru acestea. Pentru ștergerea de câmpuri e suficientă "
 "furnizarea unei liste de indecși pentru câmpuri."
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:606
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:608
 msgid ""
 "After adding or removing fields in the data provider the layer's fields need"
 " to be updated because the changes are not automatically propagated."
@@ -148,11 +156,11 @@ msgstr ""
 "stratului trebuie să fie actualizate, deoarece modificările nu se propagă "
 "automat."
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:623
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:625
 msgid "Using Spatial Index"
 msgstr "Crearea unui index spațial"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:625
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:627
 msgid ""
 "Spatial indexes can dramatically improve the performance of your code if you"
 " need to do frequent queries to a vector layer. Imagine, for instance, that "
@@ -177,7 +185,7 @@ msgstr ""
 "locații. Dacă pentru stratul respectiv există un index spațial, operațiunea "
 "va fi mult mai eficientă."
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:636
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:638
 msgid ""
 "Think of a layer without a spatial index as a telephone book in which "
 "telephone numbers are not ordered or indexed. The only way to find the "
@@ -189,7 +197,7 @@ msgstr ""
 "afla numărul de telefon al unei anumite persoane este de a citi toate "
 "numerele, începând cu primul, până când îl găsiți."
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:640
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:642
 msgid ""
 "Spatial indexes are not created by default for a QGIS vector layer, but you "
 "can create them easily. This is what you have to do:"
@@ -197,17 +205,17 @@ msgstr ""
 "Indecșii spațiali nu sunt creați în mod implicit pentru un strat QGIS "
 "vectorial, dar îi puteți genera cu ușurință. Iată ce trebuie să faceți:"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:665
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:667
 msgid "once spatial index is filled with some values, you can do some queries"
 msgstr ""
 "o dată ce ați introdus valori în indexul spațial, puteți efectua unele "
 "interogări"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:925
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:927
 msgid "The provider supports string, int and double fields."
 msgstr "Furnizorul suportă câmpuri de tip string, int sau double."
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:941
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:943
 msgid ""
 "The URI can also specify the coordinate reference system, fields, and "
 "indexing of the memory provider in the URI. The syntax is:"
@@ -215,23 +223,23 @@ msgstr ""
 "URI poate specifica, de asemenea, sistemul de coordonate de referință, "
 "câmpurile, precum și indexarea furnizorului de memorie. Sintaxa este:"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:947
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:949
 msgid "crs=definition"
 msgstr "crs=definiție"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:950
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:952
 msgid "index=yes"
 msgstr "index=yes"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:950
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:952
 msgid "Specifies that the provider will use a spatial index"
 msgstr "Specificați dacă furnizorul va utiliza un index spațial."
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:955
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:957
 msgid "field=name:type(length,precision)"
 msgstr "field=nume:tip(lungime,precizie)"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:953
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:955
 msgid ""
 "Specifies an attribute of the layer.  The attribute has a name, and "
 "optionally a type (integer, double, or string), length, and precision. There"
@@ -241,11 +249,11 @@ msgstr ""
 "tip (integer, double sau string), lungime și precizie. Pot exista mai multe "
 "definiții de câmp."
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:957
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:959
 msgid "The following example of a URI incorporates all these options"
 msgstr "Următorul exemplu de URI încorporează toate aceste opțiuni"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:963
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:965
 msgid ""
 "The following example code illustrates creating and populating a memory "
 "provider"
@@ -253,15 +261,15 @@ msgstr ""
 "Următorul exemplu de cod ilustrează crearea și popularea unui furnizor de "
 "memorie"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:989
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:991
 msgid "Finally, let's check whether everything went well"
 msgstr "În cele din urmă, să verificăm dacă totul a mers bine"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1014
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1016
 msgid "Appearance (Symbology) of Vector Layers"
 msgstr "Aspectul (simbologia) straturilor vectoriale"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1016
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1018
 msgid ""
 "When a vector layer is being rendered, the appearance of the data is given "
 "by **renderer** and **symbols** associated with the layer.  Symbols are "
@@ -273,35 +281,39 @@ msgstr ""
 " de reprezentarea vizuală a tuturor entităților, în timp ce un render "
 "determină ce simbol va fi folosit doar pentru anumite entități."
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1027
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1029
 msgid "And with that reference, let us explore it a bit"
 msgstr "Și cu acea referință, să explorăm un pic"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1040
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1042
 msgid "Type"
 msgstr "Tipul"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1040
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1042
 msgid "Class"
 msgstr "Clasa"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1040
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1042
 msgid "Description"
 msgstr "Descrierea"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1042
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1044
 msgid "singleSymbol"
 msgstr "singleSymbol"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1042
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1044
+msgid ":class:`QgsSingleSymbolRenderer <qgis.core.QgsSingleSymbolRenderer>`"
+msgstr ":class:`QgsSingleSymbolRenderer <qgis.core.QgsSingleSymbolRenderer>`"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1044
 msgid "Renders all features with the same symbol"
 msgstr "Asociază tuturor entităților același simbol"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1043
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1045
 msgid "categorizedSymbol"
 msgstr "categorizedSymbol"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1043
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1045
 msgid ""
 ":class:`QgsCategorizedSymbolRenderer "
 "<qgis.core.QgsCategorizedSymbolRenderer>`"
@@ -309,26 +321,26 @@ msgstr ""
 ":class:`QgsCategorizedSymbolRenderer "
 "<qgis.core.QgsCategorizedSymbolRenderer>`"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1043
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1045
 msgid "Renders features using a different symbol for each category"
 msgstr "Asociază entităților un simbol diferit, în funcție de categorie"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1044
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1046
 msgid "graduatedSymbol"
 msgstr "graduatedSymbol"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1044
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1046
 msgid ""
 ":class:`QgsGraduatedSymbolRenderer  <qgis.core.QgsGraduatedSymbolRenderer>`"
 msgstr ""
 ":class:`QgsGraduatedSymbolRenderer  <qgis.core.QgsGraduatedSymbolRenderer>`"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1044
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1046
 msgid "Renders features using a different symbol for each range of values"
 msgstr ""
 "Asociază fiecărei entități un simbol diferit pentru fiecare gamă de valori"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1059
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1061
 msgid ""
 "It is possible to obtain a dump of a renderer contents in text form --- can "
 "be useful for debugging"
@@ -336,82 +348,82 @@ msgstr ""
 "Este posibilă obținerea conținutului renderului sub formă de text --- lucru "
 "util pentru depanare"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1073
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1075
 msgid "Single Symbol Renderer"
 msgstr "Render cu Simbol Unic"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1100
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1102
 msgid ""
 "``name`` indicates the shape of the marker, and can be any of the following:"
 msgstr ""
 "``nume``: indică forma markerului, aceasta putând fi oricare dintre "
 "următoarele:"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1102
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1104
 msgid "``circle``"
 msgstr "``cerc``"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1103
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1105
 msgid "``square``"
 msgstr "``pătrat``"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1104
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1106
 msgid "``cross``"
 msgstr "``cross``"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1105
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1107
 msgid "``rectangle``"
 msgstr "``dreptunghi``"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1106
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1108
 msgid "``diamond``"
 msgstr "``diamant``"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1107
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1109
 msgid "``pentagon``"
 msgstr "``pentagon``"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1108
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1110
 msgid "``triangle``"
 msgstr "``triunghi``"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1109
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1111
 msgid "``equilateral_triangle``"
 msgstr "``triunghi echilateral``"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1110
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1112
 msgid "``star``"
 msgstr "``stea``"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1111
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1113
 msgid "``regular_star``"
 msgstr "``stea_regulată``"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1112
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1114
 msgid "``arrow``"
 msgstr "``săgeată``"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1113
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1115
 msgid "``filled_arrowhead``"
 msgstr "``vârf_de_săgeată_plin``"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1114
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1116
 msgid "``x``"
 msgstr "``x``"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1147
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1149
 msgid "Categorized Symbol Renderer"
 msgstr "Render cu Simboluri Categorisite"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1152
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1154
 msgid "To get a list of categories"
 msgstr "Pentru a obține o listă de categorii"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1183
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1185
 msgid "Graduated Symbol Renderer"
 msgstr "Render cu Simboluri Graduale"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1185
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1187
 msgid ""
 "This renderer is very similar to the categorized symbol renderer described "
 "above, but instead of one attribute value per class it works with ranges of "
@@ -421,11 +433,11 @@ msgstr ""
 "mai sus, dar în loc de o singură valoare de atribut per clasă el lucrează cu"
 " intervale de valori, putând fi, astfel, utilizat doar cu atribute numerice."
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1189
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1191
 msgid "To find out more about ranges used in the renderer"
 msgstr "Pentru a afla mai multe despre gamele utilizate în render"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1221
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1223
 msgid ""
 "If you wish to create your own graduated symbol renderer you can do so as "
 "illustrated in the example snippet below (which creates a simple two class "
@@ -435,25 +447,25 @@ msgstr ""
 "lucru așa cum este ilustrat în fragmentul de mai jos (care creează un simplu"
 " aranjament cu două clase)"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1265
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1267
 msgid "Working with Symbols"
 msgstr "Lucrul cu Simboluri"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1302
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1304
 msgid "Size and width are in millimeters by default, angles are in degrees."
 msgstr ""
 "Dimensiunea și lățimea sunt în milimetri, în mod implicit, iar unghiurile "
 "sunt în grade."
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1307
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1309
 msgid "Working with Symbol Layers"
 msgstr "Lucrul cu Straturile Simbolului"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1354
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1356
 msgid "Creating Custom Symbol Layer Types"
 msgstr "Crearea unor Tipuri Personalizate de Straturi pentru Simboluri"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1356
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1358
 msgid ""
 "Imagine you would like to customize the way how the data gets rendered. You "
 "can create your own symbol layer class that will draw the features exactly "
@@ -465,7 +477,7 @@ msgstr ""
 "entitățile exact așa cum doriți. Iată un exemplu de marker care desenează "
 "cercuri roșii cu o rază specificată"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1416
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1418
 msgid ""
 "Usually it is convenient to add a GUI for setting attributes of the symbol "
 "layer type to allow users to customize the appearance: in case of our "
@@ -477,7 +489,7 @@ msgstr ""
 "personalizeze aspectul: în exemplul de mai sus, putem lăsa utilizatorul să "
 "seteze raza cercului. Codul de mai jos implementează un astfel de widget"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1468
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1470
 msgid ""
 "Now we are missing only the final glue: to make QGIS aware of these new "
 "classes. This is done by adding the symbol layer to registry. It is possible"
@@ -492,11 +504,11 @@ msgstr ""
 "încărcarea de fișiere de proiect cu straturi simbol personalizate sau "
 "incapacitatea de a edita atributele stratului în GUI."
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1474
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1476
 msgid "We will have to create metadata for the symbol layer"
 msgstr "Va trebui să creăm metadate pentru stratul simbolului"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1503
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1505
 msgid ""
 "The last step is to add this symbol layer to the registry --- and we are "
 "done."
@@ -504,11 +516,11 @@ msgstr ""
 "Ultimul pas este de a adăuga acest strat simbol la registru --- și am "
 "încheiat."
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1509
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1511
 msgid "Creating Custom Renderers"
 msgstr "Crearea \\renderelor Personalizate"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1511
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1513
 msgid ""
 "It might be useful to create a new renderer implementation if you would like"
 " to customize the rules how to select symbols for rendering of features. "
@@ -522,7 +534,7 @@ msgstr ""
 "combinație de câmpuri, dimensiunea simbolurilor să depindă în funcție de "
 "scara curentă, etc"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1516
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1518
 msgid ""
 "The following code shows a simple custom renderer that creates two marker "
 "symbols and chooses randomly one of them for every feature"
@@ -531,7 +543,7 @@ msgstr ""
 "simboluri de tip marker și apoi alege aleatoriu unul dintre ele pentru "
 "fiecare entitate"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1607
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1609
 msgid ""
 "The last missing bit is the renderer metadata and registration in registry, "
 "otherwise loading of layers with the renderer will not work and user will "
@@ -543,10 +555,10 @@ msgstr ""
 "utilizatorul nu va fi capabil să-l selecteze din lista de rendere. Să "
 "finalizăm exemplul nostru de RandomRenderer"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1668
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1670
 msgid "Further Topics"
 msgstr "Lecturi suplimentare"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1671
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1673
 msgid "**TODO:**"
 msgstr "**DE EFECTUAT:**"

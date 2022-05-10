@@ -6,20 +6,21 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2022
+# Andrés Betancourt, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-12 00:23+0100\n"
+"POT-Creation-Date: 2022-05-04 02:41+0000\n"
 "PO-Revision-Date: 2022-03-14 05:07+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2022\n"
-"Language-Team: Spanish (https://www.transifex.com/qgis/teams/110551/es/)\n"
+"Last-Translator: Andrés Betancourt, 2022\n"
+"Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.10.1\n"
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -30,6 +31,10 @@ msgstr "Análisis Espacial Vectorial (Buffers)"
 #: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:7
 msgid "|gentleLogo|"
 msgstr "|gentleLogo|"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:289
+msgid "gentleLogo"
+msgstr "gentleLogo"
 
 #: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:7
 msgid "Objectives:"
@@ -250,20 +255,6 @@ msgstr ""
 " de buffer a ríos, basada en información relativa al uso del terreno "
 "adyacente"
 
-#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:116
-msgid ""
-"Buffers around polyline features, such as rivers or roads, do not have to be"
-" on both sides of the lines. They can be on either the left side or the "
-"right side of the line feature. In these cases the left or right side is "
-"determined by the direction from the starting point to the end point of line"
-" during digitising."
-msgstr ""
-"Buffers alrededor de entidades tipo polilínea, como ríos o carreteras, no "
-"necesariamente tienen que estar en los dos lados de las líneas. Pueden estar"
-" bien al lado izquierdo o al derecho de la entidad. En estos casos, el lado "
-"izquierdo o derecho se elige dependiendo de la dirección desde el punto de "
-"inicio hasta el punto final de la linea definida durante su digitalización."
-
 #: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:122
 msgid "Multiple buffer zones"
 msgstr "Zonas buffer múltiples"
@@ -317,25 +308,6 @@ msgstr ""
 msgid "Buffering outward and inward"
 msgstr "Buffer exterior e interior"
 
-#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:157
-msgid ""
-"Buffer zones around polygon features are usually extended outward from a "
-"polygon boundary but it is also possible to create a buffer zone inward from"
-" a polygon boundary. Say, for example, the Department of Tourism wants to "
-"plan a new road around Robben Island and environmental laws require that the"
-" road is at least 200 meters inward from the coast line. They could use an "
-"inward buffer to find the 200 m line inland and then plan their road not to "
-"go beyond that line."
-msgstr ""
-"Las zonas buffer en torno a entidades poligonales se extienden normalmente "
-"hacia el exterior del borde del polígono aunque también es posible crear "
-"zonas buffer hacia el interior del borde del polígono. Digamos, por ejemplo,"
-" que el Departamento de Turismo quiere planificar una nueva carretera "
-"alrededor de la Isla de Robben y las leyes medioambientales exigen que la "
-"carretera esté al menos 200 metros tierra adentro de la línea de costa. "
-"Ellos podrían utilizar un buffer interior para encontrar la línea a 200 m "
-"tierra adentro y planificar su carretera para no atravesar dicha línea."
-
 #: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:165
 msgid "Common problems / things to be aware of"
 msgstr "Problemas comunes / cosas a tener en cuenta"
@@ -371,15 +343,6 @@ msgstr ""
 msgid "More spatial analysis tools"
 msgstr "Más herramientas de análisis espacial"
 
-#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:180
-msgid ""
-"Buffering is a an important and often used spatial analysis tool but there "
-"are many others that can be used in a GIS and explored by the user."
-msgstr ""
-"El buffer es una herramienta de análisis espacial muy importante y que se "
-"utiliza frecuentemente pero hay muchas otras que se pueden utilizar en un "
-"SIG y se pueden explorar por parte del usuario."
-
 #: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:183
 msgid ""
 "**Spatial overlay** is a process that allows you to identify the "
@@ -392,15 +355,6 @@ msgstr ""
 "misma área. La capa del vector de salida es una combinación de la "
 "información de las entidades de entrada (consulte "
 ":numref:`figure_overlay_operations`)."
-
-#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:194
-msgid ""
-"Spatial overlay with two input vector layers (a_input = rectangle, b_input ="
-" circle). The resulting vector layer is displayed green."
-msgstr ""
-"La superposición espacial con dos capas de entrada vectoriales "
-"(a_input=rectángulo, b_input=círculo). La capa vectorial resultante se "
-"muestra en verde."
 
 #: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:197
 msgid "Typical spatial overlay examples are:"
@@ -570,18 +524,6 @@ msgstr ""
 #: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:254
 msgid "Something to think about"
 msgstr "Para reflexionar"
-
-#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:256
-msgid ""
-"If you don't have a computer available, you can use a toposheet and a "
-"compass to create buffer zones around buildings. Make small pencil marks at "
-"equal distance all along your feature using the compass, then connect the "
-"marks using a ruler!"
-msgstr ""
-"Si no tienes un ordenador disponible, puedes usar una hoja de topografía y "
-"un compás para  crear zonas buffer alrededor de edificios. ¡Haz pequeñas "
-"marcas de lápiz a distancias iguales alrededor de la entidad utilizando el "
-"compás, entonces conecta las marcas utilizando una regla!"
 
 #: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:261
 msgid "Further reading"

@@ -2,19 +2,20 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2022
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 10:27+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:09+0000\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2022\n"
 "Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -62,6 +63,24 @@ msgstr ""
 msgid "|basic| |FA| Loading a WMS Layer"
 msgstr "|basic| |FA| Caricare un raster WMS"
 
+#: ../../docs/training_manual/online_resources/wms.rst:281
+msgid "basic"
+msgstr "basic"
+
+#: ../../docs/training_manual/online_resources/wms.rst:21
+msgid ""
+"For this exercise, you can either use the basic map you made at the start of"
+" the course, or just start a new map and load some existing layers into it. "
+"For this example, we used a new map and loaded the original "
+":guilabel:`places`, :guilabel:`landuse` and :guilabel:`protected_areas` "
+"layers and adjusted the symbology:"
+msgstr ""
+"Per questo esercizio, puoi usare la mappa di base che hai fatto all'inizio "
+"del corso, o semplicemente iniziare una nuova mappa e caricarvi alcuni layer"
+" esistenti. Per questo esempio, abbiamo usato una nuova mappa e caricato i "
+"layer originali :guilabel:`places`, :guilabel:`landuse` e "
+":guilabel:`protected_areas` e abbiamo modificato la simbologia:"
+
 #: ../../docs/training_manual/online_resources/wms.rst:31
 msgid ""
 "Load these layers into a new map, or use your original map with only these "
@@ -70,30 +89,169 @@ msgstr ""
 "Carica questi vettori su una mappa nuova o esistente, con solo questi "
 "vettori visibili:"
 
+#: ../../docs/training_manual/online_resources/wms.rst:33
+msgid ""
+"Before starting to add the WMS layer, deactivate \"on the fly\" projection "
+"(:menuselection:`Project --> Properties... --> CRS` tab, check :guilabel:`No"
+" CRS (or unknown/non-Earth projection)`. This may cause the layers to no "
+"longer overlap properly, but don't worry: we'll fix that later."
+msgstr ""
+"Prima di iniziare ad aggiungere il layer WMS, disattiva la proiezione \"al "
+"volo\" (:menuselection:`Progetto --> Proprietà... --> scheda SR`, seleziona "
+":guilabel:`Nessun Sistema di Coordinate (o proiezione sconosciuta/non "
+"terrestre)`. Questo potrebbe causare che i layer non si sovrappongano più "
+"correttamente, ma non preoccuparti: lo sistemeremo più tardi."
+
+#: ../../docs/training_manual/online_resources/wms.rst:38
+msgid ""
+"To add WMS layers, click on the |dataSourceManager| button to open the "
+":guilabel:`Data Source Manager` dialog and enable the |addWmsLayer| "
+":guilabel:`WMS/WMTS` tab."
+msgstr ""
+"Per aggiungere layer WMS, clicca sul pulsante |dataSourceManager| per aprire"
+" la finestra di dialogo :guilabel:`Apri Gestore delle Sorgenti Dati` e "
+"attiva la scheda |addWmsLayer| :guilabel:`WMS/WMTS`."
+
+#: ../../docs/training_manual/online_resources/wms.rst:282
+msgid "dataSourceManager"
+msgstr "dataSourceManager"
+
+#: ../../docs/training_manual/online_resources/wms.rst:279
+msgid "addWmsLayer"
+msgstr "addWmsLayer"
+
+#: ../../docs/training_manual/online_resources/wms.rst:45
+msgid ""
+"Remember how you connected to a SpatiaLite or GeoPackage database at the "
+"beginning of the course. The :guilabel:`landuse`, :guilabel:`buildings`, and"
+" :guilabel:`roads` layers are stored in a database. To use those layers, you"
+" first needed to connect to the database. Using a WMS is similar, with the "
+"exception that the layers are on a remote server."
+msgstr ""
+"Ricorda come ti sei connesso a un database SpatiaLite o GeoPackage "
+"all'inizio del corso. I layer :guilabel:`landuse`, :guilabel:`buildings`, e "
+":guilabel:`roads` sono memorizzati in un database. Per usare questi layer, "
+"devi prima connetterti al database. Usare un WMS è simile, con l'eccezione "
+"che i layer sono su un server remoto."
+
 #: ../../docs/training_manual/online_resources/wms.rst:124
 msgid "Click :guilabel:`OK`."
-msgstr "Click :guilabel:`OK`."
+msgstr "Fai clic su :guilabel:`OK`."
 
-#: ../../docs/training_manual/online_resources/wms.rst:166
+#: ../../docs/training_manual/online_resources/wms.rst:133
+msgid ""
+"Note how the WMS layer's streets and our own streets overlap. That's a good "
+"sign!"
+msgstr ""
+"Nota come le strade del layer WMS e le nostre strade si sovrappongono. "
+"Questo è un buon segno!"
+
+#: ../../docs/training_manual/online_resources/wms.rst:139
+msgid ""
+"By now you may have noticed that this WMS layer actually has many features "
+"in it. It has streets, rivers, nature reserves, and so on. What's more, even"
+" though it looks like it's made up of vectors, it seems to be a raster, but "
+"you can't change its symbology. Why is that?"
+msgstr ""
+"A questo punto avrai notato che questo layer WMS ha effettivamente molti "
+"elementi al suo interno. Ha strade, fiumi, riserve naturali e così via. "
+"Inoltre, anche se sembra essere composto da vettori, sembra essere un "
+"raster, ma non si può cambiare la sua simbologia. Perché questo?"
+
+#: ../../docs/training_manual/online_resources/wms.rst:144
+msgid ""
+"This is how a WMS works: it's a map, similar to a normal map on paper, that "
+"you receive as an image. What usually happens is that you have vector "
+"layers, which QGIS renders as a map. But using a WMS, those vector layers "
+"are on the WMS server, which renders it as a map and sends that map to you "
+"as an image.  QGIS can display this image, but can't change its symbology, "
+"because all that is handled on the server."
+msgstr ""
+"Ecco come funziona un WMS: è una mappa, simile a una normale mappa su carta,"
+" che si riceve come immagine. Quello che succede di solito è che hai dei "
+"layer vettoriali, che QGIS rende come una mappa. Ma usando un WMS, quei "
+"layer vettoriali sono sul server WMS, che li rende come una mappa e te li "
+"invia come immagine. QGIS può visualizzare questa immagine, ma non può "
+"cambiare la sua simbologia, perché tutto ciò è gestito sul server."
+
+#: ../../docs/training_manual/online_resources/wms.rst:151
+msgid ""
+"This has several advantages, because you don't need to worry about the "
+"symbology. It's already worked out, and should be nice to look at on any "
+"competently designed WMS."
+msgstr ""
+"Questo ha diversi vantaggi, perché non è necessario preoccuparsi della "
+"simbologia. È già elaborata e dovrebbe essere bella da vedere su qualsiasi "
+"WMS progettato in modo adeguato."
+
+#: ../../docs/training_manual/online_resources/wms.rst:155
+msgid ""
+"On the other hand, you can't change the symbology if you don't like it, and "
+"if things change on the WMS server, then they'll change on your map as well."
+" This is why you sometimes want to use a Web Feature Service (WFS) instead, "
+"which gives you vector layers separately, and not as part of a WMS-style "
+"map."
+msgstr ""
+"D'altra parte, non puoi cambiare la simbologia se non ti piace, e se le cose"
+" cambiano sul server WMS, allora cambieranno anche sulla tua mappa. Questo è"
+" il motivo per cui a volte vuoi usare un Web Feature Service (WFS), che ti "
+"dà i layer vettoriali in modo separato, e non come parte di una mappa in "
+"formato WMS."
+
+#: ../../docs/training_manual/online_resources/wms.rst:160
+msgid ""
+"This will be covered in the next lesson, however. First, let's add another "
+"WMS layer from the :guilabel:`terrestris` WMS server."
+msgstr ""
+"Questo comunque sarà trattato nella prossima lezione. Per prima cosa, "
+"aggiungiamo un altro layer WMS dal server WMS :guilabel:`terrestris`."
+
+#: ../../docs/training_manual/online_resources/wms.rst:165
 msgid "|basic| |TY|"
 msgstr "|base| |TY|"
 
-#: ../../docs/training_manual/online_resources/wms.rst:189
+#: ../../docs/training_manual/online_resources/wms.rst:182
+#: ../../docs/training_manual/online_resources/wms.rst:200
+#: ../../docs/training_manual/online_resources/wms.rst:234
+msgid "Answer"
+msgstr "Soluzione"
+
+#: ../../docs/training_manual/online_resources/wms.rst:192
 msgid "|moderate| |TY|"
 msgstr "|moderate| |TY|"
 
-#: ../../docs/training_manual/online_resources/wms.rst:202
+#: ../../docs/training_manual/online_resources/wms.rst:286
+msgid "moderate"
+msgstr "moderate"
+
+#: ../../docs/training_manual/online_resources/wms.rst:223
 msgid "|hard| |TY|"
 msgstr "|hard| |TY|"
 
-#: ../../docs/training_manual/online_resources/wms.rst:217
+#: ../../docs/training_manual/online_resources/wms.rst:284
+msgid "hard"
+msgstr "hard"
+
+#: ../../docs/training_manual/online_resources/wms.rst:247
 msgid "|IC|"
 msgstr "|IC|"
 
-#: ../../docs/training_manual/online_resources/wms.rst:222
+#: ../../docs/training_manual/online_resources/wms.rst:252
 msgid "|FR|"
 msgstr "|FR|"
 
-#: ../../docs/training_manual/online_resources/wms.rst:229
+#: ../../docs/training_manual/online_resources/wms.rst:254
+msgid "`Spatineo Directory <https://directory.spatineo.com/>`_"
+msgstr "`Spatineo Directory <https://directory.spatineo.com/>`_"
+
+#: ../../docs/training_manual/online_resources/wms.rst:255
+msgid ""
+"`OpenStreetMap.org list of WMS servers "
+"<https://wiki.openstreetmap.org/wiki/WMS>`_"
+msgstr ""
+"`OpenStreetMap.org list of WMS servers "
+"<https://wiki.openstreetmap.org/wiki/WMS>`_"
+
+#: ../../docs/training_manual/online_resources/wms.rst:259
 msgid "|WN|"
 msgstr "|WN|"

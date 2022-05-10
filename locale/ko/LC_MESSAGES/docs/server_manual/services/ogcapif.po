@@ -12,90 +12,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-12 00:23+0100\n"
+"POT-Creation-Date: 2022-04-27 02:44+0000\n"
 "PO-Revision-Date: 2022-03-14 05:12+0000\n"
 "Last-Translator: Harrissou Sant-anna, 2022\n"
-"Language-Team: Korean (https://www.transifex.com/qgis/teams/110551/ko/)\n"
+"Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.10.1\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
-#: ../../docs/server_manual/services/ogcapif.rst:4
-msgid "WFS3 (OGC API Features)"
-msgstr "WFS3 (OGC API ─ 피처)"
-
-#: ../../docs/server_manual/services/ogcapif.rst:6
-msgid ""
-"WFS3 is the first implementation of the new generation of OGC protocols. It "
-"is described by the `OGC API - Features - Part 1: Core "
-"<http://docs.opengeospatial.org/is/17-069r3/17-069r3.html>`_ document."
-msgstr ""
-"WFS3은 신세대 OGC 프로토콜을 처음으로 구현한 것입니다. `OGC API ─ 피처 ─ 1부: 핵심 "
-"<http://docs.opengeospatial.org/is/17-069r3/17-069r3.html>`_ 문서에 잘 설명되어 "
-"있습니다."
-
-#: ../../docs/server_manual/services/ogcapif.rst:11
-msgid ""
-"Here is a quick informal summary of the most important differences between "
-"the well known WFS protocol and WFS3:"
-msgstr "다음 내용은 잘 알려진 WFS 프로토콜과 WFS3의 주요 차이점을 비공식적으로 간단히 요약한 것입니다:"
-
-#: ../../docs/server_manual/services/ogcapif.rst:14
-msgid ""
-"WFS3 is based on a `REST "
-"<https://en.wikipedia.org/wiki/Representational_state_transfer>`_ API"
-msgstr ""
-"WFS3은 `REST "
-"<https://en.wikipedia.org/wiki/Representational_state_transfer>`_ API를 기반으로 "
-"합니다."
-
-#: ../../docs/server_manual/services/ogcapif.rst:17
-msgid ""
-"WFS3 API must follow the `OPENAPI "
-"<https://en.wikipedia.org/wiki/OpenAPI_Specification>`_ specifications"
-msgstr ""
-"WFS3 API는 `OPENAPI <https://en.wikipedia.org/wiki/OpenAPI_Specification>`_ "
-"사양을 따라야만 합니다."
-
-#: ../../docs/server_manual/services/ogcapif.rst:20
-msgid ""
-"WFS3 supports multiple output formats but it does not dictate any (only "
-"GeoJSON and HTML are currently available in QGIS WFS3) and it uses `content "
-"negotiation <https://en.wikipedia.org/wiki/Content_negotiation>`_ to "
-"determine which format is to be served to the client"
-msgstr ""
-"WFS3은 여러 산출물 포맷을 지원하지만 어느 포맷도 강제하지 않으며 (QGIS WFS3은 현재 GeoJSON과 HTML만 지원합니다) "
-"클라이언트에 서비스할 포맷을 결정하는 데 `내용 협상(content negotiation) "
-"<https://en.wikipedia.org/wiki/Content_negotiation>`_ 을 사용합니다."
-
-#: ../../docs/server_manual/services/ogcapif.rst:25
-msgid "JSON and HTML are first class citizens in WFS3"
-msgstr "JSON과 HTML은 WFS3의 일급 객체(first class citizen)입니다."
-
-#: ../../docs/server_manual/services/ogcapif.rst:26
-msgid "WFS3 is self-documenting (through the ``/api`` endpoint)"
-msgstr "WFS3은 (``/api`` 종단점을 통해) 자체 문서화(self-documenting)합니다."
-
-#: ../../docs/server_manual/services/ogcapif.rst:27
-msgid "WFS3 is fully navigable (through links) and browsable"
-msgstr "WFS3을 (링크를 통해) 완전하게 둘러보고 또 탐색할 수 있습니다."
-
-#: ../../docs/server_manual/services/ogcapif.rst:31
-msgid ""
-"While the WFS3 implementation in QGIS can make use of the ``MAP`` parameter "
-"to specify the project file, no extra query parameters are allowed by the "
-"OPENAPI specification. For this reason it is strongly recommended that "
-"``MAP`` is not exposed in the URL and the project file is specified in the "
-"environment by other means (i.e. setting ``QGIS_PROJECT_FILE`` in the "
-"environment through a web server rewrite rule)."
-msgstr ""
-"QGIS에 구현된 WFS3은 프로젝트 파일을 지정하는 데 ``MAP`` 파라미터를 사용할 수 있지만, OPENAPI 사양으로 인해 다른 "
-"추가 파라미터를 사용할 수는 없습니다. 때문에 URL에 ``MAP`` 을 노출시키지 말고, 해당 환경에서 다른 방법으로 (예를 들어 웹 "
-"서버 고쳐쓰기 규칙을 통해 해당 환경에 ``QGIS_PROJECT_FILE`` 을 설정해서) 프로젝트 파일을 지정할 것을 강력히 "
-"추천합니다."
 
 #: ../../docs/server_manual/services/ogcapif.rst:42
 msgid ""
@@ -109,12 +35,6 @@ msgstr ""
 #: ../../docs/server_manual/services/ogcapif.rst:48
 msgid "Resource representation"
 msgstr "리소스 표현"
-
-#: ../../docs/server_manual/services/ogcapif.rst:50
-msgid ""
-"The QGIS Server WFS3 implementation currently supports the following "
-"resource representation (output) formats:"
-msgstr "QGIS 서버에 구현된 WFS3은 현재 다음과 같은 리소스 표현(산출물) 포맷을 지원합니다:"
 
 #: ../../docs/server_manual/services/ogcapif.rst:53
 msgid "HTML"
@@ -302,10 +222,6 @@ msgstr "적합성 선언 (경로 ``/conformance``, 링크 관계 ``conformance``
 msgid "the Collections (path ``/collections``, link relation ``data``)."
 msgstr "선택 집합 (경로 ``/collections``, 링크 관계 ``data``)."
 
-#: ../../docs/server_manual/services/ogcapif.rst:121
-msgid "Server WFS3 landing page"
-msgstr "서버 WFS3 랜딩 페이지"
-
 #: ../../docs/server_manual/services/ogcapif.rst:126
 msgid "API Definition"
 msgstr "API 정의"
@@ -346,10 +262,6 @@ msgstr ""
 "\"서비스\" 하기 때문에, 선택 집합은 (프로젝트 속성에서 벡터 레이어를 WFS로 게시한 경우) 현재 프로젝트의 벡터 레이어들입니다. "
 "이 종단점의 경로는 ``/collections/`` 입니다."
 
-#: ../../docs/server_manual/services/ogcapif.rst:158
-msgid "Server WFS3 collections list page"
-msgstr "서버 WFS3 선택 집합 목록 페이지"
-
 #: ../../docs/server_manual/services/ogcapif.rst:162
 msgid "Collection detail"
 msgstr "Collection 상세 정보"
@@ -372,10 +284,6 @@ msgid ""
 "features."
 msgstr "이 HTML 표현은 사용할 수 있는 피처를 보유한 탐색 가능한 맵도 제공합니다."
 
-#: ../../docs/server_manual/services/ogcapif.rst:179
-msgid "Server WFS3 collection detail page"
-msgstr "서버 WFS3 선택 집합 상세 정보 페이지"
-
 #: ../../docs/server_manual/services/ogcapif.rst:185
 msgid "Features list"
 msgstr "Features 목록"
@@ -392,10 +300,6 @@ msgstr ""
 #: ../../docs/server_manual/services/ogcapif.rst:197
 msgid "This endpoint is analogue to ``GetFeature`` in  WFS 1 and WFS 2."
 msgstr "이 종단점은 WFS1 및 WFS2의 ``GetFeature`` 와 유사합니다."
-
-#: ../../docs/server_manual/services/ogcapif.rst:205
-msgid "Server WFS3 features list page"
-msgstr "서버 WFS3 피처 목록 페이지"
 
 #: ../../docs/server_manual/services/ogcapif.rst:209
 msgid "Feature detail"
@@ -415,10 +319,6 @@ msgid ""
 "The HTML representation also provides a browsable map with the feature "
 "geometry."
 msgstr "이 HTML 표현은 피처 도형을 보유한 탐색 가능한 맵도 제공합니다."
-
-#: ../../docs/server_manual/services/ogcapif.rst:225
-msgid "Server WFS3 feature detail page"
-msgstr "서버 WFS3 피처 상세 정보 페이지"
 
 #: ../../docs/server_manual/services/ogcapif.rst:230
 msgid "Pagination"
@@ -621,20 +521,6 @@ msgstr "``name`` 속성만 반환"
 msgid "Customize the HTML pages"
 msgstr "HTML 페이지 사용자 정의"
 
-#: ../../docs/server_manual/services/ogcapif.rst:390
-msgid ""
-"The HTML representation uses a set of HTML templates to generate the "
-"response. The template is parsed by a template engine called `inja "
-"<https://github.com/pantor/inja/>`_. The templates can be customized by "
-"overriding them (see: :ref:`server_wfs3_template_override`). The template "
-"has access to the same data that are available to the ``JSON`` "
-"representation and a few additional functions are available to the template:"
-msgstr ""
-"HTML 표현은 응답을 생성하기 위해 HTML 템플릿의 집합을 사용합니다. `inja "
-"<https://github.com/pantor/inja/>`_ 라는 템플릿 엔진이 템플릿을 파싱합니다. 템플릿을 무시하면 "
-"(:ref:`server_wfs3_template_override` 참조) 템플릿을 사용자 지정할 수 있습니다. 템플릿은 ``JSON``"
-" 표현에 사용할 수 있는 데이터와 동일한 데이터에 접근할 수 있으며, 템플릿에 몇몇 추가 함수를 사용할 수 있습니다:"
-
 #: ../../docs/server_manual/services/ogcapif.rst:402
 msgid "Custom template functions"
 msgstr "사용자 지정 템플릿 함수"
@@ -652,17 +538,6 @@ msgstr "``path_chomp( n )``: 현재 URL 경로에서 디렉터리 요소들 가�
 #: ../../docs/server_manual/services/ogcapif.rst:407
 msgid "``json_dump( )``: prints the JSON data passed to the template"
 msgstr "``json_dump( )``: 템플릿에 전송된 JSON 데이터를 인쇄합니다."
-
-#: ../../docs/server_manual/services/ogcapif.rst:408
-msgid ""
-"``static( path )``: returns the full URL to the specified static path. For "
-"example: \"static( \"/style/black.css\" )\" with a root path "
-"\"http://localhost/qgisserver/wfs3\" will return "
-"\"http://localhost/qgisserver/wfs3/static/style/black.css\"."
-msgstr ""
-"``static( path )``: URL 전체를 지정한 정적 경로로 반환합니다. 예를 들면: 루트 경로가 "
-"\"http://localhost/qgisserver/wfs3\" 인 \"static( \"/style/black.css\" )\" 는 "
-"\"http://localhost/qgisserver/wfs3/static/style/black.css\" 를 반환할 것입니다."
 
 #: ../../docs/server_manual/services/ogcapif.rst:412
 msgid ""

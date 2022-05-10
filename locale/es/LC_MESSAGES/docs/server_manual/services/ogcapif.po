@@ -13,96 +13,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-12 00:23+0100\n"
+"POT-Creation-Date: 2022-04-27 02:44+0000\n"
 "PO-Revision-Date: 2022-03-14 05:12+0000\n"
 "Last-Translator: Abigaíl García, 2022\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.10.1\n"
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-#: ../../docs/server_manual/services/ogcapif.rst:4
-msgid "WFS3 (OGC API Features)"
-msgstr "WFS3 (Objetos API OGC)"
-
-#: ../../docs/server_manual/services/ogcapif.rst:6
-msgid ""
-"WFS3 is the first implementation of the new generation of OGC protocols. It "
-"is described by the `OGC API - Features - Part 1: Core "
-"<http://docs.opengeospatial.org/is/17-069r3/17-069r3.html>`_ document."
-msgstr ""
-"WFS3 es la primera implementación de la nueva generación de protocolos OGC. "
-"Es descrito por el `OGC API - Features - Part 1: Core "
-"<http://docs.opengeospatial.org/is/17-069r3/17-069r3.html>`_ documento."
-
-#: ../../docs/server_manual/services/ogcapif.rst:11
-msgid ""
-"Here is a quick informal summary of the most important differences between "
-"the well known WFS protocol and WFS3:"
-msgstr ""
-"Aquí hay un resumen informal rápido de las diferencias más importantes entre"
-" el conocido protocolo WFS y WFS3:"
-
-#: ../../docs/server_manual/services/ogcapif.rst:14
-msgid ""
-"WFS3 is based on a `REST "
-"<https://en.wikipedia.org/wiki/Representational_state_transfer>`_ API"
-msgstr ""
-"WFS3 está basada en una API `REST "
-"<https://en.wikipedia.org/wiki/Representational_state_transfer>`_ "
-
-#: ../../docs/server_manual/services/ogcapif.rst:17
-msgid ""
-"WFS3 API must follow the `OPENAPI "
-"<https://en.wikipedia.org/wiki/OpenAPI_Specification>`_ specifications"
-msgstr ""
-"API WFS3 debe seguir las especificaciones `OPENAPI "
-"<https://en.wikipedia.org/wiki/OpenAPI_Specification>`_"
-
-#: ../../docs/server_manual/services/ogcapif.rst:20
-msgid ""
-"WFS3 supports multiple output formats but it does not dictate any (only "
-"GeoJSON and HTML are currently available in QGIS WFS3) and it uses `content "
-"negotiation <https://en.wikipedia.org/wiki/Content_negotiation>`_ to "
-"determine which format is to be served to the client"
-msgstr ""
-"WFS3 admite múltiples formatos de salida, pero no dicta ninguno (solo "
-"GeoJSON y HTML están disponibles actualmente en QGIS WFS3) y usa "
-"`negociación de contenido "
-"<https://en.wikipedia.org/wiki/Content_negotiation>`_ para determinar qué "
-"formato se servirá al cliente"
-
-#: ../../docs/server_manual/services/ogcapif.rst:25
-msgid "JSON and HTML are first class citizens in WFS3"
-msgstr "JSON y HTML son ciudadanos de primera clase en WFS3"
-
-#: ../../docs/server_manual/services/ogcapif.rst:26
-msgid "WFS3 is self-documenting (through the ``/api`` endpoint)"
-msgstr "WFS3 se autodocumenta (a través del punto final ``/api``)"
-
-#: ../../docs/server_manual/services/ogcapif.rst:27
-msgid "WFS3 is fully navigable (through links) and browsable"
-msgstr "WFS3 es totalmente navegable (a través de enlaces) y navegable"
-
-#: ../../docs/server_manual/services/ogcapif.rst:31
-msgid ""
-"While the WFS3 implementation in QGIS can make use of the ``MAP`` parameter "
-"to specify the project file, no extra query parameters are allowed by the "
-"OPENAPI specification. For this reason it is strongly recommended that "
-"``MAP`` is not exposed in the URL and the project file is specified in the "
-"environment by other means (i.e. setting ``QGIS_PROJECT_FILE`` in the "
-"environment through a web server rewrite rule)."
-msgstr ""
-"Si bien la implementación de WFS3 en QGIS puede hacer uso del parámetro "
-"``MAP`` para especificar el archivo del proyecto, la especificación OPENAPI "
-"no permite parámetros de consulta adicionales. Por esta razón, se recomienda"
-" encarecidamente que ``MAP`` no esté expuesto en la URL y que el archivo del"
-" proyecto se especifique en el entorno por otros medios (es decir, "
-"estableciendo ``QGIS_PROJECT_FILE`` en el entorno a través de una regla de "
-"reescritura del servidor web)."
 
 #: ../../docs/server_manual/services/ogcapif.rst:42
 msgid ""
@@ -117,14 +37,6 @@ msgstr ""
 #: ../../docs/server_manual/services/ogcapif.rst:48
 msgid "Resource representation"
 msgstr "Representación de recurso"
-
-#: ../../docs/server_manual/services/ogcapif.rst:50
-msgid ""
-"The QGIS Server WFS3 implementation currently supports the following "
-"resource representation (output) formats:"
-msgstr ""
-"La implementación de QGIS Server WFS3 actualmente admite los siguientes "
-"formatos de representación de recursos (salida):"
 
 #: ../../docs/server_manual/services/ogcapif.rst:53
 msgid "HTML"
@@ -332,10 +244,6 @@ msgid "the Collections (path ``/collections``, link relation ``data``)."
 msgstr ""
 "las Colecciones (ruta ``/colecciones``, relación de enlace ``datos``)."
 
-#: ../../docs/server_manual/services/ogcapif.rst:121
-msgid "Server WFS3 landing page"
-msgstr "Página de aterrizaje de Servidor WFS3"
-
 #: ../../docs/server_manual/services/ogcapif.rst:126
 msgid "API Definition"
 msgstr "Definición API"
@@ -384,10 +292,6 @@ msgstr ""
 " (si se publicaron como WFS en las propiedades del proyecto). La ruta de "
 "este punto final es ``/collections/``."
 
-#: ../../docs/server_manual/services/ogcapif.rst:158
-msgid "Server WFS3 collections list page"
-msgstr "Página de lista de colecciones de servidor WFS3"
-
 #: ../../docs/server_manual/services/ogcapif.rst:162
 msgid "Collection detail"
 msgstr "Detalle de colección"
@@ -413,10 +317,6 @@ msgstr ""
 "La representación HTML también proporciona un mapa navegable con las "
 "funciones disponibles."
 
-#: ../../docs/server_manual/services/ogcapif.rst:179
-msgid "Server WFS3 collection detail page"
-msgstr "Página de detalles de la colección del servidor WFS3"
-
 #: ../../docs/server_manual/services/ogcapif.rst:185
 msgid "Features list"
 msgstr "Lista de objetos espaciales"
@@ -434,10 +334,6 @@ msgstr ""
 #: ../../docs/server_manual/services/ogcapif.rst:197
 msgid "This endpoint is analogue to ``GetFeature`` in  WFS 1 and WFS 2."
 msgstr "Este punto final es análogo a ``GetFeature`` en WFS 1 y WFS 2."
-
-#: ../../docs/server_manual/services/ogcapif.rst:205
-msgid "Server WFS3 features list page"
-msgstr "Página de lista de características del servidor WFS3"
 
 #: ../../docs/server_manual/services/ogcapif.rst:209
 msgid "Feature detail"
@@ -460,10 +356,6 @@ msgid ""
 msgstr ""
 "La representación HTML también proporciona un mapa navegable con la "
 "geometría de la entidad."
-
-#: ../../docs/server_manual/services/ogcapif.rst:225
-msgid "Server WFS3 feature detail page"
-msgstr "Página de detalles de la entidad del servidor WFS3"
 
 #: ../../docs/server_manual/services/ogcapif.rst:230
 msgid "Pagination"
@@ -695,23 +587,6 @@ msgstr "devuelve solo el atributo ``nombre``"
 msgid "Customize the HTML pages"
 msgstr "Personaliza las páginas HTML"
 
-#: ../../docs/server_manual/services/ogcapif.rst:390
-msgid ""
-"The HTML representation uses a set of HTML templates to generate the "
-"response. The template is parsed by a template engine called `inja "
-"<https://github.com/pantor/inja/>`_. The templates can be customized by "
-"overriding them (see: :ref:`server_wfs3_template_override`). The template "
-"has access to the same data that are available to the ``JSON`` "
-"representation and a few additional functions are available to the template:"
-msgstr ""
-"La representación HTML utiliza un conjunto de plantillas HTML para generar "
-"la respuesta. La plantilla es analizada por un motor de plantillas llamado "
-"`inja <https://github.com/pantor/inja/>`_. Las plantillas se pueden "
-"personalizar reemplazándolas (consulte: "
-":ref:`server_wfs3_template_override`). La plantilla tiene acceso a los "
-"mismos datos que están disponibles para la representación ``JSON`` y algunas"
-" funciones adicionales están disponibles para la plantilla:"
-
 #: ../../docs/server_manual/services/ogcapif.rst:402
 msgid "Custom template functions"
 msgstr "Funciones personalizadas de plantilla"
@@ -732,18 +607,6 @@ msgstr ""
 #: ../../docs/server_manual/services/ogcapif.rst:407
 msgid "``json_dump( )``: prints the JSON data passed to the template"
 msgstr "``json_dump( )``: imprime los datos JSON pasados a la plantilla"
-
-#: ../../docs/server_manual/services/ogcapif.rst:408
-msgid ""
-"``static( path )``: returns the full URL to the specified static path. For "
-"example: \"static( \"/style/black.css\" )\" with a root path "
-"\"http://localhost/qgisserver/wfs3\" will return "
-"\"http://localhost/qgisserver/wfs3/static/style/black.css\"."
-msgstr ""
-"``static( path )``: devuelve la URL completa a la ruta estática "
-"especificada. Por ejemplo: \"static( \"/style/black.css\" )\" con una ruta "
-"raiz \"http://localhost/qgisserver/wfs3\" devolverá "
-"\"http://localhost/qgisserver/wfs3/static/style/black.css\"."
 
 #: ../../docs/server_manual/services/ogcapif.rst:412
 msgid ""

@@ -1,0 +1,1012 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# 
+# Translators:
+# 徐保才 <1302638819@qq.com>, 2022
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.22\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:15+0000\n"
+"Last-Translator: 徐保才 <1302638819@qq.com>, 2022\n"
+"Language-Team: Chinese Simplified (https://www.transifex.com/qgis/teams/6144/zh-Hans/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+"Language: zh-Hans\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:2
+msgid "|LS| Supplementary Exercise"
+msgstr "课: 补充练习"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:4
+msgid ""
+"In this lesson, you will be guided through a complete GIS analysis in QGIS."
+msgstr "在本课，您将在QGIS中引导完成完整的GIS分析。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:7
+msgid ""
+"Lesson developed by Linfiniti Consulting (South Africa) and Siddique Motala "
+"(Cape Peninsula University of Technology)"
+msgstr "本课由 Linfiniti Consulting (南非) 和 Siddique Motala (开普半岛科技大学) 共同开发"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:11
+msgid "Problem Statement"
+msgstr "问题陈述"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:13
+msgid ""
+"You are tasked with finding areas in and around the Cape Peninsula that are "
+"suitable habitats for a rare fynbos plant species. The extent of your area "
+"of investigation covers Cape Town and the Cape Peninsula between "
+"Melkbosstrand in the north and Strand in the south. Botanists have provided "
+"you with the following preferences exhibited by the species in question:"
+msgstr ""
+"您的任务是在开普半岛及其周边寻找适合珍稀植物凡波斯物种栖息地的区域。调查范围涵盖开普敦和位于北部Melkbosstrand及南部Strand之间的开普敦半岛。植物学家为您提供了有关物种的以下特性："
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:20
+msgid "It grows on east facing slopes"
+msgstr "生长在朝东的山坡上"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:21
+msgid "It grows on slopes with a gradient between 15% and 60%"
+msgstr "山坡坡度在 15% 和 60% 之间"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:22
+msgid "It grows in areas that have a total annual rainfall of > 1000 mm"
+msgstr "年总降雨量 > 1000 毫米的地区"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:23
+msgid "It will only be found at least 250 m away from any human settlement"
+msgstr "距离人类居住区至少250米"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:24
+msgid ""
+"The area of vegetation in which it occurs should be at least 6000 ㎡ in area"
+msgstr "植被面积至少应为6000平米的区域"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:27
+msgid ""
+"As a student at the University, you have agreed to search for the plant in "
+"four different suitable areas of land. You want those four suitable areas to"
+" be the ones that are closest to the University of Cape Town where you live."
+" Use your GIS skills to determine where you should go to look."
+msgstr ""
+"作为这所大学的学生，您已同意在四个不同的适宜土地寻找这种植物，并希望这四个适生区是最靠近您居住的开普敦大学。使用所学的GIS技术来确定应该去哪里寻找。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:34
+msgid "Solution Outline"
+msgstr "方案概要"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:36
+msgid ""
+"The data for this exercise can be found in the "
+":file:`exercise_data/more_analysis` folder."
+msgstr "本练习数据可在 :file:`exercise_data/more_analysis` 文件夹找到。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:39
+msgid ""
+"You are going to find the four suitable areas that are closest to the "
+"University of Cape Town."
+msgstr "您将找到离开普敦大学最近的四个适生区。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:42
+msgid "The solution will involve:"
+msgstr "解决方案包括："
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:44
+msgid ""
+"Analysing a DEM raster layer to find the east facing slopes and the slopes "
+"with the correct gradients"
+msgstr "分析DEM栅格图层，找到朝东的山坡并具有合适坡度的斜坡"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:46
+msgid ""
+"Analysing a rainfall raster layer to find the areas with the correct amount "
+"of rainfall"
+msgstr "分析雨量栅格图层，找到适合降雨量的地区"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:48
+msgid ""
+"Analysing a zoning vector layer to find areas that are away from human "
+"settlement and are of the correct size"
+msgstr "分析分区矢量图层，找到远离人类居住区且大小合适的区域"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:52
+msgid "|FA| Setting up the Map"
+msgstr "跟我做: 设置地图"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:54
+msgid ""
+"Click on the |projectionEnabled| :sup:`Current CRS` button in the lower "
+"right corner of the screen. Under the :guilabel:`CRS` tab of the dialog that"
+" appears, use the \"Filter\" tool to search for \"33S\". Select the entry "
+":guilabel:`WGS 84 / UTM zone 33S` (with EPSG code ``32733``)."
+msgstr ""
+"单击屏幕右下角的 |projectionEnabled| :sup:`当前CRS` 按钮。在出现的对话框 :guilabel:`CRS` 选项卡中，使用"
+" \"过滤器\" 工具搜索 \"33S\" 。选择条目 :guilabel:`WGS 84 / UTM zone 33S` (EPSG代码 "
+"``32733`` )。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:814
+msgid "projectionEnabled"
+msgstr "projectionEnabled"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:60
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:316
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:366
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:520
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:589
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:675
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:744
+msgid "Click :guilabel:`OK`"
+msgstr "单击 :guilabel:`确定`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:61
+msgid ""
+"Save the project file by clicking on the |fileSave| :sup:`Save Project` "
+"toolbar button, or use the :menuselection:`File --> Save As...` menu item."
+msgstr ""
+"单击 |fileSave| :sup:`保存工程` 工具栏按钮保存工程文件，或使用 :menuselection:`文件 --> 另存为...` "
+"菜单项。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:812
+msgid "fileSave"
+msgstr "fileSave"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:65
+msgid ""
+"Save it in a new directory called :file:`Rasterprac`, that you should create"
+" somewhere on your computer. You will save whatever layers you create in "
+"this directory as well. Save the project as :file:`your_name_fynbos.qgs`."
+msgstr ""
+"将其保存在一个名为 :file:`Rasterprac` 的新目录中，您应该在计算机上的某个位置创建该目录，此目录还要保存将要创建的图层。保存工程为 "
+":file:`your_name_fynbos.qgs` 。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:71
+msgid "Loading Data into the Map"
+msgstr "将数据加载到地图"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:73
+msgid ""
+"In order to process the data, you will need to load the necessary layers "
+"(street names, zones, rainfall, DEM, districts) into the map canvas."
+msgstr "为了处理数据，需要将必要的图层 (街道名、分区、降雨量、DEM、行政区) 加载到地图画布。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:78
+msgid "For vectors..."
+msgstr "矢量数据..."
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:80
+msgid ""
+"Click on the |dataSourceManager| :sup:`Open Data Source Manager` button in "
+"the *Data Source Manager Toolbar*, and enable the |addOgrLayer| "
+":guilabel:`Vector` tab in the dialog that appears, or use the "
+":menuselection:`Layer --> Add Layer -->` |addOgrLayer| :menuselection:`Add "
+"Vector Layer...` menu item"
+msgstr ""
+"单击 *数据源管理器工具栏* 中的 |dataSourceManager| :sup:`打开数据源管理器` 按钮，并在出现的对话框中启用 "
+"|addOgrLayer| :guilabel:`矢量` 选项卡，或使用 :menuselection:`图层 --> 添加图层 -->` "
+"|addOgrLayer| :menuselection:`添加矢量图层...` 菜单项。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:810
+msgid "dataSourceManager"
+msgstr "dataSourceManager"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:800
+msgid "addOgrLayer"
+msgstr "addOgrLayer"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:85
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:125
+msgid "Ensure that |radioButtonOn| :guilabel:`File` is selected"
+msgstr "确保已选择 |radioButtonOn| :guilabel:`文件` 。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:816
+msgid "radioButtonOn"
+msgstr "radioButtonOn"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:86
+msgid "Click on the :guilabel:`...` button to browse for vector dataset(s)"
+msgstr "单击 :guilabel:`...` 按钮浏览矢量数据集。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:88
+msgid ""
+"In the dialog that appears, open the "
+":file:`exercise_data/more_analysis/Streets` directory"
+msgstr "在出现的对话框中，打开 :file:`exercise_data/more_analysis/Streets` 目录。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:90
+msgid "Select the file :file:`Street_Names_UTM33S.shp`"
+msgstr "选择文件 :file:`Street_Names_UTM33S.shp` 。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:91
+msgid "Click :guilabel:`Open`."
+msgstr "单击 :guilabel:`打开` 。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:93
+msgid ""
+"The dialog closes and shows the original dialog, with the file path "
+"specified in the text field next to :guilabel:`Vector dataset(s)`. This "
+"allows you to ensure that the correct file is selected. It is also possible "
+"to enter the file path in this field manually, should you wish to do so."
+msgstr ""
+"该对话框关闭后并显示原对话框，在 :guilabel:`矢量数据集` "
+"旁边的文本字段中给定了文件路径，这样可以确保选择了正确的文件。如果您愿意，也可以在该字段手动输入文件路径。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:99
+msgid ""
+"Click :guilabel:`Add`. The vector layer will be loaded into your map. Its "
+"color is automatically assigned. You will change it later."
+msgstr "单击 :guilabel:`添加` ，矢量图层将加载到地图中。它的颜色是自动分配的，您稍后要进行更改。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:103
+msgid "Rename the layer to ``Streets``"
+msgstr "将图层重命名为 ``Streets`` ："
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:105
+msgid ""
+"Right-click on it in the :guilabel:`Layers` panel (by default, the pane "
+"along the left-hand side of the screen)"
+msgstr "在 :guilabel:`图层` 面板右键单击该图层 (默认情况下，屏幕左侧的窗格)。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:107
+msgid ""
+"Click :guilabel:`Rename` in the dialog that appears and rename it, pressing "
+"the :kbd:`Enter` key when done"
+msgstr "在出现的快捷菜单中单击 :guilabel:`重命名图层` 并进行重命名，完成后按 :kbd:`Enter` 键。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:109
+msgid ""
+"Repeat the vector adding process, but this time select the "
+":file:`Generalised_Zoning_Dissolve_UTM33S.shp` file in the :file:`Zoning` "
+"directory."
+msgstr ""
+"重复矢量添加过程，但这次选择的是 :file:`Zoning` 目录中的 "
+":file:`Generalised_Zoning_Dissolve_UTM33S.shp` 文件。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:112
+msgid "Rename it to ``Zoning``."
+msgstr "重命名为 ``Zoning`` 。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:113
+msgid ""
+"Load also the vector layer :file:`admin_boundaries/Western_Cape_UTM33S.shp` "
+"into your map."
+msgstr "将矢量图层 :file:`admin_boundaries/Western_Cape_UTM33S.shp` 加载到地图。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:115
+msgid "Rename it to ``Districts``."
+msgstr "重命名为 ``Districts`` 。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:118
+msgid "For rasters..."
+msgstr "栅格数据..."
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:120
+msgid ""
+"Click on the |dataSourceManager| :sup:`Open Data Source Manager` button and "
+"enable the |addRasterLayer| :guilabel:`Raster` tab in the dialog that "
+"appears, or use the :menuselection:`Layer --> Add Layer -->` "
+"|addRasterLayer| :menuselection:`Add Raster Layer...` menu item"
+msgstr ""
+"单击 |dataSourceManager| :sup:`打开数据源管理器` 按钮，并在出现的对话框中启用 |addRasterLayer| "
+":guilabel:`栅格` 选项卡，或使用 :menuselection:`图层 --> 添加图层 -->` |addRasterLayer| "
+":menuselection:`添加栅格图层...` 菜单项。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:802
+msgid "addRasterLayer"
+msgstr "addRasterLayer"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:126
+msgid ""
+"Navigate to the appropriate file, select it, and click :guilabel:`Open`"
+msgstr "导航到相应的文件，选择栅格数据并单击 :guilabel:`打开` 。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:128
+msgid ""
+"Do this for each of the following two raster files, :file:`DEM/SRTM.tif` and"
+" :file:`rainfall/reprojected/rainfall.tif`"
+msgstr ""
+"对 :file:`DEM/SRTM.tif` 和 :file:`rainfall/reprojected/rainfall.tif` "
+"两个栅格文件中的每一个都执行上述操作。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:130
+msgid ""
+"Rename the SRTM raster to ``DEM`` and the rainfall raster to ``Rainfall`` "
+"(with an initial capital)"
+msgstr "将SRTM栅格重命名为 ``DEM`` ，rainfall 栅格重命名为 ``Rainfall`` (首字母大写)。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:134
+msgid "Changing the layer order"
+msgstr "更改图层顺序"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:136
+msgid ""
+"Click and drag layers up and down in the :guilabel:`Layers` panel to change "
+"the order they appear in on the map so that you can see as many of the "
+"layers as possible."
+msgstr "在 :guilabel:`图层` 面板单击并上下拖动图层，更改它们在地图上的显示顺序，以便可以看到尽可能多的图层。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:140
+msgid ""
+"Now that all the data is loaded and properly visible, the analysis can "
+"begin. It is best if the clipping operation is done first. This is so that "
+"no processing power is wasted on computing values in areas that are not "
+"going to be used anyway."
+msgstr "现在，所有数据都已加载并正确可见，分析就可以开始了。最好先执行裁剪运算，这样就不会浪费处理资源来计算那些无论如何都不会被使用区域的值。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:147
+msgid "Find the Correct Districts"
+msgstr "查找正确的地区"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:149
+msgid ""
+"Due to the aforementioned area of investigation, we need to limit our "
+"districts to the following ones:"
+msgstr "鉴于上述调查区域，需要将我们的地区限制为以下地区："
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:152
+msgid "``Bellville``"
+msgstr "``Bellville``"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:153
+msgid "``Cape``"
+msgstr "``Cape``"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:154
+msgid "``Goodwood``"
+msgstr "``Goodwood``"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:155
+msgid "``Kuils River``"
+msgstr "``Kuils River``"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:156
+msgid "``Mitchells Plain``"
+msgstr "``Mitchells Plain``"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:157
+msgid "``Simon Town``"
+msgstr "``Simon Town``"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:158
+msgid "``Wynberg``"
+msgstr "``Wynberg``"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:160
+msgid ""
+"Right-click on the ``Districts`` layer in the :guilabel:`Layers` panel."
+msgstr "在 :guilabel:`图层` 面板中的 ``Districts`` 图层上右键单击。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:162
+msgid ""
+"In the menu that appears,  select the :guilabel:`Filter...` menu item. The "
+":guilabel:`Query Builder` dialog appears."
+msgstr "在出现的菜单中，选择 :guilabel:`过滤...` 菜单项。此时会出现 :guilabel:`查询构建器` 对话框。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:166
+msgid "You will now build a query to select only the candidate districts:"
+msgstr "现在，您将构建一个查询仅选择候选地区："
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:168
+msgid ""
+"In the :guilabel:`Fields` list, double-click on the ``NAME_2`` field to make"
+" it appear in the :guilabel:`SQL where clause` text field below"
+msgstr ""
+"在 :guilabel:`字段` 列表，双击 ``NAME_2`` 字段，使其出现在下面的 :guilabel:`SQL where clause` "
+"文本字段中。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:171
+msgid "Click the :guilabel:`IN` button to append it to the SQL query"
+msgstr "单击 :guilabel:`IN` 按钮将其追加到SQL查询。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:172
+msgid "Open the brackets"
+msgstr "打开括号。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:173
+msgid ""
+"Click the :guilabel:`All` button below the (currently empty) "
+":guilabel:`Values` list."
+msgstr "单击 (当前为空) :guilabel:`值` 列表下方的 :guilabel:`全部` 按钮。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:176
+msgid ""
+"After a short delay, this will populate the :guilabel:`Values` list with the"
+" values of the selected field (``NAME_2``)."
+msgstr "短暂延迟后，将用所选字段 (``NAME_2``) 的值填充 :guilabel:`值` 列表。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:178
+msgid ""
+"Double-click the value ``Bellville`` in the :guilabel:`Values` list to "
+"append it to the SQL query."
+msgstr "双击 :guilabel:`值` 列表中的值 ``Bellville`` ，将其追加到SQL查询中。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:180
+msgid "Add a comma and double-click to add ``Cape`` district"
+msgstr "添加逗号并双击值列表添加 ``Cape`` 地区。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:181
+msgid "Repeat the previous step for the remaining districts"
+msgstr "对其余地区重复上一步进行添加。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:182
+msgid "Close the brackets"
+msgstr "关闭括号。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:184
+msgid ""
+"The final query should be (the order of the districts in the brackets does "
+"not matter)::"
+msgstr "最终的查询应该是 (括号中的地区顺序无关紧要)::"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:190
+msgid "You can also use the ``OR`` operator; the query would look like this::"
+msgstr "也可以使用 ``OR`` 运算符，查询如下所示："
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:198
+msgid "Click :guilabel:`OK` twice."
+msgstr "单击 :guilabel:`确定` 两次。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:200
+msgid ""
+"The districts shown in your map are now limited to those in the list above."
+msgstr "地图中显示的地区现在仅限于上面列表中的地区。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:204
+msgid "Clip the Rasters"
+msgstr "裁剪栅格"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:206
+msgid ""
+"Now that you have an area of interest, you can clip the rasters to this "
+"area."
+msgstr "现在您已经有了关注区，可以将栅格裁剪到此区域。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:209
+msgid ""
+"Open the clipping dialog by selecting the menu item :menuselection:`Raster "
+"--> Extraction --> Clip Raster by Mask Layer...`"
+msgstr "选择菜单项 :menuselection:`栅格 --> 提取 --> 按掩膜图层裁剪栅格...` ，打开裁剪对话框。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:211
+msgid "In the :guilabel:`Input layer` dropdown list, select the ``DEM`` layer"
+msgstr "在 :guilabel:`输入图层` 下拉列表中，选择 ``DEM`` 图层。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:213
+msgid ""
+"In the :guilabel:`Mask layer` dropdown list, select the ``Districts`` layer"
+msgstr "在 :guilabel:`掩膜图层` 下拉列表中，选择 ``Districts`` 图层。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:215
+msgid ""
+"Scroll down and specify an output location in the :guilabel:`Clipped (mask)`"
+" text field by clicking the :guilabel:`...` button and choosing "
+":guilabel:`Save to File...`"
+msgstr ""
+"向下滚动，通过单击 :guilabel:`...` 按钮并选择 :guilabel:`保存到文件...` ，在 :guilabel:`已裁剪 (掩膜)`"
+" 文本字段中指定输出位置。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:219
+msgid "Navigate to the :file:`Rasterprac` directory"
+msgstr "导航到 :file:`Rasterprac` 目录"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:220
+msgid "Enter a file name - ``DEM_clipped.tif``"
+msgstr "输入文件名 - ``DEM_clipped.tif``"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:221
+msgid "Save"
+msgstr "保存"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:223
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:256
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:273
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:353
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:385
+msgid ""
+"Make sure that |checkbox| :guilabel:`Open output file after running "
+"algorithm` is checked"
+msgstr "确保已勾选 |checkbox| :guilabel:`执行算法后打开输出文件` 。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:808
+msgid "checkbox"
+msgstr "checkbox"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:225
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:355
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:387
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:402
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:481
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:576
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:618
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:765
+msgid "Click :guilabel:`Run`"
+msgstr "单击 :guilabel:`运行` 。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:227
+msgid ""
+"After the clipping operation has completed, leave the :guilabel:`Clip Raster"
+" by Mask Layer` dialog open, to be able to reuse the clipping area"
+msgstr "裁剪运算完成后，让 :guilabel:`按掩膜图层裁剪栅格` 对话框处于打开状态，便于能够重新使用裁剪区域。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:230
+msgid ""
+"Select the ``Rainfall`` raster layer in the :guilabel:`Input layer` dropdown"
+" list and save your output as :file:`Rainfall_clipped.tif`"
+msgstr ""
+"在 :guilabel:`输入图层` 下拉列表中选择 ``Rainfall`` 栅格图层，并将输出保存为 "
+":file:`Rainfall_clipped.tif` 。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:232
+msgid ""
+"Do not change any other options. Leave everything the same and click "
+":guilabel:`Run`."
+msgstr "其他选项不要更改，然后单击 :guilabel:`运行` 。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:234
+msgid ""
+"After the second clipping operation has completed, you may close the "
+":guilabel:`Clip Raster by Mask Layer` dialog"
+msgstr "第二次裁剪运算完成后，可以关闭 :guilabel:`按掩膜图层裁剪栅格` 对话框。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:236
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:335
+msgid "Save the map"
+msgstr "保存地图。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:239
+msgid "Align the rasters"
+msgstr "对齐栅格"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:241
+msgid ""
+"For our analysis we need the rasters to have the same CRS and they have to "
+"be aligned."
+msgstr "为了进行分析，我们需要栅格具有相同的CRS，并且它们必须对齐。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:244
+msgid ""
+"First we change the resolution of our rainfall data to 30 meters (pixel "
+"size):"
+msgstr "首先，我们将降雨数据的分辨率更改为30米 (像素大小)："
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:247
+msgid ""
+"In the :guilabel:`Layers` panel, ensure that ``Rainfall_clipped`` is the "
+"active layer (i.e., it is highlighted by having been clicked on)"
+msgstr "在 :guilabel:`图层` 面板，确保 ``Rainfall_clipped`` 是活动图层 (即，单击可高亮显示)"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:250
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:265
+msgid ""
+"Click on the :menuselection:`Raster --> Projections --> Warp (Reproject)...`"
+" menu item to open the :guilabel:`Warp (Reproject)` dialog"
+msgstr ""
+"单击 :menuselection:`栅格 --> 投影 --> 变形 (重投影)...` ，打开 :guilabel:`变形 (重投影)` 对话框"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:252
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:268
+msgid ""
+"Under :guilabel:`Resampling method to use`, select :guilabel:`Bilinear` from"
+" the drop down menu"
+msgstr "在 :guilabel:`要使用的重采样方法` ，从下拉菜单中选择 :guilabel:`双线性`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:253
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:269
+msgid ""
+"Set :guilabel:`Output file resolution in target georeferenced units` to "
+"``30``"
+msgstr "设置 :guilabel:`以目标地理参考单位表示的输出文件分辨率` 为 ``30``"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:254
+msgid ""
+"Scroll down to :guilabel:`Reprojected` and save the output in your "
+":file:`rainfall/reprojected` directory as :file:`Rainfall30.tif`."
+msgstr ""
+"向下滚动至 :guilabel:`重投影` ，在您的 :file:`rainfall/reprojected` 目录中保存输出为 "
+":file:`Rainfall30.tif`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:260
+msgid "Then we align the DEM:"
+msgstr "然后我们对齐DEM："
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:262
+msgid ""
+"In the :guilabel:`Layers` panel, ensure that ``DEM_clipped`` is the active "
+"layer (i.e., it is highlighted by having been clicked on)"
+msgstr "在 :guilabel:`图层` 面板，确保 ``DEM_clipped`` 是活动图层 (即，单击可高亮显示)"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:267
+msgid ""
+"Under :guilabel:`Target CRS`, select :guilabel:`Project CRS: EPSG:32733 - "
+"WGS 84 / UTM zone 33S` from the drop down menu"
+msgstr ""
+"在 :guilabel:`目标CRS` ，从下拉菜单中选择 :guilabel:`工程CRS: EPSG:32733 - WGS 84 / UTM "
+"zone 33S`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:270
+msgid ""
+"Scroll down to :guilabel:`Georeferenced extents of output file to be "
+"created`. Use the button to the right of the text box to select "
+":menuselection:`Calculate from Layer --> Rainfall30`."
+msgstr ""
+"向下滚动到 :guilabel:`新建输出文件配准后的范围` ，使用文本框右侧的按钮选择 :menuselection:`从图层计算 --> "
+"Rainfall30`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:271
+msgid ""
+"Scroll down to :guilabel:`Reprojected` and save the output in your "
+":file:`DEM/reprojected` directory as :file:`DEM30.tif`."
+msgstr ""
+"向下滚动至 :guilabel:`重投影` ，在您的 :file:`DEM/reprojected` 目录中保存输出为 "
+":file:`DEM30.tif`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:277
+msgid ""
+"In order to properly see what's going on, the symbology for the layers needs"
+" to be changed."
+msgstr "为了正确看到发生的变化，需要更改图层的符号。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:281
+msgid "Changing the symbology of vector layers"
+msgstr "更改矢量图层的符号"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:283
+msgid ""
+"In the :guilabel:`Layers` panel, right-click on the :guilabel:`Streets` "
+"layer"
+msgstr "在 :guilabel:`图层` 面板，右键单击 :guilabel:`Streets` 图层"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:285
+msgid "Select :guilabel:`Properties` from the menu that appears"
+msgstr "从出现的菜单中选择 :guilabel:`属性`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:286
+msgid "Switch to the :guilabel:`Symbology` tab in the dialog that appears"
+msgstr "在出现的对话框中切换到 :guilabel:`符号化` 选项卡"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:287
+msgid "Click on the :guilabel:`Fill` entry in the top widget"
+msgstr "单击顶部控件中的 :guilabel:`填充` 条目"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:288
+msgid ""
+"Select a symbol in the list below or set a new one (color, transparency, "
+"...)"
+msgstr "在下面的列表中选择符号或设置新符号 (颜色、透明度等)"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:290
+msgid ""
+"Click :guilabel:`OK` to close the :guilabel:`Layer Properties` dialog. This "
+"will change the rendering of the :guilabel:`Streets` layer."
+msgstr ""
+"单击 :guilabel:`确定` 关闭 :guilabel:`图层属性` 对话框。这将更改 :guilabel:`Streets` 图层的渲染"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:293
+msgid ""
+"Follow a similar process for the :guilabel:`Zoning` layer and choose an "
+"appropriate color for it"
+msgstr "对 :guilabel:`Zoning` 图层执行类似的处理，并为其选择合适的颜色"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:299
+msgid "Changing the symbology of raster layers"
+msgstr "更改栅格图层的符号"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:301
+msgid "Raster layer symbology is somewhat different."
+msgstr "栅格图层符号有点不同。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:303
+msgid ""
+"Open the :guilabel:`Properties` dialog for the :guilabel:`Rainfall30` raster"
+" layer"
+msgstr "打开 :guilabel:`Rainfall30` 栅格图层的 :guilabel:`属性` 对话框"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:305
+msgid ""
+"Switch to the :guilabel:`Symbology` tab. You'll notice that this dialog is "
+"very different from the version used for vector layers."
+msgstr "切换到 :guilabel:`符号化` 选项卡。您会注意到，此对话框与用于矢量图层的样式大不一样。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:308
+msgid "Expand :guilabel:`Min/Max Value Settings`"
+msgstr "展开 :guilabel:`最小/最大值设置`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:309
+msgid ""
+"Ensure that the button :guilabel:`Mean +/- standard deviation` is selected"
+msgstr "确保选择了 :guilabel:`均值 +/- 标准差` 按钮"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:311
+msgid "Make sure that the value in the associated box is ``2.00``"
+msgstr "确保关联框中的值为 ``2.00``"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:312
+msgid ""
+"For :guilabel:`Contrast enhancement`, make sure it says :guilabel:`Stretch "
+"to MinMax`"
+msgstr "为了 :guilabel:`对比度增强` ，确保显示为 :guilabel:`拉伸至极小极大`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:314
+msgid ""
+"For :guilabel:`Color gradient`, change it to :guilabel:`White to Black`"
+msgstr "对于 :guilabel:`颜色梯度` ，将其更改为 :guilabel:`白到黑`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:318
+msgid ""
+"The ``Rainfall30`` raster, if visible, should change colors, allowing you to"
+" see different brightness values for each pixel"
+msgstr "``Rainfall30`` 栅格 (如果可见) 应该会改变颜色，使您可以看到每个像素的不同亮度值"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:320
+msgid ""
+"Repeat this process for the ``DEM30`` layer, but set the standard deviations"
+" used for stretching to ``4.00``"
+msgstr "对 ``DEM30`` 图层重复相同的处理，但将用于拉伸的标准差设置为 ``4.00``"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:324
+msgid "Clean up the map"
+msgstr "清理地图"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:326
+msgid ""
+"Remove the original ``Rainfall`` and ``DEM`` layers, as well as "
+"``Rainfall_clipped`` and ``DEM_clipped`` from the :guilabel:`Layers` panel:"
+msgstr ""
+"从 :guilabel:`图层` 面板移除原 ``Rainfall`` 和 ``DEM`` 图层，以及 ``Rainfall_clipped`` 和 "
+"``DEM_clipped`` ："
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:330
+msgid "Right-click on these layers and select :guilabel:`Remove`."
+msgstr "在这些图层上右键单击，然后选择 :guilabel:`移除图层` 。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:332
+msgid ""
+"This will not remove the data from your storage device, it will merely take "
+"it out of your map."
+msgstr "这不会从存储设备删除数据，只是将其从地图中移除。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:336
+msgid ""
+"You can now hide the vector layers by unchecking the box next to them in the"
+" :guilabel:`Layers` panel. This will make the map render faster and will "
+"save you some time."
+msgstr "现在可以通过取消勾选 :guilabel:`图层` 面板中矢量图层旁边的框来隐藏它们。这将使地图渲染速度更快，并为您节省一些时间"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:341
+msgid "Create the hillshade"
+msgstr "创建山体阴影"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:343
+msgid ""
+"In order to create the hillshade, you will need to use an algorithm that was"
+" written for this purpose."
+msgstr "为了创建山体阴影，您需要使用为此目的而编写的算法。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:346
+msgid ""
+"In the :guilabel:`Layers` panel, ensure that ``DEM30`` is the active layer "
+"(i.e., it is highlighted by having been clicked on)"
+msgstr "在 :guilabel:`图层` 面板，确保``DEM30`` 是活动图层 (即，单击可高亮显示)"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:349
+msgid ""
+"Click on the :menuselection:`Raster --> Analysis --> Hillshade...` menu item"
+" to open the :guilabel:`Hillshade` dialog"
+msgstr "单击 :menuselection:`栅格 --> 分析 --> 山体阴影...` 菜单项，打开 :guilabel:`山体阴影` 对话框"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:351
+msgid ""
+"Scroll down to :guilabel:`Hillshade` and save the output in your "
+":file:`Rasterprac` directory as :file:`hillshade.tif`"
+msgstr ""
+"向下滚动到 :guilabel:`山体阴影` ，在您的 :file:`Rasterprac` 目录中保存输出为 "
+":file:`hillshade.tif`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:356
+msgid "Wait for it to finish processing."
+msgstr "等待完成处理"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:358
+msgid ""
+"The new ``hillshade`` layer has appeared in the :guilabel:`Layers` panel."
+msgstr "新的 ``hillshade`` 图层已出现在 :guilabel:`图层` 面板。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:361
+msgid ""
+"Right-click on the ``hillshade`` layer in the :guilabel:`Layers` panel and "
+"bring up the :guilabel:`Properties` dialog"
+msgstr "在 :guilabel:`图层` 面板中的 ``hillshade`` 图层上右键单击，然后打开 :guilabel:`属性` 对话框"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:364
+msgid ""
+"Click on the :guilabel:`Transparency` tab and set the :guilabel:`Global "
+"Opacity` slider to ``20%``"
+msgstr "单击 :guilabel:`透明度` 选项卡，将 :guilabel:`全局不透明度` 滑动条设置为 ``20%``"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:367
+msgid ""
+"Note the effect when the transparent hillshade is superimposed over the "
+"clipped DEM. You may have to change the order of your layers, or click off "
+"the ``Rainfall30`` layer in order to see the effect."
+msgstr "请注意，透明山体阴影叠加在裁剪后的DEM时的效果。您可能需要更改图层的顺序，或单击 ``Rainfall30`` 图层查看效果"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:373
+msgid "Slope"
+msgstr "坡度"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:375
+msgid ""
+"Click on the :menuselection:`Raster --> Analysis --> Slope...` menu item to "
+"open the :guilabel:`Slope` algorithm dialog"
+msgstr "单击 :menuselection:`栅格 --> 分析 --> 坡度...` 菜单项，打开:guilabel:`坡度` 算法对话框"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:377
+msgid "Select ``DEM30`` as :guilabel:`Input layer`"
+msgstr "选择 ``DEM30`` 作为 :guilabel:`输入图层`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:378
+msgid ""
+"Check |checkbox| :guilabel:`Slope expressed as percent instead of degrees`. "
+"Slope can be expressed in different units (percent or degrees). Our criteria"
+" suggest that the plant of interest grows on slopes with a gradient between "
+"15% and 60%. So we need to make sure our slope data is expressed as a "
+"percent."
+msgstr ""
+"勾选 |checkbox| :guilabel:`用百分比而不是度来表示坡度` 。坡度可以用不同的单位 (百分比或度) "
+"表示。评估条件表明，适合的植物生长的坡度在15%到60%之间的斜坡上。所以需要确保我们的坡度数据是用百分比表示"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:384
+msgid "Specify an appropriate file name and location for your output."
+msgstr "为您的输出指定适当的文件名和位置"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:389
+msgid ""
+"The slope image has been calculated and added to the map. As usual, it is "
+"rendered in grayscale. Change the symbology to a more colorful one:"
+msgstr "坡度图像已计算并添加到地图中。和往常一样，是以灰度渲染的。将符号更改为更有趣的符号："
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:393
+msgid ""
+"Open the layer :guilabel:`Properties` dialog (as usual, via the right-click "
+"menu of the layer)"
+msgstr "打开图层 :guilabel:`属性` 对话框 (通常使用图层的右键单击菜单）"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:395
+msgid "Click on the :guilabel:`Symbology` tab"
+msgstr "单击 :guilabel:`符号化` 选项卡"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:396
+msgid ""
+"Where it says :guilabel:`Singleband gray` (in the :guilabel:`Render type` "
+"dropdown menu), change it to :guilabel:`Singleband pseudocolor`"
+msgstr ""
+"在显示 :guilabel:`单波段灰度` 的地方 ( :guilabel:`渲染类型` 下拉菜单中)，请将其更改为 "
+":guilabel:`单波段伪彩色`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:399
+msgid ""
+"Choose :guilabel:`Mean +/- standard deviation x` for :guilabel:`Min / Max "
+"Value Settings` with a value of ``2.0``"
+msgstr "为 :guilabel:`最小/最大值设置` 选择 :guilabel:`均值 +/- 标准差 x` ，其值为 ``2.0``"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:401
+msgid "Select a suitable :guilabel:`Color ramp`"
+msgstr "选择适当的 :guilabel:`颜色渐变`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:405
+msgid "|TY| Aspect"
+msgstr "试一试 坡向"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:407
+msgid ""
+"Use the same approach as for calculating the slope, choosing "
+":guilabel:`Aspect...` in the :menuselection:`Raster --> Analysis` menu."
+msgstr "使用与计算坡度相同的方法，在 :menuselection:`栅格 --> 分析` 菜单中选择 :guilabel:`坡向...` 。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:411
+msgid "Remember to save the project periodically."
+msgstr "请记住定期保存工程。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:414
+msgid "Reclassifying rasters"
+msgstr "重分类栅格"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:416
+msgid "Choose :menuselection:`Raster --> Raster calculator...`"
+msgstr "选择 :menuselection:`栅格 --> 栅格计算器...`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:417
+msgid ""
+"Specify your :file:`Rasterprac` directory as the location for the "
+":guilabel:`Output layer` (click on the :guilabel:`...` button), and save it "
+"as :file:`slope15_60.tif`"
+msgstr ""
+"指定 :file:`Rasterprac` 目录作为 :guilabel:`输出图层` 的位置 (单击 :guilabel:`...` "
+"按钮)，并将其保存为 :file:`slope15_60.tif`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:420
+msgid ""
+"Ensure that the :guilabel:`Open output file after running algorithm` box is "
+"selected."
+msgstr "确保选中 :guilabel:`执行算法后打开输出文件` 的方框"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:424
+msgid ""
+"In the :guilabel:`Raster bands` list on the left, you will see all the "
+"raster layers in your :guilabel:`Layers` panel. If your Slope layer is "
+"called :guilabel:`slope`, it will be listed as ``slope@1``. Indicating band "
+"1 of the slope raster."
+msgstr ""
+"在左侧的 :guilabel:`栅格波段` 列表中，显示您在 :guilabel:`图层` 面板看到的所有栅格图层。如果您的坡度图层被称为 "
+":guilabel:`slope` ，它将被列为 ``slope@1`` ，表示坡度栅格的波段是 1 。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:429
+msgid "The slope needs to be between ``15`` and ``60`` degrees."
+msgstr "坡度需要介于 ``15`` 和 ``60`` 度之间。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:431
+msgid ""
+"Using the list items and buttons in the interface, build the following "
+"expression::"
+msgstr "使用界面中的列表项和按钮，构建以下表达式::"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:436
+msgid ""
+"Set the :guilabel:`Output layer` field to an appropriate location and file "
+"name."
+msgstr "将 :guilabel:`输出图层` 字段设置为适当的位置和文件名。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:438
+msgid "Click :guilabel:`Run`."
+msgstr "单击 :guilabel:`运行` 。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:440
+msgid ""
+"Now find the correct aspect (east-facing: between ``45`` and ``135`` "
+"degrees) using the same approach."
+msgstr "现在使用同样的方法找到正确的坡向 (朝东: ``45`` 到 ``135`` 度)。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:443
+msgid "Build the following expression::"
+msgstr "构建以下表达式::"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:447
+msgid ""
+"You will know it worked when all of the east-facing slopes are white in the "
+"resulting raster (it's almost as if they are being lit by the morning "
+"sunlight)."
+msgstr "当生成栅格中所有朝东的斜坡都是白色时，您就会知道它起作用了 (就像被早晨的阳光照亮一样)。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:486
+msgid "Save the project."
+msgstr "保存工程。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:498
+msgid "Unhide the ``Zoning`` vector layer"
+msgstr "取消隐藏 ``Zoning`` 矢量图层"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:820
+msgid "toggleEditing"
+msgstr "toggleEditing"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:804
+msgid "calculateField"
+msgstr "calculateField"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:806
+msgid "capturePoint"
+msgstr "capturePoint"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:818
+msgid "saveEdits"
+msgstr "saveEdits"

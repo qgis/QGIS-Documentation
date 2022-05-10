@@ -23,6 +23,257 @@ msgstr ""
 "Language: zh-Hans\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#: ../../docs/training_manual/grass/grass_setup.rst:2
+msgid "|LS| GRASS Setup"
+msgstr "课: GRASS安装"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:4
+msgid ""
+"Using GRASS in QGIS requires you to think of the interface in a slightly "
+"different way. Remember that you're not working in QGIS directly, but "
+"working in GRASS *via* QGIS. Hence, make sure you have installed QGIS "
+"Desktop with Grass support."
+msgstr ""
+"在QGIS中使用GRASS，需要适应略微不同工作方式的界面。请记住，您不是直接使用QGIS，而是 *通过* "
+"QGIS在GRASS中工作。因此，请确保已经安装了支持GRASS的 QGIS Desktop。"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:9
+msgid ""
+"|win| To open a QGIS session with GRASS available on Windows you have to "
+"click on the ``QGIS Desktop with GRASS`` icon."
+msgstr "|win| 要在Windows使用GRASS打开QGIS会话，您必须单击 ``QGIS Desktop with GRASS`` 图标。"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:342
+msgid "win"
+msgstr "win"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:12
+msgid "**The goal for this lesson:** To begin a GRASS project in QGIS."
+msgstr "**本课目标:** 在QGIS中创建GRASS工程。"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:15
+msgid "|basic| |FA| Start a New GRASS Session"
+msgstr "|basic| 跟我做: 新建GRASS会话"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:335
+msgid "basic"
+msgstr "basic"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:17
+msgid ""
+"To launch GRASS from within QGIS, you need to activate it as with any other "
+"plugin:"
+msgstr "要从QGIS启动GRASS，您需要像使用任何其他插件一样先进行激活："
+
+#: ../../docs/training_manual/grass/grass_setup.rst:20
+msgid "First, open a new QGIS project."
+msgstr "首先，打开一个新的QGIS工程。"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:21
+msgid ""
+"In the :guilabel:`Plugin Manager`, enable :guilabel:`GRASS` in the list:"
+msgstr "在 :guilabel:`插件管理器` 的列表中启用 :guilabel:`GRASS` ："
+
+#: ../../docs/training_manual/grass/grass_setup.rst:27
+msgid "The GRASS toolbar and the GRASS panel will appear:"
+msgstr "GRASS工具栏和GRASS面板将出现："
+
+#: ../../docs/training_manual/grass/grass_setup.rst:32
+msgid "GRASS toolbar"
+msgstr "GRASS工具栏"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:37
+msgid "GRASS Panel"
+msgstr "GRASS面板"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:39
+msgid ""
+"The GRASS panel is not active because, before you can use GRASS, you need to"
+" create a ``Mapset``. GRASS always works in a database environment, which "
+"means that you need to import all the data you want to use into a GRASS "
+"database."
+msgstr ""
+"GRASS面板未激活，因为在使用GRASS之前，需要创建 ``地图集`` "
+"。GRASS始终在数据库环境中工作，这意味着您需要将所有要使用的数据导入GRASS数据库。"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:43
+msgid ""
+"The GRASS database has a straightforward structure, even if at a first look "
+"it seems very complicated. The most important thing you should know is that "
+"the upper level of the database is the ``Location``. Each ``Location`` can "
+"contain different ``Mapset``: in **every** ``Mapset`` you will find the "
+"``PERMANENT`` Mapset because it is created by default by GRASS. Each "
+"``Mapset`` contains the data (raster, vector, etc) in a particular "
+"structure, but don't worry, GRASS will take care of this for you."
+msgstr ""
+"GRASS数据库的结构非常简单，尽管第一次看到时感觉似乎非常复杂。您应该知道的最重要的一点是，数据库的上层是 ``位置`` 。每个 ``位置`` "
+"可以包含不同的 ``地图集`` ：在 **每个** ``地图集`` 中，您都会找到 ``永久`` 地图集，因为它默认由GRASS创建。每个 "
+"``地图集`` 都包含特定结构的数据 (栅格、矢量等)，但不用担心，GRASS会为您处理这些数据。"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:51
+msgid ""
+"Just remember: ``Location`` contains ``Mapset`` that contains the data. For "
+"more information visit the `GRASS website "
+"<https://grass.osgeo.org/grass77/manuals/grass_database.html>`_."
+msgstr ""
+"请记住： ``位置`` 包含 ``地图集`` 包含的数据。有关更多信息，请访问 `GRASS网站 "
+"<https://grass.osgeo.org/grass77/manuals/grass_database.html>`_ 。"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:57
+msgid "GRASS database structure (from GRASS docs)"
+msgstr "GRASS数据库结构 (来自GRASS文档)"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:60
+msgid "|basic| |FA| Start a New GRASS Project"
+msgstr "|basic| 跟我做: 启动新的GRASS工程"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:62
+msgid "Click on the :guilabel:`Plugins --> GRASS --> New Mapset` menu:"
+msgstr "单击 :guilabel:`插件 --> GRASS --> 新建地图集` 菜单："
+
+#: ../../docs/training_manual/grass/grass_setup.rst:67
+msgid "You'll be asked to choose the location of the GRASS database."
+msgstr "系统首先要求您选择GRASS数据库的位置 - 注意：文件夹及路径不能有中文等其他字符，否则创建失败。"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:69
+msgid ""
+"Set it as the directory that will be used by GRASS to set up its database:"
+msgstr "将所选文件夹设置为GRASS用于设置其数据库的目录："
+
+#: ../../docs/training_manual/grass/grass_setup.rst:74
+#: ../../docs/training_manual/grass/grass_setup.rst:89
+#: ../../docs/training_manual/grass/grass_setup.rst:95
+#: ../../docs/training_manual/grass/grass_setup.rst:102
+msgid "Click :guilabel:`Next`."
+msgstr "单击 :guilabel:`下一步` 。"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:76
+msgid ""
+"GRASS needs to create a ``Location``, which describes the maximum extent of "
+"the geographic area you'll be working in, also known as Grass ``Region``."
+msgstr "GRASS需要创建一个 ``位置`` ，它描述了您将要使用的地理区域的最大范围，也称为 Grass ``域`` 。"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:79
+msgid ""
+"the Region is extremely important for GRASS because it describes the area in"
+" which all layers will be taken into account for GRASS. Everything that is "
+"outside will not be considered. Don't worry, you can always change the "
+"extent of the GRASS Region after the Location has been created"
+msgstr ""
+"域对GRASS极其重要，因为它描述了GRASS将解释的所有图层的区域。外面的一切都不会被考虑。不用担心，在创建位置后，随时可以更改GRASS域的范围"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:84
+msgid "Call the new location ``SouthAfrica``:"
+msgstr "新建地点并命名为 ``SouthAfrica``:"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:90
+msgid "We'll be working with ``WGS 84``, so search for and select this CRS:"
+msgstr "我们将使用 ``WGS 84`` ，因此搜索并选择此CRS："
+
+#: ../../docs/training_manual/grass/grass_setup.rst:96
+msgid ""
+"Now select the region :guilabel:`South Africa` from the dropdown and click "
+":guilabel:`Set`:"
+msgstr "现在从下拉列表中选择域 :guilabel:`South Africa` ，然后单击 :guilabel:`设置` :"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:103
+msgid "Create a mapset, which is the map file that you'll be working with."
+msgstr "创建地图集，这将是您使用的地图文件。"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:108
+msgid ""
+"Once you're done, you'll see a dialog asking with a summary of all the "
+"information entered."
+msgstr "完成后，您将看到一个对话框，其中包含所有输入信息的摘要。"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:114
+msgid "Click :guilabel:`Finish`."
+msgstr "单击 :guilabel:`完成` 。"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:115
+msgid "Click :guilabel:`OK` on the success dialog."
+msgstr "在成功创建对话框中单击 :guilabel:`确定` 按钮。"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:117
+msgid ""
+"You will see that the GRASS Panel will become active and you can start to "
+"use all GRASS tools."
+msgstr "您将看到GRASS面板将变为激活状态，并可以使用所有GRASS工具。"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:121
+msgid "|basic| |FA| Loading Vector Data into GRASS"
+msgstr "|basic| 跟我做: 将矢量数据加载到GRASS"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:123
+msgid ""
+"You have now a blank map and before you can start to use all the GRASS tools"
+" you have to load data into the GRASS database, specifically into the "
+"``Mapset``. You cannot use GRASS tools with layer that are not loaded into a"
+" GRASS ``Mapset``."
+msgstr ""
+"您现在有一个空白地图，在开始使用所有GRASS工具之前，必须将数据加载到GRASS数据库，特别是加载至 ``地图集`` 。不能对未加载到GRASS "
+"``地图集`` 中的图层使用GRASS工具。"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:127
+msgid ""
+"There are many different ways to load data in the GRASS database. Let's "
+"start with the first one."
+msgstr "在GRASS数据库中加载数据有许多不同的方法。让我们从第一个开始。"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:134
+msgid "|basic| |FA| Load data using the QGIS Browser"
+msgstr "|basic| 跟我做: 使用QGIS浏览器加载数据"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:136
+msgid ""
+"In section :ref:`browser_panel_tm` we saw that the easiest and quickest way "
+"to load the data in QGIS is the Browser Panel."
+msgstr "在 :ref:`browser_panel_tm` 部件中我们发现，QGIS中加载数据最简单快捷的方法是使用浏览器面板。"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:139
+msgid ""
+"GRASS data are recognized from the QGIS Browser as *real* GRASS data and you"
+" can notice it because you will see the GRASS icon next to the GRASS Mapset."
+" Moreover you will see the |grassMapsetOpen| icon next to the Mapset that is"
+" opened."
+msgstr ""
+"GRASS数据在QGIS浏览器中被识别为 *真正* "
+"的GRASS数据，您可能会注意到它，因为您将在GRASS地图集旁边看到GRASS图标。此外，也可以在打开的地图集旁边看到 "
+"|grassMapsetOpen| 图标。"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:338
+msgid "grassMapsetOpen"
+msgstr "grassMapsetOpen"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:146
+msgid ""
+"You will see a replication of the GRASS Location as normal folder: GRASS "
+"``Mapset`` data are those within the |grassLogo| folder"
+msgstr "您将看到GRASS位置可以作为普通文件夹进行复制：GRASS ``地图集`` 数据是 |grassLogo| 文件夹中的数据"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:336
+msgid "grassLogo"
+msgstr "grassLogo"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:149
+msgid ""
+"You can easily **drag and drop** layers from a folder to the GRASS Mapset."
+msgstr "可以轻松地将图层从文件夹 **拖放** 到GRASS地图集。"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:151
+msgid ""
+"Let's try to import the :file:`roads` layer into the ``grass_mapset`` Mapset"
+" of the ``SouthAfrica`` Location."
+msgstr "让我们尝试将 :file:`roads` 图层导入到 ``SouthAfrica`` 位置的 ``grass_mapset`` 地图集。"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:168
+msgid "|basic| |FA| Load data using the GRASS Panel"
+msgstr "|basic| 跟我做: 使用GRASS面板加载数据"
+
+#: ../../docs/training_manual/grass/grass_setup.rst:340
+msgid "hard"
+msgstr "hard"
+
 #: ../../docs/training_manual/grass/grass_setup.rst:251
 msgid "Answer"
 msgstr "回答"
