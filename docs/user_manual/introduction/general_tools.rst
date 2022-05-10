@@ -517,13 +517,16 @@ Statistical Summary Panel
 The :guilabel:`Statistics` panel (:kbd:`Ctrl+6`) provides summarized information
 on any vector layer. This panel allows you to select:
 
-* the vector layer to compute the statistics on
-* the column to use, or an |expression| :ref:`expression <vector_expressions>`
+* the vector layer to compute the statistics on: it can be selected
+  from the top drop-down menu, or synced with the active layer in the
+  :guilabel:`Layers` panel using the :guilabel:`Follow selected layer`
+  checkbox at the bottom of the statistics drop-down list
+* the field or |expression| :ref:`expression <vector_expressions>` to use:
+  for each layer, the last entry is remembered and automatically computed
+  upon layer reselection.
 * the statistics to return using the drop-down button at the bottom-right of the
   dialog. Depending on the field's (or expression's values) type, available
   statistics are:
-
-.. tabularcolumns:: |l|c|c|c|c|
 
 ================================== ============ ============  ============  ============
  Statistics                         String       Integer       Float         Date
@@ -553,10 +556,10 @@ Table: Statistics available for each field type
 
 The statistical summary can be:
 
-* returned for the whole layer or |checkbox| :guilabel:`selected features only`
+* returned for the whole layer or |checkbox| :guilabel:`Selected features only`
+* |editCopy| copied to the clipboard and pasted as a table in another application
 * recalculated using the |refresh| button when the underlying data source changes
   (eg, new or removed features/fields, attribute modification)
-* |editCopy| copied to the clipboard and pasted as a table in another application
 
 .. _figure_statistical_summary:
 
