@@ -609,7 +609,7 @@ Parameters
      - ``JOIN_STYLE``
      - [enumeration]
 
-       Default: *0*
+       Default: 0
      - Specifies whether round, miter or beveled joins should be
        used when offsetting corners in a line.
        Options are:
@@ -4322,7 +4322,7 @@ Parameters
      - ``JOIN_STYLE``
      - [enumeration]
 
-       Default: *0*
+       Default: 0
      - Specifies whether round, miter or beveled joins should be
        used when offsetting corners in a line.
        Options are:
@@ -4331,6 +4331,11 @@ Parameters
        * 1 --- Miter
        * 2 --- Bevel
 
+       .. figure:: img/buffer_join_style.png
+          :align: center
+          :width: 100%
+
+          Round, miter, and bevel join styles
    * - **Miter limit**
      - ``MITER_LIMIT``
      - [number]
@@ -6162,6 +6167,8 @@ Parameters
    * - **Side**
      - ``SIDE``
      - [enumeration]
+  
+       Default: 0
      - Which side to create the buffer on.
        One of:
 
@@ -6178,6 +6185,8 @@ Parameters
    * - **Join style**
      - ``JOIN_STYLE``
      - [enumeration]
+
+       Default: 0
      - Specifies whether round, miter or beveled joins should be
        used when offsetting corners in a line.
        Options are:
@@ -6185,7 +6194,12 @@ Parameters
        * 0 --- Round
        * 1 --- Miter
        * 2 --- Bevel
+  
+       .. figure:: img/buffer_join_style.png
+          :align: center
+          :width: 100%
 
+          Round, miter, and bevel join styles
    * - **Miter limit**
      - ``MITER_LIMIT``
      - [number]
