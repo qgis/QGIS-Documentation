@@ -597,13 +597,13 @@ It also allows you to:
 
 By right clicking on a request you can: 
 
- * :guilabel:`Open URL` which will open the URL in your default browser.
- * :guilabel:`Copy URL`
- * :guilabel:`Copy As cURL` to use it in the terminal.
- * :guilabel:`Copy as JSON` will copy the whole log from one request.
-
+* :guilabel:`Open URL` which will open the URL in your default browser.
+* :guilabel:`Copy URL`
+* :guilabel:`Copy As cURL` to use it in the terminal.
+* :guilabel:`Copy as JSON` will copy the whole log from one request.
 
 .. figure:: img/network_logger.png
+   :align: center
 
    Network Logger output for GET Request
 
@@ -616,6 +616,7 @@ The :guilabel:`Profiler` allows to get load times for the Categories
 load times.
 
 .. figure:: img/profiler.png
+   :align: center
 
    Profiler for QGIS Startup
 
