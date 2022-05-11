@@ -987,26 +987,677 @@ msgid ""
 "sunlight)."
 msgstr "当生成栅格中所有朝东的斜坡都是白色时，您就会知道它起作用了 (就像被早晨的阳光照亮一样)。"
 
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:451
+msgid ""
+"Find the correct rainfall (greater than ``1000`` mm) the same way. Use the "
+"following expression::"
+msgstr "使用同样的方法找到符合要求的降雨量 (大于 ``1000`` 毫米)。使用以下表达式::"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:456
+msgid ""
+"Now that you have all three criteria each in separate rasters, you need to "
+"combine them to see which areas satisfy all the criteria. To do so, the "
+"rasters will be multiplied with each other. When this happens, all "
+"overlapping pixels with a value of ``1`` will retain the value of ``1`` "
+"(i.e. the location meets the criteria), but if a pixel in any of the three "
+"rasters has the value of ``0`` (i.e. the location does not meet the "
+"criteria), then it will be ``0`` in the result. In this way, the result will"
+" contain only the overlapping areas that meet all of the appropriate "
+"criteria."
+msgstr ""
+"现在，在单独的栅格中分别拥有所有三个条件，您需要将它们组合起来，便于查看哪些区域满足所有条件。为此，栅格将彼此相乘。产生这种情况时，所有重叠像素的值为 "
+"``1`` 时将保留 ``1`` 的值 (即位置符合要求)，但如果三个栅格中的任何一个像素的值为 ``0`` (即位置不符合条件)，则结果将为 "
+"``0`` 。这样，结果将只包含满足所有适合条件的重叠区域。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:468
+msgid "Combining rasters"
+msgstr "组合栅格"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:470
+msgid ""
+"Open the *Raster Calculator* (:menuselection:`Raster --> Raster "
+"Calculator...`)"
+msgstr "打开 *栅格计算器* (:menuselection:`栅格 --> 栅格计算器...`)"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:472
+msgid ""
+"Build the following expression (with the appropriate names for your "
+"layers)::"
+msgstr "构建以下表达式 (为图层使用适当的名称)::"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:477
+msgid "Set the output location to the :file:`Rasterprac` directory"
+msgstr "将输出位置设置为 :file:`Rasterprac` 目录"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:478
+msgid "Name the output raster :file:`aspect_slope_rainfall.tif`"
+msgstr "将输出栅格命名为 :file:`aspect_slope_rainfall.tif`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:479
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:574
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:616
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:762
+msgid ""
+"Ensure that |checkbox| :guilabel:`Open output file after running algorithm` "
+"is checked"
+msgstr "确保已勾选 |checkbox| :guilabel:`执行算法后打开输出文件`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:483
+msgid ""
+"The new raster now properly displays the areas where all three criteria are "
+"satisfied."
+msgstr "新栅格现在可以正确显示满足所有三个条件的区域。"
+
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:486
 msgid "Save the project."
 msgstr "保存工程。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:488
+msgid ""
+"The next criterion that needs to be satisfied is that the area must be "
+"``250`` m away from urban areas. We will satisfy this requirement by "
+"ensuring that the areas we compute are inside rural areas, and are ``250`` m"
+" or more from the edge of the area. Hence, we need to find all rural areas "
+"first."
+msgstr ""
+"需要满足的下一个条件是，该区域必须距离市区 ``250`` "
+"米。将通过确保我们计算的面积在农村地区内，并且距离该地区边缘250米或以上来满足这一要求。因此，需要首先找到所有的农村地区。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:495
+msgid "Finding rural areas"
+msgstr "寻找农村地区"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:497
+msgid "Hide all layers in the :guilabel:`Layers` panel"
+msgstr "在 :guilabel:`图层` 面板隐藏所有图层"
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:498
 msgid "Unhide the ``Zoning`` vector layer"
 msgstr "取消隐藏 ``Zoning`` 矢量图层"
 
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:499
+msgid ""
+"Right-click on it and bring up the :guilabel:`Attribute Table` dialog. Note "
+"the many different ways that the land is zoned here. We want to isolate the "
+"rural areas. Close the Attribute table."
+msgstr "右键单击并打开 :guilabel:`属性表` 对话框。请注意，这片土地有许多不同的分区方式，我们想分离农村地区。关闭属性表"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:503
+msgid ""
+"Right-click on the ``Zoning`` layer and select :guilabel:`Filter...` to "
+"bring up the :guilabel:`Query Builder` dialog"
+msgstr "右键单击 ``Zoning`` 图层并选择 :guilabel:`过滤...` ，打开 :guilabel:`查询构建器` 对话框"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:505
+msgid "Build the following query::"
+msgstr "构建以下查询::"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:509
+msgid "See the earlier instructions if you get stuck."
+msgstr "如果您遭到困难，请参阅前面的操作指南。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:510
+msgid ""
+"Click :guilabel:`OK` to close the :guilabel:`Query Builder` dialog. The "
+"query should return one feature."
+msgstr "单击 :guilabel:`确定` 关闭 :guilabel:`查询构建器` 对话框。查询应该返回一个要素"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:513
+msgid ""
+"You should see the rural polygons from the ``Zoning`` layer. You will need "
+"to save these."
+msgstr "应该可以从 ``Zoning`` 图层看到表示农村的多边形。您需要进行保存。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:516
+msgid ""
+"In the right-click menu for ``Zoning``, select :menuselection:`Export --> "
+"Save Features As...`."
+msgstr "在 ``Zoning`` 图层的右键单击菜单中，选择 :menuselection:`导出 --> 要素另存为...`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:518
+msgid "Save your layer under the :file:`Rasterprac` directory"
+msgstr "将图层保存在 :file:`Rasterprac` 目录中"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:519
+msgid "Name the output file :file:`rural.shp`"
+msgstr "命名输出文件为 :file:`rural.shp`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:521
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:552
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:646
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:748
+msgid "Save the project"
+msgstr "保存工程"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:523
+msgid ""
+"Now you need to exclude the areas that are within ``250m`` from the edge of "
+"the rural areas. Do this by creating a negative buffer, as explained below."
+msgstr "现在需要排除距离农村地区边缘 ``250米`` 以内的区域，这通过创建负缓冲区来实现。如下所述。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:528
+msgid "Creating a negative buffer"
+msgstr "创建负缓冲区"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:530
+msgid ""
+"Click the menu item :menuselection:`Vector --> Geoprocessing Tools --> "
+"Buffer...`"
+msgstr "单击菜单项 :menuselection:`矢量 --> 地理处理工具 --> 缓冲区...`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:532
+msgid ""
+"In the dialog that appears, select the ``rural`` layer as your input vector "
+"layer (:guilabel:`Selected features only` should not be checked)"
+msgstr "在出现的对话框中，选择 ``rural`` 图层作为输入矢量图层 (不应勾选 :guilabel:`仅选中的要素` )"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:535
+msgid ""
+"Set :guilabel:`Distance` to ``-250``. The negative value means that the "
+"buffer will be an internal buffer. Make sure that the units are meters in "
+"the dropdown menu."
+msgstr "将 :guilabel:`距离` 设置为 ``-250`` ，负值表示缓冲区将是一个内部缓冲区。确保下拉菜单中的单位为米。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:539
+msgid "Check |checkbox| :guilabel:`Dissolve result`"
+msgstr "勾选 |checkbox| :guilabel:`融合结果`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:540
+msgid ""
+"In :guilabel:`Buffered`, place the output file in the :file:`Rasterprac` "
+"directory, and name it :file:`rural_buffer.shp`"
+msgstr ""
+"在 :guilabel:`缓冲区建立后` ，将输出文件保存在 :file:`Rasterprac` 目录中，并将其命名为 "
+":file:`rural_buffer.shp`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:542
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:640
+msgid "Click :guilabel:`Save`"
+msgstr "单击 :guilabel:`保存`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:543
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:641
+msgid "Click :guilabel:`Run` and wait for the processing to complete"
+msgstr "单击 :guilabel:`运行` 并等待完成数据处理"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:544
+msgid "Close the :guilabel:`Buffer` dialog."
+msgstr "关闭 :guilabel:`缓冲区` 对话框"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:546
+msgid ""
+"Make sure that your buffer worked correctly by noting how the "
+"``rural_buffer`` layer is different from the ``rural`` layer. You may need "
+"to change the drawing order in order to observe the difference."
+msgstr ""
+"为确保您的缓冲区正常工作，请注意 ``rural_buffer`` 图层与 ``rural`` 图层的差异。为了观察差异，可能需要更改绘图顺序。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:551
+msgid "Remove the ``rural`` layer"
+msgstr "移除 ``rural`` 图层"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:555
+msgid ""
+"Now you need to combine your ``rural_buffer`` vector layer with the "
+"``aspect_slope_rainfall`` raster. To combine them, we will need to change "
+"the data format of one of the layers. In this case, you will vectorize the "
+"raster, since vector layers are more convenient when we want to calculate "
+"areas."
+msgstr ""
+"现在，您需要将 ``rural_buffer`` 矢量图层与 ``aspect_slope_rainfall`` "
+"栅格相结合。要将它们组合起来，我们需要更改其中一个图层的数据格式。在这种情况下，您将对栅格进行矢量化，因为在计算面积时，矢量图层更方便。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:562
+msgid "Vectorizing the raster"
+msgstr "矢量化栅格"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:564
+msgid ""
+"Click on the menu item :menuselection:`Raster --> Conversion --> Polygonize "
+"(Raster to  Vector)...`"
+msgstr "单击菜单项 :menuselection:`栅格 --> 转换 --> 栅格矢量化 (栅格转矢量)...`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:566
+msgid ""
+"Select the :file:`aspect_slope_rainfall` raster  as :guilabel:`Input layer`"
+msgstr "选择 :file:`aspect_slope_rainfall` 栅格作为 :guilabel:`输入图层`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:568
+msgid ""
+"Set :guilabel:`Name of the field to create` to ``suitable`` (the default "
+"field name is ``DN`` - Digital number data)"
+msgstr ""
+"将 :guilabel:`新建字段名称` 设置为 ``suitable`` (默认字段名为 ``DN`` - Digital Number 数据)"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:570
+msgid ""
+"Save the output. Under :guilabel:`Vectorized`, select :guilabel:`Save file "
+"as`. Set the location to :file:`Rasterprac` and name the file "
+":file:`aspect_slope_rainfall_all.shp`."
+msgstr ""
+"保存输出。在 :guilabel:`矢量化` 中选择 :guilabel:`文件另存为` ，将位置设置为 :file:`Rasterprac` "
+"，并命名文件为 :file:`aspect_slope_rainfall_all.shp`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:577
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:619
+msgid "Close the dialog when processing is complete"
+msgstr "数据处理完成后关闭对话框"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:579
+msgid ""
+"All areas of the raster have been vectorized, so you need to select only the"
+" areas that have a value of ``1`` in the ``suitable`` field. (Digital "
+"Number."
+msgstr ""
+"栅格的所有区域都已矢量化，因此只需在 ``suitable`` 的字段中选择值为 ``1`` 的区域 (数字量化值 - Digital Number)。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:583
+msgid ""
+"Open the :guilabel:`Query Builder` dialog (right-click - "
+":guilabel:`Filter...`) for the new vector layer"
+msgstr "打开新矢量图层的 :guilabel:`查询构建器` 对话框 (右键单击 - :guilabel:`过滤...`)"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:585
+msgid "Build this query::"
+msgstr "构建此查询::"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:590
+msgid ""
+"After you are sure the query is complete (and only the areas that meet all "
+"three criteria, i.e. with a value of ``1`` are visible), create a new vector"
+" file from the results, using the :guilabel:`Export --> Save Features As...`"
+" in the layer's right-click menu"
+msgstr ""
+"确定查询完成后 (只有满足所有三个条件的区域，即值为 ``1`` 的区域可见)，从结果新建矢量文件，在图层的右键单击菜单中使用 "
+":guilabel:`导出 --> 要素另存为...`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:595
+msgid "Save the file in the :file:`Rasterprac` directory"
+msgstr "将该文件保存在 :file:`Rasterprac` 目录中"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:596
+msgid "Name the file :file:`aspect_slope_rainfall_1.shp`"
+msgstr "命名文件为 :file:`aspect_slope_rainfall_1.shp`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:597
+msgid "Remove the ``aspect_slope_rainfall_all`` layer from your map"
+msgstr "从地图中移除 ``aspect_slope_rainfall_all`` 图层"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:599
+msgid "Save your project"
+msgstr "保存您的工程"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:601
+msgid ""
+"When we use an algorithm to vectorize a raster, sometimes the algorithm "
+"yields what is called \"Invalid geometries\", i.e. there are empty polygons,"
+" or polygons with mistakes in them, that will be difficult to analyze in the"
+" future. So, we need to use the \"Fix Geometry\" tool."
+msgstr ""
+"当我们使用算法对栅格进行矢量化时，有时该算法会产生所谓的 \"无效几何图形\" "
+"，即存在空多边形，或其中存在错误的多边形，这将在未来很难进行分析。所以，我们需要使用 \"修正几何图形\" 工具。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:608
+msgid "Fixing geometry"
+msgstr "修正几何图形"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:610
+msgid ""
+"In the :guilabel:`Processing Toolbox`, search for \"Fix geometries\", and "
+":guilabel:`Execute...` it"
+msgstr "在 :guilabel:`处理工具箱` 搜索并 :guilabel:`执行...` \"修正几何图形\""
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:612
+msgid "For the :guilabel:`Input layer`, select ``aspect_slope_rainfall_1``"
+msgstr "对于 :guilabel:`输入图层` 请选择 ``aspect_slope_rainfall_1``"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:613
+msgid ""
+"Under :guilabel:`Fixed geometries`, select :guilabel:`Save file as`, and "
+"save the output to :file:`Rasterprac` and name the file "
+":file:`fixed_aspect_slope_rainfall.shp`."
+msgstr ""
+"在 :guilabel:`已修正几何图形` 中选择 :guilabel:`文件另存为` ，将输出保存到 :file:`Rasterprac` "
+"，并将文件命名为 :file:`fixed_aspect_slope_rainfall.shp`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:621
+msgid ""
+"Now that you have vectorized the raster, and fixed the resulting geometry, "
+"you can combine the aspect, slope, and rainfall criteria with the distance "
+"from human settlement criteria by finding the intersection of the "
+"``fixed_aspect_slope_rainfall`` layer and the ``rural_buffer`` layer."
+msgstr ""
+"现在，已经对栅格进行了矢量化，并修复了生成的几何图形，可以通过 ``fixed_aspect_slope_rainfall`` 图层和 "
+"``rural_buffer`` 图层的交集，将坡向、坡度和降雨条件与距离人类居住区条件进行组合。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:628
+msgid "Determining the Intersection of vectors"
+msgstr "确定矢量的交集"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:630
+msgid ""
+"Click the menu item :menuselection:`Vector --> Geoprocessing Tools --> "
+"Intersection...`"
+msgstr "单击菜单项 :menuselection:`矢量 --> 地理处理工具 --> 相交...`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:633
+msgid ""
+"In the dialog that appears, select the ``rural_buffer`` layer as "
+":guilabel:`Input layer`"
+msgstr "在出现的对话框中，选择 ``rural_buffer`` 图层作为 :guilabel:`输入图层`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:635
+msgid ""
+"For the :guilabel:`Overlay layer`, select the "
+"``fixed_aspect_slope_rainfall`` layer"
+msgstr "对于 :guilabel:`叠加图层` ，选择 ``fixed_aspect_slope_rainfall`` 图层"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:637
+msgid ""
+"In :guilabel:`Intersection`, place the output file in the :file:`Rasterprac`"
+" directory"
+msgstr "在 :guilabel:`相交` 中，将输出文件保存在 :file:`Rasterprac` 目录"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:639
+msgid "Name the output file :file:`rural_aspect_slope_rainfall.shp`"
+msgstr "将输出文件命名为 :file:`rural_aspect_slope_rainfall.shp`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:642
+msgid "Close the :guilabel:`Intersection` dialog."
+msgstr "关闭 :guilabel:`相交` 对话框"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:644
+msgid ""
+"Make sure that your intersection worked correctly by noting that only the "
+"overlapping areas remain."
+msgstr "请注意仅保留重叠区域，以确保您的相交处理正确。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:648
+msgid ""
+"The next criteria on the list is that the area must be greater than ``6000``"
+" ㎡. You will now calculate the polygon areas in order to identify the areas "
+"that are the appropriate size for this project."
+msgstr "列表中的下一个条件是面积必须大于 ``6000`` 平米。现在，您将计算多边形区域，以确认适合此工程的区域大小。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:654
+msgid "Calculating the area for each polygon"
+msgstr "计算每个多边形的面积"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:656
+msgid "Open the new vector layer's right-click menu"
+msgstr "打开新矢量图层的右键单击菜单"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:657
+msgid "Select :guilabel:`Open attribute table`"
+msgstr "选择 :guilabel:`打开属性表`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:658
+msgid ""
+"Click the |toggleEditing| :sup:`Toggle editing` button in the top left "
+"corner of the table, or press :kbd:`Ctrl+e`"
+msgstr "单击表格左上角的 |toggleEditing| :sup:`切换编辑模式` 按钮，或按 :kbd:`Ctrl+E`"
+
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:820
 msgid "toggleEditing"
 msgstr "toggleEditing"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:660
+msgid ""
+"Click the |calculateField| :sup:`Open field calculator` button in the "
+"toolbar along the top of the table, or press :kbd:`Ctrl+i`"
+msgstr "单击表格顶部工具栏的 |calculateField| :sup:`打开字段计算器` 按钮，或按 :kbd:`Ctrl+I`"
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:804
 msgid "calculateField"
 msgstr "calculateField"
 
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:662
+msgid ""
+"In the dialog that appears, make sure that |checkbox| :guilabel:`Create new "
+"field` is checked, and set the :guilabel:`Output field name` to ``area`` The"
+" output field type should be a decimal number (real). Set "
+":guilabel:`Precision` to ``1`` (one decimal)."
+msgstr ""
+"在出现的对话框中，确保勾选了 |checkbox| :guilabel:`新建字段` ，并将 :guilabel:`输出字段名称` 设置为 "
+"``area`` ，输出字段类型应为小数 (实型)，将 :guilabel:`精度` 设置为 ``1`` (一位小数)。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:667
+msgid "In the :guilabel:`Expression` area, type::"
+msgstr "在 :guilabel:`表达式` 文本框中，键入::"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:671
+msgid ""
+"This means that the field calculator will calculate the area of each polygon"
+" in the vector layer and will then populate a new integer column (called "
+"``area``) with the computed value."
+msgstr "这意味着字段计算器将计算矢量图层中每个多边形的面积，然后用计算值填充一个新的整型列 (称为 ``area``)。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:676
+msgid ""
+"Do the same thing for another new field called ``id``. In :guilabel:`Field "
+"calculator expression`, type::"
+msgstr "对另一个名为 ``id`` 的新字段执行同样的操作。在 :guilabel:`字段计算器表达式` 中，键入::"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:681
+msgid ""
+"This ensures that each polygon has a unique ID for identification purposes."
+msgstr "这样可以确保每个多边形都有一个唯一的ID，便于识别。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:683
+msgid ""
+"Click |toggleEditing| :sup:`Toggle editing` again, and save your edits if "
+"prompted to do so"
+msgstr "再次单击 |toggleEditing| :sup:`切换编辑模式` ，并在提示时保存编辑"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:687
+msgid "Selecting areas of a given size"
+msgstr "选择给定大小的区域"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:689
+msgid "Now that the areas are known:"
+msgstr "现在，这些区域都已经知道了："
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:691
+msgid ""
+"Build a query (as usual) to select only the polygons that are larger than "
+"``6000`` ㎡. The query is::"
+msgstr "构建查询 (像之前一样)，只选择大于 ``6000`` 平米的多边形。查询是::"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:697
+msgid ""
+"Save the selection in the :file:`Rasterprac` directory as a new vector layer"
+" called :file:`suitable_areas.shp`."
+msgstr "在 :file:`Rasterprac` 目录保存选择并命名为 :file:`suitable_areas.shp` 的新矢量图层。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:700
+msgid ""
+"You now have the suitable areas that meet all of the habitat criteria for "
+"the rare fynbos plant, from which you will pick the four areas that are "
+"nearest to the University of Cape Town."
+msgstr "现在，已经拥有了满足稀有植物凡波斯所有生活环境符合条件的区域，您将从中选择离开普敦大学最近的四个区域。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:705
+msgid "Digitize the University of Cape Town"
+msgstr "数字化开普敦大学"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:707
+msgid ""
+"Create a new vector layer in the :file:`Rasterprac` directory as before, but"
+" this time, use :guilabel:`Point` as :guilabel:`Geometry type` and name it "
+":file:`university.shp`"
+msgstr ""
+"和之前一样，在 :file:`Rasterprac` 目录中新建一个矢量图层，但这次，使用 :guilabel:`点` 作为 "
+":guilabel:`几何图形类型` ，并将其命名为 :file:`university.shp`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:710
+msgid ""
+"Ensure that it is in the correct CRS (``Project CRS:EPSG:32733 - WGS 84 / "
+"UTM zone 33S``)"
+msgstr "确保其是合适的CRS (``工程CRS:EPSG:32733 - WGS 84 / UTM zone 33S``)"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:712
+msgid "Finish creating the new layer (click :guilabel:`OK`)"
+msgstr "完成创建新图层 (单击 :guilabel:`确定`)"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:713
+msgid ""
+"Hide all layers except the new ``university`` layer and the ``Streets`` "
+"layer."
+msgstr "隐藏除新建 ``university`` 图层和 ``Streets`` 图层之外的所有图层"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:715
+msgid "Add a background map (OSM):"
+msgstr "添加背景地图 (OSM):"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:717
+msgid ""
+"Go to the :guilabel:`Browser` panel and navigate to :menuselection:`XYZ "
+"Tiles --> OpenStreetMap`"
+msgstr ""
+"转到 :guilabel:`浏览器` 面板并导航至 :menuselection:`XYZ Tiles --> OpenStreetMap`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:719
+msgid ""
+"Drag and drop the ``OpenStreetMap`` entry to the bottom of the "
+":guilabel:`Layers` panel"
+msgstr "将 ``OpenStreetMap`` 条目拖放到 :guilabel:`图层` 面板的底部"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:722
+msgid ""
+"Using your internet browser, look up the location of the University of Cape "
+"Town. Given Cape Town's unique topography, the university is in a very "
+"recognizable location. Before you return to QGIS, take note of where the "
+"university is located, and what is nearby."
+msgstr ""
+"使用您的互联网浏览器，查找开普敦大学的位置。鉴于开普敦独特的地形，该大学位于非常知名的位置。在返回QGIS之前，请注意大学所在的位置，以及附近的情况。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:729
+msgid ""
+"Ensure that the ``Streets`` layer clicked on, and that the ``university`` "
+"layer is highlighted in the :guilabel:`Layers` panel"
+msgstr "确保已单击 ``Streets`` 图层，并且 :guilabel:`图层` 面板中高亮显示 ``university`` 图层"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:732
+msgid ""
+"Navigate to the :menuselection:`View --> Toolbars` menu item and ensure that"
+" :guilabel:`Digitizing` is selected. You should then see a toolbar icon with"
+" a pencil on it (|toggleEditing| :sup:`Toggle editing`). This is the *Toggle"
+" Editing* button."
+msgstr ""
+"导航至 :menuselection:`视图 --> 工具栏` 菜单项，并确保已选中 :guilabel:`数字化工具栏` "
+"。然后您会看到一个带有铅笔的工具栏图标 (|toggleEditing| :sup:`切换编辑模式`) 。这是 *切换编辑* 按钮"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:737
+msgid ""
+"Click the :guilabel:`Toggle editing` button to enter *edit mode*. This "
+"allows you to edit a vector layer"
+msgstr "单击 :guilabel:`切换编辑模式` 按钮进入 *编辑模式* 。这允许您编辑矢量图层"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:739
+msgid ""
+"Click the |capturePoint| :sup:`Add Point Feature` button, which should be "
+"nearby the |toggleEditing| :sup:`Toggle editing` button"
+msgstr ""
+"单击 |capturePoint| :sup:`添加点要素` 按钮，该按钮应位于 |toggleEditing| :sup:`切换编辑模式` 按钮附近"
+
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:806
 msgid "capturePoint"
 msgstr "capturePoint"
 
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:741
+msgid ""
+"With the :guilabel:`Add feature` tool activated, left-click on your best "
+"estimate of the location of the University of Cape Town"
+msgstr "激活 :guilabel:`添加要素` 工具后，左键单击开普敦大学位置的最佳估计值"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:743
+msgid "Supply an arbitrary integer when asked for the ``id``"
+msgstr "当要求输入 ``id`` 时，请提供任意整数"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:745
+msgid "Click the |saveEdits| :sup:`Save Layer Edits` button"
+msgstr "单击 |saveEdits| :sup:`保存图层编辑` 按钮"
+
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:818
 msgid "saveEdits"
 msgstr "saveEdits"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:746
+msgid ""
+"Click the :guilabel:`Toggle editing` button to stop your editing session"
+msgstr "单击 :guilabel:`切换编辑模式` 按钮停止编辑会话"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:751
+msgid "Find the locations that are closest to the University of Cape Town"
+msgstr "查找距离普敦大学最近的位置"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:753
+msgid ""
+"Go to the *Processing Toolbox*, locate the *Join Attributes by Nearest* "
+"algorithm (:menuselection:`Vector general --> Join Attributes by Nearest`) "
+"and execute it"
+msgstr ""
+"转到 *处理工具箱* ，找出并执行 *按最近的方式连接属性* 算法 (:menuselection:`矢量通用 --> 按最近的方式连接属性`)"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:757
+msgid ""
+":guilabel:`Input layer` should be ``university``, and :guilabel:`Input layer"
+" 2` ``suitable_areas``"
+msgstr ""
+":guilabel:`输入图层` 应为 ``university`` ， :guilabel:`输入图层 2` 是 ``suitable_areas``"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:759
+msgid "Set an appropriate output location and name (:guilabel:`Joined layer`)"
+msgstr "设置适当的输出位置和名称 (:guilabel:`被连接图层`)"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:761
+msgid "Set the :guilabel:`Maximum nearest neighbors` to ``4``"
+msgstr "将 :guilabel:`最大近邻` 设置为 ``4``"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:764
+msgid "Leave the rest of the parameters with their default values"
+msgstr "保留其余参数的默认值"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:767
+msgid ""
+"The resulting point layer will contain four features - they will all have "
+"the location of the university and its attributes, and in addition, the "
+"attributes of the nearby suitable areas (including the ``id``), and the "
+"distance to that location."
+msgstr "生成的点图层将包含四个要素 - 它们都将具有大学的位置及其属性，此外，附近合适区域的属性 (包括 ``id`` ) 以及到该位置的距离。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:772
+msgid "Open the attribute table of the result of the join"
+msgstr "打开连接结果的属性表"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:773
+msgid ""
+"Note the ``id`` of the four nearest suitable areas, and then close the "
+"attribute table"
+msgstr "记录四个最近合适区域的 ``id`` ，然后关闭属性表"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:775
+msgid "Open the attribute table of the ``suitable_areas`` layer"
+msgstr "打开 ``suitable_areas`` 图层的属性表"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:776
+msgid ""
+"Build a query to select the four suitable areas closest to the university "
+"(selecting them using the ``id`` field)"
+msgstr "构建查询，以选择离大学最近的四个合适区域 (使用 ``id`` 字段选择它们)"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:779
+msgid "This is the final answer to the research question."
+msgstr "这是本课探索问题的最终答案。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:781
+msgid ""
+"For your submission, create a fully labeled layout that includes the semi-"
+"transparent hillshade layer over an appealing raster of your choice (such as"
+" the DEM or the slope raster, for example). Also include the university and "
+"the ``suitable_areas`` layer, with the four suitable areas that are closest "
+"to the university highlighted. Follow all the best practices for cartography"
+" in creating your output map."
+msgstr ""
+"提交时，请创建完整标注的布局，其中包括半透明的山体阴影图层，覆盖在您选择的引人入胜的栅格上 (例如DEM或坡度栅格)。还包括大学和 "
+"``suitable_areas`` 图层，突出显示离大学最近的四个合适区域。在创建输出地图时，应遵循所有制图的最好做法。"
