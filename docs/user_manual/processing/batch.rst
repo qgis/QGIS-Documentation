@@ -121,29 +121,27 @@ particularly useful for naming output data objects according to input ones.
 
    Batch Processing File Path
 
-If the batch processing has more options than just input and output layers
-there are additional :guilabel:`Autofill...` options available:
+There are :guilabel:`Autofill...` options available:
 
 * :guilabel:`Fill Down` will take the input for the first process and enter
   it for all other processes.
 * :guilabel:`Calculate by Expression...` will allow you to create a new
   QGIS expression to use to update all existing values within that column.
-  Existing paramter values (including those from other columns) are
-  available for use inside the expression via `@variables`. E.g. setting
+  Existing parameter values (including those from other columns) are
+  available for use inside the expression via ``@variable``. E.g. setting
   output file names to complex expressions like:
 
- .. testcode:: expression
+  ::
 
-   '/home/me/stuff/buffer_' || left(@input, 30) || '_' || @distance || '.shp'
+     '/home/me/stuff/buffer_' || left(@input, 30) || '_' || @distance || '.shp'
 
 * :guilabel:`Add Values by Expression...` will add new rows using the values
   from an expression which returns an array. (As opposed to "Calculate by
   Expression", which works only on existing rows). The intended use case is
   to allow populating the batch dialog using complex numeric series. E.g.
-  those created by the generate_series expression function. For example,
   adding rows for a batch buffer using the expression
-  generate_series(100, 1000, 50) results in new rows with values
-  100, 150, 200, .... 1000.
+  ``generate_series(100, 1000, 50)`` for distance parameter results in new rows
+  with values 100, 150, 200, .... 1000.
 * :guilabel:`Add Files by Pattern...` adds new rows to the table for matching
   files found using a file pattern and folder, with the option to |checkbox|
   :guilabel:`Search recursively`. E.g. *.shp.
