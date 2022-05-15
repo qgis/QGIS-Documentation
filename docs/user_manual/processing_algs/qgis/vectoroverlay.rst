@@ -18,15 +18,9 @@ layer.
 Only the parts of the features in the input layer that fall within the
 polygons of the overlay layer will be added to the resulting layer.
 
-.. _warning_difference:
-
-.. warning:: **Feature modification**
-
-   The attributes of the features are **not modified**, although
-   properties such as area or length of the features will be modified
-   by the clipping operation.
-   If such properties are stored as attributes, those attributes will
-   have to be manually updated.
+.. include:: ../algs_include.rst
+   :start-after: **warning_attributes**
+   :end-before: **end_warning_attributes**
 
 This algorithm uses spatial indexes on the providers, prepared
 geometries and apply a clipping operation if the geometry isn't wholly
@@ -117,7 +111,9 @@ Input layer features that partially overlap the overlay layer
 feature(s) are split along the boundary of those feature(s) and only
 the portions outside the overlay layer features are retained.
 
-Attributes are not modified (see :ref:`warning <warning_difference>`).
+.. include:: ../algs_include.rst
+   :start-after: **warning_attributes**
+   :end-before: **end_warning_attributes**
 
 .. figure:: img/difference.png
   :align: center
@@ -292,7 +288,9 @@ features in the overlay layer.
 Features in the intersection layer are assigned the attributes of the
 overlapping features from both the input and overlay layers.
 
-Attributes are not modified (see :ref:`warning <warning_difference>`).
+.. include:: ../algs_include.rst
+   :start-after: **warning_attributes**
+   :end-before: **end_warning_attributes**
 
 .. figure:: img/intersection.png
   :align: center
@@ -600,7 +598,9 @@ layers but with the overlapping areas between the two layers removed.
 The attribute table of the symmetrical difference layer contains
 attributes and fields from both the input and overlay layers.
 
-Attributes are not modified (see :ref:`warning <warning_difference>`).
+.. include:: ../algs_include.rst
+   :start-after: **warning_attributes**
+   :end-before: **end_warning_attributes**
 
 .. figure:: img/symmetrical_difference.png
   :align: center
