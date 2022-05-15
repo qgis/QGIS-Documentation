@@ -332,8 +332,8 @@ choose the ramp type:
 Creating a Legend Patch Shape
 =============================
 
-To create a new Legend Patch Shape, activate the Legend Patch Shapes tab and
-click the |signPlus| :sup:`Add item` button. The button reveals a drop-down
+To create a new Legend Patch Shape, activate the :guilabel:`Legend Patch Shapes` tab and
+click the |symbologyAdd| :sup:`Add item` button. The button reveals a drop-down
 list to choose the geometry type:
 
 * :guilabel:`Marker Legend Patch Shape...`: to use with point geometries.
@@ -347,7 +347,7 @@ All three options will show the same dialog.
 .. figure:: img/createLegendPatchShape.png
    :align: center
 
-   Dialog to create a new Legend Patch Shape
+   Create a new Legend Patch Shape
 
 Only the shape type and displayed legend patch shapes will differ regarding
 to the chosen geometry type. The following options will be available:
@@ -356,24 +356,24 @@ to the chosen geometry type. The following options will be available:
   WKT string. Single and multipart geometries may be used, but no
   GeometryCollection.
 * |checkbox| :guilabel:`Preserve aspect ratio`
-* |iconView| :guilabel:`IconView` or |openTable| :guilabel:`ListView` of
+* |iconView| :guilabel:`Icon View` or |openTable| :guilabel:`List View` of
   available legend patch shapes, filtered by tags.
 
-When the new Shape is defined one can :guilabel:`Save Legend Patch Shape...`
-or :guilabel:`OK`, which will both lead to the same dialog.
+When the new Shape is defined you can :guilabel:`Save Legend Patch Shape...`
+or press :guilabel:`OK`, which will both lead to the same dialog.
 
 .. _figure_safe_legend_patch:
 
 .. figure:: img/safeLegendPatchShape.png
    :align: center
 
-   Dialog to safe a new Legend Patch Shape
+   Save a new Legend Patch Shape
 
-Here one has to choose a name, tags to describe the shape and if it should
+Here you have to choose a name, tags to describe the shape and if it should
 be added to favorites.
 
-If one chose the :guilabel:`Save Legend Patch Shape...` one will be directed
-back to the new legend patch dialog to keep creating new shapes.
+If you press :guilabel:`Save...`, the shape is added to the list and you are directed
+back to the :guilabel:`New Legend Patch Shape` dialog to keep creating new shapes.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
