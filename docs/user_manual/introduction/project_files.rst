@@ -21,7 +21,7 @@ Introducing QGIS projects
 =========================
 The state of your QGIS session is called a project.
 QGIS works on one project at a time.
-A settings can be project-specific or an application-wide default
+A setting can be project-specific or an application-wide default
 for new projects (see section :ref:`gui_options`).
 QGIS can save the state of your workspace into a
 :ref:`QGIS project file <qgisprojectfile>` using the menu options
