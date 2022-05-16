@@ -26,7 +26,7 @@ interconnected features. QGIS provide a wide range of functions and tools to han
 related objects and forms.
 
 .. index:: Relations, Foreign key
-.. _vector_relations:
+.. _vector_relations_interface:
 
 Introducing the relations interface
 =========================================
@@ -44,7 +44,7 @@ If you prefer shortcuts, :kbd:`F6` will open the attribute table.
 :kbd:`Ctrl+F6` will open the attribute table filtered to visible features.
 
 This will open a new window that displays the feature attributes for the
-layer (figure_attributes_table_). According to the setting in
+layer. According to the setting in
 :menuselection:`Settings --> Options --> Data sources` menu, the attribute table
 will open in a docked window or a regular window. The total number of features
 in the layer and the number of currently selected/filtered features are shown
