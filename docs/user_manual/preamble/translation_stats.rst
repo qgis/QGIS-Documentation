@@ -6,7 +6,7 @@
 Statistics of translation
 ===========================
 
-*(last update: 2022-05-10)*
+*(last update: 2022-05-17)*
 
 .. list-table::
    :widths: auto
@@ -14,9 +14,9 @@ Statistics of translation
    * - Number of strings
      - Number of target languages
      - Overall Translation ratio
-   * - **33374**
+   * - **33385**
      - **57**
-     - **12.15%**
+     - **12.22%**
 
 
 
@@ -32,7 +32,7 @@ Statistics of translation
    * - Albanian
      - 0.22
      - Arabic
-     - 3.75
+     - 3.74
      - Azerbaijani
      - 0.02
    * - Basque
@@ -46,9 +46,9 @@ Statistics of translation
      - Catalan
      - 1.4
      - Chinese Simplified
-     - 16.4
+     - 18.03
    * - Chinese Traditional
-     - 0.59
+     - 0.58
      - Croatian
      - 0.1
      - Czech
@@ -62,13 +62,13 @@ Statistics of translation
    * - Finnish
      - 1.67
      - French
-     - 82.9
+     - 82.94
      - Galician
      - 0.43
    * - Georgian
      - 0.1
      - German
-     - 18.88
+     - 18.87
      - Greek
      - 0.35
    * - Hebrew
@@ -76,21 +76,21 @@ Statistics of translation
      - Hindi
      - 0.28
      - Hungarian
-     - 8.96
+     - 8.95
    * - Igbo
      - 0.01
      - Indonesian
      - 2.65
      - Italian
-     - 86.15
+     - 86.84
    * - Japanese
-     - 64.64
+     - 64.75
      - Kabyle
      - 0.09
      - Korean
-     - 74.95
+     - 75.23
    * - Lithuanian
-     - 4.73
+     - 4.72
      - Macedonian
      - 0.11
      - Malay
@@ -110,11 +110,11 @@ Statistics of translation
    * - Polish
      - 1.69
      - Portuguese (Brazil)
-     - 36.97
+     - 37.86
      - Portuguese (Portugal)
-     - 7.84
+     - 7.83
    * - Romanian
-     - 40.3
+     - 40.26
      - Russian
      - 12.61
      - Serbian
@@ -124,7 +124,7 @@ Statistics of translation
      - Slovenian
      - 3.01
      - Spanish
-     - 95.83
+     - 95.95
    * - Swedish
      - 0.96
      - Tagalog
@@ -138,7 +138,7 @@ Statistics of translation
      - Turkish
      - 2.7
    * - Ukrainian
-     - 2.21
+     - 2.2
      - Urdu
      - 0.01
      - Vietnamese
