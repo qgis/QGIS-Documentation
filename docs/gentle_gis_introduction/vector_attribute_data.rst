@@ -150,7 +150,7 @@ table.
 Table House Attributes: An attribute table has fields (columns) and records (in
 rows).
 
-Each field in the attribute table contains contains a specific type of data –--
+Each field in the attribute table contains a specific type of data –--
 text, numeric or date. Deciding what attributes to use for a feature requires some
 thought and planning. In our house example earlier on in this topic, we chose roof
 colour, presence of a balcony and month of construction as attributes of interest.
