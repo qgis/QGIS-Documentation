@@ -23,7 +23,6 @@ QGIS User Guide
     style_library/index
     managing_data_source/index
     working_with_vector/index
-    working_with_relations/index
     working_with_raster/index
     working_with_mesh/mesh_properties
     working_with_vector_tiles/vector_tiles_properties

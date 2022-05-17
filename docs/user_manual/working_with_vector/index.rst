@@ -10,3 +10,4 @@
    vector_properties
    attribute_table
    editing_geometry_attributes
+   working_with_relations
