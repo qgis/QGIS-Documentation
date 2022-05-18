@@ -1396,7 +1396,7 @@ Once a connection to an ArcGIS REST Server is set, it's possible to:
 
   * :guilabel:`Refresh`
   * :guilabel:`Edit connection...`
-  * :guilabel:`Delete connection...`
+  * :guilabel:`Remove connection...`
   * :guilabel:`View Service Info` which will open the default web browser
     and display the Service Info.
 
