@@ -106,15 +106,20 @@ labeling and will output :numref:`figure_layout_label_html`:
 Appearance
 ----------
 
-* Define font and style of the text by clicking on the :guilabel:`Font...` button or a
+* Define font and style of the text by clicking on the :guilabel:`Font` button or a
   :guilabel:`Font color` by pushing the :ref:`color widget <color-selector>`.
+  When you clicked on the :guilabel:`Font` button, you will get in the :guilabel:`Label Font` menu.
 
-.. _figure_layout_label_appearance:
+.. _figure_layout_font_menu:
 
-.. figure:: img/label_appearance.png
+.. figure:: img/label_text_rendering.png
    :align: center
 
-   Full text rendering capabilities
+   Label Font Menu
+
+Here you can set font and style of the label text. You can use some of the options for :ref:`Formatting the label text <text_format>`,
+like :guilabel:`Text`, :guilabel:`Formatting`, :guilabel:`Buffer`, :guilabel:`Mask`, :guilabel:`Background`.
+  
 
 * You can specify different horizontal and vertical margins in ``mm``. This is
   the margin from the edge of the layout item. The label can be positioned
