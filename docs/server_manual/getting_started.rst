@@ -810,6 +810,9 @@ Configure your project
 To provide a new QGIS Server WMS, WFS or WCS, you have to create a QGIS project
 file with some data or use one of your current project. Define the colors and
 styles of the layers in QGIS and the project CRS, if not already defined.
+Then, go to the :guilabel:`QGIS Server` menu of the
+:menuselection:`Project --> Properties...` dialog and provide
+some information about the OWS in the :guilabel:`Service Capabilities` tab.
 
 .. _figure_server_definitions:
 
@@ -818,10 +821,7 @@ styles of the layers in QGIS and the project CRS, if not already defined.
 
    Definitions for a QGIS Server WMS/WFS/WCS project
 
-Then, go to the :guilabel:`QGIS Server` menu of the
-:menuselection:`Project --> Properties...` dialog and provide
-some information about the OWS in the fields under
-:guilabel:`Service Capabilities`.
+You have to :guilabel:`Enable Service Capabilities` first, if it is deactivated. 
 This will appear in the GetCapabilities response of the WMS, WFS or WCS.
 If you don't check |checkbox| :guilabel:`Service capabilities`,
 QGIS Server will use the information given in the :file:`wms_metadata.xml` file
@@ -830,10 +830,18 @@ located in the :file:`cgi-bin` folder.
 WMS capabilities
 ----------------
 
-In the :guilabel:`WMS capabilities` section, you can define
+In the :guilabel:`WMS capabilities` tab, you can define
 the extent advertised in the WMS GetCapabilities response by entering
 the minimum and maximum X and Y values in the fields under
 :guilabel:`Advertised extent`.
+
+.. _figure_wms_definitions:
+
+.. figure:: img/ows_server_wms.png
+   :align: center
+
+   Definitions in the WMS tab
+
 Clicking :guilabel:`Use Current Canvas Extent` sets these values to the
 extent currently displayed in the QGIS map canvas.
 By checking |checkbox| :guilabel:`CRS restrictions`, you can restrict
@@ -910,12 +918,37 @@ expressions) this will be listed inside the GetFeatureInfo output. If the
 layer uses a Value Map for one of its attributes, this information will also
 be shown in the GetFeatureInfo output.
 
+WMTS capabilities
+-----------------
+
+In the :guilabel:`WMTS capabilities` tab you can select the layers you
+want to publish as WMTS and specify if you want to publish as PNG or JPEG.
+
+.. _figure_wmts_definitions:
+
+.. figure:: img/ows_server_wmts.png
+   :align: center
+
+   Definitions in the WMTS tab
+
+If you enter a URL in the :guilabel:`Advertised URL` field of the
+:guilabel:`WMTS capabilities` section, QGIS Server will advertise this specific
+URL in the WMTS GetCapabilities response.
+
 WFS capabilities
 ----------------
 
-In the :guilabel:`WFS capabilities` area you can select the layers you
+In the :guilabel:`WFS capabilities` tab, you can select the layers you
 want to publish as WFS, and specify if they will allow update, insert and
 delete operations.
+
+.. _figure_wfs_definitions:
+
+.. figure:: img/ows_server_wfs.png
+   :align: center
+
+   Definitions in the WFS tab
+
 If you enter a URL in the :guilabel:`Advertised URL` field of the
 :guilabel:`WFS capabilities` section, QGIS Server will advertise this specific
 URL in the WFS GetCapabilities response.
@@ -923,8 +956,17 @@ URL in the WFS GetCapabilities response.
 WCS capabilities
 ----------------
 
-In the :guilabel:`WCS capabilities` area, you can select the layers that you
-want to publish as WCS. If you enter a URL in the :guilabel:`Advertised URL`
+In the :guilabel:`WCS capabilities` tab, you can select the layers that you
+want to publish as WCS.
+
+.. _figure_wcs_definitions:
+
+.. figure:: img/ows_server_wcs.png
+   :align: center
+
+   Definitions in the WCS tab
+
+If you enter a URL in the :guilabel:`Advertised URL`
 field of the :guilabel:`WCS capabilities` section, QGIS Server will advertise
 this specific URL in the WCS GetCapabilities response.
 

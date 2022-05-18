@@ -1617,9 +1617,9 @@ Server WMS and WFS capabilities, extent and CRS restrictions. More information
 available in section :ref:`Creatingwmsfromproject` and subsequent.
 
 
-.. _figure_qgisserver_tab:
+.. _figure_qgis_server_tab:
 
-.. figure:: img/project_qgisserver.png
+.. figure:: img/project_qgis_server.png
    :align: center
 
    QGIS Server settings tab
