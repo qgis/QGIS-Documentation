@@ -71,8 +71,44 @@ Two types of text-related items are available in QGIS:
 Formatting the label text
 =========================
 
-Most of the following properties are common to :guilabel:`Text Format`
-and :guilabel:`Label Settings` items.
+Whether you are configuring a :guilabel:`Text Format` or :guilabel:`Label Settings`
+item, you will be given the following options:
+
+.. list-table::
+   :header-rows: 1
+   :class: longtable
+
+   * - Properties tab
+     - Text format
+     - Label settings
+   * - :guilabel:`Text`
+     - |checkbox|
+     - |checkbox|
+   * - :guilabel:`Formatting`
+     - |checkbox|
+     - |checkbox|
+   * - :guilabel:`Buffer`
+     - |checkbox|
+     - |checkbox|
+   * - :guilabel:`Mask`
+     - |checkbox|
+     - |checkbox|
+   * - :guilabel:`Background`
+     - |checkbox|
+     - |checkbox|
+   * - :guilabel:`Shadow`
+     -
+     - |checkbox|
+   * - :guilabel:`Callout`
+     -
+     - |checkbox|
+   * - :guilabel:`Placement`
+     -
+     - |checkbox|
+   * - :guilabel:`Rendering`
+     -
+     - |checkbox|
+
 
 .. _labels_text:
 
