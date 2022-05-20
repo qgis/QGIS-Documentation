@@ -1,12 +1,16 @@
-.. index:: Relations
-.. _sec_working_relations:
+.. index:: Joins, Relations
+.. _sec_joins_relations:
 
 **********************************
- Working with relations
+ Joins and relations
 **********************************
 
-Relations are a technique often used in databases. The concept is that
-features (rows) of different layers (tables) can belong to each other.
+Joins and relations are technical concepts used in databases to get the most out of
+data stored in tables by combining their contents. The concept is that
+features (rows) of different layers (tables) can belong to each other. One of the
+most simple example is the value list where one attribute (foreign key) of a table 
+is used to create a link to another table which is composed of values.Relations are 
+usually used to link objects (features) from two layers (tables) together.
 
 .. only:: html
 
@@ -14,7 +18,34 @@ features (rows) of different layers (tables) can belong to each other.
       :local:
 
 
-.. index:: Relations, Foreign key
+.. index:: Joins, Foreign key
+.. _vector_joins:
+
+Foreword: Joins
+========================================
+
+QGIS allows you to create and manage joins between tables (spatial or non spatial).
+This is done on the layer level (properties). Joins enable you to define
+links between an attribute of a table and a value stored in another table.
+
+The most simple example is not even a real join but the possibility offered by QGIS
+to set a value list directly in the attribute form using the Value Map widget
+(TODO : ADD link to /working_with_vector/vector_properties.html#edit-widgets) 
+to define mapping values manually or using a CSV or layer import.
+
+The second example is to use the Value Relation widget
+(TODO : ADD link to /working_with_vector/vector_properties.html#edit-widgets) 
+to define a relation between an attribute and an other attribute contained in another layer.
+
+The third example is to use the Joins tab 
+(TODO : add link /working_with_vector/vector_properties.html#joins-properties)
+to associate features of the current layer
+to features from another loaded layer. The join is based on an attribute 
+that is shared by the layers. This enable to add one or more attribute from a table 
+to the other.
+
+
+.. index:: Joins, Foreign key
 .. _vector_relations:
 
 Foreword: Relations
@@ -31,24 +62,23 @@ related objects and forms.
 Introducing the relations interface
 =========================================
 
-TODO :  Replace Introducing the relation interface
-To open the attribute table for a vector layer, activate the layer by
-clicking on it in the :ref:`label_legend`. Then, from the main
-:menuselection:`Layer` menu, choose |openTable| :menuselection:`Open Attribute
-Table`. It is also possible to right-click on the layer and choose
-|openTable| :menuselection:`Open Attribute Table` from the drop-down menu,
-or to click on the |openTable| :guilabel:`Open Attribute Table` button
-in the Attributes toolbar.
-If you prefer shortcuts, :kbd:`F6` will open the attribute table.
-:kbd:`Shift+F6` will open the attribute table filtered to selected features and
-:kbd:`Ctrl+F6` will open the attribute table filtered to visible features.
+To open the relations interface in QGIS, select the project properties menu
+and then click on the Relations Tab. Here you can see all defined relations
+for your project. Add, discover or remove relations.
 
-This will open a new window that displays the feature attributes for the
-layer. According to the setting in
-:menuselection:`Settings --> Options --> Data sources` menu, the attribute table
-will open in a docked window or a regular window. The total number of features
-in the layer and the number of currently selected/filtered features are shown
-in the attribute table title, as well as if the layer is spatially limited.
+TODO : ADD a screen of the the relations interface
+
+ .. note:: There is no simple way to edit a relation once it is created yet.
+   To edit a relation you will have then to remove and create it from scratch.
+
+ .. note:: QGIS is able to discover existing relations from supported databases
+   formats. This can be a good way to ease the relations definition.
+
+Once a relation is created in the project properties, it can be used in the 
+layers forms widget Relation Reference
+/working_with_vector/vector_properties.html#edit-widgets
+or used in the field expression calculator to design some powerful queries and features.
+
 
 .. _one_to_many_relation:
 
