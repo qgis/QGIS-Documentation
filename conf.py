@@ -401,6 +401,8 @@ def start_qgis():
         QgsMessageBar,
     )
 
+    QgsProject.instance().clear()
+
     from qgis.analysis import QgsNativeAlgorithms
 
     # Expose the iface for plugins snippets
@@ -434,6 +436,7 @@ def start_qgis():
 
     return iface
 
+
 def dump_tree(root):
     """Dump the layer tree for testing"""
 
@@ -446,10 +449,7 @@ def dump_tree(root):
 '''
 doctest_test_doctest_blocks = ''
 
-doctest_global_cleanup = '''
-from qgis.core import QgsProject
-QgsProject.instance().clear()
-'''
+doctest_global_cleanup = ''
 
 # Make Sphinx doctest insensitive to object address differences,
 # also 'output_....' processing alg ids
@@ -476,6 +476,18 @@ class BetterOutputChecker(doctest.OutputChecker):
 
 
 ext_doctest.SphinxDocTestRunner = BetterDocTestRunner
+
+class BetterDocTestBuilder(ext_doctest.DocTestBuilder):
+
+    def skipped(self, node) -> bool:
+        to_skip = super().skipped(node)
+
+        if not to_skip and os.environ.get('SINGLE_TEST') is not None:
+            to_skip = os.path.basename(node.source or '') != os.environ.get('SINGLE_TEST')
+
+        return to_skip
+
+ext_doctest.DocTestBuilder = BetterDocTestBuilder
 
 # -- External Link check settings --------------------------------
 
