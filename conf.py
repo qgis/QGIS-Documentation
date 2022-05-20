@@ -369,6 +369,12 @@ os.environ['QT_QPA_PLATFORM'] = 'offscreen'
 from qgis.testing import start_app
 from qgis.testing.mocked import get_iface
 
+# Workaround for https://github.com/qgis/QGIS/issues/48670
+from qgis.PyQt.QtCore import QSettings
+settings = QSettings()
+settings.setValue("cache/directory", "testdata")
+
+
 def start_qgis():
 
     save_stdout = sys.stdout
@@ -386,7 +392,8 @@ def start_qgis():
         QgsFeature,
         QgsGeometry,
         QgsApplication,
-        QgsLayerTreeModel
+        QgsLayerTreeModel,
+        QgsSettings,
     )
 
     from qgis.gui import (
