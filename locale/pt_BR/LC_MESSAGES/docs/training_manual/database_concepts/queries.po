@@ -2,26 +2,27 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2022
+# Ana Mendes, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 12:04+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:14+0000\n"
+"Last-Translator: Ana Mendes, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 "Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/training_manual/database_concepts/queries.rst:2
 msgid "|LS| Queries"
@@ -99,6 +100,14 @@ msgid ""
 msgstr ""
 "Aqui está um exemplo de um filtro numérico que retorna apenas objetos cujo "
 "``house_no`` é menor que 50:"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:87
+msgid ""
+"You can combine filters (defined using the ``WHERE`` clause) with sorting "
+"(defined using the ``ORDER BY`` clause):"
+msgstr ""
+"Você pode combinar filtros (definidos usando a cláusula ``ONDE``) com "
+"classificação (definida usando a cláusula ``ORDENAR POR``):"
 
 #: ../../docs/training_manual/database_concepts/queries.rst:100
 msgid "You can also filter based on text data:"
@@ -252,6 +261,10 @@ msgstr ""
 msgid "|TY| |moderate|"
 msgstr "|TY| |moderate|"
 
+#: ../../docs/training_manual/database_concepts/queries.rst:325
+msgid "moderate"
+msgstr "moderado"
+
 #: ../../docs/training_manual/database_concepts/queries.rst:276
 msgid ""
 "Summarise the people by street name and show the actual street names instead"
@@ -261,14 +274,33 @@ msgstr ""
 "das street_ids."
 
 #: ../../docs/training_manual/database_concepts/queries.rst:279
-msgid ":ref:`Check your results <database-concepts-8>`"
-msgstr ":ref:`Confira seus resultados <database-concepts-8>`"
+msgid "Answer"
+msgstr "Responda"
 
-#: ../../docs/training_manual/database_concepts/queries.rst:284
+#: ../../docs/training_manual/database_concepts/queries.rst:282
+msgid "Here is the correct SQL statement you should use::"
+msgstr "Aqui está a instrução SQL correta que você deve usar::"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:289
+msgid "Result::"
+msgstr "Resultado::"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:298
+msgid ""
+"You will notice that we have prefixed field names with table names (e.g. "
+"people.name and streets.name). This needs to be done whenever the field name"
+" is ambiguous (i.e. not unique across all tables in the database)."
+msgstr ""
+"Você notará que temos nomes de campos prefixados com nomes de tabelas (por "
+"exemplo, pessoas.nome e ruas.nome). Isso precisa ser feito sempre que o nome"
+" do campo for ambíguo (ou seja, não exclusivo em todas as tabelas do banco "
+"de dados)."
+
+#: ../../docs/training_manual/database_concepts/queries.rst:304
 msgid "|IC|"
 msgstr "|IC|"
 
-#: ../../docs/training_manual/database_concepts/queries.rst:286
+#: ../../docs/training_manual/database_concepts/queries.rst:306
 msgid ""
 "You've seen how to use queries to return the data in your database in a way "
 "that allows you to extract useful information from it."
@@ -276,11 +308,11 @@ msgstr ""
 "Você já viu como utilizar as pequisas para retornar os dados em seu banco de"
 " dados de uma forma que lhe permite extrair informações úteis a partir dele."
 
-#: ../../docs/training_manual/database_concepts/queries.rst:290
+#: ../../docs/training_manual/database_concepts/queries.rst:310
 msgid "|WN|"
 msgstr "|WN|"
 
-#: ../../docs/training_manual/database_concepts/queries.rst:292
+#: ../../docs/training_manual/database_concepts/queries.rst:312
 msgid ""
 "Next you'll see how to create views from the queries that you've written."
 msgstr ""
