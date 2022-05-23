@@ -33,7 +33,7 @@ execution of the algorithm. Cells in a row correspond to the parameter
 needed by the algorithm, which are not arranged one above the other, as
 in the normal single--execution dialog, but horizontally in that row.
 
-Defining the batch process to run is one by filling the table with the
+Defining the batch process to run is done by filling the table with the
 corresponding values, and the dialog itself contains several tools to
 make this task easier.
 
