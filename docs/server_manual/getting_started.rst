@@ -807,7 +807,7 @@ For example with spawn-fcgi:
 Configure your project
 ======================
 
-To provide a new QGIS Server WMS, WFS or WCS, you have to create a QGIS project
+To provide a new QGIS Server WMS, WFS, OAPIF or WCS, you have to create a QGIS project
 file with some data or use one of your current project. Define the colors and
 styles of the layers in QGIS and the project CRS, if not already defined.
 Then, go to the :guilabel:`QGIS Server` menu of the
@@ -823,7 +823,7 @@ some information about the OWS in the :guilabel:`Service Capabilities` tab.
 
 You have to :guilabel:`Enable Service Capabilities` first, if it is deactivated. 
 This will appear in the GetCapabilities response of the WMS, WFS or WCS.
-If you don't check |checkbox| :guilabel:`Service capabilities`,
+If you don't check |checkbox| :guilabel:`Enable Service capabilities`,
 QGIS Server will use the information given in the :file:`wms_metadata.xml` file
 located in the :file:`cgi-bin` folder.
 
@@ -935,11 +935,11 @@ If you enter a URL in the :guilabel:`Advertised URL` field of the
 :guilabel:`WMTS capabilities` section, QGIS Server will advertise this specific
 URL in the WMTS GetCapabilities response.
 
-WFS capabilities
-----------------
+WFS/OAPIF capabilities
+----------------------
 
-In the :guilabel:`WFS capabilities` tab, you can select the layers you
-want to publish as WFS, and specify if they will allow update, insert and
+In the :guilabel:`WFS/OAPIF capabilities` tab, you can select the layers you
+want to publish as WFS or OAPIF, and specify if they will allow update, insert and
 delete operations.
 
 .. _figure_wfs_definitions:
@@ -947,7 +947,7 @@ delete operations.
 .. figure:: img/ows_server_wfs.png
    :align: center
 
-   Definitions in the WFS tab
+   Definitions in the WFS/OAPIF tab
 
 If you enter a URL in the :guilabel:`Advertised URL` field of the
 :guilabel:`WFS capabilities` section, QGIS Server will advertise this specific
