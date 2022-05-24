@@ -713,8 +713,6 @@ and a -180..180° representation of a 0..360° data.
    :width: 1.3em
 .. |dbManager| image:: /static/common/dbmanager.png
    :width: 1.5em
-.. |degrees| unicode:: 0x00B0
-   :ltrim:
 .. |nix| image:: /static/common/nix.png
    :width: 1em
 .. |osx| image:: /static/common/osx.png

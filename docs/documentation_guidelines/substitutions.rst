@@ -489,9 +489,28 @@ Icon                            Substitution                        Icon        
 |checkGeometry|                 ``|checkGeometry|``                 |exportGeometry|                ``|exportGeometry|``
 |delaunay|                      ``|delaunay|``                      |centroids|                     ``|centroids|``
 |polygonToLine|                 ``|polygonToLine|``                 |extractVertices|               ``|extractVertices|``
+|lineToPolygon|                 ``|lineToPolygon|``                 |nearestNeighbour|              ``|nearestNeighbour|``
 |splitLayer|                    ``|splitLayer|``                    |heatmap|                       ``|heatmap|``
 |showRasterCalculator|          ``|showRasterCalculator|``          |showMeshCalculator|            ``|showMeshCalculator|``
-|regularPoints|                 ``|regularPoints|``                 |basicStatistics|               ``|basicStatistics|``
+|regularPoints|                 ``|regularPoints|``                 |addGeometryAttributes|         ``|addGeometryAttributes|``
+|basicStatistics|               ``|basicStatistics|``               |uniqueValues|                  ``|uniqueValues|``
+|collect|                       ``|collect|``                       |simplify_2|                    ``|simplify_2|``
+|createGrid|                    ``|createGrid|``                    |distanceMatrix|                ``|distanceMatrix|``
+|lineIntersections|             ``|lineIntersections|``             |mergeLayers|                   ``|mergeLayers|``
+|sumPoints|                     ``|sumPoints|``                     |sumLengthLines|                ``|sumLengthLines|``
+|randomPointsInPolygons|        ``|randomPointsInPolygons|``        |randomPointsWithinPolygon|     ``|randomPointsWithinPolygon|``
+|randomPointsOnLines|           ``|randomPointOOnLines|``           |randomPointsWithinExtent|      ``|randomPointsWithinExtent|``
+|multiToSingle|                 ``|multiToSingle|``
+|grid|                          ``|grid|``                          |tiles|                         ``|tiles|``
+|merge|                         ``|merge|``                         |rasterClip|                    ``|rasterClip|``
+|contour|                       ``|contour|``                       |proximity|                     ``|proximity|``
+|polygonize|                    ``|polygonize|``                    |rasterize|                     ``|rasterize|``
+|sieve|                         ``|sieve|``                         |nearblack|                     ``|nearblack|``
+|projectionAdd|                 ``|projectionAdd|``                 |projectionExport|              ``|projectionExport``
+|8To24Bits|                     ``|8To24Bits|``                     |24To8Bits|                     ``|24To8Bits|``
+|rasterInfo|                    ``|rasterInfo|``                    |rasterOverview|                ``|rasterOverview|``
+|vrt|                           ``|vrt|``                           |voronoi|                       ``|voronoi|``
+|translate|                     ``|translate|``                     |warp|                          ``|warp|``
 ==============================  ==================================  ==============================  ==================================
 
 Various Core Plugins
@@ -529,12 +548,16 @@ Icon                            Substitution                        Icon        
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |24To8Bits| image:: /static/common/24-to-8-bits.png
+   :width: 1.5em
 .. |25dSymbol| image:: /static/common/renderer25dSymbol.png
    :width: 1.5em
 .. |3d| image:: /static/common/3d.png
    :width: 1.5em
 .. |3dNavigation| image:: /static/common/mAction3DNavigation.png
    :width: 1.3em
+.. |8To24Bits| image:: /static/common/8-to-24-bits.png
+   :width: 1.5em
 .. |action| image:: /static/common/action.png
    :width: 2em
 .. |actionRun| image:: /static/common/mAction.png
@@ -564,6 +587,8 @@ Icon                            Substitution                        Icon        
 .. |addDelimitedTextLayer| image:: /static/common/mActionAddDelimitedTextLayer.png
    :width: 1.5em
 .. |addExpression| image:: /static/common/mActionAddExpression.png
+   :width: 1.5em
+.. |addGeometryAttributes| image:: /static/common/mAlgorithmAddGeometryAttributes.png
    :width: 1.5em
 .. |addGpsLayer| image:: /static/common/mActionAddGpsLayer.png
    :width: 1.5em
@@ -717,6 +742,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |collapseTree| image:: /static/common/mActionCollapseTree.png
    :width: 1.5em
+.. |collect| image:: /static/common/mAlgorithmCollect.png
+   :width: 1.5em
 .. |colorBox| image:: /static/common/mIconColorBox.png
    :width: 1.5em
 .. |colorPicker| image:: /static/common/mIconColorPicker.png
@@ -729,6 +756,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |contextHelp| image:: /static/common/mActionContextHelp.png
    :width: 1.5em
+.. |contour| image:: /static/common/contour.png
+   :width: 1.5em
 .. |convexHull| image:: /static/common/mAlgorithmConvexHull.png
    :width: 1.5em
 .. |copySelected| image:: /static/common/mActionCopySelected.png
@@ -736,6 +765,8 @@ Icon                            Substitution                        Icon        
 .. |copyrightLabel| image:: /static/common/copyright_label.png
    :width: 1.5em
 .. |createAnnotationLayer| image:: /static/common/mActionCreateAnnotationLayer.png
+   :width: 1.5em
+.. |createGrid| image:: /static/common/mAlgorithmCreateGrid.png
    :width: 1.5em
 .. |createMemory| image:: /static/common/mActionCreateMemory.png
    :width: 1.5em
@@ -796,6 +827,8 @@ Icon                            Substitution                        Icon        
 .. |display| image:: /static/common/display.png
    :width: 1.5em
 .. |dissolve| image:: /static/common/mAlgorithmDissolve.png
+   :width: 1.5em
+.. |distanceMatrix| image:: /static/common/mAlgorithmDistanceMatrix.png
    :width: 1.5em
 .. |distributeBottom| image:: /static/common/mActionDistributeBottom.png
    :width: 1.5em
@@ -931,6 +964,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |grassTools| image:: /static/common/grass_tools.png
    :width: 1.5em
+.. |grid| image:: /static/common/grid.png
+   :width: 1.5em
 .. |groupItems| image:: /static/common/mActionGroupItems.png
    :width: 1.5em
 .. |hamburgerMenu| image:: /static/common/mIconHamburgerMenu.png
@@ -1058,6 +1093,10 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |legend| image:: /static/common/legend.png
    :width: 1.2em
+.. |lineIntersections| image:: /static/common/mAlgorithmLineIntersections.png
+   :width: 1.5em
+.. |lineToPolygon| image:: /static/common/mAlgorithmLineToPolygon.png
+   :width: 1.5em
 .. |linkGeorefToQGis| image:: /static/common/mActionLinkGeorefToQGis.png
    :width: 2.5em
 .. |linkQGisToGeoref| image:: /static/common/mActionLinkQGisToGeoref.png
@@ -1088,9 +1127,13 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |measureBearing| image:: /static/common/mActionMeasureBearing.png
    :width: 1.5em
+.. |merge| image:: /static/common/merge.png
+   :width: 1.5em
 .. |mergeFeatureAttributes| image:: /static/common/mActionMergeFeatureAttributes.png
    :width: 1.5em
 .. |mergeFeatures| image:: /static/common/mActionMergeFeatures.png
+   :width: 1.5em
+.. |mergeLayers| image:: /static/common/mAlgorithmMergeLayers.png
    :width: 1.5em
 .. |mergedFeatures| image:: /static/common/rendererMergedFeatures.png
    :width: 1.5em
@@ -1146,7 +1189,13 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |multiEdit| image:: /static/common/mActionMultiEdit.png
    :width: 1.5em
+.. |multiToSingle| image:: /static/common/mAlgorithmMultiToSingle.png
+   :width: 1.5em
 .. |multibandColor| image:: /static/common/multibandColor.png
+   :width: 1.5em
+.. |nearblack| image:: /static/common/nearblack.png
+   :width: 1.5em
+.. |nearestNeighbour| image:: /static/common/mAlgorithmNearestNeighbour.png
    :width: 1.5em
 .. |new3DMap| image:: /static/common/mActionNew3DMap.png
    :width: 1.5em
@@ -1232,6 +1281,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |polygonToLine| image:: /static/common/mAlgorithmPolygonToLine.png
    :width: 1.5em
+.. |polygonize| image:: /static/common/polygonize.png
+   :width: 1.5em
 .. |processSelected| image:: /static/common/mActionProcessSelected.png
    :width: 1.5em
 .. |processingAlgorithm| image:: /static/common/processingAlgorithm.png
@@ -1244,12 +1295,18 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |projectProperties| image:: /static/common/mActionProjectProperties.png
    :width: 1.5em
+.. |projectionAdd| image:: /static/common/projection-add.png
+   :width: 1.5em
 .. |projectionDisabled| image:: /static/common/mIconProjectionDisabled.png
    :width: 1.5em
 .. |projectionEnabled| image:: /static/common/mIconProjectionEnabled.png
    :width: 1.5em
+.. |projectionExport| image:: /static/common/projection-export.png
+   :width: 1.5em
 .. |properties| image:: /static/common/mIconProperties.png
    :width: 1.3em
+.. |proximity| image:: /static/common/proximity.png
+   :width: 1.5em
 .. |pyramids| image:: /static/common/pyramids.png
    :width: 1.5em
 .. |pythonFile| image:: /static/common/mIconPythonFile.png
@@ -1264,7 +1321,23 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |raiseItems| image:: /static/common/mActionRaiseItems.png
    :width: 1.5em
+.. |randomPointsInPolygons| image:: /static/common/mAlgorithmRandomPointsInPolygons.png
+   :width: 1.5em
+.. |randomPointsOnLines| image:: /static/common/mAlgorithmRandomPointsOnLines.png
+   :width: 1.5em
+.. |randomPointsWithinExtent| image:: /static/common/mAlgorithmRandomPointsWithinExtent.png
+   :width: 1.5em
+.. |randomPointsWithinPolygon| image:: /static/common/mAlgorithmRandomPointsWithinPolygon.png
+   :width: 1.5em
+.. |rasterClip| image:: /static/common/raster-clip.png
+   :width: 1.5em
 .. |rasterHistogram| image:: /static/common/rasterHistogram.png
+   :width: 1.5em
+.. |rasterInfo| image:: /static/common/raster-info.png
+   :width: 1.5em
+.. |rasterOverview| image:: /static/common/raster-overview.png
+   :width: 1.5em
+.. |rasterize| image:: /static/common/rasterize.png
    :width: 1.5em
 .. |rectangle3PointsDistance| image:: /static/common/mActionRectangle3PointsDistance.png
    :width: 1.5em
@@ -1402,7 +1475,11 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |showUnplacedLabel| image:: /static/common/mActionShowUnplacedLabel.png
    :width: 1.5em
+.. |sieve| image:: /static/common/sieve.png
+   :width: 1.5em
 .. |simplify| image:: /static/common/mActionSimplify.png
+   :width: 1.5em
+.. |simplify_2| image:: /static/common/mAlgorithmSimplify.png
    :width: 1.5em
 .. |singleColor| image:: /static/common/singleColor.png
    :width: 1.5em
@@ -1445,6 +1522,10 @@ Icon                            Substitution                        Icon        
    :width: 1em
 .. |sum| image:: /static/common/mActionSum.png
    :width: 1.2em
+.. |sumLengthLines| image:: /static/common/mAlgorithmSumLengthLines.png
+   :width: 1.5em
+.. |sumPoints| image:: /static/common/mAlgorithmSumPoints.png
+   :width: 1.5em
 .. |svgAnnotation| image:: /static/common/mActionSvgAnnotation.png
    :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
@@ -1473,6 +1554,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |textAnnotation| image:: /static/common/mActionTextAnnotation.png
    :width: 1.5em
+.. |tiles| image:: /static/common/tiles.png
+   :width: 1.5em
 .. |tiltDown| image:: /static/common/mActionTiltDown.png
    :width: 1.5em
 .. |tiltUp| image:: /static/common/mActionTiltUp.png
@@ -1493,6 +1576,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |transformation| image:: /static/common/transformation.png
    :width: 1.5em
+.. |translate| image:: /static/common/translate.png
+   :width: 1.5em
 .. |transparency| image:: /static/common/transparency.png
    :width: 1.5em
 .. |unchecked| image:: /static/common/unchecked.png
@@ -1500,6 +1585,8 @@ Icon                            Substitution                        Icon        
 .. |undo| image:: /static/common/mActionUndo.png
    :width: 1.5em
 .. |union| image:: /static/common/mAlgorithmUnion.png
+   :width: 1.5em
+.. |uniqueValues| image:: /static/common/mAlgorithmUniqueValues.png
    :width: 1.5em
 .. |unlockAll| image:: /static/common/mActionUnlockAll.png
    :width: 1.5em
@@ -1518,6 +1605,12 @@ Icon                            Substitution                        Icon        
 .. |viewScaleInCanvas| image:: /static/common/mActionViewScaleInCanvas.png
    :width: 1.5em
 .. |virtualLayer| image:: /static/common/mIconVirtualLayer.png
+   :width: 1.5em
+.. |voronoi| image:: /static/common/mAlgorithmVoronoi.png
+   :width: 1.5em
+.. |vrt| image:: /static/common/vrt.png
+   :width: 1.5em
+.. |warp| image:: /static/common/warp.png
    :width: 1.5em
 .. |wcs| image:: /static/common/mIconWcs.png
    :width: 1.5em

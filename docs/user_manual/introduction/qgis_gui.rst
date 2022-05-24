@@ -1266,39 +1266,39 @@ are enabled.
      - :kbd:`Alt+O` + :kbd:`G`
      -
      -
-   * - :menuselection:`--> Buffer...`
+   * - :menuselection:`-->` |buffer| :menuselection:`Buffer...`
      -
      -
      - :ref:`qgisbuffer`
-   * - :menuselection:`--> Clip...`
+   * - :menuselection:`-->` |clip| :menuselection:`Clip...`
      -
      -
      - :ref:`qgisclip`
-   * - :menuselection:`--> Convex Hull...`
+   * - :menuselection:`-->` |convexHull| :menuselection:`Convex Hull...`
      -
      -
      - :ref:`qgisconvexhull`
-   * - :menuselection:`--> Difference...`
+   * - :menuselection:`-->` |difference| :menuselection:`Difference...`
      -
      -
      - :ref:`qgisdifference`
-   * - :menuselection:`--> Dissolve...`
+   * - :menuselection:`-->` |dissolve| :menuselection:`Dissolve...`
      -
      -
      - :ref:`qgisdissolve`
-   * - :menuselection:`--> Intersection...`
+   * - :menuselection:`-->` |intersect| :menuselection:`Intersection...`
      -
      -
      - :ref:`qgisintersection`
-   * - :menuselection:`--> Symmetrical Difference...`
+   * - :menuselection:`-->` |symmetricalDifference| :menuselection:`Symmetrical Difference...`
      -
      -
      - :ref:`qgissymmetricaldifference`
-   * - :menuselection:`--> Union...`
+   * - :menuselection:`-->` |union| :menuselection:`Union...`
      -
      -
      - :ref:`qgisunion`
-   * - :menuselection:`--> Eliminate Selected Polygons...`
+   * - :menuselection:`-->` |dissolve| :menuselection:`Eliminate Selected Polygons...`
      -
      -
      - :ref:`qgiseliminateselectedpolygons`
@@ -1306,51 +1306,51 @@ are enabled.
      - :kbd:`Alt+O` + :kbd:`E`
      -
      -
-   * - :menuselection:`--> Centroids...`
+   * - :menuselection:`-->` |centroids| :menuselection:`Centroids...`
      -
      -
      - :ref:`qgiscentroids`
-   * - :menuselection:`--> Collect Geometries...`
+   * - :menuselection:`-->` |collect| :menuselection:`Collect Geometries...`
      -
      -
      - :ref:`qgiscollect`
-   * - :menuselection:`--> Extract Vertices...`
+   * - :menuselection:`-->` |extractVertices| :menuselection:`Extract Vertices...`
      -
      -
      - :ref:`qgisextractvertices`
-   * - :menuselection:`--> Multipart to Singleparts...`
+   * - :menuselection:`-->` |multiToSingle| :menuselection:`Multipart to Singleparts...`
      -
      -
      - :ref:`qgismultiparttosingleparts`
-   * - :menuselection:`--> Polygons to Lines...`
+   * - :menuselection:`-->` |polygonToLine| :menuselection:`Polygons to Lines...`
      -
      -
      - :ref:`qgispolygonstolines`
-   * - :menuselection:`--> Simplify...`
+   * - :menuselection:`-->` |simplify_2| :menuselection:`Simplify...`
      -
      -
      - :ref:`qgissimplifygeometries`
-   * - :menuselection:`--> Check Validity...`
+   * - :menuselection:`-->` |checkGeometry| :menuselection:`Check Validity...`
      -
      -
      - :ref:`qgischeckvalidity`
-   * - :menuselection:`--> Delaunay Triangulation...`
+   * - :menuselection:`-->` |delaunay| :menuselection:`Delaunay Triangulation...`
      -
      -
      - :ref:`qgisdelaunaytriangulation`
-   * - :menuselection:`--> Densify by Count...`
+   * - :menuselection:`-->` |processingAlgorithm| :menuselection:`Densify by Count...`
      -
      -
      - :ref:`qgisdensifygeometries`
-   * - :menuselection:`--> Add Geometry Attributes...`
+   * - :menuselection:`-->` |addGeometryAttributes| :menuselection:`Add Geometry Attributes...`
      -
      -
      - :ref:`qgisexportaddgeometrycolumns`
-   * - :menuselection:`--> Lines to Polygons...`
+   * - :menuselection:`-->` |lineToPolygon| :menuselection:`Lines to Polygons...`
      -
      -
      - :ref:`qgislinestopolygons`
-   * - :menuselection:`--> Voronoi Polygons...`
+   * - :menuselection:`-->` |voronoi| :menuselection:`Voronoi Polygons...`
      -
      -
      - :ref:`qgisvoronoipolygons`
@@ -1358,35 +1358,35 @@ are enabled.
      - :kbd:`Alt+O` + :kbd:`A`
      -
      -
-   * - :menuselection:`--> Line Intersection...`
+   * - :menuselection:`-->` |lineIntersections| :menuselection:`Line Intersection...`
      -
      -
      - :ref:`qgislineintersections`
-   * - :menuselection:`--> Mean Coordinate(s)...`
+   * - :menuselection:`-->` |meanCoordinates| :menuselection:`Mean Coordinate(s)...`
      -
      -
      - :ref:`qgismeancoordinates`
-   * - :menuselection:`--> Basic Statistics for Fields...`
+   * - :menuselection:`-->` |basicStatistics| :menuselection:`Basic Statistics for Fields...`
      -
      -
      - :ref:`qgisbasicstatisticsforfields`
-   * - :menuselection:`--> Count Points in Polygon...`
+   * - :menuselection:`-->` |sumPoints| :menuselection:`Count Points in Polygon...`
      -
      -
      - :ref:`qgiscountpointsinpolygon`
-   * - :menuselection:`--> Distance Matrix...`
+   * - :menuselection:`-->` |distanceMatrix| :menuselection:`Distance Matrix...`
      -
      -
      - :ref:`qgisdistancematrix`
-   * - :menuselection:`--> List Unique Values...`
+   * - :menuselection:`-->` |uniqueValues| :menuselection:`List Unique Values...`
      -
      -
      - :ref:`qgislistuniquevalues`
-   * - :menuselection:`--> Nearest Neighbour Analysis...`
+   * - :menuselection:`-->` |nearestNeighbour| :menuselection:`Nearest Neighbour Analysis...`
      -
      -
      - :ref:`qgisnearestneighbouranalysis`
-   * - :menuselection:`--> Sum Line Lengths...`
+   * - :menuselection:`-->` |sumLengthLines| :menuselection:`Sum Line Lengths...`
      -
      -
      - :ref:`qgissumlinelengths`
@@ -1394,23 +1394,23 @@ are enabled.
      - :kbd:`Alt+O` + :kbd:`D`
      -
      -
-   * - :menuselection:`--> Merge Vector Layers...`
+   * - :menuselection:`-->` |mergeLayers| :menuselection:`Merge Vector Layers...`
      -
      -
      - :ref:`qgismergevectorlayers`
-   * - :menuselection:`--> Reproject Layer...`
+   * - :menuselection:`-->` |processingAlgorithm| :menuselection:`Reproject Layer...`
      -
      -
      - :ref:`qgisreprojectlayer`
-   * - :menuselection:`--> Create Spatial Index...`
+   * - :menuselection:`-->` |processingAlgorithm| :menuselection:`Create Spatial Index...`
      -
      -
      - :ref:`qgiscreatespatialindex`
-   * - :menuselection:`--> Join Attributes by Location...`
+   * - :menuselection:`-->` |processingAlgorithm| :menuselection:`Join Attributes by Location...`
      -
      -
      - :ref:`qgisjoinattributesbylocation`
-   * - :menuselection:`--> Split Vector Layer...`
+   * - :menuselection:`-->` |splitLayer| :menuselection:`Split Vector Layer...`
      -
      -
      - :ref:`qgissplitvectorlayer`
@@ -1418,39 +1418,51 @@ are enabled.
      - :kbd:`Alt+O` + :kbd:`R`
      -
      -
-   * - :menuselection:`--> Select by Location...`
+   * - :menuselection:`-->` |createGrid| :menuselection:`Create Grid...`
      -
      -
-     - :ref:`qgisselectbylocation`
-   * - :menuselection:`--> Select Within Distance...`
-     -
-     -
-     - :ref:`qgisselectwithindistance`
-   * - :menuselection:`--> Extract Layer Extent...`
+     - :ref:`qgiscreategrid`
+   * - :menuselection:`-->` |extractLayerExtent| :menuselection:`Extract Layer Extent...`
      -
      -
      - :ref:`qgispolygonfromlayerextent`
-   * - :menuselection:`--> Random Points in Extent...`
+   * - :menuselection:`-->` |randomPointsWithinExtent| :menuselection:`Random Points in Extent...`
      -
      -
      - :ref:`qgisrandompointsinextent`
-   * - :menuselection:`--> Random Points in Layer Bounds...`
+   * - :menuselection:`-->` |randomPointsInPolygons| :menuselection:`Random Points in Polygons...`
+     -
+     -
+     - :ref:`qgisrandompointsinpolygons`
+   * - :menuselection:`-->` |randomPointsOnLines| :menuselection:`Random Points on Lines...`
+     -
+     -
+     - :ref:`qgisrandompointsonlines`
+   * - :menuselection:`-->` |selectLocation| :menuselection:`Select by Location...`
+     -
+     -
+     - :ref:`qgisselectbylocation`
+   * - :menuselection:`-->` |selectDistance| :menuselection:`Select Within Distance...`
+     -
+     -
+     - :ref:`qgisselectwithindistance`
+   * - :menuselection:`-->` |randomPointsWithinExtent| :menuselection:`Random Points in Layer Bounds...`
      -
      -
      - :ref:`qgisrandompointsinlayerbounds`
-   * - :menuselection:`--> Random Points Inside Polygons...`
+   * - :menuselection:`-->` |randomPointsWithinPolygon| :menuselection:`Random Points Inside Polygons...`
      -
      -
      - :ref:`qgisrandompointsinsidepolygons`
-   * - :menuselection:`--> Random Selection...`
+   * - :menuselection:`-->` |selectRandom| :menuselection:`Random Selection...`
      -
      -
      - :ref:`qgisrandomselection`
-   * - :menuselection:`--> Random Selection Within Subsets...`
+   * - :menuselection:`-->` |selectRandom| :menuselection:`Random Selection Within Subsets...`
      -
      -
      - :ref:`qgisrandomselectionwithinsubsets`
-   * - :menuselection:`--> Regular Points...`
+   * - :menuselection:`-->` |regularPoints| :menuselection:`Regular Points...`
      -
      -
      - :ref:`qgisregularpoints`
@@ -1495,55 +1507,59 @@ are enabled.
      -
      -
      -
-   * - :menuselection:`--> Aspect...`
+   * - :menuselection:`-->` |providerGdal| :menuselection:`Aspect...`
      -
      -
      - :ref:`gdalaspect`
-   * - :menuselection:`--> Fill nodata...`
+   * - :menuselection:`-->` |providerGdal| :menuselection:`Fill nodata...`
      -
      -
      - :ref:`gdalfillnodata`
-   * - :menuselection:`--> Grid (Moving Average)...`
+   * - :menuselection:`-->` |grid| :menuselection:`Grid (Moving Average)...`
      -
      -
      - :ref:`gdalgridaverage`
-   * - :menuselection:`--> Grid (Data Metrics)...`
+   * - :menuselection:`-->` |grid| :menuselection:`Grid (Data Metrics)...`
      -
      -
      - :ref:`gdalgriddatametrics`
-   * - :menuselection:`--> Grid (Inverse Distance to a Power)...`
+   * - :menuselection:`-->` |grid| :menuselection:`Grid (Inverse Distance to a Power)...`
      -
      -
      - :ref:`gdalgridinversedistance`
-   * - :menuselection:`--> Grid (Nearest Neighbor)...`
+   * - :menuselection:`-->` |grid| :menuselection:`Grid (Nearest Neighbor)...`
      -
      -
      - :ref:`gdalgridinversedistancenearestneighbor`
-   * - :menuselection:`--> Hillshade...`
+   * - :menuselection:`-->` |nearblack| :menuselection:`Near Black...`
+     -
+     -
+     - :ref:`gdalnearblack`
+   * - :menuselection:`-->` |providerGdal| :menuselection:`Hillshade...`
      -
      -
      - :ref:`gdalhillshade`
-   * - :menuselection:`--> Proximity (Raster Distance)...`
+   * - :menuselection:`-->` |proximity| :menuselection:`Proximity (Raster Distance)...`
      -
      -
      - :ref:`gdalproximity`
-   * - :menuselection:`--> Roughness...`
+   * - :menuselection:`-->` |providerGdal| :menuselection:`Roughness...`
      -
      -
      - :ref:`gdalroughness`
-   * - :menuselection:`--> Sieve...`
+   * - :menuselection:`-->` |sieve| :menuselection:`Sieve...`
      -
      -
      - :ref:`gdalsieve`
-   * - :menuselection:`--> Slope...`
+   * - :menuselection:`-->` |providerGdal| :menuselection:`Slope...`
      -
      -
      - :ref:`gdalslope`
-   * - :menuselection:`--> Topographic Position Index (TPI)...`
+   * - :menuselection:`-->` |providerGdal| :menuselection:`Topographic Position Index (TPI)...`
      -
      -
      - :ref:`gdaltpitopographicpositionindex`
-   * - :menuselection:`--> Terrain Ruggedness Index (TRI)...`
+   * - :menuselection:`-->` |providerGdal| :menuselection:`Terrain Ruggedness Index (TRI)...`
      -
      -
      - :ref:`gdaltriterrainruggednessindex`
@@ -1551,15 +1567,15 @@ are enabled.
      -
      -
      -
-   * - :menuselection:`--> Assign Projection...`
+   * - :menuselection:`-->` |projectionAdd| :menuselection:`Assign Projection...`
      -
      -
      - :ref:`gdalassignprojection`
-   * - :menuselection:`--> Extract Projection...`
+   * - :menuselection:`-->` |projectionExport| :menuselection:`Extract Projection...`
      -
      -
      - :ref:`gdalextractprojection`
-   * - :menuselection:`--> Warp (Reproject)...`
+   * - :menuselection:`-->` |warp| :menuselection:`Warp (Reproject)...`
      -
      -
      - :ref:`gdalwarpreproject`
@@ -1567,23 +1583,23 @@ are enabled.
      -
      -
      -
-   * - :menuselection:`--> Build Virtual Raster...`
+   * - :menuselection:`-->` |vrt| :menuselection:`Build Virtual Raster...`
      -
      -
      - :ref:`gdalbuildvirtualraster`
-   * - :menuselection:`--> Raster Information...`
+   * - :menuselection:`-->` |rasterInfo| :menuselection:`Raster Information...`
      -
      -
      - :ref:`gdalgdalinfo`
-   * - :menuselection:`--> Merge...`
+   * - :menuselection:`-->` |merge| :menuselection:`Merge...`
      -
      -
      - :ref:`gdalmerge`
-   * - :menuselection:`--> Build Overviews (Pyramids)...`
+   * - :menuselection:`-->` |rasterOverview| :menuselection:`Build Overviews (Pyramids)...`
      -
      -
      - :ref:`gdaloverviews`
-   * - :menuselection:`--> Tile Index...`
+   * - :menuselection:`-->` |tiles| :menuselection:`Tile Index...`
      -
      -
      - :ref:`gdaltileindex`
@@ -1591,15 +1607,15 @@ are enabled.
      -
      -
      -
-   * - :menuselection:`--> Clip Raster by Extent...`
+   * - :menuselection:`-->` |rasterClip| :menuselection:`Clip Raster by Extent...`
      -
      -
      - :ref:`gdalcliprasterbyextent`
-   * - :menuselection:`--> Clip Raster by Mask Layer...`
+   * - :menuselection:`-->` |rasterClip| :menuselection:`Clip Raster by Mask Layer...`
      -
      -
      - :ref:`gdalcliprasterbymasklayer`
-   * - :menuselection:`--> Contour...`
+   * - :menuselection:`-->` |contour| :menuselection:`Contour...`
      -
      -
      - :ref:`gdalcontour`
@@ -1607,23 +1623,23 @@ are enabled.
      -
      -
      -
-   * - :menuselection:`--> PCT to RGB...`
+   * - :menuselection:`-->` |8To24Bits| :menuselection:`PCT to RGB...`
      -
      -
      - :ref:`gdalpcttorgb`
-   * - :menuselection:`--> Polygonize (Raster to Vector)...`
+   * - :menuselection:`-->` |polygonize| :menuselection:`Polygonize (Raster to Vector)...`
      -
      -
      - :ref:`gdalpolygonize`
-   * - :menuselection:`--> Rasterize (Vector to Raster)...`
+   * - :menuselection:`-->` |rasterize| :menuselection:`Rasterize (Vector to Raster)...`
      -
      -
      - :ref:`gdalrasterize`
-   * - :menuselection:`--> RGB to PCT...`
+   * - :menuselection:`-->` |24To8Bits| :menuselection:`RGB to PCT...`
      -
      -
      - :ref:`gdalrgbtopct`
-   * - :menuselection:`--> Translate (Convert Format)...`
+   * - :menuselection:`-->` |translate| :menuselection:`Translate (Convert Format)...`
      -
      -
      - :ref:`gdaltranslate`
@@ -2165,11 +2181,17 @@ processes (QGIS startup, plugins loading, processing tools...)
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |24To8Bits| image:: /static/common/24-to-8-bits.png
+   :width: 1.5em
+.. |8To24Bits| image:: /static/common/8-to-24-bits.png
+   :width: 1.5em
 .. |addAllToOverview| image:: /static/common/mActionAddAllToOverview.png
    :width: 1.5em
 .. |addAmsLayer| image:: /static/common/mActionAddAmsLayer.png
    :width: 1.5em
 .. |addDelimitedTextLayer| image:: /static/common/mActionAddDelimitedTextLayer.png
+   :width: 1.5em
+.. |addGeometryAttributes| image:: /static/common/mAlgorithmAddGeometryAttributes.png
    :width: 1.5em
 .. |addGpsLayer| image:: /static/common/mActionAddGpsLayer.png
    :width: 1.5em
@@ -2213,11 +2235,19 @@ processes (QGIS startup, plugins loading, processing tools...)
    :width: 1.5em
 .. |allEdits| image:: /static/common/mActionAllEdits.png
    :width: 1.5em
+.. |basicStatistics| image:: /static/common/mAlgorithmBasicStatistics.png
+   :width: 1.5em
+.. |buffer| image:: /static/common/mAlgorithmBuffer.png
+   :width: 1.5em
 .. |captureLine| image:: /static/common/mActionCaptureLine.png
    :width: 1.5em
 .. |capturePoint| image:: /static/common/mActionCapturePoint.png
    :width: 1.5em
 .. |capturePolygon| image:: /static/common/mActionCapturePolygon.png
+   :width: 1.5em
+.. |centroids| image:: /static/common/mAlgorithmCentroids.png
+   :width: 1.5em
+.. |checkGeometry| image:: /static/common/mAlgorithmCheckGeometry.png
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
@@ -2235,9 +2265,19 @@ processes (QGIS startup, plugins loading, processing tools...)
    :width: 1.5em
 .. |circularStringRadius| image:: /static/common/mActionCircularStringRadius.png
    :width: 1.5em
+.. |clip| image:: /static/common/mAlgorithmClip.png
+   :width: 1.5em
+.. |collect| image:: /static/common/mAlgorithmCollect.png
+   :width: 1.5em
+.. |contour| image:: /static/common/contour.png
+   :width: 1.5em
+.. |convexHull| image:: /static/common/mAlgorithmConvexHull.png
+   :width: 1.5em
 .. |copyrightLabel| image:: /static/common/copyright_label.png
    :width: 1.5em
 .. |createGPX| image:: /static/common/create_gpx.png
+   :width: 1.5em
+.. |createGrid| image:: /static/common/mAlgorithmCreateGrid.png
    :width: 1.5em
 .. |createMemory| image:: /static/common/mActionCreateMemory.png
    :width: 1.5em
@@ -2246,6 +2286,8 @@ processes (QGIS startup, plugins loading, processing tools...)
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
    :width: 1.5em
 .. |dbManager| image:: /static/common/dbmanager.png
+   :width: 1.5em
+.. |delaunay| image:: /static/common/mAlgorithmDelaunay.png
    :width: 1.5em
 .. |deletePart| image:: /static/common/mActionDeletePart.png
    :width: 2em
@@ -2256,6 +2298,12 @@ processes (QGIS startup, plugins loading, processing tools...)
 .. |deselectActiveLayer| image:: /static/common/mActionDeselectActiveLayer.png
    :width: 1.5em
 .. |deselectAll| image:: /static/common/mActionDeselectAll.png
+   :width: 1.5em
+.. |difference| image:: /static/common/mAlgorithmDifference.png
+   :width: 1.5em
+.. |dissolve| image:: /static/common/mAlgorithmDissolve.png
+   :width: 1.5em
+.. |distanceMatrix| image:: /static/common/mAlgorithmDistanceMatrix.png
    :width: 1.5em
 .. |duplicateLayer| image:: /static/common/mActionDuplicateLayer.png
    :width: 1.5em
@@ -2277,6 +2325,10 @@ processes (QGIS startup, plugins loading, processing tools...)
    :width: 1.5em
 .. |extents| image:: /static/common/extents.png
    :width: 1.5em
+.. |extractLayerExtent| image:: /static/common/mAlgorithmExtractLayerExtent.png
+   :width: 1.5em
+.. |extractVertices| image:: /static/common/mAlgorithmExtractVertices.png
+   :width: 1.5em
 .. |fileExit| image:: /static/common/mActionFileExit.png
 .. |fileNew| image:: /static/common/mActionFileNew.png
    :width: 1.5em
@@ -2296,6 +2348,8 @@ processes (QGIS startup, plugins loading, processing tools...)
    :width: 1.5em
 .. |georefRun| image:: /static/common/mGeorefRun.png
    :width: 1.5em
+.. |grid| image:: /static/common/grid.png
+   :width: 1.5em
 .. |helpContents| image:: /static/common/mActionHelpContents.png
    :width: 1.5em
 .. |helpSponsors| image:: /static/common/mActionHelpSponsors.png
@@ -2314,6 +2368,8 @@ processes (QGIS startup, plugins loading, processing tools...)
    :width: 1.5em
 .. |interfaceCustomization| image:: /static/common/mActionInterfaceCustomization.png
    :width: 1.5em
+.. |intersect| image:: /static/common/mAlgorithmIntersect.png
+   :width: 1.5em
 .. |invertSelection| image:: /static/common/mActionInvertSelection.png
    :width: 1.5em
 .. |kde| image:: /static/common/kde.png
@@ -2326,11 +2382,17 @@ processes (QGIS startup, plugins loading, processing tools...)
    :width: 1.5em
 .. |layoutManager| image:: /static/common/mActionLayoutManager.png
    :width: 1.5em
+.. |lineIntersections| image:: /static/common/mAlgorithmLineIntersections.png
+   :width: 1.5em
+.. |lineToPolygon| image:: /static/common/mAlgorithmLineToPolygon.png
+   :width: 1.5em
 .. |lockedGray| image:: /static/common/lockedGray.png
    :width: 1.2em
 .. |logo| image:: /static/common/logo.png
    :width: 1.5em
 .. |mapTips| image:: /static/common/mActionMapTips.png
+   :width: 1.5em
+.. |meanCoordinates| image:: /static/common/mAlgorithmMeanCoordinates.png
    :width: 1.5em
 .. |measure| image:: /static/common/mActionMeasure.png
    :width: 1.5em
@@ -2338,9 +2400,13 @@ processes (QGIS startup, plugins loading, processing tools...)
    :width: 1.5em
 .. |measureArea| image:: /static/common/mActionMeasureArea.png
    :width: 1.5em
+.. |merge| image:: /static/common/merge.png
+   :width: 1.5em
 .. |mergeFeatureAttributes| image:: /static/common/mActionMergeFeatureAttributes.png
    :width: 1.5em
 .. |mergeFeatures| image:: /static/common/mActionMergeFeatures.png
+   :width: 1.5em
+.. |mergeLayers| image:: /static/common/mAlgorithmMergeLayers.png
    :width: 1.5em
 .. |meshReindex| image:: /static/common/mActionMeshReindex.png
    :width: 1.5em
@@ -2361,6 +2427,12 @@ processes (QGIS startup, plugins loading, processing tools...)
 .. |moveFeaturePoint| image:: /static/common/mActionMoveFeaturePoint.png
    :width: 1.5em
 .. |multiEdit| image:: /static/common/mActionMultiEdit.png
+   :width: 1.5em
+.. |multiToSingle| image:: /static/common/mAlgorithmMultiToSingle.png
+   :width: 1.5em
+.. |nearblack| image:: /static/common/nearblack.png
+   :width: 1.5em
+.. |nearestNeighbour| image:: /static/common/mAlgorithmNearestNeighbour.png
    :width: 1.5em
 .. |new3DMap| image:: /static/common/mActionNew3DMap.png
    :width: 1.5em
@@ -2410,6 +2482,10 @@ processes (QGIS startup, plugins loading, processing tools...)
    :width: 1.5em
 .. |panToSelected| image:: /static/common/mActionPanToSelected.png
    :width: 1.5em
+.. |polygonToLine| image:: /static/common/mAlgorithmPolygonToLine.png
+   :width: 1.5em
+.. |polygonize| image:: /static/common/polygonize.png
+   :width: 1.5em
 .. |processSelected| image:: /static/common/mActionProcessSelected.png
    :width: 1.5em
 .. |processingAlgorithm| image:: /static/common/processingAlgorithm.png
@@ -2422,11 +2498,35 @@ processes (QGIS startup, plugins loading, processing tools...)
    :width: 1.5em
 .. |projectProperties| image:: /static/common/mActionProjectProperties.png
    :width: 1.5em
+.. |projectionAdd| image:: /static/common/projection-add.png
+   :width: 1.5em
 .. |projectionEnabled| image:: /static/common/mIconProjectionEnabled.png
+   :width: 1.5em
+.. |projectionExport| image:: /static/common/projection-export.png
+   :width: 1.5em
+.. |providerGdal| image:: /static/common/providerGdal.png
+   :width: 1.5em
+.. |proximity| image:: /static/common/proximity.png
    :width: 1.5em
 .. |pythonFile| image:: /static/common/mIconPythonFile.png
    :width: 1.5em
 .. |qgisHomePage| image:: /static/common/mActionQgisHomePage.png
+   :width: 1.5em
+.. |randomPointsInPolygons| image:: /static/common/mAlgorithmRandomPointsInPolygons.png
+   :width: 1.5em
+.. |randomPointsOnLines| image:: /static/common/mAlgorithmRandomPointsOnLines.png
+   :width: 1.5em
+.. |randomPointsWithinExtent| image:: /static/common/mAlgorithmRandomPointsWithinExtent.png
+   :width: 1.5em
+.. |randomPointsWithinPolygon| image:: /static/common/mAlgorithmRandomPointsWithinPolygon.png
+   :width: 1.5em
+.. |rasterClip| image:: /static/common/raster-clip.png
+   :width: 1.5em
+.. |rasterInfo| image:: /static/common/raster-info.png
+   :width: 1.5em
+.. |rasterOverview| image:: /static/common/raster-overview.png
+   :width: 1.5em
+.. |rasterize| image:: /static/common/rasterize.png
    :width: 1.5em
 .. |rectangle3PointsDistance| image:: /static/common/mActionRectangle3PointsDistance.png
    :width: 1.5em
@@ -2439,6 +2539,8 @@ processes (QGIS startup, plugins loading, processing tools...)
 .. |redo| image:: /static/common/mActionRedo.png
    :width: 1.5em
 .. |refresh| image:: /static/common/mActionRefresh.png
+   :width: 1.5em
+.. |regularPoints| image:: /static/common/mAlgorithmRegularPoints.png
    :width: 1.5em
 .. |regularPolygon2Points| image:: /static/common/mActionRegularPolygon2Points.png
    :width: 1.5em
@@ -2470,11 +2572,17 @@ processes (QGIS startup, plugins loading, processing tools...)
    :width: 1.5em
 .. |selectAll| image:: /static/common/mActionSelectAll.png
    :width: 1.5em
+.. |selectDistance| image:: /static/common/mAlgorithmSelectDistance.png
+   :width: 1.5em
 .. |selectFreehand| image:: /static/common/mActionSelectFreehand.png
+   :width: 1.5em
+.. |selectLocation| image:: /static/common/mAlgorithmSelectLocation.png
    :width: 1.5em
 .. |selectPolygon| image:: /static/common/mActionSelectPolygon.png
    :width: 1.5em
 .. |selectRadius| image:: /static/common/mActionSelectRadius.png
+   :width: 1.5em
+.. |selectRandom| image:: /static/common/mAlgorithmSelectRandom.png
    :width: 1.5em
 .. |selectRectangle| image:: /static/common/mActionSelectRectangle.png
    :width: 1.5em
@@ -2490,9 +2598,15 @@ processes (QGIS startup, plugins loading, processing tools...)
    :width: 1.5em
 .. |showSelectedLayers| image:: /static/common/mActionShowSelectedLayers.png
    :width: 1.5em
+.. |sieve| image:: /static/common/sieve.png
+   :width: 1.5em
 .. |simplify| image:: /static/common/mActionSimplify.png
    :width: 1.5em
+.. |simplify_2| image:: /static/common/mAlgorithmSimplify.png
+   :width: 1.5em
 .. |splitFeatures| image:: /static/common/mActionSplitFeatures.png
+   :width: 1.5em
+.. |splitLayer| image:: /static/common/mAlgorithmSplitLayer.png
    :width: 1.5em
 .. |splitParts| image:: /static/common/mActionSplitParts.png
    :width: 1.5em
@@ -2502,9 +2616,17 @@ processes (QGIS startup, plugins loading, processing tools...)
    :width: 1em
 .. |sum| image:: /static/common/mActionSum.png
    :width: 1.2em
+.. |sumLengthLines| image:: /static/common/mAlgorithmSumLengthLines.png
+   :width: 1.5em
+.. |sumPoints| image:: /static/common/mAlgorithmSumPoints.png
+   :width: 1.5em
 .. |svgAnnotation| image:: /static/common/mActionSvgAnnotation.png
    :width: 1.5em
+.. |symmetricalDifference| image:: /static/common/mAlgorithmSymmetricalDifference.png
+   :width: 1.5em
 .. |textAnnotation| image:: /static/common/mActionTextAnnotation.png
+   :width: 1.5em
+.. |tiles| image:: /static/common/tiles.png
    :width: 1.5em
 .. |titleLabel| image:: /static/common/title_label.png
    :width: 1.5em
@@ -2516,13 +2638,25 @@ processes (QGIS startup, plugins loading, processing tools...)
    :width: 1.5em
 .. |tracking| image:: /static/common/tracking.png
    :width: 1.5em
+.. |translate| image:: /static/common/translate.png
+   :width: 1.5em
 .. |trimExtend| image:: /static/common/mActionTrimExtend.png
    :width: 1.5em
 .. |undo| image:: /static/common/mActionUndo.png
    :width: 1.5em
+.. |union| image:: /static/common/mAlgorithmUnion.png
+   :width: 1.5em
+.. |uniqueValues| image:: /static/common/mAlgorithmUniqueValues.png
+   :width: 1.5em
 .. |vertexTool| image:: /static/common/mActionVertexTool.png
    :width: 1.5em
 .. |vertexToolActiveLayer| image:: /static/common/mActionVertexToolActiveLayer.png
+   :width: 1.5em
+.. |voronoi| image:: /static/common/mAlgorithmVoronoi.png
+   :width: 1.5em
+.. |vrt| image:: /static/common/vrt.png
+   :width: 1.5em
+.. |warp| image:: /static/common/warp.png
    :width: 1.5em
 .. |zoomActual| image:: /static/common/mActionZoomActual.png
    :width: 1.5em
