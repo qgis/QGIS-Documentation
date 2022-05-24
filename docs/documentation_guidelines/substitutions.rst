@@ -365,7 +365,7 @@ Icon                            Substitution                        Icon        
 |geographic|                    ``|geographic|``                    |crs|                           ``|crs|``
 |customProjection|              ``|customProjection|``              |setProjection|                 ``|setProjection|``
 |projectionDisabled|            ``|projectionDisabled|``            |projectionEnabled|             ``|projectionEnabled|``
-|transformation|                ``|transformation|``
+|transformation|                ``|transformation|``                |gdalScript|                    ``|gdalScript|``
 |georefRun|                     ``|georefRun|``                     |pencil|                        ``|pencil|``
 |linkQGisToGeoref|              ``|linkQGisToGeoref|``              |linkGeorefToQGis|              ``|linkGeorefToQGis|``
 |fullHistogramStretch|          ``|fullHistogramStretch|``
@@ -464,15 +464,15 @@ Icon                            Substitution                        Icon        
 |saveAsPython|                  ``|saveAsPython|``                  |modelOutput|                   ``|modelOutput|``  
 |qgsProjectFile|                ``|qgsProjectFile|``                |addToProject|                  ``|addToProject|``
 |fieldInteger|                  ``|fieldInteger|``
-|mean|                          ``|mean|``                          |layerExtent|                   ``|layerExtent|``
-|randomSelection|               ``|randomSelection|``               |vectorGrid|                    ``|vectorGrid|``
+|meanCoordinates|               ``|meanCoordinates|``               |extractLayerExtent|            ``|extractLayerExtent|``
+|selectRandom|                  ``|selectRandom|``                  |vectorGrid|                    ``|vectorGrid|``
 |convexHull|                    ``|convexHull|``                    |buffer|                        ``|buffer|``
 |intersect|                     ``|intersect|``                     |union|                         ``|union|``
-|symDifference|                 ``|symDifference|``                 |clip|                          ``|clip|``
+|symmetricalDifference|         ``|symmetricalDifference|``         |clip|                          ``|clip|``
 |difference|                    ``|difference|``                    |dissolve|                      ``|dissolve|``
 |checkGeometry|                 ``|checkGeometry|``                 |exportGeometry|                ``|exportGeometry|``
 |delaunay|                      ``|delaunay|``                      |centroids|                     ``|centroids|``
-|toLines|                       ``|toLines|``                       |extractNodes|                  ``|extractNodes|``
+|polygonToLine|                 ``|polygonToLine|``                 |extractVertices|               ``|extractVertices|``
 |splitLayer|                    ``|splitLayer|``                    |heatmap|                       ``|heatmap|``
 |showRasterCalculator|          ``|showRasterCalculator|``          |showMeshCalculator|            ``|showMeshCalculator|``
 |regularPoints|                 ``|regularPoints|``
@@ -490,8 +490,7 @@ Icon                            Substitution                        Icon        
 |pythonFile|                    ``|pythonFile|``                    |runConsole|                    ``|runConsole|``
 |showEditorConsole|             ``|showEditorConsole|``             |clearConsole|                  ``|clearConsole|``
 |offlineEditingCopy|            ``|offlineEditingCopy|``            |offlineEditingSync|            ``|offlineEditingSync|``
-|plugin|                        ``|plugin|``                        |interpolation|                 ``|interpolation|``
-|gdalScript|                    ``|gdalScript|``                    |metasearch|                    ``|metasearch|``
+|plugin|                        ``|plugin|``                        |metasearch|                    ``|metasearch|``
 |geometryChecker|               ``|geometryChecker|``               |topologyChecker|               ``|topologyChecker|``
 |fromSelectedFeature|           ``|fromSelectedFeature|``           |sqlQueryBuilder|               ``|sqlQueryBuilder|``
 ==============================  ==================================  ==============================  ==================================
@@ -810,7 +809,9 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |extents| image:: /static/common/extents.png
    :width: 1.5em
-.. |extractNodes| image:: /static/common/extract_nodes.png
+.. |extractLayerExtent| image:: /static/common/mAlgorithmExtractLayerExtent.png
+   :width: 1.5em
+.. |extractVertices| image:: /static/common/mAlgorithmExtractVertices.png
    :width: 1.5em
 .. |favourites| image:: /static/common/mIconFavourites.png
    :width: 1.5em
@@ -947,8 +948,6 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |interfaceCustomization| image:: /static/common/mActionInterfaceCustomization.png
    :width: 1.5em
-.. |interpolation| image:: /static/common/interpolation.png
-   :width: 1.5em
 .. |intersect| image:: /static/common/mAlgorithmIntersect.png
    :width: 1.5em
 .. |invertSelection| image:: /static/common/mActionInvertSelection.png
@@ -999,8 +998,6 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |labelshadow| image:: /static/common/labelshadow.png
    :width: 1.5em
-.. |layerExtent| image:: /static/common/layer_extent.png
-   :width: 1.5em
 .. |layoutManager| image:: /static/common/mActionLayoutManager.png
    :width: 1.5em
 .. |legend| image:: /static/common/legend.png
@@ -1025,7 +1022,7 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |mapTips| image:: /static/common/mActionMapTips.png
    :width: 1.5em
-.. |mean| image:: /static/common/mean.png
+.. |meanCoordinates| image:: /static/common/mAlgorithmMeanCoordinates.png
    :width: 1.5em
 .. |measure| image:: /static/common/mActionMeasure.png
    :width: 1.5em
@@ -1169,6 +1166,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |pointDisplacementSymbol| image:: /static/common/rendererPointDisplacementSymbol.png
    :width: 1.5em
+.. |polygonToLine| image:: /static/common/mAlgorithmPolygonToLine.png
+   :width: 1.5em
 .. |processSelected| image:: /static/common/mActionProcessSelected.png
    :width: 1.5em
 .. |processingAlgorithm| image:: /static/common/processingAlgorithm.png
@@ -1200,8 +1199,6 @@ Icon                            Substitution                        Icon        
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
    :width: 1.5em
 .. |raiseItems| image:: /static/common/mActionRaiseItems.png
-   :width: 1.5em
-.. |randomSelection| image:: /static/common/random_selection.png
    :width: 1.5em
 .. |rasterHistogram| image:: /static/common/rasterHistogram.png
    :width: 1.5em
@@ -1293,6 +1290,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |selectRadius| image:: /static/common/mActionSelectRadius.png
    :width: 1.5em
+.. |selectRandom| image:: /static/common/mAlgorithmSelectRandom.png
+   :width: 1.5em
 .. |selectRectangle| image:: /static/common/mActionSelectRectangle.png
    :width: 1.5em
 .. |selectString| image:: /static/common/selectstring.png
@@ -1372,8 +1371,6 @@ Icon                            Substitution                        Icon        
    :width: 1.2em
 .. |svgAnnotation| image:: /static/common/mActionSvgAnnotation.png
    :width: 1.5em
-.. |symDifference| image:: /static/common/sym_difference.png
-   :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
 .. |symbologyAdd| image:: /static/common/symbologyAdd.png
@@ -1381,6 +1378,8 @@ Icon                            Substitution                        Icon        
 .. |symbologyEdit| image:: /static/common/symbologyEdit.png
    :width: 1.5em
 .. |symbologyRemove| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
+.. |symmetricalDifference| image:: /static/common/mAlgorithmSymmetricalDifference.png
    :width: 1.5em
 .. |system| image:: /static/common/system.png
    :width: 1.5em
@@ -1403,8 +1402,6 @@ Icon                            Substitution                        Icon        
 .. |tiltUp| image:: /static/common/mActionTiltUp.png
    :width: 1.5em
 .. |titleLabel| image:: /static/common/title_label.png
-   :width: 1.5em
-.. |toLines| image:: /static/common/to_lines.png
    :width: 1.5em
 .. |toggleAllLayers| image:: /static/common/mActionToggleAllLayers.png
    :width: 1.5em
