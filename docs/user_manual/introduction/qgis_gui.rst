@@ -159,7 +159,7 @@ The :menuselection:`Project` menu provides access and exit points for
      -
      -
      -
-   * - :guilabel:`Properties...`
+   * - |projectProperties| :guilabel:`Properties...`
      - :kbd:`Ctrl+Shift+P`
      -
      - :ref:`project_properties`
@@ -1215,15 +1215,15 @@ copy or paste layer properties (style, scale, CRS...).
      -
      -
      - :ref:`sec_attribute_table`
-   * - |openTableSelected| :menuselection:`--> Open Attribute Table (Selected Features)`
+   * - :menuselection:`-->` |openTableSelected| :menuselection:`Open Attribute Table (Selected Features)`
      - :kbd:`Shift+F6`
      - :guilabel:`Attributes`
      - :ref:`sec_attribute_table`
-   * - |openTableVisible| :menuselection:`--> Open Attribute Table (Visible Features)`
+   * - :menuselection:`-->` |openTableVisible| :menuselection:`Open Attribute Table (Visible Features)`
      - :kbd:`Ctrl+F6`
      - :guilabel:`Attributes`
      - :ref:`sec_attribute_table`
-   * - |openTableEdited| :menuselection:`--> Open Attribute Table (Edited and New Features)`
+   * - :menuselection:`-->` |openTableEdited| :menuselection:`Open Attribute Table (Edited and New Features)`
      -
      - :guilabel:`Attributes`
      - :ref:`sec_attribute_table`
@@ -3207,6 +3207,8 @@ Click the icon to open the Plugin Manager dialog.
 .. |processingModel| image:: /static/common/processingModel.png
    :width: 1.5em
 .. |processingResult| image:: /static/common/processingResult.png
+   :width: 1.5em
+.. |projectProperties| image:: /static/common/mActionProjectProperties.png
    :width: 1.5em
 .. |projectionEnabled| image:: /static/common/mIconProjectionEnabled.png
    :width: 1.5em
