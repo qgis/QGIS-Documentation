@@ -2518,9 +2518,8 @@ Depending on the context, it offers selection between:
   current project
 * Use current :guilabel:`Map Canvas Extent`
 * :guilabel:`Draw on Canvas`: a rectangle whose coordinates are then used
-* Use current :guilabel:`Calculate from Bookmark`: uses extent of a layer saved in the
-  bookmarks
-* Use current :guilabel:`Calculate from Layout Map`: uses extent of the layout map
+* guilabel:`Calculate from Bookmark`: uses extent of a saved :ref:`bookmark <sec_bookmarks>`
+* :guilabel:`Calculate from Layout Map`: uses extent of a :ref:`layout map <layout_map_item>`
 * Enter or edit the coordinates as ``xmin, xmax, ymin, ymax``
 
 .. _figure_extentselector_widget:
