@@ -2513,11 +2513,13 @@ The :guilabel:`Extent` selector widget is a convenient shortcut when you want to
 select a spatial extent to assign to a layer or to limit the actions to run on.
 Depending on the context, it offers selection between:
 
-* :guilabel:`Current layer extent`, e.g. when exporting a layer
-* :menuselection:`Calculate from layer -->`: uses extent of a layer loaded in the
+* :guilabel:`Current Layer Extent`: e.g. when exporting a layer
+* :menuselection:`Calculate from Layer -->`: uses extent of a layer loaded in the
   current project
-* Use current :guilabel:`Map canvas extent`
-* :guilabel:`Draw on canvas` a rectangle whose coordinates are then used
+* Use current :guilabel:`Map Canvas Extent`
+* :guilabel:`Draw on Canvas`: a rectangle whose coordinates are then used
+* guilabel:`Calculate from Bookmark`: uses extent of a saved :ref:`bookmark <sec_bookmarks>`
+* :guilabel:`Calculate from Layout Map`: uses extent of a :ref:`layout map <layout_map_item>`
 * Enter or edit the coordinates as ``xmin, xmax, ymin, ymax``
 
 .. _figure_extentselector_widget:
