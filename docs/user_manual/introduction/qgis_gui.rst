@@ -2502,32 +2502,31 @@ You can create, manage and open 3D map views via :menuselection:`View --> 3D Map
 
 The following tools are provided at the top of the 3D map view panel:
 
-* |pan| :sup:`Camera control`: moves the view, keeping the same angle
+* |pan| :sup:`Camera Control`: moves the view, keeping the same angle
   and direction of the camera
 * |zoomFullExtent| :sup:`Zoom Full`: resizes the view to the whole
   layers' extent
-* |3dNavigation| :sup:`Toggle on-screen notification`: shows/hides the
+* |3dNavigation| :sup:`Toggle On-Screen Notification`: shows/hides the
   navigation widget (that is meant to ease controlling of the map view)
 * |identify| :sup:`Identify`: returns information on the clicked point
   of the terrain or the clicked 3D feature(s) -- More details at :ref:`identify`
-* |measure| :sup:`Measurement line`: measures the horizontal distance between points
+* |measure| :sup:`Measurement Line`: measures the horizontal distance between points
 * |play| :sup:`Animations`: shows/hides the :ref:`animation player
   <create_animation>` widget
-* |saveMapAsImage| :sup:`Save as image...`: exports the current view to
+* |saveMapAsImage| :sup:`Save as Image...`: exports the current view to
   an image file format
-* |3d| :sup:`Export 3D Scene...`: exports the current view as a 3D scene
+* |3d| :sup:`Export 3D Scene`: exports the current view as a 3D scene
   (:file:`.obj` file), allowing post-processing in applications like Blender...
   The terrain and vector features are exported as 3D objects.
   The export settings, overriding the layers :ref:`properties <sec_3_d_view>`
   or map view :ref:`configuration <scene_configuration>`, include:
-
-  * :guilabel:`Scene name` and destination :guilabel:`Folder`
-  * :guilabel:`Terrain resolution`
-  * :guilabel:`Terrain texture resolution`
-  * :guilabel:`Model scale`
-  * |checkbox| :guilabel:`Smooth edges`
-  * |checkbox| :guilabel:`Export normals`
-  * |checkbox| :guilabel:`Export textures`
+ * :guilabel:`Scene name` and destination :guilabel:`Folder`
+ * :guilabel:`Terrain resolution`
+ * :guilabel:`Terrain texture resolution`
+ * :guilabel:`Model scale`
+ * |checkbox| :guilabel:`Smooth edges`
+ * |checkbox| :guilabel:`Export normals`
+ * |checkbox| :guilabel:`Export textures`
 * |showPresets| :sup:`Set View Theme`: Allows you to select the set of layers to
   display in the map view from predefined :ref:`map themes <map_themes>`.
 * The |options| :sup:`Options` menu provides shortcuts to:
@@ -2538,7 +2537,7 @@ The following tools are provided at the top of the 3D map view panel:
     :guilabel:`3D camera follows 2D Map view`)
   * :guilabel:`Show visible camera area in 2D map view`
   * |options| :sup:`Configure` the 3D map view :ref:`settings <scene_configuration>`.
-
+* |dock| :sup:`Dock 3D Map View`: switch from dockable widget to top level window
 
 .. _`scene_configuration`:
 
@@ -3087,6 +3086,8 @@ Click the icon to open the Plugin Manager dialog.
 .. |deselectActiveLayer| image:: /static/common/mActionDeselectActiveLayer.png
    :width: 1.5em
 .. |deselectAll| image:: /static/common/mActionDeselectAll.png
+   :width: 1.5em
+.. |dock| image:: /static/common/dock.png
    :width: 1.5em
 .. |duplicateLayer| image:: /static/common/mActionDuplicateLayer.png
    :width: 1.5em
