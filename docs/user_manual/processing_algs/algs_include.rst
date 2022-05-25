@@ -16,9 +16,9 @@ Algorithms Include
 Python Code Sample
 ==================
 
-The following section is used to load python code sample in algs help
+.. The following section is used to load python code sample in algs help
 
-**algorithm_code_section**
+.. **algorithm_code_section**
 
 .. code-block:: python
 
@@ -31,57 +31,57 @@ The *parameter dictionary* provides the parameter NAMEs and values.
 See :ref:`processing_console` for details on how to run processing algorithms
 from the Python console.
 
-**end_algorithm_code_section**
+.. **end_algorithm_code_section**
 
 
 Output Types
 ============
 
-The following describes the different options for algorithm outputs,
-with variants including the "skip output" and the "append" options
+.. The following describes the different options for algorithm outputs,
+ with variants including the "skip output" and the "append" options
 
 Directory
 ---------
 
-**directory_output_types**
+.. **directory_output_types**
 
 * Save to a Temporary Directory
 * Save to Directory
 
-**end_directory_output_types**
+.. **end_directory_output_types**
 
 
-**directory_output_types_skip**
+.. **directory_output_types_skip**
 
 * Skip Output
 * Save to a Temporary Directory
 * Save to Directory
 
-**end_directory_output_types_skip**
+.. **end_directory_output_types_skip**
 
 File
 ----
 
-**file_output_types**
+.. **file_output_types**
 
 * Save to a Temporary File
 * Save to File…
 
-**end_file_output_types**
+.. **end_file_output_types**
 
 
-**file_output_types_skip**
+.. **file_output_types_skip**
 
 * Skip Output
 * Save to a Temporary File
 * Save to File…
 
-**end_file_output_types_skip**
+.. **end_file_output_types_skip**
 
 Layer
 -----
 
-**layer_output_types**
+.. **layer_output_types**
 
 * Create Temporary Layer (``TEMPORARY_OUTPUT``)
 * Save to File…
@@ -90,10 +90,10 @@ Layer
 
 The file encoding can also be changed here.
 
-**end_layer_output_types**
+.. **end_layer_output_types**
 
 
-**layer_output_types_append**
+.. **layer_output_types_append**
 
 * Create Temporary Layer (``TEMPORARY_OUTPUT``)
 * Save to File…
@@ -103,10 +103,10 @@ The file encoding can also be changed here.
 
 The file encoding can also be changed here.
 
-**end_layer_output_types_append**
+.. **end_layer_output_types_append**
 
 
-**layer_output_types_skip**
+.. **layer_output_types_skip**
 
 * Skip Output
 * Create Temporary Layer (``TEMPORARY_OUTPUT``)
@@ -116,15 +116,15 @@ The file encoding can also be changed here.
 
 The file encoding can also be changed here.
 
-**end_layer_output_types_skip**
+.. **end_layer_output_types_skip**
 
 
 Extent Dropdown
 ===============
 
-The following refers to the extent selector widget in the algorithms GUI
+.. The following refers to the extent selector widget in the algorithms GUI
 
-**extent_options**
+.. **extent_options**
 
 Available methods are:
 
@@ -136,17 +136,17 @@ Available methods are:
 * Draw on canvas: click and drag a rectangle delimiting the area to take into account
 * Enter the coordinates as ``xmin, xmax, ymin, ymax``
 
-**end_extent_options**
+.. **end_extent_options**
 
 
 Geometric predicates
 ====================
 
-The following section is included in vector selection algorithms such as
-qgisselectbylocation, qgisextractbylocation and vector general algorithms
-such as qgisjoinattributesbylocation and qgisjoinbylocationsummary
+.. The following section is included in vector selection algorithms such as
+ qgisselectbylocation, qgisextractbylocation and vector general algorithms
+ such as qgisjoinattributesbylocation and qgisjoinbylocationsummary
 
-**geometric_predicates**
+.. **geometric_predicates**
 
 Geometric predicates are boolean functions used to determine the spatial
 relation a feature has with another by comparing whether and how
@@ -203,12 +203,12 @@ Available geometric predicates are:
   Two polygons cross as a polygon (false).
   In the picture, no circles will be returned.
 
-**end_geometric_predicates**
+.. **end_geometric_predicates**
 
 Notes on algorithms
 ===================
 
-**warning_attributes**
+.. **warning_attributes**
 
 .. warning:: **Geometry modification only**
 
@@ -219,4 +219,4 @@ Notes on algorithms
    If such properties are stored as attributes, those attributes will
    have to be manually updated.
 
-**end_warning_attributes**
+.. **end_warning_attributes**
