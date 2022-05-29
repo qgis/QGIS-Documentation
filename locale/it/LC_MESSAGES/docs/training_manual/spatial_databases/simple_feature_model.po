@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 "Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:2
 msgid "|LS| Simple Feature Model"
@@ -131,6 +131,10 @@ msgstr ""
 msgid "|TY| |hard|"
 msgstr "Prova"
 
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:250
+msgid "hard"
+msgstr "hard"
+
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:65
 msgid ""
 "Create a new table called cities and give it some appropriate columns, "
@@ -140,6 +144,12 @@ msgstr ""
 "Crea una nuova tabella denominata cities e inserisci alcune colonne "
 "appropriate, tra cui un campo geometry per poligoni (i confini della città)."
 " Assicurarti che esiste un vincolo per rispettare geometrie poligoni."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:69
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:121
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:200
+msgid "Answer"
+msgstr "Soluzione"
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:84
 msgid "Populate geometry_columns table"
@@ -197,6 +207,10 @@ msgstr ""
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:117
 msgid "|TY| |basic|"
 msgstr "Prova"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:249
+msgid "basic"
+msgstr "basic"
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:119
 msgid "Add an appropriate `geometry_columns` entry for your new cities layer"
@@ -263,6 +277,10 @@ msgstr ""
 msgid "|addPostgisLayer|"
 msgstr "|addPostgisLayer|"
 
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:247
+msgid "addPostgisLayer"
+msgstr "addPostgisLayer"
+
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:166
 msgid "This will open the dialog:"
 msgstr "Queesto aprirà la finestra di dialogo:"
@@ -299,6 +317,10 @@ msgstr ""
 msgid "|TY| |moderate|"
 msgstr "|TY| |moderate|"
 
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:251
+msgid "moderate"
+msgstr "moderate"
+
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:197
 msgid ""
 "Formulate a query that shows a person's name, street name and position (from"
@@ -306,6 +328,17 @@ msgid ""
 msgstr ""
 "Formulate un'interrogaazione che mostre il nome di una persona, la strada e "
 "la posizione (da the-geom coloumn) come testo"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:211
+msgid "Result::"
+msgstr "Risultato::"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:222
+msgid ""
+"As you can see, our constraint allows nulls to be added into the database."
+msgstr ""
+"Come puoi vedere, il nostro vincolo consente di aggiungere i nulli nel "
+"database."
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:226
 msgid "|IC|"
