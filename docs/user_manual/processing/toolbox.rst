@@ -159,13 +159,18 @@ table can be of one of the following types.
   ones from the drop-down list or from the :ref:`CRS selection <crs_selector>`
   dialog that appears when you click on the button on the right-hand side.
 * An **extent**, a text box defining a rectangle through its corners coordinate
-  in the format ``xmin, xmax, ymin, ymax``. Clicking on the button on the
-  right-hand side of the value selector, a pop-up menu will appear,
-  giving you options to:
+  in the format ``xmin, xmax, ymin, ymax``. Press the |mapIdentification|
+  :sup:`Set to current map canvas extent` button to use the map canvas
+  extent. Clicking the arrow on the right-hand side of the value selector,
+  a pop-up menu will appear, giving you options to:
 
-  * :guilabel:`Calculate from layer`: fills the text box with the coordinates
+  * :menuselection:`Calculate from layer -->`: fills the text box with the coordinates
     of the bounding box of a layer to select among the loaded ones
-  * :guilabel:`Use map canvas extent`
+  * :menuselection:`Calculate from layout map -->`: fills the text box with the coordinates
+    of a map item selected from a layout in the current project
+  * :menuselection:`Calculate from bookmark -->`: fills the text box with the coordinates
+    of a saved bookmark
+  * |mapIdentification| :guilabel:`Use current map canvas extent`
   * :guilabel:`Draw on canvas`: the parameters window will hide itself, so you
     can click and drag onto the canvas. Once you have defined the extent
     rectangle, the dialog will reappear, containing the values in the extent text
@@ -387,6 +392,8 @@ to a temporary file and deleted once you exit QGIS).
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
 .. |fileSave| image:: /static/common/mActionFileSave.png
+   :width: 1.5em
+.. |mapIdentification| image:: /static/common/mActionMapIdentification.png
    :width: 1.5em
 .. |options| image:: /static/common/mActionOptions.png
    :width: 1em

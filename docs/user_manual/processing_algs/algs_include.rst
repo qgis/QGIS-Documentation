@@ -129,8 +129,11 @@ The following refers to the extent selector widget in the algorithms GUI
 Available methods are:
 
 * Calculate from layer…: uses extent of a layer loaded in the current project
+* Calculate from layout map…: uses extent of a :ref:`layout map item <layout_map_item>`
+  in the active project
+* Calculate from bookmark…: uses extent of a saved :ref:`bookmark <sec_bookmarks>`
 * Use map canvas extent
-* Draw on canvas
+* Draw on canvas: click and drag a rectangle delimiting the area to take into account
 * Enter the coordinates as ``xmin, xmax, ymin, ymax``
 
 **end_extent_options**
