@@ -306,7 +306,7 @@ symbols are:
 * |indicatorNonRemovable| to identify layers that are
   :ref:`required <project_layer_capabilities>` in the project, hence non removable
 * |indicatorEmbedded| to identify an :ref:`embedded group or layer
-  <embed_layers>` and the path to their original project file
+  <nesting_projects>` and the path to their original project file
 * |indicatorBadLayer| to identify a layer whose data source was not available
   at the project file opening (see :ref:`handle_broken_paths`).
   Click the icon to update the source path or select :guilabel:`Repair Data Source...`
@@ -622,7 +622,7 @@ load times.
 
 
 .. index:: Nesting projects, Embed layers and groups
-.. _embed_layers:
+.. _nesting_projects:
 
 Embedding layers from external projects
 =======================================
