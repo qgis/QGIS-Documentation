@@ -625,8 +625,8 @@ load times.
 .. index:: Nesting projects, Embed layers and groups
 .. _nesting_projects:
 
-Nesting Projects
-================
+Embedding layers from external projects
+=======================================
 
 Sometimes, you'd like to keep some layers in different projects, but with the
 same style. You can either create a :ref:`default style <store_style>` for
