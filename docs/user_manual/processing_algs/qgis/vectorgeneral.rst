@@ -2566,6 +2566,8 @@ Advanced parameters
      - Type
      - Description
    * - **Output file type**
+
+       Optional
      - ``FILE_TYPE``
      - [enumeration]
      - Select the extension of the output files
