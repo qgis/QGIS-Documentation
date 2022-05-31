@@ -556,11 +556,13 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
-.. _qgisatlaslayouttopdf:
+.. _qgisatlaslayouttomultiplepdf:
 
-Export atlas layout as PDF
---------------------------
-Exports the atlas of a print layout as a PDF file(s).
+Export atlas layout as PDF (multiple files)
+-------------------------------------------
+|324|
+
+Exports the atlas of a print layout to multiple PDF files.
 
 If a coverage layer is set, the selected layout's atlas settings exposed
 in this algorithm will be overwritten. In this case, an empty filter or
@@ -607,6 +609,16 @@ Basic parameters
      - [boolean]
      - Determines if sorting should be inverted.
        Used when a sort expression is provided.
+   * - **Output filename**
+
+       Optional
+     - ``OUTPUT_FILENAME``
+     - [expression]
+     - Name pattern of the PDF output files.
+   * - **Output folder**
+     - ``OUTPUT_FOLDER``
+     - [folder]
+     - Destination folder for the output PDF files.
 
 Advanced parameters
 ^^^^^^^^^^^^^^^^^^^
@@ -674,6 +686,83 @@ Advanced parameters
        * 0 - Always export text as paths (recommended)
        * 1 - Always export texts as text objects
 
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **PDF file**
+     - ``OUTPUT``
+     - [file]
+     - PDF file corresponding to the exported atlas layout
+
+Python code
+...........
+
+**Algorithm ID**: ``native:atlaslayouttomultiplepdf``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgisatlaslayouttopdf:
+
+Export atlas layout as PDF (single file)
+----------------------------------------
+Exports the atlas of a print layout as a single PDF file.
+
+If a coverage layer is set, the selected layout's atlas settings exposed
+in this algorithm will be overwritten. In this case, an empty filter or
+sort by expression will turn those settings off.
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Atlas layout**
+     - ``LAYOUT``
+     - [layout]
+     - Layout to export
+   * - **Coverage layer**
+
+       Optional
+     - ``COVERAGE_LAYER``
+     - [vector: any]
+     - Layer to use to generate the atlas
+   * - **Filter expression**
+     - ``FILTER_EXPRESSION``
+     - [expression]
+     - Expression to use to filter out atlas features
+   * - **Sort expression**
+
+       Optional
+     - ``SORTBY_EXPRESSION``
+     - [expression]
+     - Expression to use to sort the atlas features
+   * - **Reverse sort order**
+
+       Optional
+     - ``SORTBY_REVERSE``
+     - [boolean]
+     - Determines if sorting should be inverted.
+       Used when a sort expression is provided.
    * - **PDF file**
      - ``OUTPUT``
      - [file]
@@ -684,6 +773,72 @@ Advanced parameters
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Map layers to assign to unlocked map item(s)**
+
+       Optional
+     - ``LAYERS``
+     - [enumeration] [layer]
+     - Layers to display in the map item(s) whose contents are not locked
+   * - **DPI**
+
+       Optional
+     - ``DPI``
+
+       Default: Not set
+     - [number]
+     - DPI of the output file(s). If not set, the value in the print layout settings will be used.
+   * - **Always export as vectors**
+     - ``FORCE_VECTOR``
+     - [boolean]
+
+       Default: False
+     - Determines if vectorial data should be left as vectors
+   * - **Append georeference information**
+     - ``GEOREFERENCE``
+     - [boolean]
+
+       Default: True
+     - Determines if a world file should be generated
+   * - **Export RDF metadata**
+     - ``INCLUDE_METADATA``
+     - [boolean]
+
+       Default: True
+     - Determines if RDF metadata (title, author, ...) should be generated
+   * - **Disable tiled raster layer exports**
+     - ``DISABLE_TILED``
+     - [boolean]
+
+       Default: False
+     - Determines if raster should be tiled
+   * - **Simplify geometries to reduce output file size**
+     - ``SIMPLIFY``
+     - [boolean]
+
+       Default: True
+     - Determines if geometries should be simplified to reduce output file size
+   * - **Text export**
+     - ``TEXT_FORMAT``
+     - [list]
+
+       Default: 0
+     - Determines if text should be exported as path or text objects.
+       Possible options are:
+
+       * 0 - Always export text as paths (recommended)
+       * 1 - Always export texts as text objects
 
 Outputs
 .......
@@ -1249,5 +1404,6 @@ Python code
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |324| replace:: ``NEW in 3.24``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
