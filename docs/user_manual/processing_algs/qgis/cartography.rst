@@ -1243,6 +1243,59 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _qgistransferannotationsfrommain:
+
+Transfer annotations from main layer
+------------------------------------
+
+Transfers all annotations from the main annotation layer in a project to a new annotation layer.
+Items placement can then be adjusted within the layer stack.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **New layer name**
+     - ``LAYER_NAME``
+     - [string]
+
+       Default: 'Annotations'
+     - Name of the annotations layer to create
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **New layer name**
+     - ``OUTPUT``
+     - [layer]
+     - A layer with items from the main annotation layer
+
+Python code
+...........
+
+**Algorithm ID**: ``native:transferannotationsfrommain``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
