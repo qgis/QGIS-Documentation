@@ -492,45 +492,50 @@ input and output. Below is an alphabetically sorted list:
    :class: longtable
 
    * - :class:`QgsProcessingParameterAggregate <qgis.core.QgsProcessingParameterAggregate>`
+     - :class:`QgsProcessingParameterAnnotationLayer <qgis.core.QgsProcessingParameterAnnotationLayer>`
      - :class:`QgsProcessingParameterAuthConfig <qgis.core.QgsProcessingParameterAuthConfig>`
      - :class:`QgsProcessingParameterBand <qgis.core.QgsProcessingParameterBand>`
-     - :class:`QgsProcessingParameterBoolean <qgis.core.QgsProcessingParameterBoolean>`
-   * - :class:`QgsProcessingParameterColor <qgis.core.QgsProcessingParameterColor>`
+   * - :class:`QgsProcessingParameterBoolean <qgis.core.QgsProcessingParameterBoolean>`
+     - :class:`QgsProcessingParameterColor <qgis.core.QgsProcessingParameterColor>`
      - :class:`QgsProcessingParameterCoordinateOperation <qgis.core.QgsProcessingParameterCoordinateOperation>`
      - :class:`QgsProcessingParameterCrs <qgis.core.QgsProcessingParameterCrs>`
-     - :class:`QgsProcessingParameterDatabaseSchema <qgis.core.QgsProcessingParameterDatabaseSchema>`
-   * - :class:`QgsProcessingParameterDatabaseTable <qgis.core.QgsProcessingParameterDatabaseTable>`
+   * - :class:`QgsProcessingParameterDatabaseSchema <qgis.core.QgsProcessingParameterDatabaseSchema>`
+     - :class:`QgsProcessingParameterDatabaseTable <qgis.core.QgsProcessingParameterDatabaseTable>`
      - :class:`QgsProcessingParameterDateTime <qgis.core.QgsProcessingParameterDateTime>`
      - :class:`QgsProcessingParameterDistance <qgis.core.QgsProcessingParameterDistance>`
-     - :class:`QgsProcessingParameterEnum <qgis.core.QgsProcessingParameterEnum>`
-   * - :class:`QgsProcessingParameterExpression <qgis.core.QgsProcessingParameterExpression>`
+   * - :class:`QgsProcessingParameterEnum <qgis.core.QgsProcessingParameterEnum>`
+     - :class:`QgsProcessingParameterExpression <qgis.core.QgsProcessingParameterExpression>`
      - :class:`QgsProcessingParameterExtent <qgis.core.QgsProcessingParameterExtent>`
      - :class:`QgsProcessingParameterFeatureSink <qgis.core.QgsProcessingParameterFeatureSink>`
-     - :class:`QgsProcessingParameterFeatureSource <qgis.core.QgsProcessingParameterFeatureSource>`
-   * - :class:`QgsProcessingParameterField <qgis.core.QgsProcessingParameterField>`
+   * - :class:`QgsProcessingParameterFeatureSource <qgis.core.QgsProcessingParameterFeatureSource>`
+     - :class:`QgsProcessingParameterField <qgis.core.QgsProcessingParameterField>`
      - :class:`QgsProcessingParameterFieldMapping  <qgis.core.QgsProcessingParameterFieldMapping>`
      - :class:`QgsProcessingParameterFile <qgis.core.QgsProcessingParameterFile>`
-     - :class:`QgsProcessingParameterFileDestination <qgis.core.QgsProcessingParameterFileDestination>`
-   * - :class:`QgsProcessingParameterFolderDestination <qgis.core.QgsProcessingParameterFolderDestination>`
+   * - :class:`QgsProcessingParameterFileDestination <qgis.core.QgsProcessingParameterFileDestination>`
+     - :class:`QgsProcessingParameterFolderDestination <qgis.core.QgsProcessingParameterFolderDestination>`
+     - :class:`QgsProcessingParameterGeometry <qgis.core.QgsProcessingParameterGeometry>`
      - :class:`QgsProcessingParameterLayout <qgis.core.QgsProcessingParameterLayout>`
-     - :class:`QgsProcessingParameterLayoutItem <qgis.core.QgsProcessingParameterLayoutItem>`
+   * - :class:`QgsProcessingParameterLayoutItem <qgis.core.QgsProcessingParameterLayoutItem>`
      - :class:`QgsProcessingParameterMapLayer <qgis.core.QgsProcessingParameterMapLayer>`
-   * - :class:`QgsProcessingParameterMapTheme <qgis.core.QgsProcessingParameterMapTheme>`
+     - :class:`QgsProcessingParameterMapTheme <qgis.core.QgsProcessingParameterMapTheme>`
      - :class:`QgsProcessingParameterMatrix <qgis.core.QgsProcessingParameterMatrix>`
-     - :class:`QgsProcessingParameterMeshLayer <qgis.core.QgsProcessingParameterMeshLayer>`
+   * - :class:`QgsProcessingParameterMeshLayer <qgis.core.QgsProcessingParameterMeshLayer>`
      - :class:`QgsProcessingParameterMultipleLayers <qgis.core.QgsProcessingParameterMultipleLayers>`
-   * - :class:`QgsProcessingParameterNumber <qgis.core.QgsProcessingParameterNumber>`
+     - :class:`QgsProcessingParameterNumber <qgis.core.QgsProcessingParameterNumber>`
      - :class:`QgsProcessingParameterPoint <qgis.core.QgsProcessingParameterPoint>`
+   * - :class:`QgsProcessingParameterPointCloudLayer <qgis.core.QgsProcessingParameterPointCloudLayer>`
      - :class:`QgsProcessingParameterProviderConnection <qgis.core.QgsProcessingParameterProviderConnection>`
      - :class:`QgsProcessingParameterRange <qgis.core.QgsProcessingParameterRange>`
-   * - :class:`QgsProcessingParameterRasterDestination <qgis.core.QgsProcessingParameterRasterDestination>`
-     - :class:`QgsProcessingParameterRasterLayer <qgis.core.QgsProcessingParameterRasterLayer>`
+     - :class:`QgsProcessingParameterRasterDestination <qgis.core.QgsProcessingParameterRasterDestination>`
+   * - :class:`QgsProcessingParameterRasterLayer <qgis.core.QgsProcessingParameterRasterLayer>`
      - :class:`QgsProcessingParameterScale <qgis.core.QgsProcessingParameterScale>`
      - :class:`QgsProcessingParameterString <qgis.core.QgsProcessingParameterString>`
-   * - :class:`QgsProcessingParameterVectorDestination <qgis.core.QgsProcessingParameterVectorDestination>`
-     - :class:`QgsProcessingParameterVectorLayer <qgis.core.QgsProcessingParameterVectorLayer>`
+     - :class:`QgsProcessingParameterVectorDestination <qgis.core.QgsProcessingParameterVectorDestination>`
+   * - :class:`QgsProcessingParameterVectorLayer <qgis.core.QgsProcessingParameterVectorLayer>`
      - :class:`QgsProcessingParameterVectorTileWriterLayers <qgis.core.QgsProcessingParameterVectorTileWriterLayers>`
      -
+     -
+
 
 The first parameter to the constructors is the name of the parameter,
 and the second is the description of the parameter (for the user
