@@ -916,6 +916,17 @@ Basic parameters
 
        Default: None
      - Value to use for nodata
+   * - **Output extent** |324|
+
+       Optional
+     - ``INPUT``
+     - [extent]
+     - Custom extent of the output raster. Only available with GDAL 3.3+.
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
    * - **Output raster type**
      - ``RTYPE``
      - [enumeration]
@@ -1596,3 +1607,11 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |324| replace:: ``NEW in 3.24``
