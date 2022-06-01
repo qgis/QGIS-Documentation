@@ -498,7 +498,7 @@ Advanced parameters
      - Layers to display in the map item(s) whose contents are not locked
    * - **Image format**
      - ``EXTENSION``
-     - [list]
+     - [enumeration]
 
        Default: png
      - File format of the generated output(s).
@@ -677,7 +677,7 @@ Advanced parameters
      - Determines if geometries should be simplified to reduce output file size
    * - **Text export**
      - ``TEXT_FORMAT``
-     - [list]
+     - [enumeration]
 
        Default: 0
      - Determines if text should be exported as path or text objects.
@@ -831,7 +831,7 @@ Advanced parameters
      - Determines if geometries should be simplified to reduce output file size
    * - **Text export**
      - ``TEXT_FORMAT``
-     - [list]
+     - [enumeration]
 
        Default: 0
      - Determines if text should be exported as path or text objects.
@@ -1063,7 +1063,7 @@ Advanced parameters
      - Determines if geometries should be simplified to reduce output file size
    * - **Text export**
      - ``TEXT_FORMAT``
-     - [list]
+     - [enumeration]
 
        Default: 0
      - Determines if text should be exported as path or text objects.
