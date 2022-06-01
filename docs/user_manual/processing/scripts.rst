@@ -509,8 +509,12 @@ Input types
    * - :class:`QgsProcessingParameterPoint <qgis.core.QgsProcessingParameterPoint>`
      - ``alg.POINT``
      - A point
+   * - :class:`QgsProcessingParameterPointCloudDestination <qgis.core.QgsProcessingParameterPointCloudDestination>`
+     - ``alg.POINTCLOUD_LAYER_DEST``
+     - A point cloud layer destination parameter, for specifying the destination path
+       for a point cloud layer created by the algorithm
    * - :class:`QgsProcessingParameterPointCloudLayer <qgis.core.QgsProcessingParameterPointCloudLayer>`
-     - ``alg.POINT_CLOUD_LAYER``
+     - ``alg.POINTCLOUD_LAYER``
      - A point cloud layer
    * - :class:`QgsProcessingParameterProviderConnection <qgis.core.QgsProcessingParameterProviderConnection>`
      - ``alg.PROVIDER_CONNECTION``
@@ -523,7 +527,8 @@ Input types
      - A raster layer
    * - :class:`QgsProcessingParameterRasterDestination <qgis.core.QgsProcessingParameterRasterDestination>`
      - ``alg.RASTER_LAYER_DEST``
-     - A raster layer
+     - A raster layer destination parameter, for specifying the destination path
+       for a raster layer created by the algorithm
    * - :class:`QgsProcessingParameterScale <qgis.core.QgsProcessingParameterScale>`
      - ``alg.SCALE``
      - A map scale
@@ -541,7 +546,8 @@ Input types
      - A vector layer
    * - :class:`QgsProcessingParameterVectorDestination <qgis.core.QgsProcessingParameterVectorDestination>`
      - ``alg.VECTOR_LAYER_DEST``
-     - A vector layer
+     - A vector layer destination parameter, for specifying the destination path
+       for a vector layer created by the algorithm
 
 
 Output types
@@ -585,6 +591,9 @@ Output types
    * - :class:`QgsProcessingOutputNumber <qgis.core.QgsProcessingOutputNumber>`
      - ``alg.NUMBER``
      - A numerical value
+   * - :class:`QgsProcessingOutputPointCloudLayer <qgis.core.QgsProcessingOutputPointCloudLayer>`
+     - ``alg.POINTCLOUD_LAYER``
+     - A point cloud layer
    * - :class:`QgsProcessingOutputRasterLayer <qgis.core.QgsProcessingOutputRasterLayer>`
      - ``alg.RASTER_LAYER``
      - A raster layer
@@ -697,4 +706,4 @@ interface.
   throw a :class:`QgsProcessingException <qgis.core.QgsProcessingException>`.
 
 There are already many processing algorithms available in QGIS.
-You can find code on :source:`python/plugins/processing/algs/qgis`.
+You can find code on the :source:`QGIS <python/plugins/processing/algs/qgis>` repo.
