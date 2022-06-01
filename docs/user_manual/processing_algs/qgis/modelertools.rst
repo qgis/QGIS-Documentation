@@ -395,6 +395,55 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _qgisraisemessage:
+
+Raise message
+-------------
+|326|
+
+Raises an information message in the log.
+The message can be customized, and optionally an expression based condition
+can be specified. If an expression condition is used, then the message will only
+be logged if the expression result is true. A false result indicates that no message
+will be logged.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Information message**
+     - ``MESSAGE``
+     - [string]
+     - Message to display
+   * - **Condition**
+
+       Optional
+     - ``CONDITION``
+     - [expression]
+     - Expression to evaluate if true
+
+Outputs
+.......
+
+A message in the log panel.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:raisemessage``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgisraisewarning:
 
 Raise warning
@@ -745,3 +794,10 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |326| replace:: ``NEW in 3.26``
