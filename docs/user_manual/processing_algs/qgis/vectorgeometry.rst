@@ -5613,6 +5613,78 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _qgisroundness:
+
+Roundness
+---------
+|324|
+
+Calculates the roundness of each feature and stores it as a new field. The input vector layer must contain polygons.
+
+The roundness of a polygon is defined as 4π × polygon area / perimeter².
+The roundness value varies between 0 and 1. A perfect circle has a roundness of 1,
+while a completely flat polygon has a roundness of 0.
+
+.. note:: The algorithm returns NULL for multipart polygon features.
+
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
+of polygon features
+
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: polygon]
+     - Input vector layer
+   * - **Roundness**
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer (with roundness field).
+       One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Rotated**
+     - ``OUTPUT``
+     - [same as input]
+     - The output vector layer with roundness value in a field
+
+Python code
+...........
+
+**Algorithm ID**: ``native:roundness``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgissegmentizebymaxangle:
 
 Segmentize by maximum angle
@@ -7354,6 +7426,7 @@ Python code
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |324| replace:: ``NEW in 3.24``
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png
