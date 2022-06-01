@@ -374,6 +374,8 @@ Parameters
      - [string]
      - Message to display
    * - **Condition**
+
+       Optional
      - ``CONDITION``
      - [expression]
      - Expression to evaluate if true
@@ -381,7 +383,7 @@ Parameters
 Outputs
 .......
 
-None.
+A message in the log panel.
 
 Python code
 ...........
@@ -419,6 +421,8 @@ Parameters
      - [string]
      - Message to display
    * - **Condition**
+
+       Optional
      - ``CONDITION``
      - [expression]
      - Expression to evaluate if true
@@ -426,7 +430,7 @@ Parameters
 Outputs
 .......
 
-None.
+A message in the log panel.
 
 Python code
 ...........
