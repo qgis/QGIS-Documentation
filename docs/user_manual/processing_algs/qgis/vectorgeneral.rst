@@ -2584,9 +2584,16 @@ Advanced parameters
      - Type
      - Description
    * - **Output file type**
+
+       Optional
      - ``FILE_TYPE``
      - [enumeration]
-     - Select the extension of the output files
+
+       Default: ``gpkg`` in the dialog window
+     - Select the extension of the output files.
+       If not specified or invalid, the output files format will
+       be the one set in the "Default output vector layer extension"
+       Processing setting.
 
 Outputs
 ..........
