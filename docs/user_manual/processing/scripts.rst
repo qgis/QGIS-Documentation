@@ -407,8 +407,8 @@ Input and output types for Processing Algorithms
 
 Here is the list of input and output types that are supported in
 Processing with their corresponding alg decorator constants
-(:file:`algfactory.py` contains the complete list of alg constants).
-Sorted on class name.
+(the :source:`algfactory.py <python/processing/algfactory.py>` file contains
+the complete list of alg constants). Sorted on class name.
 
 Input types
 ...........
@@ -421,6 +421,9 @@ Input types
    * - Class
      - Alg constant
      - Description
+   * - :class:`QgsProcessingParameterAnnotationLayer <qgis.core.QgsProcessingParameterAnnotationLayer>`
+     - ``alg.ANNOTATION_LAYER``
+     - An annotation layer
    * - :class:`QgsProcessingParameterAuthConfig <qgis.core.QgsProcessingParameterAuthConfig>`
      - ``alg.AUTH_CFG``
      - Allows users to select from available authentication configurations or
@@ -473,6 +476,9 @@ Input types
    * - :class:`QgsProcessingParameterFolderDestination <qgis.core.QgsProcessingParameterFolderDestination>`
      - ``alg.FOLDER_DEST``
      - A folder (destination folder)
+   * - :class:`QgsProcessingParameterGeometry <qgis.core.QgsProcessingParameterGeometry>`
+     - ``alg.GEOMETRY``
+     - A geometry
    * - :class:`QgsProcessingParameterNumber <qgis.core.QgsProcessingParameterNumber>`
      - ``alg.INT``
      - An integer
@@ -503,6 +509,9 @@ Input types
    * - :class:`QgsProcessingParameterPoint <qgis.core.QgsProcessingParameterPoint>`
      - ``alg.POINT``
      - A point
+   * - :class:`QgsProcessingParameterPointCloudLayer <qgis.core.QgsProcessingParameterPointCloudLayer>`
+     - ``alg.POINT_CLOUD_LAYER``
+     - A point cloud layer
    * - :class:`QgsProcessingParameterProviderConnection <qgis.core.QgsProcessingParameterProviderConnection>`
      - ``alg.PROVIDER_CONNECTION``
      - An available connection for a database provider
