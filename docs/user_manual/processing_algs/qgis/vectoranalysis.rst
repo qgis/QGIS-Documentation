@@ -1388,6 +1388,109 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _qgisshortestline:
+
+Shortest line between features
+------------------------------
+|324|
+
+Creates a line layer as the shortest line between the source and the destination layer. By default only the first nearest feature of the destination layer is taken into account. The n-nearest neighboring features number can be specified.
+If a maximum distance is specified, then only features which are closer than this distance will be considered.
+
+The output features will contain all the source layer attributes, all the attributes from the n-nearest feature and the additional field of the distance.
+
+.. important:: This algorithm uses purely Cartesian calculations for distance,
+  and does not consider geodetic or ellipsoid properties when determining
+  feature proximity. The measurement and output coordinate system is based
+  on the coordinate system of the source layer.
+
+.. figure:: img/shortest_line.png
+   :align: center
+
+   Shortest line from point features to lines
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Source layer**
+     - ``SOURCE``
+     - [vector: any]
+     - Origin layer for which to search for nearest neighbors
+   * - **Destination layer**
+     - ``DESTINATION``
+     - [vector: any]
+     - Target Layer in which to search for nearest neighbors
+   * - **Method**
+     - ``METHOD``
+     - [enumeration]
+
+       Default: 0
+     - Shortest distance calculation method
+       Possible values are:
+
+       * 0 --- Distance to nearest point on feature
+       * 1 --- Distance to feature centroid
+
+   * - **Maximum number of neighbors**
+     - ``NEIGHBORS``
+     - [number]
+
+       Default: 1
+     - Maximum number of neighbors to look for
+   * - **Maximum distance**
+
+       Optional
+     - ``DISTANCE``
+     - [number]
+     - Only destination features which are closer than this distance
+       will be considered.
+   * - **Shortest lines**
+     - ``OUTPUT``
+     - [vector: line]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output layer**
+     - ``OUTPUT``
+     - [vector: line]
+     - Line vector layer joining source features to their nearest
+       neighbor(s) in the destination layer. Contains all attributes for
+       both source and destination features, and the computed distance.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:shortestline``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgisstdbscanclustering:
 
 ST-DBSCAN clustering
@@ -1777,5 +1880,6 @@ Python code
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |324| replace:: ``NEW in 3.24``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
