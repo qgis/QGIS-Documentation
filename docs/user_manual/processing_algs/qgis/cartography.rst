@@ -952,6 +952,128 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _qgisextractlabels:
+
+Extract labels
+--------------
+|324|
+
+Extracts label information from a rendered map at a given extent and scale.
+
+If a map theme is provided, the rendered map will match the visibility and
+symbology of that theme. If left blank, all visible layers from the project
+will be used.
+Extracted label information include: position (served as point geometries),
+the associated layer name and feature ID, label text, rotation (in degree,
+clockwise), multiline alignment, and font details.
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Map extent**
+     - ``EXTENT``
+     - [extent]
+     - Extent of the map to extract the labels from
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
+   * - **Map scale**
+     - ``SCALE``
+     - [scale]
+     - Extracted labels will be rendered using their properties set at this scale.
+   * - **Map theme**
+
+       Optional
+     - ``MAP_THEME``
+     - [maptheme]
+     - A map theme displaying the layers to extract the labels from.
+       If unset, labels of the currently visible layers are extracted.
+   * - **Include unplaced labels**
+
+       Optional
+     - ``INCLUDE_UNPLACED``
+     - [boolean]
+
+       Default: True
+     - Specify whether all overlapping labels should be extracted,
+       including the conflicting (thus unplaced) ones.
+   * - **Extracted labels**
+     - ``OUTPUT``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer for the extent(s). One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Map resolution (in DPI)**
+
+       Optional
+     - ``DPI``
+
+       Default: 96.0
+     - [number]
+     -
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Extracted labels**
+     - ``OUTPUT``
+     - [vector: point]
+     - Point vector layer representing the fetched labels.
+       Each feature has attributes identifying its source (layer, feature ID)
+       and the assigned labeling properties (text, font, size, rotation, ...).
+       A default style with labeling and null symbol is also applied to the layer.
+
+       .. warning:: Because some of the generated fields have name with more than
+         10 characters, using the ESRI shapefile format (:file:`.SHP`) to store
+         the output may lead to unexpected rendering while loading the layer in QGIS.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:extractlabels``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgisprintlayoutmapextenttolayer:
 
 Print layout map extent to layer
@@ -1249,5 +1371,6 @@ Python code
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |324| replace:: ``NEW in 3.24``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
