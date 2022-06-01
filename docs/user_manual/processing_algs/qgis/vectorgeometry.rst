@@ -2160,16 +2160,20 @@ feature.
 All output geometries will be converted to multi geometries.
 In case the input is a polygon layer, common boundaries of adjacent
 polygons being dissolved will get erased.
+If enabled, the optional "Keep disjoint features separate" setting will
+cause disjoint features and parts to be exported as separate features
+(instead of parts of a single multipart feature).
 
 The resulting attribute table will have the same fields as the input
 layer.
 The values in the output layer's fields are the ones of the first
 input feature that happens to be processed.
 
+
 .. figure:: img/dissolve.png
    :align: center
 
-   Dissolve the polygon layer on a common attribute
+   Dissolving a layer into a single multipart feature
 
 **Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
 
@@ -2177,6 +2181,9 @@ input feature that happens to be processed.
 
 Parameters
 ..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -2204,6 +2211,12 @@ Parameters
        If no field is provided then all the
        features are dissolved, resulting in a
        single (multipart) feature.
+
+       .. figure:: img/dissolve_field.png
+          :align: center
+
+          Dissolve the polygon layer on a common attribute (2 multipart features)
+
    * - **Dissolved**
      - ``OUTPUT``
      - [same as input]
@@ -2214,6 +2227,30 @@ Parameters
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Keep disjoint features separate** |326|
+     - ``SEPARATE_DISJOINT``
+     - [boolean]
+
+       Default: False
+     - Parts of dissolved features are exported as separate features
+       (instead of parts of a multipart feature).
+
+       .. figure:: img/dissolve_disjoint.png
+          :align: center
+
+          source (left), dissolve all (3 distinct features - middle), dissolve on field (5 distinct features - right)
 
 Outputs
 .......
@@ -7427,6 +7464,7 @@ Python code
    source folder.
 
 .. |324| replace:: ``NEW in 3.24``
+.. |326| replace:: ``NEW in 3.26``
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png
