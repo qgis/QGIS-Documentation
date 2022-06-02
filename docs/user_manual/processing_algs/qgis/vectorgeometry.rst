@@ -2161,8 +2161,8 @@ All output geometries will be converted to multi geometries.
 In case the input is a polygon layer, common boundaries of adjacent
 polygons being dissolved will get erased.
 If enabled, the optional "Keep disjoint features separate" setting will
-cause disjoint features and parts to be exported as separate features
-(instead of parts of a single multipart feature).
+cause features and parts that do not overlap or touch to be exported as 
+separate feature (instead of parts of a single multipart feature).
 
 The resulting attribute table will have the same fields as the input
 layer.
@@ -2250,7 +2250,7 @@ Advanced parameters
        .. figure:: img/dissolve_disjoint.png
           :align: center
 
-          source (left), dissolve all (3 distinct features - middle), dissolve on field (5 distinct features - right)
+          Input features, dissolve all (3 distinct features), dissolve on field (5 distinct features)
 
 Outputs
 .......
