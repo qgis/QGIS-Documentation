@@ -2162,7 +2162,7 @@ In case the input is a polygon layer, common boundaries of adjacent
 polygons being dissolved will get erased.
 If enabled, the optional "Keep disjoint features separate" setting will
 cause features and parts that do not overlap or touch to be exported as 
-separate feature (instead of parts of a single multipart feature).
+separate features (instead of parts of a single multipart feature).
 
 The resulting attribute table will have the same fields as the input
 layer.
