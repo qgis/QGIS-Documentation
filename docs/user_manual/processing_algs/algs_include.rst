@@ -215,7 +215,7 @@ Notes on algorithms
    This operation modifies only the features geometry.
    The attribute values of the features are **not modified**, although
    properties such as area or length of the features will be modified
-   by the clipping operation.
+   by the overlay operation.
    If such properties are stored as attributes, those attributes will
    have to be manually updated.
 
