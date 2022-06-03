@@ -468,7 +468,7 @@ symbol layer types:
   if you want the exact centroid. 
 
   You can:
-  
+
   * :guilabel:`Force placement of markers inside polygons`
   * :guilabel:`Draw markers on every part of multi-part features` or place
     the point only on its biggest part
@@ -490,6 +490,18 @@ symbol layer types:
   * :guilabel:`Rotation` of the lines, counter-clockwise
   * :guilabel:`Spacing`: distance between consecutive lines
   * :guilabel:`Offset` distance of the lines from the feature boundary
+  * :guilabel:`Clipping`: allows to control how lines in the fill should
+    be clipped to the polygon shape. Options are:
+
+    * :guilabel:`Clip During Render Only`: lines are created covering
+      the whole bounding box of the feature and then clipped while drawing.
+      Line extremities (beginning and end) will not be visible.
+    * :guilabel:`Clip Lines Before Render`: lines are clipped to the exact shape
+      of the polygon prior to rendering. Line extremities (including cap styles,
+      start/end marker line objects, ...) will be visible, and may sometimes
+      extend outside of the polygon (depending on the line symbol settings).
+    * :guilabel:`No Clipping`: no clipping at all is done - lines will cover
+      the whole bounding box of the feature
 
 * **Point pattern fill**: fills the polygon with a grid pattern of 
   :ref:`marker symbol <vector_marker_symbols>`. You can set:
@@ -500,6 +512,20 @@ symbol layer types:
     offset of alignment between consecutive markers in a column (resp. in a row)
   * :guilabel:`Offset`: :guilabel:`Horizontal` and :guilabel:`Vertical` distances
     from the feature boundary
+  * :guilabel:`Angle`: rotation of the whole pattern, clockwise
+  * :guilabel:`Clipping`: allows to control how markers in the fill should
+    be clipped to the polygon shape. Options are:
+
+    * :guilabel:`Clip to shape`: markers are clipped so that only the portions
+      inside the polygon are visible
+    * :guilabel:`Marker centroid within shape`: only markers where the center
+      of the marker falls inside the polygon are drawn, but these markers won't
+      be clipped to the outside of the polygon
+    * :guilabel:`Marker completely within shape`: only markers which fall completely
+      within the polygon are shown
+    * :guilabel:`No clipping`: any marker which intersects at all with the polygon
+      will be completely rendered (strictly speaking its the "intersects with the
+      bounding box of the marker")
 
 * **Random marker fill**: fills the polygon with a :ref:`marker symbol 
   <vector_marker_symbols>` placed at random locations within the polygon
