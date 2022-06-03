@@ -466,7 +466,7 @@ symbol layer types:
   clipped to area visible in map canvas for rendering and ignores holes.
   Use the :ref:`geometry generator symbol <geometry_generator_symbol>`
   if you want the exact centroid. 
-  
+
   You can:
   
   * :guilabel:`Force placement of markers inside polygons`
@@ -485,24 +485,36 @@ symbol layer types:
   points can be set via coordinates or using the centroid (of feature or map).
   A data-defined offset can be defined.
 * **Line pattern fill**: fills the polygon with a hatching pattern of
-  :ref:`line symbol layer <vector_line_symbols>`. You can set a rotation, the
-  spacing between lines and an offset from the feature boundary.
-* **Point pattern fill**: fills the polygon with a hatching pattern of 
-  :ref:`marker symbol layer <vector_marker_symbols>`. You can set the distance
-  and a displacement between rows of markers, an offset from the
-  feature boundary and the angle of the pattern.
+  :ref:`line symbol layer <vector_line_symbols>`. You can set:
+
+  * :guilabel:`Rotation` of the lines, counter-clockwise
+  * :guilabel:`Spacing`: distance between consecutive lines
+  * :guilabel:`Offset` distance of the lines from the feature boundary
+
+* **Point pattern fill**: fills the polygon with a grid pattern of 
+  :ref:`marker symbol <vector_marker_symbols>`. You can set:
+
+  * :guilabel:`Distance`: :guilabel:`Horizontal` and :guilabel:`Vertical` distances
+    between consecutive markers
+  * :guilabel:`Displacement`: a :guilabel:`Horizontal` (resp. :guilabel:`Vertical`)
+    offset of alignment between consecutive markers in a column (resp. in a row)
+  * :guilabel:`Offset`: :guilabel:`Horizontal` and :guilabel:`Vertical` distances
+    from the feature boundary
+
 * **Random marker fill**: fills the polygon with a :ref:`marker symbol 
   <vector_marker_symbols>` placed at random locations within the polygon
   boundary. You can set:
 
-  * the number of marker symbols to render, either as an absolute count
-    or as density-based (the fill density will remain the same on different
-    scale / zoom levels)
-  * an optional random number seed, to give consistent placement
+  * :guilabel:`Count method`: whether the number of marker symbols to render
+    is considered as an absolute count or density-based
+  * :guilabel:`Point count`: the number of marker symbols to render,
+  * an optional random number :guilabel:`seed`, to give consistent placement
+  * :guilabel:`Density area`: in case of density-based count method, ensures
+    the fill density of markers remains the same on different scale / zoom levels
     of markers whenever maps are refreshed (also allows random placement
     to play nice with QGIS server and tile-based rendering)
-  * whether markers rendered near the edges of polygons should be clipped
-    to the polygon boundary or not
+  * :guilabel:`Clip markers to polygon boundary`: whether markers rendered near
+    the edges of polygons should be clipped to the polygon boundary or not
 
 * **Raster image fill**: fills the polygon with tiles from a raster image (:file:`PNG`
   :file:`JPG`, :file:`BMP` ...). The image can be a file on the disk, a remote URL
