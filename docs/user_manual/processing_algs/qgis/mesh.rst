@@ -33,7 +33,7 @@ Parameters
      - The mesh layer to export data from
    * - **Dataset groups**
      - ``DATASET_GROUPS``
-     - [layer][list]
+     - [layer] [list]
      - The dataset groups 
    * - **Dataset time**
      - ``DATASET_TIME``
@@ -165,7 +165,7 @@ Parameters
      - The mesh layer to export data from
    * - **Dataset groups**
      - ``DATASET_GROUPS``
-     - [layer][list]
+     - [layer] [list]
      - The dataset groups 
    * - **Dataset time**
      - ``DATASET_TIME``
@@ -255,7 +255,7 @@ Parameters
      - The mesh layer to export data from
    * - **Dataset groups**
      - ``DATASET_GROUPS``
-     - [layer][list]
+     - [layer] [list]
      - The dataset groups 
    * - **Dataset time**
      - ``DATASET_TIME``
@@ -343,7 +343,7 @@ Parameters
      - The mesh layer to export data from
    * - **Dataset groups**
      - ``DATASET_GROUPS``
-     - [layer][list]
+     - [layer] [list]
      - The dataset groups 
    * - **Dataset time**
      - ``DATASET_TIME``
@@ -436,7 +436,7 @@ Parameters
      - The mesh layer to export data from
    * - **Dataset groups**
      - ``DATASET_GROUPS``
-     - [layer][list]
+     - [layer] [list]
      - The dataset groups 
    * - **Dataset time**
      - ``DATASET_TIME``
@@ -543,7 +543,7 @@ Parameters
      - The mesh layer to export data from
    * - **Dataset groups**
      - ``DATASET_GROUPS``
-     - [layer][list]
+     - [layer] [list]
      - The dataset groups 
    * - **Dataset time**
      - ``DATASET_TIME``
@@ -633,7 +633,7 @@ Parameters
      - The mesh layer to extract data from
    * - **Dataset groups**
      - ``DATASET_GROUPS``
-     - [layer][list]
+     - [layer] [list]
      - The dataset groups 
    * - **Starting time**
      - ``STARTING_TIME``
@@ -745,7 +745,7 @@ Parameters
      - The mesh layer to export data from
    * - **Dataset groups**
      - ``DATASET_GROUPS``
-     - [layer][list]
+     - [layer] [list]
      - The dataset groups 
    * - **Dataset time**
      - ``DATASET_TIME``
@@ -838,11 +838,11 @@ Parameters
      - Description
    * - **Input layers**
      - ``SOURCE_DATA``
-     - [vector: any][list]
+     - [vector: any] [list]
      - Vector layers to combine to generate the mesh layer 
    * - **Vector layer**
      - GUI ONLY
-     - [vector: any][list]
+     - [vector: any] [list]
      - A selector for the vector layers to combine to generate the mesh layer
    * - **Value on vertex**
      - GUI ONLY

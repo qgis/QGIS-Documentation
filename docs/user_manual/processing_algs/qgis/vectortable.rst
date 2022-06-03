@@ -1074,7 +1074,7 @@ Parameters
      - The input vector layer
    * - **Fields to retain**
      - ``FIELDS``
-     - [tablefield: any][list]
+     - [tablefield: any] [list]
      - List of fields to keep in the layer
    * - **Retained fields**
      - ``OUTPUT``

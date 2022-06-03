@@ -1015,7 +1015,7 @@ Parameters
      - Description
    * - **Input layers**
      - ``LAYERS``
-     - [vector: any][list]
+     - [vector: any] [list]
      - Input vector layers to export
    * - **Symbology mode**
      - ``SYMBOLOGY_MODE``
