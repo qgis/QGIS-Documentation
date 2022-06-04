@@ -3488,7 +3488,7 @@ msgstr "カラーランプから、色を表す文字列を返します。"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:10
 msgid "**Saved ramp variant**"
-msgstr "保存済みカラーランプを引数にとる場合"
+msgstr "**保存済みカラーランプバージョン**"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:12
 msgid "Returns a string representing a color from a saved ramp"
@@ -3525,7 +3525,7 @@ msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:28
 msgid "**Expression-created ramp variant**"
-msgstr "**式によって定義されたカラーランプを引数にとる場合**"
+msgstr "**式によって定義されたカラーランプバージョン**"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:30
 msgid "Returns a string representing a color from an expression-created ramp"
@@ -3596,7 +3596,7 @@ msgid ""
 "is returned. Furthermore, if no ELSE clause is set and none of the "
 "conditions are met, NULL is returned."
 msgstr ""
-"CASEは、一連の条件を評価し、最初に条件が満たされた場合に結果を返します。条件は上から順に評価され、ある条件がtrueであれば評価を停止し、対応する結果が返されます。どの条件もtrueでない場合は、ELSE節の値が返されます。ELSE節が設定されておらず、いずれの条件も満たさない場合には、NULLが返されます。"
+"CASEは、一連の条件を評価し、条件が最初に満たされる結果を返します。条件は上から順に評価され、ある条件がtrueであれば評価を停止し、対応する結果が返されます。どの条件もtrueでない場合は、ELSE節の値が返されます。ELSE節が無く、いずれの条件も満たさない場合には、NULLが返されます。"
 
 #: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:20
 msgid "WHEN *condition* THEN *result*"
@@ -4171,6 +4171,21 @@ msgstr "``to_date('29 juin, 2019','d MMMM, yyyy','fr')`` → 2019-06-29"
 msgid "to_datetime"
 msgstr "to_datetime"
 
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:154
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:524
+msgid ""
+"Converts a string into a datetime object. An optional format string can be "
+"provided to parse the string; see `QDate::fromString "
+"<https://doc.qt.io/qt-5/qdate.html#fromString-2>`_, `QTime::fromString "
+"<https://doc.qt.io/qt-5/qtime.html#fromString-1>`_ or the documentation of "
+"the format_date function for additional documentation on the format. By "
+"default the current QGIS user locale is used."
+msgstr ""
+"文字列を日付時刻型オブジェクトに変換します。オプションとして、文字列をパースするためのフォーマット文字列を指定できます。フォーマットに関するドキュメントは、"
+" `QDate::fromString <https://doc.qt.io/qt-5/qdate.html#fromString-2>`_ 、 "
+"`QTime::fromString <https://doc.qt.io/qt-5/qtime.html#fromString-1>`_ または "
+"format_date 関数のドキュメントを参照してください。デフォルトでは現在のQGISユーザーのロケールを使用します。"
+
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:160
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:530
 msgid "to_datetime(string, [format], [language])"
@@ -4186,10 +4201,30 @@ msgstr "**string** - 日付時刻を表す文字列"
 msgid "**format** - format used to convert the string into a datetime"
 msgstr "**format** - 文字列を日付時刻型に変換するために使用するフォーマット"
 
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:166
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:536
+msgid ""
+"**language** - language (lowercase, two- or three-letter, ISO 639 language "
+"code) used to convert the string into a datetime. By default the current "
+"QGIS user locale is used."
+msgstr ""
+"**language** - 日付時刻型に変換する文字列の言語（2文字または3文字の小文字、 ISO 639 "
+"言語名コード）。デフォルトでは現在のQGISユーザーのロケールを使用します"
+
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:168
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:538
 msgid "``to_datetime('2012-05-04 12:50:00')`` → 2012-05-04T12:50:00"
 msgstr "``to_datetime('2012-05-04 12:50:00')`` → 2012-05-04T12:50:00"
+
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:169
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:539
+msgid ""
+"``to_datetime('June 29, 2019 @ 12:34','MMMM d, yyyy @ HH:mm')`` → "
+"2019-06-29T12:34, if the current locale uses the name 'June' for the sixth "
+"month, otherwise an error occurs"
+msgstr ""
+"``to_datetime('June 29, 2019 @ 12:34','MMMM d, yyyy @ HH:mm')`` → "
+"2019-06-29T12:34（現在のロケールが6番目の月名に 'June' を使用する言語の場合の結果。そうでない場合はエラーが発生します）"
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:170
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:540
@@ -4536,7 +4571,7 @@ msgstr "2つの日付または日付時刻の差を返します。"
 msgid ""
 "The difference is returned as an ``Interval`` and needs to be used with one "
 "of the following functions in order to extract useful information:"
-msgstr "差は ``インターバル型`` として返されるため、有用な情報を抽出す津ためには以下のいずれかの関数と一緒に使用する必要があります。"
+msgstr "差は ``インターバル型`` として返されるため、有用な情報を抽出するためには以下のいずれかの関数と一緒に使用する必要があります。"
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:20
 msgid "``year``"
@@ -4625,7 +4660,7 @@ msgstr "日付型から日を取り出します。インターバル型からは
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:600
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:640
 msgid "**Date variant**"
-msgstr "**日付型を引数にとる場合**"
+msgstr "**日付型バージョン**"
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:74
 msgid "Extracts the day from a date or datetime."
@@ -4655,7 +4690,7 @@ msgstr "``day('2012-05-12')`` → 12"
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:615
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:655
 msgid "**Interval variant**"
-msgstr "**インターバル型を引数にとる場合**"
+msgstr "**インターバル型バージョン**"
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:89
 msgid "Calculates the length in days of an interval."
@@ -4990,6 +5025,18 @@ msgstr "ap または a"
 msgid "Interpret as an AM/PM time. *ap* must be either 'am' or 'pm'."
 msgstr "AM/PM 時間として解釈します。 *ap* は 'am' または 'pm' のいずれかです。"
 
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:202
+#: ../../docs/user_manual/expressions/expression_help/String.rst:81
+msgid ""
+"**language** - language (lowercase, two- or three-letter, `ISO 639 language "
+"code <https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes>`_) used to "
+"format the date into a custom string. By default the current QGIS user "
+"locale is used."
+msgstr ""
+"**language** - 日付をカスタム文字列にフォーマットする際に使用する言語（2文字または3文字の小文字、 `ISO 639 言語名コード "
+"<https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes>`_ "
+"）。デフォルトでは現在のQGISユーザーのロケールを使用します"
+
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:204
 #: ../../docs/user_manual/expressions/expression_help/String.rst:83
 msgid "``format_date('2012-05-15','dd.MM.yyyy')`` → '15.05.2012'"
@@ -4999,6 +5046,14 @@ msgstr "``format_date('2012-05-15','dd.MM.yyyy')`` → '15.05.2012'"
 #: ../../docs/user_manual/expressions/expression_help/String.rst:84
 msgid "``format_date('2012-05-15','d MMMM yyyy','fr')`` → '15 mai 2012'"
 msgstr "``format_date('2012-05-15','d MMMM yyyy','fr')`` → '15 mai 2012'"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:206
+#: ../../docs/user_manual/expressions/expression_help/String.rst:85
+msgid ""
+"``format_date('2012-05-15','dddd')`` → 'Tuesday', if the current locale is "
+"an English variant"
+msgstr ""
+"``format_date('2012-05-15','dddd')`` → 'Tuesday' （現在のロケールが English 版の場合の結果）"
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:207
 #: ../../docs/user_manual/expressions/expression_help/String.rst:86
@@ -5024,7 +5079,7 @@ msgstr "時間型または日付時刻型から時の部分を取り出します
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:360
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:459
 msgid "**Time variant**"
-msgstr "**時間型を引数にとる場合**"
+msgstr "**時間型バージョン**"
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:222
 msgid "Extracts the hour part from a time or datetime."
@@ -5481,14 +5536,18 @@ msgstr "今から100日の日時を取得します。"
 msgid "Fields and Values"
 msgstr "フィールドと値"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:214
+msgid "Contains a list of fields from the layer, and special values."
+msgstr "レイヤのフィールドのリストと、特別な値が含まれます。"
+
 #: ../../docs/user_manual/expressions/functions_list.rst:216
 msgid ""
 "Double-click a field name to have it added to your expression. You can also "
 "type the field name (preferably inside double quotes) or its :ref:`alias "
 "<configure_field>`."
 msgstr ""
-"フィールド名をダブルクリックすると、そのフィールドが式に追加されます。式への追加は、フィールド名（ダブルクォートで囲む方が良い）またはその "
-":ref:`別名 <configure_field>` を直接入力することでも可能です。"
+"フィールド名をダブルクリックすると、そのフィールドが式に追加されます。式への追加は、フィールド名（ダブルクォート囲みを推奨）またはその :ref:`別名"
+" <configure_field>` を直接入力することでも可能です。"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:220
 msgid ""
@@ -5514,6 +5573,18 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Fields_and_Values.rst:20
 msgid "NULL"
 msgstr "NULL"
+
+#: ../../docs/user_manual/expressions/expression_help/Fields_and_Values.rst:14
+msgid "Equates to a NULL value."
+msgstr "NULL に等しい値です。"
+
+#: ../../docs/user_manual/expressions/expression_help/Fields_and_Values.rst:22
+msgid "``NULL`` → a NULL value"
+msgstr "``NULL`` → NULL値"
+
+#: ../../docs/user_manual/expressions/expression_help/Fields_and_Values.rst:24
+msgid "To test for NULL use an *IS NULL* or *IS NOT NULL* expression."
+msgstr "NULL値かどうかをテストする場合には、 *IS NULL* 式または *IS NOT NULL* 式を使用してください。"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:241
 msgid "Files and Paths Functions"
@@ -5554,6 +5625,33 @@ msgid ""
 msgstr ""
 "``base_file_name('/home/qgis/data/country_boundaries.shp')`` → "
 "'country_boundaries'"
+
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:32
+msgid "exif"
+msgstr "exif"
+
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:34
+msgid "Retrieves exif tag values from an image file."
+msgstr "画像ファイルからexifタグの値を取得します。"
+
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:40
+msgid "exif(path, [tag])"
+msgstr "exif(path, [tag])"
+
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:44
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:16
+msgid "**path** - An image file path."
+msgstr "**path** - 画像ファイルのパス"
+
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:45
+msgid ""
+"**tag** - The tag to return. If empty, a map with all exif tag values will "
+"be returned."
+msgstr "**tag** - 取得したいタグ。指定しない場合には、全てのexifタグの値がマップ型で返ります"
+
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:47
+msgid "``exif('/my/photo.jpg','Exif.Image.Orientation')`` → 0"
+msgstr "``exif('/my/photo.jpg','Exif.Image.Orientation')`` → 0"
 
 #: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:55
 msgid "file_exists"
@@ -5805,6 +5903,10 @@ msgstr "``hamming_distance('abc','ABc')`` → 2"
 msgid "``hamming_distance(upper('abc'),upper('ABC'))`` → 0"
 msgstr "``hamming_distance(upper('abc'),upper('ABC'))`` → 0"
 
+#: ../../docs/user_manual/expressions/expression_help/Fuzzy_Matching.rst:28
+msgid "``hamming_distance('abc','abcd')`` → NULL"
+msgstr "``hamming_distance('abc','abcd')`` → NULL"
+
 #: ../../docs/user_manual/expressions/expression_help/Fuzzy_Matching.rst:36
 msgid "levenshtein"
 msgstr "levenshtein"
@@ -6018,6 +6120,34 @@ msgstr "is_layer_visible(layer)"
 msgid "``is_layer_visible('baseraster')`` → True"
 msgstr "``is_layer_visible('baseraster')`` → True"
 
+#: ../../docs/user_manual/expressions/expression_help/General.rst:95
+msgid "mime_type"
+msgstr "mime_type"
+
+#: ../../docs/user_manual/expressions/expression_help/General.rst:97
+msgid "Returns the mime type of the binary data."
+msgstr "バイナリデータのMIMEタイプを返します。"
+
+#: ../../docs/user_manual/expressions/expression_help/General.rst:103
+msgid "mime_type(bytes)"
+msgstr "mime_type(bytes)"
+
+#: ../../docs/user_manual/expressions/expression_help/General.rst:105
+msgid "**bytes** - the binary data"
+msgstr "**bytes** - バイナリデータ"
+
+#: ../../docs/user_manual/expressions/expression_help/General.rst:107
+msgid "``mime_type('<html><body></body></html>')`` → text/html"
+msgstr "``mime_type('<html><body></body></html>')`` → text/html"
+
+#: ../../docs/user_manual/expressions/expression_help/General.rst:108
+msgid ""
+"``mime_type(from_base64('R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAIAOw=='))``"
+" → image/gif"
+msgstr ""
+"``mime_type(from_base64('R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAIAOw=='))``"
+" → image/gif"
+
 #: ../../docs/user_manual/expressions/expression_help/General.rst:116
 msgid "var"
 msgstr "var"
@@ -6055,7 +6185,7 @@ msgid ""
 "as 3rd argument. This is only useful for complicated expressions, where the "
 "same calculated value needs to be used in different places."
 msgstr ""
-"この関数は、第３引数の式で使われる変数を設定します。同じ計算結果を別の場所で繰り返し使用する必要があるような、複雑な式を構成する際に使われます。"
+"この関数は、第3引数の式で使われる変数を設定します。同じ計算結果を別の場所で繰り返し使用する必要があるような、複雑な式を構成する際に使われます。"
 
 #: ../../docs/user_manual/expressions/expression_help/General.rst:14
 msgid "with_variable(name, value, expression)"
@@ -6089,6 +6219,27 @@ msgid ""
 " transform, $area)."
 msgstr "このグループは、ジオメトリオブジェクトを操作する関数（例えば buffer、 transform、 $area など）が含まれます。"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:12
+msgid "affine_transform"
+msgstr "affine_transform"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
+msgid ""
+"Returns the geometry after an affine transformation. Calculations are in the"
+" Spatial Reference System of this geometry. The operations are performed in "
+"a scale, rotation, translation order. If there is a Z or M offset but the "
+"coordinate is not present in the geometry, it will be added."
+msgstr ""
+"アフィン変換後のジオメトリを返します。計算はこのジオメトリの空間参照系で行われます。変換操作は、スケーリング、回転、平行移動の順で行われます。Z座標やM値のオフセットが指定されているものの、ジオメトリの座標がZ座標やM値を持たない場合には、これらがジオメトリ座標に追加されます。"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+msgid ""
+"affine_transform(geometry, delta_x, delta_y, rotation_z, scale_x, scale_y, "
+"[delta_z=0], [delta_m=0], [scale_z=1], [scale_m=1])"
+msgstr ""
+"affine_transform(geometry, delta_x, delta_y, rotation_z, scale_x, scale_y, "
+"[delta_z=0], [delta_m=0], [scale_z=1], [scale_m=1])"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:16
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
@@ -6121,6 +6272,66 @@ msgstr "このグループは、ジオメトリオブジェクトを操作する
 msgid "**geometry** - a geometry"
 msgstr "**geometry** - ジオメトリ"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:25
+msgid "**delta_x** - x-axis translation"
+msgstr "**delta_x** - x軸方向移動量"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:26
+msgid "**delta_y** - y-axis translation"
+msgstr "**delta_y** - y軸方向移動量"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
+msgid "**rotation_z** - rotation around z-axis in degrees counter-clockwise"
+msgstr "**rotation_z** - z軸まわりの回転量（度単位、反時計回り）"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:28
+msgid "**scale_x** - x-axis scale factor"
+msgstr "**scale_x** - x軸方向スケーリング係数"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
+msgid "**scale_y** - y-axis scale factor"
+msgstr "**scale_y** - y軸方向スケーリング係数"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:30
+msgid "**delta_z** - z-axis translation"
+msgstr "**delta_z** - z軸方向移動量"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:31
+msgid "**delta_m** - m-axis translation"
+msgstr "**delta_m** - m値の増分"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:32
+msgid "**scale_z** - z-axis scale factor"
+msgstr "**scale_z** - z軸方向スケーリング係数"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:33
+msgid "**scale_m** - m-axis scale factor"
+msgstr "**scale_m** - m値のスケーリング係数"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:35
+msgid ""
+"``geom_to_wkt(affine_transform(geom_from_wkt('LINESTRING(1 1, 2 2)'), 2, 2, "
+"0, 1, 1))`` → 'LineString (3 3, 4 4)'"
+msgstr ""
+"``geom_to_wkt(affine_transform(geom_from_wkt('LINESTRING(1 1, 2 2)'), 2, 2, "
+"0, 1, 1))`` → 'LineString (3 3, 4 4)'"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:36
+msgid ""
+"``geom_to_wkt(affine_transform(geom_from_wkt('POLYGON((0 0, 0 3, 2 2, 0 "
+"0))'), 0, 0, -90, 1, 2))`` → 'Polygon ((0 0, 6 0, 4 -2, 0 0))'"
+msgstr ""
+"``geom_to_wkt(affine_transform(geom_from_wkt('POLYGON((0 0, 0 3, 2 2, 0 "
+"0))'), 0, 0, -90, 1, 2))`` → 'Polygon ((0 0, 6 0, 4 -2, 0 0))'"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:37
+msgid ""
+"``geom_to_wkt(affine_transform(geom_from_wkt('POINT(3 1)'), 0, 0, 0, 1, 1, "
+"5, 0))`` → 'PointZ (3 1 5)'"
+msgstr ""
+"``geom_to_wkt(affine_transform(geom_from_wkt('POINT(3 1)'), 0, 0, 0, 1, 1, "
+"5, 0))`` → 'PointZ (3 1 5)'"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:45
 msgid "angle_at_vertex"
 msgstr "angle_at_vertex"
@@ -6129,8 +6340,7 @@ msgstr "angle_at_vertex"
 msgid ""
 "Returns the bisector angle (average angle) to the geometry for a specified "
 "vertex on a linestring geometry. Angles are in degrees clockwise from north."
-msgstr ""
-"ラインストリングジオメトリ上の指定された頂点について、ジオメトリの二分角（平均角度）を返します。角度は北向きから時計回り方向で測り、度数の単位です。"
+msgstr "ラインストリングジオメトリ上の指定された頂点について、ジオメトリの二分角（平均角度）を返します。角度は度単位で、北から時計回りで測ります。"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:53
 msgid "angle_at_vertex(geometry, vertex)"
@@ -6377,6 +6587,14 @@ msgid ""
 "Reference System of this geometry."
 msgstr "ジオメトリからの距離がある距離以下のすべてのポイントを表すジオメトリを返します。計算はこのジオメトリの空間参照系で行なわれます。"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:56
+msgid ""
+"buffer(geometry, distance, [segments=8], [cap='round'], [join='round'], "
+"[miter_limit=2])"
+msgstr ""
+"buffer(geometry, distance, [segments=8], [cap='round'], [join='round'], "
+"[miter_limit=2])"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:61
 msgid "**distance** - buffer distance in layer units"
 msgstr "**distance** - レイヤの単位で表したバッファ距離"
@@ -6390,6 +6608,24 @@ msgid ""
 msgstr ""
 "**segments** - "
 "継ぎ目スタイルにroundを使用する場合に、円の四分の一を表現するのに使用するセグメントの数。数値が大きいほど、より多数のノードからなる、滑らかなバッファが生成されます。"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:63
+msgid ""
+"**cap** - end cap style for buffer. Valid values are 'round', 'flat' or "
+"'square'"
+msgstr "**cap** - バッファの終端スタイル。有効な値は 'round'、 'flat' または 'square' です"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:64
+msgid ""
+"**join** - join style for buffer. Valid values are 'round', 'bevel' or "
+"'miter'."
+msgstr "**join** - バッファの結合スタイル。有効な値は 'round'、 'bevel' または 'miter' です"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:65
+msgid ""
+"**miter_limit** - miter distance limit, for use when the join style is set "
+"to 'miter'"
+msgstr "**miter_limit** - miter距離の上限値（結合スタイルに 'miter' を設定した場合に使用）"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:67
 msgid ""
@@ -6539,7 +6775,7 @@ msgstr "ジオメトリを集約したマルチパートのジオメトリを返
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:52
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:146
 msgid "**List of arguments variant**"
-msgstr "**引数のリストを引数にとる場合**"
+msgstr "**引数バージョン**"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:54
 msgid "Geometry parts are specified as separate arguments to the function."
@@ -6560,7 +6796,7 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:67
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:162
 msgid "**Array variant**"
-msgstr "**配列を引数にとる場合**"
+msgstr "**配列バージョン**"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:69
 msgid "Geometry parts are specified as an array of geometry parts."
@@ -6869,6 +7105,22 @@ msgstr ""
 msgid "Further reading: :ref:`qgisextractspecificvertices` algorithm"
 msgstr "参考： :ref:`qgisextractspecificvertices` アルゴリズム"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
+msgid "exif_geotag"
+msgstr "exif_geotag"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid "Creates a point geometry from the exif geotags of an image file."
+msgstr "画像ファイルの exif ジオタグからポイントジオメトリを作成します。"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
+msgid "exif_geotag(path)"
+msgstr "exif_geotag(path)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid "``geom_to_wkt(exif_geotag('/my/photo.jpg'))`` → 'Point (2 4)'"
+msgstr "``geom_to_wkt(exif_geotag('/my/photo.jpg'))`` → 'Point (2 4)'"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:26
 msgid "extend"
 msgstr "extend"
@@ -6961,6 +7213,10 @@ msgstr "（マルチ）カーブまたは（マルチ）ラインストリング
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:34
 msgid "extrude(geometry, x, y)"
 msgstr "extrude(geometry, x, y)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:36
+msgid "**geometry** - a curve or linestring geometry"
+msgstr "**geometry** - カーブジオメトリまたはラインストリングジオメトリ"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:37
 msgid "**x** - x extension, numeric value"
@@ -7203,6 +7459,31 @@ msgstr "geometry(feature)"
 msgid "**feature** - a feature object"
 msgstr "**feature** - 地物オブジェクト"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:141
+msgid ""
+"`` geometry( $currentfeature )`` → the geometry of the current feature. "
+"Prefer using $geometry."
+msgstr "`` geometry( $currentfeature )`` → 現在の地物のジオメトリ。 $geometry の使用が推奨される"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:142
+msgid ""
+"``geom_to_wkt( geometry( get_feature_by_id( 'streets', 1 ) ) )`` → the "
+"geometry in WKT of the feature with the id 1 on the layer \"streets\", e.g. "
+"'POINT(6 50)'"
+msgstr ""
+"``geom_to_wkt( geometry( get_feature_by_id( 'streets', 1 ) ) )`` → "
+"\"streets\" レイヤ内でid が1の地物のジオメトリのWKT表現。例えば 'POINT(6 50)'"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:143
+msgid ""
+"``intersects( $geometry, geometry( get_feature( 'streets', 'name', 'Main "
+"St.' ) ) )`` → true if the current feature spatially intersects the 'Main "
+"St.' named feature in the \"streets\" layer"
+msgstr ""
+"``intersects( $geometry, geometry( get_feature( 'streets', 'name', 'Main "
+"St.' ) ) )`` → 現在の地物が \"streets\" レイヤ内で'name' フィールドの値が 'Main St.' "
+"の地物と空間的に交差する場合にtrue"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:151
 msgid "geometry_n"
 msgstr "geometry_n"
@@ -7235,6 +7516,46 @@ msgid ""
 msgstr ""
 "``geom_to_wkt(geometry_n(geom_from_wkt('GEOMETRYCOLLECTION(POINT(0 1), "
 "POINT(0 0), POINT(1 0), POINT(1 1))'),3))`` → 'Point (1 0)'"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:172
+msgid "geometry_type"
+msgstr "geometry_type"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:174
+msgid ""
+"Returns a string value describing the type of a geometry (Point, Line or "
+"Polygon)"
+msgstr "ジオメトリの種類を表す文字列値（Point、Line または Polygon）を返します。"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:180
+msgid "geometry_type(geometry)"
+msgstr "geometry_type(geometry)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:184
+msgid ""
+"``geometry_type( geom_from_wkt( 'LINESTRING(2 5, 3 6, 4 8)') )`` → 'Line'"
+msgstr ""
+"``geometry_type( geom_from_wkt( 'LINESTRING(2 5, 3 6, 4 8)') )`` → 'Line'"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:185
+msgid ""
+"``geometry_type( geom_from_wkt( 'MULTILINESTRING((2 5, 3 6, 4 8), (1 1, 0 "
+"0))') )`` → 'Line'"
+msgstr ""
+"``geometry_type( geom_from_wkt( 'MULTILINESTRING((2 5, 3 6, 4 8), (1 1, 0 "
+"0))') )`` → 'Line'"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:186
+msgid "``geometry_type( geom_from_wkt( 'POINT(2 5)') )`` → 'Point'"
+msgstr "``geometry_type( geom_from_wkt( 'POINT(2 5)') )`` → 'Point'"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:187
+msgid ""
+"``geometry_type( geom_from_wkt( 'POLYGON((-1 -1, 4 0, 4 2, 0 2, -1 -1))') "
+")`` → 'Polygon'"
+msgstr ""
+"``geometry_type( geom_from_wkt( 'POLYGON((-1 -1, 4 0, 4 2, 0 2, -1 -1))') "
+")`` → 'Polygon'"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:195
 msgid "hausdorff_distance"
@@ -7662,7 +7983,7 @@ msgstr "文字列の文字数、またはラインストリングジオメトリ
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:160
 #: ../../docs/user_manual/expressions/expression_help/String.rst:145
 msgid "**String variant**"
-msgstr "**文字列を引数にとる場合**"
+msgstr "**文字列バージョン**"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:162
 #: ../../docs/user_manual/expressions/expression_help/String.rst:147
@@ -7687,7 +8008,7 @@ msgstr "``length('hello')`` → 5"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:175
 #: ../../docs/user_manual/expressions/expression_help/String.rst:160
 msgid "**Geometry variant**"
-msgstr "**ジオメトリを引数にとる場合**"
+msgstr "**ジオメトリバージョン**"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:177
 #: ../../docs/user_manual/expressions/expression_help/String.rst:162
@@ -7718,6 +8039,37 @@ msgstr "**geometry** - ラインジオメトリオブジェクト"
 msgid "``length(geom_from_wkt('LINESTRING(0 0, 4 0)'))`` → 4.0"
 msgstr "``length(geom_from_wkt('LINESTRING(0 0, 4 0)'))`` → 4.0"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:427
+msgid ""
+"Further reading: "
+":ref:`expression_function_GeometryGroup_straight_distance_2d`"
+msgstr "参考： :ref:`expression_function_GeometryGroup_straight_distance_2d`"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
+msgid "length3D"
+msgstr "length3D"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Calculates the 3D length of a geometry line object. If the geometry is not a"
+" 3D line object, it returns its 2D length. Calculations are always "
+"planimetric in the Spatial Reference System (SRS) of this geometry, and the "
+"units of the returned length will match the units for the SRS. This differs "
+"from the calculations performed by the $length function, which will perform "
+"ellipsoidal calculations based on the project's ellipsoid and distance unit "
+"settings."
+msgstr ""
+"ラインオブジェクトのジオメトリの3次元的な長さを返します。ジオメトリが3次元ラインオブジェクトでない場合は、2次元的な長さを返します。この計算は、常にこのジオメトリの空間参照系（SRS）で平面的に計算され、長さの単位はSRSの単位と一致します。この値は、プロジェクトの楕円体と距離単位設定にもとづいた楕円体計算が行われる"
+" $length 関数とは異なります。"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
+msgid "length3D(geometry)"
+msgstr "length3D(geometry)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid "``length3D(geom_from_wkt('LINESTRINGZ(0 0 0, 3 0 4)'))`` → 5.0"
+msgstr "``length3D(geom_from_wkt('LINESTRINGZ(0 0 0, 3 0 4)'))`` → 5.0"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:26
 msgid "line_interpolate_angle"
 msgstr "line_interpolate_angle"
@@ -7726,7 +8078,8 @@ msgstr "line_interpolate_angle"
 msgid ""
 "Returns the angle parallel to the geometry at a specified distance along a "
 "linestring geometry. Angles are in degrees clockwise from north."
-msgstr "ラインストリングジオメトリに沿って指定された距離にある点での、ジオメトリに平行な角度を返します。角度は度単位で、北から時計回りで測ります。"
+msgstr ""
+"ラインストリングジオメトリに沿って指定された距離にある点における、ジオメトリに平行な角度を返します。角度は度単位で、北から時計回りで測ります。"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:34
 msgid "line_interpolate_angle(geometry, distance)"
@@ -7865,6 +8218,14 @@ msgstr "**start_distance** - 切り出しの開始距離"
 msgid "**end_distance** - distance to end of substring"
 msgstr "**end_distance** - 切り出しの終了距離"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:62
+msgid ""
+"``geom_to_wkt(line_substring(geometry:=geom_from_wkt('LineString(0 0, 10 "
+"0)'),start_distance:=2,end_distance:=6))`` → 'LineString (2 0,6 0)'"
+msgstr ""
+"``geom_to_wkt(line_substring(geometry:=geom_from_wkt('LineString(0 0, 10 "
+"0)'),start_distance:=2,end_distance:=6))`` → 'LineString (2 0,6 0)'"
+
 #: ../../docs/user_manual/expressions/functions_list.rst:439
 msgid "Further reading: :ref:`qgislinesubstring` algorithm"
 msgstr "参考： :ref:`qgislinesubstring` アルゴリズム"
@@ -7942,6 +8303,12 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:68
 msgid "main_angle"
 msgstr "main_angle"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:70
+msgid ""
+"Returns the angle of the long axis (clockwise, in degrees from North) of the"
+" oriented minimal bounding rectangle, which completely covers the geometry."
+msgstr "ジオメトリを完全にカバーする最小の回転長方形の長軸の角度（北を0度として時計回り）を返します。"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:76
 msgid "main_angle(geometry)"
@@ -8189,7 +8556,7 @@ msgstr "make_polygon"
 msgid ""
 "Creates a polygon geometry from an outer ring and optional series of inner "
 "ring geometries."
-msgstr "外側のリングジオメトリおよび任意の一連の内側リングジオメトリから、ポリゴンジオメトリを作成します。"
+msgstr "外側のリングジオメトリおよび一連の内側リングジオメトリ（オプション）から、ポリゴンジオメトリを作成します。"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:239
 msgid "make_polygon(outerRing, [innerRing1], [innerRing2], ...)"
@@ -8259,6 +8626,22 @@ msgid ""
 msgstr ""
 "**option** - 長方形を作成するためのオプション引数。デフォルト値は0。値は "
 "0（距離モード）か1（投影モード）をとる。距離モードの場合、第二距離は第2点と第3点の距離に等しくなります。投影モードの場合、第二距離は第3点をセグメントまたはその延長線上に垂直投影した距離に等しくなります。"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:272
+msgid ""
+"``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), "
+"make_point(5, 5), 0)))`` → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'"
+msgstr ""
+"``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), "
+"make_point(5, 5), 0)))`` → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:273
+msgid ""
+"``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), "
+"make_point(5, 3), 1)))`` → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'"
+msgstr ""
+"``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), "
+"make_point(5, 3), 1)))`` → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:281
 msgid "make_regular_polygon"
@@ -8442,7 +8825,7 @@ msgid ""
 "to true to avoid including these duplicate nodes in the output collection."
 msgstr ""
 "**ignore_closing_nodes** - "
-"（オプション）ラインやポリゴンのリングを閉じる重複ノードを戻り値に含めるかどうかを指定します。デフォルトはfalseです。アウトプットのコレクションに重複ノードを含めないようにするには、trueを指定します。"
+"（オプション）ラインやポリゴンのリングを閉じる重複ノードを戻り値に含めないかどうかを指定します。デフォルトはfalseです。アウトプットのコレクションに重複ノードを含めないようにするには、trueを指定します。"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:21
 msgid ""
@@ -8494,7 +8877,7 @@ msgstr "num_interior_rings"
 msgid ""
 "Returns the number of interior rings in a polygon or geometry collection, or"
 " NULL if the input geometry is not a polygon or collection."
-msgstr "ポリゴンまたはジオメトリコレクション中の内側のリングの数を返します。ポリゴンでもコレクションでもない場合、NULLを返します。"
+msgstr "ポリゴンまたはジオメトリコレクション中の内側のリングの数を返します。ポリゴンでもジオメトリコレクションでもない場合、NULLを返します。"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:34
 msgid "num_interior_rings(geometry)"
@@ -8541,7 +8924,7 @@ msgid ""
 "geometry collection, or NULL if the input geometry is not a polygon or "
 "collection."
 msgstr ""
-"ポリゴンまたはジオメトリコレクション中のリング（外側のリングを含む）の数を返します。ポリゴンでもコレクションでもない場合、NULLを返します"
+"ポリゴンまたはジオメトリコレクション中のリング（外側のリングを含む）の数を返します。ポリゴンでもジオメトリコレクションでもない場合、NULLを返します。"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:74
 msgid "num_rings(geometry)"
@@ -8575,7 +8958,7 @@ msgstr ""
 msgid ""
 "**distance** - offset distance. Positive values will be buffered to the left"
 " of lines, negative values to the right"
-msgstr "**distance** - オフセット距離。正の値はラインの左側にバッファリングされ、府の値は右にバッファリングされます"
+msgstr "**distance** - オフセット距離。正の値はラインの左側にバッファされ、負の値は右にバッファされます"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:100
 msgid ""
@@ -8609,6 +8992,22 @@ msgid ""
 "``offset_curve($geometry, -10.5)`` → line offset to the right by 10.5 units"
 msgstr "``offset_curve($geometry, -10.5)`` → 右に10.5単位オフセットしたライン"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:106
+msgid ""
+"``offset_curve($geometry, 10.5, segments:=16, join:=1)`` → line offset to "
+"the left by 10.5 units, using more segments to result in a smoother curve"
+msgstr ""
+"``offset_curve($geometry, 10.5, segments:=16, join:=1)`` → "
+"左に10.5単位オフセットしたラインで、より多数のセグメントを使用した滑らかなカーブ"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:107
+msgid ""
+"``offset_curve($geometry, 10.5, join:=3)`` → line offset to the left by 10.5"
+" units, using a beveled join"
+msgstr ""
+"``offset_curve($geometry, 10.5, join:=3)`` → 左に10.5単位オフセットしたラインで、bebel "
+"継ぎ目を使用"
+
 #: ../../docs/user_manual/expressions/functions_list.rst:457
 msgid "Further reading: :ref:`qgisoffsetline` algorithm"
 msgstr "参考： :ref:`qgisoffsetline` アルゴリズム"
@@ -8619,7 +9018,11 @@ msgstr "order_parts"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
 msgid "Orders the parts of a MultiGeometry by a given criteria"
-msgstr "与えられた基準によってマルチジオメトリの部分を並べ替えます。"
+msgstr "与えられた基準によってマルチジオメトリのパートを並べ替えます。"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
+msgid "order_parts(geometry, orderby, [ascending=true])"
+msgstr "order_parts(geometry, orderby, [ascending=true])"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
 msgid "**geometry** - a multi-type geometry"
@@ -8659,7 +9062,7 @@ msgstr "oriented_bbox"
 msgid ""
 "Returns a geometry which represents the minimal oriented bounding box of an "
 "input geometry."
-msgstr "入力ジオメトリに対して最小となる方向のバウンディングボックスのジオメトリを返します。"
+msgstr "入力ジオメトリに対して最小となる回転バウンディングボックスのジオメトリを返します。"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
 msgid "oriented_bbox(geometry)"
@@ -9813,7 +10216,7 @@ msgid ""
 "deviations in geometries and reduces the number of vertices in nearly "
 "straight segments."
 msgstr ""
-"距離の閾値を使用してノードを削除し、ジオメトリを単純化します（いわゆるDouglas "
+"距離の閾値を使用してノードを削除し、ジオメトリを単純化します（Douglas "
 "Peuckerアルゴリズム）。このアルゴリズムは、ジオメトリの大きな変動は維持し、ほぼ直線のセグメント上にある頂点を減らします。"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:35
@@ -9850,7 +10253,7 @@ msgid ""
 "create small areas in geometries, e.g., narrow spikes or nearly straight "
 "segments."
 msgstr ""
-"面積の閾値を使ってノードを削除し、ジオメトリを単純化します（いわゆるVisvalingam-"
+"面積の閾値を使ってノードを削除し、ジオメトリを単純化します（Visvalingam-"
 "Whyattアルゴリズム）。このアルゴリズムは、細長いスパイクやほぼ直線上にあるセグメントなど、非常に小さな面積を生み出す頂点を削除します。"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
@@ -9907,9 +10310,56 @@ msgid ""
 "10.5 units"
 msgstr "``single_sided_buffer($geometry, -10.5)`` → ラインから右に10.5 単位のバッファ"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:26
+msgid ""
+"``single_sided_buffer($geometry, 10.5, segments:=16, join:=1)`` → line "
+"buffered to the left by 10.5 units, using more segments to result in a "
+"smoother buffer"
+msgstr ""
+"``single_sided_buffer($geometry, 10.5, segments:=16, join:=1)`` → "
+"ラインから左に10.5単位のバッファで、より多数のセグメントを使用した滑らかなバッファ"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
+msgid ""
+"``single_sided_buffer($geometry, 10.5, join:=3)`` → line buffered to the "
+"left by 10.5 units, using a beveled join"
+msgstr ""
+"``single_sided_buffer($geometry, 10.5, join:=3)`` → "
+"ラインから左に10.5単位のバッファで、bebel 継ぎ目を使用"
+
 #: ../../docs/user_manual/expressions/functions_list.rst:579
 msgid "Further reading: :ref:`qgissinglesidedbuffer` algorithm"
 msgstr "参考： :ref:`qgissinglesidedbuffer` アルゴリズム"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
+msgid "sinuosity"
+msgstr "sinuosity"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Returns the sinuosity of a curve, which is the ratio of the curve length to "
+"the straight (2D) distance between its endpoints."
+msgstr "曲線の湾曲率、すなわち曲線の両端の（平面的な）直線距離に対する曲線長さの比率を返します。"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
+msgid "sinuosity(geometry)"
+msgstr "sinuosity(geometry)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:16
+msgid "**geometry** - Input curve (circularstring, linestring)"
+msgstr "**geometry** - 入力の曲線（円形ストリング、ラインストリング）"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid ""
+"``round(sinuosity(geom_from_wkt('LINESTRING(2 0, 2 2, 3 2, 3 3)')), 3)`` → "
+"1.265"
+msgstr ""
+"``round(sinuosity(geom_from_wkt('LINESTRING(2 0, 2 2, 3 2, 3 3)')), 3)`` → "
+"1.265"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid "``sinuosity(geom_from_wkt('LINESTRING( 3 1, 5 1)'))`` → 1.0"
+msgstr "``sinuosity(geom_from_wkt('LINESTRING( 3 1, 5 1)'))`` → 1.0"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
 msgid "smooth"
@@ -9999,6 +10449,41 @@ msgid ""
 msgstr ""
 "``geom_to_wkt(start_point(geom_from_wkt('LINESTRING(4 0, 4 2, 0 2)')))`` → "
 "'Point (4 0)'"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
+msgid "straight_distance_2d"
+msgstr "straight_distance_2d"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Returns the direct/euclidean distance between the first and last vertex of a"
+" geometry. The geometry must be a curve (circularstring, linestring)."
+msgstr ""
+"ジオメトリの始点と終点の間の直線距離（ユークリッド距離）を返します。ジオメトリは曲線（円形ストリングまたはラインストリング）でなければなりません。"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
+msgid "straight_distance_2d(geometry)"
+msgstr "straight_distance_2d(geometry)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:16
+msgid "**geometry** - The geometry."
+msgstr "**geometry** - ジオメトリ"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid "``straight_distance_2d(geom_from_wkt('LINESTRING(1 0, 1 1)'))`` → 1"
+msgstr "``straight_distance_2d(geom_from_wkt('LINESTRING(1 0, 1 1)'))`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``round(straight_distance_2d(geom_from_wkt('LINESTRING(1 4, 3 5, 5 0)')), "
+"3)`` → 5.657"
+msgstr ""
+"``round(straight_distance_2d(geom_from_wkt('LINESTRING(1 4, 3 5, 5 0)')), "
+"3)`` → 5.657"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:597
+msgid "Further reading: :ref:`expression_function_GeometryGroup_length`"
+msgstr "参考： :ref:`expression_function_GeometryGroup_length`"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "sym_difference"
@@ -10463,6 +10948,22 @@ msgstr "y_min(geometry)"
 msgid "``y_min( geom_from_wkt( 'LINESTRING(2 5, 3 6, 4 8)') )`` → 5"
 msgstr "``y_min( geom_from_wkt( 'LINESTRING(2 5, 3 6, 4 8)') )`` → 5"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:204
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:212
+msgid "$z"
+msgstr "$z"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:206
+msgid ""
+"Returns the z value of the current point feature if it is 3D. If the feature"
+" is a multipoint feature, then the z value of the first point will be "
+"returned."
+msgstr "地物が3Dの場合に、現在のポイント地物のz座標を返します。マルチポイント地物の場合は、最初のポイントのz座標を返します。"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:214
+msgid "``$z`` → 123"
+msgstr "``$z`` → 123"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:224
 msgid ""
 "Returns the z coordinate of a point geometry, or NULL if the geometry has no"
@@ -10591,6 +11092,67 @@ msgstr ""
 "``map_get( item_variables('Map 0'), 'map_scale')`` → 現在の印刷レイアウト内にある 'Map 0' "
 "アイテムの縮尺"
 
+#: ../../docs/user_manual/expressions/expression_help/Layout.rst:6
+msgid "map_credits"
+msgstr "map_credits"
+
+#: ../../docs/user_manual/expressions/expression_help/Layout.rst:8
+msgid ""
+"Returns a list of credit (usage rights) strings for the layers shown in a "
+"layout map item."
+msgstr "レイアウトの地図アイテムに表示されているレイヤのクレジット（使用権）文字列のリストを返します。"
+
+#: ../../docs/user_manual/expressions/expression_help/Layout.rst:14
+msgid ""
+"map_credits(id, [include_layer_names=false], [layer_name_separator=': '])"
+msgstr ""
+"map_credits(id, [include_layer_names=false], [layer_name_separator=': '])"
+
+#: ../../docs/user_manual/expressions/expression_help/Layout.rst:18
+msgid "**id** - map item ID"
+msgstr "**id** - 地図アイテムのID"
+
+#: ../../docs/user_manual/expressions/expression_help/Layout.rst:19
+msgid ""
+"**include_layer_names** - Set to true to include layer names before their "
+"credit strings"
+msgstr "**include_layer_names** - trueに設定すると、クレジット文字列の前にレイヤ名を含めます"
+
+#: ../../docs/user_manual/expressions/expression_help/Layout.rst:20
+msgid ""
+"**layer_name_separator** - String to insert between layer names and their "
+"credit strings, if include_layer_names is true"
+msgstr ""
+"**layer_name_separator** - include_layer_names が true "
+"の場合に、レイヤ名とクレジット文字列の間に挿入される文字列"
+
+#: ../../docs/user_manual/expressions/expression_help/Layout.rst:22
+msgid ""
+"``array_to_string( map_credits( 'Main Map' ) )`` → comma separated list of "
+"layer credits for layers shown in the 'Main Map' layout item, e.g 'CC-BY-NC,"
+" CC-BY-SA'"
+msgstr ""
+"``array_to_string( map_credits( 'Main Map' ) )`` →  'Main Map' "
+"レイアウトアイテム内に表示されているレイヤのクレジットのコンマ区切りリスト。例： 'CC-BY-NC, CC-BY-SA'"
+
+#: ../../docs/user_manual/expressions/expression_help/Layout.rst:23
+msgid ""
+"``array_to_string( map_credits( 'Main Map', include_layer_names := true, "
+"layer_name_separator := ': ' ) )`` → comma separated list of layer names and"
+" their credits for layers shown in the 'Main Map' layout item, e.g. 'Railway"
+" lines: CC-BY-NC, Basemap: CC-BY-SA'"
+msgstr ""
+"``array_to_string( map_credits( 'Main Map', include_layer_names := true, "
+"layer_name_separator := ': ' ) )`` → 'Main Map' "
+"レイアウトアイテム内に表示されているレイヤの名前とそのクレジットのコンマ区切りリスト。例： 'Railway lines: CC-BY-NC, "
+"Basemap: CC-BY-SA'"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:666
+msgid ""
+"This function requires the :ref:`Access metadata properties <metadatamenu>` "
+"of the layers to have been filled."
+msgstr "この関数は、レイヤの :ref:`「アクセス」メタデータプロパティ <metadatamenu>` が入力されていることを必要とします。"
+
 #: ../../docs/user_manual/expressions/functions_list.rst:674
 msgid "Map Layers"
 msgstr "地図レイヤ"
@@ -10603,9 +11165,9 @@ msgid ""
 ":ref:`attribute <record_attributes>` or :ref:`spatial <geometry_functions>` "
 "queries."
 msgstr ""
-"このグループには、現在のプロジェクトで利用可能なレイヤのリストが含まれます。これは、 :ref:`集計 <aggregates_function>` や"
-" :ref:`属性 <record_attributes>` 、 :ref:`空間 <geometry_functions>` "
-"クエリなどで複数のレイヤを参照する式を書くときに便利です。"
+"このグループには、現在のプロジェクトで利用可能なレイヤのリストが含まれます。これは、 :ref:`集計関数 <aggregates_function>`"
+" や :ref:`属性関数 <record_attributes>` 、 :ref:`ジオメトリ関数 <geometry_functions>` "
+"のクエリなどで複数のレイヤを参照する式を書くときに便利です。"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:681
 msgid "It also provides some convenient functions to manipulate layers."
@@ -10777,6 +11339,14 @@ msgstr "``layer_property('airports','feature_count')`` → 120"
 msgid "``layer_property('landsat','crs')`` → 'EPSG:4326'"
 msgstr "``layer_property('landsat','crs')`` → 'EPSG:4326'"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:693
+msgid ""
+"Further reading: :ref:`vector <vectorinformationmenu>`, :ref:`raster "
+"<raster_information>` and :ref:`mesh <meshinformation>` layer properties"
+msgstr ""
+"参考： :ref:`ベクタ <vectorinformationmenu>` 、 :ref:`ラスタ <raster_information>` 、 "
+":ref:`メッシュ <meshinformation>` レイヤのプロパティ"
+
 #: ../../docs/user_manual/expressions/functions_list.rst:704
 msgid "Maps Functions"
 msgstr "マップ関数"
@@ -10854,6 +11424,10 @@ msgstr "**key** - キー（文字列）"
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:66
 msgid "``map('1','one','2', 'two')`` → { '1': 'one', '2': 'two' }"
 msgstr "``map('1','one','2', 'two')`` → { '1': 'one', '2': 'two' }"
+
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:67
+msgid "``map('1','one','2', 'two')['1']`` → 'one'"
+msgstr "``map('1','one','2', 'two')['1']`` → 'one'"
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:75
 msgid "map_akeys"
@@ -10986,6 +11560,14 @@ msgid ""
 msgstr ""
 "``map_get( item_variables('Map 0'), 'map_scale')`` → "
 "（存在する場合には）現在の印刷レイアウト内にある 'Map 0' アイテムの縮尺"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:722
+msgid ""
+"You can also use the :ref:`index operator ([]) "
+"<expression_function_Operators_index>` to get a value from a map."
+msgstr ""
+"マップ型から値を取得するには :ref:`インデックス演算子 ([]) <expression_function_Operators_index>` "
+"も使用できます。"
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:6
 msgid "map_insert"
@@ -11579,6 +12161,10 @@ msgstr "``round(1234.567, 2)`` → 1234.57"
 msgid "``round(1234.567)`` → 1235"
 msgstr "``round(1234.567)`` → 1235"
 
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:456
+msgid "``round(1234.567, -1)`` → 1230"
+msgstr "``round(1234.567, -1)`` → 1230"
+
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:464
 msgid "scale_exp"
 msgstr "scale_exp"
@@ -11744,6 +12330,112 @@ msgstr "tan(angle)"
 msgid "``tan(1.0)`` → 1.5574077246549"
 msgstr "``tan(1.0)`` → 1.5574077246549"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:745
+msgid "Meshes Functions"
+msgstr "メッシュ関数"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:747
+msgid ""
+"This group contains functions which calculate or return mesh related values."
+msgstr "このグループには、メッシュに関連した値を計算したり返したりする関数が含まれます。"
+
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:12
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:20
+msgid "$face_area"
+msgstr "$face_area"
+
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:14
+msgid ""
+"Returns the area of the current mesh face. The area calculated by this "
+"function respects both the current project's ellipsoid setting and area unit"
+" settings. For example, if an ellipsoid has been set for the project then "
+"the calculated area will be ellipsoidal, and if no ellipsoid is set then the"
+" calculated area will be planimetric."
+msgstr ""
+"現在のメッシュ面の面積を返します。この関数で計算される面積には、現在のプロジェクトの楕円体設定と面積単位設定の両方が反映されます。例えば、プロジェクトに回転楕円体が設定されている場合、楕円体面積になり、設定されていない場合、平面上の面積になります。"
+
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:22
+msgid "``$face_area`` → 42"
+msgstr "``$face_area`` → 42"
+
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:30
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:38
+msgid "$face_index"
+msgstr "$face_index"
+
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:32
+msgid "Returns the index of the current mesh face."
+msgstr "現在のメッシュ面のインデックスを返します。"
+
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:40
+msgid "``$face_index`` → 4581"
+msgstr "``$face_index`` → 4581"
+
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:48
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:56
+msgid "$vertex_as_point"
+msgstr "$vertex_as_point"
+
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:50
+msgid "Returns the current vertex as a point geometry."
+msgstr "現在の頂点をポイントジオメトリとして返します。"
+
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:58
+msgid "``geom_to_wkt( $vertex_as_point )`` → 'POINT(800 1500 41)'"
+msgstr "``geom_to_wkt( $vertex_as_point )`` → 'POINT(800 1500 41)'"
+
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:66
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:74
+msgid "$vertex_index"
+msgstr "$vertex_index"
+
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:68
+msgid "Returns the index of the current mesh vertex."
+msgstr "現在のメッシュ頂点のインデックスを返します。"
+
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:76
+msgid "``$vertex_index`` → 9874"
+msgstr "``$vertex_index`` → 9874"
+
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:84
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:92
+msgid "$vertex_x"
+msgstr "$vertex_x"
+
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:86
+msgid "Returns the X coordinate of the current mesh vertex."
+msgstr "現在のメッシュ頂点のx座標を返します。"
+
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:94
+msgid "``$vertex_x`` → 42.12"
+msgstr "``$vertex_x`` → 42.12"
+
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:102
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:110
+msgid "$vertex_y"
+msgstr "$vertex_y"
+
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:104
+msgid "Returns the Y coordinate of the current mesh vertex."
+msgstr "現在のメッシュ頂点のy座標を返します。"
+
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:112
+msgid "``$vertex_y`` → 12.24"
+msgstr "``$vertex_y`` → 12.24"
+
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:120
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:128
+msgid "$vertex_z"
+msgstr "$vertex_z"
+
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:122
+msgid "Returns the Z value of the current mesh vertex."
+msgstr "現在のメッシュ頂点のz座標を返します。"
+
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:130
+msgid "``$vertex_z`` → 42"
+msgstr "``$vertex_z`` → 42"
+
 #: ../../docs/user_manual/expressions/functions_list.rst:760
 msgid "Operators"
 msgstr "演算子"
@@ -11757,77 +12449,803 @@ msgstr ""
 "このグループには演算子が含まれています（例えば、+、 - "
 "、\\*）。以下の数学関数のほとんどについて、入力の一つがNULLである場合は結果はNULLであることに注意してください。"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:12
+msgid "%"
+msgstr "%"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:14
+msgid "Remainder of division"
+msgstr "除算の余り"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:20
 msgid "a % b"
 msgstr "a % b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:16
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:22
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:39
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:42
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:44
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:61
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:66
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:84
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:107
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:131
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:155
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:178
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:260
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:308
+msgid "**a** - value"
+msgstr "**a** - 値"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:17
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:23
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:40
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:43
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:45
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:62
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:67
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:85
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:108
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:132
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:156
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:179
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:309
+msgid "**b** - value"
+msgstr "**b** - 値"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:25
+msgid "``5 % 4`` → 1"
+msgstr "``5 % 4`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:26
+msgid "``5 % NULL`` → NULL"
+msgstr "``5 % NULL`` → NULL"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:34
+msgid "\\*"
+msgstr "\\*"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:36
+msgid "Multiplication of two values"
+msgstr "2つの値の乗算"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:42
 msgid "a * b"
 msgstr "a * b"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:47
+msgid "``5 * 4`` → 20"
+msgstr "``5 * 4`` → 20"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:48
+msgid "``5 * NULL`` → NULL"
+msgstr "``5 * NULL`` → NULL"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:56
+msgid "\\+"
+msgstr "\\+"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:58
+msgid ""
+"Addition of two values. If one of the values is NULL the result will be "
+"NULL."
+msgstr "2つの値の加算。いずれかの値がNULLの場合、結果はNULLになります。"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:64
 msgid "a + b"
 msgstr "a + b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:69
+msgid "``5 + 4`` → 9"
+msgstr "``5 + 4`` → 9"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:70
+msgid "``5 + NULL`` → NULL"
+msgstr "``5 + NULL`` → NULL"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:71
+msgid "``'QGIS ' + 'ROCKS'`` → 'QGIS ROCKS'"
+msgstr "``'QGIS ' + 'ROCKS'`` → 'QGIS ROCKS'"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:72
+msgid ""
+"``to_datetime('2020-08-01 12:00:00') + '1 day 2 hours'`` → "
+"2020-08-02T14:00:00"
+msgstr ""
+"``to_datetime('2020-08-01 12:00:00') + '1 day 2 hours'`` → "
+"2020-08-02T14:00:00"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:776
+msgid ""
+"Further reading: :ref:`expression_function_String_concat`, "
+":ref:`expression_function_Operators_concat`"
+msgstr ""
+"参考： :ref:`expression_function_String_concat` 、 "
+":ref:`expression_function_Operators_concat`"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:6
+msgid "\\-"
+msgstr "\\-"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:8
+msgid ""
+"Subtraction of two values. If one of the values is NULL the result will be "
+"NULL."
+msgstr "2つの値の減算。いずれかの値がNULLの場合、結果はNULLになります。"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:14
 msgid "a - b"
 msgstr "a - b"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:19
+msgid "``5 - 4`` → 1"
+msgstr "``5 - 4`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:20
+msgid "``5 - NULL`` → NULL"
+msgstr "``5 - NULL`` → NULL"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:29
+msgid "/"
+msgstr "/"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:31
+msgid "Division of two values"
+msgstr "2つの値の除算"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:37
 msgid "a / b"
 msgstr "a / b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:42
+msgid "``5 / 4`` → 1.25"
+msgstr "``5 / 4`` → 1.25"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:43
+msgid "``5 / NULL`` → NULL"
+msgstr "``5 / NULL`` → NULL"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:51
+msgid "<"
+msgstr "<"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:53
+msgid ""
+"Compares two values and evaluates to 1 if the left value is less than the "
+"right value."
+msgstr "2つの値を比較し、左の値が右の値より小さい場合、1 と評価されます。"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:59
 msgid "a < b"
 msgstr "a < b"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:64
+msgid "``5 < 4`` → 0"
+msgstr "``5 < 4`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:65
+msgid "``5 < 5`` → 0"
+msgstr "``5 < 5`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:66
+msgid "``4 < 5`` → 1"
+msgstr "``4 < 5`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:74
+msgid "<="
+msgstr "<="
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:76
+msgid ""
+"Compares two values and evaluates to 1 if the left value is less or equal "
+"than the right value."
+msgstr "2つの値を比較し、左の値が右の値より小さいか等しい場合、1 と評価されます。"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:82
 msgid "a <= b"
 msgstr "a <= b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:87
+msgid "``5 <= 4`` → 0"
+msgstr "``5 <= 4`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:88
+msgid "``5 <= 5`` → 1"
+msgstr "``5 <= 5`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:89
+msgid "``4 <= 5`` → 1"
+msgstr "``4 <= 5`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:97
+msgid "<>"
+msgstr "<>"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:99
+msgid "Compares two values and evaluates to 1 if they are not equal."
+msgstr "2つの値を比較し、両者が等しくない場合、1 と評価されます。"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:105
 msgid "a <> b"
 msgstr "a <> b"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:110
+msgid "``5 <> 4`` → 1"
+msgstr "``5 <> 4`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:111
+msgid "``4 <> 4`` → 0"
+msgstr "``4 <> 4`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:112
+msgid "``5 <> NULL`` → NULL"
+msgstr "``5 <> NULL`` → NULL"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:113
+msgid "``NULL <> NULL`` → NULL"
+msgstr "``NULL <> NULL`` → NULL"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:121
+msgid "="
+msgstr "="
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:123
+msgid "Compares two values and evaluates to 1 if they are equal."
+msgstr "2つの値を比較し、両者が等しい場合、1 と評価されます。"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:129
 msgid "a = b"
 msgstr "a = b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:134
+msgid "``5 = 4`` → 0"
+msgstr "``5 = 4`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:135
+msgid "``4 = 4`` → 1"
+msgstr "``4 = 4`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:136
+msgid "``5 = NULL`` → NULL"
+msgstr "``5 = NULL`` → NULL"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:137
+msgid "``NULL = NULL`` → NULL"
+msgstr "``NULL = NULL`` → NULL"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:145
+msgid ">"
+msgstr ">"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:147
+msgid ""
+"Compares two values and evaluates to 1 if the left value is greater than the"
+" right value."
+msgstr "2つの値を比較し、左の値が右の値より大きい場合、1 と評価されます。"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:153
 msgid "a > b"
 msgstr "a > b"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:158
+msgid "``5 > 4`` → 1"
+msgstr "``5 > 4`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:159
+msgid "``5 > 5`` → 0"
+msgstr "``5 > 5`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:160
+msgid "``4 > 5`` → 0"
+msgstr "``4 > 5`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:168
+msgid ">="
+msgstr ">="
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:170
+msgid ""
+"Compares two values and evaluates to 1 if the left value is greater or equal"
+" than the right value."
+msgstr "2つの値を比較し、左の値が右の値より大きいか等しい場合、1 と評価されます。"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:176
 msgid "a >= b"
 msgstr "a >= b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:181
+msgid "``5 >= 4`` → 1"
+msgstr "``5 >= 4`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:182
+msgid "``5 >= 5`` → 1"
+msgstr "``5 >= 5`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:183
+msgid "``4 >= 5`` → 0"
+msgstr "``4 >= 5`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:191
+msgid "AND"
+msgstr "AND"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:193
+msgid "Returns 1 when condition a and b are true."
+msgstr "条件式 a と条件式 b がともに true である場合に 1 を返します。"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:199
 msgid "a AND b"
 msgstr "a AND b"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:201
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:361
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:382
+msgid "**a** - condition"
+msgstr "**a** - 条件式"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:202
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:383
+msgid "**b** - condition"
+msgstr "**b** - 条件式"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:204
+msgid "``TRUE AND TRUE`` → 1"
+msgstr "``TRUE AND TRUE`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:205
+msgid "``TRUE AND FALSE`` → 0"
+msgstr "``TRUE AND FALSE`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:206
+msgid "``4 = 2+2 AND 1 = 1`` → 1"
+msgstr "``4 = 2+2 AND 1 = 1`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:207
+msgid "``4 = 2+2 AND 1 = 2`` → 0"
+msgstr "``4 = 2+2 AND 1 = 2`` → 0"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:215
 msgid "ILIKE"
 msgstr "ILIKE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:217
+msgid ""
+"Returns 1 if the first parameter matches case-insensitive the supplied "
+"pattern. LIKE can be used instead of ILIKE to make the match case-sensitive."
+" Works with numbers also."
+msgstr ""
+"最初の引数が与えられたパターンと大文字・小文字を区別せずに一致する場合に 1 を返します。マッチングで大文字・小文字を区別する場合には、ILIKE "
+"の代わりに LIKE を使用してください。数値にも対応しています。"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:223
+msgid "string/number ILIKE pattern"
+msgstr "string/number ILIKE pattern"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:225
+msgid "**string/number** - string to search"
+msgstr "**string/number** - 検索する文字列"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:226
+msgid ""
+"**pattern** - pattern to find, you can use '%' as a wildcard, '_' as a "
+"single char and '\\\\\\\\' to escape these special characters."
+msgstr ""
+"**pattern** - 検索するパターン。 '%' をワイルドカードとして、 '_' を任意の1文字として、 '\\\\\\\\' "
+"をこれらの特殊文字のエスケープとして利用できます。"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:228
+msgid "``'A' ILIKE 'A'`` → 1"
+msgstr "``'A' ILIKE 'A'`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:229
+msgid "``'A' ILIKE 'a'`` → 1"
+msgstr "``'A' ILIKE 'a'`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:230
+msgid "``'A' ILIKE 'B'`` → 0"
+msgstr "``'A' ILIKE 'B'`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:231
+msgid "``'ABC' ILIKE 'b'`` → 0"
+msgstr "``'ABC' ILIKE 'b'`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:232
+msgid "``'ABC' ILIKE 'B'`` → 0"
+msgstr "``'ABC' ILIKE 'B'`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:233
+msgid "``'ABC' ILIKE '_b_'`` → 1"
+msgstr "``'ABC' ILIKE '_b_'`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:234
+msgid "``'ABC' ILIKE '_B_'`` → 1"
+msgstr "``'ABC' ILIKE '_B_'`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:235
+msgid "``'ABCD' ILIKE '_b_'`` → 0"
+msgstr "``'ABCD' ILIKE '_b_'`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:236
+msgid "``'ABCD' ILIKE '_B_'`` → 0"
+msgstr "``'ABCD' ILIKE '_B_'`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:237
+msgid "``'ABCD' ILIKE '_b%'`` → 1"
+msgstr "``'ABCD' ILIKE '_b%'`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:238
+msgid "``'ABCD' ILIKE '_B%'`` → 1"
+msgstr "``'ABCD' ILIKE '_B%'`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:239
+msgid "``'ABCD' ILIKE '%b%'`` → 1"
+msgstr "``'ABCD' ILIKE '%b%'`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:240
+msgid "``'ABCD' ILIKE '%B%'`` → 1"
+msgstr "``'ABCD' ILIKE '%B%'`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:241
+msgid "``'ABCD%' ILIKE 'abcd\\\\%'`` → 1"
+msgstr "``'ABCD%' ILIKE 'abcd\\\\%'`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:242
+msgid "``'ABCD' ILIKE '%B\\\\%'`` → 0"
+msgstr "``'ABCD' ILIKE '%B\\\\%'`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:250
+msgid "IN"
+msgstr "IN"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:252
+msgid "Returns 1 if value is found within a list of values."
+msgstr "リストの中に値が見つかった場合に 1 を返します。"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:258
+msgid "a IN b"
+msgstr "a IN b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:261
+msgid "**b** - list of values"
+msgstr "**b** - 値のリスト"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:263
+msgid "``'A' IN ('A','B')`` → 1"
+msgstr "``'A' IN ('A','B')`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:264
+msgid "``'A' IN ('C','B')`` → 0"
+msgstr "``'A' IN ('C','B')`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:272
+msgid "IS"
+msgstr "IS"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:274
+msgid "Returns 1 if a is the same as b."
+msgstr "a と b が同じ場合に 1 を返します。"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:280
 msgid "a IS b"
 msgstr "a IS b"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:282
+msgid "**a** - any value"
+msgstr "**a** - 任意の値"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:283
+msgid "**b** - any value"
+msgstr "**b** - 任意の値"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:285
+msgid "``'A' IS 'A'`` → 1"
+msgstr "``'A' IS 'A'`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:286
+msgid "``'A' IS 'a'`` → 0"
+msgstr "``'A' IS 'a'`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:287
+msgid "``4 IS 4`` → 1"
+msgstr "``4 IS 4`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:288
+msgid "``4 IS 2+2`` → 1"
+msgstr "``4 IS 2+2`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:289
+msgid "``4 IS 2`` → 0"
+msgstr "``4 IS 2`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:290
+msgid "``$geometry IS NULL`` → 0, if your geometry is not NULL"
+msgstr "``$geometry IS NULL`` → ジオメトリが NULL でない場合は 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:298
+msgid "IS NOT"
+msgstr "IS NOT"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:300
+msgid "Returns 1 if a is not the same as b."
+msgstr "a と b が同じではない場合に 1 を返します。"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:306
+msgid "a IS NOT b"
+msgstr "a IS NOT b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:311
+msgid "``'a' IS NOT 'b'`` → 1"
+msgstr "``'a' IS NOT 'b'`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:312
+msgid "``'a' IS NOT 'a'`` → 0"
+msgstr "``'a' IS NOT 'a'`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:313
+msgid "``4 IS NOT 2+2`` → 0"
+msgstr "``4 IS NOT 2+2`` → 0"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:321
 msgid "LIKE"
 msgstr "LIKE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:323
+msgid ""
+"Returns 1 if the first parameter matches the supplied pattern. Works with "
+"numbers also."
+msgstr "最初の引数が与えられたパターンと一致する場合に 1 を返します。数値にも対応しています。"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:329
+msgid "string/number LIKE pattern"
+msgstr "string/number LIKE pattern"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:331
+msgid "**string/number** - value"
+msgstr "**string/number** - 値"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:332
+msgid ""
+"**pattern** - pattern to compare value with, you can use '%' as a wildcard, "
+"'_' as a single char and '\\\\\\\\' to escape these special characters."
+msgstr ""
+"**pattern** - 値と比較するパターン。 '%' をワイルドカードとして、 '_' を任意の1文字として、 '\\\\\\\\' "
+"をこれらの特殊文字のエスケープとして利用できます。"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:334
+msgid "``'A' LIKE 'A'`` → 1"
+msgstr "``'A' LIKE 'A'`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:335
+msgid "``'A' LIKE 'a'`` → 0"
+msgstr "``'A' LIKE 'a'`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:336
+msgid "``'A' LIKE 'B'`` → 0"
+msgstr "``'A' LIKE 'B'`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:337
+msgid "``'ABC' LIKE 'B'`` → 0"
+msgstr "``'ABC' LIKE 'B'`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:338
+msgid "``'ABC' LIKE '_B_'`` → 1"
+msgstr "``'ABC' LIKE '_B_'`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:339
+msgid "``'ABCD' LIKE '_B_'`` → 0"
+msgstr "``'ABCD' LIKE '_B_'`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:340
+msgid "``'ABCD' LIKE '_B%'`` → 1"
+msgstr "``'ABCD' LIKE '_B%'`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:341
+msgid "``'ABCD' LIKE '%B%'`` → 1"
+msgstr "``'ABCD' LIKE '%B%'`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:342
+msgid "``'1%' LIKE '1\\\\%'`` → 1"
+msgstr "``'1%' LIKE '1\\\\%'`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:343
+msgid "``'1_' LIKE '1\\\\%'`` → 0"
+msgstr "``'1_' LIKE '1\\\\%'`` → 0"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:351
 msgid "NOT"
 msgstr "NOT"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:353
+msgid "Negates a condition."
+msgstr "条件式の否定を返します。"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:359
+msgid "NOT a"
+msgstr "NOT a"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:363
+msgid "``NOT 1`` → 0"
+msgstr "``NOT 1`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:364
+msgid "``NOT 0`` → 1"
+msgstr "``NOT 0`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:372
+msgid "OR"
+msgstr "OR"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:374
+msgid "Returns 1 when condition a or b is true."
+msgstr "条件式 a、条件式 b のいずれかが true である場合に 1 を返します。"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:380
 msgid "a OR b"
 msgstr "a OR b"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:385
+msgid "``4 = 2+2 OR 1 = 1`` → 1"
+msgstr "``4 = 2+2 OR 1 = 1`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:386
+msgid "``4 = 2+2 OR 1 = 2`` → 1"
+msgstr "``4 = 2+2 OR 1 = 2`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:387
+msgid "``4 = 2   OR 1 = 2`` → 0"
+msgstr "``4 = 2   OR 1 = 2`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:395
+msgid "[]"
+msgstr "[]"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:397
+msgid "Index operator. Returns an element from an array or map value."
+msgstr "インデックス演算子です。配列の要素やマップ型の値を返します。"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:403
+msgid "[index]"
+msgstr "[index]"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:405
+msgid "**index** - array index or map key value"
+msgstr "**index** - 配列のインデックスまたはマップ型のキー"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:407
+msgid "``array(1,2,3)[0]`` → 1"
+msgstr "``array(1,2,3)[0]`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:408
+msgid "``array(1,2,3)[2]`` → 3"
+msgstr "``array(1,2,3)[2]`` → 3"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:409
+msgid "``array(1,2,3)[-1]`` → 3"
+msgstr "``array(1,2,3)[-1]`` → 3"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:410
+msgid "``map('a',1,'b',2)['a']`` → 1"
+msgstr "``map('a',1,'b',2)['a']`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:411
+msgid "``map('a',1,'b',2)['b']`` → 2"
+msgstr "``map('a',1,'b',2)['b']`` → 2"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:783
+msgid ""
+"Further reading: :ref:`expression_function_Arrays_array_get`, "
+":ref:`expression_function_Maps_map_get`"
+msgstr ""
+"参考： :ref:`expression_function_Arrays_array_get` 、 "
+":ref:`expression_function_Maps_map_get`"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:6
+msgid "^"
+msgstr "^"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:8
+msgid "Power of two values."
+msgstr "2つの値の累乗。"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:14
 msgid "a ^ b"
 msgstr "a ^ b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:19
+msgid "``5 ^ 4`` → 625"
+msgstr "``5 ^ 4`` → 625"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:20
+msgid "``5 ^ NULL`` → NULL"
+msgstr "``5 ^ NULL`` → NULL"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:28
+msgid "\\||"
+msgstr "\\||"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:30
+msgid "Joins two values together into a string."
+msgstr "2つの値を連結して文字列にします。"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:34
+msgid ""
+"If one of the values is NULL the result will be NULL. See the CONCAT "
+"function for a different behavior."
+msgstr "いずれかの値がNULLの場合、結果はNULLになります。動作が異なるconcat 関数についても参照してください。"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:40
+msgid "a || b"
+msgstr "a || b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:45
+msgid "``'Here' || ' and ' || 'there'`` → 'Here and there'"
+msgstr "``'Here' || ' and ' || 'there'`` → 'Here and there'"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:46
+msgid "``'Nothing' || NULL`` → NULL"
+msgstr "``'Nothing' || NULL`` → NULL"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:47
+msgid "``'Dia: ' || \"Diameter\"`` → 'Dia: 25'"
+msgstr "``'Dia: ' || \"Diameter\"`` → 'Dia: 25'"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:48
+msgid "``1 || 2`` → '12'"
+msgstr "``1 || 2`` → '12'"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:790
+msgid ""
+"Further reading: :ref:`expression_function_String_concat`, "
+":ref:`expression_function_Operators_plus`"
+msgstr ""
+"参考： :ref:`expression_function_String_concat` 、 "
+":ref:`expression_function_Operators_plus`"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:6
+msgid "~"
+msgstr "~"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:8
+msgid ""
+"Performs a regular expression match on a string value. Backslash characters "
+"must be double escaped (e.g., \"\\\\\\\\s\" to match a white space "
+"character)."
+msgstr ""
+"文字列に対して正規表現のマッチングを実行します。バックスラッシュ文字は二重にエスケープする必要があります（例：空白文字に一致させるには "
+"\"\\\\\\\\s\" ）"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:14
+msgid "string ~ regex"
+msgstr "string ~ regex"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:16
+msgid "**string** - A string value"
+msgstr "**string** - 文字列"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:17
+msgid "**regex** - A regular expression. Slashes must be escaped, eg \\\\\\\\d."
+msgstr "**regex** - 正規表現。バックスラッシュにはエスケープが必要です。例： \\\\\\\\d."
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:19
+msgid "``'hello' ~ 'll'`` → 1"
+msgstr "``'hello' ~ 'll'`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:20
+msgid "``'hello' ~ '^ll'`` → 0"
+msgstr "``'hello' ~ '^ll'`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:21
+msgid "``'hello' ~ 'llo$'`` → 1"
+msgstr "``'hello' ~ 'llo$'`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:22
+msgid "``'abc123' ~ '\\\\d+'`` → 1"
+msgstr "``'abc123' ~ '\\\\d+'`` → 1"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:797
+msgid "Further reading: :ref:`expression_function_String_regexp_match`"
+msgstr "参考： :ref:`expression_function_String_regexp_match`"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:806
 msgid "Processing Functions"
@@ -12093,7 +13511,7 @@ msgstr "指定された地物の表示式を返します。式はデフォルト
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:28
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:84
 msgid "**No parameters**"
-msgstr "**引数なしの場合**"
+msgstr "**引数なしバージョン**"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:30
 msgid ""
@@ -12114,7 +13532,7 @@ msgstr "``display_expression()`` → 現在のレイヤの現在の地物の表�
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:41
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:97
 msgid "**One 'feature' parameter**"
-msgstr "**引数が地物1つの場合**"
+msgstr "**引数が地物1つのバージョン**"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:43
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:99
@@ -12143,7 +13561,7 @@ msgstr "``display_expression(@atlas_feature)`` → 現在の地図帳地物の�
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:56
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:112
 msgid "**Layer and feature parameters**"
-msgstr "**レイヤと地物を引数にとる場合**"
+msgstr "**レイヤと地物の引数バージョン**"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:58
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:114
@@ -12302,9 +13720,32 @@ msgstr "is_selected(feature)"
 msgid "**feature** - The feature which should be checked for selection."
 msgstr "**feature** - 選択されているかどうかを確認したい地物"
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:53
+msgid ""
+"``is_selected(@atlas_feature)`` → True if the current atlas feature is "
+"selected."
+msgstr "``is_selected(@atlas_feature)`` → 現在の地図帳地物が選択されている場合、true"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:54
+msgid ""
+"``is_selected(get_feature('streets', 'name', 'Main St.')))`` → True if the "
+"unique named \"Main St.\" feature on the active \"streets\" layer is "
+"selected."
+msgstr ""
+"``is_selected(get_feature('streets', 'name', 'Main St.')))`` →アクティブな "
+"\"streets\" レイヤで地物に一意に名前が付けられ、その中で \"Main St.\" 地物が選択されている場合に true"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:55
+msgid ""
+"``is_selected(get_feature_by_id('streets', 1))`` → True if the feature with "
+"the id 1 on the active \"streets\" layer is selected."
+msgstr ""
+"``is_selected(get_feature_by_id('streets', 1))`` → アクティブな \"streets\" "
+"レイヤでid=1 の地物が選択されている場合に true"
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:58
 msgid "**Two parameters**"
-msgstr "**引数が2個の場合**"
+msgstr "**引数が2つのバージョン**"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:60
 msgid ""
@@ -12613,9 +14054,35 @@ msgstr "参考： :ref:`project_data_source_properties` 、 :ref:`vector_relatio
 msgid "uuid"
 msgstr "uuid"
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:8
+msgid ""
+"Generates a Universally Unique Identifier (UUID) for each row using the Qt "
+"`QUuid::createUuid <https://doc.qt.io/qt-5/quuid.html#createUuid>`_ method."
+msgstr ""
+"Qtの `QUuid::createUuid <https://doc.qt.io/qt-5/quuid.html#createUuid>`_ "
+"メソッドを使用して、テーブルの各行のUUID（Universally Unique Identifier）を生成します。"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:14
+msgid "uuid([format='WithBraces'])"
+msgstr "uuid([format='WithBraces'])"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:18
+msgid ""
+"**format** - The format, as the UUID will be formatted. 'WithBraces', "
+"'WithoutBraces' or 'Id128'."
+msgstr "**format** - UUIDのフォーマット。 'WithBraces' 、 'WithoutBraces' 、または 'Id128'"
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:20
 msgid "``uuid()`` → '{0bd2f60f-f157-4a6d-96af-d4ba4cb366a1}'"
 msgstr "``uuid()`` → '{0bd2f60f-f157-4a6d-96af-d4ba4cb366a1}'"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:21
+msgid "``uuid('WithoutBraces')`` → '0bd2f60f-f157-4a6d-96af-d4ba4cb366a1'"
+msgstr "``uuid('WithoutBraces')`` → '0bd2f60f-f157-4a6d-96af-d4ba4cb366a1'"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:22
+msgid "``uuid('Id128')`` → '0bd2f60ff1574a6d96afd4ba4cb366a1'"
+msgstr "``uuid('Id128')`` → '0bd2f60ff1574a6d96afd4ba4cb366a1'"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:874
 msgid "Relations"
@@ -12748,6 +14215,14 @@ msgstr ""
 "引数のどれかがNULL値の場合、 ``||`` や ``+`` はNULLを返します。NULL値の有無に関わらず、その他の引数の結合を返したい場合には、"
 " ``concat`` 関数を使用するのが良いでしょう::"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:919
+msgid ""
+"further reading: :ref:`expression_function_Operators_concat`, "
+":ref:`expression_function_Operators_plus`"
+msgstr ""
+"参考： :ref:`expression_function_Operators_concat` 、 "
+":ref:`expression_function_Operators_plus`"
+
 #: ../../docs/user_manual/expressions/expression_help/String.rst:6
 msgid "format"
 msgstr "format"
@@ -12760,6 +14235,16 @@ msgstr "指定された引数を用いて文字列をフォーマットします
 msgid "format(string, arg1, arg2, ...)"
 msgstr "format(string, arg1, arg2, ...)"
 
+#: ../../docs/user_manual/expressions/expression_help/String.rst:16
+msgid ""
+"**string** - A string with placeholders %1, %2, etc., for the arguments. "
+"Placeholders can be repeated. The lowest numbered placeholder is replaced by"
+" arg1, the next by arg2, etc."
+msgstr ""
+"**string** - 引数のプレースホルダを含む文字列。プレースホルダには、 %1 、 %2 "
+"などを使います。プレースホルダは繰り返し使用できます。最小番号のプレースホルダは arg1 で置き換えられ、次に小さい番号は arg2 "
+"で、以下同様です。"
+
 #: ../../docs/user_manual/expressions/expression_help/String.rst:17
 msgid "**arg** - any type. Any number of arguments."
 msgstr "**arg** - 任意の型で任意の数の引数"
@@ -12768,9 +14253,31 @@ msgstr "**arg** - 任意の型で任意の数の引数"
 msgid "``format('This %1 a %2','is', 'test')`` → 'This is a test'"
 msgstr "``format('This %1 a %2','is', 'test')`` → 'This is a test'"
 
+#: ../../docs/user_manual/expressions/expression_help/String.rst:20
+msgid ""
+"``format('This is %2','a bit unexpected but 2 is lowest number in "
+"string','normal')`` → 'This is a bit unexpected but 2 is lowest number in "
+"string'"
+msgstr ""
+"``format('This is %2','a bit unexpected but 2 is lowest number in "
+"string','normal')`` → 'This is a bit unexpected but 2 is lowest number in "
+"string'"
+
 #: ../../docs/user_manual/expressions/expression_help/String.rst:95
 msgid "format_number"
 msgstr "format_number"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:97
+msgid ""
+"Returns a number formatted with the locale separator for thousands. By "
+"default the current QGIS user locale is used. Also truncates the decimal "
+"places to the number of supplied places."
+msgstr ""
+"3桁毎にロケールの桁区切り文字で区切られた数字を返します。デフォルトでは、現在のQGISユーザーのロケールが使用されます。また、指定された桁数で小数点以下の桁数をそろえます。"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:103
+msgid "format_number(number, [places=0], [language])"
+msgstr "format_number(number, [places=0], [language])"
 
 #: ../../docs/user_manual/expressions/expression_help/String.rst:107
 msgid "**number** - number to be formatted"
@@ -12781,6 +14288,25 @@ msgid ""
 "**places** - integer representing the number of decimal places to truncate "
 "the string to."
 msgstr "**places** - 小数点以下の桁数を表す整数"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:109
+msgid ""
+"**language** - language (lowercase, two- or three-letter, `ISO 639 language "
+"code <https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes>`_) used to "
+"format the number into a string. By default the current QGIS user locale is "
+"used."
+msgstr ""
+"**language** - 数値を文字列にフォーマットする際に使用する言語（2文字または3文字の小文字、 `ISO 639 言語名コード "
+"<https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes>`_ "
+"）。デフォルトでは現在のQGISユーザーのロケールを使用します"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:111
+msgid ""
+"``format_number(10000000.332,2)`` → '10,000,000.33' if e.g. the current "
+"locale is an English variant"
+msgstr ""
+"``format_number(10000000.332,2)`` → '10,000,000.33' （例えば現在のロケールが English "
+"版の場合の結果）"
 
 #: ../../docs/user_manual/expressions/expression_help/String.rst:112
 msgid "``format_number(10000000.332,2,'fr')`` → '10 000 000,33'"
@@ -12994,6 +14520,12 @@ msgstr ""
 msgid "``replace('QGIS',array('Q','S'),'')`` → 'GI'"
 msgstr "``replace('QGIS',array('Q','S'),'')`` → 'GI'"
 
+#: ../../docs/user_manual/expressions/expression_help/String.rst:315
+msgid ""
+"Returns a string with the supplied map keys replaced by paired values. "
+"Longer map keys are evaluated first."
+msgstr "与えられたマップ型を使用して、キーを対となる値で置き換えた文字列を返します。より長いキー文字列が最初に評価されます。"
+
 #: ../../docs/user_manual/expressions/expression_help/String.rst:321
 msgid "replace(string, map)"
 msgstr "replace(string, map)"
@@ -13005,6 +14537,12 @@ msgid ""
 msgstr ""
 "``replace('APP SHOULD ROCK',map('APP','QGIS','SHOULD','DOES'))`` → 'QGIS "
 "DOES ROCK'"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:327
+msgid ""
+"``replace('forty two',map('for','4','two','2','forty two','42'))`` → '42'"
+msgstr ""
+"``replace('forty two',map('for','4','two','2','forty two','42'))`` → '42'"
 
 #: ../../docs/user_manual/expressions/expression_help/String.rst:335
 msgid "right"
@@ -13225,7 +14763,7 @@ msgid ""
 "number represents the minimum number of characters to wrap."
 msgstr ""
 "**wrap_length** - 整数。 wrap_length "
-"が正の数値の場合、理想的な位置行あたりの最大文字数を意味します。負の値の場合、この数字は改行する最小文字数を意味します。"
+"が正の数値の場合、理想的な一行あたりの最大文字数を意味します。負の値の場合、この数字は改行する最小文字数を意味します。"
 
 #: ../../docs/user_manual/expressions/expression_help/String.rst:524
 msgid ""
@@ -13267,9 +14805,17 @@ msgstr ""
 msgid "from the |expressionSelect| :sup:`Select by expression` dialog"
 msgstr "|expressionSelect| :sup:`式による地物選択` ダイアログから使用"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:1175
+msgid "expressionSelect"
+msgstr "expressionSelect"
+
 #: ../../docs/user_manual/expressions/functions_list.rst:943
 msgid "from the |calculateField| :sup:`Field calculator` dialog"
 msgstr "|calculateField| :sup:`フィールド計算機` ダイアログから使用"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1173
+msgid "calculateField"
+msgstr "calculateField"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:944
 msgid "from the layer properties dialog"
@@ -13540,7 +15086,7 @@ msgstr "geometry_part_count"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "The number of parts in rendered feature's geometry"
-msgstr "レンダリングされる地物のジオメトリの部分の数"
+msgstr "レンダリングされる地物のジオメトリパートの数"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "geometry_part_num"
@@ -13548,7 +15094,7 @@ msgstr "geometry_part_num"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "The current geometry part number for feature being rendered"
-msgstr "レンダリングされている地物の現在のジオメトリ部分の番号"
+msgstr "レンダリングされる地物の現在のジオメトリパートの番号"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "geometry_point_count"
@@ -13565,6 +15111,16 @@ msgstr "geometry_point_num"
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "The current point number in the rendered geometry's part"
 msgstr "レンダリングされるジオメトリ部分の現在のポイントの番号"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid "geometry_ring_num"
+msgstr "geometry_ring_num"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid ""
+"Current geometry ring number for feature being rendered (for polygon "
+"features only). The exterior ring has a value of 0."
+msgstr "レンダリングされる地物の現在のジオメトリのリング番号（ポリゴン地物のみ）。外側リングの番号は0です。"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "grid_axis"
@@ -13606,6 +15162,14 @@ msgstr "layer"
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "The current layer"
 msgstr "現在のレイヤ"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid "layer_crs |318|"
+msgstr "layer_crs |318|"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid "The Coordinate Reference System Authority ID of the current layer"
+msgstr "現在のレイヤのCRSのAuthority ID"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "layer_id"
@@ -13676,8 +15240,31 @@ msgid "layout_pageheight"
 msgstr "layout_pageheight"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid ""
+"The active page height in the layout (in mm for standard paper sizes, or "
+"whatever unit was used for custom paper size)"
+msgstr "レイアウトのアクティブなページの高さ（標準のページサイズの場合はmm単位、カスタムのページサイズの場合は使用されている単位）"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid "layout_pageoffsets"
+msgstr "layout_pageoffsets"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid ""
+"Array of Y coordinate of the top of each page. Allows to dynamically "
+"position items on pages in a context where page sizes may change"
+msgstr ""
+"各ページの上端のY座標を要素とする配列。ページのサイズが変化することがある場合に、この変数を使用することでページ上にアイテムを動的に配置できます。"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "layout_pagewidth"
 msgstr "layout_pagewidth"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid ""
+"The active page width in the layout (in mm for standard paper sizes, or "
+"whatever unit was used for custom paper size)"
+msgstr "レイアウトのアクティブなページの幅（標準のページサイズの場合はmm単位、カスタムのページサイズの場合は使用されている単位）"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "legend_column_count"
@@ -13778,6 +15365,16 @@ msgstr "map_crs_proj4"
 msgid ""
 "The Proj4 definition of the Coordinate reference system of the current map"
 msgstr "現在の地図の座標参照系のproj4定義"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid "map_crs_projection |320|"
+msgstr "map_crs_projection |320|"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid ""
+"The descriptive name of the projection method used by the Coordinate "
+"reference system of the map (e.g. 'Albers Equal Area')"
+msgstr "地図のCRSで使用される投影法の記述名（例： 'Albers Equal Area' ）"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "map_crs_wkt"
@@ -14230,6 +15827,16 @@ msgid "The current scale bar distance value"
 msgstr "現在のスケールバーの距離の値"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid "selected_file_path"
+msgstr "selected_file_path"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid ""
+"Selected file path from file widget selector when uploading a file with an "
+"external storage system"
+msgstr "外部ストレージシステムにファイルをアップロードする際に、ファイルセレクタウィジェットによって選択されたファイルのパス"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "symbol_angle"
 msgstr "symbol_angle"
 
@@ -14331,6 +15938,20 @@ msgid "The current value"
 msgstr "現在の値"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid "vector_tile_zoom"
+msgstr "vector_tile_zoom"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid ""
+"Exact vector tile zoom level of the map that is being rendered (derived from"
+" the current map scale). Normally in interval [0, 20]. Unlike @zoom_level, "
+"this variable is a floating point value which can be used to interpolate "
+"values between two integer zoom levels."
+msgstr ""
+"レンダリングされている地図のベクトルタイルの正確なズームレベル（現在の地図の縮尺から導出される）。通常は [0, 20] "
+"の間の値。@zoom_level とは異なり、この変数は浮動小数点値であり、2つの整数のズームレベルの間の値を補間するために使用できます。"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid ""
 "Allows setting a variable for usage within an expression and avoid "
 "recalculating the same value repeatedly"
@@ -14339,6 +15960,12 @@ msgstr "式の中で使用するための変数を設定することで、同じ
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "zoom_level"
 msgstr "zoom_level"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid ""
+"Vector tile zoom level of the map that is being rendered (derived from the "
+"current map scale). Normally in interval [0, 20]."
+msgstr "レンダリングされている地図のベクトルタイルのズームレベル（現在の地図の縮尺から導出される）。通常は [0, 20] の間の値。"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1130
 msgid "Return the X coordinate of a map item center in layout::"
