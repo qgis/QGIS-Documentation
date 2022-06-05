@@ -2,26 +2,29 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2022
+# Andrés Betancourt, 2022
+# Abigaíl García, 2022
+# Eric Armijo, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 12:03+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"POT-Creation-Date: 2022-04-04 11:11+0000\n"
+"PO-Revision-Date: 2022-03-14 05:12+0000\n"
+"Last-Translator: Eric Armijo, 2022\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:5
 msgid "Working with Mesh Data"
@@ -34,23 +37,23 @@ msgstr "Qué es una malla?"
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:15
 msgid ""
 "A mesh is an unstructured grid usually with temporal and other components. "
-"The spatial component contains a collection of vertices, edges and faces in "
-"2D or 3D space:"
+"The spatial component contains a collection of vertices, edges and/or faces,"
+" in 2D or 3D space:"
 msgstr ""
-"Una malla es una cuadricula no estructurada que usualmente incluye "
-"componente temporales y otros. El componente espacial contiene una colección"
-" de vértices, bordes y facetas en un espacio 2D o 3D. "
+"Una malla es una cuadrícula no estructurada generalmente con componentes "
+"temporales y de otro tipo. El componente espacial contiene una colección de "
+"vértices, aristas y caras en el espacio 2D o 3D:"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:19
 msgid ""
-"**vertices** - XY(Z) points (in the layer's coordinate reference system)"
+"**vertices** - XY(Z) points (in the layer's coordinate reference system)"
 msgstr ""
 "**vértices** - puntos XY(Z) (en el sistema de referencia de coordenadas de "
 "la capa)"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:20
-msgid "**edges** - connect pairs of vertices"
-msgstr "**segmento**- formado por un par de vértices conectados "
+msgid "**edges** - connect pairs of vertices"
+msgstr "**bordes** - conecta pares de vértices"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:21
 msgid ""
@@ -61,17 +64,52 @@ msgstr ""
 "cerrada - tipicamente un triángulo o un cuadrilátero (cuadros), raramente "
 "polígonos con mas vértices"
 
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:24
+msgid ""
+"Relying on the above, mesh layers can thus have different types of "
+"structure:"
+msgstr ""
+"Basándose en lo anterior, las capas de malla pueden tener diferentes tipos "
+"de estructura:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:26
+msgid ""
+"1D Meshes: consist of vertices and edges. An edge connects two vertices and "
+"can have assigned data (scalars or vectors) on it. The 1D mesh network can "
+"be for example used for modelling of an urban drainage system."
+msgstr ""
+"Mallas 1D: constan de vértices y aristas. Un borde conecta dos vértices y "
+"puede tener datos asignados (escalares o vectores). La red de malla 1D se "
+"puede utilizar, por ejemplo, para modelar un sistema de drenaje urbano."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:29
+msgid ""
+"2D meshes: consist of faces with triangles, regular or unstructured quads."
+msgstr ""
+"Mallas 2D: consisten en caras con triángulos, cuadriláteros regulares o no "
+"estructurados."
+
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:30
+msgid ""
+"3D layered meshes: consist of multiple stacked 2D unstructured meshes each "
+"extruded in the vertical direction (levels) by means of a vertical "
+"coordinate. The vertices and faces have the same topology in each vertical "
+"level. The mesh definition (vertical level extrusion) could in general "
+"change in time. The data is usually defined in volume centres or by some "
+"parametric function."
+msgstr ""
+"Mallas en capas 3D: consisten en múltiples mallas 2D no estructuradas "
+"apiladas, cada una extruida en la dirección vertical (niveles) por medio de "
+"una coordenada vertical. Los vértices y las caras tienen la misma topología "
+"en cada nivel vertical. La definición de malla (extrusión de nivel vertical)"
+" podría, en general, cambiar con el tiempo. Los datos suelen estar definidos"
+" en centros de volumen o por alguna función paramétrica."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:41
 msgid "Different mesh types"
 msgstr "Diferentes tipos de Malla"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:32
-msgid "QGIS can currently render mesh data using triangles or regular quads."
-msgstr ""
-"QGIS puede representar actualmente datos de malla usando triángulos o "
-"cuadrados regulares. "
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:34
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:43
 msgid ""
 "Mesh provides information about the spatial structure. In addition, the mesh"
 " can have datasets (groups) that assign a value to every vertex. For "
@@ -83,11 +121,11 @@ msgstr ""
 " a cada vértice. Por ejemplo, se puede tener una malla triangular con "
 "vértices numerados como se muestra en la imagen abajo:"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:43
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:52
 msgid "Triangular grid with numbered vertices"
 msgstr "Malla triangular con vértices numerados"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:45
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:54
 msgid ""
 "Each vertex can store different datasets (typically multiple quantities), "
 "and those datasets can also have a temporal dimension. Thus, a single file "
@@ -98,7 +136,7 @@ msgstr ""
 "tambien una dimension temporal. Así, un solo achivo puede contener múltiples"
 " conjuntos de datos."
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:49
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:58
 msgid ""
 "The following table gives an idea about the information that can be stored "
 "in mesh datasets. Table columns represent indices of mesh vertices, each row"
@@ -113,7 +151,7 @@ msgstr ""
 "diferente. En este caso, se almacena velocidad del viento a 10 metros en "
 "momentos determinados (t1,t2,t3).   "
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:55
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:64
 msgid ""
 "In a similar way, the mesh dataset can also store vector values for each "
 "vertex. For example, wind direction vector at the given time stamps:"
@@ -122,128 +160,128 @@ msgstr ""
 " vectores para cada vértice. Por ejemplo, vectores de dirección del viento "
 "en tiempos dados: "
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:59
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:68
 msgid "10 metre wind"
 msgstr "Viento a 10 metros"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:59
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:68
 msgid "1"
 msgstr "1"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:59
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:68
 msgid "2"
 msgstr "2"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:59
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:68
 msgid "3"
 msgstr "3"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:59
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:61
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:62
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:63
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:64
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:65
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:66
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:67
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:68
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:70
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:71
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:72
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:73
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:74
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:75
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:76
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:77
 msgid "..."
 msgstr "..."
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:61
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:70
 msgid "10 metre speed at time=t1"
 msgstr "Velocidad a 10 metros en tiempo t=t1"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:61
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:63
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:70
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:72
 msgid "17251"
 msgstr "17251"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:61
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:70
 msgid "24918"
 msgstr "24918"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:61
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:70
 msgid "32858"
 msgstr "32858"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:62
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:71
 msgid "10 metre speed at time=t2"
 msgstr "Velocidad a 10 metros en tiempo  t=t2"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:62
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:71
 msgid "19168"
 msgstr "19168"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:62
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:71
 msgid "23001"
 msgstr "23001"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:62
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:71
 msgid "36418"
 msgstr "36418"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:63
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:72
 msgid "10 metre speed at time=t3"
 msgstr "Velocidad a 10 metros en tiempo t=t3"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:63
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:72
 msgid "21085"
 msgstr "21085"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:63
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:72
 msgid "30668"
 msgstr "30668"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:65
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:74
 msgid "10m wind direction time=t1"
 msgstr "Dirección de viento a 10 metros en tiempo t=t1"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:65
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:74
 msgid "[20,2]"
 msgstr "[20,2]"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:65
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:74
 msgid "[20,3]"
 msgstr "[20,3]"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:65
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:74
 msgid "[20,4.5]"
 msgstr "[20,4.5]"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:66
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:75
 msgid "10m wind direction time=t2"
 msgstr "dirección del viento a 10m en tiempo=t2"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:66
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:75
 msgid "[21,3]"
 msgstr "[21,3]"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:66
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:75
 msgid "[21,4]"
 msgstr "[21,4]"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:66
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:75
 msgid "[21,5.5]"
 msgstr "[21,5.5]"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:67
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:76
 msgid "10m wind direction time=t3"
 msgstr "dirección del viento a 10 metros en tiempo=t3"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:67
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:76
 msgid "[22,4]"
 msgstr "[22,4]"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:67
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:76
 msgid "[22,5]"
 msgstr "[22,5]"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:67
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:76
 msgid "[22,6.5]"
 msgstr "[22,6.5]"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:71
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:80
 msgid ""
 "We can visualize the data by assigning colors to values (similarly to how it"
 " is done with :ref:`Singleband pseudocolor <label_colormaptab>` raster "
@@ -260,64 +298,29 @@ msgstr ""
 "viento). Para tales cantidades es deseable desplegar flechas indicando las "
 "direcciones."
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:83
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:92
 msgid "Possible visualisation of mesh data"
 msgstr "Posible visualización de Datos de Malla"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:88
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:97
 msgid "Supported formats"
 msgstr "Formatos soportados"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:90
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:99
 msgid ""
 "QGIS accesses mesh data using the `MDAL drivers "
-"<https://github.com/lutraconsulting/MDAL>`_. Hence, the natively supported "
-"formats are:"
+"<https://github.com/lutraconsulting/MDAL>`_, and natively supports a "
+"`variety of formats <https://github.com/lutraconsulting/MDAL#supported-"
+"formats>`_. Whether QGIS can edit a mesh layer depends on the format and the"
+" mesh structure type."
 msgstr ""
-"QGIS accede a los datos de malla utilizando los `controladored de MDAL "
-"<https://github.com/lutraconsulting/MDAL>`_. Por tanto, los formatos "
-"soportados de forma nativa son:"
+"QGIS accede a los datos de la malla utilizando  `MDAL drivers "
+"<https://github.com/lutraconsulting/MDAL>`_ y admite de forma nativa una "
+"`variety of formats <https://github.com/lutraconsulting/MDAL#supported-"
+"formats>`_. Si QGIS puede editar una capa de malla depende del formato y el "
+"tipo de estructura de malla."
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:93
-msgid "``NetCDF``: Generic format for scientific data"
-msgstr "``NetCDF``: Formato genérico para datos científicos"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:94
-msgid "``GRIB``: Format commonly used in meteorology"
-msgstr "``GRIB``: Formato comúnmente usado en metereología"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:95
-msgid ""
-"``XMDF``: As an example, hydraulic outputs from TUFLOW modelling package"
-msgstr ""
-"``XMDF``:  Formato de resultado de ciertos paquetes de modelado hidráulico, "
-"por ejemplo, TUFLOW"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:96
-msgid ""
-"``DAT``: Outputs of various hydrodynamic modelling packages (e.g. BASEMENT, "
-"HYDRO_AS-2D, TUFLOW)"
-msgstr ""
-"``DAT``: Formato de resultado de varios paquetes de modelado hidrodinámico "
-"(por ejemplo, BASEMENT, HYDRO_AS-2D, TUFLOW)"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:97
-msgid ""
-"``3Di``: 3Di modelling package format based on Climate and Forecast "
-"Conventions (http://cfconventions.org/)"
-msgstr ""
-"``3Di``: Formato convencional en modelado del clima y pronóstico "
-"(http://cfconventions.org/)"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:98
-msgid ""
-"Some examples of mesh datasets can be found at "
-"https://apps.ecmwf.int/datasets/data/interim-full-daily/levtype=sfc/"
-msgstr ""
-"Algunos ejemplos de conjunto de datos tipo malla pueden encontrarse en "
-"https://apps.ecmwf.int/datasets/data/interim-full-daily/levtype=sfc/"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:101
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:104
 msgid ""
 "To load a mesh dataset into QGIS, use the |addMeshLayer| :guilabel:`Mesh` "
 "tab in the :guilabel:`Data Source Manager` dialog. Read :ref:`mesh_loading` "
@@ -327,367 +330,1341 @@ msgstr ""
 "|addMeshLayer| :guilabel:`Mesh` en el diálogo :guilabel:`Data Source "
 "Manager`. Lea :ref:`mesh_loading` para mas detalles."
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:109
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:646
+msgid "addMeshLayer"
+msgstr "addMeshLayer"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:112
 msgid "Mesh Dataset Properties"
 msgstr "Propiedades del Conjunto de Datos tipo Malla "
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:114
-msgid "Information Properties"
-msgstr "Propiedades de información"
+msgid ""
+"The :guilabel:`Layer Properties` dialog for a mesh layer provides general "
+"settings to manage dataset groups of the layer and their rendering (active "
+"dataset groups, symbology, 2D and 3D rendering). It also provides "
+"information about the layer."
+msgstr ""
+"El cuadro de diálogo :guilabel:`Layer Properties` para una capa de malla "
+"proporciona configuraciones generales para administrar grupos de conjuntos "
+"de datos de la capa y su representación (grupos de conjuntos de datos "
+"activos, simbología, representación 2D y 3D). También proporciona "
+"información sobre la capa."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:119
+msgid "To access the :guilabel:`Layer Properties` dialog:"
+msgstr "Para acceder al :guilabel:`Layer Properties` dialog:"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:121
-msgid "Mesh Layer Properties"
-msgstr "Propiedades de la Capa Malla  "
+msgid ""
+"In the :guilabel:`Layers` panel, double-click the layer or right-click and "
+"select :guilabel:`Properties...` from the pop-up menu;"
+msgstr ""
+"En el panel  :guilabel:`Layers`, haga doble clic en la capa o haga clic con "
+"el botón derecho y seleccione :guilabel:`Properties...` en el menú "
+"emergente;"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:123
 msgid ""
-"The :guilabel:`Information` tab is read-only and represents an interesting "
-"place to quickly grab summarized information and metadata on the current "
-"layer. Provided information are (based on the provider of the layer) uri, "
-"vertex count, face count and dataset groups count."
+"Go to :menuselection:`Layer --> Layer Properties...` menu when the layer is "
+"selected."
 msgstr ""
-"La pestaña :guilabel:`Información`  es de solo lectura y representa un lugar"
-" interesante para obtener rápidamente los metadatos e información resumida "
-"sobre la capa actual. La información proporcionada es (basada en el "
-"proveedor de la capa) uri, número de vértices, número de facetas o caras y "
-"el número de grupos de conjunto de datos."
+"Vaya al menú :menuselection:`Layer --> Layer Properties...`  cuando la capa "
+"este seleccionada."
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:129
-msgid "Source Properties"
-msgstr "Propiedades de fuente"
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:126
+msgid ""
+"The mesh :guilabel:`Layer Properties` dialog provides the following "
+"sections:"
+msgstr ""
+"El diálogo de malla :guilabel:`Layer Properties` proporciona las siguientes "
+"secciones:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:130
+msgid "|metadata| :ref:`Information <meshinformation>`"
+msgstr "|metadata| :ref:`Information <meshinformation>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:670
+msgid "metadata"
+msgstr "metadata"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:131
-msgid ""
-"The :guilabel:`Source` tab displays basic information about the selected "
-"mesh, including:"
-msgstr ""
-"La pestaña :guilabel:`Fuente`  muestra información básica sobre la capa "
-"malla seleccionada, incluyendo:"
+msgid "|system| :ref:`Source <meshsource>`"
+msgstr "|system| :ref:`Source <meshsource>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:680
+msgid "system"
+msgstr "system"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:132
+msgid "|symbology| :ref:`Symbology <meshsymbology>`:sup:`[1]`"
+msgstr "|symbology| :ref:`Symbology <meshsymbology>`:sup:`[1]`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:678
+msgid "symbology"
+msgstr "symbology"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:133
+msgid "|3d| :ref:`3D View <mesh3dview>`:sup:`[1]`"
+msgstr "|3d| :ref:`3D View <mesh3dview>`:sup:`[1]`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:642
+msgid "3d"
+msgstr "3d"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:134
-msgid "the Layer name to display in the :guilabel:`Layers` panel"
-msgstr "el nombre de la Capa para mostrar en el panel :guilabel:`Capas` "
+msgid "|temporal| :ref:`Temporal <meshtemporal>`"
+msgstr "|temporal| :ref:`Temporal <meshtemporal>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:682
+msgid "temporal"
+msgstr "temporal"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:135
+msgid "|rendering| :ref:`Rendering <meshrendering>`"
+msgstr "|rendering| :ref:`Rendering <meshrendering>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:674
+msgid "rendering"
+msgstr "rendering"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:136
+msgid "|editMetadata| :ref:`Metadata <meshmetadata>`"
+msgstr "|editMetadata| :ref:`Metadata <meshmetadata>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:652
+msgid "editMetadata"
+msgstr "editMetadata"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:140
 msgid ""
-"setting the Coordinate Reference System: Displays the layer’s "
-":ref:`Coordinate Reference System (CRS) <layer_crs>`. You can change the "
-"layer’s CRS by selecting a recently used one in the drop-down list or "
-"clicking on |setProjection| :guilabel:`Select CRS` button (see "
-":ref:`crs_selector`). Use this process only if the CRS applied to the layer "
-"is wrong or if none was applied."
+":sup:`[1]` Also available in the :ref:`Layer styling panel "
+"<layer_styling_panel>`"
 msgstr ""
-"Estableciendo el sistema de referencia de coordenadas: Muetra el "
-":ref:`Coordinate Reference System (CRS) <layer_crs>` de la capa. Puede "
-"cambiar el CRS de la capa seleccionando uno usado recientemente en la lista "
-"desplegable o clickando en el botón |setProjection| :guilabel:`Select CRS` "
-"(ver :ref:`crs_selector`). Use este proceso solo si el CRS aplicado a la "
-"capa es erróneo o si no tiene ninguno aplicado."
+":sup:`[1]` También disponible en the :ref:`Layer styling panel "
+"<layer_styling_panel>`"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:142
 msgid ""
-"Use the :guilabel:`Assign Extra Dataset to Mesh` button to add more groups "
-"to the current mesh layer."
+"Most of the properties of a mesh layer can be saved to or loaded from a "
+":file:`.qml` using the :guilabel:`Style` menu at the bottom of the dialog. "
+"More details at :ref:`manage_custom_style`."
 msgstr ""
-"Use el botón :guilabel:`Assign Extra Dataset to Mesh` para agregar mas "
-"grupos a la capa de malla actual."
+"La mayoría de las propiedades de una capa de malla se pueden guardar o "
+"cargar desde un :file:`.qml` usando el menú :guilabel:`Style` en la parte "
+"inferior del cuadro de diálogo. Más detalles en :ref:`manage_custom_style`."
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:146
-msgid "Symbology Properties"
-msgstr "Propiedades de simbología"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:148
-msgid ""
-"Click the |symbology| :guilabel:`Symbology` button to activate the dialog as"
-" shown in the following image:"
-msgstr ""
-"Click en el botón |symbology| :guilabel:`Symbology` para activar el diálogo "
-"como se muestra en la siguiente imagen:"
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:150
+msgid "Information Properties"
+msgstr "Propiedades de información"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:157
-msgid "Mesh Layer Symbology"
-msgstr "Simbología de la capa de malla"
+msgid "Mesh Layer Information Properties"
+msgstr "Propiedades de información de la capa de malla:"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:159
-msgid "Symbology properties are divided in several tabs:"
-msgstr "Las propiedades de simbología están divididas en varias pestañas:"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:161
-msgid ":ref:`General <mesh_symbology_general>`"
-msgstr ":ref:`General <mesh_symbology_general>`"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:162
-msgid ":ref:`Contours Symbology <mesh_symbology_contours>`"
-msgstr ":ref:`Contours Symbology <mesh_symbology_contours>`"
+msgid ""
+"The |metadata| :guilabel:`Information` tab is read-only and represents an "
+"interesting place to quickly grab summarized information and metadata on the"
+" current layer. Provided information are:"
+msgstr ""
+"La pestaña |metadata| :guilabel:`Information` es de solo lectura y "
+"representa un lugar interesante para obtener rápidamente información "
+"resumida y metadatos para la capa actual. La información proporcionada es:"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:163
-msgid ":ref:`Vectors Symbology <mesh_symbology_vectors>`"
-msgstr ":ref:`Vectors Symbology <mesh_symbology_vectors>`"
+msgid ""
+"general such as  name in the project, source path, list of auxiliary files, "
+"last save time and size, the used provider"
+msgstr ""
+"general, como el nombre en el proyecto, la ruta de origen, la lista de "
+"archivos auxiliares, el tiempo y el tamaño del último guardado, el proveedor"
+" utilizado"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:164
-msgid ":ref:`Rendering <mesh_symbology_rendering>`"
-msgstr ":ref:`Rendering <mesh_symbology_rendering>`"
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:165
+msgid ""
+"based on the provider of the layer: extent, vertex, face, edges and/or "
+"dataset groups count"
+msgstr ""
+"según el proveedor de la capa: cuentan los grupos de extensiones, vértices, "
+"caras, aristas y/o conjuntos de datos"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:167
+msgid ""
+"the Coordinate Reference System: name, units, method, accuracy, reference "
+"(i.e. whether it's static or dynamic)"
+msgstr ""
+"el Sistema de Referencia de Coordenadas: nombre, unidades, método, "
+"precisión, referencia (es decir, si es estático o dinámico)"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:169
-msgid "General"
-msgstr "General"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:171
-msgid "The tab |general| presents the following items:"
-msgstr "La pestaña  |general| contiene los siguientes elementos:"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:173
-msgid "groups available in the mesh dataset"
-msgstr "grupos disponibles en el conjunto de datos tipo malla"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:174
 msgid ""
-"dataset in the selected group(s), for example, if the layer has a temporal "
-"dimension"
+"extracted from filled :ref:`metadata <meshmetadata>`: access, extents, "
+"links, contacts, history..."
 msgstr ""
-"conjunto de datos en el grupo (s) seleccionado (s), por ejemplo, si la capa "
-"tiene una dimensión temporal"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:175
-msgid "metadata if available"
-msgstr "metadatos si están disponibles"
+"extraído de relleno :ref:`metadata <meshmetadata>`: acceso, extensiones, "
+"enlaces, contactos, historial..."
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:176
-msgid ":ref:`blending mode <blend-modes>` available for the selected dataset."
-msgstr ""
-":ref:`modo de mezcla <blend-modes>` disponible para el conjunto de datos "
-"seleccionado."
+msgid "Source Properties"
+msgstr "Propiedades de fuente"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:179
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:178
 msgid ""
-"The slider |slider|, the combo box |selectString| and the :guilabel:`|<`, "
-":guilabel:`<`, :guilabel:`>`, :guilabel:`>|` buttons allow to explore "
-"another dimension of the data, if available. As the slider moves, the "
-"metadata is presented accordingly. See the figure :ref:`Mesh groups "
-"<figure_mesh_groups>` below as an example. The map canvas will display the "
-"selected dataset group as well."
+"The |system| :guilabel:`Source` tab displays basic information about the "
+"selected mesh, including:"
 msgstr ""
-"El control deslizante |slider|, el cuadro combinado |selectString| y los "
-"botones :guilabel:`| <`, :guilabel:`<`, :guilabel:`>`, :guilabel:`> |` "
-"permiten explorar otra dimensión de los datos, si están disponibles. A "
-"medida que se mueve el control deslizante, los metadatos se presentan en "
-"consecuencia. Vea la figura :ref:`Grupos de malla` a continuación como "
-"ejemplo. El lienzo del mapa también mostrará el grupo de conjuntos de datos "
-"seleccionado."
+"La |system| :guilabel:`pestaña Fuente` muestra información básica sobre la "
+"malla seleccionada, que incluye:"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:191
-msgid "Dataset in Selected Group(s)"
-msgstr "Dataset in Selected Group(s)"
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:186
+msgid "Mesh Layer Source Properties"
+msgstr "Propiedades de origen de la capa de malla"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:188
+msgid "the layer name to display in the :guilabel:`Layers` panel"
+msgstr "el nombre de la capa para mostrar en el :guilabel:`Layers` panel"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:189
+msgid ""
+"setting the Coordinate Reference System: Displays the layer’s :ref:`Assigned"
+" Coordinate Reference System (CRS) <layer_crs>`. You can change the layer’s "
+"CRS by selecting a recently used one in the drop-down list or clicking on "
+"|setProjection| :guilabel:`Select CRS` button (see :ref:`crs_selector`). Use"
+" this process only if the CRS applied to the layer is wrong or if none was "
+"applied."
+msgstr ""
+"establecer el sistema de referencia de coordenadas: muestra la "
+"capa:ref:`Assigned Coordinate Reference System (CRS) <layer_crs>`. Puede "
+"cambiar el CRS de la capa seleccionando uno usado recientemente en la lista "
+"desplegable o haciendo clic en el botón |setProjection| "
+":guilabel:`Seleccionar CRS` (ver :ref:`crs_selector`). Use este proceso solo"
+" si el CRS aplicado a la capa es incorrecto o si no se aplicó ninguno."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:676
+msgid "setProjection"
+msgstr "setProjection"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:195
-msgid "You can apply symbology to each group using the tabs."
-msgstr "Se puede aplicar simbología a cada grupo usando las pestañas."
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:201
-msgid "Contours Symbology"
-msgstr "Simbología de Contornos"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:203
 msgid ""
-"Under :guilabel:`Groups`, click on |meshcontoursoff| to show contours with "
-"default visualization parameters."
+"The :guilabel:`Available datasets` frame lists all the dataset groups (and "
+"subgroups) in the mesh layer, with their type and description in a tree "
+"view. Both regular datasets (i.e. their data is stored in the file) and "
+"virtual datasets (which are :ref:`calculated on the fly <mesh_calculator>`) "
+"are listed."
 msgstr ""
-"En :guilabel:`Grupos`, haga click en |meshcontoursoff| para mostrar "
-"contornos con parámetros de visualización predeterminados."
+"El cuadro :guilabel:`Conjuntos de datos disponibles` enumera todos los "
+"grupos (y subgrupos) de conjuntos de datos en la capa de malla, con su tipo "
+"y descripción en una vista de árbol. Tanto conjuntos de datos regulares (es "
+"decir, sus datos se almacenan en el archivo) como conjuntos de datos "
+"virtuales (which are :ref:`calculated on the fly <mesh_calculator>`) "
+"listados."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:200
+msgid ""
+"Use the |add| :guilabel:`Assign extra dataset to mesh` button to add more "
+"groups to the current mesh layer."
+msgstr ""
+"Utilice el botón |add| :guilabel:`Assign extra dataset to mesh` para agregar"
+" más grupos a la capa de malla actual."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:644
+msgid "add"
+msgstr "add"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:202
+msgid ""
+"|collapseTree| :guilabel:`Collapse all` and |expandTree| :guilabel:`Expand "
+"all` the dataset tree, in case of embedded groups"
+msgstr ""
+"|collapseTree| :guilabel:`Contraer todo` y |expandTree| :guilabel:`Expandir "
+"todo` el árbol del conjunto de datos, en el caso de grupos incrustados"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:650
+msgid "collapseTree"
+msgstr "collapseTree"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:654
+msgid "expandTree"
+msgstr "expandTree"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:204
+msgid ""
+"If you are interested in few datasets, you can uncheck the others and make "
+"them unavailable in the project"
+msgstr ""
+"Si está interesado en algunos conjuntos de datos, puede desmarcar los demás "
+"y hacer que no estén disponibles en el proyecto"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:206
-msgid ""
-"In the tab |meshcontours| you can see and change the current visualization "
-"options of contours for the selected group, as shown in "
-":numref:`figure_mesh_symbology_contours` below:"
+msgid "Double-click over a name and you can rename the dataset."
 msgstr ""
-"En la pestaña |meshcontours| puede ver y cambiar las opciones de "
-"visualización actuales de contornos para el grupo seleccionado, como se "
-"muestra en :numref:`figure_mesh_symbology_contours` a continuación:"
+"Haga doble clic sobre un nombre y podrá cambiar el nombre del conjunto de "
+"datos."
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:215
-msgid "Styling Contours in a Mesh Layer"
-msgstr "Aplicando Estilo a Contornos en una Capa de Malla de Datos"
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:217
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:207
 msgid ""
-"Use the slide bar or combo box to set the opacity of the current group."
+"|refresh| :guilabel:`Reset to defaults`: checks all the groups and renames "
+"them back to their original name in the provider."
 msgstr ""
-"Use la barra de desplazamiento o el desplegable para especificar la opacidad"
-" del grupo actual."
+"|refresh| :guilabel:`Restablecer a los valores predeterminados': comprueba "
+"todos los grupos y les cambia el nombre a su nombre original en el "
+"proveedor."
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:219
-msgid ""
-"Use :guilabel:`Load` to adjust the min and max values of the current group."
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:672
+msgid "refresh"
+msgstr "refresh"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:209
+msgid "Right-click over a virtual dataset group and you can:"
 msgstr ""
-"Use :guilabel:`Load` para ajustar los valores mínimo y máximo del grupo "
-"actual."
+"Haga clic con el botón derecho en un grupo de conjuntos de datos virtuales y"
+" podrá:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:211
+msgid ":guilabel:`Remove dataset group` from the project"
+msgstr ":guilabel:`Eliminar grupo de conjuntos de datos` desde el proyecto"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:212
+msgid ""
+":guilabel:`Save dataset group as...` a file on disk, to any supported "
+"format. The new file is kept assigned to the current mesh layer in the "
+"project."
+msgstr ""
+":guilabel:`Guardar grupo de conjuntos de datos como....` un archivo en el "
+"disco, a cualquier formato compatible. El nuevo archivo se mantiene asignado"
+" a la capa de malla actual en el proyecto."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:214
+msgid ""
+"Checking the |unchecked| :guilabel:`Treat as static dataset` group allows to"
+" ignore the map temporal navigation properties while rendering the mesh "
+"layer. For each active dataset group (as selected in |symbology| "
+":menuselection:`Symbology -->` |general| :guilabel:`Datasets` tab), you can:"
+msgstr ""
+"Marcando el |unchecked| :guilabel:`Tratar como conjunto de datos estáticos` "
+"El grupo permite ignorar las propiedades de navegación temporal del mapa "
+"mientras se renderiza la capa de malla. Para cada grupo de conjunto de datos"
+" activo (seleccionado en |symbology| :menuselection:`Simbología -->` "
+"|general| :guilabel:`Datasets` tab), you can:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:684
+msgid "unchecked"
+msgstr "unchecked"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:656
+msgid "general"
+msgstr "general"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:221
-msgid ""
-"The :guilabel:`Interpolation` list contains three options to render "
-"contours: :guilabel:`Linear`, :guilabel:`Discrete` and :guilabel:`Exact`."
+msgid "set to :guilabel:`None`: the dataset group is not displayed at all"
 msgstr ""
-"La lista :guilabel:`Interpolación` contiene tres opciones para renderizar "
-"contornos: :guilabel:`Lineal`, :guilabel:`Discreto` and :guilabel:`Exacto`."
+"set to :guilabel:`Ninguno`: el grupo de conjuntos de datos no se muestra en "
+"absoluto"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:222
+msgid ""
+":guilabel:`Display dataset`: eg, for the \"bed elevation\" dataset which is "
+"not time aware"
+msgstr ""
+":guilabel:`Mostrar conjunto de datos`:por ejemplo, para el conjunto de datos"
+" de \"elevación de la cama\" que no tiene en cuenta el tiempo"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:224
 msgid ""
-"The :guilabel:`Color ramp` widget opens the :ref:`color ramp drop-down "
-"shortcut <color_ramp_widget>`."
+"extract a particular date time: the dataset matching the provided time is "
+"rendered and stay fixed during map navigation."
 msgstr ""
-"El widget :guilabel:`Color ramp` abre el :ref:`color ramp drop-down shortcut"
-" <color_ramp_widget>`."
+"extraer una fecha y hora en particular: el conjunto de datos que coincide "
+"con la hora proporcionada se representa y permanece fijo durante la "
+"navegación del mapa."
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:226
-msgid ""
-"The :guilabel:`Label unit suffix` is a label added after the value in the "
-"legend."
-msgstr ""
-"La :guilabel:`Label unit suffix` es una etiqueta agregada despues del valor "
-"en la leyenda."
-
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:228
-msgid ""
-"By selecting :guilabel:`Continuous` in the classification :guilabel:`Mode`, "
-"QGIS creates classes automatically considering the :guilabel:`Min` and "
-":guilabel:`Max` values. With ‘Equal interval’, you only need to select the "
-"number of classes using the combo box :guilabel:`Classes` and press the "
-"button :guilabel:`Classify`."
-msgstr ""
-"Al seleccionar :guilabel:`Continuo` en el :guilabel:` Modo` de "
-"clasificación, QGIS crea clases automáticamente considerando los valores "
-":guilabel:`Min` y :guilabel:`Max`. Con \"Intervalo igual\", solo necesita "
-"seleccionar el número de clases usando el cuadro combinado "
-":guilabel:`Clases` y presionar el botón :guilabel:`Clasificar`."
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:231
+msgid "Symbology Properties"
+msgstr "Propiedades de simbología"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:233
 msgid ""
-"The button |symbologyAdd| :sup:`Add values manually` adds a value to the "
-"individual color table. The button |symbologyRemove| :sup:`Remove selected row` "
-"deletes a value from the individual color table. Double clicking on the "
-"value column lets you insert a specific value. Double clicking on the color "
-"column opens the dialog :guilabel:`Change color`, where you can select a "
-"color to apply on that value."
+"Click the |symbology| :guilabel:`Symbology` button to activate the dialog. "
+"Symbology properties are divided into several tabs:"
 msgstr ""
-"El botón |symbologyAdd| :sup:`Añadir valores manualmente` agrega un valor a la "
-"tabla de colores individuales. El botón |symbologyRemove| :sup:`Eliminar fila(s) "
-"seleccionada(s)`  borra un valor de la tabla de colores individuales. "
-"Haciendo doble click sobre un valor en una columna se puede insertar en ella"
-" un valor de color específico. El doble clik sobre la columna color abre el "
-"cuadro de diálogo :guilabel:`Change color`,  donde se puede seleccionar un "
-"color para aplicar en dicho valor."
+"Click en el botón  |symbology| :guilabel:`Simbología` para activar el "
+"diálogo. Las propiedades de simbología se dividen en varias pestañas:"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:243
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:236
+msgid ":ref:`Datasets <mesh_symbology_datasets>`"
+msgstr ":ref:`Datasets <mesh_symbology_datasets>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:237
+msgid ":ref:`Contours <mesh_symbology_contours>`"
+msgstr ":ref:`Datasets <mesh_symbology_contours>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:238
+msgid ":ref:`Vectors <mesh_symbology_vectors>`"
+msgstr ":ref:`Vectors <mesh_symbology_vectors>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:239
+msgid ":ref:`Rendering <mesh_symbology_rendering>`"
+msgstr ":ref:`Rendering <mesh_symbology_rendering>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:240
+msgid ":ref:`Stacked mesh averaging method <mesh_stacked_averaging>`"
+msgstr ":ref:`Stacked mesh averaging method <mesh_stacked_averaging>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:245
+msgid "Datasets"
+msgstr "Conjuntos de datos"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:247
+msgid ""
+"The tab |general| :sup:`Datasets` is the main place to control and set which"
+" datasets will be used for the layer. It presents the following items:"
+msgstr ""
+"The tab |general| :sup:`Datasets` iEs el lugar principal para controlar y "
+"establecer qué conjuntos de datos se utilizarán para la capa. Presenta los "
+"siguientes elementos:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:250
+msgid ""
+":guilabel:`Groups` available in the mesh dataset, with whether they provide:"
+msgstr ""
+":guilabel:`Grupos` disponibles en el conjunto de datos de malla, con si "
+"proporcionan:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:252
+msgid "|meshcontoursoff| scalar dataset"
+msgstr "|meshcontoursoff| conjunto de datos escalares"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:662
+msgid "meshcontoursoff"
+msgstr "meshcontoursoff"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:253
+msgid ""
+"or |meshvectorsoff| vector dataset: by default, each vector dataset has a "
+"scalar dataset representing its magnitude automatically generated."
+msgstr ""
+"o |meshvectorsoff| Conjunto de datos vectoriales: de forma predeterminada, "
+"cada conjunto de datos vectoriales tiene un conjunto de datos escalar que "
+"representa su magnitud generado automáticamente."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:668
+msgid "meshvectorsoff"
+msgstr "meshvectorsoff"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:256
+msgid ""
+"Click on the icon next to the dataset name to select the group and type of "
+"data to represent."
+msgstr ""
+"Haga clic en el icono junto al nombre del conjunto de datos para seleccionar"
+" el grupo y el tipo de datos que desea representar."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:258
+msgid ":guilabel:`Selected dataset group(s) metadata`, with details on:"
+msgstr ""
+":guilabel:`Metadatos de grupo(s) de conjuntos de datos seleccionados`, con "
+"detalles en::"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:260
+msgid "the mesh type: edges or faces"
+msgstr "el tipo de malla: bordes o caras"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:261
+msgid "the data type: vertices, edges, faces or volume"
+msgstr "el tipo de datos: vértices, aristas, caras o volumen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:262
+msgid "whether it's of vector type or not"
+msgstr "si es de tipo vectorial o no"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:263
+msgid "the original name in the mesh layer"
+msgstr "el nombre original en la capa de malla"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:264
+msgid "the unit, if applicable"
+msgstr "la unidad, en su caso"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:265
+msgid ""
+":ref:`blending mode <blend-modes>` available for the selected datasets."
+msgstr ""
+":ref:`blending mode <blend-modes>` disponibles para los conjuntos de datos "
+"seleccionados."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:272
+msgid "Mesh Layer Datasets"
+msgstr "Conjuntos de datos de capa de malla"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:275
+msgid ""
+"You can apply symbology to the selected vector and/or scalar group using the"
+" next tabs."
+msgstr ""
+"Puede aplicar la simbología al vector y/o grupo escalar seleccionado usando "
+"las siguientes pestañas."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:282
+msgid "Contours Symbology"
+msgstr "Simbología de Contornos"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:284
+msgid ""
+"The |meshcontours| :sup:`Contours` tab can be activated only if a scalar "
+"dataset has been selected in the |general| :guilabel:`Datasets` tab."
+msgstr ""
+"The |meshcontours| :sup:`Contours` La pestaña se puede activar solo si se ha"
+" seleccionado un conjunto de datos escalares en |general| :guilabel:pestaña "
+"`Conjuntos de datos`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:660
+msgid "meshcontours"
+msgstr "meshcontours"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:287
+msgid ""
+"In the |meshcontours| :sup:`Contours` tab you can see and change the current"
+" visualization options of contours for the selected group, as shown in "
+":numref:`figure_mesh_symbology_contours` below:"
+msgstr ""
+"En la pestaña  |meshcontours| :sup:`Contours`  puede ver y cambiar las "
+"opciones de visualización actuales de contornos para el grupo seleccionado, "
+"como se muestra en :numref:`figure_mesh_symbology_contours` below:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:296
+msgid "Styling Contours in a Mesh Layer"
+msgstr "Aplicando Estilo a Contornos en una Capa de Malla de Datos"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:298
+msgid ""
+"For 1D mesh, set the :guilabel:`Stroke width` of the edges. This can be a "
+"fixed size for the whole dataset, or vary along the geometry (more details "
+"with the :ref:`interpolated line renderer <interpolated_line_symbol>`)"
+msgstr ""
+"Para la malla 1D, establezca el :guilabel:`Ancho del trazo` de los bordes. "
+"Esto puede ser un tamaño fijo para todo el conjunto de datos, o variar a lo "
+"largo de la geometría (más detalles con el f:`interpolated line renderer "
+"<interpolated_line_symbol>`)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:301
+msgid ""
+"Use the slider or the spinbox to set the :guilabel:`Opacity` of the current "
+"group, if of a 2D mesh type."
+msgstr ""
+"Use el control deslizante o el cuadro giratorio para establecer la "
+":guilabel:`Opacidad` del grupo actual, si es un tipo de malla 2D."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:303
+msgid ""
+"Enter the range of values you want to represent on the current group: use "
+"|refresh| :sup:`Load` to fetch the min and max values of the current group "
+"or enter custom values if you want to exclude some."
+msgstr ""
+"Ingrese el rango de valores que desea representar en el grupo actual: usar "
+"|refresh| :sup:`Load` para obtener los valores mínimo y máximo del grupo "
+"actual o ingrese valores personalizados si desea excluir algunos."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:306
+msgid ""
+"For 2D/3D meshes, select the :guilabel:`Resampling method` to interpolate "
+"the values on the surrounding vertices to the faces (or from the surrounding"
+" faces to the vertices) using the :guilabel:`Neighbour average` method. "
+"Depending on whether the dataset is defined on the vertices (respectively on"
+" the faces), QGIS defaults this setting to :guilabel:`None` (respectively "
+":guilabel:`Neighbour average`) method in order to use values on vertices and"
+" keep the default rendering smooth."
+msgstr ""
+"Para mallas 2D/3D, seleccione el :guilabel:`Método de remuestreo` para "
+"interpolar los valores de los vértices circundantes a las caras (o de las "
+"caras circundantes a los vértices) utilizando el método :guilabel:`Promedio "
+"de vecinos`. Dependiendo de si el conjunto de datos está definido en los "
+"vértices (respectivamente en las caras), QGIS establece esta configuración "
+"por defecto en el método :guilabel:`Ninguno` (respectivamente "
+":guilabel:`Promedio de vecinos`) para usar valores en los vértices y "
+"mantener el método predeterminado prestación suave."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:312
+msgid ""
+"Classify the dataset using the :ref:`color ramp shader <color_ramp_shader>` "
+"classification."
+msgstr ""
+"Clasifique el conjunto de datos utilizando la clasificación ref:`color ramp "
+"shader <color_ramp_shader>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:319
 msgid "Vectors Symbology"
 msgstr "Simbología de vectores"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:245
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:321
 msgid ""
-"In the tab |general|, click on |meshcontoursoff| to display vectors if "
-"available. The map canvas will display the vectors in the selected group "
-"with default parameters. Click on the tab |meshvectors| to change the "
-"visualization parameters for vectors as shown in the image below:"
+"The |meshvectors| :sup:`Vectors` tab can be activated only if a vector "
+"dataset has been selected in the |general| :guilabel:`Datasets` tab."
 msgstr ""
-"En la pestaña |general|, haga clic en |meshcontoursoff| para mostrar "
-"vectores si están disponibles. El lienzo del mapa mostrará los vectores en "
-"el grupo seleccionado con los parámetros predeterminados. Haga clic en la "
-"pestaña |meshvectors| para cambiar los parámetros de visualización de los "
-"vectores como se muestra en la siguiente imagen:"
+"La pestaña  |meshvectors| :sup:`Vectors`  solo se puede activar si se ha "
+"seleccionado un conjunto de datos vectoriales en |general| :guilabel: "
+"`Conjuntos de datos`."
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:255
-msgid "Styling Vectors in a Mesh Layer"
-msgstr "Aplicando Estilo a Vectores en Capa de Malla de Datos"
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:666
+msgid "meshvectors"
+msgstr "meshvectors"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:257
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:324
 msgid ""
-"The line width can be set using the combo box or typing the value. The color"
-" widget opens the dialog :guilabel:`Change color`, where you can select a "
-"color to apply to vectors."
+"In the |meshvectors| :sup:`Vectors` tab you can see and change the current "
+"visualization options of vectors for the selected group, as shown in "
+":numref:`figure_mesh_symbology_vectors`:"
 msgstr ""
-"El ancho de la línea puede especificarse usando el desplegable o escribiendo"
-" el valor. El control :guilabel:`Change color` abre el cuadro de diálogo de "
-"color, donde se puede seleccionar un color para aplicar a los vectores. "
+"En la pestaña |meshvectors| :sup:`Vectores` puede ver y cambiar las opciones"
+" de visualización actuales de los vectores para el grupo seleccionado, como "
+"se muestra en :numref:`figure_mesh_symbology_vectors`:"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:261
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:333
+msgid "Styling Vectors in a Mesh Layer with arrows"
+msgstr "Dar estilo a los vectores en una capa de malla con flechas"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:335
 msgid ""
-"Enter values for :guilabel:`Min` and :guilabel:`Max` to filter vectors "
-"according to their magnitude."
+"Mesh vector dataset can be styled using various types of "
+":guilabel:`Symbology`:"
 msgstr ""
-"Introduzca valores para :guilabel:`Min` and :guilabel:`Max` para filtrar los"
-" vectores considerando su magnitud."
+"El conjunto de datos de vector de malla se puede diseñar usando varios tipos"
+" de :guilabel:`Simbología`:"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:263
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:337
 msgid ""
-"Check on the box |checkbox| :guilabel:`Display Vectors on User Grid` and "
-"specify the :guilabel:`X spacing` and the :guilabel:`Y spacing`, QGIS will "
-"render the vector considering the given spacing."
+"**Arrows**: vectors are represented with arrows at the same place as they "
+"are defined in the raw dataset (i.e. on the nodes or center of elements) or "
+"on a user-defined grid (hence, they are evenly distributed). The arrow "
+"length is proportional to the magnitude of the arrow as defined in the raw "
+"data but can be scaled by various methods."
 msgstr ""
-"Marque en la casilla de verificación |checkbox| :guilabel:`Display Vectors "
-"on User Grid`  y especifique el :guilabel:`X spacing` y el :guilabel:`Y "
-"spacing`, QGIS renderizará los vectores considerando el espaciamiento dado."
+"**Flechas**: los vectores se representan con flechas en el mismo lugar en el"
+" que están definidos en el conjunto de datos brutos (es decir, en los nodos "
+"o en el centro de los elementos) o en una cuadrícula definida por el usuario"
+" (por tanto, están distribuidos uniformemente). La longitud de la flecha es "
+"proporcional a la magnitud de la flecha tal y como se define en los datos "
+"brutos, pero se puede escalar por varios métodos."
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:267
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:342
 msgid ""
-"With the Head Options :guilabel:`Head Options`, QGIS allows the shape of the"
-" arrow head to be set by specifying width and length (in percentage)."
+"**Streamlines**: vectors are represented with streamlines seeded from start "
+"points. The seeding points can start from the vertices of the mesh, from a "
+"user grid or randomly."
 msgstr ""
-"Con las opciones de cabeza :guilabel:`Head Options`, QGIS permite configurar"
-" la forma de la flecha al especificar el ancho y longitud (en porcentaje)."
+"**Líneas de corriente**: los vectores se representan con líneas de corriente"
+" sembradas desde los puntos de inicio. Los puntos de siembra pueden partir "
+"de los vértices de la malla, de una grilla de usuario o aleatoriamente."
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:270
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:345
 msgid ""
-"Vector's :guilabel:`Arrow length` can be rendered in QGIS in three different"
-" ways:"
+"**Traces**: a nicer animation of the streamlines, the kind of effect you get"
+" when you randomly throws sand in the water and see where the sand items "
+"flows."
 msgstr ""
-"La :guilabel:`Arrow length` de los vectores puede ser renderizada en QGIS en"
-" tres formas diferentes: "
+"**Trazas**: una animación más agradable de las líneas de corriente, el tipo "
+"de efecto que obtienes cuando arrojas arena al azar al agua y ves dónde "
+"fluyen los elementos de arena."
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:272
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:348
 msgid ""
-"Defined by Min and Max: You specify the minimum and maximum length for the "
-"vectors, QGIS will adjust their visualization accordingly"
+"Available properties depend on the selected symbology as shown in the "
+"following table."
 msgstr ""
-"Definido por Mínimo and Máximo: se especifica la longitud mínima y máxima "
-"para los vectores, QGIS ajustará su visualización con estos parámetros."
+"Las propiedades disponibles dependen de la simbología seleccionada, como se "
+"muestra en la siguiente tabla."
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:274
-msgid "Scale to magnitude: You specify the (multiplying) factor to use"
-msgstr "Escala a magnitud: se especifica el factor multiplicativo a usar"
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:351
+msgid "Label"
+msgstr "Etiqueta"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:275
-msgid "Fixed: all the vectors are shown with the same length"
-msgstr "Fijo: todos los vectores se muestran con la misma longitud"
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:351
+msgid "Description and Properties"
+msgstr "Descripción y Propiedades"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:280
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:351
+msgid "Arrow"
+msgstr "Flecha"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:351
+msgid "Streamlines"
+msgstr "Streamlines"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:351
+msgid "Traces"
+msgstr "Trazos"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:353
+msgid ":guilabel:`Line width`"
+msgstr ":guilabel:`Ancho de línea`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:353
+msgid "Width of the vector representation"
+msgstr "Ancho de la representación vectorial"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:353
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:355
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:359
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:362
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:365
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:368
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:373
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:376
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:378
+msgid "|checkbox|"
+msgstr "|checkbox|"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:648
+msgid "checkbox"
+msgstr "checkbox"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:355
+msgid ":guilabel:`Coloring method`"
+msgstr ":guilabel:`Método de coloreado`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:355
+msgid "a :guilabel:`Single color` assigned to all vectors"
+msgstr "a :guilabel:`Color único` asignado a todos los vectores"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:356
+msgid ""
+"or a variable color based on vectors magnitude, using a :ref:`Color ramp "
+"shader <color_ramp_shader>`"
+msgstr ""
+"o un color variable basado en la magnitud de los vectores, usando "
+"un:ref:`Color ramp shader <color_ramp_shader>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:359
+msgid ":guilabel:`Filter by magnitude`"
+msgstr ":guilabel:`Filtrar por magnitud`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:359
+msgid ""
+"Only vectors whose length for the selected dataset falls between a "
+":guilabel:`Min` and :guilabel:`Max` range are displayed"
+msgstr ""
+"Solo se muestran los vectores cuya longitud para el conjunto de datos "
+"seleccionado se encuentra entre un rango de :guilabel:`Min` y "
+":guilabel:`Max` "
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:362
+msgid ":guilabel:`Display on user grid`"
+msgstr ":guilabel:`Mostrar en cuadrícula de usuario`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:362
+msgid ""
+"Places the vector on a grid with custom :guilabel:`X spacing` and "
+":guilabel:`Y spacing` and interpolates their length based on neighbours"
+msgstr ""
+"Coloca el vector en una cuadrícula con :guilabel:`X espaciado` personalizado"
+" y :guilabel:`Y espaciado` e interpola su longitud en función de los vecinos"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:365
+msgid ":guilabel:`Head options`"
+msgstr ":guilabel:`Opciones de cabeza`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:365
+msgid ""
+":guilabel:`Length` and :guilabel:`Width` of the arrow head, as a percentage "
+"of its shaft length"
+msgstr ""
+":guilabel:`Longitud` y :guilabel:`Ancho` de la punta de flecha, en "
+"porcentaje de la longitud de su eje"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:368
+msgid ":guilabel:`Arrow length`"
+msgstr ":guilabel:`Longitud de la flecha`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:368
+msgid ""
+"**Defined by Min and Max**: You specify the minimum and maximum length for "
+"the arrows, QGIS will interpolate their size based on the underlying "
+"vector's magnitude"
+msgstr ""
+"**Definido por Min y Max**: Usted especifica la longitud mínima y máxima de "
+"las flechas, QGIS interpolará su tamaño en función de la magnitud del vector"
+" subyacente"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:370
+msgid ""
+"**Scale to magnitude**: arrow length is proportional to their vector's "
+"magnitude"
+msgstr ""
+"**Escala a magnitud**: la longitud de la flecha es proporcional a la "
+"magnitud de su vector"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:371
+msgid "**Fixed**: all the vectors are shown with the same length"
+msgstr "**Corregido**: todos los vectores se muestran con la misma longitud"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:373
+msgid ":guilabel:`Streamlines seeding method`"
+msgstr ":guilabel:`Agiliza el método de siembra`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:373
+msgid "**On mesh/grid**: relies on the user grid to display the vectors"
+msgstr ""
+"**En malla/cuadrícula**: se basa en la cuadrícula del usuario para mostrar "
+"los vectores"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:374
+msgid ""
+"**Randomly**: vector placement is randomly done with respect to a certain "
+"density"
+msgstr ""
+"**Aleatoriamente*: la colocación de vectores se realiza aleatoriamente con "
+"respecto a una cierta densidad"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:376
+msgid ":guilabel:`Particles count`"
+msgstr ":guilabel:`Recuento de partículas`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:376
+msgid "The amount of \"sand\" you want to throw into visualisation"
+msgstr "La cantidad de \"arena\" que desea arrojar a la visualización"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:378
+msgid ":guilabel:`Max tail length`"
+msgstr ":guilabel:`Max tail length`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:378
+msgid "The time until the particle fades out"
+msgstr "El tiempo hasta que la partícula se desvanece"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:385
 msgid "Rendering"
 msgstr "Representación"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:282
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:387
 msgid ""
-"In the tab |meshframe|,  QGIS offers two possibilities to display the grid, "
-"as shown in :numref:`figure_mesh_symbology_grid`:"
+"In the tab |meshframe| :sup:`Rendering` tab, QGIS offers possibilities to "
+"display and customize the mesh structure. :guilabel:`Line width` and "
+":guilabel:`Line color` can be set to represent:"
 msgstr ""
-"En la pestaña |meshframe|, QGIS ofrece dos posibilidades para mostrar la "
-"cuadrícula, como se muestra en :numref:`figure_mesh_symbology_grid`:"
+"En la pestaña |meshframe| :sup:`Rendering`  QGIS ofrece posibilidades para "
+"mostrar y personalizar la estructura de malla. :guilabel:`Ancho de línea` y "
+":guilabel:`Color de línea` se pueden configurar para representar:"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:285
-msgid "``Native Mesh Rendering`` that shows quadrants"
-msgstr "``Representación de malla nativa`` que muestra una grid regular"
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:664
+msgid "meshframe"
+msgstr "meshframe"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:286
-msgid "``Triangular Mesh Rendering`` that display triangles"
-msgstr ""
-"``Representación de malla triangular`` que muestra una cuadrícula triángular"
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:391
+msgid "the edges for 1D meshes"
+msgstr "los bordes para mallas 1D"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:294
-msgid "Mesh Rendering"
-msgstr "Representación de Malla"
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:392
+msgid "For 2D meshes:"
+msgstr "Para mallas 2D:"
 
-#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:297
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:394
 msgid ""
-"The line width and color can be changed in this dialog, and both the grid "
-"renderings can be turned off."
+":guilabel:`Native mesh rendering`: shows original faces and edges from the "
+"layer"
 msgstr ""
-"El ancho y el color de la línea pueden cambiarse en este cuadro de diálogo, "
-"y ambas representaciones de cuadrícual pueden desactivarse."
+":guilabel:`Representación de malla nativa`: muestra caras y bordes "
+"originales de la capa"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:395
+msgid ""
+":guilabel:`Triangular mesh rendering`: adds more edges and displays the "
+"faces as triangles"
+msgstr ""
+":guilabel:`Representación de malla triangular`: agrega más bordes y muestra "
+"las caras como triángulos"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:403
+msgid "2D Mesh Rendering"
+msgstr "Representación de malla 2D"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:409
+msgid "Stacked mesh averaging method"
+msgstr "Método de promedio de malla apilada"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:411
+msgid ""
+"3D layered meshes consist of multiple stacked 2D unstructured meshes each "
+"extruded in the vertical direction (``levels``) by means of a vertical "
+"coordinate. The vertices and faces have the same topology in each vertical "
+"level. Values are usually stored on the volumes that are regularly stacked "
+"over base 2d mesh. In order to visualise them on 2D canvas, you need to "
+"convert values on volumes (3d) to values on faces (2d) that can be shown in "
+"mesh layer. The |meshaveraging| :sup:`Stacked mesh averaging method` "
+"provides different averaging/interpolation methods to handle this."
+msgstr ""
+"Las mallas en capas 3D consisten en múltiples mallas 2D no estructuradas "
+"apiladas, cada una extruida en la dirección vertical (\"niveles\") por medio"
+" de una coordenada vertical. Los vértices y las caras tienen la misma "
+"topología en cada nivel vertical. Los valores generalmente se almacenan en "
+"los volúmenes que se apilan regularmente sobre la malla base 2d. Para "
+"visualizarlos en un lienzo 2D, debe convertir los valores de los volúmenes "
+"(3d) en valores de las caras (2d) que se pueden mostrar en la capa de malla."
+" El |promedio de malla| :sup:`Método de promedio de malla apilada` "
+"proporciona diferentes métodos de promedio/interpolación para manejar esto."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:658
+msgid "meshaveraging"
+msgstr "meshaveraging"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:420
+msgid ""
+"You can select the method to derive the 2D datasets and corresponding "
+"parameters (level index, depth or height values). For each method, an "
+"example of application is shown in the dialog but you can read more on the "
+"methods at "
+"https://fvwiki.tuflow.com/index.php?title=Depth_Averaging_Results."
+msgstr ""
+"Puede seleccionar el método para derivar los conjuntos de datos 2D y los "
+"parámetros correspondientes (índice de nivel, valores de profundidad o "
+"altura). Para cada método, se muestra un ejemplo de aplicación en el cuadro "
+"de diálogo, pero puede leer más sobre los métodos en "
+"https://fvwiki.tuflow.com/index.php?title=Depth_Averaging_Results."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:430
+msgid "3D View Properties"
+msgstr "Propiedades de vista 3D"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:432
+msgid ""
+"Mesh layers can be used as :ref:`terrain in a 3D map view "
+"<scene_configuration>` based on their vertices Z values. From the |3d| "
+":guilabel:`3D` properties tab, it's also possible to render the mesh layer's"
+" dataset in the same 3D view. Therefore, the vertical component of the "
+"vertices can be set equal to dataset values (for example, level of water "
+"surface) and the texture of the mesh can be set to render other dataset "
+"values with color shading (for example velocity)."
+msgstr ""
+"Las capas de malla se pueden utilizar como :ref:`terrain in a 3D map view "
+"<scene_configuration>` en función de los valores Z de sus vértices. Desde el"
+" |3d| :guilabel:pestaña de propiedades `3D`, también es posible representar "
+"el conjunto de datos de la capa de malla en la misma vista 3D. Por lo tanto,"
+" el componente vertical de los vértices se puede establecer igual a los "
+"valores del conjunto de datos (por ejemplo, el nivel de la superficie del "
+"agua) y la textura de la malla se puede configurar para representar otros "
+"valores del conjunto de datos con sombreado de color (por ejemplo, la "
+"velocidad)."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:444
+msgid "Mesh dataset 3D properties"
+msgstr "Propiedades 3D del conjunto de datos de malla"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:446
+msgid ""
+"Check |checkbox| :guilabel:`Enable 3D Renderer` and you can edit following "
+"properties:"
+msgstr ""
+"Check |checkbox| :guilabel:`Habilite 3D Renderer` y podrá editar las "
+"siguientes propiedades:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:449
+msgid "Under :guilabel:`Triangle settings`"
+msgstr "En :guilabel:`Configuración del triángulo`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:451
+msgid ""
+":guilabel:`Smooth triangles`: Angles between consecutive triangles are "
+"smoothed for a better 3D rendering"
+msgstr ""
+":guilabel:`Triángulos suaves`: Los ángulos entre triángulos consecutivos se "
+"suavizan para una mejor representación 3D"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:453
+msgid ""
+":guilabel:`Show wireframe` whose you can set the :guilabel:`Line width` and "
+":guilabel:`Color`"
+msgstr ""
+":guilabel:`Muestre la estructura alámbrica` en la que puede configurar "
+":guilabel:`Ancho de línea` y :guilabel:`Color`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:458
+msgid ""
+":guilabel:`Level of detail`: Controls how :ref:`simplified <meshrendering>` "
+"the mesh layer to render should be. On the far right, it is the base mesh, "
+"and the more you go left, the more the layer is simplified and is rendered "
+"with less details. This option is only available if the :guilabel:`Simplify "
+"mesh` option under the :guilabel:`Rendering` tab is activated."
+msgstr ""
+":guilabel:`Nivel de detalle': controla cómo :ref:`simplified "
+"<meshrendering>` la capa de malla para renderizar debe ser. En el extremo "
+"derecho, está la malla base, y cuanto más a la izquierda, más se simplifica "
+"la capa y se representa con menos detalles. Esta opción sólo está disponible"
+" si la opción :guilabel:`Simplificar malla` en la pestaña "
+":guilabel:`Renderizado` está activada."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:465
+msgid ""
+":guilabel:`Vertical settings` to control behavior of the vertical component"
+msgstr ""
+":guilabel:`Configuración vertical' para controlar el comportamiento del "
+"componente vertical"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:465
+msgid "of vertices of rendered triangles"
+msgstr "de vértices de triángulos renderizados"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:467
+msgid ""
+":guilabel:`Dataset group for vertical value`: the dataset group that will be"
+" used for the vertical component of the mesh"
+msgstr ""
+":guilabel:`Grupo de conjuntos de datos para valor vertical`: el grupo de "
+"conjuntos de datos que se usará para el componente vertical de la malla"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:469
+msgid ""
+"|unchecked|:guilabel:`Dataset value relative to vertices Z value`: whether "
+"to consider the dataset values as absolute Z coordinate or relative to the "
+"vertices native Z value"
+msgstr ""
+"|unchecked|:guilabel:`Valor del conjunto de datos relativo al valor Z de los"
+" vértices`: si considerar los valores del conjunto de datos como coordenadas"
+" Z absolutas o relativos al valor Z nativo de los vértices"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:472
+msgid ""
+":guilabel:`Vertical scale`: the scale factor to apply to the dataset Z "
+"values"
+msgstr ""
+":guilabel:`Escala vertical`: el factor de escala a aplicar a los valores Z "
+"del conjunto de datos"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:474
+msgid ""
+":guilabel:`Rendering color settings` with a :guilabel:`Rendering style` that"
+" can be based on the color ramp shader set in :ref:`mesh_symbology_contours`"
+" (:guilabel:`2D contour color ramp shader`) or as a :guilabel:`Single color`"
+" with an associated :guilabel:`Mesh color`"
+msgstr ""
+":guilabel:`Ajustes de color de renderizado` con un :guilabel:`Estilo de "
+"renderizado` que se puede basar en el sombreador de rampa de color "
+"establecido en :ref:`mesh_symbology_contours` (:guilabel:`Shader de rampa de"
+" color de contorno 2D`) o como :guilabel:`Color único` con un "
+":guilabel:`Color de malla` asociado"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:478
+msgid ""
+":guilabel:`Show arrows`: displays arrows on mesh layer dataset 3D entity, "
+"based on the same vector dataset group used in the :ref:`vector 2D rendering"
+" <mesh_symbology_vectors>`. They are displayed using the 2D color setting. "
+"It's also possible to define the :guilabel:`Arrow spacing` and, if it's of a"
+" :guilabel:`Fixed size` or scaled on magnitude. This spacing setting defines"
+" also the max size of arrows because arrows can't overlap."
+msgstr ""
+":guilabel:`Mostrar flechas`: muestra flechas en la entidad 3D del dataset de"
+" capa de malla, basado en el mismo grupo de dataset vectorial usado en "
+"el:ref:`vector 2D rendering <mesh_symbology_vectors>`. Se muestran "
+"utilizando la configuración de color 2D. También es posible definir el "
+":guilabel:`Espaciado entre flechas` y, si es de :guilabel:`Tamaño fijo` o "
+"escalado en magnitud. Esta configuración de espaciado define también el "
+"tamaño máximo de las flechas porque las flechas no se pueden superponer."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:490
+msgid "Rendering Properties"
+msgstr "Propiedades de Renderizado"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:492
+msgid ""
+"As mesh layers can have millions of faces, their rendering can sometimes be "
+"very slow, especially when all the faces are displayed in the view whereas "
+"they are too small to be viewed. To speed up the rendering, you can simplify"
+" the mesh layer, resulting in one or more meshes representing different "
+":ref:`levels of detail <levelofdetail>` and select at which level of detail "
+"you would like QGIS to render the mesh layer. Note that the simplify mesh "
+"contains only triangular faces."
+msgstr ""
+"Dado que las capas de malla pueden tener millones de caras, su "
+"representación a veces puede ser muy lenta, especialmente cuando todas las "
+"caras se muestran en la vista y son demasiado pequeñas para verse. Para "
+"acelerar el renderizado, puede simplificar la capa de malla, lo que da como "
+"resultado una o más mallas que representan diferentes :ref:`levels of detail"
+" <levelofdetail>` y seleccione en qué nivel de detalle desea que QGIS "
+"represente la capa de malla. Tenga en cuenta que la malla simplificada "
+"contiene solo caras triangulares."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:500
+msgid ""
+"From the |rendering| :guilabel:`Rendering` tab, check |checkbox| "
+":guilabel:`Simplify mesh` and set:"
+msgstr ""
+"Desde la pestaña |rendering| :guilabel:`Rendering`  check |checkbox| "
+":guilabel:`Simplify mesh` and set:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:503
+msgid ""
+"a :guilabel:`Reduction factor`: Controls generation of successive levels of "
+"simplified meshes. For example, if the base mesh has 5M faces, and the "
+"reduction factor is 10, the first simplified mesh will have approximately "
+"500 000 faces, the second 50 000 faces, the third 5000,... If a higher "
+"reduction factor leads quickly to simpler meshes (i.e. with triangles of "
+"bigger size), it produces also fewer levels of detail."
+msgstr ""
+"a :guilabel:`Factor de reducción`: Controla la generación de sucesivos "
+"niveles de mallas simplificadas. Por ejemplo, si la malla base tiene 5M "
+"caras, y el factor de reducción es 10, la primera malla simplificada tendrá "
+"aproximadamente 500 000 caras, la segunda 50 000 caras, la tercera 5000,... "
+"Si un factor de reducción mayor lleva rápidamente a mallas más simples (es "
+"decir, con triángulos de mayor tamaño), produce también menos niveles de "
+"detalle."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:510
+msgid ""
+":guilabel:`Minimum triangle size`: the average size (in pixels) of the "
+"triangles that is permitted to display. If the average size of the mesh is "
+"lesser than this value, the rendering of a lower level of details mesh is "
+"triggered."
+msgstr ""
+":guilabel:`Tamaño mínimo del triángulo`: el tamaño medio (en píxeles) de los"
+" triángulos que se permite mostrar. Si el tamaño medio de la malla es "
+"inferior a este valor, se activa la representación de una malla de menor "
+"nivel de detalles."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:520
+msgid "Temporal Properties"
+msgstr "Propiedades Temporales"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:522
+msgid ""
+"The |temporal| :guilabel:`Temporal` tab provides options to control the "
+"rendering of the layer over time. It allows to dynamically display temporal "
+"values of the enabled dataset groups. Such a dynamic rendering requires the "
+":ref:`temporal navigation <maptimecontrol>` to be enabled over the map "
+"canvas."
+msgstr ""
+"El |temporal| :guilabel:La pestaña `Temporal` proporciona opciones para "
+"controlar el renderizado de la capa a lo largo del tiempo. Permite mostrar "
+"dinámicamente los valores temporales de los grupos de conjuntos de datos "
+"habilitados. Una representación tan dinámica requiere la :ref:`temporal "
+"navigation <maptimecontrol>` to estar habilitado sobre el lienzo del mapa."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:533
+msgid "Mesh Temporal properties"
+msgstr "Propiedades temporales de malla"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:535
+msgid "**Layer temporal settings**"
+msgstr "**Configuración temporal de capa**"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:537
+msgid ""
+":guilabel:`Reference time` of the dataset group, as an absolute date time. "
+"By default, QGIS parses the source layer and returns the first valid "
+"reference time in the layer's dataset group. If unavailable, the value will "
+"be set by the project time range or fall back to the current date. The "
+":guilabel:`Start time` and :guilabel:`End time` to  consider are then "
+"calculated based on the internal timestamp step of the dataset."
+msgstr ""
+":guilabel:`Hora de referencia` del grupo de conjuntos de datos, como fecha y"
+" hora absolutas. Por defecto, QGIS analiza la capa de origen y devuelve la "
+"primera hora de referencia válida en el grupo de conjuntos de datos de la "
+"capa. Si no está disponible, el valor será fijado por el rango de tiempo del"
+" proyecto o se retrocederá a la fecha actual. La :guilabel:`Hora de inicio` "
+"y la :guilabel:`Hora de finalización` a considerar se calculan entonces en "
+"base al paso de tiempo interno del conjunto de datos."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:544
+msgid ""
+"It is possible to set a custom :guilabel:`Reference time` (and then the time"
+" range), and revert the changes using the |refresh| :sup:`Reload from "
+"provider` button."
+msgstr ""
+"Es posible establecer un :guilabel:`Tiempo de referencia` personalizado (y "
+"luego el rango de tiempo), y revertir los cambios usando el botón |refresh| "
+":sup:`Reload from provider` button."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:547
+msgid ""
+":guilabel:`Dataset matching method`: determines the dataset to display at "
+"the given time. Options are :guilabel:`Find closest dataset before requested"
+" time` or :guilabel:`Find closest dataset from requested time (after or "
+"before)`."
+msgstr ""
+":guilabel:`Método de coincidencia del conjunto de datos`: determina el "
+"conjunto de datos a mostrar en el momento dado. Las opciones son "
+":guilabel:`Buscar el conjunto de datos más cercano antes de la hora "
+"solicitada` o :guilabel:`Buscar el conjunto de datos más cercano a la hora "
+"solicitada (después o antes)`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:551
+msgid "**Provider time settings**"
+msgstr "**Configuración de hora del proveedor**"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:553
+msgid ""
+":guilabel:`Time unit` extracted from the raw data, or user defined. This can"
+" be used to align the speed of the mesh layer with other layers in the "
+"project during map time navigation. Supported units are :guilabel:`Seconds`,"
+" :guilabel:`Minutes`, :guilabel:`Hours` and :guilabel:`Days`."
+msgstr ""
+":guilabel:`Unidad de tiempo` extraída de los datos brutos, o definida por el"
+" usuario. Esto se puede usar para alinear la velocidad de la capa de malla "
+"con otras capas en el proyecto durante la navegación en el tiempo del mapa. "
+"Las unidades soportadas son :guilabel:`Segundos`, :guilabel:`Minutos`, "
+":guilabel:`Horas` y :guilabel:`Días`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:564
+msgid "Metadata Properties"
+msgstr "Propiedades de metadatos"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:566
+msgid ""
+"The |editMetadata| :guilabel:`Metadata` tab provides you with options to "
+"create and edit a metadata report on your layer. See :ref:`metadatamenu` for"
+" more information."
+msgstr ""
+"The |editMetadata| :guilabel:`Metadata` La pestaña le brinda opciones para "
+"crear y editar un informe de metadatos en su capa. Ver :ref:`metadatamenu` "
+"for more information."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:574
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:585
+msgid "Mesh Calculator"
+msgstr "Calculadora de malla"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:576
+msgid ""
+"The :guilabel:`Mesh Calculator` tool from the top :menuselection:`Mesh` menu"
+" allows you to perform arithmetic and logical calculations on existing "
+"dataset groups to generate a new dataset group (see "
+":numref:`figure_mesh_calculator`)."
+msgstr ""
+"La herramienta :guilabel:`Calculadora de Malla` del menú superior "
+":menuselection:`Malla` le permite realizar cálculos aritméticos y lógicos en"
+" grupos de conjuntos de datos existentes para generar un nuevo grupo de "
+"conjuntos de datos (ver :numref:`figure_mesh_calculator`)."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:587
+msgid ""
+"The :guilabel:`Datasets` list contains all dataset groups in the active mesh"
+" layer. To use a dataset group in an expression, double click its name in "
+"the list and it will be added to the :guilabel:`Mesh calculator expression` "
+"field. You can then use the operators to construct calculation expressions, "
+"or you can just type them into the box."
+msgstr ""
+"La lista :guilabel:`Datasets` contiene todos los grupos de conjuntos de "
+"datos en la capa de malla activa. Para usar un grupo de conjuntos de datos "
+"en una expresión, haga doble clic en su nombre en la lista y se agregará al "
+"campo :guilabel:`Expresión de calculadora de malla`. Luego puede usar los "
+"operadores para construir expresiones de cálculo, o simplemente puede "
+"escribirlas en el cuadro."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:593
+msgid ""
+"The :guilabel:`Result Layer` helps you configure properties of the output "
+"layer:"
+msgstr ""
+"La :guilabel:`Capa Resultado` te ayuda a configurar las propiedades de la "
+"capa de salida:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:595
+msgid ""
+"|checkbox| :guilabel:`Create on-the-fly dataset group instead of writing "
+"layer to disk`:"
+msgstr ""
+"|checkbox| :guilabel:`Crea un grupo de conjuntos de datos sobre la marcha en"
+" lugar de escribir una capa en el disco:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:598
+msgid ""
+"If unchecked, the output is stored on disk as a new plain file. An "
+":guilabel:`Output File` path and an :guilabel:`Output Format` are required."
+msgstr ""
+"Si no está marcada, la salida se almacena en el disco como un nuevo archivo "
+"sin formato. Se requiere una ruta :guilabel:`Archivo de salida` y un "
+":guilabel:`Formato de salida`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:600
+msgid ""
+"If checked, a new dataset group will be added to the mesh layer. Values of "
+"the dataset group are not stored in memory but each dataset is calculated "
+"when needed with the formula entered in the mesh calculator. That virtual "
+"dataset group is saved with the project, and if needed, it can be removed or"
+" made persistent in file from the layer :guilabel:`Source` properties tab."
+msgstr ""
+"Si está marcado, se agregará un nuevo grupo de conjuntos de datos a la capa "
+"de malla. Los valores del grupo de conjuntos de datos no se almacenan en la "
+"memoria, pero cada conjunto de datos se calcula cuando es necesario con la "
+"fórmula ingresada en la calculadora de malla. Ese grupo de conjuntos de "
+"datos virtuales se guarda con el proyecto y, si es necesario, se puede "
+"eliminar o hacer persistente en el archivo desde la pestaña de propiedades "
+"de la capa :guilabel:`Fuente`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:607
+msgid ""
+"In either case, you should provide a :guilabel:`Group Name` for the output "
+"dataset group."
+msgstr ""
+"En cualquier caso, debe proporcionar un :guilabel:`Nombre de grupo` para el "
+"grupo de conjuntos de datos de salida."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:609
+msgid "The :guilabel:`Spatial extent` to consider for calculation can be:"
+msgstr ""
+"La :guilabel:`Extensión espacial` a considerar para el cálculo puede ser:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:611
+msgid ""
+"a :guilabel:`Custom extent`, manually filled with the :guilabel:`X min`, "
+":guilabel:`X max`, :guilabel:`Y min` and :guilabel:`Y max` coordinate, or "
+"extracted from an existing dataset group (select it in the list and press "
+":guilabel:`Use selected layer extent` to fill the abovementioned coordinate "
+"fields)"
+msgstr ""
+"una :guilabel:`Extensión personalizada`, rellenada manualmente con la "
+"coordenada :guilabel:`X min`, :guilabel:`X max`, :guilabel:`Y min` y "
+":guilabel:`Y max`, o extraída de una grupo de conjunto de datos existente "
+"(selecciónelo en la lista y presione :guilabel:`Usar extensión de capa "
+"seleccionada` para completar los campos de coordenadas mencionados "
+"anteriormente)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:616
+msgid ""
+"defined by a polygon layer (:guilabel:`Mask layer`) of the project: the "
+"polygon features geometry are used to clip the mesh layer datasets"
+msgstr ""
+"definido por una capa de polígono (:guilabel:`Capa de máscara`) del "
+"proyecto: la geometría de las características del polígono se utiliza para "
+"recortar los conjuntos de datos de la capa de malla"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:619
+msgid ""
+"The :guilabel:`Temporal extent` to take into account for datasets can be set"
+" with the :guilabel:`Start time` and :guilabel:`End time` options, selected "
+"from the existing dataset groups timesteps. They can also be filled using "
+"the :guilabel:`Use all selected dataset times` button to take the whole "
+"range."
+msgstr ""
+"La :guilabel:`Extensión temporal` a tener en cuenta para los conjuntos de "
+"datos se puede configurar con las opciones :guilabel:`Hora de inicio` y "
+":guilabel:`Hora de finalización`, seleccionadas de los grupos de conjuntos "
+"de datos existentes. También se pueden rellenar utilizando el botón "
+":guilabel:`Usar todos los tiempos del dataset seleccionado` para tomar todo "
+"el rango."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:624
+msgid ""
+"The :guilabel:`Operators` section contains all available operators. To add "
+"an operator to the mesh calculator expression box, click the appropriate "
+"button. Mathematical calculations (``+``, ``-``, ``*``, ... ) and "
+"statistical functions (``min``, ``max``, ``sum (aggr)``, ``average (aggr)``,"
+" ... ) are available. Conditional expressions (``=``, ``!=``, ``<``, ``>=``,"
+" ``IF``, ``AND``, ``NOT``, ... ) return either 0 for false and 1 for true, "
+"and therefore can be used with other operators and functions. The ``NODATA``"
+" value can also be used in the expressions."
+msgstr ""
+"La sección :guilabel:`Operadores` contiene todos los operadores disponibles."
+" Para añadir un operador al cuadro de expresión de la calculadora de malla, "
+"haga clic en el botón correspondiente. Los cálculos matemáticos (``+``, "
+"``-``, ``*``, ... ) y las funciones estadísticas (``min``, ``max``, ``suma "
+"(aggr)``, ``media (aggr)``, ... ) están disponibles. Las expresiones "
+"condicionales (``=``, ``!=``, ``<``, ``>=``, ``IF``, ``AND``, ``NOT``, ... )"
+" devuelven 0 para falso y 1 para verdadero, por lo que pueden utilizarse con"
+" otros operadores y funciones. El valor ``NODATA`` también se puede utilizar"
+" en las expresiones."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:632
+msgid ""
+"The :guilabel:`Mesh Calculator Expression` widget shows and lets you edit "
+"the expression to execute."
+msgstr ""
+"El widget :guilabel:`Expresión de calculadora de malla` muestra y le permite"
+" editar la expresión para ejecutar."
