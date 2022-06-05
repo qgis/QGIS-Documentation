@@ -25,7 +25,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:5
 msgid "List of functions"
@@ -13763,6 +13763,10 @@ msgstr ""
 "ILIKE para que la coincidencia distinga entre mayúsculas y minúsculas. "
 "Funciona con números también."
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:223
+msgid "string/number ILIKE pattern"
+msgstr "cadena de texto/número ILIKE patrón"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:225
 msgid "**string/number** - string to search"
 msgstr "**string/number** - cadena para buscar"
@@ -13775,13 +13779,93 @@ msgstr ""
 "**pattern** - patrón para encontrar, puede usar '%' como comodín, '_' como "
 "un solo carácter y '\\\\\\\\' para escapar de estos caracteres especiales."
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:228
+msgid "``'A' ILIKE 'A'`` → 1"
+msgstr "``'A' ILIKE 'A'`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:229
+msgid "``'A' ILIKE 'a'`` → 1"
+msgstr "``'A' ILIKE 'a'`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:230
+msgid "``'A' ILIKE 'B'`` → 0"
+msgstr "``'A' ILIKE 'B'`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:231
+msgid "``'ABC' ILIKE 'b'`` → 0"
+msgstr "``'ABC' ILIKE 'b'`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:232
+msgid "``'ABC' ILIKE 'B'`` → 0"
+msgstr "``'ABC' ILIKE 'B'`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:233
+msgid "``'ABC' ILIKE '_b_'`` → 1"
+msgstr "``'ABC' ILIKE '_b_'`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:234
+msgid "``'ABC' ILIKE '_B_'`` → 1"
+msgstr "``'ABC' ILIKE '_B_'`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:235
+msgid "``'ABCD' ILIKE '_b_'`` → 0"
+msgstr "``'ABCD' ILIKE '_b_'`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:236
+msgid "``'ABCD' ILIKE '_B_'`` → 0"
+msgstr "``'ABCD' ILIKE '_B_'`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:237
+msgid "``'ABCD' ILIKE '_b%'`` → 1"
+msgstr "``'ABCD' ILIKE '_b%'`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:238
+msgid "``'ABCD' ILIKE '_B%'`` → 1"
+msgstr "``'ABCD' ILIKE '_B%'`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:239
+msgid "``'ABCD' ILIKE '%b%'`` → 1"
+msgstr "``'ABCD' ILIKE '%b%'`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:240
+msgid "``'ABCD' ILIKE '%B%'`` → 1"
+msgstr "``'ABCD' ILIKE '%B%'`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:241
+msgid "``'ABCD%' ILIKE 'abcd\\\\%'`` → 1"
+msgstr "``'ABCD%' ILIKE 'abcd\\\\%'`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:242
+msgid "``'ABCD' ILIKE '%B\\\\%'`` → 0"
+msgstr "``'ABCD' ILIKE '%B\\\\%'`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:250
+msgid "IN"
+msgstr "IN"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:252
 msgid "Returns 1 if value is found within a list of values."
 msgstr "Devuelve 1 si el valor se encuentra dentro de una lista de valores."
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:258
+msgid "a IN b"
+msgstr "a IN b"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:261
 msgid "**b** - list of values"
 msgstr "**b** - lista de valores"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:263
+msgid "``'A' IN ('A','B')`` → 1"
+msgstr "``'A' IN ('A','B')`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:264
+msgid "``'A' IN ('C','B')`` → 0"
+msgstr "``'A' IN ('C','B')`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:272
+msgid "IS"
+msgstr "IS"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:274
 msgid "Returns 1 if a is the same as b."
@@ -13799,13 +13883,53 @@ msgstr "**a** - algún valor"
 msgid "**b** - any value"
 msgstr "**b** - algún valor"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:285
+msgid "``'A' IS 'A'`` → 1"
+msgstr "``'A' IS 'A'`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:286
+msgid "``'A' IS 'a'`` → 0"
+msgstr "``'A' IS 'a'`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:287
+msgid "``4 IS 4`` → 1"
+msgstr "``4 IS 4`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:288
+msgid "``4 IS 2+2`` → 1"
+msgstr "``4 IS 2+2`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:289
+msgid "``4 IS 2`` → 0"
+msgstr "``4 IS 2`` → 0"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:290
 msgid "``$geometry IS NULL`` → 0, if your geometry is not NULL"
 msgstr "``$geometry IS NULL`` → 0, si su geometría no es NULL"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:298
+msgid "IS NOT"
+msgstr "IS NOT"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:300
 msgid "Returns 1 if a is not the same as b."
 msgstr "Devuelve 1 si a no es la misma que b."
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:306
+msgid "a IS NOT b"
+msgstr "a IS NOT b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:311
+msgid "``'a' IS NOT 'b'`` → 1"
+msgstr "``'a' IS NOT 'b'`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:312
+msgid "``'a' IS NOT 'a'`` → 0"
+msgstr "``'a' IS NOT 'a'`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:313
+msgid "``4 IS NOT 2+2`` → 0"
+msgstr "``4 IS NOT 2+2`` → 0"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:321
 msgid "LIKE"
@@ -13819,6 +13943,14 @@ msgstr ""
 "Devuelve 1 si el primer parámetro coincide con el patrón proporcionado. "
 "Funciona con números también."
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:329
+msgid "string/number LIKE pattern"
+msgstr "cadena de texto/número ILIKE patrón"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:331
+msgid "**string/number** - value"
+msgstr "**cadena de texto/número** - valor"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:332
 msgid ""
 "**pattern** - pattern to compare value with, you can use '%' as a wildcard, "
@@ -13827,6 +13959,38 @@ msgstr ""
 "**pattern** - patrón con el que comparar el valor, puede usar '%' como "
 "comodín, '_' como un solo carácter y '\\\\\\\\' para escapar de estos "
 "caracteres especiales."
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:334
+msgid "``'A' LIKE 'A'`` → 1"
+msgstr "``'A' LIKE 'A'`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:335
+msgid "``'A' LIKE 'a'`` → 0"
+msgstr "``'A' LIKE 'a'`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:336
+msgid "``'A' LIKE 'B'`` → 0"
+msgstr "``'A' LIKE 'B'`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:337
+msgid "``'ABC' LIKE 'B'`` → 0"
+msgstr "``'ABC' LIKE 'B'`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:338
+msgid "``'ABC' LIKE '_B_'`` → 1"
+msgstr "``'ABC' LIKE '_B_'`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:339
+msgid "``'ABCD' LIKE '_B_'`` → 0"
+msgstr "``'ABCD' LIKE '_B_'`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:340
+msgid "``'ABCD' LIKE '_B%'`` → 1"
+msgstr "``'ABCD' LIKE '_B%'`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:341
+msgid "``'ABCD' LIKE '%B%'`` → 1"
+msgstr "``'ABCD' LIKE '%B%'`` → 1"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:342
 msgid "``'1%' LIKE '1\\\\%'`` → 1"
@@ -13897,6 +14061,26 @@ msgstr "[índice]"
 msgid "**index** - array index or map key value"
 msgstr "**index** - índice de matriz o valor de clave de mapa"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:407
+msgid "``array(1,2,3)[0]`` → 1"
+msgstr "``array(1,2,3)[0]`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:408
+msgid "``array(1,2,3)[2]`` → 3"
+msgstr "``array(1,2,3)[2]`` → 3"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:409
+msgid "``array(1,2,3)[-1]`` → 3"
+msgstr "``array(1,2,3)[-1]`` → 3"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:410
+msgid "``map('a',1,'b',2)['a']`` → 1"
+msgstr "``map('a',1,'b',2)['a']`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:411
+msgid "``map('a',1,'b',2)['b']`` → 2"
+msgstr "``map('a',1,'b',2)['b']`` → 2"
+
 #: ../../docs/user_manual/expressions/functions_list.rst:783
 msgid ""
 "Further reading: :ref:`expression_function_Arrays_array_get`, "
@@ -13921,6 +14105,10 @@ msgstr "a ^ b"
 msgid "``5 ^ 4`` → 625"
 msgstr "``5 ^ 4`` → 625"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:20
+msgid "``5 ^ NULL`` → NULL"
+msgstr "``5 ^ NULL`` → NULL"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:28
 msgid "\\||"
 msgstr "\\||"
@@ -13940,6 +14128,18 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:40
 msgid "a || b"
 msgstr "a || b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:45
+msgid "``'Here' || ' and ' || 'there'`` → 'Here and there'"
+msgstr "``'Here' || ' and ' || 'there'`` → 'Here and there'"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:46
+msgid "``'Nothing' || NULL`` → NULL"
+msgstr "``'Nothing' || NULL`` → NULL"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:47
+msgid "``'Dia: ' || \"Diameter\"`` → 'Dia: 25'"
+msgstr "``'Dia: ' || \"Diameter\"`` → 'Dia: 25'"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:48
 msgid "``1 || 2`` → '12'"
@@ -13967,6 +14167,10 @@ msgstr ""
 "caracteres de barra invertida deben tener doble escape (por ejemplo, "
 "\"\\\\\\\\s\" para que coincida con un carácter de espacio en blanco)."
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:14
+msgid "string ~ regex"
+msgstr "string ~ regex"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:16
 msgid "**string** - A string value"
 msgstr "**string** - un valor cadena"
@@ -13976,6 +14180,14 @@ msgid "**regex** - A regular expression. Slashes must be escaped, eg \\\\\\\\d."
 msgstr ""
 "**regex** - Una expresión regular. Las barras deben tener caracteres de "
 "escape, por ejemplo, \\\\\\\\d."
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:19
+msgid "``'hello' ~ 'll'`` → 1"
+msgstr "``'hello' ~ 'll'`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:20
+msgid "``'hello' ~ '^ll'`` → 0"
+msgstr "``'hello' ~ '^ll'`` → 0"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:21
 msgid "``'hello' ~ 'llo$'`` → 1"
@@ -15110,6 +15322,16 @@ msgstr "**arg** - cualquier tipo. Cualquier cantidad de argumentos."
 #: ../../docs/user_manual/expressions/expression_help/String.rst:19
 msgid "``format('This %1 a %2','is', 'test')`` → 'This is a test'"
 msgstr "``format('This %1 a %2','is', 'test')`` → 'This is a test'"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:20
+msgid ""
+"``format('This is %2','a bit unexpected but 2 is lowest number in "
+"string','normal')`` → 'This is a bit unexpected but 2 is lowest number in "
+"string'"
+msgstr ""
+"``format('This is %2','a bit unexpected but 2 is lowest number in "
+"string','normal')`` → 'This is a bit unexpected but 2 is lowest number in "
+"string'"
 
 #: ../../docs/user_manual/expressions/expression_help/String.rst:95
 msgid "format_number"
