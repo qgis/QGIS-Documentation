@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.10.1\n"
 "Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/user_manual/introduction/browser.rst:8
 #: ../../docs/user_manual/introduction/browser.rst:38
@@ -382,9 +382,78 @@ msgstr ""
 msgid "They are mainly:"
 msgstr "Sono principalmente:"
 
+#: ../../docs/user_manual/introduction/browser.rst:169
+msgid "The :guilabel:`Home` folder, pointing to the current user home folder"
+msgstr ""
+"La cartella :guilabel:`Home`, che punta alla cartella home dell'utente "
+"corrente"
+
+#: ../../docs/user_manual/introduction/browser.rst:170
+msgid "on Unix-based machines, the root :guilabel:`/` folder"
+msgstr "su macchine basate su Unix, la cartella radice :guilabel:`/`"
+
+#: ../../docs/user_manual/introduction/browser.rst:171
+msgid ""
+"the connected drives, either local or network. Depending on the OS, they are"
+" directly listed (eg, ``C:\\``, ``D:\\``) or through the ``/Volumes`` entry."
+msgstr ""
+"le unità collegate, sia locali che di rete. A seconda del sistema operativo,"
+" sono elencate direttamente (ad esempio, ``C:\\``, ``D:\\``) o attraverso la"
+" voce ``/Volumi``."
+
+#: ../../docs/user_manual/introduction/browser.rst:175
+msgid "From the contextual menu of each of these folders or drives, you can:"
+msgstr "Dal menu contestuale di ciascuna di queste cartelle o unità, puoi:"
+
+#: ../../docs/user_manual/introduction/browser.rst:177
+msgid "refresh the contents"
+msgstr "aggiornare i contenuti"
+
+#: ../../docs/user_manual/introduction/browser.rst:178
+msgid ""
+"create a :menuselection:`New -->` subitem that is a :guilabel:`Directory`, "
+":guilabel:`GeoPackage` or ESRI :guilabel:`Shapefile` format dataset"
+msgstr ""
+"creare una sottovoce :menuselection:`Nuovo -->` che sia un insieme di dati "
+"in formato :guilabel:`Cartella`, :guilabel:`GeoPackage` o ESRI "
+":guilabel:`Shapefile"
+
 #: ../../docs/user_manual/introduction/browser.rst:180
 msgid "hide the directory (:guilabel:`Hide from Browser`)"
 msgstr "nascondere la cartella (:guilabel:`Nascondi dal Browser`)"
+
+#: ../../docs/user_manual/introduction/browser.rst:181
+msgid ""
+":guilabel:`Set color`: customize the folder icon color, aiding in rapid "
+"browser navigation of complex folder structures"
+msgstr ""
+":guilabel:`Imposta colore`: personalizza il colore dell'icona della "
+"cartella, aiutando la navigazione rapida nel browser di strutture complesse "
+"di cartelle."
+
+#: ../../docs/user_manual/introduction/browser.rst:183
+msgid "enable :guilabel:`Scanning`:"
+msgstr "abilitare :guilabel: `Scansione`:"
+
+#: ../../docs/user_manual/introduction/browser.rst:185
+msgid ""
+"|checkbox| :guilabel:`Monitor for changes`: allows to manually control "
+"whether a particular directory should be monitored and automatically "
+"updated. This setting applies to the selected directory and all "
+"subdirectories. This means that you can manually opt-in to monitoring of "
+"network drives if you know there's no issue, or manually opt-out of "
+"monitoring of large directories which you don't want monitored for other "
+"reasons. By default, remote or network drives are not automatically "
+"monitored."
+msgstr ""
+"|checkbox| :guilabel:`Monitoraggio delle modifiche`: consente di controllare"
+" manualmente se una particolare cartella deve essere monitorata e aggiornata"
+" automaticamente. Questa impostazione si applica alla cartella selezionata e"
+" a tutte le sottocartella. Ciò significa che puoi scegliere manualmente di "
+"monitorare le unità di rete, se si sa che non ci sono problemi, o di "
+"escludere manualmente il monitoraggio di cartelle di grandi dimensioni che "
+"non si desidera monitorare per altri motivi. Per impostazione predefinita, "
+"le unità remote o di rete non vengono monitorate automaticamente."
 
 #: ../../docs/user_manual/introduction/browser.rst:406
 msgid "checkbox"
@@ -503,7 +572,7 @@ msgstr "Menu principale"
 
 #: ../../docs/user_manual/introduction/browser.rst:215
 msgid "Create a :guilabel:`New Connection…` to an existing database"
-msgstr "Crea una :guilabel: `Nuova Connessione...` a un database esistente"
+msgstr "Crea una :guilabel:`Nuova Connessione...` a un database esistente"
 
 #: ../../docs/user_manual/introduction/browser.rst:215
 #: ../../docs/user_manual/introduction/browser.rst:218
@@ -555,9 +624,135 @@ msgstr "|checkbox|"
 msgid ":guilabel:`Create Database…`"
 msgstr ":guilabel:`Crea Database…`"
 
+#: ../../docs/user_manual/introduction/browser.rst:220
+#: ../../docs/user_manual/introduction/browser.rst:305
+msgid ":guilabel:`Save Connections…` details to a file"
+msgstr ":guilabel:`Salva Connessioni…` su un file"
+
+#: ../../docs/user_manual/introduction/browser.rst:223
+#: ../../docs/user_manual/introduction/browser.rst:308
+msgid ":guilabel:`Load Connections…`"
+msgstr ":guilabel:`Carica Connessioni…`"
+
 #: ../../docs/user_manual/introduction/browser.rst:225
 msgid "Connection / Database"
 msgstr "Connessione / Database"
+
+#: ../../docs/user_manual/introduction/browser.rst:225
+msgid ":guilabel:`Refresh` a connection"
+msgstr ":guilabel:`Aggiorna` una connessione"
+
+#: ../../docs/user_manual/introduction/browser.rst:227
+msgid ":guilabel:`Edit Connection…` settings"
+msgstr ":guilabel:`Modifica impostazioni connessione...` "
+
+#: ../../docs/user_manual/introduction/browser.rst:229
+msgid ":guilabel:`Delete Connection`"
+msgstr ":guilabel:`Rimuovi Connessione`"
+
+#: ../../docs/user_manual/introduction/browser.rst:231
+msgid ":guilabel:`Delete <database_name>`"
+msgstr ":guilabel:`Rimuovi <database_name>`"
+
+#: ../../docs/user_manual/introduction/browser.rst:233
+msgid ":guilabel:`Compact Database (VACUUM)`"
+msgstr ":guilabel:`Compatta Database (VACUUM)`"
+
+#: ../../docs/user_manual/introduction/browser.rst:235
+msgid "Create a :guilabel:`New Schema…`"
+msgstr "Creare un :guilabel:`Nuovo schema...`"
+
+#: ../../docs/user_manual/introduction/browser.rst:237
+#: ../../docs/user_manual/introduction/browser.rst:249
+msgid "Create a :guilabel:`New Table…`"
+msgstr "Creare una guilabel:`Nuova Tabella…`"
+
+#: ../../docs/user_manual/introduction/browser.rst:239
+#: ../../docs/user_manual/introduction/browser.rst:251
+#: ../../docs/user_manual/introduction/browser.rst:259
+msgid ":guilabel:`Execute SQL…` query"
+msgstr ":guilabel:`Esegui SQL…` query"
+
+#: ../../docs/user_manual/introduction/browser.rst:241
+msgid "Schema"
+msgstr "Vista"
+
+#: ../../docs/user_manual/introduction/browser.rst:241
+msgid ":guilabel:`Refresh` a schema"
+msgstr ":guilabel:`Aggiorna` una vista"
+
+#: ../../docs/user_manual/introduction/browser.rst:243
+msgid ":menuselection:`Schema Operations --> Rename Schema…`"
+msgstr ":menuselection:`Operazioni Vista --> Rinomina Vista…`"
+
+#: ../../docs/user_manual/introduction/browser.rst:246
+msgid ":menuselection:`Schema Operations --> Delete Schema…`"
+msgstr ":menuselection:`Operazioni Vista --> Elimina Vista…`"
+
+#: ../../docs/user_manual/introduction/browser.rst:253
+#: ../../docs/user_manual/introduction/browser.rst:318
+msgid "Table / Layer"
+msgstr "Tabella / Layer"
+
+#: ../../docs/user_manual/introduction/browser.rst:253
+msgid ":menuselection:`Table Operations --> Rename Table…`"
+msgstr ":menuselection:`Operazioni Tabella --> Rinomina Tabella…`"
+
+#: ../../docs/user_manual/introduction/browser.rst:256
+msgid ":menuselection:`Table Operations --> Truncate Table…`"
+msgstr ":menuselection:`Operazioni su Tabelle --> Truncate Table…`"
+
+#: ../../docs/user_manual/introduction/browser.rst:261
+msgid ":menuselection:`Export Layer --> To file…`"
+msgstr ":menuselection:`Esporta Layer --> su file…`"
+
+#: ../../docs/user_manual/introduction/browser.rst:263
+msgid ":menuselection:`Manage --> Rename Layer <layer_name>…`"
+msgstr ":menuselection:`Gestione --> Rinomina Layer <layer_name>…`"
+
+#: ../../docs/user_manual/introduction/browser.rst:266
+msgid ":menuselection:`Manage --> Delete Layer <layer_name>…`"
+msgstr ":menuselection:`Gestione --> Elimina Layer <layer_name>…`"
+
+#: ../../docs/user_manual/introduction/browser.rst:269
+msgid ":menuselection:`Manage --> Delete Selected Layers`"
+msgstr ":menuselection:`Gestione --> Elimina Layer Selezionati`"
+
+#: ../../docs/user_manual/introduction/browser.rst:272
+msgid ":menuselection:`Manage --> Add Layer to Project`"
+msgstr ":menuselection:`Gestione --> Aggiungi Layer al Progetto`"
+
+#: ../../docs/user_manual/introduction/browser.rst:275
+msgid ":menuselection:`Manage --> Add Selected Layers to Project`"
+msgstr ":menuselection:`Gestione --> Aggiungi Layer Selezionati al Progetto`"
+
+#: ../../docs/user_manual/introduction/browser.rst:278
+msgid "Open :guilabel:`Layer Properties…` dialog"
+msgstr "Apri finestra di dialogo :guilabel:`Proprietà…` layer"
+
+#: ../../docs/user_manual/introduction/browser.rst:280
+msgid "Open :guilabel:`File Properties…` dialog"
+msgstr "Apri finestra di dialogo :guilabel:`Proprietà…` file"
+
+#: ../../docs/user_manual/introduction/browser.rst:282
+msgid "Fields"
+msgstr "Campi"
+
+#: ../../docs/user_manual/introduction/browser.rst:282
+msgid ":guilabel:`Add New Field…`"
+msgstr ":guilabel:`Aggiungi Nuovo Campo…`"
+
+#: ../../docs/user_manual/introduction/browser.rst:284
+msgid "Field"
+msgstr "Campo"
+
+#: ../../docs/user_manual/introduction/browser.rst:284
+msgid ":guilabel:`Delete Field…`"
+msgstr ":guilabel:`Elimina Campo…`"
+
+#: ../../docs/user_manual/introduction/browser.rst:289
+msgid "Tiles and Web Services"
+msgstr "Tasselli e Servizi Web"
 
 #: ../../docs/user_manual/introduction/browser.rst:292
 msgid "Type of services"
@@ -571,9 +766,17 @@ msgstr "|wms| WMS / WMTS"
 msgid "wms"
 msgstr "wms"
 
+#: ../../docs/user_manual/introduction/browser.rst:294
+msgid "|vectorTileLayer| Vector Tiles"
+msgstr "|vectorTileLayer| Tasselli Vettoriali"
+
 #: ../../docs/user_manual/introduction/browser.rst:432
 msgid "vectorTileLayer"
 msgstr "vectorTileLayer"
+
+#: ../../docs/user_manual/introduction/browser.rst:294
+msgid "|xyz| XYZ Tiles"
+msgstr "|xyz| XYZ Tasselli"
 
 #: ../../docs/user_manual/introduction/browser.rst:440
 msgid "xyz"
@@ -587,9 +790,17 @@ msgstr "|wcs| WCS"
 msgid "wcs"
 msgstr "wcs"
 
+#: ../../docs/user_manual/introduction/browser.rst:294
+msgid "|wfs| WFS / OGC API - Features"
+msgstr "|wfs| WFS / OGC API - Features"
+
 #: ../../docs/user_manual/introduction/browser.rst:436
 msgid "wfs"
 msgstr "wfs"
+
+#: ../../docs/user_manual/introduction/browser.rst:294
+msgid "|afs| ArcGIS REST Servers"
+msgstr "|afs| ArcGIS REST Servers"
 
 #: ../../docs/user_manual/introduction/browser.rst:400
 msgid "afs"
@@ -603,9 +814,50 @@ msgstr "|geonode| GeoNode"
 msgid "geonode"
 msgstr "geonode"
 
+#: ../../docs/user_manual/introduction/browser.rst:298
+msgid "Create a :guilabel:`New Connection…`"
+msgstr "Creare una :guilabel:`Nuova Connessione…`"
+
+#: ../../docs/user_manual/introduction/browser.rst:300
+msgid "Create a :guilabel:`New Generic Connection…`"
+msgstr "Creare una :guilabel:`Nuova Connessione Generica…`"
+
+#: ../../docs/user_manual/introduction/browser.rst:302
+msgid "Create a :guilabel:`New ArcGIS Vector Tile Service Connection…`"
+msgstr "Creare una :guilabel:`Nuova Connessione ArcGIS REST Server…`"
+
 #: ../../docs/user_manual/introduction/browser.rst:310
 msgid "Connection"
 msgstr "Connessione"
+
+#: ../../docs/user_manual/introduction/browser.rst:310
+msgid ":guilabel:`Refresh` connection"
+msgstr ":guilabel:`Aggiorna` connessione"
+
+#: ../../docs/user_manual/introduction/browser.rst:312
+msgid ":guilabel:`Edit…` connection settings"
+msgstr ":guilabel:`Modifica…` impostazioni connessione"
+
+#: ../../docs/user_manual/introduction/browser.rst:314
+msgid ":guilabel:`Delete` connection"
+msgstr ":guilabel:`Rimuovi` connessione"
+
+#: ../../docs/user_manual/introduction/browser.rst:316
+#: ../../docs/user_manual/introduction/browser.rst:324
+msgid ":guilabel:`View Service Info` in Web browser"
+msgstr ":guilabel:`Visualizza le informazioni sul servizio` nel browser web"
+
+#: ../../docs/user_manual/introduction/browser.rst:318
+msgid ":menuselection:`Export Layer --> To File...`"
+msgstr ":menuselection:`Esporta Layer --> su File...`"
+
+#: ../../docs/user_manual/introduction/browser.rst:320
+msgid ":guilabel:`Add layer to Project`"
+msgstr ":guilabel:`Aggiungi layer al Progetto`"
+
+#: ../../docs/user_manual/introduction/browser.rst:322
+msgid "Open :guilabel:`Layer properties…` dialog"
+msgstr "Apri finestra di dialogo :guilabel:`Proprietà…` layer"
 
 #: ../../docs/user_manual/introduction/browser.rst:330
 msgid "Resources"
