@@ -2250,7 +2250,12 @@ Advanced parameters
        .. figure:: img/dissolve_disjoint.png
           :align: center
 
-          Input features, dissolve all (3 distinct features), dissolve on field (5 distinct features)
+          source (left), dissolve all (3 distinct features - right)
+
+       .. figure:: img/dissolve_disjoint_field.png
+          :align: center
+
+          source (left), dissolve on field (5 distinct features - right)
 
 Outputs
 .......
