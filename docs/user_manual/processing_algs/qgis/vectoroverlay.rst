@@ -904,7 +904,7 @@ as there are features that participate in that overlap.
 An overlay layer can also be used, in which case features from each
 layer are split at their overlap with features from the other one,
 creating a layer containing all the portions from both input and
-overlay layers.
+overlay layers. Features on the same layer will not split each other.
 The attribute table of the union layer is filled with attribute values
 from the respective original layer for non-overlapping features, and
 attribute values from both layers for overlapping features.
@@ -917,11 +917,10 @@ attribute values from both layers for overlapping features.
   clarity (right)
 
 .. note::
-   For ``union(A,B)`` algorithm, if there are overlaps among
-   geometries of layer A or among geometries of layer B, these are not
-   resolved: you need to do ``union(union(A,B))`` to resolve all
-   overlaps, i.e. run single layer ``union(X)`` on the produced result
-   ``X=union(A,B)``.
+   With an overlay layer, features on the same layer will not split each other.
+   If you want to split overlaps on the same layer as well as other layers,
+   first run the algorithm with multiple layers then run the algorithm
+   again with only the previous output.
 
 **Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
 
@@ -1045,15 +1044,11 @@ attribute values from overlay layers for overlapping features.
 
        CAPTION of image
 
-.. I'm not sure if the note below is relevant/true with the multiunion alg
-
-   .. note::
-   For ``multiunion(A,B,C,...)`` algorithm, if there are overlaps among
-   geometries of any layer, these are not
-   resolved: you need to do ``union(multiunion(A,B,C...))`` to resolve all
-   overlaps, i.e. run single layer ``union(X)`` on the produced result
-   ``X=multiunion(A,B,C,...)``.
-
+.. note::
+   With an overlay layer, features on the same layer will not split each other.
+   If you want to split overlaps on the same layer as well as other layers,
+   first run the algorithm with multiple layers then run the algorithm
+   again with only the previous output.
 
 .. seealso:: :ref:`qgisunion`, :ref:`qgisclip`, :ref:`qgisdifference`,
    :ref:`qgisintersection`
