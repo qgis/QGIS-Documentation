@@ -1034,10 +1034,10 @@ as there are features that participate in that overlap.
 Multiple overlay layers can also be used, in which case features from each
 layer are split at their overlap with features from all other layers,
 creating a layer containing all the portions from both input and
-overlay layers.
+overlay layers. Features on the same layer will not split each other.
 The attribute table of the Union layer is filled with attribute values
 from the respective original layer for non-overlapping features, and
-attribute values from both layers for overlapping features.
+attribute values from overlay layers for overlapping features.
 
 .. todo: Add an image
     .. figure:: img/multiunion.png
@@ -1048,11 +1048,11 @@ attribute values from both layers for overlapping features.
 .. I'm not sure if the note below is relevant/true with the multiunion alg
 
    .. note::
-   For ``union(A,B)`` algorithm, if there are overlaps among
-   geometries of layer A or among geometries of layer B, these are not
-   resolved: you need to do ``union(union(A,B))`` to resolve all
+   For ``multiunion(A,B,C,...)`` algorithm, if there are overlaps among
+   geometries of any layer, these are not
+   resolved: you need to do ``union(multiunion(A,B,C...))`` to resolve all
    overlaps, i.e. run single layer ``union(X)`` on the produced result
-   ``X=union(A,B)``.
+   ``X=multiunion(A,B,C,...)``.
 
 
 .. seealso:: :ref:`qgisunion`, :ref:`qgisclip`, :ref:`qgisdifference`,
