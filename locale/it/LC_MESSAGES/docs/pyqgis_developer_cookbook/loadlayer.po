@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
 "Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:25
 msgid "Loading Layers"
@@ -207,6 +207,18 @@ msgstr ""
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:229
 msgid "The uri can be created using the standard ``urllib`` library:"
 msgstr "L'uri può essere creato usando la libreria standard ``urllib``:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:244
+msgid ""
+"You can change the data source of an existing layer by calling "
+":meth:`setDataSource() <qgis.core.QgsMapLayer.setDataSource>` on a "
+":class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` instance, as in the "
+"following example:"
+msgstr ""
+"Puoi modificare l'origine dei dati di un layer esistente chiamando "
+":meth:`setDataSource() <qgis.core.QgsMapLayer.setDataSource>` su un'istanza "
+":class:`QgsVectorLayer <qgis.core.QgsVectorLayer>`, come nell'esempio "
+"seguente:"
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:265
 msgid "Raster Layers"
