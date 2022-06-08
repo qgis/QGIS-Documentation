@@ -2,26 +2,27 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2022
+# Ana Mendes, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 10:18+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:11+0000\n"
+"Last-Translator: Ana Mendes, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 "Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:5
 msgid "Translation Guidelines"
@@ -61,6 +62,23 @@ msgid ""
 msgstr ""
 " A documentação do QGIS está escrita em inglês com arquivos :file:`.rst`. "
 "Para fornecer traduções:"
+
+#: ../../docs/documentation_guidelines/do_translations.rst:28
+msgid ""
+"A prebuild script creates translation files named :file:`.po` files for the "
+"English language in the folder :file:`/QGIS-Documentation/locale/en`."
+msgstr ""
+"Um script de pré-compilação cria arquivos de tradução chamados "
+":arquivo:`.po` arquivos para o idioma inglês na pasta :arquivo:`/QGIS-"
+"Documentação/localidade/pt`."
+
+#: ../../docs/documentation_guidelines/do_translations.rst:30
+msgid ""
+"These \"originals\" are then copied by the script to the :file:`locale` "
+"folders for other languages."
+msgstr ""
+"Esses \"originais\" são então copiados pelo script para as pastas "
+":file:`localidade` para outros idiomas."
 
 #: ../../docs/documentation_guidelines/do_translations.rst:32
 msgid ""
@@ -308,6 +326,16 @@ msgstr "Traduções no Qt Linguist"
 msgid "With Qt Linguist, you need to:"
 msgstr "Com Qt Linguist, você precisa:"
 
+#: ../../docs/documentation_guidelines/do_translations.rst:147
+msgid ""
+"manually grab the :file:`.po` or :file:`.ts`  file(s). This can be achieved "
+"by downloading the file(s) either from Transifex platform or from the "
+":file:`locale/$language` folder of the source repository (in GitHub),"
+msgstr ""
+"pegue manualmente o(s) arquivo(s): arquivo:`.po` ou : arquivo:`.ts`. Isso "
+"pode ser feito baixando o(s) arquivo(s) da plataforma Transifex ou da pasta "
+":arquivo:`localidade/$idioma` do repositório de origem (no GitHub),"
+
 #: ../../docs/documentation_guidelines/do_translations.rst:150
 msgid "proceed to the translation locally"
 msgstr " prossiga para a tradução localmente"
@@ -352,6 +380,16 @@ msgstr ""
 "O idioma Destino deverá ser preenchido corretamente. O idioma de Origem pode"
 " ser deixado como o idioma POSIX e País/Região em Qualquer País."
 
+#: ../../docs/documentation_guidelines/do_translations.rst:173
+msgid ""
+"When you press the :guilabel:`OK` button Qt Linguist is filled with "
+"sentences and you can start translating, see "
+":numref:`Figure_translation_menu`."
+msgstr ""
+"Quando você pressiona o botão :guilabel:`OK`, o Qt Linguistico é preenchido "
+"com frases e você pode começar a traduzir, veja :número "
+"ref:`Figura_tradução_menu`."
+
 #: ../../docs/documentation_guidelines/do_translations.rst:183
 msgid "Translate using the linguist menu"
 msgstr "Tradução usando o menu linguist"
@@ -374,6 +412,10 @@ msgstr ""
 "tradução, deixe o campo de texto vazio para tradução e clique nesse botão, o"
 " que indica que o item está pronto e você continua com o próximo item."
 
+#: ../../docs/documentation_guidelines/do_translations.rst:381
+msgid "linguist_done_next"
+msgstr "linguístico_feito_próximo"
+
 #: ../../docs/documentation_guidelines/do_translations.rst:192
 msgid ""
 "|linguist_previous| The Goto Previous button, can be used to go to the "
@@ -382,6 +424,10 @@ msgstr ""
 "|linguist_previous| O Botão Anterior, pode ser usado para ir para um "
 "anterior item de tradução."
 
+#: ../../docs/documentation_guidelines/do_translations.rst:387
+msgid "linguist_previous"
+msgstr "linguístico_anterior"
+
 #: ../../docs/documentation_guidelines/do_translations.rst:194
 msgid ""
 "|linguist_next| The Goto Next button, can be used to go to the next "
@@ -389,6 +435,10 @@ msgid ""
 msgstr ""
 "|linguist_next| O Botão Seguinte, pode ser usado para ir para o próximo item"
 " de tradução."
+
+#: ../../docs/documentation_guidelines/do_translations.rst:383
+msgid "linguist_next"
+msgstr "linguístico_próximo"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:196
 msgid ""
@@ -401,6 +451,10 @@ msgstr ""
 "mudado e apenas algumas instruções novas/alteradas necessitam de ser "
 "traduzidas."
 
+#: ../../docs/documentation_guidelines/do_translations.rst:385
+msgid "linguist_next_todo"
+msgstr "linguístico_próximo_todo"
+
 #: ../../docs/documentation_guidelines/do_translations.rst:199
 msgid ""
 "|linguist_previous_todo| The Previous Todo button, searches backward and "
@@ -408,6 +462,10 @@ msgid ""
 msgstr ""
 "|linguist_previous_todo| O Botão Anterior A Fazer, faz uma procura para trás"
 " e salta para o primeiro item de tradução  e vê se necessita de tradução."
+
+#: ../../docs/documentation_guidelines/do_translations.rst:389
+msgid "linguist_previous_todo"
+msgstr "linguístico_anterior_todo"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:202
 msgid ""
@@ -615,6 +673,30 @@ msgstr ""
 " ``|labels|``, ``|selectString|``, ``|addLayer|`` ... Essas são etiquetas "
 "especiais utilizadas para substituir imagens"
 
+#: ../../docs/documentation_guidelines/do_translations.rst:338
+msgid ""
+"Do not change references that start with roles like ``:ref:``, ``:file:``, "
+"``:numref:`` unless they include a title. In that case, you can translate "
+"the title but keep unchanged the link (i.e., the text between ``<`` and "
+"``>``)"
+msgstr ""
+"Não altere as referências que começam com papéis como ``:referência:``, "
+"``:Arquivo:``, ``:número ref:`` a menos que incluam um título. Nesse caso, "
+"você pode traduzir o título, mas manter o link inalterado (ou seja, o texto "
+"entre ``<`` e ``>``)"
+
+#: ../../docs/documentation_guidelines/do_translations.rst:342
+msgid ""
+"When a title is provided for a reference, Transifex may display a number in "
+"the English source text in replacement of the link part. Click on the number"
+" in the source text to add the reference link next to the title being "
+"translated."
+msgstr ""
+"Quando um título é fornecido para referência, a Transifex pode exibir um "
+"número no texto original em inglês em substituição à parte do link. Clique "
+"no número no texto de origem para adicionar o link de referência ao lado do "
+"título que está sendo traduzido."
+
 #: ../../docs/documentation_guidelines/do_translations.rst:346
 msgid ""
 "Do not change references that end with an underscore like "
@@ -693,3 +775,19 @@ msgstr ""
 "Para qualquer dúvida, entre em contato com `Equipe da comunidade QGIS <qgis-"
 "community-team@lists.osgeo.org>`_ ou `Equipe de tradução QGIS <qgis-"
 "tr@lists.osgeo.org>`_."
+
+#: ../../docs/documentation_guidelines/do_translations.rst:375
+msgid "addLayer"
+msgstr "adicionar camada"
+
+#: ../../docs/documentation_guidelines/do_translations.rst:377
+msgid "checkbox"
+msgstr "caixa de seleção"
+
+#: ../../docs/documentation_guidelines/do_translations.rst:379
+msgid "heatmap"
+msgstr "mapa de calor"
+
+#: ../../docs/documentation_guidelines/do_translations.rst:391
+msgid "selectString"
+msgstr "selecione String"
