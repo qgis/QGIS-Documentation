@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2022
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2022
 # 
 #, fuzzy
 msgid ""
@@ -14,14 +15,93 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-04-27 02:44+0000\n"
 "PO-Revision-Date: 2022-03-14 05:12+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2022\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2022\n"
 "Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.10.1\n"
 "Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/server_manual/services/ogcapif.rst:4
+msgid "OGC API Features"
+msgstr "OGC API Features"
+
+#: ../../docs/server_manual/services/ogcapif.rst:6
+msgid ""
+"OGC API Features (OAPIF) is the first implementation of the new generation "
+"of OGC protocols. It is described by the `OGC API - Features - Part 1: Core "
+"<http://docs.opengeospatial.org/is/17-069r3/17-069r3.html>`_ document."
+msgstr ""
+"OGC API Features (OAPIF) è la prima implementazione della nuova generazione "
+"di protocolli OGC. È descritto dal documento `OGC API - Features - Part 1: "
+"Core <http://docs.opengeospatial.org/is/17-069r3/17-069r3.html>`_."
+
+#: ../../docs/server_manual/services/ogcapif.rst:11
+msgid ""
+"Here is a quick informal summary of the most important differences between "
+"the well known WFS protocol and OAPIF:"
+msgstr ""
+"Ecco un rapido riassunto informale delle differenze più importanti tra il "
+"noto protocollo WFS e OAPIF:"
+
+#: ../../docs/server_manual/services/ogcapif.rst:14
+msgid ""
+"OAPIF is based on a `REST "
+"<https://en.wikipedia.org/wiki/Representational_state_transfer>`_ API"
+msgstr ""
+"OAPIF è basato su un'API `REST "
+"<https://en.wikipedia.org/wiki/Representational_state_transfer>`_"
+
+#: ../../docs/server_manual/services/ogcapif.rst:17
+msgid ""
+"OAPIF must follow the `OPENAPI "
+"<https://en.wikipedia.org/wiki/OpenAPI_Specification>`_ specifications"
+msgstr ""
+"OAPIF deve seguire le specifiche di `OPENAPI "
+"<https://en.wikipedia.org/wiki/OpenAPI_Specification>`_."
+
+#: ../../docs/server_manual/services/ogcapif.rst:20
+msgid ""
+"OAPIF supports multiple output formats but it does not dictate any (only "
+"GeoJSON and HTML are currently available in QGIS OAPIF) and it uses `content"
+" negotiation <https://en.wikipedia.org/wiki/Content_negotiation>`_ to "
+"determine which format is to be served to the client"
+msgstr ""
+"OAPIF supporta diversi formati di output, ma non ne impone nessuno (solo "
+"GeoJSON e HTML sono attualmente disponibili in QGIS OAPIF) e utilizza la "
+"`content negotiation <https://en.wikipedia.org/wiki/Content_negotiation>`_ "
+"per determinare quale formato deve essere servito al client."
+
+#: ../../docs/server_manual/services/ogcapif.rst:25
+msgid "JSON and HTML are first class citizens in OAPIF"
+msgstr "JSON e HTML sono considerati di prima classe in OAPIF"
+
+#: ../../docs/server_manual/services/ogcapif.rst:26
+msgid "OAPIF is self-documenting (through the ``/api`` endpoint)"
+msgstr "OAPIF è auto-documentata (attraverso l'endpoint ``/api``)"
+
+#: ../../docs/server_manual/services/ogcapif.rst:27
+msgid "OAPIF is fully navigable (through links) and browsable"
+msgstr "L'OAPIF è completamente navigabile (tramite link) e sfogliabile"
+
+#: ../../docs/server_manual/services/ogcapif.rst:31
+msgid ""
+"While the OGC API Features implementation in QGIS can make use of the "
+"``MAP`` parameter to specify the project file, no extra query parameters are"
+" allowed by the OPENAPI specification. For this reason it is strongly "
+"recommended that ``MAP`` is not exposed in the URL and the project file is "
+"specified in the environment by other means (i.e. setting "
+"``QGIS_PROJECT_FILE`` in the environment through a web server rewrite rule)."
+msgstr ""
+"Mentre l'implementazione di OGC API Features in QGIS può utilizzare il "
+"parametro ``MAP`` per specificare il file di progetto, le specifiche OPENAPI"
+" non consentono di utilizzare parametri di interrogazione aggiuntivi. Per "
+"questo motivo si raccomanda vivamente di non esporre ``MAP`` nell'URL e di "
+"specificare il file di progetto nell'ambiente con altri mezzi (ad esempio "
+"impostando ``QGIS_PROJECT_FILE`` nell'ambiente tramite una regola di "
+"riscrittura del server web)."
 
 #: ../../docs/server_manual/services/ogcapif.rst:42
 msgid ""
@@ -36,6 +116,14 @@ msgstr ""
 #: ../../docs/server_manual/services/ogcapif.rst:48
 msgid "Resource representation"
 msgstr "Rappresentazione risorse"
+
+#: ../../docs/server_manual/services/ogcapif.rst:50
+msgid ""
+"The implementation of OGC API Features in QGIS Server currently supports the"
+" following resource representation (output) formats:"
+msgstr ""
+"L'implementazione di OGC API Features in QGIS Server supporta attualmente i "
+"seguenti formati di rappresentazione delle risorse (output):"
 
 #: ../../docs/server_manual/services/ogcapif.rst:53
 msgid "HTML"
@@ -243,6 +331,10 @@ msgstr ""
 "le Collezioni (percorso ``/collections``, relazione di collegamento "
 "``data``)."
 
+#: ../../docs/server_manual/services/ogcapif.rst:121
+msgid "Server OAPIF landing page"
+msgstr "Server OAPIF landing page"
+
 #: ../../docs/server_manual/services/ogcapif.rst:126
 msgid "API Definition"
 msgstr "Definizione API"
@@ -290,6 +382,10 @@ msgstr ""
 "pubblicati come WFS nelle proprietà del progetto). Il percorso di questo "
 "endpoint è ``/collections/``."
 
+#: ../../docs/server_manual/services/ogcapif.rst:158
+msgid "Server OAPIF collections list page"
+msgstr "Server OAPIF collections list page"
+
 #: ../../docs/server_manual/services/ogcapif.rst:162
 msgid "Collection detail"
 msgstr "Dettaglio collezione"
@@ -315,6 +411,10 @@ msgstr ""
 "La rappresentazione HTML fornisce anche una mappa navigabile con gli "
 "elementi disponibili."
 
+#: ../../docs/server_manual/services/ogcapif.rst:179
+msgid "Server OAPIF collection detail page"
+msgstr "Server OAPIF collection detail page"
+
 #: ../../docs/server_manual/services/ogcapif.rst:185
 msgid "Features list"
 msgstr "Lista elementi"
@@ -332,6 +432,10 @@ msgstr ""
 #: ../../docs/server_manual/services/ogcapif.rst:197
 msgid "This endpoint is analogue to ``GetFeature`` in  WFS 1 and WFS 2."
 msgstr "Questo endpoint è analogo a ``GetFeature`` in WFS 1 e WFS 2."
+
+#: ../../docs/server_manual/services/ogcapif.rst:205
+msgid "Server OAPIF features list page"
+msgstr "Server OAPIF features list page"
 
 #: ../../docs/server_manual/services/ogcapif.rst:209
 msgid "Feature detail"
@@ -355,6 +459,10 @@ msgid ""
 msgstr ""
 "La rappresentazione HTML fornisce anche una mappa navigabile con la "
 "geometria degli elementi."
+
+#: ../../docs/server_manual/services/ogcapif.rst:225
+msgid "Server OAPIF feature detail page"
+msgstr "Server OAPIF feature detail page"
 
 #: ../../docs/server_manual/services/ogcapif.rst:230
 msgid "Pagination"
@@ -586,6 +694,23 @@ msgstr "restituisce solo l'attributo ``name``."
 msgid "Customize the HTML pages"
 msgstr "Personalizzare le pagine HTML"
 
+#: ../../docs/server_manual/services/ogcapif.rst:390
+msgid ""
+"The HTML representation uses a set of HTML templates to generate the "
+"response. The template is parsed by a template engine called `inja "
+"<https://github.com/pantor/inja/>`_. The templates can be customized by "
+"overriding them (see: :ref:`server_oapif_template_override`). The template "
+"has access to the same data that are available to the ``JSON`` "
+"representation and a few additional functions are available to the template:"
+msgstr ""
+"La rappresentazione HTML utilizza un insieme di modelli HTML per generare la"
+" risposta. Il template viene analizzato da un motore di template chiamato "
+"`inja <https://github.com/pantor/inja/>`_. I template possono essere "
+"personalizzati sovrascrivendoli (vedere: "
+":ref:`server_oapif_template_override`). Il template ha accesso agli stessi "
+"dati disponibili per la rappresentazione ``JSON`` e alcune funzioni "
+"aggiuntive sono disponibili per il template:"
+
 #: ../../docs/server_manual/services/ogcapif.rst:402
 msgid "Custom template functions"
 msgstr "Funzioni personalizzate modello"
@@ -606,6 +731,18 @@ msgstr ""
 #: ../../docs/server_manual/services/ogcapif.rst:407
 msgid "``json_dump( )``: prints the JSON data passed to the template"
 msgstr "``json_dump( )``: stampa i dati JSON passati al modello"
+
+#: ../../docs/server_manual/services/ogcapif.rst:408
+msgid ""
+"``static( path )``: returns the full URL to the specified static path. For "
+"example: \"static( \"/style/black.css\" )\" with a root path "
+"\"http://localhost/qgisserver/oapif\" will return "
+"\"http://localhost/qgisserver/oapif/static/style/black.css\"."
+msgstr ""
+"``static( path )``: restituisce l'URL completo del percorso statico "
+"specificato. Ad esempio: \"static( \"/style/black.css\" )\" con un percorso "
+"radice \"http://localhost/qgisserver/oapif\" restituirà "
+"\"http://localhost/qgisserver/oapif/static/style/black.css\"."
 
 #: ../../docs/server_manual/services/ogcapif.rst:412
 msgid ""
