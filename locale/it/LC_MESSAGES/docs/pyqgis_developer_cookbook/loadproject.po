@@ -22,11 +22,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
 "Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/pyqgis_developer_cookbook/loadproject.rst:14
 msgid "Loading Projects"
 msgstr "Caricamento Progetti"
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:16
+msgid ""
+"The code snippets on this page need the following imports if you're outside "
+"the pyqgis console:"
+msgstr ""
+"I frammenti di codice di questa pagina necessitano delle seguenti "
+"importazioni se si è fuori dalla console pyqgis:"
 
 #: ../../docs/pyqgis_developer_cookbook/loadproject.rst:34
 msgid ""
@@ -90,3 +98,91 @@ msgstr ""
 "caricato con l'area di mappa, devi creare un'istanza di "
 ":class:`QgsLayerTreeMapCanvasBridge <qgis.gui.QgsLayerTreeMapCanvasBridge>` "
 "come nell'esempio seguente: "
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:96
+msgid "Resolving bad paths"
+msgstr "Risoluzione di percorsi errati"
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:98
+msgid ""
+"It can happen that layers loaded in the project are moved to another "
+"location. When the project is loaded again all the layer paths are broken. "
+"The :class:`QgsPathResolver <qgis.core.QgsPathResolver>` class helps you "
+"rewrite layers path within the project."
+msgstr ""
+"Può accadere che i layer caricati nel progetto vengano spostati in un'altra "
+"posizione. Quando il progetto viene caricato di nuovo, tutti i percorsi dei "
+"layer sono interrotti. La classe :class:`QgsPathResolver "
+"<qgis.core.QgsPathResolver>` aiuta a riscrivere il percorso dei layer "
+"all'interno del progetto."
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:103
+msgid ""
+"Its :meth:`setPathPreprocessor() "
+"<qgis.core.QgsPathResolver.setPathPreprocessor>` method allows setting a "
+"custom path pre-processor function to manipulate paths and data sources "
+"prior to resolving them to file references or layer sources."
+msgstr ""
+"Il suo metodo :meth:`setPathPreprocessor() "
+"<qgis.core.QgsPathResolver.setPathPreprocessor>` permette di impostare una "
+"funzione di pre-processore del percorso personalizzata per manipolare i "
+"percorsi e le fonti di dati prima di risolverli in riferimenti di file o "
+"origini layer."
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:108
+msgid ""
+"The processor function must accept a single string argument (representing "
+"the original file path or data source) and return a processed version of "
+"this path. The path pre-processor function is called **before** any bad "
+"layer handler. If multiple preprocessors are set, they will be called in "
+"sequence based on the order in which they were originally set."
+msgstr ""
+"La funzione di elaborazione deve accettare un singolo argomento stringa (che"
+" rappresenta il percorso del file originale o l'origine dei dati) e "
+"restituire una versione elaborata di questo percorso. La funzione di "
+"preprocessore del percorso viene chiamata **prima** di qualsiasi gestore di "
+"layer errato. Se sono impostati più preprocessori, essi verranno richiamati "
+"in sequenza, in base all'ordine in cui sono stati originariamente impostati."
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:114
+msgid "Some use cases:"
+msgstr "Alcuni casi d'uso:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:116
+msgid "replace an outdated path:"
+msgstr "sostituire un percorso obsoleto:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:125
+msgid "replace a database host address with a new one:"
+msgstr "sostituire un indirizzo host del database con uno nuovo:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:134
+msgid "replace stored database credentials with new ones:"
+msgstr "sostituire le credenziali del database memorizzate con quelle nuove:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:145
+msgid ""
+"Likewise, a :meth:`setPathWriter() "
+"<qgis.core.QgsPathResolver.setPathWriter>` method is available for a path "
+"writer function."
+msgstr ""
+"Allo stesso modo, è disponibile un metodo :meth:`setPathWriter() "
+"<qgis.core.QgsPathResolver.setPathWriter>` per una funzione di scrittura del"
+" percorso."
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:148
+msgid "An example to replace the path with a variable:"
+msgstr "Un esempio per sostituire il percorso con una variabile:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:157
+msgid ""
+"Both methods return an ``id`` that can be used to remove the pre-processor "
+"or writer they added. See :meth:`removePathPreprocessor() "
+"<qgis.core.QgsPathResolver.removePathPreprocessor>` and "
+":meth:`removePathWriter() <qgis.core.QgsPathResolver.removePathWriter>`."
+msgstr ""
+"Entrambi i metodi restituiscono un ``id'' che può essere usato per rimuovere"
+" il preprocessore o lo scritto che hanno aggiunto. Vedere "
+":meth:`removePathPreprocessor() "
+"<qgis.core.QgsPathResolver.removePathPreprocessor>` e "
+":meth:`removePathWriter() <qgis.core.QgsPathResolver.removePathWriter>`."
