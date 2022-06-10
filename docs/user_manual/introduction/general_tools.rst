@@ -2580,7 +2580,10 @@ screen resolution, paper size, or the terrain). Available units are:
   regardless of what the underlying map units are (e.g. they can be in inches, feet,
   geographic degrees, ...). The size in meters is calculated based on the current project
   ellipsoid setting and a projection of the distances in meters at the center of the
-  current map extent.
+  current map extent. For maps in a projected coordinate system this is calculated using
+  projected units. For maps in a geographic (latitude/longitude) based system the size is
+  approximated by calculating meter sizes using ellipsoidal calculations for the vertical
+  scale of the map.
 * and :guilabel:`Map Units`: The size is scaled according to the map view scale.
   Because this can lead to too big or too small values, use the |options| button
   next to the entry to constrain the size to a range of values based on:
