@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
 "Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/developers_guide/codingstandards.rst:5
 msgid "QGIS Coding Standards"
@@ -494,6 +494,32 @@ msgstr ""
 "I commenti ai metodi delle classi dovrebbero usare uno stile indicativo in "
 "terza persona invece dello stile imperativo:"
 
+#: ../../docs/developers_guide/codingstandards.rst:313
+msgid "Qt Signals and Slots"
+msgstr "Signal e slot Qt"
+
+#: ../../docs/developers_guide/codingstandards.rst:315
+msgid ""
+"All signal/slot connects should be made using the \"new style\" connects "
+"available in Qt5. Futher information on this requirement is available in "
+"`QEP #77 <https://github.com/qgis/QGIS-Enhancement-Proposals/issues/77>`_."
+msgstr ""
+"Tutti le coonessioni connettori signal/slot devono essere realizzate "
+"utilizzando le connessioni \"new style\" disponibili in Qt5. Ulteriori "
+"informazioni su questo requisito sono disponibili in `QEP #77 "
+"<https://github.com/qgis/QGIS-Enhancement-Proposals/issues/77>`_."
+
+#: ../../docs/developers_guide/codingstandards.rst:319
+msgid ""
+"Avoid use of Qt auto connect slots (i.e. those named ``void "
+"on_mSpinBox_valueChanged``). Auto connect slots are fragile and prone to "
+"breakage without warning if dialogs are refactored."
+msgstr ""
+"Evita l'uso degli slot di connessione automatica di Qt (cioè quelli "
+"denominati ``void on_mSpinBox_valueChanged``). Gli slot di connessione "
+"automatica sono fragili e possono interrompersi senza preavviso in caso di "
+"refactoring delle finestre di dialogo."
+
 #: ../../docs/developers_guide/codingstandards.rst:325
 msgid "Editing"
 msgstr "Modifica"
@@ -518,9 +544,41 @@ msgstr ""
 "Imposta il tuo editor per emulare le tabulazioni con gli spazi. La "
 "spaziatura delle tabulazioni dovrebbe essere impostata a 2 spazi."
 
+#: ../../docs/developers_guide/codingstandards.rst:336
+msgid "In vim this is done with ``set expandtab ts=2``"
+msgstr "In vim questo viene fatto con ``set expandtab ts=2``."
+
 #: ../../docs/developers_guide/codingstandards.rst:339
 msgid "Indentation"
 msgstr "Indentazione"
+
+#: ../../docs/developers_guide/codingstandards.rst:341
+msgid ""
+"Source code should be indented to improve readability. There is a "
+":file:`scripts/prepare-commit.sh` that looks up the changed files and "
+"reindents them using astyle. This should be run before committing. You can "
+"also use :file:`scripts/astyle.sh` to indent individual files."
+msgstr ""
+"Il codice sorgente dovrebbe essere indentato per migliorare la leggibilità. "
+"Esiste un :file:`scripts/prepare-commit.sh` che cerca i file modificati e li"
+" reindenta usando astyle. Dovrebbe essere eseguito prima del commit. Puoi "
+"anche usare :file:`scripts/astyle.sh` per indentare i file singoli."
+
+#: ../../docs/developers_guide/codingstandards.rst:346
+msgid ""
+"As newer versions of astyle indent differently than the version used to do a"
+" complete reindentation of the source, the script uses an old astyle "
+"version, that we include in our repository (enable ``WITH_ASTYLE`` in cmake "
+"to include it in the build)."
+msgstr ""
+"Poiché le nuove versioni di astyle indentano in modo diverso rispetto alla "
+"versione usata per fare una reindentazione completa del sorgente, lo script "
+"usa una vecchia versione di astyle, che includiamo nel nostro repository "
+"(abilitando ``WITH_ASTYLE`` in cmake per includerla nella compilazione)."
+
+#: ../../docs/developers_guide/codingstandards.rst:352
+msgid "Braces"
+msgstr "Parentesi"
 
 #: ../../docs/developers_guide/codingstandards.rst:354
 msgid "Braces should start on the line following the expression:"
@@ -534,12 +592,47 @@ msgstr "Compatibilità API"
 msgid "There is :api:`API documentation <>` for C++."
 msgstr "C'è :api:`Documentazione API <>` per C++."
 
+#: ../../docs/developers_guide/codingstandards.rst:374
+msgid ""
+"We try to keep the API stable and backwards compatible. Cleanups to the API "
+"should be done in a manner similar to the Qt sourcecode e.g."
+msgstr ""
+"Cerchiamo di mantenere l'API stabile e compatibile con le versioni "
+"precedenti. Le pulizie dell'API dovrebbero essere fatte in modo simile al "
+"codice sorgente di Qt, ad esempio."
+
+#: ../../docs/developers_guide/codingstandards.rst:414
+msgid "SIP Bindings"
+msgstr "Collegamenti SIP"
+
 #: ../../docs/developers_guide/codingstandards.rst:416
 msgid ""
 "Some of the SIP files are automatically generated using a dedicated script."
 msgstr ""
 "Alcuni dei file SIP sono generati automaticamente utilizzando uno script "
 "dedicato."
+
+#: ../../docs/developers_guide/codingstandards.rst:420
+msgid "Header pre-processing"
+msgstr "Pre-elaborazione intestazione"
+
+#: ../../docs/developers_guide/codingstandards.rst:423
+msgid ""
+"All the information to properly build the SIP file must be found in the C++ "
+"header file. Some macros are available for such definition:"
+msgstr ""
+"Tutte le informazioni per costruire correttamente il file SIP devono essere "
+"contenute nel file C++i intestazione . Sono disponibili alcune macro per "
+"tale definizione:"
+
+#: ../../docs/developers_guide/codingstandards.rst:426
+msgid ""
+"Use ``#ifdef SIP_RUN`` to generate code only in SIP files or ``#ifndef "
+"SIP_RUN`` for C++ code only. ``#else`` statements are handled in both cases."
+msgstr ""
+"Usa ``#ifdef SIP_RUN`` per generare codice solo nei file SIP o ``#ifndef "
+"SIP_RUN`` per il solo codice C++. Le istruzioni ``#else`` vengono gestite in"
+" entrambi i casi."
 
 #: ../../docs/developers_guide/codingstandards.rst:429
 msgid "Use ``SIP_SKIP`` to discard a line"
@@ -589,10 +682,34 @@ msgstr ""
 "le sezioni \"private\" non vengono visualizzate, a meno di usare, in questo "
 "blocco, il comando ``#ifdef SIP_RUN`` "
 
+#: ../../docs/developers_guide/codingstandards.rst:443
+msgid ""
+"``SIP_PYDEFAULTVALUE(value)`` can be used to define an alternative default "
+"value of the python method. If the default value contains a comma ``,``, the"
+" value should be surrounded by single quotes ``'``"
+msgstr ""
+"``SIP_PYDEFAULTVALUE(value)`` può essere usato per definire un valore "
+"predefinito alternativo del metodo python. Se il valore predefinito contiene"
+" una virgola ``,``, il valore deve essere racchiuso tra apici singoli ``'``."
+
+#: ../../docs/developers_guide/codingstandards.rst:446
+msgid ""
+"``SIP_PYTYPE(type)`` can be used to define an alternative type for an "
+"argument of the python method. If the type contains a comma ``,``, the type "
+"should be surrounded by single quotes ``'``"
+msgstr ""
+"``SIP_PYTYPE(tipo)`` può essere usato per definire un tipo alternativo per "
+"un argomento del metodo python. Se il tipo contiene una virgola ``,``, il "
+"tipo deve essere racchiuso tra apici singoli ``'``."
+
 #: ../../docs/developers_guide/codingstandards.rst:450
 msgid "A demo file can be found in :file:`tests/code_layout/sipifyheader.h`."
 msgstr ""
 "Un file demo può essere trovato in :file:`tests/code_layout/sipifyheader.h`."
+
+#: ../../docs/developers_guide/codingstandards.rst:453
+msgid "Generating the SIP file"
+msgstr "Generazione del file SIP"
 
 #: ../../docs/developers_guide/codingstandards.rst:455
 msgid "The SIP file can be generated using a dedicated script. For instance:"
@@ -607,14 +724,83 @@ msgstr ""
 "Per generare automaticamente il file SIP di un nuovo file C++ aggiunto deve "
 "essere eseguito :file:`scripts/sip_include.sh`."
 
+#: ../../docs/developers_guide/codingstandards.rst:464
+msgid ""
+"As soon as a SIP file is added to one of the source file "
+"(:file:`python/core/core.sip`, :file:`python/gui/gui.sip` or "
+":file:`python/analysis/analysis.sip`), it will be considered as generated "
+"automatically. A test on Travis will ensure that this file is up to date "
+"with its corresponding header."
+msgstr ""
+"Non appena un file SIP viene aggiunto a uno dei file sorgente "
+"(:file:`python/core/core.sip`, :file:`python/gui/gui.sip` o "
+":file:`python/analysis/analysis.sip`), sarà automaticamente considerato "
+"generato. Un test su Travis assicurerà che questo file sia aggiornato con "
+"l'intestazione corrispondente."
+
+#: ../../docs/developers_guide/codingstandards.rst:470
+msgid ""
+"To force recreation of SIP files, :file:`scripts/sipify_all.sh` shall be "
+"executed."
+msgstr ""
+"Per forzare la ricreazione dei file SIP, deve essere eseguito "
+":file:`scripts/sipify_all.sh`."
+
+#: ../../docs/developers_guide/codingstandards.rst:473
+msgid "Improving sipify script"
+msgstr "Miglioramento dello script sipify"
+
+#: ../../docs/developers_guide/codingstandards.rst:475
+msgid ""
+"If some improvements are required for sipify script, please add the missing "
+"bits to the demo file :file:`tests/code_layout/sipifyheader.h` and create "
+"the expected header :file:`tests/code_layout/sipifyheader.expected.sip`. "
+"This will also be automatically tested on Travis as a unit test of the "
+"script itself."
+msgstr ""
+"Se sono necessari alcuni miglioramenti per lo script sipify, aggiungi le "
+"parti mancanti al file demo :file:`tests/code_layout/sipifyheader.h` e crea "
+"l'header atteso :file:`tests/code_layout/sipifyheader.expected.sip`. Questo "
+"verrà anche testato automaticamente su Travis come unit test dello script "
+"stesso."
+
 #: ../../docs/developers_guide/codingstandards.rst:482
 msgid "Coding Style"
 msgstr "Stile Programmazione"
+
+#: ../../docs/developers_guide/codingstandards.rst:485
+msgid ""
+"Here are described some programming hints and tips that will hopefully "
+"reduce errors, development time and maintenance."
+msgstr ""
+"Qui sono descritti alcuni suggerimenti e consigli di programmazione che "
+"permetteranno di ridurre gli errori, i tempi di sviluppo e la manutenzione."
+
+#: ../../docs/developers_guide/codingstandards.rst:490
+msgid "Where-ever Possible Generalize Code"
+msgstr "Dove possibile generalizza il codice"
+
+#: ../../docs/developers_guide/codingstandards.rst:493
+msgid ""
+"If you are cut-n-pasting code, or otherwise writing the same thing more than"
+" once, consider consolidating the code into a single function."
+msgstr ""
+"Se fai un taglia-incolla di codice, o comunque scrivi la stessa cosa più di "
+"una volta, prendi in considerazione la possibilità di consolidare il codice "
+"in un'unica funzione."
+
+#: ../../docs/developers_guide/codingstandards.rst:496
+msgid "This will:"
+msgstr "In questo modo:"
 
 #: ../../docs/developers_guide/codingstandards.rst:498
 msgid "allow changes to be made in one location instead of in multiple places"
 msgstr ""
 "consente di effettuare cambiamenti in una location invece che in molte"
+
+#: ../../docs/developers_guide/codingstandards.rst:499
+msgid "help prevent code bloat"
+msgstr "eviti il gonfiamento del codice"
 
 #: ../../docs/developers_guide/codingstandards.rst:500
 msgid ""
@@ -623,6 +809,14 @@ msgid ""
 msgstr ""
 "rende più difficile alle copie multiple di avere differenze nel tempo , così"
 " da renderne più difficile per altri la comprensione"
+
+#: ../../docs/developers_guide/codingstandards.rst:505
+msgid "Prefer Having Constants First in Predicates"
+msgstr "Preferisci la presenza di costanti nei predicati"
+
+#: ../../docs/developers_guide/codingstandards.rst:507
+msgid "Prefer to put constants first in predicates."
+msgstr "Preferisci mettere le costanti nei predicati."
 
 #: ../../docs/developers_guide/codingstandards.rst:509
 msgid "``0 == value`` instead of ``value == 0``"
@@ -653,9 +847,63 @@ msgstr ""
 "aggiungere spazi tra gli operatori, i comandi e le funzioni rende più "
 "semplice alle persone la lettura del codice"
 
+#: ../../docs/developers_guide/codingstandards.rst:522
+msgid "Which is easier to read, this:"
+msgstr "È più facile leggere questo:"
+
 #: ../../docs/developers_guide/codingstandards.rst:528
 msgid "or this:"
 msgstr "o questo:"
+
+#: ../../docs/developers_guide/codingstandards.rst:534
+msgid ":file:`scripts/prepare-commit.sh` will take care of this."
+msgstr ":file:`scripts/prepare-commit.sh` si occuperà di questo."
+
+#: ../../docs/developers_guide/codingstandards.rst:538
+msgid "Put commands on separate lines"
+msgstr "Metti i comandi su linee separate"
+
+#: ../../docs/developers_guide/codingstandards.rst:540
+msgid ""
+"When reading code it's easy to miss commands, if they are not at the "
+"beginning of the line. When quickly reading through code, it's common to "
+"skip lines if they don't look like what you are looking for in the first few"
+" characters. It's also common to expect a command after a conditional like "
+"``if``."
+msgstr ""
+"Quando si legge il codice è facile perdere i comandi, se non si trovano "
+"all'inizio della riga. Quando si legge velocemente il codice, è comune "
+"saltare le righe se non sembrano quelle che si stanno cercando nei primi "
+"caratteri. È anche comune aspettarsi un comando dopo una condizione come "
+"``if``."
+
+#: ../../docs/developers_guide/codingstandards.rst:545
+msgid "Consider:"
+msgstr "Considera:"
+
+#: ../../docs/developers_guide/codingstandards.rst:553
+msgid "It's very easy to miss part of what the flow of control. Instead use"
+msgstr ""
+"È molto facile perdere parte del controllo del flusso. Utilizza invece"
+
+#: ../../docs/developers_guide/codingstandards.rst:565
+msgid "Indent access modifiers"
+msgstr "Indenta i modificatori di accesso"
+
+#: ../../docs/developers_guide/codingstandards.rst:567
+msgid ""
+"Access modifiers structure a class into sections of public API, protected "
+"API and private API. Access modifiers themselves group the code into this "
+"structure. Indent the access modifier and declarations."
+msgstr ""
+"I modificatori di accesso strutturano una classe in sezioni di API pubblica,"
+" API protetta e API privata. Gli stessi modificatori di accesso raggruppano "
+"il codice in questa struttura. Indenta il modificatore di accesso e le "
+"dichiarazioni."
+
+#: ../../docs/developers_guide/codingstandards.rst:584
+msgid "Book recommendations"
+msgstr "Consigli per i libri"
 
 #: ../../docs/developers_guide/codingstandards.rst:587
 msgid ""
@@ -701,6 +949,22 @@ msgstr ""
 msgid "Credits for contributions"
 msgstr "Crediti per contributi"
 
+#: ../../docs/developers_guide/codingstandards.rst:599
+msgid ""
+"Contributors of new functions are encouraged to let people know about their "
+"contribution by:"
+msgstr ""
+"Chi contribuisce a nuove funzioni è invitato a far conoscere il proprio "
+"contributo:"
+
+#: ../../docs/developers_guide/codingstandards.rst:602
+msgid ""
+"adding a note to the changelog for the first version where the code has been"
+" incorporated, of the type::"
+msgstr ""
+"aggiungendo una nota al changelog della prima versione in cui il codice è "
+"stato incorporato, del tipo::"
+
 #: ../../docs/developers_guide/codingstandards.rst:608
 msgid ""
 "writing an article about the new feature on a blog, and add it to the QGIS "
@@ -708,6 +972,10 @@ msgid ""
 msgstr ""
 "scrivendo un articolo sulla nuova funzione su un blog, e aggiungerlo al QGIS"
 " planet https://plugins.qgis.org/planet/"
+
+#: ../../docs/developers_guide/codingstandards.rst:610
+msgid "adding their name to:"
+msgstr "aggiungendo il proprio nome:"
 
 #: ../../docs/developers_guide/codingstandards.rst:612
 msgid ":source:`doc/CONTRIBUTORS`"
