@@ -29,9 +29,9 @@ contained by the mask geometry.
 .. figure:: img/clip.png
   :align: center
 
-  Clipping operation between a two-features input layer and a single
-  feature overlay layer (left) - resulting features are moved for
-  clarity (right)
+  Clipping operation between a two-feature input layer 'a' and a single
+  feature overlay layer 'b' (left) - resulting in a new layer with the modified 
+  'a' features (right)
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 of point, line, and polygon features
@@ -118,9 +118,9 @@ the portions outside the overlay layer features are retained.
 .. figure:: img/difference.png
   :align: center
 
-  Difference operation between a two-features input layer and a single
-  feature overlay layer (left) - resulting features are moved for
-  clarity (right)
+  Difference operation between a two-features input layer 'a' and a single
+  feature overlay layer 'b' (left) - resulting in a new layer with the modified 
+  'a' features (right)
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 of point, line, and polygon features
@@ -213,11 +213,12 @@ overlay layer features are retained.
    :start-after: **warning_attributes**
    :end-before: **end_warning_attributes**
 
-.. todo: Add an image
-    .. figure:: img/multidifference.png
-       :align: center
+.. figure:: img/difference_multi.png
+  :align: center
 
-       CAPTION of image
+  Difference operation between a two-feature input layer 'a' and single
+  feature overlay layers 'b' and 'c' (left) - resulting in a new layer with the modified 
+  'a' features (right)
 
 .. seealso:: :ref:`qgisdifference`, :ref:`qgissymmetricaldifference`, :ref:`qgisclip`
 
@@ -384,9 +385,9 @@ overlapping features from both the input and overlay layers.
 .. figure:: img/intersection.png
   :align: center
 
-  The intersection operation: A two-features input layer and a single
-  feature overlay layer (left) - resulting features are moved for
-  clarity (right)
+  Intersection operation between a two-feature input layer 'a' and a single
+  feature overlay layer 'b' (left) - overlapping areas become a new two-feature layer 
+  with both layers' attibutes (right)
 
 **Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
 
@@ -498,11 +499,12 @@ features from both the input and overlay layers.
    :start-after: **warning_attributes**
    :end-before: **end_warning_attributes**
 
-.. todo: Add an image
-    .. figure:: img/multiintersection.png
-       :align: center
+.. figure:: img/intersection_multi.png
+  :align: center
 
-       CAPTION of image
+  Intersection operation between a two-feature input layer 'a' and single
+  feature overlay layers 'b' and 'c' (left) - overlapping areas become a new two-feature layer 
+  with all layers' attibutes (right)
 
 .. seealso:: :ref:`qgisintersection`, :ref:`qgisclip`, :ref:`qgisdifference`
 
@@ -575,7 +577,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:intersection``
+**Algorithm ID**: ``qgis:multiintersection``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -793,8 +795,8 @@ attributes and fields from both the input and overlay layers.
   :align: center
 
   Symmetrical difference operation between a two-features input layer
-  and a single feature overlay layer (left) - resulting features are
-  moved for clarity (right)
+  'a' and a single feature overlay layer 'b' (left) - 
+  resulting three-feature layer (right)
 
 **Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
 
@@ -898,8 +900,8 @@ as there are features that participate in that overlap.
 .. figure:: img/union.png
   :align: center
 
-  Union operation with a single input layer of three overlapping
-  features (left) - resulting features are moved for clarity (right)
+  Union operation with a single input layer with two overlapping
+  features (left) - resulting in four features (middle) - features moved for clarity (right)
 
 An overlay layer can also be used, in which case features from each
 layer are split at their overlap with features from the other one,
@@ -912,9 +914,9 @@ attribute values from both layers for overlapping features.
 .. figure:: img/union_with_overlay.png
   :align: center
 
-  Union operation between a two-features input layer and a single
-  feature overlay layer (left) - resulting features are moved for
-  clarity (right)
+  Union operation between a two-feature input layer 'a' and a single
+  feature overlay layer 'b' (left) - resulting five-feature layer 
+  with attributes from both layers (right)
 
 .. note::
    With an overlay layer, features on the same layer will not split each other.
@@ -1038,11 +1040,12 @@ The attribute table of the Union layer is filled with attribute values
 from the respective original layer for non-overlapping features, and
 attribute values from overlay layers for overlapping features.
 
-.. todo: Add an image
-    .. figure:: img/multiunion.png
-       :align: center
+.. figure:: img/union_multi.png
+  :align: center
 
-       CAPTION of image
+  Union operation between a two-feature input layer 'a' and single
+  feature overlay layers 'b' and 'c' (left) - resulting eleven-feature layer 
+  with attributes from both layers (right)
 
 .. note::
    With an overlay layer, features on the same layer will not split each other.
