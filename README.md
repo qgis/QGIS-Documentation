@@ -153,7 +153,7 @@ make LANG=fr pdf
 For building PDFs in English you will need to install the XeLaTex compiler package `texlive-xetex` and GNU Freefont.
 
 ```
-sudo apt install texlive-xetex font-freefonts-otf
+sudo apt install texlive-xetex fonts-freefont-otf
 ```
 
 For building translated PDFs, you may have to install the texlive extra package
