@@ -833,6 +833,18 @@ a table. And there are also some buttons available. Let's review them shortly:
 * The two buttons |formView| and |openTable| to the right switch between the :ref:`table
   view and form view <attribute_table_view>` of the related child features.
 
+If you use the :menuselection:`Drag and Drop Designer` for the regions feature, you can select 
+which tools are available. You can even decide whether to open a new form when a new feature is 
+added using :guilabel:`Force hide form on add feature` option. Be aware that this option implies 
+that not null attributes must take a valid default value to work correctly.
+
+.. _figure_select_relation_tools:
+
+.. figure:: img/relations11.png
+   :align: center
+
+   Drag and Drop Designer for configure regions-airports relation tools
+
 In the above example the referencing layer has geometries (so it isn't just
 an alphanumeric table) so the above steps will create an entry in the layer
 attribute table that has no corresponding geometric feature. To add the
