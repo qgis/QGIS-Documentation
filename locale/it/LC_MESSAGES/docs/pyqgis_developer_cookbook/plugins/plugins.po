@@ -23,11 +23,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 "Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:7
 msgid "Structuring Python Plugins"
-msgstr "Struttura del plugin Python"
+msgstr "Struttura Plugin Python"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:15
 msgid "In order to create a plugin, here are some steps to follow:"
@@ -88,7 +88,7 @@ msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:41
 msgid "Plugin files"
-msgstr "I file di plugin"
+msgstr "Plugin file"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:43
 msgid "Here's the directory structure of our example plugin"
@@ -281,6 +281,10 @@ msgid "short text which describes the plugin, no HTML allowed"
 msgstr "breve testo che descrive il plugin, non in HTML"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:119
+msgid "about"
+msgstr "su"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:119
 msgid "longer text which describes the plugin in details, no HTML allowed"
 msgstr ""
 "testo più lungo che descrive il plugin nei dettagli, non è permesso HTML "
@@ -314,8 +318,16 @@ msgstr ""
 " visibile nel gestore plugin solo dopo l'installazione del plugin "
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:124
+msgid "changelog"
+msgstr "cambiamenti"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:124
 msgid "string, can be multiline, no HTML allowed"
 msgstr "stringa, può essere multilinea, HTML non permesso"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:125
+msgid "experimental"
+msgstr "sperimentale"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:125
 msgid ""
@@ -324,6 +336,10 @@ msgid ""
 msgstr ""
 "contrassegno, :const:`Vero` o :const:`Falso` - :const:`Vero` se la versione "
 "è sperimentale"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:127
+msgid "deprecated"
+msgstr "deprecato"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:127
 msgid ""
@@ -344,6 +360,10 @@ msgstr ""
 " etichette"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:130
+msgid "homepage"
+msgstr "homepage"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:130
 msgid "a valid URL pointing to the homepage of your plugin"
 msgstr "un URL valido per la pagina iniziale del tuo plugin"
 
@@ -356,8 +376,16 @@ msgid "a valid URL for the source code repository"
 msgstr "un URL valido per il repository del codice sorgente"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:132
+msgid "tracker"
+msgstr "tracker"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:132
 msgid "a valid URL for tickets and bug reports"
 msgstr "un URL valido per ticket e bug"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:133
+msgid "icon"
+msgstr "icona"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:133
 msgid ""
@@ -368,12 +396,29 @@ msgstr ""
 "pacchetto compresso del plugin) di un'immagine Web amichevole (PNG, JPEG)"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:136
+msgid "category"
+msgstr "categoria"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:136
 msgid "one of ``Raster``, ``Vector``, ``Database`` and ``Web``"
 msgstr "uno di ``Raster``, ``Vector``, ``Database`` e ``Web``"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:137
 msgid "plugin_dependencies"
 msgstr "plugin_dependencies"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:137
+msgid ""
+"PIP-like comma separated list of other plugins to install, use plugin names "
+"coming from their metadata's name field"
+msgstr ""
+"Elenco separato da virgole, simile a un PIP, di altri plugin da installare; "
+"utilizza i nomi dei plugin provenienti dal campo del nome dei rispettivi "
+"metadati."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:139
+msgid "server"
+msgstr "server"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:139
 msgid ""
@@ -572,7 +617,7 @@ msgid ""
 "You can see that in :func:`initGui()` we've used an icon from the resource "
 "file (called :file:`resources.qrc` in our case)"
 msgstr ""
-"Puio vedere che in :func:`initGui()` abbiamo usato un'icona dal file delle "
+"Puoi vedere che in :func:`initGui()` abbiamo usato un'icona dal file delle "
 "risorse (chiamato nel nostro caso :file:`resources.qrc`)"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:366
@@ -626,11 +671,9 @@ msgid ""
 "(working) directory and create a makefile which will generate UI + resource "
 "files and install the plugin into your QGIS installation."
 msgstr ""
-"Se lavori su un vero plugin è saggio scrivere il plugin in un'altra directory (funzionante) e creare un makefile che genererà file UI + file risorse e installa il plugin nella tuainstallazione QGIS.\n"
-" \n"
-" \n"
-" \n"
-" "
+"Se lavori su un plugin reale è saggio scrivere il plugin in un'altra "
+"directory (funzionante) e creare un makefile che genererà file UI + file "
+"risorse e installa il plugin nella tuainstallazione QGIS."
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:398
 msgid "Documentation"
@@ -661,26 +704,315 @@ msgstr ""
 "en_us.html` e :file:`index.html`. Qui ``ll_cc`` is the QGIS. Ciò consente a "
 "più traduzioni della documentazione da includere nel plugin."
 
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:411
+msgid ""
+"The :func:`showPluginHelp` function can also take parameters packageName, "
+"which identifies a specific plugin for which the help will be displayed, "
+"filename, which can replace \"index\" in the names of files being searched, "
+"and section, which is the name of an html anchor tag in the document on "
+"which the browser will be positioned."
+msgstr ""
+"La funzione :func:`showPluginHelp` può anche accettare i parametri "
+"packageName, che identifica uno specifico plugin per il quale verrà "
+"visualizzata la guida, filename, che può sostituire \"index\" nei nomi dei "
+"file da ricercare, e section, che è il nome di un anchor tag html nel "
+"documento su cui verrà posizionato il browser."
+
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:420
 msgid "Translation"
 msgstr "Traduzione"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:422
+msgid ""
+"With a few steps you can set up the environment for the plugin localization "
+"so that depending on the locale settings of your computer the plugin will be"
+" loaded in different languages."
+msgstr ""
+"Con pochi passaggi puoi impostare l'ambiente per la localizzazione del "
+"plugin, in modo che, a seconda delle impostazioni locali del computer, il "
+"plugin venga caricato in lingue diverse."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:427
+msgid "Software requirements"
+msgstr "Requisiti software"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:429
+msgid ""
+"The easiest way to create and manage all the translation files is to install"
+" `Qt Linguist <https://doc.qt.io/qt-5/qtlinguist-index.html>`_. In a Debian-"
+"based GNU/Linux environment you can install it typing::"
+msgstr ""
+"Il modo più semplice per creare e gestire tutti i file di traduzione è "
+"installare `Qt Linguist <https://doc.qt.io/qt-5/qtlinguist-index.html>`_. In"
+" un ambiente GNU/Linux basato su Debian è possibile installarlo digitando::"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:437
+msgid "Files and directory"
+msgstr "File e cartella"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:439
+msgid ""
+"When you create the plugin you will find the ``i18n`` folder within the main"
+" plugin directory."
+msgstr ""
+"Quando crei il plugin troverai la cartella ``i18n`` all'interno della "
+"cartella principale dei plugin."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:442
+msgid "**All the translation files have to be within this directory.**"
+msgstr "**Tutti i file di traduzione devono trovarsi in questa cartella.**"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:445
 msgid ".pro file"
 msgstr ".pro file"
 
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:447
+msgid ""
+"First you should create a ``.pro`` file, that is a *project* file that can "
+"be managed by **Qt Linguist**."
+msgstr ""
+"Per prima cosa devi creare un file ``.pro'', cioè un file *progetto* che può"
+" essere gestito da **Qt Linguist**."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:450
+msgid ""
+"In this ``.pro`` file you have to specify all the files and forms you want "
+"to translate. This file is used to set up the localization files and "
+"variables. A possible project file, matching the structure of our "
+":ref:`example plugin <plugin_files_architecture>`:"
+msgstr ""
+"In questo file ``.pro'' devi specificare tutti i file e i moduli che vuoi "
+"tradurre. Questo file viene usato per impostare i file di localizzazione e "
+"le variabili. Un possibile file di progetto, che corrisponde alla struttura "
+"del nostro :ref:`example plugin <plugin_files_architecture>`:"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:461
+msgid ""
+"Your plugin might follow a more complex structure, and it might be "
+"distributed across several files. If this is the case, keep in mind that "
+"``pylupdate5``, the program we use to read the ``.pro`` file and update the "
+"translatable string, does not expand wild card characters, so you need to "
+"place every file explicitly in the ``.pro`` file. Your project file might "
+"then look like something like this:"
+msgstr ""
+"Il tuo plugin potrebbe avere una struttura più complessa ed essere "
+"distribuito in diversi file. In questo caso, tieni presente che "
+"``pylupdate5``, il programma che si usa per leggere il file ``.pro`` e "
+"aggiornare la stringa traducibile, non espande i caratteri jolly, quindi "
+"devi inserire ogni file esplicitamente nel file ``.pro``. Il file di "
+"progetto potrebbe quindi avere un aspetto simile a questo:"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:475
+msgid ""
+"Furthermore, the ``your_plugin.py`` file is the file that *calls* all the "
+"menu and sub-menus of your plugin in the QGIS toolbar and you want to "
+"translate them all."
+msgstr ""
+"Inoltre, il file ``tuo_plugin.py`` è il file che *richiama* tutti i menu e i"
+" sottomenu del tuo plugin nella barra degli strumenti di QGIS e tu vuoi "
+"tradurli tutti."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:479
+msgid ""
+"Finally with the *TRANSLATIONS* variable you can specify the translation "
+"languages you want."
+msgstr ""
+"Infine, con la variabile *TRANSLATIONS* puoi specificare le lingue di "
+"traduzione volute."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:484
+msgid ""
+"Be sure to name the ``ts`` file like ``your_plugin_`` + ``language`` + "
+"``.ts`` otherwise the language loading will fail! Use the 2 letter shortcut "
+"for the language (**it** for Italian, **de** for German, etc...)"
+msgstr ""
+"Assicurati di denominare il file ``ts`` come ``tuo_plugin_`` + ``language`` "
+"+ ``.ts`` altrimenti il caricamento della lingua fallirà! Utilizza la "
+"scorciatoia di 2 lettere per la lingua (**it** per l'italiano, **de** per il"
+" tedesco, ecc...)"
+
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:489
 msgid ".ts file"
 msgstr ".ts file"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:491
+msgid ""
+"Once you have created the ``.pro`` you are ready to generate the ``.ts`` "
+"file(s) for the language(s) of your plugin."
+msgstr ""
+"Una volta che hai creato il file ``.pro``, sei pronto a generare il(i) file "
+"``.ts`` per la lingua(e) del plugin."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:494
+msgid "Open a terminal, go to ``your_plugin/i18n`` directory and type::"
+msgstr "Apri un terminale, vai nella cartella ``tuo_plugin/i18n`` e digita::"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:498
+msgid "you should see the ``your_plugin_language.ts`` file(s)."
+msgstr "dovresti vedere il(i) file ``tuo_plugin_language.ts``."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:500
+msgid "Open the ``.ts`` file with **Qt Linguist** and start to translate."
+msgstr "Apri il file ``.ts'' con **Qt Linguist** e inizia a tradurre."
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:503
 msgid ".qm file"
 msgstr ".qm file"
 
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:505
+msgid ""
+"When you finish to translate your plugin (if some strings are not completed "
+"the source language for those strings will be used) you have to create the "
+"``.qm`` file (the compiled ``.ts`` file that will be used by QGIS)."
+msgstr ""
+"Quando hai finito di tradurre il plugin (se alcune stringhe non sono state "
+"completate, verrà usata la lingua di partenza per quelle stringhe), devi "
+"creare il file ``.qm`` (il file ``.ts`` compilato che verrà usato da QGIS)."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:509
+msgid "Just open a terminal cd in ``your_plugin/i18n`` directory and type::"
+msgstr ""
+"Devi solo aprire un terminale con un cd nella cartella ``tuo_plugin/i18n`` e"
+" digitare::"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:513
+msgid ""
+"now, in the ``i18n`` directory you will see the ``your_plugin.qm`` file(s)."
+msgstr "ora, nella cartella ``i18n`` vedrai il(i) file ``tuo_plugin.qm``."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:516
+msgid "Translate using Makefile"
+msgstr "Tradurre con Makefile"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:518
+msgid ""
+"Alternatively you can use the makefile to extract messages from python code "
+"and Qt dialogs, if you created your plugin with Plugin Builder. At the "
+"beginning of the Makefile there is a LOCALES variable::"
+msgstr ""
+"In alternativa, puoi usare il makefile per estrarre i messaggi dal codice "
+"python e dalle finestre di dialogo Qt, se hai creato il plugin con Plugin "
+"Builder. All'inizio del Makefile c'è una variabile LOCALES::"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:524
+msgid ""
+"Add the abbreviation of the language to this variable, for example for "
+"Hungarian language::"
+msgstr ""
+"Aggiungi l'abbreviazione della lingua a questa variabile, ad esempio per la "
+"lingua ungherese::"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:529
+msgid ""
+"Now you can generate or update the :file:`hu.ts` file (and the :file:`en.ts`"
+" too) from the sources by::"
+msgstr ""
+"Ora puoi generare o aggiornare il file :file:`hu.ts` (e anche :file:`en.ts`)"
+" dai sorgenti da::"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:534
+msgid ""
+"After this, you have updated ``.ts`` file for all languages set in the "
+"LOCALES variable. Use **Qt Linguist** to translate the program messages. "
+"Finishing the translation the ``.qm`` files can be created by the "
+"transcompile::"
+msgstr ""
+"In questo modo, hai il file ``.ts`` aggiornato per tutte le lingue impostate"
+" nella variabile LOCALES. Utilizza **Qt Linguist** per tradurre i messaggi "
+"del programma. Al termine della traduzione, i file ``.qm`` possono essere "
+"creati da transcompile::"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:541
+msgid "You have to distribute ``.ts`` files with your plugin."
+msgstr "Devi installare i file ``.ts'' con il tuo plugin."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:544
+msgid "Load the plugin"
+msgstr "Caricare il plugin"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:546
+msgid ""
+"In order to see the translation of your plugin, open QGIS, change the "
+"language (:menuselection:`Settings --> Options --> General`) and restart "
+"QGIS."
+msgstr ""
+"Per vedere la traduzione del plugin, apri QGIS, cambia la lingua "
+"(:menuselection: `Impostazioni --> Opzioni --> Generale`) e riavvia QGIS."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:549
+msgid "You should see your plugin in the correct language."
+msgstr "Dovresti vedere il tuo plugin nella lingua corretta."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:553
+msgid ""
+"If you change something in your plugin (new UIs, new menu, etc..) you have "
+"to **generate again** the update version of both ``.ts`` and ``.qm`` file, "
+"so run again the command of above."
+msgstr ""
+"Sei modifichi qualcosa nel plugin (nuove UI, nuovi menu, ecc.) devi "
+"**generare nuovamente** la versione aggiornata di entrambi i file ``.ts`` e "
+"``.qm``, quindi eseguire nuovamente il comando di cui sopra."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:559
+msgid "Tips and Tricks"
+msgstr "Suggerimenti e trucchi"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:565
+msgid "Plugin Reloader"
+msgstr "Plugin Reloader"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:567
+msgid ""
+"During development of your plugin you will frequently need to reload it in "
+"QGIS for testing. This is very easy using the **Plugin Reloader** plugin. "
+"You can find it with the :ref:`Plugin Manager <plugins>`."
+msgstr ""
+"Durante lo sviluppo del tuo plugin sarà spesso necessario ricaricarlo in "
+"QGIS per testarlo. Questo è molto semplice utilizzando il plugin **Plugin "
+"Reloader**. È possibile trovarlo con il comando :ref:`Plugin Manager "
+"<plugins>`."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:572
+msgid "Accessing Plugins"
+msgstr "Accessere ai plugin"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:574
+msgid ""
+"You can access all the classes of installed plugins from within QGIS using "
+"python, which can be handy for debugging purposes."
+msgstr ""
+"Puoi accedere a tutte le classi dei plugin installati dall'interno di QGIS "
+"usando python, il che può essere utile a fini di debug."
+
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:582
 msgid "Log Messages"
 msgstr "Messaggi di Log"
 
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:584
+msgid "Plugins have their own tab within the :ref:`log_message_panel`."
+msgstr ""
+"I plugin hanno una propria scheda all'interno del :ref:`log_message_panel`."
+
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:587
 msgid "Share your plugin"
 msgstr "Condividi ilation tuo plugin"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:588
+msgid ""
+"QGIS is hosting hundreds of plugins in the plugin repository. Consider "
+"sharing yours! It will extend the possibilities of QGIS and people will be "
+"able to learn from your code. All hosted plugins can be found and installed "
+"from within QGIS with the Plugin Manager."
+msgstr ""
+"QGIS ospita centinaia di plugin nel repository dei plugin. Considera di "
+"condividere il tuo! Estenderà le possibilità di QGIS e le persone potranno "
+"imparare dal tuo codice. Tutti i plugin ospitati possono essere trovati e "
+"installati dall'interno di QGIS con il Plugin Manager."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:593
+msgid ""
+"Information and requirements are here: `plugins.qgis.org "
+"<https://plugins.qgis.org/>`_."
+msgstr ""
+"Informazioni e requisiti sono disponibili qui: `plugins.qgis.org "
+"<https://plugins.qgis.org/>`_."
