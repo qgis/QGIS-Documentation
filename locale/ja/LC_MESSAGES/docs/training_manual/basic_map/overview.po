@@ -2,19 +2,20 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2022
+# Miyoshi Tomoya, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 10:24+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:08+0000\n"
+"Last-Translator: Miyoshi Tomoya, 2022\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -45,6 +46,10 @@ msgstr "**このレッスンの目標:** QGISのユーザーインターフェ�
 msgid "|basic| |TY|: The Basics"
 msgstr "|basic| |TY|: 基礎"
 
+#: ../../docs/training_manual/basic_map/overview.rst:179
+msgid "basic"
+msgstr "basic"
+
 #: ../../docs/training_manual/basic_map/overview.rst:19
 msgid "The elements identified in the figure above are:"
 msgstr "上の図で特定される要素は以下のとおりです："
@@ -69,6 +74,10 @@ msgstr "ステータスバー"
 msgid "Side Toolbar"
 msgstr "サイドツールバー"
 
+#: ../../docs/training_manual/basic_map/overview.rst:26
+msgid "Locator bar"
+msgstr "ロケータバー"
+
 #: ../../docs/training_manual/basic_map/overview.rst:32
 msgid "|basic| The Layers List"
 msgstr "|basic| レイヤーリスト"
@@ -84,6 +93,13 @@ msgid ""
 "Expanding collapsed items (by clicking the arrow or plus symbol beside them)"
 " will provide you with more information on the layer's current appearance."
 msgstr "（横にある矢印やプラス記号をクリックして）折りたたまれた項目を展開すると、レイヤーの現在の見た目について多くの情報を提供します。"
+
+#: ../../docs/training_manual/basic_map/overview.rst:40
+msgid ""
+"Hovering over the layer will give you some basic information: layer name, "
+"type of geometry, coordinate reference system and the complete path of the "
+"location on your device."
+msgstr "レイヤにカーソルを合わせると、レイヤ名、ジオメトリの種類、座標参照系、デバイス上の位置の完全なパスなどの基本情報が表示されます。"
 
 #: ../../docs/training_manual/basic_map/overview.rst:44
 msgid ""
@@ -115,9 +131,57 @@ msgstr ""
 "ShapefileやMapInfoのファイル),データベース(例えばPostGIS,Oeacle,Spatialite,GeoPackage または "
 "MSSQL Spatial)とWMS/WFS接続にアクセスできます.またGRASS dataを見ることもできます."
 
+#: ../../docs/training_manual/basic_map/overview.rst:61
+msgid ""
+"If you have saved a project, the Browser Panel will also give you quick "
+"access to all the layers stored in the same path of the project file under "
+"in the |qgsProjectFile| :guilabel:`Project Home` item."
+msgstr ""
+"プロジェクトを保存している場合、ブラウザパネルでは、|qgsProjectFile| :guilabel:`プロジェクトホーム` "
+"項目の下にあるプロジェクトファイルと同じパスに保存されているすべてのレイヤーに素早くアクセスすることができます。"
+
+#: ../../docs/training_manual/basic_map/overview.rst:190
+msgid "qgsProjectFile"
+msgstr "qgsProjectFile"
+
+#: ../../docs/training_manual/basic_map/overview.rst:65
+msgid ""
+"Moreover, you can set one or more folder as **Favorites**: search under your"
+" path and once you have found the folder, right click on it and click on "
+"``Add as a Favorite``. You should then be able to see your folder in the "
+"|favourites| :guilabel:`Favorites` item."
+msgstr ""
+"さらに、1つ以上のフォルダを**お気に入り**として設定することができます。パスの下を検索し、フォルダが見つかったら、その上で右クリックし、``お気に入りとして追加``をクリックします。すると、|favourites|"
+" :guilabel:`お気に入り` の項目にそのフォルダが表示されるはずです。"
+
+#: ../../docs/training_manual/basic_map/overview.rst:182
+msgid "favourites"
+msgstr "favourites"
+
+#: ../../docs/training_manual/basic_map/overview.rst:70
+msgid ""
+"It can happen that the folders added to Favorite item have a really long "
+"name: don't worry right-click on the path and choose ``Rename Favorite...`` "
+"to set another name."
+msgstr ""
+"お気に入り項目に追加されたフォルダがとても長い名前を持っていることがあります：心配しないでください、パスの上で右クリックして "
+"``お気に入りの名前を変更... `` を選択して別の名前を設定してください。"
+
 #: ../../docs/training_manual/basic_map/overview.rst:75
 msgid "|basic| Toolbars"
 msgstr "|basic| ツールバー"
+
+#: ../../docs/training_manual/basic_map/overview.rst:77
+msgid ""
+"Your most often used sets of tools can be turned into toolbars for basic "
+"access. For example, the File toolbar allows you to save, load, print, and "
+"start a new project. You can easily customize the interface to see only the "
+"tools you use most often, adding or removing toolbars as necessary via the "
+":menuselection:`View --> Toolbars` menu."
+msgstr ""
+"よく使うツールのセットを基本的なアクセスのためにツールバーにすることができます。例えば、ファイルツールバーでは、保存、読み込み、印刷、新しいプロジェクトの開始が可能です。メニューの"
+" :menuselection:`ビュー--> ツールバー` "
+"から、必要に応じてツールバーを追加したり削除したりして、最も頻繁に使用するツールのみを表示するようにインターフェイスを簡単にカスタマイズすることができます。"
 
 #: ../../docs/training_manual/basic_map/overview.rst:83
 msgid ""
@@ -148,11 +212,47 @@ msgstr ""
 msgid "|basic| The Status Bar"
 msgstr "|basic| ステータスバー"
 
-#: ../../docs/training_manual/basic_map/overview.rst:123
+#: ../../docs/training_manual/basic_map/overview.rst:100
+msgid ""
+"Shows you information about the current map. Also allows you to adjust the "
+"map scale, the map rotation and see the mouse cursor's coordinates on the "
+"map."
+msgstr "現在の地図に関する情報を表示します。また、地図の縮尺や地図の回転を調整したり、地図上のマウスカーソルの座標を確認することができます。"
+
+#: ../../docs/training_manual/basic_map/overview.rst:104
+msgid "|basic| The Side Toolbar"
+msgstr "|basic| サイドツールバー"
+
+#: ../../docs/training_manual/basic_map/overview.rst:106
+msgid ""
+"By default the Side toolbar contains the buttons to load the layer and all "
+"the buttons to create a new layer. But remember that you can move all the "
+"toolbars wherever it is more comfortable for you."
+msgstr ""
+"デフォルトでは、サイドツールバーには、レイヤーを読み込むためのボタンと、新しいレイヤーを作成するためのすべてのボタンが含まれています。しかし、すべてのツールバーはどこでもあなたにとって快適な場所に移動させることができることを覚えておきましょう。"
+
+#: ../../docs/training_manual/basic_map/overview.rst:111
+msgid "|basic| The Locator Bar"
+msgstr "|basic| ロケータバー"
+
+#: ../../docs/training_manual/basic_map/overview.rst:113
+msgid ""
+"Within this bar you can access to almost all the objects of QGIS: layers, "
+"layer features, algorithms, spatial bookmarks, etc. Check all the different "
+"options in the :ref:`locator_options` section of the QGIS User Manual."
+msgstr ""
+"このバーからQGISのほぼ全てのオブジェクトにアクセスすることができます：レイヤ、レイヤ機能、アルゴリズム、空間ブックマークなどです。QGISユーザーマニュアルの"
+" :ref:`locator_options` セクションで全ての異なるオプションを確認することができます。"
+
+#: ../../docs/training_manual/basic_map/overview.rst:117
+msgid "With the shortcut :kbd:`Ctrl+K` you can easily access the bar."
+msgstr "ショートカットキー :kbd:`Ctrl+K` で、簡単にバーにアクセスできます。"
+
+#: ../../docs/training_manual/basic_map/overview.rst:121
 msgid "|basic| |TY| 1"
 msgstr "|basic| |TY| 1"
 
-#: ../../docs/training_manual/basic_map/overview.rst:125
+#: ../../docs/training_manual/basic_map/overview.rst:123
 msgid ""
 "Try to identify the four elements listed above on your own screen, without "
 "referring to the diagram above. See if you can identify their names and "
@@ -161,9 +261,16 @@ msgid ""
 msgstr ""
 "上の図を参照することなく、ご自身の画面で上記の4つの要素を識別するようにしてください。それらの名前と機能を特定できるかどうか見てください。数日中にそれらを使用するにつれて、これらの要素に慣れてくるでしょう。"
 
-#: ../../docs/training_manual/basic_map/overview.rst:130
-msgid ":ref:`Check your results <interface-overview-1>`"
-msgstr ":ref:`結果をチェックする <interface-overview-1>`"
+#: ../../docs/training_manual/basic_map/overview.rst:128
+#: ../../docs/training_manual/basic_map/overview.rst:153
+msgid "Answer"
+msgstr "答え"
+
+#: ../../docs/training_manual/basic_map/overview.rst:131
+msgid ""
+"Refer back to the image showing the interface layout and check that you "
+"remember the names and functions of the screen elements."
+msgstr "インターフェイスのレイアウトを示す画像を参照し、画面要素の名前と機能を覚えているかどうか確認してください。"
 
 #: ../../docs/training_manual/basic_map/overview.rst:136
 msgid "|basic| |TY| 2"
@@ -177,17 +284,41 @@ msgstr "画面上でこれらの各ツールを探してみてください。そ
 msgid "|fileSaveAs|"
 msgstr "|fileSaveAs|"
 
+#: ../../docs/training_manual/basic_map/overview.rst:184
+msgid "fileSaveAs"
+msgstr "fileSaveAs"
+
 #: ../../docs/training_manual/basic_map/overview.rst:141
 msgid "|zoomToLayer|"
 msgstr "|zoomToLayer|"
+
+#: ../../docs/training_manual/basic_map/overview.rst:192
+msgid "zoomToLayer"
+msgstr "zoomToLayer"
 
 #: ../../docs/training_manual/basic_map/overview.rst:142
 msgid "|invertSelection|"
 msgstr "|invertSelection|"
 
+#: ../../docs/training_manual/basic_map/overview.rst:186
+msgid "invertSelection"
+msgstr "invertSelection"
+
+#: ../../docs/training_manual/basic_map/overview.rst:143
+msgid "|checkbox|:guilabel:`Render`"
+msgstr "|checkbox|:guilabel:`レンダ`"
+
+#: ../../docs/training_manual/basic_map/overview.rst:180
+msgid "checkbox"
+msgstr "checkbox"
+
 #: ../../docs/training_manual/basic_map/overview.rst:144
 msgid "|measure|"
 msgstr "|measure|"
+
+#: ../../docs/training_manual/basic_map/overview.rst:188
+msgid "measure"
+msgstr "measure"
 
 #: ../../docs/training_manual/basic_map/overview.rst:146
 msgid ""
@@ -200,10 +331,32 @@ msgid ""
 msgstr ""
 "これらのツールのいずれかが画面に表示されていない場合は、現在隠されているいくつかのツールバーを有効にしてみてください。また、画面上に十分なスペースがない場合は、ツールバーがそのツールの一部を隠すことで短縮されることがあることに注意してください。そのように折りたたまれたツールバーでは右矢印ボタンをダブルクリックすると非表示のツールを表示できます。ツールの上でしばらくの間マウスを保持すると、何らかのツールの名前のツールチップを表示できます。"
 
-#: ../../docs/training_manual/basic_map/overview.rst:153
-msgid ":ref:`Check your results <interface-overview-2>`"
-msgstr ":ref:`結果をチェックする <interface-overview-2>`"
+#: ../../docs/training_manual/basic_map/overview.rst:156
+msgid ":guilabel:`Save as`"
+msgstr ":guilabel:`名前をつけて保存`"
 
 #: ../../docs/training_manual/basic_map/overview.rst:157
+msgid ":guilabel:`Zoom to layer(s)`"
+msgstr ":guilabel:`レイヤの領域にズーム`"
+
+#: ../../docs/training_manual/basic_map/overview.rst:158
+msgid ":guilabel:`Invert selection`"
+msgstr ":guilabel:`地物選択を反転`"
+
+#: ../../docs/training_manual/basic_map/overview.rst:159
+msgid ":guilabel:`Rendering on/off`"
+msgstr ":guilabel:`レンダリングon/off`"
+
+#: ../../docs/training_manual/basic_map/overview.rst:160
+msgid ":guilabel:`Measure line`"
+msgstr ":guilabel:`線の長さを測る`"
+
+#: ../../docs/training_manual/basic_map/overview.rst:164
 msgid "|WN|"
 msgstr "|WN|"
+
+#: ../../docs/training_manual/basic_map/overview.rst:166
+msgid ""
+"Now that you are familiar with the basics of the QGIS interface, in the next"
+" lesson we will see how to load some common data types."
+msgstr "QGISインターフェイスの基本を理解したところで、次のレッスンでは、いくつかの一般的なデータ型を読み込む方法を紹介します。"
