@@ -2,24 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2022
+# Miyoshi Tomoya, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 10:18+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"POT-Creation-Date: 2022-06-15 02:44+0000\n"
+"PO-Revision-Date: 2022-03-14 05:15+0000\n"
+"Last-Translator: Miyoshi Tomoya, 2022\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.2\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -27,11 +28,20 @@ msgstr ""
 msgid "|LS| Classification"
 msgstr "|LS| 分類"
 
+#: ../../docs/training_manual/vector_classification/classification.rst:4
+msgid ""
+"Labels are a good way to communicate information such as the names of "
+"individual places, but they can't be used for everything. For example, let "
+"us say that someone wants to know what each ``landuse`` area is used for. "
+"Using labels, you would get this:"
+msgstr ""
+"ラベルは、個々の地名などの情報を伝えるのに適していますが、何にでも使えるわけではありません。例えば、それぞれの``土地利用``が何に使われているのか知りたい人がいるとします。ラベルを使うと、こうなります："
+
 #: ../../docs/training_manual/vector_classification/classification.rst:13
 msgid ""
 "This makes the map's labeling difficult to read and even overwhelming if "
 "there are numerous different landuse areas on the map."
-msgstr "これでは地図の標識が読みにくくなり、地図上に多数の異なる土地利用の領域がある場合は圧倒的にさえなります。"
+msgstr "これでは地図の標識が読みにくくなり、地図上に多数の異なる土地利用の領域がある場合は過剰にさえなります。"
 
 #: ../../docs/training_manual/vector_classification/classification.rst:16
 msgid ""
@@ -43,11 +53,36 @@ msgstr "**このレッスンの目標：** 効果的にベクターデータを�
 msgid "|basic| |FA| Classifying Nominal Data"
 msgstr "|basic| |FA| 名義データを分類する"
 
+#: ../../docs/training_manual/vector_classification/classification.rst:402
+msgid "basic"
+msgstr "basic"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:22
+#: ../../docs/training_manual/vector_classification/classification.rst:296
+msgid "Open the :guilabel:`Layer Properties` dialog for the ``landuse`` layer"
+msgstr "``landuse``レイヤの:guilabel:`レイヤプロパティ`ダイアログを開きます"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:24
+msgid "Go to the :guilabel:`Symbology` tab"
+msgstr ":guilabel:`シンボロジ` タブをクリックします"
+
 #: ../../docs/training_manual/vector_classification/classification.rst:25
 msgid ""
 "Click on the dropdown that says :guilabel:`Single Symbol` and change it to "
 ":guilabel:`Categorized`:"
-msgstr ":guilabel:`単一シンボル` と言うドロップダウンをクリックし、それを :guilabel:`分類された` に変更します："
+msgstr ":guilabel:`単一定義` と言うドロップダウンをクリックし、それを :guilabel:`カテゴリ値による定義` に変更します："
+
+#: ../../docs/training_manual/vector_classification/classification.rst:31
+msgid ""
+"In the new panel, change the :guilabel:`Value` to ``landuse`` and the "
+":guilabel:`Color ramp` to :guilabel:`Random colors`"
+msgstr ""
+"新しいパネルで、:guilabel:`値`を``landuse``に、:guilabel:`カラーランプ`を:guilabel:`Random "
+"colors`に変更します"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:33
+msgid "Click the button labeled :guilabel:`Classify`"
+msgstr ":guilabel:`分類`ラベルの付いたボタンをクリックします"
 
 #: ../../docs/training_manual/vector_classification/classification.rst:38
 #: ../../docs/training_manual/vector_classification/classification.rst:172
@@ -58,11 +93,41 @@ msgstr ":guilabel:`OK` をクリックします"
 
 #: ../../docs/training_manual/vector_classification/classification.rst:40
 msgid "You'll see something like this:"
-msgstr "このように表示されるはずです::"
+msgstr "このように表示されるはずです:"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:45
+msgid ""
+"Click the arrow (or plus sign) next to ``landuse`` in the :guilabel:`Layers`"
+" panel, you'll see the categories explained:"
+msgstr ":guilabel:`レイヤ`パネルの``landuse``の横にある矢印（またはプラス記号）をクリックすると、分類の説明が表示されます:"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:51
+msgid ""
+"Now our landuse polygons are colored and are classified so that areas with "
+"the same land use are the same color."
+msgstr "これで土地利用ポリゴンに色が付き、同じ土地利用をするエリアは同じ色になるように分類されました。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:54
+msgid ""
+"If you wish to, you can change the symbol of each landuse area by double-"
+"clicking the relevant color block in the :guilabel:`Layers` panel or in the "
+":guilabel:`Layer Properties` dialog:"
+msgstr ""
+"必要であれば、:guilabel:`レイヤ`パネルまたは:guilabel:`レイヤプロパティ`ダイアログで該当するカラーブロックをダブルクリックして、各土地利用区域のシンボルを変更することができます:"
 
 #: ../../docs/training_manual/vector_classification/classification.rst:62
 msgid "Notice that there is one category that's empty:"
 msgstr "空の分類が一つあることに注意してください："
+
+#: ../../docs/training_manual/vector_classification/classification.rst:67
+msgid ""
+"This empty category is used to color any objects which do not have a landuse"
+" value defined or which have a *NULL* value. It can be useful to keep this "
+"empty category so that areas with a *NULL* value are still represented on "
+"the map. You may like to change the color to more obviously represent a "
+"blank or *NULL* value."
+msgstr ""
+"この空の分類は、landuse値が定義されていない、あるいは*NULL*値を持つオブジェクトに色を付けるために使用されます。この空の分類は、*NULL*値を持つ区域が地図上で表現されるようにするために有用です。空白または*NULL*値をより明確に表現するために色を変更することもできます。"
 
 #: ../../docs/training_manual/vector_classification/classification.rst:74
 msgid ""
@@ -74,6 +139,14 @@ msgstr "すべての苦労して稼いだ変更を失わないように、今、
 msgid "|basic| |TY| More Classification"
 msgstr "|basic| |TY| その他の分類"
 
+#: ../../docs/training_manual/vector_classification/classification.rst:80
+msgid ""
+"Use the knowledge you gained above to classify the ``buildings`` layer. Set "
+"the categorisation against the ``building`` field and use the "
+":guilabel:`Spectral` color ramp."
+msgstr ""
+"上記で得た知識を使って``buildings``レイヤを分類します。``building``フィールドに対して分類を設定し、:guilabel:`Spectral`カラーランプを使用します。"
+
 #: ../../docs/training_manual/vector_classification/classification.rst:84
 msgid "Remember to zoom into an urban area to see the results."
 msgstr "忘れずに、都市エリアを拡大して結果を確認してください。"
@@ -82,67 +155,518 @@ msgstr "忘れずに、都市エリアを拡大して結果を確認してくだ
 msgid "|moderate| |FA| Ratio Classification"
 msgstr "|moderate| |FA| 比率分類"
 
+#: ../../docs/training_manual/vector_classification/classification.rst:411
+msgid "moderate"
+msgstr "moderate"
+
 #: ../../docs/training_manual/vector_classification/classification.rst:89
 msgid ""
 "There are four types of classification: *nominal*, *ordinal*, *interval* and"
 " *ratio*."
 msgstr "分類には4つのタイプがあります： *名義* 、 *順序* 、 *間隔* 、 *比率* 。"
 
+#: ../../docs/training_manual/vector_classification/classification.rst:92
+msgid ""
+"In **nominal** classification, the categories that objects are classified "
+"into are name-based; they have no order. For example: town names, district "
+"codes, etc. Symbols that are used for nominal data should not imply any "
+"order or magnitude."
+msgstr ""
+"**名義**分類では、対象を分類するカテゴリは名前ベースであり、順序はありません。例えば、町名、地区コードなど。名義データに使用する記号は、順序や大きさを意味するものであってはなりません。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:98
+msgid "For points, we can use symbols of different shape."
+msgstr "ポイントには、さまざまな形の記号を使うことができます。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:99
+msgid ""
+"For polygons, we can use different types of hatching or different colours "
+"(avoid mixing light and dark colours)."
+msgstr "ポリゴンには、異なるタイプのハッチングや異なる色（明るい色と暗い色の混在を避ける）を使用することができます。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:101
+msgid ""
+"For lines, we can use different dash patterns, different colours (avoid "
+"mixing light and dark colours) and different symbols along the lines."
+msgstr "ラインには、異なるダッシュパターン、異なる色（明るい色と暗い色の混在を避ける）、線に沿った異なる記号を使用することができます。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:105
+msgid ""
+"In **ordinal** classification, the categories are arranged in a certain "
+"order. For example, world cities are given a rank depending on their "
+"importance for world trade, travel, culture, etc. Symbols that are used for "
+"ordinal data should imply order, but not magnitude."
+msgstr ""
+"**順序**分類では、カテゴリは一定の順序で並べられます。例えば、世界の都市は、世界貿易、旅行、文化などに対する重要性に応じてランク付けされます。順序データに使用する記号は、順序を意味するものでなければなりませんが、大きさを意味するものであってはなりません。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:112
+msgid "For points, we can use symbols with light to dark colours."
+msgstr "ポイントには、明るい色から暗い色の記号を使うことができます。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:113
+msgid "For polygons, we can use graduated colours (light to dark)."
+msgstr "ポリゴンには、段階的な色（明るい色から暗い色）を使うことができます。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:114
+msgid "For lines, we can use graduated colours (light to dark)."
+msgstr "ラインには、段階的な色（明るい色から暗い色）を使うことができます。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:116
+msgid ""
+"In **interval** classification, the numbers are on a scale with positive, "
+"negative and zero values. For example: height above/below sea level, "
+"temperature in degrees Celsius. Symbols that are used for interval data "
+"should imply order and magnitude."
+msgstr ""
+"**間隔**分類では、数値は正、負、ゼロの値を持つ目盛りになっています。例：海抜の高さ/海抜の低さ、気温（摂氏）。区間データに使用する記号は、順序と大きさを意味するものでなければなりません。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:123
+#: ../../docs/training_manual/vector_classification/classification.rst:136
+msgid "For points, we can use symbols with varying size (small to big)."
+msgstr "ポイントには、さまざまな大きさ（小さいものから大きいものまで）の記号を使うことができます。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:124
+#: ../../docs/training_manual/vector_classification/classification.rst:137
+msgid ""
+"For polygons, we can use graduated colours (light to dark) or add diagrams "
+"of varying size."
+msgstr "ポリゴンには、段階的な色（明るい色から暗い色）を使ったり、さまざまな大きさの図を追加することができます。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:126
+#: ../../docs/training_manual/vector_classification/classification.rst:139
+msgid "For lines, we can use thickness (thin to thick)."
+msgstr "ラインには、太さ（細いから太い）を使うことができます。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:128
+msgid ""
+"In **ratio** classification, the numbers are on a scale with only positive "
+"and zero values. For example: temperature above absolute zero (0 degrees "
+"Kelvin), distance from a point, the average amount of traffic on a given "
+"street per month, etc. Symbols that are used for ratio data should imply "
+"order and magnitude."
+msgstr ""
+"**比率**分類では、数値は正とゼロの値だけを持つスケールになっています。例：絶対零度（0度ケルビン）以上の温度、ある地点からの距離、ある通りの1ヶ月の平均交通量など。比率データに用いる記号は、順序や大きさを意味するものでなければならない。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:141
+msgid ""
+"In the example above, we used nominal classification to color each record in"
+" the ``landuse`` layer based on its ``landuse`` attribute. Now we will use "
+"ratio classification to classify the records by area."
+msgstr ""
+"上記の例では、名義分類を使用して、``landuse``（土地利用）レイヤの各レコードを``landuse``属性に基づいて色付けしました。今度は、比率分類を使って、レコードを面積で分類してみます。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:145
+msgid ""
+"We are going to reclassify the layer, so existing classes will be lost if "
+"not saved. To store the current classification:"
+msgstr "レイヤを再分類するので、既存の分類は保存しないと失われます。現在の分類を保存するには:"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:148
+msgid "Open the layer's properties dialog"
+msgstr "レイヤーのプロパティダイアログを開きます"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:149
+msgid ""
+"Click the :guilabel:`Save Style ...` button in the :guilabel:`Style` drop-"
+"down menu."
+msgstr ":guilabel:`スタイル` ドロップダウン メニューの :guilabel:`スタイルを保存 ...`ボタンをクリックします。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:151
+msgid ""
+"Select :guilabel:`Rename Current...`, enter ``land usage`` and press "
+":guilabel:`OK`."
+msgstr ":guilabel:`現在の名前を変更...`を選び、``land usage``を入力し、:guilabel:`OK`を押します。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:154
+msgid ""
+"The categories and their symbols are now saved in the layer's properties."
+msgstr "カテゴリとその記号がレイヤのプロパティに保存されました。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:155
+msgid ""
+"Click now on the :guilabel:`Add...` entry of the :guilabel:`Style` drop-down"
+" menu and create a new style named ``ratio``. This will store the new "
+"classification."
+msgstr ""
+":guilabel:`スタイル`ドロップダウンメニューの:guilabel:`追加…`エントリをクリックし、``ratio``という名前の新しいスタイルを作成します。これで、新しい分類が保存されます。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:158
+msgid "Close the :guilabel:`Layer Properties` dialog"
+msgstr ":guilabel:`レイヤプロパティ`ダイアログを閉じます"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:160
+msgid ""
+"We want to classify the landuse areas by size, but there is a problem: they "
+"don't have a size field, so we'll have to make one."
+msgstr "土地利用区域を大きさで分類したいのですが、問題があります：大きさのフィールドがないので、作らなければなりません。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:163
+msgid "Open the Attributes Table for the ``landuse`` layer."
+msgstr "``landuse``レイヤの属性テーブルを開きます。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:164
+msgid ""
+"Enter edit mode by clicking the |toggleEditing|  :sup:`Toggle editing` "
+"button"
+msgstr "|toggleEditing| :sup:``トグル編集``ボタンをクリックして編集モードにします"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:422
+msgid "toggleEditing"
+msgstr "toggleEditing"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:166
+msgid ""
+"Add a new column of decimal type, called ``AREA``, using the |newAttribute| "
+":sup:`New field` button:"
+msgstr "|newAttribute| :sup:`新規フィールド` ボタンを使って、``AREA``という倍精度の新しい列を追加します。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:412
+msgid "newAttribute"
+msgstr "newAttribute"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:174
+msgid ""
+"The new field will be added (at the far right of the table; you may need to "
+"scroll horizontally to see it). However, at the moment it is not populated, "
+"it just has a lot of *NULL* values."
+msgstr ""
+"新しいフィールドが追加されます (テーブルの右端; "
+"見るには水平方向にスクロールする必要があるかもしれません)。しかし、現時点では、このフィールドには何も入力されておらず、たくさんの*NULL*値があります。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:179
+msgid "To solve this problem, we will need to calculate the areas."
+msgstr "この問題を解決するために、面積を計算する必要があります。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:181
+msgid "Open the field calculator with the |calculateField| button."
+msgstr "calculateFieldボタンでフィールド計算機を開きます。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:403
+msgid "calculateField"
+msgstr "calculateField"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:183
+msgid "You will get this dialog:"
+msgstr "このようなダイアログが表示されます："
+
+#: ../../docs/training_manual/vector_classification/classification.rst:188
+msgid "Check the |checkbox| :guilabel:`Update existing fields`"
+msgstr "|checkbox| :guilabel:`既存のフィールドを更新する`をチェックします"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:405
+msgid "checkbox"
+msgstr "checkbox"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:189
+msgid "Select :guilabel:`AREA` in the fields drop-down menu"
+msgstr "フィールドのドロップダウンメニューから、:guilabel:`AREA`を選びます"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:194
+msgid ""
+"Under the :guilabel:`Expression` tab, expand the :guilabel:`Geometry` "
+"functions group in the list and find :menuselection:`$area`"
+msgstr ""
+":guilabel:`式`タブで、リスト内の:guilabel:`ジオメトリ`関数グループを展開し、:menuselection: "
+"`$area`を見つけます"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:196
+msgid ""
+"Double-click on it so that it appears in the :guilabel:`Expression` field"
+msgstr "それをダブルクリックして、:guilabel:`式`フィールドに表示させます"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:203
+msgid ""
+"Scroll to the ``AREA`` field in the attribute table and you will notice that"
+" it is populated with values (you may need to click the column header to "
+"refresh the data)."
+msgstr ""
+"属性テーブルの``AREA``フィールドまでスクロールすると、値が入力されていることがわかります（データを更新するために列のヘッダーをクリックする必要がある場合があります）。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:207
+msgid ""
+"These areas respect the project's area unit settings, so they may be in "
+"square meters or square degrees."
+msgstr "これらの面積はプロジェクトの面積単位の設定に従いますので、平方メートルまたは平方度の単位を使用できます。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:210
+msgid ""
+"Press |saveEdits| to save the edits and exit the edit mode with "
+"|toggleEditing| :sup:`Toggle editing`"
+msgstr "|saveEdits| を押して編集内容を保存し、|toggleEditing| :sup:`トグル編集`で編集モードを終了します"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:416
+msgid "saveEdits"
+msgstr "saveEdits"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:212
+msgid "Close the attribute table"
+msgstr "属性テーブルを閉じます"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:214
+msgid ""
+"Now that we have the data, let's use them to render the ``landuse`` layer."
+msgstr "これでデータが揃ったので、それを使って``土地利用``レイヤをレンダリングしてみましょう。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:216
+msgid ""
+"Open the :guilabel:`Layer properties` dialog's :guilabel:`Symbology` tab for"
+" the ``landuse`` layer"
+msgstr "``landuse``レイヤーの:guilabel:`レイヤプロパティ`ダイアログの:guilabel:`シンボロジ`タブを開きます"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:218
+msgid ""
+"Change the classification style from :guilabel:`Categorized` to "
+":guilabel:`Graduated`"
+msgstr "分類スタイルを:guilabel:`カテゴリ値による分類`から:guilabel:`連続値による定義`に変更します"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:221
+msgid "Change the :guilabel:`Value` to ``AREA``"
+msgstr ":guilabel:`値`を``AREA``に変更します。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:223
+msgid ""
+"Under :guilabel:`Color ramp`, choose the option :guilabel:`Create New Color "
+"Ramp...`:"
+msgstr ":guilabel:`カラーランプ`の下にある:guilabel:`カラーランプを新規作成…`オプションを選びます"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:229
+msgid ""
+"Choose :guilabel:`Gradient` (if it's not selected already) and click "
+":guilabel:`OK`. You will see this:"
+msgstr ""
+":guilabel:`勾配グリッド`を選択し（まだ選択されていない場合）、:guilabel:`OK`をクリックします。このように表示されます："
+
 #: ../../docs/training_manual/vector_classification/classification.rst:235
 msgid ""
 "You'll be using this to denote area, with small areas as :guilabel:`Color 1`"
 " and large areas as :guilabel:`Color 2`."
-msgstr "これを使用して、小さな面積の地域は :guilabel:`1` の色、大きな面積 :guilabel:`2` の色で表示します。"
+msgstr "これを使用して小さな地域は :guilabel:`色1`、大きな地域は :guilabel:`色2` で表示します。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:238
+msgid "Choose appropriate colors"
+msgstr "適切な色を選びます"
 
 #: ../../docs/training_manual/vector_classification/classification.rst:240
 msgid "In the example, the result looks like this:"
 msgstr "例では、結果は次のようになります。"
 
+#: ../../docs/training_manual/vector_classification/classification.rst:246
+msgid ""
+"You can save the colour ramp by selecting :guilabel:`Save Color Ramp...` "
+"under the :guilabel:`Color ramp` tab. Choose an appropriate name for the "
+"colour ramp and click :guilabel:`Save`. You will now be able to select the "
+"same colour ramp easily under :guilabel:`All Color Ramps`."
+msgstr ""
+":guilabel:`カラーランプ`タブの:guilabel:`カラーランプを保存...`を選択すると、カラーランプを保存することができます。カラーランプに適切な名前を選び、:guilabel:`保存`をクリックします。これで、同じカラーランプを:guilabel:`全カラーランプ`で簡単に選択できるようになります。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:253
+msgid "Click :guilabel:`Classify`"
+msgstr ":guilabel:`分類`をクリックします。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:255
+msgid "Now you will have something like this:"
+msgstr "これで、次のようなものができあがります:"
+
 #: ../../docs/training_manual/vector_classification/classification.rst:260
 msgid "Leave everything else as-is."
 msgstr "そのまま他のすべてを残します。"
 
-#: ../../docs/training_manual/vector_classification/classification.rst:271
+#: ../../docs/training_manual/vector_classification/classification.rst:262
+msgid "Click :guilabel:`OK`:"
+msgstr ":guilabel:`OK`をクリックします:"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:269
 msgid "|moderate| |TY| Refine the Classification"
 msgstr "|moderate| |TY| 分類の絞り込み"
 
-#: ../../docs/training_manual/vector_classification/classification.rst:273
+#: ../../docs/training_manual/vector_classification/classification.rst:271
 msgid ""
 "Change the values of :guilabel:`Mode` and :guilabel:`Classes` until you get "
 "a classification that makes sense."
 msgstr "理にかなった分類を得るまで :guilabel:`モード` と :guilabel:`クラス` の値を変更します。"
 
-#: ../../docs/training_manual/vector_classification/classification.rst:276
-msgid ":ref:`Check your results <classification-refine-1>`"
-msgstr ":ref:`結果を確認します <classification-refine-1>`"
+#: ../../docs/training_manual/vector_classification/classification.rst:274
+msgid "Answer"
+msgstr "答え"
 
-#: ../../docs/training_manual/vector_classification/classification.rst:279
+#: ../../docs/training_manual/vector_classification/classification.rst:277
+msgid ""
+"The settings you used might not be the same, but with the values "
+":guilabel:`Classes` = ``6`` and :guilabel:`Mode` = :guilabel:`Natural Breaks"
+" (Jenks)` (and using the same colors, of course), the map will look like "
+"this:"
+msgstr ""
+"使用した設定は同じではないかもしれませんが、 :guilabel:`Classes` = ``6`` と :guilabel:`Mode` = "
+":guilabel:`Natural Breaks (Jenks)` （そしてもちろん同じ色を使用）では、地図は次のようになります："
+
+#: ../../docs/training_manual/vector_classification/classification.rst:286
 msgid "|hard| |FA| Rule-based Classification"
 msgstr "|hard| |FA| 規則に基づく分類"
 
-#: ../../docs/training_manual/vector_classification/classification.rst:281
+#: ../../docs/training_manual/vector_classification/classification.rst:409
+msgid "hard"
+msgstr "hard"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:288
 msgid ""
 "It's often useful to combine multiple criteria for a classification, but "
 "unfortunately normal classification only takes one attribute into account. "
 "That's where rule-based classification comes in handy."
 msgstr ""
-"分類のための複数の条件を組み合わせると便利ですが、残念ながら通常の分類では1つの属性だけを考慮に入れます。規則に基づく分類が便利になるところです。"
+"分類のための複数の条件を組み合わせると便利ですが、残念ながら通常の分類では1つの属性だけを考慮に入れます。このときルールによる分類が有用になります。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:292
+msgid ""
+"In this lesson, we will represent the ``landuse`` layer in a way to easily "
+"identify |majorUrbanName| city from the other residential area, and from the"
+" other types of landuse (based on their area)."
+msgstr ""
+"このレッスンでは、|majorUrbanName| "
+"市をその他の住宅地、そしてその他の種類の土地利用（面積に基づく）から簡単に識別できるように、``landuse``レイヤを表現してみます。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:298
+msgid "Switch to the :guilabel:`Symbology` tab"
+msgstr ":guilabel:`シンボロジ`タブに切り替えます"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:299
+msgid "Switch the classification style to :guilabel:`Rule-based`"
+msgstr "分類スタイルを:guilabel:`ルールによる定義`に切り替えます"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:301
+msgid ""
+"QGIS will automatically show the rules that represent the current "
+"classification implemented for this layer. For example, after completing the"
+" exercise above, you may see something like this:"
+msgstr ""
+"QGISはこのレイヤに現在実装されている分類を表すルールを自動的に表示します。例えば、上記の演習を終えた後、以下のように表示されるかもしれません："
+
+#: ../../docs/training_manual/vector_classification/classification.rst:309
+msgid "Click and drag to select all the rules"
+msgstr "全てのルールを選択するようクリックしドラッグします"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:310
+msgid ""
+"Use the |symbologyRemove| :sup:`Remove selected rules` button to remove all "
+"of the existing rules"
+msgstr "|symbologyRemove| :sup:`選択したルールを削除` ボタンを使って、既存のルールをすべて削除します"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:420
+msgid "symbologyRemove"
+msgstr "symbologyRemove"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:313
+msgid "Let's now add our custom rules."
+msgstr "では、カスタムルールを追加してみましょう。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:315
+msgid "Click the |symbologyAdd| :sup:`Add rule` button"
+msgstr "|symbologyAdd| :sup:`ルールを追加`ボタンをクリックします"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:418
+msgid "symbologyAdd"
+msgstr "symbologyAdd"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:316
+msgid "The :guilabel:`Edit rule` dialog then appears"
+msgstr ":guilabel:`Edit rule`ダイアログが現れます"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:317
+msgid "Enter ``Swellendam city`` as :guilabel:`Label`"
+msgstr "ラベルに``Swellendam city``を入力します"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:318
+msgid ""
+"Click the |expression| button next to the :guilabel:`Filter` text area to "
+"open the :guilabel:`Expression String Builder`"
+msgstr ""
+":guilabel:`フィルタ`テキストエリアの隣にある|expression|ボタンをクリックして:guilabel:`式文字列ビルダ`を開きます"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:407
+msgid "expression"
+msgstr "expression"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:320
+msgid "Enter the criterion ``\"name\" = 'Swellendam'`` and validate"
+msgstr "条件``\"name\" = 'Swellendam'``を入力し検証します"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:325
+msgid ""
+"Back to the :guilabel:`Edit rule` dialog, assign it a darker grey-blue color"
+" in order to indicate the town's importance in the region and remove the "
+"border"
+msgstr ":guilabel:`ルールの編集`ダイアログに戻り、その地域での町の重要性を示すために濃いグレーブルーの色を割り当て、境界を削除します。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:332
+msgid "Press :guilabel:`OK`"
+msgstr ":guilabel:`OK`を押します"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:333
+msgid "Repeat the steps above to add the following rules:"
+msgstr "次のルールを追加するために上記のステップを繰り返します："
+
+#: ../../docs/training_manual/vector_classification/classification.rst:335
+msgid ""
+"**Other residential** label with the criterion ``\"landuse\" = 'residential'"
+" AND \"name\" <> 'Swellendam'`` (or ``\"landuse\" = 'residential' AND "
+"\"name\" != 'Swellendam'``). Choose a pale blue-grey :guilabel:`Fill color`"
+msgstr ""
+"``\"landuse\" = 'residential' AND \"name\" <> 'Swellendam'``（または "
+"``\"landuse\" = \"residential\" AND \"name\" != 'Swellendam'`` ）の条件を持つ "
+"**Other residential** ラベル。淡いブルーグレーの :guilabel:`Fill color` を選択します"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:339
+msgid ""
+"**Big non residential areas** label with the criterion ``\"landuse\" <> "
+"'residential' AND \"AREA\" >= 605000``. Choose a mid-green color."
+msgstr ""
+"**Big non residential areas** ラベルは、条件 ``\"landuse\" <> 'residential' AND "
+"\"AREA\" >= 605000``。色は中緑色を選びます。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:346
+msgid ""
+"These filters are exclusive, in that they exclude areas on the map (non-"
+"residential areas which are smaller than 605000 (square meters) are not "
+"included in any of the rules)."
+msgstr ""
+"これらのフィルターは排他的なものであり、地図上の地域を除外します（605000（平方メートル）より小さい非居住地域は、いずれのルールにも含まれません）。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:350
+msgid ""
+"We will catch the remaining features using a new rule labeled **Small non "
+"residential areas**. Instead of a filter expression, Check the "
+"|radioButtonOn| :guilabel:`Else`. Give this category a suitable pale green "
+"color."
+msgstr ""
+"残りの地物は **Small non residential areas** というラベルの付いた新しいルールを使って捕えます。フィルター式の代わりに、"
+" |radioButtonOn| :guilabel:`もしくは` をチェックします。このカテゴリに適切な淡い緑色を与えます。"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:414
+msgid "radioButtonOn"
+msgstr "radioButtonOn"
 
 #: ../../docs/training_manual/vector_classification/classification.rst:358
+msgid "Your rules should now look like this:"
+msgstr "ルールは次のようになります："
+
+#: ../../docs/training_manual/vector_classification/classification.rst:363
+msgid "Apply this symbology"
+msgstr "このシンボル体系を適用します"
+
+#: ../../docs/training_manual/vector_classification/classification.rst:365
 msgid "Your map will look something like this:"
 msgstr "地図は次のようになります。"
 
-#: ../../docs/training_manual/vector_classification/classification.rst:363
+#: ../../docs/training_manual/vector_classification/classification.rst:370
 msgid ""
 "Now you have a map with |majorUrbanName| the most prominent residential area"
 " and other non-residential areas colored according to their size."
-msgstr "今、 最も顕著な住宅地とその大きさに応じて色の他の非住宅地 |majorUrbanName| で地図を持っています。"
+msgstr "今、 最も顕著な住宅地|majorUrbanName|とその他の非住宅地をその大きさに応じた色の地図を持っています。"
 
-#: ../../docs/training_manual/vector_classification/classification.rst:368
+#: ../../docs/training_manual/vector_classification/classification.rst:375
 msgid "|IC|"
 msgstr "|IC|"
 
-#: ../../docs/training_manual/vector_classification/classification.rst:370
+#: ../../docs/training_manual/vector_classification/classification.rst:377
 msgid ""
 "Symbology allows us to represent the attributes of a layer in an easy-to-"
 "read way. It allows us as well as the map reader to understand the "
@@ -150,13 +674,13 @@ msgid ""
 "Depending on the problems you face, you'll apply different classification "
 "techniques to solve them."
 msgstr ""
-"シンボル体系により、レイヤーの属性は読みとりやすく表現できます。それは選択した任意の関連する属性を使用して、私たちだけでなく地図読者も地物の重要性を理解できます。直面している問題に応じて、それらを解決するために異なる分類技術を適用するでしょう。"
+"シンボル体系により、レイヤーの属性を読みとりやすく表現できます。それは選択した任意の関連する属性を使用して、私たちだけでなく地図読者も地物の重要性を理解できます。直面している問題に応じて、それらを解決するために異なる分類技法を適用するでしょう。"
 
-#: ../../docs/training_manual/vector_classification/classification.rst:378
+#: ../../docs/training_manual/vector_classification/classification.rst:385
 msgid "|WN|"
 msgstr "|WN|"
 
-#: ../../docs/training_manual/vector_classification/classification.rst:380
+#: ../../docs/training_manual/vector_classification/classification.rst:387
 msgid ""
 "Now we have a nice-looking map, but how are we going to get it out of QGIS "
 "and into a format we can print out, or make into an image or PDF? That's the"
