@@ -417,35 +417,34 @@ Parameters
        dimensions (point: 0D, line: 1D, polygon: 2D, volume: 3D)
        as the input layer's.
    * - **Input fields to keep (leave empty to keep all fields)**
-       
+
        Optional
      - ``INPUT_FIELDS``
      - [tablefield: any] [list]
-       
+
        Default: None
      - Field(s) of the input layer to keep in the output.
        If no fields are chosen all fields are taken.
    * - **Overlay fields to keep (leave empty to keep all fields)**
-       
+
        Optional
      - ``OVERLAY_FIELDS``
      - [tablefield: any] [list]
-       
+
        Default: None
      - Field(s) of the overlay layer to keep in the output.
        If no fields are chosen all fields are taken.
+       Duplicate field names will be appended a count suffix to avoid collision.
    * - **Overlay fields prefix**
-       
+
        Optional
      - ``OVERLAY_FIELDS_PREFIX``
      - [string]
-     - Prefix to add to the field names of the intersect
-       layer's fields to avoid name collisions with fields
-       in the input layer.
+     - Add a prefix to identify fields of the intersect layer.
    * - **Intersection**
      - ``OUTPUT``
      - [same as input]
-       
+
        Default: ``[Create temporary layer]``
      - Specify the layer to contain (the parts of) the features from
        the input layer that overlap one or more features from the
@@ -552,9 +551,8 @@ Advanced parameters
        Optional
      - ``OVERLAY_FIELDS_PREFIX``
      - [string]
-     - Prefix to add to the field names of the overlay
-       layers fields to avoid name collisions with fields
-       in the input layer.
+     - Add a prefix to identify fields of the overlay layers.
+       Duplicate field names will be appended a count suffix to avoid collision.
 
 Outputs
 .......
@@ -638,6 +636,7 @@ Basic parameters
        Default: None
      - Field(s) of the intersect layer to keep in the output.
        If no fields are chosen all fields are taken.
+       Duplicate field names will be appended a count suffix to avoid collision.
    * - **Intersection**
      - ``OUTPUT``
      - [vector: point]
@@ -668,9 +667,7 @@ Advanced parameters
        Optional
      - ``INTERSECT_FIELDS_PREFIX``
      - [string]
-     - Prefix to add to the field names of the intersect
-       layer's fields to avoid name collisions with fields
-       in the input layer.
+     - Add a prefix to identify fields of the intersect layer.
 
 Outputs
 .......
@@ -686,7 +683,8 @@ Outputs
    * - **Intersections**
      - ``OUTPUT``
      - [vector: point]
-     - Point vector layer with the intersections.
+     - Point vector layer of the lines intersections,
+       with both layers' attributes.
 
 Python code
 ...........
@@ -857,9 +855,8 @@ Advanced parameters
        Optional
      - ``OVERLAY_FIELDS_PREFIX``
      - [string]
-     - Prefix to add to the field names of the overlay
-       layer's fields to avoid name collisions with fields
-       in the input layer.
+     - Add a prefix to identify fields of the overlay layer.
+       Duplicate field names will be appended a count suffix to avoid collision.
 
 Outputs
 .......
@@ -876,7 +873,7 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - Layer containing (parts of) features from each layer
-       not overlapping the other layer.
+       not overlapping the other layer, with both layers' attributes.
 
 Python code
 ...........
@@ -984,9 +981,8 @@ Advanced parameters
        Optional
      - ``OVERLAY_FIELDS_PREFIX``
      - [string]
-     - Prefix to add to the field names of the overlay
-       layer's fields to avoid name collisions with fields
-       in the input layer.
+     - Add a prefix to identify fields of the overlay layer.
+       Duplicate field names will be appended a count suffix to avoid collision.
 
 Outputs
 .......
@@ -1111,9 +1107,9 @@ Advanced parameters
        Optional
      - ``OVERLAY_FIELDS_PREFIX``
      - [string]
-     - Prefix to add to the field names of the overlay
-       layers fields to avoid name collisions with fields
-       in the input layer.
+     - Add a prefix to identify fields of the overlay layers.
+       Duplicate field names will be appended a count suffix to avoid collision.
+
 
 Outputs
 .......
@@ -1130,7 +1126,8 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - Layer containing all the overlapping and
-       non-overlapping parts from the processed layer(s).
+       non-overlapping parts from the processed layer(s),
+       with all layers' attributes.
 
 Python code
 ...........
