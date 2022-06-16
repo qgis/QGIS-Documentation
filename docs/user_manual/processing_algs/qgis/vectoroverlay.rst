@@ -206,8 +206,7 @@ Any features which intersect the extent will be included.
 .. figure:: img/extractbyextent.png
   :align: center
 
-  Extract operation between a three-feature input layer 'a' and an extent, 
-  displayed in red for reference - 
+  Extract operation between a three-feature input layer 'a' and a dashed extent (left) - 
   resulting features with dashed extent for reference (right)
 
 .. seealso:: :ref:`qgisclip`
@@ -249,8 +248,7 @@ Parameters
        .. figure:: img/extractbyextent_clip.png
           :align: center
 
-          Extract operation between a three-feature input layer 'a' and the extent, 
-          displayed in red for reference, of a two-feature overlay layer 'b' (left) - 
+          Extract operation between a three-feature input layer 'a' and a dashed extent (left) - 
           resulting features with dashed extent for reference (right)
 
    * - **Extracted**
