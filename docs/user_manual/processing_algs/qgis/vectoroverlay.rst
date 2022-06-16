@@ -203,6 +203,12 @@ within a specified extent.
 
 Any features which intersect the extent will be included.
 
+.. figure:: img/extractbyextent.png
+  :align: center
+
+  Extract operation between a three-feature input layer 'a' and a dashed extent (left) - 
+  resulting features with dashed extent for reference (right)
+
 .. seealso:: :ref:`qgisclip`
 
 Parameters
@@ -238,6 +244,13 @@ Parameters
        to multi geometries to ensure uniform output types.
        Moreover the geometries will be clipped to the extent chosen
        instead of taking the whole geometry as output.
+       
+       .. figure:: img/extractbyextent_clip.png
+          :align: center
+
+          Extract operation between a three-feature input layer 'a' and a dashed extent (left) - 
+          resulting features with dashed extent for reference (right)
+
    * - **Extracted**
      - ``OUTPUT``
      - [same as input]
