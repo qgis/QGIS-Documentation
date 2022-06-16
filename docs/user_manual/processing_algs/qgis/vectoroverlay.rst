@@ -387,7 +387,7 @@ overlapping features from both the input and overlay layers.
 
   Intersection operation between a two-feature input layer 'a' and a single
   feature overlay layer 'b' (left) - overlapping areas become a new two-feature layer 
-  with both layers' attibutes (right)
+  with both layers' attributes (right)
 
 **Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
 
@@ -504,7 +504,7 @@ features from both the input and overlay layers.
 
   Intersection operation between a two-feature input layer 'a' and single
   feature overlay layers 'b' and 'c' (left) - overlapping areas become a new two-feature layer 
-  with all layers' attibutes (right)
+  with all layers' attributes (right)
 
 .. seealso:: :ref:`qgisintersection`, :ref:`qgisclip`, :ref:`qgisdifference`
 
@@ -796,7 +796,7 @@ attributes and fields from both the input and overlay layers.
 
   Symmetrical difference operation between a two-features input layer
   'a' and a single feature overlay layer 'b' (left) - 
-  resulting three-feature layer (right)
+  resulting three-feature layer with both layers' attributes (right)
 
 **Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
 
@@ -1045,7 +1045,7 @@ attribute values from overlay layers for overlapping features.
 
   Union operation between a two-feature input layer 'a' and single
   feature overlay layers 'b' and 'c' (left) - resulting eleven-feature layer 
-  with attributes from both layers (right)
+  with attributes from all layers (right)
 
 .. note::
    With an overlay layer, features on the same layer will not split each other.
