@@ -29,9 +29,9 @@ contained by the mask geometry.
 .. figure:: img/clip.png
   :align: center
 
-  Clipping operation between a two-features input layer and a single
-  feature overlay layer (left) - resulting features are moved for
-  clarity (right)
+  Clipping operation between a two-feature input layer 'a' and a single
+  feature overlay layer 'b' (left) - resulting in a new layer with the modified 
+  'a' features (right)
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 of point, line, and polygon features
@@ -118,16 +118,16 @@ the portions outside the overlay layer features are retained.
 .. figure:: img/difference.png
   :align: center
 
-  Difference operation between a two-features input layer and a single
-  feature overlay layer (left) - resulting features are moved for
-  clarity (right)
+  Difference operation between a two-features input layer 'a' and a single
+  feature overlay layer 'b' (left) - resulting in a new layer with the modified 
+  'a' features (right)
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 of point, line, and polygon features
 
 **Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
 
-.. seealso:: :ref:`qgissymmetricaldifference`, :ref:`qgisclip`
+.. seealso:: :ref:`qgismultidifference`, :ref:`qgissymmetricaldifference`, :ref:`qgisclip`
 
 Parameters
 ..........
@@ -188,6 +188,96 @@ Python code
 ...........
 
 **Algorithm ID**: ``qgis:difference``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgismultidifference:
+
+Difference (multiple)
+---------------------
+|326|
+
+Extracts features from the input layer that fall completely outside or
+only partially overlap the features from any of the overlay layer(s).
+
+For each overlay layer the difference is calculated between the result of
+all previous difference operations and this overlay layer.
+Input layer features that partially overlap feature(s) in the overlay layer
+are split along those features' boundary and only the portions outside the
+overlay layer features are retained.
+
+.. include:: ../algs_include.rst
+   :start-after: **warning_attributes**
+   :end-before: **end_warning_attributes**
+
+.. figure:: img/difference_multi.png
+  :align: center
+
+  Difference operation between a two-feature input layer 'a' and single
+  feature overlay layers 'b' and 'c' (left) - resulting in a new layer with the modified 
+  'a' features (right)
+
+.. seealso:: :ref:`qgisdifference`, :ref:`qgissymmetricaldifference`, :ref:`qgisclip`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Layer to extract (parts of) features from.
+   * - **Overlay layers**
+     - ``OVERLAYS``
+     - [vector: any] [list]
+     - List of layers containing the geometries that will be subtracted from
+       the input layer geometries.
+       They are expected to have at least as many dimensions (point: 0D,
+       line: 1D, polygon: 2D, volume: 3D) as the input layer geometries.
+   * - **Difference**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Create temporary layer]``
+     - Specify the layer to contain the (parts of) features from the
+       input layer that do not overlap features of the overlay layers.
+       One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Difference**
+     - ``OUTPUT``
+     - [same as input]
+     - Layer containing (parts of) features from the input layer
+       not overlapping features from the overlay layers.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:multidifference``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -308,13 +398,13 @@ overlapping features from both the input and overlay layers.
 .. figure:: img/intersection.png
   :align: center
 
-  The intersection operation: A two-features input layer and a single
-  feature overlay layer (left) - resulting features are moved for
-  clarity (right)
+  Intersection operation between a two-feature input layer 'a' and a single
+  feature overlay layer 'b' (left) - overlapping areas become a new two-feature layer 
+  with both layers' attributes (right)
 
 **Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
 
-.. seealso:: :ref:`qgisclip`, :ref:`qgisdifference`
+.. seealso:: :ref:`qgismultiintersection`, :ref:`qgisclip`, :ref:`qgisdifference`
 
 Parameters
 ..........
@@ -340,35 +430,34 @@ Parameters
        dimensions (point: 0D, line: 1D, polygon: 2D, volume: 3D)
        as the input layer's.
    * - **Input fields to keep (leave empty to keep all fields)**
-       
+
        Optional
      - ``INPUT_FIELDS``
      - [tablefield: any] [list]
-       
+
        Default: None
      - Field(s) of the input layer to keep in the output.
        If no fields are chosen all fields are taken.
    * - **Overlay fields to keep (leave empty to keep all fields)**
-       
+
        Optional
      - ``OVERLAY_FIELDS``
      - [tablefield: any] [list]
-       
+
        Default: None
      - Field(s) of the overlay layer to keep in the output.
        If no fields are chosen all fields are taken.
+       Duplicate field names will be appended a count suffix to avoid collision.
    * - **Overlay fields prefix**
-       
+
        Optional
      - ``OVERLAY_FIELDS_PREFIX``
      - [string]
-     - Prefix to add to the field names of the intersect
-       layer's fields to avoid name collisions with fields
-       in the input layer.
+     - Add a prefix to identify fields of the intersect layer.
    * - **Intersection**
      - ``OUTPUT``
      - [same as input]
-       
+
        Default: ``[Create temporary layer]``
      - Specify the layer to contain (the parts of) the features from
        the input layer that overlap one or more features from the
@@ -378,7 +467,6 @@ Parameters
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
-
 
 Outputs
 .......
@@ -402,6 +490,105 @@ Python code
 ...........
 
 **Algorithm ID**: ``qgis:intersection``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgismultiintersection:
+
+Intersection (multiple)
+-----------------------
+|326|
+
+Extracts the overlapping portions of features in the input and all overlay layers.
+
+Features in the output layer are assigned the attributes of the overlapping
+features from both the input and overlay layers.
+
+.. include:: ../algs_include.rst
+   :start-after: **warning_attributes**
+   :end-before: **end_warning_attributes**
+
+.. figure:: img/intersection_multi.png
+  :align: center
+
+  Intersection operation between a two-feature input layer 'a' and single
+  feature overlay layers 'b' and 'c' (left) - overlapping areas become a new two-feature layer 
+  with all layers' attributes (right)
+
+.. seealso:: :ref:`qgisintersection`, :ref:`qgisclip`, :ref:`qgisdifference`
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Layer to extract (parts of) features from.
+   * - **Overlay layers**
+     - ``OVERLAYS``
+     - [vector: any] [list]
+     - Layers containing the features to check for overlap.
+       The features' geometry is expected to have at least as many
+       dimensions (point: 0D, line: 1D, polygon: 2D, volume: 3D)
+       as the input layer's.
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Overlay fields prefix**
+
+       Optional
+     - ``OVERLAY_FIELDS_PREFIX``
+     - [string]
+     - Add a prefix to identify fields of the overlay layers.
+       Duplicate field names will be appended a count suffix to avoid collision.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Intersection**
+     - ``OUTPUT``
+     - [same as input]
+     - Layer containing (parts of) features from the input
+       layer that overlap all the overlay layers.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:multiintersection``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -462,6 +649,7 @@ Basic parameters
        Default: None
      - Field(s) of the intersect layer to keep in the output.
        If no fields are chosen all fields are taken.
+       Duplicate field names will be appended a count suffix to avoid collision.
    * - **Intersection**
      - ``OUTPUT``
      - [vector: point]
@@ -492,9 +680,7 @@ Advanced parameters
        Optional
      - ``INTERSECT_FIELDS_PREFIX``
      - [string]
-     - Prefix to add to the field names of the intersect
-       layer's fields to avoid name collisions with fields
-       in the input layer.
+     - Add a prefix to identify fields of the intersect layer.
 
 Outputs
 .......
@@ -510,7 +696,8 @@ Outputs
    * - **Intersections**
      - ``OUTPUT``
      - [vector: point]
-     - Point vector layer with the intersections.
+     - Point vector layer of the lines intersections,
+       with both layers' attributes.
 
 Python code
 ...........
@@ -619,8 +806,8 @@ attributes and fields from both the input and overlay layers.
   :align: center
 
   Symmetrical difference operation between a two-features input layer
-  and a single feature overlay layer (left) - resulting features are
-  moved for clarity (right)
+  'a' and a single feature overlay layer 'b' (left) - 
+  resulting three-feature layer with both layers' attributes (right)
 
 **Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
 
@@ -681,9 +868,8 @@ Advanced parameters
        Optional
      - ``OVERLAY_FIELDS_PREFIX``
      - [string]
-     - Prefix to add to the field names of the overlay
-       layer's fields to avoid name collisions with fields
-       in the input layer.
+     - Add a prefix to identify fields of the overlay layer.
+       Duplicate field names will be appended a count suffix to avoid collision.
 
 Outputs
 .......
@@ -700,7 +886,7 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - Layer containing (parts of) features from each layer
-       not overlapping the other layer.
+       not overlapping the other layer, with both layers' attributes.
 
 Python code
 ...........
@@ -724,13 +910,13 @@ as there are features that participate in that overlap.
 .. figure:: img/union.png
   :align: center
 
-  Union operation with a single input layer of three overlapping
-  features (left) - resulting features are moved for clarity (right)
+  Union operation with a single input layer with two overlapping
+  features (left) - resulting in four features (middle) - features moved for clarity (right)
 
 An overlay layer can also be used, in which case features from each
 layer are split at their overlap with features from the other one,
 creating a layer containing all the portions from both input and
-overlay layers.
+overlay layers. Features on the same layer will not split each other.
 The attribute table of the union layer is filled with attribute values
 from the respective original layer for non-overlapping features, and
 attribute values from both layers for overlapping features.
@@ -738,20 +924,19 @@ attribute values from both layers for overlapping features.
 .. figure:: img/union_with_overlay.png
   :align: center
 
-  Union operation between a two-features input layer and a single
-  feature overlay layer (left) - resulting features are moved for
-  clarity (right)
+  Union operation between a two-feature input layer 'a' and a single
+  feature overlay layer 'b' (left) - resulting five-feature layer 
+  with attributes from both layers (right)
 
 .. note::
-   For ``union(A,B)`` algorithm, if there are overlaps among
-   geometries of layer A or among geometries of layer B, these are not
-   resolved: you need to do ``union(union(A,B))`` to resolve all
-   overlaps, i.e. run single layer ``union(X)`` on the produced result
-   ``X=union(A,B)``.
+   With an overlay layer, features on the same layer will not split each other.
+   If you want to split overlaps on the same layer as well as other layers,
+   first run the algorithm with multiple layers then run the algorithm
+   again with only the previous output.
 
 **Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
 
-.. seealso:: :ref:`qgisclip`, :ref:`qgisdifference`,
+.. seealso:: :ref:`qgismultiunion`, :ref:`qgisclip`, :ref:`qgisdifference`,
    :ref:`qgisintersection`
 
 Parameters
@@ -809,9 +994,8 @@ Advanced parameters
        Optional
      - ``OVERLAY_FIELDS_PREFIX``
      - [string]
-     - Prefix to add to the field names of the overlay
-       layer's fields to avoid name collisions with fields
-       in the input layer.
+     - Add a prefix to identify fields of the overlay layer.
+       Duplicate field names will be appended a count suffix to avoid collision.
 
 Outputs
 .......
@@ -840,11 +1024,140 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _qgismultiunion:
+
+Union (multiple)
+----------------
+|326|
+
+Checks overlaps between features within the input layer and creates
+separate features for overlapping and non-overlapping parts.
+The area of overlap will create as many identical overlapping features
+as there are features that participate in that overlap.
+
+.. figure:: img/union.png
+  :align: center
+
+  Union operation with a single input layer of three overlapping
+  features (left) - resulting features are moved for clarity (right)
+
+Multiple overlay layers can also be used, in which case features from each
+layer are split at their overlap with features from all other layers,
+creating a layer containing all the portions from both input and
+overlay layers. Features on the same layer will not split each other.
+The attribute table of the Union layer is filled with attribute values
+from the respective original layer for non-overlapping features, and
+attribute values from overlay layers for overlapping features.
+
+.. figure:: img/union_multi.png
+  :align: center
+
+  Union operation between a two-feature input layer 'a' and single
+  feature overlay layers 'b' and 'c' (left) - resulting eleven-feature layer 
+  with attributes from all layers (right)
+
+.. note::
+   With an overlay layer, features on the same layer will not split each other.
+   If you want to split overlaps on the same layer as well as other layers,
+   first run the algorithm with multiple layers then run the algorithm
+   again with only the previous output.
+
+.. seealso:: :ref:`qgisunion`, :ref:`qgisclip`, :ref:`qgisdifference`,
+   :ref:`qgisintersection`
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer to split at any intersections.
+   * - **Overlay layers**
+
+       Optional
+     - ``OVERLAYS``
+     - [vector: any] [list]
+     - Layers that will be combined to the first one.
+       Ideally the geometry type should be the same as input layer.
+   * - **Union**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Create temporary layer]``
+     - Specify the layer to contain the (split and duplicated)
+       features from the input layer and the overlay layers.
+       One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Overlay fields prefix**
+
+       Optional
+     - ``OVERLAY_FIELDS_PREFIX``
+     - [string]
+     - Add a prefix to identify fields of the overlay layers.
+       Duplicate field names will be appended a count suffix to avoid collision.
+
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Union**
+     - ``OUTPUT``
+     - [same as input]
+     - Layer containing all the overlapping and
+       non-overlapping parts from the processed layer(s),
+       with all layers' attributes.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:multiunion``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |326| replace:: ``NEW in 3.26``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
