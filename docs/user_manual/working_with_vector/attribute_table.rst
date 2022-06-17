@@ -833,7 +833,7 @@ a table. And there are also some buttons available. Let's review them shortly:
 * The two buttons |formView| and |openTable| to the right switch between the :ref:`table
   view and form view <attribute_table_view>` of the related child features.
 
-If you use the :menuselection:`Drag and Drop Designer` for the regions feature, you can select 
+If you use the :ref:`Drag and Drop Designer <customize_form>` for the regions feature, you can select 
 which tools are available. You can even decide whether to open a new form when a new feature is 
 added using :guilabel:`Force hide form on add feature` option. Be aware that this option implies 
 that not null attributes must take a valid default value to work correctly.
