@@ -2300,6 +2300,13 @@ Parameters
        Default: 1.0
      - Scaling value: the band values are multiplied
        by this value.
+   * - **Offset**
+     - ``OFFSET``
+     - [number |dataDefine|]
+
+       Default: 0.0
+     - Offset value: it is algebraically added to the band
+       values after applying the "Scale factor".
    * - **Updated**
      - ``OUTPUT``
      - [same as input]
@@ -5907,6 +5914,13 @@ Parameters
        Default: 1.0
      - Scaling value: the band values are multiplied
        by this value.
+   * - **Offset**
+     - ``OFFSET``
+     - [number |dataDefine|]
+
+       Default: 0.0
+     - Offset value: it is algebraically added to the band
+       values after applying the "Scale factor".
    * - **Updated**
      - ``OUTPUT``
      - [same as input]
