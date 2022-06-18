@@ -2300,7 +2300,7 @@ Parameters
        Default: 1.0
      - Scaling value: the band values are multiplied
        by this value.
-   * - **Offset**
+   * - **Offset** |326|
      - ``OFFSET``
      - [number |dataDefine|]
 
@@ -5914,7 +5914,7 @@ Parameters
        Default: 1.0
      - Scaling value: the band values are multiplied
        by this value.
-   * - **Offset**
+   * - **Offset** |326|
      - ``OFFSET``
      - [number |dataDefine|]
 
