@@ -165,7 +165,7 @@ Using flags to speed up things
 
 In some instances where you may not need to use a fully fonctionnal project, but only
  want to access it for a specific reason, flags may be helpful. A full list of flags is available under
- :meth:`ProjectReadFlag <qgis.core.QgsPRoject.ProjectReadFlag>` . Multiple flags can be added together.
+ :meth:`ProjectReadFlag <qgis.core.Qgis.ProjectReadFlag>`. Multiple flags can be added together.
  
 As an example if we do not need to have functionnal layers and simply want to access of modify a project. 
 A flag can be used to bypass the data validation step and prevent the bad layer dialog from appearing.
@@ -173,9 +173,9 @@ The following can be done:
 
 .. testcode:: loadproject
 
-  readflags = QgsProject.ReadFlags()
-  readflags |= QgsProject.FlagDontResolveLayer
+  readflags = Qgis.ProjectReadFlags()
+  readflags |= Qgis.FlagDontResolveLayer
   project = QgsProject()
-  project.read('c:/Users/ClintBarton/Documents/Projects', readflags)
+  project.read('C:/Users/ClintBarton/Documents/Projects/mysweetproject.qgs', readflags)
  
-To add more flags the python | (Bitwise OR) operator must be used to append a new flags.
+To add more flags the python Bitwise OR operator (``|``) must be used.
