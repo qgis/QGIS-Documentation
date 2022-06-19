@@ -1038,8 +1038,8 @@ as there are features that participate in that overlap.
 .. figure:: img/union.png
   :align: center
 
-  Union operation with a single input layer of three overlapping
-  features (left) - resulting features are moved for clarity (right)
+  Union operation with a single input layer with two overlapping
+  features (left) - resulting in four features (middle) - features moved for clarity (right)
 
 Multiple overlay layers can also be used, in which case features from each
 layer are split at their overlap with features from all other layers,
