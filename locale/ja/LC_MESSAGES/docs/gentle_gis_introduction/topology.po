@@ -2,19 +2,20 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2022
+# Miyoshi Tomoya, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 12:05+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:08+0000\n"
+"Last-Translator: Miyoshi Tomoya, 2022\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,6 +31,10 @@ msgstr "トポロジ"
 #: ../../docs/gentle_gis_introduction/topology.rst:8
 msgid "|gentleLogo|"
 msgstr "|gentleLogo|"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:233
+msgid "gentleLogo"
+msgstr "gentleLogo"
 
 #: ../../docs/gentle_gis_introduction/topology.rst:8
 msgid "Objectives:"
@@ -67,6 +72,21 @@ msgstr ""
 " "
 "道路レイヤー内の２本のラインが交差点で完全に合っていない）を検出して修正するのに便利です。トポロジは、ネットワーク分析のような、ある種の空間分析を実行するのに必要です。"
 
+#: ../../docs/gentle_gis_introduction/topology.rst:23
+msgid ""
+"Imagine you travel to London. On a sightseeing tour you plan to visit St. "
+"Paul's Cathedral first and in the afternoon Covent Garden Market for some "
+"souvenirs. Looking at the Underground map of London (see "
+":numref:`figure_topology_london`) you have to find connecting trains to get "
+"from Covent Garden to St. Paul's. This requires topological information "
+"(data) about where it is possible to change trains. Looking at a map of the "
+"underground, the topological relationships are illustrated by circles that "
+"show connectivity."
+msgstr ""
+"あなたはロンドンに旅行しているとします。観光ツアーで、まずセント・ポール大聖堂を訪れ、午後にはコベントガーデンマーケットでお土産を買おうと計画しています。ロンドンの地下鉄の地図を見て（"
+" :numref:`figure_topology_london` "
+"を参照）、コベントガーデンからセントポールまで行くための接続列車を探さなければなりません。そのためには、どこで列車を乗り換えることができるかというトポロジ情報（データ）が必要です。地下鉄の地図を見ると、トポロジ的な関係は接続性を示す円で示されています。"
+
 #: ../../docs/gentle_gis_introduction/topology.rst:37
 msgid "Topology of London Underground Network."
 msgstr "ロンドン地下鉄ネットワークのトポロジ。"
@@ -74,6 +94,21 @@ msgstr "ロンドン地下鉄ネットワークのトポロジ。"
 #: ../../docs/gentle_gis_introduction/topology.rst:40
 msgid "Topology errors"
 msgstr "トポロジエラー"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:42
+msgid ""
+"There are different types of topological errors and they can be grouped "
+"according to whether the vector feature types are polygons or polylines. "
+"Topological errors with **polygon** features can include unclosed polygons, "
+"gaps between polygon borders or overlapping polygon borders. A common "
+"topological error with **polyline** features is that they do not meet "
+"perfectly at a point (node). This type of error is called an **undershoot** "
+"if a gap exists between the lines, and an **overshoot** if a line ends "
+"beyond the line it should connect to (see :numref:`figure_topology_errors`)."
+msgstr ""
+"トポロジエラーには様々な種類があり、ベクタ地物タイプがポリゴンかポリラインかによってグループ分けされます。**ポリゴン**地物のトポロジエラーには、閉じていないポリゴン、ポリゴン境界の隙間、ポリゴン境界の重なりがあります。**ポリライン**地物の一般的なトポロジエラーは、点（ノード）で完全に合流しないことです。このタイプのエラーは、線と線の間に隙間がある場合は"
+" **アンダーシュート** と呼ばれ、線が接続すべき線を越えて終わっている場合は **オーバーシュート** と呼ばれます (参照 "
+":numref:`figure_topology_errors`)。"
 
 #: ../../docs/gentle_gis_introduction/topology.rst:57
 msgid ""
@@ -116,7 +151,7 @@ msgid ""
 "topologically correct data, but also for people who you pass data on to. "
 "They will be expecting your data and analysis results to be correct!"
 msgstr ""
-"位相的に正しいデータを作成し所有することは、自分の解析のために重要なだけでなく、データを渡される人々のためでもあります。データを渡された人はデータと分析結果が正しいことを期待するでしょう！"
+"トポロジ的に正しいデータを作成し所有することは、自分の解析のために重要なだけでなく、データを渡される人々のためでもあります。データを渡された人はあなたのデータと分析結果が正しいことを期待するでしょう！"
 
 #: ../../docs/gentle_gis_introduction/topology.rst:83
 msgid "Topology rules"
@@ -168,6 +203,32 @@ msgstr "ベクターの線レイヤーにおいて等高線のラインはイン
 msgid "Topological tools"
 msgstr "トポロジのツール"
 
+#: ../../docs/gentle_gis_introduction/topology.rst:104
+msgid ""
+"Many GIS applications provide tools for topological editing. For example in "
+"QGIS you can **enable topological editing** to improve editing and "
+"maintaining common boundaries in polygon layers. A GIS such as QGIS "
+"'detects' a shared boundary in a polygon map so you only have to move the "
+"edge vertex of one polygon boundary and QGIS will ensure the updating of the"
+" other polygon boundaries as shown in :numref:`figure_topological_tools` "
+"(1)."
+msgstr ""
+"多くの GIS "
+"アプリケーションでは、トポロジ的な編集のためのツールを提供しています。例えば、QGISでは、**トポロジカル編集**を有効にすることで、ポリゴンレイヤーの編集と共通の境界の維持を改善することができます。QGISのようなGISはポリゴンマップの共有境界を「検出」するので、あるポリゴン境界のエッジ頂点を移動するだけで、QGISは他のポリゴン境界を"
+" :numref:`figure_topological_tools` (1) に示すように確実に更新してくれるのです。"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:111
+msgid ""
+"Another topological option allows you to prevent** polygon overlaps** during"
+" digitising (see :numref:`figure_topological_tools` (2)). If you already "
+"have one polygon, it is possible with this option to digitise a second "
+"adjacent polygon so that both polygons overlap and QGIS then clips the "
+"second polygon to the common boundary."
+msgstr ""
+"もう一つのトポロジ的オプションは、デジタイズ時にポリゴンの重なり**を防ぐことができます（ "
+":numref:`figure_topological_tools` (2) "
+"を参照してください）。すでに1つのポリゴンがある場合、このオプションを使用して、両方のポリゴンが重なるように隣接する2番目のポリゴンをデジタイズすることが可能で、QGISは2番目のポリゴンを共通の境界線にクリップします。"
+
 #: ../../docs/gentle_gis_introduction/topology.rst:123
 msgid ""
 "(1) Topological editing to detect shared boundaries, when moving vertices. "
@@ -180,6 +241,21 @@ msgstr ""
 #: ../../docs/gentle_gis_introduction/topology.rst:129
 msgid "Snapping distance"
 msgstr "スナップ距離"
+
+#: ../../docs/gentle_gis_introduction/topology.rst:131
+msgid ""
+"Snapping distance is the distance a GIS uses to search for the closest "
+"vertex and / or segment you are trying to connect when you digitise. A "
+"**segment** is a straight line formed between two vertices in a polygon or "
+"polyline geometry. If you aren't within the snapping distance, a GIS such as"
+" QGIS will leave the vertex where you release the mouse button, instead of "
+"snapping it to an existing vertex and / or segment (see "
+":numref:`figure_snapping_distance`)."
+msgstr ""
+"スナップ距離とは、デジタイズする際に、最も近い頂点やセグメントを検索するために GIS "
+"が使用する距離のことです。**セグメント**とは、ポリゴンまたはポリラインのジオメトリにおける2つの頂点間で形成される直線のことです。スナップ距離内にない場合、QGIS"
+" などの GIS は、既存の頂点やセグメントにスナップするのではなく、マウスボタンを離した位置に頂点を置きます "
+"(:numref:`figure_snapping_distance` を参照してください)。"
 
 #: ../../docs/gentle_gis_introduction/topology.rst:144
 msgid ""
