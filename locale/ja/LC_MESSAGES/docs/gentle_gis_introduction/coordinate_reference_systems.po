@@ -2,19 +2,20 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2022
+# Miyoshi Tomoya, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 10:26+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:12+0000\n"
+"Last-Translator: Miyoshi Tomoya, 2022\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,6 +31,10 @@ msgstr "座標参照系"
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:8
 msgid "|gentleLogo|"
 msgstr "|gentleLogo|"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:501
+msgid "gentleLogo"
+msgstr "gentleLogo"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:8
 msgid "Objectives:"
@@ -128,6 +133,21 @@ msgstr ""
 msgid "The three families of map projections"
 msgstr "地図投影法の大きな３つ"
 
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:59
+msgid ""
+"The process of creating map projections is best illustrated by positioning a"
+" light source inside a transparent globe on which opaque earth features are "
+"placed. Then project the feature outlines onto a two-dimensional flat piece "
+"of paper. Different ways of projecting can be produced by surrounding the "
+"globe in a **cylindrical** fashion, as a **cone**, or even as a **flat "
+"surface**. Each of these methods produces what is called a **map projection "
+"family**. Therefore, there is a family of **planar projections**, a family "
+"of **cylindrical projections**, and another called **conical projections** "
+"(see :numref:`figure_projection_families`)"
+msgstr ""
+"地図投影法の作成方法は、透明な地球儀の中に光源を置き、その上に不透明な地物を配置するのが最も分かりやすい。そして、その地物の輪郭を2次元の平らな紙に投影します。地球儀を*円筒形*や*円錐形*、あるいは*平面*で囲むなど、さまざまな投影する方法を作ることができます。これらの方法はそれぞれ、**地図投影族**と呼ばれるものを作り出します。したがって、**平面投影**の族、**円筒投影**の族、および"
+" **円錐投影**の族が存在します (参照 :numref:`figure_projection_families`)"
+
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:75
 msgid ""
 "The three families of map projections. They can be represented by a) "
@@ -146,6 +166,21 @@ msgstr ""
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:83
 msgid "Accuracy of map projections"
 msgstr "地図投影の精度"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:85
+msgid ""
+"Map projections are never absolutely accurate representations of the "
+"spherical earth. As a result of the map projection process, every map shows "
+"**distortions of angular conformity, distance and area**. A map projection "
+"may combine several of these characteristics, or may be a compromise that "
+"distorts all the properties of area, distance and angular conformity, within"
+" some acceptable limit. Examples of compromise projections are the **Winkel "
+"Tripel projection** and the **Robinson projection** (see "
+":numref:`figure_robinson_projection`), which are often used for producing "
+"and visualizing world maps."
+msgstr ""
+"地図投影は決して球体の地球を絶対的に正確に表現しているわけではありません。地図投影プロセスの結果、すべての地図は、**角度整合、距離、面積の歪み**を示します。地図投影は、これらの特性のいくつかを組み合わせることもあれば、面積、距離、角度整合のすべての特性を、ある許容範囲内で歪める妥協案とすることもあります。妥協した投影法の例として、**ヴィンケル図法**や**ロビンソン図法**（"
+" :numref:`figure_robinson_projection` 参照）があり、これらは世界地図の作成と視覚化によく使われます。"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:100
 msgid ""
@@ -181,6 +216,24 @@ msgstr ""
 "**角度性質** を維持することは地図投影上でも保存できます。正角性のこの性質を保持する地図投影は **正角** または **等角投影** "
 "と呼ばれます。"
 
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:120
+msgid ""
+"These projections are used when the **preservation of angular "
+"relationships** is important. They are commonly used for navigational or "
+"meteorological tasks. It is important to remember that maintaining true "
+"angles on a map is difficult for large areas and should be attempted only "
+"for small portions of the earth. The conformal type of projection results in"
+" distortions of areas, meaning that if area measurements are made on the "
+"map, they will be incorrect. The larger the area the less accurate the area "
+"measurements will be. Examples are the **Mercator projection** (as shown in "
+":numref:`figure_mercator_projection`) and the **Lambert Conformal Conic "
+"projection**. The U.S. Geological Survey uses a conformal projection for "
+"many of its topographic maps."
+msgstr ""
+"これらの投影は、**角度関係の保存**が重要な場合に使用されます。一般的には、航海や気象の仕事に使われます。ただし、地図上で真の角度を保つことは、広い範囲では困難であり、地球の小さな部分でのみ試みるべきであることを覚えておく必要があります。正角型の投影では、面積の歪みが生じます。つまり、地図上で面積を測定すると、不正確な値になります。面積が大きければ大きいほど、面積の測定は正確ではなくなります。例としては、**メルカトル図法**（"
+" :numref:`figure_mercator_projection` にあるように）と **ランバート正角円錐図法** "
+"があります。米国地質調査所では、地形図の多くに正角図法を使用しています。"
+
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:137
 msgid ""
 "The Mercator projection, for example, is used where angular relationships "
@@ -190,6 +243,27 @@ msgstr "メルカトル図法は、例えば、角度関係が重要である場
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:141
 msgid "Map projections with equal distance"
 msgstr "正しい距離を持つ地図投影法"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:143
+msgid ""
+"If your goal in projecting a map is to accurately measure distances, you "
+"should select a projection that is designed to preserve distances well. Such"
+" projections, called **equidistant projections**, require that the **scale**"
+" of the map is **kept constant**. A map is equidistant when it correctly "
+"represents distances from the centre of the projection to any other place on"
+" the map. **Equidistant projections** maintain accurate distances from the "
+"centre of the projection or along given lines. These projections are used "
+"for radio and seismic mapping, and for navigation. The **Plate Carree "
+"Equidistant Cylindrical** (see :numref:`figure_plate_caree_projection`) and "
+"the **Equirectangular projection** are two good examples of equidistant "
+"projections. The **Azimuthal Equidistant projection** is the projection used"
+" for the emblem of the United Nations (see "
+":numref:`figure_azimuthal_equidistant_projection`)."
+msgstr ""
+"地図を投影する際に、距離を正確に測定することが目的であれば、距離をよく保存するように設計された投影法を選択する必要があります。このような投影は、**正距図法**と呼ばれ、地図の**スケール**が**一定に保たれる**ことが必要です。地図は、投影の中心から地図上の他の場所までの距離を正しく表現しているとき、正距であると言えます。**正距図法**は、投影の中心から、あるいは与えられた線に沿って、正確な距離を維持します。これらの投影は、電波地図や地震動図、航法に使用されています。**プレートカレ正距円筒図法**（"
+" :numref:`figure_plate_caree_projection` を参照）と **正距円筒図法** "
+"は正距図法の良い例です。**正距方位図法** は国連の紋章に使われている射影です (参照 "
+":numref:`figure_azimuthal_equidistant_projection`)。"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:162
 msgid ""
@@ -204,6 +278,30 @@ msgstr "国際連合のロゴは正距方位図法が用いられています。
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:174
 msgid "Projections with equal areas"
 msgstr "正しい面積を持つ投影法"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:176
+msgid ""
+"When a map portrays areas over the entire map, so that all mapped areas have"
+" the same proportional relationship to the areas on the Earth that they "
+"represent, the map is an **equal area map**. In practice, general reference "
+"and educational maps most often require the use of **equal area "
+"projections**. As the name implies, these maps are best used when "
+"calculations of area are the dominant calculations you will perform. If, for"
+" example, you are trying to analyse a particular area in your town to find "
+"out whether it is large enough for a new shopping mall, equal area "
+"projections are the best choice. On the one hand, the larger the area you "
+"are analysing, the more precise your area measures will be, if you use an "
+"equal area projection rather than another type. On the other hand, an equal "
+"area projection results in **distortions of angular conformity** when "
+"dealing with large areas. Small areas will be far less prone to having their"
+" angles distorted when you use an equal area projection. **Alber's equal "
+"area**, **Lambert's equal area** and **Mollweide Equal Area Cylindrical "
+"projections** (shown in :numref:`figure_mollweide_equal_area_projection`) "
+"are types of equal area projections that are often encountered in GIS work."
+msgstr ""
+"地図に描かれた区域が地球上の区域と同じ比率になるように地図全体に領域を描く場合、その地図は**正積図**となります。実際のところ、一般的な参考地図や教育用地図では、**正積図法**を使用することがほとんどです。その名の通り、この地図は面積の計算が主な計算である場合に最適です。例えば、あなたの町のある区域に新しいショッピングモールを作るのに十分な広さがあるかどうか分析しようとする場合、正積図法が最も適しています。一方、分析する区域が広ければ広いほど、他の種類の投影法ではなく、等積図法を使えば、より正確な面積測定が可能になります。一方、大きな面積を扱う場合、正積図法は**正角性の歪み**を生じさせます。正積図法を使うとき、小さい面積の場合は角度の歪みが少ないです。**アルベルス正積**、**ランベルト正積**、**モルワイデ正積円筒図法**（"
+" :numref:`figure_mollweide_equal_area_projection` "
+"で示す）は、GIS作業でよく出会う正積図法の種類です。"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:199
 msgid ""
@@ -236,7 +334,7 @@ msgid ""
 "called Cartesian or rectangular coordinate reference systems) and "
 "**geographic coordinate reference systems**."
 msgstr ""
-"座標系（CRS）の助けを借りて、地球上のあらゆる場所は、座標と呼ばれる3つの数字のセットで指定できます。一般にCRSは **投影座標系** "
+"地球上のあらゆる場所は、座標参照系（CRS）の助けを借りて、座標と呼ばれる3つの数字のセットで指定できます。一般にCRSは **投影座標系** "
 "（デカルト又は直角座標系とも呼ばれる）と **地理座標系** に分類できます。"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:219
@@ -253,11 +351,43 @@ msgstr ""
 "地理座標参照系を使用することは非常に一般的です。それらは、地球の表面上の位置を記述するために緯度および経度と、時には高さ値を使用しています。最も一般的なものは"
 " **WGS 84** と呼ばれています。"
 
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:225
+msgid ""
+"**Lines of latitude** run parallel to the equator and divide the earth into "
+"180 equally spaced sections from North to South (or South to North). The "
+"reference line for latitude is the equator and each **hemisphere** is "
+"divided into ninety sections, each representing one degree of latitude. In "
+"the northern hemisphere, degrees of latitude are measured from zero at the "
+"equator to ninety at the north pole. In the southern hemisphere, degrees of "
+"latitude are measured from zero at the equator to ninety degrees at the "
+"south pole. To simplify the digitisation of maps, degrees of latitude in the"
+" southern hemisphere are often assigned negative values (0 to -90°). "
+"Wherever you are on the earth’s surface, the distance between the lines of "
+"latitude is the same (60 nautical miles). See "
+":numref:`figure_geographic_crs` for a pictorial view."
+msgstr ""
+"**緯線**は赤道と平行に走り、地球を北から南（または南から北）へ180等分しています。緯度の基準線は赤道で、各**半球**は90のセクションに分けられ、それぞれが緯度の1度を表します。北半球では、赤道上の0度から北極の90度までが緯度として測られます。南半球では、赤道上の0度から南極点の90度までが緯度です。地図のデジタル化を容易にするため、南半球の緯度には負の値（0〜-90°）が割り当てられることが多くあります。地球上のどこにいても、緯度線間の距離は同じです（60海里）。絵で見るには"
+" :numref:`figure_geographic_crs` を参照してください。"
+
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:243
 msgid ""
 "Geographic coordinate system with lines of latitude parallel to the equator "
 "and lines of longitude with the prime meridian through Greenwich."
 msgstr "緯線は赤道に平行で、経線は本初子午線がグリニッジを通る地理座標系。"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:246
+msgid ""
+"**Lines of longitude**, on the other hand, do not stand up so well to the "
+"standard of uniformity. Lines of longitude run perpendicular to the equator "
+"and converge at the poles. The reference line for longitude (the prime "
+"meridian) runs from the North pole to the South pole through Greenwich, "
+"England. Subsequent lines of longitude are measured from zero to 180 degrees"
+" East or West of the prime meridian. Note that values West of the prime "
+"meridian are assigned negative values for use in digital mapping "
+"applications. See :numref:`figure_geographic_crs` for a pictorial \\view."
+msgstr ""
+"**経線**は、一様性という基準にはあまり適いません。経線は赤道に対して垂直に走り、極点で収束します。経線の基準線（本初子午線）は北極から南極まで、イングランドのグリニッジを通っています。それ以降の経線は、本初子午線から東または西に0度から180度までの範囲で測定されます。本初子午線より西側は、デジタルマッピングアプリケーションで使用するために負の値が割り当てられていることに注意してください。絵による説明は"
+" :numref:`figure_geographic_crs` を参照してください。"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:255
 msgid ""
@@ -293,6 +423,25 @@ msgstr ""
 msgid "Projected coordinate reference systems"
 msgstr "投影座標参照系"
 
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:275
+msgid ""
+"A two-dimensional coordinate reference system is commonly defined by two "
+"axes. At right angles to each other, they form a so called **XY-plane** (see"
+" :numref:`figure_projected_crs` on the left side). The horizontal axis is "
+"normally labelled **X**, and the vertical axis is normally labelled **Y**. "
+"In a three-dimensional coordinate reference system, another axis, normally "
+"labelled **Z**, is added. It is also at right angles to the **X** and **Y** "
+"axes. The **Z** axis provides the third dimension of space (see "
+":numref:`figure_projected_crs` on the right side). Every point that is "
+"expressed in spherical coordinates can be expressed as an **X Y Z** "
+"coordinate."
+msgstr ""
+"2次元の座標参照系は、一般に2本の軸で定義されます。互いに直角で、いわゆる **XY平面** を形成します（左側の "
+":numref:`figure_projected_crs` を参照してください）。横軸は通常 **X** と表示され、縦軸は通常 **Y** "
+"と表示されます。3次元座標参照系では、通常 **Z** と表示されるもう1つの軸が追加されます。この軸も**X**軸と**Y**軸に直角です。**Z**"
+" 軸は空間の 3 番目の次元を提供します（右側の :numref:`figure_projected_crs` "
+"を参照）。球面座標で表されるすべての点は、**X Y Z** 座標で表すことができます。"
+
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:291
 msgid "Two and three dimensional coordinate reference systems."
 msgstr "二次元と三次元の基準座標系。"
@@ -317,11 +466,45 @@ msgstr ""
 msgid "Universal Transverse Mercator (UTM) CRS in detail"
 msgstr "ユニバーサル横メルカトル（UTM）CRS詳細"
 
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:305
+msgid ""
+"The Universal Transverse Mercator (UTM) coordinate reference system has its "
+"origin on the **equator** at a specific **Longitude**. Now the Y-values "
+"increase southwards and the X-values increase to the West. The UTM CRS is a "
+"global map projection. This means, it is generally used all over the world. "
+"But as already described in the section 'accuracy of map projections' above,"
+" the larger the area (for example South Africa) the more distortion of "
+"angular conformity, distance and area occur. To avoid too much distortion, "
+"the world is divided into **60 equal zones** that are all **6 degrees** wide"
+" in longitude from East to West. The **UTM zones** are numbered **1 to 60**,"
+" starting at the **antimeridian** (**zone 1** at 180 degrees West longitude)"
+" and progressing East back to the **antemeridian** (**zone 60** at 180 "
+"degrees East longitude) as shown in :numref:`figure_utm_zones`."
+msgstr ""
+"ユニバーサル横メルカトル(UTM)座標参照系は、特定の**経度**の**赤道**上に原点を持ちます。ここで、Y値は南に向かって増加し、X値は西に向かって増加します。UTM"
+" "
+"CRSは世界地図投影法です。つまり、一般的に世界中で使用されています。しかし、上記の「地図投影の精度」の項で既に述べたように、面積が大きくなればなるほど（例えば南アフリカ）、角度整合性、距離、面積の歪みが発生します。そこで、あまり大きな歪みが生じないように、世界を東西に経度**6度**の幅を持つ**60等分ゾーン**に分割しています。**UTMゾーン**には**1から60まで**の番号が付けられており、"
+" :numref:`figure_utm_zones` "
+"に示すように、**天底子午線**（西経180度の**ゾーン1**）から始まり、東に戻って**天底子午線**（東経180度の**ゾーン60**）まで進行するようになっています。"
+
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:324
 msgid ""
 "The Universal Transverse Mercator zones. For South Africa UTM zones 33S, "
 "34S, 35S, and 36S are used."
 msgstr "ユニバーサル横メルカトルゾーン。南アフリカにはUTMゾーン33S、34S、35S、36Sが使用されています。"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:327
+msgid ""
+"As you can see in :numref:`figure_utm_zones` and "
+":numref:`figure_utm_for_sa`, South Africa is covered by four **UTM zones** "
+"to minimize distortion. The **zones** are called **UTM 33S**, **UTM 34S**, "
+"**UTM 35S** and **UTM 36S**. The **S** after the zone means that the UTM "
+"zones are located **south of the equator**."
+msgstr ""
+":numref:`figure_utm_zones`と :numref:`figure_utm_for_sa` "
+"にあるように、南アフリカは歪みを最小にするために4つの **UTM ゾーン** に覆われています。これらの**ゾーン**は、**UTM "
+"33S**、**UTM 34S**、**UTM 35S**、**UTM "
+"36S**と呼ばれています。ゾーンの後の**S**は、UTMゾーンが**赤道より南**に位置していることを意味します。"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:338
 msgid ""
@@ -330,6 +513,39 @@ msgid ""
 " of Interest (AOI)."
 msgstr ""
 "UTMゾーンは、その中央経度（経絡）と33S、34S、35S、36Sとは、高い精度で南アフリカを投影するために使用されます。赤の十字は関心領域（AOI）を示します。"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:342
+msgid ""
+"Say, for example, that we want to define a two-dimensional coordinate within"
+" the **Area of Interest (AOI)** marked with a red cross in "
+":numref:`figure_utm_for_sa`. You can see, that the area is located within "
+"the **UTM zone 35S**. This means, to minimize distortion and to get accurate"
+" analysis results, we should use **UTM zone 35S** as the coordinate "
+"reference system."
+msgstr ""
+"例えば、 :numref:`figure_utm_for_sa` の赤い十字で示された **Area of Interest (AOI)** "
+"内の二次元座標を定義したいとしましょう。この領域は、**UTMゾーン35S**内に位置していることがわかります。つまり、歪みを最小限に抑え、正確な解析結果を得るためには、**UTMゾーン35S**を座標参照系として使用する必要があるのです。"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:348
+msgid ""
+"The position of a coordinate in UTM south of the equator must be indicated "
+"with the **zone number** (35) and with its **northing (Y) value** and "
+"**easting (X) value** in meters. The **northing value** is the distance of "
+"the position from the **equator** in meters. The **easting value** is the "
+"distance from the **central meridian** (longitude) of the used UTM zone. For"
+" UTM zone 35S it is **27 degrees** **East** as shown in "
+":numref:`figure_utm_for_sa`. Furthermore, because we are south of the "
+"equator and negative values are not allowed in the UTM coordinate reference "
+"system, we have to add a so called **false northing value** of 10,000,000 m "
+"to the northing (Y) value and a false easting value of 500,000 m to the "
+"easting (X) value. This sounds difficult, so, we will do an example that "
+"shows you how to find the correct **UTM 35S** coordinate for the **Area of "
+"Interest**."
+msgstr ""
+"赤道より南のUTM座標の位置は、**ゾーン番号**(35)と、**北距(Y)値**と**東距(X)値**をメートルで示さなければなりません。**北距値**は、**赤道**からの距離（メートル）です。**東距値**は、使用するUTMゾーンの**中央子午線**（経度）からの距離です。UTMゾーン35Sの場合、"
+" :numref:`figure_utm_for_sa` に示すように **27度** **East** "
+"となります。さらに、赤道の南側であり、UTM座標参照系では負の値は許されないので、北緯(Y)の値には10,000,000mのいわゆる**疑似北距値**を、東経(X)の値には500,000mの疑似東距値を追加しなければなりません。難しそうなので、例として、**Area"
+" of Interest**の正しい**UTM 35S**座標を求める方法を説明します。"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:362
 msgid "The northing (Y) value"
@@ -343,13 +559,31 @@ msgid ""
 "of 10,000,000 m. This means the northing (Y) value of our coordinate is "
 "6,450,000 m (-3,550,000 m + 10,000,000 m)."
 msgstr ""
-"探している場所は赤道から南355万メートルですので、北距（Y）の値には **負の符号** が付き-"
-"355万メートルです。UTMの定義に従い、1000万メートルの **偽の北距値** "
+"探している場所は赤道から南355万メートルですので、北距（Y）の値には **負の符号** "
+"が付き-355万メートルです。UTMの定義に従い、1000万メートルの **偽の北距値** "
 "を追加する必要があります。ということは、座標の北距（Y）の値は645万メートル（-355 万メートル +1000万メートル）です。"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:371
 msgid "The easting (X) value"
 msgstr "東距（X）値"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:373
+msgid ""
+"First we have to find the **central meridian** (longitude) for the **UTM "
+"zone 35S**. As we can see in :numref:`figure_utm_for_sa` it is **27 degrees "
+"East**. The place we are looking for is **85,000 meters West** from the "
+"central meridian. Just like the northing value, the easting (X) value gets a"
+" negative sign, giving a result of **-85,000 m**. According to the UTM "
+"definitions we have to add a **false easting value** of 500,000 m. This "
+"means the easting (X) value of our coordinate is 415,000 m (-85,000 m + "
+"500,000 m). Finally, we have to add the **zone number** to the easting value"
+" to get the correct value."
+msgstr ""
+"まず、**UTMゾーン35S**の**中心子午線**(経度)を求めなければなりません。numref:`figure_utm_for_sa` "
+"でわかるように、それは **東経27度** "
+"です。探している場所は、中心子午線から西に**85,000m**のところです。北距値と同様に、東距値にも負の符号がつき、**-85,000 m** "
+"という結果になります。UTMの定義によると、この座標の東方値は-85,000 m + 500,000 mの415,000 "
+"mとなります。最後に、正しい値を得るために、東距値に**ゾーン番号**を追加する必要があります。"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:382
 msgid ""
@@ -421,7 +655,7 @@ msgstr "何を学びましたか？"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:420
 msgid "Let's wrap up what we covered in this worksheet:"
-msgstr "このワークシートに覆われたものを包んでみましょう："
+msgstr "このワークシートで扱ったものをまとめてみましょう："
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:422
 msgid ""
@@ -476,6 +710,38 @@ msgstr "ここでは人に教える際のアイデアをいくつか述べてい
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:443
 msgid "Start QGIS"
 msgstr "QGISを始める"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:444
+msgid ""
+"In :menuselection:`Project --> Properties... --> CRS` check :guilabel:`No "
+"projection (or unknown/non-Earth projection)`"
+msgstr ""
+":menuselection:`プロジェクト--> プロパティ... --> CRS`で "
+":guilabel:`CRSなし（または未知／非地球）`をチェックします"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:446
+msgid "Load two layers of the same area but with different projections"
+msgstr "同じ面積で異なる投影法を持つ2つのレイヤを読み込む"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:447
+msgid ""
+"Let your pupils find the coordinates of several places on the two layers. "
+"You can show them that it is not possible to overlay the two layers."
+msgstr "生徒たちに、2つのレイヤ上のいくつかの場所の座標を見つけさせましょう。2つのレイヤを重ねることは不可能であることを示すことができます。"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:449
+msgid ""
+"Then define the coordinate reference system as Geographic/WGS 84 inside the "
+":guilabel:`Project Properties` dialog"
+msgstr "次に、 :guilabel:`プロジェクトプロパティ` ダイアログで、座標参照系を Geographic/WGS 84 として定義します"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:451
+msgid ""
+"Load the two layers of the same area again and let your pupils see how "
+"setting a CRS for the project (hence, enabling \"on-the-fly\" projection) "
+"works."
+msgstr ""
+"同じ区域の2つのレイヤを再度読み込み、プロジェクトのCRSの設定（つまり、「オンザフライ」投影を可能にする）がどのように機能するかを生徒たちに見せてください。"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:454
 msgid ""
@@ -537,6 +803,14 @@ msgstr ""
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:481
 msgid "**Websites**:"
 msgstr "**ウェブサイト**:"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:483
+msgid "https://foote.geography.uconn.edu/gcraft/notes/mapproj/mapproj_f.html"
+msgstr "https://foote.geography.uconn.edu/gcraft/notes/mapproj/mapproj_f.html"
+
+#: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:484
+msgid "http://geology.isu.edu/wapi/geostac/Field_Exercise/topomaps/index.htm"
+msgstr "http://geology.isu.edu/wapi/geostac/Field_Exercise/topomaps/index.htm"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:486
 msgid ""
