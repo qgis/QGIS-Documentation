@@ -55,7 +55,7 @@ Point Layers
   can be used when height values of the 3d vectors are provided as absolute
   measures from 0. :guilabel:`Relative` and :guilabel:`Terrain` add given
   elevation values to the underlying terrain elevation.
-* The :ref:`shading <shading_texture>` can be defined.
+* The :ref:`shading <shading_texture>` properties can be defined.
 * Under the :guilabel:`Transformations` frame, you can apply affine transformation
   to the symbol:
 
@@ -86,8 +86,7 @@ Line layers
   terrain. Either every :guilabel:`Vertex` of the feature will be clamped
   to the terrain or this will be done by the :guilabel:`Centroid`.
 * It is possible to |checkbox|:guilabel:`Render as simple 3D lines`.
-* The shading can be defined in the menus :guilabel:`Diffuse`, :guilabel:`Ambient`,
-  :guilabel:`Specular` and :guilabel:`Shininess`.
+* The :ref:`shading <shading_texture>` properties can be defined.
 
 .. _`3d_polygonlayers`:
 
@@ -132,7 +131,7 @@ Polygon Layers
   order of vertices).
 * |checkbox| :guilabel:`Invert normals (experimental)`: can be useful for fixing
   clockwise/counter-clockwise face vertex orders
-* The :ref:`shading <shading_texture>` can be defined.
+* The :ref:`shading <shading_texture>` properties can be defined.
 * Display of the |checkbox| :guilabel:`Edges` of the symbols can be enabled
   and assigned a :guilabel:`Width` and :guilabel:`Color`.
 
@@ -164,12 +163,14 @@ on the geometry type of the symbol:
   the :guilabel:`Specular` reflection of shiny surfaces (:guilabel:`Shininess`).
   It also includes an :guilabel:`Ambient` option to account for the small amount
   of light that is scattered about the entire scene.
+  Use the :guilabel:`Opacity` slider to render semi-transparent objects in 3D.
   Read more at https://en.wikipedia.org/wiki/Phong_reflection_model#Description
 * :guilabel:`Realistic Textured (Phong)`: same as the :guilabel:`Realistic (Phong)`
   except that an image is used as :guilabel:`Diffuse Texture`.
   The image can be a file on disk, a remote URL or :ref:`embedded in the project
   <embedded_file_selector>`.
   The :guilabel:`Texture scale` and :guilabel:`Texture rotation` are required.
+  Use the :guilabel:`Opacity` slider to render semi-transparent objects in 3D.
 * :guilabel:`CAD (Gooch)`: this technique allows shading to occur only in mid-tones
   so that edge lines and highlights remain visually prominent. Along with the
   :guilabel:`Diffuse`, :guilabel:`Specular`, :guilabel:`Shininess` options,
