@@ -2342,7 +2342,7 @@ Parameters
        Default: 1.0
      - Scaling value: the band values are multiplied
        by this value.
-   * - **Offset** |326|
+   * - **Offset** |328|
      - ``OFFSET``
      - [number |dataDefine|]
 
@@ -6028,7 +6028,7 @@ Parameters
        Default: 1.0
      - Scaling value: the band values are multiplied
        by this value.
-   * - **Offset** |326|
+   * - **Offset** |328|
      - ``OFFSET``
      - [number |dataDefine|]
 
@@ -7484,6 +7484,7 @@ Python code
 
 .. |324| replace:: ``NEW in 3.24``
 .. |326| replace:: ``NEW in 3.26``
+.. |328| replace:: ``NEW in 3.28``
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png
