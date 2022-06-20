@@ -2666,7 +2666,7 @@ synchronization and skybox.
 
    The 3D Map Camera Configuration dialog
 
-* the :guilabel:`Camera` parameter group overrides some :ref:`default camera settings <3d_options>`
+* The :guilabel:`Camera` parameter group overrides some :ref:`default camera settings <3d_options>`
   made in the :menuselection:`Settings --> Options --> 3D` dialog.
 
 * check |unchecked| :guilabel:`Show 3D Axis` to enable 3D axis tool. This parameter
