@@ -106,10 +106,12 @@ subdivisions (see :numref:`figure_layout_scalebar_segments`):
 
   * number of subdivisions of a unique segment on the :guilabel:`Left` side
   * number of segments on the :guilabel:`Right` side
-* You can set how long a segment will be (:guilabel:`Fixed width`), or limit
-  the scale bar size in ``mm`` with :guilabel:`Fit segment width` option. In the
-  latter case, each time the map scale changes, the scale bar is resized (and
-  its label updated) to fit the range set.
+* You can set the width of a segment or a range for the total length of the scalebar:
+  
+  * Set how long a segment will be in your scalebar units(:guilabel:`Fixed width`)
+  * Or limit the total scale bar size in ``mm`` with :guilabel:`Fit segment width` option. In the
+    latter case, each time the map scale changes, the scale bar is resized (and
+    its label updated) to fit between the upper and lower range set.
 * :guilabel:`Height` is used to define the height of the bar.
 * :guilabel:`Right segment subdivisions` is used to define the number of sections
   the right-side segments of the scale bar can have (for *Line Ticks Down*,
