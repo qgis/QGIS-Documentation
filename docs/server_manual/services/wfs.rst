@@ -468,7 +468,7 @@ for features. Available values are:
 
 - ``extent``
 - ``centroid``
-- ``bash``
+- ``none``
 
 URL example:
 
