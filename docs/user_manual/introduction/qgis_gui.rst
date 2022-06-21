@@ -2516,7 +2516,14 @@ The following tools are provided at the top of the 3D map view panel:
   * |checkbox| :guilabel:`Export textures`
 * |showPresets| :sup:`Set View Theme`: Allows you to select the set of layers to
   display in the map view from predefined :ref:`map themes <map_themes>`.
-* |options| :sup:`Configure` the map view :ref:`settings <scene_configuration>`
+* The |options| :sup:`Options` menu provides shortcuts to:
+
+  * Add visual effects to the 3D rendering, such as :guilabel:`Show shadows`,
+    :guilabel:`Show eye dome lighting`
+  * Synchronize the views (:guilabel:`2D map view follows 3D camera` and/or
+    :guilabel:`3D camera follows 2D Map view`)
+  * :guilabel:`Show visible camera area in 2D map view`
+  * |options| :sup:`Configure` the 3D map view :ref:`settings <scene_configuration>`.
 
 
 .. _`scene_configuration`:
@@ -2525,8 +2532,9 @@ Scene Configuration
 ---------------------
 
 The 3D map view opens with some default settings you can customize.
-To do so, click the |options| :sup:`Configure...` button at the top of
-the 3D canvas panel to open the :guilabel:`3D configuration` window.
+To do so, expand the |options| :sup:`Options` menu at the top of
+the 3D canvas panel and press the |options| :menuselection:`Configure` button
+to open the :guilabel:`3D configuration` window.
 
 .. _figure_3dmap_config:
 
@@ -2645,18 +2653,51 @@ given:
 Camera & Skybox
 ...............
 
-In this tab, you can override some :ref:`default camera settings <3d_options>`
-made in the :menuselection:`Settings --> Options --> 3D` dialog.
+In this tab, you can control different parameters like camera, 3D axis, navigation
+synchronization and skybox.
 
-Furthermore, check |unchecked| :guilabel:`Show skybox` to enable skybox rendering
-in the scene. The skybox type can be:
+.. _figure_3dmap_config_camera:
 
-* :guilabel:`Panoramic texture`, with a single file providing sight on 360\°
-* :guilabel:`Distinct faces`, with a texture file for each of the six sides
-  of a box containing the scene
+.. figure:: img/3dmapconfiguration_camera.png
+   :align: center
 
-Texture image files of the skybox can be files on the disk, remote URLs or embedded
-in the project (:ref:`more details <embedded_file_selector>`).
+   The 3D Map Camera Configuration dialog
+
+* The :guilabel:`Camera` parameter group overrides some :ref:`default camera settings <3d_options>`
+  made in the :menuselection:`Settings --> Options --> 3D` dialog.
+
+* Check |unchecked| :guilabel:`Show 3D Axis` to enable 3D axis tool. This parameter
+  group allows to set the axis type and its position.
+
+  * With the :guilabel:`Coordinate Reference System` type an orthogonal axis
+    will be represented.
+  * With the :guilabel:`Cube` type, a 3D cube will be represented. The cube
+    faces can be used to change the camera view: for example, click on the
+    :guilabel:`north` face to set the camera to see from the north.
+
+.. tip:: Right-click the 3D axis to quickly set its position and type, and the camera view.
+
+  .. _figure_3dmap_config_3daxis_menu:
+
+  .. figure:: img/3dmapconfiguration_3daxis_menu.png
+     :align: center
+
+     The 3D Axis context menu
+
+* The :guilabel:`Navigation Synchronization` parameter group adds options to
+  synchronize 2D view with 3D camera position or 3D camera position with
+  2D view or bi directional synchronization. The last option displays the extent
+  visible from the 3D camera over the 2D map view.
+
+* Check |unchecked| :guilabel:`Show skybox` to enable skybox rendering
+  in the scene. The skybox type can be:
+
+  * :guilabel:`Panoramic texture`, with a single file providing sight on 360\°
+  * :guilabel:`Distinct faces`, with a texture file for each of the six sides
+    of a box containing the scene
+
+  Texture image files of the skybox can be files on the disk, remote URLs or
+  embedded in the project (:ref:`more details <embedded_file_selector>`).
 
 Advanced
 ........
