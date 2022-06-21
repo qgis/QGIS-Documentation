@@ -2,19 +2,20 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2022
+# fairtommy <fairtommy@gmail.com>, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 10:22+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:15+0000\n"
+"Last-Translator: fairtommy <fairtommy@gmail.com>, 2022\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,23 +37,99 @@ msgstr "このレッスンでは、QGISでの完全なGIS解析を通して案�
 msgid "Problem Statement"
 msgstr "問題の状態"
 
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:13
+msgid ""
+"You are tasked with finding areas in and around the Cape Peninsula that are "
+"suitable habitats for a rare fynbos plant species. The extent of your area "
+"of investigation covers Cape Town and the Cape Peninsula between "
+"Melkbosstrand in the north and Strand in the south. Botanists have provided "
+"you with the following preferences exhibited by the species in question:"
+msgstr ""
+"あなたは、ケープ半島とその周辺で、珍しいフィンボス植物種に適した生息地を見つけるという任務を負っています。調査範囲は、北のメルクボスストラントと南のストランドの間のケープタウンとケープ半島をカバーしています。植物学者は、問題の種によって示される次の好みをあなたに提供しました："
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:20
+msgid "It grows on east facing slopes"
+msgstr "東向きの斜面で育ちます"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:27
+msgid ""
+"As a student at the University, you have agreed to search for the plant in "
+"four different suitable areas of land. You want those four suitable areas to"
+" be the ones that are closest to the University of Cape Town where you live."
+" Use your GIS skills to determine where you should go to look."
+msgstr ""
+"大学の学生として、あなたは土地の4つの異なる適切な領域で植物を探すことに同意しました。これらの4つの適切なエリアは、あなたが住んでいるケープタウン大学に最も近いエリアである必要があります。"
+" GISスキルを使用して、どこを見に行くべきかを判断します。"
+
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:34
 msgid "Solution Outline"
 msgstr "ソリューションの概要"
 
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:36
+msgid ""
+"The data for this exercise can be found in the "
+":file:`exercise_data/more_analysis` folder."
+msgstr "この演習のデータは、 :file:`exercise_data/more_analysis` フォルダにあります。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:44
+msgid ""
+"Analysing a DEM raster layer to find the east facing slopes and the slopes "
+"with the correct gradients"
+msgstr "DEMラスターレイヤーを分析して、東向きの斜面と正しい勾配の斜面を見つけます"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:46
+msgid ""
+"Analysing a rainfall raster layer to find the areas with the correct amount "
+"of rainfall"
+msgstr "降雨ラスターレイヤーを分析して、正しい降雨量のエリアを見つけます"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:54
+msgid ""
+"Click on the |projectionEnabled| :sup:`Current CRS` button in the lower "
+"right corner of the screen. Under the :guilabel:`CRS` tab of the dialog that"
+" appears, use the \"Filter\" tool to search for \"33S\". Select the entry "
+":guilabel:`WGS 84 / UTM zone 33S` (with EPSG code ``32733``)."
+msgstr ""
+"画面の右下隅にある |ProjectionEnabled| :sup:`現在のCRS` ボタンをクリックします。表示されるダイアログの "
+":guilabel:`CRS` タブで、[フィルター]ツールを使用して「33S」を検索します。エントリ :guilabel:`WGS 84 / "
+"UTMゾーン33S` （EPSGコード ``32733`` ）を選択します。"
+
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:60
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:306
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:356
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:510
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:579
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:665
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:734
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:316
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:366
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:520
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:589
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:675
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:744
 msgid "Click :guilabel:`OK`"
 msgstr ":guilabel:`OK` をクリックします"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:65
+msgid ""
+"Save it in a new directory called :file:`Rasterprac`, that you should create"
+" somewhere on your computer. You will save whatever layers you create in "
+"this directory as well. Save the project as :file:`your_name_fynbos.qgs`."
+msgstr ""
+"これを :file:`Rasterprac` "
+"という新しいディレクトリに保存します。これは、コンピュータのどこかに作成する必要があります。作成したレイヤーもこのディレクトリに保存します。プロジェクトを"
+" :file:`your_name_fynbos.qgs` として保存します。"
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:71
 msgid "Loading Data into the Map"
 msgstr "地図へデータを読み込む"
+
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:80
+msgid ""
+"Click on the |dataSourceManager| :sup:`Open Data Source Manager` button in "
+"the *Data Source Manager Toolbar*, and enable the |addOgrLayer| "
+":guilabel:`Vector` tab in the dialog that appears, or use the "
+":menuselection:`Layer --> Add Layer -->` |addOgrLayer| :menuselection:`Add "
+"Vector Layer...` menu item"
+msgstr ""
+"*データソースマネージャツールバー* の|dataSourceManager| :sup:`データソースマネージャーを開く` ボタンをクリックし、 "
+"|addOgrLayer| 表示されるダイアログの :guilabel:`ベクタ` "
+"タブを有効にします。、または:menuselection:`レイヤ->レイヤを追加->` |addOgrLayer| "
+":menuselection:`ベクタレイヤを追加...` メニュー項目を使用します"
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:91
 msgid "Click :guilabel:`Open`."
@@ -76,39 +153,39 @@ msgid ""
 "area."
 msgstr "今、興味の領域を持っている、このエリアへのラスターをクリップできます。"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:267
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:277
 msgid ""
 "In order to properly see what's going on, the symbology for the layers needs"
 " to be changed."
 msgstr "何が起こっているのかを適切に確認するために、レイヤーのためのシンボルを変更する必要があります。"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:271
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:281
 msgid "Changing the symbology of vector layers"
 msgstr "ベクターレイヤーのシンボル体系を変更する"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:289
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:299
 msgid "Changing the symbology of raster layers"
 msgstr "ラスターレイヤーのシンボル体系を変更する"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:291
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:301
 msgid "Raster layer symbology is somewhat different."
 msgstr "ラスターレイヤーシンボル体系はいくらか違います。"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:314
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:324
 msgid "Clean up the map"
 msgstr "地図をクリーンアップします。"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:320
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:330
 msgid "Right-click on these layers and select :guilabel:`Remove`."
 msgstr "これらのレイヤー上で右クリックし、 :guilabel:`削除` を選択します。"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:322
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:332
 msgid ""
 "This will not remove the data from your storage device, it will merely take "
 "it out of your map."
 msgstr "これは、記憶装置からデータを削除しません。地図から外すだけです。"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:326
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:336
 msgid ""
 "You can now hide the vector layers by unchecking the box next to them in the"
 " :guilabel:`Layers` panel. This will make the map render faster and will "
@@ -117,82 +194,82 @@ msgstr ""
 "今 :guilabel:`レイヤー` パネル中のベクターレイヤーを、横にあるボックスをオフにして非表示できます "
 "。これにより、地図のレンダリングが速くなりますし、時間の節約になります。"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:331
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:341
 msgid "Create the hillshade"
 msgstr "陰影図の作成"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:333
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:343
 msgid ""
 "In order to create the hillshade, you will need to use an algorithm that was"
 " written for this purpose."
 msgstr "陰影起伏を作成するには、この目的のために書かれたアルゴリズムを使用する必要があります。"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:346
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:356
 msgid "Wait for it to finish processing."
 msgstr "処理が完了するのを待ちます。"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:363
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:373
 msgid "Slope"
 msgstr "傾斜"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:404
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:414
 msgid "Reclassifying rasters"
 msgstr "ラスターを再分類する"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:426
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:436
 msgid ""
 "Set the :guilabel:`Output layer` field to an appropriate location and file "
 "name."
 msgstr "適切な場所とファイル名で :guilabel:`出力レイヤー` フィールドを設定してください。"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:428
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:438
 msgid "Click :guilabel:`Run`."
 msgstr ":guilabel:`実行` をクリックします。"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:458
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:468
 msgid "Combining rasters"
 msgstr "ラスターを組み合わせる"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:485
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:495
 msgid "Finding rural areas"
 msgstr "農村地域を検索する"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:513
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:523
 msgid ""
 "Now you need to exclude the areas that are within ``250m`` from the edge of "
 "the rural areas. Do this by creating a negative buffer, as explained below."
 msgstr ""
 "ここで農村地域の端から ``250m`` 内にある領域を除外する必要があります。これは以下に説明するように、負のバッファを作成することによって行います。"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:518
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:528
 msgid "Creating a negative buffer"
 msgstr "負のバッファを作成する"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:534
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:544
 msgid "Close the :guilabel:`Buffer` dialog."
 msgstr ":guilabel:`バッファ` ダイアログを閉じます。 "
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:552
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:562
 msgid "Vectorizing the raster"
 msgstr "ラスターをベクター化する"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:644
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:654
 msgid "Calculating the area for each polygon"
 msgstr "各ポリゴンの面積を計算する"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:671
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:681
 msgid ""
 "This ensures that each polygon has a unique ID for identification purposes."
 msgstr "これは、各ポリゴンは識別目的のためのユニークなIDを持っていることを保証します。"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:677
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:687
 msgid "Selecting areas of a given size"
 msgstr "与えられたサイズの面積を選択する"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:679
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:689
 msgid "Now that the areas are known:"
 msgstr "今この面積が知られています："
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:769
+#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:779
 msgid "This is the final answer to the research question."
 msgstr "これは、研究の質問への最終的な答えです。"

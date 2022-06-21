@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 "Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:2
 msgid "|LS| Creating Detailed Maps with the Atlas Tool"
@@ -39,7 +39,7 @@ msgid ""
 "You can use the Atlas tool to automatically generate a number of maps with a"
 " common format."
 msgstr ""
-"Il prgetto di campionamento sistematico è pronto e le squadre sul campo "
+"Il progetto di campionamento sistematico è pronto e le squadre sul campo "
 "hanno caricato le coordinate GPS nei loro dispositivi di navigazione. Hanno "
 "anche un modulo di dati sul campo dove raccoglieranno le informazioni "
 "misurate in ogni lotto di campionamento. Per trovare più facilmente la loro "
@@ -55,9 +55,9 @@ msgid ""
 "**The goal for this lesson:** Learn to use the Atlas tool in QGIS to "
 "generate detailed printable maps to assist in the field inventory work."
 msgstr ""
-"**L'obiettivo di questa lezione:** Imparare ad usare lo strumento Atlante in"
-" QGIS per generare mappe dettagliate stampabili per assisterti nel lavoro di"
-" catalogazione sul campo."
+"**Obiettivo di questa lezione:** Imparare ad usare lo strumento Atlante in "
+"QGIS per generare mappe dettagliate stampabili per assisterti nel lavoro di "
+"catalogazione sul campo."
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:16
 msgid "|basic| |FA| Preparing the Print Layout"
@@ -89,6 +89,14 @@ msgstr ""
 "Apri il progetto QGIS della precedente lezione :kbd:`forest_inventory.qgs`. "
 "Dovresti avere almeno i seguenti layer:"
 
+#: ../../docs/training_manual/forestry/forest_maps.rst:27
+msgid ""
+":kbd:`forest_stands_2012` (with a 50% transparency, green fill and darker "
+"green border lines)."
+msgstr ""
+":kbd:`forest_stands_2012` (con una trasparenza del 50%, riempimento verde e "
+"linee di confine verdi più scure)."
+
 #: ../../docs/training_manual/forestry/forest_maps.rst:29
 msgid ":kbd:`systematic_plots_clip`."
 msgstr ":kbd:`systematic_plots_clip`."
@@ -101,10 +109,93 @@ msgstr ":kbd:`rautjarvi_aerial`."
 msgid "Save the project with a new name, :kbd:`map_creation.qgs`."
 msgstr "Salva il progetto con un nuovo nome, :kbd:`map_creation.qgs`."
 
+#: ../../docs/training_manual/forestry/forest_maps.rst:34
+msgid ""
+"To create a printable map, remember that you use the :guilabel:`Layout "
+"Manager`:"
+msgstr ""
+"Per creare una mappa stampabile, ricordati di usare il :guilabel:`Gestore "
+"dei Layout`:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:36
+msgid "Open :menuselection:`Project --> Layout Manager...`."
+msgstr "Apri :menuselection:`Progetto --> Nuovo Layout di Stampa...`."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:37
+msgid "In the :guilabel:`Layout manager` dialog."
+msgstr "Nella finestra di dialogo :guilabel:`Crea Layout di stampa`."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:38
+msgid ""
+"Click the :guilabel:`Add` button and name your print layout "
+":kbd:`forest_map`."
+msgstr ""
+"Inserisci il titolo univoco per il tuo layout di stampa :kbd:`forest_map`."
+
 #: ../../docs/training_manual/forestry/forest_maps.rst:39
 #: ../../docs/training_manual/forestry/forest_maps.rst:392
 msgid "Click :guilabel:`OK`."
 msgstr "Fai clic su :guilabel:`OK`."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:40
+msgid "Click the :guilabel:`Show` button."
+msgstr "Fai clic sul pulsante :guilabel:`Mostra`."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:42
+msgid ""
+"Set up the printer options so that your maps will suit your paper and "
+"margins, for an A4 paper:"
+msgstr ""
+"Imposta le opzioni della stampante in modo che le mappe si adattino al tuo "
+"foglio e ai margini, per un foglio A4:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:45
+msgid "Open menuselection:`Layout --> Page Setup...`."
+msgstr "Apri menuselection:`Layout --> Imposta Pagina Stampante...`."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:46
+msgid ":guilabel:`Size` is :guilabel:`A4 (217 x 297 mm)`."
+msgstr ":guilabel:`Formato` è :guilabel:`A4 (217 x 297 mm)`."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:47
+msgid ":guilabel:`Orientation` is :guilabel:`Landscape`."
+msgstr ":guilabel:`Orientamento` è :guilabel:`Orizzontale`."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:48
+msgid ":guilabel:`Margins (millimeters)` are all set to :kbd:`5`."
+msgstr ":guilabel:`Margini (millimetri)` sono tutti impostati su :kbd:`5`."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:50
+msgid ""
+"In the :guilabel:`Print Layout` window, go to the :guilabel:`Composition` "
+"tab (on the right panel) and make sure that these settings for "
+":guilabel:`Paper and quality` are the same you defined for the printer:"
+msgstr ""
+"Nella finestra :guilabel:`Layout di stampa`, vai alla scheda "
+":guilabel:`Compositore` (sulla destra del pannello) e assicurati che queste "
+"impostazione per :guilabel:`Foglio e qualità` sono le stesse che hai "
+"definito per la stampante:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:54
+msgid ":guilabel:`Size`: :kbd:`A4 (210x297mm)`."
+msgstr ":guilabel:`Dimensione`: :kbd:`A4 (210x297mm)`."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:55
+msgid ":guilabel:`Orientation`: :kbd:`Landscape`."
+msgstr ":guilabel:`Orientamento`: :kbd:`Orizzontale`."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:56
+msgid ":guilabel:`Quality`: :kbd:`300dpi`."
+msgstr ":guilabel:`Qualità`: :kbd:`300dpi`."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:58
+msgid ""
+"Composing a map is easier if you make use of the canvas grid to position the"
+" different elements. Review the settings for the layout grid:"
+msgstr ""
+"La composizione di una mappa è più semplice se si utilizza il reticolo nell'"
+" area di disegno per posizionare i diversi elementi. Esamina le impostazioni"
+" della reticolo del layout:"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:474
 msgid "addMap"
@@ -114,6 +205,70 @@ msgstr "addMap"
 msgid "|basic| |FA| Adding Background Map"
 msgstr "|basic| |FA| Aggiungere Mappa di Sfondo"
 
+#: ../../docs/training_manual/forestry/forest_maps.rst:96
+msgid ""
+"Add the background raster :file:`basic_map.tif` that you can find in the "
+":file:`exercise_data\\\\forestry\\\\` folder."
+msgstr ""
+"Aggiungi il raster di sfondo :file:`basic_map.tif` che puoi trovare nella "
+"cartella :file:`exercise_data\\\\forestry\\`."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:98
+msgid ""
+"When prompted select the :kbd:`ETRS89 / ETRS-TM35FIN` CRS for the raster."
+msgstr ""
+"Quando viene richiesto, seleziona il SR :kbd:`ETRS89 / ETRS-TM35FIN` per il "
+"raster."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:100
+msgid ""
+"As you can see the background map is already styled. This type of ready to "
+"use cartography raster is very common. It is created from vector data, "
+"styled in a standard format and stored as a raster so that you don't have to"
+" bother styling several vector layers and worrying about getting a good "
+"result."
+msgstr ""
+"Come puoi vedere, la mappa di sfondo è già stilizzata. Questo tipo di "
+"cartografia raster pronta all'uso è molto comune. Viene creata a partire da "
+"dati vettoriali, stilizzato in un formato standard e memorizzato come "
+"raster, in modo da non doversi preoccupare di stilizzare diversi layer "
+"vettoriali e per ottenere un buon risultato."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:108
+msgid ""
+"The current styling of the sample plots is not the best, but how does it "
+"look in the print layout?:"
+msgstr ""
+"Lo stile attuale dei lotti campione non è dei migliori, ma come appare nel "
+"layout di stampa?"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:114
+msgid ""
+"While during the last exercises, the white buffer was OK on top of the "
+"aerial image, now that the background image is mostly white you barely can "
+"see the labels. You can also check how it looks like on the layout:"
+msgstr ""
+"Mentre durante le ultime esercitazioni il buffer bianco andava bene sopra "
+"l'immagine aerea, ora che l'immagine di sfondo è per lo più bianca si vedono"
+" a malapena le etichette. Puoi verificare l'aspetto del layout:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:481
+msgid "select"
+msgstr "select"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:162
+msgid "|basic| |TY| Create a Basic Map Template"
+msgstr "|basic| |TY| Creare un Modello Mappa di Base"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:164
+msgid ""
+"Once you have a symbology your happy with, you are ready to add some more "
+"information to your printed map. Add at least the following elements:"
+msgstr ""
+"Una volta ottenuta una simbologia di cui sei soddisfatti, sei pronto ad "
+"aggiungere altre informazioni alla tua mappa da stampare. Aggiungi almeno i "
+"seguenti elementi:"
+
 #: ../../docs/training_manual/forestry/forest_maps.rst:167
 msgid "Title."
 msgstr "Titolo."
@@ -122,9 +277,73 @@ msgstr "Titolo."
 msgid "A scale bar."
 msgstr "Una barra di scala."
 
+#: ../../docs/training_manual/forestry/forest_maps.rst:180
+msgid ":menuselection:`Layout --> Export as Image...`."
+msgstr ":menuselection:`Layout --> Esporta come Immagine...`."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:181
+msgid "Use for example the :kbd:`JPG format`."
+msgstr "Usa ad esempio in :kbd:`JPG format`."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:183
+msgid "That is what it will look like when printed."
+msgstr "Ecco come apparirà una volta stampato."
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:186
+msgid "|basic| |FA| Adding More Elements to the Print Layout"
+msgstr "|basic| |FA| Aggiungere altri elementi al Layout di Stampa"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:193
+msgid ""
+"The overview map will help the field teams place the detail map inside the "
+"general forest area:"
+msgstr ""
+"La mappa panoramica aiuterà le squadre sul campo a posizionare la mappa di "
+"dettaglio all'interno dell'area forestale complessiva:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:196
+msgid "Add another map element to the canvas, right under the title text."
+msgstr ""
+"Aggiungi un altro elemento all'area di disegno della mappa, proprio sotto il"
+" testo del titolo."
+
 #: ../../docs/training_manual/forestry/forest_maps.rst:472
 msgid "addImage"
 msgstr "addImage"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:264
+msgid "|basic| |FA| Creating an Atlas Coverage"
+msgstr "|basic| |FA| Creazione di una copertura Atlante"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:266
+msgid ""
+"The Atlas coverage is just a vector layer that will be used to generate the "
+"detail maps, one map for every feature in the coverage. To get an idea of "
+"what you will do next, here is a full set of detail maps for the forest "
+"area:"
+msgstr ""
+"La copertura Atlante è solo un layer vettoriale che verrà utilizzato per "
+"generare le mappe di dettaglio, una mappa per ogni elemento della struttura."
+" Per avere un'idea di ciò che si farà in seguito, ecco una serie completa di"
+" mappe di dettaglio per l'area forestale:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:273
+msgid ""
+"The coverage could be any existing layer, but usually it makes more sense to"
+" create one for the specific purpose. Let's create a grid of polygons "
+"covering the forest area:"
+msgstr ""
+"La copertura può essere un qualsiasi layer esistente, ma di solito ha più "
+"senso crearne uno per lo scopo specifico. Creiamo una quadrettatura di "
+"poligoni che copra l'area della foresta:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:299
+msgid "Set the options as follows:"
+msgstr "Imposta le opzioni come segue:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:476
+msgid "atlas"
+msgstr "atlas"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:479
 msgid "calculateField"

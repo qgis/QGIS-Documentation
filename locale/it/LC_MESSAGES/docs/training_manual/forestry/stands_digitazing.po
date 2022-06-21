@@ -22,15 +22,431 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 "Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:2
 msgid "|LS| Digitizing Forest Stands"
-msgstr "|LS| Digitalizzazione delle foreste"
+msgstr "|LS| Digitalizzazione dei boschi"
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:4
+msgid ""
+"Unless you are going to use your georeferenced map as a simple background "
+"image, the next natural step is to digitize elements from it. You have "
+"already done so in the exercises about creating vector data in "
+":doc:`../create_vector_data/create_new_vector`, when you digitized the "
+"school fields. In this lesson, you are going to digitize the forest stands' "
+"borders that appear in the map as green lines but instead of doing it using "
+"an aerial image, you will use your georeferenced map."
+msgstr ""
+"A meno che non tu non voglia usare la tua mappa georeferenziata come "
+"semplice immagine di sfondo, il passo successivo è quello di digitalizzare "
+"gli elementi da essa. Lo hai già fatto negli esercizi sulla creazione di "
+"dati vettoriali in :doc:`../create_vector_data/create_new_vector`, quando "
+"hai digitalizzato i campi della scuola. In questa lezione, digitalizzerai i "
+"confini dei popolamenti forestali che appaiono nella mappa come linee verdi,"
+" ma invece di usare un'immagine aerea, userai la tua mappa georeferenziata."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:11
+msgid ""
+"**The goal for this lesson:** Learn a technique to help the digitizing task,"
+" digitizing forest stands and finally adding the inventory data to them."
+msgstr ""
+"**Obiettivo di questa lezione: ** Imparare una tecnica per facilitare il "
+"lavoro di digitalizzazione, digitalizzando i popolamenti forestali e "
+"aggiungendovi infine i dati inventariali."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:15
+msgid "|basic| |FA| Extracting the Forest Stands Borders"
+msgstr "|basic| |FA| Ricavare i confini dei popolamenti forestali"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:371
 msgid "basic"
 msgstr "basic"
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:17
+msgid ""
+"Open your :kbd:`map_digitizing.qgs` project in QGIS, that you saved from the"
+" previous lesson."
+msgstr ""
+"Apri il progetto :kbd:`map_digitizing.qgs` in QGIS, salvato nella lezione "
+"precedente."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:19
+msgid ""
+"Once you have scanned and georeferenced your map you could start to digitize"
+" directly by looking at the image as a guide. That would most likely be the "
+"way to go if the image you are going to digitize from is, for example, an "
+"aerial photograph."
+msgstr ""
+"Una volta scansionata e georeferenziata la tua mappa, puoi iniziare a "
+"digitalizzare direttamente guardando l'immagine come guida. Questa è "
+"probabilmente la strada da seguire se l'immagine da cui si intende "
+"digitalizzare è, ad esempio, una fotografia aerea."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:24
+msgid ""
+"If what you are using to digitize is a good map, as it is in our case, it is"
+" likely that the information is clearly displayed as lines with different "
+"colors for each type of element. Those colors can be relatively easy "
+"extracted as individual images using an image processing software like `GIMP"
+" <https://www.gimp.org/>`_. Such separate images can be used to assist the "
+"digitizing, as you will see below."
+msgstr ""
+"Se quella che stai utilizzando per la digitalizzazione è una buona mappa, "
+"come nel nostro caso, è probabile che le informazioni siano chiaramente "
+"visualizzate come linee con colori diversi per ogni tipo di elemento. Questi"
+" colori possono essere estratti con relativa facilità come immagini singole "
+"utilizzando un software di elaborazione delle immagini come GIMP. Tali "
+"immagini separate possono essere utilizzate per aiutare la digitalizzazione,"
+" come potrai vedere di seguito."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:30
+msgid ""
+"The first step will be to use GIMP to obtain an image that contains only the"
+" forest stands, that is, all those greenish lines that you could see in the "
+"original scanned map:"
+msgstr ""
+"Il primo passo sarà quello di utilizzare GIMP per ottenere un'immagine che "
+"contenga solo i popolamenti forestali, cioè tutte quelle linee verdastre che"
+" puoi individuare nella mappa originale scannerizzata:"
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:34
+msgid ""
+"Open GIMP (if you don't have it installed yet, download it from the internet"
+" or ask your teacher)."
+msgstr ""
+"Apri GIMP (se non lo hai ancora installato, scaricalo da Internet o "
+"rivolgiti al tuo insegnante)."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:36
+msgid ""
+"Open the original map image, :menuselection:`File --> Open`, "
+":kbd:`rautjarvi_map.tif` in the :kbd:`exercise_data/forestry` folder. Note "
+"that the forest stands are represented as green lines (with the number of "
+"the stand also in green inside each polygon)."
+msgstr ""
+"Apri l'immagine originale della mappa, :menuselection:`File --> Apri...`, "
+":kbd:`rautjarvi_map.tif` nella cartella :kbd:`exercise_data/forestry`. Nota "
+"che i popolamenti forestali sono rappresentati come linee verdi (con il "
+"numero del popolamento anch'esso in verde all'interno di ogni poligono)."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:44
+msgid ""
+"Now you can select the pixels in the image that are making up the forest "
+"stands' borders (the greenish pixels):"
+msgstr ""
+"Ora puoi selezionare i pixel dell'immagine che costituiscono i bordi dei "
+"popolamenti forestali (i pixel verdastri):"
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:47
+msgid "Open the tool :menuselection:`Select --> By color`."
+msgstr "Apri lo strumento :menuselezione:`Selezione --> Per colore`."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:48
+msgid ""
+"With the tool active, zoom into the image (:guilabel:`Ctrl + mouse wheel`) "
+"so that a forest stand line is close enough to differentiate the pixels "
+"forming the line. See the left image below."
+msgstr ""
+"Con lo strumento attivo, ingrandisci l'immagine (:guilabel:`Ctrl + rotella "
+"del mouse`) in modo che la linea di un popolamento forestale sia abbastanza "
+"vicina da poter distinguere i pixel che la formano. Vedi l'immagine di "
+"sinistra qui sotto."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:51
+msgid ""
+"Click and drag the mouse cursor in the middle of the line so that the tool "
+"will collect several pixel color values."
+msgstr ""
+"Fai clic e trascina il cursore del mouse al centro della linea in modo che "
+"lo strumento raccolga i valori di colore di diversi pixel."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:53
+msgid ""
+"Release the mouse click and wait a few seconds. The pixels matching the "
+"colors collected by the tool will be selected through the whole image."
+msgstr ""
+"Rilascia il clic del mouse e attendi qualche secondo. I pixel che "
+"corrispondono ai colori raccolti dallo strumento verranno selezionati "
+"nell'intera immagine."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:55
+msgid ""
+"Zoom out to see how the greenish pixels have been selected throughout the "
+"image."
+msgstr ""
+"Ingrandisci per vedere come i pixel verdastri sono stati selezionati in "
+"tutta l'immagine."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:56
+msgid ""
+"If you are not happy with the result, repeat the click and drag operation."
+msgstr ""
+"Se il risultato non è soddisfacente, ripeti l'operazione di clic e "
+"trascinamento."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:57
+msgid "Your pixel selection should look something like the right image below."
+msgstr ""
+"La tua selezione dei pixel dovrebbe assomigliare all'immagine di destra qui "
+"sotto."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:62
+msgid ""
+"Once you are done with the selection you need to copy this selection as a "
+"new layer and then save it as separate image file:"
+msgstr ""
+"Una volta che hai completato la selezione, devi copiare questa selezione "
+"come nuovo livello e salvarla come file immagine separato:"
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:65
+msgid "Copy (:guilabel:`Ctr+C`) the selected pixels."
+msgstr "Copia (:guilabel:`Ctr+C`) i pixel selezionati."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:66
+msgid ""
+"And paste the pixels directly (:guilabel:`Ctr+V`), GIMP will display the "
+"pasted pixels as a new temporary layer in the :guilabel:`Layers - Brushes` "
+"panel as a :guilabel:`Floating Selection (Pasted Layer)`."
+msgstr ""
+"E incolla i pixel direttamente (:guilabel:`Ctr+V`), GIMP visualizzerà i "
+"pixel incollati come un nuovo livello temporaneo nel pannello "
+":guilabel:`Layers - Brushes` come :guilabel:`Selezione fluttuante (livello "
+"incollato)`."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:69
+msgid "Right click that temporary layer and select :guilabel:`To New Layer`."
+msgstr ""
+"Fai clic con il pulsante destro del mouse sul livello temporaneo e seleziona"
+" :guilabel:`A nuovo livello`."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:70
+msgid ""
+"Click the \"eye\" icon next to the original image layer to switch it off, so"
+" that only the :guilabel:`Pasted Layer` is visible:"
+msgstr ""
+"Fa clic sull'icona \"occhio\" accanto al livello dell'immagine originale per"
+" spegnerla, in modo che sia visibile solo il :guilabel: `Livello incollato`:"
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:76
+msgid ""
+"Finally, select :menuselection:`File --> Export...`, set :guilabel:`Select "
+"File Type (By Extension)` as a :guilabel:`TIFF image`, select the "
+":kbd:`digitizing` folder and name it :kbd:`rautjarvi_map_green.tif`. Select "
+"no compression when asked."
+msgstr ""
+"Infine, seleziona :menuselection:`File --> Esporta come...`, imposta "
+":guilabel:`Seleziona tipo di file (Per estensione)` come :guilabel:`Immagine"
+" TIFF`, seleziona la cartella :kbd:`digitizing` e denominalo "
+":kbd:`rautjarvi_map_green.tif`. Seleziona nessuna compressione quando viene "
+"richiesto."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:81
+msgid ""
+"You could do the same process with other elements in the image, for example "
+"extracting the black lines that represent roads or the brown ones that "
+"represent the terrain' contour lines. But for us, the forest stands is "
+"enough."
+msgstr ""
+"Potresti eseguire lo stesso processo con altri elementi dell'immagine, ad "
+"esempio estraendo le linee nere che rappresentano le strade o quelle marroni"
+" che rappresentano le curve di livello del terreno. Ma per noi sono "
+"sufficienti i popolamenti forestali."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:86
+msgid "|basic| |TY| Georeference the Green Pixels Image"
+msgstr "|basic| |TY| Georeferenziare l'immagine dei pixel verdi"
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:88
+msgid ""
+"As you did in the previous lesson, you need to georeference this new image "
+"to be able to use it with the rest of your data."
+msgstr ""
+"Come nella lezione precedente, devi georeferenziare questa nuova immagine "
+"per poterla utilizzare con il resto dei tuoi dati."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:91
+msgid ""
+"Note that you don't need to digitize the ground control points any more "
+"because this image is basically the same image as the original map image, as"
+" far as the Georeferencer tool is concerned. Here are some things you should"
+" remember:"
+msgstr ""
+"Nota che non è più necessario digitalizzare i punti di controllo del terreno"
+" perché questa immagine è fondamentalmente la stessa immagine della mappa "
+"originale, per quanto riguarda lo strumento Georeferenziatore. Ecco alcune "
+"cose che dovresti ricordare:"
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:95
+msgid "This image is also, of course, in :kbd:`KKJ / Finland zone 2` CRS."
+msgstr ""
+"Questa immagine è anche essa, ovviamente, in SR :kbd:`KKJ / Finlandia zona "
+"2`."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:96
+msgid ""
+"You should use the ground control points you saved, :menuselection:`File -->"
+" Load GCP points`."
+msgstr ""
+"Devi utilizzare i punti di controllo del terreno salvati, "
+":menuselection:`File --> Carica punti GCP...`."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:97
+msgid "Remember to review the :guilabel:`Transformation settings`."
+msgstr "Ricordati di rivedere le :guilabel:`Impostazioni di Trasformazione`."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:98
+msgid ""
+"Name the output raster as :kbd:`rautjarvi_green_georef.tif` in the "
+":kbd:`digitizing` folder."
+msgstr ""
+"Denomina il raster in uscita come :kbd:`rautjarvi_green_georef.tif` nella "
+"cartella :kbd:`digitizing`."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:100
+msgid "Check that the new raster is fitting nicely with the original map."
+msgstr "Verifica che il nuovo raster si adatti bene alla mappa originale."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:104
+msgid "|basic| |FA| Creating Supporting Points for Digitizing"
+msgstr "|basic| |FA| Creazione di Punti di Supporto per la Digitalizzazione"
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:106
+msgid ""
+"Having in mind the digitizing tools in QGIS, you might already be thinking "
+"that it would be helpful to snap to those green pixels while digitizing. "
+"That is precisely what you are going to do next create points from those "
+"pixels to use them later to help you follow the forest stands' borders when "
+"digitizing, by using the snapping tools available in QGIS."
+msgstr ""
+"Tenendo conto degli strumenti di digitalizzazione di QGIS, potresti già "
+"pensare che sarebbe utile agganciarsi a quei pixel verdi durante la "
+"digitalizzazione. È proprio questo il prossimo passo: creare punti da questi"
+" pixel per utilizzarli successivamente per seguire i confini dei popolamenti"
+" forestali durante la digitalizzazione, utilizzando gli strumenti di "
+"aggancio disponibili in QGIS."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:112
+msgid ""
+"Use the :menuselection:`Raster --> Conversion --> Polygonize (Raster to "
+"Vector)` tool to vectorize your green lines to polygons. If you don't "
+"remember how, you can review it in "
+":doc:`../complete_analysis/raster_to_vector`."
+msgstr ""
+"Utilizza lo strumento :menuselection:`Raster --> Conversione --> "
+"Poligonizzare (da raster a vettore)` per vettorializzare le linee verdi in "
+"poligoni. Se non ricordi come si fa, puoi rivederlo in "
+":doc:`../complete_analysis/raster_to_vector`."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:115
+msgid ""
+"Save as :kbd:`rautjarvi_green_polygon.shp` inside the :kbd:`digitizing` "
+"folder."
+msgstr ""
+"Salva come :kbd:`rautjarvi_green_polygon.shp` all'interno della cartella "
+":kbd:`digitizing`."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:117
+msgid ""
+"Zoom in and see what the polygons look like. You will get something like "
+"this:"
+msgstr ""
+"Ingrandisci e visualizza come appaiono i poligoni. Si otterrà qualcosa di "
+"simile a questo:"
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:122
+msgid ""
+"Next one option to get points out of those polygons is to get their "
+"centroids:"
+msgstr ""
+"Un'altra opzione per ottenere punti da questi poligoni è quella di ottenere "
+"i loro centroidi:"
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:124
+msgid "Open :menuselection:`Vector --> Geometry tools --> Polygon centroids`."
+msgstr ""
+"Apri :menuselection:`Vettore --> Strumenti di geometria --> Centroidi...`."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:125
+msgid "Set the polygon layer you just got as the input file for the tool."
+msgstr ""
+"Imposta il layer dei poligoni appena ottenuto come file di input per lo "
+"strumento."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:126
+msgid ""
+"Name the output as :kbd:`green_centroids.shp` inside the :kbd:`digitizing` "
+"folder."
+msgstr ""
+"Denomina l'output come :kbd:`green_centroids.shp` all'interno della cartella"
+" :kbd:`digitizing`."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:127
+msgid "Check :menuselection:`Add result to canvas`."
+msgstr "Seleziona :menuselection:`Aggiungi il risultato alla mappa`."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:128
+msgid "Run the tool to calculate the centroids for the polygons."
+msgstr "Esegui lo strumento per calcolare i centroidi dei poligoni."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:133
+msgid ""
+"Now you can remove the :guilabel:`rautjarvi_green_polygon` layer from the "
+"TOC."
+msgstr ""
+"Ora puoi rimuovere il layer :guilabel:`rautjarvi_green_polygon` dalla lista "
+"Layer."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:135
+msgid "Change the symbology of the centroids layer as:"
+msgstr "Modifica la simbologia del layer dei centroidi come:"
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:137
+msgid "Open the :guilabel:`Layer Properties` for :guilabel:`green_centroids`."
+msgstr ""
+"Apri le :guilabel:`Proprietà...` del layer :guilabel:`green_centroids`."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:138
+msgid "Go to the :guilabel:`Symbology` tab."
+msgstr "Vai alla scheda :guilabel:`Simbologia`."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:139
+msgid "Set the :guilabel:`Unit` to Map unit."
+msgstr "Imposta la :guilabel:`Dimensione` su Unità Mappa."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:140
+msgid "Set the :guilabel:`Size` to 1."
+msgstr "Imposta :guilabel: `Dimensione` a 1."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:142
+msgid ""
+"It is not necessary to differentiate points from each other, you just need "
+"them to be there for the snapping tools to use them. You can use those "
+"points now to follow the original lines much easily than without them."
+msgstr ""
+"Non è necessario differenziare i punti l'uno dall'altro, è sufficiente che "
+"siano presenti affinché gli strumenti di aggancio li utilizzino. Ora puoi "
+"utilizzare questi punti per seguire le linee originali molto più facilmente "
+"che senza di essi."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:147
+msgid "|basic| |FA| Digitize the Forest Stands"
+msgstr "|basic| |FA| Digitalizzare i boschi"
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:149
+msgid ""
+"Now you are ready to start with the actual digitizing work. You would start "
+"by creating a vector file of :guilabel:`polygon type`, but for this "
+"exercise, there is a shapefile with part of the area of interest already "
+"digitized. You will just finish digitizing the half of the forest stands "
+"that are left between the main roads (wide pink lines) and the lake:"
+msgstr ""
+"Ora sei pronto per iniziare il lavoro di digitalizzazione vero e proprio. "
+"Devi iniziare creando un file vettoriale di Tipo di geometria "
+":guilabel:`Poligono`, ma per questo esercizio è disponibile uno shapefile "
+"con parte dell'area di interesse già digitalizzata. Si finirà di "
+"digitalizzare la metà dei popolamenti forestali rimasti tra le strade "
+"principali (ampie linee rosa) e il lago:"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:212
 msgid "Click :guilabel:`OK`."

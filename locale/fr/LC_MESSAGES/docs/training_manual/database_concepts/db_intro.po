@@ -2,26 +2,26 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2021
+# Harrissou Sant-anna, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 11:58+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2021\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:07+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2022\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 "Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:2
 msgid "|LS| Introduction to Databases"
@@ -207,13 +207,9 @@ msgstr ""
 " Nous allons créer une base de données adresse."
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:122
-#: ../../docs/training_manual/database_concepts/db_intro.rst:189
+#: ../../docs/training_manual/database_concepts/db_intro.rst:209
 msgid "|TY| |basic|"
 msgstr "|TY| |basic|"
-
-#: ../../docs/training_manual/database_concepts/db_intro.rst:392
-msgid "basic"
-msgstr "basic"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:124
 msgid ""
@@ -224,14 +220,16 @@ msgstr ""
 "dans la base."
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:127
-msgid ":ref:`Check your results <database-concepts-1>`"
-msgstr ":ref:`Vérifiez vos résultats <database-concepts-1>`"
+#: ../../docs/training_manual/database_concepts/db_intro.rst:216
+#: ../../docs/training_manual/database_concepts/db_intro.rst:345
+msgid "Answer"
+msgstr "Réponse"
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:132
+#: ../../docs/training_manual/database_concepts/db_intro.rst:152
 msgid "Address Structure"
 msgstr "Structure d'une adresse"
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:134
+#: ../../docs/training_manual/database_concepts/db_intro.rst:154
 msgid ""
 "The properties that describe an address are the columns. The type of "
 "information stored in each column is its datatype. In the next section we "
@@ -242,11 +240,11 @@ msgstr ""
 "section qui suit, nous analyserons notre table d'adresse pour voir comment "
 "l'améliorer !"
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:139
+#: ../../docs/training_manual/database_concepts/db_intro.rst:159
 msgid "Database Theory"
 msgstr "Théorie de base de données"
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:141
+#: ../../docs/training_manual/database_concepts/db_intro.rst:161
 msgid ""
 "The process of creating a database involves creating a model of the real "
 "world; taking real world concepts and representing them in the database as "
@@ -256,11 +254,11 @@ msgstr ""
 "modèle basé sur le monde réel: prendre les concepts du monde réel et les "
 "représenter dans une base de données en tant qu'entités."
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:145
+#: ../../docs/training_manual/database_concepts/db_intro.rst:165
 msgid "Normalisation"
 msgstr "Normalisation"
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:147
+#: ../../docs/training_manual/database_concepts/db_intro.rst:167
 msgid ""
 "One of the main ideas in a database is to avoid data duplication / "
 "redundancy. The process of removing redundancy from a database is called "
@@ -270,7 +268,7 @@ msgstr ""
 "duplication/redondance de données. Le processus de suppression de la "
 "redondance dans une base de données s'appelle Normalisation."
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:150
+#: ../../docs/training_manual/database_concepts/db_intro.rst:170
 msgid ""
 "Normalization is a systematic way of ensuring that a database structure is "
 "suitable for general-purpose querying and free of certain undesirable "
@@ -283,15 +281,15 @@ msgstr ""
 "anomalies lors d'insertion, de mise à jour ou de suppression qui peuvent "
 "engendrer une perte d'intégrité des données. *- Wikipedia*"
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:155
+#: ../../docs/training_manual/database_concepts/db_intro.rst:175
 msgid "There are different kinds of normalisation 'forms'."
 msgstr "Il existe différents types de normalisation."
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:157
+#: ../../docs/training_manual/database_concepts/db_intro.rst:177
 msgid "Let's take a look at a simple example:"
 msgstr "Examinons cet exemple tout simple:"
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:184
+#: ../../docs/training_manual/database_concepts/db_intro.rst:204
 msgid ""
 "Imagine you have many friends with the same street name or city. Every time "
 "this data is duplicated, it consumes space. Worse still, if a city name "
@@ -302,7 +300,7 @@ msgstr ""
 "Pire encore, si un nom de ville change, vous devrez effectuer beaucoup de "
 "travail pour mettre à jour votre base de données."
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:190
+#: ../../docs/training_manual/database_concepts/db_intro.rst:210
 msgid ""
 "Redesign the theoretical `people` table above to reduce duplication and to "
 "normalise the data structure."
@@ -310,7 +308,7 @@ msgstr ""
 "Reconstruisez la structure théorique de la table `people` ci-dessus pour "
 "réduire la duplication d'information et normaliser la structure de données."
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:193
+#: ../../docs/training_manual/database_concepts/db_intro.rst:213
 msgid ""
 "You can read more about database normalisation `here "
 "<https://en.wikipedia.org/wiki/Database_normalization>`_"
@@ -318,15 +316,11 @@ msgstr ""
 "Pour en savoir plus sur la normalisation des bases de données, lisez `ceci "
 "<https://en.wikipedia.org/wiki/Database_normalization>`_"
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:196
-msgid ":ref:`Check your results <database-concepts-2>`"
-msgstr ":ref:`Vérifiez vos résultats <database-concepts-2>`"
-
-#: ../../docs/training_manual/database_concepts/db_intro.rst:201
+#: ../../docs/training_manual/database_concepts/db_intro.rst:237
 msgid "Indexes"
 msgstr "Index"
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:203
+#: ../../docs/training_manual/database_concepts/db_intro.rst:239
 msgid ""
 "A database index is a data structure that improves the speed of data "
 "retrieval operations on a database table. *- Wikipedia*"
@@ -334,7 +328,7 @@ msgstr ""
 "Un index de base de données est un lot de données destiné à accélérer les "
 "opérations de recherche de données. *- Wikipedia*"
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:206
+#: ../../docs/training_manual/database_concepts/db_intro.rst:242
 msgid ""
 "Imagine you are reading a textbook and looking for the explanation of a "
 "concept - and the textbook has no index! You will have to start reading at "
@@ -348,15 +342,15 @@ msgstr ""
 "L'index à la fin du livre vous permet d'aller directement à la page "
 "contenant l'information pertinente."
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:216
+#: ../../docs/training_manual/database_concepts/db_intro.rst:252
 msgid "Now searches on name will be faster:"
 msgstr "Maintenant, les recherches sur le nom seront plus rapides:"
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:235
+#: ../../docs/training_manual/database_concepts/db_intro.rst:271
 msgid "Sequences"
 msgstr "Séquences"
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:237
+#: ../../docs/training_manual/database_concepts/db_intro.rst:273
 msgid ""
 "A sequence is a unique number generator. It is normally used to create a "
 "unique identifier for a column in a table."
@@ -364,7 +358,7 @@ msgstr ""
 "Une séquence est un générateur de nombre unique. Il est normalement utilisé "
 "pour créer un identifiant unique pour une colonne d'une table."
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:240
+#: ../../docs/training_manual/database_concepts/db_intro.rst:276
 msgid ""
 "In this example, id is a sequence - the number is incremented each time a "
 "record is added to the table:"
@@ -372,11 +366,11 @@ msgstr ""
 "Dans cet exemple, id est une séquence - le nombre est incrémenté chaque fois"
 " qu'un nouvel enregistrement est ajouté à la table:"
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:251
+#: ../../docs/training_manual/database_concepts/db_intro.rst:287
 msgid "Entity Relationship Diagramming"
 msgstr "Diagramme Entité-Relation"
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:253
+#: ../../docs/training_manual/database_concepts/db_intro.rst:289
 msgid ""
 "In a normalised database, you typically have many relations (tables). The "
 "entity-relationship diagram (ER Diagram) is used to design the logical "
@@ -388,7 +382,7 @@ msgstr ""
 "les dépendances logiques entre les relations. Voici notre modèle non "
 "normalisé de la table `people` de notre leçon précédente:"
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:268
+#: ../../docs/training_manual/database_concepts/db_intro.rst:304
 msgid ""
 "With a little work we can split it into two tables, removing the need to "
 "repeat the street name for individuals who live in the same street:"
@@ -397,11 +391,11 @@ msgstr ""
 "le besoin de répéter le nom de la rue pour les individus qui vivent dans la "
 "même rue."
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:280
+#: ../../docs/training_manual/database_concepts/db_intro.rst:316
 msgid "and:"
 msgstr "et:"
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:291
+#: ../../docs/training_manual/database_concepts/db_intro.rst:327
 msgid ""
 "We can then link the two tables using the 'keys' :kbd:`streets.id` and "
 ":kbd:`people.streets_id`."
@@ -409,7 +403,7 @@ msgstr ""
 "Nous pouvons ensuite lier les deux tables en utilisant les clefs  'keys' "
 ":kbd:`streets.id` et :kbd:`people.streets_id`."
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:294
+#: ../../docs/training_manual/database_concepts/db_intro.rst:330
 msgid ""
 "If we draw an ER Diagram for these two tables it would look something like "
 "this:"
@@ -417,7 +411,7 @@ msgstr ""
 "Si nous dessinons un Diagramme entité-association pour ces tables, il "
 "devrait ressembler à ce qui suit:"
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:300
+#: ../../docs/training_manual/database_concepts/db_intro.rst:336
 msgid ""
 "The ER Diagram helps us to express 'one to many' relationships. In this case"
 " the arrow symbol show that one street can have many people living on it."
@@ -426,15 +420,15 @@ msgstr ""
 "plusieurs'. Dans ce cas, le symbole de flèche nous montre qu'une rue peut "
 "avoir plusieurs personnes qui vivent dedans."
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:304
+#: ../../docs/training_manual/database_concepts/db_intro.rst:340
 msgid "|TY| |moderate|"
 msgstr "|TY| |moderate|"
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:393
+#: ../../docs/training_manual/database_concepts/db_intro.rst:458
 msgid "moderate"
 msgstr "moderate"
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:306
+#: ../../docs/training_manual/database_concepts/db_intro.rst:342
 msgid ""
 "Our `people` model still has some normalisation issues - try to see if you "
 "can normalise it further and show your thoughts by means of an ER Diagram."
@@ -443,15 +437,11 @@ msgstr ""
 "Essayez de les identifier et de les corriger à l'aide d'un diagramme entité-"
 "association."
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:309
-msgid ":ref:`Check your results <database-concepts-3>`"
-msgstr ":ref:`Vérifiez vos résultats <database-concepts-3>`"
-
-#: ../../docs/training_manual/database_concepts/db_intro.rst:314
+#: ../../docs/training_manual/database_concepts/db_intro.rst:379
 msgid "Constraints, Primary Keys and Foreign Keys"
 msgstr "Contraintes, Clés Primaires et Clés Etrangères"
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:316
+#: ../../docs/training_manual/database_concepts/db_intro.rst:381
 msgid ""
 "A database constraint is used to ensure that data in a relation matches the "
 "modeller's view of how that data should be stored. For example a constraint "
@@ -464,7 +454,7 @@ msgstr ""
 "permet de s'assurer que le nombre sera bien compris entre :kbd:`1000` et "
 ":kbd:`9999`."
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:321
+#: ../../docs/training_manual/database_concepts/db_intro.rst:386
 msgid ""
 "A Primary key is one or more field values that make a record unique. Usually"
 " the primary key is called id and is a sequence."
@@ -473,7 +463,7 @@ msgstr ""
 "enregistrement unique. En générale, la clef primaire est appelé identifiant "
 "et elle correspond à une séquence."
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:324
+#: ../../docs/training_manual/database_concepts/db_intro.rst:389
 msgid ""
 "A Foreign key is used to refer to a unique record on another table (using "
 "that other table's primary key)."
@@ -481,7 +471,7 @@ msgstr ""
 "Une clef étrangère est utilisée pour se référer à un enregistrement unique "
 "d'une autre table (en utilisant la clef primaire de l'autre table)."
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:327
+#: ../../docs/training_manual/database_concepts/db_intro.rst:392
 msgid ""
 "In ER Diagramming, the linkage between tables is normally based on Foreign "
 "keys linking to Primary keys."
@@ -489,7 +479,7 @@ msgstr ""
 "Dans le diagramme entité-association, le lien entre les tables est basé sur "
 "la liaison entre les clefs étrangères et les clefs primaires."
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:330
+#: ../../docs/training_manual/database_concepts/db_intro.rst:395
 msgid ""
 "If we look at our people example, the table definition shows that the street"
 " column is a foreign key that references the primary key on the streets "
@@ -499,11 +489,11 @@ msgstr ""
 "montre que la colonne 'street' est une clef étrangère qui référence la clef "
 "primaire de la table des rues:"
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:351
+#: ../../docs/training_manual/database_concepts/db_intro.rst:416
 msgid "Transactions"
 msgstr "Transactions"
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:353
+#: ../../docs/training_manual/database_concepts/db_intro.rst:418
 msgid ""
 "When adding, changing, or deleting data in a database, it is always "
 "important that the database is left in a good state if something goes wrong."
@@ -518,7 +508,7 @@ msgstr ""
 " créer une position de retour sur laquelle on peut revenir si les "
 "modifications ne se sont pas déroulées comme prévu."
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:359
+#: ../../docs/training_manual/database_concepts/db_intro.rst:424
 msgid ""
 "Take a scenario where you have an accounting system. You need to transfer "
 "funds from one account and add them to another. The sequence of steps would "
@@ -528,15 +518,15 @@ msgstr ""
 "Vous devez transférer des fonds d'un compte à l'autre. Les étapes se "
 "dérouleront de la manière suivante:"
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:363
+#: ../../docs/training_manual/database_concepts/db_intro.rst:428
 msgid "remove R20 from Joe"
 msgstr "Supprimer R20 du compte Joe."
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:364
+#: ../../docs/training_manual/database_concepts/db_intro.rst:429
 msgid "add R20 to Anne"
 msgstr "Ajouter R20 au compte Anne."
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:366
+#: ../../docs/training_manual/database_concepts/db_intro.rst:431
 msgid ""
 "If something goes wrong during the process (e.g. power failure), the "
 "transaction will be rolled back."
@@ -544,11 +534,11 @@ msgstr ""
 "Si quelquechose se passe mal lors du processus (ex: une panne de courant), "
 "la transaction sera annulée."
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:370
+#: ../../docs/training_manual/database_concepts/db_intro.rst:435
 msgid "|IC|"
 msgstr "|IC|"
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:372
+#: ../../docs/training_manual/database_concepts/db_intro.rst:437
 msgid ""
 "Databases allow you to manage data in a structured way using simple code "
 "structures."
@@ -556,11 +546,11 @@ msgstr ""
 "Les bases de données vous permettent de gérer vos données de manière "
 "structurée en utilisant des structures de code simple."
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:376
+#: ../../docs/training_manual/database_concepts/db_intro.rst:441
 msgid "|WN|"
 msgstr "|WN|"
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:378
+#: ../../docs/training_manual/database_concepts/db_intro.rst:443
 msgid ""
 "Now that we've looked at how databases work in theory, let's create a new "
 "database to implement the theory we've covered."

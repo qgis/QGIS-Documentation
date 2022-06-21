@@ -2,26 +2,26 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2021
+# Harrissou Sant-anna, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 10:18+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2021\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:13+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2022\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 "Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:2
 msgid "|LS| Implementing the Data Model"
@@ -48,17 +48,6 @@ msgstr ""
 #: ../../docs/training_manual/database_concepts/data_model.rst:12
 msgid "Install PostgreSQL"
 msgstr "Installer PostgreSQL"
-
-#: ../../docs/training_manual/database_concepts/data_model.rst:14
-msgid ""
-"You can find PostGreSQL packages and installation instructions for your "
-"operating system at https://www.postgresql.org/download/. Please note that "
-"the documentation will assume users are running QGIS under Ubuntu."
-msgstr ""
-"Vous trouverez les paquets PostgreSQL et les instructions d'installation sur"
-" votre système d'exploitation à https://www.postgresql.org/download/. "
-"Veuillez noter que la documentation ci-après suppose que les utilisateurs "
-"utilisent QGIS sous Ubuntu."
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:19
 #: ../../docs/training_manual/database_concepts/data_model.rst:56
@@ -290,7 +279,7 @@ msgstr "Comme vous pouvez le voir, notre table est actuellement vide."
 msgid "|TY| |moderate|"
 msgstr "|TY| |moderate|"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:415
+#: ../../docs/training_manual/database_concepts/data_model.rst:448
 msgid "moderate"
 msgstr "moderate"
 
@@ -312,14 +301,15 @@ msgstr ""
 " même type de données que plus haut."
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:256
-msgid ":ref:`Check your results <database-concepts-4>`"
-msgstr ":ref:`Vérifiez vos résultats <database-concepts-4>`"
+#: ../../docs/training_manual/database_concepts/data_model.rst:385
+msgid "Answer"
+msgstr "Réponse"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:261
+#: ../../docs/training_manual/database_concepts/data_model.rst:285
 msgid "Create Keys in SQL"
 msgstr "Créer des clefs en SQL"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:263
+#: ../../docs/training_manual/database_concepts/data_model.rst:287
 msgid ""
 "The problem with our solution above is that the database doesn't know that "
 "people and streets have a logical relationship. To express this "
@@ -331,23 +321,23 @@ msgstr ""
 "l'exprimer de manière formelle, nous devons définir des clefs étrangères qui"
 " pointent vers la clef primaire de la table des rues."
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:271
+#: ../../docs/training_manual/database_concepts/data_model.rst:295
 msgid "There are two ways to do this:"
 msgstr "Il y a deux manières de le faire:"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:273
+#: ../../docs/training_manual/database_concepts/data_model.rst:297
 msgid "Add the key after the table has been created"
 msgstr "Ajouter la clef après que la table ait été créée."
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:274
+#: ../../docs/training_manual/database_concepts/data_model.rst:298
 msgid "Define the key at time of table creation"
 msgstr "Définir la clef lors de la création de la table."
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:276
+#: ../../docs/training_manual/database_concepts/data_model.rst:300
 msgid "Our table has already been created, so let's do it the first way:"
 msgstr "Notre table a déjà été créée, utilisons donc la première méthode:"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:284
+#: ../../docs/training_manual/database_concepts/data_model.rst:308
 msgid ""
 "That tells the :kbd:`people` table that its :kbd:`street_id` fields must "
 "match a valid street :kbd:`id` from the :kbd:`streets` table."
@@ -355,7 +345,7 @@ msgstr ""
 "Cela indique à la table :kbd:`people` que le champ :kbd:`street_id` doit "
 "être un :kbd:`id` valide de la table :kbd:`streets`."
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:287
+#: ../../docs/training_manual/database_concepts/data_model.rst:311
 msgid ""
 "The more usual way to create a constraint is to do it when you create the "
 "table:"
@@ -363,15 +353,15 @@ msgstr ""
 "La méthode la plus courante pour créer une contrainte consiste à le faire au"
 " moment de la création de la table:"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:299
+#: ../../docs/training_manual/database_concepts/data_model.rst:323
 msgid "After adding the constraint, our table schema looks like this now:"
 msgstr "Après avoir ajouté la contrainte, notre table ressemble à:"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:319
+#: ../../docs/training_manual/database_concepts/data_model.rst:343
 msgid "Create Indexes in SQL"
 msgstr "Créer des index en SQL"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:321
+#: ../../docs/training_manual/database_concepts/data_model.rst:345
 msgid ""
 "We want lightning fast searches on peoples names. To provide for this, we "
 "can create an index on the name column of our people table:"
@@ -380,29 +370,21 @@ msgstr ""
 "parvenir, nous pouvons créer un index sur la colonne de nom de notre table "
 "de personnes:"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:330
+#: ../../docs/training_manual/database_concepts/data_model.rst:354
 msgid "Which results in:"
 msgstr "Qui résulte dans:"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:351
+#: ../../docs/training_manual/database_concepts/data_model.rst:375
 msgid "Dropping Tables in SQL"
 msgstr "Supprimer des tables en SQL"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:353
+#: ../../docs/training_manual/database_concepts/data_model.rst:377
 msgid "If you want to get rid of a table you can use the :kbd:`drop` command:"
 msgstr ""
 "Si vous voulez supprimer une table, vous pouvez utiliser la commande "
 ":kbd:`drop`:"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:360
-msgid ""
-"In our current example, the above command would not work. Why not? :ref:`See"
-" why <database-concepts-5>`"
-msgstr ""
-"Dans l'exemple en cours, la commande ci-dessus ne fonctionnera pas. "
-"Pourquoi? :ref:`Voir la raison <database-concepts-5>`"
-
-#: ../../docs/training_manual/database_concepts/data_model.rst:365
+#: ../../docs/training_manual/database_concepts/data_model.rst:398
 msgid ""
 "If you used the same :kbd:`drop table` command on the `people` table, it "
 "would be successful:"
@@ -410,7 +392,7 @@ msgstr ""
 "Si vous avez utilisé la même commande :kbd:`drop table` sur la table "
 "`people`, elle devrait avoir réussi:"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:373
+#: ../../docs/training_manual/database_concepts/data_model.rst:406
 msgid ""
 "If you actually did enter that command and dropped the :kbd:`people` table, "
 "now would be a good time to rebuild it, as you will need it in the next "
@@ -420,11 +402,11 @@ msgstr ""
 "sera bon de la recréer car vous en aurez besoin pour les prochains "
 "exercices."
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:378
+#: ../../docs/training_manual/database_concepts/data_model.rst:411
 msgid "A word on pgAdmin III"
 msgstr "Un mot sur pgAdmin III"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:380
+#: ../../docs/training_manual/database_concepts/data_model.rst:413
 msgid ""
 "We are showing you the SQL commands from the `psql` prompt because it's a "
 "very useful way to learn about databases. However, there are quicker and "
@@ -438,19 +420,19 @@ msgstr ""
 "Installez pgAdmin III et vous pourrez créer, supprimer, modifier les tables "
 "en cliquant dans une interface graphique."
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:385
+#: ../../docs/training_manual/database_concepts/data_model.rst:418
 msgid "Under Ubuntu, you can install it like this:"
 msgstr "Sous Ubuntu, vous pouvez l'installer comme suit:"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:391
+#: ../../docs/training_manual/database_concepts/data_model.rst:424
 msgid "pgAdmin III will be covered in more detail in another module."
 msgstr "PgAdmin III sera détaillé dans un prochain module."
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:394
+#: ../../docs/training_manual/database_concepts/data_model.rst:427
 msgid "|IC|"
 msgstr "|IC|"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:396
+#: ../../docs/training_manual/database_concepts/data_model.rst:429
 msgid ""
 "You have now seen how to create a brand new database, starting completely "
 "from scratch."
@@ -458,11 +440,11 @@ msgstr ""
 "Vous avez étudié comment créer une nouvelle base de données à partir de "
 "rien."
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:400
+#: ../../docs/training_manual/database_concepts/data_model.rst:433
 msgid "|WN|"
 msgstr "|WN|"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:402
+#: ../../docs/training_manual/database_concepts/data_model.rst:435
 msgid "Next you'll learn how to use the DBMS to add new data."
 msgstr ""
 "Dans le prochain chapitre, nous allons étudier comment utiliser une base de "
