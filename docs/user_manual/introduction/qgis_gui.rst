@@ -2650,7 +2650,7 @@ given:
 * a :guilabel:`Shadow map resolution`: to make shadows look sharper.
   It may result in less performance if the resolution parameter is too high.
 
-Camera tools
+Camera & Skybox
 ...............
 
 In this tab, you can control different parameters like camera, 3D axis, navigation
