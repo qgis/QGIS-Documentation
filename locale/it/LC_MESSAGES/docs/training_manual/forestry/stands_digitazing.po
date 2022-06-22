@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2022
 # Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2022
+# Simone Falceri, 2022
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-16 07:30+0000\n"
 "PO-Revision-Date: 2022-03-14 05:16+0000\n"
-"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2022\n"
+"Last-Translator: Simone Falceri, 2022\n"
 "Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -448,14 +449,549 @@ msgstr ""
 "digitalizzare la metà dei popolamenti forestali rimasti tra le strade "
 "principali (ampie linee rosa) e il lago:"
 
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:158
+msgid "Go to the :kbd:`digitizing` folder using your file manager browser."
+msgstr ""
+"Vai alla cartella :kbd:`digitizing` utilizzando il tuo browser file manager."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:159
+msgid "Drag and drop the :kbd:`forest_stands.shp` vector file to your map."
+msgstr ""
+"Seleziona e rilascia il file vettoriale :kbd:`forest_stands.shp` sulla tua "
+"mappa."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:161
+msgid ""
+"Change the new layer's symbology so that it will be easier to see what "
+"polygons have already been digitized:"
+msgstr ""
+"Modifica la simbologia del nuovo layer in modo che sia più facile vedere "
+"quali poligoni sono già stati digitalizzati:"
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:164
+msgid "The filling of the polygon to green."
+msgstr "Il riempimento del poligono in verde."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:165
+msgid "The polygons' borders to 1 mm."
+msgstr "I bordi dei poligoni a 1 mm."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:166
+msgid "and set the transparency to 50%."
+msgstr "e imposta la trasparenza al 50%."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:168
+msgid ""
+"Now, if you remember past modules, we have to set up and activate the "
+"snapping options:"
+msgstr ""
+"Ora, se ti ricordi i moduli precedenti, dobbiamo impostare e attivare le "
+"opzioni di aggancio:"
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:170
+msgid "Go to :menuselection:`Project --> Snapping options...`."
+msgstr "Vai a :menuselection:`Progetto --> Opzioni di Aggancio...`."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:171
+msgid ""
+"Activate the snapping for the :kbd:`green_centroids` and the "
+":kbd:`forest_stands` layers."
+msgstr ""
+"Attiva l'aggancio per i layer :kbd:`green_centroids` e :kbd:`forest_stands`."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:172
+msgid "Set their :guilabel:`Tolerance` to 5 map units."
+msgstr "Imposta la loro :guilabel:`Tolleranza` a 5 unità di mappa."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:173
+msgid ""
+"Check the :guilabel:`Avoid Int.` box for the :kbd:`forest_stands` layer."
+msgstr ""
+"Seleziona la casella :guilabel:`Evita Intersezioni` per il layer "
+":kbd:`forest_stands`."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:174
+msgid "Check :guilabel:`Enable topological editing`."
+msgstr "Seleziona :guilabel:`Abilita la modifica topologica`."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:175
+msgid "Click :guilabel:`Apply`."
+msgstr "Fai clic su :guilabel:`Apply`."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:180
+msgid ""
+"With these snapping settings, whenever you are digitizing and get close "
+"enough to one of the points in the centroids layer or any vertex of your "
+"digitized polygons, a pink cross will appear on the point that will be "
+"snapped to."
+msgstr ""
+"Con queste impostazioni di aggancio, ogni volta che esegui la "
+"digitalizzazione e ti avvicini a uno dei punti del layer dei centroidi o a "
+"un qualsiasi vertice dei poligoni digitalizzati, apparirà una croce rosa sul"
+" punto a cui verrà agganciato."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:184
+msgid ""
+"Finally, turn off the visibility of all the layers except "
+":kbd:`forest_stands` and :kbd:`rautjarvi_georef`. Make sure that the map "
+"image has not transparency any more."
+msgstr ""
+"Infine, disattiva la visibilità di tutti i layer tranne :kbd:`forest_stands`"
+" e :kbd:`rautjarvi_georef`. Assicurati che l'immagine della mappa non abbia "
+"più trasparenza."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:187
+msgid "A couple of important things to note before you start digitizing:"
+msgstr ""
+"Un paio di cose importanti da notare prima che tu cominci a digitalizzare:"
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:189
+msgid "Don't try to be too accurate with the digitizing of the borders."
+msgstr ""
+"Non cercare di essere troppo preciso nella digitalizzazione dei bordi."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:190
+msgid ""
+"If a border is a straight line, digitize it with just two nodes. In general,"
+" digitize using as few nodes as possible."
+msgstr ""
+"Se un bordo è una linea retta, digitalizzalo con due soli nodi. In generale,"
+" digitalizza utilizzando il minor numero possibile di nodi."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:192
+msgid ""
+"Zoom in to close ranges only if you feel that you need to be accurate, for "
+"example, at some corners or when you want a polygon to connect with another "
+"polygon at a certain node."
+msgstr ""
+"Esegui lo zoom a distanze ravvicinate solo se ritieni necessario essere "
+"preciso, ad esempio in corrispondenza di alcuni angoli o quando vuoi che un "
+"poligono si colleghi a un altro poligono in corrispondenza di un determinato"
+" nodo."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:195
+msgid ""
+"Use the mouse's middle button to zoom in/out and to pan as you digitize."
+msgstr ""
+"Usa il tasto centrale del mouse per ingrandire/ridurre e per spostarti "
+"durante la digitalizzazione."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:196
+msgid "Digitize only one polygon at a time."
+msgstr "Digitalizza solo un poligono alla volta."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:197
+msgid ""
+"After digitizing one polygon, write the forest stand id that you can see "
+"from the map."
+msgstr ""
+"Dopo aver digitalizzato un poligono, scrivi l'id del popolamento forestale "
+"che puoi vedere dalla mappa."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:199
+msgid "Now you can start digitizing:"
+msgstr "Ora puoi iniziare la digitalizzazione:"
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:201
+msgid "Locate the forest stand number 357 in the map window."
+msgstr ""
+"Individua il numero 357 del popolamento forestale nella finestra della "
+"mappa."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:202
+msgid "Enable editing for the :kbd:`forest_stands.shp` layer."
+msgstr "Abilita la modifica del layer :kbd:`forest_stands.shp`."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:203
+msgid "Select the :guilabel:`Add feature` tool."
+msgstr "Seleziona lo strumento :guilabel:`Aggiungi elemento`."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:204
+msgid "Start digitizing the stand :kbd:`357` by connecting some of the dots."
+msgstr ""
+"Inizia a digitalizzare il popolamento forestale :kbd:`357` collegando tra "
+"loro alcuni punti."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:205
+msgid "Note the pink crosses indicating the snapping."
+msgstr "Nota le croci rosa che indicano l'aggancio. "
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:210
+msgid "When you are done, right click to end digitizing that polygon."
+msgstr ""
+"Al termine, fai clic con il pulsante destro del mouse per terminare la "
+"digitalizzazione del poligono."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:211
+msgid "Enter the forest stand :kbd:`id` (in this case 357)."
+msgstr "Inserisci il popolamento forestale :kbd:`id` (in questo caso 357)."
+
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:212
 msgid "Click :guilabel:`OK`."
 msgstr "Click :guilabel:`OK`."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:214
+msgid ""
+"If you were not prompted for the polygon :kbd:`id` when you finished "
+"digitizing it, go to :menuselection:`Settings --> Options --> Digitizing` "
+"and make sure that the :guilabel:`Suppress attribute form pop-up after "
+"feature creation` is not checked."
+msgstr ""
+"Se non ti è stato proposto il poligono :kbd:`id` quando hai finito di "
+"digitalizzarlo, vai a :menuselection:`Impostazioni --> Opzioni --> "
+"Digitalizzazione` e assicurati che l'opzione :guilabel:`Non aprire il modulo"
+" dopo la creazione di ogni geometria` non sia selezionata."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:218
+msgid "Your digitized polygon will look like this:"
+msgstr "Il tuo poligono digitalizzato si presenterà più o meno così:"
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:223
+msgid ""
+"Now for the second polygon, pick up the stand number 358. Make sure that the"
+" :guilabel:`Avoid int.` is checked for the :kbd:`forest_stands` layer. This "
+"option does not allow intersecting polygons at digitizing, so that if you "
+"digitize  over an existing polygon, the new polygon will be trimmed to meet "
+"the border of the already existing polygons. You can use this characteristic"
+" to automatically obtain a common border."
+msgstr ""
+"Ora, per il secondo poligono, prendi il popolamento forestale 358. "
+"Assicurati che l'opzione :guilabel:`Evita intersezioni` sia selezionata per "
+"il layer :kbd:`stand_forestali`. Questa opzione non consente di intersecare "
+"i poligoni durante la digitalizzazione, per cui se si digitalizza sopra un "
+"poligono esistente, il nuovo poligono verrà tagliato per incontrare il bordo"
+" dei poligoni già esistenti. È possibile utilizzare questa funzionalità per "
+"ottenere automaticamente un bordo comune."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:230
+msgid ""
+"Begin digitizing the stand 358 at one of the common corners with the stand "
+"357."
+msgstr ""
+"Inizia la digitalizzazione del popolamento 358 in uno degli angoli comuni "
+"con il popolamento 357."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:231
+msgid ""
+"Then continue normally until you get to the other common corner for both "
+"stands."
+msgstr ""
+"Quindi prosegui normalmente fino all'altro angolo comune a entrambi i "
+"popolamenti."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:232
+msgid ""
+"Finally, digitize a few points inside polygon 357 making sure that the "
+"common border is not intersected. See left image below."
+msgstr ""
+"Infine, digitalizza alcuni punti all'interno del poligono 357 assicurandoti "
+"che il bordo comune non sia intersecato. Vedi l'immagine di sinistra qui "
+"sotto."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:234
+msgid "Right click to finish editing the forest stand 358."
+msgstr ""
+"Fai clic con il pulsante destro del mouse per terminare la modifica del "
+"popolamento forestale 358."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:235
+msgid "Enter the :kbd:`id` as 358."
+msgstr "Inserisci il valore 358 come :kbd:`id`."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:236
+msgid ""
+"Click :guilabel:`OK`, your new polygon should show a common border with the "
+"stand 357 as you can see in the image on the right."
+msgstr ""
+"Fai clic su :guilabel:`OK`, il nuovo poligono dovrebbe mostrare un bordo "
+"comune con il popolamento forestale 357, come si puoi vedere nell'immagine a"
+" destra."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:242
+msgid ""
+"The part of the polygon that was overlapping the existing polygon has been "
+"automatically trimmed out and you are left with a common border, as you "
+"intended it to be."
+msgstr ""
+"La parte del poligono che si sovrapponeva al poligono esistente è stata "
+"automaticamente eliminata e rimane un bordo comune, come previsto."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:248
+msgid "|basic| |TY| Finish Digitizing the Forest Stands"
+msgstr "|basic| |TY| Terminare la digitalizzazione dei popolamenti forestali"
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:250
+msgid ""
+"Now you have two forest stands ready. And a good idea on how to proceed. "
+"Continue digitizing on your own until you have digitized all the forest "
+"stands that are limited by the main road and the lake."
+msgstr ""
+"Ora hai due popolamenti forestali pronti. E una buona base di partenza su "
+"come procedere. Continua a digitalizzare da solo fino a quando non avrai "
+"digitalizzato tutti i popolamenti forestali limitati dalla strada principale"
+" e dal lago."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:254
+msgid ""
+"It might look like a lot of work, but you will soon get used to digitizing "
+"the forest stands. It should take you about 15 minutes."
+msgstr ""
+"Potrebbe sembrare un lavoro impegnativo, ma presto ti impratichirai con la "
+"digitalizzazione dei popolamenti forestali. Dovresti impiegare circa 15 "
+"minuti."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:257
+msgid ""
+"During the digitizing you might need to edit or delete nodes, split or merge"
+" polygons. You learned about the necessary tools in "
+":doc:`../create_vector_data/topo_editing`, now is probably a good moment to "
+"go read about them again."
+msgstr ""
+"Durante la digitalizzazione potrebbe potresti avere la necssità di "
+"modificare o eliminare nodi, dividere o unire poligoni. Gli strumenti "
+"necessari sono stati illustrati in "
+":doc:`../create_vector_data/topo_editing`, ora è probabilmente un buon "
+"momento per rileggerli."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:261
+msgid ""
+"Remember that having :guilabel:`Enable topological editing` activated, "
+"allows you to move nodes common to two polygons so that the common border is"
+" edited at the same time for both polygons."
+msgstr ""
+"Ricordati che l'attivazione di :guilabel:`Abilita la modifica topologica` "
+"consente di spostare i nodi comuni a due poligoni in modo che il bordo "
+"comune venga modificato contemporaneamente per entrambi i poligoni."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:265
+msgid "Your result will look like this:"
+msgstr "Il tuo risultato apparirà simile a questo:"
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:271
+msgid "|basic| |FA| Joining the Forest Stand Data"
+msgstr "|basic| |FA| Unire i dati dei popolamenti forestali"
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:273
+msgid ""
+"It is possible that the forest inventory data you have for you map is also "
+"written in paper. In that case, you would have to first write that data to a"
+" text file or a spreadsheet. For this exercise, the information from the "
+"inventory for 1994 (the same inventory as the map) is ready as a comma "
+"separated text (csv) file."
+msgstr ""
+"È possibile che i dati dell'inventario forestale in tuo possesso per la tua "
+"mappa siano anche in formato cartaceo. In questo caso, dovrai prima "
+"riportare i dati in un file di testo o in un foglio di calcolo. Per questo "
+"esercizio, le informazioni dell'inventario del 1994 (lo stesso inventario "
+"della mappa) sono pronte in un file di testo separato da virgole (csv)."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:278
+msgid ""
+"Open the :kbd:`rautjarvi_1994.csv` file from the "
+":kbd:`exercise_data\\\\forestry` directory in a text editor and note that "
+"the inventory data file has an attribute called :kbd:`ID` that has the "
+"numbers of the forest stands. Those numbers are the same as the forest "
+"stands ids you have entered for your polygons and can be used to link the "
+"data from the text file to your vector file. You can see the metadata for "
+"this inventory data in the file :kbd:`rautjarvi_1994_legend.txt` in the same"
+" folder."
+msgstr ""
+"Apri il file :kbd:`rautjarvi_1994.csv` dalla cartella "
+":kbd:`exercise_data\\\\forestry` in un editor di testo e nota che il file "
+"dei dati dell'inventario ha un attributo chiamato :kbd:`ID` che contiene i "
+"numeri dei popolamenti forestali. Questi numeri corrispondono agli id dei "
+"popolamenti forestali inseriti per i poligoni e possono essere usati per "
+"collegare i dati dal file di testo al file vettoriale. I metadati di questo "
+"inventario sono riportati nel file :kbd:`rautjarvi_1994_legend.txt` nella "
+"stessa cartella."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:286
+msgid ""
+"Open the :kbd:`.csv` in QGIS with the :menuselection:`Layer --> Add "
+"Delimited Text Layer...` tool. In the dialog, set it as follows:"
+msgstr ""
+"Apri il file :kbd:`.csv` in QGIS con lo strumento :menuselection:`Layer --> "
+"Aggiungi layer testo delimitato...`. Nella finestra di dialogo, imposta il "
+"testo come segue:"
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:292
+msgid "To add the data from the :kbd:`.csv` file:"
+msgstr "Per aggiungere i dati dal file :kbd:`.csv`:"
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:294
+msgid "Open the Layer Properties for the :kbd:`forest_stands` layer."
+msgstr "Apri le Proprietà del Layer :kbd:`forest_stands`."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:295
+msgid "Go to the :guilabel:`Joins` tab."
+msgstr "Vai alla scheda :guilabel:`Join`."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:296
+msgid "Click the plus sign on the bottom of the dialog box."
+msgstr "Fai clic sul segno più in fondo alla finestra di dialogo."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:297
+msgid ""
+"Select :kbd:`rautjarvi_1994.csv` as the :guilabel:`Join layer` and :kbd:`ID`"
+" as the :guilabel:`Join` field."
+msgstr ""
+"Seleziona :kbd:`rautjarvi_1994.csv` come :guilabel:`Vettore di join` e "
+":kbd:`ID` come :guilabel:`Campo unione`."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:299
+msgid "Make sure that the :guilabel:`Target` field is also set to :kbd:`id`."
+msgstr ""
+"Assicurati che anche il :guilabel:`Campo destinazione` sia impostato su "
+":kbd:`id`."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:300
+msgid "Click :guilabel:`OK` two times."
+msgstr "Fai clic su :guilabel:`OK` due volte."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:302
+msgid ""
+"The data from the text file should be now linked to your vector file. To see"
+" what has happened, open the attribute table for the :kbd:`forest_stands` "
+"layer. You can see that all the attributes from the inventory data file are "
+"now linked to your digitized vector layer."
+msgstr ""
+"I dati del file di testo dovrebbero ora essere collegati al file vettoriale."
+" Per vedere cosa è successo, apri la tabella degli attributi per il layer "
+":kbd:`forest_stands`. Puoi notare che tutti gli attributi del file di dati "
+"dell'inventario sono ora collegati al layer vettoriale digitalizzato."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:308
+msgid "|basic| |TY| Renaming Attribute Names and Adding Area and Perimeter"
+msgstr ""
+"|basic| |TY| Rinominare i nomi degli attributi e aggiungere area e perimetro"
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:310
+msgid ""
+"The data from the :kbd:`.csv` file is just linked to your vector file. To "
+"make this link permanent, so that the data is actually recorded to the "
+"vector file you need to save the :kbd:`forest_stands` layer as a new vector "
+"file. Close the attribute table and right click the forest_stands layer to "
+"save it as :kbd:`forest_stands_1994.shp`."
+msgstr ""
+"I dati del file :kbd:`.csv` sono solo collegati al file vettoriale. Per "
+"rendere questo collegamento permanente, in modo che i dati siano "
+"effettivamente registrati nel file vettoriale, devi salvare il layer "
+":kbd:`forest_stands` come nuovo file vettoriale. Chiudi la tabella degli "
+"attributi e fai clic con il pulsante destro del mouse sul layer "
+"forest_stands per salvarlo come :kbd:`forest_stands_1994.shp`."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:316
+msgid ""
+"Open your new :kbd:`forest_stands_1994.shp` in your map if you did not added"
+" yet. Then open the attribute table. You notice that the names of the "
+"columns that you just added are no very useful. To solve this:"
+msgstr ""
+"Apri il nuovo :kbd:`forest_stands_1994.shp` nella tua mappa, se non lo hai "
+"ancora aggiunto. Quindi apri la tabella degli attributi. Nota che i nomi "
+"delle colonne appena aggiunte non sono molto utili. Per risolvere questo "
+"problema:"
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:320
+msgid ""
+"Add the plugin :guilabel:`Table Manager` as you have done with other plugins"
+" before."
+msgstr ""
+"Aggiungi il plugin :guilabel:`Table Manager` come già fatto con altri "
+"plugin."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:321
+msgid "Make sure the plugin is activated."
+msgstr "Assicurati che il plugin sia attivato."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:322
+msgid "In the TOC select the layer :kbd:`forest_stands_1994.shp`."
+msgstr "Nella legenda seleziona il layer :kbd:`forest_stands_1994.shp`."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:323
+msgid ""
+"Then, go to :menuselection:`Vector --> Table Manager --> Table manager`."
+msgstr ""
+"Quindi, vai a :menuselection:`Vettore --> Table Manager --> Table manager`."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:324
+msgid ""
+"Use the dialogue box to edit the names of the columns to match the ones in "
+"the :kbd:`.csv` file."
+msgstr ""
+"Utilizza la finestra di dialogo per modificare i nomi delle colonne in modo "
+"che corrispondano a quelli del file :kbd:`.csv`."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:329
+msgid "Click on :guilabel:`Save`."
+msgstr "Fai clic su :guilabel:`Salva`."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:330
+msgid "Select :guilabel:`Yes` to keep the layer style."
+msgstr "Seleziona :guilabel:`Sì` per mantenere lo stile del layer."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:331
+msgid "Close the :guilabel:`Table Manager` dialogue."
+msgstr "Chiudi la finestra di dialogo :guilabel:`Table Manager`"
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:333
+msgid ""
+"To finish gathering the information related to these forest stands, you "
+"might calculate the area and the perimeter of the stands. You calculated "
+"areas for polygons in :doc:`../complete_analysis/analysis_exercise`. Go back"
+" to that lesson if you need to and calculate the areas for the forest "
+"stands, name the new attribute :kbd:`Area` and make sure that the values "
+"calculated are in hectares."
+msgstr ""
+"Per completare la raccolta delle informazioni relative a questi popolamenti "
+"forestali, potresti calcolare l'area e il perimetro dei popolamenti. Le aree"
+" dei poligoni sono state calcolate in "
+":doc:`../complete_analysis/analysis_exercise`. Se necessario, torna a quella"
+" lezione e calcola le aree dei popolamenti forestali, dando un nome al nuovo"
+" attributo :kbd:`Area` e assicurandoti che i valori calcolati siano in "
+"ettari."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:339
+msgid ""
+"Now your :kbd:`forest_stands_1994.shp` layer is ready and packed with all "
+"the available information."
+msgstr ""
+"Ora il layer :kbd:`forest_stands_1994.shp` è pronto e contiene tutte le "
+"informazioni disponibili."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:342
+msgid ""
+"Save your project to keep the current map presentation in case you need to "
+"come back later to it."
+msgstr ""
+"Salva il tuo progetto per conservare la configurazione della mappa corrente,"
+" nel caso in cui avessi bisogno di tornarci sopra in un secondo momento."
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:346
 msgid "|IC|"
 msgstr "|IC|"
 
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:348
+msgid ""
+"It has taken a few clicks of the mouse but you now have your old inventory "
+"data in digital format and ready for use in QGIS."
+msgstr ""
+"Sono bastati pochi clic del mouse per avere i dati del vecchio inventario in"
+" formato digitale e pronti per essere utilizzati in QGIS."
+
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:352
 msgid "|WN|"
 msgstr "|WN|"
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:354
+msgid ""
+"You could start doing different analysis with your brand new dataset, but "
+"you might be more interested in performing analysis in a dataset more up to "
+"date. The topic of the next lesson will be the creation of forest stands "
+"using current aerial photos and the addition of some relevant information to"
+" your dataset."
+msgstr ""
+"Potresti iniziare a fare diverse analisi con il tuo insieme di dati nuovo di"
+" zecca, ma potresti essere più interessato a eseguire analisi in un insieme "
+"di dati più aggiornato. L'argomento della prossima lezione sarà la creazione"
+" di popolamenti forestali utilizzando le foto aeree attuali e l'aggiunta di "
+"alcune informazioni rilevanti al tuo insieme di dati."
