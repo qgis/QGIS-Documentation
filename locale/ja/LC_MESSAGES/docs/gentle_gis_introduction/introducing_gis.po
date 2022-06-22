@@ -2,19 +2,20 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2022
+# Miyoshi Tomoya, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 10:22+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:07+0000\n"
+"Last-Translator: Miyoshi Tomoya, 2022\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,6 +31,10 @@ msgstr "GIS入門"
 #: ../../docs/gentle_gis_introduction/introducing_gis.rst:7
 msgid "|gentleLogo|"
 msgstr "|gentleLogo|"
+
+#: ../../docs/gentle_gis_introduction/introducing_gis.rst:363
+msgid "gentleLogo"
+msgstr "gentleLogo"
 
 #: ../../docs/gentle_gis_introduction/introducing_gis.rst:7
 msgid "Objectives:"
@@ -295,6 +300,20 @@ msgstr ""
 msgid "What is GIS Software / a GIS Application?"
 msgstr "GIS ソフトウェア / アプリケーションとは何か?"
 
+#: ../../docs/gentle_gis_introduction/introducing_gis.rst:90
+msgid ""
+"You can see an example of what a **GIS Application** looks like "
+":numref:`figure_gis_application`. GIS Applications are normally programs "
+"with a graphical user interface that can be manipulated using the mouse and "
+"keyboard. The application provides **menus** near to the top of the window "
+"(File, Edit etc.) which, when clicked using the mouse, show a panel of "
+"**actions**. These actions provide a way for you to tell the GIS Application"
+" what you want to do. For example you may use the menus to tell the GIS "
+"Application to add a new layer to the display output."
+msgstr ""
+"**GISアプリケーション**がどのようなものか、例を見ることができます :numref:`figure_gis_application`. "
+"GISアプリケーションは通常、マウスとキーボードを使用して操作できるグラフィカル・ユーザー・インターフェイスを備えたプログラムです。アプリケーションには、ウィンドウの上部付近に**メニュー**（ファイル、編集など）があり、マウスでクリックすると、**アクション**のパネルが表示されます。これらのアクションは、GISアプリケーションに何をしたいかを伝える方法を提供します。例えば、メニューを使ってGISアプリケーションに新しいレイヤを表示出力に追加するように指示することができます。"
+
 #: ../../docs/gentle_gis_introduction/introducing_gis.rst:102
 msgid ""
 "Application menus, when clicked with the mouse, expand to show a list of "
@@ -328,6 +347,23 @@ msgstr ""
 "の表示があります。地図レイヤはディスク上のファイルやデータベースのレコードとして保存します。通常、それぞれの地図レイヤは現実世界の様々なものを表しています。"
 " –-- 道路レイヤの場合は道路ネットワークを表します。"
 
+#: ../../docs/gentle_gis_introduction/introducing_gis.rst:121
+msgid ""
+"When you open a layer in the GIS Application it will appear in the **map "
+"view**. The map view shows a graphic representing your layer. When you add "
+"more than one layer to a map view, the layers are overlaid on top of each "
+"other. Look at figures :numref:`figure_map_view_towns`, "
+":numref:`figure_map_view_schools`, :numref:`figure_map_view_railways` and "
+":numref:`figure_map_view_rivers` to see a map view that has several layers "
+"being added to it. An important function of the map view is to allow you to "
+"zoom in to magnify, zoom out to see a greater area and move around (panning)"
+" in the map."
+msgstr ""
+"GISアプリケーションでレイヤを開くと、**地図ビュー**に表示されます。地図ビューには、レイヤを表すグラフィックが表示されます。地図ビューに複数のレイヤを追加すると、レイヤは互いに重なり合って表示されます。numref:`figure_map_view_towns`、"
+" :numref:`figure_map_view_schools` 、 :numref:`figure_map_view_railways` 、 "
+":numref:`figure_map_view_rivers` "
+"を見て、いくつかのレイヤが追加されている地図ビューを見てみてください。地図ビューの重要な機能は、拡大して大きくしたり、縮小してより広い範囲を見たり、地図内を移動（パン）したりすることができることです。"
+
 #: ../../docs/gentle_gis_introduction/introducing_gis.rst:136
 msgid ""
 "A map view with several layers being added to it. A towns layer added to the"
@@ -352,11 +388,43 @@ msgid ""
 "the map view"
 msgstr "複数のレイヤが読み込まれた地図ビュー。河川レイヤが地図ビューに追加されている"
 
+#: ../../docs/gentle_gis_introduction/introducing_gis.rst:167
+msgid ""
+"Another common feature of GIS Applications is the **map legend**. The map "
+"legend provides a list of layers that have been loaded in the GIS "
+"Application. Unlike a paper map legend, the map legend or 'layers list' in "
+"the GIS Application provides a way to re-order, hide, show and group layers."
+" Changing the layer order is done by clicking on a layer in the legend, "
+"holding the mouse button down and then dragging the layer to a new position."
+" In figures :numref:`figure_map_legend_before` and "
+":numref:`figure_map_legend_after` the map legend is shown as the area to the"
+" left of the GIS Application window. By changing the layer order, the way "
+"that layers are drawn can be adjusted –-- in this case so that rivers are "
+"drawn below the roads instead of over them."
+msgstr ""
+"GISアプリケーションのもう一つの一般的な機能は、**マップ凡例**です。マップ凡例は、GIS "
+"アプリケーションに読み込まれたレイヤーのリストを提供します。紙の地図の凡例とは異なり、GIS "
+"アプリケーションのマップ凡例または「レイヤリスト」は、レイヤの順序変更、非表示、表示、およびグループ化を行う方法を提供します。レイヤの順序を変更するには、凡例内のレイヤをクリックし、マウスボタンを押したまま、レイヤを新しい位置までドラッグしてください。図"
+" :numref:`figure_map_legend_before` と :numref:`figure_map_legend_after` "
+"では、マップ凡例はGISアプリケーションウィンドウの左側の領域として表示されています。レイヤの順番を変更することで、レイヤの描画方法を調整することができます。この場合、河川は道路の上にではなく、その下に描画されるようになります。"
+
 #: ../../docs/gentle_gis_introduction/introducing_gis.rst:184
 msgid ""
 "GIS Software let you easily change symbology --- the way information is "
 "displayed."
 msgstr "GISソフトウェアにより簡単にシンボル変更ができます --- 道路情報の表示."
+
+#: ../../docs/gentle_gis_introduction/introducing_gis.rst:193
+msgid ""
+"Changing the layer order allows to adjust the way that layers are drawn. "
+"Before changing the layer order, rivers are drawn on top of roads"
+msgstr "レイヤの順番を変更することで、レイヤの描画方法を調整することができます。レイヤの順番を変更する前は、河川が道路の上に描画される"
+
+#: ../../docs/gentle_gis_introduction/introducing_gis.rst:202
+msgid ""
+"Changing the layer order allows to adjust the way that layers are drawn. "
+"After changing the layer order, rivers are drawn underneath roads"
+msgstr "レイヤの順番を変更することで、レイヤの描画方法を調整することができます。レイヤの順番を変更すると、河川が道路の下に描画される"
 
 #: ../../docs/gentle_gis_introduction/introducing_gis.rst:207
 msgid "Getting a GIS Application for your own computer(s)"
@@ -420,11 +488,39 @@ msgstr ""
 "GISアプリケーションでは可能です.例えばこの例での医療従事者の方たちは患者の年齢や性別といったデータを表データとして持っており, "
 "GISアプリケーションを使うことで性別や症例などにもとづいて表示を切り替えることができます.つまりGISアプリケーションで地理情報以外のデータを地理情報と関連付けることで様々な可視化をすることができます."
 
+#: ../../docs/gentle_gis_introduction/introducing_gis.rst:247
+msgid ""
+"GIS Systems work with many different types of data. **Vector data** is "
+"stored as a series of ``X, Y`` coordinate pairs inside the computer's "
+"memory. Vector data is used to represent points, lines and areas. "
+"Illustration :numref:`figure_vector_data` shows different types of vector "
+"data being viewed in a GIS application. In the tutorials that follow we will"
+" be exploring vector data in more detail."
+msgstr ""
+"GISシステムでは、さまざまな種類のデータを扱うことができます。**ベクターデータ**は、コンピュータのメモリ内にX、Yの座標ペアとして格納されています。ベクターデータは、点、線、面を表現するために使用されます。イラスト"
+" :numref:`figure_vector_data` "
+"はGISアプリケーションで表示される様々なタイプのベクターデータを表しています。この後のチュートリアルでは、ベクターデータについてより詳しく説明します。"
+
 #: ../../docs/gentle_gis_introduction/introducing_gis.rst:259
 msgid ""
 "Vector data is used to represent points (e.g. towns), lines (e.g. rivers) "
 "and polygons (e.g. municipal boundaries)."
 msgstr "ベクターデータによる点 (町など) , 線 (河川など) , エリア (行政区) などの表示"
+
+#: ../../docs/gentle_gis_introduction/introducing_gis.rst:262
+msgid ""
+"**Raster data** are stored as a grid of values. There are many satellites "
+"circling the earth and the photographs they take are a kind of raster data "
+"that can be viewed in a GIS. One important difference between raster and "
+"vector data is that if you zoom in too much on a raster image, it will start"
+" to appear 'blocky' (see illustrations :numref:`figure_raster_data` and "
+":numref:`figure_raster_data_zoom`). In fact these blocks are the individual "
+"cells of the data grid that makes up the raster image. We will be looking at"
+" raster data in greater detail in later tutorials."
+msgstr ""
+"**ラスターデータ**は、格子状の数値として保存されています。地球を周回する多くの人工衛星が撮影した写真は、GISで見ることのできるラスターデータの一種です。ラスターデータとベクターデータの重要な違いの一つは、ラスター画像を拡大しすぎると「ブロック状」に見えてしまうことです（図"
+" :numref:`figure_raster_data` および :numref:`figure_raster_data_zoom` "
+"を参照）。実際には、これらのブロックは、ラスター画像を構成するデータグリッドの個々のセルです。ラスターデータについては、後のチュートリアルでさらに詳しく見ていく予定です。"
 
 #: ../../docs/gentle_gis_introduction/introducing_gis.rst:276
 msgid ""
@@ -436,7 +532,7 @@ msgstr "衛星画像のラスターデータ.こちらは東ケープの山岳�
 msgid ""
 "The same raster data, but this time zoomed in. The grid nature of the data "
 "can be seen."
-msgstr "同じラスターデータを拡大したもの.グリッドの性質を示す."
+msgstr "同じラスターデータを拡大したもの。データのグリッドの性質が判ります。"
 
 #: ../../docs/gentle_gis_introduction/introducing_gis.rst:289
 msgid "What have we learned?"
