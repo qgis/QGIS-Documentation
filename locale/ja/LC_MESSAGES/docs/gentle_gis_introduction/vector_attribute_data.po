@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2022
+# fairtommy <fairtommy@gmail.com>, 2022
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-18 02:36+0000\n"
 "PO-Revision-Date: 2022-03-14 05:11+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2022\n"
+"Last-Translator: fairtommy <fairtommy@gmail.com>, 2022\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,6 +31,10 @@ msgstr "ベクター属性データ"
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:8
 msgid "|gentleLogo|"
 msgstr "|gentleLogo|"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:515
+msgid "gentleLogo"
+msgstr "gentleLogo"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:8
 msgid "Objectives:"
@@ -53,6 +58,16 @@ msgstr "属性, データベース, フィールド, データ, ベクター, �
 msgid "Overview"
 msgstr "概要"
 
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:16
+msgid ""
+"If every line on a map was the same colour, width, thickness, and had the "
+"same label, it would be very hard to make out what was going on. The map "
+"would also give us very little information. Take a look at "
+":numref:`figure_map_attributes` for example."
+msgstr ""
+"地図上のすべての線が同じ色、幅、太さで、同じラベルが付いていたら、何が起こっているのかを理解するのは非常に困難です。またその地図は私達にほとんど情報を与えないでしょう。たとえば"
+" :numref:`figure_map_attributes` を見てください。"
+
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:26
 msgid ""
 "Maps come to life when colour and different symbols are used to help you to "
@@ -62,11 +77,37 @@ msgid ""
 msgstr ""
 "地図は、異なる地物を区別できるように異なる色やシンボルが使用されていると見やすくなります。左の地図で河川、道路、等高線を区別はできるでしょうか？右の地図の場合はそれが簡単にできます。"
 
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:31
+msgid ""
+"In this topic we will look at how attribute data can help us to make "
+"interesting and informative maps. In the previous topic on vector data, we "
+"briefly explained that **attribute data** are used to **describe vector "
+"features**. Take a look at the house pictures in :numref:`figure_house`."
+msgstr ""
+"このトピックでは、興味深く有益な地図を作成するために属性データがどのように役立つかを見ていきます。ベクタデータに関する前のトピックでは "
+"**属性データ** が **ベクタ地物** を説明するために使用されることを簡単に説明しました。 :numref:`figure_house` "
+"の家の写真を見てください。"
+
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:42
 msgid ""
 "Every feature has characteristics that we can describe. These can be visible"
 " things, or things we know about the feature (e.g. year built)."
 msgstr "すべての地物は記述可能な特徴を持っています。それらは目に見える特徴もあれば、私たちが知ることのできる情報（例. 建築年）もあります。"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:45
+msgid ""
+"The geometry of these house features is a polygon (based on the floor plan "
+"of the house), the attributes we have recorded are roof colour, whether "
+"there is a balcony, and the year the house was built. Note that attributes "
+"don't have to be visible things --– they can describe things we know about "
+"the feature such as the year it was built. In a GIS Application, we can "
+"represent this feature type in a houses polygon layer, and the attributes in"
+" an attribute table (see :numref:`figure_house_gis`)."
+msgstr ""
+"これらの家の地物の形状はポリゴン（家の間取り図に基づく）であり、記録した属性は屋根の色、バルコニーがあるかどうか、家が建てられた年です。属性は目に見えるものである必要はないことに注意してください"
+"---それらは、地物が構築された年など、地物について私たちが知っていることを説明できます。 "
+"GISアプリケーションでは、この地物タイプを家のポリゴンレイヤーで表し、属性を属性テーブルで表すことができます（ "
+":numref:`figure_house_gis` 参照）。"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:58
 msgid ""
@@ -78,6 +119,18 @@ msgstr ""
 "家のレイヤー。 家の地物には、屋根の色等の属性やその他属性情報が記述されています。 属性テーブル "
 "(下図)には、地図上に示された家エリアの属性のリストが示されています。 "
 "地物がテーブルの中で強調表示されているときは、地図上では黄色のポリゴンとして見えるでしょう。"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:63
+msgid ""
+"The fact that features have attributes as well geometry in a GIS Application"
+" opens up many possibilities. For example we can use the attribute values to"
+" tell the GIS what colours and style to use when drawing features (see "
+":numref:`figure_style_by_attribute`). The process of setting colours and "
+"drawing styles is often referred to as setting feature **symbology**."
+msgstr ""
+"GISアプリケーションにおいて地物にはジオメトリだけでなく属性もあるという事実は、多くの可能性を開きます。たとえば、属性値を使用して、地物描画するときに使用する色とスタイルをGISに指示できます（"
+" :numref:`figure_style_by_attribute` 参照）。色や描画スタイルを設定する手順は、よく地物の **シンボロジー** "
+"を設定するといわれます。"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:75
 msgid ""
@@ -96,6 +149,18 @@ msgid ""
 msgstr ""
 "属性データはまた **地図ラベル** "
 "を作成する場合にも役立ちます。ほとんどのGISアプリケーションには、各地物にラベルを付けるために使用する属性を選択する機能があるでしょう。"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:84
+msgid ""
+"If you have ever **searched a map** for a place name or a specific feature, "
+"you will know how time consuming it can be. Having attribute data can make "
+"searching for a specific feature quick and easy. In "
+":numref:`figure_search_by_attribute` you can see an example of an attribute "
+"search in a GIS."
+msgstr ""
+"地名や特定の地物を "
+"**地図で検索** したことがある人なら、それがどれほど時間がかかるものかわかるでしょう。属性データがあれば、特定の地物をすばやく簡単に検索できます。 "
+":numref:`figure_search_by_attribute` には、GISでの属性検索の例があります。"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:95
 msgid ""
@@ -127,6 +192,18 @@ msgid ""
 "Before we move on to attribute data in more detail, let's take a quick "
 "recap."
 msgstr "属性データの詳細に移る前に、簡単にまとめてみましょう。"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:112
+msgid ""
+"Features are real world things such as roads, property boundaries, "
+"electrical substation sites and so on. A **feature** has a **geometry** "
+"(which determines if it is a **point**, **polyline** or **polygon**) and "
+"**attributes** (which describe the feature). This is shown in "
+":numref:`figure_features_at_glance`."
+msgstr ""
+"地物は、道路、敷地境界、変電所サイトなどの現実世界のものです。 **地物** には **ジオメトリ** （ **ポイント** 、 **ポリライン** 、"
+" **ポリゴン** のいずれであるかを決定します）と **属性** （その地物を説明します）があります。これは "
+":numref:`figure_features_at_glance` に示されています。"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:123
 msgid "Vector features at a glance."
@@ -219,6 +296,17 @@ msgid ""
 "(in rows)."
 msgstr "家の属性表：属性テーブルはフィールド (列) とレコード (行) を持っています."
 
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:153
+msgid ""
+"Each field in the attribute table contains a specific type of data –-- text,"
+" numeric or date. Deciding what attributes to use for a feature requires "
+"some thought and planning. In our house example earlier on in this topic, we"
+" chose roof colour, presence of a balcony and month of construction as "
+"attributes of interest. We could just as easily have chosen other aspects of"
+" a house such as:"
+msgstr ""
+"属性テーブルの各フィールドには、特定のタイプのデータ（テキスト、数値、または日付）が含まれています。地物に使用する属性を決定するには、いくつかの検討と計画が必要です。このトピックの前半の家の例では、関心のある属性として、屋根の色、バルコニーの有無、および建設の月を選択しました。以下のような家の他の面を選択することもたやすくできたでしょう："
+
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:159
 msgid "number of levels"
 msgstr "階数"
@@ -282,6 +370,26 @@ msgstr ""
 " **段階** 、 **連続** や **ユニークな値** "
 "シンボルのいずれかを使用する必要があります。これらは、以下のセクションに詳細に記載されています。"
 
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:189
+msgid ""
+"A GIS application will normally allow you to set the symbology of a layer "
+"using a **dialog box** such as the one shown in in "
+":numref:`figure_single_symbol`. In this dialog box you can choose colours "
+"and symbol styles. Depending on the geometry type of a layer, different "
+"options may be shown. For example with point layers you can choose a "
+"**marker style**. With line and polygon layers there is no marker style "
+"option, but instead you can select a **line style** and **colour** such as "
+"dashed orange for gravel roads, solid orange for minor roads, and so on (as "
+"shown in :numref:`figure_single_symbol_poly`). With polygon layers you also "
+"have the option of setting a **fill style** and color."
+msgstr ""
+"GISアプリケーションでは、通常、 :numref:`figure_single_symbol` に示すような **ダイアログボックス** "
+"を使用してレイヤーのシンボルを設定できます。このダイアログボックスでは、色と記号のスタイルを選択できます。レイヤーのジオメトリタイプに応じて、さまざまなオプションが表示される場合があります。たとえば、ポイントレイヤーでは、"
+" **マーカースタイル** "
+"を選択できます。ラインレイヤーとポリゴンレイヤーでは、マーカースタイルのオプションはありませんが、代わりに、砂利道の場合は破線のオレンジ、非主要道路の場合は実線のオレンジなど、"
+" **ラインスタイル** と **色** を選択できます（図 :numref:`figure_single_symbol_poly` "
+"参照）。ポリゴンレイヤーでは、 **塗りつぶしスタイル** と色を設定するオプションもあります。"
+
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:205
 msgid ""
 "When using simple symbols, the feature is drawn without using an attribute "
@@ -324,6 +432,23 @@ msgstr ""
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:245
 msgid "Our map after setting graduated colours for our contours."
 msgstr "等高線にグラデーションカラーを設定した後の地図。"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:247
+msgid ""
+"Setting colours based on discrete groups of attribute values is called "
+"Graduated Symbology in QGIS. The process is shown in Illustrations "
+":numref:`figure_graduated_symbol` and :numref:`figure_graduated_symbol_map`."
+" **Graduated symbols** are most useful when you want to show clear "
+"differences between features with attribute values in different value "
+"ranges. The GIS Application will analyse the attribute data (e.g. height) "
+"and, based on the number of classes you request, create groupings for you. "
+"This process is illustrated in table_graduated_."
+msgstr ""
+"属性値の個別のグループに基づいて色を設定することは、QGISでは段階的シンボル体系と呼ばれます。このプロセスは、イラスト "
+":numref:`figure_graduated_symbol` および :numref:`figure_graduated_symbol_map` "
+"に示されています。 **段階的シンボル** は、異なる値の範囲の属性値を持つ地物間の明確な違いを示したい場合に最も役立ちます。 "
+"GISアプリケーションは、属性データ（高さなど）を分析し、要求したクラスの数に基づいて、グループ化を作成します。この手順は "
+"table_graduated_ に示されています。"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:258
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:295
@@ -398,6 +523,13 @@ msgstr "8"
 msgid "9"
 msgstr "9"
 
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:279
+msgid ""
+"Table Graduated: Graduated colour breaks up the attribute value ranges into "
+"the number of classes you select. Each class is represented by a different "
+"colour."
+msgstr "表の段階的：段階的な色は、属性値の範囲を選択したクラスの数に分割します。各クラスは異なる色で表されます。"
+
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:283
 msgid "Continuous Colour Symbols"
 msgstr "連続カラーシンボル"
@@ -428,6 +560,17 @@ msgid ""
 msgstr ""
 "表　連続：連続色シンボルは開始色（例えばここでは明橙色）および終了色（例えばここでは暗褐色）を使用し、それらの色の間で色調の系列を作成します。"
 
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:320
+msgid ""
+"Using the same contours example we used in the previous section, let's see "
+"how a map with continuous colour symbology is defined and looks. The process"
+" starts by setting the layers properties to continuous colour using a dialog"
+" like the one shown in :numref:`figure_continuous_symbol`."
+msgstr ""
+"前のセクションで使用したのと同じ等高線の例を使用して、連続した色の記号を使用した地図がどのように定義され、どのように見えるかを見てみましょう。このプロセスは、"
+" :numref:`figure_continuous_symbol` "
+"に示すようなダイアログを使用して、レイヤーのプロパティを連続色に設定することから始まります。"
+
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:331
 msgid ""
 "Setting up continuous colour symbology. The contour height attribute is used"
@@ -436,6 +579,21 @@ msgid ""
 "drawing the features based on their heights."
 msgstr ""
 "連続色のシンボルを設定します。等高線高さ属性は、色値を決定するために使用されます。色は、最小値と最大値のために定義されています。GISアプリケーションは、その高さに基づいて地物を描画するための色のグラデーションを作成します。"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:336
+msgid ""
+"After defining the minimum and maximum colours in the colour range, the "
+"colour features are drawn in will depend on where the attribute lies in the "
+"range between minimum and maximum. For example if you have contour features "
+"with values starting at 1000 m and ending at 1400 m, the value range is 1000"
+" to 1400. If the colour set for the minimum value is set to orange and the "
+"colour for the maximum value is black, contours with a value of close to "
+"1400 m will be drawn close to black. On the other hand contours with a value"
+" near to 1000 m will be drawn close to orange (see "
+":numref:`figure_continuous_symbol_map`)."
+msgstr ""
+"色の範囲で最小色と最大色を定義した後、描画される色の特徴は、属性が最小と最大の間の範囲のどこにあるかによって異なります。たとえば、値が1000mで始まり1400mで終わる等高線地物がある場合、値の範囲は1000〜1400です。最小値に設定された色がオレンジに設定され、最大値に設定された色が黒の場合、等高線値が1400mに近い場合、黒に近く描画されます。一方、1000"
+" mに近い値の等高線は、オレンジに近く描画されます（ :numref:`figure_continuous_symbol_map` を参照）。"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:351
 msgid "A contour map drawn using continuous colour symbology"
@@ -486,9 +644,32 @@ msgid ""
 "each have their own symbol."
 msgstr "表　一意: 地物タイプ（e.g. 道路）のユニークな属性値で各々のシンボルを持つ。"
 
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:381
+msgid ""
+"Within the GIS Application we can open/choose to use Unique Value symbology "
+"for a layer. The GIS will scan through all the different string values in "
+"the attribute field and build a list of unique strings or numbers. Each "
+"unique value can then be assigned a colour and style. This is shown in "
+":numref:`figure_unique_symbol`."
+msgstr ""
+"GISアプリケーション内で、レイヤーに一意の値のシンボルを開く/使用することを選択できます。 "
+"GISは、属性フィールドのさまざまな文字列値をすべてスキャンし、一意の文字列または数値のリストを作成します。次に、それぞれの一意の値に色とスタイルを割り当てることができます。これは"
+" :numref:`figure_unique_symbol` に示されています。"
+
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:392
 msgid "Defining unique value symbology for roads based on the road type."
 msgstr "道路の種類に基づいて、道路に対して一意のシンボルを定義します。"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:394
+msgid ""
+"When the GIS draws the layer, it will look at the attributes of each feature"
+" before drawing it to the screen. Based on the value in the chosen field in "
+"the attribute table, the road line will be drawn with suitable colour and "
+"line style (and fill style if its a polygon feature). This is shown in "
+":numref:`figure_unique_symbol_map`."
+msgstr ""
+"GISがレイヤーを描画するとき、画面に描画する前に各地物の属性を確認します。属性テーブルで選択したフィールドの値に基づいて、道路の線が適切な色と線のスタイル（およびポリゴン地物の場合は塗りつぶしのスタイル）で描画されます。これは"
+" :numref:`figure_unique_symbol_map` に示されています。"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:405
 msgid "A roads vector layer symbolised using a unique value per road type."
@@ -738,6 +919,10 @@ msgstr ""
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:494
 msgid "Further reading"
 msgstr "より詳しく知りたい場合は"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:496
+msgid "**Website:** https://en.wikipedia.org/wiki/Cartography"
+msgstr "**ウェブサイト:** https://en.wikipedia.org/wiki/Cartography"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:498
 msgid ""
