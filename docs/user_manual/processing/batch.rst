@@ -34,7 +34,7 @@ process...` button.
 
 .. _figure_processing_batch_start2:
 
-.. figure:: img/batch_processing_params_dialog.png
+.. figure:: img/parameters_dialog.png
    :align: center
 
    Batch Processing From Algorithm Dialog
@@ -46,55 +46,97 @@ Executing a batch process is similar to performing a single execution of an
 algorithm. Parameter values have to be defined, but in this case we need not just
 a single value for each parameter, but a set of them instead, one for each time
 the algorithm has to be executed. Values are introduced using a table like the
-one shown next.
+one shown next, where each row is an iteration and columns are the parameters
+of the algorithm.
 
-.. _figure_processing_bath_parameters:
+.. _figure_processing_batch_parameters:
 
 .. figure:: img/batch_processing.png
    :align: center
 
    Batch Processing
 
-Each line of this table represents a single execution of the algorithm, and each
-cell contains the value of one of the parameters. It is similar to the parameters
-dialog that you see when executing an algorithm from the toolbox, but with a
-different arrangement.
 
-By default, the table contains just two rows. You can add or remove rows using
-the buttons on the lower part of the window.
+From the top toolbar, you can:
+
+* |symbologyAdd| :sup:`Add row`: adds a new processing entry for configuration
+* |symbologyRemove| :sup:`Remove row(s)`: remove selected rows from the table.
+  Row selection is done by clicking the number at the left and allows
+  :ref:`keyboard combination <interacting_features_table>` for multi selection.
+* |fileOpen| :sup:`Open` a batch processing configuration file
+* |fileSave| :sup:`Save` the batch processing configuration to a :file:`.JSON`
+  file that can be run afterwards
+
+By default, the table contains just two rows:
+
+* The first row displays in each cell an :menuselection:`Autofill... -->`
+  drop-down menu with :ref:`options <batch_parameters>` to quickly fill
+  the cells below. Available options depend on the parameter type.
+* The second row (as well as each subsequent one) represents a single execution
+  of the algorithm, and each cell contains the value of one of the parameters.
+  It is similar to the parameters dialog that you see when executing an algorithm
+  from the toolbox, but with a different arrangement.
+
+At the bottom of the table, you can set whether to |checkbox| :guilabel:`Load
+layers on completion`.
 
 Once the size of the table has been set, it has to be filled with the desired
 values.
 
+.. _batch_parameters:
+
 Filling the parameters table
 ----------------------------
 
-For most parameters, setting the value is trivial. Just type the value or select
-it from the list of available options, depending on the parameter type.
+For most parameters, setting the value is trivial. The appropriate widget,
+same as in the :ref:`single process dialog <algorithm_widgets>`, is provided,
+allowing to just type the value, or select it from a list of possible values,
+depending on the parameter type.
+This also includes data-define widget, when compatible.
 
-Filenames for input data objects are introduced directly typing or, more
-conveniently, clicking on the :guilabel:`...` button on the right hand of the cell,
-which will show a context menu with two option: one for selecting from the layers
-currently opened and another to select from the filesystem. This second option,
-when selected, shows a typical file chooser dialog. Multiple files can be
-selected at once.
-If the input parameter represents a single data object and several files are
-selected, each one of them will be put in a separate row, adding new ones if
-needed. If the parameter represents a multiple input, all the selected files
-will be added to a single cell, separated by semicolons (``;``).
+To automate the batch process definition and avoid filling the table
+cell by cell, you may want to press down the :guilabel:`Autofill...` menu
+of a parameter and select any of the following options to replace values
+in the column:
 
-Layer identifiers can be directly typed in the parameter text box. You can enter
-the full path to a file or the name of a layer that is currently loaded in the
-current QGIS project. The name of the layer will be automatically resolved to
-its source path. Notice that, if several layers have the same name, this might
-cause unexpected results due to ambiguity.
+* :guilabel:`Fill Down` will take the input for the first process and enter
+  it for all other processes.
+* |calculateField| :guilabel:`Calculate by Expression...` will allow you
+  to create a new QGIS expression to use to update all existing values within
+  that column. Existing parameter values (including those from other columns)
+  are available for use inside the expression via :ref:`variables
+  <general_tools_variables>`.
+  E.g. setting output file names to complex expressions like:
+
+  ::
+
+     '/home/me/stuff/buffer_' || left(@INPUT, 30) || '_' || @DISTANCE || '.shp'
+
+* :guilabel:`Add Values by Expression...` will add new rows using the values
+  from an expression which returns an array (as opposed to :guilabel:`Calculate
+  by Expression...`, which works only on existing rows). The intended use case
+  is to allow populating the batch dialog using complex numeric series.
+  For example adding rows for a batch buffer using the expression
+  ``generate_series(100, 1000, 50)`` for distance parameter results in new rows
+  with values 100, 150, 200, .... 1000. Other parameters are
+
+* When setting a file or layer parameter, more options are provided:
+
+  * :guilabel:`Add Files by Pattern...` adds new rows to the table for matching
+    files found using a file pattern and folder, with the option to |checkbox|
+    :guilabel:`Search recursively`. E.g. \*.shp.
+  * :guilabel:`Select files`
+  * :guilabel:`Add all files from a directory`
+  * :guilabel:`Select from open layers`
+
 
 Output data objects are always saved to a file and, unlike when executing an
-algorithm from the toolbox, saving to a temporary file or database is not permitted. You can
-type the name directly or use the file chooser dialog that appears when clicking
-on the accompanying button.
+algorithm from the toolbox, saving to a temporary file or database is not permitted.
+Path can be set using the :guilabel:`Autofill` options exposed beforehand.
+You can also type the file path directly or use the file chooser dialog that
+appears when clicking on the accompanying :guilabel:`...` button.
 
-Once you select the file, a new dialog is shown to allow for autocompletion of
+Once you select the file, a new dialog is shown to allow for auto-completion of
 other cells in the same column (same parameter).
 
 .. _figure_processing_save:
@@ -104,55 +146,24 @@ other cells in the same column (same parameter).
 
    Batch Processing Save
 
-If the default value ('Do not autocomplete') is selected, it will just put
+If the default value (:guilabel:`Do not autofill`) is selected, it will just put
 the selected filename in the selected cell from the parameters table. If any of
-the other options is selected, all the cells below the selected one will be
-automatically filled based on a defined criteria. This way, it is much easier to
-fill the table, and the batch process can be defined with less effort.
+the other options is selected, all the cells **below** the selected one will be
+automatically filled based on a defined criteria:
 
-Automatic filling can be done by simply adding correlative numbers to the selected
-file path, or by appending the value of another field at the same row. This is
-particularly useful for naming output data objects according to input ones.
-
-.. _figure_processing_file:
-
-.. figure:: img/batch_processing_filepath.png
-   :align: center
-
-   Batch Processing File Path
-
-There are :guilabel:`Autofill...` options available:
-
-* :guilabel:`Fill Down` will take the input for the first process and enter
-  it for all other processes.
-* :guilabel:`Calculate by Expression...` will allow you to create a new
-  QGIS expression to use to update all existing values within that column.
-  Existing parameter values (including those from other columns) are
-  available for use inside the expression via ``@variable``. E.g. setting
-  output file names to complex expressions like:
-
-  ::
-
-     '/home/me/stuff/buffer_' || left(@input, 30) || '_' || @distance || '.shp'
-
-* :guilabel:`Add Values by Expression...` will add new rows using the values
-  from an expression which returns an array. (As opposed to "Calculate by
-  Expression", which works only on existing rows). The intended use case is
-  to allow populating the batch dialog using complex numeric series. E.g.
-  adding rows for a batch buffer using the expression
-  ``generate_series(100, 1000, 50)`` for distance parameter results in new rows
-  with values 100, 150, 200, .... 1000.
-* :guilabel:`Add Files by Pattern...` adds new rows to the table for matching
-  files found using a file pattern and folder, with the option to |checkbox|
-  :guilabel:`Search recursively`. E.g. *.shp.
+* :guilabel:`Fill with numbers`: incrementally appends a number to the file name
+* :guilabel:`Fill with parameter values`: you can select a parameter whose value
+  in the same row is appended to the file name. This is particularly useful for
+  naming output data objects according to input ones.
 
 
 Executing the batch process
 ---------------------------
 
 To execute the batch process once you have introduced all the necessary values,
-just click on :guilabel:`OK`. Progress of the global batch task will be shown in the
-progress bar in the lower part of the dialog.
+just click on :guilabel:`Run`. The :guilabel:`Log` panel is activated and
+displays details and steps of the execution process. Progress of the global
+batch task will be shown in the progress bar in the lower part of the dialog.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -161,5 +172,15 @@ progress bar in the lower part of the dialog.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |calculateField| image:: /static/common/mActionCalculateField.png
+   :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+.. |fileOpen| image:: /static/common/mActionFileOpen.png
+   :width: 1.5em
+.. |fileSave| image:: /static/common/mActionFileSave.png
+   :width: 1.5em
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |symbologyRemove| image:: /static/common/symbologyRemove.png
+   :width: 1.5em

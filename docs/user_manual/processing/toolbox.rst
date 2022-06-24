@@ -65,6 +65,8 @@ that contain the text you have entered in their names or keywords.
 
 To execute a tool, just double-click on its name in the toolbox.
 
+.. _algorithm_widgets:
+
 The algorithm dialog
 --------------------
 
