@@ -2620,15 +2620,136 @@ msgstr ""
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1229
 msgid "Using Vector Tiles services"
-msgstr "ベクトルタイルサービスを利用する"
+msgstr "ベクタタイルサービスを利用する"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1231
+msgid ""
+"Vector Tile services can be added via the |addVectorTileLayer| "
+":guilabel:`Vector Tiles` tab of the :guilabel:`Data Source Manager` dialog "
+"or the contextual menu of the :guilabel:`Vector Tiles` entry in the "
+":guilabel:`Browser` panel. Services can be either a :guilabel:`New Generic "
+"Connection...` or a :guilabel:`New ArcGIS Vector Tile Service "
+"Connection...`."
+msgstr ""
+"ベクタタイルサービスは、 :guilabel:`データソースマネージャ` ダイアログの |addVectorTileLayer| "
+":guilabel:`ベクタタイル` タブまたは :guilabel:`ブラウザ` パネルの :guilabel:`Vector Tiles` "
+"エントリのコンテキストメニューから追加することができます。サービスは、 :guilabel:`新規一般接続...` か "
+":guilabel:`新規ArcGIS Vector Tile Service接続...` のいずれかです。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1455
 msgid "addVectorTileLayer"
 msgstr "addVectorTileLayer"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1237
+msgid "You set up a service by adding:"
+msgstr "以下を入力することで、サービスを設定できます："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1239
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1298
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1374
+msgid "a :guilabel:`Name`"
+msgstr ":guilabel:`名前`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1240
+msgid ""
+"the :guilabel:`URL`: of the type ``http://example.com/{z}/{x}/{y}.pbf`` for "
+"generic services and "
+"``http://example.com/arcgis/rest/services/Layer/VectorTileServer`` for "
+"ArcGIS based services. The service must provide tiles in :file:`.pbf` "
+"format."
+msgstr ""
+":guilabel:`URL` ：一般接続の場合は ``http://example.com/{z}/{x}/{y}.pbf`` "
+"のような形式、ArcGISベースのサービスの場合は "
+"``http://example.com/arcgis/rest/services/Layer/VectorTileServer`` "
+"のような形式です。サービスはタイルを :file:`.pbf` 形式で提供している必要があります。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1244
+msgid ""
+"the |checkbox|:guilabel:`Min. Zoom Level` and the |checkbox|:guilabel:`Max. "
+"Zoom Level`. Vector Tiles have a pyramid structure. By using these options "
+"you have the opportunity to individually generate layers from the tile "
+"pyramid. These layers will then be used to render the Vector Tile in QGIS."
+msgstr ""
+"|checkbox|:guilabel:`最小ズームレベル` および |checkbox|:guilabel:`最大ズームレベル` "
+"：ベクタタイルはピラミッド構造を持っています。これらのオプションを使用すると、タイルピラミッドから個別にレイヤを生成することができます。これらのレイヤは、QGISでベクタタイルのレンダリングに使用されます。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1249
+msgid ""
+"For Mercator projection (used by OpenStreetMap Vector Tiles) Zoom Level 0 "
+"represents the whole world at a scale of 1:500.000.000. Zoom Level 14 "
+"represents the scale 1:35.000."
+msgstr ""
+"メルカトル図法（OpenStreetMap Vector Tilesで使用）の場合、ズームレベル0は世界全体を 1:500.000.000 "
+"の縮尺で表現します。ズームレベル14は、縮尺 1:35.000 での表現です。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1252
+msgid ""
+"a :guilabel:`Style URL`: a URL to a MapBox GL JSON style configuration. If "
+"provided, then that style will be applied whenever the layers from the "
+"connection are added to QGIS. In the case of Arcgis vector tile service "
+"connections, the URL overrides the default style configuration specified in "
+"the server configuration."
+msgstr ""
+":guilabel:`Style URL` ：MapBox GL "
+"JSONスタイル設定へのURLです。これを設定すると、この接続からのレイヤがQGISに追加される場合に、常にそのスタイルが適用されます。ArcGISベクタタイルサービス接続の場合、このURLはサーバー側の設定で指定されるデフォルトのスタイル設定を上書きします。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1257
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1300
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1378
+msgid ""
+"the :ref:`authentication <authentication_index>` configuration if necessary"
+msgstr ":ref:`認証 <authentication_index>` ：必要に応じて設定"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1258
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1302
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1379
+msgid "a :guilabel:`Referer`"
+msgstr ":guilabel:`リファラー`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1260
+msgid ""
+":numref:`figure_vector_tiles_maptilerplanet` shows the dialog with the "
+"MapTiler planet Vector Tiles service configuration."
+msgstr ""
+":numref:`figure_vector_tiles_maptilerplanet` は、MapTiler planet Vector Tiles "
+"サービスの設定ダイアログを示しています。"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1268
 msgid "Vector Tiles - Maptiler Planet configuration"
-msgstr "ベクトルタイル - Maptiler Planet の設定"
+msgstr "ベクタタイル - Maptiler Planet の設定"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1270
+msgid ""
+"Configurations can be saved to :file:`.XML` file (:guilabel:`Save "
+"Connections`) through the :guilabel:`Vector Tiles` entry in :guilabel:`Data "
+"Source Manager` dialog or its context menu in the :guilabel:`Browser` panel."
+" Likewise, they can be added from a file (:guilabel:`Load Connections`)."
+msgstr ""
+"接続設定は、 :guilabel:`データソースマネージャ` ダイアログ内の :guilabel:`ベクタタイル` エントリや、 "
+":guilabel:`ブラウザ` パネルのVector Tilesのコンテキストメニューを通じて :file:`.XML` ファイルに保存（ "
+":guilabel:`接続を保存` ）することができます。同様に、接続をファイルから追加する（ :guilabel:`接続を読み込む` "
+"）こともできます。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1275
+msgid "Once a connection to a vector tile service is set, it's possible to:"
+msgstr "ベクタタイルサービスへの接続が設定できたら、以下の操作が可能です。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1277
+msgid ":guilabel:`Edit` the vector tile connection settings"
+msgstr "ベクタタイルの接続設定の :guilabel:`編集`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1278
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1337
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1400
+msgid ":guilabel:`Remove` the connection"
+msgstr "接続の :guilabel:`削除`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1279
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1338
+msgid ""
+"From the :guilabel:`Browser` panel, right-click over the entry and you can "
+"also:"
+msgstr ":guilabel:`ブラウザ` パネルでは、エントリを右クリックすることで、以下の操作もできます："
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1282
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1343
@@ -2649,15 +2770,79 @@ msgstr ""
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1291
 msgid "Using XYZ Tile services"
-msgstr "XYZタイルサービスを使用する"
+msgstr "XYZタイルサービスを利用する"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1293
+msgid ""
+"XYZ Tile services can be added via the |addXyzLayer| :guilabel:`XYZ` tab of "
+"the :guilabel:`Data Source Manager` dialog or the contextual menu of the "
+":guilabel:`XYZ Tiles` entry in the :guilabel:`Browser` panel. Press "
+":guilabel:`New` (respectively :guilabel:`New Connection`) and provide:"
+msgstr ""
+"XYZタイルサービスは、 :guilabel:`データソースマネージャ` ダイアログの |addXyzLayer| :guilabel:`XYZ` "
+"タブまたは :guilabel:`ブラウザ` パネルの :guilabel:`XYZ Tiles` "
+"エントリのコンテキストメニューから追加することができます。 :guilabel:`新規` （あるいは :guilabel:`新規接続` "
+"）を押し、以下の情報を入力します："
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1457
 msgid "addXyzLayer"
 msgstr "addXyzLayer"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1299
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1375
+msgid "the :guilabel:`URL`"
+msgstr ":guilabel:`URL`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1301
+msgid "the :guilabel:`Min. Zoom level` and :guilabel:`Max. Zoom level`"
+msgstr ":guilabel:`最小ズームレベル` および :guilabel:`最大ズームレベル`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1303
+msgid ""
+"the :guilabel:`Tile Resolution`: possible values are :guilabel:`Unknown (not"
+" scaled)`, :guilabel:`Standard (256x256 / 96DPI)` and :guilabel:`High "
+"(512x512 / 192DPI)`"
+msgstr ""
+"the :guilabel:`タイル解像度` ：可能な値は :guilabel:`不明（スケールされていない）` 、 "
+":guilabel:`標準（256x256 / 96DPI）` および :guilabel:`高解像度（512x512 / 192DPI）` です"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1307
+msgid ""
+"By default, the OpenStreetMap XYZ Tile service is configured. "
+":numref:`figure_xyz_tiles_openstreetmap` shows the dialog with the "
+"OpenStreetMap XYZ Tile service configuration."
+msgstr ""
+"デフォルトでは、OpenStreetMap XYZ Tileサービスが設定されています。 "
+":numref:`figure_xyz_tiles_openstreetmap` にOpenStreetMap XYZ "
+"Tileサービスの設定ダイアログを示します。"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1316
 msgid "XYZ Tiles - OpenStreetMap configuration"
 msgstr "XYZ Tiles - OpenStreetMap の設定"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1318
+msgid ""
+"Configurations can be saved to :file:`.XML` file (:guilabel:`Save "
+"Connections`) through the :guilabel:`XYZ Tiles` entry in :guilabel:`Data "
+"Source Manager` dialog or its context menu in the :guilabel:`Browser` panel."
+" Likewise, they can be added from a file (:guilabel:`Load Connections`)."
+msgstr ""
+"接続設定は、 :guilabel:`データソースマネージャ` ダイアログ内の :guilabel:`ベクタタイル` エントリや、 "
+":guilabel:`ブラウザ` パネルのXYZ Tilesのコンテキストメニューを通じて :file:`.XML` ファイルに保存（ "
+":guilabel:`接続を保存` ）することができます。同様に、接続をファイルから追加する（ :guilabel:`接続を読み込む` "
+"）こともできます。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1323
+msgid "The XML file for OpenStreetMap looks like this:"
+msgstr "OpenStreetMapのXMLファイルは以下のようになっています："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1334
+msgid "Once a connection to a XYZ tile service is set, it's possible to:"
+msgstr "XYZタイルサービスへの接続が設定できたら、以下の操作が可能です。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1336
+msgid ":guilabel:`Edit` the XYZ connection settings"
+msgstr "XYZタイル接続設定の :guilabel:`編集`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1341
 msgid ""
@@ -2700,6 +2885,120 @@ msgstr ""
 "``http://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid={api_key}``"
 " :guilabel:`最小ズームレベル`: 0, :guilabel:`最大ズームレベル`: 19"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1366
+msgid "Using ArcGIS REST Servers"
+msgstr "ArcGIS REST Serversを利用する"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1368
+msgid ""
+"ArcGIS REST Servers can be added via the |addAfsLayer| :guilabel:`ArcGIS "
+"REST Server` tab of the :guilabel:`Data Source Manager` dialog or the "
+"contextual menu of the :guilabel:`ArcGIS REST Servers` entry in the "
+":guilabel:`Browser` panel. Press :guilabel:`New` (respectively "
+":guilabel:`New Connection`) and provide:"
+msgstr ""
+"ArcGIS REST Serversは、 :guilabel:`データソースマネージャ` ダイアログの |addAfsLayer| "
+":guilabel:`ArcGIS REST Server` タブまたは :guilabel:`ブラウザ` パネルの :guilabel:`ArcGIS"
+" REST Servers` エントリのコンテキストメニューから追加することができます。 :guilabel:`新規` （あるいは "
+":guilabel:`新規接続` ）を押し、以下の情報を入力します："
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1433
 msgid "addAfsLayer"
 msgstr "addAfsLayer"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1376
+msgid "a :guilabel:`Community endpoint URL`"
+msgstr ":guilabel:`Community endpoint URL`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1377
+msgid "a :guilabel:`Content endpoint URL`"
+msgstr ":guilabel:`Content endpoint URL`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1383
+msgid ""
+"ArcGIS Feature Service connections which have their corresponding Portal "
+"endpoint URLS set can be explored by content groups in the browser panel."
+msgstr ""
+"ArcGIS Feature Service接続で、対応するPortal endpoint URL "
+"が設定されているものは、ブラウザパネル内でコンテンツグループごとに検索できます。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1386
+msgid ""
+"If a connection has the Portal endpoints set, then expanding out the "
+"connection in the browser will show a “Groups” and “Services” folder, "
+"instead of the full list of services usually shown. Expanding out the groups"
+" folder will show a list of all content groups that the user is a member of,"
+" each of which can be expanded to show the service items belonging to that "
+"group."
+msgstr ""
+"接続にPortal endpointsが設定されている場合、ブラウザパネルで接続を展開すると、通常表示されるサービスの完全なリストの代わりに "
+"“Groups” フォルダと “Services” "
+"フォルダが表示されます。グループフォルダを展開すると、ユーザーがメンバーとなっているすべてのコンテンツグループの一覧が表示され、それぞれのグループを展開すると、そのグループに所属するサービス項目が表示されます。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1392
+msgid ""
+"Configurations can be saved to :file:`.XML` file (:guilabel:`Save "
+"Connections`) through the :guilabel:`ArcGIS REST Server` entry in "
+":guilabel:`Data Source Manager` dialog. Likewise, they can be added from a "
+"file (:guilabel:`Load Connections`)."
+msgstr ""
+"接続設定は、 :guilabel:`データソースマネージャ` ダイアログ内の :guilabel:`ArcGIS REST Server` "
+"エントリを通じて :file:`.XML` ファイルに保存（ :guilabel:`接続を保存` "
+"）することができます。同様に、接続をファイルから追加する（ :guilabel:`接続を読み込む` ）こともできます。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1397
+msgid "Once a connection to an ArcGIS REST Server is set, it's possible to:"
+msgstr "ArcGIS REST Serverへの接続が設定できたら、以下の操作が可能です。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1399
+msgid ":guilabel:`Edit` the ArcGIS REST Server connection settings"
+msgstr "ArcGIS REST Server接続設定の :guilabel:`編集`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1401
+msgid ":guilabel:`Refresh` the connection"
+msgstr "接続の :guilabel:`再読み込み`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1402
+msgid "use a filter for the available layers"
+msgstr "利用可能なレイヤへのフィルタ適用"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1403
+msgid ""
+"choose from a list of available layers with the option to "
+"|checkbox|:guilabel:`Only request features overlapping the current view "
+"extent`"
+msgstr ""
+"|checkbox|:guilabel:`現在のビュー領域に重なる地物のみをリクエストする` オプションを用いて、利用可能なレイヤのリストから選択する"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1406
+msgid ""
+"From the :guilabel:`Browser` panel, right-click over the connection entry "
+"and you can:"
+msgstr ":guilabel:`ブラウザ` パネルでは、接続エントリを右クリックすることで、以下の操作ができます："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1409
+msgid ":guilabel:`Refresh`"
+msgstr ":guilabel:`再読み込み`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1410
+msgid ":guilabel:`Edit connection...`"
+msgstr ":guilabel:`接続の編集...`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1411
+msgid ":guilabel:`Delete connection...`"
+msgstr ":guilabel:`接続の削除...`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1412
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1417
+msgid ""
+":guilabel:`View Service Info` which will open the default web browser and "
+"display the Service Info."
+msgstr ":guilabel:`サービス情報を見る` ：デフォルトのウェブブラウザを開き、サービス情報を表示します"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1415
+msgid "Right-click over the layer entry and you can also:"
+msgstr "レイヤのエントリを右クリックすると、以下の操作ができます："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1419
+msgid ":menuselection:`Export layer... --> To File`"
+msgstr ":menuselection:`レイヤエクスポート --> ファイルへ…`"
