@@ -57,7 +57,7 @@ and update the whole QGIS documentation.
    "Marc Ducobu", "Philip Albrecht", "Dennis Milechin", "Cody Martin", "Savinaud Mickaël"
    "Stefan Uhrig", "Ariadni-Karolina Alexiou", "pathmapper", "Benjamin Riley", "MorriganR"
    "Thayer Young", "Shane Carey", "Ian Turton", "Emma Hain", "Germán Carrillo"
-   "Jakob Miksch", "Nicolas Boisteault", "rldhont", "Bertrand Rix", "Jorge Rosales"
+   "Jakob Miksch", "Nicolas Boisteault", "Bertrand Rix", "Jorge Rosales", ""
    "Jörn Gutzeit"
 
 
