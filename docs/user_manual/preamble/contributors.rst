@@ -58,7 +58,6 @@ and update the whole QGIS documentation.
    "Stefan Uhrig", "Ariadni-Karolina Alexiou", "Björn Hinkeldey", "Benjamin Riley", "MorriganR"
    "Thayer Young", "Shane Carey", "Ian Turton", "Emma Hain", "Germán Carrillo"
    "Jakob Miksch", "Nicolas Boisteault", "Bertrand Rix", "Jorge Rosales", ""
-   "Jörn Gutzeit"
 
 
 .. index:: 
