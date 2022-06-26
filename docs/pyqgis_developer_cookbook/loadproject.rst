@@ -164,8 +164,8 @@ Using flags to speed up things
 ==============================
 
 In some instances where you may not need to use a fully fonctionnal project, but only
- want to access it for a specific reason, flags may be helpful. A full list of flags is available under
- :meth:`ProjectReadFlag <qgis.core.Qgis.ProjectReadFlag>`. Multiple flags can be added together.
+want to access it for a specific reason, flags may be helpful. A full list of flags is available under
+:class:`ProjectReadFlag <qgis.core.Qgis.ProjectReadFlag>`. Multiple flags can be added together.
  
 As an example if we do not need to have functionnal layers and simply want to access of modify a project. 
 A flag can be used to bypass the data validation step and prevent the bad layer dialog from appearing.
