@@ -284,7 +284,10 @@ layer types:
   :ref:`simple marker symbol <simple_marker_symbol>`, and in addition:
 
   * |checkbox| :guilabel:`Use custom dash pattern`: overrides the
-    :guilabel:`Stroke style` setting with a custom dash.
+    :guilabel:`Stroke style` setting with a custom dash. You would need to
+    define length of consecutive dashes and spaces shaping the model,
+    in the chosen unit.
+    The total length of the pattern is displayed at the bottom of the dialog.
   * :guilabel:`Pattern offset`: the positioning of the dashes/spaces in the line
     can be tweaked, so that they can be placed at nicer positions to account for corners
     in the line (also can be used potentially to "align" adjacent dash pattern borders)
@@ -298,11 +301,11 @@ layer types:
   * :guilabel:`Trim lines` from :guilabel:`Start` and/or :guilabel:`End`:
     allows for the line rendering to trim off the first x mm and last y mm
     from the actual line string when drawing the line.
-    It can be used e.g. when creating complex symbols where a line layer should
-    not overlap marker symbol layers placed at the start and end of the line.
-    The start/end trim distance supports a range of :ref:`units  <unit_selector>`,
-    including percentage of the overall line length, and can be data defined for
-    extra control.
+    It supports a range of :ref:`units <unit_selector>`, including percentage
+    of the overall line length, and can be data defined for extra control.
+    The start/end trim distance can be used e.g. when creating complex symbols
+    where a line layer should not overlap marker symbol layers placed at
+    the start and end of the line.
 
 .. _arrow_symbol:
 
@@ -369,9 +372,12 @@ layer types:
 * **Marker line**: repeats a :ref:`marker symbol
   <vector_marker_symbols>` over the length of a line.
 
-  * The :guilabel:`Marker placement` can be at a regular distance or based on the
-    line geometry: first, last or each vertex, on the central point of the line
-    or of each segment, or on every curve point.
+  * The :guilabel:`Marker placement` can be set using a regular interval setting
+    and/or the line geometry property (on first or last vertex, inner vertices,
+    the central point of the line or of each segment, or on every curve point).
+  * When first or last vertex placement is enabled, the |checkbox|
+    :guilabel:`Place on every part extremity` option will make the markers
+    render also at the first or last vertex for every part of multipart geometries.
   * :guilabel:`Offset along the line`: the markers placement can also be given
     an offset from the start, along the line
   * The |checkbox| :guilabel:`Rotate marker to follow line direction` option
@@ -430,8 +436,7 @@ layer types:
 * **Lineburst**: renders a gradient along the width of a line.
   You can choose between :guilabel:`Two color` or :guilabel:`Color ramp` and
   the :guilabel:`Stroke width`, :guilabel:`Offset`,
-  :guilabel:`Join style`, :guilabel:`Cap style` and :guilabel:`Opacity`
-  can be adjusted.
+  :guilabel:`Join style`, :guilabel:`Cap style` can be adjusted.
 
   .. _figure_lineburst_symbol:
 
@@ -468,7 +473,7 @@ symbol layer types:
   if you want the exact centroid. 
 
   You can:
-  
+
   * :guilabel:`Force placement of markers inside polygons`
   * :guilabel:`Draw markers on every part of multi-part features` or place
     the point only on its biggest part
@@ -487,12 +492,46 @@ symbol layer types:
 * **Line pattern fill**: fills the polygon with a hatching pattern of
   :ref:`line symbol layer <vector_line_symbols>`. You can set:
 
+  * :guilabel:`Alignment`: defines how the pattern is positioned relative
+    to the feature(s):
+
+    * :guilabel:`Align pattern to feature`: lines are rendered within
+      each feature
+    * :guilabel:`Align pattern to map extent`: a pattern is rendered over
+      the whole map extent, allowing lines to align nicely across features
   * :guilabel:`Rotation` of the lines, counter-clockwise
   * :guilabel:`Spacing`: distance between consecutive lines
   * :guilabel:`Offset` distance of the lines from the feature boundary
+  * :guilabel:`Clipping`: allows to control how lines in the fill should
+    be clipped to the polygon shape. Options are:
+
+    * :guilabel:`Clip During Render Only`: lines are created covering
+      the whole bounding box of the feature and then clipped while drawing.
+      Line extremities (beginning and end) will not be visible.
+    * :guilabel:`Clip Lines Before Render`: lines are clipped to the exact shape
+      of the polygon prior to rendering. Line extremities (including cap styles,
+      start/end marker line objects, ...) will be visible, and may sometimes
+      extend outside of the polygon (depending on the line symbol settings).
+    * :guilabel:`No Clipping`: no clipping at all is done - lines will cover
+      the whole bounding box of the feature
 
 * **Point pattern fill**: fills the polygon with a grid pattern of 
   :ref:`marker symbol <vector_marker_symbols>`. You can set:
+
+  * :guilabel:`Alignment`: defines how the pattern is positioned relative
+    to the feature(s):
+
+    * :guilabel:`Align pattern to feature`: marker lines are rendered within
+      each feature
+    * :guilabel:`Align pattern to map extent`: a pattern is rendered over
+      the whole map extent, allowing markers to align nicely across features
+
+      .. _figure_point_pattern_alignment:
+
+      .. figure:: img/pointPatternAlignment.png
+         :align: center
+
+         Aligning point pattern to feature (left) and to map extent (right)
 
   * :guilabel:`Distance`: :guilabel:`Horizontal` and :guilabel:`Vertical` distances
     between consecutive markers
@@ -500,6 +539,49 @@ symbol layer types:
     offset of alignment between consecutive markers in a column (resp. in a row)
   * :guilabel:`Offset`: :guilabel:`Horizontal` and :guilabel:`Vertical` distances
     from the feature boundary
+  * :guilabel:`Clipping`: allows to control how markers in the fill should
+    be clipped to the polygon shape. Options are:
+
+    * :guilabel:`Clip to shape`: markers are clipped so that only the portions
+      inside the polygon are visible
+    * :guilabel:`Marker centroid within shape`: only markers where the center
+      of the marker falls inside the polygon are drawn, but these markers won't
+      be clipped to the outside of the polygon
+    * :guilabel:`Marker completely within shape`: only markers which fall completely
+      within the polygon are shown
+    * :guilabel:`No clipping`: any marker which intersects at all with the polygon
+      will be completely rendered (strictly speaking its the "intersects with the
+      bounding box of the marker")
+
+      .. _figure_clip_point_pattern_fill:
+
+      .. figure:: img/clipPointPatternFill.png
+         :align: center
+
+         Clipping markers in fill - From left to right: Clip to shape,
+         Marker centroid within shape, Marker completely within shape, No clipping
+
+  * :guilabel:`Rotation` of the whole pattern, clockwise
+  * The :guilabel:`Randomize pattern` group setting allows each point in a point
+    pattern fill to be randomly shifted up to the specified maximum distance
+    :guilabel:`Horizontally` or :guilabel:`Vertically`.
+    You can specify the maximum offset in any supported units, such as millimeters,
+    points, map units, or even "percentage" (where percentage is relative
+    to the pattern width or height).
+
+    You can set an optional random number seed to avoid the symbol patterns
+    "jumping" around between map refreshes. Data defined overrides are also supported.
+
+    .. note:: The main difference between the :guilabel:`Randomize pattern` and
+     the :ref:`random marker fill <random_marker_fill>` symbol type is that
+     the random offset with a point pattern allows for quasi-"regular" placement
+     of markers – because the points in the pattern are effectively constrained
+     to a grid, this allows creation of semi-random fills which don’t have empty
+     areas or overlapping markers. (As opposed to the random marker fill,
+     which will always place points completely randomly… sometimes resulting
+     in visual clusters of points or unwanted empty areas).
+
+.. _random_marker_fill:
 
 * **Random marker fill**: fills the polygon with a :ref:`marker symbol 
   <vector_marker_symbols>` placed at random locations within the polygon
