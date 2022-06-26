@@ -50,7 +50,7 @@ and update the whole QGIS documentation.
    "Paolo Corti", "Tudor Bărăscu", "Maning Sambale",  "Claudia A. Engel", "Yoichi Kayama"
    "Otto Dassau", "Denis Rouzaud", "Nick Bearman", "embelding", "ajazepk"
    "Ramon", "Andrei", "zstadler",  "icephale", "Rosa Aguilar"
-   "Patrice Pineault", "lajunek", "felixfeckler", "Benoît de Mezzo", "Étienne Trimaille"
+   "Patrice Pineault", "Jörn Gutzeit", "Felix Feckler", "Benoît de Mezzo", "Étienne Trimaille"
    "Andrea Giudiceandrea", "Julien Cabieces", "roya0045", "Sebastian Gutwein", "jveenstra1"
    "Ryan Welfle", "Martin Pergler", "Ivan Ivanov", "muranamihdk", "Loïc Bartoletti"
    "ttomasz", "Ian Maddaus", "Jürnjakob Dugge", "Roman Bug", "Damiano Lombardi"
