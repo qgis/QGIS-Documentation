@@ -56,7 +56,7 @@ and update the whole QGIS documentation.
    "ttomasz", "Ian Maddaus", "Jürnjakob Dugge", "Roman Bug", "Damiano Lombardi"
    "Marc Ducobu", "Philip Albrecht", "Dennis Milechin", "Cody Martin", "Savinaud Mickaël"
    "Stefan Uhrig", "Ariadni-Karolina Alexiou", "pathmapper", "Benjamin Riley", "MorriganR"
-   "thayeray", "Shane Carey", "Ian Turton", "Emma Hain", "gacarrillor"
+   "Thayer Young", "Shane Carey", "Ian Turton", "Emma Hain", "Germán Carrillo"
    "Jakob Miksch", "Nicolas Boisteault", "rldhont", "Bertrand Rix", "Jorge Rosales"
    "Jörn Gutzeit"
 
