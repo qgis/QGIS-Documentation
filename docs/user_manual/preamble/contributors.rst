@@ -53,7 +53,7 @@ and update the whole QGIS documentation.
    "Patrice Pineault", "Jörn Gutzeit", "Felix Feckler", "Benoît de Mezzo", "Étienne Trimaille"
    "Andrea Giudiceandrea", "Julien Cabieces", "roya0045", "Sebastian Gutwein", "jveenstra1"
    "Ryan Welfle", "Martin Pergler", "Ivan Ivanov", "muranamihdk", "Loïc Bartoletti"
-   "ttomasz", "Ian Maddaus", "Jürnjakob Dugge", "Roman Bug", "Damiano Lombardi"
+   "Tomasz Taraś", "Ian Maddaus", "Jürnjakob Dugge", "Roman Bug", "Damiano Lombardi"
    "Marc Ducobu", "Philip Albrecht", "Dennis Milechin", "Cody Martin", "Savinaud Mickaël"
    "Stefan Uhrig", "Ariadni-Karolina Alexiou", "Björn Hinkeldey", "Benjamin Riley", "MorriganR"
    "Thayer Young", "Shane Carey", "Ian Turton", "Emma Hain", "Germán Carrillo"
