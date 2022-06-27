@@ -2,19 +2,20 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2022
+# fairtommy <fairtommy@gmail.com>, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 10:19+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:08+0000\n"
+"Last-Translator: fairtommy <fairtommy@gmail.com>, 2022\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,6 +31,10 @@ msgstr "地図製作"
 #: ../../docs/gentle_gis_introduction/map_production.rst:6
 msgid "|gentleLogo|"
 msgstr "|gentleLogo|"
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:312
+msgid "gentleLogo"
+msgstr "gentleLogo"
 
 #: ../../docs/gentle_gis_introduction/map_production.rst:6
 msgid "Objectives:"
@@ -52,6 +57,20 @@ msgstr "地図製作，地図のレイアウト，スケールバー，方位記
 #: ../../docs/gentle_gis_introduction/map_production.rst:12
 msgid "Overview"
 msgstr "概要"
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:14
+msgid ""
+"Map production is the process of arranging map elements on a sheet of paper "
+"in a way that, even without many words, the average person can understand "
+"what it is all about. Maps are usually produced for presentations and "
+"reports where the audience or reader is a politician, citizen or a learner "
+"with no professional background in GIS. Because of this, a map has to be "
+"effective in communicating spatial information. Common elements of a map are"
+" the title, map body, legend, north arrow, scale bar, acknowledgement, and "
+"map border (see :numref:`figure_map_elements`)."
+msgstr ""
+"地図の作成とは、多くの言葉がなくても、平均的な人がそれが何であるかを理解できるように、1枚の紙に地図要素を配置する過程です。地図は通常、聴衆または読者がGISの専門的背景を持たない政治家、市民、または学習者であるプレゼンテーションおよびレポート用に作成されます。このため、地図は空間情報の伝達に効果的でなければなりません。地図の一般的な要素は、タイトル、地図本体、凡例、北矢印、スケールバー、認証、および地図境界です（"
+" :numref:`figure_map_elements` 参照）。"
 
 #: ../../docs/gentle_gis_introduction/map_production.rst:28
 msgid ""
@@ -90,15 +109,55 @@ msgstr ""
 msgid "Map Border in detail"
 msgstr "地図境界の詳細"
 
+#: ../../docs/gentle_gis_introduction/map_production.rst:49
+msgid ""
+"The map border is a line that defines exactly the edges of the area shown on"
+" the map. When printing a map with a graticule (which we describe further "
+"down), you often find the coordinate information of the graticule lines "
+"along the border lines, as you can see in :numref:`figure_map_legend`."
+msgstr ""
+"地図境界は、地図に表示される領域の縁を正確に定義する線です。経緯線を使用して地図を印刷する場合（これについてはさらに詳しく説明します）、 "
+":numref:`figure_map_legend` に示すように、境界に沿った経緯線の座標情報を見つけることがよくあります。"
+
 #: ../../docs/gentle_gis_introduction/map_production.rst:55
 msgid "Map Legend in detail"
 msgstr "地図凡例の詳細"
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:57
+msgid ""
+"A map is a simplified representation of the real world and **map symbols** "
+"are used to represent real objects. Without symbols, we wouldn't understand "
+"maps. To ensure that a person can correctly read a map, a map legend is used"
+" to provide a key to all the symbols used on the map. It is like a "
+"dictionary that allows you to understand the meaning of what the map shows. "
+"A map legend is usually shown a a little box in a corner of the map. It "
+"contains icons, each of which will represent a type of feature. For example,"
+" a *house* icon will show you how to identify houses on the map (see "
+":numref:`figure_map_legend`)."
+msgstr ""
+"地図は実世界の簡略化された表現であり、 **地図記号** "
+"は現実の対象を表すために使用されます。記号がなければ、地図を理解することはできません。人が地図を正しく読むことができるようにするために、地図の凡例を使用して、地図で使用されているすべての記号のキーを提供します。それは、地図が示すものの意味を理解することを可能にする辞書のようなものです。地図の凡例は通常、地図の隅にある小さなボックスに表示されます。アイコンが含まれており、各アイコンは地物のタイプを表します。たとえば、"
+" *house* アイコンは、地図上で家を識別する方法を示します（ :numref:`figure_map_legend` 参照）。"
 
 #: ../../docs/gentle_gis_introduction/map_production.rst:72
 msgid ""
 "Two maps from the same area, both with a water body in the background but "
 "with different themes, map symbols and colours in the legend."
 msgstr "同じ領域からの2つの地図、両方とも背景に水面を持つが、凡例の異なるテーマ、地図記号、色を持つ。"
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:75
+msgid ""
+"You can also use different symbols and icons in your legend to show "
+"different themes. In :numref:`figure_map_legend` you can see a map with a "
+"lake in light blue overlaid with contour lines and spot heights to show "
+"information about the terrain in that area. On the right side you see the "
+"same area with the lake in the background but this map is designed to show "
+"tourists the location of houses they can rent for their holidays. It uses "
+"brighter colours, a house icon and more descriptive and inviting words in "
+"the legend."
+msgstr ""
+"凡例でさまざまな記号やアイコンを使用して、さまざまなテーマを表示することもできます。 :numref:`figure_map_legend` "
+"では、水色の湖が等高線とスポットの高さでオーバーレイされた地図を表示して、その地域の地形に関する情報を表示できます。右側には、湖を背景にした同じエリアが表示されていますが、この地図は、観光客が休暇中に借りることができる家の場所を示すように設計されています。それは、より明るい色、家のアイコン、そして凡例のより説明的で魅力的な言葉を使用しています。"
 
 #: ../../docs/gentle_gis_introduction/map_production.rst:84
 msgid "North arrow in detail"
@@ -127,6 +186,36 @@ msgstr ""
 msgid "Scale in detail"
 msgstr "スケールの詳細"
 
+#: ../../docs/gentle_gis_introduction/map_production.rst:99
+msgid ""
+"The scale of a map, is the value of a single unit of distance on the map, "
+"representing distance in the real world. The values are shown in map units "
+"(meters, feet or degrees). The scale can be expressed in several ways, for "
+"example, in words, as a ratio or as a graphical scale bar (see "
+":numref:`figure_map_scale`)."
+msgstr ""
+"地図の縮尺は、地図上の1単位の距離の値であり、実世界の距離を表します。値は地図単位（メートル、フィート、または度）で表示されます。縮尺は、いくつかの方法で表すことができます。たとえば、単語、比率、またはグラフィカルな縮尺バーとして表すことができます（"
+" :numref:`figure_map_scale` 参照）。"
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:104
+msgid ""
+"**Expressing a scale in words** is a commonly used method and has the "
+"advantage of being easily understood by most map users. You can see an "
+"example of a word based scale in a :numref:`figure_map_scale` (a). Another "
+"option is the **representative fraction (RF)** method, where both the map "
+"distance and the ground distance in the real world are given in the same map"
+" units, as a ratio. For example, a RF value 1:25,000 means that any distance"
+" on the map is 1/25,000 *th* of the real distance on the ground (see "
+":numref:`figure_map_scale` (b)). The value 25,000 in the ratio is called the"
+" **scale denominator**. More experienced users often prefer the "
+"representative fraction method, because it reduces confusion."
+msgstr ""
+"**縮尺を単語で表現する** は一般的に使用される方法であり、ほとんどの地図利用者が簡単に理解できるという利点があります。単語に基づく縮尺の例は、 "
+":numref:`figure_map_scale` （a）で確認できます。もう1つのオプションは、 **表現分数（RF）** "
+"方式です。この方法では、実世界の地図距離と地上距離の両方が、比率として同じ地図単位で指定されます。たとえば、RF値1：25,000は、地図上の任意の距離が地上の実際の距離の25,000"
+" *分の* 1であることを意味します（ :numref:`figure_map_scale` "
+"（b）参照）。比率の25,000の値は、**縮尺分母**と呼ばれます。経験豊富なユーザーは、混乱を減らすため、表現分数方式を好むことがよくあります。"
+
 #: ../../docs/gentle_gis_introduction/map_production.rst:114
 msgid ""
 "When a representative fraction expresses a very small ratio, for example "
@@ -138,6 +227,16 @@ msgstr ""
 "表現分数が非常に小さな比、例えば1:1000 000、を表す場合、 **小縮尺地図** と呼ばれます。一方、比が非常に大きい場合、例えば1:50 "
 "000地図、 **大縮尺地図** と呼ばれます。小縮尺地図は **大きな領域** をカバーし、大縮尺地図は **小さな領域** "
 "をカバーする、と覚えておくと便利です！"
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:120
+msgid ""
+"A **scale expression as a graphic or bar scale** is another basic method of "
+"expressing a scale. A bar scale shows measured distances on the map. The "
+"equivalent distance in the real world is placed above as you can see in "
+":numref:`figure_map_scale` (c)."
+msgstr ""
+"**グラフィックまたはバー縮尺としての縮尺表現** は、縮尺を表現するもう1つの基本的な方法です。バースケールは、地図上で計測された距離を示します。 "
+":numref:`figure_map_scale` （c）でわかるように、実世界での同等の距離は上に配置されます。"
 
 #: ../../docs/gentle_gis_introduction/map_production.rst:130
 msgid ""
@@ -169,6 +268,21 @@ msgid ""
 "the real word."
 msgstr "これは、地図上の100ミリメートルは、実世界の250万ミリメートル（2500メートル）と等価であることを意味します。"
 
+#: ../../docs/gentle_gis_introduction/map_production.rst:148
+msgid ""
+"Another interesting aspect of a map scale, is that the lower the map scale, "
+"the more detailed the feature information in the map will be. In "
+":numref:`figure_map_scale_compare`, you can see an example of this. Both "
+"maps are the same size but have a different scale. The image on the left "
+"side shows more details, for example the houses south-west of the water body"
+" can be clearly identified as separate squares. In the image on the right "
+"you can only see a black clump of rectangles and you are not able to see "
+"each house clearly."
+msgstr ""
+"地図縮尺のもう1つの興味深い側面は、地図縮尺が小さいほど、地図内の地物情報がより詳細になることです。  "
+":numref:`figure_map_scale_compare` "
+"にこの例を見ることができます。両方の地図は同じサイズですが縮尺が異なります。左側の画像は詳細を示しています。たとえば、水域の南西にある家は、別々の正方形として明確に識別できます。右の画像では、黒い長方形の塊しか見えず、各家をはっきりと見ることはできません。"
+
 #: ../../docs/gentle_gis_introduction/map_production.rst:162
 msgid ""
 "Maps showing an area in two different scales. The map scale on the left is "
@@ -198,6 +312,19 @@ msgstr ""
 msgid "Graticule in detail"
 msgstr "グリッドの詳細"
 
+#: ../../docs/gentle_gis_introduction/map_production.rst:181
+msgid ""
+"A graticule is a network of lines overlain on a map to make spatial "
+"orientation easier for the reader. The lines can be used as a reference. As "
+"an example, the lines of a graticule can represent the earth's parallels of "
+"latitude and meridians of longitude. When you want to refer to a special "
+"area on a map during your presentation or in a report you could say: 'the "
+"houses close to latitude 26.04 / longitude -32.11 are often exposed to "
+"flooding during January and February' (see :numref:`figure_map_graticule`)."
+msgstr ""
+"経緯線は、読者が空間的な向きを簡単にするために地図上に重ねられた線のネットワークです。線は参照として使用できます。例として、経緯線の線は、地球の緯線と経度の子午線を表すことができます。プレゼンテーション中またはレポートで地図上の特別な領域を参照したい場合は、次のように言うことができます。「緯度26.04/経度-32.11に近い家は、1月と2月に洪水にさらされることがよくあります」（"
+" :numref:`figure_map_graticule` 参照）。"
+
 #: ../../docs/gentle_gis_introduction/map_production.rst:195
 msgid ""
 "Graticules (red lines) representing the Earth’s parallels of latitude and "
@@ -219,12 +346,34 @@ msgid ""
 msgstr ""
 "地図投影は、紙の平らなシート上に家、道路や湖のような、そのすべての地物を有する3次元地球を表現しようとします。想像できるように、これは非常に困難であり、さらには何百年も後に世界のどの地域のために完璧に地球を表現することが可能である単一の投影はありません。すべての投影は長所と短所があります。"
 
+#: ../../docs/gentle_gis_introduction/map_production.rst:208
+msgid ""
+"To be able to create maps as precisely as possible, people have studied, "
+"modified, and produced many different kinds of projections. In the end "
+"almost every country has developed its own map projection with the goal of "
+"improving the map accuracy for their territorial area (see "
+":numref:`figure_map_projection`)."
+msgstr ""
+"可能な限り正確に地図を作成できるようにするために、人々はさまざまな種類の投影法を研究、修正、および作成してきました。結局、ほぼすべての国が、自国の領土領域の地図の精度を向上させることを目的として、独自の地図投影法を開発しました（"
+" :numref:`figure_map_projection` 参照）。"
+
 #: ../../docs/gentle_gis_introduction/map_production.rst:219
 msgid ""
 "The world in different projections. A Mollweide Equal Area projection left, "
 "a Plate Carree Equidistant Cylindrical projection on the right."
 msgstr ""
 "世界はさまざまな投影法があります。 左はMollweide Equal Area投影法、右はPlate Carree Equidistant円柱投影。"
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:222
+msgid ""
+"With this in mind, we can now understand why it makes sense to add the name "
+"of the projection on a map. It allows the reader to see quickly, if one map "
+"can be compared with another. For example, features on a map in a so-called "
+"Equal Area projection appear very different to features projected in a "
+"Cylindrical Equidistant projection (see :numref:`figure_map_projection`)."
+msgstr ""
+"これを念頭に置いて、地図に投影の名前を追加することが理にかなっている理由を理解できます。ある地図を別の地図と比較できる場合、読者はすばやく確認できます。たとえば、いわゆる等面積投影法の地図上の特徴は、正距円筒図法で投影された特徴とは非常に異なって見えます（"
+" :numref:`figure_map_projection` 参照）。"
 
 #: ../../docs/gentle_gis_introduction/map_production.rst:228
 msgid ""
@@ -362,6 +511,11 @@ msgid ""
 msgstr ""
 "DeMers, Michael N. (2005). Fundamentals of Geographic Information Systems. "
 "3rd Edition. Wiley. ISBN: 9814126195"
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:294
+msgid ""
+"**Website**: `Scale (map) <https://en.wikipedia.org/wiki/Scale_(map)>`_"
+msgstr "**ウェブサイト** ： `縮尺（地図） <https://en.wikipedia.org/wiki/Scale_(map)>`_"
 
 #: ../../docs/gentle_gis_introduction/map_production.rst:296
 msgid ""
