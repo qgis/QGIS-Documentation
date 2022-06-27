@@ -176,7 +176,7 @@ The following can be done:
 .. testcode:: loadproject
 
   readflags = Qgis.ProjectReadFlags()
-  readflags |= Qgis.FlagDontResolveLayer
+  readflags |= Qgis.FlagDontResolveLayers
   project = QgsProject()
   project.read('C:/Users/ClintBarton/Documents/Projects/mysweetproject.qgs', readflags)
  
