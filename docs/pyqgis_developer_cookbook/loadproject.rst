@@ -18,7 +18,6 @@ Loading Projects
   .. testcode:: loadproject
 
     from qgis.core import (
-        Qgis,
         QgsProject,
         QgsPathResolver
     )
@@ -166,17 +165,17 @@ Using flags to speed up things
 
 In some instances where you may not need to use a fully fonctionnal project, but only
 want to access it for a specific reason, flags may be helpful. A full list of flags is available under
-:class:`ProjectReadFlag <qgis.core.Qgis.ProjectReadFlag>`. Multiple flags can be added together.
+:class:`ReadFlag <qgis.core.QgsProject.ReadFlag>`. Multiple flags can be added together.
  
 As an example, if we do not care about actual layers and data and simply want to
-access a project (e.g. for layout or 3D view settings), we can use ``FlagDontResolveLayer``
+access a project (e.g. for layout or 3D view settings), we can use ``FlagDontResolveLayers``
 to bypass the data validation step and prevent the bad layer dialog from appearing.
 The following can be done:
 
 .. testcode:: loadproject
 
-  readflags = Qgis.ProjectReadFlags()
-  readflags |= Qgis.FlagDontResolveLayers
+  readflags = QgsProject.ReadFlags()
+  readflags |= QgsProject.FlagDontResolveLayers
   project = QgsProject()
   project.read('C:/Users/ClintBarton/Documents/Projects/mysweetproject.qgs', readflags)
  
