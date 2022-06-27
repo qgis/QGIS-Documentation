@@ -51,7 +51,7 @@ and update the whole QGIS documentation.
    "Otto Dassau", "Denis Rouzaud", "Nick Bearman", "embelding", "ajazepk"
    "Ramon", "Andrei", "zstadler",  "icephale", "Rosa Aguilar"
    "Patrice Pineault", "Jörn Gutzeit", "Felix Feckler", "Benoît de Mezzo", "Étienne Trimaille"
-   "Andrea Giudiceandrea", "Julien Cabieces", "roya0045", "Sebastian Gutwein", "jveenstra1"
+   "Andrea Giudiceandrea", "Julien Cabieces", "roya0045", "Sebastian Gutwein", "Jessica Veenstra"
    "Ryan Welfle", "Martin Pergler", "Ivan Ivanov", "muranamihdk", "Loïc Bartoletti"
    "Tomasz Taraś", "Ian Maddaus", "Jürnjakob Dugge", "Roman Bug", "Damiano Lombardi"
    "Marc Ducobu", "Philip Albrecht", "Dennis Milechin", "Cody Martin", "Savinaud Mickaël"
