@@ -2,19 +2,20 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2022
+# fairtommy <fairtommy@gmail.com>, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 12:02+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:07+0000\n"
+"Last-Translator: fairtommy <fairtommy@gmail.com>, 2022\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,6 +31,10 @@ msgstr "ラスターデータ"
 #: ../../docs/gentle_gis_introduction/raster_data.rst:7
 msgid "|gentleLogo|"
 msgstr "|gentleLogo|"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:369
+msgid "gentleLogo"
+msgstr "gentleLogo"
 
 #: ../../docs/gentle_gis_introduction/raster_data.rst:7
 msgid "Objectives:"
@@ -51,6 +56,21 @@ msgstr "ラスター、ピクセル、リモートセンシング、衛星画像
 msgid "Overview"
 msgstr "概要"
 
+#: ../../docs/gentle_gis_introduction/raster_data.rst:15
+msgid ""
+"In the previous topics we have taken a closer look at vector data. While "
+"vector features use geometry (points, polylines and polygons) to represent "
+"the real world, raster data takes a different approach. Rasters are made up "
+"of a matrix of pixels (also called cells), each containing a value that "
+"represents the conditions for the area covered by that cell (see "
+":numref:`figure_raster`). In this topic we are going to take a closer look "
+"at raster data, when it is useful and when it makes more sense to use vector"
+" data."
+msgstr ""
+"前のトピックでは、ベクタデータを詳しく見てきました。ベクタ地物はジオメトリ（ポイント、ポリライン、ポリゴン）を使用して実世界を表現しますが、ラスタデータは別のアプローチを取ります。ラスタはピクセルのマトリックス（セルとも呼ばれます）で構成され、各ピクセルには、そのセルがカバーする領域の条件を表す値が含まれています（"
+" :numref:`figure_raster` "
+"参照）。このトピックでは、ラスタデータが役立つ場合、ベクタデータを使用する方が理にかなっている場合について詳しく見ていきます。"
+
 #: ../../docs/gentle_gis_introduction/raster_data.rst:29
 msgid ""
 "A raster dataset is composed of rows (running across) and columns (running "
@@ -63,6 +83,28 @@ msgstr ""
 #: ../../docs/gentle_gis_introduction/raster_data.rst:35
 msgid "Raster data in detail"
 msgstr "ラスター形式データの詳細"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:37
+msgid ""
+"Raster data is used in a GIS application when we want to display information"
+" that is continuous across an area and cannot easily be divided into vector "
+"features. When we introduced you to vector data we showed you the image in "
+":numref:`figure_landscape`. Point, polyline and polygon features work well "
+"for representing some features on this landscape, such as trees, roads and "
+"building footprints. Other features on a landscape can be more difficult to "
+"represent using vector features. For example the grasslands shown have many "
+"variations in colour and density of cover. It would be easy enough to make a"
+" single polygon around each grassland area, but a lot of the information "
+"about the grassland would be lost in the process of simplifying the features"
+" to a single polygon. This is because when you give a vector feature "
+"attribute values, they apply to the whole feature, so vectors aren't very "
+"good at representing features that are not homogeneous (entirely the same) "
+"all over. Another approach you could take is to digitise every small "
+"variation of grass colour and cover as a separate polygon. The problem with "
+"that approach is that it will take a huge amount of work in order to create "
+"a good vector dataset."
+msgstr ""
+"ラスタデータは、GISアプリケーションにおいて、エリア全体で連続していてベクタ地物に簡単に分割できない情報を表示する場合に使用されます。ベクタデータを紹介したとき、:numref:`figure_landscape`で画像を表示しました。ポイント、ポリライン、ポリゴン地物は、樹木、道路、建物のフットプリントなど、このランドスケープ上のいくつかの地物を表すのに適しています。ランドスケープ上の他の地物は、ベクタ地物を使用して表現するのがより難しい場合があります。たとえば、示されている草地には、色と覆いの密度に多くのバリエーションがあります。各草地エリアの周りに単一のポリゴンを作成するのは簡単ですが、地物を単一のポリゴンに単純化する過程で、草地に関する多くの情報が失われます。これは、ベクタ地物属性値を指定するとそれらは地物全体に適用されるため、ベクタは全体的に均一ではない（完全に同じ）地物を表現するのがあまり得意ではないためです。取りうるもう一つのアプローチは、草の色のすべての小さなバリエーションをデジタル化し、別々のポリゴンとしてカバーすることです。このアプローチの問題は、優れたベクタデータセットを作成するために膨大な量の作業が必要になることです。"
 
 #: ../../docs/gentle_gis_introduction/raster_data.rst:60
 msgid ""
@@ -93,6 +135,13 @@ msgstr ""
 " **背景** "
 "として使用してしています。人間の目は画像を解釈する上で非常に優れているので、ベクターレイヤーの背後に画像を使用すると、より多くの意味を持つ地図が得られます。ラスターデータは、現実世界の表面（例えば、衛星画像および航空写真）を描写する画像に適しているだけでなく、より抽象的なアイデアを表現するのにも適しています。たとえば、ラスターを使用して地域の降雨傾向を表示したり、火災リスクを風景上に描いたりできます。この種のアプリケーションでは、ラスター中の各セルは異なる値、たとえば"
 " 1から10の尺度で火災の危険性を表します。"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:78
+msgid ""
+"An example that shows the difference between an image obtained from a "
+"satellite and one that shows calculated values can be seen in "
+":numref:`figure_raster_types`."
+msgstr "衛星から取得した画像と計算値を示す画像の違いを示す例は、 :numref:`figure_raster_types` にあります。"
 
 #: ../../docs/gentle_gis_introduction/raster_data.rst:87
 msgid ""
@@ -133,6 +182,24 @@ msgstr ""
 msgid "Sources of raster data"
 msgstr "ラスターデータのソース"
 
+#: ../../docs/gentle_gis_introduction/raster_data.rst:111
+msgid ""
+"Raster data can be obtained in a number of ways. Two of the most common ways"
+" are aerial photography and satellite imagery. In aerial photography, an "
+"aeroplane flies over an area with a camera mounted underneath it. The "
+"photographs are then imported into a computer and georeferenced. Satellite "
+"imagery is created when satellites orbiting the earth point special digital "
+"cameras towards the earth and then take an image of the area on earth they "
+"are passing over. Once the image has been taken it is sent back to earth "
+"using radio signals to special receiving stations such as the one shown in "
+":numref:`figure_csir_station`. The process of capturing raster data from an "
+"aeroplane or satellite is called **remote sensing**."
+msgstr ""
+"ラスターデータは、さまざまな方法で取得できます。最も一般的な方法の2つは、航空写真と衛星画像です。航空写真では、飛行機がその下にカメラが取り付けられた領域を飛行します。次に、写真がコンピューターにインポートされ、地理参照されます。衛星画像は、地球を周回する衛星が特殊なデジタルカメラを地球に向け、通過する地球上の領域の画像を撮影するときに作成されます。画像が撮影されると、"
+" :numref:`figure_csir_station` "
+"に示されているような特別な受信局に無線信号を使用して地球に送り返されます。飛行機や衛星からラスターデータをキャプチャするプロセスは、 "
+"**リモートセンシング** と呼ばれます。"
+
 #: ../../docs/gentle_gis_introduction/raster_data.rst:127
 msgid ""
 "The CSIR Satellite Applications Center at Hartebeeshoek near Johannesburg. "
@@ -140,6 +207,22 @@ msgid ""
 "using radio waves."
 msgstr ""
 "ヨハネスブルグ近くにあるHartebeeshoekのCSIR衛星アプリケーションセンター。頭上を通過し電波を用いて画像をダウンロードするような特別なアンテナ·トラック衛星である。"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:131
+msgid ""
+"In other cases, raster data can be computed. For example an insurance "
+"company may take police crime incident reports and create a country wide "
+"raster map showing how high the incidence of crime is likely to be in each "
+"area. Meteorologists (people who study weather patterns) might generate a "
+"province level raster showing average temperature, rainfall and wind "
+"direction using data collected from weather stations (see "
+":numref:`figure_csir_station`). In these cases, they will often use raster "
+"analysis techniques such as interpolation (which we describe in Topic "
+":ref:`spatial_analysys`)."
+msgstr ""
+"その他の場合、ラスターデータを計算できます。たとえば、保険会社は警察の犯罪事件の報告を受け取り、各地域で犯罪の発生率がどれほど高いかを示す全国的なラスター地図を作成する場合があります。気象学者（気象パターンを研究する人々）は、気象観測所から収集されたデータを使用して、平均気温、降雨量、および風向を示す州レベルのラスターを生成する場合があります（"
+" :numref:`figure_csir_station` 参照）。このような場合、補間などのラスター分析手法を使用することがよくあります（トピック "
+":ref:`spatial_analysys` で説明します）。"
 
 #: ../../docs/gentle_gis_introduction/raster_data.rst:140
 msgid ""
@@ -158,6 +241,17 @@ msgstr ""
 #: ../../docs/gentle_gis_introduction/raster_data.rst:151
 msgid "Spatial Resolution"
 msgstr "空間的解像度"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:153
+msgid ""
+"Every raster layer in a GIS has pixels (cells) of a fixed size that "
+"determine its spatial resolution. This becomes apparent when you look at an "
+"image at a small scale (see :numref:`figure_raster_small_scale`) and then "
+"zoom in to a large scale (see :numref:`figure_raster_large_scale`)."
+msgstr ""
+"GISのすべてのラスターレイヤーには、空間解像度を決定する固定サイズのピクセル（セル）があります。これは、画像を小さな縮尺で見て（ "
+":numref:`figure_raster_small_scale` 参照）、次に大きな縮尺にズームインすると（ "
+":numref:`figure_raster_large_scale` 参照）明らかになります。"
 
 #: ../../docs/gentle_gis_introduction/raster_data.rst:164
 msgid "This satellite image looks good when using a small scale..."
