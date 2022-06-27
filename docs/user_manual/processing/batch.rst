@@ -168,8 +168,8 @@ as a single process. Depending on the algorithm, the output can be:
 
 * saved as a layer within a database container:
 
-  .. code-block:: bash
-  
+  ::
+
     # Indicate a layer within a GeoPackage file 
     ogr:dbname='C:/Path/To/Geopackage.gpkg' table="New_Table" (geom)
 
