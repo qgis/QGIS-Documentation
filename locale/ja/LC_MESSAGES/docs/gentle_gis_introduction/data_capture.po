@@ -2,19 +2,20 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2022
+# fairtommy <fairtommy@gmail.com>, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 10:22+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:06+0000\n"
+"Last-Translator: fairtommy <fairtommy@gmail.com>, 2022\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,6 +31,10 @@ msgstr "データキャプチャ"
 #: ../../docs/gentle_gis_introduction/data_capture.rst:7
 msgid "|gentleLogo|"
 msgstr "|gentleLogo|"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:438
+msgid "gentleLogo"
+msgstr "gentleLogo"
 
 #: ../../docs/gentle_gis_introduction/data_capture.rst:7
 msgid "Objectives:"
@@ -137,6 +142,22 @@ msgid ""
 "Table Shapefile 1: The basic files that together make up a 'shapefile'."
 msgstr "表　シェープファイル1：一緒に「シェープファイル」を構成する基本的なファイル。"
 
+#: ../../docs/gentle_gis_introduction/data_capture.rst:54
+msgid ""
+"When you look at the files that make up a shapefile on the computer hard "
+"disk, you will see something like :numref:`figure_shapefile`. If you want to"
+" share vector data stored in shapefiles with another person, it is important"
+" to give them all of the files for that layer. So in the case of the trees "
+"layer shown in :numref:`figure_shapefile`, you would need to give the person"
+" :file:`trees.shp`, :file:`trees.shx`, :file:`trees.dbf`, :file:`trees.prj` "
+"and :file:`trees.qml`."
+msgstr ""
+"コンピューターのハードディスク上のシェープファイルを構成するファイルを見ると、 :numref:`figure_shapefile` "
+"のようなものが表示されます。シェープファイルに保存されているベクターデータを他の人と共有したい場合は、その人にそのレイヤーのすべてのファイルを渡すことが大事です。したがって、"
+" :numref:`figure_shapefile` に示されているtreesレイヤーの場合、 :file:` trees.shp` 、 "
+":file:`trees.shx` 、 :file:`trees.dbf`  、:file:`trees.prj`および "
+":file:`trees.qml` を渡す必要があります。"
+
 #: ../../docs/gentle_gis_introduction/data_capture.rst:67
 msgid ""
 "The files that make up a ’trees’ shapefile as seen in the computer’s file "
@@ -190,7 +211,23 @@ msgid ""
 "as a nature reserve or a cultural village, polygons might make a good "
 "choice."
 msgstr ""
-"お住まいの地域のために素敵な観光地図を作成したいと思っているとしましょう。最終的な地図に対するビジョンは、観光客への関心のサイトのためにオーバーレイマーカーと5万分の１のトポシートです。まずは、ジオメトリについて考えてみましょう。ベクターレイヤーはポイント、ポリラインまたはポリゴンの地物を使用して表現できることはわかっています。この観光地図にはどれが最も理にかなっていますか？外を見るポイント、記念碑、古戦場などの特定の位置をマークしたい場合はポイントを使用できます。峠を通じて風光明媚なルートなど、ルートに沿って観光客を取るしたい場合は、ポリラインを使用しても意味があります。自然保護区や文化村など、全体が観光上関心のある領域がある場合は、ポリゴンを選択するのが良いかもしれません。"
+"お住まいの地域のために素敵な観光地図を作成したいと思っているとしましょう。最終的な地図に対するビジョンは、観光客への関心のサイトのためにオーバーレイマーカーと5万分の１のトポシートです。まずは、ジオメトリについて考えてみましょう。ベクターレイヤーはポイント、ポリラインまたはポリゴンの地物を使用して表現できることはわかっています。この観光地図にはどれが最も理にかなっていますか？外を見るポイント、記念碑、古戦場などの特定の位置をマークしたい場合はポイントを使用できます。峠を通る風光明媚なルートなど、ルートに沿って観光客を取るしたい場合は、ポリラインを使用しても意味があります。自然保護区や文化村など、全体が観光上関心のある領域がある場合は、ポリゴンを選択するのが良いかもしれません。"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:100
+msgid ""
+"As you can see it's often not easy to know what type of geometry you will "
+"need. One common approach to this problem is to make one layer for each "
+"geometry type you need. So, for example, if you look at digital data "
+"provided by the Chief Directorate: Surveys and Mapping, South Africa, they "
+"provide a river areas (polygons) layer and a rivers polyline layer. They use"
+" the river areas (polygons) to represent river stretches that are wide, and "
+"they use river polylines to represent narrow stretches of river. In "
+":numref:`figure_tourism` we can see how our tourism layers might look on a "
+"map if we used all three geometry types."
+msgstr ""
+"ご覧のとおり、必要なジオメトリのタイプを知るのは簡単ではないことがよくあります。この問題に対する一般的なアプローチの1つは、必要なジオメトリタイプごとに1つのレイヤーを作成することです。したがって、たとえば南アフリカの測量・地図主任局によって提供されたデジタルデータを見ますと、河川領域の（ポリゴン）レイヤと河川のポリラインレイヤが提供されています。河川領域（ポリゴン）は広い川の広がりを表し、河川のポリラインは狭い川の広がりを表すのに使用されます。"
+" :numref:`figure_tourism` "
+"では、3つのジオメトリタイプすべてを使用した場合に、観光レイヤーが地図上でどのように見えるかを確認できます。"
 
 #: ../../docs/gentle_gis_introduction/data_capture.rst:115
 msgid ""
@@ -355,6 +392,17 @@ msgid ""
 msgstr ""
 "どんな地物をGISに取り込むか、またそれぞれの地物がどんなジオメトリタイプと属性を持つべきか計画したら、空のシェープファイルを作成するための次のステップに進むことができます。"
 
+#: ../../docs/gentle_gis_introduction/data_capture.rst:162
+msgid ""
+"The process usually starts with choosing the 'new vector layer' option in "
+"your GIS Application and then selecting a geometry type (see "
+":numref:`figure_new_shapefile`). As we covered in an earlier topic, this "
+"means choosing either point, polyline or polygon for the geometry."
+msgstr ""
+"この手順は通常、GISアプリケーションで[新しいベクターレイヤー]オプションを選択してから、ジオメトリタイプを選択することから始まります（ "
+":numref:`figure_new_shapefile` "
+"参照）。前のトピックで説明したように、これは、ジオメトリにポイント、ポリライン、またはポリゴンのいずれかを選択することを意味します。"
+
 #: ../../docs/gentle_gis_introduction/data_capture.rst:173
 msgid ""
 "Creating a new vector layer is as simple as filling in a few details in a "
@@ -393,6 +441,17 @@ msgid ""
 msgstr ""
 "シェープファイル形式は、数値フィールド情報を全体の数（ **整数** ）または小数（ **浮動小数点数** ）のいずれかとして保存できます---"
 "キャプチャしようとしている数値データが小数点以下を持っているかどうかを事前に考えておく必要があります。"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:192
+msgid ""
+"The final step (as shown in :numref:`figure_save_shapefile`) for creating a "
+"shapefile is to give it a name and a place on the computer hard disk where "
+"it should be created. Once again it is a good idea to give the shapefile a "
+"short and meaningful name. Good examples are 'rivers', 'watersamples' and so"
+" on."
+msgstr ""
+"シェープファイルを作成するための最後のステップ（ :numref:`figure_save_shapefile` "
+"に示されている）は、シェープファイルに名前とコンピューターのハードディスク上の作成場所を指定することです。繰り返しになりますが、シェープファイルには短くて意味のある名前を付けることをお勧めします。良い例は、「川」、「水質標本」などです。"
 
 #: ../../docs/gentle_gis_introduction/data_capture.rst:203
 msgid ""
@@ -440,6 +499,26 @@ msgid ""
 "polygons."
 msgstr "ジオメトリの取得プロセスはポイント、ポリラインおよびポリゴンかによって異なります。"
 
+#: ../../docs/gentle_gis_introduction/data_capture.rst:226
+msgid ""
+"To **capture a point**, you first use the map pan and zoom tools to get to "
+"the correct geographical area that you are going to be recording data for. "
+"Next you will need to enable the point capture tool. Having done that, the "
+"next place you click with the **left mouse button** in the map view, is "
+"where you want your new point **geometry** to appear. After you click on the"
+" map, a window will appear and you can enter all of the **attribute data** "
+"for that point (see :numref:`figure_attribute_dialog`). If you are unsure of"
+" the data for a given field you can usually leave it blank, but be aware "
+"that if you leave a lot of fields blank it will be hard to make a useful map"
+" from your data!"
+msgstr ""
+"**ポイントをキャプチャ** "
+"するには、最初に地図のパンおよびズームツールを使用して、データを記録する予定の正しい地理的領域に到達します。次に、ポイントキャプチャツールを有効にする必要があります。それが終わったら、地図ビューで"
+" **マウスの左ボタン** で次にクリックする場所は、新しいポイント **ジオメトリ** "
+"を表示する場所です。マップをクリックすると、ウィンドウが表示され、そのポイントのすべての **属性データ** を入力できます（ "
+":numref:`figure_attribute_dialog` "
+"参照）。特定のフィールドのデータがわからない場合は、通常は空白のままにすることができますが、多くのフィールドを空白のままにすると、データから有用な地図を作成するのが難しくなることに注意してください。"
+
 #: ../../docs/gentle_gis_introduction/data_capture.rst:242
 msgid ""
 "After you have captured the point geometry, you will be asked to describe "
@@ -447,6 +526,27 @@ msgid ""
 " you created the vector layer."
 msgstr ""
 "ポイントジオメトリをキャプチャした後は、その属性を記述するように求められます。属性フォームは、ベクターレイヤーを作成したときに指定したフィールドに基づいています。"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:246
+msgid ""
+"To **capture a polyline** the process is similar to that of a point, in that"
+" you need to first use the pan and zoom tools to move the map in the map "
+"view to the correct geographical area. You should be zoomed in enough so "
+"that your new vector polyline feature will have an appropriate scale (see "
+":ref:`gentle_gis_vector_data` for more details on scale issues). When you "
+"are ready, you can click the polyline capture icon in the tool bar and then "
+"start drawing your line by clicking on the map. After you make your first "
+"click, you will notice that the line stretches like an elastic band to "
+"follow the mouse cursor around as you move it. Each time you click with the "
+"**left mouse button**, a new vertex will be added to the map. This process "
+"is shown in :numref:`figure_capture_polyline`."
+msgstr ""
+"**ポリラインをキャプチャ** "
+"するプロセスは、最初にパンツールとズームツールを使用して地図ビューの地図を正しい地理的領域に移動する必要があるという点で、ポイントの手順と似ています。新しいベクターポリライン地物が適切な縮尺になるように、十分にズームインする必要があります（縮尺の問題の詳細については、"
+" :ref:`gentle_gis_vector_data` "
+"参照）。準備ができたら、ツールバーのポリラインキャプチャアイコンをクリックし、地図をクリックして線の描画を開始できます。最初のクリックを行うと、線がゴムバンドのように伸びて、マウスカーソルを動かしながら動き回ることに気付くでしょう。"
+" **マウスの左ボタン** でクリックするたびに、新しい頂点が地図に追加されます。この手順は、 "
+":numref:`figure_capture_polyline` に示されています。"
 
 #: ../../docs/gentle_gis_introduction/data_capture.rst:263
 msgid ""
@@ -497,6 +597,21 @@ msgstr ""
 msgid "Heads-up digitising"
 msgstr "上向きのデジタル化"
 
+#: ../../docs/gentle_gis_introduction/data_capture.rst:289
+msgid ""
+"As you have probably discovered by now if you followed the steps above, it "
+"is pretty hard to draw the features so that they are **spatially correct** "
+"if you do not have other features that you can use as a point of reference. "
+"One common solution to this problem is to use a raster layer (such as an "
+"aerial photograph or a satellite image) as a backdrop layer. You can then "
+"use this layer as a reference map, or even trace the features off the raster"
+" layer into your vector layer if they are visible. This process is known as "
+"'heads-up digitising' and is shown in :numref:`figure_headsup_digitizing`."
+msgstr ""
+"上記の手順を実行した場合、おそらくこれまでに発見したように、参照点として使用できる他の地物がない場合、 **空間的に正しい** "
+"ように地物を描画するのはかなり困難です。この問題の一般的な解決策の1つは、背景レイヤーとしてラスターレイヤー（航空写真や衛星画像など）を使用することです。そうするとこのレイヤーを参照地図として使用できます。また、ラスターレイヤーからベクターレイヤーに地物が表示されている場合は、それらをトレースすることもできます。このプロセスは「上を向いてデジタル化」と呼ばれ、"
+" :numref:`figure_headsup_digitizing` に示されています。"
+
 #: ../../docs/gentle_gis_introduction/data_capture.rst:304
 msgid ""
 "Heads-up digitising using a satellite image as a backdrop. The image is used"
@@ -507,6 +622,22 @@ msgstr ""
 #: ../../docs/gentle_gis_introduction/data_capture.rst:308
 msgid "Digitising using a digitising table"
 msgstr "デジタル化テーブルを使用してデジタル化する"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:310
+msgid ""
+"Another method of capturing vector data is to use a digitising table. This "
+"approach is less commonly used except by GIS professionals, and it requires "
+"expensive equipment. The process of using a digitising table, is to place a "
+"paper map on the table. The paper map is held securely in place using clips."
+" Then a special device called a 'puck' is used to trace features from the "
+"map. Tiny cross-hairs in the puck are used to ensure that lines and points "
+"are drawn accurately. The puck is connected to a computer and each feature "
+"that is captured using the puck gets stored in the computer's memory. You "
+"can see what a digitising puck looks like in "
+":numref:`figure_digitizing_table`."
+msgstr ""
+"ベクターデータをキャプチャする別の方法は、デジタル化テーブルを使用することです。このアプローチは、GISの専門家以外ではあまり一般的に使用されておらず、高価な機器が必要です。デジタル化テーブルを使用する手順は、テーブルに紙の地図を配置することです。紙の地図は、クリップを使用して所定の位置にしっかりと保持されます。次に、「パック」と呼ばれる特別なデバイスを使用して、地図から地物をトレースします。パックの小さな十字線は、線と点が正確に描画されるようにするために使用されます。パックはコンピューターに接続されており、パックを使用してキャプチャされた各地物はコンピューターのメモリに保存されます。"
+" :numref:`figure_digitizing_table` でデジタル化パックがどのように見えるかを確認できます。"
 
 #: ../../docs/gentle_gis_introduction/data_capture.rst:326
 msgid ""
@@ -530,6 +661,18 @@ msgstr ""
 #: ../../docs/gentle_gis_introduction/data_capture.rst:338
 msgid "Common problems / things to be aware of"
 msgstr "一般的な問題 / 注意すべき点"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:340
+msgid ""
+"If you are digitising using a backdrop raster layer such as an aerial "
+"photograph or satellite image, it is very important that the raster layer is"
+" properly georeferenced. A layer that is georeferenced properly displays in "
+"the correct position in the map view based on the GIS Application's internal"
+" model of the Earth. We can see the effect of a poorly georeferenced image "
+"in :numref:`figure_georeference_issue`."
+msgstr ""
+"航空写真や衛星画像などの背景ラスターレイヤーを使用してデジタル化する場合は、ラスターレイヤーが適切に地理参照されていることが非常に重要です。地理参照されたレイヤーは、GISアプリケーションの地球の内部モデルに基づいて、地図ビューの正しい位置に適切に表示されます。地理参照が不十分な画像の影響は、"
+" :numref:`figure_georeference_issue` で確認できます。"
 
 #: ../../docs/gentle_gis_introduction/data_capture.rst:353
 msgid ""
@@ -671,6 +814,12 @@ msgstr ""
 #: ../../docs/gentle_gis_introduction/data_capture.rst:420
 msgid "Further reading"
 msgstr "より詳しく知りたい場合は"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:422
+msgid ""
+"The QGIS User Guide has more detailed information on :ref:`digitising vector"
+" data <editingvector>` in QGIS."
+msgstr "QGISユーザーガイドには、QGISでの :ref:`ベクターデータをデジタル化する <editingvector>` 詳細があります。"
 
 #: ../../docs/gentle_gis_introduction/data_capture.rst:426
 msgid "What's next?"
