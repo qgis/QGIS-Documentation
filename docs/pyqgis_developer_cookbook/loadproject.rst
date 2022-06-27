@@ -18,6 +18,7 @@ Loading Projects
   .. testcode:: loadproject
 
     from qgis.core import (
+        Qgis,
         QgsProject,
         QgsPathResolver
     )
