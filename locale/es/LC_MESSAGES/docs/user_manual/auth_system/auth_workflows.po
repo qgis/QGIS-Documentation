@@ -2,27 +2,28 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
-# Rodrigo Armesto Baztán <rodri_Armesto@hotmail.com>, 2021
+# Harrissou Sant-anna, 2022
+# Lucía Betancourt, 2022
+# Eric Armijo, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 10:18+0000\n"
-"Last-Translator: Rodrigo Armesto Baztán <rodri_Armesto@hotmail.com>, 2021\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:08+0000\n"
+"Last-Translator: Eric Armijo, 2022\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:4
 msgid "User Authentication Workflows"
@@ -209,6 +210,10 @@ msgstr ""
 "detectable de QGIS para cualquier certificado, selecciónelo y haga clic en "
 "|metadata| :sup:`Mostrar información para el certificado`."
 
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:415
+msgid "metadata"
+msgstr "metadata"
+
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:129
 msgid "Certificate info dialog"
 msgstr "Dialogo de Información del certificado"
@@ -230,6 +235,14 @@ msgstr ""
 "*para* certificación seleccionada. Cerrar el cuadro de diálogo **no** "
 "aplicará los cambios de política."
 
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:417
+msgid "selectString"
+msgstr "selectString"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:413
+msgid "fileSave"
+msgstr "fileSave"
+
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:143
 msgid "Saving the trust policy changes"
 msgstr "Guardar los cambios de la política de confianza"
@@ -244,6 +257,10 @@ msgstr ""
 "que serán de confianza para conexiones seguras o cambiar la política de "
 "confianza predeterminada haciendo clic en el botón |TransformSettings| "
 "**Opciones**."
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:421
+msgid "transformSettings"
+msgstr "transformSettings"
 
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:150
 msgid ""
@@ -512,6 +529,25 @@ msgstr ""
 "La contraseña maestra de la base de datos de autenticación debe estar "
 "disponible"
 
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:305
+msgid ""
+"When instantiating the authentication system, Server will create or use "
+":file:`qgis-auth.db` file in the active :ref:`user profile <user_profiles>`,"
+" or the  directory defined by the ``QGIS_AUTH_DB_DIR_PATH`` environment "
+"variable. It may be that the Server's user has no HOME directory, in which "
+"case, use the environment variable to define a directory that the Server's "
+"user has read/write permissions and is not located within the web-accessible"
+" directories."
+msgstr ""
+"Al instanciar el sistema de autenticación, el servidor creará o usará el "
+"archivo :file:`qgis-auth.db` en el :ref:`user profile <user_profiles>` "
+"activo, o el directorio definido por la variable de entorno "
+"``QGIS_AUTH_DB_DIR_PATH``. Puede ser que el usuario del servidor no tenga un"
+" directorio INICIO, en cuyo caso, use la variable de entorno para definir un"
+" directorio en el que el usuario del servidor tenga permisos de "
+"lectura/escritura y no se encuentre dentro de los directorios accesibles a "
+"través de la web."
+
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:313
 msgid ""
 "To pass the master password to Server, write it to the first line of file at"
@@ -595,17 +631,21 @@ msgstr ""
 
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:354
 msgid ""
-"You can pre-configure an SSL server configuration by clicking the |symbologyAdd|"
-" button. Alternatively, you can add a configuration when an SSL error occurs"
-" during a connection and you are presented with an **SSL Error** dialog "
-"(where the error can be ignored temporarily or saved to the database and "
-"ignored):"
+"You can pre-configure an SSL server configuration by clicking the "
+"|symbologyAdd| button. Alternatively, you can add a configuration when an "
+"SSL error occurs during a connection and you are presented with an **SSL "
+"Error** dialog (where the error can be ignored temporarily or saved to the "
+"database and ignored):"
 msgstr ""
 "Puede preconfigurar una configuración de servidor SSL haciendo clic en "
-"|symbologyAdd| botón. Alternativamente, puede agregar una configuración cuando "
-"ocurre un error SSL durante una conexión y se le presenta un cuadro de "
-"diálogo **Error SSL** (donde el error puede ignorarse temporalmente o "
+"|symbologyAdd| botón. Alternativamente, puede agregar una configuración "
+"cuando ocurre un error SSL durante una conexión y se le presenta un cuadro "
+"de diálogo **Error SSL** (donde el error puede ignorarse temporalmente o "
 "guardarse en la base de datos e ignorarse):"
+
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:419
+msgid "symbologyAdd"
+msgstr "symbologyAdd"
 
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:364
 msgid "Manually adding configuration"
