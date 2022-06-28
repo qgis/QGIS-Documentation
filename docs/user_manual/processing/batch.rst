@@ -106,11 +106,11 @@ in the column:
   that column. Existing parameter values (including those from other columns)
   are available for use inside the expression via :ref:`variables
   <general_tools_variables>`.
-  E.g. setting output file names to complex expressions like:
+  E.g. setting the number of segments based on the buffer distance of each layer:
 
   ::
 
-     '/home/me/stuff/buffer_' || left(@INPUT, 30) || '_' || @DISTANCE || '.shp'
+     CASE WHEN @DISTANCE > 20 THEN 12 ELSE 8 END
 
 * :guilabel:`Add Values by Expression...` will add new rows using the values
   from an expression which returns an array (as opposed to :guilabel:`Calculate
@@ -118,7 +118,7 @@ in the column:
   is to allow populating the batch dialog using complex numeric series.
   For example adding rows for a batch buffer using the expression
   ``generate_series(100, 1000, 50)`` for distance parameter results in new rows
-  with values 100, 150, 200, .... 1000. Other parameters are
+  with values 100, 150, 200, .... 1000.
 
 * When setting a file or layer parameter, more options are provided:
 
@@ -129,32 +129,52 @@ in the column:
   * :guilabel:`Add all files from a directory`
   * :guilabel:`Select from open layers`
 
+Output data parameter exposes the same capabilities as when executing the algorithm
+as a single process. Depending on the algorithm, the output can be:
 
-Output data objects are always saved to a file and, unlike when executing an
-algorithm from the toolbox, saving to a temporary file or database is not permitted.
-Path can be set using the :guilabel:`Autofill` options exposed beforehand.
-You can also type the file path directly or use the file chooser dialog that
-appears when clicking on the accompanying :guilabel:`...` button.
+* skipped, if the cell is left empty
+* saved as a temporary layer: fill the cell with ``TEMPORARY_OUTPUT`` and remember
+  to tick the |checkbox| :guilabel:`Load layers on completion` checkbox.
+* saved as a plain file (:file:`.SHP`, :file:`.GPKG`, :file:`.XML`, :file:`.PDF`, :file:`.JPG`,...)
+  whose path could be set with the :guilabel:`Autofill` options exposed beforehand.
+  E.g. use :guilabel:`Calculate by Expression...` to set output file names
+  to complex expressions like:
 
-Once you select the file, a new dialog is shown to allow for auto-completion of
-other cells in the same column (same parameter).
+  ::
 
-.. _figure_processing_save:
+     '/home/me/stuff/buffer_' || left(@INPUT, 30) || '_' || @DISTANCE || '.shp'
 
-.. figure:: img/batch_processing_save.png
-   :align: center
+  You can also type the file path directly or use the file chooser dialog that
+  appears when clicking on the accompanying :guilabel:`...` button.
+  Once you select the file, a new dialog is shown to allow for auto-completion of
+  other cells in the same column (same parameter).
 
-   Batch Processing Save
+  .. _figure_processing_save:
 
-If the default value (:guilabel:`Do not autofill`) is selected, it will just put
-the selected filename in the selected cell from the parameters table. If any of
-the other options is selected, all the cells **below** the selected one will be
-automatically filled based on a defined criteria:
+  .. figure:: img/batch_processing_save.png
+     :align: center
 
-* :guilabel:`Fill with numbers`: incrementally appends a number to the file name
-* :guilabel:`Fill with parameter values`: you can select a parameter whose value
-  in the same row is appended to the file name. This is particularly useful for
-  naming output data objects according to input ones.
+     Batch Processing Save
+
+  If the default value (:guilabel:`Do not autofill`) is selected, it will just put
+  the selected filename in the selected cell from the parameters table. If any of
+  the other options is selected, all the cells **below** the selected one will be
+  automatically filled based on a defined criteria:
+
+  * :guilabel:`Fill with numbers`: incrementally appends a number to the file name
+  * :guilabel:`Fill with parameter values`: you can select a parameter whose value
+    in the same row is appended to the file name. This is particularly useful for
+    naming output data objects according to input ones.
+
+* saved as a layer within a database container:
+
+  ::
+
+    # Indicate a layer within a GeoPackage file 
+    ogr:dbname='C:/Path/To/Geopackage.gpkg' table="New_Table" (geom)
+
+    # Use the "Calculate By Expression" to output to different layers in a GeoPackage
+    'ogr:dbname=\'' || @project_folder || '/Buffers.gpkg\' table="' || @INPUT || '_' || @DISTANCE || '" (geom)'
 
 
 Executing the batch process
