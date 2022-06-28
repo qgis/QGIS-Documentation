@@ -2,19 +2,20 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2022
+# fairtommy <fairtommy@gmail.com>, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 10:26+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:09+0000\n"
+"Last-Translator: fairtommy <fairtommy@gmail.com>, 2022\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,6 +27,19 @@ msgstr ""
 #: ../../docs/training_manual/qgis_server/wms.rst:2
 msgid "|LS| Serving WMS"
 msgstr "|LS| WMSサーバーを運用する"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:4
+msgid ""
+"The data used for this exercise are available in the :file:`qgis-server-"
+"tutorial-data` subdirectory of the :ref:`training data <data_downloadlink>` "
+"you downloaded. For convenience and to avoid possible permissions problems, "
+"we will assume that these files are stored in :file:`/home/qgis/projects` "
+"directory. Hence, adapt the following instructions to your path."
+msgstr ""
+"この演習に使用されるデータは、ダウンロードした :ref:`training data <data_downloadlink>` の "
+":file:`qgis-server-tutorial-data` サブディレクトリにあります。 "
+"便宜上、またパーミッションの問題を回避するために、これらのファイルは :file:`/home/qgis/projects` "
+"ディレクトリに保存されていると想定します。したがって、次の手順をあなたのパスに適合させてください。"
 
 #: ../../docs/training_manual/qgis_server/wms.rst:10
 msgid ""
@@ -222,6 +236,10 @@ msgstr "単純なGetMap要求の後のQgisサーバーの応答"
 msgid "|moderate| |TY| Change the Image and Layers parameters"
 msgstr "|moderate| |TY| 画像とレイヤーのパラメーターを変更する"
 
+#: ../../docs/training_manual/qgis_server/wms.rst:322
+msgid "moderate"
+msgstr "moderate"
+
 #: ../../docs/training_manual/qgis_server/wms.rst:145
 msgid ""
 "Based on the request above, let's replace the ``countries`` layer with "
@@ -269,14 +287,18 @@ msgid ""
 "the returned image type to ``image/png``."
 msgstr "返された画像タイプを ``image/png`` に変更するなど、上からの他のパラメーターを使って遊ぶこともできます。"
 
+#: ../../docs/training_manual/qgis_server/wms.rst:167
+msgid "|moderate| |FA| Use Filter, Opacities and Styles parameters"
+msgstr "|moderate| |FA| フィルタ、不透明度、スタイルのパラメータを使用する"
+
 #: ../../docs/training_manual/qgis_server/wms.rst:169
 msgid ""
-"Let's do another request that adds another layer, some of the :ref:`extra-"
-"getmap-parameters`, **FILTER** and **OPACITIES**, but also uses the standard"
-" STYLES parameter."
+"Let's do another request that adds another layer, some :ref:`basic "
+"parameters <services_basics>`, **FILTER** and **OPACITIES**, but also uses "
+"the standard STYLES parameter."
 msgstr ""
-":ref:`extra-getmap-parameters` 、**FILTER** 、 **OPACITIES** "
-"のような別のレイヤーを追加するリクエストを行いますが、標準のSTYLESパラメーターも使用します。"
+"別のレイヤー、いくつかの :ref:`基本パラメーター <services_basics>`, **FILTER** and **OPACITIES**"
+" を追加するが、標準のSTYLESパラメーターも使用する別のリクエストを実行してみましょう。"
 
 #: ../../docs/training_manual/qgis_server/wms.rst:195
 msgid "Response to a GetMap request with FILTER and OPACITIES parameters"
@@ -296,12 +318,13 @@ msgstr "|moderate| |FA| レッドラインを使う"
 
 #: ../../docs/training_manual/qgis_server/wms.rst:203
 msgid ""
-"Let's do another GetMap request that makes use of the :ref:`qgisserver-"
-"redlining` feature and of the **SELECTION** parameter detailed in the :ref"
-":`extra-getmap-parameters` section:"
+"Let's do another GetMap request that makes use of the :ref:`redlining "
+"<wms_redlining>` feature and of the **SELECTION** parameter detailed in the "
+":ref:`Basics <services_basics>` section:"
 msgstr ""
-":ref:`qgisserver-redlining` 機能と :ref:`extra-getmap-parameters` "
-"セクションで詳しく説明されている **SELECTION** パラメーターを利用する別のGetMapリクエストをしましょう："
+":ref:`redlining <wms_redlining>` 機能と　detailed in the :ref:`Basics "
+"<services_basics>` セクションで詳しく説明されている **SELECTION** "
+"パラメータを利用する別のGetMapリクエストを実行してみましょう："
 
 #: ../../docs/training_manual/qgis_server/wms.rst:229
 msgid ""
@@ -327,6 +350,25 @@ msgstr ""
 #: ../../docs/training_manual/qgis_server/wms.rst:242
 msgid "GetPrint requests"
 msgstr "GetPrintリクエスト"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:244
+msgid ""
+"One very nice feature of QGIS Server is that it makes use of the QGIS "
+"Desktop print layouts. You can learn about it in the :ref:`wms_getprint` "
+"section."
+msgstr ""
+"QGISサーバーの非常に優れた機能の1つは、QGISデスクトップの印刷レイアウトを利用することです。 :ref:`wms_getprint` "
+"セクションでそれについて学ぶことができます。"
+
+#: ../../docs/training_manual/qgis_server/wms.rst:247
+msgid ""
+"If you open the :file:`world.qgs` project with QGIS Desktop you will find a "
+"print layout named ``Population distribution``. A simplified ``GetPrint`` "
+"request that exemplifies this amazing feature is:"
+msgstr ""
+"QGISデスクトップで :file:`world.qgs` "
+"プロジェクトを開くと、「人口分布」という名前の印刷レイアウトが見つかります。この驚くべき機能を例示する単純化された ``GetPrint`` "
+"リクエストは次のとおりです。"
 
 #: ../../docs/training_manual/qgis_server/wms.rst:269
 msgid "Shows the pdf resulted from the above GetPrint request"
