@@ -118,7 +118,7 @@ in the column:
   is to allow populating the batch dialog using complex numeric series.
   For example adding rows for a batch buffer using the expression
   ``generate_series(100, 1000, 50)`` for distance parameter results in new rows
-  with values 100, 150, 200, .... 1000. Other parameters are
+  with values 100, 150, 200, .... 1000.
 
 * When setting a file or layer parameter, more options are provided:
 
