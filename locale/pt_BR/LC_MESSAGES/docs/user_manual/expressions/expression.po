@@ -2,30 +2,53 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2022
+# Ana Mendes, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-20 02:14+0000\n"
-"PO-Revision-Date: 2020-12-24 10:21+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:06+0000\n"
+"Last-Translator: Ana Mendes, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 "Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/user_manual/expressions/expression.rst:7
 msgid "Expressions"
 msgstr "Expressões"
+
+#: ../../docs/user_manual/expressions/expression.rst:15
+msgid ""
+"Based on layer data and prebuilt or user defined functions, **Expressions** "
+"offer a powerful way to manipulate attribute value, geometry and variables "
+"in order to dynamically change the geometry style, the content or position "
+"of the label, the value for diagram, the height of a layout item, select "
+"some features, create virtual field, ..."
+msgstr ""
+"Com base em dados de camada e funções pré-criadas ou definidas pelo usuário,"
+" **Expressões** oferecem uma maneira poderosa de manipular valor de "
+"atributo, geometria e variáveis ​​para alterar dinamicamente o estilo de "
+"geometria, o conteúdo ou a posição do rótulo, o valor do diagrama, a altura "
+"de um item de layout, selecione alguns recursos, crie um campo virtual, ..."
+
+#: ../../docs/user_manual/expressions/expression.rst:21
+msgid ""
+"A list of the default functions and variables for writing expressions can be"
+" found at :ref:`functions_list`, with detailed information and examples."
+msgstr ""
+"Uma lista das funções e variáveis ​​padrão para escrever expressões pode ser"
+" encontrada em :ref:`lista_funções`, com informações detalhadas e exemplos."
 
 #: ../../docs/user_manual/expressions/expression.rst:27
 msgid "The Expression string builder"
@@ -44,6 +67,10 @@ msgstr ""
 msgid "clicking the |expression| button;"
 msgstr "clicando no botão expressão;"
 
+#: ../../docs/user_manual/expressions/expression.rst:424
+msgid "expression"
+msgstr "expressão"
+
 #: ../../docs/user_manual/expressions/expression.rst:33
 msgid ""
 ":ref:`selecting features <sec_selection>` with the |expressionSelect| "
@@ -51,6 +78,10 @@ msgid ""
 msgstr ""
 "ref:`selecionando feições<sec_selection>` com a ferramenta "
 "|expressionSelect| :sup:`Selecionar por Expressão...`;"
+
+#: ../../docs/user_manual/expressions/expression.rst:426
+msgid "expressionSelect"
+msgstr "Selecionar expressão"
 
 #: ../../docs/user_manual/expressions/expression.rst:35
 msgid ""
@@ -60,6 +91,10 @@ msgstr ""
 ":ref:`editando atributos <calculate_fields_values>` com a ferramenta "
 "|calculateField| :sup:`Calculadora de Campo`;"
 
+#: ../../docs/user_manual/expressions/expression.rst:416
+msgid "calculateField"
+msgstr "calcular Campo"
+
 #: ../../docs/user_manual/expressions/expression.rst:37
 msgid ""
 "manipulating symbology, label or layout item parameters with the "
@@ -68,6 +103,10 @@ msgstr ""
 "manipulação de parâmetros de simbologia, rótulo ou item de layout com a "
 "ferramenta |dataDefine| :sup:`Substituição de dados definida` (veja "
 ":ref:`data_defined`);"
+
+#: ../../docs/user_manual/expressions/expression.rst:420
+msgid "dataDefine"
+msgstr "Definir dados "
 
 #: ../../docs/user_manual/expressions/expression.rst:39
 msgid ""
@@ -102,9 +141,32 @@ msgstr ""
 ":ref:`Aba de Editor de Função <function_editor>` a qual ajuda a expandir a "
 "lista de funções por meio de criações customizadas de novas funções."
 
+#: ../../docs/user_manual/expressions/expression.rst:50
+msgid "The Interface"
+msgstr "A interface"
+
+#: ../../docs/user_manual/expressions/expression.rst:52
+msgid ""
+"The :guilabel:`Expression` tab provides the main interface to write "
+"expressions using functions, layer fields and values. It contains the "
+"following widgets:"
+msgstr ""
+"A aba :guilabel:`Expressão` fornece a interface principal para escrever "
+"expressões usando funções, campos de camada e valores. Ele contém os "
+"seguintes widgets:"
+
 #: ../../docs/user_manual/expressions/expression.rst:61
 msgid "The Expression tab"
 msgstr "A guia Expressão"
+
+#: ../../docs/user_manual/expressions/expression.rst:63
+msgid ""
+"An expression editor area for typing or pasting expressions. Autocompletion "
+"is available to speed expression writing:"
+msgstr ""
+"Uma área do editor de expressão para digitar ou colar expressões. O "
+"preenchimento automático está disponível para acelerar a escrita de "
+"expressões:"
 
 #: ../../docs/user_manual/expressions/expression.rst:66
 msgid ""
@@ -156,6 +218,62 @@ msgstr ""
 "comentário com várias linhas ou comentários embutidos para ajudá-lo a se "
 "lembrar."
 
+#: ../../docs/user_manual/expressions/expression.rst:109
+msgid "Above the expression editor, a set of tools helps you:"
+msgstr ""
+"Acima do editor de expressões, um conjunto de ferramentas ajuda você a:"
+
+#: ../../docs/user_manual/expressions/expression.rst:111
+msgid "|fileNew|:sup:`Clear the expression editor`"
+msgstr "|arquivoNovo|:sup:`Limpar o editor de expressão`"
+
+#: ../../docs/user_manual/expressions/expression.rst:428
+msgid "fileNew"
+msgstr "Arquivo Novo"
+
+#: ../../docs/user_manual/expressions/expression.rst:112
+msgid "create and manage :ref:`user expressions <user_expressions_functions>`"
+msgstr ""
+"criar e gerenciar :ref:`expressões de usuário <user_expressions_functions>`"
+
+#: ../../docs/user_manual/expressions/expression.rst:114
+msgid "Under the expression editor, you find:"
+msgstr "No editor de expressões, você encontra:"
+
+#: ../../docs/user_manual/expressions/expression.rst:116
+msgid "a set of basic operators to help you build the expression"
+msgstr ""
+"um conjunto de operadores básicos para ajudá-lo a construir a expressão"
+
+#: ../../docs/user_manual/expressions/expression.rst:117
+msgid ""
+"an indication of the expected format of output when you are data-defining "
+"feature properties"
+msgstr ""
+"uma indicação do formato esperado de saída quando você está definindo "
+"propriedades de recursos de dados"
+
+#: ../../docs/user_manual/expressions/expression.rst:119
+msgid ""
+"a live :guilabel:`Output preview` of the expression, evaluated on the first "
+"feature of the Layer by default. You can browse and evaluate other features "
+"of the layer using the :guilabel:`Feature` combobox (the values are taken "
+"from the :ref:`display name <maptips>` property of the layer)."
+msgstr ""
+"uma :guilabel:`Visualização de saída` ao vivo da expressão, avaliada no "
+"primeiro recurso da Camada por padrão. Você pode navegar e avaliar outros "
+"recursos da camada usando a caixa de combinação :guilabel:`Característica` "
+"(os valores são obtidos da propriedade :ref:`Nome em Exibição <maptips> ` da"
+" camada)."
+
+#: ../../docs/user_manual/expressions/expression.rst:125
+msgid ""
+"In case of error, it indicates it and you can access the details with the "
+"provided hyperlink."
+msgstr ""
+"Em caso de erro, ele o indica e você pode acessar os detalhes com o "
+"hiperlink fornecido."
+
 #: ../../docs/user_manual/expressions/expression.rst:128
 msgid ""
 "A function selector displays the list of functions, variables, fields... "
@@ -183,6 +301,54 @@ msgstr ""
 "Pressione :kbd:`Ctrl+Click` ao passar com o mouse sobre o nome de uma função"
 " em uma expressão para exibir automaticamente sua ajuda na caixa de diálogo."
 
+#: ../../docs/user_manual/expressions/expression.rst:139
+msgid ""
+"A field's values widget shown when a field is selected in the function "
+"selector helps to fetch features attributes:"
+msgstr ""
+"A ferramenta de valores de um campo mostrado quando um campo é selecionado "
+"no seletor de função ajuda a buscar atributos de feições:"
+
+#: ../../docs/user_manual/expressions/expression.rst:142
+msgid "Look for a particular field value"
+msgstr "Procure um valor de campo específico"
+
+#: ../../docs/user_manual/expressions/expression.rst:143
+msgid ""
+"Display the list of :guilabel:`All Unique` or :guilabel:`10 Samples` values."
+" Also available from right-click."
+msgstr ""
+"Exibe a lista de valores :guilabel:`Todos únicos` ou :guilabel:`10 "
+"Amostras`. Também disponível ao clicar com o botão direito."
+
+#: ../../docs/user_manual/expressions/expression.rst:146
+msgid ""
+"When the field is mapped with another layer or a set of values, i.e. if the "
+":ref:`field widget <edit_widgets>` is of *RelationReference*, "
+"*ValueRelation* or *ValueMap* type, it's possible to list all the values of "
+"the mapped field (from the referenced layer, table or list). Moreover, you "
+"can filter this list to |checkbox| :guilabel:`Only show values in use` in "
+"the current field."
+msgstr ""
+"Quando o campo é mapeado com outra camada ou conjunto de valores, ou seja, "
+"se o :ref:`ferramenta de campo <edit_widgets>` for do tipo *Referência de "
+"relação*, *Relação de valor* ou *Mapa de valores*, é possível listar todos "
+"os valores do campo mapeado (da camada, tabela ou lista referenciada). Além "
+"disso, você pode filtrar esta lista para |caixa de seleção| "
+":guilabel:`Mostrar apenas valores em uso` no campo atual."
+
+#: ../../docs/user_manual/expressions/expression.rst:418
+msgid "checkbox"
+msgstr "caixa de seleção"
+
+#: ../../docs/user_manual/expressions/expression.rst:152
+msgid ""
+"Double-clicking a field value in the widget adds it to the expression "
+"editor."
+msgstr ""
+"Clicar duas vezes em um valor de campo na ferramenta o adiciona ao editor de"
+" expressão."
+
 #: ../../docs/user_manual/expressions/expression.rst:156
 msgid ""
 "The right panel, showing functions help or field values, can be collapsed "
@@ -193,7 +359,129 @@ msgstr ""
 "ser recolhido (invisível) na caixa de diálogo. Pressione o botão "
 ":guilabel:`Mostrar valores` ou :guilabel:`Mostrar ajuda` para recuperá-lo."
 
-#: ../../docs/user_manual/expressions/expression.rst:226
+#: ../../docs/user_manual/expressions/expression.rst:162
+msgid "Writing an expression"
+msgstr "Escrevendo uma expressão"
+
+#: ../../docs/user_manual/expressions/expression.rst:164
+msgid ""
+"QGIS expressions are used to select features or set values. Writing an "
+"expression in QGIS follows some rules:"
+msgstr ""
+"As expressões QGIS são usadas para selecionar feições ou definir valores. "
+"Escrever uma expressão no QGIS segue algumas regras:"
+
+#: ../../docs/user_manual/expressions/expression.rst:167
+msgid ""
+"**The dialog defines the context**: if you are used to SQL, you probably "
+"know queries of the type *select features from layer where condition* or "
+"*update layer set field = new_value where condition*. A QGIS expression also"
+" needs all these information but the tool you use to open the expression "
+"builder dialog provides parts of them. For example, giving a layer "
+"(``buildings``) with a field (``height``):"
+msgstr ""
+"**A caixa de diálogo define o contexto**: se você está acostumado com SQL, "
+"provavelmente conhece consultas do tipo *selecionar feições da camada onde "
+"condição* ou *atualizar camada definir campo = novo_valor onde condição*. "
+"Uma expressão QGIS também precisa de todas essas informações, mas a "
+"ferramenta que você usa para abrir a caixa de diálogo do construtor de "
+"expressões fornece partes delas. Por exemplo, dando uma camada "
+"(``edifícios``) com um campo (``altura``):"
+
+#: ../../docs/user_manual/expressions/expression.rst:174
+msgid ""
+"pressing the |expressionSelect|:sup:`Select by expression` tool means that "
+"you want to \"select features from buildings\". The **condition** is the "
+"only information you need to provide in the expression text widget, e.g. "
+"type ``\"height\" > 20`` to select buildings that are higher than 20."
+msgstr ""
+"pressionar a ferramenta |Selecionar expressão|:sup:`Selecionar por "
+"expressão` significa que você quer \"selecionar feições de edifícios\". A "
+"**condição** é a única informação que você precisa fornecer no elemento de "
+"texto de expressão, por exemplo, digite ``\"altura\" > 20`` para selecionar "
+"construções maiores que 20."
+
+#: ../../docs/user_manual/expressions/expression.rst:178
+msgid ""
+"with this selection made, pressing the |calculateField| :sup:`Field "
+"calculator` button and choosing \"height\" as :guilabel:`Update existing "
+"field`, you already provide the command \"update buildings set height = ??? "
+"where height > 20\". The only remaining bits you have to provide in this "
+"case is the **new value**, e.g. just enter ``50`` in the expression editor "
+"textbox to set the height of the previously selected buildings."
+msgstr ""
+"com esta seleção feita, pressionando o |calcular campo| :sup:`Calculadora de"
+" campo` e escolhendo \"altura\" como :guilabel:`Atualizar campo existente`, "
+"você já fornece o comando \"atualizar edifícios definir altura = ??? onde "
+"altura > 20\". Os únicos bits restantes que você precisa fornecer neste caso"
+" são o **novo valor**, por exemplo basta digitar ``50`` na caixa de texto do"
+" editor de expressão para definir a altura dos edifícios selecionados "
+"anteriormente."
+
+#: ../../docs/user_manual/expressions/expression.rst:185
+msgid ""
+"**Pay attention to quotes**: single quotes return a literal, so a text "
+"placed between single quotes (``'145'``) is interpreted as a string. Double "
+"quotes will give you the value of that text so use them for fields "
+"(``\"myfield\"``). Fields can also be used without quotes (``myfield``). No "
+"quotes for numbers (``3.16``)."
+msgstr ""
+"**Preste atenção às aspas**: aspas simples retornam um literal, então um "
+"texto colocado entre aspas simples (``'145'``) é interpretado como uma "
+"string. Aspas duplas lhe darão o valor desse texto, então use-as para campos"
+" (``\"meucampo\"``). Os campos também podem ser usados ​​sem aspas "
+"(``meucampo`). Sem aspas para números (``3.16``)."
+
+#: ../../docs/user_manual/expressions/expression.rst:191
+msgid "Functions normally take as argument a string for field name. Do::"
+msgstr ""
+"As funções normalmente tomam como argumento uma string para o nome do campo."
+" Fazer::"
+
+#: ../../docs/user_manual/expressions/expression.rst:196
+msgid "And not::"
+msgstr "E não::"
+
+#: ../../docs/user_manual/expressions/expression.rst:206
+msgid "**Use named parameters to ease expression reading**"
+msgstr "**Use parâmetros nomeados para facilitar a leitura da expressão**"
+
+#: ../../docs/user_manual/expressions/expression.rst:208
+msgid ""
+"Some functions require many parameters to be set. The expression engine "
+"supports the use of named parameters. This means that instead of writing the"
+" cryptic expression ``clamp( 1, 2, 9)``, you can use ``clamp( min:=1, "
+"value:=2, max:=9)``. This also allows arguments to be switched, e.g. "
+"``clamp( value:=2, max:=9, min:=1)``. Using named parameters helps clarify "
+"what the arguments for an expression function refer to, which is helpful "
+"when you are trying to interpret an expression later!"
+msgstr ""
+"Algumas funções requerem que muitos parâmetros sejam configurados. O "
+"mecanismo de expressão suporta o uso de parâmetros nomeados. Isso significa "
+"que em vez de escrever a expressão enigmática ``clamp( 1, 2, 9)``, você pode"
+" usar ``clamp( min:=1, valor:=2, max:=9)``. Isso também permite que os "
+"argumentos sejam trocados, por exemplo. ``clamp( valor:=2, max:=9, "
+"min:=1)``. O uso de parâmetros nomeados ajuda a esclarecer a que se referem "
+"os argumentos de uma função de expressão, o que é útil quando você está "
+"tentando interpretar uma expressão posteriormente!"
+
+#: ../../docs/user_manual/expressions/expression.rst:216
+msgid "Some use cases of expressions"
+msgstr "Alguns casos de uso de expressões"
+
+#: ../../docs/user_manual/expressions/expression.rst:218
+msgid ""
+"From the Field Calculator, calculate a \"pop_density\" field using the "
+"existing \"total_pop\" and \"area_km2\" fields::"
+msgstr ""
+"Na Calculadora de Campo, calcule um campo \"pop_densidade\" usando os campos"
+" \"total_pop\" e \"area_km2\" existentes::"
+
+#: ../../docs/user_manual/expressions/expression.rst:223
+msgid "Label or categorize features based on their area::"
+msgstr "Rotule ou categorize recursos com base em sua área::"
+
+#: ../../docs/user_manual/expressions/expression.rst:227
 msgid ""
 "Update the field \"density_level\" with categories according to the "
 "\"pop_density\" values::"
@@ -201,7 +489,7 @@ msgstr ""
 "Atualiza-se o campo sobre nível de densidade (\"density_level\") com "
 "categorias de acordo com os valores da densidade (\"pop_density\")::"
 
-#: ../../docs/user_manual/expressions/expression.rst:233
+#: ../../docs/user_manual/expressions/expression.rst:234
 msgid ""
 "Apply a categorized style to all the features according to whether their "
 "average house price is smaller or higher than 10000€ per square metre::"
@@ -210,7 +498,7 @@ msgstr ""
 "condição do valor médio da casa ser maior ou maior do que 10000€ por metro "
 "quadrado:"
 
-#: ../../docs/user_manual/expressions/expression.rst:238
+#: ../../docs/user_manual/expressions/expression.rst:239
 msgid ""
 "Using the \"Select By Expression...\" tool, select all the features "
 "representing areas of “High population density” and whose average house "
@@ -220,11 +508,135 @@ msgstr ""
 "feições representativas de áreas de \"Alta densidade populacional\" e as "
 "quais possuem valor médio da casa maior do que 10000€ por metro :sup:`2`::"
 
-#: ../../docs/user_manual/expressions/expression.rst:308
+#: ../../docs/user_manual/expressions/expression.rst:245
+msgid ""
+"The previous expression could also be used to define which features to label"
+" or show on the map."
+msgstr ""
+"A expressão anterior também pode ser usada para definir quais recursos "
+"rotular ou mostrar no mapa."
+
+#: ../../docs/user_manual/expressions/expression.rst:248
+msgid ""
+"Create a different symbol (type) for the layer, using the geometry "
+"generator::"
+msgstr ""
+"Crie um símbolo (tipo) diferente para a camada, usando o gerador de "
+"geometria::"
+
+#: ../../docs/user_manual/expressions/expression.rst:252
+msgid ""
+"Given a point feature, generate a closed line (using ``make_line``) around "
+"its geometry::"
+msgstr ""
+"Dado um recurso de ponto, gere uma linha fechada (usando ``fazer linha``) em"
+" torno de sua geometria::"
+
+#: ../../docs/user_manual/expressions/expression.rst:265
+msgid ""
+"In a print layout label, display the name of the \"airports\" features that "
+"are within the layout \"Map 1\" item::"
+msgstr ""
+"Em uma etiqueta de layout de impressão, exiba o nome dos recursos "
+"\"aeroportos\" que estão dentro do item \"Mapa 1\" do layout::"
+
+#: ../../docs/user_manual/expressions/expression.rst:280
+msgid "Saving Expressions"
+msgstr "Salvando expressões"
+
+#: ../../docs/user_manual/expressions/expression.rst:282
+msgid ""
+"Using the |fileSave| :sup:`Add current expression to user expressions` "
+"button above the expression editor frame, you can save important expressions"
+" you want to have quick access to. These are available from the **User "
+"expressions** group in the middle panel. They are saved under the :ref:`user"
+" profile <user_profiles>` (:file:`<userprofile>/QGIS/QGIS3.ini` file) and "
+"available in all expression dialogs inside all projects of the current user "
+"profile."
+msgstr ""
+"Usando o |Salvar arquivo| :sup:`Adicionar expressão atual às expressões do "
+"usuário` acima do quadro do editor de expressões, você pode salvar "
+"expressões importantes às quais deseja ter acesso rápido. Eles estão "
+"disponíveis no grupo **Expressões do usuário** no painel do meio. Eles são "
+"salvos no :ref:`perfil de usuário` (:arquivo:`/QGIS/QGIS3.ini`) e estão "
+"disponíveis em todas as caixas de diálogo de expressão dentro de todos os "
+"projetos do perfil de usuário atual."
+
+#: ../../docs/user_manual/expressions/expression.rst:430
+msgid "fileSave"
+msgstr "Salvar arquivo"
+
+#: ../../docs/user_manual/expressions/expression.rst:289
+msgid ""
+"A set of tools available above the expression editor frame helps you manage "
+"the user expressions:"
+msgstr ""
+"Um conjunto de ferramentas disponíveis acima do quadro do editor de "
+"expressão ajuda a gerenciar as expressões do usuário:"
+
+#: ../../docs/user_manual/expressions/expression.rst:292
+msgid ""
+"|fileSave|:sup:`Add the current expression to user expressions`: store the "
+"expression in the user profile. A label and a help text can be added for "
+"easy identification."
+msgstr ""
+"|Salvar arquivo|:sup:`Adicionar a expressão atual às expressões do usuário`:"
+" armazena a expressão no perfil do usuário. Uma etiqueta e um texto de ajuda"
+" podem ser adicionados para facilitar a identificação."
+
+#: ../../docs/user_manual/expressions/expression.rst:295
+msgid ""
+"|symbologyEdit| :sup:`Edit selected expression from user expressions`, as "
+"well as their help and label"
+msgstr ""
+"|Editar simbologia| :sup:`Editar expressão selecionada a partir de "
+"expressões do usuário`, bem como sua ajuda e rótulo"
+
+#: ../../docs/user_manual/expressions/expression.rst:440
+msgid "symbologyEdit"
+msgstr "Editar simbologia"
+
+#: ../../docs/user_manual/expressions/expression.rst:297
+msgid ""
+"|deleteSelected| :sup:`Remove selected expression from user expressions`"
+msgstr ""
+"|Excluir Selecionado| :sup:`Remover a expressão selecionada das expressões "
+"do usuário`"
+
+#: ../../docs/user_manual/expressions/expression.rst:422
+msgid "deleteSelected"
+msgstr "Excluir Selecionado"
+
+#: ../../docs/user_manual/expressions/expression.rst:298
+msgid ""
+"|sharingImport| :sup:`Import user expressions` from a ``.json`` file into "
+"the active user profile folder"
+msgstr ""
+"|compartilhandoImportação| :sup:`Importar expressões de usuário` de um "
+"arquivo ``.json`` para a pasta de perfil de usuário ativa"
+
+#: ../../docs/user_manual/expressions/expression.rst:434
+msgid "sharingImport"
+msgstr "Compartilhando Importação"
+
+#: ../../docs/user_manual/expressions/expression.rst:300
+msgid ""
+"|sharingExport| :sup:`Export user expressions` as a ``.json`` file; all the "
+"user expressions in the user profile :file:`QGIS3.ini` file are shared"
+msgstr ""
+"|compartilhandoExportação| :sup:`Exportar expressões do usuário` como um "
+"arquivo ``.json``; todas as expressões do usuário no perfil do usuário "
+":file:`QGIS3.ini` são compartilhadas"
+
+#: ../../docs/user_manual/expressions/expression.rst:432
+msgid "sharingExport"
+msgstr "Compartilhando Exportação"
+
+#: ../../docs/user_manual/expressions/expression.rst:309
 msgid "Function Editor"
 msgstr "Editor de Funções"
 
-#: ../../docs/user_manual/expressions/expression.rst:310
+#: ../../docs/user_manual/expressions/expression.rst:311
 msgid ""
 "With the :guilabel:`Function Editor` tab, you are able to write your own "
 "functions in Python language. This provides a handy and comfortable way to "
@@ -236,25 +648,29 @@ msgstr ""
 "de abordar necessidades específicas que não seriam cobertas pelas funções "
 "predefinidas."
 
-#: ../../docs/user_manual/expressions/expression.rst:319
+#: ../../docs/user_manual/expressions/expression.rst:320
 msgid "The Function Editor tab"
 msgstr "A guia Editor de Funções"
 
-#: ../../docs/user_manual/expressions/expression.rst:321
+#: ../../docs/user_manual/expressions/expression.rst:322
 msgid "To create a new function:"
 msgstr "Para criar uma nova função:"
 
-#: ../../docs/user_manual/expressions/expression.rst:323
+#: ../../docs/user_manual/expressions/expression.rst:324
 msgid "Press the |symbologyAdd| :sup:`New File` button."
 msgstr "Pressione o botão |symbologyAdd| :sup:`Novo Arquivo`."
 
-#: ../../docs/user_manual/expressions/expression.rst:324
+#: ../../docs/user_manual/expressions/expression.rst:438
+msgid "symbologyAdd"
+msgstr "Adicionar simbologia "
+
+#: ../../docs/user_manual/expressions/expression.rst:325
 msgid "Enter a name to use in the form that pops up and press :guilabel:`OK`."
 msgstr ""
 "Digite um nome para usar no formulário que aparece e pressione "
 ":guilabel:`OK`."
 
-#: ../../docs/user_manual/expressions/expression.rst:326
+#: ../../docs/user_manual/expressions/expression.rst:327
 msgid ""
 "A new item of the name you provide is added in the left panel of the "
 ":guilabel:`Function Editor` tab; this is a Python :file:`.py` file based on "
@@ -267,7 +683,7 @@ msgstr ""
 ":file:`/python/expressions` no diretório ativo :ref:`user profile "
 "<user_profiles>`."
 
-#: ../../docs/user_manual/expressions/expression.rst:330
+#: ../../docs/user_manual/expressions/expression.rst:331
 msgid ""
 "The right panel displays the content of the file: a python script template. "
 "Update the code and its help according to your needs."
@@ -275,7 +691,7 @@ msgstr ""
 "O painel direito exibe o conteúdo do arquivo: um modelo de script python. "
 "Atualize o código e sua ajuda de acordo com suas necessidades."
 
-#: ../../docs/user_manual/expressions/expression.rst:332
+#: ../../docs/user_manual/expressions/expression.rst:333
 msgid ""
 "Press the |start| :guilabel:`Save and Load Functions` button. The function "
 "you wrote is added to the functions tree in the :guilabel:`Expression` tab, "
@@ -285,11 +701,15 @@ msgstr ""
 "que você escreveu é adicionada à árvore de funções na guia "
 ":guilabel:`Expressão`, por padrão, no grupo``Personalizada``."
 
-#: ../../docs/user_manual/expressions/expression.rst:335
+#: ../../docs/user_manual/expressions/expression.rst:436
+msgid "start"
+msgstr "começar"
+
+#: ../../docs/user_manual/expressions/expression.rst:336
 msgid "Enjoy your new function."
 msgstr "Aproveite sua nova função."
 
-#: ../../docs/user_manual/expressions/expression.rst:336
+#: ../../docs/user_manual/expressions/expression.rst:337
 msgid ""
 "If the function requires improvements, enable the :guilabel:`Function "
 "Editor` tab, do the changes and press again the |start| :guilabel:`Save and "
@@ -301,7 +721,7 @@ msgstr ""
 ":guilabel:`Salvar e Carregar Funções` para disponibilizá-las no arquivo, e "
 "portanto, em qualquer guia de expressão."
 
-#: ../../docs/user_manual/expressions/expression.rst:341
+#: ../../docs/user_manual/expressions/expression.rst:342
 msgid ""
 "Custom Python functions are stored under the user profile directory, meaning"
 " that at each QGIS startup, it will auto load all the functions defined with"
@@ -318,14 +738,101 @@ msgstr ""
 "um projeto que utiliza uma de suas funções personalizadas, também precisará "
 "compartilhar o arquivo :file:`.py` na pasta :file:`/python/expression`."
 
-#: ../../docs/user_manual/expressions/expression.rst:402
+#: ../../docs/user_manual/expressions/expression.rst:349
+msgid "To delete a custom function:"
+msgstr "Para excluir uma função personalizada:"
+
+#: ../../docs/user_manual/expressions/expression.rst:351
+msgid "Enable the :guilabel:`Function Editor` tab"
+msgstr "Habilite a aba :guilabel:`Editor de funções`"
+
+#: ../../docs/user_manual/expressions/expression.rst:352
+msgid "Select the function in the list"
+msgstr "Selecione a função na lista"
+
+#: ../../docs/user_manual/expressions/expression.rst:353
+msgid ""
+"Press the |symbologyRemove| :sup:`Remove selected function`. The function is"
+" removed from the list and the corresponding ``.py`` file deleted from the "
+"user profile folder."
+msgstr ""
+"Pressione o botão |Remover simbologia| :sup:`Remover função selecionada`. A "
+"função é removida da lista e o arquivo ``.py`` correspondente é excluído da "
+"pasta de perfil do usuário."
+
+#: ../../docs/user_manual/expressions/expression.rst:442
+msgid "symbologyRemove"
+msgstr "Remover simbologia"
+
+#: ../../docs/user_manual/expressions/expression.rst:357
+msgid "**Example**"
+msgstr "**Exemplo**"
+
+#: ../../docs/user_manual/expressions/expression.rst:359
+msgid ""
+"Here's a short example on how to create your own ``my_sum`` function that "
+"will operate with two values."
+msgstr ""
+"Aqui está um pequeno exemplo de como criar sua própria função ``minha_soma``"
+" que irá operar com dois valores."
+
+#: ../../docs/user_manual/expressions/expression.rst:380
+msgid ""
+"When using the ``args='auto'`` function argument the number of function "
+"arguments required will be calculated by the number of arguments the "
+"function has been defined with in Python (minus 2 - ``feature``, and "
+"``parent``). The ``group='Custom'`` argument indicates the group in which "
+"the function should be listed in the Expression dialog."
+msgstr ""
+"Ao usar o argumento de função ``argumentos='auto'`` o número de argumentos "
+"de função necessários será calculado pelo número de argumentos com os quais "
+"a função foi definida em Python (menos 2 - ``característica``, e "
+"``parentesco``). O argumento ``grupo='Personalizado'`` indica o grupo no "
+"qual a função deve ser listada na caixa de diálogo Expressão."
+
+#: ../../docs/user_manual/expressions/expression.rst:386
+msgid "It is also possible to add keywords arguments like:"
+msgstr "Também é possível adicionar argumentos de palavras-chave como:"
+
+#: ../../docs/user_manual/expressions/expression.rst:388
+msgid ""
+"``usesgeometry=True`` if the expression requires access to the features "
+"geometry. By default :const:`False`."
+msgstr ""
+"``usa geometria = Verdadeira`` se a expressão requer acesso à geometria dos "
+"recursos. Por padrão :const:`Falso`."
+
+#: ../../docs/user_manual/expressions/expression.rst:390
+msgid ""
+"``handlesnull=True`` if the expression has custom handling for NULL values. "
+"If :const:`False` (default), the result will always be NULL as soon as any "
+"parameter is NULL."
+msgstr ""
+"``manipula nulos =`` se a expressão tiver tratamento personalizado para "
+"valores NULOS. Se :const:`Falso` (padrão), o resultado sempre será NULO "
+"assim que qualquer parâmetro for NULO."
+
+#: ../../docs/user_manual/expressions/expression.rst:393
+msgid ""
+"``referenced_columns=[list]``: An array of attribute names that are required"
+" to the function. Defaults to ``[QgsFeatureRequest.ALL_ATTRIBUTES]``."
+msgstr ""
+"``colunas_referenciadas=[lista]``: Uma variedade de nomes de atributos que "
+"são necessários para a função. O padrão é "
+"``[QgsFeatureRequest.ALL_ATTRIBUTES]``."
+
+#: ../../docs/user_manual/expressions/expression.rst:396
+msgid "The previous example function can then be used in expressions:"
+msgstr "A função de exemplo anterior pode ser usada em expressões:"
+
+#: ../../docs/user_manual/expressions/expression.rst:403
 msgid "Custom Function added to the Expression tab"
 msgstr "Função Personalizada adicionada à guia Expressão"
 
-#: ../../docs/user_manual/expressions/expression.rst:405
+#: ../../docs/user_manual/expressions/expression.rst:406
 msgid ""
-"Further information about creating Python code can be found in the :ref"
-":`PyQGIS-Developer-Cookbook`."
+"Further information about creating Python code can be found in the "
+":ref:`PyQGIS-Developer-Cookbook`."
 msgstr ""
 "Informações adicionais sobre a criação de código Python podem ser "
 "encontradas em :ref:`PyQGIS-Developer-Cookbook`."
