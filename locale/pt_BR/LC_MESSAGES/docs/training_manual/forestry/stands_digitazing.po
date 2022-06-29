@@ -2,30 +2,49 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2022
+# Ana Mendes, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 11:59+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:16+0000\n"
+"Last-Translator: Ana Mendes, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 "Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:2
 msgid "|LS| Digitizing Forest Stands"
 msgstr "|LS| Digitalizando Massas Florestais"
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:4
+msgid ""
+"Unless you are going to use your georeferenced map as a simple background "
+"image, the next natural step is to digitize elements from it. You have "
+"already done so in the exercises about creating vector data in "
+":doc:`../create_vector_data/create_new_vector`, when you digitized the "
+"school fields. In this lesson, you are going to digitize the forest stands' "
+"borders that appear in the map as green lines but instead of doing it using "
+"an aerial image, you will use your georeferenced map."
+msgstr ""
+"A menos que você vá usar seu mapa georreferenciado como uma simples imagem "
+"de fundo, o próximo passo natural é digitalizar os elementos dele. Você já "
+"fez isso nos exercícios sobre como criar dados vetoriais em "
+":doc:`../criar/dados_vetoriais /criar_novo_vetor`, quando você digitalizou "
+"os campos da escola. Nesta lição, você irá digitalizar as bordas dos "
+"povoamentos florestais que aparecem no mapa como linhas verdes, mas em vez "
+"de fazer isso usando uma imagem aérea, você usará seu mapa georreferenciado."
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:11
 msgid ""
@@ -39,6 +58,10 @@ msgstr ""
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:15
 msgid "|basic| |FA| Extracting the Forest Stands Borders"
 msgstr "|basic| |FA| Extrayendo los Bordes de las Masas Forestales"
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:371
+msgid "basic"
+msgstr "básico"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:17
 msgid ""
@@ -59,6 +82,23 @@ msgstr ""
 "directamente mirando las imágenes a modo de guía. Esa sería la forma más "
 "adecuada si la imagen desde la que vas a digitalizar es, por ejemplo, una "
 "fotografía aérea."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:24
+msgid ""
+"If what you are using to digitize is a good map, as it is in our case, it is"
+" likely that the information is clearly displayed as lines with different "
+"colors for each type of element. Those colors can be relatively easy "
+"extracted as individual images using an image processing software like `GIMP"
+" <https://www.gimp.org/>`_. Such separate images can be used to assist the "
+"digitizing, as you will see below."
+msgstr ""
+"Se o que você está usando para digitalizar é um bom mapa, como é o nosso "
+"caso, é provável que as informações sejam exibidas claramente como linhas "
+"com cores diferentes para cada tipo de elemento. Essas cores podem ser "
+"extraídas com relativa facilidade como imagens individuais usando um "
+"software de processamento de imagem como o `GIMP <https://www.gimp.org/>`_. "
+"Essas imagens separadas podem ser usadas para auxiliar na digitalização, "
+"como você verá abaixo."
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:30
 msgid ""
@@ -438,6 +478,18 @@ msgstr ""
 "Ahora, si recuerdas los módulos anteriores, tenemos que ajustar y activar "
 "las opciones de rotura:"
 
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:170
+msgid "Go to :menuselection:`Project --> Snapping options...`."
+msgstr "Vá para: selecionar menus :`Projeto --> Opções de encaixe...`."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:171
+msgid ""
+"Activate the snapping for the :kbd:`green_centroids` and the "
+":kbd:`forest_stands` layers."
+msgstr ""
+"Ative o snap para as camadas :kbd:`centróides_verdes` e "
+":kbd:`festandes_floresta`."
+
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:172
 msgid "Set their :guilabel:`Tolerance` to 5 map units."
 msgstr "Ajusta su :guilabel:`Tolerance` a 5 unidades de mapa."
@@ -628,6 +680,14 @@ msgstr "Haz clic derecho para terminar de editar la masa forestal 358."
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:235
 msgid "Enter the :kbd:`id` as 358."
 msgstr "Introduce la :kbd:`id` como 358."
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:236
+msgid ""
+"Click :guilabel:`OK`, your new polygon should show a common border with the "
+"stand 357 as you can see in the image on the right."
+msgstr ""
+"Clique em :guilabel:`OK`, seu novo polígono deve mostrar uma borda comum com"
+" o stand 357 como você pode ver na imagem à direita."
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:242
 msgid ""
