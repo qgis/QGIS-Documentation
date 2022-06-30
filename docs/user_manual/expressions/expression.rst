@@ -382,14 +382,14 @@ will operate with two values.
        return value1 + value2
 
 
-When using the ``args='auto'`` function argument the number of function
-arguments required will be calculated by the number of arguments the function
-has been defined with in Python (minus 2 - ``feature``, and ``parent``).
-The ``group='Custom'`` argument indicates the group in which the function
-should be listed in the Expression dialog.
+The ``@qgsfunction`` decorator accepts the following arguments:
 
-It is also possible to add keywords arguments like:
-
+* ``args``: the number of arguments. When using the ``args='auto'`` argument
+  the number of function arguments required will be calculated by the number of
+  arguments the function has been defined with in Python (minus 2 - ``feature``,
+  and ``parent``). With ``args = -1``, any number of arguments are accepted.
+* The ``group`` argument indicates the group in which the function
+  should be listed in the Expression dialog.
 * ``usesgeometry=True`` if the expression requires access to the features geometry.
   By default :const:`False`.
 * ``handlesnull=True`` if the expression has custom handling for NULL values.
@@ -397,6 +397,17 @@ It is also possible to add keywords arguments like:
   any parameter is NULL.
 * ``referenced_columns=[list]``: An array of attribute names that are required to
   the function. Defaults to ``[QgsFeatureRequest.ALL_ATTRIBUTES]``.
+
+The function itself allows following arguments:
+
+* any number and type of parameters you want to pass to your function, set before
+  the following arguments.
+* ``feature``: the current feature
+* ``parent``: the :class:`QgsExpression <qgis.core.QgsExpression>` object
+* ``context``: If there is an argument called ``context`` found at the last position,
+  this variable will contain a :class:`QgsExpressionContext <qgis.core.QgsExpressionContext>`
+  object, that gives access to various additional information like expression variables.
+  E.g. ``context.variable( 'layer_id' )``
 
 The previous example function can then be used in expressions:
 
