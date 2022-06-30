@@ -44,13 +44,20 @@ and update the whole QGIS documentation.
    "João Gaspar", "Tom Kralidis", "Alexander Bruy", "Paolo Cavallini", "Milo Van der Linden"
    "Peter Ersts", "Ujaval Gandhi", "Dominic Keller", "Giovanni Manghi", "Maximilian Krambach"
    "Anne Ghisla", "Dick Groskamp", "Uros Preloznik", "Stéphane Brunner", "QGIS Korean Translator"
-   "Zoltan Siki", "Håvard Tveite", "Mattheo Ghetta", "Salvatore Larosa", "Konstantinos Nikolaou"
+   "Zoltan Siki", "Håvard Tveite", "Matteo Ghetta", "Salvatore Larosa", "Konstantinos Nikolaou"
    "Tom Chadwin", "Larry Shaffer", "Nathan Woodrow", "Martina Savarese", "Godofredo Contreras"
    "Astrid Emde", "Luigi Pirelli", "Thomas Gratier", "Giovanni Allegri", "GiordanoPezzola"
    "Paolo Corti", "Tudor Bărăscu", "Maning Sambale",  "Claudia A. Engel", "Yoichi Kayama"
    "Otto Dassau", "Denis Rouzaud", "Nick Bearman", "embelding", "ajazepk"
    "Ramon", "Andrei", "zstadler",  "icephale", "Rosa Aguilar"
-   "Patrice Pineault"
+   "Patrice Pineault", "Jörn Gutzeit", "Felix Feckler", "Benoît de Mezzo", "Étienne Trimaille"
+   "Andrea Giudiceandrea", "Julien Cabieces", "roya0045", "Sebastian Gutwein", "Jessica Veenstra"
+   "Ryan Welfle", "Martin Pergler", "Ivan Ivanov", "muranamihdk", "Loïc Bartoletti"
+   "Tomasz Taraś", "Ian Maddaus", "Jürnjakob Dugge", "Roman Bug", "Damiano Lombardi"
+   "Marc Ducobu", "Philip Albrecht", "Dennis Milechin", "Cody Martin", "Savinaud Mickaël"
+   "Stefan Uhrig", "Ariadni-Karolina Alexiou", "Björn Hinkeldey", "Benjamin Riley", "MorriganR"
+   "Thayer Young", "Shane Carey", "Ian Turton", "Emma Hain", "Germán Carrillo"
+   "Jakob Miksch", "Nicolas Boisteault", "Bertrand Rix", "Jorge Rosales", ""
 
 
 .. index:: 
