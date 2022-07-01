@@ -91,12 +91,12 @@ For example, to reuse the |fileOpen| icon available at
 .. testcode:: plugin_snippets
 
     # e.g. somewhere in the initGui
-    self.fileOpen_action = QAction(
-        QIcon(QgsApplication.iconPath("mActionFileOpen.svg")),
+    self.file_open_action = QAction(
+        QgsApplication.getThemeIcon("/mActionFileOpen.svg"),
         self.tr("Select a File..."),
         self.iface.mainWindow()
     )
-    self.iface.addPluginToMenu("MyPlugin", self.fileOpen_action)
+    self.iface.addPluginToMenu("MyPlugin", self.file_open_action)
 
 
 .. index:: Plugins; Customization
