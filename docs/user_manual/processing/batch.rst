@@ -122,12 +122,13 @@ in the column:
 
 * When setting a file or layer parameter, more options are provided:
 
-  * :guilabel:`Add Files by Pattern...` adds new rows to the table for matching
-    files found using a file pattern and folder, with the option to |checkbox|
-    :guilabel:`Search recursively`. E.g. \*.shp.
-  * :guilabel:`Select files`
-  * :guilabel:`Add all files from a directory`
-  * :guilabel:`Select from open layers`
+  * :guilabel:`Add Files by Pattern...`: adds new rows to the table for files
+    matching a :guilabel:`File pattern` in a folder to :guilabel:`Look in`.
+    E.g. ``*.shp`` will add to the list all the :file:`SHP` files in the folder.
+    Check |checkbox| :guilabel:`Search recursively` to also browse sub-folders.
+  * :guilabel:`Select Files...` individually on disk
+  * :guilabel:`Add All Files from a Directory...`
+  * :guilabel:`Select from Open Layers...` in the active project
 
 Output data parameter exposes the same capabilities as when executing the algorithm
 as a single process. Depending on the algorithm, the output can be:
