@@ -288,7 +288,7 @@ Returns TRUE when conditions a and b are true.
 BETWEEN
 .......
 
-Returns TRUE if value is within the specified range. The range is considered inclusive of the bounds. To test for exclusion `NOT BETWEEN` can be used.
+Returns TRUE if value is within the specified range. The range is considered inclusive of the bounds. To test for exclusion NOT BETWEEN can be used.
 
 .. list-table::
    :widths: 15 85
@@ -300,6 +300,9 @@ Returns TRUE if value is within the specified range. The range is considered inc
    * - Examples
      - * ``'B' BETWEEN 'A' AND 'C'`` → TRUE
        * ``2 BETWEEN 1 AND 3`` → TRUE
+       * ``2 BETWEEN 2 AND 3`` → TRUE
+       * ``'B' BETWEEN 'a' AND 'c'`` → FALSE
+       * ``lower('B') BETWEEN 'a' AND 'b'`` → TRUE
 
 
 .. end_BETWEEN_section
@@ -478,6 +481,9 @@ Returns TRUE if value is not within the specified range. The range is considered
    * - Examples
      - * ``'B' NOT BETWEEN 'A' AND 'C'`` → FALSE
        * ``1.0 NOT BETWEEN 1.1 AND 1.2`` → TRUE
+       * ``2 NOT BETWEEN 2 AND 3`` → FALSE
+       * ``'B' NOT BETWEEN 'a' AND 'c'`` → TRUE
+       * ``lower('B') NOT BETWEEN 'a' AND 'b'`` → FALSE
 
 
 .. end_NOT BETWEEN_section
