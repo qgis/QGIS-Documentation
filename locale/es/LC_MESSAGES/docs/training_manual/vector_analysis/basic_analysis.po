@@ -2,27 +2,28 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
-# Rodrigo Armesto Baztán <rodri_Armesto@hotmail.com>, 2021
+# Harrissou Sant-anna, 2022
+# Lucía Betancourt, 2022
+# Eric Armijo, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-13 09:01+0100\n"
-"PO-Revision-Date: 2020-12-24 10:25+0000\n"
-"Last-Translator: Rodrigo Armesto Baztán <rodri_Armesto@hotmail.com>, 2021\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:13+0000\n"
+"Last-Translator: Eric Armijo, 2022\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
+"Generated-By: Babel 2.9.1\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:2
 msgid "|LS| Vector Analysis"
@@ -52,6 +53,10 @@ msgstr ""
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:15
 msgid "|basic| The GIS Process"
 msgstr "|basic| El proceso SIG"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:491
+msgid "basic"
+msgstr "basic"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:17
 msgid ""
@@ -282,6 +287,10 @@ msgstr ""
 "Note el icono |indicatorFilter| al lado de la capa :guilabel:`roads`. Le "
 "ayuda a recordar que esta capa tiene un filtro activado, por lo que algunas "
 "entidades pueden no estar disponibles en el proyecto."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:494
+msgid "indicatorFilter"
+msgstr "indicatorFilter"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:121
 msgid "The map with all the data should look like the following one:"
@@ -596,21 +605,57 @@ msgstr ""
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:279
 msgid ""
-"It shall to be ``1 km`` in radius. Save the new layer in the "
+"It shall be ``1 km`` in radius. Save the new layer in the "
 ":file:`vector_analysis.gpkg` file as ``schools_buffer_1km_dissolved``."
 msgstr ""
-"Deberá tener un radio de ``1 km``. Guarde la nueva capa en el archivo "
+"Tendrá un radio de ``1 km``. Guarde la nueva capa en el archivo "
 ":file:`vector_analysis.gpkg` como ``schools_buffer_1km_dissolved``."
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:282
-msgid ":ref:`Check your results <vector-analysis-basic-1>`"
-msgstr ":ref:`Comprueba tus resultados <vector-analysis-basic-1>`"
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:394
+msgid "Answer"
+msgstr "Respuesta"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:285
+msgid "Your buffer dialog should look like this:"
+msgstr "Su diálogo de búfer debería verse así:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:290
+msgid "The :guilabel:`Buffer distance` is :guilabel:`1` kilometer."
+msgstr "La :guilabel:`Buffer distance` es :guilabel:`1` kilómetro."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:292
+msgid ""
+"The :guilabel:`Segments to approximate` value is set to :guilabel:`20`. This"
+" is optional, but it's recommended, because it makes the output buffers look"
+" smoother. Compare this:"
+msgstr ""
+"El valor de :guilabel:`Segments to approximate` se establece en "
+":guilabel:`20`. Esto es opcional, pero se recomienda, porque hace que los "
+"búferes de salida se vean más fluidos. Compara esto:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:299
+msgid "To this:"
+msgstr "A esto:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:304
+msgid ""
+"The first image shows the buffer with the :guilabel:`Segments to "
+"approximate` value set to :guilabel:`5` and the second shows the value set "
+"to :guilabel:`20`. In our example, the difference is subtle, but you can see"
+" that the buffer's edges are smoother with the higher value."
+msgstr ""
+"La primera imagen muestra el búfer con el valor de :guilabel:`Segments to "
+"approximate` establecido en :guilabel:`5` y la segunda muestra el valor "
+"establecido en :guilabel:`20`. En nuestro ejemplo, la diferencia es sutil, "
+"pero puede ver que los bordes del búfer son más suaves con el valor más "
+"alto."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:310
 msgid "|basic| |FA| Overlapping Areas"
 msgstr "|basic| |FA| Áreas que se solapan."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:287
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:312
 msgid ""
 "Now we have identified areas where the road is less than 50 meters away and "
 "areas where there is a school within 1 km (direct line, not by road). But "
@@ -627,7 +672,7 @@ msgstr ""
 ":menuselection:`Superposición vectorial` en :guilabel:`Caja de Herramientas "
 "de Procesos`."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:296
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:321
 msgid ""
 "Use the two buffer layers as :guilabel:`Input layer` and :guilabel:`Overlay "
 "layer`, choose :file:`vector_analysis.gpkg` GeoPackage in "
@@ -640,11 +685,11 @@ msgstr ""
 ":guilabel:`nombre de la capa` ``road_school_buffers_intersect``. Deja el "
 "resto como se sugiere (por defecto)."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:305
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:330
 msgid "Click :guilabel:`Run`."
 msgstr "Haz click en :guilabel:`Ejecutar`."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:307
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:332
 msgid ""
 "In the image below, the blue areas are where both of the distance criteria "
 "are satisfied."
@@ -652,7 +697,7 @@ msgstr ""
 "En la imagen de abajo, las áreas azules son donde se cumplen los dos "
 "criterios de distancia."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:313
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:338
 msgid ""
 "You may remove the two buffer layers and only keep the one that shows where "
 "they overlap, since that's what we really wanted to know in the first place:"
@@ -660,11 +705,11 @@ msgstr ""
 "Usted puede borrar las dos capas buffer y solo mantener la que muestra la "
 "superposición, dado que eso era lo que queriamos conocer en primer lugar:"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:323
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:348
 msgid "|basic| |FA| Extract the Buildings"
 msgstr "|basic| |FA| Extraer las Construcciones"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:325
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:350
 msgid ""
 "Now you've got the area that the buildings must overlap. Next, you want to "
 "extract the buildings in that area."
@@ -672,7 +717,7 @@ msgstr ""
 "Ahora tienes el área a la que las construcciones deben superponerse. A "
 "continuación, desea extraer las construcciones en esa área."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:328
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:353
 msgid ""
 "Look for the menu entry :menuselection:`Vector Selection --> Extract by "
 "location` within the *Processing Toolbox*"
@@ -680,7 +725,7 @@ msgstr ""
 "Busca la entrada de menú :menuselection:`Selección vectorial --> Extraer por"
 " ubicación` dentro de la *Caja de Herramientas de Procesos*"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:331
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:356
 msgid ""
 "Select ``buildings_34S`` in :guilabel:`Extract features from`. Check "
 ":guilabel:`intersect` in :guilabel:`Where the features (geometric "
@@ -694,11 +739,11 @@ msgstr ""
 ":guilabel:`Comparando los objetos de`. Guarde en el archivo "
 ":file:`vector_analysis.gpkg`, y nombre la capa ``well_located_houses``."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:342
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:367
 msgid "Click :guilabel:`Run` and close the dialog"
 msgstr "Click en :guilabel:`Ejecutar` y cierre el diálogo"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:343
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:368
 msgid ""
 "You will probably find that not much seems to have changed. If so, move the "
 ":guilabel:`well_located_houses` layer to the top of the layers list, then "
@@ -708,7 +753,7 @@ msgstr ""
 "mueva la capa :guilabel:`well_located_houses` a la parte superior de la "
 "lista de capas, luego amplíe."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:350
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:375
 msgid ""
 "The red buildings are those which match our criteria, while the buildings in"
 " green are those which do not."
@@ -716,7 +761,7 @@ msgstr ""
 "Los edificios rojos son los que coinciden con nuestros criterios, mientras "
 "que los edificios en verde son los que no."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:352
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:377
 msgid ""
 "Now you have two separated layers and can remove ``buildings_34S`` from the "
 "layer list."
@@ -724,11 +769,15 @@ msgstr ""
 "Ahora tiene dos capas separadas y puede eliminar ``buildings_34S`` de la "
 "lista de capas."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:358
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:382
 msgid "|moderate| |TY| Further Filter our Buildings"
 msgstr "|moderate| |TY| Filtrado adicional de nuestros Edificios"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:360
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:497
+msgid "moderate"
+msgstr "moderate"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:384
 msgid ""
 "We now have a layer which shows us all the buildings within 1km of a school "
 "and within 50m of a road. We now need to reduce that selection to only show "
@@ -739,7 +788,7 @@ msgstr ""
 "selección para que sólo nos muestre los edificios que están a menos de 500 "
 "metros de un restaurante."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:365
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:389
 msgid ""
 "Using the processes described above, create a new layer called "
 ":guilabel:`houses_restaurants_500m` which further filters your "
@@ -750,15 +799,41 @@ msgstr ""
 ":guilabel:`C` que filtre aún más su capa :guilabel:`well_located_houses` "
 "para mostrar solo aquellos que están dentro de 500m de un restaurante."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:370
-msgid ":ref:`Check your results <vector-analysis-basic-2>`"
-msgstr ":ref:` Comprueba tus resultados  <vector-analysis-basic-2>`"
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:397
+msgid ""
+"To create the new :guilabel:`houses_restaurants_500m` layer, we go through a"
+" two step process:"
+msgstr ""
+"Para crear la nueva capa :guilabel:`houses_restaurants_500m`, pasamos por un"
+" proceso de dos pasos:"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:373
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:400
+msgid ""
+"First, create a buffer of 500m around the restaurants and add the layer to "
+"the map:"
+msgstr ""
+"Primero, cree una zona de influencia de 500 m alrededor de los restaurantes "
+"y agregue la capa al mapa:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:409
+msgid "Next, extract buildings within that buffer area:"
+msgstr ""
+"A continuación, extraiga edificios dentro de esa área de amortiguamiento:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:414
+msgid ""
+"Your map should now show only those buildings which are within 50m of a "
+"road, 1km of a school and 500m of a restaurant:"
+msgstr ""
+"Su mapa ahora debería mostrar solo aquellos edificios que se encuentran "
+"dentro de los 50 m de una carretera, 1 km de una escuela y 500 m de un "
+"restaurante:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:421
 msgid "|basic| |FA| Select Buildings of the Right Size"
 msgstr "|basic| |FA| Seleccionar las Construcciones de Tamaño Adecuado"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:375
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:423
 msgid ""
 "To see which buildings are of the correct size (more than 100 square "
 "meters), we need to calculate their size."
@@ -766,7 +841,7 @@ msgstr ""
 "Para ver qué edificios son del tamaño correcto (más de 100 metros "
 "cuadrados), necesitamos calcular su tamaño."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:378
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:426
 msgid ""
 "Select the :guilabel:`houses_restaurants_500m` layer and open the *Field "
 "Calculator* by clicking on the |calculateField| :sup:`Open Field Calculator`"
@@ -777,7 +852,11 @@ msgstr ""
 ":sup:`Abrir calculadora de campo` en la barra de herramientas principal o en"
 " la ventana de la tabla de atributos"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:382
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:492
+msgid "calculateField"
+msgstr "calculateField"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:430
 msgid ""
 "Select :guilabel:`Create a new field`, set the :guilabel:`Output field name`"
 " to ``AREA``, choose :guilabel:`Decimal number (real)` as :guilabel:`Output "
@@ -788,7 +867,7 @@ msgstr ""
 "como :guilabel:`Tipo de campo de salida`, y elija ``$area`` del grupo "
 ":menuselection:`Geometría`."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:391
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:439
 msgid ""
 "The new field ``AREA`` will contain the area of each building in square "
 "meters."
@@ -796,7 +875,7 @@ msgstr ""
 "El nuevo campo ``AREA`` contendrá el área de cada edificio en metros "
 "cuadrados."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:393
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:441
 msgid ""
 "Click :guilabel:`OK`. The ``AREA`` field has been added at the end of the "
 "attribute table."
@@ -804,7 +883,7 @@ msgstr ""
 "Click en :guilabel:`Aceptar`. El campo ``AREA`` se ha agregado al final de "
 "la tabla de atributos."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:396
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:444
 msgid ""
 "Click the |toggleEditing| :sup:`Toggle Editing` button to finish editing, "
 "and save your edits when prompted."
@@ -812,7 +891,11 @@ msgstr ""
 "Haga click en el botón |toggleEditing| :sup:`Conmutar edición` para "
 "finalizar la edición y guardar las ediciones cuando se le solicite."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:398
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:498
+msgid "toggleEditing"
+msgstr "toggleEditing"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:446
 msgid ""
 "In the :menuselection:`Source` tab of the layer properties, set the "
 ":guilabel:`Provider Feature Filter` to ``\"AREA >= 100``."
@@ -820,11 +903,11 @@ msgstr ""
 "En la pestaña :menuselection:`Fuente` de las propiedades de capa, establezca"
 " el  :guilabel:`Filtro de objeto del proveedor` a ``\"AREA >= 100``."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:404
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:452
 msgid "Click :guilabel:`OK`."
 msgstr "Haz click en :guilabel:`Aceptar`."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:406
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:454
 msgid ""
 "Your map should now only show you those buildings which match our starting "
 "criteria and which are more than 100 square meters in size."
@@ -833,11 +916,11 @@ msgstr ""
 "nuestros criterios iniciales y que tienen más de 100 metros cuadrados de "
 "tamaño."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:411
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:459
 msgid "|basic| |TY|"
 msgstr "|basic| |TY|"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:413
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:461
 msgid ""
 "Save your solution as a new layer, using the approach you learned above for "
 "doing so. The file should be saved within the same GeoPackage database, with"
@@ -847,11 +930,11 @@ msgstr ""
 "anteriormente para hacerlo. El archivo debe guardarse dentro de la misma "
 "base de datos GeoPackage, con el nombre ``solution``."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:419
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:467
 msgid "|IC|"
 msgstr "|IC|"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:421
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:469
 msgid ""
 "Using the GIS problem solving approach together with QGIS vector analysis "
 "tools, you were able to solve a problem with multiple criteria quickly and "
@@ -861,11 +944,11 @@ msgstr ""
 "herramientas de análisis de vectores QGIS, pudo resolver un problema con "
 "múltiples criterios de forma rápida y fácil."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:426
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:474
 msgid "|WN|"
 msgstr "|WN|"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:428
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:476
 msgid ""
 "In the next lesson, we will look at how to calculate the shortest distance "
 "along roads from one point to another."
