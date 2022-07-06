@@ -150,7 +150,7 @@ dependencies.
   from time import sleep
 
   from qgis.core import (
-      QgsApplication, QgsTask, QgsMessageLog,
+      QgsApplication, QgsTask, QgsMessageLog, Qgis
       )
 
   MESSAGE_CATEGORY = 'RandomIntegerSumTask'
