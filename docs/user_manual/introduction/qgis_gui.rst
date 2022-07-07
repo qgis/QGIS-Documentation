@@ -1191,6 +1191,10 @@ copy or paste layer properties (style, scale, CRS...).
      -
      -
      - :ref:`layer_definition_file`
+   * - |georefRun| :guilabel:`Georeferencer...`
+     -
+     -
+     - :ref:`georef`
    * - |editCopy| :guilabel:`Copy Style`
      -
      -
@@ -1629,10 +1633,6 @@ are enabled.
      -
      -
      - :ref:`label_raster_align`
-   * - |georefRun| :guilabel:`Georeferencer`
-     - :kbd:`Alt+R` + :kbd:`G`
-     - :guilabel:`Raster`
-     - :ref:`georef`
    * - :menuselection:`Analysis -->`
      -
      -
