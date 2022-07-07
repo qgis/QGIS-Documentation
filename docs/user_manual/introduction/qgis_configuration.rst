@@ -276,7 +276,7 @@ or when a layer without a CRS is loaded.
 
    Also if anyone knows a link to "datum ensemble" concept?
 
-:guilabel:`Only show CRS accurancy warnings for inaccuracies which exceed` a given
+:guilabel:`Only show CRS accuracy warnings for inaccuracies which exceed` a given
 distance: occurs when you are explicitly creating or modifying a dataset and
 select a CRS based on a datum ensemble with lower
 accuracy. The default is to ``Always show`` the warning if any inaccuracy.
