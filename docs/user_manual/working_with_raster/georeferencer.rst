@@ -10,10 +10,10 @@ Georeferencer
    .. contents::
       :local:
 
-The |georefRun| Georeferencer is a tool for generating world files for rasters.
-It allows you to reference rasters to geographic or projected coordinate systems by
+The |georefRun| Georeferencer is a tool for generating world files for layers.
+It allows you to reference rasters or vectors to geographic or projected coordinate systems by
 creating a new GeoTiff or by adding a world file to the existing image. The basic
-approach to georeferencing a raster is to locate points on the raster for which
+approach to georeferencing a layer is to locate points on it for which
 you can accurately determine coordinates.
 
 **Features**
@@ -26,7 +26,9 @@ you can accurately determine coordinates.
 +--------------------------------+------------------------------+-------------------------------+----------------------------+
 | Icon                           | Purpose                      | Icon                          | Purpose                    |
 +================================+==============================+===============================+============================+
-| |addRasterLayer|               | Open raster                  | |start|                       | Start georeferencing       |
+| |addRasterLayer|               | Open raster                  | |addOgrLayer|                 | Open vector                |
++--------------------------------+------------------------------+-------------------------------+----------------------------+
+| |start|                        | Start georeferencing         |                               |                            |
 +--------------------------------+------------------------------+-------------------------------+----------------------------+
 | |gdalScript|                   | Generate GDAL Script         | |loadGCPpoints|               | Load GCP Points            |
 +--------------------------------+------------------------------+-------------------------------+----------------------------+
@@ -70,7 +72,7 @@ transformation type. Based on the input parameters and data, the Georeferencer w
 compute the world file parameters. The more coordinates you provide, the better
 the result will be.
 
-The first step is to start QGIS and click on :menuselection:`Raster -->` |georefRun|
+The first step is to start QGIS and click on :menuselection:`Layer -->` |georefRun|
 :menuselection:`Georeferencer`, which appears in the QGIS menu bar. The Georeferencer
 dialog appears as shown in :numref:`figure_georeferencer_dialog`.
 
@@ -273,6 +275,8 @@ the new georeferenced raster.
 .. |addGCPPoint| image:: /static/common/mActionAddGCPPoint.png
    :width: 1.5em
 .. |addRasterLayer| image:: /static/common/mActionAddRasterLayer.png
+   :width: 1.5em
+.. |addOgrLayer| image:: /static/common/mActionAddOgrLayer.png
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
