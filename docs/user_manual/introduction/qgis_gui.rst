@@ -2479,7 +2479,7 @@ In the dialog that opens:
 ===========
 
 3D visualization support is offered through the 3D map view.
-You can create, manage and open 3D map views via :menuselection:`View -->` :menuselection:`3D Map Views`.
+You can create, manage and open 3D map views via :menuselection:`View --> 3D Map Views -->` menu:
 
 #. By clicking on |new3DMap| :menuselection:`New 3D Map View` you can create a new 3D map view.
    A floating QGIS panel will appear. 
