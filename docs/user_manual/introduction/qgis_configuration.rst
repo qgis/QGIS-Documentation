@@ -226,6 +226,9 @@ possible to filter them by activating
 CRS and Transforms Settings
 ---------------------------
 
+.. note:: For more information on how QGIS handles layer projection, please
+  read the dedicated section at :ref:`label_projections`.
+
 CRS Handling
 ............
 
