@@ -657,6 +657,10 @@ actions like:
      - :kbd:`Ctrl+Alt+M`
      -
      - :ref:`label_3dmapview`
+   * - :menuselection:`--> Manage 3D Map Views`
+     -
+     -
+     - :ref:`label_3dmapview`
    * - |pan| :guilabel:`Pan Map`
      -
      - :guilabel:`Map Navigation`
