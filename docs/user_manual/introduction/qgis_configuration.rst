@@ -342,7 +342,7 @@ which must conform to a WKT or Proj string format.
    User Defined CRS
 
 Set a :guilabel:`Name` and use |symbologyAdd| :guilabel:`Add new CRS`. 
-If you want to delete an exiting one you can use |symbologyRemove| :guilabel:`Remove CRS`.
+If you want to delete an existing one you can use |symbologyRemove| :sup:`Remove CRS`.
 
 **Definition**
 
