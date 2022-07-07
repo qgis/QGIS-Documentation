@@ -362,9 +362,6 @@ If you want to delete an existing one you can use |symbologyRemove| :sup:`Remove
 Here you can test your created CRS definition by Latitude and Longitude. 
 Use a known coordinate control if your definitiin is accurate.
 
-.. note:: For more information on how QGIS handles layer projection, please
-  read the dedicated section at :ref:`label_projections`.
-
 
 .. _datasources_options:
 
