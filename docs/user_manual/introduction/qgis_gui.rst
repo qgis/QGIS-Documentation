@@ -649,7 +649,11 @@ actions like:
      - :kbd:`Ctrl+M`
      -
      - :ref:`label_mapview`
-   * - |new3DMap| :guilabel:`3D Map Views`
+   * - :menuselection:`3D Map Views -->`
+     -
+     -
+     - :ref:`label_3dmapview`
+   * - :menuselection:`-->` |new3DMap| :guilabel:`New 3D Map View`
      - :kbd:`Ctrl+Alt+M`
      -
      - :ref:`label_3dmapview`
