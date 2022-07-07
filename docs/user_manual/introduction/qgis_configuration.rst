@@ -324,7 +324,7 @@ Here you can control whether reprojecting layers to another CRS should be:
     See :ref:`datum_transformation` for more details.
 
 
-You can |symbologyAdd| :guilabel:`Add`, |symbologyRemove| :guilabel:`Remove` or |toggleEditing| :guilabel:`Edit` transformations,
+You can |symbologyAdd| :sup:`Add`, |symbologyRemove| :sup:`Remove` or |toggleEditing| :sup:`Edit` transformations,
 which will be used in any newly created project.
 
 
