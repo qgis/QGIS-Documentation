@@ -2489,9 +2489,6 @@ You can create, manage and open 3D map views via :menuselection:`View --> 3D Map
 #. If you created one or more 3D map views, you see them listed in :menuselection:`3D Map Views`.
    You can turn them on and off by clicking on. They will be saved by saving the project, even if they are turned off.  
 
-When you clicked on |new3DMap| :menuselection:`New 3D Map View` it has the same extent and view as the
-2D main map canvas. The panel can be docked. A set of navigation tools are available to turn
-the view into 3D.
 
 .. _figure_3dmapview:
 
