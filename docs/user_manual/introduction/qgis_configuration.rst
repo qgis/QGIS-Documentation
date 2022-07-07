@@ -282,7 +282,7 @@ select a CRS based on a datum ensemble with lower
 accuracy. The default is to ``Always show`` the warning if any inaccuracy.
 Requires a QGIS version using at least `PROJ 8.0 <https://proj.org/index.html>`_.
 
-|unchecked| :guilabel:`Show CRS accurancy warning for layers in project legend`:
+|unchecked| :guilabel:`Show CRS accuracy warning for layers in project legend`:
 If checked, any layer with a CRS with accuracy issues (i.e. a dynamic crs with
 no coordinate epoch available, or a CRS based on a datum ensemble with inherent inaccuracy
 exceeding the user-set limit) will have the |indicatorLowAccuracy| warning icon
