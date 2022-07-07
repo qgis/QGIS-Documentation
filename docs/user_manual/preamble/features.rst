@@ -81,7 +81,7 @@ several formats. QGIS offers the following:
 
 * Vector digitizing tools
 * Ability to create and edit multiple file formats and GRASS vector layers
-* Georeferencer plugin to geocode images
+* Georeferencer tool to geocode vectors and images
 * GPS tools to import and export GPX format, and convert other GPS
   formats to GPX or down/upload directly to a GPS unit (on Linux,
   usb: has been added to list of GPS devices)
