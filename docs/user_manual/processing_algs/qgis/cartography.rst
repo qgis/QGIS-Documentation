@@ -973,7 +973,7 @@ Python code
 
 .. _qgisprintlayouttopdf:
 
-Export print layout as pdf
+Export print layout as PDF
 --------------------------
 Exports a print layout as a PDF file.
 
