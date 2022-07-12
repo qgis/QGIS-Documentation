@@ -649,8 +649,16 @@ actions like:
      - :kbd:`Ctrl+M`
      -
      - :ref:`label_mapview`
-   * - |new3DMap| :guilabel:`New 3D Map View`
+   * - :menuselection:`3D Map Views -->`
+     -
+     -
+     - :ref:`label_3dmapview`
+   * - :menuselection:`-->` |new3DMap| :guilabel:`New 3D Map View`
      - :kbd:`Ctrl+Alt+M`
+     -
+     - :ref:`label_3dmapview`
+   * - :menuselection:`--> Manage 3D Map Views`
+     -
      -
      - :ref:`label_3dmapview`
    * - |pan| :guilabel:`Pan Map`
@@ -2471,13 +2479,17 @@ In the dialog that opens:
 ===========
 
 3D visualization support is offered through the 3D map view.
-You create and open a 3D map view via :menuselection:`View -->`
-|new3DMap| :menuselection:`New 3D Map View`.
-A floating QGIS panel will appear. The panel can be docked.
+You can create, manage and open 3D map views via :menuselection:`View --> 3D Map Views -->` menu:
 
-To begin with, the 3D map view has the same extent and view as the
-2D main map canvas. A set of navigation tools are available to turn
-the view into 3D.
+#. By clicking on |new3DMap| :menuselection:`New 3D Map View` you can create a new 3D map view.
+   A floating and dockable QGIS panel will appear (see :ref:`figure_3dmapview`).
+   It has the same extent and view as the 2D main map canvas
+   and provides a set of navigation tools to turn the view into 3D.
+#. By clicking on :menuselection:`Manage 3D Map Views` you get in the 3D Map Views Manager. 
+   Here you get the ability to open, duplicate, remove and rename 3D map views.
+#. If you created one or more 3D map views, you see them listed in :menuselection:`3D Map Views`.
+   You can turn them on and off by clicking on. They will be saved by saving the project, even if they are turned off.  
+
 
 .. _figure_3dmapview:
 
