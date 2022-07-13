@@ -7,22 +7,23 @@
 # Translators:
 # Harrissou Sant-anna, 2022
 # Abigaíl García, 2022
+# Eric Armijo, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-12 00:23+0100\n"
+"POT-Creation-Date: 2022-06-29 02:45+0000\n"
 "PO-Revision-Date: 2022-03-14 05:11+0000\n"
-"Last-Translator: Abigaíl García, 2022\n"
+"Last-Translator: Eric Armijo, 2022\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.10.3\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/pyqgis_developer_cookbook/loadproject.rst:14
 msgid "Loading Projects"
@@ -185,3 +186,39 @@ msgstr ""
 ":meth:`removePathPreprocessor() "
 "<qgis.core.QgsPathResolver.removePathPreprocessor>` y "
 ":meth:`removePathWriter() <qgis.core.QgsPathResolver.removePathWriter>`."
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:164
+msgid "Using flags to speed up things"
+msgstr "Uso de banderas para acelerar las cosas"
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:166
+msgid ""
+"In some instances where you may not need to use a fully fonctionnal project,"
+" but only want to access it for a specific reason, flags may be helpful. A "
+"full list of flags is available under :class:`ReadFlag "
+"<qgis.core.QgsProject.ReadFlag>`. Multiple flags can be added together."
+msgstr ""
+"En algunos casos en los que no es necesario utilizar un proyecto "
+"completamente funcional, sino que sólo se quiere acceder a él por una razón "
+"específica, las banderas pueden ser útiles. Una lista completa de banderas "
+"está disponible en :class:`ReadFlag <qgis.core.QgsProject.ReadFlag>`. Se "
+"pueden añadir múltiples banderas juntas."
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:170
+msgid ""
+"As an example, if we do not care about actual layers and data and simply "
+"want to access a project (e.g. for layout or 3D view settings), we can use "
+"``FlagDontResolveLayers`` to bypass the data validation step and prevent the"
+" bad layer dialog from appearing. The following can be done:"
+msgstr ""
+"Como ejemplo, si no nos preocupamos por las capas y los datos reales y "
+"simplemente queremos acceder a un proyecto (por ejemplo, para el diseño o la"
+" configuración de la vista 3D), podemos utilizar ``FlagDontResolveLayers`` "
+"para omitir el paso de validación de datos y evitar que aparezca el cuadro "
+"de diálogo de capas incorrectas. Se puede hacer lo siguiente:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:182
+msgid "To add more flags the python Bitwise OR operator (``|``) must be used."
+msgstr ""
+"Para añadir más banderas se debe utilizar el operador Bitwise OR de python "
+"(``|``)."
