@@ -406,75 +406,75 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
-  .. _qgisfilterbygeometry:
+.. _qgisfilterbygeometry:
 
-  Filter by geometry type
-  -----------------------
-  Filters features by their geometry type. Incoming features will be directed
-  to different outputs based on whether they have a point, line or polygon geometry.
+Filter by geometry type
+-----------------------
+Filters features by their geometry type. Incoming features will be directed
+to different outputs based on whether they have a point, line or polygon geometry.
 
-  Parameters
-  ..........
+Parameters
+..........
 
-  .. list-table::
-     :header-rows: 1
-     :widths: 20 20 20 40
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
 
-     * - Label
-       - Name
-       - Type
-       - Description
-     * - **Input layer**
-       - ``INPUT``
-       - [vector: any]
-       - Layer to evaluate
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Layer to evaluate
 
-  Outputs
-  .......
+Outputs
+.......
 
-  .. list-table::
-     :header-rows: 1
-     :widths: 20 20 20 40
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
 
-     * - Label
-       - Name
-       - Type
-       - Description
-     * - **Point features**
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Point features**
 
-         Optional
-       - ``POINTS``
-       - [vector: point]
-       - Layer with points
-     * - **Line features**
+       Optional
+     - ``POINTS``
+     - [vector: point]
+     - Layer with points
+   * - **Line features**
 
-         Optional
-       - ``LINES``
-       - [vector: line]
-       - Layer with lines
-     * - **Polygon features**
+       Optional
+     - ``LINES``
+     - [vector: line]
+     - Layer with lines
+   * - **Polygon features**
 
-         Optional
-       - ``POLYGONS``
-       - [vector: polygon]
-       - Layer with polygons
-     * - **Features with no geometry**
+       Optional
+     - ``POLYGONS``
+     - [vector: polygon]
+     - Layer with polygons
+   * - **Features with no geometry**
 
-         Optional
-       - ``NO_GEOMETRY``
-       - [table]
-       - Geometry-less vector layer
+       Optional
+     - ``NO_GEOMETRY``
+     - [table]
+     - Geometry-less vector layer
 
-  Python code
-  ...........
+Python code
+...........
 
-  **Algorithm ID**: ``native:filterbygeometry``
+**Algorithm ID**: ``native:filterbygeometry``
 
-  .. include:: ../algs_include.rst
-    :start-after: **algorithm_code_section**
-    :end-before: **end_algorithm_code_section**
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
-  
+
 .. _qgisrandomextract:
 
 Random extract
