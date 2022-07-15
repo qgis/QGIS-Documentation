@@ -2595,9 +2595,8 @@ Terrain
     Raising this value will add vertical walls ("skirts") around terrain
     tiles to hide the cracks.
 
-  * :guilabel:`Terrain elevation offset`: moves the terrain up or down,
-    e.g. to adjust its elevation with respect to the ground level of other objects
-    in the scene.
+  * :guilabel:`Offset`: moves the terrain up or down, e.g. to adjust its elevation
+    with respect to the ground level of other objects in the scene.
 
     This can be useful when there is a discrepancy between the height of the terrain
     and the height of layers in your scene (e.g. point clouds which use a relative
