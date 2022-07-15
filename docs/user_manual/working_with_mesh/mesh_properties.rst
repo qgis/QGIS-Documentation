@@ -430,7 +430,7 @@ https://fvwiki.tuflow.com/index.php?title=Depth_Averaging_Results.
 -------------------
 
 Mesh layers can be used as :ref:`terrain in a 3D map view <scene_configuration>`
-based on their vertices Z values. From the |3d| :guilabel:`3D` properties tab,
+based on their vertices Z values. From the |3d| :guilabel:`3D View` properties tab,
 it's also possible to render the mesh layer's dataset in the same 3D view.
 Therefore, the vertical component of the vertices can be set equal to dataset
 values (for example, level of water surface) and the texture of the mesh can
