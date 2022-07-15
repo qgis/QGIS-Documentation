@@ -360,7 +360,7 @@ If you want to delete an existing one you can use |symbologyRemove| :sup:`Remove
 **Test**
 
 Here you can test your created CRS definition by Latitude and Longitude. 
-Use a known coordinate control if your definitiin is accurate.
+Use a known coordinate to control if your definition is accurate.
 
 
 .. _datasources_options:
