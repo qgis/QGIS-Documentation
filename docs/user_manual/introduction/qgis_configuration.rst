@@ -223,11 +223,17 @@ possible to filter them by activating
 .. index:: CRS, On-the-fly reprojection
 .. _crs_options:
 
-CRS Settings
-------------
+CRS and Transforms Settings
+---------------------------
 
 .. note:: For more information on how QGIS handles layer projection, please
   read the dedicated section at :ref:`label_projections`.
+
+CRS Handling
+............
+
+In the |crs| :guilabel:`CRS Handling` tab you can configure which CRS will 
+be used for a new project or layer.
 
 .. _figure_crs_options:
 
@@ -236,7 +242,7 @@ CRS Settings
 
    CRS Settings in QGIS
 
-**CRS for projects**
+**CRS for Projects**
 
 There is an option to automatically set new project’s CRS:
 
@@ -250,7 +256,7 @@ The choice will be saved for use in subsequent QGIS sessions.
 The Coordinate Reference System of the project can still be overridden from
 the :menuselection:`Project --> Properties... --> CRS` tab.
 
-**CRS for layers**
+**CRS for Layers**
 
 :guilabel:`Default CRS for layers`: select a default CRS to use when you
 create a layer
@@ -265,7 +271,7 @@ or when a layer without a CRS is loaded.
 
 .. _crs_inaccuracies:
 
-**Accuracy warnings**
+**Accuracy Warnings**
 
 .. A small intro either on accuracy differences between CRS/datum,
    or static vs dynamic CRS would be nice here.
@@ -273,13 +279,13 @@ or when a layer without a CRS is loaded.
 
    Also if anyone knows a link to "datum ensemble" concept?
 
-:guilabel:`Only show warnings for CRS inaccuracies which exceed` a given
+:guilabel:`Only show CRS accuracy warnings for inaccuracies which exceed` a given
 distance: occurs when you are explicitly creating or modifying a dataset and
 select a CRS based on a datum ensemble with lower
 accuracy. The default is to ``Always show`` the warning if any inaccuracy.
 Requires a QGIS version using at least `PROJ 8.0 <https://proj.org/index.html>`_.
 
-|unchecked| :guilabel:`Show warning for CRS inaccuracies for layers in project legend`:
+|unchecked| :guilabel:`Show CRS accuracy warning for layers in project legend`:
 If checked, any layer with a CRS with accuracy issues (i.e. a dynamic crs with
 no coordinate epoch available, or a CRS based on a datum ensemble with inherent inaccuracy
 exceeding the user-set limit) will have the |indicatorLowAccuracy| warning icon
@@ -295,10 +301,10 @@ of meter/submeter level are potentially very dangerous or expensive!
 .. index:: CRS, Datum transformation, Reprojection
 .. _transformations_options:
 
-Transformations Settings
-------------------------
+Coordinate Transforms
+.....................
 
-The |transformation| :guilabel:`Transformations` tab helps you set coordinate
+The |transformation| :guilabel:`Coordinate Transforms` tab helps you set coordinate
 transformations and operations to apply when loading a layer to a project or
 reprojecting a layer.
 
@@ -309,9 +315,9 @@ reprojecting a layer.
 
    Transformations Settings
 
-**Default datum transformations**
+**Default Datum Transformations**
 
-In this group, you can control whether reprojecting layers to another CRS should be:
+Here you can control whether reprojecting layers to another CRS should be:
 
 * automatically processed using QGIS default transformations settings;
 * and/or more controlled by you with custom preferences such as:
@@ -319,6 +325,42 @@ In this group, you can control whether reprojecting layers to another CRS should
   * |checkbox| :guilabel:`Ask for datum transformation if several are available`
   * a predefined list of datum transformations to apply by default.
     See :ref:`datum_transformation` for more details.
+
+
+You can |symbologyAdd| :sup:`Add`, |symbologyRemove| :sup:`Remove` or |toggleEditing| :sup:`Edit` transformations,
+which will be used in any newly created project.
+
+
+User Defined CRS
+................
+
+The |customProjection| :guilabel:`User Defined CRS` tab helps you to define a custom CRS
+which must conform to a WKT or Proj string format. 
+
+.. _figure_defined_crs:
+
+.. figure:: img/defined_crs.png
+   :align: center
+
+   User Defined CRS
+
+Set a :guilabel:`Name` and use |symbologyAdd| :sup:`Add new CRS`. 
+If you want to delete an existing one you can use |symbologyRemove| :sup:`Remove CRS`.
+
+**Definition**
+
+* :guilabel:`Format`
+   * WKT (Recommended)
+   * Proj String (Legacy - Not Recommended)
+
+* :guilabel:`Parameters`
+   * |editCopy| Copy parameters from an existing CRS.
+   * :guilabel:`Validate` tests if your expression is correct.
+
+**Test**
+
+Here you can test your created CRS definition by Latitude and Longitude. 
+Use a known coordinate to control if your definition is accurate.
 
 
 .. _datasources_options:
@@ -2188,6 +2230,8 @@ in the QGIS user profile.
 .. |symbologyRemove| image:: /static/common/symbologyRemove.png
    :width: 1.5em
 .. |temporal| image:: /static/common/temporal.png
+   :width: 1.5em
+.. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
 .. |transformation| image:: /static/common/transformation.png
    :width: 1.5em
