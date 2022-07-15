@@ -2595,24 +2595,21 @@ Terrain
     Raising this value will add vertical walls ("skirts") around terrain
     tiles to hide the cracks.
 
-* :guilabel:`Terrain elevation offset`: moves the terrain up or down,
-  e.g. to adjust its elevation with respect to the ground level of other objects
-  in the scene.
+  * :guilabel:`Terrain elevation offset`: moves the terrain up or down,
+    e.g. to adjust its elevation with respect to the ground level of other objects
+    in the scene.
 
-  This can be useful when there is a discrepancy between the height of the terrain
-  and the height of layers in your scene (e.g. point clouds which use a relative
-  vertical height only). In this case adjusting the terrain elevation manually to
-  coincide with the elevation of objects in your scene can improve the navigation
-  experience.
+    This can be useful when there is a discrepancy between the height of the terrain
+    and the height of layers in your scene (e.g. point clouds which use a relative
+    vertical height only). In this case adjusting the terrain elevation manually to
+    coincide with the elevation of objects in your scene can improve the navigation
+    experience.
 
 * When a mesh layer is used as terrain, you can configure the
-  :guilabel:`Triangles settings` (wireframe display, smooth triangles) and the
-  :guilabel:`Rendering colors settings` (as uniform or depending on terrain level).
-  More details in the :ref:`Mesh layer properties <label_meshproperties>` section.
-
-  .. TODO: replace the mesh properties link with a direct one to the 3D section
-     when available
-
+  :guilabel:`Triangles settings` (wireframe display, smooth triangles,
+  level of detail) and the :guilabel:`Rendering colors settings` (as a uniform color
+  or :ref:`color ramp based <color_ramp_shader>`).
+  More details in the :ref:`Mesh layer 3D properties <mesh3dview>` section.
 * |unchecked| :guilabel:`Terrain shading`: Allows you to choose how the
   terrain should be rendered:
 
