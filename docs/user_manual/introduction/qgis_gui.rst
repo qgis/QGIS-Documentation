@@ -2104,6 +2104,7 @@ Below is a list of the default panels provided by QGIS:
 * the :ref:`Temporal Controller <temporal_controller>`
 * the :ref:`Tile Scale Panel <tilesets>`
 * the :ref:`Undo/Redo Panel <undo_redo_panel>`
+* the :ref:`Vertex Editor Panel <vertex_editor_panel>`
 
 
 .. index:: Map view

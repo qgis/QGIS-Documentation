@@ -412,7 +412,7 @@ functions:
 .. _table_editing:
 
 +------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
-| Icon                         | Purpose                                        | Icon                     | Purpose                                   |
+| Tool                         | Purpose                                        | Tool                     | Purpose                                   |
 +==============================+================================================+==========================+===========================================+
 | |allEdits|                   | Access to save, rollback or cancel changes     | |toggleEditing|          | Turn on or off edit status of selected    |
 |                              | in all or selected layers simultaneously       |                          | layer(s) based on the active layer status |
@@ -425,8 +425,8 @@ functions:
 +------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
 | |vertexTool|                 | Vertex Tool (All Layers)                       | |vertexToolActiveLayer|  | Vertex Tool (Current Layer)               |
 +------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
-| |multiEdit|                  | Modify the attributes of all                   |                          |                                           |
-|                              | selected features simultaneously               |                          |                                           |
+| |checkbox| :guilabel:`Show   | Set whether the vertex editor panel should     |  |multiEdit|             | Modify the attributes of all              |
+| Vertex Editor`               | auto-open                                      |                          | selected features simultaneously          |
 +------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
 | |deleteSelectedFeatures|     | Delete Selected features from the active layer | |editCut|                | Cut Features from the active layer        |
 +------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
@@ -698,6 +698,16 @@ Also, select a row in the table does select the corresponding vertex
 in the map canvas, and vice versa.
 Change a coordinate in the table and the vertex position is updated.
 You can also select multiple rows and delete them altogether.
+
+If you do not want the :guilabel:`Vertex Editor` panel to immediately show
+each time you interact with vertex tools (and potentially hide other panels
+or disturb panels placement), uncheck the :guilabel:`Auto-open table` entry
+in the |hamburgerMenu| :sup:`Options` menu at the top of the panel.
+You can then also close the panel.
+To reopen the panel, you would need to right-click over a panel or toolbar and
+select it in the list or tick the :guilabel:`Show vertex editor` entry in
+the :guilabel:`Digitizing toolbar`.
+
 
 .. _figure_edit_vertex:
 
@@ -2032,6 +2042,8 @@ To edit features in-place:
 .. |fillRing| image:: /static/common/mActionFillRing.png
    :width: 1.5em
 .. |floater| image:: /static/common/floater.png
+   :width: 1.5em
+.. |hamburgerMenu| image:: /static/common/mIconHamburgerMenu.png
    :width: 1.5em
 .. |lockRepeating| image:: /static/common/lock_repeating.png
    :width: 1.5em

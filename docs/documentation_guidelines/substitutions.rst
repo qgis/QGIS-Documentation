@@ -67,6 +67,7 @@ Icon                     Substitution               Icon                   Subst
 |selectColor|            ``|selectColor|``          |selectColorRamp|      ``|selectColorRamp|``
 |tab|                    ``|tab|``                  |degrees|              ``|degrees|``
 |inputText|              ``|inputText|``            |slider|               ``|slider|``
+|hamburgerMenu|          ``|hamburgerMenu|``
 =======================  =========================  =====================  =========================
 
 
@@ -880,6 +881,8 @@ Icon                            Substitution                        Icon        
 .. |grassTools| image:: /static/common/grass_tools.png
    :width: 1.5em
 .. |groupItems| image:: /static/common/mActionGroupItems.png
+   :width: 1.5em
+.. |hamburgerMenu| image:: /static/common/mIconHamburgerMenu.png
    :width: 1.5em
 .. |handleStoreFilterExpressionChecked| image:: /static/common/mActionHandleStoreFilterExpressionChecked.png
    :width: 1.5em
