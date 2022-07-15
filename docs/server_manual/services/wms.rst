@@ -1885,6 +1885,7 @@ In a :ref:`GetMap <wms_getmap>` request, this might look like this:
    SERVICE=WMS
    &REQUEST=GetMap
    &LAYERS=EXTERNAL_WMS:basemap,layer1,layer2
+   &OPACITIES=100,200,255
    &STYLES=,,
    &basemap:url=http://externalserver.com/wms.fcgi
    &basemap:format=image/jpeg
@@ -1904,6 +1905,7 @@ requests:
    &TEMPLATE=A4
    &map0:layers=EXTERNAL_WMS:basemap,layer1,layer2
    &map0:EXTENT=<minx,miny,maxx,maxy>
+   &OPACITIES=100,200,255
    &basemap:url=http://externalserver.com/wms.fcgi
    &basemap:format=image/jpeg
    &basemap:dpiMode=7
