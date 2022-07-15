@@ -992,8 +992,8 @@ values are (not case sensitive):
 
 For example:
 
-  .. figure:: ../img/getfeaturecount_legend.png
-    :align: center
+.. figure:: ../img/getfeaturecount_legend.png
+   :align: center
 
 
 .. _wms_getlegendgraphics_rule:
