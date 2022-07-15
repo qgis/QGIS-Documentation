@@ -1875,7 +1875,7 @@ should be cascaded via QGIS server in order to appear in the printed map.
 External layers can be added to the LAYERS parameter as
 EXTERNAL_WMS:<layername>.
 The parameters for the external WMS layers (e.g. url, format,
-dpiMode, crs, layers, styles, opacity) can later be given as service
+dpiMode, crs, layers, styles) can later be given as service
 parameters <layername>:<parameter>.
 In a :ref:`GetMap <wms_getmap>` request, this might look like this:
 
@@ -1885,6 +1885,7 @@ In a :ref:`GetMap <wms_getmap>` request, this might look like this:
    SERVICE=WMS
    &REQUEST=GetMap
    &LAYERS=EXTERNAL_WMS:basemap,layer1,layer2
+   &OPACITIES=100,200,255
    &STYLES=,,
    &basemap:url=http://externalserver.com/wms.fcgi
    &basemap:format=image/jpeg
@@ -1892,7 +1893,6 @@ In a :ref:`GetMap <wms_getmap>` request, this might look like this:
    &basemap:crs=EPSG:2056
    &basemap:layers=orthofoto
    &basemap:styles=default
-   &basemap:opacities=255
 
 Similarly, external layers can be used in :ref:`GetPrint <wms_getprint>`
 requests:
@@ -1905,13 +1905,13 @@ requests:
    &TEMPLATE=A4
    &map0:layers=EXTERNAL_WMS:basemap,layer1,layer2
    &map0:EXTENT=<minx,miny,maxx,maxy>
+   &OPACITIES=100,200,255
    &basemap:url=http://externalserver.com/wms.fcgi
    &basemap:format=image/jpeg
    &basemap:dpiMode=7
    &basemap:crs=EPSG:2056
    &basemap:layers=orthofoto
    &basemap:styles=default
-   &basemap:opacities=255
 
 
 .. _wms_redlining:
