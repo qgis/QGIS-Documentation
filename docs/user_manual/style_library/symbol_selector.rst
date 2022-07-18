@@ -378,8 +378,16 @@ layer types:
   * When first or last vertex placement is enabled, the |checkbox|
     :guilabel:`Place on every part extremity` option will make the markers
     render also at the first or last vertex for every part of multipart geometries.
-  * :guilabel:`Offset along the line`: the markers placement can also be given
-    an offset from the start, along the line
+  * :guilabel:`Offset along the line`: Allows offset along line to be specified in 
+    percent for marker line and hash line symbol layer types. 
+    Offsets are treated as percent of overall line length. 
+    When the "offset along line" setting for a marker line or hash line symbol layer 
+    is longer then the size of a closed ring, treat the offset as continuing to loop 
+    around the ring. E.g. setting the offset to 150% results in the offset being 
+    treated as 50% of the length of the closed ring.
+    If a negative offset along line is set for a marker or hash line symbol layer 
+    for a closed ring, then the offset is calculated backwards along the ring
+
   * The |checkbox| :guilabel:`Rotate marker to follow line direction` option
     sets whether each marker symbol should be oriented relative to the line
     direction or not.
