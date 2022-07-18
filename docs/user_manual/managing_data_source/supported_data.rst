@@ -185,9 +185,7 @@ First check that the file meets the following requirements:
    coordinates) must be specified as numbers.
    The coordinate system is not important.
 #. If you have a CSV file with non-string columns, you can have an
-   accompanying CSVT file (see section :ref:`csvt_files`), use the
-   automatic field type detection or select the field types yourself
-   in the sample data table.
+   accompanying CSVT file (see section :ref:`csvt_files`).
 
 The elevation point data file :file:`elevp.csv` in the QGIS sample
 dataset (see section :ref:`label_sampledata`) is an example of a

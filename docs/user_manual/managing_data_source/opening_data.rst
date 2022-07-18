@@ -567,17 +567,15 @@ and can be manually changed if necessary.
 
 The following field types are supported:
 
-* `Boolean` case-insensitive literal couples that are interpreted as boolean values are `1`/`0`, `true`/`false`, `t`/`f`, `yes`/`no`
-* `Whole Number (integer)`
-* `Whole Number (integer - 64 bit)`
-* `Decimal Number`: double precision floating point number
-* `Date`
-* `Time`
-* `Date and Time`
-* `Text`
+* ``Boolean`` case-insensitive literal couples that are interpreted as boolean values are ``1``/``0``, ``true``/``false``, ``t``/``f``, ``yes``/``no``
+* ``Whole Number (integer)``
+* ``Whole Number (integer - 64 bit)``
+* ``Decimal Number``: double precision floating point number
+* ``Date``
+* ``Time``
+* ``Date and Time``
+* ``Text``
 
-As you set the parser properties, a sample data preview updates at the bottom
-of the dialog.
 
 Geometry definition
 ...................
