@@ -1588,30 +1588,33 @@ global settings. See :ref:`datum_transformation` for more details.
 
 .. _default_styles_properties:
 
-Default Styles Properties
--------------------------
+Styles Properties
+-----------------
 
-The |symbology| :guilabel:`Default Styles` tab lets you control how new layers
-will be drawn in the project when they do not have an existing :file:`.qml` style
-defined. You can:
+Under |symbology| :guilabel:`Styles` tab, you can configure symbols and colors
+inherent to the project, allowing to safely share the project among different
+machines.
 
-* Set default symbols (:guilabel:`Marker`, :guilabel:`Line`, :guilabel:`Fill`)
-  to apply depending on the layer geometry type as well as a default
-  :guilabel:`Color Ramp`
+The :guilabel:`Default Symbols` group lets you control how new layers will
+be drawn in the project when they do not have an existing :file:`.qml` style
+defined. You can set :guilabel:`Marker`, :guilabel:`Line`, :guilabel:`Fill` to
+apply depending on the layer geometry type as well as default :guilabel:`Color
+Ramp` and :guilabel:`Text Format` (e.g. when enabling labeling).
+Any of these items can be reset using the :guilabel:`Clear` entry from
+the corresponding drop-down widget.
+
+In the :guilabel:`Options` group, you can:
+
 * Apply a default :guilabel:`Opacity` to new layers
 * |checkbox| :guilabel:`Assign random colors to symbols`, modifying the symbols
   fill colors, hence avoiding same rendering for all layers.
 
 .. _figure_default_styles:
 
-.. figure:: img/project_default_styles.png
+.. figure:: img/project_styles.png
    :align: center
 
-   Default Styles tab
-
-Using the |styleManager| :guilabel:`Style Manager` button, you can also quickly
-access the :ref:`Style Manager <vector_style_manager>` dialog and configure
-symbols and color ramps.
+   Styles tab
 
 .. _project_colors:
 

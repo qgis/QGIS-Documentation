@@ -2412,6 +2412,9 @@ to:
 * choose a color from the color selector dialog
 * drag-and-drop the color from one widget to another for quick modification
 
+.. tip:: Scroll the mouse wheel over a color selector widget to quickly
+ modify the opacity of the associated color.
+
 .. note:: When the color widget is set to a :ref:`project color <project_colors>`
   through the data-defined override properties, the above functions for
   changing the color are unavailable. You'd first need to :guilabel:`Unlink color`
@@ -2446,6 +2449,8 @@ The drop-down menu to the right of the button gives quick access to a
 wider set of color ramps and options:
 
 * :guilabel:`Invert Color Ramp`
+* :guilabel:`Clear Current Ramp` to unset any assigned color ramp to the widget
+  (available only in some contexts)
 * |unchecked| :guilabel:`Random Colors`: available only in some contexts
   (e.g., when a color ramp is being used for a layer symbology),
   checking this entry creates and applies a color ramp with random colors.
@@ -2483,6 +2488,11 @@ following symbol options, together with the features of the
   It opens a dialog to set the :ref:`symbol parameters <edit_symbol>`.
 * :guilabel:`Copy Symbol` from the current item
 * :guilabel:`Paste Symbol` to the current item, speeding configuration
+* :guilabel:`Clear Current Symbol` to unset any assigned symbol to the widget
+  (available only in some contexts)
+
+.. tip:: Scroll the mouse wheel over a marker or line symbol widget to quickly
+ modify the size of the associated symbol.
 
 .. index:: Embedded file
 .. _embedded_file_selector:
@@ -2554,6 +2564,8 @@ following options:
 
    Font selector drop-down menu
 
+* :guilabel:`Clear Current Text Format` to unset any assigned text format
+  to the widget (available only in some contexts)
 * :guilabel:`Font Size` in the associated unit
 * :menuselection:`Recent Fonts -->` menu with the active font checked (at the top)
 * :guilabel:`Configure Format...`: same as pressing the font selector widget. It
@@ -2565,6 +2577,8 @@ following options:
 * :guilabel:`Paste Format` to the text, speeding configuration
 * the :ref:`color widget <color_widget>` for quick color setting
 
+.. tip:: Scroll the mouse wheel over a font selector widget to quickly
+ modify the font size of the associated text.
 
 .. index:: Unit selection; Map scale
 .. _unit_selector:
