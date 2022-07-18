@@ -214,10 +214,21 @@ variables for the external tool sets controlled by the Processing toolbox (e.g.,
 SAGA, GRASS), and for turning on debugging output for specific sections of the
 source code.
 
-|checkbox| :guilabel:`Use custom variables (restart required - include separators)`.
-You can :guilabel:`Add` and :guilabel:`Remove` variables. Already defined environment
-variables are displayed in :guilabel:`Current environment variables`, and it's
-possible to filter them by activating
+Check |checkbox| :guilabel:`Use custom variables (restart required - include separators)`
+and you can |symbologyAdd| :sup:`Add` and |symbologyRemove| :sup:`Remove` variables.
+For each new item, you can configure a :guilabel:`Variable` name, its :guilabel:`Value`
+and the :guilabel:`Apply` method to use, among which:
+
+* :guilabel:`Overwrite`: replace any preexisting value of the variable
+* :guilabel:`If undefined`: use this value for the variable if not already defined at
+  a higher level (e.g. OS or application levels)
+* :guilabel:`Unset`
+* :guilabel:`Prepend`
+* :guilabel:`Append`
+* :guilabel:`Skip`: the variable is kept in the list for future reference but unused
+
+Already defined environment variables are displayed in :guilabel:`Current environment
+variables`, and it's possible to filter them by activating
 |checkbox| :guilabel:`Show only QGIS-specific variables`.
 
 .. index:: CRS, On-the-fly reprojection
