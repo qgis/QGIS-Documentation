@@ -1339,16 +1339,31 @@ Press :guilabel:`New` (respectively :guilabel:`New Connection`) and provide:
   :guilabel:`Unknown (not scaled)`, :guilabel:`Standard (256x256 / 96DPI)`
   and :guilabel:`High (512x512 / 192DPI)`
 
-By default, the OpenStreetMap XYZ Tile service is configured.
-:numref:`figure_xyz_tiles_openstreetmap` shows the dialog with the OpenStreetMap
-XYZ Tile service configuration.
+.. _interpretation:
 
-.. _figure_xyz_tiles_openstreetmap:
+* :guilabel:`Interpretation`: converts WMTS/XYZ raster datasets to a raster 
+  layer of single band float type following a predefined encoding scheme.
+  Supported schemes are :guilabel:`Default` (no conversion is done),
+  :guilabel:`MapTiler Terrain RGB` and :guilabel:`Terrarium Terrain RGB`.
+  The selected converter will translate the RGB source values to float values
+  for each pixel. Once loaded, the layer will be presented as a single band
+  floating point raster layer, ready for styling using QGIS usual
+  :ref:`raster renderers <raster_rendering>`.
 
-.. figure:: img/xyz_tiles_dialog_osm.png
-   :align: center
+By default, QGIS provides some default and ready-to-use XYZ Tiles services:
 
-   XYZ Tiles - OpenStreetMap configuration
+* |xyz| :guilabel:`Mapzen Global Terrain`, allowing an immediate
+  access to global DEM source for the projects.
+  More details and resources at https://registry.opendata.aws/terrain-tiles/
+* |xyz| :guilabel:`OpenStreetMap` to access the world 2D map.
+  :numref:`figure_xyz_tiles_openstreetmap` shows the dialog with the OpenStreetMap
+  XYZ Tile service configuration.
+
+  .. _figure_xyz_tiles_openstreetmap:
+  .. figure:: img/xyz_tiles_dialog_osm.png
+     :align: center
+
+     XYZ Tiles - OpenStreetMap configuration
 
 Configurations can be saved to :file:`.XML` file (:guilabel:`Save Connections`)
 through the :guilabel:`XYZ Tiles` entry in :guilabel:`Data Source Manager`

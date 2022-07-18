@@ -597,6 +597,12 @@ Rendering Settings
   and 'Average'.
   You can also set the :guilabel:`Oversampling` value (between 0.0 and 99.99 - a large
   value means more work for QGIS - the default value is 2.0).
+* |checkbox| :guilabel:`Early resampling`: allows to calculate the raster
+  rendering at the provider level where the resolution of the source is known,
+  and ensures a better zoom in rendering with QGIS custom styling.
+  Really convenient for tile rasters loaded using an :ref:`interpretation method
+  <interpretation>`.
+  The option can also be set at the layer level (:guilabel:`Symbology` properties)
 
 *Contrast enhancement*
 

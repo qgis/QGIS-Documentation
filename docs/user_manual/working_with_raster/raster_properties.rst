@@ -569,6 +569,12 @@ The effect is a smoother image.
 This method can be applied to for instance digital topographic
 raster maps.
 
+|checkbox| :guilabel:`Early resampling`: allows to calculate the raster
+rendering at the provider level where the resolution of the source is known,
+and ensures a better zoom in rendering with QGIS custom styling.
+Really convenient for tile rasters loaded using an :ref:`interpretation method
+<interpretation>`.
+
 
 .. index:: Transparency
 .. _raster_transparency:
