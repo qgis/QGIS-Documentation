@@ -2520,13 +2520,13 @@ The following tools are provided at the top of the 3D map view panel:
   The terrain and vector features are exported as 3D objects.
   The export settings, overriding the layers :ref:`properties <sec_3_d_view>`
   or map view :ref:`configuration <scene_configuration>`, include:
- * :guilabel:`Scene name` and destination :guilabel:`Folder`
- * :guilabel:`Terrain resolution`
- * :guilabel:`Terrain texture resolution`
- * :guilabel:`Model scale`
- * |checkbox| :guilabel:`Smooth edges`
- * |checkbox| :guilabel:`Export normals`
- * |checkbox| :guilabel:`Export textures`
+  * :guilabel:`Scene name` and destination :guilabel:`Folder` 
+  * :guilabel:`Terrain resolution`
+  * :guilabel:`Terrain texture resolution`
+  * :guilabel:`Model scale`
+  * |checkbox| :guilabel:`Smooth edges`
+  * |checkbox| :guilabel:`Export normals`
+  * |checkbox| :guilabel:`Export textures`
 * |showPresets| :sup:`Set View Theme`: Allows you to select the set of layers to
   display in the map view from predefined :ref:`map themes <map_themes>`.
 * The |options| :sup:`Options` menu provides shortcuts to:
