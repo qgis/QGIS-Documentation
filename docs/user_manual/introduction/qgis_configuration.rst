@@ -452,6 +452,81 @@ Removing a folder from the list will make it available in the :guilabel:`Browser
 panel.
 
 
+.. _gdal_options:
+
+GDAL Settings
+.............
+
+`GDAL <https://gdal.org>`_ is a data exchange library for geospatial data that supports a
+large number of vector and raster formats.
+It provides drivers to read and (often) write data in these formats.
+The :guilabel:`GDAL` tab exposes the drivers for raster and vector
+formats with their capabilities.
+
+GDAL raster and vector drivers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The :guilabel:`Raster Drivers` and :guilabel:`Vector Drivers` tabs
+allow you to define which GDAL driver is enabled to read and/or
+write files, as in some cases more than one GDAL driver is available.
+
+.. _figure_gdal_settings:
+.. figure:: img/options_gdal.png
+   :align: center
+
+   GDAL Settings in QGIS - Raster drivers
+
+.. tip:: Double-click a raster driver that allows read and write access
+   (``rw+(v)``) opens the :ref:`Edit Create options <gdal_createoptions>`
+   dialog for customization.
+
+Raster driver options
+^^^^^^^^^^^^^^^^^^^^^
+
+This frame provides ways to customize the behavior of raster drivers that
+support read and write access:
+
+.. _gdal_createoptions:
+
+* :guilabel:`Edit create options`: allows you to edit or add different profiles
+  of file transformation, i.e. a set of predefined combinations of parameters
+  (type and level of compression, blocks size, overview, colorimetry, alpha...)
+  to use when outputting raster files. The parameters depend on the driver.
+
+  .. _figure_gdal_create_settings:
+
+  .. figure:: img/gdalCreateOptions.png
+     :align: center
+
+     Sample of create options profile (for GeoTiff)
+
+  The upper part of the dialog lists the current profile(s) and allows you to
+  add new ones or remove any of them. You can also reset the profile to its
+  default parameters if you have changed them. Some drivers (eg, GeoTiff)
+  have some sample of profiles you can work with.
+
+  At the bottom of the dialog:
+
+  * The |symbologyAdd| button lets you add rows to fill with the parameter name and value
+  * The |symbologyRemove| button deletes the selected parameter
+  * Click the :guilabel:`Validate` button to check that the creation options
+    entered for the given format are valid
+  * Use the :guilabel:`Help` button to find the parameters to use, or refer
+    to the `GDAL raster drivers documentation
+    <https://gdal.org/drivers/raster/index.html>`_.
+
+.. _gdal_pyramidsoptions:
+
+* :guilabel:`Edit Pyramids Options`
+
+  .. _figure_gdal_pyramids_settings:
+
+  .. figure:: img/gdalPyramidsOptions.png
+     :align: center
+
+     Sample of Pyramids profile
+
+
 .. index:: Rendering
 .. _rendering_options:
 
@@ -658,6 +733,89 @@ still have the possibility to remove your changes and reset to the predefined
 list.
 
 
+.. index:: Digitizing configuration
+.. _digitizing_options:
+
+Digitizing Settings
+...................
+
+.. _figure_digitizing_settings:
+
+.. figure:: img/options_digitizing.png
+   :align: center
+
+   Digitizing Settings in QGIS
+
+This tab helps you configure general settings when :ref:`editing vector layer
+<editingvector>` (attributes and geometry).
+
+**Feature creation**
+
+* |checkbox| :guilabel:`Suppress attribute form pop-up after feature creation`:
+  this choice can be overridden in each layer properties dialog.
+* |checkbox| :guilabel:`Reuse last entered attribute values`: remember the last 
+  used value of every attribute and use it as default for the next feature being digitized. 
+  Works per layer. This behavior can also be controled on a per-field basis
+  (see :ref:`configure_field`).
+* :guilabel:`Validate geometries`. Editing complex lines and polygons with many
+  nodes can result in very slow rendering. This is because the default
+  validation procedures in QGIS can take a lot of time. To speed up rendering, it
+  is possible to select GEOS geometry validation (starting from GEOS 3.3) or to
+  switch it off. GEOS geometry validation is much faster, but the disadvantage
+  is that only the first geometry problem will be reported.
+
+  Note that depending on the selection, reports of geometry errors may differ
+  (see :ref:`typesofgeomerrors`)
+* :guilabel:`Default Z value` to use when creating new 3D features.
+
+**Rubberband**
+
+* Define Rubberband :guilabel:`Line width`, :guilabel:`Line color`
+  and :guilabel:`Fill color`.
+* :guilabel:`Don't update rubberband during vertex editing`.
+
+**Snapping**
+
+* |checkbox| :guilabel:`Enable snapping by default` activates snapping when
+  a project is opened
+* Define :guilabel:`Default snap mode` |selectString| ('Vertex', 'Segment', 'Centroid',
+  'Middle of segments', Line endpoints', 'Area')
+* Define :guilabel:`Default snapping tolerance` in map units or pixels
+* Define the :guilabel:`Search radius for vertex edits` in map units or pixels
+* :guilabel:`Display main dialog as (restart required)`: set whether the
+  Advanced Snapping dialog should be shown as 'Dialog' or 'Dock'.
+* :guilabel:`Snapping marker color`
+* |checkbox| :guilabel:`Show snapping tooltips` such as name of the layer whose
+  feature you are about to snap. Helpful when multiple features overlap.
+* |checkbox| :guilabel:`Enable snapping on invisible features (not shown on the
+  map canvas)`
+
+
+**Vertex markers**
+
+* |checkbox| :guilabel:`Show markers only for selected features`
+* Define vertex :guilabel:`Marker style` |selectString| ('Cross' (default), 'Semi
+  transparent circle' or 'None')
+* Define vertex :guilabel:`Marker size (in millimeter)`
+
+**Curve offset tool**
+
+The next 3 options refer to the |offsetCurve| :sup:`Offset Curve` tool in
+:ref:`sec_advanced_edit`. Through the various settings, it is possible to
+influence the shape of the line offset. These options are possible starting
+from GEOS 3.3.
+
+* :guilabel:`Join style`: 'Round', 'Mitre' or 'Bevel'
+* :guilabel:`Quadrant segments`
+* :guilabel:`Miter limit`
+
+**Tracing**
+
+By activating the |checkbox| :guilabel:`Convert tracing to curve` you can
+create curve segments while digitizing. Keep in mind that your data provider
+must support this feature.
+
+
 .. index:: 3D
 .. _3d_options:
 
@@ -747,89 +905,6 @@ Selector <color-selector>` dialog. You can also rename it by double-clicking
 in the :guilabel:`Label` column.
 
 
-.. index:: Digitizing configuration
-.. _digitizing_options:
-
-Digitizing Settings
--------------------
-
-.. _figure_digitizing_settings:
-
-.. figure:: img/options_digitizing.png
-   :align: center
-
-   Digitizing Settings in QGIS
-
-This tab helps you configure general settings when :ref:`editing vector layer
-<editingvector>` (attributes and geometry).
-
-**Feature creation**
-
-* |checkbox| :guilabel:`Suppress attribute form pop-up after feature creation`:
-  this choice can be overridden in each layer properties dialog.
-* |checkbox| :guilabel:`Reuse last entered attribute values`: remember the last 
-  used value of every attribute and use it as default for the next feature being digitized. 
-  Works per layer. This behavior can also be controled on a per-field basis
-  (see :ref:`configure_field`).
-* :guilabel:`Validate geometries`. Editing complex lines and polygons with many
-  nodes can result in very slow rendering. This is because the default
-  validation procedures in QGIS can take a lot of time. To speed up rendering, it
-  is possible to select GEOS geometry validation (starting from GEOS 3.3) or to
-  switch it off. GEOS geometry validation is much faster, but the disadvantage
-  is that only the first geometry problem will be reported.
-
-  Note that depending on the selection, reports of geometry errors may differ
-  (see :ref:`typesofgeomerrors`)
-* :guilabel:`Default Z value` to use when creating new 3D features.
-
-**Rubberband**
-
-* Define Rubberband :guilabel:`Line width`, :guilabel:`Line color`
-  and :guilabel:`Fill color`.
-* :guilabel:`Don't update rubberband during vertex editing`.
-
-**Snapping**
-
-* |checkbox| :guilabel:`Enable snapping by default` activates snapping when
-  a project is opened
-* Define :guilabel:`Default snap mode` |selectString| ('Vertex', 'Segment', 'Centroid',
-  'Middle of segments', Line endpoints', 'Area')
-* Define :guilabel:`Default snapping tolerance` in map units or pixels
-* Define the :guilabel:`Search radius for vertex edits` in map units or pixels
-* :guilabel:`Display main dialog as (restart required)`: set whether the
-  Advanced Snapping dialog should be shown as 'Dialog' or 'Dock'.
-* :guilabel:`Snapping marker color`
-* |checkbox| :guilabel:`Show snapping tooltips` such as name of the layer whose
-  feature you are about to snap. Helpful when multiple features overlap.
-* |checkbox| :guilabel:`Enable snapping on invisible features (not shown on the
-  map canvas)`
-
-
-**Vertex markers**
-
-* |checkbox| :guilabel:`Show markers only for selected features`
-* Define vertex :guilabel:`Marker style` |selectString| ('Cross' (default), 'Semi
-  transparent circle' or 'None')
-* Define vertex :guilabel:`Marker size (in millimeter)`
-
-**Curve offset tool**
-
-The next 3 options refer to the |offsetCurve| :sup:`Offset Curve` tool in
-:ref:`sec_advanced_edit`. Through the various settings, it is possible to
-influence the shape of the line offset. These options are possible starting
-from GEOS 3.3.
-
-* :guilabel:`Join style`: 'Round', 'Mitre' or 'Bevel'
-* :guilabel:`Quadrant segments`
-* :guilabel:`Miter limit`
-
-**Tracing**
-
-By activating the |checkbox| :guilabel:`Convert tracing to curve` you can
-create curve segments while digitizing. Keep in mind that your data provider
-must support this feature.
-
-
 .. _layout_options:
 
 Layouts Settings
@@ -865,80 +940,6 @@ You can define the :guilabel:`Default font` used within the :ref:`print layout
 * Define :guilabel:`Path(s) to search for extra print templates`: a list of folders
   with custom layout templates to use while creating new one.
 
-
-.. _gdal_options:
-
-GDAL Settings
--------------
-
-`GDAL <https://gdal.org>`_ is a data exchange library for geospatial data that supports a
-large number of vector and raster formats.
-It provides drivers to read and (often) write data in these formats.
-The :guilabel:`GDAL` tab exposes the drivers for raster and vector
-formats with their capabilities.
-
-GDAL raster and vector drivers
-..............................
-
-The :guilabel:`Raster Drivers` and :guilabel:`Vector Drivers` tabs
-allow you to define which GDAL driver is enabled to read and/or
-write files, as in some cases more than one GDAL driver is available.
-
-.. _figure_gdal_settings:
-.. figure:: img/options_gdal.png
-   :align: center
-
-   GDAL Settings in QGIS - Raster drivers
-
-.. tip:: Double-click a raster driver that allows read and write access
-   (``rw+(v)``) opens the :ref:`Edit Create options <gdal_createoptions>`
-   dialog for customization.
-
-Raster driver options
-.....................
-
-This frame provides ways to customize the behavior of raster drivers that
-support read and write access:
-
-.. _gdal_createoptions:
-
-* :guilabel:`Edit create options`: allows you to edit or add different profiles
-  of file transformation, i.e. a set of predefined combinations of parameters
-  (type and level of compression, blocks size, overview, colorimetry, alpha...)
-  to use when outputting raster files. The parameters depend on the driver.
-
-  .. _figure_gdal_create_settings:
-
-  .. figure:: img/gdalCreateOptions.png
-     :align: center
-
-     Sample of create options profile (for GeoTiff)
-
-  The upper part of the dialog lists the current profile(s) and allows you to
-  add new ones or remove any of them. You can also reset the profile to its
-  default parameters if you have changed them. Some drivers (eg, GeoTiff)
-  have some sample of profiles you can work with.
-
-  At the bottom of the dialog:
-
-  * The |symbologyAdd| button lets you add rows to fill with the parameter name and value
-  * The |symbologyRemove| button deletes the selected parameter
-  * Click the :guilabel:`Validate` button to check that the creation options
-    entered for the given format are valid
-  * Use the :guilabel:`Help` button to find the parameters to use, or refer
-    to the `GDAL raster drivers documentation
-    <https://gdal.org/drivers/raster/index.html>`_.
-
-.. _gdal_pyramidsoptions:
-
-* :guilabel:`Edit Pyramids Options`
-
-  .. _figure_gdal_pyramids_settings:
-
-  .. figure:: img/gdalPyramidsOptions.png
-     :align: center
-
-     Sample of Pyramids profile
 
 .. index:: Variables
 .. _variables_options:
@@ -1122,29 +1123,46 @@ Depending on your hardware and software, you may have to install additional
 libraries to enable OpenCL acceleration.
 
 
-Processing Settings
--------------------
+IDE Settings
+------------
 
-The |processingAlgorithm| :guilabel:`Processing` tab provides you with general settings
-of tools and data providers that are used in the QGIS Processing framework.
-More information at :ref:`label_processing`.
+.. _code_editor_options:
 
-.. comment for writers:
- Actually, there seems to not be a real section describing the Processing options
- dialog. So the link above should be redirected if ever such a section is
- created, preferably in Processing chapter.
+Code Editor Settings
+....................
 
-.. _figure_processing_settings:
+In the |codeEditor| :guilabel:`Code Editor` tab, you can control the appearance
+and behaviour of code editor widgets (Python interactive console and editor,
+expression widget and function editor, ...).
 
-.. figure:: img/options_processing.png
+.. _figure_code_editor_settings:
+
+.. figure:: img/options_codeeditor.png
    :align: center
 
-   Processing Settings tab in QGIS
+   Code Editor Settings tab
+
+At the top of the dialog, a widget provides a live preview of the current
+settings, in various coding languages (Python, QGIS expression, HTML, SQL,
+JavaScript). A convenient way to adjust settings.
+
+* Check |unchecked| :guilabel:`Override code editor font` to modify the default
+  :guilabel:`Font` family and :guilabel:`Size`.
+
+* Under the :guilabel:`Colors` group, you can:
+
+  * select a :guilabel:`Color scheme`: predefined settings are ``Default``,
+    ``Solarized Dark`` and ``Solarized Light``. A ``Custom`` scheme is triggered
+    as soon as you modify a color and can be reset with selecting a predefined
+    scheme.
+  * change the :ref:`color <color_widget>` of each element in code writing,
+    such as the colors to use for comments, quotes, functions, background, ...
+
 
 .. _console_options:
 
 Python Console Settings
------------------------
+.......................
 
 The |runConsole| :guilabel:`Python Console` settings help you manage and control
 the behavior of the Python editors (:ref:`interactive console <interactive_console>`,
@@ -1203,37 +1221,24 @@ More details on `GitHub authentication
 <https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token>`_
 
 
-.. _code_editor_options:
+Processing Settings
+-------------------
 
-Code Editor Settings
---------------------
+The |processingAlgorithm| :guilabel:`Processing` tab provides you with general settings
+of tools and data providers that are used in the QGIS Processing framework.
+More information at :ref:`label_processing`.
 
-In the |codeEditor| :guilabel:`Code Editor` tab, you can control the appearance
-and behaviour of code editor widgets (Python interactive console and editor,
-expression widget and function editor, ...).
+.. comment for writers:
+ Actually, there seems to not be a real section describing the Processing options
+ dialog. So the link above should be redirected if ever such a section is
+ created, preferably in Processing chapter.
 
-.. _figure_code_editor_settings:
+.. _figure_processing_settings:
 
-.. figure:: img/options_codeeditor.png
+.. figure:: img/options_processing.png
    :align: center
 
-   Code Editor Settings tab
-
-At the top of the dialog, a widget provides a live preview of the current
-settings, in various coding languages (Python, QGIS expression, HTML, SQL,
-JavaScript). A convenient way to adjust settings.
-
-* Check |unchecked| :guilabel:`Override code editor font` to modify the default
-  :guilabel:`Font` family and :guilabel:`Size`.
-
-* Under the :guilabel:`Colors` group, you can:
-
-  * select a :guilabel:`Color scheme`: predefined settings are ``Default``,
-    ``Solarized Dark`` and ``Solarized Light``. A ``Custom`` scheme is triggered
-    as soon as you modify a color and can be reset with selecting a predefined
-    scheme.
-  * change the :ref:`color <color_widget>` of each element in code writing,
-    such as the colors to use for comments, quotes, functions, background, ...
+   Processing Settings tab in QGIS
 
 
 .. _optionsadvanced:
