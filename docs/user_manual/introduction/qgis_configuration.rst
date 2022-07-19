@@ -1702,6 +1702,42 @@ panel` to manage the map canvas :ref:`temporal navigation <maptimecontrol>`.
 
    Project Temporal tab
 
+
+.. index:: Terrain; Elevation
+.. _project_terrain:
+
+Terrain Properties
+------------------
+
+The |layoutItem3DMap| :guilabel:`Terrain` tab helps you configure default settings
+for the terrain and elevation. When any new :ref:`3d map <label_3dmapview>`
+is created in the project, the map will default to using the same terrain
+settings as are defined for the project.
+The project elevation settings will also be respected by the Profile tool.
+
+.. todo: Add link to the profile tool when available
+
+.. _figure_terrain_tab:
+
+.. figure:: img/project_terrain.png
+   :align: center
+
+   Project Terrain tab
+
+Terrain and elevation options are available for:
+
+* :guilabel:`Flat terrain` with :guilabel:`Terrain height` setting
+* :guilabel:`DEM (Raster Layer)`: with setting for defining the :guilabel:`Raster layer`,
+  a :guilabel:`Vertical scale` factor to apply to band values and
+  a vertical :guilabel:`Offset`
+* :guilabel:`Mesh`: with setting for defining the :guilabel:`Mesh layer`,
+  a :guilabel:`Vertical scale` factor to apply to vertices Z value and
+  a vertical :guilabel:`Offset`
+
+These settings can be overwritten from with the 3D map :ref:`configuration
+dialog <scene_configuration>`.
+
+
 .. index:: Customization
 .. _sec_customization:
 
@@ -2203,6 +2239,8 @@ in the QGIS user profile.
 .. |kde| image:: /static/common/kde.png
    :width: 1.5em
 .. |keyboardShortcuts| image:: /static/common/mActionKeyboardShortcuts.png
+   :width: 1.5em
+.. |layoutItem3DMap| image:: /static/common/mLayoutItem3DMap.png
    :width: 1.5em
 .. |nix| image:: /static/common/nix.png
    :width: 1em

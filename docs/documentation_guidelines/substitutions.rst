@@ -327,7 +327,7 @@ Icon                            Substitution                        Icon        
 |properties|                    ``|properties|``                    |deleteSelected|                ``|deleteSelected|``
 |browserExpand|                 ``|browserExpand|``                 |browserCollapse|               ``|browserCollapse|``
 |codeEditor|                    ``|codeEditor|``                    |add|                           ``|add|``
-|relations|                     ``|relations|``
+|relations|                     ``|relations|``                     |layoutItem3DMap|               ``|layoutItem3DMap|``
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -1000,6 +1000,8 @@ Icon                            Substitution                        Icon        
 .. |labelplacement| image:: /static/common/labelplacement.png
    :width: 1.5em
 .. |labelshadow| image:: /static/common/labelshadow.png
+   :width: 1.5em
+.. |layoutItem3DMap| image:: /static/common/mLayoutItem3DMap.png
    :width: 1.5em
 .. |layoutManager| image:: /static/common/mActionLayoutManager.png
    :width: 1.5em
