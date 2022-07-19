@@ -223,9 +223,9 @@ and the :guilabel:`Apply` method to use, among which:
 * :guilabel:`Overwrite`: replace any preexisting value of the variable
 * :guilabel:`If undefined`: use this value for the variable if not already defined at
   a higher level (e.g. OS or application levels)
-* :guilabel:`Unset`: removes the variable from the environment (the :guilabel:`Value` parameter is not used)
-* :guilabel:`Prepend`: prepends the value to the preexisting value of the variable
-* :guilabel:`Append`: appends the value to the preexisting value of the variable
+* :guilabel:`Unset`: remove the variable from the environment (the :guilabel:`Value` parameter is not used)
+* :guilabel:`Prepend`: prepend the value to the preexisting value of the variable
+* :guilabel:`Append`: append the value to the preexisting value of the variable
 * :guilabel:`Skip`: the item is kept in the list for future reference but unused
 
 Already defined environment variables are displayed in :guilabel:`Current environment
