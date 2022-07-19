@@ -211,7 +211,7 @@ several ways to define these variables. This is fully described in
        * ``periodic``: uses the last modified value of a project for checking changes
          on project configuration. Convenient on atypical file systems, such as NFS,
 	 or when the project file is stored in a database system like PostgreSQL.
-       * ``off``: disables internal caching completely
+       * ``off``: disables internal cache invalidation completely
      - filesystem
      - All
 
