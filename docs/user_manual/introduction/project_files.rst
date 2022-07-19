@@ -154,6 +154,7 @@ You can:
   and click :guilabel:`Apply changes`;
 * Press :guilabel:`Auto-Find` to browse the folders and try to automatically fix
   all or selected broken path(s). Be aware that the browsing may take some time.
+  Then click :guilabel:`Apply changes`.
 * Ignore the message and open your project with the broken path(s) by clicking
   :guilabel:`Keep Unavailable Layers`. Your layer is then displayed in the
   :guilabel:`Layers` panel, but without any data until you fix the path using
