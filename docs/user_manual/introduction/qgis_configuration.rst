@@ -641,7 +641,11 @@ These properties let you set:
   * :guilabel:`Double click action in legend` |selectString|. You can either
     'Open layer properties', 'Open attribute table' or 'Open layer styling dock'
     with the double click.
-  * |checkbox| :guilabel:`Display classification attribute names` in the Layers
+  * |unchecked| :guilabel:`Show feature count for newly added layers`: displays
+    in the :guilabel:`Layers` panel the number of features next to the layer name.
+    Feature count of classes, if any, is as well displayed.
+    You can right-click on a layer to turn on/off its feature count.
+  * |unchecked| :guilabel:`Display classification attribute names` in the Layers
     panel, e.g. when applying a categorized or rule-based renderer
     (see :ref:`vector_style_menu` for more information).
   * the :guilabel:`WMS getLegendGraphic Resolution`
@@ -1368,6 +1372,12 @@ In the |general| :guilabel:`General` tab, the :guilabel:`General settings` let y
   or if the project is accessed from computers on different platforms.
 * choose to avoid artifacts when project is rendered as map tiles. Note that
   checking this option can lead to performance degradation.
+* :guilabel:`Remember attribute tables windows and docks between sessions`:
+  If checked for a project, then any opened attribute tables will be saved into
+  the project and immediately restored when loading that project.
+  This can improve workflows when you constructed a project with a particular
+  set of attribute table configurations for your requirements, and re-setting up
+  these attribute tables is a hassle.
 
 Calculating areas and distances is a common need in GIS. However, these values
 are really tied to the underlying projection settings. The :guilabel:`Measurements`
