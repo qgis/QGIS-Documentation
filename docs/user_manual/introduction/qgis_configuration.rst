@@ -279,7 +279,7 @@ or when a layer without a CRS is loaded.
 * |radioButtonOn| :guilabel:`Leave as unknown CRS (take no action)`
 * |radioButtonOff| :guilabel:`Prompt for CRS`
 * |radioButtonOff| :guilabel:`Use project CRS`
-* |radioButtonOff| :guilabel:`Use a default CRS`
+* |radioButtonOff| :guilabel:`Use default layer CRS`
 
 .. _crs_inaccuracies:
 
@@ -325,7 +325,7 @@ reprojecting a layer.
 .. figure:: img/options_transformations.png
    :align: center
 
-   Transformations Settings
+   Transformations settings
 
 **Default Datum Transformations**
 
@@ -377,7 +377,7 @@ Use a known coordinate to control if your definition is accurate.
 
 .. _datasources_options:
 
-Data Sources Settings
+Data Sources settings
 ---------------------
 
 .. _figure_data_sources_settings:
@@ -385,12 +385,12 @@ Data Sources Settings
 .. figure:: img/options_data_sources.png
    :align: center
 
-   Data Sources Settings in QGIS
+   Data Sources settings in QGIS
 
 
 **Feature attributes and table**
 
-* |checkbox| :guilabel:`Open new attribute tables as docked windows`
+* |checkbox| :guilabel:`Open attribute table as docked window`
 * :guilabel:`Copy features as` 'Plain text, no geometry', 'Plain text, WKT geometry',
   or 'GeoJSON' when pasting features in other applications.
 * :guilabel:`Attribute table behavior` |selectString|: set filter on the attribute
@@ -430,7 +430,7 @@ Data Sources Settings
   |selectString| defines how detailed is the widget information at the bottom
   of the Browser panel when querying such files. 'No', 'Basic scan' and 'Full scan'
   are possible options.
-* :guilabel:`Prompt for raster sublayers when opening`. Some rasters support
+* :guilabel:`Prompt for sublayers when opening`. Some rasters support
   sublayers --- they are called subdatasets in GDAL. An example is netCDF files
   --- if there are many netCDF variables, GDAL sees every variable as a
   subdataset. The option allows you to control how to deal with sublayers when a file
@@ -475,8 +475,8 @@ It provides drivers to read and (often) write data in these formats.
 The :guilabel:`GDAL` tab exposes the drivers for raster and vector
 formats with their capabilities.
 
-GDAL raster and vector drivers
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**GDAL raster and vector drivers**
+
 
 The :guilabel:`Raster Drivers` and :guilabel:`Vector Drivers` tabs
 allow you to define which GDAL driver is enabled to read and/or
@@ -492,8 +492,8 @@ write files, as in some cases more than one GDAL driver is available.
    (``rw+(v)``) opens the :ref:`Edit Create options <gdal_createoptions>`
    dialog for customization.
 
-Raster driver options
-^^^^^^^^^^^^^^^^^^^^^
+**Raster driver options**
+
 
 This frame provides ways to customize the behavior of raster drivers that
 support read and write access:
@@ -536,7 +536,7 @@ support read and write access:
   .. figure:: img/gdalPyramidsOptions.png
      :align: center
 
-     Sample of Pyramids profile
+     Sample of pyramids profile
 
 
 .. index:: Rendering
@@ -550,7 +550,7 @@ Rendering Settings
 .. figure:: img/rendering_menu.png
    :align: center
 
-   Rendering tab of Project Properties dialog
+   Rendering tab of project properties dialog
 
 **Rendering behavior**
 
@@ -565,7 +565,7 @@ Rendering Settings
 .. _global_simplification:
 
 * |checkbox| :guilabel:`Enable feature simplification by default for newly added layers`
-* :guilabel:`Simplification threshold`
+* :guilabel:`Simplification threshold (higher values result in more simplification)` 
 * :guilabel:`Simplification algorithm`: This option performs a local
   "on-the-fly" simplification on feature's and speeds up geometry rendering. It
   doesn't change the geometry fetched from the data providers. This is important
@@ -576,7 +576,7 @@ Rendering Settings
 * |unchecked| :guilabel:`Simplify on provider side if possible`: the geometries
   are simplified by the provider (PostGIS, Oracle...) and unlike the
   local-side simplification, geometry-based calculations may be affected
-* :guilabel:`Maximum scale at which the layer should be simplified`
+* :guilabel:`Maximum scale at which the layer should be simplified (1:1 always simplifies)`
 * |doubleSpinBox| :guilabel:`Magnification level` (see the :ref:`magnifier <magnifier>`)
 
 .. note:: Besides the global setting, feature simplification can be set for any
@@ -641,7 +641,7 @@ Canvas and Legend Settings
 .. figure:: img/options_canvas_legend.png
    :align: center
 
-   Canvas and Legend Settings
+   Canvas & Legend settings
 
 These properties let you set:
 
@@ -696,7 +696,7 @@ Map tools Settings
 .. figure:: img/options_map_tools.png
    :align: center
 
-   Map tools Settings in QGIS
+   Map tools settings in QGIS
 
 This tab offers some options regarding the behavior of the :ref:`Identify tool <identify>`.
 
@@ -755,11 +755,7 @@ You can also import or export scales from/to a ``.XML`` file. Note that you
 still have the possibility to remove your changes and reset to the predefined
 list.
 
-
-.. index:: Digitizing configuration
-.. _digitizing_options:
-
-Digitizing Settings
+Digitizing settings
 ...................
 
 .. _figure_digitizing_settings:
@@ -767,7 +763,7 @@ Digitizing Settings
 .. figure:: img/options_digitizing.png
    :align: center
 
-   Digitizing Settings in QGIS
+   Digitizing settings in QGIS
 
 This tab helps you configure general settings when :ref:`editing vector layer
 <editingvector>` (attributes and geometry).
@@ -842,7 +838,7 @@ must support this feature.
 .. index:: 3D
 .. _3d_options:
 
-3D Settings
+3D settings
 -----------
 
 .. _figure_3d_options:
@@ -850,7 +846,7 @@ must support this feature.
 .. figure:: img/options_3d.png
    :align: center
 
-   3D Settings
+   3D settings
 
 The |3d| :guilabel:`3D` menu helps you configure some default settings to use
 for any :guilabel:`3D Map view`. These can refer to :guilabel:`Default Camera Settings`:
@@ -887,7 +883,7 @@ for any :guilabel:`3D Map view`. These can refer to :guilabel:`Default Camera Se
 .. index:: Colors
 .. _colors_options:
 
-Colors Settings
+Colors settings
 ---------------
 
 .. _figure_colors_options:
@@ -895,7 +891,7 @@ Colors Settings
 .. figure:: img/options_colors.png
    :align: center
 
-   Colors Settings
+   Colors settings
 
 This menu allows you to create or update palettes of colors used throughout the
 application in the :ref:`color selector widget <color_widget>`. You can choose
@@ -930,7 +926,7 @@ in the :guilabel:`Label` column.
 
 .. _layout_options:
 
-Layouts Settings
+Layouts settings
 ----------------
 
 .. _figure_layouts_settings:
@@ -938,7 +934,7 @@ Layouts Settings
 .. figure:: img/options_layouts.png
    :align: center
 
-   Layouts Settings in QGIS
+   Layouts settings in QGIS
 
 
 **Composition defaults**
@@ -967,7 +963,7 @@ You can define the :guilabel:`Default font` used within the :ref:`print layout
 .. index:: Variables
 .. _variables_options:
 
-Variables Settings
+Variables settings
 ------------------
 
 The :guilabel:`Variables` tab lists all the variables available at the
@@ -987,32 +983,36 @@ section.
 .. figure:: img/options_variables_global.png
    :align: center
 
-   Variables Settings in QGIS
+   Variables settings in QGIS
 
 
 .. index:: Authentication
 .. _authentication_options:
 
-Authentication Settings
+Authentication settings
 -----------------------
 
 In the :guilabel:`Authentication` tab you can set authentication configurations
 and manage PKI certificates. See :ref:`authentication_index` for more
 details.
 
+To manage authentications, you can use the list of tools next to the frame, ie:
+* |symbologyAdd| :guilabel:`Add new authentication configuration`
+* |symbologyRemove| :guilabel:`Remove selected authentication configuration`
+* |editSelected| :guilabel:`Edit selected authentication configuration`
 
 .. _figure_authentication_settings:
 
 .. figure:: ../auth_system/img/auth-editor-configs2.png
    :align: center
 
-   Authentication Settings in QGIS
+   Authentication settings in QGIS
 
 
 .. index:: Proxy, Network
 .. _network_options:
 
-Network Settings
+Network settings
 ----------------
 
 **General**
@@ -1072,7 +1072,34 @@ https://doc.qt.io/qt-5.9/qnetworkproxy.html#ProxyType-enum
 .. index:: Search widget, Locator
 .. _locator_options:
 
-Locator Settings
+GPS
+---
+
+GPSBabel
+........
+
+GPSBabel converts waypoints, tracks, and routes between popular GPS receivers 
+such as Garmin or Magellan and mapping programs like Google Earth or Basecamp. 
+Literally hundreds of GPS receivers and programs are supported.
+First you have to define the :guilabel:`Path to GPSBabel`
+Then you have to choose or to add a device. You can add and delete device paths via
+|symbologyAdd| :guilabel:`Add new path` or |symbologyRemove| :guilabel:`Remove path`.
+After that you can define different parameters:
+
+.. figure:: options_gpsbabel.png
+   :align: center
+
+   GPS Babel settings
+
+* Define :guilabel:`Waypoint download`
+* Define :guilabel:`Waypoint upload`
+* Define :guilabel:`Route download`
+* Define :guilabel:`Route upload`
+* Define :guilabel:`Track download`
+* Define :guilabel:`Track upload`
+
+
+Locator settings
 ----------------
 
 |search| The :guilabel:`Locator` tab lets you configure the :ref:`Locator bar
@@ -1085,35 +1112,35 @@ It provides some default filters (with prefix) to use:
 .. figure:: img/options_locator.png
    :align: center
 
-   Locator Settings in QGIS
+   Locator settings in QGIS
 
 
-* Project layers (``l``): finds and selects a layer in the :guilabel:`Layers`
+* Project Layers (``l``): finds and selects a layer in the :guilabel:`Layers`
   panel.
-* Project layouts (``pl``): finds and opens a print layout.
+* Project Layouts (``pl``): finds and opens a print layout.
 * Actions (``.``): finds and executes a QGIS action; actions can be any tool
   or menu in QGIS, opening a panel...
-* Active layer features (``f``): searches for matching attributes in any field
+* Active Layer Features (``f``): searches for matching attributes in any field
   from the current active layer and zooms to the selected feature.
   Press |settings| to configure the maximum number of results.
-* Features in all layers (``af``): searches for matching attributes in the
+* Features in All Layers (``af``): searches for matching attributes in the
   :ref:`display name <maptips>` of each :ref:`searchable layers <project_layer_capabilities>`
   and zooms to the selected feature.
   Press |settings| to configure the maximum number of results and the maximum
   number of results per layer.
 * Calculator (``=``): allows evaluation of any QGIS expression and, if valid,
   gives an option to copy the result to the clipboard.
-* Spatial bookmarks (``b``): finds and zooms to the bookmark extent.
+* Spatial Bookmarks (``b``): finds and zooms to the bookmark extent.
 * Settings (``set``): browses and opens project and application-wide properties
   dialogs.
-* Go to coordinate (``go``): pans the map canvas to a location defined by a
+* Go to Coordinate (``go``): pans the map canvas to a location defined by a
   comma or space separated pair of x and y coordinates or a formatted URL
   (e.g., OpenStreetMap, Leaflet, OpenLayer, Google Maps, ...).
   The coordinate is expected in WGS 84 (``epsg:4326``) and/or map canvas CRS.
-* Nominatim geocoder (``>``): geocodes using the `Nominatim <https://nominatim.org>`_
+* Nominatim Geocoder (``>``): geocodes using the `Nominatim <https://nominatim.org>`_
   geocoding service of the OpenStreetMap Foundation.
-* Processing algorithms (``a``): searches and opens a Processing algorithm dialog.
-* Edit selected features (``ef``): gives quick access and runs a compatible
+* Processing Algorithms (``a``): searches and opens a Processing algorithm dialog.
+* Edit Selected Features (``ef``): gives quick access and runs a compatible
   :ref:`modify-in-place <processing_inplace_edit>` Processing algorithm on the
   active layer.
 
@@ -1131,8 +1158,9 @@ The set of default locator filters can be extended by plugins, eg for OSM
 nominatim searches, direct database searching, layer catalog searches, ...
 
 
-Acceleration Settings
+Acceleration settings
 ---------------------
+
 OpenCL acceleration settings.
 
 .. _figure_acceleration_settings:
@@ -1146,12 +1174,12 @@ Depending on your hardware and software, you may have to install additional
 libraries to enable OpenCL acceleration.
 
 
-IDE Settings
+IDE settings
 ------------
 
 .. _code_editor_options:
 
-Code Editor Settings
+Code Editor settings
 ....................
 
 In the |codeEditor| :guilabel:`Code Editor` tab, you can control the appearance
@@ -1163,13 +1191,13 @@ expression widget and function editor, ...).
 .. figure:: img/options_codeeditor.png
    :align: center
 
-   Code Editor Settings tab
+   Code Editor settings tab
 
 At the top of the dialog, a widget provides a live preview of the current
 settings, in various coding languages (Python, QGIS expression, HTML, SQL,
 JavaScript). A convenient way to adjust settings.
 
-* Check |unchecked| :guilabel:`Override code editor font` to modify the default
+* Check |unchecked| :guilabel:`Override Code Editor Font` to modify the default
   :guilabel:`Font` family and :guilabel:`Size`.
 
 * Under the :guilabel:`Colors` group, you can:
@@ -1184,7 +1212,7 @@ JavaScript). A convenient way to adjust settings.
 
 .. _console_options:
 
-Python Console Settings
+Python Console settings
 .......................
 
 The |runConsole| :guilabel:`Python Console` settings help you manage and control
@@ -1202,7 +1230,7 @@ It can also be accessed using the |options| :sup:`Options...` button from:
 .. figure:: img/options_pythonconsole.png
    :align: center
 
-   Python Console Settings tab
+   Python Console settings tab
 
 You can specify:
 
@@ -1222,7 +1250,7 @@ You can specify:
 * under :guilabel:`Run and Debug`
 
   * |unchecked| :guilabel:`Enable Object Inspector (switching between tabs may
-    be slow)`: Enable the object inspector.
+    be slow)`: Enable Object Inspector.
   * |unchecked| :guilabel:`Auto-save script before running`: Saves the script
     automatically when executed. This action will store a temporary file (in the
     temporary system directory) that will be deleted automatically after running.
@@ -1244,7 +1272,7 @@ More details on `GitHub authentication
 <https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token>`_
 
 
-Processing Settings
+Processing settings
 -------------------
 
 The |processingAlgorithm| :guilabel:`Processing` tab provides you with general settings
@@ -1261,12 +1289,12 @@ More information at :ref:`label_processing`.
 .. figure:: img/options_processing.png
    :align: center
 
-   Processing Settings tab in QGIS
+   Processing settings tab in QGIS
 
 
 .. _optionsadvanced:
 
-Advanced Settings
+Advanced settings
 -----------------
 
 .. _figure_advanced_settings:
@@ -1274,7 +1302,7 @@ Advanced Settings
 .. figure:: img/options_advanced.png
    :align: center
 
-   Advanced Settings tab in QGIS
+   Advanced settings tab in QGIS
 
 All the settings related to QGIS (UI, tools, data providers, Processing
 configurations, default values and paths, plugins options, expressions,
@@ -1299,6 +1327,7 @@ Changes are automatically saved in the :file:`QGIS3.ini` file.
 
 .. index:: User profile
 .. _user_profiles:
+
 
 Working with User Profiles
 ==========================
@@ -2266,6 +2295,8 @@ in the QGIS user profile.
 .. |editMetadata| image:: /static/common/editmetadata.png
    :width: 1.2em
 .. |editPaste| image:: /static/common/mActionEditPaste.png
+   :width: 1.5em
+.. |editSelected| image:: /static/common/symbologyEdit.png
    :width: 1.5em
 .. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
