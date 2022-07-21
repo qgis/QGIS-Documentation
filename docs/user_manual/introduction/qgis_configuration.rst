@@ -729,9 +729,16 @@ This tab offers some options regarding the behavior of the :ref:`Identify tool <
 
 **Coordinate and Bearing Display**
 
-* Define :guilabel:`Default bearing format for new projects`:
-  used to display the mouse coordinate in the status bar when panning
-  the map canvas. It can be overridden in the project properties dialog.
+This section provides ways to :guilabel:`Configure`:
+
+* :guilabel:`Default coordinate format for new projects`, as displayed in
+  the :guilabel:`Coordinates` box on QGIS status bar and in the :guilabel:`Derived`
+  section of the |identify| :sup:`Identify features` tool's results
+* :guilabel:`Default bearing format for new projects`, as displayed in
+  the status bar for the map canvas panning direction and by the |measureBearing|
+  :sup:`Measure bearing` tool.
+
+These options can be overridden at the :ref:`project level <coordinate_and_bearing>`.
 
 **Panning and zooming**
 
@@ -1412,10 +1419,38 @@ frame lets you control these parameters. You can indeed choose:
   * Identify tool derived length, perimeter and area values
   * Default unit shown in measure dialog
 
-The :guilabel:`Coordinate and Bearing display` allows you to choose and
-customize the bearing format and the format of units
-to use to display the mouse coordinate in the status bar and the derived coordinates
-shown via the identify tool.
+.. _coordinate_and_bearing:
+
+The :guilabel:`Coordinate and Bearing display` allows you to customize
+the display of:
+
+* the coordinates shown in the :guilabel:`Coordinates` box on QGIS status bar
+  and in the :guilabel:`Derived` section of the |identify| :sup:`Identify
+  features` tool's results
+* the bearing value displayed in the status bar for the map canvas panning
+  direction and by the |measureBearing| :sup:`Measure bearing` tool.
+
+Available parameters are:
+
+* :guilabel:`Display coordinates using` either ``Map units`` (based on project CRS)
+  or ``Geographic (latitude/longitude)``
+* :guilabel:`Coordinate format`: you can configure it as ``Decimal Degrees``,
+  ``Degrees, Minutes`` or ``Degrees, Minutes, Seconds``, and whether it should display:
+
+  * |unchecked| :guilabel:`Show directional suffix`
+  * |unchecked| :guilabel:`Show leading zeros for minutes and seconds`
+  * |unchecked| :guilabel:`Show leading zeros for degrees`
+  * |unchecked| :guilabel:`Show trailing zeros`
+
+* :guilabel:`Coordinate precision`: the number of decimal places can be automatic
+  (derived from the type of CRS) or set manually
+* :guilabel:`Coordinate order`: you can opt to display the coordinates in the native
+  order of the CRS (``Default``) or switch it to either ``Easting, Northing (Longitude, Latitude)``
+  or ``Northing, Easting (Latitude, Longitude)`` order
+* :guilabel:`Bearing format` possible values are ``0 to 180°, with E/W suffix``,
+  ``-180 to +180°`` or ``0 to 360°``. The number of :guilabel:`Decimal places` as
+  well as whether to :guilabel:`Show trailing zeros` can be set.
+
 
 .. _figure_general_tab:
 
@@ -2242,6 +2277,8 @@ in the QGIS user profile.
    :width: 1.5em
 .. |general| image:: /static/common/general.png
    :width: 1.5em
+.. |identify| image:: /static/common/mActionIdentify.png
+   :width: 1.5em
 .. |indicatorLowAccuracy| image:: /static/common/mIndicatorLowAccuracy.png
    :width: 1.5em
 .. |interfaceCustomization| image:: /static/common/mActionInterfaceCustomization.png
@@ -2251,6 +2288,8 @@ in the QGIS user profile.
 .. |keyboardShortcuts| image:: /static/common/mActionKeyboardShortcuts.png
    :width: 1.5em
 .. |layoutItem3DMap| image:: /static/common/mLayoutItem3DMap.png
+   :width: 1.5em
+.. |measureBearing| image:: /static/common/mActionMeasureBearing.png
    :width: 1.5em
 .. |nix| image:: /static/common/nix.png
    :width: 1em
