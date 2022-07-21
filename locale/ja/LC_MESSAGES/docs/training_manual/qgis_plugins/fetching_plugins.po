@@ -2,19 +2,20 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2022
+# Miyoshi Tomoya, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 10:17+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:15+0000\n"
+"Last-Translator: Miyoshi Tomoya, 2022\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -45,6 +46,10 @@ msgstr "**このレッスンの目標:** QGISのプラグインシステムを�
 msgid "|basic| |FA| Managing Plugins"
 msgstr "|basic| |FA| プラグインの管理"
 
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:119
+msgid "basic"
+msgstr "basic"
+
 #: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:13
 msgid ""
 "To open the :guilabel:`Plugin Manager`, click on the menu item "
@@ -57,17 +62,85 @@ msgstr ""
 msgid "In the dialog that opens, find the :guilabel:`Processing` plugin:"
 msgstr "開かれたダイアログで :guilabel:`プロセッシング` プラグインを探しましょう。"
 
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:20
+msgid "Click in the box next to this plugin and uncheck it to deactivate it."
+msgstr "このプラグインの横のボックスをクリックしてチェックを外し、それを無効にします。"
+
 #: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:21
 msgid "Click :guilabel:`Close`."
 msgstr ":guilabel:`閉じる` をクリックします。"
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:22
+msgid ""
+"Looking at the menu, you will notice that the :guilabel:`Processing` menu is"
+" is now gone. This means that many of the processing functions you have been"
+" using before have disappeared! For example look at the "
+":menuselection:`Vector -->` and :menuselection:`Raster -->` menus. This is "
+"because they are part of the :guilabel:`Processing` plugin, which needs to "
+"be activated to use them."
+msgstr ""
+"メニューを見てみると、 :guilabel:`プロセシング` "
+"メニューがなくなっていることに気がつくと思います。これは、今まで使っていた多くの処理関数が消えてしまったことを意味します! 例えば、 "
+":menuselection:`ベクタ -->` と :menuselection:`ラスタ -->` メニューを見てください。これは、それらが "
+":guilabel:`プロセシング` プラグインの一部であり、使用するにはプラグインを有効にする必要があるからです。"
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:27
+msgid ""
+"Open the :guilabel:`Plugin Manager` again and reactivate the "
+":guilabel:`Processing` plugin by clicking in the checkbox next to it."
+msgstr ""
+"再び :guilabel:`プラグインマネージャ` を開き、 :guilabel:`Processing` "
+"プラグインの横にあるチェックボックスをクリックして、再度有効化します。"
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:29
+msgid ""
+":guilabel:`Close` the dialog. The :guilabel:`Processing` menu and functions "
+"should be available again."
+msgstr ""
+"ダイアログを :guilabel:`閉じる` します。:guilabel:`Processing`メニューと関数が再び利用可能になるはずです。"
 
 #: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:36
 msgid "|basic| |FA| Installing New Plugins"
 msgstr "|basic| |FA| 新しいプラグインのインストール"
 
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:38
+msgid ""
+"The list of plugins that you can activate and deactivate draws from the "
+"plugins that you currently have installed. To install new plugins:"
+msgstr ""
+"有効化・無効化できるプラグインのリストは、現在インストールされているプラグインから引用されています。新しいプラグインをインストールするには:"
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:41
+msgid ""
+"Select the :guilabel:`Not Installed` option in the :guilabel:`Plugin "
+"Manager` dialog. The plugins available for you to install will be listed "
+"here. This list will vary depending on your existing system setup."
+msgstr ""
+":guilabel:`プラグインマネージャ` ダイアログで :guilabel:`未インストール` "
+"オプションを選択します。インストール可能なプラグインがここにリストアップされます。このリストは、あなたの既存のシステム設定によって異なります。"
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:48
+msgid "Find information about the plugin by selecting it in the list"
+msgstr "プラグインを選択すると、そのプラグインに関する情報が表示されます"
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:53
+msgid ""
+"Install the one(s) you are interested in by clicking the :guilabel:`Install "
+"Plugin` button below the plugin information panel."
+msgstr ""
+"プラグイン情報パネルの下にある :guilabel:`インストール` ボタンをクリックして、興味のあるプラグインをインストールしてください。"
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:56
+msgid ""
+"if the plugin has some error it will be listed in the :guilabel:`Invalid` "
+"tab. You can then contact the plugin owner to fix the problem."
+msgstr ""
+"プラグインに何らかのエラーがある場合、 :guilabel:`無効` "
+"タブにリストアップされます。この場合、プラグインの所有者に連絡して、問題を解決することができます。"
+
 #: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:60
 msgid "|basic| |FA| Configuring Additional Plugin Repositories"
-msgstr "|basic| |FA| 追加的なプラグインリポジトリの設定"
+msgstr "|basic| |FA| 追加プラグインリポジトリの設定"
 
 #: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:62
 msgid ""
@@ -75,11 +148,27 @@ msgid ""
 "plugin *repositories* you are configured to use."
 msgstr "利用可能なプラグインはどのプラグイン *リポジトリ* が設定されているかによって変わります。"
 
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:65
+msgid ""
+"QGIS plugins are stored online in repositories. By default, only the "
+"`official repository <https://plugins.qgis.org>`_ is active, meaning that "
+"you can only access plugins that are published there. Given the diversity of"
+" available tools, this repository should meet most of your needs."
+msgstr ""
+"QGISのプラグインは、オンライン上のリポジトリに保存されています。デフォルトでは、`公式リポジトリ "
+"<https://plugins.qgis.org>`_ "
+"のみが有効です。つまり、そこで公開されているプラグインにのみアクセスすることができます。利用可能なツールの多様性を考えると、このリポジトリはあなたのニーズのほとんどを満たしてくれるはずです。"
+
 #: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:70
 msgid ""
 "It is possible, however, to try out more plugins than the default ones. "
 "First, you want to configure additional repositories. To do this:"
-msgstr "しかしデフォルトのものより多くのプラグインを試すこともできます。まず追加的なリポジトリの設定をします。"
+msgstr "しかしデフォルトのものより多くのプラグインを試すこともできます。まず追加リポジトリを設定します。それには:"
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:73
+msgid ""
+"Open the :guilabel:`Settings` tab in the :guilabel:`Plugin Manager` dialog"
+msgstr ":guilabel:`プラグインマネージャ` ダイアログの :guilabel:`設定` タブを開いてください"
 
 #: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:78
 msgid "Click :guilabel:`Add` to find and add a new repository."
@@ -90,23 +179,39 @@ msgid ""
 "Provide a Name and URL for the new repository you want to configure and make"
 " sure the :guilabel:`Enabled` checkbox is selected."
 msgstr ""
-"設定したい新しいリポジトリの名前とURLを入力します。 :guilabel:`利用可にする` チェックボックスがチェックされていることを確認します。"
+"設定したい新しいリポジトリの名前とURLを入力します。 :guilabel:`有効化` チェックボックスがチェックされていることを確認します。"
 
 #: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:85
 msgid ""
 "You will now see the new plugin repo listed in the list of configured Plugin"
 " Repositories"
-msgstr "新しいプラグインリポジトリがプラグインリポジトリの一覧の中に表示されます。"
+msgstr "新しいプラグインリポジトリがプラグインリポジトリの一覧の中に表示されます"
 
 #: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:91
 msgid ""
 "You can also select the option to display Experimental Plugins by selecting "
 "the :guilabel:`Show also experimental plugins` checkbox."
-msgstr "開発の初期段階にあるプラグインも表示するには :guilabel:`実験的プラグインも表示する` チェックボックスをチェックします。"
+msgstr "開発の初期段階にあるプラグインも表示するには :guilabel:`実験的プラグインを表示` チェックボックスをチェックします。"
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:93
+msgid ""
+"If you now switch back to the :guilabel:`Not Installed` tab, you will see "
+"that additional plugins are available for installation."
+msgstr "ここで :guilabel:`未インストール` タブに戻ると、追加プラグインがインストールできることがわかります。"
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:95
+msgid ""
+"To install a plugin, click on it in the list and then on the "
+":guilabel:`Install plugin` button."
+msgstr "プラグインをインストールするには、リストでプラグインをクリックし、 :guilabel:`インストール` ボタンをクリックします。"
 
 #: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:99
 msgid "|IC|"
 msgstr "|IC|"
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:101
+msgid "Installing plugins in QGIS should be straightforward and effective!"
+msgstr "QGISにプラグインをインストールするのは、簡単で効果的でしょう！"
 
 #: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:104
 msgid "|WN|"
