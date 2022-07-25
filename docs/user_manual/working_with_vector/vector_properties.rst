@@ -3252,6 +3252,54 @@ More information on variables usage in the General Tools
 :ref:`general_tools_variables` section.
 
 
+.. index:: Elevation, Terrain
+.. _vectorelevationmenu:
+
+Elevation Properties
+====================
+
+
+* :guilabel:`Profile Chart Appearance`: controls how features are rendered
+  when drawing a profile chart. Two main :guilabel:`Interpretation` modes
+  are available:
+
+  * as :guilabel:`Individual features`: samples discrete positions where
+    the cross section profile line intersects the vector features.
+    That intersection can be represented as point, line or surface
+    depending on the layer type and whether an extrusion is applied.
+
+    With checking |checkbox| :guilabel:`Respect layer symbology`,
+    features will be rendered on the profile chart with their corresponding
+    :ref:`layer styling <vector_style_menu>` (allowing e.g. categorized
+    classes to be visible on the profile chart).
+    If the profile symbol type does not match the layer's renderer symbol types,
+    only the symbol color from the renderer is applied to the profile symbol.
+
+    Depending on the layer settings, profile symbols can be represented with
+    a custom style, using:
+
+    * :ref:`Marker style <vector_marker_symbols>`, for non-extruded point and
+      line features
+    * :ref:`Line style <vector_line_symbols>`, for extruded point and line features,
+      and for non-extruded polygon features
+    * :ref:`Fill style <vector_fill_symbols>`, for extruded polygon features
+
+  * as :guilabel:`Continuous Surface (e.g. contours)`: the elevation chart
+    will be rendered as a surface instead of separate features by joining
+    the sampled elevation results into a continuous line. This can enhance
+    visualisation and is designed for vector layers which represent a
+    continuous elevation surface, e.g contour lines or surveyed elevation points.
+    The line :guilabel:`Style` can be set as:
+
+    * a profile :guilabel:`Line` with a :guilabel:`Line style` applied
+    * a surface with :guilabel:`Fill below` and a corresponding
+      :guilabel:`Fill style`
+
+    Moreover, you can check |unchecked| :guilabel:`Show markers at sampled points`
+    to make them visible over the interpretation line and assign them
+    a :guilabel:`Marker style`.
+
+
 .. index:: Metadata, Metadata editor, Keyword
 .. _vectormetadatamenu:
 
