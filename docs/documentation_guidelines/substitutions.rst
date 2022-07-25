@@ -426,6 +426,7 @@ Icon                                Substitution                            Icon
 |labelmask|                         ``|labelmask|``                         |temporal|                     ``|temporal|``
 |legend|                            ``|legend|``                            |dependencies|                 ``|dependencies|``
 |3d|                                ``|3d|``                                |system|                       ``|system|``
+|elevationscale|                    ``|elevationscale|``
 |editMetadata|                      ``|editMetadata|``                      |overlay|                      ``|overlay|``
 |digitizing|                        ``|digitizing|``                        |auxiliaryStorage|             ``|auxiliaryStorage|``
 |history|                           ``|history|``                           |stylePreset|                  ``|stylePreset|``
@@ -788,6 +789,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |editableEdits| image:: /static/common/mIconEditableEdits.png
    :width: 1em
+.. |elevationscale| image:: /static/common/elevationscale.png
+   :width: 1.5em
 .. |ellipseCenter2Points| image:: /static/common/mActionEllipseCenter2Points.png
    :width: 1.5em
 .. |ellipseCenterPoint| image:: /static/common/mActionEllipseCenterPoint.png
