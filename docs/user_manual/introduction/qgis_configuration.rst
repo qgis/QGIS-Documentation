@@ -1734,7 +1734,7 @@ Terrain and elevation options are available for:
   a :guilabel:`Vertical scale` factor to apply to vertices Z value and
   a vertical :guilabel:`Offset`
 
-These settings can be overwritten from with the 3D map :ref:`configuration
+These settings can be overwritten from the 3D map :ref:`configuration
 dialog <scene_configuration>`.
 
 
