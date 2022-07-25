@@ -26,11 +26,14 @@ There are several tabs in the dialog:
     - |rasterHistogram| :ref:`Histogram <raster_histogram>`:sup:`[1]`
     - |rendering| :ref:`Rendering <raster_rendering>`
   * - |temporal| :ref:`Temporal <raster_temporal>`
+    - |elevationscale| :ref:`Elevation <raster_elevation>`
     - |pyramids| :ref:`Pyramids <raster_pyramids>`
-    - |editMetadata| :ref:`Metadata <raster_metadata>`
-  * - |legend| :ref:`Legend <raster_server>`
+  * - |editMetadata| :ref:`Metadata <raster_metadata>`
+    - |legend| :ref:`Legend <raster_server>`
     - |overlay| :ref:`QGIS Server <raster_server>`
-    - :ref:`External plugins <plugins>`:sup:`[2]` tabs
+  * - :ref:`External plugins <plugins>`:sup:`[2]` tabs
+    -
+    -
 
 :sup:`[1]` Also available in the :ref:`Layer styling panel <layer_styling_panel>`
 
@@ -731,6 +734,39 @@ set whether the layer redraw should be:
   a raster layer).
 
 
+.. index:: Elevation, Terrain
+.. _raster_elevation:
+
+Elevation Properties
+====================
+
+The |elevationscale| :guilabel:`Elevation` tab provides options to control
+the layer elevation properties within a :ref:`3D map view <label_3dmapview>`
+and its appearance in the profile tool charts. Specifically, you can set:
+
+.. Todo: Add above a ref link to profile tool
+
+.. _figure_raster_elevation:
+
+.. figure:: img/rasterElevation.png
+   :align: center
+
+   Raster Elevation Properties
+
+* |unchecked| :guilabel:`Represents Elevation Surface`: whether
+  the raster layer represents a height surface (e.g DEM) and the pixel
+  values should be interpreted as elevations. You will need to fill in
+  the :guilabel:`Band` to pick values from and can apply a
+  :guilabel:`Scale` factor and an :guilabel:`Offset`.
+* :guilabel:`Profile Chart Appearance`: controls the rendering
+  :guilabel:`Style` the raster elevation will use when drawing a profile chart.
+  It can be set as:
+
+  * a profile :guilabel:`Line` with a :ref:`line style <vector_line_symbols>` applied
+  * a surface with :guilabel:`Fill below` and a corresponding
+    :ref:`fill style <vector_fill_symbols>`
+
+
 .. index:: Pyramids
 .. _raster_pyramids:
 
@@ -869,6 +905,8 @@ be provided for :guilabel:`Description`, :guilabel:`Attribution`,
    :width: 1.5em
 .. |editMetadata| image:: /static/common/editmetadata.png
    :width: 1.2em
+.. |elevationscale| image:: /static/common/elevationscale.png
+   :width: 1.5em
 .. |fileOpen| image:: /static/common/mActionFileOpen.png
    :width: 1.5em
 .. |fileSave| image:: /static/common/mActionFileSave.png
@@ -907,3 +945,5 @@ be provided for :guilabel:`Description`, :guilabel:`Attribution`,
    :width: 1.5em
 .. |transparency| image:: /static/common/transparency.png
    :width: 1.5em
+.. |unchecked| image:: /static/common/unchecked.png
+   :width: 1.3em
