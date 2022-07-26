@@ -10,11 +10,15 @@ Plugins
 List of plugins
 ===============
 
-Plugins can also be installed on QGIS Server. They can add new features or alter existing ones from
-QGIS Server.
+Plugins can also be installed on QGIS Server.
 
 Some plugins designed for server can be found on the official
 `QGIS repository <https://plugins.qgis.org/plugins/server/>`_.
+
+Install only plugins you need for your own purpose. On QGIS server, plugins are like hooks into QGIS server, they can
+alter inputs or outputs of QGIS server. They can produce unexpected result if you don't know how the plugin works.
+Please refer to their respective documentation or the application that needs QGIS server plugins to know which plugin can
+be useful for you.
 
 Location of plugins
 ===================
@@ -30,7 +34,7 @@ Installation
 Manually with a ZIP
 ~~~~~~~~~~~~~~~~~~~
 
-To install the **HelloWorld** example plugin for testing the server, using a specific
+As an example, to install the **HelloWorld** plugin for testing the server, using a specific
 folder, you first have to create a directory to hold server plugins. This will be specified in
 the virtual host configuration and passed on to the server through an
 environment variable:
@@ -42,6 +46,11 @@ environment variable:
  wget https://github.com/elpaso/qgis-helloserver/archive/master.zip
  unzip master.zip
  mv qgis-helloserver-master HelloServer
+
+.. warning::
+
+    According to its `description <https://plugins.qgis.org/plugins/HelloServer/>`_, HelloServer plugin is designed for
+    development and demonstration purposes. Do not keep this plugin for production if you don't need it.
 
 With a command line tool
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -55,6 +64,12 @@ The installation is using pip. Installing in a virtual environment is a good pra
 .. code-block:: bash
 
  pip3 install qgis-plugin-manager
+
+To upgrade the tool:
+
+.. code-block:: bash
+
+ pip3 install --upgrade qgis-plugin-manager
 
 Then, you can use the ``qgis-plugin-manager`` executable from the command line:
 
