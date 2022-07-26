@@ -1869,6 +1869,7 @@ Mesh
 
 The :menuselection:`Mesh` menu provides tools needed to manipulate
 :ref:`mesh layers <label_meshdata>`.
+Third-party plugins can add items to this menu.
 
 .. list-table::
    :header-rows: 1
