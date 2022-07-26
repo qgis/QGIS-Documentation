@@ -134,10 +134,11 @@ The mesh :guilabel:`Layer Properties` dialog provides the following sections:
      - |symbology| :ref:`Symbology <meshsymbology>`:sup:`[1]`
    * - |3d| :ref:`3D View <mesh3dview>`:sup:`[1]`
      - |temporal| :ref:`Temporal <meshtemporal>`
-     - |rendering| :ref:`Rendering <meshrendering>`
-   * - |editMetadata| :ref:`Metadata <meshmetadata>`
+     - |elevationscale| :ref:`Elevation <meshelevation>`
+   * - |rendering| :ref:`Rendering <meshrendering>`
+     - |editMetadata| :ref:`Metadata <meshmetadata>`
      -
-     -
+
 
 :sup:`[1]` Also available in the :ref:`Layer styling panel <layer_styling_panel>`
 
@@ -560,6 +561,37 @@ over the map canvas.
   and :guilabel:`Days`.
 
 
+.. index:: Elevation, Terrain
+.. _meshelevation:
+
+Elevation Properties
+====================
+
+The |elevationscale| :guilabel:`Elevation` tab provides options to control
+the layer elevation properties within a :ref:`3D map view <label_3dmapview>`
+and its appearance in the profile tool charts. Specifically, you can set:
+
+.. Todo: Add above a ref link to profile tool
+
+.. _figure_mesh_elevation:
+
+.. figure:: img/mesh_elevation.png
+   :align: center
+
+   Mesh Elevation properties
+
+* :guilabel:`Elevation Surface`: how the mesh layer vertices Z values
+  should be interpreted as terrain elevation. You can apply a
+  :guilabel:`Scale` factor and an :guilabel:`Offset`.
+* :guilabel:`Profile Chart Appearance`: controls the rendering
+  :guilabel:`Style` the mesh elevation will use when drawing a profile chart.
+  It can be set as:
+
+  * a profile :guilabel:`Line` with a :ref:`line style <vector_line_symbols>` applied
+  * a surface with :guilabel:`Fill below` and a corresponding
+    :ref:`fill style <vector_fill_symbols>`
+
+
 .. index:: Metadata, Metadata editor, Keyword
 .. _meshmetadata:
 
@@ -727,6 +759,8 @@ the expression to execute.
    :width: 1.5em
 .. |editMetadata| image:: /static/common/editmetadata.png
    :width: 1.2em
+.. |elevationscale| image:: /static/common/elevationscale.png
+   :width: 1.5em
 .. |expandTree| image:: /static/common/mActionExpandTree.png
    :width: 1.5em
 .. |expression| image:: /static/common/mIconExpression.png
