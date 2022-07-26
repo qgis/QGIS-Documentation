@@ -651,6 +651,13 @@ Advanced parameters
 
        Default: False
      - Determines if vectorial data should be left as vectors
+   * - **Always export as raster** |328|
+     - ``FORCE_RASTER``
+     - [boolean]
+
+       Default: False
+     - forces all the items in the map to be rasterized.
+       This parameter takes precedence over the ``FORCE_VECTOR`` parameter.
    * - **Append georeference information**
      - ``GEOREFERENCE``
      - [boolean]
@@ -685,6 +692,17 @@ Advanced parameters
 
        * 0 - Always export text as paths (recommended)
        * 1 - Always export texts as text objects
+   * - **Image compression** |328|
+     - ``IMAGE_COMPRESSION``
+     - [enumeration]
+
+       Default: 0
+     - Determines compression level of the image and how suitable the file could be
+       for printing outputs or post-production in external applications.
+       Possible options are:
+
+       * 0 - Lossy (JPEG)
+       * 1 - Lossless
 
 Outputs
 .......
@@ -805,6 +823,13 @@ Advanced parameters
 
        Default: False
      - Determines if vectorial data should be left as vectors
+   * - **Always export as raster** |328|
+     - ``FORCE_RASTER``
+     - [boolean]
+
+       Default: False
+     - forces all the items in the map to be rasterized.
+       This parameter takes precedence over the ``FORCE_VECTOR`` parameter.
    * - **Append georeference information**
      - ``GEOREFERENCE``
      - [boolean]
@@ -839,6 +864,17 @@ Advanced parameters
 
        * 0 - Always export text as paths (recommended)
        * 1 - Always export texts as text objects
+   * - **Image compression** |328|
+     - ``IMAGE_COMPRESSION``
+     - [enumeration]
+
+       Default: 0
+     - Determines compression level of the image and how suitable the file could be
+       for printing outputs or post-production in external applications.
+       Possible options are:
+
+       * 0 - Lossy (JPEG)
+       * 1 - Lossless
 
 Outputs
 .......
@@ -1037,6 +1073,13 @@ Advanced parameters
 
        Default: False
      - Determines if vectorial data should be left as vectors
+   * - **Always export as raster** |328|
+     - ``FORCE_RASTER``
+     - [enumeration]
+
+       Default: False
+     - forces all the items in the map to be rasterized.
+       This parameter takes precedence over the ``FORCE_VECTOR`` parameter.
    * - **Append georeference information**
      - ``GEOREFERENCE``
      - [boolean]
@@ -1071,7 +1114,17 @@ Advanced parameters
 
        * 0 - Always export text as paths (recommended)
        * 1 - Always export texts as text objects
+   * - **Image compression** |328|
+     - ``IMAGE_COMPRESSION``
+     - [enumeration]
 
+       Default: 0
+     - Determines compression level of the image and how suitable the file could be
+       for printing outputs or post-production in external applications.
+       Possible options are:
+
+       * 0 - Lossy (JPEG)
+       * 1 - Lossless
    * - **Export layers as separate PDF files**
      - ``SEPARATE_LAYERS``
      - [boolean]
@@ -1580,5 +1633,6 @@ Python code
    source folder.
 
 .. |324| replace:: ``NEW in 3.24``
+.. |328| replace:: ``NEW in 3.28``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
