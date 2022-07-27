@@ -88,7 +88,7 @@ Use the :meth:`iconPath() <qgis.core.QgsApplication.iconPath>` method.
 For example, to reuse the |fileOpen| icon available at
 :source:`images/themes/default/mActionFileOpen.svg`, you can do:
 
-.. testcode:: plugin_snippets
+.. code:: py
 
     # e.g. somewhere in the initGui
     self.file_open_action = QAction(
