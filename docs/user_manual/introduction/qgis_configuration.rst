@@ -997,9 +997,10 @@ and manage PKI certificates. See :ref:`authentication_index` for more
 details.
 
 To manage authentications, you can use the list of tools next to the frame, ie:
-* |symbologyAdd| :guilabel:`Add new authentication configuration`
-* |symbologyRemove| :guilabel:`Remove selected authentication configuration`
-* |editSelected| :guilabel:`Edit selected authentication configuration`
+
+* |symbologyAdd| :sup:`Add new authentication configuration`
+* |symbologyRemove| :sup:`Remove selected authentication configuration`
+* |symbologyEdit| :sup:`Edit selected authentication configuration`
 
 .. _figure_authentication_settings:
 
@@ -1078,15 +1079,15 @@ GPS
 GPSBabel
 ........
 
-GPSBabel converts waypoints, tracks, and routes between popular GPS receivers 
+`GPSBabel <https://www.gpsbabel.org/>`_ converts waypoints, tracks, and routes between popular GPS receivers 
 such as Garmin or Magellan and mapping programs like Google Earth or Basecamp. 
 Literally hundreds of GPS receivers and programs are supported.
-First you have to define the :guilabel:`Path to GPSBabel`
+First you have to define the :guilabel:`Path to GPSBabel` binaries
 Then you have to choose or to add a device. You can add and delete device paths via
 |symbologyAdd| :guilabel:`Add new path` or |symbologyRemove| :guilabel:`Remove path`.
 After that you can define different parameters:
 
-.. figure:: options_gpsbabel.png
+.. figure:: img/options_gpsbabel.png
    :align: center
 
    GPS Babel settings
@@ -1250,7 +1251,7 @@ You can specify:
 * under :guilabel:`Run and Debug`
 
   * |unchecked| :guilabel:`Enable Object Inspector (switching between tabs may
-    be slow)`: Enable Object Inspector.
+    be slow)`
   * |unchecked| :guilabel:`Auto-save script before running`: Saves the script
     automatically when executed. This action will store a temporary file (in the
     temporary system directory) that will be deleted automatically after running.
@@ -2296,7 +2297,7 @@ in the QGIS user profile.
    :width: 1.2em
 .. |editPaste| image:: /static/common/mActionEditPaste.png
    :width: 1.5em
-.. |editSelected| image:: /static/common/symbologyEdit.png
+.. |symbologyEdit| image:: /static/common/symbologyEdit.png
    :width: 1.5em
 .. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
