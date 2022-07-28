@@ -2,19 +2,20 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2022
+# Miyoshi Tomoya, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 10:27+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:09+0000\n"
+"Last-Translator: Miyoshi Tomoya, 2022\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -56,6 +57,10 @@ msgstr "**このレッスンの目標:** WMSを使用して制限を知ること
 msgid "|basic| |FA| Loading a WMS Layer"
 msgstr "|basic| |FA| WMSレイヤーを読み込む"
 
+#: ../../docs/training_manual/online_resources/wms.rst:281
+msgid "basic"
+msgstr "basic"
+
 #: ../../docs/training_manual/online_resources/wms.rst:21
 msgid ""
 "For this exercise, you can either use the basic map you made at the start of"
@@ -74,6 +79,34 @@ msgid ""
 "layers visible."
 msgstr "新しい地図にこれらのレイヤーを読み込みます。またはこれらのレイヤーを表示のみ行いオリジナルの地図を使用します。"
 
+#: ../../docs/training_manual/online_resources/wms.rst:33
+msgid ""
+"Before starting to add the WMS layer, deactivate \"on the fly\" projection "
+"(:menuselection:`Project --> Properties... --> CRS` tab, check :guilabel:`No"
+" CRS (or unknown/non-Earth projection)`. This may cause the layers to no "
+"longer overlap properly, but don't worry: we'll fix that later."
+msgstr ""
+"WMSレイヤの追加を開始する前に、\"オンザフライ\" 投影を無効にします(:menuselection:`プロジェクト --> プロパティ... "
+"--> 座標参照系(CRS)` タブで、 :guilabel:`CRSなし（または未知/非地球）` "
+"をチェックします。これにより、レイヤが正しく重ならなくなることがありますが、後で修正しますので安心してください。"
+
+#: ../../docs/training_manual/online_resources/wms.rst:38
+msgid ""
+"To add WMS layers, click on the |dataSourceManager| button to open the "
+":guilabel:`Data Source Manager` dialog and enable the |addWmsLayer| "
+":guilabel:`WMS/WMTS` tab."
+msgstr ""
+"WMSレイヤを追加するには、|dataSourceManager| ボタンをクリックして :guilabel:`データソースマネージャ` "
+"ダイアログを開き、|addWmsLayer| :guilabel:`WMS/WMTS` タブを有効にしてください。"
+
+#: ../../docs/training_manual/online_resources/wms.rst:282
+msgid "dataSourceManager"
+msgstr "dataSourceManager"
+
+#: ../../docs/training_manual/online_resources/wms.rst:279
+msgid "addWmsLayer"
+msgstr "addWmsLayer"
+
 #: ../../docs/training_manual/online_resources/wms.rst:45
 msgid ""
 "Remember how you connected to a SpatiaLite or GeoPackage database at the "
@@ -84,7 +117,7 @@ msgid ""
 msgstr ""
 "コースの冒頭でSpatiaLiteまたはGeoPackageデータベースに接続した方法を思い出してください。 :guilabel:`landuse` 、"
 " :guilabel:`buildings` 、および :guilabel:`roads` "
-"レイヤーは、１つのデータベース内に格納されています。これらのレイヤーを使用するには、まずそのデータベースに接続する必要がありました。WMSを使用するレイヤーは、リモートサーバー上にあることを除いて、同様です。"
+"レイヤは、１つのデータベース内に格納されています。これらのレイヤを使用するには、まずそのデータベースに接続する必要がありました。WMSを使用するレイヤは、リモートサーバー上にあることを除いて、同様です。"
 
 #: ../../docs/training_manual/online_resources/wms.rst:51
 msgid ""
@@ -98,13 +131,24 @@ msgid ""
 "<https://ows.terrestris.de/osm/service>`_, which makes use of the "
 "`OpenStreetMap <https://wiki.openstreetmap.org/wiki/Main_Page>`_ dataset."
 msgstr ""
-"WMSアドレスを続ける必要があります。インターネット上で利用可能ないくつかの無料のWMSサーバがあります。これらの一つは `terrestris "
-"<https://ows.terrestris.de/osm/service>`_ 、です、 `OpenStreetMap "
+"続けるにはWMSアドレスが必要です。インターネットには利用できる無料のWMSサーバがいくつかあります。そのうちのひとつは `terrestris "
+"<https://ows.terrestris.de/osm/service>`_ 、で `OpenStreetMap "
 "<https://wiki.openstreetmap.org/wiki/Main_Page>`_ データセットを使用しています。"
 
 #: ../../docs/training_manual/online_resources/wms.rst:58
 msgid "To make use of this WMS, set it up in your current dialog, like this:"
 msgstr "このWMSを利用するには、このように、今表示しているダイアログで設定します。"
+
+#: ../../docs/training_manual/online_resources/wms.rst:63
+msgid "The value of the :guilabel:`Name` field should be ``terrestris``."
+msgstr ":guilabel:`Name` フィールドの値は ``terrestris`` にします。"
+
+#: ../../docs/training_manual/online_resources/wms.rst:64
+msgid ""
+"The value of the :guilabel:`URL` field should be "
+"``https://ows.terrestris.de/osm/service``."
+msgstr ""
+":guilabel:`URL` フィールドの値は ``https://ows.terrestris.de/osm/service`` にします。"
 
 #: ../../docs/training_manual/online_resources/wms.rst:66
 msgid "Click :guilabel:`OK`. You should see the new WMS server listed:"
@@ -114,18 +158,32 @@ msgstr ":guilabel:`OK` をクリックします。リストされている新し
 msgid ""
 "Click :guilabel:`Connect`. In the list below, you should now see these new "
 "entries loaded:"
-msgstr ":guilabel:`接続` をクリック。以下のリストに、今これらの新しいエントリがロードされるはずです。"
+msgstr ":guilabel:`接続` をクリックしてください。すると下のリストに、これらの新しいエントリがロードされるはずです:"
 
 #: ../../docs/training_manual/online_resources/wms.rst:77
 msgid "These are all the layers hosted by this WMS server."
-msgstr "WMSサーバーにホストされたレイヤーがすべてあります。"
+msgstr "これらはこのWMSサーバーにホストされているすべてのレイヤです。"
 
 #: ../../docs/training_manual/online_resources/wms.rst:79
 msgid ""
 "Click once on the :guilabel:`OSM-WMS` layer. This will display its "
 ":guilabel:`Coordinate Reference System`:"
 msgstr ""
-":guilabel:`OSM-WMS` レイヤーを一度クリックしてください。これはその :guilabel:`参照座標系` を表示するでしょう："
+":guilabel:`OSM-WMS` レイヤを一回クリックしてください。これによってその :guilabel:`座標参照系` が表示されます："
+
+#: ../../docs/training_manual/online_resources/wms.rst:85
+msgid ""
+"Since we're not using ``WGS 84`` for our map, let's see all the CRSs we have"
+" to choose from."
+msgstr "私たちの地図では ``WGS 84`` を使っていないので、選択可能なすべての CRS を見てみましょう。"
+
+#: ../../docs/training_manual/online_resources/wms.rst:88
+msgid ""
+"Click the :guilabel:`Change...` button. You will see a standard "
+":guilabel:`Coordinate Reference System Selector` dialog."
+msgstr ""
+":guilabel:`Change...`ボタンをクリックします。標準的な :guilabel:`Coordinate Reference System"
+" Selector` ダイアログが表示されます。"
 
 #: ../../docs/training_manual/online_resources/wms.rst:90
 msgid ""
@@ -133,13 +191,47 @@ msgid ""
 "Mercator`."
 msgstr "*投影* CRSを希望するので、 :guilabel:`WGS 84 /疑似メルカトル` を選択してみましょう。"
 
+#: ../../docs/training_manual/online_resources/wms.rst:93
+msgid "Enter the value ``pseudo`` in the :guilabel:`Filter` field:"
+msgstr "値 ``pseudo`` を :guilabel:`フィルタ` フィールドに入力してください:"
+
+#: ../../docs/training_manual/online_resources/wms.rst:94
+msgid ""
+"Choose :guilabel:`WGS 84 / Pseudo Mercator` (with epsg:3857) from the list."
+msgstr "リストから :guilabel:`WGS 84 / Pseudo Mercator` （epsg:3857とあるもの）を選びます。"
+
+#: ../../docs/training_manual/online_resources/wms.rst:99
+msgid ""
+"Click :guilabel:`OK`. The Coordinate Reference System associated with the "
+"entry has changed."
+msgstr ":guilabel:`OK` をクリックします。入力したものに関係した座標参照系が変わりました。"
+
+#: ../../docs/training_manual/online_resources/wms.rst:102
+msgid ""
+"Click :guilabel:`Add` and the new layer will appear in your map as "
+":guilabel:`OpenStreetMap WMS - by terrestris`."
+msgstr ""
+":guilabel:`Add` をクリックすると、新しいレイヤが :guilabel:`OpenStreetMap WMS - by "
+"terrestris`としてマップに表示されます。"
+
+#: ../../docs/training_manual/online_resources/wms.rst:104
+msgid ""
+"Close the :guilabel:`Data Source Manager` dialog if not done automatically"
+msgstr "自動的に閉じないときは :guilabel:`データソースマネージャ` ダイアログを閉じてください"
+
+#: ../../docs/training_manual/online_resources/wms.rst:105
+msgid ""
+"In the :guilabel:`Layers` panel, click and drag it to the bottom of the "
+"list."
+msgstr ":guilabel:`レイヤ` パネルで、それをリストの最下部にクリック＆ドラッグします。"
+
 #: ../../docs/training_manual/online_resources/wms.rst:106
 msgid ""
 "Zoom out in order to get a global view of the layers. You will notice that "
 "your layers aren't located correctly (near west of Africa). This is because "
 "\"on the fly\" projection is disabled."
 msgstr ""
-"レイヤを全体的に表示するには、ズームアウトします。レイヤが正しく配置されていないことがわかります（アフリカの西に近い）。これは、「その場で」投影が無効になっているためです。"
+"レイヤを全体的に表示するには、ズームアウトします。レイヤが正しく配置されていないことがわかります（アフリカの西に近い）。これは、「オンザフライ」投影が無効になっているためです。"
 
 #: ../../docs/training_manual/online_resources/wms.rst:114
 msgid ""
@@ -150,6 +242,14 @@ msgstr ""
 "その投影を再度有効にしましょう。ただし :guilabel:`OpenStreetMap WMS` レイヤーと同じ投影を使用すること。それは "
 ":guilabel:`WGS 84/擬似メルカトル` です。"
 
+#: ../../docs/training_manual/online_resources/wms.rst:117
+msgid "Open the :menuselection:`Project --> Properties... --> CRS` tab"
+msgstr ":menuselection:`プロジェクト --> プロパティ... --> CRS` タブを開きます"
+
+#: ../../docs/training_manual/online_resources/wms.rst:118
+msgid "Uncheck :guilabel:`No CRS (or unknown/non-Earth projection)`"
+msgstr "Uncheck :guilabel:`CRSなし（または未知/非地球）` のチェックを外します"
+
 #: ../../docs/training_manual/online_resources/wms.rst:119
 msgid "Choose :guilabel:`WGS 84 / Pseudo Mercator` from the list."
 msgstr "リストから :guilabel:`WGS 84 / 疑似メルカトル` を選択します。"
@@ -158,11 +258,20 @@ msgstr "リストから :guilabel:`WGS 84 / 疑似メルカトル` を選択し�
 msgid "Click :guilabel:`OK`."
 msgstr ":guilabel:`OK` をクリックします。"
 
+#: ../../docs/training_manual/online_resources/wms.rst:125
+msgid ""
+"Now right-click on one of your own layers in the :guilabel:`Layers` panel "
+"and click :guilabel:`Zoom to layer(s)`. You should see the |majorUrbanName| "
+"area:"
+msgstr ""
+"次に、 :guilabel:`レイヤ` パネルで自分のレイヤの一つを右クリックして、 "
+":guilabel:`レイヤの領域にズーム`をクリックします。すると、|majorUrbanName| 領域が表示されるはずです:"
+
 #: ../../docs/training_manual/online_resources/wms.rst:133
 msgid ""
 "Note how the WMS layer's streets and our own streets overlap. That's a good "
 "sign!"
-msgstr "WMSレイヤーの街路と私たち自身の通りがどれほど重なっているかに注目してください。それは良い兆候です！"
+msgstr "WMSレイヤの街路と私たちの街路がどれほど重なっているかに注目してください。それは良い兆候です！"
 
 #: ../../docs/training_manual/online_resources/wms.rst:137
 msgid "The nature and limitations of WMS"
@@ -175,7 +284,7 @@ msgid ""
 " though it looks like it's made up of vectors, it seems to be a raster, but "
 "you can't change its symbology. Why is that?"
 msgstr ""
-"今までに、このWMSレイヤーはその中に実際に多くの地物を持っていることに気づいたかもしれません。それは道路、河川、自然保護区、などなど。しかも、それはベクターで構成されているように見えるにもかかわらず、ラスターのようですが、そのシンボルを変更できません。何故でしょうか？"
+"今までに、このWMSレイヤはその中に実際に多くの地物を持っていることに気づいたかもしれません。それは道路、河川、自然保護区、などなどがあります。しかも、それはベクターで構成されているように見えるにもかかわらず、ラスターのようですが、そのシンボルを変更できません。何故でしょうか？"
 
 #: ../../docs/training_manual/online_resources/wms.rst:144
 msgid ""
@@ -186,7 +295,7 @@ msgid ""
 "as an image.  QGIS can display this image, but can't change its symbology, "
 "because all that is handled on the server."
 msgstr ""
-"これがWMSが動作する方法です：画像として受け取るものは、紙上の通常地図に類似した、地図です。通常起こることは、ベクターレイヤーがあり、それをQGISが地図としてレンダリングするということです。しかし、WMSを使用して、それらのベクターレイヤーは地図としてそれをレンダリングした画像と、その地図を送信WMSサーバー、上にあります。QGISではこの画像を表示できますが、すべてのことはサーバー上で処理されるため、そのシンボルは変更できません。"
+"これがWMSが動作する方法です：この地図は、紙面の通常の地図のように、画像として受け取っています。普段使うのは、QGISが地図としてレンダリングする、ベクタレイヤです。しかしWMSを使うと、それらのベクタレイヤはWMSサーバー上にあり、地図としてレンダリングされ、画像としてその地図が送信されます。QGISではこの画像を表示できますが、すべてのことはサーバー上で処理されるため、そのシンボルは変更できません。"
 
 #: ../../docs/training_manual/online_resources/wms.rst:151
 msgid ""
@@ -204,7 +313,7 @@ msgid ""
 "which gives you vector layers separately, and not as part of a WMS-style "
 "map."
 msgstr ""
-"他方、気に入らなかったとしてもシンボルは変更できません。そして何かがWMSサーバー上で変更されると、それらは地図上でも同様に変更されます。だから、時々代わりにWeb地物サービス（WFS）を使用したくなります。これは別にベクターレイヤーを与え、そしてそれはWMSスタイルの地図の一部としてではありません。"
+"他方、気に入らなかったとしてもシンボルは変更できません。そして何かがWMSサーバー上で変更されると、それらは地図上でも同様に変更されます。ときどきWeb地物サービス（WFS）を代わりに使用したくなるのはこのためです。これは別にベクタレイヤを与え、そしてそれはWMSスタイルの地図の一部としてではありません。"
 
 #: ../../docs/training_manual/online_resources/wms.rst:160
 msgid ""
@@ -214,11 +323,36 @@ msgstr ""
 "しかしこれは、次のレッスンで説明します。まずは、 :guilabel:`terrestris` "
 "WMSサーバーから別のWMSレイヤーを追加してみましょう。"
 
-#: ../../docs/training_manual/online_resources/wms.rst:166
+#: ../../docs/training_manual/online_resources/wms.rst:165
 msgid "|basic| |TY|"
 msgstr "|basic| |TY|"
 
-#: ../../docs/training_manual/online_resources/wms.rst:176
+#: ../../docs/training_manual/online_resources/wms.rst:167
+msgid "Hide the :guilabel:`OSM-WSM` layer in the :guilabel:`Layers` panel."
+msgstr ":guilabel:`レイヤ` パネルにある :guilabel:`OSM-WSM` レイヤを非表示にします。"
+
+#: ../../docs/training_manual/online_resources/wms.rst:168
+msgid ""
+"Add the \"ZAF CGS 1M Bedrock Lithostratigraphy\" WMS server at this URL: "
+"``http://196.33.85.22/cgi-bin/ZAF_CGS_Bedrock_Geology/wms``"
+msgstr ""
+"\"ZAF CGS 1M Bedrock Lithostratigraphy\" WMSサーバーをこのURLで追加してください: "
+"``http://196.33.85.22/cgi-bin/ZAF_CGS_Bedrock_Geology/wms``"
+
+#: ../../docs/training_manual/online_resources/wms.rst:170
+msgid ""
+"Load the :guilabel:`BEDROCKGEOLOGY` layer into the map (you can also use the"
+" :menuselection:`Layer --> Add Layer -->` |addWmsLayer| :menuselection:`Add "
+"WMS/WMTS Layer...` button to open the Data Source Manager dialog). Remember "
+"to check that it's in the same :guilabel:`WGS 84 / World Mercator` "
+"projection as the rest of your map!"
+msgstr ""
+":guilabel:`BEDROCKGEOLOGY` レイヤをマップにロードします（ :menuselection:`レイヤ --> レイヤを追加 "
+"-->` |addWmsLayer| :menuselection:`WMS/WMTSを追加...` "
+"ボタンを使ってデータソースマネージャダイアログを表示することもできます）。このとき、マップの他の部分と同じ :guilabel:`WGS 84 / "
+"World Mercator` 投影法であることを確認することを忘れないでください!"
+
+#: ../../docs/training_manual/online_resources/wms.rst:175
 msgid ""
 "You might want to set its :guilabel:`Encoding` to :guilabel:`JPEG` and its "
 ":guilabel:`Tile size` option to ``200`` by ``200``, so that it loads faster:"
@@ -226,59 +360,118 @@ msgstr ""
 "より速くロードされるよう、その :guilabel:`Encoding` を :guilabel:`JPEG` に、その "
 ":guilabel:`タイルサイズ` オプションを ``200`` 掛ける ``200`` に設定することをお勧めします"
 
-#: ../../docs/training_manual/online_resources/wms.rst:183
-msgid ":ref:`Check your results <wms-1>`"
-msgstr ":ref:`結果の確認 <wms-1>`"
+#: ../../docs/training_manual/online_resources/wms.rst:182
+#: ../../docs/training_manual/online_resources/wms.rst:200
+#: ../../docs/training_manual/online_resources/wms.rst:234
+msgid "Answer"
+msgstr "答え"
 
-#: ../../docs/training_manual/online_resources/wms.rst:189
+#: ../../docs/training_manual/online_resources/wms.rst:185
+msgid "Your map should look like this (you may need to re-order the layers):"
+msgstr "地図はこのように表示されるはずです（レイヤの順序を変更する必要があるかもしれません）:"
+
+#: ../../docs/training_manual/online_resources/wms.rst:192
 msgid "|moderate| |TY|"
 msgstr "|moderate| |TY|"
 
+#: ../../docs/training_manual/online_resources/wms.rst:286
+msgid "moderate"
+msgstr "moderate"
+
 #: ../../docs/training_manual/online_resources/wms.rst:194
-msgid "Add the :guilabel:`bluemarble` layer."
-msgstr ":guilabel:`bluemarble` レイヤーを追加します。"
+msgid ""
+"Hide all other WMS layers to prevent them from rendering unnecessarily in "
+"the background."
+msgstr "他のWMSレイヤをすべて非表示にして、バックグラウンドで不必要にレンダリングされないようにします。"
 
 #: ../../docs/training_manual/online_resources/wms.rst:196
-msgid ":ref:`Check your results <wms-2>`"
-msgstr ":ref:`結果の確認 <wms-2>`"
+msgid "Add the \"OGC\" WMS server at this URL: ``http://ogc.gbif.org:80/wms``"
+msgstr "次のURLで \"OGC\" WMSサーバーを追加します: ``http://ogc.gbif.org:80/wms``"
 
-#: ../../docs/training_manual/online_resources/wms.rst:202
+#: ../../docs/training_manual/online_resources/wms.rst:197
+msgid "Add the :guilabel:`bluemarble` layer."
+msgstr ":guilabel:`bluemarble` レイヤを追加します。"
+
+#: ../../docs/training_manual/online_resources/wms.rst:203
+msgid ""
+"Use the same approach as before to add the new server and the appropriate "
+"layer as hosted on that server:"
+msgstr "前と同じ方法で、新しいサーバーとそのサーバー上でホストされている適切なレイヤを追加します:"
+
+#: ../../docs/training_manual/online_resources/wms.rst:212
+msgid ""
+"If you zoom into the |majorUrbanName| area, you'll notice that this dataset "
+"has a low resolution:"
+msgstr "|majorUrbanName| エリアを拡大すると、このデータセットの解像度が低いことに気づくでしょう:"
+
+#: ../../docs/training_manual/online_resources/wms.rst:218
+msgid ""
+"Therefore, it's better not to use this data for the current map. The Blue "
+"Marble data is more suitable at global or national scales"
+msgstr "そのため、今回の地図にはこのデータを使わない方がよいでしょう。Blue Marbleのデータは、地球規模や国土規模での使用に適しています"
+
+#: ../../docs/training_manual/online_resources/wms.rst:223
 msgid "|hard| |TY|"
 msgstr "|hard| |TY|"
 
-#: ../../docs/training_manual/online_resources/wms.rst:204
+#: ../../docs/training_manual/online_resources/wms.rst:284
+msgid "hard"
+msgstr "hard"
+
+#: ../../docs/training_manual/online_resources/wms.rst:225
 msgid "Part of the difficulty of using WMS is finding a good (free) server."
 msgstr "WMSを使用する難しさの一部は、良い（無料）サーバーを見つけることです。"
 
-#: ../../docs/training_manual/online_resources/wms.rst:210
+#: ../../docs/training_manual/online_resources/wms.rst:227
+msgid ""
+"Find a new WMS at `directory.spatineo.com "
+"<https://directory.spatineo.com/>`_ (or elsewhere online). It must not have "
+"associated fees or restrictions, and must have coverage over the "
+"|majorUrbanName| study area."
+msgstr ""
+"新しいWMSを `directory.spatineo.com <https://directory.spatineo.com/>`_ "
+"（またはオンラインの他の場所）で見つけてください。それは、関連する料金や制限がなく、|majorUrbanName| "
+"の研究領域をカバーしている必要があります。"
+
+#: ../../docs/training_manual/online_resources/wms.rst:231
 msgid ""
 "Remember that what you need in order to use a WMS is only its URL (and "
 "preferably some sort of description)."
 msgstr "WMSを使用するために必要なことだけでそのURL（と説明の好ましいいくつかの並べ替え）であることを忘れないでください。"
 
-#: ../../docs/training_manual/online_resources/wms.rst:213
-msgid ":ref:`Check your results <wms-3>`"
-msgstr ":ref:`結果の確認 <wms-3>`"
+#: ../../docs/training_manual/online_resources/wms.rst:237
+msgid ""
+"You may notice that many WMS servers are not always available. Sometimes "
+"this is temporary, sometimes it is permanent. An example of a WMS server "
+"that worked at the time of writing is the :guilabel:`World Mineral Deposits`"
+" WMS at http://apps1.gdr.nrcan.gc.ca/cgi-bin/worldmin_en-ca_ows. It does not"
+" require fees or have access constraints, and it is global. Therefore, it "
+"does satisfy the requirements. Keep in mind, however, that this is merely an"
+" example. There are many other WMS servers to choose from."
+msgstr ""
+"多くのWMSサーバーが常に利用可能であるとは限らないことにお気づきかもしれません。これは一時的なこともあれば、永久的なこともあります。執筆時に動作していたWMSサーバーの例は、http://apps1.gdr.nrcan.gc.ca/cgi-"
+"bin/worldmin_en-ca_ows にある :guilabel:`World Mineral Deposits` "
+"WMSです。これは料金を必要とせず、アクセス制限もなく、グローバルです。したがって、要件を満たしています。しかし、これは単なる一例であることに留意してください。他にも多くのWMSサーバーがあります。"
 
-#: ../../docs/training_manual/online_resources/wms.rst:217
+#: ../../docs/training_manual/online_resources/wms.rst:247
 msgid "|IC|"
 msgstr "|IC|"
 
-#: ../../docs/training_manual/online_resources/wms.rst:219
+#: ../../docs/training_manual/online_resources/wms.rst:249
 msgid ""
 "Using a WMS, you can add inactive maps as backdrops for your existing map "
 "data."
 msgstr "WMSを使用して、既存の地図データのための背景として、非アクティブ地図を追加できます。"
 
-#: ../../docs/training_manual/online_resources/wms.rst:222
+#: ../../docs/training_manual/online_resources/wms.rst:252
 msgid "|FR|"
 msgstr "|FR|"
 
-#: ../../docs/training_manual/online_resources/wms.rst:224
+#: ../../docs/training_manual/online_resources/wms.rst:254
 msgid "`Spatineo Directory <https://directory.spatineo.com/>`_"
 msgstr "`Spatineoディレクトリ <https://directory.spatineo.com/>`_"
 
-#: ../../docs/training_manual/online_resources/wms.rst:225
+#: ../../docs/training_manual/online_resources/wms.rst:255
 msgid ""
 "`OpenStreetMap.org list of WMS servers "
 "<https://wiki.openstreetmap.org/wiki/WMS>`_"
@@ -286,11 +479,11 @@ msgstr ""
 "`OpenStreetMap.org list of WMS servers "
 "<https://wiki.openstreetmap.org/wiki/WMS>`_"
 
-#: ../../docs/training_manual/online_resources/wms.rst:229
+#: ../../docs/training_manual/online_resources/wms.rst:259
 msgid "|WN|"
 msgstr "|WN|"
 
-#: ../../docs/training_manual/online_resources/wms.rst:231
+#: ../../docs/training_manual/online_resources/wms.rst:261
 msgid ""
 "Now that you've added an inactive map as a backdrop, you'll be glad to know "
 "that it's also possible to add features (such as the other vector layers you"
