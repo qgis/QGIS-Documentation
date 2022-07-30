@@ -2150,17 +2150,18 @@ directly linked to a particular field (like the HTML/QML widgets or the
    to re-add them. The same field can be added multiple times.
 #. Drag and drop fields within the :guilabel:`Form Layout` panel to reorder
    their position.
-#. Add containers (tab or group frames) to associate fields that belong to
+#. Add containers (tab or group boxes) to associate fields that belong to
    the same category and better structure the form.
 
-   #. The first step is to use the |symbologyAdd| icon to create a tab in which
-      fields and groups will be displayed
+   #. The first step is to use the |symbologyAdd| :sup:`Add a new tab or group
+      to the form layout` icon. Fields and other groups will be displayed in it.
    #. Then set the properties of the container, ie:
 
-      * the name
-      * the type, ie a :guilabel:`tab` or a :guilabel:`group in container`
-        (a group inside a tab or another group)
-      * and the :guilabel:`number of columns` the embedded fields
+      * the :guilabel:`Label`
+      * the :guilabel:`Container Type`: it can be a :guilabel:`Tab` or a
+        :guilabel:`Group box in container` (a collapsible group box inside
+        a tab or another group)
+      * and the :guilabel:`Number of columns` the embedded fields
         should be distributed over
 
       .. _figure_fields_layout:
@@ -2174,19 +2175,23 @@ directly linked to a particular field (like the HTML/QML widgets or the
       from the third panel:
 
       * hide or show the container's label
-      * display the container as a group box (only available for tabs).
       * rename the container
       * set the number of columns
       * enter an expression to control the container's visibility.
         The expression will be re-evaluated every time values in the form change,
         and the tab or group box shown/hidden accordingly
-      * add a background color
-   #. You can create as many containers as you want; press
-      the |symbologyAdd| icon again to create another tab or a group frame under
-      an existing tab.
+      * |checkbox| :guilabel:`Show as Group Box`: converts a tab into
+        a top-level group box and vice versa
+      * In case of a group box, set whether at the form opening it should |checkbox|
+        :guilabel:`Collapse` for every features, or only for those matching
+        a :guilabel:`Collapsing expression`.
+      * configure the :guilabel:`Style` look of the container, with custom
+        :guilabel:`Background color`, label color and font properties
+   #. You can create and embed as many containers as you want by pressing again
+      the |symbologyAdd| :sup:`Add a new tab or group to the form layout` icon.
 
 #. The next step is to assign the relevant fields to each container,
-   by simple drag and drop. Groups and tabs can also be moved in the same way.
+   by simple drag and drop. Group boxes and tabs can also be moved the same way.
 #. :ref:`Customize the widget <configure_field>` of the fields in use
 #. In case the layer is involved in a :ref:`one or many to many relation
    <vector_relations>`, drag-and-drop the relation name from the
