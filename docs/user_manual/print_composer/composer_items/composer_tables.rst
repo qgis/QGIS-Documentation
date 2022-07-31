@@ -223,8 +223,9 @@ the following functionalities (see :numref:`figure_layout_table_appearance`):
 
 * |checkbox| :guilabel:`Apply layer conditional styling colors`:
   the :ref:`conditional table formatting <conditional_formatting>` present
-  in the layer is applied inside the layout attribute table (*only background
-  and foreground colors are currently supported*). Conditional formatting rules
+  in the layer is applied inside the layout attribute table (background
+  color, font family and properties such as bold, italic, strikeout,
+  underline, color, ...). Conditional formatting rules
   take precedence over other layout table formatting settings,
   e.g. they will override other cell background color settings such as
   alternating row colors.
