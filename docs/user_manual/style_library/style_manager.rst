@@ -75,6 +75,8 @@ previewed items organized into tabs:
 You can arrange the Styles in |iconView| :guilabel:`Icon View` or in
 |openTable| :guilabel:`List View` on the bottom right side. In both views
 the tooltip shows a larger instance of the style.
+The thumbnail size slider at the left of the icons helps you adjust the actual
+thumbnail sizes in the dialog, for a better preview of the symbols!
 
 For each family of items, you can organize the elements into different categories,
 listed in the panel on the left:
