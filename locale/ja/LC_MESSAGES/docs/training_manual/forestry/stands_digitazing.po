@@ -2,20 +2,20 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
-# fairtommy <fairtommy@gmail.com>, 2021
+# Harrissou Sant-anna, 2022
+# Miyoshi Tomoya, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 11:59+0000\n"
-"Last-Translator: fairtommy <fairtommy@gmail.com>, 2021\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:16+0000\n"
+"Last-Translator: Miyoshi Tomoya, 2022\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,7 +26,7 @@ msgstr ""
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:2
 msgid "|LS| Digitizing Forest Stands"
-msgstr "|LS| 林分をデジタル化する"
+msgstr "|LS| 林分をデジタイズする"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:4
 msgid ""
@@ -38,25 +38,29 @@ msgid ""
 "borders that appear in the map as green lines but instead of doing it using "
 "an aerial image, you will use your georeferenced map."
 msgstr ""
-"地理参照された地図を単純な背景画像として使用するつもりでないならば、次の自然なステップは、そこから要素をデジタル化することです。それは学校のフィールドをデジタル化したときに、"
+"ジオリファレンスされた地図を単純な背景画像として使うのでなければ、次の自然なステップは、そこから要素をデジタイズすることです。それは学校のフィールドをデジタル化したときに、"
 " :doc:`../create_vector_data/create_new_vector` "
-"でベクタデータを作成することに関する演習ですでに行っています。このレッスンでは、地図に緑色の線で表示される林分境界線をデジタル化しますが、航空写真を使用する代わりに、地理参照された地図を使用します。"
+"でベクタデータを作成することに関する演習ですでに行っています。このレッスンでは、地図に緑色の線で表示される林分境界線をデジタイズしますが、航空写真を使う代わりに、ジオリファレンスされた地図を使います。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:11
 msgid ""
 "**The goal for this lesson:** Learn a technique to help the digitizing task,"
 " digitizing forest stands and finally adding the inventory data to them."
-msgstr "**このレッスンの目標：** 林分をデジタル化し、最終的にそれらに目録データを追加して、デジタル化作業を支援するための技術を学びます。"
+msgstr "**このレッスンの目標：** デジタイズ作業を支援するための技法を学び、林分をデジタイズし、最後にそれらに目録データを追加します。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:15
 msgid "|basic| |FA| Extracting the Forest Stands Borders"
 msgstr "|basic| |FA| 林分境界を抽出する"
 
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:371
+msgid "basic"
+msgstr "basic"
+
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:17
 msgid ""
 "Open your :kbd:`map_digitizing.qgs` project in QGIS, that you saved from the"
 " previous lesson."
-msgstr "前のレッスンで保存された、 :kbd:`map_digitizing.qgs` プロジェクトを QGISで開きます。"
+msgstr "前のレッスンで保存した、 :kbd:`map_digitizing.qgs` プロジェクトを QGISで開きます。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:19
 msgid ""
@@ -65,7 +69,7 @@ msgid ""
 "way to go if the image you are going to digitize from is, for example, an "
 "aerial photograph."
 msgstr ""
-"地図をスキャンして地理参照してしまえば、画像をガイドとして見ることで直接デジタル化を開始できるでしょう。デジタル化に使用しようとしている画像が、例えば航空写真である場合には、それが最も正しい方向である可能性が高いでしょう。"
+"地図をスキャンし、ジオリファレンスすれば、その画像をガイドとして見ながら直接デジタイズすることができます。デジタイズに使おうとしている画像が、例えば航空写真である場合には、それが最も適した方法でしょう。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:24
 msgid ""
@@ -76,7 +80,7 @@ msgid ""
 " <https://www.gimp.org/>`_. Such separate images can be used to assist the "
 "digitizing, as you will see below."
 msgstr ""
-"ここでの場合のように、デジタル化に使用しているものが良い地図であれば、情報は要素の種類ごとに異なる色の線として明確に表示されているでしょう。これらの色は、"
+"ここでの場合のように、デジタイズに使用しているものが良い地図であれば、情報は要素の種類ごとに異なる色の線として明確に表示されているでしょう。これらの色は、"
 " `GIMP <https://www.gimp.org/>`_ "
 "のような画像処理ソフトウェアを使用すれば、個別の画像として比較的簡単に抽出できます。このような個別の画像はデジタル化の支援に使用できます。それはこの後見ていきます。"
 
@@ -86,13 +90,13 @@ msgid ""
 " forest stands, that is, all those greenish lines that you could see in the "
 "original scanned map:"
 msgstr ""
-"最初のステップは、GIMPを使用して、林分、つまりオリジナルのスキャン地図で見ることができた緑がかった線すべて、だけを含む画像を得ることです。"
+"最初のステップは、GIMPを使って林分だけ、つまりオリジナルのスキャン地図で見ることができる緑がかったすべての線、を含んだ画像を得ることです:"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:34
 msgid ""
 "Open GIMP (if you don't have it installed yet, download it from the internet"
 " or ask your teacher)."
-msgstr "GIMPを開きます（それがまだインストールされていない場合は、インターネットからダウンロードするか、先生に尋ねます）。"
+msgstr "GIMPを開きます（まだインストールされていない場合は、インターネットからダウンロードするか、先生に頼んでください）。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:36
 msgid ""
@@ -101,9 +105,9 @@ msgid ""
 "that the forest stands are represented as green lines (with the number of "
 "the stand also in green inside each polygon)."
 msgstr ""
-":kbd:`exercise_data/forestry` フォルダの中で、オリジナルの地図画像 :kbd:`rautjarvi_map.tif` "
+":kbd:`exercise_data/forestry` フォルダにある、オリジナルの地図画像 :kbd:`rautjarvi_map.tif` "
 "を開きます :menuselection:`ファイル --> 開く` 。 "
-"林分は緑色の線として（各ポリゴン内には緑で林分の数も一緒に）表されていることに注意してください。"
+"林分は緑色の線として（各ポリゴン内には緑で林分の数と一緒に）表されていることに注意してください。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:44
 msgid ""
@@ -155,7 +159,7 @@ msgstr "ピクセルの選択は、以下の右の画像のようになるはず
 msgid ""
 "Once you are done with the selection you need to copy this selection as a "
 "new layer and then save it as separate image file:"
-msgstr "選択を完了したら、新しいレイヤーとしてこの選択をコピーして別の画像ファイルとして保存する必要があります。"
+msgstr "選択を完了したら、新しいレイヤとしてこの選択をコピーして別の画像ファイルとして保存する必要があります。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:65
 msgid "Copy (:guilabel:`Ctr+C`) the selected pixels."
@@ -167,19 +171,19 @@ msgid ""
 "pasted pixels as a new temporary layer in the :guilabel:`Layers - Brushes` "
 "panel as a :guilabel:`Floating Selection (Pasted Layer)`."
 msgstr ""
-"そして、ピクセルを直接貼り付けます( :guilabel:`Ctr+V` )、GIMPには貼り付けられたピクセルが新しい一時的な レイヤーとして、 "
-":guilabel:`レイヤー-ブラシ` パネル中の :guilabel:`浮動選択(貼り付け レイヤー)` として表示されます。"
+"そして、ピクセルを直接貼り付けます( :guilabel:`Ctr+V` )、GIMPには貼り付けられたピクセルが新しい一時的な レイヤとして、 "
+":guilabel:`レイヤ-ブラシ` パネル中の :guilabel:`浮動選択(貼り付け レイヤ)` として表示されます。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:69
 msgid "Right click that temporary layer and select :guilabel:`To New Layer`."
-msgstr "その一時レイヤーを右クリックして :guilabel:`新しいレイヤーへ` を選択します。"
+msgstr "その一時レイヤを右クリックして :guilabel:`新しいレイヤへ` を選択します。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:70
 msgid ""
 "Click the \"eye\" icon next to the original image layer to switch it off, so"
 " that only the :guilabel:`Pasted Layer` is visible:"
 msgstr ""
-":guilabel:`レイヤーを貼り付け` のみが表示されるよう、元の画像レイヤーの隣の「目」のアイコンをクリックしてそれを非表示にしてください。"
+":guilabel:`レイヤを貼り付け` のみが表示されるよう、元の画像レイヤの隣の「目」のアイコンをクリックしてそれを非表示にしてください。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:76
 msgid ""
@@ -222,7 +226,7 @@ msgstr ""
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:95
 msgid "This image is also, of course, in :kbd:`KKJ / Finland zone 2` CRS."
-msgstr "この画像も、もちろん、:kbd:`KKJ/フィンランドゾーン2` CRSです。"
+msgstr "この画像も、もちろん、:kbd:`KKJ / Finland zone 2` CRSです。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:96
 msgid ""
@@ -239,15 +243,15 @@ msgid ""
 "Name the output raster as :kbd:`rautjarvi_green_georef.tif` in the "
 ":kbd:`digitizing` folder."
 msgstr ""
-"出力ラスターに :kbd:`digitizing` フォルダ中で :kbd:`rautjarvi_green_georef.tif` と名前を付けます。"
+"出力ラスタに :kbd:`digitizing` フォルダ中で :kbd:`rautjarvi_green_georef.tif` と名前を付けます。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:100
 msgid "Check that the new raster is fitting nicely with the original map."
-msgstr "新しいラスターが元の地図ときちんと合っていることを確認してください。"
+msgstr "新しいラスタが元の地図ときちんと合っていることを確認してください。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:104
 msgid "|basic| |FA| Creating Supporting Points for Digitizing"
-msgstr "|basic| |FA| デジタル化を支援するポイントを作成する"
+msgstr "|basic| |FA| デジタイズを支援するポイントを作成する"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:106
 msgid ""
@@ -257,7 +261,7 @@ msgid ""
 "pixels to use them later to help you follow the forest stands' borders when "
 "digitizing, by using the snapping tools available in QGIS."
 msgstr ""
-"QGISでのデジタル化ツールを心に持っていて、デジタル化の間にそれらの緑のピクセルにスナップしたら便利だろうとすでにお考えかもしれません。それはまさに次にしようとしていること、QGISで利用可能なスナップツールを使用して、後でデジタル化するときに林分の境界をたどる支援するためにそれらを使用するためにこれらのピクセルからポイントを作成です。"
+"QGISでのデジタイズツールが念頭にあると、デジタイズ中にこれらの緑のピクセルにスナップできたら便利だろうとすでにお考えかもしれません。それはまさに次にしようとしていること、つまり、QGISで利用可能なスナップツールを使ってこれらのピクセルからポイントを作成し、後で林分の境界線に沿ってデジタイズするために使います。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:112
 msgid ""
@@ -266,8 +270,8 @@ msgid ""
 "remember how, you can review it in "
 ":doc:`../complete_analysis/raster_to_vector`."
 msgstr ""
-":menuselection:`ラスター --> 変換 --> ポリゴン化(ベクターからラスター)` ツールを使用して、緑の線をポリゴンに "
-"ベクター化してください。どのようにか覚えていない場合、 :doc:`../complete_analysis/raster_to_vector` "
+":menuselection:`ラスタ --> 変換 --> ポリゴン化(ベクタからラスタ)` ツールを使用して、緑の線をポリゴンに "
+"ベクタ化してください。やり方を覚えていない場合は、 :doc:`../complete_analysis/raster_to_vector` "
 "で確認できます。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:115
@@ -275,13 +279,13 @@ msgid ""
 "Save as :kbd:`rautjarvi_green_polygon.shp` inside the :kbd:`digitizing` "
 "folder."
 msgstr ""
-":kbd:`digitizing` フォルダ内に :kbd:`rautjarvi_green_polygon.shp` と名前を付けて保存します。"
+":kbd:`digitizing` フォルダ内に :kbd:`rautjarvi_green_polygon.shp` という名前で保存します。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:117
 msgid ""
 "Zoom in and see what the polygons look like. You will get something like "
 "this:"
-msgstr "ズームインしてポリゴンがどのように見えるかを参照してください。何かこのようになっているでしょう："
+msgstr "拡大してポリゴンがどのように見えるかを見てください。何かこのようになっているでしょう："
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:122
 msgid ""
@@ -291,11 +295,11 @@ msgstr "これらのポリゴンからポイントを得る次のオプション
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:124
 msgid "Open :menuselection:`Vector --> Geometry tools --> Polygon centroids`."
-msgstr ":menuselection:`ベクター --> ジオメトリツール --> ポリゴン重心` を開きます。"
+msgstr ":menuselection:`ベクタ --> ジオメトリツール --> ポリゴン重心` を開きます。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:125
 msgid "Set the polygon layer you just got as the input file for the tool."
-msgstr "ツールの入力ファイルとしてたった今得たポリゴンレイヤーを設定します。"
+msgstr "ツールの入力ファイルとしてたった今得たポリゴンレイヤを設定します。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:126
 msgid ""
@@ -315,15 +319,19 @@ msgstr "ポリゴンの重心を計算するためのツールを実行します
 msgid ""
 "Now you can remove the :guilabel:`rautjarvi_green_polygon` layer from the "
 "TOC."
-msgstr "今、TOCから :guilabel:`rautjarvi_green_polygon` レイヤーを削除できます。"
+msgstr "今、TOCから :guilabel:`rautjarvi_green_polygon` レイヤを削除できます。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:135
 msgid "Change the symbology of the centroids layer as:"
-msgstr "重心レイヤーのシンボルをこのように変更します："
+msgstr "重心レイヤのシンボルをこのように変更します："
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:137
 msgid "Open the :guilabel:`Layer Properties` for :guilabel:`green_centroids`."
-msgstr ":guilabel:`green_centroids` の :guilabel:`レイヤーのプロパティ`  を開きます。"
+msgstr ":guilabel:`green_centroids` の :guilabel:`レイヤのプロパティ`  を開きます。"
+
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:138
+msgid "Go to the :guilabel:`Symbology` tab."
+msgstr ":guilabel:`シンボロジ` タブに移動します。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:139
 msgid "Set the :guilabel:`Unit` to Map unit."
@@ -343,7 +351,7 @@ msgstr ""
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:147
 msgid "|basic| |FA| Digitize the Forest Stands"
-msgstr "|basic| |FA| 林分をデジタル化"
+msgstr "|basic| |FA| 林分をデジタイズする"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:149
 msgid ""
@@ -353,8 +361,8 @@ msgid ""
 "digitized. You will just finish digitizing the half of the forest stands "
 "that are left between the main roads (wide pink lines) and the lake:"
 msgstr ""
-"これで実際のデジタル化作業を開始する準備が整いました。 :guilabel:`ポリゴンタイプ` "
-"のベクターファイルの作成から始めますが、この演習のためには、関心領域の一部がすでにデジタル化されているシェープファイルがあります。主要道路（幅の広いピンクの線）と湖の間に残っている林分の半分のデジタル化を完了するだけでしょう："
+"これで実際のデジタイズ作業を開始する準備が整いました。 :guilabel:`ポリゴンタイプ` "
+"のベクタファイルの作成から始めますが、この演習のためには、関心域の一部がすでにデジタイズされているシェープファイルがあります。主要道路（幅の広いピンクの線）と湖の間に残っている林分の半分のデジタイズを完了するだけでしょう："
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:158
 msgid "Go to the :kbd:`digitizing` folder using your file manager browser."
@@ -362,13 +370,13 @@ msgstr "ファイルマネージャのブラウザを使用して :kbd:`digitizi
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:159
 msgid "Drag and drop the :kbd:`forest_stands.shp` vector file to your map."
-msgstr "地図に :kbd:`forest_stands.shp` ベクターファイルをドラッグ＆ドロップします。"
+msgstr "地図に :kbd:`forest_stands.shp` ベクタファイルをドラッグ＆ドロップします。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:161
 msgid ""
 "Change the new layer's symbology so that it will be easier to see what "
 "polygons have already been digitized:"
-msgstr "どのポリゴンがすでにデジタル化されているかが容易に見えるように、新しいレイヤーのシンボルを変更します。"
+msgstr "どのポリゴンがすでにデジタイズされているかが容易に見えるように、新しいレイヤのシンボロジを変更します:"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:164
 msgid "The filling of the polygon to green."
@@ -388,11 +396,15 @@ msgid ""
 "snapping options:"
 msgstr "過去のモジュールを覚えていれば今、私たちは、セットアップおよびスナップオプションを有効にする必要があります："
 
+#: ../../docs/training_manual/forestry/stands_digitazing.rst:170
+msgid "Go to :menuselection:`Project --> Snapping options...`."
+msgstr ":menuselection:`プロジェクト --> スナップオプション...` に移動します。"
+
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:171
 msgid ""
 "Activate the snapping for the :kbd:`green_centroids` and the "
 ":kbd:`forest_stands` layers."
-msgstr ":kbd:`green_centroids` レイヤーと :kbd:`forest_stands` レイヤーのスナップを有効にします。"
+msgstr ":kbd:`green_centroids` レイヤと :kbd:`forest_stands` レイヤのスナップを有効にします。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:172
 msgid "Set their :guilabel:`Tolerance` to 5 map units."
@@ -401,7 +413,7 @@ msgstr "それらのレイヤーの :guilabel:`許容誤差` を5地図単位に
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:173
 msgid ""
 "Check the :guilabel:`Avoid Int.` box for the :kbd:`forest_stands` layer."
-msgstr ":kbd:`forest_stands` レイヤーの :guilabel:`交差を回避` ボックスを チェックします。"
+msgstr ":kbd:`forest_stands` レイヤの :guilabel:`交差を回避` ボックスを チェックします。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:174
 msgid "Check :guilabel:`Enable topological editing`."
@@ -418,7 +430,7 @@ msgid ""
 "digitized polygons, a pink cross will appear on the point that will be "
 "snapped to."
 msgstr ""
-"これらのスナップ設定では、デジタル化中に重心レイヤー中のポイントの一つまたはデジタル化されるポリゴンのどこかの頂点に十分近づくといつでも、ピンクの十字がスナップされる点に表示されます。"
+"これらのスナップ設定では、デジタイズ中に重心レイヤ中のポイントの一つまたはデジタイズされるポリゴンのどこかの頂点に十分近づくといつでも、ピンクの十字がスナップされる点に表示されます。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:184
 msgid ""
@@ -427,21 +439,21 @@ msgid ""
 "image has not transparency any more."
 msgstr ""
 "最後に、:kbd:`forest_stands`と :kbd:`rautjarvi_georef` "
-"を除くすべてのレイヤーの可視性をオフにします。地図画像がこれ以上の透明されていないことを確認してください。"
+"を除くすべてのレイヤの可視性をオフにします。地図画像がこれ以上の透明されていないことを確認してください。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:187
 msgid "A couple of important things to note before you start digitizing:"
-msgstr "デジタル化を開始する前に注意すべきいくつかの重要な事："
+msgstr "デジタイズを開始する前に注意すべきいくつかの重要な事："
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:189
 msgid "Don't try to be too accurate with the digitizing of the borders."
-msgstr "国境のデジタル化ではあまりに正確にしようとしないでください。"
+msgstr "国境のデジタイズではあまりに正確にしようとしないでください。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:190
 msgid ""
 "If a border is a straight line, digitize it with just two nodes. In general,"
 " digitize using as few nodes as possible."
-msgstr "境界が直線である場合は、ノード2つだけでデジタル化してください。一般に、できるだけ少ないノードを使用してデジタル化してください。"
+msgstr "境界が直線である場合は、ノード2つだけでデジタイズしてください。一般に、できるだけ少ないノードを使用してデジタイズしてください。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:192
 msgid ""
@@ -454,21 +466,21 @@ msgstr ""
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:195
 msgid ""
 "Use the mouse's middle button to zoom in/out and to pan as you digitize."
-msgstr "デジタル化しながら、マウスの中ボタンを使用してズームイン/アウトおよびパンしてください。"
+msgstr "デジタイズしながら、マウスの中ボタンを使用してズームイン/アウトおよびパンしてください。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:196
 msgid "Digitize only one polygon at a time."
-msgstr "一度に1つのポリゴンをデジタル化してください。"
+msgstr "一度に1つのポリゴンをデジタイズしてください。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:197
 msgid ""
 "After digitizing one polygon, write the forest stand id that you can see "
 "from the map."
-msgstr "1つのポリゴンをデジタル化した後、地図から見える林分IDを書き込みます。"
+msgstr "1つのポリゴンをデジタイズした後、地図から見える林分IDを書き込みます。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:199
 msgid "Now you can start digitizing:"
-msgstr "今、デジタル化を開始できます："
+msgstr "今、デジタイズを開始できます："
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:201
 msgid "Locate the forest stand number 357 in the map window."
@@ -476,7 +488,7 @@ msgstr "地図ウィンドウで林分番号357の位置を確認します。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:202
 msgid "Enable editing for the :kbd:`forest_stands.shp` layer."
-msgstr ":kbd:`forest_stands.shp` レイヤーについて編集を有効にします。"
+msgstr ":kbd:`forest_stands.shp` レイヤについて編集を有効にします。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:203
 msgid "Select the :guilabel:`Add feature` tool."
@@ -484,7 +496,7 @@ msgstr ":guilabel:`地物を追加` ツールを選択します。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:204
 msgid "Start digitizing the stand :kbd:`357` by connecting some of the dots."
-msgstr "ドットの一部を接続することにより、林分 :kbd:`357` をデジタル化開始します。"
+msgstr "ドットの一部を接続することにより、林分 :kbd:`357` をデジタイズ開始します。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:205
 msgid "Note the pink crosses indicating the snapping."
@@ -492,7 +504,7 @@ msgstr "スナップを示すピンク十字に留意されたいです。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:210
 msgid "When you are done, right click to end digitizing that polygon."
-msgstr "完了したら、右クリックしてそのポリゴンのデジタル化を終了します。"
+msgstr "完了したら、右クリックしてそのポリゴンのデジタイズを終了します。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:211
 msgid "Enter the forest stand :kbd:`id` (in this case 357)."
@@ -509,12 +521,12 @@ msgid ""
 "and make sure that the :guilabel:`Suppress attribute form pop-up after "
 "feature creation` is not checked."
 msgstr ""
-"デジタル化し終えてもポリゴン :kbd:`id` の入力を求められなかった場合は、 :menuselection:`設定 --> オプション --> "
-"デジタル化` に行き、 :guilabel:`地物作成後まで 属性 フォームのポップアップを抑止` がチェックされていないことを確認してください。"
+"デジタイズし終えてもポリゴン :kbd:`id` の入力を求められなかった場合は、 :menuselection:`設定 --> オプション --> "
+"デジタイズ` に行き、 :guilabel:`地物作成後まで 属性 フォームのポップアップを抑止` がチェックされていないことを確認してください。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:218
 msgid "Your digitized polygon will look like this:"
-msgstr "デジタル化されたポリゴンは次のようになります。"
+msgstr "デジタイズされたポリゴンは次のようになります:"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:223
 msgid ""
@@ -525,14 +537,14 @@ msgid ""
 "the border of the already existing polygons. You can use this characteristic"
 " to automatically obtain a common border."
 msgstr ""
-"今、第二のポリゴンのために、林分番号358を拾います。 :kbd:`forest_stands` レイヤー :guilabel:`交差を回避` "
-"がチェックされていることを確認してください。このオプションではデジタル化においてポリゴンが交差することを許容しません。既存のポリゴンを超えてデジタル化した場合、新しいポリゴンは既存のポリゴンの境界に合うようにトリミングされます。この特性を使用すれば共通の境界が自動的に得られます。"
+"今、第二のポリゴンのために、林分番号358を拾います。 :kbd:`forest_stands` レイヤ :guilabel:`交差を回避` "
+"がチェックされていることを確認してください。このオプションではデジタイズにおいてポリゴンが交差することを許容しません。既存のポリゴンを超えてデジタイズした場合、新しいポリゴンは既存のポリゴンの境界に合うようにトリミングされます。この特性を使用すれば共通の境界が自動的に得られます。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:230
 msgid ""
 "Begin digitizing the stand 358 at one of the common corners with the stand "
 "357."
-msgstr "林分357と共通する角の一つで林分358をデジタル化し始めます。"
+msgstr "林分357と共通する角の一つで林分358をデジタイズし始めます。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:231
 msgid ""
@@ -544,7 +556,7 @@ msgstr "それから両方の林分のための他の共通の角に到達する
 msgid ""
 "Finally, digitize a few points inside polygon 357 making sure that the "
 "common border is not intersected. See left image below."
-msgstr "最後に、共通の境界が交差されていないことを確認しながらポリゴン357内のいくつかのポイントをデジタル化します。下の左の画像を参照。"
+msgstr "最後に、共通の境界が交差されていないことを確認しながらポリゴン357内のいくつかのポイントをデジタイズします。下の左の画像を参照。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:234
 msgid "Right click to finish editing the forest stand 358."
@@ -569,7 +581,7 @@ msgstr "既存のポリゴンと重なるポリゴンの部分は自動的にト
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:248
 msgid "|basic| |TY| Finish Digitizing the Forest Stands"
-msgstr "|basic| |TY| 林分をデジタル化完了"
+msgstr "|basic| |TY| 林分をデジタイズ完了"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:250
 msgid ""
@@ -577,13 +589,13 @@ msgid ""
 "Continue digitizing on your own until you have digitized all the forest "
 "stands that are limited by the main road and the lake."
 msgstr ""
-"今、2つ林分の準備ができています。そして、続行する方法について良いアイデア。主要道路と湖によって制限されているすべての林分をデジタル化するまで、自分でデジタル化を続行します。"
+"今、2つ林分の準備ができています。そして、続行する方法について良いアイデア。主要道路と湖によって制限されているすべての林分をデジタル化するまで、自分でデジタイズを続行します。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:254
 msgid ""
 "It might look like a lot of work, but you will soon get used to digitizing "
 "the forest stands. It should take you about 15 minutes."
-msgstr "それは大変な作業のように見えるかもしれませんが、すぐに林分をデジタル化するのに慣れるでしょう。それは約15分かかります。"
+msgstr "それは大変な作業のように見えるかもしれませんが、すぐに林分をデジタイズするのに慣れるでしょう。それは約15分かかります。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:257
 msgid ""
@@ -592,7 +604,7 @@ msgid ""
 ":doc:`../create_vector_data/topo_editing`, now is probably a good moment to "
 "go read about them again."
 msgstr ""
-"デジタル化中に、ポリゴンを編集したり削除したノードを、分割またはマージする必要がある場合があります。 "
+"デジタイズ中に、ポリゴンを編集したり削除したノードを、分割またはマージする必要がある場合があります。 "
 ":doc:`../create_vector_data/topo_editing` "
 "で必要なツールについて学びましたが、今それらについて読み直しに行くにはおそらく良い瞬間です。"
 
@@ -637,7 +649,7 @@ msgstr ""
 "テキストエディタで :kbd:`exercise_data\\\\forestry` ディレクトリ中の "
 ":kbd:`rautjarvi_1994.csv` ファイルを開き、目録データファイルが 林分 の番号である :kbd:`ID` と呼ばれる 属性 "
 "を持っていることに注意してください。これらの番号はポリゴンに入力した 林分 のIDと同じであり、 "
-"ベクターファイルにテキストファイルからのデータをリンクするために使用できます。同じフォルダにある "
+"ベクタファイルにテキストファイルからのデータをリンクするために使用できます。同じフォルダにある "
 ":kbd:`rautjarvi_1994_legend.txt` ファイルでこの目録データのメタデータを見ることができます。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:286
@@ -645,8 +657,8 @@ msgid ""
 "Open the :kbd:`.csv` in QGIS with the :menuselection:`Layer --> Add "
 "Delimited Text Layer...` tool. In the dialog, set it as follows:"
 msgstr ""
-"QGIS で :kbd:`.csv` :menuselection:`レイヤー --> 区切りテキストレイヤーを追加...` "
-"ツールを開きます。ダイアログ で、それを次のように設定します。"
+"QGIS で :kbd:`.csv` :menuselection:`レイヤ --> 区切りテキストレイヤを追加...` ツールを開きます。ダイアログ "
+"で、それを次のように設定します:"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:292
 msgid "To add the data from the :kbd:`.csv` file:"
@@ -654,7 +666,7 @@ msgstr ":kbd:`.csv` ファイルからデータを追加するには："
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:294
 msgid "Open the Layer Properties for the :kbd:`forest_stands` layer."
-msgstr ":kbd:`forest_stands` レイヤーのための[レイヤーのプロパティ]を開きます。"
+msgstr ":kbd:`forest_stands` レイヤのための[レイヤのプロパティ]を開きます。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:295
 msgid "Go to the :guilabel:`Joins` tab."
@@ -669,8 +681,8 @@ msgid ""
 "Select :kbd:`rautjarvi_1994.csv` as the :guilabel:`Join layer` and :kbd:`ID`"
 " as the :guilabel:`Join` field."
 msgstr ""
-":guilabel:`結合レイヤー` として :kbd:`rautjarvi_1994.csv` を 、 :guilabel:`結合` フィールドとして"
-" :kbd:`ID` を選択します。"
+":guilabel:`結合レイヤ` として :kbd:`rautjarvi_1994.csv` を 、 :guilabel:`結合` フィールドとして "
+":kbd:`ID` を選択します。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:299
 msgid "Make sure that the :guilabel:`Target` field is also set to :kbd:`id`."
@@ -687,9 +699,9 @@ msgid ""
 "layer. You can see that all the attributes from the inventory data file are "
 "now linked to your digitized vector layer."
 msgstr ""
-"テキストファイルからのデータは、今ベクターファイルにリンクする必要があります。起こったことを確認するには、 :kbd:`forest_stands` "
-"レイヤーの属性テーブル を開きます。目録データファイルからのすべての 属性 は、今お使いのデジタル化された "
-"ベクターレイヤーにリンクされていることがわかります。"
+"テキストファイルからのデータは、今ベクタファイルにリンクする必要があります。起こったことを確認するには、 :kbd:`forest_stands` "
+"レイヤの属性テーブル を開きます。目録データファイルからのすべての 属性 は、今お使いのデジタイズされた "
+"ベクタレイヤにリンクされていることがわかります。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:308
 msgid "|basic| |TY| Renaming Attribute Names and Adding Area and Perimeter"
@@ -703,9 +715,9 @@ msgid ""
 "file. Close the attribute table and right click the forest_stands layer to "
 "save it as :kbd:`forest_stands_1994.shp`."
 msgstr ""
-":kbd:`.csv` ファイルからのデータがちょうど ベクターファイルにリンクされています。データが実際に "
-"ベクターファイルに記録されるように、このリンクを恒久的なものにするには新しい ベクターファイルとして :kbd:`forest_stands` "
-"レイヤーを保存する必要があります。 属性テーブル を閉じ、forest_stands レイヤーを右クリックして "
+":kbd:`.csv` ファイルからのデータがちょうど ベクタファイルにリンクされています。データが実際に "
+"ベクタファイルに記録されるように、このリンクを恒久的なものにするには新しい ベクタファイルとして :kbd:`forest_stands` "
+"レイヤを保存する必要があります。 属性テーブル を閉じ、forest_stands レイヤを右クリックして "
 ":kbd:`forest_stands_1994.shp` としてそれを保存します。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:316
@@ -729,12 +741,12 @@ msgstr "プラグインが有効になっていることを確認します。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:322
 msgid "In the TOC select the layer :kbd:`forest_stands_1994.shp`."
-msgstr "TOCでレイヤー :kbd:`forest_stands_1994.shp` を選択します。"
+msgstr "TOCでレイヤ :kbd:`forest_stands_1994.shp` を選択します。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:323
 msgid ""
 "Then, go to :menuselection:`Vector --> Table Manager --> Table manager`."
-msgstr "次に、:menuselection:`ベクター --> テーブルマネージャ --> テーブルマネージャ` に行きます。"
+msgstr "次に、:menuselection:`ベクタ --> テーブルマネージャ --> テーブルマネージャ` に行きます。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:324
 msgid ""
@@ -748,7 +760,7 @@ msgstr ":guilabel:`保存` をクリックします。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:330
 msgid "Select :guilabel:`Yes` to keep the layer style."
-msgstr ":guilabel:`はい` を選択してレイヤースタイルを維持します。"
+msgstr ":guilabel:`はい` を選択してレイヤスタイルを維持します。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:331
 msgid "Close the :guilabel:`Table Manager` dialogue."
@@ -772,7 +784,7 @@ msgstr ""
 msgid ""
 "Now your :kbd:`forest_stands_1994.shp` layer is ready and packed with all "
 "the available information."
-msgstr "今 :kbd:`forest_stands_1994.shp` レイヤーは準備され、利用可能なすべての情報が満載です。"
+msgstr "今 :kbd:`forest_stands_1994.shp` レイヤは準備され、利用可能なすべての情報が満載です。"
 
 #: ../../docs/training_manual/forestry/stands_digitazing.rst:342
 msgid ""
