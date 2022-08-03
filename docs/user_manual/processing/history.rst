@@ -32,6 +32,25 @@ interface, since they can call an algorithm using the toolbox and then
 check the history manager to see how it could be called from the
 command line.
 
+Right-click on a row and you should be able to:
+
+* :guilabel:`Copy as Python Command`: allows for easy copying of the equivalent
+  :ref:`PyQGIS command <processing_console>` run from the dialog.
+  Same as the code displayed below the commands list.
+* :guilabel:`Copy as qgis_process Command`: allows for easy generation of
+  :ref:`qgis_process command <processing_standalone>`, including its environment
+  settings like the distance units, area units, ellipsoid, and any tricky
+  parameter values like GeoPackage outputs with specific layers
+* :guilabel:`Copy as JSON`: all the settings of the command are copied in
+  a :file:`JSON` format, ready to be consumed by qgis_process.
+  This is a convenient way to see the expected format of the commands,
+  even for complex parameters (like TIN interpolation parameters).
+  You can store these easily and then restore them later by pasting the values
+  over an algorithm dialog.
+* :guilabel:`Create Test...` using the concerned algorithm and parameters,
+  following instructions at :source:`Processing README file
+  <python/plugins/processing/tests/README.md>`.
+
 Apart from browsing the entries in the registry, you can also
 re-execute processes by simply double-clicking on the entry.
 The algorithm dialog then opens with parameters already set, and you
@@ -40,9 +59,6 @@ can change any of them to fit your needs and re-run the algorithm.
 The :guilabel:`History` dialog also provides a convenient way to
 contribute to the consolidation of the testing infrastructure of QGIS
 Processing algorithms and scripts.
-When you right-click on an entry, you can :guilabel:`Create Test...`
-using the concerned algorithm and parameters, following instructions
-at :source:`python/plugins/processing/tests/README.md`.
 
 
 The processing log

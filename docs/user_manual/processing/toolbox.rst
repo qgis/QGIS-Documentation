@@ -85,6 +85,10 @@ The dialog shows two tabs (:guilabel:`Parameters` and :guilabel:`Log`)
 on the left part, the algorithm description on the right, and a set of
 buttons at the bottom.
 
+
+Parameter types
+...............
+
 The :guilabel:`Parameters` tab is used to set the input values that the algorithm needs to be
 executed. It shows a list of input values and configuration parameters to
 be set. It of course has a different content, depending on the requirements of
@@ -114,7 +118,7 @@ table can be of one of the following types.
   .. figure:: img/vector_iterator.png
      :align: center
 
-     Vector iterator button
+     Vector input widget
 
   If the algorithm contains several of them, you will be able to toggle just
   one of them. If the button corresponding to a vector input is toggled, the
@@ -222,6 +226,9 @@ table can be of one of the following types.
   can choose the reference layer and all its properties (cell size, extent, CRS)
   will be used.
 
+Logging the execution
+.....................
+
 Along with the :guilabel:`Parameters` tab, there is another tab named
 :guilabel:`Log` (see :numref:`figure_alg_dialog_log` below).
 Information provided by the algorithm during its execution is written
@@ -249,6 +256,9 @@ These are particularly handy when you have checked the
 :guilabel:`Keep dialog open after running algorithm` in the
 :guilabel:`General` part of the Processing options.
 
+Other tools
+............
+
 On the right hand side of the dialog you will find a short description of the
 algorithm, which will help you understand its purpose and its basic ideas.
 If such a description is not available, the description panel will not be shown.
@@ -259,9 +269,28 @@ bottom of the dialog bringing you to the :ref:`Processing algorithms
 documentation <processing_algs>` or to the provider documentation (for
 some third-party providers).
 
-The :guilabel:`Run as batch process` button triggers the :ref:`batch processing
+The :menuselection:`Advanced -->` menu provides functions to reuse
+the configuration defined in the dialog without running the algorithm:
+
+* :guilabel:`Copy as Python Command`: allows for easy copying of the equivalent
+  :ref:`PyQGIS command <processing_console>` to run the tool using the
+  parameters defined in the dialog
+* :guilabel:`Copy as qgis_process Command`: allows for easy generation of
+  :ref:`qgis_process command <processing_standalone>`, including its environment
+  settings like the distance units, area units, ellipsoid, and any tricky
+  parameter values like GeoPackage outputs with specific layers
+* :guilabel:`Copy as JSON`: all the settings of the command are copied in
+  a :file:`JSON` format, ready to be consumed by qgis_process.
+  This is a convenient way to see the expected format of the commands,
+  even for complex parameters (like TIN interpolation parameters).
+  You can store these easily and then restore them later by pasting the values.
+* :guilabel:`Paste Settings` in a :file`JSON` format
+
+
+The :guilabel:`Run as Batch Process...` button triggers the :ref:`batch processing
 mode <processing_batch>` allowing to configure and run multiple instances of
 the algorithm with a variety of parameters.
+A :guilabel:`Run as Single Process...` helps you switch back from the batch mode.
 
 
 A note on projections
