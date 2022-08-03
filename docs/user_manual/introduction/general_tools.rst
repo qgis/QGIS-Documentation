@@ -2579,6 +2579,11 @@ screen resolution, paper size, or the terrain). Available units are:
 * :guilabel:`Points`
 * :guilabel:`Pixels`
 * :guilabel:`Inches`
+* :guilabel:`Percentage`: allows you to set some properties as a percent of another one. For example, this is
+  useful for creation of text formats where the components (buffer size, shadow radius...)
+  nicely scale as the text size is changed, instead of having
+  constant buffer/shadow sizes. So you don't need to adjust those sizes,
+  when the text size changes.
 * :guilabel:`Meters at Scale`: This allows you to always set the size in meters,
   regardless of what the underlying map units are (e.g. they can be in inches, feet,
   geographic degrees, ...). The size in meters is calculated based on the current project
