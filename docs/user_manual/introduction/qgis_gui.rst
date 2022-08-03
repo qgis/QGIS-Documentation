@@ -2520,7 +2520,8 @@ The following tools are provided at the top of the 3D map view panel:
   The terrain and vector features are exported as 3D objects.
   The export settings, overriding the layers :ref:`properties <sec_3_d_view>`
   or map view :ref:`configuration <scene_configuration>`, include:
-  * :guilabel:`Scene name` and destination :guilabel:`Folder` 
+
+  * :guilabel:`Scene name` and destination :guilabel:`Folder`
   * :guilabel:`Terrain resolution`
   * :guilabel:`Terrain texture resolution`
   * :guilabel:`Model scale`
@@ -2537,7 +2538,7 @@ The following tools are provided at the top of the 3D map view panel:
     :guilabel:`3D camera follows 2D Map view`)
   * :guilabel:`Show visible camera area in 2D map view`
   * |options| :sup:`Configure` the 3D map view :ref:`settings <scene_configuration>`.
-* |dock| :sup:`Dock 3D Map View`: switch from dockable widget to top level window
+* |dock| :sup:`Dock 3D Map View`: switch from docked widget to top level window
 
 .. _`scene_configuration`:
 
