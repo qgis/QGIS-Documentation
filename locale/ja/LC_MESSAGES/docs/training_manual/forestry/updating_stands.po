@@ -2,19 +2,20 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2022
+# Miyoshi Tomoya, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 11:58+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:07+0000\n"
+"Last-Translator: Miyoshi Tomoya, 2022\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,51 +33,100 @@ msgid ""
 "Now that you have digitized the information from the old inventory maps and "
 "added the corresponding information to the forest stands, the next step "
 "would be to create the inventory of the current state of the forest."
+msgstr "古い目録の地図から情報をデジタイズし、林分に対応する情報を追加したので、次のステップは、森林の現在の状態の目録を作成することです。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:8
+msgid ""
+"You will digitize new forest stands from scratch following an aerial photo "
+"from that forest area. The forestry map you digitized in the previous lesson"
+" was created from an aerial Color Infrared (CIR) photograph. This type of "
+"imagery, where the infrared light is recorded instead of the blue light, are"
+" widely used to study vegetated areas. You will also use a CIR photograph in"
+" this lesson."
 msgstr ""
-"古い目録の地図から情報をデジタル化し、林分に対応する情報を追加し終わりましたから、次のステップは、森林の現在の状態の目録を作成することです。"
+"その森林地帯の航空写真に従って、新しい林分を一からデジタイズします。前回のレッスンでデジタイズした林業地図は、航空赤外線写真(CIR)から作成されました。CIRは、青色光の代わりに赤外線を記録した画像で、植生域の調査に広く利用されています。このレッスンでは、CIR写真も使用します。"
 
 #: ../../docs/training_manual/forestry/updating_stands.rst:14
 msgid ""
 "After digitizing the forest stands, you will add information such as new "
 "constraints given by conservation regulations."
-msgstr "林分をデジタル化した後、このような保全条例により与えられた新たな制約などの情報を追加します。"
+msgstr "林分をデジタイズした後、このような保全条例により与えられた新たな制約などの情報を追加します。"
 
 #: ../../docs/training_manual/forestry/updating_stands.rst:17
 msgid ""
 "**The goal for this lesson:** To digitize a new set of forest stands from "
 "CIR aerial photographs and add information from other data-sets."
-msgstr "**このレッスンの目標：** 林分の新しいセットをCIR航空写真からデジタル化し、他のデータセットからの情報を追加します。"
+msgstr "**このレッスンの目標：** 林分の新しいセットをCIR航空写真からデジタイズし、他のデータセットからの情報を追加します。"
 
 #: ../../docs/training_manual/forestry/updating_stands.rst:22
 msgid "|basic| Comparing the Old Forest Stands to Current Aerial Photographs"
 msgstr "|basic| 古い林分を現在の航空写真と比較する"
 
+#: ../../docs/training_manual/forestry/updating_stands.rst:286
+msgid "basic"
+msgstr "basic"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:24
+msgid ""
+"The National Land Survey of Finland has an open data policy that allows you "
+"downloading a variety of geographical data like aerial imagery, traditional "
+"topographic maps, DEM, LiDAR data, etc. The service can be accessed also in "
+"English `here "
+"<https://tiedostopalvelu.maanmittauslaitos.fi/tp/kartta?lang=en>`_. The "
+"aerial image used in this exercise has been created from two orthorectified "
+"CIR images downloaded from that service (M4134F_21062012 and "
+"M4143E_21062012)."
+msgstr ""
+"フィンランド国土地理院はオープンデータ政策をとっており、航空写真、従来の地形図、DEM、LiDARデータなど、様々な地理データをダウンロードすることができます。このサービスは、`ここ"
+" <https://tiedostopalvelu.maanmittauslaitos.fi/tp/kartta?lang=en>`_ "
+"から英語でもアクセス可能です。この演習で使用した航空画像は、このサービスからダウンロードした2枚のオルソCIR画像(M4134F_21062012とM4143E_21062012)から作成したものです。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:31
+msgid ""
+"Open QGIS and set the project's CRS to :guilabel:`ETRS89 / ETRS-TM35FIN` in "
+":menuselection:`Project --> Properties... --> CRS`."
+msgstr ""
+"QGISを開き、プロジェクトのCRSを :menuselection:`プロジェクト --> プロパティ... --> CRS` で、 "
+":guilabel:`ETRS89 / ETRS-TM35FIN` に設定します。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:33
+msgid ""
+"From the :file:`exercise_data\\\\forestry\\\\` folder, add the CIR image "
+":file:`rautjarvi_aerial.tif` that is containing the digitized lakes."
+msgstr ""
+":file:`exercise_data\\\\forestry\\\\` フォルダから、デジタイズされた湖が入ったCIR画像 "
+":file:`rautjarvi_aerial.tif` を追加します。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:35
+msgid "Then save the QGIS project as :file:`digitizing_2012.qgs`."
+msgstr "次にそのQGISプロジェクトを :file:`digitizing_2012.qgs` として保存します。"
+
 #: ../../docs/training_manual/forestry/updating_stands.rst:37
 msgid ""
 "The CIR images are from 2012. You can compare the stands that were created "
 "in 1994 with the situation almost 20 years later."
-msgstr "CIRの画像は2012年からです。ほぼ20年後の状況と1994年に作成された林分を比較できます。"
+msgstr "CIRの画像は2012年のものです。1994年に造られた林分をほぼ20年後の状況と比較することができます。"
 
 #: ../../docs/training_manual/forestry/updating_stands.rst:40
 msgid "Add your :kbd:`forest_stands_1994.shp` layer."
-msgstr ":kbd:`forest_stands_1994.shp` レイヤーを追加します。"
+msgstr ":kbd:`forest_stands_1994.shp` レイヤを追加します。"
 
 #: ../../docs/training_manual/forestry/updating_stands.rst:41
 msgid "Set its styling so that you can see through your polygons."
-msgstr "スタイルを設定することでポリゴンを透過して見えるようにします。"
+msgstr "ポリゴンを透過して見えるようにスタイルを設定します。"
 
 #: ../../docs/training_manual/forestry/updating_stands.rst:42
 msgid ""
 "Review how the old forest stands follow (or not) what you might visually "
 "interpret as an homogeneous forest."
-msgstr "古い林分が視覚的に均質な森として解釈する可能性があるものをフォローする（またはしない）方法を確認してください。"
+msgstr "均質な森として解釈する可能性があるものに、古い林分がどのように従っているか（あるいは従っていないか）を確認してください。"
 
 #: ../../docs/training_manual/forestry/updating_stands.rst:45
 msgid ""
 "Zoom and pan around the area. You probably will notice that some of the old "
 "forest stands might be still corresponding with the image but others are "
 "not."
-msgstr "エリアの周りにズームおよびパンします。おそらく、古い林分でなお静止画に対応するもの、しないものがわかるでしょう。"
+msgstr "ズームとパンしてください。古い林分でなお静止画に対応するものとしないものがあることに気づくででしょう。"
 
 #: ../../docs/training_manual/forestry/updating_stands.rst:48
 msgid ""
@@ -87,7 +137,7 @@ msgid ""
 "in different ways. Or simply the priorities for the forest inventory were "
 "different that they are today."
 msgstr ""
-"これは通常の状況です、というのは20年ほどが経過して別の森林施業（伐採、間伐...）が行われていますので。林分は1992年に戻りそれらをデジタル化した人には均質に見えていたが、時間が経過するにつれ、いくつかの森は異なった方法で発展してきた、ということもありえます。あるいは森林目録のための優先順位は今日あるものと単に異なっていました。"
+"これは、20年ほどが経過しており、また、異なる森林施業（伐採、間伐...）が行われているので、通常の状況です。1992年当時林分をデジタイズした人には均質に見えていたが、時間が経過するにつれ、いくつかの森は異なった方法で発展した、ということもありえます。あるいは単純に、森林目録の優先順位が現在と異なっていたのかもしれません。"
 
 #: ../../docs/training_manual/forestry/updating_stands.rst:55
 msgid ""
@@ -174,6 +224,15 @@ msgid ""
 "Blueish areas indicate barren terrain, roads and urban areas, crops that "
 "have not started to grow etc."
 msgstr "青みを帯びた地域は不毛の地形、道路や市街地、成長を開始していない作物などを示しています"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:95
+msgid ""
+"Don't use zooms too close to the image when trying to identify forest "
+"stands. A scale between 1:3 000 and 1: 5 000 should be enough for this "
+"imagery. See the image below (1:4000 scale):"
+msgstr ""
+"林分を特定しようとする場合、画像を拡大し過ぎないでください。この画像は、1:3 000から1:5 "
+"000の縮尺で十分です。下の画像（縮尺1:4000）を見てください:"
 
 #: ../../docs/training_manual/forestry/updating_stands.rst:103
 msgid "|basic| |TY| Digitizing Forest Stands from CIR Imagery"
