@@ -232,8 +232,8 @@ Logging the execution
 Along with the :guilabel:`Parameters` tab, there is another tab named
 :guilabel:`Log` (see :numref:`figure_alg_dialog_log` below).
 Information provided by the algorithm during its execution is written
-in this tab, and allow you to track the execution and be aware and have
-more details about the algorithm as it runs.
+in this tab, allowing you to track the execution as well as being aware and
+having more details about the algorithm as it runs.
 Information on algorithm execution is also output in the
 :menuselection:`View --> Panels --> Log Messages Panel`.
 
