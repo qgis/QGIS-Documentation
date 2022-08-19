@@ -13,7 +13,7 @@ Let's take an example, geopackage with a point vector:
 
 select the layer (present in the Layer Panel), right mouse button 'Open attributes table' or click on the |mActionOpenTable| or function key F6
 
-.. figure:: img/qfield_area/add_coord2.png
+.. figure:: img/coordinate_field/add_coord2.png
 
 .. |mActionCalculateField| image:: img/qfield_area/mActionCalculateField.png  
 
@@ -26,8 +26,8 @@ select the layer (present in the Layer Panel), right mouse button 'Open attribut
 7. OK to execute and then the coord_x column will be added and populated;
 repeat the same steps for coord_y and use the **$y** function:
 
-.. figure:: img/qfield_area/add_coord3.png
+.. figure:: img/coordinate_field/add_coord3.png
 
 Here are highlighted the two columns with the coordinates:
 
-.. figure:: img/qfield_area/add_coord4.png
+.. figure:: img/coordinate_field/add_coord4.png
