@@ -1,17 +1,15 @@
-Vector simplification and smoothing
-====================================
+How to add column with area [m²]
+================================
 
-Module contributed by Paolo Cavallini - `Faunalia <https://www.faunalia.eu>`_
+Module contributed by Carlos López Quintanilla and Salvatore Fiandaca
 
-.. note:: This chapter shows how simplify vectors, and smooth out sharp corners.
+.. note:: This chapter shows how to add column with area [m²].
 
-Sometimes we need a simplified version of a vector, to have a smaller file size
-and get rid of unnecessary details. Many tools do this in a very rough way, and
-miss the adjacency and sometimes the topological correctness of polygons. GRASS
-is the ideal tool for this: being a topological GIS, adjacency and correctness
-are preserved even at very high simplification levels.
-In our case, we have a vector resulting from a raster, thus showing a "saw" pattern
-at borders. Applying a simplification results in straight lines:
+Let's take an example, geopackage with polygon vector:
+
+.. figure:: img/qfield_area/add_col_a1.png
+
+select the layer (present in the Layer Panel), right mouse button 'Open attributes table' or click on the .. |biohazard| image:: img/qfield_area/icon_tab_attr.png  or function key F6
 
 - :menuselection:`GRASS --> v.generalize` [Maximal tolerance value: 30 m]
 
