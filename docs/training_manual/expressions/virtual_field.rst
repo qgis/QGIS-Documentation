@@ -29,5 +29,4 @@ select the layer (present in the Layer Panel), right mouse button 'Open attribut
 
 The **lengh_dinamic** column populated with the **$length** function will be added
 
-.. note:: 
-A virtual field is a field that dynamically updates and does not modify the attribute table as it is stored in the project and not in the layer.
+.. note:: A virtual field is a field that dynamically updates and does not modify the attribute table as it is stored in the project and not in the layer.
