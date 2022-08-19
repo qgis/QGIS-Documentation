@@ -27,5 +27,6 @@ QGIS Training Manual
    spatial_databases/index
    processing/index
    databases/index
+   expressions/index
    appendix/contribute
    appendix/preparing_data
