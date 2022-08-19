@@ -83,7 +83,7 @@ How to reuse QGIS icons
 
 Because they are well-known and convey a clear message to the users, you may want
 sometimes to reuse QGIS icons in your plugin instead of drawing and setting a new one.
-Use the :meth:`iconPath() <qgis.core.QgsApplication.iconPath>` method.
+Use the :meth:`getThemeIcon() <qgis.core.QgsApplication.getThemeIcon>` method.
 
 For example, to reuse the |fileOpen| icon available at
 :source:`images/themes/default/mActionFileOpen.svg`, you can do:
@@ -97,6 +97,10 @@ For example, to reuse the |fileOpen| icon available at
         self.iface.mainWindow()
     )
     self.iface.addPluginToMenu("MyPlugin", self.file_open_action)
+
+:meth:`iconPath() <qgis.core.QgsApplication.iconPath>` is another method to call QGIS
+icons. Find examples of calls to theme icons at `QGIS embedded images - Cheatsheet
+<https://static.geotribu.fr/toc_nav_ignored/qgis_resources_preview_table/>`_.
 
 
 .. index:: Plugins; Customization
