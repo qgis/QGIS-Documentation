@@ -50,8 +50,8 @@ it. To do so create a directory :file:`qgis-server` and within its directory:
       && localedef -i en_US -f UTF-8 en_US.UTF-8 \
       # Add the current key for package downloading - As the key changes every year at least
       # Please refer to QGIS install documentation and replace it and its fingerprint value with the latest ones
-      && wget -O - https://qgis.org/downloads/qgis-2021.gpg.key | gpg --import \
-      && gpg --export --armor 46B5721DBBD2996A | apt-key add - \
+      && wget -O - https://qgis.org/downloads/qgis-2022.gpg.key | gpg --import \
+      && gpg --export --armor D155B8E6A419C5BE | apt-key add - \
       && echo "deb http://qgis.org/debian buster main" >> /etc/apt/sources.list.d/qgis.list \
       && apt-get update \
       && apt-get install --no-install-recommends --no-install-suggests --allow-unauthenticated -y \
