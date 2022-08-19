@@ -11,7 +11,6 @@ Let's take an example, geopackage with polygon vector:
 
 .. |mActionOpenTable| image:: img/qfield_area/mActionOpenTable.png  
 
-
 select the layer (present in the Layer Panel), right mouse button 'Open attributes table' or click on the |mActionOpenTable| or function key F6
 
 .. figure:: img/qfield_area/add_col_a2.png
@@ -34,4 +33,3 @@ select the layer (present in the Layer Panel), right mouse button 'Open attribut
 .. figure:: img/qfield_area/add_col_a4.png
 
 The area column will be added and populated with the **$area** function.
-
