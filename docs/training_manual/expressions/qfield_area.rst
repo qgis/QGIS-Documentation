@@ -9,9 +9,11 @@ Let's take an example, geopackage with polygon vector:
 
 .. figure:: img/qfield_area/add_col_a1.png
 
-select the layer (present in the Layer Panel), right mouse button 'Open attributes table' or click on the 
-.. |biohazard| image:: img/qfield_area/mActionOpenTable.png  
-or function key F6
+.. |mActionOpenTable| image:: img/qfield_area/mActionOpenTable.png  
+
+select the layer (present in the Layer Panel), right mouse button 'Open attributes table' or click on the |mActionOpenTable| or function key F6
+
+
 
 - :menuselection:`GRASS --> v.generalize` [Maximal tolerance value: 30 m]
 
