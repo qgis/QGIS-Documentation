@@ -55,4 +55,20 @@ Expression to be written in the field calculator
 
 #. `to_int
    <https://docs.qgis.org/3.22/en/docs/user_manual/expressions/functions_list.html?highlight=format%20number#to-int>`_
-
+#. `format_number
+   <https://docs.qgis.org/3.22/en/docs/user_manual/expressions/functions_list.html?highlight=format%20number#format-number>`_
+#. `$x
+   <https://docs.qgis.org/3.22/en/docs/user_manual/expressions/functions_list.html?highlight=format%20number#x>`_
+#. `$y
+   <https://docs.qgis.org/3.22/en/docs/user_manual/expressions/functions_list.html?highlight=format%20number#y>`_
+#. `z
+   <https://docs.qgis.org/3.22/en/docs/user_manual/expressions/functions_list.html?highlight=format%20number#id37>`_
+#. `m
+   <https://docs.qgis.org/3.22/en/docs/user_manual/expressions/functions_list.html?highlight=format%20number#m>`_
+#. `$lenght
+    <https://docs.qgis.org/3.22/en/docs/user_manual/expressions/functions_list.html?highlight=format%20number#length>`_
+#. `start_point
+   <https://docs.qgis.org/3.22/en/docs/user_manual/expressions/functions_list.html?highlight=format%20number#start-point>`
+#. `$geometry
+   <https://docs.qgis.org/3.22/en/docs/user_manual/expressions/functions_list.html?highlight=format%20number#geometry>`
+   
