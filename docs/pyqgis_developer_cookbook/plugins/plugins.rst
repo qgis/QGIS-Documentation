@@ -69,14 +69,16 @@ What is the meaning of the files:
 * :file:`metadata.txt` = Contains general info, version, name and some other
   metadata used by plugins website and plugin infrastructure.
 
-`Here <https://github.com/wonder-sk/qgis-minimal-plugin>`_
+For training purpose `Here <https://github.com/wonder-sk/qgis-minimal-plugin>`_
 is a way of creating the basic files (skeleton) of a typical
 QGIS Python plugin.
 
 There is a QGIS plugin called
 `Plugin Builder 3 <https://plugins.qgis.org/plugins/pluginbuilder3/>`_
 that creates a plugin template for QGIS.
-This is the recommended option, as it produces 3.x compatible sources.
+It produces 3.x compatible sources, with full possible features for a plugin.
+
+Another productivity option is using `qgis-plugin-ci <https://opengisch.github.io/qgis-plugin-ci/>`_ CLI to perform automated testing and deployment for QGIS plugins using continuous integration on Travis-CI, github workflows, Gitlab-CI and Transifex for translation. It allows to release, translate, publish or create a XML plugin repository file via CLI or automated CI actions. 
 
 .. warning::
     If you plan to upload the plugin to the :ref:`official_pyqgis_repository`
