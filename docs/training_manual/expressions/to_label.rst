@@ -54,5 +54,5 @@ Expression to be written in the field calculator
 .. note:: Functions used:
 
 * `to_int
-   <https://wiki.openstreetmap.org/wiki/Main_Page>`_
+<https://wiki.openstreetmap.org/wiki/Main_Page>`_
 
