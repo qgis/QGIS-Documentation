@@ -17,13 +17,13 @@ Select the layer (present in the Layer Panel), right mouse button 'Open attribut
 
 .. |mActionCalculateField| image:: img/_common/mActionCalculateField.png  
 
-1. Activate editing;
-2. Open Field calculator |mActionCalculateField|
-3. Create Virtual field and type **lengh_dinamic**;
-4. Real output sfield type and length 10 and 2;
-5. Search the function: **$length**
-6. Double click on the **$length** function to add it;
-7. OK to execute;
+#. Activate editing;
+#. Open Field calculator |mActionCalculateField|
+#. Create Virtual field and type **lengh_dinamic**;
+#. Real output sfield type and length 10 and 2;
+#. Search the function: **$length**
+#. Double click on the **$length** function to add it;
+#. OK to execute;
 
 .. figure:: img/virtual_field/add_campo_virt2.png
 

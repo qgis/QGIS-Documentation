@@ -16,5 +16,8 @@ Contents:
    area_field
    coordinate_field
    virtual_field
-   dimension_field_z
+   dimension_z_field
    to_label
+
+
+https://docs.qgis.org/3.22/en/docs/user_manual/expressions/functions_list.html?highlight=format%20number#format-number

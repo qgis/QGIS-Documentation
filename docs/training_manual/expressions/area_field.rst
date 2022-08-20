@@ -17,18 +17,18 @@ Select the layer (present in the Layer Panel), right mouse button 'Open attribut
 
 .. |mActionCalculateField| image:: img/_common/mActionCalculateField.png  
 
-1. Activate editing;
-2. Open Field calculator |mActionCalculateField|
-3. Create new field;
-4. Type **area** field name;
-5. Real output field type;
-6. Outlet length 10 and 2;
+#. Activate editing;
+#. Open Field calculator |mActionCalculateField|
+#. Create new field;
+#. Type **area** field name;
+#. Real output field type;
+#. Outlet length 10 and 2;
 
 .. figure:: img/area_field/add_col_a3.png
 
-1. In the search box we type the name of the function: **area**
-2. Double click on the **$area** function to add it;
-3. OK to execute;
+#. In the search box we type the name of the function: **area**
+#. Double click on the **$area** function to add it;
+#. OK to execute;
 
 .. figure:: img/area_field/add_col_a4.png
 

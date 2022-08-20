@@ -17,13 +17,13 @@ Select the layer (present in the Layer Panel), right mouse button 'Open attribut
 
 .. |mActionCalculateField| image:: img/_common/mActionCalculateField.png  
 
-1. Activate editing;
-2. Open Field calculator |mActionCalculateField|
-3. Create new field and type **cord_x**;
-4. Real output field type and length 13 and 2;
-5. Search the function: **$x**
-6. Double click on the **$x** function to add it;
-7. OK to execute and then the coord_x column will be added and populated;
+#. Activate editing;
+#. Open Field calculator |mActionCalculateField|
+#. Create new field and type **cord_x**;
+#. Real output field type and length 13 and 2;
+#. Search the function: **$x**
+#. Double click on the **$x** function to add it;
+#. OK to execute and then the coord_x column will be added and populated;
 repeat the same steps for coord_y and use the **$y** function:
 
 .. figure:: img/coordinate_field/add_coord3.png
