@@ -8,14 +8,15 @@ Module contributed by Carlos López Quintanilla and Salvatore Fiandaca
 The geometry attribute is the only field not visible in the attribute table, but there is !!!
 The geometry is expressed in a way that is not understandable by man and therefore it is avoided to show it, this attribute brings with it other implicit attributes to the geometry itself such as:
 
-* in the case of geometry (MULTI)POINT(ZM): the x, y, z, m coordinates;
-* in the case of geometry (MULTI)LINESTRING(ZM): length of the line and coordinates of the nodes/vertices;
-* in the case of geometry (MULTI)POLYGON(ZM): area, perimeter and coordinates of the vertex;
+* in the case of geometry (Multi)Point(ZM): the x, y, z, m coordinates;
+* in the case of geometry (Multi)LineString(ZM): length of the line and coordinates of the nodes/vertices;
+* in the case of geometry (Multi)Polygon(ZM): area, perimeter and coordinates of the vertex;
 
 The characteristics can always be recalled (if present, that is, if it has a Z or m) and therefore they do not need to be explicitly stated, indeed if explicit they create a redontacted dataset.
 
 One way to recall them is through labeling:
-* case (MULTI)POINT(ZM):
+
+* case (Multi)Point(ZM):
 
 Expression to be written in the field calculator
 
@@ -28,30 +29,30 @@ Expression to be written in the field calculator
 
 .. figure:: img/to_label/etichette1.png
 
+* case (Multi)LineString(ZM):
+
+Expression to be written in the field calculator
+
+::
+
+   to_int($length)  ||'/'||  z(start_point($geometry))
+
+.. figure:: img/to_label/etichette2.png
 
 
-.. |mActionOpenTable| image:: img/_common/mActionOpenTable.png  
+* case (Multi)Polygon(ZM):
 
-Select the layer (present in the Layer Panel), right mouse button 'Open attributes table' or click on the |mActionOpenTable| or function key F6
+Expression to be written in the field calculator
+
+::
+
+   'Area= ' || format_number($area,1) || ' mq'
+
+.. figure:: img/to_label/etichette3.png
 
 
-.. |mActionCalculateField| image:: img/_common/mActionCalculateField.png  
+.. note:: Functions used:
 
-#. Activate editing;
-#. Open Field calculator |mActionCalculateField|
-#. Create Virtual field and type **height**;
-#. Real output field type and length 10 and 2;
-#. Search the function: **z**
-#. Double click on the **z** function to add it;
-#. Add the function **start_point** and then **$geometry** as arguments to **z** 
-#. **z(start_point($geometry))**;
-#. OK to execute;
+* `to_int
+   <https://wiki.openstreetmap.org/wiki/Main_Page>`_
 
-.. figure:: img/dimension_z_field/quotaz2.png
-
-The **height** column populated will be added
-
-.. note:: 
-#. In case of PointZ → **z($geometry)**
-#. In case of (Multi) LinestringZ → **z(start_point($geometry))** for contour line;
-#. In case of PoligonZ **z(point_n($geometry, 1))**
