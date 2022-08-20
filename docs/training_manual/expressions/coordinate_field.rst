@@ -9,13 +9,13 @@ Let's take an example, geopackage with a point vector:
 
 .. figure:: img/coordinate_field/add_coord1.png
 
-.. |mActionOpenTable| image:: img/qfield_area/mActionOpenTable.png  
+.. |mActionOpenTable| image:: img/_common/mActionOpenTable.png  
 
-select the layer (present in the Layer Panel), right mouse button 'Open attributes table' or click on the |mActionOpenTable| or function key F6
+Select the layer (present in the Layer Panel), right mouse button 'Open attributes table' or click on the |mActionOpenTable| or function key F6
 
 .. figure:: img/coordinate_field/add_coord2.png
 
-.. |mActionCalculateField| image:: img/qfield_area/mActionCalculateField.png  
+.. |mActionCalculateField| image:: img/_common/mActionCalculateField.png  
 
 1. Activate editing;
 2. Open Field calculator |mActionCalculateField|

@@ -6,7 +6,7 @@ with many screenshots to make it easy to understand some basic functions such as
 The QGIS expressions editor
 ==========================================
 
-This module contributed by Salvatore fiandaca and Carlos López quintanillaVictor Olaya and Paolo Cavallini.
+This module contributed by Salvatore Fiandaca and Carlos López quintanilla.
 
 Contents:
 

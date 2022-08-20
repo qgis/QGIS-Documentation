@@ -1,13 +1,11 @@
-How to add a virtual field
-==========================
+How to add the z dimension to the attribute table
+=================================================
 
 Module contributed by Carlos López Quintanilla and Salvatore Fiandaca
 
-.. note:: This chapter shows how to add a virtual field.
+.. note:: This chapter shows how to add the z dimension to the attribute table.
 
-Let's take an example, geopackage with a line vector:
-
-.. figure:: img/virtual_field/add_campo_virt3.png
+Let's take an example, geopackage with a MultiLineStringZ vector:
 
 .. |mActionOpenTable| image:: img/_common/mActionOpenTable.png  
 
@@ -20,7 +18,7 @@ Select the layer (present in the Layer Panel), right mouse button 'Open attribut
 1. Activate editing;
 2. Open Field calculator |mActionCalculateField|
 3. Create Virtual field and type **lengh_dinamic**;
-4. Real output sfield type and length 10 and 2;
+4. Real output field type and length 10 and 2;
 5. Search the function: **$length**
 6. Double click on the **$length** function to add it;
 7. OK to execute;
