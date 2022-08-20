@@ -68,7 +68,7 @@ Expression to be written in the field calculator
 * `$lenght
   <https://docs.qgis.org/3.22/en/docs/user_manual/expressions/functions_list.html?highlight=format%20number#length>`_
 * `start_point
-  <https://docs.qgis.org/3.22/en/docs/user_manual/expressions/functions_list.html?highlight=format%20number#start-point>`
+  <https://docs.qgis.org/3.22/en/docs/user_manual/expressions/functions_list.html?highlight=format%20number#start-point>`_
 * `$geometry
-  <https://docs.qgis.org/3.22/en/docs/user_manual/expressions/functions_list.html?highlight=format%20number#geometry>`
+  <https://docs.qgis.org/3.22/en/docs/user_manual/expressions/functions_list.html?highlight=format%20number#geometry>`_
    
