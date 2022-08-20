@@ -54,5 +54,5 @@ Expression to be written in the field calculator
 .. note:: Functions used:
 
 #. `to_int
-   <https://wiki.openstreetmap.org/wiki/Main_Page>`_
+   <https://docs.qgis.org/3.22/en/docs/user_manual/expressions/functions_list.html?highlight=format%20number#to-int>`_
 
