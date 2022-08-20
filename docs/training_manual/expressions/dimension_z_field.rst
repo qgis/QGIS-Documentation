@@ -30,6 +30,6 @@ Select the layer (present in the Layer Panel), right mouse button 'Open attribut
 The **height** column populated will be added
 
 .. note:: 
-# In case of PointZ → **z($geometry)**
-# In case of (Multi) LinestringZ → **z(start_point($geometry))** for contour line;
-# In case of PoligonZ **z(point_n($geometry, 1))**
+#. In case of PointZ → **z($geometry)**
+#. In case of (Multi) LinestringZ → **z(start_point($geometry))** for contour line;
+#. In case of PoligonZ **z(point_n($geometry, 1))**
