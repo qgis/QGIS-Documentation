@@ -373,13 +373,27 @@ layer types:
   <vector_marker_symbols>` over the length of a line.
 
   * The :guilabel:`Marker placement` can be set using a regular interval setting
+    (starting from the first vertex)
     and/or the line geometry property (on first or last vertex, inner vertices,
     the central point of the line or of each segment, or on every curve point).
   * When first or last vertex placement is enabled, the |checkbox|
     :guilabel:`Place on every part extremity` option will make the markers
     render also at the first or last vertex for every part of multipart geometries.
-  * :guilabel:`Offset along the line`: the markers placement can also be given
-    an offset from the start, along the line
+  * :guilabel:`Offset along line`: the markers placement can also be given
+    an offset along the line, in the ref:`unit <unit_selector>` of your choice
+    (millimeters, points, map unit, meters at scale, percentage, ...):
+
+    * A positive value offsets the markers symbols in the line direction (with
+      :guilabel:`On first vertex` and :guilabel:`With interval` placements)
+      and backwards (with :guilabel:`On last vertex` placement).
+    * A negative value on a not closed line will result in no offset (for
+      :guilabel:`On first vertex` and :guilabel:`On last vertex` placements)
+      or backwards offset of the symbols (from the last vertex).
+    * With a closed ring, QGIS treats the offset as continuing to loop around
+      the ring (forward or backward).
+      E.g. setting the offset to 150% (resp. -10% or -110%) results in the
+      offset being treated as 50% (resp. 90%) of the length of the closed ring.
+
   * The |checkbox| :guilabel:`Rotate marker to follow line direction` option
     sets whether each marker symbol should be oriented relative to the line
     direction or not.

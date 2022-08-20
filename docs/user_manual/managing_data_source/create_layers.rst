@@ -403,11 +403,24 @@ Depending on the format of export, some of these options may be available:
   container-like format, this entry represents the output layer.
 * :guilabel:`Encoding`
 * :guilabel:`Save only selected features`
-* :guilabel:`Select fields to export and their export options`. In case you set
-  your fields behavior with some :ref:`Edit widgets <configure_field>`, e.g.
-  ``value map``, you can keep the displayed values in the layer by checking
-  |checkbox| :guilabel:`Replace all selected raw fields values by displayed
-  values`.
+* :guilabel:`Select fields to export and their export options`: provides means
+  to export fields with custom names and :ref:`form widget <configure_field>`
+  settings:
+
+  * Check rows under the :guilabel:`Name` column to choose fields to keep
+    in the output layer, or press :guilabel:`Select All` or
+    :guilabel:`Deselect All` buttons
+  * Toggle the :guilabel:`Use aliases for exported name` checkbox to populate
+    the :guilabel:`Export name` column with corresponding field aliases or
+    reset to the original field name.
+    Double-clicking a cell will also edit the name.
+  * Depending on whether attribute form custom widgets are in use, you can
+    :guilabel:`Replace all selected raw field values by displayed values`.
+    E.g. if a ``value map`` widget is applied to a field, the output layer
+    will contain the description values instead of the original values.
+    The replacement can also be done on a field by field basis, in the
+    :guilabel:`Replace with displayed values` column.
+
 * :guilabel:`Persist layer metadata`: ensures that any layer :ref:`metadata
   <vectormetadatamenu>` present in the source layer will be copied and stored:
 
