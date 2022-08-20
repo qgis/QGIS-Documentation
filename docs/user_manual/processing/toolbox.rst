@@ -232,8 +232,8 @@ Logging the execution
 Along with the :guilabel:`Parameters` tab, there is another tab named
 :guilabel:`Log` (see :numref:`figure_alg_dialog_log` below).
 Information provided by the algorithm during its execution is written
-in this tab, and allow you to track the execution and be aware and have
-more details about the algorithm as it runs.
+in this tab, allowing you to track the execution as well as being aware and
+having more details about the algorithm as it runs.
 Information on algorithm execution is also output in the
 :menuselection:`View --> Panels --> Log Messages Panel`.
 
@@ -292,6 +292,8 @@ mode <processing_batch>` allowing to configure and run multiple instances of
 the algorithm with a variety of parameters.
 A :guilabel:`Run as Single Process...` helps you switch back from the batch mode.
 
+When an algorithm execution finishes (either successfully or not), a new button
+:guilabel:`Change Parameters` is shown as long as the :guilabel:`Log` tab is active.
 
 A note on projections
 .....................
