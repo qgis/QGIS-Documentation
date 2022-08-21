@@ -82,10 +82,10 @@ Useful tools to quickly create plugins
 --------------------------------------
 
 `A minimal plugin to get started <https://github.com/wonder-sk/qgis-minimal-plugin>`_
-that only creates the basic files (skeleton) of a typical QGIS Python plugin.
+that only includes the basic files (skeleton) of a typical QGIS Python plugin.
 
 A fully featured QGIS plugin called `Plugin Builder 3 <https://plugins.qgis.org/plugins/pluginbuilder3/>`_
-that creates a plugin template for QGIS. It produces 3.x compatible sources, with full possible features for a plugin.
+that creates a plugin template for QGIS. It produces 3.x compatible sources, with many possible features for a plugin.
 
 Plugin content
 ==============
