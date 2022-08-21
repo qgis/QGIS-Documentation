@@ -69,16 +69,6 @@ What is the meaning of the files:
 * :file:`metadata.txt` = Contains general info, version, name and some other
   metadata used by plugins website and plugin infrastructure.
 
-For training purpose `Here <https://github.com/wonder-sk/qgis-minimal-plugin>`_
-is a way of creating the basic files (skeleton) of a typical
-QGIS Python plugin.
-
-There is a QGIS plugin called
-`Plugin Builder 3 <https://plugins.qgis.org/plugins/pluginbuilder3/>`_
-that creates a plugin template for QGIS.
-It produces 3.x compatible sources, with full possible features for a plugin.
-
-Another productivity option is using `qgis-plugin-ci <https://opengisch.github.io/qgis-plugin-ci/>`_ CLI to perform automated packaging and deployment for QGIS plugins using continuous integration on Travis-CI, github workflows, Gitlab-CI and Transifex for translation. It allows to release, translate, publish or create a XML plugin repository file via CLI or automated CI actions. 
 
 .. warning::
     If you plan to upload the plugin to the :ref:`official_pyqgis_repository`
@@ -87,6 +77,15 @@ Another productivity option is using `qgis-plugin-ci <https://opengisch.github.i
 
 
 .. index:: Plugins; Writing code
+
+Useful tools to quickly create plugins
+--------------------------------------
+
+`A minimal plugin to get started <https://github.com/wonder-sk/qgis-minimal-plugin>`_
+that only creates the basic files (skeleton) of a typical QGIS Python plugin.
+
+A fully featured QGIS plugin called `Plugin Builder 3 <https://plugins.qgis.org/plugins/pluginbuilder3/>`_
+that creates a plugin template for QGIS. It produces 3.x compatible sources, with full possible features for a plugin.
 
 Plugin content
 ==============
@@ -599,6 +598,13 @@ Plugin Reloader
 During development of your plugin you will frequently need to reload it in QGIS
 for testing. This is very easy using the **Plugin Reloader** plugin. You can find it
 with the :ref:`Plugin Manager <plugins>`.
+
+Automate packaging, release and translation with qgis-plugin-ci
+---------------------------------------------------------------
+
+`qgis-plugin-ci <https://opengisch.github.io/qgis-plugin-ci/>`_ provides a command line interface to perform automated packaging and deployment for QGIS plugins on your laptop, or using continuous integration on Travis-CI, github workflows, Gitlab-CI and Transifex for translation.
+
+It allows to release, translate, publish or even a XML plugin repository file via CLI or automate this in CI actions. 
 
 Accessing Plugins
 -----------------
