@@ -1694,9 +1694,37 @@ At the top of the :guilabel:`Digitizing panel`, you find the following buttons:
   relative to previous segment) angle from a preset list
   (following steps of 5°, 10°, 15°, 18°, 22.5°, 30°, 45° or 90°).
   Choose :guilabel:`Do not snap to common angles` to disable this feature.
-* |floater| :sup:`Floater`: displays a live preview of the coordinates
-  right next to the cursor. The values can be accessed and edited using
-  the :ref:`panel's shortcuts <digitizing_panel_shortcuts>`.
+* |floater| :sup:`Toggle Floater`: displays a live preview of the coordinates
+  right next to the cursor, allowing quick digitizing. The values can be accessed
+  using the :ref:`panel's shortcuts <digitizing_panel_shortcuts>`, edited and
+  |locked| :sup:`Locked` after validation (pressing :kbd:`Enter`).
+* |extractVertices| :sup:`Construction Tools` provides a couple of options that
+  constrain the vertices placement based on extrapolated coordinates of
+  existing elements:
+
+  * |unchecked| :guilabel:`Line Extension`: hover over a segment and you get
+    a purple dotted line extending the segment across the map canvas.
+    You can snap the vertex anywhere on this virtual line.
+  * |unchecked| :guilabel:`X/Y Point`: hover over a vertex and you get
+    a purple dotted line along its X or Y coordinate, across the map canvas.
+    You can snap the vertex anywhere on this virtual line.
+    It is even possible to hover over two different vertices, generating virtual
+    coordinate lines for both, and snap to their intersection.
+
+Below the toolbar, you will find a number of text boxes whose value reflects
+by default the position or movement of the cursor in the map canvas.
+Editing these values helps you constrain the position of the items you edit:
+
+* :guilabel:`d` for the distance from a reference position, usually the last
+  edited vertex
+* :guilabel:`a` for the angle (absolute or relative) from a reference position,
+  usually the last edited segment
+* :guilabel:`x` for the X coordinate of the pointer
+* :guilabel:`y` for the Y coordinate of the pointer
+* :guilabel:`z` for the default Z value or the Z coordinate of the vertex
+  or segment under the pointer
+* :guilabel:`m` for the default M value or the M value of the vertex or segment
+  under the pointer
 
 
 .. _digitizing_panel_shortcuts:
@@ -2055,6 +2083,8 @@ To edit features in-place:
 .. |ellipseExtent| image:: /static/common/mActionEllipseExtent.png
    :width: 1.5em
 .. |ellipseFoci| image:: /static/common/mActionEllipseFoci.png
+   :width: 1.5em
+.. |extractVertices| image:: /static/common/mAlgorithmExtractVertices.png
    :width: 1.5em
 .. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
    :width: 1.5em
