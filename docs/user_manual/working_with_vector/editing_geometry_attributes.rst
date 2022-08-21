@@ -933,7 +933,7 @@ Table Advanced Editing: Vector layer advanced editing toolbar
 .. index::
    single: Digitizing tools; Draw curves
    single: Digitizing tools; Stream digitizing
-.. _draw_curves:
+.. _drawing_methods:
 
 Straight, curve and stream digitizing
 -------------------------------------
