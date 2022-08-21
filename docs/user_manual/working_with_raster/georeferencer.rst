@@ -274,9 +274,9 @@ the new georeferenced raster.
 
 .. |addGCPPoint| image:: /static/common/mActionAddGCPPoint.png
    :width: 1.5em
-.. |addRasterLayer| image:: /static/common/mActionAddRasterLayer.png
-   :width: 1.5em
 .. |addOgrLayer| image:: /static/common/mActionAddOgrLayer.png
+   :width: 1.5em
+.. |addRasterLayer| image:: /static/common/mActionAddRasterLayer.png
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
