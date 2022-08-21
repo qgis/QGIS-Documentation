@@ -78,7 +78,7 @@ There is a QGIS plugin called
 that creates a plugin template for QGIS.
 It produces 3.x compatible sources, with full possible features for a plugin.
 
-Another productivity option is using `qgis-plugin-ci <https://opengisch.github.io/qgis-plugin-ci/>`_ CLI to perform automated testing and deployment for QGIS plugins using continuous integration on Travis-CI, github workflows, Gitlab-CI and Transifex for translation. It allows to release, translate, publish or create a XML plugin repository file via CLI or automated CI actions. 
+Another productivity option is using `qgis-plugin-ci <https://opengisch.github.io/qgis-plugin-ci/>`_ CLI to perform automated packaging and deployment for QGIS plugins using continuous integration on Travis-CI, github workflows, Gitlab-CI and Transifex for translation. It allows to release, translate, publish or create a XML plugin repository file via CLI or automated CI actions. 
 
 .. warning::
     If you plan to upload the plugin to the :ref:`official_pyqgis_repository`
