@@ -64,18 +64,20 @@ In this case, it stores wind velocity at 10m at a particular moments in time
 In a similar way, the mesh dataset can also store vector values for each vertex.
 For example, wind direction vector at the given time stamps:
 
-=============================== ========= ========= ========= =====
-10 metre wind                   1         2         3         ...
-=============================== ========= ========= ========= =====
-10 metre speed at time=t1       17251     24918     32858     ...
-10 metre speed at time=t2       19168     23001     36418     ...
-10 metre speed at time=t3       21085     30668     17251     ...
-...                             ...       ...       ...       ...
-10m wind direction time=t1      [20,2]    [20,3]    [20,4.5]  ...
-10m wind direction time=t2      [21,3]    [21,4]    [21,5.5]  ...
-10m wind direction time=t3      [22,4]    [22,5]    [22,6.5]  ...
-...                             ...       ...       ...       ...
-=============================== ========= ========= ========= =====
+.. table:: Example of mesh dataset
+
+  =============================== ========= ========= ========= =====
+  10 metre wind                   1         2         3         ...
+  =============================== ========= ========= ========= =====
+  10 metre speed at time=t1       17251     24918     32858     ...
+  10 metre speed at time=t2       19168     23001     36418     ...
+  10 metre speed at time=t3       21085     30668     17251     ...
+  ...                             ...       ...       ...       ...
+  10m wind direction time=t1      [20,2]    [20,3]    [20,4.5]  ...
+  10m wind direction time=t2      [21,3]    [21,4]    [21,5.5]  ...
+  10m wind direction time=t3      [22,4]    [22,5]    [22,6.5]  ...
+  ...                             ...       ...       ...       ...
+  =============================== ========= ========= ========= =====
 
 We can visualize the data by assigning colors to values (similarly to how it is
 done with :ref:`Singleband pseudocolor <label_colormaptab>` raster rendering)
@@ -125,7 +127,7 @@ To access the :guilabel:`Layer Properties` dialog:
 
 The mesh :guilabel:`Layer Properties` dialog provides the following sections:
 
-.. list-table::
+.. list-table:: Tabs of the Mesh Layer Properties
 
    * - |metadata| :ref:`Information <meshinformation>`
      - |system| :ref:`Source <meshsource>`
@@ -347,36 +349,38 @@ Mesh vector dataset can be styled using various types of :guilabel:`Symbology`:
 
 Available properties depend on the selected symbology as shown in the following table.
 
-+----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
-| Label                                  | Description and Properties                                                                | Arrow      | Streamlines | Traces     |
-+========================================+===========================================================================================+============+=============+============+
-| :guilabel:`Line width`                 | Width of the vector representation                                                        | |checkbox| | |checkbox|  | |checkbox| |
-+----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
-| :guilabel:`Coloring method`            | * a :guilabel:`Single color` assigned to all vectors                                      | |checkbox| | |checkbox|  | |checkbox| |
-|                                        | * or a variable color based on vectors magnitude, using a                                 |            |             |            |
-|                                        |   :ref:`Color ramp shader <color_ramp_shader>`                                            |            |             |            |
-+----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
-| :guilabel:`Filter by magnitude`        | Only vectors whose length for the selected dataset falls between a :guilabel:`Min`        | |checkbox| | |checkbox|  |            |
-|                                        | and :guilabel:`Max` range are displayed                                                   |            |             |            |
-+----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
-| :guilabel:`Display on user grid`       | Places the vector on a grid with custom :guilabel:`X spacing` and :guilabel:`Y spacing`   | |checkbox| | |checkbox|  |            |
-|                                        | and interpolates their length based on neighbours                                         |            |             |            |
-+----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
-| :guilabel:`Head options`               | :guilabel:`Length` and :guilabel:`Width` of the arrow head, as a percentage of its shaft  | |checkbox| |             |            |
-|                                        | length                                                                                    |            |             |            |
-+----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
-| :guilabel:`Arrow length`               | * **Defined by Min and Max**: You specify the minimum and maximum length for the arrows,  | |checkbox| |             |            |
-|                                        |   QGIS will interpolate their size based on the underlying vector's magnitude             |            |             |            |
-|                                        | * **Scale to magnitude**: arrow length is proportional to their vector's magnitude        |            |             |            |
-|                                        | * **Fixed**: all the vectors are shown with the same length                               |            |             |            |
-+----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
-| :guilabel:`Streamlines seeding method` | * **On mesh/grid**: relies on the user grid to display the vectors                        |            | |checkbox|  |            |
-|                                        | * **Randomly**: vector placement is randomly done with respect to a certain density       |            |             |            |
-+----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
-| :guilabel:`Particles count`            | The amount of "sand" you want to throw into visualisation                                 |            |             | |checkbox| |
-+----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
-| :guilabel:`Max tail length`            | The time until the particle fades out                                                     |            |             | |checkbox| |
-+----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
+.. table:: Availability and meaning of the vectors symbology properties
+
+  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
+  | Label                                  | Description and Properties                                                                | Arrow      | Streamlines | Traces     |
+  +========================================+===========================================================================================+============+=============+============+
+  | :guilabel:`Line width`                 | Width of the vector representation                                                        | |checkbox| | |checkbox|  | |checkbox| |
+  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
+  | :guilabel:`Coloring method`            | * a :guilabel:`Single color` assigned to all vectors                                      | |checkbox| | |checkbox|  | |checkbox| |
+  |                                        | * or a variable color based on vectors magnitude, using a                                 |            |             |            |
+  |                                        |   :ref:`Color ramp shader <color_ramp_shader>`                                            |            |             |            |
+  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
+  | :guilabel:`Filter by magnitude`        | Only vectors whose length for the selected dataset falls between a :guilabel:`Min`        | |checkbox| | |checkbox|  |            |
+  |                                        | and :guilabel:`Max` range are displayed                                                   |            |             |            |
+  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
+  | :guilabel:`Display on user grid`       | Places the vector on a grid with custom :guilabel:`X spacing` and :guilabel:`Y spacing`   | |checkbox| | |checkbox|  |            |
+  |                                        | and interpolates their length based on neighbours                                         |            |             |            |
+  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
+  | :guilabel:`Head options`               | :guilabel:`Length` and :guilabel:`Width` of the arrow head, as a percentage of its shaft  | |checkbox| |             |            |
+  |                                        | length                                                                                    |            |             |            |
+  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
+  | :guilabel:`Arrow length`               | * **Defined by Min and Max**: You specify the minimum and maximum length for the arrows,  | |checkbox| |             |            |
+  |                                        |   QGIS will interpolate their size based on the underlying vector's magnitude             |            |             |            |
+  |                                        | * **Scale to magnitude**: arrow length is proportional to their vector's magnitude        |            |             |            |
+  |                                        | * **Fixed**: all the vectors are shown with the same length                               |            |             |            |
+  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
+  | :guilabel:`Streamlines seeding method` | * **On mesh/grid**: relies on the user grid to display the vectors                        |            | |checkbox|  |            |
+  |                                        | * **Randomly**: vector placement is randomly done with respect to a certain density       |            |             |            |
+  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
+  | :guilabel:`Particles count`            | The amount of "sand" you want to throw into visualisation                                 |            |             | |checkbox| |
+  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
+  | :guilabel:`Max tail length`            | The time until the particle fades out                                                     |            |             | |checkbox| |
+  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
 
 
 .. _mesh_symbology_rendering:
