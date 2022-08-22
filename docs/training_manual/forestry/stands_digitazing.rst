@@ -121,7 +121,7 @@ Zoom in and see what the polygons look like. You will get something like this:
 
 Next one option to get points out of those polygons is to get their centroids:
 
-* Open :menuselection:`Vector --> Geometry tools --> Polygon centroids`.
+* Open :menuselection:`Vector --> Geometry tools --> Centroids`.
 * Set the polygon layer you just got as the input file for the tool.
 * Name the output as :kbd:`green_centroids.shp` inside the :kbd:`digitizing` folder.
 * Check :menuselection:`Add result to canvas`.
@@ -169,17 +169,18 @@ Now, if you remember past modules, we have to set up and activate the snapping o
 
 * Go to :menuselection:`Project --> Snapping options...`.
 * Activate the snapping for the :kbd:`green_centroids` and the :kbd:`forest_stands` layers.
-* Set their :guilabel:`Tolerance` to 5 map units.
-* Check the :guilabel:`Avoid Int.` box for the :kbd:`forest_stands` layer.
-* Check :guilabel:`Enable topological editing`.
-* Click :guilabel:`Apply`.
+* Set their :guilabel:`Tolerance` to 10 pixels.
+* Check the :guilabel:`Avoid Overlap` box for the :kbd:`forest_stands` layer.
+* Check |topologicalEditing| :sup:`Topological editing`
+* Close the pop-up
 
 .. figure:: img/snapping_settings_forest.png
    :align: center
 
+
 With these snapping settings, whenever you are digitizing and get close enough
 to one of the points in the centroids layer or any vertex of your digitized
-polygons, a pink cross will appear on the point that will be snapped to. 
+polygons, a pink square will appear on the point that will be snapped to. 
 
 Finally, turn off the visibility of all the layers except :kbd:`forest_stands`
 and :kbd:`rautjarvi_georef`. Make sure that the map image has not transparency any more.
@@ -356,7 +357,9 @@ might be more interested in performing analysis in a dataset more up to date.
 The topic of the next lesson will be the creation of forest stands using current
 aerial photos and the addition of some relevant information to your dataset.
 
-
+.. |topologicalEditing| image:: /static/common/mIconTopologicalEditing.png
+   :width: 1.5em
+   
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
