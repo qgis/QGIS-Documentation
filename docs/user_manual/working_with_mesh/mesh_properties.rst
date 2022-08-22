@@ -573,6 +573,66 @@ See :ref:`metadatamenu` for more information.
 Editing a mesh layer
 ====================
 
+QGIS allows to :ref:`create a mesh layer <vector_create_mesh>` from scratch
+or based on an existing one. You can create/modify the geometries of the new
+layer whom you can assign datasets afterwards.
+It's also possible to edit an existing mesh layer. Because the editing
+operation requires a frames-only layer, you will be asked to either
+remove any associated datasets first (make sure you have them available
+if they still are necessary) or create a copy (only geometries) of the layer.
+
+.. note:: QGIS does not allow to digitize edges on mesh layers.
+   Only vertices and faces are mesh elements that can be created.
+
+
+Overview of the mesh digitizing tools
+-------------------------------------
+
+To interact with or edit a base mesh layer element, following tools are available.
+
+.. list-table:: Tools for mesh digitizing
+   :header-rows: 1
+
+   * - Label
+     - Purpose
+     - Location
+   * - |allEdits| :sup:`Current Edits`
+     - Access to save, rollback or cancel changes in all or selected layers simultaneously
+     - :guilabel:`Digitizing` toolbar
+   * - |toggleEditing| :sup:`Toggle to Edit`
+     - Turn on/off the layer in edit mode
+     - :guilabel:`Digitizing` toolbar
+   * - |saveEdits| :sup:`Save Edits`
+     - Save changes done to the layer
+     - :guilabel:`Digitizing` toolbar
+   * - |undo| :sup:`Undo`
+     - Undo the last change(s) - :kbd:`Ctrl+Z`
+     - :guilabel:`Digitizing` toolbar
+   * - |redo| :sup:`Redo`
+     - Redo the last undone action(s) - :kbd:`Ctrl+Shift+Z`
+     - :guilabel:`Digitizing` toolbar
+   * - |cad| :sup:`Enable Advanced Digitizing tools`
+     - Turn on/off the :ref:`Advanced Digitizing Panel <advanced_digitizing_panel>`
+     - :guilabel:`Advanced Digitizing` toolbar
+   * - |meshreindex| :sup:`Reindex Faces and Vertices`
+     - Recreate index and renumber the mesh elements for optimization
+     - :guilabel:`Mesh` menu
+   * - |meshDigitizing| :sup:`Digitize Mesh Elements`
+     - Select/Create vertices and faces
+     - :guilabel:`Mesh Digitizing` toolbar
+   * - |meshSelectPolygon| :sup:`Select Mesh Elements by Polygon`
+     - Select vertices and faces overlapped by a drawn polygon
+     - :guilabel:`Mesh Digitizing` toolbar
+   * - |meshSelectExpression| :sup:`Select Mesh Elements by Expression`
+     - Select vertices and faces using an expression
+     - :guilabel:`Mesh Digitizing` toolbar
+   * - |meshTransformByExpression| :sup:`Transform Vertices Coordinates`
+     - Modify coordinates of a selection of vertices
+     - :guilabel:`Mesh Digitizing` toolbar
+   * - |meshEditForceByVectorLines| :sup:`Force by Selected Geometries`
+     - Split faces and constrain Z value using a linear geometry
+     - :guilabel:`Mesh Digitizing` toolbar
+
 .. _mesh_calculator:
 
 Mesh Calculator
@@ -649,6 +709,8 @@ the expression to execute.
 .. |add| image:: /static/common/mActionAdd.png
    :width: 1.5em
 .. |addMeshLayer| image:: /static/common/mActionAddMeshLayer.png
+   :width: 1.5em
+.. |allEdits| image:: /static/common/mActionAllEdits.png
    :width: 1.5em
 .. |cad| image:: /static/common/cad.png
    :width: 1.5em
