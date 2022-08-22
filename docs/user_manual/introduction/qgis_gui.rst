@@ -1870,11 +1870,11 @@ The :menuselection:`Mesh` menu provides tools needed to manipulate
    * - |showMeshCalculator| :menuselection:`Mesh Calculator...`
      -
      -
-     -
+     - :ref:`mesh_calculator`
    * - |meshReindex| :menuselection:`Reindex Faces and Vertices`
      -
      -
-     -
+     - :ref:`reindex_mesh`
 
 
 Processing

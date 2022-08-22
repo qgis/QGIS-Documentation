@@ -733,6 +733,24 @@ thanks to expressions.
 #. Press :guilabel:`Apply Transform` to modify the selected coordinates
    for the set of vertices.
 
+.. _reindex_mesh:
+
+Reindexing meshes
+-----------------
+
+During edit, and in order to allow quick undo/redo operations, QGIS keeps empty
+places for deleted elements, which may lead to growing memory use and
+inefficient mesh structuring.
+The :menuselection:`Mesh -->` |meshReindex| :menuselection:`Reindex Faces and
+Vertices` tool is designed to remove these holes and renumber the indices of
+faces and vertices so that they are continuous and somewhat reasonably ordered.
+This optimizes relation between faces and vertices and increases the efficiency
+of calculation.
+
+.. note:: The |meshReindex| :guilabel:`Reindex Faces and Vertices` tool saves
+ the layer and clear the undo/redo stacks, disabling any rollback.
+
+
 .. _mesh_calculator:
 
 Mesh Calculator
