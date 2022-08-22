@@ -476,6 +476,9 @@ button and you can enter attributes in the feature form that opens.
 To create features with the spatially enabled tools, you first digitize the
 geometry then enter its attributes. To digitize the geometry:
 
+#. (Optional as it is the default) Select the |digitizeWithSegment|
+   :sup:`Digitize With Segment` geometry drawing method on the
+   :guilabel:`Advanced Digitizing Toolbar`
 #. Left-click on the map area to create the first point of your new feature.
    For point features, this should be enough and trigger, if required,
    the feature form to fill in their attributes.
@@ -485,25 +488,26 @@ geometry then enter its attributes. To digitize the geometry:
    the :ref:`snap-to-grid <snap_to_grid>` or the :ref:`advanced digitizing
    <advanced_digitizing_panel>` panel to accurately position each vertex.
 
-   Along with placing nodes clik by click, lines and polygons can be:
+   Along with drawing straight segments between nodes you click one by one,
+   lines and polygons can be:
 
    * :ref:`traced automatically <tracing>`, accelerating the digitization.
      This will create consecutive straight lines between the vertices you
-     place.
+     place, following existing features.
    * free-hand digitized, pressing :kbd:`R` or activating |streamingDigitize|
-     :sup:`Stream digitizing` in the :guilabel:`Advanced Digitizing Toolbar`.
-
-   .. note::
-    Pressing :kbd:`Delete` or :kbd:`Backspace` key reverts the last
-    node you add.
-
-#. When you have finished adding points, right-click anywhere on the map area
-   to confirm you have finished entering the geometry of that feature.
+     :sup:`Stream Digitizing` in the :guilabel:`Advanced Digitizing Toolbar`.
+   * drawn as curve, pressing :kbd:`Ctrl+Shift+G` or activating |DigitizeWithCurve|
+     :sup:`Digitize with Curve` in the :guilabel:`Advanced Digitizing Toolbar`.
 
    .. note::
     While digitizing line or polygon geometries, you can switch back and forth
-    between the linear :guilabel:`Add feature` tools and :ref:`circular string
-    tools <add_circular_string>` to create compound curved geometries.
+    between the geometry drawing methods, allowing you to create features
+    mixing straight segments, free-hand ones and curved parts.
+
+#. Press :kbd:`Delete` or :kbd:`Backspace` key to revert the last node(s) you
+   may wrongly add.
+#. When you have finished adding points, right-click anywhere on the map area
+   to confirm you have finished entering the geometry of that feature.
 
    .. tip:: **Customize the digitizing rubber band**
 
@@ -1506,8 +1510,10 @@ by clicking on it.
 Shape digitizing
 ================
 
-The :guilabel:`Shape Digitizing` toolbar offers a set of tools to draw
-regular shapes and curved geometries.
+The :guilabel:`Shape Digitizing` toolbar is synchronized with the
+|digitizeShape| :sup:`Digitize Shape` :ref:`geometry drawing method
+<drawing_methods>` you can select on the :guilabel:`Advanced Digitizing Toolbar`.
+It offers a set of tools to draw lines or polygons features of regular shape.
 
 .. index:: Circular string
 .. _add_circular_string:
@@ -1545,23 +1551,23 @@ Circles are converted into circular strings. Therefore, as explained in
 :ref:`add_circular_string`, if allowed by the data provider, it will be saved as a
 curved geometry, if not, QGIS will segmentize the circular arcs.
 
-- |circle2Points| :sup:`Add circle from 2 points`: The two points define the diameter
+- |circle2Points| :sup:`Circle from 2 points`: The two points define the diameter
   and the orientation of  the circle. (Left-click, right-click)
-- |circle3Points| :sup:`Add circle from 3 points`: Draws a circle from three
+- |circle3Points| :sup:`Circle from 3 points`: Draws a circle from three
   known points on the circle. (Left-click, left-click, right-click)
-- |circleCenterPoint| :sup:`Add circle from center and a point`: Draws a circle
+- |circleCenterPoint| :sup:`Circle from center and a point`: Draws a circle
   with a given center and a point on the circle (Left-click, right-click).
   When used with the :ref:`advanced_digitizing_panel` this tool can become a
   "Add circle from center and radius" tool by setting and locking the distance
   value after first click.
-- |circle3Tangents| :sup:`Add circle from 3 tangents`: Draws a circle that is
+- |circle3Tangents| :sup:`Circle from 3 tangents`: Draws a circle that is
   tangential to three segments. **Note that you must activate snapping to
   segments** (See :ref:`snapping_tolerance`). Click on a segment to add a
   tangent. If two tangents are parallel, the coordinates of the click on the
   first parallel tangent are used to determine the positioning of the circle.
   If three tangents are parallel, an error message appears and the input
   is cleared. (Left-click, left-click, right-click)
-- |circle2TangentsPoint| :sup:`Add circle from 2 tangents and a point`: Similar
+- |circle2TangentsPoint| :sup:`Circle from 2 tangents and a point`: Similar
   to circle from 3 tangents, except that you have to select two tangents, enter
   a radius and select the desired center.
 
@@ -1577,15 +1583,15 @@ below.
 Ellipses cannot be converted as circular strings, so they will always be
 segmented.
 
-* |ellipseCenter2Points| :sup:`Add Ellipse from center and two points`: Draws an
+* |ellipseCenter2Points| :sup:`Ellipse from center and two points`: Draws an
   ellipse with a given center, major axis and minor axis. (Left-click,
   left-click, right-click)
-* |ellipseCenterPoint| :sup:`Add Ellipse from center and a point`: Draws an
+* |ellipseCenterPoint| :sup:`Ellipse from center and a point`: Draws an
   ellipse into a bounding box with the center and a corner. (Left-click,
   right-click)
-* |ellipseExtent| :sup:`Add Ellipse from extent`: Draws an ellipse into a bounding
+* |ellipseExtent| :sup:`Ellipse from extent`: Draws an ellipse into a bounding
   box with two opposite corners. (Left-click, right-click)
-* |ellipseFoci| :sup:`Add Ellipse from foci`: Draws an ellipse by 2 points for
+* |ellipseFoci| :sup:`Ellipse from foci`: Draws an ellipse by 2 points for
   foci and a point on the ellipse. (Left-click, left-click, right-click)
 
 .. index:: Draw rectangles
