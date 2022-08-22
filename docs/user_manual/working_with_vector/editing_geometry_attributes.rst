@@ -1518,18 +1518,21 @@ It offers a set of tools to draw lines or polygons features of regular shape.
 .. index:: Circular string
 .. _add_circular_string:
 
-Add Circular string
--------------------
+Circular string by radius
+-------------------------
 
-The |circularStringCurvePoint| :sup:`Add circular string` or
-|circularStringRadius| :sup:`Add circular string by radius` buttons allow users
-to add line or polygon features with a circular geometry.
+The |circularStringRadius| :sup:`Circular string by radius` button allows
+to add line or polygon features with a circular geometry, given two nodes
+on the curve and a radius:
 
-Creating features with these tools follow the same rule as of other digitizing
-tools: left-click to place vertices and right-click to finish the geometry.
-While drawing the geometry, you can switch from one tool to the other as well
-as to the :ref:`linear geometry tools <add_feature>`, creating some coumpound
-geometries.
+#. Left click twice to place the two points on the geometry.
+#. A :guilabel:`Radius` widget in the top right corner of the map canvas
+   displays current radius (corresponding to distance between the points).
+   Edit that field to the value you want.
+#. An overview of the arcs matching these constraints is displayed while
+   moving around the cursor. Right-click to validate when the expected
+   arc is shown.
+#. Add a new point to start shaping another arc.
 
 .. note:: **Curved geometries are stored as such only in compatible data provider**
 
@@ -2022,8 +2025,6 @@ To edit features in-place:
 .. |circle3Tangents| image:: /static/common/mActionCircle3Tangents.png
    :width: 1.5em
 .. |circleCenterPoint| image:: /static/common/mActionCircleCenterPoint.png
-   :width: 1.5em
-.. |circularStringCurvePoint| image:: /static/common/mActionCircularStringCurvePoint.png
    :width: 1.5em
 .. |circularStringRadius| image:: /static/common/mActionCircularStringRadius.png
    :width: 1.5em
