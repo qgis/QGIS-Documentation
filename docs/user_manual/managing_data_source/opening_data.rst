@@ -30,7 +30,7 @@ and often write a lot of formats:
   Read the complete list of `supported raster formats
   <https://gdal.org/drivers/raster/index.html>`_.
 * Database formats include PostgreSQL/PostGIS, SQLite/SpatiaLite, Oracle,
-  MSSQL Spatial, SAP HANA, MySQL...
+  MS SQL Server Spatial, SAP HANA, MySQL...
 * Web map and data services (WM(T)S, WFS, WCS, CSW, XYZ tiles, ArcGIS
   services, ...) are also handled by QGIS providers.
   See :ref:`working_with_ogc` for more information about some of these.
@@ -152,7 +152,7 @@ hierarchically, and there are several top level entries:
    * |geoPackage| :guilabel:`GeoPackage`
    * |spatialite| :guilabel:`SpatiaLite`
    * |postgis| :guilabel:`PostGIS`
-   * |mssql| :guilabel:`MSSQL`
+   * |mssql| :guilabel:`MS SQL Server`
    * |oracle| :guilabel:`Oracle`
    * |hana| :guilabel:`SAP HANA`
    * |wms| :guilabel:`WMS/WMTS`
@@ -294,7 +294,7 @@ The DB Manager
 
 The :guilabel:`DB Manager` Plugin is another tool
 for integrating and managing spatial database formats supported by
-QGIS (PostGIS, SpatiaLite, GeoPackage, Oracle Spatial, MSSQL, Virtual
+QGIS (PostGIS, SpatiaLite, GeoPackage, Oracle Spatial, MS SQL Server, Virtual
 layers). It can be activated from the
 :menuselection:`Plugins --> Manage and Install Plugins...` menu.
 
@@ -424,7 +424,7 @@ Layer` tabs allow loading of layers from source types other than :guilabel:`File
 * With the |radioButtonOn| :guilabel:`Database` source type you can select an
   existing database connection or create one to the selected database type.
   Some possible database types are ``ODBC``, ``Esri Personal Geodatabase``,
-  ``MSSQL`` as well as ``PostgreSQL`` or ``MySQL`` .
+  ``MS SQL Server`` as well as ``PostgreSQL`` or ``MySQL`` .
 
   Pressing the :guilabel:`New` button opens the
   :guilabel:`Create a New OGR Database Connection` dialog whose parameters
@@ -784,7 +784,7 @@ of them and load their tables:
 
 * |addPostgisLayer| :menuselection:`Add PostGIS Layer...` or by typing
   :kbd:`Ctrl+Shift+D`
-* |addMssqlLayer| :menuselection:`Add MSSQL Spatial Layer`
+* |addMssqlLayer| :menuselection:`Add MS SQL Server Spatial Layer`
 * |addOracleLayer| :menuselection:`Add Oracle Spatial Layer...` or by typing
   :kbd:`Ctrl+Shift+O`
 * |addHanaLayer| :menuselection:`Add SAP HANA Spatial Layer...` or by typing
@@ -805,7 +805,7 @@ below using the PostgreSQL database tool as an example.
 For additional settings specific to other providers, you can find
 corresponding descriptions at:
 
-* :ref:`create_mssql_connection`;
+* :ref:`create_ms_sql_server_connection`;
 * :ref:`create_oracle_connection`;
 * :ref:`create_hana_connection`.
 
@@ -1060,13 +1060,13 @@ Optionally, you can activate the following checkboxes:
    tables have a **primary key**.
 
 
-.. _create_mssql_connection:
+.. _create_ms_sql_server_connection:
 
-Connecting to MSSQL Spatial
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Connecting to MS SQL Server Spatial
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In addition to some of the options in :ref:`vector_create_stored_connection`,
-creating a new MSSQL connection dialog proposes you to fill a **Provider/DSN**
+creating a new MS SQL Server connection dialog proposes you to fill a **Provider/DSN**
 name. You can also display available databases.
 
 .. _create_hana_connection:
