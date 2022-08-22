@@ -645,15 +645,37 @@ the expression to execute.
    :width: 1.5em
 .. |addMeshLayer| image:: /static/common/mActionAddMeshLayer.png
    :width: 1.5em
+.. |cad| image:: /static/common/cad.png
+   :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+.. |clearText| image:: /static/common/mIconClearText.png
+   :width: 1.5em
 .. |collapseTree| image:: /static/common/mActionCollapseTree.png
    :width: 1.5em
 .. |editMetadata| image:: /static/common/editmetadata.png
    :width: 1.2em
 .. |expandTree| image:: /static/common/mActionExpandTree.png
    :width: 1.5em
+.. |expression| image:: /static/common/mIconExpression.png
+   :width: 1.5em
+.. |expressionSelect| image:: /static/common/mIconExpressionSelect.png
+   :width: 1.5em
 .. |general| image:: /static/common/general.png
+   :width: 1.5em
+.. |locked| image:: /static/common/locked.png
+   :width: 1.5em
+.. |meshDigitizing| image:: /static/common/mActionMeshDigitizing.png
+   :width: 1.5em
+.. |meshEditForceByVectorLines| image:: /static/common/mActionMeshEditForceByVectorLines.png
+   :width: 1.5em
+.. |meshReindex| image:: /static/common/mActionMeshReindex.png
+   :width: 1.5em
+.. |meshSelectExpression| image:: /static/common/mActionMeshSelectExpression.png
+   :width: 1.5em
+.. |meshSelectPolygon| image:: /static/common/mActionMeshSelectPolygon.png
+   :width: 1.5em
+.. |meshTransformByExpression| image:: /static/common/mActionMeshTransformByExpression.png
    :width: 1.5em
 .. |meshaveraging| image:: /static/common/meshaveraging.png
    :width: 1.5em
@@ -669,9 +691,17 @@ the expression to execute.
    :width: 1.5em
 .. |metadata| image:: /static/common/metadata.png
    :width: 1.5em
+.. |redo| image:: /static/common/mActionRedo.png
+   :width: 1.5em
 .. |refresh| image:: /static/common/mActionRefresh.png
    :width: 1.5em
 .. |rendering| image:: /static/common/rendering.png
+   :width: 1.5em
+.. |saveEdits| image:: /static/common/mActionSaveEdits.png
+   :width: 1.5em
+.. |selectAdd| image:: /static/common/mIconSelectAdd.png
+   :width: 1.5em
+.. |selectRemove| image:: /static/common/mIconSelectRemove.png
    :width: 1.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
@@ -681,5 +711,11 @@ the expression to execute.
    :width: 1.5em
 .. |temporal| image:: /static/common/temporal.png
    :width: 1.5em
+.. |toggleEditing| image:: /static/common/mActionToggleEditing.png
+   :width: 1.5em
 .. |unchecked| image:: /static/common/unchecked.png
    :width: 1.3em
+.. |undo| image:: /static/common/mActionUndo.png
+   :width: 1.5em
+.. |vertexCoordinates| image:: /static/common/mIconVertexCoordinates.png
+   :width: 1.5em
