@@ -635,6 +635,9 @@ To interact with or edit a base mesh layer element, following tools are availabl
      - Split faces and constrain Z value using a linear geometry
      - :guilabel:`Mesh Digitizing` toolbar
 
+Modifying mesh elements
+------------------------
+
 .. _mesh_calculator:
 
 Mesh Calculator
