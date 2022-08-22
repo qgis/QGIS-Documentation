@@ -2033,7 +2033,7 @@ context menu, or by holding the mouse over the toolbars.
 
 Available toolbars are:
 
-.. csv-table::
+.. csv-table:: QGIS Toolbars
    :header: "Name", "Main Reference for tools"
    :widths: auto
 

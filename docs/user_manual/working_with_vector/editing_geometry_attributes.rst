@@ -121,7 +121,7 @@ As for snapping mode, you can choose between ``Vertex``, ``Segment``,
 
 QGIS will show different *snap* icons depending on the kind of *snap*:
 
-.. list-table::
+.. list-table:: Snapping icons
 
    * - .. figure:: img/snap_vertex_icon.png
      - .. figure:: img/snap_segment_icon.png
@@ -403,39 +403,37 @@ is writable (i.e., its files are not read-only).
 In general, tools for editing vector layers are divided into a
 digitizing and an advanced digitizing toolbar, described in section
 :ref:`sec_advanced_edit`.
-You can select and unselect both under
-:menuselection:`View --> Toolbars -->`.
+You can select and unselect both under :menuselection:`View --> Toolbars -->`.
 
-Using the basic digitizing tools, you can perform the following
-functions:
+Using the basic digitizing tools, you can perform the following functions:
 
 .. _table_editing:
+.. table:: Vector layer basic editing toolbar
 
-+------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
-| Tool                         | Purpose                                        | Tool                     | Purpose                                   |
-+==============================+================================================+==========================+===========================================+
-| |allEdits|                   | Access to save, rollback or cancel changes     | |toggleEditing|          | Turn on or off edit status of selected    |
-|                              | in all or selected layers simultaneously       |                          | layer(s) based on the active layer status |
-+------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
-| |saveEdits|                  | Save edits to the active layer                 |                          |                                           |
-+------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
-| |newTableRow|                | Add new record                                 | |capturePoint|           | Add Feature: Capture Point                |
-+------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
-| |captureLine|                | Add Feature: Capture Line                      | |capturePolygon|         | Add Feature: Capture Polygon              |
-+------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
-| |vertexTool|                 | Vertex Tool (All Layers)                       | |vertexToolActiveLayer|  | Vertex Tool (Current Layer)               |
-+------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
-| |checkbox| :guilabel:`Show   | Set whether the vertex editor panel should     |  |multiEdit|             | Modify the attributes of all              |
-| Vertex Editor`               | auto-open                                      |                          | selected features simultaneously          |
-+------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
-| |deleteSelectedFeatures|     | Delete Selected features from the active layer | |editCut|                | Cut Features from the active layer        |
-+------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
-| |editCopy|                   | Copy selected Features from the active layer   | |editPaste|              | Paste Features into the active layer      |
-+------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
-| |undo|                       | Undo changes in the active layer               | |redo|                   | Redo changes in active layer              |
-+------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
+  +------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
+  | Tool                         | Purpose                                        | Tool                     | Purpose                                   |
+  +==============================+================================================+==========================+===========================================+
+  | |allEdits|                   | Access to save, rollback or cancel changes     | |toggleEditing|          | Turn on or off edit status of selected    |
+  |                              | in all or selected layers simultaneously       |                          | layer(s) based on the active layer status |
+  +------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
+  | |saveEdits|                  | Save edits to the active layer                 |                          |                                           |
+  +------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
+  | |newTableRow|                | Add new record                                 | |capturePoint|           | Add Feature: Capture Point                |
+  +------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
+  | |captureLine|                | Add Feature: Capture Line                      | |capturePolygon|         | Add Feature: Capture Polygon              |
+  +------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
+  | |vertexTool|                 | Vertex Tool (All Layers)                       | |vertexToolActiveLayer|  | Vertex Tool (Current Layer)               |
+  +------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
+  | |checkbox| :guilabel:`Show   | Set whether the vertex editor panel should     |  |multiEdit|             | Modify the attributes of all              |
+  | Vertex Editor`               | auto-open                                      |                          | selected features simultaneously          |
+  +------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
+  | |deleteSelectedFeatures|     | Delete Selected features from the active layer | |editCut|                | Cut Features from the active layer        |
+  +------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
+  | |editCopy|                   | Copy selected Features from the active layer   | |editPaste|              | Paste Features into the active layer      |
+  +------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
+  | |undo|                       | Undo changes in the active layer               | |redo|                   | Redo changes in active layer              |
+  +------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
 
-Table Editing: Vector layer basic editing toolbar
 
 Note that while using any of the digitizing tools, you can still
 :ref:`zoom or pan <zoom_pan>` in the map canvas without losing the
@@ -898,47 +896,43 @@ The same functions are available for editing all layers of the project.
 Advanced digitizing
 ===================
 
-.. following provides space between header and table!!
-
-\
-
-\
-
 .. _table_advanced_editing:
+.. table:: Vector layer advanced editing toolbar
 
-+---------------------------+-----------------------------------------+------------------------+-------------------------+
-| Icon                      | Purpose                                 | Icon                   | Purpose                 |
-+===========================+=========================================+========================+=========================+
-| |cad|                     | Enable Advanced Digitizing Tools        |                        |                         |
-+---------------------------+-----------------------------------------+------------------------+-------------------------+
-| |digitizeWithCurve|       | Digitize with Curve                     | |streamingDigitize|    | Enable Stream Digitizing|
-+---------------------------+-----------------------------------------+------------------------+-------------------------+
-| |moveFeature|             | Move Feature(s)                         | |moveFeatureCopy|      | Copy and Move Feature(s)|
-| |moveFeatureLine|         |                                         | |moveFeatureCopyLine|  |                         |
-| |moveFeaturePoint|        |                                         | |moveFeatureCopyPoint| |                         |
-+---------------------------+-----------------------------------------+------------------------+-------------------------+
-| |rotateFeature|           | Rotate Feature(s)                       | |simplify|             | Simplify Feature        |
-+---------------------------+-----------------------------------------+------------------------+-------------------------+
-| |scaleFeature|            | Scale Feature                           |                        |                         |
-+---------------------------+-----------------------------------------+------------------------+-------------------------+
-| |addRing|                 | Add Ring                                | |addPart|              | Add Part                |
-+---------------------------+-----------------------------------------+------------------------+-------------------------+
-| |fillRing|                | Fill Ring                               | |reverseLine|          | Swap direction          |
-+---------------------------+-----------------------------------------+------------------------+-------------------------+
-| |deleteRing|              | Delete Ring                             | |deletePart|           | Delete Part             |
-+---------------------------+-----------------------------------------+------------------------+-------------------------+
-| |offsetCurve|             | Offset Curve                            | |reshape|              | Reshape Features        |
-+---------------------------+-----------------------------------------+------------------------+-------------------------+
-| |splitParts|              | Split Parts                             | |splitFeatures|        | Split Features          |
-+---------------------------+-----------------------------------------+------------------------+-------------------------+
-| |mergeFeatureAttributes|  | Merge Attributes of Selected Features   | |mergeFeatures|        | Merge Selected Features |
-+---------------------------+-----------------------------------------+------------------------+-------------------------+
-| |rotatePointSymbols|      | Rotate Point Symbols                    | |offsetPointSymbols|   | Offset Point Symbols    |
-+---------------------------+-----------------------------------------+------------------------+-------------------------+
-| |trimExtend|              | Trim or Extend Feature                  |                        |                         |
-+---------------------------+-----------------------------------------+------------------------+-------------------------+
+  +---------------------------+-----------------------------------------+------------------------+-------------------------+
+  | Icon                      | Purpose                                 | Icon                   | Purpose                 |
+  +===========================+=========================================+========================+=========================+
+  | |cad|                     | Enable Advanced Digitizing Tools        |                        |                         |
+  +---------------------------+-----------------------------------------+------------------------+-------------------------+
+  | |digitizeWithSegment|     | Digitize with Segment                   | |digitizeWithCurve|    | Digitize with Curve     |
+  +---------------------------+-----------------------------------------+------------------------+-------------------------+
+  | |streamingDigitize|       | Enable Stream Digitizing                | |digitizeShape|        | Digitize Shape          |
+  +---------------------------+-----------------------------------------+------------------------+-------------------------+
+  | |moveFeature|             | Move Feature(s)                         | |moveFeatureCopy|      | Copy and Move Feature(s)|
+  | |moveFeatureLine|         |                                         | |moveFeatureCopyLine|  |                         |
+  | |moveFeaturePoint|        |                                         | |moveFeatureCopyPoint| |                         |
+  +---------------------------+-----------------------------------------+------------------------+-------------------------+
+  | |rotateFeature|           | Rotate Feature(s)                       | |simplify|             | Simplify Feature        |
+  +---------------------------+-----------------------------------------+------------------------+-------------------------+
+  | |scaleFeature|            | Scale Feature                           |                        |                         |
+  +---------------------------+-----------------------------------------+------------------------+-------------------------+
+  | |addRing|                 | Add Ring                                | |addPart|              | Add Part                |
+  +---------------------------+-----------------------------------------+------------------------+-------------------------+
+  | |fillRing|                | Fill Ring                               | |reverseLine|          | Swap direction          |
+  +---------------------------+-----------------------------------------+------------------------+-------------------------+
+  | |deleteRing|              | Delete Ring                             | |deletePart|           | Delete Part             |
+  +---------------------------+-----------------------------------------+------------------------+-------------------------+
+  | |offsetCurve|             | Offset Curve                            | |reshape|              | Reshape Features        |
+  +---------------------------+-----------------------------------------+------------------------+-------------------------+
+  | |splitParts|              | Split Parts                             | |splitFeatures|        | Split Features          |
+  +---------------------------+-----------------------------------------+------------------------+-------------------------+
+  | |mergeFeatureAttributes|  | Merge Attributes of Selected Features   | |mergeFeatures|        | Merge Selected Features |
+  +---------------------------+-----------------------------------------+------------------------+-------------------------+
+  | |rotatePointSymbols|      | Rotate Point Symbols                    | |offsetPointSymbols|   | Offset Point Symbols    |
+  +---------------------------+-----------------------------------------+------------------------+-------------------------+
+  | |trimExtend|              | Trim or Extend Feature                  |                        |                         |
+  +---------------------------+-----------------------------------------+------------------------+-------------------------+
 
-Table Advanced Editing: Vector layer advanced editing toolbar
 
 .. index::
    single: Digitizing tools; Draw curves
@@ -1692,25 +1686,27 @@ Keyboard shortcuts
 To speed up the use of Advanced Digitizing Panel, there are a couple of keyboard
 shortcuts available:
 
-+----------+-------------------+-------------------------------+---------------------------------------+
-| Key      | Simple            | :kbd:`Ctrl+` or :kbd:`Alt+`   | :kbd:`Shift+`                         |
-+==========+===================+===============================+=======================================+
-| :kbd:`D` | Set distance      | Lock distance                 | \                                     |
-+----------+-------------------+-------------------------------+---------------------------------------+
-| :kbd:`A` | Set angle         | Lock angle                    | Toggle relative angle to last segment |
-+----------+-------------------+-------------------------------+---------------------------------------+
-| :kbd:`X` | Set X coordinate  | Lock X coordinate             | Toggle relative X to last vertex      |
-+----------+-------------------+-------------------------------+---------------------------------------+
-| :kbd:`Y` | Set Y coordinate  | Lock Y coordinate             | Toggle relative Y to last vertex      |
-+----------+-------------------+-------------------------------+---------------------------------------+
-| :kbd:`Z` | Set Z coordinate  | Lock Z coordinate             | Toggle relative Z to last vertex      |
-+----------+-------------------+-------------------------------+---------------------------------------+
-| :kbd:`M` | Set M value       | Lock M value                  | Toggle relative M to last vertex      |
-+----------+-------------------+-------------------------------+---------------------------------------+
-| :kbd:`C` | Toggle construction mode                                                                  |
-+----------+-------------------------------------------------------------------------------------------+
-| :kbd:`P` | Toggle perpendicular and parallel modes                                                   |
-+----------+-------------------------------------------------------------------------------------------+
+.. table:: Keyboard shortcuts of the Advanced Digitizing Panel tools
+
+  +----------+-------------------+-------------------------------+---------------------------------------+
+  | Key      | Simple            | :kbd:`Ctrl+` or :kbd:`Alt+`   | :kbd:`Shift+`                         |
+  +==========+===================+===============================+=======================================+
+  | :kbd:`D` | Set distance      | Lock distance                 | \                                     |
+  +----------+-------------------+-------------------------------+---------------------------------------+
+  | :kbd:`A` | Set angle         | Lock angle                    | Toggle relative angle to last segment |
+  +----------+-------------------+-------------------------------+---------------------------------------+
+  | :kbd:`X` | Set X coordinate  | Lock X coordinate             | Toggle relative X to last vertex      |
+  +----------+-------------------+-------------------------------+---------------------------------------+
+  | :kbd:`Y` | Set Y coordinate  | Lock Y coordinate             | Toggle relative Y to last vertex      |
+  +----------+-------------------+-------------------------------+---------------------------------------+
+  | :kbd:`Z` | Set Z coordinate  | Lock Z coordinate             | Toggle relative Z to last vertex      |
+  +----------+-------------------+-------------------------------+---------------------------------------+
+  | :kbd:`M` | Set M value       | Lock M value                  | Toggle relative M to last vertex      |
+  +----------+-------------------+-------------------------------+---------------------------------------+
+  | :kbd:`C` | Toggle construction mode                                                                  |
+  +----------+-------------------------------------------------------------------------------------------+
+  | :kbd:`P` | Toggle perpendicular and parallel modes                                                   |
+  +----------+-------------------------------------------------------------------------------------------+
 
 .. note:: Z coordinate and M value options are available only if
   compatible with the layer geometry dimension.
@@ -2019,7 +2015,11 @@ To edit features in-place:
    :width: 1.5em
 .. |delta| image:: /static/common/delta.png
    :width: 1.5em
+.. |digitizeShape| image:: /static/common/mActionDigitizeShape.png
+   :width: 1.5em
 .. |digitizeWithCurve| image:: /static/common/mActionDigitizeWithCurve.png
+   :width: 1.5em
+.. |digitizeWithSegment| image:: /static/common/mActionDigitizeWithSegment.png
    :width: 1.5em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
