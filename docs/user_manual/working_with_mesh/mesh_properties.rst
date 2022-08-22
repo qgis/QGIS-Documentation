@@ -638,6 +638,37 @@ To interact with or edit a base mesh layer element, following tools are availabl
 Modifying mesh elements
 ------------------------
 
+.. _transform_meshvertices:
+
+Transforming mesh vertices
+..........................
+
+The |meshTransformByExpression| :sup:`Transform Vertices Coordinates` tool gives
+a more advanced way to move vertices, by editing their X, Y and/or Z coordinates
+thanks to expressions.
+
+#. Select the vertices you want to edit the coordinates
+#. Press |meshTransformByExpression| :sup:`Transform Vertices Coordinates`.
+   A dialog opens with a mention of the number of selected vertices.
+   You can still add or remove vertices from the selection.
+#. Depending on the properties you want to modify, you need to check the
+   :guilabel:`X coordinate`, :guilabel:`Y coordinate` and/or :guilabel:`Z value`.
+#. Then enter the target position in the box, either as a numeric value or
+   an expression (using the |expression| :sup:`Expression dialog`)
+#. With the |vertexCoordinates| :sup:`Import Coordinates of the Selected Vertex`
+   pressed, the X, Y and Z boxes are automatically filled with its coordinates
+   whenever a single vertex is selected. A convenient and quick way to adjust
+   vertices individually.
+#. Press :guilabel:`Preview Transform` to simulate the vertices new location
+   and preview the mesh with transformation.
+
+   * If the preview is green, transformed mesh is valid and you can apply
+     the transformation.
+   * If the preview is red, the transformed mesh is invalid and you can not
+     apply the transformation until it is corrected.
+#. Press :guilabel:`Apply Transform` to modify the selected coordinates
+   for the set of vertices.
+
 .. _mesh_calculator:
 
 Mesh Calculator
