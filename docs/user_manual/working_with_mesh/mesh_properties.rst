@@ -635,6 +635,70 @@ To interact with or edit a base mesh layer element, following tools are availabl
      - Split faces and constrain Z value using a linear geometry
      - :guilabel:`Mesh Digitizing` toolbar
 
+.. _select_mesh_elements:
+
+Selecting mesh elements
+-----------------------
+
+Using :guilabel:`Digitize Mesh Elements`
+........................................
+
+Activate the |meshDigitizing| :sup:`Digitize Mesh Elements` tool.
+Hover over an element and it gets highlighted, allowing you to select it.
+
+* Click on a vertex, and it is selected.
+* Click on the small square at the center of a face or an edge,
+  and it gets selected. Connected vertices are also selected.
+  Conversely, selecting all the vertices of an edge or a face also
+  selects that element.
+* Drag a rectangle to select overlapping elements (a selected face comes with
+  all their vertices).
+  Press :kbd:`Alt` key if you want to select only completely contained elements.
+* To add elements to a selection, press :kbd:`Shift` while selecting them.
+* To remove an element from the selection, press :kbd:`Ctrl` and reselect it.
+  A deselected face will also deselect all their vertices.
+
+Using :guilabel:`Select Mesh Elements by Polygon`
+.................................................
+
+Activate the |meshSelectPolygon| :sup:`Select Mesh Elements by Polygon` tool and:
+
+* Draw a polygon (left-click to add vertex, :kbd:`Backspace` to undo last vertex,
+  :kbd:`Esc` to abort the polygon and right-click to validate it) over the
+  mesh geometries. Any partially overlapping vertices and faces will get selected.
+  Press :kbd:`Alt` key while drawing if you want to select only completely
+  contained elements.
+* Right-click over the geometry of a vector layer's feature, select it in
+  the list that pops up and any partially overlapping vertices and faces of
+  the mesh layer will get selected. Use :kbd:`Alt` while drawing to select
+  only completely contained elements.
+* To add elements to a selection, press :kbd:`Shift` while selecting them.
+* To remove an element from the selection, press :kbd:`Ctrl` while drawing
+  over the selection polygon.
+
+Using :guilabel:`Select Mesh Elements by Expression`
+....................................................
+
+Another tool for mesh elements selection is |meshSelectExpression|
+:sup:`Select Mesh Elements by Expression`. When pressed, the tool opens the mesh
+:ref:`expression selector dialog <vector_expressions>` from which you can:
+
+#. Select the method of selection:
+
+   * :guilabel:`Select by vertices`: applies the entered expression to vertices,
+     and returns matching ones and their eventually associated edges/faces
+   * :guilabel:`Select by faces`: applies the entered expression to faces,
+     and returns matching ones and their associated edges/vertices
+#. Write the expression of selection. Depending on the selected method,
+   available functions in the :ref:`Meshes group <expression_function_meshes>`
+   will be filtered accordingly.
+#. Run the query by setting how the selection should behave and pressing:
+
+  * |expressionSelect| :guilabel:`Select`: replaces any existing selection
+    in the layer
+  * |selectAdd| :guilabel:`Add to current selection`
+  * |selectRemove| :guilabel:`Remove from current selection`
+
 Modifying mesh elements
 ------------------------
 
