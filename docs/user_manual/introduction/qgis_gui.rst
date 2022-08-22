@@ -1883,11 +1883,11 @@ Third-party plugins can add items to this menu.
    * - |showMeshCalculator| :menuselection:`Mesh Calculator...`
      -
      -
-     -
+     - :ref:`mesh_calculator`
    * - |meshReindex| :menuselection:`Reindex Faces and Vertices`
      -
      -
-     -
+     - :ref:`reindex_mesh`
 
 
 Processing
