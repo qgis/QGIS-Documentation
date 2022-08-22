@@ -22,8 +22,8 @@ Foreword: Spatial and non-spatial tables
 ========================================
 
 QGIS allows you to load spatial and non-spatial layers. This currently includes
-tables supported by OGR and delimited text, as well as the PostgreSQL, MSSQL,
-SpatiaLite and Oracle provider. All loaded layers are listed in
+tables supported by OGR and delimited text, as well as the PostgreSQL, MS SQL Server,
+SpatiaLite and Oracle providers. All loaded layers are listed in
 the :guilabel:`Layers` panel. Whether a layer is spatially enabled or not
 determines whether you can interact with it on the map.
 

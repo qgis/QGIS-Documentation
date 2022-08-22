@@ -52,7 +52,7 @@ Many of the features and tools available in QGIS work the same,
 regardless the vector data source.
 However, because of the differences in format specifications
 (GeoPackage, ESRI Shapefile, MapInfo and MicroStation file formats,
-AutoCAD DXF, PostGIS, SpatiaLite, Oracle Spatial, MSSQL
+AutoCAD DXF, PostGIS, SpatiaLite, Oracle Spatial, MS SQL Server
 Spatial, SAP HANA Spatial databases and many more), QGIS may handle some of
 their properties differently.
 Support is provided by the

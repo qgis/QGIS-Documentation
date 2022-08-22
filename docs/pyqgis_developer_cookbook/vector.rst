@@ -740,7 +740,7 @@ There are several ways to generate a vector layer dataset:
   a data provider that interprets the supplied path (url) of the data source
   to connect to and access the data. It can be used to create temporary,
   memory-based layers (``memory``) and connect to OGR datasets (``ogr``),
-  databases (``postgres``, ``spatialite``, ``mysql``, ``mssql``) and
+  databases (``postgres``, ``spatialite``, ``mysql``, ``ms sql server``) and
   more (``wfs``, ``gpx``, ``delimitedtext``...).
 
 
