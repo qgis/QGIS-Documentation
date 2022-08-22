@@ -271,8 +271,8 @@ the geometries of the neighboring features.
 Topological editing works with features from different layers, as long
 as the layers are visible and in editing mode.
 
-In layer with Z values, topological editing will interpolate the Z value of 
-the vertex based on the value of the edge used for the connection.
+In layer with Z or M values, topological editing will interpolate the Z or M
+value of the vertex based on the value of the edge used for the connection.
 
 .. index:: Avoid overlap
    seealso: Avoid overlap; Topology
@@ -715,6 +715,37 @@ the :guilabel:`Digitizing toolbar`.
    :align: center
 
    Vertex editor panel showing selected nodes
+
+.. _digitizing_zm:
+
+Digitizing features with Z or M value
+-------------------------------------
+
+Digitizing vector features with a Z (or M) component is not that different
+from 2D layers'. Tools and options described in this chapter are still
+available and help you place the vertex or point. Then you may need to handle
+the Z coordinate (or M value) assignment:
+
+* By default, QGIS will assign to new vertices the :guilabel:`Default Z value`
+  (respectively :guilabel:`Default M value`) set in the
+  :menuselection:`Settings --> Options --> Digitizing` tab.
+  If the :ref:`Advanced Digitizing Panel <advanced_digitizing_panel>` is in
+  use, then the value is taken from its :guilabel:`z`
+  (respectively :guilabel:`m`) widget.
+* When snapping to a vertex, the new or moved vertex takes the snapped one's
+  Z or M value.
+* When snapping to a segment while the topological editing is on, then the new
+  vertex Z or M value is interpolated along the segment.
+* If the :guilabel:`z` (respectively :guilabel:`m`) widget of the
+  :guilabel:`Advanced Digitizing Panel` is |locked| locked, then its value is
+  applied to the vertex, taking precedence over any snapped vertex or segment
+  Z or M value.
+
+To edit Z or M values of an existing feature, you can use the
+:ref:`Vertex editor panel <vertex_editor_panel>`.
+To create features with custom Z or M values you may want to rely on the
+:guilabel:`Advanced Digitizing Panel`.
+
 
 .. _clipboard_feature:
 
@@ -1734,21 +1765,30 @@ to start editing the feature, i.e.:
 #. Type the Y coordinate value you want and press :kbd:`Enter` or click the
    |locked| button to their right to lock the mouse to the Y axis on the map
    canvas.
-#. If available and relevant, proceed as above to add the Z coordinate and
-   M value (respectively :guilabel:`z` or :guilabel:`m` text box).
+#. If the layer has Z coordinate or M values, the corresponding :guilabel:`z`
+   or :guilabel:`m` widget is enabled and displays its default value,
+   as set in :menuselection:`Settings --> Options --> Digitizing` tab.
 
-   Two blue dotted lines and a green cross identify the exact coordinates you
+   #. Click the :guilabel:`z` or :guilabel:`m` text box (or use respectively
+      the :kbd:`Z` or :kbd:`M` keyboard shortcut).
+   #. Type the coordinate value you want and press :kbd:`Enter` or click the
+      |locked| button to their right to lock the value in the widget.
+
+   .. note:: Read :ref:`digitizing_zm` for details on how Z coordinate and
+    M values are automatically determined from existing features.
+
+#. Two blue dotted lines and a green cross identify the exact coordinates you
    entered.
-#. Start digitizing by clicking on the map canvas; a vertex is added at
-   the green cross position.
+   Click on the map canvas to add a vertex at the green cross position.
 
    .. figure:: img/advanced_digitizing_coordinates.png
       :align: center
 
       Start drawing at given coordinates
 
-#. You can continue digitizing by free hand, adding a new set of coordinates,
-   or you can type the segment's **length** (distance) and **angle**.
+#. You can proceed as above, adding a new set of coordinates for the next vertex,
+   or switch to another :ref:`mode of digitizing <drawing_methods>`
+   (e.g. segment, curve or stream).
 
 #. If you want to draw a segment of a given length:
 
