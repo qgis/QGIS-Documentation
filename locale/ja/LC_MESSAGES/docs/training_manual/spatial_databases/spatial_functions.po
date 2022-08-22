@@ -2,19 +2,20 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2022
+# Miyoshi Tomoya, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-14 02:17+0000\n"
-"PO-Revision-Date: 2020-12-24 10:17+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"POT-Creation-Date: 2022-03-12 00:23+0100\n"
+"PO-Revision-Date: 2022-03-14 05:09+0000\n"
+"Last-Translator: Miyoshi Tomoya, 2022\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,6 +40,17 @@ msgid ""
 "their effects."
 msgstr "**このレッスンの目的:** 空間関数をインストールし, それらの効果を簡単にデモする."
 
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:10
+msgid ""
+"We will assume the use of PostGIS version 2.1 or newer in this exercise. The"
+" installation and database configuration are different for older versions, "
+"but the rest of this material in this module will still work. Consult the "
+"documentation for your platform for help with installation and database "
+"configuration."
+msgstr ""
+"この演習では、PostGIS バージョン 2.1 "
+"以降を使用することを想定しています。古いバージョンでは、インストールとデータベース設定が異なりますが、このモジュールの残りの部分はそのまま使用できます。インストールとデータベース設定のヘルプについては、お使いのプラットフォームのドキュメントを参照してください。"
+
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:17
 msgid "Installing under Ubuntu"
 msgstr "Ubuntuでのインストール"
@@ -51,17 +63,66 @@ msgstr "PostGISはaptから簡単にインストールできます."
 msgid "Really, it's that easy..."
 msgstr "本当に簡単です..."
 
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:28
+msgid ""
+"The exact versions that will be installed depend on which version of Ubuntu "
+"you are using and which repositories you have configured. After installing "
+"you can check the version by issuing a ``select PostGIS_full_version();`` "
+"query with psql or another tool."
+msgstr ""
+"インストールされる正確なバージョンは、使用しているUbuntuのバージョンと、設定したリポジトリに依存します。インストール後、psqlや他のツールで "
+"``select PostGIS_full_version();`` クエリを発行して、バージョンを確認することができます。"
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:32
+msgid ""
+"To install a specific version (eg, PostgreSQL version 13 and PostGIS 3), you"
+" can use the following commands."
+msgstr "特定のバージョン（例えば、PostgreSQLバージョン13とPostGIS 3）をインストールする場合は、以下のコマンドを使用します。"
+
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:46
 msgid "Installing under Windows"
 msgstr "Windowsでのインストール"
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:48
+msgid ""
+"Installing on Windows can be done from binary packages using a normal "
+"Windows installation dialogs."
+msgstr "Windowsへのインストールは、バイナリパッケージから通常のWindowsのインストールダイアログを使って行うことができます。"
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:50
+msgid ""
+"First Visit `the download page <https://www.postgresql.org/download/>`_. "
+"Then follow `this guide "
+"<https://www.bostongis.com/PrinterFriendly.aspx?content_name=postgis_tut01>`_."
+msgstr ""
+"まず、 `ダウンロードページ <https://www.postgresql.org/download/>`_ にアクセスします。次に、このガイド "
+"<https://www.bostongis.com/PrinterFriendly.aspx?content_name=postgis_tut01>`_"
+" に従ってください。"
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:53
+msgid ""
+"More information about installing on Windows can be found on the `PostGIS "
+"website <https://postgis.net/windows_downloads>`_."
+msgstr ""
+"Windowsへのインストールに関する詳しい情報は、`PostGISウェブサイト<https://postgis.net/windows_downloads>`_"
+" に掲載されています。"
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:57
 msgid "Installing on Other Platforms"
 msgstr "その他のプラットフォームへのインストール"
 
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:59
+msgid ""
+"The `PostGIS website download <https://postgis.net/install/>`_ has "
+"information about installing on other platforms including macOS and on other"
+" Linux distributions"
+msgstr ""
+"PostGISウェブサイトのダウンロード <https://postgis.net/install/>`_ "
+"には、macOSを含む他のプラットフォームや他のLinuxディストリビューションへのインストールについての情報があります"
+
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:63
 msgid "Configuring Databases to use PostGIS"
-msgstr "PostGISを使用するためのデータベースの設定"
+msgstr "PostGISを使うためにデータベースを設定する"
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:65
 msgid ""
@@ -72,6 +133,15 @@ msgid ""
 msgstr ""
 "一度PostGISがインストールされたら、拡張機能を使用するようにデータベースを設定する必要があります。PostGISのバージョン> "
 "2.0をインストールしている場合、これが前の演習からアドレスデータベースを使用してpsqlで次のコマンドを発行するのと同じくらい簡単です。"
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:74
+msgid ""
+"Depending on your version, you could find more instructions on how to "
+"spatially enable a database at "
+"https://postgis.net/docs/postgis_administration.html#create_spatial_db."
+msgstr ""
+"バージョンによっては、データベースを空間的に有効にする方法について、https://postgis.net/docs/postgis_administration.html#create_spatial_db"
+"  で多くの説明を見つけることができるでしょう。"
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:79
 msgid "Looking at the installed PostGIS functions"
@@ -98,6 +168,15 @@ msgstr ""
 "私たちのPostgreSQLの ``address住所`` "
 "データベースはPostGISのおかげで地理空間的に有効になりました。次のセクションではこれについてもっと深く掘り下げていきますが、ここでちょっと味見しましょう。テキストからポイントを作成したいとしましょう。最初に、psqlコマンドを使ってポイントに関連する関数を見つけます。``address住所``"
 " データベースにまだ接続していない場合は、今すぐ実行してください。次に、"
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:96
+msgid ""
+"This is the command we're looking for: :kbd:`st_pointfromtext`.  To page "
+"through the list, use the down arrow, then press :kbd:`Q` to quit back to "
+"the psql shell."
+msgstr ""
+"これが探しているコマンドです: :kbd:`st_pointfromtext` 。 リストをページ送りするには、下矢印を使用し、 :kbd:`Q` "
+"を押して psql シェルに戻ります。"
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:99
 msgid "Try running this command:"
