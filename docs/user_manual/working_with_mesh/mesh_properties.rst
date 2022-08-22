@@ -214,14 +214,13 @@ the selected mesh, including:
     * :guilabel:`Save dataset group as...` a file on disk, to any supported format.
       The new file is kept assigned to the current mesh layer in the project.
 * Checking the |unchecked| :guilabel:`Treat as static dataset` group allows
-  to ignore the map temporal navigation properties while rendering the mesh
-  layer. For each active dataset group (as selected in |symbology|
+  to ignore the :ref:`map temporal navigation <maptimecontrol>` properties
+  while rendering the mesh layer.
+  For each active dataset group (as selected in |symbology|
   :menuselection:`Symbology -->` |general| :guilabel:`Datasets` tab), you can:
 
-  .. TODO: insert map temporal navigation reference here also
-
   * set to :guilabel:`None`: the dataset group is not displayed at all
-  * :guilabel:`Display dataset`: eg, for the "bed elevation" dataset which is
+  * :guilabel:`Display dataset`: e.g., for the "bed elevation" dataset which is
     not time aware
   * extract a particular date time: the dataset matching the provided time
     is rendered and stay fixed during map navigation.
