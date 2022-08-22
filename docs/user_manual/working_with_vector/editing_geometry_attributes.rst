@@ -945,18 +945,30 @@ Table Advanced Editing: Vector layer advanced editing toolbar
    single: Digitizing tools; Stream digitizing
 .. _drawing_methods:
 
-Straight, curve and stream digitizing
--------------------------------------
+Geometry editing techniques
+---------------------------
 
-The |digitizeWithCurve| :sup:`Digitize with Curve` tool allows you to draw curves in layers with
-geometries that support curves. Digitizing a curve requires to provide three points along the curve
-(start, point along the arc, end) which define it.
+When a geometry drawing tool (mainly the ones that add, split, reshape features)
+is enabled for a line or polygon based layer, you can select the technique for
+adding new vertices:
 
-The |streamingDigitize| :sup:`Stream Digitizing` tool allows you to activate and deactivate stream 
-digitizing which allows to create features in freehand mode. 
+* The |digitizeWithSegment| :sup:`Digitize with Segment`: draws straight segment
+  whose start and end points are defined by left clicks.
+* The |digitizeWithCurve| :sup:`Digitize with Curve`: draws curve line based on
+  three consecutive nodes defined by left clicks (start, point along the arc, end).
+  If the geometry type does not support curves, then consecutive smaller segments
+  are used to approximate the curvature.
+* The |streamingDigitize| :sup:`Stream Digitizing`: draws lines in freehand mode,
+  i.e. nodes are added following cursor movement in the map canvas and
+  a :guilabel:`Streaming Tolerance`.
+  The streaming tolerance defines the spacing between consecutive vertices.
+  Currently, the only supported unit is pixels (``px``). Only the starting left
+  click and the ending right click are necessary in this mode.
+* The |digitizeShape| :sup:`Digitize Shape`: triggers tools on the
+  :ref:`Shape Digitizing Toolbar <shape_edit>` to draw a polygon of a regular shape.
 
-The streaming tolerance affects the spacing between consecutive vertices.
-Currently, the only supported unit is pixels (``px``).
+The selected technique remains while switching among the digitizing tools.
+You can combine any of the first three methods while drawing the same geometry.
 
 .. index::
    single: Digitizing tools; Move feature
@@ -2019,7 +2031,11 @@ To edit features in-place:
    :width: 1.5em
 .. |delta| image:: /static/common/delta.png
    :width: 1.5em
+.. |digitizeShape| image:: /static/common/mActionDigitizeShape.png
+   :width: 1.5em
 .. |digitizeWithCurve| image:: /static/common/mActionDigitizeWithCurve.png
+   :width: 1.5em
+.. |digitizeWithSegment| image:: /static/common/mActionDigitizeWithSegment.png
    :width: 1.5em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
