@@ -568,6 +568,11 @@ to create and edit a metadata report on your layer.
 See :ref:`metadatamenu` for more information.
 
 
+.. _editing_mesh:
+
+Editing a mesh layer
+====================
+
 .. _mesh_calculator:
 
 Mesh Calculator
