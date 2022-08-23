@@ -22,7 +22,7 @@ simple (simple Docker images) to sophisticated (Kubernetes and so on).
 
 .. note:: QGIS Debian-Ubuntu package downloads need a valid gpg authentication key.  
    Please refer to the `installation pages <https://www.qgis.org/fr/site/forusers/alldownloads.html#debian-ubuntu>`_ 
-   to update the following Dockerfile with the latest key and its fingerprint value
+   to update the following Dockerfile.
 
 .. _simple-docker-images:
 
@@ -36,7 +36,7 @@ it. To do so create a directory :file:`qgis-server` and within its directory:
 
 .. code-block:: dockerfile
 
-  FROM debian:buster-slim
+  FROM debian:bullseye-slim
   
   ENV LANG=en_EN.UTF-8
   
@@ -48,11 +48,13 @@ it. To do so create a directory :file:`qgis-server` and within its directory:
           wget \
           locales \
       && localedef -i en_US -f UTF-8 en_US.UTF-8 \
-      # Add the current key for package downloading - As the key changes every year at least
-      # Please refer to QGIS install documentation and replace it and its fingerprint value with the latest ones
-      && wget -O - https://qgis.org/downloads/qgis-2021.gpg.key | gpg --import \
-      && gpg --export --armor 46B5721DBBD2996A | apt-key add - \
-      && echo "deb http://qgis.org/debian buster main" >> /etc/apt/sources.list.d/qgis.list \
+      # Add the current key for package downloading
+      # Please refer to QGIS install documentation (https://www.qgis.org/fr/site/forusers/alldownloads.html#debian-ubuntu)
+      && mkdir -m755 -p /etc/apt/keyrings \
+      && wget -O /etc/apt/keyrings/qgis-archive-keyring.gpg https://download.qgis.org/downloads/qgis-archive-keyring.gpg \
+      # Add repository for latest version of qgis-server
+      # Please refer to QGIS repositories documentation if you want other version (https://qgis.org/en/site/forusers/alldownloads.html#repositories)
+      && echo "deb [signed-by=/etc/apt/keyrings/qgis-archive-keyring.gpg] https://qgis.org/debian bullseye main" | tee /etc/apt/sources.list.d/qgis.list \
       && apt-get update \
       && apt-get install --no-install-recommends --no-install-suggests --allow-unauthenticated -y \
           qgis-server \
@@ -66,7 +68,7 @@ it. To do so create a directory :file:`qgis-server` and within its directory:
   
   RUN useradd -m qgis
   
-  ENV TINI_VERSION v0.17.0
+  ENV TINI_VERSION v0.19.0
   ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
   RUN chmod +x /tini
   
