@@ -30,7 +30,7 @@ and often write a lot of formats:
   Read the complete list of `supported raster formats
   <https://gdal.org/drivers/raster/index.html>`_.
 * Database formats include PostgreSQL/PostGIS, SQLite/SpatiaLite, Oracle,
-  MS SQL Server Spatial, SAP HANA, MySQL...
+  MS SQL Server, SAP HANA, MySQL...
 * Web map and data services (WM(T)S, WFS, WCS, CSW, XYZ tiles, ArcGIS
   services, ...) are also handled by QGIS providers.
   See :ref:`working_with_ogc` for more information about some of these.
