@@ -1062,8 +1062,8 @@ Optionally, you can activate the following checkboxes:
 
 .. _create_ms_sql_server_connection:
 
-Connecting to MS SQL Server Spatial
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Connecting to MS SQL Server
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In addition to some of the options in :ref:`vector_create_stored_connection`,
 creating a new MS SQL Server connection dialog proposes you to fill a **Provider/DSN**
