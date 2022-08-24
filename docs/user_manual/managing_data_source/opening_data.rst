@@ -784,7 +784,7 @@ of them and load their tables:
 
 * |addPostgisLayer| :menuselection:`Add PostGIS Layer...` or by typing
   :kbd:`Ctrl+Shift+D`
-* |addMssqlLayer| :menuselection:`Add MS SQL Server Spatial Layer`
+* |addMssqlLayer| :menuselection:`Add MS SQL Server Layer`
 * |addOracleLayer| :menuselection:`Add Oracle Spatial Layer...` or by typing
   :kbd:`Ctrl+Shift+O`
 * |addHanaLayer| :menuselection:`Add SAP HANA Spatial Layer...` or by typing
