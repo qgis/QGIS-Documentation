@@ -2066,7 +2066,7 @@ Save in database
 .................
 
 Vector layer styles can also be stored in a database if the layer datasource is a
-database provider. Supported formats are PostGIS, GeoPackage, SpatiaLite, MSSQL
+database provider. Supported formats are PostGIS, GeoPackage, SpatiaLite, MS SQL Server
 and Oracle. The layer style is saved inside a table (named :file:`layer_styles`)
 in the database. Click on :menuselection:`Save Style... --> Save in database`
 then fill in the dialog to define a style name, add a description, a :file:`.ui`
@@ -2087,7 +2087,7 @@ database or in :file:`qgis.db`, a local SQLite database in the active
 .. tip:: **Sharing style files between databases**
 
   You can only save your style in a database if the layer comes from such a
-  database. You can't mix databases (layer in Oracle and style in MSSQL for
+  database. You can't mix databases (layer in Oracle and style in MS SQL Server for
   instance). Use instead a plain text file if you want the style to be shared
   among databases.
 

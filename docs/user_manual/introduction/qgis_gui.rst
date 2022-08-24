@@ -1147,7 +1147,7 @@ copy or paste layer properties (style, scale, CRS...).
      - :guilabel:`Manage Layers`
      - :ref:`label_spatialite`
    * - :menuselection:`-->` |addMssqlLayer|
-       :guilabel:`Add MSSQL Spatial Layer...`
+       :guilabel:`Add MS SQL Server Layer...`
      -
      - :guilabel:`Manage Layers`
      - :ref:`db_tools`

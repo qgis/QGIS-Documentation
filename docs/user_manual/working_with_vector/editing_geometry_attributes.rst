@@ -10,7 +10,7 @@
       :local:
 
 QGIS has various capabilities for editing OGR, SpatiaLite, PostGIS,
-MSSQL Spatial and Oracle Spatial vector layers and tables.
+MS SQL Server and Oracle Spatial vector layers and tables.
 
 .. note::
    The procedure for editing GRASS layers is different - see section

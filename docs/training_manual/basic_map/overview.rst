@@ -56,7 +56,7 @@ will be using some of them before long, so take a look around!
 The QGIS Browser is a panel in QGIS that lets you easily navigate in your
 database. You can have access to common vector files (e.g. ESRI Shapefile
 or MapInfo files), databases (e.g. PostGIS, Oracle, SpatiaLite, GeoPackage or
-MSSQL Spatial) and WMS/WFS connections. You can also view your GRASS data.
+MS SQL Server) and WMS/WFS connections. You can also view your GRASS data.
 
 If you have saved a project, the Browser Panel will also give you quick access to
 all the layers stored in the same path of the project file under in the

@@ -158,7 +158,7 @@ using the AND, OR and NOT operators and parenthesis.
 This syntax (including the DateTime format for the ``toa`` field) works for
 GeoPackage datasets.
 
-The filter is made at the data provider (OGR, PostgreSQL, MSSQL...) level.
+The filter is made at the data provider (OGR, PostgreSQL, MS SQL Server...) level.
 So the syntax depends on the data provider (DateTime is for instance not
 supported for the ESRI Shapefile format).
 The complete expression::
