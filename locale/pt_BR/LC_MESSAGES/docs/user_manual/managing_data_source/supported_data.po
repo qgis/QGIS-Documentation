@@ -2,30 +2,54 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2022
+# Vanessa Stelzer, 2022
+# Letícia Jardim, 2022
+# Ana Camargo, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 10:24+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"POT-Creation-Date: 2022-03-30 02:29+0000\n"
+"PO-Revision-Date: 2022-03-14 05:13+0000\n"
+"Last-Translator: Ana Camargo, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 "Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:30
+msgid ""
+"Unlike vector data, raster data typically do not have an associated database"
+" record for each cell. They are geocoded by pixel resolution and the X/Y "
+"coordinate of a corner pixel of the raster layer. This allows QGIS to "
+"position the data correctly on the map canvas."
+msgstr ""
+"Ao contrário dos dados vetoriais, os dados matriciais normalmente não "
+"possuem um registro de banco de dados associado para cada célula. Eles são "
+"geocodificados pela resolução do pixel e pela coordenada X/Y de um pixel de "
+"canto da camada matricial. Isso permite que o QGIS posicione os dados "
+"corretamente na tela do mapa."
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:49
 msgid "Vector Data"
 msgstr "Dado Vetorial"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:76
+msgid "GeoPackage"
+msgstr "GeoPackage"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:88
+msgid "extensions"
+msgstr "extensões"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:93
 msgid "GeoPackage is the default format for vector data in QGIS."
@@ -34,6 +58,10 @@ msgstr "GeoPackage é o formato padrão para dados vetoriais no QGIS."
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:108
 msgid ":file:`.dbf` file containing the attributes in dBase format"
 msgstr ":file:`.dbf` arquivo que contém os atributos no formato dBase"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:129
+msgid "Use these steps to create the index:"
+msgstr "Usar estas etapas para criar o índice:"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:132
 msgid ""
@@ -44,6 +72,14 @@ msgstr ""
 "Abra a caixa de diálogo :guilabel:`Propriedades da Camada` clicando duas "
 "vezes no nome da camada na legenda ou clicando com o botão direito do mouse "
 "e escolhendo :menuselection:`Propriedades...` no menu de contexto"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:138
+msgid "**Problem loading a .prj file**"
+msgstr "**Problema ao carregar um arquivo .prj**"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:704
+msgid "setProjection"
+msgstr "definirProjeção"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:164
 msgid ""
@@ -65,6 +101,48 @@ msgstr ""
 "delimitados também podem conter informações posicionais (veja "
 ":ref:`csv_geometry`). "
 
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:179
+msgid ""
+"The file must have a delimited header row of field names. This must be the "
+"first line of the data (ideally the first row in the text file)."
+msgstr ""
+"O arquivo deve ter uma linha de cabeçalho delimitada de nomes de campo. Esta"
+" deve ser a primeira linha dos dados (de preferência a primeira linha no "
+"arquivo de texto)."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:209
+msgid "The X coordinates are contained in the ``X`` field"
+msgstr "As coordenadas X estão contidas no campo ``X``"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:210
+msgid "The Y coordinates are contained in the ``Y`` field"
+msgstr "As coordenadas Y estão contidas no campo ``Y``"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:215
+msgid "Storing geometry information in delimited text files"
+msgstr "Armazenando informações de geometria em arquivos de texto delimitados"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:217
+msgid ""
+"Delimited text files can contain geometry information in two main forms:"
+msgstr ""
+"Arquivos de texto delimitados podem conter informações de geometria em duas "
+"formas principais:"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:220
+msgid ""
+"As coordinates in separate columns (eg. ``Xcol``, ``Ycol``... ), for point "
+"geometry data;"
+msgstr ""
+"Como coordenadas em colunas separadas (ex. ``Xcol``, ``Ycol``... ), para "
+"dados de geometria de ponto;"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:237
+msgid "Delimited text files also support Z and M coordinates in geometries::"
+msgstr ""
+"Arquivos de texto delimitados também suportam coordenadas Z e M em "
+"geometrias::"
+
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:1
 msgid "Type"
 msgstr "Tipo"
@@ -78,6 +156,10 @@ msgid "Example"
 msgstr "Exemplo"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "Whole number"
+msgstr "Número inteiro"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
 msgid "Integer"
 msgstr "Número inteiro"
 
@@ -86,12 +168,46 @@ msgid "4"
 msgstr "4"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "Decimal number"
+msgstr "Número decimal"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "Real"
+msgstr "Real"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "3.456"
+msgstr "3.456"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
 msgid "Date"
 msgstr "Data"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "2016-07-28"
+msgstr "2016-07-28"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "Time"
+msgstr "Hora"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
 msgid "Time (HH:MM:SS+nn)"
 msgstr "Hora (HH:MM:SS+nn)"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "18:33:12+00"
+msgstr "18:33:12+00"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "Date & Time"
+msgstr "Data & Hora"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:267
+msgid "You can even specify width and precision of each column, e.g.::"
+msgstr ""
+"Você pode até especificar a largura e a precisão de cada coluna, por "
+"exemplo::"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:274
 msgid ""
@@ -109,11 +225,11 @@ msgstr "Camadas PostGIS"
 msgid "**PostGIS Layers**"
 msgstr "**Camadas PostGIS**"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:326
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:330
 msgid "View"
 msgstr "Ver"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:328
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:332
 msgid ""
 "If the PostgreSQL layer is a view, the same requirement exists, but views do"
 " not always have primary keys or columns with unique constraints on them. "
@@ -132,11 +248,15 @@ msgstr ""
 "coluna adequada (um tipo de número inteiro e uma chave primária ou com uma "
 "restrição exclusiva, preferencialmente indexada)."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:385
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:694
+msgid "checkbox"
+msgstr "caixa de seleção"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:394
 msgid "DB Manager"
 msgstr "Gerenciador BD"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:387
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:396
 msgid ""
 "QGIS comes with a core plugin named |dbManager| :sup:`DB Manager`. It can be"
 " used to load data, and it includes support for schemas. See section "
@@ -146,26 +266,46 @@ msgstr ""
 ":sup:`Gerenciador de BD`. Ele pode ser usado para carregar dados e inclui "
 "suporte para esquemas. Veja a seção :ref:`dbmanager` para mais informações."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:392
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:401
 msgid "shp2pgsql"
 msgstr "shp2pgsql"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:421
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:430
 msgid "ogr2ogr"
 msgstr "ogr2ogr"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:542
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:700
+msgid "nix"
+msgstr "nix"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:702
+msgid "osx"
+msgstr "osx"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:467
+msgid "Improving Performance"
+msgstr "Melhorando a Performance"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:515
+msgid "Vector layers crossing 180 |degrees| longitude"
+msgstr "Camadas vetoriais cruzando 180 |graus| longitude"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:551
 msgid "Usage"
 msgstr "Utilização"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:558
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:567
 msgid "SpatiaLite Layers"
 msgstr "Camadas SpatiaLite"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:575
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:584
 msgid ""
 "If you want to create a new SpatiaLite layer, please refer to section "
 ":ref:`vector_create_spatialite`."
 msgstr ""
 "Se você deseja criar uma nova camada SpatiaLite, por favor consulte a seção "
 ":ref:`vector_create_spatialite`."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:661
+msgid "Adding tables"
+msgstr "Adicionando tabelas"

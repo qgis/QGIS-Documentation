@@ -2,26 +2,30 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2022
+# Ana Carla Rizzo Mendes, 2022
+# Vanessa Stelzer, 2022
+# Ana Camargo, 2022
+# Letícia Jardim, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-20 02:14+0000\n"
-"PO-Revision-Date: 2020-12-24 10:23+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"POT-Creation-Date: 2022-05-11 02:37+0000\n"
+"PO-Revision-Date: 2022-03-14 05:09+0000\n"
+"Last-Translator: Letícia Jardim, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.1\n"
 "Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/server_manual/getting_started.rst:3
 msgid "Getting Started"
@@ -37,10 +41,260 @@ msgstr ""
 "comandos que requerem permissões de administrador. No Debian você pode "
 "trabalhar como administrador (``root``), sem usar ``sudo``."
 
-#: ../../docs/server_manual/getting_started.rst:588
+#: ../../docs/server_manual/getting_started.rst:95
+msgid ""
+"To properly deploy QGIS server you need a HTTP server. Recommended choices "
+"are `Apache <https://httpd.apache.org/docs/>`_ or `NGINX "
+"<https://nginx.org/en/docs/>`__."
+msgstr ""
+"Para implantar corretamente o servidor QGIS, você precisa de um servidor "
+"HTTP. As escolhas recomendadas são `Apache "
+"<https://httpd.apache.org/docs/>`_ ou `NGINX "
+"<https://nginx.org/en/docs/>`__."
+
+#: ../../docs/server_manual/getting_started.rst:107
+msgid ""
+"Install Apache and `mod_fcgid "
+"<https://httpd.apache.org/mod_fcgid/mod/mod_fcgid.html>`_:"
+msgstr ""
+"Instalar Apache e `mod_fcgid "
+"<https://httpd.apache.org/mod_fcgid/mod/mod_fcgid.html>`_:"
+
+#: ../../docs/server_manual/getting_started.rst:114
+msgid ""
+"You can run QGIS Server on your default website, but let's configure a "
+"`virtualhost <https://httpd.apache.org/docs/2.4/vhosts>`_ specifically for "
+"this, as follows."
+msgstr ""
+"Você pode executar o QGIS Server em seu site padrão, mas vamos configurar um"
+" `virtual host <https://httpd.apache.org/docs/2.4/vhosts>`_ especificamente "
+"para isto, como segue."
+
+#: ../../docs/server_manual/getting_started.rst:117
+msgid ""
+"In the :file:`/etc/apache2/sites-available` directory, create a file called "
+":file:`qgis.demo.conf`, with this content:"
+msgstr ""
+"No diretório :file:`/etc/apache2/sites-available', crie um arquivo chamado "
+":arquivo:`qgis.demo.conf', com este conteúdo:"
+
+#: ../../docs/server_manual/getting_started.rst:191
+msgid ""
+"We can now enable the virtual host and the ``fcgid`` mod if it's not already"
+" done:"
+msgstr ""
+"Agora podemos habilitar o host virtual e o ``fcgid`` mod, se isso ainda não "
+"tiver sido feito:"
+
+#: ../../docs/server_manual/getting_started.rst:326
+msgid "spawn-fcgi"
+msgstr "gerar-fcgi"
+
+#: ../../docs/server_manual/getting_started.rst:336
+#: ../../docs/server_manual/getting_started.rst:415
+msgid ""
+"Then, introduce the following block in your NGINX server configuration:"
+msgstr ""
+"Em seguida, introduzir o seguinte bloco na configuração do seu servidor "
+"NGINX:"
+
+#: ../../docs/server_manual/getting_started.rst:346
+msgid "And restart NGINX to take into account the new configuration:"
+msgstr "E reiniciar o NGINX para levar em conta a nova configuração:"
+
+#: ../../docs/server_manual/getting_started.rst:361
+#: ../../docs/server_manual/getting_started.rst:434
+msgid "QGIS Server is now available at http://qgis.demo/qgisserver."
+msgstr "O Servidor QGIS está agora disponível em http://qgis.demo/qgisserver."
+
+#: ../../docs/server_manual/getting_started.rst:394
+msgid "Then enable and start the service:"
+msgstr "Em seguida, habilitar e iniciar o serviço:"
+
+#: ../../docs/server_manual/getting_started.rst:439
+msgid "Systemd"
+msgstr "Sistemad"
+
+#: ../../docs/server_manual/getting_started.rst:472
+msgid "Now enable and start sockets:"
+msgstr "Agora ative e inicie as tomadas:"
+
+#: ../../docs/server_manual/getting_started.rst:550
+msgid "Xvfb"
+msgstr "Xvfb"
+
+#: ../../docs/server_manual/getting_started.rst:558
+msgid "To install the package:"
+msgstr "Para instalar o pacote:"
+
+#: ../../docs/server_manual/getting_started.rst:578
 msgid "Enable, start and check the status of the ``xvfb.service``:"
 msgstr "Ative, inicie e verifique o status do ``xvfb.service``:"
 
-#: ../../docs/server_manual/getting_started.rst:783
+#: ../../docs/server_manual/getting_started.rst:591
+msgid "Then you can configure the **DISPLAY** parameter."
+msgstr "Então você pode configurar o parâmetro **EXIBIR**."
+
+#: ../../docs/server_manual/getting_started.rst:607
+msgid "With NGINX"
+msgstr "Com NGINX"
+
+#: ../../docs/server_manual/getting_started.rst:626
+msgid "Installation on Windows"
+msgstr "Instalação no Windows"
+
+#: ../../docs/server_manual/getting_started.rst:630
+msgid ""
+"QGIS Server can also be installed on Windows systems using the 64 bit "
+"version of the OSGeo4W network installer "
+"(https://qgis.org/en/site/forusers/download.html)."
+msgstr ""
+"O QGIS Server também pode ser instalado em sistemas Windows usando a versão "
+"64 bit do instalador de rede OSGeo4W "
+"(https://qgis.org/en/site/forusers/download.html)."
+
+#: ../../docs/server_manual/getting_started.rst:635
+msgid "Download and run the OSGeo4W installer"
+msgstr "Baixe e execute o instalador OSGeo4W"
+
+#: ../../docs/server_manual/getting_started.rst:636
+msgid ""
+"Follow the \"Advanced Install\" and install the **QGIS Desktop**, **QGIS "
+"Server** **apache** and **mod_fcgid** packages."
+msgstr ""
+"Siga a \"Instalação Avançada\" e instale os pacotes **QGIS Desktop**, **QGIS"
+" Server** **apache** e **mod_fcgid**."
+
+#: ../../docs/server_manual/getting_started.rst:642
+msgid "Apache is not directly installed as a service on Windows. You need to:"
+msgstr ""
+"O Apache não é instalado diretamente como um serviço no Windows. Você "
+"precisa fazê-lo:"
+
+#: ../../docs/server_manual/getting_started.rst:647
+msgid "In the console, run ``apache-install.bat``, which will output"
+msgstr "No console, execute ``apache-install.bat'', que terá saída"
+
+#: ../../docs/server_manual/getting_started.rst:658
+msgid ""
+"The service is started as you can notice in the report. But the server may "
+"fail to run due to missing custom configuration."
+msgstr ""
+"O serviço está iniciado, como você pode notar no relatório. Mas o servidor "
+"pode não funcionar devido à falta de configuração personalizada."
+
+#: ../../docs/server_manual/getting_started.rst:660
+msgid ""
+"Edit the :file:`C:\\\\OSGeo4w64\\\\apps\\\\apache\\\\conf\\\\httpd.conf` "
+"file with the following changes (various other combinations are possible):"
+msgstr ""
+"Edite o :arquivo:`C:\\\\OSGeo4w64\\\\apps\\\\apache\\\\conf\\\\httpd.conf` "
+"arquivo com as seguintes mudanças (várias outras combinações são possíveis):"
+
+#: ../../docs/server_manual/getting_started.rst:667
+msgid "Purpose"
+msgstr "Finalidade"
+
+#: ../../docs/server_manual/getting_started.rst:668
+msgid "Existing config"
+msgstr "Configuração existente"
+
+#: ../../docs/server_manual/getting_started.rst:669
+msgid "Replacement"
+msgstr "Substituição"
+
+#: ../../docs/server_manual/getting_started.rst:670
+msgid ""
+"(Optional) Customize the address to listen to using an IP and/or port, You "
+"can and add as many entries as you wish."
+msgstr ""
+"(Opcional) Personalize o endereço para ouvir usando um IP e/ou porta, Você "
+"pode e adicionar quantas entradas desejar."
+
+#: ../../docs/server_manual/getting_started.rst:681
+msgid "Indicate where to find the script files"
+msgstr "Indique onde encontrar os arquivos de script"
+
+#: ../../docs/server_manual/getting_started.rst:690
+msgid "Provide permissions on the script folder"
+msgstr "Fornecer permissões na pasta de scripts"
+
+#: ../../docs/server_manual/getting_started.rst:707
+msgid "Enable file extensions to use for script files. Uncomment and complete"
+msgstr ""
+"Habilitar extensões de arquivo para uso em arquivos de script. Descomentar e"
+" completar"
+
+#: ../../docs/server_manual/getting_started.rst:715
+msgid "Add more OSGeo4W custom configuration variables"
+msgstr "Adicionar mais variáveis de configuração personalizadas OSGeo4W"
+
+#: ../../docs/server_manual/getting_started.rst:728
+msgid "Restart the Apache web server"
+msgstr "Reiniciar o servidor web Apache"
+
+#: ../../docs/server_manual/getting_started.rst:741
+msgid ""
+"A :file:`XML` file with the capabilities should be returned. Your server is "
+"ready to use."
+msgstr ""
+"Um :arquivo:`XML` arquivo com as capacidades deve ser devolvido. Seu "
+"servidor está pronto para uso."
+
+#: ../../docs/server_manual/getting_started.rst:751
+msgid "Now that QGIS Server is installed and running, we just have to use it."
+msgstr ""
+"Agora que o Servidor QGIS está instalado e funcionando, só temos que usá-lo."
+
+#: ../../docs/server_manual/getting_started.rst:761
+msgid ""
+"By opening the project and taking a quick look on layers, we know that 4 "
+"layers are currently available:"
+msgstr ""
+"Ao abrir o projeto e dar uma olhada rápida nas camadas, sabemos que 4 "
+"camadas estão disponíveis no momento:"
+
+#: ../../docs/server_manual/getting_started.rst:764
+msgid "airports"
+msgstr "aeroportos"
+
+#: ../../docs/server_manual/getting_started.rst:765
+msgid "places"
+msgstr "lugares"
+
+#: ../../docs/server_manual/getting_started.rst:766
+msgid "countries"
+msgstr "países"
+
+#: ../../docs/server_manual/getting_started.rst:769
+msgid ""
+"You don't have to understand the full request for now but you may retrieve a"
+" map with some of the previous layers thanks to QGIS Server by doing "
+"something like this in your web browser to retrieve the *countries* layer:"
+msgstr ""
+"Você não precisa entender a solicitação completa por enquanto, mas pode "
+"recuperar um mapa com algumas das camadas anteriores graças ao Servidor QGIS"
+" fazendo algo assim em seu navegador da web para recuperar a camada "
+"*países*:"
+
+#: ../../docs/server_manual/getting_started.rst:786
+msgid "If you obtain the next image, then QGIS Server is running correctly:"
+msgstr ""
+"Se você obtiver a próxima imagem, então o Servidor QGIS  está rodando "
+"corretamente:"
+
+#: ../../docs/server_manual/getting_started.rst:796
 msgid "For example with spawn-fcgi:"
 msgstr "Por exemplo com spawn-fcgi:"
+
+#: ../../docs/server_manual/getting_started.rst:808
+msgid "Configure your project"
+msgstr "Configurar seu projeto"
+
+#: ../../docs/server_manual/getting_started.rst:831
+msgid "WMS capabilities"
+msgstr "Recursos WMS"
+
+#: ../../docs/server_manual/getting_started.rst:962
+msgid "Integration with QGIS Desktop"
+msgstr "Integração com o QGIS Desktop"

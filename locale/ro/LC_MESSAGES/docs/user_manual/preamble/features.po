@@ -1,23 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
+# Harrissou Sant-anna, 2022
+# Sorin Călinică <scalinica@gmail.com>, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:30+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"POT-Creation-Date: 2022-06-15 02:44+0000\n"
+"PO-Revision-Date: 2022-03-14 05:15+0000\n"
+"Last-Translator: Sorin Călinică <scalinica@gmail.com>, 2022\n"
 "Language-Team: Romanian (https://www.transifex.com/qgis/teams/6144/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.2\n"
 "Language: ro\n"
 "Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
 
@@ -25,9 +28,50 @@ msgstr ""
 msgid "Features"
 msgstr "Funcțiuni"
 
+#: ../../docs/user_manual/preamble/features.rst:12
+msgid ""
+"QGIS offers a wealth of GIS functions, provided by core features and "
+"plugins. The locator bar makes it easy to search for functions, datasets and"
+" more."
+msgstr ""
+"QGIS oferă o multitudine de funcții GIS, prin intermediul funcțiilor de bază"
+" și al pluginurilor. Bara de localizare facilitează căutarea de funcții, "
+"seturi de date și multe altele."
+
+#: ../../docs/user_manual/preamble/features.rst:17
+msgid ""
+"A short summary of six general categories of features and plugins is "
+"presented below, followed by first insights into the integrated Python "
+"console."
+msgstr ""
+"Un scurt rezumat pentru șase categorii generale de funcții și pluginuri este"
+" prezentat mai jos, urmat de informații despre consola integrată Python."
+
 #: ../../docs/user_manual/preamble/features.rst:22
 msgid "View data"
 msgstr "Vizualizarea datelor"
+
+#: ../../docs/user_manual/preamble/features.rst:24
+msgid ""
+"You can view combinations of vector and raster data (in 2D or 3D) in "
+"different formats and projections without conversion to an internal or "
+"common format. Supported formats include:"
+msgstr ""
+"Puteți vizualiza combinații de date vectoriale și raster (în 2D sau 3D) în "
+"diferite formate și proiecții, fără a conversia într-un format intern sau "
+"comun. Formatele acceptate sunt:"
+
+#: ../../docs/user_manual/preamble/features.rst:29
+msgid ""
+"Spatially-enabled tables and views using PostGIS, SpatiaLite and MS SQL "
+"Spatial, Oracle Spatial, vector formats supported by the installed OGR "
+"library, including GeoPackage, ESRI Shapefile, MapInfo, SDTS, GML and many "
+"more. See section :ref:`label_workingvector`."
+msgstr ""
+"Tabelele și vederile activate spațial cu ajutorul PostGIS, SpatiaLite și MS "
+"SQL Spatial, Oracle Spatial, formatele vectoriale acceptate de biblioteca "
+"OGR instalată, inclusiv GeoPackage, ESRI Shapefile, MapInfo, SDTS, GML și "
+"multe altele. Consultați secțiunea :ref:`label_workingvector`."
 
 #: ../../docs/user_manual/preamble/features.rst:34
 msgid ""
@@ -37,9 +81,20 @@ msgid ""
 msgstr ""
 "Formatele raster și imaginile acceptate de biblioteca GDAL (Geospatial Data "
 "Abstraction Library), cum ar fi GeoTIFF, ERDAS IMG, ArcInfo ASCII GRID, "
-"JPEG, PNG și multe altele. Vedeți secțiunea :ref:`working_with_raster`."
+"JPEG, PNG și multe altele. Parcurgeți secțiunea :ref:`working_with_raster`."
+
+#: ../../docs/user_manual/preamble/features.rst:37
+msgid ""
+"Mesh data (TINs and regular grids are supported). See :ref:`label_meshdata`."
+msgstr ""
+"Suprafețele poliedrice (sunt acceptate TIN-urile și grilele obișnuite). "
+"Consultați :ref:`label_meshdata`."
 
 #: ../../docs/user_manual/preamble/features.rst:38
+msgid "Vector tiles"
+msgstr "Plăcuțe vectoriale"
+
+#: ../../docs/user_manual/preamble/features.rst:39
 msgid ""
 "GRASS raster and vector data from GRASS databases (location/mapset). See "
 "section :ref:`sec_grass`."
@@ -47,19 +102,36 @@ msgstr ""
 "Date raster și vectoriale GRASS din bazele de date GRASS (locație/set de "
 "hărți). Parcurgeți secțiunea :ref:`sec_grass`."
 
-#: ../../docs/user_manual/preamble/features.rst:40
+#: ../../docs/user_manual/preamble/features.rst:41
 msgid ""
 "Online spatial data served as OGC Web Services, including WMS, WMTS, WCS, "
-"WFS, and WFS-T. See section :ref:`sec_ogc`."
+"WFS, and WFS-T. See section :ref:`working_with_ogc`."
 msgstr ""
-"Date spațiale online, servite de Servicii Web OGC, inclusiv WMS, WMTS, WCS, "
-"WFS, și WFS-T. Parcurgeți secțiunea :ref:`sec_ogc`."
+"Datele spațiale online au servit ca Servicii Web OGC, inclusiv WMS, WMTS, "
+"WCS, WFS și WFS-T. Mai multe informații în :ref:`working_with_ogc`."
 
-#: ../../docs/user_manual/preamble/features.rst:50
+#: ../../docs/user_manual/preamble/features.rst:44
+msgid ""
+"The QGIS authentication infrastructure helps you manage user/password, "
+"certificates and keys for web services and other resources."
+msgstr ""
+"Infrastructura de autentificare QGIS vă ajută să gestionați "
+"utilizatorul/parola, certificatele și cheile serviciilor web și a altor "
+"resurse."
+
+#: ../../docs/user_manual/preamble/features.rst:47
+msgid "Spreadsheets (ODS / XLSX)"
+msgstr "Foi de calcul (ODS / XLSX)"
+
+#: ../../docs/user_manual/preamble/features.rst:49
+msgid "Temporal data are supported."
+msgstr "Datele temporale sunt acceptate."
+
+#: ../../docs/user_manual/preamble/features.rst:53
 msgid "Explore data and compose maps"
 msgstr "Explorarea datelor și compunerea hărților"
 
-#: ../../docs/user_manual/preamble/features.rst:52
+#: ../../docs/user_manual/preamble/features.rst:55
 msgid ""
 "You can compose maps and interactively explore spatial data with a friendly "
 "GUI. The many helpful tools available in the GUI include:"
@@ -68,57 +140,61 @@ msgstr ""
 "prin intermediul interfeței grafice prietenoase. Printre cele mai multe "
 "instrumente utile disponibile în GUI se includ:"
 
-#: ../../docs/user_manual/preamble/features.rst:55
+#: ../../docs/user_manual/preamble/features.rst:58
 msgid "QGIS browser"
 msgstr "Navigatorul QGIS"
 
-#: ../../docs/user_manual/preamble/features.rst:56
+#: ../../docs/user_manual/preamble/features.rst:59
 msgid "On-the-fly reprojection"
 msgstr "Reproiectarea Din-Zbor"
 
-#: ../../docs/user_manual/preamble/features.rst:57
+#: ../../docs/user_manual/preamble/features.rst:61
 msgid "DB Manager"
 msgstr "DB Manager"
 
-#: ../../docs/user_manual/preamble/features.rst:60
+#: ../../docs/user_manual/preamble/features.rst:63
+msgid "Report"
+msgstr "Raport"
+
+#: ../../docs/user_manual/preamble/features.rst:64
 msgid "Overview panel"
 msgstr "Panoul de Vizualizare"
 
-#: ../../docs/user_manual/preamble/features.rst:61
+#: ../../docs/user_manual/preamble/features.rst:65
 msgid "Spatial bookmarks"
 msgstr "Semne de carte Spațiale"
 
-#: ../../docs/user_manual/preamble/features.rst:62
+#: ../../docs/user_manual/preamble/features.rst:66
 msgid "Annotation tools"
 msgstr "Instrumente de adnotare"
 
-#: ../../docs/user_manual/preamble/features.rst:63
+#: ../../docs/user_manual/preamble/features.rst:67
 msgid "Identify/select features"
 msgstr "Identificarea/selectarea entităților"
 
-#: ../../docs/user_manual/preamble/features.rst:64
+#: ../../docs/user_manual/preamble/features.rst:68
 msgid "Edit/view/search attributes"
 msgstr "Editarea/vizualizarea/căutarea atributelor"
 
-#: ../../docs/user_manual/preamble/features.rst:66
+#: ../../docs/user_manual/preamble/features.rst:70
 msgid "Data-defined vector and raster symbology tools"
 msgstr ""
 "Instrumente de simbologie definită cu ajutorul datelor, pentru rastere și "
 "vectori"
 
-#: ../../docs/user_manual/preamble/features.rst:67
+#: ../../docs/user_manual/preamble/features.rst:71
 msgid "Atlas map composition with graticule layers"
 msgstr "Compoziția hărților pentru atlas, folosind straturile cu graticule"
 
-#: ../../docs/user_manual/preamble/features.rst:69
+#: ../../docs/user_manual/preamble/features.rst:73
 msgid "Support for saving and restoring projects"
 msgstr "Suport pentru salvarea și restaurarea proiectelor"
 
-#: ../../docs/user_manual/preamble/features.rst:73
+#: ../../docs/user_manual/preamble/features.rst:77
 msgid "Create, edit, manage and export data"
 msgstr "Crearea, editarea, gestionarea și exportul datelor"
 
-#: ../../docs/user_manual/preamble/features.rst:75
+#: ../../docs/user_manual/preamble/features.rst:79
 msgid ""
 "You can create, edit, manage and export vector and raster layers in several "
 "formats. QGIS offers the following:"
@@ -126,27 +202,27 @@ msgstr ""
 "Puteți crea, edita, gestiona și exporta în diverse formate straturile raster"
 " sau vectoriale. QGIS oferă următoarele:"
 
-#: ../../docs/user_manual/preamble/features.rst:80
+#: ../../docs/user_manual/preamble/features.rst:84
 msgid "Georeferencer plugin to geocode images"
 msgstr "Plugin-ul de georeferențiere pentru geocodarea imaginelor"
 
-#: ../../docs/user_manual/preamble/features.rst:84
+#: ../../docs/user_manual/preamble/features.rst:88
 msgid "Support for visualizing and editing OpenStreetMap data"
 msgstr "Suport pentru salvarea și editarea datelor OpenStreetMap"
 
-#: ../../docs/user_manual/preamble/features.rst:87
+#: ../../docs/user_manual/preamble/features.rst:91
 msgid "Improved handling of spatial database tables"
 msgstr "Gestionarea îmbunătățită a tabelelor bazei de date spațiale"
 
-#: ../../docs/user_manual/preamble/features.rst:88
+#: ../../docs/user_manual/preamble/features.rst:92
 msgid "Tools for managing vector attribute tables"
 msgstr "Instrumente pentru gestionarea tabelelor cu atribute vectoriale"
 
-#: ../../docs/user_manual/preamble/features.rst:89
+#: ../../docs/user_manual/preamble/features.rst:93
 msgid "Option to save screenshots as georeferenced images"
 msgstr "Opțiunea de a salva capturile de ecran ca imagini georeferențiate"
 
-#: ../../docs/user_manual/preamble/features.rst:90
+#: ../../docs/user_manual/preamble/features.rst:94
 msgid ""
 "DXF-Export tool with enhanced capabilities to export styles and plugins to "
 "perform CAD-like functions"
@@ -154,19 +230,19 @@ msgstr ""
 "Instrumentul DXF-Export cu capacități sporite pentru exportul stilurilor și "
 "a plugin-urilor pentru a efectua funcții similare CAD"
 
-#: ../../docs/user_manual/preamble/features.rst:94
+#: ../../docs/user_manual/preamble/features.rst:98
 msgid "Analyze data"
 msgstr "Analiza datelor"
 
-#: ../../docs/user_manual/preamble/features.rst:114
+#: ../../docs/user_manual/preamble/features.rst:118
 msgid "Publish maps on the Internet"
 msgstr "Publicarea hărților de pe Internet"
 
-#: ../../docs/user_manual/preamble/features.rst:122
+#: ../../docs/user_manual/preamble/features.rst:126
 msgid "Extend QGIS functionality through plugins"
 msgstr "Extinderea funcționalității QGIS prin intermediul plugin-urilor"
 
-#: ../../docs/user_manual/preamble/features.rst:124
+#: ../../docs/user_manual/preamble/features.rst:128
 msgid ""
 "QGIS can be adapted to your special needs with the extensible plugin "
 "architecture and libraries that can be used to create plugins. You can even "
@@ -176,19 +252,19 @@ msgstr ""
 "plugin-uri extensibile și biblioteci care pot fi folosite pentru a crea "
 "plugin-uri. Puteți crea chiar noi aplicații cu C++ sau Python!"
 
-#: ../../docs/user_manual/preamble/features.rst:129
+#: ../../docs/user_manual/preamble/features.rst:133
 msgid "Core Plugins"
 msgstr "Plugin-uri de bază"
 
-#: ../../docs/user_manual/preamble/features.rst:131
+#: ../../docs/user_manual/preamble/features.rst:135
 msgid "Core plugins include:"
 msgstr "Plugin-urile de bază includ:"
 
-#: ../../docs/user_manual/preamble/features.rst:147
+#: ../../docs/user_manual/preamble/features.rst:150
 msgid "External Python Plugins"
 msgstr "Plugin-urile Externe Python"
 
-#: ../../docs/user_manual/preamble/features.rst:149
+#: ../../docs/user_manual/preamble/features.rst:152
 msgid ""
 "QGIS offers a growing number of external Python plugins that are provided by"
 " the community. These plugins reside in the official Plugins Repository and "
@@ -201,19 +277,19 @@ msgstr ""
 " Instalatorului de Plugin-uri Python. Parcurgeți secțiunea "
 ":ref:`managing_plugins`."
 
-#: ../../docs/user_manual/preamble/features.rst:156
+#: ../../docs/user_manual/preamble/features.rst:159
 msgid "Python Console"
 msgstr "Consola Python"
 
-#: ../../docs/user_manual/preamble/features.rst:174
+#: ../../docs/user_manual/preamble/features.rst:177
 msgid "Known Issues"
 msgstr "Probleme Cunoscute"
 
-#: ../../docs/user_manual/preamble/features.rst:177
+#: ../../docs/user_manual/preamble/features.rst:180
 msgid "Number of open files limitation"
 msgstr "Limitarea numărului de fișiere deschise"
 
-#: ../../docs/user_manual/preamble/features.rst:179
+#: ../../docs/user_manual/preamble/features.rst:182
 msgid ""
 "If you are opening a large QGIS project and you are sure that all layers are"
 " valid, but some layers are flagged as bad, you are probably faced with this"
@@ -230,15 +306,15 @@ msgstr ""
 "``ulimit``, modifică limitele numai pentru procesul curent; noua limită va "
 "fi moștenită de către orice proces copil."
 
-#: ../../docs/user_manual/preamble/features.rst:187
+#: ../../docs/user_manual/preamble/features.rst:190
 msgid "You can see all current ulimit info by typing:"
 msgstr "Puteți vedea toate informațiile ulimit curente, tastând:"
 
-#: ../../docs/user_manual/preamble/features.rst:209
+#: ../../docs/user_manual/preamble/features.rst:212
 msgid "**To fix it forever**"
 msgstr "**Pentru a remedia definitiv problema**"
 
-#: ../../docs/user_manual/preamble/features.rst:211
+#: ../../docs/user_manual/preamble/features.rst:214
 msgid ""
 "On most Linux systems, resource limits are set on login by the "
 "``pam_limits`` module according to the settings contained in "
@@ -253,6 +329,14 @@ msgstr ""
 "asemenea, prin intermediul sudo), dar va trebui să vă conectați din nou "
 "pentru ca schimbările să aibă efect."
 
-#: ../../docs/user_manual/preamble/features.rst:218
+#: ../../docs/user_manual/preamble/features.rst:221
 msgid "More info:"
 msgstr "Mai multe informații:"
+
+#: ../../docs/user_manual/preamble/features.rst:223
+msgid ""
+"https://www.cyberciti.biz/faq/linux-increase-the-maximum-number-of-open-"
+"files/ https://linuxaria.com/article/open-files-in-linux"
+msgstr ""
+"https://www.cyberciti.biz/faq/linux-increase-the-maximum-number-of-open-"
+"files/ https://linuxaria.com/article/open-files-in-linux"

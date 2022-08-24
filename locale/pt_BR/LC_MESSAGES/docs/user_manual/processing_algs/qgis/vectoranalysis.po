@@ -2,438 +2,1076 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2022
+# Letícia Jardim, 2022
+# Vanessa Stelzer, 2022
+# Ana Camargo, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 10:19+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:13+0000\n"
+"Last-Translator: Ana Camargo, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 "Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:14
+msgid "Basic statistics for fields"
+msgstr "Estatísticas básicas para campos"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:15
+msgid ""
+"Generates basic statistics for a field of the attribute table of a vector "
+"layer."
+msgstr ""
+"Gera estatísticas básicas para um campo da tabela de atributos de uma camada"
+" vetorial."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:28
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:177
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:267
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:348
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:442
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:554
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:638
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:738
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:854
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:923
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1010
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1095
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1174
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1242
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1404
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:185
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:281
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:377
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:499
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:617
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:708
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:815
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:953
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1048
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1152
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1243
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1330
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1399
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1530
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1698
 msgid "Parameters"
 msgstr "Parâmetros"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:34
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:59
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:183
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:203
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:274
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:324
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:355
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:406
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:449
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:512
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:560
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:603
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:645
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:688
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:745
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:812
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:860
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:893
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:929
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:958
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1016
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1047
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1101
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1122
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1180
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1213
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1248
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:67
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:191
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:217
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:288
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:344
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:387
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:427
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:463
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:506
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:575
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:623
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:673
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:715
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:765
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:825
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:885
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:911
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:959
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:993
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1018
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1054
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1100
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1158
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1195
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1249
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1278
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1411
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1447
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1336
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1366
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1409
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1462
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1498
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1536
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1572
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1705
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1747
 msgid "Label"
 msgstr "Etiqueta"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:35
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:60
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:184
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:204
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:275
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:325
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:356
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:407
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:450
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:513
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:561
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:604
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:646
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:689
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:746
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:813
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:861
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:894
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:930
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:959
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1017
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1048
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1102
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1123
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1181
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1214
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1249
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:68
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:192
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:218
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:289
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:345
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:388
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:428
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:464
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:507
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:576
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:624
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:674
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:716
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:766
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:826
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:886
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:912
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:960
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:994
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1019
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1055
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1101
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1159
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1196
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1250
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1279
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1412
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1448
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1337
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1367
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1410
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1463
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1499
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1537
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1573
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1706
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1748
 msgid "Name"
 msgstr "Nome"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:36
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:61
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:185
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:205
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:276
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:326
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:357
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:408
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:451
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:514
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:562
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:605
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:647
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:690
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:747
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:814
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:862
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:895
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:931
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:960
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1018
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1049
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1103
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1124
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1182
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1215
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1250
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:69
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:193
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:219
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:290
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:346
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:389
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:429
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:465
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:508
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:577
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:625
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:675
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:717
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:767
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:827
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:887
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:913
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:961
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:995
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1020
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1056
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1102
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1160
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1197
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1251
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1280
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1413
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1449
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1338
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1368
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1411
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1464
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1500
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1538
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1574
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1707
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1749
 msgid "Type"
 msgstr "Tipo"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:37
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:62
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:186
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:206
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:277
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:327
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:358
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:409
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:452
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:515
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:563
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:606
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:648
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:691
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:748
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:815
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:863
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:896
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:932
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:961
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1019
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1050
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1104
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1125
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1183
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1216
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1251
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:70
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:194
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:220
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:291
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:347
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:390
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:430
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:466
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:509
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:578
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:626
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:676
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:718
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:768
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:828
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:888
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:914
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:962
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:996
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1021
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1057
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1103
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1161
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1198
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1252
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1281
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1414
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1450
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1339
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1369
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1412
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1465
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1501
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1539
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1575
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1708
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1750
 msgid "Description"
 msgstr "Descrição"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:46
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:63
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:71
 msgid "**Statistics**"
 msgstr "**Estatísticas**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:48
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:65
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:947
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:968
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1111
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1128
-msgid "[html]"
-msgstr "[html]"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:52
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:197
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:318
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:400
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:506
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:597
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:682
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:806
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:887
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:952
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1041
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1116
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1207
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1272
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1441
-msgid "Outputs"
-msgstr "Saídas"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:83
-msgid "**Minimum value**"
-msgstr "**Valor mínimo**"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:84
-msgid "``MIN``"
-msgstr "``MIN``"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:87
-msgid "**Maximum value**"
-msgstr "**Valor máximo**"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:88
-msgid "``MAX``"
-msgstr "``MAX``"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:107
-msgid "**Sum**"
-msgstr "**Soma**"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:108
-msgid "``SUM``"
-msgstr "``SOMA``"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:188
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:360
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:454
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:565
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:650
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:865
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:934
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1021
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1106
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1185
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1253
-msgid "``INPUT``"
-msgstr "``ENTRADA``"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:192
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:208
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:313
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:329
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:395
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:411
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:501
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:517
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:592
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:608
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:677
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:693
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:801
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:817
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:881
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:898
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:942
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:963
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1036
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1052
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1193
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1218
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1267
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1283
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1436
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1452
-msgid "``OUTPUT``"
-msgstr "``SAÍDA``"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:264
-msgid "``Default menu``: :menuselection:`Vector --> Analysis Tools`"
-msgstr "``Menu padrão``: :menuselection:`Vetor --> Analisar`"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:278
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1419
-msgid "**Polygons**"
-msgstr "**Polígonos**"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:289
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:298
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:385
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:759
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:774
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1026
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1258
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:303
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:312
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:433
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:839
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:854
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1068
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1081
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1168
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1259
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1468
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1546
 msgid "Optional"
 msgstr "Opcional"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:307
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:573
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:658
-msgid "``FIELD``"
-msgstr "``CAMPO``"
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:50
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:73
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1083
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1110
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1261
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1284
+msgid "[html]"
+msgstr "[html]"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:308
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:378
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:876
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:977
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1425
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1431
-msgid "[string]"
-msgstr "[string]"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:359
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:864
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:933
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1020
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1105
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1184
-msgid "**Input layer**"
-msgstr "**Camada de entrada**"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:367
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:872
-msgid "Default: 5"
-msgstr "Padrão: 5"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:373
-msgid "Default: 1.0"
-msgstr "Padrão: 1.0"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:389
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:783
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:797
-msgid "Default: False"
-msgstr "Padrão: Falso"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:478
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:495
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:582
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:60
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:211
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:338
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:457
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:569
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:667
-msgid "Default: 0"
-msgstr "Padrão: 0"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:752
-msgid "Input layer"
-msgstr "Camada de entrada"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:938
-msgid "``FIELDS``"
-msgstr "``CAMPOS``"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1023
-msgid "Input vector layer"
-msgstr "Camada vetorial de entrada"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1142
-msgid "**Number of points**"
-msgstr "**Número de pontos**"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1187
-msgid "The input layer."
-msgstr "A camada de entrada."
-
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:759
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:905
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1012
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1094
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1189
-msgid "``LAYERS``"
-msgstr "``CAMADAS``"
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1272
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1360
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1492
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1566
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1741
+msgid "Outputs"
+msgstr "Saídas"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1192
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1217
-msgid "**Output layer**"
-msgstr "**Camada de saída**"
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:77
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:81
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:85
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:89
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:101
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:105
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:109
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:113
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:117
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:121
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:125
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:129
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:133
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:145
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:149
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:153
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:228
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:233
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:238
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:243
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:397
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:403
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:474
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:550
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:891
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:969
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1115
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1288
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1292
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1296
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1300
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1304
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1423
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1429
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1436
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1509
+msgid "[number]"
+msgstr "[número]"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1197
-msgid "Specify the output vector layer. One of:"
-msgstr "Especifique a camada  vetorial de saída. Uma de:"
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:91
+msgid "**Minimum value**"
+msgstr "**Valor mínimo**"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:92
+msgid "``MIN``"
+msgstr "``MIN``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:95
+msgid "**Maximum value**"
+msgstr "**Valor máximo**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:96
+msgid "``MAX``"
+msgstr "``MAX``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:111
+msgid "**Coefficient of Variation**"
+msgstr "**Coeficiente de variação**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:112
+msgid "``CV``"
+msgstr "``CV``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:115
+msgid "**Sum**"
+msgstr "**Soma**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:116
+msgid "``SUM``"
+msgstr "``SOMA``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:119
+msgid "**Mean value**"
+msgstr "**Valor médio**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:120
+msgid "``MEAN``"
+msgstr "`` MÉDIA``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:123
+msgid "**Standard deviation**"
+msgstr "**Desvio padrão**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:131
+msgid "**Median**"
+msgstr "**Mediana**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:132
+msgid "``MEDIAN``"
+msgstr "``MEDIANA``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:157
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:248
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:355
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:478
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:589
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:685
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:777
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:921
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1029
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1124
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1205
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1308
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1378
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1513
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1675
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1758
+msgid "Python code"
+msgstr "Código Python"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:196
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:392
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:511
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:628
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:720
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:964
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1059
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1163
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1254
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1341
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1414
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1541
+msgid "``INPUT``"
+msgstr "``ENTRADA``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:197
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:201
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:223
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:656
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:679
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:868
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:917
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1711
+msgid "[vector: line]"
+msgstr "[vetor: linha]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:200
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:222
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:327
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:349
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:409
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:468
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:558
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:580
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:655
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:678
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:747
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:770
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:867
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:916
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:974
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1023
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1069
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1105
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1178
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1200
-msgid "Save to File..."
-msgstr "Salvar para Arquivo..."
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1349
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1371
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1444
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1503
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1555
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1577
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1730
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1752
+msgid "``OUTPUT``"
+msgstr "``SAÍDA``"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1201
-msgid "Save to Geopackage..."
-msgstr "Salvar para Geopackage..."
-
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1202
-msgid "Save to PostGIS Table..."
-msgstr "Salvar para Tabela PostGIS..."
-
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1204
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
 msgid "The file encoding can also be changed here."
 msgstr "A codificação do arquivo também pode ser alterada aqui."
 
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1295
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:236
+msgid "**Minimum elevation**"
+msgstr "**Elevação mínima**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:241
+msgid "**Maximum elevation**"
+msgstr "**Elevação máxima**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:260
+msgid "Count points in polygon"
+msgstr "Contar pontos em polígono"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:278
+msgid "``Default menu``: :menuselection:`Vector --> Analysis Tools`"
+msgstr "``Menu padrão``: :menuselection:`Vetor --> Analisar`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:292
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1713
+msgid "**Polygons**"
+msgstr "**Polígonos**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:293
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1714
+msgid "``POLYGONS``"
+msgstr "``POLÍGONOS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:294
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:328
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:350
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1715
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1731
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1753
+msgid "[vector: polygon]"
+msgstr "[vetor: polígono]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:297
+msgid "**Points**"
+msgstr "**Pontos**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:298
+msgid "``POINTS``"
+msgstr "``PONTOS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:299
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:393
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:410
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:469
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:512
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:522
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:559
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:581
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:748
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:771
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1179
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1201
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1255
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1415
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1445
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1504
+msgid "[vector: point]"
+msgstr "[vetor: ponto]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:315
+msgid ""
+"Points are classified based on the selected attribute and if several points "
+"with the same attribute value are within the polygon, only one of them is "
+"counted. The final count of the points in a polygon is, therefore, the count"
+" of different classes that are found in it."
+msgstr ""
+"Os pontos são classificados com base no atributo selecionado e se vários "
+"pontos com o mesmo valor de atributo estiverem dentro do polígono, apenas um"
+" deles será contado. A contagem final dos pontos em um polígono é, portanto,"
+" a contagem das diferentes classes que nele se encontram."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:321
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:636
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:728
+msgid "``FIELD``"
+msgstr "``CAMPO``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:322
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:444
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:451
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:999
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1006
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1119
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1479
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1486
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1719
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1725
+msgid "[string]"
+msgstr "[string]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:371
+msgid ""
+"The algorithm requires two parameters, a minimum cluster size, and the "
+"maximum distance allowed between clustered points."
+msgstr ""
+"O algoritmo requer dois parâmetros, um tamanho mínimo de agrupamento e a "
+"distância máxima permitida entre os pontos agrupados."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:380
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:818
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1402
+msgid "Basic parameters"
+msgstr "Parâmetros básicos"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:391
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:963
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1058
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1162
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1253
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1340
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1413
+msgid "**Input layer**"
+msgstr "**Camada de entrada**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:394
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:966
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1061
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1416
+msgid "Layer to analyze"
+msgstr "Camada a ser analisada"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:395
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1421
+msgid "**Minimum cluster size**"
+msgstr "**Tamanho mínimo do conjunto**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:396
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1422
+msgid "``MIN_SIZE``"
+msgstr "``TAMANHO_MIN``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:399
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:971
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1425
+msgid "Default: 5"
+msgstr "Padrão: 5"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:400
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1426
+msgid "Minimum number of features to generate a cluster"
+msgstr "Número mínimo de feições para gerar um conjunto"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:405
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1431
+msgid "Default: 1.0"
+msgstr "Padrão: 1.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:408
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:467
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:973
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1022
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1443
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1502
+msgid "**Clusters**"
+msgstr "**Conjuntos**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:420
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:878
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:986
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1455
+msgid "Advanced parameters"
+msgstr "Parâmetros avançados"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:435
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:861
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:898
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1470
+msgid "[boolean]"
+msgstr "[boleano]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:437
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:863
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:900
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1472
+msgid "Default: False"
+msgstr "Padrão: Falso"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:454
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1009
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1489
+msgid "Name of the field with the count of features in the same cluster"
+msgstr "Nome do campo com a contagem de feições no mesmo grupo"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:490
+msgid "Distance matrix"
+msgstr "Matriz de distância"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:533
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:643
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:735
+msgid "[enumeration]"
+msgstr "[enumeração]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:535
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:552
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:645
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:737
+msgid "Default: 0"
+msgstr "Padrão: 0"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:536
+msgid "Different types of calculation are available:"
+msgstr "Diferentes tipos de cálculo estão disponíveis:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:544
+msgid "1 --- Standard (N x T) distance matrix"
+msgstr "1 --- Matriz de distância padrão (N x T)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:548
+msgid "**Use only the nearest (k) target points**"
+msgstr "**Use apenas os pontos alvo (k) mais próximos**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:638
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:730
+msgid ""
+"Field to use to uniquely identify features of the destination layer. Used in"
+" the output attribute table"
+msgstr ""
+"Campo a ser usado para identificar exclusivamente as feições da camada de "
+"destino. Usado na tabela de atributos de saída"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:641
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:733
+msgid "**Measurement unit**"
+msgstr "**Unidade de medida**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:642
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:734
+msgid "``UNIT``"
+msgstr "``UNIDADE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:646
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:738
+msgid "Units in which to report the distance to the closest feature:"
+msgstr "Unidades nas quais relatar a distância até a feição mais próxima:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:649
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:741
+msgid "0 --- Meters"
+msgstr "0 --- Metros"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:650
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:742
+msgid "1 --- Feet"
+msgstr "1 --- Pés"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:651
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:743
+msgid "2 --- Miles"
+msgstr "2 --- Milhas"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:652
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:744
+msgid "3 --- Kilometers"
+msgstr "3 --- Quilômetros"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:653
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:745
+msgid "4 --- Layer units"
+msgstr "4 --- Unidades de camada"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:659
+msgid ""
+"Specify the output line vector layer connecting the matching points. One of:"
+msgstr ""
+"Especificar a camada vetorial da linha de saída conectando os pontos "
+"correspondentes. Um de:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:797
+msgid ""
+"If input layers are not point layers, a point on the surface of the "
+"geometries will be taken as the connecting location."
+msgstr ""
+"Se as camadas de entrada não forem camadas de pontos, um ponto na superfície"
+" das geometrias será considerado como o local de conexão."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:800
+msgid ""
+"Optionally, geodesic lines can be created, which represent the shortest path"
+" on the surface of an ellipsoid. When geodesic mode is used, it is possible "
+"to split the created lines at the antimeridian (±180 degrees longitude), "
+"which can improve rendering of the lines. Additionally, the distance between"
+" vertices can be specified. A smaller distance results in a denser, more "
+"accurate line."
+msgstr ""
+"Opcionalmente, podem ser criadas linhas geodésicas, que representam o "
+"caminho mais curto na superfície de um elipsóide. Quando o modo geodésico é "
+"usado, é possível dividir as linhas criadas no antimeridiano (±180 graus de "
+"longitude), o que pode melhorar a renderização das linhas. Além disso, a "
+"distância entre os vértices pode ser especificada. Uma distância menor "
+"resulta em uma linha mais densa e precisa."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:832
+msgid "Input layer"
+msgstr "Camada de entrada"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:859
+msgid "**Create geodesic lines**"
+msgstr "**Criar linhas geodésicas**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:860
+msgid "``GEODESIC``"
+msgstr "``GEODÉSICO``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:864
+msgid ""
+"Create geodesic lines (the shortest path on the surface of an ellipsoid)"
+msgstr ""
+"Criar linhas geodésicas (o caminho mais curto na superfície de um elipsóide)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:889
+msgid "**Distance between vertices (geodesic lines only)**"
+msgstr "**Distância entre vértices (somente linhas geodésicas)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:893
+msgid "Default: 1000.0 (kilometers)"
+msgstr "Padrão: 1000.0 (quilômetros)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:894
+msgid ""
+"Distance between consecutive vertices (in kilometers). A smaller distance "
+"results in a denser, more accurate line"
+msgstr ""
+"Distância entre vértices consecutivos (em quilômetros). Uma distância menor "
+"resulta em uma linha mais densa e precisa"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:896
+msgid "**Split lines at antimeridian (±180 degrees longitude)**"
+msgstr "**Linhas divididas em antimeridiano (±180 graus de longitude)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:977
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1072
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1181
+msgid "Default:``[Create temporary layer]``"
+msgstr "Padrão:``[Criar camada temporária]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1041
+msgid "List unique values"
+msgstr "Listar valores únicos"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1042
+msgid ""
+"Lists unique values of an attribute table field and counts their number."
+msgstr ""
+"Lista valores exclusivos de um campo de tabela de atributos e conta seu "
+"número."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1063
+msgid "``FIELDS``"
+msgstr "``CAMPOS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1065
+msgid "Field to analyze"
+msgstr "Campo para analisar"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1066
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1104
+msgid "**Unique values**"
+msgstr "**Valores únicos**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1070
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1106
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1556
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1578
+msgid "[table]"
+msgstr "[tabela]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1073
+msgid "Specify the summary table layer with unique values. One of:"
+msgstr ""
+"Especificar a camada da tabela de resumo com valores exclusivos. Um de:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1079
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1108
+msgid "**HTML report**"
+msgstr "**Relatório HTML**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1085
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1263
+msgid "Default:``[Save to temporary file]``"
+msgstr "Padrão:``[Salvar em arquivo temporário]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1113
+msgid "**Total unique values**"
+msgstr "**Valores únicos totais**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1118
+msgid "``Unique values``"
+msgstr "``Valores únicos``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1136
+msgid "Mean coordinate(s)"
+msgstr "Coordenada(s) média(s)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1165
+msgid "Input vector layer"
+msgstr "Camada vetorial de entrada"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1177
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1199
+msgid "**Mean coordinates**"
+msgstr "**Coordenadas médias**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1182
+msgid "Specify the (point vector) layer for the result. One of:"
+msgstr "Especifique a camada (vetor de pontos) para o resultado. Um de:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1202
+msgid "Resulting point(s) layer"
+msgstr "Camada de ponto(s) resultante(s)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1217
+msgid "Nearest neighbour analysis"
+msgstr "Análise do vizinho mais próximo"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1224
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1289
+msgid "Observed mean distance"
+msgstr "Distância média observada"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1225
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1293
+msgid "Expected mean distance"
+msgstr "Distância média esperada"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1226
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1297
+msgid "Nearest neighbour index"
+msgstr "Índice do vizinho mais próximo"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1227
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1301
+msgid "Number of points"
+msgstr "Número de pontos"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1256
+msgid "Point vector layer to calculate the statistics on"
+msgstr "Camada vetorial de ponto para calcular as estatísticas "
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1257
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1282
+msgid "**Nearest neighbour**"
+msgstr "**Vizinho mais próximo**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1286
+msgid "**Observed mean distance**"
+msgstr "**Distância média observada**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1290
+msgid "**Expected mean distance**"
+msgstr "**Distância média esperada**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1294
+msgid "**Nearest neighbour index**"
+msgstr "**Índice do vizinho mais próximo**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1298
+msgid "**Number of points**"
+msgstr "**Número de pontos**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1343
+msgid "The input layer."
+msgstr "A camada de entrada."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1345
+msgid "``LAYERS``"
+msgstr "``CAMADAS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1346
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1552
+msgid "[vector: any] [list]"
+msgstr "[vetor: qualquer] [lista]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1348
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1370
+msgid "**Output layer**"
+msgstr "**Camada de saída**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1353
+msgid "Specify the output vector layer. One of:"
+msgstr "Especifique a camada  vetorial de saída. Uma de:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1391
+msgid "|322|"
+msgstr "|322|"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1420
+msgid "Field containing the temporal information"
+msgstr "Campo contendo as informações temporais"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1438
+msgid "Default: 0.0 (days)"
+msgstr "Padrão: 0.0 (dias)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1525
+msgid "Statistics by categories"
+msgstr "Estatísticas por categorias"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1550
+msgid "**Field(s) with categories**"
+msgstr "**Campo(s) com categorias**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1554
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1576
+msgid "**Statistics by category**"
+msgstr "**Estatísticas por categoria**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1579
+msgid "Table containing the statistics"
+msgstr "Tabela contendo as estatísticas"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1589
 msgid "Statistics"
 msgstr "Estatísticas"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1296
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1590
 msgid "String"
 msgstr "String"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1297
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1591
 msgid "Numeric"
 msgstr "Numérico"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1298
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1592
 msgid "Date"
 msgstr "Data"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1300
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1301
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1302
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1304
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1306
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1308
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1310
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1312
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1314
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1316
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1317
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1318
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1320
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1321
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1322
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1325
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1329
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1333
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1337
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1341
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1345
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1349
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1353
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1357
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1361
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1365
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1368
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1372
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1376
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1594
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1595
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1596
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1598
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1600
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1602
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1604
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1606
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1608
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1610
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1611
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1612
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1614
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1615
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1616
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1619
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1623
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1627
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1631
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1635
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1639
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1643
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1647
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1651
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1655
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1659
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1662
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1666
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1670
 msgid "|checkbox|"
 msgstr "|checkbox|"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1415
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1774
+msgid "checkbox"
+msgstr "caixa de seleção"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1597
+msgid "Unique values (``UNIQUE``)"
+msgstr "Valores únicos (``ÚNICO``)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1609
+msgid "Minimal value (``MIN``)"
+msgstr "Valor mínimo (``MIN``)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1613
+msgid "Maximal value (``MAX``)"
+msgstr "Valor máximo (``MAX``)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1621
+msgid "Sum (``SUM``)"
+msgstr "Soma (``SOMA``)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1625
+msgid "Mean value (``MEAN``)"
+msgstr "Valor médio (``MEDIA``)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1629
+msgid "Median value (``MEDIAN``)"
+msgstr "Valor da mediana (``MEDIANA``)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1637
+msgid "Coefficient of variation (``CV``)"
+msgstr "Coeficiente de variação (``CV``)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1649
+msgid "First Quartile (``FIRSTQUARTILE``)"
+msgstr "Primeiro quartil (``PRIMEIROQUARTIL``)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1653
+msgid "Third Quartile (``THIRDQUARTILE``)"
+msgstr "Terceiro quartil (``TERCEIROQUARTIL``)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1661
+msgid "Minimum Length (``MIN_LENGTH``)"
+msgstr "Comprimento mínimo (``COMPRIMENTO_MIN``)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1665
+msgid "Mean Length (``MEAN_LENGTH``)"
+msgstr "Comprimento médio (``COMPRIMENTO_MÉDIO`)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1669
+msgid "Maximum Length (``MAX_LENGTH``)"
+msgstr "Comprimento máximo (``COMPRIMENTO_MAX``)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1687
+msgid "Sum line lengths"
+msgstr "Soma dos comprimentos das linhas"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1709
 msgid "**Lines**"
 msgstr "**Linhas**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1710
+msgid "``LINES``"
+msgstr "``LINHAS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1716
+msgid "Polygon vector layer"
+msgstr "Camada de vetor de polígono"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1717
+msgid "**Lines length field name**"
+msgstr "**Nome do campo de comprimento das linhas**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1721
+msgid "Default: 'LENGTH'"
+msgstr "Padrão: 'COMPRIMENTO'"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1729
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1751
+msgid "**Line length**"
+msgstr "**Comprimento da linha**"

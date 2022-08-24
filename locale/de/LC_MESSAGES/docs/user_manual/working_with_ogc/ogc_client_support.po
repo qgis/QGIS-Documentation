@@ -2,26 +2,31 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2022
+# Bernhard Ströbl <b.stroebl@stroweb.de>, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 11:59+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"POT-Creation-Date: 2022-04-27 02:44+0000\n"
+"PO-Revision-Date: 2022-03-14 05:08+0000\n"
+"Last-Translator: Bernhard Ströbl <b.stroebl@stroweb.de>, 2022\n"
 "Language-Team: German (https://www.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.1\n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:5
+msgid "Working with OGC / ISO protocols"
+msgstr "Arbeiten mit OGC / ISO-Protokollen"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:14
 msgid ""
@@ -35,6 +40,19 @@ msgstr ""
 "der Forschung sowie aus Non-Profit Organisationen Vereinen. Die Mitglieder "
 "entwickeln und implementieren Standards für den Austausch räumlicher Daten, "
 "GIS-Datenprocessing und standardisierte Bereitstellung von Geodaten."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:19
+msgid ""
+"Describing a basic data model for geographic features, an increasing number "
+"of specifications are developed by OGC to serve specific needs for "
+"interoperable location and geospatial technology, including GIS. Further "
+"information can be found at https://www.opengeospatial.org/."
+msgstr ""
+"Während sie ein Grunddatenmodell für geografische Objekte beschreibt, wird "
+"eine steigende Anzahl von Spezifikationen durch die OGC entwickelt, die den "
+"besonderen Bedürfnissen für interoperable Technologien für räumliche und "
+"örtliche Daten, inklusive GIS, Rechnung tragen. Weitere Informationen finden"
+" Sie unter https://www.opengeospatial.org/."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:26
 msgid "Important OGC specifications supported by QGIS are:"
@@ -60,6 +78,14 @@ msgstr "**WFS-T** --- Web Feature Service - Transactional (:ref:`ogc-wfs`)"
 msgid "**WCS** --- Web Coverage Service (:ref:`ogc-wcs`)"
 msgstr "**WCS** --- Web Coverage Service (:ref:`ogc-wcs`)"
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:33
+msgid "**WPS** --- Web Processing Service"
+msgstr "**WPS** --- Web Processing Service"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:34
+msgid "**CSW** --- Catalog Service for the Web"
+msgstr "**CSW** --- Catalog Service for the Web"
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:35
 msgid "**SFS** --- Simple Features for SQL (:ref:`label_postgis`)"
 msgstr "**SFS** --- Simple Features for SQL (:ref:`label_postgis`)"
@@ -80,6 +106,16 @@ msgstr ""
 "unterstützt mittlerweile die oben genannten Spezifikationen als Client in "
 "Form von **SFS** (durch den Postgresql/PostGIS Datenprovider, vgl. "
 ":ref:`label_postgis`)."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:43
+msgid ""
+"You can also share your maps and data through the WMS, WMTS, WFS, WFS-T and "
+"WCS protocols using a webserver with :ref:`QGIS Server <QGIS-Server-"
+"manual>`, UMN MapServer or GeoServer installed."
+msgstr ""
+"Sie können Ihre Karten und Daten auch über die Protokolle WMS, WMTS, WFS, "
+"WFS-T und WCS teilen, indem Sie einen Webserver benutzen, auf dem :ref:`QGIS"
+" Server <QGIS-Server-manual>`, UMN MapServer oder GeoServer installiert ist."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:50
 msgid "WMS/WMTS Client"
@@ -210,7 +246,7 @@ msgid ""
 "(KVP) and RESTful. These two interfaces are different, and you need to "
 "specify them to QGIS differently."
 msgstr ""
-"Dei zwei Typen von WMTS Schnittstellen die QGIS unterstützt sind die über "
+"Die zwei Typen von WMTS Schnittstellen die QGIS unterstützt sind die über "
 "Key-Value-Pairs (KVP) und RESTful. Diese zwei Schnittstellen sind "
 "unterschiedlich und Sie müssen diese für QGIS unterschiedlich spezifizieren."
 
@@ -245,6 +281,36 @@ msgstr ""
 "Der **RESTful WMTS** Service erfordert eine andere Form, eine einfache URL. "
 "Das von der OGC empfohlene Format ist:"
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:141
+msgid ""
+"This format helps you to recognize that it is a RESTful address. A RESTful "
+"WMTS is accessed in QGIS by simply adding its address in the WMS setup in "
+"the URL field of the form. An example of this type of address for the case "
+"of an Austrian basemap is "
+"https://maps.wien.gv.at/basemap/1.0.0/WMTSCapabilities.xml."
+msgstr ""
+"An diesem Format können Sie erkennen, dass es sich um eine RESTful Adresse "
+"handelt. Einen RESTful WMTS erreichen Sie von QGIS aus, indem Sie einfach "
+"seine Adresse in das Feld für die URL im WMS-Formular eingeben. Ein Beispiel"
+" für diese Art von Adresse für den Fall der österreichischen Grundkarte ist "
+"https://maps.wien.gv.at/basemap/1.0.0/WMTSCapabilities.xml."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:146
+msgid ""
+"You can still find some old services called WMS-C. These services are quite "
+"similar to WMTS (i.e., same purpose but working a little bit differently). "
+"You can manage them the same as you do WMTS services. Just add "
+"``?tiled=true`` at the end of the url. See "
+"https://wiki.osgeo.org/wiki/Tile_Map_Service_Specification for more "
+"information about this specification."
+msgstr ""
+"Es gibt immer noch einige alte WMS-C-Dienste. Diese sind ähnlich wie WMTS "
+"(d.h. sie dienen dem selben Zweck, funktionieren aber anders). Sie können "
+"Sie genau so verwalten wie WMTS-Dienste. Fügen Sie einfach ``?tiled=true`` "
+"an das Ende der URL an. Siehe "
+"https://wiki.osgeo.org/wiki/Tile_Map_Service_Specification für weitere "
+"Informationen über diese Spezifikation."
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:152
 msgid "When you read WMTS, you can often think WMS-C also."
 msgstr "Wenn Sie WMTS lesen können Sie auch an WMS-C denken."
@@ -261,6 +327,207 @@ msgstr ""
 "Wenn Sie das WMS Feature das erste Mal in QGIS verwenden sind keine Server "
 "definiert."
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:161
+msgid "You then need to create connections to the server you are targeting:"
+msgstr ""
+"Dann müssen Sie Verbindungen zu den Servern, auf die Sie zugreifen wollen, "
+"definieren:"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:163
+msgid ""
+"Go to the |wms| :guilabel:`WMS/WMTS` tab of the :guilabel:`Data Source "
+"Manager` dialog, either by:"
+msgstr ""
+"Gehen Sie zum Tab |wms| :guilabel:`WMS/WMTS` des Dialogs "
+":guilabel:`Datenquellenverwaltung` indem Sie:"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:726
+msgid "wms"
+msgstr "wms"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:166
+msgid ""
+"clicking the |dataSourceManager| :sup:`Open Data Source Manager` button (or "
+"pressing :kbd:`Ctrl+L`) and enabling the tab"
+msgstr ""
+"entweder auf die Schaltfläche |dataSourceManager| "
+":sup:`Datenquellenverwaltung öffnen` klicken (oder Tastenkürzel "
+":kbd:`Strg+L`) und dann den Tab aktivieren"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:710
+msgid "dataSourceManager"
+msgstr "dataSourceManager"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:168
+msgid ""
+"clicking the |addWmsLayer| :sup:`Add WMS layer` button on the *Manage "
+"Layers* toolbar"
+msgstr ""
+"oder auf die Schaltfläche |addWmsLayer| :sup:`WMS/WMTS-Layer hinzufügen` in "
+"der *Layerverwaltungswerkzeugleiste* klicken"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:706
+msgid "addWmsLayer"
+msgstr "addWmsLayer"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:170
+msgid ""
+"or selecting :menuselection:`Layer --> Add Layer -->` |addWmsLayer| "
+":menuselection:`Add WMS/WMTS Layer...` menu"
+msgstr ""
+"oder im Menü :menuselection:`Layer --> Layer hinzufügen -->` |addWmsLayer| "
+"den Menüpunkt :menuselection:`WMS/WMTS-Layer hinzufügen...` anwählen"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:172
+msgid ""
+"Press :guilabel:`New` from the :guilabel:`Layers` tab. The :guilabel:`Create"
+" a New WMS/WMTS Connection...` dialog appears."
+msgstr ""
+"Klicken Sie auf :guilabel:`Neu` im Tab :guilabel:`Layer`. Der Dialog "
+":guilabel:`Neue WMS/WMTS-Verbindung anlegen` erscheint."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:175
+msgid ""
+"Right-click the |wms| :guilabel:`WMS/WMTS` entry from within the "
+":ref:`Browser panel <label_browserpanel>` and select :guilabel:`New "
+"Connection...` also opens the :guilabel:`Create a New WMS/WMTS "
+"Connection...` dialog."
+msgstr ""
+"Ein Rechtsklick auf den Eintrag |wms| :guilabel:`WMS/WMTS` innerhalb des "
+":ref:`Bedienfelds Browser <label_browserpanel>` und die Auswahl "
+":guilabel:`Neue Verbindung...` öffnet ebenfalls den Dialog :guilabel:`Neue "
+"WMS/WMTS-Verbindung anlegen`."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:179
+msgid ""
+"Then enter the parameters to connect to your desired WMS server, as listed "
+"below:"
+msgstr ""
+"Geben Sie dort die Verbindungsparameter zu Ihrem gewünschten WMS-Server ein,"
+" so wie im Folgenden beschrieben:"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:187
+msgid "Creating a connection to a WMS server"
+msgstr "Verbindung mit einem WMS-Server anlegen"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:190
+msgid ""
+":guilabel:`Name`: A name for the connection. This name will be used in the "
+"Server Connections drop-down box so that you can distinguish it from other "
+"WMS servers."
+msgstr ""
+":guilabel:`Name`: Der Name der Verbindung. Der Name wird in der Auswahlliste"
+" der Serververbindungen benutzt, so dass Sie die WMS-Server unterscheiden "
+"können."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:193
+msgid ""
+":guilabel:`URL`: URL of the server providing the data. This must be a "
+"resolvable host name -- the same format as you would use to open a telnet "
+"connection or ping a host, i.e. the base URL only. For example, you "
+"shouldn't have fragments such as ``request=GetCapabilities`` or "
+"``version=1.0.0`` in your URL."
+msgstr ""
+":guilabel:`URL`: DIe URL des Servers. Es muss sich um einen auflösbaren "
+"Hostnamen handeln -- im selben Format, wie Sie es für eine Telnetverbindung "
+"benutzen würden oder um einen Host anzupingen, d.h. nur die Basis-URL. Ihre "
+"URL sollte also keine Teile wie ``request=GetCapabilities`` oder "
+"``version=1.0.0`` enthalten."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:198
+msgid ""
+":guilabel:`Authentication` (optional): using a :ref:`stored configuration "
+"<authentication_workflow>` or a basic authentication with "
+":guilabel:`Username` and :guilabel:`Password`."
+msgstr ""
+":guilabel:`Authentifizierung` (optional): Benutzen Sie eine "
+":ref:`gespeicherte Konfiguration <authentication_workflow>` oder eine Basic-"
+"Authentifizierung mit :guilabel:`Benutzername` und :guilabel:`Passwort`."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:204
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:580
+msgid ""
+"Entering **username** and **password** in the :guilabel:`Authentication` tab"
+" will keep unprotected credentials in the connection configuration. Those "
+"**credentials will be visible** if, for instance, you shared the project "
+"file with someone. Therefore, it's advisable to save your credentials in a "
+"*Authentication configuration* instead (:guilabel:`configurations` tab). See"
+" :ref:`authentication_index` for more details."
+msgstr ""
+"Wenn Sie **Benutzername** und **Passwort** im Tab "
+":guilabel:`Authentifizierung` speichern, werden diese Geheimnisse "
+"ungeschützt in der Verbindungskonfiguration gespeichert. Die **Geheimnisse "
+"sind sichtbar** wenn Sie z.B. die Projektdatei an andere weitergeben. "
+"Deshalb ist es ratsam. die Geheimnisse stattdessen in einer "
+"*Authentifizierungskonfiguration* (Tab :guilabel:`Konfigurationen`). "
+"Schlagen Sie Details in :ref:`authentication_index` nach."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:212
+msgid "HTTP :guilabel:`Referer`"
+msgstr "HTTP :guilabel:`Referer`"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:213
+msgid ""
+":guilabel:`DPI-Mode`: Available options are **all**, **off**, **QGIS**, "
+"**UMN** and **GeoServer**"
+msgstr ""
+":guilabel:`DPI-Modus`: die verfügbaren Optionen sind **alle**, **aus**, "
+"**QGIS**, **UMN** und **GeoServer**"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:215
+msgid ""
+"|unchecked| :guilabel:`Ignore GetMap/GetTile URI reported in capabilities`: "
+"if checked, use given URI from the :guilabel:`URL` field above."
+msgstr ""
+"|unchecked| :guilabel:`Gemeldete GetMap/GetTile/GetLengendGraphic-URI aus "
+"Diensteeigenschaften ignorieren`: falls Sie das anhaken, wird die im "
+":guilabel:`URL` Feld eingegebene URI benutzt."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:722
+msgid "unchecked"
+msgstr "unchecked"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:217
+msgid ""
+"|unchecked| :guilabel:`Ignore GetFeatureInfo URI reported in capabilities`: "
+"if checked, use given URI from the :guilabel:`URL` field above."
+msgstr ""
+"|unchecked| :guilabel:`Gemeldete GetFeatureInfo-URI ignorieren`: falls Sie "
+"das anhaken, wird die im :guilabel:`URL` Feld eingegebene URI benutzt."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:219
+msgid "|unchecked| :guilabel:`Ignore axis orientation (WMS 1.3/WMTS)`"
+msgstr "|unchecked| :guilabel:`Achsenorientierung ignorieren (WMS 1.3/WMTS)`"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:220
+msgid ""
+"|unchecked| :guilabel:`Ignore reported layer extents`: because the extent "
+"reported by raster layers may be smaller than the actual area which can be "
+"rendered (notably for WMS servers with symbology which takes more space than"
+" the data extent), check this option to avoid cropping raster layers to "
+"their reported extents, resulting in truncated symbols on the borders of "
+"these layers."
+msgstr ""
+"|unchecked| :guilabel:`Berichtete Layerausmaße ignorieren`: die von "
+"Rasterlayern berichteten Layerausmaße können kleiner sein, als die Fläche, "
+"die tatsächlich gerendert wird (dies ist insbesondere bei WMS-Servern der "
+"Fall, die Symbole enthalten, die mehr Platz brauchen als die Daten selbst). "
+"Haken Sie diese Option an, um zu verhindern, dass Rasterlayer am Rand "
+"abgeschnitten werden, was zu abgeschnittenen Symbolen in den Randbereichen "
+"dieser Layer führen kann"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:226
+msgid "|unchecked| :guilabel:`Invert axis orientation`"
+msgstr "|unchecked| :guilabel:`Achsenorientierung invertieren`"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:227
+msgid "|unchecked| :guilabel:`Smooth pixmap transformation`"
+msgstr "|unchecked| :guilabel:`Pixmap-Transformation glätten`"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:228
+msgid "Press :guilabel:`OK`"
+msgstr "Klicken Sie auf :guilabel:`OK`"
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:230
 msgid ""
 "Once the new WMS server connection has been created, it will be preserved "
@@ -269,9 +536,106 @@ msgstr ""
 "Wenn Sie die WMS-Verbindung einmal gesetzt haben, ist sie für zukünftige "
 "QGIS Sitzungen gespeichert."
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:235
+msgid ""
+"If you need to set up a proxy server to be able to receive WMS services from"
+" the internet, you can add your proxy server in the options. Choose "
+":menuselection:`Settings --> Options` and click on the :guilabel:`Network` "
+"tab. There, you can add your proxy settings and enable them by setting "
+"|checkbox| :guilabel:`Use proxy for web access`. Make sure that you select "
+"the correct proxy type from the :guilabel:`Proxy type` |selectString| drop-"
+"down menu."
+msgstr ""
+"Wenn Sie einen Proxyserver konfigurieren müssen, um WMS-Dienste aus dem "
+"Internet zu beziehen, können Sie Ihren Proxyserver in den Optionen "
+"hinzufügen. Wählen Sie im Menü :menuselection:`Einstellungen --> Optionen` "
+"und klicken Sie auf den Tab :guilabel:`Netzwerk`. Dort können Sie Ihre "
+"Proxyeinstellungen einfügen und sie durch Anhaken von |checkbox| "
+":guilabel:`Proxy für Webzugriff verwenden` aktivieren. Stellen Sie sicher, "
+"dass Sie den richtigen :guilabel:`Proxytyp` |selectString| aus der Auswahl "
+"eingestellt haben."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:708
+msgid "checkbox"
+msgstr "checkbox"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:718
+msgid "selectString"
+msgstr "selectString"
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:245
 msgid "Loading WMS/WMTS Layers"
 msgstr "WMS/WMTS Layer laden"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:247
+msgid ""
+"Once you have successfully filled in your parameters, you can use the "
+":guilabel:`Connect` button to retrieve the capabilities of the selected "
+"server. This includes the image encoding, layers, layer styles and "
+"projections. Since this is a network operation, the speed of the response "
+"depends on the quality of your network connection to the WMS server. While "
+"downloading data from the WMS server, the download progress is visualized in"
+" the lower left corner of the main QGIS dialog."
+msgstr ""
+"Sobald Sie einmal erfolgreich Ihre Parameter eingegeben haben, können Sie "
+"die Schaltfläche :guilabel:`Verbinden` benutzen, um die Eigenschaften des "
+"ausgewählten Servers herunterzuladen. Dazu gehören die Bildkodierung, die "
+"Layer und ihre Stile sowie die Bezugssysteme. Da es sich um eine "
+"Netzwerkanfrage handelt, hängt die Antwortgeschwindigkeit von der Qualität "
+"Ihrer Netzwerkverbindung zum WMS-Server ab. Während Daten vom WMS-Server "
+"heruntergeladen werden, wird der Downloadfortschritt in der unteren linken "
+"Ecke des QGIS-Hauptfensters dargestellt."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:255
+msgid ""
+"Your screen should now look a bit like :numref:`figure_OGC_add_wms`, which "
+"shows the response provided by a WMS server."
+msgstr ""
+"Ihr Bildschirm sollte nun so ähnlich wie im Bild "
+":numref:`figure_OGC_add_wms` aussehen, das die Antwort eines WMS-Servers "
+"darstellt."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:263
+msgid "Dialog for adding a WMS server, with filter on available layers"
+msgstr ""
+"Daten von einem WMS-Server hinzufügen, mit Auflistung der verfügbaren Layer"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:265
+msgid ""
+"The upper part of the :guilabel:`Layers` tab of the dialog shows a tree "
+"structure that can include layer groups embedding layers with their "
+"associated image style(s) served by the server. Each item can be identified "
+"by:"
+msgstr ""
+"Der obere Teil des Tabs :guilabel:`Layer` im Dialog zeigt eine Baumstruktur,"
+" die Layergruppen mit ihren enthaltenen Layern und dem (bzw. den) "
+"zugehörigen Stil(en) enthält, die vom Server angeboten werden. Jeder Eintrag"
+" wird durch:"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:270
+msgid "an :guilabel:`ID`"
+msgstr "eine :guilabel:`ID`"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:271
+msgid "a :guilabel:`Name`"
+msgstr "einen :guilabel:`Namen`"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:272
+msgid "a :guilabel:`Title`"
+msgstr "einen :guilabel:`Titel`"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:273
+msgid "and an :guilabel:`Abstract`."
+msgstr "und eine :guilabel:`Zusammenfassung` identifiziert."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:275
+msgid ""
+"The list can be filtered using the |search| widget in the top right corner."
+msgstr "Sie können die Liste mit dem Suchfeld |search| rechts oben filtern."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:716
+msgid "search"
+msgstr "search"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:277
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:283
@@ -321,60 +685,175 @@ msgstr ""
 msgid "**Options**"
 msgstr "**Optionen**"
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:326
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:298
+msgid ""
+"The Options area of the dialog provides means to configure the WMS requests."
+" You can define:"
+msgstr ""
+"Der Dialogbereich Optionen enthält Möglichkeiten, die WMS-Abfrage zu "
+"konfigurieren. Sie können folgendes einstellen:"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:301
+msgid ""
+":guilabel:`Tile size` if you want to set tile sizes (e.g., 256x256) to split"
+" up the WMS request into multiple requests."
+msgstr ""
+":guilabel:`Kachelgröße` wenn Sie die Kachelgröße (bspw., 256x256) einstellen"
+" wollen, um die WMS-Abfrage in viele einzelne Abfragen aufzuteilen."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:303
+msgid "The :guilabel:`Request step size`"
+msgstr "Die :guilabel:`Abfrageschrittgröße`"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:304
+msgid ""
+"The :guilabel:`Maximum number of GetFeatureInfo results` from the server"
+msgstr ""
+"Die :guilabel:`Maximale Anzahl von GetFeatureInfo-Ergebnissen` vom Server"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:306
+msgid ""
+"Each WMS layer can be presented in multiple CRSs, depending on the "
+"capability of the WMS server. If you select a WMS from the list, a field "
+"with the default projection provided by the web server appears. Press the : "
+"|setProjection| :sup:`Select CRS` widget to replace the default projection "
+"of the WMS with another CRS supported by the WMS server."
+msgstr ""
+"Jeder WMS-Layer kann, in Abhängigkeit von den Eigenschaften des WMS-Servers,"
+" in verschiedenen KBS präsentiert werden. Wenn Sie einen Layer aus der Liste"
+" auswählen, erscheint ein Feld mit der Standardprojektion, die der Server "
+"anbietet. Klicken Sie auf |setProjection| :sup:`KBS auswählen`, um die "
+"Standardprojektion des Layers mit einem anderen vom Server unterstützten KBS"
+" zu ersetzen."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:720
+msgid "setProjection"
+msgstr "setProjection"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:311
+msgid ""
+"A dialog similar to the one shown in :numref:`figure_projection_custom` will"
+" appear. The main difference with the WMS version of the dialog is that only"
+" those CRSs supported by the WMS server will be shown."
+msgstr ""
+"Sie sehen einen Dialog ähnlich wie im Bild "
+":numref:`figure_projection_custom`. Der Hauptunterschied zur WMS-Version des"
+" Dialogs ist, dass er nur KBS anzeigt, die vom WMS-Server unterstützt "
+"werden."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:315
+msgid ""
+"Finally you can activate |checkbox| :guilabel:`Use contextual WMS Legend` if"
+" the WMS Server supports this feature. Then only the relevant legend for "
+"your current map view extent will be shown and thus will not include legend "
+"items for items you can't see in the current map."
+msgstr ""
+"Schließlich können Sie noch |checkbox| :guilabel:`Kontextbezogene WMS-"
+"Legende verwenden` anhaken, falls der WMS-Server dies unterstützt. Dann wird"
+" nur die für Ihren aktuellen Kartenausschnitt relevante Legende gezeigt, "
+"wodurch Legendenelemente für Objekte ausgeblendet werden, die Sie im "
+"aktuellen Kartenausschnitt gar nicht sehen."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:320
+msgid ""
+"At the bottom of the dialog, a :guilabel:`Layer name` text field displays "
+"the selected item's :guilabel:`Title`. You can change the name at your will."
+" This name will appear in the :guilabel:`Layers` panel after you pressed the"
+" :guilabel:`Add` button and loaded the layer(s) in QGIS."
+msgstr ""
+"Ganz unten im Dialog sehen Sie ein Eingabefeld :guilabel:`Layername`, das "
+"den :guilabel:`Titel` des ausgewählten Eintrags enthält. Sie können den "
+"Namen nach Belieben ändern. Dieser Name wird im Bedienfeld :guilabel:`Layer`"
+" erscheinen, nachdem Sie auf die Schaltfläche :guilabel:`Hinzufügen` "
+"geklickt und damit den oder die Layer nach QGIS geladen haben."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:325
+msgid ""
+"You can select several layers at once, but only one image style per layer. "
+"When several layers are selected, they will be combined at the WMS server "
+"and transmitted to QGIS in one go, as a single layer. The default name is a "
+"slash (`/`) separated list of their original title."
+msgstr ""
+"Sie können mehrere Layer auf einmal auswählen aber nur einen Stil pro Layer."
+" Sollten mehrere Layer ausgewählt sein, werden sie auf dem WMS-Server "
+"zusammen gerendert und auf einmal als einzelner Layer an QGIS übertragen. "
+"Der Standardname ist eine Liste ihrer Titel, die mit Querstrich (`/`) "
+"getrennt ist."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:330
 msgid "**Layer Order**"
 msgstr "**Layerreihenfolge**"
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:338
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:332
+msgid ""
+"The :guilabel:`Layer Order` tab lists the selected layers available from the"
+" current connected WMS server."
+msgstr ""
+"Der Tab :guilabel:`Layerreihenfolge` listet die ausgewählten Layer des "
+"verbundenen WMS-Server auf."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:335
+msgid ""
+"WMS layers rendered by a server are overlaid in the order listed in the "
+":guilabel:`Layers` tab, from top to bottom of the list. If you want to "
+"change the overlay order, you can use the :guilabel:`Up` and "
+":guilabel:`Down` buttons of the :guilabel:`Layer Order` tab."
+msgstr ""
+"Die WMS-Layers werden vom Server in der Reihenfolge übereinander gerendert, "
+"wie sie in der Liste im Tab :guilabel:`Layer` erscheinen, von oben nach "
+"unten. Möchten Sie die Reihenfolge ändern, können Sie die Schaltflächen "
+":guilabel:`Auf` und :guilabel:`Ab` im Tab :guilabel:`Layerreihenfolge` "
+"verwenden."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:342
 msgid "**Transparency**"
 msgstr "**Transparenz**"
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:346
-msgid "**WMS Layer Transparency**"
-msgstr "**Transparenz von WMS-Layern**"
-
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:348
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:344
 msgid ""
-"The availability of WMS image transparency depends on the image encoding "
-"used: PNG and GIF support transparency, whilst JPEG leaves it unsupported."
+"The :guilabel:`Global transparency` setting from the :guilabel:`Layer "
+"Properties` is hard coded to be always on, where available."
 msgstr ""
-"Die WMS Bildtransparenz steht Ihnen abhänig von der Bildkodierung zur "
-"Verfügung: PNG und GIF unterstützen Transparenz währenddessen JPEG keine "
-"Untersützung bietet."
+"Die Einstellung für die :guilabel:`Globale Deckkraft` in den "
+":guilabel:`Layereigenschaften` ist hartkodiert, um stets aktiv zu sein, "
+"falls verfügbar."
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:351
-msgid "**Coordinate Reference System**"
-msgstr "**Koordinatenbezugsystem**"
-
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:356
-msgid ""
-"A coordinate reference system (CRS) is the OGC terminology for a QGIS "
-"projection."
-msgstr ""
-"Koordinatenbezugssystem (KBS) ist die Bezeichnung des OGC für eine "
-"Projektion in QGIS."
-
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:358
-msgid ""
-"Each WMS layer can be presented in multiple CRSs, depending on the "
-"capability of the WMS server."
-msgstr ""
-"Jeder WMS Layer kann abhängig von den Fähigkeiten des WMS in mehreren KBS "
-"dargestellt werden."
-
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:370
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:352
 msgid "Tilesets"
 msgstr "Tilesets"
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:374
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:356
 msgid "When using WMTS (Cached WMS) services like"
 msgstr "Wenn Sie WMTS (gecachte WMS) Dienste verwenden wie"
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:391
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:363
+msgid ""
+"you are able to browse through the :guilabel:`Tilesets` tab given by the "
+"server. Additional information like tile size, formats and supported CRS are"
+" listed in this table. In combination with this feature, you can use the "
+"tile scale slider by selecting :menuselection:`View --> Panels` ( or |kde| "
+":menuselection:`Settings --> Panels`), then choosing :guilabel:`Tile Scale "
+"Panel`. This gives you the available scales from the tile server with a nice"
+" slider docked in."
+msgstr ""
+"können Sie durch die vom Server angeboteten :guilabel:`Kachelsätze` browsen."
+" Zusätzliche Informationen wie Kachelgröße, Formate und unterstützte KBS "
+"sind in dieser Tabelle aufgeführt. Zusammen mit diesem Feature können Sie "
+"den Schiebregler für den Kachelmaßstab benutzen, den Sie im Menü "
+":menuselection:`Ansicht --> Bedienfelder` ( oder |kde| "
+":menuselection:`Einstellungen --> Bedienfelder`), und dann im "
+":guilabel:`Bedienfeld Kachelmaßstab` finden. Darin sehen Sie die vom "
+"Kachelserver angebotenen Maßstäbe mit einem praktischen Schieberegler."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:714
+msgid "kde"
+msgstr "kde"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:373
 msgid "Using the Identify Tool"
 msgstr "Das Objekte abfragen Werkzeug"
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:395
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:377
 msgid ""
 "Once you have added a WMS server, and if any layer from a WMS server is "
 "queryable, you can then use the |identify| :sup:`Identify` tool to select a "
@@ -389,11 +868,15 @@ msgstr ""
 "Textform geliefert. Die Formatierung hängt von dem jeweilig verwendeten WMS-"
 "Server ab."
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:403
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:712
+msgid "identify"
+msgstr "identify"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:385
 msgid "**Format selection**"
 msgstr "**Formatauswahl**"
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:405
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:387
 msgid ""
 "If multiple output formats are supported by the server, a combo box with "
 "supported formats is automatically added to the identify results dialog and "
@@ -404,11 +887,11 @@ msgstr ""
 "hinzugefügt und das ausgewählte Format kann im Projekt für den Layer "
 "gespeichert werden."
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:411
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:393
 msgid "**GML format support**"
 msgstr "**GML Formatunterstützung**"
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:413
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:395
 msgid ""
 "The |identify| :sup:`Identify` tool supports WMS server response "
 "(GetFeatureInfo) in GML format (it is called Feature in the QGIS GUI in this"
@@ -430,11 +913,11 @@ msgstr ""
 "von GetFeatureInfo im GML Format das Beispielsetup des UMN Mapservers unten "
 "an."
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:449
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:431
 msgid "**Viewing Properties**"
 msgstr "**Eigenschaften**"
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:454
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:436
 msgid ""
 "Once you have added a WMS server, you can view its properties by right-"
 "clicking on it in the legend and selecting :menuselection:`Properties`."
@@ -443,11 +926,11 @@ msgstr ""
 "Eigenschaften mit einem Rechtsklick in der Legende und dem Auswählen von "
 ":menuselection:`Eigenschaften` ansehen."
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:459
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:441
 msgid "**Metadata Tab**"
 msgstr "**Reiter Metadaten**"
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:464
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:446
 msgid ""
 "The tab :guilabel:`Metadata` displays a wealth of information about the WMS "
 "server, generally collected from the capabilities statement returned from "
@@ -461,15 +944,15 @@ msgstr ""
 "indem man den WMS Standard liest (siehe OPEN-GEOSPATIAL-CONSORTIUM "
 ":ref:`literature_and_web`), hier sind dazu einige praktische Definitionen:"
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:470
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:452
 msgid "**Server Properties**"
 msgstr "**Servereigenschaften**"
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:472
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:454
 msgid "**WMS Version** --- The WMS version supported by the server."
 msgstr "**WMS Version**-- Die WMS-Version, die vom Server unterstützt wird."
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:473
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:455
 msgid ""
 "**Image Formats** --- The list of MIME-types the server can respond with "
 "when drawing the map. QGIS supports whatever formats the underlying Qt "
@@ -480,7 +963,7 @@ msgstr ""
 " kann. QGIS unterstützt jedes Format, welches die darunterliegende "
 "Bibliothek QT unterstützt, mindestens aber ``image/png`` und ``image/jpeg``."
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:477
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:459
 msgid ""
 "**Identity Formats** --- The list of MIME-types the server can respond with "
 "when you use the Identify tool. Currently, QGIS supports the ``text-plain`` "
@@ -490,11 +973,11 @@ msgstr ""
 "Pixel-Abfragen antworten kann. Derzeit wird von QGIS nur der Typ ``text-"
 "plain`` unterstützt."
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:481
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:463
 msgid "**Layer Properties**"
 msgstr "**Layereigenschaften**"
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:483
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:465
 msgid ""
 "**Selected** --- Whether or not this layer was selected when its server was "
 "added to this project."
@@ -502,7 +985,7 @@ msgstr ""
 "**Ausgewählt** --- Gibt an, ob dieser Layer während des Hinzufügens des "
 "Server ausgewählt war."
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:485
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:467
 msgid ""
 "**Visible** --- Whether or not this layer is selected as visible in the "
 "legend (not yet used in this version of QGIS)."
@@ -510,7 +993,7 @@ msgstr ""
 "**Sichtbar** --- Gibt an, ob der Layer in der Legende angezeigt wird oder "
 "nicht. (noch nicht verwendet in der aktuellen Version von QGIS.)"
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:487
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:469
 msgid ""
 "**Can Identify** --- Whether or not this layer will return any results when "
 "the Identify tool is used on it."
@@ -518,7 +1001,7 @@ msgstr ""
 "**Kann abfragen** --- Gibt an, ob der Layer auf Abfragen Ergebnisse "
 "zurückgibt."
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:489
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:471
 msgid ""
 "**Can be Transparent** --- Whether or not this layer can be rendered with "
 "transparency. This version of QGIS will always use transparency if this is "
@@ -528,7 +1011,7 @@ msgstr ""
 " kann. Diese QGIS Version verwendet ein hardcodiertes ``Ja``, sofern die "
 "Bildkodierung Transparenz bietet"
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:492
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:474
 msgid ""
 "**Can Zoom In** --- Whether or not this layer can be zoomed in by the "
 "server. This version of QGIS assumes all WMS layers have this set to "
@@ -538,7 +1021,7 @@ msgstr ""
 " Diese Version von QGIS verwendet standardmäßig ``Ja``. Daher kann es sein, "
 "dass einige Layer komisch aussehen, die diese Funktion nicht unterstützen."
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:495
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:477
 msgid ""
 "**Cascade Count** --- WMS servers can act as a proxy to other WMS servers to"
 " get the raster data for a layer. This entry shows how many times the "
@@ -549,7 +1032,7 @@ msgstr ""
 "gibt an, wieviele WMS-Server angefragt werden müssen, um die Daten zu "
 "bekommen."
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:498
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:480
 msgid ""
 "**Fixed Width, Fixed Height** --- Whether or not this layer has fixed source"
 " pixel dimensions. This version of QGIS assumes all WMS layers have this set"
@@ -560,7 +1043,7 @@ msgstr ""
 "diesen Wert nicht gesetzt haben. Daher kann es sein, dass einige Layer "
 "komisch aussehen, die diese Funktion nicht unterstützen."
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:501
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:483
 msgid ""
 "**WGS 84 Bounding Box** --- The bounding box of the layer, in WGS 84 "
 "coordinates. Some WMS servers do not set this correctly (e.g., UTM "
@@ -578,7 +1061,7 @@ msgstr ""
 "Das WMS XML-Element ist ``LatLonBoundingBox``, ``EX_GeographicBoundingBox`` "
 "oder die CRS:84 ``BoundingBox``."
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:507
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:489
 msgid ""
 "**Available in CRS** --- The projections that this layer can be rendered in "
 "by the WMS server. These are listed in the WMS-native format."
@@ -587,7 +1070,7 @@ msgstr ""
 "Layer dargestellt werden kann. Diese sind dem Capabilities-Dokument des "
 "Servers entnommen."
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:509
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:491
 msgid ""
 "**Available in style** --- The image styles that this layer can be rendered "
 "in by the WMS server."
@@ -595,7 +1078,7 @@ msgstr ""
 "**Verfügbare Stile** --- Die Bildstile, in denen dieser Layer dargestellt "
 "werden kann."
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:523
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:505
 msgid ""
 "If a legendGraphic is available, it is shown below the layer. It is little "
 "and you have to click on it to open it in real dimension (due to "
@@ -608,7 +1091,7 @@ msgstr ""
 "Klicken auf die Legende des Layers öffnet einen Rahmen mit einer Legende in "
 "voller Auflösung."
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:533
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:515
 msgid ""
 "The legend will display contextual information based on your current scale. "
 "The WMS legend will be shown only if the WMS server has GetLegendGraphic "
@@ -620,11 +1103,11 @@ msgstr ""
 "GetLegendGraphic Capability hat und für dem Layer eine getCapability URL "
 "angegeben wurde, also müssen Sie einen Stil auswählen."
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:540
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:522
 msgid "WMS Client Limitations"
 msgstr "Einschränkungen des WMS-Klienten"
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:542
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:524
 msgid ""
 "Not all possible WMS client functionality had been included in this version "
 "of QGIS. Some of the more noteworthy exceptions follow."
@@ -632,15 +1115,15 @@ msgstr ""
 "Nicht alle mögliche WMS Client Funktionalitäten sind in diese Version von "
 "QGIS| integriert worden. Einige der bemerkenswerteren Ausnahmen folgen noch."
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:545
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:527
 msgid "**Editing WMS Layer Settings**"
 msgstr "**WMS-Layereigenschaften ändern**"
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:551
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:533
 msgid "**WMS Servers Requiring Authentication**"
 msgstr "**WMS-Server, die eine Authentifizierung benötigen**"
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:553
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:535
 msgid ""
 "Currently, publicly accessible and secured WMS services are supported. The "
 "secured WMS servers can be accessed by public authentication. You can add "
@@ -653,19 +1136,19 @@ msgstr ""
 "Anmeldeinformationen hinzufügen wenn Sie einen WMS Server hinzufügen. "
 "Schlagen Sie unter Abschnitt :ref:`ogc-wms-servers` Details nach."
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:560
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:542
 msgid "**Accessing secured OGC-layers**"
 msgstr "**Zugriff auf abgesicherte OGC-Layer**"
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:569
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:551
 msgid "**QGIS WMS Mapserver**"
 msgstr "**QGIS WMS Mapserver**"
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:577
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:559
 msgid "WCS Client"
 msgstr "WCS Client"
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:581
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:563
 msgid ""
 "|wcs| A Web Coverage Service (WCS) provides access to raster data in forms "
 "that are useful for client-side rendering, as input into scientific models, "
@@ -681,7 +1164,7 @@ msgstr ""
 " den Clients Teile von Serverinformationsbeständen basierend auf räumlichen "
 "Einschränkungen und Abfragekriterien auszuwählen."
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:587
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:569
 msgid ""
 "QGIS has a native WCS provider and supports both version 1.0 and 1.1 (which "
 "are significantly different), but currently it prefers 1.0, because 1.1 has "
@@ -693,7 +1176,7 @@ msgstr ""
 "vorgezogen da es mit 1.1 viele Probleme gibt (z.B. implementiert jeder "
 "Server es auf eine andere Art und Weise mit zahlreichen Besonderheiten)."
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:591
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:573
 msgid ""
 "The native WCS provider handles all network requests and uses all standard "
 "QGIS network settings (especially proxy). It is also possible to select "
@@ -708,15 +1191,15 @@ msgstr ""
 "ebenfalls das Auswählen der Zeitposition wenn Temporal Domain vom Server "
 "angeboten wird."
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:608
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:590
 msgid "WFS and WFS-T Client"
 msgstr "WFS und WFS-T Klient"
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:624
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:606
 msgid "**Loading a WFS Layer**"
 msgstr "**Einen WFS-Layer laden**"
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:676
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:658
 msgid ""
 "Note that any proxy settings you may have set in your preferences are also "
 "recognized."
@@ -724,6 +1207,6 @@ msgstr ""
 "Beachten Sie dass auch jede Proxyeinstellung die Sie in Ihren eingestellt "
 "haben berücksichtigt wird."
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:703
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:685
 msgid "Adding a WFS layer"
 msgstr "Einen WFS Layer hinzufügen"

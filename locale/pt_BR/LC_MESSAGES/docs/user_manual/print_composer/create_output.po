@@ -2,30 +2,41 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2022
+# Ana Camargo, 2022
+# Vanessa Stelzer, 2022
+# Letícia Jardim, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 10:26+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:11+0000\n"
+"Last-Translator: Letícia Jardim, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 "Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/user_manual/print_composer/create_output.rst:8
 msgid "Creating an Output"
 msgstr "Criando um arquivo de Saída"
+
+#: ../../docs/user_manual/print_composer/create_output.rst:632
+msgid "saveMapAsImage"
+msgstr "salvarMapaComoImagem"
+
+#: ../../docs/user_manual/print_composer/create_output.rst:630
+msgid "saveAsSVG"
+msgstr "salvarComoSVG"
 
 #: ../../docs/user_manual/print_composer/create_output.rst:42
 msgid ""
@@ -35,6 +46,10 @@ msgstr ""
 "O ícone |saveAsPDF| :sup:`Exportar como PDF` salva o layout de impressão "
 "definido diretamente como um arquivo :file:`PDF` (Portable Document Format)."
 
+#: ../../docs/user_manual/print_composer/create_output.rst:628
+msgid "saveAsPDF"
+msgstr "salvarComoPDF"
+
 #: ../../docs/user_manual/print_composer/create_output.rst:46
 msgid "Export settings"
 msgstr "Definições para exportação"
@@ -43,10 +58,22 @@ msgstr "Definições para exportação"
 msgid "Export as Image"
 msgstr "Exportar como Imagem"
 
+#: ../../docs/user_manual/print_composer/create_output.rst:66
+msgid "To export a layout as an image:"
+msgstr "Para exportar um layout como uma imagem:"
+
 #: ../../docs/user_manual/print_composer/create_output.rst:74
 msgid "In the next (:guilabel:`Image Export Options`) dialog:"
 msgstr ""
 "Na próxima caixa de diálogo (:guilabel:`Opções de Exportação de Imagem`):"
+
+#: ../../docs/user_manual/print_composer/create_output.rst:636
+msgid "unchecked"
+msgstr "desmarcado"
+
+#: ../../docs/user_manual/print_composer/create_output.rst:620
+msgid "checkbox"
+msgstr "caixa de seleção"
 
 #: ../../docs/user_manual/print_composer/create_output.rst:102
 msgid ""
@@ -89,6 +116,14 @@ msgstr ""
 " de texto, como buffers, estão em vigor. É por isso que a exportação como "
 "caminhos é recomendada."
 
+#: ../../docs/user_manual/print_composer/create_output.rst:202
+msgid "Export as PDF"
+msgstr "Exportar como PDF"
+
+#: ../../docs/user_manual/print_composer/create_output.rst:204
+msgid "To export a layout as PDF:"
+msgstr "Para exportar um layout como PDF:"
+
 #: ../../docs/user_manual/print_composer/create_output.rst:207
 msgid ""
 "Fill in the path and filename: unlike for image and SVG export, all the "
@@ -122,6 +157,10 @@ msgstr ""
 msgid "PDF Export Options"
 msgstr "Opções de exportação de PDF"
 
+#: ../../docs/user_manual/print_composer/create_output.rst:276
+msgid "Generate an Atlas"
+msgstr "Gerar um Atlas"
+
 #: ../../docs/user_manual/print_composer/create_output.rst:286
 msgid ""
 "a map item showing, for another layer, only features that share the same "
@@ -131,9 +170,25 @@ msgstr ""
 "compartilham o mesmo atributo que a feição atlas ou estão dentro de sua "
 "geometria."
 
+#: ../../docs/user_manual/print_composer/create_output.rst:292
+msgid ""
+"For each feature, the output is processed for all pages and items according "
+"to their exports settings."
+msgstr ""
+"Para cada feição, a saída é processada para todas as páginas e itens de "
+"acordo com suas configurações de exportação."
+
+#: ../../docs/user_manual/print_composer/create_output.rst:295
+msgid "**Use variables for more flexibility**"
+msgstr "**Usar variáveis para maior flexibilidade**"
+
 #: ../../docs/user_manual/print_composer/create_output.rst:317
 msgid ":guilabel:`Configuration`"
 msgstr ":guilabel:`Configuração`"
+
+#: ../../docs/user_manual/print_composer/create_output.rst:634
+msgid "selectString"
+msgstr "selecionarTexto"
 
 #: ../../docs/user_manual/print_composer/create_output.rst:348
 msgid ""
@@ -144,6 +199,10 @@ msgstr ""
 "Uma lista drop-down :guilabel:`Formato de exportação de imagem` para "
 "selecionar o formato de saída quando usar o botão |saveMapAsImage| "
 ":sup:`Exportar atlas como Imagens ...`."
+
+#: ../../docs/user_manual/print_composer/create_output.rst:362
+msgid "Customize labels with expression"
+msgstr "Customizar rótulos com expressão"
 
 #: ../../docs/user_manual/print_composer/create_output.rst:364
 msgid ""
@@ -161,6 +220,30 @@ msgstr ""
 msgid "or, another combination:"
 msgstr "ou outra combinação:"
 
+#: ../../docs/user_manual/print_composer/create_output.rst:622
+msgid "dataDefine"
+msgstr "definirDados"
+
+#: ../../docs/user_manual/print_composer/create_output.rst:501
+msgid "Preview and generate an atlas"
+msgstr "Pré-visualizar e gerar um atlas"
+
+#: ../../docs/user_manual/print_composer/create_output.rst:508
+msgid "Atlas Preview toolbar"
+msgstr "Barra de ferramentas de pré-visualização do Atlas"
+
+#: ../../docs/user_manual/print_composer/create_output.rst:610
+msgid "atlas"
+msgstr "atlas"
+
 #: ../../docs/user_manual/print_composer/create_output.rst:518
 msgid "|atlasNext| :sup:`Next feature`"
 msgstr "|atlasNext| :sup:`Next feature`"
+
+#: ../../docs/user_manual/print_composer/create_output.rst:547
+msgid "**Print a specific atlas feature**"
+msgstr "**Imprimir uma feição específica do atlas***"
+
+#: ../../docs/user_manual/print_composer/create_output.rst:560
+msgid "Use project defined relations for atlas creation"
+msgstr "Utilizar as relações definidas pelo projeto para a criação do atlas"

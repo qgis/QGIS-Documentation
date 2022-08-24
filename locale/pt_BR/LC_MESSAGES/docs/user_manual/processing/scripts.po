@@ -1,249 +1,446 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
-# Aline Furlanetto Viero <afviero@gmail.com>, 2020
+# Harrissou Sant-anna, 2022
+# Vanessa Stelzer, 2022
+# Letícia Jardim, 2022
+# Ana Camargo, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:31+0000\n"
-"Last-Translator: Aline Furlanetto Viero <afviero@gmail.com>, 2020\n"
+"POT-Creation-Date: 2022-06-08 02:39+0000\n"
+"PO-Revision-Date: 2022-03-14 05:14+0000\n"
+"Last-Translator: Ana Camargo, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.1\n"
 "Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/user_manual/processing/scripts.rst:6
+msgid "Writing new Processing algorithms as Python scripts"
+msgstr "Escrevendo novos algoritmos de Processamento como scripts Python"
+
+#: ../../docs/user_manual/processing/scripts.rst:13
+msgid "There are two options for writing Processing algorithms using Python."
+msgstr ""
+"Existem duas opções para escrever algoritmos de Processamento usando Python."
+
+#: ../../docs/user_manual/processing/scripts.rst:37
+msgid "The following code"
+msgstr "O seguinte código"
+
+#: ../../docs/user_manual/processing/scripts.rst:40
+msgid "counts the number of features"
+msgstr "conta o número de feições"
+
+#: ../../docs/user_manual/processing/scripts.rst:236
+msgid ""
+"Must return a new copy of your algorithm. If you change the name of the "
+"class, make sure you also update the value returned here to match!"
+msgstr ""
+"Deve retornar uma nova cópia do seu algoritmo. Se você alterar o nome da "
+"classe, certifique-se de atualizar também o valor retornado aqui para "
+"corresponder!"
+
+#: ../../docs/user_manual/processing/scripts.rst:241
+msgid "name (mandatory)"
+msgstr "nome (obrigatório)"
+
+#: ../../docs/user_manual/processing/scripts.rst:241
+msgid "Returns the unique algorithm name, used for identifying the algorithm."
+msgstr ""
+"Retorna o nome exclusivo do algoritmo, usado para identificar o algoritmo."
+
+#: ../../docs/user_manual/processing/scripts.rst:247
+msgid "group"
+msgstr "grupo"
+
+#: ../../docs/user_manual/processing/scripts.rst:247
+msgid "Returns the name of the group this algorithm belongs to."
+msgstr "Retorna o nome do grupo ao qual este algoritmo pertence."
+
+#: ../../docs/user_manual/processing/scripts.rst:250
+msgid "Returns the unique ID of the group this algorithm belongs to."
+msgstr "Retorna o ID único do grupo ao qual este algoritmo pertence."
+
+#: ../../docs/user_manual/processing/scripts.rst:256
+msgid "Here we define the inputs and outputs of the algorithm."
+msgstr "Aqui definimos as entradas e saídas do algoritmo."
+
+#: ../../docs/user_manual/processing/scripts.rst:266
+msgid "This is where the processing takes place."
+msgstr "É onde ocorre o processamento."
+
+#: ../../docs/user_manual/processing/scripts.rst:313
+msgid "count the number of features"
+msgstr "contar o número de feições"
+
+#: ../../docs/user_manual/processing/scripts.rst:314
+msgid "do a buffer operation"
+msgstr "fazer uma operação de buffer"
 
 #: ../../docs/user_manual/processing/scripts.rst:421
-#: ../../docs/user_manual/processing/scripts.rst:531
+#: ../../docs/user_manual/processing/scripts.rst:555
 msgid "Class"
 msgstr "Classes"
 
 #: ../../docs/user_manual/processing/scripts.rst:423
-#: ../../docs/user_manual/processing/scripts.rst:533
+#: ../../docs/user_manual/processing/scripts.rst:557
 msgid "Description"
 msgstr "Descrição"
 
-#: ../../docs/user_manual/processing/scripts.rst:428
+#: ../../docs/user_manual/processing/scripts.rst:424
 msgid ""
-":class:`QgsProcessingParameterBand <qgis.core.QgsProcessingParameterBand>`"
+":class:`QgsProcessingParameterAnnotationLayer "
+"<qgis.core.QgsProcessingParameterAnnotationLayer>`"
 msgstr ""
-":class:`QgsProcessingParameterBand <qgis.core.QgsProcessingParameterBand>`"
+":class:`QgsProcessingParameterAnnotationLayer "
+"<qgis.core.QgsProcessingParameterAnnotationLayer>`"
+
+#: ../../docs/user_manual/processing/scripts.rst:425
+msgid "``alg.ANNOTATION_LAYER``"
+msgstr "`alg.CAMADA_ANOTACAO``"
+
+#: ../../docs/user_manual/processing/scripts.rst:426
+msgid "An annotation layer"
+msgstr "Uma camada de texto"
 
 #: ../../docs/user_manual/processing/scripts.rst:431
 msgid ""
-":class:`QgsProcessingParameterBoolean "
-"<qgis.core.QgsProcessingParameterBoolean>`"
+":class:`QgsProcessingParameterBand <qgis.core.QgsProcessingParameterBand>`"
 msgstr ""
-":class:`QgsProcessingParameterBoolean "
-"<qgis.core.QgsProcessingParameterBoolean>`"
+":class:`QgsProcessingParameterBand <qgis.core.QgsProcessingParameterBand>`"
 
 #: ../../docs/user_manual/processing/scripts.rst:434
 msgid ""
-":class:`QgsProcessingParameterColor <qgis.core.QgsProcessingParameterColor>`"
+":class:`QgsProcessingParameterBoolean "
+"<qgis.core.QgsProcessingParameterBoolean>`"
 msgstr ""
-":class:`QgsProcessingParameterColor <qgis.core.QgsProcessingParameterColor>`"
+":class:`QgsProcessingParameterBoolean "
+"<qgis.core.QgsProcessingParameterBoolean>`"
+
+#: ../../docs/user_manual/processing/scripts.rst:436
+#: ../../docs/user_manual/processing/scripts.rst:560
+msgid "A boolean value"
+msgstr "Um valor booleano"
 
 #: ../../docs/user_manual/processing/scripts.rst:437
 msgid ""
-":class:`QgsProcessingParameterCrs <qgis.core.QgsProcessingParameterCrs>`"
+":class:`QgsProcessingParameterColor <qgis.core.QgsProcessingParameterColor>`"
 msgstr ""
-":class:`QgsProcessingParameterCrs <qgis.core.QgsProcessingParameterCrs>`"
+":class:`QgsProcessingParameterColor <qgis.core.QgsProcessingParameterColor>`"
 
-#: ../../docs/user_manual/processing/scripts.rst:440
-msgid ""
-":class:`QgsProcessingParameterDistance "
-"<qgis.core.QgsProcessingParameterDistance>`"
-msgstr ""
-":class:`QgsProcessingParameterDistance "
-"<qgis.core.QgsProcessingParameterDistance>`"
+#: ../../docs/user_manual/processing/scripts.rst:439
+msgid "A color"
+msgstr "Uma cor"
 
 #: ../../docs/user_manual/processing/scripts.rst:443
 msgid ""
-":class:`QgsProcessingParameterEnum <qgis.core.QgsProcessingParameterEnum>`"
+":class:`QgsProcessingParameterCrs <qgis.core.QgsProcessingParameterCrs>`"
 msgstr ""
-":class:`QgsProcessingParameterEnum <qgis.core.QgsProcessingParameterEnum>`"
+":class:`QgsProcessingParameterCrs <qgis.core.QgsProcessingParameterCrs>`"
 
-#: ../../docs/user_manual/processing/scripts.rst:446
-msgid ""
-":class:`QgsProcessingParameterExpression "
-"<qgis.core.QgsProcessingParameterExpression>`"
-msgstr ""
-":class:`QgsProcessingParameterExpression "
-"<qgis.core.QgsProcessingParameterExpression>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:449
-msgid ""
-":class:`QgsProcessingParameterExtent "
-"<qgis.core.QgsProcessingParameterExtent>`"
-msgstr ""
-":class:`QgsProcessingParameterExtent "
-"<qgis.core.QgsProcessingParameterExtent>`"
+#: ../../docs/user_manual/processing/scripts.rst:445
+msgid "A Coordinate Reference System"
+msgstr "Um Sistema de Referência de Coordenadas"
 
 #: ../../docs/user_manual/processing/scripts.rst:455
 msgid ""
-":class:`QgsProcessingParameterFile <qgis.core.QgsProcessingParameterFile>`"
+":class:`QgsProcessingParameterDistance "
+"<qgis.core.QgsProcessingParameterDistance>`"
 msgstr ""
-":class:`QgsProcessingParameterFile <qgis.core.QgsProcessingParameterFile>`"
+":class:`QgsProcessingParameterDistance "
+"<qgis.core.QgsProcessingParameterDistance>`"
 
 #: ../../docs/user_manual/processing/scripts.rst:458
 msgid ""
-":class:`QgsProcessingParameterFileDestination "
-"<qgis.core.QgsProcessingParameterFileDestination>`"
+":class:`QgsProcessingParameterEnum <qgis.core.QgsProcessingParameterEnum>`"
 msgstr ""
-":class:`QgsProcessingParameterFileDestination "
-"<qgis.core.QgsProcessingParameterFileDestination>`"
+":class:`QgsProcessingParameterEnum <qgis.core.QgsProcessingParameterEnum>`"
 
 #: ../../docs/user_manual/processing/scripts.rst:461
 msgid ""
-":class:`QgsProcessingParameterFolderDestination "
-"<qgis.core.QgsProcessingParameterFolderDestination>`"
+":class:`QgsProcessingParameterExpression "
+"<qgis.core.QgsProcessingParameterExpression>`"
 msgstr ""
-":class:`QgsProcessingParameterFolderDestination "
-"<qgis.core.QgsProcessingParameterFolderDestination>`"
+":class:`QgsProcessingParameterExpression "
+"<qgis.core.QgsProcessingParameterExpression>`"
+
+#: ../../docs/user_manual/processing/scripts.rst:462
+msgid "``alg.EXPRESSION``"
+msgstr "``alg.EXPRESSÃO``"
+
+#: ../../docs/user_manual/processing/scripts.rst:463
+msgid "An expression"
+msgstr "Uma expressão"
 
 #: ../../docs/user_manual/processing/scripts.rst:464
-#: ../../docs/user_manual/processing/scripts.rst:485
 msgid ""
-":class:`QgsProcessingParameterNumber "
-"<qgis.core.QgsProcessingParameterNumber>`"
+":class:`QgsProcessingParameterExtent "
+"<qgis.core.QgsProcessingParameterExtent>`"
 msgstr ""
-":class:`QgsProcessingParameterNumber "
-"<qgis.core.QgsProcessingParameterNumber>`"
+":class:`QgsProcessingParameterExtent "
+"<qgis.core.QgsProcessingParameterExtent>`"
+
+#: ../../docs/user_manual/processing/scripts.rst:465
+msgid "``alg.EXTENT``"
+msgstr "``alg.EXTENSÃO``"
+
+#: ../../docs/user_manual/processing/scripts.rst:466
+msgid "A spatial extent defined by xmin, xmax, ymin, ymax"
+msgstr "Uma extensão espacial definida por xmin, xmax, ymin, ymax"
+
+#: ../../docs/user_manual/processing/scripts.rst:468
+msgid "``alg.FIELD``"
+msgstr "``alg.CAMPO``"
+
+#: ../../docs/user_manual/processing/scripts.rst:469
+msgid "A field in the attribute table of a vector layer"
+msgstr "Um campo na tabela de atributos de uma camada vetorial"
+
+#: ../../docs/user_manual/processing/scripts.rst:470
+msgid ""
+":class:`QgsProcessingParameterFile <qgis.core.QgsProcessingParameterFile>`"
+msgstr ""
+":class:`QgsProcessingParameterFile <qgis.core.QgsProcessingParameterFile>`"
 
 #: ../../docs/user_manual/processing/scripts.rst:473
 msgid ""
-":class:`QgsProcessingParameterMapLayer "
-"<qgis.core.QgsProcessingParameterMapLayer>`"
+":class:`QgsProcessingParameterFileDestination "
+"<qgis.core.QgsProcessingParameterFileDestination>`"
 msgstr ""
-":class:`QgsProcessingParameterMapLayer "
-"<qgis.core.QgsProcessingParameterMapLayer>`"
+":class:`QgsProcessingParameterFileDestination "
+"<qgis.core.QgsProcessingParameterFileDestination>`"
 
 #: ../../docs/user_manual/processing/scripts.rst:476
 msgid ""
-":class:`QgsProcessingParameterMatrix "
-"<qgis.core.QgsProcessingParameterMatrix>`"
+":class:`QgsProcessingParameterFolderDestination "
+"<qgis.core.QgsProcessingParameterFolderDestination>`"
 msgstr ""
-":class:`QgsProcessingParameterMatrix "
-"<qgis.core.QgsProcessingParameterMatrix>`"
+":class:`QgsProcessingParameterFolderDestination "
+"<qgis.core.QgsProcessingParameterFolderDestination>`"
+
+#: ../../docs/user_manual/processing/scripts.rst:479
+msgid ""
+":class:`QgsProcessingParameterGeometry "
+"<qgis.core.QgsProcessingParameterGeometry>`"
+msgstr ""
+":class:`QgsProcessingParameterGeometry "
+"<qgis.core.QgsProcessingParameterGeometry>`"
+
+#: ../../docs/user_manual/processing/scripts.rst:480
+msgid "``alg.GEOMETRY``"
+msgstr "``alg.GEOMETRIA``"
+
+#: ../../docs/user_manual/processing/scripts.rst:481
+msgid "A geometry"
+msgstr "Uma geometria"
 
 #: ../../docs/user_manual/processing/scripts.rst:482
+#: ../../docs/user_manual/processing/scripts.rst:506
 msgid ""
-":class:`QgsProcessingParameterMultipleLayers "
-"<qgis.core.QgsProcessingParameterMultipleLayers>`"
+":class:`QgsProcessingParameterNumber "
+"<qgis.core.QgsProcessingParameterNumber>`"
 msgstr ""
-":class:`QgsProcessingParameterMultipleLayers "
-"<qgis.core.QgsProcessingParameterMultipleLayers>`"
+":class:`QgsProcessingParameterNumber "
+"<qgis.core.QgsProcessingParameterNumber>`"
 
-#: ../../docs/user_manual/processing/scripts.rst:488
-msgid ""
-":class:`QgsProcessingParameterPoint <qgis.core.QgsProcessingParameterPoint>`"
-msgstr ""
-":class:`QgsProcessingParameterPoint <qgis.core.QgsProcessingParameterPoint>`"
+#: ../../docs/user_manual/processing/scripts.rst:484
+msgid "An integer"
+msgstr "Um número inteiro"
+
+#: ../../docs/user_manual/processing/scripts.rst:487
+msgid "A layout"
+msgstr "Um layout"
+
+#: ../../docs/user_manual/processing/scripts.rst:490
+msgid "A layout item"
+msgstr "Um item de layout"
 
 #: ../../docs/user_manual/processing/scripts.rst:491
 msgid ""
-":class:`QgsProcessingParameterRange <qgis.core.QgsProcessingParameterRange>`"
+":class:`QgsProcessingParameterMapLayer "
+"<qgis.core.QgsProcessingParameterMapLayer>`"
 msgstr ""
-":class:`QgsProcessingParameterRange <qgis.core.QgsProcessingParameterRange>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:494
-msgid ""
-":class:`QgsProcessingParameterRasterLayer "
-"<qgis.core.QgsProcessingParameterRasterLayer>`"
-msgstr ""
-":class:`QgsProcessingParameterRasterLayer "
-"<qgis.core.QgsProcessingParameterRasterLayer>`"
-
-#: ../../docs/user_manual/processing/scripts.rst:496
-#: ../../docs/user_manual/processing/scripts.rst:499
-#: ../../docs/user_manual/processing/scripts.rst:566
-msgid "A raster layer"
-msgstr "Uma camada raster"
+":class:`QgsProcessingParameterMapLayer "
+"<qgis.core.QgsProcessingParameterMapLayer>`"
 
 #: ../../docs/user_manual/processing/scripts.rst:497
 msgid ""
-":class:`QgsProcessingParameterRasterDestination "
-"<qgis.core.QgsProcessingParameterRasterDestination>`"
+":class:`QgsProcessingParameterMatrix "
+"<qgis.core.QgsProcessingParameterMatrix>`"
 msgstr ""
-":class:`QgsProcessingParameterRasterDestination "
-"<qgis.core.QgsProcessingParameterRasterDestination>`"
+":class:`QgsProcessingParameterMatrix "
+"<qgis.core.QgsProcessingParameterMatrix>`"
 
 #: ../../docs/user_manual/processing/scripts.rst:503
 msgid ""
-":class:`QgsProcessingParameterFeatureSink "
-"<qgis.core.QgsProcessingParameterFeatureSink>`"
+":class:`QgsProcessingParameterMultipleLayers "
+"<qgis.core.QgsProcessingParameterMultipleLayers>`"
 msgstr ""
-":class:`QgsProcessingParameterFeatureSink "
-"<qgis.core.QgsProcessingParameterFeatureSink>`"
+":class:`QgsProcessingParameterMultipleLayers "
+"<qgis.core.QgsProcessingParameterMultipleLayers>`"
 
-#: ../../docs/user_manual/processing/scripts.rst:506
+#: ../../docs/user_manual/processing/scripts.rst:508
+#: ../../docs/user_manual/processing/scripts.rst:587
+msgid "A numerical value"
+msgstr "Um valor numérico"
+
+#: ../../docs/user_manual/processing/scripts.rst:509
 msgid ""
-":class:`QgsProcessingParameterFeatureSource "
-"<qgis.core.QgsProcessingParameterFeatureSource>`"
+":class:`QgsProcessingParameterPoint <qgis.core.QgsProcessingParameterPoint>`"
 msgstr ""
-":class:`QgsProcessingParameterFeatureSource "
-"<qgis.core.QgsProcessingParameterFeatureSource>`"
+":class:`QgsProcessingParameterPoint <qgis.core.QgsProcessingParameterPoint>`"
+
+#: ../../docs/user_manual/processing/scripts.rst:511
+msgid "A point"
+msgstr "Um ponto"
 
 #: ../../docs/user_manual/processing/scripts.rst:512
 msgid ""
-":class:`QgsProcessingParameterString "
-"<qgis.core.QgsProcessingParameterString>`"
+":class:`QgsProcessingParameterPointCloudLayer "
+"<qgis.core.QgsProcessingParameterPointCloudLayer>`"
 msgstr ""
-":class:`QgsProcessingParameterString "
-"<qgis.core.QgsProcessingParameterString>`"
+":class:`QgsProcessingParameterPointCloudLayer "
+"<qgis.core.QgsProcessingParameterPointCloudLayer>`"
 
-#: ../../docs/user_manual/processing/scripts.rst:515
-msgid ""
-":class:`QgsProcessingParameterVectorLayer "
-"<qgis.core.QgsProcessingParameterVectorLayer>`"
-msgstr ""
-":class:`QgsProcessingParameterVectorLayer "
-"<qgis.core.QgsProcessingParameterVectorLayer>`"
+#: ../../docs/user_manual/processing/scripts.rst:513
+msgid "``alg.POINT_CLOUD_LAYER``"
+msgstr "``alg.CAMADA_NUVEM_PONTOS``"
 
-#: ../../docs/user_manual/processing/scripts.rst:517
-#: ../../docs/user_manual/processing/scripts.rst:520
-#: ../../docs/user_manual/processing/scripts.rst:572
-msgid "A vector layer"
-msgstr "Uma camada vetorial"
+#: ../../docs/user_manual/processing/scripts.rst:514
+msgid "A point cloud layer"
+msgstr "Uma camada de nuvens de pontos"
 
 #: ../../docs/user_manual/processing/scripts.rst:518
 msgid ""
+":class:`QgsProcessingParameterRange <qgis.core.QgsProcessingParameterRange>`"
+msgstr ""
+":class:`QgsProcessingParameterRange <qgis.core.QgsProcessingParameterRange>`"
+
+#: ../../docs/user_manual/processing/scripts.rst:520
+msgid "A number range"
+msgstr "Um intervalo de números"
+
+#: ../../docs/user_manual/processing/scripts.rst:521
+msgid ""
+":class:`QgsProcessingParameterRasterLayer "
+"<qgis.core.QgsProcessingParameterRasterLayer>`"
+msgstr ""
+":class:`QgsProcessingParameterRasterLayer "
+"<qgis.core.QgsProcessingParameterRasterLayer>`"
+
+#: ../../docs/user_manual/processing/scripts.rst:523
+#: ../../docs/user_manual/processing/scripts.rst:526
+#: ../../docs/user_manual/processing/scripts.rst:590
+msgid "A raster layer"
+msgstr "Uma camada raster"
+
+#: ../../docs/user_manual/processing/scripts.rst:524
+msgid ""
+":class:`QgsProcessingParameterRasterDestination "
+"<qgis.core.QgsProcessingParameterRasterDestination>`"
+msgstr ""
+":class:`QgsProcessingParameterRasterDestination "
+"<qgis.core.QgsProcessingParameterRasterDestination>`"
+
+#: ../../docs/user_manual/processing/scripts.rst:529
+msgid "A map scale"
+msgstr "Uma escala do mapa"
+
+#: ../../docs/user_manual/processing/scripts.rst:530
+msgid ""
+":class:`QgsProcessingParameterFeatureSink "
+"<qgis.core.QgsProcessingParameterFeatureSink>`"
+msgstr ""
+":class:`QgsProcessingParameterFeatureSink "
+"<qgis.core.QgsProcessingParameterFeatureSink>`"
+
+#: ../../docs/user_manual/processing/scripts.rst:533
+msgid ""
+":class:`QgsProcessingParameterFeatureSource "
+"<qgis.core.QgsProcessingParameterFeatureSource>`"
+msgstr ""
+":class:`QgsProcessingParameterFeatureSource "
+"<qgis.core.QgsProcessingParameterFeatureSource>`"
+
+#: ../../docs/user_manual/processing/scripts.rst:536
+msgid ""
+":class:`QgsProcessingParameterString "
+"<qgis.core.QgsProcessingParameterString>`"
+msgstr ""
+":class:`QgsProcessingParameterString "
+"<qgis.core.QgsProcessingParameterString>`"
+
+#: ../../docs/user_manual/processing/scripts.rst:539
+msgid ""
+":class:`QgsProcessingParameterVectorLayer "
+"<qgis.core.QgsProcessingParameterVectorLayer>`"
+msgstr ""
+":class:`QgsProcessingParameterVectorLayer "
+"<qgis.core.QgsProcessingParameterVectorLayer>`"
+
+#: ../../docs/user_manual/processing/scripts.rst:541
+#: ../../docs/user_manual/processing/scripts.rst:544
+#: ../../docs/user_manual/processing/scripts.rst:596
+msgid "A vector layer"
+msgstr "Uma camada vetorial"
+
+#: ../../docs/user_manual/processing/scripts.rst:542
+msgid ""
 ":class:`QgsProcessingParameterVectorDestination "
 "<qgis.core.QgsProcessingParameterVectorDestination>`"
 msgstr ""
 ":class:`QgsProcessingParameterVectorDestination "
 "<qgis.core.QgsProcessingParameterVectorDestination>`"
 
-#: ../../docs/user_manual/processing/scripts.rst:546
+#: ../../docs/user_manual/processing/scripts.rst:548
+msgid "Output types"
+msgstr "Tipos de saída"
+
+#: ../../docs/user_manual/processing/scripts.rst:570
 msgid ":class:`QgsProcessingOutputHtml <qgis.core.QgsProcessingOutputHtml>`"
 msgstr ":class:`QgsProcessingOutputHtml <qgis.core.QgsProcessingOutputHtml>`"
 
-#: ../../docs/user_manual/processing/scripts.rst:548
+#: ../../docs/user_manual/processing/scripts.rst:572
 msgid "HTML"
 msgstr "HTML"
 
-#: ../../docs/user_manual/processing/scripts.rst:606
+#: ../../docs/user_manual/processing/scripts.rst:575
+msgid "A integer"
+msgstr "Um número inteiro"
+
+#: ../../docs/user_manual/processing/scripts.rst:578
+msgid "A layer definition"
+msgstr "Uma definição de camada"
+
+#: ../../docs/user_manual/processing/scripts.rst:630
 msgid "Communicating with the user"
 msgstr "Comunicação com o usuário"
 
-#: ../../docs/user_manual/processing/scripts.rst:631
+#: ../../docs/user_manual/processing/scripts.rst:655
 msgid "Documenting your scripts"
 msgstr "Documentando seus scripts"
 
-#: ../../docs/user_manual/processing/scripts.rst:658
+#: ../../docs/user_manual/processing/scripts.rst:663
+msgid "Flags"
+msgstr "Bandeiras"
+
+#: ../../docs/user_manual/processing/scripts.rst:682
 msgid "Best practices for writing script algorithms"
 msgstr "Melhores práticas para algoritmos de script escrito"
 
-#: ../../docs/user_manual/processing/scripts.rst:666
+#: ../../docs/user_manual/processing/scripts.rst:690
 msgid ""
 "Do not load resulting layers. Let Processing handle your results and load "
 "your layers if needed."

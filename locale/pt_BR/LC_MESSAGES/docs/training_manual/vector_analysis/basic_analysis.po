@@ -2,26 +2,28 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2022
+# Vanessa Stelzer, 2022
+# Ana Camargo, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 10:25+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:13+0000\n"
+"Last-Translator: Ana Camargo, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 "Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:2
 msgid "|LS| Vector Analysis"
@@ -38,6 +40,18 @@ msgstr ""
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:15
 msgid "|basic| The GIS Process"
 msgstr "|basic| O Processo SIG"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:491
+msgid "basic"
+msgstr "básico"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:17
+msgid ""
+"Before we start, it would be useful to give a brief overview of a process "
+"that can be used to solve a problem. The way to go about it is:"
+msgstr ""
+"Antes de começarmos, seria útil dar uma breve visão geral de um processo que"
+" pode ser usado para resolver um problema. A maneira de fazer isso é:"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:21
 msgid "State the Problem"
@@ -70,6 +84,14 @@ msgstr ""
 "residenciais em  |majorUrbanName|  por clientes que se encaixam nos "
 "seguintes critérios:"
 
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:36
+msgid "It must be within reasonable driving distance of a school (say 1km)"
+msgstr "Deve estar a uma distância razoável de uma escola (digamos 1 km)"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:37
+msgid "It must be more than 100m squared in size"
+msgstr "Deve ter mais de 100m quadrados de tamanho"
+
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:38
 msgid "Closer than 50m to a main road"
 msgstr "A menos de 50m de uma estrada principal"
@@ -81,6 +103,26 @@ msgstr "A menos de 500m de um restaurante"
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:43
 msgid "|basic| The Data"
 msgstr "|basic| Os Dados"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:45
+msgid "To answer these questions, we are going to need the following data:"
+msgstr "Para responder a essas perguntas, vamos precisar dos seguintes dados:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:47
+msgid "The residential properties (buildings) in the area"
+msgstr "As propriedades residenciais (edifícios) na área"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:48
+msgid "The roads in and around the town"
+msgstr "As estradas dentro e ao redor da cidade"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:49
+msgid "The location of schools and restaurants"
+msgstr "A localização de escolas e restaurantes"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:50
+msgid "The size of buildings"
+msgstr "O tamanho dos prédios"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:59
 msgid ""
@@ -97,13 +139,37 @@ msgstr ""
 msgid "|basic| |FA| Start a Project and get the Data"
 msgstr "|basic| |FA| Inicie um projeto e obtenha os dados"
 
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:69
+msgid "We first need to load the data to work with."
+msgstr "Primeiro precisamos carregar os dados para trabalhar."
+
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:71
 msgid "Start a new QGIS project"
 msgstr "Inicie um novo projeto QGIS"
 
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:82
+msgid "``buildings``"
+msgstr "``prédios``"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:83
+msgid "``roads``"
+msgstr "``estradas``"
+
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:84
 msgid "``restaurants``"
 msgstr "``restaurantes``"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:85
+msgid "``schools``"
+msgstr "``escolas``"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:104
+msgid ""
+"In the dialog that pops up we filter these features with the following "
+"expression::"
+msgstr ""
+"Na caixa de diálogo exibida, filtramos essas feições com a seguinte "
+"expressão::"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:121
 msgid "The map with all the data should look like the following one:"
@@ -152,18 +218,23 @@ msgstr ""
 "Usa el mismo enfoque que anteriormente y crea un buffer para tus colegios. "
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:282
-msgid ":ref:`Check your results <vector-analysis-basic-1>`"
-msgstr ":ref:`Comprueba tus resultados <vector-analysis-basic-1>`"
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:394
+msgid "Answer"
+msgstr "Resposta"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:285
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:299
+msgid "To this:"
+msgstr "Para isso:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:310
 msgid "|basic| |FA| Overlapping Areas"
 msgstr "|basic| |FA| Areas que se sobrepõe."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:305
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:330
 msgid "Click :guilabel:`Run`."
 msgstr "Haz clic en :guilabel:`Run`."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:313
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:338
 msgid ""
 "You may remove the two buffer layers and only keep the one that shows where "
 "they overlap, since that's what we really wanted to know in the first place:"
@@ -171,7 +242,7 @@ msgstr ""
 "Usted puede borrar las dos capas buffer y solo mantener la que muestra la "
 "superposición, dado que eso era lo que queriamos conocer en primer lugar:"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:325
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:350
 msgid ""
 "Now you've got the area that the buildings must overlap. Next, you want to "
 "extract the buildings in that area."
@@ -179,7 +250,7 @@ msgstr ""
 "Agora você tem a área em que as construções devem se sobrepor. Em seguida, "
 "você deseja extrair as construções nessa área."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:350
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:375
 msgid ""
 "The red buildings are those which match our criteria, while the buildings in"
 " green are those which do not."
@@ -187,11 +258,15 @@ msgstr ""
 "Os prédios vermelhos são aqueles que atendem aos nossos critérios, enquanto "
 "os prédios em verde são aqueles que não atendem."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:358
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:382
 msgid "|moderate| |TY| Further Filter our Buildings"
 msgstr "|moderate| |TY| Filtrado adicional de nuestros Edificios"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:360
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:497
+msgid "moderate"
+msgstr "moderado"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:384
 msgid ""
 "We now have a layer which shows us all the buildings within 1km of a school "
 "and within 50m of a road. We now need to reduce that selection to only show "
@@ -202,7 +277,7 @@ msgstr ""
 "selección para que sólo nos muestre los edificios que están a menos de 500 "
 "metros de un restaurante."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:365
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:389
 msgid ""
 "Using the processes described above, create a new layer called "
 ":guilabel:`houses_restaurants_500m` which further filters your "
@@ -214,26 +289,22 @@ msgstr ""
 ":guilabel:`casas_bem_localizadas` para mostrar apenas aqueles que estão a "
 "500m de um restaurante."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:370
-msgid ":ref:`Check your results <vector-analysis-basic-2>`"
-msgstr ":ref:` Comprueba tus resultados  <vector-analysis-basic-2>`"
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:373
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:421
 msgid "|basic| |FA| Select Buildings of the Right Size"
 msgstr "|basic| |FA| Seleccione las Construcciones de Tamaño Adecuado"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:404
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:452
 msgid "Click :guilabel:`OK`."
 msgstr "Haz clic en :guilabel:`OK`."
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:411
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:459
 msgid "|basic| |TY|"
 msgstr "|basic| |TY|"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:419
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:467
 msgid "|IC|"
 msgstr "|IC|"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:426
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:474
 msgid "|WN|"
 msgstr "|WN|"

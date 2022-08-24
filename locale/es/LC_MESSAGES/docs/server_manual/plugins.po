@@ -7,20 +7,21 @@
 # Translators:
 # Harrissou Sant-anna, 2022
 # Eric Armijo, 2022
+# Carlos López Quintanilla <carlos.lopez@psig.es>, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-04 11:11+0000\n"
+"POT-Creation-Date: 2022-07-27 02:49+0000\n"
 "PO-Revision-Date: 2022-03-14 05:07+0000\n"
-"Last-Translator: Eric Armijo, 2022\n"
+"Last-Translator: Carlos López Quintanilla <carlos.lopez@psig.es>, 2022\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.3\n"
 "Language: es\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -32,15 +33,7 @@ msgstr "Complementos"
 msgid "List of plugins"
 msgstr "Lista de complementos"
 
-#: ../../docs/server_manual/plugins.rst:13
-msgid ""
-"Plugins can also be installed on QGIS Server. They can add new features or "
-"alter existing ones from QGIS Server."
-msgstr ""
-"Los complementos también se pueden instalar en QGIS Server. Pueden añadir "
-"nuevas funcionalidades o alterar las existentes de QGIS Server."
-
-#: ../../docs/server_manual/plugins.rst:16
+#: ../../docs/server_manual/plugins.rst:15
 msgid ""
 "Some plugins designed for server can be found on the official `QGIS "
 "repository <https://plugins.qgis.org/plugins/server/>`_."
@@ -49,11 +42,11 @@ msgstr ""
 "<https://plugins.qgis.org/plugins/server/>`_ se pueden encontrar algunos "
 "complementos diseñados para el servidor."
 
-#: ../../docs/server_manual/plugins.rst:20
+#: ../../docs/server_manual/plugins.rst:24
 msgid "Location of plugins"
 msgstr "Ubicación de complementos"
 
-#: ../../docs/server_manual/plugins.rst:22
+#: ../../docs/server_manual/plugins.rst:26
 msgid ""
 "By default, on Debian based systems, QGIS Server will look for plugins "
 "located in :file:`/usr/lib/qgis/plugins`. The default value is displayed "
@@ -61,38 +54,25 @@ msgid ""
 "path by defining the environment variable ``QGIS_PLUGINPATH`` in the web "
 "server configuration."
 msgstr ""
-"De formar predeterminada, en los sistemas basados en Debian, QGIS Server "
-"buscará los complementos ubicados en :file:`/usr/lib/qgis/plugins`. El valor"
-" por defecto se muestra cuando QGIS Server se inicia, en los registros. Es "
-"posible establecer una ruta personalizada definiendo la variable de entorno "
+"Por defecto, en los sistemas basados en Debian, QGIS Server buscará los "
+"complementos ubicados en :file:`/usr/lib/qgis/plugins`. El valor por defecto"
+" se muestra cuando QGIS Server se inicia, en los registros. Es posible "
+"establecer una ruta personalizada definiendo la variable de entorno "
 "``QGIS_PLUGINPATH`` en la configuración del servidor web."
 
-#: ../../docs/server_manual/plugins.rst:28
+#: ../../docs/server_manual/plugins.rst:32
 msgid "Installation"
 msgstr "Instalación"
 
-#: ../../docs/server_manual/plugins.rst:31
+#: ../../docs/server_manual/plugins.rst:35
 msgid "Manually with a ZIP"
 msgstr "Manualmente con un ZIP"
 
-#: ../../docs/server_manual/plugins.rst:33
-msgid ""
-"To install the **HelloWorld** example plugin for testing the server, using a"
-" specific folder, you first have to create a directory to hold server "
-"plugins. This will be specified in the virtual host configuration and passed"
-" on to the server through an environment variable:"
-msgstr ""
-"Para instalar el complemento de ejemplo **HelloWorld** para probar el "
-"servidor, utilizando una carpeta específica, primero hay que crear un "
-"directorio para albergar los plugins del servidor. Esto se especificará en "
-"la configuración del host virtual y se pasará al servidor a través de una "
-"variable de entorno:"
-
-#: ../../docs/server_manual/plugins.rst:47
+#: ../../docs/server_manual/plugins.rst:56
 msgid "With a command line tool"
 msgstr "Con una herramienta de línea de comando"
 
-#: ../../docs/server_manual/plugins.rst:49
+#: ../../docs/server_manual/plugins.rst:58
 msgid ""
 "If you need to install and regularly upgrade plugins which are stored in the"
 " QGIS plugin repository, you may use the `QGIS-Plugin-Manager "
@@ -105,7 +85,7 @@ msgstr ""
 " herramienta que te ayuda a gestionar los complementos desde la línea de "
 "comandos."
 
-#: ../../docs/server_manual/plugins.rst:53
+#: ../../docs/server_manual/plugins.rst:62
 msgid ""
 "The installation is using pip. Installing in a virtual environment is a good"
 " practice but not required:"
@@ -113,7 +93,7 @@ msgstr ""
 "La instalación se realiza con pip. La instalación en un entorno virtual es "
 "una buena práctica pero no es necesaria:"
 
-#: ../../docs/server_manual/plugins.rst:59
+#: ../../docs/server_manual/plugins.rst:74
 msgid ""
 "Then, you can use the ``qgis-plugin-manager`` executable from the command "
 "line:"
@@ -121,7 +101,7 @@ msgstr ""
 "A continuación, puede utilizar el ejecutable ``qgis-plugin-manager`` desde "
 "la línea de comandos:"
 
-#: ../../docs/server_manual/plugins.rst:77
+#: ../../docs/server_manual/plugins.rst:92
 msgid ""
 "We suggest you to read the full documentation in the `readme file "
 "<https://github.com/3liz/qgis-plugin-manager/blob/master/README.md>`_ to "
@@ -131,15 +111,15 @@ msgstr ""
 "<https://github.com/3liz/qgis-plugin-manager/blob/master/README.md>`_ para "
 "saber cómo instalar o actualizar complementos con esta herramienta."
 
-#: ../../docs/server_manual/plugins.rst:82
+#: ../../docs/server_manual/plugins.rst:97
 msgid "HTTP Server configuration"
 msgstr "Configuración del servidor HTTP"
 
-#: ../../docs/server_manual/plugins.rst:85
+#: ../../docs/server_manual/plugins.rst:100
 msgid "Apache"
 msgstr "Apache"
 
-#: ../../docs/server_manual/plugins.rst:87
+#: ../../docs/server_manual/plugins.rst:102
 msgid ""
 "To be able to use server plugins, FastCGI needs to know where to look. So, "
 "we have to modify the Apache configuration file to indicate the "
@@ -149,7 +129,7 @@ msgstr ""
 "dónde buscar. Así que tenemos que modificar el archivo de configuración de "
 "Apache para indicar la variable de entorno ``QGIS_PLUGINPATH`` a FastCGI:"
 
-#: ../../docs/server_manual/plugins.rst:95
+#: ../../docs/server_manual/plugins.rst:110
 msgid ""
 "Moreover, a basic HTTP authorization is necessary to play with the "
 "HelloWorld plugin previously introduced. So we have to update the Apache "
@@ -159,19 +139,19 @@ msgstr ""
 "complemento HelloWorld introducido anteriormente. Entonces tenemos que "
 "actualizar el archivo de configuración de Apache por última vez:"
 
-#: ../../docs/server_manual/plugins.rst:108
+#: ../../docs/server_manual/plugins.rst:123
 msgid "Then, restart Apache:"
 msgstr "A continuación, reinicie Apache:"
 
-#: ../../docs/server_manual/plugins.rst:115
+#: ../../docs/server_manual/plugins.rst:130
 msgid "How to use a plugin"
 msgstr "Como usar un complemento"
 
-#: ../../docs/server_manual/plugins.rst:117
+#: ../../docs/server_manual/plugins.rst:132
 msgid "Test the server with the HelloWorld plugin:"
 msgstr "Pruebe el servidor con el complemento HelloWorld:"
 
-#: ../../docs/server_manual/plugins.rst:124
+#: ../../docs/server_manual/plugins.rst:139
 msgid ""
 "You can have a look at the default GetCapabilities of the QGIS server at:"
 msgstr ""

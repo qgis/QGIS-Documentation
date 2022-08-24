@@ -2,19 +2,20 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2022
+# Miyoshi Tomoya, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 10:17+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:08+0000\n"
+"Last-Translator: Miyoshi Tomoya, 2022\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,23 +35,44 @@ msgid ""
 "information gathered in the field to calculate the forest parameters, for "
 "the whole forest first, and then for the stands you digitized before."
 msgstr ""
-"森林のパラメーターを推定することは、森林調査の目標です。前のレッスンからの例を続け、野外で収集された調査情報を使用し、最初に森林全体に対して、それから前にデジタル化した林分に対して、森林のパラメーターを計算しましょう。"
+"森林のパラメーターを推定することは、森林調査の目標です。前のレッスンからの例を続け、野外で収集された調査情報を使い、最初に森林全体に対して、次に前にデジタイズした林分に対して、森林のパラメーターを計算しましょう。"
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:9
 msgid ""
 "**The goal for this lesson:** Calculate forest parameters at general and "
 "stand level."
-msgstr "**このレッスンの目標：** 一般と林分レベルで森林のパラメーターを計算します。"
+msgstr "**このレッスンの目標：** 森林パラメーターを全般レベルと林分レベルで計算する。"
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:12
 msgid "|basic| |FA| Adding the Inventory Results"
-msgstr "|basic| |FA|  調査結果を追加"
+msgstr "|basic| |FA|  調査結果を追加する"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:200
+msgid "basic"
+msgstr "basic"
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:14
 msgid ""
 "The field teams visited the forest and with the help of the information you "
 "provided, gathered information about the forest at every sample plot."
-msgstr "野外チームは森林を訪問し、こちらから提供する情報の助けを借りて、すべてのサンプルプロットでの森林に関する情報を集めました。"
+msgstr "野外チームは森林を訪れ、あなたが提供した情報の助けを借りて、すべてのサンプルプロットでの森林に関する情報を集めました。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:17
+msgid ""
+"Most often the information will be collected into paper forms in the field, "
+"then typed to a spreadsheet. The sample plots information has been condensed"
+" into a :file:`.csv` file that can be easily open in QGIS."
+msgstr ""
+"多くの場合、情報は野外で紙の様式に収集され、その後でスプレッドシートに入力されます。サンプルプロットの情報は、QGISで簡単に開けるように "
+":file:`.csv` ファイルに凝縮されています。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:21
+msgid ""
+"Continue with the QGIS project from the lesson about designing the "
+"inventory, you probably named it :file:`forest_inventory.qgs`."
+msgstr ""
+"目録の設計に関するレッスンで使用したQGISプロジェクト（ :file:`forest_inventory.qgs` "
+"という名前をつけた筈です）を続けます。"
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:24
 msgid "First, add the sample plots measurements to your QGIS project:"
@@ -60,9 +82,23 @@ msgstr "まず、QGIS プロジェクトにサンプルプロットの測定を�
 msgid "Go to :menuselection:`Layer --> Add Delimited Text Layer...`."
 msgstr ":menuselection:`レイヤー - >区切りのテキストレイヤーを追加...` に行きます。"
 
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:27
+msgid ""
+"Browse to the file :file:`systematic_inventory_results.csv` located in "
+":file:`exercise_data/forestry/results/`."
+msgstr ""
+"file:`exercise_data/forestry/results/` にある "
+":file:`systematic_inventory_results.csv` というファイルをブラウズします。"
+
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:29
 msgid "Make sure that the :guilabel:`Point coordinates` option is checked."
 msgstr ":guilabel:`ポイント座標` オプションがチェックされていることを確認します。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:30
+msgid ""
+"Set the fields for the coordinates to the :guilabel:`X` and :guilabel:`Y` "
+"fields."
+msgstr "座標を表すフィールドを :guilabel:`X` と :guilabel:`Y` に設定します。"
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:31
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:64
@@ -72,25 +108,100 @@ msgstr ":guilabel:`ポイント座標` オプションがチェックされて�
 msgid "Click :guilabel:`OK`."
 msgstr ":guilabel:`OK` をクリックします。"
 
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:32
+msgid "When prompted, select :guilabel:`ETRS89 / ETRS-TM35FIN` as the CRS."
+msgstr "プロンプトが表示されたら、CRSとして :guilabel:`ETRS89 / ETRS-TM35FIN` を選択します。"
+
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:33
 msgid ""
 "Open the new layer's :guilabel:`Attribute table` and have a look at the "
 "data."
 msgstr "新しいレイヤーの :guilabel:`属性テーブル` を開いてデータを見てみましょう。"
 
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:35
+msgid ""
+"You can read the type of data that is contained in the sample plots "
+"measurements in the text file :file:`legend_2012_inventorydata.txt` located "
+"in the :file:`exercise_data/forestry/results/` folder."
+msgstr ""
+"サンプルプロットの測定結果に含まれるデータの型は、 :file:`exercise_data/forestry/results/` "
+"フォルダにあるテキストファイル :file:`legend_2012_inventorydata.txt` で読み取ることができます。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:39
+msgid ""
+"The :file:`systematic_inventory_results` layer you just added is actually "
+"just a virtual representation of the text information in the :file:`.csv` "
+"file. Before you continue, convert the inventory results to a real spatial "
+"dataset:"
+msgstr ""
+"先ほど追加した :file:`systematic_inventory_results` レイヤは、実際には :file:`.csv` "
+"ファイル内のテキスト情報を仮想的に表現したものに過ぎません。続行する前に、目録結果を実際の空間データセットに変換してください。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:43
+msgid "Right click on the :file:`systematic_inventory_results` layer."
+msgstr ":file:`systematic_inventory_results` レイヤを右クリックします。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:44
+msgid "Browse to :file:`exercise_data/forestry/results/` folder."
+msgstr ":file:`exercise_data/forestry/results/` フォルダをブラウズします。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:45
+msgid "Name the file :file:`sample_plots_results.shp`."
+msgstr "そのファイルに :file:`sample_plots_results.shp` という名前をつけます。"
+
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:46
 msgid "Check :guilabel:`Add saved file to map`."
 msgstr ":guilabel:`保存したファイルを地図に追加` をチェックします。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:47
+msgid ""
+"Remove the :file:`systematic_inventory_results` layer from your project."
+msgstr "プロジェクトから :file:`systematic_inventory_results` レイヤを削除します。"
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:50
 msgid "|basic| |FA| Whole Forest Parameters Estimation"
 msgstr "|basic| |FA| 森林全体のパラメーター推定"
 
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:52
+msgid ""
+"You can calculate the averages for this whole forest area from the inventory"
+" results for the some interesting parameters, like the volume and the number"
+" of stems per hectare. Since the systematic sample plots represent equal "
+"areas, you can directly calculate the averages of the volumes and number of "
+"stems per hectare from the :file:`sample_plots_results` layer."
+msgstr ""
+"目録作成結果から、1ヘクタールあたりの体積や幹数などの興味深いパラメータについて、この森林エリア全体の平均を計算することができます。系統的なサンプルプロットは同じ面積を表しているので、"
+" :file:`sample_plots_results` レイヤからヘクタールあたりの体積と幹数の平均を直接計算することができます。"
+
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:58
 msgid ""
 "You can calculate the average of a field in a vector layer using the "
 ":guilabel:`Basic statistics` tool:"
-msgstr ":guilabel:`基本統計` ツールを使用して、ベクターレイヤー内のフィールドの平均値を計算できます。"
+msgstr ":guilabel:`基本統計` ツールを使用して、ベクタレイヤ内のフィールドの平均値を計算できます:"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:61
+msgid ""
+"Open :menuselection:`Vector --> Analysis Tools --> Basic statistics for "
+"Fields`."
+msgstr ":menuselection:`ベクタ --> 解析ツール --> 属性の基本統計量` を開きます。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:62
+msgid "Select ``sample_plots_results`` as the :guilabel:`Input Vector Layer`."
+msgstr ":guilabel:`入力レイヤ` として ``sample_plots_results`` を選びます。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:63
+msgid "Select ``Vol`` as :guilabel:`Target field`."
+msgstr ":guilabel:`統計量を計算する属性（フィールド）` として ``Vol`` を選びます。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:66
+msgid "The average volume in the forest is ``135.2 m3/ha``."
+msgstr "森林の平均体積は ``135.2 m3/ha`` です。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:68
+msgid ""
+"You can calculate the average for the number of stems in the same way, "
+"``2745 stems/ha``."
+msgstr "幹数の平均も同様に ``2745本/ha`` と計算できます。"
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:74
 msgid "|basic| |FA| Estimating Stand Parameters"
@@ -108,7 +219,7 @@ msgid ""
 "the stand inventory. Nevertheless, you will get information for a good "
 "number of stands just using the planned plots."
 msgstr ""
-"以前にデジタル化された別の林分のための推定値を算出するために、同じ体系的サンプルプロットを利用できます。林分の一部はどんなサンプルプロットも取得しておらず、そしてそれらについては情報は取得されないでしょう。体系的な調査を計画するときに、野外チームがこの目的のためにいくつかの余分なサンプルプロットを測定するように、いくつかの余分なサンプルプロットを計画することもできたかもしれません。あるいは後で野外チームを送って不足している林分の見積を取得することで林分の調査を完了することもできたかもしれません。それにもかかわらず、計画されたプロットを使用するだけで林分のかなりの数の情報が得られるでしょう。"
+"以前にデジタイズされた別の林分のための推定値を算出するために、同じ体系的サンプルプロットを利用できます。林分の一部はどんなサンプルプロットも取得しておらず、そしてそれらについては情報は取得されないでしょう。体系的な調査を計画するときに、野外チームがこの目的のためにいくつかの余分なサンプルプロットを測定するように、いくつかの余分なサンプルプロットを計画することもできたかもしれません。あるいは後で野外チームを送って不足している林分の見積を取得することで林分の調査を完了することもできたかもしれません。それにもかかわらず、計画されたプロットを使用するだけで林分のかなりの数の情報が得られるでしょう。"
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:85
 msgid ""

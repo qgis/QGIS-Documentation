@@ -2,26 +2,28 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2022
+# Vanessa Stelzer, 2022
+# Ana Camargo, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 11:58+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:10+0000\n"
+"Last-Translator: Ana Camargo, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 "Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:2
 msgid "|LS| Spatial Queries"
@@ -47,11 +49,11 @@ msgstr ""
 "**A meta para esta lição:** Para ver como as funções espaciais são "
 "implementados de forma semelhante a funções não-espaciais \"normais\"."
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:14
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:13
 msgid "Spatial Operators"
 msgstr "Operadores Espaciais"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:16
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:15
 msgid ""
 "When you want to know which points are within a distance of 2 degrees to a "
 "point(X,Y) you can do this with:"
@@ -59,15 +61,15 @@ msgstr ""
 "Quando você quiser saber quais os pontos estão a uma distância de 2 graus "
 "até um ponto (X, Y), você pode fazer isso com:"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:25
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:60
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:145
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:185
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:286
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:24
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:67
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:160
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:200
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:301
 msgid "Result:"
 msgstr "Resultados:"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:34
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:33
 msgid ""
 "the_geom value above was truncated for space on this page. If you want to "
 "see the point in human-readable coordinates, try something similar to what "
@@ -77,7 +79,7 @@ msgstr ""
 " ver o ponto em coordenadas legíveis, tentar algo parecido com o que você "
 "fez na seção \"Ver um ponto como WKT\", acima."
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:38
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:37
 msgid ""
 "How do we know that the query above returns all the points within 2 "
 "*degrees*? Why not 2 *meters*? Or any other unit, for that matter?"
@@ -85,15 +87,16 @@ msgstr ""
 "Como sabemos que a consulta acima retorna todos os pontos dentro de 2 "
 "*graus*? Por que não 2 *metros*? Ou qualquer outra unidade, que interesse?"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:41
-msgid ":ref:`Check your results <spatial-queries-1>`"
-msgstr ":ref:`Cheque seus resultados <spatial-queries-1>`"
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:40
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:96
+msgid "Answer"
+msgstr "Resposta"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:46
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:53
 msgid "Spatial Indexes"
 msgstr "Índices espaciais"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:48
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:55
 msgid ""
 "We also can define spatial indexes. A spatial index makes your spatial "
 "queries much faster. To create a spatial index on the geometry column use:"
@@ -102,25 +105,25 @@ msgstr ""
 "consultas espaciais muito mais rápidas. Para criar um índice espacial na "
 "coluna de geometria, use:"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:86
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:93
 msgid "|TY| |moderate|"
 msgstr "|TY| |moderate|"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:87
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:397
+msgid "moderate"
+msgstr "moderado"
+
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:94
 msgid "Modify the cities table so its geometry column is spatially indexed."
 msgstr ""
 "Modificar a tabela de cidades de modo que sua coluna de geometria é "
 "espacialmente indexado."
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:89
-msgid ":ref:`Check your results <spatial-queries-2>`"
-msgstr ":ref:`Cheque seus resultados <spatial-queries-2>`"
-
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:93
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:108
 msgid "PostGIS Spatial Functions Demo"
 msgstr "PostGIS Espacial Funções Demonstração"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:95
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:110
 msgid ""
 "In order to demo PostGIS spatial functions, we'll create a new database "
 "containing some (fictional) data."
@@ -128,16 +131,16 @@ msgstr ""
 "A fim de demonstração de PostGIS funções espaciais, vamos criar um novo "
 "banco de dados que contém alguns dados (fictícios)."
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:98
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:113
 msgid "To start, create a new database (exit the psql shell first):"
 msgstr ""
 "Para começar, crie um novo banco de dados (saia primeiro do shell psql):"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:104
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:119
 msgid "Remember to install the postgis extensions:"
 msgstr "Lembre-se de instalar as extensões postgis:"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:110
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:125
 msgid ""
 "Next, import the data provided in the :kbd:`exercise_data/postgis/` "
 "directory. Refer back to the previous lesson for instructions, but remember "
@@ -151,19 +154,19 @@ msgstr ""
 "novo banco de dados. Você pode importar do terminal ou via DB Manager. "
 "Importe os arquivos para as seguintes tabelas de banco de dados:"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:116
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:131
 msgid ":kbd:`points.shp` into :kbd:`building`"
 msgstr ":kbd:`points.shp` em :kbd:`edifícios`"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:117
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:132
 msgid ":kbd:`lines.shp` into :kbd:`road`"
 msgstr ":kbd:`lines.shp` Em :kbd:`estradas`"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:118
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:133
 msgid ":kbd:`polygons.shp` into :kbd:`region`"
 msgstr ":kbd:`polygons.shp` em :kbd:`regiões`"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:120
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:135
 msgid ""
 "Load these three database layers into QGIS via the :guilabel:`Add PostGIS "
 "Layers` dialog, as usual. When you open their attribute tables, you'll note "
@@ -175,7 +178,7 @@ msgstr ""
 "abre as suas tabelas de atributos, você vai notar que eles têm tanto um: "
 "kbd: `campo id` e uma: kbd:` campo gid` criado pela importação PostGIS."
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:125
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:140
 msgid ""
 "Now that the tables are imported, we can use PostGIS to query the data. Go "
 "back to your terminal (command line) and enter the psql prompt by running::"
@@ -184,7 +187,7 @@ msgstr ""
 "os dados. Volte para o seu terminal (linha de comando) e digite o prompt do "
 "psql executando ::"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:130
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:145
 msgid ""
 "We'll demo some of these select statements by creating views from them, so "
 "that you can open them in QGIS and see the results."
@@ -193,42 +196,42 @@ msgstr ""
 "visualizações a partir delas, para que você possa abri-las no QGIS e ver os "
 "resultados."
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:134
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:149
 msgid "Select by location"
 msgstr "Selecionar pela localização"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:136
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:151
 msgid "Get all the buildings in the KwaZulu region:"
 msgstr "Obtenha todos os edifícios na região de KwaZulu:"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:158
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:173
 msgid "Or, if we create a view from it:"
 msgstr "Ou, se criarmos uma visualização a partir dele:"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:168
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:183
 msgid "Add the view as a layer and view it in QGIS:"
 msgstr "Adicionar a vista como uma camada e exibi-lo no QGIS:"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:174
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:189
 msgid "Select neighbors"
 msgstr "Selecione os vizinhos"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:176
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:191
 msgid "Show a list of all the names of regions adjoining the Hokkaido region:"
 msgstr ""
 "Mostre uma lista de todos os nomes de regiões adjacentes à região de "
 "Hokkaido:"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:196
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:211
 msgid "As a view:"
 msgstr "Como vista:"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:206
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:251
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:221
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:266
 msgid "In QGIS:"
 msgstr "En QGIS:"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:211
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:226
 msgid ""
 "Note the missing region (Queensland). This may be due to a topology error. "
 "Artifacts such as this can alert us to potential problems in the data. To "
@@ -240,19 +243,19 @@ msgstr ""
 "problemas nos dados. Para resolver esse enigma sem ser pego pelas anomalias "
 "que os dados possam ter, poderíamos usar uma interseção de buffer:"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:223
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:238
 msgid "This creates a buffer of 100 meters around the region Hokkaido."
 msgstr "Isso cria um buffer de 100 metros ao redor da região de Hokkaido."
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:225
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:240
 msgid "The darker area is the buffer:"
 msgstr "A área sombreada representa o buffer:"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:230
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:245
 msgid "Select using the buffer:"
 msgstr "Selecione usando o buffer:"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:245
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:260
 msgid ""
 "In this query, the original buffer view is used as any other table would be."
 " It is given the alias :kbd:`a`, and its geometry field, :kbd:`a.the_geom`, "
@@ -267,7 +270,7 @@ msgstr ""
 "Hokkaido é excluído desta instrução SELECT, porque nós não queremos isso; "
 "queremos apenas as regiões adjacentes."
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:256
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:271
 msgid ""
 "It is also possible to select all objects within a given distance, without "
 "the extra step of creating a buffer:"
@@ -275,33 +278,33 @@ msgstr ""
 "Também é possível selecionar todos os objetos dentro de uma determinada "
 "distância, sem a etapa extra de criar um buffer:"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:268
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:283
 msgid ""
 "This achieves the same result, without need for the interim buffer step:"
 msgstr ""
 "Isto atinge o mesmo resultado, sem necessidade de intercalar o passo de "
 "buffer:"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:275
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:290
 msgid "Select unique values"
 msgstr "Selecione valores únicos"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:277
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:292
 msgid ""
 "Show a list of unique town names for all buildings in the Queensland region:"
 msgstr ""
 "Mostre uma lista de nomes de cidades exclusivos para todos os edifícios na "
 "região de Queensland:"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:299
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:314
 msgid "Further examples ..."
 msgstr "Outros exemplos ..."
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:360
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:375
 msgid "|IC|"
 msgstr "|IC|"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:362
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:377
 msgid ""
 "You have seen how to query spatial objects using the new database functions "
 "from PostGIS."
@@ -309,11 +312,11 @@ msgstr ""
 "Você já viu como consultar objetos espaciais usando as novas funções de "
 "banco de dados do PostGIS."
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:366
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:381
 msgid "|WN|"
 msgstr "|WN|"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:368
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:383
 msgid ""
 "Next we're going to investigate the structures of more complex geometries "
 "and how to create them using PostGIS."

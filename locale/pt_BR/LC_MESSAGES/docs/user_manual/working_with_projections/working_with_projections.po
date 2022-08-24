@@ -2,26 +2,29 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2022
+# Vanessa Stelzer, 2022
+# Ana Camargo, 2022
+# Letícia Jardim, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 11:59+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:07+0000\n"
+"Last-Translator: Letícia Jardim, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 "Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:5
 msgid "Working with Projections"
@@ -31,17 +34,106 @@ msgstr "Trabalhando com Projeções"
 msgid "Overview of Projection Support"
 msgstr "Visão geral do Suporte a Projeções"
 
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:44
+msgid "Layer Coordinate Reference Systems"
+msgstr "Sistemas de referência de coordenadas da camada"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:415
+msgid "options"
+msgstr "opções"
+
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:91
 msgid "|radioButtonOff| :guilabel:`Use project CRS`"
 msgstr "|radioButtonOff| :guilabel:`Usar SRC do projeto`"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:100
+msgid "Select the layers in the :guilabel:`Layers` panel"
+msgstr "Selecione as camadas no painel :guilabel:`Camadas'."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:103
+msgid "Find and select the right CRS to use"
+msgstr "Encontre e selecione o CRS adequado para usar"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:117
+msgid "Project Coordinate Reference Systems"
+msgstr "Sistemas referência de coordenadas projetadas"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:119
+msgid ""
+"Every project in QGIS also has an associated Coordinate Reference System. "
+"The project CRS determines how data is projected from its underlying raw "
+"coordinates to the flat map rendered within your QGIS map canvas."
+msgstr ""
+"Cada projeto no QGIS também tem um Sistema de Referência de Coordenadas "
+"associado. O projeto SRC determina como os dados são projetados de suas "
+"coordenadas brutas subjacentes para o mapa plano renderizado em sua tela de "
+"mapa QGIS."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:131
+msgid ""
+"It is important to make an appropriate choice of CRS for your QGIS projects."
+" Choosing an inappropriate CRS can cause your maps to look distorted, and "
+"poorly reflect the real-world relative sizes and positions of features. "
+"Usually, while working in smaller geographic areas, there will be a number "
+"of standard CRSs used within a particular country or administrative area. "
+"It's important to research which CRSs are appropriate or standard choices "
+"for the area you are mapping, and ensure that your QGIS project follows "
+"these standards."
+msgstr ""
+"É importante fazer uma escolha apropriada de SRC para seus projetos QGIS. "
+"Escolher um SRC inadequado pode fazer com que seus mapas pareçam distorcidos"
+" e reflitam mal os tamanhos relativos do mundo real e as posições das "
+"feições. Normalmente, ao trabalhar em áreas geográficas menores, haverá "
+"vários SRCs padrão usados em um determinado país ou área administrativa. É "
+"importante pesquisar quais SRCs são escolhas apropriadas ou padrão para a "
+"área que você está mapeando e garantir que seu projeto QGIS siga esses "
+"padrões."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:160
+msgid "Project Properties Dialog"
+msgstr "Caixa de Diálogo de Propriedades de Projeto"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:162
 msgid "Available options are:"
 msgstr "As opções disponíveis são:"
 
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:429
+msgid "unchecked"
+msgstr "desmarcado"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:172
+msgid ""
+"No reprojection is done while rendering the layers: features are just drawn "
+"using their raw coordinates."
+msgstr ""
+"Nenhuma reprojeção é feita durante a renderização das camadas: as feições "
+"são apenas desenhadas usando suas coordenadas brutas."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:174
+msgid "The ellipsoid is locked out and forced to ``None/Planimetric``."
+msgstr "A elipsóide é bloqueada e forçada a \"Nenhum/Planimétrico\"."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:175
+msgid ""
+"The distance and area units, and the coordinate display are locked out and "
+"forced to \"unknown units\"; all measurements are done in unknown map units,"
+" and no conversion is possible."
+msgstr ""
+"As unidades de distância e área, e a exibição de coordenadas são bloqueadas "
+"e forçadas a \"unidades desconhecidas\"; todas as medições são feitas em "
+"unidades de mapa desconhecidas, e nenhuma conversão é possível."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:210
+msgid "Coordinate Reference System Selector"
+msgstr "Seletor do Sistemas de Referência de Coordenadas"
+
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:241
 msgid "Custom Coordinate Reference System"
 msgstr "Sistema de Referência de Coordenadas personalizado"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:411
+msgid "customProjection"
+msgstr "projeçãoPersonalizada"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:259
 msgid ""
@@ -54,3 +146,67 @@ msgstr ""
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:262
 msgid "A descriptive name"
 msgstr "Um nome descritivo"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:263
+msgid "The cartographic parameters in PROJ or WKT format"
+msgstr "Os parâmetros cartográficos em formato PROJ ou WKT"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:423
+msgid "symbologyAdd"
+msgstr "Adicionar simbologia"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:268
+msgid "Enter a descriptive name"
+msgstr "Insira um nome descritivo"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:312
+msgid "Setting an NTv2 transformation"
+msgstr "Configurar uma transformação NTv2"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:319
+msgid "Datum Transformations"
+msgstr "Transformações de Datum"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:336
+msgid ""
+"If desired, QGIS can also prompt you whenever multiple possible "
+"transformations can be made between two CRSs, and allow you to make an "
+"informed selection of which is the most appropriate transformation to use "
+"for your data."
+msgstr ""
+"Se desejar, o QGIS também pode lhe solicitar sempre que várias "
+"transformações possíveis possam ser feitas entre dois CRSs, e permitir que "
+"você faça uma seleção informada de qual é a transformação mais apropriada "
+"para usar para seus dados."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:409
+msgid "checkbox"
+msgstr "caixa de seleção"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:351
+msgid ""
+"or defining a list of appropriate datum transformations to use as defaults "
+"when loading a layer to a project or reprojecting a layer."
+msgstr ""
+"ou definir uma lista de transformações de dados apropriadas para usar como "
+"padrão ao carregar uma camada em um projeto ou ao reprojetar uma camada."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:421
+msgid "setProjection"
+msgstr "definir projeção"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:370
+msgid "Selecting a preferred default datum transformation"
+msgstr "Selecionando uma transformação padrão de datum preferida"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:379
+msgid "Find your preferred transformation and select it"
+msgstr "Encontre a transformação de sua preferência e selecione"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:382
+msgid "Click :guilabel:`OK`."
+msgstr "Clique :guilabel:`OK`."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:425
+msgid "symbologyRemove"
+msgstr "removerSimbologia"

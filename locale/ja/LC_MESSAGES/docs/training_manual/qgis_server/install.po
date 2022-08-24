@@ -2,19 +2,20 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2022
+# Miyoshi Tomoya, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 11:59+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:16+0000\n"
+"Last-Translator: Miyoshi Tomoya, 2022\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,9 +28,32 @@ msgstr ""
 msgid "|LS| Install QGIS Server"
 msgstr "|LS| QGISサーバーをインストールする"
 
+#: ../../docs/training_manual/qgis_server/install.rst:8
+msgid ""
+"**The goal for this lesson:** To learn how to install **QGIS Server** on "
+"Debian Stretch. With negligible variations you can also follow it for any "
+"Debian based distribution like Ubuntu and its derivatives."
+msgstr ""
+"**このレッスンの目標:** Debian Stretchに **QGIS Server** "
+"をインストールする方法を学ぶこと。ごくわずかな変更で、Ubuntuやその派生版のようなDebianベースのディストリビューションでもこのレッスンに従うことができます。"
+
+#: ../../docs/training_manual/qgis_server/install.rst:12
+msgid ""
+"In Ubuntu you can use your regular user, prepending ``sudo`` to commands "
+"requiring admin permissions. In Debian you can work as admin (``root``), "
+"without using ``sudo``."
+msgstr ""
+"Ubuntuでは、管理者権限を必要とするコマンドの前に ``sudo`` "
+"を付けて、通常のユーザーを使用することができます。Debianでは、``sudo`` を使用せずに、管理者 (``root``) "
+"として作業することができます。"
+
 #: ../../docs/training_manual/qgis_server/install.rst:17
 msgid "|moderate| |FA| Install from packages"
 msgstr "|moderate| |FA| パッケージからインストールする"
+
+#: ../../docs/training_manual/qgis_server/install.rst:149
+msgid "moderate"
+msgstr "moderate"
 
 #: ../../docs/training_manual/qgis_server/install.rst:22
 msgid "Install QGIS Server with:"
@@ -49,28 +73,15 @@ msgstr ""
 "bin/qgis_mapserv.fcgi`` のような何かを出力する ``find / -name 'qgis_mapserv.fcgi'`` "
 "を実行して、どこにインストールされたかを確認できます。"
 
-#: ../../docs/training_manual/qgis_server/install.rst:41
-msgid ""
-"Optionally, if you want to do a command line test at this time you can run "
-"the ``/usr/lib/cgi-bin/qgis_mapserv.fcgi`` command which should output "
-"something like:"
-msgstr ""
-"この時点では、コマンドラインのテストを行いたい場合は、オプションで ``/usr/lib/cgi-bin/qgis_mapserv.fcgi``  "
-"コマンドを実行できます、出力は何かこのようなはずである："
+#: ../../docs/training_manual/qgis_server/install.rst:148
+msgid "hard"
+msgstr "hard"
 
-#: ../../docs/training_manual/qgis_server/install.rst:60
-msgid ""
-"This is a good thing, it tells you we're on the right track as the server is"
-" saying that we haven't asked for a supported service. We'll see later on "
-"how to make WMS requests."
-msgstr ""
-"これは良いことです、私たちがサポートされているサービスを求めていないことをサーバーが言っているので、私たちが正しい軌道にいると告げています。WMSリクエストを作成する方法は後で見ます。"
-
-#: ../../docs/training_manual/qgis_server/install.rst:79
+#: ../../docs/training_manual/qgis_server/install.rst:76
 msgid "|moderate| |FA| Create another virtual host"
 msgstr "|moderate| |FA| 別の仮想ホストを作成"
 
-#: ../../docs/training_manual/qgis_server/install.rst:81
+#: ../../docs/training_manual/qgis_server/install.rst:78
 msgid ""
 "Let's create another Apache virtual host pointing to QGIS Server. You can "
 "choose whatever name you like (``coco.bango``, ``super.duper.training``, "
@@ -81,7 +92,7 @@ msgstr ""
 "``super.duper.training`` 、 ``example.com``、など）が、単純化のために ``myhost`` "
 "を使用するつもりです。"
 
-#: ../../docs/training_manual/qgis_server/install.rst:89
+#: ../../docs/training_manual/qgis_server/install.rst:86
 msgid ""
 "We can check that ``myhost`` points to the localhost by running in the "
 "terminal the  ``ping myhost`` command which should output:"
@@ -89,7 +100,7 @@ msgstr ""
 "ターミナルで ``ping myhost`` コマンドを実行することによって、 ``myhost`` "
 "がlocalhostを指していることを確認できます。"
 
-#: ../../docs/training_manual/qgis_server/install.rst:99
+#: ../../docs/training_manual/qgis_server/install.rst:96
 msgid ""
 "Let's try if we can access QGIS Server from the ``myhost`` site by doing: "
 "``curl http://myhost/cgi-bin/qgis_mapserv.fcgi`` or by accessing the url "
@@ -99,7 +110,7 @@ msgstr ""
 "したり、DebianのボックスブラウザからURLにアクセスすることによって、 ``myhost`` "
 "サイトからQGISサーバーにアクセスできるかどうか試してみましょう。おそらく得られるのは："
 
-#: ../../docs/training_manual/qgis_server/install.rst:124
+#: ../../docs/training_manual/qgis_server/install.rst:121
 msgid ""
 "If you try again to access the http://myhost/cgi-bin/qgis_mapserv.fcgi url "
 "you'll notice everything is working now!"
@@ -107,17 +118,17 @@ msgstr ""
 "再度 http://myhost/cgi-bin/qgis_mapserv.fcgi  "
 "URLにアクセスするために試してみると、すべてが今稼働していることに気づくでしょう！"
 
-#: ../../docs/training_manual/qgis_server/install.rst:128
+#: ../../docs/training_manual/qgis_server/install.rst:125
 msgid "|IC|"
 msgstr "|IC|"
 
-#: ../../docs/training_manual/qgis_server/install.rst:130
+#: ../../docs/training_manual/qgis_server/install.rst:127
 msgid ""
 "You learned how to install different QGIS Server versions from packages, how"
 " to configure Apache with QGIS Server, on Debian based Linux distros."
 msgstr ""
 "DebianベースのLinuxディストリビューション上で、QGISサーバーでApacheを設定する方法を、パッケージから異なるQGISサーバーのバージョンをインストールする方法を学びました。"
 
-#: ../../docs/training_manual/qgis_server/install.rst:134
+#: ../../docs/training_manual/qgis_server/install.rst:131
 msgid "|WN|"
 msgstr "|WN|"
