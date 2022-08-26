@@ -60,6 +60,7 @@ borders (the greenish pixels):
 
 .. figure:: img/green_px_selected.png
    :align: center
+
 |
 
 Once you are done with the selection you need to copy this selection as a new
@@ -123,6 +124,7 @@ Zoom in and see what the polygons look like. You will get something like this:
 
 .. figure:: img/green_polygons.png
    :align: center
+
 |
 
 Next one option to get points out of those polygons is to get their centroids:
@@ -135,6 +137,7 @@ Next one option to get points out of those polygons is to get their centroids:
 
 .. figure:: img/green_points.png
    :align: center
+
 |
 
 Now you can remove the :guilabel:`rautjarvi_green_polygon` layer from the TOC.
@@ -161,6 +164,7 @@ the main roads (wide pink lines) and the lake:
 
 .. figure:: img/forest_stands_to_digitize.png
    :align: center
+
 |
 
 * Go to the :kbd:`digitizing` folder using your file manager browser.
@@ -186,6 +190,7 @@ Now, if you remember past modules, we have to set up and activate the snapping o
 
 .. figure:: img/snapping_settings_forest.png
    :align: center
+
 |
 
 With these snapping settings, whenever you are digitizing and get close enough
@@ -217,6 +222,7 @@ Now you can start digitizing:
 
 .. figure:: img/dgitizing_357_1.png
    :align: center
+
 |
 
 * When you are done, right click to end digitizing that polygon.
@@ -231,6 +237,7 @@ Your digitized polygon will look like this:
 
 .. figure:: img/dgitizing_357_3.png
    :align: center
+
 |
 
 Now for the second polygon, pick up the stand number 358. Make sure that the
@@ -251,6 +258,7 @@ to automatically obtain a common border.
 
 .. figure:: img/dgitizing_358_5.png
    :align: center
+
 |
 
 The part of the polygon that was overlapping the existing polygon has been
@@ -280,6 +288,7 @@ Your result will look like this:
 
 .. figure:: img/stands_fully_digitized.png
    :align: center
+
 |
 
 |basic| |FA| Joining the Forest Stand Data
@@ -303,6 +312,7 @@ in the same folder.
 
 .. figure:: img/inventory_csv_import.png
    :align: center
+
 |
 
 To add the data from the :kbd:`.csv` file:
@@ -372,10 +382,6 @@ might be more interested in performing analysis in a dataset more up to date.
 The topic of the next lesson will be the creation of forest stands using current
 aerial photos and the addition of some relevant information to your dataset.
 
-.. |topologicalEditing| image:: /static/common/mIconTopologicalEditing.png
-   :width: 1.5em
-.. |avoidIntersectionsLayers| image:: /static/common/mActionAvoidIntersectionsLayers.png
-   :width: 1.5em
    
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -389,3 +395,8 @@ aerial photos and the addition of some relevant information to your dataset.
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/common/basic.png
+
+.. |topologicalEditing| image:: /static/common/mIconTopologicalEditing.png
+   :width: 1.5em
+.. |avoidIntersectionsLayers| image:: /static/common/mActionAvoidIntersectionsLayers.png
+   :width: 1.5em
