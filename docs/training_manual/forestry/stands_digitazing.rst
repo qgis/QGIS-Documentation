@@ -40,6 +40,7 @@ original scanned map:
 
 .. figure:: img/gimp_map.png
    :align: center
+
 |
 
 Now you can select the pixels in the image that are making up the forest stands'
