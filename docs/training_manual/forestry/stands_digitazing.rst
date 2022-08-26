@@ -75,7 +75,8 @@ layer and then save it as separate image file:
 
 .. figure:: img/saving_green_px.png
    :align: center
-!
+
+|
 
 * Finally, select :menuselection:`File --> Export...`, set :guilabel:`Select
   File Type (By Extension)` as a :guilabel:`TIFF image`, select the
