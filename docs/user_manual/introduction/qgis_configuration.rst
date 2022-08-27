@@ -201,7 +201,7 @@ if you made any :ref:`customization <sec_customization>`.
 
 .. _figure_environment_variables:
 
-.. figure:: img/sys-env-options.png
+.. figure:: img/options_system.png
    :align: center
 
    System environment variables in QGIS
@@ -351,7 +351,7 @@ which must conform to a WKT or Proj string format.
 
 .. _figure_defined_crs:
 
-.. figure:: img/defined_crs.png
+.. figure:: img/options_defined_crs.png
    :align: center
 
    User Defined CRS
@@ -550,7 +550,7 @@ layers rendering in the map canvas.
 
 .. _figure_rendering_menu:
 
-.. figure:: img/rendering_menu.png
+.. figure:: img/options_rendering.png
    :align: center
 
    Rendering settings
@@ -1055,7 +1055,7 @@ Network settings
 
 .. _figure_network_tab:
 
-.. figure:: img/proxy-settings.png
+.. figure:: img/options_network.png
    :align: center
 
    Proxy-settings in QGIS
@@ -1193,7 +1193,7 @@ OpenCL acceleration settings.
 
 .. _figure_acceleration_settings:
 
-.. figure:: img/acceleration_menu.png
+.. figure:: img/options_acceleration.png
    :align: center
 
    Acceleration tab
