@@ -184,8 +184,8 @@ Now, if you remember past modules, we have to set up and activate the snapping o
 * Set :guilabel:`Type` for each layer to :kbd:`Vertex`
 * Set  :guilabel:`Tolerance` for each layer to :kbd:`10 pixels`
 * Check the :guilabel:`Avoid Overlap` box for the :kbd:`forest_stands` layer
-* Check |topologicalEditing| :sup:`Topological editing`
-* Choose |avoidIntersectionsLayers| :sup:`Follow Advanced Configuration`
+* Press |topologicalEditing| :guilabel:`Topological editing`
+* Choose |avoidIntersectionsLayers| :guilabel:`Follow Advanced Configuration`
 * Close the pop-up
 
 .. figure:: img/snapping_settings_forest.png
