@@ -179,14 +179,15 @@ have already been digitized:
 
 Now, if you remember past modules, we have to set up and activate the snapping options:
 
-* Go to :menuselection:`Project --> Snapping options...`
-* Check the :kbd:`green_centroids` and :kbd:`forest_stands` layers
-* Set :guilabel:`Type` for each layer to :kbd:`Vertex`
-* Set  :guilabel:`Tolerance` for each layer to :kbd:`10 pixels`
-* Check the :guilabel:`Avoid Overlap` box for the :kbd:`forest_stands` layer
-* Press |topologicalEditing| :guilabel:`Topological editing`
-* Choose |avoidIntersectionsLayers| :guilabel:`Follow Advanced Configuration`
-* Close the pop-up
+#. Go to :menuselection:`Project --> Snapping options...`
+#. Check the ``green_centroids`` and ``forest_stands`` layers
+#. Set :guilabel:`Type` for each layer to ``Vertex``
+#. Set  :guilabel:`Tolerance` for each layer to ``10``
+#. Set  :guilabel:`Units` for each layer to ``pixels``
+#. Check :guilabel:`Avoid Overlap` for the ``forest_stands`` layer
+#. Press |topologicalEditing| :guilabel:`Topological editing`
+#. Choose |avoidIntersectionsLayers| :guilabel:`Follow Advanced Configuration`
+#. Close the pop-up
 
 .. figure:: img/snapping_settings_forest.png
    :align: center
