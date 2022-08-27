@@ -63,7 +63,7 @@ General Settings
 .. figure:: img/options_general.png
    :align: center
 
-   General Settings in QGIS
+   General Settings
 
 .. index:: Overwrite language
 .. _locale_options:
@@ -204,7 +204,7 @@ if you made any :ref:`customization <sec_customization>`.
 .. figure:: img/options_system.png
    :align: center
 
-   System environment variables in QGIS
+   System environment variables
 
 System environment variables can be viewed, and many configured, in the
 **Environment** group. This is useful for
@@ -252,7 +252,7 @@ be used for a new project or layer.
 .. figure:: img/options_crs.png
    :align: center
 
-   CRS Settings in QGIS
+   CRS Settings
 
 **CRS for Projects**
 
@@ -385,7 +385,7 @@ Data Sources settings
 .. figure:: img/options_data_sources.png
    :align: center
 
-   Data Sources settings in QGIS
+   Data Sources settings
 
 
 **Feature attributes and table**
@@ -486,7 +486,7 @@ write files, as in some cases more than one GDAL driver is available.
 .. figure:: img/options_gdal.png
    :align: center
 
-   GDAL Settings in QGIS - Raster drivers
+   GDAL Settings - Raster drivers
 
 .. tip:: Double-click a raster driver that allows read and write access
    (``rw+(v)``) opens the :ref:`Edit Create options <gdal_createoptions>`
@@ -723,7 +723,7 @@ Map tools Settings
 .. figure:: img/options_map_tools.png
    :align: center
 
-   Map tools settings in QGIS
+   Map tools settings
 
 This tab offers some options regarding the behavior of the :ref:`Identify tool <identify>`.
 
@@ -782,6 +782,9 @@ You can also import or export scales from/to a ``.XML`` file. Note that you
 still have the possibility to remove your changes and reset to the predefined
 list.
 
+.. index:: Digitizing configuration
+.. _digitizing_options:
+
 Digitizing settings
 ...................
 
@@ -790,7 +793,7 @@ Digitizing settings
 .. figure:: img/options_digitizing.png
    :align: center
 
-   Digitizing settings in QGIS
+   Digitizing settings
 
 This tab helps you configure general settings when :ref:`editing vector layer
 <editingvector>` (attributes and geometry).
@@ -961,7 +964,7 @@ Layouts settings
 .. figure:: img/options_layouts.png
    :align: center
 
-   Layouts settings in QGIS
+   Layouts settings
 
 
 **Composition defaults**
@@ -1010,7 +1013,7 @@ section.
 .. figure:: img/options_variables_global.png
    :align: center
 
-   Variables settings in QGIS
+   Variables settings
 
 
 .. index:: Authentication
@@ -1034,7 +1037,7 @@ To manage authentications, you can use the list of tools next to the frame, ie:
 .. figure:: ../auth_system/img/auth-editor-configs2.png
    :align: center
 
-   Authentication settings in QGIS
+   Authentication settings
 
 
 .. index:: Proxy, Network
@@ -1058,7 +1061,7 @@ Network settings
 .. figure:: img/options_network.png
    :align: center
 
-   Proxy-settings in QGIS
+   Network and proxy settings
 
 **Cache settings**
 
@@ -1140,35 +1143,35 @@ It provides some default filters (with prefix) to use:
 .. figure:: img/options_locator.png
    :align: center
 
-   Locator settings in QGIS
+   Locator settings
 
 
-* Project Layers (``l``): finds and selects a layer in the :guilabel:`Layers`
+* :guilabel:`Project Layers` (``l``): finds and selects a layer in the :guilabel:`Layers`
   panel.
-* Project Layouts (``pl``): finds and opens a print layout.
+* :guilabel:`Project Layouts` (``pl``): finds and opens a print layout.
 * Actions (``.``): finds and executes a QGIS action; actions can be any tool
   or menu in QGIS, opening a panel...
-* Active Layer Features (``f``): searches for matching attributes in any field
+* :guilabel:`Active Layer Features` (``f``): searches for matching attributes in any field
   from the current active layer and zooms to the selected feature.
   Press |settings| to configure the maximum number of results.
-* Features in All Layers (``af``): searches for matching attributes in the
+* :guilabel:`Features in All Layers` (``af``): searches for matching attributes in the
   :ref:`display name <maptips>` of each :ref:`searchable layers <project_layer_capabilities>`
   and zooms to the selected feature.
   Press |settings| to configure the maximum number of results and the maximum
   number of results per layer.
-* Calculator (``=``): allows evaluation of any QGIS expression and, if valid,
+* :guilabel:`Calculator` (``=``): allows evaluation of any QGIS expression and, if valid,
   gives an option to copy the result to the clipboard.
-* Spatial Bookmarks (``b``): finds and zooms to the bookmark extent.
-* Settings (``set``): browses and opens project and application-wide properties
+* :guilabel:`Spatial Bookmarks` (``b``): finds and zooms to the bookmark extent.
+* :guilabel:`Settings` (``set``): browses and opens project and application-wide properties
   dialogs.
-* Go to Coordinate (``go``): pans the map canvas to a location defined by a
+* :guilabel:`Go to Coordinate` (``go``): pans the map canvas to a location defined by a
   comma or space separated pair of x and y coordinates or a formatted URL
   (e.g., OpenStreetMap, Leaflet, OpenLayer, Google Maps, ...).
   The coordinate is expected in WGS 84 (``epsg:4326``) and/or map canvas CRS.
-* Nominatim Geocoder (``>``): geocodes using the `Nominatim <https://nominatim.org>`_
+* :guilabel:`Nominatim Geocoder` (``>``): geocodes using the `Nominatim <https://nominatim.org>`_
   geocoding service of the OpenStreetMap Foundation.
 * Processing Algorithms (``a``): searches and opens a Processing algorithm dialog.
-* Edit Selected Features (``ef``): gives quick access and runs a compatible
+* :guilabel:`Edit Selected Features` (``ef``): gives quick access and runs a compatible
   :ref:`modify-in-place <processing_inplace_edit>` Processing algorithm on the
   active layer.
 
@@ -1196,7 +1199,7 @@ OpenCL acceleration settings.
 .. figure:: img/options_acceleration.png
    :align: center
 
-   Acceleration tab
+   Acceleration settings
 
 Depending on your hardware and software, you may have to install additional 
 libraries to enable OpenCL acceleration.
@@ -1219,7 +1222,7 @@ expression widget and function editor, ...).
 .. figure:: img/options_codeeditor.png
    :align: center
 
-   Code Editor settings tab
+   Code Editor settings
 
 At the top of the dialog, a widget provides a live preview of the current
 settings, in various coding languages (Python, QGIS expression, HTML, SQL,
@@ -1258,7 +1261,7 @@ It can also be accessed using the |options| :sup:`Options...` button from:
 .. figure:: img/options_pythonconsole.png
    :align: center
 
-   Python Console settings tab
+   Python Console settings
 
 You can specify:
 
@@ -1317,7 +1320,7 @@ More information at :ref:`label_processing`.
 .. figure:: img/options_processing.png
    :align: center
 
-   Processing settings tab in QGIS
+   Processing settings
 
 
 .. _optionsadvanced:
@@ -1330,7 +1333,7 @@ Advanced settings
 .. figure:: img/options_advanced.png
    :align: center
 
-   Advanced settings tab in QGIS
+   Advanced settings
 
 All the settings related to QGIS (UI, tools, data providers, Processing
 configurations, default values and paths, plugins options, expressions,
@@ -1767,7 +1770,7 @@ and ``closeProject()``.
 .. figure:: img/macro.png
    :align: center
 
-   Macro settings in QGIS
+   Macro settings
 
 QGIS Server Properties
 ----------------------
@@ -1783,7 +1786,7 @@ available in section :ref:`Creatingwmsfromproject` and subsequent.
 .. figure:: img/project_qgis_server.png
    :align: center
 
-   QGIS Server settings tab
+   QGIS Server settings
 
 .. index:: Temporal; Project time range
 .. _project_temporal:
