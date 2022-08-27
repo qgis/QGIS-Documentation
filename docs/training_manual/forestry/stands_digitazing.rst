@@ -41,6 +41,8 @@ original scanned map:
 .. figure:: img/gimp_map.png
    :align: center
 
+|
+
 Now you can select the pixels in the image that are making up the forest stands'
 borders (the greenish pixels):
 
@@ -59,6 +61,8 @@ borders (the greenish pixels):
 .. figure:: img/green_px_selected.png
    :align: center
 
+|
+
 Once you are done with the selection you need to copy this selection as a new
 layer and then save it as separate image file:
 
@@ -72,7 +76,9 @@ layer and then save it as separate image file:
 
 .. figure:: img/saving_green_px.png
    :align: center
-   
+
+|
+
 * Finally, select :menuselection:`File --> Export...`, set :guilabel:`Select
   File Type (By Extension)` as a :guilabel:`TIFF image`, select the
   :kbd:`digitizing` folder and name it :kbd:`rautjarvi_map_green.tif`.
@@ -119,9 +125,11 @@ Zoom in and see what the polygons look like. You will get something like this:
 .. figure:: img/green_polygons.png
    :align: center
 
+|
+
 Next one option to get points out of those polygons is to get their centroids:
 
-* Open :menuselection:`Vector --> Geometry tools --> Polygon centroids`.
+* Open :menuselection:`Vector --> Geometry tools --> Centroids`.
 * Set the polygon layer you just got as the input file for the tool.
 * Name the output as :kbd:`green_centroids.shp` inside the :kbd:`digitizing` folder.
 * Check :menuselection:`Add result to canvas`.
@@ -129,6 +137,8 @@ Next one option to get points out of those polygons is to get their centroids:
 
 .. figure:: img/green_points.png
    :align: center
+
+|
 
 Now you can remove the :guilabel:`rautjarvi_green_polygon` layer from the TOC.
 
@@ -155,6 +165,8 @@ the main roads (wide pink lines) and the lake:
 .. figure:: img/forest_stands_to_digitize.png
    :align: center
 
+|
+
 * Go to the :kbd:`digitizing` folder using your file manager browser.
 * Drag and drop the :kbd:`forest_stands.shp` vector file to your map.
 
@@ -167,24 +179,28 @@ have already been digitized:
 
 Now, if you remember past modules, we have to set up and activate the snapping options:
 
-* Go to :menuselection:`Project --> Snapping options...`.
-* Activate the snapping for the :kbd:`green_centroids` and the :kbd:`forest_stands` layers.
-* Set their :guilabel:`Tolerance` to 5 map units.
-* Check the :guilabel:`Avoid Int.` box for the :kbd:`forest_stands` layer.
-* Check :guilabel:`Enable topological editing`.
-* Click :guilabel:`Apply`.
+* Go to :menuselection:`Project --> Snapping options...`
+* Check the :kbd:`green_centroids` and :kbd:`forest_stands` layers
+* Set :guilabel:`Type` for each layer to :kbd:`Vertex`
+* Set  :guilabel:`Tolerance` for each layer to :kbd:`10 pixels`
+* Check the :guilabel:`Avoid Overlap` box for the :kbd:`forest_stands` layer
+* Press |topologicalEditing| :guilabel:`Topological editing`
+* Choose |avoidIntersectionsLayers| :guilabel:`Follow Advanced Configuration`
+* Close the pop-up
 
 .. figure:: img/snapping_settings_forest.png
    :align: center
 
+|
+
 With these snapping settings, whenever you are digitizing and get close enough
 to one of the points in the centroids layer or any vertex of your digitized
-polygons, a pink cross will appear on the point that will be snapped to. 
+polygons, a pink square will appear on the point that will be snapped to. 
 
 Finally, turn off the visibility of all the layers except :kbd:`forest_stands`
 and :kbd:`rautjarvi_georef`. Make sure that the map image has not transparency any more.
 
-A couple of important things to note before you start digitizing:
+A few important things to note before you start digitizing:
 
 * Don't try to be too accurate with the digitizing of the borders.
 * If a border is a straight line, digitize it with just two nodes. In general,
@@ -207,6 +223,8 @@ Now you can start digitizing:
 .. figure:: img/dgitizing_357_1.png
    :align: center
 
+|
+
 * When you are done, right click to end digitizing that polygon.
 * Enter the forest stand :kbd:`id` (in this case 357).
 * Click :guilabel:`OK`.
@@ -219,6 +237,8 @@ Your digitized polygon will look like this:
 
 .. figure:: img/dgitizing_357_3.png
    :align: center
+
+|
 
 Now for the second polygon, pick up the stand number 358. Make sure that the
 :guilabel:`Avoid int.` is checked for the :kbd:`forest_stands` layer. This
@@ -238,6 +258,8 @@ to automatically obtain a common border.
 
 .. figure:: img/dgitizing_358_5.png
    :align: center
+
+|
 
 The part of the polygon that was overlapping the existing polygon has been
 automatically trimmed out and you are left with a common border, as you intended
@@ -267,6 +289,8 @@ Your result will look like this:
 .. figure:: img/stands_fully_digitized.png
    :align: center
 
+|
+
 |basic| |FA| Joining the Forest Stand Data
 -------------------------------------------------------------------------------
 
@@ -288,6 +312,8 @@ in the same folder.
 
 .. figure:: img/inventory_csv_import.png
    :align: center
+
+|
 
 To add the data from the :kbd:`.csv` file:
 
@@ -356,7 +382,7 @@ might be more interested in performing analysis in a dataset more up to date.
 The topic of the next lesson will be the creation of forest stands using current
 aerial photos and the addition of some relevant information to your dataset.
 
-
+   
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -369,3 +395,8 @@ aerial photos and the addition of some relevant information to your dataset.
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/common/basic.png
+
+.. |topologicalEditing| image:: /static/common/mIconTopologicalEditing.png
+   :width: 1.5em
+.. |avoidIntersectionsLayers| image:: /static/common/mActionAvoidIntersectionsLayers.png
+   :width: 1.5em
