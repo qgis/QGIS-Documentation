@@ -2275,7 +2275,7 @@ variables overwritten by lower level ones are strike through.
 
 .. _figure_variables_dialog:
 
-.. figure:: img/options_variables.png
+.. figure:: img/project_variables.png
    :align: center
 
    Variables editor at the project level
