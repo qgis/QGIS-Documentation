@@ -1147,7 +1147,7 @@ copy or paste layer properties (style, scale, CRS...).
      - :guilabel:`Manage Layers`
      - :ref:`label_spatialite`
    * - :menuselection:`-->` |addMssqlLayer|
-       :guilabel:`Add MSSQL Spatial Layer...`
+       :guilabel:`Add MS SQL Server Layer...`
      -
      - :guilabel:`Manage Layers`
      - :ref:`db_tools`
@@ -1884,7 +1884,7 @@ Third-party plugins can add items to this menu.
      -
      -
      -
-   * - |meshreindex| :menuselection:`Reindex Faces and Vertices`
+   * - |meshReindex| :menuselection:`Reindex Faces and Vertices`
      -
      -
      -
@@ -2033,7 +2033,7 @@ context menu, or by holding the mouse over the toolbars.
 
 Available toolbars are:
 
-.. csv-table::
+.. csv-table:: QGIS Toolbars
    :header: "Name", "Main Reference for tools"
    :widths: auto
 
@@ -3177,7 +3177,7 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |mergeFeatures| image:: /static/common/mActionMergeFeatures.png
    :width: 1.5em
-.. |meshreindex| image:: /static/common/mActionMeshReindex.png
+.. |meshReindex| image:: /static/common/mActionMeshReindex.png
    :width: 1.5em
 .. |messageLog| image:: /static/common/mMessageLog.png
    :width: 1.5em

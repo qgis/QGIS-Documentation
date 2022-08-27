@@ -199,7 +199,7 @@ Mesh
 ================================  ====================================  ================================  ====================================
 Icon                              Substitution                          Icon                              Substitution
 ================================  ====================================  ================================  ====================================
-|meshDigitizing|                  ``|meshDigitizing|``                  |meshreindex|                     ``|meshreindex|``
+|meshDigitizing|                  ``|meshDigitizing|``                  |meshReindex|                     ``|meshReindex|``
 |meshSelectExpression|            ``|meshSelectExpression|``            |meshSelectPolygon|               ``|meshSelectPolygon|``
 |meshTransformByExpression|       ``|meshTransformByExpression|``       |meshEditForceByVectorLines|      ``|meshEditForceByVectorLines|``
 |vertexCoordinates|               ``|vertexCoordinates|``
@@ -1057,6 +1057,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |meshEditForceByVectorLines| image:: /static/common/mActionMeshEditForceByVectorLines.png
    :width: 1.5em
+.. |meshReindex| image:: /static/common/mActionMeshReindex.png
+   :width: 1.5em
 .. |meshSelectExpression| image:: /static/common/mActionMeshSelectExpression.png
    :width: 1.5em
 .. |meshSelectPolygon| image:: /static/common/mActionMeshSelectPolygon.png
@@ -1070,8 +1072,6 @@ Icon                            Substitution                        Icon        
 .. |meshcontoursoff| image:: /static/common/meshcontoursoff.png
    :width: 1.5em
 .. |meshframe| image:: /static/common/meshframe.png
-   :width: 1.5em
-.. |meshreindex| image:: /static/common/mActionMeshReindex.png
    :width: 1.5em
 .. |meshvectors| image:: /static/common/meshvectors.png
    :width: 1.5em

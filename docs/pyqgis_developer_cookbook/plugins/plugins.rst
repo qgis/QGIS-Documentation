@@ -69,14 +69,6 @@ What is the meaning of the files:
 * :file:`metadata.txt` = Contains general info, version, name and some other
   metadata used by plugins website and plugin infrastructure.
 
-`Here <https://github.com/wonder-sk/qgis-minimal-plugin>`_
-is a way of creating the basic files (skeleton) of a typical
-QGIS Python plugin.
-
-There is a QGIS plugin called
-`Plugin Builder 3 <https://plugins.qgis.org/plugins/pluginbuilder3/>`_
-that creates a plugin template for QGIS.
-This is the recommended option, as it produces 3.x compatible sources.
 
 .. warning::
     If you plan to upload the plugin to the :ref:`official_pyqgis_repository`
@@ -85,6 +77,15 @@ This is the recommended option, as it produces 3.x compatible sources.
 
 
 .. index:: Plugins; Writing code
+
+Useful tools to quickly create plugins
+--------------------------------------
+
+`A minimal plugin to get started <https://github.com/wonder-sk/qgis-minimal-plugin>`_
+that only includes the basic files (skeleton) of a typical QGIS Python plugin.
+
+A fully featured QGIS plugin called `Plugin Builder 3 <https://plugins.qgis.org/plugins/pluginbuilder3/>`_
+that creates a plugin template for QGIS. It produces 3.x compatible sources, with many possible features for a plugin.
 
 Plugin content
 ==============
@@ -597,6 +598,14 @@ Plugin Reloader
 During development of your plugin you will frequently need to reload it in QGIS
 for testing. This is very easy using the **Plugin Reloader** plugin. You can find it
 with the :ref:`Plugin Manager <plugins>`.
+
+Automate packaging, release and translation with qgis-plugin-ci
+---------------------------------------------------------------
+
+`qgis-plugin-ci <https://opengisch.github.io/qgis-plugin-ci/>`_ provides a command line interface to perform automated packaging and deployment for QGIS plugins on your computer, or using continuous integration 
+like `GitHub workflows <https://docs.github.com/en/actions/using-workflows>`_ or `Gitlab-CI <https://docs.gitlab.com/ee/ci/>`_ as well as `Transifex <https://www.transifex.com/>`_ for translation.
+
+It allows releasing, translating, publishing or generating an XML plugin repository file via CLI or in CI actions. 
 
 Accessing Plugins
 -----------------
