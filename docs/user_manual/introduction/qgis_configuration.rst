@@ -545,22 +545,42 @@ support read and write access:
 Rendering Settings
 ------------------
 
+The |rendering| :guilabel:`Rendering` tab provides settings for controlling
+layers rendering in the map canvas.
+
 .. _figure_rendering_menu:
 
 .. figure:: img/rendering_menu.png
    :align: center
 
-   Rendering tab of project properties dialog
+   Rendering settings
 
 **Rendering behavior**
 
 * |checkbox| :guilabel:`By default new layers added to the map should be
   displayed`: unchecking this option can be handy when loading multiple layers
   to avoid each new layer being rendered in the canvas and slow down the process
-* |checkbox| :guilabel:`Use render caching where possible to speed up redraws`
-* |checkbox| :guilabel:`Render layers in parallel using many CPU cores`
-* |checkbox| :guilabel:`Max cores to use`
+* |checkbox| :guilabel:`Maximum cores to use for map rendering`
 * :guilabel:`Map update interval (default to 250 ms)`
+* :guilabel:`Magnification level` (see the :ref:`magnifier <magnifier>`)
+
+**Rendering quality**
+
+* |checkbox| :guilabel:`Make lines appear less jagged at the expense of some
+  drawing performance`
+
+Vector rendering settings
+.........................
+
+The |polygonLayer| :guilabel:`Vector` tab contains specific settings
+for rendering vector layers.
+
+.. _figure_rendering_vector:
+
+.. figure:: img/options_rendering_vector.png
+   :align: center
+
+   Vector rendering settings
 
 .. _global_simplification:
 
@@ -577,15 +597,9 @@ Rendering Settings
   are simplified by the provider (PostGIS, Oracle...) and unlike the
   local-side simplification, geometry-based calculations may be affected
 * :guilabel:`Maximum scale at which the layer should be simplified (1:1 always simplifies)`
-* |doubleSpinBox| :guilabel:`Magnification level` (see the :ref:`magnifier <magnifier>`)
 
 .. note:: Besides the global setting, feature simplification can be set for any
    specific layer from its :menuselection:`Layer properties --> Rendering` menu.
-
-**Rendering quality**
-
-* |checkbox| :guilabel:`Make lines appear less jagged at the expense of some
-  drawing performance`
 
 **Curve segmentation**
 
@@ -597,7 +611,21 @@ Rendering Settings
 * :guilabel:`Tolerance type`: it can be *Maximum angle* or *Maximum difference*
   between approximation and curve.
 
-**Rasters**
+Raster rendering settings
+.........................
+
+The |raster| :guilabel:`Raster` tab contains specific settings for rendering
+raster layers.
+
+
+.. _figure_rendering_raster:
+
+.. figure:: img/options_rendering_raster.png
+   :align: center
+
+   Raster rendering settings
+
+Under :guilabel:`Bands and Resampling`:
 
 * With :guilabel:`RGB band selection`, you can define the number for the Red,
   Green and Blue band.
@@ -610,9 +638,8 @@ Rendering Settings
   You can also set the :guilabel:`Oversampling` value (between 0.0 and 99.99 - a large
   value means more work for QGIS - the default value is 2.0).
 
-*Contrast enhancement*
 
-Contrast enhancement options can be applied to :guilabel:`Single band gray`,
+:guilabel:`Contrast Enhancement` options can be applied to :guilabel:`Single band gray`,
 :guilabel:`Multi band color (byte/band)` or :guilabel:`Multi band color (>byte/band)`.
 For each, you can set:
 
@@ -2289,15 +2316,11 @@ in the QGIS user profile.
    :width: 1.5em
 .. |customProjection| image:: /static/common/mActionCustomProjection.png
    :width: 1.5em
-.. |doubleSpinBox| image:: /static/common/doublespinbox.png
-   :width: 1.5em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
 .. |editMetadata| image:: /static/common/editmetadata.png
    :width: 1.2em
 .. |editPaste| image:: /static/common/mActionEditPaste.png
-   :width: 1.5em
-.. |symbologyEdit| image:: /static/common/symbologyEdit.png
    :width: 1.5em
 .. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
@@ -2335,13 +2358,19 @@ in the QGIS user profile.
    :width: 1em
 .. |overlay| image:: /static/common/overlay.png
    :width: 1.5em
+.. |polygonLayer| image:: /static/common/mIconPolygonLayer.png
+   :width: 1.5em
 .. |processingAlgorithm| image:: /static/common/processingAlgorithm.png
    :width: 1.5em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
    :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
    :width: 1.5em
+.. |raster| image:: /static/common/mIconRaster.png
+   :width: 1.5em
 .. |relations| image:: /static/common/relations.png
+   :width: 1.5em
+.. |rendering| image:: /static/common/rendering.png
    :width: 1.5em
 .. |runConsole| image:: /static/common/iconRunConsole.png
    :width: 1.5em
@@ -2362,6 +2391,8 @@ in the QGIS user profile.
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
 .. |symbologyAdd| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |symbologyEdit| image:: /static/common/symbologyEdit.png
    :width: 1.5em
 .. |symbologyRemove| image:: /static/common/symbologyRemove.png
    :width: 1.5em
