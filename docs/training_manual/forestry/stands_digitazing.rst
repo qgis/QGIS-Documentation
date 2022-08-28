@@ -181,9 +181,9 @@ Now, if you remember past modules, we have to set up and activate the snapping o
 
 #. Go to :menuselection:`Project --> Snapping options...`
 #. Check the ``green_centroids`` and ``forest_stands`` layers
-#. Set :guilabel:`Type` for each layer to ``Vertex``
-#. Set  :guilabel:`Tolerance` for each layer to ``10``
-#. Set  :guilabel:`Units` for each layer to ``pixels``
+#. Set :guilabel:`Type` for each layer to |pointLayer| :guilabel:`Vertex`
+#. Set :guilabel:`Tolerance` for each layer to ``10``
+#. Set :guilabel:`Units` for each layer to :guilabel:`pixels`
 #. Check :guilabel:`Avoid Overlap` for the ``forest_stands`` layer
 #. Press |topologicalEditing| :guilabel:`Topological editing`
 #. Choose |avoidIntersectionsLayers| :guilabel:`Follow Advanced Configuration`
