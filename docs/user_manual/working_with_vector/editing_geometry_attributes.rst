@@ -474,6 +474,9 @@ button and you can enter attributes in the feature form that opens.
 To create features with the spatially enabled tools, you first digitize the
 geometry then enter its attributes. To digitize the geometry:
 
+#. (Optional as it is the default) Select the |digitizeWithSegment|
+   :sup:`Digitize With Segment` geometry drawing method on the
+   :guilabel:`Advanced Digitizing Toolbar`
 #. Left-click on the map area to create the first point of your new feature.
    For point features, this should be enough and trigger, if required,
    the feature form to fill in their attributes.
@@ -483,25 +486,26 @@ geometry then enter its attributes. To digitize the geometry:
    the :ref:`snap-to-grid <snap_to_grid>` or the :ref:`advanced digitizing
    <advanced_digitizing_panel>` panel to accurately position each vertex.
 
-   Along with placing nodes clik by click, lines and polygons can be:
+   Along with drawing straight segments between nodes you click one by one,
+   lines and polygons can be:
 
    * :ref:`traced automatically <tracing>`, accelerating the digitization.
      This will create consecutive straight lines between the vertices you
-     place.
+     place, following existing features.
    * free-hand digitized, pressing :kbd:`R` or activating |streamingDigitize|
-     :sup:`Stream digitizing` in the :guilabel:`Advanced Digitizing Toolbar`.
-
-   .. note::
-    Pressing :kbd:`Delete` or :kbd:`Backspace` key reverts the last
-    node you add.
-
-#. When you have finished adding points, right-click anywhere on the map area
-   to confirm you have finished entering the geometry of that feature.
+     :sup:`Stream Digitizing` in the :guilabel:`Advanced Digitizing Toolbar`.
+   * drawn as curve, pressing :kbd:`Ctrl+Shift+G` or activating |DigitizeWithCurve|
+     :sup:`Digitize with Curve` in the :guilabel:`Advanced Digitizing Toolbar`.
 
    .. note::
     While digitizing line or polygon geometries, you can switch back and forth
-    between the linear :guilabel:`Add feature` tools and :ref:`circular string
-    tools <add_circular_string>` to create compound curved geometries.
+    between the geometry drawing methods, allowing you to create features
+    mixing straight segments, free-hand ones and curved parts.
+
+#. Press :kbd:`Delete` or :kbd:`Backspace` key to revert the last node(s) you
+   may wrongly add.
+#. When you have finished adding points, right-click anywhere on the map area
+   to confirm you have finished entering the geometry of that feature.
 
    .. tip:: **Customize the digitizing rubber band**
 
@@ -939,18 +943,30 @@ Advanced digitizing
    single: Digitizing tools; Stream digitizing
 .. _drawing_methods:
 
-Straight, curve and stream digitizing
--------------------------------------
+Geometry editing techniques
+---------------------------
 
-The |digitizeWithCurve| :sup:`Digitize with Curve` tool allows you to draw curves in layers with
-geometries that support curves. Digitizing a curve requires to provide three points along the curve
-(start, point along the arc, end) which define it.
+When a geometry drawing tool (mainly the ones that add, split, reshape features)
+is enabled for a line or polygon based layer, you can select the technique for
+adding new vertices:
 
-The |streamingDigitize| :sup:`Stream Digitizing` tool allows you to activate and deactivate stream 
-digitizing which allows to create features in freehand mode. 
+* The |digitizeWithSegment| :sup:`Digitize with Segment`: draws straight segment
+  whose start and end points are defined by left clicks.
+* The |digitizeWithCurve| :sup:`Digitize with Curve`: draws curve line based on
+  three consecutive nodes defined by left clicks (start, point along the arc, end).
+  If the geometry type does not support curves, then consecutive smaller segments
+  are used to approximate the curvature.
+* The |streamingDigitize| :sup:`Stream Digitizing`: draws lines in freehand mode,
+  i.e. nodes are added following cursor movement in the map canvas and
+  a :guilabel:`Streaming Tolerance`.
+  The streaming tolerance defines the spacing between consecutive vertices.
+  Currently, the only supported unit is pixels (``px``). Only the starting left
+  click and the ending right click are necessary in this mode.
+* The |digitizeShape| :sup:`Digitize Shape`: triggers tools on the
+  :ref:`Shape Digitizing Toolbar <shape_edit>` to draw a polygon of a regular shape.
 
-The streaming tolerance affects the spacing between consecutive vertices.
-Currently, the only supported unit is pixels (``px``).
+The selected technique remains while switching among the digitizing tools.
+You can combine any of the first three methods while drawing the same geometry.
 
 .. index::
    single: Digitizing tools; Move feature
@@ -1488,24 +1504,29 @@ by clicking on it.
 Shape digitizing
 ================
 
-The :guilabel:`Shape Digitizing` toolbar offers a set of tools to draw
-regular shapes and curved geometries.
+The :guilabel:`Shape Digitizing` toolbar is synchronized with the
+|digitizeShape| :sup:`Digitize Shape` :ref:`geometry drawing method
+<drawing_methods>` you can select on the :guilabel:`Advanced Digitizing Toolbar`.
+It offers a set of tools to draw lines or polygons features of regular shape.
 
 .. index:: Circular string
 .. _add_circular_string:
 
-Add Circular string
--------------------
+Circular string by radius
+-------------------------
 
-The |circularStringCurvePoint| :sup:`Add circular string` or
-|circularStringRadius| :sup:`Add circular string by radius` buttons allow users
-to add line or polygon features with a circular geometry.
+The |circularStringRadius| :sup:`Circular string by radius` button allows
+to add line or polygon features with a circular geometry, given two nodes
+on the curve and a radius:
 
-Creating features with these tools follow the same rule as of other digitizing
-tools: left-click to place vertices and right-click to finish the geometry.
-While drawing the geometry, you can switch from one tool to the other as well
-as to the :ref:`linear geometry tools <add_feature>`, creating some coumpound
-geometries.
+#. Left click twice to place the two points on the geometry.
+#. A :guilabel:`Radius` widget in the top right corner of the map canvas
+   displays current radius (corresponding to distance between the points).
+   Edit that field to the value you want.
+#. An overview of the arcs matching these constraints is displayed while
+   moving around the cursor. Right-click to validate when the expected
+   arc is shown.
+#. Add a new point to start shaping another arc.
 
 .. note:: **Curved geometries are stored as such only in compatible data provider**
 
@@ -1527,23 +1548,23 @@ Circles are converted into circular strings. Therefore, as explained in
 :ref:`add_circular_string`, if allowed by the data provider, it will be saved as a
 curved geometry, if not, QGIS will segmentize the circular arcs.
 
-- |circle2Points| :sup:`Add circle from 2 points`: The two points define the diameter
+- |circle2Points| :sup:`Circle from 2 points`: The two points define the diameter
   and the orientation of  the circle. (Left-click, right-click)
-- |circle3Points| :sup:`Add circle from 3 points`: Draws a circle from three
+- |circle3Points| :sup:`Circle from 3 points`: Draws a circle from three
   known points on the circle. (Left-click, left-click, right-click)
-- |circleCenterPoint| :sup:`Add circle from center and a point`: Draws a circle
+- |circleCenterPoint| :sup:`Circle from center and a point`: Draws a circle
   with a given center and a point on the circle (Left-click, right-click).
   When used with the :ref:`advanced_digitizing_panel` this tool can become a
   "Add circle from center and radius" tool by setting and locking the distance
   value after first click.
-- |circle3Tangents| :sup:`Add circle from 3 tangents`: Draws a circle that is
+- |circle3Tangents| :sup:`Circle from 3 tangents`: Draws a circle that is
   tangential to three segments. **Note that you must activate snapping to
   segments** (See :ref:`snapping_tolerance`). Click on a segment to add a
   tangent. If two tangents are parallel, the coordinates of the click on the
   first parallel tangent are used to determine the positioning of the circle.
   If three tangents are parallel, an error message appears and the input
   is cleared. (Left-click, left-click, right-click)
-- |circle2TangentsPoint| :sup:`Add circle from 2 tangents and a point`: Similar
+- |circle2TangentsPoint| :sup:`Circle from 2 tangents and a point`: Similar
   to circle from 3 tangents, except that you have to select two tangents, enter
   a radius and select the desired center.
 
@@ -1559,15 +1580,15 @@ below.
 Ellipses cannot be converted as circular strings, so they will always be
 segmented.
 
-* |ellipseCenter2Points| :sup:`Add Ellipse from center and two points`: Draws an
+* |ellipseCenter2Points| :sup:`Ellipse from center and two points`: Draws an
   ellipse with a given center, major axis and minor axis. (Left-click,
   left-click, right-click)
-* |ellipseCenterPoint| :sup:`Add Ellipse from center and a point`: Draws an
+* |ellipseCenterPoint| :sup:`Ellipse from center and a point`: Draws an
   ellipse into a bounding box with the center and a corner. (Left-click,
   right-click)
-* |ellipseExtent| :sup:`Add Ellipse from extent`: Draws an ellipse into a bounding
+* |ellipseExtent| :sup:`Ellipse from extent`: Draws an ellipse into a bounding
   box with two opposite corners. (Left-click, right-click)
-* |ellipseFoci| :sup:`Add Ellipse from foci`: Draws an ellipse by 2 points for
+* |ellipseFoci| :sup:`Ellipse from foci`: Draws an ellipse by 2 points for
   foci and a point on the ellipse. (Left-click, left-click, right-click)
 
 .. index:: Draw rectangles
@@ -2000,8 +2021,6 @@ To edit features in-place:
 .. |circle3Tangents| image:: /static/common/mActionCircle3Tangents.png
    :width: 1.5em
 .. |circleCenterPoint| image:: /static/common/mActionCircleCenterPoint.png
-   :width: 1.5em
-.. |circularStringCurvePoint| image:: /static/common/mActionCircularStringCurvePoint.png
    :width: 1.5em
 .. |circularStringRadius| image:: /static/common/mActionCircularStringRadius.png
    :width: 1.5em
