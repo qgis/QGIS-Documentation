@@ -108,7 +108,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:rasterize``
+**Algorithm ID**: ``native:rasterize``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
