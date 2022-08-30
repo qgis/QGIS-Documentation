@@ -353,16 +353,24 @@ Tilesets
 
 .. index:: WMS tiles, WMS-C, WMTS
 
-When using WMTS (Cached WMS) services like
+When using WMTS (Cached WMS) services you are able to browse through
+the :guilabel:`Tilesets` tab given by the server.
+Additional information like tile size, formats and supported CRS are listed in
+this table.
 
 ::
+
+  # example of WMTS service
 
   https://opencache.statkart.no/gatekeeper/gk/gk.open_wmts?\
     service=WMTS&request=GetCapabilities
 
-you are able to browse through the :guilabel:`Tilesets` tab given by the server.
-Additional information like tile size, formats and supported CRS are listed in
-this table. In combination with this feature, you can use the tile scale slider
+Selecting a layer to load, it is also possible to apply an
+:ref:`Interpretation method <interpretation>`, converting it into a raster layer
+of single band float type, ready for styling using QGIS usual
+:ref:`raster renderers <raster_rendering>`.
+
+In combination with this feature, you can use the tile scale slider
 by selecting :menuselection:`View --> Panels` ( or |kde| :menuselection:`Settings
 --> Panels`), then choosing :guilabel:`Tile Scale Panel`. This gives you the
 available scales from the tile server with a nice slider docked in.
