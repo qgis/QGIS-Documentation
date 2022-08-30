@@ -1103,8 +1103,8 @@ https://doc.qt.io/qt-5.9/qnetworkproxy.html#ProxyType-enum
 .. index:: Search widget, Locator
 .. _locator_options:
 
-GPS
----
+GPS settings
+------------
 
 GPSBabel
 ........
