@@ -70,6 +70,9 @@ The :guilabel:`General` block contains a number of interesting parameters.
   display of broken algorithms (generally from third-party providers).
   If checked, they will be available in the Processing toolbox, with a warning
   icon and a tooltip explaining they have issues. Use at your own risks.
+* :guilabel:`Show feature count for output vector layers`. Since calculating
+  the feature count might take some time in certain data formats, this option
+  is off by default.
 * :guilabel:`Show layer CRS definition in selection boxes`
 * :guilabel:`Show tooltip when there are disabled providers`
 * :guilabel:`Style for line layers`, :guilabel:`Style for point layers`,
