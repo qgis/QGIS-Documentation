@@ -329,6 +329,17 @@ magenta for the report feature and semi-transparent light gray for
 the other features)::
 
     if($id=@atlas_featureid, '#FF880088', '#88CCCCCC')
+    
+Style matching features from other layers
+-----------------------------------------
+
+To highlight features within your group. Say you group over
+polygon features and want to highlight point features within the group.
+
+Use this rule to filter out only matching features.
+
+   attributes(@atlas_feature) ['group_field_name'] = "group_field_name"
+
 
 More level 1 groups
 -------------------
