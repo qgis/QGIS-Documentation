@@ -1572,8 +1572,8 @@ Creates a rectangle from 3 points.
        * **point3** - Third point.
        * **option** - An optional argument to construct the rectangle. By default this value is 0. Value can be 0 (distance) or 1 (projected). Option distance: Second distance is equal to the distance between 2nd and 3rd point. Option projected: Second distance is equal to the distance of the perpendicular projection of the 3rd point on the segment or its extension.
    * - Examples
-     - * ``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), make_point(5, 5), 0)))`` → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'
-       * ``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), make_point(5, 3), 1)))`` → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'
+     - * ``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), make_point(5, 5), 0))`` → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'
+       * ``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), make_point(5, 3), 1))`` → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'
 
 
 .. end_make_rectangle_3points_section
