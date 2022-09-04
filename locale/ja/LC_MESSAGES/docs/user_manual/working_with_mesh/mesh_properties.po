@@ -6,7 +6,6 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2022
-# fairtommy <fairtommy@gmail.com>, 2022
 # tomoyuki arai <tarai.3367@gmail.com>, 2022
 # 
 #, fuzzy
@@ -1076,6 +1075,20 @@ msgstr ""
 msgid "3D View Properties"
 msgstr "3Dビュープロパティ"
 
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:432
+msgid ""
+"Mesh layers can be used as :ref:`terrain in a 3D map view "
+"<scene_configuration>` based on their vertices Z values. From the |3d| "
+":guilabel:`3D View` properties tab, it's also possible to render the mesh "
+"layer's dataset in the same 3D view. Therefore, the vertical component of "
+"the vertices can be set equal to dataset values (for example, level of water"
+" surface) and the texture of the mesh can be set to render other dataset "
+"values with color shading (for example velocity)."
+msgstr ""
+"メッシュレイヤは頂点のZ値に基づいて :ref:`3Dマップビューの地形 <scene_configuration>` としても使用できます。 |3d|"
+" :guilabel:`3Dビュー` "
+"プロパティタブから、メッシュレイヤのデータセットを同じ3Dビューでレンダリングすることもできます。従って、頂点の鉛直成分はデータセット値（例えば水面の標高）と等しいように設定することができ、メッシュのテクスチャは他のデータセット値（例えば速度）をカラーランプシェーダでレンダリングするように設定できます。"
+
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:444
 msgid "Mesh dataset 3D properties"
 msgstr "メッシュデータセットの3Dプロパティ"
@@ -1112,8 +1125,8 @@ msgid ""
 msgstr ""
 ":guilabel:`詳細水準（Level of detail）` ：レンダリングするメッシュレイヤをどれだけ :ref:`簡素化 "
 "<meshrendering>` "
-"するかを制御する。スライダーの右端は元のメッシュで、左に行くほどメッシュレイヤは簡略化され、ディテールがより少なくなる。このオプションは、 "
-":guilabel:`レンダリング` タブで :guilabel:`メッシュの簡素化` オプションを有効にした場合のみ利用可能。"
+"するかを制御します。スライダーの右端は元のメッシュで、左に行くほどメッシュレイヤは簡略化され、ディテールがより少なくなります。このオプションは、 "
+":guilabel:`レンダリング` タブで :guilabel:`メッシュの簡素化` オプションを有効にした場合のみ利用可能です。"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:465
 msgid ""
@@ -1166,9 +1179,35 @@ msgid ""
 " also the max size of arrows because arrows can't overlap."
 msgstr ""
 ":guilabel:`矢印を表示` ： :ref:`ベクトルの2Dレンダリング <mesh_symbology_vectors>` "
-"で使用されるデータセットグループと同じデータセットに基づいて、メッシュレイヤデータセットの3Dエンティティ上に矢印を表示する。矢印は2Dの色設定を使って表示される。また、"
+"で使用されるデータセットグループと同じデータセットに基づいて、メッシュレイヤデータセットの3Dエンティティ上に矢印を表示します。矢印は2Dの色設定を使って表示されます。また、"
 " :guilabel:`矢印の間隔` の定義や、  :guilabel:`固定サイズ` "
-"とするか大きさでスケーリングするかを定義できる。矢印は重なり合うことができないため、この矢印の間隔設定は矢印の最大サイズも定義する。"
+"とするか大きさでスケーリングするかを定義できます。矢印は重なり合うことができないため、この矢印の間隔設定は矢印の最大サイズも定義します。"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:490
+msgid "Rendering Properties"
+msgstr "レンダリングプロパティ"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:492
+msgid ""
+"As mesh layers can have millions of faces, their rendering can sometimes be "
+"very slow, especially when all the faces are displayed in the view whereas "
+"they are too small to be viewed. To speed up the rendering, you can simplify"
+" the mesh layer, resulting in one or more meshes representing different "
+":ref:`levels of detail <levelofdetail>` and select at which level of detail "
+"you would like QGIS to render the mesh layer. Note that the simplify mesh "
+"contains only triangular faces."
+msgstr ""
+"メッシュレイヤは数百万の面を持つことがあるため、レンダリングには非常に時間がかかることがあります。これは特に、面が小さすぎて表示はできないものの、全ての面がビュー内にある場合に顕著です。レンダリングを高速化するためにメッシュレイヤを簡素化すると、さまざまな"
+" :ref:`詳細水準（level of detail） <levelofdetail>` "
+"を表す1つまたは複数のメッシュが生成され、QGISにどの詳細水準のメッシュレイヤをレンダリングさせるかを選択できます。簡素化されたメッシュは三角形の面のみとなることに留意してください。"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:500
+msgid ""
+"From the |rendering| :guilabel:`Rendering` tab, check |checkbox| "
+":guilabel:`Simplify mesh` and set:"
+msgstr ""
+"|rendering| :guilabel:`レンダリング` タブで |checkbox| :guilabel:`メッシュの簡素化` "
+"にチェックを入れると、以下が設定できます："
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:503
 msgid ""
@@ -1179,10 +1218,42 @@ msgid ""
 "reduction factor leads quickly to simpler meshes (i.e. with triangles of "
 "bigger size), it produces also fewer levels of detail."
 msgstr ""
-":guilabel:`Reduction factor` "
-"：単純化されたメッシュの連続するレベルの生成を制御します。たとえば、ベースメッシュに5Mの面があり、縮小係数が10の場合、最初の簡略化されたメッシュには約500"
-" "
-"000の面、2番目の50000の面、3番目の5000の面があります。より単純なメッシュ（つまり、より大きなサイズの三角形を使用）では、詳細レベルも少なくなります。"
+":guilabel:`削減係数` "
+"：簡素化されたメッシュの連続するレベルの生成を制御します。例えば、ベースメッシュに5百万個の面があり、削減係数が10の場合、最初の簡素化されたメッシュはおよそ500,000個の面、2番目は50,000個の面、3番目は5000個の面、といった具合になります。削減係数が大きいほどより単純なメッシュ（つまり、より大きなサイズの三角形）に早く到達し、詳細水準の数も少なくなります。"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:510
+msgid ""
+":guilabel:`Minimum triangle size`: the average size (in pixels) of the "
+"triangles that is permitted to display. If the average size of the mesh is "
+"lesser than this value, the rendering of a lower level of details mesh is "
+"triggered."
+msgstr ""
+":guilabel:`最小三角形サイズ` "
+"：表示が許可される三角形の平均サイズ（ピクセル単位）です。メッシュの平均サイズがこの値よりも小さい場合には、より低い詳細水準のメッシュのレンダリングに切り替わります。"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:520
+msgid "Temporal Properties"
+msgstr "時系列プロパティ"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:522
+msgid ""
+"The |temporal| :guilabel:`Temporal` tab provides options to control the "
+"rendering of the layer over time. It allows to dynamically display temporal "
+"values of the enabled dataset groups. Such a dynamic rendering requires the "
+":ref:`temporal navigation <maptimecontrol>` to be enabled over the map "
+"canvas."
+msgstr ""
+"|temporal| :guilabel:`時系列` "
+"タブは、時間経過に伴うレイヤのレンダリングを制御するオプションを提供します。これは、有効化されたデータセットグループの時系列値を動的に表示できるようになります。このような動的なレンダリングには、マップキャンバスで"
+" :ref:`時系列ナビ <maptimecontrol>` を有効にする必要があります。"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:533
+msgid "Mesh Temporal properties"
+msgstr "メッシュの時系列プロパティ"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:535
+msgid "**Layer temporal settings**"
+msgstr "**レイヤ時間設定**"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:537
 msgid ""
@@ -1193,9 +1264,61 @@ msgid ""
 ":guilabel:`Start time` and :guilabel:`End time` to  consider are then "
 "calculated based on the internal timestamp step of the dataset."
 msgstr ""
-"絶対日時としての、データセットグループの :guilabel:`参照時刻` "
-"。デフォルトでは、QGISはソースレイヤーを解析し、レイヤーのデータセットグループの最初の有効な参照時間を返します。使用できない場合、値はプロジェクトの時間範囲によって設定されるか、現在の日付にフォールバックします。次に、考慮すべき"
-" :guilabel:`開始時刻` と :guilabel:`終了時刻` が、データセットの内部タイムスタンプステップに基づいて計算されます。"
+":guilabel:`参照時間` "
+"は、データセットグループの絶対的な日時としての基準です。デフォルトでは、QGISはソースレイヤを解析し、レイヤのデータセットグループ内の最初の有効な参照時間を返します。これが利用できない場合は、この値はプロジェクトの時間範囲によって設定されるか、現在の日付にフォールバックされます。考慮すべき"
+" :guilabel:`開始時刻` と :guilabel:`終了時刻` は、データセット内部のタイムスタンプのステップに基づいて計算されます。"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:544
+msgid ""
+"It is possible to set a custom :guilabel:`Reference time` (and then the time"
+" range), and revert the changes using the |refresh| :sup:`Reload from "
+"provider` button."
+msgstr ""
+"カスタムの :guilabel:`参照時間` （と時間範囲）を設定することができ、変更は |refresh| :sup:`プロバイダから再読み込み` "
+"ボタンを使用して元に戻すことができます。"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:547
+msgid ""
+":guilabel:`Dataset matching method`: determines the dataset to display at "
+"the given time. Options are :guilabel:`Find closest dataset before requested"
+" time` or :guilabel:`Find closest dataset from requested time (after or "
+"before)`."
+msgstr ""
+":guilabel:`データセット検索方法` ：指定された時間に表示するデータセットを決定します。選択肢は、 "
+":guilabel:`時間内に最も近いデータセットを見つける` と :guilabel:`時間内に最も近いデータセットを見つける（前後）` の2つです。"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:551
+msgid "**Provider time settings**"
+msgstr "**プロバイダ時間設定**"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:553
+msgid ""
+":guilabel:`Time unit` extracted from the raw data, or user defined. This can"
+" be used to align the speed of the mesh layer with other layers in the "
+"project during map time navigation. Supported units are :guilabel:`Seconds`,"
+" :guilabel:`Minutes`, :guilabel:`Hours` and :guilabel:`Days`."
+msgstr ""
+":guilabel:`時間単位` "
+"は、元データから抽出されるか、ユーザーが定義します。この値は、マップの時系列ナビゲーションの際に、メッシュレイヤの速度をプロジェクト内の他のレイヤと揃えるために使用されます。サポートしている単位は、"
+" :guilabel:`秒` 、 :guilabel:`分` 、 :guilabel:`時` 、および :guilabel:`日` です。"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:564
+msgid "Metadata Properties"
+msgstr "メタデータプロパティ"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:566
+msgid ""
+"The |editMetadata| :guilabel:`Metadata` tab provides you with options to "
+"create and edit a metadata report on your layer. See :ref:`metadatamenu` for"
+" more information."
+msgstr ""
+"|editMetadata| :guilabel:`メタデータ` タブには、レイヤに関するメタデータレポートの作成・編集オプションがあります。詳細は "
+":ref:`metadatamenu` を参照してください。"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:574
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:585
+msgid "Mesh Calculator"
+msgstr "メッシュ計算機"
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:576
 msgid ""
@@ -1204,6 +1327,117 @@ msgid ""
 "dataset groups to generate a new dataset group (see "
 ":numref:`figure_mesh_calculator`)."
 msgstr ""
-"上部の :guilabel:`Mesh Calculator` ツール :menuselection:`Mesh` "
-"メニューを使用すると、既存のデータセットグループに対して算術計算と論理計算を実行して、新しいデータセットグループを生成できます（ "
-":numref:`figure_mesh_calculator` を参照）。"
+":menuselection:`メッシュ` メニューの先頭にある :guilabel:`メッシュ計算機` "
+"ツールを使用すると、既存のデータセットグループに対して算術演算や論理演算を行い、新しいデータセットグループを生成できます（ "
+":numref:`figure_mesh_calculator` 参照）。"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:587
+msgid ""
+"The :guilabel:`Datasets` list contains all dataset groups in the active mesh"
+" layer. To use a dataset group in an expression, double click its name in "
+"the list and it will be added to the :guilabel:`Mesh calculator expression` "
+"field. You can then use the operators to construct calculation expressions, "
+"or you can just type them into the box."
+msgstr ""
+":guilabel:`データセット` "
+"のリストには、アクティブなメッシュレイヤ内の全てのデータセットグループが含まれます。データセットグループを式で使用するには、リスト内でグループ名をダブルクリックします。すると、"
+" :guilabel:`メッシュ計算機の式` "
+"フィールドにグループが追加されます。続いて演算子ボタンを使用したりボックスに演算子を直接入力して、計算式を構築してください。"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:593
+msgid ""
+"The :guilabel:`Result Layer` helps you configure properties of the output "
+"layer:"
+msgstr ":guilabel:`ラスタレイヤ` では、出力レイヤのプロパティを設定できます："
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:595
+msgid ""
+"|checkbox| :guilabel:`Create on-the-fly dataset group instead of writing "
+"layer to disk`:"
+msgstr "|checkbox| :guilabel:`ディスクに書き込まないオンザフライ・ラスタを作成`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:598
+msgid ""
+"If unchecked, the output is stored on disk as a new plain file. An "
+":guilabel:`Output File` path and an :guilabel:`Output Format` are required."
+msgstr ""
+"これにチェックを入れない場合、出力結果は通常の新しいファイルとしてディスク上に保存されます。 :guilabel:`出力ファイル` のパスと、 "
+":guilabel:`出力形式` を指定する必要があります。"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:600
+msgid ""
+"If checked, a new dataset group will be added to the mesh layer. Values of "
+"the dataset group are not stored in memory but each dataset is calculated "
+"when needed with the formula entered in the mesh calculator. That virtual "
+"dataset group is saved with the project, and if needed, it can be removed or"
+" made persistent in file from the layer :guilabel:`Source` properties tab."
+msgstr ""
+"チェックを入れた場合、メッシュレイヤに新しいデータセットグループが追加されます。データセットグループの値はメモリには保存されておらず、各データセットはメッシュ計算機に入力された計算式で必要となった時に計算されます。この仮想のデータセットはプロジェクトに保存され、レイヤの"
+" :guilabel:`ソース` プロパティタブから必要に応じて削除したり、ファイルに永続化させたりすることができます。"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:607
+msgid ""
+"In either case, you should provide a :guilabel:`Group Name` for the output "
+"dataset group."
+msgstr "どちらの場合でも、出力データセットグループの :guilabel:`グループ名` を指定する必要があります。"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:609
+msgid "The :guilabel:`Spatial extent` to consider for calculation can be:"
+msgstr ":guilabel:`空間範囲` は計算で考慮する範囲で、以下の設定があります："
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:611
+msgid ""
+"a :guilabel:`Custom extent`, manually filled with the :guilabel:`X min`, "
+":guilabel:`X max`, :guilabel:`Y min` and :guilabel:`Y max` coordinate, or "
+"extracted from an existing dataset group (select it in the list and press "
+":guilabel:`Use selected layer extent` to fill the abovementioned coordinate "
+"fields)"
+msgstr ""
+":guilabel:`カスタム範囲` ：座標の :guilabel:`X最小値` 、 :guilabel:`X最大値` 、 "
+":guilabel:`Y最小値` 、 :guilabel:`Y最大値` "
+"を手動で入力するか、既存のデータセットグループから抽出します（範囲に使用したいデータセットをリストで選択し、 "
+":guilabel:`選択レイヤの領域を使用` ボタンを押すと上記の座標フィールドが入力されます）"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:616
+msgid ""
+"defined by a polygon layer (:guilabel:`Mask layer`) of the project: the "
+"polygon features geometry are used to clip the mesh layer datasets"
+msgstr ""
+"プロジェクトのポリゴンレイヤによる定義（ :guilabel:`マスクレイヤ` "
+"）：ポリゴン地物のジオメトリを使用してメッシュレイヤのデータセットを切り抜きます"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:619
+msgid ""
+"The :guilabel:`Temporal extent` to take into account for datasets can be set"
+" with the :guilabel:`Start time` and :guilabel:`End time` options, selected "
+"from the existing dataset groups timesteps. They can also be filled using "
+"the :guilabel:`Use all selected dataset times` button to take the whole "
+"range."
+msgstr ""
+":guilabel:`時系列範囲` ：データセットが考慮する時間範囲を :guilabel:`開始時刻` と :guilabel:`終了時刻` "
+"のオプションで設定します。これは、データセットグループの既存の時間ステップの中から選択します。また、 "
+":guilabel:`全ての選択データセット時間を使用` ボタンを押して、時間の全範囲を設定することもできます。"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:624
+msgid ""
+"The :guilabel:`Operators` section contains all available operators. To add "
+"an operator to the mesh calculator expression box, click the appropriate "
+"button. Mathematical calculations (``+``, ``-``, ``*``, ... ) and "
+"statistical functions (``min``, ``max``, ``sum (aggr)``, ``average (aggr)``,"
+" ... ) are available. Conditional expressions (``=``, ``!=``, ``<``, ``>=``,"
+" ``IF``, ``AND``, ``NOT``, ... ) return either 0 for false and 1 for true, "
+"and therefore can be used with other operators and functions. The ``NODATA``"
+" value can also be used in the expressions."
+msgstr ""
+":guilabel:`演算子` "
+"セクションには利用可能なすべての演算子があります。演算子をメッシュ計算機の式ボックスに追加するには、それに応じたボタンをクリックします。算術計算（ "
+"``+`` 、 ``-`` 、 ``*`` など）や統計関数（ ``min`` 、 ``max`` 、 ``sum (aggr)`` 、 "
+"``average (aggr)`` など）が利用できます。条件式（ ``=`` 、 ``!=`` 、 ``<`` 、 ``>=`` 、 ``IF`` "
+"、 ``AND`` 、 ``NOT`` など）は、偽の場合は 0 、真の場合は 1 を返すので、他の演算子や関数と共に使うことができます。 "
+"``NODATA`` 値も式中で使用できます。"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:632
+msgid ""
+"The :guilabel:`Mesh Calculator Expression` widget shows and lets you edit "
+"the expression to execute."
+msgstr ":guilabel:`メッシュ計算機の式` ウィジェットには実行する式が表示され、式を編集することができます。"
