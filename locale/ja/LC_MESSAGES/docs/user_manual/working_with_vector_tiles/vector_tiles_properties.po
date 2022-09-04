@@ -6,7 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2022
-# fairtommy <fairtommy@gmail.com>, 2022
+# tomoyuki arai <tarai.3367@gmail.com>, 2022
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-04-04 11:11+0000\n"
 "PO-Revision-Date: 2022-03-14 05:10+0000\n"
-"Last-Translator: fairtommy <fairtommy@gmail.com>, 2022\n"
+"Last-Translator: tomoyuki arai <tarai.3367@gmail.com>, 2022\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -91,8 +91,21 @@ msgid ""
 ":guilabel:`Vector Tile` tab in the :guilabel:`Data Source Manager` dialog. "
 "Read :ref:`vector_tiles` for more details."
 msgstr ""
-"ベクタータイルデータセットをQGISにロードするには、 |addVectorTileLayer| :guilabel:`データソースマネージャ` "
-"ダイアログの :guilabel:`ベクタタイル` タブを使用します。詳細は :ref:`vector_tiles` をお読みください。"
+"ベクタタイルデータセットをQGISにロードするには、 :guilabel:`データソースマネージャ` ダイアログの "
+"|addVectorTileLayer| :guilabel:`ベクタタイル` タブを使用します。詳細は :ref:`vector_tiles` "
+"を参照してください。"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:119
+msgid "addVectorTileLayer"
+msgstr "addVectorTileLayer"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:53
+msgid "Vector Tiles Dataset Properties"
+msgstr "ベクタタイルデータセットのプロパティ"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:56
+msgid "Information Properties"
+msgstr "情報プロパティ"
 
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:58
 msgid ""
@@ -100,8 +113,35 @@ msgid ""
 "place to quickly grab summarized information and metadata on the current "
 "layer. Provided information are:"
 msgstr ""
-":guilabel:`Information` "
-"タブは読み取り専用であり、現在のレイヤーで要約された情報とメタデータをすばやく取得するための興味深い場所を表しています。提供される情報は次のとおりです："
+":guilabel:`情報` "
+"タブは読み取り専用で、現在のレイヤの要約された情報やメタデータをさっと掴むことができる興味深い場所です。提供される情報には、以下のものがあります："
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:62
+msgid ""
+"based on the provider of the layer: name, URI, source type and path, number "
+"of zoom levels"
+msgstr "レイヤのプロバイダからの情報：名前、URI、ソースタイプとパス、ズームレベルの数"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:64
+msgid ""
+"the Coordinate Reference System: name, units, method, accuracy, reference "
+"(i.e. whether it's static or dynamic)"
+msgstr "空間参照システム（CRS）：CRSの名前、単位、投影法、精度、参照（静的か動的か）"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:66
+msgid ""
+"picked from the :ref:`filled metadata <vectortilesmetadatamenu>`: access, "
+"extents, links, contacts, history..."
+msgstr ""
+":ref:`入力されたメタデータ <vectortilesmetadatamenu>` からの情報：アクセス、領域、リンク、連絡先、履歴など"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:70
+msgid "Symbology and Label Properties"
+msgstr "シンボロジプロパティとラベルプロパティ"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:77
+msgid "Vector Tile Layer Symbology"
+msgstr "ベクタタイルレイヤのシンボロジ"
 
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:79
 msgid ""
@@ -111,10 +151,13 @@ msgid ""
 "Connection`. The symbology will be shown immediately in the |symbology| "
 ":guilabel:`Symbology` tab after clicking the :guilabel:`OK` button."
 msgstr ""
-"ベクタタイルはポイント、ライン、ポリゴンのジオメトリで構成されているため、それぞれのシンボルを使用できます。地図作成スタイルを適用するには、 "
-":guilabel:`Vector Tiles Connection` を作成するときに :guilabel:`StyleURL` "
-"を使用する必要があります。シンボルは :guilabel:`OK` ボタンをクリックした後 |symbology| の "
-":guilabel:`Symbology` タブにすぐに表示されます。"
+"ベクタタイルはポイント、ライン、ポリゴンのジオメトリで構成されているため、それぞれでシンボルを使用できます。地図作成スタイルを適用するには、 "
+":guilabel:`ベクタタイル接続` を作成するときに :guilabel:`StyleURL` を使用する必要があります。シンボルは "
+":guilabel:`OK` ボタンをクリックした後すぐに |symbology| :guilabel:`シンボロジ` タブに表示されます。"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:123
+msgid "symbology"
+msgstr "symbology"
 
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:85
 msgid ""
@@ -124,9 +167,10 @@ msgid ""
 "OpenStreetMap ``landuse`` layer. The settings are made for the class "
 "``suburb`` here. For better visibility most of the rules are deselected."
 msgstr ""
-"独自の地図作成スタイルを作成するには、地物の :ref:`rules <rule_based_rendering>` "
-"のセットを定義し、スタイルとラベルを適用します。 In :numref:`figure_vector_tile_symbology` "
-"で、OpenStreetMapの「landuse」レイヤーのスタイルとラベル付けを設定しました。ここではクラス「郊外」の設定が行われています。見やすくするために、ほとんどのルールの選択が解除されています。"
+"独自の地図作成スタイルを作成するために、地物に :ref:`ルール <rule_based_rendering>` "
+"のセットを定義し、スタイルとラベルに適用することができます。 :numref:`figure_vector_tile_symbology` "
+"では、OpenStreetMapの ``landuse`` レイヤのスタイルとラベル付けを設定しています。ここでは、 ``suburb`` "
+"クラスに対して設定を行っています。マップを見やすくするため、ほとんどのルールの選択を解除しています。"
 
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:91
 msgid ""
@@ -136,13 +180,25 @@ msgid ""
 " with complex vector styling and to locate troublesome rules. Style and "
 "labelling can be dependent on the zoom level."
 msgstr ""
-"下部に :guilabel:`現在のズーム` が表示されます。 :guilabel:`表示される規則のみ` "
-"オプションをチェックして、規則のリストを特定のズームレベルで表示される規則のみにフィルタリングします。これにより、複雑なベクタスタイルの操作や、面倒な規則の特定が容易になります。スタイルとラベル付けは、ズームレベルに依存するようにできます。"
+"下部には :guilabel:`現在のズーム` が表示されています。 :guilabel:`表示できるルールのみ` "
+"オプションにチェックを入れると、指定したズームレベルで表示されるルールのみにリストをフィルタリングできます。これにより、複雑なベクタスタイルの設定作業や、問題のあるルールの特定が容易になります。スタイルとラベル付けは、ズームレベルに依存するようにできます。"
 
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:97
 msgid ""
 "There is also the option to import styles. Those styles can be supplied as:"
-msgstr "スタイルをインポートするオプションもあります。これらのスタイルは、次のように提供できます："
+msgstr "スタイルをインポートするオプションもあります。スタイルは以下の形式で与えます："
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:99
+msgid ":guilabel:`QML` files (:ref:`qgisstylefile`)"
+msgstr ":guilabel:`QML` ファイル（ :ref:`qgisstylefile` ）"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:100
+msgid ":guilabel:`MapBox GL Json` style configuration files"
+msgstr ":guilabel:`MapBox GL JSON` スタイル設定ファイル"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:106
+msgid "Metadata Properties"
+msgstr "メタデータプロパティ"
 
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:108
 msgid ""
@@ -150,5 +206,9 @@ msgid ""
 "create and edit a metadata report on your layer. See :ref:`metadatamenu` for"
 " more information."
 msgstr ""
-"|editMetadata| :guilabel:`Metadata` "
-"タブには、レイヤーでメタデータレポートを作成および編集するためのオプションがあります。詳細は :ref:`metadatamenu` を参照。"
+"|editMetadata| :guilabel:`メタデータ` タブには、レイヤに関するメタデータレポートの作成・編集オプションがあります。詳細は "
+":ref:`metadatamenu` を参照してください。"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:121
+msgid "editMetadata"
+msgstr "editMetadata"
