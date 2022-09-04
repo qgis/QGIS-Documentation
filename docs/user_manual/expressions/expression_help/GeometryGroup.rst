@@ -1785,6 +1785,27 @@ Creates a triangle polygon.
 
 .. end_make_triangle_section
 
+.. _expression_function_GeometryGroup_make_valid:
+
+make_valid
+..........
+
+Returns a valid geometry or an empty geometry if the geometry could not be made valid.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - make_valid(geometry)
+   * - Arguments
+     - * **geometry** - a geometry
+   * - Examples
+     - * ``geom_to_wkt(make_valid(geom_from_wkt('POLYGON((3 2, 4 1, 5 8, 3 2, 4 2))')))`` → 'GeometryCollection (Polygon ((5 8, 4 1, 3 2, 5 8)),LineString (3 2, 4 2))'
+       * ``make_valid(geom_from_wkt('LINESTRING(0 0)'))`` → <empty geometry>
+
+
+.. end_make_valid_section
+
 .. _expression_function_GeometryGroup_minimal_circle:
 
 minimal_circle
