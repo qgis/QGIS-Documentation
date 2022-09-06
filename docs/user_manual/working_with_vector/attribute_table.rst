@@ -22,8 +22,8 @@ Foreword: Spatial and non-spatial tables
 ========================================
 
 QGIS allows you to load spatial and non-spatial layers. This currently includes
-tables supported by OGR and delimited text, as well as the PostgreSQL, MSSQL,
-SpatiaLite and Oracle provider. All loaded layers are listed in
+tables supported by OGR and delimited text, as well as the PostgreSQL, MS SQL Server,
+SpatiaLite and Oracle providers. All loaded layers are listed in
 the :guilabel:`Layers` panel. Whether a layer is spatially enabled or not
 determines whether you can interact with it on the map.
 
@@ -562,7 +562,9 @@ A short example illustrates how field calculator works when using the
 #. Set the :guilabel:`Output field length` to ``10`` and the :guilabel:`Precision`
    to ``3``
 #. Double click on ``$length`` in the :guilabel:`Geometry` group to add the length
-   of the geometry into the Field calculator expression box.
+   of the geometry into the Field calculator expression box (you will begin to see
+   a preview of the output, up to 60 characters, below the expression box updating 
+   in real-time as the expression is assembled).
 #. Complete the expression by typing ``/ 1000`` in the Field calculator
    expression box and click :guilabel:`OK`.
 #. You can now find a new :guilabel:`length_km` field in the attribute table.
@@ -811,7 +813,7 @@ a table. And there are also some buttons available. Let's review them shortly:
   form of a feature from the region layer. But the table is representing
   features of the airport layer.
 * The |saveEdits| button is for saving all the edits in the child layer (airport).
-* The |capturePoint| lets you digitize the airport geometry in the map canvas and
+* The |capturePoint| button lets you digitize the airport geometry in the map canvas and
   assigns the new feature to the current region by default.
   Note that the icon will change according to the geometry type.
 * The |newTableRow| button adds a new record to the airport layer attribute table
@@ -830,6 +832,18 @@ a table. And there are also some buttons available. Let's review them shortly:
   features.
 * The two buttons |formView| and |openTable| to the right switch between the :ref:`table
   view and form view <attribute_table_view>` of the related child features.
+
+If you use the :ref:`Drag and Drop Designer <customize_form>` for the regions feature, you can select 
+which tools are available. You can even decide whether to open a new form when a new feature is 
+added using :guilabel:`Force hide form on add feature` option. Be aware that this option implies 
+that not null attributes must take a valid default value to work correctly.
+
+.. _figure_select_relation_tools:
+
+.. figure:: img/relations11.png
+   :align: center
+
+   Drag and Drop Designer for configure regions-airports relation tools
 
 In the above example the referencing layer has geometries (so it isn't just
 an alphanumeric table) so the above steps will create an entry in the layer
@@ -1082,7 +1096,7 @@ This might not be a problem for 2 tables, but imagine if we want to take separat
 
 Polymorphic relations solve this problem as all the referencing features are stored in the same table ``documents``.
 For each feature the referenced layer is stored in the ``referenced_layer`` field and the referenced
-feature id in the ``referenced_fk``.
+feature id in the ``referenced_fk`` field.
 
 
 Defining polymorphic relations

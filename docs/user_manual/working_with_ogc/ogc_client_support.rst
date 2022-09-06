@@ -353,16 +353,24 @@ Tilesets
 
 .. index:: WMS tiles, WMS-C, WMTS
 
-When using WMTS (Cached WMS) services like
+When using WMTS (Cached WMS) services you are able to browse through
+the :guilabel:`Tilesets` tab given by the server.
+Additional information like tile size, formats and supported CRS are listed in
+this table.
 
 ::
+
+  # example of WMTS service
 
   https://opencache.statkart.no/gatekeeper/gk/gk.open_wmts?\
     service=WMTS&request=GetCapabilities
 
-you are able to browse through the :guilabel:`Tilesets` tab given by the server.
-Additional information like tile size, formats and supported CRS are listed in
-this table. In combination with this feature, you can use the tile scale slider
+Selecting a layer to load, it is also possible to apply an
+:ref:`Interpretation method <interpretation>`, converting it into a raster layer
+of single band float type, ready for styling using QGIS usual
+:ref:`raster renderers <raster_rendering>`.
+
+In combination with this feature, you can use the tile scale slider
 by selecting :menuselection:`View --> Panels` ( or |kde| :menuselection:`Settings
 --> Panels`), then choosing :guilabel:`Tile Scale Panel`. This gives you the
 available scales from the tile server with a nice slider docked in.
@@ -593,7 +601,7 @@ WFS and WFS-T Client
 
 In QGIS, a WFS layer behaves pretty much like any other vector layer.
 You can identify and select features, and view the attribute table.
-QGIS supports WFS 1.0.0, 1.1.0, 2.0 and WFS3 (OGC API - Features),
+QGIS supports WFS 1.0.0, 1.1.0, 2.0 and OGC API - Features (OAPIF),
 including editing (through WFS-T).
 
 In general, adding a WFS layer is very similar to the procedure used with WMS.
@@ -625,8 +633,8 @@ To be able to load a WFS Layer, first create a connection to the WFS server:
    
       Creating a connection to a WFS server
 
-   .. note:: In case of an OGC API - Features (WFS3), the URL to provide should
-     be the :ref:`landing page <wfs3_endpoints>`, ie the main page from which
+   .. note:: In case of an OGC API - Features (OAPIF), the URL to provide should
+     be the :ref:`landing page <oapif_endpoints>`, ie the main page from which
      it is possible to navigate to all the available service endpoints.
 
 #. In the WFS settings dialog, you can:

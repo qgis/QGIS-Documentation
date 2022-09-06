@@ -158,7 +158,7 @@ using the AND, OR and NOT operators and parenthesis.
 This syntax (including the DateTime format for the ``toa`` field) works for
 GeoPackage datasets.
 
-The filter is made at the data provider (OGR, PostgreSQL, MSSQL...) level.
+The filter is made at the data provider (OGR, PostgreSQL, MS SQL Server...) level.
 So the syntax depends on the data provider (DateTime is for instance not
 supported for the ESRI Shapefile format).
 The complete expression::
@@ -259,8 +259,8 @@ Features rendering
 The renderer is responsible for drawing a feature together with the correct
 symbol. Regardless layer geometry type, there are four common types of
 renderers: single symbol, categorized, graduated and rule-based. For point
-layers, there are a point displacement and a heatmap renderers available while
-polygon layers can also be rendered with the inverted polygons and 2.5 D renderers.
+layers, there are point displacement, point cluster and heatmap renderers available while
+polygon layers can also be rendered with the merged features, inverted polygons and 2.5 D renderers.
 
 There is no continuous color renderer, because it is in fact only a special
 case of the graduated renderer. The categorized and graduated renderers can be
@@ -1379,20 +1379,33 @@ With rule-based labeling multiple label configurations can be defined
 and applied selectively on the base of expression filters and scale range, as in
 :ref:`Rule-based rendering <rule_based_rendering>`.
 
-To create a rule, select the |labelingRuleBased| **Rule-based labeling** option in the main
-drop-down list from the :guilabel:`Labels` tab and click the |symbologyAdd| button
-at the bottom  of the dialog. Then fill the new dialog with a description and an
-expression to filter features. You can also set a :ref:`scale range
-<label_scaledepend>` in which the label rule should be applied. The other
-options available in this dialog are the :ref:`common settings <showlabels>`
-seen beforehand.
+To create a rule:
 
-.. _figure_labels_rule_settings:
+#. Select the |labelingRuleBased| **Rule-based labeling** option in the main
+   drop-down list from the :guilabel:`Labels` tab
+#. Click the |symbologyAdd| :sup:`Add rule` button at the bottom of the dialog.
+#. Fill the new dialog with:
 
-.. figure:: img/label_rule_settings.png
-   :align: center
+   * :guilabel:`Description`: a text used to identify the rule in the
+     :guilabel:`Labels` tab and as a :ref:`label legend entry <vectorlegendmenu>`
+     in the print layout legend
+   * :guilabel:`Filter`: an expression to select the features to apply the label
+     settings to
+   * If there are rules already set, the :guilabel:`Else` option can be
+     used to select all the features not matching any filter of the rules
+     in the same group.
+#. You can set a :ref:`scale range <label_scaledepend>` in which the label
+   rule should be applied.
+#. The options available under the :guilabel:`Labels` group box are
+   the usual :ref:`label settings <showlabels>`. Configure them and press
+   :guilabel:`OK`.
 
-   Rule settings
+   .. _figure_labels_rule_settings:
+
+   .. figure:: img/label_rule_settings.png
+      :align: center
+
+      Rule settings
 
 A summary of existing rules is shown in the main dialog (see :numref:`figure_labels_rule_based`).
 You can add multiple rules, reorder or imbricate them with a drag-and-drop.
@@ -3189,8 +3202,8 @@ provided :guilabel:`Configuration` options:
 * :guilabel:`Separate fields for start and event duration`: features are rendered
   if the range defined by their :guilabel:`Start field` and :guilabel:`Event duration field`
   values overlaps the map canvas temporal.
-* :guilabel:`Sart and end date/time from expressions`: features are rendered
-  if the time range specified by the :guilabel:`Start expression` and
+* :guilabel:`Start and end date/time from expressions`: features are rendered
+  if the time range specified by the fields :guilabel:`Start expression` and
   :guilabel:`End expression` overlaps the map canvas temporal.
 * :guilabel:`Redraw layer only`: the layer is redrawn at each new animation
   frame but no time-based filtering is applied to the features.

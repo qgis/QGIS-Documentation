@@ -31,7 +31,7 @@ Parameters
      - Description
    * - **Input layers**
      - ``LAYERS``
-     - [vector: any][list]
+     - [vector: any] [list]
      - Input vector layers to get information on.
    * - **Output**
      - ``OUTPUT``
@@ -92,7 +92,7 @@ Parameters
      - Description
    * - **Input layers**
      - ``LAYERS``
-     - [vector: any][list]
+     - [vector: any] [list]
      - Input vector layers. The output spreadsheet will consist of a sheet,
        for each layer, that contains the attributes of this layer.
    * - **Use field aliases as column headings**

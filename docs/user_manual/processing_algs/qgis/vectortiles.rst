@@ -31,7 +31,7 @@ Parameters
      - Description
    * - **Input layers**
      - ``INPUT``
-     - [vector: any][list]
+     - [vector: any] [list]
      - A list of layers to combine to generate the vector tiles
    * - **Minimum zoom level**
      - ``MIN_ZOOM``
@@ -158,7 +158,7 @@ Parameters
      - Template to generate the vector tiles url
    * - **Input layers**
      - ``INPUT``
-     - [vector: any][list]
+     - [vector: any] [list]
      - A list of layers to combine to generate the vector tiles
    * - **Minimum zoom level**
      - ``MIN_ZOOM``

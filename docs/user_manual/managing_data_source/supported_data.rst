@@ -52,8 +52,8 @@ Many of the features and tools available in QGIS work the same,
 regardless the vector data source.
 However, because of the differences in format specifications
 (GeoPackage, ESRI Shapefile, MapInfo and MicroStation file formats,
-AutoCAD DXF, PostGIS, SpatiaLite, Oracle Spatial, MSSQL
-Spatial, SAP HANA Spatial databases and many more), QGIS may handle some of
+AutoCAD DXF, PostGIS, SpatiaLite, Oracle Spatial, MS SQL Server,
+SAP HANA Spatial databases and many more), QGIS may handle some of
 their properties differently.
 Support is provided by the
 `OGR Simple Feature Library <https://gdal.org/drivers/vector/index.html>`_.
@@ -184,7 +184,7 @@ First check that the file meets the following requirements:
 #. The X and Y coordinates fields (if geometry is defined by 
    coordinates) must be specified as numbers.
    The coordinate system is not important.
-#. If you have a CSV file with non-string columns, you must have an
+#. If you have a CSV file with non-string columns, you can have an
    accompanying CSVT file (see section :ref:`csvt_files`).
 
 The elevation point data file :file:`elevp.csv` in the QGIS sample
@@ -254,10 +254,16 @@ different columns:
     :header: "Type", "Name", "Example"
 
     "Whole number", "Integer", 4
+    "Boolean", "Integer(Boolean)", true
     "Decimal number", "Real", 3.456
     "Date", "Date (YYYY-MM-DD)", 2016-07-28
     "Time", "Time (HH:MM:SS+nn)", 18:33:12+00
     "Date & Time", "DateTime (YYYY-MM-DD HH:MM:SS+nn)", 2016-07-28 18:33:12+00
+    "CoordX", "CoordX", 8.8249
+    "CoordY", "CoordY", 47.2274
+    "Point(X)", "Point(X)", 8.8249
+    "Point(Y)", "Point(Y)", 47.2274
+    "WKT", "WKT", POINT(15 20)
 
 The CSVT file is a **ONE line** plain text file with the data types in
 quotes and separated by commas, e.g.::
@@ -273,6 +279,14 @@ the same name, but :file:`.csvt` as the extension.
 
 *You can find more information at*
 `GDAL CSV Driver <https://gdal.org/drivers/vector/csv.html>`_.
+
+.. _tip_detect_field_types:
+
+.. tip:: **Detect Field Types**
+
+   Instead of using a CSVT file to tell the data types, QGIS provides the
+   possibility to automatically detect the field types and to change the
+   assumed field types.
 
 
 .. index:: PostGIS, PostgreSQL
@@ -672,7 +686,7 @@ Adding views
 ^^^^^^^^^^^^
 
 When adding a view as a layer, the SAP HANA provider cannot automatically
-indentify columns that unambiguously identify a feature. Furthermore, some views
+identify columns that unambiguously identify a feature. Furthermore, some views
 are read-only and cannot be edited.
 
 To have full feature editing support, the view must be updatable (check column

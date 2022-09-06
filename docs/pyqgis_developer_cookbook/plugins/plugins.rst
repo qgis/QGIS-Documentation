@@ -69,14 +69,6 @@ What is the meaning of the files:
 * :file:`metadata.txt` = Contains general info, version, name and some other
   metadata used by plugins website and plugin infrastructure.
 
-`Here <https://github.com/wonder-sk/qgis-minimal-plugin>`_
-is a way of creating the basic files (skeleton) of a typical
-QGIS Python plugin.
-
-There is a QGIS plugin called
-`Plugin Builder 3 <https://plugins.qgis.org/plugins/pluginbuilder3/>`_
-that creates a plugin template for QGIS.
-This is the recommended option, as it produces 3.x compatible sources.
 
 .. warning::
     If you plan to upload the plugin to the :ref:`official_pyqgis_repository`
@@ -85,6 +77,15 @@ This is the recommended option, as it produces 3.x compatible sources.
 
 
 .. index:: Plugins; Writing code
+
+Useful tools to quickly create plugins
+--------------------------------------
+
+`A minimal plugin to get started <https://github.com/wonder-sk/qgis-minimal-plugin>`_
+that only includes the basic files (skeleton) of a typical QGIS Python plugin.
+
+A fully featured QGIS plugin called `Plugin Builder 3 <https://plugins.qgis.org/plugins/pluginbuilder3/>`_
+that creates a plugin template for QGIS. It produces 3.x compatible sources, with many possible features for a plugin.
 
 Plugin content
 ==============
@@ -133,8 +134,9 @@ tracker                False     a valid URL for tickets and bug reports
 icon                   False     a file name or a relative path (relative to
                                  the base folder of the plugin's compressed
                                  package) of a web friendly image (PNG, JPEG)
-category               False     one of ``Raster``, ``Vector``, ``Database`` and ``Web``
-plugin_dependencies    False     PIP-like comma separated list of other plugins to install
+category               False     one of ``Raster``, ``Vector``, ``Database``, ``Mesh`` and ``Web``
+plugin_dependencies    False     PIP-like comma separated list of other plugins to install, use
+                                 plugin names coming from their metadata's name field
 server                 False     boolean flag, :const:`True` or :const:`False`, determines if
                                  the plugin has a server interface
 hasProcessingProvider  False     boolean flag, :const:`True` or :const:`False`, determines if
@@ -144,7 +146,7 @@ hasProcessingProvider  False     boolean flag, :const:`True` or :const:`False`, 
 By default, plugins are placed in the :menuselection:`Plugins` menu (we will see
 in the next section how to add a menu entry for your plugin) but they can also
 be placed into :menuselection:`Raster`, :menuselection:`Vector`,
-:menuselection:`Database` and :menuselection:`Web` menus.
+:menuselection:`Database`, :menuselection:`Mesh` and :menuselection:`Web` menus.
 
 A corresponding "category" metadata entry exists to specify that, so the plugin
 can be classified accordingly. This metadata entry is used as tip for users and
@@ -214,7 +216,9 @@ An example for this metadata.txt
   ; Since QGIS 3.8, a comma separated list of plugins to be installed
   ; (or upgraded) can be specified.
   ; The example below will try to install (or upgrade) "MyOtherPlugin" version 1.12
-  ; and any version of "YetAnotherPlugin"
+  ; and any version of "YetAnotherPlugin".
+  ; Both "MyOtherPlugin" and "YetAnotherPlugin" names come from their own metadata's
+  ; name field
   plugin_dependencies=MyOtherPlugin==1.12,YetAnotherPlugin
 
 
@@ -343,6 +347,36 @@ custom menu group directly to the menu bar, as the next example demonstrates:
 
 Don't forget to set :class:`QAction` and :class:`QMenu` ``objectName`` to a name
 specific to your plugin so that it can be customized.
+
+While help and about actions can also be added to your custom menu,
+a convenient place to make them available is in the 
+QGIS main :menuselection:`Help --> Plugins` menu. This is done using the
+:meth:`pluginHelpMenu() <qgis.gui.QgisInterface.pluginHelpMenu>` method.
+
+.. testcode:: plugins
+
+    def initGui(self):
+
+        self.help_action = QAction(
+            QIcon(":/plugins/testplug/icon.png"),
+            self.tr("Test Plugin..."),
+            self.iface.mainWindow()
+        )
+        # Add the action to the Help menu
+        self.iface.pluginHelpMenu().addAction(self.help_action)
+
+        self.help_action.triggered.connect(self.show_help)
+        
+    @staticmethod
+    def show_help():
+        """ Open the online help. """
+        QDesktopServices.openUrl(QUrl('https://docs.qgis.org'))
+
+    def unload(self):
+
+        self.iface.pluginHelpMenu().removeAction(self.help_action)
+        del self.help_action
+
 
 .. index:: Plugins; Resource file, resources.qrc
 
@@ -564,6 +598,14 @@ Plugin Reloader
 During development of your plugin you will frequently need to reload it in QGIS
 for testing. This is very easy using the **Plugin Reloader** plugin. You can find it
 with the :ref:`Plugin Manager <plugins>`.
+
+Automate packaging, release and translation with qgis-plugin-ci
+---------------------------------------------------------------
+
+`qgis-plugin-ci <https://opengisch.github.io/qgis-plugin-ci/>`_ provides a command line interface to perform automated packaging and deployment for QGIS plugins on your computer, or using continuous integration 
+like `GitHub workflows <https://docs.github.com/en/actions/using-workflows>`_ or `Gitlab-CI <https://docs.gitlab.com/ee/ci/>`_ as well as `Transifex <https://www.transifex.com/>`_ for translation.
+
+It allows releasing, translating, publishing or generating an XML plugin repository file via CLI or in CI actions. 
 
 Accessing Plugins
 -----------------

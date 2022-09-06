@@ -21,7 +21,7 @@ Introducing QGIS projects
 =========================
 The state of your QGIS session is called a project.
 QGIS works on one project at a time.
-A settings can be project-specific or an application-wide default
+A setting can be project-specific or an application-wide default
 for new projects (see section :ref:`gui_options`).
 QGIS can save the state of your workspace into a
 :ref:`QGIS project file <qgisprojectfile>` using the menu options
@@ -75,8 +75,9 @@ The information saved in a project file includes:
 * Which layers can be queried
 * Layer properties, including symbolization and styles
 * Layer notes
-* Projection for the map view
-* Last viewed extent
+* 2D and 3D map views
+* Projection for each map view
+* Last viewed extent for each map
 * Print layouts
 * Print layout elements with settings
 * Print layout atlas settings
@@ -154,6 +155,7 @@ You can:
   and click :guilabel:`Apply changes`;
 * Press :guilabel:`Auto-Find` to browse the folders and try to automatically fix
   all or selected broken path(s). Be aware that the browsing may take some time.
+  Then click :guilabel:`Apply changes`.
 * Ignore the message and open your project with the broken path(s) by clicking
   :guilabel:`Keep Unavailable Layers`. Your layer is then displayed in the
   :guilabel:`Layers` panel, but without any data until you fix the path using
@@ -166,6 +168,8 @@ You can:
   to auto-fix those that have the same broken file path.
 * |deleteSelected| :guilabel:`Remove Unavailable Layers` from the project.
 
+Launching QGIS from command line using the :ref:`skipbadlayers` option can
+help you skip the :guilabel:`Handle Unavailable Layers` dialog at startup.
 
 .. _`sec_output`:
 

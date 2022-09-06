@@ -65,6 +65,9 @@ previewed items organized into tabs:
 * |labelingSingle| :guilabel:`Label settings` to manage :ref:`label settings
   <showlabels>`, which include the text formats and some layer-type specific
   settings such as label placement, priority, callouts, rendering...
+* |legend| :guilabel:`Legend Patch Shapes` to manage custom legend patch
+  shapes, which include :guilabel:`Marker`, :guilabel:`Line` and
+  :guilabel:`Fill` geometries.
 * |3d| :guilabel:`3D Symbols` to configure symbols with :ref:`3D properties
   <3dsymbols>` (extrusion, shading, altitude, ...) for the features to render
   in a :ref:`3D Map view <label_3dmapview>`
@@ -72,6 +75,8 @@ previewed items organized into tabs:
 You can arrange the Styles in |iconView| :guilabel:`Icon View` or in
 |openTable| :guilabel:`List View` on the bottom right side. In both views
 the tooltip shows a larger instance of the style.
+The thumbnail size slider at the left of the icons helps you adjust the actual
+thumbnail sizes in the dialog, for a better preview of the symbols!
 
 For each family of items, you can organize the elements into different categories,
 listed in the panel on the left:
@@ -324,6 +329,55 @@ choose the ramp type:
  stop` as well as :kbd:`DEL` key removes the selected color stop. 
 
 
+.. _legend_patch:
+
+Creating a Legend Patch Shape
+=============================
+
+To create a new Legend Patch Shape, activate the :guilabel:`Legend Patch Shapes` tab and
+click the |symbologyAdd| :sup:`Add item` button. The button reveals a drop-down
+list to choose the geometry type:
+
+* :guilabel:`Marker Legend Patch Shape...`: to use with point geometries.
+* :guilabel:`Line Legend Patch Shape...`: to use with line geometries.
+* :guilabel:`Fill Legend Patch Shape...`: to use with polygon geometries.
+
+All three options will show the same dialog.
+
+.. _figure_legend_patch:
+
+.. figure:: img/createLegendPatchShape.png
+   :align: center
+
+   Create a new Legend Patch Shape
+
+Only the shape type and displayed legend patch shapes will differ regarding
+to the chosen geometry type. The following options will be available:
+
+* :guilabel:`Shape`: define the shape of the legend patch shape as a
+  WKT string. Single and multipart geometries may be used, but no
+  GeometryCollection.
+* |checkbox| :guilabel:`Preserve aspect ratio`
+* |iconView| :guilabel:`Icon View` or |openTable| :guilabel:`List View` of
+  available legend patch shapes, filtered by tags.
+
+When the new Shape is defined you can :guilabel:`Save Legend Patch Shape...`
+or press :guilabel:`OK`, which will both lead to the same dialog.
+
+.. _figure_safe_legend_patch:
+
+.. figure:: img/safeLegendPatchShape.png
+   :align: center
+
+   Save a new Legend Patch Shape
+
+Here you have to choose a name, tags to describe the shape and if it should
+be added to favorites.
+
+If you press :guilabel:`Save...`, the shape is added to the list and you are directed
+back to the :guilabel:`New Legend Patch Shape` dialog to keep creating new shapes.
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -332,6 +386,8 @@ choose the ramp type:
 
 .. |3d| image:: /static/common/3d.png
    :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
 .. |color| image:: /static/common/color.png
 .. |fileOpen| image:: /static/common/mActionFileOpen.png
    :width: 1.5em
@@ -341,6 +397,8 @@ choose the ramp type:
    :width: 1.5em
 .. |labelingSingle| image:: /static/common/labelingSingle.png
    :width: 1.5em
+.. |legend| image:: /static/common/legend.png
+   :width: 1.2em
 .. |lineLayer| image:: /static/common/mIconLineLayer.png
    :width: 1.5em
 .. |openTable| image:: /static/common/mActionOpenTable.png

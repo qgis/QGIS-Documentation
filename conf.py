@@ -155,7 +155,7 @@ if html_context['isTesting'] or html_context['outdated']:
 if html_context['isTesting']:
     tags.add('testing')
 
-supported_languages = cfg['supported_languages'].replace(' ', '').split(',')
+supported_languages = cfg['supported_languages'].split()
 version_list = cfg['version_list'].replace(' ', '').split(',')
 docs_url = 'https://docs.qgis.org/'
 
@@ -232,6 +232,8 @@ latex_documents = [
         f'PyQGIS {version} developer cookbook', u'QGIS Project', 'manual'),
     ('docs/training_manual/index', 'QGISTrainingManual.tex',
         u'QGIS Training Manual', u'QGIS Project', 'manual'),
+    ('docs/gentle_gis_introduction/index', 'GentleGISIntroduction.tex',
+        u'Gentle GIS Introduction', u'QGIS Project', 'manual'),
     ('docs/documentation_guidelines/index', 'QGISDocumentationGuidelines.tex',
         u'QGIS Documentation Guidelines', u'QGIS Project', 'manual'),
     #('docs/developers_guide/index', 'QGISDevelopersGuide.tex', u'QGIS Developers Guide', u'QGIS Project', 'manual'),
@@ -369,6 +371,12 @@ os.environ['QT_QPA_PLATFORM'] = 'offscreen'
 from qgis.testing import start_app
 from qgis.testing.mocked import get_iface
 
+# Workaround for https://github.com/qgis/QGIS/issues/48670
+from qgis.PyQt.QtCore import QSettings
+settings = QSettings()
+settings.setValue("cache/directory", "testdata")
+
+
 def start_qgis():
 
     save_stdout = sys.stdout
@@ -386,13 +394,16 @@ def start_qgis():
         QgsFeature,
         QgsGeometry,
         QgsApplication,
-        QgsLayerTreeModel
+        QgsLayerTreeModel,
+        QgsSettings,
     )
 
     from qgis.gui import (
         QgsLayerTreeView,
         QgsMessageBar,
     )
+
+    QgsProject.instance().clear()
 
     from qgis.analysis import QgsNativeAlgorithms
 
@@ -427,6 +438,7 @@ def start_qgis():
 
     return iface
 
+
 def dump_tree(root):
     """Dump the layer tree for testing"""
 
@@ -439,10 +451,7 @@ def dump_tree(root):
 '''
 doctest_test_doctest_blocks = ''
 
-doctest_global_cleanup = '''
-from qgis.core import QgsProject
-QgsProject.instance().clear()
-'''
+doctest_global_cleanup = ''
 
 # Make Sphinx doctest insensitive to object address differences,
 # also 'output_....' processing alg ids
@@ -470,6 +479,18 @@ class BetterOutputChecker(doctest.OutputChecker):
 
 ext_doctest.SphinxDocTestRunner = BetterDocTestRunner
 
+class BetterDocTestBuilder(ext_doctest.DocTestBuilder):
+
+    def skipped(self, node) -> bool:
+        to_skip = super().skipped(node)
+
+        if not to_skip and os.environ.get('SINGLE_TEST') is not None:
+            to_skip = os.path.basename(node.source or '') != os.environ.get('SINGLE_TEST')
+
+        return to_skip
+
+ext_doctest.DocTestBuilder = BetterDocTestBuilder
+
 # -- External Link check settings --------------------------------
 
 # A list of regular expressions that match URIs that should not be checked
@@ -486,4 +507,3 @@ linkcheck_retries = 2
 # -- Redirection settings --------------------------------
 
 rediraffe_redirects = "redirects.txt"
-#rediraffe_branch = "release_3.4"

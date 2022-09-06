@@ -86,6 +86,10 @@ pdf: latex
 	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISTrainingManual.tex; \
 	if [ "$(LATEXCOMPILER)" != "xelatex" ] && [ -f "QGISTrainingManual.dvi" ]; then \
 		dvipdfmx -q QGISTrainingManual.dvi; fi; \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape GentleGISIntroduction.tex; \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape GentleGISIntroduction.tex; \
+	if [ "$(LATEXCOMPILER)" != "xelatex" ]  && [ -f "GentleGISIntroduction.dvi" ]; then \
+		dvipdfmx -q GentleGISIntroduction.dvi; fi; \
 	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISDocumentationGuidelines.tex; \
 	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISDocumentationGuidelines.tex; \
 	if [ "$(LATEXCOMPILER)" != "xelatex" ]  && [ -f "QGISDocumentationGuidelines.dvi" ]; then \
@@ -98,6 +102,7 @@ pdf: latex
 	mv $(BUILDDIR)/latex/$(LANG)/QGISServerUserGuide.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-ServerUserGuide-$(LANG).pdf || true;
 	mv $(BUILDDIR)/latex/$(LANG)/PyQGISDeveloperCookbook.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-PyQGISDeveloperCookbook-$(LANG).pdf || true;
 	mv $(BUILDDIR)/latex/$(LANG)/QGISTrainingManual.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-TrainingManual-$(LANG).pdf || true;
+	mv $(BUILDDIR)/latex/$(LANG)/GentleGISIntroduction.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-GentleGISIntroduction-$(LANG).pdf || true;
 	mv $(BUILDDIR)/latex/$(LANG)/QGISDocumentationGuidelines.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-DocumentationGuidelines-$(LANG).pdf || true;
 
 zip:

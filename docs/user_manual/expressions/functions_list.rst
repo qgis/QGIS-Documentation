@@ -586,7 +586,7 @@ Further reading: :ref:`qgisreverselinedirection` algorithm
    :start-after: .. end_reverse_section
    :end-before: .. end_roundness_section
 
-.. TODO: Further reading: :ref:`qgisroundness` algorithm
+Further reading: :ref:`qgisroundness` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_roundness_section
@@ -774,6 +774,7 @@ This group contains math functions (e.g., square root, sin and cos).
 .. include:: expression_help/Math.rst
    :start-after: :orphan:
 
+.. _expression_function_meshes:
 
 Meshes Functions
 ----------------

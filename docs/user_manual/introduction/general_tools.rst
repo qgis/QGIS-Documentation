@@ -174,69 +174,72 @@ frame listing vector or raster layers added to the project, optionally
 organized in groups. Depending on the item selected in the panel, a
 right-click shows a dedicated set of options presented below.
 
-.. tabularcolumns:: |l|c|c|c|
+.. table updated with https://tableconvert.com/excel-to-restructuredtext
+.. table:: Contextual menus from Layers Panel items
 
-=================================================================  ==================  =================  =============
-Option                                                             Vector Layer        Raster Layer       Group
-=================================================================  ==================  =================  =============
-|zoomToLayer| :guilabel:`Zoom to Layer(s)/Group`                   |checkbox|          |checkbox|         |checkbox|
-|zoomToLayer| :guilabel:`Zoom to Selection`                        |checkbox|          \                  \
-|inOverview| :guilabel:`Show in Overview`                          |checkbox|          |checkbox|         \
-:guilabel:`Show Feature Count`                                     |checkbox|          \                  \
-|labelingSingle| :guilabel:`Show Label`                                  |checkbox|          \                  \
-:guilabel:`Copy Layer/Group`                                       |checkbox|          |checkbox|         |checkbox|
-:guilabel:`Rename Layer/Group`                                     |checkbox|          |checkbox|         |checkbox|
-|zoomActual| :guilabel:`Zoom to Native Resolution (100%)`          \                   |checkbox|         \
-:guilabel:`Stretch Using Current Extent`                           \                   |checkbox|         \
-|dbManager| :guilabel:`Update SQL Layer...`                        |checkbox|          \                  \
-|addGroup| :guilabel:`Add Group`                                   \                   \                  |checkbox|
-|duplicateLayer| :guilabel:`Duplicate Layer`                       |checkbox|          |checkbox|         \
-|removeLayer| :guilabel:`Remove Layer/Group...`                    |checkbox|          |checkbox|         |checkbox|
-:guilabel:`Move Out of Group`                                      |checkbox|          |checkbox|         \
-:guilabel:`Move to Top`                                            |checkbox|          |checkbox|         |checkbox|
-:guilabel:`Move to Bottom`                                         |checkbox|          |checkbox|         |checkbox|
-:guilabel:`Check and all its Parents`                              |checkbox|          |checkbox|         \
-:guilabel:`Group Selected`                                         |checkbox|          |checkbox|         \
-|openTable| :guilabel:`Open Attribute Table`                       |checkbox|          \                  \
-|toggleEditing| :guilabel:`Toggle Editing`                         |checkbox|          \                  \
-|allEdits| :menuselection:`Current Edits -->`                      |checkbox|          \                  \
-:guilabel:`Filter...`                                              |checkbox|          \                  \
-:guilabel:`Change Data Source...`                                  |checkbox|          \                  \
-:guilabel:`Repair Data Source...`                                  |checkbox|          \                  \
-:menuselection:`Actions on selections -->` (in edit mode)          |checkbox|          \                  \
-:menuselection:`--> Duplicate Feature`                             |checkbox|          \                  \
-:menuselection:`--> Duplicate Feature and Digitize`                |checkbox|          \                  \
-:guilabel:`Set Layer Scale Visibility...`                          |checkbox|          |checkbox|         \
-:guilabel:`Zoom to Visible Scale`                                  |checkbox|          |checkbox|         \
-:menuselection:`Set CRS -->`                                       |checkbox|          |checkbox|         \
-:menuselection:`--> Set Layer/Group CRS...`                        |checkbox|          |checkbox|         |checkbox|
-:menuselection:`--> Set Project CRS from Layer`                    |checkbox|          |checkbox|         \
-:guilabel:`Set Group WMS Data...`                                  \                   \                  |checkbox|
-|unchecked| :guilabel:`Mutually Exclusive Group`                   \                   \                  |checkbox|
-:guilabel:`Check and all its children (Ctrl-click)`                \                   \                  |checkbox|
-:guilabel:`Uncheck and all its children (Ctrl-click)`              \                   \                  |checkbox|
-:guilabel:`Make Permanent`                                         |checkbox|          \                  \
-:menuselection:`Export -->`                                        |checkbox|          |checkbox|         |checkbox|
-:menuselection:`--> Save As...`                                    \                   |checkbox|         \
-:menuselection:`--> Save Features As...`                           |checkbox|          \                  \
-:menuselection:`--> Save Selected Features As...`                  |checkbox|          \                  \
-:menuselection:`--> Save As Layer Definition File...`              |checkbox|          |checkbox|         |checkbox|
-:menuselection:`--> Save As QGIS Layer Style File...`              |checkbox|          |checkbox|         \
-:menuselection:`Styles -->`                                        |checkbox|          |checkbox|         \
-:menuselection:`--> Copy Style`                                    |checkbox|          |checkbox|         \
-:menuselection:`--> Paste Style`                                   |checkbox|          |checkbox|         |checkbox|
-:menuselection:`--> Add...`                                        |checkbox|          |checkbox|         \
-:menuselection:`--> Rename Current...`                             |checkbox|          |checkbox|         \
-:menuselection:`--> Edit symbol...`                                |checkbox|          \                  \
-:menuselection:`--> Copy Symbol`                                   |checkbox|          \                  \
-:menuselection:`--> Paste Symbol`                                  |checkbox|          \                  \
-:guilabel:`Add Layer Notes...`                                     |checkbox|          |checkbox|         \
-:guilabel:`Edit Layer Notes...`                                    |checkbox|          |checkbox|         \
-:guilabel:`Remove Layer Notes`                                     |checkbox|          |checkbox|         \
-:guilabel:`Properties...`                                          |checkbox|          |checkbox|         \
-=================================================================  ==================  =================  =============
+ ============================================================ ============= =============== =============== ============= ==================== 
+  Option                                                       Group         Vector Layer    Raster Layer    Mesh Layer    Point Cloud Layer   
+ ============================================================ ============= =============== =============== ============= ==================== 
+  |zoomToLayer| :guilabel:`Zoom to Layer(s)/Group`             |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|          
+  |zoomToLayer| :guilabel:`Zoom to Selection`                                |checkbox|                                                        
+  |inOverview| :guilabel:`Show in Overview`                                  |checkbox|      |checkbox|      |checkbox|    |checkbox|          
+  :guilabel:`Show Feature Count`                                             |checkbox|                                                        
+  |labelingSingle| :guilabel:`Show Label`                                    |checkbox|                                                        
+  :guilabel:`Copy Layer/Group`                                 |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|          
+  :guilabel:`Rename Layer/Group`                               |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|          
+  |zoomActual| :guilabel:`Zoom to Native Resolution (100%)`                                  |checkbox|                                        
+  :guilabel:`Stretch Using Current Extent`                                                   |checkbox|                                        
+  |dbManager| :guilabel:`Update SQL Layer...`                                |checkbox|                                                        
+  |addVirtualLayer| :guilabel:`Edit Virtual Layer...`                        |checkbox|                                                        
+  |addGroup| :guilabel:`Add Group`                             |checkbox|                                                                      
+  |duplicateLayer| :guilabel:`Duplicate Layer`                               |checkbox|      |checkbox|      |checkbox|    |checkbox|          
+  |removeLayer| :guilabel:`Remove Layer/Group...`              |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|          
+  :guilabel:`Move Out of Group`                                              |checkbox|      |checkbox|      |checkbox|    |checkbox|          
+  :guilabel:`Move to Top`                                      |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|          
+  :guilabel:`Move to Bottom`                                   |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|          
+  :guilabel:`Check and all its Parents`                                      |checkbox|      |checkbox|      |checkbox|    |checkbox|          
+  :guilabel:`Group Selected`                                                 |checkbox|      |checkbox|      |checkbox|    |checkbox|          
+  |openTable| :guilabel:`Open Attribute Table`                               |checkbox|                                                        
+  |toggleEditing| :guilabel:`Toggle Editing`                                 |checkbox|                      |checkbox|                        
+  |allEdits| :menuselection:`Current Edits -->`                              |checkbox|                      |checkbox|                        
+  :guilabel:`Filter...`                                                      |checkbox|      |checkbox|                    |checkbox|          
+  :guilabel:`Change Data Source...`                                          |checkbox|      |checkbox|      |checkbox|    |checkbox|          
+  :guilabel:`Repair Data Source...`                                          |checkbox|      |checkbox|      |checkbox|    |checkbox|          
+  :menuselection:`Actions on selections -->` (in edit mode)                  |checkbox|                                                        
+  :menuselection:`--> Duplicate Feature`                                     |checkbox|                                                        
+  :menuselection:`--> Duplicate Feature and Digitize`                        |checkbox|                                                        
+  :guilabel:`Set Layer Scale Visibility...`                                  |checkbox|      |checkbox|      |checkbox|    |checkbox|          
+  :guilabel:`Zoom to Visible Scale`                                          |checkbox|      |checkbox|      |checkbox|    |checkbox|          
+  :menuselection:`Layer CRS -->`                                             |checkbox|      |checkbox|      |checkbox|    |checkbox|          
+  :menuselection:`--> Set Project CRS from Layer`                            |checkbox|      |checkbox|      |checkbox|    |checkbox|          
+  :menuselection:`--> Set to..` (recent CRSs)                                                                |checkbox|    |checkbox|          
+  :menuselection:`--> Set Layer CRS...`                                      |checkbox|      |checkbox|      |checkbox|    |checkbox|          
+  :menuselection:`Set Group CRS...`                            |checkbox|                                                                      
+  :guilabel:`Set Group WMS Data...`                            |checkbox|                                                                      
+  |unchecked| :guilabel:`Mutually Exclusive Group`             |checkbox|                                                                      
+  :guilabel:`Check and all its children (Ctrl-click)`          |checkbox|                                                                      
+  :guilabel:`Uncheck and all its children (Ctrl-click)`        |checkbox|                                                                      
+  :guilabel:`Make Permanent`                                                 |checkbox|                                                        
+  :menuselection:`Export -->`                                  |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|          
+  :menuselection:`--> Save As...`                                                            |checkbox|                                        
+  :menuselection:`--> Save Features As...`                                   |checkbox|                                                        
+  :menuselection:`--> Save Selected Features As...`                          |checkbox|                                                        
+  :menuselection:`--> Save As Layer Definition File...`        |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|          
+  :menuselection:`--> Save As QGIS Layer Style File...`                      |checkbox|      |checkbox|      |checkbox|    |checkbox|          
+  :menuselection:`Styles -->`                                                |checkbox|      |checkbox|      |checkbox|    |checkbox|          
+  :menuselection:`--> Copy Style`                                            |checkbox|      |checkbox|      |checkbox|    |checkbox|          
+  :menuselection:`--> Paste Style`                             |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|          
+  :menuselection:`--> Add...`                                                |checkbox|      |checkbox|      |checkbox|    |checkbox|          
+  :menuselection:`--> Rename Current...`                                     |checkbox|      |checkbox|      |checkbox|    |checkbox|          
+  :menuselection:`--> Edit symbol...`                                        |checkbox|                                                        
+  :menuselection:`--> Copy Symbol`                                           |checkbox|                                                        
+  :menuselection:`--> Paste Symbol`                                          |checkbox|                                                        
+  :guilabel:`Add Layer Notes...`                                             |checkbox|      |checkbox|      |checkbox|    |checkbox|          
+  :guilabel:`Edit Layer Notes...`                                            |checkbox|      |checkbox|      |checkbox|    |checkbox|          
+  :guilabel:`Remove Layer Notes`                                             |checkbox|      |checkbox|      |checkbox|    |checkbox|          
+  :guilabel:`Properties...`                                                  |checkbox|      |checkbox|      |checkbox|    |checkbox|          
+ ============================================================ ============= =============== =============== ============= ==================== 
 
-Table: Context menu from Layers Panel items
 
 For GRASS vector layers, |toggleEditing| :sup:`Toggle editing` is not available.
 See section :ref:`grass_digitizing` for information on editing GRASS vector
@@ -517,46 +520,49 @@ Statistical Summary Panel
 The :guilabel:`Statistics` panel (:kbd:`Ctrl+6`) provides summarized information
 on any vector layer. This panel allows you to select:
 
-* the vector layer to compute the statistics on
-* the column to use, or an |expression| :ref:`expression <vector_expressions>`
+* the vector layer to compute the statistics on: it can be selected
+  from the top drop-down menu, or synced with the active layer in the
+  :guilabel:`Layers` panel using the :guilabel:`Follow selected layer`
+  checkbox at the bottom of the statistics drop-down list
+* the field or |expression| :ref:`expression <vector_expressions>` to use:
+  for each layer, the last entry is remembered and automatically computed
+  upon layer reselection.
 * the statistics to return using the drop-down button at the bottom-right of the
   dialog. Depending on the field's (or expression's values) type, available
   statistics are:
 
-.. tabularcolumns:: |l|c|c|c|c|
+.. table:: Statistics available for each field type
 
-================================== ============ ============  ============  ============
- Statistics                         String       Integer       Float         Date
-================================== ============ ============  ============  ============
-Count                               |checkbox|   |checkbox|    |checkbox|    |checkbox|
-Count Distinct Value                |checkbox|                               |checkbox|
-Count Missing value                 |checkbox|   |checkbox|    |checkbox|    |checkbox|
-Sum                                              |checkbox|    |checkbox|
-Mean                                             |checkbox|    |checkbox|    |checkbox|
-Standard Deviation                               |checkbox|    |checkbox|
-Standard Deviation on Sample                     |checkbox|    |checkbox|
-Minimal value                       |checkbox|   |checkbox|    |checkbox|    |checkbox|
-Maximal value                       |checkbox|   |checkbox|    |checkbox|    |checkbox|
-Range                                            |checkbox|    |checkbox|    |checkbox|
-Minority                            |checkbox|   |checkbox|    |checkbox|
-Majority                            |checkbox|   |checkbox|    |checkbox|
-Variety                                          |checkbox|    |checkbox|
-First Quartile                                   |checkbox|    |checkbox|
-Third Quartile                                   |checkbox|    |checkbox|
-Inter Quartile Range                             |checkbox|    |checkbox|
-Minimum Length                      |checkbox|
-Maximum Length                      |checkbox|
-Mean Length                         |checkbox|
-================================== ============ ============  ============  ============
-
-Table: Statistics available for each field type
+ ================================== ============ ============  ============  ============
+  Statistics                         String       Integer       Float         Date
+ ================================== ============ ============  ============  ============
+ Count                               |checkbox|   |checkbox|    |checkbox|    |checkbox|
+ Count Distinct Value                |checkbox|                               |checkbox|
+ Count Missing value                 |checkbox|   |checkbox|    |checkbox|    |checkbox|
+ Sum                                              |checkbox|    |checkbox|
+ Mean                                             |checkbox|    |checkbox|    |checkbox|
+ Standard Deviation                               |checkbox|    |checkbox|
+ Standard Deviation on Sample                     |checkbox|    |checkbox|
+ Minimal value                       |checkbox|   |checkbox|    |checkbox|    |checkbox|
+ Maximal value                       |checkbox|   |checkbox|    |checkbox|    |checkbox|
+ Range                                            |checkbox|    |checkbox|    |checkbox|
+ Minority                            |checkbox|   |checkbox|    |checkbox|
+ Majority                            |checkbox|   |checkbox|    |checkbox|
+ Variety                                          |checkbox|    |checkbox|
+ First Quartile                                   |checkbox|    |checkbox|
+ Third Quartile                                   |checkbox|    |checkbox|
+ Inter Quartile Range                             |checkbox|    |checkbox|
+ Minimum Length                      |checkbox|
+ Maximum Length                      |checkbox|
+ Mean Length                         |checkbox|
+ ================================== ============ ============  ============  ============
 
 The statistical summary can be:
 
-* returned for the whole layer or |checkbox| :guilabel:`selected features only`
+* returned for the whole layer or |checkbox| :guilabel:`Selected features only`
+* |editCopy| copied to the clipboard and pasted as a table in another application
 * recalculated using the |refresh| button when the underlying data source changes
   (eg, new or removed features/fields, attribute modification)
-* |editCopy| copied to the clipboard and pasted as a table in another application
 
 .. _figure_statistical_summary:
 
@@ -598,13 +604,13 @@ It also allows you to:
 
 By right clicking on a request you can: 
 
- * :guilabel:`Open URL` which will open the URL in your default browser.
- * :guilabel:`Copy URL`
- * :guilabel:`Copy As cURL` to use it in the terminal.
- * :guilabel:`Copy as JSON` will copy the whole log from one request.
-
+* :guilabel:`Open URL` which will open the URL in your default browser.
+* :guilabel:`Copy URL`
+* :guilabel:`Copy As cURL` to use it in the terminal.
+* :guilabel:`Copy as JSON` will copy the whole log from one request.
 
 .. figure:: img/network_logger.png
+   :align: center
 
    Network Logger output for GET Request
 
@@ -617,6 +623,7 @@ The :guilabel:`Profiler` allows to get load times for the Categories
 load times.
 
 .. figure:: img/profiler.png
+   :align: center
 
    Profiler for QGIS Startup
 
@@ -624,8 +631,8 @@ load times.
 .. index:: Nesting projects, Embed layers and groups
 .. _nesting_projects:
 
-Nesting Projects
-================
+Embedding layers from external projects
+=======================================
 
 Sometimes, you'd like to keep some layers in different projects, but with the
 same style. You can either create a :ref:`default style <store_style>` for
@@ -830,7 +837,7 @@ You can use the :guilabel:`Map Navigation` toolbar, the mouse and keyboard on
 the map canvas and also the menu actions from the :menuselection:`View`
 menu and the layers' contextual menu in the :guilabel:`Layers` panel.
 
-.. list-table::
+.. list-table:: Map canvas navigation actions
    :header-rows: 1
    :widths: 5 15 65 5 5 5
    :class: longtable
@@ -993,7 +1000,8 @@ To create a bookmark:
    <extent_selector>` widget
 #. Indicate the :guilabel:`CRS` to use for the extent
 #. Select whether the bookmark will be :guilabel:`Saved in` :guilabel:`User
-   Bookmarks` or :guilabel:`Project Bookmarks`
+   Bookmarks` or :guilabel:`Project Bookmarks` (by default, this drop-down list 
+   is set to :guilabel:`User Bookmarks`)
 #. Press :guilabel:`Save` to add the bookmark to the list
 
 Note that you can have multiple bookmarks with the same name.
@@ -1014,7 +1022,7 @@ the |showBookmarks| :guilabel:`Spatial Bookmarks` entry in the
 
 You can perform the following tasks:
 
-.. list-table::
+.. list-table:: Managing bookmark actions
    :header-rows: 1
    :widths: 20 40 40
    :class: longtable
@@ -1778,27 +1786,27 @@ automatically filling the search box with existing values.
 Alongside each field, there is a drop-down list with options to
 control the search behaviour:
 
-.. tabularcolumns:: |l|c|c|c|
+.. table:: Query operators per data type
 
-============================================= ============ ============  ============
- Field search option                           String       Numeric       Date
-============================================= ============ ============  ============
- :guilabel:`Exclude Field` from the search     |checkbox|   |checkbox|    |checkbox|
- :guilabel:`Equal to (=)`                      |checkbox|   |checkbox|    |checkbox|
- :guilabel:`Not equal to (≠)`                  |checkbox|   |checkbox|    |checkbox|
- :guilabel:`Greater than (>)`                               |checkbox|    |checkbox|
- :guilabel:`Less than (<)`                                  |checkbox|    |checkbox|
- :guilabel:`Greater than or equal to (≥)`                   |checkbox|    |checkbox|
- :guilabel:`Less than or equal to (≤)`                      |checkbox|    |checkbox|
- :guilabel:`Between (inclusive)`                            |checkbox|    |checkbox|
- :guilabel:`Not between (inclusive)`                        |checkbox|    |checkbox|
- :guilabel:`Contains`                          |checkbox|
- :guilabel:`Does not contain`                  |checkbox|
- :guilabel:`Is missing (null)`                 |checkbox|   |checkbox|    |checkbox|
- :guilabel:`Is not missing (not null)`         |checkbox|   |checkbox|    |checkbox|
- :guilabel:`Starts with`                       |checkbox|
- :guilabel:`Ends with`                         |checkbox|
-============================================= ============ ============  ============
+ ============================================= ============ ============  ============
+  Field search option                           String       Numeric       Date
+ ============================================= ============ ============  ============
+  :guilabel:`Exclude Field` from the search     |checkbox|   |checkbox|    |checkbox|
+  :guilabel:`Equal to (=)`                      |checkbox|   |checkbox|    |checkbox|
+  :guilabel:`Not equal to (≠)`                  |checkbox|   |checkbox|    |checkbox|
+  :guilabel:`Greater than (>)`                               |checkbox|    |checkbox|
+  :guilabel:`Less than (<)`                                  |checkbox|    |checkbox|
+  :guilabel:`Greater than or equal to (≥)`                   |checkbox|    |checkbox|
+  :guilabel:`Less than or equal to (≤)`                      |checkbox|    |checkbox|
+  :guilabel:`Between (inclusive)`                            |checkbox|    |checkbox|
+  :guilabel:`Not between (inclusive)`                        |checkbox|    |checkbox|
+  :guilabel:`Contains`                          |checkbox|
+  :guilabel:`Does not contain`                  |checkbox|
+  :guilabel:`Is missing (null)`                 |checkbox|   |checkbox|    |checkbox|
+  :guilabel:`Is not missing (not null)`         |checkbox|   |checkbox|    |checkbox|
+  :guilabel:`Starts with`                       |checkbox|
+  :guilabel:`Ends with`                         |checkbox|
+ ============================================= ============ ============  ============
 
 
 For string comparisons, it is also possible to use the |checkbox|
@@ -1993,6 +2001,8 @@ example, from the context menu you can:
 * Toggle feature selection: Add identified feature to selection
 * Copy attribute value: Copy only the value of the attribute that you click on
 * Copy feature attributes: Copy the attributes of the feature
+* Select features by attribute value: Select all features in the layer
+  that match the selected attribute
 * Clear result: Remove results in the window
 * Clear highlights: Remove features highlighted on the map
 * Highlight all
@@ -2107,7 +2117,7 @@ Save in database
 .................
 
 Vector layer styles can also be stored in a database if the layer datasource is a
-database provider. Supported formats are PostGIS, GeoPackage, SpatiaLite, MSSQL
+database provider. Supported formats are PostGIS, GeoPackage, SpatiaLite, MS SQL Server
 and Oracle. The layer style is saved inside a table (named :file:`layer_styles`)
 in the database. Click on :menuselection:`Save Style... --> Save in database`
 then fill in the dialog to define a style name, add a description, a :file:`.ui`
@@ -2128,7 +2138,7 @@ database or in :file:`qgis.db`, a local SQLite database in the active
 .. tip:: **Sharing style files between databases**
 
   You can only save your style in a database if the layer comes from such a
-  database. You can't mix databases (layer in Oracle and style in MSSQL for
+  database. You can't mix databases (layer in Oracle and style in MS SQL Server for
   instance). Use instead a plain text file if you want the style to be shared
   among databases.
 
@@ -2316,7 +2326,7 @@ variables overwritten by lower level ones are strike through.
 
 .. _figure_variables_dialog:
 
-.. figure:: img/options_variables.png
+.. figure:: img/project_variables.png
    :align: center
 
    Variables editor at the project level
@@ -2557,11 +2567,13 @@ The :guilabel:`Extent` selector widget is a convenient shortcut when you want to
 select a spatial extent to assign to a layer or to limit the actions to run on.
 Depending on the context, it offers selection between:
 
-* :guilabel:`Current layer extent`, e.g. when exporting a layer
-* :menuselection:`Calculate from layer -->`: uses extent of a layer loaded in the
+* :guilabel:`Current Layer Extent`: e.g. when exporting a layer
+* :menuselection:`Calculate from Layer -->`: uses extent of a layer loaded in the
   current project
-* Use current :guilabel:`Map canvas extent`
-* :guilabel:`Draw on canvas` a rectangle whose coordinates are then used
+* Use current :guilabel:`Map Canvas Extent`
+* :guilabel:`Draw on Canvas`: a rectangle whose coordinates are then used
+* guilabel:`Calculate from Bookmark`: uses extent of a saved :ref:`bookmark <sec_bookmarks>`
+* :guilabel:`Calculate from Layout Map`: uses extent of a :ref:`layout map <layout_map_item>`
 * Enter or edit the coordinates as ``xmin, xmax, ymin, ymax``
 
 .. _figure_extentselector_widget:
@@ -2618,11 +2630,19 @@ screen resolution, paper size, or the terrain). Available units are:
 * :guilabel:`Points`
 * :guilabel:`Pixels`
 * :guilabel:`Inches`
+* :guilabel:`Percentage`: allows you to set some properties as a percent of another one. For example, this is
+  useful for creation of text formats where the components (buffer size, shadow radius...)
+  nicely scale as the text size is changed, instead of having
+  constant buffer/shadow sizes. So you don't need to adjust those sizes,
+  when the text size changes.
 * :guilabel:`Meters at Scale`: This allows you to always set the size in meters,
   regardless of what the underlying map units are (e.g. they can be in inches, feet,
   geographic degrees, ...). The size in meters is calculated based on the current project
   ellipsoid setting and a projection of the distances in meters at the center of the
-  current map extent.
+  current map extent. For maps in a projected coordinate system this is calculated using
+  projected units. For maps in a geographic (latitude/longitude) based system the size is
+  approximated by calculating meter sizes using ellipsoidal calculations for the vertical
+  scale of the map.
 * and :guilabel:`Map Units`: The size is scaled according to the map view scale.
   Because this can lead to too big or too small values, use the |options| button
   next to the entry to constrain the size to a range of values based on:
@@ -2651,7 +2671,14 @@ Numeric formatters allow formatting of numeric values for display, using
 a variety of different formatting techniques (for instance scientific notation,
 currency values, percentage values, etc). One use of this is to set
 text in a layout scale bar or fixed table.
- 
+
+.. _figure_number_formatting:
+
+.. figure:: img/number_formatting.png
+   :align: center
+
+   Formatting numeric value
+
 Different categories of formats are supported.
 For most of them, you can set part or all of the following numeric options:
 
@@ -2865,6 +2892,8 @@ The values presented in the varying size assistant above will set the size
 .. |addPolygon| image:: /static/common/mActionAddPolygon.png
    :width: 1.5em
 .. |addPolyline| image:: /static/common/mActionAddPolyline.png
+   :width: 1.5em
+.. |addVirtualLayer| image:: /static/common/mActionAddVirtualLayer.png
    :width: 1.5em
 .. |allEdits| image:: /static/common/mActionAllEdits.png
    :width: 1.5em

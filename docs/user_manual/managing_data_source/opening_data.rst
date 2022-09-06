@@ -30,7 +30,7 @@ and often write a lot of formats:
   Read the complete list of `supported raster formats
   <https://gdal.org/drivers/raster/index.html>`_.
 * Database formats include PostgreSQL/PostGIS, SQLite/SpatiaLite, Oracle,
-  MSSQL Spatial, SAP HANA, MySQL...
+  MS SQL Server, SAP HANA, MySQL...
 * Web map and data services (WM(T)S, WFS, WCS, CSW, XYZ tiles, ArcGIS
   services, ...) are also handled by QGIS providers.
   See :ref:`working_with_ogc` for more information about some of these.
@@ -152,7 +152,7 @@ hierarchically, and there are several top level entries:
    * |geoPackage| :guilabel:`GeoPackage`
    * |spatialite| :guilabel:`SpatiaLite`
    * |postgis| :guilabel:`PostGIS`
-   * |mssql| :guilabel:`MSSQL`
+   * |mssql| :guilabel:`MS SQL Server`
    * |oracle| :guilabel:`Oracle`
    * |hana| :guilabel:`SAP HANA`
    * |wms| :guilabel:`WMS/WMTS`
@@ -205,10 +205,12 @@ menu will have supporting entries.
 For example, for non-database, non-service-based vector, raster and
 mesh data sources:
 
-* :guilabel:`Delete File "<name of file>"...`
-* :guilabel:`Export Layer` --> :guilabel:`To File...`
+* :menuselection:`Export Layer --> To File...`
 * :guilabel:`Add Layer to Project`
 * :guilabel:`Layer Properties`
+* :menuselection:`Manage --> Rename "<name of file>"...` or
+  :guilabel:`Delete "<name of file>"...`
+* :guilabel:`Show in Files`
 * :guilabel:`File Properties`
 
 In the :guilabel:`Layer properties` entry, you will find (similar
@@ -292,7 +294,7 @@ The DB Manager
 
 The :guilabel:`DB Manager` Plugin is another tool
 for integrating and managing spatial database formats supported by
-QGIS (PostGIS, SpatiaLite, GeoPackage, Oracle Spatial, MSSQL, Virtual
+QGIS (PostGIS, SpatiaLite, GeoPackage, Oracle Spatial, MS SQL Server, Virtual
 layers). It can be activated from the
 :menuselection:`Plugins --> Manage and Install Plugins...` menu.
 
@@ -375,12 +377,12 @@ To load a layer from a file:
    in the pull-down menu).
 #. Press :guilabel:`Open` to load the selected file into :guilabel:`Data
    Source Manager` dialog
-   
+
    .. _figure_vector_layer_open_options:
-   
+
    .. figure:: img/openoptionsvectorlayer.png
       :align: center
-      
+
       Loading a Shapefile with open options
 
 #. Press :guilabel:`Add` to load the file in QGIS and display them in the map view.
@@ -392,7 +394,7 @@ To load a layer from a file:
       :align: center
 
       QGIS with Shapefile of Alaska loaded
-      
+
 .. note::
 
  For loading vector and raster files the GDAL driver offers to define open
@@ -422,7 +424,7 @@ Layer` tabs allow loading of layers from source types other than :guilabel:`File
 * With the |radioButtonOn| :guilabel:`Database` source type you can select an
   existing database connection or create one to the selected database type.
   Some possible database types are ``ODBC``, ``Esri Personal Geodatabase``,
-  ``MSSQL`` as well as ``PostgreSQL`` or ``MySQL`` .
+  ``MS SQL Server`` as well as ``PostgreSQL`` or ``MySQL`` .
 
   Pressing the :guilabel:`New` button opens the
   :guilabel:`Create a New OGR Database Connection` dialog whose parameters
@@ -527,6 +529,7 @@ You can specify a delimiter by choosing between:
 * |radioButtonOff|:guilabel:`Custom delimiters`, choosing among some predefined
   delimiters like ``comma``, ``space``, ``tab``, ``semicolon``, ... .
 
+
 Records and fields
 ..................
 
@@ -545,9 +548,34 @@ Some other convenient options can be used for data recognition:
 * |checkbox|:guilabel:`Trim fields`: allows you to trim leading and trailing
   spaces from fields.
 * |checkbox|:guilabel:`Discard empty fields`.
+* :guilabel:`Custom boolean literals`: allows you to add a custom couple of
+  string that will be detected as boolean values.
 
-As you set the parser properties, a sample data preview updates at the bottom
-of the dialog.
+
+Field type detection
+....................
+
+QGIS tries to detect the field types automatically (unless
+|checkbox|:guilabel:`Detect field types` is not checked) by examining
+the content of an optional sidecar CSVT file (see:
+`GeoCSV specification <https://giswiki.hsr.ch/GeoCSV#CSVT_file_format_specification>`_)
+and by scanning the whole file to make sure that all values can actually
+be converted without errors, the fall-back field type is text.
+
+The detected field type appears under the field name in sample data preview table
+and can be manually changed if necessary.
+
+The following field types are supported:
+
+* ``Boolean`` case-insensitive literal couples that are interpreted as boolean values are ``1``/``0``, ``true``/``false``, ``t``/``f``, ``yes``/``no``
+* ``Whole Number (integer)``
+* ``Whole Number (integer - 64 bit)``
+* ``Decimal Number``: double precision floating point number
+* ``Date``
+* ``Time``
+* ``Date and Time``
+* ``Text``
+
 
 Geometry definition
 ...................
@@ -590,6 +618,15 @@ and behaves like any other map layer in QGIS.
 This layer is the result of a query on the :file:`.csv` source file
 (hence, linked to it) and would require
 :ref:`to be saved <general_saveas>` in order to get a spatial layer on disk.
+
+Sample Data
+...........
+
+As you set the parser properties, the sample data preview updates regarding to
+the applied settings.
+
+Also in the Sample Data Table it is possible to override the automatically
+determined column types.
 
 
 .. _import_dxfdwg:
@@ -705,9 +742,21 @@ QGIS also supports editable views in SpatiaLite.
 GPS
 ---
 
-Loading GPS data in QGIS can be done using the core plugin ``GPS Tools``.
-Instructions are found in section :ref:`plugin_gps`.
+There are dozens of different file formats for storing GPS data. The format
+that QGIS uses is called GPX (GPS eXchange format), which is a standard
+interchange format that can contain any number of waypoints, routes and tracks
+in the same file.
 
+Use the :guilabel:`...` :sup:`Browse` button to select the GPX file, then use the checkboxes
+to select the feature types you want to load from that GPX file.
+Each feature type will be loaded in a separate layer.
+
+.. _figure_gps_datasource_manager:
+
+.. figure:: img/gps_datasource.png
+   :align: center
+
+   Loading GPS Data dialog
 
 GRASS
 -----
@@ -735,7 +784,7 @@ of them and load their tables:
 
 * |addPostgisLayer| :menuselection:`Add PostGIS Layer...` or by typing
   :kbd:`Ctrl+Shift+D`
-* |addMssqlLayer| :menuselection:`Add MSSQL Spatial Layer`
+* |addMssqlLayer| :menuselection:`Add MS SQL Server Layer`
 * |addOracleLayer| :menuselection:`Add Oracle Spatial Layer...` or by typing
   :kbd:`Ctrl+Shift+O`
 * |addHanaLayer| :menuselection:`Add SAP HANA Spatial Layer...` or by typing
@@ -756,7 +805,7 @@ below using the PostgreSQL database tool as an example.
 For additional settings specific to other providers, you can find
 corresponding descriptions at:
 
-* :ref:`create_mssql_connection`;
+* :ref:`create_ms_sql_server_connection`;
 * :ref:`create_oracle_connection`;
 * :ref:`create_hana_connection`.
 
@@ -1011,13 +1060,13 @@ Optionally, you can activate the following checkboxes:
    tables have a **primary key**.
 
 
-.. _create_mssql_connection:
+.. _create_ms_sql_server_connection:
 
-Connecting to MSSQL Spatial
+Connecting to MS SQL Server
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In addition to some of the options in :ref:`vector_create_stored_connection`,
-creating a new MSSQL connection dialog proposes you to fill a **Provider/DSN**
+creating a new MS SQL Server connection dialog proposes you to fill a **Provider/DSN**
 name. You can also display available databases.
 
 .. _create_hana_connection:
@@ -1088,7 +1137,7 @@ The following parameters can be entered:
     identity of the server instead of the host name with which the connection
     was established. If you specify ``*`` as the host name, then the server's
     host name is not validated. Other wildcards are not permitted.
-  * :guilabel:`Key store file with public key`: Currently ignored. This
+  * :guilabel:`Keystore file with private key`: Currently ignored. This
     parameter might allow to authenticate via certificate instead via user and
     password in future.
   * :guilabel:`Trust store file with public key`: Specifies the path to a trust
@@ -1250,7 +1299,7 @@ MapTiler planet Vector Tiles service configuration.
 
 .. figure:: img/vector_tiles_maptilerplanet.png
    :align: center
-   
+
    Vector Tiles - Maptiler Planet configuration
 
 Configurations can be saved to :file:`.XML` file (:guilabel:`Save Connections`)
@@ -1263,7 +1312,7 @@ Once a connection to a vector tile service is set, it's possible to:
 * :guilabel:`Edit` the vector tile connection settings
 * :guilabel:`Remove` the connection
 * From the :guilabel:`Browser` panel, right-click over the entry
-  and you an also:
+  and you can also:
 
   * :guilabel:`Add layer to project`: a double-click also adds the layer
   * View the :guilabel:`Layer Properties...` and get access to metadata and
@@ -1290,16 +1339,31 @@ Press :guilabel:`New` (respectively :guilabel:`New Connection`) and provide:
   :guilabel:`Unknown (not scaled)`, :guilabel:`Standard (256x256 / 96DPI)`
   and :guilabel:`High (512x512 / 192DPI)`
 
-By default, the OpenStreetMap XYZ Tile service is configured.
-:numref:`figure_xyz_tiles_openstreetmap` shows the dialog with the OpenStreetMap
-XYZ Tile service configuration.
+.. _interpretation:
 
-.. _figure_xyz_tiles_openstreetmap:
+* :guilabel:`Interpretation`: converts WMTS/XYZ raster datasets to a raster 
+  layer of single band float type following a predefined encoding scheme.
+  Supported schemes are :guilabel:`Default` (no conversion is done),
+  :guilabel:`MapTiler Terrain RGB` and :guilabel:`Terrarium Terrain RGB`.
+  The selected converter will translate the RGB source values to float values
+  for each pixel. Once loaded, the layer will be presented as a single band
+  floating point raster layer, ready for styling using QGIS usual
+  :ref:`raster renderers <raster_rendering>`.
 
-.. figure:: img/xyz_tiles_dialog_osm.png
-   :align: center
+By default, QGIS provides some default and ready-to-use XYZ Tiles services:
 
-   XYZ Tiles - OpenStreetMap configuration
+* |xyz| :guilabel:`Mapzen Global Terrain`, allowing an immediate
+  access to global DEM source for the projects.
+  More details and resources at https://registry.opendata.aws/terrain-tiles/
+* |xyz| :guilabel:`OpenStreetMap` to access the world 2D map.
+  :numref:`figure_xyz_tiles_openstreetmap` shows the dialog with the OpenStreetMap
+  XYZ Tile service configuration.
+
+  .. _figure_xyz_tiles_openstreetmap:
+  .. figure:: img/xyz_tiles_dialog_osm.png
+     :align: center
+
+     XYZ Tiles - OpenStreetMap configuration
 
 Configurations can be saved to :file:`.XML` file (:guilabel:`Save Connections`)
 through the :guilabel:`XYZ Tiles` entry in :guilabel:`Data Source Manager`
@@ -1394,7 +1458,7 @@ Once a connection to an ArcGIS REST Server is set, it's possible to:
 
   * :guilabel:`Refresh`
   * :guilabel:`Edit connection...`
-  * :guilabel:`Delete connection...`
+  * :guilabel:`Remove connection...`
   * :guilabel:`View Service Info` which will open the default web browser
     and display the Service Info.
 

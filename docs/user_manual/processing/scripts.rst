@@ -407,8 +407,8 @@ Input and output types for Processing Algorithms
 
 Here is the list of input and output types that are supported in
 Processing with their corresponding alg decorator constants
-(:file:`algfactory.py` contains the complete list of alg constants).
-Sorted on class name.
+(the :source:`algfactory.py <python/processing/algfactory.py>` file contains
+the complete list of alg constants). Sorted on class name.
 
 Input types
 ...........
@@ -421,6 +421,9 @@ Input types
    * - Class
      - Alg constant
      - Description
+   * - :class:`QgsProcessingParameterAnnotationLayer <qgis.core.QgsProcessingParameterAnnotationLayer>`
+     - ``alg.ANNOTATION_LAYER``
+     - An annotation layer
    * - :class:`QgsProcessingParameterAuthConfig <qgis.core.QgsProcessingParameterAuthConfig>`
      - ``alg.AUTH_CFG``
      - Allows users to select from available authentication configurations or
@@ -473,6 +476,9 @@ Input types
    * - :class:`QgsProcessingParameterFolderDestination <qgis.core.QgsProcessingParameterFolderDestination>`
      - ``alg.FOLDER_DEST``
      - A folder (destination folder)
+   * - :class:`QgsProcessingParameterGeometry <qgis.core.QgsProcessingParameterGeometry>`
+     - ``alg.GEOMETRY``
+     - A geometry
    * - :class:`QgsProcessingParameterNumber <qgis.core.QgsProcessingParameterNumber>`
      - ``alg.INT``
      - An integer
@@ -503,6 +509,13 @@ Input types
    * - :class:`QgsProcessingParameterPoint <qgis.core.QgsProcessingParameterPoint>`
      - ``alg.POINT``
      - A point
+   * - :class:`QgsProcessingParameterPointCloudDestination <qgis.core.QgsProcessingParameterPointCloudDestination>`
+     - ``alg.POINTCLOUD_LAYER_DEST``
+     - A point cloud layer destination parameter, for specifying the destination path
+       for a point cloud layer created by the algorithm
+   * - :class:`QgsProcessingParameterPointCloudLayer <qgis.core.QgsProcessingParameterPointCloudLayer>`
+     - ``alg.POINTCLOUD_LAYER``
+     - A point cloud layer
    * - :class:`QgsProcessingParameterProviderConnection <qgis.core.QgsProcessingParameterProviderConnection>`
      - ``alg.PROVIDER_CONNECTION``
      - An available connection for a database provider
@@ -514,7 +527,8 @@ Input types
      - A raster layer
    * - :class:`QgsProcessingParameterRasterDestination <qgis.core.QgsProcessingParameterRasterDestination>`
      - ``alg.RASTER_LAYER_DEST``
-     - A raster layer
+     - A raster layer destination parameter, for specifying the destination path
+       for a raster layer created by the algorithm
    * - :class:`QgsProcessingParameterScale <qgis.core.QgsProcessingParameterScale>`
      - ``alg.SCALE``
      - A map scale
@@ -532,7 +546,8 @@ Input types
      - A vector layer
    * - :class:`QgsProcessingParameterVectorDestination <qgis.core.QgsProcessingParameterVectorDestination>`
      - ``alg.VECTOR_LAYER_DEST``
-     - A vector layer
+     - A vector layer destination parameter, for specifying the destination path
+       for a vector layer created by the algorithm
 
 
 Output types
@@ -576,6 +591,9 @@ Output types
    * - :class:`QgsProcessingOutputNumber <qgis.core.QgsProcessingOutputNumber>`
      - ``alg.NUMBER``
      - A numerical value
+   * - :class:`QgsProcessingOutputPointCloudLayer <qgis.core.QgsProcessingOutputPointCloudLayer>`
+     - ``alg.POINTCLOUD_LAYER``
+     - A point cloud layer
    * - :class:`QgsProcessingOutputRasterLayer <qgis.core.QgsProcessingOutputRasterLayer>`
      - ``alg.RASTER_LAYER``
      - A raster layer
@@ -688,4 +706,4 @@ interface.
   throw a :class:`QgsProcessingException <qgis.core.QgsProcessingException>`.
 
 There are already many processing algorithms available in QGIS.
-You can find code on :source:`python/plugins/processing/algs/qgis`.
+You can find code on the :source:`QGIS <python/plugins/processing/algs/qgis>` repo.

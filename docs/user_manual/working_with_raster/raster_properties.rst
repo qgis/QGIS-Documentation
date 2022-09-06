@@ -423,8 +423,8 @@ The scalar dataset elements are then assigned their color based on their class.
    their color :
 
    * :guilabel:`Discrete` (a ``<=`` symbol appears in the header of the
-     :guilabel:`Value` column): The color is taken from the closest color mapl
-     entry with equa or higher value
+     :guilabel:`Value` column): The color is taken from the closest color map
+     entry with equal or higher value
    * :guilabel:`Linear`: The color is linearly interpolated from the color map
      entries above and below the pixel value, meaning that to each dataset
      value corresponds a unique color
@@ -454,7 +454,7 @@ The scalar dataset elements are then assigned their color based on their class.
    * The button |symbologyAdd| :sup:`Add values manually` adds a value to the table.
    * The button |symbologyRemove| :sup:`Remove selected row` deletes selected values
      from the table.
-   * Double clicking in the :guilabel:`Value` lets you modify the class value.
+   * Double clicking in the :guilabel:`Value` column lets you modify the class value.
    * Double clicking in the :guilabel:`Color` column opens the dialog
      :guilabel:`Change color`, where you can select a color to apply for
      that value.
@@ -568,6 +568,12 @@ method, which cause sharp edges to be blurred.
 The effect is a smoother image.
 This method can be applied to for instance digital topographic
 raster maps.
+
+|checkbox| :guilabel:`Early resampling`: allows to calculate the raster
+rendering at the provider level where the resolution of the source is known,
+and ensures a better zoom in rendering with QGIS custom styling.
+Really convenient for tile rasters loaded using an :ref:`interpretation method
+<interpretation>`.
 
 
 .. index:: Transparency

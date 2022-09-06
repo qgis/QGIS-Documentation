@@ -16,13 +16,16 @@ From a command line tool, run ``qgis_process`` and you should get:
 
 .. code-block:: bash
 
-  QGIS Processing Executor - 3.21.0-Master 'Master' (3.21.0-Master)
-  Usage: C:\OSGeo4W\apps\qgis-dev\bin\qgis_process.exe [--json] [--verbose] [command] [algorithm id or path to model file] [parameters]
+  QGIS Processing Executor - 3.27.0-Master 'Master' (3.27.0-Master)
+  Usage: C:\OSGeo4W\apps\qgis-dev\bin\qgis_process.exe [--help] [--version] [--json] [--verbose] [--no-python] [command] [algorithm id, path to model file, or path to Python script] [parameters]
 
   Options:
 
-    --json          Output results as JSON objects
-    --verbose       Output verbose logs
+    --help or -h      Output the help
+    --version or -v   Output all versions related to QGIS Process
+    --json            Output results as JSON objects
+    --verbose         Output verbose logs
+    --no-python       Disable Python support (results in faster startup)
 
   Available commands:
 
@@ -35,11 +38,14 @@ From a command line tool, run ``qgis_process`` and you should get:
                      Parameter values are specified after -- with PARAMETER=VALUE syntax.
                      Ordered list values for a parameter can be created by specifying the parameter multiple times,
                      e.g. --LAYERS=layer1.shp --LAYERS=layer2.shp
+                     Alternatively, a '-' character in place of the parameters argument indicates that the parameters should be read from STDIN as a JSON object.
+                     The JSON should be structured as a map containing at least the "inputs" key specifying a map of input parameter values.
+                     This implies the --json option for output as a JSON object.
                      If required, the ellipsoid to use for distance and area calculations can be specified via the "--ELLIPSOID=name" argument.
                      If required, an existing QGIS project to use during the algorithm execution can be specified via the "--PROJECT_PATH=path" argument.
 
 .. note::
-  Only installed plugins that advertize ``hasProcessingProvider=yes``
+  Only installed plugins that advertise ``hasProcessingProvider=yes``
   in their :file:`metadata.txt` file are recognized and can be activated
   or loaded by qgis_process tool.
 
@@ -62,7 +68,7 @@ Specify the name of the algorithm or a path to a model as first parameter.
 
 .. code-block:: bash
 
-   qgis_process run qgis:buffer -- INPUT=source.shp DISTANCE=2 OUTPUT=buffered.shp
+   qgis_process run native:buffer -- INPUT=source.shp DISTANCE=2 OUTPUT=buffered.shp
 
 Where a parameter accepts a list of values, set the same variable multiple times.
 
@@ -72,6 +78,7 @@ Where a parameter accepts a list of values, set the same variable multiple times
 
 While running an algorithm a text-based feedback bar is shown, and the operation
 can be cancelled via :kbd:`CTRL+C`.
+
 The ``run`` command also supports further parameters.
 
 - ``--json`` will format stdout output in a JSON structured way.
@@ -79,3 +86,38 @@ The ``run`` command also supports further parameters.
 - ``--distance_units`` will use the specified distance units.
 - ``--area_units`` will use the specified area units.
 - ``--project_path`` will load the specified project for running the algorithm.
+
+Complex input parameters, i.e. parameter types which are themselves specified
+as a dictionary type object for algorithms, are supported by qgis_process.
+To indicate that parameters will be specified via stdin,
+the qgis_process command must follow the format (with a trailing ``-``
+in place of the usual arguments list).
+
+.. code-block:: bash
+
+   qgis_process run algorithmId -
+
+
+The JSON object must contain an "inputs" key, which is a map of the input parameter values.
+E.g.
+
+.. code-block:: bash
+
+   echo "{'inputs': {'INPUT': 'my_shape.shp', 'DISTANCE': 5}}" | qgis_process run native:buffer -
+
+Additionally, extra settings like the distance units, area units, ellipsoid
+and project path can be included in this JSON object:
+
+.. code-block:: bash
+
+   {
+    'ellipsoid': 'EPSG:7019',
+    'distance_units': 'feet',
+    'area_units': 'ha',
+    'project_path': 'C:/temp/my_project.qgs'
+    'inputs': {'DISTANCE': 5, 'SEGMENTS': 8 ... }
+   }
+
+Specifying input parameters via stdin implies automatically the :file:`JSON`
+output format for results.
+

@@ -405,12 +405,36 @@ Returns the combination of two geometries.
 
 .. end_combine_section
 
+.. _expression_function_GeometryGroup_concave_hull:
+
+concave_hull
+............
+
+Returns a possibly concave polygon that contains all the points in the geometry
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - concave_hull(geometry, target_percent, [allow_holes=False])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **geometry** - a geometry
+       * **target_percent** - the percentage of area of the convex hull the solution tries to approach. A target_percent of 1 gives the same result as the convex hull. A target_percent between 0 and 0.99 produces a result that should have a smaller area than the convex hull.
+       * **allow_holes** - optional argument specifying whether to allow holes within the output geometry. Defaults to FALSE, set to TRUE to avoid including holes in the output geometry.
+   * - Examples
+     - * ``geom_to_wkt(concavehull(geom_from_wkt('MULTILINESTRING((106 164,30 112,74 70,82 112,130 94,130 62,122 40,156 32,162 76,172 88),(132 178,134 148,128 136,96 128,132 108,150 130,170 142,174 110,156 96,158 90,158 88),(22 64,66 28,94 38,94 68,114 76,112 30,132 10,168 18,178 34,186 52,184 74,190 100,190 122,182 148,178 170,176 184,156 164,146 178,132 186,92 182,56 158,36 150,62 150,76 128,88 118))'), 0.99))`` → 'Polygon ((30 112, 36 150, 92 182, 132 186, 176 184, 190 122, 190 100, 186 52, 178 34, 168 18, 132 10, 112 30, 66 28, 22 64, 30 112))'
+
+
+.. end_concave_hull_section
+
 .. _expression_function_GeometryGroup_contains:
 
 contains
 ........
 
-Tests whether a geometry contains another. Returns true if and only if no points of geometry2 lie in the exterior of geometry1, and at least one point of the interior of geometry2 lies in the interior of geometry1.
+Tests whether a geometry contains another. Returns TRUE if and only if no points of geometry2 lie in the exterior of geometry1, and at least one point of the interior of geometry2 lies in the interior of geometry1.
 
 .. list-table::
    :widths: 15 85
@@ -421,8 +445,8 @@ Tests whether a geometry contains another. Returns true if and only if no points
      - * **geometry1** - a geometry
        * **geometry2** - a geometry
    * - Examples
-     - * ``contains( geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))' ), geom_from_wkt( 'POINT(0.5 0.5 )' ) )`` → true
-       * ``contains( geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → false
+     - * ``contains( geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))' ), geom_from_wkt( 'POINT(0.5 0.5 )' ) )`` → TRUE
+       * ``contains( geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → FALSE
 
 
 .. end_contains_section
@@ -452,7 +476,7 @@ Returns the convex hull of a geometry. It represents the minimum convex geometry
 crosses
 .......
 
-Tests whether a geometry crosses another. Returns true if the supplied geometries have some, but not all, interior points in common.
+Tests whether a geometry crosses another. Returns TRUE if the supplied geometries have some, but not all, interior points in common.
 
 .. list-table::
    :widths: 15 85
@@ -463,8 +487,8 @@ Tests whether a geometry crosses another. Returns true if the supplied geometrie
      - * **geometry1** - a geometry
        * **geometry2** - a geometry
    * - Examples
-     - * ``crosses( geom_from_wkt( 'LINESTRING(3 5, 4 4, 5 3)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → true
-       * ``crosses( geom_from_wkt( 'POINT(4 5)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → false
+     - * ``crosses( geom_from_wkt( 'LINESTRING(3 5, 4 4, 5 3)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → TRUE
+       * ``crosses( geom_from_wkt( 'POINT(4 5)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → FALSE
 
 
 .. end_crosses_section
@@ -537,7 +561,7 @@ Returns a geometry that represents that part of geometry1 that does not intersec
 disjoint
 ........
 
-Tests whether geometries do not spatially intersect. Returns true if the geometries do not share any space together.
+Tests whether geometries do not spatially intersect. Returns TRUE if the geometries do not share any space together.
 
 .. list-table::
    :widths: 15 85
@@ -548,8 +572,8 @@ Tests whether geometries do not spatially intersect. Returns true if the geometr
      - * **geometry1** - a geometry
        * **geometry2** - a geometry
    * - Examples
-     - * ``disjoint( geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0 ))' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → true
-       * ``disjoint( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ), geom_from_wkt( 'POINT(4 4)' ))`` → false
+     - * ``disjoint( geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0 ))' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → TRUE
+       * ``disjoint( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ), geom_from_wkt( 'POINT(4 4)' ))`` → FALSE
 
 
 .. end_disjoint_section
@@ -922,7 +946,7 @@ Returns a feature's geometry.
    * - Examples
      - * `` geometry( $currentfeature )`` → the geometry of the current feature. Prefer using $geometry.
        * ``geom_to_wkt( geometry( get_feature_by_id( 'streets', 1 ) ) )`` → the geometry in WKT of the feature with the id 1 on the layer "streets", e.g. 'POINT(6 50)'
-       * ``intersects( $geometry, geometry( get_feature( 'streets', 'name', 'Main St.' ) ) )`` → true if the current feature spatially intersects the 'Main St.' named feature in the "streets" layer
+       * ``intersects( $geometry, geometry( get_feature( 'streets', 'name', 'Main St.' ) ) )`` → TRUE if the current feature spatially intersects the 'Main St.' named feature in the "streets" layer
 
 
 .. end_geometry_section
@@ -1081,7 +1105,7 @@ Returns a geometry that represents the shared portion of two geometries.
 intersects
 ..........
 
-Tests whether a geometry intersects another. Returns true if the geometries spatially intersect (share any portion of space) and false if they do not.
+Tests whether a geometry intersects another. Returns TRUE if the geometries spatially intersect (share any portion of space) and false if they do not.
 
 .. list-table::
    :widths: 15 85
@@ -1092,8 +1116,8 @@ Tests whether a geometry intersects another. Returns true if the geometries spat
      - * **geometry1** - a geometry
        * **geometry2** - a geometry
    * - Examples
-     - * ``intersects( geom_from_wkt( 'POINT(4 4)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → true
-       * ``intersects( geom_from_wkt( 'POINT(4 5)' ), geom_from_wkt( 'POINT(5 5)' ) )`` → false
+     - * ``intersects( geom_from_wkt( 'POINT(4 4)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → TRUE
+       * ``intersects( geom_from_wkt( 'POINT(4 5)' ), geom_from_wkt( 'POINT(5 5)' ) )`` → FALSE
 
 
 .. end_intersects_section
@@ -1103,7 +1127,7 @@ Tests whether a geometry intersects another. Returns true if the geometries spat
 intersects_bbox
 ...............
 
-Tests whether a geometry's bounding box overlaps another geometry's bounding box. Returns true if the geometries spatially intersect the bounding box defined and false if they do not.
+Tests whether a geometry's bounding box overlaps another geometry's bounding box. Returns TRUE if the geometries spatially intersect the bounding box defined and false if they do not.
 
 .. list-table::
    :widths: 15 85
@@ -1114,8 +1138,8 @@ Tests whether a geometry's bounding box overlaps another geometry's bounding box
      - * **geometry1** - a geometry
        * **geometry2** - a geometry
    * - Examples
-     - * ``intersects_bbox( geom_from_wkt( 'POINT(4 5)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → true
-       * ``intersects_bbox( geom_from_wkt( 'POINT(6 5)' ), geom_from_wkt( 'POLYGON((3 3, 4 4, 5 5, 3 3))' ) )`` → false
+     - * ``intersects_bbox( geom_from_wkt( 'POINT(4 5)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → TRUE
+       * ``intersects_bbox( geom_from_wkt( 'POINT(6 5)' ), geom_from_wkt( 'POLYGON((3 3, 4 4, 5 5, 3 3))' ) )`` → FALSE
 
 
 .. end_intersects_bbox_section
@@ -1125,7 +1149,7 @@ Tests whether a geometry's bounding box overlaps another geometry's bounding box
 is_closed
 .........
 
-Returns true if a line string is closed (start and end points are coincident), or false if a line string is not closed. If the geometry is not a line string then the result will be NULL.
+Returns TRUE if a line string is closed (start and end points are coincident), or false if a line string is not closed. If the geometry is not a line string then the result will be NULL.
 
 .. list-table::
    :widths: 15 85
@@ -1135,8 +1159,8 @@ Returns true if a line string is closed (start and end points are coincident), o
    * - Arguments
      - * **geometry** - a line string geometry
    * - Examples
-     - * ``is_closed(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)'))`` → false
-       * ``is_closed(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2, 0 0)'))`` → true
+     - * ``is_closed(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)'))`` → FALSE
+       * ``is_closed(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2, 0 0)'))`` → TRUE
 
 
 .. end_is_closed_section
@@ -1146,7 +1170,7 @@ Returns true if a line string is closed (start and end points are coincident), o
 is_empty
 ........
 
-Returns true if a geometry is empty (without coordinates), false if the geometry is not empty and NULL if there is no geometry. See also is_empty_or_null.
+Returns TRUE if a geometry is empty (without coordinates), false if the geometry is not empty and NULL if there is no geometry. See also is_empty_or_null.
 
 .. list-table::
    :widths: 15 85
@@ -1156,10 +1180,10 @@ Returns true if a geometry is empty (without coordinates), false if the geometry
    * - Arguments
      - * **geometry** - a geometry
    * - Examples
-     - * ``is_empty(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)'))`` → false
-       * ``is_empty(geom_from_wkt('LINESTRING EMPTY'))`` → true
-       * ``is_empty(geom_from_wkt('POINT(7 4)'))`` → false
-       * ``is_empty(geom_from_wkt('POINT EMPTY'))`` → true
+     - * ``is_empty(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)'))`` → FALSE
+       * ``is_empty(geom_from_wkt('LINESTRING EMPTY'))`` → TRUE
+       * ``is_empty(geom_from_wkt('POINT(7 4)'))`` → FALSE
+       * ``is_empty(geom_from_wkt('POINT EMPTY'))`` → TRUE
 
 
 .. end_is_empty_section
@@ -1169,7 +1193,7 @@ Returns true if a geometry is empty (without coordinates), false if the geometry
 is_empty_or_null
 ................
 
-Returns true if a geometry is NULL or empty (without coordinates) or false otherwise. This function is like the expression '$geometry IS NULL or is_empty($geometry)'
+Returns TRUE if a geometry is NULL or empty (without coordinates) or false otherwise. This function is like the expression '$geometry IS NULL or is_empty($geometry)'
 
 .. list-table::
    :widths: 15 85
@@ -1179,11 +1203,11 @@ Returns true if a geometry is NULL or empty (without coordinates) or false other
    * - Arguments
      - * **geometry** - a geometry
    * - Examples
-     - * ``is_empty_or_null(NULL)`` → true
-       * ``is_empty_or_null(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)'))`` → false
-       * ``is_empty_or_null(geom_from_wkt('LINESTRING EMPTY'))`` → true
-       * ``is_empty_or_null(geom_from_wkt('POINT(7 4)'))`` → false
-       * ``is_empty_or_null(geom_from_wkt('POINT EMPTY'))`` → true
+     - * ``is_empty_or_null(NULL)`` → TRUE
+       * ``is_empty_or_null(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)'))`` → FALSE
+       * ``is_empty_or_null(geom_from_wkt('LINESTRING EMPTY'))`` → TRUE
+       * ``is_empty_or_null(geom_from_wkt('POINT(7 4)'))`` → FALSE
+       * ``is_empty_or_null(geom_from_wkt('POINT EMPTY'))`` → TRUE
 
 
 .. end_is_empty_or_null_section
@@ -1193,7 +1217,7 @@ Returns true if a geometry is NULL or empty (without coordinates) or false other
 is_multipart
 ............
 
-Returns true if the geometry is of Multi type.
+Returns TRUE if the geometry is of Multi type.
 
 .. list-table::
    :widths: 15 85
@@ -1203,8 +1227,8 @@ Returns true if the geometry is of Multi type.
    * - Arguments
      - * **geometry** - a geometry
    * - Examples
-     - * ``is_multipart(geom_from_wkt('MULTIPOINT ((0 0),(1 1),(2 2))'))`` → true
-       * ``is_multipart(geom_from_wkt('POINT (0 0)'))`` → false
+     - * ``is_multipart(geom_from_wkt('MULTIPOINT ((0 0),(1 1),(2 2))'))`` → TRUE
+       * ``is_multipart(geom_from_wkt('POINT (0 0)'))`` → FALSE
 
 
 .. end_is_multipart_section
@@ -1214,7 +1238,7 @@ Returns true if the geometry is of Multi type.
 is_valid
 ........
 
-Returns true if a geometry is valid; if it is well-formed in 2D according to the OGC rules.
+Returns TRUE if a geometry is valid; if it is well-formed in 2D according to the OGC rules.
 
 .. list-table::
    :widths: 15 85
@@ -1224,8 +1248,8 @@ Returns true if a geometry is valid; if it is well-formed in 2D according to the
    * - Arguments
      - * **geometry** - a geometry
    * - Examples
-     - * ``is_valid(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2, 0 0)'))`` → true
-       * ``is_valid(geom_from_wkt('LINESTRING(0 0)'))`` → false
+     - * ``is_valid(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2, 0 0)'))`` → TRUE
+       * ``is_valid(geom_from_wkt('LINESTRING(0 0)'))`` → FALSE
 
 
 .. end_is_valid_section
@@ -1344,7 +1368,9 @@ Returns the point interpolated by a specified distance along a linestring geomet
      - * **geometry** - a linestring geometry
        * **distance** - distance along line to interpolate
    * - Examples
-     - * ``geom_to_wkt(line_interpolate_point(geometry:=geom_from_wkt('LineString(0 0, 10 0)'),distance:=5))`` → 'Point (5 0)'
+     - * ``geom_to_wkt(line_interpolate_point(geometry:=geom_from_wkt('LineString(0 0, 8 0)'), distance:=5))`` → 'Point (5 0)'
+       * ``geom_to_wkt(line_interpolate_point(geometry:=geom_from_wkt('LineString(0 0, 1 1, 2 0)'), distance:=2.1))`` → 'Point (1.48492424 0.51507576)'
+       * ``geom_to_wkt(line_interpolate_point(geometry:=geom_from_wkt('LineString(0 0, 1 0)'), distance:=2))`` → NULL
 
 
 .. end_line_interpolate_point_section
@@ -1682,8 +1708,8 @@ Creates a rectangle from 3 points.
        * **point3** - Third point.
        * **option** - An optional argument to construct the rectangle. By default this value is 0. Value can be 0 (distance) or 1 (projected). Option distance: Second distance is equal to the distance between 2nd and 3rd point. Option projected: Second distance is equal to the distance of the perpendicular projection of the 3rd point on the segment or its extension.
    * - Examples
-     - * ``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), make_point(5, 5), 0)))`` → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'
-       * ``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), make_point(5, 3), 1)))`` → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'
+     - * ``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), make_point(5, 5), 0))`` → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'
+       * ``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), make_point(5, 3), 1))`` → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'
 
 
 .. end_make_rectangle_3points_section
@@ -1759,6 +1785,27 @@ Creates a triangle polygon.
 
 .. end_make_triangle_section
 
+.. _expression_function_GeometryGroup_make_valid:
+
+make_valid
+..........
+
+Returns a valid geometry or an empty geometry if the geometry could not be made valid.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - make_valid(geometry)
+   * - Arguments
+     - * **geometry** - a geometry
+   * - Examples
+     - * ``geom_to_wkt(make_valid(geom_from_wkt('POLYGON((3 2, 4 1, 5 8, 3 2, 4 2))')))`` → 'GeometryCollection (Polygon ((5 8, 4 1, 3 2, 5 8)),LineString (3 2, 4 2))'
+       * ``make_valid(geom_from_wkt('LINESTRING(0 0)'))`` → <empty geometry>
+
+
+.. end_make_valid_section
+
 .. _expression_function_GeometryGroup_minimal_circle:
 
 minimal_circle
@@ -1812,7 +1859,7 @@ Returns a multipoint geometry consisting of every node in the input geometry.
 num_geometries
 ..............
 
-Returns the number of geometries in a geometry collection, or NULL if the input geometry is not a collection.
+Returns the number of geometries in a geometry collection, or the number of parts in a multi-part geometry. The function returns NULL if the input geometry is not a collection.
 
 .. list-table::
    :widths: 15 85
@@ -1820,9 +1867,10 @@ Returns the number of geometries in a geometry collection, or NULL if the input 
    * - Syntax
      - num_geometries(geometry)
    * - Arguments
-     - * **geometry** - geometry collection
+     - * **geometry** - geometry collection or multi-part geometry
    * - Examples
      - * ``num_geometries(geom_from_wkt('GEOMETRYCOLLECTION(POINT(0 1), POINT(0 0), POINT(1 0), POINT(1 1))'))`` → 4
+       * ``num_geometries(geom_from_wkt('MULTIPOINT((0 1), (0 0), (1 0))'))`` → 3
 
 
 .. end_num_geometries_section
@@ -1966,7 +2014,7 @@ Returns a geometry which represents the minimal oriented bounding box of an inpu
 overlaps
 ........
 
-Tests whether a geometry overlaps another. Returns true if the geometries share space, are of the same dimension, but are not completely contained by each other.
+Tests whether a geometry overlaps another. Returns TRUE if the geometries share space, are of the same dimension, but are not completely contained by each other.
 
 .. list-table::
    :widths: 15 85
@@ -1977,8 +2025,8 @@ Tests whether a geometry overlaps another. Returns true if the geometries share 
      - * **geometry1** - a geometry
        * **geometry2** - a geometry
    * - Examples
-     - * ``overlaps( geom_from_wkt( 'LINESTRING(3 5, 4 4, 5 5, 5 3)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → true
-       * ``overlaps( geom_from_wkt( 'LINESTRING(0 0, 1 1)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → false
+     - * ``overlaps( geom_from_wkt( 'LINESTRING(3 5, 4 4, 5 5, 5 3)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → TRUE
+       * ``overlaps( geom_from_wkt( 'LINESTRING(0 0, 1 1)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → FALSE
 
 
 .. end_overlaps_section
@@ -2008,8 +2056,8 @@ Read more on the underlying GEOS "Contains" predicate, as described in PostGIS `
        * **limit** - an optional integer to limit the number of matching features. If not set, all the matching features will be returned.
        * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
    * - Examples
-     - * ``overlay_contains('regions')`` → true if the current feature spatially contains a region
-       * ``overlay_contains('regions', filter:= population > 10000)`` → true if the current feature spatially contains a region with a population greater than 10000
+     - * ``overlay_contains('regions')`` → TRUE if the current feature spatially contains a region
+       * ``overlay_contains('regions', filter:= population > 10000)`` → TRUE if the current feature spatially contains a region with a population greater than 10000
        * ``overlay_contains('regions', name)`` → an array of names, for the regions contained in the current feature
        * ``array_to_string(overlay_contains('regions', name))`` → a string as a comma separated list of names, for the regions contained in the current feature
        * ``array_sort(overlay_contains(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions contained in the current feature and with a population greater than 10000
@@ -2043,8 +2091,8 @@ Read more on the underlying GEOS "Crosses" predicate, as described in PostGIS `S
        * **limit** - an optional integer to limit the number of matching features. If not set, all the matching features will be returned.
        * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
    * - Examples
-     - * ``overlay_crosses('regions')`` → true if the current feature spatially crosses a region
-       * ``overlay_crosses('regions', filter:= population > 10000)`` → true if the current feature spatially crosses a region with a population greater than 10000
+     - * ``overlay_crosses('regions')`` → TRUE if the current feature spatially crosses a region
+       * ``overlay_crosses('regions', filter:= population > 10000)`` → TRUE if the current feature spatially crosses a region with a population greater than 10000
        * ``overlay_crosses('regions', name)`` → an array of names, for the regions crossed by the current feature
        * ``array_to_string(overlay_crosses('regions', name))`` → a string as a comma separated list of names, for the regions crossed by the current feature
        * ``array_sort(overlay_crosses(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions crossed by the current feature and with a population greater than 10000
@@ -2078,8 +2126,8 @@ Read more on the underlying GEOS "Disjoint" predicate, as described in PostGIS `
        * **limit** - an optional integer to limit the number of matching features. If not set, all the matching features will be returned.
        * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
    * - Examples
-     - * ``overlay_disjoint('regions')`` → true if the current feature is spatially disjoint from all the regions
-       * ``overlay_disjoint('regions', filter:= population > 10000)`` → true if the current feature is spatially disjoint from all the regions with a population greater than 10000
+     - * ``overlay_disjoint('regions')`` → TRUE if the current feature is spatially disjoint from all the regions
+       * ``overlay_disjoint('regions', filter:= population > 10000)`` → TRUE if the current feature is spatially disjoint from all the regions with a population greater than 10000
        * ``overlay_disjoint('regions', name)`` → an array of names, for the regions spatially disjoint from the current feature
        * ``array_to_string(overlay_disjoint('regions', name))`` → a string as a comma separated list of names, for the regions spatially disjoint from the current feature
        * ``array_sort(overlay_disjoint(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions spatially disjoint from the current feature and with a population greater than 10000
@@ -2113,8 +2161,8 @@ Read more on the underlying GEOS "Equals" predicate, as described in PostGIS `ST
        * **limit** - an optional integer to limit the number of matching features. If not set, all the matching features will be returned.
        * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
    * - Examples
-     - * ``overlay_equals('regions')`` → true if the current feature is spatially equal to a region
-       * ``overlay_equals('regions', filter:= population > 10000)`` → true if the current feature is spatially equal to a region with a population greater than 10000
+     - * ``overlay_equals('regions')`` → TRUE if the current feature is spatially equal to a region
+       * ``overlay_equals('regions', filter:= population > 10000)`` → TRUE if the current feature is spatially equal to a region with a population greater than 10000
        * ``overlay_equals('regions', name)`` → an array of names, for the regions spatially equal to the current feature
        * ``array_to_string(overlay_equals('regions', name))`` → a string as a comma separated list of names, for the regions spatially equal to the current feature
        * ``array_sort(overlay_equals(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions spatially equal to the current feature and with a population greater than 10000
@@ -2161,14 +2209,14 @@ Read more on the underlying GEOS "Intersects" predicate, as described in PostGIS
        * **return_details** - Set this to true to return a list of maps containing (key names in quotes) the feature 'id', the expression 'result' and the 'overlap' value. The 'radius' of the maximum inscribed circle is also returned when the target layer is a polygon. Only valid when used with the expression parameter
        * **sort_by_intersection_size** - only valid when used with an expression, set this to 'des' to return the results ordered by the overlap value in descending order or set this to 'asc' for ascending order.
    * - Examples
-     - * ``overlay_intersects('regions')`` → true if the current feature spatially intersects a region
-       * ``overlay_intersects('regions', filter:= population > 10000)`` → true if the current feature spatially intersects a region with a population greater than 10000
+     - * ``overlay_intersects('regions')`` → TRUE if the current feature spatially intersects a region
+       * ``overlay_intersects('regions', filter:= population > 10000)`` → TRUE if the current feature spatially intersects a region with a population greater than 10000
        * ``overlay_intersects('regions', name)`` → an array of names, for the regions intersected by the current feature
        * ``array_to_string(overlay_intersects('regions', name))`` → a string as a comma separated list of names, for the regions intersected by the current feature
        * ``array_sort(overlay_intersects(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions intersected by the current feature and with a population greater than 10000
        * ``overlay_intersects(layer:='regions', expression:= geom_to_wkt($geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions intersected by the current feature
-       * ``overlay_intersects(layer:='regions', min_overlap:=0.54)`` → true if the current feature spatially intersects a region and the intersection area (of at least one of the parts in case of multipolygons) is greater or equal to 0.54
-       * ``overlay_intersects(layer:='regions', min_inscribed_circle_radius:=0.54)`` → true if the current feature spatially intersects a region and the intersection area maximum inscribed circle's radius (of at least one of the parts in case of multipart) is greater or equal to 0.54
+       * ``overlay_intersects(layer:='regions', min_overlap:=0.54)`` → TRUE if the current feature spatially intersects a region and the intersection area (of at least one of the parts in case of multipolygons) is greater or equal to 0.54
+       * ``overlay_intersects(layer:='regions', min_inscribed_circle_radius:=0.54)`` → TRUE if the current feature spatially intersects a region and the intersection area maximum inscribed circle's radius (of at least one of the parts in case of multipart) is greater or equal to 0.54
        * ``overlay_intersects(layer:='regions', expression:= geom_to_wkt($geometry), return_details:=true)`` → an array of maps containing 'id', 'result', 'overlap' and 'radius'
        * ``overlay_intersects(layer:='regions', expression:= geom_to_wkt($geometry), sort_by_intersection_size:='des')`` → an array of geometries (in WKT) ordered by the overlap value in descending order
 
@@ -2201,8 +2249,8 @@ Note: This function can be slow and consume a lot of memory for large layers.
        * **max_distance** - an optional distance to limit the search of matching features. If not set, all the features in the target layer will be used.
        * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
    * - Examples
-     - * ``overlay_nearest('airports')`` → true if the "airports" layer has at least one feature
-       * ``overlay_nearest('airports', max_distance:= 5000)`` → true if there is an airport within a distance of 5000 map units from the current feature
+     - * ``overlay_nearest('airports')`` → TRUE if the "airports" layer has at least one feature
+       * ``overlay_nearest('airports', max_distance:= 5000)`` → TRUE if there is an airport within a distance of 5000 map units from the current feature
        * ``overlay_nearest('airports', name)`` → the name of the closest airport to the current feature, as an array
        * ``array_to_string(overlay_nearest('airports', name))`` → the name of the closest airport to the current feature, as a string
        * ``overlay_nearest(layer:='airports', expression:= name, max_distance:= 5000)`` → the name of the closest airport within a distance of 5000 map units from the current feature, as an array
@@ -2237,8 +2285,8 @@ Read more on the underlying GEOS "Touches" predicate, as described in PostGIS `S
        * **limit** - an optional integer to limit the number of matching features. If not set, all the matching features will be returned.
        * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
    * - Examples
-     - * ``overlay_touches('regions')`` → true if the current feature spatially touches a region
-       * ``overlay_touches('regions', filter:= population > 10000)`` → true if the current feature spatially touches a region with a population greater than 10000
+     - * ``overlay_touches('regions')`` → TRUE if the current feature spatially touches a region
+       * ``overlay_touches('regions', filter:= population > 10000)`` → TRUE if the current feature spatially touches a region with a population greater than 10000
        * ``overlay_touches('regions', name)`` → an array of names, for the regions touched by the current feature
        * ``string_to_array(overlay_touches('regions', name))`` → a string as a comma separated list of names, for the regions touched by the current feature
        * ``array_sort(overlay_touches(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions touched by the current feature and with a population greater than 10000
@@ -2272,8 +2320,8 @@ Read more on the underlying GEOS "Within" predicate, as described in PostGIS `ST
        * **limit** - an optional integer to limit the number of matching features. If not set, all the matching features will be returned.
        * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
    * - Examples
-     - * ``overlay_within('regions')`` → true if the current feature is spatially within a region
-       * ``overlay_within('regions', filter:= population > 10000)`` → true if the current feature is spatially within a region with a population greater than 10000
+     - * ``overlay_within('regions')`` → TRUE if the current feature is spatially within a region
+       * ``overlay_within('regions', filter:= population > 10000)`` → TRUE if the current feature is spatially within a region with a population greater than 10000
        * ``overlay_within('regions', name)`` → an array of names, for the regions containing the current feature
        * ``array_to_string(overlay_within('regions', name))`` → a string as a comma separated list of names, for the regions containing the current feature
        * ``array_sort(overlay_within(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions containing the current feature and with a population greater than 10000
@@ -2444,7 +2492,7 @@ Tests whether the DE-9IM relationship between two geometries matches a specified
        * **geometry** - a geometry
        * **pattern** - DE-9IM pattern to match
    * - Examples
-     - * ``relate( geom_from_wkt( 'LINESTRING(40 40,120 120)' ), geom_from_wkt( 'LINESTRING(40 40,60 120)' ), '**1F001**' )`` → True
+     - * ``relate( geom_from_wkt( 'LINESTRING(40 40,120 120)' ), geom_from_wkt( 'LINESTRING(40 40,60 120)' ), '**1F001**' )`` → TRUE
 
 
 .. end_relate_section
@@ -2500,7 +2548,7 @@ Returns a rotated version of a geometry. Calculations are in the Spatial Referen
 roundness
 .........
 
-Calculates how close a polygon shape is to a circle. The function returns 1 when the polygon shape is a perfect circle and 0 when it is completely flat.
+Calculates how close a polygon shape is to a circle. The function Returns TRUE when the polygon shape is a perfect circle and 0 when it is completely flat.
 
 .. list-table::
    :widths: 15 85
@@ -2845,7 +2893,7 @@ Creates a buffer along a line geometry where the buffer diameter varies evenly o
 touches
 .......
 
-Tests whether a geometry touches another. Returns true if the geometries have at least one point in common, but their interiors do not intersect.
+Tests whether a geometry touches another. Returns TRUE if the geometries have at least one point in common, but their interiors do not intersect.
 
 .. list-table::
    :widths: 15 85
@@ -2856,8 +2904,8 @@ Tests whether a geometry touches another. Returns true if the geometries have at
      - * **geometry1** - a geometry
        * **geometry2** - a geometry
    * - Examples
-     - * ``touches( geom_from_wkt( 'LINESTRING(5 3, 4 4)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → true
-       * ``touches( geom_from_wkt( 'POINT(4 4)' ), geom_from_wkt( 'POINT(5 5)' ) )`` → false
+     - * ``touches( geom_from_wkt( 'LINESTRING(5 3, 4 4)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ) )`` → TRUE
+       * ``touches( geom_from_wkt( 'POINT(4 4)' ), geom_from_wkt( 'POINT(5 5)' ) )`` → FALSE
 
 
 .. end_touches_section
@@ -3062,7 +3110,7 @@ Returns a wedge shaped buffer originating from a point geometry.
 within
 ......
 
-Tests whether a geometry is within another. Returns true if the geometry1 is completely within geometry2.
+Tests whether a geometry is within another. Returns TRUE if the geometry1 is completely within geometry2.
 
 .. list-table::
    :widths: 15 85
@@ -3073,8 +3121,8 @@ Tests whether a geometry is within another. Returns true if the geometry1 is com
      - * **geometry1** - a geometry
        * **geometry2** - a geometry
    * - Examples
-     - * ``within( geom_from_wkt( 'POINT( 0.5 0.5)' ), geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))' ) )`` → true
-       * ``within( geom_from_wkt( 'POINT( 5 5 )' ), geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0 ))' ) )`` → false
+     - * ``within( geom_from_wkt( 'POINT( 0.5 0.5)' ), geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))' ) )`` → TRUE
+       * ``within( geom_from_wkt( 'POINT( 5 5 )' ), geom_from_wkt( 'POLYGON((0 0, 0 1, 1 1, 1 0, 0 0 ))' ) )`` → FALSE
 
 
 .. end_within_section

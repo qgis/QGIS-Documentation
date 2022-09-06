@@ -46,7 +46,7 @@ For this exercise you will use a previously scanned map, you can find it as
 You will use the georeferencing tool from QGIS named :guilabel:`Georeferencer`.
 To georeference the map:
 
-#. Open the georeference tool, :menuselection:`Raster -->` |georefRun|
+#. Open the georeference tool, :menuselection:`Layer -->` |georefRun|
    :menuselection:`Georeferencer...`.
 
    .. figure:: img/georeferencer.png

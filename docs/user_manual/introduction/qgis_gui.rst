@@ -159,7 +159,7 @@ The :menuselection:`Project` menu provides access and exit points for
      -
      -
      -
-   * - :guilabel:`Properties...`
+   * - |projectProperties| :guilabel:`Properties...`
      - :kbd:`Ctrl+Shift+P`
      -
      - :ref:`project_properties`
@@ -649,8 +649,16 @@ actions like:
      - :kbd:`Ctrl+M`
      -
      - :ref:`label_mapview`
-   * - |new3DMap| :guilabel:`New 3D Map View`
+   * - :menuselection:`3D Map Views -->`
+     -
+     -
+     - :ref:`label_3dmapview`
+   * - :menuselection:`-->` |new3DMap| :guilabel:`New 3D Map View`
      - :kbd:`Ctrl+Alt+M`
+     -
+     - :ref:`label_3dmapview`
+   * - :menuselection:`--> Manage 3D Map Views`
+     -
      -
      - :ref:`label_3dmapview`
    * - |pan| :guilabel:`Pan Map`
@@ -834,7 +842,7 @@ actions like:
      -
      -
      - :ref:`label_legend`
-   * - :menuselection:`-->` :guilabel:`Toogle Selected Layers Independently`
+   * - :menuselection:`-->` :guilabel:`Toggle Selected Layers Independently`
      -
      -
      - :ref:`label_legend`
@@ -1139,7 +1147,7 @@ copy or paste layer properties (style, scale, CRS...).
      - :guilabel:`Manage Layers`
      - :ref:`label_spatialite`
    * - :menuselection:`-->` |addMssqlLayer|
-       :guilabel:`Add MSSQL Spatial Layer...`
+       :guilabel:`Add MS SQL Server Layer...`
      -
      - :guilabel:`Manage Layers`
      - :ref:`db_tools`
@@ -1191,6 +1199,10 @@ copy or paste layer properties (style, scale, CRS...).
      -
      -
      - :ref:`layer_definition_file`
+   * - |georefRun| :guilabel:`Georeferencer...`
+     -
+     -
+     - :ref:`georef`
    * - |editCopy| :guilabel:`Copy Style`
      -
      -
@@ -1215,15 +1227,15 @@ copy or paste layer properties (style, scale, CRS...).
      -
      -
      - :ref:`sec_attribute_table`
-   * - |openTableSelected| :menuselection:`--> Open Attribute Table (Selected Features)`
+   * - :menuselection:`-->` |openTableSelected| :menuselection:`Open Attribute Table (Selected Features)`
      - :kbd:`Shift+F6`
      - :guilabel:`Attributes`
      - :ref:`sec_attribute_table`
-   * - |openTableVisible| :menuselection:`--> Open Attribute Table (Visible Features)`
+   * - :menuselection:`-->` |openTableVisible| :menuselection:`Open Attribute Table (Visible Features)`
      - :kbd:`Ctrl+F6`
      - :guilabel:`Attributes`
      - :ref:`sec_attribute_table`
-   * - |openTableEdited| :menuselection:`--> Open Attribute Table (Edited and New Features)`
+   * - :menuselection:`-->` |openTableEdited| :menuselection:`Open Attribute Table (Edited and New Features)`
      -
      - :guilabel:`Attributes`
      - :ref:`sec_attribute_table`
@@ -1629,10 +1641,6 @@ are enabled.
      -
      -
      - :ref:`label_raster_align`
-   * - |georefRun| :guilabel:`Georeferencer`
-     - :kbd:`Alt+R` + :kbd:`G`
-     - :guilabel:`Raster`
-     - :ref:`georef`
    * - :menuselection:`Analysis -->`
      -
      -
@@ -1861,6 +1869,7 @@ Mesh
 
 The :menuselection:`Mesh` menu provides tools needed to manipulate
 :ref:`mesh layers <label_meshdata>`.
+Third-party plugins can add items to this menu.
 
 .. list-table::
    :header-rows: 1
@@ -1875,7 +1884,7 @@ The :menuselection:`Mesh` menu provides tools needed to manipulate
      -
      -
      -
-   * - |meshreindex| :menuselection:`Reindex Faces and Vertices`
+   * - |meshReindex| :menuselection:`Reindex Faces and Vertices`
      -
      -
      -
@@ -2024,7 +2033,7 @@ context menu, or by holding the mouse over the toolbars.
 
 Available toolbars are:
 
-.. csv-table::
+.. csv-table:: QGIS Toolbars
    :header: "Name", "Main Reference for tools"
    :widths: auto
 
@@ -2096,6 +2105,7 @@ Below is a list of the default panels provided by QGIS:
 * the :ref:`Temporal Controller <temporal_controller>`
 * the :ref:`Tile Scale Panel <tilesets>`
 * the :ref:`Undo/Redo Panel <undo_redo_panel>`
+* the :ref:`Vertex Editor Panel <vertex_editor_panel>`
 
 
 .. index:: Map view
@@ -2131,7 +2141,7 @@ Click on the map view and you should be able to interact with it:
   button or the mouse wheel is held down. When the mouse is used, the distance
   and direction of the pan action are shown in the status bar at the bottom.
 * it can be zoomed in and out, with the dedicated |zoomIn| :sup:`Zoom In`
-  and |zoomIn| :sup:`Zoom Out` tools. Hold the :kbd:`Alt` key to switch from
+  and |zoomOut| :sup:`Zoom Out` tools. Hold the :kbd:`Alt` key to switch from
   one tool to the other. Zooming is also performed by rolling
   the wheel forward to zoom in and backwards to zoom out.
   The zoom is centered on the mouse cursor position. You can customize the
@@ -2276,7 +2286,7 @@ The :guilabel:`Temporal controller` panel has the following modes:
 
   * |unchecked| :guilabel:`Cumulative range`: all animation frames will
     have the same start date-time but different end dates and times.
-    This is useful is you wish to accumulate data in your temporal
+    This is useful if you wish to accumulate data in your temporal
     visualisation instead of showing a ‘moving time window’ across your data.
 
 .. _`create_temporal_animation`:
@@ -2290,7 +2300,7 @@ To create a temporal animation:
 
 #. Toggle on the |temporalNavigationAnimated| :sup:`Animated temporal
    navigation`, displaying the animation player widget
-#. Enter the :guilabel:`Time range` to consider. Using the close |refresh|
+#. Enter the :guilabel:`Time range` to consider. Using the |refresh|
    button, this can be defined as:
 
    * :guilabel:`Set to full range` of all the time enabled layers
@@ -2471,13 +2481,17 @@ In the dialog that opens:
 ===========
 
 3D visualization support is offered through the 3D map view.
-You create and open a 3D map view via :menuselection:`View -->`
-|new3DMap| :menuselection:`New 3D Map View`.
-A floating QGIS panel will appear. The panel can be docked.
+You can create, manage and open 3D map views via :menuselection:`View --> 3D Map Views -->` menu:
 
-To begin with, the 3D map view has the same extent and view as the
-2D main map canvas. A set of navigation tools are available to turn
-the view into 3D.
+#. By clicking on |new3DMap| :menuselection:`New 3D Map View` you can create a new 3D map view.
+   A floating and dockable QGIS panel will appear (see :ref:`figure_3dmapview`).
+   It has the same extent and view as the 2D main map canvas
+   and provides a set of navigation tools to turn the view into 3D.
+#. By clicking on :menuselection:`Manage 3D Map Views` you get in the 3D Map Views Manager. 
+   Here you get the ability to open, duplicate, remove and rename 3D map views.
+#. If you created one or more 3D map views, you see them listed in :menuselection:`3D Map Views`.
+   You can turn them on and off by clicking on. They will be saved by saving the project, even if they are turned off.  
+
 
 .. _figure_3dmapview:
 
@@ -2488,20 +2502,20 @@ the view into 3D.
 
 The following tools are provided at the top of the 3D map view panel:
 
-* |pan| :sup:`Camera control`: moves the view, keeping the same angle
+* |pan| :sup:`Camera Control`: moves the view, keeping the same angle
   and direction of the camera
 * |zoomFullExtent| :sup:`Zoom Full`: resizes the view to the whole
   layers' extent
-* |3dNavigation| :sup:`Toggle on-screen notification`: shows/hides the
+* |3dNavigation| :sup:`Toggle On-Screen Notification`: shows/hides the
   navigation widget (that is meant to ease controlling of the map view)
 * |identify| :sup:`Identify`: returns information on the clicked point
   of the terrain or the clicked 3D feature(s) -- More details at :ref:`identify`
-* |measure| :sup:`Measurement line`: measures the horizontal distance between points
+* |measure| :sup:`Measurement Line`: measures the horizontal distance between points
 * |play| :sup:`Animations`: shows/hides the :ref:`animation player
   <create_animation>` widget
-* |saveMapAsImage| :sup:`Save as image...`: exports the current view to
+* |saveMapAsImage| :sup:`Save as Image...`: exports the current view to
   an image file format
-* |3d| :sup:`Export 3D Scene...`: exports the current view as a 3D scene
+* |3d| :sup:`Export 3D Scene`: exports the current view as a 3D scene
   (:file:`.obj` file), allowing post-processing in applications like Blender...
   The terrain and vector features are exported as 3D objects.
   The export settings, overriding the layers :ref:`properties <sec_3_d_view>`
@@ -2516,8 +2530,15 @@ The following tools are provided at the top of the 3D map view panel:
   * |checkbox| :guilabel:`Export textures`
 * |showPresets| :sup:`Set View Theme`: Allows you to select the set of layers to
   display in the map view from predefined :ref:`map themes <map_themes>`.
-* |options| :sup:`Configure` the map view :ref:`settings <scene_configuration>`
+* The |options| :sup:`Options` menu provides shortcuts to:
 
+  * Add visual effects to the 3D rendering, such as :guilabel:`Show shadows`,
+    :guilabel:`Show eye dome lighting`
+  * Synchronize the views (:guilabel:`2D map view follows 3D camera` and/or
+    :guilabel:`3D camera follows 2D Map view`)
+  * :guilabel:`Show visible camera area in 2D map view`
+  * |options| :sup:`Configure` the 3D map view :ref:`settings <scene_configuration>`.
+* |dock| :sup:`Dock 3D Map View`: switch from docked widget to top level window
 
 .. _`scene_configuration`:
 
@@ -2525,8 +2546,9 @@ Scene Configuration
 ---------------------
 
 The 3D map view opens with some default settings you can customize.
-To do so, click the |options| :sup:`Configure...` button at the top of
-the 3D canvas panel to open the :guilabel:`3D configuration` window.
+To do so, expand the |options| :sup:`Options` menu at the top of
+the 3D canvas panel and press the |options| :menuselection:`Configure` button
+to open the :guilabel:`3D configuration` window.
 
 .. _figure_3dmap_config:
 
@@ -2575,24 +2597,20 @@ Terrain
     Raising this value will add vertical walls ("skirts") around terrain
     tiles to hide the cracks.
 
-* :guilabel:`Terrain elevation offset`: moves the terrain up or down,
-  e.g. to adjust its elevation with respect to the ground level of other objects
-  in the scene.
+  * :guilabel:`Offset`: moves the terrain up or down, e.g. to adjust its elevation
+    with respect to the ground level of other objects in the scene.
 
-  This can be useful when there is a discrepancy between the height of the terrain
-  and the height of layers in your scene (e.g. point clouds which use a relative
-  vertical height only). In this case adjusting the terrain elevation manually to
-  coincide with the elevation of objects in your scene can improve the navigation
-  experience.
+    This can be useful when there is a discrepancy between the height of the terrain
+    and the height of layers in your scene (e.g. point clouds which use a relative
+    vertical height only). In this case adjusting the terrain elevation manually to
+    coincide with the elevation of objects in your scene can improve the navigation
+    experience.
 
 * When a mesh layer is used as terrain, you can configure the
-  :guilabel:`Triangles settings` (wireframe display, smooth triangles) and the
-  :guilabel:`Rendering colors settings` (as uniform or depending on terrain level).
-  More details in the :ref:`Mesh layer properties <label_meshproperties>` section.
-
-  .. TODO: replace the mesh properties link with a direct one to the 3D section
-     when available
-
+  :guilabel:`Triangles settings` (wireframe display, smooth triangles,
+  level of detail) and the :guilabel:`Rendering colors settings` (as a uniform color
+  or :ref:`color ramp based <color_ramp_shader>`).
+  More details in the :ref:`Mesh layer 3D properties <mesh3dview>` section.
 * |unchecked| :guilabel:`Terrain shading`: Allows you to choose how the
   terrain should be rendered:
 
@@ -2645,18 +2663,51 @@ given:
 Camera & Skybox
 ...............
 
-In this tab, you can override some :ref:`default camera settings <3d_options>`
-made in the :menuselection:`Settings --> Options --> 3D` dialog.
+In this tab, you can control different parameters like camera, 3D axis, navigation
+synchronization and skybox.
 
-Furthermore, check |unchecked| :guilabel:`Show skybox` to enable skybox rendering
-in the scene. The skybox type can be:
+.. _figure_3dmap_config_camera:
 
-* :guilabel:`Panoramic texture`, with a single file providing sight on 360\°
-* :guilabel:`Distinct faces`, with a texture file for each of the six sides
-  of a box containing the scene
+.. figure:: img/3dmapconfiguration_camera.png
+   :align: center
 
-Texture image files of the skybox can be files on the disk, remote URLs or embedded
-in the project (:ref:`more details <embedded_file_selector>`).
+   The 3D Map Camera Configuration dialog
+
+* The :guilabel:`Camera` parameter group overrides some :ref:`default camera settings <3d_options>`
+  made in the :menuselection:`Settings --> Options --> 3D` dialog.
+
+* Check |unchecked| :guilabel:`Show 3D Axis` to enable 3D axis tool. This parameter
+  group allows to set the axis type and its position.
+
+  * With the :guilabel:`Coordinate Reference System` type an orthogonal axis
+    will be represented.
+  * With the :guilabel:`Cube` type, a 3D cube will be represented. The cube
+    faces can be used to change the camera view: for example, click on the
+    :guilabel:`north` face to set the camera to see from the north.
+
+.. tip:: Right-click the 3D axis to quickly set its position and type, and the camera view.
+
+  .. _figure_3dmap_config_3daxis_menu:
+
+  .. figure:: img/3dmapconfiguration_3daxis_menu.png
+     :align: center
+
+     The 3D Axis context menu
+
+* The :guilabel:`Navigation Synchronization` parameter group adds options to
+  synchronize 2D view with 3D camera position or 3D camera position with
+  2D view or bi directional synchronization. The last option displays the extent
+  visible from the 3D camera over the 2D map view.
+
+* Check |unchecked| :guilabel:`Show skybox` to enable skybox rendering
+  in the scene. The skybox type can be:
+
+  * :guilabel:`Panoramic texture`, with a single file providing sight on 360\°
+  * :guilabel:`Distinct faces`, with a texture file for each of the six sides
+    of a box containing the scene
+
+  Texture image files of the skybox can be files on the disk, remote URLs or
+  embedded in the project (:ref:`more details <embedded_file_selector>`).
 
 Advanced
 ........
@@ -2766,7 +2817,7 @@ To create an animation:
    https://doc.qt.io/qt-5/qeasingcurve.html#EasingFunction-typedef).
 
    The animation can also be previewed by moving the time slider.
-   Keeping the :guilabel:`Loop` button checked will repeatedly run the
+   Keeping the :guilabel:`Loop` box checked will repeatedly run the
    animation while clicking |play| stops a running animation.
 
 Click |fileSave| :sup:`Export animation frames` to generate a series of images
@@ -3037,6 +3088,8 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |deselectAll| image:: /static/common/mActionDeselectAll.png
    :width: 1.5em
+.. |dock| image:: /static/common/dock.png
+   :width: 1.5em
 .. |duplicateLayer| image:: /static/common/mActionDuplicateLayer.png
    :width: 1.5em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
@@ -3124,7 +3177,7 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |mergeFeatures| image:: /static/common/mActionMergeFeatures.png
    :width: 1.5em
-.. |meshreindex| image:: /static/common/mActionMeshReindex.png
+.. |meshReindex| image:: /static/common/mActionMeshReindex.png
    :width: 1.5em
 .. |messageLog| image:: /static/common/mMessageLog.png
    :width: 1.5em
@@ -3207,6 +3260,8 @@ Click the icon to open the Plugin Manager dialog.
 .. |processingModel| image:: /static/common/processingModel.png
    :width: 1.5em
 .. |processingResult| image:: /static/common/processingResult.png
+   :width: 1.5em
+.. |projectProperties| image:: /static/common/mActionProjectProperties.png
    :width: 1.5em
 .. |projectionEnabled| image:: /static/common/mIconProjectionEnabled.png
    :width: 1.5em

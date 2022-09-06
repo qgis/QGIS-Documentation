@@ -134,7 +134,7 @@ Parameters
      - [vector: any]
      - The input layer.
    * - **Outputs and filters**
-       
+
        (one or more)
      - ``OUTPUT_<name of the filter>``
      - [same as input]
@@ -152,7 +152,7 @@ Outputs
      - Type
      - Description
    * - **Output**
-       
+
        (one or more)
      - ``native:filter_1:OUTPUT_<name of filter>``
      - [same as input]
@@ -163,75 +163,6 @@ Python code
 ...........
 
 **Algorithm ID**: ``native:filter``
-
-.. include:: ../algs_include.rst
-  :start-after: **algorithm_code_section**
-  :end-before: **end_algorithm_code_section**
-
-
-.. _qgisfilterbygeometry:
-
-Filter by geometry type
------------------------
-Filters features by their geometry type. Incoming features will be directed
-to different outputs based on whether they have a point, line or polygon geometry.
-
-Parameters
-..........
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
-
-   * - Label
-     - Name
-     - Type
-     - Description
-   * - **Input layer**
-     - ``INPUT``
-     - [vector: any]
-     - Layer to evaluate
-
-Outputs
-.......
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
-
-   * - Label
-     - Name
-     - Type
-     - Description
-   * - **Point features**
-
-       Optional
-     - ``POINTS``
-     - [vector: point]
-     - Layer with points
-   * - **Line features**
-
-       Optional
-     - ``LINES``
-     - [vector: line]
-     - Layer with lines
-   * - **Polygon features**
-
-       Optional
-     - ``POLYGONS``
-     - [vector: polygon]
-     - Layer with polygons
-   * - **Features with no geometry**
-
-       Optional
-     - ``NO_GEOMETRY``
-     - [table]
-     - Geometry-less vector layer
-
-Python code
-...........
-
-**Algorithm ID**: ``native:filterbygeometry``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -280,7 +211,7 @@ Outputs
      - [vector]
      - A Vector Layer of the input, if compatible
    * - **Raster layer**
- 
+
        Optional
      - ``RASTER``
      - [raster]
@@ -374,6 +305,8 @@ Parameters
      - [string]
      - Message to display
    * - **Condition**
+
+       Optional
      - ``CONDITION``
      - [expression]
      - Expression to evaluate if true
@@ -381,12 +314,61 @@ Parameters
 Outputs
 .......
 
-None.
+A message in the log panel.
 
 Python code
 ...........
 
 **Algorithm ID**: ``native:raiseexception``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgisraisemessage:
+
+Raise message
+-------------
+|326|
+
+Raises an information message in the log.
+The message can be customized, and optionally an expression based condition
+can be specified. If an expression condition is used, then the message will only
+be logged if the expression result is true. A false result indicates that no message
+will be logged.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Information message**
+     - ``MESSAGE``
+     - [string]
+     - Message to display
+   * - **Condition**
+
+       Optional
+     - ``CONDITION``
+     - [expression]
+     - Expression to evaluate if true
+
+Outputs
+.......
+
+A message in the log panel.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:raisemessage``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -419,6 +401,8 @@ Parameters
      - [string]
      - Message to display
    * - **Condition**
+
+       Optional
      - ``CONDITION``
      - [expression]
      - Expression to evaluate if true
@@ -426,7 +410,7 @@ Parameters
 Outputs
 .......
 
-None.
+A message in the log panel.
 
 Python code
 ...........
@@ -741,3 +725,10 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |326| replace:: ``NEW in 3.26``

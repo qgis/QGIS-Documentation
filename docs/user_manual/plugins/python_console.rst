@@ -101,7 +101,7 @@ The Code Editor
 Use the |showEditorConsole| :sup:`Show Editor` button to enable the editor
 widget. It allows editing and saving Python files and offers advanced
 functionalities to manage your code (comment and uncomment code, check syntax,
-share the code via codepad.org and much more). Main features are:
+share the code via GitHub and much more). Main features are:
 
 * Code completion, highlighting syntax and calltips for the following APIs:
 
@@ -112,7 +112,7 @@ share the code via codepad.org and much more). Main features are:
   * osgeo-gdal-ogr
 
 * :kbd:`Ctrl+Space` to view the auto-completion list.
-* Sharing code snippets via codepad.org.
+* Sharing code snippets via :ref:`GitHub <console_options>`.
 * :kbd:`Ctrl+4` Syntax check.
 * Search bar (open it with the default Desktop Environment shortcut, usually
   :kbd:`Ctrl+F`):

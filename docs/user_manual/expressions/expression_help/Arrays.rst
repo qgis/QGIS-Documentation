@@ -32,7 +32,7 @@ Returns an array containing all the values passed as parameter.
 array_all
 .........
 
-Returns true if an array contains all the values of a given array.
+Returns TRUE if an array contains all the values of a given array.
 
 .. list-table::
    :widths: 15 85
@@ -43,8 +43,8 @@ Returns true if an array contains all the values of a given array.
      - * **array_a** - an array
        * **array_b** - the array of values to search
    * - Examples
-     - * ``array_all(array(1,2,3),array(2,3))`` → true
-       * ``array_all(array(1,2,3),array(1,2,4))`` → false
+     - * ``array_all(array(1,2,3),array(2,3))`` → TRUE
+       * ``array_all(array(1,2,3),array(1,2,4))`` → FALSE
 
 
 .. end_array_all_section
@@ -95,7 +95,7 @@ Returns an array containing all the given arrays concatenated.
 array_contains
 ..............
 
-Returns true if an array contains the given value.
+Returns TRUE if an array contains the given value.
 
 .. list-table::
    :widths: 15 85
@@ -106,7 +106,7 @@ Returns true if an array contains the given value.
      - * **array** - an array
        * **value** - the value to search
    * - Examples
-     - * ``array_contains(array(1,2,3),2)`` → true
+     - * ``array_contains(array(1,2,3),2)`` → TRUE
 
 
 .. end_array_contains_section
@@ -290,7 +290,7 @@ Returns an array with the given value added at the given position.
 array_intersect
 ...............
 
-Returns true if at least one element of array1 exists in array2.
+Returns TRUE if at least one element of array1 exists in array2.
 
 .. list-table::
    :widths: 15 85
@@ -301,7 +301,7 @@ Returns true if at least one element of array1 exists in array2.
      - * **array1** - an array
        * **array2** - another array
    * - Examples
-     - * ``array_intersect(array(1,2,3,4),array(4,0,2,5))`` → true
+     - * ``array_intersect(array(1,2,3,4),array(4,0,2,5))`` → TRUE
 
 
 .. end_array_intersect_section
@@ -776,6 +776,28 @@ Creates an array containing a sequence of numbers.
 
 
 .. end_generate_series_section
+
+.. _expression_function_Arrays_geometries_to_array:
+
+geometries_to_array
+...................
+
+Splits a geometry into simpler geometries in an array.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - geometries_to_array(geometry)
+   * - Arguments
+     - * **geometry** - the input geometry
+   * - Examples
+     - * ``geometries_to_array(geom_from_wkt('GeometryCollection (Polygon ((5 8, 4 1, 3 2, 5 8)),LineString (3 2, 4 2))'))`` → an array of a polygon and a line geometries
+       * ``geom_to_wkt(geometries_to_array(geom_from_wkt('GeometryCollection (Polygon ((5 8, 4 1, 3 2, 5 8)),LineString (3 2, 4 2))'))[0])`` → 'Polygon ((5 8, 4 1, 3 2, 5 8))'
+       * ``geometries_to_array(geom_from_wkt('MULTIPOLYGON(((5 5,0 0,0 10,5 5)),((5 5,10 10,10 0,5 5))'))`` → an array of two polygon geometries
+
+
+.. end_geometries_to_array_section
 
 .. _expression_function_Arrays_regexp_matches:
 

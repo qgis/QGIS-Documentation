@@ -117,6 +117,11 @@ several ways to define these variables. This is fully described in
      - false
      - All
 
+   * - QGIS_SERVER_LANDING_PAGE_PREFIX
+     - Prefix of the path component of the landing page base URL
+     - ""
+     - All
+
    * - .. _qgis_server_landing_page_projects_directories:
 
        QGIS_SERVER_LANDING_PAGE_PROJECTS_DIRECTORIES
@@ -193,6 +198,22 @@ several ways to define these variables. This is fully described in
        * ``1`` or ``true`` (case insensitive)
      - false
      - WMS
+
+   * - QGIS_SERVER_PROJECT_CACHE_CHECK_INTERVAL
+     - Controls the periodic strategy interval for cache invalidation
+     -
+     - All
+
+   * - QGIS_SERVER_PROJECT_CACHE_STRATEGY
+     - Defines method for invalidating the project cache. Available strategies are:
+
+       * ``filesystem``: uses the file system watcher strategy
+       * ``periodic``: uses the last modified value of a project for checking changes
+         on project configuration. Convenient on atypical file systems, such as NFS,
+	 or when the project file is stored in a database system like PostgreSQL.
+       * ``off``: disables internal cache invalidation completely
+     - filesystem
+     - All
 
    * - QGIS_SERVER_SHOW_GROUP_SEPARATOR
      - Defines whether a group separator (e.g. thousand separator) should be used for

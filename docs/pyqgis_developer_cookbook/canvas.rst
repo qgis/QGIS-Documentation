@@ -29,6 +29,7 @@ Using the Map Canvas
         QgsProject,
         QgsGeometry,
         QgsMapRendererJob,
+        QgsWkbTypes,
     )
 
     from qgis.gui import (
@@ -153,7 +154,7 @@ To show a polyline:
 
 .. testcode:: canvas
 
-  r = QgsRubberBand(canvas, False)  # False = not a polygon
+  r = QgsRubberBand(canvas, QgsWkbTypes.LineGeometry)  # line
   points = [QgsPoint(-100, 45), QgsPoint(10, 60), QgsPoint(120, 45)]
   r.setToGeometry(QgsGeometry.fromPolyline(points), None)
 
@@ -161,7 +162,7 @@ To show a polygon
 
 .. testcode:: canvas
 
-  r = QgsRubberBand(canvas, True)  # True = a polygon
+  r = QgsRubberBand(canvas, QgsWkbTypes.PolygonGeometry)  # polygon
   points = [[QgsPointXY(-100, 35), QgsPointXY(10, 50), QgsPointXY(120, 35)]]
   r.setToGeometry(QgsGeometry.fromPolygonXY(points), None)
 
@@ -342,7 +343,7 @@ described before to show the selected rectangle as it is being defined.
     def __init__(self, canvas):
       self.canvas = canvas
       QgsMapToolEmitPoint.__init__(self, self.canvas)
-      self.rubberBand = QgsRubberBand(self.canvas, True)
+      self.rubberBand = QgsRubberBand(self.canvas, QgsWkbTypes.PolygonGeometry)
       self.rubberBand.setColor(Qt.red)
       self.rubberBand.setWidth(1)
       self.reset()
@@ -350,7 +351,7 @@ described before to show the selected rectangle as it is being defined.
     def reset(self):
       self.startPoint = self.endPoint = None
       self.isEmittingPoint = False
-      self.rubberBand.reset(True)
+      self.rubberBand.reset(QgsWkbTypes.PolygonGeometry)
 
     def canvasPressEvent(self, e):
       self.startPoint = self.toMapCoordinates(e.pos())
@@ -374,7 +375,7 @@ described before to show the selected rectangle as it is being defined.
       self.showRect(self.startPoint, self.endPoint)
 
     def showRect(self, startPoint, endPoint):
-      self.rubberBand.reset(QGis.Polygon)
+      self.rubberBand.reset(QgsWkbTypes.PolygonGeometry)
       if startPoint.x() == endPoint.x() or startPoint.y() == endPoint.y():
         return
 

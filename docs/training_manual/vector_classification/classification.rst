@@ -322,7 +322,7 @@ Let's now add our custom rules.
    .. figure:: img/query_builder_example.png
       :align: center
 
-#. Back to the :guilabel:`Edit rule` dalog, assign it a darker
+#. Back to the :guilabel:`Edit rule` dialog, assign it a darker
    grey-blue color in order to indicate the town's
    importance in the region and remove the border
 

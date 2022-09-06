@@ -98,6 +98,10 @@ layer string field.
 The output layer will have a point geometry reflecting the geocoded location
 as well as a number of attributes associated to the geocoded location.
 
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>` 
+of point features
+
 .. note:: This algorithm is compliant with the `usage policy
  <https://operations.osmfoundation.org/policies/nominatim/>`_ of the
  Nominatim geocoding service provided by the OpenStreetMap Foundation.
@@ -812,6 +816,7 @@ If the file is saved in a local folder, you can choose between many
 file formats.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+of point, line, and polygon features
 
 .. seealso:: :ref:`qgisdeleteduplicategeometries`,
    :ref:`qgisremovenullgeometries`
@@ -1010,7 +1015,7 @@ Parameters
      - Description
    * - **Input layers**
      - ``LAYERS``
-     - [vector: any][list]
+     - [vector: any] [list]
      - Input vector layers to export
    * - **Symbology mode**
      - ``SYMBOLOGY_MODE``
@@ -2192,6 +2197,7 @@ Reprojects a vector layer in a different CRS. The reprojected layer
 will have the same features and attributes of the input layer.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+of point, line, and polygon features
 
 .. seealso:: :ref:`qgisassignprojection`,
    :ref:`qgisdefinecurrentprojection`, :ref:`qgisfindprojection`
@@ -2443,6 +2449,10 @@ Geometries and other attributes remain unchanged in the output.
 Optionally, the separator string can be a regular expression
 for added flexibility.
 
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>` 
+of point, line, and polygon features
+
 Parameters
 ..........
 
@@ -2574,9 +2584,16 @@ Advanced parameters
      - Type
      - Description
    * - **Output file type**
+
+       Optional
      - ``FILE_TYPE``
      - [enumeration]
-     - Select the extension of the output files
+
+       Default: ``gpkg`` in the dialog window
+     - Select the extension of the output files.
+       If not specified or invalid, the output files format will
+       be the one set in the "Default output vector layer extension"
+       Processing setting.
 
 Outputs
 ..........

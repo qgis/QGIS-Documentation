@@ -270,9 +270,9 @@ Python code
 Fill nodata
 -----------
 Fill raster regions with no data values by interpolation from edges.
-The values for the no-data regions are calculated by the sourrounding
+The values for the no-data regions are calculated by the surrounding
 pixel values using inverse distance weighting.
-After the interpolation a smoothing of the results takes placce.
+After the interpolation a smoothing of the results takes place.
 Input can be any GDAL-supported raster layer. This algorithm is
 generally suitable for interpolating missing regions of fairly
 continuously varying rasters (such as elevation models for instance).

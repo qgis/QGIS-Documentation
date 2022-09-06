@@ -93,7 +93,7 @@ Settings
 .. testoutput:: cheat_sheet
   :hide:
 
-  qgis/symbolsListGroupsIndex
+  ...
 
 Toolbars
 ========

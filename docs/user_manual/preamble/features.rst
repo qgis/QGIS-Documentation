@@ -55,21 +55,22 @@ Explore data and compose maps
 You can compose maps and interactively explore spatial data with a
 friendly GUI. The many helpful tools available in the GUI include:
 
-*  QGIS browser
-*  On-the-fly reprojection
-*  DB Manager
-*  Print layout
-*  Report
-*  Overview panel
-*  Spatial bookmarks
-*  Annotation tools
-*  Identify/select features
-*  Edit/view/search attributes
-*  Data-defined feature labeling
-*  Data-defined vector and raster symbology tools
-*  Atlas map composition with graticule layers
-*  North arrow, scale bar and copyright label for maps
-*  Support for saving and restoring projects
+* QGIS browser
+* On-the-fly reprojection
+* 2D and 3D map rendering
+* DB Manager
+* Print layout
+* Report
+* Overview panel
+* Spatial bookmarks
+* Annotation tools
+* Identify/select features
+* Edit/view/search attributes
+* Data-defined feature labeling
+* Data-defined vector and raster symbology tools
+* Atlas map composition with graticule layers
+* North arrow, scale bar and copyright label for maps
+* Support for saving and restoring projects
 
 
 Create, edit, manage and export data
@@ -78,20 +79,20 @@ Create, edit, manage and export data
 You can create, edit, manage and export vector and raster layers in
 several formats. QGIS offers the following:
 
-*  Vector digitizing tools
-*  Ability to create and edit multiple file formats and GRASS vector layers
-*  Georeferencer plugin to geocode images
-*  GPS tools to import and export GPX format, and convert other GPS
-   formats to GPX or down/upload directly to a GPS unit (on Linux,
-   usb: has been added to list of GPS devices)
-*  Support for visualizing and editing OpenStreetMap data
-*  Ability to create spatial database tables from files with the DB
-   Manager plugin
-*  Improved handling of spatial database tables
-*  Tools for managing vector attribute tables
-*  Option to save screenshots as georeferenced images
-*  DXF-Export tool with enhanced capabilities to export styles and plugins
-   to perform CAD-like functions
+* Vector digitizing tools
+* Ability to create and edit multiple file formats and GRASS vector layers
+* Georeferencer tool to geocode vectors and images
+* GPS tools to import and export GPX format, and convert other GPS
+  formats to GPX or down/upload directly to a GPS unit (on Linux,
+  usb: has been added to list of GPS devices)
+* Support for visualizing and editing OpenStreetMap data
+* Ability to create spatial database tables from files with the DB
+  Manager plugin
+* Improved handling of spatial database tables
+* Tools for managing vector attribute tables
+* Option to save screenshots as georeferenced images
+* DXF-Export tool with enhanced capabilities to export styles and plugins
+  to perform CAD-like functions
 
 Analyze data
 ----------------------------------------------------------------------
@@ -104,8 +105,8 @@ You can also use the integrated GRASS tools, which include the
 complete GRASS functionality of more than 400 modules (see section
 :ref:`sec_grass`). Or, you can work with the Processing plugin, which
 provides a powerful geospatial analysis framework to call native and
-third-party algorithms from QGIS, such as GDAL, SAGA, GRASS, R, and
-more (see section :ref:`sec_processing_intro`).
+third-party algorithms from QGIS, such as GDAL, SAGA, GRASS, OTB, R,
+and more (see section :ref:`sec_processing_intro`).
 All analysis functions are run in the background, allowing you to
 continue your work before the processing has finished.
 
@@ -116,10 +117,10 @@ complete workflow in an intuitive graphical environment.
 Publish maps on the Internet
 ----------------------------------------------------------------------
 
-QGIS can be used as a WMS, WMTS, WMS-C or WFS and WFS-T client (see
-section :ref:`working_with_ogc`), and QGIS Server (see the :ref:`QGIS-Server-manual`)
-allows you to publish your data through the WMS, WCS and WFS protocols on the Internet
-using a webserver.
+QGIS can be used as a WMS, WMTS, WMS-C, WFS, OAPIF and WFS-T client (see
+section :ref:`working_with_ogc`), and QGIS Server (see :ref:`QGIS-Server-manual`)
+allows you to publish your data through the WMS, WCS, WFS and OAPIF
+protocols on the Internet using a webserver.
 
 Extend QGIS functionality through plugins
 ----------------------------------------------------------------------
@@ -133,16 +134,16 @@ Core Plugins
 
 Core plugins include:
 
-#.  DB Manager (exchange, edit and view layers and tables from/to databases; execute SQL queries)
-#.  Geometry Checker (check geometries for errors)
-#.  Georeferencer GDAL (add projection information to rasters using GDAL)
-#.  GPS Tools (load and import GPS data)
-#.  GRASS 7 (integrate GRASS GIS)
-#.  MetaSearch Catalogue Client (interacting with metadata catalog services
-    supporting the OGC Catalog Service for the Web (CSW) standard)
-#.  Offline Editing (allow offline editing and synchronizing with databases)
-#.  Processing (the spatial data processing framework for QGIS)
-#.  Topology Checker (find topological errors in vector layers)
+#. DB Manager (exchange, edit and view layers and tables from/to databases; execute SQL queries)
+#. Geometry Checker (check geometries for errors)
+#. Georeferencer GDAL (add projection information to rasters using GDAL)
+#. GPS Tools (load and import GPS data)
+#. GRASS (integrate GRASS GIS)
+#. MetaSearch Catalogue Client (interacting with metadata catalog services
+   supporting the OGC Catalog Service for the Web (CSW) standard)
+#. Offline Editing (allow offline editing and synchronizing with databases)
+#. Processing (the spatial data processing framework for QGIS)
+#. Topology Checker (find topological errors in vector layers)
 
 
 External Python Plugins

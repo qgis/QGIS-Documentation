@@ -34,8 +34,8 @@ Setting up your project
 
 We assume you have already got a local QGIS clone containing the
 source code, and have installed all needed build dependencies etc. There are
-detailed instructions for :ref:`git access <git_access>` and `dependency installation
-<https://htmlpreview.github.io/?https://github.com/qgis/QGIS/blob/master/doc/INSTALL.html>`_.
+detailed instructions for :ref:`git access <git_access>` and
+:source:`dependency requirements <INSTALL.md>`.
 
 On our system we have checked out the code into ``$HOME/dev/cpp/QGIS`` and the
 rest of the article is written assuming that. You should update these paths as
@@ -178,7 +178,7 @@ directory.
 
     Command arguments: install
 
-    .. image:: img/image07.jpeg
+    .. image:: img/buildSteps.jpeg
 
     You are almost ready to build. Just one note: QtCreator will need write
     permissions on the install prefix. By default (which I am using here) QGIS is
@@ -188,7 +188,7 @@ directory.
     To start the build, click that big hammer icon on the bottom left of the
     window.
 
-    .. image:: img/image08.jpeg
+    .. image:: img/hammer.jpeg
 
     Setting your run environment
     =============================
@@ -200,17 +200,15 @@ directory.
 
     Now select the 'Run Settings' tab
 
-    .. image:: img/image09.jpeg
+    .. image:: img/runSettingsTab.jpeg
 
     We need to update the default run settings from using the 'qgis' run
     configuration to using a custom one.
 
-    .. image:: img/image10.jpeg
+    .. image:: img/runSettings.jpeg
 
-    Do do that, click the 'Add v' combo button next to the Run configuration
-    combo and choose 'Custom Executable' from the top of the list.
-
-    .. image:: img/image11.jpeg
+    To do that, click the :menuselection:`Add` combo button next to the Run configuration
+    combo and choose :guilabel:`Custom Executable` from the top of the list.
 
     Now in the properties area set the following details:
 
@@ -229,7 +227,7 @@ directory.
     Then click the 'Rename' button and give your custom executable a meaningful
     name e.g. 'Installed QGIS'
 
-    .. image:: img/image12.jpeg
+    .. image:: img/runConfig.jpeg
 
 Running and debugging
 ======================
@@ -237,7 +235,7 @@ Running and debugging
 Now you are ready to run and debug QGIS. To set a break point, simply open a
 source file and click in the left column.
 
-.. image:: img/image14.jpeg
+.. image:: img/breakPoint.jpeg
 
 Now launch QGIS under the debugger by clicking the |runDebug| :sup:`Start
 Debugging` in the bottom left of the window. 

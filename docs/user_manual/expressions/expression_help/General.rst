@@ -74,7 +74,7 @@ Evaluates a template which is passed in a string. Useful to expand dynamic param
 is_layer_visible
 ................
 
-Returns true if a specified layer is visible.
+Returns TRUE if a specified layer is visible.
 
 .. list-table::
    :widths: 15 85
@@ -84,7 +84,7 @@ Returns true if a specified layer is visible.
    * - Arguments
      - * **layer** - a string, representing either a layer name or layer ID
    * - Examples
-     - * ``is_layer_visible('baseraster')`` → True
+     - * ``is_layer_visible('baseraster')`` → TRUE
 
 
 .. end_is_layer_visible_section

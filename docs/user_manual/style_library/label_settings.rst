@@ -71,8 +71,44 @@ Two types of text-related items are available in QGIS:
 Formatting the label text
 =========================
 
-Most of the following properties are common to :guilabel:`Text Format`
-and :guilabel:`Label Settings` items.
+Whether you are configuring a :guilabel:`Text Format` or :guilabel:`Label Settings`
+item, you will be given the following options:
+
+.. list-table::
+   :header-rows: 1
+   :class: longtable
+
+   * - Properties tab
+     - Text format
+     - Label settings
+   * - :guilabel:`Text`
+     - |checkbox|
+     - |checkbox|
+   * - :guilabel:`Formatting`
+     - |checkbox|
+     - |checkbox|
+   * - :guilabel:`Buffer`
+     - |checkbox|
+     - |checkbox|
+   * - :guilabel:`Mask`
+     - |checkbox|
+     - |checkbox|
+   * - :guilabel:`Background`
+     - |checkbox|
+     - |checkbox|
+   * - :guilabel:`Shadow`
+     -
+     - |checkbox|
+   * - :guilabel:`Callout`
+     -
+     - |checkbox|
+   * - :guilabel:`Placement`
+     -
+     - |checkbox|
+   * - :guilabel:`Rendering`
+     -
+     - |checkbox|
+
 
 .. _labels_text:
 
@@ -165,6 +201,9 @@ In the |labelformatting| :guilabel:`Formatting` tab, you can:
 
 * Under :guilabel:`Spacing`, change the space between words and between
   individual letters.
+* :guilabel:`Stretch` ratio: allows text to be horizontally stretched or
+  condensed by a factor. Handy for tweaking the widths of fonts to fit a bit
+  of extra text into labels.
 * |checkbox| :guilabel:`Enable kerning` of the text font
 * Set the :guilabel:`Text orientation` which can be :guilabel:`Horizontal`
   or :guilabel:`Vertical`. It can also be :guilabel:`Rotation-based` when
@@ -595,6 +634,16 @@ Next to placement modes, you can set:
   * :guilabel:`Clipping`: Determines how the label placement on a line is calculated.
     By default only the visible extent of the line is used but the whole extent
     can be used to have more consistent results.
+  * :guilabel:`Anchor text`: controls which part of the text (start, center or end)
+    will line up with the anchor point. Using :guilabel:`Automatic` anchoring
+    means that:
+
+    * For labels anchored near the start of the line (0-25%), the anchor placement
+      will be the **start** of the label text
+    * For labels anchored near the end of the line (75-100%), the anchor placement
+      will be the **end** of the label text
+    * For labels anchored near the center of the line (25-75%), the anchor placement
+      will be the **center** of the label text
   * :guilabel:`Placement Behavior`: use :guilabel:`Preferred Placement Hint`
     to treat the label anchor only as a hint for the label placement.
     By choosing :guilabel:`Strict`, labels are placed exactly on the label
@@ -821,15 +870,35 @@ Under :guilabel:`Label options`:
      features from other layers, it just controls the order in which
      labels are drawn on top of all the layers' features.
 
-* While rendering labels and in order to display readable labels,
-  QGIS automatically evaluates the position of the labels and can hide some of them
-  in case of collision. You can however choose to |checkbox| :guilabel:`Show all
-  labels for this layer (including colliding labels)` in order to manually fix
-  their placement (see :ref:`label_toolbar`).
+* :guilabel:`Allow inferior fallback placements`: By default QGIS tries to
+  render labels at their best placement, following your settings.
+  Check this mode to allow features to fallback to worse placement options
+  when there's no other choice, e.g. when a line is too short to fit a curved
+  label text then the label may be placed horizontally just over the feature's
+  center point.
 * With data-defined expressions in :guilabel:`Show label` and :guilabel:`Always Show`
   you can fine tune which labels should be rendered.
 * Allow to :guilabel:`Show upside-down labels`: alternatives are **Never**,
   **when rotation defined** or **always**.
+* The :guilabel:`Overlapping labels` group allows you to control whether
+  overlapping labels are permitted for features in the layer and
+  how each of them should be handled:
+
+  * :guilabel:`Never overlap`: never ever place overlapping labels for the layer,
+    even if it means some labels will be missing
+  * :guilabel:`Allow overlaps if required`: if the label can't otherwise be placed,
+    draw an overlapping label. This mode will cause the label to be moved to
+    a less ideal placement if possible, e.g. moving the label further from the
+    center of a line or polygon, IF doing so will avoid overlapping labels.
+    But if there's no other positions possible, then draw the label overlapping.
+  * :guilabel:`Allow overlaps without penalty`: It doesn't matter at all if
+    the label overlaps other labels or obstacles, that's fine to do and
+    the best placement (e.g most central placement) should always be used even
+    if an alternate further placement is possible which avoids overlaps entirely.
+
+  Allowing both overlapping labels and fallback placements options will
+  guarantee that all features in the layer are labeled... not necessarily at
+  their best rendering!
 
 Feature options
 ...............

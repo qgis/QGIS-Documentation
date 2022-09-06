@@ -2,7 +2,7 @@
 .. _layout_label_item:
 
 The Label Item
-===============
+==============
 
 .. only:: html
 
@@ -106,8 +106,9 @@ labeling and will output :numref:`figure_layout_label_html`:
 Appearance
 ----------
 
-* Define :guilabel:`Font` by clicking on the :guilabel:`Font...` button or a
-  :guilabel:`Font color` by pushing the :ref:`color widget <color-selector>`.
+* Define font and style of the text by clicking on the :guilabel:`Font` button.
+  In the :guilabel:`Label Font` menu you can use some of the options for :ref:`Formatting the label text <text_format>`.
+  
 * You can specify different horizontal and vertical margins in ``mm``. This is
   the margin from the edge of the layout item. The label can be positioned
   outside the bounds of the label e.g. to align label items with other items.

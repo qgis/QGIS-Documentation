@@ -244,11 +244,11 @@ Returns the feature id of the current row.
 is_selected
 ...........
 
-Returns True if a feature is selected. Can be used with zero, one or two arguments, see below for details.
+Returns TRUE if a feature is selected. Can be used with zero, one or two arguments, see below for details.
 
 **No parameters**
 
-If called with no parameters, the function will return true if the current feature in the current layer is selected.
+If called with no parameters, the function will return TRUE if the current feature in the current layer is selected.
 
 .. list-table::
    :widths: 15 85
@@ -256,12 +256,12 @@ If called with no parameters, the function will return true if the current featu
    * - Syntax
      - is_selected()
    * - Examples
-     - * ``is_selected()`` → True if the current feature in the current layer is selected.
+     - * ``is_selected()`` → TRUE if the current feature in the current layer is selected.
 
 
 **One 'feature' parameter**
 
-If called with a 'feature' parameter only, the function returns true if the specified feature from the current layer is selected.
+If called with a 'feature' parameter only, the function returns TRUE if the specified feature from the current layer is selected.
 
 .. list-table::
    :widths: 15 85
@@ -271,14 +271,14 @@ If called with a 'feature' parameter only, the function returns true if the spec
    * - Arguments
      - * **feature** - The feature which should be checked for selection.
    * - Examples
-     - * ``is_selected(@atlas_feature)`` → True if the current atlas feature is selected.
-       * ``is_selected(get_feature('streets', 'name', 'Main St.')))`` → True if the unique named "Main St." feature on the active "streets" layer is selected.
-       * ``is_selected(get_feature_by_id('streets', 1))`` → True if the feature with the id 1 on the active "streets" layer is selected.
+     - * ``is_selected(@atlas_feature)`` → TRUE if the current atlas feature is selected.
+       * ``is_selected(get_feature('streets', 'name', 'Main St.')))`` → TRUE if the unique named "Main St." feature on the active "streets" layer is selected.
+       * ``is_selected(get_feature_by_id('streets', 1))`` → TRUE if the feature with the id 1 on the active "streets" layer is selected.
 
 
 **Two parameters**
 
-If the function is called with both a layer and a feature, it will return true if the specified feature from the specified layer is selected.
+If the function is called with both a layer and a feature, it will return TRUE if the specified feature from the specified layer is selected.
 
 .. list-table::
    :widths: 15 85
@@ -289,8 +289,8 @@ If the function is called with both a layer and a feature, it will return true i
      - * **layer** - The layer (its ID or name) on which the selection will be checked.
        * **feature** - The feature which should be checked for selection.
    * - Examples
-     - * ``is_selected( 'streets', get_feature('streets', 'name', "street_name"))`` → True if the current building's street is selected (assuming the building layer has a field named 'street_name' and the 'streets' layer has a field called 'name' with unique values).
-       * ``is_selected( 'streets', get_feature_by_id('streets', 1))`` → True if the feature with the id 1 on the "streets" layer is selected.
+     - * ``is_selected( 'streets', get_feature('streets', 'name', "street_name"))`` → TRUE if the current building's street is selected (assuming the building layer has a field named 'street_name' and the 'streets' layer has a field called 'name' with unique values).
+       * ``is_selected( 'streets', get_feature_by_id('streets', 1))`` → TRUE if the feature with the id 1 on the "streets" layer is selected.
 
 
 .. end_is_selected_section

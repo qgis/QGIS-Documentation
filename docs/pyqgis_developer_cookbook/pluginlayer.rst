@@ -46,6 +46,7 @@ the original code  of the `Watermark example plugin <https://github.com/sourcepo
 The custom renderer is the part of the implement that defines the actual drawing on the canvas.
 
 .. testcode:: pluginlayer
+    :skipif: True
 
     class WatermarkLayerRenderer(QgsMapLayerRenderer):
 
@@ -88,6 +89,7 @@ The plugin layer can be added to the project and to the canvas as
 any other map layer:
 
 .. testcode:: pluginlayer
+    :skipif: True
 
     plugin_layer = WatermarkPluginLayer()
     QgsProject.instance().addMapLayer(plugin_layer)
@@ -95,6 +97,7 @@ any other map layer:
 When loading a project containing such a layer, a factory class is needed:
 
 .. testcode:: pluginlayer
+    :skipif: True
 
     class WatermarkPluginLayerType(QgsPluginLayerType):
 

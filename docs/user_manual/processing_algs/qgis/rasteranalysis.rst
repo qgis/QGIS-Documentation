@@ -335,7 +335,7 @@ Python code
 
 .. _qgiscellstackpercentrankfromrasterlayer:
 
-cell stack percentrank from raster layer
+Cell stack percentrank from raster layer
 ----------------------------------------
 
 Calculates the cell-wise percentrank value of a stack of rasters based
@@ -2444,7 +2444,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:rasterlayerstatistics``
+**Algorithm ID**: ``native:rasterlayerstatistics``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**

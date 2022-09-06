@@ -177,7 +177,7 @@ In addition, QGIS Server introduced some options to select layers by:
 * the layer id
 
 The project option allowing to select layers by their
-id is in :menuselection:`OWS Server --> WMS capabilities` menu of the
+id is in :menuselection:`QGIS Server --> WMS` tab of the
 :menuselection:`Project --> Properties...` dialog.
 Check the :guilabel:`Use layer ids as names` checkbox to activate this option.
 
@@ -992,8 +992,8 @@ values are (not case sensitive):
 
 For example:
 
-  .. figure:: ../img/getfeaturecount_legend.png
-    :align: center
+.. figure:: ../img/getfeaturecount_legend.png
+   :align: center
 
 
 .. _wms_getlegendgraphics_rule:
@@ -1885,6 +1885,7 @@ In a :ref:`GetMap <wms_getmap>` request, this might look like this:
    SERVICE=WMS
    &REQUEST=GetMap
    &LAYERS=EXTERNAL_WMS:basemap,layer1,layer2
+   &OPACITIES=100,200,255
    &STYLES=,,
    &basemap:url=http://externalserver.com/wms.fcgi
    &basemap:format=image/jpeg
@@ -1904,6 +1905,7 @@ requests:
    &TEMPLATE=A4
    &map0:layers=EXTERNAL_WMS:basemap,layer1,layer2
    &map0:EXTENT=<minx,miny,maxx,maxy>
+   &OPACITIES=100,200,255
    &basemap:url=http://externalserver.com/wms.fcgi
    &basemap:format=image/jpeg
    &basemap:dpiMode=7
@@ -1969,29 +1971,30 @@ a label are drawn on top of the normal map:
 
    Server response to a GetMap request with redlining parameters
 
-You can see there are several parameters in this request:
+You can see there are several parameters in this request to control
+the redlining feature. The full list includes:
 
 * **HIGHLIGHT_GEOM**: You can add POINT, MULTILINESTRING, POLYGON etc.
   It supports multipart geometries. Here is an example:
   ``HIGHLIGHT_GEOM=MULTILINESTRING((0 0, 0 1, 1 1))``.
   The coordinates should be in the CRS of the GetMap/GetPrint request.
-
-* **HIGHLIGHT_SYMBOL**: This controls how the geometry is outlined and
-  you can change the stroke width, color and opacity.
-
-* **HIGHLIGHT_LABELSTRING**: You can pass your labeling text to this
-  parameter.
-
-* **HIGHLIGHT_LABELSIZE**: This parameter controls the size of the
-  label.
-
-* **HIGHLIGHT_LABELFONT**: This parameter controls the font of the
-  label (e.g. Arial)
-
-* **HIGHLIGHT_LABELCOLOR**: This parameter controls the label color.
-
 * **HIGHLIGHT_LABELBUFFERCOLOR**: This parameter controls the label
   buffer color.
-
 * **HIGHLIGHT_LABELBUFFERSIZE**: This parameter controls the label
   buffer size.
+* **HIGHLIGHT_LABELCOLOR**: This parameter controls the label color.
+* **HIGHLIGHT_LABEL_DISTANCE**: controls the distance between feature
+  (e.g. point or line) and the label in mm
+* **HIGHLIGHT_LABELFONT**: This parameter controls the font of the
+  label (e.g. Arial)
+* **HIGHLIGHT_LABEL_HORIZONTAL_ALIGNMENT**: places the label horizontally
+  on a point using the specified alignment (e.g. 'left', 'center', 'right')
+* **HIGHLIGHT_LABEL_ROTATION**: controls the label rotation in degrees
+* **HIGHLIGHT_LABELSIZE**: This parameter controls the size of the
+  label.
+* **HIGHLIGHT_LABELSTRING**: You can pass your labeling text to this
+  parameter.
+* **HIGHLIGHT_LABEL_VERTICAL_ALIGNMENT**: places the label vertically
+  on a point using the specified alignment (e.g. 'top', 'half', 'bottom')
+* **HIGHLIGHT_SYMBOL**: This controls how the geometry is outlined and
+  you can change the stroke width, color and opacity.
