@@ -1363,12 +1363,11 @@ Annotation Tools
 ----------------
 
 Annotations are information added to the map canvas and shown within a
-balloon. This information can be of different types and annotations are
-added using the corresponding tools in the :guilabel:`Annotations Toolbar`:
+balloon. This information can be of different types. You can add annotations by
+:menuselection:`Edit --> Add Annotation --> Type of Annotation`:
 
 * |textAnnotation| :sup:`Text Annotation` for custom formatted text
-* |htmlAnnotation| :sup:`HTML Annotation` to place the content of an :file:`html`
-  file
+* |htmlAnnotation| :sup:`HTML Annotation` to place the content of an :file:`html` file
 * |svgAnnotation| :sup:`SVG Annotation` to add an :file:`SVG` symbol
 * |formAnnotation| :sup:`Form Annotation`: useful to display attributes
   of a vector layer in a customized :file:`ui` file (see :numref:`figure_custom_annotation`).
@@ -1383,6 +1382,7 @@ added using the corresponding tools in the :guilabel:`Annotations Toolbar`:
    :align: center
 
    Customized QT Designer annotation form
+
 
 .. Todo: Ideally, to sync with the text, this screenshot should not show the
  dialog of form annotation but instead different forms in action, this will be all
@@ -1416,18 +1416,66 @@ options. This dialog is almost the same for all the annotation types:
 
    Annotation text dialog
 
-Annotations can be selected when an annotation tool is enabled. They can then be
-moved by map position (by dragging the map marker) or by moving only the balloon.
-The |annotation| :sup:`Move Annotation` tool also allows you to move the
-balloon on the map canvas.
+Annotation Layers
+.................
 
-To delete an annotation, select it and either press the :kbd:`Del` or :kbd:`Backspace`
-button, or double-click it and press the :guilabel:`Delete` button in the properties dialog.
+* All Annotations are added to those called |layerAnnotation| :guilabel:`annotation layers`. 
+* They are not linked to any external dataset, but to a single QGIS project only. 
+* Every annotation item is completely geo-referenced and tied to a particular geographic location. 
+  Moving your map, changing the scale or changing projection won’t cause your annotations to 
+  jump around the map. 
+* You can style the annotation items on an item-by-item basis,through 
+  the QGIS “Layer Styling” dock.
+
+* By default, any newly created annotation item will be added to a special 
+  main annotation layer.This one is always drawn on the very top of your map. 
+* You won't see it listed alongside your other layers in your project.
+* You can control opacity or blend mode in the  “Main Annotation Layer Properties” 
+  option from the annotations toolbar. 
+
+* It is possible to create your own secondary annotation layers, 
+  from the annotations toolbar. Select “New Annotation Layer” and a 
+  new annotation layer will be added to your project. 
+* Unlike the main annotation layer, you’ll see any secondary annotation layers appear in the 
+  list of your project’s layers. You can toggle their visibility, rename them, and even 
+  reposition them to control whether the annotations show above or below particular layers in your map!
+
+Annotation Toolbar
+..................
+
+To customize your annotation items, you can use the :guilabel:`annotation toolbar`.
+
+* |newlayerAnnotation| :sup:`New Annotation Layer`: will add a new annotation layer.
+  You can control settings of Main Annotation Layer in :sup:`Main Annotation Layer Properties`. 
+* |select| :sup:`Modify Annotations`: allows you to move and edit existing annotation items or geometric nodes
+* |addPolygon| :sup:`Create Polygon`: creates a new polygon
+* |addPolyline| :sup:`Create Line`: creates a new polyline
+* |addMarker| :sup:`Create Marker`: creates a new marker
+* |label| :sup:`Create Text at Point`: creates a new text label
+* |textAnnotation| :sup:`Annotation Type`: choose type of annoation item
+
+Annotations can be selected when an annotation tool is enabled. Then they can be
+moved by dragging the map marker. Or you can use the |select| :sup:`Modify Annotations` tool 
+to move the balloon on the map canvas. You can use this tool also, to modify nodes 
+of existing polygons or polylines.
+When an annotation item is selected, you can move it by pressing
+the cursor keys. It has the same interaction pattern like the layout items:
+
+* shift + cursor key = big movement
+* alt + cursor key = 1 px movement
+
+Creating new line and polygon annotation items, are supported by the vector feature capture tools, 
+for drawing line and polygon features (Snapping, tracing, CAD dock, etc.). When you use |label| :sup:`Create Text at Point`
+it is possible to add a framework for map tools.
+
+To delete an annotation, select it and either press the :kbd:`Del` or :kbd:`Backspace` button, 
+or double-click it and press the :guilabel:`Delete` button in the properties dialog.
 
 .. note::
    If you press :kbd:`Ctrl+T` while an :guilabel:`Annotation` tool (move annotation,
    text annotation, form annotation) is active, the visibility states of the items
    are inverted.
+
 
 .. tip:: **Layout the map with annotations**
 
@@ -2855,6 +2903,8 @@ The values presented in the varying size assistant above will set the size
    please add it also to the substitutions.txt file in the
    source folder.
 
+
+
 .. |3d| image:: /static/common/3d.png
    :width: 1.5em
 .. |addGrid| image:: /static/common/add_grid.png
@@ -2864,6 +2914,12 @@ The values presented in the varying size assistant above will set the size
 .. |addImage| image:: /static/common/mActionAddImage.png
    :width: 1.5em
 .. |addMap| image:: /static/common/mActionAddMap.png
+   :width: 1.5em
+.. |addMarker| image:: /static/common/mActionAddMarker.png
+   :width: 1.5em 
+.. |addPolygon| image:: /static/common/mActionAddPolygon.png
+   :width: 1.5em
+.. |addPolyline| image:: /static/common/mActionAddPolyline.png
    :width: 1.5em
 .. |addVirtualLayer| image:: /static/common/mActionAddVirtualLayer.png
    :width: 1.5em
@@ -2983,9 +3039,13 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |invertSelection| image:: /static/common/mActionInvertSelection.png
    :width: 1.5em
+.. |label| image:: /static/common/mActionCreateAnnotationLayer.png
+   :width: 1.5em
 .. |labelingSingle| image:: /static/common/labelingSingle.png
    :width: 1.5em
 .. |labelmask| image:: /static/common/labelmask.png
+   :width: 1.5em
+.. |layerAnnotation| image:: /static/common/mIconAnnotationLayer.png
    :width: 1.5em
 .. |mapIdentification| image:: /static/common/mActionMapIdentification.png
    :width: 1.5em
@@ -3002,6 +3062,8 @@ The values presented in the varying size assistant above will set the size
 .. |networkAndProxy| image:: /static/common/network_and_proxy.png
    :width: 1.5em
 .. |newBookmark| image:: /static/common/mActionNewBookmark.png
+   :width: 1.5em
+.. |newlayerAnnotation| image:: /static/common/mActionCreateAnnotationLayer.png
    :width: 1.5em
 .. |northArrow| image:: /static/common/north_arrow.png
    :width: 1.5em
@@ -3028,6 +3090,8 @@ The values presented in the varying size assistant above will set the size
 .. |scaleBar| image:: /static/common/mActionScaleBar.png
    :width: 1.5em
 .. |search| image:: /static/common/search.png
+   :width: 1.5em
+.. |select| image:: /static/common/mActionSelect.png
    :width: 1.5em
 .. |selectAll| image:: /static/common/mActionSelectAll.png
    :width: 1.5em
