@@ -413,6 +413,8 @@ Custom template functions
   link list
 - ``content_type_name( content_type )``: Returns a short name from a
   content type, for example "text/html" will return "HTML"
+- ``nl2br( text )``: Returns the input text with all newlines replaced
+  by "<br>" tags
 
 
 .. _`server_oapif_template_override`:
