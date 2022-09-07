@@ -2610,6 +2610,28 @@ Returns a multi line geometry consisting of a line for every segment in the inpu
 
 .. end_segments_to_lines_section
 
+.. _expression_function_GeometryGroup_shared_paths:
+
+shared_paths
+............
+
+Returns a collection containing paths shared by the two input geometries. Those going in the same direction are in the first element of the collection, those going in the opposite direction are in the second element. The paths themselves are given in the direction of the first geometry.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - shared_paths(geometry1, geometry2)
+   * - Arguments
+     - * **geometry1** - a LineString/MultiLineString geometry
+       * **geometry2** - a LineString/MultiLineString geometry
+   * - Examples
+     - * ``geom_to_wkt(shared_paths(geom_from_wkt('MULTILINESTRING((26 125,26 200,126 200,126 125,26 125),(51 150,101 150,76 175,51 150)))'),geom_from_wkt('LINESTRING(151 100,126 156.25,126 125,90 161, 76 175)')))`` → 'GeometryCollection (MultiLineString ((126 156.25, 126 125),(101 150, 90 161),(90 161, 76 175)),MultiLineString EMPTY)'
+       * ``geom_to_wkt(shared_paths(geom_from_wkt('LINESTRING(76 175,90 161,126 125,126 156.25,151 100)'),geom_from_wkt('MULTILINESTRING((26 125,26 200,126 200,126 125,26 125),(51 150,101 150,76 175,51 150))')))`` → 'GeometryCollection (MultiLineString EMPTY,MultiLineString ((76 175, 90 161),(90 161, 101 150),(126 125, 126 156.25)))'
+
+
+.. end_shared_paths_section
+
 .. _expression_function_GeometryGroup_shortest_line:
 
 shortest_line
