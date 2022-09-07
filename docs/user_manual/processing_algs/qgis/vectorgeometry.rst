@@ -3311,6 +3311,20 @@ Parameters
      - ``INPUT``
      - [vector: any]
      - Input vector layer
+   * - **Repair method**
+     - ``METHOD``
+     - [enumeration]
+
+       Default: 1
+     - Method used to repair the geometries. One of:
+
+       * 0 --- ``Linework``: combines all rings into a set of noded lines and
+         then extracts valid polygons from that linework
+       * 1 --- ``Structure``: first makes all rings valid and then merges shells
+         and subtracts holes from shells to generate valid result.
+         Assumes that holes and shells are correctly categorized.
+         Requires QGIS version built with GEOS 3.10 or later
+         (check :menuselection:`Help --> About` menu).
    * - **Fixed geometries**
      - ``OUTPUT``
      - [same as input]
