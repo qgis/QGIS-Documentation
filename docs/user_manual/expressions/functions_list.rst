@@ -468,6 +468,12 @@ Further reading: :ref:`qgislinesubstring` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_line_substring_section
+   :end-before: .. end_make_valid_section
+
+Further reading: :ref:`qgischeckvalidity`, :ref:`qgisfixgeometries` algorithms
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_make_valid_section
    :end-before: .. end_minimal_circle_section
 
 Further reading: :ref:`qgisminimumenclosingcircle` algorithm

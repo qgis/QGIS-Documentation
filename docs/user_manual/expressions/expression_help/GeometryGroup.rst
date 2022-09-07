@@ -1796,9 +1796,13 @@ Returns a valid geometry or an empty geometry if the geometry could not be made 
    :widths: 15 85
 
    * - Syntax
-     - make_valid(geometry)
+     - make_valid(geometry, [method=structure], [keep_collapsed=false])
+
+       [] marks optional arguments
    * - Arguments
      - * **geometry** - a geometry
+       * **method** - repair algorithm. May be either 'structure' or 'linework'. The 'linework' option combines all rings into a set of noded lines and then extracts valid polygons from that linework. The 'structure' method first makes all rings valid and then merges shells and subtracts holes from shells to generate valid result. Assumes that holes and shells are correctly categorized.
+       * **keep_collapsed** - if set to true, then components that have collapsed into a lower dimensionality will be kept. For example, a ring collapsing to a line, or a line collapsing to a point.
    * - Examples
      - * ``geom_to_wkt(make_valid(geom_from_wkt('POLYGON((3 2, 4 1, 5 8, 3 2, 4 2))')))`` → 'GeometryCollection (Polygon ((5 8, 4 1, 3 2, 5 8)),LineString (3 2, 4 2))'
        * ``make_valid(geom_from_wkt('LINESTRING(0 0)'))`` → <empty geometry>
