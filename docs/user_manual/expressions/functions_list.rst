@@ -450,6 +450,26 @@ Further reading: :ref:`expression_function_GeometryGroup_overlay_intersects`
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_intersects_section
+   :end-before: .. end_is_empty_section
+
+Further reading: :ref:`expression_function_GeometryGroup_is_empty_or_null`
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_is_empty_section
+   :end-before: .. end_is_empty_or_null_section
+
+Further reading: :ref:`expression_function_GeometryGroup_is_empty`,
+:ref:`expression_function_Fields_and_Values_NULL`
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_is_empty_or_null_section
+   :end-before: .. end_is_valid_section
+
+Further reading: :ref:`expression_function_GeometryGroup_make_valid`
+:ref:`qgischeckvalidity` algorithm
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_is_valid_section
    :end-before: .. end_length_section
 
 Further reading: :ref:`expression_function_GeometryGroup_straight_distance_2d`
@@ -470,7 +490,8 @@ Further reading: :ref:`qgislinesubstring` algorithm
    :start-after: .. end_line_substring_section
    :end-before: .. end_make_valid_section
 
-Further reading: :ref:`qgischeckvalidity`, :ref:`qgisfixgeometries` algorithms
+Further reading: :ref:`expression_function_GeometryGroup_is_valid`,
+:ref:`qgisfixgeometries` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_make_valid_section
