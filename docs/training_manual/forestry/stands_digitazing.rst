@@ -403,8 +403,11 @@ aerial photos and the addition of some relevant information to your dataset.
 .. |LS| replace:: Lesson:
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
+.. |avoidIntersectionsLayers| image:: /static/common/mActionAvoidIntersectionsLayers.png
+   :width: 1.5em
 .. |basic| image:: /static/common/basic.png
-
+.. |pointLayer| image:: /static/common/mIconPointLayer.png
+   :width: 1.5em
 .. |topologicalEditing| image:: /static/common/mIconTopologicalEditing.png
    :width: 1.5em
 .. |avoidIntersectionsLayers| image:: /static/common/mActionAvoidIntersectionsLayers.png
