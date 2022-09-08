@@ -177,68 +177,68 @@ right-click shows a dedicated set of options presented below.
 .. table updated with https://tableconvert.com/excel-to-restructuredtext
 .. table:: Contextual menus from Layers Panel items
 
- ============================================================ ============= =============== =============== ============= ==================== 
-  Option                                                       Group         Vector Layer    Raster Layer    Mesh Layer    Point Cloud Layer   
- ============================================================ ============= =============== =============== ============= ==================== 
-  |zoomToLayer| :guilabel:`Zoom to Layer(s)/Group`             |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|          
-  |zoomToLayer| :guilabel:`Zoom to Selection`                                |checkbox|                                                        
-  |inOverview| :guilabel:`Show in Overview`                                  |checkbox|      |checkbox|      |checkbox|    |checkbox|          
-  :guilabel:`Show Feature Count`                                             |checkbox|                                                        
-  |labelingSingle| :guilabel:`Show Label`                                    |checkbox|                                                        
-  :guilabel:`Copy Layer/Group`                                 |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|          
-  :guilabel:`Rename Layer/Group`                               |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|          
-  |zoomActual| :guilabel:`Zoom to Native Resolution (100%)`                                  |checkbox|                                        
-  :guilabel:`Stretch Using Current Extent`                                                   |checkbox|                                        
-  |dbManager| :guilabel:`Update SQL Layer...`                                |checkbox|                                                        
-  |addVirtualLayer| :guilabel:`Edit Virtual Layer...`                        |checkbox|                                                        
-  |addGroup| :guilabel:`Add Group`                             |checkbox|                                                                      
-  |duplicateLayer| :guilabel:`Duplicate Layer`                               |checkbox|      |checkbox|      |checkbox|    |checkbox|          
-  |removeLayer| :guilabel:`Remove Layer/Group...`              |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|          
-  :guilabel:`Move Out of Group`                                              |checkbox|      |checkbox|      |checkbox|    |checkbox|          
-  :guilabel:`Move to Top`                                      |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|          
-  :guilabel:`Move to Bottom`                                   |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|          
-  :guilabel:`Check and all its Parents`                                      |checkbox|      |checkbox|      |checkbox|    |checkbox|          
-  :guilabel:`Group Selected`                                                 |checkbox|      |checkbox|      |checkbox|    |checkbox|          
-  |openTable| :guilabel:`Open Attribute Table`                               |checkbox|                                                        
-  |toggleEditing| :guilabel:`Toggle Editing`                                 |checkbox|                      |checkbox|                        
-  |allEdits| :menuselection:`Current Edits -->`                              |checkbox|                      |checkbox|                        
-  :guilabel:`Filter...`                                                      |checkbox|      |checkbox|                    |checkbox|          
-  :guilabel:`Change Data Source...`                                          |checkbox|      |checkbox|      |checkbox|    |checkbox|          
-  :guilabel:`Repair Data Source...`                                          |checkbox|      |checkbox|      |checkbox|    |checkbox|          
-  :menuselection:`Actions on selections -->` (in edit mode)                  |checkbox|                                                        
-  :menuselection:`--> Duplicate Feature`                                     |checkbox|                                                        
-  :menuselection:`--> Duplicate Feature and Digitize`                        |checkbox|                                                        
-  :guilabel:`Set Layer Scale Visibility...`                                  |checkbox|      |checkbox|      |checkbox|    |checkbox|          
-  :guilabel:`Zoom to Visible Scale`                                          |checkbox|      |checkbox|      |checkbox|    |checkbox|          
-  :menuselection:`Layer CRS -->`                                             |checkbox|      |checkbox|      |checkbox|    |checkbox|          
-  :menuselection:`--> Set Project CRS from Layer`                            |checkbox|      |checkbox|      |checkbox|    |checkbox|          
-  :menuselection:`--> Set to..` (recent CRSs)                                                                |checkbox|    |checkbox|          
-  :menuselection:`--> Set Layer CRS...`                                      |checkbox|      |checkbox|      |checkbox|    |checkbox|          
-  :menuselection:`Set Group CRS...`                            |checkbox|                                                                      
-  :guilabel:`Set Group WMS Data...`                            |checkbox|                                                                      
-  |unchecked| :guilabel:`Mutually Exclusive Group`             |checkbox|                                                                      
-  :guilabel:`Check and all its children (Ctrl-click)`          |checkbox|                                                                      
-  :guilabel:`Uncheck and all its children (Ctrl-click)`        |checkbox|                                                                      
-  :guilabel:`Make Permanent`                                                 |checkbox|                                                        
-  :menuselection:`Export -->`                                  |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|          
-  :menuselection:`--> Save As...`                                                            |checkbox|                                        
-  :menuselection:`--> Save Features As...`                                   |checkbox|                                                        
-  :menuselection:`--> Save Selected Features As...`                          |checkbox|                                                        
-  :menuselection:`--> Save As Layer Definition File...`        |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|          
-  :menuselection:`--> Save As QGIS Layer Style File...`                      |checkbox|      |checkbox|      |checkbox|    |checkbox|          
-  :menuselection:`Styles -->`                                                |checkbox|      |checkbox|      |checkbox|    |checkbox|          
-  :menuselection:`--> Copy Style`                                            |checkbox|      |checkbox|      |checkbox|    |checkbox|          
-  :menuselection:`--> Paste Style`                             |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|          
-  :menuselection:`--> Add...`                                                |checkbox|      |checkbox|      |checkbox|    |checkbox|          
-  :menuselection:`--> Rename Current...`                                     |checkbox|      |checkbox|      |checkbox|    |checkbox|          
-  :menuselection:`--> Edit symbol...`                                        |checkbox|                                                        
-  :menuselection:`--> Copy Symbol`                                           |checkbox|                                                        
-  :menuselection:`--> Paste Symbol`                                          |checkbox|                                                        
-  :guilabel:`Add Layer Notes...`                                             |checkbox|      |checkbox|      |checkbox|    |checkbox|          
-  :guilabel:`Edit Layer Notes...`                                            |checkbox|      |checkbox|      |checkbox|    |checkbox|          
-  :guilabel:`Remove Layer Notes`                                             |checkbox|      |checkbox|      |checkbox|    |checkbox|          
-  :guilabel:`Properties...`                                                  |checkbox|      |checkbox|      |checkbox|    |checkbox|          
- ============================================================ ============= =============== =============== ============= ==================== 
+ ============================================================ ============= =============== =============== ============= ====================
+  Option                                                       Group         Vector Layer    Raster Layer    Mesh Layer    Point Cloud Layer
+ ============================================================ ============= =============== =============== ============= ====================
+  |zoomToLayer| :guilabel:`Zoom to Layer(s)/Group`             |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  |zoomToLayer| :guilabel:`Zoom to Selection`                                |checkbox|
+  |inOverview| :guilabel:`Show in Overview`                                  |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  :guilabel:`Show Feature Count`                                             |checkbox|
+  |labelingSingle| :guilabel:`Show Label`                                    |checkbox|
+  :guilabel:`Copy Layer/Group`                                 |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  :guilabel:`Rename Layer/Group`                               |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  |zoomActual| :guilabel:`Zoom to Native Resolution (100%)`                                  |checkbox|
+  :guilabel:`Stretch Using Current Extent`                                                   |checkbox|
+  |dbManager| :guilabel:`Update SQL Layer...`                                |checkbox|
+  |addVirtualLayer| :guilabel:`Edit Virtual Layer...`                        |checkbox|
+  |addGroup| :guilabel:`Add Group`                             |checkbox|
+  |duplicateLayer| :guilabel:`Duplicate Layer`                               |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  |removeLayer| :guilabel:`Remove Layer/Group...`              |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  :guilabel:`Move Out of Group`                                              |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  :guilabel:`Move to Top`                                      |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  :guilabel:`Move to Bottom`                                   |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  :guilabel:`Check and all its Parents`                                      |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  :guilabel:`Group Selected`                                                 |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  |openTable| :guilabel:`Open Attribute Table`                               |checkbox|
+  |toggleEditing| :guilabel:`Toggle Editing`                                 |checkbox|                      |checkbox|
+  |allEdits| :menuselection:`Current Edits -->`                              |checkbox|                      |checkbox|
+  :guilabel:`Filter...`                                                      |checkbox|      |checkbox|                    |checkbox|
+  :guilabel:`Change Data Source...`                                          |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  :guilabel:`Repair Data Source...`                                          |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  :menuselection:`Actions on selections -->` (in edit mode)                  |checkbox|
+  :menuselection:`--> Duplicate Feature`                                     |checkbox|
+  :menuselection:`--> Duplicate Feature and Digitize`                        |checkbox|
+  :guilabel:`Set Layer Scale Visibility...`                                  |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  :guilabel:`Zoom to Visible Scale`                                          |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  :menuselection:`Layer CRS -->`                                             |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  :menuselection:`--> Set Project CRS from Layer`                            |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  :menuselection:`--> Set to..` (recent CRSs)                                                                |checkbox|    |checkbox|
+  :menuselection:`--> Set Layer CRS...`                                      |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  :menuselection:`Set Group CRS...`                            |checkbox|
+  :guilabel:`Set Group WMS Data...`                            |checkbox|
+  |unchecked| :guilabel:`Mutually Exclusive Group`             |checkbox|
+  :guilabel:`Check and all its children (Ctrl-click)`          |checkbox|
+  :guilabel:`Uncheck and all its children (Ctrl-click)`        |checkbox|
+  :guilabel:`Make Permanent`                                                 |checkbox|
+  :menuselection:`Export -->`                                  |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  :menuselection:`--> Save As...`                                                            |checkbox|
+  :menuselection:`--> Save Features As...`                                   |checkbox|
+  :menuselection:`--> Save Selected Features As...`                          |checkbox|
+  :menuselection:`--> Save As Layer Definition File...`        |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  :menuselection:`--> Save As QGIS Layer Style File...`                      |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  :menuselection:`Styles -->`                                                |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  :menuselection:`--> Copy Style`                                            |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  :menuselection:`--> Paste Style`                             |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  :menuselection:`--> Add...`                                                |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  :menuselection:`--> Rename Current...`                                     |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  :menuselection:`--> Edit symbol...`                                        |checkbox|
+  :menuselection:`--> Copy Symbol`                                           |checkbox|
+  :menuselection:`--> Paste Symbol`                                          |checkbox|
+  :guilabel:`Add Layer Notes...`                                             |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  :guilabel:`Edit Layer Notes...`                                            |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  :guilabel:`Remove Layer Notes`                                             |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  :guilabel:`Properties...`                                                  |checkbox|      |checkbox|      |checkbox|    |checkbox|
+ ============================================================ ============= =============== =============== ============= ====================
 
 
 For GRASS vector layers, |toggleEditing| :sup:`Toggle editing` is not available.
@@ -602,7 +602,7 @@ It also allows you to:
   every request has to be performed.
 * |search| :guilabel:`Filter requests`
 
-By right clicking on a request you can: 
+By right clicking on a request you can:
 
 * :guilabel:`Open URL` which will open the URL in your default browser.
 * :guilabel:`Copy URL`
@@ -618,7 +618,7 @@ By right clicking on a request you can:
 Profiler
 ........
 
-The :guilabel:`Profiler` allows to get load times for the Categories 
+The :guilabel:`Profiler` allows to get load times for the Categories
 :guilabel:`Startup` and :guilabel:`Project Load`, to identify causes of slow
 load times.
 
@@ -1000,7 +1000,7 @@ To create a bookmark:
    <extent_selector>` widget
 #. Indicate the :guilabel:`CRS` to use for the extent
 #. Select whether the bookmark will be :guilabel:`Saved in` :guilabel:`User
-   Bookmarks` or :guilabel:`Project Bookmarks` (by default, this drop-down list 
+   Bookmarks` or :guilabel:`Project Bookmarks` (by default, this drop-down list
    is set to :guilabel:`User Bookmarks`)
 #. Press :guilabel:`Save` to add the bookmark to the list
 
@@ -1531,7 +1531,7 @@ The |measure| :sup:`Measure Line` measures distances between given points.
 The tool then allows you to click points on the map. Each segment length,
 as well as the total, shows up in the measure window.
 To stop measuring, click the right mouse button. Now it is possible
-to copy all your line measurements at once to the clipboard using the 
+to copy all your line measurements at once to the clipboard using the
 :guilabel:`Copy All` button.
 
 Note that you can use the drop-down list near the total to change
@@ -1873,14 +1873,14 @@ default it will display the following information:
 * **Data attributes**: This is the list of attribute fields and values for the
   feature that has been clicked.
 * information about the related child feature if you defined a :ref:`relation <vector_relations>`:
-  
+
   * the name of the relation
   * the entry in reference field, e.g. the name of the related child feature
   * **Actions**: lists actions defined in the layer's properties dialog (see :ref:`actions_menu`)
     and the default action is ``View feature form``.
   * **Data attributes**: This is the list of attributes fields and values of the
-    related child feature. 
-  
+    related child feature.
+
 .. note:: Links in the feature's attributes are clickable from the :guilabel:`Identify
    Results` panel and will open in your default web browser.
 
@@ -2182,9 +2182,40 @@ A summary of the filled information is provided in the :guilabel:`Validation`
 tab and helps you identify potential issues related to the form. You can then
 either fix them or ignore them.
 
-Metadata are currently saved in the project file. They can also be saved in a
-:file:`.qmd` file alongside file based layers or in a local :file:`.sqlite`
-database for remote layers (e.g. PostGIS).
+Metadata are saved in the project file by default, the :guilabel:`Metadata` drop-down
+offers options for loading/saving metadata from :file:`.qmd` file
+and for loading/saving metadata in the "Default" location.
+
+.. _figure_metadata_save_options:
+
+.. figure:: img/metadata_save_options.png
+   :align: center
+
+   Metadata load/save options
+
+
+The "Default" location used by :guilabel:`Save as Default` and :guilabel:`Restore Default`
+changes depending on the underlaying data source and on its configuration:
+
+.. _`savemetadatatodb`:
+
+For PostgreSQL data sources if the configuration
+option :guilabel:`Allow saving/loading QGIS layer metadata in the database`
+is checked the metadata are stored inside a dedicated table in the
+database.
+
+For GeoPackage data sources :guilabel:`Save as Default` always saves the metadata
+in the internal metadata tables of the GeoPackage.
+
+When metadata are saved into the internal tables of PostgreSQL or GeoPackage they
+become available for search and filtering in the browser and in
+the :ref:`layer metadata search panel<layer_metadata_search_panel>`.
+
+For all other file based data sources :guilabel:`Save as Default` saves the metadata
+in a :file:`.qmd` file alongside the file.
+
+In all other cases :guilabel:`Save as Default` saves the metadata
+in a local :file:`.sqlite` database.
 
 
 .. _layer_notes:
@@ -2668,7 +2699,7 @@ But they can also have their custom settings. Provided categories are:
 
   * number of :guilabel:`Decimal places`
   * :guilabel:`Scaling` to indicate whether the actual values already represent
-    percentages (then they will be kept as is) or fractions (then they are converted)    
+    percentages (then they will be kept as is) or fractions (then they are converted)
 * :guilabel:`Scientific` notation in the form ``2.56e+03``. The number of
   :guilabel:`Decimal places` can be set.
 

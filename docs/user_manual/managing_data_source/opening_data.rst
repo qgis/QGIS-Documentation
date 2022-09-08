@@ -897,6 +897,8 @@ checkboxes:
 * |checkbox| :guilabel:`Use estimated table metadata`
 * |checkbox| :guilabel:`Allow saving/loading QGIS projects in the database`
   - more details :ref:`here <saveprojecttodb>`
+* |checkbox| :guilabel:`Allow saving/loading QGIS layer metadata in the database`
+  - more details :ref:`here <savemetadatatodb>`
 
 .. tip:: **Use estimated table metadata to speed up operations**
 
@@ -1216,6 +1218,25 @@ To load a layer from a database, you can perform the following steps:
   :ref:`DB Manager <dbmanager>` to drag and drop the database tables
   into the map canvas.
 
+.. _layer_metadata_search_panel:
+
+The Layer Metadata Search Panel
+===============================
+
+The layer metadata search panel allows to browse layers metadata,
+filter the results by text, by current project and map canvas extent
+and add the selected layers to the map canvas.
+
+The sources of metadata are implemented through a layer metadata provider
+system that can be extended by plugins, QGIS provides out of the
+box the layer metadata provider that retrieves the metadata from the
+connections that allow for metadata storage (for more details
+:ref:`here <savemetadatatodb>`).
+
+.. figure:: img/layer_metadata_search_panel.png
+   :align: center
+
+   Layer Metadata Search Panel
 
 QGIS Custom formats
 ===================
@@ -1341,7 +1362,7 @@ Press :guilabel:`New` (respectively :guilabel:`New Connection`) and provide:
 
 .. _interpretation:
 
-* :guilabel:`Interpretation`: converts WMTS/XYZ raster datasets to a raster 
+* :guilabel:`Interpretation`: converts WMTS/XYZ raster datasets to a raster
   layer of single band float type following a predefined encoding scheme.
   Supported schemes are :guilabel:`Default` (no conversion is done),
   :guilabel:`MapTiler Terrain RGB` and :guilabel:`Terrarium Terrain RGB`.
@@ -1377,7 +1398,7 @@ The XML file for OpenStreetMap looks like this:
   <!DOCTYPE connections>
   <qgsXYZTilesConnections version="1.0">
     <xyztiles url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
-     zmin="0" zmax="19" tilePixelRatio="0" password="" name="OpenStreetMap" 
+     zmin="0" zmax="19" tilePixelRatio="0" password="" name="OpenStreetMap"
      username="" authcfg="" referer=""/>
   </qgsXYZTilesConnections>
 
@@ -1416,7 +1437,7 @@ Using ArcGIS REST Servers
 -------------------------
 
 ArcGIS REST Servers can be added via the
-|addAfsLayer| :guilabel:`ArcGIS REST Server` tab of the 
+|addAfsLayer| :guilabel:`ArcGIS REST Server` tab of the
 :guilabel:`Data Source Manager` dialog or the contextual menu of the
 :guilabel:`ArcGIS REST Servers` entry in the :guilabel:`Browser` panel.
 Press :guilabel:`New` (respectively :guilabel:`New Connection`) and provide:
@@ -1430,7 +1451,7 @@ Press :guilabel:`New` (respectively :guilabel:`New Connection`) and provide:
 
 .. note::
 
-   ArcGIS Feature Service connections which have their corresponding Portal 
+   ArcGIS Feature Service connections which have their corresponding Portal
    endpoint URLS set can be explored by content groups in the browser panel.
 
    If a connection has the Portal endpoints set, then expanding out the connection
