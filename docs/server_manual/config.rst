@@ -243,6 +243,11 @@ several ways to define these variables. This is fully described in
        If the value is ``-1``, it means that there is no maximum set.
      - -1
      - WMS
+     
+   * - QGIS_SERVER_ALLOWED_EXTRA_SQL_TOKENS
+     - Comma separated list of strings that represent the allowed extra SQL tokens accepted as components of a feature filter.
+     - ''
+     - WMS
 
    * - QUERY_STRING
      - The query string, normally passed by the web server. This variable can be
