@@ -129,25 +129,25 @@ Zoom in and see what the polygons look like. You will get something like this:
 
 Next one option to get points out of those polygons is to get their centroids:
 
-* Open :menuselection:`Vector --> Geometry tools --> Centroids`.
-* Set the polygon layer you just got as the input file for the tool.
-* Name the output as :kbd:`green_centroids.shp` inside the :kbd:`digitizing` folder.
-* Check :menuselection:`Add result to canvas`.
-* Run the tool to calculate the centroids for the polygons.
+#. Open :menuselection:`Vector --> Geometry tools --> Centroids`.
+#. Set :guilabel:`Input Layer` to  |polygonLayer| ``rautjarvi_green_polygon`` (the polygon layer you have just created)
+#. Set :guilabel:`Centroids` to :kbd:`green_centroids.shp` within the folder :kbd:`digitizing`
+#. |checkbox| :menuselection:`Open output file after running algorithm`
+#. :guilabel:`Run`. This will calculate the centroids for the polygons and add them to the project as a new layer.
 
 .. figure:: img/green_points.png
    :align: center
 
 |
 
-Now you can remove the :guilabel:`rautjarvi_green_polygon` layer from the TOC.
+Now you can remove the |polygonLayer| ``rautjarvi_green_polygon`` layer from the TOC.
 
-Change the symbology of the centroids layer as:
+Change the symbology of the centroids layer as follows:
 
-* Open the :guilabel:`Layer Properties` for :guilabel:`green_centroids`.
-* Go to the :guilabel:`Symbology` tab.
-* Set the :guilabel:`Unit` to Map unit.
-* Set the :guilabel:`Size` to 1.
+#. Open the :guilabel:`Layer Properties` for |pointLayer| ``green_centroids``.
+#. Go to the :guilabel:`Symbology` tab.
+#. Set :guilabel:`Size` to :kbd:`1.00` and choose :menuselection:`Map Units`
+
 
 It is not necessary to differentiate points from each other, you just need them
 to be there for the snapping tools to use them. You can use those points now to
@@ -170,21 +170,20 @@ the main roads (wide pink lines) and the lake:
 * Go to the :kbd:`digitizing` folder using your file manager browser.
 * Drag and drop the :kbd:`forest_stands.shp` vector file to your map.
 
-Change the new layer's symbology so that it will be easier to see what polygons
-have already been digitized:
+Change the new layer's symbology so that it will be easier to see the polygons
+have already been digitized. 
 
-* The filling of the polygon to green.
-* The polygons' borders to 1 mm.
-* and set the transparency to 50%.
+* Set :guilabel:`Fill color` to green - and change the :guilabel:`Opacity` to :kbd:`50%`
+* Select :guilabel:`Simple Fill` and set :guilabel:`Stroke width` to :kbd:`1.00 mm`.
 
 Now, if you remember past modules, we have to set up and activate the snapping options:
 
 #. Go to :menuselection:`Project --> Snapping options...`
-#. Check the ``green_centroids`` and ``forest_stands`` layers
-#. Set :guilabel:`Type` for each layer to |pointLayer| :guilabel:`Vertex`
+#. Check the |pointLayer| ``green_centroids`` and |polygonLayer| ``forest_stands`` layers
+#. Set :guilabel:`Type` for each layer to :guilabel:`Vertex`
 #. Set :guilabel:`Tolerance` for each layer to ``10``
 #. Set :guilabel:`Units` for each layer to :guilabel:`pixels`
-#. Check :guilabel:`Avoid Overlap` for the ``forest_stands`` layer
+#. |checkbox| Check :guilabel:`Avoid Overlap` for the ``forest_stands`` layer
 #. Press |topologicalEditing| :guilabel:`Topological editing`
 #. Choose |avoidIntersectionsLayers| :guilabel:`Follow Advanced Configuration`
 #. Close the pop-up
@@ -215,22 +214,23 @@ A few important things to note before you start digitizing:
 
 Now you can start digitizing:
 
-* Locate the forest stand number 357 in the map window.
-* Enable editing for the :kbd:`forest_stands.shp` layer.
-* Select the :guilabel:`Add feature` tool.
-* Start digitizing the stand :kbd:`357` by connecting some of the dots.
-* Note the pink crosses indicating the snapping.
+#.  Locate the forest stand number :kbd:`357` in the map window.
+#.  Select the ``forest_stands`` layer.
+#.  Click the |toggleEditing| :sup:`Toggle Editing` button to enable editing
+#.  Select |capturePolygon| :sup:`Add Polygon Feature` tool.
+#.  Start digitizing the stand :kbd:`357` by connecting some of the dots. Note the pink crosses indicating the snapping.
 
 .. figure:: img/dgitizing_357_1.png
    :align: center
 
 |
 
-* When you are done, right click to end digitizing that polygon.
-* Enter the forest stand :kbd:`id` (in this case 357).
-* Click :guilabel:`OK`.
+When you are done:
+#.  Right click to end digitizing that polygon.
+#.  Enter the forest stand :guilabel:`ID` within the form (in this case :kbd:`357`).
+#.  Click :guilabel:`OK`.
 
-If you were not prompted for the polygon :kbd:`id` when you finished digitizing it,
+If a form did not appear when you finished digitizing the polygon,
 go to :menuselection:`Settings --> Options --> Digitizing` and make sure that the
 :guilabel:`Suppress attribute form pop-up after feature creation` is not checked.
 
@@ -241,21 +241,21 @@ Your digitized polygon will look like this:
 
 |
 
-Now for the second polygon, pick up the stand number 358. Make sure that the
-:guilabel:`Avoid int.` is checked for the :kbd:`forest_stands` layer. This
-option does not allow intersecting polygons at digitizing, so that if you
-digitize  over an existing polygon, the new polygon will be trimmed to meet
-the border of the already existing polygons. You can use this characteristic
+Now for the second polygon, pick up the stand number 358. Make sure that |checkbox| 
+:guilabel:`Avoid overlaps` is checked for the ``forest_stands`` layer (as shown above). This
+option ensures polygons do not overlap. So, if you
+digitize over an existing polygon, the new polygon will be trimmed to meet
+the border of the existing polygons. You can use this option
 to automatically obtain a common border.
 
 * Begin digitizing the stand 358 at one of the common corners with the stand 357. 
-* Then continue normally until you get to the other common corner for both stands.
+* Continue normally until you get to the other common corner for both stands.
 * Finally, digitize a few points inside polygon 357 making sure that the common
   border is not intersected. See left image below.
 * Right click to finish editing the forest stand 358.
 * Enter the :kbd:`id` as 358.
-* Click :guilabel:`OK`, your new polygon should show a common border with the
-  stand 357 as you can see in the image on the right.
+* Click :guilabel:`OK`. Your new polygon should have a common border with the
+  stand 357 as you can see in the image below.
 
 .. figure:: img/dgitizing_358_5.png
    :align: center
@@ -263,7 +263,7 @@ to automatically obtain a common border.
 |
 
 The part of the polygon that was overlapping the existing polygon has been
-automatically trimmed out and you are left with a common border, as you intended
+automatically trimmed and you are left with a common border - as you intended
 it to be.
 
 
@@ -308,65 +308,73 @@ used to link the data from the text file to your vector file. You can see the
 metadata for this inventory data in the file :kbd:`rautjarvi_1994_legend.txt`
 in the same folder.
 
-* Open the :kbd:`.csv` in QGIS with the :menuselection:`Layer --> Add Delimited
-  Text Layer...` tool. In the dialog, set it as follows:
+Now add this file into the project:
+
+#.  Use the |addDelimitedTextLayer| :sup:`Add Delimted Text layer` tool. This is accessed via :menuselection:`Layer --> Add Layer --> Add Delimited Text Layer`. 
+#.  Set details in the dialog as follows:
 
 .. figure:: img/inventory_csv_import.png
    :align: center
 
 |
 
-To add the data from the :kbd:`.csv` file:
+To link the data from the :kbd:`.csv` file with the digitized polygons, create a join between the two layers:
 
-* Open the Layer Properties for the :kbd:`forest_stands` layer.
-* Go to the :guilabel:`Joins` tab.
-* Click the plus sign on the bottom of the dialog box.
-* Select :kbd:`rautjarvi_1994.csv` as the :guilabel:`Join layer` and :kbd:`ID`
-  as the :guilabel:`Join` field.
-* Make sure that the :guilabel:`Target` field is also set to :kbd:`id`.
-* Click :guilabel:`OK` two times.
+#.  Open the Layer Properties for the ``forest_stands`` layer.
+#.  Go to the :guilabel:`Joins` tab.
+#.  Click |symbologyAdd| :sup:`Add new join` on the bottom of the dialog box.
+#.  Select :kbd:`rautjarvi_1994.csv` as the :guilabel:`Join layer` 
+#.  Set the :guilabel:`Join` field to :kbd:`ID`
+#.  Set the :guilabel:`Target` field to :kbd:`ID`
+#.  Click :guilabel:`OK` two times.
 
 The data from the text file should be now linked to your vector file. To see
-what has happened, open the attribute table for the :kbd:`forest_stands` layer.
+what has happened, select the ``forest_stands`` layer and use |openTable| :sup:`Open Attribute Table`.
 You can see that all the attributes from the inventory data file are now linked
 to your digitized vector layer.
 
-|basic| |TY| Renaming Attribute Names and Adding Area and Perimeter 
--------------------------------------------------------------------------------
+You will see that the field names are prefixed with :kbd:`rautjarvi_1994_`. To change this:
+
+#.  Open the Layer Properties for the ``forest_stands`` layer.
+#.  Go to the :guilabel:`Joins` tab.
+#.  Select :guilabel:`Join Layer` :kbd:`rautjarvi_1994` 
+#.  Click the |toggleEditing| :sup:`Edit selected join` button to enable editing
+#.  |checkbox| Check :guilabel:`Custom field name prefix`
+#.  Change the prefix as required (or remove entirely)
+
+.. figure:: img/join_csv.png
+   :align: center
+
+|
 
 The data from the :kbd:`.csv` file is just linked to your vector file. To make
 this link permanent, so that the data is actually recorded to the vector file
-you need to save the :kbd:`forest_stands` layer as a new vector file. Close the
-attribute table and right click the forest_stands layer to save it as
-:kbd:`forest_stands_1994.shp`.
+you need to save the :kbd:`forest_stands` layer as a new vector file. To do this:
 
-Open your new :kbd:`forest_stands_1994.shp` in your map if you did not added yet.
-Then open the attribute table. You notice that the names of the columns that you
-just added are no very useful. To solve this:
+#.  Right click on ``forest_stands`` layer
+#.  Choose :menuselection:`Export -> Save features as`
+#.  Set :guilabel:`Format` to :kbd:`ESRI Shapefile`
+#.  Set file name to :kbd:`forest_stands_1994.shp`
+#.  To include the new file as a layer in the project |checkbox| Check :guilabel:`Add saved file to map`
 
-* Add the plugin :guilabel:`Table Manager` as you have done with other plugins before.
-* Make sure the plugin is activated.
-* In the TOC select the layer :kbd:`forest_stands_1994.shp`.
-* Then, go to :menuselection:`Vector --> Table Manager --> Table manager`.
-* Use the dialogue box to edit the names of the columns to match the ones in the :kbd:`.csv` file.
-
-.. figure:: img/forestry_table_manager.png
+.. figure:: img/save_vector_layer.png
    :align: center
 
-* Click on :guilabel:`Save`.
-* Select :guilabel:`Yes` to keep the layer style.
-* Close the :guilabel:`Table Manager` dialogue.
+|
+
+|basic| |TY| Adding Area and Perimeter 
+-------------------------------------------------------------------------------
 
 To finish gathering the information related to these forest stands, you might
 calculate the area and the perimeter of the stands. You calculated areas for
 polygons in :doc:`../complete_analysis/analysis_exercise`. Go back to that
-lesson if you need to and calculate the areas for the forest stands, name the
-new attribute :kbd:`Area` and make sure that the values calculated are in hectares.
+lesson if you need to and calculate the areas for the forest stands. Name the
+new attribute :kbd:`Area` and make sure that the values calculated are in hectares. You could also do the same for the perimeter.
 
-Now your :kbd:`forest_stands_1994.shp` layer is ready and packed with all the
+Now your ``forest_stands_1994`` layer is ready and packed with all the
 available information.
 
-Save your project to keep the current map presentation in case you need to come
+Save your project to keep the current map layers in case you need to come
 back later to it.
 
 |IC|
@@ -400,4 +408,20 @@ aerial photos and the addition of some relevant information to your dataset.
 .. |topologicalEditing| image:: /static/common/mIconTopologicalEditing.png
    :width: 1.5em
 .. |avoidIntersectionsLayers| image:: /static/common/mActionAvoidIntersectionsLayers.png
+   :width: 1.5em
+.. |pointLayer| image:: /static/common/mIconPointLayer.png
+   :width: 1.5em
+.. |polygonLayer| image:: /static/common/mIconPolygonLayer.png
+   :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |toggleEditing| image:: /static/common/mActionToggleEditing.png
+   :width: 1.5em
+.. |capturePolygon| image:: /static/common/mActionCapturePolygon.png
+   :width: 1.5em
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |addDelimitedTextLayer| image:: /static/common/mActionAddDelimitedTextLayer.png
+   :width: 1.5em
+.. |openTable| image:: /static/common/mActionOpenTable.png
    :width: 1.5em
