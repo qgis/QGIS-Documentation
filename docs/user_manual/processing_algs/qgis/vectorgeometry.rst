@@ -2239,7 +2239,9 @@ Advanced parameters
      - Name
      - Type
      - Description
-   * - **Keep disjoint features separate** |326|
+   * - **Keep disjoint features separate**
+
+       |326|
      - ``SEPARATE_DISJOINT``
      - [boolean]
 
@@ -2342,7 +2344,9 @@ Parameters
        Default: 1.0
      - Scaling value: the band values are multiplied
        by this value.
-   * - **Offset** |328|
+   * - **Offset**
+
+       |328|
      - ``OFFSET``
      - [number |dataDefine|]
 
@@ -3312,6 +3316,8 @@ Parameters
      - [vector: any]
      - Input vector layer
    * - **Repair method**
+
+       |328|
      - ``METHOD``
      - [enumeration]
 
@@ -6042,7 +6048,9 @@ Parameters
        Default: 1.0
      - Scaling value: the band values are multiplied
        by this value.
-   * - **Offset** |328|
+   * - **Offset**
+
+       |328|
      - ``OFFSET``
      - [number |dataDefine|]
 
