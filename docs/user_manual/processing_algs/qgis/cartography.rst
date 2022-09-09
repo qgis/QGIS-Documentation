@@ -651,7 +651,9 @@ Advanced parameters
 
        Default: False
      - Determines if vectorial data should be left as vectors
-   * - **Always export as raster** |328|
+   * - **Always export as raster**
+
+       |328|
      - ``FORCE_RASTER``
      - [boolean]
 
@@ -692,7 +694,9 @@ Advanced parameters
 
        * 0 - Always export text as paths (recommended)
        * 1 - Always export texts as text objects
-   * - **Image compression** |328|
+   * - **Image compression**
+
+       |328|
      - ``IMAGE_COMPRESSION``
      - [enumeration]
 
@@ -823,7 +827,9 @@ Advanced parameters
 
        Default: False
      - Determines if vectorial data should be left as vectors
-   * - **Always export as raster** |328|
+   * - **Always export as raster**
+
+       |328|
      - ``FORCE_RASTER``
      - [boolean]
 
@@ -864,7 +870,9 @@ Advanced parameters
 
        * 0 - Always export text as paths (recommended)
        * 1 - Always export texts as text objects
-   * - **Image compression** |328|
+   * - **Image compression**
+
+       |328|
      - ``IMAGE_COMPRESSION``
      - [enumeration]
 
@@ -1073,7 +1081,9 @@ Advanced parameters
 
        Default: False
      - Determines if vectorial data should be left as vectors
-   * - **Always export as raster** |328|
+   * - **Always export as raster**
+
+       |328|
      - ``FORCE_RASTER``
      - [enumeration]
 
@@ -1114,7 +1124,9 @@ Advanced parameters
 
        * 0 - Always export text as paths (recommended)
        * 1 - Always export texts as text objects
-   * - **Image compression** |328|
+   * - **Image compression**
+
+       |328|
      - ``IMAGE_COMPRESSION``
      - [enumeration]
 
