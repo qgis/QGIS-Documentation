@@ -916,7 +916,7 @@ Returns the Well-Known Text (WKT) representation of the geometry without SRID me
 $geometry
 .........
 
-Returns the geometry of the current feature. Can be used for processing with other functions.
+Returns the geometry of the current feature. Can be used for processing with other functions. **WARNING: This function is deprecated. It is recommended to use the replacement @geometry variable instead.**
 
 .. list-table::
    :widths: 15 85

@@ -88,7 +88,7 @@ Allows the target feature to be specified.
 $currentfeature
 ...............
 
-Returns the current feature being evaluated. This can be used with the 'attribute' function to evaluate attribute values from the current feature.
+Returns the current feature being evaluated. This can be used with the 'attribute' function to evaluate attribute values from the current feature. **WARNING: This function is deprecated. It is recommended to use the replacement @feature variable instead.**
 
 .. list-table::
    :widths: 15 85
@@ -226,7 +226,7 @@ Returns the feature with an id on a layer.
 $id
 ...
 
-Returns the feature id of the current row.
+Returns the feature id of the current row. **WARNING: This function is deprecated. It is recommended to use the replacement @id variable instead.**
 
 .. list-table::
    :widths: 15 85
