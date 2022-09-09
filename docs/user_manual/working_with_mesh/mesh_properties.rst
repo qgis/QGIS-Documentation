@@ -97,7 +97,7 @@ Supported formats
 =================
 
 QGIS accesses mesh data using the `MDAL drivers <https://github.com/lutraconsulting/MDAL>`_,
-and natively supports a `variety of formats <https://github.com/lutraconsulting/MDAL#supported-formats>`_.
+and natively supports a `variety of formats <https://github.com/lutraconsulting/MDAL#supported-formats>`__.
 Whether QGIS can edit a mesh layer depends on the format and the mesh
 structure type.
 
@@ -583,6 +583,8 @@ if they still are necessary) or create a copy (only geometries) of the layer.
 
 .. note:: QGIS does not allow to digitize edges on mesh layers.
    Only vertices and faces are mesh elements that can be created.
+   Also not all supported mesh formats can be edited in QGIS
+   (see `permissions <https://github.com/lutraconsulting/MDAL#supported-formats>`__).
 
 
 Overview of the mesh digitizing tools
