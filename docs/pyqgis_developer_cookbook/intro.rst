@@ -197,6 +197,29 @@ start QGIS from the command line using ``qgis --code qgis_init.py``.
 Code provided via ``--code`` is executed late in the QGIS initialization
 phase, after the application components have been loaded.
 
+Additional arguments for Python
+-------------------------------
+
+To provide additional arguments for your ``--code`` script or for
+other python code that is executed, you can use the ``--py-args``
+argument. Any argument coming after ``--py-args`` and before a
+``--`` arg (if present) will be passed to Python but ignored by
+the QGIS application itself.
+
+In the following example, ``myfile.tif`` will be available via
+``sys.argv`` in Python but will not be loaded by QGIS. Whereas
+``otherfile.tif`` will be loaded by QGIS but is not present in
+``sys.argv``.
+
+.. code-block:: bash
+  qgis --code qgis_init.py --py-args myfile.tif -- otherfile.tif
+  
+If you want access to every command line parameter from within
+Python, you can use ``QCoreApplication.arguments()``
+
+.. code-block:: python
+  QgsApplication.instance().arguments()
+
 .. _pythonapplications:
 
 Python Applications
