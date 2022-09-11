@@ -212,12 +212,14 @@ In the following example, ``myfile.tif`` will be available via
 ``sys.argv``.
 
 .. code-block:: bash
+
   qgis --code qgis_init.py --py-args myfile.tif -- otherfile.tif
   
 If you want access to every command line parameter from within
 Python, you can use ``QCoreApplication.arguments()``
 
 .. code-block:: python
+
   QgsApplication.instance().arguments()
 
 .. _pythonapplications:
