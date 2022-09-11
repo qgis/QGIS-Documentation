@@ -191,7 +191,7 @@ The ``--code`` parameter
 ------------------------
 
 You can provide custom code to execute as startup paramteter
-to QGIS. To do so, create a python file ``qgis_init.py`` to execute and
+to QGIS. To do so, create a python file, for example ``qgis_init.py``, to execute and
 start QGIS from the command line using ``qgis --code qgis_init.py``.
 
 Code provided via ``--code`` is executed late in the QGIS initialization
