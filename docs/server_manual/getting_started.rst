@@ -420,12 +420,12 @@ is much easier to setup than **spawn-fcgi** but it's much slower.
    .. code-block:: nginx
       :linenos:
 
-     location /qgisserver {
-         gzip           off;
-         include        fastcgi_params;
-         fastcgi_pass   unix:/var/run/fcgiwrap.socket;
-         fastcgi_param  SCRIPT_FILENAME /usr/lib/cgi-bin/qgis_mapserv.fcgi;
-     }
+       location /qgisserver {
+           gzip           off;
+           include        fastcgi_params;
+           fastcgi_pass   unix:/var/run/fcgiwrap.socket;
+           fastcgi_param  SCRIPT_FILENAME /usr/lib/cgi-bin/qgis_mapserv.fcgi;
+       }
 
 #. Finally, restart NGINX and **fcgiwrap** to take into account the new configuration:
 
