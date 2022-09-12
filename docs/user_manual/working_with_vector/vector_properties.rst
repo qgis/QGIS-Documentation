@@ -747,34 +747,47 @@ dialog for the rivers layer of the QGIS sample dataset.
 Point displacement Renderer
 ............................
 
-The |pointDisplacementSymbol| :guilabel:`Point Displacement` renderer works to
-visualize all features of a point layer, even if they have the same location.
-To do this, the renderer takes the points falling in a given :guilabel:`Distance`
-tolerance from each other and places them around their barycenter following
-different :guilabel:`Placement methods`:
+The |pointDisplacementSymbol| :guilabel:`Point Displacement` renderer takes
+the point features falling in a given distance tolerance from each other and
+places their symbols around their barycenter, following different placement
+methods. This can be a convenient way to visualize all the features of a point
+layer, even if they have the same location (e.g. amenities in a building).
 
-* **Ring**: places all the features on a circle whose radius depends on the
-  number of features to display.
-* **Concentric rings**: uses a set of concentric circles to show the features.
-* **Grid**: generates a regular grid with a point symbol at each intersection.
+To configure a point displacement renderer, you have to:
 
-The :guilabel:`Center symbol` widget helps you customize the symbol and color
-of the middle point.
-For the distributed points symbols, you can apply any of the *No symbols*,
-*Single symbol*, *Categorized*, *Graduated* or *Rule-based* renderer using the
-:guilabel:`Renderer` drop-down list and customize them using the
-:guilabel:`Renderer Settings...` button.
+#. Set the :guilabel:`Center symbol`: how the virtual point at the center will
+   look like
+#. Select the :guilabel:`Renderer` type: how you want to classify features
+   in the layer (single, categorized, rule-based...)
+#. Press the :guilabel:`Renderer Settings...` button to configure features'
+   symbology according to the selected renderer
+#. Indicate the :guilabel:`Distance` tolerance in which close features are
+   considered overlapping and then displaced over the same virtual point.
+   Supports common symbol units.
+#. Configure the :guilabel:`Placement methods`:
 
-While the minimal spacing of the :guilabel:`Displacement lines` depends on the
-point symbol renderer's, you can still customize some of its settings such as
-the :guilabel:`Stroke width`, :guilabel:`Stroke color` and :guilabel:`Size
-adjustment` (eg, to add more spacing between the rendered points).
+   * **Ring**: places all the features on a circle whose radius depends on the
+     number of features to display.
+   * **Concentric rings**: uses a set of concentric circles to show the features.
+   * **Grid**: generates a regular grid with a point symbol at each intersection.
 
-Use the :guilabel:`Labels` group options to perform points labeling: the labels
-are placed near the displaced position of the symbol, and not at the feature
-real position. Other than the :guilabel:`Label attribute`, :guilabel:`Label
-font` and :guilabel:`Label color`, you can set the :guilabel:`Minimum map
-scale` to display the labels.
+#. Displaced symbols are placed on the :guilabel:`Displacement lines`.
+   While the minimal spacing of the displacement lines depends on the
+   point symbols renderer, you can still customize some of their settings such as
+   the :guilabel:`Stroke width`, :guilabel:`Stroke color` and :guilabel:`Size
+   adjustment` (e.g., to add more spacing between the rendered points).
+
+#. Use the :guilabel:`Labels` group options to perform points labeling: the labels
+   are placed near the displaced symbol, and not at the feature real position.
+
+   #. Select the :guilabel:`Label attribute`: a field of the layer to use for labeling
+   #. Indicate the :guilabel:`Label font` properties and size
+   #. Pick a :guilabel:`Label color`
+   #. Set a :guilabel:`Label distance factor`: for each point feature, offsets
+      the label from the symbol center proportionally to the symbol's diagonal size.
+   #. Turn on |unchecked| :guilabel:`Use scale dependent labeling`
+      if you want to display labels only on scales larger than a given
+      :guilabel:`Minimum map scale`.
 
 .. _figure_displacement_symbology:
 
@@ -802,23 +815,27 @@ Point Cluster Renderer
 Unlike the |pointDisplacementSymbol| :guilabel:`Point Displacement` renderer
 which blows up nearest or overlaid point features placement, the |pointClusterSymbol|
 :guilabel:`Point Cluster` renderer groups nearby points into a single
-rendered marker symbol. Based on a specified :guilabel:`Distance`, points
-that fall within from each others are merged into a single symbol.
+rendered marker symbol. Points that fall within a specified distance
+from each others are merged into a single symbol.
 Points aggregation is made based on the closest group being formed, rather
 than just assigning them the first group within the search distance.
 
 From the main dialog, you can:
 
-* set the symbol to represent the point cluster in the :guilabel:`Cluster symbol`;
-  the default rendering displays the number of aggregated features thanks to the
-  ``@cluster_size`` :ref:`variable <general_tools_variables>` on Font marker
-  symbol layer.
-* use the :guilabel:`Renderer` drop-down list to apply any of the other feature
-  rendering types to the layer (single, categorized, rule-based...). Then, push
-  the :guilabel:`Renderer Settings...` button to configure features' symbology as usual.
-  Note that this renderer is only visible on features that are not clustered.
-  Also, when the symbol color is the same for all the point features inside a
-  cluster, that color sets the ``@cluster_color`` variable of the cluster.
+#. Set the symbol to represent the point cluster in the :guilabel:`Cluster symbol`;
+   the default rendering displays the number of aggregated features thanks to the
+   ``@cluster_size`` :ref:`variable <general_tools_variables>` on Font marker
+   symbol layer.
+#. Select the :guilabel:`Renderer` type, i.e. how you want to classify features
+   in the layer (single, categorized, rule-based...)
+#. Press the :guilabel:`Renderer Settings...` button to configure features' symbology
+   as usual. Note that this symbology is only visible on features that are not clustered,
+   the :guilabel:`Cluster symbol` being applied otherwise. 
+   Also, when all the point features in a cluster belong to the same rendering class,
+   and thus would be applied the same color, that color represents the ``@cluster_color``
+   variable of the cluster.
+#. Indicate the maximal :guilabel:`Distance` to consider for clustering features.
+   Supports common symbol units.
 
 .. _figure_cluster_symbology:
 
@@ -835,7 +852,7 @@ From the main dialog, you can:
  Use instead the Processing :ref:`qgiskmeansclustering` or
  :ref:`qgisdbscanclustering` algorithm if you want to create cluster-based
  features.
-
+ 
 .. index:: Classes
    single: Symbology; Merged Features renderer
 .. _merged_renderer:
