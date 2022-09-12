@@ -325,17 +325,18 @@ FastCGI wrappers
 spawn-fcgi
 ^^^^^^^^^^
 
-If you want to use `spawn-fcgi <https://redmine.lighttpd.net/projects/spawn-fcgi/wiki>`_,
-the first step is to install the package:
+If you want to use `spawn-fcgi <https://redmine.lighttpd.net/projects/spawn-fcgi/wiki>`_:
 
-.. code-block:: bash
+#. The first step is to install the package:
 
-  apt install spawn-fcgi
+   .. code-block:: bash
+
+     apt install spawn-fcgi
 
 
-Then, introduce the following block in your NGINX server configuration:
+#. Then, introduce the following block in your NGINX server configuration:
 
-.. code-block:: nginx
+   .. code-block:: nginx
 
      location /qgisserver {
          gzip           off;
@@ -343,20 +344,20 @@ Then, introduce the following block in your NGINX server configuration:
          fastcgi_pass   unix:/var/run/qgisserver.socket;
      }
 
-And restart NGINX to take into account the new configuration:
+#. And restart NGINX to take into account the new configuration:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-  systemctl restart nginx
+     systemctl restart nginx
 
-Finally, considering that there is no default service file for spawn-fcgi, you
-have to manually start QGIS Server in your terminal:
+#. Finally, considering that there is no default service file for spawn-fcgi,
+   you have to manually start QGIS Server in your terminal:
 
-.. code-block:: bash
+   .. code-block:: bash
 
- spawn-fcgi -s /var/run/qgisserver.socket \
-                 -U www-data -G www-data -n \
-                 /usr/lib/cgi-bin/qgis_mapserv.fcgi
+    spawn-fcgi -s /var/run/qgisserver.socket \
+                    -U www-data -G www-data -n \
+                    /usr/lib/cgi-bin/qgis_mapserv.fcgi
 
 QGIS Server is now available at http://qgis.demo/qgisserver.
 
@@ -367,10 +368,11 @@ QGIS Server is now available at http://qgis.demo/qgisserver.
     ``export QGIS_SERVER_LOG_STDERR=1``
 
 Of course, you can add an init script to start QGIS Server at boot time or whenever you want.
-For example with **systemd**, edit the file
-:file:`/etc/systemd/system/qgis-server.service` with this content:
+For example with **systemd**:
 
-.. code-block:: ini
+#. Edit the file :file:`/etc/systemd/system/qgis-server.service` with this content:
+
+   .. code-block:: ini
 
     [Unit]
     Description=QGIS server
@@ -391,11 +393,11 @@ For example with **systemd**, edit the file
     [Install]
     WantedBy=multi-user.target
 
-Then enable and start the service:
+#. Then enable and start the service:
 
-.. code-block:: bash
+   .. code-block:: bash
 
- systemctl enable --now qgis-server
+    systemctl enable --now qgis-server
 
 .. warning::
 
@@ -406,16 +408,17 @@ fcgiwrap
 
 Using `fcgiwrap <https://www.nginx.com/resources/wiki/start/topics/examples/fcgiwrap/>`_
 is much easier to setup than **spawn-fcgi** but it's much slower.
-You first have to install the corresponding package:
 
-.. code-block:: bash
+#. You first have to install the corresponding package:
 
- apt install fcgiwrap
+   .. code-block:: bash
 
-Then, introduce the following block in your NGINX server configuration:
+    apt install fcgiwrap
 
-.. code-block:: nginx
-   :linenos:
+#. Then, introduce the following block in your NGINX server configuration:
+
+   .. code-block:: nginx
+      :linenos:
 
      location /qgisserver {
          gzip           off;
@@ -424,123 +427,121 @@ Then, introduce the following block in your NGINX server configuration:
          fastcgi_param  SCRIPT_FILENAME /usr/lib/cgi-bin/qgis_mapserv.fcgi;
      }
 
-Finally, restart NGINX and **fcgiwrap** to take into account the new configuration:
+#. Finally, restart NGINX and **fcgiwrap** to take into account the new configuration:
 
-.. code-block:: bash
+   .. code-block:: bash
 
- systemctl restart nginx
- systemctl restart fcgiwrap
+    systemctl restart nginx
+    systemctl restart fcgiwrap
 
 QGIS Server is now available at http://qgis.demo/qgisserver.
-
 
 
 Systemd
 .......
 
-QGIS Server needs a running X Server to be fully usable, in particular for printing. In the case you already have a
-running X Server, you can use systemd services.
+QGIS Server needs a running X Server to be fully usable, in particular for printing.
+In the case you already have a running X Server, you can use systemd services.
 
-This method, to deploy QGIS Server, relies on two Systemd units:
+This method, to deploy QGIS Server, relies on two Systemd units to configure:
+a `Socket unit <https://www.freedesktop.org/software/systemd/man/systemd.socket.html>`_
+and a `Service unit <https://www.freedesktop.org/software/systemd/man/systemd.service.html>`_.
 
-* a `Socket unit <https://www.freedesktop.org/software/systemd/man/systemd.socket.html>`_
-* and a `Service unit <https://www.freedesktop.org/software/systemd/man/systemd.service.html>`_.
+#. The **QGIS Server Socket unit** defines and creates a file system socket,
+   used by NGINX to start and communicate with QGIS Server.
+   The Socket unit has to be configured with ``Accept=false``, meaning that the
+   calls to the ``accept()`` system call are delegated to the process created by
+   the Service unit.
+   It is located in :file:`/etc/systemd/system/qgis-server@.socket`, which is actually
+   a template:
 
-The **QGIS Server Socket unit** defines and creates a file system socket,
-used by NGINX to start and communicate with QGIS Server.
-The Socket unit has to be configured with ``Accept=false``, meaning that the
-calls to the ``accept()`` system call are delegated to the process created by
-the Service unit.
-It is located in :file:`/etc/systemd/system/qgis-server@.socket`, which is actually
-a template:
+   .. code-block:: ini
 
-.. code-block:: ini
+    [Unit]
+    Description=QGIS Server Listen Socket (instance %i)
 
- [Unit]
- Description=QGIS Server Listen Socket (instance %i)
+    [Socket]
+    Accept=false
+    ListenStream=/var/run/qgis-server-%i.sock
+    SocketUser=www-data
+    SocketGroup=www-data
+    SocketMode=0600
 
- [Socket]
- Accept=false
- ListenStream=/var/run/qgis-server-%i.sock
- SocketUser=www-data
- SocketGroup=www-data
- SocketMode=0600
+    [Install]
+    WantedBy=sockets.target
 
- [Install]
- WantedBy=sockets.target
+#. Now enable and start sockets:
 
-Now enable and start sockets:
+   .. code-block:: bash
 
-.. code-block:: bash
+    for i in 1 2 3 4; do systemctl enable --now qgis-server@$i.socket; done
 
- for i in 1 2 3 4; do systemctl enable --now qgis-server@$i.socket; done
+#. The **QGIS Server Service unit** defines and starts the QGIS Server process.
+   The important part is that the Service process’ standard input is connected to
+   the socket defined by the Socket unit.
+   This has to be configured using ``StandardInput=socket`` in the Service unit
+   configuration located in :file:`/etc/systemd/system/qgis-server@.service`:
 
-The **QGIS Server Service unit** defines and starts the QGIS Server process.
-The important part is that the Service process’ standard input is connected to
-the socket defined by the Socket unit.
-This has to be configured using ``StandardInput=socket`` in the Service unit
-configuration located in :file:`/etc/systemd/system/qgis-server@.service`:
+   .. code-block:: ini
 
-.. code-block:: ini
+    [Unit]
+    Description=QGIS Server Service (instance %i)
 
- [Unit]
- Description=QGIS Server Service (instance %i)
+    [Service]
+    User=www-data
+    Group=www-data
+    StandardOutput=null
+    StandardError=journal
+    StandardInput=socket
+    ExecStart=/usr/lib/cgi-bin/qgis_mapserv.fcgi
+    EnvironmentFile=/etc/qgis-server/env
 
- [Service]
- User=www-data
- Group=www-data
- StandardOutput=null
- StandardError=journal
- StandardInput=socket
- ExecStart=/usr/lib/cgi-bin/qgis_mapserv.fcgi
- EnvironmentFile=/etc/qgis-server/env
+    [Install]
+    WantedBy=multi-user.target
 
- [Install]
- WantedBy=multi-user.target
+   .. note::
+    The QGIS Server :ref:`environment variables <qgis-server-envvar>`
+    are defined in a separate file, :file:`/etc/qgis-server/env`.
+    It could look like this:
 
-.. note::
- The QGIS Server :ref:`environment variables <qgis-server-envvar>`
- are defined in a separate file, :file:`/etc/qgis-server/env`.
- It could look like this:
+    .. code-block:: make
 
- .. code-block:: make
+      QGIS_PROJECT_FILE=/etc/qgis/myproject.qgs
+      QGIS_SERVER_LOG_STDERR=1
+      QGIS_SERVER_LOG_LEVEL=3
 
-   QGIS_PROJECT_FILE=/etc/qgis/myproject.qgs
-   QGIS_SERVER_LOG_STDERR=1
-   QGIS_SERVER_LOG_LEVEL=3
+#. Now start socket service:
 
-Now start socket service:
+   .. code-block:: bash
 
-.. code-block:: bash
+    for i in 1 2 3 4; do systemctl enable --now qgis-server@$i.service; done
 
- for i in 1 2 3 4; do systemctl enable --now qgis-server@$i.service; done
+#. Finally, for the NGINX HTTP server, let's introduce the configuration for this setup:
 
-Finally, for the NGINX HTTP server, lets introduce the configuration for this setup:
+   .. code-block:: nginx
 
-.. code-block:: nginx
-
- upstream qgis-server_backend {
-    server unix:/var/run/qgis-server-1.sock;
-    server unix:/var/run/qgis-server-2.sock;
-    server unix:/var/run/qgis-server-3.sock;
-    server unix:/var/run/qgis-server-4.sock;
- }
-
- server {
-    …
-
-    location /qgis-server {
-        gzip off;
-        include fastcgi_params;
-        fastcgi_pass qgis-server_backend;
+    upstream qgis-server_backend {
+       server unix:/var/run/qgis-server-1.sock;
+       server unix:/var/run/qgis-server-2.sock;
+       server unix:/var/run/qgis-server-3.sock;
+       server unix:/var/run/qgis-server-4.sock;
     }
- }
 
-Now restart NGINX for the new configuration to be taken into account:
+    server {
+       …
 
-.. code-block:: bash
+       location /qgis-server {
+           gzip off;
+           include fastcgi_params;
+           fastcgi_pass qgis-server_backend;
+       }
+    }
 
- systemctl restart nginx
+#. Now restart NGINX for the new configuration to be taken into account:
+
+   .. code-block:: bash
+
+    systemctl restart nginx
 
 Thanks to Oslandia for sharing `their tutorial <https://oslandia.com/en/2018/11/23/deploying-qgis-server-with-systemd/>`_.
 
@@ -555,72 +556,65 @@ to have a virtual X environment.
 If you're running the Server in graphic/X11 environment then there is no need to install xvfb.
 More info at https://www.itopen.it/qgis-server-setup-notes/.
 
-To install the package:
+#. To install the package:
 
-.. code-block:: bash
+   .. code-block:: bash
 
- apt install xvfb
+    apt install xvfb
 
-Create the service file, :file:`/etc/systemd/system/xvfb.service`, with this content:
+#. Create the service file, :file:`/etc/systemd/system/xvfb.service`, with this content:
 
-.. code-block:: ini
+   .. code-block:: ini
 
-  [Unit]
-  Description=X Virtual Frame Buffer Service
-  After=network.target
+     [Unit]
+     Description=X Virtual Frame Buffer Service
+     After=network.target
 
-  [Service]
-  ExecStart=/usr/bin/Xvfb :99 -screen 0 1024x768x24 -ac +extension GLX +render -noreset
+     [Service]
+     ExecStart=/usr/bin/Xvfb :99 -screen 0 1024x768x24 -ac +extension GLX +render -noreset
 
-  [Install]
-  WantedBy=multi-user.target
+     [Install]
+     WantedBy=multi-user.target
 
-Enable, start and check the status of the ``xvfb.service``:
+#. Enable, start and check the status of the ``xvfb.service``:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   systemctl enable --now xvfb.service
-   systemctl status xvfb.service
+      systemctl enable --now xvfb.service
+      systemctl status xvfb.service
 
-Then, according to your HTTP server, you should configure the **DISPLAY**
-parameter or directly use **xvfb-run**.
+#. Then, according to your HTTP server, you should configure the **DISPLAY**
+   parameter or directly use **xvfb-run**.
 
-With Apache
-...........
+   * Using Apache:
 
-Then you can configure the **DISPLAY** parameter.
+     #. Add to your *Fcgid* configuration (see :ref:`httpserver`):
 
-With Apache you just add to your *FastCGI* configuration (see above):
+        .. code-block:: apache
 
-.. code-block:: apache
+          FcgidInitialEnv DISPLAY       ":99"
 
-  FcgidInitialEnv DISPLAY       ":99"
+     #. Restart Apache for the new configuration to be taken into account:
 
+        .. code-block:: bash
 
-Now restart Apache for the new configuration to be taken into account:
+          systemctl restart apache2
 
-.. code-block:: bash
+   * Using NGINX
 
-  systemctl restart apache2
+     * With spawn-fcgi using ``xvfb-run``:
 
-With NGINX
-..........
+       .. code-block:: bash
 
-Then you can directly use **xvfb-run** or configure the **DISPLAY** parameter.
+        xvfb-run /usr/bin/spawn-fcgi -f /usr/lib/cgi-bin/qgis_mapserv.fcgi \
+                                     -s /tmp/qgisserver.socket \
+                                     -G www-data -U www-data -n
 
-* With spawn-fcgi using ``xvfb-run``:
+     * With the **DISPLAY** environment variable in the HTTP server configuration.
 
-  .. code-block:: bash
+       .. code-block:: nginx
 
-   xvfb-run /usr/bin/spawn-fcgi -f /usr/lib/cgi-bin/qgis_mapserv.fcgi \
-                                -s /tmp/qgisserver.socket \
-                                -G www-data -U www-data -n
-
-* With the **DISPLAY** environment variable in the HTTP server configuration.
-
-  .. code-block:: nginx
-
-   fastcgi_param  DISPLAY       ":99";
+        fastcgi_param  DISPLAY       ":99";
 
 Installation on Windows
 =======================
