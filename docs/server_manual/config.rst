@@ -77,6 +77,11 @@ several ways to define these variables. This is fully described in
      - ''
      - All
 
+   * - QGIS_SERVER_ALLOWED_EXTRA_SQL_TOKENS
+     - Comma separated list of strings that represent the allowed extra SQL tokens accepted as components of a feature filter.
+     - ''
+     - WMS
+
    * - QGIS_SERVER_API_RESOURCES_DIRECTORY
      - Base directory for all OGC API (such as OAPIF/WFS3) static resources (HTML
        templates, CSS, JS, ...)
@@ -106,6 +111,11 @@ several ways to define these variables. This is fully described in
        Set this QGIS project flag to not load layouts.
      - false
      - WMS
+
+   * - QGIS_SERVER_FORCE_READONLY_LAYERS
+     - Force QGIS Server to open all layers in a read only mode
+     - false
+     - All
 
    * - QGIS_SERVER_IGNORE_BAD_LAYERS
      - "Bad" layers are layers that cannot be loaded. The default behavior of QGIS Server
@@ -242,11 +252,6 @@ several ways to define these variables. This is fully described in
      - Maximum height/width for a WMS request. The most conservative between this and the project one is used.
        If the value is ``-1``, it means that there is no maximum set.
      - -1
-     - WMS
-     
-   * - QGIS_SERVER_ALLOWED_EXTRA_SQL_TOKENS
-     - Comma separated list of strings that represent the allowed extra SQL tokens accepted as components of a feature filter.
-     - ''
      - WMS
 
    * - QUERY_STRING
