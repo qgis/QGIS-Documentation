@@ -69,10 +69,11 @@ You can use the following options:
   plugins in early stages of development, which are generally unsuitable for
   production use. For these plugins, you can install either the stable or
   the experimental version, and at any moment switch from one to the other.
-* |checkbox| :guilabel:`Show also Deprecated Plugins`. Because they use
-  functions that are no longer available in QGIS, these plugins are set
-  deprecated and generally unsuitable for production use. They are grayed
-  in the plugins list.
+* |checkbox| :guilabel:`Show also Deprecated Plugins`. These plugins are
+  usually unmaintained because they have replacement functions in QGIS,
+  a lack of maintainers, they rely on functions that are no longer available
+  in QGIS... They are generally unsuitable for production use and appear
+  grayed in the plugins list.
 
 By default, in the :guilabel:`Plugin Repositories` section, QGIS provides
 you with its official plugin repository with the URL
@@ -110,7 +111,7 @@ available tabs can be:
 
 * |showPluginManager| :guilabel:`All`: shows all the available plugins in
   the enabled repositories
-* |plugin-installed| :guilabel:`Installed`: shows both the plugins you installed
+* |pluginInstalled| :guilabel:`Installed`: shows both the plugins you installed
   and the core plugins that are installed by default and you can not uninstall
 * |plugin| :guilabel:`Not installed`: shows uninstalled or not yet installed
   plugins in the enabled repositories
@@ -212,8 +213,6 @@ directly from their repository. Encrypted files are supported.
 .. |installPluginFromZip| image:: /static/common/mActionInstallPluginFromZip.png
    :width: 1.5em
 .. |plugin| image:: /static/common/plugin.png
-   :width: 1.5em
-.. |plugin-installed| image:: /static/common/plugin-installed.png
    :width: 1.5em
 .. |plugin-new| image:: /static/common/plugin-new.png
    :width: 1.5em
