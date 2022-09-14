@@ -163,7 +163,7 @@ and :meth:`removePathWriter() <qgis.core.QgsPathResolver.removePathWriter>`.
 Using flags to speed up things
 ==============================
 
-In some instances where you may not need to use a fully fonctionnal project, but only
+In some instances where you may not need to use a fully functional project, but only
 want to access it for a specific reason, flags may be helpful. A full list of flags is available under
 :class:`ReadFlag <qgis.core.QgsProject.ReadFlag>`. Multiple flags can be added together.
  
