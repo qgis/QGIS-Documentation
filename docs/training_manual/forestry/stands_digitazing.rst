@@ -183,7 +183,7 @@ Now, if you remember past modules, we have to set up and activate the snapping o
 
 #. Go to :menuselection:`Project --> Snapping options...`
 #. Press |snapping| :sup:`Enable Snapping` and select :guilabel:`Advanced Configuration`
-#. Check the |pointLayer| ``green_centroids`` and |polygonLayer| ``forest_stands`` layers
+#. Check the :guilabel:`green_centroids` and :guilabel:`forest_stands` layers
 #. Set :guilabel:`Type` for each layer to :guilabel:`Vertex`
 #. Set :guilabel:`Tolerance` for each layer to ``10``
 #. Set :guilabel:`Units` for each layer to :guilabel:`pixels`
