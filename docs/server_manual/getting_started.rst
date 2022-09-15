@@ -238,7 +238,7 @@ NGINX HTTP Server
 
 .. note:: In the following, please replace ``qgis.demo`` with the name or IP address of your server.
 
-You can also use QGIS Server with `NGINX <https://nginx.org/>`__. Unlike Apache,
+You can also use QGIS Server with `NGINX <https://nginx.org/en/docs/>`__. Unlike Apache,
 NGINX does not automatically spawn FastCGI processes. The FastCGI processes are
 to be started by something else.
 
