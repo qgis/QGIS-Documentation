@@ -405,6 +405,30 @@ Returns the combination of two geometries.
 
 .. end_combine_section
 
+.. _expression_function_GeometryGroup_concave_hull:
+
+concave_hull
+............
+
+Returns a possibly concave polygon that contains all the points in the geometry
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - concave_hull(geometry, target_percent, [allow_holes=False])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **geometry** - a geometry
+       * **target_percent** - the percentage of area of the convex hull the solution tries to approach. A target_percent of 1 gives the same result as the convex hull. A target_percent between 0 and 0.99 produces a result that should have a smaller area than the convex hull.
+       * **allow_holes** - optional argument specifying whether to allow holes within the output geometry. Defaults to FALSE, set to TRUE to avoid including holes in the output geometry.
+   * - Examples
+     - * ``geom_to_wkt(concavehull(geom_from_wkt('MULTILINESTRING((106 164,30 112,74 70,82 112,130 94,130 62,122 40,156 32,162 76,172 88),(132 178,134 148,128 136,96 128,132 108,150 130,170 142,174 110,156 96,158 90,158 88),(22 64,66 28,94 38,94 68,114 76,112 30,132 10,168 18,178 34,186 52,184 74,190 100,190 122,182 148,178 170,176 184,156 164,146 178,132 186,92 182,56 158,36 150,62 150,76 128,88 118))'), 0.99))`` → 'Polygon ((30 112, 36 150, 92 182, 132 186, 176 184, 190 122, 190 100, 186 52, 178 34, 168 18, 132 10, 112 30, 66 28, 22 64, 30 112))'
+
+
+.. end_concave_hull_section
+
 .. _expression_function_GeometryGroup_contains:
 
 contains
@@ -892,7 +916,7 @@ Returns the Well-Known Text (WKT) representation of the geometry without SRID me
 $geometry
 .........
 
-Returns the geometry of the current feature. Can be used for processing with other functions.
+Returns the geometry of the current feature. Can be used for processing with other functions. **WARNING: This function is deprecated. It is recommended to use the replacement @geometry variable instead.**
 
 .. list-table::
    :widths: 15 85
@@ -1344,7 +1368,9 @@ Returns the point interpolated by a specified distance along a linestring geomet
      - * **geometry** - a linestring geometry
        * **distance** - distance along line to interpolate
    * - Examples
-     - * ``geom_to_wkt(line_interpolate_point(geometry:=geom_from_wkt('LineString(0 0, 10 0)'),distance:=5))`` → 'Point (5 0)'
+     - * ``geom_to_wkt(line_interpolate_point(geometry:=geom_from_wkt('LineString(0 0, 8 0)'), distance:=5))`` → 'Point (5 0)'
+       * ``geom_to_wkt(line_interpolate_point(geometry:=geom_from_wkt('LineString(0 0, 1 1, 2 0)'), distance:=2.1))`` → 'Point (1.48492424 0.51507576)'
+       * ``geom_to_wkt(line_interpolate_point(geometry:=geom_from_wkt('LineString(0 0, 1 0)'), distance:=2))`` → NULL
 
 
 .. end_line_interpolate_point_section
@@ -1682,8 +1708,8 @@ Creates a rectangle from 3 points.
        * **point3** - Third point.
        * **option** - An optional argument to construct the rectangle. By default this value is 0. Value can be 0 (distance) or 1 (projected). Option distance: Second distance is equal to the distance between 2nd and 3rd point. Option projected: Second distance is equal to the distance of the perpendicular projection of the 3rd point on the segment or its extension.
    * - Examples
-     - * ``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), make_point(5, 5), 0)))`` → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'
-       * ``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), make_point(5, 3), 1)))`` → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'
+     - * ``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), make_point(5, 5), 0))`` → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'
+       * ``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), make_point(5, 3), 1))`` → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'
 
 
 .. end_make_rectangle_3points_section
@@ -1758,6 +1784,32 @@ Creates a triangle polygon.
 
 
 .. end_make_triangle_section
+
+.. _expression_function_GeometryGroup_make_valid:
+
+make_valid
+..........
+
+Returns a valid geometry or an empty geometry if the geometry could not be made valid.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - make_valid(geometry, [method=structure], [keep_collapsed=false])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **geometry** - a geometry
+       * **method** - repair algorithm. May be either 'structure' or 'linework'. The 'linework' option combines all rings into a set of noded lines and then extracts valid polygons from that linework. The 'structure' method first makes all rings valid and then merges shells and subtracts holes from shells to generate valid result. Assumes that holes and shells are correctly categorized.
+       * **keep_collapsed** - if set to true, then components that have collapsed into a lower dimensionality will be kept. For example, a ring collapsing to a line, or a line collapsing to a point.
+   * - Examples
+     - * ``geom_to_wkt(make_valid(geom_from_wkt('POLYGON((3 2, 4 1, 5 8, 3 2, 4 2))')))`` → 'Polygon ((3 2, 5 8, 4 1, 3 2))'
+       * ``geom_to_wkt(make_valid(geom_from_wkt('POLYGON((3 2, 4 1, 5 8, 3 2, 4 2))'), 'linework'))`` → 'GeometryCollection (Polygon ((5 8, 4 1, 3 2, 5 8)),LineString (3 2, 4 2))'
+       * ``make_valid(geom_from_wkt('LINESTRING(0 0)'))`` →  &lt;empty geometry&gt;
+
+
+.. end_make_valid_section
 
 .. _expression_function_GeometryGroup_minimal_circle:
 
@@ -2562,6 +2614,28 @@ Returns a multi line geometry consisting of a line for every segment in the inpu
 
 
 .. end_segments_to_lines_section
+
+.. _expression_function_GeometryGroup_shared_paths:
+
+shared_paths
+............
+
+Returns a collection containing paths shared by the two input geometries. Those going in the same direction are in the first element of the collection, those going in the opposite direction are in the second element. The paths themselves are given in the direction of the first geometry.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - shared_paths(geometry1, geometry2)
+   * - Arguments
+     - * **geometry1** - a LineString/MultiLineString geometry
+       * **geometry2** - a LineString/MultiLineString geometry
+   * - Examples
+     - * ``geom_to_wkt(shared_paths(geom_from_wkt('MULTILINESTRING((26 125,26 200,126 200,126 125,26 125),(51 150,101 150,76 175,51 150)))'),geom_from_wkt('LINESTRING(151 100,126 156.25,126 125,90 161, 76 175)')))`` → 'GeometryCollection (MultiLineString ((126 156.25, 126 125),(101 150, 90 161),(90 161, 76 175)),MultiLineString EMPTY)'
+       * ``geom_to_wkt(shared_paths(geom_from_wkt('LINESTRING(76 175,90 161,126 125,126 156.25,151 100)'),geom_from_wkt('MULTILINESTRING((26 125,26 200,126 200,126 125,26 125),(51 150,101 150,76 175,51 150))')))`` → 'GeometryCollection (MultiLineString EMPTY,MultiLineString ((76 175, 90 161),(90 161, 101 150),(126 125, 126 156.25)))'
+
+
+.. end_shared_paths_section
 
 .. _expression_function_GeometryGroup_shortest_line:
 

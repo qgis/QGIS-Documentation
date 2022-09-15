@@ -271,8 +271,8 @@ the geometries of the neighboring features.
 Topological editing works with features from different layers, as long
 as the layers are visible and in editing mode.
 
-In layer with Z values, topological editing will interpolate the Z value of 
-the vertex based on the value of the edge used for the connection.
+In layer with Z or M values, topological editing will interpolate the Z or M
+value of the vertex based on the value of the edge used for the connection.
 
 .. index:: Avoid overlap
    seealso: Avoid overlap; Topology
@@ -474,6 +474,9 @@ button and you can enter attributes in the feature form that opens.
 To create features with the spatially enabled tools, you first digitize the
 geometry then enter its attributes. To digitize the geometry:
 
+#. (Optional as it is the default) Select the |digitizeWithSegment|
+   :sup:`Digitize With Segment` geometry drawing method on the
+   :guilabel:`Advanced Digitizing Toolbar`
 #. Left-click on the map area to create the first point of your new feature.
    For point features, this should be enough and trigger, if required,
    the feature form to fill in their attributes.
@@ -483,25 +486,26 @@ geometry then enter its attributes. To digitize the geometry:
    the :ref:`snap-to-grid <snap_to_grid>` or the :ref:`advanced digitizing
    <advanced_digitizing_panel>` panel to accurately position each vertex.
 
-   Along with placing nodes clik by click, lines and polygons can be:
+   Along with drawing straight segments between nodes you click one by one,
+   lines and polygons can be:
 
    * :ref:`traced automatically <tracing>`, accelerating the digitization.
      This will create consecutive straight lines between the vertices you
-     place.
+     place, following existing features.
    * free-hand digitized, pressing :kbd:`R` or activating |streamingDigitize|
-     :sup:`Stream digitizing` in the :guilabel:`Advanced Digitizing Toolbar`.
-
-   .. note::
-    Pressing :kbd:`Delete` or :kbd:`Backspace` key reverts the last
-    node you add.
-
-#. When you have finished adding points, right-click anywhere on the map area
-   to confirm you have finished entering the geometry of that feature.
+     :sup:`Stream Digitizing` in the :guilabel:`Advanced Digitizing Toolbar`.
+   * drawn as curve, pressing :kbd:`Ctrl+Shift+G` or activating |DigitizeWithCurve|
+     :sup:`Digitize with Curve` in the :guilabel:`Advanced Digitizing Toolbar`.
 
    .. note::
     While digitizing line or polygon geometries, you can switch back and forth
-    between the linear :guilabel:`Add feature` tools and :ref:`circular string
-    tools <add_circular_string>` to create compound curved geometries.
+    between the geometry drawing methods, allowing you to create features
+    mixing straight segments, free-hand ones and curved parts.
+
+#. Press :kbd:`Delete` or :kbd:`Backspace` key to revert the last node(s) you
+   may wrongly add.
+#. When you have finished adding points, right-click anywhere on the map area
+   to confirm you have finished entering the geometry of that feature.
 
    .. tip:: **Customize the digitizing rubber band**
 
@@ -713,6 +717,37 @@ the :guilabel:`Digitizing toolbar`.
    :align: center
 
    Vertex editor panel showing selected nodes
+
+.. _digitizing_zm:
+
+Digitizing features with Z or M value
+-------------------------------------
+
+Digitizing vector features with a Z (or M) component is not that different
+from 2D layers'. Tools and options described in this chapter are still
+available and help you place the vertex or point. Then you may need to handle
+the Z coordinate (or M value) assignment:
+
+* By default, QGIS will assign to new vertices the :guilabel:`Default Z value`
+  (respectively :guilabel:`Default M value`) set in the
+  :menuselection:`Settings --> Options --> Digitizing` tab.
+  If the :ref:`Advanced Digitizing Panel <advanced_digitizing_panel>` is in
+  use, then the value is taken from its :guilabel:`z`
+  (respectively :guilabel:`m`) widget.
+* When snapping to a vertex, the new or moved vertex takes the snapped one's
+  Z or M value.
+* When snapping to a segment while the topological editing is on, then the new
+  vertex Z or M value is interpolated along the segment.
+* If the :guilabel:`z` (respectively :guilabel:`m`) widget of the
+  :guilabel:`Advanced Digitizing Panel` is |locked| locked, then its value is
+  applied to the vertex, taking precedence over any snapped vertex or segment
+  Z or M value.
+
+To edit Z or M values of an existing feature, you can use the
+:ref:`Vertex editor panel <vertex_editor_panel>`.
+To create features with custom Z or M values you may want to rely on the
+:guilabel:`Advanced Digitizing Panel`.
+
 
 .. _clipboard_feature:
 
@@ -939,18 +974,30 @@ Advanced digitizing
    single: Digitizing tools; Stream digitizing
 .. _drawing_methods:
 
-Straight, curve and stream digitizing
--------------------------------------
+Geometry editing techniques
+---------------------------
 
-The |digitizeWithCurve| :sup:`Digitize with Curve` tool allows you to draw curves in layers with
-geometries that support curves. Digitizing a curve requires to provide three points along the curve
-(start, point along the arc, end) which define it.
+When a geometry drawing tool (mainly the ones that add, split, reshape features)
+is enabled for a line or polygon based layer, you can select the technique for
+adding new vertices:
 
-The |streamingDigitize| :sup:`Stream Digitizing` tool allows you to activate and deactivate stream 
-digitizing which allows to create features in freehand mode. 
+* The |digitizeWithSegment| :sup:`Digitize with Segment`: draws straight segment
+  whose start and end points are defined by left clicks.
+* The |digitizeWithCurve| :sup:`Digitize with Curve`: draws curve line based on
+  three consecutive nodes defined by left clicks (start, point along the arc, end).
+  If the geometry type does not support curves, then consecutive smaller segments
+  are used to approximate the curvature.
+* The |streamingDigitize| :sup:`Stream Digitizing`: draws lines in freehand mode,
+  i.e. nodes are added following cursor movement in the map canvas and
+  a :guilabel:`Streaming Tolerance`.
+  The streaming tolerance defines the spacing between consecutive vertices.
+  Currently, the only supported unit is pixels (``px``). Only the starting left
+  click and the ending right click are necessary in this mode.
+* The |digitizeShape| :sup:`Digitize Shape`: triggers tools on the
+  :ref:`Shape Digitizing Toolbar <shape_edit>` to draw a polygon of a regular shape.
 
-The streaming tolerance affects the spacing between consecutive vertices.
-Currently, the only supported unit is pixels (``px``).
+The selected technique remains while switching among the digitizing tools.
+You can combine any of the first three methods while drawing the same geometry.
 
 .. index::
    single: Digitizing tools; Move feature
@@ -1488,24 +1535,29 @@ by clicking on it.
 Shape digitizing
 ================
 
-The :guilabel:`Shape Digitizing` toolbar offers a set of tools to draw
-regular shapes and curved geometries.
+The :guilabel:`Shape Digitizing` toolbar is synchronized with the
+|digitizeShape| :sup:`Digitize Shape` :ref:`geometry drawing method
+<drawing_methods>` you can select on the :guilabel:`Advanced Digitizing Toolbar`.
+It offers a set of tools to draw lines or polygons features of regular shape.
 
 .. index:: Circular string
 .. _add_circular_string:
 
-Add Circular string
--------------------
+Circular string by radius
+-------------------------
 
-The |circularStringCurvePoint| :sup:`Add circular string` or
-|circularStringRadius| :sup:`Add circular string by radius` buttons allow users
-to add line or polygon features with a circular geometry.
+The |circularStringRadius| :sup:`Circular string by radius` button allows
+to add line or polygon features with a circular geometry, given two nodes
+on the curve and a radius:
 
-Creating features with these tools follow the same rule as of other digitizing
-tools: left-click to place vertices and right-click to finish the geometry.
-While drawing the geometry, you can switch from one tool to the other as well
-as to the :ref:`linear geometry tools <add_feature>`, creating some coumpound
-geometries.
+#. Left click twice to place the two points on the geometry.
+#. A :guilabel:`Radius` widget in the top right corner of the map canvas
+   displays current radius (corresponding to distance between the points).
+   Edit that field to the value you want.
+#. An overview of the arcs matching these constraints is displayed while
+   moving around the cursor. Right-click to validate when the expected
+   arc is shown.
+#. Add a new point to start shaping another arc.
 
 .. note:: **Curved geometries are stored as such only in compatible data provider**
 
@@ -1527,23 +1579,23 @@ Circles are converted into circular strings. Therefore, as explained in
 :ref:`add_circular_string`, if allowed by the data provider, it will be saved as a
 curved geometry, if not, QGIS will segmentize the circular arcs.
 
-- |circle2Points| :sup:`Add circle from 2 points`: The two points define the diameter
+- |circle2Points| :sup:`Circle from 2 points`: The two points define the diameter
   and the orientation of  the circle. (Left-click, right-click)
-- |circle3Points| :sup:`Add circle from 3 points`: Draws a circle from three
+- |circle3Points| :sup:`Circle from 3 points`: Draws a circle from three
   known points on the circle. (Left-click, left-click, right-click)
-- |circleCenterPoint| :sup:`Add circle from center and a point`: Draws a circle
+- |circleCenterPoint| :sup:`Circle from center and a point`: Draws a circle
   with a given center and a point on the circle (Left-click, right-click).
   When used with the :ref:`advanced_digitizing_panel` this tool can become a
   "Add circle from center and radius" tool by setting and locking the distance
   value after first click.
-- |circle3Tangents| :sup:`Add circle from 3 tangents`: Draws a circle that is
+- |circle3Tangents| :sup:`Circle from 3 tangents`: Draws a circle that is
   tangential to three segments. **Note that you must activate snapping to
   segments** (See :ref:`snapping_tolerance`). Click on a segment to add a
   tangent. If two tangents are parallel, the coordinates of the click on the
   first parallel tangent are used to determine the positioning of the circle.
   If three tangents are parallel, an error message appears and the input
   is cleared. (Left-click, left-click, right-click)
-- |circle2TangentsPoint| :sup:`Add circle from 2 tangents and a point`: Similar
+- |circle2TangentsPoint| :sup:`Circle from 2 tangents and a point`: Similar
   to circle from 3 tangents, except that you have to select two tangents, enter
   a radius and select the desired center.
 
@@ -1559,15 +1611,15 @@ below.
 Ellipses cannot be converted as circular strings, so they will always be
 segmented.
 
-* |ellipseCenter2Points| :sup:`Add Ellipse from center and two points`: Draws an
+* |ellipseCenter2Points| :sup:`Ellipse from center and two points`: Draws an
   ellipse with a given center, major axis and minor axis. (Left-click,
   left-click, right-click)
-* |ellipseCenterPoint| :sup:`Add Ellipse from center and a point`: Draws an
+* |ellipseCenterPoint| :sup:`Ellipse from center and a point`: Draws an
   ellipse into a bounding box with the center and a corner. (Left-click,
   right-click)
-* |ellipseExtent| :sup:`Add Ellipse from extent`: Draws an ellipse into a bounding
+* |ellipseExtent| :sup:`Ellipse from extent`: Draws an ellipse into a bounding
   box with two opposite corners. (Left-click, right-click)
-* |ellipseFoci| :sup:`Add Ellipse from foci`: Draws an ellipse by 2 points for
+* |ellipseFoci| :sup:`Ellipse from foci`: Draws an ellipse by 2 points for
   foci and a point on the ellipse. (Left-click, left-click, right-click)
 
 .. index:: Draw rectangles
@@ -1673,9 +1725,37 @@ At the top of the :guilabel:`Digitizing panel`, you find the following buttons:
   relative to previous segment) angle from a preset list
   (following steps of 5°, 10°, 15°, 18°, 22.5°, 30°, 45° or 90°).
   Choose :guilabel:`Do not snap to common angles` to disable this feature.
-* |floater| :sup:`Floater`: displays a live preview of the coordinates
-  right next to the cursor. The values can be accessed and edited using
-  the :ref:`panel's shortcuts <digitizing_panel_shortcuts>`.
+* |floater| :sup:`Toggle Floater`: displays a live preview of the coordinates
+  right next to the cursor, allowing quick digitizing. The values can be accessed
+  using the :ref:`panel's shortcuts <digitizing_panel_shortcuts>`, edited and
+  |locked| :sup:`Locked` after validation (pressing :kbd:`Enter`).
+* |extractVertices| :sup:`Construction Tools` provides a couple of options that
+  constrain the vertices placement based on extrapolated coordinates of
+  existing elements:
+
+  * |unchecked| :guilabel:`Line Extension`: hover over a segment and you get
+    a purple dotted line extending the segment across the map canvas.
+    You can snap the vertex anywhere on this virtual line.
+  * |unchecked| :guilabel:`X/Y Point`: hover over a vertex and you get
+    a purple dotted line along its X or Y coordinate, across the map canvas.
+    You can snap the vertex anywhere on this virtual line.
+    It is even possible to hover over two different vertices, generating virtual
+    coordinate lines for both, and snap to their intersection.
+
+Below the toolbar, you will find a number of text boxes whose value reflects
+by default the position or movement of the cursor in the map canvas.
+Editing these values helps you constrain the position of the items you edit:
+
+* :guilabel:`d` for the distance from a reference position, usually the last
+  edited vertex
+* :guilabel:`a` for the angle (absolute or relative) from a reference position,
+  usually the last edited segment
+* :guilabel:`x` for the X coordinate of the pointer
+* :guilabel:`y` for the Y coordinate of the pointer
+* :guilabel:`z` for the default Z value or the Z coordinate of the vertex
+  or segment under the pointer
+* :guilabel:`m` for the default M value or the M value of the vertex or segment
+  under the pointer
 
 
 .. _digitizing_panel_shortcuts:
@@ -1730,21 +1810,30 @@ to start editing the feature, i.e.:
 #. Type the Y coordinate value you want and press :kbd:`Enter` or click the
    |locked| button to their right to lock the mouse to the Y axis on the map
    canvas.
-#. If available and relevant, proceed as above to add the Z coordinate and
-   M value (respectively :guilabel:`z` or :guilabel:`m` text box).
+#. If the layer has Z coordinate or M values, the corresponding :guilabel:`z`
+   or :guilabel:`m` widget is enabled and displays its default value,
+   as set in :menuselection:`Settings --> Options --> Digitizing` tab.
 
-   Two blue dotted lines and a green cross identify the exact coordinates you
+   #. Click the :guilabel:`z` or :guilabel:`m` text box (or use respectively
+      the :kbd:`Z` or :kbd:`M` keyboard shortcut).
+   #. Type the coordinate value you want and press :kbd:`Enter` or click the
+      |locked| button to their right to lock the value in the widget.
+
+   .. note:: Read :ref:`digitizing_zm` for details on how Z coordinate and
+    M values are automatically determined from existing features.
+
+#. Two blue dotted lines and a green cross identify the exact coordinates you
    entered.
-#. Start digitizing by clicking on the map canvas; a vertex is added at
-   the green cross position.
+   Click on the map canvas to add a vertex at the green cross position.
 
    .. figure:: img/advanced_digitizing_coordinates.png
       :align: center
 
       Start drawing at given coordinates
 
-#. You can continue digitizing by free hand, adding a new set of coordinates,
-   or you can type the segment's **length** (distance) and **angle**.
+#. You can proceed as above, adding a new set of coordinates for the next vertex,
+   or switch to another :ref:`mode of digitizing <drawing_methods>`
+   (e.g. segment, curve or stream).
 
 #. If you want to draw a segment of a given length:
 
@@ -2001,8 +2090,6 @@ To edit features in-place:
    :width: 1.5em
 .. |circleCenterPoint| image:: /static/common/mActionCircleCenterPoint.png
    :width: 1.5em
-.. |circularStringCurvePoint| image:: /static/common/mActionCircularStringCurvePoint.png
-   :width: 1.5em
 .. |circularStringRadius| image:: /static/common/mActionCircularStringRadius.png
    :width: 1.5em
 .. |dataDefine| image:: /static/common/mIconDataDefine.png
@@ -2036,6 +2123,8 @@ To edit features in-place:
 .. |ellipseExtent| image:: /static/common/mActionEllipseExtent.png
    :width: 1.5em
 .. |ellipseFoci| image:: /static/common/mActionEllipseFoci.png
+   :width: 1.5em
+.. |extractVertices| image:: /static/common/mAlgorithmExtractVertices.png
    :width: 1.5em
 .. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
    :width: 1.5em

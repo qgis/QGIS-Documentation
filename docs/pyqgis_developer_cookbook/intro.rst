@@ -134,31 +134,38 @@ them.
 Running Python code when QGIS starts
 ====================================
 
-There are two distinct methods to run Python code every time QGIS
+There are different methods to run Python code every time QGIS
 starts.
 
 1. Creating a startup.py script
 
 2. Setting the ``PYQGIS_STARTUP`` environment variable to an
    existing Python file
+   
+3. Specifying a startup script using the ``--code init_qgis.py``
+   parameter.
 
 
 The :file:`startup.py` file
 ----------------------------
 
-Every time QGIS starts, the user's Python home directory
+Every time QGIS starts, the user's Python home directory and a list
+of system paths are searched for a file named :file:`startup.py`. If that file exists, it
+is executed by the embedded Python interpreter.
+
+The path in the user's home directory usually is found under:
 
 * Linux: :file:`.local/share/QGIS/QGIS3`
 * Windows: :file:`AppData\\Roaming\\QGIS\\QGIS3`
 * macOS: :file:`Library/Application Support/QGIS/QGIS3`
 
-is searched for a file named :file:`startup.py`. If that file exists, it
-is executed by the embedded Python interpreter.
+The default system paths depend on the operating system. To find the
+paths that work for you, open the Python Console and run
+``QStandardPaths.standardLocations(QStandardPaths.AppDataLocation)``
+to see the list of default directories.
 
-.. note:: The default path depends on the operating system. To find the
-  path that will work for you, open the Python Console and run
-  ``QStandardPaths.standardLocations(QStandardPaths.AppDataLocation)``
-  to see the list of default directories.
+The ``startup.py`` script is executed immediately upon initializing
+python in QGIS, early on in the start of the application.
 
 .. index::
   pair: Environment; PYQGIS_STARTUP
@@ -179,6 +186,41 @@ homebrew or MacPorts installs on Mac.
 .. index::
   pair: Python; Custom applications
   pair: Python; Standalone scripts
+
+The ``--code`` parameter
+------------------------
+
+You can provide custom code to execute as startup paramteter
+to QGIS. To do so, create a python file, for example ``qgis_init.py``, to execute and
+start QGIS from the command line using ``qgis --code qgis_init.py``.
+
+Code provided via ``--code`` is executed late in the QGIS initialization
+phase, after the application components have been loaded.
+
+Additional arguments for Python
+-------------------------------
+
+To provide additional arguments for your ``--code`` script or for
+other python code that is executed, you can use the ``--py-args``
+argument. Any argument coming after ``--py-args`` and before a
+``--`` arg (if present) will be passed to Python but ignored by
+the QGIS application itself.
+
+In the following example, ``myfile.tif`` will be available via
+``sys.argv`` in Python but will not be loaded by QGIS. Whereas
+``otherfile.tif`` will be loaded by QGIS but is not present in
+``sys.argv``.
+
+.. code-block:: bash
+
+  qgis --code qgis_init.py --py-args myfile.tif -- otherfile.tif
+  
+If you want access to every command line parameter from within
+Python, you can use ``QCoreApplication.arguments()``
+
+.. code-block:: python
+
+  QgsApplication.instance().arguments()
 
 .. _pythonapplications:
 
