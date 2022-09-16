@@ -2195,7 +2195,7 @@ and for loading/saving metadata in the "Default" location.
 
 
 The "Default" location used by :guilabel:`Save as Default` and :guilabel:`Restore Default`
-changes depending on the underlaying data source and on its configuration:
+changes depending on the underlying data source and on its configuration:
 
 .. _`savemetadatatodb`:
 
