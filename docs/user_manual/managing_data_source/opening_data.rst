@@ -1223,15 +1223,17 @@ To load a layer from a database, you can perform the following steps:
 The Layer Metadata Search Panel
 ===============================
 
-The layer metadata search panel allows to browse layers metadata,
-filter the results by text, by current project and map canvas extent
-and add the selected layers to the map canvas.
+The layer metadata search panel allows to browse layers metadata
+from registered metadata providers and add them to the project.
+
+The list can be filtered by text, by current project and by map canvas extent.
 
 The sources of metadata are implemented through a layer metadata provider
-system that can be extended by plugins, QGIS provides out of the
-box the layer metadata provider that retrieves the metadata from the
-connections that allow for metadata storage (for more details
-:ref:`here <savemetadatatodb>`).
+system that can be extended by plugins. 
+
+QGIS provides out of the box the layer metadata providers that retrieve 
+the metadata from the connections that allow for metadata storage 
+(for more details :ref:`save metadata to the database <savemetadatatodb>`).
 
 .. figure:: img/layer_metadata_search_panel.png
    :align: center
