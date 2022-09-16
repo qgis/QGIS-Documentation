@@ -2199,23 +2199,23 @@ changes depending on the underlying data source and on its configuration:
 
 .. _`savemetadatatodb`:
 
-For PostgreSQL data sources if the configuration
-option :guilabel:`Allow saving/loading QGIS layer metadata in the database`
-is checked the metadata are stored inside a dedicated table in the
-database.
+* For PostgreSQL data sources if the configuration
+  option :guilabel:`Allow saving/loading QGIS layer metadata in the database`
+  is checked the metadata are stored inside a dedicated table in the
+  database.
 
-For GeoPackage data sources :guilabel:`Save as Default` always saves the metadata
-in the internal metadata tables of the GeoPackage.
+* For GeoPackage data sources :guilabel:`Save as Default` always saves the metadata
+  in the internal metadata tables of the GeoPackage.
 
-When metadata are saved into the internal tables of PostgreSQL or GeoPackage they
-become available for search and filtering in the browser and in
-the :ref:`layer metadata search panel<layer_metadata_search_panel>`.
+  When metadata are saved into the internal tables of PostgreSQL or GeoPackage they
+  become available for search and filtering in the browser and in
+  the :ref:`layer metadata search panel <layer_metadata_search_panel>`.
 
-For all other file based data sources :guilabel:`Save as Default` saves the metadata
-in a :file:`.qmd` file alongside the file.
+* For all other file based data sources :guilabel:`Save as Default` saves the metadata
+  in a :file:`.qmd` file alongside the file.
 
-In all other cases :guilabel:`Save as Default` saves the metadata
-in a local :file:`.sqlite` database.
+* In all other cases :guilabel:`Save as Default` saves the metadata
+  in a local :file:`.sqlite` database.
 
 
 .. _layer_notes:
