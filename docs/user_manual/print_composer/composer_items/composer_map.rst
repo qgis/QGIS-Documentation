@@ -98,6 +98,14 @@ functionalities:
     in the combobox. Again, the above mentioned clipping modes are available and
     labels can be forced to display only inside the clipping shape.
 
+  .. only:: html
+
+     .. _figure_layout_mapclipitem:
+
+     .. figure:: img/map_cliptoitem.gif
+        :align: center
+
+        Clipping a layout map item to shapes
 
 .. _`layout_main_properties`:
 
