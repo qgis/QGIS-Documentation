@@ -210,6 +210,13 @@ if 'html_context' in globals():
 else:
     html_context = context
 
+from sphinx.builders.html import StandaloneHTMLBuilder
+StandaloneHTMLBuilder.supported_image_types = [
+    'image/svg+xml',
+    'image/gif',
+    'image/png',
+    'image/jpeg'
+]
 
 # -- Options for LaTeX output --------------------------------------------------
 
