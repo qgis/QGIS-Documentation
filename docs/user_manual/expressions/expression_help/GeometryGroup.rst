@@ -1806,7 +1806,8 @@ Returns a valid geometry or an empty geometry if the geometry could not be made 
    * - Examples
      - * ``geom_to_wkt(make_valid(geom_from_wkt('POLYGON((3 2, 4 1, 5 8, 3 2, 4 2))')))`` → 'Polygon ((3 2, 5 8, 4 1, 3 2))'
        * ``geom_to_wkt(make_valid(geom_from_wkt('POLYGON((3 2, 4 1, 5 8, 3 2, 4 2))'), 'linework'))`` → 'GeometryCollection (Polygon ((5 8, 4 1, 3 2, 5 8)),LineString (3 2, 4 2))'
-       * ``make_valid(geom_from_wkt('LINESTRING(0 0)'))`` →  &lt;empty geometry&gt;
+       * ``geom_to_wkt(make_valid(geom_from_wkt('POLYGON((3 2, 4 1, 5 8))'), method:='linework'))`` → 'Polygon ((3 2, 4 1, 5 8, 3 2))'
+       * ``make_valid(geom_from_wkt('LINESTRING(0 0)'))`` → An empty geometry
 
 
 .. end_make_valid_section
