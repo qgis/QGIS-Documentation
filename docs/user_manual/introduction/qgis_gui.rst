@@ -2983,12 +2983,6 @@ The |messageLog| :sup:`Messages` button next to it opens the
 :guilabel:`Log Messages Panel` which has information on underlying
 processes (QGIS startup, plugins loading, processing tools...)
 
-Depending on the :ref:`Plugin Manager settings <setting_plugins>`,
-the status bar can sometimes show icons to the right to inform you
-about the availability of new (|pluginNew|) or  upgradeable (|pluginUpgrade|)
-plugins.
-Click the icon to open the Plugin Manager dialog.
-
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -3246,10 +3240,6 @@ Click the icon to open the Plugin Manager dialog.
 .. |panToSelected| image:: /static/common/mActionPanToSelected.png
    :width: 1.5em
 .. |play| image:: /static/common/mActionPlay.png
-   :width: 1.5em
-.. |pluginNew| image:: /static/common/pluginNew.png
-   :width: 1.5em
-.. |pluginUpgrade| image:: /static/common/pluginUpgrade.png
    :width: 1.5em
 .. |processSelected| image:: /static/common/mActionProcessSelected.png
    :width: 1.5em
