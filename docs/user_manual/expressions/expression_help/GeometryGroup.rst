@@ -160,6 +160,12 @@ Returns a geometry which represents the bounding box of an input geometry. Calcu
        * ``geom_to_wkt(bounds(geom_from_wkt('Polygon((1 1, 0 0, -1 1, 1 1))')))`` → 'Polygon ((-1 0, 1 0, 1 1, -1 1, -1 0))'
 
 
+.. figure:: /docs/user_manual/processing_algs/qgis/img/bounding_box.png
+   :align: center
+   :width: 100%
+
+   Black lines represent the bounding boxes of each polygon feature
+
 .. end_bounds_section
 
 .. _expression_function_GeometryGroup_bounds_height:
@@ -228,6 +234,12 @@ Returns a geometry that represents all points whose distance from this geometry 
    * - Examples
      - * ``buffer($geometry, 10.5)`` → polygon of the current feature's geometry buffered by 10.5 units
 
+
+.. figure:: /docs/user_manual/processing_algs/qgis/img/buffer.png
+   :align: center
+   :width: 100%
+
+   Buffer (in yellow) of points, line and polygon
 
 .. end_buffer_section
 
@@ -2364,6 +2376,12 @@ Returns a rotated version of a geometry. Calculations are in the Spatial Referen
      - * ``rotate($geometry, 45, make_point(4, 5))`` → geometry rotated 45 degrees clockwise around the (4, 5) point
        * ``rotate($geometry, 45)`` → geometry rotated 45 degrees clockwise around the center of its bounding box
 
+
+.. figure:: /docs/user_manual/expressions/expression_help/img/rotate.*
+   :align: center
+   :width: 100%
+
+   Rotating features
 
 .. end_rotate_section
 

@@ -1,4 +1,5 @@
 from os import path, walk
+import glob
 from sys import argv
 import json
 import re
@@ -20,6 +21,9 @@ else:
 help_folder = path.join(qgis_repo_path, 'resources/function_help/json')
 # expression help folder
 output_folder = path.join(path.dirname(__file__), '..', 'docs/user_manual/expressions/expression_help')
+# images file location
+img_list_file = path.join(path.dirname(__file__), '..', 'docs/user_manual/expressions/expression_help/img/images_list.json')
+algorithm_folder = path.join(path.dirname(__file__), '..', 'docs/user_manual/processing_algs')
 
 def sphynxify_html(text, base_indent=0):
     filler = base_indent * ' '
@@ -180,6 +184,41 @@ def format_variant(function_dict, f_name):
             f"\n\n\n")
     return text
 
+def create_function_anchor(func, group):
+    """
+    Returns function unique identifier
+    :param func: The function in use
+    :param group: The group it belongs to
+    :return: unique identifier of the function based on its name and group
+    """
+    return "expression_function_{}_{}".format(group.replace(' ','_'), functions[func]['filename'])
+
+def find_img_path(anchor):
+    """
+    Locate the corresponding image file for the expression function
+    and format the text to include in the help file
+    :param anchor: The identifier of the expression function
+    :return: 'absolute' path to the file within the repo
+    """
+
+    img_path=''
+    # For image files in the expression help img folder
+    if anchor['img']:
+        temp_path = path.join(output_folder, 'img', anchor['img']+'.*')
+        if glob.glob(temp_path):
+            img_path = temp_path.split('..')[-1]
+    # For image files from the algorithm folder
+    elif anchor['alg_img']:
+        temp_path = path.join(algorithm_folder, '**', anchor['alg_img']+'.*')
+        if glob.glob(temp_path, recursive=True):
+            img_path = glob.glob(temp_path, recursive=True)[0].split('..')[-1]
+
+    return img_path
+
+# Load list of referenced expression and images
+with open(img_list_file) as f:
+    img_data = json.load(f)
+
 # Get a list of all files on that folder
 
 (_, _, filenames) = next(walk(help_folder))
@@ -194,7 +233,7 @@ for file in filenames:
     #print(data)
     data['filename'] = file.replace('op_', '')
     if data['type'] == 'group':
-        groups[data['name']] = {'description': data['description'], 'func_list': []}
+        groups[data['name']] = {'description': data['description'], 'func_list': {}}
     elif data['type'] in ['function', 'expression', 'operator', 'value']:
         functions[data['name']] = data
     else:
@@ -206,7 +245,8 @@ for f_name in functions.keys():
     if 'groups' in function:
         for g_name in function['groups']:
             if g_name not in ('deprecated'):
-                groups[g_name]['func_list'].append(function['name'])
+                # Assign anchor value to function key
+                groups[g_name]['func_list'][function['name']] = create_function_anchor(f_name, g_name)
             else:
                 print(f'Warning: Function {function["name"]} is deprecated!')
     else:
@@ -217,7 +257,8 @@ for g_name in groups:
     func_list = groups[g_name]['func_list']
     if len(func_list) < 1:
         continue
-    func_list.sort(key=lambda x: x.strip('$'))
+    # Sort list of functions, maintaining e.g. $geometry and geometry functions closer
+    func_list = {key: val for key, val in sorted(func_list.items(), key = lambda ele: ele[0].strip('$'))}
     output_group_file = path.join(output_folder, g_name.replace(' ','_') + '.rst')
     with open(output_group_file, 'w') as f:
         f.write(f":orphan:\n\n"
@@ -228,11 +269,18 @@ for g_name in groups:
                 f"   qgis/QGIS repository.\n\n")
         for f_name in func_list:
             f_description = sphynxify_html(functions[f_name]['description'])
-            f.write(f".. _expression_function_{g_name.replace(' ','_')}_{functions[f_name]['filename']}:\n\n"
+            f.write(f".. _{func_list[f_name]}:\n\n"
                     f"{escape_colliding_functions(f_name)}\n"
                     f"{'.'* (len(escape_colliding_functions(f_name)))}\n\n"
-                     f"{f_description}\n"
+                    f"{f_description}\n"
                     f"\n")
             text = format_function(functions[f_name])
             f.write(text)
+            # Insert reference to image if any correct one filled
+            if func_list[f_name] in img_data.keys():
+                if find_img_path(img_data[func_list[f_name]]):
+                    f.write(f".. figure:: {find_img_path(img_data[func_list[f_name]])}\n"
+                            f"   :align: center\n   :width: 100%\n\n"
+                            f"   {img_data[func_list[f_name]]['caption']}\n\n")
+
             f.write(f'.. end_{f_name}_section\n\n')
