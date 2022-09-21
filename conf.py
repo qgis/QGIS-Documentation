@@ -210,6 +210,14 @@ if 'html_context' in globals():
 else:
     html_context = context
 
+# Supported image file formats and order of picking if named alike
+from sphinx.builders.html import StandaloneHTMLBuilder
+StandaloneHTMLBuilder.supported_image_types = [
+    'image/svg+xml',
+    'image/gif',
+    'image/png',
+    'image/jpeg'
+]
 
 # -- Options for LaTeX output --------------------------------------------------
 
