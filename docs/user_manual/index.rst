@@ -26,6 +26,7 @@ QGIS User Guide
     working_with_raster/index
     working_with_mesh/mesh_properties
     working_with_vector_tiles/vector_tiles_properties
+    working_with_point_clouds/point_clouds
     print_composer/index
     working_with_ogc/ogc_client_support.rst
     working_with_gps/index
