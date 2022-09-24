@@ -1,23 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
+# Harrissou Sant-anna, 2022
+# Miyoshi Tomoya, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:21+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"POT-Creation-Date: 2022-03-12 00:23+0100\n"
+"PO-Revision-Date: 2022-03-14 05:12+0000\n"
+"Last-Translator: Miyoshi Tomoya, 2022\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -45,7 +48,7 @@ msgstr ""
 msgid ""
 "First, open the QGIS project corresponding to this lesson. It contains just "
 "a single layer with two polygons"
-msgstr "まず、このレッスンに対応するQGISプロジェクトを開きます。これには、2つのポリゴンを持つだけの単一のレイヤーが含まれています"
+msgstr "まず、このレッスンに対応するQGISプロジェクトを開きます。これには、2つのポリゴンを持つだけの単一のレイヤが含まれています"
 
 #: ../../docs/training_manual/processing/first_alg.rst:19
 msgid ""
@@ -89,7 +92,7 @@ msgid ""
 "to store. In this case, the only input we have is a vector layer with "
 "polygons."
 msgstr ""
-"アルゴリズムはすべて同様のインターフェイスを持っていて、基本的に記入しなければならない入力パラメーターと、どこに保存するか選択する必要がある出力が含まれています。この場合は、持っている唯一の入力はポリゴンでのベクターレイヤーです。"
+"アルゴリズムはすべて同様のインターフェイスを持っていて、基本的に記入しなければならない入力パラメーターと、どこに保存するか選択する必要がある出力が含まれています。この場合は、持っている唯一の入力はポリゴンでのベクタレイヤです。"
 
 #: ../../docs/training_manual/processing/first_alg.rst:49
 msgid ""
@@ -98,7 +101,7 @@ msgid ""
 "output is saved: enter a filepath or save it to a temporary filename"
 msgstr ""
 "入力として *ポリゴン* "
-"レイヤーを選択します。アルゴリズムは、重心レイヤーである単一の出力を有しています。ファイルパスを入力するか、一時的なファイル名に保存：データ出力が保存されている定義するための2つのオプションがあります。"
+"レイヤを選択します。アルゴリズムは、重心レイヤである単一の出力を有しています。ファイルパスを入力するか、一時的なファイル名に保存：データ出力が保存されている定義するための2つのオプションがあります。"
 
 #: ../../docs/training_manual/processing/first_alg.rst:53
 msgid ""
@@ -113,8 +116,16 @@ msgid ""
 "or table."
 msgstr ""
 "保存先を設定してかつ一時ファイルに結果を保存しないようにしたい場合には、出力の形式は、ファイル名の拡張子によって定義されます。形式を選択するには、単に対応するファイルの拡張子を選択します（または、直接ファイルパスを入力している場合は、代わりにそれを追加します）。入力したファイルパスの拡張子は、サポートされているもののいずれかと一致しない場合は、デフォルトの拡張子（通常はテーブルに対して"
-" :file:`.dbf` 、ラスターレイヤーに対して :file:`.tif` ベクターレイヤーに対して :file:`.shp` "
-"）がファイルパスに追加され、その拡張子に対応するファイル形式がレイヤーまたはテーブルを保存するために使用されます。"
+" :file:`.dbf` 、ラスタレイヤに対して :file:`.tif` ベクタレイヤに対して :file:`.shp` "
+"）がファイルパスに追加され、その拡張子に対応するファイル形式がレイヤまたはテーブルを保存するために使用されます。"
+
+#: ../../docs/training_manual/processing/first_alg.rst:62
+msgid ""
+"In all the exercises in this guide, we will be saving results to a temporary"
+" file, since there is no need to save them for a later use. Feel free to "
+"save them to a permanent location if you want to."
+msgstr ""
+"このガイドのすべての演習では、後で使うために保存する必要が無いので、結果を一時ファイルに保存しています。必要であれば、恒久的な場所に保存してください。"
 
 #: ../../docs/training_manual/processing/first_alg.rst:66
 msgid ""
@@ -124,6 +135,12 @@ msgid ""
 "exist."
 msgstr ""
 "QGISを閉じると一時ファイルが削除されます。一時的な出力として保存された出力を持つプロジェクトを作成する場合は、後でプロジェクトをバック開こうとすると、出力ファイルが存在しないので、QGISは、文句を言うでしょう。"
+
+#: ../../docs/training_manual/processing/first_alg.rst:71
+msgid ""
+"Once you have configured the algorithm dialog, press :guilabel:`Run` to run "
+"the algorithm."
+msgstr "アルゴリズムダイアログを設定し終えたら :guilabel:`実行` を押してアルゴリズムを実行してくます。"
 
 #: ../../docs/training_manual/processing/first_alg.rst:74
 msgid "You will get the following output."
