@@ -1,25 +1,28 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
+# Harrissou Sant-anna, 2022
+# Ana Camargo, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:21+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"POT-Creation-Date: 2022-03-12 00:23+0100\n"
+"PO-Revision-Date: 2022-03-14 05:09+0000\n"
+"Last-Translator: Ana Camargo, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
 "Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/training_manual/processing/crs.rst:2
 msgid "CRSs. Reprojecting"
@@ -56,6 +59,16 @@ msgstr ""
 "devem ter o mesmo. Se você usar camadas com SRC diferentes entre si o QGIS "
 "irá avisá-lo sobre isso. Observe que o SRC de camadas de entrada é mostrada "
 "junto com o seu nome na caixa de diálogo de parâmetros."
+
+#: ../../docs/training_manual/processing/crs.rst:19
+msgid ""
+"If there are no input layer, it will use the project CRS, unless the "
+"algorithm contains a specific CRS field (as it happened in the last lesson "
+"with the graticule algorithm)"
+msgstr ""
+"Se não houver camada de entrada, ele usará o SRC do projeto, a menos que o "
+"algoritmo contenha um campo SRC específico (como aconteceu na última lição "
+"com o algoritmo da retícula)"
 
 #: ../../docs/training_manual/processing/crs.rst:23
 msgid ""
@@ -135,6 +148,22 @@ msgid ""
 msgstr ""
 "Se você abrir a tabela de atributos da nova camada, irá ver que ela contém "
 "dois novos campos com as coordenadas X e Y de cada ponto."
+
+#: ../../docs/training_manual/processing/crs.rst:60
+msgid ""
+"Those coordinate values are given in the layer CRS, since we chose that "
+"option. However, even if you choose another option, the output CRS of the "
+"layer would have been the same, since the input CRS is used to set the CRS "
+"of the output layer. Choosing another option will cause the values to be "
+"different, but not the resulting point to change or the CRS of the output "
+"layer to be different to the CRS of the input one."
+msgstr ""
+"Esses valores de coordenadas são fornecidos na camada SRC, pois escolhemos "
+"essa opção. No entanto, mesmo se você escolher outra opção, o SRC de saída "
+"da camada teria sido o mesmo, pois o SRC de entrada é usado para definir o "
+"SRC da camada de saída. Escolher outra opção fará com que os valores sejam "
+"diferentes, mas não com que o ponto resultante seja alterado ou que o SRC da"
+" camada de saída seja diferente do SRC da camada de entrada."
 
 #: ../../docs/training_manual/processing/crs.rst:68
 msgid ""
