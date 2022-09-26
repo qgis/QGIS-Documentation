@@ -565,7 +565,7 @@ over the map canvas.
 .. _meshelevation:
 
 Elevation Properties
-====================
+--------------------
 
 The |elevationscale| :guilabel:`Elevation` tab provides options to control
 the layer elevation properties within a :ref:`3D map view <label_3dmapview>`
