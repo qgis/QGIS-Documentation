@@ -393,7 +393,7 @@ Returns TRUE if a is the same as b.
 
 .. end_IS_section
 
-.. _expression_function_Operators_IS NOT:
+.. _expression_function_Operators_IS_NOT:
 
 IS NOT
 ......
@@ -414,7 +414,7 @@ Returns TRUE if a is not the same as b.
        * ``4 IS NOT 2+2`` → FALSE
 
 
-.. end_IS NOT_section
+.. end_IS_NOT_section
 
 .. _expression_function_Operators_LIKE:
 
@@ -467,7 +467,7 @@ Negates a condition.
 
 .. end_NOT_section
 
-.. _expression_function_Operators_NOT BETWEEN:
+.. _expression_function_Operators_NOT_BETWEEN:
 
 NOT BETWEEN
 ...........
@@ -492,7 +492,7 @@ Returns TRUE if value is not within the specified range. The range is considered
 .. note:: *value NOT BETWEEN lower_bound AND higher_bound* is the same as "*value < lower_bound OR value > higher_bound*".
 
 
-.. end_NOT BETWEEN_section
+.. end_NOT_BETWEEN_section
 
 .. _expression_function_Operators_OR:
 

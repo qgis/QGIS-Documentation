@@ -842,16 +842,16 @@ Further reading: :ref:`expression_function_String_concat`,
    :start-after: end_+_section
    :end-before: end_BETWEEN_section
 
-Further reading: :ref:`expression_function_Operators_NOT BETWEEN`
+Further reading: :ref:`expression_function_Operators_NOT_BETWEEN`
 
 .. include:: expression_help/Operators.rst
    :start-after: end_BETWEEN_section
-   :end-before: end_NOT BETWEEN_section
+   :end-before: end_NOT_BETWEEN_section
 
 Further reading: :ref:`expression_function_Operators_BETWEEN`
 
 .. include:: expression_help/Operators.rst
-   :start-after: end_NOT BETWEEN_section
+   :start-after: end_NOT_BETWEEN_section
    :end-before: end_[]_section
 
 Further reading: :ref:`expression_function_Arrays_array_get`,
