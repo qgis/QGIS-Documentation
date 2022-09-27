@@ -659,10 +659,6 @@ For rasters rendering, you can also define the following options:
 * :guilabel:`Cumulative pixel count cut limits`
 * :guilabel:`Standard deviation multiplier`
 
-**Debugging**
-
-* |checkbox| :guilabel:`Map canvas refresh` to debug rendering duration in
-  the :guilabel:`Log Messages` panel.
 
 .. _canvas_legend_options:
 
