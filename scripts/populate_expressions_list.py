@@ -191,7 +191,7 @@ def create_function_anchor(func, group):
     :param group: The group it belongs to
     :return: unique identifier of the function based on its name and group
     """
-    return "expression_function_{}_{}".format(group.replace(' ','_'), functions[func]['filename'])
+    return "expression_function_{}_{}".format(group, functions[func]['filename']).replace(' ','_')
 
 def find_img_path(anchor):
     """
@@ -283,4 +283,4 @@ for g_name in groups:
                             f"   :align: center\n   :width: 100%\n\n"
                             f"   {img_data[func_list[f_name]]['caption']}\n\n")
 
-            f.write(f'.. end_{f_name}_section\n\n')
+            f.write(f".. end_{f_name.replace(' ', '_')}_section\n\n")

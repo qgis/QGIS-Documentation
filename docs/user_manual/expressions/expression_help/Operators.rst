@@ -294,15 +294,18 @@ Returns TRUE if value is within the specified range. The range is considered inc
    :widths: 15 85
 
    * - Syntax
-     - BETWEEN lower_bound AND higher_bound
+     - value BETWEEN lower_bound AND higher_bound
    * - Arguments
-     - * **lower_bound AND higher_bound** - range bounds
+     - * **value** - the value to compare with a range. It can be a string, a number or a date.
+       * **lower_bound AND higher_bound** - range bounds
    * - Examples
      - * ``'B' BETWEEN 'A' AND 'C'`` → TRUE
        * ``2 BETWEEN 1 AND 3`` → TRUE
        * ``2 BETWEEN 2 AND 3`` → TRUE
        * ``'B' BETWEEN 'a' AND 'c'`` → FALSE
        * ``lower('B') BETWEEN 'a' AND 'b'`` → TRUE
+
+.. note:: *value BETWEEN lower_bound AND higher_bound* is the same as "*value >= lower_bound AND value <= higher_bound*".
 
 
 .. end_BETWEEN_section
@@ -390,7 +393,7 @@ Returns TRUE if a is the same as b.
 
 .. end_IS_section
 
-.. _expression_function_Operators_IS NOT:
+.. _expression_function_Operators_IS_NOT:
 
 IS NOT
 ......
@@ -411,7 +414,7 @@ Returns TRUE if a is not the same as b.
        * ``4 IS NOT 2+2`` → FALSE
 
 
-.. end_IS NOT_section
+.. end_IS_NOT_section
 
 .. _expression_function_Operators_LIKE:
 
@@ -464,7 +467,7 @@ Negates a condition.
 
 .. end_NOT_section
 
-.. _expression_function_Operators_NOT BETWEEN:
+.. _expression_function_Operators_NOT_BETWEEN:
 
 NOT BETWEEN
 ...........
@@ -475,9 +478,10 @@ Returns TRUE if value is not within the specified range. The range is considered
    :widths: 15 85
 
    * - Syntax
-     - NOT BETWEEN lower_bound AND higher_bound
+     - value NOT BETWEEN lower_bound AND higher_bound
    * - Arguments
-     - * **lower_bound AND higher_bound** - range bounds
+     - * **value** - the value to compare with a range. It can be a string, a number or a date.
+       * **lower_bound AND higher_bound** - range bounds
    * - Examples
      - * ``'B' NOT BETWEEN 'A' AND 'C'`` → FALSE
        * ``1.0 NOT BETWEEN 1.1 AND 1.2`` → TRUE
@@ -485,8 +489,10 @@ Returns TRUE if value is not within the specified range. The range is considered
        * ``'B' NOT BETWEEN 'a' AND 'c'`` → TRUE
        * ``lower('B') NOT BETWEEN 'a' AND 'b'`` → FALSE
 
+.. note:: *value NOT BETWEEN lower_bound AND higher_bound* is the same as "*value < lower_bound OR value > higher_bound*".
 
-.. end_NOT BETWEEN_section
+
+.. end_NOT_BETWEEN_section
 
 .. _expression_function_Operators_OR:
 
