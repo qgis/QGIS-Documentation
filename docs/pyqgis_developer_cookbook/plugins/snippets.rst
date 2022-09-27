@@ -35,6 +35,7 @@ Code Snippets
     )
 
     from qgis.gui import (
+        QgsGui,
         QgsOptionsWidgetFactory,
         QgsOptionsPageWidget
     )
@@ -77,6 +78,17 @@ The method that is called when CTRL+I is pressed
   def key_action_triggered(self):
     QMessageBox.information(self.iface.mainWindow(),"Ok", "You pressed Ctrl+I")
 
+It is also possible to allow users to customize key shortcuts for the provided actions.
+This is done by adding:
+
+.. testcode:: plugin_snippets
+
+  # in the initGui() function
+  QgsGui.shortcutsManager().registerAction(self.key_action)
+
+  # and in the unload() function
+  QgsGui.shortcutsManager().unregisterAction(self.key_action)
+
 
 How to reuse QGIS icons
 -----------------------
@@ -85,8 +97,9 @@ Because they are well-known and convey a clear message to the users, you may wan
 sometimes to reuse QGIS icons in your plugin instead of drawing and setting a new one.
 Use the :meth:`getThemeIcon() <qgis.core.QgsApplication.getThemeIcon>` method.
 
-For example, to reuse the |fileOpen| icon available at
-:source:`images/themes/default/mActionFileOpen.svg`, you can do:
+For example, to reuse the |fileOpen|
+:source:`mActionFileOpen.svg <images/themes/default/mActionFileOpen.svg>` icon available
+in the QGIS code repository:
 
 .. code:: py
 
@@ -172,7 +185,7 @@ Finally we are adding the imports and modifying the ``__init__`` function:
         def unload(self):
             iface.unregisterOptionsWidgetFactory(self.options_factory)
 
-.. tip:: **Add custom tabs to a vector layer properties dialog**
+.. tip:: **Add custom tabs to layer properties dialog**
 
     You can apply a similar logic to add the plugin custom option to the layer
     properties dialog using the classes
