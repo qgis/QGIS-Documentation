@@ -555,16 +555,20 @@ layers rendering in the map canvas.
 
    Rendering settings
 
-**Rendering behavior**
+**Rendering Behavior**
 
 * |checkbox| :guilabel:`By default new layers added to the map should be
   displayed`: unchecking this option can be handy when loading multiple layers
   to avoid each new layer being rendered in the canvas and slow down the process
-* |checkbox| :guilabel:`Maximum cores to use for map rendering`
-* :guilabel:`Map update interval (default to 250 ms)`
+* Set the :guilabel:`Maximum cores to use for map rendering`
+* The map canvas renders in the background onto a separate image and at each
+  :guilabel:`Map update interval` (defaults to 250 ms), the content from this
+  (off-screen) image will be taken to update the visible screen representation.
+  However, if rendering finishes faster than this duration, it will be shown
+  instantaneously.
 * :guilabel:`Magnification level` (see the :ref:`magnifier <magnifier>`)
 
-**Rendering quality**
+**Rendering Quality**
 
 * |checkbox| :guilabel:`Make lines appear less jagged at the expense of some
   drawing performance`
@@ -584,32 +588,37 @@ for rendering vector layers.
 
 .. _global_simplification:
 
-* |checkbox| :guilabel:`Enable feature simplification by default for newly added layers`
-* :guilabel:`Simplification threshold (higher values result in more simplification)` 
-* :guilabel:`Simplification algorithm`: This option performs a local
-  "on-the-fly" simplification on feature's and speeds up geometry rendering. It
-  doesn't change the geometry fetched from the data providers. This is important
-  when you have expressions that use the feature geometry (e.g. calculation of
-  area) - it ensures that these calculations are done on the original geometry,
-  not on the simplified one. For this purpose, QGIS provides three algorithms:
-  'Distance' (default), 'SnapToGrid' and 'Visvalingam'.
-* |unchecked| :guilabel:`Simplify on provider side if possible`: the geometries
-  are simplified by the provider (PostGIS, Oracle...) and unlike the
-  local-side simplification, geometry-based calculations may be affected
-* :guilabel:`Maximum scale at which the layer should be simplified (1:1 always simplifies)`
+* |checkbox| :guilabel:`Enable Feature Simplification by Default for Newly Added
+  Layers`: you simplify features' geometry (fewer nodes) and as a result, they
+  display more quickly. Be aware that this can cause rendering inconsistencies.
+  Available settings are:
 
-.. note:: Besides the global setting, feature simplification can be set for any
+  * :guilabel:`Simplification threshold (higher values result in more simplification)` 
+  * :guilabel:`Simplification algorithm`: This option performs a local
+    "on-the-fly" simplification on feature's and speeds up geometry rendering. It
+    doesn't change the geometry fetched from the data providers. This is important
+    when you have expressions that use the feature geometry (e.g. calculation of
+    area) - it ensures that these calculations are done on the original geometry,
+    not on the simplified one. For this purpose, QGIS provides three algorithms:
+    'Distance' (default), 'SnapToGrid' and 'Visvalingam'.
+  * |unchecked| :guilabel:`Simplify on provider side if possible`: the geometries
+    are simplified by the provider (PostGIS, Oracle...) and unlike the
+    local-side simplification, geometry-based calculations may be affected
+  * :guilabel:`Maximum scale at which the layer should be simplified
+    (1:1 always simplifies)`
+
+  .. note:: Besides the global setting, feature simplification can be set for any
    specific layer from its :menuselection:`Layer properties --> Rendering` menu.
 
-**Curve segmentation**
+* :guilabel:`Curve Segmentation`
 
-* :guilabel:`Segmentation tolerance`: this setting controls the way circular arcs
-  are rendered. **The smaller** maximum angle (between the two consecutive vertices
-  and the curve center, in degrees) or maximum difference (distance between the
-  segment of the two vertices and the curve line, in map units), the **more
-  straight line** segments will be used during rendering.
-* :guilabel:`Tolerance type`: it can be *Maximum angle* or *Maximum difference*
-  between approximation and curve.
+  * :guilabel:`Segmentation tolerance`: this setting controls the way circular arcs
+    are rendered. **The smaller** maximum angle (between the two consecutive vertices
+    and the curve center, in degrees) or maximum difference (distance between the
+    segment of the two vertices and the curve line, in map units), the **more
+    straight line** segments will be used during rendering.
+  * :guilabel:`Tolerance type`: it can be *Maximum angle* or *Maximum difference*
+    between approximation and curve.
 
 Raster rendering settings
 .........................
@@ -654,7 +663,7 @@ For each, you can set:
 * the :guilabel:`Limits (minimum/maximum)` to apply, with values such as 'Cumulative
   pixel count cut', 'Minimum/Maximum', 'Mean +/- standard deviation'.
 
-For rasters rendering, you can also define the following options:
+The :guilabel:`Contrast Enhancement` options also include:
 
 * :guilabel:`Cumulative pixel count cut limits`
 * :guilabel:`Standard deviation multiplier`
