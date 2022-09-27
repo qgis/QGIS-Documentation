@@ -2922,8 +2922,7 @@ the Coordinate option and the |extents| :guilabel:`Extents` option
 that displays the coordinates of the current bottom-left and top-right
 corners of the map view in map units.
 
-Next to the coordinate display you will find the :guilabel:`Scale`
-display.
+Next to the coordinate display you will find the :guilabel:`Scale` display.
 It shows the scale of the map view. There is a scale selector, which
 allows you to choose between
 :ref:`predefined and custom scales <predefinedscales>`.
@@ -2940,7 +2939,7 @@ The magnification level is expressed as a percentage.
 If the :guilabel:`Magnifier` has a level of 100%, then the current map
 is not magnified, i.e. is rendered at accurate scale relative to the monitor's resolution (DPI).
 A default magnification value can be defined within
-:menuselection:`Settings --> Options --> Rendering --> Rendering behavior`,
+:menuselection:`Settings --> Options --> Rendering --> Rendering Behavior`,
 which is very useful for high-resolution screens to enlarge small
 symbols. In addition, a setting in :menuselection:`Settings --> Options --> Canvas & Legend --> DPI` 
 controls whether QGIS respects each monitor's physical DPI or uses the overall system logical DPI.
@@ -2948,14 +2947,14 @@ controls whether QGIS respects each monitor's physical DPI or uses the overall s
 To the right of the magnifier tool you can define a current clockwise
 rotation for your map view in degrees.
 
-On the right side of the status bar, there is a small checkbox which
-can be used temporarily to prevent layers being rendered to the map
-view (see section :ref:`redraw_events`).
+On the right side of the status bar, the |checkbox| :guilabel:`Render`
+checkbox can be used to temporarily suspend the map view rendering
+(see section :ref:`redraw_events`).
 
-To the right of the render functions, you find the |projectionEnabled|
-:guilabel:`EPSG:code` button showing the current project CRS. Clicking
-on this opens the :guilabel:`Project Properties` dialog and lets you
-apply another CRS to the map view.
+To the right of the |checkbox| :guilabel:`Render` function, you find the
+|projectionEnabled| :guilabel:`EPSG:code` button showing the current project CRS.
+Clicking on this opens the :guilabel:`Project Properties` dialog and lets you
+reproject the map view or adjust any other project property.
 
 .. index::
    single: Scale calculate
@@ -2974,7 +2973,7 @@ apply another CRS to the map view.
    specifies (e.g., ``+units=us-ft``).
 
    Note that CRS choice on startup can be set in
-   :menuselection:`Settings --> Options --> CRS`.
+   :menuselection:`Settings --> Options --> CRS Handling`.
 
 Messaging
 ---------

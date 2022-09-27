@@ -689,20 +689,45 @@ Working with the map canvas
 ===========================
 
 .. index:: Rendering
+   single: Rendering; Suspending
 .. _`redraw_events`:
 
-Rendering
----------
+Controlling map rendering
+-------------------------
 
 By default, QGIS renders all visible layers whenever the map canvas is
 refreshed. The events that trigger a refresh of the map canvas include:
 
-*  adding a layer
-*  panning or zooming
-*  resizing the QGIS window
-*  changing the visibility of a layer or layers
+* changing the visibility of a layer
+* modifying symbology of a visible layer
+* adding a layer
+* panning or zooming
+* resizing the QGIS window
 
 QGIS allows you to control the rendering process in a number of ways.
+
+* at the :ref:`global level <rendering_options>`
+* per layer, using e.g. the :ref:`scale dependent rendering <label_scaledepend>`
+* or with dedicated tools in the GUI.
+
+To stop the map drawing, press the :kbd:`Esc` key. This will halt the refresh of
+the map canvas and leave the map partially drawn. It may however take a bit of time
+after pressing :kbd:`Esc` for the map drawing to halt.
+
+To suspend rendering, click the |checkbox| :guilabel:`Render` checkbox in the
+bottom-right corner of the status bar. When |checkbox| :guilabel:`Render`
+is unchecked, QGIS does not redraw the canvas in response to any of
+the usual triggers mentioned earlier. Examples of when you
+might want to suspend rendering include:
+
+* adding many layers and symbolizing them prior to drawing
+* adding one or more large layers and setting scale dependency before drawing
+* adding one or more large layers and zooming to a specific view before drawing
+* any combination of the above
+
+Checking the |checkbox| :guilabel:`Render` checkbox enables rendering and
+causes an immediate refresh of the map canvas.
+
 
 .. index:: Rendering scale dependent, Scale
 .. _`label_scaledepend`:
@@ -729,100 +754,6 @@ the current map canvas scale as boundary of the range visibility.
    its visibility scale range, the layer is greyed in the Layers panel and
    a new option :guilabel:`Zoom to Visible Scale` appears in the layer context menu.
    Select it and the map is zoomed to the layer's nearest visibility scale.
-
-
-.. _`label_controlmap`:
-
-Controlling Map Rendering
-.........................
-
-Map rendering can be controlled in various ways, as described below.
-
-.. index::
-   single: Rendering; Suspending
-.. _`label_suspendrender`:
-
-Suspending Rendering
-^^^^^^^^^^^^^^^^^^^^
-
-To suspend rendering, click the |checkbox| :guilabel:`Render` checkbox in the
-bottom-right corner of the status bar. When |checkbox| :guilabel:`Render`
-is not checked, QGIS does not redraw the canvas in response to any of
-the events described in the section :ref:`redraw_events`. Examples of when you
-might want to suspend rendering include:
-
-* adding many layers and symbolizing them prior to drawing
-* adding one or more large layers and setting scale dependency before drawing
-* adding one or more large layers and zooming to a specific view before drawing
-* any combination of the above
-
-Checking the |checkbox| :guilabel:`Render` checkbox enables rendering and
-causes an immediate refresh of the map canvas.
-
-
-.. index::
-   single: Rendering; Options
-   single: Layers; Initial visibility
-.. _`label_settinglayer`:
-
-Setting Layer Add Option
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-You can set an option to always load new layers without drawing them. This
-means the layer will be added to the map, but its visibility checkbox in the
-legend will be unchecked by default. To set this option, choose menu option
-:menuselection:`Settings --> Options` and click on the :guilabel:`Rendering`
-tab. Uncheck |checkbox| :guilabel:`By default new layers added to the map
-should be displayed`. Any layer subsequently added to the map will be off
-(invisible) by default.
-
-
-.. index::
-   single: Rendering; Halting
-.. _label_stoprender:
-
-Stopping Rendering
-^^^^^^^^^^^^^^^^^^
-
-To stop the map drawing, press the :kbd:`Esc` key. This will halt the refresh of
-the map canvas and leave the map partially drawn. It may take a bit of time
-between pressing :kbd:`Esc` for the map drawing to halt.
-
-
-.. index::
-   single: Rendering; Quality
-.. _`label_renderquality`:
-
-Influence Rendering Quality
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-QGIS has an option to influence the rendering quality of the map. Choose menu
-option :menuselection:`Settings --> Options`, click on the :guilabel:`Rendering`
-tab and select or deselect |checkbox| :guilabel:`Make lines appear less jagged
-at the expense of some drawing performance`.
-
-.. index::
-   single: Rendering; Speed-up
-
-Speed-up rendering
-^^^^^^^^^^^^^^^^^^
-
-There are some settings that allow you to improve rendering speed. Open the QGIS options
-dialog using :menuselection:`Settings --> Options`, go to the :guilabel:`Rendering`
-tab and select or deselect the following checkboxes:
-
-* |checkbox| :guilabel:`Use render caching where possible to speed up redraws`.
-* |checkbox| :guilabel:`Render layers in parallel using many CPU cores` and then
-  set the |checkbox| :guilabel:`Max cores to use`.
-* The map renders in the background onto a separate image and each
-  |checkbox| :guilabel:`Map Update interval`, the content from this
-  (off-screen) image will be taken to update the visible screen representation.
-  However, if rendering finishes faster than this duration, it will be shown
-  instantaneously.
-* With |checkbox| :guilabel:`Enable Feature simplification by default for newly
-  added layers`, you simplify features' geometry (fewer nodes) and as a result,
-  they display more quickly.
-  Be aware that this can cause rendering inconsistencies.
 
 
 .. index:: Zoom, Pan, Map navigation
