@@ -7,8 +7,8 @@
 # Translators:
 # Harrissou Sant-anna, 2022
 # Vanessa Stelzer, 2022
-# Letícia Jardim, 2022
 # Ana Camargo, 2022
+# Letícia Jardim, 2022
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-12 00:23+0100\n"
 "PO-Revision-Date: 2022-03-14 05:08+0000\n"
-"Last-Translator: Ana Camargo, 2022\n"
+"Last-Translator: Letícia Jardim, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,6 +33,24 @@ msgstr "Projeções raster"
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:14
 msgid "Assign projection"
 msgstr "Atribuir projeção"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:15
+msgid "Applies a coordinate system to a raster dataset."
+msgstr "Aplica um sistema de coordenadas a um conjunto de dados raster."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:17
+msgid ""
+"This algorithm is derived from the `GDAL edit utility "
+"<https://gdal.org/programs/gdal_edit.html>`_."
+msgstr ""
+"Este algoritmo é derivado do utilitário `GDAL edit "
+"<https://gdal.org/programs/gdal_edit.html>`_."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:20
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:78
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:151
+msgid "**Default menu**: :menuselection:`Raster --> Projections`"
+msgstr "**Menu padrão**: :menuselection:`Raster --> Projeções`"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:23
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:81
@@ -85,6 +103,11 @@ msgstr "Descrição"
 msgid "**Input layer**"
 msgstr "**Camada de entrada**"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:34
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:92
+msgid "``INPUT_LAYER``"
+msgstr "``CAMADA_ENTRADA``"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:35
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:55
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:93
@@ -98,6 +121,10 @@ msgstr "[raster]"
 msgid "Input raster layer"
 msgstr "Camada raster de entrada "
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:37
+msgid "**Desired CRS**"
+msgstr "**SRC desejada**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:38
 msgid "``CRS``"
 msgstr "``SRC``"
@@ -109,17 +136,29 @@ msgstr "``SRC``"
 msgid "[crs]"
 msgstr "[src]"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:40
+msgid "The projection (CRS) of the output layer"
+msgstr "A projeção (SRC) da camada de saída"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:43
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:108
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:327
 msgid "Outputs"
 msgstr "Saídas"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:53
+msgid "**Layer with projection**"
+msgstr "**Camada com projeção**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:54
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:225
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:338
 msgid "``OUTPUT``"
 msgstr "``SAÍDA``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:56
+msgid "The output raster layer (with the new projection information)"
+msgstr "A camada raster de saída (com as novas informações de projeção)"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:59
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:131
@@ -131,6 +170,22 @@ msgstr "Código Python"
 msgid "Extract projection"
 msgstr "Extrair projeção"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:75
+msgid ""
+"This algorithm is derived from the `GDAL srsinfo utility "
+"<https://gdal.org/programs/gdalsrsinfo.html>`_."
+msgstr ""
+"Este algoritmo é derivado do utilitário \"GDAL srsinfo "
+"<https://gdal.org/programs/gdalsrsinfo.html>`_."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:91
+msgid "**Input file**"
+msgstr "**Arquivo de entrada**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:99
+msgid "**Create also .prj file**"
+msgstr "**Criar também arquivo .prj**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:101
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:311
 msgid "[boolean]"
@@ -141,10 +196,30 @@ msgstr "[boleano]"
 msgid "Default: False"
 msgstr "Padrão: Falso"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:118
+msgid "**World file**"
+msgstr "**Arquivo global**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:120
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:125
 msgid "[file]"
 msgstr "[arquivo]"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:121
+msgid ""
+"Text file with extension :file:`.wld` containing transformation parameters "
+"for the raster file."
+msgstr ""
+"Arquivo texto com extensão :file:`.wld` contendo parâmetros de transformação"
+" para o arquivo raster."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:148
+msgid ""
+"This algorithm is derived from the `GDAL warp utility "
+"<https://gdal.org/programs/gdalwarp.html>`_."
+msgstr ""
+"Este algoritmo é derivado do utilitário `GDAL warp "
+"<https://gdal.org/programs/gdalwarp.html>`_."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:157
 msgid "Basic parameters"
@@ -153,6 +228,10 @@ msgstr "Parâmetros básicos"
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:169
 msgid "``INPUT``"
 msgstr "``ENTRADA``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:171
+msgid "Input raster layer to reproject"
+msgstr "Camada de entrada raster para reprojetar"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:172
 msgid "**Source CRS**"
@@ -172,6 +251,10 @@ msgstr "Opcional"
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:175
 msgid "``SOURCE_CRS``"
 msgstr "``SRC_ORIGEM``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:177
+msgid "Defines the CRS of the input raster layer"
+msgstr "Define o SRC da camada raster de entrada"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:178
 msgid "**Target CRS**"
@@ -193,6 +276,10 @@ msgstr "O SRC da camada de saída"
 msgid "**Resampling method to use**"
 msgstr "**Método de amostragem a ser utilizado**"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:187
+msgid "``RESAMPLING``"
+msgstr "``REAMOSTRAGEM``"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:188
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:265
 msgid "[enumeration]"
@@ -202,6 +289,10 @@ msgstr "[enumeração]"
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:267
 msgid "Default: 0"
 msgstr "Padrão: 0"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:191
+msgid "Pixel value resampling method to use. Options:"
+msgstr "Método de reamostragem de valor de pixel a ser usado. Opções:"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:194
 msgid "0 --- Nearest neighbour"
@@ -214,6 +305,10 @@ msgstr "1 --- Bilinear"
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:196
 msgid "2 --- Cubic"
 msgstr "2 --- Cúbico"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:197
+msgid "3 --- Cubic spline"
+msgstr "3 --- Estriado cúbico"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:199
 msgid "5 --- Average"
@@ -257,6 +352,10 @@ msgstr "[número]"
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:323
 msgid "Default: None"
 msgstr "Padrão: Nenhum"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:223
+msgid "Defines the output file resolution of reprojection result"
+msgstr "Define a resolução do arquivo de saída do resultado da reprojeção"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:224
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:337
@@ -407,3 +506,11 @@ msgstr "**Parâmetros adicionais da linha de comando**"
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:320
 msgid "``EXTRA``"
 msgstr "``EXTRA``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:324
+msgid "Add extra GDAL command line options."
+msgstr "Adicione opções extras de linha de comando GDAL."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:342
+msgid "Reprojected output raster layer"
+msgstr "Reprojetar camada rasterizada de saída"

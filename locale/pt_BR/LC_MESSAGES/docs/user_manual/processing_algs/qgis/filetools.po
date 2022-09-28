@@ -8,6 +8,7 @@
 # Harrissou Sant-anna, 2022
 # Vanessa Stelzer, 2022
 # Ana Camargo, 2022
+# Letícia Jardim, 2022
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-12 00:23+0100\n"
 "PO-Revision-Date: 2022-03-14 05:10+0000\n"
-"Last-Translator: Ana Camargo, 2022\n"
+"Last-Translator: Letícia Jardim, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,9 +26,22 @@ msgstr ""
 "Language: pt_BR\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:2
+msgid "File tools"
+msgstr "Ferramentas de arquivo"
+
 #: ../../docs/user_manual/processing_algs/qgis/filetools.rst:13
 msgid "Download file"
 msgstr "Fazer download do arquivo"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:14
+msgid ""
+"Downloads a file specified using a URL (using for instance ``http:`` or "
+"``file:``). In other words you can copy/paste a URL and download the file."
+msgstr ""
+"Realize o download de um arquivo especificado utilizando uma URL "
+"(utilizando, por exemplo, ``http:`` ou ``file:``). Em outras palavras, você "
+"pode copiar/colar uma URL e fazer o download do arquivo."
 
 #: ../../docs/user_manual/processing_algs/qgis/filetools.rst:19
 msgid "Parameters"
@@ -76,6 +90,10 @@ msgstr "``URL``"
 msgid "[string]"
 msgstr "[string]"
 
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:35
+msgid "The URL of the file to download."
+msgstr "A URL do arquivo a ser baixado."
+
 #: ../../docs/user_manual/processing_algs/qgis/filetools.rst:36
 #: ../../docs/user_manual/processing_algs/qgis/filetools.rst:88
 msgid "**File destination**"
@@ -91,6 +109,14 @@ msgstr "Opcional"
 msgid "``OUTPUT``"
 msgstr "``SAÍDA``"
 
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:42
+msgid "Default: ``[Save to temporary file]``"
+msgstr "Padrão: ``[Salvar em arquivo temporário]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:43
+msgid "Specification of the file destination. One of:"
+msgstr "Especificação do destino do arquivo. Um de:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Skip Output"
 msgstr "Ignorar Saída"
@@ -98,6 +124,10 @@ msgstr "Ignorar Saída"
 #: ../../docs/user_manual/processing_algs/algs_include.rst:4
 msgid "Save to a Temporary File"
 msgstr "Salvar como Arquivo Temporário"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:5
+msgid "Save to File…"
+msgstr "Salvar em Arquivo..."
 
 #: ../../docs/user_manual/processing_algs/qgis/filetools.rst:51
 msgid "Advanced parameters"
@@ -111,9 +141,25 @@ msgstr "**Método**"
 msgid "``METHOD``"
 msgstr "``MÉTODO``"
 
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:63
+msgid "[enumeration]"
+msgstr "[enumeração]"
+
 #: ../../docs/user_manual/processing_algs/qgis/filetools.rst:65
 msgid "Default: 0"
 msgstr "Padrão: 0"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:66
+msgid "The HTTP method to use for the request. Options are:"
+msgstr "O método HTTP a ser utilizado para a solicitação. As opções são:"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:68
+msgid "0 --- GET"
+msgstr "0 --- LER"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:69
+msgid "1 --- POST"
+msgstr "1 --- CRIAR"
 
 #: ../../docs/user_manual/processing_algs/qgis/filetools.rst:70
 msgid "**Data**"
@@ -123,9 +169,17 @@ msgstr "**Dados**"
 msgid "``DATA``"
 msgstr "``DADOS``"
 
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:75
+msgid "The data to add in the body if the request is a POST."
+msgstr "Os dados a serem acrescentados no corpo se o pedido for um 'CRIAR'."
+
 #: ../../docs/user_manual/processing_algs/qgis/filetools.rst:78
 msgid "Outputs"
 msgstr "Saídas"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:91
+msgid "The location of the downloaded file"
+msgstr "A localização do arquivo baixado"
 
 #: ../../docs/user_manual/processing_algs/qgis/filetools.rst:94
 msgid "Python code"

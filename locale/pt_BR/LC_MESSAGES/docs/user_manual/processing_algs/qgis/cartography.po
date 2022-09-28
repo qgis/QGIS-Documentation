@@ -8,8 +8,8 @@
 # Harrissou Sant-anna, 2022
 # Ana Carla Rizzo Mendes, 2022
 # Vanessa Stelzer, 2022
-# Letícia Jardim, 2022
 # Ana Camargo, 2022
+# Letícia Jardim, 2022
 # 
 #, fuzzy
 msgid ""
@@ -18,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-07-13 02:47+0000\n"
 "PO-Revision-Date: 2022-03-14 05:09+0000\n"
-"Last-Translator: Ana Camargo, 2022\n"
+"Last-Translator: Letícia Jardim, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,6 +30,10 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:2
 msgid "Cartography"
 msgstr "Cartografia"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:13
+msgid "Align points to features"
+msgstr "Alinhar pontos às feições"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:15
 msgid ""
@@ -224,12 +228,28 @@ msgstr "``ENTRADA``"
 msgid "[vector: point]"
 msgstr "[vetor: ponto]"
 
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:44
+msgid "Point features to calculate the rotation for"
+msgstr "Feições de ponto para calcular a rotação para"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:45
+msgid "**Reference layer**"
+msgstr "**Camada de referência**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:46
+msgid "``REFERENCE_LAYER``"
+msgstr "\"CAMADA_REFERÊNCIA\""
+
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:47
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:229
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:451
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:590
 msgid "[vector: any]"
 msgstr "[vetor: qualquer]"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:48
+msgid "Layer to find the closest feature from for rotation calculation"
+msgstr "Camada para encontrar a feição mais próxima para cálculo de rotação"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:49
 msgid "**Maximum distance to consider**"
@@ -258,6 +278,10 @@ msgstr "**Distância máxima a considerar**"
 msgid "Optional"
 msgstr "Opcional"
 
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:52
+msgid "``MAX_DISTANCE``"
+msgstr "\"DISTÂNCIA_MÁXIMA\""
+
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:53
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:170
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:174
@@ -280,9 +304,45 @@ msgstr "Opcional"
 msgid "[number]"
 msgstr "[número]"
 
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:55
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:510
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:632
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:770
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:875
+msgid "Default: Not set"
+msgstr "Padrão: Não definido"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:56
+msgid ""
+"If no reference feature is found within this distance, no rotation is "
+"assigned to the point feature."
+msgstr ""
+"Se nenhuma feição de referência for encontrada dentro dessa distância, "
+"nenhuma rotação será atribuída à feição de ponto."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:58
+msgid "**Angle field name**"
+msgstr "**Nome do campo de ângulo**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:59
+msgid "``FIELD_NAME``"
+msgstr "\"NOME_CAMPO\""
+
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:62
 msgid "Default: 'rotation'"
 msgstr "Padrão: 'rotação'"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:63
+msgid "Field in which to store the rotation value."
+msgstr "Campo no qual armazenar o valor de rotação."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:64
+msgid "**Automatically apply symbology**"
+msgstr "**Aplicar simbologia automaticamente**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:65
+msgid "``APPLY_SYMBOLOGY``"
+msgstr "``APLICAR_SIMBOLOGIA``"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:66
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:246
@@ -456,10 +516,24 @@ msgstr "[enumeração] [lista]"
 msgid "[file]"
 msgstr "[arquivo]"
 
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+msgid "Save to a Temporary File"
+msgstr "Salvar em um Arquivo Temporário"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:180
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:400
+msgid "**Symbol count**"
+msgstr "**Contagem de símbolos**"
+
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:181
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:401
 msgid "``SYMBOLS``"
 msgstr "``SÍMBOLOS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:185
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:405
+msgid "``TEXTFORMATS``"
+msgstr "``FORMATOSDETEXTO``"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:231
 msgid "**Categorize using expression**"
@@ -528,6 +602,11 @@ msgstr ""
 msgid "[table]"
 msgstr "[tabela]"
 
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:265
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:279
+msgid "Default: ``[Skip output]``"
+msgstr "Default: ``[Pular saída]``"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Skip Output"
 msgstr "Ignorar Saída"
@@ -549,6 +628,10 @@ msgstr ""
 "A camada de vetor de entrada com o estilo categorizado aplicado. Nenhuma "
 "nova camada é gerada."
 
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:327
+msgid "Create style database from project"
+msgstr "Criar banco de dados de estilo do projeto"
+
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:328
 msgid ""
 "Extracts all style objects (symbols, color ramps, text formats and label "
@@ -556,6 +639,14 @@ msgid ""
 msgstr ""
 "Extrai todos os objetos de estilo (símbolos, rampas de cores, formatos de "
 "texto e configurações de rótulos) de um projeto QGIS."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:348
+msgid "**Input project (leave blank to use current)**"
+msgstr "**Insira o projeto (deixe em branco para usar o atual)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:353
+msgid "A QGIS project file to extract the style items from"
+msgstr "Um arquivo de projeto QGIS para extrair os itens de estilo "
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:354
 msgid "**Objects to extract**"
@@ -642,6 +733,16 @@ msgstr "Camada a ser usada para gerar o atlas"
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:592
 msgid "**Filter expression**"
 msgstr "**Expressão do filtro**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:454
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:593
+msgid "``FILTER_EXPRESSION``"
+msgstr "``FILTRAR_EXPRESSÃO``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:456
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:595
+msgid "Expression to use to filter out atlas features"
+msgstr "Expressão a ser usada para filtrar as feições do atlas"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:457
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:596
@@ -743,10 +844,39 @@ msgstr "``GEOREFERÊNCIA``"
 msgid "**Always export as vectors**"
 msgstr "**Sempre exportar como vetores**"
 
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:640
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:883
+msgid "Determines if vectorial data should be left as vectors"
+msgstr "Determina se os dados vetoriais devem ser deixados como vetores"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:641
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:884
+msgid "**Append georeference information**"
+msgstr "**Anexar informações de georeferência**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:659
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:902
+msgid "**Simplify geometries to reduce output file size**"
+msgstr ""
+"**Simplificar as geometrias para reduzir o tamanho do arquivo de saída**"
+
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:660
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:903
 msgid "``SIMPLIFY``"
 msgstr "``SIMPLIFICAR``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:664
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:907
+msgid ""
+"Determines if geometries should be simplified to reduce output file size"
+msgstr ""
+"Determina se as geometrias devem ser simplificadas para reduzir o tamanho do"
+" arquivo de saída"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:666
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:909
+msgid "``TEXT_FORMAT``"
+msgstr "\"FORMATO_TEXTO\""
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:669
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:912
@@ -754,15 +884,59 @@ msgstr "``SIMPLIFICAR``"
 msgid "Default: 0"
 msgstr "Padrão: 0"
 
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:670
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:913
+msgid ""
+"Determines if text should be exported as path or text objects. Possible "
+"options are:"
+msgstr ""
+"Determina se o texto deve ser exportado como caminho ou objetos de texto. As"
+" opções possíveis são:"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:673
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:916
+msgid "0 - Always export text as paths (recommended)"
+msgstr "0 - Sempre exportar texto como caminhos (recomendado)"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:674
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:917
+msgid "1 - Always export texts as text objects"
+msgstr "1 - Sempre exportar textos como objetos de texto"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:676
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:698
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:842
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:939
+msgid "**PDF file**"
+msgstr "**Arquivo PDF**"
+
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:680
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:741
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:846
 msgid "Default: [Save to temporary file]"
 msgstr "Padrão: [Salvar em arquivo temporário]"
 
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:681
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:742
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:847
+msgid "Name (including path) of the output file. One of:"
+msgstr "Nome (incluindo caminho) do arquivo de saída. Um de:"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:716
+msgid "Export print layout as image"
+msgstr "Exportar layout de impressão como imagem"
+
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:821
 msgid "Export print layout as PDF"
 msgstr "Exportar layout de impressão em PDF"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:919
+msgid "**Export layers as separate PDF files**"
+msgstr "**Exportar camadas como arquivos PDF separados**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:920
+msgid "``SEPARATE_LAYERS``"
+msgstr "``SEPARAR_CAMADAS``"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:985
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:991
@@ -795,6 +969,11 @@ msgstr "[vetor: polígono]"
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1212
 msgid "Default: ``[Create temporary layer]``"
 msgstr "Padrão: ``[Criar camada temporária]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1003
+msgid "Specify the output vector layer for the extent(s). One of:"
+msgstr ""
+"Especifique a camada vetorial de saída para a(s) extensão(ões). Um de:"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1023
 msgid "``CRS``"
@@ -831,6 +1010,10 @@ msgstr "**Largura do mapa**"
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1059
 msgid "``WIDTH``"
 msgstr "``LARGURA``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1076
+msgid "Set layer style"
+msgstr "Definir estilo de camada"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1081
 msgid ""

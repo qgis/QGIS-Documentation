@@ -7,8 +7,8 @@
 # Translators:
 # Harrissou Sant-anna, 2022
 # Ana Carla Rizzo Mendes, 2022
-# Letícia Jardim, 2022
 # Vanessa Stelzer, 2022
+# Letícia Jardim, 2022
 # Ana Camargo, 2022
 # 
 #, fuzzy
@@ -16,14 +16,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"POT-Creation-Date: 2022-09-28 02:54+0000\n"
 "PO-Revision-Date: 2022-03-14 05:12+0000\n"
 "Last-Translator: Ana Camargo, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.3\n"
 "Language: pt_BR\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -211,6 +211,7 @@ msgstr "Retorna um valor agregado calculado usando feições de outra camada."
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:35
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:38
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:44
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:51
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:52
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:53
@@ -619,6 +620,7 @@ msgstr "[] marca argumentos opcionais"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:38
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:40
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:43
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:46
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:53
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:54
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:55
@@ -1109,6 +1111,7 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:40
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:42
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:44
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:48
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:49
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:56
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:57
@@ -1667,6 +1670,14 @@ msgstr "q3"
 msgid "Returns the calculated third quartile from a field or expression."
 msgstr "Retorna o terceiro quartil calculado de um campo ou expressão."
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:512
+msgid ""
+"Returns the aggregate range of values (maximum - minimum) from a field or "
+"expression."
+msgstr ""
+"Retorna o intervalo agregado de valores (máximo - mínimo) de um campo ou "
+"expressão."
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:534
 msgid "relation_aggregate"
 msgstr "relation_aggregate"
@@ -1701,6 +1712,10 @@ msgstr ""
 msgid "array"
 msgstr "array"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:20
+msgid "array(value1, value2, ...)"
+msgstr "matriz(valor1, valor2, ...)"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:22
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:64
 msgid "**value** - a value"
@@ -1723,6 +1738,10 @@ msgid "Returns true if an array contains all the values of a given array."
 msgstr ""
 "Retorna verdadeiro se uma matriz contiver todos os valores de uma "
 "determinada matriz."
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:43
+msgid "**array_a** - an array"
+msgstr "**matriz_a** - uma matriz"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:55
 msgid "array_append"
@@ -1792,6 +1811,18 @@ msgstr "**valor** - o valor a ser contado"
 msgid "array_distinct"
 msgstr "array_distinct"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:140
+msgid "Returns an array containing distinct values of the given array."
+msgstr "Retorna uma matriz contendo valores distintos da matriz fornecida."
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:146
+msgid "array_distinct(array)"
+msgstr "matriz_distinta(matriz)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:150
+msgid "``array_distinct(array(1,2,3,2,1))`` → [ 1, 2, 3 ]"
+msgstr "``matriz_distinta(matriz(1,2,3,2,1))`` → [ 1, 2, 3 ]"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:158
 msgid "array_filter"
 msgstr "array_filter"
@@ -1803,6 +1834,10 @@ msgid ""
 msgstr ""
 "Retorna uma matriz com apenas os itens para os quais a expressão é avaliada "
 "como verdadeira."
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:166
+msgid "array_filter(array, expression, [limit=0])"
+msgstr "filtro_matriz(matriz, expressão, [limite=0])"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:172
 msgid ""
@@ -1850,6 +1885,10 @@ msgid "Returns true if at least one element of array1 exists in array2."
 msgstr ""
 "Retorna verdadeiro se pelo menos um elemento da matriz1 existir em matriz2."
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:38
+msgid "**array1** - an array"
+msgstr "**matriz1** - uma matriz"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:39
 msgid "**array2** - another array"
 msgstr "**matriz2** - outra matriz"
@@ -1858,6 +1897,10 @@ msgstr "**matriz2** - outra matriz"
 msgid "array_last"
 msgstr "array_last"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:51
+msgid "Returns the last value of an array."
+msgstr "Retorna o último valor de uma matriz."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:69
 msgid "array_length"
 msgstr "array_length"
@@ -1865,6 +1908,14 @@ msgstr "array_length"
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:71
 msgid "Returns the number of elements of an array."
 msgstr "Retorna o número de elementos de uma matriz."
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:77
+msgid "array_length(array)"
+msgstr "matriz_comprimento(matriz)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:81
+msgid "``array_length(array(1,2,3))`` → 3"
+msgstr "\"matriz_comprimento(matriz(1,2,3))`` → 3"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:91
 msgid "Returns the most common values in an array."
@@ -1896,9 +1947,25 @@ msgstr ""
 "maioria_real: Retorna o valor que ocorre mais da metade do tamanho da "
 "matriz."
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:127
+msgid "array_max"
+msgstr "matriz_max"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:129
 msgid "Returns the maximum value of an array."
 msgstr "Retorna o valor máximo de uma matriz."
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:135
+msgid "array_max(array)"
+msgstr "matriz_max(matriz)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:139
+msgid "``array_max(array(0,42,4,2))`` → 42"
+msgstr "``matriz_max(matriz(0,42,4,2))`` → 42"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:147
+msgid "array_mean"
+msgstr "matriz_média"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:149
 msgid ""
@@ -1908,6 +1975,22 @@ msgstr ""
 "Retorna a média dos valores aritméticos em uma matriz. Valores não numéricos"
 " na matriz são ignorados."
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:155
+msgid "array_mean(array)"
+msgstr "matriz_média(matriz)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:159
+msgid "``array_mean(array(0,1,7,66.6,135.4))`` → 42"
+msgstr "``matriz_media(matriz(0,1,7,66.6,135.4))`` → 42"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:160
+msgid "``array_mean(array(0,84,'a','b','c'))`` → 42"
+msgstr "``matriz_media(matriz(0,84,'a','b','c'))`` → 42"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:168
+msgid "array_median"
+msgstr "matriz_mediana"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:170
 msgid ""
 "Returns the median of arithmetic values in an array. Non arithmetic values "
@@ -1916,13 +1999,50 @@ msgstr ""
 "Retorna a mediana dos valores aritméticos em uma matriz. Valores não "
 "aritméticos na matriz são ignorados."
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:176
+msgid "array_median(array)"
+msgstr "matriz_mediana(matriz)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:180
+msgid "``array_median(array(0,1,42,42,43))`` → 42"
+msgstr "``matriz_mediana(matriz(0,1,42,42,43))`` → 42"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:181
+msgid "``array_median(array(0,1,2,42,'a','b'))`` → 1.5"
+msgstr "``matriz_mediana(matriz(0,1,2,42,'a','b'))`` → 1.5"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:189
+msgid "array_min"
+msgstr "matriz_min"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:191
 msgid "Returns the minimum value of an array."
 msgstr "Retorna o valor mínimo de uma matriz."
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:197
+msgid "array_min(array)"
+msgstr "matriz_min(matriz)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:201
+msgid "``array_min(array(43,42,54))`` → 42"
+msgstr "``matriz_min(matriz(43,42,54))`` → 42"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:209
+msgid "array_minority"
+msgstr "matriz_minoria"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:211
 msgid "Returns the less common values in an array."
 msgstr "Retorna os valores menos comuns em uma matriz."
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:226
+msgid "all: Default, all less common values are returned in an array."
+msgstr ""
+"todos: Padrão, todos os valores menos comuns são retornados em uma matriz."
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:227
+msgid "any: Returns one of the less common values."
+msgstr "qualquer: Retorna um dos valores menos comuns."
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:228
 msgid ""
@@ -1936,6 +2056,10 @@ msgstr ""
 msgid "array_prepend"
 msgstr "array_prepend"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:268
+msgid "array_prioritize"
+msgstr "matriz_prioritizar"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:290
 msgid "array_remove_all"
 msgstr "array_remove_all"
@@ -1948,9 +2072,30 @@ msgstr "**valor** - os valores a serem removidos"
 msgid "array_remove_at"
 msgstr "array_remove_at"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:332
+msgid "array_replace"
+msgstr "matriz_substituir"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:347
+msgid "**before** - the value or array of values to replace"
+msgstr "**antes** - o valor ou matriz de valores a serem substituídos"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:348
+msgid "**after** - the value or array of values to use as a replacement"
+msgstr ""
+"**depois** - o valor ou matriz de valores a serem usados como substituição"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:376
 msgid "array_reverse"
 msgstr "array_reverse"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:378
+msgid "Returns the given array with array values in reversed order."
+msgstr "Retorna a matriz fornecida com valores da matriz na ordem inversa."
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:384
+msgid "array_reverse(array)"
+msgstr "matriz_inversa(matriz)"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:396
 msgid "array_slice"
@@ -1959,6 +2104,22 @@ msgstr "array_slice"
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:425
 msgid "array_sort"
 msgstr "array_sort"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:448
+msgid "array_sum"
+msgstr "matriz_soma"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:450
+msgid ""
+"Returns the sum of arithmetic values in an array. Non numeric values in the "
+"array are ignored."
+msgstr ""
+"Retorna a soma dos valores aritméticos em uma matriz. Valores não numéricos "
+"na matriz são ignorados."
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:456
+msgid "array_sum(array)"
+msgstr "matriz_soma(matriz)"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:468
 msgid "array_to_string"
@@ -2076,6 +2237,17 @@ msgstr ""
 msgid "color_hsl(hue, saturation, lightness)"
 msgstr "cor_hsl(matiz, saturação, luminosidade)"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:90
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:112
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:135
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:157
+msgid ""
+"**saturation** - saturation percentage of the color as an integer value from"
+" 0 to 100"
+msgstr ""
+"**saturação** - porcentagem de saturação da cor como um valor inteiro de 0 a"
+" 100"
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:101
 msgid "color_hsla"
 msgstr "color_hsla"
@@ -2105,6 +2277,14 @@ msgstr "color_hsva"
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:154
 msgid "color_hsva(hue, saturation, value, alpha)"
 msgstr "cor_hsva(matiz, saturação, valor, alfa)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:159
+msgid ""
+"**alpha** - alpha component as an integer value from 0 (completely "
+"transparent) to 255 (opaque)"
+msgstr ""
+"**alfa** - componente alfa como um valor inteiro de 0 (completamente "
+"transparente) a 255 (opaco)"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:169
 msgid "color_mix_rgb"
@@ -2182,6 +2362,10 @@ msgstr "hsl_saturação: saturação HSL (0-100)"
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:231
 msgid "color_rgb"
 msgstr "color_rgb"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:239
+msgid "color_rgb(red, green, blue)"
+msgstr "cor_rgb(vermelho, verde, azul)"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:241
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:263
@@ -2311,13 +2495,63 @@ msgstr "QUANDO *condição* ENTÃO *resultado*"
 msgid "[ …n ]"
 msgstr "[ …n ]"
 
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:26
+msgid "END"
+msgstr "E"
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:36
+msgid "**WHEN condition** - A condition expression to evaluate"
+msgstr "**condição QUANDO** - Uma expressão de condição para avaliar"
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:37
+msgid ""
+"**THEN result** - If *condition* evaluates to True then *result* is "
+"evaluated and returned."
+msgstr ""
+"**resultado ENTÃO** - Se *condição* for avaliada como Verdadeira, então "
+"*resultado* será avaliado e retornado."
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:38
+msgid ""
+"**ELSE result** - If none of the above conditions evaluated to True then "
+"*result* is evaluated and returned."
+msgstr ""
+"**resultado SENÃO** - Se nenhuma das condições acima for avaliada como "
+"Verdadeiro, o *resultado* será avaliado e retornado."
+
 #: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:49
 msgid "coalesce"
 msgstr "coalesce"
 
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:51
+msgid "Returns the first non-NULL value from the expression list."
+msgstr "Retorna o primeiro valor não NULO da lista de expressões."
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:53
+msgid "This function can take any number of arguments."
+msgstr "Esta função pode receber qualquer número de argumentos."
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:61
+msgid "**expression** - any valid expression or value, regardless of type."
+msgstr ""
+"**expressão** - qualquer expressão ou valor válido, independentemente do "
+"tipo."
+
 #: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:74
 msgid "if"
 msgstr "if"
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:76
+msgid ""
+"Tests a condition and returns a different result depending on the "
+"conditional check."
+msgstr ""
+"Testa uma condição e retorna um resultado diferente dependendo da "
+"verificação condicional."
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:84
+msgid "**condition** - the condition which should be checked"
+msgstr "**condição** - a condição que deve ser verificada"
 
 #: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:88
 msgid "``if( 1+1=2, 'Yes', 'No' )`` → 'Yes'"
@@ -2343,6 +2577,16 @@ msgstr "``se( 10, 'Um', 'Zero' )`` → 'Um'"
 msgid "nullif(value1, value2)"
 msgstr "nullif(value1, value2)"
 
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:112
+msgid ""
+"**value1** - The value that should either be used or substituted with NULL."
+msgstr "**valor1** - O valor que deve ser usado ou substituído por NULO."
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:113
+msgid ""
+"**value2** - The control value that will trigger the NULL substitution."
+msgstr "**valor2** - O valor de controle que acionará a substituição NULO."
+
 #: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:125
 #: ../../docs/user_manual/expressions/expression_help/String.rst:223
 msgid "regexp_match"
@@ -2367,6 +2611,10 @@ msgstr "Funções de Conversão"
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:22
 msgid "**string** - the string to decode"
 msgstr "**cadeia** - a cadeia a ser decodificada"
+
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:116
+msgid "**value** - the binary value to encode"
+msgstr "**valor** - o valor binário a ser codificado"
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:126
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:496
@@ -2505,6 +2753,14 @@ msgstr "Funções Data e Hora"
 msgid "age"
 msgstr "age"
 
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:16
+msgid ""
+"The difference is returned as an ``Interval`` and needs to be used with one "
+"of the following functions in order to extract useful information:"
+msgstr ""
+"A diferença é retornada como um ``Intervalo`` e precisa ser usada com uma "
+"das seguintes funções para extrair informações úteis:"
+
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:20
 msgid "``year``"
 msgstr "``ano``"
@@ -2553,9 +2809,17 @@ msgstr "dia(data)"
 msgid "``day('2012-05-12')`` → 12"
 msgstr "``dia('2012-05-12')`` → 12"
 
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:89
+msgid "Calculates the length in days of an interval."
+msgstr "Calcula a duração em dias de um intervalo."
+
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:95
 msgid "day(interval)"
 msgstr "dia (intervalo)"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:97
+msgid "**interval** - interval value to return number of days from"
+msgstr "**intervalo** - valor do intervalo para retornar o número de dias"
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:109
 msgid "day_of_week"
@@ -2620,8 +2884,18 @@ msgstr "dddd"
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:1
 #: ../../docs/user_manual/expressions/expression_help/String.rst:1
+msgid "the long localized day name (e.g. 'Monday' to 'Sunday')"
+msgstr "o nome longo do dia localizado (ex., 'Segunda-feira' a 'Domingo')"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:1
+#: ../../docs/user_manual/expressions/expression_help/String.rst:1
 msgid "M"
 msgstr "M"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:1
+#: ../../docs/user_manual/expressions/expression_help/String.rst:1
+msgid "the month as number without a leading zero (1-12)"
+msgstr "o mês como número sem zero à esquerda (1-12)"
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:1
 #: ../../docs/user_manual/expressions/expression_help/String.rst:1
@@ -2630,13 +2904,28 @@ msgstr "MM"
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:1
 #: ../../docs/user_manual/expressions/expression_help/String.rst:1
+msgid "the month as number with a leading zero (01-12)"
+msgstr "o mês como número com um zero à esquerda (01-12)"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:1
+#: ../../docs/user_manual/expressions/expression_help/String.rst:1
 msgid "MMM"
 msgstr "MMM"
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:1
 #: ../../docs/user_manual/expressions/expression_help/String.rst:1
+msgid "the abbreviated localized month name (e.g. 'Jan' to 'Dec')"
+msgstr "o nome abreviado do mês localizado (ex., 'Jan' a 'Dez')"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:1
+#: ../../docs/user_manual/expressions/expression_help/String.rst:1
 msgid "MMMM"
 msgstr "MMMM"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:1
+#: ../../docs/user_manual/expressions/expression_help/String.rst:1
+msgid "the long localized month name (e.g. 'January' to 'December')"
+msgstr "o nome longo do mês localizado (ex., 'janeiro' a 'dezembro')"
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:1
 #: ../../docs/user_manual/expressions/expression_help/String.rst:1
@@ -2779,6 +3068,18 @@ msgstr "Calcula a duração em horas de um intervalo."
 msgid "hour(interval)"
 msgstr "hora(intervalo)"
 
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:245
+msgid "**interval** - interval value to return number of hours from"
+msgstr "**intervalo** - valor do intervalo para retornar o número de horas"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:259
+msgid "Creates a date value from year, month and day numbers."
+msgstr "Cria um valor de data a partir de números de ano, mês e dia."
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:265
+msgid "make_date(year, month, day)"
+msgstr "fazer_data(ano, mês, dia)"
+
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:267
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:289
 msgid ""
@@ -2798,6 +3099,10 @@ msgstr "**mês** - Número do mês, onde 1=Janeiro"
 msgid "**day** - Day number, beginning with 1 for the first day in the month"
 msgstr "**dia** - Número do dia, começando com 1 para o primeiro dia do mês"
 
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:271
+msgid "``make_date(2020,5,4)`` → date value 2020-05-04"
+msgstr "``fazer_data(2020,5,4)`` → valor da data 2020-05-04"
+
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:292
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:344
 msgid "**hour** - Hour number"
@@ -2807,6 +3112,23 @@ msgstr "**hora** - Número da hora"
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:345
 msgid "**minute** - Minutes"
 msgstr "**minuto** - Minutos"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:294
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:346
+msgid "**second** - Seconds (fractional values include milliseconds)"
+msgstr "**segundo** - Segundos (valores fracionários incluem milissegundos)"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:306
+msgid ""
+"Creates an interval value from year, month, weeks, days, hours, minute and "
+"seconds values."
+msgstr ""
+"Cria um  intervalo de valores para os valores de ano, mês, semanas, dias, "
+"horas, minutos e segundos."
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:316
+msgid "**years** - Number of years (assumes a 365.25 day year length)."
+msgstr "**anos** - Número de anos (supõe uma duração de ano de 365,25 dias)."
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:317
 msgid "**months** - Number of months (assumes a 30 day month length)"
@@ -2848,9 +3170,20 @@ msgstr "Calcula a duração em minutos de um intervalo."
 msgid "minute(interval)"
 msgstr "minuto (intervalo)"
 
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:385
+msgid "**interval** - interval value to return number of minutes from"
+msgstr "**intervalo** - valor do intervalo para retornar o número de minutos"
+
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:397
 msgid "month"
 msgstr "month"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:399
+msgid ""
+"Extracts the month part from a date, or the number of months from an "
+"interval."
+msgstr ""
+"Extrai a parte do mês de uma data ou o número de meses de um intervalo."
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:409
 msgid "month(date)"
@@ -2868,9 +3201,24 @@ msgstr "Calcula a duração em meses de um intervalo."
 msgid "month(interval)"
 msgstr "mês (intervalo)"
 
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:426
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:625
+msgid "**interval** - interval value to return number of months from"
+msgstr "**intervalo** - valor do intervalo para retornar o número de meses"
+
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:437
 msgid "now"
 msgstr "now"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:439
+msgid ""
+"Returns the current date and time. The function is static and will return "
+"consistent results while evaluating. The time returned is the time when the "
+"expression is prepared."
+msgstr ""
+"Retorna a data e hora atuais. A função é estática e retornará resultados "
+"consistentes durante a avaliação. A hora retornada é a hora em que a "
+"expressão é preparada."
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:445
 msgid "now()"
@@ -2884,13 +3232,30 @@ msgstr "``agora()`` → 22-07-2012T13:24:57"
 msgid "second"
 msgstr "second"
 
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:476
+msgid "Calculates the length in seconds of an interval."
+msgstr "Calcula a duração em segundos de um intervalo."
+
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:482
 msgid "second(interval)"
 msgstr "segundo (intervalo)"
 
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:484
+msgid "**interval** - interval value to return number of seconds from"
+msgstr ""
+"**intervalo** - valor do intervalo para retornar o número de segundos "
+
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:596
 msgid "week"
 msgstr "week"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:598
+msgid ""
+"Extracts the week number from a date, or the number of weeks from an "
+"interval."
+msgstr ""
+"Extrai o número da semana de uma data ou o número de semanas de um "
+"intervalo."
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:608
 msgid "week(date)"
@@ -2900,6 +3265,10 @@ msgstr "semana (data)"
 msgid "``week('2012-05-12')`` → 19"
 msgstr "``semana('2012-05-12')`` → 19"
 
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:617
+msgid "Calculates the length in weeks of an interval."
+msgstr "Calcula a duração em semanas de um intervalo."
+
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:623
 msgid "week(interval)"
 msgstr "semana (intervalo)"
@@ -2907,6 +3276,12 @@ msgstr "semana (intervalo)"
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:636
 msgid "year"
 msgstr "year"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:638
+msgid ""
+"Extracts the year part from a date, or the number of years from an interval."
+msgstr ""
+"Extrai a parte do ano de uma data ou o número de anos de um intervalo."
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:648
 msgid "year(date)"
@@ -2916,9 +3291,17 @@ msgstr "ano (data)"
 msgid "``year('2012-05-12')`` → 2012"
 msgstr "``ano('2012-05-12')`` → 2012"
 
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:657
+msgid "Calculates the length in years of an interval."
+msgstr "Calcula a duração em anos de um intervalo."
+
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:663
 msgid "year(interval)"
 msgstr "ano (intervalo)"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:665
+msgid "**interval** - interval value to return number of years from"
+msgstr "**intervalo** - valor do intervalo para retornar o número de anos "
 
 #: ../../docs/user_manual/expressions/functions_list.rst:180
 #: ../../docs/user_manual/expressions/functions_list.rst:1128
@@ -2956,6 +3339,10 @@ msgstr "Obtenha a data/hora de 100 dias a partir de agora:"
 #: ../../docs/user_manual/expressions/functions_list.rst:212
 msgid "Fields and Values"
 msgstr "Campos e Valores"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:214
+msgid "Contains a list of fields from the layer, and special values."
+msgstr "Contém uma lista de campos da camada e valores especiais."
 
 #: ../../docs/user_manual/expressions/functions_list.rst:216
 msgid ""
@@ -2997,6 +3384,18 @@ msgstr ""
 msgid "NULL"
 msgstr "NULL"
 
+#: ../../docs/user_manual/expressions/expression_help/Fields_and_Values.rst:14
+msgid "Equates to a NULL value."
+msgstr "Equivale a um valor NULO."
+
+#: ../../docs/user_manual/expressions/expression_help/Fields_and_Values.rst:22
+msgid "``NULL`` → a NULL value"
+msgstr "``NULO`` → um valor NULO"
+
+#: ../../docs/user_manual/expressions/expression_help/Fields_and_Values.rst:24
+msgid "To test for NULL use an *IS NULL* or *IS NOT NULL* expression."
+msgstr "Para testar NULO, use uma expressão *É NULO* ou *NÃO É NULO*."
+
 #: ../../docs/user_manual/expressions/functions_list.rst:241
 msgid "Files and Paths Functions"
 msgstr "Funções de Arquivos e Caminhos"
@@ -3034,6 +3433,10 @@ msgstr ""
 "Retorna o nome de um arquivo (incluindo a extensão do arquivo), excluindo o "
 "diretório."
 
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:83
+msgid "file_name(path)"
+msgstr "nome_arquivo(caminho)"
+
 #: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:95
 msgid "file_path"
 msgstr "file_path"
@@ -3049,6 +3452,10 @@ msgstr "file_size"
 #: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:117
 msgid "Returns the size (in bytes) of a file."
 msgstr "Retorna o tamanho (em bytes) de um arquivo."
+
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:123
+msgid "file_size(path)"
+msgstr "tamanho_arquivo(caminho)"
 
 #: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:135
 msgid "file_suffix"
@@ -3186,6 +3593,10 @@ msgstr ""
 "Avalia uma expressão que é passada em uma string. Útil para expandir "
 "parâmetros dinâmicos passados ​​como campos ou variáveis ​​de contexto."
 
+#: ../../docs/user_manual/expressions/expression_help/General.rst:42
+msgid "eval(expression)"
+msgstr "avaliar(expressão)"
+
 #: ../../docs/user_manual/expressions/expression_help/General.rst:44
 msgid "**expression** - an expression string"
 msgstr "**expressão** - uma cadeia de expressão"
@@ -3194,6 +3605,10 @@ msgstr "**expressão** - uma cadeia de expressão"
 msgid "is_layer_visible"
 msgstr "is_layer_visible"
 
+#: ../../docs/user_manual/expressions/expression_help/General.rst:77
+msgid "Returns true if a specified layer is visible."
+msgstr "Retorna verdadeiro se uma camada especificada estiver visível."
+
 #: ../../docs/user_manual/expressions/expression_help/General.rst:105
 msgid "**bytes** - the binary data"
 msgstr "**bytes** - os dados binários"
@@ -3201,6 +3616,10 @@ msgstr "**bytes** - os dados binários"
 #: ../../docs/user_manual/expressions/expression_help/General.rst:116
 msgid "var"
 msgstr "var"
+
+#: ../../docs/user_manual/expressions/expression_help/General.rst:118
+msgid "Returns the value stored within a specified variable."
+msgstr "Retorna o valor armazenado em uma variável especificada."
 
 #: ../../docs/user_manual/expressions/expression_help/General.rst:124
 msgid "var(name)"
@@ -3224,6 +3643,18 @@ msgstr ""
 "Esta função define uma variável para qualquer código de expressão que será "
 "fornecido como 3º argumento. Isso só é útil para expressões complicadas, "
 "onde o mesmo valor calculado precisa ser usado em lugares diferentes."
+
+#: ../../docs/user_manual/expressions/expression_help/General.rst:14
+msgid "with_variable(name, value, expression)"
+msgstr "com_variável (nome, valor, expressão)"
+
+#: ../../docs/user_manual/expressions/expression_help/General.rst:16
+msgid "**name** - the name of the variable to set"
+msgstr "**nome** - o nome da variável a ser definida"
+
+#: ../../docs/user_manual/expressions/expression_help/General.rst:17
+msgid "**value** - the value to set"
+msgstr "**valor** - o valor a ser definido"
 
 #: ../../docs/user_manual/expressions/expression_help/General.rst:18
 msgid ""
@@ -3274,9 +3705,59 @@ msgstr ""
 msgid "**geometry** - a geometry"
 msgstr "**geometria** - uma geometria"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:25
+msgid "**delta_x** - x-axis translation"
+msgstr "**delta_x** - tradução do eixo x"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:26
+msgid "**delta_y** - y-axis translation"
+msgstr "**delta_y** - tradução do eixo y"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
+msgid "**rotation_z** - rotation around z-axis in degrees counter-clockwise"
+msgstr ""
+"**rotação_z** - rotação em torno do eixo z em graus no sentido anti-horário"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:28
+msgid "**scale_x** - x-axis scale factor"
+msgstr "**escala_x** - fator de escala do eixo x"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
+msgid "**scale_y** - y-axis scale factor"
+msgstr "**escala_y** - fator de escala do eixo y"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:30
+msgid "**delta_z** - z-axis translation"
+msgstr "**delta_z** - tradução do eixo z"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:31
+msgid "**delta_m** - m-axis translation"
+msgstr "**delta_m** - tradução do eixo m"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:32
+msgid "**scale_z** - z-axis scale factor"
+msgstr "**escala_z** - fator de escala do eixo z"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:33
+msgid "**scale_m** - m-axis scale factor"
+msgstr "**escala_m** - fator de escala do eixo m"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:45
 msgid "angle_at_vertex"
 msgstr "angle_at_vertex"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:53
+msgid "angle_at_vertex(geometry, vertex)"
+msgstr "ângulo_no_vértice (geometria, vértice)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:38
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:56
+msgid ""
+"**vertex** - vertex index, starting from 0; if the value is negative, the "
+"selected vertex index will be its total count minus the absolute value"
+msgstr ""
+"**vértice** - índice do vértice, a partir de 0; se o valor for negativo, o "
+"índice do vértice selecionado será sua contagem total menos o valor absoluto"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:66
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:74
@@ -3374,13 +3855,63 @@ msgstr "bounds_height"
 msgid "bounds_width"
 msgstr "bounds_width"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
+msgid ""
+"Returns the width of the bounding box of a geometry. Calculations are in the"
+" Spatial Reference System of this geometry."
+msgstr ""
+"Retorna a largura da caixa delimitadora de uma geometria. Os cálculos estão "
+"no Sistema de Referência Espacial desta geometria."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:48
 msgid "buffer"
 msgstr "buffer"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:50
+msgid ""
+"Returns a geometry that represents all points whose distance from this "
+"geometry is less than or equal to distance. Calculations are in the Spatial "
+"Reference System of this geometry."
+msgstr ""
+"Retorna uma geometria que representa todos os pontos cuja distância dessa "
+"geometria é menor ou igual à distância. Os cálculos estão no Sistema de "
+"Referência Espacial desta geometria."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:61
+msgid "**distance** - buffer distance in layer units"
+msgstr "**distância** - distância do buffer em unidades de camada"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:74
+msgid "Buffer (in yellow) of points, line and polygon"
+msgstr "Buffer (em amarelo) de pontos, linha e polígono"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "buffer_by_m"
 msgstr "buffer_by_m"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Creates a buffer along a line geometry where the buffer diameter varies "
+"according to the m-values at the line vertices."
+msgstr ""
+"Cria um buffer ao longo de uma geometria de linha onde o diâmetro do buffer "
+"varia de acordo com os valores m nos vértices da linha."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid ""
+"**geometry** - input geometry. Must be a (multi)line geometry with m values."
+msgstr ""
+"**geometria** - geometria de entrada. Deve ser uma geometria de (multi)linha"
+" com valores m."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:21
+msgid ""
+"**segments** - number of segments to approximate quarter-circle curves in "
+"the buffer."
+msgstr ""
+"**segmentos** - número de segmentos para aproximar as curvas de um quarto de"
+" círculo no buffer."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "centroid"
@@ -3394,17 +3925,47 @@ msgstr "Retorna o centro geométrico de uma geometria."
 msgid "centroid(geometry)"
 msgstr "centroide (geometria)"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid "``centroid($geometry)`` → a point geometry"
+msgstr "``centroide($geometria)`` → uma geometria de ponto"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
 msgid "closest_point"
 msgstr "closest_point"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
+msgid "Returns the point on geometry1 that is closest to geometry2."
+msgstr "Retorna o ponto em geometria1 que está mais próximo de geometria2."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:35
+msgid "closest_point(geometry1, geometry2)"
+msgstr "ponto_mais próximo(geometria1, geometria2)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:37
+msgid "**geometry1** - geometry to find closest point on"
+msgstr "**geometria1** - geometria para encontrar o ponto mais próximo em"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:38
+msgid "**geometry2** - geometry to find closest point to"
+msgstr "**geometria2** - geometria para encontrar o ponto mais próximo de"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:48
 msgid "collect_geometries"
 msgstr "collect_geometries"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:54
+msgid "Geometry parts are specified as separate arguments to the function."
+msgstr ""
+"As partes geométricas são especificadas como argumentos separados para a "
+"função."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "combine"
 msgstr "combine"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid "Returns the combination of two geometries."
+msgstr "Retorna a combinação de duas geometrias."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "combine(geometry1, geometry2)"
@@ -3440,33 +4001,118 @@ msgstr "convex_hull"
 msgid "crosses"
 msgstr "crosses"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Tests whether a geometry crosses another. Returns true if the supplied "
+"geometries have some, but not all, interior points in common."
+msgstr ""
+"Testa se uma geometria cruza outra. Retorna verdadeiro se as geometrias "
+"fornecidas tiverem alguns, mas não todos, pontos internos em comum."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
+msgid "crosses(geometry1, geometry2)"
+msgstr "cruzam (geometria1, geometria2)"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "difference"
 msgstr "diferença"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Returns a geometry that represents that part of geometry1 that does not "
+"intersect with geometry2."
+msgstr ""
+"Retorna uma geometria que representa a parte da geometria1 que não faz "
+"interseção com geometria2."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
+msgid "difference(geometry1, geometry2)"
+msgstr "diferença(geometria1, geometria2)"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "disjoint"
 msgstr "disjoint"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Tests whether geometries do not spatially intersect. Returns true if the "
+"geometries do not share any space together."
+msgstr ""
+"Testa se as geometrias não se cruzam espacialmente. Retorna verdadeiro se as"
+" geometrias não compartilharem nenhum espaço."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "distance"
 msgstr "distance"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Returns the minimum distance (based on spatial ref) between two geometries "
+"in projected units."
+msgstr ""
+"Retorna a distância mínima (com base na referência espacial) entre duas "
+"geometrias em unidades projetadas."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
+msgid "distance(geometry1, geometry2)"
+msgstr "distância(geometria1, geometria2)"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
 msgid "distance_to_vertex"
 msgstr "distance_to_vertex"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
+msgid "Returns the distance along the geometry to a specified vertex."
+msgstr ""
+"Retorna a distância ao longo da geometria para um vértice especificado."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:35
+msgid "distance_to_vertex(geometry, vertex)"
+msgstr "distância_ao_vértice(geometria, vértice)"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:48
 msgid "end_point"
 msgstr "end_point"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:50
+msgid "Returns the last node from a geometry."
+msgstr "Retorna o último nó de uma geometria."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:56
+msgid "end_point(geometry)"
+msgstr "ponto_final(geometria)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:16
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:47
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:54
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:58
+msgid "**geometry** - geometry object"
+msgstr "**geometria** - objeto geométrico"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:26
 msgid "extend"
 msgstr "extend"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:34
+msgid "extend(geometry, start_distance, end_distance)"
+msgstr "estender(geometria, distância_inicial, distância_final)"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "exterior_ring"
 msgstr "exterior_ring"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:16
+msgid "**geometry** - a polygon geometry"
+msgstr "**geometria** - uma geometria de polígono"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:26
+msgid "extrude"
+msgstr "extrusão"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:34
+msgid "extrude(geometry, x, y)"
+msgstr "extrusão(geometria, x, y)"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:37
 msgid "**x** - x extension, numeric value"
@@ -3479,6 +4125,16 @@ msgstr "**y** - extensão y, valor numérico"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:49
 msgid "flip_coordinates"
 msgstr "flip_coordinates"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:51
+msgid ""
+"Returns a copy of the geometry with the x and y coordinates swapped. Useful "
+"for repairing geometries which have had their latitude and longitude values "
+"reversed."
+msgstr ""
+"Retorna uma cópia da geometria com as coordenadas x e y trocadas. Útil para "
+"reparar geometrias que tiveram seus valores de latitude e longitude "
+"invertidos."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "force_rhr"
@@ -3505,9 +4161,21 @@ msgstr "**precisão** - precisão numérica"
 msgid "$geometry"
 msgstr "$geometry"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:113
+msgid ""
+"Returns the geometry of the current feature. Can be used for processing with"
+" other functions."
+msgstr ""
+"Retorna a geometria da feição atual. Pode ser usado para processamento com "
+"outras funções."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:129
 msgid "geometry"
 msgstr "geometry"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:131
+msgid "Returns a feature's geometry."
+msgstr "Retorna a geometria de uma feição."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:137
 msgid "geometry(feature)"
@@ -3517,14 +4185,38 @@ msgstr "geometria (feição)"
 msgid "geometry_n"
 msgstr "geometry_n"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:153
+msgid ""
+"Returns a specific geometry from a geometry collection, or NULL if the input"
+" geometry is not a collection."
+msgstr ""
+"Retorna uma geometria específica de uma coleção de geometrias ou NULO se a "
+"geometria de entrada não for uma coleção."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:159
+msgid "geometry_n(geometry, index)"
+msgstr "geometria_n(geometria, índice)"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:16
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:161
 msgid "**geometry** - geometry collection"
 msgstr "**geometria** - coleção de geometria"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:172
+msgid "geometry_type"
+msgstr "tipo_geometria"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:180
+msgid "geometry_type(geometry)"
+msgstr "tipo_geometria(geometria)"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:195
 msgid "hausdorff_distance"
 msgstr "hausdorff_distance"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:204
+msgid "Testing similarity of geometries."
+msgstr "Teste de similaridade de geometrias."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:233
 msgid "inclination"
@@ -3553,6 +4245,13 @@ msgstr "**geometria** - geometria do polígono"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:278
 msgid "intersection"
 msgstr "intersection"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:280
+msgid ""
+"Returns a geometry that represents the shared portion of two geometries."
+msgstr ""
+"Retorna uma geometria que representa a porção compartilhada de duas "
+"geometrias."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:286
 msgid "intersection(geometry1, geometry2)"
@@ -3604,9 +4303,25 @@ msgstr "está_vazio_ou_nulo(geometria)"
 msgid "``is_empty_or_null(NULL)`` → true"
 msgstr "``está_vazio_ou_nulo(NULO)`` → verdadeiro"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:96
+msgid "is_multipart"
+msgstr "é_multipartes"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:98
+msgid "Returns true if the geometry is of Multi type."
+msgstr "Retorna verdadeiro se a geometria for do tipo Multi."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:104
+msgid "is_multipart(geometry)"
+msgstr "é_multiparte(geometria)"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:117
 msgid "is_valid"
 msgstr "é_valido"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:125
+msgid "is_valid(geometry)"
+msgstr "é_válido(geometria)"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:138
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:146
@@ -3621,6 +4336,19 @@ msgstr "``$comprimento`` → 42.4711"
 #: ../../docs/user_manual/expressions/expression_help/String.rst:141
 msgid "length"
 msgstr "length"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:183
+#: ../../docs/user_manual/expressions/expression_help/String.rst:168
+msgid "length(geometry)"
+msgstr "comprimento(geometria)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
+msgid "length3D"
+msgstr "comprimento3D"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
+msgid "length3D(geometry)"
+msgstr "comprimento3D(geometria)"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:26
 msgid "line_interpolate_angle"
@@ -3638,6 +4366,10 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:47
 msgid "line_interpolate_point"
 msgstr "line_interpolate_point"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:58
+msgid "**distance** - distance along line to interpolate"
+msgstr "**distância** - distância ao longo da linha para interpolar"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "line_locate_point"
@@ -3701,6 +4433,14 @@ msgstr "Retorna o valor mínimo de m (medida) de uma geometria."
 msgid "m_min(geometry)"
 msgstr "m_min(geometria)"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:68
+msgid "main_angle"
+msgstr "ângulo_principal"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:76
+msgid "main_angle(geometry)"
+msgstr "ângulo_principal(geometria)"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:88
 msgid "make_circle"
 msgstr "make_circle"
@@ -3709,6 +4449,10 @@ msgstr "make_circle"
 msgid "Creates a circular polygon."
 msgstr "Cria um polígono circular."
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:96
+msgid "make_circle(center, radius, [segments=36])"
+msgstr "criar_círculo(centro, raio, [segmentos=36])"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:100
 msgid "**center** - center point of the circle"
 msgstr "**centro** - ponto central do círculo"
@@ -3716,6 +4460,16 @@ msgstr "**centro** - ponto central do círculo"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:101
 msgid "**radius** - radius of the circle"
 msgstr "**raio** - raio do círculo"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:102
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:130
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:365
+msgid ""
+"**segments** - optional argument for polygon segmentation. By default this "
+"value is 36"
+msgstr ""
+"**segmentos** - argumento opcional para segmentação de polígonos. Por padrão"
+" esse valor é 36"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:114
 msgid "make_ellipse"
@@ -3737,9 +4491,49 @@ msgstr "**azimute** - orientação da elipse"
 msgid "make_line"
 msgstr "make_line"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:144
+msgid "Creates a line geometry from a series of point geometries."
+msgstr ""
+"Cria uma geometria de linha a partir de uma série de geometrias de ponto."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:148
+msgid "Line vertices are specified as separate arguments to the function."
+msgstr ""
+"Os vértices de linha são especificados como argumentos separados para a "
+"função."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:154
+msgid "make_line(point1, point2, ...)"
+msgstr "criar_linha(ponto1, ponto2,...)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:156
+msgid "**point** - a point geometry (or array of points)"
+msgstr "**ponto** - uma geometria de ponto (ou matriz de pontos)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:164
+msgid "Line vertices are specified as an array of points."
+msgstr "Os vértices de linha são especificados como uma matriz de pontos."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:170
+msgid "make_line(array)"
+msgstr "criar_linha(matriz)"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:172
 msgid "**array** - array of points"
 msgstr "**matriz** - matriz de pontos"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:182
+msgid "make_point"
+msgstr "criar_ponto"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:184
+msgid "Creates a point geometry from an x and y (and optional z and m) value."
+msgstr ""
+"Cria uma geometria de ponto a partir de x e y (e valores z e m opcionais)."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:190
+msgid "make_point(x, y, [z], [m])"
+msgstr "criar_ponto(x, y, [z], [m])"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:194
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:219
@@ -3751,10 +4545,26 @@ msgstr "**x** - coordenada x do ponto"
 msgid "**y** - y coordinate of point"
 msgstr "**y** - coordenada y do ponto"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:196
+msgid "**z** - optional z coordinate of point"
+msgstr "**z** - coordenada z opcional do ponto"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:197
+msgid "**m** - optional m value of point"
+msgstr "**m** - valor m opcional do ponto"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:209
+msgid "make_point_m"
+msgstr "criar_ponto_m"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:211
 msgid "Creates a point geometry from an x, y coordinate and m value."
 msgstr ""
 "Cria uma geometria de ponto a partir de uma coordenada x, y e um valor m."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:217
+msgid "make_point_m(x, y, m)"
+msgstr "criar_ponto_m(x, y, m)"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:221
 msgid "**m** - m value of point"
@@ -3792,6 +4602,14 @@ msgstr "make_regular_polygon"
 msgid "Creates a regular polygon."
 msgstr "Cria um polígono regular."
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:293
+msgid "**center** - center of the regular polygon"
+msgstr "**centro** - centro do polígono regular"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:295
+msgid "**number_sides** - Number of sides/edges of the regular polygon"
+msgstr "**numero_lados** - Número de lados/bordas do polígono regular"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:307
 msgid "make_square"
 msgstr "make_square"
@@ -3799,6 +4617,10 @@ msgstr "make_square"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:309
 msgid "Creates a square from a diagonal."
 msgstr "Cria um quadrado a partir da diagonal."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:315
+msgid "make_square(point1, point2)"
+msgstr "fazer_quadrado(ponto1, ponto2)"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:317
 msgid "**point1** - First point of the diagonal"
@@ -3816,6 +4638,10 @@ msgstr "make_triangle"
 msgid "Creates a triangle polygon."
 msgstr "Cria um polígono triangular."
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:337
+msgid "make_triangle(point1, point2, point3)"
+msgstr "fazer_triângulo(ponto1, ponto2, ponto3)"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:339
 msgid "**point1** - first point of the triangle"
 msgstr "**ponto1** - primeiro ponto do triângulo"
@@ -3832,21 +4658,46 @@ msgstr "**ponto3** - terceiro ponto do triângulo"
 msgid "minimal_circle"
 msgstr "minimal_circle"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:360
+msgid "minimal_circle(geometry, [segments=36])"
+msgstr "círculo_mínimo(geometria, [segmentos=36])"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "nodes_to_points"
 msgstr "nodes_to_points"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Returns a multipoint geometry consisting of every node in the input "
+"geometry."
+msgstr ""
+"Retorna uma geometria multiponto que consiste em cada nó na geometria de "
+"entrada."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "num_geometries"
 msgstr "num_geometries"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
+msgid "num_geometries(geometry)"
+msgstr "num_geometrias(geometria)"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:26
 msgid "num_interior_rings"
 msgstr "num_interior_rings"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:36
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:76
+msgid "**geometry** - input geometry"
+msgstr "**geometria** - geometria de entrada"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:46
 msgid "num_points"
 msgstr "num_points"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:48
+msgid "Returns the number of vertices in a geometry."
+msgstr "Retorna o número de vértices em uma geometria."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:54
 msgid "num_points(geometry)"
@@ -3855,6 +4706,20 @@ msgstr "num_pontos(geometria)"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:66
 msgid "num_rings"
 msgstr "num_rings"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:68
+msgid ""
+"Returns the number of rings (including exterior rings) in a polygon or "
+"geometry collection, or NULL if the input geometry is not a polygon or "
+"collection."
+msgstr ""
+"Retorna o número de anéis (incluindo anéis externos) em um polígono ou "
+"coleção de geometrias ou NULO se a geometria de entrada não for um polígono "
+"ou coleção."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:74
+msgid "num_rings(geometry)"
+msgstr "num_aneis(geometria)"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:86
 msgid "offset_curve"
@@ -3868,6 +4733,20 @@ msgstr "order_parts"
 msgid "Orders the parts of a MultiGeometry by a given criteria"
 msgstr "Ordena as partes de um MultiGeometry por um determinado critério"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid "**geometry** - a multi-type geometry"
+msgstr "**geometria** - uma geometria de vários tipos"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid "**orderby** - an expression string defining the order criteria"
+msgstr "**ordenar por** - uma expressão que define os critérios de ordenação"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+msgid "**ascending** - boolean, True for ascending, False for descending"
+msgstr ""
+"**ascendente** - booleano, verdadeiro para ascendente, falso para "
+"descendente"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:31
 msgid "oriented_bbox"
 msgstr "oriented_bbox"
@@ -3875,6 +4754,32 @@ msgstr "oriented_bbox"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "overlaps"
 msgstr "overlaps"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:22
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:44
+msgid "**layer** - the layer whose overlay is checked"
+msgstr "**camada*** - a camada cuja sobreposição é verificada"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:12
+msgid ""
+"Note: This function can be slow and consume a lot of memory for large "
+"layers."
+msgstr ""
+"Nota: Esta função pode ser lenta e consumir muita memória para camadas "
+"grandes."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:22
+msgid "**layer** - the target layer"
+msgstr "**camada** - a camada alvo"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:24
+msgid ""
+"**filter** - an optional expression to filter the target features to check. "
+"If not set, all the features in the target layer will be used."
+msgstr ""
+"**filtro** - uma expressão opcional para filtrar as feições alvo a serem "
+"verificadas. Se não estiver definido, todas as feições da camada alvo serão "
+"usadas."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
@@ -3897,17 +4802,67 @@ msgstr "perímetro (geometria)"
 msgid "point_n"
 msgstr "point_n"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:46
+msgid "Returns a specific node from a geometry."
+msgstr "Retorna um nó específico de uma geometria."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:52
+msgid "point_n(geometry, index)"
+msgstr "ponto_n(geometria, índice)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:55
+msgid ""
+"**index** - index of node to return, where 1 is the first node; if the value"
+" is negative, the selected vertex index will be its total count minus the "
+"absolute value"
+msgstr ""
+"**índice** - índice do nó a ser retornado, onde 1 é o primeiro nó; se o "
+"valor for negativo, o índice do vértice selecionado será sua contagem total "
+"menos o valor absoluto"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "point_on_surface"
 msgstr "point_on_surface"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid "Returns a point guaranteed to lie on the surface of a geometry."
+msgstr "Retorna um ponto garantido para estar na superfície de uma geometria."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
+msgid "point_on_surface(geometry)"
+msgstr "ponto_na_superficie(geometria)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid "``point_on_surface($geometry)`` → a point geometry"
+msgstr "``ponto_na_superficie($geometria)`` → uma geometria de ponto"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "pole_of_inaccessibility"
 msgstr "pole_of_inaccessibility"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
+msgid "pole_of_inaccessibility(geometry, tolerance)"
+msgstr "pólo_de_inacessibilidade(geometria, tolerância)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:17
+msgid ""
+"**tolerance** - maximum distance between the returned point and the true "
+"pole location"
+msgstr ""
+"**tolerância** - distância máxima entre o ponto retornado e a localização do"
+" pólo verdadeiro"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "project"
 msgstr "project"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Returns a point projected from a start point using a distance, a bearing "
+"(azimuth) and an elevation in radians."
+msgstr ""
+"Retorna um ponto projetado de um ponto inicial usando uma distância, um rumo"
+" (azimute) e uma elevação em radianos."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "project(point, distance, azimuth, [elevation])"
@@ -3968,6 +4923,14 @@ msgstr ""
 msgid "rotate"
 msgstr "girar"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Returns a rotated version of a geometry. Calculations are in the Spatial "
+"Reference System of this geometry."
+msgstr ""
+"Retorna uma versão rotacionada de uma geometria. Os cálculos estão no "
+"Sistema de Referência Espacial desta geometria."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "rotate(geometry, rotation, [center])"
 msgstr "girar(geometria, rotação, [centro])"
@@ -3984,11 +4947,11 @@ msgstr ""
 "**centro** - ponto central de rotação. Se não for especificado, o centro da "
 "caixa delimitadora da geometria será usado."
 
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:31
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:37
 msgid "segments_to_lines"
 msgstr "segments_to_lines"
 
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:33
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
 msgid ""
 "Returns a multi line geometry consisting of a line for every segment in the "
 "input geometry."
@@ -3996,7 +4959,7 @@ msgstr ""
 "Retorna uma geometria de várias linhas que consiste em uma linha para cada "
 "segmento na geometria de entrada."
 
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:45
 msgid "segments_to_lines(geometry)"
 msgstr "segmentos_para_linhas(geometria)"
 
@@ -4056,13 +5019,37 @@ msgstr ""
 msgid "simplify_vw"
 msgstr "simplify_vw"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:17
+msgid ""
+"**tolerance** - a measure of the maximum area created by a node for the node"
+" to be removed"
+msgstr ""
+"**tolerância** - uma medida da área máxima criada por um nó para que o nó "
+"seja removido"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "single_sided_buffer"
 msgstr "single_sided_buffer"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"**distance** - buffer distance. Positive values will be buffered to the left"
+" of lines, negative values to the right"
+msgstr ""
+"**distância** - distância do buffer. Os valores positivos serão armazenados "
+"à esquerda das linhas, os valores negativos à direita"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "sinuosity"
 msgstr "sinuosidade"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Returns the sinuosity of a curve, which is the ratio of the curve length to "
+"the straight (2D) distance between its endpoints."
+msgstr ""
+"Retorna a sinuosidade de uma curva, que é a razão entre o comprimento da "
+"curva e a distância reta (2D) entre suas extremidades."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "sinuosity(geometry)"
@@ -4088,9 +5075,22 @@ msgstr ""
 msgid "start_point"
 msgstr "start_point"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid "Returns the first node from a geometry."
+msgstr "Retorna o primeiro nó de uma geometria."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "start_point(geometry)"
 msgstr "ponto_inicial(geometria)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Returns the direct/euclidean distance between the first and last vertex of a"
+" geometry. The geometry must be a curve (circularstring, linestring)."
+msgstr ""
+"Retorna a distância direta/euclidiana entre o primeiro e o último vértice de"
+" uma geometria. A geometria deve ser uma curva (sequência circular, "
+"sequência de linhas)."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:16
 msgid "**geometry** - The geometry."
@@ -4100,13 +5100,43 @@ msgstr "**geometria** - A geometria."
 msgid "sym_difference"
 msgstr "sym_difference"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Returns a geometry that represents the portions of two geometries that do "
+"not intersect."
+msgstr ""
+"Retorna uma geometria que representa as partes de duas geometrias que não se"
+" intersectam."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "tapered_buffer"
 msgstr "tapered_buffer"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Creates a buffer along a line geometry where the buffer diameter varies "
+"evenly over the length of the line."
+msgstr ""
+"Cria um buffer ao longo de uma geometria de linha onde o diâmetro do buffer "
+"varia uniformemente ao longo do comprimento da linha."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid "**geometry** - input geometry. Must be a (multi)line geometry."
+msgstr ""
+"**geometria** - geometria de entrada. Deve ser uma geometria de "
+"(multi)linha."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "touches"
 msgstr "touches"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Tests whether a geometry touches another. Returns true if the geometries "
+"have at least one point in common, but their interiors do not intersect."
+msgstr ""
+"Testa se uma geometria toca outra. Retorna verdadeiro se as geometrias "
+"tiverem pelo menos um ponto em comum, mas seus interiores não se cruzarem."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "touches(geometry1, geometry2)"
@@ -4143,6 +5173,13 @@ msgstr ""
 msgid "union"
 msgstr "union"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Returns a geometry that represents the point set union of the geometries."
+msgstr ""
+"Retorna uma geometria que representa a união do conjunto de pontos das "
+"geometrias."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "union(geometry1, geometry2)"
 msgstr "união(geometria1, geometria2)"
@@ -4150,6 +5187,13 @@ msgstr "união(geometria1, geometria2)"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
 msgid "wedge_buffer"
 msgstr "wedge_buffer"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
+msgid ""
+"**center** - center point (origin) of buffer. Must be a point geometry."
+msgstr ""
+"**centro** - ponto central (origem) do buffer. Deve ser uma geometria de "
+"ponto."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "within"
@@ -4171,6 +5215,15 @@ msgstr "dentro(geometria1, geometria2)"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "$x"
 msgstr "$x"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Returns the x coordinate of the current point feature. If the feature is a "
+"multipoint feature, then the x-coordinate of the first point will be "
+"returned."
+msgstr ""
+"Retorna a coordenada x da feição de ponto atual. Se a feição for multiponto,"
+" a coordenada x do primeiro ponto será retornada."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:16
 msgid "``$x`` → 42"
@@ -4212,6 +5265,14 @@ msgstr "$x_at(i)"
 msgid "x_max"
 msgstr "x_max"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:67
+msgid ""
+"Returns the maximum x coordinate of a geometry. Calculations are in the "
+"spatial reference system of this geometry."
+msgstr ""
+"Retorna a coordenada x máxima de uma geometria. Os cálculos estão no sistema"
+" de referência espacial desta geometria."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:73
 msgid "x_max(geometry)"
 msgstr "x_max(geometria)"
@@ -4219,6 +5280,14 @@ msgstr "x_max(geometria)"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:85
 msgid "x_min"
 msgstr "x_min"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:87
+msgid ""
+"Returns the minimum x coordinate of a geometry. Calculations are in the "
+"spatial reference system of this geometry."
+msgstr ""
+"Retorna a coordenada x mínima de uma geometria. Os cálculos estão no sistema"
+" de referência espacial desta geometria."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:93
 msgid "x_min(geometry)"
@@ -4228,6 +5297,15 @@ msgstr "x_min(geometria)"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:113
 msgid "$y"
 msgstr "$y"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:107
+msgid ""
+"Returns the y coordinate of the current point feature. If the feature is a "
+"multipoint feature, then the y-coordinate of the first point will be "
+"returned."
+msgstr ""
+"Retorna a coordenada y da feição de ponto atual. Se a feição for multiponto,"
+" a coordenada y do primeiro ponto será retornada."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:115
 msgid "``$y`` → 42"
@@ -4248,6 +5326,10 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:131
 msgid "y(geometry)"
 msgstr "y(geometria)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:146
+msgid "Retrieves a y coordinate of the current feature's geometry."
+msgstr "Recupera uma coordenada y da geometria da feição atual."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:164
 msgid "y_max"
@@ -4397,6 +5479,14 @@ msgstr "layer_property"
 msgid "name: layer name"
 msgstr "nome: nome da camada"
 
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:53
+msgid "id: layer ID"
+msgstr "ID: ID da camada"
+
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:63
+msgid "is_editable: if layer is in edit mode"
+msgstr "é_editável: se a camada estiver no modo de edição"
+
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:64
 msgid "crs: layer CRS"
 msgstr "src: camada SRC"
@@ -4404,6 +5494,14 @@ msgstr "src: camada SRC"
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:67
 msgid "extent: layer extent (as a geometry object)"
 msgstr "extensão: extensão da camada (como um objeto de geometria)"
+
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:68
+msgid "distance_units: layer distance units"
+msgstr "unidades_distância: unidades de distância da camada"
+
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:69
+msgid "type: layer type, e.g., Vector or Raster"
+msgstr "tipo: tipo de camada, ex., Vetorial ou Raster"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:704
 msgid "Maps Functions"
@@ -4474,6 +5572,10 @@ msgstr "**mapa** - um mapa"
 msgid "map_avals"
 msgstr "map_avals"
 
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:97
+msgid "Returns all the values of a map as an array."
+msgstr "Retorna todos os valores de um mapa como uma matriz."
+
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:115
 msgid "map_concat"
 msgstr "map_concat"
@@ -4538,6 +5640,10 @@ msgstr "map_to_hstore"
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:49
 msgid "to_json"
 msgstr "to_json"
+
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:59
+msgid "**value** - The input value"
+msgstr "**valor** - O valor de entrada"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:730
 msgid "Mathematical Functions"
@@ -4877,6 +5983,21 @@ msgstr "``radianos(57.2958)`` → 1"
 msgid "rand"
 msgstr "rand"
 
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:403
+msgid ""
+"**min** - an integer representing the smallest possible random number "
+"desired"
+msgstr ""
+"**min** - um número inteiro que representa o menor número aleatório possível"
+" desejado"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:404
+msgid ""
+"**max** - an integer representing the largest possible random number desired"
+msgstr ""
+"**max** - um inteiro que representa o maior número aleatório possível "
+"desejado"
+
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:415
 msgid "randf"
 msgstr "randf"
@@ -4885,9 +6006,45 @@ msgstr "randf"
 msgid "round"
 msgstr "round"
 
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:441
+msgid "Rounds a number to number of decimal places."
+msgstr "Arredonda um número para número de casas decimais."
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:447
+msgid "round(value, [places=0])"
+msgstr "arredondar(valor, [casas=0])"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:451
+msgid "**value** - decimal number to be rounded"
+msgstr "**valor** - número decimal a ser arredondado"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:452
+msgid ""
+"**places** - Optional integer representing number of places to round "
+"decimals to. Can be negative."
+msgstr ""
+"**casas** - Número inteiro opcional que representa o número de casas para "
+"arredondar os decimais. Pode ser negativo."
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:454
+msgid "``round(1234.567, 2)`` → 1234.57"
+msgstr "``arredondar(1234.567, 2)`` → 1234.57"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:455
+msgid "``round(1234.567)`` → 1235"
+msgstr "``arredondar(1234.567)`` → 1235"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:456
+msgid "``round(1234.567, -1)`` → 1230"
+msgstr "``arredondar(1234.567, -1)`` → 1230"
+
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:464
 msgid "scale_exp"
 msgstr "scale_exp"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:483
+msgid "easing in, using an exponent of 2"
+msgstr "facilitando, usando um expoente de 2"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:494
 msgid "scale_linear"
@@ -5097,9 +6254,20 @@ msgstr "a * b"
 msgid "``5 * 4`` → 20"
 msgstr "``5 * 4`` → 20"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:48
+msgid "``5 * NULL`` → NULL"
+msgstr "``5 * NULO`` → NULO"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:56
 msgid "\\+"
 msgstr "\\+"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:58
+msgid ""
+"Addition of two values. If one of the values is NULL the result will be "
+"NULL."
+msgstr ""
+"Adição de dois valores. Se um dos valores for NULO, o resultado será NULO."
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:64
 msgid "a + b"
@@ -5116,6 +6284,14 @@ msgstr "``5 + NULO`` → NULO"
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:6
 msgid "\\-"
 msgstr "\\-"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:8
+msgid ""
+"Subtraction of two values. If one of the values is NULL the result will be "
+"NULL."
+msgstr ""
+"Subtração de dois valores. Se um dos valores for NULO, o resultado será "
+"NULO."
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:14
 msgid "a - b"
@@ -5153,6 +6329,14 @@ msgstr "`5 / NULO`` → NULO"
 msgid "<"
 msgstr "<"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:53
+msgid ""
+"Compares two values and evaluates to 1 if the left value is less than the "
+"right value."
+msgstr ""
+"Compara dois valores e avalia como 1 se o valor da esquerda for menor que o "
+"valor da direita."
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:59
 msgid "a < b"
 msgstr "a < b"
@@ -5173,6 +6357,14 @@ msgstr "``4 < 5`` → 1"
 msgid "<="
 msgstr "<="
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:76
+msgid ""
+"Compares two values and evaluates to 1 if the left value is less or equal "
+"than the right value."
+msgstr ""
+"Compara dois valores e avalia como 1 se o valor da esquerda for menor ou "
+"igual ao valor da direita."
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:82
 msgid "a <= b"
 msgstr "a <= b"
@@ -5192,6 +6384,10 @@ msgstr "``4 <= 5`` → 1"
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:97
 msgid "<>"
 msgstr "<>"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:99
+msgid "Compares two values and evaluates to 1 if they are not equal."
+msgstr "Compara dois valores e avalia com 1 se eles não forem iguais."
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:105
 msgid "a <> b"
@@ -5217,6 +6413,10 @@ msgstr "``NULO <> NULO`` → NULO"
 msgid "="
 msgstr "="
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:123
+msgid "Compares two values and evaluates to 1 if they are equal."
+msgstr "Compara dois valores e avalia com 1 se forem iguais."
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:129
 msgid "a = b"
 msgstr "a = b"
@@ -5241,6 +6441,14 @@ msgstr "``NULO = NULO`` → NULO"
 msgid ">"
 msgstr ">"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:147
+msgid ""
+"Compares two values and evaluates to 1 if the left value is greater than the"
+" right value."
+msgstr ""
+"Compara dois valores e avalia como 1 se o valor esquerdo for maior que o "
+"valor direito."
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:153
 msgid "a > b"
 msgstr "a > b"
@@ -5260,6 +6468,14 @@ msgstr "``4 > 5`` → 0"
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:168
 msgid ">="
 msgstr ">="
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:170
+msgid ""
+"Compares two values and evaluates to 1 if the left value is greater or equal"
+" than the right value."
+msgstr ""
+"Compara dois valores e avalia como 1 se o valor da esquerda for maior ou "
+"igual ao valor da direita."
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:176
 msgid "a >= b"
@@ -5323,6 +6539,10 @@ msgstr "ILIKE"
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:250
 msgid "IN"
 msgstr "EM"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:252
+msgid "Returns 1 if value is found within a list of values."
+msgstr "Retorna 1 se o valor for encontrado em uma lista de valores."
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:258
 msgid "a IN b"
@@ -5520,6 +6740,10 @@ msgstr "parameter"
 msgid "parameter(name)"
 msgstr "parâmetro(nome)"
 
+#: ../../docs/user_manual/expressions/expression_help/Processing.rst:22
+msgid "**name** - name of the corresponding input parameter"
+msgstr "**nome** - nome do parâmetro de entrada correspondente"
+
 #: ../../docs/user_manual/expressions/functions_list.rst:819
 msgid "Rasters Functions"
 msgstr "Funções Rasters"
@@ -5535,6 +6759,18 @@ msgstr "raster_statistic"
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:14
 msgid "Returns statistics from a raster layer."
 msgstr "Retorna as estatísticas de uma camada raster."
+
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:20
+msgid "raster_statistic(layer, band, property)"
+msgstr "estatística_raster(camada, banda, propriedade)"
+
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:23
+msgid ""
+"**band** - integer representing the band number from the raster layer, "
+"starting at 1"
+msgstr ""
+"**banda** - inteiro representando o número da banda da camada raster, "
+"começando em 1"
 
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:28
 msgid "min: minimum value"
@@ -5555,6 +6791,26 @@ msgstr "soma: soma de todos os valores do raster"
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:46
 msgid "raster_value"
 msgstr "raster_value"
+
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:48
+msgid "Returns the raster value found at the provided point."
+msgstr "Retorna o valor raster encontrado no ponto fornecido."
+
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:54
+msgid "raster_value(layer, band, point)"
+msgstr "valor_raster(camada, banda, ponto)"
+
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:56
+msgid "**layer** - the name or id of a raster layer"
+msgstr "**camada** - o nome ou id de uma camada raster"
+
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:58
+msgid ""
+"**point** - point geometry (for multipart geometries having more than one "
+"part, a NULL value will be returned)"
+msgstr ""
+"**ponto** - geometria de ponto (para geometrias multipartes com mais de uma "
+"parte, um valor NULO será retornado)"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:832
 msgid "Record and Attributes Functions"
@@ -5577,10 +6833,35 @@ msgstr "Retorna um atributo de uma feição."
 msgid "**Variant 1**"
 msgstr "** Variante 1**"
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:18
+msgid "Returns the value of an attribute from the current feature."
+msgstr "Retorna o valor de um atributo da feição atual."
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:24
+msgid "attribute(attribute_name)"
+msgstr "atributo(nome_atributo)"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:26
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:42
+msgid "**attribute_name** - name of attribute to be returned"
+msgstr "**nome_atributo** - nome do atributo a ser retornado"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:28
+msgid ""
+"``attribute( 'name' )`` → value stored in 'name' attribute for the current "
+"feature"
+msgstr ""
+"``atributo( 'nome' )`` → valor armazenado no atributo 'nome' para a feição "
+"atual"
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:31
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:69
 msgid "**Variant 2**"
 msgstr "**Variante 2**"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:39
+msgid "attribute(feature, attribute_name)"
+msgstr "atributo(feição, nome_atributo)"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:41
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:79
@@ -5629,6 +6910,11 @@ msgstr "**Sem parâmetros**"
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:97
 msgid "**One 'feature' parameter**"
 msgstr "**Um parâmetro 'feição'**"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:56
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:112
+msgid "**Layer and feature parameters**"
+msgstr "**Parâmetros de camada e feição**"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:58
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:114
@@ -5700,9 +6986,21 @@ msgstr ""
 "Se chamada sem parâmetros, a função retornará verdadeiro se a feição atual "
 "na camada atual for selecionada."
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:51
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:69
+msgid "**feature** - The feature which should be checked for selection."
+msgstr "**feição** - A feição que deve ser verificada para seleção."
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:58
 msgid "**Two parameters**"
 msgstr "**Dois parâmetros**"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:68
+msgid ""
+"**layer** - The layer (its ID or name) on which the selection will be "
+"checked."
+msgstr ""
+"**camada** - A camada (seu ID ou nome) na qual a seleção será verificada."
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:137
 msgid "num_selected"
@@ -5752,6 +7050,10 @@ msgstr ""
 "modo de transação, o valor será recuperado apenas uma vez durante o tempo de"
 " vida de uma transação e armazenado em cache e incrementado. Isso torna "
 "inseguro trabalhar no mesmo banco de dados de vários processos em paralelo."
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:46
+msgid "**id_field** - Name of the field that contains the current value"
+msgstr "**campo_id** - Nome do campo que contém o valor atual"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:6
 msgid "uuid"

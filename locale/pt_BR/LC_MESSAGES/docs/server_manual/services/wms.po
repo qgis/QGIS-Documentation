@@ -43,6 +43,10 @@ msgid "Returns a map"
 msgstr "Retorna um mapa"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Retrieves data (geometry and values) for a pixel location"
+msgstr "Recupera dados (geometria e valores) para uma localização de pixel"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid "Returns legend symbols"
 msgstr "Retorna os símbolos das legendas"
 
@@ -75,8 +79,51 @@ msgid "Version of the service"
 msgstr "Versão do serviço"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "QGIS project file"
+msgstr "arquivo de projeto QGIS"
+
+#: ../../docs/server_manual/services/wms.rst:66
+#: ../../docs/server_manual/services/wms.rst:127
+#: ../../docs/server_manual/services/wms.rst:337
+#: ../../docs/server_manual/services/wms.rst:434
+#: ../../docs/server_manual/services/wms.rst:477
+#: ../../docs/server_manual/services/wms.rst:641
+#: ../../docs/server_manual/services/wms.rst:861
+#: ../../docs/server_manual/services/wms.rst:1008
+#: ../../docs/server_manual/services/wms.rst:1031
+#: ../../docs/server_manual/services/wms.rst:1060
+#: ../../docs/server_manual/services/wms.rst:1088
+#: ../../docs/server_manual/services/wms.rst:1115
+#: ../../docs/server_manual/services/wms.rst:1142
+#: ../../docs/server_manual/services/wms.rst:1169
+#: ../../docs/server_manual/services/wms.rst:1196
+#: ../../docs/server_manual/services/wms.rst:1223
+#: ../../docs/server_manual/services/wms.rst:1282
+#: ../../docs/server_manual/services/wms.rst:1308
+#: ../../docs/server_manual/services/wms.rst:1338
+#: ../../docs/server_manual/services/wms.rst:1366
+#: ../../docs/server_manual/services/wms.rst:1412
+#: ../../docs/server_manual/services/wms.rst:1438
+#: ../../docs/server_manual/services/wms.rst:1468
+#: ../../docs/server_manual/services/wms.rst:1496
+#: ../../docs/server_manual/services/wms.rst:1539
+#: ../../docs/server_manual/services/wms.rst:1575
+#: ../../docs/server_manual/services/wms.rst:1657
+#: ../../docs/server_manual/services/wms.rst:1842
+msgid "URL example:"
+msgstr "Exemplo de URL:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers' style"
+msgstr "Estilo das camadas"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid "Coordinate reference system"
 msgstr "Sistema de referência de coordenadas"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Map extent"
+msgstr "Extensão do mapa"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid "Width of the image in pixels"
@@ -90,9 +137,45 @@ msgstr "Altura da imagem em pixels"
 msgid "Image format"
 msgstr "Formato de imagem"
 
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Transparent background"
+msgstr "Plano de fundo transparente"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Specify the background color"
+msgstr "Especificar a cor de fundo"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Specify the output resolution"
+msgstr "Especificar a resolução de saída"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "JPEG compression"
+msgstr "Compressão JPEG"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Opacity for layer or group"
+msgstr "Opacidade para camada ou grupo"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "FILE_NAME"
+msgstr "NOME_ARQUIVO"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Options of the specified file format"
+msgstr "Opções do formato de arquivo especificado"
+
 #: ../../docs/server_manual/services/wms.rst:151
 msgid "VERSION"
 msgstr "VERSÃO"
+
+#: ../../docs/server_manual/services/wms.rst:153
+msgid ""
+"This parameter allows to specify the version of the service to use. "
+"Available values for the ``VERSION`` parameter are:"
+msgstr ""
+"Este parâmetro permite especificar a versão do serviço a ser utilizada. Os "
+"valores disponíveis para o parâmetro ``VERSÃO`` são:"
 
 #: ../../docs/server_manual/services/wms.rst:156
 msgid "``1.1.1``"
@@ -106,9 +189,39 @@ msgstr "``1.3.0``"
 msgid "LAYERS"
 msgstr "CAMADAS"
 
+#: ../../docs/server_manual/services/wms.rst:171
+msgid ""
+"This parameter allows to specify the layers to display on the map. Names "
+"have to be separated by a comma."
+msgstr ""
+"Este parâmetro permite especificar as camadas a serem exibidas no mapa. Os "
+"nomes devem ser separados por vírgula."
+
+#: ../../docs/server_manual/services/wms.rst:177
+msgid "the layer id"
+msgstr "o ID da camada"
+
 #: ../../docs/server_manual/services/wms.rst:196
 msgid "STYLES"
 msgstr "ESTILOS"
+
+#: ../../docs/server_manual/services/wms.rst:198
+msgid ""
+"This parameter can be used to specify a layer's style for the rendering "
+"step. Styles have to be separated by a comma. The name of the default style "
+"is ``default``."
+msgstr ""
+"Este parâmetro pode ser usado para especificar o estilo de uma camada para a"
+" etapa de renderização. Os estilos devem ser separados por vírgula. O nome "
+"do estilo padrão é ``padrão``."
+
+#: ../../docs/server_manual/services/wms.rst:264
+msgid ""
+"This parameter allows to specify the map extent with units according to the "
+"current CRS. Coordinates have to be separated by a comma."
+msgstr ""
+"Este parâmetro permite especificar a extensão do mapa com unidades de acordo"
+" com o SRC atual. As coordenadas devem ser separadas por vírgula."
 
 #: ../../docs/server_manual/services/wms.rst:304
 #: ../../docs/server_manual/services/wms.rst:881
@@ -138,6 +251,14 @@ msgstr ""
 msgid "FORMAT"
 msgstr "FORMATO"
 
+#: ../../docs/server_manual/services/wms.rst:324
+msgid ""
+"This parameter may be used to specify the format of map image. Available "
+"values are:"
+msgstr ""
+"Este parâmetro pode ser usado para especificar o formato da imagem do mapa. "
+"Os valores disponíveis são:"
+
 #: ../../docs/server_manual/services/wms.rst:327
 #: ../../docs/server_manual/services/wms.rst:1711
 msgid "``jpg``"
@@ -164,6 +285,15 @@ msgstr "``imagem/png``"
 msgid "TRANSPARENT"
 msgstr "TRANSPARENTE"
 
+#: ../../docs/server_manual/services/wms.rst:358
+msgid ""
+"This boolean parameter can be used to specify the background transparency. "
+"Available values are (not case sensitive):"
+msgstr ""
+"Este parâmetro booleano pode ser usado para especificar a transparência do "
+"plano de fundo. Os valores disponíveis são (não diferenciam maiúsculas de "
+"minúsculas):"
+
 #: ../../docs/server_manual/services/wms.rst:362
 #: ../../docs/server_manual/services/wms.rst:774
 #: ../../docs/server_manual/services/wms.rst:788
@@ -187,9 +317,43 @@ msgstr "``VERDADEIRO``"
 msgid "``FALSE``"
 msgstr "``FALSO``"
 
+#: ../../docs/server_manual/services/wms.rst:365
+msgid ""
+"However, this parameter is ignored if the format of the image indicated with"
+" ``FORMAT`` is different from PNG."
+msgstr ""
+"No entanto, este parâmetro é ignorado se o formato da imagem indicado com "
+"``FORMATO`` for diferente de PNG."
+
+#: ../../docs/server_manual/services/wms.rst:379
+msgid "URL example with the literal notation:"
+msgstr "Exemplo de URL com a notação literal:"
+
+#: ../../docs/server_manual/services/wms.rst:390
+msgid "URL example with the hexadecimal notation:"
+msgstr "Exemplo de URL com a notação hexadecimal:"
+
+#: ../../docs/server_manual/services/wms.rst:405
+msgid "DPI"
+msgstr "DPI"
+
+#: ../../docs/server_manual/services/wms.rst:407
+msgid "This parameter can be used to specify the requested output resolution."
+msgstr ""
+"Este parâmetro pode ser usado para especificar a resolução de saída "
+"solicitada."
+
+#: ../../docs/server_manual/services/wms.rst:413
+msgid "IMAGE_QUALITY"
+msgstr "QUALIDADE_IMAGEM"
+
 #: ../../docs/server_manual/services/wms.rst:428
 msgid "OPACITIES"
 msgstr "OPACIDADES"
+
+#: ../../docs/server_manual/services/wms.rst:453
+msgid "To the left ``OPACITIES=255,0`` and to the right ``OPACITIES=255,255``"
+msgstr "À esquerda ``OPACIDADES=255,0`` e à direita ``OPACIDADES=255,255``"
 
 #: ../../docs/server_manual/services/wms.rst:458
 msgid "FILTER"
@@ -199,9 +363,25 @@ msgstr "FILTRO"
 msgid "SELECTION"
 msgstr "SELEÇÃO"
 
+#: ../../docs/server_manual/services/wms.rst:547
+msgid "FORMAT-OPTIONS"
+msgstr "FORMATO-OPÇÕES"
+
 #: ../../docs/server_manual/services/wms.rst:1
 msgid "Maximum number of features to return"
 msgstr "Número máximo de feições a serem retornadas"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Same as `I` parameter, but in WMS 1.1.1"
+msgstr "Igual ao parâmetro `I`, mas em WMS 1.1.1"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Same as `J` parameter, but in WMS 1.1.1"
+msgstr "Igual ao parâmetro `J`, mas em WMS 1.1.1"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "WMS_PRECISION"
+msgstr "WMS_PRECISÃO"
 
 #: ../../docs/server_manual/services/wms.rst:623
 msgid ""
@@ -222,6 +402,14 @@ msgstr "Tolerância em pixels para camadas de linha"
 msgid "Tolerance in pixels for polygon layers"
 msgstr "Tolerância em pixels para camadas de polígono"
 
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Geometry filtering"
+msgstr "Filtragem de geometria"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Add geometry to the output"
+msgstr "Adicionar geometria à saída"
+
 #: ../../docs/server_manual/services/wms.rst:667
 msgid ""
 "This parameter may be used to specify the format of the result. Available "
@@ -234,9 +422,21 @@ msgstr ""
 msgid "``text/xml``"
 msgstr "``texto/xml``"
 
+#: ../../docs/server_manual/services/wms.rst:671
+msgid "``text/html``"
+msgstr "``texto/html``"
+
 #: ../../docs/server_manual/services/wms.rst:686
 msgid "short name"
 msgstr "nome curto"
+
+#: ../../docs/server_manual/services/wms.rst:687
+msgid "layer id"
+msgstr "camada id"
+
+#: ../../docs/server_manual/services/wms.rst:704
+msgid "By default, only 1 feature per layer is returned."
+msgstr "Por padrão, apenas 1 feição por camada é retornada."
 
 #: ../../docs/server_manual/services/wms.rst:709
 msgid "I"
@@ -246,6 +446,10 @@ msgstr "I"
 msgid "X"
 msgstr "X"
 
+#: ../../docs/server_manual/services/wms.rst:719
+msgid "Same parameter as ``I``, but defined in WMS 1.1.1."
+msgstr "Mesmo parâmetro que ``I``, mas definido no WMS 1.1.1."
+
 #: ../../docs/server_manual/services/wms.rst:724
 msgid "J"
 msgstr "J"
@@ -254,14 +458,40 @@ msgstr "J"
 msgid "Y"
 msgstr "Y"
 
+#: ../../docs/server_manual/services/wms.rst:734
+msgid "Same parameter as ``J``, but defined in WMS 1.1.1."
+msgstr "Mesmo parâmetro que ``J``, mas definido no WMS 1.1.1."
+
+#: ../../docs/server_manual/services/wms.rst:741
+msgid "This parameter specifies the tolerance in pixels for point layers."
+msgstr ""
+"Este parâmetro especifica a tolerância em pixels para camadas de pontos."
+
+#: ../../docs/server_manual/services/wms.rst:748
+msgid "This parameter specifies the tolerance in pixels for line layers."
+msgstr ""
+"Este parâmetro especifica a tolerância em pixels para camadas de linha."
+
 #: ../../docs/server_manual/services/wms.rst:755
 msgid "This parameter specifies the tolerance in pixels for polygon layers."
 msgstr ""
 "Este parâmetro especifica a tolerância em pixels para camadas de polígono."
 
+#: ../../docs/server_manual/services/wms.rst:760
+msgid "FILTER_GEOM"
+msgstr "FILTRAR_GEOM"
+
+#: ../../docs/server_manual/services/wms.rst:780
+msgid "WITH_GEOMETRY"
+msgstr "COM_GEOMETRIA"
+
 #: ../../docs/server_manual/services/wms.rst:1
 msgid "Legend format"
 msgstr "Formato da legenda"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Map width"
+msgstr "Largura do mapa"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid "Map height"
@@ -279,6 +509,22 @@ msgstr "Espaço vertical entre o título da camada e os itens (mm)"
 msgid "Vertical space between symbol and items (mm)"
 msgstr "Espaço vertical entre o símbolo e os itens (mm)"
 
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Horizontal space between symbol and label (mm)"
+msgstr "Espaço horizontal entre o símbolo e o rótulo (mm)"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Width of the symbol preview (mm)"
+msgstr "Largura da pré-visualização do símbolo (mm)"
+
+#: ../../docs/server_manual/services/wms.rst:923
+msgid ""
+"This parameter may be used to specify the format of legend image. Available "
+"values are:"
+msgstr ""
+"Este parâmetro pode ser usado para especificar o formato da imagem da "
+"legenda. Os valores disponíveis são:"
+
 #: ../../docs/server_manual/services/wms.rst:993
 #: ../../docs/server_manual/services/wms.rst:1679
 msgid "For example:"
@@ -288,13 +534,97 @@ msgstr "Por exemplo:"
 msgid "RULE"
 msgstr "REGRA"
 
+#: ../../docs/server_manual/services/wms.rst:1083
+msgid "LAYERSPACE"
+msgstr "ESPAÇOCAMADA"
+
+#: ../../docs/server_manual/services/wms.rst:1137
+msgid "SYMBOLSPACE"
+msgstr "ESPAÇOSIMBOLO"
+
+#: ../../docs/server_manual/services/wms.rst:1166
+msgid ""
+"This parameter allows to specify the horizontal space between symbol and "
+"label text in millimeters. By default the space value is ``2`` mm."
+msgstr ""
+"Este parâmetro permite especificar o espaço horizontal entre o símbolo e o "
+"texto do rótulo em milímetros. Por padrão, o valor do espaço é ``2`` mm."
+
+#: ../../docs/server_manual/services/wms.rst:1191
+msgid "SYMBOLWIDTH"
+msgstr "LARGURASIMBOLO"
+
+#: ../../docs/server_manual/services/wms.rst:1218
+msgid "SYMBOLHEIGHT"
+msgstr "ALTURASIMBOLO"
+
+#: ../../docs/server_manual/services/wms.rst:1220
+msgid ""
+"This parameter allows to specify the height of the symbol preview in "
+"millimeters. By default the height value is ``4`` mm."
+msgstr ""
+"Este parâmetro permite especificar a altura da visualização do símbolo em "
+"milímetros. Por padrão, o valor da altura é ``4`` mm."
+
+#: ../../docs/server_manual/services/wms.rst:1245
+msgid "LAYERTITLE"
+msgstr "TITULOCAMADA"
+
 #: ../../docs/server_manual/services/wms.rst:1251
 msgid "``TRUE`` (default value)"
 msgstr "``VERDADEIRO`` (valor padrão)"
 
+#: ../../docs/server_manual/services/wms.rst:1274
+msgid "LAYERFONTBOLD"
+msgstr "CAMADAFONTENEGRITO"
+
+#: ../../docs/server_manual/services/wms.rst:1304
+msgid "LAYERFONTSIZE"
+msgstr "CAMADAFONTETAMANHO"
+
+#: ../../docs/server_manual/services/wms.rst:1330
+msgid "LAYERFONTITALIC"
+msgstr "CAMADAFONTEITÁLICO"
+
+#: ../../docs/server_manual/services/wms.rst:1360
+msgid "LAYERFONTCOLOR"
+msgstr "CAMADAFONTECOR"
+
+#: ../../docs/server_manual/services/wms.rst:1404
+msgid "ITEMFONTBOLD"
+msgstr "ITEMFONTENEGRITO"
+
+#: ../../docs/server_manual/services/wms.rst:1434
+msgid "ITEMFONTSIZE"
+msgstr "ITEMFONTETAMANHO"
+
+#: ../../docs/server_manual/services/wms.rst:1460
+msgid "ITEMFONTITALIC"
+msgstr "ITEMFONTEITÁLICO"
+
+#: ../../docs/server_manual/services/wms.rst:1490
+msgid "ITEMFONTCOLOR"
+msgstr "ITEMFONTECOR"
+
 #: ../../docs/server_manual/services/wms.rst:1
 msgid "Layers to describe"
 msgstr "Camadas para descrever"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "SLD version"
+msgstr "Versão SLD"
+
+#: ../../docs/server_manual/services/wms.rst:1611
+msgid "SLD_VERSION"
+msgstr "VERSÃO_SLD"
+
+#: ../../docs/server_manual/services/wms.rst:1613
+msgid ""
+"This parameter allows to specify the version of SLD. Only the value "
+"``1.1.0`` is available."
+msgstr ""
+"Este parâmetro permite especificar a versão do SLD. Apenas o valor ``1.1.0``"
+" está disponível."
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid "Atlas features"
@@ -312,6 +642,10 @@ msgstr "Camadas do mapa 'X'"
 msgid "Rotation  of the map 'X'"
 msgstr "Rotação do mapa 'X'"
 
+#: ../../docs/server_manual/services/wms.rst:1697
+msgid "TEMPLATE"
+msgstr "MODELO"
+
 #: ../../docs/server_manual/services/wms.rst:1707
 msgid ""
 "This parameter specifies the format of map image. Available values are:"
@@ -323,6 +657,10 @@ msgstr ""
 msgid "``png`` (default value)"
 msgstr "``png`` (valor padrão)"
 
+#: ../../docs/server_manual/services/wms.rst:1714
+msgid "``svg``"
+msgstr "``svg``"
+
 #: ../../docs/server_manual/services/wms.rst:1715
 msgid "``image/svg``"
 msgstr "``imagem/svg``"
@@ -331,9 +669,29 @@ msgstr "``imagem/svg``"
 msgid "``pdf``"
 msgstr "``pdf``"
 
+#: ../../docs/server_manual/services/wms.rst:1720
+msgid ""
+"If the ``FORMAT`` parameter is different from one of these values, then an "
+"exception is returned."
+msgstr ""
+"Se o parâmetro ``FORMATO`` for diferente de um desses valores, uma exceção "
+"será retornada."
+
 #: ../../docs/server_manual/services/wms.rst:1751
 msgid "This parameter specifies the map rotation in degrees."
 msgstr "Este parâmetro especifica a rotação do mapa em graus."
+
+#: ../../docs/server_manual/services/wms.rst:1770
+msgid "mapX:SCALE"
+msgstr "mapaX:ESCALA"
+
+#: ../../docs/server_manual/services/wms.rst:1780
+msgid "mapX:LAYERS"
+msgstr "mapaX:CAMADAS"
+
+#: ../../docs/server_manual/services/wms.rst:1789
+msgid "mapX:STYLES"
+msgstr "mapaX:ESTILOS"
 
 #: ../../docs/server_manual/services/wms.rst:1807
 msgid "initial visibility of layers"

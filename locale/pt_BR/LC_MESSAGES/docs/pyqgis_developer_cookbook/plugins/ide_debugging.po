@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2022
 # Vanessa Stelzer, 2022
+# Letícia Jardim, 2022
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-16 07:30+0000\n"
 "PO-Revision-Date: 2022-03-14 05:10+0000\n"
-"Last-Translator: Vanessa Stelzer, 2022\n"
+"Last-Translator: Letícia Jardim, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -194,6 +195,14 @@ msgstr "Para usar o Eclipse, verifique se você instalou o seguinte"
 msgid "`Eclipse <https://www.eclipse.org>`_"
 msgstr "`Eclipse <https://www.eclipse.org>`_"
 
+#: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:98
+msgid ""
+"`Aptana Studio 3 Plugin <http://www.aptana.com>`_ or `PyDev "
+"<https://www.pydev.org>`_"
+msgstr ""
+"`Plugin Aptana Studio 3 <http://www.aptana.com>`_ ou `PyDev "
+"<https://www.pydev.org>`_"
+
 #: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:99
 msgid "QGIS 2.x"
 msgstr "QGIS 2.x"
@@ -209,6 +218,10 @@ msgstr ""
 "momento, ainda é experimental, então habilite |checkbox| "
 ":guilabel:`Complementos experimentais` em :menuselection:`Complementos --> "
 "Gerenciar e Instalar Complementos... --> Opções` de antemão."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:338
+msgid "checkbox"
+msgstr "caixa de seleção"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:105
 msgid ""
@@ -574,6 +587,78 @@ msgstr "Clique na engrenagem pequena e depois :guilabel:`Adicionar`."
 #: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:258
 msgid "Select :guilabel:`Virtualenv environment`."
 msgstr "Selecione :guilabel:`Virtualenv environment`."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:270
+msgid ""
+"In the new window, select your new interpreter ``QGIS`` and click the last "
+"icon in the vertical menu :guilabel:`Show paths for the selected "
+"interpreter.`"
+msgstr ""
+"Na nova janela, selecione seu novo intérprete ``QGIS`` e clique no último "
+"ícone no menu vertical :guilabel:`Mostrar caminhos para o intérprete "
+"selecionado.`"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:272
+msgid ""
+"Finally, add the following absolute path to the list "
+":file:`~/dev/qgis/build/master/output/python`."
+msgstr ""
+"Finalmente, adicione o seguinte caminho absoluto à lista "
+":file:`~/dev/qgis/build/master/output/python'."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:279
+msgid ""
+"Restart PyCharm and you can start using this new Python virtual environment "
+"for all your plugins."
+msgstr ""
+"Reinicie PyCharm e você pode começar a usar este novo ambiente virtual "
+"Python para todos os seus plugins."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:286
+msgid ""
+"In the professional version of PyCharm, remote debugging is working well. "
+"For the Community edition, remote debugging is not available. You can only "
+"have access to a local debugger, meaning that the code must run *inside* "
+"PyCharm (as script or unittest), not in QGIS itself. For Python code running"
+" *in* QGIS, you might use the *First Aid* plugin mentioned above."
+msgstr ""
+"Na versão profissional do PyCharm, a depuração remota está funcionando bem. "
+"Para a edição comunitária, a depuração remota não está disponível. Você só "
+"pode ter acesso a um depurador local, o que significa que o código deve "
+"rodar *dentro* do PyCharm (como script ou teste unitário), e não no próprio "
+"QGIS. Para código Python rodando *no* QGIS, você pode usar o plugin *First "
+"Aid* mencionado acima."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:295
+msgid ""
+"If you do not use an IDE such as Eclipse or PyCharm, you can debug using "
+"PDB, following these steps."
+msgstr ""
+"Se você não usa uma IDE como Eclipse ou PyCharm, você pode depurar usando o "
+"PDB, seguindo estes passos."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:298
+msgid "First add this code in the spot where you would like to debug"
+msgstr "Primeiro adicione este código no local onde você gostaria de depurar"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:310
+msgid "Then run QGIS from the command line."
+msgstr "Em seguida, execute o QGIS a partir da linha de comando."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:312
+msgid "On Linux do:"
+msgstr "No Linux faça:"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:318
+msgid "On macOS do:"
+msgstr "No macOS faça:"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:324
+msgid ""
+"And when the application hits your breakpoint you can type in the console!"
+msgstr ""
+"E quando a aplicação atingir seu ponto de parada, você pode digitar no "
+"console!"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/ide_debugging.rst:330
 msgid "**TODO:**"

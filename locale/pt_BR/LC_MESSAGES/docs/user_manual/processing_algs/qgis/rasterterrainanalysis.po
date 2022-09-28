@@ -30,6 +30,16 @@ msgstr ""
 msgid "Aspect"
 msgstr "Aspecto"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:15
+msgid ""
+"Calculates the aspect of the Digital Terrain Model in input. The final "
+"aspect raster layer contains values from 0 to 360 that express the slope "
+"direction, starting from north (0°) and continuing clockwise."
+msgstr ""
+"Calcula o aspecto do Modelo Digital de Terreno na entrada. A camada raster "
+"de aspecto final contém valores de 0 a 360 que expressam a direção da "
+"inclinação, começando do norte (0°) e continuando no sentido horário."
+
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:35
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:130
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:224
@@ -134,6 +144,30 @@ msgstr "``ENTRADA``"
 msgid "[raster]"
 msgstr "[raster]"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:48
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:144
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:333
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:461
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:541
+msgid "Digital Terrain Model raster layer"
+msgstr "Camada raster do Modelo Digital de Terreno "
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:49
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:145
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:334
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:462
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:542
+msgid "**Z factor**"
+msgstr "**Fator Z**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:50
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:146
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:335
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:463
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:543
+msgid "``Z_FACTOR``"
+msgstr "``FATOR_Z``"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:51
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:147
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:159
@@ -152,6 +186,16 @@ msgstr "[número]"
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:546
 msgid "Default: 1.0"
 msgstr "Padrão: 1.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:54
+msgid ""
+"Vertical exaggeration. This parameter is useful when the Z units differ from"
+" the X and Y units, for example feet and meters. You can use this parameter "
+"to adjust for this. The default is 1 (no exaggeration)."
+msgstr ""
+"Exagero vertical. Este parâmetro é útil quando as unidades Z diferem das "
+"unidades X e Y, por exemplo, pés e metros. Você pode usar este parâmetro "
+"para ajustar isso. O padrão é 1 (sem exagero)."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:59
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:80
@@ -214,6 +258,16 @@ msgstr "Código Python"
 msgid "Hillshade"
 msgstr "Sombreamento"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:102
+msgid ""
+"The shading of the layer is calculated according to the sun position: you "
+"have the options to change both the horizontal angle (azimuth) and the "
+"vertical angle (sun elevation) of the sun."
+msgstr ""
+"O sombreamento da camada é calculado de acordo com a posição do sol: você "
+"tem a opção de alterar tanto o ângulo horizontal (azimute) quanto o ângulo "
+"vertical (elevação do sol) do sol."
+
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:110
 msgid "Azimuth and vertical angle"
 msgstr "Azimute e ângulo vertical"
@@ -230,13 +284,33 @@ msgstr "``AZIMUTE``"
 msgid "Default: 300.0"
 msgstr "Padrão: 300.0"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:162
+msgid ""
+"Set the horizontal angle (in degrees) of the sun (clockwise direction). "
+"Range: 0 to 360. 0 is north."
+msgstr ""
+"Defina o ângulo horizontal (em graus) do sol (sentido horário). Faixa: 0 a "
+"360. 0 é o norte."
+
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:164
 msgid "**Vertical angle**"
 msgstr "**Ângulo vertical**"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:165
+msgid "``V_ANGLE``"
+msgstr "``ÂNGULO_V``"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:168
 msgid "Default: 40.0"
 msgstr "Padrão: 40,0"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:169
+msgid ""
+"Set the vertical angle (in degrees) of the sun, that is the height of the "
+"sun. Values can go from 0 (minimum elevation) to 90 (maximum elevation)."
+msgstr ""
+"Defina o ângulo vertical (em graus) do sol, que é a altura do sol. Os "
+"valores podem ir de 0 (elevação mínima) a 90 (elevação máxima)."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:173
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:194
@@ -247,9 +321,39 @@ msgstr "**Sombreamento**"
 msgid "Hypsometric curves"
 msgstr "Curvas hipsométricas"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:217
+msgid ""
+"A hypsometric curve is a cumulative histogram of elevation values in a "
+"geographical area."
+msgstr ""
+"Uma curva hipsométrica é um histograma cumulativo de valores de elevação em "
+"uma área geográfica."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:220
+msgid ""
+"You can use hypsometric curves to detect differences in the landscape due to"
+" the geomorphology of the territory."
+msgstr ""
+"Você pode usar curvas hipsométricas para detectar diferenças na paisagem "
+"devido à geomorfologia do território."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:238
+msgid "Digital Terrain Model raster layer to use for calculating altitudes"
+msgstr ""
+"Camada raster do Modelo Digital de Terreno a ser usada para calcular "
+"altitudes"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:242
 msgid "[vector: polygon]"
 msgstr "[vetor: polígono]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:243
+msgid ""
+"Polygon vector layer with boundaries of areas used to calculate hypsometric "
+"curves"
+msgstr ""
+"Camada vetorial de polígono com limites de áreas usadas para calcular curvas"
+" hipsométricas"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:249
 msgid "Default: 100.0"
@@ -258,6 +362,11 @@ msgstr "Padrão: 100.0"
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:250
 msgid "Vertical distance between curves"
 msgstr "Distância vertical entre curvas"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:251
+#, python-format
+msgid "**Use % of area instead of absolute value**"
+msgstr "**Usar % da área em vez do valor absoluto**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:253
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:348
@@ -268,6 +377,14 @@ msgstr "[boleano]"
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:350
 msgid "Default: False"
 msgstr "Padrão: Falso"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:256
+msgid ""
+"Write area percentage to “Area” field of the CSV file instead of the "
+"absolute area"
+msgstr ""
+"Escreva a porcentagem da área no campo “Área” do arquivo CSV em vez da área "
+"absoluta"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:258
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:280
@@ -281,6 +398,10 @@ msgstr "Camada de relevo"
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:346
 msgid "**Generate relief classes automatically**"
 msgstr "**Gerar classes de relevo automaticamente**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:347
+msgid "``AUTO_COLORS``"
+msgstr "``CORES_AUTOMÁTICAS``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:355
 msgid "Optional"
@@ -309,6 +430,14 @@ msgstr "[tabela]"
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:394
 msgid "Skip Output"
 msgstr "Ignorar Saída"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:439
+msgid ""
+"Each pixel contains the difference in elevation from a center cell and the 8"
+" cells surrounding it."
+msgstr ""
+"Cada célula contém a somatória das diferenças absolutas  de elevação entre "
+"uma célula central e as 8 que a envolvem."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:515
 msgid "Slope"

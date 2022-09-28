@@ -13,14 +13,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"POT-Creation-Date: 2022-09-28 02:54+0000\n"
 "PO-Revision-Date: 2022-03-14 05:12+0000\n"
 "Last-Translator: Harrissou Sant-anna, 2022\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.3\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -212,6 +212,7 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:35
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:38
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:44
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:51
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:52
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:53
@@ -620,6 +621,7 @@ msgstr "[] indique des éléments optionnels"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:38
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:40
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:43
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:46
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:53
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:54
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:55
@@ -1113,6 +1115,7 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:40
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:42
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:44
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:48
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:49
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:56
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:57
@@ -7274,7 +7277,7 @@ msgstr "end_point(geometry)"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:16
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:41
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:47
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:54
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:58
 msgid "**geometry** - geometry object"
@@ -8864,22 +8867,6 @@ msgstr ""
 " et le 3ème point. Option projeté : La seconde distance est égale à la "
 "distance de la projection perpendiculaire du 3ème point sur le segment ou "
 "son extension."
-
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:272
-msgid ""
-"``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), "
-"make_point(5, 5), 0)))`` → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'"
-msgstr ""
-"``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), "
-"make_point(5, 5), 0)))`` → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'"
-
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:273
-msgid ""
-"``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), "
-"make_point(5, 3), 1)))`` → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'"
-msgstr ""
-"``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), "
-"make_point(5, 3), 1)))`` → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:281
 msgid "make_regular_polygon"
@@ -10550,11 +10537,11 @@ msgstr ""
 "``rotate($geometry, 45)`` → géométrie tournée de 45 degrés dans le sens des "
 "aiguilles d'une montre autour du centre de sa boîte englobante"
 
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:31
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:37
 msgid "segments_to_lines"
 msgstr "segments_to_lines"
 
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:33
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
 msgid ""
 "Returns a multi line geometry consisting of a line for every segment in the "
 "input geometry."
@@ -10562,11 +10549,11 @@ msgstr ""
 "Renvoie une géométrie multi-lignes consistant en une ligne pour chaque "
 "segment de la géométrie en entrée."
 
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:45
 msgid "segments_to_lines(geometry)"
 msgstr "segments_to_lines(geometry)"
 
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:43
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:49
 msgid ""
 "``geom_to_wkt(segments_to_lines(geom_from_wkt('LINESTRING(0 0, 1 1, 2 "
 "2)')))`` → 'MultiLineString ((0 0, 1 1),(1 1, 2 2))'"

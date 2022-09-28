@@ -280,9 +280,37 @@ msgstr "Arquivo de tabela que contém os valores exportados da banda raster"
 msgid "Python code"
 msgstr "Código Python"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:79
+msgid "**Algorithm ID**: ``gdal:gdal2xyz``"
+msgstr "**ID do algoritmo**: ``gdal:gdal2xyz``"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:89
 msgid "PCT to RGB"
 msgstr "PCT para RGB"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:90
+msgid ""
+"Converts an 8 bit paletted image to a 24 bit RGB. It will convert a "
+"pseudocolor band from the input file to an RGB file of the desired format."
+msgstr ""
+"Converte uma imagem paletada de 8 bits para uma RGB de 24 bits. Converte uma"
+" banda pseudo-colorida do arquivo de entrada para um arquivo RGB do formato "
+"desejado."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:94
+msgid ""
+"This algorithm is derived from the `GDAL pct2rgb utility "
+"<https://gdal.org/programs/pct2rgb.html>`_."
+msgstr ""
+"Este algoritmo é derivado do utilitário `GDAL pct2rgb "
+"<https://gdal.org/programs/pct2rgb.html>`_."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:97
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:177
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:416
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:488
+msgid "**Default menu**: :menuselection:`Raster --> Conversion`"
+msgstr "**Menu padrão**: :menuselection:`Raster --> Conversão`"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:114
 msgid "Input 8 bit raster image"
@@ -295,6 +323,10 @@ msgstr "**Gerar um arquivo RGBA**"
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:123
 msgid "``RGBA``"
 msgstr "``RGBA``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:127
+msgid "Sets whether the output file should be of type RGBA."
+msgstr "Define se o arquivo de saída deve ser do tipo RGBA."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:154
 msgid "24 bit RGB raster image"
@@ -313,6 +345,14 @@ msgstr ""
 "Cria polígonos vetoriais para todas as regiões conectadas de pixels no "
 "raster que compartilha um valor de pixel comum. Cada polígono é criado com "
 "um atributo que indica o valor de pixel desse polígono."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:174
+msgid ""
+"This algorithm is derived from the `GDAL polygonize utility "
+"<https://gdal.org/programs/gdal_polygonize.html>`_."
+msgstr ""
+"Este algoritmo é derivado do utilitário `GDAL polygonize "
+"<https://gdal.org/programs/gdal_polygonize.html>`_."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:183
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:293
@@ -421,6 +461,15 @@ msgstr ""
 "Cria um novo raster usando banda (s) selecionada de uma determinada camada "
 "raster. O algoritmo também torna possível reordenar as bandas para o raster "
 "recém-criado."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:286
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:485
+msgid ""
+"This algorithm is derived from the `GDAL translate utility "
+"<https://gdal.org/programs/gdal_translate.html>`_."
+msgstr ""
+"Este algoritmo é derivado do utilitário `GDAL tradutor "
+"<https://gdal.org/programs/gdal_translate.html>`_."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:308
 msgid "**Selected band(s)**"
@@ -562,6 +611,10 @@ msgstr "10 --- CFloat32"
 msgid "11 --- CFloat64"
 msgstr "11 --- CFloat64"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:401
+msgid "RGB to PCT"
+msgstr "RGB para PCT"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:409
 msgid ""
 "If you want to classify a raster map and want to reduce the number of "
@@ -571,6 +624,14 @@ msgstr ""
 "Se você quiser classificar um mapa raster e quiser reduzir o número de "
 "classes que pode ser útil para downsample sua imagem com este algoritmo "
 "antes."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:413
+msgid ""
+"This algorithm is derived from the `GDAL rgb2pct utility "
+"<https://gdal.org/programs/rgb2pct.html>`_."
+msgstr ""
+"Este algoritmo é derivado do utilitário `GDAL rgb2pct "
+"<https://gdal.org/programs/rgb2pct.html>`_."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:433
 msgid "Input (RGB) raster layer"
@@ -600,6 +661,11 @@ msgid ""
 msgstr ""
 "O número de cores que a imagem resultante conterá. Um valor de 2-256 é "
 "possível."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:441
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:463
+msgid "**RGB to PCT**"
+msgstr "**RGB para PCT**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:466
 msgid "Output raster layer."
@@ -663,3 +729,7 @@ msgstr "Especificação da camada raster (traduzida) de saída. Um de:"
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:610
 msgid "Output (translated) raster layer."
 msgstr "Saída (traduzida) da camada raster."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:615
+msgid "**Algorithm ID**: ``gdal:translate``"
+msgstr "**ID do algoritmo**: ``gdal:traduzir``"

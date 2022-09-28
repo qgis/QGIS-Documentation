@@ -8,6 +8,7 @@
 # Harrissou Sant-anna, 2022
 # Vanessa Stelzer, 2022
 # Ana Camargo, 2022
+# Letícia Jardim, 2022
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-16 07:30+0000\n"
 "PO-Revision-Date: 2022-03-14 05:13+0000\n"
-"Last-Translator: Ana Camargo, 2022\n"
+"Last-Translator: Letícia Jardim, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -117,6 +118,13 @@ msgstr "[número]"
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:43
 msgid "Default: 100.0"
 msgstr "Padrão: 100.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:50
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:328
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:431
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:554
+msgid "``PIXEL_SIZE``"
+msgstr "``TAMANHO_PIXEL``"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:53
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:331
@@ -223,6 +231,20 @@ msgstr "[string]"
 msgid ":guilabel:`Points`"
 msgstr ":guilabel:`Pontos`"
 
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:304
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:527
+msgid ":guilabel:`Structured lines`"
+msgstr ":guilabel:`Linhas estruturadas`"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:305
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:528
+msgid ":guilabel:`Break lines`"
+msgstr ":guilabel:`Linhas de quebra`"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:311
+msgid "**Distance coefficient P**"
+msgstr "**Coeficiente de distância P**"
+
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:312
 msgid "``DISTANCE_COEFFICIENT``"
 msgstr "``COEFICIENTE_DISTÂNCIA``"
@@ -231,14 +253,36 @@ msgstr "``COEFICIENTE_DISTÂNCIA``"
 msgid "Default: 2.0"
 msgstr "Padrão: 2.0"
 
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:316
+msgid ""
+"Sets the distance coefficient for the interpolation. Minimum: 0.0, maximum: "
+"100.0."
+msgstr ""
+"Define o coeficiente de distância para a interpolação. Mínimo: 0,0, máximo: "
+"100.0."
+
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:318
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:544
 msgid "**Extent (xmin, xmax, ymin, ymax)**"
 msgstr "**Extensão (xmin, xmax, ymin, ymax)**"
 
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:319
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:545
+msgid "``EXTENT``"
+msgstr "`` EXTENSÃO``"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:320
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:546
+msgid "[extent]"
+msgstr "[extensão]"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Available methods are:"
 msgstr "Os métodos disponíveis são:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
+msgstr "Insira as coordenadas como ``xmin, xmax, ymin, ymax``"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:345
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:369
@@ -246,6 +290,26 @@ msgstr "Os métodos disponíveis são:"
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:605
 msgid "**Interpolated**"
 msgstr "**Interpolado**"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:387
+msgid "Line Density"
+msgstr "Densidade de linha"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:414
+msgid "**Input line layer**"
+msgstr "**Camada de entrada de linha**"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:416
+msgid "[vector: any]"
+msgstr "[vetor: qualquer]"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:418
+msgid "**Weight field**"
+msgstr "*Campo de peso**"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:419
+msgid "``WEIGHT``"
+msgstr "``PESO``"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:427
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:434
@@ -267,6 +331,10 @@ msgstr "``MÉTODO``"
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:538
 msgid "Default: 0"
 msgstr "Padrão: 0"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:541
+msgid ":guilabel:`Linear`"
+msgstr ":guilabel:`Linear`"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:582
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:609
@@ -290,6 +358,10 @@ msgstr "Ignorar Saída"
 #: ../../docs/user_manual/processing_algs/algs_include.rst:6
 msgid "Save to Geopackage…"
 msgstr "Salvar para Geopackage…"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:7
+msgid "Save to Database Table…"
+msgstr "Salvar na Tabela de Banco de Dados..."
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:9
 msgid "The file encoding can also be changed here."

@@ -7,8 +7,8 @@
 # Translators:
 # Harrissou Sant-anna, 2022
 # Ana Carla Rizzo Mendes, 2022
-# Letícia Jardim, 2022
 # Vanessa Stelzer, 2022
+# Letícia Jardim, 2022
 # Ana Camargo, 2022
 # 
 #, fuzzy
@@ -488,6 +488,14 @@ msgstr "[booleano]"
 msgid "Default: False"
 msgstr "Padrão: Falso"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:56
+msgid ""
+"Activating the trigonometric angle results in different categories: 0° "
+"(East), 90° (North), 180° (West), 270° (South)."
+msgstr ""
+"A ativação do ângulo trigonométrico resulta em diferentes categorias: 0° "
+"(Leste), 90° (Norte), 180° (Oeste), 270° (Sul)."
+
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:59
 msgid "``ZERO_FLAT``"
 msgstr "``ZERO_FLAT``"
@@ -499,6 +507,36 @@ msgid ""
 msgstr ""
 "Ativando esta opção será inserido um valor 0 para o valor -9999 em áreas "
 "planas."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:65
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:186
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1522
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1975
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2215
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2340
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2451
+msgid "**Compute edges**"
+msgstr "**Computar arestas**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:66
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:187
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1523
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1976
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2216
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2341
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2452
+msgid "``COMPUTE_EDGES``"
+msgstr "``COMPUTAR_ARESTAS``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:70
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:191
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1527
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1980
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2220
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2345
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2456
+msgid "Generates edges from the elevation raster"
+msgstr "Gera arestas a partir do raster de elevação"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:72
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1529
@@ -568,9 +606,18 @@ msgstr "``SAÍDA``"
 msgid "Default: ``[Save to temporary file]``"
 msgstr "Padrão: ``[Salvar em arquivo temporário]``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:82
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:235
+msgid "Output raster layer. One of:"
+msgstr "Camada raster de saída. Um de:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
 msgstr "Salvar em arquivo temporário"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:4
+msgid "Save to File…"
+msgstr "Salvar em Arquivo..."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:89
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:356
@@ -891,6 +938,10 @@ msgstr "\"TABELA_CORES\""
 msgid "[file]"
 msgstr "[arquivo]"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:195
+msgid "A text-based color configuration file"
+msgstr "Um arquivo de configuração de cores baseado em texto"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:196
 msgid "**Matching mode**"
 msgstr "**Modo de correspondência**"
@@ -1029,6 +1080,11 @@ msgstr ""
 "O número de pixels a pesquisar em todas as direções para encontrar valores "
 "para interpolar a partir"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:327
+msgid "**Number of smoothing iterations to run after the interpolation**"
+msgstr ""
+"**Número de iterações de suavização a serem executadas após a interpolação**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:328
 msgid "``ITERATIONS``"
 msgstr "``ITERAÇÕES``"
@@ -1059,6 +1115,10 @@ msgstr "``SEM_MÁSCARA``"
 msgid "``MASK_LAYER``"
 msgstr "``CAMADA_MÁSCARA``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:343
+msgid "A raster layer that defines the areas to fill."
+msgstr "Uma camada raster que define as áreas a serem preenchidas."
+
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:344
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:402
 msgid "**Filled**"
@@ -1074,6 +1134,28 @@ msgstr "Especificação da camada raster de saída. Um de:"
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2288
 msgid "Output raster"
 msgstr "Raster de saída"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:424
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:618
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:788
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:979
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1130
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1300
+msgid ""
+"This algorithm is derived from the `GDAL grid utility "
+"<https://gdal.org/programs/gdal_grid.html>`_."
+msgstr ""
+"Este algoritmo é derivado do utilitário `GDAL grid "
+"<https://gdal.org/programs/gdal_grid.html>`_."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:429
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:621
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:793
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1135
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1305
+msgid "`GDAL grid tutorial <https://gdal.org/tutorials/gdal_grid_tut.html>`_"
+msgstr ""
+"` Tutorial GDAL grid <https://gdal.org/tutorials/gdal_grid_tut.html>`_"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:446
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:635
@@ -1110,6 +1192,13 @@ msgstr "**Métrica de dados a ser usada**"
 msgid "``METRIC``"
 msgstr "``MÉTRICA``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:475
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:828
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1157
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1327
+msgid "``RADIUS_1``"
+msgstr "``RAIO_1``"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:478
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:485
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:492
@@ -1137,6 +1226,13 @@ msgstr "``MÉTRICA``"
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1839
 msgid "Default: 0.0"
 msgstr "Padrão: 0,0"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:482
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:835
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1164
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1334
+msgid "``RADIUS_2``"
+msgstr "``RAIO_2``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:489
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:842
@@ -1198,6 +1294,15 @@ msgstr "``SEMDADOS``"
 msgid "**Interpolated (data metrics)**"
 msgstr "**Interpolado (métricas de dados)**"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:515
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:683
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:874
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1023
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1358
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1551
+msgid "Specify the output raster layer with interpolated values. One of:"
+msgstr "Especificar a camada raster de saída com valores interpolados. Um de:"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:534
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:702
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:893
@@ -1235,6 +1340,16 @@ msgstr "Campo para a interpolação"
 msgid "**Output data type**"
 msgstr "**Tipo de dados de saída**"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:564
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:732
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:923
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1072
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1245
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1407
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1888
+msgid "``DATA_TYPE``"
+msgstr "``TIPO_DADOS``"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:567
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:735
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:926
@@ -1244,6 +1359,16 @@ msgstr "**Tipo de dados de saída**"
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1891
 msgid "Default: 5"
 msgstr "Padrão: 5"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:568
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:736
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:927
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1076
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1249
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1411
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1892
+msgid "Defines the data type of the output raster file. Options:"
+msgstr "Define os tipos de dados do arquivo raster de saída. Opções:"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:571
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:739
@@ -1355,6 +1480,16 @@ msgstr "9 --- CFloat32"
 msgid "10 --- CFloat64"
 msgstr "10 --- CFloat64"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:597
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:765
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:956
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1105
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1278
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1440
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1608
+msgid "Output raster with interpolated values"
+msgstr "Raster de saída com valores interpolados"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:640
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:816
 msgid "``POWER``"
@@ -1413,6 +1548,15 @@ msgstr "``MAX_PONTOS``"
 msgid "Default: 12"
 msgstr "Padrão: 12"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:662
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:853
+msgid "Do not search for more points than this number."
+msgstr "Não pesquise por mais pontos do que este número."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:821
+msgid "**Smothing**"
+msgstr "**Suavização**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:869
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:953
 msgid "**Interpolated (IDW)**"
@@ -1457,6 +1601,17 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1275
 msgid "**Interpolated (moving average)**"
 msgstr "**Interpolado (média móvel)**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1197
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1676
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1846
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1986
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2111
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2232
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2351
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2462
+msgid "Specify the output raster layer. One of:"
+msgstr "Especificar a camada raster de saída. Um de:"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1353
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1437
@@ -1650,13 +1805,29 @@ msgstr "**Unidades de distância**"
 msgid "``UNITS``"
 msgstr "``UNIDADES``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1800
+msgid ""
+"Indicate whether distances generated should be in pixel or georeferenced "
+"coordinates. One of:"
+msgstr ""
+"Indique se as distâncias geradas devem ser em pixels ou coordenadas "
+"georreferenciadas. Um de:"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1803
 msgid "0 --- Georeferenced coordinates"
 msgstr "0 --- Coordenadas georreferenciadas"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1804
+msgid "1 --- Pixel coordinates"
+msgstr "1 --- Coordenadas do pixel"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1806
 msgid "**The maximum distance to be generated**"
 msgstr "**A distância máxima a ser gerada**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1809
+msgid "``MAX_DISTANCE``"
+msgstr "\"DISTÂNCIA_MÁXIMA\""
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1825
 msgid "``REPLACE``"

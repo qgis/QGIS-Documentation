@@ -26,6 +26,14 @@ msgstr ""
 "Language: pt_BR\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:2
+msgid "Vector miscellaneous"
+msgstr "Diversos vetoriais"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:14
+msgid "Build virtual vector"
+msgstr "Construir vetor virtual"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:24
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:97
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:208
@@ -82,6 +90,10 @@ msgstr "Tipo"
 msgid "Description"
 msgstr "Descrição"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:34
+msgid "**Input datasources**"
+msgstr "**Fontes de dados de entrada**"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:35
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:112
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:224
@@ -89,6 +101,14 @@ msgstr "Descrição"
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:874
 msgid "``INPUT``"
 msgstr "``ENTRADA``"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:36
+msgid "[vector: any] [list]"
+msgstr "[vetor: qualquer] [lista]"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:40
+msgid "``UNIONED``"
+msgstr "\"UNIÃO\""
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:41
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:375
@@ -145,14 +165,26 @@ msgstr "**Vetor virtual**"
 msgid "``OUTPUT``"
 msgstr "``SAÍDA``"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:48
+msgid "[same as input]"
+msgstr "[o mesmo que entrada]"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:50
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:897
 msgid "Default: ``[Save to temporary file]``"
 msgstr "Padrão: ``[Salvar em arquivo temporário]``"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:51
+msgid "Specify the output layer containing only the duplicates. One of:"
+msgstr "Especificar a camada de saída contendo apenas as duplicatas. Um de:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
 msgstr "Salvar como Arquivo Temporário"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:4
+msgid "Save to File…"
+msgstr "Salvar em Arquivo..."
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:60
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:166
@@ -171,6 +203,10 @@ msgstr "Saídas"
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:875
 msgid "[vector: any]"
 msgstr "[vetor: qualquer]"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:73
+msgid "The output virtual vector made from the chosen sources"
+msgstr "O vetor virtual de saída feito a partir das fontes escolhidas"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:76
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:182
@@ -194,6 +230,10 @@ msgstr "Parâmetros básicos"
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:873
 msgid "**Input layer**"
 msgstr "**Camada de entrada**"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:115
+msgid "**SQL expression**"
+msgstr "**Expressão SQL**"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:116
 msgid "``SQL``"
@@ -230,6 +270,14 @@ msgstr "``SQL``"
 msgid "[string]"
 msgstr "[string]"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:120
+msgid "**SQL dialect**"
+msgstr "**Dialeto SQL**"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:121
+msgid "``DIALECT``"
+msgstr "''DIALETO''"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:122
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:237
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:328
@@ -244,9 +292,17 @@ msgstr "[enumeração]"
 msgid "Default: 0"
 msgstr "Padrão: 0"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:125
+msgid "SQL dialect to use. One of:"
+msgstr "dialeto SQL a ser usado. Um de:"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:127
 msgid "0 --- None"
 msgstr "0 --- Nenhum"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:129
+msgid "2 --- SQLite"
+msgstr "2 --- SQLite"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:133
 msgid "Specification of the output layer. One of:"
@@ -346,6 +402,10 @@ msgstr "Opções adicionais de criação de GDAL."
 msgid "Vector layer created by the query"
 msgstr "Camada vetorial criada pela consulta"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:194
+msgid "Export to PostgreSQL (available connections)"
+msgstr "Exportação para PostgreSQL (conexões disponíveis)"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:219
 msgid "**Database (connection name)**"
 msgstr "**Banco de dados (nome da conexão)**"
@@ -353,6 +413,15 @@ msgstr "**Banco de dados (nome da conexão)**"
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:220
 msgid "``DATABASE``"
 msgstr "``BANCO DE DADOS``"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:222
+msgid "The PostgreSQL database to connect to"
+msgstr "O banco de dados PostgreSQL para conexão com"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:230
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:529
+msgid "``SHAPE_ENCODING``"
+msgstr "''CODIFICAÇÃO_DE_FORMATO''"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:233
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:291
@@ -372,10 +441,20 @@ msgstr "``BANCO DE DADOS``"
 msgid "Default: ''"
 msgstr "Padrão: ''"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:234
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:533
+msgid "Sets the encoding to apply to the data"
+msgstr "Define a codificação a ser aplicada aos dados"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:235
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:534
 msgid "**Output geometry type**"
 msgstr "**Tipo de geometria de saída**"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:240
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:539
+msgid "Defines the output geometry type. One of:"
+msgstr "Define o tipo de geometria de saída. Uma das:"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:242
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:541
@@ -397,10 +476,20 @@ msgstr "2 --- GEOMETRIA"
 msgid "3 --- POINT"
 msgstr "3 --- PONTO"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:246
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:545
+msgid "4 --- LINESTRING"
+msgstr "4 --- FIO DE LINHA"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:247
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:546
 msgid "5 --- POLYGON"
 msgstr "5 --- POLÍGONO"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:248
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:547
+msgid "6 --- GEOMETRYCOLLECTION"
+msgstr "6 --COLEÇÃO DE GEOMETRIA"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:249
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:548
@@ -411,6 +500,11 @@ msgstr "7 --- MULTIPONTO"
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:549
 msgid "8 --- MULTIPOLYGON"
 msgstr "8 --- MULTIPOLÍGONO"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:251
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:550
+msgid "9 --- MULTILINESTRING"
+msgstr "9 --- CADEIA DE LINHAS MÚLTIPLAS"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:257
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:265
@@ -434,6 +528,11 @@ msgstr "[src]"
 msgid "Default: None"
 msgstr "Padrão: Nenhum"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:260
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:559
+msgid "Defines the output CRS of the database table"
+msgstr "Define o SRC de saída da tabela de banco de dados"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:277
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:616
 msgid "**Schema (schema name)**"
@@ -449,20 +548,88 @@ msgstr "``ESQUEMA``"
 msgid "Default: 'public'"
 msgstr "Padrão: 'público'"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:284
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:623
+msgid "Defines the schema for the database table"
+msgstr "Define o esquema para a tabela do banco de dados"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:285
+msgid "**Table to export to (leave blank to use layer name)**"
+msgstr "**Tabela para exportar (deixe em branco para usar o nome da camada)**"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:288
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:627
 msgid "``TABLE``"
 msgstr "``TABELA``"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:292
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:631
+msgid ""
+"Defines a name for the table that will be imported into the database. By "
+"default the table name is the name of the input vector file."
+msgstr ""
+"Define um nome para a tabela que será importada para o banco de dados. Por "
+"padrão, o nome da tabela é o nome do arquivo vetorial de entrada."
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:296
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:635
+msgid "**Primary Key (new field)**"
+msgstr "**Chave Primária (novo campo)**"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:299
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:638
+msgid "``PK``"
+msgstr "``CP``"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:302
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:641
 msgid "Default: 'id'"
 msgstr "Padrão: 'id'"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:303
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:642
+msgid ""
+"Defines which attribute field will be the primary key of the database table"
+msgstr ""
+"Define qual campo de atributo será a chave primária da tabela do banco de "
+"dados"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:305
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:644
+msgid ""
+"**Primary Key (existing field, used if the above option is left empty)**"
+msgstr ""
+"**Chave primária (campo existente, usado se a opção acima for deixada "
+"vazia)**"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:309
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:647
+msgid "``PRIMARY_KEY``"
+msgstr "``CHAVE_PRIMÁRIA``"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:310
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:648
+msgid "[tablefield: any]"
+msgstr "[campo da tabela: qualquer]"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:313
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:651
+msgid ""
+"Defines which attribute field in the exported layer will be the primary key "
+"of the database table"
+msgstr ""
+"Define qual campo de atributo na camada exportada será a chave primária da "
+"tabela do banco de dados"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:315
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:653
 msgid "**Geometry column name**"
 msgstr "**Nome da coluna geometria**"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:318
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:656
+msgid "``GEOCOLUMN``"
+msgstr "''GEO COLUNA''"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:321
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:659
@@ -498,10 +665,23 @@ msgstr "0 --- 2"
 msgid "1 --- 3"
 msgstr "1 --- 3"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:337
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:675
+msgid "**Distance tolerance for simplification**"
+msgstr "**Distância tolerada para simplificação**"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:340
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:678
 msgid "``SIMPLIFY``"
 msgstr "``SIMPLIFICAR``"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:344
+msgid ""
+"Defines a distance tolerance for the simplification of the vector geometries"
+" to be imported. By default there is no simplification."
+msgstr ""
+"Define uma tolerância de distância para a simplificação das geometrias "
+"vetoriais a serem importadas. Por padrão, não há simplificação."
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:347
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:685
@@ -581,6 +761,11 @@ msgstr ""
 msgid "``WHERE``"
 msgstr "``ONDE``"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:389
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:736
+msgid "**Group N features per transaction (Default: 2000)**"
+msgstr "**Agrupar N feições por transação (Padrão: 2000)**"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:396
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:743
 msgid ""
@@ -619,6 +804,16 @@ msgstr ""
 "Se houver uma tabela com o mesmo nome no banco de dados, e se esta opção "
 "estiver configurada para Verdadeiro tabela será sobrescrita."
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:409
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:756
+msgid "**Append to existing table**"
+msgstr "**Adicionar para a tabela existente**"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:412
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:759
+msgid "``APPEND``"
+msgstr "``ANEXAR``"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:416
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:763
 msgid ""
@@ -629,6 +824,11 @@ msgstr ""
 "Se marcado / Verdadeiro, os dados vetoriais serão anexados a uma tabela "
 "existente. Novos campos encontrados na camada de entrada são ignorados. Por "
 "padrão, uma nova tabela será criada."
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:420
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:767
+msgid "**Append and add new fields to existing table**"
+msgstr "**Alterar e acrescentar novos campos à tabela existente**"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:423
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:770
@@ -655,6 +855,11 @@ msgstr ""
 "nomes de colunas para minúsculas, remover espaços e outros caracteres "
 "inválidos)."
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:442
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:789
+msgid "**Do not create Spatial Index**"
+msgstr "**Não criar Índice Espacial**"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:445
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:792
 msgid "``INDEX``"
@@ -674,6 +879,11 @@ msgstr ""
 msgid "**Continue after a failure, skipping the failed feature**"
 msgstr "**Continuar após uma falha, pulando a feição com falha**"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:468
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:815
+msgid "**Keep width and precision of input attributes**"
+msgstr "**Mantenha a largura e precisão dos atributos de entrada**"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:471
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:818
 msgid "``PRECISION``"
@@ -690,6 +900,26 @@ msgstr ""
 msgid "This algorithm has no output."
 msgstr "Este algoritmo não tem saída."
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:503
+msgid "Export to PostgreSQL (new connection)"
+msgstr "Exportação para PostgreSQL (nova conexão)"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:576
+msgid "**Host**"
+msgstr "**Host**"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:579
+msgid "``HOST``"
+msgstr "``HOST``"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:582
+msgid "Default: 'localhost'"
+msgstr "Padrão: 'localhost'"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:583
+msgid "Name of the database host"
+msgstr "Nome do host do banco de dados"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:584
 msgid "**Port**"
 msgstr "**Porta**"
@@ -701,6 +931,10 @@ msgstr "``PORTA``"
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:590
 msgid "Default: '5432'"
 msgstr "Padrão: '5432'"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:591
+msgid "Port number the PostgreSQL database server listens on"
+msgstr "Número da porta que o servidor de banco de dados PostgreSQL ouve em"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:592
 msgid "**Username**"
@@ -751,6 +985,14 @@ msgstr "0 --- 2D"
 msgid "1 --- 3D"
 msgstr "1 --- 3D"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:682
+msgid ""
+"Defines a distance tolerance for the simplification of the vector geometries"
+" to be imported. By default no simplification there is no simplification."
+msgstr ""
+"Define uma tolerância de distância para a simplificação das geometrias "
+"vetoriais a serem importadas. Por padrão, não há simplificação."
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:718
 msgid "**Fields to include (leave empty to use all fields)**"
 msgstr ""
@@ -768,13 +1010,55 @@ msgstr "[cadeia] [lista]"
 msgid "Default: []"
 msgstr "Padrão: []"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:725
+msgid ""
+"Defines fields to keep from the imported vector file. If none is selected, "
+"all the fields are imported."
+msgstr ""
+"Define campos a serem mantidos do arquivo vetorial importado. Se nenhum for "
+"selecionado, todos os campos são importados."
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:734
+msgid ""
+"Defines with a SQL \"WHERE\" statement which features should be selected for"
+" the output table"
+msgstr ""
+"Define com uma declaração SQL \"WHERE\" quais características devem ser "
+"selecionadas para a tabela de saída"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:774
+msgid ""
+"If activated the vector data will be appended to an existing table, there "
+"won't be created a new table. New fields found in input layer are added to "
+"the table. By default a new table will be created."
+msgstr ""
+"Se ativado, os dados vetoriais serão anexados a uma tabela existente, não "
+"será criada uma nova tabela. Novos campos encontrados na camada de entrada "
+"são adicionados à tabela. Por padrão, uma nova tabela será criada."
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:850
 msgid "Vector Information"
 msgstr "Informações vetoriais"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:858
+msgid ""
+"This algorithm is derived from the `GDAL ogrinfo utility "
+"<https://gdal.org/programs/ogrinfo.html>`_."
+msgstr ""
+"Este algoritmo é derivado do utilitário \"GDAL ogrinfo "
+"<https://gdal.org/programs/ogrinfo.html>`_."
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:876
 msgid "Input vector layer"
 msgstr "Camada vetorial de entrada"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:877
+msgid "**Summary output only**"
+msgstr "**Somente a saída resumida**"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:880
+msgid "``SUMMARY_ONLY``"
+msgstr "''APENAS SUMARIO''"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:885
 msgid "**Suppress metadata info**"

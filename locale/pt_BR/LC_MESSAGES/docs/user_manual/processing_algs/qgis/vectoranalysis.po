@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2022
-# Letícia Jardim, 2022
 # Vanessa Stelzer, 2022
+# Letícia Jardim, 2022
 # Ana Camargo, 2022
 # 
 #, fuzzy
@@ -26,6 +26,10 @@ msgstr ""
 "Language: pt_BR\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:2
+msgid "Vector analysis"
+msgstr "Análise vetorial"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:14
 msgid "Basic statistics for fields"
 msgstr "Estatísticas básicas para campos"
@@ -37,6 +41,10 @@ msgid ""
 msgstr ""
 "Gera estatísticas básicas para um campo da tabela de atributos de uma camada"
 " vetorial."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:20
+msgid "The statistics returned will depend on the field type."
+msgstr "As estatísticas retornadas dependerão do tipo de campo."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:28
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:185
@@ -213,6 +221,42 @@ msgstr "Tipo"
 msgid "Description"
 msgstr "Descrição"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:40
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:629
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:633
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:721
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:725
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:831
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:846
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:965
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:975
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1024
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1060
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1164
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1342
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1542
+msgid "[vector: any]"
+msgstr "[vetor: qualquer]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:41
+msgid "Vector layer to calculate the statistics on"
+msgstr "Camada vetorial para calcular as estatísticas "
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:42
+msgid "**Field to calculate statistics on**"
+msgstr "**Campo para calcular as estatísticas**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:43
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:443
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:998
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1478
+msgid "``FIELD_NAME``"
+msgstr "\"NOME_CAMPO\""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:45
+msgid "Any supported table field to calculate the statistics"
+msgstr "Qualquer campo de tabela suportado para calcular as estatísticas"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:46
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:71
 msgid "**Statistics**"
@@ -242,6 +286,23 @@ msgstr "Opcional"
 msgid "[html]"
 msgstr "[html]"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:52
+msgid "Default: ``[Save to temporary file]``"
+msgstr "Padrão: ``[Salvar em arquivo temporário]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:53
+msgid "Specification of the file for the calculated statistics. One of:"
+msgstr "Especificação do arquivo para as estatísticas calculadas. Um de:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:4
+msgid "Save to a Temporary File"
+msgstr "Salvar em um Arquivo Temporário"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:4
+#: ../../docs/user_manual/processing_algs/algs_include.rst:5
+msgid "Save to File…"
+msgstr "Salvar em Arquivo..."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:60
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:211
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:338
@@ -260,6 +321,16 @@ msgstr "[html]"
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1741
 msgid "Outputs"
 msgstr "Saídas"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:75
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:326
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:348
+msgid "**Count**"
+msgstr "**Contagem**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:76
+msgid "``COUNT``"
+msgstr "``CONTAGEM``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:77
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:81
@@ -300,6 +371,22 @@ msgstr "Saídas"
 msgid "[number]"
 msgstr "[número]"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:79
+msgid "**Number of unique values**"
+msgstr "**Número de valores únicos**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:80
+msgid "``UNIQUE``"
+msgstr "``ÚNICO``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:84
+msgid "``EMPTY``"
+msgstr "``VAZIO``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:87
+msgid "**Number of non-empty values**"
+msgstr "**Número de valores não vazios**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:91
 msgid "**Minimum value**"
 msgstr "**Valor mínimo**"
@@ -315,6 +402,30 @@ msgstr "**Valor máximo**"
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:96
 msgid "``MAX``"
 msgstr "``MAX``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:99
+msgid "**Minimum length**"
+msgstr "**Comprimento mínimo**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:100
+msgid "``MIN_LENGTH``"
+msgstr "``COMPRIMENTO_MIN``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:103
+msgid "**Maximum length**"
+msgstr "**Comprimento máximo**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:104
+msgid "``MAX_LENGTH``"
+msgstr "``COMPRIMENTO_MAX``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:107
+msgid "**Mean length**"
+msgstr "**Comprimento médio**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:108
+msgid "``MEAN_LENGTH``"
+msgstr "``COMPRIMENTO_MÉDIA``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:111
 msgid "**Coefficient of Variation**"
@@ -344,6 +455,14 @@ msgstr "`` MÉDIA``"
 msgid "**Standard deviation**"
 msgstr "**Desvio padrão**"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:127
+msgid "**Range**"
+msgstr "**Intervalo**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:128
+msgid "``RANGE``"
+msgstr "``INTERVALO``"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:131
 msgid "**Median**"
 msgstr "**Mediana**"
@@ -351,6 +470,38 @@ msgstr "**Mediana**"
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:132
 msgid "``MEDIAN``"
 msgstr "``MEDIANA``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:135
+msgid "**Minority (rarest occurring value)**"
+msgstr "**Minoria (valor de ocorrência mais rara)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:136
+msgid "``MINORITY``"
+msgstr "``MINORIA``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:139
+msgid "**Majority (most frequently occurring value)**"
+msgstr "**Maioria (valor que ocorre com mais frequência)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:140
+msgid "``MAJORITY``"
+msgstr "`` MAIORIA``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:143
+msgid "**First quartile**"
+msgstr "**Primeiro quartil**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:144
+msgid "``FIRSTQUARTILE``"
+msgstr "``PRIMEIROQUARTIL``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:147
+msgid "**Third quartile**"
+msgstr "**Terceiro quartil**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:148
+msgid "``THIRDQUARTILE``"
+msgstr "``TERCEIROQUARTIL``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:157
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:248
@@ -370,6 +521,10 @@ msgstr "``MEDIANA``"
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1758
 msgid "Python code"
 msgstr "Código Python"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:195
+msgid "**Line layer**"
+msgstr "**Camada de linha**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:196
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:392
@@ -437,9 +592,21 @@ msgstr "A codificação do arquivo também pode ser alterada aqui."
 msgid "**Minimum elevation**"
 msgstr "**Elevação mínima**"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:237
+msgid "``MINELEVATION``"
+msgstr "``ELEVAÇÃOMIN``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:239
+msgid "The minimum elevation for the geometries in the layer"
+msgstr "A elevação mínima para as geometrias na camada"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:241
 msgid "**Maximum elevation**"
 msgstr "**Elevação máxima**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:242
+msgid "``MAXELEVATION``"
+msgstr "``ELEVAÇÃOMÁX``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:260
 msgid "Count points in polygon"
@@ -495,6 +662,20 @@ msgstr "``PONTOS``"
 msgid "[vector: point]"
 msgstr "[vetor: ponto]"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:301
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1166
+msgid "**Weight field**"
+msgstr "**Campo de peso**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:304
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1169
+msgid "``WEIGHT``"
+msgstr "``PESO``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:310
+msgid "**Class field**"
+msgstr "**Campo de classe**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:315
 msgid ""
 "Points are classified based on the selected attribute and if several points "
@@ -525,6 +706,22 @@ msgstr "``CAMPO``"
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1725
 msgid "[string]"
 msgstr "[string]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:324
+msgid "Default: 'NUMPOINTS'"
+msgstr "Padrão: 'NUMPONTOS'"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:325
+msgid "The name of the field to store the count of points"
+msgstr "O nome do campo para armazenar a contagem de pontos"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:331
+msgid "Specification of the output layer. One of:"
+msgstr "Especificação da camada de saída. Uma de:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:7
+msgid "Append to Layer…"
+msgstr "Anexar à Camada..."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:371
 msgid ""
@@ -618,6 +815,17 @@ msgstr "Padrão: Falso"
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1489
 msgid "Name of the field with the count of features in the same cluster"
 msgstr "Nome do campo com a contagem de feições no mesmo grupo"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:472
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:967
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1507
+msgid "**Number of clusters**"
+msgstr "**Número de agrupamentos**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:475
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1510
+msgid "The number of clusters discovered"
+msgstr "O número de agrupamentos descobertos"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:490
 msgid "Distance matrix"
@@ -822,6 +1030,14 @@ msgstr "Padrão:``[Salvar em arquivo temporário]``"
 msgid "**Total unique values**"
 msgstr "**Valores únicos totais**"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1114
+msgid "``TOTAL_VALUES``"
+msgstr "``VALORES_TOTAIS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1116
+msgid "The number of uniqe values in the input field"
+msgstr "O número de valores únicos no campo de entrada"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1118
 msgid "``Unique values``"
 msgstr "``Valores únicos``"
@@ -830,9 +1046,50 @@ msgstr "``Valores únicos``"
 msgid "Mean coordinate(s)"
 msgstr "Coordenada(s) média(s)"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1137
+msgid ""
+"Computes a point layer with the center of mass of geometries in an input "
+"layer."
+msgstr ""
+"Calcula uma camada de ponto com o centro de massa das geometrias em uma "
+"camada de entrada."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1140
+msgid ""
+"An attribute can be specified as containing weights to be applied to each "
+"feature when computing the center of mass."
+msgstr ""
+"Um atributo pode ser especificado como contendo pesos a serem aplicados a "
+"cada feição ao calcular o centro de massa."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1143
+msgid ""
+"If an attribute is selected in the parameter, features will be grouped "
+"according to values in this field. Instead of a single point with the center"
+" of mass of the whole layer, the output layer will contain a center of mass "
+"for the features in each category."
+msgstr ""
+"Se um atributo for selecionado no parâmetro, as feições serão agrupadas de "
+"acordo com os valores deste campo. Em vez de um único ponto com o centro de "
+"massa de toda a camada, a camada de saída conterá um centro de massa para as"
+" feições em cada categoria."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1165
 msgid "Input vector layer"
 msgstr "Camada vetorial de entrada"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1170
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1174
+msgid "[tablefield: numeric]"
+msgstr "[campo de tabela: numérico]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1171
+msgid "Field to use if you want to perform a weighted mean"
+msgstr "Campo a ser usado se você deseja realizar uma média ponderada"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1175
+msgid "Unique field on which the calculation of the mean will be made"
+msgstr "Campo único no qual será feito o cálculo da média"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1177
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1199
@@ -850,6 +1107,22 @@ msgstr "Camada de ponto(s) resultante(s)"
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1217
 msgid "Nearest neighbour analysis"
 msgstr "Análise do vizinho mais próximo"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1218
+msgid ""
+"Performs nearest neighbor analysis for a point layer. The output tells you "
+"how your data are distributed (clustered, randomly or distributed)."
+msgstr ""
+"Executa a análise do vizinho mais próximo para uma camada de ponto. A saída "
+"informa como seus dados são distribuídos (agrupados, aleatoriamente ou "
+"distribuídos)."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1221
+msgid ""
+"Output is generated as an HTML file with the computed statistical values:"
+msgstr ""
+"A saída é gerada como um arquivo HTML com os valores estatísticos "
+"calculados:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1224
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1289
@@ -880,6 +1153,14 @@ msgstr "Camada vetorial de ponto para calcular as estatísticas "
 msgid "**Nearest neighbour**"
 msgstr "**Vizinho mais próximo**"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1264
+msgid "Specification of the HTML file for the computed statistics. One of:"
+msgstr "Especificação do arquivo HTML para as estatísticas computadas. Um de:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1285
+msgid "HTML file with the computed statistics"
+msgstr "Arquivo HTML com as estatísticas computadas"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1286
 msgid "**Observed mean distance**"
 msgstr "**Distância média observada**"
@@ -896,9 +1177,36 @@ msgstr "**Índice do vizinho mais próximo**"
 msgid "**Number of points**"
 msgstr "**Número de pontos**"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1320
+msgid "Overlap analysis"
+msgstr "Análise de sobreposição"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1321
+msgid ""
+"Calculates the area and percentage cover by which features from an input "
+"layer are overlapped by features from a selection of overlay layers."
+msgstr ""
+"Calcula a área e a cobertura percentual pela qual as feições de uma camada "
+"de entrada são sobrepostas por feições de uma seleção de camadas de "
+"sobreposição."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1325
+msgid ""
+"New attributes are added to the output layer reporting the total area of "
+"overlap and percentage of the input feature overlapped by each of the "
+"selected overlay layers."
+msgstr ""
+"Novos atributos são adicionados à camada de saída relatando a área total de "
+"sobreposição e a porcentagem da feição de entrada sobreposta por cada uma "
+"das camadas de sobreposição selecionadas."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1343
 msgid "The input layer."
 msgstr "A camada de entrada."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1344
+msgid "**Overlap layers**"
+msgstr "**Sobreposição de camadas**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1345
 msgid "``LAYERS``"
@@ -908,6 +1216,10 @@ msgstr "``CAMADAS``"
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1552
 msgid "[vector: any] [list]"
 msgstr "[vetor: qualquer] [lista]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1347
+msgid "The overlay layers."
+msgstr "As camadas de sobreposição."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1348
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1370
@@ -926,6 +1238,10 @@ msgstr "|322|"
 msgid "Field containing the temporal information"
 msgstr "Campo contendo as informações temporais"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1434
+msgid "**Maximum time duration between clustered points**"
+msgstr "**Duração máxima de tempo entre pontos agrupados**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1438
 msgid "Default: 0.0 (days)"
 msgstr "Padrão: 0.0 (dias)"
@@ -934,9 +1250,17 @@ msgstr "Padrão: 0.0 (dias)"
 msgid "Statistics by categories"
 msgstr "Estatísticas por categorias"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1540
+msgid "**Input vector layer**"
+msgstr "**Camada vetorial de entrada**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1550
 msgid "**Field(s) with categories**"
 msgstr "**Campo(s) com categorias**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1553
+msgid "The fields that (combined) define the categories"
+msgstr "Os campos que (combinados) definem as categorias"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1554
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1576

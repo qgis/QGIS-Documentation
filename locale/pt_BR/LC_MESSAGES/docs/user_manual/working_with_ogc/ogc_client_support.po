@@ -40,6 +40,10 @@ msgstr ""
 "para os conteúdos e serviços geoespaciais, processamento e troca de dados "
 "SIG."
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:26
+msgid "Important OGC specifications supported by QGIS are:"
+msgstr "Importantes especificações OGC suportadas pelo QGIS são:"
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:28
 msgid "**WMS** --- Web Map Service (:ref:`ogc-wms`)"
 msgstr "**WMS** --- Serviço de Mapas Web (:ref:`ogc-wms`)"
@@ -60,6 +64,14 @@ msgstr ""
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:32
 msgid "**WCS** --- Web Coverage Service (:ref:`ogc-wcs`)"
 msgstr "**WCS** --- Serviços de Cobertura Web (:ref:`ogc-wcs`)"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:33
+msgid "**WPS** --- Web Processing Service"
+msgstr "**SPW** --- Serviço de Processamento Web"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:34
+msgid "**CSW** --- Catalog Service for the Web"
+msgstr "**SCW** --- Serviço de catálogo para a Web"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:35
 msgid "**SFS** --- Simple Features for SQL (:ref:`label_postgis`)"
@@ -139,6 +151,14 @@ msgstr "Quando lê o WMTS pode muitas vezes pensar em WMS-C."
 msgid "Selecting WMS/WMTS Servers"
 msgstr "Selecionando os Servidores WMS/WMTS"
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:159
+msgid ""
+"The first time you use the WMS feature in QGIS, there are no servers "
+"defined."
+msgstr ""
+"A primeira vez que você usa o recurso WMS no QGIS, não há servidores "
+"definidos."
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:726
 msgid "wms"
 msgstr "WMS"
@@ -151,13 +171,37 @@ msgstr "Gerenciador de fonte de dados"
 msgid "addWmsLayer"
 msgstr "adicionar camada Wms"
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:179
+msgid ""
+"Then enter the parameters to connect to your desired WMS server, as listed "
+"below:"
+msgstr ""
+"Em seguida, digite os parâmetros para se conectar ao seu servidor WMS "
+"desejado, conforme listado abaixo:"
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:187
 msgid "Creating a connection to a WMS server"
 msgstr "Criando uma conexão com um servidor WMS"
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:212
+msgid "HTTP :guilabel:`Referer`"
+msgstr "HTTP :guilabel:`Referência`"
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:722
 msgid "unchecked"
 msgstr "desmarcado"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:226
+msgid "|unchecked| :guilabel:`Invert axis orientation`"
+msgstr "|unchecked| :guilabel:`Inverter orientação do eixo`"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:227
+msgid "|unchecked| :guilabel:`Smooth pixmap transformation`"
+msgstr "|unchecked| :guilabel:`Suavizar transformação do mapa de pixels`"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:228
+msgid "Press :guilabel:`OK`"
+msgstr "Pressione :guilabel:`OK`"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:708
 msgid "checkbox"
@@ -170,6 +214,29 @@ msgstr "selecionarCadeia"
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:245
 msgid "Loading WMS/WMTS Layers"
 msgstr "Carregando as camadas WMS/WMTS"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:270
+msgid "an :guilabel:`ID`"
+msgstr "um :guilabel:`ID`"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:271
+msgid "a :guilabel:`Name`"
+msgstr "um :guilabel:`Nome`"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:272
+msgid "a :guilabel:`Title`"
+msgstr "um :guilabel:`Título`"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:273
+msgid "and an :guilabel:`Abstract`."
+msgstr "e um :guilabel:`Resumo`."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:275
+msgid ""
+"The list can be filtered using the |search| widget in the top right corner."
+msgstr ""
+"A lista pode ser filtrada usando a ferramenta de |pesquisa|  no canto "
+"superior direito."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:716
 msgid "search"
@@ -321,6 +388,14 @@ msgstr ""
 "**Selecionado** --- Querendo ou não esta camada selecionado quando o seu "
 "servidor foi adicionado a este projeto."
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:467
+msgid ""
+"**Visible** --- Whether or not this layer is selected as visible in the "
+"legend (not yet used in this version of QGIS)."
+msgstr ""
+"**Visível** --- Se esta camada é ou não selecionada como visível na legenda "
+"(ainda não usada nesta versão do QGIS)."
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:469
 msgid ""
 "**Can Identify** --- Whether or not this layer will return any results when "
@@ -328,6 +403,16 @@ msgid ""
 msgstr ""
 "**Pode Identificar** --- Camada que retorna ou não resultados através do uso"
 " da ferramenta Identificar."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:471
+msgid ""
+"**Can be Transparent** --- Whether or not this layer can be rendered with "
+"transparency. This version of QGIS will always use transparency if this is "
+"``Yes`` and the image encoding supports transparency."
+msgstr ""
+"**Pode ser transparente*** --- Se esta camada pode ou não ser renderizada "
+"com transparência. Esta versão do QGIS utilizará sempre a transparência se "
+"esta for \"Sim\" e a codificação da imagem suportar a transparência."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:477
 msgid ""
@@ -444,9 +529,25 @@ msgstr "WFS e WFS-T Cliente"
 msgid "**Loading a WFS Layer**"
 msgstr "**Carregando uma camada WFS**"
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:618
+msgid "Enter ``Gateway Geomatics`` as name"
+msgstr "Insira ``Geomática do portal`` como nome"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:619
+msgid "Enter the URL (see above)"
+msgstr "Insira a URL (veja acima)"
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:626
 msgid "Creating a connection to a WFS server"
 msgstr "Criando uma conexão com um servidor WFS"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:638
+msgid ":guilabel:`Invert axis orientation`."
+msgstr ":guilabel:`Inverter orientação do eixo`"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:656
+msgid "Press :guilabel:`OK` to create the connection."
+msgstr "Pressione :guilabel:`OK` para criar a conexão."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:658
 msgid ""
@@ -455,3 +556,33 @@ msgid ""
 msgstr ""
 "Repare que as configurações proxy que definiu nas suas preferências são "
 "também reconhecidas."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:664
+msgid "Click :guilabel:`Connect`"
+msgstr "Clique :guilabel:`Conectar'."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:665
+msgid "Select the :guilabel:`Parks` layer in the list"
+msgstr "Selecione a camada :guilabel:`Parques` na lista"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:666
+msgid "You can also choose whether to:"
+msgstr "Você também pode escolher se deseja:"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:672
+msgid "|unchecked| :guilabel:`Change` the layer's CRS"
+msgstr "|unchecked| :guilabel:`Mudar` o SRC da camada"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:677
+msgid "Click :guilabel:`Add` to add the layer to the map."
+msgstr "Clique :guilabel:`Adicionar` para adicionar a camada ao mapa."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:687
+msgid ""
+"You'll notice the download progress is visualized in the lower left of the "
+"QGIS main window. Once the layer is loaded, you can identify and select a "
+"couple of features and view the attribute table."
+msgstr ""
+"O progresso do download é visualizado na parte inferior esquerda da janela "
+"principal do QGIS. Uma vez carregada a camada, você pode identificar e "
+"selecionar algumas feições e visualizar a tabela de atributos."

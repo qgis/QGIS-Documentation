@@ -336,6 +336,11 @@ msgstr ""
 msgid "**Output data type**"
 msgstr "**Tipo de dados de saída**"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:106
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:300
+msgid "``DATA_TYPE``"
+msgstr "``TIPO_DADOS``"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:107
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:301
 msgid "[enumeration]"
@@ -494,6 +499,10 @@ msgstr "**SRC Alvo**"
 msgid "``TARGET_CRS``"
 msgstr "``SRC_ALVO``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:213
+msgid "**Create an output alpha band**"
+msgstr "**Criar uma banda alfa de saída**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:214
 msgid "``ALPHA_BAND``"
 msgstr "``BANDA_ALFA``"
@@ -514,6 +523,10 @@ msgstr "Padrão: Verdadeiro"
 msgid "Applies the vector layer extent to the output raster if checked."
 msgstr "Aplica a extensão da camada vetorial à saída raster  se checado."
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:226
+msgid "**Keep resolution of input raster**"
+msgstr "**Mantenha a resolução do raster de entrada**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:227
 msgid "``KEEP_RESOLUTION``"
 msgstr "``MANTER_RESOLUÇÃO``"
@@ -530,6 +543,10 @@ msgstr "``RESOLUÇÃO_X`"
 msgid "``Y_RESOLUTION``"
 msgstr "``RESOLUÇÃO_Y``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:264
+msgid "[raster] Default: ``[Save to temporary file]``"
+msgstr "[raster] Padrão: ``[Salvar em arquivo temporário]``"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:359
 msgid "Contour"
 msgstr "contorno"
@@ -539,6 +556,11 @@ msgid "Extracts contour lines from any GDAL-supported elevation raster."
 msgstr ""
 "Extrai linhas de contorno de qualquer raster de elevação suportada pelo "
 "GDAL."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:386
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:525
+msgid "Input raster"
+msgstr "Raster de entrada"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:387
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:526
@@ -575,6 +597,24 @@ msgstr "``INTERVALO``"
 msgid "Default: 10.0"
 msgstr "Padrão: 10.0"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:400
+msgid "**Attribute name (if not set, no elevation attribute is attached)**"
+msgstr ""
+"**Nome do atributo (se não definido, nenhum atributo de elevação é "
+"anexado)**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:403
+msgid "``FIELD_NAME``"
+msgstr "\"NOME_CAMPO\""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:406
+msgid "Default: 'ELEV'"
+msgstr "Padrão: 'ELEV'"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:407
+msgid "Provides a name for the attribute in which to put the elevation."
+msgstr "Fornece um nome para o atributo no qual colocar a elevação."
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:411
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:542
 msgid "``OFFSET``"
@@ -597,6 +637,11 @@ msgstr "**Contornos**"
 msgid "[vector: line]"
 msgstr "[vetor: linha]"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:421
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:572
+msgid "Specification of the output vector layer. One of:"
+msgstr "Especificação da camada vetorial de saída. Um de:"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:439
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:590
 msgid "**Produce 3D vector**"
@@ -616,6 +661,11 @@ msgstr ""
 "Força a produção de vetores 3D em vez de 2D. Inclui elevação em todos os "
 "vértice."
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:446
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:597
+msgid "**Treat all raster values as valid**"
+msgstr "**Tratar todos os valores raster como válidos**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:451
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:602
 msgid "Ignores any nodata values in the dataset."
@@ -624,3 +674,7 @@ msgstr "Ignora todos os valores de nodata no conjunto de dados."
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:553
 msgid "Default: 'ELEV_MIN'"
 msgstr "Padrão: 'ELEV_MIN'"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:563
+msgid "Default: 'ELEV_MAX'"
+msgstr "Padrão: 'ELEV_MAX'"

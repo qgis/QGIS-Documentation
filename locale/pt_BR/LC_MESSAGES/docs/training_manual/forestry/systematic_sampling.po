@@ -124,6 +124,11 @@ msgstr ""
 "En la práctica, simplemente necesitas representar las parcelas de muestreo "
 "como puntos que serán utilizados luego por los equipos de campo:"
 
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:53
+msgid ""
+"Open your :file:`digitizing_2012.qgs` project from the previous lesson."
+msgstr "Abra seu projeto :file:`digitizing_2012.qgs' da lição anterior."
+
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:54
 msgid "Remove all the layers except for :guilabel:`forest_stands_2012`."
 msgstr "Remover todas as camadas exceto :guilabel:`forest_stands_2012`."
@@ -139,6 +144,24 @@ msgid ""
 msgstr ""
 "Ahora necesitas crear una rejilla de puntos rectangular separados 70 metros:"
 
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:59
+msgid ""
+"Open :menuselection:`Vector --> Research Tools` |regularPoints| "
+":guilabel:`Regular points`."
+msgstr ""
+"Aberto :menuselection:`Vetor --> Ferramentas de pesquisa` |regularPoints| "
+":guilabel:`Pontos regulares`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:60
+msgid ""
+"Press the drop-down button next to the :guilabel:`Input extent` field and "
+"from the :guilabel:`Calculate from Layer` menu, select "
+":guilabel:`forest_stands_2012`."
+msgstr ""
+"Pressione o botão drop-down ao lado do campo :guilabel:`Extensão de entrada`"
+" e no menu :guilabel:`Calcular a partir da camada`, selecione "
+":guilabel:`forest_stands_2012`."
+
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:62
 msgid ""
 "In the :guilabel:`Point spacing/count` settings, enter ``80`` ``meters``."
@@ -153,6 +176,14 @@ msgid ""
 msgstr ""
 "Verifique a caixa :guilabel:`Usar espaçamento de pontos` para indicar que o "
 "valor representa a distância entre os pontos."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:65
+msgid ""
+"Under :guilabel:`Regular points`, save the output as "
+":file:`systematic_plots.shp` in the :file:`forestry\\\\sampling\\\\` folder."
+msgstr ""
+"Em :guilabel:`pontos regulares`, salvar a saída como "
+":file:`parcelas_sistemáticas.shp` na pasta :file:`\\\\amostra\\\\florestal`"
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:67
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:90
@@ -176,6 +207,10 @@ msgstr ""
 "interesado en los puntos que están dentro de tu área forestal (mira la "
 "imagen inferior):"
 
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:216
+msgid "gdal"
+msgstr "gdal"
+
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:93
 msgid ""
 "You have now the points that the field teams will use to navigate to the "
@@ -191,6 +226,12 @@ msgstr ""
 "exportarlos a un formato que pueda ser utilizado por sus aparatos de GPS. "
 "Otra fuente útil en el campo son los mapas generales y detallados de la "
 "localización de las parcelas de muestreo."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:106
+msgid "Turn the top menu into |labelingSingle| :guilabel:`Single Labels`."
+msgstr ""
+"Transforme o menu superior em |labelingSingle| :guilabel:`Rótulos "
+"individuais'."
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:107
 msgid "For the :guilabel:`Value` entry, select the field ``id``."
@@ -218,6 +259,18 @@ msgstr ""
 " de otro modo, nombrarlos de Oeste-Este/Norte-Sur sigue un orden lógico y es"
 " una buena opción."
 
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:124
+msgid "Enable the |toggleEditing| edit mode."
+msgstr "Habilitar o modo |toggleEditing| editar."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:125
+msgid "Open the |calculateField| :sup:`Field calculator`:"
+msgstr "Abra a |calculateField| :sup:`Calculadora de campo`:"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:214
+msgid "calculateField"
+msgstr "calcularCampo"
+
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:127
 msgid "Check :guilabel:`Create a new field`"
 msgstr "Verificar :guilabel:`Criar um novo campo'."
@@ -235,6 +288,14 @@ msgid "In :guilabel:`Format` select :guilabel:`GPS eXchange Format [GPX]`."
 msgstr ""
 "En :guilabel:`Format` selecciona :guilabel:`GPS eXchange Format [GPX]`."
 
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:163
+msgid ""
+"Save the output :guilabel:`File name` as :file:`plots_wgs84.gpx` in the "
+":file:`forestry\\\\sampling\\\\` folder."
+msgstr ""
+"Salvar a saída :guilabel:`nome do arquivo` como :file:`plots_wgs84.gpx` na "
+"pasta :file:`forestry``sampling``."
+
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:165
 msgid "In :guilabel:`CRS` select :guilabel:`Selected CRS`."
 msgstr "En :guilabel:`CRS` selecciona :guilabel:`Seleceted CRS`."
@@ -242,6 +303,24 @@ msgstr "En :guilabel:`CRS` selecciona :guilabel:`Seleceted CRS`."
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:166
 msgid "Browse for :guilabel:`EPSG:4326 - WGS 84`."
 msgstr "Procurar por :guilabel:`EPSG:4326 - WGS 84`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:168
+msgid ""
+"The `GPX <https://gdal.org/drivers/vector/gpx.html>`_ format accepts only "
+"this CRS, if you select a different one, QGIS will give no error but you "
+"will get an empty file."
+msgstr ""
+"O formato `GPX <https://gdal.org/drivers/vector/gpx.html>`_ aceita apenas "
+"este SRC, se você selecionar um diferente, QGIS não dará nenhum erro, mas "
+"você receberá um arquivo vazio."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:173
+msgid ""
+"In the dialog that opens, select only the ``waypoints`` layer (the rest of "
+"the layers are empty)."
+msgstr ""
+"No caixa de diálogo que se abre, selecione apenas a camada \"pontos de "
+"passagem\" (o resto das camadas estão vazias)."
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:185
 msgid "Save your QGIS project now."

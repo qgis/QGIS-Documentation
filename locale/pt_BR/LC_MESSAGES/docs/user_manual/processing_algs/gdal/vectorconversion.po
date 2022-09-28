@@ -35,6 +35,14 @@ msgstr "Conversão vetorial"
 msgid "Convert format"
 msgstr "Converter formato"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:18
+msgid ""
+"This algorithm is derived from the `ogr2ogr utility "
+"<https://gdal.org/programs/ogr2ogr.html>`_."
+msgstr ""
+"Este algoritmo é derivado do utilitário `ogr2ogr "
+"<https://gdal.org/programs/ogr2ogr.html>`_."
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:22
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:112
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:207
@@ -232,10 +240,33 @@ msgstr "A camada vetorial de saída."
 msgid "Python code"
 msgstr "Código Python"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:93
+msgid "**Algorithm ID**: ``gdal:convertformat``"
+msgstr "**ID do algoritmo**: ``gdal:converterformato``"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:103
+msgid "Rasterize (overwrite with attribute)"
+msgstr "Rasterizar (sobrescrever com atributo)"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:108
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:203
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:297
+msgid ""
+"This algorithm is derived from the `GDAL rasterize utility "
+"<https://gdal.org/programs/gdal_rasterize.html>`_."
+msgstr ""
+"Este algoritmo é derivado do utilitário `GDAL rasterize "
+"<https://gdal.org/programs/gdal_rasterize.html>`_."
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:130
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:225
 msgid "**Input raster layer**"
 msgstr "**Camada matricial de entrada**"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:131
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:226
+msgid "``INPUT_RASTER``"
+msgstr "\"RASTER DE ENTRADA\""
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:132
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:182
@@ -251,6 +282,11 @@ msgstr "[raster]"
 msgid "Input raster layer"
 msgstr "Camada raster de entrada "
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:134
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:321
+msgid "**Field to use for a burn-in value**"
+msgstr "**Campo a ser utilizado para uma queima em valor**"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:137
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:324
 msgid "``FIELD``"
@@ -265,6 +301,11 @@ msgstr "[campo de tabela: numérico]"
 msgid "Defines the attribute field to use to set the pixels values"
 msgstr ""
 "Define o campo de atributo a ser usado para definir os valores de pixels"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:152
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:247
+msgid "**Add burn in values to existing raster values**"
+msgstr "**Adicionar a queima em valores aos valores raster existentes**"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:153
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:248
@@ -362,12 +403,28 @@ msgstr "Padrão: 0.0"
 msgid "The value to burn"
 msgstr "O valor para queimar"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:252
+msgid ""
+"If False, pixels are assigned the fixed value. If True, the fixed value is "
+"added to the value of the input raster layer."
+msgstr ""
+"Se Falso, é atribuído o valor fixo aos pixels. Se Verdadeiro, o valor fixo é"
+" adicionado ao valor da camada raster de entrada."
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:293
+msgid "Rasterize (vector to raster)"
+msgstr "Rasterizar (vetor a rasterizar)"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:294
 msgid ""
 "Converts vector geometries (points, lines and polygons) into a raster image."
 msgstr ""
 "Converte geometrias vetoriais (pontos, linhas e polígonos) em uma imagem "
 "matricial."
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:300
+msgid "**Default menu**: :menuselection:`Raster --> Conversion`"
+msgstr "**Menu padrão**: :menuselection:`Raster --> Conversão`"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:326
 msgid ""
@@ -380,6 +437,10 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:339
 msgid "``USE_Z``"
 msgstr "``USAR_Z``"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:346
+msgid "**Output raster size units**"
+msgstr "**Unidades de tamanho rasterizado de saída**"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:347
 msgid "``UNITS``"
@@ -442,6 +503,10 @@ msgstr ""
 "vertical (se unidades de tamanho for \"Unidades Georreferenciadas\") do "
 "raster de saída."
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:373
+msgid "**Output extent**"
+msgstr "**Extensão da produção**"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:376
 msgid "``EXTENT``"
 msgstr "`` EXTENSÃO``"
@@ -453,6 +518,13 @@ msgstr "[extensão]"
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Available methods are:"
 msgstr "Os métodos disponíveis são:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:5
+msgid ""
+"Calculate from layer…: uses extent of a layer loaded in the current project"
+msgstr ""
+"Calcular a partir da camada...: utilizar a extensão de uma camada carregada "
+"no projeto atual"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:6
 msgid "Use map canvas extent"
@@ -485,6 +557,16 @@ msgstr "Padrão: ``[Salvar em arquivo temporário]``"
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:399
 msgid "Specification of the output raster layer. One of:"
 msgstr "Especificação da camada raster de saída. Um de:"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:406
+msgid ""
+"For ``Save to File``, the output format has to be specified. All GDAL raster"
+" formats are supported. For ``Save to a Temporary File`` the QGIS default "
+"raster format will be used."
+msgstr ""
+"Para \"Salvar para arquivar\", o formato de saída tem que ser especificado. "
+"Todos os formatos de raster GDAL são suportados. Para \"Salvar em um arquivo"
+" temporário\" será utilizado o formato raster padrão QGIS."
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:429
 msgid ""
@@ -561,6 +643,10 @@ msgstr "9 --- CFloat32"
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:456
 msgid "10 --- CFloat64"
 msgstr "10 --- CFloat64"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:458
+msgid "**Pre-initialize the output image with value**"
+msgstr "**Pré-inicializar a imagem de saída com valor**"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:466
 msgid "**Invert rasterization**"

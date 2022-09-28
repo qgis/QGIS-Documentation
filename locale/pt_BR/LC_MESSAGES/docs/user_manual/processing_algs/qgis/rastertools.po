@@ -7,8 +7,8 @@
 # Translators:
 # Harrissou Sant-anna, 2022
 # Ana Carla Rizzo Mendes, 2022
-# Ana Camargo, 2022
 # Vanessa Stelzer, 2022
+# Ana Camargo, 2022
 # Letícia Jardim, 2022
 # 
 #, fuzzy
@@ -16,14 +16,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-12 00:23+0100\n"
+"POT-Creation-Date: 2022-08-31 02:57+0000\n"
 "PO-Revision-Date: 2022-03-14 05:06+0000\n"
 "Last-Translator: Letícia Jardim, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.10.3\n"
 "Language: pt_BR\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -157,6 +157,10 @@ msgstr "Inserir as coordenadas como ``xmin, xmax, ymin, ymax``"
 msgid "**Tile size**"
 msgstr "**Tamanho do bloco**"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:50
+msgid "``TILE_SIZE``"
+msgstr "\"TAMANHO_BLOCO\""
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:51
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:57
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:151
@@ -218,6 +222,14 @@ msgstr "[boleano]"
 msgid "Default: False"
 msgstr "Padrão: Falso"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:66
+msgid ""
+"Allows exporting the map with a transparent background. Outputs an RGBA "
+"(instead of RGB) image if set to ``True``."
+msgstr ""
+"Permite exportar o mapa com um fundo transparente. Produz uma imagem RGBA "
+"(ao invés de RGB) se definida como ``Verdade``."
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:68
 msgid "**Map theme to render**"
 msgstr "**Tema de mapa para renderizar**"
@@ -246,6 +258,11 @@ msgstr "``MAPA_TEMA``"
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:418
 msgid "[enumeration]"
 msgstr "[enumeração]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:73
+msgid "Use an existing :ref:`map theme <map_themes>` for the rendering."
+msgstr ""
+"Utilize um :ref:`tema de mapa <map_themes>` existente para a renderização."
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:75
 msgid "**Single layer to render**"
@@ -323,6 +340,23 @@ msgstr "Código Python"
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:121
 msgid "Fill NoData cells"
 msgstr "Preencher células sem dados"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:123
+msgid ""
+"Resets the NoData values in the input raster to a chosen value, resulting in"
+" raster dataset with no NoData pixels."
+msgstr ""
+"Redefine os valores 'sem dado' no raster de entrada para um valor escolhido,"
+" resultando em um conjunto de dados raster pixels 'sem dado'."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:126
+msgid ""
+"The algorithm respects the input raster data type, e.g. a floating point "
+"fill value will be truncated when applied to an integer raster."
+msgstr ""
+"O algoritmo respeita o tipo de dados raster de entrada, por exemplo, um "
+"valor de preenchimento de ponto flutuante será truncado quando aplicado a um"
+" raster inteiro."
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:132
 msgid "Filling NoData values (in grey) of a raster"
@@ -483,6 +517,11 @@ msgstr "Escolha a cor de fundo para os blocos"
 msgid "**Tile format**"
 msgstr "**Formato de bloco**"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:255
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:417
+msgid "``TILE_FORMAT``"
+msgstr "'FORMATO_BLOCO\""
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:258
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:420
 msgid "Default: 0"
@@ -531,6 +570,10 @@ msgstr "Padrão: 4"
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:284
 msgid "**Tile width**"
 msgstr "**Largura do bloco**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:287
+msgid "``TILE_WIDTH``"
+msgstr "\"LARGURA_BLOCO\""
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:290
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:298
