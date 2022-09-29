@@ -211,7 +211,10 @@ Adding or subtracting an interval to dates, datetimes or times, using the
 Fields and Values
 ------------------
 
-Contains a list of fields from the layer, and special values.
+Contains a list of fields from the active layer, and special values.
+Fields list includes the ones stored in the dataset, :ref:`virtual
+<virtual_field>` and :ref:`auxiliary <vector_auxiliary_storage>` ones 
+as well as from :ref:`joins <sec_joins>`.
 
 Double-click a field name to have it added to your expression. You can also
 type the field name (preferably inside double quotes) or its :ref:`alias
@@ -734,8 +737,13 @@ This function requires the :ref:`Access metadata properties
 Map Layers
 ----------
 
-This group contains a list of the available layers in the current project.
-This offers a convenient way to write expressions referring to multiple layers,
+This group contains a list of the available layers in the current project and,
+for each layer, their fields (stored in the dataset, virtual or auxiliary ones
+as well as from joins). The fields can be interacted the same way as mentioned
+in :ref:`fields_values`, except that a double-click will add the name
+as a string (single quoted) to the expression instead of as a field reference
+given that they do not belong to the active layer.
+This offers a convenient way to write expressions referring to different layers,
 such as when performing :ref:`aggregates <aggregates_function>`, :ref:`attribute
 <record_attributes>` or :ref:`spatial <geometry_functions>` queries.
 
