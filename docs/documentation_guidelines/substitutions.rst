@@ -331,6 +331,7 @@ Icon                            Substitution                        Icon        
 |browserExpand|                 ``|browserExpand|``                 |browserCollapse|               ``|browserCollapse|``
 |codeEditor|                    ``|codeEditor|``                    |add|                           ``|add|``
 |relations|                     ``|relations|``                     |layoutItem3DMap|               ``|layoutItem3DMap|``
+|stopwatch|                     ``|stopwatch|``
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -1377,6 +1378,8 @@ Icon                            Substitution                        Icon        
 .. |stackedBar| image:: /static/common/stacked-bar.png
    :width: 1.5em
 .. |start| image:: /static/common/mActionStart.png
+   :width: 1.5em
+.. |stopwatch| image:: /static/common/mIconStopwatch.png
    :width: 1.5em
 .. |streamingDigitize| image:: /static/common/mActionStreamingDigitize.png
    :width: 1.5em

@@ -614,6 +614,37 @@ By right clicking on a request you can:
 
    Network Logger output for GET Request
 
+Query Logger
+............
+
+The |dbManager| :guilabel:`Query Logger` is the place to log the SQL commands
+sent by the data provider and the connections API to the backend database,
+together with their execution time as measured by QGIS (i.e. in the client
+that sent the commands).
+This can be useful when investigating performances of a particular layer
+during debugging or development of a QGIS algorithm or plugin.
+
+From its top toolbar, you can:
+
+* |record| :guilabel:`Record Log`: which will start or stop the logging.
+* |deleteSelected| :guilabel:`Clear Log`: will clear the log history.
+* |fileSave| :guilabel:`Save Log...`: will first show a big warning that
+  the log is sensitive and should be treated as confidential and then
+  allow you to save the log.
+* |options| :guilabel:`Settings`
+* |search| :guilabel:`Filter queries` based on the query string subsets
+  or details such as provider type, start time, initiator, ...
+
+Right-click on a reported query, and you can:
+
+* :guilabel:`Copy SQL` command called by QGIS on the database
+* :guilabel:`Copy as JSON`: copies the tree values as a json string to the
+  clipboard, for easy pasting in bug reports or for remote assistance.
+
+.. figure:: img/query_logger.png
+   :align: center
+
+   Query Logger output
 
 Profiler
 ........
@@ -3077,6 +3108,8 @@ The values presented in the varying size assistant above will set the size
 .. |showPresets| image:: /static/common/mActionShowPresets.png
    :width: 1.5em
 .. |showSelectedLayers| image:: /static/common/mActionShowSelectedLayers.png
+   :width: 1.5em
+.. |stopwatch| image:: /static/common/mIconStopwatch.png
    :width: 1.5em
 .. |stylePreset| image:: /static/common/stylepreset.png
    :width: 1.5em
