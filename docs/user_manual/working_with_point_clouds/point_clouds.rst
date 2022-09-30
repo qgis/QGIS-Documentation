@@ -413,7 +413,7 @@ Classification Renderer
 In the |paletted| :guilabel:`Classification` rendering, the point cloud is shown
 differentiated by color on the basis of an attribute. Any type of attribute
 can be used (numeric, string, ...). Point cloud data often includes a
-field called :guilabel:`Classification`. This usually contains data determined
+field called ``Classification``. This usually contains data determined
 automatically by post-processing, e.g. about vegetation. With
 :guilabel:`Attribute` you can select the field from the attribute table that
 will be used for the classification. By default, QGIS uses the definitions of
