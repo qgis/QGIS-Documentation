@@ -206,30 +206,32 @@ renderers can be found. In the lower part there are the sections
 settings for the entire layer can be made and which are the same for all
 renderers.
 
-Under :guilabel:`Point Symbol`, the size and the unit (e.g. milimetres,
-pixels, inches) with which each data point is displayed can be set. Either
-:guilabel:`Circle` or :guilabel:`Square` can be selected as the style for
-the points.
+* Under :guilabel:`Point Symbol`, the size and the unit (e.g. millimeters,
+  pixels, inches) with which each data point is displayed can be set. Either
+  :guilabel:`Circle` or :guilabel:`Square` can be selected as the style for
+  the points.
 
-In the :guilabel:`Layer Rendering` section you have the following options
-to modify the rendering of the layer:
+* In the :guilabel:`Layer Rendering` section you have the following options
+  to modify the rendering of the layer:
 
-* :guilabel:`Maximum error` Point clouds usually contains more points than
-  are needed for the display. By this option you set how dense or sparse the
-  display of the point cloud will be (This can also be understood as 'maximum
-  allowed gap between points'.) If you set a large number (e.g. 5 mm), there
-  will be visible gaps between points. Low value (e.g. 0.1 mm) could force
-  rendering of unnecessary amount of points, making rendering slower (different
-  units can be selected).
+  .. _`point_clouds_symbology_maxerror`:
 
-* :guilabel:`Opacity` |slider| You can make the underlying layer in the map
-  canvas visible with this tool. Use the slider to adapt the visibility of
-  your layer to your needs. You can also make a precise definition of the
-  percentage of visibility in the menu beside the slider.
+  * :guilabel:`Maximum error`: Point clouds usually contains more points than
+    are needed for the display. By this option you set how dense or sparse the
+    display of the point cloud will be (this can also be understood as 'maximum
+    allowed gap between points'). If you set a large number (e.g. 5 mm), there
+    will be visible gaps between points. Low value (e.g. 0.1 mm) could force
+    rendering of unnecessary amount of points, making rendering slower (different
+    units can be selected).
 
-* :guilabel:`Blending mode` You can achieve special rendering effects with
-  these tools. The pixels of your overlaying and underlaying layers are mixed
-  through the settings described in :ref:`blend-modes`.
+  * :guilabel:`Opacity`: You can make the underlying layer in the map
+    canvas visible with this tool. Use the slider to adapt the visibility of
+    your layer to your needs. You can also make a precise definition of the
+    percentage of visibility in the menu beside the slider.
+
+  * :guilabel:`Blending mode`: You can achieve special rendering effects with
+    these tools. The pixels of your overlaying and underlying layers are mixed
+    through the settings described in :ref:`blend-modes`.
 
 
 
