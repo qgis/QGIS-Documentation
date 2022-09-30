@@ -181,7 +181,7 @@ renderer:
 
 * if the dataset contains color information (red, green, blue
   attributes), the RGB renderer will be used
-* else if the dataset contains a :guilabel:`Classification` attribute, the
+* else if the dataset contains a ``Classification`` attribute, the
   classified renderer will be used
 * else it will fall back to rendering based on Z attribute
 
