@@ -381,8 +381,8 @@ and the layout:
 RGB Renderer
 .............
 
-With the |multibandColor| RGB renderer, three selected attributes from the
-point cloud will be used as the red, green and blue component. If the
+With the |multibandColor| :guilabel:`RGB` renderer, three selected attributes
+from the point cloud will be used as the red, green and blue component. If the
 attributes are named accordingly, QGIS selects them automatically and fetches
 :guilabel:`Min` and :guilabel:`Max` values for each band and scales the coloring
 accordingly. However, it is also possible to modify the values manually.
