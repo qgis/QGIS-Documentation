@@ -165,7 +165,7 @@ for rendering point clouds. These can be selected using the drop-down
 menu at the top of the Symbology tab
 (see :numref:`figure_point_cloud_symbology_overview`):
 
-* |pointCloudExtent| :guilabel:`Extent Only` Only a bounding box of the extent
+* |pointCloudExtent| :guilabel:`Extent Only`: Only a bounding box of the extent
   of the data is displayed; the symbol can be changed with the
   :ref:`vector_fill_symbols` dialog by clicking in the line, clicking on the
   |browserCollapse| arrow at the end leads you to :ref:`color_widget`.
