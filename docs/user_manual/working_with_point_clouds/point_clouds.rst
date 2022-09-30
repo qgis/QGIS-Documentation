@@ -459,10 +459,8 @@ of the point cloud in 3D maps. Following options can be selected from
 the drop down menu at the top of the tab: 
 
 * :guilabel:`No Rendering`: Data are not displayed
-* |singleColor| :guilabel:`Single Color` All points are displayed in the same
-  colour regardless of attributes, clicking in the line takes you to the
-  :ref:`color-selector` widget, clicking on the |browserCollapse| arrow at the
-  end opens :ref:`color_widget`
+* |singleColor| :guilabel:`Single Color`: All points are displayed in the same
+  :ref:`color <color-selector>` regardless of attributes
 * |singlebandPseudocolor| :guilabel:`Attribute by Ramp` See
   :ref:`point_cloud_ramp`
 * |multibandColor| :guilabel:`RGB` See :ref:`point_cloud_rgb`
