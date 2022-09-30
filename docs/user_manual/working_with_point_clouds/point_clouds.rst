@@ -288,7 +288,7 @@ across the classes:
   the color ramp stops; limits values are set following stops distribution
   in the color ramp (you can find more information on stops in colour ramps
   here: :ref:`color-ramp`).
-* :guilabel:`Equal interval` The number of classes is set by the
+* :guilabel:`Equal interval`: The number of classes is set by the
   :guilabel:`Classes` field at the end of the line; limits values are defined
   so that the classes all have the same magnitude.
 
