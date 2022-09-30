@@ -160,9 +160,9 @@ Symbology Properties
 --------------------
 
 In the |symbology| :guilabel:`Symbology` tab the settings for the
-rendering of the point cloud are made. There are four different options
-for rendering point clouds. These can be selected using the drop-down
-menu at the top of the Symbology tab
+rendering of the point cloud are made. There are different options
+for rendering point clouds that can be selected using the drop-down
+menu at the top of the :guilabel:`Symbology` tab
 (see :numref:`figure_point_cloud_symbology_overview`):
 
 * |pointCloudExtent| :guilabel:`Extent Only`: Only a bounding box of the extent
