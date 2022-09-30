@@ -313,7 +313,7 @@ Below the table there are the options to restore the default classes with
 
 Since a customized color map can be very complex, there is also the option to
 |fileOpen| :sup:`Load` an existing color map or to |fileSaveAs| :sup:`Save` it for use in
-other layers (txt file).
+other layers (as a :file:`txt` file).
 
 If you have selected :guilabel:`Linear` for :guilabel:`Interpolation`, you can
 also configure:
