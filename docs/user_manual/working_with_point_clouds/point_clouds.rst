@@ -480,7 +480,7 @@ options:
 
 * :guilabel:`Point size`: The size (in pixels) with which each data point is
   displayed can be set
-* :guilabel:`Maximum screen space error` By this option you set how dense or
+* :guilabel:`Maximum screen space error`: By this option you set how dense or
   sparse the display of the point cloud will be (in pixels). If you set a large
   number (e.g. 10), there will be visible gaps between points; low value
   (e.g. 0) could force rendering of unnecessary amount of points, making
