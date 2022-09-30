@@ -32,6 +32,10 @@ msgstr "Plugin"
 msgid "List of plugins"
 msgstr "Elenco dei plugin"
 
+#: ../../docs/server_manual/plugins.rst:13
+msgid "Plugins can also be installed on QGIS Server."
+msgstr "I plugin possono essere installati anche su QGIS Server."
+
 #: ../../docs/server_manual/plugins.rst:15
 msgid ""
 "Some plugins designed for server can be found on the official `QGIS "
@@ -39,6 +43,21 @@ msgid ""
 msgstr ""
 "Alcuni plugin progettati per il server si trovano nel repository ufficiale "
 "di `QGIS <https://plugins.qgis.org/plugins/server/>`_."
+
+#: ../../docs/server_manual/plugins.rst:18
+msgid ""
+"Install only plugins you need for your own purpose. On QGIS server, plugins "
+"are like hooks into QGIS server, they can alter inputs or outputs of QGIS "
+"server. They can produce unexpected result if you don't know how the plugin "
+"works. Please refer to their respective documentation or the application "
+"that needs QGIS server plugins to know which plugin can be useful for you."
+msgstr ""
+"Installa solo i plugin necessari per i tuoi scopi. Sul server QGIS, i plugin"
+" sono come dei collegamenti nel server QGIS e possono alterare gli input o "
+"gli output del server QGIS. Possono produrre risultati inaspettati se "
+"conosci il funzionamento del plugin. Per sapere quale plugin ti può essere "
+"utile, consulta la rispettiva documentazione o l'applicazione che necessita "
+"dei plugin del server QGIS."
 
 #: ../../docs/server_manual/plugins.rst:24
 msgid "Location of plugins"
@@ -66,6 +85,30 @@ msgstr "Installazione"
 msgid "Manually with a ZIP"
 msgstr "Manualmente con uno ZIP"
 
+#: ../../docs/server_manual/plugins.rst:37
+msgid ""
+"As an example, to install the **HelloWorld** plugin for testing the server, "
+"using a specific folder, you first have to create a directory to hold server"
+" plugins. This will be specified in the virtual host configuration and "
+"passed on to the server through an environment variable:"
+msgstr ""
+"Ad esempio, per installare il plugin **HelloWorld** per testare il server, "
+"utilizzando una cartella specifica, devi prima creare una cartella per "
+"contenere i plugin del server. Questa sarà specificata nella configurazione "
+"dell'host virtuale e passata al server attraverso una variabile d'ambiente:"
+
+#: ../../docs/server_manual/plugins.rst:52
+msgid ""
+"According to its `description "
+"<https://plugins.qgis.org/plugins/HelloServer/>`_, HelloServer plugin is "
+"designed for development and demonstration purposes. Do not keep this plugin"
+" for production if you don't need it."
+msgstr ""
+"Conformemente alla sua `descrizione "
+"<https://plugins.qgis.org/plugins/HelloServer/>`_, il plugin HelloServer è "
+"stato progettato per scopi di sviluppo e dimostrativi. Non utilizzare questo"
+" plugin per la produzione se non ne hai bisogno."
+
 #: ../../docs/server_manual/plugins.rst:56
 msgid "With a command line tool"
 msgstr "Con uno strumento a linea di comando"
@@ -89,6 +132,10 @@ msgid ""
 msgstr ""
 "L'installazione avviene tramite pip. L'installazione in un ambiente virtuale"
 " è una buona pratica, ma non è obbligatoria:"
+
+#: ../../docs/server_manual/plugins.rst:68
+msgid "To upgrade the tool:"
+msgstr "Per aggiornare lo strumento:"
 
 #: ../../docs/server_manual/plugins.rst:74
 msgid ""
