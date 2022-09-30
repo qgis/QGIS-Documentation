@@ -459,7 +459,7 @@ of the point cloud in 3D maps. There are five options that can be selected from
 the drop down menu at the top of the tab. The last three options are identical
 to those in the Symbology tab: 
 
-* :guilabel:`No Rendering` Data are not displayed
+* :guilabel:`No Rendering`: Data are not displayed
 * |singleColor| :guilabel:`Single Color` All points are displayed in the same
   colour regardless of attributes, clicking in the line takes you to the
   :ref:`color-selector` widget, clicking on the |browserCollapse| arrow at the
