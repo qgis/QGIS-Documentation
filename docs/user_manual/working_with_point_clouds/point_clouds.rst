@@ -309,8 +309,8 @@ But you can also edit these classes manually:
   for the selection
 
 Below the table there are the options to restore the default classes with
-:guilabel:`Classify` or to manually add |symbologyAdd| values or delete
-|symbologyRemove| selected values from the table.
+:guilabel:`Classify` or to manually |symbologyAdd| :sup:`Add` values or
+|symbologyRemove| :sup:`Delete` selected values from the table.
 
 Since a customized color map can be very complex, there is also the option to
 load |fileOpen| an existing color map or to save |fileSaveAs| it for use in
