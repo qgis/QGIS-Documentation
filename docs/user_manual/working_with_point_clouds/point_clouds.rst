@@ -187,7 +187,7 @@ renderer:
 
 
 If you do not know the attributes of the point cloud, the |basicStatistics|
-:guilabel:`Statistics` :ref:`tab<point_clouds_statistics>` provides a good
+:guilabel:`Statistics` :ref:`tab <point_clouds_statistics>` provides a good
 overview of which attributes are contained in the point cloud and in which
 ranges the values are located.
 
