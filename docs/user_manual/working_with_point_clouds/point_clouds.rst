@@ -508,7 +508,7 @@ the data in 3D maps. There are two setting options:
   displayed at a height scale of ``1:10``
 * An :guilabel:`offset` to the z-level can be entered. For example, the
   lowest z-value contained in the data can be used as this value. This can
-  be done automatically with the |refresh| refresh button at the end of
+  be done automatically with the |refresh| :sup:`Refresh` button at the end of
   the line.
 
 
