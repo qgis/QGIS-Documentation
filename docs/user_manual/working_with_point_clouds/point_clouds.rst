@@ -500,7 +500,7 @@ options:
 Elevation Properties
 --------------------
 
-In the |elevationScale| :guilabel:`Elevation` tab you can set corrections for
+In the |elevationscale| :guilabel:`Elevation` tab, you can set corrections for
 the Z-values of the data. This may be necessary to adjust the elevation of
 the data in 3D maps. There are two setting options:
 
