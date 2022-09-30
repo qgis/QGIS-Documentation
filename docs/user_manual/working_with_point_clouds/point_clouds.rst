@@ -461,10 +461,10 @@ the drop down menu at the top of the tab:
 * :guilabel:`No Rendering`: Data are not displayed
 * |singleColor| :guilabel:`Single Color`: All points are displayed in the same
   :ref:`color <color-selector>` regardless of attributes
-* |singlebandPseudocolor| :guilabel:`Attribute by Ramp` See
+* |singlebandPseudocolor| :guilabel:`Attribute by Ramp`: See
   :ref:`point_cloud_ramp`
-* |multibandColor| :guilabel:`RGB` See :ref:`point_cloud_rgb`
-* |paletted| :guilabel:`Classification` See :ref:`point_cloud_classification`
+* |multibandColor| :guilabel:`RGB`: See :ref:`point_cloud_rgb`
+* |paletted| :guilabel:`Classification`: See :ref:`point_cloud_classification`
 
 
 .. _figure_point_cloud_3d_view:
