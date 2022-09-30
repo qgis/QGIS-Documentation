@@ -410,8 +410,8 @@ A :guilabel:`Contrast enhancement` method can be applied to the values:
 Classification Renderer
 ........................
 
-In the |paletted| classified rendering, the point cloud is shown differentiated
-by colour on the basis of an attribute. In principle, any type of attribute
+In the |paletted| :guilabel:`Classification` rendering, the point cloud is shown
+differentiated by color on the basis of an attribute. Any type of attribute
 can be used (numeric, string, ...). Point cloud data often includes a
 field called :guilabel:`Classification`. This usually contains data determined
 automatically by post-processing, e.g. about vegetation. With
