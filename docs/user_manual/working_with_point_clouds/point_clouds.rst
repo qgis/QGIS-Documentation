@@ -169,12 +169,12 @@ menu at the top of the :guilabel:`Symbology` tab
   of the data is displayed; the symbol can be changed with the
   :ref:`vector_fill_symbols` dialog by clicking in the line, clicking on the
   |browserCollapse| arrow at the end leads you to :ref:`color_widget`.
-* |singlebandPseudocolor| :guilabel:`Attribute by Ramp` The data is drawn over
-  a color gradient: see :ref:`point_cloud_ramp`
-* |multibandColor| :guilabel:`RGB` Draw the data using red, green and blue
-  color values: see :ref:`point_cloud_rgb`
-* |paletted| :guilabel:`Classification` The data is drawn using different colors
-  for different classes: see :ref:`point_cloud_classification`
+* |singlebandPseudocolor| :guilabel:`Attribute by Ramp`: The data is drawn over
+  a color gradient. See :ref:`point_cloud_ramp`
+* |multibandColor| :guilabel:`RGB`: Draw the data using red, green and blue
+  color values. See :ref:`point_cloud_rgb`
+* |paletted| :guilabel:`Classification`: The data is drawn using different colors
+  for different classes. See :ref:`point_cloud_classification`
 
 When a point cloud is loaded, QGIS follows a logic to select the best
 renderer:
