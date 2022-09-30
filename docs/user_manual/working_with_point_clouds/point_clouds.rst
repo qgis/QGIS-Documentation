@@ -484,8 +484,8 @@ options:
   sparse the display of the point cloud will be (in pixels). If you set a large
   number (e.g. 10), there will be visible gaps between points; low value
   (e.g. 0) could force rendering of unnecessary amount of points, making
-  rendering slower (more details you can find at :ref:`point_clouds_symbology`
-  > :guilabel:`Maximum error`).
+  rendering slower (you can find more details at :guilabel:`Symbology`
+  :ref:`Maximum error <point_clouds_symbology_maxerror>`).
 * :guilabel:`Point budget` To avoid long rendering you can set the maximum
   number of points that will be rendered
 * :guilabel:`Point cloud size` For your information only, the total number of
