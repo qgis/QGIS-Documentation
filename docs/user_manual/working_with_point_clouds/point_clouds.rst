@@ -200,11 +200,10 @@ ranges the values are located.
    Point cloud symbology tab
 
 
-In the upper part of the Symbology tab, the settings of the different
-renderers can be found. In the lower part there are the sections
-:guilabel:`Point Symbol` and :guilabel:`Layer Rendering` with which general
+In the upper part of the :guilabel:`Symbology` tab, the settings of the different
+renderers can be found. In the lower part there are sections with which general
 settings for the entire layer can be made and which are the same for all
-renderers.
+renderers:
 
 * Under :guilabel:`Point Symbol`, the size and the unit (e.g. millimeters,
   pixels, inches) with which each data point is displayed can be set. Either
