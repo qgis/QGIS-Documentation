@@ -136,7 +136,7 @@ information about the point cloud layer:
 * :guilabel:`Settings`: Set a Layer name different from the layer
   filename that will be used to identify the layer in the project
   (in the Layers Panel, with expressions, in print layout legend,...)
-* :guilabel:`Assigned Coordinate Reference System (CRS)` Here you
+* :guilabel:`Assigned Coordinate Reference System (CRS)`: Here you
   can change the layer's assigned
   :ref:`Coordinate Reference System <layer_crs>`, selecting a
   recently used one in the drop-down list or clicking on |setProjection|
