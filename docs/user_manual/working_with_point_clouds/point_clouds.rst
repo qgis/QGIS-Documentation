@@ -390,8 +390,10 @@ accordingly. However, it is also possible to modify the values manually.
 A :guilabel:`Contrast enhancement` method can be applied to the values:
 :guilabel:`No Enhancement`, :guilabel:`Stretch to MinMax`,
 :guilabel:`Stretch and Clip to MinMax` and :guilabel:`Clip to MinMax`
-(NOTE: this tool is still under development. If you have problems with it, you
-should use the default setting :guilabel:`Stretch to MinMax`).
+
+.. note:: The :guilabel:`Contrast enhancement` tool is still under development.
+  If you have problems with it, you should use the default setting
+  :guilabel:`Stretch to MinMax`.
 
 
 .. _figure_point_cloud_rgb:
