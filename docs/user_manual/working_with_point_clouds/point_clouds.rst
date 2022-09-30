@@ -504,8 +504,8 @@ In the |elevationscale| :guilabel:`Elevation` tab, you can set corrections for
 the Z-values of the data. This may be necessary to adjust the elevation of
 the data in 3D maps. There are two setting options:
 
-* You can set a :guilabel:`scale`: If a 10 is entered here, the data is
-  displayed at a height scale of 1:10
+* You can set a :guilabel:`Scale`: If ``10`` is entered here, the data is
+  displayed at a height scale of ``1:10``
 * An :guilabel:`offset` to the z-level can be entered. For example, the
   lowest z-value contained in the data can be used as this value. This can
   be done automatically with the |refresh| refresh button at the end of
