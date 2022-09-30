@@ -133,7 +133,7 @@ Source Properties
 In the |system| :guilabel:`Source` tab you can see and edit basic
 information about the point cloud layer:  
 
-* :guilabel:`Settings` Set a Layer name different from the layer
+* :guilabel:`Settings`: Set a Layer name different from the layer
   filename that will be used to identify the layer in the project
   (in the Layers Panel, with expressions, in print layout legend,...)
 * :guilabel:`Assigned Coordinate Reference System (CRS)` Here you
