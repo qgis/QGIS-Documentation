@@ -478,7 +478,7 @@ In the lower part of the |3d| :guilabel:`3D View` tab you can find the
 entire layer which are the same for all renderers. There are the following
 options:
 
-* :guilabel:`Point size` The size (in pixels) with which each data point is
+* :guilabel:`Point size`: The size (in pixels) with which each data point is
   displayed can be set
 * :guilabel:`Maximum screen space error` By this option you set how dense or
   sparse the display of the point cloud will be (in pixels). If you set a large
