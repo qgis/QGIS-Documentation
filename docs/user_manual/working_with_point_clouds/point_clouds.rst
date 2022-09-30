@@ -486,11 +486,11 @@ options:
   (e.g. 0) could force rendering of unnecessary amount of points, making
   rendering slower (you can find more details at :guilabel:`Symbology`
   :ref:`Maximum error <point_clouds_symbology_maxerror>`).
-* :guilabel:`Point budget` To avoid long rendering you can set the maximum
+* :guilabel:`Point budget`: To avoid long rendering, you can set the maximum
   number of points that will be rendered
-* :guilabel:`Point cloud size` For your information only, the total number of
+* :guilabel:`Point cloud size`: For your information only, the total number of
   points is shown here
-* |checkbox| :guilabel:`Show bounding boxes` Especially useful for debugging:
+* |checkbox| :guilabel:`Show bounding boxes`: Especially useful for debugging,
   shows bounding boxes of nodes in hierarchy
 
 
