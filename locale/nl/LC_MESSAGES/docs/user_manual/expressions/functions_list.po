@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-07 02:57+0000\n"
+"POT-Creation-Date: 2022-09-28 02:54+0000\n"
 "PO-Revision-Date: 2022-03-14 05:12+0000\n"
 "Last-Translator: DiGro, 2022\n"
 "Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
@@ -212,6 +212,7 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:35
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:38
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:44
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:51
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:52
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:53
@@ -620,6 +621,7 @@ msgstr "[] markeert optionele argumenten"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:38
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:40
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:43
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:46
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:53
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:54
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:55
@@ -1114,6 +1116,7 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:40
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:42
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:44
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:48
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:49
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:56
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:57
@@ -7007,6 +7010,10 @@ msgstr ""
 "``geom_to_wkt(bounds(geom_from_wkt('Polygon((1 1, 0 0, -1 1, 1 1))')))`` → "
 "'Polygon ((-1 0, 1 0, 1 1, -1 1, -1 0))'"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:26
+msgid "Black lines represent the bounding boxes of each polygon feature"
+msgstr "Zwarte lijnen geven de begrenzingsvakken van elk object polygoon weer"
+
 #: ../../docs/user_manual/expressions/functions_list.rst:331
 msgid "Further reading: :ref:`qgisboundingboxes` algorithm"
 msgstr "Lees verder: algoritme :ref:`qgisboundingboxes`"
@@ -7136,6 +7143,10 @@ msgid ""
 msgstr ""
 "``buffer($geometry, 10.5)`` → polygoon van de geometrie van het huidige "
 "object, gebufferd op 10.5 eenheden"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:74
+msgid "Buffer (in yellow) of points, line and polygon"
+msgstr "Buffer (in geel) van punten, lijn en polygoon"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:337
 msgid "Further reading: :ref:`qgisbuffer` algorithm"
@@ -7622,7 +7633,7 @@ msgstr "end_point(geometry)"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:16
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:41
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:47
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:54
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:58
 msgid "**geometry** - geometry object"
@@ -10997,11 +11008,15 @@ msgstr ""
 "``rotate($geometry, 45)`` → geometrie 45 graden geroteerd, met de wijzers "
 "van de klok mee, rond het middelpunt van zijn begrenzingsvak"
 
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:31
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:30
+msgid "Rotating features"
+msgstr "Objecten roteren"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:37
 msgid "segments_to_lines"
 msgstr "segments_to_lines"
 
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:33
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
 msgid ""
 "Returns a multi line geometry consisting of a line for every segment in the "
 "input geometry."
@@ -11009,11 +11024,11 @@ msgstr ""
 "Geeft een geometrie multilijn terug, bestaande uit een lijn voor elk segment"
 " in de invoergeometrie."
 
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:45
 msgid "segments_to_lines(geometry)"
 msgstr "segments_to_lines(geometry)"
 
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:43
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:49
 msgid ""
 "``geom_to_wkt(segments_to_lines(geom_from_wkt('LINESTRING(0 0, 1 1, 2 "
 "2)')))`` → 'MultiLineString ((0 0, 1 1),(1 1, 2 2))'"
