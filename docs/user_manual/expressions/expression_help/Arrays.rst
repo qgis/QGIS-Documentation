@@ -255,7 +255,7 @@ Returns the Nth value (0 for the first one) or the last -Nth value (-1 for the l
      - array_get(array, index)
    * - Arguments
      - * **array** - an array
-       * **index** - the index to get (0 based)
+       * **pos** - the index to get (0 based)
    * - Examples
      - * ``array_get(array('a','b','c'),1)`` → 'b'
        * ``array_get(array('a','b','c'),-1)`` → 'c'
