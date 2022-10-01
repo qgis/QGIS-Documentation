@@ -353,6 +353,18 @@ msgstr ""
 msgid "spawn-fcgi"
 msgstr "spawn-fcgi"
 
+#: ../../docs/server_manual/getting_started.rst:328
+msgid ""
+"If you want to use `spawn-fcgi <https://redmine.lighttpd.net/projects/spawn-"
+"fcgi/wiki>`_:"
+msgstr ""
+"Als u wilt gebruiken `spawn-fcgi "
+"<https://redmine.lighttpd.net/projects/spawn-fcgi/wiki>`_:"
+
+#: ../../docs/server_manual/getting_started.rst:330
+msgid "The first step is to install the package:"
+msgstr "De eerste stap is om het pakket te installeren:"
+
 #: ../../docs/server_manual/getting_started.rst:337
 #: ../../docs/server_manual/getting_started.rst:418
 msgid ""
@@ -386,6 +398,22 @@ msgstr ""
 "configureren, vóór het uitvoeren van de server. Bijvoorbeeld: ``export "
 "QGIS_SERVER_LOG_STDERR=1``"
 
+#: ../../docs/server_manual/getting_started.rst:370
+msgid ""
+"Of course, you can add an init script to start QGIS Server at boot time or "
+"whenever you want. For example with **systemd**:"
+msgstr ""
+"Natuurlijk kunt u een script init toevoegen om QGIS Server te starten bij "
+"het opstarten of wanneer u maar wilt. Bijvoorbeeld met **systemd**:"
+
+#: ../../docs/server_manual/getting_started.rst:373
+msgid ""
+"Edit the file :file:`/etc/systemd/system/qgis-server.service` with this "
+"content:"
+msgstr ""
+"Bewerk het bestand :file:`/etc/systemd/system/qgis-server.service` met deze "
+"inhoud:"
+
 #: ../../docs/server_manual/getting_started.rst:396
 msgid "Then enable and start the service:"
 msgstr "Schakel dan de service in en start die:"
@@ -400,6 +428,21 @@ msgstr ""
 #: ../../docs/server_manual/getting_started.rst:407
 msgid "fcgiwrap"
 msgstr "fcgiwrap"
+
+#: ../../docs/server_manual/getting_started.rst:409
+msgid ""
+"Using `fcgiwrap "
+"<https://www.nginx.com/resources/wiki/start/topics/examples/fcgiwrap/>`_ is "
+"much easier to setup than **spawn-fcgi** but it's much slower."
+msgstr ""
+"Gebruiken van `fcgiwrap "
+"<https://www.nginx.com/resources/wiki/start/topics/examples/fcgiwrap/>`_ is "
+"veel gemakkelijker in te stellen dan **spawn-fcgi**, maar het is veel "
+"trager."
+
+#: ../../docs/server_manual/getting_started.rst:412
+msgid "You first have to install the corresponding package:"
+msgstr "U dient eerst het corresponderende pakket te installeren:"
 
 #: ../../docs/server_manual/getting_started.rst:430
 msgid ""
@@ -422,6 +465,17 @@ msgstr ""
 "QGIS Server heeft een werkende X Server nodig om volledig bruikbaar te zijn,"
 " in het bijzonder voor afdrukken. In het geval u al een werkende X Server "
 "heeft, kunt services van systemd gebruiken."
+
+#: ../../docs/server_manual/getting_started.rst:446
+msgid ""
+"This method, to deploy QGIS Server, relies on two Systemd units to "
+"configure: a `Socket unit "
+"<https://www.freedesktop.org/software/systemd/man/systemd.socket.html>`_ and"
+" a `Service unit "
+"<https://www.freedesktop.org/software/systemd/man/systemd.service.html>`_."
+msgstr ""
+"Deze methode om QGIS Server ui te rollen, vertrouwt\n"
+"d op twee eenhden Systemd om te configureren: een `eenheid Socket <https://www.freedesktop.org/software/systemd/man/systemd.socket.html>`_ en een `eenheid Service <https://www.freedesktop.org/software/systemd/man/systemd.service.html>`_."
 
 #: ../../docs/server_manual/getting_started.rst:450
 msgid ""
@@ -472,6 +526,14 @@ msgstr ""
 #: ../../docs/server_manual/getting_started.rst:513
 msgid "Now start socket service:"
 msgstr "Nu de socket service starten:"
+
+#: ../../docs/server_manual/getting_started.rst:519
+msgid ""
+"Finally, for the NGINX HTTP server, let's introduce the configuration for "
+"this setup:"
+msgstr ""
+"Tenslotte, voor de NGINX HTTP-server, introduceren we de configuratie voor "
+"deze setup:"
 
 #: ../../docs/server_manual/getting_started.rst:540
 msgid "Now restart NGINX for the new configuration to be taken into account:"
@@ -536,6 +598,24 @@ msgid ""
 msgstr ""
 "Dan, overeenkomstig uw HTTP-server, zou u de parameter  **DISPLAY** moeten "
 "configureren of direct **xvfb-run** moeten gebruiken."
+
+#: ../../docs/server_manual/getting_started.rst:589
+msgid "Using Apache:"
+msgstr "Met Apache"
+
+#: ../../docs/server_manual/getting_started.rst:591
+msgid "Add to your *Fcgid* configuration (see :ref:`httpserver`):"
+msgstr "Voeg uw configuratie *Fcgid* toe (bekijk :ref:`httpserver`):"
+
+#: ../../docs/server_manual/getting_started.rst:597
+msgid "Restart Apache for the new configuration to be taken into account:"
+msgstr ""
+"Herstart Apache opnieuw om er voor te zorgen dat de nieuwe configuratie "
+"daadwerkelijk wordt doorgevoerd:"
+
+#: ../../docs/server_manual/getting_started.rst:603
+msgid "Using NGINX"
+msgstr "Met NGINX"
 
 #: ../../docs/server_manual/getting_started.rst:605
 msgid "With spawn-fcgi using ``xvfb-run``:"
