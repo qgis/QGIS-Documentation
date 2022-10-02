@@ -586,6 +586,11 @@ Available tools are organized under following tabs:
 * |dbManager| :guilabel:`Query Logger`
 * |stopwatch| :guilabel:`Profiler`
 
+.. note:: Plugin authors can extend the panel with custom tabs
+ for debugging and developping their own plugins.
+ This is done using :meth:`registerDevToolWidgetFactory
+ <qgis.gui.QgisInterface.registerDevToolWidgetFactory>` method.
+
 Network Logger
 ..............
 
