@@ -578,36 +578,45 @@ The statistical summary can be:
 Debugging/Development Tools Panel
 ---------------------------------
 
-The :guilabel:`Debugging/Development Tools` panel (:kbd:`F12`) provides a
-:guilabel:`Network Logger` and a :guilabel:`Profiler`.
+The :guilabel:`Debugging/Development Tools` panel (:kbd:`F12`) provides
+a unified place for handling and debugging actions within QGIS.
+Available tools are organized under following tabs:
+
+* |networkAndProxy| :guilabel:`Network Logger`
+* |dbManager| :guilabel:`Query Logger`
+* |stopwatch| :guilabel:`Profiler`
 
 Network Logger
 ..............
 
-The |networkAndProxy| :guilabel:`Network Logger` provides a list of ongoing
-and completed network requests, along with a whole load of useful detail
+The |networkAndProxy| :guilabel:`Network Logger` tab helps you record
+and display network requests, along with a whole load of useful details
 like request and reply status, header, errors, SSL configuration errors,
 timeouts, cache status, etc.
 
-It also allows you to:
+From its top toolbar, you can:
 
-* |record| :guilabel:`Record Log` which will start or stop the logging.
-* |deleteSelected| :guilabel:`Clear Log` will clear the log history.
-* |fileSave| :guilabel:`Save Log...` will first show a big warning that
-  the log is sensitive and should be treated as confidential and than
+* |record| :guilabel:`Record Log`: which will start or stop the logging.
+* |deleteSelected| :guilabel:`Clear Log`: will clear the log history.
+* |fileSave| :guilabel:`Save Log...`: will first show a big warning that
+  the log is sensitive and should be treated as confidential and then
   allow you to save the log.
-* |options| :guilabel:`Settings` will allow you to
-  :guilabel:`Show Successful Requests` and :guilabel:`Show Timeouts`.
-* |checkbox| :guilabel:`Disable cache` will disable the cache so that
+* Press the |options| :guilabel:`Settings` drop-down menu toselect whether
+  to :guilabel:`Show Successful Requests`, :guilabel:`Show Timeouts` and
+  :guilabel:`Show Replies Served from Cache`.
+* |unchecked| :guilabel:`Disable cache`: will disable the cache so that
   every request has to be performed.
-* |search| :guilabel:`Filter requests`
+* |search| :guilabel:`Filter requests` based on URL string subsets
+  or request status
+
 
 By right clicking on a request you can:
 
 * :guilabel:`Open URL` which will open the URL in your default browser.
 * :guilabel:`Copy URL`
 * :guilabel:`Copy As cURL` to use it in the terminal.
-* :guilabel:`Copy as JSON` will copy the whole log from one request.
+* :guilabel:`Copy as JSON`: copies the tree values as a json string to the
+  clipboard, for easy pasting in bug reports or for remote assistance.
 
 .. figure:: img/network_logger.png
    :align: center
@@ -649,9 +658,17 @@ Right-click on a reported query, and you can:
 Profiler
 ........
 
-The :guilabel:`Profiler` allows to get load times for the Categories
-:guilabel:`Startup` and :guilabel:`Project Load`, to identify causes of slow
-load times.
+The |stopwatch| :guilabel:`Profiler` tab allows to get load times for every
+single operation involved in actions requested by the user. Depending on
+the context, these operations can be settings reading, menu, map canvas or 3D
+views creation, resolving map layers reference, bookmark or layout loading, ...
+This helps identify causes of slow load times.
+
+Default supported actions can be selected from the :guilabel:`Categories`
+drop-down menu:
+
+* QGIS :guilabel:`Startup`
+* :guilabel:`Project Load`
 
 .. figure:: img/profiler.png
    :align: center
