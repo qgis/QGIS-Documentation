@@ -333,44 +333,9 @@ also configure:
 Customize Color Ramp Legend
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
 
-With :guilabel:`linear` for :guilabel:`Interpolation`, QGIS by
-default displays a continuous color ramp with min and max values in the
-:guilabel:`Layers` panel and in the :ref:`layout legend <layout_legend_item>`. 
-This can be customized using the :guilabel:`Legend settings` button.
-
-
-.. _figure_point_cloud_legend_settings:
-
-.. figure:: img/point_cloud_legend_settings.png
-   :align: center
-
-   Legend settings to the point cloud color ramp legend
-
-
-If you uncheck |checkbox| :guilabel:`Use continuous legend` the legend
-displays separated colors corresponding to the different classes in the
-color map table. If you leave it checked, you have options for the labels
-and the layout:
-
-**Labels**
-
-* Add a :guilabel:`Prefix` and a :guilabel:`Suffix` to the labels
-* Modify the :guilabel:`Minimum` and a :guilabel:`Maximum` values to show in
-  the legend
-* :ref:`Customize <number_formatting>` the :guilabel:`Number format`
-* :ref:`Customize <text_format>` the :guilabel:`Text format` to use in the
-  print layout legend.
-
-**Layout**
-
-* Control the :guilabel:`Orientation` of the legend color ramp; it can be
-  :guilabel:`Vertical` or :guilabel:`Horizontal`
-* Control the :guilabel:`Direction` of the values depending on the orientation:
-
-  * If vertical, you can display the :guilabel:`Maximum on top`
-    or the :guilabel:`Minimum on top`
-  * If horizontal, you can display the :guilabel:`Maximum on right`
-    or the :guilabel:`Minimum on right`
+Since the customization works the same way as with a raster layer, you can
+find information in the raster data chapter under
+:ref:`raster_legend_settings`.
 
 
 
@@ -417,8 +382,9 @@ automatically by post-processing, e.g. about vegetation. With
 will be used for the classification. By default, QGIS uses the definitions of
 the LAS specification (see table 'ASPRS Standard Point Classes' in the PDF on
 `ASPRS home page <https://www.asprs.org/divisions-committees/lidar-division/laser-las-file-format-exchange-activities>`_).
-However, the data may deviate from this schema; in case of doubt, the
-definition must be requested from the data provider.
+However, the data may deviate from this schema; in case of doubt, you have to
+ask the person or institution from which you received the data for the
+definitions.
 
 
 .. _figure_point_cloud_classification:
@@ -533,15 +499,6 @@ See :ref:`metadatamenu` for more information.
 
 
 
-..  _figure_point_cloud_metadata:
-
-.. figure:: img/point_cloud_metadata.png
-   :align: center
-
-   The point cloud metadata tab
-
-
-
 .. _point_clouds_statistics:
 
 Statistics Properties
@@ -585,8 +542,8 @@ abundance.
    :width: 1.3em
 .. |editMetadata| image:: /static/common/editmetadata.png
    :width: 1.2em
-.. |elevationScale| image:: /static/common/elevationScale.png
-   :width: 1.7em
+.. |elevationscale| image:: /static/common/elevationscale.png
+   :width: 1.5em
 .. |fileOpen| image:: /static/common/mActionFileOpen.png
    :width: 1.5em
 .. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
@@ -602,19 +559,18 @@ abundance.
 .. |pointCloudExtent| image:: /static/common/pointCloudExtent.png
    :width: 1.5em
 .. |refresh| image:: /static/common/mActionRefresh.png
-   :width: 1.3em
+   :width: 1.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
 .. |singleColor| image:: /static/common/singleColor.png
    :width: 1.5em
 .. |singlebandPseudocolor| image:: /static/common/singlebandPseudocolor.png
    :width: 1.5em
-.. |slider| image:: /static/common/slider.png
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
 .. |symbologyAdd| image:: /static/common/symbologyAdd.png
-   :width: 1.3em
+   :width: 1.5em
 .. |symbologyRemove| image:: /static/common/symbologyRemove.png
-   :width: 1.3em
+   :width: 1.5em
 .. |system| image:: /static/common/system.png
-   :width: 1.7em
+   :width: 1.5em
