@@ -117,16 +117,18 @@ The current translations are made possible thanks to:
    Javier César Aldariz, Mayeul Kauffmann, Fran Raga"
    "Ukrainian", "Alexander Bruy"
 
+.. only:: not testing
 
-.. _translation_stats:
+  .. _translation_stats:
 
-Statistics of translation
-=========================
+  Statistics of translation
+  =========================
 
-Efforts of translation for QGIS |CURRENT| Long Term Release are provided below.
+  Efforts of translation for QGIS |CURRENT| Long Term Release are provided below.
+  Only languages that reached 5% by the version release time are published here.
 
-.. include:: translation_stats.rst
-   :start-line: 8
+  .. include:: translation_stats.rst
+     :start-line: 8
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
