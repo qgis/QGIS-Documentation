@@ -97,7 +97,7 @@ Supported formats
 =================
 
 QGIS accesses mesh data using the `MDAL drivers <https://github.com/lutraconsulting/MDAL>`_,
-and natively supports a `variety of formats <https://github.com/lutraconsulting/MDAL#supported-formats>`_.
+and natively supports a `variety of formats <https://github.com/lutraconsulting/MDAL#supported-formats>`__.
 Whether QGIS can edit a mesh layer depends on the format and the mesh
 structure type.
 
@@ -568,6 +568,189 @@ to create and edit a metadata report on your layer.
 See :ref:`metadatamenu` for more information.
 
 
+.. _editing_mesh:
+
+Editing a mesh layer
+====================
+
+QGIS allows to :ref:`create a mesh layer <vector_create_mesh>` from scratch
+or based on an existing one. You can create/modify the geometries of the new
+layer whom you can assign datasets afterwards.
+It's also possible to edit an existing mesh layer. Because the editing
+operation requires a frames-only layer, you will be asked to either
+remove any associated datasets first (make sure you have them available
+if they still are necessary) or create a copy (only geometries) of the layer.
+
+.. note:: QGIS does not allow to digitize edges on mesh layers.
+   Only vertices and faces are mesh elements that can be created.
+   Also not all supported mesh formats can be edited in QGIS
+   (see `permissions <https://github.com/lutraconsulting/MDAL#supported-formats>`__).
+
+
+Overview of the mesh digitizing tools
+-------------------------------------
+
+To interact with or edit a base mesh layer element, following tools are available.
+
+.. list-table:: Tools for mesh digitizing
+   :header-rows: 1
+
+   * - Label
+     - Purpose
+     - Location
+   * - |allEdits| :sup:`Current Edits`
+     - Access to save, rollback or cancel changes in all or selected layers simultaneously
+     - :guilabel:`Digitizing` toolbar
+   * - |toggleEditing| :sup:`Toggle to Edit`
+     - Turn on/off the layer in edit mode
+     - :guilabel:`Digitizing` toolbar
+   * - |saveEdits| :sup:`Save Edits`
+     - Save changes done to the layer
+     - :guilabel:`Digitizing` toolbar
+   * - |undo| :sup:`Undo`
+     - Undo the last change(s) - :kbd:`Ctrl+Z`
+     - :guilabel:`Digitizing` toolbar
+   * - |redo| :sup:`Redo`
+     - Redo the last undone action(s) - :kbd:`Ctrl+Shift+Z`
+     - :guilabel:`Digitizing` toolbar
+   * - |cad| :sup:`Enable Advanced Digitizing tools`
+     - Turn on/off the :ref:`Advanced Digitizing Panel <advanced_digitizing_panel>`
+     - :guilabel:`Advanced Digitizing` toolbar
+   * - |meshreindex| :sup:`Reindex Faces and Vertices`
+     - Recreate index and renumber the mesh elements for optimization
+     - :guilabel:`Mesh` menu
+   * - |meshDigitizing| :sup:`Digitize Mesh Elements`
+     - Select/Create vertices and faces
+     - :guilabel:`Mesh Digitizing` toolbar
+   * - |meshSelectPolygon| :sup:`Select Mesh Elements by Polygon`
+     - Select vertices and faces overlapped by a drawn polygon
+     - :guilabel:`Mesh Digitizing` toolbar
+   * - |meshSelectExpression| :sup:`Select Mesh Elements by Expression`
+     - Select vertices and faces using an expression
+     - :guilabel:`Mesh Digitizing` toolbar
+   * - |meshTransformByExpression| :sup:`Transform Vertices Coordinates`
+     - Modify coordinates of a selection of vertices
+     - :guilabel:`Mesh Digitizing` toolbar
+   * - |meshEditForceByVectorLines| :sup:`Force by Selected Geometries`
+     - Split faces and constrain Z value using a linear geometry
+     - :guilabel:`Mesh Digitizing` toolbar
+
+.. _select_mesh_elements:
+
+Selecting mesh elements
+-----------------------
+
+Using :guilabel:`Digitize Mesh Elements`
+........................................
+
+Activate the |meshDigitizing| :sup:`Digitize Mesh Elements` tool.
+Hover over an element and it gets highlighted, allowing you to select it.
+
+* Click on a vertex, and it is selected.
+* Click on the small square at the center of a face or an edge,
+  and it gets selected. Connected vertices are also selected.
+  Conversely, selecting all the vertices of an edge or a face also
+  selects that element.
+* Drag a rectangle to select overlapping elements (a selected face comes with
+  all their vertices).
+  Press :kbd:`Alt` key if you want to select only completely contained elements.
+* To add elements to a selection, press :kbd:`Shift` while selecting them.
+* To remove an element from the selection, press :kbd:`Ctrl` and reselect it.
+  A deselected face will also deselect all their vertices.
+
+Using :guilabel:`Select Mesh Elements by Polygon`
+.................................................
+
+Activate the |meshSelectPolygon| :sup:`Select Mesh Elements by Polygon` tool and:
+
+* Draw a polygon (left-click to add vertex, :kbd:`Backspace` to undo last vertex,
+  :kbd:`Esc` to abort the polygon and right-click to validate it) over the
+  mesh geometries. Any partially overlapping vertices and faces will get selected.
+  Press :kbd:`Alt` key while drawing if you want to select only completely
+  contained elements.
+* Right-click over the geometry of a vector layer's feature, select it in
+  the list that pops up and any partially overlapping vertices and faces of
+  the mesh layer will get selected. Use :kbd:`Alt` while drawing to select
+  only completely contained elements.
+* To add elements to a selection, press :kbd:`Shift` while selecting them.
+* To remove an element from the selection, press :kbd:`Ctrl` while drawing
+  over the selection polygon.
+
+Using :guilabel:`Select Mesh Elements by Expression`
+....................................................
+
+Another tool for mesh elements selection is |meshSelectExpression|
+:sup:`Select Mesh Elements by Expression`. When pressed, the tool opens the mesh
+:ref:`expression selector dialog <vector_expressions>` from which you can:
+
+#. Select the method of selection:
+
+   * :guilabel:`Select by vertices`: applies the entered expression to vertices,
+     and returns matching ones and their eventually associated edges/faces
+   * :guilabel:`Select by faces`: applies the entered expression to faces,
+     and returns matching ones and their associated edges/vertices
+#. Write the expression of selection. Depending on the selected method,
+   available functions in the :ref:`Meshes group <expression_function_meshes>`
+   will be filtered accordingly.
+#. Run the query by setting how the selection should behave and pressing:
+
+  * |expressionSelect| :guilabel:`Select`: replaces any existing selection
+    in the layer
+  * |selectAdd| :guilabel:`Add to current selection`
+  * |selectRemove| :guilabel:`Remove from current selection`
+
+Modifying mesh elements
+------------------------
+
+.. _transform_meshvertices:
+
+Transforming mesh vertices
+..........................
+
+The |meshTransformByExpression| :sup:`Transform Vertices Coordinates` tool gives
+a more advanced way to move vertices, by editing their X, Y and/or Z coordinates
+thanks to expressions.
+
+#. Select the vertices you want to edit the coordinates
+#. Press |meshTransformByExpression| :sup:`Transform Vertices Coordinates`.
+   A dialog opens with a mention of the number of selected vertices.
+   You can still add or remove vertices from the selection.
+#. Depending on the properties you want to modify, you need to check the
+   :guilabel:`X coordinate`, :guilabel:`Y coordinate` and/or :guilabel:`Z value`.
+#. Then enter the target position in the box, either as a numeric value or
+   an expression (using the |expression| :sup:`Expression dialog`)
+#. With the |vertexCoordinates| :sup:`Import Coordinates of the Selected Vertex`
+   pressed, the X, Y and Z boxes are automatically filled with its coordinates
+   whenever a single vertex is selected. A convenient and quick way to adjust
+   vertices individually.
+#. Press :guilabel:`Preview Transform` to simulate the vertices new location
+   and preview the mesh with transformation.
+
+   * If the preview is green, transformed mesh is valid and you can apply
+     the transformation.
+   * If the preview is red, the transformed mesh is invalid and you can not
+     apply the transformation until it is corrected.
+#. Press :guilabel:`Apply Transform` to modify the selected coordinates
+   for the set of vertices.
+
+.. _reindex_mesh:
+
+Reindexing meshes
+-----------------
+
+During edit, and in order to allow quick undo/redo operations, QGIS keeps empty
+places for deleted elements, which may lead to growing memory use and
+inefficient mesh structuring.
+The :menuselection:`Mesh -->` |meshReindex| :menuselection:`Reindex Faces and
+Vertices` tool is designed to remove these holes and renumber the indices of
+faces and vertices so that they are continuous and somewhat reasonably ordered.
+This optimizes relation between faces and vertices and increases the efficiency
+of calculation.
+
+.. note:: The |meshReindex| :guilabel:`Reindex Faces and Vertices` tool saves
+ the layer and clear the undo/redo stacks, disabling any rollback.
+
+
 .. _mesh_calculator:
 
 Mesh Calculator
@@ -645,15 +828,39 @@ the expression to execute.
    :width: 1.5em
 .. |addMeshLayer| image:: /static/common/mActionAddMeshLayer.png
    :width: 1.5em
+.. |allEdits| image:: /static/common/mActionAllEdits.png
+   :width: 1.5em
+.. |cad| image:: /static/common/cad.png
+   :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+.. |clearText| image:: /static/common/mIconClearText.png
+   :width: 1.5em
 .. |collapseTree| image:: /static/common/mActionCollapseTree.png
    :width: 1.5em
 .. |editMetadata| image:: /static/common/editmetadata.png
    :width: 1.2em
 .. |expandTree| image:: /static/common/mActionExpandTree.png
    :width: 1.5em
+.. |expression| image:: /static/common/mIconExpression.png
+   :width: 1.5em
+.. |expressionSelect| image:: /static/common/mIconExpressionSelect.png
+   :width: 1.5em
 .. |general| image:: /static/common/general.png
+   :width: 1.5em
+.. |locked| image:: /static/common/locked.png
+   :width: 1.5em
+.. |meshDigitizing| image:: /static/common/mActionMeshDigitizing.png
+   :width: 1.5em
+.. |meshEditForceByVectorLines| image:: /static/common/mActionMeshEditForceByVectorLines.png
+   :width: 1.5em
+.. |meshReindex| image:: /static/common/mActionMeshReindex.png
+   :width: 1.5em
+.. |meshSelectExpression| image:: /static/common/mActionMeshSelectExpression.png
+   :width: 1.5em
+.. |meshSelectPolygon| image:: /static/common/mActionMeshSelectPolygon.png
+   :width: 1.5em
+.. |meshTransformByExpression| image:: /static/common/mActionMeshTransformByExpression.png
    :width: 1.5em
 .. |meshaveraging| image:: /static/common/meshaveraging.png
    :width: 1.5em
@@ -669,9 +876,17 @@ the expression to execute.
    :width: 1.5em
 .. |metadata| image:: /static/common/metadata.png
    :width: 1.5em
+.. |redo| image:: /static/common/mActionRedo.png
+   :width: 1.5em
 .. |refresh| image:: /static/common/mActionRefresh.png
    :width: 1.5em
 .. |rendering| image:: /static/common/rendering.png
+   :width: 1.5em
+.. |saveEdits| image:: /static/common/mActionSaveEdits.png
+   :width: 1.5em
+.. |selectAdd| image:: /static/common/mIconSelectAdd.png
+   :width: 1.5em
+.. |selectRemove| image:: /static/common/mIconSelectRemove.png
    :width: 1.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
@@ -681,5 +896,11 @@ the expression to execute.
    :width: 1.5em
 .. |temporal| image:: /static/common/temporal.png
    :width: 1.5em
+.. |toggleEditing| image:: /static/common/mActionToggleEditing.png
+   :width: 1.5em
 .. |unchecked| image:: /static/common/unchecked.png
    :width: 1.3em
+.. |undo| image:: /static/common/mActionUndo.png
+   :width: 1.5em
+.. |vertexCoordinates| image:: /static/common/mIconVertexCoordinates.png
+   :width: 1.5em
