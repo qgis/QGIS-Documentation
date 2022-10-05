@@ -109,6 +109,11 @@ msgstr ""
 msgid "symbology"
 msgstr "symbology"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:63
+msgid "|addGroup| :sup:`Add new group`: see :ref:`group_layers_interact`"
+msgstr ""
+"|addGroup| :sup:`Csoport hozzáadása`: see :ref:`group_layers_interact`"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2817
 msgid "addGroup"
 msgstr "addGroup"
@@ -125,9 +130,39 @@ msgstr ""
 msgid "showPresets"
 msgstr "showPresets"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:66
+msgid "|filterMap| filter layers in the legend tree:"
+msgstr "|filterMap| a jelmagyarázat réteginek szűrése:"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2885
 msgid "filterMap"
 msgstr "filterMap"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:68
+msgid ""
+":guilabel:`Filter Legend by Map Content`: only the layers that are set "
+"visible and whose features intersect the current map canvas have their style"
+" rendered in the layers panel. Otherwise, a generic NULL symbol is applied "
+"to the layer. Based on the layer symbology, this is a convenient way to "
+"identify which kind of features from which layers cover your area of "
+"interest."
+msgstr ""
+":guilabel:`Jelmagyarázat szűrése a réteg tartalmával` : csak azoknak a "
+"rétegeknek a stílusa jelenik meg a rétegek panelen, amelyek láthatók, és "
+"amelyek elemei metszik az aktuális térképvásznat. Ellenkező esetben egy "
+"általános NULL szimbólum kerül a réteg neve mellé. A réteg jelrendszere "
+"alapján ez egy kényelmes módja annak azonosítására, hogy mely rétegekből "
+"milyen elemek fedik le érdeklődési területét."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:73
+msgid ""
+":guilabel:`Show Private Layers`: a convenient shortcut to display and "
+"interact with :ref:`private layers <project_layer_capabilities>` in the "
+":guilabel:`Layers` panel without modifying the project settings."
+msgstr ""
+":guilabel:`Privát rétegek megjelenítése`: gyors parancsikon a :ref:`privát "
+"rétegek <project_layer_capabilities>` megjelenítéséhez és interakciójához a "
+"projektbeállítások :guilabel:`Rétegek` panelén történő módosítás nélkül."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:76
 msgid ""
@@ -440,6 +475,10 @@ msgstr "Raszterréteg"
 msgid "Group"
 msgstr "Csoport"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:182
+msgid "|zoomToLayer| :guilabel:`Zoom to Layer(s)/Group`"
+msgstr "|zoomToLayer| :guilabel:`Nagyítás a réteg(ek)re/csoportra`"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:3055
 msgid "zoomToLayer"
 msgstr "zoomToLayer"
@@ -626,6 +665,10 @@ msgstr "inOverview"
 #: ../../docs/user_manual/introduction/general_tools.rst:185
 msgid ":guilabel:`Show Feature Count`"
 msgstr ":guilabel:`Elemszám megjelenítése`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:186
+msgid "|labelingSingle| :guilabel:`Show Label`"
+msgstr "|labelingSingle| :guilabel:`Címkék megjelenítése`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2939
 msgid "labelingSingle"
@@ -846,6 +889,18 @@ msgstr ":menuselection:`--> Szimbólum másolása`"
 msgid ":menuselection:`--> Paste Symbol`"
 msgstr ":menuselection:`--> Szimbólum beillesztése`"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:233
+msgid ":guilabel:`Add Layer Notes...`"
+msgstr ":guilabel:`Jegyzet készítése a réteghez…`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:234
+msgid ":guilabel:`Edit Layer Notes...`"
+msgstr ":guilabel:`Réteg jegyzetének szerkesztése…`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:235
+msgid ":guilabel:`Remove Layer Notes`"
+msgstr ":guilabel:`Réteg jegyzetének eltávolítása`"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:236
 msgid ":guilabel:`Properties...`"
 msgstr ":guilabel:`Tulajdonságok…`"
@@ -1012,6 +1067,16 @@ msgstr ""
 msgid "editableEdits"
 msgstr "editableEdits"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:303
+msgid ""
+"|indicatorFilter| to indicate :ref:`a filter <vector_query_builder>` applied"
+" to the layer. Hover over the icon to see the filter expression and double-"
+"click to update the query"
+msgstr ""
+"|indicatorFilter| jelzi, hogy a réteg :ref:`szűrve van "
+"<vector_query_builder>`. A kifejezés megtekintéséhez vigye az egeret az ikon"
+" fölé, a lekérdezés szerkesztéséhez kattintson rá duplán."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2921
 msgid "indicatorFilter"
 msgstr "indicatorFilter"
@@ -1074,6 +1139,14 @@ msgstr ""
 msgid "indicatorMemory"
 msgstr "indicatorMemory"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:318
+msgid ""
+"|indicatorOffline| to identify a layer used in :ref:`offline editing mode "
+"<offlinedit>`."
+msgstr ""
+"|indicatorOffline| jelzi, ha a réteg :ref:`offline szerkesztési módban "
+"<offlinedit>` van."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2933
 msgid "indicatorOffline"
 msgstr "indicatorOffline"
@@ -1087,6 +1160,16 @@ msgstr ""
 #: ../../docs/user_manual/introduction/general_tools.rst:2927
 msgid "indicatorNoCRS"
 msgstr "indicatorNoCRS"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:321
+msgid ""
+"|indicatorLowAccuracy| for layers with coordinates stored in a coordinate "
+"reference system which is inherently low accuracy (requires the "
+":ref:`corresponding setting <crs_inaccuracies>` to be enabled)"
+msgstr ""
+"|indicatorLowAccuracy| jelzi, ha egy réteg olyan koordináta-"
+"referenciarendszerben van tárolva, ami eredendően alacsony pontosságú (a "
+":ref:`megfelelő <crs_inaccuracies>` beállítást engedélyezni kell)"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2923
 msgid "indicatorLowAccuracy"
@@ -1103,6 +1186,14 @@ msgstr ""
 #: ../../docs/user_manual/introduction/general_tools.rst:2935
 msgid "indicatorTemporal"
 msgstr "indicatorTemporal"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:325
+msgid ""
+"|indicatorNotes| to identify a layer that has :ref:`notes <layer_notes>` "
+"associated"
+msgstr ""
+"|indicatorNotes| segít azonosítani :ref:`jegyzettel <layer_notes>` ellátott "
+"rétegeket"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2931
 msgid "indicatorNotes"
@@ -1152,10 +1243,10 @@ msgid ""
 "the same type (vector/raster) as the original layer and, for vector layers, "
 "have the same geometry type (point, line or polygon)."
 msgstr ""
-"A hely menüből másolja a réteg stílusát, majd illessze be egy csoportra vagy"
-" a kiválasztott rétegekre: a stílus alkalmazva lesz az összes, az eredetivel"
-" azonos típusú (vektor/raszter) rétegre, illetve vektorréteg esetén akkor, "
-"ha a geometria típusa is azonos (pont, vonal vagy felület)."
+"A helyi menüből másolja a réteg stílusát, majd illessze be egy csoportra "
+"vagy a kiválasztott rétegekre: a stílus alkalmazva lesz az összes, az "
+"eredetivel azonos típusú (vektor/raszter) rétegre, illetve vektorréteg "
+"esetén akkor, ha a geometria típusa is azonos (pont, vonal vagy felület)."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:351
 msgid ""
@@ -1163,9 +1254,9 @@ msgid ""
 "current one) or delete the current style (when multiple styles are "
 "available)."
 msgstr ""
-"átnevezze az aktuális stílust, hozzáadjon egy új stílust (ami tulajdonképpen"
-" a jelenlegi másolata) vagy törölje az aktuális stílust (ha több stílus "
-"érhető el)."
+"nevezze át az aktuális stílust, adjon hozzá egy új stílust (ami "
+"tulajdonképpen a jelenlegi másolata) vagy törölje az aktuális stílust (ha "
+"több stílus érhető el)."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:355
 msgid "The previous options are also available for raster or mesh layers."
@@ -1660,29 +1751,151 @@ msgstr "editCopy"
 msgid "Show statistics on a field"
 msgstr "Egy mező statisztikáinak megjelenítése"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:572
+msgid "Debugging/Development Tools Panel"
+msgstr "Hibakereső és fejlesztői eszközök panel"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:574
+msgid ""
+"The :guilabel:`Debugging/Development Tools` panel (:kbd:`F12`) provides a "
+":guilabel:`Network Logger` and a :guilabel:`Profiler`."
+msgstr ""
+"A :guilabel:`Hibakereső és fejlesztői eszközök` panel (:kbd:`F12`) egy "
+":guilabel:`Hálózati naplózót` és egy :guilabel:`Profilozót` tartalmaz."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:578
+msgid "Network Logger"
+msgstr "Hálózati naplózó"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:580
+msgid ""
+"The |networkAndProxy| :guilabel:`Network Logger` provides a list of ongoing "
+"and completed network requests, along with a whole load of useful detail "
+"like request and reply status, header, errors, SSL configuration errors, "
+"timeouts, cache status, etc."
+msgstr ""
+"A |networkAndProxy| :guilabel:`Hálózati naplózó` a folyamatban lévő és "
+"befejezett hálózati kérések listáját tartalmazza, valamint azok számos "
+"hasznos részletét, például a kérések és válaszok állapotát, a fejlécüket, "
+"hibákat, SSL konfigurációs hibákat, időtúllépéseket, a gyorsítótár állapotát"
+" stb."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2955
 msgid "networkAndProxy"
 msgstr "networkAndProxy"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:585
+msgid "It also allows you to:"
+msgstr "Az alábbiakat teszi lehetővé:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:587
+msgid "|record| :guilabel:`Record Log` which will start or stop the logging."
+msgstr ""
+"|rekord| :guilabel:`Napló felvétele`, amely elindítja vagy leállítja a "
+"naplózást."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2975
 msgid "record"
 msgstr "record"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:588
+msgid "|deleteSelected| :guilabel:`Clear Log` will clear the log history."
+msgstr ""
+"A |deleteSelected| :guilabel:`Napló törlése` kitörli a napló előzményeit."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2857
 msgid "deleteSelected"
 msgstr "deleteSelected"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:589
+msgid ""
+"|fileSave| :guilabel:`Save Log...` will first show a big warning that the "
+"log is sensitive and should be treated as confidential and than allow you to"
+" save the log."
+msgstr ""
+"|fileSave| :guilabel: A `Napló mentése...` először egy nagy figyelmeztetést "
+"jelenít meg arról, hogy a napló érzékeny adatokat tartalmaz, amiket "
+"bizalmasan kell kezelni, majd lehetővé teszi a napló mentését."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2883
 msgid "fileSave"
 msgstr "fileSave"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:592
+msgid ""
+"|options| :guilabel:`Settings` will allow you to :guilabel:`Show Successful "
+"Requests` and :guilabel:`Show Timeouts`."
+msgstr ""
+"A |options| :guilabel:`Beállítások` lehetővé teszi a :guilabel:`Sikeres "
+"kérések megjelenítését` és az :guilabel:`Időtúllépések megjelenítését`."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2963
 msgid "options"
 msgstr "options"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:594
+msgid ""
+"|checkbox| :guilabel:`Disable cache` will disable the cache so that every "
+"request has to be performed."
+msgstr ""
+"A |checkbox| :guilabel:`Gyorsítótár letiltása` letiltja a gyorsítótárat, így"
+" minden kérés végre lesz hajtva."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:596
+msgid "|search| :guilabel:`Filter requests`"
+msgstr "|search| :guilabel:`Kérések szűrése`"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2983
 msgid "search"
 msgstr "search"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:598
+msgid "By right clicking on a request you can:"
+msgstr "A kérésre jobb gombbal kattintva:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:600
+msgid ":guilabel:`Open URL` which will open the URL in your default browser."
+msgstr ""
+"Az :guilabel:`URL megnyitása` megnyitja az URL-t az Ön alapértelmezett "
+"böngészőjében."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:601
+msgid ":guilabel:`Copy URL`"
+msgstr ":guilabel:`URL másolása`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:602
+msgid ":guilabel:`Copy As cURL` to use it in the terminal."
+msgstr ":guilabel:`Másolás cURL-ként` a terminálban való használathoz."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:603
+msgid ":guilabel:`Copy as JSON` will copy the whole log from one request."
+msgstr ":guilabel:`Másolás JSON-ként` a kérés teljes naplóját másolja."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:608
+msgid "Network Logger output for GET Request"
+msgstr "A Hálózati naplózó kimenete egy GET lekérésnél"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:612
+msgid "Profiler"
+msgstr "Profilozó"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:614
+msgid ""
+"The :guilabel:`Profiler` allows to get load times for the Categories "
+":guilabel:`Startup` and :guilabel:`Project Load`, to identify causes of slow"
+" load times."
+msgstr ""
+"A :guilabel:`Profilozó` elérhetővé teszi teszi az :guilabel:`Indítás` és "
+":guilabel:`Projektbetöltés` kategóriák betöltési idejét, hogy azonosíthassa "
+"a lassú betöltési idők okait."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:621
+msgid "Profiler for QGIS Startup"
+msgstr "A QGIS indítási idejének profilozása"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:628
+msgid "Embedding layers from external projects"
+msgstr "Rétegek beágyazása külső projektekből"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:630
 msgid ""
@@ -2083,6 +2296,19 @@ msgstr ""
 msgid "Zooming and Panning"
 msgstr "Nagyítás és mozgatás"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:828
+msgid ""
+"There are multiple ways to zoom and pan to an area of interest. You can use "
+"the :guilabel:`Map Navigation` toolbar, the mouse and keyboard on the map "
+"canvas and also the menu actions from the :menuselection:`View` menu and the"
+" layers' contextual menu in the :guilabel:`Layers` panel."
+msgstr ""
+"Többféleképpen is nagyíthatja és mozgathatja a térképet egy Önt érdeklő "
+"területre. Használhatja a :guilabel:`Térképi navigáció` eszköztárat, az "
+"egeret és a billentyűzetet a térképvásznon, valamint a "
+":menuselection:`Nézet` menü és a :guilabel:`Rétegek` panelen lévő rétegek "
+"helyi menüjének műveleteit."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:838
 msgid "Icon"
 msgstr "Ikon"
@@ -2188,6 +2414,14 @@ msgstr "panToSelected"
 msgid "Pan Map to Selection"
 msgstr "Térkép mozgatása a kiválasztott elemekhez"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:872
+msgid ""
+"Pan the map to the selected features of all the selected layers in the "
+":guilabel:`Layers` panel."
+msgstr ""
+"Térkép eltolása a :guilabel:`Rétegek` panelen kijelölt rétegek összes "
+"kiválasztott elemére."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:877
 msgid "|zoomToSelected|"
 msgstr "|zoomToSelected|"
@@ -2200,9 +2434,27 @@ msgstr "zoomToSelected"
 msgid "Zoom To Selection"
 msgstr "Nagyítás a kiválasztott elemekre"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:879
+msgid ""
+"Zoom to the selected features of all the selected layers in the "
+":guilabel:`Layers` panel."
+msgstr ""
+"Nagyítás a :guilabel:`Rétegek` panelen kijelölt rétegek összes kiválasztott "
+"elemére."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:884
 msgid "|zoomToLayer|"
 msgstr "|zoomToLayer|"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:885
+msgid "Zoom To Layer(s)"
+msgstr "Nagyítás a réteg(ek)re"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:886
+msgid ""
+"Zoom to the extent of all the selected layers in the :guilabel:`Layers` "
+"panel."
+msgstr "Nagyítás a :guilabel:`Rétegek` panelen kijelölt összes rétegre."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:891
 msgid "|zoomFullExtent|"
@@ -2215,6 +2467,14 @@ msgstr "zoomFullExtent"
 #: ../../docs/user_manual/introduction/general_tools.rst:892
 msgid "Zoom Full"
 msgstr "Teljes nagyítás"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:893
+msgid ""
+"Zoom to the extent of all the layers in the project or to the :ref:`project "
+"full extent <project_full_extent>`."
+msgstr ""
+"Nagyítás a projekt összes rétegének terjedelmére vagy a :ref:`projekt teljes"
+" terjedelmére <project_full_extent>`."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:898
 msgid "|zoomLast|"
@@ -2416,6 +2676,14 @@ msgid "Enter or select a group name in which to store related bookmarks"
 msgstr ""
 "Adja meg vagy válassza ki a csoport nevét, amelyben a kapcsolódó "
 "könyvjelzőket tárolni kívánja"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:992
+msgid ""
+"Select the extent of the area you wish to save, using the :ref:`extent "
+"selector <extent_selector>` widget"
+msgstr ""
+"Válassza ki a menteni kívánt terület terjedelmét a :ref:`terjedelemválasztó "
+"<extent_selector>` vezérlő segítségével"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:994
 msgid "Indicate the :guilabel:`CRS` to use for the extent"
@@ -3322,6 +3590,16 @@ msgstr ""
 msgid "Annotation Tools"
 msgstr "Annotációs eszközök"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1374
+msgid ""
+"Annotations are information added to the map canvas and shown within a "
+"balloon. This information can be of different types and annotations are "
+"added using the corresponding tools in the :guilabel:`Annotations Toolbar`:"
+msgstr ""
+"Az annotációk a térképvászonhoz hozzáadott, buborékban megjelenő "
+"információk. Ezek különböző típusú információk lehetnek, amiket az "
+":guilabel:`Annotációs eszköztár` megfelelő eszközeivel adhat hozzá:"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:1378
 msgid "|textAnnotation| :sup:`Text Annotation` for custom formatted text"
 msgstr ""
@@ -3602,6 +3880,25 @@ msgstr ""
 " --> Geometria eszközök --> Geometria-attribútumok hozzáadása…`. Itt a mérés"
 " planimetrikus, hacsak nem ellipszoidi mérést választott."
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1488
+msgid "Measure length, areas, bearings and angles interactively"
+msgstr "Hossz, terület, irányszög és bezárt szög mérése interaktívan"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1490
+msgid ""
+"Click the |measure| icon in the Attribute toolbar to begin measurements. The"
+" down arrow near the icon switches between |measure| length, |measureArea| "
+"area, |measureBearing| bearing or |measureAngle| angle. The default unit "
+"used in the dialog is the one set in :menuselection:`Project --> "
+"Properties... --> General` menu."
+msgstr ""
+"Kattintson a |measure| ikonra az Azonosítás eszköztáron a mérés "
+"megkezdéséhez. Az ikon melletti lefele nyíllal válthat |measure| hossz, "
+"|measureArea| terület, |measureBearing| irányszög és |measureAngle| bezárt "
+"szög mérése között. A dialógusablakban használt alapértelmezett mértékegység"
+" a :menuselection:`Projekt --> Beállítások… --> Általános` menüben "
+"beállítottak egyike."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2949
 msgid "measureArea"
 msgstr "measureArea"
@@ -3613,6 +3910,16 @@ msgstr "measureBearing"
 #: ../../docs/user_manual/introduction/general_tools.rst:2947
 msgid "measureAngle"
 msgstr "measureAngle"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1496
+msgid ""
+"For the :guilabel:`Measure Line` and the :guilabel:`Measure Area` the "
+"measurements can be done in |radioButtonOn| :guilabel:`Cartesian` or "
+"|radioButtonOn| :guilabel:`Ellipsoidal` measure."
+msgstr ""
+":guilabel:`Hosszmérés` és :guilabel:`Területmérés` esetén a mérések  "
+"|radioButtonOn| :guilabel:`Derékszögű` vagy |radioButtonOn| "
+":guilabel:`Ellipszoidi` számítás szerint végezhetőek."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2971
 msgid "radioButtonOn"
@@ -3655,6 +3962,21 @@ msgstr ""
 "be a réteg illesztésének tűrését. Így már a mérőeszközök használatakor "
 "minden egérkattintás (a tűrésbeállításon belül) az adott rétegre fog "
 "illeszteni."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1522
+msgid ""
+"The |measure| :sup:`Measure Line` measures distances between given points. "
+"The tool then allows you to click points on the map. Each segment length, as"
+" well as the total, shows up in the measure window. To stop measuring, click"
+" the right mouse button. Now it is possible to copy all your line "
+"measurements at once to the clipboard using the :guilabel:`Copy All` button."
+msgstr ""
+"A |measure| :sup:`Hosszmérés` a megadott pontok közötti távolságot méri. Az "
+"eszköz ezután lehetővé teszi, hogy rákattintson a térkép pontjaira. Az egyes"
+" szakaszok hossza, valamint a teljes összeg megjelenik a mérési ablakban. A "
+"mérés leállításához kattintson jobb egérgombbal. Ezután lehetőség van az "
+"összes vonalmérés vágólapra másolására egyben, az :guilabel:`Összes "
+"másolása` gombbal."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1529
 msgid ""
@@ -3705,6 +4027,22 @@ msgstr ""
 msgid "Measure Area"
 msgstr "Területmérés"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1563
+msgid ""
+"|measureBearing| :sup:`Measure Bearing`: You can also measure bearings. The "
+"cursor becomes cross-shaped. Click to draw the first point of the bearing, "
+"then move the cursor to draw the second point. The measurement is displayed "
+"in a pop-up dialog."
+msgstr ""
+"|measureArea| :sup:`Irányszögmérés`: Irányszög mérésére is van lehetőség. A "
+"kurzor kereszt alakra vált. Kattintson az irányszög első pontjának "
+"megrajzolásához, majd mozgassa az egérmutatót a második pont "
+"megrajzolásához. A mérés megjelenik egy felugró ablakban."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1573
+msgid "Measure Bearing"
+msgstr "Irányszög mérése"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:1575
 msgid ""
 "|measureAngle| :sup:`Measure Angle`: You can also measure angles. The cursor"
@@ -3712,14 +4050,14 @@ msgid ""
 " to measure, then move the cursor to draw the desired angle. The measurement"
 " is displayed in a pop-up dialog."
 msgstr ""
-"|measureArea| :sup:`Szögmérés`: Szögmérésre is van lehetőség. A kurzor "
-"kereszt alakra vált. Kattintson az első szakasz meghúzásához, majd mozgassa "
-"az egérmutatót és rajzolja meg a kívánt szöget. A mérés megjelenik egy "
-"felugró ablakban."
+"|measureArea| :sup:`Szögmérés`: Bezárt szög mérésére is van lehetőség. A "
+"kurzor kereszt alakra vált. Kattintson az első szakasz meghúzásához, majd "
+"mozgassa az egérmutatót és rajzolja meg a kívánt szöget. A mérés megjelenik "
+"egy felugró ablakban."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1585
 msgid "Measure Angle"
-msgstr "Szögmérés"
+msgstr "Bezárt szög mérése"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1588
 msgid "Interacting with features"
@@ -4586,6 +4924,17 @@ msgstr ""
 "listák. A :guilabel:`Mód` határozza meg, hogy melyik réteg elemei legyenek "
 "azonosítva::"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1920
+msgid ""
+"**Current layer**: only features from the selected layers are identified. If"
+" a group is selected, features from its visible layers are identified. If "
+"there is no selection then only the current layer is identified."
+msgstr ""
+"**Aktuális réteg**: csak a kiválasztott rétegek elemei kerülnek "
+"azonosításra. Ha egy csoport van kiválasztva, akkor annak látható rétegei n "
+"történik az azonosítás. Ha nincs kijelölés, akkor csak az aktuális réteg "
+"kerül azonosításra."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:1923
 msgid ""
 "**Top down, stop at first**: only features from the upper visible layer."
@@ -4897,7 +5246,11 @@ msgstr ""
 "réteghez (azonos néven). SLD-k bármilyen típusú megjelenítésből "
 "exportálhatók – egy szimbólum, kategorizált, fokozatos vagy szabályalapú –, "
 "viszont SLD importálásakor vagy „egy szimbólum” vagy „szabályalapú” "
-"megjelenítés jön létre."
+"megjelenítés jön létre. Ez azt is jelenti, hogy a kategorizált vagy "
+"fokozatos stílusok szabályalapúvá alakulnak át. Ha meg akarja őrizni ezeket "
+"a megjelenítéseket, akkor a QML formátumot kell használnia. Egyébként néha "
+"nagyon hasznos lehet a stílusok szabályalapúvá alakításának ilyen egyszerű "
+"módja."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2059
 msgid "Save in database"
@@ -5047,13 +5400,264 @@ msgstr ""
 "stílussal együtt) a Rétegek panelhez. A :file:`.qlr` fájlokat a rendszer "
 "fájlkezelőjéből is a térképre húzhatja fogd és vidd módszerrel."
 
+#: ../../docs/user_manual/introduction/general_tools.rst:2137
+msgid "Documenting your data"
+msgstr "Az adatok dokumentálása"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2139
+msgid ""
+"In addition to displaying and symbolizing the data in the layers, QGIS "
+"allows you to fill:"
+msgstr ""
+"A rétegekben lévő adatok megjelenítése és szimbolizálása mellett a QGIS "
+"lehetővé teszi a következők kitöltését:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2142
+msgid ""
+"**metadata**: information to help people find and understand the dataset, "
+"how they can access and use it... these are properties of the datasource and"
+" can live out of the QGIS project."
+msgstr ""
+"**metaadatok**: olyan információk, amelyek segítenek másoknak megtalálni és "
+"megérteni az adathalmazt, hogyan érhetik azt el és hogyan használhatják... "
+"ezek az adatforrás tulajdonságai, és a QGIS projekten kívül állnak."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2145
+msgid ""
+"**notes**: instructions and comments regarding the layer in the current "
+"project"
+msgstr ""
+"**jegyzetek**: utasítások és megjegyzések az aktuális projektben lévő "
+"réteggel kapcsolatban"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2151
+msgid "Metadata"
+msgstr "Metaadatok"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2153
+msgid ""
+"In the layer properties dialog, the |editMetadata| :guilabel:`Metadata` tab "
+"provides you with options to create and edit a metadata report on your "
+"layer."
+msgstr ""
+"A rétegtulajdonságok párbeszédpanelen a :guilabel:`Metaadatok` fülön "
+"lehetősége van metaadatok létrehozására és szerkesztésére."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2867
 msgid "editMetadata"
 msgstr "editMetadata"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:2156
+msgid "Information to fill concern:"
+msgstr "A kitöltendő információk a következők:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2158
+msgid ""
+"the data :guilabel:`Identification`: basic attribution of the dataset "
+"(parent, identifier, title, abstract, language...);"
+msgstr ""
+"az adatok :guilabel:`Azonosítása`: az adathalmaz alapvető tulajdonítása "
+"(szülő, azonosító, cím, kivonat, nyelv…);"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2160
+msgid ""
+"the :guilabel:`Categories` the data belongs to. Alongside the **ISO** "
+"categories, you can add custom ones;"
+msgstr ""
+"a :guilabel:`Kategóriák`, amelyekhez az adatok tartoznak. Az **ISO** "
+"kategóriák mellé egyéni kategóriákat is felvehet;"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2162
+msgid ""
+"the :guilabel:`Keywords` to retrieve the data and associated concepts "
+"following a standard based vocabulary;"
+msgstr ""
+"a :guilabel:`Kulcsszavak` az adatok és a kapcsolódó fogalmak lekéréséhez "
+"szabványos szójegyzék szerint;"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2164
+msgid ""
+"the :guilabel:`Access` to the dataset (licenses, rights, fees, and "
+"constraints);"
+msgstr ""
+"a :guilabel:`Hozzáférés` az adathalmazhoz (licencek, jogok, díjak és "
+"korlátozások);"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2165
+msgid ""
+"the :guilabel:`Extent` of the dataset, either spatial one (CRS, map extent, "
+"altitudes) or temporal;"
+msgstr ""
+"az adathalmaz :guilabel:`Terjedelme` térbeli értelemben (CRS, térképi "
+"terjedelem, magasságok) és időben;"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2167
+msgid "the :guilabel:`Contact` of the owner(s) of the dataset;"
+msgstr "az adatkészlet tulajdonosának/tulajdonosainak :guilabel:`Névjegye`;"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2168
+msgid "the :guilabel:`Links` to ancillary resources and related information;"
+msgstr ""
+":guilabel:`Linkek` kiegészítő forrásokhoz és kapcsolódó információkhoz;"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2169
+msgid "the :guilabel:`History` of the dataset."
+msgstr "az adathalmaz :guilabel:`Előzményei`."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2171
+msgid ""
+"A summary of the filled information is provided in the "
+":guilabel:`Validation` tab and helps you identify potential issues related "
+"to the form. You can then either fix them or ignore them."
+msgstr ""
+"A kitöltött információk összefoglalása a :guilabel:`Ellenőrzés` fülön "
+"található, és segít megtalálni az űrlappal kapcsolatos lehetséges "
+"problémákat. Ezeket kijavíthatja, vagy figyelmen kívül hagyhatja őket."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2175
+msgid ""
+"Metadata are currently saved in the project file. They can also be saved in "
+"a :file:`.qmd` file alongside file based layers or in a local "
+":file:`.sqlite` database for remote layers (e.g. PostGIS)."
+msgstr ""
+"A metaadatok jelenleg a projektfájlban vannak elmentve. Menthetők egy "
+":file:`.qmd` fájlba is a fájlalapú rétegek mellé, vagy egy helyi "
+":file:`.sqlite` adatbázisba távoli rétegekhez (pl. PostGIS)."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2183
+msgid "Layer notes"
+msgstr "Rétegjegyzetek"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2185
+msgid ""
+"Layer notes allow you to document the layer within the current project. They"
+" can be place to store important messages for users of the project like to "
+"do lists, instructions, warnings, ..."
+msgstr ""
+"A rétegjegyzetek lehetővé teszik a réteg dokumentálását az aktuális "
+"projekten belül. A projekt felhasználói számára tárolhatnak fontos "
+"üzeneteket, mint például tennivaló listák, utasítások, figyelmeztetések, …"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2189
+msgid ""
+"From the layer's contextual menu in :guilabel:`Layers` panel, select "
+":guilabel:`Add layer notes...` and fill the open dialog with necessary "
+"texts."
+msgstr ""
+"A :guilabel:`Rétegek` panelen a réteg helyi menüjében válassza a "
+":guilabel:`Jegyzet készítse a réteghez…` lehetőséget, és töltse ki a "
+"megnyíló párbeszédablakot a szükséges szövegekkel."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2197
+msgid "Adding notes to a layer"
+msgstr "Jegyzetek hozzáadása egy réteghez"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2199
+msgid ""
+"The :guilabel:`Add layer notes` dialog provides a html-based multiline text "
+"box with a complete set of tools for:"
+msgstr ""
+"A :guilabel:`Rétegjegyzetek` párbeszédablakban egy HTML-alapú, többsoros "
+"szövegdoboz található, amelyben az alábbi eszközök érhetőek el:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2202
+msgid "text manipulation: cut, copy, paste, undo, redo"
+msgstr "szövegkezelés: kivágás, másolás, beillesztés, visszavonás, újra"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2203
+msgid ""
+"characters formatting, applied to all or parts of the contents: font size "
+"and color, bold, italic, underline, strikethrough, background color, URL "
+"highlighting"
+msgstr ""
+"karakterformázás a tartalom egészére vagy egy részére alkalmazva: betűméret "
+"és -szín, félkövér, dőlt, aláhúzás, áthúzás, háttérszín, URL-kiemelés"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2205
+msgid ""
+"paragraph structuring: bullet and numbered lists, indentation, predefined "
+"headings"
+msgstr ""
+"bekezdések strukturálása: pontozott és számozott listák, behúzás, előre "
+"meghatározott címsorok"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2206
+msgid "file insertion, even with drag-and-drop"
+msgstr "fájlbeszúrás akár fogd és vidd módszerrel is"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2207
+msgid "editing with HTML coding"
+msgstr "HTML-kód szerkesztése"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2209
+msgid ""
+"From the :guilabel:`...` drop-down at the far right of the toolbar, you can:"
+msgstr ""
+"Az eszköztár jobb szélén található :guilabel:`...` legördülő menüből a "
+"következőket teheti:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2211
+msgid ":guilabel:`Remove all formatting`"
+msgstr ":guilabel:`Összes formázás eltávolítása`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2212
+msgid ":guilabel:`Remove character formatting`"
+msgstr ":guilabel:`Karakterformázás eltávolítása`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2213
+msgid ":guilabel:`Clear all content`"
+msgstr ":guilabel:`Tartalom törlése`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2215
+msgid ""
+"In the :guilabel:`Layers` panel, a layer with a note is assigned the "
+"|indicatorNotes| icon which, upon hover, displays the note. Click the icon "
+"to edit the note. You can as well right-click the layer and :guilabel:`Edit "
+"layer note...` or :guilabel:`Remove layer note`."
+msgstr ""
+"A :guilabel:`Rétegek` panelen egy megjegyzést tartalmazó rétegnél az "
+"|indicatorNotes| ikon fölé víve az egérmutatót megjeleníti a jegyzetet. "
+"Kattintson az ikonra a jegyzet szerkesztéséhez. A rétegre jobb gombbal "
+"kattintva elérheti a :guilabel:`Jegyzet készítése a réteghez…` és "
+":guilabel:`Réteg jegyzetének eltávolítása` menüpontokat."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2220
+msgid ""
+"Notes are part of the :ref:`layer style <store_style>` and can be saved in "
+"the :file:`.qml` or :file:`.qlr` file. They can also be transferred from one"
+" layer to another while copy-pasting the layer style."
+msgstr ""
+"A megjegyzések a :ref:`rétegstílus <store_style>` részét képezik, és a "
+":file:`.qml` vagy :file:`.qlr` fájlba menthetőek. A rétegstílus másolásakor "
+"és beillesztésekor is átvihetők egyik rétegről a másikra."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2229
 msgid "Storing values in Variables"
 msgstr "Értékek tárolása változókban"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2231
+msgid ""
+"In QGIS, you can use variables to store useful recurrent values (e.g. the "
+"project's title, or the user's full name) that can be used in expressions. "
+"Variables can be defined at the application's global level, project level, "
+"layer level, processing modeler level, layout level, and layout item's "
+"level. Just like CSS cascading rules, variables can be overwritten - e.g., a"
+" project level variable will overwrite any application global level "
+"variables set with the same name. You can use these variables to build text "
+"strings or other custom expressions using the ``@`` character before the "
+"variable name. For example in print layout creating a label with this "
+"content::"
+msgstr ""
+"A QGIS-ben változók segítségével az ismétlődő értékeket eltárolhatja "
+"(például a projekt címét vagy a felhasználó teljes nevét), ezek később "
+"kifejezésekben használhatóak. A változók az alkalmazás globális szintjén, "
+"projektszinten, rétegszinten, feldolgozási modellező szintjén, elrendezés "
+"szintjén és elrendezési elem szintjén definiálhatók. Csakúgy, mint a CSS "
+"lépcsőzetes szabályai, a változók felülírhatók – például egy projektszintű "
+"változó felülír minden alkalmazásszintű, azonos nevű változót. Ezekkel a "
+"változókkal szöveges karakterláncokat vagy más egyéni kifejezéseket hozhat "
+"létre, a változó neve előtti ``@`` karakter használatával. Például "
+"nyomtatási elrendezésben a következő tartalommal létrehozott címke:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2244
 msgid "Will render the label like this::"
@@ -5091,6 +5695,14 @@ msgid ""
 msgstr ""
 "**vektorréteg változókat** a :guilabel:`Rétegtulajdonságok` "
 "párbeszédablakból (lásd :ref:`vector_properties_dialog`);"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2258
+msgid ""
+"**modeler variables** from the :guilabel:`Graphical Modeler` dialog (see "
+":ref:`processing.modeler`);"
+msgstr ""
+"**modellező változóit** a :guilabel:`Grafikus modellező` párbeszédablakban "
+"(lásd: :ref:`processing.modeler`);"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2260
 msgid ""
@@ -5458,6 +6070,20 @@ msgstr ""
 msgid ":guilabel:`Invert Color Ramp`"
 msgstr ":guilabel:`Színskála invertálása`"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:2439
+msgid ""
+"|unchecked| :guilabel:`Random Colors`: available only in some contexts "
+"(e.g., when a color ramp is being used for a layer symbology), checking this"
+" entry creates and applies a color ramp with random colors. It also enables "
+"a :guilabel:`Shuffle random colors` entry to regenerate a new random color "
+"ramp if the current one is not satisfactory."
+msgstr ""
+"|unchecked| :guilabel:`Véletlen színek`: csak bizonyos kontextusokban érhető"
+" el (pl. színskálát használva a réteg jelrendszerében), a bejelölése "
+"véletlenszerű színekkel hoz létre egy színskálát. Lehetővé teszi továbbá a "
+":guilabel:`Véletlen színek keverését` is, amely egy új véletlenszerű "
+"színskálát generál, ha az aktuális nem lenne megfelelő."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2444
 msgid ""
 "a preview of the ``gradient`` or ``catalog: cpt-city`` color ramps flagged "
@@ -5537,6 +6163,114 @@ msgid ":guilabel:`Paste Symbol` to the current item, speeding configuration"
 msgstr ""
 ":guilabel:`Szimbólum beillesztése` az aktuális elemre, meggyorsítva a "
 "beállítást "
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2481
+msgid "Remote or embedded file selector"
+msgstr "Távoli vagy beágyazott fájlválasztó"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2483
+msgid ""
+"Along with the file selector widget, the :guilabel:`...` button will "
+"sometimes show a drop-down arrow. This is usually available when using:"
+msgstr ""
+"A fájlválasztó vezérlője mellett a :guilabel:`…` gombon néha egy legördülő "
+"nyíl látható. Ez általában akkor érhető el, ha használ:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2486
+msgid "an SVG file in a symbol or a label"
+msgstr "SVG-fájl szimbólumhoz vagy címkéhez"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2487
+msgid "a raster image to customize symbols, labels, textures or decorations"
+msgstr ""
+"raszteres képet szimbólumok, címék, textúrák vagy dekorációk testre "
+"szabásához"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2489
+msgid "Pressing the arrow will provide you with a menu to:"
+msgstr "A nyilat megnyomva egy menü jelenik meg, amiből:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2491
+msgid ""
+"load the file from the file system: the file is identified through the file "
+"path and QGIS needs to resolve the path in order to display the "
+"corresponding image"
+msgstr ""
+"betölthet egy fájlt a fájlrendszerből: a fájlt annak elérési útja "
+"azonosítja, és a QGIS-nek fel kell oldania ezt az elérési utat a megfelelő "
+"kép megjelenítéséhez"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2493
+msgid ""
+"load the file from a remote URL: as above, the image will only be loaded on "
+"successful retrieval of the remote resource"
+msgstr ""
+"betölthet egy fájl távoli URL-ről: mint fent, a kép csak a távoli erőforrás "
+"sikeres lekérésekor töltődik be"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2495
+msgid ""
+"embed the file into the item: the file is embedded inside the current "
+"project, style database, or print layout template. The file is then always "
+"rendered as part of the item. This is a convenient way to create self-"
+"contained projects with custom symbols which can be easily shared amongst "
+"different users and installations of QGIS."
+msgstr ""
+"beágyazhatja a fájlt az elembe: a fájl az aktuális projektbe, "
+"stílusadatbázisba vagy nyomtatási elrendezéssablonba lesz beágyazva. A fájl "
+"ezután mindig az elem részeként fog megjelenni. Ez kényelmes módja egyéni "
+"szimbólumokat tartalmazó, de mégis kompakt projektek létrehozásának, amelyek"
+" könnyen megoszthatók más QGIS-felhasználókkal."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2500
+msgid "extract the embedded file from the widget and save it on disk."
+msgstr "kibonthatja a beágyazott fájlt a vezérlőből és elmentheti lemezre."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2506
+msgid "Spatial Extent Selector"
+msgstr "Térbeli terjedelemválasztó"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2508
+msgid ""
+"The :guilabel:`Extent` selector widget is a convenient shortcut when you "
+"want to select a spatial extent to assign to a layer or to limit the actions"
+" to run on. Depending on the context, it offers selection between:"
+msgstr ""
+"A :guilabel:`Terjedelem` választó kényelmesen használható felületet biztosít"
+" rétegekhez rendelt térbeli terjedelem kiválasztásához, vagy a végrehajtandó"
+" műveletek térbeli korlátozásához. A kontextustól függően a következők közül"
+" választhat:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2512
+msgid ":guilabel:`Current layer extent`, e.g. when exporting a layer"
+msgstr ":guilabel:`Aktuális réteg terjedelme`, pl. réteg exportálásakor"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2513
+msgid ""
+":menuselection:`Calculate from layer -->`: uses extent of a layer loaded in "
+"the current project"
+msgstr ""
+":menuselection:`Számítás egy rétegből -->`: használja az aktuális projektben"
+" betöltött rétegek egyikének terjedelmét"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2515
+msgid "Use current :guilabel:`Map canvas extent`"
+msgstr "Az aktuális :guilabel:`Térképvászon terjedelmének` használata"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2516
+msgid ":guilabel:`Draw on canvas` a rectangle whose coordinates are then used"
+msgstr ""
+":guilabel:`Kijelölés a térképvásznon` egy térképre rajzolt téglalap "
+"sarokkoordinátáival"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2517
+msgid "Enter or edit the coordinates as ``xmin, xmax, ymin, ymax``"
+msgstr ""
+"Megadhatja vagy szerkesztheti az ``xmin, xmax, ymin, ymax`` koordinátákat"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2524
+msgid "Extent selector widget"
+msgstr "Terjedelemválasztó vezérlő"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2531
 msgid "Font Selector"
@@ -5634,6 +6368,29 @@ msgstr ":guilabel:`Pixel`"
 msgid ":guilabel:`Inches`"
 msgstr ":guilabel:`Hüvelyk`"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:2573
+msgid ""
+":guilabel:`Meters at Scale`: This allows you to always set the size in "
+"meters, regardless of what the underlying map units are (e.g. they can be in"
+" inches, feet, geographic degrees, ...). The size in meters is calculated "
+"based on the current project ellipsoid setting and a projection of the "
+"distances in meters at the center of the current map extent. For maps in a "
+"projected coordinate system this is calculated using projected units. For "
+"maps in a geographic (latitude/longitude) based system the size is "
+"approximated by calculating meter sizes using ellipsoidal calculations for "
+"the vertical scale of the map."
+msgstr ""
+":guilabel:`Méretarányos méter`: Ez lehetővé teszi, hogy mindig méterben "
+"állítsa be a méretet, függetlenül attól, hogy mik az alapul szolgáló "
+"térképegységek (pl. lehetnek hüvelykben, lábban, földrajzi fokban stb.). A "
+"méterben megadott méretet a program az aktuális projekt ellipszoid-"
+"beállítása és a térkép aktuális terjedelmének középpontjában mért távolságok"
+" vetülete alapján számítja ki. Vetített koordináta-rendszerben lévő térképek"
+" esetén vetített mértékegységek használatával számol. A földrajzi "
+"(szélesség/hosszúság) alapú rendszerben lévő térképek esetében a méter "
+"méretének közelítése a térkép függőleges méretarányának ellipszoidi "
+"számításával történik."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2581
 msgid ""
 "and :guilabel:`Map Units`: The size is scaled according to the map view "
@@ -5688,6 +6445,10 @@ msgstr ""
 "százalékértékek stb.) használatával. Ennek egyik felhasználási módja a "
 "szöveg beállítása egy elrendezés léptékvonalzóján vagy rögzített "
 "táblázatban."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2615
+msgid "Formatting numeric value"
+msgstr "Számérték formázása"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2617
 msgid ""
@@ -6126,9 +6887,43 @@ msgstr ""
 msgid "Using the data-defined assistant interface"
 msgstr "Az adatvezérelt segéd használata"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:2758
+msgid ""
+"When the |dataDefine| :sup:`Data-defined override` button is associated with"
+" a size, a rotation, an opacity or a color property, it has an "
+":guilabel:`Assistant...` option that helps you change how the data is "
+"applied to the parameter for each feature. The assistant allows you to:"
+msgstr ""
+"Amikor egy |dataDefine| :sup:`Adatvezérelt felülbírálás` gomb mérethez, "
+"elforgatáshoz, átlátszatlansághoz vagy színtulajdonsághoz van társítva, van "
+"egy :guilabel:`Segéd…` menüpontja, amely segít megváltoztatni, hogy az "
+"adatokat miként kell az egyes elemek paramétereihez igazítani. A segéd "
+"lehetővé teszi:"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2763
 msgid "Define the :guilabel:`Input` data, ie:"
 msgstr ":guilabel:`Input` adat meghatározása, pl.:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2765
+msgid ""
+":guilabel:`Source`: the attribute to represent, using a field or an "
+"|expression| :ref:`expression <vector_expressions>`"
+msgstr ""
+":guilabel:`Forrás`: az ábrázolandó attribútum egy mező vagy |expression| "
+":ref:`kifejezés <vector_expressions>` használatával"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2767
+msgid ""
+"the range of values to represent: you can manually enter the values or use "
+"the |refresh| :sup:`Fetch value range from layer` button to fill these "
+"fields automatically with the minimum and maximum values returned by the "
+":guilabel:`Source` expression applied to your data"
+msgstr ""
+"az ábrázolandó értékek tartománya: kézzel is megadhatja az értékeket, vagy "
+"használhatja az |refresh| :sup:`Értéktartomány betöltése a rétegből` gombot,"
+" amellyel automatikusan kitölti ezeket a mezőket az adatokra alkalmazott "
+":guilabel:`Forrás` kifejezés által visszaadott minimális és maximális "
+"értékekkel"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2771
 msgid ""
@@ -6152,6 +6947,41 @@ msgstr ""
 ":guilabel:`Output` értékek meghatározása: a lehetőségek a definiálandó "
 "paramétertől függően változnak. Globálisan beállíthatja:"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:2779
+msgid ""
+"for a color setting, the :ref:`color ramp <color-ramp>` to apply to values "
+"and the single color to use for NULL values"
+msgstr ""
+"szín beállítása esetén az értékekre alkalmazandó :ref:`színskálát <color-"
+"ramp>`, és egy színt a NULL-értékekhez"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2781
+msgid ""
+"for the others, the minimum and maximum values to apply to the selected "
+"property as well as the size/angle/opacity value for ignored or NULL source "
+"features"
+msgstr ""
+"egyébként az kiválasztott tulajdonságra alkalmazandó minimum és maximum "
+"értékeket, valamint a figyelmen kívül hagyott vagy NULL elemek "
+"méretét/szögét/átlátszatlanságát"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2784
+msgid ""
+"for size properties, the :guilabel:`Scale method` of representation which "
+"can be **Flannery**, **Exponential**, **Surface**, **Radius** or **Linear**"
+msgstr ""
+"a mérettulajdonságok esetében az ábrázolás guilabel:`Méretezési módját`, "
+"amely lehet **Flannery**, **Exponenciális**, **Felület**, **Sugár** vagy "
+"**Lineáris**"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2786
+msgid ""
+"the :guilabel:`Exponent` to use for data scaling when the :guilabel:`Scale "
+"method` is of exponential type or when tweaking the opacity"
+msgstr ""
+"az adatok méretezésének :guilabel:`Kitevőjét`, ha a :guilabel:`Méretezési "
+"mód` exponenciálisra van állítva, vagy átlátszatlanság módosításakor"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2789
 msgid ""
 "When compatible with the property, a live-update preview is displayed in the"
@@ -6159,3 +6989,15 @@ msgid ""
 msgstr ""
 "Ha kompatibilis a tulajdonsággal, a párbeszédablak jobb szélén látható egy "
 "élő előnézet, amely segít beállítani az értékek skálázását."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2797
+msgid "Scaling feature size based on passengers field's value"
+msgstr "Elem méretének skálázása a passengers mező értéke alapján"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2799
+msgid ""
+"The values presented in the varying size assistant above will set the size "
+"'Data-defined override' with:"
+msgstr ""
+"A fenti Segédben látható értékek az alábbi 'Adatvezérelt felülbírálással' "
+"állítják be a méretet:"
