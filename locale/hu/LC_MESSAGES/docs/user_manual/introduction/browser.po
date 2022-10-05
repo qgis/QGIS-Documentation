@@ -250,6 +250,14 @@ msgid ""
 msgstr ""
 "Rétegek átnevezése és törlése (helyi menü: :menuselection:`Kezelés -->`)"
 
+#: ../../docs/user_manual/introduction/browser.rst:107
+msgid ""
+"Open a file explorer window and directly select the file :guilabel:`Show in "
+"Files`"
+msgstr ""
+"A :guilabel:`Megjelenítés a Fájlkezelőben` megnyit egy fájlkezelő ablakot és"
+" kijelöli benne a fájlt"
+
 #: ../../docs/user_manual/introduction/browser.rst:110
 msgid ""
 "Resource specific actions are listed for the different resource groups "
@@ -331,9 +339,27 @@ msgid ""
 msgstr ""
 "A projektfájl mentése után elérhetővé válik a :guilabel:`Projektkönyvtár` "
 "bejegyzés, egy olyan mappa, amely az aktuális projekten belül használható "
-"adatokat és egyéb tartalmakat (szkriptek, modellek, szöveg stb.) tartalmaz. "
-"A :guilabel:`Böngésző` panelről lehetővé teszi a projekt adatainak és egyéb "
-"fájljainak gyors elérését."
+"adatokat és egyéb tartalmakat (szkriptek, modellek, szöveg stb.) "
+"tartalmazza. Lehetővé teszi a projekt adatainak és egyéb fájljainak gyors "
+"elérését a :guilabel:`Böngésző` panelről."
+
+#: ../../docs/user_manual/introduction/browser.rst:153
+msgid ""
+"It defaults to the project file folder but can be changed through the "
+":menuselection:`Project --> Properties... --> General --> Project home` "
+"option, or by right-clicking on the :guilabel:`Project Home` item of the "
+"Browser panel and selecting :guilabel:`Set project home...`. Customizing "
+"that folder is especially useful in contexts where QGIS projects are not "
+"stored in the root folder of an organisational 'project', along with "
+"datasets."
+msgstr ""
+"Alapértelmezetten a projektfájl könyvtárára mutat, de ez módosítható a "
+":menuselection:`Projekt --> Beállítások… --> Általános --> Projektkönyvtár` "
+"szerkesztésével, vagy Böngésző panel :guilabel:`Projektkönyvtár` elemére "
+"jobb gombbal kattintva a :guilabel:`Projektkönyvtár beállítása…` "
+"menüponttal. A mappa testreszabása különösen hasznos olyan környezetben, "
+"ahol a QGIS-projektek nem az adathalmazokkal együtt a szervezeti „projekt” "
+"gyökérmappájában vannak tárolva."
 
 #: ../../docs/user_manual/introduction/browser.rst:162
 msgid "Drives and file system"
@@ -403,6 +429,26 @@ msgstr ""
 msgid "enable :guilabel:`Scanning`:"
 msgstr ":guilabel:`Beolvasás engedélyezése`:"
 
+#: ../../docs/user_manual/introduction/browser.rst:185
+msgid ""
+"|checkbox| :guilabel:`Monitor for changes`: allows to manually control "
+"whether a particular directory should be monitored and automatically "
+"updated. This setting applies to the selected directory and all "
+"subdirectories. This means that you can manually opt-in to monitoring of "
+"network drives if you know there's no issue, or manually opt-out of "
+"monitoring of large directories which you don't want monitored for other "
+"reasons. By default, remote or network drives are not automatically "
+"monitored."
+msgstr ""
+"|checkbox| :guilabel:`Változások figyelése`: lehetővé teszi annak "
+"szabályozását, hogy egy adott könyvtárat figyelni és automatikusan "
+"frissíteni kell-e. Ez a beállítás a kiválasztott könyvtárra és az összes "
+"alkönyvtárra vonatkozik. Ez azt jelenti, hogy manuálisan is engedélyezheti a"
+" hálózati meghajtók figyelését, ha tudja, hogy nincs vele probléma, vagy "
+"manuálisan is leiratkozhat a nagy könyvtárak figyeléséről, amelyeket más "
+"okokból nem szeretne figyelni. Alapértelmezés szerint a távoli vagy hálózati"
+" meghajtókat a rendszer nem figyeli automatikusan."
+
 #: ../../docs/user_manual/introduction/browser.rst:406
 msgid "checkbox"
 msgstr "checkbox"
@@ -437,6 +483,17 @@ msgstr ""
 #: ../../docs/user_manual/introduction/browser.rst:200
 msgid "Database entries"
 msgstr "Adatbázisok"
+
+#: ../../docs/user_manual/introduction/browser.rst:202
+msgid ""
+"Depending on your OS and installed drivers, you might have access to "
+"different database types to use in QGIS. Below are listed the different "
+"entries of contextual menu at each level of the dataset tree."
+msgstr ""
+"Az operációs rendszertől és a telepített illesztőprogramoktól függően "
+"előfordulhat, hogy eltérő adatbázistípusokhoz férhet hozzá a QGIS-ben. Az "
+"alábbiakban felsoroljuk a helyi menü különböző bejegyzéseit az adathalmazfa "
+"minden szintjén."
 
 #: ../../docs/user_manual/introduction/browser.rst:210
 #: ../../docs/user_manual/introduction/browser.rst:292
@@ -506,6 +563,10 @@ msgid "Top menu"
 msgstr "Főmenü"
 
 #: ../../docs/user_manual/introduction/browser.rst:215
+msgid "Create a :guilabel:`New Connection…` to an existing database"
+msgstr ":guilabel:`Új kapcsolat…` létrehozása egy meglévő adatbázishoz"
+
+#: ../../docs/user_manual/introduction/browser.rst:215
 #: ../../docs/user_manual/introduction/browser.rst:218
 #: ../../docs/user_manual/introduction/browser.rst:220
 #: ../../docs/user_manual/introduction/browser.rst:223
@@ -551,29 +612,246 @@ msgstr "Főmenü"
 msgid "|checkbox|"
 msgstr "|checkbox|"
 
+#: ../../docs/user_manual/introduction/browser.rst:218
+msgid ":guilabel:`Create Database…`"
+msgstr ":guilabel:`Adatbázis létrehozása…`"
+
+#: ../../docs/user_manual/introduction/browser.rst:220
+#: ../../docs/user_manual/introduction/browser.rst:305
+msgid ":guilabel:`Save Connections…` details to a file"
+msgstr ":guilabel:`Kapcsolatok mentése…` fájlba"
+
+#: ../../docs/user_manual/introduction/browser.rst:223
+#: ../../docs/user_manual/introduction/browser.rst:308
+msgid ":guilabel:`Load Connections…`"
+msgstr ":guilabel:`Kapcsolatok betöltése…`"
+
+#: ../../docs/user_manual/introduction/browser.rst:225
+msgid "Connection / Database"
+msgstr "Kapcsolat / Adatbázis"
+
+#: ../../docs/user_manual/introduction/browser.rst:225
+msgid ":guilabel:`Refresh` a connection"
+msgstr "Egy kapcsolat :guilabel:`Frissítése`"
+
+#: ../../docs/user_manual/introduction/browser.rst:227
+msgid ":guilabel:`Edit Connection…` settings"
+msgstr ":guilabel:`Kapcsolat szerkesztése…`"
+
+#: ../../docs/user_manual/introduction/browser.rst:229
+msgid ":guilabel:`Delete Connection`"
+msgstr ":guilabel:`Kapcsolat törlése`"
+
+#: ../../docs/user_manual/introduction/browser.rst:231
+msgid ":guilabel:`Delete <database_name>`"
+msgstr ":guilabel:`<adatbázis_tábla> törlése`"
+
+#: ../../docs/user_manual/introduction/browser.rst:233
+msgid ":guilabel:`Compact Database (VACUUM)`"
+msgstr ":guilabel:`Adatbázis tisztítása (VACUUM)`"
+
+#: ../../docs/user_manual/introduction/browser.rst:235
+msgid "Create a :guilabel:`New Schema…`"
+msgstr ":guilabel:`Új séma…` létrehozása"
+
+#: ../../docs/user_manual/introduction/browser.rst:237
+#: ../../docs/user_manual/introduction/browser.rst:249
+msgid "Create a :guilabel:`New Table…`"
+msgstr ":guilabel:`Új tábla…` létrehozása"
+
+#: ../../docs/user_manual/introduction/browser.rst:239
+#: ../../docs/user_manual/introduction/browser.rst:251
+#: ../../docs/user_manual/introduction/browser.rst:259
+msgid ":guilabel:`Execute SQL…` query"
+msgstr ":guilabel:`SQL végrehajtása…`"
+
+#: ../../docs/user_manual/introduction/browser.rst:241
+msgid "Schema"
+msgstr "Séma"
+
+#: ../../docs/user_manual/introduction/browser.rst:241
+msgid ":guilabel:`Refresh` a schema"
+msgstr "Séma :guilabel:`Frissítése`"
+
+#: ../../docs/user_manual/introduction/browser.rst:243
+msgid ":menuselection:`Schema Operations --> Rename Schema…`"
+msgstr ":menuselection:`Sémaműveletek --> Séma átnevezése…`"
+
+#: ../../docs/user_manual/introduction/browser.rst:246
+msgid ":menuselection:`Schema Operations --> Delete Schema…`"
+msgstr ":menuselection:`Sémaműveletek --> Séma törlése…`"
+
+#: ../../docs/user_manual/introduction/browser.rst:253
+#: ../../docs/user_manual/introduction/browser.rst:318
+msgid "Table / Layer"
+msgstr "Tábla / Réteg"
+
+#: ../../docs/user_manual/introduction/browser.rst:253
+msgid ":menuselection:`Table Operations --> Rename Table…`"
+msgstr ":menuselection:`Táblaműveletek --> Tábla átnevezése…`"
+
+#: ../../docs/user_manual/introduction/browser.rst:256
+msgid ":menuselection:`Table Operations --> Truncate Table…`"
+msgstr ":menuselection:`Táblaműveletek --> Tábla ürítése…`"
+
+#: ../../docs/user_manual/introduction/browser.rst:261
+msgid ":menuselection:`Export Layer --> To file…`"
+msgstr ":menuselection:`Réteg exportálása --> Fájlba…`"
+
+#: ../../docs/user_manual/introduction/browser.rst:263
+msgid ":menuselection:`Manage --> Rename Layer <layer_name>…`"
+msgstr ":menuselection:`Kezelés --> <rétegnév> réteg átnevezése…`"
+
+#: ../../docs/user_manual/introduction/browser.rst:266
+msgid ":menuselection:`Manage --> Delete Layer <layer_name>…`"
+msgstr ":menuselection:`Kezelés --> <rétegnév> réteg törlése…`"
+
+#: ../../docs/user_manual/introduction/browser.rst:269
+msgid ":menuselection:`Manage --> Delete Selected Layers`"
+msgstr ":menuselection:`Kezelés --> Kiválasztott rétegek törlése`"
+
+#: ../../docs/user_manual/introduction/browser.rst:272
+msgid ":menuselection:`Manage --> Add Layer to Project`"
+msgstr ":menuselection:`Kezelés --> Réteg hozzáadása a projekthez`"
+
+#: ../../docs/user_manual/introduction/browser.rst:275
+msgid ":menuselection:`Manage --> Add Selected Layers to Project`"
+msgstr ""
+":menuselection:`Kezelés --> Kiválasztott rétegek hozzáadása a projekthez`"
+
+#: ../../docs/user_manual/introduction/browser.rst:278
+msgid "Open :guilabel:`Layer Properties…` dialog"
+msgstr ":guilabel:`Réteg tulajdonságai…` párbeszédablak megnyitása"
+
+#: ../../docs/user_manual/introduction/browser.rst:280
+msgid "Open :guilabel:`File Properties…` dialog"
+msgstr ":guilabel:`Fájl tulajdonságai…` párbeszédablak megnyitása"
+
+#: ../../docs/user_manual/introduction/browser.rst:282
+msgid "Fields"
+msgstr "Mezők"
+
+#: ../../docs/user_manual/introduction/browser.rst:282
+msgid ":guilabel:`Add New Field…`"
+msgstr ":guilabel:`Új mező hozzáadása…`"
+
+#: ../../docs/user_manual/introduction/browser.rst:284
+msgid "Field"
+msgstr "Mező"
+
+#: ../../docs/user_manual/introduction/browser.rst:284
+msgid ":guilabel:`Delete Field…`"
+msgstr ":guilabel:`Mező törlése…`"
+
+#: ../../docs/user_manual/introduction/browser.rst:289
+msgid "Tiles and Web Services"
+msgstr "Webes és csempeszolgáltatások"
+
+#: ../../docs/user_manual/introduction/browser.rst:292
+msgid "Type of services"
+msgstr "Szolgáltatás típusa"
+
+#: ../../docs/user_manual/introduction/browser.rst:294
+msgid "|wms| WMS / WMTS"
+msgstr "|wms| WMS / WMTS"
+
 #: ../../docs/user_manual/introduction/browser.rst:438
 msgid "wms"
 msgstr "wms"
+
+#: ../../docs/user_manual/introduction/browser.rst:294
+msgid "|vectorTileLayer| Vector Tiles"
+msgstr "|vectorTileLayer| Vektorcsempe"
+
+#: ../../docs/user_manual/introduction/browser.rst:432
+msgid "vectorTileLayer"
+msgstr "vectorTileLayer"
+
+#: ../../docs/user_manual/introduction/browser.rst:294
+msgid "|xyz| XYZ Tiles"
+msgstr "|xyz| XYZ-csempe"
 
 #: ../../docs/user_manual/introduction/browser.rst:440
 msgid "xyz"
 msgstr "xyz"
 
+#: ../../docs/user_manual/introduction/browser.rst:294
+msgid "|wcs| WCS"
+msgstr "|wcs| WCS"
+
 #: ../../docs/user_manual/introduction/browser.rst:434
 msgid "wcs"
 msgstr "wcs"
+
+#: ../../docs/user_manual/introduction/browser.rst:294
+msgid "|wfs| WFS / OGC API - Features"
+msgstr "|wfs| WFS / OGC API – Elemek"
 
 #: ../../docs/user_manual/introduction/browser.rst:436
 msgid "wfs"
 msgstr "wfs"
 
+#: ../../docs/user_manual/introduction/browser.rst:294
+msgid "|afs| ArcGIS REST Servers"
+msgstr "|afs| ArcGIS REST Szerver"
+
 #: ../../docs/user_manual/introduction/browser.rst:400
 msgid "afs"
 msgstr "afs"
 
+#: ../../docs/user_manual/introduction/browser.rst:294
+msgid "|geonode| GeoNode"
+msgstr "|geonode| GeoNode"
+
 #: ../../docs/user_manual/introduction/browser.rst:414
 msgid "geonode"
 msgstr "geonode"
+
+#: ../../docs/user_manual/introduction/browser.rst:298
+msgid "Create a :guilabel:`New Connection…`"
+msgstr ":guilabel:`Új kapcsolat…` létrehozása"
+
+#: ../../docs/user_manual/introduction/browser.rst:300
+msgid "Create a :guilabel:`New Generic Connection…`"
+msgstr ":guilabel:`Új általános kapcsolat…` létrehozása"
+
+#: ../../docs/user_manual/introduction/browser.rst:302
+msgid "Create a :guilabel:`New ArcGIS Vector Tile Service Connection…`"
+msgstr ""
+":guilabel:`Új ArcGIS vektorcsempe szolgáltatás kapcsolat…` létrehozása"
+
+#: ../../docs/user_manual/introduction/browser.rst:310
+msgid "Connection"
+msgstr "Kapcsolat"
+
+#: ../../docs/user_manual/introduction/browser.rst:310
+msgid ":guilabel:`Refresh` connection"
+msgstr "Kapcsolat :guilabel:`Frissítése`"
+
+#: ../../docs/user_manual/introduction/browser.rst:312
+msgid ":guilabel:`Edit…` connection settings"
+msgstr "Kapcsolat beállításainak :guilabel:`Szerkesztése…`"
+
+#: ../../docs/user_manual/introduction/browser.rst:314
+msgid ":guilabel:`Delete` connection"
+msgstr "Kapcsolat :guilabel:`Törlése`"
+
+#: ../../docs/user_manual/introduction/browser.rst:316
+#: ../../docs/user_manual/introduction/browser.rst:324
+msgid ":guilabel:`View Service Info` in Web browser"
+msgstr ":guilabel:`Szolgáltatás információinak megtekintése` böngészőben"
+
+#: ../../docs/user_manual/introduction/browser.rst:318
+msgid ":menuselection:`Export Layer --> To File...`"
+msgstr ":menuselection:`Réteg exportálása --> Fájlba…`"
+
+#: ../../docs/user_manual/introduction/browser.rst:320
+msgid ":guilabel:`Add layer to Project`"
+msgstr ":guilabel:`Réteg hozzáadása a projekthez`"
+
+#: ../../docs/user_manual/introduction/browser.rst:322
+msgid "Open :guilabel:`Layer properties…` dialog"
+msgstr ":guilabel:`Réteg tulajdonságai…` párbeszédablak megnyitása"
 
 #: ../../docs/user_manual/introduction/browser.rst:330
 msgid "Resources"
