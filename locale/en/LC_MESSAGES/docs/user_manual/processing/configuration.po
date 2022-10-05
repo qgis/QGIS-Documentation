@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-12 00:23+0100\n"
+"POT-Creation-Date: 2022-10-05 02:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.10.3\n"
 
 #: ../../docs/user_manual/processing/configuration.rst:5
 msgid "Configuring the Processing Framework"
@@ -88,10 +88,21 @@ msgid ":guilabel:`Max Threads`"
 msgstr ""
 
 #: ../../docs/user_manual/processing/configuration.rst:42
-msgid ":guilabel:`Output folder`"
+msgid ""
+":guilabel:`Output folder` for non temporary outputs: If no folder path is"
+" provided for the Processing execution outputs, this is the folder in "
+"which they will be saved. Default is :file:`processing/outputs` under the"
+" active :ref:`user profile <user_profiles>` directory."
 msgstr ""
 
-#: ../../docs/user_manual/processing/configuration.rst:43
+#: ../../docs/user_manual/processing/configuration.rst:46
+msgid ""
+":guilabel:`Override temporary output folder path`: Temporary outputs are "
+"saved by default in the :file:`tmp` folder on the machine. This option "
+"helps you set a different place for storage."
+msgstr ""
+
+#: ../../docs/user_manual/processing/configuration.rst:49
 msgid ""
 ":guilabel:`Pre-execution script` and :guilabel:`Post-execution script`. "
 "These parameters point to files that contain scripts written using the "
@@ -99,7 +110,7 @@ msgid ""
 "scripting and the console."
 msgstr ""
 
-#: ../../docs/user_manual/processing/configuration.rst:47
+#: ../../docs/user_manual/processing/configuration.rst:53
 msgid ""
 ":guilabel:`Prefer output filename for layer names`. The name of each "
 "resulting layer created by an algorithm is defined by the algorithm "
@@ -113,7 +124,7 @@ msgid ""
 "with other already existing filenames."
 msgstr ""
 
-#: ../../docs/user_manual/processing/configuration.rst:59
+#: ../../docs/user_manual/processing/configuration.rst:65
 msgid ""
 ":guilabel:`Results group name`. If you want to obtain all processing "
 "result layers in a group in the :guilabel:`Layers` panel, set a group "
@@ -126,7 +137,7 @@ msgid ""
 "running algorithm` is checked in the algorithm dialog."
 msgstr ""
 
-#: ../../docs/user_manual/processing/configuration.rst:69
+#: ../../docs/user_manual/processing/configuration.rst:75
 msgid ""
 ":guilabel:`Show algorithms with known issues`: By default, QGIS avoids "
 "display of broken algorithms (generally from third-party providers). If "
@@ -134,15 +145,15 @@ msgid ""
 " icon and a tooltip explaining they have issues. Use at your own risks."
 msgstr ""
 
-#: ../../docs/user_manual/processing/configuration.rst:73
+#: ../../docs/user_manual/processing/configuration.rst:79
 msgid ":guilabel:`Show layer CRS definition in selection boxes`"
 msgstr ""
 
-#: ../../docs/user_manual/processing/configuration.rst:74
+#: ../../docs/user_manual/processing/configuration.rst:80
 msgid ":guilabel:`Show tooltip when there are disabled providers`"
 msgstr ""
 
-#: ../../docs/user_manual/processing/configuration.rst:75
+#: ../../docs/user_manual/processing/configuration.rst:81
 msgid ""
 ":guilabel:`Style for line layers`, :guilabel:`Style for point layers`, "
 ":guilabel:`Style for polygons layers` and :guilabel:`Style for raster "
@@ -154,7 +165,7 @@ msgid ""
 "rendered with that style."
 msgstr ""
 
-#: ../../docs/user_manual/processing/configuration.rst:86
+#: ../../docs/user_manual/processing/configuration.rst:92
 msgid ""
 "Rendering styles can be configured individually for each algorithm and "
 "each one of its outputs. Just right-click on the name of the algorithm in"
@@ -162,21 +173,21 @@ msgid ""
 "You will see a dialog like the one shown next."
 msgstr ""
 
-#: ../../docs/user_manual/processing/configuration.rst:97
+#: ../../docs/user_manual/processing/configuration.rst:103
 msgid "Rendering Styles"
 msgstr ""
 
-#: ../../docs/user_manual/processing/configuration.rst:99
+#: ../../docs/user_manual/processing/configuration.rst:105
 msgid ""
 "Select the style file (:file:`.qml`) that you want for each output and "
 "press :guilabel:`OK`."
 msgstr ""
 
-#: ../../docs/user_manual/processing/configuration.rst:101
+#: ../../docs/user_manual/processing/configuration.rst:107
 msgid ":guilabel:`Warn before executing if parameter CRS's do not match`"
 msgstr ""
 
-#: ../../docs/user_manual/processing/configuration.rst:103
+#: ../../docs/user_manual/processing/configuration.rst:109
 msgid ""
 "The :guilabel:`Menus` block controls whether an algorithm, script or "
 "model (built-in or provided by plugins) should be made available through "
@@ -184,35 +195,35 @@ msgid ""
 " item of each provider, you can:"
 msgstr ""
 
-#: ../../docs/user_manual/processing/configuration.rst:108
+#: ../../docs/user_manual/processing/configuration.rst:114
 msgid ""
 ":guilabel:`Add button in toolbar`, making it available in the "
 ":guilabel:`Processing Algorithms` toolbar"
 msgstr ""
 
-#: ../../docs/user_manual/processing/configuration.rst:110
+#: ../../docs/user_manual/processing/configuration.rst:116
 msgid "assign an :guilabel:`Icon` to the algorithm"
 msgstr ""
 
-#: ../../docs/user_manual/processing/configuration.rst:111
+#: ../../docs/user_manual/processing/configuration.rst:117
 msgid ""
 "set a :guilabel:`Menu path`: the algorithm will then be available through"
 " an existing or a custom menu, e.g. ``Vect&or/MyTopAlgorithms``"
 msgstr ""
 
-#: ../../docs/user_manual/processing/configuration.rst:114
+#: ../../docs/user_manual/processing/configuration.rst:120
 msgid ""
 "Restart QGIS to apply the settings. At any time, your changes can be "
 ":guilabel:`Reset to defaults`."
 msgstr ""
 
-#: ../../docs/user_manual/processing/configuration.rst:117
+#: ../../docs/user_manual/processing/configuration.rst:123
 msgid ""
 "In the :guilabel:`Models` and :guilabel:`Scripts` blocks, you can set a "
 "default folder to store, and look for models and scripts respectively."
 msgstr ""
 
-#: ../../docs/user_manual/processing/configuration.rst:120
+#: ../../docs/user_manual/processing/configuration.rst:126
 msgid ""
 "You will also find a block for algorithm :guilabel:`Providers`. This is "
 "the place installed providers expose their settings. For example, built-"
