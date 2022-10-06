@@ -359,6 +359,12 @@ Further reading: :ref:`qgiscollect` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_collect_geometries_section
+   :end-before: .. end_concave_hull_section
+
+Further reading: :ref:`expression_function_GeometryGroup_convex_hull`
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_concave_hull_section
    :end-before: .. end_contains_section
 
 Further reading: :ref:`expression_function_GeometryGroup_overlay_contains`
@@ -367,7 +373,8 @@ Further reading: :ref:`expression_function_GeometryGroup_overlay_contains`
    :start-after: .. end_contains_section
    :end-before: .. end_convex_hull_section
 
-Further reading: :ref:`qgisconvexhull` algorithm
+Further reading: :ref:`expression_function_GeometryGroup_concave_hull`,
+:ref:`qgisconvexhull` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_convex_hull_section
