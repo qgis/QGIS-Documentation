@@ -432,6 +432,8 @@ aerial photos and the addition of some relevant information to your dataset.
    :width: 1.5em
 .. |polygonLayer| image:: /static/common/mIconPolygonLayer.png
    :width: 1.5em
+.. |snapping| image:: /static/common/mIconSnapping.png
+   :width: 1.5em
 .. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
