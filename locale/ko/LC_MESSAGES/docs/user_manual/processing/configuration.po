@@ -13,14 +13,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-12 00:23+0100\n"
+"POT-Creation-Date: 2022-10-05 02:45+0000\n"
 "PO-Revision-Date: 2022-03-14 05:13+0000\n"
 "Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2022\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.10.3\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -115,10 +115,26 @@ msgid ":guilabel:`Max Threads`"
 msgstr ":guilabel:`Max Threads`: 스레드 최대 개수를 설정합니다."
 
 #: ../../docs/user_manual/processing/configuration.rst:42
-msgid ":guilabel:`Output folder`"
-msgstr ":guilabel:`Output folder`: 산출물을 저장할 폴더를 설정합니다."
+msgid ""
+":guilabel:`Output folder` for non temporary outputs: If no folder path is "
+"provided for the Processing execution outputs, this is the folder in which "
+"they will be saved. Default is :file:`processing/outputs` under the active "
+":ref:`user profile <user_profiles>` directory."
+msgstr ""
+"임시 산출물이 아닌 산출물 용 :guilabel:`Output folder`: 공간 처리 프레임워크 실행 산출물 용 폴더 경로가 지정되어"
+" 있지 않은 경우, 이 폴더에 산출물을 저장할 것입니다. 기본값은 활성 :ref:`사용자 프로파일 <user_profiles>` 디렉터리"
+" 아래 있는 :file:`processing/outputs` 입니다."
 
-#: ../../docs/user_manual/processing/configuration.rst:43
+#: ../../docs/user_manual/processing/configuration.rst:46
+msgid ""
+":guilabel:`Override temporary output folder path`: Temporary outputs are "
+"saved by default in the :file:`tmp` folder on the machine. This option helps"
+" you set a different place for storage."
+msgstr ""
+":guilabel:`Override temporary output folder path`: 임시 산출물은 기본적으로 시스템 상에 있는 "
+":file:`tmp` 폴더에 저장됩니다. 이 옵션을 통해 저장소의 다른 위치를 설정할 수 있습니다."
+
+#: ../../docs/user_manual/processing/configuration.rst:49
 msgid ""
 ":guilabel:`Pre-execution script` and :guilabel:`Post-execution script`. "
 "These parameters point to files that contain scripts written using the "
@@ -129,7 +145,7 @@ msgstr ""
 "파라미터들은 공간 처리 스크립트 작업 기능을 통해 작성된 스크립트를 가리킵니다. 스크립트 작업 및 콘솔에 관한 부분에서 이 옵션들을 "
 "설명하고 있습니다."
 
-#: ../../docs/user_manual/processing/configuration.rst:47
+#: ../../docs/user_manual/processing/configuration.rst:53
 msgid ""
 ":guilabel:`Prefer output filename for layer names`. The name of each "
 "resulting layer created by an algorithm is defined by the algorithm itself. "
@@ -148,7 +164,7 @@ msgstr ""
 " 명칭이 달라지기도 합니다. 이 옵션을 활성화하면 대신 산출 파일명에서 레이어 명칭을 가져올 것입니다. 산출물이 임시 파일로 저장되는 "
 "경우, 이 임시 파일의 명칭은 다른 기존 임시 파일과의 충돌을 피하려는 목적으로 아주 길고 의미도 없다는 점을 기억해두십시오."
 
-#: ../../docs/user_manual/processing/configuration.rst:59
+#: ../../docs/user_manual/processing/configuration.rst:65
 msgid ""
 ":guilabel:`Results group name`. If you want to obtain all processing result "
 "layers in a group in the :guilabel:`Layers` panel, set a group name for this"
@@ -167,7 +183,7 @@ msgstr ""
 "after running algorithm` 옵션을 체크한 경우 :guilabel:`Layers` 패널에만 산출 레이어를 불러올 것이라는"
 " 점을 기억하십시오."
 
-#: ../../docs/user_manual/processing/configuration.rst:69
+#: ../../docs/user_manual/processing/configuration.rst:75
 msgid ""
 ":guilabel:`Show algorithms with known issues`: By default, QGIS avoids "
 "display of broken algorithms (generally from third-party providers). If "
@@ -178,19 +194,19 @@ msgstr ""
 "망가진 알고리즘을 출력하지 않습니다. 이 옵션을 체크하는 경우 공간처리 툴박스에서 경고 아이콘 및 해당 알고리즘에 문제가 있다는 사실을 "
 "설명하는 툴팁과 함께 표시되고, 해당 알고리즘을 사용할 수 있습니다.  이런 알고리즘은 사용자의 책임 하에 사용하십시오."
 
-#: ../../docs/user_manual/processing/configuration.rst:73
+#: ../../docs/user_manual/processing/configuration.rst:79
 msgid ":guilabel:`Show layer CRS definition in selection boxes`"
 msgstr ""
 ":guilabel:`Show layer CRS definition in selection boxes`: 콤보 박스에 레이어 좌표계 정의를"
 " 표출합니다."
 
-#: ../../docs/user_manual/processing/configuration.rst:74
+#: ../../docs/user_manual/processing/configuration.rst:80
 msgid ":guilabel:`Show tooltip when there are disabled providers`"
 msgstr ""
 ":guilabel:`Show tooltip when there are disabled providers`: 비활성화된 제공자가 있는 경우"
 " 툴팁을 표출합니다."
 
-#: ../../docs/user_manual/processing/configuration.rst:75
+#: ../../docs/user_manual/processing/configuration.rst:81
 msgid ""
 ":guilabel:`Style for line layers`, :guilabel:`Style for point layers`, "
 ":guilabel:`Style for polygons layers` and :guilabel:`Style for raster "
@@ -207,7 +223,7 @@ msgstr ""
 "사용자가 원하는 스타일을 생성하고 파일로 저장한 다음, 알고리즘이 사용할 수 있도록 설정에서 해당 파일을 가리키는 경로를 입력하기만 하면"
 " 됩니다. 공간 처리 프레임워크가 레이어를 불러와서 QGIS 맵 캔버스에 추가할 때마다 해당 스타일로 렌더링할 것입니다."
 
-#: ../../docs/user_manual/processing/configuration.rst:86
+#: ../../docs/user_manual/processing/configuration.rst:92
 msgid ""
 "Rendering styles can be configured individually for each algorithm and each "
 "one of its outputs. Just right-click on the name of the algorithm in the "
@@ -218,24 +234,24 @@ msgstr ""
 "오른쪽 클릭한 다음 :guilabel:`Edit rendering styles for outputs` 메뉴 옵션을 선택하십시오. 다음 "
 "그림과 같은 대화창이 열릴 겁니다."
 
-#: ../../docs/user_manual/processing/configuration.rst:97
+#: ../../docs/user_manual/processing/configuration.rst:103
 msgid "Rendering Styles"
 msgstr "렌더링 스타일"
 
-#: ../../docs/user_manual/processing/configuration.rst:99
+#: ../../docs/user_manual/processing/configuration.rst:105
 msgid ""
 "Select the style file (:file:`.qml`) that you want for each output and press"
 " :guilabel:`OK`."
 msgstr ""
 "각 산출물별로 사용자가 원하는 스타일 파일(:file:`.qml`)을 선택한 다음 :guilabel:`OK` 버튼을 클릭하십시오. "
 
-#: ../../docs/user_manual/processing/configuration.rst:101
+#: ../../docs/user_manual/processing/configuration.rst:107
 msgid ":guilabel:`Warn before executing if parameter CRS's do not match`"
 msgstr ""
 ":guilabel:`Warn before executing if parameter CRS's do not match`: 파라미터 좌표계가"
 " 일치하지 않을 경우 실행 전에 경고합니다."
 
-#: ../../docs/user_manual/processing/configuration.rst:103
+#: ../../docs/user_manual/processing/configuration.rst:109
 msgid ""
 "The :guilabel:`Menus` block controls whether an algorithm, script or model "
 "(built-in or provided by plugins) should be made available through a "
@@ -245,7 +261,7 @@ msgstr ""
 ":guilabel:`Menus` 블록에서 (내장된 또는 플러그인이 제공하는) 알고리즘, 스크립트 또는 모델을 (공간처리 툴박스와 함께) "
 "전용 메뉴 또는 툴바를 통해 사용할 수 있게 해야 할지를 제어합니다. 각 제공자의 각 항목에 대해 다음을 설정할 수 있습니다:"
 
-#: ../../docs/user_manual/processing/configuration.rst:108
+#: ../../docs/user_manual/processing/configuration.rst:114
 msgid ""
 ":guilabel:`Add button in toolbar`, making it available in the "
 ":guilabel:`Processing Algorithms` toolbar"
@@ -253,11 +269,11 @@ msgstr ""
 ":guilabel:`Add button in toolbar`: :guilabel:`Processing Algorithms` 툴바에서 "
 "사용할 수 있게 합니다."
 
-#: ../../docs/user_manual/processing/configuration.rst:110
+#: ../../docs/user_manual/processing/configuration.rst:116
 msgid "assign an :guilabel:`Icon` to the algorithm"
 msgstr "알고리즘에 :guilabel:`Icon` 을 할당합니다."
 
-#: ../../docs/user_manual/processing/configuration.rst:111
+#: ../../docs/user_manual/processing/configuration.rst:117
 msgid ""
 "set a :guilabel:`Menu path`: the algorithm will then be available through an"
 " existing or a custom menu, e.g. ``Vect&or/MyTopAlgorithms``"
@@ -265,7 +281,7 @@ msgstr ""
 ":guilabel:`Menu path`: 메뉴 경로를 설정하면 기존 메뉴 또는 예를 들어 "
 "``Vect&or/MyTopAlgorithms`` 과 같은 사용자 지정 메뉴를 통해 알고리즘을 사용할 수 있습니다."
 
-#: ../../docs/user_manual/processing/configuration.rst:114
+#: ../../docs/user_manual/processing/configuration.rst:120
 msgid ""
 "Restart QGIS to apply the settings. At any time, your changes can be "
 ":guilabel:`Reset to defaults`."
@@ -273,7 +289,7 @@ msgstr ""
 "이런 설정들을 적용하려면 QGIS를 재시작하십시오. :guilabel:`Reset to defaults` 옵션을 사용해서 언제라도 사용자"
 " 변경 사항을 초기화할 수 있습니다."
 
-#: ../../docs/user_manual/processing/configuration.rst:117
+#: ../../docs/user_manual/processing/configuration.rst:123
 msgid ""
 "In the :guilabel:`Models` and :guilabel:`Scripts` blocks, you can set a "
 "default folder to store, and look for models and scripts respectively."
@@ -281,7 +297,7 @@ msgstr ""
 ":guilabel:`Models` 및 :guilabel:`Scripts` 블록에서 모델 및 스크립트 저장 용 기본 폴더, 모델 및 "
 "스크립트 검색 용 기본 폴더를 각각 설정할 수 있습니다."
 
-#: ../../docs/user_manual/processing/configuration.rst:120
+#: ../../docs/user_manual/processing/configuration.rst:126
 msgid ""
 "You will also find a block for algorithm :guilabel:`Providers`. This is the "
 "place installed providers expose their settings. For example, built-in "
