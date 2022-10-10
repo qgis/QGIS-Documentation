@@ -516,9 +516,6 @@ Slope
 Calculates the slope from an input raster layer. The slope is the
 angle of inclination of the terrain and is expressed in **degrees**.
 
-In the following picture you can see to the left the DTM layer with
-the elevation of the terrain while to the right the calculated slope:
-
 .. figure:: img/slope.png
    :align: center
 
