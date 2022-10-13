@@ -606,7 +606,7 @@ From its top toolbar, you can:
 * |fileSave| :guilabel:`Save Log...`: will first show a big warning that
   the log is sensitive and should be treated as confidential and then
   allow you to save the log.
-* Press the |options| :guilabel:`Settings` drop-down menu toselect whether
+* Press the |options| :guilabel:`Settings` drop-down menu to select whether
   to :guilabel:`Show Successful Requests`, :guilabel:`Show Timeouts` and
   :guilabel:`Show Replies Served from Cache`.
 * |unchecked| :guilabel:`Disable cache`: will disable the cache so that
@@ -645,7 +645,6 @@ From its top toolbar, you can:
 * |fileSave| :guilabel:`Save Log...`: will first show a big warning that
   the log is sensitive and should be treated as confidential and then
   allow you to save the log.
-* |options| :guilabel:`Settings`
 * |search| :guilabel:`Filter queries` based on the query string subsets
   or details such as provider type, start time, initiator, ...
 
