@@ -721,6 +721,29 @@ To add vertices to a mesh layer:
    * inside a face: splits the face into triangles whose edges connect
      the surrounding vertices to the new vertex.
 
+Adding faces
+............
+
+To add faces to a mesh layer:
+
+#. Press the |meshDigitizing| :sup:`Digitize mesh elements` button
+#. A :guilabel:`Vertex Z value` widget appears on the top right corner of
+   the map canvas. Set this value to the Z coordinate you would like to assign
+   to the subsequent vertices.
+#. Double-click to add a first vertex or move the cursor next to a vertex.
+#. Click the small triangle that appears next to the vertex and move the cursor
+   to the next vertex position; you can snap to existing vertex or double-click
+   to add a new one.
+#. Proceed as above to add as many vertices you wish for the face.
+   Press :kbd:`Backspace` button to undo the last vertex.
+#. While moving the mouse, a rubberband showing the shape of the face is displayed.
+   If it is shown in green, then the expected face is valid and you can
+   right-click to add it to the mesh. If in red, the face is not valid
+   (e.g. because it self-intersects, overlaps an existing face or vertex, ...)
+   and can't be added. You'd need to fix the geometry.
+#. Press :kbd:`Esc` to abort the face digitizing.
+#. Right-click to validate the face.
+
 .. _remove_mesh_items:
 
 Removing mesh elements
