@@ -811,6 +811,103 @@ thanks to expressions.
 #. Press :guilabel:`Apply Transform` to modify the selected coordinates
    for the set of vertices.
 
+Reshaping mesh geometry
+.......................
+
+The contextual menu
+^^^^^^^^^^^^^^^^^^^
+
+#. Enable the |meshDigitizing| :sup:`Digitize mesh elements`
+#. Select mesh item(s), or not
+#. Hover over a mesh element, it gets highlighted.
+#. Right-click and you can:
+
+   * :ref:`remove the item(s) <remove_mesh_items>`
+   * :guilabel:`Split Selected Face(s)` (:guilabel:`Split Current Face`):
+     splits the face you are hovering over or each selected quad mesh faces
+     into two triangles
+   * :guilabel:`Delaunay Triangulation with Selected vertices`:
+     builds triangular faces using selected free vertices.
+   * :guilabel:`Refine Selected Face(s)` (:guilabel:`Refine Current Face`):
+     splits the face into four faces, based on vertices added at the middle of
+     each edge (a triangle results into triangles, a quad into quads).
+     Also triangulates adjacent faces connected to the new vertices.
+
+The edge markers
+^^^^^^^^^^^^^^^^
+
+When the |meshDigitizing| :sup:`Digitize mesh elements` is active and you hover
+over an edge, the edge is highlighted and it is possible to interact with it.
+Depending on the context, following markers may be available:
+
+* a **square**, at the center of the edge: click on it to select extremity vertices.
+* a **cross** if the two faces on either side can be merged: click on it to delete
+  the edge and merge the faces.
+* a **circle** if the edge is between two triangles: Click on it to flip the edge,
+  i.e. connect it instead to the two other "free" vertices of the faces
+
+The :guilabel:`Force by Selected Geometries` tool
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The |meshEditForceByVectorLines| :sup:`Force by Selected Geometries` tool
+provides advanced ways to apply break lines using lines geometry.
+A break line will force the mesh to have edges along the line. Note that
+the break line will not be considered persistent once the operation is done;
+resulting edges will not act as constraints anymore and can be modified like
+any other edge.
+This can be used for example to locally modify a mesh layer with accurate
+lines, as river banks or border of road embankments.
+
+#. Enable the |meshEditForceByVectorLines| :sup:`Force by Selected Geometries` tool
+#. Indicate the geometry to use as "forcing line"; it can be:
+
+   * picked from a line or polygon feature in the map canvas: right-click over
+     the vector feature and select it from the list in the contextual menu.
+   * a virtual line drawn over the mesh frame: left-click to add vertices,
+     right-click for validation. Vertices Z value is set through the
+     :guilabel:`Vertex Z value` widget or the :guilabel:`z` widget
+     if the :guilabel:`Advanced Digitizing Panel` is on. If the line is snapped
+     to a mesh vertex or a 3D vector feature's vertex or segment,
+     the new vertex takes the snapped element Z value.
+
+Mesh faces that overlap the line geometry or the polygon's boundary will be
+affected in a way that depends on options you can set from
+the |meshEditForceByVectorLines| :sup:`Force by Selected
+Geometries` tool drop-down menu:
+
+* |checkbox| :guilabel:`Add new vertex on intersecting edges`: with this option,
+  a new vertex is added each time the forcing line intersect an edge. This option
+  leads to split along the line each encountered faces.
+
+  Without this option, encountered faces are removed and replaced by faces
+  coming from a triangulation with only the existing vertices plus the vertices
+  of the forcing lines (new vertices are also added on the boundary edge
+  intersecting the forcing lines).
+
+  .. _figure_force_mesh_geometry:
+
+  .. figure:: img/force_mesh_geometry.png
+     :align: center
+
+     Force Mesh using a line geometry - Results without (middle) and with (right)
+     new vertex on edges intersection
+
+* :guilabel:`Interpolate Z value from`: set how the new vertices Z value is
+  calculated. It can be from:
+
+  * the :guilabel:`Mesh` itself: the new vertices Z value is interpolated from
+    vertices of the face they fall within
+  * or the :guilabel:`Forcing line`: if the line is defined by a 3D vector
+    feature or a drawn line then the new vertices Z value is derived from
+    its geometry. In case of 2D line feature, the new vertices Z value is
+    the :guilabel:`Vertex Z value`.
+
+* :guilabel:`Tolerance`: when an existing mesh vertex is closer to the line than
+  the tolerance value, do not create new vertex on the line but use the existing
+  vertex instead.
+  The value can be set in :guilabel:`Meters at Scale` or in :guilabel:`Map Units`
+  (more details at :ref:`unit_selector`).
+
 .. _reindex_mesh:
 
 Reindexing meshes
