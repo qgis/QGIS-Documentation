@@ -383,7 +383,7 @@ Print Layout
 Icon                     Substitution                 Icon                     Substitution
 =======================  ===========================  =======================  ===========================
 |newLayout|              ``|newLayout|``              |layoutManager|          ``|layoutManager|``
-|duplicateLayout|        ``|duplicateLayout|``        \                        \
+|duplicateLayout|        ``|duplicateLayout|``
 |newReport|              ``|newReport|``              |newPage|                ``|newPage|``
 |atlasSettings|          ``|atlasSettings|``          |atlas|                  ``|atlas|``
 |filePrint|              ``|filePrint|``              |saveMapAsImage|         ``|saveMapAsImage|``
@@ -408,11 +408,10 @@ Icon                     Substitution                 Icon                     S
 |alignTop|               ``|alignTop|``               |alignBottom|            ``|alignBottom|``
 |resizeShortest|         ``|resizeShortest|``         |resizeTallest|          ``|resizeTallest|``
 |resizeNarrowest|        ``|resizeNarrowest|``        |resizeWidest|           ``|resizeWidest|``
-|resizeSquare|           ``|resizeSquare|``           \                        \
+|resizeSquare|           ``|resizeSquare|``           |groupItems|             ``|groupItems|``
 |lockItems|              ``|lockItems|``              |unlockAll|              ``|unlockAll|``
 |locked|                 ``|locked|``                 |unlocked|               ``|unlocked|``
 |lockRepeating|          ``|lockRepeating|``          |lockedGray|             ``|lockedGray|``
-|groupItems|             ``|groupItems|``             \                        \
 =======================  ===========================  =======================  ===========================
 
 Layer Properties
@@ -444,6 +443,9 @@ Icon                                Substitution                            Icon
 |meshcontours|                      ``|meshcontours|``                      |meshcontoursoff|              ``|meshcontoursoff|``
 |meshvectors|                       ``|meshvectors|``                       |meshvectorsoff|               ``|meshvectorsoff|``
 |meshframe|                         ``|meshframe|``                         |meshaveraging|                ``|meshaveraging|``
+|singleColor|                       ``|singleColor|``                       |paletted|                     ``|paletted|``
+|singlebandPseudocolor|             ``|singlebandPseudocolor|``             |multibandColor|               ``|multibandColor|``
+|pointCloudExtent|                  ``|pointCloudExtent|``
 |sum|                               ``|sum|``                               |sort|                         ``|sort|``
 |paintEffects|                      ``|paintEffects|``                      |mapIdentification|            ``|mapIdentification|``
 |styleManager|                      ``|styleManager|``                      |iconView|                     ``|iconView|``
@@ -480,7 +482,7 @@ Icon                            Substitution                        Icon        
 |polygonToLine|                 ``|polygonToLine|``                 |extractVertices|               ``|extractVertices|``
 |splitLayer|                    ``|splitLayer|``                    |heatmap|                       ``|heatmap|``
 |showRasterCalculator|          ``|showRasterCalculator|``          |showMeshCalculator|            ``|showMeshCalculator|``
-|regularPoints|                 ``|regularPoints|``
+|regularPoints|                 ``|regularPoints|``                 |basicStatistics|               ``|basicStatistics|``
 ==============================  ==================================  ==============================  ==================================
 
 Various Core Plugins
@@ -641,6 +643,8 @@ Icon                            Substitution                        Icon        
 .. |avoidIntersectionsCurrentLayer| image:: /static/common/mActionAvoidIntersectionsCurrentLayer.png
    :width: 1.5em
 .. |avoidIntersectionsLayers| image:: /static/common/mActionAvoidIntersectionsLayers.png
+   :width: 1.5em
+.. |basicStatistics| image:: /static/common/mAlgorithmBasicStatistics.png
    :width: 1.5em
 .. |browserCollapse| image:: /static/common/browser_collapse.png
    :width: 1.5em
@@ -1103,6 +1107,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |moveLabel| image:: /static/common/mActionMoveLabel.png
    :width: 1.5em
+.. |multibandColor| image:: /static/common/multibandColor.png
+   :width: 1.5em
 .. |multiEdit| image:: /static/common/mActionMultiEdit.png
    :width: 1.5em
 .. |new3DMap| image:: /static/common/mActionNew3DMap.png
@@ -1161,6 +1167,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |paintEffects| image:: /static/common/mIconPaintEffects.png
    :width: 1.5em
+.. |paletted| image:: /static/common/paletted.png
+   :width: 1.5em
 .. |pan| image:: /static/common/mActionPan.png
    :width: 1.5em
 .. |panTo| image:: /static/common/mActionPanTo.png
@@ -1176,6 +1184,8 @@ Icon                            Substitution                        Icon        
 .. |play| image:: /static/common/mActionPlay.png
    :width: 1.5em
 .. |plugin| image:: /static/common/plugin.png
+   :width: 1.5em
+.. |pointCloudExtent| image:: /static/common/pointCloudExtent.png
    :width: 1.5em
 .. |pointClusterSymbol| image:: /static/common/rendererPointClusterSymbol.png
    :width: 1.5em
@@ -1352,6 +1362,10 @@ Icon                            Substitution                        Icon        
 .. |showUnplacedLabel| image:: /static/common/mActionShowUnplacedLabel.png
    :width: 1.5em
 .. |simplify| image:: /static/common/mActionSimplify.png
+   :width: 1.5em
+.. |singlebandPseudocolor| image:: /static/common/singlebandPseudocolor.png
+   :width: 1.5em
+.. |singleColor| image:: /static/common/singleColor.png
    :width: 1.5em
 .. |singleSymbol| image:: /static/common/rendererSingleSymbol.png
    :width: 1.5em
