@@ -737,6 +737,84 @@ Another tool for mesh elements selection is |meshSelectExpression|
 Modifying mesh elements
 ------------------------
 
+Adding vertices
+...............
+
+To add vertices to a mesh layer:
+
+#. Press the |meshDigitizing| :sup:`Digitize mesh elements` button
+#. A :guilabel:`Vertex Z value` widget appears on the top right corner of
+   the map canvas. Set this value to the Z coordinate you would like to assign
+   to the subsequent vertices
+#. Then double-click:
+
+   * outside a face: adds a "free vertex", that is a vertex not linked to any
+     face. This vertex is represented by a red dot when the layer is in
+     editing mode.
+   * on the edge of existing face(s): adds a vertex on the edge, splits the
+     face(s) into triangles connected to the new vertex
+   * inside a face: splits the face into triangles whose edges connect
+     the surrounding vertices to the new vertex.
+
+Adding faces
+............
+
+To add faces to a mesh layer:
+
+#. Press the |meshDigitizing| :sup:`Digitize mesh elements` button
+#. A :guilabel:`Vertex Z value` widget appears on the top right corner of
+   the map canvas. Set this value to the Z coordinate you would like to assign
+   to the subsequent vertices.
+#. Double-click to add a first vertex or move the cursor next to a vertex.
+#. Click the small triangle that appears next to the vertex and move the cursor
+   to the next vertex position; you can snap to existing vertex or double-click
+   to add a new one.
+#. Proceed as above to add as many vertices you wish for the face.
+   Press :kbd:`Backspace` button to undo the last vertex.
+#. While moving the mouse, a rubberband showing the shape of the face is displayed.
+   If it is shown in green, then the expected face is valid and you can
+   right-click to add it to the mesh. If in red, the face is not valid
+   (e.g. because it self-intersects, overlaps an existing face or vertex, ...)
+   and can't be added. You'd need to fix the geometry.
+#. Press :kbd:`Esc` to abort the face digitizing.
+#. Right-click to validate the face.
+
+.. _remove_mesh_items:
+
+Removing mesh elements
+......................
+
+#. :ref:`Select the target elements <select_mesh_elements>`
+#. Enable the |meshDigitizing| :sup:`Digitize mesh elements` tool
+#. Right-click and select:
+
+   * :guilabel:`Remove Selected Vertices and Fill Hole(s)`
+     or press :kbd:`Ctrl+Del`: removes vertices and linked faces and
+     fills the hole(s) by triangulating from the neighbor vertices
+   * :guilabel:`Remove Selected Vertices Without Filling Hole(s)`
+     or press :kbd:`Ctrl+Shift+Del`: removes vertices and linked faces
+     and do not fill hole(s)
+   * :guilabel:`Remove Selected Face(s)` or press :kbd:`Shift+Del`:
+     removes faces but keeps the vertices
+
+These options are also accessible from the contextual menu when hovering over
+a single item without selecting.
+
+Moving mesh elements
+....................
+
+To move vertices and faces of a mesh layer:
+
+#. :ref:`Select the target elements <select_mesh_elements>`
+#. Enable the |meshDigitizing| :sup:`Digitize mesh elements` tool
+#. To start moving the element, click on a vertex or the centroid of a face/edge
+#. Move the cursor to the target location (snapping to vector features is
+   supported).
+#. If the new location does not generate an invalid mesh, the moved elements
+   appear in green. Click again to release them at this location.
+   Faces whose vertices are all selected are translated, their neighbors are
+   reshaped accordingly.
+
 .. _transform_meshvertices:
 
 Transforming mesh vertices
