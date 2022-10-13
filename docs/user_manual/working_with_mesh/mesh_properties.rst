@@ -807,10 +807,13 @@ The :guilabel:`Force by Selected Geometries` tool
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The |meshEditForceByVectorLines| :sup:`Force by Selected Geometries` tool
-provides advanced ways to split faces of a mesh using a line geometry.
-The mesh frame and properties are affected along that line.
-This can be used for example to locally modify a mesh layer with a more accurate
-3D contours you may have got by other means.
+provides advanced ways to apply break lines using lines geometry.
+A break line will force the mesh to have edges along the line. Note that
+the break line will not be considered persistent once the operation is done;
+resulting edges will not act as constraints anymore and can be modified like
+any other edge.
+This can be used for example to locally modify a mesh layer with accurate
+lines, as river banks or border of road embankments.
 
 #. Enable the |meshEditForceByVectorLines| :sup:`Force by Selected Geometries` tool
 #. Indicate the geometry to use as "forcing line"; it can be:
@@ -824,14 +827,19 @@ This can be used for example to locally modify a mesh layer with a more accurate
      to a mesh vertex or a 3D vector feature's vertex or segment,
      the new vertex takes the snapped element Z value.
 
-Mesh faces that overlap the line geometry or the polygon's boundary are split
-along the vector geometry. Their shapes and vertices z value depend on options
-you can set from the |meshEditForceByVectorLines| :sup:`Force by Selected
+Mesh faces that overlap the line geometry or the polygon's boundary will be
+affected in a way that depends on options you can set from
+the |meshEditForceByVectorLines| :sup:`Force by Selected
 Geometries` tool drop-down menu:
 
-* |checkbox| :guilabel:`Add new vertex on intersecting edges`: defines whether
-  a vertex element is added only on the forcing line vertices or should also be
-  added to the mesh whenever the line intersects an interior edge.
+* |checkbox| :guilabel:`Add new vertex on intersecting edges`: with this option,
+  a new vertex is added each time the forcing line intersect an edge. This option
+  leads to split along the line each encountered faces.
+
+  Without this option, encountered faces are removed and replaced by faces
+  coming from a triangulation with only the existing vertices plus the vertices
+  of the forcing lines (new vertices are also added on the boundary edge
+  intersecting the forcing lines).
 
   .. _figure_force_mesh_geometry:
 
@@ -853,7 +861,7 @@ Geometries` tool drop-down menu:
 
 * :guilabel:`Tolerance`: when an existing mesh vertex is closer to the line than
   the tolerance value, do not create new vertex on the line but use the existing
-  vertex to split the face.
+  vertex instead.
   The value can be set in :guilabel:`Meters at Scale` or in :guilabel:`Map Units`
   (more details at :ref:`unit_selector`).
 
