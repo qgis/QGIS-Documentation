@@ -13,7 +13,7 @@ Vector Data
 Overview
 ========
 
-**Vector** data provide a way to represent real world **features** within the GIS
+**Vector** data provides a way to represent real world **features** within the GIS
 environment. A feature is anything you can see on the landscape. Imagine you are
 standing on the top of a hill. Looking down you can see houses, roads, trees,
 rivers, and so on (see :numref:`figure_vector_landscape`). Each one of these things would be a
