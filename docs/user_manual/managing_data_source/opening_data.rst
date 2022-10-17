@@ -62,12 +62,9 @@ However, all these tools point to a unique dialog, the :guilabel:`Data Source
 Manager` dialog, that you can open with the |dataSourceManager|
 :sup:`Open Data Source Manager` button, available on the :guilabel:`Data Source
 Manager Toolbar`, or by pressing :kbd:`Ctrl+L`.
-The :guilabel:`Data Source Manager` dialog(:numref:`figure_datasource_manager`) offers a unified interface to open
-vector or raster file-based data as well as databases or web services supported
-by QGIS.
-It can be set modal or not with the |checkbox|
-:guilabel:`Modeless data source manager dialog`
-in the :menuselection:`Settings --> Options --> General` menu.
+The :guilabel:`Data Source Manager` dialog (:numref:`figure_datasource_manager`)
+offers a unified interface to open file-based data as well as databases or
+web services supported by QGIS.
 
 
 .. _figure_datasource_manager:
