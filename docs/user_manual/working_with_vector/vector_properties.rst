@@ -3261,11 +3261,11 @@ Elevation Properties
     Depending on the layer settings, profile symbols can be represented with
     a custom style, using:
 
-    * :ref:`Marker style <vector_marker_symbols>`, for non-extruded point and
-      line features
-    * :ref:`Line style <vector_line_symbols>`, for extruded point and line features,
-      and for non-extruded polygon features
-    * :ref:`Fill style <vector_fill_symbols>`, for extruded polygon features
+    * :ref:`Marker style <vector_marker_symbols>`: for non-extruded point and line
+      features, and for non-extruded polygon features touched by the profile line
+    * :ref:`Line style <vector_line_symbols>`: for extruded point and line features,
+      and for non-extruded polygon features intersected by the profile line
+    * :ref:`Fill style <vector_fill_symbols>`: for extruded polygon features
 
   * as :guilabel:`Continuous Surface (e.g. contours)`: the elevation chart
     will be rendered as a surface instead of separate features by joining
