@@ -708,15 +708,11 @@ The following table displays the various combinations.
  +                                       +-------------------------+-------------------------------+------------------------------------------+
  |                                       | Yes                     | :guilabel:`Vertex Z value`    | Average of the selected vertices         |
  +---------------------------------------+-------------------------+-------------------------------+------------------------------------------+
- | Vertex on an unshared edge            | No                      | :guilabel:`Vertex Z value`    | Default or user defined                  |
- +                                       +-------------------------+                               +------------------------------------------+
- |                                       | Yes                     |                               | Average of the selected vertices         |
+ | Vertex on an edge                     | ---                     | Mesh layer                    | Interpolated from the edge's vertices    |
  +---------------------------------------+-------------------------+-------------------------------+------------------------------------------+
- | Vertex on an edge shared by two faces | ---                     | Mesh layer                    | Interpolated from the faces' vertices    |
+ | Vertex on a face                      | ---                     | Mesh layer                    | Interpolated from the face's vertices    |
  +---------------------------------------+-------------------------+-------------------------------+------------------------------------------+
- | Vertex on a face                      | ---                     | Mesh layer                    | Interpolated from the face vertices      |
- +---------------------------------------+-------------------------+-------------------------------+------------------------------------------+
- | Vertex snapped to a 2D vector feature | ---                     | ---                           | No value                                 |
+ | Vertex snapped to a 2D vector feature | ---                     | :guilabel:`Vertex Z value`    | Default or user defined                  |
  +---------------------------------------+-------------------------+-------------------------------+------------------------------------------+
  | Vertex snapped to a 3D vector vertex  | ---                     | Vector layer                  | Vertex                                   |
  +---------------------------------------+-------------------------+-------------------------------+------------------------------------------+
@@ -808,10 +804,10 @@ Another tool for mesh elements selection is |meshSelectExpression|
    will be filtered accordingly.
 #. Run the query by setting how the selection should behave and pressing:
 
-  * |expressionSelect| :guilabel:`Select`: replaces any existing selection
-    in the layer
-  * |selectAdd| :guilabel:`Add to current selection`
-  * |selectRemove| :guilabel:`Remove from current selection`
+   * |expressionSelect| :guilabel:`Select`: replaces any existing selection
+     in the layer
+   * |selectAdd| :guilabel:`Add to current selection`
+   * |selectRemove| :guilabel:`Remove from current selection`
 
 Modifying mesh elements
 ------------------------
