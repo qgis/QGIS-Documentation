@@ -81,10 +81,10 @@ following sections:
      - |system| :ref:`Source <point_clouds_source>`
      - |symbology| :ref:`Symbology <point_clouds_symbology>`:sup:`[1]`
    * - |3d| :ref:`3D View <point_clouds_3d>`:sup:`[1]`
+     - |rendering| :ref:`Rendering <point_clouds_rendering>`
      - |elevationscale| :ref:`Elevation <point_clouds_elevation>`:sup:`[1]`
-     - |editMetadata| :ref:`Metadata <point_clouds_metadata>`
-   * - |basicStatistics| :ref:`Statistics <point_clouds_statistics>`
-     -
+   * - |editMetadata| :ref:`Metadata <point_clouds_metadata>`
+     - |basicStatistics| :ref:`Statistics <point_clouds_statistics>`
      -
 
 :sup:`[1]` Also available in the :ref:`Layer styling panel <layer_styling_panel>`
@@ -460,6 +460,27 @@ options:
   shows bounding boxes of nodes in hierarchy
 
 
+.. _point_clouds_rendering:
+
+Rendering Properties
+--------------------
+
+Under the :guilabel:`Scale dependent visibility` group box,
+you can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum
+(exclusive)` scale, defining a range of scale in which features will be
+visible. Out of this range, they are hidden. The |mapIdentification|
+:sup:`Set to current canvas scale` button helps you use the current map
+canvas scale as boundary of the range visibility.
+See :ref:`label_scaledepend` for more information.
+
+
+.. _figure_point_cloud_rendering:
+
+.. figure:: img/point_cloud_rendering.png
+   :align: center
+
+   The point cloud rendering tab
+
 
 .. _point_clouds_elevation:
 
@@ -479,7 +500,7 @@ the data in 3D maps. There are two setting options:
   the line.
 
 
-..  _figure_point_cloud_elevation:
+.. _figure_point_cloud_elevation:
 
 .. figure:: img/point_cloud_elevation.png
    :align: center
@@ -550,6 +571,8 @@ abundance.
    :width: 1.5em
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
+.. |mapIdentification| image:: /static/common/mActionMapIdentification.png
+   :width: 1.5em
 .. |metadata| image:: /static/common/metadata.png
    :width: 1.5em
 .. |multibandColor| image:: /static/common/multibandColor.png
@@ -559,6 +582,8 @@ abundance.
 .. |pointCloudExtent| image:: /static/common/pointCloudExtent.png
    :width: 1.5em
 .. |refresh| image:: /static/common/mActionRefresh.png
+   :width: 1.5em
+.. |rendering| image:: /static/common/rendering.png
    :width: 1.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em

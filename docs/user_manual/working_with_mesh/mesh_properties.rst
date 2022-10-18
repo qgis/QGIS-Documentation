@@ -493,6 +493,22 @@ properties:
 Rendering Properties
 --------------------
 
+Under the :guilabel:`Scale dependent visibility` group box,
+you can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum
+(exclusive)` scale, defining a range of scale in which mesh elements will be
+visible. Out of this range, they are hidden. The |mapIdentification|
+:sup:`Set to current canvas scale` button helps you use the current map
+canvas scale as boundary of the range visibility.
+See :ref:`label_scaledepend` for more information.
+
+
+.. _figure_mesh_rendering:
+
+.. figure:: img/mesh_rendering.png
+   :align: center
+
+   Mesh rendering properties
+
 As mesh layers can have millions of faces, their rendering can sometimes
 be very slow, especially when all the faces are displayed in the view
 whereas they are too small to be viewed.
@@ -1136,6 +1152,8 @@ the expression to execute.
 .. |general| image:: /static/common/general.png
    :width: 1.5em
 .. |locked| image:: /static/common/locked.png
+   :width: 1.5em
+.. |mapIdentification| image:: /static/common/mActionMapIdentification.png
    :width: 1.5em
 .. |meshDigitizing| image:: /static/common/mActionMeshDigitizing.png
    :width: 1.5em
