@@ -1997,17 +1997,6 @@ either :ref:`mask symbol layers <mask_marker_symbol>` or :ref:`mask labels
 |3d| The :guilabel:`3D View` tab provides settings for vector layers that should
 be depicted in the :ref:`3D Map view <label_3dmapview>` tool.
 
-For better performance, data from vector layers are loaded in the background,
-using multithreading, and rendered in tiles whose size can be controlled from
-the :guilabel:`Layer rendering` section of the tab:
-
-* :guilabel:`Zoom levels count`: determines how deep the quadtree will be.
-  For example, one zoom level means there will be a single tile for the whole layer.
-  Three zoom levels means there will be 16 tiles at the leaf level (every extra
-  zoom level multiplies that by 4). The default is ``3`` and the maximum is ``8``.
-* |checkbox| :guilabel:`Show bounding boxes of tiles`: especially useful if
-  there are issues with tiles not showing up when they should
-
 To display a layer in 3D, select from the combobox at the top of the tab, either:
 
 * :guilabel:`Single symbol`: features are rendered using a common 3D symbol
@@ -2024,6 +2013,24 @@ To display a layer in 3D, select from the combobox at the top of the tab, either
 
    3D properties of a point layer
 
+.. attention:: **Prefer the** :guilabel:`Elevation` **tab for symbol elevation and terrain settings**
+
+ Features' elevation and altitude related properties (:guilabel:`Altitude clamping`,
+ :guilabel:`Altitude binding`, :guilabel:`Extrusion` or :guilabel:`Height`)
+ in the :guilabel:`3D View` tab inherit their default values from the layer's
+ :ref:`Elevation properties <vectorelevationmenu>` and should preferably be set
+ from within the :guilabel:`Elevation` tab.
+
+For better performance, data from vector layers are loaded in the background,
+using multithreading, and rendered in tiles whose size can be controlled from
+the :guilabel:`Layer rendering` section of the tab:
+
+* :guilabel:`Zoom levels count`: determines how deep the quadtree will be.
+  For example, one zoom level means there will be a single tile for the whole layer.
+  Three zoom levels means there will be 16 tiles at the leaf level (every extra
+  zoom level multiplies that by 4). The default is ``3`` and the maximum is ``8``.
+* |checkbox| :guilabel:`Show bounding boxes of tiles`: especially useful if
+  there are issues with tiles not showing up when they should.
 
 .. index:: Fields, Forms
 .. _vector_fields_menu:
