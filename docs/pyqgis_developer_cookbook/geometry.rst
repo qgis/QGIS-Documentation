@@ -30,6 +30,7 @@ Geometry Handling
 
     from qgis.core import (
       QgsGeometry,
+      QgsGeometryCollection,
       QgsPoint,
       QgsPointXY,
       QgsWkbTypes,
@@ -242,6 +243,16 @@ regardless of the geometry's type. E.g.
 .. testoutput:: geometry
 
   LineString (0 0, 10 10)
+
+.. testcode:: geometry
+
+  gc = QgsGeometryCollection()
+  gc.fromWkt('GeometryCollection( Point(1 2), Point(11 12), LineString(33 34, 44 45))')
+  print(gc[1].asWkt())
+
+.. testoutput:: geometry
+
+  Point (11 12)
 
 It's also possible to modify each part of the geometry using
 :meth:`QgsGeometry.parts() <qgis.core.QgsGeometry.parts>` method.
