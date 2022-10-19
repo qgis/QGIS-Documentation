@@ -42,14 +42,15 @@ The vector :guilabel:`Layer Properties` dialog provides the following sections:
      - |rendering| :ref:`Rendering <vectorrenderingmenu>`
      - |temporal| :ref:`Temporal <vectortemporalmenu>`
    * - |expression| :ref:`Variables <vectorvariablesmenu>`
+     - |elevationscale| :ref:`Elevation <vectorelevationmenu>`
      - |editMetadata| :ref:`Metadata <vectormetadatamenu>`
-     - |dependencies| :ref:`Dependencies <vectordependenciesmenu>`
-   * - |legend| :ref:`Legend <vectorlegendmenu>`
+   * - |dependencies| :ref:`Dependencies <vectordependenciesmenu>`
+     - |legend| :ref:`Legend <vectorlegendmenu>`
      - |overlay| :ref:`QGIS Server <vectorservermenu>`
-     - |digitizing| :ref:`Digitizing <digitizingmenu>`
-   * - :ref:`External plugins <plugins>`:sup:`[2]` tabs
+   * - |digitizing| :ref:`Digitizing <digitizingmenu>`
+     - :ref:`External plugins <plugins>`:sup:`[2]` tabs
      -
-     -
+
 
 :sup:`[1]` Also available in the :ref:`Layer styling panel <layer_styling_panel>`
 
@@ -1996,17 +1997,6 @@ either :ref:`mask symbol layers <mask_marker_symbol>` or :ref:`mask labels
 |3d| The :guilabel:`3D View` tab provides settings for vector layers that should
 be depicted in the :ref:`3D Map view <label_3dmapview>` tool.
 
-For better performance, data from vector layers are loaded in the background,
-using multithreading, and rendered in tiles whose size can be controlled from
-the :guilabel:`Layer rendering` section of the tab:
-
-* :guilabel:`Zoom levels count`: determines how deep the quadtree will be.
-  For example, one zoom level means there will be a single tile for the whole layer.
-  Three zoom levels means there will be 16 tiles at the leaf level (every extra
-  zoom level multiplies that by 4). The default is ``3`` and the maximum is ``8``.
-* |checkbox| :guilabel:`Show bounding boxes of tiles`: especially useful if
-  there are issues with tiles not showing up when they should
-
 To display a layer in 3D, select from the combobox at the top of the tab, either:
 
 * :guilabel:`Single symbol`: features are rendered using a common 3D symbol
@@ -2023,6 +2013,24 @@ To display a layer in 3D, select from the combobox at the top of the tab, either
 
    3D properties of a point layer
 
+.. attention:: **Prefer the** :guilabel:`Elevation` **tab for symbol elevation and terrain settings**
+
+ Features' elevation and altitude related properties (:guilabel:`Altitude clamping`,
+ :guilabel:`Altitude binding`, :guilabel:`Extrusion` or :guilabel:`Height`)
+ in the :guilabel:`3D View` tab inherit their default values from the layer's
+ :ref:`Elevation properties <vectorelevationmenu>` and should preferably be set
+ from within the :guilabel:`Elevation` tab.
+
+For better performance, data from vector layers are loaded in the background,
+using multithreading, and rendered in tiles whose size can be controlled from
+the :guilabel:`Layer rendering` section of the tab:
+
+* :guilabel:`Zoom levels count`: determines how deep the quadtree will be.
+  For example, one zoom level means there will be a single tile for the whole layer.
+  Three zoom levels means there will be 16 tiles at the leaf level (every extra
+  zoom level multiplies that by 4). The default is ``3`` and the maximum is ``8``.
+* |checkbox| :guilabel:`Show bounding boxes of tiles`: especially useful if
+  there are issues with tiles not showing up when they should.
 
 .. index:: Fields, Forms
 .. _vector_fields_menu:
@@ -3258,6 +3266,48 @@ More information on variables usage in the General Tools
 Elevation Properties
 ====================
 
+The |elevationscale| :guilabel:`Elevation` tab provides options to control
+the layer elevation properties within a :ref:`3D map view <label_3dmapview>`
+and its appearance in the profile tool charts. Specifically, you can set:
+
+.. Todo: Add above a ref link to profile tool
+
+.. _figure_elevationvector:
+
+.. figure:: img/vector_elevation.png
+   :align: center
+
+   Vector layer elevation properties dialog
+
+
+* :guilabel:`Elevation Clamping`: defines how and whether the features altitude
+  should be:
+
+  * :guilabel:`Clamped to terrain`: takes elevation directly from the terrain
+    height and ignores any existing Z values in the features. A data-defined
+    :guilabel:`Offset` value from the terrain can also be filled.
+  * :guilabel:`Relative to terrain`: any existing Z values in the features
+    are added to the terrain height. A :guilabel:`Scale` factor followed by
+    a data-defined :guilabel:`Offset` can be used to adjust the elevation.
+    This option is not available for 2D geometry layers.
+  * :guilabel:`Absolute`: ignores the terrain height and directly takes Z values
+    from the features for the elevation. A :guilabel:`Scale` factor followed
+    by a data-defined :guilabel:`Offset` can be used to adjust the elevation.
+    For 2D geometry layers (with no Z values), a data-defined
+    :guilabel:`Base height` can instead be set.
+* |unchecked| :guilabel:`Enable extrusion`: you can set a :guilabel:`Height`
+  to control how high features vertically extend above their base.
+  This is convenient to indicate that a 2D geometry layers, e.g. a polygon
+  building footprints layer, actually represents 3D objects.
+* :guilabel:`Elevation Binding`: only relevant when combining an
+  :guilabel:`Elevation clamping` relying on the terrain with a line or
+  polygon layer, this option controls how feature elevation is set relative
+  to the terrain height. The terrain can be sampled:
+
+  * at the feature's :guilabel:`Centroid`, with the centroid height being
+    added to each vertex's z value
+  * at every individual :guilabel:`Vertex` before being added to the vertex's
+    z value
 
 * :guilabel:`Profile Chart Appearance`: controls how features are rendered
   when drawing a profile chart. Two main :guilabel:`Interpretation` modes
@@ -3585,6 +3635,8 @@ To do so:
    :width: 1.5em
 .. |editMetadata| image:: /static/common/editmetadata.png
    :width: 1.2em
+.. |elevationscale| image:: /static/common/elevationscale.png
+   :width: 1.5em
 .. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
 .. |formView| image:: /static/common/mActionFormView.png
