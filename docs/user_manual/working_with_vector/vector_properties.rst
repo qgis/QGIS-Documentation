@@ -3280,7 +3280,7 @@ and its appearance in the profile tool charts. Specifically, you can set:
     height and ignores any existing Z values in the features. A data-defined
     :guilabel:`Offset` value from the terrain can also be filled.
   * :guilabel:`Relative to terrain`: any existing Z values in the features
-    is added to the terrain height. A :guilabel:`Scale` factor followed by
+    are added to the terrain height. A :guilabel:`Scale` factor followed by
     a data-defined :guilabel:`Offset` can be used to adjust the elevation.
     This option is not available for 2D geometry layers.
   * :guilabel:`Absolute`: ignores the terrain height and directly takes Z values
@@ -3290,8 +3290,8 @@ and its appearance in the profile tool charts. Specifically, you can set:
     :guilabel:`Base height` can instead be set.
 * |unchecked| :guilabel:`Enable extrusion`: you can set a :guilabel:`Height`
   to control how high features vertically extend above their base.
-  This is convenient to represent 2D geometry layers, e.g. polygon building
-  footprints layers.
+  This is convenient to indicate that a 2D geometry layers, e.g. a polygon
+  building footprints layer, actually represents 3D objects.
 * :guilabel:`Elevation Binding`: only relevant when combining an
   :guilabel:`Elevation clamping` relying on the terrain with a line or
   polygon layer, this option controls how feature elevation is set relative
