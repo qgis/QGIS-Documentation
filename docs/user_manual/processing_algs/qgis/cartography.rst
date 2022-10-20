@@ -658,7 +658,7 @@ Advanced parameters
      - [boolean]
 
        Default: False
-     - forces all the items in the map to be rasterized.
+     - Forces all the items in the map to be rasterized.
        This parameter takes precedence over the ``FORCE_VECTOR`` parameter.
    * - **Append georeference information**
      - ``GEOREFERENCE``
@@ -834,7 +834,7 @@ Advanced parameters
      - [boolean]
 
        Default: False
-     - forces all the items in the map to be rasterized.
+     - Forces all the items in the map to be rasterized.
        This parameter takes precedence over the ``FORCE_VECTOR`` parameter.
    * - **Append georeference information**
      - ``GEOREFERENCE``
@@ -1085,10 +1085,10 @@ Advanced parameters
 
        |328|
      - ``FORCE_RASTER``
-     - [enumeration]
+     - [boolean]
 
        Default: False
-     - forces all the items in the map to be rasterized.
+     - Forces all the items in the map to be rasterized.
        This parameter takes precedence over the ``FORCE_VECTOR`` parameter.
    * - **Append georeference information**
      - ``GEOREFERENCE``
