@@ -22,6 +22,8 @@ Using the Map Canvas
 
     from qgis.PyQt.QtCore import Qt, QRectF
 
+    from qgis.PyQt.QtWidgets import QMenu
+
     from qgis.core import (
         QgsVectorLayer,
         QgsPoint,
@@ -36,6 +38,7 @@ Using the Map Canvas
         QgsMapCanvas,
         QgsVertexMarker,
         QgsMapCanvasItem,
+        QgsMapMouseEvent,
         QgsRubberBand,
     )
 
@@ -317,6 +320,28 @@ for asking to the user to select a feature that will be sent to a callback funct
 
   # activation of the map tool
   canvas.setMapTool(feature_identifier)
+
+Add items to map canvas contextual menu
+----------------------------------------
+
+Interaction with map canvas can also be done through entries you may add to
+its contextual menu using the :attr:`contextMenuAboutToShow
+<qgis.gui.QgsMapCanvas.contextMenuAboutToShow>` signal.
+
+The following code adds :menuselection:`My menu --> My Action` action next to
+default entries when you right-click over the map canvas.
+
+.. testcode:: canvas
+
+    # a slot to populate the context menu
+    def populateContextMenu(menu: QMenu, event: QgsMapMouseEvent):
+        subMenu = menu.addMenu('My Menu')
+        action = subMenu.addAction('My Action')
+        action.triggered.connect(lambda *args:
+                                 print(f'Action triggered at {event.x},{event.y()}'))
+
+    canvas.contextMenuAboutToShow.connect(populateContextMenu)
+    canvas.show()
 
 
 .. index:: Map canvas; Custom map tools
