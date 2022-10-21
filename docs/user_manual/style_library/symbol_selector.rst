@@ -229,8 +229,9 @@ Appropriate for point geometry features, marker symbols have several
 .. _raster_image_marker:
 
 * **Raster image marker**: use an image (:file:`PNG`, :file:`JPG`, :file:`BMP` ...)
-  as marker symbol. The image can be a file on the disk, a remote URL
-  or embedded in the style database (:ref:`more details <embedded_file_selector>`).
+  as marker symbol. The image can be a file on the disk, a remote URL, embedded
+  in the style database (:ref:`more details <embedded_file_selector>`) or it can
+  be encoded as a base64 string.
   Width and height of the image can be set independently or using the
   |lockedGray| :sup:`Lock aspect ratio`. The size can be set using any of the
   :ref:`common units <unit_selector>` or as a percentage of the image's original
@@ -243,8 +244,9 @@ Appropriate for point geometry features, marker symbols have several
   :menuselection:`Settings --> Options... --> System` menu) to render as marker
   symbol. Width and height of the symbol can be set independently or using the
   |lockedGray| :sup:`Lock aspect ratio`. Each SVG file colors and stroke can
-  also be adapted. The image can be a file on the disk, a remote URL or
-  embedded in the style database (:ref:`more details <embedded_file_selector>`).
+  also be adapted. The image can be a file on the disk, a remote URL, embedded
+  in the style database (:ref:`more details <embedded_file_selector>`) or it can
+  be encoded as a base64 string.
 
   The symbol can also be set with :guilabel:`Dynamic SVG parameters`.
   See :ref:`svg_symbol` section to parametrize an SVG symbol.
