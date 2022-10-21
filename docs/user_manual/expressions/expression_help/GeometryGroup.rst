@@ -264,6 +264,12 @@ Creates a buffer along a line geometry where the buffer diameter varies accordin
      - * ``buffer_by_m(geometry:=geom_from_wkt('LINESTRINGM(1 2 0.5, 4 2 0.2)'),segments:=8)`` → A variable width buffer starting with a diameter of 0.5 and ending with a diameter of 0.2 along the linestring geometry.
 
 
+.. figure:: /docs/user_manual/processing_algs/qgis/img/variable_buffer_m.png
+   :align: center
+   :width: 100%
+
+   Buffering line features using the m value on the vertices
+
 .. end_buffer_by_m_section
 
 .. _expression_function_GeometryGroup_centroid:
@@ -2629,6 +2635,12 @@ Creates a buffer along a line geometry where the buffer diameter varies evenly o
      - * ``tapered_buffer(geometry:=geom_from_wkt('LINESTRING(1 2, 4 2)'),start_width:=1,end_width:=2,segments:=8)`` → A tapered buffer starting with a diameter of 1 and ending with a diameter of 2 along the linestring geometry.
 
 
+.. figure:: /docs/user_manual/processing_algs/qgis/img/tapered_buffer.png
+   :align: center
+   :width: 100%
+
+   Tapered buffer on line features
+
 .. end_tapered_buffer_section
 
 .. _expression_function_GeometryGroup_touches:
@@ -2694,6 +2706,12 @@ Returns a translated version of a geometry. Calculations are in the Spatial Refe
    * - Examples
      - * ``translate($geometry, 5, 10)`` → a geometry of the same type like the original one
 
+
+.. figure:: /docs/user_manual/processing_algs/qgis/img/translate_geometry.png
+   :align: center
+   :width: 100%
+
+   Translating features
 
 .. end_translate_section
 
