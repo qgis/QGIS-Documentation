@@ -1409,7 +1409,7 @@ with both families of annotations.
  +-----------------------------------------------------+---------------------------------------------------------------------+                     +
  | |addMarker| :sup:`Create Marker Annotation`         | Create an annotation as a point feature                             |                     |
  +-----------------------------------------------------+---------------------------------------------------------------------+                     +
- | |label| :sup:`Create Text Annotation at Point`      | Create an annotation as a text label                                |                     |
+ | |actionText| :sup:`Create Text Annotation at Point` | Create an annotation as a text label                                |                     |
  +-----------------------------------------------------+---------------------------------------------------------------------+---------------------+
  | |textAnnotation| :sup:`Text Annotation`             | Select and create a text formatted annotation                       | Balloon annotations |
  +-----------------------------------------------------+---------------------------------------------------------------------+                     +
@@ -1457,7 +1457,7 @@ The Feature annotations have dedicated tools for creation depending on their typ
 * |addPolygon| :sup:`Create Polygon Annotation`
 * |addPolyline| :sup:`Create Line Annotation`
 * |addMarker| :sup:`Create Marker Annotation`
-* |label| :sup:`Create Text Annotation at Point`
+* |actionText| :sup:`Create Text Annotation at Point`
 
 All the usual QGIS shortcuts for creating features apply when creating annotation
 items. A line or polygon annotation is drawn by left-clicking once for each vertex,
@@ -3026,6 +3026,8 @@ The values presented in the varying size assistant above will set the size
 
 .. |3d| image:: /static/common/3d.png
    :width: 1.5em
+.. |actionText| image:: /static/common/mActionText.png
+   :width: 1.5em
 .. |addGrid| image:: /static/common/add_grid.png
    :width: 1.5em
 .. |addGroup| image:: /static/common/mActionAddGroup.png
@@ -3159,8 +3161,6 @@ The values presented in the varying size assistant above will set the size
 .. |indicatorTemporal| image:: /static/common/mIndicatorTemporal.png
    :width: 1.5em
 .. |invertSelection| image:: /static/common/mActionInvertSelection.png
-   :width: 1.5em
-.. |label| image:: /static/common/mActionLabel.png
    :width: 1.5em
 .. |labelingSingle| image:: /static/common/labelingSingle.png
    :width: 1.5em

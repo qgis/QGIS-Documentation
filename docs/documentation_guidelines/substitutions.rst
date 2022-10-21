@@ -266,7 +266,7 @@ Icon                     Substitution                 Icon                     S
 |createAnnotationLayer|  ``|createAnnotationLayer|``  |annotationLayer|        ``|annotationLayer|``
 |annotation|             ``|annotation|``             |textAnnotation|         ``|textAnnotation|``
 |formAnnotation|         ``|formAnnotation|``         |htmlAnnotation|         ``|htmlAnnotation|``
-|svgAnnotation|          ``|svgAnnotation|``          |autoPlacementSettings|  ``|autoPlacementSettings|``
+|svgAnnotation|          ``|svgAnnotation|``          |actionText|             ``|actionText|``
 |labelbackground|        ``|labelbackground|``        |labelbuffer|            ``|labelbuffer|``
 |labelformatting|        ``|labelformatting|``        |labelplacement|         ``|labelplacement|``
 |labelshadow|            ``|labelshadow|``            |render|                 ``|render|``
@@ -276,7 +276,7 @@ Icon                     Substitution                 Icon                     S
 |pinLabels|              ``|pinLabels|``              |showHideLabels|         ``|showHideLabels|``
 |moveLabel|              ``|moveLabel|``              |rotateLabel|            ``|rotateLabel|``
 |showPinnedLabels|       ``|showPinnedLabels|``       |showUnplacedLabel|      ``|showUnplacedLabel|``
-|changeLabelProperties|  ``|changeLabelProperties|``
+|changeLabelProperties|  ``|changeLabelProperties|``  |autoPlacementSettings|  ``|autoPlacementSettings|``
 =======================  ===========================  =======================  ===========================
 
 Decorations
@@ -531,6 +531,8 @@ Icon                            Substitution                        Icon        
 .. |action| image:: /static/common/action.png
    :width: 2em
 .. |actionRun| image:: /static/common/mAction.png
+   :width: 1.5em
+.. |actionText| image:: /static/common/mActionText.png
    :width: 1.5em
 .. |add| image:: /static/common/mActionAdd.png
    :width: 1.5em
