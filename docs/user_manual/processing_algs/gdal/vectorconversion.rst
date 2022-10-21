@@ -36,7 +36,9 @@ Basic parameters
      - ``INPUT``
      - [vector: any]
      - Input vector layer
-   * - **Convert all layers from dataset** |324|
+   * - **Convert all layers from dataset**
+
+       |324|
      - ``CONVERT_ALL_LAYERS``
      - [boolean]
 
