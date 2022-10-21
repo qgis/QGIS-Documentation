@@ -916,7 +916,9 @@ Basic parameters
 
        Default: None
      - Value to use for nodata
-   * - **Output extent** |324|
+   * - **Output extent**
+
+       |324|
 
        Optional
      - ``INPUT``

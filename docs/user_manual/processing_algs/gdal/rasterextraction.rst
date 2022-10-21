@@ -201,7 +201,9 @@ Basic parameters
      - ``TARGET_CRS``
      - [crs]
      - Set the coordinate reference to use for the mask layer
-   * - **Target extent** |324|
+   * - **Target extent**
+
+       |324|
 
        Optional
      - ``TARGET_EXTENT``
