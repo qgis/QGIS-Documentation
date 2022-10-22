@@ -1075,7 +1075,7 @@ To use these variables in an expression, they should be preceded by the
    edited in the parent form. Only usable in an embedded form context."
    "form_mode", "What the form is used for, like AddFeatureMode, SingleEditMode, MultiEditMode,
    SearchMode, AggregateSearchMode or IdentifyMode as string."
-   "feature |328|", "The current feature being evaluated. This can be used with the 'attribute'
+   "feature", "The current feature being evaluated. This can be used with the 'attribute'
    function to evaluate attribute values from the current feature."
    "frame_duration", "Temporal duration of each animation frame (as an interval value)"
    "frame_number", "Current frame number during animation playback"
@@ -1084,7 +1084,7 @@ To use these variables in an expression, they should be preceded by the
    "fullextent_maxy", "Maximum y value from full canvas extent (including all layers)"
    "fullextent_minx", "Minimum x value from full canvas extent (including all layers)"
    "fullextent_miny", "Minimum y value from full canvas extent (including all layers)"
-   "geometry |328|", "The geometry of the current feature being evaluated"
+   "geometry", "The geometry of the current feature being evaluated"
    "geometry_part_count", "The number of parts in rendered feature's geometry"
    "geometry_part_num", "The current geometry part number for feature being rendered"
    "geometry_point_count", "The number of points in the rendered geometry's part"
@@ -1093,7 +1093,7 @@ To use these variables in an expression, they should be preceded by the
    (for polygon features only). The exterior ring has a value of 0."
    "grid_axis", "The current grid annotation axis (eg, 'x' for longitude, 'y' for latitude)"
    "grid_number", "The current grid annotation value"
-   "id |328|", "The ID of the current feature being evaluated"
+   "id", "The ID of the current feature being evaluated"
    "item_id", "The layout item user ID (not necessarily unique)"
    "item_uuid", "The layout item unique ID"
    "layer", "The current layer"
@@ -1268,7 +1268,6 @@ This makes it easy to quickly retrieve and reapply previously used expressions.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |328| replace:: ``NEW in 3.28``
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
 .. |expressionSelect| image:: /static/common/mIconExpressionSelect.png

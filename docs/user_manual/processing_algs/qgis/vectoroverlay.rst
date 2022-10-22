@@ -198,7 +198,6 @@ Python code
 
 Difference (multiple)
 ---------------------
-|326|
 
 Extracts features from the input layer that fall completely outside or
 only partially overlap the features from any of the overlay layer(s).
@@ -500,7 +499,6 @@ Python code
 
 Intersection (multiple)
 -----------------------
-|326|
 
 Extracts the overlapping portions of features in the input and all overlay layers.
 
@@ -1028,7 +1026,6 @@ Python code
 
 Union (multiple)
 ----------------
-|326|
 
 Checks overlaps between features within the input layer and creates
 separate features for overlapping and non-overlapping parts.
@@ -1158,6 +1155,5 @@ Python code
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |326| replace:: ``NEW in 3.26``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em

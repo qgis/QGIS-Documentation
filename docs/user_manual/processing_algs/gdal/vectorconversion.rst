@@ -37,8 +37,6 @@ Basic parameters
      - [vector: any]
      - Input vector layer
    * - **Convert all layers from dataset**
-
-       |324|
      - ``CONVERT_ALL_LAYERS``
      - [boolean]
 
@@ -505,12 +503,3 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |324| replace:: ``NEW in 3.24``

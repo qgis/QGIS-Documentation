@@ -203,8 +203,6 @@ Basic parameters
      - Set the coordinate reference to use for the mask layer
    * - **Target extent**
 
-       |324|
-
        Optional
      - ``TARGET_EXTENT``
      - [extent]
@@ -656,12 +654,3 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |324| replace:: ``NEW in 3.24``

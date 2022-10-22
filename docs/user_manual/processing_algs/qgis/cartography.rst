@@ -560,7 +560,6 @@ Python code
 
 Export atlas layout as PDF (multiple files)
 -------------------------------------------
-|324|
 
 Exports the atlas of a print layout to multiple PDF files.
 
@@ -652,8 +651,6 @@ Advanced parameters
        Default: False
      - Determines if vectorial data should be left as vectors
    * - **Always export as raster**
-
-       |328|
      - ``FORCE_RASTER``
      - [boolean]
 
@@ -695,8 +692,6 @@ Advanced parameters
        * 0 - Always export text as paths (recommended)
        * 1 - Always export texts as text objects
    * - **Image compression**
-
-       |328|
      - ``IMAGE_COMPRESSION``
      - [enumeration]
 
@@ -828,8 +823,6 @@ Advanced parameters
        Default: False
      - Determines if vectorial data should be left as vectors
    * - **Always export as raster**
-
-       |328|
      - ``FORCE_RASTER``
      - [boolean]
 
@@ -871,8 +864,6 @@ Advanced parameters
        * 0 - Always export text as paths (recommended)
        * 1 - Always export texts as text objects
    * - **Image compression**
-
-       |328|
      - ``IMAGE_COMPRESSION``
      - [enumeration]
 
@@ -1082,8 +1073,6 @@ Advanced parameters
        Default: False
      - Determines if vectorial data should be left as vectors
    * - **Always export as raster**
-
-       |328|
      - ``FORCE_RASTER``
      - [boolean]
 
@@ -1125,8 +1114,6 @@ Advanced parameters
        * 0 - Always export text as paths (recommended)
        * 1 - Always export texts as text objects
    * - **Image compression**
-
-       |328|
      - ``IMAGE_COMPRESSION``
      - [enumeration]
 
@@ -1176,7 +1163,6 @@ Python code
 
 Extract labels
 --------------
-|324|
 
 Extracts label information from a rendered map at a given extent and scale.
 
@@ -1644,7 +1630,5 @@ Python code
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |324| replace:: ``NEW in 3.24``
-.. |328| replace:: ``NEW in 3.28``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em

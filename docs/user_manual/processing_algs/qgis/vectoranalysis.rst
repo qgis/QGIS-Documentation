@@ -1392,7 +1392,6 @@ Python code
 
 Shortest line between features
 ------------------------------
-|324|
 
 Creates a line layer as the shortest line between the source and the destination layer. By default only the first nearest feature of the destination layer is taken into account. The n-nearest neighboring features number can be specified.
 If a maximum distance is specified, then only features which are closer than this distance will be considered.
@@ -1880,6 +1879,5 @@ Python code
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |324| replace:: ``NEW in 3.24``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em

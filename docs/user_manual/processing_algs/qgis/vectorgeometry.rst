@@ -2240,8 +2240,6 @@ Advanced parameters
      - Type
      - Description
    * - **Keep disjoint features separate**
-
-       |326|
      - ``SEPARATE_DISJOINT``
      - [boolean]
 
@@ -2345,8 +2343,6 @@ Parameters
      - Scaling value: the band values are multiplied
        by this value.
    * - **Offset**
-
-       |328|
      - ``OFFSET``
      - [number |dataDefine|]
 
@@ -3316,8 +3312,6 @@ Parameters
      - [vector: any]
      - Input vector layer
    * - **Repair method**
-
-       |328|
      - ``METHOD``
      - [enumeration]
 
@@ -5686,7 +5680,6 @@ Python code
 
 Roundness
 ---------
-|324|
 
 Calculates the roundness of each feature and stores it as a new field. The input vector layer must contain polygons.
 
@@ -6049,8 +6042,6 @@ Parameters
      - Scaling value: the band values are multiplied
        by this value.
    * - **Offset**
-
-       |328|
      - ``OFFSET``
      - [number |dataDefine|]
 
@@ -7504,9 +7495,6 @@ Python code
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |324| replace:: ``NEW in 3.24``
-.. |326| replace:: ``NEW in 3.26``
-.. |328| replace:: ``NEW in 3.28``
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png
