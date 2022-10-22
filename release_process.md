@@ -37,15 +37,15 @@ This usually happens from the October release.
 Following changes have to be done in `master` branch before you create the new release branch.
 Otherwise, you will have to do the changes twice: in master and in the new branch.
 
-- [ ] In [substitutions.txt](substitutions.txt) file:
-  - [ ] replace |CURRENT| value with the new version number
-  - [ ] Remove intermediate versions substitutions and their occurrences in the rst files
+- [ ] In [substitutions.txt](substitutions.txt) file, replace |CURRENT| value with the new version number
 - [ ] In [docs_conf.yml](docs_conf.yml) file: add the new release number to the `version_list` parameter
 
 #### After the new LTR branch is created
-- [ ] In [substitutions.txt](substitutions.txt) file, add substitutions for the versions
-  of the next LTR cycle that starts (e.g. if you just create the release_3.22 branch, you should add
-  to the master branch substitutions for 3.22, 3.26 and 3.28)
+- [ ] In [substitutions.txt](substitutions.txt) file:
+  - [ ] Remove intermediate versions substitutions and their occurrences in the rst files
+  - [ ] Add substitutions for the versions of the next LTR cycle that starts
+        (e.g. if you just create the release_3.22 branch, you should add
+        to the master branch substitutions for 3.24, 3.26 and 3.28)
 - [ ] In [auto-label.yml](.github/workflows/auto-label.yml) file: update list of versions labels to listen to
 </details>
 

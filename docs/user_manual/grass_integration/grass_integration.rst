@@ -890,7 +890,7 @@ https://qgis.org/en/site/getinvolved/development/addinggrasstools.html.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |CURRENT| replace:: 3.22
+.. |CURRENT| replace:: 3.28
 .. |captureBoundary| image:: /static/common/mActionCaptureBoundary.png
    :width: 1.5em
 .. |captureCentroid| image:: /static/common/mActionCaptureCentroid.png
