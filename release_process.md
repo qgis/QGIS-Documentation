@@ -40,7 +40,7 @@ Otherwise, you will have to do the changes twice: in master and in the new branc
 - [ ] In [substitutions.txt](substitutions.txt) file, replace |CURRENT| value with the new version number
 - [ ] In [docs_conf.yml](docs_conf.yml) file: add the new release number to the `version_list` parameter
 
-#### After the new LTR branch is created
+#### After the new branch is created
 - [ ] In [substitutions.txt](substitutions.txt) file:
   - [ ] Remove intermediate versions substitutions and their occurrences in the rst files
   - [ ] Add substitutions for the versions of the next LTR cycle that starts
@@ -55,14 +55,16 @@ Otherwise, you will have to do the changes twice: in master and in the new branc
 - [ ] In [docs_conf.yml](docs_conf.yml) file, add the new release number to the `version_list` parameter
 </details>
 
-### Next to-be LTR branch
+### New release_x.y branch
 <details>
 New releases are branched off the `master` branch and thus require a set of changes.
 
-- [ ] Ensure that [basic changes](#Before-creating-the-new-release-branch) are applied
+- [ ] Ensure that changes to do in master before creating the new release branch are applied
 - [ ] In [conf.py](conf.py) file:
   - [ ] set the `version` value (in the form x.y)
   - [ ] set the html_context `isTesting` option to `False`
+- [ ] In [README.MD](README.MD) file, update the badges to point to the current branch instead of master
+- [ ] In [Makefile](Makefile) file, set the `VERSION` number as in the conf.py file
 - [ ] In [docker-world.sh](docker-world.sh) file: replace `QGIS-Documentation` with `QGIS-Documentation-x.y`
 - [ ] In [cronjob.sh](cronjob.sh) file:
   - [ ] replace `QGIS-Documentation` with `QGIS-Documentation-x.y`
