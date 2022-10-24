@@ -252,7 +252,7 @@ Returns the Nth value (0 for the first one) or the last -Nth value (-1 for the l
    :widths: 15 85
 
    * - Syntax
-     - array_get(array, index)
+     - array_get(array, pos)
    * - Arguments
      - * **array** - an array
        * **pos** - the index to get (0 based)
