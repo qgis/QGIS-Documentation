@@ -808,140 +808,6 @@ the current map canvas scale as boundary of the range visibility.
    Select it and the map is zoomed to the layer's nearest visibility scale.
 
 
-.. index:: Zoom, Pan, Map navigation
-.. _zoom_pan:
-
-
-Zooming and Panning
--------------------
-
-There are multiple ways to zoom and pan to an area of interest.
-You can use the :guilabel:`Map Navigation` toolbar, the mouse and keyboard on
-the map canvas and also the menu actions from the :menuselection:`View`
-menu and the layers' contextual menu in the :guilabel:`Layers` panel.
-
-.. list-table:: Map canvas navigation actions
-   :header-rows: 1
-   :widths: 5 15 65 5 5 5
-   :class: longtable
-
-   * - Icon
-     - Label
-     - Usage
-     - View menu
-     - Map Navigation Toolbar
-     - Layer Contextual Menu
-   * - |pan|
-     - Pan Map
-     - When activated, left click anywhere on the map canvas to pan the map at
-       the cursor position. You can also pan the map by holding down the left
-       mouse button and dragging the map canvas.
-     - |checkbox|
-     - |checkbox|
-     -
-   * - |zoomIn|
-     - Zoom In
-     - When activated, left click anywhere on the map canvas to zoom in one
-       level. The mouse cursor position will be the center of the
-       zoomed area of interest. You can also zoom in to an area
-       by dragging a rectangle on the map canvas with the left mouse button.
-     - |checkbox|
-     - |checkbox|
-     -
-   * - |zoomOut|
-     - Zoom Out
-     - When activated, left click anywhere on the map canvas to zoom out one
-       level. The mouse cursor position will be the center of the
-       zoomed area of interest. You can also zoom out from an area
-       by dragging a rectangle on the map canvas with the left mouse button.
-     - |checkbox|
-     - |checkbox|
-     -
-   * - |panToSelected|
-     - Pan Map to Selection
-     - Pan the map to the selected features of all the selected layers in the
-       :guilabel:`Layers` panel.
-     - |checkbox|
-     - |checkbox|
-     -
-   * - |zoomToSelected|
-     - Zoom To Selection
-     - Zoom to the selected features of all the selected layers in the
-       :guilabel:`Layers` panel.
-     - |checkbox|
-     - |checkbox|
-     - |checkbox|
-   * - |zoomToLayer|
-     - Zoom To Layer(s)
-     - Zoom to the extent of all the selected layers in the
-       :guilabel:`Layers` panel.
-     - |checkbox|
-     - |checkbox|
-     - |checkbox|
-   * - |zoomFullExtent|
-     - Zoom Full
-     - Zoom to the extent of all the layers in the project
-       or to the :ref:`project full extent <project_full_extent>`.
-     - |checkbox|
-     - |checkbox|
-     -
-   * - |zoomLast|
-     - Zoom Last
-     - Zoom the map to the previous extent in history.
-     - |checkbox|
-     - |checkbox|
-     -
-   * - |zoomNext|
-     - Zoom Next
-     - Zoom the map to the next extent in history.
-     - |checkbox|
-     - |checkbox|
-     -
-   * - |zoomActual|
-     - Zoom to Native Resolution
-     - Zoom the map to a level where one pixel of the active raster layer covers
-       one screen pixel.
-     - |checkbox|
-     - |checkbox|
-     - |checkbox|
-
-A :guilabel:`Zoom factor` can be set under the
-:menuselection:`Settings -->` |options| :menuselection:`Options --> Map
-tools` menu to define the scale behavior while zooming. There, you can also
-set a list of :guilabel:`Predefined Scales` that will be available at the
-bottom of the map canvas.
-
-With the Mouse on the Map Canvas
-......................................
-
-In addition to using the |pan| :sup:`Pan` |zoomIn| :sup:`Zoom In` and
-|zoomOut| :sup:`Zoom Out` tools described above, you can hold the mouse wheel
-inside of the map canvas and drag the mouse cursor (on macOS, you may need to
-hold down the :kbd:`cmd` key). You can also roll the mouse wheel to zoom in and
-out on the map. The mouse cursor position will be the center of the zoomed area
-of interest. Holding down :kbd:`Ctrl` while rolling the mouse wheel results in a
-finer zoom.
-
-With the Keyboard on the Map Canvas
-...................................
-
-Holding down :kbd:`spacebar` on the keyboard and moving the mouse cursor will
-pan the map the same way dragging the map canvas with |pan| :sup:`Pan` does.
-
-Panning the map is possible with the arrow keys.
-Place the mouse cursor inside the map area, and press on the arrow keys
-to pan up, down, left and right.
-
-The :kbd:`PgUp` and :kbd:`PgDown` keys on the keyboard will cause
-the map display to zoom in or out following the zoom factor set. Pressing
-:kbd:`Ctrl++` or :kbd:`Ctrl+-` also performs an immediate zoom in/out
-on the map canvas.
-
-When certain map tools are active (Identify, Measure...), you can perform a
-zoom by holding down :kbd:`Shift` and dragging a rectangle on the map to zoom
-to that area. This is not enabled for selection tools (since they
-use :kbd:`Shift` for adding to selection) or edit tools.
-
 .. index::
    single: Bookmarks
    see: Spatial bookmarks; Bookmarks
@@ -3011,10 +2877,6 @@ The values presented in the varying size assistant above will set the size
    :width: 1em
 .. |osx| image:: /static/common/osx.png
    :width: 1em
-.. |pan| image:: /static/common/mActionPan.png
-   :width: 1.5em
-.. |panToSelected| image:: /static/common/mActionPanToSelected.png
-   :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
    :width: 1.5em
 .. |rasterHistogram| image:: /static/common/rasterHistogram.png
@@ -3089,19 +2951,7 @@ The values presented in the varying size assistant above will set the size
    :width: 1.3em
 .. |zoomActual| image:: /static/common/mActionZoomActual.png
    :width: 1.5em
-.. |zoomFullExtent| image:: /static/common/mActionZoomFullExtent.png
-   :width: 1.5em
-.. |zoomIn| image:: /static/common/mActionZoomIn.png
-   :width: 1.5em
-.. |zoomLast| image:: /static/common/mActionZoomLast.png
-   :width: 1.5em
-.. |zoomNext| image:: /static/common/mActionZoomNext.png
-   :width: 1.5em
-.. |zoomOut| image:: /static/common/mActionZoomOut.png
-   :width: 1.5em
 .. |zoomToBookmark| image:: /static/common/mActionZoomToBookmark.png
    :width: 1.5em
 .. |zoomToLayer| image:: /static/common/mActionZoomToLayer.png
-   :width: 1.5em
-.. |zoomToSelected| image:: /static/common/mActionZoomToSelected.png
    :width: 1.5em

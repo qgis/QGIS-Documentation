@@ -2114,9 +2114,6 @@ Below is a list of the default panels provided by QGIS:
 Map View
 ========
 
-Exploring the map view
-----------------------
-
 The map view (also called **Map canvas**) is the "business end" of
 QGIS --- maps are displayed in this area, in 2D.
 The map displayed in this window will reflect the rendering (symbology,
@@ -2133,29 +2130,85 @@ If there are already layers in the project, no map canvas resize is
 performed, so only features falling within the current map canvas extent
 will be visible.
 
-Click on the map view and you should be able to interact with it:
+.. index:: Zoom, Pan, Map navigation
+.. _zoom_pan:
 
-* it can be panned, shifting the display to another region of the map:
-  this is performed using the |pan| :sup:`Pan Map` tool, the arrow keys,
-  moving the mouse while any of the :kbd:`Space` key, the middle mouse
-  button or the mouse wheel is held down. When the mouse is used, the distance
-  and direction of the pan action are shown in the status bar at the bottom.
-* it can be zoomed in and out, with the dedicated |zoomIn| :sup:`Zoom In`
-  and |zoomOut| :sup:`Zoom Out` tools. Hold the :kbd:`Alt` key to switch from
-  one tool to the other. Zooming is also performed by rolling
-  the wheel forward to zoom in and backwards to zoom out.
-  The zoom is centered on the mouse cursor position. You can customize the
-  :guilabel:`Zoom factor` under the
-  :menuselection:`Settings --> Options --> Map tools` menu.
-* it can be zoomed to the full extent of all loaded layers (|zoomFullExtent|
-  :sup:`Zoom Full`), to the extent of all the selected layers in the
-  :menuselection:`Layers` panel (|zoomToLayer| :sup:`Zoom to Layer(s)`)
-  or to the extent of the selected features of all the selected layers in the
-  :menuselection:`Layers` panel (|zoomToSelected| :sup:`Zoom to
-  Selection`)
-* you can navigate back/forward through the canvas view history with
-  the |zoomLast|:sup:`Zoom Last` and |zoomNext|:sup:`Zoom Next` buttons
-  or using the back/forward mouse buttons.
+
+Exploring the map view
+----------------------
+
+Click on the map view and you should be able to interact with it,
+panning or zooming to different areas of the map.
+Dedicated tools are provided in the :guilabel:`Navigation Toolbar` and
+in the :menuselection:`View` menu, with handful shortcuts from the keyboard
+or the mouse buttons.
+
+
+.. list-table:: Map canvas navigation tools
+   :header-rows: 1
+   :widths: 20 75
+   :class: longtable
+
+   * - Tool
+     - Usage
+   * - |pan| :sup:`Pan Map`
+     - * Single left click: the map is centered on the clicked point, at the same scale
+       * Hold down the left mouse button and drag the map canvas.
+
+   * - |zoomIn| :sup:`Zoom In`
+     - * Single left click: the map is centered on the clicked point,
+         while the scale gets doubled
+       * Drag a rectangle on the map canvas with the left mouse button
+         to zoom in to an area.
+       * Hold the :kbd:`Alt` key to switch to the |zoomOut| :sup:`Zoom Out` tool.
+
+   * - |zoomOut| :sup:`Zoom Out`
+     - * Single left click: the map is centered on the clicked point,
+         while the scale gets halved
+       * Drag a rectangle on the map canvas with the left mouse button
+         to zoom out from an area.
+       * Hold the :kbd:`Alt` key to switch to the |zoomIn| :sup:`Zoom In` tool.
+
+   * - |panToSelected| :sup:`Pan Map to Selection`
+     - Pan the map to the selected features of all the selected layers in the
+       :guilabel:`Layers` panel.
+   * - |zoomToSelected| :sup:`Zoom To Selection`
+     - Zoom to the selected features of all the selected layers in the
+       :guilabel:`Layers` panel.
+
+       *Also available in the layer contextual menu*
+   * - |zoomToLayer| :sup:`Zoom To Layer(s)`
+     - Zoom to the extent of all the selected layers in the
+       :guilabel:`Layers` panel.
+
+       *Also available in the layer contextual menu*
+   * - |zoomFullExtent| :sup:`Zoom Full`
+     - Zoom to the extent of all the layers in the project
+       or to the :ref:`project full extent <project_full_extent>`.
+   * - |zoomLast| :sup:`Zoom Last`
+     - Zoom the map to the previous extent in history.
+   * - |zoomNext| :sup:`Zoom Next`
+     - Zoom the map to the next extent in history.
+   * - |zoomActual| :sup:`Zoom to Native Resolution`
+     - Zoom the map to a level where one pixel of the active raster layer covers
+       one screen pixel.
+
+       *Also available in the layer contextual menu*
+   * - Mouse wheel
+     - * Pan map: Hold and drag the mouse wheel.
+       * Zoom: Roll the mouse wheel to zoom in or zoom out.
+         With :kbd:`Ctrl` key pressed while rolling the mouse wheel
+         results in a finer zoom.
+       * Press the back or forward button to browse the map canvas zoom history.
+   * - Keyboard
+     - * Pan map: Hold down the :kbd:`Space` key and move the mouse.
+         Press the arrow keys to pan up, down, left and right.
+       * Zoom in: Press :kbd:`PgUp` or :kbd:`Ctrl++`
+       * Zoom out: Press :kbd:`PgDown` or :kbd:`Ctrl+-`
+       * Zoom to area: When certain map tools are active (Identify, Measure...),
+         hold down :kbd:`Shift` and drag a rectangle on the map to zoom to that
+         area. Not compatible with active selection or edit tools.
+
 
 Right-click over the map and you should be able to |editCopy|
 :guilabel:`Copy coordinates` of the clicked point in the map CRS, in WGS84
@@ -2287,7 +2340,7 @@ The :guilabel:`Temporal controller` panel has the following modes:
   * |unchecked| :guilabel:`Cumulative range`: all animation frames will
     have the same start date-time but different end dates and times.
     This is useful if you wish to accumulate data in your temporal
-    visualisation instead of showing a ‘moving time window’ across your data.
+    visualization instead of showing a ‘moving time window’ across your data.
 
 .. _`create_temporal_animation`:
 
@@ -2449,7 +2502,7 @@ In the dialog that opens:
    * |checkbox| :guilabel:`Simplify geometries to reduce output file
      size`:
      Geometries will be simplified while exporting the map by removing
-     vertices that are not discernably different at the export
+     vertices that are not discernibly different at the export
      resolution (e.g. if the export resolution is ``300 dpi``, vertices
      that are less than ``1/600 inch`` apart will be removed).
      This can reduce the size and complexity of the export file (very
