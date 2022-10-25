@@ -6,7 +6,7 @@
 Statistics of translation
 ===========================
 
-*(last update: 2022-10-18)*
+*(last update: 2022-10-25)*
 
 .. list-table::
    :widths: auto
@@ -14,9 +14,9 @@ Statistics of translation
    * - Number of strings
      - Number of target languages
      - Overall Translation ratio
-   * - **33616**
+   * - **33676**
      - **57**
-     - **13.46%**
+     - **13.44%**
 
 
 
@@ -40,35 +40,35 @@ Statistics of translation
      - Bengali
      - 0.16
      - Bulgarian
-     - 2.35
+     - 2.34
    * - Burmese
      - 0.09
      - Catalan
-     - 1.39
+     - 1.38
      - Chinese Simplified
-     - 19.41
+     - 19.36
    * - Chinese Traditional
      - 0.58
      - Croatian
      - 0.1
      - Czech
-     - 5.39
+     - 5.38
    * - Danish
      - 0.62
      - Dutch
-     - 99.71
+     - 99.52
      - Estonian
      - 1.24
    * - Finnish
      - 1.66
      - French
-     - 87.23
+     - 87.07
      - Galician
      - 0.43
    * - Georgian
      - 0.1
      - German
-     - 19.73
+     - 19.68
      - Greek
      - 0.35
    * - Hebrew
@@ -76,21 +76,21 @@ Statistics of translation
      - Hindi
      - 0.28
      - Hungarian
-     - 15.81
+     - 15.74
    * - Igbo
      - 0.01
      - Indonesian
-     - 2.61
+     - 2.6
      - Italian
-     - 99.49
+     - 99.3
    * - Japanese
-     - 76.23
+     - 76.08
      - Kabyle
      - 0.09
      - Korean
-     - 75.13
+     - 74.98
    * - Lithuanian
-     - 4.67
+     - 4.66
      - Macedonian
      - 0.11
      - Malay
@@ -102,29 +102,29 @@ Statistics of translation
      - Mongolian
      - 0.1
    * - N'ko
-     - 1.7
+     - 1.69
      - Norwegian Bokmål
-     - 2.96
+     - 2.95
      - Persian
      - 0.39
    * - Polish
      - 1.67
      - Portuguese (Brazil)
-     - 68.28
+     - 68.97
      - Portuguese (Portugal)
-     - 7.74
+     - 7.71
    * - Romanian
-     - 40.49
+     - 40.4
      - Russian
-     - 12.49
+     - 12.45
      - Serbian
      - 0.1
    * - Slovak
-     - 1.22
+     - 1.21
      - Slovenian
-     - 2.98
+     - 2.97
      - Spanish
-     - 99.4
+     - 99.2
    * - Swedish
      - 0.95
      - Tagalog
@@ -136,7 +136,7 @@ Statistics of translation
      - Thai
      - 0.1
      - Turkish
-     - 2.68
+     - 2.67
    * - Ukrainian
      - 2.17
      - Urdu
