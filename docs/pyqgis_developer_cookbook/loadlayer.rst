@@ -103,9 +103,9 @@ The following list shows how to access various data sources using vector data
 providers:
 
 .. index::
-   pair: Loading; OGR layers
+   pair: Loading; GDAL layers
 
-* OGR library (Shapefile and many other file formats) --- data source is the
+* GDAL library (Shapefile and many other file formats) --- data source is the
   path to the file:
 
   * for Shapefile:
@@ -206,7 +206,7 @@ providers:
 .. index::
   pair: Loading; MySQL geometries
 
-* MySQL WKB-based geometries, through OGR --- data source is the connection
+* MySQL WKB-based geometries, through GDAL --- data source is the connection
   string to the table:
 
   .. code-block:: python

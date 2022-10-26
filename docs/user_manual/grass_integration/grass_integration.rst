@@ -136,11 +136,11 @@ stored in subdirectories called :file:`LOCATIONs`. Each :file:`LOCATION` is defi
 by its coordinate system, map projection and geographical boundaries. Each
 :file:`LOCATION` can have several :file:`MAPSETs` (subdirectories of the
 :file:`LOCATION`) that are used to subdivide the project into different topics or
-subregions, or as workspaces for individual team members (see Neteler & Mitasova
-2008 in :ref:`literature_and_web`). In order to analyse vector and raster layers
+sub-regions, or as workspaces for individual team members (see Neteler & Mitasova
+2008 in :ref:`literature_and_web`). In order to analyze vector and raster layers
 with GRASS modules, you generally have to import them into a GRASS :file:`LOCATION`.
 (This is not strictly true -- with the GRASS modules :file:`r.external` and :file:`v.external`
-you can create read-only links to external GDAL/OGR-supported datasets without
+you can create read-only links to external GDAL-supported datasets without
 importing them. This is not the usual way for beginners to work with GRASS, therefore
 this functionality will not be described here.)
 

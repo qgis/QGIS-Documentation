@@ -2427,10 +2427,8 @@ In the dialog that opens:
 
    * |checkbox| :guilabel:`Export RDF metadata` of the document such
      as the title, author, date, description...
-   * |unchecked| :guilabel:`Create Geospatial PDF (GeoPDF)`:
-     Generate a
-     `georeferenced PDF file <https://gdal.org/drivers/raster/pdf.html>`_
-     (requires GDAL version 3 or later).
+   * |unchecked| :guilabel:`Create Geospatial PDF (GeoPDF)`: Generate a
+     `georeferenced PDF file <https://gdal.org/drivers/raster/pdf.html>`_.
      You can:
 
      * Choose the GeoPDF :guilabel:`Format`
@@ -2441,8 +2439,8 @@ In the dialog that opens:
 
      .. note::
 
-       Since QGIS 3.10, with GDAL 3 a GeoPDF file can also be used as a
-       data source. For more on GeoPDF support in QGIS, see
+       A GeoPDF file can also be used as a data source.
+       For more on GeoPDF support in QGIS, see
        https://north-road.com/2019/09/03/qgis-3-10-loves-geopdf/.
 
    * :guilabel:`Rasterize map`

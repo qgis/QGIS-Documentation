@@ -824,9 +824,9 @@ make sure the schemas match.
    'string' and want to paste values from another attribute column that
    has a greater length the length of the column size will be extended
    to the same amount.
-   This is because the GDAL Shapefile driver starting with GDAL/OGR
-   1.10 knows to auto-extend string and integer fields to dynamically
-   accommodate for the length of the data to be inserted.
+   This is because the GDAL Shapefile driver knows to auto-extend string
+   and integer fields to dynamically  accommodate for the length of
+   the data to be inserted.
 
 .. _delete_feature:
 

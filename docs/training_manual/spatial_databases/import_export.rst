@@ -32,7 +32,7 @@ You may encounter this error:
   "gist"
 
 This is a known issue regarding the creation *in situ* of a spatial index for
-the data you're importing. To avoid the error, exclude the :kbd:`-I` parameter.
+the data you're importing. To avoid the error, exclude the ``-I`` parameter.
 This will mean that no spatial index is being created directly, and you'll need
 to create it in the database after the data have been imported. (The creation
 of a spatial index will be covered in the next lesson.)
@@ -59,7 +59,7 @@ ogr2ogr
 -------------------------------------------------------------------------------
 
 ogr2ogr is a very powerful tool to convert data into and from postgis to many
-data formats. ogr2ogr is part of the GDAL/OGR Software and has to be installed
+data formats. ogr2ogr is part of the GDAL library and has to be installed
 separately. To export a table from PostGIS to GML, you can use this command:
 
 .. code-block:: bash

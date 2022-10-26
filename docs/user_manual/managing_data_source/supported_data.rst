@@ -54,10 +54,9 @@ However, because of the differences in format specifications
 (GeoPackage, ESRI Shapefile, MapInfo and MicroStation file formats,
 AutoCAD DXF, PostGIS, SpatiaLite, Oracle Spatial, MS SQL Server,
 SAP HANA Spatial databases and many more), QGIS may handle some of
-their properties differently.
-Support is provided by the
-`OGR Simple Feature Library <https://gdal.org/drivers/vector/index.html>`_.
-This section describes how to work with these specificities.
+their properties differently. Support is provided by the
+`GDAL vector drivers <https://gdal.org/drivers/vector/index.html>`_.
+This section describes how to work with these specifics.
 
 .. note::
 
@@ -92,7 +91,7 @@ GeoPackage layers can have JSON fields.
 
 GeoPackage is the default format for vector data in QGIS.
 
-.. index:: ESRI Shapefile format, OGR
+.. index:: ESRI Shapefile format, GDAL
 .. _vector_shapefiles:
 
 ESRI Shapefile format
@@ -116,7 +115,7 @@ A Shapefile format dataset can contain additional files.
 For further details, see the the ESRI technical specification at
 https://www.esri.com/library/whitepapers/pdfs/shapefile.pdf.
 
-GDAL 3.1 has read-write support for compressed ESRI Shapefile
+GDAL has read-write support for compressed ESRI Shapefile
 format (:file:`shz` and :file:`shp.zip`).
 
 **Improving Performance for ESRI Shapefile format datasets**
@@ -245,9 +244,9 @@ Delimited text files also support Z and M coordinates in geometries::
 Using CSVT file to control field formatting
 ...........................................
 
-When loading CSV files, the OGR driver assumes all fields are strings
+When loading CSV files, the GDAL driver assumes all fields are strings
 (i.e. text) unless it is told otherwise.
-You can create a CSVT file to tell OGR (and QGIS) the data type of the
+You can create a CSVT file to tell GDAL (and QGIS) the data type of the
 different columns:
 
 .. csv-table::
@@ -299,7 +298,7 @@ PostGIS layers are stored in a PostgreSQL database.
 The advantages of PostGIS are spatial indexing, filtering and
 querying capabilities.
 Using PostGIS, vector functions such as select and identify work more
-accurately than they do with OGR layers in QGIS.
+accurately than they do with GDAL layers in QGIS.
 
 
 .. _tip_postgis_layers:
@@ -456,7 +455,7 @@ This will import the Shapefile format dataset :file:`alaska.shp` into the
 PostGIS database *postgis* using the user *postgres* with the password
 *topsecret* on the host server *myhost.de*.
 
-Note that OGR must be built with PostgreSQL to support PostGIS.
+Note that GDAL must be built with PostgreSQL to support PostGIS.
 You can verify this by typing (in |nix|)::
 
   ogrinfo --formats | grep -i post

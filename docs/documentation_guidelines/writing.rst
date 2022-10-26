@@ -443,7 +443,7 @@ within normal text:
 
 .. code-block:: rst
 
-   QGIS can load several :index:`Vector formats` supported by GDAL/OGR ...
+   QGIS can load several :index:`Vector formats` supported by GDAL ...
 
 Or you can use the ``.. index::`` block-level markup which links to the
 beginning of the next paragraph. Because of the rules mentioned above, it
