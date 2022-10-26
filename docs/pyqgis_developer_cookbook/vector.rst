@@ -734,12 +734,12 @@ There are several ways to generate a vector layer dataset:
   <qgis.core.QgsVectorFileWriter.writeAsVectorFormatV3>` which saves the whole
   vector layer or creating an instance of the class and issue calls to
   :meth:`addFeature() <qgis.core.QgsVectorFileWriter.addFeature>`. This class
-  supports all the vector formats that OGR supports (GeoPackage, Shapefile,
+  supports all the vector formats that GDAL supports (GeoPackage, Shapefile,
   GeoJSON, KML and others).
 * the :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` class: instantiates
   a data provider that interprets the supplied path (url) of the data source
   to connect to and access the data. It can be used to create temporary,
-  memory-based layers (``memory``) and connect to OGR datasets (``ogr``),
+  memory-based layers (``memory``) and connect to GDAL vector datasets (``ogr``),
   databases (``postgres``, ``spatialite``, ``mysql``, ``mssql``) and
   more (``wfs``, ``gpx``, ``delimitedtext``...).
 
@@ -788,7 +788,7 @@ From an instance of :class:`QgsVectorFileWriter <qgis.core.QgsVectorFileWriter>`
 
     success again!
 
-.. Cannot CI test this snippet because OGR driver for 'FileGDB' not found
+.. Cannot CI test this snippet because GDAL driver for 'FileGDB' not found
 
 .. code-block:: python
 
