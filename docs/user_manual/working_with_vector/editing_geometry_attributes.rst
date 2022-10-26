@@ -1507,28 +1507,37 @@ offset coordinates for the features whose symbol is moved in the map canvas.
 Trim/Extend Feature
 -------------------
 
-When a digitized line is too short or too long to snap to another line (missing or
-crossing the line), it is necessary to be able to extend or shorten the segment.
+The |trimExtend| :sup:`Trim/Extend` tool allows you to shorten or lengthen
+segments of a (multi)line or (multi)polygon geometry to converge with a
+selected segment (the cutting line). This results in a modified geometry
+with a vertex snapped to the target segment or in its prolongation.
+Depending on how the selected geometries are placed in relation to each
+other, the tool will either:
 
-The |trimExtend| :sup:`Trim/Extend` tool allows you to also modify
-(multi)lines AND (multi)polygons.
-Moreover, it is not necessarily the end of the lines that is
-concerned; any segment of a geometry can be modified.
+* **Trim**: removes parts of the line segment or polygon boundary,
+  beyond the cutting line
+* **Extend**: extends polygon boundaries or line segments so that they can
+  snap to the cutting line.
 
-.. note:: This can lead to invalid geometries.
+In order to trim or extend existing geometries:
 
-.. note:: You must activate segment snapping for this tool to work.
+#. Enable appropriate :ref:`snapping settings <snapping_options>` on segment
+   for the involved layer(s)
+#. Select the |trimExtend| :sup:`Trim/Extend` tool
+#. Click the target limit segment, i.e. the segment with respect to which
+   you want to extend or trim another segment. It appears highlighted.
+#. Move to the segment you want to trim or extend. It does not need to be
+   the last segment of the geometry, but has to be on the active layer.
+#. Hover over the segment, and QGIS displays a preview of what the feature's
+   geometry would be. If OK, click the segment.
+   In the case of a trim, you must select the part that should be shortened.
+#. When both segments are in 3D, the tool performs an interpolation on
+   the limit segment to get the Z value.
 
-The tool asks you to select a limit (a segment) with respect to which
-another segment will be extended or trimmed.
-Unlike the vertex tool, a check is performed to modify only the layer
-being edited.
+.. attention:: Pay attention to the modified geometry while using the |trimExtend|
+  :sup:`Trim/Extend` tool. Depending on the inputs, it can create invalid
+  geometries, potentially resulting in failure at layer saving.
 
-When both segments are in 3D, the tool performs an interpolation on
-the limit segment to get the Z value.
-
-In the case of a trim, you must select the part that will be shortened
-by clicking on it.
 
 .. _shape_edit:
 
