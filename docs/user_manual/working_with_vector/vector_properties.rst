@@ -2047,8 +2047,8 @@ the |newAttribute| :sup:`New field` and |deleteAttribute| :sup:`Delete field`
 buttons.
 
 You can also rename fields by double-clicking its name. This is only supported
-for data providers like PostgreSQL, Oracle, Memory layer and some OGR layer
-depending on the OGR data format and version.
+for data providers like PostgreSQL, Oracle, Memory layer and some GDAL layers
+depending on the GDAL version.
 
 If set in the underlying data source or in the :ref:`forms properties
 <configure_field>`, the field's alias is also displayed. An alias is a human
@@ -2539,7 +2539,7 @@ QGIS provides more options to tweak the join:
   to avoid name collision
 
 QGIS currently has support for joining non-spatial table formats supported by
-OGR (e.g., CSV, DBF and Excel), delimited text and the PostgreSQL provider.
+GDAL (e.g., CSV, DBF and Excel), delimited text and the PostgreSQL providers.
 
 
 .. _vector_auxiliary_storage:

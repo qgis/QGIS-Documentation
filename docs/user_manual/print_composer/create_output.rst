@@ -235,7 +235,7 @@ To export a layout as PDF:
        much more suitable for printing outputs or for post-production in external
        applications (requires Qt 5.13 or later).
    * |unchecked| :guilabel:`Create Geospatial PDF (GeoPDF)`:
-     Generate a georeferenced PDF file (requires GDAL version 3 or later).
+     Generate a georeferenced PDF file.
    * |unchecked| :guilabel:`Disable tiled raster layer exports`: When exporting
      files, QGIS uses tiled based rendering that saves memory.
      Sometimes, this can cause visible "seams" in the rasters for generated files.
@@ -257,8 +257,8 @@ To export a layout as PDF:
 
    PDF Export Options
 
-.. note:: Since QGIS 3.10, with GDAL 3, GeoPDF export is supported, and a number
-   of GeoPDF specific options are available:
+.. note:: GeoPDF export is supported, and a number of GeoPDF specific options
+   are available:
    
    * :guilabel:`Format` (GeoPDF format - there are some GeoPDF variations),
    * :guilabel:`Include multiple map themes` (specify map themes to include),

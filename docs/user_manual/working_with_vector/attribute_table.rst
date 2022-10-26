@@ -22,7 +22,7 @@ Foreword: Spatial and non-spatial tables
 ========================================
 
 QGIS allows you to load spatial and non-spatial layers. This currently includes
-tables supported by OGR and delimited text, as well as the PostgreSQL, MS SQL Server,
+tables supported by GDAL and delimited text, as well as the PostgreSQL, MS SQL Server,
 SpatiaLite and Oracle providers. All loaded layers are listed in
 the :guilabel:`Layers` panel. Whether a layer is spatially enabled or not
 determines whether you can interact with it on the map.
@@ -101,7 +101,7 @@ following functionality:
    "|actionRun|", "Actions", "Lists the actions related to the layer"
 
 
-.. note:: Depending on the format of the data and the OGR library built with
+.. note:: Depending on the format of the data and the GDAL library built with
    your QGIS version, some tools may not be available.
 
 Below these buttons is the Quick Field Calculation bar (enabled only in
@@ -489,7 +489,7 @@ contextual menu of the layer, from the :guilabel:`Layers` panel, click on
 :menuselection:`Export --> Save selected features as...` to define the name of
 the output dataset, its format and CRS (see section :ref:`general_saveas`). You'll
 notice that |checkbox| :menuselection:`Save only selected features` is checked.
-It is also possible to specify OGR creation options within the dialog.
+It is also possible to specify GDAL creation options within the dialog.
 
 .. index:: Field Calculator, Derived Fields, Virtual Fields, Fields edit
 .. _calculate_fields_values:

@@ -322,7 +322,7 @@ These elements are:
 * |indicatorMemory| to remind you that the layer is a :ref:`temporary scratch
   layer <vector_new_scratch_layer>` and its content will be discarded when you
   close this project. To avoid data loss and make the layer permanent, click
-  the icon to store the layer in any of the OGR vector formats supported by QGIS.
+  the icon to store the layer in any of the GDAL vector formats supported by QGIS.
 * |indicatorOffline| to identify a layer used in :ref:`offline editing mode
   <offlinedit>`.
 * |indicatorNoCRS| to identify a layer that has no/unknown CRS
