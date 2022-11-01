@@ -6,7 +6,7 @@
 Statistics of translation
 ===========================
 
-*(last update: 2022-10-25)*
+*(last update: 2022-11-01)*
 
 .. list-table::
    :widths: auto
@@ -15,8 +15,8 @@ Statistics of translation
      - Number of target languages
      - Overall Translation ratio
    * - **33676**
-     - **57**
-     - **13.44%**
+     - **58**
+     - **13.22%**
 
 
 
@@ -46,7 +46,7 @@ Statistics of translation
      - Catalan
      - 1.38
      - Chinese Simplified
-     - 19.36
+     - 19.49
    * - Chinese Traditional
      - 0.58
      - Croatian
@@ -56,7 +56,7 @@ Statistics of translation
    * - Danish
      - 0.62
      - Dutch
-     - 99.52
+     - 99.54
      - Estonian
      - 1.24
    * - Finnish
@@ -76,13 +76,13 @@ Statistics of translation
      - Hindi
      - 0.28
      - Hungarian
-     - 15.74
+     - 15.7
    * - Igbo
      - 0.01
      - Indonesian
      - 2.6
      - Italian
-     - 99.3
+     - 99.32
    * - Japanese
      - 76.08
      - Kabyle
@@ -105,43 +105,49 @@ Statistics of translation
      - 1.69
      - Norwegian Bokmål
      - 2.95
-     - Persian
+     - Panjabi (Punjabi)
+     - 0.0
+   * - Persian
      - 0.39
-   * - Polish
+     - Polish
      - 1.67
      - Portuguese (Brazil)
-     - 68.97
-     - Portuguese (Portugal)
+     - 69.49
+   * - Portuguese (Portugal)
      - 7.71
-   * - Romanian
-     - 40.4
+     - Romanian
+     - 40.38
      - Russian
      - 12.45
-     - Serbian
+   * - Serbian
      - 0.1
-   * - Slovak
+     - Slovak
      - 1.21
      - Slovenian
      - 2.97
-     - Spanish
-     - 99.2
-   * - Swedish
+   * - Spanish
+     - 99.19
+     - Swedish
      - 0.95
      - Tagalog
      - 0.09
-     - Tamil
+   * - Tamil
      - 0.45
-   * - Telugu
+     - Telugu
      - 0.03
      - Thai
      - 0.1
-     - Turkish
+   * - Turkish
      - 2.67
-   * - Ukrainian
+     - Ukrainian
      - 2.17
      - Urdu
      - 0.01
-     - Vietnamese
+   * - Vietnamese
      - 0.22
+     -
+     -
+     -
+     -
 
 
