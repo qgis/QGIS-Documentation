@@ -96,7 +96,7 @@ The following example shows how to check if a given expression can be parsed cor
    exp = QgsExpression('1 + 1 = ')
    assert(exp.hasParserError())
 
-   assert(exp.parserErrorString() == '\nsyntax error, unexpected $end')
+   assert(exp.parserErrorString() == '\nsyntax error, unexpected end of file')
 
 .. index:: Expressions; Evaluating
 
