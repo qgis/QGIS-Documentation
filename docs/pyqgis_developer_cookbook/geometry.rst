@@ -271,8 +271,7 @@ It's also possible to modify each part of the geometry using
 
 .. testoutput:: geometry
 
-    MultiPoint ((-10334726.79314761981368065 -5360105.10101188533008099),(-10462133.82917750626802444 -5217484.34365727473050356),(-10589398.51346865110099316 -5072020.358805269934237))
-
+    MultiPoint ((-10334728.12541878595948219 -5360106.25905461423099041),(-10462135.16126426123082638 -5217485.4735023295506835),(-10589399.84444035589694977 -5072021.45942386891692877))
 
 .. index:: Geometry; Predicates and operations
 
@@ -357,13 +356,13 @@ The following code assumes ``layer`` is a :class:`QgsVectorLayer
 .. testoutput:: geometry
 
     Zambia
-    Perimeter (m): 5539361.250294596
+    Perimeter (m): 5539361.250294601
     Area (m2): 751989035032.9031
     Area (km2): 751989.0350329031
     Zimbabwe
-    Perimeter (m): 2865021.332507607
-    Area (m2): 389267821381.6009
-    Area (km2): 389267.82138160086
+    Perimeter (m): 2865021.3325076113
+    Area (m2): 389267821381.6008
+    Area (km2): 389267.8213816008
 
 Alternatively, you may want to know the distance and bearing between two points.
 
