@@ -418,6 +418,10 @@ Using the basic digitizing tools, you can perform the following functions:
   +------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
   | |saveEdits|                  | Save edits to the active layer                 |                          |                                           |
   +------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
+  | |digitizeWithSegment|        | Digitize using straight segments               | |digitizeWithCurve|      | Digitize using curve lines                |
+  +------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
+  | |streamingDigitize|          | Enable freehand digitizing                     | |digitizeShape|          | Digitize polygon of regular shape         |
+  +------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
   | |newTableRow|                | Add new record                                 | |capturePoint|           | Add Feature: Capture Point                |
   +------------------------------+------------------------------------------------+--------------------------+-------------------------------------------+
   | |captureLine|                | Add Feature: Capture Line                      | |capturePolygon|         | Add Feature: Capture Polygon              |
@@ -457,6 +461,37 @@ of all features unless
    Remember to |saveEdits| :sup:`Save Layer Edits` regularly.
    This will also check that your data source can accept all the changes.
 
+.. index::
+   single: Digitizing tools; Draw curves
+   single: Digitizing tools; Stream digitizing
+.. _drawing_methods:
+
+Geometry editing techniques
+---------------------------
+
+When a geometry drawing tool (mainly the ones that add, split, reshape features)
+is enabled for a line or polygon based layer, you can select the technique for
+adding new vertices:
+
+* The |digitizeWithSegment| :sup:`Digitize with Segment`: draws straight segment
+  whose start and end points are defined by left clicks.
+* The |digitizeWithCurve| :sup:`Digitize with Curve`: draws curve line based on
+  three consecutive nodes defined by left clicks (start, point along the arc, end).
+  If the geometry type does not support curves, then consecutive smaller segments
+  are used to approximate the curvature.
+* The |streamingDigitize| :sup:`Stream Digitizing`: draws lines in freehand mode,
+  i.e. nodes are added following cursor movement in the map canvas and
+  a :guilabel:`Streaming Tolerance`.
+  The streaming tolerance defines the spacing between consecutive vertices.
+  Currently, the only supported unit is pixels (``px``). Only the starting left
+  click and the ending right click are necessary in this mode.
+* The |digitizeShape| :sup:`Digitize Shape`: triggers tools on the
+  :ref:`Shape Digitizing Toolbar <shape_edit>` to draw a polygon of a regular shape.
+
+The selected technique remains while switching among the digitizing tools.
+You can combine any of the first three methods while drawing the same geometry.
+
+
 .. index:: Adding features, Rubber band
 .. _add_feature:
 
@@ -475,8 +510,7 @@ To create features with the spatially enabled tools, you first digitize the
 geometry then enter its attributes. To digitize the geometry:
 
 #. (Optional as it is the default) Select the |digitizeWithSegment|
-   :sup:`Digitize With Segment` geometry drawing method on the
-   :guilabel:`Advanced Digitizing Toolbar`
+   :sup:`Digitize With Segment` geometry drawing method
 #. Left-click on the map area to create the first point of your new feature.
    For point features, this should be enough and trigger, if required,
    the feature form to fill in their attributes.
@@ -493,9 +527,9 @@ geometry then enter its attributes. To digitize the geometry:
      This will create consecutive straight lines between the vertices you
      place, following existing features.
    * free-hand digitized, pressing :kbd:`R` or activating |streamingDigitize|
-     :sup:`Stream Digitizing` in the :guilabel:`Advanced Digitizing Toolbar`.
+     :sup:`Stream Digitizing`.
    * drawn as curve, pressing :kbd:`Ctrl+Shift+G` or activating |DigitizeWithCurve|
-     :sup:`Digitize with Curve` in the :guilabel:`Advanced Digitizing Toolbar`.
+     :sup:`Digitize with Curve`.
 
    .. note::
     While digitizing line or polygon geometries, you can switch back and forth
@@ -939,10 +973,6 @@ Advanced digitizing
   +===========================+=========================================+========================+=========================+
   | |cad|                     | Enable Advanced Digitizing Tools        |                        |                         |
   +---------------------------+-----------------------------------------+------------------------+-------------------------+
-  | |digitizeWithSegment|     | Digitize with Segment                   | |digitizeWithCurve|    | Digitize with Curve     |
-  +---------------------------+-----------------------------------------+------------------------+-------------------------+
-  | |streamingDigitize|       | Enable Stream Digitizing                | |digitizeShape|        | Digitize Shape          |
-  +---------------------------+-----------------------------------------+------------------------+-------------------------+
   | |moveFeature|             | Move Feature(s)                         | |moveFeatureCopy|      | Copy and Move Feature(s)|
   | |moveFeatureLine|         |                                         | |moveFeatureCopyLine|  |                         |
   | |moveFeaturePoint|        |                                         | |moveFeatureCopyPoint| |                         |
@@ -968,36 +998,6 @@ Advanced digitizing
   | |trimExtend|              | Trim or Extend Feature                  |                        |                         |
   +---------------------------+-----------------------------------------+------------------------+-------------------------+
 
-
-.. index::
-   single: Digitizing tools; Draw curves
-   single: Digitizing tools; Stream digitizing
-.. _drawing_methods:
-
-Geometry editing techniques
----------------------------
-
-When a geometry drawing tool (mainly the ones that add, split, reshape features)
-is enabled for a line or polygon based layer, you can select the technique for
-adding new vertices:
-
-* The |digitizeWithSegment| :sup:`Digitize with Segment`: draws straight segment
-  whose start and end points are defined by left clicks.
-* The |digitizeWithCurve| :sup:`Digitize with Curve`: draws curve line based on
-  three consecutive nodes defined by left clicks (start, point along the arc, end).
-  If the geometry type does not support curves, then consecutive smaller segments
-  are used to approximate the curvature.
-* The |streamingDigitize| :sup:`Stream Digitizing`: draws lines in freehand mode,
-  i.e. nodes are added following cursor movement in the map canvas and
-  a :guilabel:`Streaming Tolerance`.
-  The streaming tolerance defines the spacing between consecutive vertices.
-  Currently, the only supported unit is pixels (``px``). Only the starting left
-  click and the ending right click are necessary in this mode.
-* The |digitizeShape| :sup:`Digitize Shape`: triggers tools on the
-  :ref:`Shape Digitizing Toolbar <shape_edit>` to draw a polygon of a regular shape.
-
-The selected technique remains while switching among the digitizing tools.
-You can combine any of the first three methods while drawing the same geometry.
 
 .. index::
    single: Digitizing tools; Move feature
