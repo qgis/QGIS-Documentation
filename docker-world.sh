@@ -25,7 +25,7 @@ git pull
 
 # only languages which have translations in transifex
 # NOTE: we BUILD zh_Hans, but we SERVE zh-Hans
-: ${langs:=en cs de es fr hu it ja ko li nl pt_BR pt_PT ro ru zh_Hans}
+#: ${langs:=en cs de es fr hu it ja ko li nl pt_BR pt_PT ro ru zh_Hans}
 : ${langs:=en}
 
 # if you only want to build one language, do:
