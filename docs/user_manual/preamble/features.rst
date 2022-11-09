@@ -208,6 +208,9 @@ use something like:
     $ ulimit -Sn #number_of_allowed_open_files
     $ ulimit -Sn
     $ qgis
+    
+Alternatively, from Linux kernel version 2.6.36 onward, you can use the newer ``prlimit`` utility. More info: https://manpages.ubuntu.com/manpages/jammy/man1/prlimit.1.html
+
 
 **To fix it forever**
 
