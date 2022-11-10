@@ -1,7 +1,7 @@
 name: 👓 Handle stale issues
 on:
   schedule:
-  - cron: "30 2 * * *"
+  - cron: "30 15 * * *"
 
 permissions:
   contents: read
@@ -64,7 +64,8 @@ jobs:
         stale-issue-label: 'Stale'
 
         only-labels: 'Feedback'
-        days-before-stale: 14
+        days-before-stale: 1
         days-before-close: 7
 
+        labels-to-remove-when-unstale: 'Stale'
         operations-per-run: 1000
