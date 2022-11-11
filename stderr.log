@@ -1,0 +1,310 @@
+Exception occurred while parsing document:
+Traceback (most recent call last):
+  File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\ReText\tab.py", line 237, in updatePreviewBox
+    self.converted = self.converterProcess.get_result()
+  File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\ReText\converterprocess.py", line 183, in get_result
+    raise ConversionError(result)
+ReText.converterprocess.ConversionError: The background markup conversion process received this exception:
+    Traceback (most recent call last):
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\ReText\converterprocess.py", line 88, in _converter_process_func
+        converted = current_markup.convert(job['text'])
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\markups\restructuredtext.py", line 67, in convert
+        parts = self._publish_parts(text, source_path=self.filename,
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\core.py", line 441, in publish_parts
+        output, pub = publish_programmatically(
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\core.py", line 665, in publish_programmatically
+        output = pub.publish(enable_exit_status=enable_exit_status)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\core.py", line 217, in publish
+        self.document = self.reader.read(self.source, self.parser,
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\readers\__init__.py", line 72, in read
+        self.parse()
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\readers\__init__.py", line 78, in parse
+        self.parser.parse(self.input, document)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\__init__.py", line 183, in parse
+        self.statemachine.run(inputlines, document, inliner=self.inliner)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 170, in run
+        results = StateMachineWS.run(self, input_lines, input_offset,
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\statemachine.py", line 239, in run
+        context, next_state, result = self.check_line(
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\statemachine.py", line 451, in check_line
+        return method(match, context, next_state)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 2769, in underline
+        self.section(title, source, style, lineno - 1, messages)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 327, in section
+        self.new_subsection(title, lineno, messages)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 393, in new_subsection
+        newabsoffset = self.nested_parse(
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 281, in nested_parse
+        state_machine.run(block, input_offset, memo=self.memo,
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 196, in run
+        results = StateMachineWS.run(self, input_lines, input_offset)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\statemachine.py", line 239, in run
+        context, next_state, result = self.check_line(
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\statemachine.py", line 451, in check_line
+        return method(match, context, next_state)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 2769, in underline
+        self.section(title, source, style, lineno - 1, messages)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 327, in section
+        self.new_subsection(title, lineno, messages)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 393, in new_subsection
+        newabsoffset = self.nested_parse(
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 281, in nested_parse
+        state_machine.run(block, input_offset, memo=self.memo,
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 196, in run
+        results = StateMachineWS.run(self, input_lines, input_offset)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\statemachine.py", line 239, in run
+        context, next_state, result = self.check_line(
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\statemachine.py", line 451, in check_line
+        return method(match, context, next_state)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 1267, in bullet
+        i, blank_finish = self.list_item(match.end())
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 1289, in list_item
+        self.nested_parse(indented, input_offset=line_offset,
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 281, in nested_parse
+        state_machine.run(block, input_offset, memo=self.memo,
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 196, in run
+        results = StateMachineWS.run(self, input_lines, input_offset)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\statemachine.py", line 239, in run
+        context, next_state, result = self.check_line(
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\statemachine.py", line 451, in check_line
+        return method(match, context, next_state)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 2783, in text
+        paragraph, literalnext = self.paragraph(lines, startline)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 418, in paragraph
+        textnodes, messages = self.inline_text(text, lineno)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 427, in inline_text
+        nodes, messages = self.inliner.parse(text, lineno,
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 646, in parse
+        before, inlines, remaining, sysmessages = method(self, match,
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 789, in interpreted_or_phrase_ref
+        nodelist, messages = self.interpreted(rawsource, escaped, role,
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 889, in interpreted
+        msg = self.reporter.error(
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\utils\__init__.py", line 231, in error
+        return self.system_message(self.ERROR_LEVEL, *args, **kwargs)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\utils\__init__.py", line 195, in system_message
+        self.stream.write(msg.astext() + '\n')
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\utils\error_reporting.py", line 203, in write
+        self.stream.write(data)
+    AttributeError: 'NoneType' object has no attribute 'write'
+
+Exception occurred while parsing document:
+Traceback (most recent call last):
+  File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\ReText\tab.py", line 237, in updatePreviewBox
+    self.converted = self.converterProcess.get_result()
+  File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\ReText\converterprocess.py", line 183, in get_result
+    raise ConversionError(result)
+ReText.converterprocess.ConversionError: The background markup conversion process received this exception:
+    Traceback (most recent call last):
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\ReText\converterprocess.py", line 88, in _converter_process_func
+        converted = current_markup.convert(job['text'])
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\markups\restructuredtext.py", line 67, in convert
+        parts = self._publish_parts(text, source_path=self.filename,
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\core.py", line 441, in publish_parts
+        output, pub = publish_programmatically(
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\core.py", line 665, in publish_programmatically
+        output = pub.publish(enable_exit_status=enable_exit_status)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\core.py", line 217, in publish
+        self.document = self.reader.read(self.source, self.parser,
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\readers\__init__.py", line 72, in read
+        self.parse()
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\readers\__init__.py", line 78, in parse
+        self.parser.parse(self.input, document)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\__init__.py", line 183, in parse
+        self.statemachine.run(inputlines, document, inliner=self.inliner)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 170, in run
+        results = StateMachineWS.run(self, input_lines, input_offset,
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\statemachine.py", line 239, in run
+        context, next_state, result = self.check_line(
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\statemachine.py", line 451, in check_line
+        return method(match, context, next_state)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 2769, in underline
+        self.section(title, source, style, lineno - 1, messages)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 327, in section
+        self.new_subsection(title, lineno, messages)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 393, in new_subsection
+        newabsoffset = self.nested_parse(
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 281, in nested_parse
+        state_machine.run(block, input_offset, memo=self.memo,
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 196, in run
+        results = StateMachineWS.run(self, input_lines, input_offset)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\statemachine.py", line 239, in run
+        context, next_state, result = self.check_line(
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\statemachine.py", line 451, in check_line
+        return method(match, context, next_state)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 2769, in underline
+        self.section(title, source, style, lineno - 1, messages)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 327, in section
+        self.new_subsection(title, lineno, messages)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 393, in new_subsection
+        newabsoffset = self.nested_parse(
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 281, in nested_parse
+        state_machine.run(block, input_offset, memo=self.memo,
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 196, in run
+        results = StateMachineWS.run(self, input_lines, input_offset)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\statemachine.py", line 239, in run
+        context, next_state, result = self.check_line(
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\statemachine.py", line 451, in check_line
+        return method(match, context, next_state)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 1267, in bullet
+        i, blank_finish = self.list_item(match.end())
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 1289, in list_item
+        self.nested_parse(indented, input_offset=line_offset,
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 281, in nested_parse
+        state_machine.run(block, input_offset, memo=self.memo,
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 196, in run
+        results = StateMachineWS.run(self, input_lines, input_offset)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\statemachine.py", line 239, in run
+        context, next_state, result = self.check_line(
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\statemachine.py", line 451, in check_line
+        return method(match, context, next_state)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 2783, in text
+        paragraph, literalnext = self.paragraph(lines, startline)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 418, in paragraph
+        textnodes, messages = self.inline_text(text, lineno)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 427, in inline_text
+        nodes, messages = self.inliner.parse(text, lineno,
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 646, in parse
+        before, inlines, remaining, sysmessages = method(self, match,
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 789, in interpreted_or_phrase_ref
+        nodelist, messages = self.interpreted(rawsource, escaped, role,
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 889, in interpreted
+        msg = self.reporter.error(
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\utils\__init__.py", line 231, in error
+        return self.system_message(self.ERROR_LEVEL, *args, **kwargs)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\utils\__init__.py", line 195, in system_message
+        self.stream.write(msg.astext() + '\n')
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\utils\error_reporting.py", line 203, in write
+        self.stream.write(data)
+    AttributeError: 'NoneType' object has no attribute 'write'
+
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:31: (ERROR/3) Unknown interpreted text role "guilabel".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:31: (ERROR/3) Unknown interpreted text role "menuselection".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:33: (ERROR/3) Unknown interpreted text role "file".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:33: (ERROR/3) Unknown interpreted text role "file".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:35: (ERROR/3) Unknown interpreted text role "file".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:40: (ERROR/3) Unknown interpreted text role "kbd".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:67: (ERROR/3) Unknown interpreted text role "kbd".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:68: (ERROR/3) Unknown interpreted text role "kbd".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:68: (ERROR/3) Unknown interpreted text role "kbd".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:114: (ERROR/3) Unknown interpreted text role "kbd".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:116: (ERROR/3) Unknown interpreted text role "guilabel".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:116: (ERROR/3) Unknown interpreted text role "guilabel".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:121: (ERROR/3) Unknown interpreted text role "kbd".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:121: (ERROR/3) Unknown interpreted text role "kbd".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:156: (ERROR/3) Unknown interpreted text role "kbd".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:156: (ERROR/3) Unknown interpreted text role "kbd".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:156: (ERROR/3) Unknown interpreted text role "kbd".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:167: (ERROR/3) Unknown interpreted text role "kbd".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:172: (ERROR/3) Unknown interpreted text role "guilabel".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:175: (ERROR/3) Unknown interpreted text role "menuselection".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:176: (ERROR/3) Unknown interpreted text role "kbd".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:176: (ERROR/3) Unknown interpreted text role "guilabel".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:177: (ERROR/3) Unknown interpreted text role "guilabel".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:177: (ERROR/3) Unknown interpreted text role "kbd".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:178: (ERROR/3) Unknown interpreted text role "kbd".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:179: (ERROR/3) Unknown interpreted text role "guilabel".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:179: (ERROR/3) Unknown interpreted text role "guilabel".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:183: (ERROR/3) Unknown interpreted text role "guilabel".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:184: (ERROR/3) Unknown interpreted text role "guilabel".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:190: (ERROR/3) Unknown interpreted text role "kbd".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:194: (ERROR/3) Unknown interpreted text role "guilabel".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:205: (ERROR/3) Unknown interpreted text role "menuselection".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:206: (ERROR/3) Unknown interpreted text role "kbd".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:207: (ERROR/3) Unknown interpreted text role "kbd".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:223: (ERROR/3) Unknown interpreted text role "guilabel".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:224: (ERROR/3) Unknown interpreted text role "kbd".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:225: (ERROR/3) Unknown interpreted text role "kbd".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:230: (ERROR/3) Unknown interpreted text role "kbd".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:246: (ERROR/3) Unknown interpreted text role "kbd".
+C:/Users/tim/Documents/QGIS Documentation/QGIS-Documentation/docs/training_manual/forestry/updating_stands.rst:248: (ERROR/3) Unknown interpreted text role "kbd".
+Exception occurred while parsing document:
+Traceback (most recent call last):
+  File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\ReText\tab.py", line 237, in updatePreviewBox
+    self.converted = self.converterProcess.get_result()
+  File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\ReText\converterprocess.py", line 183, in get_result
+    raise ConversionError(result)
+ReText.converterprocess.ConversionError: The background markup conversion process received this exception:
+    Traceback (most recent call last):
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\ReText\converterprocess.py", line 88, in _converter_process_func
+        converted = current_markup.convert(job['text'])
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\markups\restructuredtext.py", line 67, in convert
+        parts = self._publish_parts(text, source_path=self.filename,
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\core.py", line 441, in publish_parts
+        output, pub = publish_programmatically(
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\core.py", line 665, in publish_programmatically
+        output = pub.publish(enable_exit_status=enable_exit_status)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\core.py", line 217, in publish
+        self.document = self.reader.read(self.source, self.parser,
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\readers\__init__.py", line 72, in read
+        self.parse()
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\readers\__init__.py", line 78, in parse
+        self.parser.parse(self.input, document)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\__init__.py", line 183, in parse
+        self.statemachine.run(inputlines, document, inliner=self.inliner)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 170, in run
+        results = StateMachineWS.run(self, input_lines, input_offset,
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\statemachine.py", line 239, in run
+        context, next_state, result = self.check_line(
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\statemachine.py", line 451, in check_line
+        return method(match, context, next_state)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 2769, in underline
+        self.section(title, source, style, lineno - 1, messages)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 327, in section
+        self.new_subsection(title, lineno, messages)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 393, in new_subsection
+        newabsoffset = self.nested_parse(
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 281, in nested_parse
+        state_machine.run(block, input_offset, memo=self.memo,
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 196, in run
+        results = StateMachineWS.run(self, input_lines, input_offset)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\statemachine.py", line 239, in run
+        context, next_state, result = self.check_line(
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\statemachine.py", line 451, in check_line
+        return method(match, context, next_state)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 2769, in underline
+        self.section(title, source, style, lineno - 1, messages)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 327, in section
+        self.new_subsection(title, lineno, messages)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 393, in new_subsection
+        newabsoffset = self.nested_parse(
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 281, in nested_parse
+        state_machine.run(block, input_offset, memo=self.memo,
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 196, in run
+        results = StateMachineWS.run(self, input_lines, input_offset)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\statemachine.py", line 239, in run
+        context, next_state, result = self.check_line(
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\statemachine.py", line 451, in check_line
+        return method(match, context, next_state)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 1267, in bullet
+        i, blank_finish = self.list_item(match.end())
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 1289, in list_item
+        self.nested_parse(indented, input_offset=line_offset,
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 281, in nested_parse
+        state_machine.run(block, input_offset, memo=self.memo,
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 196, in run
+        results = StateMachineWS.run(self, input_lines, input_offset)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\statemachine.py", line 239, in run
+        context, next_state, result = self.check_line(
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\statemachine.py", line 451, in check_line
+        return method(match, context, next_state)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 2783, in text
+        paragraph, literalnext = self.paragraph(lines, startline)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 418, in paragraph
+        textnodes, messages = self.inline_text(text, lineno)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 427, in inline_text
+        nodes, messages = self.inliner.parse(text, lineno,
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 646, in parse
+        before, inlines, remaining, sysmessages = method(self, match,
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 789, in interpreted_or_phrase_ref
+        nodelist, messages = self.interpreted(rawsource, escaped, role,
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\parsers\rst\states.py", line 889, in interpreted
+        msg = self.reporter.error(
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\utils\__init__.py", line 231, in error
+        return self.system_message(self.ERROR_LEVEL, *args, **kwargs)
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\utils\__init__.py", line 195, in system_message
+        self.stream.write(msg.astext() + '\n')
+      File "c:\users\tim\documents\qgis documentation\qgis-documentation\venv\lib\site-packages\docutils\utils\error_reporting.py", line 203, in write
+        self.stream.write(data)
+    AttributeError: 'NoneType' object has no attribute 'write'
+
