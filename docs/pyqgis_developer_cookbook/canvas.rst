@@ -338,7 +338,7 @@ default entries when you right-click over the map canvas.
         subMenu = menu.addMenu('My Menu')
         action = subMenu.addAction('My Action')
         action.triggered.connect(lambda *args:
-                                 print(f'Action triggered at {event.x},{event.y()}'))
+                                 print(f'Action triggered at {event.x()},{event.y()}'))
 
     canvas.contextMenuAboutToShow.connect(populateContextMenu)
     canvas.show()
@@ -404,10 +404,10 @@ described before to show the selected rectangle as it is being defined.
       if startPoint.x() == endPoint.x() or startPoint.y() == endPoint.y():
         return
 
-      point1 = QgsPoint(startPoint.x(), startPoint.y())
-      point2 = QgsPoint(startPoint.x(), endPoint.y())
-      point3 = QgsPoint(endPoint.x(), endPoint.y())
-      point4 = QgsPoint(endPoint.x(), startPoint.y())
+      point1 = QgsPointXY(startPoint.x(), startPoint.y())
+      point2 = QgsPointXY(startPoint.x(), endPoint.y())
+      point3 = QgsPointXY(endPoint.x(), endPoint.y())
+      point4 = QgsPointXY(endPoint.x(), startPoint.y())
 
       self.rubberBand.addPoint(point1, False)
       self.rubberBand.addPoint(point2, False)
