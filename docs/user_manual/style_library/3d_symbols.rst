@@ -43,7 +43,7 @@ Point Layers
     and a :guilabel:`Length`
   * :guilabel:`Plane` defined by a :guilabel:`Size`
   * :guilabel:`Torus` defined by a :guilabel:`Radius` and a :guilabel:`Minor radius`
-  * :guilabel:`3D Model`, using a 3D model file: supported formats include wavefront ``.obj`` and ``.fbx``. 
+  * :guilabel:`3D Model`, using a 3D model file: supported formats include wavefront ``.obj``, ``.glTF``, and ``.fbx``. 
     Models can be a file on disk, a remote URL or :ref:`embedded in the project
     <embedded_file_selector>`. Community-created models are shared on the QGIS Hub 
     at https://plugins.qgis.org/wavefronts
