@@ -635,6 +635,81 @@ To interact with or edit a base mesh layer element, following tools are availabl
      - Split faces and constrain Z value using a linear geometry
      - :guilabel:`Mesh Digitizing` toolbar
 
+Exploring the Z value assignment logic
+--------------------------------------
+
+When a mesh layer is turned into edit mode, a :guilabel:`Vertex Z value` widget
+opens at the top right of the map canvas. By default, its value corresponds to
+the :guilabel:`Default Z value` set in :menuselection:`Settings --> Options -->
+Digitizing` tab. When there are selected vertices, the widget displays
+the average Z value of the selected vertices.
+
+During editing, the :guilabel:`Vertex Z value` is assigned to new vertices.
+It is also possible to set a custom value: edit the widget, press :kbd:`Enter`
+and you will override the default value and make use of this new value in
+the digitizing process.
+Click the |clearText| icon in the widget to reset its value to the Options
+default value.
+
+Rules of assignment
+...................
+
+When **creating** a new vertex, its Z value definition may vary depending on
+the active selection in the mesh layer and its location.
+The following table displays the various combinations.
+
+.. table:: Matrix of Z value assignment to new vertex
+
+ +---------------------------------------+-------------------------+-------------------------------+------------------------------------------+
+ | Vertex creation                       | Are there selected      | Source of assigned value      | Assigned Z Value                         |
+ |                                       | vertices in mesh layer? |                               |                                          |
+ +=======================================+=========================+===============================+==========================================+
+ | "Free" vertex, not connected to any   | No                      | :guilabel:`Vertex Z value`    | Default or user defined                  |
+ +                                       +                         +-------------------------------+------------------------------------------+
+ | face or edge of a face                |                         | :guilabel:`Advanced           | :guilabel:`z` widget if in               |
+ |                                       |                         | Digitizing Panel` (if         | |locked| :sup:`Locked` state             |
+ |                                       |                         | :guilabel:`z` widget is in    |                                          |
+ |                                       |                         | |locked| :sup:`Locked` state) |                                          |
+ +                                       +-------------------------+-------------------------------+------------------------------------------+
+ |                                       | Yes                     | :guilabel:`Vertex Z value`    | Average of the selected vertices         |
+ +---------------------------------------+-------------------------+-------------------------------+------------------------------------------+
+ | Vertex on an edge                     | ---                     | Mesh layer                    | Interpolated from the edge's vertices    |
+ +---------------------------------------+-------------------------+-------------------------------+------------------------------------------+
+ | Vertex on a face                      | ---                     | Mesh layer                    | Interpolated from the face's vertices    |
+ +---------------------------------------+-------------------------+-------------------------------+------------------------------------------+
+ | Vertex snapped to a 2D vector feature | ---                     | :guilabel:`Vertex Z value`    | Default or user defined                  |
+ +---------------------------------------+-------------------------+-------------------------------+------------------------------------------+
+ | Vertex snapped to a 3D vector vertex  | ---                     | Vector layer                  | Vertex                                   |
+ +---------------------------------------+-------------------------+-------------------------------+------------------------------------------+
+ | Vertex snapped to a 3D vector segment | ---                     | Vector layer                  | Interpolated along the vector segment    |
+ +---------------------------------------+-------------------------+-------------------------------+------------------------------------------+
+
+
+.. note:: The :guilabel:`Vertex Z value` widget is deactivated if
+  the :ref:`Advanced Digitizing Panel <advanced_digitizing_panel>` is enabled
+  and no mesh element is selected.
+  The latter's :guilabel:`z` widget then rules the Z value assignment.
+
+
+Modifying Z value of existing vertices
+......................................
+
+To modify the Z value of vertices, the most straightforward way is:
+
+#. Select one or many vertices. The :guilabel:`Vertex Z value` widget
+   will display the average height of the selection.
+#. Change the value in the widget.
+#. Press :kbd:`Enter`. The entered value is assigned to the vertices
+   and becomes the default value of next vertices.
+
+Another way to change the Z value of a vertex is to move and snap it
+on a vector layer feature with the Z value capability.
+If more than one vertex are selected, the Z value can't be changed in this way.
+
+The :ref:`Transform mesh vertices <transform_meshvertices>` dialog also provides
+means to modify the Z value of a selection of vertices (along with their X or Y
+coordinates).
+
 .. _select_mesh_elements:
 
 Selecting mesh elements
@@ -694,10 +769,10 @@ Another tool for mesh elements selection is |meshSelectExpression|
    will be filtered accordingly.
 #. Run the query by setting how the selection should behave and pressing:
 
-  * |expressionSelect| :guilabel:`Select`: replaces any existing selection
-    in the layer
-  * |selectAdd| :guilabel:`Add to current selection`
-  * |selectRemove| :guilabel:`Remove from current selection`
+   * |expressionSelect| :guilabel:`Select`: replaces any existing selection
+     in the layer
+   * |selectAdd| :guilabel:`Add to current selection`
+   * |selectRemove| :guilabel:`Remove from current selection`
 
 Modifying mesh elements
 ------------------------
