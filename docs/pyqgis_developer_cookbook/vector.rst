@@ -68,7 +68,8 @@ Retrieving information about attributes
 ========================================
 
 You can retrieve information about the fields associated with a vector layer
-by calling :meth:`fields() <qgis.core.QgsVectorLayer.fields>` on a :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` object:
+by calling :meth:`fields() <qgis.core.QgsVectorLayer.fields>` on a
+:class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` object:
 
 .. testcode:: vectors
 
@@ -86,8 +87,7 @@ by calling :meth:`fields() <qgis.core.QgsVectorLayer.fields>` on a :class:`QgsVe
     USE String
 
 The :meth:`displayField() <qgis.core.QgsVectorLayer.displayField>` and
-:meth:`mapTipTemplate() <qgis.core.QgsVectorLayer.mapTipTemplate>` methods of
-the :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` class provide
+:meth:`mapTipTemplate() <qgis.core.QgsMapLayer.mapTipTemplate>` methods provide
 information on the field and template used in the :ref:`maptips` tab.
 
 When you load a vector layer, a field is always chosen by QGIS as the
