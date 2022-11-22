@@ -257,6 +257,46 @@ Merge map elements into a hstore-formatted string.
 
 .. end_map_to_hstore_section
 
+.. _expression_function_Maps_map_to_html_dl:
+
+map_to_html_dl
+..............
+
+Merge map elements into a HTML definition list string.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - map_to_html_dl(map)
+   * - Arguments
+     - * **map** - the input map
+   * - Examples
+     - * ``map_to_html_dl(map('qgis','rocks'))`` → <dl><dt>qgis</dt><dd>rocks</dd></dl>
+
+
+.. end_map_to_html_dl_section
+
+.. _expression_function_Maps_map_to_html_table:
+
+map_to_html_table
+.................
+
+Merge map elements into a HTML table string.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - map_to_html_table(map)
+   * - Arguments
+     - * **map** - the input map
+   * - Examples
+     - * ``map_to_html_table(map('qgis','rocks'))`` → <table><thead><th>qgis</th></thead><tbody><tr><td>rocks</td></tr></tbody></table>
+
+
+.. end_map_to_html_table_section
+
 .. _expression_function_Maps_to_json:
 
 to_json

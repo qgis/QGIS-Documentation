@@ -6,6 +6,28 @@
    in the resources/function_help/json/ folder in the
    qgis/QGIS repository.
 
+.. _expression_function_Rasters_raster_attributes:
+
+raster_attributes
+.................
+
+Returns a map with the fields names as keys and the raster attribute table values as values from the attribute table entry that matches the given raster value.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - raster_attributes(layer, band, value)
+   * - Arguments
+     - * **layer** - the name or id of a raster layer
+       * **band** - the band number for the associated attribute table lookup.
+       * **value** - raster value
+   * - Examples
+     - * ``raster_attributes('vegetation', 1, raster_value('vegetation', 1, make_point(1,1)))`` → {'class': 'Vegetated', 'subclass': 'Trees'}
+
+
+.. end_raster_attributes_section
+
 .. _expression_function_Rasters_raster_statistic:
 
 raster_statistic
