@@ -119,7 +119,8 @@ API Documentation
 It is required to write API documentation for every class, method, enum and
 other code that is available in the public API.
 
-QGIS uses Doxygen for documentation. Write descriptive and meaningful comments
+QGIS uses `Doxygen <https://www.doxygen.nl/index.html>`_ or documentation.
+Write descriptive and meaningful comments
 that give a reader information about what to expect, what happens in edge cases
 and give hints about other interfaces he could be looking for, best
 practices and code samples.
@@ -248,8 +249,9 @@ example:
    *
    ***************************************************************************/
 
-.. note:: There is a template for Qt Creator in git. To use it, copy it from
-  :file:`doc/qt_creator_license_template` to a local location, adjust the
+.. note:: There is a template for Qt Creator in git repository. To use it, copy it from
+  :source:`qt_creator_license_template <editors/QtCreator/qt_creator_license_template>`
+  to a local location, adjust the
   mail address and - if required - the name and configure QtCreator to use it:
   :menuselection:`Tools --> Options --> C++ --> File Naming`.
 
@@ -339,9 +341,10 @@ Indentation
 -----------
 
 Source code should be indented to improve readability. There is a
-:file:`scripts/prepare-commit.sh` that looks up the changed files and reindents
+:source:`prepare_commit.sh <scripts/prepare_commit.sh>`
+file that looks up the changed files and reindents
 them using astyle. This should be run before committing. You can also use
-:file:`scripts/astyle.sh` to indent individual files.
+:source:`astyle.sh <scripts/astyle.sh>` to indent individual files.
 
 As newer versions of astyle indent differently than the version used to do a
 complete reindentation of the source, the script uses an old astyle version,
@@ -372,7 +375,7 @@ API Compatibility
 There is :api:`API documentation <>` for C++.
 
 We try to keep the API stable and backwards compatible. Cleanups to the API
-should be done in a manner similar to the Qt sourcecode e.g.
+should be done in a manner similar to the Qt source code e.g.
 
 .. code-block:: cpp
 
@@ -447,7 +450,8 @@ header file. Some macros are available for such definition:
   of the python method. If the type contains a comma ``,``, the type should be
   surrounded by single quotes ``'``
 
-A demo file can be found in :file:`tests/code_layout/sipifyheader.h`.
+A demo file, :source:`sipifyheader.h <tests/code_layout/sipify/sipifyheader.h>`,
+is also available.
 
 Generating the SIP file
 -----------------------
@@ -458,24 +462,27 @@ The SIP file can be generated using a dedicated script. For instance:
 
     scripts/sipify.pl src/core/qgsvectorlayer.h > python/core/qgsvectorlayer.sip
     
-To automatically generate the SIP file of a newly added C++ file :file:`scripts/sip_include.sh` 
-needs to be executed.
+To automatically generate the SIP file of a newly added C++ file
+:source:`sip_include.sh <scripts/sip_include.sh>` needs to be executed.
 
 As soon as a SIP file is added to one of the source file
-(:file:`python/core/core.sip`, :file:`python/gui/gui.sip` or
-:file:`python/analysis/analysis.sip`), it will be considered as generated
-automatically. A test on Travis will ensure that this file is up to date with
-its corresponding header.
+(:source:`core_auto.sip <python/core/core_auto.sip>`,
+:source:`gui_auto.sip <python/gui/gui_auto.sip>` or
+:source:`analysis_auto.sip <python/analysis/analysis_auto.sip>`),
+it will be considered as generated automatically.
+A test on will ensure that this file is up to date with its corresponding header.
 
-To force recreation of SIP files, :file:`scripts/sipify_all.sh` shall be executed.
+To force recreation of SIP files, :source:`sipify_all.sh <scripts/sipify_all.sh>`
+shall be executed.
 
 Improving sipify script
 -----------------------
 
 If some improvements are required for sipify script, please add the missing bits
-to the demo file :file:`tests/code_layout/sipifyheader.h` and create the expected
-header :file:`tests/code_layout/sipifyheader.expected.sip`. This will also be
-automatically tested on Travis as a unit test of the script itself.
+to the demo file :source:`sipifyheader.h <tests/code_layout/sipify/sipifyheader.h>`
+and create the expected header :source:`sipifyheader.expected.sip
+<tests/code_layout/sipify/sipifyheader.expected.sip>`. This will also be
+automatically tested as a unit test of the script itself.
 
 
 Settings
@@ -486,8 +493,10 @@ QGIS code base offers a mechanism to declare, register and use settings.
 * settings should be defined using one of the available implementations
   (:api:`QgsSettingsEntryString <classQgsSettingsEntryString.html>`,
   :api:`QgsSettingsEntryInteger <classQgsSettingsEntryInteger.html>`, …).
-* they are declared as ``const static`` either in a dedicated class or in the registry directly (core, gui, app, …).
-* they always must be added to the registry using ``QgsSettingsRegistry::addSettingsEntry``.
+* they are declared as ``const static`` either in a dedicated class or
+  in the registry directly (core, gui, app, …).
+* they always must be added to the registry using ``addSettingsEntry`` method
+  of  :api:`QgsSettingsRegistry <classQgsSettingsRegistry.html>`.
 * the setting key should be using a ``kebab-case``.
 
 Coding Style
@@ -500,7 +509,6 @@ errors, development time and maintenance.
 
 Where-ever Possible Generalize Code
 ------------------------------------
-
 
 If you are cut-n-pasting code, or otherwise writing the same thing more than
 once, consider consolidating the code into a single function.
@@ -543,7 +551,8 @@ or this:
 
   if ( ! a && b )
 
-.. note:: :file:`scripts/prepare-commit.sh` will take care of this.
+.. note:: :source:`prepare_commit.sh <scripts/prepare_commit.sh>` script will
+ take care of this.
 
 
 Put commands on separate lines
