@@ -20,9 +20,9 @@ adding tests is required.
 To test algorithms you can add entries into :file:`testdata/qgis_algorithm_tests.yaml`
 or :file:`testdata/gdal_algorithm_tests.yaml` as appropriate.
 
-This file is structured with `yaml syntax <https://yaml.org/start.html>`_.
+This file is structured with `yaml syntax <https://yaml.org/>`_.
 
-A basic test appears under the toplevel key ``tests`` and looks like this:
+A basic test appears under the top level key ``tests`` and looks like this:
 
 .. code-block:: yaml
 

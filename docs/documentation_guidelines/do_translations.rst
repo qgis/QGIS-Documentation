@@ -200,7 +200,7 @@ In the menu you see the following buttons which are convenient to use.
   jumps to the first translation item it finds that still needs a translation.
 
 For further information on the use of Qt Linguist, see
-https://doc-snapshots.qt.io/qt5-5.12/linguist-translators.html
+https://doc.qt.io/qt-5/linguist-translators.html
 
 .. warning::
 
