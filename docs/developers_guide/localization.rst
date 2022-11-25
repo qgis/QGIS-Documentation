@@ -16,7 +16,7 @@ Another option in the settings allows to define if the
 numeric thousands separator has to be used.
 
 All these features are implemented through the
-`QLocale <https://doc.qt.io/qt-5/qlocale.htm>`_
+`QLocale <https://doc.qt.io/qt-5/qlocale.html>`_
 QT class which provides a very complete support for numeric
 and date types representation.
 

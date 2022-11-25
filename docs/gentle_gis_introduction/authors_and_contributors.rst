@@ -10,7 +10,7 @@ About the authors & contributors
 |                | is also a founding member of Linfiniti Consulting CC. --- a small    |
 |                | business set up with the goal of helping people to learn and use     |
 |                | opensource GIS software.                                             |
-|                | **Web**: https://www.kartoza.com **Email**: tim@kartoza.com          |
+|                | **Web**: https://kartoza.com **Email**: tim@kartoza.com              |
 +----------------+----------------------------------------------------------------------+
 | |otto|         | Otto Dassau --- Assistant Author. Otto Dassau is the documentation   |
 |                | maintainer and project steering committee member of the QGIS         |
