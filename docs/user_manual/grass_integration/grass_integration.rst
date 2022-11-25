@@ -34,7 +34,7 @@ the QGIS 'Alaska' dataset :file:`qgis\_sample\_data.zip` from
 https://qgis.org/downloads/data/ and unzip the file into :file:`grassdata`.
 
 More sample GRASS :file:`LOCATIONs` are available at the GRASS website at
-https://grass.osgeo.org/download/sample-data/.
+https://grass.osgeo.org/download/data/.
 
 .. _sec_load_grassdata:
 
@@ -348,7 +348,7 @@ used as the link to one key column in the database table.
 
    The best way to learn the GRASS vector model and its capabilities is to
    download one of the many GRASS tutorials where the vector model is described
-   more deeply. See https://grass.osgeo.org/documentation/manuals/ for more information,
+   more deeply. See https://grass.osgeo.org/learn/manuals/ for more information,
    books and tutorials in several languages.
 
 .. index::

@@ -516,7 +516,7 @@ Vector layers crossing 180 |degrees| longitude
 
 Many GIS packages don't wrap vector maps with a geographic reference system
 (lat/lon) crossing the 180 degrees longitude line
-(http://postgis.refractions.net/documentation/manual-2.0/ST_Shift_Longitude.html).
+(https://postgis.net/docs/ST_Shift_Longitude.html).
 As result, if we open such a map in QGIS, we could see two widely
 separated locations, that should appear near each other.
 In :numref:`Figure_vector_crossing`, the tiny point on the far left of the map
