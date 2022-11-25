@@ -100,7 +100,7 @@ units feet. The EPSG code is 2964.
 
 If you intend to use QGIS as a graphical front end for GRASS, you can find a
 selection of sample locations (e.g., Spearfish or South Dakota) at the
-official GRASS GIS website, https://grass.osgeo.org/download/sample-data/.
+official GRASS GIS website, https://grass.osgeo.org/download/data/.
 
 .. index:: Start QGIS, Stop QGIS
 .. _`label_startingqgis`:
