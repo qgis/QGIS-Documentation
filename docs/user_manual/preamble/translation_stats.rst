@@ -6,7 +6,7 @@
 Statistics of translation
 ===========================
 
-*(last update: 2022-11-22)*
+*(last update: 2022-11-29)*
 
 .. list-table::
    :widths: auto
@@ -14,9 +14,9 @@ Statistics of translation
    * - Number of strings
      - Number of target languages
      - Overall Translation ratio
-   * - **33690**
+   * - **33729**
      - **58**
-     - **13.25%**
+     - **13.24%**
 
 
 
@@ -36,7 +36,7 @@ Statistics of translation
      - Azerbaijani
      - 0.02
    * - Basque
-     - 0.83
+     - 0.82
      - Bengali
      - 0.16
      - Bulgarian
@@ -46,29 +46,29 @@ Statistics of translation
      - Catalan
      - 1.38
      - Chinese Simplified
-     - 19.47
+     - 19.45
    * - Chinese Traditional
      - 0.58
      - Croatian
      - 0.1
      - Czech
-     - 5.38
+     - 5.37
    * - Danish
      - 0.62
      - Dutch
-     - 99.5
+     - 99.42
      - Estonian
      - 1.24
    * - Finnish
-     - 1.66
+     - 1.65
      - French
-     - 87.06
+     - 86.96
      - Galician
      - 0.43
    * - Georgian
      - 0.09
      - German
-     - 19.66
+     - 19.64
      - Greek
      - 0.35
    * - Hebrew
@@ -76,21 +76,21 @@ Statistics of translation
      - Hindi
      - 0.28
      - Hungarian
-     - 15.68
+     - 15.66
    * - Igbo
      - 0.01
      - Indonesian
      - 2.6
      - Italian
-     - 99.24
+     - 99.13
    * - Japanese
-     - 76.11
+     - 76.02
      - Kabyle
      - 0.09
      - Korean
-     - 75.33
+     - 75.25
    * - Lithuanian
-     - 4.66
+     - 4.65
      - Macedonian
      - 0.11
      - Malay
@@ -112,21 +112,21 @@ Statistics of translation
      - Polish
      - 1.67
      - Portuguese (Brazil)
-     - 71.13
+     - 71.48
    * - Portuguese (Portugal)
-     - 7.71
+     - 7.7
      - Romanian
-     - 40.36
+     - 40.31
      - Russian
-     - 12.45
+     - 12.43
    * - Serbian
      - 0.1
      - Slovak
-     - 1.21
+     - 1.2
      - Slovenian
      - 2.97
    * - Spanish
-     - 99.11
+     - 99.0
      - Swedish
      - 0.95
      - Tagalog
@@ -140,7 +140,7 @@ Statistics of translation
    * - Turkish
      - 2.67
      - Ukrainian
-     - 2.17
+     - 2.16
      - Urdu
      - 0.01
    * - Vietnamese
