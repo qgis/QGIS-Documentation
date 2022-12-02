@@ -384,19 +384,21 @@ will operate with two values.
 
 The ``@qgsfunction`` decorator accepts the following arguments:
 
-* ``args``: the number of arguments. When using the ``args='auto'`` argument
-  the number of function arguments required will be calculated by the number of
-  arguments the function has been defined with in Python (minus 2 - ``feature``,
-  and ``parent``). With ``args = -1``, any number of arguments are accepted.
-* The ``group`` argument indicates the group in which the function
-  should be listed in the Expression dialog.
-* ``usesgeometry=True`` if the expression requires access to the features geometry.
-  By default :const:`False`.
-* ``handlesnull=True`` if the expression has custom handling for NULL values.
-  If :const:`False` (default), the result will always be NULL as soon as
-  any parameter is NULL.
-* ``referenced_columns=[list]``: An array of attribute names that are required to
-  the function. Defaults to ``[QgsFeatureRequest.ALL_ATTRIBUTES]``.
+* ``args``:  the number of arguments. With ``args='auto'`` the number of arguments
+  will automatically be extracted from the signature. With ``args=-1``, any number
+  of arguments are accepted. Note that two arguments, feature and parent, are always
+  automatically passed. Defaults to ``"auto"``.
+* ``group``: indicates the expression group to which this expression should be added.
+  Defaults to ``"custom"``.
+* ``usesgeometry=True`` if this expression requires the geometry (i.e.
+  ``feature.geometry()``). Defaults to :const:`False`.
+* ``referenced_columns=[list]``: A list of attribute names that are required to run
+  this function. ``QgsFeatureRequest.ALL_ATTRIBUTES`` can be used to indicate all
+  attributes. Defaults to ``[QgsFeatureRequest.ALL_ATTRIBUTES]``. This can be used
+  by the expression engine and providers to prepare their requests and potentially
+  omit attributes that are not needed to improve performance.
+* ``handlesnull=True`` if the expression has custom handling for NULL values. If
+  :const:`False` (default), the result will always be NULL if any parameter is NULL.
 
 The function itself allows following arguments:
 
