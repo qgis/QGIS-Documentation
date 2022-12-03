@@ -370,9 +370,11 @@ If you want to make a backup of your PostGIS database using the
 styles as saved by QGIS fail to restore afterwards, you need to set
 the XML option to :file:`DOCUMENT` before the restore command:
 
-.. code-block:: sql
-
-   SET XML OPTION DOCUMENT;
+#. Make a PLAIN backup of the ``layer_style`` table
+#. Open the file within a text editor
+#. Change the line ``SET xmloption = content;`` into ``SET XML OPTION DOCUMENT;``
+#. Save the file
+#. Use psql to restore the table in the new database
 
 
 Filter database side
