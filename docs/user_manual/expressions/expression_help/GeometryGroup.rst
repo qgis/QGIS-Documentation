@@ -1477,6 +1477,27 @@ Returns the m (measure) value of a point geometry.
 
 .. end_m_section
 
+.. _expression_function_GeometryGroup_m_at:
+
+m_at
+....
+
+Retrieves a m coordinate of the geometry, or NULL if the geometry has no m value.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - m_at(geometry, vertex)
+   * - Arguments
+     - * **geometry** - geometry object
+       * **vertex** - index of the vertex of the geometry (indices start at 0; negative values apply from the last index, starting at -1)
+   * - Examples
+     - * ``m_at(geom_from_wkt('LineStringZM(0 0 0 0, 10 10 0 5, 10 10 0 0)'), 1)`` → 5
+
+
+.. end_m_at_section
+
 .. _expression_function_GeometryGroup_m_max:
 
 m_max
@@ -3196,7 +3217,7 @@ Tests whether a geometry is within another. Returns TRUE if the geometry1 is com
 $x
 ..
 
-Returns the x coordinate of the current point feature. If the feature is a multipoint feature, then the x-coordinate of the first point will be returned.
+Returns the x coordinate of the current point feature. If the feature is a multipoint feature, then the x-coordinate of the first point will be returned. **WARNING: This function is deprecated. It is recommended to use the replacement x() function with @geometry variable instead.**
 
 .. list-table::
    :widths: 15 85
@@ -3235,20 +3256,41 @@ Returns the x coordinate of a point geometry, or the x coordinate of the centroi
 $x_at
 .....
 
-Retrieves a x coordinate of the current feature's geometry.
+Retrieves a x coordinate of the current feature's geometry. **WARNING: This function is deprecated. It is recommended to use the replacement x_at function with @geometry variable instead.**
 
 .. list-table::
    :widths: 15 85
 
    * - Syntax
-     - $x_at(i)
+     - $x_at(vertex)
    * - Arguments
-     - * **i** - index of point of a line (indices start at 0; negative values apply from the last index, starting at -1)
+     - * **vertex** - index of the vertex of the current geometry (indices start at 0; negative values apply from the last index, starting at -1)
    * - Examples
      - * ``$x_at(1)`` → 5
 
 
 .. end_$x_at_section
+
+.. _expression_function_GeometryGroup_x_at:
+
+x_at
+....
+
+Retrieves a x coordinate of the geometry.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - x_at(geometry, vertex)
+   * - Arguments
+     - * **geometry** - geometry object
+       * **vertex** - index of the vertex of the geometry (indices start at 0; negative values apply from the last index, starting at -1)
+   * - Examples
+     - * ``x_at( geom_from_wkt( 'POINT(4 5)' ), 0 )`` → 4
+
+
+.. end_x_at_section
 
 .. _expression_function_GeometryGroup_x_max:
 
@@ -3295,7 +3337,7 @@ Returns the minimum x coordinate of a geometry. Calculations are in the spatial 
 $y
 ..
 
-Returns the y coordinate of the current point feature. If the feature is a multipoint feature, then the y-coordinate of the first point will be returned.
+Returns the y coordinate of the current point feature. If the feature is a multipoint feature, then the y-coordinate of the first point will be returned. **WARNING: This function is deprecated. It is recommended to use the replacement y() function with @geometry variable instead.**
 
 .. list-table::
    :widths: 15 85
@@ -3334,20 +3376,41 @@ Returns the y coordinate of a point geometry, or the y coordinate of the centroi
 $y_at
 .....
 
-Retrieves a y coordinate of the current feature's geometry.
+Retrieves a y coordinate of the current feature's geometry. **WARNING: This function is deprecated. It is recommended to use the replacement y_at function with @geometry variable instead.**
 
 .. list-table::
    :widths: 15 85
 
    * - Syntax
-     - $y_at(i)
+     - $y_at(vertex)
    * - Arguments
-     - * **i** - index of point of a line (indices start at 0; negative values apply from the last index, starting at -1)
+     - * **vertex** - index of the vertex of the current geometry (indices start at 0; negative values apply from the last index, starting at -1)
    * - Examples
      - * ``$y_at(1)`` → 2
 
 
 .. end_$y_at_section
+
+.. _expression_function_GeometryGroup_y_at:
+
+y_at
+....
+
+Retrieves a y coordinate of the geometry.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - y_at(geometry, vertex)
+   * - Arguments
+     - * **geometry** - geometry object
+       * **vertex** - index of the vertex of the geometry (indices start at 0; negative values apply from the last index, starting at -1)
+   * - Examples
+     - * ``y_at( geom_from_wkt( 'POINT(4 5)' ), 0 )`` → 5
+
+
+.. end_y_at_section
 
 .. _expression_function_GeometryGroup_y_max:
 
@@ -3394,7 +3457,7 @@ Returns the minimum y coordinate of a geometry. Calculations are in the spatial 
 $z
 ..
 
-Returns the z value of the current point feature if it is 3D. If the feature is a multipoint feature, then the z value of the first point will be returned.
+Returns the z value of the current point feature if it is 3D. If the feature is a multipoint feature, then the z value of the first point will be returned. **WARNING: This function is deprecated. It is recommended to use the replacement z() function with @geometry variable instead.**
 
 .. list-table::
    :widths: 15 85
@@ -3426,6 +3489,27 @@ Returns the z coordinate of a point geometry, or NULL if the geometry has no z v
 
 
 .. end_z_section
+
+.. _expression_function_GeometryGroup_z_at:
+
+z_at
+....
+
+Retrieves a z coordinate of the geometry, or NULL if the geometry has no z value.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - z_at(geometry, vertex)
+   * - Arguments
+     - * **geometry** - geometry object
+       * **vertex** - index of the vertex of the geometry (indices start at 0; negative values apply from the last index, starting at -1)
+   * - Examples
+     - * ``z_at(geom_from_wkt('LineStringZ(0 0 0, 10 10 5, 10 10 0)'), 1)`` → 5
+
+
+.. end_z_at_section
 
 .. _expression_function_GeometryGroup_z_max:
 
