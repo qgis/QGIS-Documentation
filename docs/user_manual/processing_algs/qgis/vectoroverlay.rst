@@ -713,8 +713,8 @@ Python code
 
 Split with lines
 ----------------
-Splits the lines or polygons in one layer using the lines in another
-layer to define the breaking points.
+Splits the lines or polygons in one layer using the lines or polygon rings
+in another layer to define the breaking points.
 Intersection between geometries in both layers are considered as split
 points.
 
@@ -745,8 +745,8 @@ Parameters
      - Layer containing the lines or polygons to split.
    * - **Split layer**
      - ``LINES``
-     - [vector: line]
-     - Line layer whose lines are used to define the breaking points.
+     - [vector: line, polygon]
+     - Layer whose lines or rings are used to define the breaking points.
    * - **Split**
      - ``OUTPUT``
      - [same as input]
