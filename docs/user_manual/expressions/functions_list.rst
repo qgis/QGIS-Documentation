@@ -711,7 +711,30 @@ Further reading: :ref:`expression_function_GeometryGroup_overlay_within`
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_within_section
+   :end-before: .. end_$x_section
 
+Further reading: :ref:`expression_function_GeometryGroup_x`
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_$x_section
+   :end-before: .. end_$x_at_section
+
+Further reading: :ref:`expression_function_GeometryGroup_x_at`
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_$x_at_section
+   :end-before: .. end_$y_section
+
+Further reading: :ref:`expression_function_GeometryGroup_y`
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_$y_section
+   :end-before: .. end_$y_at_section
+
+Further reading: :ref:`expression_function_GeometryGroup_y_at`
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_$y_at_section
 
 Layout Functions
 ----------------
