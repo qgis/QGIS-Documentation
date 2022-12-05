@@ -7,8 +7,8 @@ QGIS project.
 
 Specifications:
 
-- `WCS 1.0.0 <http://docs.opengeospatial.org/is/16-083r2/16-083r2.html>`_
-- `WCS 1.1.1 <http://docs.opengeospatial.org/is/09-146r8/09-146r8.html>`_
+- `WCS 1.0.0 <http://docs.ogc.org/is/16-083r2/16-083r2.html>`_
+- `WCS 1.1.1 <http://docs.ogc.org/is/09-146r8/09-146r8.html>`_
 
 Standard requests provided by QGIS Server:
 

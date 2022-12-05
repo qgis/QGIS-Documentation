@@ -10,8 +10,8 @@ well as the image format to generate. Basic support is also available for
 Specifications:
 
 - `WMS 1.1.1 <https://portal.ogc.org/files/?artifact_id=1081&amp;version=1&amp;format=pdf>`_
-- `WMS 1.3.0 <https://portal.opengeospatial.org/files/?artifact_id=14416&format=pdf>`_
-- `SLD 1.1.0 WMS profile <http://portal.opengeospatial.org/files/?artifact_id=22364&format=pdf>`_
+- `WMS 1.3.0 <https://portal.ogc.org/files/?artifact_id=14416&format=pdf>`_
+- `SLD 1.1.0 WMS profile <https://portal.ogc.org/files/?artifact_id=22364&format=pdf>`_
 
 Standard requests provided by QGIS Server:
 

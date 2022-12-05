@@ -9,8 +9,8 @@ query.
 
 Specifications document according to the version number of the service:
 
-- `WFS 1.0.0 <http://portal.opengeospatial.org/files/?artifact_id=7176>`_
-- `WFS 1.1.0 <http://portal.opengeospatial.org/files/?artifact_id=8339>`_
+- `WFS 1.0.0 <https://portal.ogc.org/files/?artifact_id=7176>`_
+- `WFS 1.1.0 <https://portal.ogc.org/files/?artifact_id=8339>`_
 
 Standard requests provided by QGIS Server:
 

@@ -43,9 +43,9 @@ To get started using and contributing to the QGIS repository, you need to:
 
 #. have a `GitHub account <https://github.com/join>`_
 #. make your own copy of the `QGIS repository <https://github.com/qgis/QGIS>`_
-   (see `fork <https://docs.github.com/en/github/getting-started-with-github/fork-a-repo#fork-an-example-repository>`_)
+   (see `fork <https://docs.github.com/en/get-started/quickstart/fork-a-repo>`_)
 #. have a :ref:`git client installed <installing_git>` on your system
-#. set up your `git environment <https://docs.github.com/en/github/getting-started-with-github/set-up-git#setting-up-git>`_
+#. set up your `git environment <https://docs.github.com/en/get-started/quickstart/set-up-git#setting-up-git>`_
 #. and have fun!
 
 
@@ -208,8 +208,8 @@ Procedure
 .. note:: See the following sites for information on becoming a GIT master.
 
  * https://git-scm.com/book/en/v2
- * http://gitready.com
- * https://help.github.com/en
+ * https://gitready.com
+ * https://support.github.com/
 
 Testing before merging back to master
 --------------------------------------
@@ -229,7 +229,7 @@ use easily.
 
 In general it is easier for developers if you submit GitHub pull
 requests. We do not describe Pull Requests here, but rather refer you to the
-`GitHub pull request documentation <https://help.github.com/articles/about-pull-requests>`_.
+`GitHub pull request documentation <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests>`_.
 
 If you make a pull request we ask that you please merge master to your PR
 branch regularly so that your PR is always mergeable to the upstream master
