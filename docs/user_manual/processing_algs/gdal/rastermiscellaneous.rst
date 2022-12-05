@@ -301,7 +301,7 @@ Generates a directory with small tiles and metadata, following the
 `OSGeo Tile Map Service Specification <https://wiki.osgeo.org/wiki/Tile_Map_Service_Specification>`_.
 See also the
 `OpenGIS Web Map Tile Service Implementation Standard
-<https://www.opengeospatial.org/standards/wmts>`_.
+<https://www.ogc.org/standards/wmts>`_.
 Simple web pages with viewers based on Google Maps, OpenLayers and
 Leaflet are generated as well.
 To explore your maps on-line in the web browser, you only need to

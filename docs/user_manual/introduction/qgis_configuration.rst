@@ -1101,7 +1101,7 @@ the string listed in this text box.
 
 If you need more detailed information about the different proxy settings,
 please refer to the manual of the underlying QT library documentation at
-https://doc.qt.io/qt-5.9/qnetworkproxy.html#ProxyType-enum
+https://doc.qt.io/archives/qt-5.9/qnetworkproxy.html#ProxyType-enum
 
 .. tip:: **Using Proxies**
 
