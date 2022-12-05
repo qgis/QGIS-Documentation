@@ -47,7 +47,7 @@ QGIS loads the EPT immediately (which leads to a reduced loading time).
 In QGIS it is not (yet) possible to edit point clouds. If you want to manipulate
 your point cloud, you can use `CloudCompare <https://www.cloudcompare.org/>`_,
 an open source point cloud processing tool. Also the
-`Point Data Abstraction Library <https://pdal.io>`_ (PDAL - similar to GDAL)
+`Point Data Abstraction Library <https://pdal.io/en/stable/>`_ (PDAL - similar to GDAL)
 offers you options to edit point clouds (PDAL is command line only).
 
 Due to the large number of data points, it is not possible to display an

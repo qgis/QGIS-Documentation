@@ -170,7 +170,7 @@ Take a look at some example and try to explore the query language.
 -------------------------------------------------------------------------------
 
 The **DataPlotly** plugin allows you to create `D3 <https://d3js.org/>`_ plots of vector
-attributes data thanks to the `plotly <https://plot.ly/>`_ library.
+attributes data thanks to the `plotly <https://plotly.com/>`_ library.
 
 #. Start a new project
 #. Load the :guilabel:`sample_points` layer from the :file:`exercise_data/plugins`

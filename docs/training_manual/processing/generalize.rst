@@ -1,7 +1,7 @@
 Vector simplification and smoothing
 ====================================
 
-Module contributed by Paolo Cavallini - `Faunalia <https://www.faunalia.eu>`_
+Module contributed by Paolo Cavallini - `Faunalia <https://www.faunalia.eu/en>`_
 
 .. note:: This chapter shows how simplify vectors, and smooth out sharp corners.
 

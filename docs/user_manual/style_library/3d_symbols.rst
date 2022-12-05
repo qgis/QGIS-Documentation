@@ -188,7 +188,7 @@ Application example
 ===================
 
 To go through the settings explained above you can have a look at
-https://public.cloudmergin.com/projects/saber/luxembourg/tree.
+https://app.merginmaps.com/projects/saber/luxembourg/tree.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

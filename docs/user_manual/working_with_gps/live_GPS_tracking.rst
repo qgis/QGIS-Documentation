@@ -169,7 +169,7 @@ MS Windows
 ..........
 
 Easiest way to make it work is to use a middleware (freeware, not open) called
-`GPSGate <https://gpsgate.com/download/gpsgate_client>`_.
+`GPSGate <https://gpsgate.com/gpsgate-splitter>`_.
 
 Launch the program, make it scan for GPS devices (works for both USB and BT
 ones) and then in QGIS just click :guilabel:`Connect` in the Live tracking panel

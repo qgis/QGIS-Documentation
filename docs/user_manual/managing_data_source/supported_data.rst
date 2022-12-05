@@ -113,8 +113,8 @@ An ESRI Shapefile format dataset can also include a file with a
 While it is very useful to have a projection file, it is not
 mandatory.
 A Shapefile format dataset can contain additional files.
-For further details, see the the ESRI technical specification at
-https://www.esri.com/library/whitepapers/pdfs/shapefile.pdf.
+For further details, see the the ESRI `technical specification
+<https://www.esri.com/content/dam/esrisites/sitecore-archive/Files/Pdfs/library/whitepapers/pdfs/shapefile.pdf>`_.
 
 GDAL 3.1 has read-write support for compressed ESRI Shapefile
 format (:file:`shz` and :file:`shp.zip`).

@@ -1,7 +1,7 @@
 Predicting landslides
 ==========================================
 
-Module contributed by Paolo Cavallini - `Faunalia <https://www.faunalia.eu>`_
+Module contributed by Paolo Cavallini - `Faunalia <https://www.faunalia.eu/en>`_
 
 .. note:: This chapter shows how to create an oversimplified model to predict
   the probability of landslides.
