@@ -1235,7 +1235,7 @@ From the :guilabel:`Attachment` widget, you have to first select the :guilabel:`
 
 * :guilabel:`WebDAV Storage`: The resource is pushed to a HTTP server supporting the
   `WebDAV <https://en.wikipedia.org/wiki/WebDAV>`_ protocol and the attribute is updated with
-  its URL. `Nextcloud <https://nextcloud.com/>`_, `Pydio <https://pydio.com/>`_
+  its URL. `Nextcloud <https://nextcloud.com/>`_, `Pydio <https://pydio.com>`_
   or other file hosting software support this protocol.
 
 Then, you have to set up the :guilabel:`Store URL` parameter, which provides the URL to be used when a new

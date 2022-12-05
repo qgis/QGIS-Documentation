@@ -9,7 +9,7 @@ Version 1.3, 3 November 2008
 
 Copyright  2000, 2001, 2002, 2007, 2008  Free Software Foundation, Inc
 
-http://fsf.org/
+https://www.fsf.org/
 
 
 Everyone is permitted to copy and distribute verbatim copies of this
