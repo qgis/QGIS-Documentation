@@ -134,7 +134,7 @@ In order to translate using Transifex, you need to:
    :ref:`guidelines <translate_manual>`.
 
 For further information on the use of Transifex Web Editor, see
-https://docs.transifex.com/translation/translating-with-the-web-editor.
+https://help.transifex.com/en/articles/6318216-translating-with-the-web-editor.
 
 
 .. _translation_linguist:

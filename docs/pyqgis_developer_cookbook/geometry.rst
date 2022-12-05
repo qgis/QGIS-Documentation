@@ -64,7 +64,7 @@ coordinates in CRS of the layer.
 
 Description and specifications of all possible geometries construction and
 relationships are available in the `OGC Simple Feature Access Standards
-<https://www.opengeospatial.org/standards/sfa>`_ for advanced details.
+<https://www.ogc.org/standards/sfa>`_ for advanced details.
 
 .. index:: Geometry; Construction
 

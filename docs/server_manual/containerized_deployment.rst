@@ -551,11 +551,7 @@ custom images to be accessible.
 To use docker-compose alike functionalities, you need to install the
 **ecs-cli** client and have `proper permissions / roles
 <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html>`_.
-Then, with the help of the `ecs-cli compose` commands (see the
-`ecs-cli compose manual
-<https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-ecs-cli-compose.html>`_
-and
-`ecs-cli tutorial <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-cli-tutorial-fargate.html>`_),
+Then, with the help of the `ecs-cli compose <https://github.com/aws/amazon-ecs-cli>`_ commands,
 you can reuse the :ref:`stack description <docker-compose-file>`.
 
 To use Kubernetes, you can use the AWS web console or the command line

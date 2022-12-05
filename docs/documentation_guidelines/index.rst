@@ -12,7 +12,7 @@ QGIS Documentation source files are available at https://github.com/qgis/QGIS-Do
 They are mainly written using the reStructuredText (reST) format syntax, coupled
 with some scripts from the Sphinx toolset to post-process the HTML output.
 For general information on these tools, see
-http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html or
+https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html or
 https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html.
 
 The following chapters will guide you through learning:

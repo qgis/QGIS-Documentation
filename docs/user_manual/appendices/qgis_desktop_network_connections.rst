@@ -104,7 +104,7 @@ from the user before they take place, others happen automatically.
    * - Nominatim Geocoder
      - Geocoding services
      - User initiated
-     - https://nominatim.qgis.org/search
+     - https://nominatim.qgis.org/ui/search.html
      - IP, QGIS version, OS
      -
    * - Geodetic grid

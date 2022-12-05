@@ -19,7 +19,7 @@ GIS data processing and exchange.
 Describing a basic data model for geographic features, an increasing number
 of specifications are developed by OGC to serve specific needs for interoperable
 location and geospatial technology, including GIS. Further information
-can be found at https://www.opengeospatial.org/.
+can be found at https://www.ogc.org/.
 
 .. index:: WMS, WFS, WCS, CAT, SFS, GML
 
