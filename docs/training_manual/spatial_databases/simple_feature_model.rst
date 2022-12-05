@@ -31,7 +31,7 @@ The model defines geospatial data from Point, Linestring, and Polygon types
 (and aggregations of them to Multi objects).
 
 For further information, have a look at the `OGC Simple Feature for SQL
-<https://www.opengeospatial.org/standards/sfs>`_ standard.
+<https://www.ogc.org/standards/sfs>`_ standard.
 
 Add a geometry field to table
 -------------------------------------------------------------------------------

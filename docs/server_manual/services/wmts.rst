@@ -8,7 +8,7 @@ parameters like layers to render, as well as tile parameters.
 
 Specifications document of the service:
 
-- `WMTS 1.0.0 <http://portal.opengeospatial.org/files/?artifact_id=35326>`_
+- `WMTS 1.0.0 <https://portal.ogc.org/files/?artifact_id=35326>`_
 
 Standard requests provided by QGIS Server:
 

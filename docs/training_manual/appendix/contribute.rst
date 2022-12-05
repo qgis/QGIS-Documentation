@@ -20,7 +20,7 @@ Manual Format
 
 This manual is written using `Sphinx <https://www.sphinx-doc.org/en/master/>`_,
 a Python document generator using the `reStructuredText
-<http://docutils.sourceforge.net/rst.html>`_ markup language. Instructions on
+<https://docutils.sourceforge.io/rst.html>`_ markup language. Instructions on
 how to use these tools are available on their respective sites.
 
 Adding a Module

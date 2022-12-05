@@ -82,7 +82,7 @@ from the following sources:
 * Streets and Places datasets from OpenStreetMap
   (https://www.openstreetmap.org/)
 * Property boundaries (urban and rural), water bodies from NGI
-  (http://www.ngi.gov.za/)
+  (https://ngi.dalrrd.gov.za/)
 * SRTM DEM from the CGIAR-CGI (http://srtm.csi.cgiar.org/)
 
 Download the prepared dataset from the `Training data repository <training_data_>`_

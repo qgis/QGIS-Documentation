@@ -14,7 +14,7 @@ The Open Geospatial Consortium (OGC) provides tests which can be run free of
 charge to make sure a server is compliant with a certain specification.  This
 chapter provides a quick tutorial to setup the WMS and OGC API Features tests
 on an Ubuntu system. A detailed documentation can be found at the
-`OGC website <https://www.opengeospatial.org/compliance>`_.
+`OGC website <https://www.ogc.org/compliance>`_.
 
 
 pyogctest
