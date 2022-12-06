@@ -6,7 +6,7 @@
 Statistics of translation
 ===========================
 
-*(last update: 2022-11-29)*
+*(last update: 2022-12-06)*
 
 .. list-table::
    :widths: auto
@@ -46,7 +46,7 @@ Statistics of translation
      - Catalan
      - 1.38
      - Chinese Simplified
-     - 19.45
+     - 19.44
    * - Chinese Traditional
      - 0.58
      - Croatian
@@ -56,19 +56,19 @@ Statistics of translation
    * - Danish
      - 0.62
      - Dutch
-     - 99.42
+     - 99.37
      - Estonian
-     - 1.24
+     - 1.23
    * - Finnish
      - 1.65
      - French
-     - 86.96
+     - 86.94
      - Galician
      - 0.43
    * - Georgian
      - 0.09
      - German
-     - 19.64
+     - 19.62
      - Greek
      - 0.35
    * - Hebrew
@@ -82,13 +82,13 @@ Statistics of translation
      - Indonesian
      - 2.6
      - Italian
-     - 99.13
+     - 99.09
    * - Japanese
-     - 76.02
+     - 76.01
      - Kabyle
      - 0.09
      - Korean
-     - 75.25
+     - 75.23
    * - Lithuanian
      - 4.65
      - Macedonian
@@ -112,11 +112,11 @@ Statistics of translation
      - Polish
      - 1.67
      - Portuguese (Brazil)
-     - 71.48
+     - 71.67
    * - Portuguese (Portugal)
      - 7.7
      - Romanian
-     - 40.31
+     - 40.3
      - Russian
      - 12.43
    * - Serbian
@@ -126,7 +126,7 @@ Statistics of translation
      - Slovenian
      - 2.97
    * - Spanish
-     - 99.0
+     - 98.96
      - Swedish
      - 0.95
      - Tagalog
