@@ -272,13 +272,13 @@ several ways to define these variables. This is fully described in
 
    * - QGIS_SERVER_WCS_SERVICE_URL
      - This is an option to set the service URL if it is not present in the project.
-       See :ref:`qgis_server_service_url` for more information.
+       See :ref:`QGIS_SERVER_SERVICE_URL <qgis_server_service_url>` for more information.
      - ''
      - WCS
 
    * - QGIS_SERVER_WFS_SERVICE_URL
      - This is an option to set the service URL if it is not present in the project.
-       See :ref:`qgis_server_service_url` for more information.
+       See :ref:`QGIS_SERVER_SERVICE_URL <qgis_server_service_url>` for more information.
      - ''
      - WFS
 
@@ -290,13 +290,13 @@ several ways to define these variables. This is fully described in
 
    * - QGIS_SERVER_WMS_SERVICE_URL
      - This is an option to set the service URL if it is not present in the project.
-       See :ref:`qgis_server_service_url` for more information.
+       See :ref:`QGIS_SERVER_SERVICE_URL <qgis_server_service_url>` for more information.
      - ''
      - WMS
 
    * - QGIS_SERVER_WMTS_SERVICE_URL 
      - This is an option to set the service URL if it is not present in the project.
-       See :ref:`qgis_server_service_url` for more information.
+       See :ref:`QGIS_SERVER_SERVICE_URL <qgis_server_service_url>` for more information.
      - ''
      - WMTS
 
