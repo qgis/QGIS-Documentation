@@ -225,6 +225,28 @@ several ways to define these variables. This is fully described in
      - filesystem
      - All
 
+   * - .. _qgis_server_service_url:
+
+       QGIS_SERVER_SERVICE_URL
+     - This is an option to set the service URL if it is not present in the project.
+
+       The service URL is defined from (in order of precedence):
+
+       * Value defined in the project per service
+       * The ``QGIS_SERVER_<service>_SERVICE_URL`` environment variable
+       * The ``QGIS_SERVER_SERVICE_URL`` environment variable
+       * The ``X-Qgis-<service>-Service-Url`` header
+       * The ``X-Qgis-Service-Url`` header
+       * Build from the ``Forwarded`` header
+       * Build from the ``X-Forwarded-Host`` and ``X-Forwarded-Proto`` headers
+       * Build from the ``Host`` header and the server protocol
+       * Build from the server name and the server protocol.
+
+       The last three also use the ``REQUEST`` path and the ``MAP`` provided
+       in the query string.
+     - ''
+     - All
+
    * - QGIS_SERVER_SHOW_GROUP_SEPARATOR
      - Defines whether a group separator (e.g. thousand separator) should be used for
        numeric values (e.g. in GetFeatureInfo responses). The default value is ``0``.
@@ -248,11 +270,35 @@ several ways to define these variables. This is fully described in
      - false
      - All
 
+   * - QGIS_SERVER_WCS_SERVICE_URL
+     - This is an option to set the service URL if it is not present in the project.
+       See :ref:`qgis_server_service_url` for more information.
+     - ''
+     - WCS
+
+   * - QGIS_SERVER_WFS_SERVICE_URL
+     - This is an option to set the service URL if it is not present in the project.
+       See :ref:`qgis_server_service_url` for more information.
+     - ''
+     - WFS
+
    * - QGIS_SERVER_WMS_MAX_HEIGHT / QGIS_SERVER_WMS_MAX_WIDTH
      - Maximum height/width for a WMS request. The most conservative between this and the project one is used.
        If the value is ``-1``, it means that there is no maximum set.
      - -1
      - WMS
+
+   * - QGIS_SERVER_WMS_SERVICE_URL
+     - This is an option to set the service URL if it is not present in the project.
+       See :ref:`qgis_server_service_url` for more information.
+     - ''
+     - WMS
+
+   * - QGIS_SERVER_WMTS_SERVICE_URL 
+     - This is an option to set the service URL if it is not present in the project.
+       See :ref:`qgis_server_service_url` for more information.
+     - ''
+     - WMTS
 
    * - QUERY_STRING
      - The query string, normally passed by the web server. This variable can be
@@ -272,53 +318,6 @@ several ways to define these variables. This is fully described in
        if something is wrong, an error message.
      - ''
      - All
-
-   * - SERVICE_URL
-     - This is an option To set the service URL it it's not present in the project.
-
-       The service URL resolution watch on the following and thaks the first:
-
-         - Value defined in the project per service.
-         - The ``<service>_SERVICE_URL`` environment variable.
-         - The ``SERVICE_URL`` environment variable.
-         - The ``X-<service>-Servcie-Url`` header.
-         - The ``X-Service-Url`` header.
-         - Build form the ``Forwarded`` header.
-         - Build form the ``X-Forwarded-Host`` and ``X-Forwarded-Proto`` headers.
-         - Build form the ``Host`` header and the server protocol.
-         - Build form the server name and the server protocol.
-
-       The tree last also use the request path and the ``MAP`` provided in the query string.
-     - ''
-     - All
-
-   * - WMS_SERVICE_URL
-     - This is an option To set the service URL it it's not present in the project.
-
-       See ``SERVICE_URL`` for more informations
-     - ''
-     - WMS
-
-   * - WFS_SERVICE_URL
-     - This is an option To set the service URL it it's not present in the project.
-
-       See ``SERVICE_URL`` for more informations
-     - ''
-     - WFS
-
-   * - WMTS_SERVICE_URL
-     - This is an option To set the service URL it it's not present in the project.
-
-       See ``SERVICE_URL`` for more informations
-     - ''
-     - WMTS
-
-   * - WCS_SERVICE_URL
-     - This is an option To set the service URL it it's not present in the project.
-
-       See ``SERVICE_URL`` for more informations
-     - ''
-     - WCS
 
 
 Settings summary
