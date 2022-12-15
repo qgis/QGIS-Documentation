@@ -111,7 +111,7 @@ URL example to save an XML **GetCapabilities** document:
   http://localhost/qgisserver?
   SERVICE=WMS
   &REQUEST=GetCapabilities
-  &FILE_FORMAT=wms_capabilities.xml
+  &FILE_NAME=wms_capabilities.xml
   &...
 
 
