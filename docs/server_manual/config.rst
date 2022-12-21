@@ -242,8 +242,8 @@ several ways to define these variables. This is fully described in
        * Build from the ``Host`` header and the server protocol
        * Build from the server name and the server protocol.
 
-       The last three also use the ``REQUEST`` path and the ``MAP`` provided
-       in the query string.
+       In the last four cases, the resulting Service URL is based on the ``MAP`` parameter
+       provided in the query string and on the incoming path request.
      - ''
      - All
 
