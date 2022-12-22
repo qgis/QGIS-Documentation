@@ -199,6 +199,28 @@ several ways to define these variables. This is fully described in
      - false
      - WMS
 
+   * - .. _qgis_server_service_url:
+
+       QGIS_SERVER_SERVICE_URL
+     - This is an option to set the service URL if it is not present in the project.
+
+       The service URL is defined from (in order of precedence):
+
+       * Value defined in the project per service
+       * The ``QGIS_SERVER_<service>_SERVICE_URL`` environment variable
+       * The ``QGIS_SERVER_SERVICE_URL`` environment variable
+       * The ``X-Qgis-<service>-Service-Url`` header
+       * The ``X-Qgis-Service-Url`` header
+       * Build from the ``Forwarded`` header
+       * Build from the ``X-Forwarded-Host`` and ``X-Forwarded-Proto`` headers
+       * Build from the ``Host`` header and the server protocol
+       * Build from the server name and the server protocol.
+
+       In the last four cases, the resulting Service URL is based on the ``MAP`` parameter
+       provided in the query string and on the incoming path request.
+     - ''
+     - All
+
    * - QGIS_SERVER_SHOW_GROUP_SEPARATOR
      - Defines whether a group separator (e.g. thousand separator) should be used for
        numeric values (e.g. in GetFeatureInfo responses). The default value is ``0``.
@@ -222,11 +244,35 @@ several ways to define these variables. This is fully described in
      - false
      - All
 
+   * - QGIS_SERVER_WCS_SERVICE_URL
+     - This is an option to set the service URL if it is not present in the project.
+       See :ref:`QGIS_SERVER_SERVICE_URL <qgis_server_service_url>` for more information.
+     - ''
+     - WCS
+
+   * - QGIS_SERVER_WFS_SERVICE_URL
+     - This is an option to set the service URL if it is not present in the project.
+       See :ref:`QGIS_SERVER_SERVICE_URL <qgis_server_service_url>` for more information.
+     - ''
+     - WFS
+
    * - QGIS_SERVER_WMS_MAX_HEIGHT / QGIS_SERVER_WMS_MAX_WIDTH
      - Maximum height/width for a WMS request. The most conservative between this and the project one is used.
        If the value is ``-1``, it means that there is no maximum set.
      - -1
      - WMS
+
+   * - QGIS_SERVER_WMS_SERVICE_URL
+     - This is an option to set the service URL if it is not present in the project.
+       See :ref:`QGIS_SERVER_SERVICE_URL <qgis_server_service_url>` for more information.
+     - ''
+     - WMS
+
+   * - QGIS_SERVER_WMTS_SERVICE_URL 
+     - This is an option to set the service URL if it is not present in the project.
+       See :ref:`QGIS_SERVER_SERVICE_URL <qgis_server_service_url>` for more information.
+     - ''
+     - WMTS
 
    * - QUERY_STRING
      - The query string, normally passed by the web server. This variable can be
