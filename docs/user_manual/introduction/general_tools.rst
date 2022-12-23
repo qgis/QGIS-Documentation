@@ -781,33 +781,6 @@ Checking the |checkbox| :guilabel:`Render` checkbox enables rendering and
 causes an immediate refresh of the map canvas.
 
 
-.. index:: Rendering scale dependent, Scale
-.. _`label_scaledepend`:
-
-Scale Dependent Rendering
-.........................
-
-Scale-dependent rendering allows you to specify the minimum and maximum scales
-at which a layer (raster or vector) will be visible. To set scale-dependent rendering,
-open the :guilabel:`Properties` dialog by double-clicking on the layer in the legend.
-On the :guilabel:`Rendering` tab, tick |checkbox| :guilabel:`Scale
-dependent visibility` and enter the :guilabel:`Minimum (exclusive)` and
-:guilabel:`Maximum (inclusive)` scale values.
-
-You can also activate scale dependent visibility on a layer from the Layers panel.
-Right-click on the layer and in the context menu, select :guilabel:`Set Layer Scale Visibility`.
-
-The |mapIdentification| :sup:`Set to current canvas scale` button allow you to use
-the current map canvas scale as boundary of the range visibility.
-
-
-.. note::
-   When a layer is not rendered in the map canvas because the map scale is out of
-   its visibility scale range, the layer is greyed in the Layers panel and
-   a new option :guilabel:`Zoom to Visible Scale` appears in the layer context menu.
-   Select it and the map is zoomed to the layer's nearest visibility scale.
-
-
 .. index::
    single: Bookmarks
    see: Spatial bookmarks; Bookmarks
@@ -2398,6 +2371,36 @@ Pressing the arrow will provide you with a menu to:
   This is a convenient way to create self-contained projects with custom symbols
   which can be easily shared amongst different users and installations of QGIS.
 * extract the embedded file from the widget and save it on disk.
+
+.. index:: Rendering; Scale dependent visibility
+.. _label_scaledepend:
+
+Visibility Scale Selector
+-------------------------
+
+The visibility scale selector provides options to control the scales
+at which an element will be made visible in the map canvas.
+Out of the specified range of scales, the elements are not displayed.
+It can be applied e.g. to layers, labels or diagrams,
+from their :guilabel:`Rendering` properties tab.
+
+#. Tick the |checkbox| :guilabel:`Scale dependent visibility` box
+#. Fill the :guilabel:`Minimum (exclusive)` box with the most zoomed out desired scale,
+   typing the value or selecting it from the :ref:`predefined scales <predefinedscales>`
+#. and/or fill the :guilabel:`Maximum (inclusive)` box with the most zoomed in desired scale
+
+   The |mapIdentification| :sup:`Set to current canvas scale` button next to
+   the scale boxes sets the current map canvas scale as boundary of the range visibility.
+   Press the arrow next to the button to access scales from layouts' maps
+   and reuse them to fill the box.
+
+.. _figure_visibilityscaleselector_widget:
+
+.. figure:: img/visibilityscale_selector.png
+   :align: center
+
+   Visibility scale selector widget
+
 
 .. index:: Extent selection
 .. _extent_selector:
