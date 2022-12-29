@@ -18,6 +18,7 @@ QGIS User Guide
     introduction/browser
     introduction/qgis_configuration
     working_with_projections/working_with_projections
+    map_views/index
     introduction/general_tools
     expressions/index
     style_library/index
