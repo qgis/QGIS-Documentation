@@ -336,7 +336,8 @@ Here you can control whether reprojecting layers to another CRS should be:
     See :ref:`datum_transformation` for more details.
 
 
-You can |symbologyAdd| :sup:`Add`, |symbologyRemove| :sup:`Remove` or |toggleEditing| :sup:`Edit` transformations,
+You can |symbologyAdd| :sup:`Add`, |symbologyRemove| :sup:`Remove`
+or |toggleEditing| :sup:`Edit` transformations,
 which will be used in any newly created project.
 
 
@@ -783,12 +784,14 @@ These options can be overridden at the :ref:`project level <coordinate_and_beari
 
 **Predefined scales**
 
-Here, you find a list of predefined scales to display in the status
-bar :guilabel:`Scale` drop-down widget, for quick zoom. With the |symbologyAdd|
-and |symbologyRemove| buttons you can add or remove your personal scales.
+Here, you find a list of predefined scales to display by default in the scale-related drop-down widgets,
+such as the status bar :guilabel:`Scale`, the visibility scales selector or secondary 2D map view settings,...
+With the |symbologyAdd| and |symbologyRemove| buttons you can add or remove your personal scales.
 You can also import or export scales from/to a ``.XML`` file. Note that you
-still have the possibility to remove your changes and reset to the predefined
-list.
+still have the possibility to remove your changes and reset to the predefined list.
+
+From the project properties dialog, you can also set your own list of scales,
+overriding this global one in the widgets.
 
 .. index:: Digitizing configuration
 .. _digitizing_options:
@@ -1553,8 +1556,9 @@ The |overlay| :guilabel:`View Settings` tab provides means to control
 the project map canvas. You can:
 
 * set :guilabel:`Project predefined scales`: the list of scales to display in
-  the status bar :guilabel:`Scale` drop-down widget. This overrides
-  the global predefined scales.
+  scale-related drop-down widgets, such as the status bar :guilabel:`Scale`,
+  the visibility scales selector or secondary 2D map view settings,...
+  in replacement of the global :ref:`predefined scales <predefinedscales>`.
 
 .. _project_full_extent:
 
