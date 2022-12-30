@@ -487,11 +487,18 @@ properties:
   also the max size of arrows because arrows can't overlap.
 
 
-.. index:: Rendering
+.. index:: Rendering; Scale dependent visibility
 .. _meshrendering:
 
 Rendering Properties
 --------------------
+
+.. _figure_mesh_rendering:
+
+.. figure:: img/mesh_rendering.png
+   :align: center
+
+   Mesh rendering properties
 
 Under the :guilabel:`Scale dependent visibility` group box,
 you can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum
@@ -501,13 +508,11 @@ visible. Out of this range, they are hidden. The |mapIdentification|
 canvas scale as boundary of the range visibility.
 See :ref:`label_scaledepend` for more information.
 
+.. note::
 
-.. _figure_mesh_rendering:
-
-.. figure:: img/mesh_rendering.png
-   :align: center
-
-   Mesh rendering properties
+   You can also activate scale dependent visibility on a layer from within
+   the :guilabel:`Layers` panel: right-click on the layer and in the contextual menu,
+   select :guilabel:`Set Layer Scale Visibility`.
 
 As mesh layers can have millions of faces, their rendering can sometimes
 be very slow, especially when all the faces are displayed in the view
