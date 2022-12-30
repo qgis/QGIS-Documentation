@@ -693,9 +693,6 @@ In the |rendering| :guilabel:`Rendering` tab, it's possible to:
   helps you use the current map canvas scale as a boundary.
   See :ref:`label_scaledepend` for more information.
 
-     The |mapIdentification| :sup:`Set to current canvas scale` button next to
-     the scale boxes sets the current map canvas scale as boundary of the range visibility.
-
   .. note::
 
    You can also activate scale dependent visibility on a layer from within
