@@ -327,7 +327,6 @@ also configure:
   More details at :ref:`point_cloud_legend_settings`.
 
 
-
 .. _point_cloud_legend_settings:
 
 Customize Color Ramp Legend
@@ -336,7 +335,6 @@ Customize Color Ramp Legend
 Since the customization works the same way as with a raster layer, you can
 find information in the raster data chapter under
 :ref:`raster_legend_settings`.
-
 
 
 .. _point_cloud_rgb:
@@ -473,6 +471,11 @@ visible. Out of this range, they are hidden. The |mapIdentification|
 canvas scale as boundary of the range visibility.
 See :ref:`label_scaledepend` for more information.
 
+.. note::
+
+   You can also activate scale dependent visibility on a layer from within
+   the :guilabel:`Layers` panel: right-click on the layer and in the contextual menu,
+   select :guilabel:`Set Layer Scale Visibility`.
 
 .. _figure_point_cloud_rendering:
 
