@@ -119,6 +119,46 @@ or in a custom CRS. The copied information can then be pasted in an expression,
 a script, text editor or spreadsheet...
 
 
+.. index:: Rendering
+   single: Rendering; Suspending
+.. _`redraw_events`:
+
+Controlling map rendering
+=========================
+
+By default, QGIS renders all visible layers whenever the map canvas is
+refreshed. The events that trigger a refresh of the map canvas include:
+
+* changing the visibility of a layer
+* modifying symbology of a visible layer
+* adding a layer
+* panning or zooming
+* resizing the QGIS window
+
+QGIS allows you to control the rendering process in a number of ways.
+
+* at the :ref:`global level <rendering_options>`
+* per layer, using e.g. the :ref:`scale dependent rendering <label_scaledepend>`
+* or with dedicated tools in the GUI.
+
+To stop the map drawing, press the :kbd:`Esc` key. This will halt the refresh of
+the map canvas and leave the map partially drawn. It may however take a bit of time
+after pressing :kbd:`Esc` for the map drawing to halt.
+
+To suspend rendering, click the |checkbox| :guilabel:`Render` checkbox in the
+bottom-right corner of the status bar. When |checkbox| :guilabel:`Render`
+is unchecked, QGIS does not redraw the canvas in response to any of
+the usual triggers mentioned earlier. Examples of when you
+might want to suspend rendering include:
+
+* adding many layers and symbolizing them prior to drawing
+* adding one or more large layers and setting scale dependency before drawing
+* adding one or more large layers and zooming to a specific view before drawing
+* any combination of the above
+
+Checking the |checkbox| :guilabel:`Render` checkbox enables rendering and
+causes an immediate refresh of the map canvas.
+
 
 .. _additional_map_views:
 
