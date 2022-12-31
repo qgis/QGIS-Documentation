@@ -18,7 +18,7 @@ You can create, manage and open 3D map views via :menuselection:`View --> 3D Map
    A floating and dockable QGIS panel will appear (see :ref:`figure_3dmapview`).
    It has the same extent and view as the 2D main map canvas
    and provides a set of navigation tools to turn the view into 3D.
-#. By clicking on :menuselection:`Manage 3D Map Views` you get in the 3D Map Views Manager. 
+#. By clicking on :menuselection:`Manage 3D Map Views` you get in the 3D Map Views Manager.
    Here you get the ability to open, duplicate, remove and rename 3D map views.
 #. If you created one or more 3D map views, you see them listed in :menuselection:`3D Map Views`.
    You can turn them on and off by clicking on. They will be saved by saving the project, even if they are turned off.  
@@ -74,7 +74,7 @@ The following tools are provided at the top of the 3D map view panel:
 .. _`scene_configuration`:
 
 Scene Configuration
----------------------
+===================
 
 The 3D map view opens with some default settings you can customize.
 To do so, expand the |options| :sup:`Options` menu at the top of
@@ -93,7 +93,7 @@ In the 3D Configuration window there are various options to
 fine-tune the 3D scene:
 
 Terrain
-.......
+-------
 
 * :guilabel:`Terrain`: Before diving into the details, it is worth
   noting that the terrain in a 3D view is represented by a hierarchy of
@@ -152,7 +152,7 @@ Terrain
     :guilabel:`Specular` colors and :guilabel:`Shininess`
 
 Lights
-......
+------
 
 From the :guilabel:`Lights` tab, press the |symbologyAdd| menu to add
 
@@ -176,7 +176,7 @@ From the :guilabel:`Lights` tab, press the |symbologyAdd| menu to add
    The 3D Map Lights Configuration dialog
 
 Shadow
-......
+------
 
 Check |unchecked| :guilabel:`Show shadow` to display shadow within your scene,
 given:
@@ -192,7 +192,7 @@ given:
   It may result in less performance if the resolution parameter is too high.
 
 Camera & Skybox
-...............
+---------------
 
 In this tab, you can control different parameters like camera, 3D axis, navigation
 synchronization and skybox.
@@ -241,7 +241,7 @@ synchronization and skybox.
   embedded in the project (:ref:`more details <embedded_file_selector>`).
 
 Advanced
-........
+--------
 
 * :guilabel:`Map tile resolution`: Width and height of the 2D map
   images used as textures for the terrain tiles.
@@ -275,7 +275,7 @@ Advanced
 .. _`3d_navigation`:
 
 Navigation options
-------------------
+==================
 
 To explore the map view in 3D:
 
@@ -329,7 +329,7 @@ button on the top of the 3D canvas panel.
 .. _`create_animation`:
 
 Creating an animation
----------------------
+=====================
 
 An animation is based on a set of keyframes - camera positions at particular times.
 To create an animation:
@@ -357,10 +357,58 @@ representing the scene. Other than the filename :guilabel:`Template` and the
 second`, the :guilabel:`Output width` and :guilabel:`Output height`.
 
 3D vector layers
-----------------
+================
 
 A vector layer with elevation values can be shown in the 3D map
 view by checking :guilabel:`Enable 3D Renderer` in the
 :guilabel:`3D View` section of the vector layer properties.
 A number of options are available for controlling the rendering of
 the 3D vector layer.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |3d| image:: /static/common/3d.png
+   :width: 1.5em
+.. |3dNavigation| image:: /static/common/mAction3DNavigation.png
+   :width: 1.3em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |dock| image:: /static/common/dock.png
+   :width: 1.5em
+.. |fileSave| image:: /static/common/mActionFileSave.png
+   :width: 1.5em
+.. |identify| image:: /static/common/mActionIdentify.png
+   :width: 1.5em
+.. |measure| image:: /static/common/mActionMeasure.png
+   :width: 1.5em
+.. |new3DMap| image:: /static/common/mActionNew3DMap.png
+   :width: 1.5em
+.. |options| image:: /static/common/mActionOptions.png
+   :width: 1em
+.. |pan| image:: /static/common/mActionPan.png
+   :width: 1.5em
+.. |play| image:: /static/common/mActionPlay.png
+   :width: 1.5em
+.. |saveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
+   :width: 1.5em
+.. |showPresets| image:: /static/common/mActionShowPresets.png
+   :width: 1.5em
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |tiltDown| image:: /static/common/mActionTiltDown.png
+   :width: 1.5em
+.. |tiltUp| image:: /static/common/mActionTiltUp.png
+   :width: 1.5em
+.. |unchecked| image:: /static/common/unchecked.png
+   :width: 1.3em
+.. |zoomFullExtent| image:: /static/common/mActionZoomFullExtent.png
+   :width: 1.5em
+.. |zoomIn| image:: /static/common/mActionZoomIn.png
+   :width: 1.5em
+.. |zoomOut| image:: /static/common/mActionZoomOut.png
+   :width: 1.5em

@@ -11,12 +11,26 @@
       :local:
 
 
-The map view (also called **Map canvas**) is the "business end" of
-QGIS --- maps are displayed in this area, in 2D.
-The map displayed in this window will reflect the rendering (symbology,
-labeling, visibilities...) you applied to the layers you have loaded.
-It also depends on the layers and the project's Coordinate Reference
-System (CRS).
+The 2D map view (also called **Map canvas**) is the central place where maps are displayed.
+QGIS opens by default with a single map view (called ``main map``),
+showing layers in 2D, and tightly bound to the :guilabel:`Layers` panel.
+That window reflects the rendering (symbology, labeling, visibilities...)
+you applied to the loaded layers.
+
+
+.. _figure_startup_bis:
+
+.. figure:: ../introduction/img/startup.png
+   :align: center
+
+   QGIS GUI
+
+
+.. index:: Zoom, Pan, Map navigation
+.. _zoom_pan:
+
+Exploring the map view
+======================
 
 When you add a layer (see e.g. :ref:`opening_data`), QGIS automatically
 looks for its CRS. If a different CRS is set by default for the project
@@ -26,13 +40,6 @@ you start with a blank QGIS project.
 If there are already layers in the project, no map canvas resize is
 performed, so only features falling within the current map canvas extent
 will be visible.
-
-.. index:: Zoom, Pan, Map navigation
-.. _zoom_pan:
-
-
-Exploring the map view
-----------------------
 
 Click on the map view and you should be able to interact with it,
 panning or zooming to different areas of the map.
@@ -106,26 +113,20 @@ or the mouse buttons.
          hold down :kbd:`Shift` and drag a rectangle on the map to zoom to that
          area. Not compatible with active selection or edit tools.
 
-
 Right-click over the map and you should be able to |editCopy|
 :guilabel:`Copy coordinates` of the clicked point in the map CRS, in WGS84
 or in a custom CRS. The copied information can then be pasted in an expression,
 a script, text editor or spreadsheet...
 
-By default, QGIS opens a single map view (called "main map"), which is
-tightly bound to the :guilabel:`Layers` panel; the main map *automatically*
-reflects the changes you do in the :guilabel:`Layers` panel area.
-But it is also possible to open additional map views whose content could diverge
-from the :guilabel:`Layers` panel current state. They can be of 2D or :ref:`3D
-<label_3dmapview>` type, show different scale or extent, or display a different
-set of the loaded layers thanks to :ref:`map themes <map_themes>`.
 
 
 .. _additional_map_views:
 
 Setting additional map views
-----------------------------
+============================
 
+It is also possible to open additional map views whose content could diverge
+from the :guilabel:`Layers` panel current state.
 To add a new map view, go to :menuselection:`View -->` |newMap|
 :menuselection:`New Map View`. A new floating widget, mimicking the main map
 view's rendering, is added to QGIS. You can add as many map views as you need.
@@ -174,7 +175,7 @@ capabilities:
 .. _maptimecontrol:
 
 Time-based control on the map canvas
-------------------------------------
+====================================
 
 QGIS can handle temporal control on loaded layers, i.e. modify the map canvas
 rendering based on a time variation. To achieve this, you need:
@@ -213,7 +214,7 @@ rendering based on a time variation. To achieve this, you need:
 .. _temporal_controller:
 
 The temporal controller panel
-.............................
+-----------------------------
 
 The :guilabel:`Temporal controller` panel has the following modes:
 
@@ -242,7 +243,7 @@ The :guilabel:`Temporal controller` panel has the following modes:
 .. _`create_temporal_animation`:
 
 Animating a temporal navigation
-...............................
+-------------------------------
 
 An animation is based on a varying set of visible layers at particular times
 within a time range.
@@ -314,7 +315,7 @@ To create a temporal animation:
 .. _`exportingmapcanvas`:
 
 Exporting the map view
-----------------------
+======================
 
 Maps you make can be layout and exported to various formats using the
 advanced capabilities of the
@@ -420,3 +421,68 @@ In the dialog that opens:
    settings and paste the map in another application such as
    LibreOffice, GIMP...
 
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |editCopy| image:: /static/common/mActionEditCopy.png
+   :width: 1.5em
+.. |fileSave| image:: /static/common/mActionFileSave.png
+   :width: 1.5em
+.. |indicatorTemporal| image:: /static/common/mIndicatorTemporal.png
+   :width: 1.5em
+.. |newMap| image:: /static/common/mActionNewMap.png
+   :width: 1.5em
+.. |options| image:: /static/common/mActionOptions.png
+   :width: 1em
+.. |pan| image:: /static/common/mActionPan.png
+   :width: 1.5em
+.. |panToSelected| image:: /static/common/mActionPanToSelected.png
+   :width: 1.5em
+.. |play| image:: /static/common/mActionPlay.png
+   :width: 1.5em
+.. |radioButtonOff| image:: /static/common/radiobuttonoff.png
+   :width: 1.5em
+.. |radioButtonOn| image:: /static/common/radiobuttonon.png
+   :width: 1.5em
+.. |refresh| image:: /static/common/mActionRefresh.png
+   :width: 1.5em
+.. |saveAsPDF| image:: /static/common/mActionSaveAsPDF.png
+   :width: 1.5em
+.. |saveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
+   :width: 1.5em
+.. |settings| image:: /static/common/settings.png
+   :width: 1.5em
+.. |showPresets| image:: /static/common/mActionShowPresets.png
+   :width: 1.5em
+.. |temporal| image:: /static/common/temporal.png
+   :width: 1.5em
+.. |temporalNavigationAnimated| image:: /static/common/mTemporalNavigationAnimated.png
+   :width: 1.5em
+.. |temporalNavigationFixedRange| image:: /static/common/mTemporalNavigationFixedRange.png
+   :width: 1.5em
+.. |temporalNavigationOff| image:: /static/common/mTemporalNavigationOff.png
+   :width: 1.5em
+.. |unchecked| image:: /static/common/unchecked.png
+   :width: 1.3em
+.. |zoomActual| image:: /static/common/mActionZoomActual.png
+   :width: 1.5em
+.. |zoomFullExtent| image:: /static/common/mActionZoomFullExtent.png
+   :width: 1.5em
+.. |zoomIn| image:: /static/common/mActionZoomIn.png
+   :width: 1.5em
+.. |zoomLast| image:: /static/common/mActionZoomLast.png
+   :width: 1.5em
+.. |zoomNext| image:: /static/common/mActionZoomNext.png
+   :width: 1.5em
+.. |zoomOut| image:: /static/common/mActionZoomOut.png
+   :width: 1.5em
+.. |zoomToLayer| image:: /static/common/mActionZoomToLayer.png
+   :width: 1.5em
+.. |zoomToSelected| image:: /static/common/mActionZoomToSelected.png
+   :width: 1.5em
