@@ -2165,10 +2165,6 @@ processes (QGIS startup, plugins loading, processing tools...)
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |3d| image:: /static/common/3d.png
-   :width: 1.5em
-.. |3dNavigation| image:: /static/common/mAction3DNavigation.png
-   :width: 1.3em
 .. |addAllToOverview| image:: /static/common/mActionAddAllToOverview.png
    :width: 1.5em
 .. |addAmsLayer| image:: /static/common/mActionAddAmsLayer.png
@@ -2259,8 +2255,6 @@ processes (QGIS startup, plugins loading, processing tools...)
    :width: 1.5em
 .. |deselectAll| image:: /static/common/mActionDeselectAll.png
    :width: 1.5em
-.. |dock| image:: /static/common/dock.png
-   :width: 1.5em
 .. |duplicateLayer| image:: /static/common/mActionDuplicateLayer.png
    :width: 1.5em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
@@ -2317,8 +2311,6 @@ processes (QGIS startup, plugins loading, processing tools...)
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
 .. |inOverview| image:: /static/common/mActionInOverview.png
-   :width: 1.5em
-.. |indicatorTemporal| image:: /static/common/mIndicatorTemporal.png
    :width: 1.5em
 .. |interfaceCustomization| image:: /static/common/mActionInterfaceCustomization.png
    :width: 1.5em
@@ -2418,8 +2410,6 @@ processes (QGIS startup, plugins loading, processing tools...)
    :width: 1.5em
 .. |panToSelected| image:: /static/common/mActionPanToSelected.png
    :width: 1.5em
-.. |play| image:: /static/common/mActionPlay.png
-   :width: 1.5em
 .. |processSelected| image:: /static/common/mActionProcessSelected.png
    :width: 1.5em
 .. |processingAlgorithm| image:: /static/common/processingAlgorithm.png
@@ -2437,10 +2427,6 @@ processes (QGIS startup, plugins loading, processing tools...)
 .. |pythonFile| image:: /static/common/mIconPythonFile.png
    :width: 1.5em
 .. |qgisHomePage| image:: /static/common/mActionQgisHomePage.png
-   :width: 1.5em
-.. |radioButtonOff| image:: /static/common/radiobuttonoff.png
-   :width: 1.5em
-.. |radioButtonOn| image:: /static/common/radiobuttonon.png
    :width: 1.5em
 .. |rectangle3PointsDistance| image:: /static/common/mActionRectangle3PointsDistance.png
    :width: 1.5em
@@ -2492,8 +2478,6 @@ processes (QGIS startup, plugins loading, processing tools...)
    :width: 1.5em
 .. |selectRectangle| image:: /static/common/mActionSelectRectangle.png
    :width: 1.5em
-.. |settings| image:: /static/common/settings.png
-   :width: 1.5em
 .. |showAllLayers| image:: /static/common/mActionShowAllLayers.png
    :width: 1.5em
 .. |showBookmarks| image:: /static/common/mActionShowBookmarks.png
@@ -2501,8 +2485,6 @@ processes (QGIS startup, plugins loading, processing tools...)
 .. |showMeshCalculator| image:: /static/common/mActionShowMeshCalculator.png
    :width: 1.5em
 .. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
-   :width: 1.5em
-.. |showPresets| image:: /static/common/mActionShowPresets.png
    :width: 1.5em
 .. |showRasterCalculator| image:: /static/common/mActionShowRasterCalculator.png
    :width: 1.5em
@@ -2522,21 +2504,7 @@ processes (QGIS startup, plugins loading, processing tools...)
    :width: 1.2em
 .. |svgAnnotation| image:: /static/common/mActionSvgAnnotation.png
    :width: 1.5em
-.. |symbologyAdd| image:: /static/common/symbologyAdd.png
-   :width: 1.5em
-.. |temporal| image:: /static/common/temporal.png
-   :width: 1.5em
-.. |temporalNavigationAnimated| image:: /static/common/mTemporalNavigationAnimated.png
-   :width: 1.5em
-.. |temporalNavigationFixedRange| image:: /static/common/mTemporalNavigationFixedRange.png
-   :width: 1.5em
-.. |temporalNavigationOff| image:: /static/common/mTemporalNavigationOff.png
-   :width: 1.5em
 .. |textAnnotation| image:: /static/common/mActionTextAnnotation.png
-   :width: 1.5em
-.. |tiltDown| image:: /static/common/mActionTiltDown.png
-   :width: 1.5em
-.. |tiltUp| image:: /static/common/mActionTiltUp.png
    :width: 1.5em
 .. |titleLabel| image:: /static/common/title_label.png
    :width: 1.5em
@@ -2550,8 +2518,6 @@ processes (QGIS startup, plugins loading, processing tools...)
    :width: 1.5em
 .. |trimExtend| image:: /static/common/mActionTrimExtend.png
    :width: 1.5em
-.. |unchecked| image:: /static/common/unchecked.png
-   :width: 1.3em
 .. |undo| image:: /static/common/mActionUndo.png
    :width: 1.5em
 .. |vertexTool| image:: /static/common/mActionVertexTool.png
