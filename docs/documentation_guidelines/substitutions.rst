@@ -1108,9 +1108,9 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |moveLabel| image:: /static/common/mActionMoveLabel.png
    :width: 1.5em
-.. |multibandColor| image:: /static/common/multibandColor.png
-   :width: 1.5em
 .. |multiEdit| image:: /static/common/mActionMultiEdit.png
+   :width: 1.5em
+.. |multibandColor| image:: /static/common/multibandColor.png
    :width: 1.5em
 .. |new3DMap| image:: /static/common/mActionNew3DMap.png
    :width: 1.5em
@@ -1364,11 +1364,11 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |simplify| image:: /static/common/mActionSimplify.png
    :width: 1.5em
-.. |singlebandPseudocolor| image:: /static/common/singlebandPseudocolor.png
-   :width: 1.5em
 .. |singleColor| image:: /static/common/singleColor.png
    :width: 1.5em
 .. |singleSymbol| image:: /static/common/rendererSingleSymbol.png
+   :width: 1.5em
+.. |singlebandPseudocolor| image:: /static/common/singlebandPseudocolor.png
    :width: 1.5em
 .. |slider| image:: /static/common/slider.png
 .. |snapping| image:: /static/common/mIconSnapping.png
