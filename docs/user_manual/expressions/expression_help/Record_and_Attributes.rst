@@ -239,6 +239,57 @@ Returns the feature id of the current row. **WARNING: This function is deprecate
 
 .. end_$id_section
 
+.. _expression_function_Record_and_Attributes_is_attribute_valid:
+
+is_attribute_valid
+..................
+
+Returns TRUE if a specific feature attribute meets all constraints.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - is_attribute_valid(attribute, [feature], [layer], [strength])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **attribute** - an attribute name
+       * **feature** - A feature. If not set, the feature attached to the expression context will be used.
+       * **layer** - A vector layer. If not set, the layer attached to the expression context will be used.
+       * **strength** - Set to 'hard' or 'soft' to narrow down to a specific constraint type. If not set, the function will return FALSE if either a hard or a soft constraint fails.
+   * - Examples
+     - * ``is_attribute_valid('HECTARES')`` → TRUE
+       * ``is_attribute_valid('HOUSES',get_feature('my_layer', 'FID', 10), 'my_layer')`` → FALSE
+
+
+.. end_is_attribute_valid_section
+
+.. _expression_function_Record_and_Attributes_is_feature_valid:
+
+is_feature_valid
+................
+
+Returns TRUE if a feature meets all field constraints.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - is_feature_valid([feature], [layer], [strength])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **feature** - A feature. If not set, the feature attached to the expression context will be used.
+       * **layer** - A vector layer. If not set, the layer attached to the expression context will be used.
+       * **strength** - Set to 'hard' or 'soft' to narrow down to a specific constraint type. If not set, the function will return FALSE if either a hard or a soft constraint fails.
+   * - Examples
+     - * ``is_feature_valid(strength:='hard')`` → TRUE
+       * ``is_feature_valid(get_feature('my_layer', 'FID', 10), 'my_layer')`` → FALSE
+
+
+.. end_is_feature_valid_section
+
 .. _expression_function_Record_and_Attributes_is_selected:
 
 is_selected
