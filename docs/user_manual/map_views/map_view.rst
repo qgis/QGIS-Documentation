@@ -160,6 +160,145 @@ Checking the |checkbox| :guilabel:`Render` checkbox enables rendering and
 causes an immediate refresh of the map canvas.
 
 
+.. _maptimecontrol:
+
+Time-based control on the map canvas
+====================================
+
+QGIS can handle temporal control on loaded layers, i.e. modify the map canvas
+rendering based on a time variation. To achieve this, you need:
+
+#. Layers that have dynamic temporal properties set.
+   QGIS supports temporal control for different data providers, with custom settings.
+   It's mainly about setting the time range in which the layer would display:
+
+   * :ref:`raster layers <raster_temporal>`: controls whether to display or
+     not the layer.
+
+   .. Todo: This option might need some tweak: I think WMS-T and Postgis raster layers
+    enable more options and behaviour so, if someone can provide a better summary
+    of the temporal setting on rasters and as well describe those in raster properties,
+    it'd be very welcome!
+
+   * :ref:`vector layers <vectortemporalmenu>`: features are filtered based
+     on time values associated to their attributes
+   * :ref:`mesh layers <meshtemporal>`: displays dynamically the active dataset
+     groups values
+
+   When dynamic temporal options are enabled for a layer, an |indicatorTemporal|
+   icon is displayed next to the layer in the :guilabel:`Layers` panel to remind
+   you that the layer is temporally controlled.
+   Click the icon to update the temporal settings.
+
+#. Enable the temporal navigation of the map canvas using the :ref:`Temporal
+   controller panel <temporal_controller>`. The panel is activated:
+
+   * using the |temporal| :sup:`Temporal controller panel` icon located in the
+     :guilabel:`Map Navigation` toolbar
+   * or from the :menuselection:`View --> Panels --> Temporal controller panel`
+     menu
+
+.. _temporal_controller:
+
+The temporal controller panel
+-----------------------------
+
+The :guilabel:`Temporal controller` panel has the following modes:
+
+.. figure:: img/temporal_controller_panel.png
+   :align: center
+
+   Temporal Controller Panel in navigation mode
+
+* |temporalNavigationOff| :sup:`Turn off temporal navigation`: all the
+  temporal settings are disabled and visible layers are rendered as usual
+* |temporalNavigationFixedRange| :sup:`Fixed range temporal navigation`:
+  a time range is set and only layers (or features) whose temporal range
+  overlaps with this range are displayed on the map.
+* |temporalNavigationAnimated| :sup:`Animated temporal navigation`:
+  a time range is set, split into steps, and only layers (or features)
+  whose temporal range overlaps with each frame are displayed on the map
+* |settings| :sup:`Settings` for general control of the animation
+
+  * :guilabel:`Frames rate`: number of steps that are shown per second
+
+  * |unchecked| :guilabel:`Cumulative range`: all animation frames will
+    have the same start date-time but different end dates and times.
+    This is useful if you wish to accumulate data in your temporal
+    visualization instead of showing a ‘moving time window’ across your data.
+
+.. _`create_temporal_animation`:
+
+Animating a temporal navigation
+-------------------------------
+
+An animation is based on a varying set of visible layers at particular times
+within a time range.
+To create a temporal animation:
+
+#. Toggle on the |temporalNavigationAnimated| :sup:`Animated temporal
+   navigation`, displaying the animation player widget
+#. Enter the :guilabel:`Time range` to consider. Using the |refresh|
+   button, this can be defined as:
+
+   * :guilabel:`Set to full range` of all the time enabled layers
+   * :guilabel:`Set to preset project range` as defined in the :ref:`project
+     properties <project_temporal>`
+   * :guilabel:`Set to single layer's range` taken from a time-enabled layer
+#. Fill in the time :guilabel:`Step` to split the time range.
+   Different units are supported, from ``seconds`` to ``centuries``.
+   A ``source timestamps`` option is also available as step: when selected,
+   this causes the temporal navigation to step between all available time ranges
+   from layers in the project. It’s useful when a project contains layers with
+   non-contiguous available times, such as a WMS-T service which provides images
+   that are available at irregular dates. This option will allow you to only step
+   between time ranges where the next available image is shown.
+
+#. Click the |play| button to preview the animation.
+   QGIS will generate scenes using the layers rendering at the set times.
+   Layers display depends on whether they overlap any individual time frame.
+
+   .. only:: html
+
+      .. figure:: img/map_navigation.gif
+         :align: center
+
+         Temporal navigation through a layer
+
+   The animation can also be previewed by moving the time slider.
+   Keeping the |refresh| :sup:`Loop` button pressed will repeatedly run the
+   animation while clicking |play| stops a running animation.
+   A full set of video player buttons is available.
+
+   Horizontal scrolling using the mouse wheel (where supported) with the
+   cursor on the map canvas will also allow you to navigate, or “scrub”,
+   the temporal navigation slider backwards and forwards.
+
+#. Click the |fileSave| :sup:`Export animation` button if you want to generate
+   a series of images representing the scene. They can be later combined in a
+   video editor software:
+
+   .. figure:: img/saveTimeAnimation.png
+      :align: center
+
+      Exporting map canvas animation scenes to images
+
+   * The filename :guilabel:`Template`: the ``####`` are replaced with frame
+     sequence number
+   * The :guilabel:`Output directory`
+   * Under :guilabel:`Map settings`, you can:
+
+     * redefine the :ref:`spatial extent <extent_selector>` to use
+     * control the :guilabel:`Resolution` of the image
+       (:guilabel:`Output width` and :guilabel:`Output height`)
+     * :guilabel:`Draw active decorations`: whether active :ref:`decorations
+       <decorations>` should be kept in the output
+   * Under :guilabel:`Temporal settings`, you can redefine:
+
+     * the time :guilabel:`Range` for the animation
+     * the :guilabel:`Step (frame length)` in the unit of your choice
+
+
 .. index::
    single: Bookmarks
    see: Spatial bookmarks; Bookmarks
@@ -1013,146 +1152,6 @@ capabilities:
     they are set in the displayed layers' properties
   * :guilabel:`Change map CRS...`
   * :guilabel:`Rename view...`
-
-
-.. _maptimecontrol:
-
-Time-based control on the map canvas
-====================================
-
-QGIS can handle temporal control on loaded layers, i.e. modify the map canvas
-rendering based on a time variation. To achieve this, you need:
-
-#. Layers that have dynamic temporal properties set.
-   QGIS supports temporal control for different data providers, with custom
-   settings.
-   It's mainly about setting the time range in which the layer would display:
-
-   * :ref:`raster layers <raster_temporal>`: controls whether to display or
-     not the layer.
-
-   .. Todo: This option might need some tweak: I think WMS-T and Postgis raster layers
-    enable more options and behaviour so, if someone can provide a better summary
-    of the temporal setting on rasters and as well describe those in raster properties,
-    it'd be very welcome!
-
-   * :ref:`vector layers <vectortemporalmenu>`: features are filtered based
-     on time values associated to their attributes
-   * :ref:`mesh layers <meshtemporal>`: displays dynamically the active dataset
-     groups values
-
-   When dynamic temporal options are enabled for a layer, an |indicatorTemporal|
-   icon is displayed next to the layer in the :guilabel:`Layers` panel to remind
-   you that the layer is temporally controlled.
-   Click the icon to update the temporal settings.
-
-#. Enable the temporal navigation of the map canvas using the :ref:`Temporal
-   controller panel <temporal_controller>`. The panel is activated:
-
-   * using the |temporal| :sup:`Temporal controller panel` icon located in the
-     :guilabel:`Map Navigation` toolbar
-   * or from the :menuselection:`View --> Panels --> Temporal controller panel`
-     menu
-
-.. _temporal_controller:
-
-The temporal controller panel
------------------------------
-
-The :guilabel:`Temporal controller` panel has the following modes:
-
-.. figure:: img/temporal_controller_panel.png
-   :align: center
-
-   Temporal Controller Panel in navigation mode
-
-* |temporalNavigationOff| :sup:`Turn off temporal navigation`: all the
-  temporal settings are disabled and visible layers are rendered as usual
-* |temporalNavigationFixedRange| :sup:`Fixed range temporal navigation`:
-  a time range is set and only layers (or features) whose temporal range
-  overlaps with this range are displayed on the map.
-* |temporalNavigationAnimated| :sup:`Animated temporal navigation`:
-  a time range is set, split into steps, and only layers (or features)
-  whose temporal range overlaps with each frame are displayed on the map
-* |settings| :sup:`Settings` for general control of the animation
-
-  * :guilabel:`Frames rate`: number of steps that are shown per second
-
-  * |unchecked| :guilabel:`Cumulative range`: all animation frames will
-    have the same start date-time but different end dates and times.
-    This is useful if you wish to accumulate data in your temporal
-    visualization instead of showing a ‘moving time window’ across your data.
-
-.. _`create_temporal_animation`:
-
-Animating a temporal navigation
--------------------------------
-
-An animation is based on a varying set of visible layers at particular times
-within a time range.
-To create a temporal animation:
-
-#. Toggle on the |temporalNavigationAnimated| :sup:`Animated temporal
-   navigation`, displaying the animation player widget
-#. Enter the :guilabel:`Time range` to consider. Using the |refresh|
-   button, this can be defined as:
-
-   * :guilabel:`Set to full range` of all the time enabled layers
-   * :guilabel:`Set to preset project range` as defined in the :ref:`project
-     properties <project_temporal>`
-   * :guilabel:`Set to single layer's range` taken from a time-enabled layer
-#. Fill in the time :guilabel:`Step` to split the time range.
-   Different units are supported, from ``seconds`` to ``centuries``.
-   A ``source timestamps`` option is also available as step: when selected,
-   this causes the temporal navigation to step between all available time ranges
-   from layers in the project. It’s useful when a project contains layers with
-   non-contiguous available times, such as a WMS-T service which provides images
-   that are available at irregular dates. This option will allow you to only step
-   between time ranges where the next available image is shown.
-
-#. Click the |play| button to preview the animation.
-   QGIS will generate scenes using the layers rendering at the set times.
-   Layers display depends on whether they overlap any individual time frame.
-
-   .. only:: html
-
-      .. figure:: img/map_navigation.gif
-         :align: center
-
-         Temporal navigation through a layer
-
-   The animation can also be previewed by moving the time slider.
-   Keeping the |refresh| :sup:`Loop` button pressed will repeatedly run the
-   animation while clicking |play| stops a running animation.
-   A full set of video player buttons is available.
-
-   Horizontal scrolling using the mouse wheel (where supported) with the
-   cursor on the map canvas will also allow you to navigate, or “scrub”,
-   the temporal navigation slider backwards and forwards.
-
-#. Click the |fileSave| :sup:`Export animation` button if you want to generate
-   a series of images representing the scene. They can be later combined in a
-   video editor software:
-
-   .. figure:: img/saveTimeAnimation.png
-      :align: center
-
-      Exporting map canvas animation scenes to images
-
-   * The filename :guilabel:`Template`: the ``####`` are replaced with frame
-     sequence number
-   * The :guilabel:`Output directory`
-   * Under :guilabel:`Map settings`, you can:
-
-     * redefine the :ref:`spatial extent <extent_selector>` to use
-     * control the :guilabel:`Resolution` of the image
-       (:guilabel:`Output width` and :guilabel:`Output height`)
-     * :guilabel:`Draw active decorations`: whether active :ref:`decorations
-       <decorations>` should be kept in the output
-   * Under :guilabel:`Temporal settings`, you can redefine:
-
-     * the time :guilabel:`Range` for the animation
-     * the :guilabel:`Step (frame length)` in the unit of your choice
 
 
 .. _`exportingmapcanvas`:
