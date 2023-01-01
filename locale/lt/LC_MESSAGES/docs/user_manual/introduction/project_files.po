@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2022
+# Tomas Straupis, 2023
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-07-20 02:44+0000\n"
 "PO-Revision-Date: 2022-03-14 05:08+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2022\n"
+"Last-Translator: Tomas Straupis, 2023\n"
 "Language-Team: Lithuanian (https://www.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,6 +32,32 @@ msgstr "Darbas su projekto failais"
 msgid "Introducing QGIS projects"
 msgstr "Įvadas į QGIS projektus"
 
+#: ../../docs/user_manual/introduction/project_files.rst:22
+msgid ""
+"The state of your QGIS session is called a project. QGIS works on one "
+"project at a time. A setting can be project-specific or an application-wide "
+"default for new projects (see section :ref:`gui_options`). QGIS can save the"
+" state of your workspace into a :ref:`QGIS project file <qgisprojectfile>` "
+"using the menu options :menuselection:`Project -->` |fileSave| "
+":menuselection:`Save` or :menuselection:`Project -->` |fileSaveAs| "
+":menuselection:`Save As...`."
+msgstr ""
+"Jūsų QGIS projekto būsena vadinasi projektu. QGIS vienu metu dirba su vienu "
+"projektu. Nustatymai gali būti arba projekto, arba aplikacijos lygmenyje "
+"naujiems projektams (daugiau informacijos skiltyje :ref:`gui_options`). QGIS"
+" gali įrašyti jūsų darbo erdvės būseną į :ref:`QGIS projekto failą "
+"<qgisprojectfile>` naudojant meniu parinktis :menuselection:`Projektas -->` "
+"|fileSave| :menuselection:`Įrašyti` arba :menuselection:`Projektas -->` "
+"|fileSaveAs| :menuselection:`Įrašyti kaip...`."
+
+#: ../../docs/user_manual/introduction/project_files.rst:225
+msgid "fileSave"
+msgstr "fileSave"
+
+#: ../../docs/user_manual/introduction/project_files.rst:227
+msgid "fileSaveAs"
+msgstr "fileSaveAs"
+
 #: ../../docs/user_manual/introduction/project_files.rst:34
 msgid ""
 "If the project has been modified the ``*`` symbol will appear in the title "
@@ -45,6 +72,10 @@ msgstr ""
 "duomenų šaltinio pakeitimus`, kurį rasite :menuselection:`Nustatymai --> "
 "Parinktys --> Bendra`."
 
+#: ../../docs/user_manual/introduction/project_files.rst:217
+msgid "checkbox"
+msgstr "checkbox"
+
 #: ../../docs/user_manual/introduction/project_files.rst:40
 msgid ""
 "You can load existing projects into QGIS from the Browser panel or by "
@@ -57,6 +88,31 @@ msgstr ""
 ":menuselection:`Projektas --> Naujas pagal šabloną` arba "
 ":menuselection:`Projektas --> Atverti ankstesnius -->`."
 
+#: ../../docs/user_manual/introduction/project_files.rst:223
+msgid "fileOpen"
+msgstr "fileOpen"
+
+#: ../../docs/user_manual/introduction/project_files.rst:46
+msgid ""
+"At startup, a list of :guilabel:`Project Templates` and :guilabel:`Recent "
+"Projects` are displayed, including screenshots, names and file paths (for up"
+" to ten projects). The :guilabel:`Recent Projects` list is handy to access "
+"recently used projects. Double-click an entry to open the project or project"
+" template. Right-click an entry to :guilabel:`Pin to List`, :guilabel:`Open "
+"Directory...` or :guilabel:`Remove from List`. You can also add a layer to "
+"create a new project automatically. The lists will then disappear, giving "
+"way to the map canvas."
+msgstr ""
+"Pradžioje rodomas sąrašas :guilabel:`Projekto šablonų` ir "
+":guilabel:`Paskutinių projektų` sąrašas su nuotraukomis, pavadinimais ir "
+"keliu (iki dešimties projektų). :guilabel:`Paskutiniai projektai` patogūs "
+"norint pasiekti paskutinius naudotus projektus. Du kartus spauskite ant "
+"įrašo, kad atvertumėte projektą ar projekto šabloną. Spauskite ant įrašo "
+"dešinį mygtuką, jei norite :guilabel:`Prisegti prie sąrašo`, "
+":guilabel:`Atverti aplanką...` ar :guilabel:`Išimti iš sąrašo`. Taipogi "
+"galite pridėti sluoksnį, kad automatiškai sukurtumėte naują projektą. "
+"Sąrašas tada dings, jo vietą užims žemėlapio drobė."
+
 #: ../../docs/user_manual/introduction/project_files.rst:57
 msgid ""
 "If you want to clear your session and start fresh, go to "
@@ -68,6 +124,10 @@ msgstr ""
 ":menuselection:`Projektas -->` |fileNew| :menuselection:`Naujas`. Jūsų bus "
 "paklausta, ar norite įrašyti dabartinį projektą, jei buvo padaryti "
 "pakeitimai po jo paskutinio įrašymo."
+
+#: ../../docs/user_manual/introduction/project_files.rst:221
+msgid "fileNew"
+msgstr "fileNew"
 
 #: ../../docs/user_manual/introduction/project_files.rst:62
 msgid ""
@@ -96,6 +156,10 @@ msgstr "Kuriuose sluoksniuose galima daryti užklausas"
 #: ../../docs/user_manual/introduction/project_files.rst:76
 msgid "Layer properties, including symbolization and styles"
 msgstr "Sluoksnių savybės, įskaitant simbolizavimą ir stilius"
+
+#: ../../docs/user_manual/introduction/project_files.rst:77
+msgid "Layer notes"
+msgstr "Sluoksnio pastabos"
 
 #: ../../docs/user_manual/introduction/project_files.rst:78
 msgid "Projection for the map view"
@@ -271,6 +335,17 @@ msgstr ""
 "Pažymėti eilutę, spausti :guilabel:`Naršyti`, nurodyti teisingą vietą ir "
 "spausti :guilabel:`Pritaikyti pakeitimus`;"
 
+#: ../../docs/user_manual/introduction/project_files.rst:155
+msgid ""
+"Press :guilabel:`Auto-Find` to browse the folders and try to automatically "
+"fix all or selected broken path(s). Be aware that the browsing may take some"
+" time. Then click :guilabel:`Apply changes`."
+msgstr ""
+"Spausti :guilabel:`Rasti automatiškai`, kad būtų naršoma po aplankus ir "
+"bandoma automatiškai rasti pataisymą visiems sugadintiems keliams. Turėkite "
+"omenyje, kad naršymas gali užtrukti daug laiko. Tada spauskite "
+":guilabel:`Pritaikyti pakeitimus`."
+
 #: ../../docs/user_manual/introduction/project_files.rst:158
 msgid ""
 "Ignore the message and open your project with the broken path(s) by clicking"
@@ -287,6 +362,10 @@ msgstr ""
 "piktogramoje, kuri bus rodoma greta :guilabel:`Sluoksnių` skydelyje arba "
 ":guilabel:`Taisyti duomenų šaltinį...` sluoksnio kontekstiniame meniu."
 
+#: ../../docs/user_manual/introduction/project_files.rst:229
+msgid "indicatorBadLayer"
+msgstr "indicatorBadLayer"
+
 #: ../../docs/user_manual/introduction/project_files.rst:165
 msgid ""
 "With the :guilabel:`Repair Data Source...` tool, once a layer path has been "
@@ -302,6 +381,10 @@ msgid ""
 "|deleteSelected| :guilabel:`Remove Unavailable Layers` from the project."
 msgstr ""
 "|deleteSelected| :guilabel:`Išimti neprieinamus sluoksnius` iš projekto."
+
+#: ../../docs/user_manual/introduction/project_files.rst:219
+msgid "deleteSelected"
+msgstr "deleteSelected"
 
 #: ../../docs/user_manual/introduction/project_files.rst:174
 msgid "Generating output"
@@ -330,6 +413,10 @@ msgstr ""
 "žemėlapio drobę kaip piešinį (PNG, JPG, TIFF...) nurodytu masteliu, "
 "rezoliucija ir dydžiu... Galima piešiniui įrašyti ir geopririšimo "
 "informaciją. Daugiau informacijos rasite :ref:`exportingmapcanvas`."
+
+#: ../../docs/user_manual/introduction/project_files.rst:233
+msgid "saveMapAsImage"
+msgstr "saveMapAsImage"
 
 #: ../../docs/user_manual/introduction/project_files.rst:191
 msgid ""
@@ -370,3 +457,7 @@ msgstr ""
 ":menuselection:`Naujas spausdinimo išdėstymas...` atidaro dialogą, kur "
 "galite išdėstyti ir spausdinti dabartinę žemėlapio drobę (daugiau "
 "informacijos skyriuje :ref:`label_printlayout`)."
+
+#: ../../docs/user_manual/introduction/project_files.rst:231
+msgid "newLayout"
+msgstr "newLayout"
