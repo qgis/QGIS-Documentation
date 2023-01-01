@@ -5,6 +5,21 @@
 .rst-content .guilabel {
  background:#7fbbe3
 }
+
+/* adds scrollbar to side navigator and keep showing the top title block */
+.wy-side-nav-search {
+   margin-bottom: 0;
+}
+.wy-side-scroll {
+   width: auto;
+   overflow-y: hidden;
+   display: flex;
+   flex-direction: column;
+}
+.wy-menu.wy-menu-vertical {
+   overflow-y: auto;
+}
+
 /*rtd theme does not render menuselection, so let's apply guilabel settings to it*/
 .rst-content .menuselection {
  background:#7fbbe3;
