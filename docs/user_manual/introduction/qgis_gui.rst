@@ -611,8 +611,7 @@ View
 ----
 
 The map is rendered in map views. You can interact with these
-views using the :menuselection:`View` tools (see :ref:`working_canvas`
-for more information). For example, you can:
+views using the :menuselection:`View` tools. For example, you can:
 
 * Create new 2D or 3D map views next to the main map canvas
 * :ref:`Zoom or pan <zoom_pan>` to any place
@@ -1891,7 +1890,7 @@ Available toolbars are:
    ":guilabel:`Help`"
    ":guilabel:`Label`", ":ref:`label_toolbar`"
    ":guilabel:`Manage Layers`", ":ref:`opening_data`"
-   ":guilabel:`Map Navigation`", ":ref:`working_canvas`"
+   ":guilabel:`Map Navigation`", ":ref:`zoom_pan`"
    ":guilabel:`Mesh Digitizing`", ":ref:`editing_mesh`"
    ":guilabel:`Plugins`", ":ref:`plugins.index`"
    ":guilabel:`Project`", ":ref:`project_files`, :ref:`label_printlayout`, :ref:`vector_symbol_library`"
