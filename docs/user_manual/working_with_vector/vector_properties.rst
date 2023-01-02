@@ -1862,7 +1862,7 @@ You can use:
      attribute or enter a custom value in the widget.
   #. For histogram and stacked bars, enter a :guilabel:`Bar length` value,
      used to represent the :guilabel:`Maximum value` of the attributes.
-     For each feature, the bar lenght will then be scaled linearly to keep
+     For each feature, the bar length will then be scaled linearly to keep
      this matching.
   #. For pie chart and text diagram, enter a :guilabel:`Size` value,
      used to represent the :guilabel:`Maximum value` of the attributes.
@@ -3120,6 +3120,13 @@ future QGIS sessions until it's toggled off.
 Rendering Properties
 ====================
 
+.. _figure_rendering:
+
+.. figure:: img/simplify_rendering.png
+   :align: center
+
+   Layer Rendering Properties dialog
+
 Scale dependent visibility
 --------------------------
 
@@ -3129,6 +3136,12 @@ visible. Out of this range, they are hidden. The |mapIdentification|
 :sup:`Set to current canvas scale` button helps you use the current map
 canvas scale as boundary of the range visibility.
 See :ref:`label_scaledepend` for more information.
+
+.. note::
+
+   You can also activate scale dependent visibility on a layer from within
+   the :guilabel:`Layers` panel: right-click on the layer and in the contextual menu,
+   select :guilabel:`Set Layer Scale Visibility`.
 
 
 Simplify geometry
@@ -3141,19 +3154,10 @@ This feature can be enabled or disabled in the layer settings using the
 setting that enables generalisation by default for newly added layers (see
 :ref:`global simplification <global_simplification>` for more information).
 
-.. _figure_rendering:
-
-.. figure:: img/simplify_rendering.png
-   :align: center
-
-   Layer Geometry Simplification dialog
-
-
 .. note::
   Feature generalisation may introduce artefacts into your rendered
   output in some cases. These may include slivers between polygons and
   inaccurate rendering when using offset-based symbol layers.
-
 
 While rendering extremely detailed layers (e.g. polygon layers with a huge number
 of nodes), this can cause layout exports in PDF/SVG format to be huge as all
