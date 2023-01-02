@@ -300,7 +300,9 @@ You can define:
 
 * :guilabel:`Tile size` if you want to set tile sizes (e.g., 256x256)
   to split up the WMS request into multiple requests.
-* The :guilabel:`Request step size`
+* :guilabel:`Request step size`: if you want to reduce the effect of cut labels at tile 
+  borders, increasing the step size creates larger requests, fewer tiles and fewer borders. 
+  The default value is 2000.
 * The :guilabel:`Maximum number of GetFeatureInfo results` from the server
 
 * Each WMS layer can be presented in multiple CRSs, depending on the capability of
