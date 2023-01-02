@@ -965,6 +965,35 @@ Selector <color-selector>` dialog. You can also rename it by double-clicking
 in the :guilabel:`Label` column.
 
 
+.. index:: Fonts
+.. _fonts_options:
+
+Fonts Settings
+--------------
+
+.. _figure_fonts_options:
+
+.. figure:: img/options_fonts.png
+   :align: center
+
+   Fonts settings
+
+The :guilabel:`Fonts` tab provides support to manage fonts used across the projects:
+
+* :guilabel:`Font Replacements`: gives ability to populate a list of automatic font replacements to apply when loading projects or styles,
+  allowing better support for projects and styles to be used across different operating systems (e.g. replace "Arial" with "Helvetica").
+* :guilabel:`User Fonts`: Allows you to place TTF or OTF fonts in the :file:`fonts` sub-folder of the :ref:`user profile <user_profiles>`.
+  These fonts can be automatically loaded at QGIS startup time.
+  This provides a way to use fonts without requiring them to be installed on an operating system level,
+  which is often blocked in enterprise environments.
+  The panel lists all installed user fonts and allows you to manage (i.e. remove) previously installed user fonts.
+
+  It is also possible to |checkbox| :guilabel:`Automatically download missing, freely-licensed fonts`:
+  E.g. if you open a project or style, or try to load a vector tile layer that references fonts that aren’t currently available,
+  then a hard-coded list of freely licensed fonts to download via URL is consulted to determine whether
+  it’s possible to automatically download the font to the user profile font directory (with notification of the font license).
+
+
 .. _layout_options:
 
 Layouts settings
@@ -985,14 +1014,14 @@ You can define the :guilabel:`Default font` used within the :ref:`print layout
 
 **Grid appearance**
 
-* Define the :guilabel:`Grid style` |selectString| ('Solid', 'Dots', 'Crosses')
+* Define the :guilabel:`Grid style` ('Solid', 'Dots', 'Crosses')
 * Define the :guilabel:`Grid color`
 
 **Grid and guide defaults**
 
-* Define the :guilabel:`Grid spacing` |selectNumber|
-* Define the :guilabel:`Grid offset` |selectNumber| for X and Y
-* Define the :guilabel:`Snap tolerance` |selectNumber|
+* Define the :guilabel:`Grid spacing`
+* Define the :guilabel:`Grid offset` for X and Y
+* Define the :guilabel:`Snap tolerance`
 
 
 **Layout Paths**
