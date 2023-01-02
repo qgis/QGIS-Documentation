@@ -2387,12 +2387,11 @@ constraints and:
   You can hover over the cross to remind which
   constraints are applied to the field and fix the value:
 
-  * A yellow cross appears when the unmet constraint is an unenforced one
-    and it does not prevent you to save the changes with the "wrong"
-    values;
+  * A yellow cross appears when the unmet constraint is an unenforced one (``soft constraint``)
+    and it does not prevent you to save the changes with the "wrong" values;
   * An orange cross can not be ignored and does not allow you to save your
     modifications until they meet the constraints. It appears when the
-    |checkbox| :guilabel:`Enforce constraint` option is checked.
+    |checkbox| :guilabel:`Enforce constraint` option is checked (``hard constraint``).
 
 
 .. _edit_widgets:
