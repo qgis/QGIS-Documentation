@@ -126,9 +126,8 @@ To create a map theme:
 
 #. Check a layer you want to show
 #. Configure the layer properties (symbology, diagram, labels...) as usual
-#. Expand the :menuselection:`Style -->` menu at the bottom and click on :guilabel:`Add...` to
-   store the settings as :ref:`a new style embedded in the project
-   <manage_custom_style>`
+#. Expand the :menuselection:`Style -->` menu at the bottom and click on :guilabel:`Add...`
+   to store the settings as :ref:`a new style embedded in the project <manage_custom_style>`
 
    .. note:: A map theme does not remember the current details of the properties:
      only a reference to the style name is saved, so whenever you apply
@@ -336,6 +335,57 @@ These elements are:
   Select the contextual menu :guilabel:`Zoom to Visible Scale` option to zoom
   the map to the layer's nearest visibility scale bound.
 
+.. _render_as_group:
+
+Control layers rendering through grouping
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Groups are a means of structuring layers within a tree in the project
+but they can also impact how their component layers are rendered,
+namely as a single flattened object during map renders.
+
+Option for such a rendering is available within the :guilabel:`Layer Styling` panel whenever a group is selected.
+Under the |symbology| :sup:`Symbology` tab, check |checkbox| :guilabel:`Render Layers as a Group`
+to enable a set of options to control the appearance of the child layers as a whole, instead of individual layers:
+
+* :guilabel:`Opacity`: Features from child layers which are obscured by other child layers remain obscured,
+  and the opacity applies to the "whole of group" only.
+
+  .. _figure_group_opacity:
+
+  .. figure:: img/group_opacity.png
+     :align: center
+
+     Setting opacity on layers vs on a group
+
+     The image on the left shows two layers being rendered at 50% opacity
+     (underlying features are visible, but semi-masked by the 50% red feature on top).
+     The second image shows the result of setting the opacity on the group
+     (parts of the blue underlying child layer is completely obscured by the red layer on top
+     and then the result is rendered at 50% opacity).
+
+* :guilabel:`Blend modes`: Just like opacity, setting a :ref:`blend mode <blend-modes>` (like multiply, overlay, ...)
+  for an entire group results first in flattening features of child layers, with upper ones obscuring lower.
+  The rendering is then obtained by blending the flat group and the layers sitting below the group.
+
+  * When the child layers have blend modes assigned, it is applied before flattening
+    but the scope is restricted to only affecting other child layers from that group,
+    and not other layers sitting below the whole group.
+  * Child layers are added some more :ref:`blending modes <blending_clipping>` options
+    in their :guilabel:`Symbology` tab which perform "clipping" style operations
+    on other child layers during the render.
+    You can e.g. clip the render of one layer’s content by the content in a second "mask" layer.
+
+* :guilabel:`Layer effects`: applies :ref:`effects <draw_effects>` only to the flattened render of the child layers;
+  So e.g. a drop shadow effect applied to the group would not be visible for obscured child layers.
+
+
+When a group is set to :guilabel:`Render layers as a group`,
+then only the group will be shown in the :guilabel:`Layer Order` panel list.
+Group children will not be visible in this order list,
+as their ordering is determined by the placement of the group layer.
+
+
 .. index:: Style
 
 .. _editing_style_layer:
@@ -347,8 +397,8 @@ From the Layers panel, you have shortcuts to change the layer rendering quickly
 and easily. Right-click on a vector layer and select :menuselection:`Styles -->`
 in the list in order to:
 
-* see the :ref:`styles <manage_custom_style>` currently applied to the layer. If
-  you defined many styles for the layer, you can switch from one to another
+* see the :ref:`styles <manage_custom_style>` currently applied to the layer.
+  If you defined many styles for the layer, you can switch from one to another
   and your layer rendering will automatically be updated on the map canvas.
 * copy part or all of the current style, and when applicable, paste a copied
   style from another layer
@@ -408,8 +458,9 @@ rather than as a separate dialog.
 
 From a drop-down list of current layers in the layer panel, select an item and:
 
-* Depending on the layer type, set:
+* Depending on the active item, set:
 
+  * |symbology| :guilabel:`Symbology` for groups (see :ref:`render_as_group`)
   * |symbology| :guilabel:`Symbology`, |transparency| :guilabel:`Transparency`,
     and |rasterHistogram| :guilabel:`Histogram` properties for raster layer.
     These options are the same as in the :ref:`raster_properties_dialog`.
@@ -420,6 +471,9 @@ From a drop-down list of current layers in the layer panel, select an item and:
   * |symbology| :guilabel:`Symbology` and |3d| :guilabel:`3D View` properties
     for mesh layer.
     These options are the same as in the :ref:`label_meshproperties`.
+  * |symbology| :guilabel:`Symbology`, |3d| :guilabel:`3D View`
+    and |elevationscale| :guilabel:`Elevation` properties for point cloud layer.
+    These options are the same as in the :ref:`point_clouds_properties`.
 * Manage the associated style(s) in the |stylePreset| :guilabel:`Style Manager`
   (more details at :ref:`manage_custom_style`).
 * See the |history| :guilabel:`History` of changes you applied to the
@@ -2791,6 +2845,34 @@ on layers and features, and also on print layout items:
 * **Subtract**: Subtracts pixel values of one item from the other.
   In the case of negative values, black is displayed.
 
+.. todo: Add examples for the common blending modes
+
+.. _blending_clipping:
+
+When a layer is part of a group that :ref:`renders layers as a group <render_as_group>`,
+additional blending modes are available for the rendering.
+They provide methods to clip the render of one layer’s content by the content in a second "mask" layer.
+
+* :guilabel:`Masked By Below`: The output is the source, where the alpha is reduced by that of the destination.
+* :guilabel:`Mask Below`: The output is the destination, where the alpha is reduced by that of the source.
+* :guilabel:`Inverse Masked By Below`: The output is the source, where the alpha is reduced by the inverse of destination.
+* :guilabel:`Inverse Mask Below`: The output is the destination, where the alpha is reduced by the inverse of the source.
+* :guilabel:`Paint Inside Below`: The source pixel is blended on top of the destination,
+  with the alpha of the source pixel reduced by the alpha of the destination pixel.
+* :guilabel:`Paint Below Inside`: The destination pixel is blended on top of the source,
+  with the alpha of the destination pixel is reduced by the alpha of the destination pixel.
+
+.. _figure_blend_clipping_modes:
+
+.. figure:: img/blending_clipping.png
+   :align: center
+
+   Examples of blend clipping mode applied to top green layer in a group
+
+   **A**: Mask Below **B**: Masked By Below **C**: Paint Below Inside
+   **D**: Inverse Mask Below **E**: Inverse Masked By Below **F**: Paint Inside Below
+
+
 .. index:: Data-defined override
 .. _data_defined:
 
@@ -2971,6 +3053,8 @@ The values presented in the varying size assistant above will set the size
    :width: 1.2em
 .. |editableEdits| image:: /static/common/mIconEditableEdits.png
    :width: 1em
+.. |elevationscale| image:: /static/common/elevationscale.png
+   :width: 1.5em
 .. |expandNewTree| image:: /static/common/mActionExpandNewTree.png
    :width: 1.5em
 .. |expandTree| image:: /static/common/mActionExpandTree.png
