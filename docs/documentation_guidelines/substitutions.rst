@@ -263,9 +263,10 @@ Icon                     Substitution                 Icon                     S
 |piechart|               ``|piechart|``               |diagramNone|            ``|diagramNone|``
 |text|                   ``|text|``                   |histogram|              ``|histogram|``
 |stackedBar|             ``|stackedBar|``
+|createAnnotationLayer|  ``|createAnnotationLayer|``  |annotationLayer|        ``|annotationLayer|``
 |annotation|             ``|annotation|``             |textAnnotation|         ``|textAnnotation|``
 |formAnnotation|         ``|formAnnotation|``         |htmlAnnotation|         ``|htmlAnnotation|``
-|svgAnnotation|          ``|svgAnnotation|``          |autoPlacementSettings|  ``|autoPlacementSettings|``
+|svgAnnotation|          ``|svgAnnotation|``          |actionText|             ``|actionText|``
 |labelbackground|        ``|labelbackground|``        |labelbuffer|            ``|labelbuffer|``
 |labelformatting|        ``|labelformatting|``        |labelplacement|         ``|labelplacement|``
 |labelshadow|            ``|labelshadow|``            |render|                 ``|render|``
@@ -275,7 +276,7 @@ Icon                     Substitution                 Icon                     S
 |pinLabels|              ``|pinLabels|``              |showHideLabels|         ``|showHideLabels|``
 |moveLabel|              ``|moveLabel|``              |rotateLabel|            ``|rotateLabel|``
 |showPinnedLabels|       ``|showPinnedLabels|``       |showUnplacedLabel|      ``|showUnplacedLabel|``
-|changeLabelProperties|  ``|changeLabelProperties|``
+|changeLabelProperties|  ``|changeLabelProperties|``  |autoPlacementSettings|  ``|autoPlacementSettings|``
 =======================  ===========================  =======================  ===========================
 
 Decorations
@@ -531,6 +532,8 @@ Icon                            Substitution                        Icon        
    :width: 2em
 .. |actionRun| image:: /static/common/mAction.png
    :width: 1.5em
+.. |actionText| image:: /static/common/mActionText.png
+   :width: 1.5em
 .. |add| image:: /static/common/mActionAdd.png
    :width: 1.5em
 .. |add3DMap| image:: /static/common/mActionAdd3DMap.png
@@ -629,6 +632,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |annotation| image:: /static/common/mActionAnnotation.png
    :width: 1.5em
+.. |annotationLayer| image:: /static/common/mIconAnnotationLayer.png
+   :width: 1.5em
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png
@@ -718,6 +723,8 @@ Icon                            Substitution                        Icon        
 .. |copySelected| image:: /static/common/mActionCopySelected.png
    :width: 1.5em
 .. |copyrightLabel| image:: /static/common/copyright_label.png
+   :width: 1.5em
+.. |createAnnotationLayer| image:: /static/common/mActionCreateAnnotationLayer.png
    :width: 1.5em
 .. |createMemory| image:: /static/common/mActionCreateMemory.png
    :width: 1.5em
@@ -1108,9 +1115,9 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |moveLabel| image:: /static/common/mActionMoveLabel.png
    :width: 1.5em
-.. |multibandColor| image:: /static/common/multibandColor.png
-   :width: 1.5em
 .. |multiEdit| image:: /static/common/mActionMultiEdit.png
+   :width: 1.5em
+.. |multibandColor| image:: /static/common/multibandColor.png
    :width: 1.5em
 .. |new3DMap| image:: /static/common/mActionNew3DMap.png
    :width: 1.5em
@@ -1364,11 +1371,11 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |simplify| image:: /static/common/mActionSimplify.png
    :width: 1.5em
-.. |singlebandPseudocolor| image:: /static/common/singlebandPseudocolor.png
-   :width: 1.5em
 .. |singleColor| image:: /static/common/singleColor.png
    :width: 1.5em
 .. |singleSymbol| image:: /static/common/rendererSingleSymbol.png
+   :width: 1.5em
+.. |singlebandPseudocolor| image:: /static/common/singlebandPseudocolor.png
    :width: 1.5em
 .. |slider| image:: /static/common/slider.png
 .. |snapping| image:: /static/common/mIconSnapping.png
