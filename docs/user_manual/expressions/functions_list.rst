@@ -965,6 +965,18 @@ Further reading: :ref:`expression_function_Record_and_Attributes_$id`
 
 .. include:: expression_help/Record_and_Attributes.rst
    :start-after: .. end_get_feature_by_id_section
+   :end-before: .. end_is_attribute_valid_section
+
+Further reading: :ref:`constraints`
+
+.. include:: expression_help/Record_and_Attributes.rst
+   :start-after: .. end_is_attribute_valid_section
+   :end-before: .. end_is_feature_valid_section
+
+Further reading: :ref:`constraints`
+
+.. include:: expression_help/Record_and_Attributes.rst
+   :start-after: .. end_is_feature_valid_section
    :end-before: .. end_represent_attributes_section
 
 Further reading: :ref:`expression_function_Record_and_Attributes_represent_value`
