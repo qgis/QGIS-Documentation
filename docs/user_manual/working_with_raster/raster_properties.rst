@@ -692,6 +692,14 @@ In the |rendering| :guilabel:`Rendering` tab, it's possible to:
   The |mapIdentification| :sup:`Set to current canvas scale` button
   helps you use the current map canvas scale as a boundary.
   See :ref:`label_scaledepend` for more information.
+
+  .. note::
+
+   You can also activate scale dependent visibility on a layer from within
+   the :guilabel:`Layers` panel: right-click on the layer and in the contextual menu,
+   select :guilabel:`Set Layer Scale Visibility`.
+
+
 * :guilabel:`Refresh layer at interval (seconds)`: set a timer to
   automatically refresh individual layers.
   Canvas updates are deferred in order to avoid refreshing multiple

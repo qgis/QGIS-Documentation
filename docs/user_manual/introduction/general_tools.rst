@@ -46,23 +46,16 @@ Layers Panel
    single: Legend
 
 The :guilabel:`Layers` panel (also called the ``map legend``) lists all
-the layers in the project and helps you
-manage their visibility. You can show or hide it by pressing :kbd:`Ctrl+1`.
-A layer can be selected and dragged up or down in the
-legend to change the Z-ordering. Z-ordering means that layers listed nearer the
-top of the legend are drawn over layers listed lower down in the legend.
-Also a layer or a group of layers can be dragged across several QGIS instances.
+the layers in the project and helps you manage their visibility and shape the map.
+You can show or hide the panel by pressing :kbd:`Ctrl+1`.
 
-.. note:: The Z-ordering behavior can be overridden by the
-   :ref:`Layer Order <layer_order>` panel.
+At the top of the :guilabel:`Layers` panel, a toolbar allows you to:
 
-At the top of the Layers panel, a toolbar allows you to:
-
-* |symbology| :sup:`Open the layer styling dock (F7)`: toggle the layer styling
-  panel on and off.
+* |symbology| :sup:`Open the layer styling dock (F7)`: toggle the
+  :ref:`Layer Styling <layer_styling_panel>` panel on and off.
 * |addGroup| :sup:`Add new group`: see :ref:`group_layers_interact`
 * |showPresets| :sup:`Manage Map Themes`: control visibility of layers and
-  arrange them in different map themes.
+  arrange them in different :ref:`map themes <map_themes>`.
 * |filterMap| filter layers in the legend tree:
 
   * :guilabel:`Filter Legend by Map Content`: only the layers that are set
@@ -170,12 +163,22 @@ Overview of the context menu of the Layers panel
 ................................................
 
 At the bottom of the toolbar, the main component of the Layers panel is the
-frame listing vector or raster layers added to the project, optionally
-organized in groups. Depending on the item selected in the panel, a
-right-click shows a dedicated set of options presented below.
+frame listing all the layers added to the project, optionally organized in groups.
+A layer with a checked box next to it displays its contents overlapping the map
+canvas extent, unless a :ref:`scale-based visibility <label_scaledepend>` is set.
+A layer can be selected and dragged up or down in the legend to change the Z-ordering.
+Z-ordering means that layers listed nearer the top of the legend are drawn
+over layers listed lower down in the legend.
+Also a layer or a group of layers can be dragged across several QGIS instances.
+
+.. note:: The Z-ordering behavior can be overridden by the
+   :ref:`Layer Order <layer_order>` panel.
+
+Depending on the item selected in the panel,
+a right-click shows a dedicated set of options presented below.
 
 .. table updated with https://tableconvert.com/excel-to-restructuredtext
-.. table:: Contextual menus from Layers Panel items
+.. table:: Contextual menus from :guilabel:`Layers` panel items
 
  ============================================================ ============= =============== =============== ============= ====================
   Option                                                       Group         Vector Layer    Raster Layer    Mesh Layer    Point Cloud Layer
@@ -257,7 +260,8 @@ do this:
 #. Press the |folder| icon to add a new group. Type in a name for
    the group and press :kbd:`Enter`. Now click on an existing layer and
    drag it onto the group.
-#. Select more than one layer, then press the |folder| icon. The selected layers are automatically inserted into the new group.
+#. Select more than one layer, then press the |folder| icon.
+   The selected layers are automatically inserted into the new group.
 #. Select some layers, right-click in the legend window and choose
    :guilabel:`Group Selected`. The selected layers will automatically be placed
    in a new group.
@@ -297,9 +301,9 @@ all selected layers or groups will be removed from the layers list.
 More information on layers and groups using indicator icon
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In some circumstances, icons appears next to the layer or group in the
-:guilabel:`Layers` panel to give more information about the layer/group. These
-symbols are:
+In some circumstances, formatting or icons next to the layer or group in the
+:guilabel:`Layers` panel change to give more information about the layer/group.
+These elements are:
 
 * |toggleEditing| to indicate that the layer is in edit mode and you can modify
   the data
@@ -327,6 +331,10 @@ symbols are:
   :ref:`corresponding setting <crs_inaccuracies>` to be enabled)
 * |indicatorTemporal| to identify a temporal layer controlled by canvas animation
 * |indicatorNotes| to identify a layer that has :ref:`notes <layer_notes>` associated
+* A grayed name, when the map canvas current scale is outside the layer's
+  visibility scale range (as set in its :menuselection:`Rendering` properties).
+  Select the contextual menu :guilabel:`Zoom to Visible Scale` option to zoom
+  the map to the layer's nearest visibility scale bound.
 
 .. index:: Style
 
@@ -779,33 +787,6 @@ might want to suspend rendering include:
 
 Checking the |checkbox| :guilabel:`Render` checkbox enables rendering and
 causes an immediate refresh of the map canvas.
-
-
-.. index:: Rendering scale dependent, Scale
-.. _`label_scaledepend`:
-
-Scale Dependent Rendering
-.........................
-
-Scale-dependent rendering allows you to specify the minimum and maximum scales
-at which a layer (raster or vector) will be visible. To set scale-dependent rendering,
-open the :guilabel:`Properties` dialog by double-clicking on the layer in the legend.
-On the :guilabel:`Rendering` tab, tick |checkbox| :guilabel:`Scale
-dependent visibility` and enter the :guilabel:`Minimum (exclusive)` and
-:guilabel:`Maximum (inclusive)` scale values.
-
-You can also activate scale dependent visibility on a layer from the Layers panel.
-Right-click on the layer and in the context menu, select :guilabel:`Set Layer Scale Visibility`.
-
-The |mapIdentification| :sup:`Set to current canvas scale` button allow you to use
-the current map canvas scale as boundary of the range visibility.
-
-
-.. note::
-   When a layer is not rendered in the map canvas because the map scale is out of
-   its visibility scale range, the layer is greyed in the Layers panel and
-   a new option :guilabel:`Zoom to Visible Scale` appears in the layer context menu.
-   Select it and the map is zoomed to the layer's nearest visibility scale.
 
 
 .. index::
@@ -2398,6 +2379,36 @@ Pressing the arrow will provide you with a menu to:
   This is a convenient way to create self-contained projects with custom symbols
   which can be easily shared amongst different users and installations of QGIS.
 * extract the embedded file from the widget and save it on disk.
+
+.. index:: Rendering; Scale dependent visibility
+.. _label_scaledepend:
+
+Visibility Scale Selector
+-------------------------
+
+The visibility scale selector provides options to control the scales
+at which an element will be made visible in the map canvas.
+Out of the specified range of scales, the elements are not displayed.
+It can be applied e.g. to layers, labels or diagrams,
+from their :guilabel:`Rendering` properties tab.
+
+#. Tick the |checkbox| :guilabel:`Scale dependent visibility` box
+#. Fill the :guilabel:`Minimum (exclusive)` box with the most zoomed out desired scale,
+   typing the value or selecting it from the :ref:`predefined scales <predefinedscales>`
+#. and/or fill the :guilabel:`Maximum (inclusive)` box with the most zoomed in desired scale
+
+   The |mapIdentification| :sup:`Set to current canvas scale` button next to
+   the scale boxes sets the current map canvas scale as boundary of the range visibility.
+   Press the arrow next to the button to access scales from layouts' maps
+   and reuse them to fill the box.
+
+.. _figure_visibilityscaleselector_widget:
+
+.. figure:: img/visibilityscale_selector.png
+   :align: center
+
+   Visibility scale selector widget
+
 
 .. index:: Extent selection
 .. _extent_selector:
