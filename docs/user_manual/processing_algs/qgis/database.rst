@@ -309,6 +309,15 @@ Parameters
      - If a layer has a selection, setting this option to ``True``
        will result in only selected features being saved. For
        layers without a selection all features will be saved.
+   * - **Export related layers following relations defined in the project**
+     - ``EXPORT_RELATED_LAYERS``
+     - [boolean]
+
+       Default: False
+     - If an input layer has :ref:`relations <vector_relations>` set in the project,
+       setting this option to ``True`` will result in exporting also its related layer(s).
+       If the layer has features selected, then only their related features will be exported
+       unless the related layer was also an input layer.
    * - **Destination GeoPackage**
      - ``OUTPUT``
      - [file]
