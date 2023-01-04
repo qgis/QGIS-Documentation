@@ -1238,6 +1238,11 @@ From the :guilabel:`Attachment` widget, you have to first select the :guilabel:`
   its URL. `Nextcloud <https://nextcloud.com/>`_, `Pydio <https://pydio.com>`_
   or other file hosting software support this protocol.
 
+* :guilabel:`AWS S3`: The resource is pushed to a server supporting
+  `AWS Simple Storage Service <https://en.wikipedia.org/wiki/Amazon_S3>`_ protocol and the attribute is
+  updated with its URL. Amazon Web Service and `MinIO <https://en.wikipedia.org/wiki/MinIO>`_ hosting software
+  support this protocol.
+
 Then, you have to set up the :guilabel:`Store URL` parameter, which provides the URL to be used when a new
 resource needs to be stored. It's possible to set up an expression using the
 :ref:`data defined override widget <data_defined>` in order to have specific values according to
@@ -1248,12 +1253,16 @@ file path of the user selected file (using the file selector or drag'n drop).
 
 .. note::
 
-   Using the **WebDAV** external storage, if the URL ends with a "/", it is considered as a folder and
+   Using the **WebDAV** or **AWS S3** external storage, if the URL ends with a "/", it is considered as a folder and
    the selected file name will be appended to get the final URL.
 
 
 If the external storage system needs to, it's possible to configure an
 :ref:`authentication <authentication>`.
+
+.. note::
+
+   To use the **AWS S3** external storage, you must use an **AWS S3** authentication type.
 
 .. _external_storage_use:
 
