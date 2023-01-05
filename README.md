@@ -173,7 +173,7 @@ We rely on the [Transifex platform](https://transifex.com) to store and coordina
 our translation efforts. To be part of the translation team, please follow
 [becoming a translator](https://www.qgis.org/en/site/getinvolved/translate.html#becoming-a-translator).
 
-The process is automated using the [Transifex - GitHub integration system](https://docs.transifex.com/integrations/transifex-github-integration)
+The process is automated using the [Transifex - GitHub integration system](https://help.transifex.com/en/articles/6265125-github-via-transifex-ui)
 and some custom scripts:
 
 * The [transifex.yml](transifex.yml) configuration file:
