@@ -37,6 +37,8 @@ Map Rendering and Printing
         QgsUnitTypes,
         QgsProject,
         QgsFillSymbol,
+        QgsAbstractValidityCheck,
+        check,
     )
 
     from qgis.PyQt.QtGui import (
@@ -125,7 +127,7 @@ Print layout is a very handy tool if you would like to do a more sophisticated
 output than the simple rendering shown above. It is possible
 to create complex map layouts consisting of map views, labels, legend, tables
 and other elements that are usually present on paper maps. The layouts can be
-then exported to PDF, raster images or directly printed on a printer.
+then exported to PDF, SVG, raster images or directly printed on a printer.
 
 The layout consists of a bunch of classes. They all belong to the core
 library. QGIS application has a convenient GUI for placement of the elements,
@@ -205,9 +207,6 @@ Here's a description of some of the main layout items that can be added to a lay
     item.applyDefaultSize()
     layout.addLayoutItem(item)
 
-* arrow
-* picture
-* basic shape
 * nodes based shape
 
   .. testcode:: composer
@@ -232,7 +231,12 @@ Here's a description of some of the main layout items that can be added to a lay
     symbol = QgsFillSymbol.createSimple(props)
     polygonItem.setSymbol(symbol)
 
-* table
+.. there is no point in showing them if not documented
+
+  * arrow
+  * picture
+  * basic shape
+  * table
 
 Once an item is added to the layout, it can be moved and resized:
 
@@ -255,6 +259,65 @@ templates which are essentially compositions with all their items saved to a
 Once the composition is ready (the layout items have been created and added
 to the composition), we can proceed to produce a raster and/or vector output.
 
+Checking layout validity
+------------------------
+
+A layout is a made of a set of interconnected items and it can happen that these connections are broken during modifications
+(a legend connected to a removed map, an image item with missing source file,...)
+or you may want to apply custom constraints to the layout items.
+The :class:`QgsAbstractValidityCheck <qgis.core.QgsAbstractValidityCheck>` helps you achieve this.
+
+A basic check looks like:
+
+.. testcode:: composer
+
+  @check.register(type=QgsAbstractValidityCheck.TypeLayoutCheck)
+  def my_layout_check(context, feedback):
+    results = ...
+    return results
+
+Here's a check which throws a warning whenever a layout map item is set to the web mercator projection:
+
+.. testcode:: composer
+
+  @check.register(type=QgsAbstractValidityCheck.TypeLayoutCheck)
+  def layout_map_crs_choice_check(context, feedback):
+    layout = context.layout
+    results = []
+    for i in layout.items():
+      if isinstance(i, QgsLayoutItemMap) and i.crs().authid() == 'EPSG:3857':
+        res = QgsValidityCheckResult()
+        res.type = QgsValidityCheckResult.Warning
+        res.title = 'Map projection is misleading'
+        res.detailedDescription = 'The projection for the map item {} is set to <i>Web Mercator (EPSG:3857)</i> which misrepresents areas and shapes. Consider using an appropriate local projection instead.'.format(i.displayName())
+        results.append(res)
+
+    return results
+
+And here's a more complex example, which throws a warning if any layout map items are set to a CRS which is only valid outside of the extent shown in that map item:
+
+.. testcode:: composer
+
+   @check.register(type=QgsAbstractValidityCheck.TypeLayoutCheck)
+   def layout_map_crs_area_check(context, feedback):
+       layout = context.layout
+       results = []
+       for i in layout.items():
+           if isinstance(i, QgsLayoutItemMap):
+               bounds = i.crs().bounds()
+               ct = QgsCoordinateTransform(QgsCoordinateReferenceSystem('EPSG:4326'), i.crs(), QgsProject.instance())
+               bounds_crs = ct.transformBoundingBox(bounds)
+
+               if not bounds_crs.contains(i.extent()):
+                   res = QgsValidityCheckResult()
+                   res.type = QgsValidityCheckResult.Warning
+                   res.title = 'Map projection is incorrect'
+                   res.detailedDescription = 'The projection for the map item {} is set to \'{}\', which is not valid for the area displayed within the map.'.format(i.displayName(), i.crs().authid())
+                   results.append(res)
+
+       return results
+
+
 .. index:: Output; Raster image
 
 Exporting the layout
@@ -270,8 +333,8 @@ To export a layout, the :class:`QgsLayoutExporter <qgis.core.QgsLayoutExporter>`
    exporter = QgsLayoutExporter(layout)
    exporter.exportToPdf(pdf_path, QgsLayoutExporter.PdfExportSettings())
 
-Use the :meth:`exportToImage() <qgis.core.QgsLayoutExporter.exportToImage>`
-in case you want to export to an image instead of a PDF file.
+Use :meth:`exportToSvg() <qgis.core.QgsLayoutExporter.exportToSvg>` or :meth:`exportToImage() <qgis.core.QgsLayoutExporter.exportToImage>`
+in case you want to export to respectively an SVG or image file instead of a PDF file.
 
 Exporting a layout atlas
 ------------------------
