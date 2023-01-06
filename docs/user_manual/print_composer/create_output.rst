@@ -57,6 +57,11 @@ are:
 * :guilabel:`Exclude item from exports` in the :ref:`item properties
   <layout_Rendering_Mode>` panel
 
+Moreover, a number of predefined checks are automatically applied to the layout.
+Currently these checks include testing that scalebars are correctly linked to map items,
+and that map overview items are also correctly linked to a map.
+If the checks fail, you are shown a nice warning advising you of the issue.
+
 
 .. _export_layout_image:
 
