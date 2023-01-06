@@ -29,6 +29,10 @@ msgstr ""
 msgid "Database"
 msgstr "Base de dados"
 
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:13
+msgid "Export to PostgreSQL"
+msgstr "Exportar para PostgreSQL"
+
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:22
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:151
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:271
@@ -104,6 +108,11 @@ msgstr "``ENTRADA``"
 msgid "[vector: any]"
 msgstr "[vetor: qualquer]"
 
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:36
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:165
+msgid "Vector layer to add to the database"
+msgstr "Camada vetorial para adicionar ao banco de dados"
+
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:37
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:404
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:483
@@ -161,6 +170,12 @@ msgstr "``ESQUEMA``"
 msgid "Default: 'public'"
 msgstr "Padrão: 'público'"
 
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:49
+msgid ""
+"Name of the schema to store the data. It can be a new one or already exist."
+msgstr ""
+"Nome do esquema para armazenar os dados. Pode ser um novo ou já existente."
+
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:51
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:170
 msgid "**Table to import to (leave blank to use layer name)**"
@@ -195,6 +210,11 @@ msgstr "**Campo de chave primária**"
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:182
 msgid "``PRIMARY_KEY``"
 msgstr "``CHAVE_PRIMÁRIA``"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:64
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:183
+msgid "[tablefield: any]"
+msgstr "[campo da tabela: qualquer]"
 
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:69
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:185
@@ -297,6 +317,22 @@ msgstr "Especifica se deve ou não ser criado um índice espacial"
 msgid "**Convert field names to lowercase**"
 msgstr "*Converte nomes de campos em minúsculas**"
 
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:104
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:221
+msgid "``LOWERCASE_NAMES``"
+msgstr "``LOWERCASE_NAMES``"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:108
+msgid "Converts the field names of the input vector layer to lowercase"
+msgstr ""
+"Converte os nomes dos campos da camada vetorial de entrada em letras "
+"minúsculas"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:111
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:228
+msgid "``DROP_STRING_LENGTH``"
+msgstr "``DROP_STRING_LENGTH``"
+
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:114
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:121
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:231
@@ -305,6 +341,21 @@ msgstr "*Converte nomes de campos em minúsculas**"
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:308
 msgid "Default: False"
 msgstr "Padrão: Falso"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:118
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:235
+msgid "``FORCE_SINGLEPART``"
+msgstr "``FORCE_SINGLEPART``"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:122
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:239
+msgid ""
+"Should the features of the output layer be single-part instead of multi-"
+"part. By default the existing geometries information are preserved."
+msgstr ""
+"Caso as características da camada de saída sejam de peça única em vez de "
+"peças múltiplas. Por padrão, as informações geométricas existentes são "
+"preservadas."
 
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:128
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:245
@@ -330,6 +381,59 @@ msgstr "O algoritmo não tem saída."
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:611
 msgid "Python code"
 msgstr "Código Python"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:145
+msgid "Export to SpatiaLite"
+msgstr "Exporta para SpatiaLite"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:166
+msgid "**File database**"
+msgstr "**Base de dados de arquivos**"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:169
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:538
+msgid "The SQLite/SpatiaLite database file to connect to"
+msgstr "O arquivo de banco de dados SQLite/SpatiaLite para conexão com"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:177
+msgid ""
+"Defines the table name for the imported vector file. If nothing is "
+"specified, the layer name will be used."
+msgstr ""
+"Define o nome da tabela para o arquivo vetorial importado. Se nada for "
+"especificado, será usado o nome da camada."
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:184
+msgid "Use a field in the input vector layer as the primary key"
+msgstr "Usar um campo na camada vetorial de entrada como chave primária"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:190
+msgid ""
+"Defines the name of the geometry column in the new SpatiaLite table. "
+"Geometry information for the features is stored in this column."
+msgstr ""
+"Define o nome da coluna de geometria na nova tabela SpatiaLite. As "
+"informações geométricas para as características são armazenadas nesta "
+"coluna."
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:207
+msgid ""
+"If the specified table exists, setting this option to ``True`` will make "
+"sure that it is deleted and a new table will be created before the features "
+"of the layer is added. If this option is ``False`` and the table exists, the"
+" algorithm will throw an exception (\"table already exists\")."
+msgstr ""
+"Se a tabela especificada existir, definindo esta opção como \"Verdadeira\", "
+"certificar-se de que caso seja apagada, uma nova tabela será criada antes "
+"que as características da camada sejam adicionadas. Se esta opção for "
+"``Falsa'' e a tabela existir, o algoritmo lançará uma exceção (\"tabela já "
+"existe\")."
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:225
+msgid "Convert the field names of the input vector layer to lowercase"
+msgstr ""
+"Converte os nomes dos campos da camada vetorial de entrada em letras "
+"minúsculas"
 
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:263
 msgid "Adds layers to a GeoPackage."
@@ -371,6 +475,10 @@ msgstr "**Salvar apenas feições selecionadas**"
 msgid "``SELECTED_FEATURES_ONLY``"
 msgstr "\"FEIÇÕES_SELECIONADAS_SOMENTE\""
 
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:312
+msgid "**Destination GeoPackage**"
+msgstr "**GeoPackage de Destino**"
+
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:313
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:441
 msgid "``OUTPUT``"
@@ -384,18 +492,73 @@ msgstr "[arquivo]"
 msgid "Default: ``[Save to temporary file]``"
 msgstr "Padrão: ``[Salvar em arquivo temporário]``"
 
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:317
+msgid "Specify where to store the GeoPackage file. One of"
+msgstr "Especifique onde armazenar o arquivo GeoPackage. Um de"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
 msgstr "Salvar em um Arquivo Temporário"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:4
+msgid "Save to File…"
+msgstr "Salvar em Arquivo..."
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:335
+msgid "``OUTPUT_LAYERS``"
+msgstr "``OUTPUT_LAYERS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:336
+msgid "[string] [list]"
+msgstr "[string] [lista]"
 
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:337
 msgid "The list of layers added to the GeoPackage."
 msgstr "A lista de camadas adicionadas ao GeoPackage."
 
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:352
+msgid "PostgreSQL execute and load SQL"
+msgstr "PostgreSQL executa e carrega SQL"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:354
+msgid ""
+"Allows a SQL database query to be performed on a PostgreSQL database "
+"connected to QGIS and loads the result. The algorithm **won't** create a new"
+" layer: it is designed to run queries on the layer itself."
+msgstr ""
+"Permite que uma consulta de banco de dados SQL seja realizada em um banco de"
+" dados PostgreSQL conectado ao QGIS e carrega o resultado. O algoritmo "
+"**não** criará uma nova camada: ele é projetado para executar consultas na "
+"própria camada."
+
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:6
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:366
 msgid "**Example**"
 msgstr "**Exemplo**"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:8
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:368
+msgid ""
+"Set all the values of an existing field to a fixed value. The SQL query "
+"string will be:"
+msgstr ""
+"Defina todos os valores de um campo existente para um valor fixado. A "
+"consulta SQL de string será:"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:390
+msgid ""
+":ref:`qgispostgisexecutesql`, :ref:`qgisexecutesql`, "
+":ref:`qgisspatialiteexecutesql`"
+msgstr ""
+":ref:`qgispostgisexecutesql`, :ref:`qgisexecutesql`, "
+":ref:`qgisspatialiteexecutesql`"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:409
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:488
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:539
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:596
+msgid "**SQL query**"
+msgstr "**Consulta SQL**"
 
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:410
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:489
@@ -404,6 +567,10 @@ msgstr "**Exemplo**"
 msgid "``SQL``"
 msgstr "``SQL``"
 
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:414
+msgid "**Unique ID field name**"
+msgstr "**Nome do campo de ID único**"
+
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:415
 msgid "``ID_FIELD``"
 msgstr "'CAMPO_ID\""
@@ -411,6 +578,10 @@ msgstr "'CAMPO_ID\""
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:418
 msgid "Default: id"
 msgstr "Padrão: 'id'"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:419
+msgid "Sets the primary key field (a column in the result table)"
+msgstr "Define o campo chave primário (uma coluna na tabela de resultados)"
 
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:420
 msgid "**Geometry field name**"
@@ -423,6 +594,31 @@ msgstr "\"CAMPO_GEOMETRIA\""
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:427
 msgid "Name of the geometry column (a column in the result table)"
 msgstr "Nome da coluna de geometria (uma coluna na tabela de resultados)"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:440
+msgid "**SQL layer**"
+msgstr "**Camada SQL**"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:443
+msgid "The resulting vector layer to be loaded into QGIS."
+msgstr "A camada vetorial resultante a ser carregada no QGIS."
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:458
+msgid "PostgreSQL execute SQL"
+msgstr "PostgreSQL executa SQL"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:469
+msgid ""
+":ref:`qgispostgisexecuteandloadsql`, :ref:`qgisexecutesql`, "
+":ref:`qgisspatialiteexecutesql`"
+msgstr ""
+":ref:`qgispostgisexecuteandloadsql`, :ref:`qgisexecutesql`, "
+":ref:`qgisspatialiteexecutesql`"
+
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:519
+#: ../../docs/user_manual/processing_algs/qgis/database.rst:573
+msgid ":ref:`qgispostgisexecutesql`, :ref:`qgisexecutesql`"
+msgstr ":ref:`qgispostgisexecutesql`, :ref:`qgisexecutesql`"
 
 #: ../../docs/user_manual/processing_algs/qgis/database.rst:537
 msgid "[vector]"

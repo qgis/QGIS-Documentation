@@ -175,6 +175,21 @@ msgstr "Remova a camada :file:`systematic_inventory_results` do seu projeto."
 msgid "|basic| |FA| Whole Forest Parameters Estimation"
 msgstr "|basic| |FA| Estimación de los Parámetros del Monte Entero"
 
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:52
+msgid ""
+"You can calculate the averages for this whole forest area from the inventory"
+" results for the some interesting parameters, like the volume and the number"
+" of stems per hectare. Since the systematic sample plots represent equal "
+"areas, you can directly calculate the averages of the volumes and number of "
+"stems per hectare from the :file:`sample_plots_results` layer."
+msgstr ""
+"Você pode calcular as médias para toda essa área florestal a partir dos "
+"resultados do inventário para alguns parâmetros interessantes, como o volume"
+" e o número de caules por hectare. Como as parcelas de amostra sistemática "
+"representam áreas iguais, é possível calcular diretamente as médias dos "
+"volumes e do número de caules por hectare a partir da camada "
+":file:`sample_plots_results`."
+
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:58
 msgid ""
 "You can calculate the average of a field in a vector layer using the "
@@ -182,6 +197,36 @@ msgid ""
 msgstr ""
 "Puedes calcular la media de un campo en la capa vectorial utilizando la "
 "herramienta :guilabel:`Basic statistics`:"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:61
+msgid ""
+"Open :menuselection:`Vector --> Analysis Tools --> Basic statistics for "
+"Fields`."
+msgstr ""
+"Abra :menuselection:`Vetor --> Ferramentas de Análise --> Estatísticas "
+"básicas para Campos'."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:62
+msgid "Select ``sample_plots_results`` as the :guilabel:`Input Vector Layer`."
+msgstr ""
+"Selecione ``sample_plots_results`` como a :guilabel:`Camada vetorial de "
+"entrada`."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:63
+msgid "Select ``Vol`` as :guilabel:`Target field`."
+msgstr "Selecione ``Vol`` como :guilabel:`Campo alvo`."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:66
+msgid "The average volume in the forest is ``135.2 m3/ha``."
+msgstr "O volume médio na floresta é de ``135,2 m3/ha``."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:68
+msgid ""
+"You can calculate the average for the number of stems in the same way, "
+"``2745 stems/ha``."
+msgstr ""
+"Você pode calcular a média do número de hastes da mesma forma, ``2745 "
+"hastes/ha``."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:74
 msgid "|basic| |FA| Estimating Stand Parameters"
@@ -273,9 +318,22 @@ msgstr "Abre el :guilabel:`Field calculator`."
 msgid "Create a new field called ``area``."
 msgstr "Criar um novo campo chamado ``área``."
 
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:128
+msgid "Set the :guilabel:`Output field type` to ``Decimal number (real)``."
+msgstr ""
+"Defina o :guilabel:`Tipo de campo de saída` para ``Número decimal (real)``."
+
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:129
 msgid "Set the :guilabel:`Precision` to ``2``."
 msgstr "Defina a :guilabel:`Precisão` para ``2``."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:130
+msgid ""
+"In the :guilabel:`Expression` box, write ``$area / 10000``. This will "
+"calculate the area of the forest stands in ha."
+msgstr ""
+"Na caixa :guilabel:`Expressão`, escreva ``$area / 10000``. Isto calculará a "
+"área dos povoamentos florestais em ha."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:134
 msgid ""
@@ -284,6 +342,10 @@ msgid ""
 msgstr ""
 "Ahora calcula un campo con el volumen total y el número de pies estimados "
 "para cada masa:"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:136
+msgid "Name the fields ``s_vol`` and ``s_stem``."
+msgstr "Nomeie os campos ``s_vol`` e ``s_stem``."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:137
 msgid "The fields can be integer numbers or you can use real numbers also."
@@ -321,9 +383,31 @@ msgstr ""
 "dividir la suma del volumen de las masas por la suma del área de las masas "
 "que contienen información."
 
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:150
+msgid ""
+"Open :menuselection:`Vector --> Analysis Tools --> Basic statistics for "
+"fields`."
+msgstr ""
+"Abra :menuselection:`Vetor --> Ferramentas de Análise --> Estatísticas "
+"básicas para Campos'."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:152
+msgid "Select ``area`` as :guilabel:`Field to calculate statistics on`."
+msgstr ""
+"Selecione ``área`` como :guilabel:`Campo para calcular estatísticas sobre`."
+
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:153
 msgid "Check the :guilabel:`Selected features only`"
 msgstr "Selecione o :guilabel:`Apenas características selecionadas`"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:159
+msgid ""
+"As you can see, the total sum of the stands' areas is ``66.04 ha``. Note "
+"that the area of the missing forest stands is only about ``7 ha``."
+msgstr ""
+"Como você pode ver, a soma total das áreas das arquibancadas é de ``66,04 "
+"ha``. Observe que a área dos povoamentos florestais desaparecidos é de "
+"apenas ``7 ha``."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:165
 msgid ""
@@ -337,6 +421,14 @@ msgstr ""
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:168
 msgid "``184.9 m3/ha`` and"
 msgstr "``184,9 m3/ha`` e"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:169
+msgid "``2719 stems/ha``."
+msgstr "``2719 troncos/ha``."
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:171
+msgid "Save your QGIS project, :file:`forest_inventory.qgs`."
+msgstr "Salve seu projeto QGIS, :file:`forest_inventory.qgs`."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:174
 msgid "|IC|"

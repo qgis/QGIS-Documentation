@@ -15,14 +15,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-30 02:29+0000\n"
+"POT-Creation-Date: 2022-12-21 02:17+0000\n"
 "PO-Revision-Date: 2022-03-14 05:13+0000\n"
 "Last-Translator: Eric Armijo, 2022\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.11.0\n"
 "Language: es\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -56,22 +56,6 @@ msgid ""
 msgstr ""
 "`WMS 1.1.1 "
 "<https://portal.ogc.org/files/?artifact_id=1081&amp;version=1&amp;format=pdf>`_"
-
-#: ../../docs/server_manual/services/wms.rst:13
-msgid ""
-"`WMS 1.3.0 "
-"<https://portal.opengeospatial.org/files/?artifact_id=14416&format=pdf>`_"
-msgstr ""
-"`WMS 1.3.0 "
-"<https://portal.opengeospatial.org/files/?artifact_id=14416&format=pdf>`_"
-
-#: ../../docs/server_manual/services/wms.rst:14
-msgid ""
-"`SLD 1.1.0 WMS profile "
-"<http://portal.opengeospatial.org/files/?artifact_id=22364&format=pdf>`_"
-msgstr ""
-"`perfil SLD 1.1.0 WMS "
-"<http://portal.opengeospatial.org/files/?artifact_id=22364&format=pdf>`_"
 
 #: ../../docs/server_manual/services/wms.rst:16
 msgid "Standard requests provided by QGIS Server:"
@@ -2507,7 +2491,7 @@ msgstr ""
 "más tarde como parámetros de servicio <layername>:<parameter>. En una "
 "solicitud :ref:`GetMap <wms_getmap>`, esto podría verse así:"
 
-#: ../../docs/server_manual/services/wms.rst:1896
+#: ../../docs/server_manual/services/wms.rst:1897
 msgid ""
 "Similarly, external layers can be used in :ref:`GetPrint <wms_getprint>` "
 "requests:"
@@ -2515,11 +2499,11 @@ msgstr ""
 "De manera similar, las capas externas se pueden usar en las solicitudes "
 ":ref:`GetPrint <wms_getprint>`:"
 
-#: ../../docs/server_manual/services/wms.rst:1918
+#: ../../docs/server_manual/services/wms.rst:1920
 msgid "Redlining"
 msgstr "Redlining"
 
-#: ../../docs/server_manual/services/wms.rst:1920
+#: ../../docs/server_manual/services/wms.rst:1922
 msgid ""
 "This feature is available and can be used with :ref:`GetMap <wms_getmap>` "
 "and :ref:`GetPrint <wms_getprint>` requests."
@@ -2527,7 +2511,7 @@ msgstr ""
 "Esta función está disponible y se puede utilizar con solicitudes "
 ":ref:`GetMap <wms_getmap>` y :ref:`GetPrint <wms_getprint>`."
 
-#: ../../docs/server_manual/services/wms.rst:1923
+#: ../../docs/server_manual/services/wms.rst:1925
 msgid ""
 "The redlining feature can be used to pass geometries and labels in the "
 "request which are overlapped by the server over the standard returned image "
@@ -2540,11 +2524,11 @@ msgstr ""
 "algunos comentarios (etiquetas) a algunas áreas, ubicaciones, etc. que no "
 "están en el mapa estándar."
 
-#: ../../docs/server_manual/services/wms.rst:1928
+#: ../../docs/server_manual/services/wms.rst:1930
 msgid "The :ref:`GetMap <wms_getmap>` request is in the format:"
 msgstr "La solicitud :ref:`GetMap <wms_getmap>` tiene el formato:"
 
-#: ../../docs/server_manual/services/wms.rst:1945
+#: ../../docs/server_manual/services/wms.rst:1947
 msgid ""
 "The :ref:`GetPrint <wms_getprint>` equivalent is in the format (note that "
 "``mapX:`` parameter is added to tell which map has redlining):"
@@ -2553,7 +2537,7 @@ msgstr ""
 "cuenta que se agrega el parámetro ``mapX:`` para indicar qué mapa tiene "
 "líneas rojas):"
 
-#: ../../docs/server_manual/services/wms.rst:1962
+#: ../../docs/server_manual/services/wms.rst:1964
 msgid ""
 "Here is the image outputed by the above request in which a polygon and a "
 "label are drawn on top of the normal map:"
@@ -2561,16 +2545,16 @@ msgstr ""
 "Aquí está la imagen obtenida por la solicitud anterior en la que se dibujan "
 "un polígono y una etiqueta sobre el mapa normal:"
 
-#: ../../docs/server_manual/services/wms.rst:1970
+#: ../../docs/server_manual/services/wms.rst:1972
 msgid "Server response to a GetMap request with redlining parameters"
 msgstr ""
 "Respuesta del servidor a una solicitud GetMap con parámetros de marcado"
 
-#: ../../docs/server_manual/services/wms.rst:1972
+#: ../../docs/server_manual/services/wms.rst:1974
 msgid "You can see there are several parameters in this request:"
 msgstr "Puede ver que hay varios parámetros en esta solicitud:"
 
-#: ../../docs/server_manual/services/wms.rst:1974
+#: ../../docs/server_manual/services/wms.rst:1976
 msgid ""
 "**HIGHLIGHT_GEOM**: You can add POINT, MULTILINESTRING, POLYGON etc. It "
 "supports multipart geometries. Here is an example: "
@@ -2582,7 +2566,7 @@ msgstr ""
 "``HIGHLIGHT_GEOM=MULTILINESTRING((0 0, 0 1, 1 1))``. Las coordenadas deben "
 "estar en el SRC de la solicitud GetMap/GetPrint."
 
-#: ../../docs/server_manual/services/wms.rst:1979
+#: ../../docs/server_manual/services/wms.rst:1981
 msgid ""
 "**HIGHLIGHT_SYMBOL**: This controls how the geometry is outlined and you can"
 " change the stroke width, color and opacity."
@@ -2590,7 +2574,7 @@ msgstr ""
 "**HIGHLIGHT_SYMBOL**: Esto controla cómo se perfila la geometría y puede "
 "cambiar el ancho, el color y la opacidad del trazo."
 
-#: ../../docs/server_manual/services/wms.rst:1982
+#: ../../docs/server_manual/services/wms.rst:1984
 msgid ""
 "**HIGHLIGHT_LABELSTRING**: You can pass your labeling text to this "
 "parameter."
@@ -2598,13 +2582,13 @@ msgstr ""
 "**HIGHLIGHT_LABELSTRING**: Puede pasar su texto de etiquetado a este "
 "parámetro."
 
-#: ../../docs/server_manual/services/wms.rst:1985
+#: ../../docs/server_manual/services/wms.rst:1987
 msgid ""
 "**HIGHLIGHT_LABELSIZE**: This parameter controls the size of the label."
 msgstr ""
 "**HIGHLIGHT_LABELSIZE**: Este parámetro controla el tamaño de la etiqueta."
 
-#: ../../docs/server_manual/services/wms.rst:1988
+#: ../../docs/server_manual/services/wms.rst:1990
 msgid ""
 "**HIGHLIGHT_LABELFONT**: This parameter controls the font of the label (e.g."
 " Arial)"
@@ -2612,12 +2596,12 @@ msgstr ""
 "**HIGHLIGHT_LABELFONT**: Este parámetro controla la fuente de la etiqueta "
 "(por ejemplo, Arial)"
 
-#: ../../docs/server_manual/services/wms.rst:1991
+#: ../../docs/server_manual/services/wms.rst:1993
 msgid "**HIGHLIGHT_LABELCOLOR**: This parameter controls the label color."
 msgstr ""
 "**HIGHLIGHT_LABELCOLOR**: Este parámetro controla el color de la etiqueta."
 
-#: ../../docs/server_manual/services/wms.rst:1993
+#: ../../docs/server_manual/services/wms.rst:1995
 msgid ""
 "**HIGHLIGHT_LABELBUFFERCOLOR**: This parameter controls the label buffer "
 "color."
@@ -2625,7 +2609,7 @@ msgstr ""
 "**HIGHLIGHT_LABELBUFFERCOLOR**: Este parámetro controla el color del búfer "
 "de etiquetas."
 
-#: ../../docs/server_manual/services/wms.rst:1996
+#: ../../docs/server_manual/services/wms.rst:1998
 msgid ""
 "**HIGHLIGHT_LABELBUFFERSIZE**: This parameter controls the label buffer "
 "size."

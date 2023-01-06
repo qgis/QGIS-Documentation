@@ -2,25 +2,24 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
-# Kwon.Yongchan <ruvyn@naver.com>, 2022
+# Harrissou Sant-anna, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 12:00+0000\n"
-"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2022\n"
+"POT-Creation-Date: 2022-12-21 02:17+0000\n"
+"PO-Revision-Date: 2022-03-14 05:09+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2022\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.11.0\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -81,14 +80,6 @@ msgstr ""
 "이 모델은 포인트, `라인스트링 <http://msdn.microsoft.com/ko-kr/library/bb895372.aspx>`_,"
 " 폴리곤 (그리고 이들의 집합인 다중 오브젝트) 유형으로 지리공간 데이터를 정의합니다."
 
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:33
-msgid ""
-"For further information, have a look at the `OGC Simple Feature for SQL "
-"<https://www.opengeospatial.org/standards/sfs>`_ standard."
-msgstr ""
-"더 자세한 정보를 알고 싶다면 `OGC Simple Feature for SQL "
-"<https://www.opengeospatial.org/standards/sfs>`_ 표준을 참조하십시오."
-
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:37
 msgid "Add a geometry field to table"
 msgstr "테이블에 도형 필드 추가"
@@ -97,11 +88,11 @@ msgstr "테이블에 도형 필드 추가"
 msgid "Let's add a point field to our people table:"
 msgstr "사용자의 'people' 테이블에 포인트 필드를 추가해봅시다:"
 
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:48
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:47
 msgid "Add a constraint based on geometry type"
 msgstr "도형의 유형을 기반으로 하는 제약 조건 추가"
 
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:50
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:49
 msgid ""
 "You will notice that the geometry field type does not implicitly specify "
 "what *type* of geometry for the field - for that we need a constraint:"
@@ -109,21 +100,17 @@ msgstr ""
 "도형 필드의 유형이 무조건 필드에 들어 있는 도형의 *유형*을 지정하지는 않는다는 사실을 눈치챘을 겁니다. 이를 위해서는 제약 조건이 "
 "필요합니다:"
 
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:60
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:59
 msgid ""
 "This adds a constraint to the table so that it will only accept a point "
 "geometry or a null value."
 msgstr "이렇게 테이블에 제약 조건을 걸면 포인트 도형 또는 널 값만을 받아들이게 됩니다."
 
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:64
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:63
 msgid "|TY| |hard|"
 msgstr "|TY| |hard| 고급"
 
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:212
-msgid "hard"
-msgstr "hard"
-
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:66
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:65
 msgid ""
 "Create a new table called cities and give it some appropriate columns, "
 "including a geometry field for storing polygons (the city boundaries). Make "
@@ -132,21 +119,17 @@ msgstr ""
 "'cities'라는 새 테이블을 생성하고 폴리곤(도시 경계)을 저장하기 위한 도형 필드를 포함한 적절한 몇몇 열을 부여하십시오. 도형 "
 "필드가 폴리곤만을 받아들이도록 하는 제약 조건을 걸어야 합니다."
 
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:70
-msgid ":ref:`Check your results <simple-feature-1>`"
-msgstr ":ref:`결과 확인 <simple-feature-1>`"
-
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:75
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:84
 msgid "Populate geometry_columns table"
 msgstr "'geometry_columns' 테이블 채우기"
 
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:77
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:86
 msgid ""
 "At this point you should also add an entry into the ``geometry_columns`` "
 "table:"
 msgstr "이제 ``geometry_columns`` 테이블에도 항목을 추가해야 합니다:"
 
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:84
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:93
 msgid ""
 "Why? :kbd:`geometry_columns` is used by certain applications to be aware of "
 "which tables in the database contain geometry data."
@@ -154,12 +137,12 @@ msgstr ""
 "왜냐구요? 특정 응용 프로그램들이 데이터베이스에서 도형 데이터를 담고 있는 테이블을 찾을 때 :kbd:`geometry_columns` "
 "를 이용하기 때문입니다."
 
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:89
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:98
 msgid ""
 "If the above ``INSERT`` statement causes an error, run this query first:"
 msgstr "앞의 ``INSERT`` 선언문이 오류를 일으키면 우선 다음 쿼리를 실행하십시오:"
 
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:96
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:105
 msgid ""
 "If the column :kbd:`f_table_name` contains the value :kbd:`people`, then "
 "this table has already been registered and you don't need to do anything "
@@ -168,13 +151,13 @@ msgstr ""
 ":kbd:`f_table_name` 열이 :kbd:`people` 값을 담고 있다면, 이 테이블은 이미 등록됐다는 뜻이므로 아무것도 할 "
 "필요가 없습니다."
 
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:100
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:109
 msgid ""
 "The value ``2`` refers to the number of dimensions; in this case, two: **X**"
 " and **Y**."
 msgstr "``2`` 값은 차원의 개수를 의미합니다. 이 경우 **X** 와 **Y** 2개를 뜻합니다."
 
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:103
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:112
 msgid ""
 "The value :kbd:`4326` refers to the projection we are using; in this case, "
 "WGS 84, which is referred to by the number 4326 (refer to the earlier "
@@ -183,31 +166,23 @@ msgstr ""
 ":kbd:`4326` 값은 우리가 사용할 투영체를 의미합니다. 이 경우, 4326이란 숫자는 (EPSG에 대한 앞에서의 설명대로) "
 "WGS84를 뜻합니다."
 
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:108
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:117
 msgid "|TY| |basic|"
 msgstr "|TY| |basic| 초급"
 
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:211
-msgid "basic"
-msgstr "basic"
-
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:110
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:119
 msgid "Add an appropriate `geometry_columns` entry for your new cities layer"
 msgstr "사용자의 'cities' 레이어에 적합한 'geometry_columns' 항목을 추가하십시오."
 
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:112
-msgid ":ref:`Check your results <simple-feature-2>`"
-msgstr ":ref:`결과 확인 <simple-feature-2>`"
-
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:117
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:132
 msgid "Add geometry record to table using SQL"
 msgstr "SQL을 이용해 테이블에 도형 레코드 추가"
 
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:119
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:134
 msgid "Now that our tables are geo-enabled, we can store geometries in them:"
 msgstr "이제 테이블에서 지리공간 데이터를 이용할 수 있으므로, 테이블에 도형을 저장할 수 있습니다:"
 
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:130
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:145
 msgid ""
 "In the new entry above, you will need to specify which projection (SRID) you"
 " want to use. This is because you entered the geometry of the new point "
@@ -219,7 +194,7 @@ msgstr ""
 "자동적으로 정확한 투영체 정보를 추가하지 못 합니다. 이 새 포인트는 당연히 자기가 추가되는 데이터셋과 동일한 SRID를 사용해야 "
 "하므로, 이를 지정해주어야 합니다."
 
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:136
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:151
 msgid ""
 "If at this point you were using a graphical interface, for example, "
 "specifying the projection for each point would be automatic. In other words,"
@@ -230,7 +205,7 @@ msgstr ""
 "예를 들어 이 시점에서 GUI를 사용하고 있을 경우, 각 포인트에 대해 자동적으로 투영체를 지정할 것입니다. 다시 말해 이전 단계에서처럼"
 " 데이터셋에 투영체를 설정했다면, 추가하고자 하는 모든 포인트에 정확한 투영체를 사용했는지 일반적으로 걱정할 필요가 없습니다."
 
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:142
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:157
 msgid ""
 "Now is probably a good time to open QGIS and try to view your :kbd:`people` "
 "table. Also, we should try editing / adding / deleting records and then "
@@ -239,7 +214,7 @@ msgstr ""
 "이제 QGIS를 실행해서 사용자의 :kbd:`people` 테이블을 살펴보도록 합시다. 또, 레코드를 편집/추가/삭제한 다음 "
 "데이터베이스에 선택 쿼리를 실행해서 데이터가 어떻게 변경됐는지 보도록 합시다."
 
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:146
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:161
 msgid ""
 "To load a PostGIS layer in QGIS, use the :menuselection:`Layer --> Add "
 "PostGIS Layers` menu option or toolbar button:"
@@ -247,27 +222,23 @@ msgstr ""
 "QGIS에 PostGIS 레이어를 불러오려면, 메뉴에서 :menuselection:`Layer --> Add PostGIS Layers`"
 " 항목을 선택하거나 다음 툴바 버튼을 클릭하십시오."
 
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:149
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:164
 msgid "|addPostgisLayer|"
 msgstr "|addPostgisLayer|"
 
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:209
-msgid "addPostgisLayer"
-msgstr "addPostgisLayer"
-
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:151
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:166
 msgid "This will open the dialog:"
 msgstr "다음 대화 창이 나타날 것입니다."
 
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:156
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:171
 msgid "Click on the :guilabel:`New` button to open this dialog:"
 msgstr ":guilabel:`New` 버튼을 클릭해서 다음 대화 창을 여십시오."
 
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:161
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:176
 msgid "Then define a new connection, e.g.::"
 msgstr "다음처럼 새 연결을 정의하십시오."
 
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:171
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:186
 msgid ""
 "To see whether QGIS has found the :kbd:`address` database and that your "
 "username and password are correct, click :guilabel:`Test Connect`. If it "
@@ -279,7 +250,7 @@ msgstr ""
 ":guilabel:`Save Password` 옆의 체크박스를 체크하십시오. 그 다음 :guilabel:`OK` 를 클릭해서 이 연결을 "
 "생성합니다."
 
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:176
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:191
 msgid ""
 "Back in the :guilabel:`Add PostGIS Layers` dialog, click :guilabel:`Connect`"
 " and add layers to your project as usual."
@@ -287,39 +258,31 @@ msgstr ""
 "다시 :guilabel:`Add PostGIS Layers` 대화 창으로 돌아가서, :guilabel:`Connect` 를 클릭한 다음 "
 "평상시처럼 사용자 프로젝트에 레이어를 추가하십시오."
 
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:180
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:195
 msgid "|TY| |moderate|"
 msgstr "|TY| |moderate| 중급"
 
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:213
-msgid "moderate"
-msgstr "moderate"
-
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:182
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:197
 msgid ""
 "Formulate a query that shows a person's name, street name and position (from"
 " the the_geom column) as plain text."
 msgstr "인물의 성명, 도로명 및 ('the_geom' 열로부터) 위치를 플레인 텍스트로 보여주는 쿼리를 작성하십시오."
 
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:185
-msgid ":ref:`Check your results <simple-feature-3>`"
-msgstr ":ref:`결과 확인 <simple-feature-3>`"
-
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:188
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:226
 msgid "|IC|"
 msgstr "|IC|"
 
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:190
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:228
 msgid ""
 "You have seen how to add spatial objects to your database and view them in "
 "GIS software."
 msgstr "사용자 데이터베이스에 공간 오브젝트를 추가하는 방법 및 GIS 소프트웨어에서 해당 오브젝트를 보는 방법을 배웠습니다."
 
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:194
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:232
 msgid "|WN|"
 msgstr "|WN|"
 
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:196
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:234
 msgid ""
 "Next you'll see how to import data into, and export data from, your "
 "database."

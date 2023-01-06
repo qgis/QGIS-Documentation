@@ -2,27 +2,26 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2021
+# Harrissou Sant-anna, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-24 10:21+0000\n"
-"PO-Revision-Date: 2020-12-24 10:27+0000\n"
-"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2021\n"
+"POT-Creation-Date: 2022-12-21 02:17+0000\n"
+"PO-Revision-Date: 2022-03-14 05:10+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2022\n"
 "Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.11.0\n"
 "Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:5
 msgid "Configuring external applications"
@@ -464,23 +463,6 @@ msgstr ""
 ":guilabel:`Scatterplot` esegue una funzione R che produce un grafico di "
 "dispersione plot da due campi numerici del layer vettoriale fornito."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:226
-msgid ""
-":guilabel:`test_sf` does some operations that depend on the ``sf`` package "
-"and can be used to check if the R package ``sf`` is installed. If the "
-"package is not installed, R will try to install it (and all the packages it "
-"depends on) for you, using the :guilabel:`Package repository` specified in "
-":menuselection:`Provider --> R` in the Processing options. The default is "
-"https://cran.at.r-project.org/. Installing may take some time..."
-msgstr ""
-":guilabel:`test_sf` esegue alcune operazioni che dipendono dal package "
-"``sf`` e può essere usato per controllare se il package R ``sf`` è "
-"installato. Se il package non è installato, R cercherà di installarlo (e "
-"tutti i package da cui dipende) per te, usando il :guilabel:`Package "
-"repository` specificato in :menuselection:`Programmi --> R` nelle opzioni di"
-" Processing. Il default è https://cran.at.r-project.org/. L'installazione "
-"potrebbe richiedere del tempo..."
-
 #: ../../docs/user_manual/processing/3rdParty.rst:235
 msgid ""
 ":guilabel:`test_sp` can be used to check if the R package ``sp`` is "
@@ -615,11 +597,11 @@ msgstr "In Ubuntu, imposta il percorso a (o, meglio, includi nel percorso):"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:296
 msgid ""
-"/home/<user>/.local/share/QGIS/QGIS3/profiles/default/resource_sharing/repositories/github.com/qgis"
-"/QGIS-Resources/collections/rscripts"
+"/home/<user>/.local/share/QGIS/QGIS3/profiles/default/resource_sharing/repositories/github.com/qgis/QGIS-"
+"Resources/collections/rscripts"
 msgstr ""
-"/home/<user>/.local/share/QGIS/QGIS3/profiles/default/resource_sharing/repositories/github.com/qgis"
-"/QGIS-Resources/collections/rscripts"
+"/home/<user>/.local/share/QGIS/QGIS3/profiles/default/resource_sharing/repositories/github.com/qgis/QGIS-"
+"Resources/collections/rscripts"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:301
 msgid "On Windows, set the path to (or, better, include in the path):"
@@ -627,11 +609,11 @@ msgstr "In Windows,  imposta il percorso a (o, meglio, includi nel percorso):"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:303
 msgid ""
-"C:\\\\Users\\\\<user>\\\\AppData\\\\Roaming\\\\QGIS\\\\QGIS3\\\\profiles\\\\default\\\\resource_sharing\\\\repositories\\\\github.com\\\\qgis"
-"\\\\QGIS-Resources\\\\collections\\\\rscripts"
+"C:\\\\Users\\\\<user>\\\\AppData\\\\Roaming\\\\QGIS\\\\QGIS3\\\\profiles\\\\default\\\\resource_sharing\\\\repositories\\\\github.com\\\\qgis\\\\QGIS-"
+"Resources\\\\collections\\\\rscripts"
 msgstr ""
-"C:\\\\Users\\\\<user>\\\\AppData\\\\Roaming\\\\QGIS\\\\QGIS3\\\\profiles\\\\default\\\\resource_sharing\\\\repositories\\\\github.com\\\\qgis"
-"\\\\QGIS-Resources\\\\collections\\\\rscripts"
+"C:\\\\Users\\\\<user>\\\\AppData\\\\Roaming\\\\QGIS\\\\QGIS3\\\\profiles\\\\default\\\\resource_sharing\\\\repositories\\\\github.com\\\\qgis\\\\QGIS-"
+"Resources\\\\collections\\\\rscripts"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:305
 msgid ""
@@ -1040,45 +1022,11 @@ msgstr ""
 "versione 2.0 del plugin *Processing R Provider* e una nuova installazione di"
 " *R* 3.4.4 (*apt* solo pacchetto ``r-base-core``):"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:539
-msgid ""
-"``abind, askpass, assertthat, backports, base64enc, BH, bit, bit64, blob, "
-"brew, callr, classInt, cli, colorspace, covr, crayon, crosstalk, curl, DBI, "
-"deldir, desc, dichromat, digest, dplyr, e1071, ellipsis, evaluate, fansi, "
-"farver, fastmap, gdtools, ggplot2, glue, goftest, gridExtra, gtable, highr, "
-"hms, htmltools, htmlwidgets, httpuv, httr, jsonlite, knitr, labeling, later,"
-" lazyeval, leafem, leaflet, leaflet.providers, leafpop, leafsync, lifecycle,"
-" lwgeom, magrittr, maps, mapview, markdown, memoise, microbenchmark, mime, "
-"munsell, odbc, openssl, pillar, pkgbuild, pkgconfig, pkgload, plogr, plyr, "
-"png, polyclip, praise, prettyunits, processx, promises, ps, purrr, R6, "
-"raster, RColorBrewer, Rcpp, reshape2, rex, rgeos, rlang, rmarkdown, "
-"RPostgres, RPostgreSQL, rprojroot, RSQLite, rstudioapi, satellite, scales, "
-"sf, shiny, sourcetools, sp, spatstat, spatstat.data, spatstat.utils, stars, "
-"stringi, stringr, svglite, sys, systemfonts, tensor, testthat, tibble, "
-"tidyselect, tinytex, units, utf8, uuid, vctrs, viridis, viridisLite, "
-"webshot, withr, xfun, XML, xtable``"
-msgstr ""
-"``abind, askpass, assertthat, backports, base64enc, BH, bit, bit64, blob, "
-"brew, callr, classInt, cli, colorspace, covr, crayon, crosstalk, curl, DBI, "
-"deldir, desc, dichromat, digest, dplyr, e1071, ellipsis, evaluate, fansi, "
-"farver, fastmap, gdtools, ggplot2, glue, goftest, gridExtra, gtable, highr, "
-"hms, htmltools, htmlwidgets, httpuv, httr, jsonlite, knitr, labeling, later,"
-" lazyeval, leafem, leaflet, leaflet.providers, leafpop, leafsync, lifecycle,"
-" lwgeom, magrittr, maps, mapview, markdown, memoise, microbenchmark, mime, "
-"munsell, odbc, openssl, pillar, pkgbuild, pkgconfig, pkgload, plogr, plyr, "
-"png, polyclip, praise, prettyunits, processx, promises, ps, purrr, R6, "
-"raster, RColorBrewer, Rcpp, reshape2, rex, rgeos, rlang, rmarkdown, "
-"RPostgres, RPostgreSQL, rprojroot, RSQLite, rstudioapi, satellite, scales, "
-"sf, shiny, sourcetools, sp, spatstat, spatstat.data, spatstat.utils, stars, "
-"stringi, stringr, svglite, sys, systemfonts, tensor, testthat, tibble, "
-"tidyselect, tinytex, units, utf8, uuid, vctrs, viridis, viridisLite, "
-"webshot, withr, xfun, XML, xtable``"
-
-#: ../../docs/user_manual/processing/3rdParty.rst:562
+#: ../../docs/user_manual/processing/3rdParty.rst:555
 msgid "GRASS"
 msgstr "GRASS"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:564
+#: ../../docs/user_manual/processing/3rdParty.rst:557
 msgid ""
 "Configuring GRASS is not much different from configuring SAGA. First, the "
 "path to the GRASS folder has to be defined, but only if you are running "
@@ -1088,7 +1036,7 @@ msgstr ""
 "cosa, il percorso della cartella di GRASS deve essere definito, ma solo se "
 "stai usando Windows."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:568
+#: ../../docs/user_manual/processing/3rdParty.rst:561
 msgid ""
 "By default, the Processing framework tries to configure its GRASS connector "
 "to use the GRASS distribution that ships along with QGIS. This should work "
@@ -1107,7 +1055,7 @@ msgstr ""
 " versione. GRASS 7 è necessario per far funzionare correttamente gli "
 "algoritmi."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:578
+#: ../../docs/user_manual/processing/3rdParty.rst:571
 msgid ""
 "If you are running Linux, you just have to make sure that GRASS is correctly"
 " installed, and that it can be run without problem from a terminal window."
@@ -1116,7 +1064,7 @@ msgstr ""
 "correttamente, e che possa essere eseguito senza problemi da una finestra di"
 " terminale."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:582
+#: ../../docs/user_manual/processing/3rdParty.rst:575
 msgid ""
 "GRASS algorithms use a region for calculations. This region can be defined "
 "manually using values similar to the ones found in the SAGA configuration, "
@@ -1133,11 +1081,11 @@ msgstr ""
 "basta selezionare l'opzione :guilabel:`Use min covering region` nei "
 "parametri di configurazione di GRASS."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:596
+#: ../../docs/user_manual/processing/3rdParty.rst:589
 msgid "LAStools"
 msgstr "LAStools"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:598
+#: ../../docs/user_manual/processing/3rdParty.rst:591
 msgid ""
 "To use `LAStools <https://rapidlasso.com/lastools/>`_ in QGIS, you need to "
 "download and install LAStools on your computer and install the LAStools "
@@ -1147,7 +1095,7 @@ msgstr ""
 "scaricare e installare LAStools sul tuo computer e installare il plugin "
 "LAStools (disponibile nel repository ufficiale) in QGIS."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:602
+#: ../../docs/user_manual/processing/3rdParty.rst:595
 msgid ""
 "On Linux platforms, you will need `Wine <https://www.winehq.org/>`_ to be "
 "able to run some of the tools."
@@ -1155,7 +1103,7 @@ msgstr ""
 "Sulle piattaforme Linux, avrai bisogno di `Wine <https://www.winehq.org/>`_ "
 "per essere in grado di eseguire alcuni degli strumenti."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:605
+#: ../../docs/user_manual/processing/3rdParty.rst:598
 msgid ""
 "LAStools is activated and configured in the Processing options "
 "(:menuselection:`Settings --> Options`, :guilabel:`Processing` tab, "
@@ -1170,18 +1118,18 @@ msgstr ""
 "(:guilabel:`Cartella Wine`). Su Ubuntu, la cartella predefinita di Wine è "
 ":file:`/usr/bin`."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:616
+#: ../../docs/user_manual/processing/3rdParty.rst:609
 msgid "OTB Applications"
 msgstr "Applicazioni OTB"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:618
+#: ../../docs/user_manual/processing/3rdParty.rst:611
 msgid ""
 "OTB applications are fully supported within the QGIS Processing framework."
 msgstr ""
 "Le applicazioni OTB sono pienamente supportate all'interno del framework "
 "QGIS Processing."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:621
+#: ../../docs/user_manual/processing/3rdParty.rst:614
 msgid ""
 "`OTB <https://www.orfeo-toolbox.org>`_ (Orfeo ToolBox) is an image "
 "processing library for remote sensing data. It also provides applications "
@@ -1195,7 +1143,7 @@ msgstr ""
 "L'elenco delle applicazioni e la loro documentazione sono disponibili in "
 "`OTB CookBook <https://www.orfeo-toolbox.org/CookBook/Applications.html>`_"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:628
+#: ../../docs/user_manual/processing/3rdParty.rst:621
 msgid ""
 "Note that OTB is not distributed with QGIS and needs to be installed "
 "separately. Binary packages for OTB can be found on the `download page "
@@ -1205,11 +1153,11 @@ msgstr ""
 "separatamente. I pacchetti binari per OTB possono essere trovati sulla "
 "pagina di download <https://www.orfeo-toolbox.org/download>`_."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:632
+#: ../../docs/user_manual/processing/3rdParty.rst:625
 msgid "To configure QGIS processing to find the OTB library:"
 msgstr "Per configurare processing di QGIS per trovare la libreria OTB:"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:634
+#: ../../docs/user_manual/processing/3rdParty.rst:627
 msgid ""
 "Open the processing settings: :menuselection:`Settings --> Options --> "
 "Processing` (left panel)*"
@@ -1217,19 +1165,19 @@ msgstr ""
 "Aprire le impostazioni di processing: :menuselection:`Impostazioni --> "
 "Opzioni --> Progtammi` (pannello sinistro)*"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:635
+#: ../../docs/user_manual/processing/3rdParty.rst:628
 msgid "You can see OTB under \"Providers\":"
 msgstr "Puoi vedere OTB sotto \"Programmi\":"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:637
+#: ../../docs/user_manual/processing/3rdParty.rst:630
 msgid "Expand the :guilabel:`OTB` tab"
 msgstr "Espandi la scheda :guilabel:`OTB"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:638
+#: ../../docs/user_manual/processing/3rdParty.rst:631
 msgid "Tick the :guilabel:`Activate` option"
 msgstr "Spunta l'opzione :guilabel:`Activate`"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:639
+#: ../../docs/user_manual/processing/3rdParty.rst:632
 msgid ""
 "Set the :guilabel:`OTB folder`. This is the location of your OTB "
 "installation."
@@ -1237,7 +1185,7 @@ msgstr ""
 "Imposta :guilabel:`OTB folder`. Questa è la posizione della tua "
 "installazione di OTB."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:640
+#: ../../docs/user_manual/processing/3rdParty.rst:633
 msgid ""
 "Set the :guilabel:`OTB application folder`. This is the location of your OTB"
 " applications ( :file:`<PATH_TO_OTB_INSTALLATION>/lib/otb/applications`)"
@@ -1245,13 +1193,13 @@ msgstr ""
 "Imposta :guilabel:`OTB application folder`. Questa è la posizione delle tue "
 "applicazioni OTB ( :file:`<PATH_TO_OTB_INSTALLATION>/lib/otb/applications`)"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:642
+#: ../../docs/user_manual/processing/3rdParty.rst:635
 msgid "Click \"ok\" to save the settings and close the dialog."
 msgstr ""
 "Clicca su \"ok\" per salvare le impostazioni e chiudere la finestra di "
 "dialogo."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:644
+#: ../../docs/user_manual/processing/3rdParty.rst:637
 msgid ""
 "If settings are correct, OTB algorithms will be available in the "
 ":guilabel:`Processing Toolbox`."
@@ -1259,11 +1207,11 @@ msgstr ""
 "Se le impostazioni sono corrette, gli algoritmi OTB saranno disponibili "
 "nella :guilabel:`Processing Toolbox`."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:648
+#: ../../docs/user_manual/processing/3rdParty.rst:641
 msgid "Documentation of OTB settings available in QGIS Processing"
 msgstr "Documentazione delle impostazioni OTB disponibili in QGIS Processing"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:651
+#: ../../docs/user_manual/processing/3rdParty.rst:644
 msgid ""
 "**Activate**: This is a checkbox to activate or deactivate the OTB provider."
 " An invalid OTB setting will uncheck this when saved."
@@ -1272,28 +1220,28 @@ msgstr ""
 "il provider OTB. Un'impostazione OTB non valida deselezionerà questa casella"
 " quando viene salvata."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:654
+#: ../../docs/user_manual/processing/3rdParty.rst:647
 msgid "**OTB folder**: This is the directory where OTB is available."
 msgstr "**OTB folder**: Questa è la cartella dove è disponibile OTB."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:656
+#: ../../docs/user_manual/processing/3rdParty.rst:649
 msgid ""
 "**OTB application folder**: This is the location(s) of OTB applications."
 msgstr ""
 "**OTB application folder**: Questa è la posizione(i) delle applicazioni OTB."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:658
+#: ../../docs/user_manual/processing/3rdParty.rst:651
 msgid "Multiple paths are allowed."
 msgstr "Sono ammessi più percorsi."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:660
+#: ../../docs/user_manual/processing/3rdParty.rst:653
 msgid ""
 "**Logger level** (optional): Level of logger to use by OTB applications."
 msgstr ""
 "**Logger level** (opzionale): Livello di log da utilizzare dalle "
 "applicazioni OTB."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:662
+#: ../../docs/user_manual/processing/3rdParty.rst:655
 msgid ""
 "The level of logging controls the amount of detail printed during algorithm "
 "execution. Possible values for logger level are ``INFO``, ``WARNING``, "
@@ -1305,7 +1253,7 @@ msgstr ""
 "``INFO``, ``WARNING``, ``CRITICAL``, ``DEBUG``. Questo valore è ``INFO`` per"
 " default. Questa è una configurazione utente avanzata."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:667
+#: ../../docs/user_manual/processing/3rdParty.rst:660
 msgid ""
 "**Maximum RAM to use** (optional): by default, OTB applications use all "
 "available system RAM."
@@ -1313,7 +1261,7 @@ msgstr ""
 "**Maximum RAM to use** (opzionale): per impostazione predefinita, le "
 "applicazioni OTB utilizzano tutta la RAM di sistema disponibile."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:670
+#: ../../docs/user_manual/processing/3rdParty.rst:663
 msgid ""
 "You can, however, instruct OTB to use a specific amount of RAM (in MB) using"
 " this option. A value of 256 is ignored by the OTB processing provider. This"
@@ -1323,11 +1271,11 @@ msgstr ""
 "MB) usando questa opzione. Un valore di 256 viene ignorato dal processing "
 "provider OTB. Questa è una configurazione utente avanzata."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:674
+#: ../../docs/user_manual/processing/3rdParty.rst:667
 msgid "**Geoid file** (optional): Path to the geoid file."
 msgstr "**Geoid file** (opzionale): Percorso al file geoid."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:676
+#: ../../docs/user_manual/processing/3rdParty.rst:669
 msgid ""
 "This option sets the value of the elev.dem.geoid and elev.geoid parameters "
 "in OTB applications. Setting this value globally enables users to share it "
@@ -1338,14 +1286,14 @@ msgstr ""
 "utenti di condividerlo tra più algoritmi di elaborazione. Vuoto per "
 "impostazione predefinita."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:681
+#: ../../docs/user_manual/processing/3rdParty.rst:674
 msgid ""
 "**SRTM tiles folder** (optional): Directory where SRTM tiles are available."
 msgstr ""
 "**SRTM tiles folder** (opzionale): Cartella dove sono disponibili i tasselli"
 " SRTM."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:684
+#: ../../docs/user_manual/processing/3rdParty.rst:677
 msgid ""
 "SRTM data can be stored locally to avoid downloading of files during "
 "processing. This option sets the value of elev.dem.path and elev.dem "
@@ -1358,11 +1306,11 @@ msgstr ""
 "globalmente permette agli utenti di condividerlo tra più algoritmi di "
 "elaborazione. Vuoto per impostazione predefinita."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:691
+#: ../../docs/user_manual/processing/3rdParty.rst:684
 msgid "Compatibility between QGIS and OTB versions"
 msgstr "Compatibilità tra le versioni di QGIS e OTB"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:693
+#: ../../docs/user_manual/processing/3rdParty.rst:686
 msgid ""
 "All OTB versions (from OTB 6.6.1) are compatible with the latest QGIS "
 "version."
@@ -1370,11 +1318,11 @@ msgstr ""
 "Tutte le versioni di OTB (da OTB 6.6.1) sono compatibili con l'ultima "
 "versione di QGIS."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:696
+#: ../../docs/user_manual/processing/3rdParty.rst:689
 msgid "Troubleshoot"
 msgstr "Risoluzione dei problemi"
 
-#: ../../docs/user_manual/processing/3rdParty.rst:697
+#: ../../docs/user_manual/processing/3rdParty.rst:690
 msgid ""
 "If you have issues with OTB applications in QGIS Processing, please open an "
 "issue on the `OTB bug tracker <https://gitlab.orfeo-"
@@ -1384,10 +1332,10 @@ msgstr ""
 " su `OTB bug tracker <https://gitlab.orfeo-"
 "toolbox.org/orfeotoolbox/otb/-/issues>`_, usando l'etichetta ``qgis``."
 
-#: ../../docs/user_manual/processing/3rdParty.rst:701
+#: ../../docs/user_manual/processing/3rdParty.rst:694
 msgid ""
-"Additional information about OTB and QGIS can be found `here <https://www"
-".orfeo-toolbox.org/CookBook-develop/QGISInterface.html>`_"
+"Additional information about OTB and QGIS can be found `here "
+"<https://www.orfeo-toolbox.org/CookBook-develop/QGISInterface.html>`_"
 msgstr ""
 "Ulteriori informazioni su OTB e QGIS possono essere trovate `here "
 "<https://www.orfeo-toolbox.org/CookBook-develop/QGISInterface.html>`_"

@@ -8,8 +8,8 @@
 # Harrissou Sant-anna, 2022
 # Ana Carla Rizzo Mendes, 2022
 # Vanessa Stelzer, 2022
-# Letícia Jardim, 2022
 # Ana Camargo, 2022
+# Letícia Jardim, 2022
 # 
 #, fuzzy
 msgid ""
@@ -18,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-04-27 02:44+0000\n"
 "PO-Revision-Date: 2022-03-14 05:13+0000\n"
-"Last-Translator: Ana Camargo, 2022\n"
+"Last-Translator: Letícia Jardim, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -283,6 +283,22 @@ msgstr ""
 "|metadados| A guia: guilabel: ` informação` é somente leitura e representa "
 "um local interessante para obter rapidamente informações resumidas e "
 "metadados na camada atual. As informações fornecidas são:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:86
+msgid ""
+"the Coordinate Reference System: name, units, method, accuracy, reference "
+"(i.e. whether it's static or dynamic)"
+msgstr ""
+"o Sistema de Referência de Coordenadas: nome, unidades, método, precisão, "
+"referência (ou seja, se é estático ou dinâmico)"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:90
+msgid ""
+"and related to its geometry (spatial extent, CRS...) or its attributes "
+"(number of fields, characteristics of each...)."
+msgstr ""
+"e relacionados à sua geometria (extensão espacial, SRC...) ou seus atributos"
+" (número de campos, características de cada um...)."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:97
 msgid "Source Properties"
@@ -1121,6 +1137,14 @@ msgstr ""
 "De volta à guia Classes, você pode especificar o número de classes e também "
 "o modo para classificar os recursos dentro das classes (usando a lista "
 "Modo). Os modos disponíveis são:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:512
+msgid ""
+"Equal Interval: each class will have the same size (e.g. with the values "
+"from 1 to 16 and four classes, each class will have a size of four)."
+msgstr ""
+"Intervalo igual: cada classe terá o mesmo tamanho (por exemplo, com os "
+"valores de 1 a 16 e quatro classes, cada classe terá um tamanho de quatro)."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:524
 msgid ""
@@ -2584,6 +2608,13 @@ msgstr ""
 "intervalo de escala, como em: ref: `Renderização baseada em "
 "regras<rule_based_rendering>`."
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1385
+msgid ""
+"Click the |symbologyAdd| :sup:`Add rule` button at the bottom of the dialog."
+msgstr ""
+"Clique no botão |symbologyAdd| :sup:`Adicionar regra` na parte inferior da "
+"caixa de diálogo."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:1386
 msgid "Fill the new dialog with:"
 msgstr "Preencher a nova caixa de diálogo com:"
@@ -2605,6 +2636,14 @@ msgstr ""
 "Se já houver regras definidas, a opção :guilabel:`Senão` pode ser utilizada "
 "para selecionar todas as características que não correspondem a nenhum "
 "filtro das regras no mesmo grupo."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1396
+msgid ""
+"You can set a :ref:`scale range <label_scaledepend>` in which the label rule"
+" should be applied."
+msgstr ""
+"Você pode definir um intervalo de escala de ref:`referência' na qual a regra"
+" de rótulo deve ser aplicada."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:1407
 msgid "Rule settings"
@@ -4983,6 +5022,16 @@ msgstr "Identificação do mapa"
 msgid "Simplify geometry"
 msgstr "Simplificar geometria"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3140
+msgid ""
+"You can also do this by forcing the layout to export as a raster, but that "
+"is an all-or-nothing solution, given that the rasterisation is applied to "
+"all layers."
+msgstr ""
+"Você também pode fazer isso forçando o layout a ser exportado como raster, "
+"mas essa é uma solução de tudo ou nada, já que a rasterização é aplicada a "
+"todas as camadas."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3158
 msgid ""
 "If set, the reference scale indicates the map scale at which symbology and "
@@ -4999,6 +5048,25 @@ msgstr ""
 msgid "Temporal Properties"
 msgstr "Propriedades Temporais"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3203
+msgid ""
+":guilabel:`Start and end date/time from expressions`: features are rendered "
+"if the time range specified by the fields :guilabel:`Start expression` and "
+":guilabel:`End expression` overlaps the map canvas temporal."
+msgstr ""
+":guilabel:`Data/hora de início e fim das expressões`: as características são"
+" renderizadas se o intervalo de tempo especificado pelos campos "
+":guilabel:`Expressão de início` e :guilabel:`Expressão de fim` se sobrepõem "
+"ao tempo da tela do mapa."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3213
+msgid ":guilabel:`Include start, exclude end`"
+msgstr ":guilabel: `Inclua início, exclua fim`"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3214
+msgid ":guilabel:`Include start, include end`"
+msgstr ":guilabel:`Inclua o início, inclua o fim'."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3222
 msgid "Variables Properties"
 msgstr "Propriedades das Variáveis"
@@ -5007,6 +5075,10 @@ msgstr "Propriedades das Variáveis"
 msgid "Metadata Properties"
 msgstr "Propriedades dos Metadados"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3251
+msgid "Dependencies Properties"
+msgstr "Propriedades de Dependências"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3270
 msgid "Legend Properties"
 msgstr "Propriedades da legenda"
@@ -5014,6 +5086,11 @@ msgstr "Propriedades da legenda"
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3315
 msgid "QGIS Server Properties"
 msgstr "Propriedades do Servidor QGIS"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3345
+msgid "To learn more about QGIS Server, read the :ref:`QGIS-Server-manual`."
+msgstr ""
+"Para saber mais sobre o Servidor QGIS, leia o:ref:`QGIS-Server-manual`."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3351
 msgid "Digitizing Properties"
@@ -5030,6 +5107,10 @@ msgstr "Verificações de Geometria"
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3395
 msgid "Topology Checks"
 msgstr "Verificações de Topologia"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3409
+msgid "Topology check option"
+msgstr "Opção de verificação de topologia"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3410
 msgid "Illustration"

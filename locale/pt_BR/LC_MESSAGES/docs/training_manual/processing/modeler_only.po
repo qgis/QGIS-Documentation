@@ -7,8 +7,8 @@
 # Translators:
 # Ana Carla Rizzo Mendes, 2022
 # Vanessa Stelzer, 2022
-# Letícia Jardim, 2022
 # Ana Camargo, 2022
+# Letícia Jardim, 2022
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-12 00:23+0100\n"
 "PO-Revision-Date: 2022-03-14 05:06+0000\n"
-"Last-Translator: Ana Camargo, 2022\n"
+"Last-Translator: Letícia Jardim, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -81,6 +81,34 @@ msgstr ""
 "Abra o modelador e inicie o modelo adicionando as entradas necessárias. "
 "Neste caso, precisamos de uma camada vetorial (restrita a pontos) e um "
 "atributo dela, com os valores que utilizaremos para a rasterização."
+
+#: ../../docs/training_manual/processing/modeler_only.rst:14
+msgid ""
+"The next step is to compute the extent of the selected features. That's "
+"where we can use the model-only tool called *Vector layer bounds*. First, we"
+" will have to create a layer that has the extent of those selected features."
+" Then, we can use this tool on that layer."
+msgstr ""
+"O próximo passo é calcular a extensão das características selecionadas. É aí"
+" que podemos usar a ferramenta somente modelo chamada *Limites da camada "
+"vetorial*. Primeiro, teremos que criar uma camada que tenha a extensão "
+"dessas características selecionadas. Depois, podemos usar esta ferramenta "
+"nessa camada."
+
+#: ../../docs/training_manual/processing/modeler_only.rst:16
+msgid ""
+"An easy way of creating a layer with the extent of the selected features is "
+"to compute a convex hull of the input points layer. It will use only the "
+"selected point, so the convex hull will have the same bounding box as the "
+"selection. Then we can add the *Vector layer bounds* algorithm, and use the "
+"convex hull layer as input. It should look this in the modeler canvas:"
+msgstr ""
+"Uma maneira fácil de criar uma camada com a extensão das características "
+"selecionadas é calcular um casco convexo da camada de pontos de entrada. Ele"
+" usará apenas o ponto selecionado, de modo que o casco convexo terá a mesma "
+"caixa de delimitação que a seleção. Então podemos adicionar o algoritmo "
+"*Limites da camada vetorial*, e usar a camada convexa do casco como entrada."
+" Ele deve ser visto na tela do modelador:"
 
 #: ../../docs/training_manual/processing/modeler_only.rst:20
 msgid ""

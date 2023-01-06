@@ -87,6 +87,10 @@ msgstr ""
 " também explora as ferramentas baseadas no provedor de dados ou nas "
 "especificidades do formato. "
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1479
+msgid "kde"
+msgstr "kde"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:115
 msgid "Exploring the Interface"
 msgstr "Explorando a Interface"
@@ -130,9 +134,17 @@ msgstr "geoPackage"
 msgid "|postgis| :guilabel:`PostGIS`"
 msgstr "|postgis| :guilabel:`PostGIS`"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1493
+msgid "postgis"
+msgstr "postgis"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:155
 msgid "|mssql| :guilabel:`MSSQL`"
 msgstr "|mssql| :guilabel:`MSSQL`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1483
+msgid "mssql"
+msgstr "mssql"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:156
 msgid "|oracle| :guilabel:`Oracle`"
@@ -200,6 +212,14 @@ msgstr ":guilabel:`Adicionar camada ao projeto`"
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:210
 msgid ":guilabel:`Layer Properties`"
 msgstr ":guilabel:`Propriedades da Camada`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:211
+msgid ""
+":menuselection:`Manage --> Rename \"<name of file>\"...` or "
+":guilabel:`Delete \"<name of file>\"...`"
+msgstr ""
+":menuselection:`Gerenciar --> Renomear \"<name of file>\"...` ou "
+":guilabel:`Deletar \"<name of file>\"...`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:213
 msgid ":guilabel:`Show in Files`"
@@ -306,6 +326,22 @@ msgstr "criar :ref:`virtual layers <vector_virtual_layers>`"
 msgid "DB Manager dialog"
 msgstr "Caixa de diálogo Gerenciador DB"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:328
+msgid ""
+"Some :ref:`external plugins <plugins>` also provide tools to open specific "
+"format files in QGIS."
+msgstr ""
+"Alguns: 'plugins externos <plugins>' também fornecem ferramentas para abrir "
+"arquivos de formato específico no QGIS."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:336
+msgid "Loading a layer from a file"
+msgstr "Carregando uma camada de um arquivo"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:338
+msgid "To load a layer from a file:"
+msgstr "Para carregar uma camada de um arquivo:"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:340
 msgid ""
 "Open the layer type tab in the :guilabel:`Data Source Manager` dialog, ie "
@@ -353,6 +389,26 @@ msgstr ""
 "ser carregados selecionando ``Todos os arquivos`` (o item superior no menu "
 "pull-down). "
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:386
+msgid "Loading a Shapefile with open options"
+msgstr "Carregando um Shapefile com opções em aberto"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:396
+msgid "QGIS with Shapefile of Alaska loaded"
+msgstr "QGIS com Shapefile do Alasca carregado"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:407
+msgid ""
+"Because some formats like MapInfo (e.g., :file:`.tab`) or Autocad "
+"(:file:`.dxf`) allow mixing different types of geometry in a single file, "
+"loading such datasets opens a dialog to select geometries to use in order to"
+" have one geometry per layer."
+msgstr ""
+"Como alguns formatos como MapInfo (por exemplo, :file:`.tab`) ou Autocad "
+"(:file:`.dxf`) permitem misturar diferentes tipos de geometria em um único "
+"arquivo, carregar tais conjuntos de dados abre um diálogo para selecionar as"
+" geometrias a serem utilizadas a fim de ter uma geometria por camada."
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:434
 msgid ""
 "The |radioButtonOn| :guilabel:`Protocol: HTTP(S), cloud, etc.` source type "
@@ -364,6 +420,14 @@ msgstr ""
 "abre dados armazenados localmente ou na rede sejam publicamente acessíveis, "
 "ou em armazenamentos  em nuvem particulares fornecidos por serviços "
 "comerciais. Os tipos de protocolo suportados são: "
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:455
+msgid "Loading a mesh layer"
+msgstr "Carregando uma camada de malha"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:461
+msgid "To add a mesh layer to QGIS:"
+msgstr "Para adicionar uma camada de malha ao QGIS:"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:466
 msgid "Enable the |addMeshLayer| :guilabel:`Mesh` tab on the left panel"
@@ -381,9 +445,28 @@ msgstr ""
 "Pressione o botão :guilabel:`...` :sup:`Buscar` para selecionar o arquivo. "
 ":ref:`Vários formatos <mesh_supported_formats>` são suportados."
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:489
+msgid "Importing a delimited text file"
+msgstr "Importando um arquivo de texto delimitado"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:501
 msgid "Enable the |addDelimitedTextLayer| :guilabel:`Delimited Text` tab"
 msgstr "Ative a guia |addDelimitedTextLayer| :guilabel:`Texto Delimitado`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:504
+msgid ""
+"In the :guilabel:`Layer name` field, provide the name to use for the layer "
+"in the project (e.g. :file:`Elevation`)."
+msgstr ""
+"No campo :guilabel:`Nome da camada`, fornecer o nome a ser utilizado para a "
+"camada no projeto (por exemplo :file:`Elevação`)."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:506
+msgid ""
+"Configure the settings to meet your dataset and needs, as explained below."
+msgstr ""
+"Configure as configurações para atender seu conjunto de dados e "
+"necessidades, conforme explicado abaixo."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:516
 msgid "File format"
@@ -402,13 +485,51 @@ msgstr ""
 "o delimitador correto. Você pode especificar um delimitador escolhendo "
 "entre: "
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:523
+msgid ""
+"|radioButtonOn|:guilabel:`CSV (comma separated values)` to use the comma "
+"character."
+msgstr ""
+"|radioButtonOn|:guilabel:`CSV (valores separados por vírgula)` para utilizar"
+" o caractere de vírgula."
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1495
 msgid "radioButtonOff"
 msgstr "botãoRádioDesligado"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:533
+msgid "Records and fields"
+msgstr "Registros e campos"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:535
+msgid "Some other convenient options can be used for data recognition:"
+msgstr ""
+"Algumas outras opções convenientes podem ser usadas para reconhecimento de "
+"dados:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:545
+msgid ""
+"|checkbox|:guilabel:`Decimal separator is comma`: you can force decimal "
+"separator to be a comma."
+msgstr ""
+"|checkbox|:guilabel:`Separador decimal é vírgula`: você pode forçar o "
+"separador decimal a ser uma vírgula."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:555
+msgid "Geometry definition"
+msgstr "Definição de geometria"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1501
 msgid "setProjection"
 msgstr "definirProjeção"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:577
+msgid "Layer settings"
+msgstr "Configurações de camada"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:579
+msgid "Additionally, you can enable:"
+msgstr "Além disso, você pode habilitar:"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:581
 msgid ""
@@ -476,6 +597,22 @@ msgstr "O QGIS também suporta visualizações editáveis ​​no SpatiaLite."
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:708
 msgid "GPS"
 msgstr "GPS"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:710
+msgid ""
+"There are dozens of different file formats for storing GPS data. The format "
+"that QGIS uses is called GPX (GPS eXchange format), which is a standard "
+"interchange format that can contain any number of waypoints, routes and "
+"tracks in the same file."
+msgstr ""
+"Existem dezenas de formatos de arquivo diferentes para armazenar dados GPS. "
+"O formato que o QGIS usa é chamado GPX (formato GPS eXchange), que é um "
+"formato padrão de intercâmbio que pode conter qualquer número de pontos de "
+"passagem, rotas e trilhas no mesmo arquivo."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:724
+msgid "Loading GPS Data dialog"
+msgstr "Carregando a janela de dados do GPS"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:727
 msgid "GRASS"
@@ -623,6 +760,15 @@ msgstr ""
 msgid "**Use estimated table metadata to speed up operations**"
 msgstr "**Usar metadados de tabela estimados para acelerar as operações**"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:891
+msgid ""
+"Because of database type particularities, provided options are not the same."
+" Database specific options are described below."
+msgstr ""
+"Devido às particularidades do tipo de banco de dados, as opções fornecidas "
+"não são as mesmas. As opções específicas do banco de dados estão descritas "
+"abaixo."
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:906
 msgid "The service file can look like this::"
 msgstr "O arquivo de serviço pode se parecer com o seguinte::"
@@ -718,6 +864,12 @@ msgstr "nix"
 msgid "osx"
 msgstr "osx"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1139
+msgid "To load a layer from a database, you can perform the following steps:"
+msgstr ""
+"Para carregar uma camada de um banco de dados, você pode executar as "
+"seguintes etapas:"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1149
 msgid "Find the layer(s) you wish to add in the list of available layers."
 msgstr ""
@@ -745,6 +897,10 @@ msgstr ""
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1186
 msgid "QGIS Custom formats"
 msgstr "Formatos personalizados QGIS"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1188
+msgid "QGIS proposes two custom formats:"
+msgstr "O QGIS propõe dois formatos personalizados:"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1218
 msgid "Connecting to web services"

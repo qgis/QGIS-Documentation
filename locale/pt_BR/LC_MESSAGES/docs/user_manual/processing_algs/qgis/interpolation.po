@@ -7,8 +7,8 @@
 # Translators:
 # Harrissou Sant-anna, 2022
 # Vanessa Stelzer, 2022
-# Ana Camargo, 2022
 # Letícia Jardim, 2022
+# Ana Camargo, 2022
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-16 07:30+0000\n"
 "PO-Revision-Date: 2022-03-14 05:13+0000\n"
-"Last-Translator: Letícia Jardim, 2022\n"
+"Last-Translator: Ana Camargo, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -138,13 +138,31 @@ msgstr "Padrão: 0.1"
 msgid "Optional"
 msgstr "Opcional"
 
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:70
+msgid "``RADIUS_FIELD``"
+msgstr "``RADIUS_FIELD``"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:77
+msgid "``WEIGHT_FIELD``"
+msgstr "``WEIGHT_FIELD``"
+
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:83
 msgid "``KERNEL``"
 msgstr "``KERNEL``"
 
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:84
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:131
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:536
+msgid "[enumeration]"
+msgstr "[enumeração]"
+
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:86
 msgid "Default: *0*"
 msgstr "Padrão: *0*"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:99
+msgid "0 --- Quartic"
+msgstr "0 --- Quartico"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:100
 msgid "1 --- Triangular"
@@ -158,9 +176,18 @@ msgstr "2 --- Uniforme"
 msgid "Default: *0.0*"
 msgstr "Padrão: *0.0*"
 
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:130
+msgid "``OUTPUT_VALUE``"
+msgstr "``OUTPUT_VALUE``"
+
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:137
 msgid "0 --- Raw"
 msgstr "0 --- Bruto"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:140
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:164
+msgid "**Heatmap**"
+msgstr "**Mapa de calor**"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:141
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:165
@@ -191,6 +218,12 @@ msgstr "[raster]"
 msgid "Default: ``[Save to temporary file]``"
 msgstr "Padrão: ``[Salvar em arquivo temporário]``"
 
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:145
+msgid "Specify the output raster layer with kernel density values. One of:"
+msgstr ""
+"Especificar a camada raster de saída com valores de densidade de kernel. Um "
+"de:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
 msgstr "Salvar como Arquivo Temporário"
@@ -202,6 +235,14 @@ msgstr "Salvar como Arquivo Temporário"
 msgid "Outputs"
 msgstr "Saídas"
 
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:167
+msgid "Raster layer with kernel density values"
+msgstr "Camada raster com valores de densidade de kernel"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:170
+msgid "Example: Creating a Heatmap"
+msgstr "Exemplo: Criando um mapa de calor"
+
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:184
 msgid "Airports of Alaska"
 msgstr "Aeroportos do Alasca"
@@ -209,6 +250,14 @@ msgstr "Aeroportos do Alasca"
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:630
 msgid "selectString"
 msgstr "selecionarCadeia"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:216
+msgid "The heatmap after loading looks like a grey surface"
+msgstr "O mapa de calor após o carregamento parece uma superfície cinza"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:237
+msgid "Styled heatmap of airports of Alaska"
+msgstr "Mapa de calor estilizado dos aeroportos do Alasca"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:242
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:375
@@ -220,6 +269,21 @@ msgstr "Código Python"
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:254
 msgid "IDW Interpolation"
 msgstr "Interpolação IDW"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:262
+msgid ""
+"The IDW interpolation method also has some disadvantages: the quality of the"
+" interpolation result can decrease, if the distribution of sample data "
+"points is uneven."
+msgstr ""
+"O método de interpolação IDW também tem algumas desvantagens: a qualidade do"
+" resultado da interpolação pode diminuir, se a distribuição dos pontos de "
+"dados amostrais for desigual."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:282
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:505
+msgid "**Input layer(s)**"
+msgstr "**Camada(s) de entrada**"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:284
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:507
@@ -291,6 +355,14 @@ msgstr "Insira as coordenadas como ``xmin, xmax, ymin, ymax``"
 msgid "**Interpolated**"
 msgstr "**Interpolado**"
 
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:350
+msgid "Raster layer of interpolated values. One of:"
+msgstr "Camada raster de valores interpolados. Um de:"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:372
+msgid "Raster layer of interpolated values"
+msgstr "Camada raster de valores interpolados"
+
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:387
 msgid "Line Density"
 msgstr "Densidade de linha"
@@ -311,6 +383,13 @@ msgstr "*Campo de peso**"
 msgid "``WEIGHT``"
 msgstr "``PESO``"
 
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:421
+msgid ""
+"Field of the layer containing the weight factor to use during the "
+"calculation"
+msgstr ""
+"Campo da camada que contém o fator de peso a ser usado durante o cálculo"
+
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:427
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:434
 msgid "Default: 10"
@@ -319,6 +398,14 @@ msgstr "Padrão: 10"
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:430
 msgid "**Pixel size**"
 msgstr "**Tamanho dos pixels**"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:489
+msgid ""
+"The algorithm creates both the raster layer of the interpolated values and "
+"the vector line layer with the triangulation boundaries."
+msgstr ""
+"O algoritmo cria tanto a camada raster dos valores interpolados quanto a "
+"camada vetorial de linha com os limites da triangulação."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:534
 msgid "**Interpolation method**"
@@ -331,6 +418,10 @@ msgstr "``MÉTODO``"
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:538
 msgid "Default: 0"
 msgstr "Padrão: 0"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:539
+msgid "Set the interpolation method to be used. One of:"
+msgstr "Defina o método de interpolação a ser usado. Um de:"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:541
 msgid ":guilabel:`Linear`"

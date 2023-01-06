@@ -84,6 +84,22 @@ msgstr ""
 msgid "To query the current renderer:"
 msgstr "Para consultar o renderizador atual:"
 
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:173
+msgid ""
+"To set a renderer, use the :meth:`setRenderer() "
+"<qgis.core.QgsRasterLayer.setRenderer>` method of :class:`QgsRasterLayer "
+"<qgis.core.QgsRasterLayer>`. There are a number of renderer classes (derived"
+" from :class:`QgsRasterRenderer <qgis.core.QgsRasterRenderer>`):"
+msgstr ""
+"Para definir um renderizador, utilize o método :meth:`setRenderer() "
+"<qgis.core.QgsRasterLayer.setRenderer>` método de :class:`QgsRasterLayer "
+"<qgis.core.QgsRasterLayer>`. Há um número de classes de renderizador "
+"(derivado de :class:`QgsRasterRenderer <qgis.core.QgsRasterRenderer>`):"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:178
+msgid ":class:`QgsHillshadeRenderer <qgis.core.QgsHillshadeRenderer>`"
+msgstr ":class:`QgsHillshadeRenderer <qgis.core.QgsHillshadeRenderer>`"
+
 #: ../../docs/pyqgis_developer_cookbook/raster.rst:179
 msgid ""
 ":class:`QgsMultiBandColorRenderer <qgis.core.QgsMultiBandColorRenderer>`"
@@ -95,6 +111,11 @@ msgid ""
 ":class:`QgsPalettedRasterRenderer <qgis.core.QgsPalettedRasterRenderer>`"
 msgstr ""
 ":class:`QgsPalettedRasterRenderer <qgis.core.QgsPalettedRasterRenderer>`"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:181
+msgid ":class:`QgsRasterContourRenderer <qgis.core.QgsRasterContourRenderer>`"
+msgstr ""
+":class:`QgsRasterContourRenderer <qgis.core.QgsRasterContourRenderer>`"
 
 #: ../../docs/pyqgis_developer_cookbook/raster.rst:182
 msgid ""
@@ -196,6 +217,14 @@ msgstr ""
 "O número ``1 '' no código acima é o número da banda (as bandas raster são "
 "indexadas a partir de uma)."
 
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:236
+msgid ""
+"Finally we have to use the :meth:`triggerRepaint() "
+"<qgis.core.QgsMapLayer.triggerRepaint>` method to see the results:"
+msgstr ""
+"Finalmente temos que utilizar o método :meth:`triggerRepaint() "
+"<qgis.core.QgsMapLayer.triggerRepaint>` para ver os resultados:"
+
 #: ../../docs/pyqgis_developer_cookbook/raster.rst:248
 msgid "Multi Band Rasters"
 msgstr "Rasters Multibandas"
@@ -209,9 +238,36 @@ msgstr ""
 "desenho de banda única pode ser escolhido, tanto em níveis de cinza quanto "
 "em pseudocolor."
 
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:264
+msgid ""
+"We have to use :meth:`triggerRepaint() "
+"<qgis.core.QgsMapLayer.triggerRepaint>` to update the map and see the "
+"result:"
+msgstr ""
+"Temos que utilizar :meth:`triggerRepaint() "
+"<qgis.core.QgsMapLayer.triggerRepaint>` para atualizar o mapa e ver o "
+"resultado:"
+
 #: ../../docs/pyqgis_developer_cookbook/raster.rst:278
 msgid "Query Values"
 msgstr "Valores de Consulta"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:280
+msgid ""
+"Raster values can be queried using the :meth:`sample() "
+"<qgis.core.QgsRasterDataProvider.sample>` method of the "
+":class:`QgsRasterDataProvider <qgis.core.QgsRasterDataProvider>` class. You "
+"have to specify a :class:`QgsPointXY <qgis.core.QgsPointXY>` and the band "
+"number of the raster layer you want to query. The method returns a tuple "
+"with the value and :const:`True` or :const:`False` depending on the results:"
+msgstr ""
+"Valores Raster podem ser consultados utilizando o método :meth:`sample() "
+"<qgis.core.QgsRasterDataProvider.sample>` método da "
+":class:`QgsRasterDataProvider <qgis.core.QgsRasterDataProvider>` class. Você"
+" tem que especificar uma :class:`QgsPointXY <qgis.core.QgsPointXY>` e o "
+"número da banda da camada raster que você deseja consultar. O método retorna"
+" um tuplo com o valor e :const:`Verdadeiro` ou :const:`Falso`, dependendo "
+"dos resultados:"
 
 #: ../../docs/pyqgis_developer_cookbook/raster.rst:313
 msgid "Editing raster data"
@@ -226,3 +282,13 @@ msgstr ""
 "Você pode criar uma camada raster utilizando a :class:`QgsRasterBlock "
 "<qgis.core.QgsRasterBlock>` class. Por exemplo, para criar um bloco raster "
 "2x2 com um byte por pixel:"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:323
+msgid ""
+"Raster pixels can be overwritten thanks to the :meth:`writeBlock() "
+"<qgis.core.QgsRasterDataProvider.writeBlock>` method. To overwrite existing "
+"raster data at position 0,0 by the 2x2 block:"
+msgstr ""
+"Os pixels raster podem ser sobrescritos graças ao método :meth:`writeBlock()"
+" <qgis.core.QgsRasterDataProvider.writeBlock>`. Para sobrescrever dados "
+"raster existentes na posição 0,0 pelo bloco 2x2:"

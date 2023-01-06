@@ -16,14 +16,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-22 02:43+0000\n"
+"POT-Creation-Date: 2022-12-21 02:17+0000\n"
 "PO-Revision-Date: 2022-03-14 05:07+0000\n"
 "Last-Translator: Letícia Jardim, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.10.3\n"
+"Generated-By: Babel 2.11.0\n"
 "Language: pt_BR\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -586,6 +586,10 @@ msgstr ""
 "para a feição ativa o na tela do mapa pressionando qualquer botão na parte "
 "inferior:"
 
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:143
+msgid "|zoomTo| :sup:`Zoom to current feature`"
+msgstr "|zoomTo| :sup:`Zoom para a feição atual`"
+
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1393
 msgid "zoomTo"
 msgstr "zoom para"
@@ -622,6 +626,10 @@ msgstr "Configurando as colunas"
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:170
 msgid "the :ref:`column(s) size <resize_columns>`"
 msgstr "the :ref:`tamanho(s) da(s) coluna(s) <resize_columns>`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:171
+msgid "the :ref:`column(s) visibility and order <organize_columns>`"
+msgstr "a :ref:`coluna(s) visibilidade e ordem <organize_columns>`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:177
 msgid "Resizing columns widths"
@@ -1526,6 +1534,28 @@ msgstr "link"
 msgid "unlink"
 msgstr "desvincular"
 
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:834
+msgid ""
+"If you use the :ref:`Drag and Drop Designer <customize_form>` for the "
+"regions feature, you can select which tools are available. You can even "
+"decide whether to open a new form when a new feature is added using "
+":guilabel:`Force hide form on add feature` option. Be aware that this option"
+" implies that not null attributes must take a valid default value to work "
+"correctly."
+msgstr ""
+"Se você utilizar a função :ref:`Design de arrastar e soltar' para as "
+"regiões, você pode selecionar quais ferramentas estão disponíveis. Você pode"
+" até decidir se deseja abrir um novo formulário quando um novo recurso for "
+"adicionado utilizando a opção :guilabel:`Forçar a forma de ocultação no "
+"recurso adicionar`. Esteja ciente de que esta opção implica que atributos "
+"não nulos devem ter um valor padrão válido para funcionar corretamente."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:844
+msgid "Drag and Drop Designer for configure regions-airports relation tools"
+msgstr ""
+"Design de arrasta/solta para configuração de regiões - ferramentas de "
+"relação aeroportos"
+
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1295
 msgid "addPart"
 msgstr "adicionar parte"
@@ -1533,6 +1563,17 @@ msgstr "adicionar parte"
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:873
 msgid "Identification dialog airport with relation to regions"
 msgstr "Diálogo de identificação do aeroporto com relação às regiões"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:880
+msgid ""
+"If you look at the feature dialog now, you will see, that the form of the "
+"region is embedded inside the airports form and will even have a combobox, "
+"which allows you to assign the current airport to another region."
+msgstr ""
+"Se você olhar para a caixa de diálogo de feições agora, você verá, que a "
+"forma da região está embutida dentro do formulário dos aeroportos e terá até"
+" mesmo uma caixa combinada, o que lhe permite atribuir o aeroporto atual a "
+"outra região."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:903
 msgid ""
@@ -1550,6 +1591,42 @@ msgstr "Selecione as características dos pais com valores infantis"
 msgid "Introducing many-to-many (N-M) relations"
 msgstr "Introduzindo as relações entre muitos para muitos (N-M)"
 
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:975
+msgid ""
+"Instead of PostgreSQL you can also use GeoPackage. In this case, the three "
+"tables can be created manually using the :menuselection:`Database --> DB "
+"Manager…`. In GeoPackage there are no schemas so the *locations* prefix is "
+"not needed."
+msgstr ""
+"Ao invés do PostgreSQL, você também pode usar o GeoPackage. Neste caso, as "
+"três tabelas podem ser criadas manualmente utilizando o :menuselection:`Base"
+" de Dados --> Gerenciar BD...`. No GeoPackage não há esquemas, portanto o "
+"prefixo *localizações* não é necessário."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:985
+msgid ""
+"Set up the table only with the ``id`` field using :menuselection:`Table --> "
+"Create Table…`"
+msgstr ""
+"Configure a tabela somente com o campo \"ID\", utilizando "
+":menuselection:`Tabela --> Criar Tabela...`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:986
+msgid ""
+"Using :menuselection:`Database --> SQL Window…`, type and execute this SQL "
+"code:"
+msgstr ""
+"Utilizando :menuselection:`Base de dados --> SQL Window...`, digite e "
+"execute este código SQL:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1004
+msgid ""
+"Then in QGIS, you should set up two :ref:`one-to-many relations "
+"<one_to_many_relation>` as explained above:"
+msgstr ""
+"Então, no QGIS, você deve estabelecer duas: ref:`uma-para-muitas relações "
+"<one_to_many_relation>` como explicado acima:"
+
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1007
 msgid "a relation between ``airlines`` table and the pivot table;"
 msgstr "uma relação entre a \"tabela de linhas aéreas\" e a tabela dinâmica;"
@@ -1558,9 +1635,51 @@ msgstr "uma relação entre a \"tabela de linhas aéreas\" e a tabela dinâmica;
 msgid "and a second one between ``airports`` table and the pivot table."
 msgstr "e uma segunda entre a mesa \"aeroportos\" e a tabela dinâmica."
 
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1010
+msgid ""
+"An easier way to do it (only for PostgreSQL) is using the "
+":guilabel:`Discover Relations` in :menuselection:`Project --> Properties -->"
+" Relations`. QGIS will automatically read all relations in your database and"
+" you only have to select the two you need. Remember to load the three tables"
+" in the QGIS project first."
+msgstr ""
+"Uma maneira mais fácil de fazê-lo (somente para o PostgreSQL) é utilizar o "
+":guilabel:`Relações de Descoberta' em :menuselection:`Projeto --> "
+"Propriedades --> Relações'. QGIS lerá automaticamente todas as relações em "
+"seu banco de dados e você só terá que selecionar as duas que você precisa. "
+"Lembre-se de carregar primeiro as três tabelas do projeto QGIS."
+
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1020
 msgid "Relations and autodiscover"
 msgstr "Relações e auto-descobrimento"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1022
+msgid ""
+"In case you want to remove an ``airport`` or an ``airline``, QGIS won't "
+"remove the associated record(s) in ``airports_airlines`` table. This task "
+"will be made by the database if we specify the right *constraints* in the "
+"pivot table creation as in the current example."
+msgstr ""
+"Caso você queira remover um \"aeroporto\" ou uma \"linha aérea\", o QGIS não"
+" removerá o(s) registro(s) associado(s) na tabela \"airports_airlines\". "
+"Esta tarefa será feita pelo banco de dados se especificarmos as *restrições*"
+" corretas na criação da tabela pivô, como no exemplo atual."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1027
+msgid "**Combining N-M relation with automatic transaction group**"
+msgstr "**Combinação da relação N-M com grupo de transação automática**"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1029
+msgid ""
+"You should enable the transaction mode in :menuselection:`Project Properties"
+" --> Data Sources -->` when working on such context. QGIS should be able to "
+"add or update row(s) in all tables (airlines, airports and the pivot "
+"tables)."
+msgstr ""
+"Você deve ativar o modo de transação em :menuselection:`Propriedades do "
+"projeto --> Fontes de dados -->` quando trabalhar em tal contexto. QGIS deve"
+" ser capaz de adicionar ou atualizar linha(s) em todas as tabelas "
+"(companhias aéreas, aeroportos e as tabelas pivot)."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1043
 msgid "Set relationship cardinality"
@@ -1579,6 +1698,10 @@ msgstr ""
 "registro será automaticamente inserido na tabela "
 "``aeroportos_companhiaAerea```."
 
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1055
+msgid "N-M relationship between airports and airlines"
+msgstr "Relação N-M entre aeroportos e companhias aéreas"
+
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1057
 msgid "Using **Many to one relation** cardinality"
 msgstr "Usando cardinalidade **relação muitos para um**"
@@ -1587,13 +1710,46 @@ msgstr "Usando cardinalidade **relação muitos para um**"
 msgid "**Pivot table primary key**"
 msgstr "**Chave primária da tabela dinâmica**"
 
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1068
+msgid ""
+"Avoid using multiple fields in the primary key in a pivot table. QGIS "
+"assumes a single primary key so a constraint like ``constraint "
+"airports_airlines_pkey primary key (airport_fk, airline_fk)`` will not work."
+msgstr ""
+"Evite usar vários campos na chave primária em uma tabela pivô. QGIS assume "
+"uma única chave primária, portanto uma restrição como ``restrição "
+"airports_airlines_pkey chave primária (airport_fk, airline_fk)`` não "
+"funcionará."
+
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1077
 msgid "Introducing polymorphic relations"
 msgstr "Introduzindo relações polimórficas"
 
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1086
+msgid ""
+"To be more precise, a polymorphic relation is a set of normal relations "
+"having the same referencing layer but having the referenced layer "
+"dynamically defined. The polymorphic setting of the layer is solved by using"
+" an expression which has to match some properties of the referenced layer "
+"like the table name, layer id, layer name."
+msgstr ""
+"Para ser mais preciso, uma relação polimórfica é um conjunto de relações "
+"normais com a mesma camada de referência, mas com a camada referenciada "
+"dinamicamente definida. O ajuste polimórfico da camada é resolvido usando "
+"uma expressão que tem que combinar algumas propriedades da camada "
+"referenciada como o nome da tabela, id da camada, nome da camada."
+
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1101
 msgid "Defining polymorphic relations"
 msgstr "Definindo relações polimórficas"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1114
+msgid ""
+"Adding a polymorphic relation using ``documents`` layer as referencing and "
+"``animals`` and ``plants`` as referenced layers."
+msgstr ""
+"Adicionando uma relação polimórfica utilizando \"documentos\" como camadas "
+"de referência e \"animais\" e \"plantas\" como camadas de referência."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1155
 msgid ""
@@ -1611,9 +1767,30 @@ msgstr "O exemplo acima utiliza o seguinte esquema de banco de dados:"
 msgid "Storing and fetching an external resource"
 msgstr "Armazenamento e busca de um recurso externo"
 
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1206
+msgid ""
+"A field may target a resource stored on an external storage system. "
+"Attribute forms can be configured so they act as a client to an external "
+"storage system in order to store and fetch those resources, on users demand,"
+" directly from the forms."
+msgstr ""
+"Um campo pode ter como alvo um recurso armazenado em um sistema de "
+"armazenamento externo. Os formulários de atributos podem ser configurados "
+"para que atuem como clientes de um sistema de armazenamento externo a fim de"
+" armazenar e buscar esses recursos, sob demanda dos usuários, diretamente "
+"dos formulários."
+
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1213
 msgid "Configuring an external storage"
 msgstr "Configuração de um armazenamento externo"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1253
+msgid ""
+"If the external storage system needs to, it's possible to configure an "
+":ref:`authentication <authentication>`."
+msgstr ""
+"Se o sistema de armazenamento externo precisar, é possível configurar uma "
+":ref:`autenticação <authentication>'."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1259
 msgid "Using an external storage"

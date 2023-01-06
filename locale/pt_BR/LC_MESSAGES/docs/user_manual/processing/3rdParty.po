@@ -15,14 +15,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-12 00:23+0100\n"
+"POT-Creation-Date: 2022-12-21 02:17+0000\n"
 "PO-Revision-Date: 2022-03-14 05:10+0000\n"
 "Last-Translator: Ana Camargo, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.11.0\n"
 "Language: pt_BR\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -41,6 +41,14 @@ msgstr "Uma nota para os formatos dos arquivos"
 #: ../../docs/user_manual/processing/3rdParty.rst:85
 msgid "A note on vector layer selections"
 msgstr "Uma nota para as seleções da camada vetorial"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:96
+msgid ""
+"In other cases, exporting only selected features is needed, which causes "
+"longer execution times."
+msgstr ""
+"Em outros casos, é necessário exportar apenas as feições selecionadas, o que"
+" causa tempos de execução mais longos."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:104
 msgid "SAGA"
@@ -87,6 +95,14 @@ msgstr ":guilabel:`Reamostragem do Y máx`"
 #: ../../docs/user_manual/processing/3rdParty.rst:138
 msgid ":guilabel:`Resampling cellsize`"
 msgstr ":guilabel:`Reamostragem do tamanho da célula`"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:140
+msgid ""
+"Notice that QGIS will resample input layers to that extent, even if they do "
+"not overlap with it."
+msgstr ""
+"Observe que o QGIS irá reamostrar camadas de entrada nessa extensão, mesmo "
+"que elas não se sobreponham a ela."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:142
 msgid ""
@@ -144,6 +160,14 @@ msgstr "Registrando"
 msgid "R scripts"
 msgstr "scripts R"
 
+#: ../../docs/user_manual/processing/3rdParty.rst:242
+msgid ""
+"If you have R configured correctly for QGIS, you should be able to run these"
+" scripts."
+msgstr ""
+"Se você configurou o R corretamente para o QGIS, você poderá executar esses "
+"scripts."
+
 #: ../../docs/user_manual/processing/3rdParty.rst:251
 msgid "Adding R scripts from the QGIS collection"
 msgstr "Adicionando scripts R da coleção QGIS"
@@ -151,6 +175,10 @@ msgstr "Adicionando scripts R da coleção QGIS"
 #: ../../docs/user_manual/processing/3rdParty.rst:272
 msgid "Close the plugin"
 msgstr "Feche o plug-in"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:294
+msgid "On Ubuntu, set the path to (or, better, include in the path):"
+msgstr "No Ubuntu, defina o caminho para (ou, melhor, inclua no caminho):"
 
 #: ../../docs/user_manual/processing/3rdParty.rst:327
 msgid "Creating R scripts"
@@ -176,9 +204,35 @@ msgstr ""
 "Os campos da tabela são armazenados como cadeiais contendo o nome do campo "
 "selecionado."
 
+#: ../../docs/user_manual/processing/3rdParty.rst:493
+msgid ""
+"This will cause QGIS to redirect all R graphical outputs to a temporary "
+"file, which will be opened once R execution has finished."
+msgstr ""
+"Isso fará com que o QGIS redirecione todas as saídas gráficas do R para um "
+"arquivo temporário, que será aberto assim que a execução do R terminar."
+
+#: ../../docs/user_manual/processing/3rdParty.rst:499
+msgid ""
+"For more information, please check the R scripts in the official QGIS "
+"collection (you download and install them using the *QGIS Resource Sharing* "
+"plugin, as explained elsewhere). Most of them are rather simple and will "
+"greatly help you understand how to create your own scripts."
+msgstr ""
+"Para obter maiores informações, verifique os scripts R na coleção oficial do"
+" QGIS (você os baixa e instala usando o plug-in *QGIS Resource Sharing*, "
+"conforme explicado em outro lugar). A maioria deles é bastante simples e o "
+"ajudará muito a entender como criar seus próprios scripts."
+
 #: ../../docs/user_manual/processing/3rdParty.rst:520
 msgid "R libraries"
 msgstr "Bibliotecas R"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:522
+msgid ""
+"The R script ``sp_test`` tries to load the R packages ``sp`` and ``raster``."
+msgstr ""
+"O script R ``sp_test`` tenta carregar os pacotes R ``sp`` e ``raster``."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:555
 msgid "GRASS"
@@ -196,3 +250,33 @@ msgstr ""
 msgid "Click \"ok\" to save the settings and close the dialog."
 msgstr ""
 "Clique em \"ok\" para salvar as configurações e fechar a caixa de diálogo."
+
+#: ../../docs/user_manual/processing/3rdParty.rst:651
+msgid "Multiple paths are allowed."
+msgstr "São permitidos múltiplos caminhos."
+
+#: ../../docs/user_manual/processing/3rdParty.rst:684
+msgid "Compatibility between QGIS and OTB versions"
+msgstr "Compatibilidade entre as versões QGIS e OTB"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:689
+msgid "Troubleshoot"
+msgstr "Resolução de problemas"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:690
+msgid ""
+"If you have issues with OTB applications in QGIS Processing, please open an "
+"issue on the `OTB bug tracker <https://gitlab.orfeo-"
+"toolbox.org/orfeotoolbox/otb/-/issues>`_, using the ``qgis`` label."
+msgstr ""
+"Se você tiver problemas com aplicações OTB no Processamento QGIS, por favor,"
+" abra um problema no `OTB bug tracker <https://gitlab.orfeo-"
+"toolbox.org/orfeotoolbox/otb/-/issues>`_, utilizando a etiqueta ``qgis``."
+
+#: ../../docs/user_manual/processing/3rdParty.rst:694
+msgid ""
+"Additional information about OTB and QGIS can be found `here "
+"<https://www.orfeo-toolbox.org/CookBook-develop/QGISInterface.html>`_"
+msgstr ""
+"Informações adicionais sobre OTB e QGIS podem ser encontradas `aqui "
+"<https://www.orfeo-toolbox.org/CookBook-develop/QGISInterface.html>`_"

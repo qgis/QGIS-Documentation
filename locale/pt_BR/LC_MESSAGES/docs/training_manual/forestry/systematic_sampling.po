@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2022
 # Ana Camargo, 2022
+# Kyle Felipe Vieira Roberto <kylefelipe@gmail.com>, 2022
 # Letícia Jardim, 2022
 # 
 #, fuzzy
@@ -182,8 +183,8 @@ msgid ""
 "Under :guilabel:`Regular points`, save the output as "
 ":file:`systematic_plots.shp` in the :file:`forestry\\\\sampling\\\\` folder."
 msgstr ""
-"Em :guilabel:`pontos regulares`, salvar a saída como "
-":file:`parcelas_sistemáticas.shp` na pasta :file:`\\\\amostra\\\\florestal`"
+"Em :guilabel:`Pontos regulares`, salvar a saída como "
+":file:`systematic_plots.shp` na pasta :file:`\\\\forestry\\\\sampling`"
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:67
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:90
@@ -207,9 +208,24 @@ msgstr ""
 "interesado en los puntos que están dentro de tu área forestal (mira la "
 "imagen inferior):"
 
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:84
+msgid ""
+"From the Processing toolbox, open |gdal| :menuselection:`GDAL --> Vector "
+"geoprocessing --> Clip vector by mask layer`."
+msgstr ""
+"A partir da caixa de ferramentas Processamento, abra |gdal| "
+":menuselection:`GDAL --> Geoprocessamento de vetor --> Recortar vetor pela "
+"camada de máscara`."
+
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:216
 msgid "gdal"
 msgstr "gdal"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:86
+msgid "Select :guilabel:`systematic_plots` as the :guilabel:`Input layer`."
+msgstr ""
+"Selecione :guilabel:`gráficos_sistemáticos` como o :guilabel:`Camada de "
+"entrada`."
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:93
 msgid ""
@@ -226,6 +242,22 @@ msgstr ""
 "exportarlos a un formato que pueda ser utilizado por sus aparatos de GPS. "
 "Otra fuente útil en el campo son los mapas generales y detallados de la "
 "localización de las parcelas de muestreo."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:98
+msgid ""
+"Let's start with the naming of the sample plots. If you check the "
+":guilabel:`Attribute table` for the plots inside the forest area, you can "
+"see that you have the default :guilabel:`id` field automatically generated "
+"by the :guilabel:`Regular points` tool. Label the points to see them in the "
+"map and consider if you could use those numbers as part of your sample plot "
+"naming:"
+msgstr ""
+"Vamos começar com a nomenclatura das parcelas de amostra. Se você verificar "
+"a :guilabel:``tabela de atributos` para os lotes dentro da área da floresta,"
+" você pode ver que você tem o campo :guilabel:`id` padrão gerado "
+"automaticamente pela ferramenta :guilabel:`pontos regulares`. Etiquete os "
+"pontos para vê-los no mapa e considere se você poderia utilizar esses "
+"números como parte do nome de sua amostra de parcelas:"
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:106
 msgid "Turn the top menu into |labelingSingle| :guilabel:`Single Labels`."
@@ -259,6 +291,21 @@ msgstr ""
 " de otro modo, nombrarlos de Oeste-Este/Norte-Sur sigue un orden lógico y es"
 " una buena opción."
 
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:119
+msgid ""
+"Nevertheless, the number values in the ``id`` field are not so good. It "
+"would be better if the naming would be something like ``p_1, p_2...``. You "
+"can create a new column for the ``systematic_plots_clip`` layer:"
+msgstr ""
+"No entanto, os valores numéricos no campo \"id\" não são tão bons. Seria "
+"melhor se o nome fosse algo como ``p_1, p_2...``. Você pode criar uma nova "
+"coluna para a camada ``systematic_plots_clip``:"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:123
+msgid "Go to the :guilabel:`Attribute table` for ``systematic_plots_clip``."
+msgstr ""
+"Vá para a :guilabel:`tabela de atributos` para ``systematic_plots_clip``."
+
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:124
 msgid "Enable the |toggleEditing| edit mode."
 msgstr "Habilitar o modo |toggleEditing| editar."
@@ -275,6 +322,15 @@ msgstr "calcularCampo"
 msgid "Check :guilabel:`Create a new field`"
 msgstr "Verificar :guilabel:`Criar um novo campo'."
 
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:128
+msgid "Enter ``Plot_id`` as :guilabel:`Output field name`"
+msgstr "Digite ``Plot_id`` como :guilabel:`Nome do campo de saída`"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:129
+msgid "Set the :guilabel:`Output field type` to :guilabel:`Text (string)`."
+msgstr ""
+"Defina o :guilabel:`Tipo de campo de saída` para :guilabel:`Texto (string)`."
+
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:136
 msgid "Disable the edit mode and save your changes."
 msgstr "Deshabilita el modo edición y guarda tus cambios."
@@ -282,6 +338,14 @@ msgstr "Deshabilita el modo edición y guarda tus cambios."
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:146
 msgid "|basic| |FA| Exporting Sample Plots as GPX format"
 msgstr "|basic| |FA| Exportando Parcelas de Muestreo a formato GPX"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:156
+msgid ""
+"Right-click ``systematic_plots_clip`` layer and select "
+":menuselection:`Export --> Save features as...`."
+msgstr ""
+"Clique com o botão direito do mouse sobre a camada 'systematic_plots_clip' e"
+" selecione :menuselection:`Exportar --> Salvar recursos como...`."
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:162
 msgid "In :guilabel:`Format` select :guilabel:`GPS eXchange Format [GPX]`."
@@ -294,7 +358,7 @@ msgid ""
 ":file:`forestry\\\\sampling\\\\` folder."
 msgstr ""
 "Salvar a saída :guilabel:`nome do arquivo` como :file:`plots_wgs84.gpx` na "
-"pasta :file:`forestry``sampling``."
+"pasta :file:`forestry\\\\sampling\\\\`."
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:165
 msgid "In :guilabel:`CRS` select :guilabel:`Selected CRS`."

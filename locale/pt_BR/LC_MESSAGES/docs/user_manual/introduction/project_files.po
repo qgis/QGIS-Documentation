@@ -33,6 +33,25 @@ msgstr "Trabalhando com Arquivos de Projetos"
 msgid "Introducing QGIS projects"
 msgstr "Introduzindo projetos do QGIS"
 
+#: ../../docs/user_manual/introduction/project_files.rst:22
+msgid ""
+"The state of your QGIS session is called a project. QGIS works on one "
+"project at a time. A setting can be project-specific or an application-wide "
+"default for new projects (see section :ref:`gui_options`). QGIS can save the"
+" state of your workspace into a :ref:`QGIS project file <qgisprojectfile>` "
+"using the menu options :menuselection:`Project -->` |fileSave| "
+":menuselection:`Save` or :menuselection:`Project -->` |fileSaveAs| "
+":menuselection:`Save As...`."
+msgstr ""
+"Sua sessão atual do QGIS pode ser chamada de projeto. O QGIS trabalha em um "
+"projeto por vez. Uma configuração pode ser específica do projeto ou padrão "
+"de toda a aplicação para novos projetos (consulte a seção: ref: "
+"`gui_options`). O QGIS pode salvar a sessão do seu espaço de trabalho em: "
+"ref: `arquivo de projeto QGIS <qgisprojectfile>` usando as opções de menu: "
+"menuselection: `Projeto ->` | fileSave | : menuselection: `Salvar` ou: "
+"menuselection:` Projeto -> `| fileSaveAs | : menuselection: `Salvar como "
+"...`."
+
 #: ../../docs/user_manual/introduction/project_files.rst:225
 msgid "fileSave"
 msgstr "salvarArquivo"
@@ -40,6 +59,21 @@ msgstr "salvarArquivo"
 #: ../../docs/user_manual/introduction/project_files.rst:227
 msgid "fileSaveAs"
 msgstr "Salvar arquivo como"
+
+#: ../../docs/user_manual/introduction/project_files.rst:34
+msgid ""
+"If the project has been modified the ``*`` symbol will appear in the title "
+"bar and QGIS will, by default, ask you if you would like to save the "
+"changes. This behavior is controlled by the |checkbox| :guilabel:`Prompt to "
+"save project and data source changes when required` setting under "
+":menuselection:`Settings --> Options --> General`."
+msgstr ""
+"Se o projeto tiver sido modificado, o símbolo ``*`` aparecerá na barra de "
+"título e QGIS perguntará, por padrão, se você gostaria de salvar as "
+"mudanças. Este comportamento é controlado pela caixa de checagem |[caixa de "
+"checagem] : guilabel:`Pedido para salvar as alterações do projeto e da fonte"
+" de dados quando necessário` em :menuselection:`Configurações --> Opções -->"
+" Geral`."
 
 #: ../../docs/user_manual/introduction/project_files.rst:217
 msgid "checkbox"
@@ -77,6 +111,14 @@ msgstr ""
 msgid "fileNew"
 msgstr "Arquivo Novo"
 
+#: ../../docs/user_manual/introduction/project_files.rst:62
+msgid ""
+"When you open a fresh project, the title bar will show ``Untitled Project`` "
+"until you save it."
+msgstr ""
+"Quando você abre um novo projeto, a barra do título mostrará \"Projeto sem "
+"título\" até que você o salve."
+
 #: ../../docs/user_manual/introduction/project_files.rst:70
 msgid "Starting a new project in QGIS"
 msgstr "Iniciando um novo projeto no QGIS"
@@ -96,6 +138,10 @@ msgstr "Quais camadas podem ser consultadas"
 #: ../../docs/user_manual/introduction/project_files.rst:76
 msgid "Layer properties, including symbolization and styles"
 msgstr "Propriedades das camadas, incluindo simbologia e estilos"
+
+#: ../../docs/user_manual/introduction/project_files.rst:77
+msgid "Layer notes"
+msgstr "Notas de camadas"
 
 #: ../../docs/user_manual/introduction/project_files.rst:78
 msgid "Projection for the map view"
@@ -235,9 +281,39 @@ msgstr ""
 " abrirá um diálogo para escolher uma conexão GeoPackage e projeto ou uma "
 "conexão PostgreSQL, esquema e projeto."
 
+#: ../../docs/user_manual/introduction/project_files.rst:135
+msgid ""
+"Projects stored in Geopackage or PostgreSQL can also be loaded through the "
+"QGIS browser panel, either by double-clicking them or by dragging them to "
+"the map canvas."
+msgstr ""
+"Os projetos armazenados em Geopackage ou PostgreSQL também podem ser "
+"carregados através do painel do navegador QGIS, seja clicando duas vezes "
+"sobre eles ou arrastando-os para a tela do mapa."
+
 #: ../../docs/user_manual/introduction/project_files.rst:143
 msgid "Handling broken file paths"
 msgstr "Manipulação de caminhos de arquivos quebrados"
+
+#: ../../docs/user_manual/introduction/project_files.rst:145
+msgid ""
+"When opening a project, QGIS may fail to reach some data sources due to "
+"unavailable service/database, or to a renamed or moved file. QGIS then opens"
+" the :guilabel:`Handle Unavailable Layers` dialog, referencing the unfound "
+"layers. You can:"
+msgstr ""
+"Ao abrir um projeto, o QGIS pode não alcançar algumas fontes de dados devido"
+" à indisponibilidade de serviço/base de dados, ou a um arquivo renomeado ou "
+"movido. O QGIS abre então uma janela :guilabel:`Manusear camadas "
+"indisponíveis', referenciando as camadas infundadas. Você pode:"
+
+#: ../../docs/user_manual/introduction/project_files.rst:153
+msgid ""
+"Select a row, press :guilabel:`Browse` to indicate the correct location and "
+"click :guilabel:`Apply changes`;"
+msgstr ""
+"Selecione uma linha, pressione :guilabel:`Navegar` para indicar a "
+"localização correta e clique :guilabel:`Aplicar mudanças`;"
 
 #: ../../docs/user_manual/introduction/project_files.rst:155
 msgid ""
@@ -249,6 +325,17 @@ msgstr ""
 "consertar automaticamente todos os caminhos quebrados ou selecionados. "
 "Esteja ciente de que a navegação pode levar algum tempo. Depois clique em "
 ":guilabel:`Aplicar mudanças`."
+
+#: ../../docs/user_manual/introduction/project_files.rst:165
+msgid ""
+"With the :guilabel:`Repair Data Source...` tool, once a layer path has been "
+"fixed, QGIS scans through all other broken paths and tries to auto-fix those"
+" that have the same broken file path."
+msgstr ""
+"Com a ferramenta :guilabel:`Reparar fonte de dados...`, uma vez que um "
+"caminho de camadas tenha sido fixado, o QGIS escaneia todos os outros "
+"caminhos quebrados e tenta fixar automaticamente aqueles que têm o mesmo "
+"caminho de arquivo quebrado."
 
 #: ../../docs/user_manual/introduction/project_files.rst:168
 msgid ""

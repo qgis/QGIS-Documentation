@@ -7,8 +7,8 @@
 # Translators:
 # Harrissou Sant-anna, 2022
 # Vanessa Stelzer, 2022
-# Ana Camargo, 2022
 # Letícia Jardim, 2022
+# Ana Camargo, 2022
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-12 00:23+0100\n"
 "PO-Revision-Date: 2022-03-14 05:08+0000\n"
-"Last-Translator: Letícia Jardim, 2022\n"
+"Last-Translator: Ana Camargo, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -170,6 +170,14 @@ msgstr "Código Python"
 msgid "Extract projection"
 msgstr "Extrair projeção"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:72
+msgid ""
+"Extracts the projection of a raster file and writes it into a *world* file "
+"with extension :file:`.wld`."
+msgstr ""
+"Extrai a projeção de um arquivo raster e o grava em um arquivo *global* com "
+"extensão :file:`.wld`."
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:75
 msgid ""
 "This algorithm is derived from the `GDAL srsinfo utility "
@@ -186,6 +194,10 @@ msgstr "**Arquivo de entrada**"
 msgid "**Create also .prj file**"
 msgstr "**Criar também arquivo .prj**"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:100
+msgid "``PRJ_FILE_CREATE``"
+msgstr "``PRJ_FILE_CREATE``"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:101
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:311
 msgid "[boolean]"
@@ -196,9 +208,21 @@ msgstr "[boleano]"
 msgid "Default: False"
 msgstr "Padrão: Falso"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:104
+msgid ""
+"If this is activated a :file:`.prj` file containing the projection "
+"information is also created."
+msgstr ""
+"Se isto for ativado, um arquivo :file:`.prj` contendo as informações de "
+"projeção também é criado."
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:118
 msgid "**World file**"
 msgstr "**Arquivo global**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:119
+msgid "``WORLD_FILE``"
+msgstr "``WORLD_FILE``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:120
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:125
@@ -212,6 +236,27 @@ msgid ""
 msgstr ""
 "Arquivo texto com extensão :file:`.wld` contendo parâmetros de transformação"
 " para o arquivo raster."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:124
+msgid "``PRJ_FILE``"
+msgstr "``PRJ_FILE``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:126
+msgid ""
+"Text file with :file:`.prj` extension that describes the CRS. Will be "
+"``None`` if :guilabel:`Create also .prj file` is False."
+msgstr ""
+"Arquivo texto com :file:`.prj` extensão que descreve o SRC. Será ``Nenhum`` "
+"se :guilabel:`Criar também o arquivo .prj` for Falso."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:144
+msgid ""
+"Reprojects a raster layer into another Coordinate Reference System (CRS). "
+"The output file resolution and the resampling method can be chosen."
+msgstr ""
+"Reproje uma camada rasterizada em outro Sistema de Referência Coordenada "
+"(SRC). A resolução do arquivo de saída e o método de reamostragem podem ser "
+"escolhidos."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:148
 msgid ""
@@ -338,6 +383,10 @@ msgstr "10 --- Primeiro quartil"
 msgid "11 --- Third quartile"
 msgstr "11 --- Terceiro quartil"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:206
+msgid "**Nodata value for output bands**"
+msgstr "**Valor Semdados para bandas de saída**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:209
 msgid "``NODATA``"
 msgstr "``SEMDADOS``"
@@ -352,6 +401,15 @@ msgstr "[número]"
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:323
 msgid "Default: None"
 msgstr "Padrão: Nenhum"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:216
+msgid "**Output file resolution in target georeferenced units**"
+msgstr ""
+"**Resolução do arquivo de saída em unidades georreferenciadas de destino**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:219
+msgid "``TARGET_RESOLUTION``"
+msgstr "``TARGET_RESOLUTION``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:223
 msgid "Defines the output file resolution of reprojection result"
@@ -416,6 +474,10 @@ msgstr ""
 msgid "**Output data type**"
 msgstr "**Tipo de dados de saída**"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:264
+msgid "``DATA_TYPE``"
+msgstr "``DATA_TYPE``"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:268
 msgid "Defines the format of the output raster file. Options:"
 msgstr "Define o formato do arquivo matricial de saída. Opções:"
@@ -472,6 +534,10 @@ msgstr "11 --- CFloat64"
 msgid "**Georeferenced extents of output file to be created**"
 msgstr "**Extensões georreferenciadas do arquivo de saída a ser criado**"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:286
+msgid "``TARGET_EXTENT``"
+msgstr "``TARGET_EXTENT``"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:287
 msgid "[extent]"
 msgstr "[extensão]"
@@ -498,6 +564,20 @@ msgstr "Desenhar na tela"
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
 msgstr "Insira as coordenadas como ``xmin, xmax, ymin, ymax``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:300
+msgid "``TARGET_EXTENT_CRS``"
+msgstr "``TARGET_EXTENT_CRS``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:314
+msgid ""
+"Two threads will be used to process chunks of the image and perform "
+"input/output operations simultaneously. Note that the computation itself is "
+"not multithreaded."
+msgstr ""
+"Duas linhas serão usadas para processar pedaços da imagem e realizar "
+"operações de entrada/saída simultaneamente. Note que o cálculo em si não é "
+"multi-tarefa."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:317
 msgid "**Additional command-line parameters**"

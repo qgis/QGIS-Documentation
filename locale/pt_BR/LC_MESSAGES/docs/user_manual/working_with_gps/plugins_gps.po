@@ -32,6 +32,14 @@ msgstr "Complemento GPS"
 msgid "What is GPS?"
 msgstr "O que é GPS?"
 
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:27
+msgid ""
+"QGIS supports also GNSS receivers. But we keep using the term GPS in this "
+"documentation."
+msgstr ""
+"O QGIS também suporta receptores GNSS. Mas continuamos usando o termo GPS "
+"nesta documentação."
+
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:33
 msgid "Loading GPS data from a file"
 msgstr "Carregando dados GPS de um arquivo"
@@ -44,13 +52,57 @@ msgstr "mostrarGerenciadordePlug-ins"
 msgid "checkbox"
 msgstr "caixa de seleção"
 
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:47
+msgid "|importGPX| :sup:`GPS Tools`"
+msgstr "|importGPX| :sup:`Ferramentas GPS`"
+
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:310
 msgid "importGPX"
 msgstr "importarGPX"
 
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:48
+msgid "|createGPX| :guilabel:`Create new GPX Layer`"
+msgstr "|createGPX| :guilabel:`Criar nova camada GPX`"
+
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:308
 msgid "createGPX"
 msgstr "criarGPX"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:54
+msgid ""
+"Select :menuselection:`Vector --> GPS Tools` or click the |importGPX| "
+":sup:`GPS Tools` icon in the toolbar and open the :guilabel:`Load GPX file` "
+"tab (see :numref:`figure_GPS`)."
+msgstr ""
+"Selecione :menuselection:`Vetor --> Ferramentas GPS` ou clique no ícone "
+"|importGPX| :sup:`Ferramentas GPS` na barra de ferramentas e abra a aba "
+":guilabel:`Carregar arquivo GPX` (veja :numref:`figure_GPS`)."
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:57
+msgid ""
+"Browse to the folder :file:`qgis_sample_data/gps/`, select the GPX file "
+":file:`national_monuments.gpx` and click :guilabel:`Open`."
+msgstr ""
+"Navegue até a pasta :file:`qgis_sample_data/gps/`, selecione o arquivo GPX "
+":file:`national_monuments.gpx` e clique em :guilabel:`Abrir`."
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:65
+msgid "The *GPS Tools* dialog window"
+msgstr "A janela de diálogo *Ferramentas GPS*"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:73
+msgid ""
+"GPS units allow you to store data in different coordinate systems. When "
+"downloading a GPX file (from your GPS unit or a web site) and then loading "
+"it in QGIS, be sure that the data stored in the GPX file uses WGS 84 "
+"(latitude/longitude). QGIS expects this, and it is the official GPX "
+"specification. See https://www.topografix.com/GPX/1/1/."
+msgstr ""
+"As unidades GPS permitem o armazenamento de dados em diferentes sistemas de "
+"coordenadas. Ao baixar um arquivo GPX (de sua unidade GPS ou de um web site)"
+" e depois carregá-lo no QGIS, certifique-se de que os dados armazenados no "
+"arquivo GPX usam o WGS 84 (latitude/longitude). O QGIS espera isto, e é a "
+"especificação oficial do GPX. Veja https://www.topografix.com/GPX/1/1/."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:80
 msgid "GPSBabel"
@@ -127,6 +179,14 @@ msgstr "|win| No Windows, é \"COM1\" ou \"COM2\"."
 msgid "win"
 msgstr "ganhar"
 
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:130
+msgid ""
+"When you click :guilabel:`OK`, the data will be downloaded from the device "
+"and appear as a layer in QGIS."
+msgstr ""
+"Ao clicar :guilabel:`OK`, os dados serão baixados do dispositivo e "
+"aparecerão como uma camada no QGIS."
+
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:134
 msgid "Uploading GPS data to a device"
 msgstr "Carregando dados no receptor GPS"
@@ -159,6 +219,14 @@ msgstr ""
 "porém ``%in`` é substituído pelo nome do arquivo GPS que é utilizado e "
 "``%out`` é substituído pelo nome da porta."
 
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:186
+msgid ""
+"You can learn more about GPSBabel and its available command line options at "
+"https://www.gpsbabel.org."
+msgstr ""
+"Você pode saber mais sobre o GPSBabel e suas opções de linha de comando "
+"disponíveis em https://www.gpsbabel.org."
+
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:189
 msgid ""
 "Once you have created a new device type, it will appear in the device lists "
@@ -180,6 +248,14 @@ msgstr "Garmin GPSMAP 60cs"
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:263
 msgid "**MS Windows**"
 msgstr "**MS Windows**"
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:207
+msgid ""
+"Install the Garmin USB drivers from "
+"https://www8.garmin.com/support/download_details.jsp?id=591"
+msgstr ""
+"Instale os drivers Garmin USB em: "
+"https://www8.garmin.com/support/download_details.jsp?id=591"
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:210
 msgid ""
@@ -219,6 +295,16 @@ msgid ""
 msgstr ""
 "Depois disso, é necessário ter certeza de que o módulo do kernel "
 "\"garmin_gps\" não está carregando."
+
+#: ../../docs/user_manual/working_with_gps/plugins_gps.rst:232
+msgid ""
+"and then you can use the GPS Tools. Unfortunately there seems to be a `bug "
+"#7182 <https://issues.qgis.org/issues/7182>`_ and usually QGIS freezes "
+"several times before the operation work fine."
+msgstr ""
+"e então você pode usar as Ferramentas GPS. Infelizmente parece haver um `bug"
+" #7182 <https://issues.qgis.org/issues/7182>`_ e geralmente o QGIS congela "
+"várias vezes antes que a operação funcione bem."
 
 #: ../../docs/user_manual/working_with_gps/plugins_gps.rst:237
 msgid "BTGP-38KM datalogger (only Bluetooth)"

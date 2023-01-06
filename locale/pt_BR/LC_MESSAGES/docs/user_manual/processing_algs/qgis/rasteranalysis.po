@@ -8,8 +8,9 @@
 # Harrissou Sant-anna, 2022
 # Ana Carla Rizzo Mendes, 2022
 # Vanessa Stelzer, 2022
-# Ana Camargo, 2022
+# Kyle Felipe Vieira Roberto <kylefelipe@gmail.com>, 2022
 # Letícia Jardim, 2022
+# Ana Camargo, 2022
 # 
 #, fuzzy
 msgid ""
@@ -18,7 +19,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-18 02:36+0000\n"
 "PO-Revision-Date: 2022-03-14 05:07+0000\n"
-"Last-Translator: Letícia Jardim, 2022\n"
+"Last-Translator: Ana Camargo, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -40,6 +41,18 @@ msgstr "Porcentagem da pilha de células em relação ao valor"
 msgid "There are two methods for percentile calculation:"
 msgstr "Há dois métodos para o cálculo do percentil:"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:26
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:187
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:351
+msgid "Inclusive linear interpolation (PERCENTRANK.INC)"
+msgstr "Interpolação linear inclusiva (PERCENTRANK.INC)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:27
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:188
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:352
+msgid "Exclusive linear interpolation (PERCENTRANK.EXC)"
+msgstr "Interpolação linear exclusiva (PERCENTRANK.EXC)"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:29
 msgid ""
 "The linear interpolation method return the unique percent rank for different"
@@ -54,6 +67,15 @@ msgstr ""
 "<https://help.libreoffice.org/latest/en-"
 "US/text/scalc/01/04060184.html?DbPAR=CALC#bm_id3148807>`_ ou pelo Microsoft "
 "Excel."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:46
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:207
+msgid ""
+":ref:`qgiscellstackpercentile`, "
+":ref:`qgiscellstackpercentrankfromrasterlayer`"
+msgstr ""
+":ref:`qgiscellstackpercentile`, "
+":ref:`qgiscellstackpercentrankfromrasterlayer`"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:4
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:5
@@ -1010,6 +1032,28 @@ msgstr "Camada raster de saída contendo o resultado"
 msgid "**CRS authority identifier**"
 msgstr "**Identificador da autoridade SRC**"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:81
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:90
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:143
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:306
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:471
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:638
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:785
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:916
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1027
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1142
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1252
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1371
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1481
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1655
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1886
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2048
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2288
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2519
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2675
+msgid "``CRS_AUTHID``"
+msgstr "``CRS_AUTHID``"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:82
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:86
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:91
@@ -1432,6 +1476,13 @@ msgstr "Percentil de pilha celular"
 msgid "There are three methods for percentile calculation:"
 msgstr "Há três métodos para o cálculo do percentil:"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:186
+msgid ""
+"Nearest rank: returns the value that is nearest to the specified percentile"
+msgstr ""
+"Classificação mais próxima: retorna o valor mais próximo do percentil "
+"especificado"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:190
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:354
 msgid ""
@@ -1476,6 +1527,12 @@ msgstr "**Percentil**"
 msgid "Default: 0.25"
 msgstr "Padrão: 0,25"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:371
+msgid ""
+":ref:`qgiscellstackpercentile`, :ref:`qgiscellstackpercentrankfromvalue`"
+msgstr ""
+":ref:`qgiscellstackpercentile`, :ref:`qgiscellstackpercentrankfromvalue`"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:394
 msgid "**Value raster layer**"
 msgstr "**Valor da camada raster**"
@@ -1505,9 +1562,24 @@ msgstr "''FAIXA DE VALOR RASTER''"
 msgid "Default: 1"
 msgstr "Padrão: 1"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:403
+msgid "Band of the \"value raster layer\" to compare to"
+msgstr "Banda da \"camada de valor raster\" para comparar com"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:504
 msgid "Cell statistics"
 msgstr "Estatísticas de células"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:517
+msgid ""
+"The :guilabel:`Reference layer` parameter specifies an existing raster layer"
+" to use as a reference when creating the output raster. The output raster "
+"will have the same extent, CRS, and pixel dimensions as this layer."
+msgstr ""
+"O parâmetro :guilabel:`Camada de referência` especifica uma camada raster "
+"existente a ser utilizada como referência ao criar o raster de saída. O "
+"raster de saída terá a mesma extensão, SRC, e dimensões de pixel que esta "
+"camada."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:534
 msgid ""
@@ -1656,10 +1728,26 @@ msgstr ""
 "que as células correspondentes na lista de matrizes são iguais à matriz de "
 "valor. As células ``SemDados`` (cinza) são levadas em consideração."
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:694
+msgid ":ref:`qgisgreaterthanfrequency`, :ref:`qgislessthanfrequency`"
+msgstr ":ref:`qgisgreaterthanfrequency`, :ref:`qgislessthanfrequency`"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:19
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:714
 msgid "**Input value raster**"
 msgstr "**Valor de entrada raster**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:22
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:717
+msgid "The input value layer serves as reference layer for the sample layers"
+msgstr ""
+"A camada de valor de entrada serve como camada de referência para as camadas"
+" de amostra"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:24
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:719
+msgid "``INPUT_VALUE_RASTER_BAND``"
+msgstr "``INPUT_VALUE_RASTER_BAND``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:25
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:720
@@ -1755,11 +1843,25 @@ msgstr "''CONTAGEM DE OCORRÊNCIAS''"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:822
 msgid "**Algorithm ID**: ``native:equaltofrequency``"
-msgstr "**ID do algoritmo***: \"nativo:igual a freqüência\""
+msgstr "**ID do algoritmo**: ``native:equaltofrequency``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3606
 msgid "gaussian_formula"
 msgstr "fórmula_gaussiana"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:848
+msgid ""
+":ref:`qgisfuzzifyrasterlargemembership` "
+":ref:`qgisfuzzifyrasterlinearmembership`, "
+":ref:`qgisfuzzifyrasternearmembership`, "
+":ref:`qgisfuzzifyrasterpowermembership`, "
+":ref:`qgisfuzzifyrastersmallmembership`"
+msgstr ""
+":ref:`qgisfuzzifyrasterlargemembership` "
+":ref:`qgisfuzzifyrasterlinearmembership`, "
+":ref:`qgisfuzzifyrasternearmembership`, "
+":ref:`qgisfuzzifyrasterpowermembership`, "
+":ref:`qgisfuzzifyrastersmallmembership`"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:866
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:976
@@ -1840,6 +1942,20 @@ msgstr "Padrão: 0,01"
 msgid "Spread of the gaussian function"
 msgstr "Difusão da função gaussiana"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:959
+msgid ""
+":ref:`qgisfuzzifyrastergaussianmembership`, "
+":ref:`qgisfuzzifyrasterlinearmembership`, "
+":ref:`qgisfuzzifyrasternearmembership`, "
+":ref:`qgisfuzzifyrasterpowermembership`, "
+":ref:`qgisfuzzifyrastersmallmembership`"
+msgstr ""
+":ref:`qgisfuzzifyrastergaussianmembership`, "
+":ref:`qgisfuzzifyrasterlinearmembership`, "
+":ref:`qgisfuzzifyrasternearmembership`, "
+":ref:`qgisfuzzifyrasterpowermembership`, "
+":ref:`qgisfuzzifyrastersmallmembership`"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:991
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1217
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1446
@@ -1859,6 +1975,20 @@ msgstr "Padrão: 5"
 msgid "Spread of the large function"
 msgstr "Espalhamento da grande função"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1075
+msgid ""
+":ref:`qgisfuzzifyrastergaussianmembership`, "
+":ref:`qgisfuzzifyrasterlargemembership`, "
+":ref:`qgisfuzzifyrasternearmembership`, "
+":ref:`qgisfuzzifyrasterpowermembership`, "
+":ref:`qgisfuzzifyrastersmallmembership`"
+msgstr ""
+":ref:`qgisfuzzifyrastergaussianmembership`, "
+":ref:`qgisfuzzifyrasterlargemembership`, "
+":ref:`qgisfuzzifyrasternearmembership`, "
+":ref:`qgisfuzzifyrasterpowermembership`, "
+":ref:`qgisfuzzifyrastersmallmembership`"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1103
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1326
 msgid "**Low fuzzy membership bound**"
@@ -1872,6 +2002,20 @@ msgstr "Baixo limite da função linear"
 msgid "High bound of the linear function"
 msgstr "Alto limite da função linear"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1185
+msgid ""
+":ref:`qgisfuzzifyrastergaussianmembership`, "
+":ref:`qgisfuzzifyrasterlargemembership`, "
+":ref:`qgisfuzzifyrasterlinearmembership`, "
+":ref:`qgisfuzzifyrasterpowermembership`, "
+":ref:`qgisfuzzifyrastersmallmembership`"
+msgstr ""
+":ref:`qgisfuzzifyrastergaussianmembership`, "
+":ref:`qgisfuzzifyrasterlargemembership`, "
+":ref:`qgisfuzzifyrasterlinearmembership`, "
+":ref:`qgisfuzzifyrasterpowermembership`, "
+":ref:`qgisfuzzifyrastersmallmembership`"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1218
 msgid "Midpoint of the near function"
 msgstr "Ponto médio da função próxima"
@@ -1879,6 +2023,20 @@ msgstr "Ponto médio da função próxima"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1224
 msgid "Spread of the near function"
 msgstr "Espalhamento da função próxima"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1300
+msgid ""
+":ref:`qgisfuzzifyrastergaussianmembership`, "
+":ref:`qgisfuzzifyrasterlargemembership`, "
+":ref:`qgisfuzzifyrasterlinearmembership`, "
+":ref:`qgisfuzzifyrasternearmembership`, "
+":ref:`qgisfuzzifyrastersmallmembership`"
+msgstr ""
+":ref:`qgisfuzzifyrastergaussianmembership`, "
+":ref:`qgisfuzzifyrasterlargemembership`, "
+":ref:`qgisfuzzifyrasterlinearmembership`, "
+":ref:`qgisfuzzifyrasternearmembership`, "
+":ref:`qgisfuzzifyrastersmallmembership`"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1342
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3288
@@ -1892,6 +2050,24 @@ msgstr "Expoente da função de potência"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3616
 msgid "small_formula"
 msgstr "pequena_fórmula"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1414
+msgid ""
+":ref:`qgisfuzzifyrastergaussianmembership`, "
+":ref:`qgisfuzzifyrasterlargemembership` "
+":ref:`qgisfuzzifyrasterlinearmembership`, "
+":ref:`qgisfuzzifyrasternearmembership`, "
+":ref:`qgisfuzzifyrasterpowermembership`"
+msgstr ""
+":ref:`qgisfuzzifyrastergaussianmembership`, "
+":ref:`qgisfuzzifyrasterlargemembership` "
+":ref:`qgisfuzzifyrasterlinearmembership`, "
+":ref:`qgisfuzzifyrasternearmembership`, "
+":ref:`qgisfuzzifyrasterpowermembership`"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1447
+msgid "Midpoint of the small function"
+msgstr "Ponto médio da função pequena"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1453
 msgid "Spread of the small function"
@@ -1909,6 +2085,10 @@ msgstr "ref:`qgisigualaFreqüência', :ref:`qgisMenosQueFreqüência'"
 msgid "Highest position in raster stack"
 msgstr "Posição mais alta na pilha raster"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1573
+msgid ":ref:`qgislowestpositioninrasterstack`"
+msgstr ":ref:`qgislowestpositioninrasterstack`"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:21
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1595
 msgid "List of raster layers to compare with"
@@ -1925,13 +2105,25 @@ msgstr "Especificação do raster de saída contendo o resultado. Um de:"
 msgid "Less than frequency"
 msgstr "Menor do que a freqüência"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1709
+msgid ":ref:`qgisequaltofrequency`, :ref:`qgisgreaterthanfrequency`"
+msgstr ":ref:`qgisequaltofrequency`, :ref:`qgisgreaterthanfrequency`"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1730
 msgid "Lowest position in raster stack"
 msgstr "Posição mais baixa na pilha rasterizada"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1749
+msgid ":ref:`qgishighestpositioninrasterstack`"
+msgstr ":ref:`qgishighestpositioninrasterstack`"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1770
 msgid "Raster boolean AND"
 msgstr "Raster Booleano E"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1787
+msgid ":ref:`qgisrasterbooleanor`"
+msgstr ":ref:`qgisrasterbooleanor`"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1807
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1969
@@ -1947,6 +2139,14 @@ msgstr "**Trate os valores 'sem dados' como falsos**"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1976
 msgid "``NODATA_AS_FALSE``"
 msgstr "''SEM DADOS COMO FALSOS''"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1818
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1980
+msgid ""
+"Treat nodata values in the input files as 0 when performing the operation"
+msgstr ""
+"Trate os valores sem dados nos arquivos de entrada como 0 ao realizar a "
+"operação"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1845
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2007
@@ -1968,6 +2168,11 @@ msgstr "**Tipo de dados de saída**"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3082
 msgid "``DATA_TYPE``"
 msgstr "''TIPO DE DADO''"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1855
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2017
+msgid "Output raster data type. Options:"
+msgstr "Tipo de dados raster de saída. Opções:"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1857
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2019
@@ -2046,6 +2251,25 @@ msgstr "9 --- CFloat32"
 msgid "10 --- CFloat64"
 msgstr "10 --- CFloat64"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1901
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2063
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2530
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2686
+msgid "**NODATA pixel count**"
+msgstr "**Contagem de pixels SEMDADOS**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1902
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2064
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2531
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2687
+msgid "``NODATA_PIXEL_COUNT``"
+msgstr "``NODATA_PIXEL_COUNT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1904
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2066
+msgid "The count of nodata pixels in the output raster layer"
+msgstr "A contagem de pixels sem dados na camada raster de saída"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1905
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2067
 msgid "**True pixel count**"
@@ -2055,6 +2279,12 @@ msgstr "**Contagem de pixels verdadeiros**"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2068
 msgid "``TRUE_PIXEL_COUNT``"
 msgstr "''CONTAGEM DE PIXELS VERDADEIROS''"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1908
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2070
+msgid "The count of True pixels (value = 1) in the output raster layer"
+msgstr ""
+"A contagem de pixels verdadeiros (valor = 1) na camada raster de saída"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1909
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2071
@@ -2066,9 +2296,18 @@ msgstr "''Contagem de pixels falsos''"
 msgid "``FALSE_PIXEL_COUNT``"
 msgstr "''CONTAGEM DE PIXELS FALSOS''"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1912
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2074
+msgid "The count of False pixels (value = 0) in the output raster layer"
+msgstr "A contagem de pixels falsos (valor = 0) na camada raster de saída"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1932
 msgid "Raster boolean OR"
 msgstr "Raster Booleano OU"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1949
+msgid ":ref:`qgisrasterbooleanand`"
+msgstr ":ref:`qgisrasterbooleanand`"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2093
 msgid "Raster calculator"
@@ -2077,6 +2316,10 @@ msgstr "Calculadora Raster"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2094
 msgid "Performs algebraic operations using raster layers."
 msgstr "Executa operações algébricas usando camadas matriciais."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2109
+msgid ":ref:`label_raster_calc`"
+msgstr ":ref:`label_raster_calc`"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2123
 msgid "**Layers**"
@@ -2258,6 +2501,10 @@ msgstr "''CONTAGEM DE BANDAS''"
 msgid "The number of bands in the raster"
 msgstr "O número de bandas na matriz"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2294
+msgid "The raster layer extent in the CRS"
+msgstr "A extensão da camada raster no SRC"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2296
 msgid "``HAS_NODATA_VALUE``"
 msgstr "''SEM VOLUME DE DADOS''"
@@ -2365,6 +2612,15 @@ msgstr ""
 msgid "**Statistics**"
 msgstr "**Estatísticas**"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2379
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2414
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2485
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2539
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2782
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2827
+msgid "``OUTPUT_HTML_FILE``"
+msgstr "``OUTPUT_HTML_FILE``"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2380
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2415
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2540
@@ -2458,6 +2714,10 @@ msgstr "``FAIXA``"
 msgid "**Standard deviation**"
 msgstr "**Desvio padrão**"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2433
+msgid "``STD_DEV``"
+msgstr "``STD_DEV``"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2436
 msgid "**Sum**"
 msgstr "**Soma**"
@@ -2530,7 +2790,7 @@ msgstr "Especificação da tabela para valores únicos:"
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 #: ../../docs/user_manual/processing_algs/algs_include.rst:4
 msgid "Create Temporary Layer (``TEMPORARY_OUTPUT``)"
-msgstr "Criar Camada Temporária (``SAÍDA_TEMPORÁRIA``)"
+msgstr "Criar Camada Temporária (``TEMPORARY_OUTPUT``)"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:5
 #: ../../docs/user_manual/processing_algs/algs_include.rst:6
@@ -2604,6 +2864,10 @@ msgstr ""
 "Calcula estatísticas para os valores de uma camada raster, categorizados por"
 " zonas definidas em outra camada raster."
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2582
+msgid ":ref:`qgiszonalstatisticsfb`"
+msgstr ":ref:`qgiszonalstatisticsfb`"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2599
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3369
 msgid "**Input Layer**"
@@ -2663,6 +2927,27 @@ msgid ""
 msgstr ""
 "Camada raster usada para calcular os centróides que serão usados como "
 "referência ao determinar as zonas na camada de saída. Um de:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2657
+msgid ""
+"0 --- Input layer: zones are determined by sampling the zone raster layer "
+"value at the centroid of each pixel from the source raster layer"
+msgstr ""
+"0 --- Camada de entrada: as zonas são determinadas pela amostragem do valor "
+"da camada raster da zona no centroide de cada pixel da camada raster de "
+"origem"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2659
+msgid ""
+"1 --- Zones layer: the input raster layer will be sampled at the centroid of"
+" each pixel from the zones raster layer"
+msgstr ""
+"1 --- Camada de zonas: a camada raster de entrada será amostrada no "
+"centroide de cada pixel da camada raster de zonas"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2693
+msgid "The output layer contains the following information **for each zone**:"
+msgstr "A camada de saída contém as seguintes informações **para cada zona**:"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2696
 msgid "Area: the area in square raster units in the zone;"
@@ -3242,11 +3527,23 @@ msgstr ""
 "Extrai valores matriciais nas localizações dos pontos. Se a camada matricial"
 " for multibanda, cada banda é amostrada."
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3355
+msgid ""
+"The attribute table of the resulting layer will have as many new columns as "
+"the raster layer band count."
+msgstr ""
+"A tabela de atributos da camada resultante terá tantas colunas novas quanto "
+"a contagem de bandas da camada raster."
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3371
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3387
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3410
 msgid "[vector: point]"
 msgstr "[vetor: ponto]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3372
+msgid "Point vector layer to use for  sampling"
+msgstr "Camada vetorial de ponto a ser usada para amostragem"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3373
 msgid "**Raster Layer**"

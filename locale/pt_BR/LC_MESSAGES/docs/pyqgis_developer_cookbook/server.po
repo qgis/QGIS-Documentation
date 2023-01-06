@@ -34,6 +34,11 @@ msgstr "Servidor QGIS e Python"
 msgid "Introduction"
 msgstr "Introdução"
 
+#: ../../docs/pyqgis_developer_cookbook/server.rst:40
+msgid "To learn more about QGIS Server, read the :ref:`QGIS-Server-manual`."
+msgstr ""
+"Para saber mais sobre o Servidor QGIS, leia o:ref:`QGIS-Server-manual`."
+
 #: ../../docs/pyqgis_developer_cookbook/server.rst:42
 msgid "QGIS Server is three different things:"
 msgstr "O Servidor QGIS é três coisas diferentes:"
@@ -199,6 +204,16 @@ msgstr ""
 msgid "Server filter plugins"
 msgstr "Complementos de filtro de servidor"
 
+#: ../../docs/pyqgis_developer_cookbook/server.rst:166
+msgid ""
+"Filters come in three different flavors and they can be instanciated by "
+"subclassing one of the classes below and by calling the corresponding method"
+" of :class:`QgsServerInterface <qgis.server.QgsServerInterface>`:"
+msgstr ""
+"Os filtros vêm em três sabores diferentes e podem ser instanciados "
+"subclassificando uma das classes abaixo e chamando o método correspondente "
+"de :class:`QgsServerInterface <qgis.server.QgsServerInterface>`:"
+
 #: ../../docs/pyqgis_developer_cookbook/server.rst:173
 msgid "Filter Type"
 msgstr "Tipo de Filtro"
@@ -219,6 +234,12 @@ msgstr "I/O"
 msgid ":class:`QgsServerFilter <qgis.server.QgsServerFilter>`"
 msgstr ":class:`QgsServerFilter <qgis.server.QgsServerFilter>`"
 
+#: ../../docs/pyqgis_developer_cookbook/server.rst:178
+msgid ""
+":meth:`registerFilter() <qgis.server.QgsServerInterface.registerFilter>`"
+msgstr ""
+":meth:`registerFilter() <qgis.server.QgsServerInterface.registerFilter>`"
+
 #: ../../docs/pyqgis_developer_cookbook/server.rst:179
 msgid "Access Control"
 msgstr "Controle de Acesso"
@@ -227,6 +248,14 @@ msgstr "Controle de Acesso"
 msgid ":class:`QgsAccessControlFilter <qgis.server.QgsAccessControlFilter>`"
 msgstr ":class:`QgsAccessControlFilter <qgis.server.QgsAccessControlFilter>`"
 
+#: ../../docs/pyqgis_developer_cookbook/server.rst:181
+msgid ""
+":meth:`registerAccessControl() "
+"<qgis.server.QgsServerInterface.registerAccessControl>`"
+msgstr ""
+":meth:`registerAccessControl() "
+"<qgis.server.QgsServerInterface.registerAccessControl>`"
+
 #: ../../docs/pyqgis_developer_cookbook/server.rst:182
 msgid "Cache"
 msgstr "Cache"
@@ -234,6 +263,14 @@ msgstr "Cache"
 #: ../../docs/pyqgis_developer_cookbook/server.rst:183
 msgid ":class:`QgsServerCacheFilter <qgis.server.QgsServerCacheFilter>`"
 msgstr ":class:`QgsServerCacheFilter <qgis.server.QgsServerCacheFilter>`"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:184
+msgid ""
+":meth:`registerServerCache() "
+"<qgis.server.QgsServerInterface.registerServerCache>`"
+msgstr ""
+":meth:`registerServerCache() "
+"<qgis.server.QgsServerInterface.registerServerCache>`"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:187
 msgid "I/O filters"
@@ -273,6 +310,12 @@ msgstr ""
 "manipular todas as suas propriedades (entrada/saída) e gerar exceções "
 "(embora de uma maneira bastante específica, como iremos ver abaixo)."
 
+#: ../../docs/pyqgis_developer_cookbook/server.rst:228
+msgid "The following paragraphs describe the available callbacks in details."
+msgstr ""
+"Os parágrafos seguintes descrevem em detalhes as funções de retorno "
+"disponíveis."
+
 #: ../../docs/pyqgis_developer_cookbook/server.rst:231
 msgid "requestReady"
 msgstr "requestReady"
@@ -288,6 +331,10 @@ msgstr "redireciona"
 #: ../../docs/pyqgis_developer_cookbook/server.rst:239
 msgid "add/remove certain parameters (typenames for example)"
 msgstr "adicionar/remover certos parâmetros (nomes de tipo, por exemplo)"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:240
+msgid "raise exceptions"
+msgstr "levantar exceções"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:242
 msgid ""
@@ -338,6 +385,22 @@ msgstr "Modificando a entrada"
 msgid "This is an extract of what you see in the log file:"
 msgstr "Este é um extrato do que você vê no arquivo de registro:"
 
+#: ../../docs/pyqgis_developer_cookbook/server.rst:472
+msgid ""
+"If you really want to implement a custom service it is recommended to "
+"subclass :class:`QgsService <qgis.server.QgsService>` and register your "
+"service on :meth:`registerFilter() "
+"<qgis.server.QgsServerInterface.serviceRegistry>` by calling its "
+":meth:`registerService(service) "
+"<qgis.server.QgsServiceRegistry.registerService>`"
+msgstr ""
+"Se você realmente deseja implementar um serviço personalizado, é recomendado"
+" subclasse :class:`QgsService <qgis.server.QgsService>` e registrar seu "
+"serviço em :meth:`registerFilter() "
+"<qgis.server.QgsServerInterface.serviceRegistry>` chamando seu "
+":meth:`registerService(service) "
+"<qgis.server.QgsServiceRegistry.registerService>`"
+
 #: ../../docs/pyqgis_developer_cookbook/server.rst:478
 msgid "Modifying or replacing the output"
 msgstr "Modificando ou substituindo a saída"
@@ -345,6 +408,18 @@ msgstr "Modificando ou substituindo a saída"
 #: ../../docs/pyqgis_developer_cookbook/server.rst:529
 msgid "Access control filters"
 msgstr "Filtros de controle de acesso"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:539
+msgid ""
+":meth:`allowToEdit(layer, feature) "
+"<qgis.server.QgsAccessControlFilter.allowToEdit>`"
+msgstr ""
+":meth:`allowToEdit(layer, feature) "
+"<qgis.server.QgsAccessControlFilter.allowToEdit>`"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:545
+msgid "Here's the directory structure of our example plugin:"
+msgstr "Aqui está a estrutura do diretório do nosso exemplo de plugin:"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:559
 msgid ""
@@ -411,6 +486,10 @@ msgstr "Limitar o acesso à camada."
 #: ../../docs/pyqgis_developer_cookbook/server.rst:702
 msgid "Example:"
 msgstr "Exemplo:"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:675
+msgid "To limit everything on read only access."
+msgstr "Limitar tudo no acesso somente para leitura."
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:723
 msgid "Custom services"

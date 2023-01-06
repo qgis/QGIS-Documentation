@@ -2,26 +2,27 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2022
+# Letícia Jardim, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 10:22+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:06+0000\n"
+"Last-Translator: Letícia Jardim, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 "Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/gentle_gis_introduction/data_capture.rst:4
 msgid "Data Capture"
@@ -411,6 +412,18 @@ msgstr ""
 "tipo de geometria e os atributos que cada elemento devem ter, pode seguir "
 "para o próximo passo que é a criação de uma shapefile vazia."
 
+#: ../../docs/gentle_gis_introduction/data_capture.rst:162
+msgid ""
+"The process usually starts with choosing the 'new vector layer' option in "
+"your GIS Application and then selecting a geometry type (see "
+":numref:`figure_new_shapefile`). As we covered in an earlier topic, this "
+"means choosing either point, polyline or polygon for the geometry."
+msgstr ""
+"O processo geralmente começa com a escolha da opção 'nova camada vetorial' "
+"em sua Aplicação GIS e depois selecionando um tipo de geometria (ver "
+":numref:`figure_new_shapefile`). Como abordamos em um tópico anterior, isto "
+"significa escolher um ponto, polilinha ou polígono para a geometria."
+
 #: ../../docs/gentle_gis_introduction/data_capture.rst:173
 msgid ""
 "Creating a new vector layer is as simple as filling in a few details in a "
@@ -529,6 +542,33 @@ msgstr ""
 "descrever os atributos. O formulário do atributo é baseado nos campos que "
 "especificou quando criou a camada vetorial."
 
+#: ../../docs/gentle_gis_introduction/data_capture.rst:246
+msgid ""
+"To **capture a polyline** the process is similar to that of a point, in that"
+" you need to first use the pan and zoom tools to move the map in the map "
+"view to the correct geographical area. You should be zoomed in enough so "
+"that your new vector polyline feature will have an appropriate scale (see "
+":ref:`gentle_gis_vector_data` for more details on scale issues). When you "
+"are ready, you can click the polyline capture icon in the tool bar and then "
+"start drawing your line by clicking on the map. After you make your first "
+"click, you will notice that the line stretches like an elastic band to "
+"follow the mouse cursor around as you move it. Each time you click with the "
+"**left mouse button**, a new vertex will be added to the map. This process "
+"is shown in :numref:`figure_capture_polyline`."
+msgstr ""
+"Para **capturar uma polilinha** o processo é semelhante ao de um ponto, na "
+"medida em que primeiro é preciso usar as ferramentas de pan e zoom para "
+"mover o mapa na visualização do mapa para a área geográfica correta. Você "
+"deve fazer zoom suficiente para que seu novo recurso de polilinha vetorial "
+"tenha uma escala apropriada (veja :ref:`gentle_gis_vector_data` para mais "
+"detalhes sobre questões de escala). Quando estiver pronto, você pode clicar "
+"no ícone de captura da polilinha na barra de ferramentas e então começar a "
+"desenhar sua linha, clicando no mapa. Após fazer seu primeiro clique, você "
+"notará que a linha se estica como uma faixa elástica para seguir o cursor do"
+" mouse à medida que você a move. Cada vez que você clicar com o botão "
+"esquerdo do mouse***, um novo vértice será adicionado ao mapa. Este processo"
+" é mostrado em :numref:`figure_capture_polyline`."
+
 #: ../../docs/gentle_gis_introduction/data_capture.rst:263
 msgid ""
 "Capturing lines for a tourism map. When editing a line layer, the vertices "
@@ -629,6 +669,23 @@ msgstr ""
 #: ../../docs/gentle_gis_introduction/data_capture.rst:338
 msgid "Common problems / things to be aware of"
 msgstr "Problemas comuns / coisas a ter cuidado"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:340
+msgid ""
+"If you are digitising using a backdrop raster layer such as an aerial "
+"photograph or satellite image, it is very important that the raster layer is"
+" properly georeferenced. A layer that is georeferenced properly displays in "
+"the correct position in the map view based on the GIS Application's internal"
+" model of the Earth. We can see the effect of a poorly georeferenced image "
+"in :numref:`figure_georeference_issue`."
+msgstr ""
+"Se você estiver digitalizando usando uma camada de fundo raster como uma "
+"fotografia aérea ou imagem de satélite, é muito importante que a camada "
+"raster seja devidamente georreferenciada. Uma camada que seja "
+"georreferenciada adequadamente exibe na posição correta na visualização do "
+"mapa com base no modelo interno da aplicação GIS da Terra. Podemos ver o "
+"efeito de uma imagem mal georreferenciada em "
+":numref:`figure_georeference_issue`."
 
 #: ../../docs/gentle_gis_introduction/data_capture.rst:353
 msgid ""
@@ -814,6 +871,14 @@ msgstr ""
 #: ../../docs/gentle_gis_introduction/data_capture.rst:420
 msgid "Further reading"
 msgstr "Outras leituras"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:422
+msgid ""
+"The QGIS User Guide has more detailed information on :ref:`digitising vector"
+" data <editingvector>` in QGIS."
+msgstr ""
+"O Guia do Usuário QGIS tem informações mais detalhadas sobre :ref:`digitação"
+" de dados vetoriais <editingvector>` no QGIS."
 
 #: ../../docs/gentle_gis_introduction/data_capture.rst:426
 msgid "What's next?"

@@ -2,27 +2,26 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Francis Gasc <francisgasc@gmail.com>, 2021
-# Harrissou Sant-anna, 2021
+# Harrissou Sant-anna, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-21 02:13+0000\n"
-"PO-Revision-Date: 2020-12-24 12:02+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2021\n"
+"POT-Creation-Date: 2022-12-21 02:17+0000\n"
+"PO-Revision-Date: 2022-03-14 05:07+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2022\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.11.0\n"
 "Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/server_manual/containerized_deployment.rst:3
 msgid "Containerized deployment"
@@ -57,19 +56,6 @@ msgstr ""
 "être récupérées comme sources (Dockerfile et ressources) à construire ou "
 "déjà construites à partir de registres (privés ou publics)."
 
-#: ../../docs/server_manual/containerized_deployment.rst:23
-msgid ""
-"QGIS Debian-Ubuntu package downloads need a valid gpg authentication key. "
-"Please refer to the `installation pages "
-"<https://www.qgis.org/fr/site/forusers/alldownloads.html#debian-ubuntu>`_ to"
-" update the following Dockerfile with the latest key fingerprint"
-msgstr ""
-"Les téléchargements de paquets QGIS Debian-Ubuntu nécessitent une clé "
-"d'authentification gpg valide. Veuillez vous référer aux pages "
-"d'installation <https://www.qgis.org/fr/site/forusers/alldownloads.html"
-"#debian-ubuntu>`_ pour mettre à jour le Dockerfile suivant avec la dernière "
-"empreinte de la clé"
-
 #: ../../docs/server_manual/containerized_deployment.rst:30
 msgid "Simple docker images"
 msgstr "Simples images docker"
@@ -88,19 +74,19 @@ msgstr ""
 msgid "create a file :file:`Dockerfile` with this content:"
 msgstr "créer un fichier :file:`Dockerfile` avec ce contenu :"
 
-#: ../../docs/server_manual/containerized_deployment.rst:88
+#: ../../docs/server_manual/containerized_deployment.rst:90
 msgid "create a file :file:`cmd.sh` with this content:"
 msgstr "créer un fichier :file:`cmd.sh` avec ce contenu :"
 
-#: ../../docs/server_manual/containerized_deployment.rst:99
+#: ../../docs/server_manual/containerized_deployment.rst:101
 msgid "build the image with:"
 msgstr "construire l'image avec:"
 
-#: ../../docs/server_manual/containerized_deployment.rst:107
+#: ../../docs/server_manual/containerized_deployment.rst:109
 msgid "First run"
 msgstr "Premier lancement"
 
-#: ../../docs/server_manual/containerized_deployment.rst:109
+#: ../../docs/server_manual/containerized_deployment.rst:111
 msgid ""
 "To run the server you will need a QGIS project file. You can use one of "
 "yours or pick `this sample <https://gitlab.com/Oslandia/qgis/docker-"
@@ -113,7 +99,7 @@ msgstr ""
 "qgis/-/blob/cc1798074d4a66a472721352f3984bb318777a5a/qgis-"
 "exec/data/osm.qgs>`_."
 
-#: ../../docs/server_manual/containerized_deployment.rst:112
+#: ../../docs/server_manual/containerized_deployment.rst:114
 msgid ""
 "To do so, create a directory :file:`data` within the directory :file:`qgis-"
 "server` and copy your file in it. To comply with the following explanations,"
@@ -123,47 +109,47 @@ msgstr ""
 "server` et copiez votre fichier dedans. Pour respecter les explications "
 "suivantes, renommez-le en :file:`osm.qgs`."
 
-#: ../../docs/server_manual/containerized_deployment.rst:125
+#: ../../docs/server_manual/containerized_deployment.rst:127
 msgid "Now, you can run the server with:"
 msgstr "Maintenant, vous pouvez faire fonctionner le serveur avec :"
 
-#: ../../docs/server_manual/containerized_deployment.rst:135
+#: ../../docs/server_manual/containerized_deployment.rst:137
 msgid "Options used:"
 msgstr "Options utilisées :"
 
-#: ../../docs/server_manual/containerized_deployment.rst:137
+#: ../../docs/server_manual/containerized_deployment.rst:139
 msgid "**-d**: run in the background"
 msgstr "**-d** : exécuter en arrière-plan"
 
-#: ../../docs/server_manual/containerized_deployment.rst:138
+#: ../../docs/server_manual/containerized_deployment.rst:140
 msgid "**--rm**: remove the container when it is stopped"
 msgstr "**--rm** : supprimer le conteneur lorsqu'il est arrêté"
 
-#: ../../docs/server_manual/containerized_deployment.rst:139
+#: ../../docs/server_manual/containerized_deployment.rst:141
 msgid "**--name**: name of the container to be created"
 msgstr "**--name** : nom du conteneur à créer"
 
-#: ../../docs/server_manual/containerized_deployment.rst:140
+#: ../../docs/server_manual/containerized_deployment.rst:142
 msgid "**--net**: (previously created) sub network"
 msgstr "**--net** : (précédemment créé) nom du sous-réseau"
 
-#: ../../docs/server_manual/containerized_deployment.rst:141
+#: ../../docs/server_manual/containerized_deployment.rst:143
 msgid "**--hostname**: container hostname, for later referencing"
 msgstr "**--hostname** : nom d'hôte du conteneur, pour référence ultérieure"
 
-#: ../../docs/server_manual/containerized_deployment.rst:142
+#: ../../docs/server_manual/containerized_deployment.rst:144
 msgid "**-v**: local data directory to be mounted in the container"
 msgstr "**-v** : dossier de données locales à monter dans le conteneur"
 
-#: ../../docs/server_manual/containerized_deployment.rst:143
+#: ../../docs/server_manual/containerized_deployment.rst:145
 msgid "**-p**: host/container port mapping"
 msgstr "**-p** : mappage des ports hôtes/conteneurs"
 
-#: ../../docs/server_manual/containerized_deployment.rst:144
+#: ../../docs/server_manual/containerized_deployment.rst:146
 msgid "**-e**: environment variable to be used in the container"
 msgstr "**-e** : variable d'environnement à utiliser dans le conteneur"
 
-#: ../../docs/server_manual/containerized_deployment.rst:147
+#: ../../docs/server_manual/containerized_deployment.rst:149
 msgid ""
 "To check, type ``docker ps | grep qgis-server`` and you should see a line "
 "with **qgis-server**::"
@@ -171,11 +157,11 @@ msgstr ""
 "Pour vérifier, tapez ``docker ps | grep qgis-server`` et vous devriez voir "
 "une ligne avec **qgis-server**: :"
 
-#: ../../docs/server_manual/containerized_deployment.rst:155
+#: ../../docs/server_manual/containerized_deployment.rst:157
 msgid "Usable sample"
 msgstr "Exemple fonctionnel"
 
-#: ../../docs/server_manual/containerized_deployment.rst:157
+#: ../../docs/server_manual/containerized_deployment.rst:159
 msgid ""
 "As the server is only accepting fastcgi connections, you need an HTTP server"
 " that handles this protocol. To do so we have to create a simple Nginx "
@@ -185,41 +171,42 @@ msgstr ""
 " serveur HTTP qui gère ce protocole. Pour ce faire, nous devons créer un "
 "simple fichier de configuration Nginx et lancer une image Nginx."
 
-#: ../../docs/server_manual/containerized_deployment.rst:162
+#: ../../docs/server_manual/containerized_deployment.rst:164
 msgid ""
 "Create a file :file:`nginx.conf` in the current directory with this content:"
 msgstr ""
 "Créez un fichier :file:`nginx.conf` dans le dossier courant avec ce contenu "
 ":"
 
-#: ../../docs/server_manual/containerized_deployment.rst:183
+#: ../../docs/server_manual/containerized_deployment.rst:185
 msgid "And type this command:"
 msgstr "Et taper cette commande:"
 
-#: ../../docs/server_manual/containerized_deployment.rst:191
+#: ../../docs/server_manual/containerized_deployment.rst:193
 msgid ""
-"To check capabilities availability, type in a browser http://localhost:8080"
-"/qgis-server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+"To check capabilities availability, type in a browser "
+"http://localhost:8080/qgis-"
+"server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
 msgstr ""
 "Pour vérifier la disponibilité des capacités du serveur, tapez dans l'url "
 "d'un navigateur http://localhost:8080/qgis-"
 "server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
 
-#: ../../docs/server_manual/containerized_deployment.rst:195
-#: ../../docs/server_manual/containerized_deployment.rst:291
-#: ../../docs/server_manual/containerized_deployment.rst:514
+#: ../../docs/server_manual/containerized_deployment.rst:197
+#: ../../docs/server_manual/containerized_deployment.rst:293
+#: ../../docs/server_manual/containerized_deployment.rst:516
 msgid "Cleanup"
 msgstr "Nettoyage"
 
-#: ../../docs/server_manual/containerized_deployment.rst:197
+#: ../../docs/server_manual/containerized_deployment.rst:199
 msgid "To cleanup the running images, type:"
 msgstr "Pour nettoyer les images en cours, tapez :"
 
-#: ../../docs/server_manual/containerized_deployment.rst:206
+#: ../../docs/server_manual/containerized_deployment.rst:208
 msgid "Docker stacks"
 msgstr "Docker stacks"
 
-#: ../../docs/server_manual/containerized_deployment.rst:208
+#: ../../docs/server_manual/containerized_deployment.rst:210
 msgid ""
 "The previous method is scriptable, but not easily packageable nor "
 "standardized or easily manageable."
@@ -227,7 +214,7 @@ msgstr ""
 "La méthode précédente est scriptable, mais elle n'est ni facile à mettre en "
 "œuvre, ni standardisée, ni facilement gérable."
 
-#: ../../docs/server_manual/containerized_deployment.rst:211
+#: ../../docs/server_manual/containerized_deployment.rst:213
 msgid ""
 "To work with a docker image set you could use a docker stack managed by an "
 "orchestrator. In a stack, the images are working in the same private "
@@ -241,7 +228,7 @@ msgstr ""
 "toute la pile ou déployer la pile à d'autres workers. Il existe de nombreux "
 "orchestrateurs, par exemple Swarm, Kubernetes et Mesos."
 
-#: ../../docs/server_manual/containerized_deployment.rst:218
+#: ../../docs/server_manual/containerized_deployment.rst:220
 msgid ""
 "In the following, we will present simple configurations for testing "
 "purposes. They are not suitable for production."
@@ -249,11 +236,11 @@ msgstr ""
 "Dans ce qui suit, nous présenterons des configurations simples à des fins de"
 " test. Elles ne sont pas adaptées à la production."
 
-#: ../../docs/server_manual/containerized_deployment.rst:223
+#: ../../docs/server_manual/containerized_deployment.rst:225
 msgid "Swarm/docker-compose"
 msgstr "Swarm/docker-compose"
 
-#: ../../docs/server_manual/containerized_deployment.rst:225
+#: ../../docs/server_manual/containerized_deployment.rst:227
 msgid ""
 "Docker now has its own orchestrator: Swarm (compatible with docker-compose "
 "files). You have to `enable it <https://docs.docker.com/get-"
@@ -265,11 +252,11 @@ msgstr ""
 "started/orchestration/#enable-docker-swarm>`_ (la version Mac fonctionnera "
 "également avec des conteneurs Linux)."
 
-#: ../../docs/server_manual/containerized_deployment.rst:233
+#: ../../docs/server_manual/containerized_deployment.rst:235
 msgid "Stack description"
 msgstr "Description de la Stack"
 
-#: ../../docs/server_manual/containerized_deployment.rst:235
+#: ../../docs/server_manual/containerized_deployment.rst:237
 msgid ""
 "Now that you have Swarm working, create the service file (see `Deploy to "
 "Swarm <https://docs.docker.com/get-started/swarm-deploy/>`_) :file:`qgis-"
@@ -279,11 +266,11 @@ msgstr ""
 "`Deploy to Swarm <https://docs.docker.com/get-started/swarm-deploy/>`_) "
 ":file:`qgis-stack.yaml` :"
 
-#: ../../docs/server_manual/containerized_deployment.rst:265
+#: ../../docs/server_manual/containerized_deployment.rst:267
 msgid "To deploy (or update) the stack, type:"
 msgstr "Pour déployer (ou mettre à jour) la stack, tapez :"
 
-#: ../../docs/server_manual/containerized_deployment.rst:271
+#: ../../docs/server_manual/containerized_deployment.rst:273
 msgid ""
 "Check the stack deployment status until you obtain **1/1** in the "
 "**replicas** column:"
@@ -291,11 +278,11 @@ msgstr ""
 "Vérifiez le statut de déploiement de la stack jusqu'à ce que vous obteniez "
 "**1/1** dans la colonne **replicas** :"
 
-#: ../../docs/server_manual/containerized_deployment.rst:278
+#: ../../docs/server_manual/containerized_deployment.rst:280
 msgid "Something like:"
 msgstr "Quelque chose comme :"
 
-#: ../../docs/server_manual/containerized_deployment.rst:287
+#: ../../docs/server_manual/containerized_deployment.rst:289
 msgid ""
 "To check WMS capabilities, type in a web browser http://localhost:8080/qgis-"
 "server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
@@ -304,19 +291,19 @@ msgstr ""
 "http://localhost:8080/qgis-"
 "server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
 
-#: ../../docs/server_manual/containerized_deployment.rst:293
+#: ../../docs/server_manual/containerized_deployment.rst:295
 msgid "To cleanup, type:"
 msgstr "Pour nettoyer, tapez :"
 
-#: ../../docs/server_manual/containerized_deployment.rst:300
+#: ../../docs/server_manual/containerized_deployment.rst:302
 msgid "Kubernetes"
 msgstr "Kubernetes"
 
-#: ../../docs/server_manual/containerized_deployment.rst:303
+#: ../../docs/server_manual/containerized_deployment.rst:305
 msgid "Installation"
 msgstr "Installation"
 
-#: ../../docs/server_manual/containerized_deployment.rst:305
+#: ../../docs/server_manual/containerized_deployment.rst:307
 msgid ""
 "If you have a **Docker Desktop** installation, using Kubernetes (aka k8s) is"
 " pretty straight forward: `enable k8s <https://docs.docker.com/get-"
@@ -326,17 +313,19 @@ msgstr ""
 "Kubernetes (alias k8s) est assez simple : `activez k8s "
 "<https://docs.docker.com/get-started/orchestration/#enable-kubernetes>`_."
 
-#: ../../docs/server_manual/containerized_deployment.rst:309
+#: ../../docs/server_manual/containerized_deployment.rst:311
 msgid ""
-"If not, follow the `minikube tutorial <https://kubernetes.io/docs/tutorials"
-"/hello-minikube/>`_ or `microk8s for Ubuntu "
-"<https://ubuntu.com/tutorials/install-a-local-kubernetes-with-microk8s>`_."
+"If not, follow the `minikube tutorial "
+"<https://kubernetes.io/docs/tutorials/hello-minikube/>`_ or `microk8s for "
+"Ubuntu <https://ubuntu.com/tutorials/install-a-local-kubernetes-with-"
+"microk8s>`_."
 msgstr ""
-"Sinon, suivez le tutoriel `minikube <https://kubernetes.io/docs/tutorials"
-"/hello-minikube/>`_ ou `microk8s pour Ubuntu "
-"<https://ubuntu.com/tutorials/install-a-local-kubernetes-with-microk8s>`_."
+"Sinon, suivez le tutoriel `minikube "
+"<https://kubernetes.io/docs/tutorials/hello-minikube/>`_ ou `microk8s pour "
+"Ubuntu <https://ubuntu.com/tutorials/install-a-local-kubernetes-with-"
+"microk8s>`_."
 
-#: ../../docs/server_manual/containerized_deployment.rst:314
+#: ../../docs/server_manual/containerized_deployment.rst:316
 msgid ""
 "As Kubernetes installation can be really complex, we will only focus on "
 "aspects used by this demo. For further / deeper information, check the "
@@ -347,11 +336,11 @@ msgstr ""
 "plus amples informations, consultez la `documentation officielle "
 "<https://kubernetes.io/docs/home/>`_."
 
-#: ../../docs/server_manual/containerized_deployment.rst:320
+#: ../../docs/server_manual/containerized_deployment.rst:322
 msgid "microk8s"
 msgstr "microk8s"
 
-#: ../../docs/server_manual/containerized_deployment.rst:322
+#: ../../docs/server_manual/containerized_deployment.rst:324
 msgid ""
 "microk8s needs extra steps: you have to enable the registry and tag the "
 "qgis-server image in order to have Kubernetes to find the created images."
@@ -360,17 +349,17 @@ msgstr ""
 "registre et marquer l'image du serveur qgis afin que Kubernetes puisse "
 "trouver les images créées."
 
-#: ../../docs/server_manual/containerized_deployment.rst:326
+#: ../../docs/server_manual/containerized_deployment.rst:328
 msgid "First, enable the registry:"
 msgstr "Tout d'abord, activez le dépôt :"
 
-#: ../../docs/server_manual/containerized_deployment.rst:332
+#: ../../docs/server_manual/containerized_deployment.rst:334
 msgid "Then, tag and push the image to your newly created registry:"
 msgstr ""
 "Ensuite, vous devez étiqueter et pousser l'image vers votre dépôt "
 "nouvellement créé :"
 
-#: ../../docs/server_manual/containerized_deployment.rst:338
+#: ../../docs/server_manual/containerized_deployment.rst:340
 msgid ""
 "Finally, add or complete the :file:`/etc/docker/daemon.json` to have your "
 "registry **127.0.0.1:32000** listed in the **insecure-registries** field:"
@@ -379,11 +368,11 @@ msgstr ""
 "que votre dépôt **127.0.0.1:32000** soit listé dans le champ **insecure-"
 "registries** :"
 
-#: ../../docs/server_manual/containerized_deployment.rst:351
+#: ../../docs/server_manual/containerized_deployment.rst:353
 msgid "Creating manifests"
 msgstr "Créer des manifests"
 
-#: ../../docs/server_manual/containerized_deployment.rst:353
+#: ../../docs/server_manual/containerized_deployment.rst:355
 msgid ""
 "Kubernetes describes the objects to deploy in yaml manifests. There are many"
 " different kinds, but we will only use deployments (handle pods, i.e. docker"
@@ -395,27 +384,27 @@ msgstr ""
 "déploiements (handle pods, c'est-à-dire les images de docker) et les "
 "services pour exposer les déploiements à des fins internes ou externes."
 
-#: ../../docs/server_manual/containerized_deployment.rst:359
+#: ../../docs/server_manual/containerized_deployment.rst:361
 msgid "Deployment manifests"
 msgstr "Déploiement des manifests"
 
-#: ../../docs/server_manual/containerized_deployment.rst:361
+#: ../../docs/server_manual/containerized_deployment.rst:363
 msgid "Create a file :file:`deployments.yaml` with this content:"
 msgstr "Créez un fichier :file:`deployments.yaml` avec ce contenu :"
 
-#: ../../docs/server_manual/containerized_deployment.rst:433
+#: ../../docs/server_manual/containerized_deployment.rst:435
 msgid "Service manifests"
 msgstr "Service manifests"
 
-#: ../../docs/server_manual/containerized_deployment.rst:435
+#: ../../docs/server_manual/containerized_deployment.rst:437
 msgid "Create a file :file:`services.yaml` with this content:"
 msgstr "Créez un fichier :file:`services.yaml` avec ce contenu :"
 
-#: ../../docs/server_manual/containerized_deployment.rst:467
+#: ../../docs/server_manual/containerized_deployment.rst:469
 msgid "Deploying manifests"
 msgstr "Déploiement des manifests"
 
-#: ../../docs/server_manual/containerized_deployment.rst:469
+#: ../../docs/server_manual/containerized_deployment.rst:471
 msgid ""
 "To deploy the images and services in Kubernetes, one can use the dashboard "
 "(click on the **+** on the upper right) or the command line."
@@ -424,7 +413,7 @@ msgstr ""
 "le tableau de bord (cliquez sur le **+** en haut à droite) ou la ligne de "
 "commande."
 
-#: ../../docs/server_manual/containerized_deployment.rst:473
+#: ../../docs/server_manual/containerized_deployment.rst:475
 msgid ""
 "When using the command line with microk8s you will have to prefix each "
 "command with `microk8s`."
@@ -432,40 +421,41 @@ msgstr ""
 "Lorsque vous utilisez la ligne de commande avec microk8s, vous devez "
 "préfixer chaque commande par \"microk8s\"."
 
-#: ../../docs/server_manual/containerized_deployment.rst:476
+#: ../../docs/server_manual/containerized_deployment.rst:478
 msgid "To deploy or update your manifests:"
 msgstr "Pour déployer ou mettre à jour vos manifests :"
 
-#: ../../docs/server_manual/containerized_deployment.rst:482
+#: ../../docs/server_manual/containerized_deployment.rst:484
 msgid "To check what is currently deployed:"
 msgstr "Pour vérifier ce qui est actuellement déployé :"
 
-#: ../../docs/server_manual/containerized_deployment.rst:488
+#: ../../docs/server_manual/containerized_deployment.rst:490
 msgid "You should obtain something like::"
 msgstr "Vous devriez obtenir quelque chose comme: :"
 
-#: ../../docs/server_manual/containerized_deployment.rst:504
+#: ../../docs/server_manual/containerized_deployment.rst:506
 msgid "To read nginx/qgis logs, type:"
 msgstr "Pour lire les journaux nginx/qgis, tapez :"
 
-#: ../../docs/server_manual/containerized_deployment.rst:510
+#: ../../docs/server_manual/containerized_deployment.rst:512
 msgid ""
-"To check WMS capabilities, type in a web browser http://localhost:30080"
-"/qgis-server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+"To check WMS capabilities, type in a web browser "
+"http://localhost:30080/qgis-"
+"server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
 msgstr ""
 "Pour vérifier les capacités du serveur WMS, tapez dans un navigateur web "
 "http://localhost:30080/qgis-"
 "server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
 
-#: ../../docs/server_manual/containerized_deployment.rst:516
+#: ../../docs/server_manual/containerized_deployment.rst:518
 msgid "To clean up, type:"
 msgstr "Pour nettoyer, tapez :"
 
-#: ../../docs/server_manual/containerized_deployment.rst:523
+#: ../../docs/server_manual/containerized_deployment.rst:525
 msgid "Cloud deployment"
 msgstr "Déploiement en Cloud"
 
-#: ../../docs/server_manual/containerized_deployment.rst:525
+#: ../../docs/server_manual/containerized_deployment.rst:527
 msgid ""
 "Managing your own cluster of servers to handle the deployment of "
 "containerized applications, is a complex job. You have to handle multiple "
@@ -476,7 +466,7 @@ msgstr ""
 "multiples questions, telles que le matériel, la bande passante et la "
 "sécurité à différents niveaux."
 
-#: ../../docs/server_manual/containerized_deployment.rst:530
+#: ../../docs/server_manual/containerized_deployment.rst:532
 msgid ""
 "Cloud deployment solutions can be a good alternative when you do not want to"
 " focus on infrastructure management."
@@ -485,7 +475,7 @@ msgstr ""
 "alternative lorsque vous ne voulez pas vous concentrer sur la gestion de "
 "l'infrastructure."
 
-#: ../../docs/server_manual/containerized_deployment.rst:533
+#: ../../docs/server_manual/containerized_deployment.rst:535
 msgid ""
 "A cloud deployment may use proprietary mechanisms, but they are also "
 "compatible with the stages explained previously (:ref:`docker images "
@@ -496,11 +486,11 @@ msgstr ""
 "(:ref:`docker images <simple-docker-images>` and :ref:`stack management "
 "<docker-stacks>`)."
 
-#: ../../docs/server_manual/containerized_deployment.rst:539
+#: ../../docs/server_manual/containerized_deployment.rst:541
 msgid "AWS usecase"
 msgstr "Cas d'utilisation avec AWS"
 
-#: ../../docs/server_manual/containerized_deployment.rst:541
+#: ../../docs/server_manual/containerized_deployment.rst:543
 msgid ""
 "With Amazon AWS, through `ECS (Elastic Container Service) "
 "<https://console.aws.amazon.com/ecs/home>`_ functionalities, you can use "
@@ -515,29 +505,7 @@ msgstr ""
 "`registre d'images <https://console.aws.amazon.com/ecr/home>`_ pour que vos "
 "images personnalisées soient accessibles."
 
-#: ../../docs/server_manual/containerized_deployment.rst:549
-msgid ""
-"To use docker-compose alike functionalities, you need to install the **ecs-"
-"cli** client and have `proper permissions / roles "
-"<https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html>`_."
-" Then, with the help of the `ecs-cli compose` commands (see the `ecs-cli "
-"compose manual <https://docs.aws.amazon.com/AmazonECS/latest/developerguide"
-"/cmd-ecs-cli-compose.html>`_ and `ecs-cli tutorial "
-"<https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-cli-"
-"tutorial-fargate.html>`_), you can reuse the :ref:`stack description "
-"<docker-compose-file>`."
-msgstr ""
-"Pour utiliser les mêmes fonctionnalités que docker-compose, vous devez "
-"installer le client **ecs-cli** et avoir les `permissions / rôles "
-"<https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html>`_."
-" Ensuite, à l'aide des commandes `ecs-cli compose` (voir le manuel `ecs-cli "
-"compose` <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cmd-"
-"ecs-cli-compose.html>`_ et le tutoriel `ecs-cli "
-"<https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-cli-"
-"tutorial-fargate.html>`_), vous pouvez réutiliser la description de "
-":ref:`stack <docker-compose-file>`."
-
-#: ../../docs/server_manual/containerized_deployment.rst:559
+#: ../../docs/server_manual/containerized_deployment.rst:557
 msgid ""
 "To use Kubernetes, you can use the AWS web console or the command line tool "
 "`eksctl <https://docs.aws.amazon.com/eks/latest/userguide/getting-"

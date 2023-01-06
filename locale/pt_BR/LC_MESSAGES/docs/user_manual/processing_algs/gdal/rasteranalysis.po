@@ -889,6 +889,10 @@ msgstr "Adicionar opções extras de linha de comando GDAL"
 msgid "Outputs"
 msgstr "Saídas"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:138
+msgid "Output raster with angle values in degrees"
+msgstr "Raster de saída com valores de ângulo em graus"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:141
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:259
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:408
@@ -946,6 +950,10 @@ msgstr "Um arquivo de configuração de cores baseado em texto"
 msgid "**Matching mode**"
 msgstr "**Modo de correspondência**"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:197
+msgid "``MATCH_MODE``"
+msgstr "``MATCH_MODE``"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:198
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:452
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:565
@@ -979,6 +987,15 @@ msgstr "1 --- Usar quádruplos RGBA mais próximos"
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:205
 msgid "2 --- Use smoothly blended colours"
 msgstr "2 --- Usar suavemente cores misturadas"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:230
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:253
+msgid "**Color relief**"
+msgstr "**Cor do relevo**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:256
+msgid "A 4-band output raster"
+msgstr "Um raster de saída de 4 bandas"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:271
 msgid "Fill nodata"
@@ -1192,6 +1209,13 @@ msgstr "**Métrica de dados a ser usada**"
 msgid "``METRIC``"
 msgstr "``MÉTRICA``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:474
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:827
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1156
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1326
+msgid "**The first radius of search ellipse**"
+msgstr "**O primeiro raio da elipse de pesquisa**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:475
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:828
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1157
@@ -1227,12 +1251,44 @@ msgstr "``RAIO_1``"
 msgid "Default: 0.0"
 msgstr "Padrão: 0,0"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:479
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:832
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1161
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1331
+msgid "The first radius (X axis if rotation angle is 0) of the search ellipse"
+msgstr ""
+"O primeiro raio (eixo X se o ângulo de rotação for 0) da elipse de pesquisa"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:481
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:834
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1163
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1333
+msgid "**The second radius of search ellipse**"
+msgstr "**O segundo raio da elipse de pesquisa**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:482
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:835
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1164
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1334
 msgid "``RADIUS_2``"
 msgstr "``RAIO_2``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:486
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:839
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1168
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1338
+msgid ""
+"The second radius (Y axis if rotation angle is 0) of the search ellipse"
+msgstr ""
+"O segundo raio (eixo Y se o ângulo de rotação for 0) da elipse de pesquisa"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:488
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:841
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1170
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1340
+msgid "**Angle of search ellipse rotation in degrees (counter clockwise)**"
+msgstr ""
+"**Ângulo de rotação da elipse de pesquisa em graus (sentido anti-horário)**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:489
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:842
@@ -1257,6 +1313,13 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1177
 msgid "**Minimum number of data points to use**"
 msgstr "**Número mínimo de pontos de dados a usar**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:496
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:664
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:855
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1178
+msgid "``MIN_POINTS``"
+msgstr "``MIN_POINTS``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:500
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:668
@@ -1320,6 +1383,15 @@ msgstr "**Valor Z do campo**"
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1380
 msgid "``Z_FIELD``"
 msgstr "``CAMPO_Z``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:538
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:706
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:897
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1046
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1219
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1381
+msgid "[tablefield: numeric]"
+msgstr "[campo de tabela: numérico]"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:539
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:707
@@ -1562,6 +1634,10 @@ msgstr "**Suavização**"
 msgid "**Interpolated (IDW)**"
 msgstr "**Interpolado (IDW)**"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:971
+msgid "Grid (Linear)"
+msgstr "Grade (Linear)"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1001
 msgid "**Search distance**"
 msgstr "**Distância de busca**"
@@ -1613,6 +1689,10 @@ msgstr "**Interpolado (média móvel)**"
 msgid "Specify the output raster layer. One of:"
 msgstr "Especificar a camada raster de saída. Um de:"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1293
+msgid "Grid (Nearest neighbor)"
+msgstr "Grade (vizinho mais próximo)"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1353
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1437
 msgid "**Interpolated (Nearest neighbour)**"
@@ -1621,6 +1701,14 @@ msgstr "**Interpolado (Vizinho mais próximo)**"
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1455
 msgid "Hillshade"
 msgstr "Sombreamento"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1462
+msgid ""
+"This algorithm is derived from the `GDAL DEM utility "
+"<https://gdal.org/programs/gdaldem.html>`__ ."
+msgstr ""
+"Este algoritmo é derivado do utilitário `GDAL DEM "
+"(MDE)<https://gdal.org/programs/gdaldem.html>`__ ."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1485
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1655
@@ -1829,6 +1917,14 @@ msgstr "**A distância máxima a ser gerada**"
 msgid "``MAX_DISTANCE``"
 msgstr "\"DISTÂNCIA_MÁXIMA\""
 
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1822
+msgid ""
+"**Value to be applied to all pixels that are within the maxdist of target "
+"pixels**"
+msgstr ""
+"**Valor a ser aplicado a todos os pixels que estão dentro da maxdist dos "
+"pixels de destino**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1825
 msgid "``REPLACE``"
 msgstr "``SUBSTITUIR``"
@@ -1843,14 +1939,35 @@ msgstr ""
 " distância máxima dos pixels de destino (incluindo os pixels de destino) em "
 "vez de um valor de distância."
 
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1840
+msgid "Specify the nodata value to use for the output raster"
+msgstr "Especifique o valor sem dados a ser usado para o raster de saída"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1841
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1918
 msgid "**Proximity map**"
 msgstr "**Mapa de proximidade**"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1936
+msgid "Roughness"
+msgstr "Rugosidade"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1981
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2031
+msgid "**Roughness**"
+msgstr "**Rugosidade**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2086
 msgid "Only raster polygons smaller than this size will be removed"
 msgstr "Apenas polígonos matriciais menores que este tamanho serão removidos"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2089
+msgid "``EIGHT_CONNECTEDNESS``"
+msgstr "``EIGHT_CONNECTEDNESS``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2093
+msgid "Use eight connectedness instead of four connectedness"
+msgstr "Usar oito conexões em vez de quatro conexões"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2152
 msgid "Output raster layer."

@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2022
 # Vanessa Stelzer, 2022
+# Letícia Jardim, 2022
 # Ana Camargo, 2022
 # 
 #, fuzzy
@@ -14,14 +15,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"POT-Creation-Date: 2022-11-30 02:27+0000\n"
 "PO-Revision-Date: 2022-03-14 05:13+0000\n"
 "Last-Translator: Ana Camargo, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.11.0\n"
 "Language: pt_BR\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -49,6 +50,14 @@ msgstr ""
 "com mais de 400 módulos GRASS. Nesta seção, apresentaremos as "
 "funcionalidades do provedor e do complemento e forneceremos alguns exemplos "
 "de gerenciamento e trabalho com dados GRASS."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:36
+msgid ""
+"More sample GRASS :file:`LOCATIONs` are available at the GRASS website at "
+"https://grass.osgeo.org/download/data/."
+msgstr ""
+"Mais exemplos de GRASS:file:`LOCATIONs` estão disponíveis no site da GRASS "
+"em https://grass.osgeo.org/download/data/."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:42
 msgid "Loading GRASS raster and vector layers"
@@ -323,6 +332,18 @@ msgstr ""
 msgid "**Learning the GRASS Vector Model**"
 msgstr "**Aprendendo um Modelo Vetor GRASS**"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:349
+msgid ""
+"The best way to learn the GRASS vector model and its capabilities is to "
+"download one of the many GRASS tutorials where the vector model is described"
+" more deeply. See https://grass.osgeo.org/learn/manuals/ for more "
+"information, books and tutorials in several languages."
+msgstr ""
+"A melhor maneira de aprender o modelo vetorial GRASS e suas capacidades é "
+"baixar um dos muitos tutoriais GRASS onde o modelo vetorial é descrito mais "
+"profundamente. Veja https://grass.osgeo.org/learn/manuals/ para mais "
+"informações. "
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:360
 msgid "Creating a new GRASS vector layer"
 msgstr "Criando uma nova camada vetorial GRASS"
@@ -353,9 +374,29 @@ msgstr ""
 "digitalização QGIS padrão. No entanto, existem algumas particularidades que "
 "você deve conhecer devido a"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:395
+msgid "complexity of GRASS model"
+msgstr "complexidade do modelo GRASS"
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:398
 msgid "multiple geometry types in single map"
 msgstr "vários tipos de geometria em um único mapa"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:399
+msgid "geometry sharing by multiple features from multiple layers"
+msgstr "compartilhamento de geometria por várias feições de várias camadas"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:401
+msgid "The particularities are discussed in the following sections."
+msgstr "As particularidades são discutidas nas seções a seguir."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:405
+msgid ""
+"All the changes done during editing are immediately written to vector map "
+"and related attribute tables."
+msgstr ""
+"Todas as alterações feitas durante a edição são imediatamente gravadas no "
+"mapa vetorial e nas tabelas de atributos relacionadas."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:411
 msgid "There are two main reasons for this behaviour:"
@@ -435,6 +476,10 @@ msgstr "Digitaliza novo centróide (etiqueta da área existente)"
 msgid "|capturePolygon|"
 msgstr "|capturePolygon|"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:902
+msgid "capturePolygon"
+msgstr "capturarPolígono"
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:437
 msgid "Digitize new closed boundary"
 msgstr "Digitalizar novo limite fechado"
@@ -447,9 +492,24 @@ msgstr "**Digitalizando polígonos no GRASS**"
 msgid "**Category**"
 msgstr "**Categoria**"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:461
+msgid ""
+"New categories are always created only in currently being edited layer."
+msgstr ""
+"Novas categorias são sempre criadas apenas na camada que está sendo editada."
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:467
 msgid "**Attributes**"
 msgstr "**Atributos**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:496
+msgid ""
+"Do not save project file when the layer is edited, the layer would be stored"
+" with 'Edit Style' which has no meaning if layer is not edited."
+msgstr ""
+"Não salve o arquivo do projeto quando a camada for editada, a camada será "
+"armazenada com 'Editar estilo', o que não terá significado se a camada não "
+"for editada."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:502
 msgid ""
@@ -463,9 +523,21 @@ msgstr ""
 msgid "**Snapping**"
 msgstr "**Ajuste**"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:513
+msgid "Use layer's CRS also for canvas when editing."
+msgstr "Use o SRC da camada também para a tela ao editar."
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:516
 msgid "**Limitations**"
 msgstr "**Limitações**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:922
+msgid "nix"
+msgstr "nix"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:924
+msgid "osx"
+msgstr "osx"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:527
 msgid "**GRASS Edit Permissions**"

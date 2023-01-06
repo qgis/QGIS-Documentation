@@ -113,3 +113,35 @@ msgstr "Um exemplo para substituir o caminho por uma variável:"
 #: ../../docs/pyqgis_developer_cookbook/loadproject.rst:164
 msgid "Using flags to speed up things"
 msgstr "Uso de referências para acelerar as coisas"
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:166
+msgid ""
+"In some instances where you may not need to use a fully functional project, "
+"but only want to access it for a specific reason, flags may be helpful. A "
+"full list of flags is available under :class:`ReadFlag "
+"<qgis.core.QgsProject.ReadFlag>`. Multiple flags can be added together."
+msgstr ""
+"Em alguns casos em que você pode não precisar usar um projeto totalmente "
+"funcional, mas apenas querer acessá-lo por uma razão específica, as "
+"bandeiras podem ser úteis. Uma lista completa de bandeiras está disponível "
+"em :class:`ReadFlag <qgis.core.QgsProject.ReadFlag>`. Várias bandeiras podem"
+" ser adicionadas juntas."
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:170
+msgid ""
+"As an example, if we do not care about actual layers and data and simply "
+"want to access a project (e.g. for layout or 3D view settings), we can use "
+"``FlagDontResolveLayers`` to bypass the data validation step and prevent the"
+" bad layer dialog from appearing. The following can be done:"
+msgstr ""
+"Como exemplo, se não nos importamos com as camadas e dados reais e "
+"simplesmente queremos acessar um projeto (por exemplo, para configurações de"
+" layout ou visualização 3D), podemos usar \"FlagDontResolveLayers\" para "
+"contornar a etapa de validação de dados e evitar que o diálogo de camadas "
+"ruins apareça. O seguinte pode ser feito:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:182
+msgid "To add more flags the python Bitwise OR operator (``|``) must be used."
+msgstr ""
+"Para acrescentar mais bandeiras, deve-se utilizar o operador Bitwise python "
+"OR (``|``)."

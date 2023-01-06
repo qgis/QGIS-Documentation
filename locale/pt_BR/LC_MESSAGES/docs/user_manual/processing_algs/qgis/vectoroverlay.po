@@ -7,8 +7,8 @@
 # Translators:
 # Harrissou Sant-anna, 2022
 # Vanessa Stelzer, 2022
-# Ana Camargo, 2022
 # Letícia Jardim, 2022
+# Ana Camargo, 2022
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-06-22 02:43+0000\n"
 "PO-Revision-Date: 2022-03-14 05:13+0000\n"
-"Last-Translator: Letícia Jardim, 2022\n"
+"Last-Translator: Ana Camargo, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,9 +30,27 @@ msgstr ""
 msgid "**Geometry modification only**"
 msgstr "**Apenas modificação de geometria**"
 
+#: ../../docs/user_manual/processing_algs/algs_include.rst:5
+msgid ""
+"This operation modifies only the features geometry. The attribute values of "
+"the features are **not modified**, although properties such as area or "
+"length of the features will be modified by the clipping operation. If such "
+"properties are stored as attributes, those attributes will have to be "
+"manually updated."
+msgstr ""
+"Esta operação modifica apenas a geometria das feições. Os valores dos "
+"atributos das características são **não modificados**, embora propriedades "
+"tais como área ou comprimento das características sejam modificadas pela "
+"operação de recorte. Se tais propriedades forem armazenadas como atributos, "
+"esses atributos terão que ser atualizados manualmente."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:849
 msgid "checkbox"
 msgstr "caixa de seleção"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:41
+msgid ":ref:`qgisintersection`, :ref:`qgisdifference`"
+msgstr ":ref:`qgisintersection`, :ref:`qgisdifference`"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:44
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:133
@@ -202,6 +220,10 @@ msgstr "``SAÍDA``"
 msgid "Default: ``[Create temporary layer]``"
 msgstr "Padrão: ``[Criar camada temporária]``"
 
+#: ../../docs/user_manual/processing_algs/algs_include.rst:4
+msgid "Save to File…"
+msgstr "Salvar em Arquivo..."
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:5
 msgid "Save to Geopackage…"
 msgstr "Salvar para Geopackage…"
@@ -236,10 +258,30 @@ msgstr "Código Python"
 msgid "Difference"
 msgstr "Diferença"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:130
+msgid ":ref:`qgissymmetricaldifference`, :ref:`qgisclip`"
+msgstr ":ref:`qgissymmetricaldifference`, :ref:`qgisclip`"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:156
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:181
 msgid "**Difference**"
 msgstr "**Diferença**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:161
+msgid ""
+"Specify the layer to contain the (parts of) features from the input layer "
+"that are not inside the overlay layer. One of:"
+msgstr ""
+"Especifique a camada para conter as (partes das) feições da camada de "
+"entrada que não estão dentro da camada de sobreposição. Um de:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:184
+msgid ""
+"Layer containing (parts of) features from the input layer not overlapping "
+"the overlay layer."
+msgstr ""
+"Camada contendo (partes das) feições da camada de entrada que não se "
+"sobrepõe à camada de sobreposição."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:201
 msgid ""
@@ -252,6 +294,16 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:204
 msgid "Any features which intersect the extent will be included."
 msgstr "Quaisquer feições que cruzem a extensão serão incluídas."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:209
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:251
+msgid ""
+"Extract operation between a three-feature input layer 'a' and a dashed "
+"extent (left) - resulting features with dashed extent for reference (right)"
+msgstr ""
+"Operação de extração entre uma camada de entrada de três características "
+"\"a\" e uma extensão tracejada (esquerda) - características resultantes com "
+"extensão tracejada para referência (direita)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:212
 msgid ":ref:`qgisclip`"
@@ -272,6 +324,12 @@ msgstr "[extensão]"
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Available methods are:"
 msgstr "Os métodos disponíveis são:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:5
+msgid ""
+"Calculate from layer…: uses extent of a layer loaded in the current project"
+msgstr ""
+"Calcular da camada…: usa a extensão de uma camada carregada no projeto atual"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:7
 msgid "Draw on canvas"
@@ -302,6 +360,26 @@ msgstr "**Extraído**"
 msgid "Intersection"
 msgstr "Interseção"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:298
+msgid ""
+"Extracts the portions of features from the input layer that overlap features"
+" in the overlay layer."
+msgstr ""
+"Extrai as partes das feições da camada de entrada que se sobrepõem aàs "
+"feições na camada de sobreposição."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:301
+msgid ""
+"Features in the intersection layer are assigned the attributes of the "
+"overlapping features from both the input and overlay layers."
+msgstr ""
+"As feições na camada de interseção são atribuídas aos atributos das feições "
+"sobrepostas das camadas de entrada e de sobreposição."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:317
+msgid ":ref:`qgisclip`, :ref:`qgisdifference`"
+msgstr ":ref:`qgisclip`, :ref:`qgisdifference`"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:344
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:353
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:362
@@ -314,12 +392,27 @@ msgstr "Interseção"
 msgid "Optional"
 msgstr "Opcional"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:345
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:450
+msgid "``INPUT_FIELDS``"
+msgstr "``INPUT_FIELDS``"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:348
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:357
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:453
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:462
 msgid "Default: None"
 msgstr "Padrão: Nenhum"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:354
+msgid "``OVERLAY_FIELDS``"
+msgstr "``OVERLAY_FIELDS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:363
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:682
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:810
+msgid "``OVERLAY_FIELDS_PREFIX``"
+msgstr "``OVERLAY_FIELDS_PREFIX``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:364
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:494
@@ -366,10 +459,22 @@ msgstr "**camada de interseção***"
 msgid "``INTERSECT``"
 msgstr "`` INTERSEÇÃO``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:459
+msgid "``INTERSECT_FIELDS``"
+msgstr "``INTERSECT_FIELDS``"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:467
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:512
 msgid "[vector: point]"
 msgstr "[vetor: ponto]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:470
+msgid ""
+"Specify the layer to contain the intersection points of the lines from the "
+"input and overlay layers. One of:"
+msgstr ""
+"Especifique a camada para conter os pontos de interseção das linhas das "
+"camadas de entrada e de sobreposição. Um de:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:479
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:668
@@ -377,9 +482,17 @@ msgstr "[vetor: ponto]"
 msgid "Advanced parameters"
 msgstr "Parâmetros avançados"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:493
+msgid "``INTERSECT_FIELDS_PREFIX``"
+msgstr "``INTERSECT_FIELDS_PREFIX``"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:510
 msgid "**Intersections**"
 msgstr "**Interseções**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:513
+msgid "Point vector layer with the intersections."
+msgstr "Camada vetorial de ponto com as interseções."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:539
 msgid "Split lines"
@@ -388,6 +501,10 @@ msgstr "Linhas divididas"
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:557
 msgid "[vector: line, polygon]"
 msgstr "[vetor: linha, polígono]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:558
+msgid "Layer containing the lines or polygons to split."
+msgstr "Camada que contém as linhas ou polígonos a serem divididos."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:560
 msgid "``LINES``"
@@ -402,6 +519,10 @@ msgstr "**Dividir**"
 msgid "Symmetrical difference"
 msgstr "Diferença simétrica"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:627
+msgid ":ref:`qgisdifference`, :ref:`qgisclip`, :ref:`qgisintersection`"
+msgstr ":ref:`qgisdifference`, :ref:`qgisclip`, :ref:`qgisintersection`"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:647
 msgid "First layer to extract (parts of) features from."
 msgstr "Primeira camada para extrair (partes de) feições de."
@@ -414,6 +535,10 @@ msgstr "**Diferença simétrica**"
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:718
 msgid "Union"
 msgstr "União"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:754
+msgid ":ref:`qgisclip`, :ref:`qgisdifference`, :ref:`qgisintersection`"
+msgstr ":ref:`qgisclip`, :ref:`qgisdifference`, :ref:`qgisintersection`"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:782
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:827

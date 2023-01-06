@@ -2,28 +2,26 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# MarieSilvestre, 2021
-# Francis Gasc <francisgasc@gmail.com>, 2021
-# Harrissou Sant-anna, 2021
+# Harrissou Sant-anna, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 10:24+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2021\n"
+"POT-Creation-Date: 2022-12-21 02:17+0000\n"
+"PO-Revision-Date: 2022-03-14 05:13+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2022\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.11.0\n"
 "Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:5
 msgid "Exploring Data Formats and Fields"
@@ -85,27 +83,6 @@ msgstr ""
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:49
 msgid "Vector Data"
 msgstr "Données Vecteur"
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:51
-msgid ""
-"Many of the features and tools available in QGIS work the same, regardless "
-"the vector data source. However, because of the differences in format "
-"specifications (GeoPackage, ESRI Shapefile, MapInfo and MicroStation file "
-"formats, AutoCAD DXF, PostGIS, SpatiaLite, DB2, Oracle Spatial, MSSQL "
-"Spatial databases, and many more), QGIS may handle some of their properties "
-"differently. Support is provided by the `OGR Simple Feature Library "
-"<https://gdal.org/drivers/vector/index.html>`_. This section describes how "
-"to work with these specificities."
-msgstr ""
-"De nombreuses fonctionnalités et outils disponibles dans QGIS fonctionnent "
-"de la même manière, quelle que soit la source de données vecteur. Cependant,"
-" en raison des différences de spécifications de format (GeoPackage, ESRI "
-"Shapefile, formats de fichiers MapInfo et MicroStation, AutoCAD DXF, bases "
-"de données PostGIS, SpatiaLite, DB2, Oracle Spatial, MSSQL Spatial, et bien "
-"d'autres), QGIS peut gérer différemment certaines de leurs propriétés. La "
-"prise en charge est assurée grâce à la `bibliothèque de fonctionnalités "
-"simples OGR <https://gdal.org/drivers/vector/index.html>`_. Cette section "
-"décrit comment travailler avec ces spécificités."
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:64
 msgid ""
@@ -213,23 +190,6 @@ msgstr ":file:`.dbf` fichier contenant les attributs au format dBase;"
 msgid ":file:`.shx` index file"
 msgstr ":file:`.shx` fichier d'index."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:111
-msgid ""
-"An ESRI Shapefile format dataset can also include a file with a :file:`.prj`"
-" suffix, which contains projection information. While it is very useful to "
-"have a projection file, it is not mandatory. A Shapefile format dataset can "
-"contain additional files. For further details, see the the ESRI technical "
-"specification at "
-"https://www.esri.com/library/whitepapers/pdfs/shapefile.pdf."
-msgstr ""
-"Un ensemble de données au format ESRI Shapefile peut également inclure un "
-"fichier avec un suffixe :file:`.prj`, qui contient des informations sur la "
-"projection. Bien qu'il soit très utile d'avoir un fichier de projection, ce "
-"n'est pas obligatoire. Un ensemble de données au format Shapefile peut "
-"contenir des fichiers supplémentaires. Pour plus de détails, voir la "
-"spécification technique d'ESRI à l'adresse "
-"https://www.esri.com/library/whitepapers/pdfs/shapefile.pdf."
-
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:119
 msgid ""
 "GDAL 3.1 has read-write support for compressed ESRI Shapefile format "
@@ -308,10 +268,6 @@ msgstr ""
 ":file:`.prj` ne fournissent souvent pas les paramètres de projection "
 "complets tels qu'utilisés dans QGIS et listés dans le dialogue "
 ":guilabel:`CRS`."
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:693
-msgid "setProjection"
-msgstr "setProjection"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:149
 msgid ""
@@ -654,11 +610,11 @@ msgstr ""
 "des instructions pour modifier la table PostgreSQL ou afficher la définition"
 " pour permettre à QGIS de la charger."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:310
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:314
 msgid "Primary key"
 msgstr "Clé primaire"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:312
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:316
 msgid ""
 "QGIS requires that PostgreSQL layers contain a column that can be used as a "
 "unique key for the layer. For tables, this usually means that the table "
@@ -679,7 +635,7 @@ msgstr ""
 "indexé (notez que les clés primaires sont automatiquement indexées dans "
 "PostgreSQL)."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:321
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:325
 msgid ""
 "QGIS offers a checkbox **Select at id** that is activated by default. This "
 "option gets the ids without the attributes, which is faster in most cases."
@@ -688,11 +644,11 @@ msgstr ""
 "défaut. Cette option obtient les identifiants sans les attributs, ce qui est"
 " plus rapide dans la plupart des cas."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:326
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:330
 msgid "View"
 msgstr "Vue"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:328
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:332
 msgid ""
 "If the PostgreSQL layer is a view, the same requirement exists, but views do"
 " not always have primary keys or columns with unique constraints on them. "
@@ -710,7 +666,7 @@ msgstr ""
 "inclue un champ qui convient (de type entier et qui soit une clé primaire ou"
 " ayant une contrainte d'unicité, de préférence indexé)."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:336
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:340
 msgid ""
 "As for table, a checkbox **Select at id** is activated by default (see above"
 " for the meaning of the checkbox). It can make sense to disable this option "
@@ -721,11 +677,11 @@ msgstr ""
 "cocher). Ça peut avoir du sens de désactiver cette option lorsque vous "
 "utilisez des vues coûteuses."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:343
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:352
 msgid "QGIS layer_style table and database backup"
 msgstr "Table QGIS layer_style et sauvegarde en base de données"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:345
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:354
 msgid ""
 "If you want to make a backup of your PostGIS database using the "
 ":file:`pg_dump` and :file:`pg_restore` commands, and the default layer "
@@ -738,11 +694,11 @@ msgstr ""
 "devez définir l'option XML  à :file:`DOCUMENT` et la restauration "
 "fonctionnera."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:356
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:367
 msgid "Filter database side"
 msgstr "Filtrer côté base de données"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:358
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:369
 msgid ""
 "QGIS allows to filter features already on server side. Check "
 ":menuselection:`Settings --> Options --> Data Sources -->` |checkbox| "
@@ -758,15 +714,11 @@ msgstr ""
 "serveur seront envoyées à la base de données. Les expressions utilisant des "
 "opérateurs ou des fonctions non pris en charge seront évaluées en local."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:683
-msgid "checkbox"
-msgstr "checkbox"
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:367
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:378
 msgid "Support of PostgreSQL data types"
 msgstr "Types de données supportés par PostgreSQL"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:369
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:380
 msgid ""
 "Data types supported by the PostgreSQL provider include: integer, float, "
 "boolean, binary object, varchar, geometry, timestamp, array, hstore and "
@@ -776,11 +728,11 @@ msgstr ""
 "entier, flottant, booléen, objet binaire, varchar, géométrie, horodatage, "
 "tableau, hstore et json."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:378
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:389
 msgid "Importing Data into PostgreSQL"
 msgstr "Importer des données dans PostgreSQL"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:380
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:391
 msgid ""
 "Data can be imported into PostgreSQL/PostGIS using several tools, including "
 "the DB Manager plugin and the command line tools shp2pgsql and ogr2ogr."
@@ -790,11 +742,11 @@ msgstr ""
 "permettent d'importer les données dans une base de données "
 "PostgreSQL/PostGIS."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:385
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:396
 msgid "DB Manager"
 msgstr "DB Manager"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:387
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:398
 msgid ""
 "QGIS comes with a core plugin named |dbManager| :sup:`DB Manager`. It can be"
 " used to load data, and it includes support for schemas. See section "
@@ -804,15 +756,11 @@ msgstr ""
 "être utilisé pour charger des données et inclut la prise en charge des "
 "schémas. Voir la section :ref:`dbmanager` pour plus d'informations."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:685
-msgid "dbManager"
-msgstr "dbManager"
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:392
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:403
 msgid "shp2pgsql"
 msgstr "shp2pgsql"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:394
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:405
 msgid ""
 "PostGIS includes a utility called **shp2pgsql**, that can be used to import "
 "Shapefile format datasets into a PostGIS-enabled database. For example, to "
@@ -825,7 +773,7 @@ msgstr ""
 "Shapefile nommé :file:`lacs.shp` dans une base de données PostgreSQL nommée "
 "``gis_data``, utilisez la commande suivante ::"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:402
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:413
 msgid ""
 "This creates a new layer named ``lakes_new`` in the ``gis_data`` database. "
 "The new layer will have a spatial reference identifier (SRID) of 2964. See "
@@ -837,11 +785,11 @@ msgstr ""
 "(SRID) de 2964. Voir la section :ref:`label_projections` pour plus "
 "d'informations sur les systèmes de référence spatiale et les projections."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:411
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:422
 msgid "**Exporting datasets from PostGIS**"
 msgstr "**Exporter des jeux de données depuis PostGIS**"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:413
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:424
 msgid ""
 "There is also a tool for exporting PostGIS datasets to Shapefile format: "
 "**pgsql2shp**. It is shipped within your PostGIS distribution."
@@ -849,11 +797,11 @@ msgstr ""
 "Il existe également un outil pour exporter les jeux de données PostGIS au "
 "format Shapefile: **pgsql2shp**. Il est dans votre distribution PostGIS."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:421
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:432
 msgid "ogr2ogr"
 msgstr "ogr2ogr"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:423
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:434
 msgid ""
 "In addition to **shp2pgsql** and **DB Manager**, there is another tool for "
 "feeding geographical data in PostGIS: **ogr2ogr**. It is part of your GDAL "
@@ -863,13 +811,13 @@ msgstr ""
 "alimenter les données géographiques dans PostGIS: **ogr2ogr**. Il fait "
 "partie de votre installation GDAL."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:427
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:438
 msgid "To import a Shapefile format dataset into PostGIS, do the following::"
 msgstr ""
 "Pour importer un jeu de données au format Shapefile dans PostGIS, procédez "
 "comme suit:"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:432
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:443
 msgid ""
 "This will import the Shapefile format dataset :file:`alaska.shp` into the "
 "PostGIS database *postgis* using the user *postgres* with the password "
@@ -879,7 +827,7 @@ msgstr ""
 " la base de données PostGIS *postgis* en utilisant l'utilisateur *postgres* "
 "avec le mot de passe *topsecret* sur le serveur hôte *myhost.de*."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:436
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:447
 msgid ""
 "Note that OGR must be built with PostgreSQL to support PostGIS. You can "
 "verify this by typing (in |nix|)::"
@@ -887,11 +835,7 @@ msgstr ""
 "Notez que OGR doit être construit avec PostgreSQL pour prendre en charge "
 "PostGIS. Vous pouvez le vérifier en tapant (dans |nix|) ::"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:689
-msgid "nix"
-msgstr "nix"
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:442
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:453
 msgid ""
 "If you prefer to use the PostgreSQL's **COPY** command instead of the "
 "default **INSERT INTO** method, you can export the following environment "
@@ -901,11 +845,7 @@ msgstr ""
 "méthode **INSERT INTO** par défaut, vous pouvez exporter la variable "
 "d'environnement suivante (au moins disponible sur |nix| et |osx|) ::"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:691
-msgid "osx"
-msgstr "osx"
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:448
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:459
 msgid ""
 "**ogr2ogr** does not create spatial indexes like **shp2pgsl** does. You need"
 " to create them manually, using the normal SQL command **CREATE INDEX** "
@@ -917,11 +857,11 @@ msgstr ""
 "INDEX** par la suite, comme étape supplémentaire (comme décrit dans la "
 "section suivante :ref:`vector_improving_performance`)."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:458
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:469
 msgid "Improving Performance"
 msgstr "Améliorer les performances"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:460
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:471
 msgid ""
 "Retrieving features from a PostgreSQL database can be time-consuming, "
 "especially over a network. You can improve the drawing performance of "
@@ -938,7 +878,7 @@ msgstr ""
 "accélérer la recherche spatiale (les informations d'index GiST sont "
 "extraites de la documentation PostGIS disponible sur https://postgis.net)."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:467
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:478
 msgid ""
 "You can use the DBManager to create an index for your layer. You should "
 "first select the layer and click on :menuselection:`Table --> Edit table`, "
@@ -950,11 +890,11 @@ msgstr ""
 "--> Modifier la table`, puis allez dans l'onglet :menuselection:`Index` et "
 "cliquez sur :guilabel:`Ajouter un index spatial`."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:473
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:484
 msgid "The syntax for creating a GiST index is::"
 msgstr "La syntaxe pour créer un index GiST est ::"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:479
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:490
 msgid ""
 "Note that for large tables, creating the index can take a long time. Once "
 "the index is created, you should perform a ``VACUUM ANALYZE``. See the "
@@ -966,42 +906,20 @@ msgstr ""
 "ANALYSE``. Voir la documentation PostGIS (POSTGIS-PROJECT dans "
 ":ref:`literature_and_web`) pour plus d'informations."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:484
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:495
 msgid "The following example creates a GiST index::"
 msgstr "L'exemple suivant crée un index GiST ::"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:506
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:517
 msgid "Vector layers crossing 180 |degrees| longitude"
 msgstr "Couches vecteur franchissant la ligne des 180 |degrees| de longitude"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:508
-msgid ""
-"Many GIS packages don't wrap vector maps with a geographic reference system "
-"(lat/lon) crossing the 180 degrees longitude line "
-"(http://postgis.refractions.net/documentation/manual-2.0/ST_Shift_Longitude.html)."
-" As result, if we open such a map in QGIS, we could see two widely separated"
-" locations, that should appear near each other. In "
-":numref:`Figure_vector_crossing`, the tiny point on the far left of the map "
-"canvas (Chatham Islands) should be within the grid, to the right of the New "
-"Zealand main islands."
-msgstr ""
-"De nombreux progiciels SIG n'intègrent pas les cartes vecteur avec un "
-"système de référence géographique (lat/lon) qui traverse la ligne de 180 "
-"degrés de longitude "
-"(http://postgis.refractions.net/documentation/manual-2.0/ST_Shift_Longitude.html)."
-" Par conséquent, si nous ouvrons une telle carte dans un QGIS, nous "
-"pourrions voir deux endroits très éloignés l'un de l'autre, qui devraient "
-"apparaître à proximité l'un de l'autre. Dans "
-":numref:`Figure_vector_crossing`, le point minuscule à l'extrême gauche du "
-"canevas de la carte (îles Chatham) devrait se trouver à l'intérieur du "
-"quadrillage, à droite des îles principales de la Nouvelle-Zélande."
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:522
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:533
 msgid "Map in lat/lon crossing the 180 |degrees| longitude line"
 msgstr ""
 "Carte en lat/lon de part et d'autre de la ligne des 180 |degrees| longitude "
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:524
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:535
 msgid ""
 "A work-around is to transform the longitude values using PostGIS and the "
 "**ST_Shift_Longitude** function. This function reads every point/vertex in "
@@ -1017,7 +935,7 @@ msgstr ""
 " résultat est une version 0 |degrees| - 360 |degrees| des données sur une "
 "carte centrée à 180 |degrees|."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:538
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:549
 msgid ""
 "Crossing 180 |degrees| longitude applying the **ST_Shift_Longitude** "
 "function"
@@ -1025,11 +943,11 @@ msgstr ""
 "Traversée de la longitude 180 |degrees| en utilisant la fonction "
 "**ST_Shift_Longitude**"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:542
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:553
 msgid "Usage"
 msgstr "Usage"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:544
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:555
 msgid ""
 "Import data into PostGIS (:ref:`vector_import_data_in_postgis`) using, for "
 "example, the DB Manager plugin."
@@ -1037,7 +955,7 @@ msgstr ""
 "Importer des données dans PostGIS (:ref:`vector_import_data_in_postgis`) en "
 "utilisant, par exemple, l'extension DB Manager."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:546
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:557
 msgid ""
 "Use the PostGIS command line interface to issue the following command (in "
 "this example, \"TABLE\" is the actual name of your PostGIS table): "
@@ -1048,7 +966,7 @@ msgstr ""
 "PostGIS): ``gis_data=# update TABLE set "
 "the_geom=ST_Shift_Longitude(the_geom);``"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:549
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:560
 msgid ""
 "If everything went well, you should receive a confirmation about the number "
 "of features that were updated. Then you'll be able to load the map and see "
@@ -1058,11 +976,11 @@ msgstr ""
 "nombre d'entités qui ont été mises à jour. Ensuite, vous pouvez charger la "
 "carte et voir la différence (Figure_vector_crossing_map_)."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:558
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:569
 msgid "SpatiaLite Layers"
 msgstr "Couches SpatiaLite"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:560
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:571
 msgid ""
 "If you want to save a vector layer using the SpatiaLite format, you can do "
 "this by following instructions at :ref:`general_saveas`. You select "
@@ -1075,7 +993,7 @@ msgstr ""
 ":guilabel:`Format` et entrez les deux :guilabel:`Nom de fichier` et "
 ":guilabel:`Nom de coouche`."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:565
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:576
 msgid ""
 "Also, you can select ``SQLite`` as format and then add ``SPATIALITE=YES`` in"
 " the :menuselection:`Custom Options --> Data source` field. This tells GDAL "
@@ -1087,7 +1005,7 @@ msgstr ""
 "de données`. Cela indique à GDAL de créer une base de données SpatiaLite. "
 "Voir également https://gdal.org/drivers/vector/sqlite.html."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:571
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:582
 msgid ""
 "QGIS also supports editable views in SpatiaLite. For SpatiaLite data "
 "management, you can also use the core plugin :ref:`DB Manager <dbmanager>`."
@@ -1096,7 +1014,7 @@ msgstr ""
 " gestion des données SpatiaLite, vous pouvez également utiliser le plugin "
 "principal :ref:`Gestionnaire de bases de données <dbmanager>`."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:575
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:586
 msgid ""
 "If you want to create a new SpatiaLite layer, please refer to section "
 ":ref:`vector_create_spatialite`."
@@ -1104,11 +1022,11 @@ msgstr ""
 "Si vous souhaitez créer une nouvelle couche SpatiaLite, référez-vous à la "
 "section :ref:`vector_create_spatialite`."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:584
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:595
 msgid "GeoJSON specific parameters"
 msgstr "Paramètres spécifiques à GeoJSON"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:586
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:597
 msgid ""
 "When :ref:`exporting layers <general_saveas>` to GeoJSON, there are some "
 "specific :guilabel:`Layer Options` available. These options come from GDAL "
@@ -1118,7 +1036,7 @@ msgstr ""
 "sont proposées des :guilabel:`Options de couche` spécifiques. Ces options "
 "proviennent de GDAL qui est responsable de l'écriture du fichier:"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:590
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:601
 msgid ""
 ":guilabel:`COORDINATE_PRECISION` the maximum number of digits after the "
 "decimal separator to write in coordinates. Defaults to 15 (note: for Lat Lon"
@@ -1130,7 +1048,7 @@ msgstr ""
 "(remarque: pour les coordonnées de Lat Lon, 6 est considéré comme "
 "suffisant). Une troncature se produira pour supprimer les zéros de fin."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:594
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:605
 msgid ""
 ":guilabel:`RFC7946` by default GeoJSON 2008 will be used. If set to YES, the"
 " updated RFC 7946 standard will be used. Default is NO (thus GeoJSON 2008). "
@@ -1153,7 +1071,7 @@ msgstr ""
 "d'extension sont interdits dans les objets FeatureCollection, Feature et "
 "Geometry, la précision des coordonnées par défaut est de 7 chiffres décimaux"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:605
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:616
 msgid ""
 ":guilabel:`WRITE_BBOX` set to YES to include the bounding box of the "
 "geometries at the feature and feature collection level"
@@ -1161,7 +1079,7 @@ msgstr ""
 ":guilabel:`WRITE_BBOX` défini sur YES pour inclure la boîte englobante des "
 "géométries au niveau de l'entité et de la collection d'entités"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:608
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:619
 msgid ""
 "Besides GeoJSON there is also an option to export to \"GeoJSON - Newline "
 "Delimited\" (see https://gdal.org/drivers/vector/geojsonseq.html). Instead "
@@ -1174,18 +1092,18 @@ msgstr ""
 "type (probablement uniquement Features) séparés séquentiellement avec des "
 "retours à la ligne."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:614
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:625
 msgid ""
 "GeoJSON - Newline Delimited has some specific Layer options availabe too:"
 msgstr ""
 "GeoJSON - Newline Delimited propose également des options de couche "
 "spécifiques:"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:616
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:627
 msgid ":guilabel:`COORDINATE_PRECISION` see above (same as for GeoJSON)"
 msgstr ":guilabel:`COORDINATE_PRECISION` voir ci-dessus (comme pour GeoJSON)"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:617
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:628
 msgid ""
 ":guilabel:`RS` whether to start records with the RS=0x1E character. The "
 "difference is how the features are separated: only by a newline (LF) "
@@ -1201,87 +1119,3 @@ msgstr ""
 "d'enregistrement (RS) (donnant des séquences de texte GeoJSON, geojsons). "
 "Par défaut à NO. Les fichiers reçoivent l'extension :file:`.json` si "
 "l'extension n'est pas fournie."
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:630
-msgid "DB2 Spatial Layers"
-msgstr "Couches DB2 Spatial"
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:632
-msgid ""
-"IBM DB2 for Linux, Unix and Windows (DB2 LUW), IBM DB2 for z/OS (mainframe) "
-"and IBM DashDB products allow users to store and analyse spatial data in "
-"relational table columns. The DB2 provider for QGIS supports the full range "
-"of visualization, analysis and manipulation of spatial data in these "
-"databases."
-msgstr ""
-"Les produits IBM DB2 pour Linux, Unix et Windows (DB2 LUW), IBM DB2 pour z /"
-" OS (mainframe) et IBM DashDB permettent aux utilisateurs de stocker et "
-"d'analyser des données spatiales dans des colonnes de table relationnelle. "
-"Le fournisseur DB2 pour QGIS prend en charge la gamme complète de "
-"visualisation, d'analyse et de manipulation des données spatiales dans ces "
-"bases de données."
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:643
-msgid ""
-"User documentation on these capabilities can be found at the `DB2 z/OS "
-"KnowledgeCenter`_, `DB2 LUW KnowledgeCenter`_ and `DB2 DashDB "
-"KnowledgeCenter`_."
-msgstr ""
-"La documentation utilisateur sur ces fonctionnalités se trouve dans le `DB2 "
-"z/OS KnowledgeCenter`_, `DB2 LUW KnowledgeCenter`_ et `DB2 DashDB "
-"KnowledgeCenter`_."
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:647
-msgid ""
-"For more information about working with the DB2 spatial capabilities, check "
-"out the `DB2 Spatial Tutorial`_ on IBM DeveloperWorks."
-msgstr ""
-"Pour plus d'informations sur l'utilisation des capacités spatiales DB2, "
-"consultez le `DB2 Spatial Tutorial`_ sur IBM DeveloperWorks."
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:650
-msgid ""
-"The DB2 provider currently only supports the Windows environment through the"
-" Windows ODBC driver."
-msgstr ""
-"Le fournisseur DB2 ne prend actuellement en charge que l'environnement "
-"Windows via le pilote ODBC Windows."
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:653
-msgid "The client running QGIS needs to have one of the following installed:"
-msgstr ""
-"Le client exécutant QGIS doit avoir l'un des éléments suivants installé:"
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:655
-msgid "DB2 LUW"
-msgstr "DB2 LUW"
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:656
-msgid "IBM Data Server Driver Package"
-msgstr "IBM Data Server Driver Package"
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:657
-msgid "IBM Data Server Client"
-msgstr "IBM Data Server Client"
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:659
-msgid ""
-"To open a DB2 data in QGIS, see the :ref:`browser_panel` or "
-":ref:`vector_loading_database` section."
-msgstr ""
-"Pour ouvrir une donnée DB2 dans QGIS, consultez la section "
-":ref:`browser_panel` ou :ref:`vector_loading_database`."
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:662
-msgid ""
-"If you are accessing a DB2 LUW database on the same machine or using DB2 LUW"
-" as a client, the DB2 executables and supporting files need to be included "
-"in the Windows path. This can be done by creating a batch file like the "
-"following with the name **db2.bat** and including it in the directory "
-"**%OSGEO4W_ROOT%/etc/ini**::"
-msgstr ""
-"Si vous accédez à une base de données DB2 LUW sur la même machine ou "
-"utilisez DB2 LUW en tant que client, les exécutables DB2 et les fichiers de "
-"prise en charge doivent être inclus dans le chemin Windows. Cela peut être "
-"fait en créant un fichier batch comme le suivant avec le nom **db2.bat** et "
-"en l'incluant dans le répertoire **% OSGEO4W_ROOT%/etc/ini** ::"

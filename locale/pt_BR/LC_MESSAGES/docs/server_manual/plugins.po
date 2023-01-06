@@ -7,8 +7,8 @@
 # Translators:
 # Harrissou Sant-anna, 2022
 # Vanessa Stelzer, 2022
-# Ana Camargo, 2022
 # Letícia Jardim, 2022
+# Ana Camargo, 2022
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-07-27 02:49+0000\n"
 "PO-Revision-Date: 2022-03-14 05:07+0000\n"
-"Last-Translator: Letícia Jardim, 2022\n"
+"Last-Translator: Ana Camargo, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,6 +37,14 @@ msgstr "Lista de plugins"
 #: ../../docs/server_manual/plugins.rst:13
 msgid "Plugins can also be installed on QGIS Server."
 msgstr "Plugins também podem ser instalados no Servidor QGIS."
+
+#: ../../docs/server_manual/plugins.rst:15
+msgid ""
+"Some plugins designed for server can be found on the official `QGIS "
+"repository <https://plugins.qgis.org/plugins/server/>`_."
+msgstr ""
+"Alguns plugins projetados para servidor podem ser encontrados no repositório"
+" oficial `QGIS <https://plugins.qgis.org/plugins/server/>`_."
 
 #: ../../docs/server_manual/plugins.rst:18
 msgid ""
@@ -93,6 +101,27 @@ msgstr ""
 msgid "With a command line tool"
 msgstr "Com uma ferramenta de linha de comando"
 
+#: ../../docs/server_manual/plugins.rst:58
+msgid ""
+"If you need to install and regularly upgrade plugins which are stored in the"
+" QGIS plugin repository, you may use the `QGIS-Plugin-Manager "
+"<https://github.com/3liz/qgis-plugin-manager>`_. It's a tool to help you "
+"manage plugins from the command line."
+msgstr ""
+"Se você precisar instalar e atualizar regularmente plugins que são "
+"armazenados no repositório de plugins QGIS, você pode utilizar o `QGIS-"
+"Plugin-Manager <https://github.com/3liz/qgis-plugin-manager>`_. É uma "
+"ferramenta para ajudá-lo a gerenciar os plugins a partir da linha de "
+"comando."
+
+#: ../../docs/server_manual/plugins.rst:62
+msgid ""
+"The installation is using pip. Installing in a virtual environment is a good"
+" practice but not required:"
+msgstr ""
+"A instalação está usando pip. Instalar em um ambiente virtual é uma boa "
+"prática, mas não é obrigatório:"
+
 #: ../../docs/server_manual/plugins.rst:68
 msgid "To upgrade the tool:"
 msgstr "Para atualizar a ferramenta:"
@@ -122,6 +151,16 @@ msgstr "Configuração do Servidor HTTP"
 #: ../../docs/server_manual/plugins.rst:100
 msgid "Apache"
 msgstr "Apache"
+
+#: ../../docs/server_manual/plugins.rst:102
+msgid ""
+"To be able to use server plugins, FastCGI needs to know where to look. So, "
+"we have to modify the Apache configuration file to indicate the "
+"``QGIS_PLUGINPATH`` environment variable to FastCGI:"
+msgstr ""
+"Para poder usar plugins de servidor, FastCGI precisa saber onde procurar. "
+"Portanto, temos que modificar o arquivo de configuração do Apache para "
+"indicar a variável de ambiente ``QGIS_PLUGINPATH`` para FastCGI:"
 
 #: ../../docs/server_manual/plugins.rst:123
 msgid "Then, restart Apache:"

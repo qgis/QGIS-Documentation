@@ -8,6 +8,7 @@
 # Harrissou Sant-anna, 2022
 # Ana Carla Rizzo Mendes, 2022
 # Vanessa Stelzer, 2022
+# Kyle Felipe Vieira Roberto <kylefelipe@gmail.com>, 2022
 # Letícia Jardim, 2022
 # Ana Camargo, 2022
 # 
@@ -30,6 +31,30 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:14
 msgid "Assign projection"
 msgstr "Atribuir projeção"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:15
+msgid "Assigns a new projection to a vector layer."
+msgstr "Atribui uma nova projeção a uma camada vetorial."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:21
+msgid ""
+"This algorithm can be used to repair layers which have been assigned an "
+"incorrect projection."
+msgstr ""
+"Este algoritmo pode ser usado para reparar camadas que receberam uma "
+"projeção incorreta."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:24
+msgid "Attributes are not modified by this algorithm."
+msgstr "Os atributos não são modificados por este algoritmo."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:26
+msgid ""
+":ref:`qgisdefinecurrentprojection`, :ref:`qgisfindprojection`, "
+":ref:`qgisreprojectlayer`"
+msgstr ""
+":ref:`qgisdefinecurrentprojection`, :ref:`qgisfindprojection`, "
+":ref:`qgisreprojectlayer`"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:30
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:106
@@ -498,6 +523,35 @@ msgstr "Opcional"
 msgid "``OUTPUT``"
 msgstr "``SAÍDA``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:56
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:128
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:275
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:522
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:603
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:957
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1126
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1269
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1343
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1461
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1624
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1792
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1896
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2016
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2096
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2227
+msgid "Default: ``[Create temporary layer]``"
+msgstr "Padrão: ``[Criar camada temporária]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:57
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:618
+msgid "Specify the output layer containing only the duplicates. One of:"
+msgstr "Especificar a camada de saída contendo apenas as duplicatas. Um de:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:4
+#: ../../docs/user_manual/processing_algs/algs_include.rst:5
+msgid "Save to File…"
+msgstr "Salvar em Arquivo..."
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:5
 #: ../../docs/user_manual/processing_algs/algs_include.rst:6
 msgid "Save to Geopackage…"
@@ -575,6 +629,10 @@ msgstr "Saídas"
 msgid "Python code"
 msgstr "Código Python"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:120
+msgid "**Address field**"
+msgstr "**Campo de Endereço**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:121
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:337
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1411
@@ -582,6 +640,14 @@ msgstr "Código Python"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2542
 msgid "``FIELD``"
 msgstr "``CAMPO``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:122
+msgid "[tablefield: string]"
+msgstr "[tablefield: string]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:123
+msgid "Field containing the addresses to geocode"
+msgstr "Campo contendo os endereços para geocode"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:124
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:151
@@ -593,6 +659,13 @@ msgstr "**Geocodificado**"
 msgid "[vector: point]"
 msgstr "[vetor: ponto]"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:129
+msgid ""
+"Specify the output layer containing only the geocoded addresses. One of:"
+msgstr ""
+"Especifique a camada de saída contendo apenas os endereços geocodificados. "
+"Uma de:"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:133
 msgid "Save to File..."
 msgstr "Salvar para Arquivo..."
@@ -600,6 +673,14 @@ msgstr "Salvar para Arquivo..."
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:134
 msgid "Save to Geopackage..."
 msgstr "Salvar para Geopackage..."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:135
+msgid "Save to Database Table..."
+msgstr "Salvar na Tabela de Banco de Dados..."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:136
+msgid "Append to Layer..."
+msgstr "Anexar à Camada..."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:184
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:331
@@ -649,15 +730,37 @@ msgstr "[enumeração]"
 msgid "Default: 0"
 msgstr "Padrão: 0"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:193
+msgid "Select the destination for the bookmarks. One of:"
+msgstr "Selecione o destino para os favoritos. Um de:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:196
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:263
+msgid "0 --- Project bookmarks"
+msgstr "0 --- Projetos favoritos"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:197
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:264
+msgid "1 --- User bookmarks"
+msgstr "1 --- Usuários favoritos"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:198
 msgid "**Name field**"
 msgstr "**Nome do Campo**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:199
+msgid "``NAME_EXPRESSION``"
+msgstr "``NAME_EXPRESSION``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:200
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:205
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2077
 msgid "[expression]"
 msgstr "[expressão]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:204
+msgid "``GROUP_EXPRESSION``"
+msgstr "``GROUP_EXPRESSION``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:221
 msgid "``COUNT``"
@@ -691,6 +794,10 @@ msgstr "[enumeração] [lista]"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:259
 msgid "Default: [0,1]"
 msgstr "Padrão: [0,1]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:260
+msgid "Select the source(s) of the bookmarks. One or more of:"
+msgstr "Selecione a(s) fonte(s) dos favoritos. Um ou mais de:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:265
 msgid "**Output CRS**"
@@ -743,6 +850,10 @@ msgstr ""
 msgid "Field of the vector layer"
 msgstr "Campo da camada vetorial"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:352
+msgid "**Indexed layer**"
+msgstr "**Camada indexada**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:355
 msgid "A copy of the input vector layer with an index for the specified field"
 msgstr ""
@@ -774,6 +885,10 @@ msgstr "Nenhuma nova camada de saída é criada."
 msgid "Input vector layer"
 msgstr "Camada vetorial de entrada"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:408
+msgid "Indexed layer"
+msgstr "Camada indexada"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:411
 msgid "A copy of the input vector layer with a spatial index"
 msgstr "Uma cópia da camada vetorial de entrada com um índice espacial"
@@ -793,6 +908,14 @@ msgstr ""
 "formato Shapefile não contém o arquivo ``prj`` e você sabe a projeção "
 "correta."
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:440
+msgid ""
+":ref:`qgisassignprojection`, :ref:`qgisfindprojection`, "
+":ref:`qgisreprojectlayer`"
+msgstr ""
+":ref:`qgisassignprojection`, :ref:`qgisfindprojection`, "
+":ref:`qgisreprojectlayer`"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:457
 msgid "Vector layer with missing projection information"
 msgstr "Camada vetorial com informações de projeção ausentes"
@@ -802,6 +925,10 @@ msgstr "Camada vetorial com informações de projeção ausentes"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1037
 msgid "**CRS**"
 msgstr "**SRC**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:461
+msgid "Select the CRS to assign to the vector layer"
+msgstr "Selecione o SRC para atribuir à camada vetorial"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:477
 msgid "The input vector layer with the defined projection"
@@ -814,6 +941,14 @@ msgstr "Excluir geometrias duplicadas"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:493
 msgid "Finds and removes duplicated geometries."
 msgstr "Localiza e remove geometrias duplicadas."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:499
+msgid ""
+":ref:`qgisdropgeometries`, :ref:`qgisremovenullgeometries`, "
+":ref:`qgisremoveduplicatesbyattribute`"
+msgstr ""
+":ref:`qgisdropgeometries`, :ref:`qgisremovenullgeometries`, "
+":ref:`qgisremoveduplicatesbyattribute`"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:517
 msgid "The layer with duplicate geometries you want to clean"
@@ -829,6 +964,11 @@ msgstr "**Limpo**"
 msgid "**Count of discarded duplicate records**"
 msgstr "**Contagem de registros duplicados descartados**"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:541
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:648
+msgid "``DUPLICATE_COUNT``"
+msgstr "``DUPLICATE_COUNT``"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:543
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:650
 msgid "Count of discarded duplicate records"
@@ -842,6 +982,11 @@ msgstr "A camada de saída sem geometrias duplicadas"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:655
 msgid "**Count of retained records**"
 msgstr "**Contagem de registros retidos**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:549
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:656
+msgid "``RETAINED_COUNT``"
+msgstr "``RETAINED_COUNT``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:551
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:658
@@ -860,6 +1005,14 @@ msgstr ""
 "Exclui linhas duplicadas considerando apenas o campo/campos especificados. A"
 " primeira linha correspondente será mantida e as duplicatas serão "
 "descartadas."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:572
+msgid ""
+"Optionally, these duplicate records can be saved to a separate output for "
+"analysis."
+msgstr ""
+"Opcionalmente, esses registros duplicados podem ser salvos em uma saída "
+"separada para análise."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:575
 msgid ":ref:`qgisdeleteduplicategeometries`"
@@ -889,6 +1042,11 @@ msgstr "[campo da tabela: qualquer][list]"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:651
 msgid "**Filtered (no duplicates)**"
 msgstr "**Filtrado (sem duplicatas)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:604
+msgid "Specify the output layer containing the unique features. One of:"
+msgstr ""
+"Especifique a camada de saída contendo as características únicas. Uma de:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:611
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:637
@@ -964,6 +1122,10 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:712
 msgid "**Geometry comparison behavior**"
 msgstr "**Comportamento de comparação de geometria**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:715
+msgid "``MATCH_TYPE``"
+msgstr "``MATCH_TYPE``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:718
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1435
@@ -1063,9 +1225,17 @@ msgstr "Camada vetorial contendo as feições excluídas."
 msgid "**Count of unchanged features**"
 msgstr "**Contagem de feições inalteradas**"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:781
+msgid "``UNCHANGED_COUNT``"
+msgstr "``UNCHANGED_COUNT``"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:783
 msgid "Count of unchanged features."
 msgstr "Contagem de feições inalteradas"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:785
+msgid "``ADDED_COUNT``"
+msgstr "``ADDED_COUNT``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:787
 msgid "Count of features added in revised layer."
@@ -1074,6 +1244,10 @@ msgstr "Contagem de feições adicionadas na camada revisada."
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:788
 msgid "**Count of features deleted from original layer**"
 msgstr "**Contagem de feições excluídas da camada original**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:789
+msgid "``DELETED_COUNT``"
+msgstr "``DELETED_COUNT``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:791
 msgid "Count of features deleted from original layer."
@@ -1092,6 +1266,10 @@ msgstr ""
 msgid "checkbox"
 msgstr "caixa de seleção"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:816
+msgid ":ref:`qgisdeleteduplicategeometries`, :ref:`qgisremovenullgeometries`"
+msgstr ":ref:`qgisdeleteduplicategeometries`, :ref:`qgisremovenullgeometries`"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:836
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:856
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1267
@@ -1106,6 +1284,18 @@ msgstr "Executar SQL"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:886
 msgid "The result of the query will be added as a new layer."
 msgstr "O resultado da consulta será adicionado como uma nova camada."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:888
+msgid ":ref:`qgisspatialiteexecutesql`, :ref:`qgispostgisexecutesql`"
+msgstr ":ref:`qgisspatialiteexecutesql`, :ref:`qgispostgisexecutesql`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:904
+msgid "``INPUT_DATASOURCES``"
+msgstr "``INPUT_DATASOURCES``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:911
+msgid "``INPUT_QUERY``"
+msgstr "``INPUT_QUERY``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:912
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:919
@@ -1127,9 +1317,17 @@ msgstr "O resultado da consulta será adicionado como uma nova camada."
 msgid "[string]"
 msgstr "[string]"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:918
+msgid "``INPUT_UID_FIELD``"
+msgstr "``INPUT_UID_FIELD``"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:921
 msgid "**Geometry field**"
 msgstr "**Campo geometria**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:924
+msgid "``INPUT_GEOMETRY_FIELD``"
+msgstr "``INPUT_GEOMETRY_FIELD``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:926
 msgid "Specify the geometry field"
@@ -1138,6 +1336,10 @@ msgstr "Especifique o campo de geometria"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:927
 msgid "**Geometry type**"
 msgstr "**Tipo de Geometria**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:930
+msgid "``INPUT_GEOMETRY_TYPE``"
+msgstr "``INPUT_GEOMETRY_TYPE``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:934
 msgid ""
@@ -1175,6 +1377,10 @@ msgstr "5 --- Multiponto"
 msgid "7 --- MultiPolygon"
 msgstr "7 --- MultiPolígono"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:950
+msgid "``INPUT_GEOMETRY_CRS``"
+msgstr "``INPUT_GEOMETRY_CRS``"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:952
 msgid "The CRS to assign to the output layer"
 msgstr "O SRC a ser atribuído à camada de saída"
@@ -1191,6 +1397,14 @@ msgstr "Exportar camadas para DXF"
 msgid "|318|"
 msgstr "|318|"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:999
+msgid ":ref:`create_dxf_files`"
+msgstr ":ref:`create_dxf_files`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1012
+msgid "**Input layers**"
+msgstr "**Camadas de entrada**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1013
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1999
 msgid "``LAYERS``"
@@ -1203,6 +1417,10 @@ msgstr "Insira camadas vetoriais para exportar"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1016
 msgid "**Symbology mode**"
 msgstr "**Modo de simbologia**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1017
+msgid "``SYMBOLOGY_MODE``"
+msgstr "``SYMBOLOGY_MODE``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1021
 msgid "Type of symbology to apply to output layers. You can choose between:"
@@ -1249,9 +1467,17 @@ msgstr "**Codificando**"
 msgid "``ENCODING``"
 msgstr "``CODIFICANDO``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1040
+msgid "Choose the CRS for the output layer."
+msgstr "Escolha o SRC para a camada de saída."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1041
 msgid "**Use layer title as name**"
 msgstr "**Utilizar o título da camada como nome**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1042
+msgid "``USE_LAYER_TITLE``"
+msgstr "``USE_LAYER_TITLE``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1043
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1050
@@ -1276,6 +1502,10 @@ msgstr "[boleano]"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2466
 msgid "Default: False"
 msgstr "Padrão: Falso"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1049
+msgid "``FORCE_2D``"
+msgstr "``FORCE_2D``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1060
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1083
@@ -1326,6 +1556,14 @@ msgstr "**Feições selecionadas**"
 msgid "Specify the vector layer for the selected features. One of:"
 msgstr "Especifique a camada vetorial para as feições selecionadas. Um de:"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1148
+msgid ""
+"Vector layer with only the selected features, or no feature if none was "
+"selected."
+msgstr ""
+"Camada vetorial com apenas as feições selecionadas, ou nenhuma feição se "
+"nenhuma foi selecionada."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1164
 msgid "Extract Shapefile encoding"
 msgstr "Extrair a codificação do Shapefile"
@@ -1341,6 +1579,18 @@ msgstr ""
 msgid "**Shapefile encoding**"
 msgstr "**Codificação do Shapefile**"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1201
+msgid "Encoding information specified in the input file"
+msgstr "Informações de codificação especificadas no arquivo de entrada"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1203
+msgid "``CPG_ENCODING``"
+msgstr "``CPG_ENCODING``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1207
+msgid "``LDID_ENCODING``"
+msgstr "``LDID_ENCODING``"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1224
 msgid "Find projection"
 msgstr "Encontrar projeção"
@@ -1354,6 +1604,14 @@ msgstr ""
 "A área que a camada deve cobrir deve ser especificada por meio do parâmetro "
 "de área de destino. O sistema de referência de coordenadas para esta área "
 "alvo deve ser conhecido pelo QGIS."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1237
+msgid ""
+":ref:`qgisassignprojection`, :ref:`qgisdefinecurrentprojection`, "
+":ref:`qgisreprojectlayer`"
+msgstr ""
+":ref:`qgisassignprojection`, :ref:`qgisdefinecurrentprojection`, "
+":ref:`qgisreprojectlayer`"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1255
 msgid "Layer with unknown projection"
@@ -1399,10 +1657,27 @@ msgstr ""
 msgid "Join attributes by field value"
 msgstr "Unir atributos por valor de campo"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1389
+msgid ":ref:`qgisjoinbynearest`, :ref:`qgisjoinattributesbylocation`"
+msgstr ":ref:`qgisjoinbynearest`, :ref:`qgisjoinattributesbylocation`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1413
+msgid "Field of the source layer to use for the join"
+msgstr "Campo da camada de origem a ser usado para a união"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1414
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1862
+msgid "**Input layer 2**"
+msgstr "**Camada de entrada 2**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1415
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1863
 msgid "``INPUT_2``"
 msgstr "**ENTRADA_2**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1417
+msgid "Layer with the attribute table to join"
+msgstr "Camada com a tabela de atributos para unir"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1419
 msgid "``FIELD_2``"
@@ -1431,10 +1706,55 @@ msgstr ""
 msgid "``METHOD``"
 msgstr "``MÉTODO``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1436
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1597
+msgid "The type of the final joined layer. One of:"
+msgstr "O tipo da camada final unida. Um de:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1444
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1607
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1783
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1872
+msgid "``DISCARD_NONMATCHING``"
+msgstr "``DISCARD_NONMATCHING``"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1447
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2083
 msgid "Default: True"
 msgstr "Padrão: Verdadeiro"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1450
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1613
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1878
+msgid "**Joined field prefix**"
+msgstr "**Prefixo de campo combinado**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1453
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1616
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1879
+msgid "``PREFIX``"
+msgstr "``PREFIXO``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1462
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1625
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1793
+msgid "Specify the output vector layer for the join. One of:"
+msgstr "Especifique a camada vetorial de saída para a união. Um de:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1470
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1500
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1633
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1663
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1905
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1933
+msgid "``NON_MATCHING``"
+msgstr "``NON_MATCHING``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1494
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1657
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1938
+msgid "``JOINED_COUNT``"
+msgstr "``JOINED_COUNT``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1502
 msgid "Vector layer with the non-matched features"
@@ -1445,14 +1765,37 @@ msgstr "Camada vetorial com as características não correspondentes"
 msgid "Output vector layer with added attributes from the join"
 msgstr "Camada vetorial de saída com atributos adicionais da junção"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1510
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1943
+msgid "``UNJOINABLE_COUNT``"
+msgstr "``JOINED_COUNT``"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1527
 msgid "Join attributes by location"
 msgstr "Unir atributos por localização"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1539
+msgid ""
+":ref:`qgisjoinbynearest`, :ref:`qgisjoinattributestable`, "
+":ref:`qgisjoinbylocationsummary`"
+msgstr ""
+":ref:`qgisjoinbynearest`, :ref:`qgisjoinattributestable`, "
+":ref:`qgisjoinbylocationsummary`"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1543
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1701
 msgid "Exploring spatial relations"
 msgstr "Explorando relações espaciais"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+msgid ""
+"Geometric predicates are boolean functions used to determine the spatial "
+"relation a feature has with another by comparing whether and how their "
+"geometries share a portion of space."
+msgstr ""
+"Predicados geométricos são funções booleanas usadas para determinar a "
+"relação espacial que um recurso tem com outro, comparando se e como suas "
+"geometrias compartilham uma parte do espaço."
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:10
 msgid "Looking for spatial relations between layers"
@@ -1526,18 +1869,76 @@ msgstr ""
 msgid "*Touch*"
 msgstr "*Toca*"
 
+#: ../../docs/user_manual/processing_algs/algs_include.rst:37
+msgid ""
+"Tests whether a geometry touches another. Returns 1 (true) if the geometries"
+" have at least one point in common, but their interiors do not intersect. "
+"Only circle 3 is returned."
+msgstr ""
+"Testa se uma geometria toca outra. Retorna 1 (verdadeiro) se as geometrias "
+"tiverem pelo menos um ponto em comum, mas seus interiores não se cruzarem. "
+"Apenas o círculo 3 é retornado."
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:44
 msgid "*Overlap*"
 msgstr "*Sobrepor*"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:42
+msgid ""
+"Tests whether a geometry overlaps another. Returns 1 (true) if the "
+"geometries share space, are of the same dimension, but are not completely "
+"contained by each other. Only circle 2 is returned."
+msgstr ""
+"Testa se uma geometria se sobrepõe a outra. Retorna 1 (verdadeiro) se as "
+"geometrias compartilham espaço, são da mesma dimensão, mas não estão "
+"completamente contidas umas nas outras. Apenas o círculo 2 é retornado."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:48
+msgid "*Are within*"
+msgstr "*Estão dentro*"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:47
+msgid ""
+"Tests whether a geometry is within another. Returns 1 (true) if geometry a "
+"is completely inside geometry b. Only circle 1 is returned."
+msgstr ""
+"Testa se uma geometria está dentro de outra. Retorna 1 (verdadeiro) se a "
+"geometria a estiver completamente dentro da geometria b. Apenas o círculo 1 "
+"é retornado."
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:56
 msgid "*Cross*"
 msgstr "*Cruza*"
 
+#: ../../docs/user_manual/processing_algs/algs_include.rst:51
+msgid ""
+"Returns 1 (true) if the supplied geometries have some, but not all, interior"
+" points in common and the actual crossing is of a lower dimension than the "
+"highest supplied geometry. For example, a line crossing a polygon will cross"
+" as a line (true). Two lines crossing will cross as a point (true). Two "
+"polygons cross as a polygon (false). In the picture, no circles will be "
+"returned."
+msgstr ""
+"Retorna 1 (verdadeiro) se as geometrias fornecidas tiverem alguns, mas não "
+"todos, pontos internos em comum e o cruzamento real for de uma dimensão "
+"menor que a geometria fornecida mais alta. Por exemplo, uma linha que cruza "
+"um polígono cruzará como uma linha (verdadeiro). Duas linhas que se cruzam "
+"se cruzarão como um ponto (verdadeiro). Dois polígonos se cruzam como um "
+"polígono (falso). Na imagem, nenhum círculo será devolvido."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1567
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1725
 msgid "**Join layer**"
 msgstr "**Camada de junção**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1570
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1728
+msgid ""
+"The attributes of this vector layer will be **added** to the source layer "
+"attribute table."
+msgstr ""
+"Os atributos desta camada vetorial serão **adicionados** à tabela de "
+"atributos da camada de origem."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1572
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1730
@@ -1584,6 +1985,11 @@ msgstr "3 --- toca"
 msgid "6 --- crosses"
 msgstr "6 --- cruza"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1587
+msgid "**Fields to add (leave empty to use all fields)**"
+msgstr ""
+"**Campos a serem adicionados (deixe em branco para usar todos os campos)**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1590
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1748
 msgid "``JOIN_FIELDS``"
@@ -1621,6 +2027,10 @@ msgstr "**Resumos para calcular (deixe em branco para usar todos os campos)**"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1758
 msgid "Default: []"
 msgstr "Padrão: []"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1762
+msgid "0 --- count"
+msgstr "0 --- contagem"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1763
 msgid "1 --- unique"
@@ -1682,6 +2092,10 @@ msgstr "17 --- comprimento_máximo"
 msgid "18 --- mean_length"
 msgstr "17 --- comprimento_médio"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1829
+msgid "Join attributes by nearest"
+msgstr "Unir atributos por mais próximo"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1839
 msgid ""
 "If a maximum distance is specified, only features which are closer than this"
@@ -1690,13 +2104,31 @@ msgstr ""
 "Se uma distância máxima for especificada, somente as feições que estiverem "
 "mais próximas que essa distância serão correspondidas."
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1842
+msgid ""
+":ref:`qgisnearestneighbouranalysis`, :ref:`qgisjoinattributestable`, "
+":ref:`qgisjoinattributesbylocation`, :ref:`qgisdistancematrix`"
+msgstr ""
+":ref:`qgisnearestneighbouranalysis`, :ref:`qgisjoinattributestable`, "
+":ref:`qgisjoinattributesbylocation`, :ref:`qgisdistancematrix`"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1861
 msgid "The input layer."
 msgstr "A camada de entrada."
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1865
+msgid "The join layer."
+msgstr "A camada de junção."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1868
 msgid "[fields]"
 msgstr "[campos]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1869
+msgid "Join layer fields to copy (if empty, all fields will be copied)."
+msgstr ""
+"Unir os campos da camada para copiar (se estiver vazio, todos os campos "
+"serão copiados)."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1882
 msgid "**Maximum nearest neighbors**"
@@ -1721,6 +2153,18 @@ msgstr "``MAX_DISTÂNCIA``"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1891
 msgid "Maximum search distance"
 msgstr "Distância máxima de pesquisa"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1897
+msgid "Specify the vector layer containing the joined features. One of:"
+msgstr "Especifique a camada vetorial que contém as feições unidas. Uma de:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1909
+msgid ""
+"Specify the vector layer containing the features that could not be joined. "
+"One of:"
+msgstr ""
+"Especifique a camada vetorial que contém as feições que não puderam ser "
+"unidas. Uma de:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1935
 msgid ""
@@ -1800,6 +2244,18 @@ msgstr ""
 "As camadas que devem ser mescladas em uma única camada. As camadas devem ser"
 " do mesmo tipo de geometria."
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2004
+msgid "**Destination CRS**"
+msgstr "**SRC de Destino**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2009
+msgid ""
+"Choose the CRS for the output layer. If not specified, the CRS of the first "
+"input layer is used."
+msgstr ""
+"Escolha o SRC para a camada de saída. Se não for especificado, o SRC da "
+"primeira camada de entrada é usado."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2012
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2034
 msgid "**Merged**"
@@ -1811,9 +2267,25 @@ msgstr "**Mesclado**"
 msgid "Specify the output vector layer. One of:"
 msgstr "Especifique a camada  vetorial de saída. Uma de:"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2037
+msgid ""
+"Output vector layer containing all the features and attributes from the "
+"input layers."
+msgstr ""
+"Camada vetorial de saída contendo todas as feições e atributos das camadas "
+"de entrada."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2053
 msgid "Order by expression"
 msgstr "Ordenar por expressão"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2054
+msgid ""
+"Sorts a vector layer according to an expression: changes the feature index "
+"according to an expression."
+msgstr ""
+"Classifica uma camada vetorial de acordo com uma expressão: altera o índice "
+"de feição de acordo com uma expressão."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2075
 msgid "**Expression**"
@@ -1895,6 +2367,26 @@ msgstr "A camada vetorial de entrada com o arquivo SHX reparado"
 msgid "Reproject layer"
 msgstr "Reprojetar camada"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2183
+msgid ""
+"Reprojects a vector layer in a different CRS. The reprojected layer will "
+"have the same features and attributes of the input layer."
+msgstr ""
+"Reprojeta uma camada vetorial em um SRC diferente. A camada reprojetada terá"
+" as mesmas feições e atributos da camada de entrada."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2188
+msgid ""
+":ref:`qgisassignprojection`, :ref:`qgisdefinecurrentprojection`, "
+":ref:`qgisfindprojection`"
+msgstr ""
+":ref:`qgisassignprojection`, :ref:`qgisdefinecurrentprojection`, "
+":ref:`qgisfindprojection`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2205
+msgid "Input vector layer to reproject"
+msgstr "Camada vetorial de entrada para reprojetar"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2206
 msgid "**Target CRS**"
 msgstr "**SRC Alvo**"
@@ -1911,6 +2403,14 @@ msgstr "``OPERAÇÃO``"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2245
 msgid "**Reprojected**"
 msgstr "**Reprojetado**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2248
+msgid "Output (reprojected) vector layer"
+msgstr "Camada vetorial de saída (reprojetada)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2263
+msgid "Save vector features to file"
+msgstr "Salvar feições vetoriais em arquivo"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2276
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2527
@@ -1945,6 +2445,10 @@ msgstr "**Nome da camada**"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2353
 msgid "``LAYER_NAME``"
 msgstr "\"NOME_CAMADA\""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2321
+msgid "``DATASOURCE_OPTIONS``"
+msgstr "``DATASOURCE_OPTIONS``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2328
 msgid "``LAYER_OPTIONS``"
@@ -1981,6 +2485,27 @@ msgstr "Camada vetorial para definir a codificação."
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2409
 msgid "**Output layer**"
 msgstr "**Camada de saída**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2412
+msgid "Input vector layer with the set encoding."
+msgstr "Camada vetorial de entrada com a codificação definida."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2454
+msgid "**Split using values in the field**"
+msgstr "**Dividir utilizando valores do campo**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2457
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2544
+msgid "Field to use for splitting"
+msgstr "Campo a ser utilizado para divisão"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2458
+msgid "**Split value using character**"
+msgstr "**Dividir valor usando caractere**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2461
+msgid "Character to use for splitting"
+msgstr "Caráter a ser utilizado para divisão"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2462
 msgid "**Use regular expression separator**"
@@ -2054,6 +2579,16 @@ msgstr "``TIPO_ARQUIVO``"
 msgid "Default: ``gpkg`` in the dialog window"
 msgstr "Padrão: ``gpkg``` na janela de diálogo"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2575
+msgid ""
+"Select the extension of the output files. If not specified or invalid, the "
+"output files format will be the one set in the \"Default output vector layer"
+" extension\" Processing setting."
+msgstr ""
+"Selecione a extensão dos arquivos de saída. Se não especificado ou inválido,"
+" o formato dos arquivos de saída será o definido na configuração de "
+"processamento \"Extensão padrão da camada vetorial de saída\"."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2594
 msgid "The directory for the output layers"
 msgstr "O diretório para as camadas de saída"
@@ -2064,7 +2599,7 @@ msgstr "**Camadas de saída**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2596
 msgid "``OUTPUT_LAYERS``"
-msgstr "``SAIDA_CAMADAS```"
+msgstr "``OUTPUT_LAYERS``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2597
 msgid "[same as input] [list]"

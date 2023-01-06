@@ -1,24 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
-# mnamihdk, 2020
+# Harrissou Sant-anna, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:24+0000\n"
-"Last-Translator: mnamihdk, 2020\n"
+"POT-Creation-Date: 2022-12-21 02:17+0000\n"
+"PO-Revision-Date: 2022-03-14 05:07+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2022\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -623,10 +624,6 @@ msgstr ""
 "``SIP_PYTYPE(type)``  は、Pythonのメソッドの引数のための別の型を定義するために使用することができます。型がコンマ ``,``"
 " を含む場合は、型はシングルクォート ``'`` で囲まなければなりません。"
 
-#: ../../docs/developers_guide/codingstandards.rst:450
-msgid "A demo file can be found in :file:`tests/scripts/sipifyheader.h`."
-msgstr "デモファイルが :file:`tests/scripts/sipifyheader.h` にありますので利用可能です。"
-
 #: ../../docs/developers_guide/codingstandards.rst:453
 msgid "Generating the SIP file"
 msgstr "SIP ファイルを生成する"
@@ -635,79 +632,61 @@ msgstr "SIP ファイルを生成する"
 msgid "The SIP file can be generated using a dedicated script. For instance:"
 msgstr "SIP ファイルはそのための専用スクリプトを使って生成することができます。例えば次のようにします。"
 
-#: ../../docs/developers_guide/codingstandards.rst:468
-msgid ""
-"Older files for which the automatic creation is not enabled yet are listed "
-"in :file:`python/auto_sip.blacklist`."
-msgstr ""
-"自動生成がまだ有効にされていない古いファイルは :file:`python/auto_sip.blacklist` にリストアップされています。"
-
-#: ../../docs/developers_guide/codingstandards.rst:472
+#: ../../docs/developers_guide/codingstandards.rst:473
 msgid "Improving sipify script"
 msgstr "sipify スクリプトを改善する"
 
-#: ../../docs/developers_guide/codingstandards.rst:474
-msgid ""
-"If some improvements are required for sipify script, please add the missing "
-"bits to the demo file :file:`tests/scripts/sipifyheader.h` and create the "
-"expected header :file:`tests/scripts/sipifyheader.expected.si`. This will "
-"also be automatically tested on Travis as a unit test of the script itself."
-msgstr ""
-"sipify スクリプトに何か改善が必要な場合は、デモファイル :file:`tests/scripts/sipifyheader.h` "
-"に必要な追加を行い、 期待されるヘッダ :file:`tests/scripts/sipifyheader.expected.si` "
-"を作成してください。これはスクリプト自身のユニットテストとしても、Travisで自動的にテストされます。"
-
-#: ../../docs/developers_guide/codingstandards.rst:481
+#: ../../docs/developers_guide/codingstandards.rst:482
 msgid "Coding Style"
 msgstr "コーディングスタイル"
 
-#: ../../docs/developers_guide/codingstandards.rst:484
+#: ../../docs/developers_guide/codingstandards.rst:485
 msgid ""
 "Here are described some programming hints and tips that will hopefully "
 "reduce errors, development time and maintenance."
 msgstr "ここでは、うまくいけばエラーや開発時間、メンテナンスを減らすことが期待できる、プログラミングのヒントやコツを説明します。"
 
-#: ../../docs/developers_guide/codingstandards.rst:489
+#: ../../docs/developers_guide/codingstandards.rst:490
 msgid "Where-ever Possible Generalize Code"
 msgstr "可能なかぎりコードを一般化しましょう"
 
-#: ../../docs/developers_guide/codingstandards.rst:492
+#: ../../docs/developers_guide/codingstandards.rst:493
 msgid ""
 "If you are cut-n-pasting code, or otherwise writing the same thing more than"
 " once, consider consolidating the code into a single function."
 msgstr "コードをカット＆ペーストしている、あるいは複数回同じことを書いている場合は、単一の関数にコードを統合することを検討してください。"
 
-#: ../../docs/developers_guide/codingstandards.rst:495
+#: ../../docs/developers_guide/codingstandards.rst:496
 msgid "This will:"
 msgstr "これにより："
 
-#: ../../docs/developers_guide/codingstandards.rst:497
+#: ../../docs/developers_guide/codingstandards.rst:498
 msgid "allow changes to be made in one location instead of in multiple places"
 msgstr "変更は複数の場所ではなく一箇所で行うことを可能にします"
 
-#: ../../docs/developers_guide/codingstandards.rst:498
+#: ../../docs/developers_guide/codingstandards.rst:499
 msgid "help prevent code bloat"
 msgstr "コードの膨張を防ぐのを助けます"
 
-#: ../../docs/developers_guide/codingstandards.rst:499
+#: ../../docs/developers_guide/codingstandards.rst:500
 msgid ""
 "make it more difficult for multiple copies to evolve differences over time, "
 "thus making it harder to understand and maintain for others"
 msgstr "複数のコピーが時間につれて違いを進化させること、したがって他人が理解して維持管理するのを難しくすること、がより起こりにくくします"
 
-#: ../../docs/developers_guide/codingstandards.rst:504
+#: ../../docs/developers_guide/codingstandards.rst:505
 msgid "Prefer Having Constants First in Predicates"
 msgstr "述語中で定数は最初にしましょう"
 
-#: ../../docs/developers_guide/codingstandards.rst:506
+#: ../../docs/developers_guide/codingstandards.rst:507
 msgid "Prefer to put constants first in predicates."
 msgstr "述語中では最初に定数を置くことを好みます。"
 
-#: ../../docs/developers_guide/codingstandards.rst:508
+#: ../../docs/developers_guide/codingstandards.rst:509
 msgid "``0 == value`` instead of ``value == 0``"
 msgstr "``value == 0`` の代わりに ``0 == value``"
 
-#: ../../docs/developers_guide/codingstandards.rst:510
+#: ../../docs/developers_guide/codingstandards.rst:511
 msgid ""
 "This will help prevent programmers from accidentally using ``=`` when they "
 "meant to use ``==``, which can introduce very subtle logic bugs. The "
@@ -717,33 +696,33 @@ msgstr ""
 "これにより、プログラマが ``==`` を使用するつもりで誤って ``=`` を使用することを防げます、それは非常に微妙な論理的バグになる。比較のための"
 " ``==`` の代わりに誤って ``=`` を使用している場合、 定数には本質的に値を割り当てできませんから、コンパイラでエラーが発生します。"
 
-#: ../../docs/developers_guide/codingstandards.rst:516
+#: ../../docs/developers_guide/codingstandards.rst:517
 msgid "Whitespace Can Be Your Friend"
 msgstr "空白は友達になりえます"
 
-#: ../../docs/developers_guide/codingstandards.rst:518
+#: ../../docs/developers_guide/codingstandards.rst:519
 msgid ""
 "Adding spaces between operators, statements, and functions makes it easier "
 "for humans to parse code."
 msgstr "演算子、ステートメント、および関数の間にスペースを追加すると、人間がコードを簡単に解析できるようになります。"
 
-#: ../../docs/developers_guide/codingstandards.rst:521
+#: ../../docs/developers_guide/codingstandards.rst:522
 msgid "Which is easier to read, this:"
 msgstr "より読みやすいのは、こちら:"
 
-#: ../../docs/developers_guide/codingstandards.rst:527
+#: ../../docs/developers_guide/codingstandards.rst:528
 msgid "or this:"
 msgstr "またはこちら："
 
-#: ../../docs/developers_guide/codingstandards.rst:533
+#: ../../docs/developers_guide/codingstandards.rst:534
 msgid ":file:`scripts/prepare-commit.sh` will take care of this."
 msgstr ":file:`scripts/prepare-commit.sh` はこれを行います。"
 
-#: ../../docs/developers_guide/codingstandards.rst:537
+#: ../../docs/developers_guide/codingstandards.rst:538
 msgid "Put commands on separate lines"
 msgstr "コマンドは別々の行に入れましょう"
 
-#: ../../docs/developers_guide/codingstandards.rst:539
+#: ../../docs/developers_guide/codingstandards.rst:540
 msgid ""
 "When reading code it's easy to miss commands, if they are not at the "
 "beginning of the line. When quickly reading through code, it's common to "
@@ -754,19 +733,19 @@ msgstr ""
 "コードを読み取るとき、行の先頭にない場合は、コマンドを見逃しやすくなります。すぐにコードを読むとき、それらは最初の数文字で探しているもののように見えない場合、行を読み飛ばすのが一般的です。"
 " ``if`` のような条件の後にコマンドを期待することも一般的です。"
 
-#: ../../docs/developers_guide/codingstandards.rst:544
+#: ../../docs/developers_guide/codingstandards.rst:545
 msgid "Consider:"
 msgstr "考えてみましょう："
 
-#: ../../docs/developers_guide/codingstandards.rst:552
+#: ../../docs/developers_guide/codingstandards.rst:553
 msgid "It's very easy to miss part of what the flow of control. Instead use"
 msgstr "制御のどのような流れの一部を見逃すのは非常に簡単です。代わりに使用します"
 
-#: ../../docs/developers_guide/codingstandards.rst:564
+#: ../../docs/developers_guide/codingstandards.rst:565
 msgid "Indent access modifiers"
 msgstr "アクセス修飾子を字下げしましょう"
 
-#: ../../docs/developers_guide/codingstandards.rst:566
+#: ../../docs/developers_guide/codingstandards.rst:567
 msgid ""
 "Access modifiers structure a class into sections of public API, protected "
 "API and private API. Access modifiers themselves group the code into this "
@@ -774,19 +753,11 @@ msgid ""
 msgstr ""
 "アクセス修飾子は、公開API、保護されたAPIとプライベートAPIのセクションにクラスを構造化します。アクセス修飾子自体はこのような構造にコードをグループ化します。アクセス修飾子と宣言を字下げしてください。"
 
-#: ../../docs/developers_guide/codingstandards.rst:583
+#: ../../docs/developers_guide/codingstandards.rst:584
 msgid "Book recommendations"
 msgstr "お奨めの読み物"
 
-#: ../../docs/developers_guide/codingstandards.rst:586
-msgid ""
-"`Effective Modern C++ <http://shop.oreilly.com/product/0636920033707.do>`_, "
-"Scott Meyers"
-msgstr ""
-"`Effective Modern C++ <http://shop.oreilly.com/product/0636920033707.do>`_, "
-"Scott Meyers （ `日本語版 <https://www.oreilly.co.jp/books/9784873117362/>`_ ）"
-
-#: ../../docs/developers_guide/codingstandards.rst:591
+#: ../../docs/developers_guide/codingstandards.rst:592
 msgid ""
 "You should also really read this article from Qt Quarterly on `designing Qt "
 "style (APIs) <https://doc.qt.io/archives/qq/qq13-apis.html>`_"
@@ -794,23 +765,23 @@ msgstr ""
 "Qt Quarterly の記事 `designing Qt style (APIs) "
 "<https://doc.qt.io/archives/qq/qq13-apis.html>`_ も絶対に読むべきです。"
 
-#: ../../docs/developers_guide/codingstandards.rst:596
+#: ../../docs/developers_guide/codingstandards.rst:597
 msgid "Credits for contributions"
 msgstr "貢献のためのクレジット"
 
-#: ../../docs/developers_guide/codingstandards.rst:598
+#: ../../docs/developers_guide/codingstandards.rst:599
 msgid ""
 "Contributors of new functions are encouraged to let people know about their "
 "contribution by:"
 msgstr "新機能の貢献者は、以下の手段によりその貢献について人々に知らせることをお勧めします："
 
-#: ../../docs/developers_guide/codingstandards.rst:601
+#: ../../docs/developers_guide/codingstandards.rst:602
 msgid ""
 "adding a note to the changelog for the first version where the code has been"
 " incorporated, of the type::"
 msgstr "コードが組み込まれた最初のバージョンの更新履歴にメモを追加すること、以下のタイプで::"
 
-#: ../../docs/developers_guide/codingstandards.rst:607
+#: ../../docs/developers_guide/codingstandards.rst:608
 msgid ""
 "writing an article about the new feature on a blog, and add it to the QGIS "
 "planet https://plugins.qgis.org/planet/"
@@ -818,6 +789,6 @@ msgstr ""
 "新機能についてのブログ記事を執筆し、それを QGIS planet https://plugins.qgis.org/planet/ "
 "に追加してください。"
 
-#: ../../docs/developers_guide/codingstandards.rst:609
+#: ../../docs/developers_guide/codingstandards.rst:610
 msgid "adding their name to:"
 msgstr "以下に自分の名前を追加すること："
