@@ -310,13 +310,6 @@ To create the layer action:
      URL, and then calls ``show()`` on it to make it visible as a
      window on the user’s desktop.
 
-   Note that this is a somewhat contrived example.
-   Python works with semantically significant indentation, so
-   separating things with semicolons isn't the best way to write it.
-   So, in the real world, you'd be more likely to import your logic
-   from a Python module and then call a function with a field
-   attribute as parameter.
-
    You could also use this approach to display an image without
    requiring that the users have a particular image viewer on their
    system.
