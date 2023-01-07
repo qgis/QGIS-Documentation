@@ -291,18 +291,19 @@ To create the layer action:
 
    * :guilabel:`Type`: ``Python``
    * :guilabel:`Description`: ``Wikipedia``
-   * :guilabel:`Action Text` (all on one line)::
+   * :guilabel:`Action Text`::
 
-         from qgis.PyQt.QtCore import QUrl; from qgis.PyQt.QtWebKitWidgets import QWebView; myWV = QWebView(None); myWV.load(QUrl('https://wikipedia.org/wiki/[%name%]')); myWV.show()
+         from qgis.PyQt.QtCore import QUrl
+         from qgis.PyQt.QtWebKitWidgets import QWebView
+         myWV = QWebView(None)
+         myWV.load(QUrl('https://wikipedia.org/wiki/[%name%]'))
+         myWV.show()
 
    .. figure:: img/python_action_example.png
       :align: center
 
    There are a couple of things going on here:
 
-   * All the python code is in a single line with semi-colons
-     separating commands (instead of newlines, the usual way of
-     separating Python commands).
    * ``[%name%]`` will be replaced by the actual attribute value
      when the action is invoked (as before).
    * The code simply creates a new ``QWebView`` instance, sets its
