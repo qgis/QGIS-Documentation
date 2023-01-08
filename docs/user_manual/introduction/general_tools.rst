@@ -2813,39 +2813,48 @@ QGIS offers different options for special rendering effects with these tools tha
 you may previously only know from graphics programs. Blending modes can be applied
 on layers and features, and also on print layout items:
 
-* **Normal**: This is the standard blend mode, which uses the alpha channel of the top
+* :guilabel:`Normal`: This is the standard blend mode, which uses the alpha channel of the top
   pixel to blend with the pixel beneath it. The colors aren't mixed.
-* **Lighten**: This selects the maximum of each component from the foreground and
+* :guilabel:`Lighten`: This selects the maximum of each component from the foreground and
   background pixels. Be aware that the results tend to be jagged and harsh.
-* **Screen**: Light pixels from the source are painted over the destination, while
+* :guilabel:`Screen`: Light pixels from the source are painted over the destination, while
   dark pixels are not. This mode is most useful for mixing the texture of one item
   with another item (such as using a hillshade to texture another layer).
-* **Dodge**: Brighten and saturate underlying pixels based on the lightness
+* :guilabel:`Dodge`: Brighten and saturate underlying pixels based on the lightness
   of the top pixel. Brighter top pixels cause the saturation and brightness of
   the underlying pixels to increase. This works best if the top pixels aren't too
   bright. Otherwise the effect is too extreme.
-* **Addition**: Adds pixel values of one item to the other.
+* :guilabel:`Addition`: Adds pixel values of one item to the other.
   In case of values above the maximum value (in the case of RGB), white is displayed.
   This mode is suitable for highlighting features.
-* **Darken**: Retains the lowest values of each component of the
+* :guilabel:`Darken`: Retains the lowest values of each component of the
   foreground and background pixels. Like lighten, the results tend to be jagged and harsh.
-* **Multiply**: Pixel values of the top item are multiplied with
+* :guilabel:`Multiply`: Pixel values of the top item are multiplied with
   the corresponding values for the bottom item. The results are darker.
-* **Burn**: Darker colors in the top item cause the underlying items to darken.
+* :guilabel:`Burn`: Darker colors in the top item cause the underlying items to darken.
   Burn can be used to tweak and colorize underlying layers.
-* **Overlay**: Combines multiply and screen blending modes.
+* :guilabel:`Overlay`: Combines multiply and screen blending modes.
   Light parts become lighter and dark parts become darker.
-* **Soft light**: Very similar to overlay, but instead of using multiply/screen
+* :guilabel:`Soft light`: Very similar to overlay, but instead of using multiply/screen
   it uses color burn/dodge. This is supposed to emulate shining a soft light onto an image.
-* **Hard light**: Hard light is also very similar to the overlay mode. It's supposed
+* :guilabel:`Hard light`: Hard light is also very similar to the overlay mode. It's supposed
   to emulate projecting a very intense light onto an image.
-* **Difference**: Subtracts the top pixel from the bottom pixel, or the other
+* :guilabel:`Difference`: Subtracts the top pixel from the bottom pixel, or the other
   way around, in order always to get a positive value. Blending with black produces no change,
   as the difference with all colors is zero.
-* **Subtract**: Subtracts pixel values of one item from the other.
+* :guilabel:`Subtract`: Subtracts pixel values of one item from the other.
   In the case of negative values, black is displayed.
 
-.. todo: Add examples for the common blending modes
+.. _figure_blend_modes:
+
+.. figure:: img/blending_modes.png
+   :align: center
+
+   Examples of blend modes applied to a green feature over an orange
+
+   From top to bottom, left to right: Normal -- Lighten, Screen, Dodge, Addition --
+   Difference, Subtract -- Darken, Multiply, Burn -- Overlay, Soft light, Hard light
+
 
 .. _blending_clipping:
 
