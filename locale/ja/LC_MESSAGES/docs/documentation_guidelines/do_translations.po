@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2022
+# 藤本 理弘 <mfujimot@gmail.com>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-12-21 02:17+0000\n"
 "PO-Revision-Date: 2022-03-14 05:11+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2022\n"
+"Last-Translator: 藤本 理弘 <mfujimot@gmail.com>, 2023\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,7 +37,7 @@ msgid ""
 "given."
 msgstr ""
 "このマニュアルは翻訳者の助けとなるよう書かれました。最初に、翻訳の全体のプロセスが技術的にどのように進行するかを説明します。次に実際の翻訳がどのように行われるかを、英語のrstドキュメントからオランダ語への翻訳に例をとって説明します。最後に"
-" :ref:`翻訳ルールのまとめ <translation_summary>` を見てもらいます。"
+" :ref:`翻訳ルールのまとめ <translation_summary>` を見てください。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:16
 msgid ""
@@ -44,31 +45,32 @@ msgid ""
 "rules described below are also applicable to QGIS applications and website "
 "translation."
 msgstr ""
-"このガイドラインではQGISドキュメントに焦点を当てますが、下記の方法やルールはQGISアプリケーションやQGISウェブサイトの翻訳にも適用可能です。"
+"このガイドラインでは QGIS ドキュメントに焦点を当てますが、下記の方法やルールは QGIS アプリケーションや QGIS "
+"ウェブサイトの翻訳にも適用可能です。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:23
 msgid "Translation process"
-msgstr "翻訳のプロセス"
+msgstr "翻訳プロセス"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:25
 msgid ""
 "QGIS Documentation is written in English with :file:`.rst` files. In order "
 "to provide translations:"
-msgstr "QGISのドキュメントは :file:`.rst` ファイルを使い英語で書かれています。翻訳は次のプロセスを経て提供されます。"
+msgstr "QGIS のドキュメントは :file:`.rst` ファイルを使い英語で書かれています。翻訳を提供するには次のようにします。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:28
 msgid ""
 "A prebuild script creates translation files named :file:`.po` files for the "
 "English language in the folder :file:`/QGIS-Documentation/locale/en`."
 msgstr ""
-"プレビルドスクリプトによって、 :file:`.po` ファイルと呼ばれる翻訳用のファイルが、まず英語のために :file:`/QGIS-"
-"Documentation/locale/en` フォルダの中に作成されます。"
+"事前ビルドスクリプトによって :file:`.po` ファイルと呼ばれる翻訳用のファイルが、 :file:`/QGIS-"
+"Documentation/locale/en` フォルダーの中に作成されます。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:30
 msgid ""
 "These \"originals\" are then copied by the script to the :file:`locale` "
 "folders for other languages."
-msgstr "次にスクリプトによって、この「オリジナル」が、その他の言語のために :file:`locale` フォルダにコピーされます。"
+msgstr "スクリプトによって、これら「オリジナル」が、その他の言語のために :file:`locale` フォルダーにコピーされます。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:32
 msgid ""
@@ -76,8 +78,8 @@ msgid ""
 "platform, and made available for translators who can begin to translate from"
 " English to their language with the editor."
 msgstr ""
-":file:`.po` "
-"ファイルの中の文章がTransifexのウェブプラットフォームにプッシュされ、英語から各言語へと、翻訳者がエディタを使って翻訳できるようになります。 "
+":file:`.po` ファイルの中の文が Transifex "
+"のウェブプラットフォームにプッシュされ、英語から各言語へと、翻訳者がエディターを使って翻訳できるようになります。 "
 
 #: ../../docs/documentation_guidelines/do_translations.rst:35
 msgid "At the end of the day, a script pulls back all validated translations"
@@ -100,10 +102,10 @@ msgid ""
 ":file:`.po` file and needs to be translated. The amount of work for updating"
 " translations for next release should be relatively small."
 msgstr ""
-"原文の :file:`.rst` ドキュメントが更新されると、新しく英語の :file:`.po` "
+":file:`.rst` ドキュメントが更新されると、新しく英語の :file:`.po` "
 "ファイルが作られます。この新しいファイルの内容は、各言語の既存の :file:`.po` ファイルへとマージされます。言い換えると、翻訳済みの "
-":file:`.rst` ドキュメントに新たな文章が追加されても、翻訳済みの :file:`.po` "
-"には新しい（あるいは修正された）文章だけが追加され、その部分だけを翻訳し直せばよいということです。このため、次のリリースのための翻訳の更新作業は、比較的少く済むはずです。"
+":file:`.rst` ドキュメントに新たな文が追加されても、翻訳済みの :file:`.po` "
+"には新しい（あるいは修正された）文だけが追加され、その部分だけを翻訳し直せばよいということです。このため、次のリリースのための翻訳の更新作業は、比較的少なく済むはずです。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:46
 msgid ""
@@ -114,14 +116,15 @@ msgid ""
 "application are pushed to and pulled from transifex as a single :file:`.ts` "
 "file."
 msgstr ""
-"上記のプロセスは、QGISウェブサイト、QGISデスクトップアプリケーション、QGISサーバのいずれの翻訳でも、同じように行われます。ただしアプリケーションの翻訳では、:file:`.po`"
-" ファイルではなく、:file:`.py` ファイルや :file:`.cpp` ファイル、 :file:`.yaml` "
-"ファイルなどのアプリケーションを形作るファイルの中のすべての翻訳可能な文字列が、単一の :file:`.ts` "
-"ファイルとしてtransifexとの間でやりとりされるという違いがあります。"
+"上記のプロセスは、QGIS ウェブサイト、QGIS デスクトップアプリケーション、QGIS "
+"サーバーのいずれの翻訳でも、同じように行われます。ただしアプリケーションの翻訳では、:file:`.po` ファイルではなく、:file:`.py` "
+"ファイルや :file:`.cpp` ファイル、 :file:`.yaml` "
+"ファイルなどのアプリケーションを形作るファイルの中のすべての翻訳可能な文字列が、単一の :file:`.ts` ファイルとして Transifex "
+"との間でやりとりされるという違いがあります。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:52
 msgid "Two different tools are currently used to do translations in QGIS:"
-msgstr "現在、ふたつの異なるツールが、QGISでの翻訳を行うために使用されています。"
+msgstr "現在、2つの異なるツールが、 QGIS での翻訳を行うために使用されています。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:54
 msgid ""
@@ -131,7 +134,7 @@ msgid ""
 "Just pick the files you want and translate. Translated files are stored in "
 "the platform until another release is pushed."
 msgstr ""
-"`Transifexのウェブプラットフォーム <https://www.transifex.com/>`_, "
+"`Transifex ウェブプラットフォーム <https://www.transifex.com/>`_, "
 "は、QGISを翻訳するのに一番簡単でお勧めの方法です。上で説明したプロセスは透過的に行われ、またすべての翻訳可能なテキストは1箇所に集められています。翻訳者は希望のファイルを選んで翻訳するだけです。別のリリースがプッシュされ翻訳を再開するまで、翻訳済みファイルはこのプラットフォームの中に保存されています。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:59
@@ -140,14 +143,14 @@ msgid ""
 "development tool, requires the translator to pull locally the :file:`.po` "
 "(or :file:`.ts`) files from the source code, translate and then push back."
 msgstr ""
-"`Qt Linguist <https://doc.qt.io/qt-5/qtlinguist-index.html>`_ "
-"はQtの開発ツールです。翻訳者は :file:`.po` (もしくは :file:`.ts`) "
+"`Qt Linguist <https://doc.qt.io/qt-5/qtlinguist-index.html>`_ は Qt "
+"の開発ツールです。翻訳者は :file:`.po` (もしくは :file:`.ts`) "
 "ファイルをソースコードからローカル環境に取得し、翻訳した後は送り返す必要があります。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:64
 msgid ""
 "Note that whatever tool you choose, rules of translations are the same."
-msgstr "どんなツールを選ぼうと、翻訳のルールは同じであることに注意してください。"
+msgstr "どちらのツールを選ぼうと、翻訳のルールは同じであることに注意してください。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:69
 msgid "Translate a file"
@@ -194,7 +197,7 @@ msgid ""
 " does not hold any translations yet."
 msgstr ""
 "このファイルと並んでごく小さなサイズの :file:`.mo` "
-"ファイルがあるのに気づかれると思いますが、今の所このファイルにはなんの翻訳も含まれていません。"
+"ファイルがあるのに気づかれると思いますが、今のところ、このファイルにはなんの翻訳も含まれていません。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:101
 msgid "Translation in Transifex"
@@ -202,15 +205,15 @@ msgstr "Transifexでの翻訳"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:103
 msgid "In order to translate using Transifex, you need to:"
-msgstr "Transifexを使って翻訳するには、以下に従ってください。"
+msgstr "Transifex を使って翻訳するには、以下のようにしてください。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:105
 msgid ""
 "`create an account on Transifex and join the QGIS project "
 "<https://qgis.org/en/site/getinvolved/translate.html#join-a-project>`_."
 msgstr ""
-"`Transifexでアカウントを作成し、QGISプロジェクトに参加します。 "
-"<https://qgis.org/en/site/getinvolved/translate.html#join-a-project>`_."
+"`Transifex でアカウントを作成し、QGIS プロジェクトに参加してください "
+"<https://qgis.org/en/site/getinvolved/translate.html#join-a-project>`_。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:107
 msgid ""
@@ -218,12 +221,12 @@ msgid ""
 " this case ``QGIS Documentation``). A list of available languages with their"
 " ratio of translation is displayed."
 msgstr ""
-"Languagesチームの一員となったら、該当するプロジェクト（ここでは ``QGIS Documentation`` "
+"Languages チームの一員となったら、該当するプロジェクト（ここでは ``QGIS Documentation`` "
 "です）をクリックします。翻訳が可能な言語の一覧が、その進捗の割合とともに表示されます。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:116
 msgid "Select language for translation in the Transifex menu"
-msgstr "Transifexのメニューで翻訳する言語を選んでください"
+msgstr "Transifex のメニューで翻訳する言語を選ぶ"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:118
 msgid "Hover over your language and click either:"
@@ -268,13 +271,32 @@ msgid ""
 ":ref:`guidelines <translate_manual>`."
 msgstr "あとは個々のテキストを選んで、下記の :ref:`guidelines <translate_manual>` に従って翻訳するだけです。"
 
+#: ../../docs/documentation_guidelines/do_translations.rst:136
+msgid ""
+"For further information on the use of Transifex Web Editor, see "
+"https://help.transifex.com/en/articles/6318216-translating-with-the-web-"
+"editor."
+msgstr ""
+"Transifex の Web "
+"エディターについてのより詳しい情報は、https://help.transifex.com/en/articles/6318216-translating-"
+"with-the-web-editor を参照してください。"
+
 #: ../../docs/documentation_guidelines/do_translations.rst:143
 msgid "Translation in Qt Linguist"
-msgstr "Qt Linguistによる翻訳"
+msgstr "Qt Linguist による翻訳"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:145
 msgid "With Qt Linguist, you need to:"
-msgstr "Qt Linguistを使って翻訳するには、以下に従ってください。"
+msgstr "Qt Linguist を使って翻訳するには、以下に従ってください。"
+
+#: ../../docs/documentation_guidelines/do_translations.rst:147
+msgid ""
+"manually grab the :file:`.po` or :file:`.ts`  file(s). This can be achieved "
+"by downloading the file(s) either from Transifex platform or from the "
+":file:`locale/$language` folder of the source repository (in GitHub),"
+msgstr ""
+"手動で :file:`.po` または :file:`.ts` ファイルを取得します。Transifex プラットフォームから、またはソースリポジトリ "
+"(GitHub) の :file:`locale/$language` フォルダーから、ファイルをダウンロードすることで実現できます。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:150
 msgid "proceed to the translation locally"
@@ -282,7 +304,7 @@ msgstr "ローカルで翻訳に取りかかります。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:151
 msgid "upload the modified files to their sources (Transifex or GitHub)."
-msgstr "修正を行ったファイルをTransifexかGitHubの元の場所へアップロードします。"
+msgstr "修正を行ったファイルを元の場所 (Transifex または GitHub) へアップロードします。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:153
 msgid ""
@@ -292,29 +314,40 @@ msgid ""
 "one and potentially overwrite any modification made by others on the "
 "platform in the meantime."
 msgstr ""
-"翻訳可能なファイルをTransifexを使ってダウンロードしたりアップロードしたりすることは可能ですが、この手順はお勧めできません。というのも、Transifexにはバージョン管理システムがないために、あなたがアップロードしたファイルは単純に既存のファイルを置き換えるだけなので、その間にTransifexで他の人によって行われた変更を上書きしてしまう可能性があるからです。"
+"翻訳可能なファイルを Transifex を使ってダウンロードしたりアップロードしたりすることも可能ですが、この手順はお勧めできません。というのも、 "
+"Transifex にはバージョン管理システムがないために、あなたがアップロードしたファイルは単純に既存のファイルを置き換えるだけなので、その間に "
+"Transifex で他の人によって行われた変更を上書きしてしまう可能性があるからです。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:159
 msgid ""
 "When you open the file in Qt Linguist for the first time you will see the "
 "following dialog:"
-msgstr "Qt Linguistで初めてそのファイルを開くときは、次のようなダイアログが表示されます。"
+msgstr "Qt Linguist で初めてそのファイルを開くときは、次のようなダイアログが表示されます。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:167
 msgid "Select language for translation in linguist menu"
-msgstr "linguist メニューから翻訳する言語を選んでください"
+msgstr "linguist メニューから翻訳する言語を選ぶ"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:170
 msgid ""
 "The Target language should be filled correctly. The Source language can be "
 "left as is with language POSIX and Country/Region on Any Country."
 msgstr ""
-"ターゲット言語は正しく選択する必要があります。ソース言語はLanguageはPOSIX、Country/RegionはAny "
-"Countryのままでかまいません。"
+"Target language は正しく選択する必要があります。 Source language は POSIX、Country/Region はAny"
+" Country のままでかまいません。"
+
+#: ../../docs/documentation_guidelines/do_translations.rst:173
+msgid ""
+"When you press the :guilabel:`OK` button Qt Linguist is filled with "
+"sentences and you can start translating, see "
+":numref:`Figure_translation_menu`."
+msgstr ""
+":guilabel:`OK` ボタンを押すと、 Qt Linguist は文を埋め、翻訳を始めることができます。 "
+":numref:`Figure_translation_menu` を参照してください。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:183
 msgid "Translate using the linguist menu"
-msgstr "Qt Linguistのメニューを使用して翻訳"
+msgstr "Qt Linguist のメニューを使用して翻訳"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:185
 msgid "In the menu you see the following buttons which are convenient to use."
@@ -331,17 +364,29 @@ msgstr ""
 "|linguist_done_next| [翻訳を完了して次へ] "
 "ボタンは、最も重要なボタンです。翻訳が必要な項目では、テキストフィールドに翻訳を入力してこのボタンを押してください。翻訳を必要としない項目では、テキストフィールドは空のままでこのボタンを押してください。これで翻訳完了となり、次の項目に進みます。"
 
+#: ../../docs/documentation_guidelines/do_translations.rst:381
+msgid "linguist_done_next"
+msgstr "linguist_done_next"
+
 #: ../../docs/documentation_guidelines/do_translations.rst:192
 msgid ""
 "|linguist_previous| The Goto Previous button, can be used to go to the "
 "previous translation item."
 msgstr "|linguist_previous| [前へ行く] ボタンで、その前の翻訳項目に移動することができます。"
 
+#: ../../docs/documentation_guidelines/do_translations.rst:387
+msgid "linguist_previous"
+msgstr "linguist_previous"
+
 #: ../../docs/documentation_guidelines/do_translations.rst:194
 msgid ""
 "|linguist_next| The Goto Next button, can be used to go to the next "
 "translation item."
 msgstr "|linguist_next| [次へ行く] ボタンで、その次の翻訳項目に移動することができます。"
+
+#: ../../docs/documentation_guidelines/do_translations.rst:383
+msgid "linguist_next"
+msgstr "linguist_next"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:196
 msgid ""
@@ -352,12 +397,28 @@ msgstr ""
 "|linguist_next_todo| [次のするべき] "
 "ボタンは、翻訳が必要な次の翻訳項目にジャンプします。ソースファイルの変更によって追加や修正が行われた文だけを翻訳する必要があるときに便利です。"
 
+#: ../../docs/documentation_guidelines/do_translations.rst:385
+msgid "linguist_next_todo"
+msgstr "linguist_next_todo"
+
 #: ../../docs/documentation_guidelines/do_translations.rst:199
 msgid ""
 "|linguist_previous_todo| The Previous Todo button, searches backward and "
 "jumps to the first translation item it finds that still needs a translation."
 msgstr ""
 "|linguist_previous_todo| [前のするべき] ボタンは逆方向に検索を行い、最初に見つかった未翻訳の項目にジャンプします。"
+
+#: ../../docs/documentation_guidelines/do_translations.rst:389
+msgid "linguist_previous_todo"
+msgstr "linguist_previous_todo"
+
+#: ../../docs/documentation_guidelines/do_translations.rst:202
+msgid ""
+"For further information on the use of Qt Linguist, see "
+"https://doc.qt.io/qt-5/linguist-translators.html"
+msgstr ""
+"Qt Linguist の使い方についての詳しい情報は、 https://doc.qt.io/qt-5/linguist-"
+"translators.html を参照してください。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:207
 msgid ""
@@ -368,8 +429,8 @@ msgid ""
 "you have to use the manual_en_v2.8 branch."
 msgstr ""
 "翻訳のためにソースリポジトリからファイルをダウンロードするときは、絶対に ``master`` "
-"ブランチで行なってはなりません。ある特定のバージョンで英語での更新が完了した後は、常に翻訳用ブランチが有効になっています。翻訳のためにはそのブランチを使用してください。例えばQGIS"
-" 2.8の翻訳では、manual_en_v2.8 ブランチを使用してください。"
+"ブランチで行わないでください。ある特定のバージョンで英語での更新が完了した後は、常に翻訳用ブランチが有効になっています。翻訳のためにはそのブランチを使用してください。例えばQGIS"
+" 2.8 の翻訳では、manual_en_v2.8 ブランチを使用してください。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:217
 msgid "Translate a manual"
@@ -377,22 +438,22 @@ msgstr "マニュアルを翻訳する"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:219
 msgid "Now we start to translate the plugin_heatmap manual!"
-msgstr "それでは plugin_heatmap マニュアルの翻訳を始めましょう！"
+msgstr "それでは plugin_heatmap のマニュアルの翻訳を始めましょう！"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:221
 msgid ""
 "Translating most of the sentences should be straightforward. During this "
 "translation session I will point out which parts (rst statements) need "
 "special translation."
-msgstr "センテンスのほとんどはそのまま翻訳するべきです。特別な翻訳をしなければならない部分（rst文）を、この翻訳セッションの中で挙げていきます。"
+msgstr "大部分の文は、そのまま翻訳してください。特別な翻訳をしなければならない部分（rst 文）を、この翻訳セッションの中で挙げていきます。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:225
 msgid "Below we see an interesting sentence to translate:"
-msgstr "以下で翻訳の対象として興味深いセンテンスを見ていきましょう。"
+msgstr "以下で翻訳の対象として興味深い文を見ていきましょう。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:235
 msgid "This sentence contains two rst statements:"
-msgstr "このセンテンスには2つのrst構文があります。"
+msgstr "このセンテンスには2つの rst 構文があります。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:237
 msgid ""
@@ -400,7 +461,7 @@ msgid ""
 " translated! This will be replaced by the heatmap plugin icon!"
 msgstr ""
 "``|heatmap|`` のように ``|`` "
-"の間にある言葉は置換されるので決して翻訳してはいけません。ここではヒートマッププラグインのアイコンに置換されます。"
+"に挟まれた言葉は、置換されるので決して翻訳してはいけません。ここではヒートマッププラグインのアイコンに置換されます。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:239
 msgid ""
@@ -411,11 +472,12 @@ msgid ""
 "Dutch case it is not!"
 msgstr ""
 "``:sup:`Heatmap``` のような ``:sup:`` "
-"文は上付き文です。続くテキストを少し高く出力します。これはツールバー項目の上にマウスを当てた時に表示されるポップアップテキストを表示するために使用されますが、実際のQGISアプリケーションでの翻訳とは異なる場合があります。オランダ語の場合はそうではありません。"
+"文は上付き文です。続くテキストを少し高く出力します。これはツールバー項目の上にマウスを当てた時に表示されるポップアップテキストを表示するために使用されますが、実際の"
+" QGIS アプリケーションでの翻訳とは異なる場合があります。オランダ語の場合はそうではありません。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:245
 msgid "All other plain text in this sentence can be translated!"
-msgstr "このセンテンス中のそれ以外のプレーン・テキストはすべて翻訳してかまいません。"
+msgstr "この文中のそれ以外のプレーンテキストは、すべて翻訳してかまいません。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:247
 msgid ""
@@ -424,7 +486,7 @@ msgid ""
 " a ``:ref:`` statement should never be changed because it is a unique "
 "identifier!"
 msgstr ""
-"次の文章には 、通常マニュアルの別のセクションを参照するために使用される ``:ref:`` 文が含まれています。 ``:ref:`` "
+"次の文には 、マニュアルの別のセクションをを参照するためによく使われる ``:ref:`` 文が含まれています。 ``:ref:`` "
 "文に続くテキストは一意の識別子であるため、 変更してはいけません。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:258
@@ -435,9 +497,9 @@ msgid ""
 "this reference is referring to is translated, all references to this header "
 "will be automatically translated as well."
 msgstr ""
-"In this case ``load_core_plugin`` is a unique reference identifier placed "
-"before an rst item that has a caption. ref文は見出しテキストに置換され、ハイパーリンクになります。 "
-"参照されている見出しが翻訳された時は、この見出しを参照しているすべてのref文も自動的に同じように翻訳されます。"
+"この場合、 ``load_core_plugin`` は一意の参照識別子であり、キャプションのある rst アイテムの前に配置されます。この ref "
+"文は見出しのテキストに置換され、ハイパーリンクに変換されます。 参照されている見出しが翻訳された時は、この見出しを参照しているすべての ref "
+"文も自動的に同じように翻訳されます。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:264
 msgid ""
@@ -445,20 +507,20 @@ msgid ""
 "actually displayed in a menu in QGIS application, this may be translated in "
 "the application and therefore should be changed when this is the case."
 msgstr ""
-"次の文章には rst-タグ ``:menuselection:`` "
-"があります。後ろに続くテキストは実際にQGISアプリケーションのメニューで表示されるテキストです。これはアプリケーションでは翻訳されているかもしれませんので、その場合は変更すべきです。"
+"次の文には rst タグ ``:menuselection:`` があります。続くテキストは実際に QGIS "
+"アプリケーションのメニューで表示されるテキストです。これはアプリケーションでは翻訳されているかもしれませんので、その場合は変更すべきです。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:273
 msgid ""
 "In above item \"View -->\" is actually translated to \"Beeld -->\" because "
 "this is the translation used in the Dutch localized QGIS application."
 msgstr ""
-"ここではオランダ語へのローカライズQGISアプリケーションで使用される翻訳ですので、上記の「View -->」は実際には「Beeld "
-"-->」と翻訳されます。"
+"ここではオランダ語へローカライズされた QGIS アプリケーションで使用される翻訳ですので、上記の \"View -->\" は実際には \"Beeld"
+" -->\" と翻訳されます。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:276
 msgid "A bit further we meet the following tricky translation item:"
-msgstr "次のように、もう少しトリッキーな文章のこともあります。"
+msgstr "次のように、トリッキーな翻訳アイテムを見かけることもあります。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:283
 msgid ""
@@ -470,15 +532,15 @@ msgid ""
 "``figure_heatmap_settings``. When a PDF document is created "
 "``figure_heatmap_settings_`` is replaced with a figure number."
 msgstr ""
-"この文章には、図 ``figure_heatmap_settings_`` "
-"への参照があります。セクションへの参照と同様に、この参照を変更してはいけません。rstドキュメントでの参照定義は :file:`.po` "
-"ファイルには含まれていないため、これを変更することはできません。このことは図への参照は翻訳できないことを意味します。HTML生成時には "
-"``figure_heatmap_settings`` と表示されます。PDF生成の際には ``figure_heatmap_settings_`` "
-"は図番号に置き換えられます。"
+"この文には、図 ``figure_heatmap_settings_`` "
+"への参照があります。セクションへの参照と同様に、この参照を変更してはいけません。 rst ドキュメントでの参照定義は :file:`.po` "
+"ファイルには含まれていないため、これを変更することはできません。このことは図への参照は翻訳できないことを意味します。 HTML 生成時には "
+"``figure_heatmap_settings`` と表示されます。 PDF 生成の際には ``figure_heatmap_settings_``"
+" は図番号に置き換えられます。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:290
 msgid "The next translation item with rst attributes is the following item:"
-msgstr "次の rst属性付きの文章はこのようなものです。"
+msgstr "次の rst 属性付きの文はこのようなものです。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:296
 msgid ""
@@ -486,18 +548,18 @@ msgid ""
 "bold. The text itself is often text included in the dialog itself and may "
 "well be translated in the application."
 msgstr ""
-"上の行内の二重星印を削除しないでください。二重星印に挟まれたテキストは太字で印刷されます。テキストそのものは多くの場合、ダイアログ中のテキストであり、アプリケーションでは翻訳されているかもしれません。"
+"上の行内の二重星印を削除しないでください。二重星印に挟まれたテキストは太字で表示されます。テキストそのものは多くの場合、ダイアログ中のテキストであり、アプリケーションでは翻訳されているかもしれません。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:300
 msgid "The following translation item contains the ``:guilabel:`` rst tag."
-msgstr "以下の文章には ``:guilabel:`` rstタグが含まれています。"
+msgstr "以下の文章には ``:guilabel:`` rst タグが含まれています。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:307
 msgid ""
 "The text ``Advanced`` of the guilabel tag may well be translated in the QGIS"
 " application and probably needs to be changed!"
 msgstr ""
-"guilabelタグの テキスト ``Advanced`` はQGISアプリケーション中でおそらく翻訳されるのでたぶん変更する必要があります！"
+"guilabel タグのテキスト ``Advanced`` は QGIS アプリケーション中でおそらく翻訳されるのでたぶん変更する必要があります。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:310
 msgid ""
@@ -506,7 +568,7 @@ msgid ""
 "and does not need translation."
 msgstr ""
 "以下の文章には \\``airports\\`` "
-"が含まれています。引用符は、テキストに別のテキストフォントを与えるために使用されています。このケースでは、リテラル値であり、翻訳を必要としません。"
+"が含まれています。引用符は、テキストに別のテキストフォントを設定するために使用されています。このケースでは、リテラル値であり、翻訳を必要としません。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:323
 msgid ""
@@ -516,8 +578,8 @@ msgid ""
 "by the reader. Never remove the underscore at the end of the hyperlink which"
 " forms an essential part of it!!"
 msgstr ""
-"この文章には、URLと表示テキストの両方を持つハイパーリンクも含まれています。URLはもちろん手をつけずそのまま残すべきですが、読者に表示される方のテキストである"
-" ``https://www.qgistutorials.com`` "
+"この文には、URL と表示テキストの両方を持つハイパーリンクも含まれています。URL "
+"はもちろん手をつけずそのまま残すべきですが、読者に表示される方のテキストである ``https://www.qgistutorials.com`` "
 "は変更することができます。ハイパーリンクの末尾のアンダースコアは本質的な部分なので決して削除してはいけません。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:333
@@ -531,8 +593,29 @@ msgid ""
 "are special tags used to replace images"
 msgstr ""
 "``|bronze|`` 、 ``|checkbox|`` 、``|labels|`` 、``|selectString|`` "
-"、``|addLayer|`` ... のような、２つの 文字 ``|`` "
-"の間のテキストを変更しないでください。これらは画像に置換するために使用される特殊なタグです。"
+"、``|addLayer|`` ... のような、2つの ``|`` "
+"の文字に挟まれたテキストは変更しないでください。これらは、画像に置換するために使用される特殊なタグです"
+
+#: ../../docs/documentation_guidelines/do_translations.rst:338
+msgid ""
+"Do not change references that start with roles like ``:ref:``, ``:file:``, "
+"``:numref:`` unless they include a title. In that case, you can translate "
+"the title but keep unchanged the link (i.e., the text between ``<`` and "
+"``>``)"
+msgstr ""
+"``:ref:``, ``:file:``, ``:numref:`` "
+"などで始まる役割を持つ参照は、タイトルが含まれていない限り変更しないでください。タイトルが含まれている場合は、タイトルを翻訳することはできますが、リンク（すなわち"
+" ``<`` と ``>`` で囲まれたテキスト）は変更せずにおいてください"
+
+#: ../../docs/documentation_guidelines/do_translations.rst:342
+msgid ""
+"When a title is provided for a reference, Transifex may display a number in "
+"the English source text in replacement of the link part. Click on the number"
+" in the source text to add the reference link next to the title being "
+"translated."
+msgstr ""
+"参照にタイトルが提供されている場合、Transifex "
+"は英語の原文にリンク部分の代わりに数字を表示することがあります。原文の数字をクリックすると、翻訳中のタイトルの横に参照のリンクが追加されます。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:346
 msgid ""
@@ -546,7 +629,7 @@ msgid ""
 "description. Leave the underscore at the end of the hyperlink, without "
 "additional spacing (``>`_``)"
 msgstr ""
-"ハイパーリンクのURLを変更しないでください。ただし読者に表示される記述は変更できます。ハイパーリンクの末尾のアンダースコア (``>`_``) "
+"ハイパーリンクの URL を変更しないでください。ただし読者に表示される記述は変更できます。ハイパーリンクの末尾のアンダースコア (``>`_``) "
 "は空白を加えたりせずそのまま残しておいてください。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:350
@@ -556,7 +639,8 @@ msgid ""
 "in the QGIS Application. Do not change the tag itself."
 msgstr ""
 "``:index:`` 、 ``:sup:`` 、 ``:guilabel:`` 、 ``:menuselection:`` "
-"タグに続く引用符内のテキストは変更してください。それがQGISアプリケーションで翻訳されているかどうか（翻訳されていたらどう翻訳されているか）を確認してください。タグ自体は変更しないでください。"
+"タグに続く引用符内のテキストは変更してください。それが QGIS "
+"アプリケーションで翻訳されているかどうか、どう翻訳されているかを確認してください。タグ自体は変更しないでください。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:353
 msgid ""
@@ -571,7 +655,7 @@ msgid ""
 "to the cosmetics of the information provided"
 msgstr ""
 "`````, ``````, ``*``, ``**``, ``::`` "
-"などの特殊文字は、正確に元のテキストと同じ文字を同じ数だけ使用するよう注意してください 。これらは情報の見た目を整えるのに貢献しています。"
+"などの特殊文字は、正確に元のテキストと同じ文字を（同じ数だけ）使用するよう注意してください 。これらは情報の見た目を整えるのに貢献しています。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:358
 msgid ""
@@ -598,3 +682,19 @@ msgid ""
 msgstr ""
 "ご質問がございましたら、 `QGISコミュニティチーム <qgis-community-team@lists.osgeo.org>`_ または "
 "`QGIS翻訳チーム <qgis-tr@lists.osgeo.org>`_ までご連絡ください。"
+
+#: ../../docs/documentation_guidelines/do_translations.rst:375
+msgid "addLayer"
+msgstr "addLayer"
+
+#: ../../docs/documentation_guidelines/do_translations.rst:377
+msgid "checkbox"
+msgstr "checkbox"
+
+#: ../../docs/documentation_guidelines/do_translations.rst:379
+msgid "heatmap"
+msgstr "heatmap"
+
+#: ../../docs/documentation_guidelines/do_translations.rst:391
+msgid "selectString"
+msgstr "selectString"
