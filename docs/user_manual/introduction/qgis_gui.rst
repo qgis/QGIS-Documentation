@@ -1576,6 +1576,10 @@ are enabled.
      -
      -
      - :ref:`qgisselectbylocation`
+   * - :menuselection:`--> Select Within Distance...`
+     -
+     -
+     - :ref:`qgisselectwithindistance`
    * - :menuselection:`--> Extract Layer Extent...`
      -
      -

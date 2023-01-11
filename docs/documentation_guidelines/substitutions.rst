@@ -240,7 +240,8 @@ Icon                            Substitution                        Icon        
 |selectFreehand|                ``|selectFreehand|``                |selectRadius|                  ``|selectRadius|``
 |selectAll|                     ``|selectAll|``                     |deselectAll|                   ``|deselectAll|``
 |invertSelection|               ``|invertSelection|``               |expressionSelect|              ``|expressionSelect|``
-|deselectActiveLayer|           ``|deselectActiveLayer|``           |selectLocation|                ``|selectLocation|``
+|deselectActiveLayer|           ``|deselectActiveLayer|``
+|selectDistance|                ``|selectDistance|``                |selectLocation|                ``|selectLocation|``
 |selectAllTree|                 ``|selectAllTree|``                 |select|                        ``|select|``
 |selectAdd|                     ``|selectAdd|``                     |selectRemove|                  ``|selectRemove|``
 |formSelect|                    ``|formSelect|``                    |dataDefine|                    ``|dataDefine|``
@@ -1315,6 +1316,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |selectColor| image:: /static/common/selectcolor.png
 .. |selectColorRamp| image:: /static/common/selectcolorramp.png
+.. |selectDistance| image:: /static/common/mAlgorithmSelectDistance.png
+   :width: 1.5em
 .. |selectFreehand| image:: /static/common/mActionSelectFreehand.png
    :width: 1.5em
 .. |selectLocation| image:: /static/common/mAlgorithmSelectLocation.png
