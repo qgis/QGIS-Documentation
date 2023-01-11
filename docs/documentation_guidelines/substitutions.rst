@@ -408,6 +408,10 @@ Icon                     Substitution                 Icon                     S
 |alignLeft|              ``|alignLeft|``              |alignRight|             ``|alignRight|``
 |alignHCenter|           ``|alignHCenter|``           |alignVCenter|           ``|alignVCenter|``
 |alignTop|               ``|alignTop|``               |alignBottom|            ``|alignBottom|``
+|distributeLeft|         ``|distributeLeft|``         |distributeRight|        ``|distributeRight|``
+|distributeTop|          ``|distributeTop|``          |distributeBottom|       ``|distributeBottom|``
+|distributeHCenter|      ``|distributeHCenter|``      |distributeVCenter|      ``|distributeVCenter|``
+|distributeHSpace|       ``|distributeHSpace|``       |distributeVSpace|       ``|distributeVSpace|``
 |resizeShortest|         ``|resizeShortest|``         |resizeTallest|          ``|resizeTallest|``
 |resizeNarrowest|        ``|resizeNarrowest|``        |resizeWidest|           ``|resizeWidest|``
 |resizeSquare|           ``|resizeSquare|``           |groupItems|             ``|groupItems|``
@@ -785,6 +789,22 @@ Icon                            Substitution                        Icon        
 .. |display| image:: /static/common/display.png
    :width: 1.5em
 .. |dissolve| image:: /static/common/mAlgorithmDissolve.png
+   :width: 1.5em
+.. |distributeBottom| image:: /static/common/mActionDistributeBottom.png
+   :width: 1.5em
+.. |distributeHCenter| image:: /static/common/mActionDistributeHCenter.png
+   :width: 1.5em
+.. |distributeHSpace| image:: /static/common/mActionDistributeHSpace.png
+   :width: 1.5em
+.. |distributeLeft| image:: /static/common/mActionDistributeLeft.png
+   :width: 1.5em
+.. |distributeRight| image:: /static/common/mActionDistributeRight.png
+   :width: 1.5em
+.. |distributeTop| image:: /static/common/mActionDistributeTop.png
+   :width: 1.5em
+.. |distributeVCenter| image:: /static/common/mActionDistributeVCenter.png
+   :width: 1.5em
+.. |distributeVSpace| image:: /static/common/mActionDistributeVSpace.png
    :width: 1.5em
 .. |dock| image:: /static/common/dock.png
    :width: 1.5em
