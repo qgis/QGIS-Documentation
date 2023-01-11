@@ -291,10 +291,12 @@ To create the layer action:
 
    * :guilabel:`Type`: ``Python``
    * :guilabel:`Description`: ``Wikipedia``
+   * :guilabel:`Scope`: ``Feature``, ``Canvas``
    * :guilabel:`Action Text`::
 
          from qgis.PyQt.QtCore import QUrl
          from qgis.PyQt.QtWebKitWidgets import QWebView
+
          myWV = QWebView(None)
          myWV.load(QUrl('https://wikipedia.org/wiki/[%name%]'))
          myWV.show()
