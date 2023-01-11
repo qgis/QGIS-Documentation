@@ -81,3 +81,24 @@ Returns a matching layer property or metadata value.
 
 .. end_layer_property_section
 
+.. _expression_function_Map_Layers_load_layer:
+
+load_layer
+..........
+
+Loads a layer by source URI and provider name.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - load_layer(uri, provider)
+   * - Arguments
+     - * **uri** - layer source URI string
+       * **provider** - layer data provider name
+   * - Examples
+     - * ``layer_property(load_layer('c:/data/roads.shp', 'ogr'), 'feature_count')`` → count of features from the c:/data/roads.shp vector layer
+
+
+.. end_load_layer_section
+

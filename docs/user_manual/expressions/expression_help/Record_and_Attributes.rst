@@ -255,12 +255,12 @@ Returns TRUE if a specific feature attribute meets all constraints.
        [] marks optional arguments
    * - Arguments
      - * **attribute** - an attribute name
-       * **feature** - A feature. If not set, the feature attached to the expression context will be used.
-       * **layer** - A vector layer. If not set, the layer attached to the expression context will be used.
+       * **feature** - A feature. If not set, the current feature will be used.
+       * **layer** - A vector layer. If not set, the current layer will be used.
        * **strength** - Set to 'hard' or 'soft' to narrow down to a specific constraint type. If not set, the function will return FALSE if either a hard or a soft constraint fails.
    * - Examples
-     - * ``is_attribute_valid('HECTARES')`` → TRUE
-       * ``is_attribute_valid('HOUSES',get_feature('my_layer', 'FID', 10), 'my_layer')`` → FALSE
+     - * ``is_attribute_valid('HECTARES')`` → TRUE if the current feature's value in the "HECTARES" field meets all constraints.
+       * ``is_attribute_valid('HOUSES',get_feature('my_layer', 'FID', 10), 'my_layer')`` → FALSE if the value in the "HOUSES" field from the feature with "FID"=10 in 'my_layer' fails to meet all constraints.
 
 
 .. end_is_attribute_valid_section
@@ -280,12 +280,12 @@ Returns TRUE if a feature meets all field constraints.
 
        [] marks optional arguments
    * - Arguments
-     - * **feature** - A feature. If not set, the feature attached to the expression context will be used.
-       * **layer** - A vector layer. If not set, the layer attached to the expression context will be used.
+     - * **feature** - A feature. If not set, the current feature will be used.
+       * **layer** - A vector layer. If not set, the current layer will be used.
        * **strength** - Set to 'hard' or 'soft' to narrow down to a specific constraint type. If not set, the function will return FALSE if either a hard or a soft constraint fails.
    * - Examples
-     - * ``is_feature_valid(strength:='hard')`` → TRUE
-       * ``is_feature_valid(get_feature('my_layer', 'FID', 10), 'my_layer')`` → FALSE
+     - * ``is_feature_valid(strength:='hard')`` → TRUE if all fields from the current feature meet their hard constraints.
+       * ``is_feature_valid(get_feature('my_layer', 'FID', 10), 'my_layer')`` → FALSE if all fields from feature with "FID"=10 in 'my_layer' fails to meet all constraints.
 
 
 .. end_is_feature_valid_section
@@ -490,10 +490,12 @@ Returns the configured representation value for a field value. It depends on the
    :widths: 15 85
 
    * - Syntax
-     - represent_value(value, fieldName)
+     - represent_value(value, [fieldName])
+
+       [] marks optional arguments
    * - Arguments
      - * **value** - The value which should be resolved. Most likely a field.
-       * **fieldName** - The field name for which the widget configuration should be loaded. (Optional)
+       * **fieldName** - The field name for which the widget configuration should be loaded.
    * - Examples
      - * ``represent_value("field_with_value_map")`` → Description for value
        * ``represent_value('static value', 'field_name')`` → Description for static value
