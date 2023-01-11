@@ -106,8 +106,8 @@ if the movement is too slow, you can speed it up by holding :kbd:`Shift`.
 If you need better precision, use the :guilabel:`Position and size` properties,
 or grid/guides snapping as explained above for item's creation.
 
-Resizing or moving several items at once is made the same way as for a single
-item. QGIS however provides some advanced tools to automatically resize a selection
+Resizing or moving several items at once is made the same way as for a single item.
+QGIS however provides some advanced tools to automatically resize a selection
 of items following different rules:
 
 * each item height matches the |resizeTallest| tallest or the |resizeShortest|
@@ -117,11 +117,12 @@ of items following different rules:
 * resizes items to |resizeSquare| squares: each item is enlarged to form a
   square.
 
-Likewise, automated tools are available to organize multiple items position
+Likewise, there are :ref:`tools <align_items>` available to organize multiple items position
 by distributing equidistantly:
 
 * edges (left, right, top or bottom) of items;
-* centers of items either horizontally or vertically.
+* centers of items horizontally or vertically;
+* spacing between items horizontally or vertically.
 
 .. _group_items:
 
@@ -156,8 +157,8 @@ panel and unchecking the tickbox or you can use the icons on the toolbar.
 .. index:: Items alignment
 .. _align_items:
 
-Alignment
-.........
+Alignment and distribution
+..........................
 
 Raising or lowering the visual hierarchy for elements are inside the |raiseItems|
 :sup:`Raise selected items` pull-down menu. Choose an element on the print layout
@@ -181,12 +182,19 @@ one of the alignment icons:
 
 * |alignLeft| :guilabel:`Align Left` or |alignRight| :guilabel:`Align Right`;
 * |alignTop| :guilabel:`Align Top` or |alignBottom| :guilabel:`Align Bottom`;
-* |alignHCenter| :guilabel:`Align Center` horizontally or |alignVCenter|
-  :guilabel:`Align Center Vertical`.
+* |alignHCenter| :guilabel:`Align Center` horizontally or |alignVCenter| :guilabel:`Align Center Vertical`.
 
-All selected elements will then be aligned to their
-common bounding box. When moving items on the layout canvas, alignment helper
-lines appear when borders, centers or corners are aligned.
+All selected elements will then be aligned to their common bounding box.
+When moving items on the layout canvas, alignment helper lines appear when borders, centers or corners are aligned.
+
+Another way to improve layout items placement is by adjusting the spacing between them, over the layout page.
+This can be done by selecting the items and press the |distributeLeft| :guilabel:`Distribute Left Edges` drop-down menu to:
+
+* |distributeLeft| :guilabel:`Distribute Left Edges` or |distributeRight|:guilabel:`Distribute Right Edges` of items equidistantly
+* |distributeTop| :guilabel:`Distribute Top edges` or  |distributeBottom| :guilabel:`Distribute Bottom Edges` of items equidistantly
+* |distributeHCenter| :guilabel:`Distribute Horizontal Centers` or |distributeVCenter| :guilabel:`Distribute Vertical Centers` of items equidistantly 
+* Add equal space between items: |distributeHSpace| :guilabel:`Distribute Horizontal Spacing Equally`
+  or |distributeVSpace|:guilabel:`Distribute Vertical Spacing Equally`
 
 .. _item_common_properties:
 
@@ -328,6 +336,22 @@ More information on variables usage in the :ref:`general_tools_variables` sectio
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |dataDefine| image:: /static/common/mIconDataDefine.png
+   :width: 1.5em
+.. |distributeBottom| image:: /static/common/mActionDistributeBottom.png
+   :width: 1.5em
+.. |distributeHCenter| image:: /static/common/mActionDistributeHCenter.png
+   :width: 1.5em
+.. |distributeHSpace| image:: /static/common/mActionDistributeHSpace.png
+   :width: 1.5em
+.. |distributeLeft| image:: /static/common/mActionDistributeLeft.png
+   :width: 1.5em
+.. |distributeRight| image:: /static/common/mActionDistributeRight.png
+   :width: 1.5em
+.. |distributeTop| image:: /static/common/mActionDistributeTop.png
+   :width: 1.5em
+.. |distributeVCenter| image:: /static/common/mActionDistributeVCenter.png
+   :width: 1.5em
+.. |distributeVSpace| image:: /static/common/mActionDistributeVSpace.png
    :width: 1.5em
 .. |groupItems| image:: /static/common/mActionGroupItems.png
    :width: 1.5em
