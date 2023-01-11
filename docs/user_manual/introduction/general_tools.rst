@@ -344,7 +344,7 @@ Groups are a means of structuring layers within a tree in the project
 but they can also impact how their component layers are rendered,
 namely as a single flattened object during map renders.
 
-Option for such a rendering is available within the :guilabel:`Layer Styling` panel whenever a group is selected.
+The option for such a rendering is available within the :guilabel:`Layer Styling` panel whenever a group is selected.
 Under the |symbology| :sup:`Symbology` tab, check |checkbox| :guilabel:`Render Layers as a Group`
 to enable a set of options to control the appearance of the child layers as a whole, instead of individual layers:
 
@@ -371,7 +371,7 @@ to enable a set of options to control the appearance of the child layers as a wh
   * When the child layers have blend modes assigned, it is applied before flattening
     but the scope is restricted to only affecting other child layers from that group,
     and not other layers sitting below the whole group.
-  * Child layers are added some more :ref:`blending modes <blending_clipping>` options
+  * Some more :ref:`blending modes <blending_clipping>` options are available for child layers in groups,
     in their :guilabel:`Symbology` tab which perform "clipping" style operations
     on other child layers during the render.
     You can e.g. clip the render of one layer’s content by the content in a second "mask" layer.
@@ -2693,14 +2693,14 @@ When a layer is part of a group that :ref:`renders layers as a group <render_as_
 additional blending modes are available for the rendering.
 They provide methods to clip the render of one layer’s content by the content in a second "mask" layer.
 
-* :guilabel:`Masked By Below`: The output is the source, where the alpha is reduced by that of the destination.
-* :guilabel:`Mask Below`: The output is the destination, where the alpha is reduced by that of the source.
-* :guilabel:`Inverse Masked By Below`: The output is the source, where the alpha is reduced by the inverse of destination.
-* :guilabel:`Inverse Mask Below`: The output is the destination, where the alpha is reduced by the inverse of the source.
-* :guilabel:`Paint Inside Below`: The source pixel is blended on top of the destination,
-  with the alpha of the source pixel reduced by the alpha of the destination pixel.
-* :guilabel:`Paint Below Inside`: The destination pixel is blended on top of the source,
-  with the alpha of the destination pixel is reduced by the alpha of the destination pixel.
+* :guilabel:`Masked By Below`: The output is the top pixel, where the opacity is reduced by that of the bottom pixel.
+* :guilabel:`Mask Below`: The output is the bottom pixel, where the opacity is reduced by that of the top pixel.
+* :guilabel:`Inverse Masked By Below`: The output is the top pixel, where the opacity is reduced by the inverse of the bottom pixel.
+* :guilabel:`Inverse Mask Below`: The output is the bottom pixel, where the opacity is reduced by the inverse of the top pixel.
+* :guilabel:`Paint Inside Below`: The top pixel is blended on top of the bottom pixel,
+  with the opacity of the top pixel reduced by the opacity of the bottom pixel.
+* :guilabel:`Paint Below Inside`: The bottom pixel is blended on top of the top pixel,
+  with the opacity of the bottom pixel reduced by the opacity of the top pixel.
 
 .. _figure_blend_clipping_modes:
 
