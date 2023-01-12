@@ -291,30 +291,26 @@ To create the layer action:
 
    * :guilabel:`Type`: ``Python``
    * :guilabel:`Description`: ``Wikipedia``
-   * :guilabel:`Action Text` (all on one line)::
+   * :guilabel:`Scope`: ``Feature``, ``Canvas``
+   * :guilabel:`Action Text`::
 
-         from qgis.PyQt.QtCore import QUrl; from qgis.PyQt.QtWebKitWidgets import QWebView; myWV = QWebView(None); myWV.load(QUrl('https://wikipedia.org/wiki/[%name%]')); myWV.show()
+         from qgis.PyQt.QtCore import QUrl
+         from qgis.PyQt.QtWebKitWidgets import QWebView
+
+         myWV = QWebView(None)
+         myWV.load(QUrl('https://wikipedia.org/wiki/[%name%]'))
+         myWV.show()
 
    .. figure:: img/python_action_example.png
       :align: center
 
    There are a couple of things going on here:
 
-   * All the python code is in a single line with semi-colons
-     separating commands (instead of newlines, the usual way of
-     separating Python commands).
    * ``[%name%]`` will be replaced by the actual attribute value
      when the action is invoked (as before).
    * The code simply creates a new ``QWebView`` instance, sets its
      URL, and then calls ``show()`` on it to make it visible as a
      window on the user’s desktop.
-
-   Note that this is a somewhat contrived example.
-   Python works with semantically significant indentation, so
-   separating things with semicolons isn't the best way to write it.
-   So, in the real world, you'd be more likely to import your logic
-   from a Python module and then call a function with a field
-   attribute as parameter.
 
    You could also use this approach to display an image without
    requiring that the users have a particular image viewer on their

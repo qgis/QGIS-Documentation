@@ -2934,15 +2934,12 @@ where ``QGIS`` is the search term. Armed with this information, we can proceed:
    from the pop-up menu.
 #. Click on the :guilabel:`Actions` tab.
 #. Click |symbologyAdd| :sup:`Add a new action`.
-#. Choose the :guilabel:`Open` action type,
+#. Choose the :guilabel:`Open URL` action type,
 #. Enter a name for the action, for example ``Google Search``.
 #. Additionally you can add a :guilabel:`Short Name` or even an :guilabel:`Icon`.
 #. Choose the action :guilabel:`Scope`. See :ref:`adding_actions` for further
    information. Leave the default settings for this example.
-#. For the action, we need to provide the name of the external program to run.
-   In this case, we can use Firefox. If the program is not in your path, you
-   need to provide the full path.
-#. Following the name of the external application, add the URL used for doing
+#. For the action, add the URL used for doing
    a Google search, up to but not including the search term:
    ``https://www.google.com/search?q=``
 #. The text in the :guilabel:`Action` field should now look like this:
@@ -2980,7 +2977,7 @@ identify a lake. In the result box you'll now see that our action is visible:
 
    Select feature and choose action
 
-When we click on the action, it brings up Firefox and navigates to the URL
+When we click on the action, it brings up our default browser and navigates to the URL
 https://www.google.com/search?q=Tustumena. It is also possible to add further
 attribute fields to the action. Therefore, you can add a ``+`` to the end of
 the action text, select another field and click on :guilabel:`Insert Field`. In
