@@ -1739,6 +1739,9 @@ be selected on the map canvas too):
 * |selectLocation| :sup:`Select by Location` to select the features
   based on their spatial relationship with other features (in the same or
   another layer - see :ref:`qgisselectbylocation`)
+* |selectDistance| :sup:`Select within distance` to select features
+  wherever they are within the specified maximum distance from referenced features -
+  see :ref:`qgisselectwithindistance`)
 
 For example, if you want to find regions that are boroughs from
 :file:`regions.shp` of the QGIS sample data, you can:
@@ -3180,6 +3183,8 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |selectColor| image:: /static/common/selectcolor.png
 .. |selectColorRamp| image:: /static/common/selectcolorramp.png
+.. |selectDistance| image:: /static/common/mAlgorithmSelectDistance.png
+   :width: 1.5em
 .. |selectFreehand| image:: /static/common/mActionSelectFreehand.png
    :width: 1.5em
 .. |selectLocation| image:: /static/common/mAlgorithmSelectLocation.png
