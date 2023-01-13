@@ -959,12 +959,25 @@ Further reading: :ref:`maps_functions`
 
 .. include:: expression_help/Record_and_Attributes.rst
    :start-after: .. end_attributes_section
+   :end-before: .. end_feature_id_section
+
+Further reading: :ref:`expression_function_Record_and_Attributes_get_feature_by_id`
+
+.. include:: expression_help/Record_and_Attributes.rst
+   :start-after: .. end_feature_id_section
    :end-before: .. end_get_feature_by_id_section
 
-Further reading: :ref:`expression_function_Record_and_Attributes_$id`
+Further reading: :ref:`expression_function_Record_and_Attributes_feature_id`
 
 .. include:: expression_help/Record_and_Attributes.rst
    :start-after: .. end_get_feature_by_id_section
+   :end-before: .. end_$id_section
+
+Further reading: :ref:`expression_function_Record_and_Attributes_feature_id`,
+:ref:`expression_function_Record_and_Attributes_get_feature_by_id`
+
+.. include:: expression_help/Record_and_Attributes.rst
+   :start-after: .. end_$id_section
    :end-before: .. end_is_attribute_valid_section
 
 Further reading: :ref:`constraints`

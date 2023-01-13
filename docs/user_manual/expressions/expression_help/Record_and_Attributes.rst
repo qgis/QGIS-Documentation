@@ -158,6 +158,26 @@ If the function is called with both a layer and a feature, it will evaluate the 
 
 .. end_display_expression_section
 
+.. _expression_function_Record_and_Attributes_feature_id:
+
+feature_id
+..........
+
+Returns a feature's unique ID, or NULL if the feature is not valid.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - feature_id(feature)
+   * - Arguments
+     - * **feature** - a feature object
+   * - Examples
+     - * ``feature_id( @feature )`` → the ID of the current feature
+
+
+.. end_feature_id_section
+
 .. _expression_function_Record_and_Attributes_get_feature:
 
 get_feature
