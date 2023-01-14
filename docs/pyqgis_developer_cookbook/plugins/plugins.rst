@@ -12,63 +12,65 @@ Structuring Python Plugins
       :local:
 
 
-In order to create a plugin, here are some steps to follow:
+The main steps for creating a plugin are: 
 
 #. *Idea*: Have an idea about what you want to do with your new QGIS plugin.
-   Why do you do it?
-   What problem do you want to solve?
-   Is there already another plugin for that problem?
-#. *Create files*: some are essentials (see :ref:`plugin_files_architecture`)
-#. *Write code*: Write the code in appropriate files
+#. *Setup*: :ref:`Create the files for your plugin <plugin_setup>`. Depending on the plugin type, 
+   some are mandatory while others are optional 
+#. *Develop*: :ref:`Write the code <plugin_development>` in appropriate files
+#. *Document*: :ref:`Write the plugin documentation <plugin_docs>`
+#. Optionally: *Translate*: :ref:`Translate your plugin <plugin_translation>` into different languages
 #. *Test*: :ref:`Reload your plugin <plugin_reloader_trick>` to check if
    everything is OK
 #. *Publish*: Publish your plugin in QGIS repository or make your own
    repository as an "arsenal" of personal "GIS weapons".
 
+
+
 .. index:: Plugins; Writing
 
-Writing a plugin
-================
+.. _plugin_setup:
 
-Since the introduction of Python plugins in QGIS, a number of plugins have
-appeared. The QGIS team maintains an :ref:`official_pyqgis_repository`.
-You can use their source to learn more about programming with PyQGIS or
-find out whether you are duplicating development effort.
+Getting started
+===============
+
+Before starting to write a new plugin, have a look at the 
+:ref:`official_pyqgis_repository`.
+The source code of existing plugins can help you to learn more about programming. 
+You may also find that a similar plugin already exists and you may be able to 
+extend it or at least build on it to develop your own.
 
 .. _plugin_files_architecture:
 
-Plugin files
-------------
+Set up pugin file structure
+---------------------------
 
-Here's the directory structure of our example plugin
+To get started with a new plugin, we need to set up the necessary plugin files.
 
-::
+There are two plugin template resources that can help get you started: 
 
-  PYTHON_PLUGINS_PATH/
-    MyPlugin/
-      __init__.py    --> *required*
-      mainPlugin.py  --> *core code*
-      metadata.txt   --> *required*
-      resources.qrc  --> *likely useful*
-      resources.py   --> *compiled version, likely useful*
-      form.ui        --> *likely useful*
-      form.py        --> *compiled version, likely useful*
+* For educational purposes or whenever a minimalist approach is desired, the
+  `minimal plugin template <https://github.com/wonder-sk/qgis-minimal-plugin>`_
+  provides the basic files (skeleton) necesary to create a valid QGIS Python plugin.
+* For a more fully feature plugin template, the 
+  `Plugin Builder <https://plugins.qgis.org/plugins/pluginbuilder3/>`_ can create 
+  templates for multiple different plugin types, including features such as 
+  localization (translation) and testing. 
 
-What is the meaning of the files:
+A typical plugin directory includes the following files: 
 
-* :file:`__init__.py` = The starting point of the plugin. It has to have the
+* :file:`metadata.txt` - *required* - Contains general info, version, name and some other
+  metadata used by plugins website and plugin infrastructure.  
+* :file:`__init__.py` - *required* - The starting point of the plugin. It has to have the
   :func:`classFactory` method and may have any other initialisation code.
-* :file:`mainPlugin.py` = The main working code of the plugin. Contains all
+* :file:`mainPlugin.py` - *core code* - The main working code of the plugin. Contains all
   the information about the actions of the plugin and the main code.
-* :file:`resources.qrc` = The .xml document created by Qt Designer. Contains
-  relative paths to resources of the forms.
-* :file:`resources.py` = The translation of the .qrc file described above to
-  Python.
-* :file:`form.ui` = The GUI created by Qt Designer.
-* :file:`form.py` = The translation of the form.ui described above to Python.
-* :file:`metadata.txt` = Contains general info, version, name and some other
-  metadata used by plugins website and plugin infrastructure.
-
+* :file:`form.ui` - *for plugins with custom GUI* -  The GUI created by Qt Designer.
+* :file:`form.py` - *compiled GUI* - The translation of the form.ui described above to Python.
+* :file:`resources.qrc` - *optional* - An .xml document created by Qt Designer. Contains
+  relative paths to resources used in the GUI forms.
+* :file:`resources.py` - *compiled resources, optional* - The translation of the .qrc file 
+  described above to Python.
 
 .. warning::
     If you plan to upload the plugin to the :ref:`official_pyqgis_repository`
@@ -76,34 +78,26 @@ What is the meaning of the files:
     plugin :ref:`official_pyqgis_repository_validation`
 
 
+
 .. index:: Plugins; Writing code
 
-Useful tools to quickly create plugins
---------------------------------------
+.. _plugin_development:
 
-`A minimal plugin to get started <https://github.com/wonder-sk/qgis-minimal-plugin>`_
-that only includes the basic files (skeleton) of a typical QGIS Python plugin.
+Writing plugin code
+===================
 
-A fully featured QGIS plugin called `Plugin Builder 3 <https://plugins.qgis.org/plugins/pluginbuilder3/>`_
-that creates a plugin template for QGIS. It produces 3.x compatible sources, with many possible features for a plugin.
-
-Plugin content
-==============
-
-Here you can find information and examples about what to add in each of the
-files in the file structure described above.
+The following section show what content should be added in each of the
+files introduced above.
 
 .. index:: Plugins; Metadata, metadata.txt
 
 .. _plugin_metadata:
 
-Plugin metadata
----------------
+metadata.txt
+------------
 
-First, the plugin manager needs to retrieve some basic information about the
-plugin such as its name, description etc. File :file:`metadata.txt` is the
-right place to put this information.
-
+First, the Plugin Manager needs to retrieve some basic information about the
+plugin such as its name, description etc. This information is stored in :file:`metadata.txt`.
 
 .. note::
    All metadata must be in UTF-8 encoding.
@@ -265,7 +259,7 @@ This is where the magic happens and this is how magic looks like:
 
     def initGui(self):
       # create action that will start plugin configuration
-      self.action = QAction(QIcon(":/plugins/testplug/icon.png"),
+      self.action = QAction(QIcon("testplug:icon.png"),
                             "Test plugin",
                             self.iface.mainWindow())
       self.action.setObjectName("testAction")
@@ -329,7 +323,7 @@ custom menu group directly to the menu bar, as the next example demonstrates:
         self.menu.setObjectName("testMenu")
         self.menu.setTitle("MyMenu")
 
-        self.action = QAction(QIcon(":/plugins/testplug/icon.png"),
+        self.action = QAction(QIcon("testplug:icon.png"),
                               "Test plugin",
                               self.iface.mainWindow())
         self.action.setObjectName("testAction")
@@ -358,7 +352,7 @@ QGIS main :menuselection:`Help --> Plugins` menu. This is done using the
     def initGui(self):
 
         self.help_action = QAction(
-            QIcon(":/plugins/testplug/icon.png"),
+            QIcon("testplug:icon.png"),
             self.tr("Test Plugin..."),
             self.iface.mainWindow()
         )
@@ -378,55 +372,19 @@ QGIS main :menuselection:`Help --> Plugins` menu. This is done using the
         del self.help_action
 
 
-.. index:: Plugins; Resource file, resources.qrc
-
-Resource File
--------------
-
-You can see that in :func:`initGui()` we've used an icon from the resource file
-(called :file:`resources.qrc` in our case)
-
-.. code-block:: xml
-
-  <RCC>
-    <qresource prefix="/plugins/testplug" >
-       <file>icon.png</file>
-    </qresource>
-  </RCC>
-
-It is good to use a prefix that will not collide with other plugins or any
-parts of QGIS, otherwise you might get resources you did not want. Now you
-just need to generate a Python file that will contain the resources. It's
-done with :command:`pyrcc5` command:
-
-::
-
-  pyrcc5 -o resources.py resources.qrc
-
-.. note::
-
-    In Windows environments, attempting to run the :command:`pyrcc5` from
-    Command Prompt or Powershell will probably result in the error "Windows
-    cannot access the specified device, path, or file [...]".  The easiest
-    solution is probably to use the OSGeo4W Shell but if you are comfortable
-    modifying the PATH environment variable or specifiying the path to the
-    executable explicitly you should be able to find it at
-    :file:`<Your QGIS Install Directory>\\bin\\pyrcc5.exe`.
-
-And that's all... nothing complicated :)
-
-If you've done everything correctly you should be able to find and load
-your plugin in the plugin manager and see a message in console when toolbar
-icon or appropriate menu item is selected.
 
 When working on a real plugin it's wise to write the plugin in another
 (working) directory and create a makefile which will generate UI + resource
 files and install the plugin into your QGIS installation.
 
+
+
 .. index:: Plugins; Documentation, Plugins; Implementing help
 
-Documentation
-=============
+.. _plugin_docs:
+
+Documenting plugins
+===================
 
 The documentation for the plugin can be written as HTML help files. The
 :mod:`qgis.utils` module provides a function, :func:`showPluginHelp` which
@@ -445,10 +403,15 @@ filename, which can replace "index" in the names of files being searched,
 and section, which is the name of an html anchor tag in the document
 on which the browser will be positioned.
 
+
+
+
 .. index:: Plugins; Code snippets, Plugins; Translation
 
-Translation
-===========
+.. _plugin_translation:
+
+Translating plugins
+===================
 
 With a few steps you can set up the environment for the plugin localization so
 that depending on the locale settings of your computer the plugin will be loaded
@@ -586,6 +549,7 @@ You should see your plugin in the correct language.
    again the command of above.
 
 
+
 Tips and Tricks
 ===============
 
@@ -621,6 +585,44 @@ Log Messages
 ------------
 
 Plugins have their own tab within the :ref:`log_message_panel`.
+
+
+.. index:: Plugins; Resource file, resources.qrc
+
+Resource File
+-------------
+
+Some plugins use resource files, for example :file:`resources.qrc` which define
+resources for the GUI, such as icons:     
+
+.. code-block:: xml
+
+  <RCC>
+    <qresource prefix="/plugins/testplug" >
+       <file>icon.png</file>
+    </qresource>
+  </RCC>
+
+It is good to use a prefix that will not collide with other plugins or any
+parts of QGIS, otherwise you might get resources you did not want. Now you
+just need to generate a Python file that will contain the resources. It's
+done with :command:`pyrcc5` command:
+
+::
+
+  pyrcc5 -o resources.py resources.qrc
+
+.. note::
+
+    In Windows environments, attempting to run the :command:`pyrcc5` from
+    Command Prompt or Powershell will probably result in the error "Windows
+    cannot access the specified device, path, or file [...]".  The easiest
+    solution is probably to use the OSGeo4W Shell but if you are comfortable
+    modifying the PATH environment variable or specifiying the path to the
+    executable explicitly you should be able to find it at
+    :file:`<Your QGIS Install Directory>\\bin\\pyrcc5.exe`.
+
+
 
 Share your plugin
 -----------------
