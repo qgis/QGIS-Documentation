@@ -42,7 +42,7 @@ extend it or at least build on it to develop your own.
 
 .. _plugin_files_architecture:
 
-Set up pugin file structure
+Set up plugin file structure
 ---------------------------
 
 To get started with a new plugin, we need to set up the necessary plugin files.
@@ -51,7 +51,7 @@ There are two plugin template resources that can help get you started:
 
 * For educational purposes or whenever a minimalist approach is desired, the
   `minimal plugin template <https://github.com/wonder-sk/qgis-minimal-plugin>`_
-  provides the basic files (skeleton) necesary to create a valid QGIS Python plugin.
+  provides the basic files (skeleton) necessary to create a valid QGIS Python plugin.
 * For a more fully feature plugin template, the 
   `Plugin Builder <https://plugins.qgis.org/plugins/pluginbuilder3/>`_ can create 
   templates for multiple different plugin types, including features such as 
