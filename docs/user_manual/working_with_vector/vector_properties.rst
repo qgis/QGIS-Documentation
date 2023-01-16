@@ -2841,10 +2841,9 @@ You can add one or more attribute field values as arguments to the application.
 When the action is invoked, any set of characters that start with a ``%``
 followed by the name of a field will be replaced by the value of that field.
 The special characters ``%%`` will be replaced by the value of the field
-that was selected from the identify results or attribute table (see using_actions_
-below). Double quote marks can be used to group text into a single argument to
-the program, script or command. Double quotes will be ignored if preceded by a
-backslash.
+that was selected from the identify results or attribute table (see :ref:`using_actions`).
+Double quote marks can be used to group text into a single argument to the program, script or command.
+Double quotes will be ignored if preceded by a backslash.
 
 The :guilabel:`Action Scopes` allows you to define where the action should be available.
 You have following choices:
@@ -2913,8 +2912,7 @@ their settings, they can be available:
 * when right-clicking a feature with the |identify| :sup:`Identify Features` tool
   (see :ref:`identify` for more information);
 * from the :guilabel:`Identify Results` panel, under the :guilabel:`Actions` section;
-* as items of an :guilabel:`Actions` column in the :guilabel:`Attribute Table`
-  dialog.
+* as items of an :guilabel:`Actions` column in the :guilabel:`Attribute Table` dialog.
 
 If you are invoking an action that uses the ``%%`` notation, right-click on the
 field value in the :guilabel:`Identify Results` dialog or the
@@ -2931,7 +2929,6 @@ Here is the action to achieve this:
 
 ::
 
-
   bash -c "echo \"%taxon_name %lat %long\" >> /tmp/species_localities.txt"
 
 
@@ -2939,7 +2936,6 @@ After selecting a few localities and running the action on each one, opening
 the output file will show something like this:
 
 ::
-
 
   Acacia mearnsii -34.0800000000 150.0800000000
   Acacia mearnsii -34.9000000000 150.1200000000
@@ -2963,38 +2959,36 @@ where ``QGIS`` is the search term. Armed with this information, we can proceed:
 #. Choose the :guilabel:`Open URL` action type,
 #. Enter a name for the action, for example ``Google Search``.
 #. Additionally you can add a :guilabel:`Short Name` or even an :guilabel:`Icon`.
-#. Choose the action :guilabel:`Scope`. See :ref:`adding_actions` for further
-   information. Leave the default settings for this example.
-#. For the action, add the URL used for doing
-   a Google search, up to but not including the search term:
+#. Choose the :guilabel:`Action Scopes`.
+   See :ref:`adding_actions` for further information.
+   Leave the default settings for this example.
+#. For the action, add the URL used for doing a Google search, up to but not including the search term:
    ``https://www.google.com/search?q=``
-#. The text in the :guilabel:`Action` field should now look like this:
-   ``https://www.google.com/search?q=``
-#. Click on the drop-down box containing the field names for the ``lakes``
-   layer. It's located just to the left of the :guilabel:`Insert` button.
-#. From the drop-down box, select 'NAMES' and click :guilabel:`Insert`.
-#. Your action text now looks like this:
+#. The text in the :guilabel:`Action` field should now look like this::
 
-   ``https://www.google.com/search?q=[%NAMES%]``
+     https://www.google.com/search?q=
+
+#. Click on the drop-down box containing the field names for the ``lakes`` layer.
+   It's located just to the left of the :guilabel:`Insert` button.
+#. From the drop-down box, select :guilabel:`NAMES` and click :guilabel:`Insert`.
+#. Your action text now looks like this::
+
+     https://www.google.com/search?q=[%NAMES%]
+
 #. To finalize and add the action, click the :guilabel:`OK` button.
 
-.. _figure_add_action:
+   .. _figure_add_action:
 
-.. figure:: img/add_action_edit.png
-   :align: center
+   .. figure:: img/add_action_edit.png
+      :align: center
 
-   Edit action dialog configured with the example
+      Edit action dialog configured with the example
 
-This completes the action, and it is ready to use. The final text of the
-action should look like this:
+This completes the action, and it is ready to use.
 
-::
-
-   https://www.google.com/search?q=[%NAMES%]
-
-We can now use the action. Close the :guilabel:`Layer Properties` dialog and
-zoom in to an area of interest. Make sure the ``lakes`` layer is active and
-identify a lake. In the result box you'll now see that our action is visible:
+Close the :guilabel:`Layer Properties` dialog and zoom in to an area of interest.
+Make sure the ``lakes`` layer is active and identify a lake.
+In the result box you'll now see that our action is visible:
 
 .. _figure_actions_selection:
 
@@ -3025,8 +3019,7 @@ also use actions to launch web-based reports for an attribute field or
 combination of fields, specifying them in the same way we did in our
 Google search example.
 
-We can also make more complex examples, for instance, using **Python**
-actions.
+We can also make more complex examples, for instance, using **Python** actions.
 
 Usually, when we create an action to open a file with an external application,
 we can use absolute paths, or eventually relative paths. In the second case,
