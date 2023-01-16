@@ -42,7 +42,7 @@ To learn more about QGIS Server, read the :ref:`QGIS-Server-manual`.
 QGIS Server is three different things:
 
 1. QGIS Server library: a library that provides an API for creating OGC web services
-2. QGIS Server FCGI: a FCGI binary application :file:`qgis_maserv.fcgi` that
+2. QGIS Server FCGI: a FCGI binary application :file:`qgis_mapserv.fcgi` that
    together with a web server implements a set of OGC services (WMS, WFS, WCS etc.)
    and OGC APIs (WFS3/OAPIF)
 3. QGIS Development Server: a development server binary application :file:`qgis_mapserver`
@@ -147,7 +147,8 @@ A minimal example of the QGIS Server API usage (without the HTTP part) follows:
 Here is a complete standalone application example developed for the continuous integrations
 testing on QGIS source code repository, it showcases a wide set of different plugin filters
 and authentication schemes (not mean for production because they were developed for testing
-purposes only but still interesting for learning): :source:`tests/src/python/qgis_wrapped_server.py`
+purposes only but still interesting for learning):
+:source:`qgis_wrapped_server.py <tests/src/python/qgis_wrapped_server.py>`
 
 Server plugins
 ==============
@@ -286,7 +287,7 @@ but, in any case, prevent response to be sent to the client.
 
 
 Raising exceptions from a plugin
-................................
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Some work has still to be done on this topic: the current implementation can
 distinguish between handled and unhandled exceptions by setting a
@@ -302,7 +303,7 @@ loop for being handled there.
 .. index:: server plugins; metadata.txt, metadata, metadata.txt
 
 Writing a server plugin
-.......................
+^^^^^^^^^^^^^^^^^^^^^^^
 
 A server plugin is a standard QGIS Python plugin as described in
 :ref:`developing_plugins`, that just provides an additional (or alternative)
@@ -320,12 +321,12 @@ metadata entry is needed (in :file:`metadata.txt`)::
 
     Only plugins that have the ``server=True`` metadata set will be loaded and executed by QGIS Server.
 
-The example plugin discussed here (with many more) is available
-on github at https://github.com/elpaso/qgis3-server-vagrant/tree/master/resources/web/plugins,
+The `qgis3-server-vagrant <https://github.com/elpaso/qgis3-server-vagrant/tree/master/resources/web/plugins>`_
+example plugin discussed here (with many more) is available on github,
 a few server plugins are also published in the official `QGIS plugins repository <https://plugins.qgis.org/plugins/server>`_.
 
 Plugin files
-............
+~~~~~~~~~~~~
 
 Here's the directory structure of our example server plugin.
 
@@ -340,7 +341,7 @@ Here's the directory structure of our example server plugin.
 .. index:: Plugins; metadata.txt, Metadata
 
 __init__.py
-^^^^^^^^^^^
++++++++++++
 
 This file is required by Python's import system. Also, QGIS Server requires that this
 file contains a :func:`serverClassFactory()` function, which is called when the
@@ -357,7 +358,7 @@ This is how the example plugin :file:`__init__.py` looks like:
 
 
 HelloServer.py
-^^^^^^^^^^^^^^
+++++++++++++++
 
 This is where the magic happens and this is how magic looks like:
 (e.g. :file:`HelloServer.py`)
@@ -427,7 +428,7 @@ the input parameters before entering the core processing of the server (by using
 The following examples cover some common use cases:
 
 Modifying the input
-^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~
 
 The example plugin contains a test example that changes input parameters coming
 from the query string, in this example a new parameter is injected into the
@@ -485,7 +486,7 @@ the output and send them to the client (this is explained below).
     calling its :meth:`registerService(service) <qgis.server.QgsServiceRegistry.registerService>`
 
 Modifying or replacing the output
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The watermark filter example shows how to replace the WMS output with a new
 image obtained by adding a watermark image on the top of the WMS image generated
@@ -564,13 +565,14 @@ Here's the directory structure of our example plugin:
 
 
 __init__.py
-^^^^^^^^^^^
+~~~~~~~~~~~
 
-This file is required by Python's import system. As for all QGIS server plugins, this
-file contains a :func:`serverClassFactory()` function, which is called when the
-plugin gets loaded into QGIS Server at startup. It receives a reference to an instance of
-:class:`QgsServerInterface <qgis.server.QgsServerInterface>` and must return an instance
-of your plugin's class.
+This file is required by Python's import system.
+As for all QGIS server plugins, this file contains a :func:`serverClassFactory()` function,
+which is called when the plugin gets loaded into QGIS Server at startup.
+It receives a reference to an instance of
+:class:`QgsServerInterface <qgis.server.QgsServerInterface>`
+and must return an instance of your plugin's class.
 This is how the example plugin :file:`__init__.py` looks like:
 
 
@@ -582,7 +584,7 @@ This is how the example plugin :file:`__init__.py` looks like:
 
 
 AccessControl.py
-^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~
 
 .. testcode:: server
 
@@ -632,14 +634,14 @@ the restriction per layer.
 layerFilterExpression
 ^^^^^^^^^^^^^^^^^^^^^
 
-Used to add an Expression to limit the results, e.g.:
+Used to add an Expression to limit the results.
+
+For example, to limit to features where the attribute ``role`` is equal to ``user``.
 
 .. testcode:: server
 
    def layerFilterExpression(self, layer):
        return "$role = 'user'"
-
-To limit on feature where the attribute role is equals to "user".
 
 
 layerFilterSubsetString
@@ -647,12 +649,12 @@ layerFilterSubsetString
 
 Same than the previous but use the ``SubsetString`` (executed in the database)
 
+For example, to limit to features where the attribute ``role`` is equal to ``user``.
+
 .. testcode:: server
 
    def layerFilterSubsetString(self, layer):
        return "role = 'user'"
-
-To limit on feature where the attribute role is equals to "user".
 
 
 layerPermissions
@@ -672,7 +674,7 @@ Return an object of type :meth:`LayerPermissions()
 * :attr:`canDelete <qgis.server.QgsAccessControlFilter.LayerPermissions.canDelete>`
   to be able to delete a feature.
 
-Example:
+For example, to limit everything on read only access:
 
 .. testcode:: server
 
@@ -682,8 +684,6 @@ Example:
        rights.canInsert = rights.canUpdate = rights.canDelete = False
        return rights
 
-To limit everything on read only access.
-
 
 authorizedLayerAttributes
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -692,14 +692,12 @@ Used to limit the visibility of a specific subset of attribute.
 
 The argument attribute return the current set of visible attributes.
 
-Example:
+For example, to hide the ``role`` attribute:
 
 .. testcode:: server
 
    def authorizedLayerAttributes(self, layer, attributes):
        return [a for a in attributes if a != "role"]
-
-To hide the 'role' attribute.
 
 
 allowToEdit
@@ -709,22 +707,19 @@ This is used to limit the editing on a subset of features.
 
 It is used in the ``WFS-Transaction`` protocol.
 
-Example:
+For example, to be able to edit only feature that has the attribute ``role``
+with the value ``user``:
 
 .. testcode:: server
 
-
    def allowToEdit(self, layer, feature):
        return feature.attribute('role') == 'user'
-
-To be able to edit only feature that has the attribute role
-with the value user.
 
 
 cacheKey
 ^^^^^^^^
 
-QGIS server maintain a cache of the capabilities then to have a cache
+QGIS Server maintains a cache of the capabilities then to have a cache
 per role you can return the role in this method. Or return ``None``
 to completely disable the cache.
 
@@ -735,12 +730,12 @@ Custom services
 In QGIS Server, core services such as WMS, WFS and WCS are implemented as subclasses of
 :class:`QgsService <qgis.server.QgsService>`.
 
-To implemented a new service that will be executed when the query string parameter ``SERVICE``
-matches the service name, you can implemented your own :class:`QgsService <qgis.server.QgsService>`
-and register your service on the :meth:`serviceRegistry() <qgis.server.QgsServerInterface.serviceRegistry>` by
-calling its :meth:`registerService(service) <qgis.server.QgsServiceRegistry.registerService>`.
+To implement a new service that will be executed when the query string parameter ``SERVICE`` matches the service name,
+you can implement your own :class:`QgsService <qgis.server.QgsService>`
+and register your service on the :meth:`serviceRegistry() <qgis.server.QgsServerInterface.serviceRegistry>`
+by calling its :meth:`registerService(service) <qgis.server.QgsServiceRegistry.registerService>`.
 
-Here is an example of a custom service named CUSTOM:
+Here is an example of a custom service named ``CUSTOM``:
 
 .. testcode:: server
 
@@ -778,11 +773,11 @@ In QGIS Server, core OGC APIs such OAPIF (aka WFS3) are implemented as collectio
 are registered to an instance of :class:`QgsServerOgcApi <qgis.server.QgsServerOgcApi>`
 (or it's parent class :class:`QgsServerApi <qgis.server.QgsServerApi>`).
 
-To implemented a new API that will be executed when the url path matches
-a certain URL, you can implemented your own :class:`QgsServerOgcApiHandler <qgis.server.QgsServerOgcApiHandler>`
-instances, add them to an :class:`QgsServerOgcApi <qgis.server.QgsServerOgcApi>` and register
-the API on the :meth:`serviceRegistry() <qgis.server.QgsServerInterface.serviceRegistry>` by
-calling its :meth:`registerApi(api) <qgis.server.QgsServiceRegistry.registerApi>`.
+To implement a new API that will be executed when the url path matches a certain URL,
+you can implement your own :class:`QgsServerOgcApiHandler <qgis.server.QgsServerOgcApiHandler>` instances,
+add them to an :class:`QgsServerOgcApi <qgis.server.QgsServerOgcApi>` and register
+the API on the :meth:`serviceRegistry() <qgis.server.QgsServerInterface.serviceRegistry>`
+by calling its :meth:`registerApi(api) <qgis.server.QgsServiceRegistry.registerApi>`.
 
 Here is an example of a custom API that will be executed when the URL contains ``/customapi``:
 
@@ -867,5 +862,3 @@ Here is an example of a custom API that will be executed when the URL contains `
             handler = CustomApiHandler()
             api.registerHandler(handler)
             serverIface.serviceRegistry().registerApi(api)
-
-
