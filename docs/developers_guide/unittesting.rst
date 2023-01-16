@@ -495,7 +495,7 @@ not interested, just do the step explained in the above section.
   # which point to directories outside the build tree to the install RPATH
   INSTALL_RPATH_USE_LINK_PATH true)
   IF (APPLE)
-  # For Mac OS X, the executable must be at the root of the bundle's executable folder
+  # For macOS, the executable must be at the root of the bundle's executable folder
   INSTALL(TARGETS qgis_${testname} RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX})
   ADD_TEST(qgis_${testname} ${CMAKE_INSTALL_PREFIX}/qgis_${testname})
   ELSE (APPLE)
@@ -562,7 +562,7 @@ run directly from inside the source tree.
   # which point to directories outside the build tree to the install RPATH
   INSTALL_RPATH_USE_LINK_PATH true)
   IF (APPLE)
-  # For Mac OS X, the executable must be at the root of the bundle's executable folder
+  # For macOS, the executable must be at the root of the bundle's executable folder
   INSTALL(TARGETS qgis_${testname} RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX})
   ADD_TEST(qgis_${testname} ${CMAKE_INSTALL_PREFIX}/qgis_${testname})
   ELSE (APPLE)
