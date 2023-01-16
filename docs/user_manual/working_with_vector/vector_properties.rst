@@ -2859,19 +2859,19 @@ below). Double quote marks can be used to group text into a single argument to
 the program, script or command. Double quotes will be ignored if preceded by a
 backslash.
 
-The :guilabel:`Action Scopes` allows you to define *where* the action should be
-available. You have 4 different choices:
+The :guilabel:`Action Scopes` allows you to define where the action should be available.
+You have following choices:
 
-#. :guilabel:`Feature Scope`: action is available when right click in the cell
-   within the attribute table.
-#. :guilabel:`Field Scope`: action is available when right click in the cell
+#. :guilabel:`Field`: action is available when right click in the cell
    within the attribute table, in the feature form and in the default action
    button of the main toolbar.
-#. :guilabel:`Layer Scope`: action is available in the action button in the
-   attribute table toolbar. Be aware that this type of action involves the entire
-   layer and not the single features.
-#. :guilabel:`Canvas`: action is available in the main action button in the
-   toolbar.
+#. :guilabel:`Feature`: action is available when right click in the cell
+   within the attribute table.
+#. :guilabel:`Canvas`: action is available in the main action button in the toolbar.
+#. :guilabel:`Form`: action is available only in a feature form designed
+   using the :ref:`drag-and-drop <drag_drop_designer>` mode.
+#. :guilabel:`Layer`: action is available in the action button in the attribute table toolbar.
+   Be aware that this type of action involves the entire layer and not the single features.
 
 If you have field names that are substrings of other field names (e.g.,
 ``col1`` and ``col10``), you should indicate that by surrounding the field name
