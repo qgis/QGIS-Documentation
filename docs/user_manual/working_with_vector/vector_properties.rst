@@ -2800,15 +2800,30 @@ passing parameters to a web reporting tool.
    Overview action dialog with some sample actions
 
 Actions are useful when you frequently want to run an external application or
-view a web page based on one or more values in your vector layer. They are
-divided into six types and can be used like this:
+view a web page based on one or more values in your vector layer.
+They are of different types and can be used like this:
 
-* Generic, Mac, Windows and Unix actions start an external process.
-* Python actions execute a Python expression.
-* Generic and Python actions are visible everywhere.
-* Mac, Windows and Unix actions are visible only on the respective platform (i.e.,
-  you can define three 'Edit' actions to open an editor and the users can only
-  see and execute the one 'Edit' action for their platform to run the editor).
+* :guilabel:`Generic`, :guilabel:`macOS`, :guilabel:`Windows`
+  and :guilabel:`Unix` actions start an external process.
+* :guilabel:`Python` actions execute a Python expression.
+* :guilabel:`Generic` and :guilabel:`Python` actions are visible everywhere.
+* :guilabel:`macOS`, :guilabel:`Windows` and :guilabel:`Unix`
+  actions are visible only on the respective platform
+  (i.e., you can define three "Edit" actions to open an editor and the users can only
+  see and execute the one "Edit" action for their platform to run the editor).
+* :guilabel:`Open URL`: Uses a HTTP GET request to open a provided URL.
+* :guilabel:`Submit URL (urlencoded or JSON)`:
+  Same as the :guilabel:`Open URL` action but using a HTTP POST request.
+  Data are posted to a URL, using "application/x-www-form-urlencoded"
+  or "application/json" if the body is a valid JSON.
+
+  An example of action call could be::
+
+    http://localhost:8000?/[% url_encode(map('file', 'index.php')) %]
+
+* :guilabel:`Submit URL (multipart)`: Same as the :guilabel:`Open URL` action
+  but using a HTTP POST request.
+  Data are posted to a URL, using "multipart/form-data".
 
 There are several examples included in the dialog. You can load them by clicking
 on :guilabel:`Create Default Actions`. To edit any of the examples, double-click
