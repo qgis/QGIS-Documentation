@@ -1254,10 +1254,6 @@ are enabled.
      -
      -
      - :ref:`geometry_checker`
-   * - |gpsImporter| :guilabel:`GPS Tools`
-     - :kbd:`Alt+O` + :kbd:`G`
-     - :guilabel:`Vector`
-     - :ref:`plugin_gps`
    * - |topologyChecker| :guilabel:`Topology Checker`
      -
      - :guilabel:`Vector`
@@ -3076,8 +3072,6 @@ processes (QGIS startup, plugins loading, processing tools...)
 .. |geometryChecker| image:: /static/common/geometrychecker.png
    :width: 1.5em
 .. |georefRun| image:: /static/common/mGeorefRun.png
-   :width: 1.5em
-.. |gpsImporter| image:: /static/common/gps_importer.png
    :width: 1.5em
 .. |helpContents| image:: /static/common/mActionHelpContents.png
    :width: 1.5em
