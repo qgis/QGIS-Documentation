@@ -311,6 +311,16 @@ MAXFEATURES
 
 This parameter allows to limit the number of features returned by the request.
 
+URL example:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+  SERVICE=WFS
+  &REQUEST=GetFeature
+  &TYPENAME=places
+  &MAXFEATURES=1000
+
 .. note::
 
   This parameter may be useful to improve performances when underlying vector
@@ -324,6 +334,8 @@ SRSNAME
 
 This parameter allows to indicate the response output Spatial Reference System
 as well as the ``BBOX`` CRS and has to be formed like ``EPSG:XXXX``.
+
+URL example:
 
 .. code-block:: bash
 
