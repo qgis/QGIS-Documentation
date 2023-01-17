@@ -1,3 +1,5 @@
+.. _gps_algorithms:
+
 GPS
 ========
 
@@ -181,12 +183,16 @@ Parameters
      - Description
    * - **Device**
      - ``DEVICE``
-     - [file]
-     - The GPS device used to create the data
+     - [enumeration]
+
+       Default:`Garmin serial`
+     - The GPS device used to create the data.
+       Must be declared in :ref:`GPS Settings <defining_new_device>` dialog.
    * - **Port**
      - ``PORT``
      - [enumeration]
      - The port the device is connected to.
+       Available ports depend on the OS.
    * - **Feature type**
      - ``FEATURE_TYPE``
      - [enumeration]
@@ -262,12 +268,16 @@ Parameters
      - :file:`.GPX` file containing the data to upload
    * - **Device**
      - ``DEVICE``
-     - [file]
-     - The GPS device to upload the data to
+     - [enumeration]
+
+       Default:`Garmin serial`
+     - The GPS device you would like to upload the data to.
+       Must be declared in :ref:`GPS Settings <defining_new_device>` dialog.
    * - **Port**
      - ``PORT``
      - [enumeration]
      - The port the device is connected to.
+       Available ports depend on the OS.
    * - **Feature type**
      - ``FEATURE_TYPE``
      - [enumeration]
