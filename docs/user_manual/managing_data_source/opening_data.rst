@@ -739,14 +739,16 @@ QGIS also supports editable views in SpatiaLite.
 GPS
 ---
 
-There are dozens of different file formats for storing GPS data. The format
-that QGIS uses is called GPX (GPS eXchange format), which is a standard
-interchange format that can contain any number of waypoints, routes and tracks
-in the same file.
+There are dozens of different file formats for storing GPS data.
+The format that QGIS uses is called GPX (GPS eXchange format),
+which is a standard interchange format that can contain any number of waypoints,
+routes and tracks in the same file.
 
-Use the :guilabel:`...` :sup:`Browse` button to select the GPX file, then use the checkboxes
-to select the feature types you want to load from that GPX file.
+Use the :guilabel:`...` :sup:`Browse` button to select the GPX file,
+then use the check boxes to select the feature types you want to load from that GPX file.
 Each feature type will be loaded in a separate layer.
+
+More on GPS data manipulation at :ref:`working_gps`.
 
 .. _figure_gps_datasource_manager:
 
