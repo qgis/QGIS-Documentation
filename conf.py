@@ -79,6 +79,9 @@ gettext_compact = False     # optional.
 # Enable numeric figure references
 numfig = True
 
+# The filename format for language-specific figures
+figure_language_filename = '{path}{language}/{basename}{ext}'
+
 # -- Options for HTML output -------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
