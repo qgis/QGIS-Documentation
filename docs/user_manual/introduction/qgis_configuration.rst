@@ -1174,6 +1174,18 @@ and :ref:`manipulate their data <gps_algorithms>`.
      * :guilabel:`Track download` from the device
      * :guilabel:`Track upload` to the device
 
+     This will probably be a GPSBabel command,
+     but you can use any other command line program that can create a GPX file.
+     QGIS will replace the keywords ``%type``, ``%in``, and ``%out`` when it runs the command.
+
+     As an example, if you create a device type with the download command
+     ``gpsbabel %type -i garmin -o gpx %in %out``
+     and then use it to download waypoints from port ``/dev/ttyS0`` to the file ``output.gpx``,
+     QGIS will replace the keywords and run the command
+     ``gpsbabel -w -i garmin -o gpx /dev/ttyS0 output.gpx``.
+
+     Read the GPSBabel manual for the command line options that may be specific to your use case.
+
 Once you have created a new device type, it will appear in the device lists for
 the GPS download and upload algorithms.
 

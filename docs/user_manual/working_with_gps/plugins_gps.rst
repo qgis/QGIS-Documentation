@@ -73,52 +73,6 @@ This program can also transfer GPS data between your computer and a GPS device.
 QGIS relies on GPSBabel to do these things and provides you with convenient Processing algorithms
 available under the :ref:`GPS group <gps_algorithms>`.
 
-
-.. _defining-new-device:
-
-Defining new device types
--------------------------
-
-There are lots of different types of GPS devices. The QGIS developers can't
-test all of them, so if you have one that does not work with any of the device
-types listed in the :guilabel:`Download from GPS` and :guilabel:`Upload to GPS`
-tools, you can define your own device type for it. You do this by using the GPS
-device editor, which you start by clicking the :guilabel:`Edit Devices` button in the
-download or the upload tab.
-
-To define a new device, you simply click the :guilabel:`New Device` button,
-enter a name, enter download and upload commands for your device, and
-click the :guilabel:`Update Device` button. The name will be listed in the
-device menus in the upload and download windows -- it can be any string. The
-download command is the command that is used to download data from the device
-to a GPX file. This will probably be a GPSBabel command, but you can use any
-other command line program that can create a GPX file. QGIS will replace the
-keywords ``%type``, ``%in``, and ``%out`` when it runs the command.
-
-``%type`` will be replaced by ``-w`` if you are downloading waypoints,
-``-r`` if you are downloading routes and ``-t`` if you are downloading tracks.
-These are command-line options that tell GPSBabel which feature type to download.
-
-``%in`` will be replaced by the port name that you choose in the download window
-and ``%out`` will be replaced by the name you choose for the GPX file that the
-downloaded data should be stored in. So, if you create a device type with the
-download command ``gpsbabel %type -i garmin -o gpx %in %out`` (this is actually
-the download command for the predefined device type 'Garmin serial') and then
-use it to download waypoints from port ``/dev/ttyS0`` to the file ``output.gpx``,
-QGIS will replace the keywords and run the command
-``gpsbabel -w -i garmin -o gpx /dev/ttyS0 output.gpx``.
-
-The upload command is the command that is used to upload data to the device.
-The same keywords are used, but ``%in`` is now replaced by the name of the GPX
-file for the layer that is being uploaded, and ``%out`` is replaced by the port
-name.
-
-You can learn more about GPSBabel and its available command line options at
-https://www.gpsbabel.org.
-
-Once you have created a new device type, it will appear in the device lists for
-the download and upload tools.
-
 Download of points/tracks from GPS units
 ----------------------------------------
 
