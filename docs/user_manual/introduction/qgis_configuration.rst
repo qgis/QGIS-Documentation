@@ -1146,6 +1146,19 @@ https://doc.qt.io/archives/qt-5.9/qnetworkproxy.html#ProxyType-enum
 GPS settings
 ------------
 
+GPS Visualisation Options
+.........................
+
+.. figure:: img/options_gps.png
+   :align: center
+
+   GPS settings
+
+This dialog helps you configure GPS devices display when :ref:`connected to QGIS <sec_gpstracking>`:
+
+* :guilabel:`GPS location marker` for controlling the marker symbol used for the current GPS location
+* :guilabel:`Rotate to match GPS bearing`: whether the marker symbol should be rotated to match the GPS direction
+
 .. _defining_new_device:
 
 GPSBabel
