@@ -9,6 +9,7 @@
 # Lucía Betancourt, 2022
 # Andrés Betancourt, 2022
 # Eric Armijo, 2022
+# vareli <ehespinosa@ya.com>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-21 02:56+0000\n"
 "PO-Revision-Date: 2022-03-14 05:09+0000\n"
-"Last-Translator: Eric Armijo, 2022\n"
+"Last-Translator: vareli <ehespinosa@ya.com>, 2023\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -352,6 +353,18 @@ msgstr ""
 msgid "spawn-fcgi"
 msgstr "spawn-fcgi"
 
+#: ../../docs/server_manual/getting_started.rst:328
+msgid ""
+"If you want to use `spawn-fcgi <https://redmine.lighttpd.net/projects/spawn-"
+"fcgi/wiki>`_:"
+msgstr ""
+"Si desea usar `spawn-fcgi <https://redmine.lighttpd.net/projects/spawn-"
+"fcgi/wiki>`_:"
+
+#: ../../docs/server_manual/getting_started.rst:330
+msgid "The first step is to install the package:"
+msgstr "El primer paso es instalar el paquete:"
+
 #: ../../docs/server_manual/getting_started.rst:337
 #: ../../docs/server_manual/getting_started.rst:418
 msgid ""
@@ -386,6 +399,23 @@ msgstr ""
 "antes de ejecutar el servidor. Por ejemplo: ``export "
 "QGIS_SERVER_LOG_STDERR=1``"
 
+#: ../../docs/server_manual/getting_started.rst:370
+msgid ""
+"Of course, you can add an init script to start QGIS Server at boot time or "
+"whenever you want. For example with **systemd**:"
+msgstr ""
+"Desde luego usted puede añadir un script de inicio para arrancar el Servidor"
+" QGIS en el momento del arranque o cuando quiera. Por ejemplo con "
+"**systemd**:"
+
+#: ../../docs/server_manual/getting_started.rst:373
+msgid ""
+"Edit the file :file:`/etc/systemd/system/qgis-server.service` with this "
+"content:"
+msgstr ""
+"Edite el archivo :file:`/etc/systemd/system/qgis-server.service` con este "
+"contenido:"
+
 #: ../../docs/server_manual/getting_started.rst:396
 msgid "Then enable and start the service:"
 msgstr "Luego habilite e inicie el servicio:"
@@ -400,6 +430,20 @@ msgstr ""
 #: ../../docs/server_manual/getting_started.rst:407
 msgid "fcgiwrap"
 msgstr "fcgiwrap"
+
+#: ../../docs/server_manual/getting_started.rst:409
+msgid ""
+"Using `fcgiwrap "
+"<https://www.nginx.com/resources/wiki/start/topics/examples/fcgiwrap/>`_ is "
+"much easier to setup than **spawn-fcgi** but it's much slower."
+msgstr ""
+"La utilización de `fcgiwrap "
+"<https://www.nginx.com/resources/wiki/start/topics/examples/fcgiwrap/>`_ es "
+"mucho más fácil de configurar que **spawn-fcgi** pero es mucho más lento."
+
+#: ../../docs/server_manual/getting_started.rst:412
+msgid "You first have to install the corresponding package:"
+msgstr "Primero tiene que instalar el correspondiente paquete:"
 
 #: ../../docs/server_manual/getting_started.rst:430
 msgid ""
@@ -422,6 +466,20 @@ msgstr ""
 "QGIS Server necesita un servidor X en ejecución para ser completamente "
 "utilizable, en particular para imprimir. En el caso de que ya tenga un "
 "servidor X en ejecución, puede utilizar los servicios de systemd."
+
+#: ../../docs/server_manual/getting_started.rst:446
+msgid ""
+"This method, to deploy QGIS Server, relies on two Systemd units to "
+"configure: a `Socket unit "
+"<https://www.freedesktop.org/software/systemd/man/systemd.socket.html>`_ and"
+" a `Service unit "
+"<https://www.freedesktop.org/software/systemd/man/systemd.service.html>`_."
+msgstr ""
+"Este método, para desplegar el Servidor QGIS, confía en dos unidades Systemd"
+" a configurar: una `unidad Socket "
+"<https://www.freedesktop.org/software/systemd/man/systemd.socket.html>`_ y "
+"una `unidad "
+"Service<https://www.freedesktop.org/software/systemd/man/systemd.service.html>`_."
 
 #: ../../docs/server_manual/getting_started.rst:450
 msgid ""
@@ -472,6 +530,14 @@ msgstr ""
 #: ../../docs/server_manual/getting_started.rst:513
 msgid "Now start socket service:"
 msgstr "Ahora inicie el servicio de socket:"
+
+#: ../../docs/server_manual/getting_started.rst:519
+msgid ""
+"Finally, for the NGINX HTTP server, let's introduce the configuration for "
+"this setup:"
+msgstr ""
+"Finalmente, para el servidor NGINX HTTP, introduzcamos la configuración para"
+" esta instalación:"
 
 #: ../../docs/server_manual/getting_started.rst:540
 msgid "Now restart NGINX for the new configuration to be taken into account:"
@@ -533,6 +599,22 @@ msgid ""
 msgstr ""
 "Luego, de acuerdo con su servidor HTTP, debe configurar el parámetro "
 "**DISPLAY** o usar directamente **xvfb-run**."
+
+#: ../../docs/server_manual/getting_started.rst:589
+msgid "Using Apache:"
+msgstr "Usando Apache:"
+
+#: ../../docs/server_manual/getting_started.rst:591
+msgid "Add to your *Fcgid* configuration (see :ref:`httpserver`):"
+msgstr "Añada su configuración *Fcgid* (vea :ref:`httpserver`):"
+
+#: ../../docs/server_manual/getting_started.rst:597
+msgid "Restart Apache for the new configuration to be taken into account:"
+msgstr "Reinicie Apache para que la nueva configuración sea tenida en cuenta:"
+
+#: ../../docs/server_manual/getting_started.rst:603
+msgid "Using NGINX"
+msgstr "Usando NGINX"
 
 #: ../../docs/server_manual/getting_started.rst:605
 msgid "With spawn-fcgi using ``xvfb-run``:"
