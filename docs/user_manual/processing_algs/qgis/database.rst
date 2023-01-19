@@ -309,6 +309,17 @@ Parameters
      - If a layer has a selection, setting this option to ``True``
        will result in only selected features being saved. For
        layers without a selection all features will be saved.
+   * - **Export related layers following relations defined in the project**
+
+       |328|
+     - ``EXPORT_RELATED_LAYERS``
+     - [boolean]
+
+       Default: False
+     - If an input layer has :ref:`relations <vector_relations>` set in the project,
+       setting this option to ``True`` will result in exporting also its related layer(s).
+       If the layer has features selected, then only their related features will be exported
+       unless the related layer was also an input layer.
    * - **Destination GeoPackage**
      - ``OUTPUT``
      - [file]
@@ -615,3 +626,12 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |328| replace:: ``NEW in 3.28``

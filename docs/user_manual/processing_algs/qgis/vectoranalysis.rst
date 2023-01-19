@@ -1333,6 +1333,9 @@ overlapped by each of the selected overlay layers.
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -1349,7 +1352,7 @@ Parameters
      - ``LAYERS``
      - [vector: any] [list]
      - The overlay layers.
-   * - **Output layer**
+   * - **Overlap**
      - ``OUTPUT``
      - [same as input]
 
@@ -1359,6 +1362,30 @@ Parameters
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Grid size**
+
+       |328|
+
+       Optional
+     - ``GRID_SIZE``
+     - [number]
+
+       Default: Not set
+     - If provided, the input geometries are snapped to a grid of the given size,
+       and the result vertices are computed on that same grid. Requires GEOS 3.9.0 or higher.
 
 Outputs
 .......
@@ -1371,7 +1398,7 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Output layer**
+   * - **Overlap**
      - ``OUTPUT``
      - [same as input]
      - The output layer with additional fields reporting the
@@ -1881,5 +1908,6 @@ Python code
    source folder.
 
 .. |324| replace:: ``NEW in 3.24``
+.. |328| replace:: ``NEW in 3.28``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
