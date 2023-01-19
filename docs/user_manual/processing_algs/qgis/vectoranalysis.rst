@@ -1377,6 +1377,8 @@ Advanced parameters
      - Description
    * - **Grid size**
 
+       |328|
+
        Optional
      - ``GRID_SIZE``
      - [number]
@@ -1906,5 +1908,6 @@ Python code
    source folder.
 
 .. |324| replace:: ``NEW in 3.24``
+.. |328| replace:: ``NEW in 3.28``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em

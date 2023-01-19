@@ -184,6 +184,8 @@ Advanced parameters
      - Description
    * - **Grid size**
 
+       |328|
+
        Optional
      - ``GRID_SIZE``
      - [number]
@@ -510,6 +512,8 @@ Advanced parameters
      - Add a prefix to identify fields of the overlay layer.
        Duplicate field names will be appended a count suffix to avoid collision.
    * - **Grid size**
+
+       |328|
 
        Optional
      - ``GRID_SIZE``
@@ -923,6 +927,8 @@ Advanced parameters
        Duplicate field names will be appended a count suffix to avoid collision.
    * - **Grid size**
 
+       |328|
+
        Optional
      - ``GRID_SIZE``
      - [number]
@@ -1057,6 +1063,8 @@ Advanced parameters
      - Add a prefix to identify fields of the overlay layer.
        Duplicate field names will be appended a count suffix to avoid collision.
    * - **Grid size**
+
+       |328|
 
        Optional
      - ``GRID_SIZE``
@@ -1228,5 +1236,6 @@ Python code
    source folder.
 
 .. |326| replace:: ``NEW in 3.26``
+.. |328| replace:: ``NEW in 3.28``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
