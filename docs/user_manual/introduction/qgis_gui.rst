@@ -90,10 +90,9 @@ The :menuselection:`Project` menu provides access and exit points for
   :ref:`print layout <label_printlayout>` for more complex output
 * Set project properties and snapping options for geometry editing.
 
-.. list-table::
+.. list-table:: The Project menu items
    :header-rows: 1
    :widths: 40 20 10 30
-   :stub-columns: 0
 
    * - Menu Option
      - Shortcut
@@ -225,10 +224,9 @@ The :menuselection:`Edit` menu provides most of the native tools needed
 to edit layer attributes or geometry (see :ref:`editingvector` for
 details).
 
-.. list-table::
+.. list-table:: The Edit menu items
    :header-rows: 1
    :widths: 45 18 13 24
-   :stub-columns: 0
 
    * - Menu Option
      - Shortcut
@@ -589,7 +587,7 @@ details).
 Tools that depend on the selected layer geometry type i.e. point,
 polyline or polygon, are activated accordingly:
 
-.. list-table::
+.. list-table:: The "Move feature" geometry based icons
    :header-rows: 1
    :widths: 40 15 15 15
 
@@ -636,10 +634,9 @@ actions like:
   option, it makes your screen display only the map
 
 
-.. list-table::
+.. list-table:: The View menu items
    :header-rows: 1
    :widths: 42 22 12 24
-   :stub-columns: 0
 
    * - Menu Option
      - Shortcut
@@ -904,10 +901,9 @@ The :menuselection:`Layer` menu also contains tools to configure,
 copy or paste layer properties (style, scale, CRS...).
 
 
-.. list-table::
+.. list-table:: The Layer menu items
    :header-rows: 1
    :widths: 37 18 18 27
-   :stub-columns: 0
 
    * - Menu Option
      - Shortcut
@@ -1185,7 +1181,7 @@ copy or paste layer properties (style, scale, CRS...).
 Settings
 --------
 
-.. list-table::
+.. list-table:: The Settings menu items
    :header-rows: 1
    :widths: 50 50
 
@@ -1219,7 +1215,7 @@ Under |kde| Linux KDE, you'll find more tools in the
 Plugins
 -------
 
-.. list-table::
+.. list-table:: The Plugins menu items
    :header-rows: 1
    :widths: 36 17 17 30
 
@@ -1246,10 +1242,9 @@ Vector
 This is what the :guilabel:`Vector` menu looks like if all core plugins
 are enabled.
 
-.. list-table::
+.. list-table:: The Vector menu items
    :header-rows: 1
    :widths: 40 15 10 35
-   :stub-columns: 0
 
    * - Menu Option
      - Shortcut
@@ -1476,7 +1471,7 @@ This is what the :guilabel:`Raster` menu looks like if all core plugins
 are enabled.
 
 
-.. list-table::
+.. list-table:: The Raster menu items
    :header-rows: 1
    :widths: 40 15 8 38
 
@@ -1651,7 +1646,7 @@ plugins are enabled.
 If no database plugins are enabled, there will be no
 :guilabel:`Database` menu.
 
-.. list-table::
+.. list-table:: The Database menu items
    :header-rows: 1
    :widths: 40 15 15 30
 
@@ -1689,7 +1684,7 @@ This is what the :guilabel:`Web` menu looks like if all the core
 plugins are enabled.
 If no web plugins are enabled, there will be no :guilabel:`Web` menu.
 
-.. list-table::
+.. list-table:: The Web menu items
    :header-rows: 1
    :widths: 30 15 15 40
 
@@ -1722,7 +1717,7 @@ The :menuselection:`Mesh` menu provides tools needed to manipulate
 :ref:`mesh layers <label_meshdata>`.
 Third-party plugins can add items to this menu.
 
-.. list-table::
+.. list-table::  The Mesh menu items
    :header-rows: 1
    :widths: 40 15 15 30
    :stub-columns: 0
@@ -1744,7 +1739,7 @@ Third-party plugins can add items to this menu.
 Processing
 ----------
 
-.. list-table::
+.. list-table:: The Processing menu items
    :header-rows: 1
    :widths: 30 20 10 40
 
@@ -1778,7 +1773,7 @@ When starting QGIS for the first time not all core plugins are loaded.
 Help
 ----
 
-.. list-table::
+.. list-table:: The Help menu items
    :header-rows: 1
    :widths: 40 15 15 30
 
@@ -1830,7 +1825,7 @@ QGIS
 This menu is only available under |osx| macOS and contains some OS
 related commands.
 
-.. csv-table::
+.. csv-table::  The QGIS menu items
    :header: "Menu Option", "Shortcut"
    :widths: auto
 
@@ -1936,7 +1931,7 @@ options, checking boxes, filling values...) to perform more complex tasks.
 
 Below is a list of the default panels provided by QGIS:
 
-.. list-table::
+.. list-table:: QGIS Panels
    :header-rows: 1
    :widths: auto
 
