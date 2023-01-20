@@ -114,7 +114,7 @@ The :menuselection:`Project` menu provides access and exit points for
    * - :menuselection:`Open from -->`
      -
      -
-     -
+     - :ref:`sec_projects`
    * - :menuselection:`--> GeoPackage...`
      -
      -
@@ -142,7 +142,7 @@ The :menuselection:`Project` menu provides access and exit points for
    * - :menuselection:`Save to -->`
      -
      -
-     -
+     - :ref:`sec_projects`
    * - :menuselection:`--> Templates...`
      -
      -
@@ -647,7 +647,7 @@ actions like:
      - Reference
    * - |newMap| :guilabel:`New Map View`
      - :kbd:`Ctrl+M`
-     -
+     - :guilabel:`Map Navigation`
      - :ref:`label_mapview`
    * - :menuselection:`3D Map Views -->`
      -
@@ -655,7 +655,7 @@ actions like:
      - :ref:`label_3dmapview`
    * - :menuselection:`-->` |new3DMap| :guilabel:`New 3D Map View`
      - :kbd:`Ctrl+Alt+M`
-     -
+     - :guilabel:`Map Navigation`
      - :ref:`label_3dmapview`
    * - :menuselection:`--> Manage 3D Map Views`
      -
@@ -668,7 +668,7 @@ actions like:
    * - |panToSelected| :guilabel:`Pan Map to Selection`
      -
      - :guilabel:`Map Navigation`
-     -
+     - :ref:`zoom_pan`
    * - |zoomIn| :guilabel:`Zoom In`
      - :kbd:`Ctrl+Alt++`
      - :guilabel:`Map Navigation`
@@ -704,6 +704,10 @@ actions like:
      -
      - :guilabel:`Attributes`
      - :ref:`statistical_summary`
+   * - |layoutItem3DMap| :guilabel:`Elevation Profile`
+     -
+     -
+     -
    * - |zoomFullExtent| :guilabel:`Zoom Full`
      - :kbd:`Ctrl+Shift+F`
      - :guilabel:`Map Navigation`
@@ -1191,6 +1195,11 @@ copy or paste layer properties (style, scale, CRS...).
      -
      -
      - :ref:`vector_tiles`
+   * - :menuselection:`-->` |addPointCloudLayer|
+       :guilabel:`Add Point Cloud Layer...`
+     -
+     -
+     - :ref:`working_with_point_clouds`
    * - :guilabel:`Embed Layers and Groups...`
      -
      -
@@ -1294,7 +1303,7 @@ copy or paste layer properties (style, scale, CRS...).
    * - :guilabel:`Set Scale Visibility of Layer(s)`
      -
      -
-     -
+     - :ref:`label_scaledepend`
    * - :guilabel:`Set CRS of Layer(s)`
      - :kbd:`Ctrl+Shift+C`
      -
@@ -1308,7 +1317,9 @@ copy or paste layer properties (style, scale, CRS...).
      -
      - :ref:`vector_properties_dialog`,
        :ref:`raster_properties_dialog`,
-       :ref:`label_meshproperties`
+       :ref:`label_meshproperties`,
+       :ref:`point_clouds_properties`,
+       :ref:`vectortiles_properties`
    * - :guilabel:`Filter...`
      - :kbd:`Ctrl+F`
      -
@@ -1995,11 +2006,10 @@ related commands.
    ":guilabel:`Quit QGIS`", ":kbd:`Cmd+Q`"
 
 
-:guilabel:`Preferences` correspond to
-:menuselection:`Settings --> Options`, :guilabel:`About QGIS`
-corresponds to :menuselection:`Help --> About` and
-:guilabel:`Quit QGIS` corresponds to
-:menuselection:`Project --> Exit QGIS` for other platforms.
+:guilabel:`Preferences` corresponds to :menuselection:`Settings --> Options`,
+:guilabel:`About QGIS` corresponds to :menuselection:`Help --> About`
+and :guilabel:`Quit QGIS` corresponds to :menuselection:`Project --> Exit QGIS`
+for other platforms.
 
 
 .. _sec_panels_and_toolbars:
@@ -2007,10 +2017,9 @@ corresponds to :menuselection:`Help --> About` and
 Panels and Toolbars
 ===================
 
-From the :menuselection:`View` menu (or |kde|
-:menuselection:`Settings`), you can switch QGIS widgets
-(:menuselection:`Panels -->`) and toolbars
-(:menuselection:`Toolbars -->`) on and off.
+From the :menuselection:`View` menu (or |kde| :menuselection:`Settings`),
+you can switch QGIS widgets (:menuselection:`Panels -->`)
+and toolbars (:menuselection:`Toolbars -->`) on and off.
 To (de)activate any of them, right-click the menu bar or toolbar and
 choose the item you want.
 Panels and toolbars can be moved and placed wherever you like within
@@ -3070,6 +3079,8 @@ processes (QGIS startup, plugins loading, processing tools...)
    :width: 1.5em
 .. |addPart| image:: /static/common/mActionAddPart.png
    :width: 1.5em
+.. |addPointCloudLayer| image:: /static/common/mActionAddPointCloudLayer.png
+   :width: 1.5em
 .. |addPostgisLayer| image:: /static/common/mActionAddPostgisLayer.png
    :width: 1.5em
 .. |addRasterLayer| image:: /static/common/mActionAddRasterLayer.png
@@ -3206,6 +3217,8 @@ processes (QGIS startup, plugins loading, processing tools...)
 .. |keyboardShortcuts| image:: /static/common/mActionKeyboardShortcuts.png
    :width: 1.5em
 .. |labelingSingle| image:: /static/common/labelingSingle.png
+   :width: 1.5em
+.. |layoutItem3DMap| image:: /static/common/mLayoutItem3DMap.png
    :width: 1.5em
 .. |layoutManager| image:: /static/common/mActionLayoutManager.png
    :width: 1.5em
