@@ -136,6 +136,18 @@ In the |text| :guilabel:`Text` tab, you can set:
 
   * Color, applicable to text, underline, strikethrough, and overline
   * Font properties (font family, font size, bold and italic)
+  * Superscript and subscript components in text,
+    where the text will be vertically :sup:`super` or :sub:`sub` aligned
+    and automatically sized to 2/3 of the parent font size.
+    You can also set a fixed font size for the superscript/subscript
+    by including css rules, e.g.:
+
+    .. code:: html
+
+      <sup style="font-size:33pt">my superscript text</sup>
+
+    The CSS formatting rules ``vertical-align: super`` or ``vertical-align: sub``
+    are also available in any other HTML element (annotation, layout label or HTML items, ...).
 
   In order to use the HTML formatting, you need to provide the HTML code in the :guilabel:`Value` field.
   The expression is parsed and any supported HTML tag overrides its corresponding setting in the labels properties.
