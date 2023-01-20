@@ -859,170 +859,10 @@ actions like:
      -
      -
      - :ref:`sec_panels_and_toolbars`
-   * - :menuselection:`--> Advanced Digitizing`
-     -
-     -
-     - :ref:`advanced_digitizing_panel`
-   * - :menuselection:`--> Browser`
-     -
-     -
-     - :ref:`browser_panel`
-   * - :menuselection:`--> Browser (2)`
-     -
-     -
-     - :ref:`browser_panel`
-   * - :menuselection:`--> Debugging/Development Tools`
-     - :kbd:`F12`
-     -
-     - :ref:`debug_dev_tools`
-   * - :menuselection:`--> Geometry Validation`
-     -
-     -
-     - :ref:`digitizingmenu`
-   * - :menuselection:`--> GPS Information`
-     -
-     -
-     - :ref:`sec_gpstracking`
-   * - :menuselection:`--> GRASS Tools`
-     -
-     -
-     - :ref:`sec_grass`
-   * - :menuselection:`--> Layer Order`
-     -
-     -
-     - :ref:`layer_order`
-   * - :menuselection:`--> Layer Styling`
-     -
-     -
-     - :ref:`layer_styling_panel`
-   * - :menuselection:`--> Layers`
-     -
-     -
-     - :ref:`label_legend`
-   * - :menuselection:`--> Log Messages`
-     -
-     -
-     - :ref:`log_message_panel`
-   * - :menuselection:`--> Overview`
-     -
-     -
-     - :ref:`overview_panels`
-   * - :menuselection:`--> Processing Toolbox`
-     -
-     -
-     - :ref:`processing.toolbox`
-   * - :menuselection:`--> Results Viewer`
-     -
-     -
-     - :ref:`processing.toolbox`
-   * - :menuselection:`--> Snapping and Digitizing Options`
-     -
-     -
-     - :ref:`snapping_tolerance`
-   * - :menuselection:`--> Spatial Bookmark Manager`
-     -
-     -
-     - :ref:`sec_bookmarks`
-   * - :menuselection:`--> Statistics`
-     -
-     -
-     - :ref:`statistical_summary`
-   * - :menuselection:`--> Temporal Controller`
-     -
-     -
-     - :ref:`temporal_controller`
-   * - :menuselection:`--> Tile Scale`
-     -
-     -
-     - :ref:`tilesets`
-   * - :menuselection:`--> Undo/Redo`
-     -
-     -
-     - :ref:`undo_redo_panel`
    * - :menuselection:`Toolbars -->`
      -
      -
      - :ref:`sec_panels_and_toolbars`
-   * - :menuselection:`--> Advanced Digitizing Toolbar`
-     -
-     -
-     - :ref:`sec_advanced_edit`
-   * - :menuselection:`--> Annotations Toolbar`
-     -
-     -
-     -
-   * - :menuselection:`--> Attributes Toolbar`
-     -
-     -
-     -
-   * - :menuselection:`--> Data Source Manager Toolbar`
-     -
-     -
-     - :ref:`manage_data_source`
-   * - :menuselection:`--> Database Toolbar`
-     -
-     -
-     -
-   * - :menuselection:`--> Digitizing Toolbar`
-     -
-     -
-     - :ref:`sec_edit_existing_layer`
-   * - :menuselection:`--> Help Toolbar`
-     -
-     -
-     -
-   * - :menuselection:`--> Label Toolbar`
-     -
-     -
-     - :ref:`label_toolbar`
-   * - :menuselection:`--> Manage Layers Toolbar`
-     -
-     -
-     - :ref:`manage_data_source`
-   * - :menuselection:`--> Map Navigation Toolbar`
-     -
-     -
-     -
-   * - :menuselection:`--> Mesh Digitizing Toolbar`
-     -
-     -
-     -
-   * - :menuselection:`--> Plugins Toolbar`
-     -
-     -
-     - :ref:`plugins.index`
-   * - :menuselection:`--> Project Toolbar`
-     -
-     -
-     -
-   * - :menuselection:`--> Raster Toolbar`
-     -
-     -
-     -
-   * - :menuselection:`--> Selection Toolbar`
-     -
-     -
-     - :ref:`sec_selection`
-   * - :menuselection:`--> Shape Digitizing Toolbar`
-     -
-     -
-     - :ref:`shape_edit`
-   * - :menuselection:`--> Snapping Toolbar`
-     -
-     -
-     - :ref:`snapping_tolerance`
-   * - :menuselection:`--> Vector Toolbar`
-     -
-     -
-     -
-   * - :menuselection:`--> Web Toolbar`
-     -
-     -
-     -
-   * - :menuselection:`--> GRASS`
-     -
-     -
-     - :ref:`sec_grass`
    * - :guilabel:`Toggle Full Screen Mode`
      - :kbd:`F11`
      -
@@ -2047,20 +1887,21 @@ context menu, or by holding the mouse over the toolbars.
 Available toolbars are:
 
 .. csv-table:: QGIS Toolbars
-   :header: "Name", "Main Reference for tools"
+   :header: "Toolbar name", "Main Reference for tools"
    :widths: auto
 
-   ":guilabel:`Advanced Digitizing Toolbar`", ":ref:`sec_advanced_edit`"
-   ":guilabel:`Annotations Toolbar`"
+   ":guilabel:`Advanced Digitizing`", ":ref:`sec_advanced_edit`"
+   ":guilabel:`Annotations`", ":ref:`sec_annotations`"
    ":guilabel:`Attributes`", ":ref:`sec_attribute_table`, :ref:`general_tools`"
    ":guilabel:`Data Source Manager`", ":ref:`manage_data_source`"
    ":guilabel:`Database`", ":ref:`dbmanager`"
    ":guilabel:`Digitizing`", ":ref:`sec_edit_existing_layer`"
+   ":guilabel:`GRASS`", ":ref:`sec_grass`"
    ":guilabel:`Help`"
    ":guilabel:`Label`", ":ref:`label_toolbar`"
    ":guilabel:`Manage Layers`", ":ref:`opening_data`"
    ":guilabel:`Map Navigation`", ":ref:`working_canvas`"
-   ":guilabel:`Mesh Digitizing Toolbar`"
+   ":guilabel:`Mesh Digitizing`", ":ref:`editing_mesh`"
    ":guilabel:`Plugins`", ":ref:`plugins.index`"
    ":guilabel:`Project`", ":ref:`project_files`, :ref:`label_printlayout`, :ref:`vector_symbol_library`"
    ":guilabel:`Processing Algorithms`", ":ref:`processing.options`"
@@ -2080,8 +1921,8 @@ Available toolbars are:
 .. tip:: **Restoring toolbars**
 
    If you have accidentally hidden a toolbar, you can get it
-   back using :menuselection:`View --> Toolbars -->` (or |kde|
-   :menuselection:`Settings --> Toolbars -->`).
+   back using :menuselection:`View --> Toolbars -->`
+   (or |kde| :menuselection:`Settings --> Toolbars -->`).
    If, for some reason, a toolbar (or any other widget) totally
    disappears from the interface, you'll find tips to get it back at
    :ref:`restoring initial GUI <tip_restoring_configuration>`.
@@ -2095,30 +1936,83 @@ Panels
 
 QGIS provides many panels.
 Panels are special widgets that you can interact with (selecting
-options, checking boxes, filling values...) to perform more complex
-tasks.
+options, checking boxes, filling values...) to perform more complex tasks.
 
 Below is a list of the default panels provided by QGIS:
 
-* the :ref:`Advanced Digitizing Panel <advanced_digitizing_panel>`
-* the :ref:`Browser Panel <browser_panel>`
-* the :ref:`Debugging/Development Tools <debug_dev_tools>`
-* the :ref:`Geometry Validation Panel <geometry_validation_panel>`
-* the :ref:`GPS Information Panel <sec_gpstracking>`
-* the :ref:`Identify Panel <identify>`
-* the :ref:`Layer Order Panel <layer_order>`
-* the :ref:`Layer Styling Panel <layer_styling_panel>`
-* the :ref:`Layers Panel <label_legend>`
-* the :ref:`Log Messages Panel <log_message_panel>`
-* the :ref:`Overview Panel <overview_panels>`
-* the :ref:`Processing Toolbox <label_processing>`
-* the :guilabel:`Result Viewer Panel`
-* the :ref:`Spatial Bookmark Manager Panel <sec_bookmarks>`
-* the :ref:`Statistics Panel <statistical_summary>`
-* the :ref:`Temporal Controller <temporal_controller>`
-* the :ref:`Tile Scale Panel <tilesets>`
-* the :ref:`Undo/Redo Panel <undo_redo_panel>`
-* the :ref:`Vertex Editor Panel <vertex_editor_panel>`
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Panel name
+     - Shortcut
+     - Reference
+   * - :guilabel:`Advanced Digitizing`
+     - :kbd:`Ctrl+4`
+     - :ref:`advanced_digitizing_panel`
+   * - :guilabel:`Browser`
+     - :kbd:`Ctrl+2`
+     - :ref:`browser_panel`
+   * - :guilabel:`Browser (2)`
+     -
+     - :ref:`browser_panel`
+   * - :guilabel:`Debugging/Development Tools`
+     - :kbd:`F12`
+     - :ref:`debug_dev_tools`
+   * - :guilabel:`Elevation Profile`
+     -
+     -
+   * - :guilabel:`Geometry Validation`
+     -
+     - :ref:`digitizingmenu`
+   * - :guilabel:`GPS Information`
+     - :kbd:`Ctrl+0`
+     - :ref:`sec_gpstracking`
+   * - :guilabel:`GRASS Tools`
+     -
+     - :ref:`sec_grass`
+   * - :guilabel:`Layer Order`
+     - :kbd:`Ctrl+9`
+     - :ref:`layer_order`
+   * - :guilabel:`Layer Styling`
+     - :kbd:`Ctrl+3`
+     - :ref:`layer_styling_panel`
+   * - :guilabel:`Layers`
+     - :kbd:`Ctrl+1`
+     - :ref:`label_legend`
+   * - :guilabel:`Log Messages`
+     -
+     - :ref:`log_message_panel`
+   * - :guilabel:`Overview`
+     - :kbd:`Ctrl+8`
+     - :ref:`overview_panels`
+   * - :guilabel:`Processing Toolbox`
+     -
+     - :ref:`processing.toolbox`
+   * - :guilabel:`Results Viewer`
+     -
+     - :ref:`processing.toolbox`
+   * - :guilabel:`Snapping and Digitizing Options`
+     -
+     - :ref:`snapping_tolerance`
+   * - :guilabel:`Spatial Bookmark Manager`
+     - :kbd:`Ctrl+7`
+     - :ref:`sec_bookmarks`
+   * - :guilabel:`Statistics`
+     - :kbd:`Ctrl+6`
+     - :ref:`statistical_summary`
+   * - :guilabel:`Temporal Controller`
+     -
+     - :ref:`temporal_controller`
+   * - :guilabel:`Tile Scale`
+     -
+     - :ref:`tilesets`
+   * - :guilabel:`Undo/Redo`
+     - :kbd:`Ctrl+5`
+     - :ref:`undo_redo_panel`
+   * - :guilabel:`Vertex Editor`
+     -
+     - :ref:`vertex_editor_panel`
 
 
 .. index:: Map view
