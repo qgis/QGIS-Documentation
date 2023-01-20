@@ -49,6 +49,8 @@ To load a vector tiles dataset into QGIS, use the |addVectorTileLayer| :guilabel
 in the :guilabel:`Data Source Manager` dialog. Read :ref:`vector_tiles` for
 more details.
 
+.. _vectortiles_properties:
+
 Vector Tiles Dataset Properties
 ===============================
 
