@@ -561,16 +561,19 @@ over the map canvas.
 
 * :guilabel:`Reference time` of the dataset group, as an absolute date time.
   By default, QGIS parses the source layer and returns the first valid reference
-  time in the layer's dataset group. If unavailable, the value will be set by
-  the project time range or fall back to the current date.
+  time in the layer's dataset group.
+  If unavailable, the value will be set by the project time range
+  or fall back to the current date.
   The :guilabel:`Start time` and :guilabel:`End time` to  consider
   are then calculated based on the internal timestamp step of the dataset.
 
-  It is possible to set a custom :guilabel:`Reference time` (and then the time
-  range), and revert the changes using the |refresh| :sup:`Reload from provider`
-  button.
-* :guilabel:`Dataset matching method`: determines the dataset to display at the
-  given time. Options are :guilabel:`Find closest dataset before requested time`
+  It is possible to set a custom :guilabel:`Reference time` (and then the time range),
+  and revert the changes using the |refresh| :sup:`Reload from provider` button.
+  With |checkbox| :guilabel:`Always take reference time from data source` checked,
+  you ensure that the time properties are updated from the file
+  each time the layer is reloaded or the project reopened.
+* :guilabel:`Dataset matching method`: determines the dataset to display at the given time.
+  Options are :guilabel:`Find closest dataset before requested time`
   or :guilabel:`Find closest dataset from requested time (after or before)`.
 
 **Provider time settings**
