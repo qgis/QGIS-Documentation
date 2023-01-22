@@ -75,16 +75,15 @@ You are welcome to subscribe to any of the lists. Please remember to
 contribute to the list by answering questions and sharing your
 experiences.
 
-IRC
+
+Matrix / IRC
 ===
 
-We also maintain a presence on IRC - visit us by joining the #qgis
-channel on irc.freenode.net. Please wait for a response to your
-question, as many folks on the channel are doing other things and it
-may take a while for them to notice your question. If you missed a
-discussion on IRC, not a problem! We log all discussion, so you can
-easily catch up. Just go to http://irclogs.geoapt.com/qgis/ and read the
-IRC-logs.
+Matrix (https://matrix.org) is a project for decentralised chat. QGIS has a room accessible by the #qgis:osgeo.org alias (among others) which bridges to the libera.chat #qgis IRC channel.
+
+To use Matrix: create an account (at matrix.org is easiest, but if you have an OSGeo account you can also use your OSGeo id as matrix id), install a client (Elements is easiest, but see https://matrix.org/docs/projects/try-matrix-now/#clients for more), OR point your browser to https://matrix.to/#/#qgis:osgeo.org
+
+To use IRC: install an IRC client and connect to irc://irc.libera.chat/#qgis or point your browser to https://web.libera.chat/?channels=#qgis
 
 Commercial support
 ==================
