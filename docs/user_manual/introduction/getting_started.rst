@@ -147,7 +147,7 @@ Where :file:`qgis_sample_data` represents the path to the unzipped dataset.
    #. Click on the |dataSourceManager| :sup:`Open Data Source Manager` icon.
       The Data Source Manager should open in Browser mode.
    #. Browse to the folder :file:`qgis_sample_data/raster/`
-   #. Select the ERDAS IMG file :file:`landcover.img` and double-click it.
+   #. Select the ERDAS IMG file |rasterLayer| :guilabel:`landcover.img` and double-click it.
       The landcover layer is added in the background while the Data Source
       Manager window remains open.
 
@@ -159,10 +159,25 @@ Where :file:`qgis_sample_data` represents the path to the unzipped dataset.
          Adding data to a new project in QGIS
 
    #. To load the lakes data, browse to the folder :file:`qgis_sample_data/gml/`,
-      and double-click the :file:`lakes.gml` file to open it.
-   #. A :guilabel:`Coordinate Reference System Selector` dialog opens. In the
-      :guilabel:`Filter` menu, type ``2964``, filtering the list of Coordinate
-      Reference Systems below.
+      and drag and drop the |dbSchema| :guilabel:`lakes.gml` file over QGIS main dialog.
+   #. The :guilabel:`Select Items to Add` dialog opens, scanning the file.
+      This is due to :file:`.gml` file format being able to store more than one layer at a time.
+
+      .. _figure_selectitems:
+
+      .. figure:: img/addLayerItems.png
+         :align: center
+
+         Select layers within a file
+
+   #. In our case there is a single |polygonLayer| :guilabel:`lakes` layer.
+      Select it and press :guilabel:`Add Layers`.
+   #. The layer is added to the :guilabel:`Layers` panel but it displays
+      |indicatorNoCRS| :sup:`Layer has no coordinate reference system set` next to it.
+      Let's adjust that by clicking the icon.
+   #. A :guilabel:`Coordinate Reference System Selector` dialog opens.
+      In the :guilabel:`Filter` menu, type ``2964``,
+      filtering the list of Coordinate Reference Systems below.
 
       .. _figure_selectCRS:
 
@@ -257,7 +272,11 @@ features and settings, and how to use them.
    :width: 1.3em
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
    :width: 1.5em
+.. |dbSchema| image:: /static/common/mIconDbSchema.png
+   :width: 1.5em
 .. |fileSave| image:: /static/common/mActionFileSave.png
+   :width: 1.5em
+.. |indicatorNoCRS| image:: /static/common/mIndicatorNoCRS.png
    :width: 1.5em
 .. |labelingSingle| image:: /static/common/labelingSingle.png
    :width: 1.5em
@@ -265,6 +284,10 @@ features and settings, and how to use them.
    :width: 1em
 .. |osx| image:: /static/common/osx.png
    :width: 1em
+.. |polygonLayer| image:: /static/common/mIconPolygonLayer.png
+   :width: 1.5em
+.. |rasterLayer| image:: /static/common/mIconRasterLayer.png
+   :width: 1.5em
 .. |saveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
    :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
