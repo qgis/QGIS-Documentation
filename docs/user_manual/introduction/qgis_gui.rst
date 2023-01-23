@@ -90,10 +90,9 @@ The :menuselection:`Project` menu provides access and exit points for
   :ref:`print layout <label_printlayout>` for more complex output
 * Set project properties and snapping options for geometry editing.
 
-.. list-table::
+.. list-table:: The Project menu items
    :header-rows: 1
    :widths: 40 20 10 30
-   :stub-columns: 0
 
    * - Menu Option
      - Shortcut
@@ -114,7 +113,7 @@ The :menuselection:`Project` menu provides access and exit points for
    * - :menuselection:`Open from -->`
      -
      -
-     -
+     - :ref:`sec_projects`
    * - :menuselection:`--> GeoPackage...`
      -
      -
@@ -142,7 +141,7 @@ The :menuselection:`Project` menu provides access and exit points for
    * - :menuselection:`Save to -->`
      -
      -
-     -
+     - :ref:`sec_projects`
    * - :menuselection:`--> Templates...`
      -
      -
@@ -225,10 +224,9 @@ The :menuselection:`Edit` menu provides most of the native tools needed
 to edit layer attributes or geometry (see :ref:`editingvector` for
 details).
 
-.. list-table::
+.. list-table:: The Edit menu items
    :header-rows: 1
    :widths: 45 18 13 24
-   :stub-columns: 0
 
    * - Menu Option
      - Shortcut
@@ -589,7 +587,7 @@ details).
 Tools that depend on the selected layer geometry type i.e. point,
 polyline or polygon, are activated accordingly:
 
-.. list-table::
+.. list-table:: The "Move feature" geometry based icons
    :header-rows: 1
    :widths: 40 15 15 15
 
@@ -636,10 +634,9 @@ actions like:
   option, it makes your screen display only the map
 
 
-.. list-table::
+.. list-table:: The View menu items
    :header-rows: 1
    :widths: 42 22 12 24
-   :stub-columns: 0
 
    * - Menu Option
      - Shortcut
@@ -647,7 +644,7 @@ actions like:
      - Reference
    * - |newMap| :guilabel:`New Map View`
      - :kbd:`Ctrl+M`
-     -
+     - :guilabel:`Map Navigation`
      - :ref:`label_mapview`
    * - :menuselection:`3D Map Views -->`
      -
@@ -655,7 +652,7 @@ actions like:
      - :ref:`label_3dmapview`
    * - :menuselection:`-->` |new3DMap| :guilabel:`New 3D Map View`
      - :kbd:`Ctrl+Alt+M`
-     -
+     - :guilabel:`Map Navigation`
      - :ref:`label_3dmapview`
    * - :menuselection:`--> Manage 3D Map Views`
      -
@@ -668,7 +665,7 @@ actions like:
    * - |panToSelected| :guilabel:`Pan Map to Selection`
      -
      - :guilabel:`Map Navigation`
-     -
+     - :ref:`zoom_pan`
    * - |zoomIn| :guilabel:`Zoom In`
      - :kbd:`Ctrl+Alt++`
      - :guilabel:`Map Navigation`
@@ -704,6 +701,10 @@ actions like:
      -
      - :guilabel:`Attributes`
      - :ref:`statistical_summary`
+   * - |layoutItem3DMap| :guilabel:`Elevation Profile`
+     -
+     -
+     -
    * - |zoomFullExtent| :guilabel:`Zoom Full`
      - :kbd:`Ctrl+Shift+F`
      - :guilabel:`Map Navigation`
@@ -855,170 +856,10 @@ actions like:
      -
      -
      - :ref:`sec_panels_and_toolbars`
-   * - :menuselection:`--> Advanced Digitizing`
-     -
-     -
-     - :ref:`advanced_digitizing_panel`
-   * - :menuselection:`--> Browser`
-     -
-     -
-     - :ref:`browser_panel`
-   * - :menuselection:`--> Browser (2)`
-     -
-     -
-     - :ref:`browser_panel`
-   * - :menuselection:`--> Debugging/Development Tools`
-     - :kbd:`F12`
-     -
-     - :ref:`debug_dev_tools`
-   * - :menuselection:`--> Geometry Validation`
-     -
-     -
-     - :ref:`digitizingmenu`
-   * - :menuselection:`--> GPS Information`
-     -
-     -
-     - :ref:`sec_gpstracking`
-   * - :menuselection:`--> GRASS Tools`
-     -
-     -
-     - :ref:`sec_grass`
-   * - :menuselection:`--> Layer Order`
-     -
-     -
-     - :ref:`layer_order`
-   * - :menuselection:`--> Layer Styling`
-     -
-     -
-     - :ref:`layer_styling_panel`
-   * - :menuselection:`--> Layers`
-     -
-     -
-     - :ref:`label_legend`
-   * - :menuselection:`--> Log Messages`
-     -
-     -
-     - :ref:`log_message_panel`
-   * - :menuselection:`--> Overview`
-     -
-     -
-     - :ref:`overview_panels`
-   * - :menuselection:`--> Processing Toolbox`
-     -
-     -
-     - :ref:`processing.toolbox`
-   * - :menuselection:`--> Results Viewer`
-     -
-     -
-     - :ref:`processing.toolbox`
-   * - :menuselection:`--> Snapping and Digitizing Options`
-     -
-     -
-     - :ref:`snapping_tolerance`
-   * - :menuselection:`--> Spatial Bookmark Manager`
-     -
-     -
-     - :ref:`sec_bookmarks`
-   * - :menuselection:`--> Statistics`
-     -
-     -
-     - :ref:`statistical_summary`
-   * - :menuselection:`--> Temporal Controller`
-     -
-     -
-     - :ref:`temporal_controller`
-   * - :menuselection:`--> Tile Scale`
-     -
-     -
-     - :ref:`tilesets`
-   * - :menuselection:`--> Undo/Redo`
-     -
-     -
-     - :ref:`undo_redo_panel`
    * - :menuselection:`Toolbars -->`
      -
      -
      - :ref:`sec_panels_and_toolbars`
-   * - :menuselection:`--> Advanced Digitizing Toolbar`
-     -
-     -
-     - :ref:`sec_advanced_edit`
-   * - :menuselection:`--> Annotations Toolbar`
-     -
-     -
-     -
-   * - :menuselection:`--> Attributes Toolbar`
-     -
-     -
-     -
-   * - :menuselection:`--> Data Source Manager Toolbar`
-     -
-     -
-     - :ref:`manage_data_source`
-   * - :menuselection:`--> Database Toolbar`
-     -
-     -
-     -
-   * - :menuselection:`--> Digitizing Toolbar`
-     -
-     -
-     - :ref:`sec_edit_existing_layer`
-   * - :menuselection:`--> Help Toolbar`
-     -
-     -
-     -
-   * - :menuselection:`--> Label Toolbar`
-     -
-     -
-     - :ref:`label_toolbar`
-   * - :menuselection:`--> Manage Layers Toolbar`
-     -
-     -
-     - :ref:`manage_data_source`
-   * - :menuselection:`--> Map Navigation Toolbar`
-     -
-     -
-     -
-   * - :menuselection:`--> Mesh Digitizing Toolbar`
-     -
-     -
-     -
-   * - :menuselection:`--> Plugins Toolbar`
-     -
-     -
-     - :ref:`plugins.index`
-   * - :menuselection:`--> Project Toolbar`
-     -
-     -
-     -
-   * - :menuselection:`--> Raster Toolbar`
-     -
-     -
-     -
-   * - :menuselection:`--> Selection Toolbar`
-     -
-     -
-     - :ref:`sec_selection`
-   * - :menuselection:`--> Shape Digitizing Toolbar`
-     -
-     -
-     - :ref:`shape_edit`
-   * - :menuselection:`--> Snapping Toolbar`
-     -
-     -
-     - :ref:`snapping_tolerance`
-   * - :menuselection:`--> Vector Toolbar`
-     -
-     -
-     -
-   * - :menuselection:`--> Web Toolbar`
-     -
-     -
-     -
-   * - :menuselection:`--> GRASS`
-     -
-     -
-     - :ref:`sec_grass`
    * - :guilabel:`Toggle Full Screen Mode`
      - :kbd:`F11`
      -
@@ -1060,10 +901,9 @@ The :menuselection:`Layer` menu also contains tools to configure,
 copy or paste layer properties (style, scale, CRS...).
 
 
-.. list-table::
+.. list-table:: The Layer menu items
    :header-rows: 1
    :widths: 37 18 18 27
-   :stub-columns: 0
 
    * - Menu Option
      - Shortcut
@@ -1191,6 +1031,11 @@ copy or paste layer properties (style, scale, CRS...).
      -
      -
      - :ref:`vector_tiles`
+   * - :menuselection:`-->` |addPointCloudLayer|
+       :guilabel:`Add Point Cloud Layer...`
+     -
+     -
+     - :ref:`working_with_point_clouds`
    * - :guilabel:`Embed Layers and Groups...`
      -
      -
@@ -1294,7 +1139,7 @@ copy or paste layer properties (style, scale, CRS...).
    * - :guilabel:`Set Scale Visibility of Layer(s)`
      -
      -
-     -
+     - :ref:`label_scaledepend`
    * - :guilabel:`Set CRS of Layer(s)`
      - :kbd:`Ctrl+Shift+C`
      -
@@ -1308,7 +1153,9 @@ copy or paste layer properties (style, scale, CRS...).
      -
      - :ref:`vector_properties_dialog`,
        :ref:`raster_properties_dialog`,
-       :ref:`label_meshproperties`
+       :ref:`label_meshproperties`,
+       :ref:`point_clouds_properties`,
+       :ref:`vectortiles_properties`
    * - :guilabel:`Filter...`
      - :kbd:`Ctrl+F`
      -
@@ -1334,7 +1181,7 @@ copy or paste layer properties (style, scale, CRS...).
 Settings
 --------
 
-.. list-table::
+.. list-table:: The Settings menu items
    :header-rows: 1
    :widths: 50 50
 
@@ -1368,7 +1215,7 @@ Under |kde| Linux KDE, you'll find more tools in the
 Plugins
 -------
 
-.. list-table::
+.. list-table:: The Plugins menu items
    :header-rows: 1
    :widths: 36 17 17 30
 
@@ -1395,10 +1242,9 @@ Vector
 This is what the :guilabel:`Vector` menu looks like if all core plugins
 are enabled.
 
-.. list-table::
+.. list-table:: The Vector menu items
    :header-rows: 1
    :widths: 40 15 10 35
-   :stub-columns: 0
 
    * - Menu Option
      - Shortcut
@@ -1625,7 +1471,7 @@ This is what the :guilabel:`Raster` menu looks like if all core plugins
 are enabled.
 
 
-.. list-table::
+.. list-table:: The Raster menu items
    :header-rows: 1
    :widths: 40 15 8 38
 
@@ -1800,7 +1646,7 @@ plugins are enabled.
 If no database plugins are enabled, there will be no
 :guilabel:`Database` menu.
 
-.. list-table::
+.. list-table:: The Database menu items
    :header-rows: 1
    :widths: 40 15 15 30
 
@@ -1838,7 +1684,7 @@ This is what the :guilabel:`Web` menu looks like if all the core
 plugins are enabled.
 If no web plugins are enabled, there will be no :guilabel:`Web` menu.
 
-.. list-table::
+.. list-table:: The Web menu items
    :header-rows: 1
    :widths: 30 15 15 40
 
@@ -1871,7 +1717,7 @@ The :menuselection:`Mesh` menu provides tools needed to manipulate
 :ref:`mesh layers <label_meshdata>`.
 Third-party plugins can add items to this menu.
 
-.. list-table::
+.. list-table::  The Mesh menu items
    :header-rows: 1
    :widths: 40 15 15 30
    :stub-columns: 0
@@ -1893,7 +1739,7 @@ Third-party plugins can add items to this menu.
 Processing
 ----------
 
-.. list-table::
+.. list-table:: The Processing menu items
    :header-rows: 1
    :widths: 30 20 10 40
 
@@ -1927,7 +1773,7 @@ When starting QGIS for the first time not all core plugins are loaded.
 Help
 ----
 
-.. list-table::
+.. list-table:: The Help menu items
    :header-rows: 1
    :widths: 40 15 15 30
 
@@ -1979,7 +1825,7 @@ QGIS
 This menu is only available under |osx| macOS and contains some OS
 related commands.
 
-.. csv-table::
+.. csv-table::  The QGIS menu items
    :header: "Menu Option", "Shortcut"
    :widths: auto
 
@@ -1991,11 +1837,10 @@ related commands.
    ":guilabel:`Quit QGIS`", ":kbd:`Cmd+Q`"
 
 
-:guilabel:`Preferences` correspond to
-:menuselection:`Settings --> Options`, :guilabel:`About QGIS`
-corresponds to :menuselection:`Help --> About` and
-:guilabel:`Quit QGIS` corresponds to
-:menuselection:`Project --> Exit QGIS` for other platforms.
+:guilabel:`Preferences` corresponds to :menuselection:`Settings --> Options`,
+:guilabel:`About QGIS` corresponds to :menuselection:`Help --> About`
+and :guilabel:`Quit QGIS` corresponds to :menuselection:`Project --> Exit QGIS`
+for other platforms.
 
 
 .. _sec_panels_and_toolbars:
@@ -2003,10 +1848,9 @@ corresponds to :menuselection:`Help --> About` and
 Panels and Toolbars
 ===================
 
-From the :menuselection:`View` menu (or |kde|
-:menuselection:`Settings`), you can switch QGIS widgets
-(:menuselection:`Panels -->`) and toolbars
-(:menuselection:`Toolbars -->`) on and off.
+From the :menuselection:`View` menu (or |kde| :menuselection:`Settings`),
+you can switch QGIS widgets (:menuselection:`Panels -->`)
+and toolbars (:menuselection:`Toolbars -->`) on and off.
 To (de)activate any of them, right-click the menu bar or toolbar and
 choose the item you want.
 Panels and toolbars can be moved and placed wherever you like within
@@ -2034,20 +1878,21 @@ context menu, or by holding the mouse over the toolbars.
 Available toolbars are:
 
 .. csv-table:: QGIS Toolbars
-   :header: "Name", "Main Reference for tools"
+   :header: "Toolbar name", "Main Reference for tools"
    :widths: auto
 
-   ":guilabel:`Advanced Digitizing Toolbar`", ":ref:`sec_advanced_edit`"
-   ":guilabel:`Annotations Toolbar`"
+   ":guilabel:`Advanced Digitizing`", ":ref:`sec_advanced_edit`"
+   ":guilabel:`Annotations`", ":ref:`sec_annotations`"
    ":guilabel:`Attributes`", ":ref:`sec_attribute_table`, :ref:`general_tools`"
    ":guilabel:`Data Source Manager`", ":ref:`manage_data_source`"
    ":guilabel:`Database`", ":ref:`dbmanager`"
    ":guilabel:`Digitizing`", ":ref:`sec_edit_existing_layer`"
+   ":guilabel:`GRASS`", ":ref:`sec_grass`"
    ":guilabel:`Help`"
    ":guilabel:`Label`", ":ref:`label_toolbar`"
    ":guilabel:`Manage Layers`", ":ref:`opening_data`"
    ":guilabel:`Map Navigation`", ":ref:`working_canvas`"
-   ":guilabel:`Mesh Digitizing Toolbar`"
+   ":guilabel:`Mesh Digitizing`", ":ref:`editing_mesh`"
    ":guilabel:`Plugins`", ":ref:`plugins.index`"
    ":guilabel:`Project`", ":ref:`project_files`, :ref:`label_printlayout`, :ref:`vector_symbol_library`"
    ":guilabel:`Processing Algorithms`", ":ref:`processing.options`"
@@ -2067,8 +1912,8 @@ Available toolbars are:
 .. tip:: **Restoring toolbars**
 
    If you have accidentally hidden a toolbar, you can get it
-   back using :menuselection:`View --> Toolbars -->` (or |kde|
-   :menuselection:`Settings --> Toolbars -->`).
+   back using :menuselection:`View --> Toolbars -->`
+   (or |kde| :menuselection:`Settings --> Toolbars -->`).
    If, for some reason, a toolbar (or any other widget) totally
    disappears from the interface, you'll find tips to get it back at
    :ref:`restoring initial GUI <tip_restoring_configuration>`.
@@ -2082,30 +1927,83 @@ Panels
 
 QGIS provides many panels.
 Panels are special widgets that you can interact with (selecting
-options, checking boxes, filling values...) to perform more complex
-tasks.
+options, checking boxes, filling values...) to perform more complex tasks.
 
 Below is a list of the default panels provided by QGIS:
 
-* the :ref:`Advanced Digitizing Panel <advanced_digitizing_panel>`
-* the :ref:`Browser Panel <browser_panel>`
-* the :ref:`Debugging/Development Tools <debug_dev_tools>`
-* the :ref:`Geometry Validation Panel <geometry_validation_panel>`
-* the :ref:`GPS Information Panel <sec_gpstracking>`
-* the :ref:`Identify Panel <identify>`
-* the :ref:`Layer Order Panel <layer_order>`
-* the :ref:`Layer Styling Panel <layer_styling_panel>`
-* the :ref:`Layers Panel <label_legend>`
-* the :ref:`Log Messages Panel <log_message_panel>`
-* the :ref:`Overview Panel <overview_panels>`
-* the :ref:`Processing Toolbox <label_processing>`
-* the :guilabel:`Result Viewer Panel`
-* the :ref:`Spatial Bookmark Manager Panel <sec_bookmarks>`
-* the :ref:`Statistics Panel <statistical_summary>`
-* the :ref:`Temporal Controller <temporal_controller>`
-* the :ref:`Tile Scale Panel <tilesets>`
-* the :ref:`Undo/Redo Panel <undo_redo_panel>`
-* the :ref:`Vertex Editor Panel <vertex_editor_panel>`
+.. list-table:: QGIS Panels
+   :header-rows: 1
+   :widths: auto
+
+   * - Panel name
+     - Shortcut
+     - Reference
+   * - :guilabel:`Advanced Digitizing`
+     - :kbd:`Ctrl+4`
+     - :ref:`advanced_digitizing_panel`
+   * - :guilabel:`Browser`
+     - :kbd:`Ctrl+2`
+     - :ref:`browser_panel`
+   * - :guilabel:`Browser (2)`
+     -
+     - :ref:`browser_panel`
+   * - :guilabel:`Debugging/Development Tools`
+     - :kbd:`F12`
+     - :ref:`debug_dev_tools`
+   * - :guilabel:`Elevation Profile`
+     -
+     -
+   * - :guilabel:`Geometry Validation`
+     -
+     - :ref:`digitizingmenu`
+   * - :guilabel:`GPS Information`
+     - :kbd:`Ctrl+0`
+     - :ref:`sec_gpstracking`
+   * - :guilabel:`GRASS Tools`
+     -
+     - :ref:`sec_grass`
+   * - :guilabel:`Layer Order`
+     - :kbd:`Ctrl+9`
+     - :ref:`layer_order`
+   * - :guilabel:`Layer Styling`
+     - :kbd:`Ctrl+3`
+     - :ref:`layer_styling_panel`
+   * - :guilabel:`Layers`
+     - :kbd:`Ctrl+1`
+     - :ref:`label_legend`
+   * - :guilabel:`Log Messages`
+     -
+     - :ref:`log_message_panel`
+   * - :guilabel:`Overview`
+     - :kbd:`Ctrl+8`
+     - :ref:`overview_panels`
+   * - :guilabel:`Processing Toolbox`
+     -
+     - :ref:`processing.toolbox`
+   * - :guilabel:`Results Viewer`
+     -
+     - :ref:`processing.toolbox`
+   * - :guilabel:`Snapping and Digitizing Options`
+     -
+     - :ref:`snapping_tolerance`
+   * - :guilabel:`Spatial Bookmark Manager`
+     - :kbd:`Ctrl+7`
+     - :ref:`sec_bookmarks`
+   * - :guilabel:`Statistics`
+     - :kbd:`Ctrl+6`
+     - :ref:`statistical_summary`
+   * - :guilabel:`Temporal Controller`
+     -
+     - :ref:`temporal_controller`
+   * - :guilabel:`Tile Scale`
+     -
+     - :ref:`tilesets`
+   * - :guilabel:`Undo/Redo`
+     - :kbd:`Ctrl+5`
+     - :ref:`undo_redo_panel`
+   * - :guilabel:`Vertex Editor`
+     -
+     - :ref:`vertex_editor_panel`
 
 
 .. index:: Map view
@@ -3066,6 +2964,8 @@ processes (QGIS startup, plugins loading, processing tools...)
    :width: 1.5em
 .. |addPart| image:: /static/common/mActionAddPart.png
    :width: 1.5em
+.. |addPointCloudLayer| image:: /static/common/mActionAddPointCloudLayer.png
+   :width: 1.5em
 .. |addPostgisLayer| image:: /static/common/mActionAddPostgisLayer.png
    :width: 1.5em
 .. |addRasterLayer| image:: /static/common/mActionAddRasterLayer.png
@@ -3202,6 +3102,8 @@ processes (QGIS startup, plugins loading, processing tools...)
 .. |keyboardShortcuts| image:: /static/common/mActionKeyboardShortcuts.png
    :width: 1.5em
 .. |labelingSingle| image:: /static/common/labelingSingle.png
+   :width: 1.5em
+.. |layoutItem3DMap| image:: /static/common/mLayoutItem3DMap.png
    :width: 1.5em
 .. |layoutManager| image:: /static/common/mActionLayoutManager.png
    :width: 1.5em
