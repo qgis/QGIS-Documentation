@@ -90,6 +90,7 @@ Icon                            Substitution                        Icon        
 |addVectorTileLayer|            ``|addVectorTileLayer|``            |addXyzLayer|                   ``|addXyzLayer|``
 |addVirtualLayer|               ``|addVirtualLayer|``               |addWmsLayer|                   ``|addWmsLayer|``
 |addWcsLayer|                   ``|addWcsLayer|``                   |addWfsLayer|                   ``|addWfsLayer|``
+|addPointCloudLayer|            ``|addPointCloudLayer|``            |addGpsLayer|                   ``|addGpsLayer|``
 |newVectorLayer|                ``|newVectorLayer|``                |newSpatiaLiteLayer|            ``|newSpatiaLiteLayer|``
 |newGeoPackageLayer|            ``|newGeoPackageLayer|``            |createMemory|                  ``|createMemory|``
 |newVirtualLayer|               ``|newVirtualLayer|``               |newMeshLayer|                  ``|newMeshLayer|``
@@ -97,6 +98,7 @@ Icon                            Substitution                        Icon        
 |geoPackage|                    ``|geoPackage|``                    |spatialite|                    ``|spatialite|``
 |virtualLayer|                  ``|virtualLayer|``                  |wms|                           ``|wms|``
 |wcs|                           ``|wcs|``                           |wfs|                           ``|wfs|``
+|pointCloudLayer|               ``|pointCloudLayer|``               |gps|                           ``|gps|``
 |dbSchema|                      ``|dbSchema|``
 |inOverview|                    ``|inOverview|``                    |addAllToOverview|              ``|addAllToOverview|``
 |removeAllFromOverview|         ``|removeAllFromOverview|``         |removeLayer|                   ``|removeLayer|``
@@ -559,6 +561,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |addExpression| image:: /static/common/mActionAddExpression.png
    :width: 1.5em
+.. |addGpsLayer| image:: /static/common/mActionAddGpsLayer.png
+   :width: 1.5em
 .. |addGrid| image:: /static/common/add_grid.png
    :width: 1.5em
 .. |addHtml| image:: /static/common/mActionAddHtml.png
@@ -586,6 +590,8 @@ Icon                            Substitution                        Icon        
 .. |addOracleLayer| image:: /static/common/mActionAddOracleLayer.png
    :width: 1.5em
 .. |addPart| image:: /static/common/mActionAddPart.png
+   :width: 1.5em
+.. |addPointCloudLayer| image:: /static/common/mActionAddPointCloudLayer.png
    :width: 1.5em
 .. |addPolygon| image:: /static/common/mActionAddPolygon.png
    :width: 1.5em
@@ -897,6 +903,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |georefRun| image:: /static/common/mGeorefRun.png
    :width: 1.5em
+.. |gps| image:: /static/common/mIconGps.png
+   :width: 1.5em
 .. |gpsImporter| image:: /static/common/gps_importer.png
    :width: 1.5em
 .. |gpsTrackBarChart| image:: /static/common/gpstrack_barchart.png
@@ -1207,6 +1215,8 @@ Icon                            Substitution                        Icon        
 .. |plugin| image:: /static/common/plugin.png
    :width: 1.5em
 .. |pointCloudExtent| image:: /static/common/pointCloudExtent.png
+   :width: 1.5em
+.. |pointCloudLayer| image:: /static/common/mIconPointCloudLayer.png
    :width: 1.5em
 .. |pointClusterSymbol| image:: /static/common/rendererPointClusterSymbol.png
    :width: 1.5em
