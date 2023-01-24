@@ -52,9 +52,12 @@ routes and tracks in the same file.
 
 To load a :file:`GPX` file:
 
-#. Open the :guilabel:`GPS` tab in the :guilabel:`Data Source Manager` dialog,
-   i.e. click the |dataSourceManager| :sup:`Open Data Source Manager` button
-   (or press :kbd:`Ctrl+L`) and enable the target tab
+#. Open the :guilabel:`GPS` tab in the :guilabel:`Data Source Manager` dialog, i.e.:
+
+   * Click the |dataSourceManager| :sup:`Open Data Source Manager` button on the toolbar
+     (or press :kbd:`Ctrl+L`) and enable the target tab
+   * Or select :menuselection:`Layer --> Add Layer -->` |addGpsLayer|
+     :menuselection:`Add GPX Layer...`
 #. Use the :guilabel:`...` :sup:`Browse` button next to the :guilabel:`GPX dataset` option
    to select the GPX file
 #. Use the check boxes to select the :guilabel:`Feature types` you want to load from the file.
@@ -87,5 +90,7 @@ available under the :ref:`GPS group <gps_algorithms>`.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |addGpsLayer| image:: /static/common/mActionAddGpsLayer.png
+   :width: 1.5em
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
    :width: 1.5em
