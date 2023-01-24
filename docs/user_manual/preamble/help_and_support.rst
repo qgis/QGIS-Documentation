@@ -87,7 +87,10 @@ To use Matrix:
 #. Install a client (Elements is easiest, but see `Matrix clients <https://matrix.org/docs/projects/try-matrix-now/#clients>`_ for more),
    OR point your browser to https://matrix.to/#/#qgis:osgeo.org
 
-To use IRC: install an IRC client and connect to irc://irc.libera.chat/#qgis or point your browser to https://web.libera.chat/?channels=#qgis
+To use IRC:
+
+#. Install an IRC client
+#. Connect to irc://irc.libera.chat/#qgis or point your browser to https://web.libera.chat/?channels=#qgis
 
 Commercial support
 ==================
