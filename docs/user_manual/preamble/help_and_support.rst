@@ -77,7 +77,7 @@ experiences.
 
 
 Matrix / IRC
-===
+============
 
 Matrix (https://matrix.org) is a project for decentralised chat. QGIS has a room accessible by the #qgis:osgeo.org alias (among others) which bridges to the libera.chat #qgis IRC channel.
 
