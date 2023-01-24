@@ -81,7 +81,11 @@ Matrix / IRC
 
 Matrix (https://matrix.org) is a project for decentralised chat. QGIS has a room accessible by the #qgis:osgeo.org alias (among others) which bridges to the libera.chat #qgis IRC channel.
 
-To use Matrix: create an account (at matrix.org is easiest, but if you have an OSGeo account you can also use your OSGeo id as matrix id), install a client (Elements is easiest, but see https://matrix.org/docs/projects/try-matrix-now/#clients for more), OR point your browser to https://matrix.to/#/#qgis:osgeo.org
+To use Matrix:
+
+#. Create an account (at matrix.org is easiest, but if you have an OSGeo account you can also use your OSGeo id as matrix id)
+#. Install a client (Elements is easiest, but see `Matrix clients <https://matrix.org/docs/projects/try-matrix-now/#clients>`_ for more),
+   OR point your browser to https://matrix.to/#/#qgis:osgeo.org
 
 To use IRC: install an IRC client and connect to irc://irc.libera.chat/#qgis or point your browser to https://web.libera.chat/?channels=#qgis
 
