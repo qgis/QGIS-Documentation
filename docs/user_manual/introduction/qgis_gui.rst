@@ -1035,6 +1035,11 @@ copy or paste layer properties (style, scale, CRS...).
      -
      -
      - :ref:`working_with_point_clouds`
+   * - :menuselection:`-->` |addGpsLayer|
+       :guilabel:`Add GPX Layer...`
+     -
+     -
+     - :ref:`gps_data`
    * - :guilabel:`Embed Layers and Groups...`
      -
      -
@@ -2161,6 +2166,8 @@ processes (QGIS startup, plugins loading, processing tools...)
 .. |addAmsLayer| image:: /static/common/mActionAddAmsLayer.png
    :width: 1.5em
 .. |addDelimitedTextLayer| image:: /static/common/mActionAddDelimitedTextLayer.png
+   :width: 1.5em
+.. |addGpsLayer| image:: /static/common/mActionAddGpsLayer.png
    :width: 1.5em
 .. |addGrid| image:: /static/common/add_grid.png
    :width: 1.5em
