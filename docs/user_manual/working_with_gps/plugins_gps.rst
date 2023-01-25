@@ -1,7 +1,7 @@
 .. _gps_data:
 
-Introducing GPS Data
-=====================
+Introducing GNSS/GPS Data
+===========================
 
 .. only:: html
 

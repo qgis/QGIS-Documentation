@@ -1174,8 +1174,7 @@ and :ref:`manipulate their data <gps_algorithms>`.
      * :guilabel:`Track download` from the device
      * :guilabel:`Track upload` to the device
 
-     This will probably be a GPSBabel command,
-     but you can use any other command line program that can create a GPX file.
+     While the commands are usually GPSBabel commands, you can also use any other command line program that can create a GPX file.
      QGIS will replace the keywords ``%type``, ``%in``, and ``%out`` when it runs the command.
 
      As an example, if you create a device type with the download command
