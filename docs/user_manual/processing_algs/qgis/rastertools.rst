@@ -203,8 +203,14 @@ Generate XYZ tiles (Directory)
 Generates raster “XYZ” tiles using the current QGIS project
 as individual images to a directory structure.
 
+Optionally, a Leaflet HTML output file using the generated
+tiles as a map layer could be created.
+
 Parameters
 ..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -306,17 +312,21 @@ Parameters
        Default: False
      - 
    * - **Output directory**
+
+       Optional
      - ``OUTPUT_DIRECTORY``
      - [folder]
 
        Default: ``[Save to temporary folder]``
-     - Specification of the output raster. One of:
+     - Specification of the output directory (for the tiles). One of:
 
        .. include:: ../algs_include.rst
           :start-after: **directory_output_types_skip**
           :end-before: **end_directory_output_types_skip**
 
    * - **Output html (Leaflet)**
+
+       Optional
      - ``OUTPUT_HTML``
      - [html]
 
@@ -326,6 +336,46 @@ Parameters
        .. include:: ../algs_include.rst
           :start-after: **file_output_types_skip**
           :end-before: **end_file_output_types_skip**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Leaflet HTML output title**
+
+       Optional
+     - ``HTML_TITLE``
+     - [string]
+
+       Default: Not set
+     - HTML <title>-tag used for the Leaflet HTML output file.
+   * - **Leaflet HTML output attribution**
+
+       Optional
+     - ``HTML_ATTRIBUTION``
+     - [string]
+
+       Default: Not set
+     - Custom map attribution used for the Leaflet HTML output file.
+       HTML links are possible.
+   * - **Include OpenStreetMap basemap in Leaflet HTML output**
+
+       Optional
+     - ``HTML_OSM``
+     - [boolean]
+
+       Default: False
+     - An OpenStreetMap basemap layer (source: https://tile.openstreetmap.org)
+       is included in the Leaflet HTML output file. Proper map attribution is
+       added automatically.
 
 Outputs
 .......
