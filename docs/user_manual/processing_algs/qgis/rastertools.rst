@@ -311,6 +311,31 @@ Basic parameters
 
        Default: False
      - 
+   * - **Output directory**
+
+       Optional
+     - ``OUTPUT_DIRECTORY``
+     - [folder]
+
+       Default: ``[Save to temporary folder]``
+     - Specification of the output directory (for the tiles). One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **directory_output_types_skip**
+          :end-before: **end_directory_output_types_skip**
+
+   * - **Output html (Leaflet)**
+
+       Optional
+     - ``OUTPUT_HTML``
+     - [html]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output HTML file. One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types_skip**
+          :end-before: **end_file_output_types_skip**
 
 Advanced parameters
 ^^^^^^^^^^^^^^^^^^^
@@ -349,9 +374,8 @@ Advanced parameters
 
        Default: False
      - An OpenStreetMap basemap layer (source: https://tile.openstreetmap.org)
-       is included in the Leaflet HTML outut file. Proper map attribution is
+       is included in the Leaflet HTML output file. Proper map attribution is
        added automatically.
-
 
 Outputs
 .......
@@ -359,37 +383,19 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :class: longtable
 
    * - Label
      - Name
      - Type
      - Description
    * - **Output directory**
-
-       Optional
      - ``OUTPUT_DIRECTORY``
      - [folder]
-
-       Default: ``[Save to temporary folder]``
-     - Specification of the output directory (for the tiles). One of:
-
-       .. include:: ../algs_include.rst
-          :start-after: **directory_output_types_skip**
-          :end-before: **end_directory_output_types_skip**
-
+     - Output directory (for the tiles)
    * - **Output html (Leaflet)**
-
-       Optional
      - ``OUTPUT_HTML``
      - [html]
-
-       Default: ``[Save to temporary file]``
-     - Specification of the output HTML file. One of:
-
-       .. include:: ../algs_include.rst
-          :start-after: **file_output_types_skip**
-          :end-before: **end_file_output_types_skip**
+     - The output HTML (Leaflet) file
 
 Python code
 ...........
