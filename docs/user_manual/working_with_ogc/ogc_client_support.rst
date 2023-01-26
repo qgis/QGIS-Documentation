@@ -437,28 +437,37 @@ UMN Mapserver below to support GetFeatureInfo in GML format.
   # in WEB METADATA define formats (example):
   "wms_getfeatureinfo_formatlist" "OGRGML,text/html"
 
-.. _`ogc-wms-properties`:
-
-**Viewing Properties**
 
 .. index::
    single: WMS; Properties
+.. _`ogc-wms-properties`:
+
+Viewing Properties
+------------------
 
 Once you have added a WMS server, you can view its properties by right-clicking
 on it in the legend and selecting :menuselection:`Properties`.
+The WMS/WMTS layer properties is much like the raster layer properties
+so you will find detailed description at :ref:`raster_properties_dialog`.
+However, there are some differences, which will be explained below.
 
 .. _`ogc-wms-properties-metadata`:
+
+Information properties
+......................
+
+.. todo: Review information in this section, whether they are still provided
 
 **Metadata Tab**
 
 .. index::
    pair: WMS; Metadata
 
-The tab :guilabel:`Metadata` displays a wealth of information about the WMS
-server, generally collected from the capabilities statement returned from
-that server. Many definitions can be gleaned by reading the WMS standards (see
-OPEN-GEOSPATIAL-CONSORTIUM in :ref:`literature_and_web`), but here are a few handy
-definitions:
+The tab :guilabel:`Metadata` displays a wealth of information about the WMS server,
+generally collected from the capabilities statement returned from that server.
+Many definitions can be gleaned by reading the WMS standards
+(see OPEN-GEOSPATIAL-CONSORTIUM in :ref:`literature_and_web`),
+but here are a few handy definitions:
 
 * **Server Properties**
 
