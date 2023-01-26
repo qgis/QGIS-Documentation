@@ -561,12 +561,34 @@ to help display the correct temporal data:
 
 * :guilabel:`Ignore time components (use dates only)`:
   If checked, the time component of temporal queries will be discarded
-  and only the date component will be used in server requests
+  and only the date component will be used in server requests.
 
 You can also |checkbox| :guilabel:`Use Specific WMS-T Reference Time`
 picked from times reported in the layer's capabilities.
 Convenient for servers which expose a non-contiguous set of date time instances
 (instead of a range of dates).
+
+.. _`wms_server_properties`:
+
+QGIS Server properties
+......................
+
+In addition to a raster layer :ref:`QGIS Server properties <raster_server>`,
+the WMS/WMTS layer will display following options:
+
+* :guilabel:`WMS Print layer`: Allows to set alternative WMS layer
+  that should be used for printing (in the :ref:`GetProjectSettings <wms_getprojectsettings>` reply).
+  Convenient for WMTS layers that are generally not suitable for printing.
+* |checkbox| :guilabel:`Publish WMS/WMTS data source uri`:
+  Allows a web client to fetch the WMS/WMTS data directly
+* |checkbox| :guilabel:`Advertise as background layer`
+
+.. _figure_wms_server:
+
+.. figure:: img/server_properties.png
+   :align: center
+
+   QGIS Server properties of a WMS/WMTS layer
 
 .. _`ogc-wms-legend`:
 
