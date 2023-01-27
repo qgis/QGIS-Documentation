@@ -254,7 +254,6 @@ deserves your options to accelerate it should be (in order of priority):
 * Send a message to the mailing list 'marketing' your PR and how wonderful it
   will be to have it included in the code base.
 * Send a message to the person your PR has been assigned to in the PR queue.
-* Send a message to Marco Hugentobler (who manages the PR queue).
 * Send a message to the project steering committee asking them to help see your
   PR incorporated into the code base.
 
