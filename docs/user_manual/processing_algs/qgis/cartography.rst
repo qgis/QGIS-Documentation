@@ -1576,7 +1576,7 @@ Python code
 Transfer annotations from main layer
 ------------------------------------
 
-Transfers all annotations from the main annotation layer in a project to a new annotation layer.
+Transfers all :ref:`annotations <annotation_layer>` from the main annotation layer in a project to a new annotation layer.
 Items placement can then be adjusted within the layer stack.
 
 Parameters

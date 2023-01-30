@@ -780,6 +780,7 @@ with both families of annotations.
  | |annotation| :sup:`Move Annotation`                 | Adjust size and position of annotation element                      |                     |
  +-----------------------------------------------------+---------------------------------------------------------------------+---------------------+
 
+.. _annotation_layer:
 
 Feature Annotations
 -------------------
