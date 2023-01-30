@@ -212,19 +212,23 @@ You then need to create connections to the server you are targeting:
       See :ref:`authentication_index` for more details.
 
    * HTTP :guilabel:`Referer`
-   * :guilabel:`DPI-Mode`: Available options are **all**, **off**, **QGIS**,
+   * :guilabel:`WMS DPI-Mode`: Available options are **all**, **off**, **QGIS**,
      **UMN** and **GeoServer**
+   * :guilabel:`WMTS server-side tile pixel ratio`:  When rendering WMTS layers,
+     allows to scale up or down the tiles based on the device screen DPI.
+     Available options are :guilabel:`Undefined (not scaled)`,
+     :guilabel:`Standard (96 DPI)` and :guilabel:`High (192 DPI)`.
    * |unchecked| :guilabel:`Ignore GetMap/GetTile/GetLegendGraphic URI reported in capabilities`:
      if checked, use given URI from the :guilabel:`URL` field above.
    * |unchecked| :guilabel:`Ignore GetFeatureInfo URI reported in capabilities`:
      if checked, use given URI from the :guilabel:`URL` field above.
-   * |unchecked| :guilabel:`Ignore axis orientation (WMS 1.3/WMTS)`
    * |unchecked| :guilabel:`Ignore reported layer extents`: because the extent
      reported by raster layers may be smaller than the actual area which can
      be rendered (notably for WMS servers with symbology which takes more space
      than the data extent), check this option to avoid cropping raster layers
      to their reported extents, resulting in truncated symbols on the borders
      of these layers.
+   * |unchecked| :guilabel:`Ignore axis orientation (WMS 1.3/WMTS)`
    * |unchecked| :guilabel:`Invert axis orientation`
    * |unchecked| :guilabel:`Smooth pixmap transformation`
 #. Press :guilabel:`OK`
