@@ -526,42 +526,6 @@ The legend will display contextual information based on your current scale. The
 WMS legend will be shown only if the WMS server has GetLegendGraphic capability
 and the layer has getCapability url specified, so you have to select a styling.
 
-.. _`ogc-wms-limits`:
-
-WMS Client Limitations
-----------------------
-
-Not all possible WMS client functionality had been included in this version
-of QGIS. Some of the more noteworthy exceptions follow.
-
-**Editing WMS Layer Settings**
-
-Once you've completed the |addWmsLayer| :sup:`Add WMS layer` procedure,
-there is no way to change the settings. A work-around is to delete the layer
-completely and start again.
-
-**WMS Servers Requiring Authentication**
-
-Currently, publicly accessible and secured WMS services are supported. The secured
-WMS servers can be accessed by public authentication. You can add the (optional)
-credentials when you add a WMS server. See section :ref:`ogc-wms-servers` for
-details.
-
-.. index:: InteProxy, Secured OGC Authentication
-
-.. tip:: **Accessing secured OGC-layers**
-
-   If you need to access secured layers with secured methods other than basic
-   authentication, you can use InteProxy as a transparent proxy, which does
-   support several authentication methods. More information can be found in the
-   InteProxy manual at https://inteproxy.wald.intevation.org.
-
-.. index:: Mapserver
-
-.. tip:: **QGIS WMS Mapserver**
-
-   Since Version 1.7.0, QGIS has its own implementation of a WMS 1.3.0 Mapserver.
-   Read more about this in :ref:`QGIS-Server-manual`.
 
 .. _`ogc-wcs`:
 
