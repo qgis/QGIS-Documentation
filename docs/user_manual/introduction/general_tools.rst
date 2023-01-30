@@ -1263,13 +1263,192 @@ To add layout extent(s):
 Annotation Tools
 ----------------
 
-Annotations are information added to the map canvas and shown within a
-balloon. This information can be of different types and annotations are
-added using the corresponding tools in the :guilabel:`Annotations Toolbar`:
+Annotations are another type of elements added onto the map canvas to provide
+additional information that can not be depicted by the rendered layers.
+Unlike :ref:`labels <vector_labels_tab>` that rely on attribute values stored
+in vector layers, annotations are independent details, stored within the project
+file itself.
+
+Two families of annotations are available in QGIS:
+
+* **Feature annotations**: they are actual georeferenced features of text, marker,
+  line or polygon type stored within a special layer type called "annotation layer".
+  They are tied to a particular geographic location, meaning that moving your map,
+  changing the scale or changing projection won’t cause your annotations to jump
+  around the map. Rather, they’ll be locked in place to the location you’ve drawn them.
+* **Balloon annotations**: these are individuals annotations of text, form or image
+  type placed inside a bubble. They can be associated to any layer for their visibility,
+  are drawn on top of the map canvas. The size is dependent from the map canvas scale,
+  and its position can be anchored.
+
+.. tip:: **Layout the map with annotations**
+
+  You can print or export annotations with your map to various formats using:
+
+  * map canvas export tools available in the :menuselection:`Project` menu
+  * :ref:`print layout <create-output>`, in which case you need to check
+    :guilabel:`Draw map canvas items` in the corresponding map item properties
+
+
+The :guilabel:`Annotations Toolbar` provides a set of tools to create and interact
+with both families of annotations.
+
+.. table:: The Annotations Toolbar actions
+
+ +-----------------------------------------------------+---------------------------------------------------------------------+---------------------+
+ | Tool                                                | Usage                                                               | Scope               |
+ +-----------------------------------------------------+---------------------------------------------------------------------+---------------------+
+ | |createAnnotationLayer| :sup:`New Annotation Layer` | Create a new layer to store annotations                             | Feature annotations |
+ +-----------------------------------------------------+---------------------------------------------------------------------+                     +
+ | :sup:`Main Annotation Layer Properties`             | Control settings of the Main Annotation Layer                       |                     |
+ +-----------------------------------------------------+---------------------------------------------------------------------+                     +
+ | |select| :sup:`Modify Annotations`                  | Select, move, resize and modify symbology properties of annotations |                     |
+ +-----------------------------------------------------+---------------------------------------------------------------------+                     +
+ | |addPolygon| :sup:`Create Polygon Annotation`       | Create an annotation as a polygon feature                           |                     |
+ +-----------------------------------------------------+---------------------------------------------------------------------+                     +
+ | |addPolyline| :sup:`Create Line Annotation`         | Create an annotation as a polyline feature                          |                     |
+ +-----------------------------------------------------+---------------------------------------------------------------------+                     +
+ | |addMarker| :sup:`Create Marker Annotation`         | Create an annotation as a point feature                             |                     |
+ +-----------------------------------------------------+---------------------------------------------------------------------+                     +
+ | |actionText| :sup:`Create Text Annotation at Point` | Create an annotation as a text label                                |                     |
+ +-----------------------------------------------------+---------------------------------------------------------------------+---------------------+
+ | |textAnnotation| :sup:`Text Annotation`             | Select and create a text formatted annotation                       | Balloon annotations |
+ +-----------------------------------------------------+---------------------------------------------------------------------+                     +
+ | |htmlAnnotation| :sup:`HTML Annotation`             | Select and create annotation with an :file:`HTML` file's content    |                     |
+ +-----------------------------------------------------+---------------------------------------------------------------------+                     +
+ | |svgAnnotation| :sup:`SVG Annotation`               | Select and create annotation showing an :file:`SVG` file            |                     |
+ +-----------------------------------------------------+---------------------------------------------------------------------+                     +
+ | |formAnnotation| :sup:`Form Annotation`             | Select and create annotation showing attributes of a vector layer   |                     |
+ |                                                     | in a custom form file                                               |                     |
+ +-----------------------------------------------------+---------------------------------------------------------------------+                     +
+ | |annotation| :sup:`Move Annotation`                 | Adjust size and position of annotation element                      |                     |
+ +-----------------------------------------------------+---------------------------------------------------------------------+---------------------+
+
+
+Feature Annotations
+...................
+
+Feature annotations are stored in **annotation layers**. Unlike conventional
+layers, an annotation layer is available only in the current project and can
+contain features of different types (text, marker, line, polygon).
+The layer has no attributes and no symbology associated, but instead each feature
+can be symbolized on an item-by-item basis, through :guilabel:`Layer Styling` panel.
+
+Two types of annotation layer are available in QGIS:
+
+* A common :guilabel:`Annotation Layer`: you can create one using
+  the |createAnnotationLayer| :sup:`New Annotation Layer` tool. It is listed
+  in the :guilabel:`Layers` panel, allowing you to control its features'
+  visibility, move it to show above or below particular layers in your map,
+  like any common layer.
+  Double-click the layer and you can access its properties.
+* The :guilabel:`Main Annotation Layer`: By default, this is where annotations
+  are stored when no annotation layer is available in the project or is selected
+  at creation time. This layer is always drawn on the very top of your map and
+  you won't see it listed in the :guilabel:`Layers` panel alongside the other
+  layers in your project, meaning that its features are always visible.
+  The :guilabel:`Main Annotation Layer Properties` entry on
+  the :guilabel:`Annotations` toolbar helps you open its properties dialog.
+
+Interaction
+^^^^^^^^^^^
+
+The Feature annotations have dedicated tools for creation depending on their type:
+
+* |addPolygon| :sup:`Create Polygon Annotation`
+* |addPolyline| :sup:`Create Line Annotation`
+* |addMarker| :sup:`Create Marker Annotation`
+* |actionText| :sup:`Create Text Annotation at Point`
+
+All the usual QGIS shortcuts for creating features apply when creating annotation
+items. A line or polygon annotation is drawn by left-clicking once for each vertex,
+with a final right mouse click to complete the shape. Snapping can be enabled
+while you draw, you can use the :guilabel:`Advanced Digitizing Tools` to precisely
+place vertices, and even switch the :ref:`drawing tools <drawing_methods>`
+to the streaming mode for completely free-form shapes.
+
+Unlike common layers, an annotation layer does not need to be active before you
+select its features. Simply grab the |select| :sup:`Modify Annotations` tool and
+you will be able to interact with any feature annotation:
+
+* **Selection**: simply left-click on the annotation
+* **Moving**: Left click on a selected annotation item to start moving it.
+  A right-click or pressing :kbd:`Esc` key cancels the move, while a second
+  left click will confirm the move.
+  The displacement can also be controlled pressing the cursor keys:
+
+  * :kbd:`Shift+key` for big movement
+  * :kbd:`Alt+key` for ``1 px`` movement
+* **Geometry modification**: for line or polygon annotations, left-click on
+  a vertex of the geometry, move and click again.
+  Double-click a segment to add a new vertex.
+* **Delete**: Pressing the :kbd:`Del` or :kbd:`Backspace` key while
+  an annotation is selected will delete that annotation
+* :ref:`Change feature symbology <annotation_feature_symbology>`
+
+.. _annotation_feature_symbology:
+
+Feature symbology
+^^^^^^^^^^^^^^^^^
+
+A selected annotation will display its :guilabel:`Symbology` properties
+in the :guilabel:`Layer styling` panel. You can:
+
+* modify the appearance using full capabilities of the :ref:`symbol
+  <symbol-selector>` or the :ref:`text format <text_format>` (including the text
+  itself), depending on the type.
+* configure a :guilabel:`Reference scale`
+* set a :guilabel:`Z index`
+* modify some of the :guilabel:`Layer rendering` settings
+
+Layer Properties
+^^^^^^^^^^^^^^^^
+
+The properties dialog of an annotation layer provides the following tabs:
+
+* :guilabel:`Information`: a read-only dialog representing an interesting
+  place to quickly grab summarized information and metadata on the current layer.
+* :guilabel:`Source`: defines general settings for the annotation layer. You can:
+
+  * Set a :guilabel:`Layer name` that will be used to identify the layer
+    in the project (in the :guilabel:`Layers Panel`, with expressions, ...)
+  * Display the layer's :ref:`Assigned Coordinate Reference System (CRS) <layer_crs>`:
+    you can change the layer's CRS, selecting a recently used one
+    in the drop-down list or clicking on |setProjection| :sup:`Select CRS` button
+    (see :ref:`crs_selector`). Use this process only if the CRS applied to the
+    layer is a wrong one or if none was applied.
+
+* :guilabel:`Rendering`:
+
+  * You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum
+    (exclusive)` scale, defining a range of scale in which features will be
+    visible. Out of this range, they are hidden. The |mapIdentification|
+    :sup:`Set to current canvas scale` button helps you use the current map
+    canvas scale as boundary of the range visibility.
+    See :ref:`label_scaledepend` for more information.
+  * :guilabel:`Opacity`: You can make the underlying layer in
+    the map canvas visible with this tool. Use the slider to adapt the visibility
+    of your vector layer to your needs. You can also make a precise definition of
+    the percentage of visibility in the menu beside the slider.
+  * :guilabel:`Blending mode` at the :guilabel:`Layer` level: You can achieve
+    special rendering effects with these tools that you may previously only
+    know from graphics programs. The pixels of your overlaying and underlying
+    layers are mixed through the settings described in :ref:`blend-modes`.
+  * Apply :ref:`paint effects <draw_effects>` on all the layer features with the
+    :guilabel:`Draw Effects` button.
+
+  Some of these options are accessible from the feature annotation
+  :guilabel:`Symbology` properties.
+
+  
+Balloon annotations
+...................
+
+You can add balloon annotations through :menuselection:`Edit --> Add Annotation -->`
+menu or from the :guilabel:`Annotations Toolbar`:
 
 * |textAnnotation| :sup:`Text Annotation` for custom formatted text
-* |htmlAnnotation| :sup:`HTML Annotation` to place the content of an :file:`html`
-  file
+* |htmlAnnotation| :sup:`HTML Annotation` to place the content of an :file:`html` file
 * |svgAnnotation| :sup:`SVG Annotation` to add an :file:`SVG` symbol
 * |formAnnotation| :sup:`Form Annotation`: useful to display attributes
   of a vector layer in a customized :file:`ui` file (see :numref:`figure_custom_annotation`).
@@ -1277,20 +1456,18 @@ added using the corresponding tools in the :guilabel:`Annotations Toolbar`:
   but displayed in an annotation item. Also see this video
   https://www.youtube.com/watch?v=0pDBuSbQ02o&feature=youtu.be&t=2m25s
   from Tim Sutton for more information.
+* |annotation| :sup:`Move Annotation` to adjust annotation element size or position
+  (using click and drag)
 
 .. _figure_custom_annotation:
 
 .. figure:: img/custom_annotation.png
    :align: center
 
-   Customized QT Designer annotation form
+   Examples of balloon annotations
 
-.. Todo: Ideally, to sync with the text, this screenshot should not show the
- dialog of form annotation but instead different forms in action, this will be all
- about showing what an annotation looks like.
- Annotation dialog will need to be shown only when it's described (which is done below)
 
-To add an annotation, select the corresponding tool and click on the map canvas.
+To add a balloon annotation, select the corresponding tool and click on the map canvas.
 An empty balloon is added. Double-click on it and a dialog opens with various
 options. This dialog is almost the same for all the annotation types:
 
@@ -1315,7 +1492,7 @@ options. This dialog is almost the same for all the annotation types:
 .. figure:: img/annotation.png
    :align: center
 
-   Annotation text dialog
+   A ballon annotation text dialog
 
 Annotations can be selected when an annotation tool is enabled. They can then be
 moved by map position (by dragging the map marker) or by moving only the balloon.
@@ -1326,17 +1503,9 @@ To delete an annotation, select it and either press the :kbd:`Del` or :kbd:`Back
 button, or double-click it and press the :guilabel:`Delete` button in the properties dialog.
 
 .. note::
-   If you press :kbd:`Ctrl+T` while an :guilabel:`Annotation` tool (move annotation,
+   If you press :kbd:`Ctrl+T` while a balloon :guilabel:`Annotation` tool (move annotation,
    text annotation, form annotation) is active, the visibility states of the items
    are inverted.
-
-.. tip:: **Layout the map with annotations**
-
-  You can print or export annotations with your map to various formats using:
-
-  * map canvas export tools available in the :menuselection:`Project` menu
-  * :ref:`print layout <create-output>`, in which case you need to check
-    :guilabel:`Draw map canvas items` in the corresponding map item properties
 
 
 .. index::
@@ -2825,6 +2994,8 @@ The values presented in the varying size assistant above will set the size
 
 .. |3d| image:: /static/common/3d.png
    :width: 1.5em
+.. |actionText| image:: /static/common/mActionText.png
+   :width: 1.5em
 .. |addGrid| image:: /static/common/add_grid.png
    :width: 1.5em
 .. |addGroup| image:: /static/common/mActionAddGroup.png
@@ -2832,6 +3003,12 @@ The values presented in the varying size assistant above will set the size
 .. |addImage| image:: /static/common/mActionAddImage.png
    :width: 1.5em
 .. |addMap| image:: /static/common/mActionAddMap.png
+   :width: 1.5em
+.. |addMarker| image:: /static/common/mActionAddMarker.png
+   :width: 1.5em
+.. |addPolygon| image:: /static/common/mActionAddPolygon.png
+   :width: 1.5em
+.. |addPolyline| image:: /static/common/mActionAddPolyline.png
    :width: 1.5em
 .. |addVirtualLayer| image:: /static/common/mActionAddVirtualLayer.png
    :width: 1.5em
@@ -2856,6 +3033,8 @@ The values presented in the varying size assistant above will set the size
 .. |colorWheel| image:: /static/common/mIconColorWheel.png
    :width: 1.5em
 .. |copyrightLabel| image:: /static/common/copyright_label.png
+   :width: 1.5em
+.. |createAnnotationLayer| image:: /static/common/mActionCreateAnnotationLayer.png
    :width: 1.5em
 .. |dataDefine| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
@@ -2995,6 +3174,8 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |search| image:: /static/common/search.png
    :width: 1.5em
+.. |select| image:: /static/common/mActionSelect.png
+   :width: 1.5em
 .. |selectAll| image:: /static/common/mActionSelectAll.png
    :width: 1.5em
 .. |selectColor| image:: /static/common/selectcolor.png
@@ -3013,6 +3194,8 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
+.. |setProjection| image:: /static/common/mActionSetProjection.png
+   :width: 1.5em
 .. |sharing| image:: /static/common/mActionSharing.png
    :width: 1.5em
 .. |sharingExport| image:: /static/common/mActionSharingExport.png
