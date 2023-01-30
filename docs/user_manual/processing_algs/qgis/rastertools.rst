@@ -306,17 +306,21 @@ Parameters
        Default: False
      - 
    * - **Output directory**
+
+       Optional
      - ``OUTPUT_DIRECTORY``
      - [folder]
 
        Default: ``[Save to temporary folder]``
-     - Specification of the output raster. One of:
+     - Specification of the output directory (for the tiles). One of:
 
        .. include:: ../algs_include.rst
           :start-after: **directory_output_types_skip**
           :end-before: **end_directory_output_types_skip**
 
    * - **Output html (Leaflet)**
+
+       Optional
      - ``OUTPUT_HTML``
      - [html]
 
