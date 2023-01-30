@@ -501,6 +501,59 @@ definitions:
   - **Available in style** --- The image styles that this layer can be rendered
     in by the WMS server.
 
+.. _wmts_temporal:
+
+Temporal properties
+...................
+
+Raster :ref:`temporal properties <raster_temporal>` (namely :guilabel:`Dynamic Temporal Control`)
+can be set for WMS and WMTS layers.
+By default, when a time-dimension enabled WMS or WMTS layer is added to the project,
+it is indicated in the :guilabel:`Layers` panel
+with the |indicatorTemporal| :sup:`Temporal Layer` icon next to it.
+Its :guilabel:`Temporal` properties default to the :guilabel:`Automatic` temporal mode,
+meaning that the layer will follow the temporal controller's current time range by default.
+
+You can then opt to show a specific static time value for the layer
+by unchecking :guilabel:`Dynamic Temporal Control`
+and picking an option under :guilabel:`Static WMS-T Temporal Range`:
+
+* :guilabel:`Server default`
+* :guilabel:`Predefined date` with a server exposing data for non-contiguous temporal ranges
+  or :guilabel:`Predefined range` with a server exposing a range of available dates.
+  A :guilabel:`Start date` and :guilabel:`End date` are necessary in the latter case.
+  Their expected formatting can be deduced from the reference time option (see below).
+  depending on whether the provider has data for contiguous period or not
+* :guilabel:`Follow project's temporal range` as defined in the project's properties dialog
+
+.. _figure_wmts_temporal:
+
+.. figure:: img/temporal_properties.png
+   :align: center
+
+   Temporal properties of a WMTS layer
+
+
+Whatever temporal data control is in use, there are some :guilabel:`WMS-T Settings`
+to help display accurate data:
+
+* :guilabel:`Time slice mode` which can be:
+
+  * :guilabel:`Use whole temporal range`
+  * :guilabel:`Match to start of range`
+  * :guilabel:`match to end of range`
+  * :guilabel:`Closest match to start of range`
+  * :guilabel:`Closest match to end of range`
+
+* :guilabel:`Ignore time components (use dates only)`:
+  If checked, the time component of temporal queries will be discarded
+  and only the date component will be used in server requests
+
+You can also |checkbox| :guilabel:`Use Specific WMS-T Reference Time`
+picked from times reported in the layer's capabilities.
+Convenient for servers which expose a non-contiguous set of date time instances
+(instead of a range of dates).
+
 .. _`ogc-wms-legend`:
 
 Show WMS legend graphic in table of contents and layout
@@ -720,6 +773,8 @@ features and view the attribute table.
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
    :width: 1.5em
 .. |identify| image:: /static/common/mActionIdentify.png
+   :width: 1.5em
+.. |indicatorTemporal| image:: /static/common/mIndicatorTemporal.png
    :width: 1.5em
 .. |kde| image:: /static/common/kde.png
    :width: 1.5em

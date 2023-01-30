@@ -174,12 +174,8 @@ rendering based on a time variation. To achieve this, you need:
 
    * :ref:`raster layers <raster_temporal>`: controls whether to display or
      not the layer.
-
-   .. Todo: This option might need some tweak: I think WMS-T and Postgis raster layers
-    enable more options and behaviour so, if someone can provide a better summary
-    of the temporal setting on rasters and as well describe those in raster properties,
-    it'd be very welcome!
-
+   * :ref:`WMTS layers <wmts_temporal>`: controls whether the data should be rendered
+     based on a static time range or following a dynamic temporal range
    * :ref:`vector layers <vectortemporalmenu>`: features are filtered based
      on time values associated to their attributes
    * :ref:`mesh layers <meshtemporal>`: displays dynamically the active dataset
