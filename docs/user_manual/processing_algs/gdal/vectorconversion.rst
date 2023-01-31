@@ -471,6 +471,14 @@ Advanced parameters
      - Burns the fixed burn value, or the burn value associated
        with the first feature into all parts of the image not
        inside the provided polygon.
+   *  - **Additional command-line parameters**
+
+        Optional
+      - ``EXTRA``
+      - [string]
+
+        Default: ''
+      - Add extra GDAL command line options
 
 Outputs
 .......
