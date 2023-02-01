@@ -12,11 +12,11 @@ Structuring Python Plugins
       :local:
 
 
-The main steps for creating a plugin are: 
+The main steps for creating a plugin are:
 
 #. *Idea*: Have an idea about what you want to do with your new QGIS plugin.
-#. *Setup*: :ref:`Create the files for your plugin <plugin_setup>`. Depending on the plugin type, 
-   some are mandatory while others are optional 
+#. *Setup*: :ref:`Create the files for your plugin <plugin_setup>`. Depending on the plugin type,
+   some are mandatory while others are optional
 #. *Develop*: :ref:`Write the code <plugin_development>` in appropriate files
 #. *Document*: :ref:`Write the plugin documentation <plugin_docs>`
 #. Optionally: *Translate*: :ref:`Translate your plugin <plugin_translation>` into different languages
@@ -42,22 +42,22 @@ extend it or at least build on it to develop your own.
 
 .. _plugin_files_architecture:
 
-Set up pugin file structure
----------------------------
+Set up plugin file structure
+----------------------------
 
 To get started with a new plugin, we need to set up the necessary plugin files.
 
-There are two plugin template resources that can help get you started: 
+There are two plugin template resources that can help get you started:
 
 * For educational purposes or whenever a minimalist approach is desired, the
   `minimal plugin template <https://github.com/wonder-sk/qgis-minimal-plugin>`_
-  provides the basic files (skeleton) necesary to create a valid QGIS Python plugin.
+  provides the basic files (skeleton) necessary to create a valid QGIS Python plugin.
 * For a more fully feature plugin template, the 
   `Plugin Builder <https://plugins.qgis.org/plugins/pluginbuilder3/>`_ can create 
   templates for multiple different plugin types, including features such as 
   localization (translation) and testing. 
 
-A typical plugin directory includes the following files: 
+A typical plugin directory includes the following files:
 
 * :file:`metadata.txt` - *required* - Contains general info, version, name and some other
   metadata used by plugins website and plugin infrastructure.  
@@ -86,7 +86,7 @@ A typical plugin directory includes the following files:
 Writing plugin code
 ===================
 
-The following section show what content should be added in each of the
+The following section shows what content should be added in each of the
 files introduced above.
 
 .. index:: Plugins; Metadata, metadata.txt
