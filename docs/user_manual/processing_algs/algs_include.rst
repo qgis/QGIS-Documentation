@@ -225,6 +225,26 @@ Notes on algorithms
 Raster data types
 =================
 
+Simplified list
+---------------
+
+.. **raster_data_types_simplified**
+
+.. The following section is included in raster based algorithms such as
+ gdalrastercalculator
+
+
+* 0 --- Byte        (Eight bit unsigned integer (quint8))
+* 1 --- Int16       (Sixteen bit signed integer (qint16))
+* 2 --- UInt16      (Sixteen bit unsigned integer (quint16))
+* 3 --- UInt32      (Thirty two bit unsigned integer (quint32))
+* 4 --- Int32       (Thirty two bit signed integer (qint32))
+* 5 --- Float32     (Thirty two bit floating point (float))
+* 6 --- Float64     (Sixty four bit floating point (double))
+
+.. **end_raster_data_types_simplified**
+
+
 Without user input
 ------------------
 
