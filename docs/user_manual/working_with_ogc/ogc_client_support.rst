@@ -536,13 +536,13 @@ and picking an option under :guilabel:`Static WMS-T Temporal Range`:
 
 
 Whatever temporal data control is in use, there are some :guilabel:`WMS-T Settings`
-to help display accurate data:
+to help display the correct temporal data:
 
 * :guilabel:`Time slice mode` which can be:
 
   * :guilabel:`Use whole temporal range`
   * :guilabel:`Match to start of range`
-  * :guilabel:`match to end of range`
+  * :guilabel:`Match to end of range`
   * :guilabel:`Closest match to start of range`
   * :guilabel:`Closest match to end of range`
 
