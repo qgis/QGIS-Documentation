@@ -1035,6 +1035,11 @@ copy or paste layer properties (style, scale, CRS...).
      -
      -
      - :ref:`working_with_point_clouds`
+   * - :menuselection:`-->` |addGpsLayer|
+       :guilabel:`Add GPX Layer...`
+     -
+     -
+     - :ref:`gps_data`
    * - :guilabel:`Embed Layers and Groups...`
      -
      -
@@ -1253,10 +1258,6 @@ are enabled.
      -
      -
      - :ref:`geometry_checker`
-   * - |gpsImporter| :guilabel:`GPS Tools`
-     - :kbd:`Alt+O` + :kbd:`G`
-     - :guilabel:`Vector`
-     - :ref:`plugin_gps`
    * - |topologyChecker| :guilabel:`Topology Checker`
      -
      - :guilabel:`Vector`
@@ -2166,6 +2167,8 @@ processes (QGIS startup, plugins loading, processing tools...)
    :width: 1.5em
 .. |addDelimitedTextLayer| image:: /static/common/mActionAddDelimitedTextLayer.png
    :width: 1.5em
+.. |addGpsLayer| image:: /static/common/mActionAddGpsLayer.png
+   :width: 1.5em
 .. |addGrid| image:: /static/common/add_grid.png
    :width: 1.5em
 .. |addImage| image:: /static/common/mActionAddImage.png
@@ -2288,8 +2291,6 @@ processes (QGIS startup, plugins loading, processing tools...)
 .. |geometryChecker| image:: /static/common/geometrychecker.png
    :width: 1.5em
 .. |georefRun| image:: /static/common/mGeorefRun.png
-   :width: 1.5em
-.. |gpsImporter| image:: /static/common/gps_importer.png
    :width: 1.5em
 .. |helpContents| image:: /static/common/mActionHelpContents.png
    :width: 1.5em
