@@ -1140,11 +1140,13 @@ https://doc.qt.io/archives/qt-5.9/qnetworkproxy.html#ProxyType-enum
    Using proxies can sometimes be tricky. It is useful to proceed by 'trial and
    error' with the above proxy types, to check if they succeed in your case.
 
-.. index:: Search widget, Locator
-.. _locator_options:
+.. index:: GPS
+.. _gps_options:
 
 GPS settings
 ------------
+
+.. _defining_new_device:
 
 GPSBabel
 ........
@@ -1152,23 +1154,48 @@ GPSBabel
 `GPSBabel <https://www.gpsbabel.org/>`_ converts waypoints, tracks, and routes between popular GPS receivers 
 such as Garmin or Magellan and mapping programs like Google Earth or Basecamp. 
 Literally hundreds of GPS receivers and programs are supported.
-First you have to define the :guilabel:`Path to GPSBabel` binaries
-Then you have to choose or to add a device. You can add and delete device paths via
-|symbologyAdd| :guilabel:`Add new path` or |symbologyRemove| :guilabel:`Remove path`.
-After that you can define different parameters:
+QGIS relies on GPSBabel to interact with these devices
+and :ref:`manipulate their data <gps_algorithms>`.
+
+#. First you have to define the :guilabel:`Path to GPSBabel` binaries.
+#. Then you may want to add your device.
+   You can update devices list using |symbologyAdd| :sup:`Add new device`
+   or |symbologyRemove| :sup:`Remove device` button.
+#. For each device:
+
+   * you provide a :guilabel:`Device name`
+   * you configure different :guilabel:`Commands` QGIS will use while interacting with it,
+     such as:
+
+     * :guilabel:`Waypoint download` from the device
+     * :guilabel:`Waypoint upload` to the device
+     * :guilabel:`Route download` from the device
+     * :guilabel:`Route upload` to the device
+     * :guilabel:`Track download` from the device
+     * :guilabel:`Track upload` to the device
+
+     While the commands are usually GPSBabel commands, you can also use any other command line program that can create a GPX file.
+     QGIS will replace the keywords ``%type``, ``%in``, and ``%out`` when it runs the command.
+
+     As an example, if you create a device type with the download command
+     ``gpsbabel %type -i garmin -o gpx %in %out``
+     and then use it to download waypoints from port ``/dev/ttyS0`` to the file ``output.gpx``,
+     QGIS will replace the keywords and run the command
+     ``gpsbabel -w -i garmin -o gpx /dev/ttyS0 output.gpx``.
+
+     Read the GPSBabel manual for the command line options that may be specific to your use case.
+
+Once you have created a new device type, it will appear in the device lists for
+the GPS download and upload algorithms.
 
 .. figure:: img/options_gpsbabel.png
    :align: center
 
    GPS Babel settings
 
-* Define :guilabel:`Waypoint download`
-* Define :guilabel:`Waypoint upload`
-* Define :guilabel:`Route download`
-* Define :guilabel:`Route upload`
-* Define :guilabel:`Track download`
-* Define :guilabel:`Track upload`
 
+.. index:: Search widget, Locator
+.. _locator_options:
 
 Locator settings
 ----------------
