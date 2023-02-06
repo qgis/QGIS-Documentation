@@ -2330,6 +2330,8 @@ General options
 * |checkbox| :guilabel:`Editable`: uncheck this option to set the field read-only
   (not manually modifiable) even when the layer is in edit mode. Note that
   checking this setting doesn't override any edit limitation from the provider.
+  This option can be controlled by a data-defined property thanks to the
+  |dataDefine| :sup:`Data-defined override` button.
 * |checkbox| :guilabel:`Reuse last entered value`: remembers the last value
   entered in this field and uses it as default for the next feature being edited
   in the layer.
