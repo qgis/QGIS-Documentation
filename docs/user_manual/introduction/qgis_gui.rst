@@ -756,7 +756,7 @@ actions like:
        :guilabel:`Title Label...`
      -
      -
-     - :ref:`title_label_decoration`
+     - :ref:`titlelabel_decoration`
    * - :menuselection:`-->` |copyrightLabel|
        :guilabel:`Copyright Label...`
      -
