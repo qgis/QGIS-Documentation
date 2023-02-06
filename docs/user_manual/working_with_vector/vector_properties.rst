@@ -2243,8 +2243,8 @@ be used to enhance the appearance of the form or to display dynamically calculat
 
 * ``HTML Widget``: embeds an HTML page, the HTML source may contain the result of dynamically calculated expressions.
 * ``QML Widget``: embeds a QML page, the QML source may contain the result of dynamically calculated expressions.
-* ``Text Widget``: display a text widget which supports basic HTML markup and may contain the result of dynamically calculated expressions.
-* ``Spacer Widget``: insert an empty transparent rectangle, increasing the vertical distance between two widgets.
+* ``Text Widget``: displays a text widget which supports basic HTML markup and may contain the result of dynamically calculated expressions.
+* ``Spacer Widget``: inserts an empty transparent rectangle, increasing the vertical distance between two widgets.
 
 
 .. tip:: **Display Dynamic Content**
