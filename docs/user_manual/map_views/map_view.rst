@@ -471,7 +471,7 @@ annotations to the map canvas.
    if you're satisfied.
 
 .. index:: Title
-.. _title_label_decoration:
+.. _titlelabel_decoration:
 
 Title Label
 -----------
@@ -893,6 +893,7 @@ The properties dialog of an annotation layer provides the following tabs:
   Some of these options are accessible from the feature annotation
   :guilabel:`Symbology` properties.
 
+.. _balloon_annotations:
 
 Balloon annotations
 -------------------
