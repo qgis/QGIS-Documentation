@@ -1855,8 +1855,8 @@ Advanced parameters
      - Output raster data type. Options:
 
        .. include:: ../algs_include.rst
-          :start-after: **raster_data_types**
-          :end-before: **end_raster_data_types**
+          :start-after: **native_raster_data_types**
+          :end-before: **end_native_raster_data_types**
 
 Outputs
 .......
@@ -2009,8 +2009,8 @@ Advanced parameters
      - Output raster data type. Options:
 
        .. include:: ../algs_include.rst
-          :start-after: **raster_data_types**
-          :end-before: **end_raster_data_types**
+          :start-after: **native_raster_data_types**
+          :end-before: **end_native_raster_data_types**
 
 Outputs
 .......
@@ -2936,8 +2936,8 @@ Advanced parameters
        Options:
 
        .. include:: ../algs_include.rst
-          :start-after: **raster_data_types**
-          :end-before: **end_raster_data_types**
+          :start-after: **native_raster_data_types**
+          :end-before: **end_native_raster_data_types**
 
 Outputs
 .......
@@ -3062,8 +3062,8 @@ Advanced parameters
        Options:
 
        .. include:: ../algs_include.rst
-          :start-after: **raster_data_types**
-          :end-before: **end_raster_data_types**
+          :start-after: **native_raster_data_types**
+          :end-before: **end_native_raster_data_types**
 
 Outputs
 .......

@@ -248,13 +248,39 @@ Available options depend on the GDAL version built with QGIS
 .. **end_raster_data_types_simplified**
 
 
+Without user input (native)
+---------------------------
+
+.. **native_raster_data_types**
+
+.. The following section is included in raster based algorithms such as
+ qgisrasterbooleanand, qgisrasterbooleanor, qgisreclassifybylayer, qgisreclassifybytable
+
+
+* 0 --- Byte        (Eight bit unsigned integer (quint8))
+* 1 --- Int16       (Sixteen bit signed integer (qint16))
+* 2 --- UInt16      (Sixteen bit unsigned integer (quint16))
+* 3 --- Int32       (Thirty two bit signed integer (qint32))
+* 4 --- UInt32      (Thirty two bit unsigned integer (quint32))
+* 5 --- Float32     (Thirty two bit floating point (float))
+* 6 --- Float64     (Sixty four bit floating point (double))
+* 7 --- CInt16      (Complex Int16)
+* 8 --- CInt32      (Complex Int32)
+* 9 --- CFloat32    (Complex Float32)
+* 10 --- CFloat64   (Complex Float64)
+
+Available options depend on the GDAL version built with QGIS
+(see :menuselection:`Help --> About` menu)
+
+.. **end_native_raster_data_types**
+
+
 Without user input
 ------------------
 
 .. **raster_data_types**
 
 .. The following section is included in raster based algorithms such as
- qgisrasterbooleanand, qgisrasterbooleanor, qgisreclassifybylayer, qgisreclassifybytable,
  gdalrasterize, gdalmerge, gdalretile, gdalgriddatametrics,
  gdalgridinversedistancenearestneighbor, gdalgridinversedistance, gdalgridlinear,
  gdalgridaverage, gdalgridnearestneighbor, gdalproximity
