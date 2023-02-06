@@ -242,6 +242,9 @@ Simplified list
 * 5 --- Float32     (Thirty two bit floating point (float))
 * 6 --- Float64     (Sixty four bit floating point (double))
 
+Available options depend on the GDAL version built with QGIS
+(see :menuselection:`Help --> About` menu)
+
 .. **end_raster_data_types_simplified**
 
 
@@ -269,6 +272,9 @@ Without user input
 * 9 --- CFloat32    (Complex Float32)
 * 10 --- CFloat64   (Complex Float64)
 
+Available options depend on the GDAL version built with QGIS
+(see :menuselection:`Help --> About` menu)
+
 .. **end_raster_data_types**
 
 
@@ -295,4 +301,8 @@ With user input
 * 10 --- CFloat32   (Complex Float32)
 * 11 --- CFloat64   (Complex Float64)
 
+Available options depend on the GDAL version built with QGIS
+(see :menuselection:`Help --> About` menu)
+
 .. **end_raster_data_types_extended**
+
