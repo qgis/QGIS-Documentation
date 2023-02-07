@@ -1857,8 +1857,8 @@ Advanced parameters
        * 0 --- Byte
        * 1 --- Int16
        * 2 --- UInt16
-       * 3 --- UInt32
-       * 4 --- Int32
+       * 3 --- Int32
+       * 4 --- UInt32
        * 5 --- Float32
        * 6 --- Float64
        * 7 --- CInt16
@@ -2019,8 +2019,8 @@ Advanced parameters
        * 0 --- Byte
        * 1 --- Int16
        * 2 --- UInt16
-       * 3 --- UInt32
-       * 4 --- Int32
+       * 3 --- Int32
+       * 4 --- UInt32
        * 5 --- Float32
        * 6 --- Float64
        * 7 --- CInt16
@@ -2955,8 +2955,8 @@ Advanced parameters
        * 0 --- Byte
        * 1 --- Int16
        * 2 --- UInt16
-       * 3 --- UInt32
-       * 4 --- Int32
+       * 3 --- Int32
+       * 4 --- UInt32
        * 5 --- Float32
        * 6 --- Float64
        * 7 --- CInt16
@@ -3089,8 +3089,8 @@ Advanced parameters
        * 0 --- Byte
        * 1 --- Int16
        * 2 --- UInt16
-       * 3 --- UInt32
-       * 4 --- Int32
+       * 3 --- Int32
+       * 4 --- UInt32
        * 5 --- Float32
        * 6 --- Float64
        * 7 --- CInt16
