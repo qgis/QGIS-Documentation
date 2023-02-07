@@ -560,17 +560,9 @@ Basic parameters
      - Defines the format of the output raster file.
        Options:
 
-       * 0 --- Byte
-       * 1 --- Int16
-       * 2 --- UInt16
-       * 3 --- UInt32
-       * 4 --- Int32
-       * 5 --- Float32
-       * 6 --- Float64
-       * 7 --- CInt16
-       * 8 --- CInt32
-       * 9 --- CFloat32
-       * 10 --- CFloat64
+       .. include:: ../algs_include.rst
+          :start-after: **raster_data_types**
+          :end-before: **end_raster_data_types**
 
    * - **Merged**
      - ``OUTPUT``
@@ -932,16 +924,12 @@ Basic parameters
      - [enumeration]
 
        Default: 5
-     - Defines the format of the output raster file.
+     - Defines the data type of the output raster file.
        Options:
 
-       * 0 --- Byte
-       * 1 --- Int16
-       * 2 --- UInt16
-       * 3 --- UInt32
-       * 4 --- Int32
-       * 5 --- Float32
-       * 6 --- Float64
+       .. include:: ../algs_include.rst
+          :start-after: **raster_data_types_simplified**
+          :end-before: **end_raster_data_types_simplified**
 
    * - **Calculated**
      - ``OUTPUT``
@@ -1289,17 +1277,9 @@ Advanced parameters
      - Defines the format of the output raster file.
        Options:
 
-       * 0 --- Byte
-       * 1 --- Int16
-       * 2 --- UInt16
-       * 3 --- UInt32
-       * 4 --- Int32
-       * 5 --- Float32
-       * 6 --- Float64
-       * 7 --- CInt16
-       * 8 --- CInt32
-       * 9 --- CFloat32
-       * 10 --- CFloat64
+       .. include:: ../algs_include.rst
+          :start-after: **raster_data_types**
+          :end-before: **end_raster_data_types**
 
    * - **Build only the pyramids**
      - ``ONLY_PYRAMIDS``
