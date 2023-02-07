@@ -928,8 +928,8 @@ Basic parameters
        Options:
 
        .. include:: ../algs_include.rst
-          :start-after: **raster_data_types_simplified**
-          :end-before: **end_raster_data_types_simplified**
+          :start-after: **raster_data_types**
+          :end-before: **end_raster_data_types**
 
    * - **Calculated**
      - ``OUTPUT``

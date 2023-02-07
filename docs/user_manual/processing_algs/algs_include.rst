@@ -225,29 +225,6 @@ Notes on algorithms
 Raster data types
 =================
 
-Simplified list
----------------
-
-.. **raster_data_types_simplified**
-
-.. The following section is included in raster based algorithms such as
- gdalrastercalculator
-
-
-* 0 --- Byte        (Eight bit unsigned integer (quint8))
-* 1 --- Int16       (Sixteen bit signed integer (qint16))
-* 2 --- UInt16      (Sixteen bit unsigned integer (quint16))
-* 3 --- UInt32      (Thirty two bit unsigned integer (quint32))
-* 4 --- Int32       (Thirty two bit signed integer (qint32))
-* 5 --- Float32     (Thirty two bit floating point (float))
-* 6 --- Float64     (Sixty four bit floating point (double))
-
-Available options depend on the GDAL version built with QGIS
-(see :menuselection:`Help --> About` menu)
-
-.. **end_raster_data_types_simplified**
-
-
 Without user input (native)
 ---------------------------
 
@@ -268,6 +245,7 @@ Without user input (native)
 * 8 --- CInt32      (Complex Int32)
 * 9 --- CFloat32    (Complex Float32)
 * 10 --- CFloat64   (Complex Float64)
+* 11 --- Int8       (Eight bit signed integer (qint8))
 
 Available options depend on the GDAL version built with QGIS
 (see :menuselection:`Help --> About` menu)
@@ -283,7 +261,7 @@ Without user input
 .. The following section is included in raster based algorithms such as
  gdalrasterize, gdalmerge, gdalretile, gdalgriddatametrics,
  gdalgridinversedistancenearestneighbor, gdalgridinversedistance, gdalgridlinear,
- gdalgridaverage, gdalgridnearestneighbor, gdalproximity
+ gdalgridaverage, gdalgridnearestneighbor, gdalproximity, gdalrastercalculator
 
 
 * 0 --- Byte        (Eight bit unsigned integer (quint8))
@@ -297,6 +275,7 @@ Without user input
 * 8 --- CInt32      (Complex Int32)
 * 9 --- CFloat32    (Complex Float32)
 * 10 --- CFloat64   (Complex Float64)
+* 11 --- Int8       (Eight bit signed integer (qint8))
 
 Available options depend on the GDAL version built with QGIS
 (see :menuselection:`Help --> About` menu)
@@ -326,6 +305,7 @@ With user input
 * 9 --- CInt32      (Complex Int32)
 * 10 --- CFloat32   (Complex Float32)
 * 11 --- CFloat64   (Complex Float64)
+* 12 --- Int8       (Eight bit signed integer (qint8))
 
 Available options depend on the GDAL version built with QGIS
 (see :menuselection:`Help --> About` menu)
