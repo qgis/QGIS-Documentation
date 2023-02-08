@@ -169,13 +169,15 @@ Returns a number formatted with the locale separator for thousands. By default t
    :widths: 15 85
 
    * - Syntax
-     - format_number(number, [places=0], [language])
+     - format_number(number, [places=0], [language], [omit_group_separators=false], [trim_trailing_zeroes=false])
 
        [] marks optional arguments
    * - Arguments
      - * **number** - number to be formatted
        * **places** - integer representing the number of decimal places to truncate the string to.
        * **language** - language (lowercase, two- or three-letter, `ISO 639 language code <https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes>`_) used to format the number into a string. By default the current QGIS user locale is used.
+       * **omit_group_separators** - if set to true then group separators will not be included in the string
+       * **trim_trailing_zeroes** - if set to true then trailing zeros following the decimal point will be trimmed from the string
    * - Examples
      - * ``format_number(10000000.332,2)`` → '10,000,000.33' if e.g. the current locale is an English variant
        * ``format_number(10000000.332,2,'fr')`` → '10 000 000,33'
