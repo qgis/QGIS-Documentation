@@ -264,6 +264,7 @@ Basic parameters
    * - **Clipped (mask)**
      - ``OUTPUT``
      - [raster]
+
        Default: ``[Save to temporary file]``
      - Specification of the output raster layer.
        One of:
