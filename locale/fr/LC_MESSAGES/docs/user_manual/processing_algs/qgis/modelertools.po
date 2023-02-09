@@ -382,9 +382,20 @@ msgstr "``OUTPUT_<name of the filter>``"
 msgid "[same as input]"
 msgstr "[identique à l'entrée]"
 
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:141
+msgid "The output layers with filters (as many as there are filters)."
+msgstr "Les couches de sortie filtrées (autant qu'il y a de filtres)"
+
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:157
 msgid "``native:filter_1:OUTPUT_<name of filter>``"
 msgstr "``native:filter_1:OUTPUT_<name of filter>``"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:159
+msgid ""
+"The output layers with filtered features (as many as there are filters)."
+msgstr ""
+"Les couches de sortie avec les entités filtrées (autant qu'il y a de "
+"filtres)"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:165
 msgid "**Algorithm ID**: ``native:filter``"
@@ -411,7 +422,7 @@ msgstr "Entités ponctuelles"
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:378
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:425
 msgid "Optional"
-msgstr "Optionnel·le·s"
+msgstr "Optionnel"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:209
 msgid "``POINTS``"
@@ -420,6 +431,10 @@ msgstr "``POINTS``"
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:210
 msgid "[vector: point]"
 msgstr "[vecteur : point]"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:211
+msgid "Layer with points"
+msgstr "Couche de points"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:212
 msgid "**Line features**"
@@ -432,6 +447,10 @@ msgstr "``LINES``"
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:216
 msgid "[vector: line]"
 msgstr "[vecteur : ligne]"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:217
+msgid "Layer with lines"
+msgstr "Couche de lignes"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:218
 msgid "**Polygon features**"
@@ -446,6 +465,14 @@ msgstr "``POLYGONS``"
 msgid "[vector: polygon]"
 msgstr "[vecteur : polygone]"
 
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:223
+msgid "Layer with polygons"
+msgstr "Couche de polygones"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:224
+msgid "**Features with no geometry**"
+msgstr "**Entités sans géométrie\""
+
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:227
 msgid "``NO_GEOMETRY``"
 msgstr "``NO_GEOMETRY``"
@@ -453,6 +480,10 @@ msgstr "``NO_GEOMETRY``"
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:228
 msgid "[table]"
 msgstr "[table]"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:229
+msgid "Geometry-less vector layer"
+msgstr "Couche vectorielle non géométrique"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:234
 msgid "**Algorithm ID**: ``native:filterbygeometry``"
@@ -471,6 +502,10 @@ msgstr "``VECTOR``"
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:280
 msgid "[vector]"
 msgstr "[vecteur]"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:282
+msgid "**Raster layer**"
+msgstr "**Couche raster**"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:285
 msgid "``RASTER``"
@@ -525,15 +560,30 @@ msgstr "La couche chargée (renommée)"
 msgid "**Algorithm ID**: ``native:loadlayer``"
 msgstr "**ID de l'algorithme** : ``native:loadlayer``"
 
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:372
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:419
+msgid "**Message**"
+msgstr "**Message**"
+
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:373
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:420
 msgid "``MESSAGE``"
 msgstr "``MESSAGE``"
 
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:375
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:422
+msgid "Message to display"
+msgstr "Message à afficher"
+
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:376
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:423
 msgid "**Condition**"
 msgstr "**Condition**"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:381
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:428
+msgid "Expression to evaluate if true"
+msgstr "Expression à évaluer si vrai"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:391
 msgid "**Algorithm ID**: ``native:raiseexception``"
@@ -571,6 +621,10 @@ msgstr "La couche de sortie (renommée)"
 msgid "**Algorithm ID**: ``native:renamelayer``"
 msgstr "**ID de l'algorithme** : ``native:renamelayer``"
 
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:515
+msgid "**Use HTML**"
+msgstr "**Utiliser HTML**"
+
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:516
 msgid "``USE_HTML``"
 msgstr "``USE_HTML``"
@@ -578,6 +632,14 @@ msgstr "``USE_HTML``"
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:517
 msgid "[Boolean]"
 msgstr "[Booléen]"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:519
+msgid "Default: False"
+msgstr "Par défaut : Faux"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:520
+msgid "Use HTML formatting"
+msgstr "Utiliser le formatage HTML"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:533
 msgid "**File**"
@@ -587,9 +649,25 @@ msgstr "**Fichier**"
 msgid "**Algorithm ID**: ``native:savelog``"
 msgstr "**ID de l'algorithme** : ``native:savelog``"
 
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:564
+msgid "**Variable name**"
+msgstr "**Nom de variable**"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:567
+msgid "Name of the variable"
+msgstr "Nom de la variable"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:568
+msgid "**Variable value**"
+msgstr "**Valeur de variable**"
+
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:569
 msgid "``VALUE``"
 msgstr "``VALUE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:571
+msgid "Value to be stored"
+msgstr "Valeur à stocker"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:581
 msgid "**Algorithm ID**: ``native:setprojectvariable``"
@@ -653,13 +731,30 @@ msgstr ":ref:`qgisbuffer`"
 msgid "``DISTANCE``"
 msgstr "``DISTANCE``"
 
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:676
+msgid "**Segments**"
+msgstr "**Segments**"
+
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:677
 msgid "``SEGMENTS``"
 msgstr "``SEGMENTS``"
 
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:678
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:715
+msgid "[number]"
+msgstr "[nombre]"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:680
+msgid "Default: *5*"
+msgstr "Par défaut : *5*"
+
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:684
 msgid "``DISSOLVE``"
 msgstr "``DISSOLVE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:685
+msgid "[boolean]"
+msgstr "[booléen]"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:696
 msgid "``END_CAP_STYLE``"
@@ -672,6 +767,10 @@ msgstr "``JOIN_STYLE``"
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:714
 msgid "``MITER_LIMIT``"
 msgstr "``MITER_LIMIT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:717
+msgid "Default: 2.0"
+msgstr "Par défaut : 2.0"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:733
 msgid "**Buffer**"

@@ -2277,6 +2277,14 @@ msgstr ""
 "Renvoie la Nème valeur (0 pour la première) ou la dernière -Nème valeur (-1 "
 "pour la dernière) d'un tableau."
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:255
+msgid "array_get(array, pos)"
+msgstr "array_get(array, pos)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:258
+msgid "**pos** - the index to get (0 based)"
+msgstr "**pos** - l'index à obtenir (basé sur 0)"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:260
 msgid "``array_get(array('a','b','c'),1)`` → 'b'"
 msgstr "``array_get(array('a','b','c'),1)`` → 'b'"
@@ -2448,6 +2456,10 @@ msgstr "``array_majority(array(0,1,42,42,43,42,42), 'real_majority')`` → 42"
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:127
 msgid "array_max"
 msgstr "array_max"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:129
+msgid "Returns the maximum value of an array."
+msgstr "Renvoie la valeur maximale d'une liste."
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:135
 msgid "array_max(array)"
@@ -8860,6 +8872,22 @@ msgstr ""
 "distance de la projection perpendiculaire du 3ème point sur le segment ou "
 "son extension."
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:272
+msgid ""
+"``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), "
+"make_point(5, 5), 0))`` → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'"
+msgstr ""
+"``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), "
+"make_point(5, 5), 0))`` → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:273
+msgid ""
+"``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), "
+"make_point(5, 3), 1))`` → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'"
+msgstr ""
+"``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), "
+"make_point(5, 3), 1))`` → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:281
 msgid "make_regular_polygon"
 msgstr "make_regular_polygon"
@@ -10845,6 +10873,10 @@ msgstr "straight_distance_2d"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "straight_distance_2d(geometry)"
 msgstr "straight_distance_2d(geometry)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:16
+msgid "**geometry** - The geometry."
+msgstr "**geometry** - la géométrie"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
 msgid "``straight_distance_2d(geom_from_wkt('LINESTRING(1 0, 1 1)'))`` → 1"
@@ -12842,6 +12874,10 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:12
 msgid "%"
 msgstr "%"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:14
+msgid "Remainder of division"
+msgstr "Reste d'une division"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:20
 msgid "a % b"

@@ -10,6 +10,7 @@
 # Andrés Betancourt, 2022
 # Abigaíl García, 2022
 # Eric Armijo, 2022
+# vareli <ehespinosa@ya.com>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -18,7 +19,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-09 02:43+0000\n"
 "PO-Revision-Date: 2022-03-14 05:12+0000\n"
-"Last-Translator: Eric Armijo, 2022\n"
+"Last-Translator: vareli <ehespinosa@ya.com>, 2023\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2264,6 +2265,10 @@ msgid ""
 msgstr ""
 "Devuelve el valor N (0 para el primero) o el último valor -N (-1 para el "
 "último) de una matriz."
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:258
+msgid "**pos** - the index to get (0 based)"
+msgstr "**pos** - el índice para obtener (basado en 0)"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:260
 msgid "``array_get(array('a','b','c'),1)`` → 'b'"
@@ -6907,6 +6912,12 @@ msgstr ""
 "``geom_to_wkt(bounds(geom_from_wkt('Polygon((1 1, 0 0, -1 1, 1 1))')))`` → "
 "'Polygon ((-1 0, 1 0, 1 1, -1 1, -1 0))'"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:26
+msgid "Black lines represent the bounding boxes of each polygon feature"
+msgstr ""
+"Las líneas negras representan los cuadros delimitadores de cada unidad "
+"poligonal"
+
 #: ../../docs/user_manual/expressions/functions_list.rst:331
 msgid "Further reading: :ref:`qgisboundingboxes` algorithm"
 msgstr "Otras lecturas: algoritmo :ref:`qgisboundingboxes`"
@@ -7036,6 +7047,10 @@ msgid ""
 msgstr ""
 "``buffer($geometry, 10.5)`` → polígono de la geometría de la entidad actual "
 "almacenada con búfer de 10.5 unidades"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:74
+msgid "Buffer (in yellow) of points, line and polygon"
+msgstr "Buffer (en amarillo) de puntos, línea y polígono"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:337
 msgid "Further reading: :ref:`qgisbuffer` algorithm"
@@ -9195,6 +9210,22 @@ msgstr ""
 "la distancia de la proyección perpendicular del tercer punto en el segmento "
 "o su extensión."
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:272
+msgid ""
+"``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), "
+"make_point(5, 5), 0))`` → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'"
+msgstr ""
+"``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), "
+"make_point(5, 5), 0))`` → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:273
+msgid ""
+"``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), "
+"make_point(5, 3), 1))`` → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'"
+msgstr ""
+"``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), "
+"make_point(5, 3), 1))`` → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:281
 msgid "make_regular_polygon"
 msgstr "make_regular_polygon"
@@ -10877,6 +10908,10 @@ msgid ""
 msgstr ""
 "``rotate($geometry, 45)`` → geometría rotada 45 grados horarios alrededor  "
 "del centro de su recuadro delimitador"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:30
+msgid "Rotating features"
+msgstr "Características giratorias"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:37
 msgid "segments_to_lines"

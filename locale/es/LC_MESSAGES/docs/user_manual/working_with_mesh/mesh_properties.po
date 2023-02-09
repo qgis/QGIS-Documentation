@@ -9,6 +9,7 @@
 # Andrés Betancourt, 2022
 # Abigaíl García, 2022
 # Eric Armijo, 2022
+# vareli <ehespinosa@ya.com>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-23 02:30+0000\n"
 "PO-Revision-Date: 2022-03-14 05:12+0000\n"
-"Last-Translator: Eric Armijo, 2022\n"
+"Last-Translator: vareli <ehespinosa@ya.com>, 2023\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -305,6 +306,20 @@ msgstr "Posible visualización de Datos de Malla"
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:97
 msgid "Supported formats"
 msgstr "Formatos soportados"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:99
+msgid ""
+"QGIS accesses mesh data using the `MDAL drivers "
+"<https://github.com/lutraconsulting/MDAL>`_, and natively supports a "
+"`variety of formats <https://github.com/lutraconsulting/MDAL#supported-"
+"formats>`__. Whether QGIS can edit a mesh layer depends on the format and "
+"the mesh structure type."
+msgstr ""
+"QGIS accede a los datos de malla usando controladores `MDAL "
+"<https://github.com/lutraconsulting/MDAL>`_, y soporta nativamente una "
+"`variedad de formatos <https://github.com/lutraconsulting/MDAL#supported-"
+"formats>`__. Si QGIS puede editar una capa de malla depende del formato y "
+"del tipo de estructura de la malla."
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:104
 msgid ""
@@ -1211,6 +1226,25 @@ msgstr ""
 msgid "3D View Properties"
 msgstr "Propiedades de vista 3D"
 
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:432
+msgid ""
+"Mesh layers can be used as :ref:`terrain in a 3D map view "
+"<scene_configuration>` based on their vertices Z values. From the |3d| "
+":guilabel:`3D View` properties tab, it's also possible to render the mesh "
+"layer's dataset in the same 3D view. Therefore, the vertical component of "
+"the vertices can be set equal to dataset values (for example, level of water"
+" surface) and the texture of the mesh can be set to render other dataset "
+"values with color shading (for example velocity)."
+msgstr ""
+"Las capas de malla se pueden usar como :ref:`terreno en una vista de mapa 3D"
+" <scene_configuration>` en base a los valores de sus vértices Z. Desde el "
+"tabular de propiedades |3d| :guilabel:`Vista 3D`, es también posible "
+"renderizar el conjunto de datos de la capa de malla en la misma vista 3D. "
+"Por lo tanto, el componente vertical de los vértices puede ser igualado a "
+"los valores del conjunto de datos (por ejemplo, nivel de la superficie del "
+"agua) y la textura de la malla puede ser ajustada para renderizar otros "
+"valores del conjunto de datos con color sombreado (por ejemplo velocidad)."
+
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:444
 msgid "Mesh dataset 3D properties"
 msgstr "Propiedades 3D del conjunto de datos de malla"
@@ -1481,6 +1515,732 @@ msgstr ""
 "The |editMetadata| :guilabel:`Metadata` La pestaña le brinda opciones para "
 "crear y editar un informe de metadatos en su capa. Ver :ref:`metadatamenu` "
 "for more information."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:574
+msgid "Editing a mesh layer"
+msgstr "Editando la capa de malla"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:576
+msgid ""
+"QGIS allows to :ref:`create a mesh layer <vector_create_mesh>` from scratch "
+"or based on an existing one. You can create/modify the geometries of the new"
+" layer whom you can assign datasets afterwards. It's also possible to edit "
+"an existing mesh layer. Because the editing operation requires a frames-only"
+" layer, you will be asked to either remove any associated datasets first "
+"(make sure you have them available if they still are necessary) or create a "
+"copy (only geometries) of the layer."
+msgstr ""
+"QGIS permite :ref:`crear una capa de malla <vector_create_mesh>` desde cero "
+"en base a una existente. Usted puede  crear/modificar las geometrías de la "
+"nueva capa a la que puede asignar conjunto de datos después. También es "
+"posible editar una capa de malla existente. Debido a que la operación de "
+"edición requiera una capa de solo tramas se le preguntará si quitar "
+"cualquier conjunto de datos asociados primero (compruebe que los tiene "
+"disponibles si son necesarios después) o crear una copia (solo geometrías) "
+"de la capa."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:584
+msgid ""
+"QGIS does not allow to digitize edges on mesh layers. Only vertices and "
+"faces are mesh elements that can be created. Also not all supported mesh "
+"formats can be edited in QGIS (see `permissions "
+"<https://github.com/lutraconsulting/MDAL#supported-formats>`__)."
+msgstr ""
+"QGIS no permite digitalizar bordes en capas de malla. Solo pueden ser "
+"creados los elementos vértices y lados. Asimismo no todos los formatos de "
+"malla soportados pueden ser editados en QGIS (vea  `permisos "
+"<https://github.com/lutraconsulting/MDAL#supported-formats>`__)."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:591
+msgid "Overview of the mesh digitizing tools"
+msgstr "Visión general de las herramientas de digitalización de malla"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:593
+msgid ""
+"To interact with or edit a base mesh layer element, following tools are "
+"available."
+msgstr ""
+"Para interactuar con o editar un elemento de base de capa de mala, están "
+"disponibles las siguientes herramientas."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:595
+msgid "Tools for mesh digitizing"
+msgstr "Herramientas para digitalización de malla"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:599
+msgid "Purpose"
+msgstr "Propósito"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:600
+msgid "Location"
+msgstr "Localización"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:601
+msgid "|allEdits| :sup:`Current Edits`"
+msgstr "|allEdits| :sup:`Ediciones Actuales`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:1081
+msgid "allEdits"
+msgstr "allEdits"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:602
+msgid ""
+"Access to save, rollback or cancel changes in all or selected layers "
+"simultaneously"
+msgstr ""
+"Acceso a guardar, deshacer o cancelar los cambios en todas o en las capas "
+"seleccionadas simultáneamente"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:603
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:606
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:609
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:612
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:615
+msgid ":guilabel:`Digitizing` toolbar"
+msgstr ":guilabel:`Barra de herramientas de digitalización"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:604
+msgid "|toggleEditing| :sup:`Toggle to Edit`"
+msgstr "|toggleEditing| :sup:`Palanca para Editar`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:1149
+msgid "toggleEditing"
+msgstr "toggleEditing"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:605
+msgid "Turn on/off the layer in edit mode"
+msgstr "Conmuta on/off la capa en modo edición"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:607
+msgid "|saveEdits| :sup:`Save Edits`"
+msgstr "|saveEdits| :sup:`Guardar Edición`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:1135
+msgid "saveEdits"
+msgstr "saveEdits"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:608
+msgid "Save changes done to the layer"
+msgstr "Guarda los cambios hechos en la capa"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:610
+msgid "|undo| :sup:`Undo`"
+msgstr "|undo| :sup:`Deshacer`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:1153
+msgid "undo"
+msgstr "undo"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:611
+msgid "Undo the last change(s) - :kbd:`Ctrl+Z`"
+msgstr "Deshace el último cambio(s) - :kbd:`Ctrl+Z`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:613
+msgid "|redo| :sup:`Redo`"
+msgstr "|redo| :sup:`Rehacer`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:1129
+msgid "redo"
+msgstr "redo"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:614
+msgid "Redo the last undone action(s) - :kbd:`Ctrl+Shift+Z`"
+msgstr "Rehace la última acción(es) deshecha - :kbd:`Ctrl+Shift+Z`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:616
+msgid "|cad| :sup:`Enable Advanced Digitizing tools`"
+msgstr "|cad| :sup:`Habilitar as herramientas Avanzadas de Edición`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:1083
+msgid "cad"
+msgstr "cad"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:617
+msgid ""
+"Turn on/off the :ref:`Advanced Digitizing Panel <advanced_digitizing_panel>`"
+msgstr ""
+"Conmuta on/off el :ref:`Panel de Digitalización Avanzada "
+"<advanced_digitizing_panel>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:618
+msgid ":guilabel:`Advanced Digitizing` toolbar"
+msgstr ":guilabel:Barra de herramientas `Digitalización Avanzada`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:619
+msgid "|meshreindex| :sup:`Reindex Faces and Vertices`"
+msgstr "|meshreindex| :sup:`Reindexa Lados y Vértices`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:1107
+msgid "meshReindex"
+msgstr "meshReindex"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:620
+msgid "Recreate index and renumber the mesh elements for optimization"
+msgstr ""
+"Vuelve a crear el índice y vuelve a numerar los elementos de la malla para "
+"su optimización"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:621
+msgid ":guilabel:`Mesh` menu"
+msgstr ":guilabel:Menú `Malla`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:622
+msgid "|meshDigitizing| :sup:`Digitize Mesh Elements`"
+msgstr "|meshDigitizing| :sup:`Digitaliza Elementos de Malla`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:1103
+msgid "meshDigitizing"
+msgstr "meshDigitizing"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:623
+msgid "Select/Create vertices and faces"
+msgstr "Selecciona/Crea vértices y lados"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:624
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:627
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:630
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:633
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:636
+msgid ":guilabel:`Mesh Digitizing` toolbar"
+msgstr ":guilabel:Barra de herramietas `Digitalización de Malla`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:625
+msgid "|meshSelectPolygon| :sup:`Select Mesh Elements by Polygon`"
+msgstr ""
+"|meshSelectPolygon| :sup:`Selecciona Elementos de la Malla por Polígonos`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:1111
+msgid "meshSelectPolygon"
+msgstr "meshSelectPolygon"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:626
+msgid "Select vertices and faces overlapped by a drawn polygon"
+msgstr "Selecciona vértices y caras superpuestas de un polígono dibujado"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:628
+msgid "|meshSelectExpression| :sup:`Select Mesh Elements by Expression`"
+msgstr ""
+"|meshSelectExpression| :sup:`Selecciona Elementos de la Malla por Expresión`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:1109
+msgid "meshSelectExpression"
+msgstr "meshSelectExpression"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:629
+msgid "Select vertices and faces using an expression"
+msgstr "Selecciona vértices y lados usando una expresión"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:631
+msgid "|meshTransformByExpression| :sup:`Transform Vertices Coordinates`"
+msgstr ""
+"|meshTransformByExpression| :sup:`Transforma Coordenadas de los Vértices`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:1113
+msgid "meshTransformByExpression"
+msgstr "meshTransformByExpression"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:632
+msgid "Modify coordinates of a selection of vertices"
+msgstr "Modifica las coordenadas de una selección de vértices"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:634
+msgid "|meshEditForceByVectorLines| :sup:`Force by Selected Geometries`"
+msgstr ""
+"|meshEditForceByVectorLines| :sup:`Fuerza por Geometrías Seleccionadas`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:1105
+msgid "meshEditForceByVectorLines"
+msgstr "meshEditForceByVectorLines"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:635
+msgid "Split faces and constrain Z value using a linear geometry"
+msgstr "Dividir caras y restringir el valor a Z usando una geometría lineal"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:1087
+msgid "clearText"
+msgstr "clearText"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:1101
+msgid "locked"
+msgstr "bloqueado"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:716
+msgid "Selecting mesh elements"
+msgstr "Seleccionar elementos de malla"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:719
+msgid "Using :guilabel:`Digitize Mesh Elements`"
+msgstr "Using :guilabel:`Digitalizar Elementos de Malla`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:721
+msgid ""
+"Activate the |meshDigitizing| :sup:`Digitize Mesh Elements` tool. Hover over"
+" an element and it gets highlighted, allowing you to select it."
+msgstr ""
+"Activar |meshDigitizing| :sup:Herramienta `Digitalizar Elementos de Malla`. "
+"Pasar el cursor sobre un elemento y resaltarlo permitiéndole seleccionarlo."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:724
+msgid "Click on a vertex, and it is selected."
+msgstr "Pulsar en un vértice para seleccionarlo."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:725
+msgid ""
+"Click on the small square at the center of a face or an edge, and it gets "
+"selected. Connected vertices are also selected. Conversely, selecting all "
+"the vertices of an edge or a face also selects that element."
+msgstr ""
+"Pulsar en el cuadrado pequeño de una cara o borde y se selecciona. Los "
+"vértices conectados también son seleccionados. Por el contrario "
+"seleccionando todos los vértices de un borde o una cara también seleccionar "
+"ese elemento."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:729
+msgid ""
+"Drag a rectangle to select overlapping elements (a selected face comes with "
+"all their vertices). Press :kbd:`Alt` key if you want to select only "
+"completely contained elements."
+msgstr ""
+"Arrastre un rectángulo para seleccionar elementos superpuestos (una cara "
+"seleccionada viene con todos sus vértices). Pulse la tecla :kbd:`Alt` si "
+"desea seleccionar solo los elementos completamente contenidos."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:732
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:750
+msgid ""
+"To add elements to a selection, press :kbd:`Shift` while selecting them."
+msgstr ""
+"Para añadir elementos a una selección, pulse kbd:`Shift` mientras los "
+"selecciona."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:733
+msgid ""
+"To remove an element from the selection, press :kbd:`Ctrl` and reselect it. "
+"A deselected face will also deselect all their vertices."
+msgstr ""
+"Para quitar un elemento de una selección, pulse :kbd:`Ctrl` y vuelva a "
+"seleccionarlo. Una cara fuera de la selección también dejará fuera todos sus"
+" vértices."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:737
+msgid "Using :guilabel:`Select Mesh Elements by Polygon`"
+msgstr "Using :guilabel:`Seleccionar Elementos de Malla por Polígono`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:739
+msgid ""
+"Activate the |meshSelectPolygon| :sup:`Select Mesh Elements by Polygon` tool"
+" and:"
+msgstr ""
+"Activar la |meshSelectPolygon| :sup: Herramienta`Seleccionar Elementos de "
+"Malla por Polígono` y:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:741
+msgid ""
+"Draw a polygon (left-click to add vertex, :kbd:`Backspace` to undo last "
+"vertex, :kbd:`Esc` to abort the polygon and right-click to validate it) over"
+" the mesh geometries. Any partially overlapping vertices and faces will get "
+"selected. Press :kbd:`Alt` key while drawing if you want to select only "
+"completely contained elements."
+msgstr ""
+"Dibujar un polígono (pulsación izquierda para añadir vértice, "
+":kbd:`Backspace` para deshacer el último vértice, :kbd:`Esc` para abortar el"
+" polígono y pulsación derecha para validarlo) sobre las geometrías de la "
+"malla. Cualquiera de los vértices y caras parcialmente superpuestos será "
+"seleccionado. Pulse la tecla :kbd:`Alt` mientras dibuja si desea seleccionar"
+" solo los elementos completamente contenidos."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:746
+msgid ""
+"Right-click over the geometry of a vector layer's feature, select it in the "
+"list that pops up and any partially overlapping vertices and faces of the "
+"mesh layer will get selected. Use :kbd:`Alt` while drawing to select only "
+"completely contained elements."
+msgstr ""
+"Haga pulsación derecha sobre la geometría de una capa vectorial, "
+"selecciónela en la lista que emerge y cualquiera de los vértices o caras "
+"parcialmente superpuestas de la capa de malla será seleccionada. Use "
+":kbd:`Alt` mientras dibuja para seleccionar solo los elementos completamente"
+" contenidos."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:751
+msgid ""
+"To remove an element from the selection, press :kbd:`Ctrl` while drawing "
+"over the selection polygon."
+msgstr ""
+"Para quitar un elemento de la selección, pulse :kbd:`Ctrl` mientras dibuja "
+"sobre la selección del polígono."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:755
+msgid "Using :guilabel:`Select Mesh Elements by Expression`"
+msgstr "Usando :guilabel:`Seleccionar Elementos de Malla por Expresión`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:757
+msgid ""
+"Another tool for mesh elements selection is |meshSelectExpression| "
+":sup:`Select Mesh Elements by Expression`. When pressed, the tool opens the "
+"mesh :ref:`expression selector dialog <vector_expressions>` from which you "
+"can:"
+msgstr ""
+"Otra herramienta para seleccionar elementos de malla es "
+"|meshSelectExpression| :sup:`Seleccionar Elementos de Malla por Expresión`. "
+"Cuando se pulsa, la herramienta abre el diálogo  :ref:`selector de expresión"
+" <vector_expressions>` de malla desde el cual usted puede:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:761
+msgid "Select the method of selection:"
+msgstr "Seleccionar el método de selección:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:763
+msgid ""
+":guilabel:`Select by vertices`: applies the entered expression to vertices, "
+"and returns matching ones and their eventually associated edges/faces"
+msgstr ""
+":guilabel:`Seleccionar por vértices`: aplica la expresión introducida a los "
+"vértices y devuelve los que coinciden y sus bordes/caras eventualmente "
+"asociadas"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:765
+msgid ""
+":guilabel:`Select by faces`: applies the entered expression to faces, and "
+"returns matching ones and their associated edges/vertices"
+msgstr ""
+":guilabel:`Seleccionar por caras`: aplica la expresión introducida a las "
+"caras y devuelve las que coincidan y sus bordes/vértices asociados"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:767
+msgid ""
+"Write the expression of selection. Depending on the selected method, "
+"available functions in the :ref:`Meshes group <expression_function_meshes>` "
+"will be filtered accordingly."
+msgstr ""
+"Escribir la expresión de selección. Dependiendo del método seleccionado las "
+"funciones disponibles en el :ref:`Grupo de mallas "
+"<expression_function_meshes>` será filtrado en consecuencia."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:770
+msgid "Run the query by setting how the selection should behave and pressing:"
+msgstr ""
+"Ejecute la consulta configurando como debe comportarse la selección y "
+"pulsando:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:772
+msgid ""
+"|expressionSelect| :guilabel:`Select`: replaces any existing selection in "
+"the layer"
+msgstr ""
+"|expressionSelect| :guilabel:`Seleccionar`: reemplaza cualquier selección "
+"existente en la capa"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:1097
+msgid "expressionSelect"
+msgstr "expressionSelect"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:774
+msgid "|selectAdd| :guilabel:`Add to current selection`"
+msgstr "|selectAdd| :guilabel:`Añadir a la selección actual`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:1137
+msgid "selectAdd"
+msgstr "selectAdd"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:775
+msgid "|selectRemove| :guilabel:`Remove from current selection`"
+msgstr "|selectRemove| :guilabel:`Quitar de la selección actual`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:1139
+msgid "selectRemove"
+msgstr "selectRemove"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:778
+msgid "Modifying mesh elements"
+msgstr "Modificando elementos de la malla"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:781
+msgid "Adding vertices"
+msgstr "Añadiendo vértices"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:783
+msgid "To add vertices to a mesh layer:"
+msgstr "Para añadir vértices a una capa de malla:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:785
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:804
+msgid "Press the |meshDigitizing| :sup:`Digitize mesh elements` button"
+msgstr "Pulse el botón |meshDigitizing| :sup:`Digitalizar elementos de malla`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:786
+msgid ""
+"A :guilabel:`Vertex Z value` widget appears on the top right corner of the "
+"map canvas. Set this value to the Z coordinate you would like to assign to "
+"the subsequent vertices"
+msgstr ""
+"Aparece un widget :guilabel:`Valor del vértice Z` en la esquina superior "
+"derecha del vista del mapa. Establezca este valor en la coordenada Z que le "
+"gustaría asignar a los vértices posteriores"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:789
+msgid "Then double-click:"
+msgstr "Luego haga doble pulsación:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:791
+msgid ""
+"outside a face: adds a \"free vertex\", that is a vertex not linked to any "
+"face. This vertex is represented by a red dot when the layer is in editing "
+"mode."
+msgstr ""
+"fuera de una cara: añada un \"vértice libre\", que es un vértice no enlazado"
+" a ninguna cara. Este vértice se representa por un punto rojo cuando la capa"
+" está en modo edición."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:794
+msgid ""
+"on the edge of existing face(s): adds a vertex on the edge, splits the "
+"face(s) into triangles connected to the new vertex"
+msgstr ""
+"en el borde de una cara(s) existente: añada un vértice en el borde, divide "
+"la(s) cara(s) en triángulos conectados al nuevo vértice"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:796
+msgid ""
+"inside a face: splits the face into triangles whose edges connect the "
+"surrounding vertices to the new vertex."
+msgstr ""
+"dentro de una cara: divide la cara en triángulos cuyos bordes conectan los "
+"vértices que rodean al nuevo vértice."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:800
+msgid "Adding faces"
+msgstr "Añadiendo caras"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:802
+msgid "To add faces to a mesh layer:"
+msgstr "Para añadir cara a un capa de malla:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:805
+msgid ""
+"A :guilabel:`Vertex Z value` widget appears on the top right corner of the "
+"map canvas. Set this value to the Z coordinate you would like to assign to "
+"the subsequent vertices."
+msgstr ""
+"Aparece un widget :guilabel:`Valor del vértice Z` en la esquina superior "
+"derecha del vista del mapa. Establezca este valor en la coordenada Z que le "
+"gustaría asignar a los vértices posteriores."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:808
+msgid ""
+"Double-click to add a first vertex or move the cursor next to a vertex."
+msgstr ""
+"Haga doble pulsación para añadir el primer vértice o mueva el cursos al lado"
+" de un vértice."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:809
+msgid ""
+"Click the small triangle that appears next to the vertex and move the cursor"
+" to the next vertex position; you can snap to existing vertex or double-"
+"click to add a new one."
+msgstr ""
+"Pulse el pequeño triángulo que aparece cerca del vértice y mueva el cursor a"
+" la siguiente posición de vértice, puede ajustar se un vértice existente o "
+"hacer doble pulsación para añadir uno nuevo."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:812
+msgid ""
+"Proceed as above to add as many vertices you wish for the face. Press "
+":kbd:`Backspace` button to undo the last vertex."
+msgstr ""
+"Proceda igual que lo anterior para añadir tantos vértices como desee por "
+"cara. Pulse el botón :kbd:`Retroceso` para deshacer el último vértice."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:814
+msgid ""
+"While moving the mouse, a rubberband showing the shape of the face is "
+"displayed. If it is shown in green, then the expected face is valid and you "
+"can right-click to add it to the mesh. If in red, the face is not valid "
+"(e.g. because it self-intersects, overlaps an existing face or vertex, ...) "
+"and can't be added. You'd need to fix the geometry."
+msgstr ""
+"Mientras mueve el ratón se muestra una banda elástica que muestra la forma "
+"de la cara. Sí se muestra en verde la cara esperada es válida y puede pulsar"
+" el botón derecho para añadirla a la malla. Sí está en rojo la cara no es "
+"válida (e.g. porque se auto-cruza, se superpone a una cara o vértice "
+"existente, ...) y no puede ser añadida. Se necesita corregir la geometría."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:819
+msgid "Press :kbd:`Esc` to abort the face digitizing."
+msgstr "Pulse :kbd:`Esc` para abortar la digitalización de la cara."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:820
+msgid "Right-click to validate the face."
+msgstr "Pulsación derecha para validar la cara."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:825
+msgid "Removing mesh elements"
+msgstr "Quitando elementos de la malla"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:827
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:848
+msgid ":ref:`Select the target elements <select_mesh_elements>`"
+msgstr ":ref:`Seleccione los elementos objetivo <select_mesh_elements>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:828
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:849
+msgid "Enable the |meshDigitizing| :sup:`Digitize mesh elements` tool"
+msgstr ""
+"Habilite la herramienta |meshDigitizing| :sup:`Digitalizar elementos de la "
+"malla`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:829
+msgid "Right-click and select:"
+msgstr "Pulse botón derecho y seleccione:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:831
+msgid ""
+":guilabel:`Remove Selected Vertices and Fill Hole(s)` or press "
+":kbd:`Ctrl+Del`: removes vertices and linked faces and fills the hole(s) by "
+"triangulating from the neighbor vertices"
+msgstr ""
+":guilabel:`Quitar los Vértices Seleccionados y Rellenar lo(s) Agujero(s)` o "
+"pulse :kbd:`Ctrl+Del`: quita los vértices y caras enlazadas y rellena lo(s) "
+"agujero(s) triangulando desde los vértices vecinos"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:834
+msgid ""
+":guilabel:`Remove Selected Vertices Without Filling Hole(s)` or press "
+":kbd:`Ctrl+Shift+Del`: removes vertices and linked faces and do not fill "
+"hole(s)"
+msgstr ""
+":guilabel:`Quitar los Vértices Seleccionados Sin Rellenar lo(s) Agujero(s)` "
+"o pulse :kbd:`Ctrl+Shift+Del`: quita los vértices y caras enlazadas y no "
+"rellena lo(s) agujero(s)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:861
+msgid "Transforming mesh vertices"
+msgstr "Transformando vértices de la malla"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:863
+msgid ""
+"The |meshTransformByExpression| :sup:`Transform Vertices Coordinates` tool "
+"gives a more advanced way to move vertices, by editing their X, Y and/or Z "
+"coordinates thanks to expressions."
+msgstr ""
+"La herramienta |meshTransformByExpression| :sup:`Transformar Coordenadas de "
+"los Vértices` da una manera más avanzada de mover los vértices editando sus "
+"coordenadas X, Y y/o Z gracias a expresiones."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:867
+msgid "Select the vertices you want to edit the coordinates"
+msgstr "Seleccionar los vértices donde desea editar las coordenadas"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:868
+msgid ""
+"Press |meshTransformByExpression| :sup:`Transform Vertices Coordinates`. A "
+"dialog opens with a mention of the number of selected vertices. You can "
+"still add or remove vertices from the selection."
+msgstr ""
+"Pulse |meshTransformByExpression| :sup:`Transformas las Coordenadas de los "
+"Vértices`. Se abre un diálogo con una mención del número de vértices "
+"seleccionados. Todavía puede añadir o quitar vértices de la selección."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:871
+msgid ""
+"Depending on the properties you want to modify, you need to check the "
+":guilabel:`X coordinate`, :guilabel:`Y coordinate` and/or :guilabel:`Z "
+"value`."
+msgstr ""
+"Dependiendo de las las propiedades que desee modificar tiene que comprobar "
+":guilabel:`Coordenada X`, :guilabel:`Coordenada Y` y/o :guilabel:`Valor Z`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:873
+msgid ""
+"Then enter the target position in the box, either as a numeric value or an "
+"expression (using the |expression| :sup:`Expression dialog`)"
+msgstr ""
+"Después introduzca la posición objetivo en la caja, bien como un valor "
+"numérico o una expresión (usando el |expression| :sup:`Diálogo expresión`)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:1095
+msgid "expression"
+msgstr "expresión"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:875
+msgid ""
+"With the |vertexCoordinates| :sup:`Import Coordinates of the Selected "
+"Vertex` pressed, the X, Y and Z boxes are automatically filled with its "
+"coordinates whenever a single vertex is selected. A convenient and quick way"
+" to adjust vertices individually."
+msgstr ""
+"Con |vertexCoordinates| :sup:`Importar las Coordenadas del Vértice "
+"Seleccionado` pulsado las cajas X, Y y Z son automáticamente rellenadas con "
+"sus coordenadas siempre que haya un solo vértice seleccionado. Una manera "
+"conveniente y rápida de ajustar los vértices individualmente."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:1155
+msgid "vertexCoordinates"
+msgstr "vertexCoordinates"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:879
+msgid ""
+"Press :guilabel:`Preview Transform` to simulate the vertices new location "
+"and preview the mesh with transformation."
+msgstr ""
+"Press :guilabel:`Vista Previa de la Transformación` para simular la nueva "
+"localización de los vértices y previsualizar la malla con la transformación."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:882
+msgid ""
+"If the preview is green, transformed mesh is valid and you can apply the "
+"transformation."
+msgstr ""
+"Si la vista previa es verde, la malla transformada es válida y usted puede "
+"aplicar la transformación."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:884
+msgid ""
+"If the preview is red, the transformed mesh is invalid and you can not apply"
+" the transformation until it is corrected."
+msgstr ""
+"Si la vista previa está en rojo, la malla transformada no es válida y usted "
+"no puede aplicar la transformación hasta que se corrija."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:886
+msgid ""
+"Press :guilabel:`Apply Transform` to modify the selected coordinates for the"
+" set of vertices."
+msgstr ""
+"Press :guilabel:`Aplicar la Transformación` para modificar las coordenadas "
+"seleccionadas para el conjunto de los vértices."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:989
+msgid "Reindexing meshes"
+msgstr "Volviendo a indexar mallas"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:991
+msgid ""
+"During edit, and in order to allow quick undo/redo operations, QGIS keeps "
+"empty places for deleted elements, which may lead to growing memory use and "
+"inefficient mesh structuring. The :menuselection:`Mesh -->` |meshReindex| "
+":menuselection:`Reindex Faces and Vertices` tool is designed to remove these"
+" holes and renumber the indices of faces and vertices so that they are "
+"continuous and somewhat reasonably ordered. This optimizes relation between "
+"faces and vertices and increases the efficiency of calculation."
+msgstr ""
+"Durante la edición, con el objetivo de permitir un rápido hacer/deshacer de "
+"la operaciones, QGIS mantiene sitios vacíos para los elementos borrados, que"
+" puede llevar a un crecimiento del uso de memoria y una estructuración de "
+"malla ineficiente. La herramienta :menuselection:`Malla -->` |meshReindex| "
+":menuselection:`Volver a Indexar Caras y Vértices` está diseñada para quitar"
+" estos agujeros y re-numerar los índices de caras y vértices de modo que "
+"sean continuos y de alguna manera razonablemente ordenados. Estos optimiza "
+"la relación entre caras y véŕtices e incrementa la eficiencia de cálculo."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:1000
+msgid ""
+"The |meshReindex| :guilabel:`Reindex Faces and Vertices` tool saves the "
+"layer and clear the undo/redo stacks, disabling any rollback."
+msgstr ""
+"La herramienta |meshReindex| :guilabel:`Volver a Indexar Caras y Vértices` "
+"tool sguarda la capa y borra las pilas de deshacer/rehacer, deshabilitando "
+"cualquier reversión."
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:1007
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:1018

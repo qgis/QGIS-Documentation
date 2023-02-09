@@ -2,24 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2022
+# Zoltan Siki <siki.zoltan@epito.bme.hu>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 10:21+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"POT-Creation-Date: 2022-11-09 02:43+0000\n"
+"PO-Revision-Date: 2022-03-14 05:11+0000\n"
+"Last-Translator: Zoltan Siki <siki.zoltan@epito.bme.hu>, 2023\n"
 "Language-Team: Hungarian (https://www.transifex.com/qgis/teams/6144/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.11.0\n"
 "Language: hu\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -27,8 +28,273 @@ msgstr ""
 msgid "Editing"
 msgstr "Szerkesztés"
 
-#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:831
-#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:833
-#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1580
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:12
+msgid ""
+"QGIS has various capabilities for editing OGR, SpatiaLite, PostGIS, MSSQL "
+"Spatial and Oracle Spatial vector layers and tables."
+msgstr ""
+"A QGIS változatos lehetőségeket biztosít OGR, SpatiaLite, PostGIS, MSSQL és "
+"ORacle Spatial vektor rétegek és táblázatok szerkesztésére."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:16
+msgid ""
+"The procedure for editing GRASS layers is different - see section "
+":ref:`grass_digitizing` for details."
+msgstr ""
+"GRASS rétegek szerkesztési eljárása eltérő - lásd a :ref:`grass_digitizing` "
+"fejezetet a részletekért."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:21
+msgid "**Concurrent Edits**"
+msgstr "**Párhuzamos szerkesztés**"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:23
+msgid ""
+"This version of QGIS does not track if somebody else is editing the same "
+"feature at the same time as you are. The last person to save the edits wins."
+msgstr ""
+"A QGIS ezen verziója nem követi, hogy valaki más ugyanazt az elemet "
+"szerkeszti egyidőben amit ön. A szerkesztéseit utolsóként elmentő személy "
+"győz."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:29
+msgid "**Validating Edits**"
+msgstr "**Szerkesztések ellenőrzése**"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:31
+msgid ""
+"Continuous validation can be activated on a layer basis in the "
+":menuselection:`Layer Properties --> Digitizing` tab. More at "
+":ref:`digitizingmenu`."
+msgstr ""
+"Rétegenként a folyamatos ellenőrzés bekapcsolható a :menuselection:`Layer "
+"Properties --> Digitizing`  fülön. Továbbiak :ref:`digitizingmenu`."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:41
+msgid "Setting the snapping tolerance and search radius"
+msgstr "Illesztési tolerancia és keresési sugár beállítása"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:43
+msgid ""
+"Under the :menuselection:`Settings --> Options... --> Digitizing` menu, QGIS"
+" provides a number of parameters to configure default behaviour of editing "
+"tools. More information at :ref:`digitizing_options`."
+msgstr ""
+"A  :menuselection:`Settings --> Options... --> Digitizing`  menüben  több "
+"paramétert biztosít a szerkesztő eszközök viselkedésének konfigurálásához. "
+"További információk :ref:`digitizing_options`."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:47
+msgid ""
+"For optimal and accurate editing of vector layer geometries, we need to set "
+"an appropriate value of snapping tolerance and search radius for features "
+"vertices. The :guilabel:`Snapping` group provides related options, namely "
+"handling of the snapping tolerance and the search radius."
+msgstr ""
+"A vektor rétegek optimális és pontos szerkesztéséhez be kell állítanunk az "
+"illesztési tolerancia és a keresési sugár megfelelő értékét a töréspont "
+"elemekhez. A :guilabel:`Snapping` csoport biztosítja a kapcsolódó "
+"beállításokat, nevezetesen az illesztési toleranciát és a keresési sugarat."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:52
+msgid ""
+"Snapping tolerance: When you add a new vertex or move an existing one, the "
+"snapping tolerance is the distance QGIS uses to search for the closest "
+"vertex or segment you are trying to connect to. If you are not within the "
+"snapping tolerance, QGIS will leave the vertex where you release the mouse "
+"button, instead of snapping it to an existing vertex or segment."
+msgstr ""
+"Illesztési tolerancia: Amikor egy új töréspontot ad meg vagy egy létezőt "
+"mozgat, az illesztési tolerancia az a távolság, amit a QGIS használ a "
+"legközelebbi töréspont vagy szakasz kereséséhez, amihez csatlakozni próbál. "
+"Ha nincs az illesztési tolerancián belül, akkor a QGIS az egérgomb "
+"felengedési helyén hagyja a töréspontot, ahelyett hogy illesztené azt egy "
+"létező törésponthoz vagy szakaszhoz."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:59
+msgid ""
+"The tolerance setting affects all tools that work with snapping and applies "
+"by default to new layers and projets. It can however be overridden at layer "
+"level (see :ref:`snapping_options`)."
+msgstr ""
+"A tolerancia beállítás az összes illesztéssel dolgozó eszközt érinti és "
+"alapértelmez szerint új rétegekre vagy projektekre vonatkozik. Bár réteg "
+"szinten felülírható (lásd :ref:`snapping_options`)."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:65
+msgid ""
+"Search radius: :guilabel:`Search radius for vertex edits` is the distance "
+"QGIS uses to ``search`` for the vertex to select when you click on the map. "
+"If you are not within the search radius, QGIS will not find and select any "
+"vertex for editing."
+msgstr ""
+"Keresési sugár: :guilabel:`Search radius for vertex edits` az a távolság "
+"amit a QGIS használ a töréspontok kiválasztásához amikor a térképre kattint."
+" Ha nincs a keresési sugáron belül , a QGIS egy töréspontot sem talál és "
+"egyiket sem választja ki szerkesztésre."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:71
+msgid ""
+"Snap tolerance and search radius are set in ``map units`` or ``pixels``. You"
+" may need to experiment to get them right. If you specify a too big "
+"tolerance, QGIS may snap to the wrong vertex, especially if you are dealing "
+"with a large number of vertices in close proximity. The smaller the search "
+"radius, the more difficult it will be to hit what you want to move."
+msgstr ""
+"Az illesztési tolerancia és a keresési sugár ``térképi egységekben`` vagy "
+"``pixelekben`` állítható be. Lehet, hogy kísérleteznie kell a megfelelő "
+"érték megtalálásához. Ha túl nagy toleranciát ad meg, a QGIS rossz "
+"törésponthoz illeszthet, különösen akkor, ha nagy számú egymáshoz közeli "
+"törésponttal van dolgunk. Minél kisebb a keresési sugár, annál nehezebb lesz"
+" eltalálni a mozgatandó töréspontot."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:82
+msgid "Snapping and Digitizing Options"
+msgstr "Illesztési és digitalizálási beállítások"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:91
+msgid ""
+"By default, snapping is disabled in a project until you press the |snapping|"
+" :sup:`Enable snapping` button or press :kbd:`S`. The snapping mode, "
+"tolerance value, and units can also be configured in this toolbar."
+msgstr ""
+"Alapértelmezés szerint az illesztés ki van kapcsolva a projektben ameddig "
+"megnyomja a |snapping| :sup:`Enable snapping` gombot vagy megnyomja az "
+"kbd:`S`.t. Az illesztési mód, tolerancia és egységek is beállíthatók ebben "
+"az eszközsorban."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2115
+msgid "snapping"
+msgstr "illesztés"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:97
+msgid "Snapping properties"
+msgstr "Illesztési tulajdonságok"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:99
+msgid "There are three options to select the layer(s) to snap to:"
+msgstr "Három lehetőség van a réteg kiválasztására amihez illesztünk:"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:101
+msgid ""
+":guilabel:`All layers`: quick setting for all visible layers in the project "
+"so that the pointer snaps to all vertices and/or segments. In most cases, it"
+" is sufficient to use this snapping mode, but beware when using it for "
+"projects with many vector layers, as it may affect performance."
+msgstr ""
+":guilabel:`All layers`: gyors beállítás az összes látható rétegre a "
+"projektben, így az egér mutatót az összes törésponthoz és szakaszhoz "
+"illeszti. A legtöbb esetben ennek az illesztési módnak a használata "
+"megfelelő, de vigyázzon, ha sok vektor réteget tartalmazó projekttel "
+"használja, mivel ez hatással lehet a teljesítményre."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:106
+msgid ""
+":guilabel:`Current layer`: only the active layer is used, a convenient way "
+"to ensure topological consistency within the layer being edited."
+msgstr ""
+"guilabel:`Current layer`: csak az aktív réteget használja, kényelmes módja a"
+" szerkesztett rétegen belül a  topológiai konzisztencia biztosítására."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:108
+msgid ""
+":guilabel:`Advanced Configuration`: allows you to enable and adjust snapping"
+" mode, tolerance and units, overlaps and scales of snapping on a layer basis"
+" (see :numref:`figure_edit_snapping`). If you need to edit a layer and snap "
+"its vertices to another, make sure that the target layer is checked and "
+"increase the snapping tolerance to a higher value. Snapping will not occur "
+"to a layer that is not checked in the snapping options dialog."
+msgstr ""
+":guilabel:`Bővített beállítások`: rétegenként lehetővé teszi az illesztés "
+"bekapcsolását és a mód, tolerancia és mértékegysége, átfedés és méretarány "
+"beállítását (lásd :numref:`figure_edit_snapping``). Ha egy réteget kell "
+"szerkesztenünk és egy másik töréspontjaihoz akarjuk illeszteni, győződjön "
+"meg róla, hogy a a cél réteget kijelölte és növelje meg az illesztési "
+"toleranciát egy nagyobb értékre. Az illesztés nem történik meg azokra a "
+"rétegekre, melyeket nem jelölt ki az illesztési beállítások "
+"párbeszédablakban."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:117
+msgid ""
+"As for snapping mode, you can choose between ``Vertex``, ``Segment``, "
+"``Area``, ``Centroid``, ``Middle of Segments`` and ``Line Endpoints``."
+msgstr ""
+"Az illesztési módnál a ``Töréspont``, ``Szakasz``, ``Terület``, "
+"``Centrális``, ``Szakaszok közepe`` és ``Vonal végpontok`` közül választhat."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:122
+msgid "QGIS will show different *snap* icons depending on the kind of *snap*:"
+msgstr ""
+"A QGIS különböző *illesztés* ikont jelenít meg az *illesztés* típus "
+"függvényében:"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:129
+msgid "Snapping to a vertex: box icon"
+msgstr "Törésponthoz illesztés: négyzet ikon"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:130
+msgid "Snapping to a segment: hourglass icon"
+msgstr "Szakaszhoz illesztés: homokóra ikon"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:131
+msgid "Snapping to an intersection: cross icon"
+msgstr "Metszéshez illesztés: kereszt ikon"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:134
+msgid ""
+"Note that it is possible to change the color of these icons in the "
+":guilabel:`Digitizing` part of the global settings."
+msgstr ""
+"Vegye figyelembe, hogy ezeknek az ikonoknak a színét meg lehet változtatni a"
+" globális beállítások :guilabel:`Digitizing`  részén."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:137
+msgid ""
+"The tolerance values can be set either in the project's ``map units`` or in "
+"``pixels``. The advantage of choosing ``pixels`` is that it keeps the "
+"snapping constant at different map scales. 10 to 12 pixels is normally a "
+"good value, but it depends on the DPI of your screen. Using map units allows"
+" the tolerance to be related to real ground distances. For example, if you "
+"have a minimum distance between elements, this option can be useful to "
+"ensure that you don’t add vertices too close to each other."
+msgstr ""
+"A tolerancia érték vagy a projekt ``térképi egységeiben`` vagy "
+"``pixelekben`` állítható be. A ``pixelek`` választásának előnye, hogy az "
+"illesztést a méretaránytól függetlenül állandó értéken tartja. 10-12 pixel "
+"általában jó érték, de függ a képernyő DPI értékétől. A térképi egységek "
+"használata lehetővé teszi, hogy a toleranciát valós terepi méretekhez kösse."
+" Például, ha van az elemek között egy minimális távolság, ez a beállítás "
+"biztosíthatja, hogy ne adjon meg csomópontokat egymáshoz túl közel."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:154
+msgid "Snapping options (Advanced Configuration mode)"
+msgstr "Illesztési beállítások (bővített beállítások mód)"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:158
+msgid ""
+"By default, only visible features (the features whose style is displayed, "
+"except for layers where the symbology is \"No symbols\") can be snapped. You"
+" can enable the snapping on invisible features by checking |unchecked| "
+":guilabel:`Enable snapping on invisible features` under the "
+":menuselection:`Settings --> Options --> Digitizing` tab."
+msgstr ""
+"Alapértelmezés szerint csak a látható elemekhez illeszthetünk (azok az "
+"elemek, melyek stílusa megjelenik, kivéve azokat a rétegeket, ahol a "
+"jelrendszer \"Nincsenek szimbólumok\"). Engedélyezheti az illesztést nem "
+"látható elemekhez is az |unchecked| :guilabel:`Illesztés engedélyezése a "
+"láthatatlan elemekhez` bekapcsolásával a :menuselection:`Beállítások --> "
+"Beállítások --> Digitalizálás` fülön."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:174
+msgid "Enable snapping on intersections"
+msgstr "Metszéshez illesztés engedéklyezése"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:184
+msgid "Limit snapping to a scale range"
+msgstr "Illesztés korlátozása egy méretarány tartományra"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:893
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:895
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1697
 msgid "\\"
 msgstr "\\"
