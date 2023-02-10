@@ -493,10 +493,11 @@ QGIS code base offers a mechanism to declare, register and use settings.
 * settings should be defined using one of the available implementations
   (:api:`QgsSettingsEntryString <classQgsSettingsEntryString.html>`,
   :api:`QgsSettingsEntryInteger <classQgsSettingsEntryInteger.html>`, …).
+* settings must be integrated in the settings tree (`QgsSettingsTree`),
+  this is automatically done when using the constructor with a parent node
+  (`QgsSettingsTreeNode`).
 * they are declared as ``const static`` either in a dedicated class or
   in the registry directly (core, gui, app, …).
-* they always must be added to the registry using ``addSettingsEntry`` method
-  of  :api:`QgsSettingsRegistry <classQgsSettingsRegistry.html>`.
 * the setting key should be using a ``kebab-case``.
 
 Coding Style
