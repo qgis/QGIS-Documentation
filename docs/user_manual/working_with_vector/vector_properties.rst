@@ -2228,7 +2228,8 @@ directly linked to a particular field (like the HTML/QML widgets or the
    and you can drag and drop them as with the other fields.
    The associated action will be embedded at the chosen place
    in the current layer's form.
-#. Further customize the form by adding one or more widgets from :guilabel:`Other Widgets` (see :ref:`Other Widgets <other_widgets>`)
+#. Further customize the form by adding one or more widgets from :guilabel:`Other Widgets`
+   (see :ref:`other_widgets`)
 #. Apply the layer's properties dialog
 #. Open a feature attribute form (eg, using the |identify| :sup:`Identify features`
    tool) and it should display the new form.
@@ -2238,18 +2239,19 @@ directly linked to a particular field (like the HTML/QML widgets or the
 Other Widgets
 ^^^^^^^^^^^^^
 
-The drag and drop designer offers a number of widgets that are not connected to a particular field, they can
-be used to enhance the appearance of the form or to display dynamically calculated values.
+The drag and drop designer offers a number of widgets that are not connected to a particular field.
+They can be used to enhance the appearance of the form or to display dynamically calculated values.
 
-* ``HTML Widget``: embeds an HTML page, the HTML source may contain the result of dynamically calculated expressions.
-* ``QML Widget``: embeds a QML page, the QML source may contain the result of dynamically calculated expressions.
-* ``Text Widget``: displays a text widget which supports basic HTML markup and may contain the result of dynamically calculated expressions.
-* ``Spacer Widget``: inserts an empty transparent rectangle, increasing the vertical distance between two widgets.
+* :guilabel:`HTML Widget`: embeds an HTML page, the HTML source may contain the result of dynamically calculated expressions.
+* :guilabel:`QML Widget`: embeds a QML page, the QML source may contain the result of dynamically calculated expressions.
+* :guilabel:`Text Widget`: displays a text widget which supports basic HTML markup
+  and may contain the result of dynamically calculated expressions.
+* :guilabel:`Spacer Widget`: inserts an empty transparent rectangle, increasing the vertical distance between two widgets.
 
 
 .. tip:: **Display Dynamic Content**
 
-   The widgets mentioned above (except the Spacer Widget) support expressions that can be used to display
+   The widgets mentioned above (except the :guilabel:`Spacer Widget`) support expressions that can be used to display
    content that dynamically changes whenever another field in the form changes.
    This can be achieved using the ``current_value('field_name')`` function in the expression to examine
    the value of another field.
