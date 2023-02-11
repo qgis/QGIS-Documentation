@@ -5,8 +5,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
 # Michel Zevort <michel.zevort@developpement-durable.gouv.fr>, 2022
+# Harrissou Sant-anna, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,14 +15,14 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-12 00:23+0100\n"
 "PO-Revision-Date: 2022-03-14 05:09+0000\n"
-"Last-Translator: Michel Zevort <michel.zevort@developpement-durable.gouv.fr>, 2022\n"
+"Last-Translator: Harrissou Sant-anna, 2023\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
 "Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/pyqgis_developer_cookbook/intro.rst:8
 msgid "Introduction"
@@ -440,11 +440,12 @@ msgid ""
 "<qgis.core.QgsApplication.initQgis>` method."
 msgstr ""
 "Une fois le chemin du préfixe configuré, nous enregistrons une référence à "
-":class:`QgsApplication` dans la variable ``qgs``. Le second argument est "
-"défini à :const:`False`, spécifiant que nous ne prévoyons pas d'utiliser "
-"l'interface graphique puisque nous écrivons un script autonome. Avec "
-"``QgsApplication`` configuré, nous chargeons les fournisseurs de données "
-"QGIS et le registre des couches en appelant la méthode :meth:`initQgis() `."
+":class:`QgsApplication <qgis.core.QgsApplication>` dans la variable ``qgs``."
+" Le second argument est défini à :const:`False`, spécifiant que nous ne "
+"prévoyons pas d'utiliser l'interface graphique puisque nous écrivons un "
+"script autonome. Avec ``QgsApplication`` configuré, nous chargeons les "
+"fournisseurs de données QGIS et le registre des couches en appelant la "
+"méthode :meth:`initQgis() <qgis.core.QgsApplication.initQgis>`."
 
 #: ../../docs/pyqgis_developer_cookbook/intro.rst:271
 msgid ""
