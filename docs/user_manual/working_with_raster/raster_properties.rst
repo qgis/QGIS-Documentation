@@ -894,7 +894,7 @@ QGIS Server Properties
 ======================
 
 The |overlay| :guilabel:`QGIS Server` tab helps you configure
-settings of the data when published on a server.
+settings of the data when published by :ref:`QGIS Server <QGIS-Server-manual>`.
 The configuration concerns:
 
 * :guilabel:`Description`: provides information to describe the data,
@@ -908,6 +908,10 @@ The configuration concerns:
   and in ``text/plain`` or ``text/xml`` :guilabel:`Format`
 * :guilabel:`Legend URL`: a :guilabel:`URL` for the legend,
   in either ``image/png`` or ``image/jpeg`` :guilabel:`Format`
+
+.. note::
+  When the raster layer you want to publish is already provided by a web service,
+  further :ref:`properties <wms_server_properties>` are available for setting.
 
 .. _figure_raster_server:
 
