@@ -6,7 +6,7 @@
 
 .. only:: html
 
-.. contents::
+   .. contents::
       :local:
 
 .. The aim of this chapter is to describe and add information on particular
