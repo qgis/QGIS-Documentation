@@ -893,9 +893,25 @@ layout legend <layout_legend_item>`. These options include:
 QGIS Server Properties
 ======================
 
-From the |overlay| :guilabel:`QGIS Server` tab, information can
-be provided for :guilabel:`Description`, :guilabel:`Attribution`,
-:guilabel:`Metadata URL` and :guilabel:`Legend URL`.
+The |overlay| :guilabel:`QGIS Server` tab helps you configure
+settings of the data when published by :ref:`QGIS Server <QGIS-Server-manual>`.
+The configuration concerns:
+
+* :guilabel:`Description`: provides information to describe the data,
+  such as :guilabel:`Short name`, :guilabel:`Title`, :guilabel:`Summary`,
+  a :guilabel:`List of Keywords`,  and a :guilabel:`Data URL`
+  whose :guilabel:`Type` can be in ``text/html``, ``text/plain`` or ``application/pdf``.
+* :guilabel:`Attribution`: a :guilabel:`Title` and :guilabel:`URL`
+  to identify who provides the data
+* :guilabel:`Metadata URL`: a list of :guilabel:`URL` for the metadata
+  that can be of ``FGDC`` or ``TC211`` :guilabel:`Type`,
+  and in ``text/plain`` or ``text/xml`` :guilabel:`Format`
+* :guilabel:`Legend URL`: a :guilabel:`URL` for the legend,
+  in either ``image/png`` or ``image/jpeg`` :guilabel:`Format`
+
+.. note::
+  When the raster layer you want to publish is already provided by a web service,
+  further :ref:`properties <wms_server_properties>` are available for setting.
 
 .. _figure_raster_server:
 

@@ -441,28 +441,37 @@ UMN Mapserver below to support GetFeatureInfo in GML format.
   # in WEB METADATA define formats (example):
   "wms_getfeatureinfo_formatlist" "OGRGML,text/html"
 
-.. _`ogc-wms-properties`:
-
-**Viewing Properties**
 
 .. index::
    single: WMS; Properties
+.. _`ogc-wms-properties`:
+
+Viewing Properties
+------------------
 
 Once you have added a WMS server, you can view its properties by right-clicking
 on it in the legend and selecting :menuselection:`Properties`.
+The WMS/WMTS layer properties is much like the raster layer properties
+so you will find detailed description at :ref:`raster_properties_dialog`.
+However, there are some differences, which will be explained below.
 
 .. _`ogc-wms-properties-metadata`:
+
+Information properties
+......................
+
+.. todo: Review information in this section, whether they are still provided
 
 **Metadata Tab**
 
 .. index::
    pair: WMS; Metadata
 
-The tab :guilabel:`Metadata` displays a wealth of information about the WMS
-server, generally collected from the capabilities statement returned from
-that server. Many definitions can be gleaned by reading the WMS standards (see
-OPEN-GEOSPATIAL-CONSORTIUM in :ref:`literature_and_web`), but here are a few handy
-definitions:
+The tab :guilabel:`Metadata` displays a wealth of information about the WMS server,
+generally collected from the capabilities statement returned from that server.
+Many definitions can be gleaned by reading the WMS standards
+(see OPEN-GEOSPATIAL-CONSORTIUM in :ref:`literature_and_web`),
+but here are a few handy definitions:
 
 * **Server Properties**
 
@@ -552,12 +561,34 @@ to help display the correct temporal data:
 
 * :guilabel:`Ignore time components (use dates only)`:
   If checked, the time component of temporal queries will be discarded
-  and only the date component will be used in server requests
+  and only the date component will be used in server requests.
 
 You can also |checkbox| :guilabel:`Use Specific WMS-T Reference Time`
 picked from times reported in the layer's capabilities.
 Convenient for servers which expose a non-contiguous set of date time instances
 (instead of a range of dates).
+
+.. _`wms_server_properties`:
+
+QGIS Server properties
+......................
+
+In addition to the raster layer :ref:`properties <raster_server>`,
+publishing a WMS/WMTS layer with QGIS Server will display following options:
+
+* :guilabel:`WMS Print layer`: Allows to set alternative WMS layer
+  that should be used for printing (in the :ref:`GetProjectSettings <wms_getprojectsettings>` reply).
+  Convenient for WMTS layers that are generally not suitable for printing.
+* |checkbox| :guilabel:`Publish WMS/WMTS data source uri`:
+  Allows a web client to fetch the WMS/WMTS data directly
+* |checkbox| :guilabel:`Advertise as background layer`
+
+.. _figure_wms_server:
+
+.. figure:: img/server_properties.png
+   :align: center
+
+   QGIS Server properties of a WMS/WMTS layer
 
 .. _`ogc-wms-legend`:
 
