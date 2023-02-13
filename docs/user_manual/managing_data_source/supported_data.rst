@@ -6,7 +6,7 @@
 
 .. only:: html
 
-   .. contents::
+.. contents::
       :local:
 
 .. The aim of this chapter is to describe and add information on particular
@@ -652,7 +652,7 @@ column.
 .. index:: PostGIS; ST_Shift_Longitude
 
 Layers crossing 180° longitude
-------------------------------
+==============================
 
 Many GIS packages don't wrap layers with a geographic reference system
 (lat/lon) crossing the 180 degrees longitude line.
@@ -670,7 +670,7 @@ the New Zealand main islands.
    Map in lat/lon crossing the 180° longitude line
 
 Solving in PostGIS
-..................
+------------------
 
 A work-around is to transform the longitude values using PostGIS and the
 `ST_ShiftLongitude <https://postgis.net/docs/ST_Shift_Longitude.html>`_ function.
