@@ -26,9 +26,7 @@ The main steps for creating a plugin are:
    repository as an "arsenal" of personal "GIS weapons".
 
 
-
 .. index:: Plugins; Writing
-
 .. _plugin_setup:
 
 Getting started
@@ -75,12 +73,10 @@ A typical plugin directory includes the following files:
 .. warning::
     If you plan to upload the plugin to the :ref:`official_pyqgis_repository`
     you must check that your plugin follows some additional rules, required for
-    plugin :ref:`official_pyqgis_repository_validation`
-
+    plugin :ref:`official_pyqgis_repository_validation`.
 
 
 .. index:: Plugins; Writing code
-
 .. _plugin_development:
 
 Writing plugin code
@@ -90,7 +86,6 @@ The following section shows what content should be added in each of the
 files introduced above.
 
 .. index:: Plugins; Metadata, metadata.txt
-
 .. _plugin_metadata:
 
 metadata.txt
@@ -372,15 +367,12 @@ QGIS main :menuselection:`Help --> Plugins` menu. This is done using the
         del self.help_action
 
 
-
 When working on a real plugin it's wise to write the plugin in another
 (working) directory and create a makefile which will generate UI + resource
 files and install the plugin into your QGIS installation.
 
 
-
 .. index:: Plugins; Documentation, Plugins; Implementing help
-
 .. _plugin_docs:
 
 Documenting plugins
@@ -404,10 +396,7 @@ and section, which is the name of an html anchor tag in the document
 on which the browser will be positioned.
 
 
-
-
 .. index:: Plugins; Code snippets, Plugins; Translation
-
 .. _plugin_translation:
 
 Translating plugins
@@ -548,11 +537,19 @@ You should see your plugin in the correct language.
    **generate again** the update version of both ``.ts`` and ``.qm`` file, so run
    again the command of above.
 
+Share your plugin
+=================
+
+QGIS is hosting hundreds of plugins in the plugin repository. Consider sharing
+yours! It will extend the possibilities of QGIS and people will be able to learn
+from your code. All hosted plugins can be found and installed from within QGIS
+with the Plugin Manager.
+
+Information and requirements are here: `plugins.qgis.org <https://plugins.qgis.org/>`_.
 
 
 Tips and Tricks
 ===============
-
 
 .. _plugin_reloader_trick:
 
@@ -621,14 +618,3 @@ done with :command:`pyrcc5` command:
     modifying the PATH environment variable or specifiying the path to the
     executable explicitly you should be able to find it at
     :file:`<Your QGIS Install Directory>\\bin\\pyrcc5.exe`.
-
-
-
-Share your plugin
------------------
-QGIS is hosting hundreds of plugins in the plugin repository. Consider sharing
-yours! It will extend the possibilities of QGIS and people will be able to learn
-from your code. All hosted plugins can be found and installed from within QGIS
-with the Plugin Manager.
-
-Information and requirements are here: `plugins.qgis.org <https://plugins.qgis.org/>`_.
