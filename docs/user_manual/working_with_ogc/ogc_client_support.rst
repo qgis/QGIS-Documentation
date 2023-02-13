@@ -569,8 +569,8 @@ Convenient for servers which expose a non-contiguous set of date time instances
 QGIS Server properties
 ......................
 
-In addition to a raster layer :ref:`QGIS Server properties <raster_server>`,
-the WMS/WMTS layer will display following options:
+In addition to the raster layer :ref:`properties <raster_server>`,
+publishing a WMS/WMTS layer with QGIS Server will display following options:
 
 * :guilabel:`WMS Print layer`: Allows to set alternative WMS layer
   that should be used for printing (in the :ref:`GetProjectSettings <wms_getprojectsettings>` reply).
