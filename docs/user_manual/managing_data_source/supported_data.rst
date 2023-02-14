@@ -524,56 +524,6 @@ The following example creates a GiST index::
   gis_data=# \q
   gsherman@madison:~/current$
 
-.. index:: PostGIS; ST_Shift_Longitude
-
-Vector layers crossing 180 |degrees| longitude
-----------------------------------------------
-
-Many GIS packages don't wrap vector maps with a geographic reference system
-(lat/lon) crossing the 180 degrees longitude line
-(https://postgis.net/docs/ST_Shift_Longitude.html).
-As result, if we open such a map in QGIS, we could see two widely
-separated locations, that should appear near each other.
-In :numref:`Figure_vector_crossing`, the tiny point on the far left of the map
-canvas (Chatham Islands) should be within the grid, to the right of
-the New Zealand main islands.
-
-.. _figure_vector_crossing:
-
-.. figure:: img/vectorNotWrapping.png
-   :align: center
-
-   Map in lat/lon crossing the 180 |degrees| longitude line
-
-A work-around is to transform the longitude values using PostGIS and the
-**ST_Shift_Longitude** function.
-This function reads every point/vertex in every component of every
-feature in a geometry, and if the longitude coordinate is < 0
-|degrees|, it adds 360 |degrees| to it.
-The result is a 0 |degrees| - 360 |degrees| version of the data to be
-plotted in a 180 |degrees|-centric map.
-
-.. _figure_vector_crossing_map:
-
-.. figure:: img/vectorWrapping.png
-   :align: center
-   :width: 25em
-
-   Crossing 180 |degrees| longitude applying the **ST_Shift_Longitude**
-   function
-
-Usage
-.....
-
-* Import data into PostGIS (:ref:`vector_import_data_in_postgis`) using,
-  for example, the DB Manager plugin.
-* Use the PostGIS command line interface to issue the following command
-  (in this example, "TABLE" is the actual name of your PostGIS table):
-  ``gis_data=# update TABLE set the_geom=ST_Shift_Longitude(the_geom);``
-* If everything went well, you should receive a confirmation about the
-  number of features that were updated.
-  Then you'll be able to load the map and see the difference
-  (Figure_vector_crossing_map_).
 
 .. index:: SpatiaLite, SQLite
 .. _spatialite_data:
@@ -673,7 +623,7 @@ it is not possible to create such a mapping, you might still view the features,
 but editing might not work.
 
 Adding tables
-^^^^^^^^^^^^^
+.............
 
 When adding a table as a layer, the SAP HANA provider uses the table's primary
 key to map it to a unique feature id. Therefore, to have full feature editing
@@ -684,7 +634,7 @@ get the best performance, your primary key should be a single column of type
 ``INTEGER``.
 
 Adding views
-^^^^^^^^^^^^
+............
 
 When adding a view as a layer, the SAP HANA provider cannot automatically
 identify columns that unambiguously identify a feature. Furthermore, some views
@@ -698,6 +648,59 @@ columns can be given by using
 selecting the columns in the :guilabel:`Feature id` column. For best
 performance, the :guilabel:`Feature id` value should be a single ``INTEGER``
 column.
+
+.. index:: PostGIS; ST_Shift_Longitude
+
+Layers crossing 180° longitude
+==============================
+
+Many GIS packages don't wrap layers with a geographic reference system
+(lat/lon) crossing the 180 degrees longitude line.
+As result, if we open such a layer in QGIS, we could see two widely
+separated locations, that should appear near each other.
+In :numref:`Figure_vector_crossing`, the tiny point on the far left of the map canvas
+(Chatham Islands) should be within the grid, to the right of
+the New Zealand main islands.
+
+.. _figure_vector_crossing:
+
+.. figure:: img/vectorNotWrapping.png
+   :align: center
+
+   Map in lat/lon crossing the 180° longitude line
+
+Solving in PostGIS
+------------------
+
+A work-around is to transform the longitude values using PostGIS and the
+`ST_ShiftLongitude <https://postgis.net/docs/ST_Shift_Longitude.html>`_ function.
+This function reads every point/vertex in every component of every feature in a geometry,
+and shifts its longitude coordinate from -180..0° to 180..360° and vice versa if between these ranges.
+This function is symmetrical so the result is a 0..360° representation of a -180..180° data
+and a -180..180° representation of a 0..360° data.
+
+.. _figure_vector_crossing_map:
+
+.. figure:: img/vectorWrapping.png
+   :align: center
+   :width: 25em
+
+   Crossing 180° longitude applying the **ST_ShiftLongitude** function
+
+
+#. Import data into PostGIS (:ref:`vector_import_data_in_postgis`) using,
+   for example, the DB Manager plugin.
+#. Use the PostGIS command line interface to issue the following command:
+
+   .. code-block:: sql
+
+      -- In this example, "TABLE" is the actual name of your PostGIS table
+      update TABLE set geom=ST_ShiftLongitude(geom);
+
+#. If everything went well, you should receive a confirmation about
+   the number of features that were updated.
+   Then you'll be able to load the map and see the difference
+   (Figure_vector_crossing_map_).
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
