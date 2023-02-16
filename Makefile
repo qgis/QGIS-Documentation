@@ -51,8 +51,8 @@ html:
 	fi
 
 latex:
-	# for LANG=ja overwrites the default latex_engine=xelatex by latex_engine=platex
-	$(eval SPHINXINTLOPTS += $(if $(filter $(LANG),ja),-D latex_engine=platex,))
+	# for LANG=ja overwrites the default latex_engine=xelatex by latex_engine=uplatex
+	$(eval SPHINXINTLOPTS += $(if $(filter $(LANG),ja),-D latex_engine=uplatex,))
 	# A tag -t $LANG is used in the building process to allow for dynamic
 	# settings in the conf.py. For example, for korean we need to use other
 	# latex_elements and we use a if tags.has('ko') expression to overwrite the defaults
@@ -61,11 +61,11 @@ latex:
 
 pdf: latex
 	# Choose the correct latex compiler, equivalent to:
-	# IF LANG=ja THEN LATEXCOMPILER = platex -kanji=euc ELSE LATEXCOMPILER = xelatex
-	$(eval LATEXCOMPILER := $(if $(filter $(LANG),ja),platex,xelatex))
+	# IF LANG=ja THEN LATEXCOMPILER = uplatex -kanji=euc ELSE LATEXCOMPILER = xelatex
+	$(eval LATEXCOMPILER := $(if $(filter $(LANG),ja),uplatex,xelatex))
 
 	# Compile the tex files into PDF, it runs 2x to fix hyperlinks
-	# notice that platex compiler needs an extra step to convert dvi to PDF
+	# notice that uplatex compiler needs an extra step to convert dvi to PDF
 	# using the dvipdfmx command
 	# -interaction=batchmode in latex compiler and -q im dvipdfmx will hide errors
 	# for debugging you need to remove them
