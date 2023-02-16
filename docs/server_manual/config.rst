@@ -81,12 +81,12 @@ several ways to define these variables. This is fully described in
      - Base directory for all OGC API (such as OAPIF/WFS3) static resources (HTML
        templates, CSS, JS, ...)
      - depends on packaging
-     - WFS
+     - OAPIF/WFS3
 
    * - QGIS_SERVER_API_WFS3_MAX_LIMIT
-     - Maximum value for ``limit`` in a features request.
+     - Maximum value for ``limit`` in a OAPIF/WFS3 features request.
      - 10000
-     - WFS
+     - OAPIF/WFS3
 
    * - QGIS_SERVER_CACHE_DIRECTORY
      - Specifies the network cache directory on the filesystem.
