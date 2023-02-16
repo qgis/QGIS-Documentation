@@ -537,8 +537,8 @@ You should see your plugin in the correct language.
    **generate again** the update version of both ``.ts`` and ``.qm`` file, so run
    again the command of above.
 
-Share your plugin
-=================
+Sharing your plugin
+===================
 
 QGIS is hosting hundreds of plugins in the plugin repository. Consider sharing
 yours! It will extend the possibilities of QGIS and people will be able to learn
