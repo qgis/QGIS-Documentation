@@ -102,7 +102,7 @@ def read_subst(file):
     unicode_pattern = re.compile(r"\.\. \|([\w\d\s-]+)\|\s+unicode::\s+([^\n]+)")
 
     # read substitutions file line by line searching for pattern matches
-    with open (file, "r") as f:
+    with open (file) as f:
         for line in f:
             if image_pattern.match(line) is not None:
                 # Adds new image object to dictionary
