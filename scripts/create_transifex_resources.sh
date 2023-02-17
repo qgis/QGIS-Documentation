@@ -43,9 +43,9 @@ do
   # appending the target branch name after double "-"
   # and replacing "_", "/", ".", "\" and " " characters with "-" in the path
   # so for a file like
-  #   locale/en/LC_MESSAGES/docs/user_manual/processing/3rdParty.po in release_3.16 branch
+  #   locale/en/LC_MESSAGES/docs/user_manual/processing/3rdParty.po in release_3.22 branch
   # we will get
-  #   locale-en-lc-messages-docs-user-manual-processing-3rdparty-po--release-3-16
+  #   locale-en-lc-messages-docs-user-manual-processing-3rdparty-po--release-3-22
   RESOURCE=`echo "$POFILE--$TARGETBRANCH" | tr '[:upper:]' '[:lower:]' | sed 's,[_/ \.\\],-,g'`
   echo $RESOURCE
 
@@ -53,13 +53,13 @@ do
   # When we are done in this block we should have created sections in the
   # .tx/config file that look like this:
   #
-  #   [qgis-documentation.locale-en-lc-messages-docs-user-manual-processing-3rdparty-po--release-3-16]
+  #   [o:qgis:p:qgis-documentation:r:locale-en-lc-messages-docs-user-manual-processing-3rdparty-po--release-3-22]
   #   file_filter = locale/<lang>/LC_MESSAGES/docs/user_manual/processing/3rdParty.po
   #   source_file = locale/en/LC_MESSAGES/docs/user_manual/processing/3rdParty.po
   #   source_lang = en
-  #   type = PO
+  #   type        = PO
   #
-  echo -e "[$PROJECT.$RESOURCE]\nfile_filter = $GENERICFILE\nsource_file = $POFILE\nsource_lang = en\ntype = PO\n" >> $CONFIGFILE
+  echo -e "[o:qgis:p:$PROJECT:r:$RESOURCE]\nfile_filter = $GENERICFILE\nsource_file = $POFILE\nsource_lang = en\ntype        = PO\n" >> $CONFIGFILE
 
 done
 
