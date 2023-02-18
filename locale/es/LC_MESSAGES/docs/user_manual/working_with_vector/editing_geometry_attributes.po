@@ -10,6 +10,7 @@
 # Lucía Betancourt, 2022
 # Abigaíl García, 2022
 # Eric Armijo, 2022
+# vareli <ehespinosa@ya.com>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -18,7 +19,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-09 02:43+0000\n"
 "PO-Revision-Date: 2022-03-14 05:11+0000\n"
-"Last-Translator: Eric Armijo, 2022\n"
+"Last-Translator: vareli <ehespinosa@ya.com>, 2023\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -3274,6 +3275,80 @@ msgstr ""
 msgid "Trim/Extend Feature"
 msgstr "Cortar/Extender Objeto espacial"
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1459
+msgid ""
+"The |trimExtend| :sup:`Trim/Extend` tool allows you to shorten or lengthen "
+"segments of a (multi)line or (multi)polygon geometry to converge with a "
+"selected segment (the cutting line). This results in a modified geometry "
+"with a vertex snapped to the target segment or in its prolongation. "
+"Depending on how the selected geometries are placed in relation to each "
+"other, the tool will either:"
+msgstr ""
+"La herramienta |trimExtend| :sup:`Recortar/Extender` le permite acortar o "
+"alargar segmentos de una geometría (multi)línea o (multi)polígono para "
+"converger con un segmente seleccionado (la línea de corte). Esta da como "
+"resultado una geometría modificada con un vértice ajustado al segmento "
+"seleccionado o su prolongación. Dependiendo de como las geometrías "
+"seleccionados se sitúan en relación una con otro, la herramienta será:"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1466
+msgid ""
+"**Trim**: removes parts of the line segment or polygon boundary, beyond the "
+"cutting line"
+msgstr ""
+"**Recortar**: quita partes del segmento de línea o de los límites del "
+"polígono, más allá de la linea de corte"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1468
+msgid ""
+"**Extend**: extends polygon boundaries or line segments so that they can "
+"snap to the cutting line."
+msgstr ""
+"**Extender**: extiende los limites del polígono o los segmentos de la línea "
+"de modo que puedan encajar con la línea de corte."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1471
+msgid "In order to trim or extend existing geometries:"
+msgstr "Con el objetivo de recortar o extender geometrías existentes:"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1473
+msgid ""
+"Enable appropriate :ref:`snapping settings <snapping_options>` on segment "
+"for the involved layer(s)"
+msgstr ""
+"Habilite los :ref:`ajustes de recorte <snapping_options>` sobre el segmento "
+"para la(s) capa(s) implicada(s)"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1475
+msgid "Select the |trimExtend| :sup:`Trim/Extend` tool"
+msgstr "Seleccione la herramienta |trimExtend| :sup:`Recortar/Extender`"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1476
+msgid ""
+"Click the target limit segment, i.e. the segment with respect to which you "
+"want to extend or trim another segment. It appears highlighted."
+msgstr ""
+"Pulse el límite del segmento objetivo, esto es, el segmento con respecto al "
+"cual desea extender o recortar otro segmento. Aparece resaltado."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1478
+msgid ""
+"Move to the segment you want to trim or extend. It does not need to be the "
+"last segment of the geometry, but has to be on the active layer."
+msgstr ""
+"Vaya al segmento que desea recortar o extender. No es necesario que sea el "
+"último segmento de la geometría, pero tiene que estar en una capa activa."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1480
+msgid ""
+"Hover over the segment, and QGIS displays a preview of what the feature's "
+"geometry would be. If OK, click the segment. In the case of a trim, you must"
+" select the part that should be shortened."
+msgstr ""
+"Pase el cursor sobre el segmento y QGIS muestra una previsualización de como"
+" sería la geometría de la característica. Sí OK, pulse el segmento. En el "
+"caso de un recorte, usted debe seleccionar la parte que sería recortada."
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1483
 msgid ""
 "When both segments are in 3D, the tool performs an interpolation on the "
@@ -3281,6 +3356,17 @@ msgid ""
 msgstr ""
 "Cuando ambos segmentos están en 3D, la herramienta realiza una interpolación"
 " en el segmento límite para obtener el valor Z."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1486
+msgid ""
+"Pay attention to the modified geometry while using the |trimExtend| "
+":sup:`Trim/Extend` tool. Depending on the inputs, it can create invalid "
+"geometries, potentially resulting in failure at layer saving."
+msgstr ""
+"Preste atención a la geometría modificada mientras utilice la herramienta "
+"|trimExtend| :sup:`Recortar/Extender`. Dependiendo de las entradas, puede "
+"crear geometrías no válidas, con el resultado potencial de un fallo en la "
+"capa guardada."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1494
 msgid "Shape digitizing"
