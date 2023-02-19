@@ -1,31 +1,33 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
+# Harrissou Sant-anna, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:24+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"POT-Creation-Date: 2022-03-12 00:23+0100\n"
+"PO-Revision-Date: 2022-03-14 05:14+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2022\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:29
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:18
 msgid "Network analysis library"
 msgstr "네트워크 분석 라이브러리"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:41
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:40
 msgid ""
 "The network analysis library was created by exporting basic functions from "
 "the RoadGraph core plugin and now you can use it's methods in plugins or "
@@ -34,31 +36,31 @@ msgstr ""
 "네트워크 분석 라이브러리는 코어 플러그인 *RoadGraph* 에서 기본 함수들을 가져와  생성됐습니다. 이제 플러그인에서나 파이썬 "
 "콘솔에서 직접 이 라이브러리의 메소드를 사용할 수 있습니다."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:46
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:45
 msgid "General information"
 msgstr "일반 정보"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:48
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:47
 msgid "Briefly, a typical use case can be described as:"
 msgstr "이 라이브러리의 전형적인 용도를 간단히 설명하면 다음과 같습니다."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:50
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:49
 msgid "create graph from geodata (usually polyline vector layer)"
 msgstr "공간 데이터(일반적으로 폴리라인 벡터 레이어)로부터 그래프 생성"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:51
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:50
 msgid "run graph analysis"
 msgstr "그래프 분석 실행"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:52
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:51
 msgid "use analysis results (for example, visualize them)"
 msgstr "분석 결과 이용(예를 들어 분석 결과의 시각화 등)"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:55
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:54
 msgid "Building a graph"
 msgstr "그래프 만들기"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:57
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:56
 msgid ""
 "The first thing you need to do --- is to prepare input data, that is to "
 "convert a vector layer into a graph. All further actions will use this "
@@ -67,7 +69,7 @@ msgstr ""
 "가장 먼저 해야 할 일은 입력 데이터를 준비하는 것인데, 벡터 레이어를 그래프(수학적으로 간략화된 연결관계)로 변환하는 것입니다. 이후의"
 " 모든 작업은 레이어가 아니라 이 그래프를 사용합니다."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:61
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:60
 msgid ""
 "As a source we can use any polyline vector layer. Nodes of the polylines "
 "become graph vertexes, and segments of the polylines are graph edges. If "
@@ -78,7 +80,7 @@ msgstr ""
 " 선분(segment)은 그래프의 엣지(edge)가 됩니다. 노드 몇 개가 동일한 좌표에 있을 경우 그 노드들은 동일한 그래프 버텍스가 "
 "됩니다. 따라서 공통 노드를 가진 2개의 선분은 서로 연결됩니다."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:66
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:65
 msgid ""
 "Additionally, during graph creation it is possible to \"fix\" (\"tie\") to "
 "the input vector layer any number of additional points. For each additional "
@@ -89,7 +91,7 @@ msgstr ""
 "추가 포인트에 대응하는, 가장 가까운 그래프 버텍스 또는 가장 가까운 그래프 엣지를 찾을 것입니다. 후자의 경우 엣지가 나뉘어 새 "
 "버텍스가 추가됩니다."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:71
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:70
 msgid ""
 "Vector layer attributes and length of an edge can be used as the properties "
 "of an edge."
@@ -102,16 +104,6 @@ msgstr "이제 실제로 해 봅시다."
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:103
 msgid "Then some examples for creating a director"
 msgstr "다음은 director를 생성하는 몇 가지 방법의 예시입니다."
-
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:119
-msgid ""
-"To construct a director  we should pass a vector layer, that will be used as"
-" the source for the graph structure and information about allowed movement "
-"on each road segment (one-way or bidirectional movement, direct or reverse "
-"direction). The call looks like this"
-msgstr ""
-"director를 생성하려면 벡터 레이어를 넘겨줘야 하는데, 이 레이어는 그래프 구조 및 각 도로 엣지에서 허용되는 움직임(단방향 또는 "
-"양방향, 순방향 또는 역방향)에 대한 정보를 위한 자료로 쓰이게 됩니다. 다음과 같이 함수를 호출합니다."
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:133
 msgid "And here is full list of what these parameters mean:"

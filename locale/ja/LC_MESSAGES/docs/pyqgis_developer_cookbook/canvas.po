@@ -1,69 +1,52 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
-# mnamihdk, 2020
-# fairtommy <fairtommy@gmail.com>, 2020
+# Harrissou Sant-anna, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:24+0000\n"
-"Last-Translator: fairtommy <fairtommy@gmail.com>, 2020\n"
+"POT-Creation-Date: 2022-11-09 02:43+0000\n"
+"PO-Revision-Date: 2022-03-14 05:09+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2022\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:42
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:13
 msgid "Using the Map Canvas"
 msgstr "マップキャンバスを使う"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:56
-msgid ""
-"The map canvas is implemented with the :class:`QgsMapCanvas "
-"<qgis.gui.QgsMapCanvas>` class in the :mod:`qgis.gui` module. The "
-"implementation is based on the Qt Graphics View framework. This framework "
-"generally provides a surface and a view where custom graphics items are "
-"placed and user can interact with them.  We will assume that you are "
-"familiar enough with Qt to understand the concepts of the graphics scene, "
-"view and items. If not, please read the `overview of the framework "
-"<https://doc.qt.io/qt-5/graphicsview.html>`_."
-msgstr ""
-"マップキャンバスは、 :mod:`qgis.gui` モジュール内の :class:`QgsMapCanvas "
-"<qgis.gui.QgsMapCanvas>` クラスで実装されています。実装は Qt Graphics View "
-"フレームワークに基づいています。このフレームワークは一般的に、カスタムグラフィックスアイテムが配置され、ユーザがそれらを操作することができるサーフェスとビューを提供します。"
-" ここでは、グラフィックスシーン、ビュー、アイテムの概念を理解できるほどQtに精通していることを前提とします。そうでない場合は `フレームワークの概要 "
-"<https://doc.qt.io/qt-5/graphicsview.html>`_ をお読みください。"
-
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:79
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:82
 msgid "To summarize, the map canvas architecture consists of three concepts:"
 msgstr "要約すると、地図キャンバスアーキテクチャは３つのコンセプトからなります："
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:81
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:84
 msgid "map canvas --- for viewing of the map"
 msgstr "map canvas --- 地図の可視化"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:88
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:91
 msgid "Embedding Map Canvas"
 msgstr "地図キャンバスを埋め込む"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:106
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:109
 msgid ""
 "By default, map canvas has black background and does not use anti-aliasing. "
 "To set white background and enable anti-aliasing for smooth rendering"
 msgstr ""
 "デフォルトでは、地図キャンバスの背景色は黒でありアンチエイリアスは使用されません。背景を白に設定し、投影をなめらかにするためのアンチエイリアスを有効にするには"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:117
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:120
 msgid ""
 "Now it is time to add some map layers. We will first open a layer and add it"
 " to the current project. Then we will set the canvas extent and set the list"
@@ -71,21 +54,21 @@ msgid ""
 msgstr ""
 "それでは、地図レイヤを追加していきましょう。まずレイヤを開いて、現在のプロジェクトに追加します。次に、キャンバスの範囲を設定し、キャンバスのレイヤのリストを設定します。"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:137
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:140
 msgid ""
 "After executing these commands, the canvas should show the layer you have "
 "loaded."
 msgstr "これらのコマンドを実行した後、キャンバスには読み込んだレイヤーが表示されているはずです。"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:143
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:146
 msgid "Rubber Bands and Vertex Markers"
 msgstr "ラバーバンドと頂点マーカー"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:161
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:164
 msgid "To show a polygon"
 msgstr "ポリゴンを表示するには"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:169
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:172
 msgid ""
 "Note that points for polygon is not a plain list: in fact, it is a list of "
 "rings containing linear rings of the polygon: first ring is the outer "
@@ -93,13 +76,13 @@ msgid ""
 msgstr ""
 "ポリゴンの点が普通のリストではないことに注意してください。実際には、ポリゴンの線状のリングを含有するリングのリストです：最初のリングは外側の境界であり、さらに（オプションの）リングはポリゴンの穴に対応します。"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:173
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:176
 msgid ""
 "Rubber bands allow some customization, namely to change their color and line"
 " width"
 msgstr "ラバーバンドはいくらかカスタマイズできます、すなわち、その色と線幅を変更することがが可能です"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:189
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:192
 msgid ""
 "(in C++ it's possible to just delete the item, however in Python ``del r`` "
 "would just delete the reference and the object will still exist as it is "
@@ -108,11 +91,11 @@ msgstr ""
 "（C ++ではアイテムを削除することだけ可能ですが、Pythonでは ``del r`` "
 "は参照を削除するだけでありオブジェクトはキャンバスの所有物なのでそのまま残ります）"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:220
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:223
 msgid "Using Map Tools with Canvas"
 msgstr "地図キャンバスで地図ツールを使用する"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:222
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:225
 msgid ""
 "The following example constructs a window that contains a map canvas and "
 "basic map tools for map panning and zooming. Actions are created for "
@@ -132,11 +115,11 @@ msgstr ""
 " -- 地図ツールがアクティブになると、そのアクションは選択されたと印が付き、前の地図ツールのアクションは選択解除されます。地図ツールは "
 ":meth:`setMapTool() <qgis.gui.QgsMapCanvas.setMapTool>` メソッドを使って起動します。"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:298
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:350
 msgid "Writing Custom Map Tools"
 msgstr "カスタム地図ツールを書く"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:308
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:360
 msgid ""
 "Here is an example of a map tool that allows to define a rectangular extent "
 "by clicking and dragging on the canvas. When the rectangle is defined, it "
@@ -146,6 +129,6 @@ msgid ""
 msgstr ""
 "キャンバスをクリックしてドラッグすることで矩形範囲を定義できる地図ツールの例を次に示します。矩形が定義されると、境界座標がコンソールに表示されます。前述のラバーバンド要素を使用して、選択されている矩形が定義されていることを示します。"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:382
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:434
 msgid "Writing Custom Map Canvas Items"
 msgstr "カスタム地図キャンバスアイテムを書く"

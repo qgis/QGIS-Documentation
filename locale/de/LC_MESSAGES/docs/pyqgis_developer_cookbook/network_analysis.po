@@ -1,28 +1,33 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
-# Jochen Schwarze <jochen.schwarze@live.unigis.net>, 2020
+# Harrissou Sant-anna, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:24+0000\n"
-"Last-Translator: Jochen Schwarze <jochen.schwarze@live.unigis.net>, 2020\n"
+"POT-Creation-Date: 2022-03-12 00:23+0100\n"
+"PO-Revision-Date: 2022-03-14 05:14+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2022\n"
 "Language-Team: German (https://www.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:16
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:18
+msgid "Network analysis library"
+msgstr "Netzwerkanalysebibliothek"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:20
 msgid ""
 "The code snippets on this page need the following imports if you're outside "
 "the pyqgis console:"
@@ -30,11 +35,7 @@ msgstr ""
 "Die Codefragmente auf dieser Seite müssen wie folgt importiert werden, wenn "
 "Sie sich außerhalb der pyqgis-Konsole befinden:"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:29
-msgid "Network analysis library"
-msgstr "Netzwerkanalysebibliothek"
-
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:41
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:40
 msgid ""
 "The network analysis library was created by exporting basic functions from "
 "the RoadGraph core plugin and now you can use it's methods in plugins or "
@@ -44,32 +45,32 @@ msgstr ""
 "aus dem RoadGraph-Kern-Plugin exportiert wurden. Jetzt können Sie die "
 "Methoden in Plugins oder direkt von der Python-Konsole aus verwenden."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:46
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:45
 msgid "General information"
 msgstr "Allgemeine Informationen"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:48
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:47
 msgid "Briefly, a typical use case can be described as:"
 msgstr "Ein typischer Anwendungsfall sieht so aus:"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:50
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:49
 msgid "create graph from geodata (usually polyline vector layer)"
 msgstr ""
 "Graphen aus Geodaten erstellen (Typischerweise Polylinien Vektorlayer)"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:51
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:50
 msgid "run graph analysis"
 msgstr "Graphenanalyse durchführen"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:52
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:51
 msgid "use analysis results (for example, visualize them)"
 msgstr "Analyseergebnisse verwenden (z.B. für Visualisierungszwecke)"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:55
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:54
 msgid "Building a graph"
 msgstr "Einen Graphen erstellen"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:57
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:56
 msgid ""
 "The first thing you need to do --- is to prepare input data, that is to "
 "convert a vector layer into a graph. All further actions will use this "
@@ -79,7 +80,7 @@ msgstr ""
 "muss in einen Graphen konvertiert werden. Alle weiteren Aktionen verwenden "
 "diesen Graphen und nicht den Vektorlayer."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:61
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:60
 msgid ""
 "As a source we can use any polyline vector layer. Nodes of the polylines "
 "become graph vertexes, and segments of the polylines are graph edges. If "
@@ -92,7 +93,7 @@ msgstr ""
 " dann repräsentieren sie den selben Knoten. So werden zwei Kanten, die einen"
 " gemeinsamen Knoten haben, miteinander verbunden."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:66
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:65
 msgid ""
 "Additionally, during graph creation it is possible to \"fix\" (\"tie\") to "
 "the input vector layer any number of additional points. For each additional "
@@ -106,7 +107,7 @@ msgstr ""
 "Kante. Im letzteren Fall wird die Kante geteilt und ein neuer Knoten "
 "hinzugefügt."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:71
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:70
 msgid ""
 "Vector layer attributes and length of an edge can be used as the properties "
 "of an edge."
@@ -121,19 +122,6 @@ msgstr "Es ist Zeit, den Prozess näher zu beleuchten."
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:103
 msgid "Then some examples for creating a director"
 msgstr "Ein paar Beispiele einen director zu erzeugen"
-
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:119
-msgid ""
-"To construct a director  we should pass a vector layer, that will be used as"
-" the source for the graph structure and information about allowed movement "
-"on each road segment (one-way or bidirectional movement, direct or reverse "
-"direction). The call looks like this"
-msgstr ""
-"Um einen Director zu konstruieren, wird ein Vektorlayer übergeben, der als "
-"Quelle für die Graphenstruktur dient und Informationen über erlaubte "
-"Bewegung auf jedem Straßensegment enthält (uni- oder bidirektionale "
-"Bewegung, direkte oder umgekehrte Richtung). Der Aufruf sieht folgendermaßen"
-" aus:"
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:133
 msgid "And here is full list of what these parameters mean:"

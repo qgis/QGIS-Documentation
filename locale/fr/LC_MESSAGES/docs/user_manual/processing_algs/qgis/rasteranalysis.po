@@ -27,6 +27,15 @@ msgstr ""
 msgid "Raster analysis"
 msgstr "Analyse raster"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:46
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:207
+msgid ""
+":ref:`qgiscellstackpercentile`, "
+":ref:`qgiscellstackpercentrankfromrasterlayer`"
+msgstr ""
+":ref:`qgiscellstackpercentile`, "
+":ref:`qgiscellstackpercentrankfromrasterlayer`"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:4
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:5
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:49
@@ -464,6 +473,15 @@ msgstr "[enumeration]"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3065
 msgid "Default: 0"
 msgstr "Par défaut : 0"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:78
+msgid "**Value**"
+msgstr "**Valeur**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:79
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:242
+msgid "``VALUE``"
+msgstr "``VALUE``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:60
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:69
@@ -1469,8 +1487,8 @@ msgid ""
 "``Float32`` or ``Float64`` depending on input float type) or ``Count`` and "
 "``Variety`` (data type is always ``Int32``)."
 msgstr ""
-"**Détails du calcul : Les couches raster d'entrée qui ne correspondent pas à"
-" la taille de cellule de la couche raster de référence seront "
+"**Détails du calcul** : Les couches raster d'entrée qui ne correspondent pas"
+" à la taille de cellule de la couche raster de référence seront "
 "rééchantillonnées en utilisant le ``rééchantillonnage du plus proche "
 "voisin``. Le type de données raster de sortie sera réglé sur le type de "
 "données le plus complexe présent dans les ensembles de données d'entrée, "
@@ -1722,6 +1740,11 @@ msgstr "``FOUND_LOCATIONS_COUNT``"
 msgid "``MEAN_FREQUENCY_PER_LOCATION``"
 msgstr "``MEAN_FREQUENCY_PER_LOCATION``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:113
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:808
+msgid "**Count of value occurrences**"
+msgstr "**Nombre d'occurrences de la valeur**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:114
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:809
 msgid "``OCCURRENCE_COUNT``"
@@ -1916,6 +1939,10 @@ msgstr ""
 "d'appartenance large est définie comme |fuzzy_large_formula|, où *f1* est "
 "l'écart et *f2* le point médian."
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3608
+msgid "fuzzy_large_formula"
+msgstr "fuzzy_large_formula"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:959
 msgid ""
 ":ref:`qgisfuzzifyrastergaussianmembership`, "
@@ -2047,13 +2074,13 @@ msgid ""
 "membership. The near membership function is defined as |near_formula|, where"
 " *f1* is the spread and *f2* the midpoint."
 msgstr ""
-"Transforme un raster d'entrée en un raster floue en attribuant une valeur "
+"Transforme un raster d'entrée en un raster flou en attribuant une valeur "
 "d'appartenance à chaque pixel, à l'aide d'une fonction d'appartenance "
 "proche. Les valeurs d'appartenance varient de 0 à 1. Dans la trame floue, "
 "une valeur de 0 implique aucune appartenance à l'ensemble flou défini, alors"
 " qu'une valeur de 1 signifie une appartenance complète. La fonction "
-"d'appartenance proche est définie comme |proche_formule|, où *f1* est "
-"l'écart et *f2* le point médian."
+"d'appartenance proche est définie par |near_formula|, où *f1* est l'écart et"
+" *f2* le point médian."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1185
 msgid ""
@@ -2344,6 +2371,20 @@ msgstr "1 --- Int16"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3091
 msgid "2 --- UInt16"
 msgstr "2 --- UInt16"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1860
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2022
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2958
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3092
+msgid "3 --- Int32"
+msgstr "3 --- Int32"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1861
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2023
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2959
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3093
+msgid "4 --- UInt32"
+msgstr "4 --- UInt32"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1862
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2024

@@ -2,29 +2,32 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
-# Murat ENEZ <muratenez@gmail.com>, 2021
+# Harrissou Sant-anna, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-13 09:01+0100\n"
-"PO-Revision-Date: 2020-12-24 10:18+0000\n"
-"Last-Translator: Murat ENEZ <muratenez@gmail.com>, 2021\n"
+"POT-Creation-Date: 2022-03-12 00:23+0100\n"
+"PO-Revision-Date: 2022-03-14 05:07+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2022\n"
 "Language-Team: Turkish (https://www.transifex.com/qgis/teams/6144/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
+"Generated-By: Babel 2.9.0\n"
 "Language: tr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../../docs/pyqgis_developer_cookbook/communicating.rst:10
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:13
+msgid "Communicating with the user"
+msgstr "Kullanıcı iletişim arayüzü"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:15
 msgid ""
 "The code snippets on this page need the following imports if you're outside "
 "the pyqgis console:"
@@ -32,11 +35,7 @@ msgstr ""
 "Pyqgis konsolunun dışındaysanız, bu sayfadaki kod parçacıkları aşağıdaki içe"
 " aktarmalara ihtiyaç duyar:"
 
-#: ../../docs/pyqgis_developer_cookbook/communicating.rst:35
-msgid "Communicating with the user"
-msgstr "Kullanıcı iletişim arayüzü"
-
-#: ../../docs/pyqgis_developer_cookbook/communicating.rst:40
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:41
 msgid ""
 "This section shows some methods and elements that should be used to "
 "communicate with the user, in order to keep consistency in the User "
@@ -45,11 +44,11 @@ msgstr ""
 "Bu bölüm kullanıcı ile iletişim kurmamızı sağlayan metod ve bileşenlerin "
 "kullanımını içerir."
 
-#: ../../docs/pyqgis_developer_cookbook/communicating.rst:44
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:45
 msgid "Showing messages. The QgsMessageBar class"
 msgstr "Mesajları gösterme. QgsMessageBar sınıfı"
 
-#: ../../docs/pyqgis_developer_cookbook/communicating.rst:46
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:47
 msgid ""
 "Using message boxes can be a bad idea from a user experience point of view. "
 "For showing a small info line or a warning/error messages, the QGIS message "
@@ -60,7 +59,7 @@ msgstr ""
 "mesaj satırı bölmesinde göstermek QGIS için daha mantıklı bir yöntemdir. "
 "Toplu işlemlerde yüzlerce hata ve uyarı mesajı oluşabilir."
 
-#: ../../docs/pyqgis_developer_cookbook/communicating.rst:50
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:51
 msgid ""
 "Using the reference to the QGIS interface object, you can show a message in "
 "the message bar with the following code"
@@ -68,21 +67,21 @@ msgstr ""
 "QGIS arayüzünde mesaj satırı kısmını kullanarak mesaj göstermek için "
 "kullanılacak kod örneği:"
 
-#: ../../docs/pyqgis_developer_cookbook/communicating.rst:67
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:68
 msgid "QGIS Message bar"
 msgstr "QGIS Mesaj çubuğu"
 
-#: ../../docs/pyqgis_developer_cookbook/communicating.rst:69
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:70
 msgid "You can set a duration to show it for a limited time"
 msgstr ""
 "Mesajların belirli bir süre gösterilip ardından mesaj çubuğunun kaybolmasını"
 " sağlamak için süre sınırı koyabilirsiniz."
 
-#: ../../docs/pyqgis_developer_cookbook/communicating.rst:83
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:84
 msgid "QGIS Message bar with timer"
 msgstr "QGIS Mesaj çubuğu, zaman sınırlaması ile"
 
-#: ../../docs/pyqgis_developer_cookbook/communicating.rst:85
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:86
 msgid ""
 "The examples above show an error bar, but the ``level`` parameter can be "
 "used to creating warning messages or info messages, using the "
@@ -94,27 +93,27 @@ msgstr ""
 "<qgis.core.Qgis.MessageLevel>` seçenekleri kullanılabilir. 4 farklı seviye "
 "öntanımlıdır:"
 
-#: ../../docs/pyqgis_developer_cookbook/communicating.rst:89
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:90
 msgid "Info"
 msgstr "Bilgi"
 
-#: ../../docs/pyqgis_developer_cookbook/communicating.rst:90
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:91
 msgid "Warning"
 msgstr "Uyarı"
 
-#: ../../docs/pyqgis_developer_cookbook/communicating.rst:91
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:92
 msgid "Critical"
 msgstr "Kritik"
 
-#: ../../docs/pyqgis_developer_cookbook/communicating.rst:92
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:93
 msgid "Success"
 msgstr "Başarılı"
 
-#: ../../docs/pyqgis_developer_cookbook/communicating.rst:98
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:99
 msgid "QGIS Message bar (info)"
 msgstr "QGIS Mesaj çubuğu (bilgi)"
 
-#: ../../docs/pyqgis_developer_cookbook/communicating.rst:100
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:101
 msgid ""
 "Widgets can be added to the message bar, like for instance a button to show "
 "more info"
@@ -122,11 +121,11 @@ msgstr ""
 "Mesaj çubuğuna araçlar eklenebilir, örneğin daha fazla bilgi göstermek için "
 "bir buton"
 
-#: ../../docs/pyqgis_developer_cookbook/communicating.rst:123
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:124
 msgid "QGIS Message bar with a button"
 msgstr "Butonlu bir QGIS Mesaj çubuğu"
 
-#: ../../docs/pyqgis_developer_cookbook/communicating.rst:125
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:126
 msgid ""
 "You can even use a message bar in your own dialog so you don't have to show "
 "a message box, or if it doesn't make sense to show it in the main QGIS "
@@ -136,15 +135,15 @@ msgstr ""
 "kullanabilirsiniz yada mesaj kutusu göstermek zorunlu değilse "
 "kullanılabilir. "
 
-#: ../../docs/pyqgis_developer_cookbook/communicating.rst:151
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:152
 msgid "QGIS Message bar in custom dialog"
 msgstr "QGIS, özel bileşenli mesaj çubuğu"
 
-#: ../../docs/pyqgis_developer_cookbook/communicating.rst:155
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:156
 msgid "Showing progress"
 msgstr "İlerleme durumu gösterme"
 
-#: ../../docs/pyqgis_developer_cookbook/communicating.rst:157
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:158
 msgid ""
 "Progress bars can also be put in the QGIS message bar, since, as we have "
 "seen, it accepts widgets. Here is an example that you can try in the "
@@ -153,7 +152,7 @@ msgstr ""
 "İlerleme durum çubukları QGIS mesaj çubuğu içinde gösterilebilir. İşte "
 "burada konsolda deneyebileceğiniz örnek bir kod."
 
-#: ../../docs/pyqgis_developer_cookbook/communicating.rst:183
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:184
 msgid ""
 "Also, you can use the built-in status bar to report progress, as in the next"
 " example:"
@@ -161,11 +160,11 @@ msgstr ""
 "Ayrıca entegre ilerleme durum çubuğunu kullanabilirsiniz. İşte sonraki örnek"
 " kod:"
 
-#: ../../docs/pyqgis_developer_cookbook/communicating.rst:210
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:212
 msgid "Logging"
 msgstr "Loglama"
 
-#: ../../docs/pyqgis_developer_cookbook/communicating.rst:212
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:214
 msgid ""
 "There are three different types of logging available in QGIS to log and save"
 " all the information about the execution of your code. Each has its specific"
@@ -177,7 +176,7 @@ msgstr ""
 "konumu vardır. Lütfen amacınız için doğru günlük kaydı yöntemini kullanmayı "
 "düşünün:"
 
-#: ../../docs/pyqgis_developer_cookbook/communicating.rst:256
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:258
 msgid ""
 "You can see the output of the :class:`QgsMessageLog "
 "<qgis.core.QgsMessageLog>` in the :ref:`log_message_panel`"
@@ -185,16 +184,16 @@ msgstr ""
 ":class:`QgsMessageLog <qgis.core.QgsMessageLog>` sınıfının çıktılarını  "
 ":ref:`log_message_panel` içerisinde görebilirsiniz."
 
-#: ../../docs/pyqgis_developer_cookbook/communicating.rst:291
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:293
 msgid "https://docs.python.org/3/library/logging.html"
 msgstr ""
 "https://docs.python.org/3/library/logging.html\n"
 " "
 
-#: ../../docs/pyqgis_developer_cookbook/communicating.rst:292
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:294
 msgid "https://docs.python.org/3/howto/logging.html"
 msgstr "https://docs.python.org/3/howto/logging.html"
 
-#: ../../docs/pyqgis_developer_cookbook/communicating.rst:293
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:295
 msgid "https://docs.python.org/3/howto/logging-cookbook.html"
 msgstr "https://docs.python.org/3/howto/logging-cookbook.html"

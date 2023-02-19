@@ -5679,9 +5679,9 @@ msgid ""
 "type the field name (preferably inside double quotes) or its :ref:`alias "
 "<configure_field>`."
 msgstr ""
-"Double-cliquer sur le nom d'un champ pour l'ajouter à votre expression. Vous"
+"Double-cliquez sur le nom d'un champ pour l'ajouter à votre expression. Vous"
 " pouvez aussi taper le nom de votre champ entre guillemets ou son "
-":ref:`alias `<configure_field>."
+":ref:`alias <configure_field>`."
 
 #: ../../docs/user_manual/expressions/functions_list.rst:220
 msgid ""
@@ -8276,6 +8276,14 @@ msgstr "**geometry** - un objet géométrique linéaire"
 #: ../../docs/user_manual/expressions/expression_help/String.rst:172
 msgid "``length(geom_from_wkt('LINESTRING(0 0, 4 0)'))`` → 4.0"
 msgstr "``length(geom_from_wkt('LINESTRING(0 0, 4 0)'))`` → 4.0"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:427
+msgid ""
+"Further reading: "
+":ref:`expression_function_GeometryGroup_straight_distance_2d`"
+msgstr ""
+"Plus de détails : "
+":ref:`expression_function_GeometryGroup_straight_distance_2d`"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "length3D"
@@ -10890,6 +10898,10 @@ msgstr ""
 "``round(straight_distance_2d(geom_from_wkt('LINESTRING(1 4, 3 5, 5 0)')), "
 "3)`` → 5.657"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:597
+msgid "Further reading: :ref:`expression_function_GeometryGroup_length`"
+msgstr "Plus de détails : :ref:`expression_function_GeometryGroup_length`"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "sym_difference"
 msgstr "sym_difference"
@@ -11065,6 +11077,10 @@ msgid ""
 "original one"
 msgstr ""
 "translate($geometry, 5, 10) → une géométrie du même type que l'original"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
+msgid "Translating features"
+msgstr "Translater des entités"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:627
 msgid "Further reading: :ref:`qgistranslategeometry` algorithm"
@@ -11754,6 +11770,15 @@ msgstr "``layer_property('aeroports','feature_count')`` → 120"
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:79
 msgid "``layer_property('landsat','crs')`` → 'EPSG:4326'"
 msgstr "``layer_property('landsat','crs')`` → 'EPSG:4326'"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:693
+msgid ""
+"Further reading: :ref:`vector <vectorinformationmenu>`, :ref:`raster "
+"<raster_information>` and :ref:`mesh <meshinformation>` layer properties"
+msgstr ""
+"Plus de détails : propriétés des couches :ref:`vecteur "
+"<vectorinformationmenu>`, :ref:`raster <raster_information>` et "
+":ref:`maillage <meshinformation>`"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:704
 msgid "Maps Functions"
@@ -12853,6 +12878,10 @@ msgstr "``$vertex_y`` → 12.24"
 msgid "$vertex_z"
 msgstr "$vertex_z"
 
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:122
+msgid "Returns the Z value of the current mesh vertex."
+msgstr "Renvoie la valeur Z du sommet actuel du maillage."
+
 #: ../../docs/user_manual/expressions/expression_help/Meshes.rst:130
 msgid "``$vertex_z`` → 42"
 msgstr "``$vertex_z`` → 42"
@@ -13036,6 +13065,14 @@ msgstr "``5 / NULL`` → NULL"
 msgid "<"
 msgstr "<"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:53
+msgid ""
+"Compares two values and evaluates to 1 if the left value is less than the "
+"right value."
+msgstr ""
+"Compare deux valeurs et renvoie 1 si la valeur à gauche est inférieure à "
+"celle de droite."
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:59
 msgid "a < b"
 msgstr "a < b"
@@ -13056,6 +13093,14 @@ msgstr "``4 < 5`` → 1"
 msgid "<="
 msgstr "<="
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:76
+msgid ""
+"Compares two values and evaluates to 1 if the left value is less or equal "
+"than the right value."
+msgstr ""
+"Compare deux valeurs et renvoie 1 si la valeur à gauche est inférieure ou "
+"égale à celle de droite."
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:82
 msgid "a <= b"
 msgstr "a <= b"
@@ -13075,6 +13120,10 @@ msgstr "``4 <= 5`` → 1"
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:97
 msgid "<>"
 msgstr "<>"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:99
+msgid "Compares two values and evaluates to 1 if they are not equal."
+msgstr "Compare deux valeurs et renvoie 1 si elles ne sont pas égales."
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:105
 msgid "a <> b"
@@ -13100,6 +13149,10 @@ msgstr "``NULL <> NULL`` → NULL"
 msgid "="
 msgstr "="
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:123
+msgid "Compares two values and evaluates to 1 if they are equal."
+msgstr "Compare deux valeurs et renvoie 1 si elles sont égales."
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:129
 msgid "a = b"
 msgstr "a = b"
@@ -13124,6 +13177,14 @@ msgstr "``NULL = NULL`` → NULL"
 msgid ">"
 msgstr ">"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:147
+msgid ""
+"Compares two values and evaluates to 1 if the left value is greater than the"
+" right value."
+msgstr ""
+"Compare deux valeurs et renvoie 1 si la valeur à gauche est supérieure à "
+"celle de droite."
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:153
 msgid "a > b"
 msgstr "a > b"
@@ -13144,6 +13205,14 @@ msgstr "``4 > 5`` → 0"
 msgid ">="
 msgstr ">="
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:170
+msgid ""
+"Compares two values and evaluates to 1 if the left value is greater or equal"
+" than the right value."
+msgstr ""
+"Compare deux valeurs et renvoie 1 si la valeur à gauche est supérieure ou "
+"égale à celle de droite."
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:176
 msgid "a >= b"
 msgstr "a >= b"
@@ -13163,6 +13232,10 @@ msgstr "``4 >= 5`` → 0"
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:191
 msgid "AND"
 msgstr "AND"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:193
+msgid "Returns 1 when condition a and b are true."
+msgstr "Renvoie 1 lorsque les conditions a et b sont vraies."
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:199
 msgid "a AND b"
@@ -13291,6 +13364,14 @@ msgstr "Renvoie 1 si a est identique à b"
 msgid "a IS b"
 msgstr "a IS b"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:282
+msgid "**a** - any value"
+msgstr "**a** - n'importe quelle valeur"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:283
+msgid "**b** - any value"
+msgstr "**b** - n'importe quelle valeur"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:285
 msgid "``'A' IS 'A'`` → 1"
 msgstr "``'A' IS 'A'`` → 1"
@@ -13311,9 +13392,17 @@ msgstr "``4 IS 2+2`` → 1"
 msgid "``4 IS 2`` → 0"
 msgstr "``4 IS 2`` → 0"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:290
+msgid "``$geometry IS NULL`` → 0, if your geometry is not NULL"
+msgstr "``$geometry IS NULL`` → 0, si la géométrie n'est pas NULL"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:298
 msgid "IS NOT"
 msgstr "IS NOT"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:300
+msgid "Returns 1 if a is not the same as b."
+msgstr "Renvoie 1 si a n'est pas identique à b."
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:306
 msgid "a IS NOT b"
@@ -13443,6 +13532,14 @@ msgstr "``map('a',1,'b',2)['a']`` → 1"
 msgid "``map('a',1,'b',2)['b']`` → 2"
 msgstr "``map('a',1,'b',2)['b']`` → 2"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:784
+msgid ""
+"Further reading: :ref:`expression_function_Arrays_array_get`, "
+":ref:`expression_function_Maps_map_get`"
+msgstr ""
+"Voir aussi : :ref:`expression_function_Arrays_array_get`, "
+":ref:`expression_function_Maps_map_get`"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:6
 msgid "^"
 msgstr "^"
@@ -13467,9 +13564,25 @@ msgstr "\\||"
 msgid "a || b"
 msgstr "a || b"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:46
+msgid "``'Nothing' || NULL`` → NULL"
+msgstr "``'Rien' || NULL`` → NULL"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:47
+msgid "``'Dia: ' || \"Diameter\"`` → 'Dia: 25'"
+msgstr "``'Dia: ' || \"Diametre\"`` → 'Dia: 25'"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:48
 msgid "``1 || 2`` → '12'"
 msgstr "``1 || 2`` → '12'"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:791
+msgid ""
+"Further reading: :ref:`expression_function_String_concat`, "
+":ref:`expression_function_Operators_plus`"
+msgstr ""
+"Voir aussi : :ref:`expression_function_String_concat`, "
+":ref:`expression_function_Operators_plus`"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:6
 msgid "~"
@@ -13494,6 +13607,10 @@ msgstr "``'hello' ~ 'llo$'`` → 1"
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:22
 msgid "``'abc123' ~ '\\\\d+'`` → 1"
 msgstr "``'abc123' ~ '\\\\d+'`` → 1"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:798
+msgid "Further reading: :ref:`expression_function_String_regexp_match`"
+msgstr "Plus de détails : :ref:`expression_function_String_regexp_match`"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:807
 msgid "Processing Functions"
@@ -14548,6 +14665,14 @@ msgstr ""
 "Lorsque l'un des arguments est une valeur NULL, ``||`` ou ``+`` renverra une"
 " valeur NULL. Pour retourner les autres arguments malgré la valeur NULL, "
 "vous pouvez utiliser la fonction ``concat``::"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:920
+msgid ""
+"further reading: :ref:`expression_function_Operators_concat`, "
+":ref:`expression_function_Operators_plus`"
+msgstr ""
+"Voir aussi : :ref:`expression_function_Operators_concat`, "
+":ref:`expression_function_Operators_plus`"
 
 #: ../../docs/user_manual/expressions/expression_help/String.rst:6
 msgid "format"
