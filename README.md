@@ -206,10 +206,9 @@ To do so, you need to manually pull the translations from Transifex to your loca
    source ./venv/bin/activate
    pip install -r REQUIREMENTS.txt
    ```
-1. Update resources references in the config file.
-   This is necessary to catch any new or removed files.
+1. Install [Transifex command line client](https://github.com/transifex/cli/)
    ```
-   ./scripts/create_transifex_resources.sh
+   curl -o- https://raw.githubusercontent.com/transifex/cli/master/install.sh | bash
    ```
 1. Download the translated strings using the [minimize_translation script](scripts/minimize_translation.sh).
    By default this pulls all the languages.
@@ -221,15 +220,13 @@ To do so, you need to manually pull the translations from Transifex to your loca
    ./scripts/minimize_translation.sh -l it
    ```
 
-   IMPORTANT: to be able to pull from transifex.com, you will need a credentials file. 
-   This file should be named: ``.transifexrc`` and easiest is to put it in your home dir. 
+   IMPORTANT: to be able to pull from transifex.com, you will need a credentials file.
+   This file should be named: ``.transifexrc`` and easiest is to put it in your home dir.
    The file should contain this:
    ```
    [https://www.transifex.com]
-   hostname = https://www.transifex.com
-   password = yourtransifexpassword
-   token = 
-   username = yourtransifexusername
+   rest_hostname = https://rest.api.transifex.com
+   token = yourtransifextoken
    ```
 1. Build the docs in your language
    ```
