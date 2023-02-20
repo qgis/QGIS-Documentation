@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2022
 # Steffen Hollah, 2023
+# Joern G <j.gutzeit@umwelt-it.de>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-06-15 02:44+0000\n"
 "PO-Revision-Date: 2022-03-14 05:15+0000\n"
-"Last-Translator: Steffen Hollah, 2023\n"
+"Last-Translator: Joern G <j.gutzeit@umwelt-it.de>, 2023\n"
 "Language-Team: German (https://www.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -59,8 +60,8 @@ msgid ""
 "common format. Supported formats include:"
 msgstr ""
 "Es ist möglich, Vektor- und Rasterdaten (in 2D und 3D) in unterschiedlichen "
-"Formaten und mit verschiedenen Projektionen anzuschauen, ohne die Daten "
-"selbst in ein internes oder gemeinsames Format konvertieren zu müssen. Zu "
+"Formaten und mit verschiedenen Projektionen zu visualisieren, ohne die Daten"
+" selbst in ein internes oder gemeinsames Format konvertieren zu müssen. Zu "
 "den unterstützten Datenformaten gehören:"
 
 #: ../../docs/user_manual/preamble/features.rst:29
@@ -86,6 +87,15 @@ msgstr ""
 " IMG, ArcInfo ASCII GRID, JPEG, PNG und viele mehr. Siehe Kapitel "
 ":ref:`working_with_raster`."
 
+#: ../../docs/user_manual/preamble/features.rst:37
+msgid ""
+"Mesh data (TINs and regular grids are supported). See :ref:`label_meshdata`."
+msgstr "Mesh Daten (siehe :ref:`label_meshdata`)"
+
+#: ../../docs/user_manual/preamble/features.rst:38
+msgid "Vector tiles"
+msgstr "Vektorkacheln (Vector Tiles; siehe :ref:`label_vector_tiles`)"
+
 #: ../../docs/user_manual/preamble/features.rst:39
 msgid ""
 "GRASS raster and vector data from GRASS databases (location/mapset). See "
@@ -93,6 +103,28 @@ msgid ""
 msgstr ""
 "GRASS Raster- und Vektordaten aus GRASS Datenbanken (Location/Mapset). Siehe"
 " Kapitel :ref:`sec_grass`."
+
+#: ../../docs/user_manual/preamble/features.rst:41
+msgid ""
+"Online spatial data served as OGC Web Services, including WMS, WMTS, WCS, "
+"WFS, and WFS-T. See section :ref:`working_with_ogc`."
+msgstr ""
+"Online-Geodaten, die als OGC-Webdienste bereitgestellt werden, "
+"einschließlich WMS, WMTS, WCS, WFS und WFS-T. Siehe Abschnitt "
+":ref:`working_with_ogc`."
+
+#: ../../docs/user_manual/preamble/features.rst:44
+msgid ""
+"The QGIS authentication infrastructure helps you manage user/password, "
+"certificates and keys for web services and other resources."
+msgstr ""
+"Die QGIS-Authentifizierungsinfrastruktur hilft Ihnen bei der Verwaltung von "
+"Benutzern/Passwörtern, Zertifikaten und Schlüsseln für Webdienste und andere"
+" Ressourcen."
+
+#: ../../docs/user_manual/preamble/features.rst:47
+msgid "Spreadsheets (ODS / XLSX)"
+msgstr "Tabellen (ODS, XLS(X), ...)"
 
 #: ../../docs/user_manual/preamble/features.rst:49
 msgid "Temporal data are supported."
@@ -130,6 +162,10 @@ msgstr "DB Manager"
 #: ../../docs/user_manual/preamble/features.rst:62
 msgid "Print layout"
 msgstr "Drucklayout"
+
+#: ../../docs/user_manual/preamble/features.rst:63
+msgid "Report"
+msgstr "Berichte"
 
 #: ../../docs/user_manual/preamble/features.rst:64
 msgid "Overview panel"
@@ -182,6 +218,10 @@ msgid ""
 msgstr ""
 "Sie können Vektor- und Rasterlayer erstellen, bearbeiten und in zahlreiche "
 "Formate exportieren. QGIS bietet die folgenden an:"
+
+#: ../../docs/user_manual/preamble/features.rst:82
+msgid "Vector digitizing tools"
+msgstr "Werkzeuge zur Vektordigitalisierung"
 
 #: ../../docs/user_manual/preamble/features.rst:83
 msgid ""
@@ -242,9 +282,58 @@ msgstr ""
 msgid "Analyze data"
 msgstr "Daten analysieren"
 
+#: ../../docs/user_manual/preamble/features.rst:100
+msgid ""
+"You can perform spatial data analysis on spatial databases and other OGR-"
+"supported formats. QGIS currently offers vector analysis, raster analysis, "
+"sampling, geoprocessing, geometry and database management tools. You can "
+"also use the integrated GRASS tools, which include the complete GRASS "
+"functionality of more than 400 modules (see section :ref:`sec_grass`). Or, "
+"you can work with the Processing plugin, which provides a powerful "
+"geospatial analysis framework to call native and third-party algorithms from"
+" QGIS, such as GDAL, SAGA, GRASS, OTB, R, and more (see section "
+":ref:`sec_processing_intro`). All analysis functions are run in the "
+"background, allowing you to continue your work before the processing has "
+"finished."
+msgstr ""
+"Sie können räumliche Datenanalysen mit räumlichen Datenbanken und anderen "
+"OGR-unterstützten Formaten durchführen. QGIS bietet derzeit Werkzeuge für "
+"Vektoranalyse, Rasteranalyse, Stichproben, Geoprocessing, Geometrie und "
+"Datenbankmanagement. Sie können auch die integrierten GRASS-Werkzeuge "
+"verwenden, die die gesamte GRASS-Funktionalität von mehr als 400 Modulen "
+"umfassen (siehe Abschnitt :ref:`sec_grass`). Oder Sie können mit dem "
+"Processing-Plugin arbeiten, das ein leistungsfähiges Framework für die "
+"Geodatenanalyse bietet, um native Algorithmen aus QGIS und Algorithmen von "
+"Drittanbietern aufzurufen, wie z.B. GDAL, SAGA, GRASS, OTB, R und mehr "
+"(siehe Abschnitt :ref:`sec_processing_intro`). Alle Analysefunktionen werden"
+" im Hintergrund ausgeführt, so dass Sie Ihre Arbeit fortsetzen können, "
+"während die Verarbeitung läuft."
+
+#: ../../docs/user_manual/preamble/features.rst:113
+msgid ""
+"The graphical modeller allows you to combine / chain functions into a "
+"complete workflow in an intuitive graphical environment."
+msgstr ""
+"Mit dem grafischen Modellierer können Sie in einer intuitiven grafischen "
+"Umgebung Funktionen zu einem vollständigen Arbeitsablauf "
+"kombinieren/verketten."
+
 #: ../../docs/user_manual/preamble/features.rst:118
 msgid "Publish maps on the Internet"
 msgstr "Karten im Internet veröffentlichen"
+
+#: ../../docs/user_manual/preamble/features.rst:120
+msgid ""
+"QGIS can be used as a WMS, WMTS, WMS-C, WFS, OAPIF and WFS-T client (see "
+"section :ref:`working_with_ogc`), and QGIS Server (see :ref:`QGIS-Server-"
+"manual`) allows you to publish your data through the WMS, WCS, WFS and OAPIF"
+" protocols on the Internet using a webserver."
+msgstr ""
+"QGIS kann als WMS-, WMTS-, WMS-C-, WFS-, OAPIF- und WFS-T-Client verwendet "
+"werden (siehe Abschnitt :ref:`working_with_ogc`), und QGIS Server (siehe "
+":ref:`QGIS-Server-manual`) ermöglicht es Ihnen, Ihre Daten über die WMS-, "
+"WCS-, WFS- und OAPIF-Protokolle mit Hilfe eines Webservers im Internet zu "
+"veröffentlichen."
 
 #: ../../docs/user_manual/preamble/features.rst:126
 msgid "Extend QGIS functionality through plugins"
@@ -290,6 +379,10 @@ msgstr ""
 #: ../../docs/user_manual/preamble/features.rst:140
 msgid "GPS Tools (load and import GPS data)"
 msgstr "GPS Werkzeuge (GPS Daten laden und importieren)"
+
+#: ../../docs/user_manual/preamble/features.rst:141
+msgid "GRASS (integrate GRASS GIS)"
+msgstr "GRASS (integriertes GRASS GIS)"
 
 #: ../../docs/user_manual/preamble/features.rst:142
 msgid ""
