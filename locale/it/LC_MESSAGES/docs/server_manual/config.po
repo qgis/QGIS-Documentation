@@ -6,21 +6,21 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2022
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2022
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-27 02:44+0000\n"
+"POT-Creation-Date: 2023-02-18 12:09+0100\n"
 "PO-Revision-Date: 2022-03-14 05:10+0000\n"
-"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2022\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2023\n"
 "Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.10.1\n"
+"Generated-By: Babel 2.11.0\n"
 "Language: it\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -115,7 +115,12 @@ msgstr ""
 #: ../../docs/server_manual/config.rst:77
 #: ../../docs/server_manual/config.rst:148
 #: ../../docs/server_manual/config.rst:190
-#: ../../docs/server_manual/config.rst:247
+#: ../../docs/server_manual/config.rst:221
+#: ../../docs/server_manual/config.rst:250
+#: ../../docs/server_manual/config.rst:256
+#: ../../docs/server_manual/config.rst:268
+#: ../../docs/server_manual/config.rst:274
+#: ../../docs/server_manual/config.rst:293
 msgid "''"
 msgstr "''"
 
@@ -134,8 +139,9 @@ msgstr "''"
 #: ../../docs/server_manual/config.rst:178
 #: ../../docs/server_manual/config.rst:184
 #: ../../docs/server_manual/config.rst:191
-#: ../../docs/server_manual/config.rst:223
-#: ../../docs/server_manual/config.rst:248
+#: ../../docs/server_manual/config.rst:222
+#: ../../docs/server_manual/config.rst:245
+#: ../../docs/server_manual/config.rst:294
 msgid "All"
 msgstr "All"
 
@@ -192,16 +198,16 @@ msgstr "dipende dal packaging"
 
 #: ../../docs/server_manual/config.rst:84
 #: ../../docs/server_manual/config.rst:89
-msgid "WFS"
-msgstr "WFS"
+msgid "OAPIF/WFS3"
+msgstr "OAPIF/WFS3"
 
 #: ../../docs/server_manual/config.rst:86
 msgid "QGIS_SERVER_API_WFS3_MAX_LIMIT"
 msgstr "QGIS_SERVER_API_WFS3_MAX_LIMIT"
 
 #: ../../docs/server_manual/config.rst:87
-msgid "Maximum value for ``limit`` in a features request."
-msgstr "Valore massimo per ``limit`` in una richiesta di elementi."
+msgid "Maximum value for ``limit`` in a OAPIF/WFS3 features request."
+msgstr "Valore massimo per ``limit`` in una richiesta di features OAPIF/WFS3."
 
 #: ../../docs/server_manual/config.rst:88
 msgid "10000"
@@ -256,15 +262,16 @@ msgstr ""
 #: ../../docs/server_manual/config.rst:166
 #: ../../docs/server_manual/config.rst:177
 #: ../../docs/server_manual/config.rst:199
-#: ../../docs/server_manual/config.rst:208
-#: ../../docs/server_manual/config.rst:222
+#: ../../docs/server_manual/config.rst:230
+#: ../../docs/server_manual/config.rst:244
 msgid "false"
 msgstr "false"
 
 #: ../../docs/server_manual/config.rst:108
 #: ../../docs/server_manual/config.rst:200
-#: ../../docs/server_manual/config.rst:209
-#: ../../docs/server_manual/config.rst:229
+#: ../../docs/server_manual/config.rst:231
+#: ../../docs/server_manual/config.rst:263
+#: ../../docs/server_manual/config.rst:269
 msgid "WMS"
 msgstr "WMS"
 
@@ -410,13 +417,13 @@ msgstr ""
 
 #: ../../docs/server_manual/config.rst:175
 #: ../../docs/server_manual/config.rst:197
-#: ../../docs/server_manual/config.rst:206
+#: ../../docs/server_manual/config.rst:228
 msgid "``0`` or ``false`` (case insensitive)"
 msgstr "``0`` o ``false`` (non tiene conto del maiuscolo o minuscolo)"
 
 #: ../../docs/server_manual/config.rst:176
 #: ../../docs/server_manual/config.rst:198
-#: ../../docs/server_manual/config.rst:207
+#: ../../docs/server_manual/config.rst:229
 msgid "``1`` or ``true`` (case insensitive)"
 msgstr "``1`` o ``true`` (non tiene conto del maiuscolo o minuscolo)"
 
@@ -433,7 +440,7 @@ msgstr ""
 "il valore è ``-1`` utilizza il numero di core del processore."
 
 #: ../../docs/server_manual/config.rst:183
-#: ../../docs/server_manual/config.rst:228
+#: ../../docs/server_manual/config.rst:262
 msgid "-1"
 msgstr "-1"
 
@@ -465,11 +472,74 @@ msgstr ""
 "Attiva il rendering parallelo per le richieste di WMS GetMap. È disabilitato"
 " (``false``) per impostazione predefinita. I valori disponibili sono:"
 
-#: ../../docs/server_manual/config.rst:202
+#: ../../docs/server_manual/config.rst:204
+msgid "QGIS_SERVER_SERVICE_URL"
+msgstr "QGIS_SERVER_SERVICE_URL"
+
+#: ../../docs/server_manual/config.rst:205
+msgid ""
+"This is an option to set the service URL if it is not present in the "
+"project."
+msgstr ""
+"Questa è un'opzione per impostare l'URL del servizio se non è presente nel "
+"progetto."
+
+#: ../../docs/server_manual/config.rst:207
+msgid "The service URL is defined from (in order of precedence):"
+msgstr "L'URL del servizio è definito da (in ordine di precedenza):"
+
+#: ../../docs/server_manual/config.rst:209
+msgid "Value defined in the project per service"
+msgstr "Valore definito nel progetto per il servizio"
+
+#: ../../docs/server_manual/config.rst:210
+msgid "The ``QGIS_SERVER_<service>_SERVICE_URL`` environment variable"
+msgstr "La variabile d'ambiente ``QGIS_SERVER_<service>_SERVICE_URL``"
+
+#: ../../docs/server_manual/config.rst:211
+msgid "The ``QGIS_SERVER_SERVICE_URL`` environment variable"
+msgstr "La variabile d'ambiente ``QGIS_SERVER_SERVICE_URL``"
+
+#: ../../docs/server_manual/config.rst:212
+msgid "The ``X-Qgis-<service>-Service-Url`` header"
+msgstr "L'intestazione ``X-Qgis-<service>-Service-Url"
+
+#: ../../docs/server_manual/config.rst:213
+msgid "The ``X-Qgis-Service-Url`` header"
+msgstr "L'intestazione ``X-Qgis-Service-Url``."
+
+#: ../../docs/server_manual/config.rst:214
+msgid "Build from the ``Forwarded`` header"
+msgstr "Costruito dall'intestazione ``Forwarded``"
+
+#: ../../docs/server_manual/config.rst:215
+msgid "Build from the ``X-Forwarded-Host`` and ``X-Forwarded-Proto`` headers"
+msgstr ""
+"Costruito dalle intestazioni ``X-Forwarded-Host'' e ``X-Forwarded-Proto''."
+
+#: ../../docs/server_manual/config.rst:216
+msgid "Build from the ``Host`` header and the server protocol"
+msgstr ""
+"Costruito in base all'intestazione ``Host`` e al protocollo del server"
+
+#: ../../docs/server_manual/config.rst:217
+msgid "Build from the server name and the server protocol."
+msgstr "Costruito dal nome del server e dal protocollo del server."
+
+#: ../../docs/server_manual/config.rst:219
+msgid ""
+"In the last four cases, the resulting Service URL is based on the ``MAP`` "
+"parameter provided in the query string and on the incoming path request."
+msgstr ""
+"Negli ultimi quattro casi, l'URL del servizio risultante si basa sul "
+"parametro ``MAP`` fornito nella stringa di query e sulla richiesta di "
+"percorso in ingresso."
+
+#: ../../docs/server_manual/config.rst:224
 msgid "QGIS_SERVER_SHOW_GROUP_SEPARATOR"
 msgstr "QGIS_SERVER_SHOW_GROUP_SEPARATOR"
 
-#: ../../docs/server_manual/config.rst:203
+#: ../../docs/server_manual/config.rst:225
 msgid ""
 "Defines whether a group separator (e.g. thousand separator) should be used "
 "for numeric values (e.g. in GetFeatureInfo responses). The default value is "
@@ -479,11 +549,11 @@ msgstr ""
 "migliaia) deve essere usato per i valori numerici (ad esempio, nelle "
 "risposte di GetFeatureInfo). Il valore predefinito è ``0``."
 
-#: ../../docs/server_manual/config.rst:211
+#: ../../docs/server_manual/config.rst:233
 msgid "QGIS_SERVER_TRUST_LAYER_METADATA"
 msgstr "QGIS_SERVER_TRUST_LAYER_METADATA"
 
-#: ../../docs/server_manual/config.rst:212
+#: ../../docs/server_manual/config.rst:234
 msgid ""
 "This is an option at the project level to improve project read time by using"
 " the vector layer extents defined in the project metadata and disabling the "
@@ -494,7 +564,7 @@ msgstr ""
 " nei metadati del progetto e disabilitando il controllo dell'unicità della "
 "chiave primaria dei layer PostgreSQL/PostGIS."
 
-#: ../../docs/server_manual/config.rst:216
+#: ../../docs/server_manual/config.rst:238
 msgid ""
 "Trusting layer metadata can be forced by setting this variable to ``1`` or "
 "``true``. The vector layer's extent will then be the one defined in the "
@@ -507,17 +577,46 @@ msgstr ""
 "PostgreSQL/PostGIS definita nell'origine dati sarà considerata unica senza "
 "alcun controllo."
 
-#: ../../docs/server_manual/config.rst:221
+#: ../../docs/server_manual/config.rst:243
 msgid "Do not use it if layers' extent is not fixed during the project's use."
 msgstr ""
 "Non usarlo se l'estensione dei layer non viene definita durante l'uso del "
 "progetto."
 
-#: ../../docs/server_manual/config.rst:225
+#: ../../docs/server_manual/config.rst:247
+msgid "QGIS_SERVER_WCS_SERVICE_URL"
+msgstr "QGIS_SERVER_WCS_SERVICE_URL"
+
+#: ../../docs/server_manual/config.rst:248
+#: ../../docs/server_manual/config.rst:254
+#: ../../docs/server_manual/config.rst:266
+#: ../../docs/server_manual/config.rst:272
+msgid ""
+"This is an option to set the service URL if it is not present in the "
+"project. See :ref:`QGIS_SERVER_SERVICE_URL <qgis_server_service_url>` for "
+"more information."
+msgstr ""
+"È un'opzione per impostare l'URL del servizio se non è presente nel "
+"progetto. Vedere :ref:`QGIS_SERVER_SERVICE_URL <qgis_server_service_url>` "
+"per maggiori informazioni."
+
+#: ../../docs/server_manual/config.rst:251
+msgid "WCS"
+msgstr "WCS"
+
+#: ../../docs/server_manual/config.rst:253
+msgid "QGIS_SERVER_WFS_SERVICE_URL"
+msgstr "QGIS_SERVER_WFS_SERVICE_URL"
+
+#: ../../docs/server_manual/config.rst:257
+msgid "WFS"
+msgstr "WFS"
+
+#: ../../docs/server_manual/config.rst:259
 msgid "QGIS_SERVER_WMS_MAX_HEIGHT / QGIS_SERVER_WMS_MAX_WIDTH"
 msgstr "QGIS_SERVER_WMS_MAX_HEIGHT / QGIS_SERVER_WMS_MAX_WIDTH"
 
-#: ../../docs/server_manual/config.rst:226
+#: ../../docs/server_manual/config.rst:260
 msgid ""
 "Maximum height/width for a WMS request. The most conservative between this "
 "and the project one is used. If the value is ``-1``, it means that there is "
@@ -527,11 +626,23 @@ msgstr ""
 "più conservativo tra questo e quello del progetto. Se il valore è ``-1'', "
 "significa che non è stato impostato un massimo."
 
-#: ../../docs/server_manual/config.rst:231
+#: ../../docs/server_manual/config.rst:265
+msgid "QGIS_SERVER_WMS_SERVICE_URL"
+msgstr "QGIS_SERVER_WMS_SERVICE_URL"
+
+#: ../../docs/server_manual/config.rst:271
+msgid "QGIS_SERVER_WMTS_SERVICE_URL"
+msgstr "QGIS_SERVER_WMTS_SERVICE_URL"
+
+#: ../../docs/server_manual/config.rst:275
+msgid "WMTS"
+msgstr "WMTS"
+
+#: ../../docs/server_manual/config.rst:277
 msgid "QUERY_STRING"
 msgstr "QUERY_STRING"
 
-#: ../../docs/server_manual/config.rst:232
+#: ../../docs/server_manual/config.rst:278
 msgid ""
 "The query string, normally passed by the web server. This variable can be "
 "useful while testing QGIS server binary from the command line."
@@ -539,7 +650,7 @@ msgstr ""
 "La stringa di query, normalmente passata dal server web. Questa variabile "
 "può essere utile per testare i binari del server QGIS dalla riga di comando."
 
-#: ../../docs/server_manual/config.rst:235
+#: ../../docs/server_manual/config.rst:281
 msgid ""
 "For example for testing a GetCapabilities request on the command line to a "
 "project that also requires a PostgreSQL connection defined in a "
@@ -549,7 +660,7 @@ msgstr ""
 " a un progetto che richiede anche una connessione PostgreSQL definita in un "
 "file pg_service.conf:"
 
-#: ../../docs/server_manual/config.rst:245
+#: ../../docs/server_manual/config.rst:291
 msgid ""
 "The result should be either the content of the GetCapabilities response or, "
 "if something is wrong, an error message."
@@ -557,11 +668,11 @@ msgstr ""
 "Il risultato dovrebbe essere il contenuto della risposta di GetCapabilities "
 "o, se qualcosa non va, un messaggio di errore."
 
-#: ../../docs/server_manual/config.rst:252
+#: ../../docs/server_manual/config.rst:298
 msgid "Settings summary"
 msgstr "Riepilogo impostazioni"
 
-#: ../../docs/server_manual/config.rst:254
+#: ../../docs/server_manual/config.rst:300
 msgid ""
 "When QGIS Server is starting, you have a summary of all configurable "
 "parameters thanks to environment variables. Moreover, the value currently "
@@ -571,11 +682,11 @@ msgstr ""
 "parametri configurabili grazie alle variabili d'ambiente. Inoltre, viene "
 "visualizzato anche il valore attualmente utilizzato e l'origine."
 
-#: ../../docs/server_manual/config.rst:258
+#: ../../docs/server_manual/config.rst:304
 msgid "For example with spawn-fcgi:"
 msgstr "Ad esempio con spawn-fcgi:"
 
-#: ../../docs/server_manual/config.rst:289
+#: ../../docs/server_manual/config.rst:335
 msgid ""
 "In this particular case, we know that **QGIS_SERVER_MAX_THREADS** and "
 "**QGIS_SERVER_PARALLEL_RENDERING** values are read from the ini file found "
@@ -591,11 +702,11 @@ msgstr ""
 " ini sono **/qgis/max_threads** e **/qgis/parallel_rendering** e i loro "
 "valori sono **true** e **4** thread."
 
-#: ../../docs/server_manual/config.rst:297
+#: ../../docs/server_manual/config.rst:343
 msgid "Connection to service file"
 msgstr "Connessione a file di servizio"
 
-#: ../../docs/server_manual/config.rst:299
+#: ../../docs/server_manual/config.rst:345
 msgid ""
 "In order to make apache aware of the PostgreSQL service file (see the "
 ":ref:`pg-service-file` section) you need to make your :file:`*.conf` file "
@@ -605,11 +716,11 @@ msgstr ""
 "vedere la sezione :ref:`pg-service-file`) devi fare in modo che il tuo file "
 ":file:`*.conf` assomigli a:"
 
-#: ../../docs/server_manual/config.rst:315
+#: ../../docs/server_manual/config.rst:361
 msgid "Add fonts to your linux server"
 msgstr "Aggiungere font al server Linux"
 
-#: ../../docs/server_manual/config.rst:317
+#: ../../docs/server_manual/config.rst:363
 msgid ""
 "Keep in mind that you may use QGIS projects that point to fonts that may not"
 " exist by default on other machines. This means that if you share the "
@@ -621,7 +732,7 @@ msgstr ""
 "significa che se si condivide il progetto, questo potrebbe apparire diverso "
 "su altri computer (se i font non esistono sul computer di destinazione)."
 
-#: ../../docs/server_manual/config.rst:321
+#: ../../docs/server_manual/config.rst:367
 msgid ""
 "In order to ensure this does not happen you just need to install the missing"
 " fonts on the target machine. Doing this on desktop systems is usually "
@@ -631,7 +742,7 @@ msgstr ""
 "destinazione. Sui sistemi desktop questa operazione è di solito banale "
 "(doppio clic sui font)."
 
-#: ../../docs/server_manual/config.rst:324
+#: ../../docs/server_manual/config.rst:370
 msgid ""
 "For linux, if you don't have a desktop environment installed (or you prefer "
 "the command line) you need to:"
@@ -639,10 +750,10 @@ msgstr ""
 "Per Linux, se non hai installato un ambiente desktop (o preferisci la linea "
 "di comando), devi installarlo:"
 
-#: ../../docs/server_manual/config.rst:326
+#: ../../docs/server_manual/config.rst:372
 msgid "On Debian based systems:"
 msgstr "Su sistemi basati su Debian:"
 
-#: ../../docs/server_manual/config.rst:339
+#: ../../docs/server_manual/config.rst:385
 msgid "On Fedora based systems:"
 msgstr "Su sistemi basati su Fedora:"
