@@ -6,7 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2022
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2022
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-09 02:43+0000\n"
 "PO-Revision-Date: 2022-03-14 05:11+0000\n"
-"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2022\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2023\n"
 "Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -3294,6 +3294,81 @@ msgstr ""
 msgid "Trim/Extend Feature"
 msgstr "Troncare/Estendere Elemento"
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1459
+msgid ""
+"The |trimExtend| :sup:`Trim/Extend` tool allows you to shorten or lengthen "
+"segments of a (multi)line or (multi)polygon geometry to converge with a "
+"selected segment (the cutting line). This results in a modified geometry "
+"with a vertex snapped to the target segment or in its prolongation. "
+"Depending on how the selected geometries are placed in relation to each "
+"other, the tool will either:"
+msgstr ""
+"Lo strumento |trimExtend| :sup:`Tronca/Estendi` consente di accorciare o "
+"allungare i segmenti di una geometria (multi)linea o (multi)poligono per "
+"farli convergere con un segmento selezionato (la linea di taglio). Il "
+"risultato è una geometria modificata con un vertice agganciato al segmento "
+"di destinazione o al suo prolungamento. A seconda di come le geometrie "
+"selezionate sono posizionate l'una rispetto all'altra, lo strumento può:"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1466
+msgid ""
+"**Trim**: removes parts of the line segment or polygon boundary, beyond the "
+"cutting line"
+msgstr ""
+"**Tronca**: rimuove parti del segmento di linea o del confine del poligono, "
+"oltre la linea di taglio."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1468
+msgid ""
+"**Extend**: extends polygon boundaries or line segments so that they can "
+"snap to the cutting line."
+msgstr ""
+"**Estendi**: estende i confini dei poligoni o i segmenti di linea in modo "
+"che possano agganciarsi alla linea di taglio."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1471
+msgid "In order to trim or extend existing geometries:"
+msgstr "Per tagliare o estendere geometrie esistenti:"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1473
+msgid ""
+"Enable appropriate :ref:`snapping settings <snapping_options>` on segment "
+"for the involved layer(s)"
+msgstr ""
+"Abilita le :ref:`snapping settings <snapping_options>` appropriate sul "
+"segmento per il(i) layer coinvolto."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1475
+msgid "Select the |trimExtend| :sup:`Trim/Extend` tool"
+msgstr "Seleziona lo strumento |TrimExtend| :sup:`Tronca/Estendi`"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1476
+msgid ""
+"Click the target limit segment, i.e. the segment with respect to which you "
+"want to extend or trim another segment. It appears highlighted."
+msgstr ""
+"Fai clic sull'estremità del segmento di destinazione, ossia il segmento "
+"rispetto al quale vuoi estendere o tagliare un altro segmento. Il segmento "
+"appare evidenziato."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1478
+msgid ""
+"Move to the segment you want to trim or extend. It does not need to be the "
+"last segment of the geometry, but has to be on the active layer."
+msgstr ""
+"Spostati sul segmento che voui tagliare o estendere. Non è necessario che "
+"sia l'ultimo segmento della geometria, ma deve trovarsi sul layer attivo."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1480
+msgid ""
+"Hover over the segment, and QGIS displays a preview of what the feature's "
+"geometry would be. If OK, click the segment. In the case of a trim, you must"
+" select the part that should be shortened."
+msgstr ""
+"Passando il mouse sul segmento, QGIS visualizza un'anteprima della "
+"configurazione della geometria. Se l'anteprima è OK, fai clic sul segmento. "
+"Nel caso di un taglio, è necessario selezionare la parte da accorciare."
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1483
 msgid ""
 "When both segments are in 3D, the tool performs an interpolation on the "
@@ -3301,6 +3376,17 @@ msgid ""
 msgstr ""
 "Quando entrambi i segmenti sono in 3D, lo strumento esegue un'interpolazione"
 " sul limite del segmento per ottenere il valore Z."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1486
+msgid ""
+"Pay attention to the modified geometry while using the |trimExtend| "
+":sup:`Trim/Extend` tool. Depending on the inputs, it can create invalid "
+"geometries, potentially resulting in failure at layer saving."
+msgstr ""
+"Presta attenzione alla geometria modificata quando utilizzi lo strumento "
+"|trimExtend| :sup:`Tronca/Estendi`. A seconda degli input, può creare "
+"geometrie non valide, causando potenzialmente un errore nel salvataggio del "
+"layer."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1494
 msgid "Shape digitizing"
