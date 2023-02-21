@@ -6,7 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2022
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2022
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-12-21 02:17+0000\n"
 "PO-Revision-Date: 2022-03-14 05:13+0000\n"
-"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2022\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2023\n"
 "Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -208,6 +208,23 @@ msgstr ":file:`.dbf` file contenente gli attributi in formato dBase"
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:109
 msgid ":file:`.shx` index file"
 msgstr ":file:`.shx` file indici"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:111
+msgid ""
+"An ESRI Shapefile format dataset can also include a file with a :file:`.prj`"
+" suffix, which contains projection information. While it is very useful to "
+"have a projection file, it is not mandatory. A Shapefile format dataset can "
+"contain additional files. For further details, see the the ESRI `technical "
+"specification <https://www.esri.com/content/dam/esrisites/sitecore-"
+"archive/Files/Pdfs/library/whitepapers/pdfs/shapefile.pdf>`_."
+msgstr ""
+"Un set di dati in formato ESRI Shapefile può anche includere un file con "
+"suffisso :file:`.prj`, che contiene informazioni sulla proiezione. Sebbene "
+"sia molto utile avere un file di proiezione, non è obbligatorio. Un set di "
+"dati in formato Shapefile può contenere altri file. Per ulteriori dettagli, "
+"consultare le `specifiche tecniche ESRI "
+"<https://www.esri.com/content/dam/esrisites/sitecore-"
+"archive/Files/Pdfs/library/whitepapers/pdfs/shapefile.pdf>_."
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:119
 msgid ""
@@ -725,6 +742,30 @@ msgstr ""
 "salvati da QGIS non ripristinabili in seguito, devi impostare l’opzione XML "
 "su :file:`DOCUMENT` prima del comando di ripristino."
 
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:359
+msgid "Make a PLAIN backup of the ``layer_style`` table"
+msgstr "Eseguire un backup PLAIN della tabella ``layer_style''."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:360
+msgid "Open the file within a text editor"
+msgstr "Aprire il file in un editor di testo"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:361
+msgid ""
+"Change the line ``SET xmloption = content;`` into ``SET XML OPTION "
+"DOCUMENT;``"
+msgstr ""
+"Modificare la riga ``SET xmloption = content;`` in ``SET XML OPTION "
+"DOCUMENT;``"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:362
+msgid "Save the file"
+msgstr "Salvare il file"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:363
+msgid "Use psql to restore the table in the new database"
+msgstr "Utilizzare psql per ripristinare la tabella nel nuovo database"
+
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:367
 msgid "Filter database side"
 msgstr "Filtro lato server"
@@ -960,6 +1001,25 @@ msgstr "Il seguente esempio crea un indice GiST:"
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:517
 msgid "Vector layers crossing 180 |degrees| longitude"
 msgstr "Vettori a cavallo dei 180 |degrees| di longitudine"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:519
+msgid ""
+"Many GIS packages don't wrap vector maps with a geographic reference system "
+"(lat/lon) crossing the 180 degrees longitude line "
+"(https://postgis.net/docs/ST_Shift_Longitude.html). As result, if we open "
+"such a map in QGIS, we could see two widely separated locations, that should"
+" appear near each other. In :numref:`Figure_vector_crossing`, the tiny point"
+" on the far left of the map canvas (Chatham Islands) should be within the "
+"grid, to the right of the New Zealand main islands."
+msgstr ""
+"Molti pacchetti GIS non includono mappe vettoriali con un sistema di "
+"riferimento geografico (lat/lon) che attraversa la linea di longitudine di "
+"180 gradi (https://postgis.net/docs/ST_Shift_Longitude.html). Di "
+"conseguenza, se apriamo una mappa di questo tipo in QGIS, potremmo vedere "
+"due località molto separate, che dovrebbero apparire vicine. In "
+":numref:`Figure_vector_crossing`, il piccolo punto all'estrema sinistra "
+"della mappa (Chatham Islands) dovrebbe trovarsi all'interno della griglia, a"
+" destra delle isole principali della Nuova Zelanda."
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:533
 msgid "Map in lat/lon crossing the 180 |degrees| longitude line"
