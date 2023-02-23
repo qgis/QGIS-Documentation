@@ -113,9 +113,7 @@ In February, the new version is labeled as LTR, and replaces the previous one in
   These are the languages that will be published in the documentation.
   A threshold of 5% is currently applied to candidates.
 - [ ] In [docker-world.sh](docker-world.sh) file: complete the `langs` variable with the supported languages
-- [ ] In the [makefile](makefile):
-  - [ ] set `VERSION` parameter to the version number
-  - [ ] add the supported languages to the `LANGUAGES` parameter 
+- [ ] In the [makefile](makefile): add the supported languages to the `LANGUAGES` parameter 
 - [ ] Copy the [locale](locale) folder from the previous LTR to the new one
 - [ ] Generate new English source files (see instructions in [README](README.md) file)
 - [ ] Pull/Copy-paste translated files from the old LTR branch to the new LTR branch
