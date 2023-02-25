@@ -1756,13 +1756,241 @@ msgstr "meshEditForceByVectorLines"
 msgid "Split faces and constrain Z value using a linear geometry"
 msgstr "Dividir caras y restringir el valor a Z usando una geometría lineal"
 
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:639
+msgid "Exploring the Z value assignment logic"
+msgstr "Explorando la asignación lógica del valor Z"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:641
+msgid ""
+"When a mesh layer is turned into edit mode, a :guilabel:`Vertex Z value` "
+"widget opens at the top right of the map canvas. By default, its value "
+"corresponds to the :guilabel:`Default Z value` set in "
+":menuselection:`Settings --> Options --> Digitizing` tab. When there are "
+"selected vertices, the widget displays the average Z value of the selected "
+"vertices."
+msgstr ""
+"Cuando una capa de malla se pone en modo edición se abre un artilugio "
+":guilabel:`Valor del vértice Z` en la parte superior derecha del lienzo del "
+"mapa. De manera predeterminada su valor corresponde al :guilabel:`Valor Z "
+"predeterminado` establecido en la pestaña :menuselection:`Ajustes --> "
+"Opciones --> Digitalización`. Cuando hay vértices seleccionados el artilugio"
+" muestra el valor medio de Z de los vértices seleccionados."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:647
+msgid ""
+"During editing, the :guilabel:`Vertex Z value` is assigned to new vertices. "
+"It is also possible to set a custom value: edit the widget, press "
+":kbd:`Enter` and you will override the default value and make use of this "
+"new value in the digitizing process. Click the |clearText| icon in the "
+"widget to reset its value to the Options default value."
+msgstr ""
+"Durante la edición el :guilabel:`Valor Z del vértice` es asignado a los "
+"nuevos vértices. Tambien es posible establecer un valor a medida: edite el "
+"artilugio, pulse :kbd:`Enter` y usted anulará el valor predeterminado y hará"
+" uso del nuevo valor en el proceso de digitalización. Pulse el icono "
+"|limpiar Texto| en el artilugio para restablecer su valor al predeterminado "
+"en Opciones."
+
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:1087
 msgid "clearText"
 msgstr "clearText"
 
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:655
+msgid "Rules of assignment"
+msgstr "Reglas de asignación"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:657
+msgid ""
+"When **creating** a new vertex, its Z value definition may vary depending on"
+" the active selection in the mesh layer and its location. The following "
+"table displays the various combinations."
+msgstr ""
+"Cuando **crea** un nuevo vértice, la definición de su valor Z puede variar "
+"dependiendo de la selección activa en la capa de malla y su localización. La"
+" siguiente tabla muestra las diversas combinaciones."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:661
+msgid "Matrix of Z value assignment to new vertex"
+msgstr "Matriz de asignación del valor Z a nuevo vértice"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:664
+msgid "Vertex creation"
+msgstr "Creación del vértice"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:664
+msgid "Are there selected vertices in mesh layer?"
+msgstr "¿Hay vértices seleccionados en la capa de malla?"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:664
+msgid "Source of assigned value"
+msgstr "Fuente del valor asignado"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:664
+msgid "Assigned Z Value"
+msgstr "Valor Z asignado"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:667
+msgid "\"Free\" vertex, not connected to any"
+msgstr "Vértice \"Libre\", no conectado a nada"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:669
+msgid "face or edge of a face"
+msgstr "cara o arista de una cara"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:667
+msgid "No"
+msgstr "No"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:667
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:674
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:680
+msgid ":guilabel:`Vertex Z value`"
+msgstr ":guilabel:`Valor Z del vértice`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:667
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:680
+msgid "Default or user defined"
+msgstr "Predeterminado o definido por el usuario"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:669
+msgid ""
+":guilabel:`Advanced Digitizing Panel` (if :guilabel:`z` widget is in "
+"|locked| :sup:`Locked` state)"
+msgstr ""
+":guilabel:`Panel de Digitalización Avanzada` (si el artilugio :guilabel:`z` "
+"está en |bloqueado| estado :sup:`Bloqueado`)"
+
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:1101
 msgid "locked"
 msgstr "bloqueado"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:669
+msgid ":guilabel:`z` widget if in |locked| :sup:`Locked` state"
+msgstr ""
+"artilugio :guilabel:`z` si está en |bloqueado| estado :sup:`Bloqueado`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:674
+msgid "Yes"
+msgstr "Si"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:674
+msgid "Average of the selected vertices"
+msgstr "Media de los vértices seleccionados"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:676
+msgid "Vertex on an edge"
+msgstr "Vértice sobre una arista"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:676
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:678
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:680
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:682
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:684
+msgid "---"
+msgstr "---"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:676
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:678
+msgid "Mesh layer"
+msgstr "Capa de malla"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:676
+msgid "Interpolated from the edge's vertices"
+msgstr "Interpolada desde los vértices de la arista"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:678
+msgid "Vertex on a face"
+msgstr "Vértice sobre una cara"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:678
+msgid "Interpolated from the face's vertices"
+msgstr "Interpolada desde los vértices de la cara"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:680
+msgid "Vertex snapped to a 2D vector feature"
+msgstr "Vértice ajustado a una entidad vectorial 2D"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:682
+msgid "Vertex snapped to a 3D vector vertex"
+msgstr "Vértice ajustado a una entidad vectorial 3D"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:682
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:684
+msgid "Vector layer"
+msgstr "Capa vectorial"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:682
+msgid "Vertex"
+msgstr "Vértice"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:684
+msgid "Vertex snapped to a 3D vector segment"
+msgstr "Vértice ajustado a un segmento vectorial 3D"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:684
+msgid "Interpolated along the vector segment"
+msgstr "Interpolado a lo largo del segmento de vector"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:688
+msgid ""
+"The :guilabel:`Vertex Z value` widget is deactivated if the :ref:`Advanced "
+"Digitizing Panel <advanced_digitizing_panel>` is enabled and no mesh element"
+" is selected. The latter's :guilabel:`z` widget then rules the Z value "
+"assignment."
+msgstr ""
+"El artilugio :guilabel:`Valor Z del vértice` está desactivado si el "
+":ref:`Panel de Digitalización Avanzada <advanced_digitizing_panel>` está "
+"habilitado y no se ha seleccionado elementos de la malla El artilugio "
+":guilabel:`z` de este último gobierna la asignación del valor Z."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:695
+msgid "Modifying Z value of existing vertices"
+msgstr "Modificando el valor Z de los vértices existentes"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:697
+msgid "To modify the Z value of vertices, the most straightforward way is:"
+msgstr "Para modificar el valor Z de los vértices, la manera más directa es:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:699
+msgid ""
+"Select one or many vertices. The :guilabel:`Vertex Z value` widget will "
+"display the average height of the selection."
+msgstr ""
+"Seleccionar uno o más vértices. El artilugio :guilabel:`Valor Z del vértice`"
+" mostrará el tamaño medio de la selección."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:701
+msgid "Change the value in the widget."
+msgstr "Cambie el valor en el artilugio."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:702
+msgid ""
+"Press :kbd:`Enter`. The entered value is assigned to the vertices and "
+"becomes the default value of next vertices."
+msgstr ""
+"Pulse :kbd:`Enter`. El valor introducido se asigna a los vértices y se "
+"convierte en el valor predeterminado de los vértices próximos."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:705
+msgid ""
+"Another way to change the Z value of a vertex is to move and snap it on a "
+"vector layer feature with the Z value capability. If more than one vertex "
+"are selected, the Z value can't be changed in this way."
+msgstr ""
+"Otra manera de cambiar el valor Z de un vértice es moverlo y encajarlo en "
+"una entidad de capa vectorial con la capacidad de valor Z. Si están "
+"seleccionados más de un vértice, el valor Z no puede ser cambiado de este "
+"modo."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:709
+msgid ""
+"The :ref:`Transform mesh vertices <transform_meshvertices>` dialog also "
+"provides means to modify the Z value of a selection of vertices (along with "
+"their X or Y coordinates)."
+msgstr ""
+"El diálogo :ref:`Transformar los vértices de la malla "
+"<transform_meshvertices>` también proporciona medio para modificar el valor "
+"Z de una selección de vértices (junto con sus coordenadas X o Y)."
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:716
 msgid "Selecting mesh elements"
@@ -2353,9 +2581,161 @@ msgstr ""
 "una **cruz** si las dos caras de cada lado se pueden fusionar: pulse sobre "
 "ella para borrar el borde y fusionar las caras."
 
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:921
+msgid ""
+"a **circle** if the edge is between two triangles: Click on it to flip the "
+"edge, i.e. connect it instead to the two other \"free\" vertices of the "
+"faces"
+msgstr ""
+"un **círculo** si la arista está entre dos triángulos: Pulse en él para dar "
+"la vuelta a la arista, esto es, conectarla a los otros vértices \"libres\" "
+"de las caras"
+
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:925
 msgid "The :guilabel:`Force by Selected Geometries` tool"
 msgstr "La herramienta :guilabel:`Fuerza por Geometrías Seleccionadas`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:927
+msgid ""
+"The |meshEditForceByVectorLines| :sup:`Force by Selected Geometries` tool "
+"provides advanced ways to apply break lines using lines geometry. A break "
+"line will force the mesh to have edges along the line. Note that the break "
+"line will not be considered persistent once the operation is done; resulting"
+" edges will not act as constraints anymore and can be modified like any "
+"other edge. This can be used for example to locally modify a mesh layer with"
+" accurate lines, as river banks or border of road embankments."
+msgstr ""
+"The |meshEditForceByVectorLines| :sup:La herramienta `Fuerza por las "
+"Geometrías Seleccionadas` proporciona maneras avanzadas de aplicar líneas de"
+" ruptura usando geometrías de líneas. Una línea de ruptura forzará a la "
+"malla a tener aristas a lo largo de la línea. Tenga en cuenta que la linea "
+"de ruptura no se considerará persistente una vez efectuada la operación; las"
+" artistas resultante no actuarán como restricciones y podrán ser modificadas"
+" como cualquier otro borde. Esto se puede usar, por ejemplo, para modificar "
+"localmente una capa de malla con líneas precisas, como riberas de ríos o "
+"borde de terraplenes de carreteras."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:936
+msgid ""
+"Enable the |meshEditForceByVectorLines| :sup:`Force by Selected Geometries` "
+"tool"
+msgstr ""
+"Habilitar la herramienta |meshEditForceByVectorLines| :sup:`Fuerza por las "
+"Geometrías Seleccionadas`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:937
+msgid "Indicate the geometry to use as \"forcing line\"; it can be:"
+msgstr "Indicar la geometría a ser usada como \"línea de fuerza\"; puede ser:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:939
+msgid ""
+"picked from a line or polygon feature in the map canvas: right-click over "
+"the vector feature and select it from the list in the contextual menu."
+msgstr ""
+"seleccionado de una entidad de línea o polígono en el lienzo del mapa: botón"
+" derecho sobre la característica vectorial y seleccionarlo de la la lista en"
+" el menú contextual."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:941
+msgid ""
+"a virtual line drawn over the mesh frame: left-click to add vertices, right-"
+"click for validation. Vertices Z value is set through the :guilabel:`Vertex "
+"Z value` widget or the :guilabel:`z` widget if the :guilabel:`Advanced "
+"Digitizing Panel` is on. If the line is snapped to a mesh vertex or a 3D "
+"vector feature's vertex or segment, the new vertex takes the snapped element"
+" Z value."
+msgstr ""
+"una linea virtual dibujada sobre la trama de la malla: botón izquierdo para "
+"añadir vértices, botón derecho para valida. El valor Z de los vértices se "
+"establece por medio del artilugio :guilabel:`Valor Z del vértice` o el "
+"artilugio :guilabel:`z` si está activado el :guilabel:`Panel de "
+"Digitalización Avanzada`. Si la línea se ajusta a un vértice de malla o al "
+"vértice o segmento de una entidad vectorial 3D, el nuevo vértice toma el "
+"valor Z del elemento ajustado."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:948
+msgid ""
+"Mesh faces that overlap the line geometry or the polygon's boundary will be "
+"affected in a way that depends on options you can set from the "
+"|meshEditForceByVectorLines| :sup:`Force by Selected Geometries` tool drop-"
+"down menu:"
+msgstr ""
+"Las caras de malla que se superponen a la geometría de la línea o al límite "
+"del polígono se verán afectadas de una manera que depende de las opciones "
+"que usted haya establecido en la herramienta |meshEditForceByVectorLines| "
+":sup:`Fuerza por Geometrías Seleccionadas` del menú desplegado:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:953
+msgid ""
+"|checkbox| :guilabel:`Add new vertex on intersecting edges`: with this "
+"option, a new vertex is added each time the forcing line intersect an edge. "
+"This option leads to split along the line each encountered faces."
+msgstr ""
+"|checkbox| :guilabel:`Agregar un nuevo vértice en las aristas que se "
+"cruzan`: con esta opción se añade un nuevo vértice cada vez que línea de "
+"fuerza se cruza con una arista. Esta opción lleva a la división a lo largo "
+"de la línea a la que se enfrenta cada uno."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:957
+msgid ""
+"Without this option, encountered faces are removed and replaced by faces "
+"coming from a triangulation with only the existing vertices plus the "
+"vertices of the forcing lines (new vertices are also added on the boundary "
+"edge intersecting the forcing lines)."
+msgstr ""
+"Sin esta opción, las caras encontradas son quitadas y reemplazadas por las "
+"caras que viene de una triangulación con los vértices existentes más los "
+"vértices de las líneas forzadas (también se añaden nuevos vértices en el "
+"borde del límite donde se cruzan las líneas de fuerza)."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:967
+msgid ""
+"Force Mesh using a line geometry - Results without (middle) and with (right)"
+" new vertex on edges intersection"
+msgstr ""
+"Fuerza la Malla usando una geometría de línea - Resultados sin (medio) y con"
+" (derecha) nuevo vértice en la intersección de los bordes"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:970
+msgid ""
+":guilabel:`Interpolate Z value from`: set how the new vertices Z value is "
+"calculated. It can be from:"
+msgstr ""
+":guilabel:`Interpolar el valor Z desde`: establece cómo se calcula el valor "
+"Z de los nuevos vértices. Puede ser desde:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:973
+msgid ""
+"the :guilabel:`Mesh` itself: the new vertices Z value is interpolated from "
+"vertices of the face they fall within"
+msgstr ""
+"la :guilabel:`Malla` misma: el valor Z de los nuevos vértices se interpola "
+"de los vértices de la cara dentro de la que cae"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:975
+msgid ""
+"or the :guilabel:`Forcing line`: if the line is defined by a 3D vector "
+"feature or a drawn line then the new vertices Z value is derived from its "
+"geometry. In case of 2D line feature, the new vertices Z value is the "
+":guilabel:`Vertex Z value`."
+msgstr ""
+"o :guilabel:`Línea de fuerza`: sí la línea se define por una característica "
+"vectorial 3D o una nueva línea dibujada el valor Z se deriva de su "
+"geometría. En el caso de una característica lineal 2D, el valor de los "
+"nuevos vértices Z es el :guilabel:`Valor del vértice Z`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:980
+msgid ""
+":guilabel:`Tolerance`: when an existing mesh vertex is closer to the line "
+"than the tolerance value, do not create new vertex on the line but use the "
+"existing vertex instead. The value can be set in :guilabel:`Meters at Scale`"
+" or in :guilabel:`Map Units` (more details at :ref:`unit_selector`)."
+msgstr ""
+":guilabel:`Tolerancia`: cuando un vértice de malla está más cerca a la línea"
+" que el valor de tolerancia, no crea un nuevo vértice en la línea y usa un "
+"vértice existente en su lugar. El valor se puede establecer en "
+":guilabel:`Metros a Escala` o en :guilabel:`Unidades del Mapa` (más detalles"
+" en :ref:`unit_selector`)."
 
 #: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:989
 msgid "Reindexing meshes"
