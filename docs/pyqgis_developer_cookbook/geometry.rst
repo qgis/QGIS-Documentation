@@ -162,7 +162,7 @@ enumeration.
   WkbType.Polygon
 
 As an alternative, one can use the :meth:`type() <qgis.core.QgsGeometry.type>`
-method which returns a value from the :class:`QgsWkbTypes.GeometryType <qgis.core.QgsWkbTypes.geometryType>`
+method which returns a value from the :meth:`QgsWkbTypes.GeometryType <qgis.core.QgsWkbTypes.geometryType>`
 enumeration.
 
 .. testcode:: geometry
