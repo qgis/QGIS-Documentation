@@ -147,26 +147,33 @@ enumeration.
 
 .. testcode:: geometry
 
-  if gPnt.wkbType() == QgsWkbTypes.Point:
-    print(gPnt.wkbType())
-    # output: 1 for Point
-  if gLine.wkbType() == QgsWkbTypes.LineString:
-    print(gLine.wkbType())
-    # output: 2 for LineString
-  if gPolygon.wkbType() == QgsWkbTypes.Polygon:
-    print(gPolygon.wkbType())
-    # output: 3 for Polygon
+  print(gPnt.wkbType())
+  # output: 'WkbType.Point'
+  print(gLine.wkbType())
+  # output: 'WkbType.LineString'
+  print(gPolygon.wkbType())
+  # output: 'WkbType.Polygon'
 
 .. testoutput:: geometry
   :hide:
 
-  1
-  2
-  3
+  WkbType.Point
+  WkbType.LineString
+  WkbType.Polygon
 
 As an alternative, one can use the :meth:`type() <qgis.core.QgsGeometry.type>`
-method which returns a value from the :class:`QgsWkbTypes.GeometryType <qgis.core.QgsWkbTypes>`
+method which returns a value from the :meth:`QgsWkbTypes.GeometryType <qgis.core.QgsWkbTypes.geometryType>`
 enumeration.
+
+.. testcode:: geometry
+
+  print(gLine.type())
+  # output: 'GeometryType.Line'
+
+.. testoutput:: geometry
+  :hide:
+
+  GeometryType.Line
 
 You can use the :meth:`displayString() <qgis.core.QgsWkbTypes.displayString>`
 function to get a human readable geometry type.
@@ -181,6 +188,7 @@ function to get a human readable geometry type.
   # output: 'Polygon'
 
 .. testoutput:: geometry
+  :hide:
 
   Point
   LineString
@@ -313,10 +321,10 @@ The following code assumes ``layer`` is a :class:`QgsVectorLayer <qgis.core.QgsV
 .. testoutput:: geometry
 
     Zambia
-    Area:  62.822790653431014
+    Area:  62.82279065343119
     Perimeter:  50.65232014052552
     Zimbabwe
-    Area:  33.41113559136511
+    Area:  33.41113559136517
     Perimeter:  26.608288555013935
 
 Now you have calculated and printed the areas and perimeters of the geometries.
