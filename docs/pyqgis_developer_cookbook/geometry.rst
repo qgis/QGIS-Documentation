@@ -155,7 +155,7 @@ enumeration.
   # output: 'WkbType.Polygon'
 
 .. testoutput:: geometry
-   :hide:
+  :hide:
 
   WkbType.Point
   WkbType.LineString
@@ -171,7 +171,7 @@ enumeration.
   # output: 'GeometryType.Line'
 
 .. testoutput:: geometry
-   :hide:
+  :hide:
 
   GeometryType.Line
 
@@ -188,7 +188,7 @@ function to get a human readable geometry type.
   # output: 'Polygon'
 
 .. testoutput:: geometry
-   :hide:
+  :hide:
 
   Point
   LineString
