@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2022
 # Letícia Jardim, 2022
+# Gabriela Piedade, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-12 00:23+0100\n"
 "PO-Revision-Date: 2022-03-14 05:06+0000\n"
-"Last-Translator: Letícia Jardim, 2022\n"
+"Last-Translator: Gabriela Piedade, 2023\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -229,6 +230,19 @@ msgstr ""
 msgid "Multi Band Rasters"
 msgstr "Rasters Multibandas"
 
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:250
+msgid ""
+"By default, QGIS maps the first three bands to red, green and blue to create"
+" a color image (this is the ``MultiBandColor`` drawing style). In some cases"
+" you might want to override these setting. The following code interchanges "
+"red band (1) and green band (2):"
+msgstr ""
+"Por padrão, o QGIS mapeia as três primeiras bandas para vermelho, verde e "
+"azul, para assim criar uma imagem colorida (esse é o estilo de desenho "
+"''MultiBandColor''). Em alguns casos, você pode querer substituir essas "
+"configurações. O código a seguir intercala a faixa vermelha (1) e a faixa "
+"verde (2):"
+
 #: ../../docs/pyqgis_developer_cookbook/raster.rst:261
 msgid ""
 "In case only one band is necessary for visualization of the raster, single "
@@ -268,6 +282,28 @@ msgstr ""
 "número da banda da camada raster que você deseja consultar. O método retorna"
 " um tuplo com o valor e :const:`Verdadeiro` ou :const:`Falso`, dependendo "
 "dos resultados:"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:291
+msgid ""
+"Another method to query raster values is using the :meth:`identify() "
+"<qgis.core.QgsRasterDataProvider.identify>` method that returns a "
+":class:`QgsRasterIdentifyResult <qgis.core.QgsRasterIdentifyResult>` object."
+msgstr ""
+"Outra forma de consultar valores raster é usar o método :meth:`identify() "
+"<qgis.core.QgsRasterDataProvider.identify>` que retorna um objeto "
+":class:`QgsRasterIdentifyResult <qgis.core.QgsRasterIdentifyResult>`"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:306
+msgid ""
+"In this case, the :meth:`results() "
+"<qgis.core.QgsRasterIdentifyResult.results>` method returns a dictionary, "
+"with band indices as keys, and band values as values. For instance, "
+"something like ``{1: 323.0}``"
+msgstr ""
+"Nesse caso, o método :meth:`results() "
+"<qgis.core.QgsRasterIdentifyResult.results>` retorna um dicionário, com "
+"índices de banda como chaves, e valores de banda como valores. Por exemplo, "
+"algo como ''{1: 323,0}''"
 
 #: ../../docs/pyqgis_developer_cookbook/raster.rst:313
 msgid "Editing raster data"
