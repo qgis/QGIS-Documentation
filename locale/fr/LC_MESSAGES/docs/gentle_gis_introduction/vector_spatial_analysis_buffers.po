@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2022
+# Augustin Roche <augustin.roche@gmail.com>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-04 02:41+0000\n"
 "PO-Revision-Date: 2022-03-14 05:07+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2022\n"
+"Last-Translator: Augustin Roche <augustin.roche@gmail.com>, 2023\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -253,6 +254,20 @@ msgstr ""
 "Table des attributs de tampon 1: Table d'attributs avec différentes "
 "distances tampon pour les rivières selon l'utilisation du terrain adjacent."
 
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:116
+msgid ""
+"Buffers around polyline features, such as rivers or roads, do not have to be"
+" on both sides of the lines. They can be on either the left side or the "
+"right side of the line feature. In these cases the left or right side is "
+"determined by the direction from the starting point to the end point of the "
+"line during digitising."
+msgstr ""
+"Les tampons autour des entités polylignes, comme les rivières ou les routes,"
+" ne doivent pas nécessairement être des deux côtés de la ligne. Ils peuvent "
+"être soit du côté gauche, soit du côté droit de l'entité de ligne. Dans ce "
+"cas, le côté gauche ou droit est déterminé par la direction depuis le point "
+"de départ vers le dernier point de la ligne pendant la numérisation."
+
 #: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:122
 msgid "Multiple buffer zones"
 msgstr "Zones tampons multiples"
@@ -304,6 +319,25 @@ msgstr ""
 msgid "Buffering outward and inward"
 msgstr "Créer des tampons à l'extérieur ou à l'intérieur"
 
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:157
+msgid ""
+"Buffer zones around polygon features are usually extended outward from a "
+"polygon boundary but it is also possible to create a buffer zone inward from"
+" a polygon boundary. Say, for example, the Department of Tourism wants to "
+"plan a new road around Robben Island and environmental laws require that the"
+" road is at least 200 meters inward from the coastline. They could use an "
+"inward buffer to find the 200 m line inland and then plan their road not to "
+"go beyond that line."
+msgstr ""
+"Les zones tampon autour des polygones s'étendent généralement vers "
+"l'extérieur de la limite du polygone, mais il est aussi possible de créer "
+"une zone tampon vers l'intérieur de la limite. Disons par exemple que le "
+"Département du Tourisme veuille planifier une nouvelle route autour de "
+"Robben Island, et que les règles environnementales imposent une distance "
+"d'au moins 200 mètres vers l'intérieurs depuis le littoral. Ils peuvent "
+"utiliser un tampon vers l'intérieur pour définir la zone des 200 m dans les "
+"terres et concevoir une route qui ne dépasse pas cette ligne."
+
 #: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:165
 msgid "Common problems / things to be aware of"
 msgstr "Problèmes courants / Choses à savoir"
@@ -338,6 +372,15 @@ msgstr ""
 msgid "More spatial analysis tools"
 msgstr "Plus d'outils d'analyse spatiale"
 
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:180
+msgid ""
+"Buffering is an important and often used spatial analysis tool but there are"
+" many others that can be used in a GIS and explored by the user."
+msgstr ""
+"Les zones tampons sont un outil d'analyse spatiale important et couramment "
+"utilisé, mais il en existe bien d'autres que l'on peut utiliser dans un SIG "
+"et que l'utilisateur peut explorer."
+
 #: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:183
 msgid ""
 "**Spatial overlay** is a process that allows you to identify the "
@@ -350,6 +393,15 @@ msgstr ""
 "partie de cette surface. La couche vecteur qui en résulte est une "
 "combinaison des informations des entités d'entrée (voir "
 ":numref:`figure_overlay_operations`)."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:194
+msgid ""
+"Spatial overlay with two input vector layers (a_input = rectangle, b_input ="
+" circle). The resulting vector layer is displayed in green."
+msgstr ""
+"Recouvrement spatial entre deux couches vectorielles en entrée (a_input = "
+"rectangle, b_input = cercle). La couche vectorielle résultante est affichée "
+"en vert."
 
 #: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:197
 msgid "Typical spatial overlay examples are:"
@@ -517,6 +569,18 @@ msgstr ""
 #: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:254
 msgid "Something to think about"
 msgstr "A retenir"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:256
+msgid ""
+"If you don't have a computer available, you can use a toposheet and a "
+"compass to create buffer zones around buildings. Make small pencil marks at "
+"an equal distance all along your feature using the compass, then connect the"
+" marks using a ruler!"
+msgstr ""
+"i vous n'avez pas d'ordinateur sous la main, vous pouvez utiliser une carte "
+"topographique et un compas pour créer une zone tampon autour des bâtiments. "
+"Faites de petites marques de crayon à égale distance le long de l'entité en "
+"utilisant le compas, puis connectez les marques avec une règle !"
 
 #: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:261
 msgid "Further reading"
