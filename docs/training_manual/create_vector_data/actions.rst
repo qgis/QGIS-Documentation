@@ -101,7 +101,7 @@ property yet. First we will create a field for this purpose.
      *ImageMagick*.
      Remember to put a space after the command!
 
-   * MacOS
+   * macOS
 
      #. Click on the :guilabel:`Type` dropdown and choose
         :guilabel:`Mac`.
@@ -187,10 +187,10 @@ let's tell QGIS to do that automatically for us!
      This will tell Ubuntu to open an Internet address in your
      default browser, such as Chrome or Firefox.
 
-   * MacOS
+   * macOS
 
      Under :guilabel:`Action`, write ``open``.
-     This will tell MacOS to open an Internet address in your default
+     This will tell macOS to open an Internet address in your default
      browser, such as Safari.
 
    Now you can continue writing the command

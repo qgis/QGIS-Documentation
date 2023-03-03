@@ -2787,15 +2787,30 @@ passing parameters to a web reporting tool.
    Overview action dialog with some sample actions
 
 Actions are useful when you frequently want to run an external application or
-view a web page based on one or more values in your vector layer. They are
-divided into six types and can be used like this:
+view a web page based on one or more values in your vector layer.
+They are of different types and can be used like this:
 
-* Generic, Mac, Windows and Unix actions start an external process.
-* Python actions execute a Python expression.
-* Generic and Python actions are visible everywhere.
-* Mac, Windows and Unix actions are visible only on the respective platform (i.e.,
-  you can define three 'Edit' actions to open an editor and the users can only
-  see and execute the one 'Edit' action for their platform to run the editor).
+* :guilabel:`Generic`, :guilabel:`macOS`, :guilabel:`Windows`
+  and :guilabel:`Unix` actions start an external process.
+* :guilabel:`Python` actions execute a Python expression.
+* :guilabel:`Generic` and :guilabel:`Python` actions are visible everywhere.
+* :guilabel:`macOS`, :guilabel:`Windows` and :guilabel:`Unix`
+  actions are visible only on the respective platform
+  (i.e., you can define three "Edit" actions to open an editor and the users can only
+  see and execute the one "Edit" action for their platform to run the editor).
+* :guilabel:`Open URL`: Uses a HTTP GET request to open a provided URL.
+* :guilabel:`Submit URL (urlencoded or JSON)`:
+  Same as the :guilabel:`Open URL` action but using a HTTP POST request.
+  Data are posted to a URL, using "application/x-www-form-urlencoded"
+  or "application/json" if the body is a valid JSON.
+
+  An example of action call could be::
+
+    http://localhost:8000?/[% url_encode(map('file', 'index.php')) %]
+
+* :guilabel:`Submit URL (multipart)`: Same as the :guilabel:`Open URL` action
+  but using a HTTP POST request.
+  Data are posted to a URL, using "multipart/form-data".
 
 There are several examples included in the dialog. You can load them by clicking
 on :guilabel:`Create Default Actions`. To edit any of the examples, double-click
@@ -2826,24 +2841,23 @@ You can add one or more attribute field values as arguments to the application.
 When the action is invoked, any set of characters that start with a ``%``
 followed by the name of a field will be replaced by the value of that field.
 The special characters ``%%`` will be replaced by the value of the field
-that was selected from the identify results or attribute table (see using_actions_
-below). Double quote marks can be used to group text into a single argument to
-the program, script or command. Double quotes will be ignored if preceded by a
-backslash.
+that was selected from the identify results or attribute table (see :ref:`using_actions`).
+Double quote marks can be used to group text into a single argument to the program, script or command.
+Double quotes will be ignored if preceded by a backslash.
 
-The :guilabel:`Action Scopes` allows you to define *where* the action should be
-available. You have 4 different choices:
+The :guilabel:`Action Scopes` allows you to define where the action should be available.
+You have following choices:
 
-#. :guilabel:`Feature Scope`: action is available when right click in the cell
-   within the attribute table.
-#. :guilabel:`Field Scope`: action is available when right click in the cell
+#. :guilabel:`Field`: action is available when right click in the cell
    within the attribute table, in the feature form and in the default action
    button of the main toolbar.
-#. :guilabel:`Layer Scope`: action is available in the action button in the
-   attribute table toolbar. Be aware that this type of action involves the entire
-   layer and not the single features.
-#. :guilabel:`Canvas`: action is available in the main action button in the
-   toolbar.
+#. :guilabel:`Feature`: action is available when right click in the cell
+   within the attribute table.
+#. :guilabel:`Canvas`: action is available in the main action button in the toolbar.
+#. :guilabel:`Form`: action is available only in a feature form designed
+   using the :ref:`drag-and-drop <drag_drop_designer>` mode.
+#. :guilabel:`Layer`: action is available in the action button in the attribute table toolbar.
+   Be aware that this type of action involves the entire layer and not the single features.
 
 If you have field names that are substrings of other field names (e.g.,
 ``col1`` and ``col10``), you should indicate that by surrounding the field name
@@ -2898,8 +2912,7 @@ their settings, they can be available:
 * when right-clicking a feature with the |identify| :sup:`Identify Features` tool
   (see :ref:`identify` for more information);
 * from the :guilabel:`Identify Results` panel, under the :guilabel:`Actions` section;
-* as items of an :guilabel:`Actions` column in the :guilabel:`Attribute Table`
-  dialog.
+* as items of an :guilabel:`Actions` column in the :guilabel:`Attribute Table` dialog.
 
 If you are invoking an action that uses the ``%%`` notation, right-click on the
 field value in the :guilabel:`Identify Results` dialog or the
@@ -2916,7 +2929,6 @@ Here is the action to achieve this:
 
 ::
 
-
   bash -c "echo \"%taxon_name %lat %long\" >> /tmp/species_localities.txt"
 
 
@@ -2924,7 +2936,6 @@ After selecting a few localities and running the action on each one, opening
 the output file will show something like this:
 
 ::
-
 
   Acacia mearnsii -34.0800000000 150.0800000000
   Acacia mearnsii -34.9000000000 150.1200000000
@@ -2948,38 +2959,36 @@ where ``QGIS`` is the search term. Armed with this information, we can proceed:
 #. Choose the :guilabel:`Open URL` action type,
 #. Enter a name for the action, for example ``Google Search``.
 #. Additionally you can add a :guilabel:`Short Name` or even an :guilabel:`Icon`.
-#. Choose the action :guilabel:`Scope`. See :ref:`adding_actions` for further
-   information. Leave the default settings for this example.
-#. For the action, add the URL used for doing
-   a Google search, up to but not including the search term:
+#. Choose the :guilabel:`Action Scopes`.
+   See :ref:`adding_actions` for further information.
+   Leave the default settings for this example.
+#. For the action, add the URL used for doing a Google search, up to but not including the search term:
    ``https://www.google.com/search?q=``
-#. The text in the :guilabel:`Action` field should now look like this:
-   ``https://www.google.com/search?q=``
-#. Click on the drop-down box containing the field names for the ``lakes``
-   layer. It's located just to the left of the :guilabel:`Insert` button.
-#. From the drop-down box, select 'NAMES' and click :guilabel:`Insert`.
-#. Your action text now looks like this:
+#. The text in the :guilabel:`Action` field should now look like this::
 
-   ``https://www.google.com/search?q=[%NAMES%]``
+     https://www.google.com/search?q=
+
+#. Click on the drop-down box containing the field names for the ``lakes`` layer.
+   It's located just to the left of the :guilabel:`Insert` button.
+#. From the drop-down box, select :guilabel:`NAMES` and click :guilabel:`Insert`.
+#. Your action text now looks like this::
+
+     https://www.google.com/search?q=[%NAMES%]
+
 #. To finalize and add the action, click the :guilabel:`OK` button.
 
-.. _figure_add_action:
+   .. _figure_add_action:
 
-.. figure:: img/add_action_edit.png
-   :align: center
+   .. figure:: img/add_action_edit.png
+      :align: center
 
-   Edit action dialog configured with the example
+      Edit action dialog configured with the example
 
-This completes the action, and it is ready to use. The final text of the
-action should look like this:
+This completes the action, and it is ready to use.
 
-::
-
-   https://www.google.com/search?q=[%NAMES%]
-
-We can now use the action. Close the :guilabel:`Layer Properties` dialog and
-zoom in to an area of interest. Make sure the ``lakes`` layer is active and
-identify a lake. In the result box you'll now see that our action is visible:
+Close the :guilabel:`Layer Properties` dialog and zoom in to an area of interest.
+Make sure the ``lakes`` layer is active and identify a lake.
+In the result box you'll now see that our action is visible:
 
 .. _figure_actions_selection:
 
@@ -3010,8 +3019,7 @@ also use actions to launch web-based reports for an attribute field or
 combination of fields, specifying them in the same way we did in our
 Google search example.
 
-We can also make more complex examples, for instance, using **Python**
-actions.
+We can also make more complex examples, for instance, using **Python** actions.
 
 Usually, when we create an action to open a file with an external application,
 we can use absolute paths, or eventually relative paths. In the second case,
