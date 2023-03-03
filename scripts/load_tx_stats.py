@@ -112,16 +112,21 @@ def load_overall_stats():
             f"   * - Number of strings\n"
             f"     - Number of target languages\n"
             f"     - Overall Translation ratio\n"
-            f"   * - **{total_strings}**\n"
-            f"     - **{nb_languages}**\n"
-            f"     - **{global_percentage}%**\n"
+            f"   * - |total_strings|\n"
+            f"     - |nb_languages|\n"
+            f"     - |global_percentage|\n"
             "\n")
 
     return text
 
 
 def load_lang_stats(target_langs, nb_columns=1):
-    """Format statistics of translated languages into a multi-column table"""
+    """
+    Formats statistics of translated languages into a multi-column table
+    :param target_langs: list of languages available in the project
+    :param nb_columns: number of columns in the table
+    :return: a formatted table with full text language and percentage of translation
+    """
 
     text = (".. list-table::\n"
             "   :widths: auto\n"
@@ -141,7 +146,7 @@ def load_lang_stats(target_langs, nb_columns=1):
             else:
                 text += (f"     - {target_langs[lang]['name']}\n")
 
-            text += (f"     - {target_langs[lang]['percentage']}\n")
+            text += (f"     - |stats_{lang}|\n")
             i += 1
 
     # Add empty cells to keep a well formatted rst table
@@ -153,6 +158,26 @@ def load_lang_stats(target_langs, nb_columns=1):
 
     return text
 
+
+def load_lang_substitutions(target_langs):
+    """
+    Create list of substitutions for the statistics
+    :param target_langs: the list of available languages
+    :return: formated list of text substitutions
+    """
+
+    text = (f".. list of substitutions for the statistics:\n\n"
+            f".. |today| replace:: *{date.today()}*\n"
+            f".. |total_strings| replace:: **{total_strings}**\n"
+            f".. |nb_languages| replace:: **{nb_languages}**\n"
+            f".. |global_percentage| replace:: **{global_percentage}%**\n\n"
+            )
+
+    for lang in target_langs:
+        if lang != 'en':
+            text += (f".. |stats_{lang}| replace:: {target_langs[lang]['percentage']}\n")
+
+    return text
 
 # Store the stats as a table in a rst file
 statsfile = path.join(path.dirname(__file__),
@@ -167,10 +192,12 @@ with open(statsfile, 'w') as f:
             f"Statistics of translation\n"
             f"===========================\n\n"
 
-            f"*(last update: {date.today()})*"
+            f"*Last update:* |today|"
             f"\n\n"
             f"{load_overall_stats()}"
             f"\n\n"
             f"{load_lang_stats(language_rate, nb_columns=3)}"
             f"\n\n"
+            f"{load_lang_substitutions(language_rate)}"
+            f"\n"
             )

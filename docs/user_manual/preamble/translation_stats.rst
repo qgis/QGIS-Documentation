@@ -6,7 +6,7 @@
 Statistics of translation
 ===========================
 
-*(last update: 2023-02-28)*
+*Last update:* |today|
 
 .. list-table::
    :widths: auto
@@ -14,9 +14,9 @@ Statistics of translation
    * - Number of strings
      - Number of target languages
      - Overall Translation ratio
-   * - **33754**
-     - **58**
-     - **13.45%**
+   * - |total_strings|
+     - |nb_languages|
+     - |global_percentage|
 
 
 
@@ -30,124 +30,190 @@ Statistics of translation
      - Language
      - Translation ratio (%)
    * - Albanian
-     - 0.21
+     - |stats_sq|
      - Arabic
-     - 3.69
+     - |stats_ar|
      - Azerbaijani
-     - 0.02
+     - |stats_az|
    * - Basque
-     - 0.82
+     - |stats_eu|
      - Bengali
-     - 0.16
+     - |stats_bn|
      - Bulgarian
-     - 2.34
+     - |stats_bg|
    * - Burmese
-     - 0.09
+     - |stats_my|
      - Catalan
-     - 1.38
+     - |stats_ca|
      - Chinese Simplified
-     - 19.52
+     - |stats_zh-Hans|
    * - Chinese Traditional
-     - 0.58
+     - |stats_zh-Hant|
      - Croatian
-     - 0.1
+     - |stats_hr|
      - Czech
-     - 5.36
+     - |stats_cs|
    * - Danish
-     - 0.62
+     - |stats_da|
      - Dutch
-     - 100.0
+     - |stats_nl|
      - Estonian
-     - 1.23
+     - |stats_et|
    * - Finnish
-     - 1.65
+     - |stats_fi|
      - French
-     - 88.35
+     - |stats_fr|
      - Galician
-     - 0.43
+     - |stats_gl|
    * - Georgian
-     - 0.09
+     - |stats_ka|
      - German
-     - 21.2
+     - |stats_de|
      - Greek
-     - 0.35
+     - |stats_el|
    * - Hebrew
-     - 0.71
+     - |stats_he|
      - Hindi
-     - 0.28
+     - |stats_hi|
      - Hungarian
-     - 17.49
+     - |stats_hu|
    * - Igbo
-     - 0.01
+     - |stats_ig|
      - Indonesian
-     - 2.6
+     - |stats_id|
      - Italian
-     - 100.0
+     - |stats_it|
    * - Japanese
-     - 75.92
+     - |stats_ja|
      - Kabyle
-     - 0.09
+     - |stats_kab|
      - Korean
-     - 76.02
+     - |stats_ko|
    * - Lithuanian
-     - 6.58
+     - |stats_lt|
      - Macedonian
-     - 0.11
+     - |stats_mk|
      - Malay
-     - 0.04
+     - |stats_ms|
    * - Malayalam
-     - 0.09
+     - |stats_ml|
      - Marathi
-     - 0.18
+     - |stats_mr|
      - Mongolian
-     - 0.1
+     - |stats_mn|
    * - N'ko
-     - 1.69
+     - |stats_nqo|
      - Norwegian Bokmål
-     - 2.94
+     - |stats_nb|
      - Panjabi (Punjabi)
-     - 0.0
+     - |stats_pa|
    * - Persian
-     - 0.39
+     - |stats_fa|
      - Polish
-     - 1.66
+     - |stats_pl|
      - Portuguese (Brazil)
-     - 74.05
+     - |stats_pt_BR|
    * - Portuguese (Portugal)
-     - 7.69
+     - |stats_pt_PT|
      - Romanian
-     - 40.21
+     - |stats_ro|
      - Russian
-     - 12.42
+     - |stats_ru|
    * - Serbian
-     - 0.1
+     - |stats_sr|
      - Slovak
-     - 1.2
+     - |stats_sk|
      - Slovenian
-     - 2.97
+     - |stats_sl|
    * - Spanish
-     - 99.71
+     - |stats_es|
      - Swedish
-     - 0.93
+     - |stats_sv|
      - Tagalog
-     - 0.09
+     - |stats_tl|
    * - Tamil
-     - 0.45
+     - |stats_ta|
      - Telugu
-     - 0.03
+     - |stats_te|
      - Thai
-     - 0.1
+     - |stats_th|
    * - Turkish
-     - 2.66
+     - |stats_tr|
      - Ukrainian
-     - 2.16
+     - |stats_uk|
      - Urdu
-     - 0.0
+     - |stats_ur|
    * - Vietnamese
-     - 0.22
+     - |stats_vi|
      -
      -
      -
      -
 
+
+.. list of substitutions for the statistics:
+
+.. |today| replace:: *2023-03-03*
+.. |total_strings| replace:: **33752**
+.. |nb_languages| replace:: **58**
+.. |global_percentage| replace:: **13.47%**
+
+.. |stats_sq| replace:: 0.21
+.. |stats_ar| replace:: 3.69
+.. |stats_az| replace:: 0.02
+.. |stats_eu| replace:: 0.82
+.. |stats_bn| replace:: 0.16
+.. |stats_bg| replace:: 2.34
+.. |stats_my| replace:: 0.09
+.. |stats_ca| replace:: 1.38
+.. |stats_zh-Hans| replace:: 19.52
+.. |stats_zh-Hant| replace:: 0.58
+.. |stats_hr| replace:: 0.1
+.. |stats_cs| replace:: 5.36
+.. |stats_da| replace:: 0.62
+.. |stats_nl| replace:: 100.0
+.. |stats_et| replace:: 1.23
+.. |stats_fi| replace:: 1.65
+.. |stats_fr| replace:: 88.82
+.. |stats_gl| replace:: 0.43
+.. |stats_ka| replace:: 0.09
+.. |stats_de| replace:: 21.72
+.. |stats_el| replace:: 0.35
+.. |stats_he| replace:: 0.71
+.. |stats_hi| replace:: 0.28
+.. |stats_hu| replace:: 17.49
+.. |stats_ig| replace:: 0.01
+.. |stats_id| replace:: 2.6
+.. |stats_it| replace:: 99.96
+.. |stats_ja| replace:: 75.93
+.. |stats_kab| replace:: 0.09
+.. |stats_ko| replace:: 76.03
+.. |stats_lt| replace:: 6.58
+.. |stats_mk| replace:: 0.11
+.. |stats_ms| replace:: 0.04
+.. |stats_ml| replace:: 0.09
+.. |stats_mr| replace:: 0.18
+.. |stats_mn| replace:: 0.1
+.. |stats_nqo| replace:: 1.69
+.. |stats_nb| replace:: 2.94
+.. |stats_pa| replace:: 0.0
+.. |stats_fa| replace:: 0.39
+.. |stats_pl| replace:: 1.67
+.. |stats_pt_BR| replace:: 74.2
+.. |stats_pt_PT| replace:: 7.69
+.. |stats_ro| replace:: 40.21
+.. |stats_ru| replace:: 12.42
+.. |stats_sr| replace:: 0.1
+.. |stats_sk| replace:: 1.2
+.. |stats_sl| replace:: 2.97
+.. |stats_es| replace:: 99.79
+.. |stats_sv| replace:: 0.93
+.. |stats_tl| replace:: 0.09
+.. |stats_ta| replace:: 0.45
+.. |stats_te| replace:: 0.03
+.. |stats_th| replace:: 0.1
+.. |stats_tr| replace:: 2.66
+.. |stats_uk| replace:: 2.16
+.. |stats_ur| replace:: 0.0
+.. |stats_vi| replace:: 0.22
 
