@@ -1067,17 +1067,25 @@ further reading: :ref:`expression_function_Operators_concat`,
    :start-after: .. end_concat_section
    :end-before: .. end_ltrim_section
 
-Further reading: :ref:`expression_function_String_rtrim`
+Further reading: :ref:`expression_function_String_rtrim`,
+:ref:`expression_function_String_trim`
 
 .. include:: expression_help/String.rst
    :start-after: .. end_ltrim_section
    :end-before: .. end_rtrim_section
 
-Further reading: :ref:`expression_function_String_ltrim`
+Further reading: :ref:`expression_function_String_ltrim`,
+:ref:`expression_function_String_trim`
 
 .. include:: expression_help/String.rst
    :start-after: .. end_rtrim_section
+   :end-before: .. end_trim_section
 
+Further reading: :ref:`expression_function_String_ltrim`,
+:ref:`expression_function_String_rtrim`
+
+.. include:: expression_help/String.rst
+   :start-after: .. end_trim_section
 
 User Expressions
 ----------------
