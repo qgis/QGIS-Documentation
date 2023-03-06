@@ -2568,8 +2568,6 @@ processes (QGIS startup, plugins loading, processing tools...)
    :width: 1.5em
 .. |selectAll| image:: /static/common/mActionSelectAll.png
    :width: 1.5em
-.. |selectDistance| image:: /static/common/mAlgorithmSelectDistance.png
-   :width: 1.5em
 .. |selectFreehand| image:: /static/common/mActionSelectFreehand.png
    :width: 1.5em
 .. |selectLocation| image:: /static/common/mAlgorithmSelectLocation.png
