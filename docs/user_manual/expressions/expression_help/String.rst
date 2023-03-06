@@ -288,6 +288,30 @@ Returns a string padded on the left to the specified width, using a fill charact
 
 .. end_lpad_section
 
+.. _expression_function_String_ltrim:
+
+ltrim
+.....
+
+Removes the longest string containing only the specified characters (a space by default) from the start of string.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - ltrim(string, [characters=' '])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **string** - string to trim
+       * **characters** - characters to trim
+   * - Examples
+     - * ``ltrim('   hello world  ')`` → 'hello world  '
+       * ``ltrim('zzzytest', 'xyz')`` → 'test'
+
+
+.. end_ltrim_section
+
 .. _expression_function_String_regexp_match:
 
 regexp_match
@@ -443,6 +467,30 @@ Returns a string padded on the right to the specified width, using a fill charac
 
 
 .. end_rpad_section
+
+.. _expression_function_String_rtrim:
+
+rtrim
+.....
+
+Removes the longest string containing only the specified characters (a space by default) from the end of string.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - rtrim(string, [characters=' '])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **string** - string to trim
+       * **characters** - characters to trim
+   * - Examples
+     - * ``rtrim('   hello world  ')`` → '   hello world'
+       * ``rtrim('testxxzx', 'xyz')`` → 'test'
+
+
+.. end_rtrim_section
 
 .. _expression_function_String_strpos:
 
