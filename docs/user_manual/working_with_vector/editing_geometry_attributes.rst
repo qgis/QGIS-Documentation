@@ -11,6 +11,7 @@
 
 QGIS has various capabilities for editing OGR, SpatiaLite, PostGIS,
 MS SQL Server and Oracle Spatial vector layers and tables.
+They can be of 2D or 3D geometry type.
 
 .. note::
    The procedure for editing GRASS layers is different - see section
@@ -20,7 +21,7 @@ MS SQL Server and Oracle Spatial vector layers and tables.
 
 .. attention:: **Concurrent Edits**
 
-   This version of QGIS does not track if somebody else is editing the
+   QGIS does not track if somebody else is editing the
    same feature at the same time as you are.
    The last person to save the edits wins.
 
@@ -86,7 +87,7 @@ Global :ref:`snapping and digitizing settings <digitizing_options>`
 project from the :menuselection:`Project --> Snapping Options...` menu.
 In the :guilabel:`Snapping and Digitizing Options`, you can also configure
 some other properties (snapping layers, scale limit, topology...)
-The guilabel:`Snapping Toolbar` gives access to most of these features.
+The :guilabel:`Snapping Toolbar` gives access to most of these features.
 
 By default, snapping is disabled in a project until you press the
 |snapping| :sup:`Enable snapping` button or press :kbd:`S`.
@@ -722,18 +723,17 @@ The Vertex Editor Panel
 .......................
 
 With enabling a vertex tool, you also open the :guilabel:`Vertex Editor` panel.
-Right-clicking over a feature fills the panel with the list of all the
-vertices of the feature with their :guilabel:`x`, :guilabel:`y`
-(:guilabel:`z`, :guilabel:`m` if applicable) coordinates and
-:guilabel:`r` (for the radius, in case of circular geometry).
-The feature is also made exclusive for editing, meaning that the edit of
-any other features is disabled: new vertices can only be added to the bound
-feature, selecting and moving of vertices and segments
-by clicking or dragging the map canvas is only possible for that feature.
-Also, select a row in the table does select the corresponding vertex
-in the map canvas, and vice versa.
-Change a coordinate in the table and the vertex position is updated.
-You can also select multiple rows and delete them altogether.
+Right-clicking over a feature fills the panel with the list of all the vertices of the feature
+with their :guilabel:`x`, :guilabel:`y` (:guilabel:`z`, :guilabel:`m` if applicable) coordinates
+and :guilabel:`r` (for the radius, in case of circular geometry).
+The feature is also made exclusive for editing, meaning that the edit of any other features is disabled:
+
+* Selecting a row in the table does select the corresponding vertex in the map canvas, and vice versa.
+* Clicking or dragging over the map canvas will only select or move vertices and segments of that feature
+* Change a coordinate in the table and the vertex position is updated.
+  This is a convenient way to edit Z coordinate or M value on vertices.
+* You can also select multiple rows and delete them altogether.
+* New vertices can only be added to the bound feature
 
 If you do not want the :guilabel:`Vertex Editor` panel to immediately show
 each time you interact with vertex tools (and potentially hide other panels
@@ -752,15 +752,16 @@ the :guilabel:`Digitizing toolbar`.
 
    Vertex editor panel showing selected nodes
 
+.. index:: 3D
 .. _digitizing_zm:
 
-Digitizing features with Z or M value
--------------------------------------
+Rules of Z coordinate or M value assignment
+-------------------------------------------
 
-Digitizing vector features with a Z (or M) component is not that different
-from 2D layers'. Tools and options described in this chapter are still
-available and help you place the vertex or point. Then you may need to handle
-the Z coordinate (or M value) assignment:
+Digitizing 3D vector features or features with M value is not that different from (X,Y) 2D layers'.
+Tools and options described in this chapter are still available
+and help you place the vertex or point in a planar environment.
+Then you may need to handle the Z coordinate (or M value) assignment:
 
 * By default, QGIS will assign to new vertices the :guilabel:`Default Z value`
   (respectively :guilabel:`Default M value`) set in the
@@ -768,10 +769,9 @@ the Z coordinate (or M value) assignment:
   If the :ref:`Advanced Digitizing Panel <advanced_digitizing_panel>` is in
   use, then the value is taken from its :guilabel:`z`
   (respectively :guilabel:`m`) widget.
-* When snapping to a vertex, the new or moved vertex takes the snapped one's
-  Z or M value.
-* When snapping to a segment while the topological editing is on, then the new
-  vertex Z or M value is interpolated along the segment.
+* When snapping to a vertex, the new or moved vertex takes the snapped one's Z or M value.
+* When snapping to a segment while the topological editing is on,
+  then the new vertex Z or M value is interpolated along the segment.
 * If the :guilabel:`z` (respectively :guilabel:`m`) widget of the
   :guilabel:`Advanced Digitizing Panel` is |locked| locked, then its value is
   applied to the vertex, taking precedence over any snapped vertex or segment
@@ -1691,8 +1691,8 @@ The Advanced Digitizing panel
 When capturing, reshaping, splitting new or existing geometries you also have the
 possibility to use the Advanced Digitizing panel. You can digitize lines exactly
 parallel or perpendicular to a particular angle or lock lines to specific angles.
-Furthermore, you can enter coordinates directly so that you can make a precise
-definition of your new geometry.
+Furthermore, you can make a precise definition of your new geometry by entering
+X and Y coordinates as well as Z  for 3D features, or M values.
 
 .. _figure_advanced_digitizing:
 
@@ -1701,7 +1701,7 @@ definition of your new geometry.
 
    The Advanced Digitizing panel
 
-The :guilabel:`Advanced Digitizing` panel can be open either with a right-click
+The :guilabel:`Advanced Digitizing` panel can be opened either with a right-click
 on the toolbar, from :menuselection:`View --> Panels -->` menu or pressing
 :kbd:`Ctrl+4`. Once the panel is visible, click the |cad| :sup:`Enable advanced
 digitizing tools` button to activate the set of tools.
