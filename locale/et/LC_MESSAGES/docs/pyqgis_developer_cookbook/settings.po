@@ -1,0 +1,154 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.22\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-12 00:23+0100\n"
+"PO-Revision-Date: 2022-03-14 05:06+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2023\n"
+"Language-Team: Estonian (https://www.transifex.com/qgis/teams/6144/et/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+"Language: et\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:15
+msgid "Reading And Storing Settings"
+msgstr "Reading And Storing Settings"
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:18
+msgid ""
+"The code snippets on this page need the following imports if you're outside "
+"the pyqgis console:"
+msgstr ""
+"The code snippets on this page need the following imports if you're outside "
+"the pyqgis console:"
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:33
+msgid ""
+"Many times it is useful for a plugin to save some variables so that the user"
+" does not have to enter or select them again next time the plugin is run."
+msgstr ""
+"Many times it is useful for a plugin to save some variables so that the user"
+" does not have to enter or select them again next time the plugin is run."
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:36
+msgid ""
+"These variables can be saved and retrieved with help of Qt and QGIS API. For"
+" each variable, you should pick a key that will be used to access the "
+"variable --- for user's favourite color you could use key "
+"\"favourite_color\" or any other meaningful string. It is recommended to "
+"give some structure to naming of keys."
+msgstr ""
+"These variables can be saved and retrieved with help of Qt and QGIS API. For"
+" each variable, you should pick a key that will be used to access the "
+"variable --- for user's favourite color you could use key "
+"\"favourite_color\" or any other meaningful string. It is recommended to "
+"give some structure to naming of keys."
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:41
+msgid "We can differentiate between several types of settings:"
+msgstr "We can differentiate between several types of settings:"
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:45
+msgid ""
+"**global settings** --- they are bound to the user at a particular machine. "
+"QGIS itself stores a lot of global settings, for example, main window size "
+"or default snapping tolerance. Settings are handled using the "
+":class:`QgsSettings <qgis.core.QgsSettings>` class, through for example the "
+":meth:`setValue() <qgis.core.QgsSettings.setValue>` and :meth:`value() "
+"<qgis.core.QgsSettings.value>` methods."
+msgstr ""
+"**global settings** --- they are bound to the user at a particular machine. "
+"QGIS itself stores a lot of global settings, for example, main window size "
+"or default snapping tolerance. Settings are handled using the "
+":class:`QgsSettings <qgis.core.QgsSettings>` class, through for example the "
+":meth:`setValue() <qgis.core.QgsSettings.setValue>` and :meth:`value() "
+"<qgis.core.QgsSettings.value>` methods."
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:52
+msgid "Here you can see an example of how these methods are used."
+msgstr "Here you can see an example of how these methods are used."
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:73
+msgid ""
+"The second parameter of the :meth:`value() <qgis.core.QgsSettings.value>` "
+"method is optional and specifies the default value that is returned if there"
+" is no previous value set for the passed setting name."
+msgstr ""
+"The second parameter of the :meth:`value() <qgis.core.QgsSettings.value>` "
+"method is optional and specifies the default value that is returned if there"
+" is no previous value set for the passed setting name."
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:77
+msgid ""
+"For a method to pre-configure the default values of the global settings "
+"through the  :file:`global_settings.ini` file, see "
+":ref:`deploying_organization` for further details."
+msgstr ""
+"For a method to pre-configure the default values of the global settings "
+"through the  :file:`global_settings.ini` file, see "
+":ref:`deploying_organization` for further details."
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:83
+msgid ""
+"**project settings** --- vary between different projects and therefore they "
+"are connected with a project file. Map canvas background color or "
+"destination coordinate reference system (CRS) are examples --- white "
+"background and WGS84 might be suitable for one project, while yellow "
+"background and UTM projection are better for another one."
+msgstr ""
+"**project settings** --- vary between different projects and therefore they "
+"are connected with a project file. Map canvas background color or "
+"destination coordinate reference system (CRS) are examples --- white "
+"background and WGS84 might be suitable for one project, while yellow "
+"background and UTM projection are better for another one."
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:89
+msgid "An example of usage follows."
+msgstr "An example of usage follows."
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:119
+msgid ""
+"As you can see, the :meth:`writeEntry() <qgis.core.QgsProject.writeEntry>` "
+"method is used for many data types (integer, string, list), but several "
+"methods exist for reading the setting value back, and the corresponding one "
+"has to be selected for each data type."
+msgstr ""
+"As you can see, the :meth:`writeEntry() <qgis.core.QgsProject.writeEntry>` "
+"method is used for many data types (integer, string, list), but several "
+"methods exist for reading the setting value back, and the corresponding one "
+"has to be selected for each data type."
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:126
+msgid ""
+"**map layer settings** --- these settings are related to a particular "
+"instance of a map layer with a project. They are *not* connected with "
+"underlying data source of a layer, so if you create two map layer instances "
+"of one shapefile, they will not share the settings. The settings are stored "
+"inside the project file, so if the user opens the project again, the layer-"
+"related settings will be there again. The value for a given setting is "
+"retrieved using the :meth:`customProperty() "
+"<qgis.core.QgsMapLayer.customProperty>` method, and can be set using the "
+":meth:`setCustomProperty() <qgis.core.QgsMapLayer.setCustomProperty>` one."
+msgstr ""
+"**map layer settings** --- these settings are related to a particular "
+"instance of a map layer with a project. They are *not* connected with "
+"underlying data source of a layer, so if you create two map layer instances "
+"of one shapefile, they will not share the settings. The settings are stored "
+"inside the project file, so if the user opens the project again, the layer-"
+"related settings will be there again. The value for a given setting is "
+"retrieved using the :meth:`customProperty() "
+"<qgis.core.QgsMapLayer.customProperty>` method, and can be set using the "
+":meth:`setCustomProperty() <qgis.core.QgsMapLayer.setCustomProperty>` one."
