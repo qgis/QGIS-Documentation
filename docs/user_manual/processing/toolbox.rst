@@ -104,12 +104,9 @@ table can be of one of the following types.
   right-hand side, to let you select filenames that represent layers currently
   not loaded in QGIS.
 * A **vector layer**, to select from a list of all vector layers available in
-  QGIS. Layers not loaded in QGIS can be selected as well, as in the case of raster
-  layers, but only if the algorithm does not require a table field selected from
-  the attributes table of the layer. In that case, only opened layers can be
-  selected, since they need to be open so as to retrieve the list of field names
-  available.
-
+  QGIS. Layers not currently loaded in QGIS can be selected as well, just like
+  for raster layers.
+  
   You will see an iterator button by each vector layer selector, as shown in the
   figure below.
 
