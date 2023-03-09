@@ -284,7 +284,7 @@ the configuration defined in the dialog without running the algorithm:
   This is a convenient way to see the expected format of the commands,
   even for complex parameters (like TIN interpolation parameters).
   You can store these easily and then restore them later by pasting the values.
-* :guilabel:`Paste Settings` in a :file`JSON` format
+* :guilabel:`Paste Settings` in a :file:`JSON` format
 
 
 The :guilabel:`Run as Batch Process...` button triggers the :ref:`batch processing
