@@ -38,6 +38,28 @@ Parameters
        Default: The first band of the input layer
      - If the raster is multiband, choose the band you want to
        convert
+   * - **Source nodata**
+
+       Optional
+     - ``NODATA_INPUT``
+     - [number]
+
+       Default: None
+     - Input pixel value to treat as "nodata" (GDAL >= 3.7).
+   * - **Destination nodata**
+
+       Optional
+     - ``NODATA_OUTPUT``
+     - [number]
+
+       Default: None
+     - Assign specified "nodata" value to output (GDAL >= 3.7).
+   * - **Do not output nodata values**
+     - ``SKIP_NODATA``
+     - [boolean]
+
+       Default: False
+     - Do not output "nodata" values (GDAL >= 3.3).
    * - **Output comma-separated values**
      - ``CSV``
      - [boolean]
@@ -136,7 +158,7 @@ Parameters
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
-  
+
 Outputs
 .......
 
@@ -504,7 +526,7 @@ Basic parameters
      - [crs]
      - Specify a projection for the output file
    * - **Assign a specified nodata value to output bands**
-       
+
        Optional
      - ``NODATA``
      - [number]
@@ -559,7 +581,7 @@ Advanced parameters
 
        Optional
      - ``EXTRA``
-     - [string]   
+     - [string]
 
        Default: None
      - Add extra GDAL command line options
