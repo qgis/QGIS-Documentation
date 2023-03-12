@@ -112,7 +112,7 @@ Z and M values (if present) can be translated and scaled.
 .. figure:: img/affinetransform.png
    :align: center
 
-   Vector point layer (green dots) before (left), and after (rigth) an affine transformation (translation). 
+   Vector point layer (green dots) before (left), and after (right) an affine transformation (translation). 
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>` 
@@ -544,7 +544,7 @@ In this case the buffer will result in a smaller polygon (setback).
 .. figure:: img/buffer.png
    :align: center
 
-   Buffer (in yellow) of points, line and polygon
+   Buffer (in orange) of points, line and polygon
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>` 
@@ -557,6 +557,9 @@ of polygon features
 
 Parameters
 ..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -638,13 +641,13 @@ Parameters
 
        Default: False
      - Dissolve the final buffer. If ``True`` (checked), overlapping
-       buffers will be dissolved (combined) into a new feature.
+       buffers will be dissolved (combined) into a single multipart feature.
 
        .. figure:: img/buffer_dissolve.png
           :align: center
           :width: 100%
 
-          Standard and dissolved buffer
+          Standard (three single part features - left), dissolved (1 multipart feature with 2 parts - right)
    * - **Buffered**
      - ``OUTPUT``
      - [vector: polygon]
@@ -656,6 +659,31 @@ Parameters
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_append**
           :end-before: **end_layer_output_types_append**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Keep disjoint features separate**
+     - ``SEPARATE_DISJOINT``
+     - [boolean]
+
+       Default: False
+     - If ``True`` (checked) and dissolved is checked, features that do not overlap or touch to be exported as 
+       separate features
+       (instead of parts of a multipart feature).
+
+       .. figure:: img/buffer_disjoint.png
+          :align: center
+
+          Results in 2 single part features
 
 Outputs
 .......
