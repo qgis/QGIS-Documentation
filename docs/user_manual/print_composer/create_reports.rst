@@ -27,7 +27,7 @@ subjects or locations.
 In QGIS, a :guilabel:`Report` is an extension of a
 :ref:`Layouts <label_printlayout>`.
 
-Reports allow users to output their GIS projects in a quick
+Reports allow users to output their GIS projects in a really simple quick
 and structured way.
 
 A report can be created with :menuselection:`Project --> New Report`
