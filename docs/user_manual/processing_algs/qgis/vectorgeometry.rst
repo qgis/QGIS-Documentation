@@ -676,7 +676,7 @@ Advanced parameters
      - [boolean]
 
        Default: False
-     - If ``True`` (checked) and dissolved is checked, features that do not overlap or touch to be exported as 
+     - If ``True`` (checked) and dissolved is checked, features that do not overlap or touch will be exported as 
        separate features
        (instead of parts of a multipart feature).
 
