@@ -209,7 +209,7 @@ Apache HTTP Server
    .. code-block:: bash
 
      # Replace 127.0.0.1 with the IP of your server.
-     sh -c "echo '127.0.0.1 qgis.demo' >> /etc/hosts"``.
+     sh -c "echo '127.0.0.1 qgis.demo' >> /etc/hosts"
 
 .. important::
 
