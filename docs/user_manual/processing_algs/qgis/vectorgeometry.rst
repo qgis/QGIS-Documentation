@@ -544,7 +544,8 @@ In this case the buffer will result in a smaller polygon (setback).
 .. figure:: img/buffer.png
    :align: center
 
-   Buffer (in orange) of points, line and polygon
+   Buffer (in yellow) of points, line, polygon with positive buffer, 
+   and polygon with negative buffer 
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>` 
