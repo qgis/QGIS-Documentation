@@ -661,31 +661,6 @@ Basic parameters
           :start-after: **layer_output_types_append**
           :end-before: **end_layer_output_types_append**
 
-Advanced parameters
-^^^^^^^^^^^^^^^^^^^
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
-
-   * - Label
-     - Name
-     - Type
-     - Description
-   * - **Keep disjoint features separate**
-     - ``SEPARATE_DISJOINT``
-     - [boolean]
-
-       Default: False
-     - If ``True`` (checked) and dissolved is checked, features that do not overlap or touch to be exported as 
-       separate features
-       (instead of parts of a multipart feature).
-
-       .. figure:: img/buffer_disjoint.png
-          :align: center
-
-          Results in 2 single part features
-
 Outputs
 .......
 
