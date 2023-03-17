@@ -162,5 +162,3 @@ Automating the process as much as possible would lower the risk and make it less
 
   * languages list: they are defined in docs_conf.yml, makefile, docker-world.sh
   * version number: it is defined in conf.py, makefile, docker-world.sh, cronjob.sh, doctest.dockerfile
-* The pull of translations from Transifex could be improved via a github action that regularly
-  downloads unfinished files (making published docs as close as possible to translators work)
