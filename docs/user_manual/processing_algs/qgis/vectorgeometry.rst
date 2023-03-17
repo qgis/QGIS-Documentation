@@ -629,10 +629,10 @@ Parameters
      - [number]
 
        Default: 2.0
-     - Sets the maximum distance from the offset curve to use
+     - Sets the maximum distance from the offset geometry to use
        when creating a mitered join as a factor of the offset distance (only applicable for miter
        join styles).
-       Minimum: 1.
+       Minimum: 1.0
               
        .. figure:: img/buffer_miter_limit.png
           :align: center
@@ -4417,10 +4417,15 @@ Parameters
      - [number]
 
        Default: 2.0
-     - Controls the maximum distance from the offset curve to use
-       when creating a mitered join (only applicable for miter
+     - Sets the maximum distance from the offset geometry to use
+       when creating a mitered join as a factor of the offset distance (only applicable for miter
        join styles).
-       Minimum: 1.
+       Minimum: 1.0              
+       .. figure:: img/buffer_miter_limit.png
+          :align: center
+          :width: 100%
+         
+          A 10m buffer with a limit of 2 and a 10m buffer with a limit of 1
    * - **Offset**
      - ``OUTPUT``
      - [vector: line]
@@ -6362,10 +6367,16 @@ Parameters
      - [number]
 
        Default: 2.0
-     - Controls the maximum distance from the offset curve to use
-       when creating a mitered join (only applicable for miter
+     - Sets the maximum distance from the offset geometry to use
+       when creating a mitered join as a factor of the offset distance (only applicable for miter
        join styles).
        Minimum: 1.0
+                     
+       .. figure:: img/buffer_miter_limit.png
+          :align: center
+          :width: 100%
+         
+          A 10m buffer with a limit of 2 and a 10m buffer with a limit of 1
    * - **Buffer**
      - ``OUTPUT``
      - [vector: polygon]
