@@ -112,7 +112,7 @@ Z and M values (if present) can be translated and scaled.
 .. figure:: img/affinetransform.png
    :align: center
 
-   Vector point layer (green dots) before (left), and after (rigth) an affine transformation (translation). 
+   Vector point layer (green dots) before (left), and after (right) an affine transformation (translation). 
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>` 
@@ -544,7 +544,8 @@ In this case the buffer will result in a smaller polygon (setback).
 .. figure:: img/buffer.png
    :align: center
 
-   Buffer (in yellow) of points, line and polygon
+   Buffer (in yellow) of points, line, polygon with positive buffer, 
+   and polygon with negative buffer 
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>` 
@@ -638,13 +639,13 @@ Parameters
 
        Default: False
      - Dissolve the final buffer. If ``True`` (checked), overlapping
-       buffers will be dissolved (combined) into a new feature.
+       buffers will be dissolved (combined) into a single multipart feature.
 
        .. figure:: img/buffer_dissolve.png
           :align: center
           :width: 100%
 
-          Standard and dissolved buffer
+          Standard (three single part features - left), dissolved (1 multipart feature with 2 parts - right)
    * - **Buffered**
      - ``OUTPUT``
      - [vector: polygon]

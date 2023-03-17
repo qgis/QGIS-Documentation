@@ -267,7 +267,8 @@ Returns a geometry that represents all points whose distance from this geometry 
    :align: center
    :width: 100%
 
-   Buffer (in yellow) of points, line and polygon
+   Buffer (in yellow) of points, line, polygon with positive buffer, 
+   and polygon with negative buffer
 
 .. end_buffer_section
 
