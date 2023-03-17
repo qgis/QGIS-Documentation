@@ -204,6 +204,9 @@ and some custom scripts:
 * The [pofiles action](.github/workflows/pofiles.yml): creates/updates English `*.po` files
   with recent changes in the source `*.rst` files. Feeds the transifex bot.
 
+* For files that are not yet fully translated in Transifex,
+  the [pull_minimized_translations action](.github/workflows/pull_minimized_translations.yml)
+  periodically and automatically pulls them to the repository.
 
 Based on the above, translated strings are automatically available in released
 branch so building the docs in any translated locale is possible following
@@ -212,8 +215,9 @@ the instructions in earlier sections:
 make html LANG=yourlanguage
 ```
 
-Sometimes, you may want to build the docs with new strings in a partially translated file.
-In this case, you need to manually pull the translations from Transifex to your local repository:
+Sometimes, you may want to build the docs with really new strings in a partially translated file
+and the above workflow may fail to work.
+In that case, you need to manually pull the translations from Transifex to your local repository:
 
 1. Checkout locally the repository and target branch in git
 1. Prepare the environment
