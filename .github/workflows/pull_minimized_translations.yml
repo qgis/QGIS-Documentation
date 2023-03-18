@@ -29,6 +29,7 @@ jobs:
     - name: Install Transifex client
       run: |
           curl -o- https://raw.githubusercontent.com/transifex/cli/master/install.sh | bash
+          mv tx LICENSE -t /usr/local/bin/
 
     - shell: bash
       name: create .transifexrc file
@@ -46,11 +47,7 @@ jobs:
         git config --global user.name 'Transifex update'
         git config --global user.email 'tx-update@users.noreply.github.com'
         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-        rm tx LICENSE
-        if [[ -n $(git status -s) ]]
-        then
-          git add locale/*
-          git commit -m "Loading new translations"
+        if git add locale/* && git commit -m "Loading new translations"; then
           git push
         else
          echo "no new translations"
