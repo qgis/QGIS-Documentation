@@ -13,14 +13,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-27 02:44+0000\n"
+"POT-Creation-Date: 2023-02-18 12:09+0100\n"
 "PO-Revision-Date: 2022-03-14 05:10+0000\n"
 "Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2022\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.10.1\n"
+"Generated-By: Babel 2.11.0\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -107,7 +107,12 @@ msgstr ""
 #: ../../docs/server_manual/config.rst:77
 #: ../../docs/server_manual/config.rst:148
 #: ../../docs/server_manual/config.rst:190
-#: ../../docs/server_manual/config.rst:247
+#: ../../docs/server_manual/config.rst:221
+#: ../../docs/server_manual/config.rst:250
+#: ../../docs/server_manual/config.rst:256
+#: ../../docs/server_manual/config.rst:268
+#: ../../docs/server_manual/config.rst:274
+#: ../../docs/server_manual/config.rst:293
 msgid "''"
 msgstr "''"
 
@@ -126,8 +131,9 @@ msgstr "''"
 #: ../../docs/server_manual/config.rst:178
 #: ../../docs/server_manual/config.rst:184
 #: ../../docs/server_manual/config.rst:191
-#: ../../docs/server_manual/config.rst:223
-#: ../../docs/server_manual/config.rst:248
+#: ../../docs/server_manual/config.rst:222
+#: ../../docs/server_manual/config.rst:245
+#: ../../docs/server_manual/config.rst:294
 msgid "All"
 msgstr "모두"
 
@@ -178,18 +184,9 @@ msgstr "(OAPIF/WFS3 같은) OGC API의 모든 정적 리소스(HTML 템플릿, C
 msgid "depends on packaging"
 msgstr "패키지에 따라 다름"
 
-#: ../../docs/server_manual/config.rst:84
-#: ../../docs/server_manual/config.rst:89
-msgid "WFS"
-msgstr "WFS"
-
 #: ../../docs/server_manual/config.rst:86
 msgid "QGIS_SERVER_API_WFS3_MAX_LIMIT"
 msgstr "QGIS_SERVER_API_WFS3_MAX_LIMIT"
-
-#: ../../docs/server_manual/config.rst:87
-msgid "Maximum value for ``limit`` in a features request."
-msgstr "피처 요청에서 ``limit`` 의 최대값입니다."
 
 #: ../../docs/server_manual/config.rst:88
 msgid "10000"
@@ -242,15 +239,16 @@ msgstr ""
 #: ../../docs/server_manual/config.rst:166
 #: ../../docs/server_manual/config.rst:177
 #: ../../docs/server_manual/config.rst:199
-#: ../../docs/server_manual/config.rst:208
-#: ../../docs/server_manual/config.rst:222
+#: ../../docs/server_manual/config.rst:230
+#: ../../docs/server_manual/config.rst:244
 msgid "false"
 msgstr "false"
 
 #: ../../docs/server_manual/config.rst:108
 #: ../../docs/server_manual/config.rst:200
-#: ../../docs/server_manual/config.rst:209
-#: ../../docs/server_manual/config.rst:229
+#: ../../docs/server_manual/config.rst:231
+#: ../../docs/server_manual/config.rst:263
+#: ../../docs/server_manual/config.rst:269
 msgid "WMS"
 msgstr "WMS"
 
@@ -381,13 +379,13 @@ msgstr ""
 
 #: ../../docs/server_manual/config.rst:175
 #: ../../docs/server_manual/config.rst:197
-#: ../../docs/server_manual/config.rst:206
+#: ../../docs/server_manual/config.rst:228
 msgid "``0`` or ``false`` (case insensitive)"
 msgstr "``0`` 또는 ``false`` (대소문자 구분 안 함)"
 
 #: ../../docs/server_manual/config.rst:176
 #: ../../docs/server_manual/config.rst:198
-#: ../../docs/server_manual/config.rst:207
+#: ../../docs/server_manual/config.rst:229
 msgid "``1`` or ``true`` (case insensitive)"
 msgstr "``1`` 또는 ``true`` (대소문자 구분 안 함)"
 
@@ -403,7 +401,7 @@ msgstr ""
 "병렬 렌더링을 활성화한 경우 사용할 스레드의 개수를 지정합니다. 값이 ``-1`` 인 경우 프로세서 코어의 개수를 사용합니다."
 
 #: ../../docs/server_manual/config.rst:183
-#: ../../docs/server_manual/config.rst:228
+#: ../../docs/server_manual/config.rst:262
 msgid "-1"
 msgstr "-1"
 
@@ -433,11 +431,11 @@ msgstr ""
 "WMS GetMap 요청에 대해 병렬 렌더링을 활성화합니다. 기본적으로 비활성화(``false``) 상태입니다. 다음 값을 사용할 수 "
 "있습니다:"
 
-#: ../../docs/server_manual/config.rst:202
+#: ../../docs/server_manual/config.rst:224
 msgid "QGIS_SERVER_SHOW_GROUP_SEPARATOR"
 msgstr "QGIS_SERVER_SHOW_GROUP_SEPARATOR"
 
-#: ../../docs/server_manual/config.rst:203
+#: ../../docs/server_manual/config.rst:225
 msgid ""
 "Defines whether a group separator (e.g. thousand separator) should be used "
 "for numeric values (e.g. in GetFeatureInfo responses). The default value is "
@@ -446,11 +444,11 @@ msgstr ""
 "숫자 값에 대해 (예를 들어 ``GetFeatureInfo`` 응답에서) 그룹 구분자(예: 천 단위 구분자)를 사용해야 할지 여부를 "
 "정의합니다. 기본값은 ``0`` 입니다."
 
-#: ../../docs/server_manual/config.rst:211
+#: ../../docs/server_manual/config.rst:233
 msgid "QGIS_SERVER_TRUST_LAYER_METADATA"
 msgstr "QGIS_SERVER_TRUST_LAYER_METADATA"
 
-#: ../../docs/server_manual/config.rst:212
+#: ../../docs/server_manual/config.rst:234
 msgid ""
 "This is an option at the project level to improve project read time by using"
 " the vector layer extents defined in the project metadata and disabling the "
@@ -459,7 +457,7 @@ msgstr ""
 "PostgreSQL/PostGIS 레이어 기본 키(primary key)의 유일성 점검을 비활성화하고 프로젝트 메타데이터에 정의된 벡터 "
 "레이어 영역을 사용해서 프로젝트를 읽어오는 시간을 단축하기 위한 프로젝트 수준 옵션입니다."
 
-#: ../../docs/server_manual/config.rst:216
+#: ../../docs/server_manual/config.rst:238
 msgid ""
 "Trusting layer metadata can be forced by setting this variable to ``1`` or "
 "``true``. The vector layer's extent will then be the one defined in the "
@@ -470,15 +468,19 @@ msgstr ""
 "프로젝트에 정의된 영역으로 받아들이고, 데이터소스에 정의된 PostgreSQL/PostGIS 레이어의 기본 키를 점검하지 않은 채 "
 "유일하다고 간주할 것입니다."
 
-#: ../../docs/server_manual/config.rst:221
+#: ../../docs/server_manual/config.rst:243
 msgid "Do not use it if layers' extent is not fixed during the project's use."
 msgstr "프로젝트를 사용하는 도중 레이어 영역이 고정되지 않는 상황에서는 이 변수를 사용해서는 안 됩니다."
 
-#: ../../docs/server_manual/config.rst:225
+#: ../../docs/server_manual/config.rst:257
+msgid "WFS"
+msgstr "WFS"
+
+#: ../../docs/server_manual/config.rst:259
 msgid "QGIS_SERVER_WMS_MAX_HEIGHT / QGIS_SERVER_WMS_MAX_WIDTH"
 msgstr "QGIS_SERVER_WMS_MAX_HEIGHT / QGIS_SERVER_WMS_MAX_WIDTH"
 
-#: ../../docs/server_manual/config.rst:226
+#: ../../docs/server_manual/config.rst:260
 msgid ""
 "Maximum height/width for a WMS request. The most conservative between this "
 "and the project one is used. If the value is ``-1``, it means that there is "
@@ -487,11 +489,11 @@ msgstr ""
 "WMS 요청에 대한 최대 높이/너비입니다. 이 값과 프로젝트 값 사이에 가장 보수적인 값을 사용합니다. 값이 ``-1`` 인 경우, "
 "설정된 최대값이 없다는 뜻입니다."
 
-#: ../../docs/server_manual/config.rst:231
+#: ../../docs/server_manual/config.rst:277
 msgid "QUERY_STRING"
 msgstr "QUERY_STRING"
 
-#: ../../docs/server_manual/config.rst:232
+#: ../../docs/server_manual/config.rst:278
 msgid ""
 "The query string, normally passed by the web server. This variable can be "
 "useful while testing QGIS server binary from the command line."
@@ -499,7 +501,7 @@ msgstr ""
 "일반적으로 웹 서버가 전송하는 쿼리 문자열을 정의합니다. 이 환경 변수는 명령 줄 인터페이스에서 QGIS 서버 파일을 검증하는 데 "
 "유용합니다."
 
-#: ../../docs/server_manual/config.rst:235
+#: ../../docs/server_manual/config.rst:281
 msgid ""
 "For example for testing a GetCapabilities request on the command line to a "
 "project that also requires a PostgreSQL connection defined in a "
@@ -508,18 +510,18 @@ msgstr ""
 "예를 들어 다음은 :file:`pg_service.conf` 파일에 정의된 PostgreSQL 연결도 필요로 하는 프로젝트에 명령 줄 "
 "인터페이스에서 ``GetCapabilities`` 요청을 검증하는 예입니다:"
 
-#: ../../docs/server_manual/config.rst:245
+#: ../../docs/server_manual/config.rst:291
 msgid ""
 "The result should be either the content of the GetCapabilities response or, "
 "if something is wrong, an error message."
 msgstr ""
 "이 요청에 대한 결과는 ``GetCapabilities`` 응답의 내용이거나, 또는 무언가 오류가 발생한 경우 오류 메시지여야 합니다."
 
-#: ../../docs/server_manual/config.rst:252
+#: ../../docs/server_manual/config.rst:298
 msgid "Settings summary"
 msgstr "설정 요약"
 
-#: ../../docs/server_manual/config.rst:254
+#: ../../docs/server_manual/config.rst:300
 msgid ""
 "When QGIS Server is starting, you have a summary of all configurable "
 "parameters thanks to environment variables. Moreover, the value currently "
@@ -528,11 +530,11 @@ msgstr ""
 "QGIS 서버 실행 시, 환경 설정할 수 있는 모든 파라미터의 요약을 환경 변수 덕분에 볼 수 있습니다. 게다가, 현재 사용되는 값과 그"
 " 기원까지 표시됩니다."
 
-#: ../../docs/server_manual/config.rst:258
+#: ../../docs/server_manual/config.rst:304
 msgid "For example with spawn-fcgi:"
 msgstr "예를 들어 'spawn-fcgi' 의 경우:"
 
-#: ../../docs/server_manual/config.rst:289
+#: ../../docs/server_manual/config.rst:335
 msgid ""
 "In this particular case, we know that **QGIS_SERVER_MAX_THREADS** and "
 "**QGIS_SERVER_PARALLEL_RENDERING** values are read from the ini file found "
@@ -546,11 +548,11 @@ msgstr ""
 "읽어왔다는 사실을 알 수 있습니다. :file:`.ini` 파일의 대응 항목들은 **/qgis/max_threads** 및 "
 "**/qgis/parallel_rendering** 이며 그 값은 각각 **true** 와 스레드 **4** 개입니다."
 
-#: ../../docs/server_manual/config.rst:297
+#: ../../docs/server_manual/config.rst:343
 msgid "Connection to service file"
 msgstr "서비스 파일에 연결"
 
-#: ../../docs/server_manual/config.rst:299
+#: ../../docs/server_manual/config.rst:345
 msgid ""
 "In order to make apache aware of the PostgreSQL service file (see the "
 ":ref:`pg-service-file` section) you need to make your :file:`*.conf` file "
@@ -559,11 +561,11 @@ msgstr ""
 "Apache가 PostgreSQL 서비스 파일(:ref:`pg-service-file` 참조)을 인지하도록 하려면, 사용자의 "
 ":file:`*.conf` 파일을 다음과 같이 추가해야 합니다:"
 
-#: ../../docs/server_manual/config.rst:315
+#: ../../docs/server_manual/config.rst:361
 msgid "Add fonts to your linux server"
 msgstr "사용자 리눅스 서버에 글꼴 추가"
 
-#: ../../docs/server_manual/config.rst:317
+#: ../../docs/server_manual/config.rst:363
 msgid ""
 "Keep in mind that you may use QGIS projects that point to fonts that may not"
 " exist by default on other machines. This means that if you share the "
@@ -573,7 +575,7 @@ msgstr ""
 "사용자의 QGIS 프로젝트가 가리키는 글꼴이 다른 시스템 상에는 기본적으로 존재하지 않을 수도 있다는 사실을 기억하고 있어야 합니다. 즉"
 " 프로젝트를 공유하는 경우, (대상 컴퓨터에 해당 글꼴이 없다면) 다른 컴퓨터에서는 다르게 보일 수도 있다는 뜻입니다."
 
-#: ../../docs/server_manual/config.rst:321
+#: ../../docs/server_manual/config.rst:367
 msgid ""
 "In order to ensure this does not happen you just need to install the missing"
 " fonts on the target machine. Doing this on desktop systems is usually "
@@ -582,17 +584,17 @@ msgstr ""
 "이런 일이 일어나지 않도록 보장하려면, 대상 컴퓨터에 빠진 글꼴을 설치하기만 하면 됩니다. 데스크탑 시스템인 경우 보통 이 작업은 어렵지"
 " 않습니다. (글꼴 파일을 더블클릭하면 됩니다.)"
 
-#: ../../docs/server_manual/config.rst:324
+#: ../../docs/server_manual/config.rst:370
 msgid ""
 "For linux, if you don't have a desktop environment installed (or you prefer "
 "the command line) you need to:"
 msgstr ""
 "리눅스의 경우, 데스크탑 환경이 설치되지 않았다면 (또는 사용자가 명령 줄 인터페이스를 선호한다면) 다음 명령어를 실행하면 됩니다:"
 
-#: ../../docs/server_manual/config.rst:326
+#: ../../docs/server_manual/config.rst:372
 msgid "On Debian based systems:"
 msgstr "데비안 기반 시스템인 경우:"
 
-#: ../../docs/server_manual/config.rst:339
+#: ../../docs/server_manual/config.rst:385
 msgid "On Fedora based systems:"
 msgstr "페도라 기반 시스템인 경우:"

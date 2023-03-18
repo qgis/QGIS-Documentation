@@ -2,19 +2,19 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 10:18+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:13+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2022\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -170,15 +170,11 @@ msgstr ""
 " 항목명들이 모두 유효하지는 않습니다. 유효한 명칭으로 변경하십시오.) 앞에서와 마찬가지로 동일한 데이터 유형의 ID 열을 테이블에 "
 "추가해야 합니다."
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:256
-msgid ":ref:`Check your results <database-concepts-4>`"
-msgstr ":ref:`결과 확인 <database-concepts-4>`"
-
-#: ../../docs/training_manual/database_concepts/data_model.rst:261
+#: ../../docs/training_manual/database_concepts/data_model.rst:285
 msgid "Create Keys in SQL"
 msgstr "SQL로 키 생성"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:263
+#: ../../docs/training_manual/database_concepts/data_model.rst:287
 msgid ""
 "The problem with our solution above is that the database doesn't know that "
 "people and streets have a logical relationship. To express this "
@@ -188,19 +184,19 @@ msgstr ""
 "앞 단계까지의 문제점은 데이터베이스가 people과 streets가 논리적 관계를 가지고 있다는 사실을 모른다는 것입니다. 이 관계를 "
 "표현하려면, streets 테이블의 기본 키를 가리키는 외래 키를 정의해야만 합니다."
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:271
+#: ../../docs/training_manual/database_concepts/data_model.rst:295
 msgid "There are two ways to do this:"
 msgstr "두 가지 방법이 있습니다."
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:273
+#: ../../docs/training_manual/database_concepts/data_model.rst:297
 msgid "Add the key after the table has been created"
 msgstr "테이블 생성 후 키 추가"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:274
+#: ../../docs/training_manual/database_concepts/data_model.rst:298
 msgid "Define the key at time of table creation"
 msgstr "테이블 생성 시 키 정의"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:284
+#: ../../docs/training_manual/database_concepts/data_model.rst:308
 msgid ""
 "That tells the :kbd:`people` table that its :kbd:`street_id` fields must "
 "match a valid street :kbd:`id` from the :kbd:`streets` table."
@@ -208,22 +204,15 @@ msgstr ""
 "이렇게 하면 :kbd:`people` 테이블에 :kbd:`street_id` 필드가 :kbd:`streets` 테이블의 유효한 도로 "
 ":kbd:`id` 와 일치해야만 한다고 알려주게 됩니다."
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:319
+#: ../../docs/training_manual/database_concepts/data_model.rst:343
 msgid "Create Indexes in SQL"
 msgstr "SQL로 인덱스 생성"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:351
+#: ../../docs/training_manual/database_concepts/data_model.rst:375
 msgid "Dropping Tables in SQL"
 msgstr "SQL로 테이블 드롭"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:360
-msgid ""
-"In our current example, the above command would not work. Why not? :ref:`See"
-" why <database-concepts-5>`"
-msgstr ""
-"현재 예제에서 이 명령어는 동작하지 않습니다. 어째서일까요? :ref:`이런 이유 때문입니다. <database-concepts-5>`"
-
-#: ../../docs/training_manual/database_concepts/data_model.rst:373
+#: ../../docs/training_manual/database_concepts/data_model.rst:406
 msgid ""
 "If you actually did enter that command and dropped the :kbd:`people` table, "
 "now would be a good time to rebuild it, as you will need it in the next "
@@ -231,11 +220,11 @@ msgid ""
 msgstr ""
 "실제로 명령어를 입력해서 :kbd:`people` 테이블을 드롭했다면, 다음 예제에 필요하므로 지금 다시 생성하도록 하십시오."
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:378
+#: ../../docs/training_manual/database_concepts/data_model.rst:411
 msgid "A word on pgAdmin III"
 msgstr "pgAdmin III에 대해"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:380
+#: ../../docs/training_manual/database_concepts/data_model.rst:413
 msgid ""
 "We are showing you the SQL commands from the `psql` prompt because it's a "
 "very useful way to learn about databases. However, there are quicker and "
@@ -247,24 +236,24 @@ msgstr ""
 " 여기서 여러분이 배운 작업의 대부분을 더 빠르고 쉽게 할 수 있는 방법이 있습니다. pgAdmin III를 설치하면 GUI 환경에서 "
 "'포인트 & 클릭'만으로 테이블의 생성, 삭제, 수정 등을 할 수 있습니다."
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:391
+#: ../../docs/training_manual/database_concepts/data_model.rst:424
 msgid "pgAdmin III will be covered in more detail in another module."
 msgstr "다른 모듈에서 pgAdmin III에 대해 더 자세히 배우게 될 것입니다."
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:394
+#: ../../docs/training_manual/database_concepts/data_model.rst:427
 msgid "|IC|"
 msgstr "|IC|"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:396
+#: ../../docs/training_manual/database_concepts/data_model.rst:429
 msgid ""
 "You have now seen how to create a brand new database, starting completely "
 "from scratch."
 msgstr "이제 완전히 처음부터 새 데이터베이스를 생성하는 방법을 배웠습니다."
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:400
+#: ../../docs/training_manual/database_concepts/data_model.rst:433
 msgid "|WN|"
 msgstr "|WN|"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:402
+#: ../../docs/training_manual/database_concepts/data_model.rst:435
 msgid "Next you'll learn how to use the DBMS to add new data."
 msgstr "다음 강의에서 DBMS를 통해 새 데이터를 추가하는 방법을 배울 것입니다."

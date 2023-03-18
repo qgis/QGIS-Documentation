@@ -5715,6 +5715,10 @@ msgstr ""
 msgid "NULL"
 msgstr "NULL"
 
+#: ../../docs/user_manual/expressions/expression_help/Fields_and_Values.rst:14
+msgid "Equates to a NULL value."
+msgstr "Équivaut à une valeur NULL."
+
 #: ../../docs/user_manual/expressions/expression_help/Fields_and_Values.rst:22
 msgid "``NULL`` → a NULL value"
 msgstr "``NULL`` → une valeur NULL"
@@ -6298,6 +6302,10 @@ msgstr "mime_type"
 msgid "mime_type(bytes)"
 msgstr "mime_type(bytes)"
 
+#: ../../docs/user_manual/expressions/expression_help/General.rst:105
+msgid "**bytes** - the binary data"
+msgstr "**bytes** - la donnée binaire"
+
 #: ../../docs/user_manual/expressions/expression_help/General.rst:107
 msgid "``mime_type('<html><body></body></html>')`` → text/html"
 msgstr "``mime_type('<html><body></body></html>')`` → text/html"
@@ -6447,6 +6455,14 @@ msgstr ""
 "**rotation_z** - rotation autour de l'axe z en degrés, dans le sens inverse "
 "des aiguilles d'une montre"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:28
+msgid "**scale_x** - x-axis scale factor"
+msgstr "**scale_x** - le facteur d'échelle sur l'axe x"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
+msgid "**scale_y** - y-axis scale factor"
+msgstr "**scale_y** - le facteur d'échelle sur l'axe y"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:30
 msgid "**delta_z** - z-axis translation"
 msgstr "**delta_z** - translation suivant l'axe z"
@@ -6454,6 +6470,14 @@ msgstr "**delta_z** - translation suivant l'axe z"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:31
 msgid "**delta_m** - m-axis translation"
 msgstr "**delta_m** - translation suivant l'axe m"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:32
+msgid "**scale_z** - z-axis scale factor"
+msgstr "**scale_z** - le facteur d'échelle sur l'axe z"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:33
+msgid "**scale_m** - m-axis scale factor"
+msgstr "**scale_m** - le facteur d'échelle sur l'axe m"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:35
 msgid ""
@@ -6693,6 +6717,12 @@ msgid ""
 msgstr ""
 "``geom_to_wkt(bounds(geom_from_wkt('Polygon((1 1, 0 0, -1 1, 1 1))')))`` → "
 "'Polygon ((-1 0, 1 0, 1 1, -1 1, -1 0))'"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:26
+msgid "Black lines represent the bounding boxes of each polygon feature"
+msgstr ""
+"Les lignes noires représentent les rectangles d'encombrement de chaque "
+"entité polygonale."
 
 #: ../../docs/user_manual/expressions/functions_list.rst:331
 msgid "Further reading: :ref:`qgisboundingboxes` algorithm"
@@ -13564,6 +13594,10 @@ msgstr "\\||"
 msgid "a || b"
 msgstr "a || b"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:45
+msgid "``'Here' || ' and ' || 'there'`` → 'Here and there'"
+msgstr "``'Ici' || ' et ' || 'là'`` → 'Ici et là'"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:46
 msgid "``'Nothing' || NULL`` → NULL"
 msgstr "``'Rien' || NULL`` → NULL"
@@ -13591,6 +13625,10 @@ msgstr "~"
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:14
 msgid "string ~ regex"
 msgstr "string ~ regex"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:16
+msgid "**string** - A string value"
+msgstr "**string** - une chaîne de caractères"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:19
 msgid "``'hello' ~ 'll'`` → 1"
@@ -14142,6 +14180,14 @@ msgstr "is_selected(feature)"
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:69
 msgid "**feature** - The feature which should be checked for selection."
 msgstr "**feature** - l'entité qui doit être vérifiée pour la sélection."
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:53
+msgid ""
+"``is_selected(@atlas_feature)`` → True if the current atlas feature is "
+"selected."
+msgstr ""
+"``is_selected(@atlas_feature)`` → Vrai si l'entité actuelle de l'atlas est "
+"sélectionnée."
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:58
 msgid "**Two parameters**"

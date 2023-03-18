@@ -1,54 +1,99 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
-# Sorin Călinică <scalinica@gmail.com>, 2020
+# Harrissou Sant-anna, 2022
+# Sorin Călinică <scalinica@gmail.com>, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:24+0000\n"
-"Last-Translator: Sorin Călinică <scalinica@gmail.com>, 2020\n"
+"POT-Creation-Date: 2022-03-12 00:23+0100\n"
+"PO-Revision-Date: 2022-03-14 05:11+0000\n"
+"Last-Translator: Sorin Călinică <scalinica@gmail.com>, 2022\n"
 "Language-Team: Romanian (https://www.transifex.com/qgis/teams/6144/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
 "Language: ro\n"
 "Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:32
+#: ../../docs/pyqgis_developer_cookbook/server.rst:38
 msgid "Introduction"
 msgstr "Introducere"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:170
+#: ../../docs/pyqgis_developer_cookbook/server.rst:176
+msgid "I/O"
+msgstr "I/O"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:177
 msgid ":class:`QgsServerFilter <qgis.server.QgsServerFilter>`"
 msgstr ":class:`QgsServerFilter <qgis.server.QgsServerFilter>`"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:171
+#: ../../docs/pyqgis_developer_cookbook/server.rst:178
+msgid ""
+":meth:`registerFilter() <qgis.server.QgsServerInterface.registerFilter>`"
+msgstr ""
+":meth:`registerFilter() <qgis.server.QgsServerInterface.registerFilter>`"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:180
 msgid ":class:`QgsAccessControlFilter <qgis.server.QgsAccessControlFilter>`"
 msgstr ":class:`QgsAccessControlFilter <qgis.server.QgsAccessControlFilter>`"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:172
+#: ../../docs/pyqgis_developer_cookbook/server.rst:181
+msgid ""
+":meth:`registerAccessControl() "
+"<qgis.server.QgsServerInterface.registerAccessControl>`"
+msgstr ""
+":meth:`registerAccessControl() "
+"<qgis.server.QgsServerInterface.registerAccessControl>`"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:183
 msgid ":class:`QgsServerCacheFilter <qgis.server.QgsServerCacheFilter>`"
 msgstr ":class:`QgsServerCacheFilter <qgis.server.QgsServerCacheFilter>`"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:217
+#: ../../docs/pyqgis_developer_cookbook/server.rst:184
+msgid ""
+":meth:`registerServerCache() "
+"<qgis.server.QgsServerInterface.registerServerCache>`"
+msgstr ""
+":meth:`registerServerCache() "
+"<qgis.server.QgsServerInterface.registerServerCache>`"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:200
+#: ../../docs/pyqgis_developer_cookbook/server.rst:364
+msgid ":meth:`requestReady() <qgis.server.QgsServerFilter.requestReady>`"
+msgstr ":meth:`requestReady() <qgis.server.QgsServerFilter.requestReady>`"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:201
+#: ../../docs/pyqgis_developer_cookbook/server.rst:365
+msgid ""
+":meth:`responseComplete() <qgis.server.QgsServerFilter.responseComplete>`"
+msgstr ""
+":meth:`responseComplete() <qgis.server.QgsServerFilter.responseComplete>`"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:202
+#: ../../docs/pyqgis_developer_cookbook/server.rst:366
+msgid ":meth:`sendResponse() <qgis.server.QgsServerFilter.sendResponse>`"
+msgstr ":meth:`sendResponse() <qgis.server.QgsServerFilter.sendResponse>`"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:228
 msgid "The following paragraphs describe the available callbacks in details."
 msgstr ""
 "Următoarele paragrafe descriu, în detaliu, funcțiile de reapelare "
 "disponibile."
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:220
+#: ../../docs/pyqgis_developer_cookbook/server.rst:231
 msgid "requestReady"
 msgstr "requestReady"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:222
+#: ../../docs/pyqgis_developer_cookbook/server.rst:233
 msgid ""
 "This is called when the request is ready: incoming URL and data have been "
 "parsed and before entering the core services (WMS, WFS etc.) switch, this is"
@@ -59,24 +104,24 @@ msgstr ""
 "(WMS, WFS, etc), acesta este punctul în care se poate interveni asupra "
 "datelor de intrare, putându-se efectua acțiuni de genul:"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:226
+#: ../../docs/pyqgis_developer_cookbook/server.rst:237
 msgid "authentication/authorization"
 msgstr "autentificare/autorizare"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:227
+#: ../../docs/pyqgis_developer_cookbook/server.rst:238
 msgid "redirects"
 msgstr "redirectări"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:228
+#: ../../docs/pyqgis_developer_cookbook/server.rst:239
 msgid "add/remove certain parameters (typenames for example)"
 msgstr ""
 "adăugarea/eliminarea anumitor parametri (denumirile tipurilor, de exemplu)"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:229
+#: ../../docs/pyqgis_developer_cookbook/server.rst:240
 msgid "raise exceptions"
 msgstr "tratarea excepțiilor"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:231
+#: ../../docs/pyqgis_developer_cookbook/server.rst:242
 msgid ""
 "You could even substitute a core service completely by changing **SERVICE** "
 "parameter and hence bypassing the core service completely (not that this "
@@ -86,15 +131,15 @@ msgstr ""
 "schimbarea parametrului **SERVICE**, astfel, ocolindu-se complet serviciul "
 "de bază (deși, acest lucru nu ar avea prea mult sens)."
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:237
+#: ../../docs/pyqgis_developer_cookbook/server.rst:247
 msgid "sendResponse"
 msgstr "sendResponse"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:261
+#: ../../docs/pyqgis_developer_cookbook/server.rst:267
 msgid "responseComplete"
 msgstr "responseComplete"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:285
+#: ../../docs/pyqgis_developer_cookbook/server.rst:291
 msgid ""
 "This approach basically works but it is not very \"pythonic\": a better "
 "approach would be to raise exceptions from python code and see them bubbling"
@@ -105,30 +150,25 @@ msgstr ""
 "excepțiile din codul python la nivelul buclei C++, pentru a fi manipulată "
 "acolo."
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:293
+#: ../../docs/pyqgis_developer_cookbook/server.rst:298
 msgid "Writing a server plugin"
 msgstr "Scrierea unui plugin pentru server"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:316
-#: ../../docs/pyqgis_developer_cookbook/server.rst:542
+#: ../../docs/pyqgis_developer_cookbook/server.rst:321
+#: ../../docs/pyqgis_developer_cookbook/server.rst:543
 msgid "Plugin files"
 msgstr "Fișierele Plugin-ului"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:318
-msgid "Here's the directory structure of our example server plugin"
-msgstr ""
-"Iată structura de directoare a exemplului nostru de plugin pentru server"
-
-#: ../../docs/pyqgis_developer_cookbook/server.rst:331
-#: ../../docs/pyqgis_developer_cookbook/server.rst:556
+#: ../../docs/pyqgis_developer_cookbook/server.rst:336
+#: ../../docs/pyqgis_developer_cookbook/server.rst:557
 msgid "__init__.py"
 msgstr "__init__.py"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:349
+#: ../../docs/pyqgis_developer_cookbook/server.rst:353
 msgid "HelloServer.py"
 msgstr "HelloServer.py"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:351
+#: ../../docs/pyqgis_developer_cookbook/server.rst:355
 msgid ""
 "This is where the magic happens and this is how magic looks like: (e.g. "
 ":file:`HelloServer.py`)"
@@ -136,36 +176,63 @@ msgstr ""
 "Aici este locul în care se întâmplă magia, și iată rezultatul acesteia: (de "
 "exemplu :file:`HelloServer.py`)"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:416
+#: ../../docs/pyqgis_developer_cookbook/server.rst:418
 msgid "The following examples cover some common use cases:"
 msgstr "Următorul exemplu demonstrează câteva cazuri de utilizare obișnuită:"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:419
+#: ../../docs/pyqgis_developer_cookbook/server.rst:421
 msgid "Modifying the input"
 msgstr "Modificarea intrării"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:462
-msgid ""
-"The same technique can be exploited to use a custom service instead of a "
-"core one: you could for example skip a **WFS** **SERVICE** request or any "
-"other core request just by changing the **SERVICE** parameter to something "
-"different and the core service will be skipped, then you can inject your "
-"custom results into the output and send them to the client (this is "
-"explained here below)."
-msgstr ""
-"Aceeași tehnică poate fi exploatată pentru a utiliza un serviciu "
-"personalizat in locul unuia de bază: de exemplu, ați putea sări peste o "
-"cerere **WFS** **SERVICE**, sau peste oricare altă cerere de bază, doar prin"
-" schimbarea parametrului **SERVICE** în ceva diferit, iar serviciul de bază "
-"va fi omis; în acel caz, veți puteți injecta datele dvs. în interiorul "
-"rezultatului, trimițându-le clientului (acest lucru este explicat în "
-"continuare)."
-
-#: ../../docs/pyqgis_developer_cookbook/server.rst:476
+#: ../../docs/pyqgis_developer_cookbook/server.rst:478
 msgid "Modifying or replacing the output"
 msgstr "Modificarea sau înlocuirea rezultatului"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:574
+#: ../../docs/pyqgis_developer_cookbook/server.rst:535
+msgid ""
+":meth:`layerFilterExpression(layer) "
+"<qgis.server.QgsAccessControlFilter.layerFilterExpression>`"
+msgstr ""
+":meth:`layerFilterExpression(layer) "
+"<qgis.server.QgsAccessControlFilter.layerFilterExpression>`"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:536
+msgid ""
+":meth:`layerFilterSubsetString(layer) "
+"<qgis.server.QgsAccessControlFilter.layerFilterSubsetString>`"
+msgstr ""
+":meth:`layerFilterSubsetString(layer) "
+"<qgis.server.QgsAccessControlFilter.layerFilterSubsetString>`"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:537
+msgid ""
+":meth:`layerPermissions(layer) "
+"<qgis.server.QgsAccessControlFilter.layerPermissions>`"
+msgstr ""
+":meth:`layerPermissions(layer) "
+"<qgis.server.QgsAccessControlFilter.layerPermissions>`"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:538
+msgid ""
+":meth:`authorizedLayerAttributes(layer, attributes) "
+"<qgis.server.QgsAccessControlFilter.authorizedLayerAttributes>`"
+msgstr ""
+":meth:`authorizedLayerAttributes(layer, attributes) "
+"<qgis.server.QgsAccessControlFilter.authorizedLayerAttributes>`"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:539
+msgid ""
+":meth:`allowToEdit(layer, feature) "
+"<qgis.server.QgsAccessControlFilter.allowToEdit>`"
+msgstr ""
+":meth:`allowToEdit(layer, feature) "
+"<qgis.server.QgsAccessControlFilter.allowToEdit>`"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:540
+msgid ":meth:`cacheKey() <qgis.server.QgsAccessControlFilter.cacheKey>`"
+msgstr ":meth:`cacheKey() <qgis.server.QgsAccessControlFilter.cacheKey>`"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:575
 msgid "AccessControl.py"
 msgstr "AccessControl.py"
 

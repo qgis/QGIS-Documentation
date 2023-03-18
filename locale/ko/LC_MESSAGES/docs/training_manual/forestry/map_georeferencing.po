@@ -2,20 +2,19 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
-# Kwon.Yongchan <ruvyn@naver.com>, 2022
+# Harrissou Sant-anna, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 10:28+0000\n"
-"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2022\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:10+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2022\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -62,10 +61,6 @@ msgstr "**이 강의의 목표:** QGIS의 지리참조 도구를 사용하는 �
 msgid "|basic| Scan the map"
 msgstr "|basic| 지도 스캔"
 
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:159
-msgid "basic"
-msgstr "basic"
-
 #: ../../docs/training_manual/forestry/map_georeferencing.rst:20
 msgid ""
 "The first task you will have to do is to scan your map. If your map is too "
@@ -89,100 +84,27 @@ msgstr ""
 "300 DPI 정도가 좋습니다. 여러분의 지도에 여러 색상이 쓰였다면 컬러로 스캔하십시오. 나중에 이 색상들을 사용하여 지도에서 정보를 "
 "분리, 서로 다른 레이어로 저장할 수 있습니다. (예 : 수종경계, 등고선, 도로 등등) "
 
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:31
-msgid ""
-"For this exercise you will use a previously scanned map, you can find it as "
-":kbd:`rautjarvi_map.tif` in the data folder :kbd:`exercise_data/forestry`"
-msgstr ""
-"이 예제에서 쓰일 미리 스캔된 맵은 데이터 폴더 :kbd:`exercise_data/forestry` 안에 있는 "
-":kbd:`rautjarvi_map.tif` 파일입니다."
-
 #: ../../docs/training_manual/forestry/map_georeferencing.rst:35
 msgid "|basic| |FA| Georeferencing the scanned map"
 msgstr "|basic| |FA| 스캔한 맵을 지리참조시키기"
 
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:37
-msgid ""
-"Open QGIS and set the project's CRS to :kbd:`ETRS89 / ETRS-TM35FIN` in "
-":menuselection:`Project --> Properties --> CRS`, which is the currently used"
-" CRS in Finland."
-msgstr ""
-"QGIS 시작후 프로젝트 CRS를 :menuselection:`Project --> Properties --> CRS`에서 핀란드에서 "
-"사용중인 좌표계  :kbd:`ETRS89 / ETRS-TM35FIN`로 설정합니다."
-
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:43
-msgid "Save the QGIS project as :kbd:`map_digitizing.qgs`."
-msgstr "이 QGIS 프로젝트를 :kbd:`map_digitizing.qgs` 라는 이름으로 저장하십시오."
-
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:45
-msgid ""
-"You will use the georeferencing plugin from QGIS, the plugin is already "
-"installed in QGIS. Activate the plugin using the plugin manager as you have "
-"done in previous modules. The plugin is named :guilabel:`Georeferencer "
-"GDAL`."
-msgstr ""
-"이미 QGIS에 설치된 지리참조 플러그인을 사용할 것입니다. 이전 강의에서 실습했던 것처럼 플러그인 관리자를 이용해서 해당 플러그인을 "
-"활성화하십시오. 지리참조 플러그인의 명칭은 :guilabel:`Georeferencer GDAL` 입니다."
-
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:49
-msgid "To georeference the map:"
-msgstr "맵을 지리참조시키려면,"
-
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:51
-msgid ""
-"Open the georeference tool, :menuselection:`Raster --> Georeferencer --> "
-"Georeferencer`."
-msgstr ""
-":menuselection:`Raster --> Georeferencer --> Georeferencer` 메뉴를 클릭해서 지리참조 "
-"도구를 실행하십시오."
-
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:52
-msgid ""
-"Add the map image file, :kbd:`rautjarvi_map.tif`, as the image to "
-"georeference, :menuselection:`File --> Open raster`."
-msgstr ""
-"지도 이미지파일을 추가합니다, :kbd:`rautjarvi_map.tif` 배경으로 사용할 이미지 파일을 "
-":menuselection:`파일 --> 래스터열기`로 이동합니다."
-
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:54
-msgid ""
-"When prompted find and select the :kbd:`KKJ / Finland zone 2` CRS, it is the"
-" CRS that was used in Finland back in 1994 when this map was created."
-msgstr ""
-"대화 창이 열리면 :kbd:`KKJ / Finland zone 2` CRS를 찾아 선택하십시오. 이 맵이 생성된 1994년 당시 "
-"핀란드에서 쓰이던 CRS입니다."
-
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:56
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:69
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:84
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:57
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:76
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:96
 msgid "Click :guilabel:`OK`."
 msgstr ":guilabel:`OK` 를 클릭하십시오."
 
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:58
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:59
 msgid ""
 "Next you should define the transformation settings for georeferencing the "
 "map:"
 msgstr "다음으로 맵을 지리참조시키기 위한 변환 설정을 정의해야 합니다."
 
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:60
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:61
 msgid "Open :menuselection:`Settings --> Transformation settings`."
 msgstr ":menuselection:`Settings --> Transformation settings` 메뉴를 클릭합니다."
 
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:61
-msgid ""
-"Click the icon next to the :kbd:`Output raster` box, go to the folder and "
-"create the folder :kbd:`exercise_data\\\\forestry\\\\digitizing` and name "
-"the file as :kbd:`rautjarvi_georef.tif`."
-msgstr ""
-":kbd:`Output raster` 옆에 있는 아이콘을 클릭해서 데이터 폴더로 이동한 다음, "
-":kbd:`exercise_data\\\\forestry\\\\digitizing` 폴더를 생성하고 "
-":kbd:`rautjarvi_georef.tif` 라는 이름으로 저장하십시오."
-
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:64
-msgid "Set the rest of parameters as shown below."
-msgstr "나머지 파라미터를 다음과 같이 설정하십시오."
-
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:71
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:78
 msgid ""
 "The map contains several cross-hairs marking the coordinates in the map, we "
 "will use those to georeference this image. You can use the zooming and "
@@ -192,17 +114,7 @@ msgstr ""
 "지도에는 다양한 십자선의로 좌표 마킹한 위치를 포함합니다. 이 위치값으로 배경이미지로 설정항 수 있습니다. 확대/축소 & 이동툴을 "
 "사용하여 QGIS의 지오리퍼런서 윈도우에서 이미지를 확인할 수 있습니다."
 
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:76
-msgid ""
-"Zoom in to the left lower corner of the map and note that there is a cross-"
-"hair with a coordinate pair, X and Y, that as mentioned before are in "
-":guilabel:`KKJ / Finland zone 2` CRS. You will use this point as the first "
-"ground control point for the georeferencing your map."
-msgstr ""
-"지도의 좌하단 코너로 확대후 X, Y가 맞추어진 십자성이 있는지 확인하십시오. 확인방법은 :guilabel:`KKJ / Finland "
-"zone 2` CRS에서 언급하였습니다. 이점을 지도의 배경이미지로할 첫번째 기준점으로 사용할 수 있습니다."
-
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:80
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:87
 msgid ""
 "Select the :guilabel:`Add point` tool and click in the intersection of the "
 "cross-hairs (pan and zoom as needed)."
@@ -210,131 +122,37 @@ msgstr ""
 ":guilabel:`Add point` 도구를 사용해서 십자 표식의 교차점을 선택하십시오. (필요하다면 확대/축소 및 이동 도구를 "
 "사용하십시오.)"
 
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:82
-msgid ""
-"In the :guilabel:`Enter map coordinates` dialogue write the coordinates that"
-" appear in the map (X: 2557000 and Y: 6786000)."
-msgstr ""
-":guilabel:`Enter map coordinates` 대화 창에 맵 위에 써 있는 좌표(X: 2557000, Y: "
-"6786000)를 입력하십시오."
-
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:86
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:98
 msgid "The first coordinate for the georeferencing is now ready."
 msgstr "지리참조 작업을 위한 첫 번째 좌표가 준비됐습니다."
 
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:88
-msgid ""
-"Look for other cross-hairs in the black lines image, they are separated 1000"
-" meters from each other both in North and East direction. You should be able"
-" to calculate the coordinates of those points in relation to the first one."
-msgstr ""
-"검정색 라인 이미지에서 다른 십자 표식을 찾아보십시오. 각각 북쪽과 동쪽 방향에 서로 1000 미터 간격으로 떨어져 있습니다. 첫 번째 "
-"좌표를 기준으로 이 포인트들의 좌표를 계산할 수 있을 겁니다."
-
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:92
-msgid ""
-"Zoom out in the image and move to the right until you find other cross-hair,"
-" and estimate how many kilometres you have moved. Try to get ground control "
-"points as far from each other as possible. Digitize at least three more "
-"ground control points in the same way you did the first one. You should end "
-"up with something similar to this:"
-msgstr ""
-"이미지를 축소한 다음 다른 십자 표식을 찾을 때까지 오른쪽으로 이동하십시오. 그리고 몇 킬로미터나 이동했는지 측정해보십시오. 가능한 한 "
-"서로에게서 가장 멀리 떨어진 지상기준점을 찾아보십시오. 첫 지상기준점과 동일한 방법으로 적어도 3개 이상의 지상기준점을 더 "
-"디지타이즈하십시오. 다음과 같은 화면을 보게 될 것입니다."
-
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:101
-msgid ""
-"With already three digitized ground control points you will be able to see "
-"the georeferencing error as a red line coming out of the points. The error "
-"in pixels can be seen also in the :guilabel:`GCP table` in the "
-":guilabel:`dX[pixels]` and :guilabel:`dY[pixels]` columns. The error in "
-"pixels should not be higher than 10 pixels, if it is you should review the "
-"points you have digitized and the coordinates you have entered to find what "
-"the problem is. You can use the image above as a guide."
-msgstr ""
-"3개 이상의 지상기준점을 디지타이즈했기 때문에 포인트에서 뻗어나온 빨강색 라인을 볼 수 있을 겁니다. 이 라인은 지리참조 오류를 "
-"의미합니다. :guilabel:`GCP table` 의 :guilabel:`dX[pixels]` 및 "
-":guilabel:`dY[pixels]` 열에서도 픽셀 단위로 표출된 오류를 볼 수 있습니다. 이 오류는 10 픽셀을 넘어서는 안 "
-"됩니다. 만약 10 픽셀 이상일 경우 디지타이즈한 포인트및 입력한 좌표를 살펴보고 문제가 무엇인지 알아내야 합니다. 앞의 이미지를 "
-"기준으로 삼으십시오."
-
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:109
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:121
 msgid ""
 "Once you are happy with your control points, you can save them for later "
 "use:"
 msgstr "기준점에 만족하시면 나중에 사용할 수 있도록 저장할 수 있습니다:"
 
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:111
-msgid ":menuselection:`File --> Save GCP points as...`."
-msgstr ":menuselection:`File --> Save GCP points as...` 메뉴를 클릭하십시오."
-
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:112
-msgid ""
-"In the folder :kbd:`exercise_data\\\\forestry\\\\digitizing`, name the file "
-":kbd:`rautjarvi_map.tif.points`."
-msgstr ""
-":kbd:`exercise_data\\\\forestry\\\\digitizing` 폴더에 "
-":kbd:`rautjarvi_map.tif.points` 라는 이름으로 파일을 저장하십시오."
-
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:115
-msgid "Finally, georeference you map:"
-msgstr "마지막으로, 사용자의 맵을 지리참조시킵니다."
-
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:117
-msgid ":menuselection:`File --> Start georeferencing`."
-msgstr ":menuselection:`File --> Start georeferencing` 메뉴를 클릭하십시오."
-
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:118
-msgid ""
-"Note that you named the file already as :kbd:`rautjarvi_georef.tif` when you"
-" edited the Georeferencer settings."
-msgstr ""
-"여러분이 지리참조 도구 설정을 정의했을 때 이미 :kbd:`rautjarvi_georef.tif` 라는 이름으로 파일을 저장했던 것을 "
-"기억하십시오."
-
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:121
-msgid ""
-"Now you can see the map in QGIS project as a georeferenced raster. Note that"
-" the raster seems to be slightly rotated, but that is simply because the "
-"data is :kbd:`KKJ / Finland zone 2` and your project is in :kbd:`ETRS89 / "
-"ETRS-TM35FIN`."
-msgstr ""
-"이제 QGIS 프로젝트에서 지리참조된 래스터인 맵을 볼 수 있습니다. 래스터가 약간 기운 것처럼 보이지만, 데이터의 좌표계는 "
-":kbd:`KKJ / Finland zone 2` 이고 프로젝트는 :kbd:`ETRS89 / ETRS-TM35FIN` 이기 때문입니다."
-
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:125
-msgid ""
-"To check that your data is properly georeferenced you can open the aerial "
-"image in the :kbd:`exercise_data\\\\forestry` folder, named "
-":kbd:`rautjarvi_aerial.tif`. Your map and this image should match quite "
-"well. Set the map transparency to 50% and compare it to the aerial image."
-msgstr ""
-"데이터가 제대로 지리참조되었는지 확인하려면 :kbd:`exercise_data\\\\forestry` 폴더에 있는 파일명 "
-":kbd:`rautjarvi_aerial.tif` 항공사진을 불러옵니다. 맵과 이 사진이 잘 맞아야 합니다. 맵의 투명도를 50%로 "
-"설정한 다음 항공사진과 비교해보십시오."
-
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:133
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:148
 msgid ""
 "Save the changes to your QGIS project, you will continue from this point for"
 " the next lesson."
 msgstr "변경 사항을 QGIS 프로젝트에 저장하십시오. 다음 강의에서도 이 프로젝트를 사용할 것입니다."
 
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:137
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:152
 msgid "|IC|"
 msgstr "|IC|"
 
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:139
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:154
 msgid ""
 "You have now georeferenced a paper map, making it possible to use it as a "
 "map layer in QGIS."
 msgstr "이제 종이지도에 지오리퍼런싱되어 QGIS의 지도레이어로 사용할 수 있습니다."
 
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:143
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:158
 msgid "|WN|"
 msgstr "|WN|"
 
-#: ../../docs/training_manual/forestry/map_georeferencing.rst:145
+#: ../../docs/training_manual/forestry/map_georeferencing.rst:160
 msgid ""
 "In the next lesson, you will digitize the forest stands in your map as "
 "polygons and add the inventory data to them."

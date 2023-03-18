@@ -1,31 +1,33 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
+# Harrissou Sant-anna, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:24+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"POT-Creation-Date: 2022-03-12 00:23+0100\n"
+"PO-Revision-Date: 2022-03-14 05:14+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2022\n"
 "Language-Team: Ukrainian (https://www.transifex.com/qgis/teams/6144/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
 "Language: uk\n"
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:29
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:18
 msgid "Network analysis library"
 msgstr "Бібліотека аналізу мереж"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:41
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:40
 msgid ""
 "The network analysis library was created by exporting basic functions from "
 "the RoadGraph core plugin and now you can use it's methods in plugins or "
@@ -35,32 +37,32 @@ msgstr ""
 "плаґіна RoadGraph і тепер ви можете використовувати його можливості у своїх "
 "модулях або з консолі Python."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:46
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:45
 msgid "General information"
 msgstr "Загальна інформація"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:48
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:47
 msgid "Briefly, a typical use case can be described as:"
 msgstr ""
 "Типовий алгоритм використання бібліотеки складається з наступних кроків:"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:50
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:49
 msgid "create graph from geodata (usually polyline vector layer)"
 msgstr "створити граф з просторових даних (зазвичай лінійних векторних шарів)"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:51
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:50
 msgid "run graph analysis"
 msgstr "проаналізувати граф"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:52
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:51
 msgid "use analysis results (for example, visualize them)"
 msgstr "використати результати аналізу (наприклад. візуалізувати їх)"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:55
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:54
 msgid "Building a graph"
 msgstr "Побудова графу"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:57
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:56
 msgid ""
 "The first thing you need to do --- is to prepare input data, that is to "
 "convert a vector layer into a graph. All further actions will use this "
@@ -70,7 +72,7 @@ msgstr ""
 "шар у граф. Всі подальші операції будуть виконуватися з цим графом, а не з "
 "шаром."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:61
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:60
 msgid ""
 "As a source we can use any polyline vector layer. Nodes of the polylines "
 "become graph vertexes, and segments of the polylines are graph edges. If "
@@ -82,7 +84,7 @@ msgstr ""
 "мають однакові координати, то вони будуть відповідати одній вершині графу. "
 "Тобто дві лінії, що мають спільний вузол, будуть зв'язані між собою."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:66
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:65
 msgid ""
 "Additionally, during graph creation it is possible to \"fix\" (\"tie\") to "
 "the input vector layer any number of additional points. For each additional "
@@ -94,7 +96,7 @@ msgstr ""
 "знайдено відповідність --- найближчий вузол чи ребро графу. В останньому "
 "випадку ребро буде розбито на дві частини, і з'явиться новий вузол."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:71
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:70
 msgid ""
 "Vector layer attributes and length of an edge can be used as the properties "
 "of an edge."
@@ -111,17 +113,6 @@ msgid "Then some examples for creating a director"
 msgstr ""
 "Та повідомити директору про неї. Один директор може використовувати декілька"
 " стратегій"
-
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:119
-msgid ""
-"To construct a director  we should pass a vector layer, that will be used as"
-" the source for the graph structure and information about allowed movement "
-"on each road segment (one-way or bidirectional movement, direct or reverse "
-"direction). The call looks like this"
-msgstr ""
-"У конструктор директора передається векторний шар, на основі якого буде "
-"створено граф, а також інформація про характер руху на кожному сегменті "
-"дороги (дозволені напрямки руху, односторонній чи двосторонній рух)."
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:133
 msgid "And here is full list of what these parameters mean:"

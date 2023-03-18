@@ -2,20 +2,19 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
-# Kwon.Yongchan <ruvyn@naver.com>, 2022
+# Harrissou Sant-anna, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 11:58+0000\n"
-"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2022\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:06+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2022\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -102,10 +101,6 @@ msgstr ""
 msgid "|basic| |FA| Implementing a Systematic Sampling Plot Design"
 msgstr "|basic| |FA| 체계적인 표본 조사구 설계 시행"
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:203
-msgid "basic"
-msgstr "basic"
-
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:42
 msgid ""
 "For the forest you are working with, the manager has decided that a "
@@ -127,83 +122,13 @@ msgid ""
 "will be used by the field teams later:"
 msgstr "실습 시 여러분은 표본 조사구를 단순히 포인트로 표현하면 되는데, 나중에 현장 조사팀이 이 포인트들을 사용할 것입니다. "
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:53
-msgid "Open your :kbd:`digitizing_2012.qgs` project from the previous lesson."
-msgstr "이전 강의에서 사용했던 :kbd:`digitizing_2012.qgs` 를 여십시오."
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:54
-msgid "Remove all the layers except for :kbd:`forest_stands_2012`."
-msgstr ":kbd:`forest_stands_2012` 를 제외한 모든 레이어를 제거합니다. "
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:55
-msgid "Save your project now as :kbd:`forest_inventory.qgs`"
-msgstr "이 프로젝트를 :kbd:`forest_inventory.qgs` 라는 이름으로 저장하십시오. "
-
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:57
 msgid ""
 "Now you need to create a rectangular grid of points separated 80 meters from"
 " each other:"
 msgstr "지금부터 포인트 사이의 간격이 80m인 정사각형 포인트 그리드를 만들어야 합니다."
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:59
-msgid "Open :menuselection:`Vector --> Research Tools --> Regular points`."
-msgstr ""
-"메뉴에서 :menuselection:`Vector --> Research Tools --> Regular points` 도구를 "
-"선택하십시오."
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:60
-msgid ""
-"In the :guilabel:`Area` definitions select :guilabel:`Input Boundary Layer`."
-msgstr ":guilabel:`Area` 정의에서 :guilabel:`Input Boundary Layer` 를 선택하십시오."
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:61
-msgid "And as input layer set the :kbd:`forest_stands_2012` layer."
-msgstr "입력 레이어로 :kbd:`forest_stands_2012` 를 설정합니다."
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:62
-msgid ""
-"In the :guilabel:`Grid Spacing` settings, select :guilabel:`Use this point "
-"spacing` and set it to :kbd:`80`."
-msgstr ""
-":guilabel:`Grid Spacing` 설정에서 :guilabel:`Use this point spacing` 을 선택한 다음 "
-":kbd:`80` 으로 설정합니다."
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:63
-msgid ""
-"Save the output as :kbd:`systematic_plots.shp` in the "
-":kbd:`forestry\\\\sampling\\\\` folder."
-msgstr ""
-":kbd:`forestry\\\\sampling\\\\` 폴더에 :kbd:`systematic_plots.shp` 라는 이름으로 산출물을"
-" 저장하십시오."
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:64
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:85
-msgid "Check :guilabel:`Add result to canvas`."
-msgstr ":guilabel:`Add result to canvas` 체크박스를 체크하십시오."
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:65
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:86
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:103
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:129
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:159
-msgid "Click :guilabel:`OK`."
-msgstr ":guilabel:`OK` 를 클릭하십시오."
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:67
-msgid ""
-"The suggested :guilabel:`Regular points` creates the systematic points "
-"starting in the corner upper-left corner of the extent of the selected "
-"polygon layer. If you want to add some randomness to this regular points, "
-"you could use a randomly calculated number between 0 and 80 (80 is the "
-"distance between our points), and then write it as the :guilabel:`Initial "
-"inset from corner (LH side)` parameter in the tool's dialog."
-msgstr ""
-"이때 사용한 :guilabel:`Regular points` 도구는 선택한 폴리곤 레이어 범위의 좌상단에서 시작되는 체계적인 포인트 군을"
-" 생성합니다. 이 '규칙적 포인트 군'에 임의성을 부여하고 싶다면, 0에서 80 사이(80은 우리가 사용한 포인트 사이의 거리입니다)에서"
-" 임의로 숫자를 계산하여 :guilabel:`Regular points` 도구 대화창의 :guilabel:`Initial inset "
-"from corner (LH side)` 파라미터로 입력하면 됩니다."
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:74
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:77
 msgid ""
 "You notice that the tool has used the whole extent of your stands layer to "
 "generate a rectangular grid of points. But you are only interested on those "
@@ -212,24 +137,7 @@ msgstr ""
 "이 도구가 수종경계 레이어의 전체 범위에 정사각형 포인트 그리드를 생성했다는 것을 알 수 있습니다. 하지만 실제로는 삼림 지역 내부에 "
 "있는 포인트만 사용해야 합니다. (다음 이미지들을 참조하십시오)"
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:81
-msgid "Open :menuselection:`Vector --> Geoprocessing Tools --> Clip`."
-msgstr ""
-"메뉴에서 :menuselection:`Vector --> Geoprocessing Tools --> Clip` 도구를 선택하십시오."
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:82
-msgid "Select :kbd:`systematic_plots` as :guilabel:`Input vector layer`."
-msgstr ":guilabel:`Input vector layer` 로 :kbd:`systematic_plots` 를 선택합니다."
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:83
-msgid "Set :kbd:`forest_stands_2012` as the :guilabel:`Clip layer`."
-msgstr ":guilabel:`Clip layer` 로는 :kbd:`forest_stands_2012` 를 설정합니다."
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:84
-msgid "Save the result as :kbd:`systematic_plots_clip.shp`."
-msgstr "산출물을 :kbd:`systematic_plots_clip.shp` 파일로 저장하십시오."
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:88
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:93
 msgid ""
 "You have now the points that the field teams will use to navigate to the "
 "designed sample plots locations. You can still prepare these points so that "
@@ -241,41 +149,13 @@ msgstr ""
 "이 포인트들을 손볼 수 있습니다. 최소한, 포인트에 의미있는 이름을 부여해서 현장 조사팀의 GPS 기기에서 사용할 수 있는 형식으로 "
 "내보낼 수 있을 것입니다."
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:93
-msgid ""
-"Lets start with the naming of the sample plots. If you check the "
-":guilabel:`Attribute table` for the plots inside the forest area, you can "
-"see that you have the default :guilabel:`id` field automatically generated "
-"by the :guilabel:`Regular points` tool. Label the points to see them in the "
-"map and consider if you could use those numbers as part of your sample plot "
-"naming:"
-msgstr ""
-"표본 조사구에 명칭을 부여해봅시다. 산림 지역 내부에 있는 조사구의 :guilabel:`Attribute table` 을 확인해보면, "
-":guilabel:`Regular points` 도구가 자동적으로 생성한 기본 :guilabel:`id` 항목을 볼 수 있을 것입니다. "
-"맵에서 볼 수 있도록 포인트에 라벨을 생성하고, 라벨 숫자들을 표본 조사구를 명명하는 데 쓸 수 있는지 알아보겠습니다. "
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:110
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:135
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:172
+msgid "Click :guilabel:`OK`."
+msgstr ":guilabel:`OK` 를 클릭하십시오."
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:99
-msgid ""
-"Open the :guilabel:`Layer Properties --> Labels` for your "
-":kbd:`systematic_plots_clip`."
-msgstr ""
-":kbd:`systematic_plots_clip` 을 오른쪽 마우스 클릭해서 :guilabel:`Layer Properties --> "
-"Labels` 를 선택하십시오."
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:100
-msgid ""
-"Check :guilabel:`Label this layer with` and select the field :kbd:`ID`."
-msgstr ":guilabel:`Label this layer with` 체크박스를 체크한 다음, :kbd:`ID` 항목을 선택합니다."
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:101
-msgid ""
-"Go to the :guilabel:`Buffer` options and check the :guilabel:`Draw text "
-"buffer`, set the :guilabel:`Size` to :kbd:`1`."
-msgstr ""
-":guilabel:`Buffer` 옵션에서 :guilabel:`Draw text buffer` 체크박스를 체크한 다음, "
-":guilabel:`Size` 를 :kbd:`1` 로 설정하십시오."
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:105
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:112
 msgid ""
 "Now look at the labels on your map. You can see that the points have been "
 "created and numbered first West to East and then North to South. If you look"
@@ -288,153 +168,31 @@ msgstr ""
 "있습니다. 다시 속성 테이블을 살펴보면, 테이블 안의 포인트 순서도 이 패턴을 따른다는 사실을 알 수 있을 것입니다. 표본 조사구에 다른"
 " 방식으로 명칭을 부여할 이유가 없다면, 논리적 순서를 따라 서-동/북-남 방향으로 명명하는 것은 훌륭한 옵션이 되겠습니다."
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:112
-msgid ""
-"If you would like to order or name them in a different way, you could use a "
-"spreadsheet to be able to order and combine rows and columns in any "
-"different way."
-msgstr ""
-"만약 다른 방식으로 순서를 정렬하거나 명명하고 싶다면, 스프레드시트를 사용하여 어떤 다른 방식으로든 행과 열을 정렬하고 병합할 수 "
-"있습니다."
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:116
-msgid ""
-"Nevertheless, the number values in the :kbd:`id` field are not so good. It "
-"would be better if the naming would be something like :kbd:`p_1, p_2...`. "
-"You can create a new column for the :kbd:`systematic_plots_clip` layer:"
-msgstr ""
-"그럼에도 불구하고 :kbd:`id` 항목의 숫자값이 썩 좋아 보이지는 않네요. :kbd:`p_1, p_2...` 와 같은 형식으로 "
-"명명하는 것이 나을 것 같습니다. :kbd:`systematic_plots_clip` 레이어에 새로운 열을 만들어볼까요? "
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:120
-msgid ""
-"Go to the :guilabel:`Attribute table` for :kbd:`systematic_plots_clip`."
-msgstr ":kbd:`systematic_plots_clip` 레이어의 :guilabel:`Attribute table` 을 여십시오."
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:121
-msgid "Enable the edit mode."
-msgstr "편집 모드를 활성화합니다."
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:122
-msgid ""
-"Open the :guilabel:`Field calculator` and name the new column "
-":kbd:`Plot_id`."
-msgstr ""
-":guilabel:`Field calculator` 를 실행한 다음 새로운 열을 :kbd:`Plot_id` 라고 명명하십시오."
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:123
-msgid "Set the :guilabel:`Output field type`to :kbd:`Text (string)`."
-msgstr ":guilabel:`Output field type` 을 :kbd:`Text (string)` 으로 설정하십시오."
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:124
-msgid ""
-"In the :guilabel:`Expression` field, write, copy or construct this formula "
-":kbd:`concat('P_', $rownum )`. Remember that you can also double click on "
-"the elements inside the :guilabel:`Function list`. The :kbd:`concat` "
-"function can be found under :guilabel:`String` and the :kbd:`$rownum` "
-"parameter can be found under :guilabel:`Record`."
-msgstr ""
-":guilabel:`Expression` 항목에 다음 :kbd:`concat('P_', $rownum )` 식을 입력하거나 복사하거나 "
-"생성하십시오. :guilabel:`Function list` 에 있는 요소들을 더블클릭할 수도 있습니다. :kbd:`concat` 함수는"
-" :guilabel:`String` 아래에서, :kbd:`$rownum` 파라미터는 :guilabel:`Record` 아래에서 찾을 수 "
-"있습니다."
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:130
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:136
 msgid "Disable the edit mode and save your changes."
 msgstr "편집 모드를 해제하고 변경 사항을 저장하십시오."
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:132
-msgid ""
-"Now you have a new column with plot names that are meaningful to you. For "
-"the :kbd:`systematic_plots_clip` layer, change the field used for labeling "
-"to your new :kbd:`Plot_id` field."
-msgstr ""
-"이제 의미있는 조사구 명칭을 가진 새로운 열이 생겼습니다. :kbd:`systematic_plots_clip` 레이어의 레이블에 사용하는"
-" 항목을 새로운 :kbd:`Plot_id` 로 변경합니다."
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:140
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:146
 msgid "|basic| |FA| Exporting Sample Plots as GPX format"
 msgstr "|basic| |FA| 표본 조사구를 GPX 형식으로 내보내기"
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:142
-msgid ""
-"The field teams will be probably using a GPS device to locate the sample "
-"plots you planned. The next step is to export the points you created to a "
-"format that your GPS can read. QGIS allows you to save your point and line "
-"vector data in `GPS eXchange Format "
-"(GPX)<https://en.wikipedia.org/wiki/GPS_Exchange_Format>`, which is an "
-"standard GPS data format that can be read by most of the specialized "
-"software. You need to be careful with selecting the CRS when you save your "
-"data:"
-msgstr ""
-"현장 조사팀은 아마도 GPS 기기를 이용해서 여러분이 지정한 표본 조사구의 위치를 찾을 것입니다. 다음 단계는 여러분이 생성한 포인트를 "
-"GPS 기기가 읽을 수 있는 형식으로 내보내는 것입니다. QGIS는 포인트 및 라인 벡터 데이터를 `GPS eXchange Format "
-"(GPX) <https://ko.wikipedia.org/wiki/GPX>`_ 라는 형식으로 저장할 수 있는데, 이 형식은 표준 GPS "
-"데이터 형식으로 대부분의 전문 소프트웨어가 읽어낼 수 있습니다. 다만 데이터를 저장할 때 CRS 설정에 주의해야 합니다. "
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:150
-msgid ""
-"Right click :kbd:`systematic_plots_clip` and select :guilabel:`Save as`."
-msgstr ""
-":kbd:`systematic_plots_clip` 레이어를 오른쪽 클릭해서 :guilabel:`Save as` 를 선택하십시오."
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:151
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:162
 msgid "In :guilabel:`Format` select :guilabel:`GPS eXchange Format [GPX]`."
 msgstr ":guilabel:`Format` 에서 :guilabel:`GPS eXchange Format [GPX]` 를 선택합니다."
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:152
-msgid "Save the output as :kbd:`plots_wgs84.gpx`."
-msgstr "산출물을 :kbd:`plots_wgs84.gpx` 라는 이름으로 저장하십시오."
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:153
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:165
 msgid "In :guilabel:`CRS` select :guilabel:`Selected CRS`."
 msgstr ":guilabel:`CRS` 에서 :guilabel:`Selected CRS` 를 선택합니다."
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:154
-msgid "Browse for :kbd:`WGS 84 (EPSG:4326)`."
-msgstr ":kbd:`WGS 84 (EPSG:4326)` 항목을 찾으십시오."
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:156
-msgid ""
-"The :kbd:`GPX` format accepts only this CRS, if you select a different one, "
-"QGIS will give no error but you will get an empty file."
-msgstr ""
-":kbd:`GPX` 형식은 이 CRS만 사용할 수 있습니다. 만약 다른 CRS를 선택하면 QGIS가 오류를 경고하지는 않지만 빈 파일을 "
-"얻게 될 것입니다. "
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:160
-msgid ""
-"In the dialog that opens, select only the :kbd:`waypoints` layer (the rest "
-"of the layers are empty)."
-msgstr "대화창이 열리면 :kbd:`waypoints` 레이어만 선택하십시오. (다른 레이어들은 비어 있습니다.)"
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:166
-msgid ""
-"The inventory sample plots are now in a standard format that can be managed "
-"by most of the GPS software. The field teams can now upload the locations of"
-" the sample plots to their devices. That would be done by using the specific"
-" devices own software and the :kbd:`plots_wgs84.gpx` file you just saved. "
-"Other option would be to use the :guilabel:`GPS Tools` plugin but it would "
-"most likely involve setting the tool to work with your specific GPS device. "
-"If you are working with your own data and want to see how the tool works you"
-" can find out information about it in the section :ref:`working_gps` in the "
-"**QGIS User Manual**."
-msgstr ""
-"이제 표본 조사구 목록이 대부분의 GPS 소프트웨어가 관리할 수 있는 표준 형식으로 저장되었습니다. 이제 현장 조사팀이 현장 조사구의 "
-"위치를 GPS 기기에 업로드할 수 있게 되었습니다. 여러분이 방금 저장한 :kbd:`plots_wgs84.gpx` 파일과 특정 기기의 "
-"소프트웨어를 통해서 말이죠. :guilabel:`GPS Tools` 플러그인을 사용할 수도 있지만, 특정 GPS 기기에 맞춰 도구를 따로"
-" 설정해줘야 할 것입니다. 여러분 자신의 데이터를 사용해서 이 도구가 어떻게 동작하는지 알고 싶다면, **QGIS 사용자 매뉴얼** 의 "
-":ref:`working_gps` 에서 관련 정보를 찾을 수 있습니다."
-
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:175
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:185
 msgid "Save your QGIS project now."
 msgstr "이제 QGiS 프로젝트를 저장하십시오."
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:178
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:188
 msgid "|IC|"
 msgstr "|IC|"
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:180
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:190
 msgid ""
 "You just saw how easily you can create a systematic sampling design to be "
 "used in a forest inventory. Creating other types of sampling designs will "
@@ -446,11 +204,11 @@ msgstr ""
 " 다른 도구들을 사용하거나, 스프레드시트를 이용하거나, 표본 조사구의 좌표를 계산하기 위한 스크립트를 사용해야 하지만, 기본적인 발상은 "
 "똑같습니다."
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:186
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:196
 msgid "|WN|"
 msgstr "|WN|"
 
-#: ../../docs/training_manual/forestry/systematic_sampling.rst:188
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:198
 msgid ""
 "In the next lesson you will see how to use the Atlas capabilities in QGIS to"
 " automatically generate detailed maps that the field teams will be using to "

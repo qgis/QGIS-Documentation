@@ -2,19 +2,19 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 10:18+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:13+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2022\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -236,15 +236,11 @@ msgid ""
 "an ID column with the same data-type as above."
 msgstr "電話番号、自宅住所、名前などのフィールドを追加します。上記と同じデータ型のID列も作ったか確認して下さい。"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:256
-msgid ":ref:`Check your results <database-concepts-4>`"
-msgstr ":ref:`結果をチェックする <database-concepts-4>`"
-
-#: ../../docs/training_manual/database_concepts/data_model.rst:261
+#: ../../docs/training_manual/database_concepts/data_model.rst:285
 msgid "Create Keys in SQL"
 msgstr "SQLでキーを作成する"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:263
+#: ../../docs/training_manual/database_concepts/data_model.rst:287
 msgid ""
 "The problem with our solution above is that the database doesn't know that "
 "people and streets have a logical relationship. To express this "
@@ -254,23 +250,23 @@ msgstr ""
 "上記のソリューションの問題はデータベースが people と streets "
 "に論理的な関係があることを知らないことです。この関係を表現するには、streets テーブルの主キーを指す外部キーを定義する必要があります。"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:271
+#: ../../docs/training_manual/database_concepts/data_model.rst:295
 msgid "There are two ways to do this:"
 msgstr "これを行うには2つの方法があります:"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:273
+#: ../../docs/training_manual/database_concepts/data_model.rst:297
 msgid "Add the key after the table has been created"
 msgstr "テーブル作成後にキーを追加する"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:274
+#: ../../docs/training_manual/database_concepts/data_model.rst:298
 msgid "Define the key at time of table creation"
 msgstr "テーブル作成時にキーを定義する"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:276
+#: ../../docs/training_manual/database_concepts/data_model.rst:300
 msgid "Our table has already been created, so let's do it the first way:"
 msgstr "テーブルは既に作成されているので最初の方法を採ります:"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:284
+#: ../../docs/training_manual/database_concepts/data_model.rst:308
 msgid ""
 "That tells the :kbd:`people` table that its :kbd:`street_id` fields must "
 "match a valid street :kbd:`id` from the :kbd:`streets` table."
@@ -278,63 +274,56 @@ msgstr ""
 ":kbd:`people` テーブルの :kbd:`street_id` フィールドは :kbd:`streets` テーブルの有効な街路 "
 ":kbd:`id` と一致しなければならないことを指示します。"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:287
+#: ../../docs/training_manual/database_concepts/data_model.rst:311
 msgid ""
 "The more usual way to create a constraint is to do it when you create the "
 "table:"
 msgstr "より一般的には制約の作成はテーブルの作成時に行います:"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:299
+#: ../../docs/training_manual/database_concepts/data_model.rst:323
 msgid "After adding the constraint, our table schema looks like this now:"
 msgstr "制約を追加した後、テーブルのスキーマはこのようになります:"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:319
+#: ../../docs/training_manual/database_concepts/data_model.rst:343
 msgid "Create Indexes in SQL"
 msgstr "SQLでインデックスを作成する"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:321
+#: ../../docs/training_manual/database_concepts/data_model.rst:345
 msgid ""
 "We want lightning fast searches on peoples names. To provide for this, we "
 "can create an index on the name column of our people table:"
 msgstr "人の名前をすばやく検索できるようにするにはpeople（人々）テーブルのname（名前）列にインデックスを作成します:"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:330
+#: ../../docs/training_manual/database_concepts/data_model.rst:354
 msgid "Which results in:"
 msgstr "その結果:"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:351
+#: ../../docs/training_manual/database_concepts/data_model.rst:375
 msgid "Dropping Tables in SQL"
 msgstr "SQLでテーブルを削除する"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:353
+#: ../../docs/training_manual/database_concepts/data_model.rst:377
 msgid "If you want to get rid of a table you can use the :kbd:`drop` command:"
 msgstr "テーブルを取り除きたい場合は :kbd:`drop` コマンドを使用します:"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:360
-msgid ""
-"In our current example, the above command would not work. Why not? :ref:`See"
-" why <database-concepts-5>`"
-msgstr ""
-"現在の例では上記のコマンドは動作しないでしょう。なぜでしょうか。 :ref:`こちら <database-concepts-5>` を参照して下さい。"
-
-#: ../../docs/training_manual/database_concepts/data_model.rst:365
+#: ../../docs/training_manual/database_concepts/data_model.rst:398
 msgid ""
 "If you used the same :kbd:`drop table` command on the `people` table, it "
 "would be successful:"
 msgstr "`people` テーブルに同じ :kbd:`drop table` コマンドを使う場合は正しく削除されるでしょう:"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:373
+#: ../../docs/training_manual/database_concepts/data_model.rst:406
 msgid ""
 "If you actually did enter that command and dropped the :kbd:`people` table, "
 "now would be a good time to rebuild it, as you will need it in the next "
 "exercises."
 msgstr "実際にそのコマンドを入力して :kbd:`people` テーブルを削除した場合は、再度作成して下さい。次の演習で必要になります。"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:378
+#: ../../docs/training_manual/database_concepts/data_model.rst:411
 msgid "A word on pgAdmin III"
 msgstr "pgAdmin III について一言"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:380
+#: ../../docs/training_manual/database_concepts/data_model.rst:413
 msgid ""
 "We are showing you the SQL commands from the `psql` prompt because it's a "
 "very useful way to learn about databases. However, there are quicker and "
@@ -346,28 +335,28 @@ msgstr ""
 "プロンプトからSQLコマンドを入力しています。しかし、より早くより簡単に行う方法があります。pgAdminIII "
 "をインストールするとGUI上のクリック操作でテーブルの create, drop, alter 等を行うことができます。"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:385
+#: ../../docs/training_manual/database_concepts/data_model.rst:418
 msgid "Under Ubuntu, you can install it like this:"
 msgstr "Ubuntuではこのようにインストールします:"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:391
+#: ../../docs/training_manual/database_concepts/data_model.rst:424
 msgid "pgAdmin III will be covered in more detail in another module."
 msgstr "pgAdmin III は別のモジュールで詳しく取り上げます。"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:394
+#: ../../docs/training_manual/database_concepts/data_model.rst:427
 msgid "|IC|"
 msgstr "|IC|"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:396
+#: ../../docs/training_manual/database_concepts/data_model.rst:429
 msgid ""
 "You have now seen how to create a brand new database, starting completely "
 "from scratch."
 msgstr "真新しいデータベースを完全にゼロから作成する方法を見てきました。"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:400
+#: ../../docs/training_manual/database_concepts/data_model.rst:433
 msgid "|WN|"
 msgstr "|WN|"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:402
+#: ../../docs/training_manual/database_concepts/data_model.rst:435
 msgid "Next you'll learn how to use the DBMS to add new data."
 msgstr "次はDBMSを使用して新しいデータを追加する方法を学びます。"

@@ -2,19 +2,20 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2022
+# Sorin Călinică <scalinica@gmail.com>, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 10:18+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:13+0000\n"
+"Last-Translator: Sorin Călinică <scalinica@gmail.com>, 2022\n"
 "Language-Team: Romanian (https://www.transifex.com/qgis/teams/6144/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -187,6 +188,10 @@ msgstr "După cum puteți vedea, tabela noastră este vidă, în mod curent."
 msgid "|TY| |moderate|"
 msgstr "|TY| |moderate|"
 
+#: ../../docs/training_manual/database_concepts/data_model.rst:448
+msgid "moderate"
+msgstr "moderate"
+
 #: ../../docs/training_manual/database_concepts/data_model.rst:250
 msgid "Use the approach shown above to make a table called people:"
 msgstr "Folosiți abordarea de mai sus pentru a crea un tabel denumit people:"
@@ -201,15 +206,11 @@ msgstr ""
 " sunt toate nume valide: schimbați-le pentru a deveni valide). Asigurați-vă "
 "că îi adăugați tabelului o coloană ID cu același tip de date ca și mai sus."
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:256
-msgid ":ref:`Check your results <database-concepts-4>`"
-msgstr ":ref:`Check your results <database-concepts-4>`"
-
-#: ../../docs/training_manual/database_concepts/data_model.rst:261
+#: ../../docs/training_manual/database_concepts/data_model.rst:285
 msgid "Create Keys in SQL"
 msgstr "Crearea Cheilor în SQL"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:263
+#: ../../docs/training_manual/database_concepts/data_model.rst:287
 msgid ""
 "The problem with our solution above is that the database doesn't know that "
 "people and streets have a logical relationship. To express this "
@@ -221,19 +222,19 @@ msgstr ""
 " trebui să definim o cheie externă care face legătura cu cheia primară a "
 "tabelului de străzi."
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:271
+#: ../../docs/training_manual/database_concepts/data_model.rst:295
 msgid "There are two ways to do this:"
 msgstr "Sunt două moduri de a face asta:"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:273
+#: ../../docs/training_manual/database_concepts/data_model.rst:297
 msgid "Add the key after the table has been created"
 msgstr "Adăugați cheia după crearea tabelului"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:274
+#: ../../docs/training_manual/database_concepts/data_model.rst:298
 msgid "Define the key at time of table creation"
 msgstr "Definiți cheia la momentul creării tabelului"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:284
+#: ../../docs/training_manual/database_concepts/data_model.rst:308
 msgid ""
 "That tells the :kbd:`people` table that its :kbd:`street_id` fields must "
 "match a valid street :kbd:`id` from the :kbd:`streets` table."
@@ -241,23 +242,15 @@ msgstr ""
 "Asta spune tabelului :kbd:`people` că valoarea câmpurilor :kbd:`street_id` "
 "trebuie să fie o valoare validă :kbd:`id` din tabelul :kbd:`streets`."
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:319
+#: ../../docs/training_manual/database_concepts/data_model.rst:343
 msgid "Create Indexes in SQL"
 msgstr "Crearea de indecși în SQL"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:351
+#: ../../docs/training_manual/database_concepts/data_model.rst:375
 msgid "Dropping Tables in SQL"
 msgstr "Ștergerea Tabelelor în SQL"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:360
-msgid ""
-"In our current example, the above command would not work. Why not? :ref:`See"
-" why <database-concepts-5>`"
-msgstr ""
-"În exemplul curent, comanda de mai sus nu va funcționa. De ce? :ref:`See why"
-" <database-concepts-5>`"
-
-#: ../../docs/training_manual/database_concepts/data_model.rst:373
+#: ../../docs/training_manual/database_concepts/data_model.rst:406
 msgid ""
 "If you actually did enter that command and dropped the :kbd:`people` table, "
 "now would be a good time to rebuild it, as you will need it in the next "
@@ -266,11 +259,11 @@ msgstr ""
 "Dacă ați introdus acea comandă și ați șters tabelul :kbd:`people`, ar fi un "
 "moment bun să îl refaceți, deoarece îl veți folosi în exercițiile următoare."
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:378
+#: ../../docs/training_manual/database_concepts/data_model.rst:411
 msgid "A word on pgAdmin III"
 msgstr "Câteva cuvinte despre pgAdmin III"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:380
+#: ../../docs/training_manual/database_concepts/data_model.rst:413
 msgid ""
 "We are showing you the SQL commands from the `psql` prompt because it's a "
 "very useful way to learn about databases. However, there are quicker and "
@@ -284,26 +277,26 @@ msgstr ""
 "veți putea crea, șterge, modifica etc. tabele utilizănd operații 'point and "
 "click' într-un GUI."
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:391
+#: ../../docs/training_manual/database_concepts/data_model.rst:424
 msgid "pgAdmin III will be covered in more detail in another module."
 msgstr "pgAdmin III va fi acoperit mai detaliat în alt modul."
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:394
+#: ../../docs/training_manual/database_concepts/data_model.rst:427
 msgid "|IC|"
 msgstr "|IC|"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:396
+#: ../../docs/training_manual/database_concepts/data_model.rst:429
 msgid ""
 "You have now seen how to create a brand new database, starting completely "
 "from scratch."
 msgstr ""
 "Ați văzut cum să creați o bază de date complet nouă, pornind de la zero."
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:400
+#: ../../docs/training_manual/database_concepts/data_model.rst:433
 msgid "|WN|"
 msgstr "|WN|"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:402
+#: ../../docs/training_manual/database_concepts/data_model.rst:435
 msgid "Next you'll learn how to use the DBMS to add new data."
 msgstr ""
 "În continuare veți învăța cum să folosiți DBMS-ul pentru adăguarea datelor."

@@ -1,31 +1,33 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Aline Furlanetto Viero <afviero@gmail.com>, 2020
+# Harrissou Sant-anna, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:24+0000\n"
-"Last-Translator: Aline Furlanetto Viero <afviero@gmail.com>, 2020\n"
+"POT-Creation-Date: 2022-03-12 00:23+0100\n"
+"PO-Revision-Date: 2022-03-14 05:15+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
 "Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/pluginlayer.rst:25
+#: ../../docs/pyqgis_developer_cookbook/pluginlayer.rst:14
 msgid "Using Plugin Layers"
 msgstr "Usando Camadas de Complementos"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/pluginlayer.rst:27
+#: ../../docs/pyqgis_developer_cookbook/pluginlayer.rst:35
 msgid ""
 "If your plugin uses its own methods to render a map layer, writing your own "
 "layer type based on :class:`QgsPluginLayer <qgis.core.QgsPluginLayer>` might"
@@ -36,11 +38,11 @@ msgstr ""
 ":class:`QgsPluginLayer <qgis.core.QgsPluginLayer>` pode ser a melhor maneira"
 " de implementar isso."
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/pluginlayer.rst:33
+#: ../../docs/pyqgis_developer_cookbook/pluginlayer.rst:41
 msgid "Subclassing QgsPluginLayer"
 msgstr "Subclassificação QgsPluginLayer"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/pluginlayer.rst:35
+#: ../../docs/pyqgis_developer_cookbook/pluginlayer.rst:43
 msgid ""
 "Below is an example of a minimal QgsPluginLayer implementation. It is based "
 "on the original code  of the `Watermark example plugin "
@@ -50,7 +52,7 @@ msgstr ""
 " no código original do `complemento de exemplo de Marca de Água "
 "<https://github.com/sourcepole/qgis-watermark-plugin>`_."
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/pluginlayer.rst:38
+#: ../../docs/pyqgis_developer_cookbook/pluginlayer.rst:46
 msgid ""
 "The custom renderer is the part of the implement that defines the actual "
 "drawing on the canvas."
@@ -58,7 +60,7 @@ msgstr ""
 "O renderizador personalizado é a parte do implemento que define o desenho "
 "real na tela."
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/pluginlayer.rst:79
+#: ../../docs/pyqgis_developer_cookbook/pluginlayer.rst:87
 msgid ""
 "The plugin layer can be added to the project and to the canvas as any other "
 "map layer:"
@@ -66,7 +68,7 @@ msgstr ""
 "A camada de complemento pode ser adicionada ao projeto e à tela como "
 "qualquer outra camada de mapa:"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/pluginlayer.rst:87
+#: ../../docs/pyqgis_developer_cookbook/pluginlayer.rst:95
 msgid ""
 "When loading a project containing such a layer, a factory class is needed:"
 msgstr ""
