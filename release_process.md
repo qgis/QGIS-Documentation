@@ -114,9 +114,8 @@ In February, the new version is labeled as LTR, and replaces the previous one in
   A threshold of 5% is currently applied to candidates.
 - [ ] In [docker-world.sh](docker-world.sh) file: complete the `langs` variable with the supported languages
 - [ ] In the [makefile](makefile): add the supported languages to the `LANGUAGES` parameter 
-- [ ] Copy the [locale](locale) folder from the previous LTR to the new one
+- [ ] Copy the [locale](locale) folder from the old LTR branch to the new LTR branch
 - [ ] Generate new English source files (see instructions in [README](README.md) file)
-- [ ] Pull/Copy-paste translated files from the old LTR branch to the new LTR branch
 </details>
 
 ### Transifex platform
@@ -138,10 +137,12 @@ is being translated. So when a new LTR is published, we disconnect the old one a
 - [ ] In [fix_versions.sh](scripts/fix_versions.sh) file:
   - [ ] add the old LTR number to the `DEPRECATED` parameter
   - [ ] add the new LTR number to the `DOCVERSIONS` parameter
-- [ ] In [pofiles.yml](.github/workflows/pofiles.yml): update references to the new LTR branch in order
+- [ ] In [pofiles.yml](.github/workflows/pofiles.yml): update branch to the new LTR branch in order
   to generate updated English \*.po source files to push to Transifex
-- [ ] In [translation_statistics.yml](.github/workflows/translation_statistics.yml): update references to
-  the branch to generate translation statistics for the new LTR
+- [ ] In [pull_minimize_translations.yml](.github/workflows/pull_minimize_translations.yml): update target_branch
+  to the new LTR branch in which to pull translations from Transifex
+- [ ] In [translation_statistics.yml](.github/workflows/translation_statistics.yml): update target_branch
+  to the branch(es) in which to generate translation statistics
 </details>
 
 ### Server
@@ -162,5 +163,3 @@ Automating the process as much as possible would lower the risk and make it less
 
   * languages list: they are defined in docs_conf.yml, makefile, docker-world.sh
   * version number: it is defined in conf.py, makefile, docker-world.sh, cronjob.sh, doctest.dockerfile
-* The pull of translations from Transifex could be improved via a github action that regularly
-  downloads unfinished files (making published docs as close as possible to translators work)

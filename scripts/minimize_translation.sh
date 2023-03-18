@@ -20,7 +20,7 @@ SOURCEPOFILES='locale'
 
 # Pull translations of all languages from Transifex,
 # fetching only the strings that are really translated and not the whole file
-tx pull --mode onlytranslated $LANG
+./tx pull --force --mode onlytranslated $LANG
 
 # The onlytranslated mode actually pulls all the existing files
 # (with only the file header when no string has been translated yet)
