@@ -2,25 +2,24 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2022
+# Harrissou Sant-anna, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-12 00:23+0100\n"
-"PO-Revision-Date: 2022-03-14 05:12+0000\n"
-"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2022\n"
+"POT-Creation-Date: 2023-03-19 12:09+0100\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2023\n"
 "Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.11.0\n"
 "Language: it\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -404,7 +403,7 @@ msgstr ""
 "utilizzare ``authcfg`` nell'URL dell'origine dati, come nel seguente "
 "frammento di codice:"
 
-#: ../../docs/pyqgis_developer_cookbook/authentication.rst:332
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:333
 msgid ""
 "In the upper case, the ``wms`` provider will take care to expand ``authcfg``"
 " URI parameter with credential just before setting the HTTP connection."
@@ -413,7 +412,7 @@ msgstr ""
 "parametro URI ``authcfg`` con le credenziali appena prima di impostare la "
 "connessione HTTP."
 
-#: ../../docs/pyqgis_developer_cookbook/authentication.rst:337
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:338
 msgid ""
 "The developer would have to leave ``authcfg`` expansion to the "
 ":class:`QgsAuthManager <qgis.core.QgsAuthManager>`, in this way he will be "
@@ -423,7 +422,7 @@ msgstr ""
 ":class:`QgsAuthManager <qgis.core.QgsAuthManager>`, in questo modo sarà "
 "sicuro che l'espansione non venga fatta troppo presto."
 
-#: ../../docs/pyqgis_developer_cookbook/authentication.rst:340
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:341
 msgid ""
 "Usually an URI string, built using the :class:`QgsDataSourceURI "
 "<qgis.core.QgsDataSourceUri>` class, is used to set a data source in the "
@@ -433,7 +432,7 @@ msgstr ""
 ":class:`QgsDataSourceURI <qgis.core.QgsDataSourceUri>`, viene usata per "
 "impostare un'origine dati nel modo seguente:"
 
-#: ../../docs/pyqgis_developer_cookbook/authentication.rst:357
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:359
 msgid ""
 "The ``False`` parameter is important to avoid URI complete expansion of the "
 "``authcfg`` id present in the URI."
@@ -441,11 +440,11 @@ msgstr ""
 "Il parametro ``False`` è importante per evitare l'espansione completa "
 "dell'URI dell'id ``authcfg`` presente nell'URI."
 
-#: ../../docs/pyqgis_developer_cookbook/authentication.rst:363
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:365
 msgid "PKI examples with other data providers"
 msgstr "Esempi di PKI con altri fornitori di dati"
 
-#: ../../docs/pyqgis_developer_cookbook/authentication.rst:365
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:367
 msgid ""
 "Other example can be read directly in the QGIS tests upstream as in "
 ":source:`test_authmanager_pki_ows "
@@ -459,11 +458,11 @@ msgstr ""
 ":source:`test_authmanager_pki_postgres "
 "<tests/src/python/test_authmanager_pki_postgres.py>`."
 
-#: ../../docs/pyqgis_developer_cookbook/authentication.rst:373
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:375
 msgid "Adapt plugins to use Authentication infrastructure"
 msgstr "Adattare i plugin per utilizzare l'infrastruttura di autenticazione"
 
-#: ../../docs/pyqgis_developer_cookbook/authentication.rst:375
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:377
 msgid ""
 "Many third party plugins are using httplib2 or other Python networking "
 "libraries to manage HTTP connections instead of integrating with "
@@ -475,7 +474,7 @@ msgstr ""
 ":class:`QgsNetworkAccessManager <qgis.core.QgsNetworkAccessManager>` e la "
 "relativa integrazione dell'infrastruttura di autenticazione."
 
-#: ../../docs/pyqgis_developer_cookbook/authentication.rst:379
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:381
 msgid ""
 "To facilitate this integration a helper Python function has been created "
 "called ``NetworkAccessManager``. Its code can be found `here "
@@ -485,17 +484,17 @@ msgstr ""
 "Python chiamata ``NetworkAccessManager``. Il suo codice si trova `here "
 "<https://github.com/rduivenvoorde/pdokservicesplugin/blob/master/networkaccessmanager.py>`_."
 
-#: ../../docs/pyqgis_developer_cookbook/authentication.rst:383
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:385
 msgid "This helper class can be used as in the following snippet:"
 msgstr ""
 "Questa helper classe può essere utilizzata come nel seguente frammento di "
 "codice:"
 
-#: ../../docs/pyqgis_developer_cookbook/authentication.rst:397
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:399
 msgid "Authentication GUIs"
 msgstr "GUI di autenticazione"
 
-#: ../../docs/pyqgis_developer_cookbook/authentication.rst:399
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:401
 msgid ""
 "In this paragraph are listed the available GUIs useful to integrate "
 "authentication infrastructure in custom interfaces."
@@ -503,11 +502,11 @@ msgstr ""
 "In questo paragrafo sono elencate le GUI disponibili utili per integrare "
 "l'infrastruttura di autenticazione in interfacce personalizzate."
 
-#: ../../docs/pyqgis_developer_cookbook/authentication.rst:405
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:407
 msgid "GUI to select credentials"
 msgstr "GUI per selezionare le credenziali"
 
-#: ../../docs/pyqgis_developer_cookbook/authentication.rst:407
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:409
 msgid ""
 "If it's necessary to select a :term:`Authentication Configuration` from the "
 "set stored in the :term:`Authentication DB` it is available in the GUI class"
@@ -517,13 +516,13 @@ msgstr ""
 "dall'insieme memorizzato nel :term:`Authentication DB`, è disponibile nella "
 "classe GUI :class:`QgsAuthConfigSelect <qgis.gui.QgsAuthConfigSelect>`."
 
-#: ../../docs/pyqgis_developer_cookbook/authentication.rst:414
-#: ../../docs/pyqgis_developer_cookbook/authentication.rst:445
-#: ../../docs/pyqgis_developer_cookbook/authentication.rst:469
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:416
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:447
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:471
 msgid "and can be used as in the following snippet:"
 msgstr "e può essere utilizzato come nel seguente frammento di codice:"
 
-#: ../../docs/pyqgis_developer_cookbook/authentication.rst:427
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:429
 msgid ""
 "The above example is taken from the QGIS source :source:`code "
 "<src/providers/postgres/qgspgnewconnection.cpp#L42>`. The second parameter "
@@ -537,11 +536,11 @@ msgstr ""
 "viene utilizzato per limitare i :term:`Authentication Method` compatibili "
 "con il provider specificato."
 
-#: ../../docs/pyqgis_developer_cookbook/authentication.rst:436
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:438
 msgid "Authentication Editor GUI"
 msgstr "Editor autenticazione GUI"
 
-#: ../../docs/pyqgis_developer_cookbook/authentication.rst:438
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:440
 msgid ""
 "The complete GUI used to manage credentials, authorities and to access to "
 "Authentication utilities is managed by the :class:`QgsAuthEditorWidgets "
@@ -551,7 +550,7 @@ msgstr ""
 "autorità e per accedere alle utilità di autenticazione è gestita dalla "
 "classe :class:`QgsAuthEditorWidgets <qgis.gui.QgsAuthEditorWidgets>`."
 
-#: ../../docs/pyqgis_developer_cookbook/authentication.rst:455
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:457
 msgid ""
 "An integrated example can be found in the related :source:`test "
 "<tests/src/python/test_qgsauthsystem.py#L80>`."
@@ -559,11 +558,11 @@ msgstr ""
 "Un esempio integrato si trova nel relativo :source:`test "
 "<tests/src/python/test_qgsauthsystem.py#L80>`."
 
-#: ../../docs/pyqgis_developer_cookbook/authentication.rst:461
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:463
 msgid "Authorities Editor GUI"
 msgstr "Autorità Editor GUI"
 
-#: ../../docs/pyqgis_developer_cookbook/authentication.rst:463
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:465
 msgid ""
 "A GUI used to manage only authorities is managed by the "
 ":class:`QgsAuthAuthoritiesEditor <qgis.gui.QgsAuthAuthoritiesEditor>` class."
