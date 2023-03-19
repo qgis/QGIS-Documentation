@@ -3,7 +3,7 @@ name: Update English PO files for translation
 on:
   push:
     branches:
-      - release_3.22
+      - release_3.28
     paths:
       - 'docs/**'
 
@@ -22,7 +22,7 @@ jobs:
     - name: checkout
       uses: actions/checkout@v3
       with:
-        ref: release_3.22
+        ref: release_3.28
 
     - name: Set up Python 3.7
       uses: actions/setup-python@v4
