@@ -11,7 +11,7 @@
 # Update: Harrissou Sant-anna, December 2020
 
 TARGETBRANCH=`git branch --show-current`
-SOURCEPOFILES='locale/en/LC_MESSAGES/docs/'
+SOURCEPOFILES='locale/en/LC_MESSAGES/docs'
 PROJECT='qgis-documentation'
 CONFIGFILE='.tx/config'
 
