@@ -1,0 +1,442 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# 
+# Translators:
+# Michel Zevort <michel.zevort@developpement-durable.gouv.fr>, 2022
+# Harrissou Sant-anna, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.22\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-23 02:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:12+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2023\n"
+"Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:5
+msgid "Working with Mesh Data"
+msgstr "Travailler avec des données maillées (mesh)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:13
+msgid "What's a mesh?"
+msgstr "Qu'est-ce qu'un maillage ?"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:15
+msgid ""
+"A mesh is an unstructured grid usually with temporal and other components. "
+"The spatial component contains a collection of vertices, edges and/or faces,"
+" in 2D or 3D space:"
+msgstr ""
+"Un maillage est une grille non structurée généralement avec des composants "
+"temporels et autres. La composante spatiale contient une collection de "
+"sommets, d'arêtes et de faces dans un espace 2D ou 3D.:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:19
+msgid ""
+"**vertices** - XY(Z) points (in the layer's coordinate reference system)"
+msgstr ""
+"**sommets** - points  XY(Z) (dans le système de référence des coordonnées de"
+" la couche)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:20
+msgid "**edges** - connect pairs of vertices"
+msgstr "**arrêtes** - connecte une paire de sommets"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:21
+msgid ""
+"**faces** - a face is a set of edges forming a closed shape - typically a "
+"triangle or a quadrilateral (quad), rarely polygons with more vertices"
+msgstr ""
+"**faces** : une face est définie par une série d'arêtes formant une surface "
+"fermée, typiquement un triangle ou un quadrilatère et, plus rarement, un "
+"polygone composé de plus de sommets"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:24
+msgid ""
+"Relying on the above, mesh layers can thus have different types of "
+"structure:"
+msgstr ""
+"Sur la base de ce qui précède, les couches de maillage peuvent donc avoir "
+"différents types de structure :"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:26
+msgid ""
+"1D Meshes: consist of vertices and edges. An edge connects two vertices and "
+"can have assigned data (scalars or vectors) on it. The 1D mesh network can "
+"be for example used for modelling of an urban drainage system."
+msgstr ""
+"1D Meshes: ils sont constitués de sommets et d'arêtes. Une arête relie deux "
+"sommets et peut recevoir des données (scalaires ou vectorielles). Le réseau "
+"maillé 1D peut par exemple être utilisé pour la modélisation d'un système de"
+" drainage urbain."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:29
+msgid ""
+"2D meshes: consist of faces with triangles, regular or unstructured quads."
+msgstr ""
+"2D meshes: consistent en des faces avec des triangles, des quadrangles "
+"réguliers ou non structurés."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:30
+msgid ""
+"3D layered meshes: consist of multiple stacked 2D unstructured meshes each "
+"extruded in the vertical direction (levels) by means of a vertical "
+"coordinate. The vertices and faces have the same topology in each vertical "
+"level. The mesh definition (vertical level extrusion) could in general "
+"change in time. The data is usually defined in volume centres or by some "
+"parametric function."
+msgstr ""
+"3D layered meshes: consistent en plusieurs maillages 2D non structurés "
+"empilés, chacun étant extrudé dans la direction verticale (niveaux) au moyen"
+" d'une coordonnée verticale. Les sommets et les faces ont la même topologie "
+"dans chaque niveau vertical. La définition du maillage (extrusion des "
+"niveaux verticaux) peut en général changer dans le temps. Les données sont "
+"généralement définies en centres de volume ou par une fonction paramétrique."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:41
+msgid "Different mesh types"
+msgstr "Différents types de maillage"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:43
+msgid ""
+"Mesh provides information about the spatial structure. In addition, the mesh"
+" can have datasets (groups) that assign a value to every vertex. For "
+"example, having a triangular mesh with numbered vertices as shown in the "
+"image below:"
+msgstr ""
+"Le maillage fournit les information sur la structure spatiale. En plus, un "
+"maillage peut contenir des jeux de données (des groupes) qui attribuent une "
+"valeur à chaque sommet. Voici un exemple avec un maillage triangulaire dont "
+"les numéros de sommets apparaissent sur l'image ci-dessous :"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:52
+msgid "Triangular grid with numbered vertices"
+msgstr "Maillage triangulaire dont les sommets sont numérotés"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:54
+msgid ""
+"Each vertex can store different datasets (typically multiple quantities), "
+"and those datasets can also have a temporal dimension. Thus, a single file "
+"may contain multiple datasets."
+msgstr ""
+"Chaque sommet peut stocker plusieurs jeux de données (très souvent de "
+"grandes quantités) et ceux-ci peuvent avoir également une dimension "
+"temporelle. Ainsi, un unique fichier peut contenir de très nombreux jeux de "
+"données."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:58
+msgid ""
+"The following table gives an idea about the information that can be stored "
+"in mesh datasets. Table columns represent indices of mesh vertices, each row"
+" represents one dataset. Datasets can have different datatypes. In this "
+"case, it stores wind velocity at 10m at a particular moments in time (t1, "
+"t2, t3)."
+msgstr ""
+"Le tableau qui suit donne une idée des informations qui peuvent être "
+"stockées dans les jeux de données maillés. Les colonnes correspondent aux "
+"numéros des sommets et chaque ligne représente un jeu de données. Les jeux "
+"de données peuvent être de différents types. Dans cet exemple, il s'agit de "
+"la vitesse du vent à 10m à différents moments (t1, t2, t3)."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:64
+msgid ""
+"In a similar way, the mesh dataset can also store vector values for each "
+"vertex. For example, wind direction vector at the given time stamps:"
+msgstr ""
+"De la même manière, un jeu de données maillé peut stocker des vecteurs de "
+"valeurs pour chaque sommet. Par exemple, la direction du vent à un moment "
+"donné :"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:68
+msgid "10 metre wind"
+msgstr "Vent à 10m"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:68
+msgid "1"
+msgstr "1"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:68
+msgid "2"
+msgstr "2"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:68
+msgid "3"
+msgstr "3"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:68
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:70
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:71
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:72
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:73
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:74
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:75
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:76
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:77
+msgid "..."
+msgstr "..."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:70
+msgid "10 metre speed at time=t1"
+msgstr "Vitesse à 10m au temps t1"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:70
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:72
+msgid "17251"
+msgstr "17251"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:70
+msgid "24918"
+msgstr "24918"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:70
+msgid "32858"
+msgstr "32858"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:71
+msgid "10 metre speed at time=t2"
+msgstr "Vitesse à 10m au temps t2"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:71
+msgid "19168"
+msgstr "19168"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:71
+msgid "23001"
+msgstr "23001"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:71
+msgid "36418"
+msgstr "36418"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:72
+msgid "10 metre speed at time=t3"
+msgstr "Vitesse à 10m au temps t3"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:72
+msgid "21085"
+msgstr "21085"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:72
+msgid "30668"
+msgstr "30668"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:74
+msgid "10m wind direction time=t1"
+msgstr "Direction du vent à 10m au temps t1"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:74
+msgid "[20,2]"
+msgstr "[20,2]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:74
+msgid "[20,3]"
+msgstr "[20,3]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:74
+msgid "[20,4.5]"
+msgstr "[20,4.5]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:75
+msgid "10m wind direction time=t2"
+msgstr "Direction du vent à 10m au temps t2"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:75
+msgid "[21,3]"
+msgstr "[21,3]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:75
+msgid "[21,4]"
+msgstr "[21,4]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:75
+msgid "[21,5.5]"
+msgstr "[21,5.5]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:76
+msgid "10m wind direction time=t3"
+msgstr "Direction du vent à 10m au temps t3"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:76
+msgid "[22,4]"
+msgstr "[22,4]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:76
+msgid "[22,5]"
+msgstr "[22,5]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:76
+msgid "[22,6.5]"
+msgstr "[22,6.5]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:80
+msgid ""
+"We can visualize the data by assigning colors to values (similarly to how it"
+" is done with :ref:`Singleband pseudocolor <label_colormaptab>` raster "
+"rendering) and interpolating data between vertices according to the mesh "
+"topology. It is common that some quantities are 2D vectors rather than being"
+" simple scalar values (e.g. wind direction). For such quantities it is "
+"desirable to display arrows indicating the directions."
+msgstr ""
+"Nous pouvons visualiser les données en attribuant des couleurs aux valeurs "
+"(de la même façon que pour les rendus raster en :ref:`Pseudo-couleur à bande"
+" unique <label_colormaptab>`) et en interpolant les données entre les "
+"sommets en fonction de la topologie. Il est courant que les valeurs soient "
+"des vecteurs 2D plutôt que de simples valeurs scalaires (comme pour la "
+"direction du vent). Pour de tels types de valeurs, il est préférable "
+"d'afficher des flèches indiquant les directions."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:92
+msgid "Possible visualisation of mesh data"
+msgstr "Exemples de visualisation de données maillées"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:97
+msgid "Supported formats"
+msgstr "Formats de données gérés"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:99
+msgid ""
+"QGIS accesses mesh data using the `MDAL drivers "
+"<https://github.com/lutraconsulting/MDAL>`_, and natively supports a "
+"`variety of formats <https://github.com/lutraconsulting/MDAL#supported-"
+"formats>`__. Whether QGIS can edit a mesh layer depends on the format and "
+"the mesh structure type."
+msgstr ""
+"QGIS accède aux données maillées à l'aide des  `drivers MDAL "
+"<https://github.com/lutraconsulting/MDAL>`_,et supporte nativement une "
+"`variété de formats <https://github.com/lutraconsulting/MDAL#supported-"
+"formats>`__. La possibilité pour QGIS de modifier une couche de maillage "
+"dépend du format et du type de structure de maillage."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:104
+msgid ""
+"To load a mesh dataset into QGIS, use the |addMeshLayer| :guilabel:`Mesh` "
+"tab in the :guilabel:`Data Source Manager` dialog. Read :ref:`mesh_loading` "
+"for more details."
+msgstr ""
+"Pour charger un jeu de données maillé dans QGIS, utilisez la commande "
+"|addMeshLayer| :guilabel:`Maillage` dans la boîte de dialogue "
+":guilabel:`Gestionnaire source de données`. Lisez :ref:`mesh_loading` pour "
+"plus de détails."
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:1079
+msgid "addMeshLayer"
+msgstr "addMeshLayer"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:112
+msgid "Mesh Dataset Properties"
+msgstr "Propriétés d'un jeu de données maillé"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:130
+msgid "|metadata| :ref:`Information <meshinformation>`"
+msgstr "|metadata| :ref:`Information <meshinformation>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:1127
+msgid "metadata"
+msgstr "metadata"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:131
+msgid "|system| :ref:`Source <meshsource>`"
+msgstr "|system| :ref:`Source <meshsource>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:1145
+msgid "system"
+msgstr "system"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:132
+msgid "|symbology| :ref:`Symbology <meshsymbology>`:sup:`[1]`"
+msgstr "|symbology| :ref:`Symbologie <meshsymbology>`:sup:`[1]`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:1143
+msgid "symbology"
+msgstr "symbology"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:133
+msgid "|3d| :ref:`3D View <mesh3dview>`:sup:`[1]`"
+msgstr "|3d| :ref:`Vue 3D <mesh3dview>`:sup:`[1]`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:1075
+msgid "3d"
+msgstr "3d"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:134
+msgid "|temporal| :ref:`Temporal <meshtemporal>`"
+msgstr "|temporal| :ref:`Temporel <meshtemporal>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:1147
+msgid "temporal"
+msgstr "temporal"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:135
+msgid "|rendering| :ref:`Rendering <meshrendering>`"
+msgstr "|rendering| :ref:`Rendu <meshrendering>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:1133
+msgid "rendering"
+msgstr "rendering"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:136
+msgid "|editMetadata| :ref:`Metadata <meshmetadata>`"
+msgstr "|editMetadata| :ref:`Métadonnées <meshmetadata>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:1091
+msgid "editMetadata"
+msgstr "editMetadata"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:140
+msgid ""
+":sup:`[1]` Also available in the :ref:`Layer styling panel "
+"<layer_styling_panel>`"
+msgstr ""
+":sup:`[1]` Aussi disponible dans le :ref:`panneau Style de Couche "
+"<layer_styling_panel>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:150
+msgid "Information Properties"
+msgstr "Onglet Information"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:176
+msgid "Source Properties"
+msgstr "Onglet Source"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:231
+msgid "Symbology Properties"
+msgstr "Onglet Style"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:239
+msgid ":ref:`Rendering <mesh_symbology_rendering>`"
+msgstr ":ref:`Rendering <mesh_symbology_rendering>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:282
+msgid "Contours Symbology"
+msgstr "Symbologie des contours"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:296
+msgid "Styling Contours in a Mesh Layer"
+msgstr "Styliser les contours dans une couche maillée"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:319
+msgid "Vectors Symbology"
+msgstr "Symbologie des vecteurs"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:385
+msgid "Rendering"
+msgstr "Rendu"
+
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:676
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:678
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:680
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:682
+#: ../../docs/user_manual/working_with_mesh/mesh_properties.rst:684
+msgid "---"
+msgstr "---"

@@ -1,0 +1,151 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# 
+# Translators:
+# Harrissou Sant-anna, 2022
+# Miyoshi Tomoya, 2022
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.22\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-12 00:23+0100\n"
+"PO-Revision-Date: 2022-03-14 05:06+0000\n"
+"Last-Translator: Miyoshi Tomoya, 2022\n"
+"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:38
+msgid "Using Raster Layers"
+msgstr "ラスタレイヤを使う"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:40
+msgid ""
+"The code snippets on this page need the following imports if you're outside "
+"the pyqgis console:"
+msgstr "pyqgisコンソールを使わない場合、このページにあるコードスニペットは次のインポートが必要です:"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:68
+msgid "Layer Details"
+msgstr "レイヤーについて"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:70
+msgid ""
+"A raster layer consists of one or more raster bands --- referred to as "
+"single band and multi band rasters. One band represents a matrix of values. "
+"A color image (e.g. aerial photo) is a raster consisting of red, blue and "
+"green bands. Single band rasters typically represent either continuous "
+"variables (e.g. elevation) or discrete variables (e.g. land use). In some "
+"cases, a raster layer comes with a palette and the raster values refer to "
+"the colors stored in the palette."
+msgstr ""
+"ひとつのラスタレイヤは、1つまたは複数のラスタバンド（シングルバンドおよびマルチバンドラスタと呼ばれる）で構成されています。1つのバンドは、値の行列を表します。カラー画像（航空写真など）は、赤、青、緑のバンドで構成されるラスタです。シングルバンドのラスタは、通常、連続変数（標高など）または離散変数（土地利用など）を表します。ラスタレイヤにパレットが付属し、ラスタ値がパレットに格納されている色を参照する場合もあります。"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:78
+msgid ""
+"The following code assumes ``rlayer`` is a :class:`QgsRasterLayer "
+"<qgis.core.QgsRasterLayer>` object."
+msgstr ""
+"次のコードは ``rlayer`` が :class:`QgsRasterLayer <qgis.core.QgsRasterLayer>` "
+"オブジェクトであると仮定しています。"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:149
+msgid "Renderer"
+msgstr "レンダラー"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:151
+msgid ""
+"When a raster layer is loaded, it gets a default renderer based on its type."
+" It can be altered either in the layer properties or programmatically."
+msgstr ""
+"ラスタレイヤがロードされると、そのタイプに応じたデフォルトレンダラーが取得されます。これは、レイヤプロパティまたはプログラムによって変更することができます。"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:154
+msgid "To query the current renderer:"
+msgstr "現在のレンダラーを問い合わせるには:"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:173
+msgid ""
+"To set a renderer, use the :meth:`setRenderer() "
+"<qgis.core.QgsRasterLayer.setRenderer>` method of :class:`QgsRasterLayer "
+"<qgis.core.QgsRasterLayer>`. There are a number of renderer classes (derived"
+" from :class:`QgsRasterRenderer <qgis.core.QgsRasterRenderer>`):"
+msgstr ""
+"レンダラーを設定するには、 :class:`QgsRasterLayer <qgis.core.QgsRasterLayer>` の "
+":meth:`setRenderer() <qgis.core.QgsRasterLayer.setRenderer>` "
+"メソッドを使います。レンダラークラス（ :class:`QgsRasterRenderer <qgis.core.QgsRasterRenderer>`"
+" から派生したもの）は多数存在します:"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:178
+msgid ":class:`QgsHillshadeRenderer <qgis.core.QgsHillshadeRenderer>`"
+msgstr ":class:`QgsHillshadeRenderer <qgis.core.QgsHillshadeRenderer>`"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:179
+msgid ""
+":class:`QgsMultiBandColorRenderer <qgis.core.QgsMultiBandColorRenderer>`"
+msgstr ""
+":class:`QgsMultiBandColorRenderer <qgis.core.QgsMultiBandColorRenderer>`"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:180
+msgid ""
+":class:`QgsPalettedRasterRenderer <qgis.core.QgsPalettedRasterRenderer>`"
+msgstr ""
+":class:`QgsPalettedRasterRenderer <qgis.core.QgsPalettedRasterRenderer>`"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:181
+msgid ":class:`QgsRasterContourRenderer <qgis.core.QgsRasterContourRenderer>`"
+msgstr ""
+":class:`QgsRasterContourRenderer <qgis.core.QgsRasterContourRenderer>`"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:182
+msgid ""
+":class:`QgsSingleBandColorDataRenderer "
+"<qgis.core.QgsSingleBandColorDataRenderer>`"
+msgstr ""
+":class:`QgsSingleBandColorDataRenderer "
+"<qgis.core.QgsSingleBandColorDataRenderer>`"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:183
+msgid ""
+":class:`QgsSingleBandGrayRenderer <qgis.core.QgsSingleBandGrayRenderer>`"
+msgstr ""
+":class:`QgsSingleBandGrayRenderer <qgis.core.QgsSingleBandGrayRenderer>`"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:184
+msgid ""
+":class:`QgsSingleBandPseudoColorRenderer "
+"<qgis.core.QgsSingleBandPseudoColorRenderer>`"
+msgstr ""
+":class:`QgsSingleBandPseudoColorRenderer "
+"<qgis.core.QgsSingleBandPseudoColorRenderer>`"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:186
+msgid ""
+"Single band raster layers can be drawn either in gray colors (low values = "
+"black, high values = white) or with a pseudocolor algorithm that assigns "
+"colors to the values. Single band rasters with a palette can also be drawn "
+"using the palette. Multiband layers are typically drawn by mapping the bands"
+" to RGB colors. Another possibility is to use just one band for drawing."
+msgstr ""
+"シングルバンドのラスタレイヤは、グレーカラー（低い値＝黒、高い値＝白）、または値に色を割り当てる疑似カラーアルゴリズムで描画することができます。パレットを持つシングルバンドラスタは、そのパレットを使って描画することもできます。マルチバンドレイヤは、通常、バンドをRGBカラーにマッピングして描画します。他には、描画に1つのバンドだけを使うこともできます。"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:197
+msgid "Single Band Rasters"
+msgstr "シングルバンドラスタ"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:248
+msgid "Multi Band Rasters"
+msgstr "マルチバンドラスタ"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:278
+msgid "Query Values"
+msgstr "値の検索"

@@ -1,0 +1,234 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# 
+# Translators:
+# Harrissou Sant-anna, 2022
+# Miyoshi Tomoya, 2022
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.22\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-16 07:30+0000\n"
+"PO-Revision-Date: 2022-03-14 05:14+0000\n"
+"Last-Translator: Miyoshi Tomoya, 2022\n"
+"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:2
+msgid "|LS| GRASS Tools"
+msgstr "|LS| GRASSツール"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:4
+msgid ""
+"In this lesson we will present a selection of tools to give you an idea of "
+"the capabilities of GRASS."
+msgstr "このレッスンでは、あなたにGRASSの機能についてのアイデアを与えるために選り抜きのツールを紹介します。"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:11
+msgid "|basic| |FA| Create an aspect map"
+msgstr "|basic| |FA| 傾斜方位地図を作る"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:200
+msgid "basic"
+msgstr "basic"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:13
+#: ../../docs/training_manual/grass/grass_tools.rst:36
+msgid "Open the :guilabel:`GRASS Tools` tab"
+msgstr ":guilabel:`GRASSツール` タブを開きます"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:14
+#: ../../docs/training_manual/grass/grass_tools.rst:37
+msgid ""
+"Load the :file:`g_dem` raster layer from the :guilabel:`grass_mapset` Mapset"
+msgstr ":guilabel:`grass_mapset` マップセットから :file:`g_dem` ラスタレイヤを読み込みます"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:15
+msgid ""
+"Look for the :guilabel:`r.aspect` module by searching for it in the "
+":guilabel:`Filter` field of the :guilabel:`Modules List` tab"
+msgstr ""
+":guilabel:`r.aspect` モジュールを :guilabel:`モジュールリスト` タブの :guilabel:`フィルタ` "
+"フィールドを使って探します"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:17
+msgid ""
+"Open the tool and set it up like this and click on the :guilabel:`Run` "
+"button:"
+msgstr "そのツールを開いて次のように設定し、 :guilabel:`実行` ボタンをクリックします:"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:22
+msgid ""
+"When the process is finished click on :guilabel:`View Output` to load the "
+"resulting layer in the canvas:"
+msgstr "処理が終了したら :guilabel:`出力を見る` をクリックし、結果のレイヤをキャンバスに読み込みます:"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:28
+msgid ""
+"The :file:`g_aspect` layer is stored within the :guilabel:`grass_mapset` "
+"Mapset so you can remove the layer from the canvas and reload it whenever "
+"you want."
+msgstr ""
+":file:`g_aspect` レイヤは :guilabel:`grass_mapset` "
+"マップセット内に格納されているので、キャンバスからレイヤを削除してもいつでも再読み込みすることができます。"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:32
+msgid "|basic| |FA| Get basic statistic of raster layer"
+msgstr "|basic| |FA| ラスタレイヤの基本的な統計情報を取得する"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:34
+msgid ""
+"We want to know some basic statistics of the :file:`g_dem` raster layer."
+msgstr "ラスタレイヤ :file:`g_dem` の基本的な統計情報をいくつか知りたいと思います。"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:38
+msgid ""
+"Look for the :guilabel:`r.info` module by searching for it in the "
+":guilabel:`Filter` field of the :guilabel:`Modules List` tab"
+msgstr ""
+":guilabel:`モジュールリスト` タブの :guilabel:`フィルタ` フィールドで :guilabel:`r.info` "
+"モジュールを検索してください"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:40
+msgid "Set up the tool like this and click on :guilabel:`Run`:"
+msgstr "次のようにツールを設定し、:guilabel:`実行` をクリックします:"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:45
+msgid ""
+"Within the Output tab you will see some raster information printed, like the"
+" path of the file, the number of rows and columns and other useful "
+"information:"
+msgstr "出力タブ内には、ファイルのパス、行数、列数など有用なラスタ情報が出力されているのがわかります。"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:53
+msgid "|moderate| |FA| The Reclass Tool"
+msgstr "|moderate| |FA| Reclass ツール"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:201
+msgid "moderate"
+msgstr "moderate"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:55
+msgid ""
+"Reclassifying a raster layer is a very useful task. We just created the "
+":file:`g_aspect` layer from the :file:`g_dem` one. The value range gets from"
+" 0 (North) passing through 90 (East), 180 (South), 270 (West) and finally to"
+" 360 (North again). We can reclassify the :file:`g_aspect` layer to have "
+"just 4 **categories** following specific *rules* (North = 1, East = 2, South"
+" = 3 and West = 4)."
+msgstr ""
+"ラスタレイヤの再分類は非常に価値ある作業です。私たちは :file:`g_dem` レイヤから :file:`g_aspect` "
+"レイヤを作成したところです。その値域は0（北）から90（東）、180（南）、270（西）を経て、最後に360（再び北）までとなっています。 "
+":file:`g_aspect` レイヤを再分類して、具体的な *規則*（北 = 1, 東 = 2, 南 = 3, 西 = 4）に従って、4つの "
+"**カテゴリー** だけを持つようにすることができます。"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:62
+msgid ""
+"Grass reclassify tool accepts a ``txt`` file with the defined rules. Writing"
+" the rules is very simple and the GRASS Manual contains very good "
+"description."
+msgstr ""
+"Grass 再分類ツールは、定義された規則を含む ``txt`` ファイルを受け取ります。規則の書き方は非常に簡単で、GRASS "
+"マニュアルに非常に詳しい説明があります。"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:65
+msgid ""
+"Each GRASS tool has its own Manual tab. Take the time to read the "
+"description of the tool you are using to don't miss some useful parameters"
+msgstr ""
+"GRASSの各ツールには、それぞれ「マニュアル」タブがあります。使用するツールの説明をよく読んで、便利なパラメータを見逃さないようにしましょう。"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:69
+msgid ""
+"Load the :file:`g_aspect` layer or, if you don't have create it, go back to "
+"the :ref:`grass_aspect` section."
+msgstr ""
+":file:`g_aspect` レイヤを読み込むか、作成していない場合は、 :ref:`grass_aspect` セクションに戻りましょう。"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:71
+msgid ""
+"Look for the :guilabel:`r.reclass` module by searching for it in the "
+":guilabel:`Filter` field of the :guilabel:`Modules List` tab"
+msgstr ""
+":guilabel:`r.reclass` モジュールを :guilabel:`モジュール` タブの :guilabel:`フィルタ` "
+"フィールドで検索して探します"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:73
+msgid ""
+"Open the tool and set it up like the following picture. The file containing "
+"the rules is in the :file:`exercise_data/grass/` folder, named "
+":file:`reclass_aspect.txt`."
+msgstr ""
+"ツールを開き、次の図のように設定します。規則を含んでいるファイルは :file:`exercise_data/grass/` フォルダに "
+":file:`reclass_aspect.txt` という名前であります。"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:75
+msgid "Click on :guilabel:`Run` and wait until the process is finished:"
+msgstr ":guilabel:`実行` をクリックし、処理が終了するまで待ちます。"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:80
+msgid ""
+"Click on :guilabel:`View Output` to load the reclassified raster in the "
+"canvas"
+msgstr ":guilabel:`出力を見る` をクリックすると、再分類されたラスタがキャンバスに読み込まれます"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:82
+msgid ""
+"The new layer is made up by just 4 values (1, 2, 3, and 4) and it is easier "
+"to manage and to process."
+msgstr "新しいレイヤは、4つの値（1、2、3、4）だけで構成され、管理も加工もしやすくなっています。"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:88
+msgid ""
+"Open the :file:`reclass_aspect.txt` with a text editor to see the rules and "
+"to start becoming used to them. Moreover, take a deep look at the GRASS "
+"manual: a lot of different examples are pointed out."
+msgstr ""
+"テキストエディタで :file:`reclass_aspect.txt` を開き、規則を確認し、慣れることから始めてください。さらに、GRASS "
+"のマニュアルをよく読んでみてください：多くの異なる例が示されています。"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:94
+msgid "|moderate| |TY| Reclassify with your rules"
+msgstr "|moderate| |TY| 自分の規則で再分類する"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:102
+msgid "Answer"
+msgstr "答え"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:126
+msgid "|moderate| |FA| The Mapcalc Tool"
+msgstr "|moderate| |FA| Mapcalcツール"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:137
+msgid "Start the tool."
+msgstr "ツールを起動します。"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:146
+msgid "In order, they are:"
+msgstr "順番に:"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:181
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../docs/training_manual/grass/grass_tools.rst:183
+msgid ""
+"In this lesson, we have covered only a few of the many tools GRASS offers. "
+"To explore the capabilities of GRASS for yourself, open the :guilabel:`GRASS"
+" Tools` dialog and scroll down the :guilabel:`Modules List`. Or for a more "
+"structured approach, look under the :guilabel:`Modules Tree` tab, which "
+"organizes tools by type."
+msgstr ""
+"このレッスンでは、GRASSが提供する多くのツールのうちのわずかしかカバーしていません。自分でGRASSの機能を探索するには "
+":guilabel:`GRASSツール` ダイアログを開き、 :guilabel:`モジュールリスト` "
+"を下へスクロールします。より構造化されたアプローチがよければ :guilabel:`モジュールツリー` タブではツールが種類ごとに整理されています。"

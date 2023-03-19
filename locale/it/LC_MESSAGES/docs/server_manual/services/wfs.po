@@ -1,0 +1,764 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# 
+# Translators:
+# Harrissou Sant-anna, 2022
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.22\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-21 02:17+0000\n"
+"PO-Revision-Date: 2022-03-14 05:06+0000\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2023\n"
+"Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+"Language: it\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/server_manual/services/wfs.rst:2
+msgid "Web Feature Service (WFS)"
+msgstr "Web Feature Service (WFS)"
+
+#: ../../docs/server_manual/services/wfs.rst:4
+msgid ""
+"The **1.0.0** and **1.1.0** WFS standards implemented in QGIS Server provide"
+" a HTTP interface to query geographic features from a QGIS project. A "
+"typical WFS request defines the QGIS project to use and the layer to query."
+msgstr ""
+"Gli standard **1.0.0** e **1.1.0** WFS implementati in QGIS Server "
+"forniscono un'interfaccia HTTP per interrogare gli elementi geografici da un"
+" progetto QGIS. Una tipica richiesta WFS definisce il progetto QGIS da usare"
+" e il layer da interrogare."
+
+#: ../../docs/server_manual/services/wfs.rst:10
+msgid ""
+"Specifications document according to the version number of the service:"
+msgstr ""
+"Documento delle specifiche secondo il numero di versione del servizio:"
+
+#: ../../docs/server_manual/services/wfs.rst:12
+msgid "`WFS 1.0.0 <https://portal.ogc.org/files/?artifact_id=7176>`_"
+msgstr "`WFS 1.0.0 <https://portal.ogc.org/files/?artifact_id=7176>`_"
+
+#: ../../docs/server_manual/services/wfs.rst:13
+msgid "`WFS 1.1.0 <https://portal.ogc.org/files/?artifact_id=8339>`_"
+msgstr "`WFS 1.1.0 <https://portal.ogc.org/files/?artifact_id=8339>`_"
+
+#: ../../docs/server_manual/services/wfs.rst:15
+msgid "Standard requests provided by QGIS Server:"
+msgstr "Richieste standard fornite da QGIS Server:"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Request"
+msgstr "Request"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Description"
+msgstr "Descrizione"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`GetCapabilities <wfs_getcapabilities>`"
+msgstr ":ref:`GetCapabilities <wfs_getcapabilities>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Returns XML metadata with information about the server"
+msgstr "Restituisce metadati XML con informazioni sul server"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`GetFeature <wfs_getfeature>`"
+msgstr ":ref:`GetFeature <wfs_getfeature>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Returns a selection of features"
+msgstr "Restituisce una selezione di elementi"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`DescribeFeatureType <wfs_describefeaturetype>`"
+msgstr ":ref:`DescribeFeatureType <wfs_describefeaturetype>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Returns a description of feature types and properties"
+msgstr "Restituisce una descrizione dei tipi di elementi e delle proprietà"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`Transaction <wfs_transaction>`"
+msgstr ":ref:`Transaction <wfs_transaction>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Allows features to be inserted, updated or deleted"
+msgstr ""
+"Permette l'inserimento, l'aggiornamento o la cancellazione di elementi"
+
+#: ../../docs/server_manual/services/wfs.rst:30
+msgid "GetCapabilities"
+msgstr "GetCapabilities"
+
+#: ../../docs/server_manual/services/wfs.rst:32
+msgid ""
+"Standard parameters for the **GetCapabilities** request according to the OGC"
+" WFS 1.0.0 and 1.1.0 specifications:"
+msgstr ""
+"Parametri standard per la richiesta **GetCapabilities** in conformità alle "
+"specifiche OGC WFS 1.0.0 e 1.1.0:"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Parameter"
+msgstr "Parametro"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Required"
+msgstr "Richiesto"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`SERVICE <services_basics_service>`"
+msgstr ":ref:`SERVICE <services_basics_service>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Yes"
+msgstr "Sì"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Name of the service (**WFS**)"
+msgstr "Nome del servizio (**WFS**)"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`REQUEST <services_basics_request>`"
+msgstr ":ref:`REQUEST <services_basics_request>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Name of the request (**GetCapabilities**)"
+msgstr "Nome della richiesta (**GetCapabilities**)"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`VERSION <wfs_version>`"
+msgstr ":ref:`VERSION <wfs_version>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "No"
+msgstr "No"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Version of the service"
+msgstr "Versione del servizio"
+
+#: ../../docs/server_manual/services/wfs.rst:43
+#: ../../docs/server_manual/services/wfs.rst:105
+#: ../../docs/server_manual/services/wfs.rst:536
+#: ../../docs/server_manual/services/wfs.rst:605
+msgid ""
+"In addition to the standard ones, QGIS Server supports the following extra "
+"parameters:"
+msgstr ""
+"Oltre a quelli standard, QGIS Server supporta i seguenti parametri extra:"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`MAP <services_basics_map>`"
+msgstr ":ref:`MAP <services_basics_map>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "QGIS project file"
+msgstr "File di progetto QGIS"
+
+#: ../../docs/server_manual/services/wfs.rst:57
+msgid "VERSION"
+msgstr "VERSION"
+
+#: ../../docs/server_manual/services/wfs.rst:59
+msgid ""
+"This parameter allows to specify the version of the service to use. "
+"Available values for the ``VERSION`` parameter are:"
+msgstr ""
+"Questo parametro permette di specificare la versione del servizio da "
+"utilizzare. I valori disponibili per il parametro ``VERSION`` sono:"
+
+#: ../../docs/server_manual/services/wfs.rst:62
+msgid "``1.0.0``"
+msgstr "``1.0.0``"
+
+#: ../../docs/server_manual/services/wfs.rst:63
+msgid "``1.1.0``"
+msgstr "``1.1.0``"
+
+#: ../../docs/server_manual/services/wfs.rst:65
+msgid ""
+"If no version is indicated in the request, then ``1.1.0`` is used by "
+"default."
+msgstr ""
+"Se nessuna versione è indicata nella richiesta, allora ``1.1.0`` è usato per"
+" default."
+
+#: ../../docs/server_manual/services/wfs.rst:68
+#: ../../docs/server_manual/services/wfs.rst:127
+#: ../../docs/server_manual/services/wfs.rst:146
+#: ../../docs/server_manual/services/wfs.rst:201
+#: ../../docs/server_manual/services/wfs.rst:260
+#: ../../docs/server_manual/services/wfs.rst:346
+#: ../../docs/server_manual/services/wfs.rst:368
+#: ../../docs/server_manual/services/wfs.rst:413
+#: ../../docs/server_manual/services/wfs.rst:463
+#: ../../docs/server_manual/services/wfs.rst:487
+#: ../../docs/server_manual/services/wfs.rst:506
+#: ../../docs/server_manual/services/wfs.rst:546
+#: ../../docs/server_manual/services/wfs.rst:626
+msgid "URL example:"
+msgstr "Esempio di URL:"
+
+#: ../../docs/server_manual/services/wfs.rst:81
+msgid "GetFeature"
+msgstr "GetFeature"
+
+#: ../../docs/server_manual/services/wfs.rst:83
+msgid ""
+"Standard parameters for the **GetFeature** request according to the OGC WFS "
+"1.0.0 and 1.1.0 specifications:"
+msgstr ""
+"Parametri standard per la richiesta **GetFeature** secondo le specifiche OGC"
+" WFS 1.0.0 e 1.1.0:"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Name of the request (**GetFeature**)"
+msgstr "Nome della richiesta (**GetFeature**)"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`TYPENAME <wfs_getfeature_typename>`"
+msgstr ":ref:`TYPENAME <wfs_getfeature_typename>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Name of layers"
+msgstr "Nome dei layer"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`FEATUREID <wfs_getfeature_featureid>`"
+msgstr ":ref:`FEATUREID <wfs_getfeature_featureid>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Filter the features by ids"
+msgstr "Filtrare gli elementi per id"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`OUTPUTFORMAT <wfs_getfeature_outputformat>`"
+msgstr ":ref:`OUTPUTFORMAT <wfs_getfeature_outputformat>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Output Format"
+msgstr "Formato risultato"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`RESULTTYPE <wfs_getfeature_resulttype>`"
+msgstr ":ref:`RESULTTYPE <wfs_getfeature_resulttype>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Type of the result"
+msgstr "Tipo di risultato"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`PROPERTYNAME <wfs_getfeature_propertyname>`"
+msgstr ":ref:`PROPERTYNAME <wfs_getfeature_propertyname>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Name of properties to return"
+msgstr "Nome delle proprietà da restituire"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`MAXFEATURES <wfs_getfeature_maxfeatures>`"
+msgstr ":ref:`MAXFEATURES <wfs_getfeature_maxfeatures>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Maximum number of features to return"
+msgstr "Numero massimo di elementi da restituire"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`SRSNAME <wfs_getfeature_srsname>`"
+msgstr ":ref:`SRSNAME <wfs_getfeature_srsname>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Coordinate reference system"
+msgstr "Sistema di riferimento delle Coordinate"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`FILTER <wfs_getfeature_filter>`"
+msgstr ":ref:`FILTER <wfs_getfeature_filter>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "OGC Filter Encoding"
+msgstr "Codifica filtro OGC"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`BBOX <wfs_getfeature_bbox>`"
+msgstr ":ref:`BBOX <wfs_getfeature_bbox>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Map Extent"
+msgstr "Estensione mappa"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`SORTBY <wfs_getfeature_sortby>`"
+msgstr ":ref:`SORTBY <wfs_getfeature_sortby>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Sort the results"
+msgstr "Ordinare i risultati"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`STARTINDEX <wfs_getfeature_startindex>`"
+msgstr ":ref:`STARTINDEX <wfs_getfeature_startindex>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Paging"
+msgstr "Paginazione"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`GEOMETRYNAME <wfs_getfeature_geometryname>`"
+msgstr ":ref:`GEOMETRYNAME <wfs_getfeature_geometryname>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Type of geometry to return"
+msgstr "Tipo di geometria da restituire"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`EXP_FILTER <wfs_getfeature_expfilter>`"
+msgstr ":ref:`EXP_FILTER <wfs_getfeature_expfilter>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Expression filtering"
+msgstr "Espressione di filtraggio"
+
+#: ../../docs/server_manual/services/wfs.rst:122
+msgid "TYPENAME"
+msgstr "TYPENAME"
+
+#: ../../docs/server_manual/services/wfs.rst:124
+msgid ""
+"This parameter allows to specify layer names and is mandatory if "
+"``FEATUREID`` is not set."
+msgstr ""
+"Questo parametro consente di specificare i nomi dei layer ed è obbligatorio "
+"se ``FEATUREID`` non è impostato."
+
+#: ../../docs/server_manual/services/wfs.rst:141
+msgid "FEATUREID"
+msgstr "FEATUREID"
+
+#: ../../docs/server_manual/services/wfs.rst:143
+msgid ""
+"This parameter allows to specify the ID of a specific feature and is formed "
+"like ``typename.fid,typename.fid,...``."
+msgstr ""
+"Questo parametro consente di specificare l'ID di una elemento specifico e ha"
+" una forma del tipo ``typename.fid,typename.fid,...``."
+
+#: ../../docs/server_manual/services/wfs.rst:156
+msgid "XML response:"
+msgstr "Risposta XML:"
+
+#: ../../docs/server_manual/services/wfs.rst:180
+msgid "OUTPUTFORMAT"
+msgstr "OUTPUTFORMAT"
+
+#: ../../docs/server_manual/services/wfs.rst:183
+msgid ""
+"This parameter may be used to specify the format of the response. If "
+"``VERSION`` is greater or equal than ``1.1.0``, GML3 is the default format. "
+"Otherwise GML2 is used."
+msgstr ""
+"Questo parametro può essere usato per specificare il formato della risposta."
+" Se ``VERSION`` è maggiore o uguale a ``1.1.0``, il formato predefinito è "
+"GML3. Altrimenti viene utilizzato GML2."
+
+#: ../../docs/server_manual/services/wfs.rst:187
+msgid "Available values are:"
+msgstr "Valori possibili sono:"
+
+#: ../../docs/server_manual/services/wfs.rst:189
+msgid "``gml2``"
+msgstr "``gml2``"
+
+#: ../../docs/server_manual/services/wfs.rst:190
+msgid "``text/xml; subtype=gml/2.1.2``"
+msgstr "``text/xml; subtype=gml/2.1.2``"
+
+#: ../../docs/server_manual/services/wfs.rst:191
+msgid "``gml3``"
+msgstr "``gml3``"
+
+#: ../../docs/server_manual/services/wfs.rst:192
+msgid "``text/xml; subtype=gml/3.1.1``"
+msgstr "``text/xml; subtype=gml/3.1.1``"
+
+#: ../../docs/server_manual/services/wfs.rst:193
+msgid "``geojson``"
+msgstr "``geojson``"
+
+#: ../../docs/server_manual/services/wfs.rst:194
+msgid "``application/vnd.geo+json``,"
+msgstr "``application/vnd.geo+json``,"
+
+#: ../../docs/server_manual/services/wfs.rst:195
+msgid "``application/vnd.geo json``"
+msgstr "``application/vnd.geo json``"
+
+#: ../../docs/server_manual/services/wfs.rst:196
+msgid "``application/geo+json``"
+msgstr "``application/geo+json``"
+
+#: ../../docs/server_manual/services/wfs.rst:197
+msgid "``application/geo json``"
+msgstr "``application/geo json``"
+
+#: ../../docs/server_manual/services/wfs.rst:198
+msgid "``application/json``"
+msgstr "``application/json``"
+
+#: ../../docs/server_manual/services/wfs.rst:212
+msgid "GeoJSON response:"
+msgstr "Risposta GeoJSON:"
+
+#: ../../docs/server_manual/services/wfs.rst:252
+msgid "RESULTTYPE"
+msgstr "RESULTTYPE"
+
+#: ../../docs/server_manual/services/wfs.rst:254
+msgid ""
+"This parameter may be used to specify the kind of result to return. "
+"Available values are:"
+msgstr ""
+"Questo parametro può essere usato per specificare il tipo di risultato da "
+"restituire. I valori disponibili sono:"
+
+#: ../../docs/server_manual/services/wfs.rst:257
+msgid "``results``: the default behavior"
+msgstr "``results``: il risultato predefinito"
+
+#: ../../docs/server_manual/services/wfs.rst:258
+msgid "``hits``: returns only a feature count"
+msgstr "``hits``: restituisce solo un conteggio degli elementi"
+
+#: ../../docs/server_manual/services/wfs.rst:275
+msgid "PROPERTYNAME"
+msgstr "PROPERTYNAME"
+
+#: ../../docs/server_manual/services/wfs.rst:277
+msgid ""
+"This parameter may be used to specify a specific property to return. A "
+"property needs to be mapped with a ``TYPENAME`` or a ``FEATUREID``:"
+msgstr ""
+"Questo parametro può essere utilizzato per specificare una proprietà "
+"specifica da restituire. Una proprietà deve essere mappata con un "
+"``TYPENAME`` o un ``FEATUREID``:"
+
+#: ../../docs/server_manual/services/wfs.rst:280
+msgid "Valid URL example:"
+msgstr "Esempio di URL valido:"
+
+#: ../../docs/server_manual/services/wfs.rst:290
+msgid "On the contrary, the next URL will return an exception:"
+msgstr "Al contrario, il seguente URL restituirà un'eccezione:"
+
+#: ../../docs/server_manual/services/wfs.rst:310
+msgid "MAXFEATURES"
+msgstr "MAXFEATURES"
+
+#: ../../docs/server_manual/services/wfs.rst:312
+msgid ""
+"This parameter allows to limit the number of features returned by the "
+"request."
+msgstr ""
+"Questo parametro consente di limitare il numero di elementi restituiti dalla"
+" richiesta."
+
+#: ../../docs/server_manual/services/wfs.rst:316
+msgid ""
+"This parameter may be useful to improve performances when underlying vector "
+"layers are heavy."
+msgstr ""
+"Questo parametro può essere utile per migliorare le prestazioni quando i "
+"layer vettoriali sottostanti sono pesanti."
+
+#: ../../docs/server_manual/services/wfs.rst:323
+msgid "SRSNAME"
+msgstr "SRSNAME"
+
+#: ../../docs/server_manual/services/wfs.rst:325
+msgid ""
+"This parameter allows to indicate the response output Spatial Reference "
+"System as well as the ``BBOX`` CRS and has to be formed like ``EPSG:XXXX``."
+msgstr ""
+"Questo parametro consente di indicare il sistema di riferimento spaziale in "
+"uscita dalla risposta e anche il SR ``BBOX`` e deve essere formato come "
+"``EPSG:XXXX``."
+
+#: ../../docs/server_manual/services/wfs.rst:340
+msgid "FILTER"
+msgstr "FILTER"
+
+#: ../../docs/server_manual/services/wfs.rst:342
+msgid ""
+"This parameter allows to filter the response with the **Filter Encoding** "
+"language defined by the `OGC Filter Encoding standard "
+"<https://www.ogc.org/standards/filter>`_."
+msgstr ""
+"Questo parametro consente di filtrare la risposta con il linguaggio **Filter"
+" Encoding** definito dallo standard `OGC Filter Encoding "
+"<https://www.ogc.org/standards/filter>`_."
+
+#: ../../docs/server_manual/services/wfs.rst:360
+msgid "BBOX"
+msgstr "BBOX"
+
+#: ../../docs/server_manual/services/wfs.rst:362
+msgid ""
+"This parameter allows to specify the map extent with units according to the "
+"current CRS. Coordinates have to be separated by a comma."
+msgstr ""
+"Questo parametro permette di specificare l'estensione della mappa con unità "
+"secondo il SR corrente. Le coordinate devono essere separate da una virgola."
+
+#: ../../docs/server_manual/services/wfs.rst:365
+msgid ""
+"The ``SRSNAME`` parameter may specify the CRS of the extent. If not "
+"specified, the CRS of the layer is used."
+msgstr ""
+"Il parametro ``SRSNAME`` può specificare il SR dell'estensione. Se non viene"
+" specificato, viene utilizzato il SR del layer."
+
+#: ../../docs/server_manual/services/wfs.rst:379
+msgid ""
+"The ``FEATUREID`` parameter cannot be used with the ``BBOX``. Any attempt "
+"will result in an exception:"
+msgstr ""
+"Il parametro ``FEATUREID`` non può essere utilizzato con la ``BBOX``. "
+"Qualsiasi tentativo provocherà un'eccezione:"
+
+#: ../../docs/server_manual/services/wfs.rst:392
+msgid "SORTBY"
+msgstr "SORTBY"
+
+#: ../../docs/server_manual/services/wfs.rst:394
+msgid ""
+"This parameter allows to sort resulting features according to property "
+"values and has to be formed like ``propertyname SORTRULE``."
+msgstr ""
+"Questo parametro consente di ordinare gli elementi risultanti in base ai "
+"valori delle proprietà e deve essere formato come ``propertyname SORTRULE``."
+
+#: ../../docs/server_manual/services/wfs.rst:397
+msgid "Available values for ``SORTRULE`` in case of descending sorting:"
+msgstr "Valori possibili per ``SORTRULE`` in caso di ordinamento discendente:"
+
+#: ../../docs/server_manual/services/wfs.rst:399
+msgid "``D``"
+msgstr "``D``"
+
+#: ../../docs/server_manual/services/wfs.rst:400
+msgid "``+D``"
+msgstr "``+D``"
+
+#: ../../docs/server_manual/services/wfs.rst:401
+msgid "``DESC``"
+msgstr "``DESC``"
+
+#: ../../docs/server_manual/services/wfs.rst:402
+msgid "``+DESC``"
+msgstr "``+DESC``"
+
+#: ../../docs/server_manual/services/wfs.rst:405
+msgid "Available values for ``SORTRULE`` in case of ascending sorting:"
+msgstr "Valori possibili per ``SORTRULE`` in caso di ordinamento ascendente:"
+
+#: ../../docs/server_manual/services/wfs.rst:407
+msgid "``A``"
+msgstr "``A``"
+
+#: ../../docs/server_manual/services/wfs.rst:408
+msgid "``+A``"
+msgstr "``+A``"
+
+#: ../../docs/server_manual/services/wfs.rst:409
+msgid "``ASC``"
+msgstr "``ASC``"
+
+#: ../../docs/server_manual/services/wfs.rst:410
+msgid "``+ASC``"
+msgstr "``+ASC``"
+
+#: ../../docs/server_manual/services/wfs.rst:425
+msgid "The corresponding result:"
+msgstr "Il risultato ottenuto:"
+
+#: ../../docs/server_manual/services/wfs.rst:454
+msgid "GEOMETRYNAME"
+msgstr "GEOMETRYNAME"
+
+#: ../../docs/server_manual/services/wfs.rst:456
+msgid ""
+"This parameter can be used to specify the kind of geometry to return for "
+"features. Available values are:"
+msgstr ""
+"Questo parametro può essere usato per specificare il tipo di geometria da "
+"restituire per gli elementi. I valori disponibili sono:"
+
+#: ../../docs/server_manual/services/wfs.rst:459
+msgid "``extent``"
+msgstr "``extent``"
+
+#: ../../docs/server_manual/services/wfs.rst:460
+msgid "``centroid``"
+msgstr "``centroid``"
+
+#: ../../docs/server_manual/services/wfs.rst:461
+msgid "``none``"
+msgstr "``none``"
+
+#: ../../docs/server_manual/services/wfs.rst:478
+msgid "STARTINDEX"
+msgstr "STARTINDEX"
+
+#: ../../docs/server_manual/services/wfs.rst:480
+msgid ""
+"This parameter is standard in WFS 2.0, but it's an extension for WFS 1.0.0."
+msgstr ""
+"Questo parametro è standard in WFS 2.0, ma è un'estensione per WFS 1.0.0."
+
+#: ../../docs/server_manual/services/wfs.rst:483
+msgid ""
+"Actually, it can be used to skip some features in the result set and in "
+"combination with ``MAXFEATURES``, it provides the ability to page through "
+"results."
+msgstr ""
+"In pratica, può essere usato per saltare alcuni elementi dell'insieme dei "
+"risultati e, in combinazione con ``MAXFEATURES``, fornisce la possibilità di"
+" sfogliare i risultati."
+
+#: ../../docs/server_manual/services/wfs.rst:502
+msgid "EXP_FILTER"
+msgstr "EXP_FILTER"
+
+#: ../../docs/server_manual/services/wfs.rst:504
+msgid "This parameter allows to filter the response with QGIS expressions."
+msgstr ""
+"Questo parametro consente di filtrare la risposta con le espressioni di "
+"QGIS."
+
+#: ../../docs/server_manual/services/wfs.rst:520
+msgid "DescribeFeatureType"
+msgstr "DescribeFeatureType"
+
+#: ../../docs/server_manual/services/wfs.rst:522
+msgid ""
+"Standard parameters for the **DescribeFeatureType** request according to the"
+" OGC WFS 1.0.0 and 1.1.0 specifications:"
+msgstr ""
+"Parametri standard per la richiesta **DescribeFeatureType** secondo le "
+"specifiche OGC WFS 1.0.0 e 1.1.0:"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Name of the request (**DescribeFeatureType**)"
+msgstr "Nome della richiesta (**DescribeFeatureType**)"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Format of the response"
+msgstr "Formato della risposta"
+
+#: ../../docs/server_manual/services/wfs.rst:556
+msgid "Output response:"
+msgstr "Risposta in uscita:"
+
+#: ../../docs/server_manual/services/wfs.rst:580
+msgid "Transaction"
+msgstr "Transazione"
+
+#: ../../docs/server_manual/services/wfs.rst:582
+msgid ""
+"This request allows to update, delete or add one or several features thanks "
+"to a XML document. The :ref:`delete <wfs_transaction_delete>` action may be "
+"achieved with a POST request as well as with the :ref:`OPERATION "
+"<wfs_transaction_operation>` parameter while the :ref:`add "
+"<wfs_transaction_add>` and the :ref:`update <wfs_transaction_update>` "
+"operations may be achieved through POST request only."
+msgstr ""
+"Questa richiesta consente di aggiornare, cancellare o aggiungere una o più "
+"elementi grazie a un documento XML. L'azione :ref:`delete "
+"<wfs_transaction_delete>` può essere realizzata con una richiesta POST e con"
+" il parametro :ref:`OPERATION <wfs_transaction_operation>`, mentre le "
+"operazioni :ref:`add <wfs_transaction_add>` e :ref:`update "
+"<wfs_transaction_update>` possono essere realizzate solo tramite richiesta "
+"POST."
+
+#: ../../docs/server_manual/services/wfs.rst:590
+msgid ""
+"Standard parameters for the **Transaction** request according to the OGC WFS"
+" 1.0.0 and 1.1.0 specifications:"
+msgstr ""
+"Parametri standard per la richiesta **Transaction** secondo le specifiche "
+"OGC WFS 1.0.0 e 1.1.0:"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Name of the request (**Transaction**)"
+msgstr "Nome della richiesta (**Transazione**)"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`OPERATION <wfs_transaction_operation>`"
+msgstr ":ref:`OPERATION <wfs_transaction_operation>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Specify the operation"
+msgstr "Specificare l'operazione"
+
+#: ../../docs/server_manual/services/wfs.rst:621
+msgid "OPERATION"
+msgstr "OPERATION"
+
+#: ../../docs/server_manual/services/wfs.rst:623
+msgid ""
+"This parameter allows to delete a feature without using a POST request with "
+"a dedicated XML document."
+msgstr ""
+"Questo parametro consente di eliminare un elemento senza utilizzare una "
+"richiesta POST con un documento XML dedicato."
+
+#: ../../docs/server_manual/services/wfs.rst:639
+msgid ""
+"``FEATUREID``, ``BBOX`` and ``FILTER`` parameters are mutually exclusive and"
+" prioritized in this order."
+msgstr ""
+"I parametri ``FEATUREID``, ``BBOX`` e ``FILTER`` si escludono a vicenda e "
+"sono prioritari in questo ordine."
+
+#: ../../docs/server_manual/services/wfs.rst:645
+msgid "Add features"
+msgstr "Aggiungere elementi"
+
+#: ../../docs/server_manual/services/wfs.rst:647
+#: ../../docs/server_manual/services/wfs.rst:679
+#: ../../docs/server_manual/services/wfs.rst:709
+msgid "POST request example:"
+msgstr "Esempio richiesta POST:"
+
+#: ../../docs/server_manual/services/wfs.rst:654
+msgid "with the *add.xml* document:"
+msgstr "con il documento *add.xml*:"
+
+#: ../../docs/server_manual/services/wfs.rst:677
+msgid "Update features"
+msgstr "Aggiornare elementi"
+
+#: ../../docs/server_manual/services/wfs.rst:686
+msgid "with the *update.xml* document:"
+msgstr "con il documento *update.xml*:"
+
+#: ../../docs/server_manual/services/wfs.rst:707
+msgid "Delete features"
+msgstr "Eliminare elementi"
+
+#: ../../docs/server_manual/services/wfs.rst:716
+msgid "with the *delete.xml* document:"
+msgstr "con il documento *delete.xml*:"

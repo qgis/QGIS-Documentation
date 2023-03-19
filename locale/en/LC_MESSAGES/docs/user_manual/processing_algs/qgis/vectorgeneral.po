@@ -1,0 +1,3450 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-19 12:09+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2
+msgid "Vector general"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:14
+msgid "Assign projection"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:15
+msgid "Assigns a new projection to a vector layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:17
+msgid ""
+"It creates a new layer with the exact same features and geometries as the"
+" input one, but assigned to a new CRS. The geometries are **not** "
+"reprojected, they are just assigned to a different CRS."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:21
+msgid ""
+"This algorithm can be used to repair layers which have been assigned an "
+"incorrect projection."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:24
+msgid "Attributes are not modified by this algorithm."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:26
+msgid ""
+":ref:`qgisdefinecurrentprojection`, :ref:`qgisfindprojection`, "
+":ref:`qgisreprojectlayer`"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:30
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:110
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:178
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:249
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:325
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:386
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:448
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:508
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:582
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:690
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:825
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:897
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1006
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1112
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1175
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1245
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1326
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1397
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1554
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1716
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1860
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2001
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2074
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2150
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2206
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2302
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2408
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2472
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2557
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2653
+msgid "Parameters"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:36
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:72
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:116
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:151
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:184
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:220
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:255
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:294
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:331
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:352
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:392
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:408
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:454
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:474
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:514
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:540
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:589
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:637
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:697
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:768
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:831
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:855
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:904
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:976
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1012
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1083
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1118
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1145
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1182
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1198
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1252
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1288
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1333
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1361
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1404
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1493
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1561
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1660
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1723
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1820
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1867
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1937
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2007
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2043
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2080
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2123
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2156
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2173
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2215
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2247
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2270
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2311
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2337
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2369
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2414
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2434
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2479
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2519
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2566
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2597
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2620
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2659
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2675
+msgid "Label"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:37
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:73
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:117
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:152
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:185
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:221
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:256
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:295
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:332
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:353
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:393
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:409
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:455
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:475
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:515
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:541
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:590
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:638
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:698
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:769
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:832
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:856
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:905
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:977
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1013
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1084
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1119
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1146
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1183
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1199
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1253
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1289
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1334
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1362
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1405
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1494
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1562
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1661
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1724
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1821
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1868
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1938
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2008
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2044
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2081
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2124
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2157
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2174
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2216
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2248
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2271
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2312
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2338
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2370
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2415
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2435
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2480
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2520
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2567
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2598
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2621
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2660
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2676
+msgid "Name"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:38
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:74
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:118
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:153
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:186
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:222
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:257
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:296
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:333
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:354
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:394
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:410
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:456
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:476
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:516
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:542
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:591
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:639
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:699
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:770
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:833
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:857
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:906
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:978
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1014
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1085
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1120
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1147
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1184
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1200
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1254
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1290
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1335
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1363
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1406
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1495
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1563
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1662
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1725
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1822
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1869
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1939
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2009
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2045
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2082
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2125
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2158
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2175
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2217
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2249
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2272
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2313
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2339
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2371
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2416
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2436
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2481
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2521
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2568
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2599
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2622
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2661
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2677
+msgid "Type"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:39
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:75
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:119
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:154
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:187
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:223
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:258
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:297
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:334
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:355
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:395
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:411
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:457
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:477
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:517
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:543
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:592
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:640
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:700
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:771
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:834
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:858
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:907
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:979
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1015
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1086
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1121
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1148
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1185
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1201
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1255
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1291
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1336
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1364
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1407
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1496
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1564
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1663
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1726
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1823
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1870
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1940
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2010
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2046
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2083
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2126
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2159
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2176
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2218
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2250
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2273
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2314
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2340
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2372
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2417
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2437
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2482
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2522
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2569
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2600
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2623
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2662
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2678
+msgid "Description"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:40
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:120
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:458
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:518
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:593
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:835
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1871
+msgid "**Input layer**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:41
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:121
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:189
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:336
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:397
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:459
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:479
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:519
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:594
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:836
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1123
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1187
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1257
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1338
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1409
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1566
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1728
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1872
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2085
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2161
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2220
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2316
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2419
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2484
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2571
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2664
+msgid "``INPUT``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:42
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:122
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:337
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:398
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:460
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:520
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:595
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:703
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:707
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:837
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:960
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:982
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1124
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1188
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1258
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1339
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1410
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1420
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1567
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1592
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1729
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1754
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1873
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1877
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2086
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2179
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2221
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2317
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2420
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2485
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2572
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2665
+msgid "[vector: any]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:43
+msgid "Vector layer with wrong or missing CRS"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:44
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:50
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:76
+msgid "**Assigned CRS**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:45
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:270
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:463
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1042
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2020
+msgid "``CRS``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:46
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:271
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:464
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:956
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1043
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2021
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2225
+msgid "[crs]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:48
+msgid "Default: ``EPSG:4326 - WGS84``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:49
+msgid "Select the new CRS to assign to the vector layer"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:52
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:617
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:643
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:711
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:718
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:922
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:928
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:934
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:954
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1343
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1430
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1456
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1503
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1513
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1597
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1623
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1670
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1760
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1767
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2019
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2253
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2343
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2349
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2356
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2603
+msgid "Optional"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:53
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:77
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:129
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:156
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:276
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:299
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:357
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:413
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:523
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:549
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:604
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:656
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:840
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:860
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:959
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:981
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1065
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1088
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1127
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1150
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1270
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1293
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1344
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1366
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1462
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1508
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1629
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1675
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1802
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1825
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1906
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1942
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2026
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2048
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2106
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2128
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2178
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2230
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2275
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2320
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2374
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2439
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2502
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2524
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2579
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2625
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2680
+msgid "``OUTPUT``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:54
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:78
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:358
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:414
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:480
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:524
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:550
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:605
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:619
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:645
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:657
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1128
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1151
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1345
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1367
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1463
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1475
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1505
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1509
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1630
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1642
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1672
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1676
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1803
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1826
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1907
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1919
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1943
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1947
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2027
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2049
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2107
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2129
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2231
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2276
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2321
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2375
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2440
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2503
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2525
+msgid "[same as input]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:56
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:132
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:279
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:526
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:607
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:962
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1130
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1273
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1347
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1465
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1632
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1805
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1909
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2029
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2109
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2233
+msgid "Default: ``[Create temporary layer]``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:57
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:622
+msgid "Specify the output layer containing only the duplicates. One of:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+#: ../../docs/user_manual/processing_algs/algs_include.rst:4
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:136
+msgid "Create Temporary Layer (``TEMPORARY_OUTPUT``)"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:4
+#: ../../docs/user_manual/processing_algs/algs_include.rst:5
+msgid "Save to File…"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:5
+#: ../../docs/user_manual/processing_algs/algs_include.rst:6
+msgid "Save to Geopackage…"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:6
+#: ../../docs/user_manual/processing_algs/algs_include.rst:7
+msgid "Save to Database Table…"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:142
+msgid "The file encoding can also be changed here."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:66
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:145
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:214
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:288
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:346
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:402
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:468
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:534
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:630
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:761
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:849
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:970
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1077
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1139
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1192
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1282
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1355
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1487
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1654
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1814
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1930
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2037
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2117
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2167
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2264
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2363
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2428
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2513
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2614
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2669
+msgid "Outputs"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:79
+msgid "Vector layer with assigned projection"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:82
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:161
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:230
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:304
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:363
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:418
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:484
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:558
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:665
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:798
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:866
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:986
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1093
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1156
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1216
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1299
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1372
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1519
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1680
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1830
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1962
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2054
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2133
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2183
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2280
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2387
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2444
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2529
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2634
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2685
+msgid "Python code"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:84
+msgid "**Algorithm ID**: ``native:assignprojection``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+msgid ""
+"The *algorithm id* is displayed when you hover over the algorithm in the "
+"Processing Toolbox. The *parameter dictionary* provides the parameter "
+"NAMEs and values. See :ref:`processing_console` for details on how to run"
+" processing algorithms from the Python console."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:94
+msgid "Batch Nominatim geocoder"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:96
+msgid ""
+"Performs batch geocoding using the Nominatim service against an input "
+"layer string field. The output layer will have a point geometry "
+"reflecting the geocoded location as well as a number of attributes "
+"associated to the geocoded location."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:101
+msgid ""
+"|checkbox| Allows :ref:`features in-place modification "
+"<processing_inplace_edit>` of point features"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2700
+msgid "checkbox"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:105
+msgid ""
+"This algorithm is compliant with the `usage policy "
+"<https://operations.osmfoundation.org/policies/nominatim/>`_ of the "
+"Nominatim geocoding service provided by the OpenStreetMap Foundation."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:123
+msgid "Vector layer to geocode the features"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:124
+msgid "**Address field**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:125
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:341
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1415
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2488
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2575
+msgid "``FIELD``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:126
+msgid "[tablefield: string]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:127
+msgid "Field containing the addresses to geocode"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:128
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:155
+msgid "**Geocoded**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:130
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:157
+msgid "[vector: point]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:133
+msgid "Specify the output layer containing only the geocoded addresses. One of:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:137
+msgid "Save to File..."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:138
+msgid "Save to Geopackage..."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:139
+msgid "Save to Database Table..."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:140
+msgid "Append to Layer..."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:158
+msgid "Vector layer with point features corresponding to the geocoded addresses"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:163
+msgid "**Algorithm ID**: ``native:batchnominatimgeocoder``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:173
+msgid "Convert layer to spatial bookmarks"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:174
+msgid ""
+"Creates spatial bookmarks corresponding to the extent of features "
+"contained in a layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:188
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:335
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:396
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1122
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1186
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1256
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1337
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1408
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2084
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2219
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2483
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2570
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2663
+msgid "**Input Layer**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:190
+msgid "[vector: line, polygon]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:191
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:838
+msgid "The input vector layer"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:192
+msgid "**Bookmark destination**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:193
+msgid "``DESTINATION``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:194
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:720
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:936
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1022
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1039
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1437
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1604
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2605
+msgid "[enumeration]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:196
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:938
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1024
+msgid "Default: 0"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:197
+msgid "Select the destination for the bookmarks. One of:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:200
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:267
+msgid "0 --- Project bookmarks"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:201
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:268
+msgid "1 --- User bookmarks"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:202
+msgid "**Name field**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:203
+msgid "``NAME_EXPRESSION``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:204
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:209
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2090
+msgid "[expression]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:205
+msgid "Field or expression that will give names to the generated bookmarks"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:207
+msgid "**Group field**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:208
+msgid "``GROUP_EXPRESSION``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:210
+msgid "Field or expression that will provide groups for the generated bookmarks"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:224
+msgid "**Count of bookmarks added**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:225
+msgid "``COUNT``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:226
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:546
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:554
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:653
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:661
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:786
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:790
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:794
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1499
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1515
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1666
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1897
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1903
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1952
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1957
+msgid "[number]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:232
+msgid "**Algorithm ID**: ``native:layertobookmarks``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:242
+msgid "Convert spatial bookmarks to layer"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:243
+msgid ""
+"Creates a new layer containing polygon features for stored spatial "
+"bookmarks. The export can be filtered to only bookmarks belonging to the "
+"current project, to all user bookmarks, or a combination of both."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:259
+msgid "**Bookmark source**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:260
+msgid "``SOURCE``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:261
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1573
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1735
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1769
+msgid "[enumeration] [list]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:263
+msgid "Default: [0,1]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:264
+msgid "Select the source(s) of the bookmarks. One or more of:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:269
+msgid "**Output CRS**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:273
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2227
+msgid "Default: ``EPSG:4326 - WGS 84``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:274
+msgid "The CRS of the output layer"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:275
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:298
+msgid "**Output**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:277
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:300
+msgid "[vector: polygon]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:280
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:527
+msgid "Specify the output layer. One of:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:301
+msgid "The output (bookmarks) vector layer"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:306
+msgid "**Algorithm ID**: ``native:bookmarkstolayer``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:316
+msgid "Create attribute index"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:317
+msgid ""
+"Creates an index against a field of the attribute table to speed up "
+"queries. The support for index creation depends on both the layer's data "
+"provider and the field type."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:322
+msgid "No outputs are created: the index is stored on the layer itself."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:338
+msgid "Select the vector layer you want to create an attribute index for"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:340
+msgid "**Attribute to index**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:342
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1416
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1424
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2489
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2576
+msgid "[tablefield: any]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:343
+msgid "Field of the vector layer"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:356
+msgid "**Indexed layer**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:359
+msgid "A copy of the input vector layer with an index for the specified field"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:365
+msgid "**Algorithm ID**: ``native:createattributeindex``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:375
+msgid "Create spatial index"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:376
+msgid ""
+"Creates an index to speed up access to the features in a layer based on "
+"their spatial location. Support for spatial index creation is dependent "
+"on the layer's data provider."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:381
+msgid "No new output layers are created."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:383
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:442
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1541
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1996
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2552
+msgid "**Default menu**: :menuselection:`Vector --> Data Management Tools`"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:399
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2486
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2573
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2666
+msgid "Input vector layer"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:412
+msgid "Indexed layer"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:415
+msgid "A copy of the input vector layer with a spatial index"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:420
+msgid "**Algorithm ID**: ``native:createspatialindex``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:430
+msgid "Define Shapefile projection"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:431
+msgid ""
+"Sets the CRS (projection) of an existing Shapefile format dataset to the "
+"provided CRS. It is very useful when a Shapefile format dataset is "
+"missing the ``prj`` file and you know the correct projection."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:436
+msgid ""
+"Contrary to the :ref:`qgisassignprojection` algorithm, it modifies the "
+"current layer and will not output a new layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:439
+msgid ""
+"For Shapefile datasets, the ``.prj`` and ``.qpj`` files will be "
+"overwritten - or created if missing - to match the provided CRS."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:444
+msgid ""
+":ref:`qgisassignprojection`, :ref:`qgisfindprojection`, "
+":ref:`qgisreprojectlayer`"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:461
+msgid "Vector layer with missing projection information"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:462
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:952
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1041
+msgid "**CRS**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:465
+msgid "Select the CRS to assign to the vector layer"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:481
+msgid "The input vector layer with the defined projection"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:486
+msgid "**Algorithm ID**: ``qgis:definecurrentprojection``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:496
+msgid "Delete duplicate geometries"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:497
+msgid "Finds and removes duplicated geometries."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:499
+msgid ""
+"Attributes are not checked, so in case two features have identical "
+"geometries but different attributes, only one of them will be added to "
+"the result layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:503
+msgid ""
+":ref:`qgisdropgeometries`, :ref:`qgisremovenullgeometries`, "
+":ref:`qgisremoveduplicatesbyattribute`"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:521
+msgid "The layer with duplicate geometries you want to clean"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:522
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:548
+msgid "**Cleaned**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:544
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:651
+msgid "**Count of discarded duplicate records**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:545
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:652
+msgid "``DUPLICATE_COUNT``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:547
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:654
+msgid "Count of discarded duplicate records"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:551
+msgid "The output layer without any duplicated geometries"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:552
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:659
+msgid "**Count of retained records**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:553
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:660
+msgid "``RETAINED_COUNT``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:555
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:662
+msgid "Count of unique records"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:560
+msgid "**Algorithm ID**: ``native:deleteduplicategeometries``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:570
+msgid "Delete duplicates by attribute"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:571
+msgid ""
+"Deletes duplicate rows by only considering the specified field / fields. "
+"The first matching row will be retained, and duplicates will be "
+"discarded."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:576
+msgid ""
+"Optionally, these duplicate records can be saved to a separate output for"
+" analysis."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:579
+msgid ":ref:`qgisdeleteduplicategeometries`"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:596
+msgid "The input layer"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:597
+msgid "**Fields to match duplicates by**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:598
+msgid "``FIELDS``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:599
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:713
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1432
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1599
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1762
+msgid "[tablefield: any] [list]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:600
+msgid ""
+"Fields defining duplicates. Features with identical values for all these "
+"fields are considered duplicates."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:603
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:655
+msgid "**Filtered (no duplicates)**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:608
+msgid "Specify the output layer containing the unique features. One of:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:615
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:641
+msgid "**Filtered (duplicates)**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:618
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:644
+msgid "``DUPLICATES``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:621
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:647
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1477
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1644
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1921
+msgid "Default: ``[Skip output]``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+msgid "Skip Output"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:648
+msgid ""
+"Vector layer containing the removed features. Will not be produced if not"
+" specified (left as ``[Skip output]``)."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:658
+msgid "Vector layer containing the unique features."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:667
+msgid "**Algorithm ID**: ``native:removeduplicatesbyattribute``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:677
+msgid "Detect dataset changes"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:679
+msgid ""
+"Compares two vector layers, and determines which features are unchanged, "
+"added or deleted between the two. It is designed for comparing two "
+"different versions of the same dataset."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:687
+msgid "Detect dataset change example"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:701
+msgid "**Original layer**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:702
+msgid "``ORIGINAL``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:704
+msgid "The vector layer considered as the original version"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:705
+msgid "**Revised layer**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:706
+msgid "``REVISED``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:708
+msgid "The revised or modified vector layer"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:709
+msgid "**Attributes to consider for match**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:712
+msgid "``COMPARE_ATTRIBUTES``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:714
+msgid "Attributes to consider for match. By default, all attributes are compared."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:716
+msgid "**Geometry comparison behavior**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:719
+msgid "``MATCH_TYPE``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:722
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1439
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1899
+msgid "Default: 1"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:723
+msgid "Defines the criteria for comparison. Options:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:725
+msgid "0 --- Exact Match: includes the order and vertices count of geometries"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:727
+msgid ""
+"1 --- Tolerant Match (Topological Equality): geometries are considered "
+"equal"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:730
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:772
+msgid "**Unchanged features**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:731
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:773
+msgid "``UNCHANGED``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:732
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:742
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:752
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:774
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:778
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:782
+msgid "[vector: same as Original layer]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:733
+msgid "Specify the output vector layer containing the unchanged features. One of:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:740
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:776
+msgid "**Added features**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:741
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:777
+msgid "``ADDED``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:743
+msgid "Specify the output vector layer containing the added features. One of:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:750
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:780
+msgid "**Deleted features**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:751
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:781
+msgid "``DELETED``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:753
+msgid "Specify the output vector layer containing the deleted features. One of:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:775
+msgid "Vector layer containing the unchanged features."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:779
+msgid "Vector layer containing the added features."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:783
+msgid "Vector layer containing the deleted features."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:784
+msgid "**Count of unchanged features**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:785
+msgid "``UNCHANGED_COUNT``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:787
+msgid "Count of unchanged features."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:788
+msgid "**Count of features added in revised layer**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:789
+msgid "``ADDED_COUNT``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:791
+msgid "Count of features added in revised layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:792
+msgid "**Count of features deleted from original layer**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:793
+msgid "``DELETED_COUNT``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:795
+msgid "Count of features deleted from original layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:800
+msgid "**Algorithm ID**: ``native:detectvectorchanges``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:810
+msgid "Drop geometries"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:811
+msgid ""
+"Creates a simple *geometryless* copy of the input layer attribute table. "
+"It keeps the attribute table of the source layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:815
+msgid ""
+"If the file is saved in a local folder, you can choose between many file "
+"formats."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:818
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2199
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2467
+msgid ""
+"|checkbox| Allows :ref:`features in-place modification "
+"<processing_inplace_edit>` of point, line, and polygon features"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:821
+msgid ":ref:`qgisdeleteduplicategeometries`, :ref:`qgisremovenullgeometries`"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:839
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:859
+msgid "**Dropped geometries**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:841
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:861
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1271
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1294
+msgid "[table]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:842
+msgid "Specify the output geometryless layer. One of:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:862
+msgid "The output geometryless layer. A copy of the original attribute table."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:868
+msgid "**Algorithm ID**: ``native:dropgeometries``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:878
+msgid "Execute SQL"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:879
+msgid "Runs a simple or complex query with ``SQL`` syntax on the source layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:882
+msgid ""
+"Input datasources are identified with ``input1``, ``input2``... "
+"``inputN`` and a simple query will look like ``SELECT * FROM input1``."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:885
+msgid ""
+"Beside a simple query, you can add expressions or variables within the "
+"``SQL query`` parameter itself. This is particulary useful if this "
+"algorithm is executed within a Processing model and you want to use a "
+"model input as a parameter of the query. An example of a query will then "
+"be ``SELECT * FROM [% @table %]`` where ``@table`` is the variable that "
+"identifies the model input."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:891
+msgid "The result of the query will be added as a new layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:893
+msgid ":ref:`qgisspatialiteexecutesql`, :ref:`qgispostgisexecutesql`"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:908
+msgid "**Additional input datasources (called input1, .., inputN in the query)**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:909
+msgid "``INPUT_DATASOURCES``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:910
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1018
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2013
+msgid "[vector: any] [list]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:911
+msgid ""
+"List of layers to query. In the SQL editor you can refer these layers "
+"with their **real** name or also with **input1**, **input2**, **inputN** "
+"depending on how many layers have been chosen."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:915
+msgid "**SQL query**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:916
+msgid "``INPUT_QUERY``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:917
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:924
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:930
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1204
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1208
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1212
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1458
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1625
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1893
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2255
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2345
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2351
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2358
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2379
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2383
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2424
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2493
+msgid "[string]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:918
+msgid "Type the string of your SQL query, e.g. ``SELECT * FROM input1``."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:920
+msgid "**Unique identifier field**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:923
+msgid "``INPUT_UID_FIELD``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:925
+msgid "Specify the column with unique ID"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:926
+msgid "**Geometry field**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:929
+msgid "``INPUT_GEOMETRY_FIELD``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:931
+msgid "Specify the geometry field"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:932
+msgid "**Geometry type**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:935
+msgid "``INPUT_GEOMETRY_TYPE``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:939
+msgid ""
+"Choose the geometry of the result. By default the algorithm will "
+"autodetect it. One of:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:943
+msgid "0 --- Autodetect"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:944
+msgid "1 --- No geometry"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:945
+msgid "2 --- Point"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:946
+msgid "3 --- LineString"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:947
+msgid "4 --- Polygon"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:948
+msgid "5 --- MultiPoint"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:949
+msgid "6 --- MultiLineString"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:950
+msgid "7 --- MultiPolygon"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:955
+msgid "``INPUT_GEOMETRY_CRS``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:957
+msgid "The CRS to assign to the output layer"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:958
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:980
+msgid "**SQL Output**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:963
+msgid "Specify the output layer created by the query. One of:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:983
+msgid "Vector layer created by the query"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:988
+msgid "**Algorithm ID**: ``qgis:executesql``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:998
+msgid "Export layers to DXF"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1000
+msgid ""
+"Exports layers to DXF file. For each layer, you can choose a field whose "
+"values are used to split features in generated destination layers in DXF "
+"output."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1003
+msgid ":ref:`create_dxf_files`"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1016
+msgid "**Input layers**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1017
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2012
+msgid "``LAYERS``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1019
+msgid "Input vector layers to export"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1020
+msgid "**Symbology mode**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1021
+msgid "``SYMBOLOGY_MODE``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1025
+msgid "Type of symbology to apply to output layers. You can choose between:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1027
+msgid "0 --- No Symbology"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1028
+msgid "1 --- Feature Symbology"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1029
+msgid "2 --- Symbol Layer Symbology"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1031
+msgid "**Symbology scale**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1032
+msgid "``SYMBOLOGY_SCALE``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1033
+msgid "[scale]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1035
+msgid "Default: 1:1 000 000"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1036
+msgid "Default scale of data export."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1037
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2422
+msgid "**Encoding**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1038
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1203
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2423
+msgid "``ENCODING``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1040
+msgid "Encoding to apply to layers."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1044
+msgid "Choose the CRS for the output layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1045
+msgid "**Use layer title as name**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1046
+msgid "``USE_LAYER_TITLE``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1047
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1054
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1060
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1449
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1616
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1797
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1886
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2094
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2101
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2497
+msgid "[boolean]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1049
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1056
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1062
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1618
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1799
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1888
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2103
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2499
+msgid "Default: False"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1050
+msgid ""
+"Name the output layer with the layer title (as set in QGIS) instead of "
+"the layer name."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1052
+msgid "**Force 2D**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1053
+msgid "``FORCE_2D``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1058
+msgid "**Export labels as MTEXT elements**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1059
+msgid "``MTEXT``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1063
+msgid "Exports labels as MTEXT or TEXT elements"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1064
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1087
+msgid "**DXF**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1066
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1089
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2162
+msgid "[file]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1068
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2323
+msgid "Default: ``[Save to temporary file]``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1069
+msgid "Specification of the output DXF file. One of:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+msgid "Save to a Temporary File"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1090
+msgid ":file:`.DXF` file containing the input layers"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1095
+msgid "**Algorithm ID**: ``native:dxfexport``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1105
+msgid "Extract selected features"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1106
+msgid "Saves the selected features as a new layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1108
+msgid ""
+"If the selected layer has no selected features, the newly created layer "
+"will be empty."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1125
+msgid "Layer to save the selection from"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1126
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1149
+msgid "**Selected features**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1131
+msgid "Specify the vector layer for the selected features. One of:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1152
+msgid ""
+"Vector layer with only the selected features, or no feature if none was "
+"selected."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1158
+msgid "**Algorithm ID**: ``native:saveselectedfeatures``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1168
+msgid "Extract Shapefile encoding"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1170
+msgid ""
+"Extracts the attribute encoding information embedded in a Shapefile. Both"
+" the encoding specified by an optional :file:`.cpg` file and any encoding"
+" details present in the :file:`.dbf` LDID header block are considered."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1189
+msgid "ESRI Shapefile (:file:`.SHP`) Layer to extract the encoding information."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1202
+msgid "**Shapefile encoding**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1205
+msgid "Encoding information specified in the input file"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1206
+msgid "**CPG encoding**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1207
+msgid "``CPG_ENCODING``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1209
+msgid "Encoding information specified in any optional :file:`.CPG` file"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1210
+msgid "**LDID encoding**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1211
+msgid "``LDID_ENCODING``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1213
+msgid "Encoding information specified in :file:`.dbf` LDID header block"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1218
+msgid "**Algorithm ID**: ``native:shpencodinginfo``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1228
+msgid "Find projection"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1229
+msgid ""
+"Creates a shortlist of candidate coordinate reference systems, for "
+"instance for a layer with an unknown projection."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1232
+msgid ""
+"The area that the layer is expected to cover must be specified via the "
+"target area parameter. The coordinate reference system for this target "
+"area must be known to QGIS."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1237
+msgid ""
+"The algorithm operates by testing the layer's extent in every known "
+"reference system and then listing any for which the bounds would be near "
+"the target area if the layer was in this projection."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1241
+msgid ""
+":ref:`qgisassignprojection`, :ref:`qgisdefinecurrentprojection`, "
+":ref:`qgisreprojectlayer`"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1259
+msgid "Layer with unknown projection"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1260
+msgid "**Target area for layer (xmin, xmax, ymin, ymax)**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1261
+msgid "``TARGET_AREA``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1262
+msgid "[extent]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1263
+msgid "The area that the layer covers."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+msgid "Available methods are:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:5
+msgid ""
+"Calculate from layer…: uses extent of a layer loaded in the current "
+"project"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:6
+msgid ""
+"Calculate from layout map…: uses extent of a :ref:`layout map item "
+"<layout_map_item>` in the active project"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+msgid ""
+"Calculate from bookmark…: uses extent of a saved :ref:`bookmark "
+"<sec_bookmarks>`"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+msgid "Use map canvas extent"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:10
+msgid ""
+"Draw on canvas: click and drag a rectangle delimiting the area to take "
+"into account"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:11
+msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1269
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1292
+msgid "**CRS candidates**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1274
+msgid ""
+"Specify the table (geometryless layer) for the CRS suggestions (EPSG "
+"codes). One of:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1295
+msgid "A table with all the CRS (EPSG codes) of the matching criteria."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1301
+msgid "**Algorithm ID**: ``qgis:findprojection``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1311
+msgid "Flatten relationship"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1313
+msgid ""
+"Flattens a :ref:`relationship <vector_relations>` for a vector layer, "
+"exporting a single layer containing one parent feature per related child "
+"feature. This master feature contains all the attributes for the related "
+"features. This allows to have the relation as a plain table that can be "
+"e.g. exported to CSV."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1323
+msgid ""
+"Form of a region with related children (left) - A duplicate region "
+"feature for each related child, with joined attributes (right)"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1340
+msgid "Layer with the relationship that should be de-normalized"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1341
+msgid "**Flattened Layer**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1348
+msgid "Specify the output (flattened) layer. One of:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1365
+msgid "**Flattened layer**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1368
+msgid ""
+"A layer containing master features with all the attributes for the "
+"related features"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1374
+msgid "**Algorithm ID**: ``native:flattenrelationships``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1384
+msgid "Join attributes by field value"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1385
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1532
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1693
+msgid ""
+"Takes an input vector layer and creates a new vector layer that is an "
+"extended version of the input one, with additional attributes in its "
+"attribute table."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1389
+msgid ""
+"The additional attributes and their values are taken from a second vector"
+" layer. An attribute is selected in each of them to define the join "
+"criteria."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1393
+msgid ":ref:`qgisjoinbynearest`, :ref:`qgisjoinattributesbylocation`"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1411
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1568
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1730
+msgid ""
+"Input vector layer. The output layer will consist of the features of this"
+" layer with attributes from matching features in the second layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1414
+msgid "**Table field**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1417
+msgid "Field of the source layer to use for the join"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1418
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1875
+msgid "**Input layer 2**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1419
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1876
+msgid "``INPUT_2``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1421
+msgid "Layer with the attribute table to join"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1422
+msgid "**Table field 2**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1423
+msgid "``FIELD_2``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1425
+msgid ""
+"Field of the second (join) layer to use for the join The type of the "
+"field must be equal to (or compatible with) the input table field type."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1428
+msgid "**Layer 2 fields to copy**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1431
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1880
+msgid "``FIELDS_TO_COPY``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1433
+msgid ""
+"Select the specific fields you want to add. By default all the fields are"
+" added."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1435
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1602
+msgid "**Join type**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1436
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1603
+msgid "``METHOD``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1440
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1605
+msgid "The type of the final joined layer. One of:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1442
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1607
+msgid "0 --- Create separate feature for each matching feature (one-to-many)"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1444
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1609
+msgid "1 --- Take attributes of the first matching feature only (one-to-one)"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1447
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1614
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1795
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1884
+msgid "**Discard records which could not be joined**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1448
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1615
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1796
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1885
+msgid "``DISCARD_NONMATCHING``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1451
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2096
+msgid "Default: True"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1452
+msgid "Check if you don't want to keep the features that could not be joined"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1454
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1621
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1891
+msgid "**Joined field prefix**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1457
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1624
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1892
+msgid "``PREFIX``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1459
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1626
+msgid ""
+"Add a prefix to joined fields in order to easily identify them and avoid "
+"field name collision"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1461
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1507
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1628
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1674
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1801
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1824
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1905
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1941
+msgid "**Joined layer**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1466
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1633
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1806
+msgid "Specify the output vector layer for the join. One of:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1473
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1501
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1640
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1668
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1917
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1945
+msgid "**Unjoinable features from first layer**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1474
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1504
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1641
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1671
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1918
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1946
+msgid "``NON_MATCHING``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1478
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1645
+msgid ""
+"Specify the output vector layer for unjoinable features from first layer."
+" One of:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1497
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1664
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1950
+msgid "**Number of joined features from input table**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1498
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1665
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1951
+msgid "``JOINED_COUNT``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1506
+msgid "Vector layer with the non-matched features"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1510
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1677
+msgid "Output vector layer with added attributes from the join"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1511
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1955
+msgid "**Number of unjoinable features from input table**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1514
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1956
+msgid "``UNJOINABLE_COUNT``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1521
+msgid "**Algorithm ID**: ``native:joinattributestable``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1531
+msgid "Join attributes by location"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1536
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1697
+msgid ""
+"The additional attributes and their values are taken from a second vector"
+" layer. A spatial criteria is applied to select the values from the "
+"second layer that are added to each feature from the first layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1543
+msgid ""
+":ref:`qgisjoinbynearest`, :ref:`qgisjoinattributestable`, "
+":ref:`qgisjoinbylocationsummary`"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1547
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1709
+msgid "Exploring spatial relations"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+msgid ""
+"Geometric predicates are boolean functions used to determine the spatial "
+"relation a feature has with another by comparing whether and how their "
+"geometries share a portion of space."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:10
+msgid "Looking for spatial relations between layers"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:12
+msgid ""
+"Using the figure above, we are looking for the green circles by spatially"
+" comparing them to the orange rectangle feature. Available geometric "
+"predicates are:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:19
+msgid "*Intersect*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:17
+msgid ""
+"Tests whether a geometry intersects another. Returns 1 (true) if the "
+"geometries spatially intersect (share any portion of space - overlap or "
+"touch) and 0 if they don’t. In the picture above, this will return "
+"circles 1, 2 and 3."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:26
+msgid "*Contain*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:22
+msgid ""
+"Returns 1 (true) if and only if no points of b lie in the exterior of a, "
+"and at least one point of the interior of b lies in the interior of a. In"
+" the picture, no circle is returned, but the rectangle would be if you "
+"would look for it the other way around, as it contains circle 1 "
+"completely. This is the opposite of *are within*."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:30
+msgid "*Disjoint*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:29
+msgid ""
+"Returns 1 (true) if the geometries do not share any portion of space (no "
+"overlap, not touching). Only circle 4 is returned."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:34
+msgid "*Equal*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:33
+msgid ""
+"Returns 1 (true) if and only if geometries are exactly the same. No "
+"circles will be returned."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:39
+msgid "*Touch*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:37
+msgid ""
+"Tests whether a geometry touches another. Returns 1 (true) if the "
+"geometries have at least one point in common, but their interiors do not "
+"intersect. Only circle 3 is returned."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:44
+msgid "*Overlap*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:42
+msgid ""
+"Tests whether a geometry overlaps another. Returns 1 (true) if the "
+"geometries share space, are of the same dimension, but are not completely"
+" contained by each other. Only circle 2 is returned."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:48
+msgid "*Are within*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:47
+msgid ""
+"Tests whether a geometry is within another. Returns 1 (true) if geometry "
+"a is completely inside geometry b. Only circle 1 is returned."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:56
+msgid "*Cross*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:51
+msgid ""
+"Returns 1 (true) if the supplied geometries have some, but not all, "
+"interior points in common and the actual crossing is of a lower dimension"
+" than the highest supplied geometry. For example, a line crossing a "
+"polygon will cross as a line (true). Two lines crossing will cross as a "
+"point (true). Two polygons cross as a polygon (false). In the picture, no"
+" circles will be returned."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1565
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1727
+msgid "**Join to features in**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1571
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1733
+msgid "**Where the features**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1572
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1734
+msgid "``PREDICATE``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1575
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1737
+msgid "Default: [0]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1576
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1738
+msgid ""
+"Type of spatial relation the source feature should have with the target "
+"feature so that they could be joined. One or more of:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1579
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1741
+msgid "0 --- intersect"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1580
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1742
+msgid "1 --- contain"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1581
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1743
+msgid "2 --- equal"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1582
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1744
+msgid "3 --- touch"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1583
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1745
+msgid "4 --- overlap"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1584
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1746
+msgid "5 --- are within"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1585
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1747
+msgid "6 --- cross"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1587
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1749
+msgid ""
+"If more than one condition is chosen, at least one of them (OR operation)"
+" has to be met for a feature to be extracted."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1590
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1752
+msgid "**By comparing to**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1591
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1753
+msgid "``JOIN``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1593
+msgid ""
+"The join layer. Features of this vector layer will **add** their "
+"attributes to the source layer attribute table if they satisfy the "
+"spatial relationship."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1595
+msgid "**Fields to add (leave empty to use all fields)**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1598
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1761
+msgid "``JOIN_FIELDS``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1600
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1763
+msgid ""
+"Select the specific fields you want to add from the join layer. By "
+"default all the fields are added."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1611
+msgid ""
+"2 --- Take attributes of the feature with largest overlap only (one-to-"
+"one)"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1619
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1800
+msgid ""
+"Remove from the output the input layer's features which could not be "
+"joined"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1673
+msgid "Vector layer of the non-matched features"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1682
+msgid "**Algorithm ID**: ``native:joinattributesbylocation``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1692
+msgid "Join attributes by location (summary)"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1702
+msgid ""
+"The algorithm calculates a statistical summary for the values from "
+"matching features in the second layer (e.g. maximum value, mean value, "
+"etc)."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1706
+msgid ":ref:`qgisjoinattributesbylocation`"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1755
+msgid ""
+"The join layer. Features of this vector layer will **add** summaries of "
+"their attributes to the source layer attribute table if they satisfy the "
+"spatial relationship."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1758
+msgid "**Fields to summarize (leave empty to use all fields)**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1765
+msgid "**Summaries to calculate (leave empty to use all fields)**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1768
+msgid "``SUMMARIES``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1771
+msgid "Default: []"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1772
+msgid ""
+"For each input feature, statistics are calculated on joined fields of "
+"their matching features. One or more of:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1775
+msgid "0 --- count"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1776
+msgid "1 --- unique"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1777
+msgid "2 --- min"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1778
+msgid "3 --- max"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1779
+msgid "4 --- range"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1780
+msgid "5 --- sum"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1781
+msgid "6 --- mean"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1782
+msgid "7 --- median"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1783
+msgid "8 --- stddev"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1784
+msgid "9 --- minority"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1785
+msgid "10 --- majority"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1786
+msgid "11 --- q1"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1787
+msgid "12 --- q3"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1788
+msgid "13 --- iqr"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1789
+msgid "14 --- empty"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1790
+msgid "15 --- filled"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1791
+msgid "16 --- min_length"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1792
+msgid "17 --- max_length"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1793
+msgid "18 --- mean_length"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1827
+msgid "Output vector layer with summarized attributes from the join"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1832
+msgid "**Algorithm ID**: ``qgis:joinbylocationsummary``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1842
+msgid "Join attributes by nearest"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1843
+msgid ""
+"Takes an input vector layer and creates a new vector layer with "
+"additional fields in its attribute table. The additional attributes and "
+"their values are taken from a second vector layer. Features are joined by"
+" finding the closest features from each layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1849
+msgid ""
+"By default only the nearest feature is joined, but the join can also join"
+" to the k-nearest neighboring features."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1852
+msgid ""
+"If a maximum distance is specified, only features which are closer than "
+"this distance will be matched."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1855
+msgid ""
+":ref:`qgisnearestneighbouranalysis`, :ref:`qgisjoinattributestable`, "
+":ref:`qgisjoinattributesbylocation`, :ref:`qgisdistancematrix`"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1874
+msgid "The input layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1878
+msgid "The join layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1879
+msgid "**Layer 2 fields to copy (leave empty to copy all fields)**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1881
+msgid "[fields]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1882
+msgid "Join layer fields to copy (if empty, all fields will be copied)."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1889
+msgid "Remove from the output the input layer records which could not be joined"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1894
+msgid "Joined field prefix"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1895
+msgid "**Maximum nearest neighbors**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1896
+msgid "``NEIGHBORS``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1900
+msgid "Maximum number of nearest neighbors"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1901
+msgid "**Maximum distance**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1902
+msgid "``MAX_DISTANCE``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1904
+msgid "Maximum search distance"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1910
+msgid "Specify the vector layer containing the joined features. One of:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1922
+msgid ""
+"Specify the vector layer containing the features that could not be "
+"joined. One of:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1944
+msgid "The output joined layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1948
+msgid ""
+"Layer containing the features from first layer that could not be joined "
+"to any features in the join layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1953
+msgid "Number of features from the input table that have been joined."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1958
+msgid "Number of features from the input table that could not be joined."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1964
+msgid "**Algorithm ID**: ``native:joinbynearest``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1974
+msgid "Merge vector layers"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1975
+msgid ""
+"Combines multiple vector layers of the **same geometry** type into a "
+"single one."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1978
+msgid ""
+"The attribute table of the resulting layer will contain the fields from "
+"all input layers. If fields with the same name but different types are "
+"found then the exported field will be automatically converted into a "
+"string type field. New fields storing the original layer name and source "
+"are also added."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1983
+msgid ""
+"If any input layers contain Z or M values, then the output layer will "
+"also contain these values. Similarly, if any of the input layers are "
+"multi-part, the output layer will also be a multi-part layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1988
+msgid ""
+"Optionally, the destination coordinate reference system (CRS) for the "
+"merged layer can be set. If it is not set, the CRS will be taken from the"
+" first input layer. All layers will be reprojected to match this CRS."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1998
+msgid ":ref:`qgissplitvectorlayer`"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2011
+msgid "**Input Layers**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2014
+msgid ""
+"The layers that are to be merged into a single layer. Layers should be of"
+" the same geometry type."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2017
+msgid "**Destination CRS**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2022
+msgid ""
+"Choose the CRS for the output layer. If not specified, the CRS of the "
+"first input layer is used."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2025
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2047
+msgid "**Merged**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2030
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2110
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2234
+msgid "Specify the output vector layer. One of:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2050
+msgid ""
+"Output vector layer containing all the features and attributes from the "
+"input layers."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2056
+msgid "**Algorithm ID**: ``native:mergevectorlayers``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2066
+msgid "Order by expression"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2067
+msgid ""
+"Sorts a vector layer according to an expression: changes the feature "
+"index according to an expression."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2070
+msgid ""
+"Be careful, it might not work as expected with some providers, the order "
+"might not be kept every time."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2087
+msgid "Input vector layer to sort"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2088
+msgid "**Expression**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2089
+msgid "``EXPRESSION``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2091
+msgid "Expression to use for the sorting"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2092
+msgid "**Sort ascending**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2093
+msgid "``ASCENDING``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2097
+msgid "If checked the vector layer will be sorted from small to large values."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2099
+msgid "**Sort nulls first**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2100
+msgid "``NULLS_FIRST``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2104
+msgid "If checked, Null values are placed first"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2105
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2127
+msgid "**Ordered**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2130
+msgid "Output (sorted) vector layer"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2135
+msgid "**Algorithm ID**: ``native:orderbyexpression``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2145
+msgid "Repair Shapefile"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2147
+msgid "Repairs a broken ESRI Shapefile dataset by (re)creating the SHX file."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2160
+msgid "**Input Shapefile**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2163
+msgid "Full path to the ESRI Shapefile dataset with a missing or broken SHX file"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2177
+msgid "**Repaired layer**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2180
+msgid "The input vector layer with the SHX file repaired"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2185
+msgid "**Algorithm ID**: ``native:repairshapefile``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2195
+msgid "Reproject layer"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2196
+msgid ""
+"Reprojects a vector layer in a different CRS. The reprojected layer will "
+"have the same features and attributes of the input layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2202
+msgid ""
+":ref:`qgisassignprojection`, :ref:`qgisdefinecurrentprojection`, "
+":ref:`qgisfindprojection`"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2209
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2305
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2560
+msgid "Basic parameters"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2222
+msgid "Input vector layer to reproject"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2223
+msgid "**Target CRS**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2224
+msgid "``TARGET_CRS``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2228
+msgid "Destination coordinate reference system"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2229
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2274
+msgid "**Reprojected**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2241
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2331
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2591
+msgid "Advanced parameters"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2251
+msgid "**Coordinate Operation**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2254
+msgid "``OPERATION``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2256
+msgid ""
+"Specific operation to use for a particular reprojection task, instead of "
+"always forcing use of the current project's transformation settings. "
+"Useful when reprojecting a particular layer and control over the exact "
+"transformation pipeline is required. Requires proj version >= 6."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2261
+msgid "Read more at :ref:`datum_transformation`."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2277
+msgid "Output (reprojected) vector layer"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2282
+msgid "**Algorithm ID**: ``native:reprojectlayer``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2292
+msgid "Save vector features to file"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2294
+msgid "Saves vector features to a specified file dataset."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2296
+msgid ""
+"For dataset formats supporting layers, an optional layer name parameter "
+"can be used to specify a custom string. Optional GDAL-defined dataset and"
+" layer options can be specified. For more information on this, read the "
+"online `GDAL documentation <https://gdal.org/drivers/vector/index.html>`_"
+" on the format."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2315
+msgid "**Vector features**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2318
+msgid "Input vector layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2319
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2373
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2418
+msgid "**Saved features**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2324
+msgid "Specify the file to save the features to. One of:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2341
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2381
+msgid "**Layer name**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2344
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2382
+msgid "``LAYER_NAME``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2346
+msgid "Name to use for the output layer"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2347
+msgid "**GDAL dataset options**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2350
+msgid "``DATASOURCE_OPTIONS``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2352
+msgid ""
+"GDAL dataset creation options of the output format. Separate individual "
+"options with semicolons."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2354
+msgid "**GDAL layer options**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2357
+msgid "``LAYER_OPTIONS``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2359
+msgid ""
+"GDAL layer creation options of the output format. Separate individual "
+"options with semicolons."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2376
+msgid "Vector layer with the saved features."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2377
+msgid "**File name and path**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2378
+msgid "``FILE_PATH``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2380
+msgid "Output file name and path."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2384
+msgid "Name of the layer, if any."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2389
+msgid "**Algorithm ID**: ``native:savefeatures``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2399
+msgid "Set layer encoding"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2401
+msgid ""
+"Sets the encoding used for reading a layer's attributes. No permanent "
+"changes are made to the layer, rather it affects only how the layer is "
+"read during the current session."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2405
+msgid ""
+"Changing the encoding is only supported for some vector layer data "
+"sources."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2421
+msgid "Vector layer to set the encoding."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2425
+msgid "Text encoding to assign to the layer in the current QGIS session."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2438
+msgid "**Output layer**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2441
+msgid "Input vector layer with the set encoding."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2446
+msgid "**Algorithm ID**: ``native:setlayerencoding``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2456
+msgid "Split features by character"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2457
+msgid ""
+"Features are split into multiple output features by splitting a field's "
+"value at a specified character. For instance, if a layer contains "
+"features with multiple comma separated values contained in a single "
+"field, this algorithm can be used to split these values up across "
+"multiple output features. Geometries and other attributes remain "
+"unchanged in the output. Optionally, the separator string can be a "
+"regular expression for added flexibility."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2487
+msgid "**Split using values in the field**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2490
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2577
+msgid "Field to use for splitting"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2491
+msgid "**Split value using character**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2492
+msgid "``CHAR``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2494
+msgid "Character to use for splitting"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2495
+msgid "**Use regular expression separator**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2496
+msgid "``REGEX``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2501
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2523
+msgid "**Split**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2505
+msgid "Default: ``Create temporary layer``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2506
+msgid "Specify output vector layer. One of:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2526
+msgid "The output vector layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2531
+msgid "**Algorithm ID**: ``native:splitfeaturesbycharacter``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2541
+msgid "Split vector layer"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2542
+msgid ""
+"Creates a set of vectors in an output folder based on an input layer and "
+"an attribute. The output folder will contain as many layers as the unique"
+" values found in the desired field."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2547
+msgid ""
+"The number of files generated is equal to the number of different values "
+"found for the specified attribute."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2550
+msgid "It is the opposite operation of *merging*."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2554
+msgid ":ref:`qgismergevectorlayers`"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2574
+msgid "**Unique ID field**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2578
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2624
+msgid "**Output directory**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2580
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2626
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2681
+msgid "[folder]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2582
+msgid "Default: ``[Save to temporary folder]``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2583
+msgid "Specify the directory for the output layers. One of:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+msgid "Save to a Temporary Directory"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:4
+msgid "Save to Directory"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2601
+msgid "**Output file type**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2604
+msgid "``FILE_TYPE``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2607
+msgid "Default: ``gpkg`` in the dialog window"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2608
+msgid ""
+"Select the extension of the output files. If not specified or invalid, "
+"the output files format will be the one set in the \"Default output "
+"vector layer extension\" Processing setting."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2627
+msgid "The directory for the output layers"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2628
+msgid "**Output layers**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2629
+msgid "``OUTPUT_LAYERS``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2630
+msgid "[same as input] [list]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2631
+msgid "The output vector layers resulting from the split."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2636
+msgid "**Algorithm ID**: ``native:splitvectorlayer``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2646
+msgid "Truncate table"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2647
+msgid "Truncates a layer, by deleting all features from within the layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2649
+msgid ""
+"This algorithm modifies the layer in place, and deleted features cannot "
+"be restored!"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2679
+msgid "**Truncated layer**"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2682
+msgid "The truncated (empty) layer"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2687
+msgid "**Algorithm ID**: ``native:truncatetable``"
+msgstr ""
+
