@@ -2,10 +2,9 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# MarieSilvestre, 2023
 # Harrissou Sant-anna, 2023
 # 
 #, fuzzy
@@ -13,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-21 02:17+0000\n"
-"PO-Revision-Date: 2022-03-14 05:08+0000\n"
+"POT-Creation-Date: 2023-03-19 12:09+0100\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
 "Last-Translator: Harrissou Sant-anna, 2023\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -569,11 +568,6 @@ msgstr ""
 "Envoyer un message à la personne à qui est attribuée la PR dans la liste."
 
 #: ../../docs/developers_guide/git.rst:257
-msgid "Send a message to Marco Hugentobler (who manages the PR queue)."
-msgstr ""
-"Envoyer un message à Marco Hugentobler (qui gère la file d'attente des PR)"
-
-#: ../../docs/developers_guide/git.rst:258
 msgid ""
 "Send a message to the project steering committee asking them to help see "
 "your PR incorporated into the code base."
@@ -581,17 +575,17 @@ msgstr ""
 "Envoyez un message au comité de direction du projet en leur demandant "
 "assistance pour incorporer votre PR au code principal."
 
-#: ../../docs/developers_guide/git.rst:263
+#: ../../docs/developers_guide/git.rst:262
 msgid "Best practice for creating a pull request"
 msgstr "Bonnes pratiques pour la création de pull request"
 
-#: ../../docs/developers_guide/git.rst:265
+#: ../../docs/developers_guide/git.rst:264
 msgid "Always start a feature branch from current master."
 msgstr ""
 "Commencez toujours une nouvelle branche pour une fonctionnalité à partir de "
 "la branche master actuelle."
 
-#: ../../docs/developers_guide/git.rst:266
+#: ../../docs/developers_guide/git.rst:265
 msgid ""
 "If you are coding a feature branch, don't \"merge\" anything into that "
 "branch, rather rebase as described in the next point to keep your history "
@@ -601,7 +595,7 @@ msgstr ""
 "cette branche, plutôt rebasez comme décrit au point suivant pour garder "
 "votre historique propre."
 
-#: ../../docs/developers_guide/git.rst:268
+#: ../../docs/developers_guide/git.rst:267
 msgid ""
 "Before you create a pull request do ``git fetch upstream`` and ``git rebase "
 "upstream/master`` (given upstream is the remote for qgis user and not your "
@@ -613,7 +607,7 @@ msgstr ""
 "distant pour l'utilisateur qgis et non votre propre dépôt, contrôler votre "
 "``.git/config`` ou faites ``git remote -v | grep github.com/qgis``)."
 
-#: ../../docs/developers_guide/git.rst:272
+#: ../../docs/developers_guide/git.rst:271
 msgid ""
 "You may do a git rebase like in the last line repeatedly without doing any "
 "damage (as long as the only purpose of your branch is to get merged into "
@@ -623,7 +617,7 @@ msgstr ""
 "répétée sans dommage (du moment que l'objectif de votre branche est d'être "
 "fusionnée dans la branche master)."
 
-#: ../../docs/developers_guide/git.rst:275
+#: ../../docs/developers_guide/git.rst:274
 msgid ""
 "Attention: After a rebase you need to ``git push -f`` to your forked repo. "
 "**CORE DEVS: DO NOT DO THIS ON THE QGIS PUBLIC REPOSITORY!**"
@@ -632,11 +626,11 @@ msgstr ""
 "push -f`` vers votre dépôt forké. **DÉVELOPPEURS PRINCIPAUX: NE FAITES PAS "
 "CELA DANS LE DEPÔT QGIS PUBLIC !**"
 
-#: ../../docs/developers_guide/git.rst:280
+#: ../../docs/developers_guide/git.rst:279
 msgid "Special labels to notify documentors"
 msgstr "Notifications destinées à la documentation"
 
-#: ../../docs/developers_guide/git.rst:282
+#: ../../docs/developers_guide/git.rst:281
 msgid ""
 "There is a special label (``Needs Documentation``) that can be assigned by "
 "reviewers to your pull request to automatically generate issue reports in "
@@ -649,7 +643,7 @@ msgstr ""
 "dès que votre demande d'amélioration est fusionnée. N'oubliez pas de "
 "mentionner si votre fonctionnalité mérite une telle étiquette."
 
-#: ../../docs/developers_guide/git.rst:287
+#: ../../docs/developers_guide/git.rst:286
 msgid ""
 "Moreover, you can add special tags to your commit messages to provide more "
 "information to documenters. The commit message is then added to the "
@@ -659,7 +653,7 @@ msgstr ""
 "validation pour fournir plus d'informations aux documentalistes. Le  message"
 " de validation est ensuite ajouté au rapport de problème :"
 
-#: ../../docs/developers_guide/git.rst:290
+#: ../../docs/developers_guide/git.rst:289
 msgid ""
 "``[needs-docs]`` to instruct doc writers to please add some extra "
 "documentation after a fix or addition to an already existing functionality."
@@ -667,7 +661,7 @@ msgstr ""
 "``[needs-docs]`` permet aux rédacteurs d'identifier des correctifs ou des "
 "améliorations apportées à une fonctionnalité déjà existante."
 
-#: ../../docs/developers_guide/git.rst:292
+#: ../../docs/developers_guide/git.rst:291
 msgid ""
 "``[feature]`` in case of new functionality. Filling a good description in "
 "your PR will be a good start."
@@ -675,7 +669,7 @@ msgstr ""
 "``[feature]`` pour une nouvelle fonctionnalité. Fournir une bonne "
 "description dans la PR est vivement recommandé."
 
-#: ../../docs/developers_guide/git.rst:295
+#: ../../docs/developers_guide/git.rst:294
 msgid ""
 "Please devs use these labels (case insensitive) so doc writers have issues "
 "to work on and have an overview of things to do. BUT please also take time "
@@ -687,11 +681,11 @@ msgstr ""
 "version. Mais, veuillez s'il vous plaît prendre le temps d'ajouter quelques "
 "commentaires: soit dans le commit, soit dans la documentation elle-même."
 
-#: ../../docs/developers_guide/git.rst:301
+#: ../../docs/developers_guide/git.rst:300
 msgid "Due Diligence"
 msgstr "Vérifications nécessaires"
 
-#: ../../docs/developers_guide/git.rst:303
+#: ../../docs/developers_guide/git.rst:302
 msgid ""
 "QGIS is licensed under the GPL. You should make every effort to ensure you "
 "only submit patches which are unencumbered by conflicting intellectual "
@@ -702,11 +696,11 @@ msgstr ""
 "patchs non encombrés de problème de propriété intellectuelle. Ne soumettez "
 "pas de code non disponible sous licence GPL."
 
-#: ../../docs/developers_guide/git.rst:310
+#: ../../docs/developers_guide/git.rst:309
 msgid "Obtaining GIT Write Access"
 msgstr "Obtenir les droits d'écriture dans Git"
 
-#: ../../docs/developers_guide/git.rst:312
+#: ../../docs/developers_guide/git.rst:311
 msgid ""
 "Write access to QGIS source tree is by invitation. Typically when a person "
 "submits several (there is no fixed number here) substantial patches that "
@@ -734,7 +728,7 @@ msgstr ""
 "plusieurs patchs démontrant sa compréhension de la modification de la base "
 "de code, de manière propre, sans rien casser, etc."
 
-#: ../../docs/developers_guide/git.rst:324
+#: ../../docs/developers_guide/git.rst:323
 msgid ""
 "Since moving to GIT, we are less likely to grant write access to new "
 "developers since it is trivial to share code within github by forking QGIS "
@@ -744,7 +738,7 @@ msgstr ""
 "écriture aux nouveaux développeurs car il est maintenant trivial de partager"
 " du code sous GitHub en forkant QGIS et en proposant des pull requests."
 
-#: ../../docs/developers_guide/git.rst:328
+#: ../../docs/developers_guide/git.rst:327
 msgid ""
 "Always check that everything compiles before making any commits / pull "
 "requests. Try to be aware of possible breakages your commits may cause for "
