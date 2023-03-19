@@ -18,7 +18,7 @@ The development of this module has been sponsored by the European Union.
 
    forestry_intro
    map_georeferencing
-   stands_digitazing
+   stands_digitizing
    updating_stands
    systematic_sampling
    forest_maps   
