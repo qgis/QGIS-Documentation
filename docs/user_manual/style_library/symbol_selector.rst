@@ -120,11 +120,10 @@ You can setup some parameters that apply to the global symbol:
     being applied to, additional settings are available in the :guilabel:`Advanced`
     menu:
 
-    * :ref:`Symbol levels... <Symbols_levels>` to define the order of symbols
-      rendering
+    * :ref:`Symbol levels... <Symbols_levels>` to define the order of symbols rendering
     * :ref:`Data-defined Size Legend <data_defined_size_legend>`
-    * :guilabel:`Match to Saved Symbols...` and :guilabel:`Match to Symbols from
-      File...` to automatically :ref:`assign symbols to classes <categorized_advanced_menu>`
+    * :guilabel:`Match to Saved Symbols...` and :guilabel:`Match to Symbols from File...`
+      to automatically :ref:`assign symbols to classes <categorized_advanced_menu>`
 
 .. _symbol_layer:
 

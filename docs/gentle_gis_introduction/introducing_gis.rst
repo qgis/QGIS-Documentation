@@ -90,10 +90,10 @@ What is GIS Software / a GIS Application?
 You can see an example of what a **GIS Application** looks like :numref:`figure_gis_application`.
 GIS Applications are normally programs with a graphical user interface that can
 be manipulated using the mouse and keyboard. The application provides **menus**
-near to the top of the window (File, Edit etc.) which, when clicked using the
-mouse, show a panel of **actions**. These actions provide a way for you to tell
-the GIS Application what you want to do. For example you may use the menus to tell
-the GIS Application to add a new layer to the display output.
+near to the top of the window (:guilabel:`Project`, :guilabel:`Edit`, etc.) which,
+when clicked using the mouse, show a panel of **actions**.
+These actions provide a way for you to tell the GIS Application what you want to do.
+For example you may use the menus to tell the GIS Application to add a new layer to the display output.
 
 
 .. figure:: img/menus.png

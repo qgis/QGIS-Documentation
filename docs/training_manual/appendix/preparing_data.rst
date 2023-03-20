@@ -21,7 +21,7 @@ more complex data sources which may or may not be available for your region.
 .. note:: These instructions assume you have a good knowledge of QGIS and are
   not intended to be used as teaching material.
 
-|hard| |TY|  Create OSM based vector Files
+|hard| |TY|  Create OSM based vector files
 --------------------------------------------------------------------------------
 
 If you wish to replace the default data set with localised data for your course,
@@ -175,7 +175,7 @@ are added to the map):
 The important thing is that you have 7 vector layers matching those
 shown above and that all those layers have some data.
 
-|hard| |TY| Create SRTM DEM tiff Files
+|hard| |TY| Create SRTM DEM tiff files
 --------------------------------------------------------------------------------
 
 For modules :ref:`tm_create_vector_data` and :ref:`tm_rasters`, you'll also need
@@ -195,7 +195,7 @@ Keep the :file:`GeoTiff` format. Once the form is filled, click on the
 Once you have downloaded the required file(s), they should be saved in the
 :file:`exercise_data` directory, under :file:`raster/SRTM` subfolders.
 
-|hard| |TY| Create imagery tiff Files
+|hard| |TY| Create imagery tiff files
 --------------------------------------------------------------------------------
 
 
@@ -212,12 +212,12 @@ For reference, the image in the example data is:
    :align: center
 
 
-|basic| |TY| Replace Tokens
+|basic| |TY| Replace tokens
 --------------------------------------------------------------------------------
 
-Having created your localised dataset, the final step is to replace the tokens
+Having created your localized dataset, the final step is to replace the tokens
 in the :file:`substitutions.txt` file so that the appropriate names will appear
-in your localised version of the Training Manual.
+in your localized version of the Training Manual.
 
 The tokens you need to replace are as follows:
 

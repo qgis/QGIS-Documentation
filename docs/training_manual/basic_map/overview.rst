@@ -75,13 +75,13 @@ Favorite``. You should then be able to see your folder in the |favourites|
 ...............................................................................
 
 Your most often used sets of tools can be turned into toolbars for basic access.
-For example, the File toolbar allows you to save, load, print, and start a new
+For example, the :guilabel:`Project` toolbar allows you to save, load, print, and start a new
 project. You can easily customize the interface to see only the tools you use
 most often, adding or removing toolbars as necessary via the
 :menuselection:`View --> Toolbars` menu.
 
 Even if they are not visible in a toolbar, all of your tools will remain
-accessible via the menus. For example, if you remove the :guilabel:`File`
+accessible via the menus. For example, if you remove the :guilabel:`Project`
 toolbar (which contains the :guilabel:`Save` button), you can still save your
 map by clicking on the :guilabel:`Project` menu and then clicking on
 :guilabel:`Save`.
