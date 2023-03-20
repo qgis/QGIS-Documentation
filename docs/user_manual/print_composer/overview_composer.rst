@@ -28,9 +28,9 @@ Sample Session for beginners
 Before you start to work with the print layout, you need to load some raster
 or vector layers in the QGIS map canvas and adapt their properties to suit your
 own convenience. After everything is rendered and symbolized to your liking,
-click the |newLayout| :sup:`New Print Layout` icon in the toolbar or
-choose :menuselection:`File --> New Print Layout`. You will be prompted to
-choose a title for the new layout.
+click the |newLayout| :sup:`New Print Layout` icon in the :guilabel:`Project` toolbar
+or choose :menuselection:`Project -->` |newLayout| :menuselection:`New Print Layout`.
+You will be prompted to choose a title for the new layout.
 
 
 To demonstrate how to create a map please follow the next instructions.

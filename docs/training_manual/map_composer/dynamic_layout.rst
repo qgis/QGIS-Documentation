@@ -15,8 +15,8 @@ Also, the date of creation will adapt dynamically.
    and :file:`water.shp` into the map canvas and adapt its properties
    to suit your own convenience.
 #. After everything is rendered and symbolized to your liking,
-   click the |newLayout| :sup:`New Print Layout` icon in the toolbar
-   or choose :menuselection:`File --> New Print Layout`.
+   click the |newLayout| :sup:`New Print Layout` icon in the :guilabel:`Project` toolbar
+   or choose :menuselection:`Project -->` |newLayout| :menuselection:`New Print Layout`.
    You will be prompted to choose a title for the new print layout.
 #. We want to create a map layout consisting of a header and a map of
    the region near Swellendam, South Africa.

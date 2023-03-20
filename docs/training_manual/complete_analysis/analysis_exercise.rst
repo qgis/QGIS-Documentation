@@ -41,11 +41,11 @@ University of Cape Town.
 
 The solution will involve:
 
-#. Analysing a DEM raster layer to find the east facing slopes and the
+#. Analyzing a DEM raster layer to find the east facing slopes and the
    slopes with the correct gradients
-#. Analysing a rainfall raster layer to find the areas with the
+#. Analyzing a rainfall raster layer to find the areas with the
    correct amount of rainfall
-#. Analysing a zoning vector layer to find areas that are away from
+#. Analyzing a zoning vector layer to find areas that are away from
    human settlement and are of the correct size
 
 |FA| Setting up the Map
@@ -60,7 +60,7 @@ The solution will involve:
 #. Click :guilabel:`OK`
 #. Save the project file by clicking on the |fileSave|
    :sup:`Save Project` toolbar button, or use the
-   :menuselection:`File --> Save As...` menu item.
+   :menuselection:`Project --> Save As...` menu item.
 
    Save it in a new directory called :file:`Rasterprac`, that you
    should create somewhere on your computer.
