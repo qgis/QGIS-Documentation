@@ -115,8 +115,8 @@ Icon                            Substitution                        Icon        
 |indicatorLowAccuracy|          ``|indicatorLowAccuracy|``          |indicatorOffline|              ``|indicatorOffline|``
 ==============================  ==================================  ==============================  ==================================
 
-File
-....
+Project
+.......
 
 =======================  ===========================  =======================  ===========================
 Icon                     Substitution                 Icon                     Substitution
