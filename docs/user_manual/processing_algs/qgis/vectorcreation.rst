@@ -616,7 +616,7 @@ Python code
 Import geotagged photos
 -----------------------
 Creates a point layer corresponding to the geotagged locations from
-JPEG images from a source folder.
+JPEG or HEIC/HEIF images from a source folder.
 
 The point layer will contain a single PointZ feature per input file
 from which the geotags could be read.
