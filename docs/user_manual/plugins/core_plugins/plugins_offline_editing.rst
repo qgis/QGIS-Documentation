@@ -31,7 +31,7 @@ To use the plugin:
 #. In the :guilabel:`Select remote layers` section, check the layers you'd like to
    save. The content of the layers is saved to database tables.
 
-   note::
+   .. note::
      Since target database formats do not have native list support, the offline
      editing plugin transforms {string, number} list fields into string fields where
      values are separated by commas. This allows reading and edit of the contents
