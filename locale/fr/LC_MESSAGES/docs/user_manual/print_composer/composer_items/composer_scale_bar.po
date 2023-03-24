@@ -2,24 +2,24 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
+# Harrissou Sant-anna, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-16 07:30+0000\n"
-"PO-Revision-Date: 2022-03-14 05:12+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2022\n"
+"POT-Creation-Date: 2023-03-19 12:09+0100\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2023\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.11.0\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -44,7 +44,7 @@ msgstr ""
 "d'échelle que vous pourrez ensuite manipuler comme expliqué dans "
 ":ref:`interact_layout_item`."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:178
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:180
 msgid "scaleBar"
 msgstr "scaleBar"
 
@@ -247,22 +247,38 @@ msgstr "nombre de segments sur le côté :guilabel:`Droit`"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:109
 msgid ""
-"You can set how long a segment will be (:guilabel:`Fixed width`), or limit "
-"the scale bar size in ``mm`` with :guilabel:`Fit segment width` option. In "
-"the latter case, each time the map scale changes, the scale bar is resized "
-"(and its label updated) to fit the range set."
+"You can set the width of a segment or a range for the total length of the "
+"scale bar:"
 msgstr ""
-"Vous pouvez définir la longueur d'un segment (:guilabel:`Largeur fixe`), ou "
-"limiter la taille de la barre d'échelle en ``mm`` avec l'option "
-":guilabel:`ajuster la largeur de segment`. Dans ce dernier cas, chaque fois "
-"que l'échelle de la carte change, la barre d'échelle est redimensionnée (et "
-"son étiquette mise à jour) pour s'adapter à la plage définie."
+"Vous pouvez définir la largeur d'un segment ou une plage pour la longueur "
+"totale de la barre d'échelle :"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:113
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:111
+msgid ""
+"Set how long a segment will be in your scale bar units (:guilabel:`Fixed "
+"width`)"
+msgstr ""
+"Définir la longueur d'un segment dans l'unité de la barre d'écchelle "
+"(:guilabel:`Largeur fixe`)"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:112
+msgid ""
+"Or limit the total scale bar size in ``mm`` with :guilabel:`Fit segment "
+"width` option. In the latter case, each time the map scale changes, the "
+"scale bar is resized (and its label updated) to fit between the upper and "
+"lower range set."
+msgstr ""
+"Ou limiter la taille de la barre d'échelle en ``mm`` avec l'option "
+":guilabel:`Ajuster la largeur de segment`. Dans ce dernier cas, chaque fois "
+"que l'échelle de la carte change, la barre d'échelle est redimensionnée pour"
+" se caler entre les valeurs minimale et maximale définies (et son étiquette "
+"mise à jour)."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:115
 msgid ":guilabel:`Height` is used to define the height of the bar."
 msgstr "Le champ :guilabel:`Hauteur` permet de définir la hauteur des barres."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:114
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:116
 msgid ""
 ":guilabel:`Right segment subdivisions` is used to define the number of "
 "sections the right-side segments of the scale bar can have (for *Line Ticks "
@@ -273,7 +289,7 @@ msgstr ""
 "avoir (pour les styles de barre d'échelle *Repère en-dessous de la ligne*, "
 "*Repère au-milieu de la ligne* et *Repère au-dessus de la ligne*) ."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:117
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:119
 msgid ""
 ":guilabel:`Subdivision height` is used to define the height of the "
 "subdivision segment."
@@ -281,11 +297,11 @@ msgstr ""
 ":guilabel:`Hauteur subdivision` est utilisé pour définir la hauteur du "
 "segment de subdivision."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:121
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:123
 msgid "Display"
 msgstr "Affichage"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:123
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:125
 msgid ""
 "The :guilabel:`Display` group of the scale bar :guilabel:`Item Properties` "
 "panel provides the following functionalities:"
@@ -293,28 +309,28 @@ msgstr ""
 "Le groupe :guilabel:`Affichage` de la barre d'échelle :guilabel:`Propriétés "
 "de l'élément` offre les fonctionnalités suivantes :"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:131
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:133
 msgid "Scale Bar Display group"
 msgstr "Propriétés d'éffichage d'une barre d'échelle"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:133
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:135
 msgid "You can define how the scale bar will be displayed in its frame."
 msgstr ""
 "Vous pouvez définir comment l'échelle graphique sera affichée dans son "
 "cadre."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:135
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:137
 msgid ":guilabel:`Box margin` : space between text and frame borders"
 msgstr ""
 ":guilabel:`Marge de la boîte` : espace entre le texte et les bords du cadre"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:136
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:138
 msgid ":guilabel:`Label margin` : space between text and scale bar drawing"
 msgstr ""
 ":guilabel:`Marge des étiquettes` : espace entre le texte et la barre "
 "graphique"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:137
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:139
 msgid ""
 ":guilabel:`Vertical label placement`: it can be above or below the scale bar"
 " segment"
@@ -322,7 +338,7 @@ msgstr ""
 ":guilabel:`Placement vertical de l'étiquette` : il peut se faire au dessus "
 "ou en dessous des segments de la barre d'échelle"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:139
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:141
 msgid ""
 ":guilabel:`Horizontal label placement`: which would be centered at the scale"
 " bar segment's edge or center"
@@ -330,7 +346,7 @@ msgstr ""
 ":guilabel:`Placement horizontal de l'étiquette` : peut être centré sur "
 "chaque segment ou sur les bords des segments de la barre d'échelle"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:141
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:143
 msgid ""
 ":guilabel:`Primary fill` and :guilabel:`Secondary fill` of the scale bar "
 "drawing using :ref:`fill symbols properties <vector_fill_symbols>` (color, "
@@ -342,7 +358,7 @@ msgstr ""
 "<vector_fill_symbols>` (couleur, opacité, motifs, effets...) --- pour les "
 "styles *Boîte simple*, *Boîte double* et *Creux*"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:145
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:147
 msgid ""
 ":guilabel:`Line style` of the scale bar drawing using :ref:`line symbols "
 "properties <vector_line_symbols>` (color, stroke, join, cap style, patterns,"
@@ -353,7 +369,7 @@ msgstr ""
 "trait, jointure, style cap, motifs, effets...) --- pour tous sauf le style "
 "*Numérique*"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:148
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:150
 msgid ""
 ":guilabel:`Division style` and :guilabel:`Subdivision style` respectively "
 "for division and subdivision segments in *Line Ticks Up*, *Line Ticks "
@@ -368,7 +384,7 @@ msgstr ""
 " de symboles linéaires <vector_line_symbols>` (couleur, trait, jointure, "
 "style de cap, motifs, effets...)"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:152
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:154
 msgid ""
 ":guilabel:`Alignment` puts text on the left, center or right side of the "
 "frame (only for *Numeric* scale bar style)"
@@ -376,7 +392,7 @@ msgstr ""
 ":guilabel:`Alignement` met le texte à gauche, au centre ou à droite du cadre"
 " (uniquement pour le style *Numerique* de la barre d'échelle)"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:154
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:156
 msgid ""
 ":guilabel:`Font` to set the :ref:`properties <text_format>` (size, font, "
 "color, letter spacing, shadow, background...) of the scale bar label."
@@ -385,7 +401,7 @@ msgstr ""
 " police, couleur, espacement des lettres, ombre, fond...) du label de la "
 "barre d'échelle."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:158
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:160
 msgid ""
 "Since most of the display properties of the scale bar rely on symbols whose "
 "properties can be data-defined, it's possible to render data-defined scale "
@@ -395,7 +411,7 @@ msgstr ""
 "sur des symboles dont les propriétés peuvent être définies par des données, "
 "il est possible de rendre des barres d'échelle définies par des données."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:161
+#: ../../docs/user_manual/print_composer/composer_items/composer_scale_bar.rst:163
 msgid ""
 "**Example**: The following code applied to the bold property of the scale "
 "labels will display numbers in bold when they are a multiple of 500:"
