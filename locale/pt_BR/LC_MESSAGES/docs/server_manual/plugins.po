@@ -2,27 +2,26 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
-# Vanessa Stelzer, 2022
-# Letícia Jardim, 2022
-# Ana Camargo, 2022
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# Kyle Felipe Vieira Roberto <kylefelipe@gmail.com>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-27 02:49+0000\n"
-"PO-Revision-Date: 2022-03-14 05:07+0000\n"
-"Last-Translator: Ana Camargo, 2022\n"
+"POT-Creation-Date: 2023-03-19 12:09+0100\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Kyle Felipe Vieira Roberto <kylefelipe@gmail.com>, 2023\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.10.3\n"
+"Generated-By: Babel 2.11.0\n"
 "Language: pt_BR\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -64,6 +63,20 @@ msgstr ""
 #: ../../docs/server_manual/plugins.rst:24
 msgid "Location of plugins"
 msgstr "Localização dos plugins"
+
+#: ../../docs/server_manual/plugins.rst:26
+msgid ""
+"By default, on Debian based systems, QGIS Server will look for plugins "
+"located in :file:`/usr/lib/qgis/plugins`. The default value is displayed "
+"when QGIS Server is starting, in the logs. It's possible to set a custom "
+"path by defining the environment variable ``QGIS_PLUGINPATH`` in the web "
+"server configuration."
+msgstr ""
+"Por padrão, nos sistemas baseados em Debian, QGIS Server irá verificar por "
+"plugins localizados em :file:`/usr/lib/qgis/plugins`. O valor padrão exibido"
+" quando QGIS Server está iniciando, nos logs. É possível configurar um "
+"caminho customizado através da alteração da variável de ambiente "
+"``QGIS_PLUGINPATH`` nas configurações do servidor web."
 
 #: ../../docs/server_manual/plugins.rst:32
 msgid "Installation"
@@ -150,7 +163,7 @@ msgstr "Configuração do Servidor HTTP"
 
 #: ../../docs/server_manual/plugins.rst:100
 msgid "Apache"
-msgstr "Apache"
+msgstr ""
 
 #: ../../docs/server_manual/plugins.rst:102
 msgid ""
@@ -161,6 +174,16 @@ msgstr ""
 "Para poder usar plugins de servidor, FastCGI precisa saber onde procurar. "
 "Portanto, temos que modificar o arquivo de configuração do Apache para "
 "indicar a variável de ambiente ``QGIS_PLUGINPATH`` para FastCGI:"
+
+#: ../../docs/server_manual/plugins.rst:110
+msgid ""
+"Moreover, a basic HTTP authorization is necessary to play with the "
+"HelloWorld plugin previously introduced. So we have to update the Apache "
+"configuration file a last time:"
+msgstr ""
+"Além disso, uma autorização HTTP básica é necessária para jogar com o plugin"
+" HelloWorld introduzido anteriormente. Portanto, temos que atualizar o "
+"arquivo de configuração do Apache uma última vez:"
 
 #: ../../docs/server_manual/plugins.rst:123
 msgid "Then, restart Apache:"
@@ -173,3 +196,8 @@ msgstr "Como usar um plug-in"
 #: ../../docs/server_manual/plugins.rst:132
 msgid "Test the server with the HelloWorld plugin:"
 msgstr "Teste o servidor com o plugin HelloWorld:"
+
+#: ../../docs/server_manual/plugins.rst:139
+msgid ""
+"You can have a look at the default GetCapabilities of the QGIS server at:"
+msgstr "Você pode dar uma olhada no padrão GetCapabilities do QGIS Server em:"
