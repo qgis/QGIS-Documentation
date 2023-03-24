@@ -875,6 +875,13 @@ To add faces to a mesh layer:
 #. Press :kbd:`Esc` to abort the face digitizing.
 #. Right-click to validate the face.
 
+.. _figure_invalid_mesh:
+
+.. figure:: img/invalid_mesh.png
+   :align: center
+
+   Examples of invalid mesh
+
 .. _remove_mesh_items:
 
 Removing mesh elements
@@ -905,7 +912,8 @@ To move vertices and faces of a mesh layer:
 #. Enable the |meshDigitizing| :sup:`Digitize mesh elements` tool
 #. To start moving the element, click on a vertex or the centroid of a face/edge
 #. Move the cursor to the target location (snapping to vector features is supported).
-#. If the new location does not generate an invalid mesh, the moved elements appear in green.
+#. If the new location does not generate an :ref:`invalid mesh <figure_invalid_mesh>`,
+   the moved elements appear in green.
    Click again to release them at this location.
    Faces whose vertices are all selected are translated, their neighbors are reshaped accordingly.
 
