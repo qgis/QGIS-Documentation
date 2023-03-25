@@ -21,33 +21,42 @@ if len(argv) > 1:
 headers = {'Authorization': 'Bearer ' + TX_TOKEN}
 project_id = "o:qgis:p:qgis-documentation"
 
-# Load target languages of the QGIS Documentation project from transifex
-target_languages = requests.get(
-    f"https://rest.api.transifex.com/projects/{project_id}/languages",
-    headers=headers
-    )
-target_languages = target_languages.json()
-# Where we store statistics of each language
-language_rate = {}
+def build_languages_list():
+    """
+    Fetch languages available in Transifex
+    :return: A dict with languages code and name
+    """
 
-# Fetch list of languages
-for lang in target_languages['data']:
-    code = lang['attributes']['code']
-    language_rate[code] = {'name': lang['attributes']['name']}
+    # Load target languages of the QGIS Documentation project from Transifex
+    target_languages = requests.get(
+        f"https://rest.api.transifex.com/projects/{project_id}/languages",
+        headers=headers
+        )
+    target_languages = target_languages.json()
 
-# Add English to the list
-language_rate['en'] = {'name': 'English'}
-# Sort by language name for a better display in docs
-language_rate = {k: v for k, v in sorted(
-    language_rate.items(),
-    key=lambda item: item[1]['name'])
-}
-# print(language_rate, ' counts ', len(language_rate))
+    # Fetch list of languages
+    languages_list = {}
+    for lang in target_languages['data']:
+        code = lang['attributes']['code']
+        languages_list[code] = {'name': lang['attributes']['name']}
 
-# Extract statistics for every single available languages,
-# namely their number of translated strings
-for lang in language_rate:
-    # print('LANG  ', language_rate[lang]['name'])
+    # Add English to the list
+    languages_list['en'] = {'name': 'English'}
+    # Sort by language name for a better display in docs
+    languages_list = {k: v for k, v in sorted(
+        languages_list.items(),
+        key=lambda item: item[1]['name'])
+    }
+    return languages_list
+
+
+def extract_language_stats(lang):
+    """
+    Extracts statistics for available language,
+    namely the number of translated strings and calculates percentage
+    :param lang: the language code
+    :return: dict elements with number of translated strings and the corresponding ratio
+    """
 
     resource_language_stats = requests.get(
         f"https://rest.api.transifex.com/resource_language_stats?"
@@ -62,11 +71,18 @@ for lang in language_rate:
         translated_strings += resource['attributes']['translated_strings']
         total_strings += resource['attributes']['total_strings']
 
-    language_rate[lang]['translated_strings'] = translated_strings
-    language_rate[lang]['percentage'] = round(
-        translated_strings * 100 / total_strings, 2)
+    # For actual translated strings we need to ignore the notranslate ones
+    translated_strings -= total_notranslate
+    percentage = round(
+        translated_strings * 100 / (total_strings - total_notranslate),
+        2)
 
-# print(language_rate)
+    return {'translated_strings': translated_strings,
+            'percentage': percentage,
+           }
+
+
+
 
 
 def walk_pagination(results):
@@ -177,8 +193,16 @@ def load_lang_substitutions(target_langs):
     return text
 
 
+# Let's pull the stats for each language now
+language_rate = build_languages_list()
+for lang in language_rate:
+    language_rate[lang].update(
+        extract_language_stats(lang),
+        )
 #Add global stats to English language
 language_rate['en'].update(project_stats(language_rate))
+
+print('language_rate', language_rate)
 
 # Store the stats as a table in a rst file
 statsfile = path.join(path.dirname(__file__),
