@@ -173,7 +173,7 @@ def load_lang_substitutions(target_langs):
             f".. |global_percentage| replace:: **{global_percentage}%**\n\n"
             )
 
-    for lang in target_langs:
+    for lang in sorted(target_langs):
         if lang != 'en':
             text += (f".. |stats_{lang}| replace:: {target_langs[lang]['percentage']}\n")
 
