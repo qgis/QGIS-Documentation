@@ -21,103 +21,140 @@ if len(argv) > 1:
 headers = {'Authorization': 'Bearer ' + TX_TOKEN}
 project_id = "o:qgis:p:qgis-documentation"
 
-# Load target languages of the QGIS Documentation project from transifex
-target_languages = requests.get(
-    f"https://rest.api.transifex.com/projects/{project_id}/languages",
-    headers=headers
-    )
-target_languages = target_languages.json()
-# Where we store statistics of each language
-language_rate = {}
+def build_languages_list():
+    """
+    Fetch languages available in Transifex
+    :return: A dict with languages code and name
+    """
 
-# Fetch list of languages
-for lang in target_languages['data']:
-    code = lang['attributes']['code']
-    language_rate[code] = {'name': lang['attributes']['name']}
+    # Load target languages of the QGIS Documentation project from Transifex
+    target_languages = requests.get(
+        f"https://rest.api.transifex.com/projects/{project_id}/languages",
+        headers=headers
+        )
+    target_languages = target_languages.json()
 
-# Add English to the list
-language_rate['en'] = {'name': 'English'}
-# Sort by language name for a better display in docs
-language_rate = {k: v for k, v in sorted(
-    language_rate.items(),
-    key=lambda item: item[1]['name'])
-}
-# print(language_rate, ' counts ', len(language_rate))
+    # Fetch list of languages
+    languages_list = {}
+    for lang in target_languages['data']:
+        code = lang['attributes']['code']
+        languages_list[code] = {'name': lang['attributes']['name']}
 
-# Extract statistics for every single available languages,
-# namely their number of translated strings
-for lang in language_rate:
-    # print('LANG  ', language_rate[lang]['name'])
-    translated_strings = 0
-    total_strings = 0
+    # Add English to the list
+    languages_list['en'] = {'name': 'English'}
+    # Sort by language name for a better display in docs
+    languages_list = {k: v for k, v in sorted(
+        languages_list.items(),
+        key=lambda item: item[1]['name'])
+    }
+    return languages_list
+
+
+def extract_language_stats(lang):
+    """
+    Extracts statistics for available language,
+    namely the number of translated strings and calculates percentage
+    :param lang: the language code
+    :return: dict elements with number of translated strings and the corresponding ratio
+    """
 
     resource_language_stats = requests.get(
         f"https://rest.api.transifex.com/resource_language_stats?"
         f"filter[project]={project_id}&filter[language]=l:{lang}",
         headers=headers)
-    resource_language_stats = resource_language_stats.json()
+    all_resources = walk_pagination(resource_language_stats)
+    #print('all resources ', len(all_resources))
 
-    all_resources = resource_language_stats['data']
-
-    # Walk through pagination
-    while 'next' in resource_language_stats['links'].keys():
-        resource_language_stats = requests.get(
-            resource_language_stats['links']['next'],
-            headers=headers
-            ).json()
-        all_resources.extend(resource_language_stats['data'])
-
+    translated_strings = 0
+    total_strings = 0
     for resource in all_resources:
         translated_strings += resource['attributes']['translated_strings']
         total_strings += resource['attributes']['total_strings']
 
-    language_rate[lang]['translated_strings'] = translated_strings
-    language_rate[lang]['percentage'] = round(
-        translated_strings * 100 / total_strings, 2)
-    # Keep total count of available strings in 'en' only,
-    # no need to store multiple times
-    if lang == 'en':
-        language_rate[lang]['total_strings'] = total_strings
+    # For actual translated strings we need to ignore the notranslate ones
+    translated_strings -= total_notranslate
+    percentage = round(
+        translated_strings * 100 / (total_strings - total_notranslate),
+        2)
 
-# print(language_rate)
-
-# Stats for the whole project (== English source language)
-# Number of target translation languages declared in Transifex for the project
-nb_languages = len(language_rate) - 1
-# Total number of strings in English to translate
-total_strings = language_rate['en']['total_strings']
-# translation percentage of the whole project, let's not count 'en'
-total_translated_strings = sum(
-    language_rate[lang]['translated_strings']
-    for lang in language_rate if lang != 'en')
-global_percentage = round(
-    total_translated_strings*100/(total_strings * nb_languages), 2)
-
-language_rate['en'].update(
-    {'nb_languages': nb_languages,
-     'translated_strings': total_translated_strings,
-     'percentage': global_percentage
-     }
-    )
-
-# print('all ', language_rate)
+    return {'translated_strings': translated_strings,
+            'percentage': percentage,
+           }
 
 
-def load_overall_stats():
-    """Format statistics of translation in the project"""
+def count_untranslatable_resources():
+    """
+    Returns count of strings tagged as notranslate
+    """
 
-    text = (f".. list-table::\n"
-            f"   :widths: auto\n"
-            f"\n"
-            f"   * - Number of strings\n"
-            f"     - Number of target languages\n"
-            f"     - Overall Translation ratio\n"
-            f"   * - |total_strings|\n"
-            f"     - |nb_languages|\n"
-            f"     - |global_percentage|\n"
-            "\n")
+    # Load target languages of the QGIS Documentation project from Transifex
+    project_resources = requests.get(
+        f"https://rest.api.transifex.com/resources?filter[project]={project_id}",
+        headers=headers
+        )
+    all_project_resources = walk_pagination(project_resources)
+    #print('all_project_resources ', all_project_resources)
 
-    return text
+    total_notranslate = 0
+    for resource in all_project_resources:
+        resource_slug = resource['attributes']['slug']
+        notranslate_strings = requests.get(
+            f"https://rest.api.transifex.com/resource_strings?"
+            f"filter[resource]={project_id}:r:{resource_slug}&filter[tags][all]=notranslate",
+            headers=headers
+            )
+        all_notranslate_strings = walk_pagination(notranslate_strings)
+        total_notranslate += len(all_notranslate_strings)
+
+    print('notranslate    ', total_notranslate)
+    return total_notranslate
+
+
+def walk_pagination(results):
+    """
+    Fetch data from Transifex API across the pages
+    :param results: the request response
+    :return: complete and formatted response
+    """
+
+    results = results.json()
+    results_data = results['data']
+    # Walk through pagination
+    while 'next' in results['links'].keys():
+        if results['links']['next'] == None:
+            break
+        results = requests.get(
+            results['links']['next'],
+            headers=headers
+            ).json()
+        results_data.extend(results['data'])
+
+    #print('end of while ', len(results_data))
+    return results_data
+
+
+def project_stats(languages):
+    """
+    Calculates stats at the project level
+    """
+
+    # Number of target translation languages declared in Transifex for the project
+    nb_languages = len(languages) - 1
+    # Total number of strings in English to actually translate
+    total_strings = languages['en']['translated_strings']
+    # translation percentage of the whole project, let's not count 'en'
+    total_translated_strings = sum(
+        languages[lang]['translated_strings']
+        for lang in languages if lang != 'en')
+    global_percentage = round(
+        total_translated_strings*100/(total_strings * nb_languages), 2)
+
+    # print('all ', languages_list)
+    return {'nb_languages': nb_languages,
+            'total_strings': total_strings,
+            'translated_strings': total_translated_strings,
+            'percentage': global_percentage,
+           }
 
 
 def load_lang_stats(target_langs, nb_columns=1):
@@ -131,8 +168,8 @@ def load_lang_stats(target_langs, nb_columns=1):
     text = (".. list-table::\n"
             "   :widths: auto\n"
             "\n"
-            "   * - Language\n"
-            "     - Translation ratio (%)\n")
+            "   * - Language\n     - Translation ratio (%)\n"
+            )
     # Add more columns
     text += (
         "     - Language\n     - Translation ratio (%)\n" * (nb_columns - 1)
@@ -152,6 +189,7 @@ def load_lang_stats(target_langs, nb_columns=1):
     # Add empty cells to keep a well formatted rst table
     # when the number of target languages is not a multiple
     # of the number of columns
+    nb_languages = target_langs['en']['nb_languages']
     if nb_languages % nb_columns:
         remaining_cells = nb_columns - (nb_languages % nb_columns)
         text += ("     -\n     -\n" * remaining_cells)
@@ -168,16 +206,30 @@ def load_lang_substitutions(target_langs):
 
     text = (f".. list of substitutions for the statistics:\n\n"
             f".. |today| replace:: *{date.today()}*\n"
-            f".. |total_strings| replace:: **{total_strings}**\n"
-            f".. |nb_languages| replace:: **{nb_languages}**\n"
-            f".. |global_percentage| replace:: **{global_percentage}%**\n\n"
+            f".. |total_strings| replace:: **{target_langs['en']['total_strings']}**\n"
+            f".. |nb_languages| replace:: **{target_langs['en']['nb_languages']}**\n"
+            f".. |global_percentage| replace:: **{target_langs['en']['percentage']}%**\n\n"
             )
 
-    for lang in target_langs:
+    for lang in sorted(target_langs):
         if lang != 'en':
             text += (f".. |stats_{lang}| replace:: {target_langs[lang]['percentage']}\n")
 
     return text
+
+
+#Fetch count of the notranslate strings
+total_notranslate = count_untranslatable_resources()
+# Let's pull the stats for each language now
+language_rate = build_languages_list()
+for lang in language_rate:
+    language_rate[lang].update(
+        extract_language_stats(lang),
+        )
+#Add global stats to English language
+language_rate['en'].update(project_stats(language_rate))
+
+print('language_rate', language_rate)
 
 # Store the stats as a table in a rst file
 statsfile = path.join(path.dirname(__file__),
@@ -194,7 +246,14 @@ with open(statsfile, 'w') as f:
 
             f"*Last update:* |today|"
             f"\n\n"
-            f"{load_overall_stats()}"
+            f".. list-table::\n"
+            f"   :widths: auto\n\n"
+            f"   * - Number of strings\n"
+            f"     - Number of target languages\n"
+            f"     - Overall Translation ratio\n"
+            f"   * - |total_strings|\n"
+            f"     - |nb_languages|\n"
+            f"     - |global_percentage|\n\n"
             f"\n\n"
             f"{load_lang_stats(language_rate, nb_columns=3)}"
             f"\n\n"
