@@ -103,22 +103,6 @@ language_rate['en'].update(
 # print('all ', language_rate)
 
 
-def load_overall_stats():
-    """Format statistics of translation in the project"""
-
-    text = (f".. list-table::\n"
-            f"   :widths: auto\n"
-            f"\n"
-            f"   * - Number of strings\n"
-            f"     - Number of target languages\n"
-            f"     - Overall Translation ratio\n"
-            f"   * - |total_strings|\n"
-            f"     - |nb_languages|\n"
-            f"     - |global_percentage|\n"
-            "\n")
-
-    return text
-
 
 def load_lang_stats(target_langs, nb_columns=1):
     """
@@ -131,8 +115,8 @@ def load_lang_stats(target_langs, nb_columns=1):
     text = (".. list-table::\n"
             "   :widths: auto\n"
             "\n"
-            "   * - Language\n"
-            "     - Translation ratio (%)\n")
+            "   * - Language\n     - Translation ratio (%)\n"
+            )
     # Add more columns
     text += (
         "     - Language\n     - Translation ratio (%)\n" * (nb_columns - 1)
@@ -194,7 +178,14 @@ with open(statsfile, 'w') as f:
 
             f"*Last update:* |today|"
             f"\n\n"
-            f"{load_overall_stats()}"
+            f".. list-table::\n"
+            f"   :widths: auto\n\n"
+            f"   * - Number of strings\n"
+            f"     - Number of target languages\n"
+            f"     - Overall Translation ratio\n"
+            f"   * - |total_strings|\n"
+            f"     - |nb_languages|\n"
+            f"     - |global_percentage|\n\n"
             f"\n\n"
             f"{load_lang_stats(language_rate, nb_columns=3)}"
             f"\n\n"
