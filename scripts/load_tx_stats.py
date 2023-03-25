@@ -82,7 +82,32 @@ def extract_language_stats(lang):
            }
 
 
+def count_untranslatable_resources():
+    """
+    Returns count of strings tagged as notranslate
+    """
 
+    # Load target languages of the QGIS Documentation project from Transifex
+    project_resources = requests.get(
+        f"https://rest.api.transifex.com/resources?filter[project]={project_id}",
+        headers=headers
+        )
+    all_project_resources = walk_pagination(project_resources)
+    #print('all_project_resources ', all_project_resources)
+
+    total_notranslate = 0
+    for resource in all_project_resources:
+        resource_slug = resource['attributes']['slug']
+        notranslate_strings = requests.get(
+            f"https://rest.api.transifex.com/resource_strings?"
+            f"filter[resource]={project_id}:r:{resource_slug}&filter[tags][all]=notranslate",
+            headers=headers
+            )
+        all_notranslate_strings = walk_pagination(notranslate_strings)
+        total_notranslate += len(all_notranslate_strings)
+
+    print('notranslate    ', total_notranslate)
+    return total_notranslate
 
 
 def walk_pagination(results):
@@ -193,6 +218,8 @@ def load_lang_substitutions(target_langs):
     return text
 
 
+#Fetch count of the notranslate strings
+total_notranslate = count_untranslatable_resources()
 # Let's pull the stats for each language now
 language_rate = build_languages_list()
 for lang in language_rate:
