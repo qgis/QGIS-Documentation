@@ -136,6 +136,7 @@ def load_lang_stats(target_langs, nb_columns=1):
     # Add empty cells to keep a well formatted rst table
     # when the number of target languages is not a multiple
     # of the number of columns
+    nb_languages = target_langs['en']['nb_languages']
     if nb_languages % nb_columns:
         remaining_cells = nb_columns - (nb_languages % nb_columns)
         text += ("     -\n     -\n" * remaining_cells)
@@ -152,9 +153,9 @@ def load_lang_substitutions(target_langs):
 
     text = (f".. list of substitutions for the statistics:\n\n"
             f".. |today| replace:: *{date.today()}*\n"
-            f".. |total_strings| replace:: **{total_strings}**\n"
-            f".. |nb_languages| replace:: **{nb_languages}**\n"
-            f".. |global_percentage| replace:: **{global_percentage}%**\n\n"
+            f".. |total_strings| replace:: **{target_langs['en']['total_strings']}**\n"
+            f".. |nb_languages| replace:: **{target_langs['en']['nb_languages']}**\n"
+            f".. |global_percentage| replace:: **{target_langs['en']['percentage']}%**\n\n"
             )
 
     for lang in sorted(target_langs):
