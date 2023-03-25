@@ -65,10 +65,6 @@ for lang in language_rate:
     language_rate[lang]['translated_strings'] = translated_strings
     language_rate[lang]['percentage'] = round(
         translated_strings * 100 / total_strings, 2)
-    # Keep total count of available strings in 'en' only,
-    # no need to store multiple times
-    if lang == 'en':
-        language_rate[lang]['total_strings'] = total_strings
 
 # print(language_rate)
 
@@ -96,27 +92,28 @@ def walk_pagination(results):
     return results_data
 
 
-# Stats for the whole project (== English source language)
-# Number of target translation languages declared in Transifex for the project
-nb_languages = len(language_rate) - 1
-# Total number of strings in English to translate
-total_strings = language_rate['en']['total_strings']
-# translation percentage of the whole project, let's not count 'en'
-total_translated_strings = sum(
-    language_rate[lang]['translated_strings']
-    for lang in language_rate if lang != 'en')
-global_percentage = round(
-    total_translated_strings*100/(total_strings * nb_languages), 2)
+def project_stats(languages):
+    """
+    Calculates stats at the project level
+    """
 
-language_rate['en'].update(
-    {'nb_languages': nb_languages,
-     'translated_strings': total_translated_strings,
-     'percentage': global_percentage
-     }
-    )
+    # Number of target translation languages declared in Transifex for the project
+    nb_languages = len(languages) - 1
+    # Total number of strings in English to actually translate
+    total_strings = languages['en']['translated_strings']
+    # translation percentage of the whole project, let's not count 'en'
+    total_translated_strings = sum(
+        languages[lang]['translated_strings']
+        for lang in languages if lang != 'en')
+    global_percentage = round(
+        total_translated_strings*100/(total_strings * nb_languages), 2)
 
-# print('all ', language_rate)
-
+    # print('all ', languages_list)
+    return {'nb_languages': nb_languages,
+            'total_strings': total_strings,
+            'translated_strings': total_translated_strings,
+            'percentage': global_percentage,
+           }
 
 
 def load_lang_stats(target_langs, nb_columns=1):
@@ -178,6 +175,10 @@ def load_lang_substitutions(target_langs):
             text += (f".. |stats_{lang}| replace:: {target_langs[lang]['percentage']}\n")
 
     return text
+
+
+#Add global stats to English language
+language_rate['en'].update(project_stats(language_rate))
 
 # Store the stats as a table in a rst file
 statsfile = path.join(path.dirname(__file__),
