@@ -48,25 +48,16 @@ language_rate = {k: v for k, v in sorted(
 # namely their number of translated strings
 for lang in language_rate:
     # print('LANG  ', language_rate[lang]['name'])
-    translated_strings = 0
-    total_strings = 0
 
     resource_language_stats = requests.get(
         f"https://rest.api.transifex.com/resource_language_stats?"
         f"filter[project]={project_id}&filter[language]=l:{lang}",
         headers=headers)
-    resource_language_stats = resource_language_stats.json()
+    all_resources = walk_pagination(resource_language_stats)
+    #print('all resources ', len(all_resources))
 
-    all_resources = resource_language_stats['data']
-
-    # Walk through pagination
-    while 'next' in resource_language_stats['links'].keys():
-        resource_language_stats = requests.get(
-            resource_language_stats['links']['next'],
-            headers=headers
-            ).json()
-        all_resources.extend(resource_language_stats['data'])
-
+    translated_strings = 0
+    total_strings = 0
     for resource in all_resources:
         translated_strings += resource['attributes']['translated_strings']
         total_strings += resource['attributes']['total_strings']
@@ -80,6 +71,30 @@ for lang in language_rate:
         language_rate[lang]['total_strings'] = total_strings
 
 # print(language_rate)
+
+
+def walk_pagination(results):
+    """
+    Fetch data from Transifex API across the pages
+    :param results: the request response
+    :return: complete and formatted response
+    """
+
+    results = results.json()
+    results_data = results['data']
+    # Walk through pagination
+    while 'next' in results['links'].keys():
+        if results['links']['next'] == None:
+            break
+        results = requests.get(
+            results['links']['next'],
+            headers=headers
+            ).json()
+        results_data.extend(results['data'])
+
+    #print('end of while ', len(results_data))
+    return results_data
+
 
 # Stats for the whole project (== English source language)
 # Number of target translation languages declared in Transifex for the project
