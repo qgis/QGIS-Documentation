@@ -91,13 +91,13 @@ item, you will be given the following options:
      - |checkbox|
      - |checkbox|
    * - :guilabel:`Mask`
-     - |checkbox|
+     - 
      - |checkbox|
    * - :guilabel:`Background`
      - |checkbox|
      - |checkbox|
    * - :guilabel:`Shadow`
-     -
+     - |checkbox|
      - |checkbox|
    * - :guilabel:`Callout`
      -
