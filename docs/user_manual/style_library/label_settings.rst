@@ -223,7 +223,9 @@ In the |labelformatting| :guilabel:`Formatting` tab, you can:
   * Set an ideal line size for auto-wrapping using the :guilabel:`Wrap lines to`
     option. The size can represent either the :guilabel:`Maximum line length`
     or the :guilabel:`Minimum line length`.
-  * Decide the :guilabel:`Line Height`
+  * Decide the :guilabel:`Line Height`: values can be set to be in
+    :guilabel:`Millimeters`, :guilabel:`Points`, :guilabel:`Pixels`, 
+    :guilabel:`Percentage`, or :guilabel:`Inches`.
   * Format the :guilabel:`Alignment`: typical values available are
     :guilabel:`Left`, :guilabel:`Right`, :guilabel:`Justify` and :guilabel:`Center`.
 
