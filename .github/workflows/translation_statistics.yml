@@ -37,13 +37,13 @@ jobs:
       run: python3 ./scripts/load_tx_stats.py $TRANSIFEX_PASSWORD
 
     - name: Commit changes to LTR
-      if: ${{ matrix.target_branch }} != "master"
+      if: ${{ matrix.target_branch }} != master
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        commit-message: Update statistics of translation
+        commit_message: Update statistics of translation
 
     - id: create_pr
-      if: ${{ matrix.target_branch }} == "master"
+      if: ${{ matrix.target_branch }} == master
       name: Create Pull Request for master
       uses: peter-evans/create-pull-request@v4
       with:
