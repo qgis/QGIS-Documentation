@@ -226,6 +226,8 @@ In the |labelformatting| :guilabel:`Formatting` tab, you can:
   * Decide the :guilabel:`Line Height`: values can be set to be in
     :guilabel:`Millimeters`, :guilabel:`Points`, :guilabel:`Pixels`, 
     :guilabel:`Percentage`, or :guilabel:`Inches`.
+    When line height is set to percentage it is the percentage of the 
+    default text line spacing of that font family. Typically 1.2 times the text size.  
   * Format the :guilabel:`Alignment`: typical values available are
     :guilabel:`Left`, :guilabel:`Right`, :guilabel:`Justify` and :guilabel:`Center`.
 
@@ -415,7 +417,8 @@ labels with similar colors, and you want to make the labels visible.
 .. figure:: img/label_mask.png
    :align: center
 
-   Labels settings - Mask tab
+   Labels settings - Mask tab (with the text sample showing a green background 
+   representing another layer being excluded)
 
 To create masking effects on labels:
 
