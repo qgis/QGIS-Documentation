@@ -156,7 +156,7 @@ Statistics of translation
 .. |today| replace:: *2023-03-28*
 .. |total_strings| replace:: **31688**
 .. |nb_languages| replace:: **58**
-.. |global_percentage| replace:: **12.22%**
+.. |global_percentage| replace:: **12.23%**
 
 .. |stats_ar| replace:: 3.43
 .. |stats_az| replace:: 0.02
@@ -165,7 +165,7 @@ Statistics of translation
 .. |stats_ca| replace:: 1.08
 .. |stats_cs| replace:: 4.99
 .. |stats_da| replace:: 0.66
-.. |stats_de| replace:: 18.66
+.. |stats_de| replace:: 18.67
 .. |stats_el| replace:: 0.37
 .. |stats_es| replace:: 90.76
 .. |stats_et| replace:: 3.71
@@ -184,7 +184,7 @@ Statistics of translation
 .. |stats_ja| replace:: 70.27
 .. |stats_ka| replace:: 0.1
 .. |stats_kab| replace:: 0.1
-.. |stats_ko| replace:: 76.44
+.. |stats_ko| replace:: 76.88
 .. |stats_lt| replace:: 4.14
 .. |stats_mk| replace:: 0.12
 .. |stats_ml| replace:: 0.09
