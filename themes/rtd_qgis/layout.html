@@ -1,5 +1,12 @@
 {% extends "sphinx_rtd_theme/layout.html" %}
 
+ {%- block extrahead %}
+  <meta name="description" content="QGIS {{ version }} documentation: {{ title|striptags|e }}">
+  {%- if outdated %}
+  <meta name="robots" content="noindex">
+  {%- endif %}
+ {%- endblock -%}
+
  {%block extrabody %}
 
   <nav class="release_status_topbar">
