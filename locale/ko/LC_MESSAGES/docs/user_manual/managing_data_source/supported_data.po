@@ -2,20 +2,21 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
-# Kwon.Yongchan <ruvyn@naver.com>, 2022
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# Kwon.Yongchan <ruvyn@naver.com>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-21 02:17+0000\n"
-"PO-Revision-Date: 2022-03-14 05:13+0000\n"
-"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2022\n"
+"POT-Creation-Date: 2023-03-19 12:09+0100\n"
+"PO-Revision-Date: 2023-03-19 14:53+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2023\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -82,20 +83,20 @@ msgid ""
 "Many of the features and tools available in QGIS work the same, regardless "
 "the vector data source. However, because of the differences in format "
 "specifications (GeoPackage, ESRI Shapefile, MapInfo and MicroStation file "
-"formats, AutoCAD DXF, PostGIS, SpatiaLite, Oracle Spatial, MSSQL Spatial, "
+"formats, AutoCAD DXF, PostGIS, SpatiaLite, Oracle Spatial, MS SQL Server, "
 "SAP HANA Spatial databases and many more), QGIS may handle some of their "
-"properties differently. Support is provided by the `OGR Simple Feature "
-"Library <https://gdal.org/drivers/vector/index.html>`_. This section "
-"describes how to work with these specificities."
+"properties differently. Support is provided by the `GDAL vector drivers "
+"<https://gdal.org/drivers/vector/index.html>`_. This section describes how "
+"to work with these specifics."
 msgstr ""
 "벡터 데이터소스와 상관없이, QGIS에서 사용할 수 있는 많은 기능과 도구들은 동일하게 작동합니다. 하지만 GeoPackage, ESRI"
 " Shapefile, MapInfo 및 MicroStation 파일 포맷, AutoCAD DXF, PostGIS, SpatiaLite, "
-"Oracle Spatial, MSSQL Spatial, SAP HANA 공간 데이터베이스, 그 외에도 수많은 포맷들의 사양 차이 때문에 "
-"QGIS가 포맷들의 일부 속성들을 서로 다르게 처리할 수도 있습니다. `OGR 단순 피처(Simple Feature) 라이브러리 "
+"Oracle Spatial, MS SQL 서버, SAP HANA 공간 데이터베이스, 그 외에도 수많은 포맷들의 사양 차이 때문에 "
+"QGIS가 포맷들의 일부 속성들을 서로 다르게 처리할 수도 있습니다. `GDAL 벡터 드라이버 "
 "<https://gdal.org/drivers/vector/index.html>`_ 가 지원을 제공합니다. 이 단락에서는 이런 사양들을 "
 "어떻게 작업하는지에 대해 설명합니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:64
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:63
 msgid ""
 "QGIS supports (multi)point, (multi)line, (multi)polygon, CircularString, "
 "CompoundCurve, CurvePolygon, MultiCurve, MultiSurface feature types, all "
@@ -104,7 +105,7 @@ msgstr ""
 "QGIS는 Z 그리고/또는 M 값을 보유할 수도 있는 [멀티]포인트, [멀티]라인, [멀티]폴리곤, CircularString, "
 "CompoundCurve, CurvePolygon, MultiCurve, MultiSurface 피처 유형을 지원합니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:68
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:67
 msgid ""
 "You should also note that some drivers don't support some of these feature "
 "types, like CircularString, CompoundCurve, CurvePolygon, MultiCurve, "
@@ -114,11 +115,11 @@ msgstr ""
 "MultiSurface 같은 일부 피처 유형을 지원하지 않는다는 사실도 알아두어야 합니다. 이 경우 QGIS는 이 유형들을 변환할 "
 "것입니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:76
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:75
 msgid "GeoPackage"
 msgstr "GeoPackage"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:77
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:76
 msgid ""
 "The `GeoPackage <https://www.geopackage.org/>`_ (GPKG) format is platform-"
 "independent, and is implemented as a SQLite database container, and can be "
@@ -129,27 +130,27 @@ msgstr ""
 "데이터베이스 컨테이너로 실행되고, 벡터와 래스터 데이터 둘 다 저장할 수 있습니다. OGC(Open Geospatial "
 "Consortium)가 정의한 이 포맷은 2014년 공개되었습니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:83
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:82
 msgid "GeoPackage can be used to store the following in a SQLite database:"
 msgstr "SQLite 데이터베이스에 다음을 저장하는 데 GeoPackage를 사용할 수 있습니다:"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:85
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:84
 msgid "**vector** features"
 msgstr "**벡터** 피처"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:86
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:85
 msgid "**tile matrix sets of imagery** and **raster** maps"
 msgstr "**이미지의 타일 매트릭스 집합** 및 **래스터** 맵"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:87
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:86
 msgid "attributes (non-spatial data)"
 msgstr "속성 (비공간 데이터)"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:88
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:87
 msgid "extensions"
 msgstr "확장자"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:90
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:89
 msgid ""
 "Since QGIS version 3.8, GeoPackage can also store QGIS projects. GeoPackage "
 "layers can have JSON fields."
@@ -157,15 +158,15 @@ msgstr ""
 "GeoPackage는 QGIS 3.8 버전부터 QGIS 프로젝트도 저장할 수 있습니다. GeoPackage 레이어는 JSON 필드를 "
 "보유할 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:93
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:92
 msgid "GeoPackage is the default format for vector data in QGIS."
 msgstr "GeoPackage는 QGIS의 벡터 데이터용 기본 포맷입니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:99
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:98
 msgid "ESRI Shapefile format"
 msgstr "ESRI Shapefile 포맷"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:100
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:99
 msgid ""
 "The ESRI Shapefile format is still one of the most used vector file formats,"
 " even if it has some limitations compared to for instance GeoPackage and "
@@ -174,37 +175,51 @@ msgstr ""
 "ESRI Shapefile 포맷은, 예를 들어 GeoPackage 및 SpatiaLite와 비교하면 몇몇 제한이 존재하더라도, 지금도 "
 "QGIS에서 가장 자주 이용되는 벡터 파일 포맷 가운데 하나입니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:104
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:103
 msgid ""
 "An ESRI Shapefile format dataset consists of several files. The following "
 "three are required:"
 msgstr "ESRI Shapefile 포맷 데이터셋은 파일 몇 개로 이루어져 있습니다. 다음은 필수적인 파일 3개입니다:"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:107
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:106
 msgid ":file:`.shp` file containing the feature geometries"
 msgstr ":file:`.shp`: 피처 도형을 담고 있는 파일"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:108
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:107
 msgid ":file:`.dbf` file containing the attributes in dBase format"
 msgstr ":file:`.dbf`: dBase 서식으로 속성을 담고 있는 파일"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:109
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:108
 msgid ":file:`.shx` index file"
 msgstr ":file:`.shx`: 인덱스 파일"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:119
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:110
 msgid ""
-"GDAL 3.1 has read-write support for compressed ESRI Shapefile format "
+"An ESRI Shapefile format dataset can also include a file with a :file:`.prj`"
+" suffix, which contains projection information. While it is very useful to "
+"have a projection file, it is not mandatory. A Shapefile format dataset can "
+"contain additional files. For further details, see the the ESRI `technical "
+"specification <https://www.esri.com/content/dam/esrisites/sitecore-"
+"archive/Files/Pdfs/library/whitepapers/pdfs/shapefile.pdf>`_."
+msgstr ""
+"ESRI Shapefile 포맷 데이터셋은 :file:`.prj` 확장자를 쓰는 파일도 포함할 수 있는데, 이 파일은 투영체 정보를 담고"
+" 있습니다. 투영체 파일이 있다면 매우 유용하지만, 필수적인 파일은 아닙니다. Shapefile 포맷 데이터셋은 추가 파일들을 포함할 "
+"수도 있습니다. 더 자세한 내용은 `ESRI 기술 사양 문서 "
+"<https://www.esri.com/content/dam/esrisites/sitecore-"
+"archive/Files/Pdfs/library/whitepapers/pdfs/shapefile.pdf>`_ 를 참조하세요."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:118
+msgid ""
+"GDAL has read-write support for compressed ESRI Shapefile format "
 "(:file:`shz` and :file:`shp.zip`)."
 msgstr ""
-"GDAL 3.1 버전은 압축 ESRI Shapefile 포맷(:file:`shz` 및 :file:`shp.zip`) 읽고 쓰기를 "
-"지원합니다."
+"GDAL은 압축 ESRI Shapefile 포맷(:file:`shz` 및 :file:`shp.zip`) 읽고 쓰기를 지원합니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:122
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:121
 msgid "**Improving Performance for ESRI Shapefile format datasets**"
 msgstr "**ESRI Shapefile 포맷 데이터셋 성능 향상**"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:124
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:123
 msgid ""
 "To improve the drawing performance for an ESRI Shapefile format dataset, you"
 " can create a spatial index. A spatial index will improve the speed of both "
@@ -214,15 +229,15 @@ msgstr ""
 "ESRI Shapefile 포맷 데이터셋 렌더링 성능을 향상시키려면, 공간 인덱스를 생성하면 됩니다. 공간 인덱스가 있다면 확대/축소 및"
 " 이동 속도도 향상됩니다. QGIS가 이용하는 공간 인덱스 파일의 확장자는 :file:`.qix` 입니다. "
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:129
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:128
 msgid "Use these steps to create the index:"
 msgstr "다음 단계를 통해 인덱스를 생성하십시오:"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:131
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:130
 msgid "Load an ESRI Shapefile format dataset (see :ref:`browser_panel`)"
 msgstr "ESRI Shapefile 포맷 데이터셋을 불러옵니다. (:ref:`browser_panel` 참조)"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:132
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:131
 msgid ""
 "Open the :guilabel:`Layer Properties` dialog by double-clicking on the layer"
 " name in the legend or by right-clicking and choosing "
@@ -231,17 +246,17 @@ msgstr ""
 "범례에 있는 레이어명을 더블클릭하거나, 또는 오른쪽 클릭한 다음 컨텍스트 메뉴에서 :menuselection:`Properties` 를 "
 "선택해서 :guilabel:`Layer Properties` 대화창을 엽니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:135
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:134
 msgid ""
 "In the :guilabel:`Source` tab, click the :guilabel:`Create Spatial Index` "
 "button"
 msgstr ":guilabel:`Source` 탭에서 :guilabel:`Create Spatial Index` 버튼을 클릭하십시오."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:138
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:137
 msgid "**Problem loading a .prj file**"
 msgstr "**.prj 파일을 불러올 때의 문제**"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:140
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:139
 msgid ""
 "If you load an ESRI Shapefile format dataset with a :file:`.prj` file and "
 "QGIS is not able to read the coordinate reference system from that file, you"
@@ -257,11 +272,11 @@ msgstr ""
 ":file:`.prj` 파일이 QGIS에서 사용되는, :guilabel:`CRS` 대화창 목록에 있는 완전한 투영체 파라미터를 제공하지 "
 "못 하는 경우가 많기 때문입니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:706
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:720
 msgid "setProjection"
 msgstr "setProjection"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:149
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:148
 msgid ""
 "For the same reason, if you create a new ESRI Shapefile format dataset with "
 "QGIS, two different projection files are created: a :file:`.prj` file with "
@@ -274,11 +289,11 @@ msgstr ""
 " 다른 투영체 파일을 생성합니다. :file:`.qpj` 파일이 존재하는 경우, QGIS는 :file:`.prj` 파일 대신 "
 ":file:`.qpj` 파일을 이용할 것입니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:162
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:161
 msgid "Delimited Text Files"
 msgstr "구분 텍스트 파일"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:164
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:163
 msgid ""
 "Delimited text files are very common and widely used because of their "
 "simplicity and readability -- data can be viewed and edited in a plain text "
@@ -293,7 +308,7 @@ msgstr ""
 " 첫 행은 보통 열 명칭을 담고 있습니다. CSV(Comma Separated Values)는 각 열을 쉼표로 구분하는 흔한 구분 텍스트"
 " 파일 유형입니다. 구분 텍스트 파일은 위치 정보를 담을 수도 있습니다. (:ref:`csv_geometry` 참조)"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:175
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:174
 msgid ""
 "QGIS allows you to load a delimited text file as a layer or an ordinary "
 "table (see :ref:`browser_panel` or :ref:`vector_loading_csv`). First check "
@@ -302,7 +317,7 @@ msgstr ""
 "QGIS는 구분 텍스트 파일을 레이어 또는 일반 테이블로 불러올 수 있습니다. (:ref:`browser_panel` 또는 "
 ":ref:`vector_loading_csv` 를 참조하세요.) 먼저 파일이 다음 조건을 만족시키는지 확인하십시오:"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:179
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:178
 msgid ""
 "The file must have a delimited header row of field names. This must be the "
 "first line of the data (ideally the first row in the text file)."
@@ -310,27 +325,27 @@ msgstr ""
 "파일이 필드명을 담은 구분된 헤더(header) 행을 보유해야만 합니다. 헤더 행은 데이터의 첫 줄(이상적으로는 텍스트 파일의 첫 "
 "행)이어야만 합니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:182
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:181
 msgid ""
 "If geometry should be enabled, the file must contain field(s) that define "
 "the geometry. These field(s) can have any name."
 msgstr ""
 "도형을 활성화해야 하는 경우, 파일이 도형 정의 필드(들)를 포함해야만 합니다. 이 필드(들)의 명칭은 어떤 것이라도 가능합니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:184
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:183
 msgid ""
 "The X and Y coordinates fields (if geometry is defined by coordinates) must "
 "be specified as numbers. The coordinate system is not important."
 msgstr "도형이 좌표로 정의된 경우, X와 Y 좌표 필드는 숫자로 지정돼야만 합니다. 어떤 좌표계인지는 중요하지 않습니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:187
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:186
 msgid ""
-"If you have a CSV file with non-string columns, you must have an "
-"accompanying CSVT file (see section :ref:`csvt_files`)."
+"If you have a CSV file with non-string columns, you can have an accompanying"
+" CSVT file (see section :ref:`csvt_files`)."
 msgstr ""
-"문자열이 아닌 데이터를 CSV 파일로 저장하려면, CSVT 파일을 이용해야만 합니다. (:ref:`csvt_files` 을 참조하세요.)"
+"문자열이 아닌 데이터를 CSV 파일로 저장하는 경우 CSVT 파일을 이용하면 됩니다. (:ref:`csvt_files` 을 참조하세요.)"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:190
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:189
 msgid ""
 "The elevation point data file :file:`elevp.csv` in the QGIS sample dataset "
 "(see section :ref:`label_sampledata`) is an example of a valid text file:"
@@ -338,56 +353,56 @@ msgstr ""
 "유효한 텍스트 파일의 예로, QGIS 예시 데이터셋(:ref:`label_sampledata` 참조)에 들어 있는 다음 "
 ":file:`elevp.csv` 표고 포인트 데이터 파일을 불러들이겠습니다:"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:202
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:201
 msgid "Some things to note about the text file:"
 msgstr "이 텍스트 파일에 대해 알아두어야 할 점은 다음과 같습니다:"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:204
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:203
 msgid ""
 "The example text file uses ``;`` (semicolon) as delimiter (any character can"
 " be used to delimit the fields)."
 msgstr "이 예시 텍스트 파일은 구분자로 ``;`` (쌍반점)을 씁니다. (어떤 문자라도 필드를 구분하는 데 쓸 수 있습니다.)"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:206
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:205
 msgid ""
 "The first row is the header row. It contains the fields ``X``, ``Y`` and "
 "``ELEV``."
 msgstr "첫 줄이 헤더 행입니다. ``X``, ``Y`` 및 ``ELEV`` 필드를 담고 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:208
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:207
 msgid "No quotes (``\"``) are used to delimit text fields"
 msgstr "텍스트 필드를 구분하는 데 큰따옴표(``\"``)를 쓰지 않습니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:209
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:208
 msgid "The X coordinates are contained in the ``X`` field"
 msgstr "X 좌표는 ``X`` 필드에 담겨 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:210
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:209
 msgid "The Y coordinates are contained in the ``Y`` field"
 msgstr "Y 좌표는 ``Y`` 필드에 담겨 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:215
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:214
 msgid "Storing geometry information in delimited text files"
 msgstr "구분 텍스트 파일에 지리 정보 저장하기"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:217
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:216
 msgid ""
 "Delimited text files can contain geometry information in two main forms:"
 msgstr "구분 텍스트 파일은 다음과 같은 주된 양식 2개로 지리 정보를 담을 수 있습니다:"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:220
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:219
 msgid ""
 "As coordinates in separate columns (eg. ``Xcol``, ``Ycol``... ), for point "
 "geometry data;"
 msgstr "포인트 도형 데이터의 경우, 분리된 열에 (예: ``Xcol``, ``Ycol`` 등등) 좌표로 저장"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:222
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:221
 msgid ""
 "As well-known text (WKT) representation of geometry in a single column, for "
 "any geometry type."
 msgstr "모든 도형 유형의 경우, 단일 열에 도형의 WKT(Well-Known Text) 표현으로 저장"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:225
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:224
 msgid ""
 "Features with curved geometries (CircularString, CurvePolygon and "
 "CompoundCurve) are supported. Here are some examples of geometry types in a "
@@ -396,22 +411,22 @@ msgstr ""
 "만곡 도형(CircularString, CurvePolygon 및 CompoundCurve) 피처를 지원합니다. 다음은 구분 텍스트 "
 "파일에 도형을 WKT로 코딩한 도형 유형의 예시입니다::"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:237
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:236
 msgid "Delimited text files also support Z and M coordinates in geometries::"
 msgstr "구분 텍스트 파일은 도형의 Z 및 M 좌표도 지원합니다::"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:246
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:245
 msgid "Using CSVT file to control field formatting"
 msgstr "필드 서식 제어에 CSVT 파일 사용하기"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:248
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:247
 msgid ""
-"When loading CSV files, the OGR driver assumes all fields are strings (i.e. "
-"text) unless it is told otherwise. You can create a CSVT file to tell OGR "
+"When loading CSV files, the GDAL driver assumes all fields are strings (i.e."
+" text) unless it is told otherwise. You can create a CSVT file to tell GDAL "
 "(and QGIS) the data type of the different columns:"
 msgstr ""
-"CSV 파일을 불러올 때, 달리 지정하지 않는 이상 OGR 드라이버는 모든 필드가 (텍스트 등의) 문자열이라고 가정합니다. OGR "
-"드라이버에 (그리고 QGIS 에) 서로 다른 열들이 어떤 데이터 유형인지 알려주는 다음 CSVT 파일을 생성할 수 있습니다:"
+"CSV 파일을 불러올 때, 달리 지정하지 않는 이상 GDAL 드라이버는 모든 필드가 (텍스트 등의) 문자열이라고 가정합니다. GDAL "
+"드라이버에 (그리고 QGIS에) 서로 다른 열들이 어떤 데이터 유형인지 알려준 다음 CSVT 파일을 생성할 수 있습니다:"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:1
 msgid "Type"
@@ -436,6 +451,18 @@ msgstr "Integer"
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:1
 msgid "4"
 msgstr "4"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "Boolean"
+msgstr "불(Boolean)"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "Integer(Boolean)"
+msgstr "Integer(Boolean)"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "true"
+msgstr "true"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:1
 msgid "Decimal number"
@@ -485,18 +512,50 @@ msgstr "DateTime (YYYY-MM-DD HH:MM:SS+nn)"
 msgid "2016-07-28 18:33:12+00"
 msgstr "2016-07-28 18:33:12+00"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:262
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "CoordX"
+msgstr "CoordX"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "8.8249"
+msgstr "8.8249"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "CoordY"
+msgstr "CoordY"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "47.2274"
+msgstr "47.2274"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "Point(X)"
+msgstr "Point(X)"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "Point(Y)"
+msgstr "Point(Y)"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "WKT"
+msgstr "WKT"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:1
+msgid "POINT(15 20)"
+msgstr "POINT(15 20)"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:267
 msgid ""
 "The CSVT file is a **ONE line** plain text file with the data types in "
 "quotes and separated by commas, e.g.::"
 msgstr ""
 "CSVT 파일은 데이터 유형을 따옴표로 표현하고 쉼표 등으로 구분하는, 다음과 같은 **한 줄** 짜리 평문 텍스트 파일입니다:"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:267
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:272
 msgid "You can even specify width and precision of each column, e.g.::"
 msgstr "각 열의 길이(width)와 정밀도도 다음과 같이 설정할 수 있습니다:"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:271
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:276
 msgid ""
 "This file is saved in the same folder as the :file:`.csv` file, with the "
 "same name, but :file:`.csvt` as the extension."
@@ -504,7 +563,7 @@ msgstr ""
 "이 파일은 :file:`.csv` 파일과 동일한 폴더에 저장됩니다. 파일명은 CSV 파일과 동일해야 하지만, 확장자는 "
 ":file:`.csvt` 를 씁니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:274
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:279
 msgid ""
 "*You can find more information at* `GDAL CSV Driver "
 "<https://gdal.org/drivers/vector/csv.html>`_."
@@ -512,26 +571,39 @@ msgstr ""
 "*더 자세한 내용은* `GDAL CSV 드라이버 <https://gdal.org/drivers/vector/csv.html>`_ *에서 "
 "찾아볼 수 있습니다*."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:282
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:284
+msgid "**Detect Field Types**"
+msgstr "**필드 유형 탐지**"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:286
+msgid ""
+"Instead of using a CSVT file to tell the data types, QGIS provides the "
+"possibility to automatically detect the field types and to change the "
+"assumed field types."
+msgstr ""
+"데이터 유형을 말해주는 CSVT 파일을 사용하는 대신, QGIS는 필드 유형을 자동으로 탐지하고 해당 필드 유형으로 변경시킬 수 있는 "
+"기능을 제공하고 있습니다."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:295
 msgid "PostGIS Layers"
 msgstr "PostGIS 레이어"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:284
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:297
 msgid ""
 "PostGIS layers are stored in a PostgreSQL database. The advantages of "
 "PostGIS are spatial indexing, filtering and querying capabilities. Using "
 "PostGIS, vector functions such as select and identify work more accurately "
-"than they do with OGR layers in QGIS."
+"than they do with GDAL layers in QGIS."
 msgstr ""
 "PostGIS 레이어는 PostgreSQL 데이터베이스에 저장돼 있습니다. PostGIS의 장점은 공간 인덱스, 필터링 및 쿼리 작업 "
-"능력입니다. PostGIS를 이용하면, 선택 및 식별 같은 벡터 기능들을 QGIS에서 OGR 레이어로 작업하는 것보다 더 정확하게 작업할"
-" 수 있습니다."
+"능력입니다. PostGIS를 이용하면, 선택 및 식별 같은 벡터 기능들을 QGIS에서 GDAL 레이어로 작업하는 것보다 더 정확하게 "
+"작업할 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:293
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:306
 msgid "**PostGIS Layers**"
 msgstr "**PostGIS 레이어**"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:295
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:308
 msgid ""
 "Normally, a PostGIS layer is identified by an entry in the geometry_columns "
 "table. QGIS can load layers that do not have an entry in the "
@@ -542,7 +614,7 @@ msgstr ""
 "테이블에 항목이 없는 레이어를 불러올 수 있습니다. 테이블과 뷰 둘 다 말입니다. 뷰 생성에 대한 정보는 PostgreSQL 사용자 "
 "지침서를 참조하십시오."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:302
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:315
 msgid ""
 "This section contains some details on how QGIS accesses PostgreSQL layers. "
 "Most of the time, QGIS should simply provide you with a list of database "
@@ -556,15 +628,15 @@ msgstr ""
 "불러오는 데 문제가 있을 경우, 다음 내용을 통해 QGIS 메시지를 이해해서 PostgreSQL 테이블 또는 뷰 정의를 수정하면 "
 "QGIS가 테이블 또는 뷰를 불러올 수 있을 것입니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:311
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:324
 msgid "A PostgreSQL database can also store QGIS projects."
 msgstr "PostgreSQL 데이터베이스도 QGIS 프로젝트를 저장할 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:314
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:327
 msgid "Primary key"
 msgstr "기본 키"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:316
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:329
 msgid ""
 "QGIS requires that PostgreSQL layers contain a column that can be used as a "
 "unique key for the layer. For tables, this usually means that the table "
@@ -581,7 +653,7 @@ msgstr ""
 " 열을 대신 사용할 것입니다. 열을 인덱스 작업하면 성능이 향상됩니다. (PostgreSQL은 기본 키를 자동적으로 인덱스 작업한다는 "
 "사실을 기억하십시오.)"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:325
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:338
 msgid ""
 "QGIS offers a checkbox **Select at id** that is activated by default. This "
 "option gets the ids without the attributes, which is faster in most cases."
@@ -589,11 +661,11 @@ msgstr ""
 "QGIS 의 |checkbox| :guilabel:`Select at id` 체크박스는 기본적으로 활성화돼 있습니다. 이 옵션을 "
 "활성화하면 속성 없이 ID를 가져오는데, 대부분의 경우 훨씬 빠릅니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:330
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:343
 msgid "View"
 msgstr "뷰"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:332
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:345
 msgid ""
 "If the PostgreSQL layer is a view, the same requirement exists, but views do"
 " not always have primary keys or columns with unique constraints on them. "
@@ -608,7 +680,7 @@ msgstr ""
 "QGIS는 레이어를 불러오지 못 합니다. 이 경우 적당한 열을 (기본 키 또는 유일 제약조건을 가진 정수 유형, 인덱스 작업 추천) "
 "포함하도록 뷰를 수정해야 합니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:340
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:353
 msgid ""
 "As for table, a checkbox **Select at id** is activated by default (see above"
 " for the meaning of the checkbox). It can make sense to disable this option "
@@ -617,22 +689,22 @@ msgstr ""
 "테이블인 경우, |checkbox| :guilabel:`Select at id` 체크박스가 기본적으로 활성화돼 있습니다. (이 체크박스의"
 " 의미는 바로 앞에서 설명했습니다.) 사용자가 대용량 뷰를 이용하는 경우 이 옵션을 비활성화하는 편이 좋습니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:344
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:357
 msgid "**PostgreSQL foreign table**"
 msgstr "**PostgreSQL 외래 테이블**"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:346
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:359
 msgid ""
 "PostgreSQL foreign tables are not explicitely supported by the PostgreSQL "
 "provider and will be handled like a view."
 msgstr ""
 "PostgreSQL 제공자는 PostgreSQL 외래(foreign) 테이블을 분명하게 지원하지 않으며, 뷰처럼 처리할 것입니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:352
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:365
 msgid "QGIS layer_style table and database backup"
 msgstr "QGIS layer_style 테이블 및 데이터베이스 백업"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:354
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:367
 msgid ""
 "If you want to make a backup of your PostGIS database using the "
 ":file:`pg_dump` and :file:`pg_restore` commands, and the default layer "
@@ -643,11 +715,34 @@ msgstr ""
 "기본 레이어 스타일을 QGIS에서 저장한 대로 복구되지 않는다면, 복구 명령 전에 :file:`DOCUMENT` 에 XML 옵션을 "
 "설정해줘야 합니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:367
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:372
+msgid "Make a PLAIN backup of the ``layer_style`` table"
+msgstr "``layer_style`` 테이블을 평문으로 백업하십시오."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:373
+msgid "Open the file within a text editor"
+msgstr "텍스트 편집기에서 백업 파일을 여십시오."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:374
+msgid ""
+"Change the line ``SET xmloption = content;`` into ``SET XML OPTION "
+"DOCUMENT;``"
+msgstr ""
+"``SET xmloption = content;`` 줄을 ``SET XML OPTION DOCUMENT;`` 로 변경하십시오."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:375
+msgid "Save the file"
+msgstr "파일을 저장하십시오."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:376
+msgid "Use psql to restore the table in the new database"
+msgstr "PostgreSQL의 psql을 이용해서 새 데이터베이스에 테이블을 복원하십시오."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:380
 msgid "Filter database side"
 msgstr "데이터베이스 쪽에서 필터링"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:369
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:382
 msgid ""
 "QGIS allows to filter features already on server side. Check "
 ":menuselection:`Settings --> Options --> Data Sources -->` |checkbox| "
@@ -661,15 +756,15 @@ msgstr ""
 "side if possible` 체크박스를 활성화하면 됩니다. 이 옵션을 활성화하면 데이터베이스에 지원하는 표현식만 전송할 것입니다. "
 "지원하지 않는 연산자 또는 함수를 이용한 표현식은 자연스럽게 폴백(fallback)되어 로컬에서 평가될 것입니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:696
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:712
 msgid "checkbox"
-msgstr "checkbox"
+msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:378
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:391
 msgid "Support of PostgreSQL data types"
 msgstr "PostgreSQL 데이터 유형의 지원"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:380
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:393
 msgid ""
 "Data types supported by the PostgreSQL provider include: integer, float, "
 "boolean, binary object, varchar, geometry, timestamp, array, hstore and "
@@ -679,11 +774,11 @@ msgstr ""
 "문자형(varchar), 도형형, 타임스탬프(timestamp), 배열(array), HStore, JSON 등의 데이터 유형을 "
 "지원합니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:389
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:402
 msgid "Importing Data into PostgreSQL"
 msgstr "PostgreSQL로 데이터 가져오기"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:391
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:404
 msgid ""
 "Data can be imported into PostgreSQL/PostGIS using several tools, including "
 "the DB Manager plugin and the command line tools shp2pgsql and ogr2ogr."
@@ -691,11 +786,11 @@ msgstr ""
 "DB 관리자 플러그인과 shp2pgsql 및 ogr2ogr 명령 줄 도구를 포함하는 도구 몇 가지를 이용해서 "
 "PostgreSQL/PostGIS로 데이터를 가져올 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:396
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:409
 msgid "DB Manager"
 msgstr "DB 관리자"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:398
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:411
 msgid ""
 "QGIS comes with a core plugin named |dbManager| :sup:`DB Manager`. It can be"
 " used to load data, and it includes support for schemas. See section "
@@ -704,15 +799,15 @@ msgstr ""
 "QGIS는 |dbManager| :sup:`DB Manager` 라는 핵심 플러그인을 내장하고 있습니다. 이 도구는 데이터를 불러오는 데"
 " 쓸 수 있으며, 스키마를 지원하기도 합니다. 더 자세한 내용은 :ref:`dbmanager` 을 참조하세요."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:698
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:714
 msgid "dbManager"
-msgstr "dbManager"
+msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:403
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:416
 msgid "shp2pgsql"
 msgstr "shp2pgsql"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:405
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:418
 msgid ""
 "PostGIS includes a utility called **shp2pgsql**, that can be used to import "
 "Shapefile format datasets into a PostGIS-enabled database. For example, to "
@@ -723,7 +818,7 @@ msgstr ""
 "기능을 포함하고 있습니다. 예를 들어, ``gis_data`` 라는 PostgreSQL 데이터베이스로 :file:`lakes.shp` "
 "이라는 Shapefile 포맷 데이터셋을 가져오려면, 다음 명령어를 사용하십시오::"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:413
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:426
 msgid ""
 "This creates a new layer named ``lakes_new`` in the ``gis_data`` database. "
 "The new layer will have a spatial reference identifier (SRID) of 2964. See "
@@ -734,11 +829,11 @@ msgstr ""
 "SRID(Spatial Reference IDentifier) 2964를 적용받게 됩니다. 공간 참조 시스템 및 투영체에 대한 더 자세한"
 " 내용은 :ref:`label_projections` 을 참조하세요."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:422
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:435
 msgid "**Exporting datasets from PostGIS**"
 msgstr "**PostGIS에서 데이터셋 내보내기**"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:424
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:437
 msgid ""
 "There is also a tool for exporting PostGIS datasets to Shapefile format: "
 "**pgsql2shp**. It is shipped within your PostGIS distribution."
@@ -746,11 +841,11 @@ msgstr ""
 "PostGIS 데이터베이스를 Shapefile 포맷 데이터셋으로 내보내는 도구인 **pgsql2shp** 도 있습니다. 이 도구도 "
 "PostGIS 배포판에 내장돼 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:432
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:445
 msgid "ogr2ogr"
 msgstr "ogr2ogr"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:434
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:447
 msgid ""
 "In addition to **shp2pgsql** and **DB Manager**, there is another tool for "
 "feeding geographical data in PostGIS: **ogr2ogr**. It is part of your GDAL "
@@ -759,11 +854,11 @@ msgstr ""
 "**shp2pgsql** 및 DB 관리자 이외에, PostGIS로 지리 데이터를 불러올 수 있는 또다른 도구인 **ogr2ogr** 도 "
 "있습니다. 이 도구는 사용자가 GDAL 을 설치할 때 함께 설치됩니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:438
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:451
 msgid "To import a Shapefile format dataset into PostGIS, do the following::"
 msgstr "PostGIS로 Shapefile 포맷 데이터셋을 가져오려면, 다음 명령어를 입력하십시오::"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:443
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:456
 msgid ""
 "This will import the Shapefile format dataset :file:`alaska.shp` into the "
 "PostGIS database *postgis* using the user *postgres* with the password "
@@ -772,19 +867,19 @@ msgstr ""
 "이 명령어는 호스트 서버 *myhost.de* 에 있는 PostGIS 데이터베이스 *postgis* 로 Shapefile 포맷 데이터셋 "
 ":file:`alaska.shp` 를 사용자 *postgre* 와 비밀번호 *topsecret* 을 이용해서 불러올 것입니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:447
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:460
 msgid ""
-"Note that OGR must be built with PostgreSQL to support PostGIS. You can "
+"Note that GDAL must be built with PostgreSQL to support PostGIS. You can "
 "verify this by typing (in |nix|)::"
 msgstr ""
-"PostGIS를 지원하려면 OGR을 PostgreSQL과 함께 빌드해야만 한다는 사실을 기억하십시오. 함께 빌드했는지 확인하려면 "
+"PostGIS를 지원하려면 GDAL을 PostgreSQL과 함께 빌드해야만 한다는 사실을 기억하십시오. 함께 빌드했는지 확인하려면 "
 "(|nix| 에서) 다음과 같이 입력해보세요::"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:702
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:716
 msgid "nix"
 msgstr "nix"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:453
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:466
 msgid ""
 "If you prefer to use the PostgreSQL's **COPY** command instead of the "
 "default **INSERT INTO** method, you can export the following environment "
@@ -793,11 +888,11 @@ msgstr ""
 "PostgreSQL의 기본 메소드인 **INSERT INTO** 대신 **COPY** 명령어를 더 선호하는 경우, 다음 명령어로 (적어도"
 " |nix| 와 |osx| 에서는) 다음 환경 변수를 내보낼 수 있습니다::"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:704
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:718
 msgid "osx"
 msgstr "osx"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:459
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:472
 msgid ""
 "**ogr2ogr** does not create spatial indexes like **shp2pgsl** does. You need"
 " to create them manually, using the normal SQL command **CREATE INDEX** "
@@ -808,11 +903,11 @@ msgstr ""
 " (다음 :ref:`vector_improving_performance` 에서 설명하는 대로) 추가 단계로 일반적인 SQL 명령어 "
 "**CREATE INDEX** 를 이용해서 직접 생성해야 합니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:469
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:482
 msgid "Improving Performance"
 msgstr "성능 향상시키기"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:471
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:484
 msgid ""
 "Retrieving features from a PostgreSQL database can be time-consuming, "
 "especially over a network. You can improve the drawing performance of "
@@ -826,7 +921,7 @@ msgstr ""
 "PostGIS는 공간 검색 속도를 높이기 위해 GiST(Generalized Search Tree) 인덱스를 생성할 수 있습니다. "
 "(GiST 인덱스에 대한 정보는 `PostGIS 문서 <https://postgis.net>`_ 를 참조하세요.)"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:478
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:491
 msgid ""
 "You can use the DBManager to create an index for your layer. You should "
 "first select the layer and click on :menuselection:`Table --> Edit table`, "
@@ -837,11 +932,11 @@ msgstr ""
 "--> Edit table` 메뉴를 클릭하고, :menuselection:`Indexes` 탭에서 :guilabel:`Add "
 "Spatial Index` 를 클릭하십시오."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:484
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:497
 msgid "The syntax for creating a GiST index is::"
 msgstr "GiST 인덱스를 생성하기 위한 문법은 다음과 같습니다::"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:490
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:503
 msgid ""
 "Note that for large tables, creating the index can take a long time. Once "
 "the index is created, you should perform a ``VACUUM ANALYZE``. See the "
@@ -852,74 +947,15 @@ msgstr ""
 "ANALYZE`` 명령을 실행해야 합니다. 더 자세한 내용은 PostGIS 문서(:ref:`literature_and_web` 에 있는 "
 "POSTGIS-PROJECT)를 참조하세요."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:495
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:508
 msgid "The following example creates a GiST index::"
 msgstr "다음은 GiST 인덱스를 생성하는 예시입니다::"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:517
-msgid "Vector layers crossing 180 |degrees| longitude"
-msgstr "경도 180 |degrees| 선을 가로지르는 벡터 레이어"
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:533
-msgid "Map in lat/lon crossing the 180 |degrees| longitude line"
-msgstr "경도 180 |degrees| 선을 가로지르는 위도/경도 맵"
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:535
-msgid ""
-"A work-around is to transform the longitude values using PostGIS and the "
-"**ST_Shift_Longitude** function. This function reads every point/vertex in "
-"every component of every feature in a geometry, and if the longitude "
-"coordinate is < 0 |degrees|, it adds 360 |degrees| to it. The result is a 0 "
-"|degrees| - 360 |degrees| version of the data to be plotted in a 180 "
-"|degrees|-centric map."
-msgstr ""
-"PostGIS와 **ST_Shift_Longitude** 함수를 이용해서 경도를 변환하면 이 문제를 해결할 수 있습니다. 이 함수는 "
-"도형이 보유한 모든 객체의 모든 요소의 모든 포인트/꼭짓점을 읽은 다음 경도 좌표가 0 |degrees| 미만인 경우 360 "
-"|degrees| 를 더합니다. 그 결과, 경도 180 |degrees| 선을 중심으로 하는 맵에 0 |degrees| 에서 360 "
-"|degrees| 범위로 변환된 데이터를 그리게 됩니다."
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:549
-msgid ""
-"Crossing 180 |degrees| longitude applying the **ST_Shift_Longitude** "
-"function"
-msgstr "경도 180 |degrees| 선을 가로지르는 데이터에 **ST_Shift_Longitude** 함수를 적용"
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:553
-msgid "Usage"
-msgstr "활용"
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:555
-msgid ""
-"Import data into PostGIS (:ref:`vector_import_data_in_postgis`) using, for "
-"example, the DB Manager plugin."
-msgstr ""
-"DB 관리자 플러그인 등을 이용해서 PostGIS로 데이터를 불러옵니다. "
-"(:ref:`vector_import_data_in_postgis` 참조)"
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:557
-msgid ""
-"Use the PostGIS command line interface to issue the following command (in "
-"this example, \"TABLE\" is the actual name of your PostGIS table): "
-"``gis_data=# update TABLE set the_geom=ST_Shift_Longitude(the_geom);``"
-msgstr ""
-"PostGIS 명령 줄 인터페이스를 통해 다음 명령어를 입력하고 실행합니다. (이 예시에서, \"TABLE\" 은 사용자 PostGIS "
-"테이블의 실제 명칭입니다): ``gis_data=# update TABLE set "
-"the_geom=ST_Shift_Longitude(the_geom);``"
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:560
-msgid ""
-"If everything went well, you should receive a confirmation about the number "
-"of features that were updated. Then you'll be able to load the map and see "
-"the difference (Figure_vector_crossing_map_)."
-msgstr ""
-"모든 작업이 제대로 됐다면, 업데이트한 피처의 개수를 확인하는 메시지를 볼 수 있을 겁니다. 그리고 나서야 맵을 불러와서 바뀐 "
-"모습(:numref:`figure_vector_crossing_map`)을 볼 수 있습니다."
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:569
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:532
 msgid "SpatiaLite Layers"
 msgstr "SpatiaLite 레이어"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:571
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:534
 msgid ""
 "If you want to save a vector layer using the SpatiaLite format, you can do "
 "this by following instructions at :ref:`general_saveas`. You select "
@@ -930,7 +966,7 @@ msgstr ""
 ":guilabel:`Format` 을 ``SpatiaLite`` 으로 선택하고 :guilabel:`File name` 과 "
 ":guilabel:`Layer name` 을 둘 다 입력하십시오."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:576
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:539
 msgid ""
 "Also, you can select ``SQLite`` as format and then add ``SPATIALITE=YES`` in"
 " the :menuselection:`Custom Options --> Data source` field. This tells GDAL "
@@ -941,7 +977,7 @@ msgstr ""
 "란에 ``SPATIALITE=YES`` 를 추가해도 됩니다. 이렇게 하면 GDAL이 SpatiaLite 데이터베이스를 추가할 겁니다. "
 "https://gdal.org/drivers/vector/sqlite.html 도 참조하세요. "
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:582
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:545
 msgid ""
 "QGIS also supports editable views in SpatiaLite. For SpatiaLite data "
 "management, you can also use the core plugin :ref:`DB Manager <dbmanager>`."
@@ -949,17 +985,17 @@ msgstr ""
 "QGIS는 SpatiaLite에서 편집할 수 있는 뷰도 지원합니다. SpatiaLite 데이터를 관리하고자 한다면, 핵심 플러그인인  "
 ":ref:`DB 관리자 <dbmanager>` 를 이용할 수도 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:586
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:549
 msgid ""
 "If you want to create a new SpatiaLite layer, please refer to section "
 ":ref:`vector_create_spatialite`."
 msgstr "새 SpatiaLite 레이어를 생성하고 싶다면, :ref:`vector_create_spatialite` 를 참조해주세요."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:595
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:558
 msgid "GeoJSON specific parameters"
 msgstr "GeoJSON 특화 파라미터"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:597
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:560
 msgid ""
 "When :ref:`exporting layers <general_saveas>` to GeoJSON, there are some "
 "specific :guilabel:`Layer Options` available. These options come from GDAL "
@@ -968,7 +1004,7 @@ msgstr ""
 "GeoJSON으로 :ref:`레이어를 내보내는 <general_saveas>` 경우, 특화된 몇몇 :guilabel:`Layer "
 "Options` 를 사용할 수 있습니다. 이 특화 옵션은 해당 파일의 작성을 책임지는 GDAL이 제공합니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:601
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:564
 msgid ""
 ":guilabel:`COORDINATE_PRECISION` the maximum number of digits after the "
 "decimal separator to write in coordinates. Defaults to 15 (note: for Lat Lon"
@@ -979,7 +1015,7 @@ msgstr ""
 "(참고: 위경도 좌표의 경우 6이면 충분하다고 간주합니다.) 잘라내기(truncation) 기능이 이 자릿수 뒤의 0들을 제거할 "
 "것입니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:605
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:568
 msgid ""
 ":guilabel:`RFC7946` by default GeoJSON 2008 will be used. If set to YES, the"
 " updated RFC 7946 standard will be used. Default is NO (thus GeoJSON 2008). "
@@ -999,13 +1035,13 @@ msgstr ""
 " north]입니다. 피처 집합(FeatureCollection), 피처 및 도형 객체에서 일부 확장자 명칭들을 사용할 수 없으며, 기본"
 " 좌표 정밀도는 십진수 7자리입니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:616
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:579
 msgid ""
 ":guilabel:`WRITE_BBOX` set to YES to include the bounding box of the "
 "geometries at the feature and feature collection level"
 msgstr ":guilabel:`WRITE_BBOX`: YES로 설정하면 피처 및 피처 집합 수준에서 도형의 경계 상자를 포함합니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:619
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:582
 msgid ""
 "Besides GeoJSON there is also an option to export to \"GeoJSON - Newline "
 "Delimited\" (see https://gdal.org/drivers/vector/geojsonseq.html). Instead "
@@ -1017,16 +1053,16 @@ msgstr ""
 "집합(FeatureCollection with Features) 대신 새줄 문자(newline)로 연속적으로 구분된 (아마도 피처만의) "
 "한 유형을 줄줄이 이어지게 할 수 있습니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:625
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:588
 msgid ""
 "GeoJSON - Newline Delimited has some specific Layer options availabe too:"
 msgstr "GeoJSON - 새줄 문자 구분도 몇몇 특화된 레이어 옵션을 사용할 수 있습니다:"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:627
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:590
 msgid ":guilabel:`COORDINATE_PRECISION` see above (same as for GeoJSON)"
 msgstr ":guilabel:`COORDINATE_PRECISION`: 앞의 설명 참조 (GeoJSON과 동일)"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:628
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:591
 msgid ""
 ":guilabel:`RS` whether to start records with the RS=0x1E character. The "
 "difference is how the features are separated: only by a newline (LF) "
@@ -1040,11 +1076,11 @@ msgstr ""
 "수도 (GeoJSON 텍스트 시퀀스, geojsons) 있습니다. 기본값은 NO입니다. 확장자를 지정하지 않을 경우 파일에 "
 ":file:`.json` 확장자를 붙입니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:641
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:604
 msgid "SAP HANA Spatial Layers"
 msgstr "SAP HANA 공간 레이어"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:643
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:606
 msgid ""
 "This section contains some details on how QGIS accesses SAP HANA layers. "
 "Most of the time, QGIS should simply provide you with a list of database "
@@ -1057,11 +1093,11 @@ msgstr ""
 "데이터베이스 테이블 및 뷰 목록을 제공하고, 사용자 요청에 따라 테이블을 불러올 것입니다. 하지만 QGIS로 SAP HANA 테이블 및 "
 "뷰를 불러오는 데 문제가 있을 경우, 다음 내용을 통해 기저 원인을 이해하고 문제점을 해결할 수 있을 것입니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:650
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:613
 msgid "Feature Identification"
 msgstr "피처 식별"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:652
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:615
 msgid ""
 "If you'd like to use all of QGIS' feature editing capabilities, QGIS must be"
 " able to unambiguously identify each feature in a layer. Internally, QGIS "
@@ -1071,7 +1107,7 @@ msgstr ""
 "QGIS의 모든 편집 작업 케이퍼빌리티를 이용하고 싶다면, QGIS가 레이어에 있는 각 피처를 확실하게 식별할 수 있어야만 합니다. "
 "QGIS는 내부적으로 64비트 부호 있는 정수형을 사용해서 피처를 식별하는 데, 이때 음수 범위를 특수 목적 용으로 예약해 둡니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:657
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:620
 msgid ""
 "Therefore, the SAP HANA provider requires a unique key that can be mapped to"
 " a positive 64-bit integer to fully support QGIS' feature editing "
@@ -1081,11 +1117,11 @@ msgstr ""
 "따라서 SAP HANA 제공자가 QGIS의 피처 편집 작업 케이퍼빌리티를 완전하게 지원하려면 양의 64비트 정수형에 매핑될 수 있는 유일"
 " 키가 필요하게 됩니다. 이런 매핑을 할 수 없는 경우, 그래도 피처를 볼 수는 있겠지만 편집 작업은 할 수 없을지도 모릅니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:663
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:626
 msgid "Adding tables"
 msgstr "테이블 추가하기"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:665
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:628
 msgid ""
 "When adding a table as a layer, the SAP HANA provider uses the table's "
 "primary key to map it to a unique feature id. Therefore, to have full "
@@ -1095,7 +1131,7 @@ msgstr ""
 "테이블을 레이어로 추가하는 경우 SAP HANA 제공자는 테이블의 기본 키를 이용해서 유일 FID(Feature ID)에 매핑시킵니다. "
 "따라서 피처 편집 작업을 완전하게 지원하려면 사용자의 테이블 정의에 기본 키가 있어야 합니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:669
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:632
 msgid ""
 "The SAP HANA provider supports multi-column primary keys, but if you'd like "
 "to get the best performance, your primary key should be a single column of "
@@ -1104,11 +1140,11 @@ msgstr ""
 "SAP HANA 제공자가 다중 열 기본 키를 지원하긴 하지만, 최고의 성능을 보이길 원한다면 사용자의 기본 키가  ``INTEGER`` "
 "유형의 단일 열이어야 합니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:674
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:637
 msgid "Adding views"
 msgstr "뷰 추가"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:676
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:639
 msgid ""
 "When adding a view as a layer, the SAP HANA provider cannot automatically "
 "identify columns that unambiguously identify a feature. Furthermore, some "
@@ -1117,7 +1153,7 @@ msgstr ""
 "뷰를 레이어로 추가하는 경우 SAP HANA 제공자는 피처를 확실하게 식별하는 열을 자동으로 식별하지 못 합니다. 게다가 몇몇 뷰는 "
 "읽기전용으로 편집할 수 없기도 합니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:680
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:643
 msgid ""
 "To have full feature editing support, the view must be updatable (check "
 "column ``IS_READ_ONLY`` in system view ``SYS.VIEWS`` for the view in "
@@ -1132,3 +1168,71 @@ msgstr ""
 ":menuselection:`Layer --> Add Layer --> Add SAP HANA Spatial Layer` 메뉴에서 "
 ":guilabel:`Feature id` 열에 있는 열을 선택하면 열을 지정할 수 있습니다. 최고의 성능을 바란다면, "
 ":guilabel:`Feature id` 값이 단일 ``INTEGER`` 열이어야 합니다."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:655
+msgid "Layers crossing 180° longitude"
+msgstr "경도 180° 선을 가로지르는 레이어"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:657
+msgid ""
+"Many GIS packages don't wrap layers with a geographic reference system "
+"(lat/lon) crossing the 180 degrees longitude line. As result, if we open "
+"such a layer in QGIS, we could see two widely separated locations, that "
+"should appear near each other. In :numref:`Figure_vector_crossing`, the tiny"
+" point on the far left of the map canvas (Chatham Islands) should be within "
+"the grid, to the right of the New Zealand main islands."
+msgstr ""
+"많은 GIS 패키지들이 경도 180˚ 선을 가로지르는 지리 참조 시스템(위도/경도)으로 레이어를 감싸고 있지 않습니다. 그 결과, "
+"QGIS에서 이런 레이어를 열었을 때, 서로 가까이 있어야 하지만 멀리 떨어져 있는 두 위치를 보게 됩니다. "
+":numref:`figure_vector_crossing` 에서, 맵 캔버스 왼쪽 구석에 있는 작은 점들(채텀 제도)은 그리드 내부, "
+"뉴질랜드 본도의 오른쪽에 있어야 합니다."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:670
+msgid "Map in lat/lon crossing the 180° longitude line"
+msgstr "경도 180° 선을 가로지르는 위도/경도 맵"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:673
+msgid "Solving in PostGIS"
+msgstr "PostGIS에서 해결하기"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:675
+msgid ""
+"A work-around is to transform the longitude values using PostGIS and the "
+"`ST_ShiftLongitude <https://postgis.net/docs/ST_Shift_Longitude.html>`_ "
+"function. This function reads every point/vertex in every component of every"
+" feature in a geometry, and shifts its longitude coordinate from -180..0° to"
+" 180..360° and vice versa if between these ranges. This function is "
+"symmetrical so the result is a 0..360° representation of a -180..180° data "
+"and a -180..180° representation of a 0..360° data."
+msgstr ""
+"PostGIS와 `ST_ShiftLongitude "
+"<https://postgis.net/docs/ST_Shift_Longitude.html>`_ 함수를 이용해서 경도값을 변환시키는 것도 "
+"해결책이 될 수 있습니다. 이 함수는 도형의 모든 피처에 있는 모든 요소의 모든 포인트/꼭짓점을 읽어들여 그 경도 좌표가 -180~0° "
+"또는 180~360° 범위에 있을 경우 좌표를 각각 180~360° 또는 -180~0° 범위로 변이시킵니다. 이 함수는 대칭적이기 "
+"때문에, -180~180° 범위의 데이터를 0~360° 범위로 산출하고  0~360° 범위의 데이터를 -180~180° 범위로 "
+"산출합니다."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:688
+msgid "Crossing 180° longitude applying the **ST_ShiftLongitude** function"
+msgstr "경도 180° 선을 가로지르는 데이터에 **ST_Shift_Longitude** 함수를 적용"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:691
+msgid ""
+"Import data into PostGIS (:ref:`vector_import_data_in_postgis`) using, for "
+"example, the DB Manager plugin."
+msgstr ""
+"DB 관리자 플러그인 등을 이용해서 PostGIS로 데이터를 불러옵니다. "
+"(:ref:`vector_import_data_in_postgis` 참조)"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:693
+msgid "Use the PostGIS command line interface to issue the following command:"
+msgstr "PostGIS 명령 줄 인터페이스를 이용해서 다음 명령어를 실행하십시오:"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:700
+msgid ""
+"If everything went well, you should receive a confirmation about the number "
+"of features that were updated. Then you'll be able to load the map and see "
+"the difference (Figure_vector_crossing_map_)."
+msgstr ""
+"모든 작업이 제대로 됐다면, 업데이트한 피처의 개수를 확인하는 메시지를 볼 수 있을 겁니다. 그리고 나서야 맵을 불러와서 바뀐 "
+"모습(:numref:`figure_vector_crossing_map`)을 볼 수 있습니다."
