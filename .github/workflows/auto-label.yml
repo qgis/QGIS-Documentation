@@ -7,11 +7,23 @@ on:
   issues:
     types: [opened]
 
+permissions:
+  contents: read
+
 jobs:
   test:
+    permissions:
+      issues: write
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     runs-on: ubuntu-latest
     steps:
-      - uses: Naturalclar/issue-action@v2.0.2
+      - name: Harden Runner
+        uses: step-security/harden-runner@1f99358870fe1c846a3ccba386cc2b2246836776 # v2.2.1
+        with:
+          egress-policy: audit # TODO: change to 'egress-policy: block' after couple of runs
+
+      - uses: Naturalclar/issue-action@dc881db370e1faa4bcc32ad5d3fadb6d905d8700 # v2.0.2
         with:
           title-or-body: "both"
           parameters: |
@@ -20,4 +32,4 @@ jobs:
               {"keywords": ["QGIS version: 3.32"], "labels": ["3.32"]},
               {"keywords": ["QGIS version: 3.34"], "labels": ["3.34"]}
             ]
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
+          github-token: "${{ GH_TOKEN }}"
