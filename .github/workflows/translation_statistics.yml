@@ -48,14 +48,7 @@ jobs:
     - name: Report statistics
       run: python3 ./scripts/load_tx_stats.py $TRANSIFEX_PASSWORD
 
-    - name: Commit changes to LTR
-      if: github.ref != 'refs/heads/master'
-      uses: stefanzweifel/git-auto-commit-action@3ea6ae190baf489ba007f7c92608f33ce20ef04a # v4.16.0
-      with:
-        commit_message: Update statistics of translation
-
     - id: create_pr
-      if: github.ref == 'refs/heads/master'
       name: Create Pull Request for master
       uses: peter-evans/create-pull-request@38e0b6e68b4c852a5500a94740f0e535e0d7ba54 # v4.2.4
       with:
@@ -65,7 +58,6 @@ jobs:
         labels: Translation
 
     - name: Enable Pull Request Automerge
-      if: github.ref == 'refs/heads/master'
       run: gh pr merge --rebase --auto "${{ steps.create_pr.outputs.pull-request-number }}"
       env:
         GH_TOKEN: ${{ GH_TOKEN }}
