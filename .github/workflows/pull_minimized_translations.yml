@@ -49,8 +49,8 @@ jobs:
     - name: Download and sanitize files and folders
       run: bash ./scripts/minimize_translation.sh
 
-#    - name: Show changes
-#      run: echo `git status`
+    # - name: Show changes
+    #   run: echo `git status`
 
     - name: Load translations if any
       run: |
@@ -64,22 +64,22 @@ jobs:
         fi
 
 
-#    - name: Pull source file using transifex client
- #     uses: transifex/cli-action@v1
-  #    with:
-   #       token: ${{ secrets.TRANSIFEX_PASSWORD }}
-    #      args: pull --force --mode onlytranslated -l fr 
+    # - name: Pull source file using transifex client
+    #   uses: transifex/cli-action@bc67c0ab1369ef941f0963d902c45d11688c8bc9 # v1
+    #   with:
+    #       token: ${{ secrets.TRANSIFEX_PASSWORD }}
+    #       args: pull --force --mode onlytranslated -l fr
 
-#    - name: Commit the changes in the PO files
- #     id: "auto-commit-action"
-#      uses: stefanzweifel/git-auto-commit-action@v4
- #     with:
- #       commit_message: 'Load translated strings'
+    # - name: Commit the changes in the PO files
+    #   id: "auto-commit-action"
+    #   uses: stefanzweifel/git-auto-commit-action@3ea6ae190baf489ba007f7c92608f33ce20ef04a # v4.16.0
+    #   with:
+    #     commit_message: 'Load translated strings'
 
-  #  - name: "Inform that changes have been made"
-   #   if: steps.auto-commit-action.outputs.changes_detected == 'true'
-    #  run: echo "Changes committed!"
+    # - name: "Inform that changes have been made"
+    #   if: steps.auto-commit-action.outputs.changes_detected == 'true'
+    #   run: echo "Changes committed!"
 
-#    - name: "Inform that no changes were performed"
- #     if: steps.auto-commit-action.outputs.changes_detected == 'false'
-  #    run: echo "No Changes detected!"
+    # - name: "Inform that no changes were performed"
+    #   if: steps.auto-commit-action.outputs.changes_detected == 'false'
+    #   run: echo "No Changes detected!"
