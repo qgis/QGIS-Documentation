@@ -309,5 +309,3 @@ input, and creates a *QQ Plot* (to test the normality of the
 distribution).
 
 The plot is automatically added to the Processing *Result Viewer*.
-
-QGIS

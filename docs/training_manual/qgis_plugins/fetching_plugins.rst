@@ -117,5 +117,3 @@ Next we'll introduce you to some useful plugins as examples.
 .. |LS| replace:: Lesson:
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/common/basic.png
-
-QGIS

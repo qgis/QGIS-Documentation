@@ -750,5 +750,3 @@ will get into the habit of writing test to test new functionality and to check
 for regressions. Some aspects of the test system (in particular the
 :file:`CMakeLists.txt` parts) are still being worked on so that the testing framework
 works in a truly platform independent way.
-
-QGIS

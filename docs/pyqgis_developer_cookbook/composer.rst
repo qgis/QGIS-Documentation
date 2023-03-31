@@ -352,5 +352,3 @@ example, the pages are exported to PNG images:
 Notice that the outputs will be saved in the base path folder, using the output
 filename expression configured on atlas.
 
-
-QGIS

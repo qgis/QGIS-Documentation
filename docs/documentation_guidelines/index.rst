@@ -37,5 +37,3 @@ project, you may find help at `Get Involved in the QGIS Community
    do_translations
    substitutions
 
-
-QGIS

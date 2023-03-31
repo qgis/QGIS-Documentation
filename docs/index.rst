@@ -107,5 +107,3 @@ Please have a look into one of the documents below.
    source folder.
 
 .. |CURRENT| replace:: 3.28
-
-QGIS

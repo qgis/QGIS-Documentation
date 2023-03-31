@@ -3582,5 +3582,3 @@ Python code
    :height: 4.4em
 .. |small_formula| image:: img/fuzzy_small_formula.png
    :height: 3.2em
-
-QGIS

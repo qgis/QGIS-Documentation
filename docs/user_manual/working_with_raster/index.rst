@@ -10,5 +10,3 @@ Working with Raster Data
 	raster_properties
 	raster_analysis
         georeferencer
-
-QGIS

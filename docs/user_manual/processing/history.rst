@@ -82,5 +82,3 @@ input data, output comments or additional information to log when
 they detect potential problems with the data, in order to warn you.
 Make sure you check those messages in the log if you get unexpected
 results.
-
-QGIS

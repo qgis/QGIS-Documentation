@@ -84,5 +84,3 @@ them and use these tables as layers in QGIS.
 .. |basic| image:: /static/common/basic.png
 .. |newSpatiaLiteLayer| image:: /static/common/mActionNewSpatiaLiteLayer.png
    :width: 1.5em
-
-QGIS

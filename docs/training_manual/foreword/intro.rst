@@ -105,5 +105,3 @@ in the :ref:`tm_preparing_data` appendix.
 .. |basic| image:: /static/common/basic.png
 .. |hard| image:: /static/common/hard.png
 .. |moderate| image:: /static/common/moderate.png
-
-QGIS

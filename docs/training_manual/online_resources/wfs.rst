@@ -181,5 +181,3 @@ Next, you'll see how to use QGIS Server to provide OGC services.
 .. |moderate| image:: /static/common/moderate.png
 .. |wfs| image:: /static/common/mIconWfs.png
    :width: 1.5em
-
-QGIS

@@ -84,5 +84,3 @@ On **polygon layers**, the following rules are available:
 * **Must not overlap with**: Adjacent polygons from one layer should not share
   common area with polygons from another layer.
 
-
-QGIS

@@ -100,5 +100,3 @@ Returns the Soundex representation of a string. Soundex is a phonetic matching a
 
 .. end_soundex_section
 
-
-QGIS

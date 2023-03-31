@@ -36,5 +36,3 @@ algorithms.
      vectorselection
      vectortable
      vectortiles
-
-QGIS

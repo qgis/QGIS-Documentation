@@ -40,5 +40,3 @@ QGIS User Guide
     preamble/contributors
     appendices/index
     literature_web/literature_and_web_references
-
-QGIS

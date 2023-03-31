@@ -46,5 +46,3 @@ Returns the current, unsaved value of a field in the form or table row currently
 
 .. end_current_value_section
 
-
-QGIS

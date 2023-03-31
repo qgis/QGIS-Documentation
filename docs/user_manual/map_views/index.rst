@@ -18,5 +18,3 @@ show different scale or extent, or display a different set of the loaded layers 
 
       map_view
       3d_map_view
-
-QGIS

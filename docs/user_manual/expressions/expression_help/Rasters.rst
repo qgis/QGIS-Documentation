@@ -62,5 +62,3 @@ Returns the raster value found at the provided point.
 
 .. end_raster_value_section
 
-
-QGIS

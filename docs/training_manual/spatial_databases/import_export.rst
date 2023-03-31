@@ -100,5 +100,3 @@ Next we'll look at how to query the data we've created before.
 .. |IC| replace:: In Conclusion
 .. |LS| replace:: Lesson:
 .. |WN| replace:: What's Next?
-
-QGIS

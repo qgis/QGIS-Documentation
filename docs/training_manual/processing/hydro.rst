@@ -113,5 +113,3 @@ within that subbasin and then pass it to the module that calculates those statis
 We will use both the basin calculations procedure and the statistics
 calculation in other lessons, to find out how other elements can help us
 automate both of them and work more effectively.
-
-QGIS

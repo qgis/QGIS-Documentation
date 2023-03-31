@@ -629,5 +629,3 @@ Python code
 
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
-
-QGIS

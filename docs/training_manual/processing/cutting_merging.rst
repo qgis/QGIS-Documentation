@@ -112,5 +112,3 @@ we get the final layer we wanted.
 The reprojection processes might have caused the final layer to contain data
 outside the bounding box that we calculated in one of the first steps.
 This can be solved by clipping it again, as we did to obtain the base DEM.
-
-QGIS

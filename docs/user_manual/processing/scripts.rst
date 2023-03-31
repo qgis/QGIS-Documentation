@@ -707,5 +707,3 @@ interface.
 
 There are already many processing algorithms available in QGIS.
 You can find code on the :source:`QGIS <python/plugins/processing/algs/qgis>` repo.
-
-QGIS

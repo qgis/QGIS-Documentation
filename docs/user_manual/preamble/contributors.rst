@@ -138,5 +138,3 @@ The current translations are made possible thanks to:
    source folder.
 
 .. |CURRENT| replace:: 3.22
-
-QGIS

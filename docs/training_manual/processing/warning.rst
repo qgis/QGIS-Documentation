@@ -52,5 +52,3 @@ Here is a good reference that you can read to learn more about spatial data anal
 Michael John De Smith, Michael F. Goodchild, Paul A. Longley
 
 It is available online `here <https://www.spatialanalysisonline.com/>`_
-
-QGIS

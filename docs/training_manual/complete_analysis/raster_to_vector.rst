@@ -125,5 +125,3 @@ for the residential development.
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
 .. |moderate| image:: /static/common/moderate.png
-
-QGIS

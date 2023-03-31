@@ -127,5 +127,3 @@ or to validate output of a spatial analysis.
    :width: 1.5em
 .. |zoomOut| image:: /static/common/mActionZoomOut.png
    :width: 1.5em
-
-QGIS

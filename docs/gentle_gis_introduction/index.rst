@@ -22,5 +22,3 @@ A Gentle Introduction to GIS
    spatial_analysis_interpolation
    authors_and_contributors
    gnu_free_documentation_license
-
-QGIS

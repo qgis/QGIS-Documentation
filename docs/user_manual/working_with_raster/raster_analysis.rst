@@ -189,5 +189,3 @@ layers. You can also choose one or more other options (see :numref:`figure_raste
    :width: 1.5em
 .. |symbologyRemove| image:: /static/common/symbologyRemove.png
    :width: 1.5em
-
-QGIS

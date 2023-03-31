@@ -618,5 +618,3 @@ done with :command:`pyrcc5` command:
     modifying the PATH environment variable or specifiying the path to the
     executable explicitly you should be able to find it at
     :file:`<Your QGIS Install Directory>\\bin\\pyrcc5.exe`.
-
-QGIS

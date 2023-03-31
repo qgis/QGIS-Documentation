@@ -9,5 +9,3 @@ Working with GPS Data
 
 	plugins_gps
 	live_GPS_tracking
-
-QGIS

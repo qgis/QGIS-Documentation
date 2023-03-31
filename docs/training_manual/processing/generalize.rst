@@ -24,5 +24,3 @@ first analysis, and see the difference. Note that adjacency is not lost.
 
 This second option can be applied e.g. to contour lines resulting from a coarse
 raster, to GPS tracks with sparse vertices, etc.
-
-QGIS

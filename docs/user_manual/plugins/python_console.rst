@@ -168,5 +168,3 @@ share the code via GitHub and much more). Main features are:
    :width: 1.5em
 .. |start| image:: /static/common/mActionStart.png
    :width: 1.5em
-
-QGIS

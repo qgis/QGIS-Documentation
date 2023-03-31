@@ -22,5 +22,3 @@ present the final results.
    source folder.
 
 .. |MOD| replace:: Module:
-
-QGIS

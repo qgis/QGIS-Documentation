@@ -107,5 +107,3 @@ not only to SAGA, but also to other external applications as well.
 In the next lesson we will introduce the processing log, where information about
 commands run by geoalgorithms is kept, and you will see how to get more detail
 when issues like this appear.
-
-QGIS

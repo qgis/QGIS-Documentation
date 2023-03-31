@@ -113,5 +113,3 @@ What we will try to do now is to create an algorithm that calculates the TWI fro
    As you can see, the parameters dialog, contain the input that you added to the model, along with the outputs that you set as final when adding the corresponding algorithms.
 
 #. Run it using the DEM as input and you will get the TWI layer in just one single step.
-
-QGIS

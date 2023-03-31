@@ -152,5 +152,3 @@ This function sets a variable for any expression code that will be provided as 3
 
 .. end_with_variable_section
 
-
-QGIS

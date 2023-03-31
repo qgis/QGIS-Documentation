@@ -453,5 +453,3 @@ For a list of loaded layers and layer ids, use the :meth:`mapLayers() <qgis.core
 .. testcode:: loadlayer
 
     QgsProject.instance().mapLayers()
-
-QGIS

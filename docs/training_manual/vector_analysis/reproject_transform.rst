@@ -256,5 +256,3 @@ QGIS' various vector analysis tools.
    :width: 1.5em
 .. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em
-
-QGIS

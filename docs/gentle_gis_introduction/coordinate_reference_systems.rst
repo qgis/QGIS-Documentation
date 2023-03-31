@@ -500,5 +500,3 @@ In the section that follows we will take a closer look at **Map Production**.
 
 .. |gentleLogo| image:: img/gentlelogo.png
    :width: 3em
-
-QGIS

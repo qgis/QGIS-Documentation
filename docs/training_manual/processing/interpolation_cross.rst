@@ -54,5 +54,3 @@ Interpolating that layer will get you a raster layer with the estimated error in
 You can also get the same information (difference between original point values and interpolated ones) directly with :menuselection:`GRASS --> v.sample`.
 
 Your results might differ from these ones, since there is a random component introduced when running the random selection, at the beginning of this lesson.
-
-QGIS

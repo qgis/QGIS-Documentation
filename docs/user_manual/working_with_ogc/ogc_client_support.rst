@@ -788,5 +788,3 @@ features and view the attribute table.
    :width: 1.5em
 .. |wms| image:: /static/common/mIconWms.png
    :width: 1.5em
-
-QGIS

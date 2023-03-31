@@ -423,5 +423,3 @@ back to the :guilabel:`New Legend Patch Shape` dialog to keep creating new shape
    :width: 1.5em
 .. |unchecked| image:: /static/common/unchecked.png
    :width: 1.3em
-
-QGIS

@@ -937,5 +937,3 @@ https://qgis.org/en/site/getinvolved/development/addinggrasstools.html.
    :width: 2.5em
 .. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
    :width: 1.5em
-
-QGIS

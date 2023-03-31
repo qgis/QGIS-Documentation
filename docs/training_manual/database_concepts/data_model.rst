@@ -446,5 +446,3 @@ Next you'll learn how to use the DBMS to add new data.
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
 .. |moderate| image:: /static/common/moderate.png
-
-QGIS

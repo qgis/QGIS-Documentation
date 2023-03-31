@@ -11,5 +11,3 @@
    symbol_selector
    label_settings
    3d_symbols
-
-QGIS

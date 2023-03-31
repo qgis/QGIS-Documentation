@@ -178,5 +178,3 @@ hitting the :kbd:`Del` key.
    :ltrim:
 .. |editNodesShape| image:: /static/common/mActionEditNodesShape.png
    :width: 1.5em
-
-QGIS

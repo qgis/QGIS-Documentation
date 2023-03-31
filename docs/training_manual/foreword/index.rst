@@ -7,5 +7,3 @@ Course Introduction
 
    foreword
    intro
-
-QGIS

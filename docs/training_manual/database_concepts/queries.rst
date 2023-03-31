@@ -323,5 +323,3 @@ Next you'll see how to create views from the queries that you've written.
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
 .. |moderate| image:: /static/common/moderate.png
-
-QGIS

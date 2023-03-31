@@ -121,5 +121,3 @@ and project path can be included in this JSON object:
 Specifying input parameters via stdin implies automatically the :file:`JSON`
 output format for results.
 
-
-QGIS

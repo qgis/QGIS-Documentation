@@ -18,5 +18,3 @@ and `GDAL vector programs <https://gdal.org/programs/index.html#vector-programs>
      vectorconversion
      vectorgeoprocessing
      vectormiscellaneous
-
-QGIS

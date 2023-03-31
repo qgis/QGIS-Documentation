@@ -80,5 +80,3 @@ populate the items with the parameters of a 3D View.
 
 .. |add3DMap| image:: /static/common/mActionAdd3DMap.png
    :width: 1.5em
-
-QGIS

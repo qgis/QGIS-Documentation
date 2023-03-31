@@ -435,5 +435,3 @@ added to the project in a safe way.
 
 
 See also: https://www.opengis.ch/2018/06/22/threads-in-pyqgis3/.
-
-QGIS

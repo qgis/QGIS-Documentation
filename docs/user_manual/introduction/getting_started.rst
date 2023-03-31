@@ -296,5 +296,3 @@ features and settings, and how to use them.
    :width: 1em
 .. |zoomIn| image:: /static/common/mActionZoomIn.png
    :width: 1.5em
-
-QGIS

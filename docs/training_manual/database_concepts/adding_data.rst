@@ -220,5 +220,3 @@ data in various ways.
 .. |basic| image:: /static/common/basic.png
 .. |hard| image:: /static/common/hard.png
 .. |moderate| image:: /static/common/moderate.png
-
-QGIS

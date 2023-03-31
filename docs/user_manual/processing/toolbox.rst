@@ -439,5 +439,3 @@ to a temporary file and deleted once you exit QGIS).
    :width: 1.5em
 .. |search| image:: /static/common/search.png
    :width: 1.5em
-
-QGIS

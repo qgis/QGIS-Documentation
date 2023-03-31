@@ -227,5 +227,3 @@ can also:
    :width: 1.5em
 .. |northArrow| image:: /static/common/north_arrow.png
    :width: 1.5em
-
-QGIS

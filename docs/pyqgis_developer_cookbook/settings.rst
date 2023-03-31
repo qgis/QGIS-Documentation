@@ -141,5 +141,3 @@ We can differentiate between several types of settings:
 
    # read the value again (returning "default text" if not found)
    mytext = vlayer.customProperty("mytext", "default text")
-
-QGIS

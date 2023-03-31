@@ -64,5 +64,3 @@ Authors
 - Gary Sherman
 - Marco Hugentobler
 - Matthias Kuhn
-
-QGIS

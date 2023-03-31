@@ -76,5 +76,3 @@ check them for geometry errors. If at least one feature contains an invalid geom
 To activate this hook we need enter its filename in the *Pre-execution script
 file* option in the Processing configuration dialog. 
 The hook will be executed before running any Processing algorithm.
-
-QGIS

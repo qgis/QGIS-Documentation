@@ -719,5 +719,3 @@ and a -180..180° representation of a 0..360° data.
    :width: 1em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
-
-QGIS

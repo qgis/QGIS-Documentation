@@ -862,5 +862,3 @@ Here is an example of a custom API that will be executed when the URL contains `
             handler = CustomApiHandler()
             api.registerHandler(handler)
             serverIface.serviceRegistry().registerApi(api)
-
-QGIS

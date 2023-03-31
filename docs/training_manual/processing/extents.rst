@@ -91,5 +91,3 @@ whole set of features, and the selection is not used to compute the extent,
 even though the rasterization is executed on the selected items only.
 In that case, you might want to actually create a new layer from the
 selection, and then use it as input.
-
-QGIS

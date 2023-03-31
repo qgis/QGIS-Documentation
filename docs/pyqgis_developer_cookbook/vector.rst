@@ -1680,5 +1680,3 @@ Further Topics
 
 
 .. _supported formats by OGR: https://gdal.org/drivers/vector/index.html
-
-QGIS

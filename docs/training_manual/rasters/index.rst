@@ -23,5 +23,3 @@ directly. In this module, you'll see how it's done in QGIS.
    source folder.
 
 .. |MOD| replace:: Module:
-
-QGIS

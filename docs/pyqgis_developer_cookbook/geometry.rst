@@ -391,5 +391,3 @@ of a few of them.
 * Distance and area using the :class:`QgsDistanceArea <qgis.core.QgsDistanceArea>` class:
   :source:`Distance matrix algorithm <python/plugins/processing/algs/qgis/PointDistance.py>`
 * :source:`Lines to polygons algorithm <python/plugins/processing/algs/qgis/LinesToPolygons.py>`
-
-QGIS

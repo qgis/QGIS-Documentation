@@ -86,5 +86,3 @@ In the following sections, we will review each one of these elements in detail.
 
 .. |processingAlgorithm| image:: /static/common/processingAlgorithm.png
    :width: 1.5em
-
-QGIS

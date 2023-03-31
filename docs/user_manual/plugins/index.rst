@@ -10,5 +10,3 @@ Plugins
    plugins
    core_plugins/index
    python_console
-
-QGIS

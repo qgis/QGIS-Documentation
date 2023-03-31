@@ -13,5 +13,3 @@ are documented here.
      qgis/index
      gdal/index
      otb
-
-QGIS

@@ -51,5 +51,3 @@ Returns a list of credit (usage rights) strings for the layers shown in a layout
 
 .. end_map_credits_section
 
-
-QGIS

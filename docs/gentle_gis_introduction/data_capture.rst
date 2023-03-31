@@ -437,5 +437,3 @@ all about how image data can be used in a GIS.
 
 .. |gentleLogo| image:: img/gentlelogo.png
    :width: 3em
-
-QGIS

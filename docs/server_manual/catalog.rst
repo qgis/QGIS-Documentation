@@ -52,5 +52,3 @@ It is possible to consult information of the elements in the map as shown in the
    :align: center
 
    Consulting information of a map element
-
-QGIS

@@ -444,5 +444,3 @@ Resources
    :width: 1.5em
 .. |xyz| image:: /static/common/mIconXyz.png
    :width: 1.5em
-
-QGIS

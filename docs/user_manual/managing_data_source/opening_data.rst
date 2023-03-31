@@ -1588,5 +1588,3 @@ Once a connection to an ArcGIS REST Server is set, it's possible to:
    :width: 1.5em
 .. |xyz| image:: /static/common/mIconXyz.png
    :width: 1.5em
-
-QGIS

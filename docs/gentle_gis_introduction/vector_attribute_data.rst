@@ -514,5 +514,3 @@ by creating new data.
 
 .. |gentleLogo| image:: img/gentlelogo.png
    :width: 3em
-
-QGIS

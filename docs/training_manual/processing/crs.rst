@@ -106,5 +106,3 @@ coordinates are different. You can see that by running the *Export/Add geometry
 columns* algorithm using this new layer as input, and veryfing that the added
 coordinates are different to the ones in the attribute tables of both of the
 two layers that we had computed before.
-
-QGIS

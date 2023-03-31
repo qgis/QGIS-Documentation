@@ -123,5 +123,3 @@ different platforms.
 .. |slider| image:: /static/common/slider.png
 .. |win| image:: /static/common/win.png
    :width: 1em
-
-QGIS

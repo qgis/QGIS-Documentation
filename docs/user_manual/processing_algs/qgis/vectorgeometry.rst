@@ -7524,5 +7524,3 @@ Python code
    :width: 1.5em
 .. |newAttribute| image:: /static/common/mActionNewAttribute.png
    :width: 1.5em
-
-QGIS

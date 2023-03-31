@@ -43,5 +43,3 @@ of QGIS, and you can also find it in Appendix :ref:`gpl_appendix`.
         The latest version of this document can always be found in the
         documentation area of the QGIS website at
         https://www.qgis.org/en/docs/.
-
-QGIS

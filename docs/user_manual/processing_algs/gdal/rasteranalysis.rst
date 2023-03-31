@@ -2461,5 +2461,3 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
-
-QGIS

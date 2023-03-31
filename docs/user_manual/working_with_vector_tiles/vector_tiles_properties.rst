@@ -124,5 +124,3 @@ See :ref:`metadatamenu` for more information.
    :width: 1.2em
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
-
-QGIS

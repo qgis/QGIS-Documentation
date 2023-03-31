@@ -48,5 +48,3 @@ Now we have to edit the rasterize algorithm, so it uses the output of the calcul
 The final algorithm should look like this:
 
 .. figure:: img/modeler_only/final.png
-
-QGIS

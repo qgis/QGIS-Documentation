@@ -240,5 +240,3 @@ J
 
 This parameter allows to define the Y coordinate of the pixel for
 which we want to retrieve underlying information.
-
-QGIS

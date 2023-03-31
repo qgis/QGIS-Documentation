@@ -232,5 +232,3 @@ directly from their repository. Encrypted files are supported.
    :width: 1.5em
 .. |transformSettings| image:: /static/common/mActionTransformSettings.png
    :width: 1.5em
-
-QGIS

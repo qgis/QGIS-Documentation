@@ -20,5 +20,3 @@ quality maps with all the requisite map components.
    source folder.
 
 .. |MOD| replace:: Module:
-
-QGIS

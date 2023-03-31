@@ -217,5 +217,3 @@ Statistics of translation
 .. |stats_zh-Hans| replace:: 16.8
 .. |stats_zh-Hant| replace:: 0.61
 
-
-QGIS

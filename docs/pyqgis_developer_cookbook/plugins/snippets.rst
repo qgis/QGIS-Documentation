@@ -283,5 +283,3 @@ like this:
 
 .. |fileOpen| image:: /static/common/mActionFileOpen.png
    :width: 1.5em
-
-QGIS

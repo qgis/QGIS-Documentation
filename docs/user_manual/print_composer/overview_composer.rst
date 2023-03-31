@@ -938,5 +938,3 @@ the actions done after the selected one will be removed.
    :width: 1.5em
 .. |zoomToArea| image:: /static/common/mActionZoomToArea.png
    :width: 1.5em
-
-QGIS

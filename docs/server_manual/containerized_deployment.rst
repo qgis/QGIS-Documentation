@@ -560,5 +560,3 @@ tool
 and have the proper permissions / roles. Then with a well configured
 kubectl environment, you can reuse the :ref:`Kubernetes manifests
 <k8s-manifests>`.
-
-QGIS

@@ -21,5 +21,3 @@ QGIS allows you to make use of GRASS' powerful GIS tools directly.
    source folder.
 
 .. |MOD| replace:: Module:
-
-QGIS

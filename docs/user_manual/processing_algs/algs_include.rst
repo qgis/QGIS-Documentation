@@ -332,5 +332,3 @@ Available options depend on the GDAL version built with QGIS
 
 .. **end_raster_data_types_extended**
 
-
-QGIS

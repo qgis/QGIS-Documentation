@@ -131,5 +131,3 @@ If you want to add your existing plugin to Processing, you need to add some code
 
 #. Now you can reload your plugin in QGIS and you should see your example
    script in the Processing toolbox and modeler.
-
-QGIS

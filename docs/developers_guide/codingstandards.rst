@@ -633,5 +633,3 @@ contribution by:
   * :source:`doc/CONTRIBUTORS`
   * :source:`doc/AUTHORS`
 
-
-QGIS

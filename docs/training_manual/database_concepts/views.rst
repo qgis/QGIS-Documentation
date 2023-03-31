@@ -99,5 +99,3 @@ in the database. The next lesson will show you how to do this.
 .. |IC| replace:: In Conclusion
 .. |LS| replace:: Lesson:
 .. |WN| replace:: What's Next?
-
-QGIS

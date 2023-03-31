@@ -22,5 +22,3 @@ features.
    source folder.
 
 .. |MOD| replace:: Module:
-
-QGIS

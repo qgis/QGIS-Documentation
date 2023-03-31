@@ -161,5 +161,3 @@ QGIS Server. For example with the standard ``LAYERS`` parameter:
   &REQUEST=GetMap
   &LAYERS=shortname1,shortname2
   &...
-
-QGIS

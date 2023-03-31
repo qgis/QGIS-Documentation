@@ -632,5 +632,3 @@ Returns the aggregate summed value from a field or expression.
 
 .. end_sum_section
 
-
-QGIS

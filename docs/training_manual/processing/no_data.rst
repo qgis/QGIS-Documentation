@@ -91,5 +91,3 @@ The no-data value comes from the 0/0 expression. Since that is an undetermined v
 Now you just have to multiply it by the slope layer included in the project, and you will get the desired result.
 
 All that can be done in a single operation with the calculator. We leave that as an exercise for the reader.
-
-QGIS

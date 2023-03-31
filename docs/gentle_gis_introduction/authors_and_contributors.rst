@@ -46,5 +46,3 @@ About the authors & contributors
 .. |otto| image:: img/otto_dassau.png
 .. |sibongile| image:: img/sibongile_mthombeni.png
 .. |tim| image:: img/tim_sutton.png
-
-QGIS

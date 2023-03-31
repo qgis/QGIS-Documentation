@@ -2332,5 +2332,3 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |zoomToLayer| image:: /static/common/mActionZoomToLayer.png
    :width: 1.5em
-
-QGIS

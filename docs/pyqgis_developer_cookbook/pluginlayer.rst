@@ -118,5 +118,3 @@ When loading a project containing such a layer, a factory class is needed:
     plt =  WatermarkPluginLayerType()
 
     assert QgsApplication.pluginLayerRegistry().addPluginLayerType(plt)
-
-QGIS

@@ -615,5 +615,3 @@ Performs a regular expression match on a string value. Backslash characters must
 
 .. end_~_section
 
-
-QGIS

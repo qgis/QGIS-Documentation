@@ -40,5 +40,3 @@ locate suitable farm properties for this new residential development.
 
 .. |MOD| replace:: Module:
 .. |majorUrbanName| replace:: Swellendam
-
-QGIS

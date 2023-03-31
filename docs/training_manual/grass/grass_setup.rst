@@ -341,5 +341,3 @@ operations that GRASS offers.
 .. |srtmFileName| replace:: :file:`srtm_41_19_4326.tif`
 .. |win| image:: /static/common/win.png
    :width: 1em
-
-QGIS

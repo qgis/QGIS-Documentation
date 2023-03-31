@@ -225,5 +225,3 @@ should be surrounded by ``[%`` and ``%]`` in the :guilabel:`Main properties` fra
    :width: 1.3em
 .. |label| image:: /static/common/mActionLabel.png
    :width: 1.5em
-
-QGIS

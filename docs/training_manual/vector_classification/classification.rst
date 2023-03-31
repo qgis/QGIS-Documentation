@@ -421,5 +421,3 @@ QGIS and into a format we can print out, or make into an image or PDF? That's th
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
-
-QGIS

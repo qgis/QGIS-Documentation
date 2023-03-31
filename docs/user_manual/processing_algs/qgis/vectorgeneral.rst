@@ -2699,5 +2699,3 @@ Python code
 
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-
-QGIS

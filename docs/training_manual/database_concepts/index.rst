@@ -25,5 +25,3 @@ learning about other typical RDBMS functions.
    source folder.
 
 .. |MOD| replace:: Module:
-
-QGIS

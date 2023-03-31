@@ -640,5 +640,3 @@ the related child features following the parent's identifier.
    :width: 2.5em
 .. |unchecked| image:: /static/common/unchecked.png
    :width: 1.3em
-
-QGIS

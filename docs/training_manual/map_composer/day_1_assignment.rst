@@ -43,5 +43,3 @@ start to finish, using both raster and vector data sources.
 .. |IC| replace:: In Conclusion
 .. |basic| image:: /static/common/basic.png
 .. |moderate| image:: /static/common/moderate.png
-
-QGIS

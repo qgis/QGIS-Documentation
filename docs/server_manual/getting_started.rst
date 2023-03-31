@@ -1036,5 +1036,3 @@ print service, the full list is available in this `repository
    :width: 1.3em
 .. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em
-
-QGIS

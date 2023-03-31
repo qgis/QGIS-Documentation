@@ -166,5 +166,3 @@ symbolization is useful in the case of rasters as well.
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/common/basic.png
 .. |hard| image:: /static/common/hard.png
-
-QGIS

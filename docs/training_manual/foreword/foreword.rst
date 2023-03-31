@@ -155,5 +155,3 @@ version which is part of the QGIS documentation website (https://docs.qgis.org).
 .. note::
    The documentation website contains links to both online and PDF versions of
    the Training manual and other parts of the QGIS documentation.
-
-QGIS

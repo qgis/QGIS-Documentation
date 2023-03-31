@@ -10,5 +10,3 @@
    expression
    functions_list
 
-
-QGIS

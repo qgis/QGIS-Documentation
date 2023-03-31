@@ -179,5 +179,3 @@ will display numbers in bold when they are a multiple of 500:
 
 .. |scaleBar| image:: /static/common/mActionScaleBar.png
    :width: 1.5em
-
-QGIS

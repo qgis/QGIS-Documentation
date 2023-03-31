@@ -1396,5 +1396,3 @@ from the external storage system. In that case, more details might appear in the
    :width: 1.5em
 .. |zoomToSelected| image:: /static/common/mActionZoomToSelected.png
    :width: 1.5em
-
-QGIS

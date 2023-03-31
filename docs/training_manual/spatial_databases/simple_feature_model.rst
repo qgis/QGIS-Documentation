@@ -249,5 +249,3 @@ Next you'll see how to import data into, and export data from, your database.
 .. |basic| image:: /static/common/basic.png
 .. |hard| image:: /static/common/hard.png
 .. |moderate| image:: /static/common/moderate.png
-
-QGIS

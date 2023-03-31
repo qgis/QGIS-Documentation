@@ -10,5 +10,3 @@
     opening_data
     create_layers
     supported_data
-
-QGIS

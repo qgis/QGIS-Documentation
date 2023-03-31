@@ -109,5 +109,3 @@ Double clicking on an entry will add the string to the SQL window.
 
 .. |dbManager| image:: /static/common/dbmanager.png
    :width: 1.5em
-
-QGIS

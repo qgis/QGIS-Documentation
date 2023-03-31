@@ -14,5 +14,3 @@ Write a short explanatory text to accompany it. Include in this text the
 criteria that were used in considering a house for purchase and subsequent
 development, as well as explaining your recommendations for which buildings
 are suitable.
-
-QGIS

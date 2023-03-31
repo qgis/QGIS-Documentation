@@ -10,5 +10,3 @@ Authentication System
    auth_overview
    auth_workflows
    auth_considerations
-
-QGIS

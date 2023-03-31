@@ -17,5 +17,3 @@ OPEN-GEOSPATIAL-CONSORTIUM. Web map service (1.1.1) implementation specification
 OPEN-GEOSPATIAL-CONSORTIUM. Web map service (1.3.0) implementation specification. https://portal.ogc.org/files/?artifact_id=14416&format=pdf, 2004.
 
 POSTGIS-PROJECT. Spatial support for postgresql. http://www.refractions.net/products/postgis/, 2013.
-
-QGIS

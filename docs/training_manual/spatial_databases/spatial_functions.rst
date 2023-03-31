@@ -241,5 +241,3 @@ Next you'll learn how spatial features are represented in a database.
 .. |IC| replace:: In Conclusion
 .. |LS| replace:: Lesson:
 .. |WN| replace:: What's Next?
-
-QGIS

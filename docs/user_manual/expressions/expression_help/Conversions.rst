@@ -354,5 +354,3 @@ Converts a string into a time object. An optional format string can be provided 
 
 .. end_to_time_section
 
-
-QGIS

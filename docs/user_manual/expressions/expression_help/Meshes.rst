@@ -132,5 +132,3 @@ Returns the Z value of the current mesh vertex.
 
 .. end_$vertex_z_section
 
-
-QGIS

@@ -283,5 +283,3 @@ This is the subject of the next lesson.
 .. |moderate| image:: /static/common/moderate.png
 .. |options| image:: /static/common/mActionOptions.png
    :width: 1em
-
-QGIS

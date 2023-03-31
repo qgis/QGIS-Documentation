@@ -1998,5 +1998,3 @@ the redlining feature. The full list includes:
   on a point using the specified alignment (e.g. 'top', 'half', 'bottom')
 * **HIGHLIGHT_SYMBOL**: This controls how the geometry is outlined and
   you can change the stroke width, color and opacity.
-
-QGIS

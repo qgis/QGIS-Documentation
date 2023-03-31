@@ -31,5 +31,3 @@ lessons in this guide. In each of them you will find a QGIS project file. Just
 open it and you will be ready to start the lesson.
 
 Enjoy!
-
-QGIS

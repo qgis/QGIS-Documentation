@@ -21,5 +21,3 @@ for further demonstrations of QGIS functionality.
    source folder.
 
 .. |MOD| replace:: Module:
-
-QGIS

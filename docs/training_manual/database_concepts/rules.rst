@@ -80,5 +80,3 @@ which takes these database concepts and applies them to GIS data.
 .. |IC| replace:: In Conclusion
 .. |LS| replace:: Lesson:
 .. |WN| replace:: What's Next?
-
-QGIS

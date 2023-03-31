@@ -47,5 +47,3 @@ Each one of those values is handled as a single output, and stored in a variable
 This has no importance at all now, but once we move to the graphical modeler,
 you will see that it will allow us to use those values as numeric inputs for
 other algorithms. 
-
-QGIS

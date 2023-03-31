@@ -68,5 +68,3 @@ You can see them all by invoking the server with ``-h``.
     addressAndPort    Listen to address and port (default: "localhost:8000")
                         address and port can also be specified with the environment
                         variables QGIS_SERVER_ADDRESS and QGIS_SERVER_PORT
-
-QGIS

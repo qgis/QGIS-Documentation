@@ -24,5 +24,3 @@ To learn more about QGIS Server, read the :ref:`QGIS-Server-manual`.
    source folder.
 
 .. |MOD| replace:: Module:
-
-QGIS

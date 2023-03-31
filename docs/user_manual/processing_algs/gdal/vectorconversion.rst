@@ -514,5 +514,3 @@ Python code
    source folder.
 
 .. |324| replace:: ``NEW in 3.24``
-
-QGIS

@@ -29,5 +29,3 @@ Finally, we convert to a vector:
 - :menuselection:`GRASS --> r.to.vect` [Feature type: area; Smooth corners: yes]
 
 **Exercise for the reader**: repeat the analysis, replacing GRASS commands with analogous from other programs.
-
-QGIS

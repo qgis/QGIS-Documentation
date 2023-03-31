@@ -23,5 +23,3 @@ spatial database implementations including SpatiaLite.
    source folder.
 
 .. |MOD| replace:: Module:
-
-QGIS
