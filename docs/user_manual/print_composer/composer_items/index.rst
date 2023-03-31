@@ -18,3 +18,5 @@ Layout Items
    composer_image
    composer_html_frame
    composer_shapes
+
+QGIS

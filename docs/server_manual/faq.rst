@@ -170,3 +170,5 @@ Frequently Asked Question
   queries to be run in SQL.
 
 * To be continued...
+
+QGIS

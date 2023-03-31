@@ -670,3 +670,5 @@ Calculates the length in years of an interval.
 
 .. end_year_section
 
+
+QGIS

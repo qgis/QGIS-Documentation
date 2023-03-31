@@ -496,3 +496,5 @@ of the overview on the selected map frame. You can customize it with:
    :width: 1.5em
 .. |viewScaleInCanvas| image:: /static/common/mActionViewScaleInCanvas.png
    :width: 1.5em
+
+QGIS

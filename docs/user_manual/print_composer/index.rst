@@ -16,3 +16,5 @@ and print them or save them as image, PDF or SVG files.
    composer_items/index
    create_output
    create_reports
+
+QGIS

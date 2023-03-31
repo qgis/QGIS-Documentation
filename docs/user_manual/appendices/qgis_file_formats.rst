@@ -111,3 +111,5 @@ only ``renderer_v2`` and its ``symbol`` tag expanded).
 
    The top level tags of a QML file (only the renderer_v2 tag
    with its symbol tag is expanded)
+
+QGIS

@@ -198,3 +198,5 @@ raster and the forest inventory results to create a map presentation of the resu
 .. |LS| replace:: Lesson:
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/common/basic.png
+
+QGIS

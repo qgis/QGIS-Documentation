@@ -459,3 +459,5 @@ Further information about creating Python code can be found in the
    :width: 1.5em
 .. |symbologyRemove| image:: /static/common/symbologyRemove.png
    :width: 1.5em
+
+QGIS

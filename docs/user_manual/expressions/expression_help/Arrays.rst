@@ -849,3 +849,5 @@ Splits string into an array using supplied delimiter and optional string for emp
 
 .. end_string_to_array_section
 
+
+QGIS

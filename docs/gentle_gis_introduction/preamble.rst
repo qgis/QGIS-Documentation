@@ -86,3 +86,5 @@ We hope you enjoy using and learning QGIS in the spirit of Ubuntu!
 .. figure:: img/tims_sign.png
 
 Tim Sutton, April 2009
+
+QGIS

@@ -181,3 +181,5 @@ The following can be done:
   project.read('C:/Users/ClintBarton/Documents/Projects/mysweetproject.qgs', readflags)
  
 To add more flags the python Bitwise OR operator (``|``) must be used.
+
+QGIS

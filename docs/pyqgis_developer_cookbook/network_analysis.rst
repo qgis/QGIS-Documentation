@@ -552,3 +552,5 @@ Here is an example
         rb.addPoint(QgsPointXY(centerPoint.x() + delta, centerPoint.y() - delta))
         rb.addPoint(QgsPointXY(centerPoint.x() + delta, centerPoint.y() + delta))
         rb.addPoint(QgsPointXY(centerPoint.x() - delta, centerPoint.y() + delta))
+
+QGIS

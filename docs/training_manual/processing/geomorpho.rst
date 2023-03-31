@@ -27,3 +27,5 @@ let's say ``(rainfall * slope )/100``:
 * then let's calculate what are the municipalities with the greatest predicted
   risk of rainfall: :menuselection:`SAGA --> Raster statistics with polygons`
   (the parameters of interest are *Maximum* and *Mean*)
+
+QGIS

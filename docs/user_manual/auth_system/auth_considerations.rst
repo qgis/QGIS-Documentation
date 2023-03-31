@@ -73,3 +73,5 @@ The authentication system safely disables itself when ``qca-ossl`` is not found
 at run-time.
 
 .. _licensing and exporting: https://www.openssl.org/docs/faq.html
+
+QGIS

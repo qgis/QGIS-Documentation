@@ -451,3 +451,5 @@ Sets a specific color component for a color string, e.g., the red component or a
 
 .. end_set_color_part_section
 
+
+QGIS

@@ -24,3 +24,5 @@ Services (WMS) and Web Feature Services (WFS).
    source folder.
 
 .. |MOD| replace:: Module:
+
+QGIS

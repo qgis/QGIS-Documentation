@@ -50,3 +50,5 @@ The parameters window should look like this.
 A python field calculator is available in the *Advanced Python field calculator*, which will not be detailed here
 
 .. figure:: img/vector_calculator/advanced.png
+
+QGIS

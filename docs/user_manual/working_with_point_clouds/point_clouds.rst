@@ -602,3 +602,5 @@ abundance.
    :width: 1.5em
 .. |system| image:: /static/common/system.png
    :width: 1.5em
+
+QGIS

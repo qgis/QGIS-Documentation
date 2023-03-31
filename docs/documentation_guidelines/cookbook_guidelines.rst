@@ -172,3 +172,5 @@ are many options. You can:
 
   You have to install `Docker <https://www.docker.com/>`_ first because this
   uses a docker image with QGIS in it.
+
+QGIS

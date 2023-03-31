@@ -94,3 +94,5 @@ available under the :ref:`GPS group <gps_algorithms>`.
    :width: 1.5em
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
    :width: 1.5em
+
+QGIS

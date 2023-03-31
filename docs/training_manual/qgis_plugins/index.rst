@@ -19,3 +19,5 @@ you'll be shown how to activate and use plugins.
    source folder.
 
 .. |MOD| replace:: Module:
+
+QGIS

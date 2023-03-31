@@ -299,3 +299,5 @@ Next you'll see how to run spatial statistics algorithms on vector datasets.
    :width: 1.5em
 .. |hard| image:: /static/common/hard.png
 .. |moderate| image:: /static/common/moderate.png
+
+QGIS

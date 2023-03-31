@@ -422,3 +422,5 @@ The reason for using SIP instead of the more widely used SWIG is that the
 QGIS code depends on Qt libraries. Python bindings for Qt (PyQt) are
 done using SIP and this allows seamless integration of PyQGIS with
 PyQt.
+
+QGIS

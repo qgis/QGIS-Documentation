@@ -225,3 +225,5 @@ More info:
 
 https://www.cyberciti.biz/faq/linux-increase-the-maximum-number-of-open-files/
 https://linuxaria.com/article/open-files-in-linux
+
+QGIS

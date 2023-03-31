@@ -284,3 +284,5 @@ Feature Service (WFS). That's the topic of the next lesson.
 .. |hard| image:: /static/common/hard.png
 .. |majorUrbanName| replace:: Swellendam
 .. |moderate| image:: /static/common/moderate.png
+
+QGIS

@@ -263,3 +263,5 @@ Running tests locally
 
 or one of the following values listed in the :source:`CMakelists.txt
 <python/plugins/processing/tests/CMakeLists.txt>`
+
+QGIS

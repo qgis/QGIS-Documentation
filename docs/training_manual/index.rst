@@ -29,3 +29,5 @@ QGIS Training Manual
    databases/index
    appendix/contribute
    appendix/preparing_data
+
+QGIS

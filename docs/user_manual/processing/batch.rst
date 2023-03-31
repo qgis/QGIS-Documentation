@@ -205,3 +205,5 @@ batch task will be shown in the progress bar in the lower part of the dialog.
    :width: 1.5em
 .. |symbologyRemove| image:: /static/common/symbologyRemove.png
    :width: 1.5em
+
+QGIS

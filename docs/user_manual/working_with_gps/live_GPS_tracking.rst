@@ -261,3 +261,5 @@ or without it, by connecting the QGIS live tracking tool directly to the device
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
    :width: 1.5em
 .. |slider| image:: /static/common/slider.png
+
+QGIS

@@ -420,3 +420,5 @@ save the configuration to the database.
    :width: 1.5em
 .. |transformSettings| image:: /static/common/mActionTransformSettings.png
    :width: 1.5em
+
+QGIS

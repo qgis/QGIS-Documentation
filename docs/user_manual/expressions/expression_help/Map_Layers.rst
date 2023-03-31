@@ -81,3 +81,5 @@ Returns a matching layer property or metadata value.
 
 .. end_layer_property_section
 
+
+QGIS

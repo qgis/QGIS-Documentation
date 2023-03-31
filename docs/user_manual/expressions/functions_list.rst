@@ -1273,3 +1273,5 @@ This makes it easy to quickly retrieve and reapply previously used expressions.
    :width: 1.5em
 .. |expressionSelect| image:: /static/common/mIconExpressionSelect.png
    :width: 1.5em
+
+QGIS

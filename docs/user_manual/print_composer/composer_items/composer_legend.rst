@@ -334,3 +334,5 @@ and lines can be customized through this dialog.
    :width: 1.5em
 .. |symbologyRemove| image:: /static/common/symbologyRemove.png
    :width: 1.5em
+
+QGIS

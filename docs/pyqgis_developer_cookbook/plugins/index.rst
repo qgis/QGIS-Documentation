@@ -31,3 +31,5 @@ For definitions of ``~`` and ``(UserProfile)`` see :ref:`core_and_external_plugi
 
     By setting `QGIS_PLUGINPATH` to an existing directory path, you can add this
     path to the list of paths that are searched for plugins.
+
+QGIS

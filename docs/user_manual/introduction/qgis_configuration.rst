@@ -2482,3 +2482,5 @@ in the QGIS user profile.
    :width: 1em
 .. |zoomFullExtent| image:: /static/common/mActionZoomFullExtent.png
    :width: 1.5em
+
+QGIS

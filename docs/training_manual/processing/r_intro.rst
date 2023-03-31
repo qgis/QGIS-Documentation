@@ -257,3 +257,5 @@ syntax to get the results out of R:
   the result should be sent to R output (Result viewer)
 * ``+`` after a plot enables overlay plots. For example ``plot(Layer[[X]],
   Layer[[Y]]) + abline(h=mean(Layer[[X]]))``
+
+QGIS

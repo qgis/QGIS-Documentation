@@ -787,3 +787,5 @@ viewing the field.
    :width: 1.5em
 .. |symbologyRemove| image:: /static/common/symbologyRemove.png
    :width: 1.5em
+
+QGIS

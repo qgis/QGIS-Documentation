@@ -477,3 +477,5 @@ and can be used as in the following snippet:
   parent = QWidget()  # Your GUI parent widget
   gui = QgsAuthAuthoritiesEditor( parent )
   gui.show()
+
+QGIS

@@ -35,3 +35,5 @@ You can also modify the algorithm. Just copy it, open the :menuselection:`Plugin
    source folder.
 
 .. |hard| image:: /static/common/hard.png
+
+QGIS

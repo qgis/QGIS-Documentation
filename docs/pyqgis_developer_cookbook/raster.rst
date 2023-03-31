@@ -330,3 +330,5 @@ To overwrite existing raster data at position 0,0 by the 2x2 block:
     provider.setEditable(True)
     provider.writeBlock(block, 1, 0, 0)
     provider.setEditable(False)
+
+QGIS

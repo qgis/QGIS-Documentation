@@ -503,3 +503,5 @@ then use it to enhance your data and maps visibility.
    :width: 1.5em
 .. |vectorGrid| image:: /static/common/vector_grid.png
    :width: 1.5em
+
+QGIS

@@ -298,3 +298,5 @@ Further resources on how to use the python logging facility are available at:
 
    Please note that without logging to a file by setting a filename the logging may be
    multithreaded which heavily slows down the output.
+
+QGIS

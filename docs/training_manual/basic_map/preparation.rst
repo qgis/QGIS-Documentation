@@ -291,3 +291,5 @@ This is the topic of the next lesson.
    :width: 1.5em
 .. |spatialite| image:: /static/common/mIconSpatialite.png
    :width: 1.5em
+
+QGIS

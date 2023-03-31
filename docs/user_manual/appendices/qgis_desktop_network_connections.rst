@@ -114,3 +114,5 @@ from the user before they take place, others happen automatically.
      - IP, PROJ version
      - Access logs are permanently deleted after one day
 
+
+QGIS

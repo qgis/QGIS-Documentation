@@ -234,3 +234,5 @@ Catalog servers.
 
 .. |metasearch| image:: /static/common/MetaSearch.png
    :width: 1.5em
+
+QGIS

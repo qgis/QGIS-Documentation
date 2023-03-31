@@ -398,3 +398,5 @@ That is what we will do in the next module!
    :width: 1.5em
 .. |sum| image:: /static/common/mActionSum.png
    :width: 1.2em
+
+QGIS

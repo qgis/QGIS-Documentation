@@ -600,3 +600,5 @@ Returns a string wrapped to a maximum/minimum number of characters.
 
 .. end_wordwrap_section
 
+
+QGIS

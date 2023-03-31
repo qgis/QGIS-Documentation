@@ -635,3 +635,5 @@ Python code
    source folder.
 
 .. |328| replace:: ``NEW in 3.28``
+
+QGIS

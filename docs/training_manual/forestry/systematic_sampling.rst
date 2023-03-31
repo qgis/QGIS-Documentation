@@ -223,3 +223,5 @@ navigate to the sample plots assigned to them.
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
+
+QGIS

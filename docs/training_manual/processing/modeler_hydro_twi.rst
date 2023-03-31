@@ -36,3 +36,5 @@ This is how the final model should look like:
 .. warning:: todo: Add image
 
 As you see, using a model in another model is nothing special, and you can add it just like you add another algorithm, as long as the model is saved in the models folder and is available in the toolbox.
+
+QGIS

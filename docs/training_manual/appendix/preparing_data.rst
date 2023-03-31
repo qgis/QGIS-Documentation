@@ -249,3 +249,5 @@ The tokens you need to replace are as follows:
 .. |majorUrbanName| replace:: Swellendam
 .. |zoomToLayer| image:: /static/common/mActionZoomToLayer.png
    :width: 1.5em
+
+QGIS

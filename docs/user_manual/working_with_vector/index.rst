@@ -10,3 +10,5 @@
    vector_properties
    attribute_table
    editing_geometry_attributes
+
+QGIS

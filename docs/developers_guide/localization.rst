@@ -89,3 +89,5 @@ it validates the input correctly. As an alternative it is possible
 to use the :class:`QgsDoubleValidator <qgis.gui.QgsDoubleValidator>` class
 independently on a string obtained from another widget (e.g. a simple
 ``QLineEdit`` widget).
+
+QGIS

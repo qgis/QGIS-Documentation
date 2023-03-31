@@ -132,3 +132,5 @@ For example, built-in providers contain an :guilabel:`Activate` item
 that you can use to make their algorithms appear or not in the toolbox.
 Some algorithm providers have their own configuration items, which will
 be explained when covering particular algorithm providers.
+
+QGIS

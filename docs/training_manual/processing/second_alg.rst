@@ -69,3 +69,5 @@ Now when you run an algorithm, just use the filename instead of the full path. F
 
 
 Try yourself the *Create grid* algorithm with different grid sizes, and also with different types of grids.
+
+QGIS

@@ -448,3 +448,5 @@ see how it can be used to describe vector features.
 
 .. |gentleLogo| image:: img/gentlelogo.png
    :width: 3em
+
+QGIS

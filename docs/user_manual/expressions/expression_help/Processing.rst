@@ -26,3 +26,5 @@ Returns the value of a processing algorithm input parameter.
 
 .. end_parameter_section
 
+
+QGIS

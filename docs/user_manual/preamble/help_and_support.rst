@@ -148,3 +148,5 @@ variety of useful information relating to QGIS development, release
 plans, links to download sites, message-translation hints and
 more.
 Check it out, there are some goodies inside!
+
+QGIS

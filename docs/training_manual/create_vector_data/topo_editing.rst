@@ -381,3 +381,5 @@ simpler and more effective.
    :width: 1.5em
 .. |vertexToolActiveLayer| image:: /static/common/mActionVertexToolActiveLayer.png
    :width: 1.5em
+
+QGIS

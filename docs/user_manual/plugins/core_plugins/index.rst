@@ -68,3 +68,5 @@ Icon                    Plugin                        Description               
    :width: 1.5em
 .. |topologyChecker| image:: /static/common/mActionTopologyChecker.png
    :width: 1.5em
+
+QGIS

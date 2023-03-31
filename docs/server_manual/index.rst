@@ -19,3 +19,5 @@ QGIS Server Guide/Manual
   development_server
   containerized_deployment
   faq
+
+QGIS

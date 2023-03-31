@@ -274,3 +274,5 @@ Expression-related errors can occur during expression parsing or evaluation:
    value = exp.evaluate()
    if exp.hasEvalError():
       raise ValueError(exp.evalErrorString())
+
+QGIS

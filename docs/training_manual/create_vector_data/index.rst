@@ -23,3 +23,5 @@ learn how to modify existing vector data and create new datasets entirely.
    source folder.
 
 .. |MOD| replace:: Module:
+
+QGIS

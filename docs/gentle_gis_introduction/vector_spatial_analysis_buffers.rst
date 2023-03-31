@@ -288,3 +288,5 @@ an example of spatial analysis you can do with raster data.
 
 .. |gentleLogo| image:: img/gentlelogo.png
    :width: 3em
+
+QGIS

@@ -199,3 +199,5 @@ this in the next lesson.
    :width: 1.5em
 .. |selectRectangle| image:: /static/common/mActionSelectRectangle.png
    :width: 1.5em
+
+QGIS

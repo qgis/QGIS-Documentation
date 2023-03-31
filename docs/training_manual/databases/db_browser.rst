@@ -99,3 +99,5 @@ complete set of database management tasks.
 .. |LS| replace:: Lesson:
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/common/basic.png
+
+QGIS

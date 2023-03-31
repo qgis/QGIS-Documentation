@@ -355,3 +355,5 @@ That is the topic of the next module.
    :width: 1.5em
 .. |symbologyRemove| image:: /static/common/symbologyRemove.png
    :width: 1.5em
+
+QGIS

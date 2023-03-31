@@ -34,3 +34,5 @@ The development of this module has been sponsored by the European Union.
    source folder.
 
 .. |MOD| replace:: Module:
+
+QGIS

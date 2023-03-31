@@ -748,3 +748,5 @@ with the *delete.xml* document:
           </ogc:Filter>
       </wfs:Delete>
   </wfs:Transaction>
+
+QGIS

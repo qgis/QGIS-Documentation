@@ -412,3 +412,5 @@ the 3D vector layer.
    :width: 1.5em
 .. |zoomOut| image:: /static/common/mActionZoomOut.png
    :width: 1.5em
+
+QGIS

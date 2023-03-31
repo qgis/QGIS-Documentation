@@ -497,3 +497,5 @@ distance along roads from one point to another.
 .. |moderate| image:: /static/common/moderate.png
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
+
+QGIS

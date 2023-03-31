@@ -207,3 +207,5 @@ analyze it further.
    :width: 2em
 .. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em
+
+QGIS

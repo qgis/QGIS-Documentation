@@ -272,3 +272,5 @@ time.
    :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
+
+QGIS

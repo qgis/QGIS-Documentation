@@ -198,3 +198,5 @@ results you just calculated.
 .. |LS| replace:: Lesson:
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/common/basic.png
+
+QGIS

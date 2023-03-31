@@ -84,3 +84,5 @@ Try yourself saving it using different file formats (use, for instance,
 :file:`shp` and :file:`geojson` as extensions). Also, if you do not want the
 layer to be loaded in QGIS after it is generated, you can check off the checkbox
 that is found below the output path box.
+
+QGIS

@@ -528,3 +528,5 @@ Generates a Universally Unique Identifier (UUID) for each row using the Qt `QUui
 
 .. end_uuid_section
 
+
+QGIS

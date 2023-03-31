@@ -814,3 +814,5 @@ to help you with the layout and the description::
    :width: 1.5em
 .. |win| image:: /static/common/win.png
    :width: 1em
+
+QGIS

@@ -1635,3 +1635,5 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |zoomToSelected| image:: /static/common/mActionZoomToSelected.png
    :width: 1.5em
+
+QGIS

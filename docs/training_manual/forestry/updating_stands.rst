@@ -284,3 +284,5 @@ of forest parameters.
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/common/basic.png
+
+QGIS

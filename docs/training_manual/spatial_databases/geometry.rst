@@ -336,3 +336,5 @@ that would otherwise seem cryptic.
 .. |TY| replace:: Try Yourself
 .. |hard| image:: /static/common/hard.png
 .. |moderate| image:: /static/common/moderate.png
+
+QGIS

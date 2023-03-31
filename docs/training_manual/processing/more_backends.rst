@@ -81,3 +81,5 @@ Dissolve features based on a common attribute:
 .. _LecoS: https://conservationecology.wordpress.com/qgis-plugins-and-scripts/lecos-land-cover-statistics/
 .. _lwgeom: https://plugins.qgis.org/plugins/processinglwgeomprovider/
 .. _Animove: https://www.faunalia.eu/en/dev/animove
+
+QGIS

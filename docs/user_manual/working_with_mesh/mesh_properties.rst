@@ -1220,3 +1220,5 @@ the expression to execute.
    :width: 1.5em
 .. |vertexCoordinates| image:: /static/common/mIconVertexCoordinates.png
    :width: 1.5em
+
+QGIS

@@ -456,3 +456,5 @@ database to implement the theory we've covered.
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/common/basic.png
 .. |moderate| image:: /static/common/moderate.png
+
+QGIS

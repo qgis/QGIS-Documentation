@@ -897,3 +897,5 @@ Sources
 * :api:`QGIS C++ API <>`
 * `StackOverFlow QGIS questions <https://stackoverflow.com/questions/tagged/qgis>`_
 * `Script by Klas Karlsson <https://raw.githubusercontent.com/klakar/QGIS_resources/master/collections/Geosupportsystem/python/qgis_basemaps.py>`_
+
+QGIS

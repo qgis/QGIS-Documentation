@@ -78,3 +78,5 @@ To use the plugin:
    :width: 1.5em
 .. |offlineEditingSync| image:: /static/common/offline_editing_sync.png
    :width: 1.5em
+
+QGIS

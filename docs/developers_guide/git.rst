@@ -328,3 +328,5 @@ Always check that everything compiles before making any commits / pull
 requests. Try to be aware of possible breakages your commits may cause for
 people building on other platforms and with older / newer versions of
 libraries.
+
+QGIS

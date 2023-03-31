@@ -640,3 +640,5 @@ In the :guilabel:`General` group of the processing options dialog, you will find
 entries named :guilabel:`Pre-execution script` and :guilabel:`Post-execution
 script` where the filenames of the scripts to be run in each case can be
 entered.
+
+QGIS

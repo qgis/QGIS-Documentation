@@ -29,3 +29,5 @@ PyQGIS Developer Cookbook
    network_analysis
    server
    cheat_sheet
+
+QGIS

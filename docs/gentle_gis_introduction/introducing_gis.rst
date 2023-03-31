@@ -362,3 +362,5 @@ let's look at vectors!
 
 .. |gentleLogo| image:: img/gentlelogo.png
    :width: 3em
+
+QGIS

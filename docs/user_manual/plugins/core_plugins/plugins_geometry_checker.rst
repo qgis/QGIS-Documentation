@@ -179,3 +179,5 @@ by attribute value`.
    :width: 2.5em
 .. |success| image:: /static/common/mIconSuccess.png
    :width: 1em
+
+QGIS

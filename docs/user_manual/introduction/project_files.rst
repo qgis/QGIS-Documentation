@@ -235,3 +235,5 @@ Other ways to produce output files are:
    :width: 1.5em
 .. |saveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
    :width: 1.5em
+
+QGIS

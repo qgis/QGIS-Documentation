@@ -199,3 +199,5 @@ organizes tools by type.
 .. |TY| replace:: Try Yourself
 .. |basic| image:: /static/common/basic.png
 .. |moderate| image:: /static/common/moderate.png
+
+QGIS

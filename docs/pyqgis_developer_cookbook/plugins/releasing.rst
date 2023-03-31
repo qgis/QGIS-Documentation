@@ -134,3 +134,5 @@ look like.
     |-- resources_rc.py
     `-- ui_Qt_user_interface_file.ui
 
+
+QGIS

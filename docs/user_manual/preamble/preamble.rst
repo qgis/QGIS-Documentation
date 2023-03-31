@@ -70,3 +70,5 @@ https://qgis.org/en/site/forusers/visualchangelogs.html.
 
 .. |QGIS_CURRENT| replace:: QGIS 3.28
 .. _QGIS_CURRENT: https://docs.qgis.org/3.28/en/docs/
+
+QGIS

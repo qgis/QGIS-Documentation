@@ -1648,3 +1648,5 @@ Python code
 .. |328| replace:: ``NEW in 3.28``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+
+QGIS

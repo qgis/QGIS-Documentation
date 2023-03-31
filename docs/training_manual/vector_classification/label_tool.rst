@@ -423,3 +423,5 @@ topic for the next lesson!
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
+
+QGIS

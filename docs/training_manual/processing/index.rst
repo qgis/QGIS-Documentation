@@ -49,3 +49,5 @@ Contents:
    solar
    r_intro
    geomorpho
+
+QGIS

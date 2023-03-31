@@ -150,3 +150,5 @@ following functionalities (see :numref:`figure_layout_html_breaks`):
    :width: 1.3em
 .. |dataDefine| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
+
+QGIS

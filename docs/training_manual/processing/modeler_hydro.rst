@@ -55,3 +55,5 @@ This model contains all the steps needed to complete the calculation, but it jus
    .. figure:: img/modeler_hydro/result_2.png
 
       Threshold = 1,0000,000
+
+QGIS

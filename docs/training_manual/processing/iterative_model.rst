@@ -34,3 +34,5 @@ which should use the slope output as its only input.
 If you now run the model, apart from the tables you will get a set of pages with
 statistics.
 These pages will be available in the results dialog.
+
+QGIS

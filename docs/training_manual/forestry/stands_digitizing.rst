@@ -440,3 +440,5 @@ aerial photos and the addition of some relevant information to your dataset.
    :width: 1.5em
 .. |topologicalEditing| image:: /static/common/mIconTopologicalEditing.png
    :width: 1.5em
+
+QGIS

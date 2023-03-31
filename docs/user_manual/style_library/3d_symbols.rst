@@ -205,3 +205,5 @@ https://app.merginmaps.com/projects/saber/luxembourg/tree.
    :width: 1.5em
 .. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em
+
+QGIS

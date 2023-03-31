@@ -78,3 +78,5 @@ background as a support layer), we can apply a *Gaussian filter* to the layer.
 With the above parameters you will get the following result
 
 .. figure:: img/interpolation/filtered_raster.png
+
+QGIS

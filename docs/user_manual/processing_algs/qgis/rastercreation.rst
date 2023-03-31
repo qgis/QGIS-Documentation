@@ -1094,3 +1094,5 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+
+QGIS

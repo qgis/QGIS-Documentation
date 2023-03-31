@@ -457,3 +457,5 @@ A typical Linux installation will have the following directory tree:
 
 To override the templates you can copy the whole tree to another location
 and point ``QGIS_SERVER_API_RESOURCES_DIRECTORY`` to the new location.
+
+QGIS

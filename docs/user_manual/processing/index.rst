@@ -17,3 +17,5 @@ QGIS processing framework
     standalone
     scripts
     3rdParty
+
+QGIS

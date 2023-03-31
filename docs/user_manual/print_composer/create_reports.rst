@@ -375,3 +375,5 @@ As you see, reports in QGIS are extremely powerful and flexible!
    :width: 1.5em
 .. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em
+
+QGIS

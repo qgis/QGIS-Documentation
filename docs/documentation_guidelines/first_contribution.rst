@@ -668,3 +668,5 @@ Further reading
    :width: 4em
 .. |githubSuggestions| image:: /static/common/githubSuggestions.png
    :width: 1.5em
+
+QGIS

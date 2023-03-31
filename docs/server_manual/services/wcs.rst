@@ -298,3 +298,5 @@ resolution of the response image depends on this value.
   :align: center
 
   From left to right: ``WIDTH=20&HEIGHT=20``, ``WIDTH=50&HEIGHT=50``, ``WIDTH=100&HEIGHT=100``
+
+QGIS

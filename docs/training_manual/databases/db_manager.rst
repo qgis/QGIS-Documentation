@@ -300,3 +300,5 @@ Next, we will look at how to use many of these same techniques with
 .. |basic| image:: /static/common/basic.png
 .. |dbManager| image:: /static/common/dbmanager.png
    :width: 1.5em
+
+QGIS

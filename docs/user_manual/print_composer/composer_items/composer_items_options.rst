@@ -378,3 +378,5 @@ More information on variables usage in the :ref:`general_tools_variables` sectio
    :width: 1.5em
 .. |symbologyRemove| image:: /static/common/symbologyRemove.png
    :width: 1.5em
+
+QGIS

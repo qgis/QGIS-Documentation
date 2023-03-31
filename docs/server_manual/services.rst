@@ -24,3 +24,5 @@ behavior thanks to the QGIS rendering engine.
    services/wcs.rst
    services/wmts.rst
    services/ogcapif.rst
+
+QGIS

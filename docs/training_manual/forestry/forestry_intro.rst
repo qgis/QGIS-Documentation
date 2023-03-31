@@ -44,3 +44,5 @@ accessed in English `here <https://tiedostopalvelu.maanmittauslaitos.fi/tp/kartt
    source folder.
 
 .. |LS| replace:: Lesson:
+
+QGIS

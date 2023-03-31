@@ -40,3 +40,5 @@ See also `PostGIS In Action <https://www.postgis.us>`_.
    source folder.
 
 .. |MOD| replace:: Module:
+
+QGIS

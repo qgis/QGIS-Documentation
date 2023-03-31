@@ -966,3 +966,5 @@ Under :guilabel:`Feature options`:
    :width: 1.5em
 .. |unchecked| image:: /static/common/unchecked.png
    :width: 1.3em
+
+QGIS

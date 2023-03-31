@@ -87,3 +87,5 @@ results in this case.
 
 Click on *OK* and the batch process will be run. If everything went fine,
 all your layers will have been processed, and 3 new layers would have been created.
+
+QGIS

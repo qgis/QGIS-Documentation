@@ -285,3 +285,5 @@ Some other methods that can be used to modify the groups and layers:
     # expand/collapse the group view
     node_group1.setExpanded(True)
     node_group1.setExpanded(False)
+
+QGIS

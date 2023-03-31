@@ -178,3 +178,5 @@ and add the inventory data to them.
    :width: 1.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
+
+QGIS
