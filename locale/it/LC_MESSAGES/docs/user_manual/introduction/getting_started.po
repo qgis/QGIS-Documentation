@@ -2,11 +2,11 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
-# Stefano Campus <skampus@gmail.com>, 2022
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
 # Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2023
 # 
 #, fuzzy
@@ -14,14 +14,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-30 02:27+0000\n"
-"PO-Revision-Date: 2022-03-14 05:10+0000\n"
+"POT-Creation-Date: 2023-03-31 16:11+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
 "Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2023\n"
 "Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: it\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -65,17 +65,17 @@ msgstr ""
 "|osx| macOS. Pacchetti binari (rpm e deb) o repository software sono "
 "disponibili per molte versioni di GNU/Linux |nix|."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:272
+#: ../../docs/user_manual/introduction/getting_started.rst:295
 msgid "win"
-msgstr "win"
+msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:266
+#: ../../docs/user_manual/introduction/getting_started.rst:285
 msgid "osx"
-msgstr "osx"
+msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:264
+#: ../../docs/user_manual/introduction/getting_started.rst:283
 msgid "nix"
-msgstr "nix"
+msgstr ""
 
 #: ../../docs/user_manual/introduction/getting_started.rst:34
 msgid ""
@@ -291,9 +291,9 @@ msgstr ""
 "Clicca sull'icona |dataSourceManager| :sup:`Apri Gestore delle Sorgenti "
 "Dati`. Il Gestore delle Sorgenti Dati dovrebbe aprirsi in modalità Browser."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:258
+#: ../../docs/user_manual/introduction/getting_started.rst:273
 msgid "dataSourceManager"
-msgstr "dataSourceManager"
+msgstr ""
 
 #: ../../docs/user_manual/introduction/getting_started.rst:149
 msgid "Browse to the folder :file:`qgis_sample_data/raster/`"
@@ -301,13 +301,17 @@ msgstr "Sfoglia la cartella :file:`qgis_sample_data/raster/`"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:150
 msgid ""
-"Select the ERDAS IMG file :file:`landcover.img` and double-click it. The "
-"landcover layer is added in the background while the Data Source Manager "
-"window remains open."
+"Select the ERDAS IMG file |rasterLayer| :guilabel:`landcover.img` and "
+"double-click it. The landcover layer is added in the background while the "
+"Data Source Manager window remains open."
 msgstr ""
-"Seleziona il file IMG ERDAS :file:`landcover.img` e fai doppio clic su di "
-"esso. Il layer landcover viene aggiunto in background mentre la finestra "
-"Gestore delle Sorgenti Dati rimane aperta."
+"Seleziona il file ERDAS IMG |rasterLayer| :guilabel:`landcover.img` e fai "
+"doppio clic. Il layer landcover viene aggiunto in background mentre la "
+"finestra Data Source Manager rimane aperta."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:289
+msgid "rasterLayer"
+msgstr ""
 
 #: ../../docs/user_manual/introduction/getting_started.rst:159
 msgid "Adding data to a new project in QGIS"
@@ -316,13 +320,59 @@ msgstr "Aggiungere dati a un nuovo progetto in QGIS"
 #: ../../docs/user_manual/introduction/getting_started.rst:161
 msgid ""
 "To load the lakes data, browse to the folder :file:`qgis_sample_data/gml/`, "
-"and double-click the :file:`lakes.gml` file to open it."
+"and drag and drop the |dbSchema| :guilabel:`lakes.gml` file over QGIS main "
+"dialog."
 msgstr ""
-"Per caricare i dati dei laghi, sfoglia la cartella "
-":file:`qgis_sample_sample_data/gml/`, e fai doppio clic sul file "
-":file:`lakes.gml` per aprirlo."
+"Per caricare i dati dei laghi, naviga nella cartella "
+":file:`qgis_sample_data/gml/` e trascina il file |dbSchema| "
+":guilabel:`lakes.gml` nella finestra di dialogo principale di QGIS."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:275
+msgid "dbSchema"
+msgstr ""
 
 #: ../../docs/user_manual/introduction/getting_started.rst:163
+msgid ""
+"The :guilabel:`Select Items to Add` dialog opens, scanning the file. This is"
+" due to :file:`.gml` file format being able to store more than one layer at "
+"a time."
+msgstr ""
+"Si apre la finestra di dialogo :guilabel:`Seleziona elementi da aggiungere`,"
+" che analizza il file. Ciò è dovuto al fatto che il formato :file:`.gml` è "
+"in grado di memorizzare più di un layer alla volta."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:171
+msgid "Select layers within a file"
+msgstr "Selezionare i layer all'interno di un file"
+
+#: ../../docs/user_manual/introduction/getting_started.rst:173
+msgid ""
+"In our case there is a single |polygonLayer| :guilabel:`lakes` layer. Select"
+" it and press :guilabel:`Add Layers`."
+msgstr ""
+"Nel nostro caso c'è un singolo layer |polygonLayer| :guilabel:`lakes`. "
+"Selezionalo e premi :guilabel:`Aggiungi layer`."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:287
+msgid "polygonLayer"
+msgstr ""
+
+#: ../../docs/user_manual/introduction/getting_started.rst:175
+msgid ""
+"The layer is added to the :guilabel:`Layers` panel but it displays "
+"|indicatorNoCRS| :sup:`Layer has no coordinate reference system set` next to"
+" it. Let's adjust that by clicking the icon."
+msgstr ""
+"Il layer viene aggiunto al pannello :guilabel:`Layer`, ma viene visualizzato"
+" |indicatorNoCRS| :sup:`Il layer non ha un sistema di riferimento per le "
+"coordinate impostato!` accanto ad esso. Si può intervenire facendo clic "
+"sull'icona."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:279
+msgid "indicatorNoCRS"
+msgstr ""
+
+#: ../../docs/user_manual/introduction/getting_started.rst:178
 msgid ""
 "A :guilabel:`Coordinate Reference System Selector` dialog opens. In the "
 ":guilabel:`Filter` menu, type ``2964``, filtering the list of Coordinate "
@@ -333,23 +383,23 @@ msgstr ""
 "di seguito la lista filtrata dell'elenco dei sistemi di riferimento delle "
 "coordinate. "
 
-#: ../../docs/user_manual/introduction/getting_started.rst:172
+#: ../../docs/user_manual/introduction/getting_started.rst:187
 msgid "Select the Coordinate Reference System of data"
 msgstr "Seleziona il Sistema di Riferimento delle Coordinate"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:174
+#: ../../docs/user_manual/introduction/getting_started.rst:189
 msgid "Select the :guilabel:`NAD27 / Alaska Albers` entry"
 msgstr "Selezionare la voce :guilabel:`NAD27 / Alaska Albers`"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:175
+#: ../../docs/user_manual/introduction/getting_started.rst:190
 msgid "Click :guilabel:`OK`"
 msgstr "Fai clic su :guilabel:`OK`"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:176
+#: ../../docs/user_manual/introduction/getting_started.rst:191
 msgid "Close the Data Source Manager window"
 msgstr "Chiudi la finestra Gestore della sorgente dati."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:178
+#: ../../docs/user_manual/introduction/getting_started.rst:193
 msgid ""
 "You now have the two layers available in your project in some random "
 "colours. Let's do some customization on the lakes layer."
@@ -357,7 +407,7 @@ msgstr ""
 "Ora hai i due layer disponibili nel tuo progetto in alcuni colori casuali. "
 "Facciamo qualche personalizzazione sul layer laghi."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:181
+#: ../../docs/user_manual/introduction/getting_started.rst:196
 msgid ""
 "Select the |zoomIn| :sup:`Zoom In` tool on the :guilabel:`Navigation` "
 "toolbar"
@@ -365,15 +415,15 @@ msgstr ""
 "Seleziona lo strumento |zoomIn| :sup:`Ingrandisci` sulla barra degli "
 "strumenti :guilabel:`Gestisci la barra di navigazione`"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:274
+#: ../../docs/user_manual/introduction/getting_started.rst:297
 msgid "zoomIn"
-msgstr "zoomIn"
+msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:182
+#: ../../docs/user_manual/introduction/getting_started.rst:197
 msgid "Zoom to an area with some lakes"
 msgstr "Fai zoom su un'area con alcuni laghi"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:183
+#: ../../docs/user_manual/introduction/getting_started.rst:198
 msgid ""
 "Double-click the :file:`lakes` layer in the map legend to open the "
 ":guilabel:`Properties` dialog"
@@ -381,71 +431,71 @@ msgstr ""
 "Fai doppio click sul layer  :file:`lakes`  nella legenda per aprire la "
 "finestra di dialogo :guilabel:`Proprietà`."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:185
+#: ../../docs/user_manual/introduction/getting_started.rst:200
 msgid "To change the lakes color:"
 msgstr "Per cambiare il colore dei laghi:"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:187
+#: ../../docs/user_manual/introduction/getting_started.rst:202
 msgid "Click on the |symbology| :guilabel:`Symbology` tab"
 msgstr ""
 "Clicca sulla scheda  |symbology| :guilabel:`Simbologia` e seleziona blu come"
 " colore di riempimento."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:270
+#: ../../docs/user_manual/introduction/getting_started.rst:293
 msgid "symbology"
-msgstr "symbology"
+msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:188
+#: ../../docs/user_manual/introduction/getting_started.rst:203
 msgid "Select blue as fill color."
 msgstr "Seleziona blu come colore di riempimento"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:195
+#: ../../docs/user_manual/introduction/getting_started.rst:210
 msgid "Selecting Lakes color"
 msgstr "Selezione del colore dei laghi"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:197
+#: ../../docs/user_manual/introduction/getting_started.rst:212
 msgid ""
 "Press :guilabel:`OK`. Lakes are now displayed in blue in the map canvas."
 msgstr ""
 "Premi :guilabel:`OK`. I laghi sono ora visualizzati in blu nella mappa."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:198
+#: ../../docs/user_manual/introduction/getting_started.rst:213
 msgid "To display the name of the lakes:"
 msgstr "Per visualizzare i nomi dei laghi:"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:200
+#: ../../docs/user_manual/introduction/getting_started.rst:215
 msgid "Reopen the :file:`lakes` layer :guilabel:`Properties` dialog"
 msgstr ""
 "Riapri la finestra di dialogo :guilabel:`Proprietà` del layer :file:`lakes`."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:201
+#: ../../docs/user_manual/introduction/getting_started.rst:216
 msgid "Click on the |labelingSingle| :guilabel:`Labels` tab"
 msgstr "Clicca sulla scheda |labelingSingle| :guilabel:`Etichette`"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:262
+#: ../../docs/user_manual/introduction/getting_started.rst:281
 msgid "labelingSingle"
-msgstr "labelingSingle"
+msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:202
+#: ../../docs/user_manual/introduction/getting_started.rst:217
 msgid ""
 "Select :guilabel:`Single labels` in the drop-down menu to enable labeling."
 msgstr ""
 "Seleziona :guilabel:`Etichette singole` nel menu a discesa per abilitare "
 "l'etichettatura."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:203
+#: ../../docs/user_manual/introduction/getting_started.rst:218
 msgid "From the :guilabel:`Label with` list, choose the ``NAMES`` field."
 msgstr "Dalla lista :guilabel:`Etichetta con`, scegli il campo ``Nomi``."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:210
+#: ../../docs/user_manual/introduction/getting_started.rst:225
 msgid "Showing Lakes names"
 msgstr "Visualizzazione del nome dei laghi"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:212
+#: ../../docs/user_manual/introduction/getting_started.rst:227
 msgid "Press :guilabel:`Apply`. Names will now load over the boundaries."
 msgstr "Premi :guilabel:`Applica`. I nomi ora passeranno sopra i confini."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:213
+#: ../../docs/user_manual/introduction/getting_started.rst:228
 msgid ""
 "You can improve readability of the labels by adding a white buffer around "
 "them:"
@@ -453,32 +503,32 @@ msgstr ""
 "Puoi migliorare la leggibilità delle etichette aggiungendo un buffer bianco "
 "intorno ad esse:"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:215
+#: ../../docs/user_manual/introduction/getting_started.rst:230
 msgid "Click the :guilabel:`Buffer` tab in the list on the left"
 msgstr "Clicca sulla scheda :guilabel:`Buffer` nella lista sulla sinistra"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:216
+#: ../../docs/user_manual/introduction/getting_started.rst:231
 msgid "Check |checkbox| :guilabel:`Draw text buffer`"
 msgstr "Seleziona |checkbox| :guilabel:`Disegna buffer del testo`"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:256
+#: ../../docs/user_manual/introduction/getting_started.rst:271
 msgid "checkbox"
-msgstr "checkbox"
+msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:217
+#: ../../docs/user_manual/introduction/getting_started.rst:232
 msgid "Choose ``3`` as buffer size"
 msgstr "Scegli ``3`` come dimensione del buffer"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:218
+#: ../../docs/user_manual/introduction/getting_started.rst:233
 msgid "Click :guilabel:`Apply`"
 msgstr "Fai clic su :guilabel:`Applica`"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:219
+#: ../../docs/user_manual/introduction/getting_started.rst:234
 msgid "Check if the result looks good, and update the value if needed."
 msgstr ""
 "Controlla se il risultato è buono e, se necessario, aggiorna il valore."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:220
+#: ../../docs/user_manual/introduction/getting_started.rst:235
 msgid ""
 "Finally click :guilabel:`OK` to close the :guilabel:`Layer Properties` "
 "dialog and apply the changes."
@@ -486,7 +536,7 @@ msgstr ""
 "Infine clicca :guilabel:`OK` per chiudere la finestra di dialogo "
 ":guilabel:`Proprietà vettore` e applicare le modifiche."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:223
+#: ../../docs/user_manual/introduction/getting_started.rst:238
 msgid ""
 "Let's now add some decorations in order to shape the map and export it out "
 "of QGIS:"
@@ -494,13 +544,13 @@ msgstr ""
 "Aggiungiamo ora alcune decorazioni per migliorare la mappa ed esportarla da "
 "QGIS:"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:226
+#: ../../docs/user_manual/introduction/getting_started.rst:241
 msgid "Select :menuselection:`View --> Decorations --> Scale Bar` menu"
 msgstr ""
 "Seleziona il menu :menuselection:`Visualizza --> Decorazioni --> Barra di "
 "scala`"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:227
+#: ../../docs/user_manual/introduction/getting_started.rst:242
 msgid ""
 "In the dialog that opens, check |checkbox| :guilabel:`Enable Scale Bar` "
 "option"
@@ -508,15 +558,15 @@ msgstr ""
 "Nella finestra di dialogo che si apre, spunta l'opzione |checkbox| "
 ":guilabel:`Attiva Barra di Scala`"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:228
+#: ../../docs/user_manual/introduction/getting_started.rst:243
 msgid "Customize the options of the dialog as you want"
 msgstr "Personalizza le opzioni nella finestra di dialogo come preferisci"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:229
+#: ../../docs/user_manual/introduction/getting_started.rst:244
 msgid "Press :guilabel:`Apply`"
 msgstr "Premi :guilabel:`Applica`"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:230
+#: ../../docs/user_manual/introduction/getting_started.rst:245
 msgid ""
 "Likewise, from the decorations menu, add more items (north arrow, "
 "copyright...) to the map canvas with custom properties."
@@ -524,7 +574,7 @@ msgstr ""
 "Analogamente, dal menu decorazioni, aggiungi altre voci (freccia nord, "
 "copyright....) alla mappa con proprietà personalizzate."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:232
+#: ../../docs/user_manual/introduction/getting_started.rst:247
 msgid ""
 "Click :menuselection:`Project --> Import/Export -->` |saveMapAsImage| "
 ":menuselection:`Export Map to Image...`"
@@ -532,15 +582,15 @@ msgstr ""
 "Clicca :menuselection:`Progetto --> Importa/Esporta -->` |saveMapAsImage| "
 ":menuselection:`Esporta Mappa come Immagine...`"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:268
+#: ../../docs/user_manual/introduction/getting_started.rst:291
 msgid "saveMapAsImage"
-msgstr "saveMapAsImage"
+msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:234
+#: ../../docs/user_manual/introduction/getting_started.rst:249
 msgid "Press :guilabel:`Save` in the opened dialog"
 msgstr "Premi :guilabel:`Salva` nella finestra di dialogo aperta"
 
-#: ../../docs/user_manual/introduction/getting_started.rst:235
+#: ../../docs/user_manual/introduction/getting_started.rst:250
 msgid ""
 "Select a file location, a format and confirm by pressing :guilabel:`Save` "
 "again."
@@ -548,7 +598,7 @@ msgstr ""
 "Seleziona il percorso del file, il formato e conferma cliccando "
 ":guilabel:`Salva` ancora."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:237
+#: ../../docs/user_manual/introduction/getting_started.rst:252
 msgid ""
 "Press :menuselection:`Project -->` |fileSave| :menuselection:`Save...` to "
 "store your changes as a :file:`.qgz` project file."
@@ -556,11 +606,11 @@ msgstr ""
 "Premi :menuselection:`Progetto -->` |fileSave| :menuselection:`Salva` per "
 "memorizzare le modifiche come file di progetto :file:`.qgz`. "
 
-#: ../../docs/user_manual/introduction/getting_started.rst:260
+#: ../../docs/user_manual/introduction/getting_started.rst:277
 msgid "fileSave"
-msgstr "fileSave"
+msgstr ""
 
-#: ../../docs/user_manual/introduction/getting_started.rst:240
+#: ../../docs/user_manual/introduction/getting_started.rst:255
 msgid ""
 "That's it! You can see how easy it is to visualize raster and vector layers "
 "in QGIS, configure them and generate your map in an image format you can use"
@@ -573,10 +623,14 @@ msgstr ""
 "funzionalità, le caratteristiche e le impostazioni disponibili e come "
 "usarle."
 
-#: ../../docs/user_manual/introduction/getting_started.rst:246
+#: ../../docs/user_manual/introduction/getting_started.rst:261
 msgid ""
 "To continue learning QGIS through step-by-step exercises, follow the "
 ":ref:`Training manual <QGIS-training-manual-index-reference>`."
 msgstr ""
 "Per continuare ad imparare QGIS attraverso esercizi passo dopo passo, "
 "utilizza il :ref:`Training manual <QGIS-training-manual-index-reference>`."
+
+#: ../../docs/user_manual/introduction/getting_started.rst:300
+msgid "QGIS"
+msgstr ""
