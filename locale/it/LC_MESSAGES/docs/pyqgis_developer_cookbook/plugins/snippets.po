@@ -2,24 +2,26 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2022
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-12 00:23+0100\n"
-"PO-Revision-Date: 2022-03-14 05:15+0000\n"
-"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2022\n"
-"Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2023\n"
+"Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: it\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -35,33 +37,83 @@ msgstr ""
 "I frammenti di codice di questa pagina necessitano delle seguenti "
 "importazioni se sei è al di fuori della console pyqgis:"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:50
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:60
 msgid "This section features code snippets to facilitate plugin development."
 msgstr ""
 "Questa sezione contiene frammenti di codice per facilitare lo sviluppo dei "
 "plugin."
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:55
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:65
 msgid "How to call a method by a key shortcut"
 msgstr "Come richiamare un metodo con una scorciatoia da tastiera"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:57
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:67
 msgid "In the plug-in add to the :func:`initGui()`"
 msgstr "Nel plug-in aggiungere a :func:`initGui()`"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:66
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:76
 msgid "To :func:`unload()` add"
 msgstr "A :func:`unload()` aggiungere"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:72
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:82
 msgid "The method that is called when CTRL+I is pressed"
 msgstr "Il metodo che viene richiamato quando si preme CTRL+I"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:83
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:89
+msgid ""
+"It is also possible to allow users to customize key shortcuts for the "
+"provided actions. This is done by adding:"
+msgstr ""
+"È anche possibile consentire agli utenti di personalizzare le scorciatoie da"
+" tastiera per le azioni fornite. Questo si ottiene aggiungendo:"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:102
+msgid "How to reuse QGIS icons"
+msgstr "Come riutilizzare le icone di QGIS"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:104
+msgid ""
+"Because they are well-known and convey a clear message to the users, you may"
+" want sometimes to reuse QGIS icons in your plugin instead of drawing and "
+"setting a new one. Use the :meth:`getThemeIcon() "
+"<qgis.core.QgsApplication.getThemeIcon>` method."
+msgstr ""
+"Poiché sono ben conosciute e trasmettono un messaggio chiaro agli utenti, a "
+"volte potresti voler riutilizzare le icone di QGIS nel tuo plugin, invece di"
+" disegnarne e impostarne una nuova. Utilizza il metodo :meth:`getThemeIcon()"
+" <qgis.core.QgsApplication.getThemeIcon>`."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:108
+msgid ""
+"For example, to reuse the |fileOpen| :source:`mActionFileOpen.svg "
+"<images/themes/default/mActionFileOpen.svg>` icon available in the QGIS code"
+" repository:"
+msgstr ""
+"Ad esempio, per riutilizzare l'icona |fileOpen| :source:`mActionFileOpen.svg"
+" <images/themes/default/mActionFileOpen.svg>` disponibile nel repository del"
+" codice QGIS:"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:284
+msgid "fileOpen"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:122
+msgid ""
+":meth:`iconPath() <qgis.core.QgsApplication.iconPath>` is another method to "
+"call QGIS icons. Find examples of calls to theme icons at `QGIS embedded "
+"images - Cheatsheet "
+"<https://static.geotribu.fr/toc_nav_ignored/qgis_resources_preview_table/>`_."
+msgstr ""
+":meth:`iconPath() <qgis.core.QgsApplication.iconPath>` è un altro metodo per"
+" richiamare le icone di QGIS. Trovi esempi di richiami alle icone tematiche "
+"in `QGIS embedded images - Cheatsheet "
+"<https://static.geotribu.fr/toc_nav_ignored/qgis_resources_preview_table/>`_."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:130
 msgid "Interface for plugin in the options dialog"
 msgstr "Interfaccia per il plugin nella finestra di dialogo delle opzioni"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:85
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:132
 msgid ""
 "You can add a custom plugin options tab to :menuselection:`Settings --> "
 "Options`. This is preferable over adding a specific main menu entry for your"
@@ -76,7 +128,7 @@ msgstr ""
 "dell'applicazione QGIS e del plugin in un unico punto, facile da scoprire e "
 "da navigare per gli utenti."
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:90
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:137
 msgid ""
 "The following snippet will just add a new blank tab for the plugin's "
 "settings, ready for you to populate with all the options and settings "
@@ -90,19 +142,19 @@ msgstr ""
 "file diversi. In questo esempio, aggiungiamo due classi al file principale "
 ":file:`mainPlugin.py`."
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:118
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:165
 msgid ""
 "Finally we are adding the imports and modifying the ``__init__`` function:"
 msgstr ""
 "Infine, aggiungiamo le importazioni e modifichiamo la funzione ``__init__``:"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:149
-msgid "**Add custom tabs to a vector layer properties dialog**"
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:196
+msgid "**Add custom tabs to layer properties dialog**"
 msgstr ""
 "**Aggiungere schede personalizzate alla finestra di dialogo delle proprietà "
-"di un layer vettoriale**"
+"dei layer**"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:151
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:198
 msgid ""
 "You can apply a similar logic to add the plugin custom option to the layer "
 "properties dialog using the classes :class:`QgsMapLayerConfigWidgetFactory "
@@ -114,3 +166,60 @@ msgstr ""
 ":class:`QgsMapLayerConfigWidgetFactory "
 "<qgis.gui.QgsMapLayerConfigWidgetFactory>` e :class:`QgsMapLayerConfigWidget"
 " <qgis.gui.QgsMapLayerConfigWidget>`."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:207
+msgid "Embed custom widgets for layers in the layer tree"
+msgstr "Incorporare widget personalizzati per i layer nell'albero dei layer"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:209
+msgid ""
+"Beside usual layer symbology elements displayed next or below the layer "
+"entry in the :guilabel:`Layers` panel, you can add your own widgets, "
+"allowing for quick access to some actions that are often used with a layer "
+"(setup filtering, selection, style, refreshing a layer with a button widget,"
+" create a layer based time slider or just show extra layer information in a "
+"Label there, or ...). These so-called **Layer tree embedded widgets** are "
+"made available through the layer's properties :guilabel:`Legend` tab for "
+"individual layers."
+msgstr ""
+"Oltre ai consueti elementi della simbologia dei layer visualizzati accanto o"
+" sotto la voce del layer nel pannello :guilabel:`Layer`, puoi aggiungere i "
+"tuoi widget, consentendo l'accesso rapido ad alcune azioni spesso utilizzate"
+" con un layer (impostazione di filtri, selezioni, stili, aggiornamento di un"
+" layer con un widget pulsante, creazione di un cursore temporale basato sul "
+"layer o semplicemente visualizzazione di informazioni extra sul layer in "
+"un'etichetta, o ...). Questi cosiddetti **Widget incorporati nell'albero dei"
+" layer** sono resi disponibili per i singoli layer attraverso le proprietà "
+":guilabel:`Legenda` del layer."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:217
+msgid ""
+"The following code snippet creates a drop-down in the legend which shows you"
+" the layer-styles available for the layer, allowing to quickly switch "
+"between the different layer styles."
+msgstr ""
+"Il seguente frammento di codice crea un menu a tendina nella legenda che "
+"mostra gli stili di livello disponibili per il layer, consentendo di passare"
+" rapidamente tra i diversi stili di livello."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:258
+msgid ""
+"Then from a given layer's :guilabel:`Legend` properties tab, drag the "
+"``Layer style chooser`` from the :guilabel:`Available widgets` to "
+":guilabel:`Used widgets` to enable the widget in the layer tree. Embedded "
+"widgets are ALWAYS displayed at the top of their associated layer node "
+"subitems."
+msgstr ""
+"Quindi, dalla scheda delle proprietà :guilabel:`Legenda` di un dato layer, "
+"trascina la ``Scelta stile layer`` da :guilabel:`Widget disponibili` alla "
+":guilabel:`Widget utilizzati`` per abilitare il widget nell'albero del "
+"layer. I widget incorporati sono SEMPRE visualizzati in cima alle sottovoci "
+"dei nodi di livello associati."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:264
+msgid ""
+"If you want to use the widgets from within e.g. a plugin, you can add them "
+"like this:"
+msgstr ""
+"Se vuoi utilizzare i widget dall'interno, ad esempio, di un plugin, puoi "
+"aggiungerli in questo modo:"
