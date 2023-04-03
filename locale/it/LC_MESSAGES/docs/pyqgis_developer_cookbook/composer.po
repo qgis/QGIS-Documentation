@@ -2,25 +2,26 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2022
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-12 00:23+0100\n"
-"PO-Revision-Date: 2022-03-14 05:07+0000\n"
-"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2022\n"
-"Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
+"POT-Creation-Date: 2023-03-31 16:11+0000\n"
+"PO-Revision-Date: 2023-03-19 14:53+0000\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2023\n"
+"Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: it\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -33,7 +34,7 @@ msgid "The code snippets on this page need the following imports:"
 msgstr ""
 "I frammenti di codice in questa pagina hanno bisogno dei seguenti import:"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:58
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:60
 msgid ""
 "There are generally two approaches when input data should be rendered as a "
 "map: either do it quick way using `QgsMapRendererJob` or produce more fine-"
@@ -45,11 +46,11 @@ msgstr ""
 " produrre un output più preciso componendo la mappa con la classe "
 ":class:`QgsLayout <qgis.core.QgsLayout>`."
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:65
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:67
 msgid "Simple Rendering"
 msgstr "Visualizzazione Semplice"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:67
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:69
 msgid ""
 "The rendering is done creating a :class:`QgsMapSettings "
 "<qgis.core.QgsMapSettings>` object to define the rendering settings, and "
@@ -62,15 +63,15 @@ msgstr ""
 " con tali impostazioni. Quest'ultimo viene poi utilizzato per creare "
 "l'immagine risultante."
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:71
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:73
 msgid "Here's an example:"
 msgstr "Ecco un esempio:"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:105
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:107
 msgid "Rendering layers with different CRS"
 msgstr "Visualizzare layer con diversi SR"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:107
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:109
 msgid ""
 "If you have more than one layer and they have a different CRS, the simple "
 "example above will probably not work: to get the right values from the "
@@ -80,27 +81,27 @@ msgstr ""
 "precedente probabilmente non funzionerà: per ottenere i valori giusti dai "
 "calcoli di estensione devi impostare esplicitamente il SR di destinazione"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:122
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:124
 msgid "Output using print layout"
 msgstr "Risultato con layout di stampa"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:124
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:126
 msgid ""
 "Print layout is a very handy tool if you would like to do a more "
 "sophisticated output than the simple rendering shown above. It is possible "
 "to create complex map layouts consisting of map views, labels, legend, "
 "tables and other elements that are usually present on paper maps. The "
-"layouts can be then exported to PDF, raster images or directly printed on a "
-"printer."
+"layouts can be then exported to PDF, SVG, raster images or directly printed "
+"on a printer."
 msgstr ""
-"Il layout di stampa è uno strumento molto utile se vuoi ottenere un "
-"risultato più sofisticato della semplice visualizzazione mostrata sopra. "
-"Puoi creare layout cartografici complessi composti da viste della mappa, "
-"etichette, legende, tabelle e altri elementi solitamente presenti sulle "
-"mappe cartacee. I layout possono essere esportati in PDF, immagini raster o "
-"stampati direttamente su una stampante."
+"Il layout di stampa è uno strumento molto utile se vuoi ottenere un output "
+"più sofisticato rispetto alla semplice rappresentazione mostrata sopra. Puoi"
+" creare layout cartografici complessi composti da viste della mappa, "
+"etichette, legende, tabelle e altri elementi solitamente presenti nelle "
+"mappe cartacee. I layout possono essere esportati in PDF, SVG, immagini "
+"raster o stampati direttamente su una stampante."
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:130
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:132
 msgid ""
 "The layout consists of a bunch of classes. They all belong to the core "
 "library. QGIS application has a convenient GUI for placement of the "
@@ -116,7 +117,7 @@ msgstr ""
 "<https://doc.qt.io/qt-5/graphicsview.html>`_, ti consigliamo di consultare "
 "ora la documentazione, perché il layout si basa su di esso."
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:137
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:139
 msgid ""
 "The central class of the layout is the :class:`QgsLayout "
 "<qgis.core.QgsLayout>` class, which is derived from the Qt `QGraphicsScene "
@@ -128,7 +129,7 @@ msgstr ""
 "<https://doc.qt.io/qt-5/qgraphicsscene.html>`_. Creiamo un'istanza di questa"
 " classe:"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:147
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:149
 msgid ""
 "This initializes the layout with some default settings, specifically by "
 "adding an empty A4 page to the layout. You can create layouts without "
@@ -142,7 +143,7 @@ msgstr ""
 "<qgis.core.QgsLayout.initializeDefaults>`, ma dovrai occuparti personalmente"
 " di aggiungere pagine al layout."
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:152
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:154
 msgid ""
 "The previous code creates a \"temporary\" layout that is not visible in the "
 "GUI. It can be handy to e.g. quickly add some items and export without "
@@ -156,7 +157,7 @@ msgstr ""
 "modifiche all'utente. Se vuoi che il layout venga salvato/ripristinato "
 "insieme al progetto e sia disponibile nel gestore dei layout, aggiungi:"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:163
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:165
 msgid ""
 "Now we can add various elements (map, label, ...) to the layout. All these "
 "objects are represented by classes that inherit from the base "
@@ -166,7 +167,7 @@ msgstr ""
 "Tutti questi oggetti sono rappresentati da classi che ereditano dalla classe"
 " base :class:`QgsLayoutItem <qgis.core.QgsLayoutItem>`."
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:166
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:168
 msgid ""
 "Here's a description of some of the main layout items that can be added to a"
 " layout."
@@ -174,7 +175,7 @@ msgstr ""
 "Ecco una descrizione di alcuni dei principali oggetti di layout che possono "
 "essere aggiunti a un layout."
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:168
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:170
 msgid ""
 "map --- Here we create a map of a custom size and render the current map "
 "canvas"
@@ -182,7 +183,7 @@ msgstr ""
 "map --- Qui creiamo una mappa di dimensioni personalizzate e visualizziamo "
 "l'area mappa della mappa corrente."
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:180
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:182
 msgid ""
 "label --- allows displaying labels. It is possible to modify its font, "
 "color, alignment and margin"
@@ -190,48 +191,32 @@ msgstr ""
 "label --- permetta la visualizzazione di etichette. É possibile modificarne "
 "il carattere, colore, allineamento e margine"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:190
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:192
 msgid "legend"
-msgstr "legenda"
+msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:198
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:200
 msgid "scale bar"
 msgstr "barra di scala"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:208
-msgid "arrow"
-msgstr "freccia"
-
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:209
-msgid "picture"
-msgstr "immagine"
-
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:210
-msgid "basic shape"
-msgstr "forma di base"
-
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:211
 msgid "nodes based shape"
 msgstr "forma basata su nodi"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:235
-msgid "table"
-msgstr "tabella"
-
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:237
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:241
 msgid "Once an item is added to the layout, it can be moved and resized:"
 msgstr ""
 "Una volta aggiunto un oggetto al layout, è possibile spostarlo e "
 "ridimensionarlo:"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:244
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:248
 msgid ""
 "A frame is drawn around each item by default. You can remove it as follows:"
 msgstr ""
 "Per impostazione predefinita, attorno a ciascun elemento viene disegnata una"
 " cornice. Puoi rimuoverla come segue:"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:251
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:255
 msgid ""
 "Besides creating the layout items by hand, QGIS has support for layout "
 "templates which are essentially compositions with all their items saved to a"
@@ -241,7 +226,7 @@ msgstr ""
 "layout, che sono essenzialmente composizioni con tutti i loro oggetti "
 "salvati in un file .qpt (con sintassi XML)."
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:255
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:259
 msgid ""
 "Once the composition is ready (the layout items have been created and added "
 "to the composition), we can proceed to produce a raster and/or vector "
@@ -251,11 +236,53 @@ msgstr ""
 "creati e aggiunti alla composizione), possiamo procedere alla produzione di "
 "un output raster e/o vettoriale."
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:261
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:263
+msgid "Checking layout validity"
+msgstr "Controllo della validità del layout"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:265
+msgid ""
+"A layout is a made of a set of interconnected items and it can happen that "
+"these connections are broken during modifications (a legend connected to a "
+"removed map, an image item with missing source file,...) or you may want to "
+"apply custom constraints to the layout items. The "
+":class:`QgsAbstractValidityCheck <qgis.core.QgsAbstractValidityCheck>` helps"
+" you achieve this."
+msgstr ""
+"Un layout è costituito da un insieme di elementi interconnessi e può "
+"accadere che queste connessioni vengano interrotte durante le modifiche (una"
+" legenda collegata a una mappa rimossa, un elemento immagine con un file "
+"sorgente mancante, ...) o che si vogliano applicare vincoli personalizzati "
+"agli elementi del layout. La :class:`QgsAbstractValidityCheck "
+"<qgis.core.QgsAbstractValidityCheck>` aiuta a raggiungere questo obiettivo."
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:270
+msgid "A basic check looks like:"
+msgstr "Un controllo di base si presenta come segue:"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:279
+msgid ""
+"Here's a check which throws a warning whenever a layout map item is set to "
+"the web mercator projection:"
+msgstr ""
+"Ecco un controllo che genera un avviso ogni volta che un elemento della "
+"mappa di layout è impostato sulla proiezione web mercator:"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:297
+msgid ""
+"And here's a more complex example, which throws a warning if any layout map "
+"items are set to a CRS which is only valid outside of the extent shown in "
+"that map item:"
+msgstr ""
+"Ed ecco un esempio più complesso, che genera un avviso se uno qualsiasi "
+"degli elementi della mappa di layout è impostato su un SR valido solo al di "
+"fuori dell'estensione mostrata in quell'elemento della mappa:"
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:324
 msgid "Exporting the layout"
 msgstr "Esporta il layout"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:263
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:326
 msgid ""
 "To export a layout, the :class:`QgsLayoutExporter "
 "<qgis.core.QgsLayoutExporter>` class must be used."
@@ -263,20 +290,23 @@ msgstr ""
 "Per esportare un layout, è necessario utilizzare la classe "
 ":class:`QgsLayoutExporter <qgis.core.QgsLayoutExporter>`."
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:273
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:336
 msgid ""
-"Use the :meth:`exportToImage() <qgis.core.QgsLayoutExporter.exportToImage>` "
-"in case you want to export to an image instead of a PDF file."
+"Use :meth:`exportToSvg() <qgis.core.QgsLayoutExporter.exportToSvg>` or "
+":meth:`exportToImage() <qgis.core.QgsLayoutExporter.exportToImage>` in case "
+"you want to export to respectively an SVG or image file instead of a PDF "
+"file."
 msgstr ""
-"Utilizzare la :meth:`exportToImage() "
-"<qgis.core.QgsLayoutExporter.exportToImage>` nel caso in cui si voglia "
-"esportare in un'immagine invece che in un file PDF."
+"Usa :meth:`exportToSvg() <qgis.core.QgsLayoutExporter.exportToSvg>` o "
+":meth:`exportToImage() <qgis.core.QgsLayoutExporter.exportToImage>` nel caso"
+" in cui tui voglia esportare rispettivamente in un file SVG o in un file "
+"immagine invece che in un file PDF."
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:277
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:340
 msgid "Exporting a layout atlas"
 msgstr "Esportare un layout atlante"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:279
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:342
 msgid ""
 "If you want to export all pages from a layout that has the atlas option "
 "configured and enabled, you need to use the :meth:`atlas() "
@@ -290,7 +320,7 @@ msgstr ""
 "(:class:`QgsLayoutExporter <qgis.core.QgsLayoutExporter>`) con piccole "
 "modifiche. Nell'esempio seguente, le pagine sono esportate in immagini PNG:"
 
-#: ../../docs/pyqgis_developer_cookbook/composer.rst:289
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:352
 msgid ""
 "Notice that the outputs will be saved in the base path folder, using the "
 "output filename expression configured on atlas."
@@ -298,3 +328,7 @@ msgstr ""
 "Da notare che gli output saranno salvati nella cartella del percorso di "
 "base, utilizzando l'espressione del nome del file di output configurata su "
 "atlante."
+
+#: ../../docs/pyqgis_developer_cookbook/composer.rst:356
+msgid "QGIS"
+msgstr ""
