@@ -1117,9 +1117,9 @@ Outputs
    * - **Total unique values**
      - ``TOTAL_VALUES``
      - [number]
-     - The number of uniqe values in the input field
-   * - **UNIQUE_VALUES**
-     - ``Unique values``
+     - The number of unique values in the input field
+   * - **Unique values concatenated**
+     - ``UNIQUE_VALUES``
      - [string]
      - A string with the comma separated list of unique values found
        in the input field
