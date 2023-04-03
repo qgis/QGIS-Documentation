@@ -3158,7 +3158,7 @@ Parameters
      - [raster]
      - Raster layer to use for rescaling
    * - **Band number**
-     - ``Band``
+     - ``BAND``
      - [raster band]
 
        Default: The first band of the input layer
