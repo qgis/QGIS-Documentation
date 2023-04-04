@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"POT-Creation-Date: 2023-04-04 12:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -311,10 +311,10 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:19
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:36
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:39
-#: ../../docs/user_manual/expressions/expression_help/Operators.rst:41
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:43
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:48
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:58
-#: ../../docs/user_manual/expressions/expression_help/Operators.rst:63
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:65
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:70
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:81
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:96
@@ -719,10 +719,10 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:21
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:38
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:41
-#: ../../docs/user_manual/expressions/expression_help/Operators.rst:43
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:45
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:50
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:60
-#: ../../docs/user_manual/expressions/expression_help/Operators.rst:65
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:67
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:72
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:83
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:98
@@ -738,7 +738,6 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Processing.rst:21
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:21
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:55
-#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:15
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:17
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:25
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:40
@@ -1222,10 +1221,10 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:40
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:41
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:44
-#: ../../docs/user_manual/expressions/expression_help/Operators.rst:46
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:48
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:53
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:63
-#: ../../docs/user_manual/expressions/expression_help/Operators.rst:68
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:70
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:75
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:86
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:101
@@ -1242,8 +1241,8 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:36
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:59
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:15
-#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:18
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:19
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:20
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:27
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:37
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:43
@@ -7194,6 +7193,12 @@ msgstr ""
 msgid "``geom_to_wkt(flip_coordinates(make_point(1, 2)))`` → 'Point (2 1)'"
 msgstr ""
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:62
+msgid ""
+"``geom_to_wkt(flip_coordinates(geom_from_wkt('LineString(0 2, 1 0, 1 "
+"6)')))))`` → 'LineString (2 0, 0 1, 6 1)'"
+msgstr ""
+
 #: ../../docs/user_manual/expressions/functions_list.rst:425
 msgid "Further reading: :ref:`qgisswapxy` algorithm"
 msgstr ""
@@ -12607,7 +12612,7 @@ msgid "%"
 msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:14
-msgid "Remainder of division"
+msgid "Remainder of division. Takes the sign of the dividend."
 msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:20
@@ -12618,10 +12623,10 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:22
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:39
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:42
-#: ../../docs/user_manual/expressions/expression_help/Operators.rst:44
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:46
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:51
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:61
-#: ../../docs/user_manual/expressions/expression_help/Operators.rst:66
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:68
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:84
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:99
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:107
@@ -12635,9 +12640,9 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:23
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:40
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:43
-#: ../../docs/user_manual/expressions/expression_help/Operators.rst:45
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:47
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:62
-#: ../../docs/user_manual/expressions/expression_help/Operators.rst:67
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:69
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:85
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:100
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:108
@@ -12648,60 +12653,68 @@ msgid "**b** - value"
 msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:25
-msgid "``5 % 4`` → 1"
+msgid "``9 % 2`` → 1"
 msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:26
+msgid "``9 % -2`` → 1"
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:27
+msgid "``-9 % 2`` → -1"
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:28
 msgid "``5 % NULL`` → NULL"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Operators.rst:34
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:36
 msgid "\\*"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Operators.rst:36
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:38
 msgid "Multiplication of two values"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Operators.rst:42
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:44
 msgid "a * b"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Operators.rst:47
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:49
 msgid "``5 * 4`` → 20"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Operators.rst:48
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:50
 msgid "``5 * NULL`` → NULL"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Operators.rst:56
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:58
 msgid "\\+"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Operators.rst:58
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:60
 msgid ""
 "Addition of two values. If one of the values is NULL the result will be "
 "NULL."
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Operators.rst:64
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:66
 msgid "a + b"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Operators.rst:69
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:71
 msgid "``5 + 4`` → 9"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Operators.rst:70
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:72
 msgid "``5 + NULL`` → NULL"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Operators.rst:71
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:73
 msgid "``'QGIS ' + 'ROCKS'`` → 'QGIS ROCKS'"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Operators.rst:72
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:74
 msgid ""
 "``to_datetime('2020-08-01 12:00:00') + '1 day 2 hours'`` → "
 "2020-08-02T14:00:00"
@@ -14212,24 +14225,24 @@ msgid ""
 msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:14
-msgid "represent_value(value, fieldName)"
+msgid "represent_value(value, [fieldName])"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:16
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:18
 msgid "**value** - The value which should be resolved. Most likely a field."
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:17
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:19
 msgid ""
 "**fieldName** - The field name for which the widget configuration should "
-"be loaded. (Optional)"
+"be loaded."
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:19
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:21
 msgid "``represent_value(\"field_with_value_map\")`` → Description for value"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:20
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:22
 msgid ""
 "``represent_value('static value', 'field_name')`` → Description for "
 "static value"
