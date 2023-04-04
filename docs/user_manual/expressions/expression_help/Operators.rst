@@ -11,7 +11,7 @@
 %
 .
 
-Remainder of division
+Remainder of division. Takes the sign of the dividend.
 
 .. list-table::
    :widths: 15 85
@@ -22,7 +22,9 @@ Remainder of division
      - * **a** - value
        * **b** - value
    * - Examples
-     - * ``5 % 4`` → 1
+     - * ``9 % 2`` → 1
+       * ``9 % -2`` → 1
+       * ``-9 % 2`` → -1
        * ``5 % NULL`` → NULL
 
 

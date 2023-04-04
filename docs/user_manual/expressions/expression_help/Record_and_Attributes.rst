@@ -439,10 +439,12 @@ Returns the configured representation value for a field value. It depends on the
    :widths: 15 85
 
    * - Syntax
-     - represent_value(value, fieldName)
+     - represent_value(value, [fieldName])
+
+       [] marks optional arguments
    * - Arguments
      - * **value** - The value which should be resolved. Most likely a field.
-       * **fieldName** - The field name for which the widget configuration should be loaded. (Optional)
+       * **fieldName** - The field name for which the widget configuration should be loaded.
    * - Examples
      - * ``represent_value("field_with_value_map")`` → Description for value
        * ``represent_value('static value', 'field_name')`` → Description for static value
