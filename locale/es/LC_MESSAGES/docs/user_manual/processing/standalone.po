@@ -2,27 +2,27 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Rodrigo Armesto Baztán <rodri_Armesto@hotmail.com>, 2021
-# Abigaíl García, 2022
+# Harrissou Sant-anna, 2023
+# Eric Armijo, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-21 02:13+0000\n"
-"PO-Revision-Date: 2020-12-24 10:17+0000\n"
-"Last-Translator: Abigaíl García, 2022\n"
-"Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Eric Armijo, 2023\n"
+"Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/user_manual/processing/standalone.rst:4
 msgid "Using processing from the command line"
@@ -45,17 +45,17 @@ msgstr ""
 "Desde una herramienta de línea de comandos, ejecutar ``qgis_process`` y se "
 "debería obtener:"
 
-#: ../../docs/user_manual/processing/standalone.rst:41
+#: ../../docs/user_manual/processing/standalone.rst:48
 msgid ""
-"Only installed plugins that advertize ``hasProcessingProvider=yes`` in their"
+"Only installed plugins that advertise ``hasProcessingProvider=yes`` in their"
 " :file:`metadata.txt` file are recognized and can be activated or loaded by "
 "qgis_process tool."
 msgstr ""
-"Solo los complementos instalados que anuncian ``hasProcessingProvider=yes`` "
-"en su archivo :file:`metadata.txt` se reconocen y pueden activarse o "
-"cargarse con la herramienta qgis_process."
+"Sólo los complementos instalados que anuncian ``hasProcessingProvider=yes`` "
+"en su archivo :file:`metadata.txt` son reconocidos y pueden ser activados o "
+"cargados por la herramienta qgis_process."
 
-#: ../../docs/user_manual/processing/standalone.rst:46
+#: ../../docs/user_manual/processing/standalone.rst:53
 msgid ""
 "The command ``list`` can be used to get a list of all available providers "
 "and algorithms."
@@ -63,7 +63,7 @@ msgstr ""
 "El comando ``list`` puede ser usado para obtener una lista de proveedores y "
 "algoritmos disponibles."
 
-#: ../../docs/user_manual/processing/standalone.rst:53
+#: ../../docs/user_manual/processing/standalone.rst:60
 msgid ""
 "The command ``help`` can be used to get further information about commands "
 "or algorithms."
@@ -71,7 +71,7 @@ msgstr ""
 "El comando ``help`` puede ser usado para obtener mas información sobre "
 "comandos o algoritmos."
 
-#: ../../docs/user_manual/processing/standalone.rst:59
+#: ../../docs/user_manual/processing/standalone.rst:66
 msgid ""
 "The command ``run`` can be used to run an algorithm or model. Specify the "
 "name of the algorithm or a path to a model as first parameter."
@@ -80,7 +80,7 @@ msgstr ""
 "Especificar el nombre del algoritmo o una ruta a un modelo como primer "
 "parámetro."
 
-#: ../../docs/user_manual/processing/standalone.rst:66
+#: ../../docs/user_manual/processing/standalone.rst:73
 msgid ""
 "Where a parameter accepts a list of values, set the same variable multiple "
 "times."
@@ -88,37 +88,78 @@ msgstr ""
 "Cuando un parámetro acepte una lista de valores, establezca la misma "
 "variable múltiples veces."
 
-#: ../../docs/user_manual/processing/standalone.rst:72
+#: ../../docs/user_manual/processing/standalone.rst:79
 msgid ""
 "While running an algorithm a text-based feedback bar is shown, and the "
-"operation can be cancelled via :kbd:`CTRL+C`. The ``run`` command also "
-"supports further parameters."
+"operation can be cancelled via :kbd:`CTRL+C`."
 msgstr ""
-"Mientras se ejecuta un algoritmo, se muestra una barra de comentarios basada"
-" en texto y la operación se puede cancelar mediante :kbd:`CTRL+C`. El "
-"comando ``ejecutar`` también admite otros parámetros."
+"Mientras se ejecuta un algoritmo se muestra una barra de retroalimentación "
+"basada en texto, y la operación puede cancelarse mediante :kbd:`CTRL+C`."
 
-#: ../../docs/user_manual/processing/standalone.rst:76
+#: ../../docs/user_manual/processing/standalone.rst:82
+msgid "The ``run`` command also supports further parameters."
+msgstr "El comando ``run`` también admite otros parámetros."
+
+#: ../../docs/user_manual/processing/standalone.rst:84
 msgid "``--json`` will format stdout output in a JSON structured way."
 msgstr ""
 "``--json`` formateará la salida estándar de una manera estructurada JSON."
 
-#: ../../docs/user_manual/processing/standalone.rst:77
+#: ../../docs/user_manual/processing/standalone.rst:85
 msgid "``--ellipsoid`` will set the ellipsoid to the specified one."
 msgstr "``--ellipsoid`` establecerá el elipsoide en el especificado."
 
-#: ../../docs/user_manual/processing/standalone.rst:78
+#: ../../docs/user_manual/processing/standalone.rst:86
 msgid "``--distance_units`` will use the specified distance units."
 msgstr "``--distance_units`` usará las unidades especificadas de distancia.."
 
-#: ../../docs/user_manual/processing/standalone.rst:79
+#: ../../docs/user_manual/processing/standalone.rst:87
 msgid "``--area_units`` will use the specified area units."
 msgstr "``--area_units`` usará las unidades de área especificadas."
 
-#: ../../docs/user_manual/processing/standalone.rst:80
+#: ../../docs/user_manual/processing/standalone.rst:88
 msgid ""
 "``--project_path`` will load the specified project for running the "
 "algorithm."
 msgstr ""
 "``--project_path`` cargará el proeycto especificado para ejecutar el "
 "algoritmo."
+
+#: ../../docs/user_manual/processing/standalone.rst:90
+msgid ""
+"Complex input parameters, i.e. parameter types which are themselves "
+"specified as a dictionary type object for algorithms, are supported by "
+"qgis_process. To indicate that parameters will be specified via stdin, the "
+"qgis_process command must follow the format (with a trailing ``-`` in place "
+"of the usual arguments list)."
+msgstr ""
+"qgis_process admite parámetros de entrada complejos, es decir, tipos de "
+"parámetros que se especifican a su vez como un objeto de tipo diccionario "
+"para algoritmos. Para indicar que los parámetros se especificarán a través "
+"de stdin, el comando qgis_process debe seguir el formato (con un ``-`` al "
+"final en lugar de la lista de argumentos habitual)."
+
+#: ../../docs/user_manual/processing/standalone.rst:101
+msgid ""
+"The JSON object must contain an \"inputs\" key, which is a map of the input "
+"parameter values. E.g."
+msgstr ""
+"El objeto JSON debe contener una clave \"inputs\", que es un mapa de los "
+"valores de los parámetros de entrada. Por ejemplo"
+
+#: ../../docs/user_manual/processing/standalone.rst:108
+msgid ""
+"Additionally, extra settings like the distance units, area units, ellipsoid "
+"and project path can be included in this JSON object:"
+msgstr ""
+"Además, en este objeto JSON se pueden incluir ajustes adicionales como las "
+"unidades de distancia, las unidades de área, el elipsoide y la ruta del "
+"proyecto:"
+
+#: ../../docs/user_manual/processing/standalone.rst:121
+msgid ""
+"Specifying input parameters via stdin implies automatically the :file:`JSON`"
+" output format for results."
+msgstr ""
+"La especificación de parámetros de entrada a través de stdin implica "
+"automáticamente el formato de salida :file:`JSON` para los resultados."
