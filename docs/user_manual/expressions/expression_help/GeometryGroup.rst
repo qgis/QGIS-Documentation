@@ -267,8 +267,7 @@ Returns a geometry that represents all points whose distance from this geometry 
    :align: center
    :width: 100%
 
-   Buffer (in yellow) of points, line, polygon with positive buffer, 
-   and polygon with negative buffer
+   Buffer (in yellow) of points, line, polygon with positive buffer, and polygon with negative buffer
 
 .. end_buffer_section
 
@@ -761,6 +760,7 @@ Returns a copy of the geometry with the x and y coordinates swapped. Useful for 
      - * **geometry** - a geometry
    * - Examples
      - * ``geom_to_wkt(flip_coordinates(make_point(1, 2)))`` → 'Point (2 1)'
+       * ``geom_to_wkt(flip_coordinates(geom_from_wkt('LineString(0 2, 1 0, 1 6)')))))`` → 'LineString (2 0, 0 1, 6 1)'
 
 
 .. end_flip_coordinates_section
