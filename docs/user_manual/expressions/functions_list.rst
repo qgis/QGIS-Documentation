@@ -1023,6 +1023,23 @@ access to the relation ID for writing an expression (with e.g. the
 :ref:`relation_aggregate <expression_function_Aggregates_relation_aggregate>`
 function) or customizing a form.
 
+.. _sensors_functions:
+
+Sensors Functions
+-----------------
+
+This group contains functions to interact with sensors.
+
+.. only:: html
+
+   .. contents::
+      :local:
+      :class: toc_columns
+
+.. include:: expression_help/Sensors.rst
+   :start-after: :orphan:
+
+
 .. _string_functions:
 
 String Functions
