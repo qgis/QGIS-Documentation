@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        target_branch: [master, release_3.28]
+        target_branch: [release_3.28]
     env:
       TRANSIFEX_PASSWORD: ${{ secrets.TRANSIFEX_PASSWORD }}
 
