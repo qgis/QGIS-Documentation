@@ -2,27 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
-# Abigaíl García, 2022
-# Eric Armijo, 2022
-# vareli <ehespinosa@ya.com>, 2023
+# Harrissou Sant-anna, 2023
+# Eric Armijo, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-21 02:56+0000\n"
-"PO-Revision-Date: 2022-03-14 05:11+0000\n"
-"Last-Translator: vareli <ehespinosa@ya.com>, 2023\n"
-"Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Eric Armijo, 2023\n"
+"Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.10.3\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: es\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -38,7 +36,7 @@ msgstr ""
 "Los fragmentos de código en esta página necesitan las siguientes adiciones "
 "si está fuera de la consola de pyqgis:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:34
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:35
 msgid ""
 "Sometimes you need to load an existing project from a plugin or (more often)"
 " when developing a standalone QGIS Python application (see: "
@@ -48,7 +46,7 @@ msgstr ""
 "o (más a menudo) al desarrollar una aplicación autónoma QGIS Python (vea : "
 ":ref:`pythonapplications`)."
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:41
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:42
 msgid ""
 "To load a project into the current QGIS application you need to create an "
 "instance of the :class:`QgsProject <qgis.core.QgsProject>` class. This is a "
@@ -64,7 +62,7 @@ msgstr ""
 ":meth:`read() <qgis.core.QgsProject.read>` y pasar la ruta para que el "
 "proyecto sea cargado: "
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:66
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:67
 msgid ""
 "If you need to make modifications to the project (for example to add or "
 "remove some layers) and save your changes, call the :meth:`write() "
@@ -78,7 +76,7 @@ msgstr ""
 " método :meth:`write() <qgis.core.QgsProject.write>` también acepta una ruta"
 " opcional para salvar el proyecto en una nueva localización: "
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:78
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:79
 msgid ""
 "Both :meth:`read() <qgis.core.QgsProject.read>` and :meth:`write() "
 "<qgis.core.QgsProject.write>` functions return a boolean value that you can "
@@ -88,7 +86,7 @@ msgstr ""
 "<qgis.core.QgsProject.write>`  retornan un valor booleano que puede utilizar"
 " para verificar si la operación fue exitosa. "
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:84
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:85
 msgid ""
 "If you are writing a QGIS standalone application, in order to synchronise "
 "the loaded project with the canvas you need to instantiate a "
@@ -100,11 +98,11 @@ msgstr ""
 ":class:'QgsLayerTreeMapCanvasBridge <qgis.gui.QgsLayerTreeMapCanvasBridge>' "
 "al igual que en el ejemplo:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:96
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:97
 msgid "Resolving bad paths"
 msgstr "Resolver rutas erróneas"
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:98
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:99
 msgid ""
 "It can happen that layers loaded in the project are moved to another "
 "location. When the project is loaded again all the layer paths are broken. "
@@ -117,7 +115,7 @@ msgstr ""
 "<qgis.core.QgsPathResolver>` le ayuda a reescribir la ruta de las capas "
 "dentro del proyecto."
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:103
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:104
 msgid ""
 "Its :meth:`setPathPreprocessor() "
 "<qgis.core.QgsPathResolver.setPathPreprocessor>` method allows setting a "
@@ -130,7 +128,7 @@ msgstr ""
 "fuentes de datos antes de resolverlas en referencias de archivos o fuentes "
 "de capas."
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:108
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:109
 msgid ""
 "The processor function must accept a single string argument (representing "
 "the original file path or data source) and return a processed version of "
@@ -145,23 +143,23 @@ msgstr ""
 "configuran varios preprocesadores, se llamarán en secuencia según el orden "
 "en que se configuraron originalmente."
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:114
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:115
 msgid "Some use cases:"
 msgstr "Algunos casos de uso:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:116
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:117
 msgid "replace an outdated path:"
 msgstr "reemplazar ruta desactualizada:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:125
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:126
 msgid "replace a database host address with a new one:"
 msgstr "reemplace una dirección host de base de datos con una nueva:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:134
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:135
 msgid "replace stored database credentials with new ones:"
 msgstr "reemplazar credenciales de base de datos almacenada con unas nuevas:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:145
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:146
 msgid ""
 "Likewise, a :meth:`setPathWriter() "
 "<qgis.core.QgsPathResolver.setPathWriter>` method is available for a path "
@@ -171,11 +169,11 @@ msgstr ""
 "<qgis.core.QgsPathResolver.setPathWriter>` está disponible para una función "
 "de escritor de ruta."
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:148
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:149
 msgid "An example to replace the path with a variable:"
 msgstr "Un ejemplo para reemplazar la ruta con una variable:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:157
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:158
 msgid ""
 "Both methods return an ``id`` that can be used to remove the pre-processor "
 "or writer they added. See :meth:`removePathPreprocessor() "
@@ -188,37 +186,37 @@ msgstr ""
 "<qgis.core.QgsPathResolver.removePathPreprocessor>` y "
 ":meth:`removePathWriter() <qgis.core.QgsPathResolver.removePathWriter>`."
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:164
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:165
 msgid "Using flags to speed up things"
 msgstr "Uso de banderas para acelerar las cosas"
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:166
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:167
 msgid ""
 "In some instances where you may not need to use a fully functional project, "
 "but only want to access it for a specific reason, flags may be helpful. A "
-"full list of flags is available under :class:`ReadFlag "
-"<qgis.core.QgsProject.ReadFlag>`. Multiple flags can be added together."
+"full list of flags is available under :class:`ProjectReadFlag "
+"<qgis.core.Qgis.ProjectReadFlag>`. Multiple flags can be added together."
 msgstr ""
-"En algunas instancias donde puede que no necesite usar un proyecto "
-"totalmente funcional y solo desee acceder a él por una razón específica, las"
-" banderas pueden ser útiles. Hay una lista completa de las banderas "
-"disponibles bajo :class:`ReadFlag <qgis.core.QgsProject.ReadFlag>`. Su "
-"pueden añadir juntas múltiples banderas."
+"En algunos casos en los que puede que no necesite utilizar un proyecto "
+"completamente funcional, pero sólo desea acceder a él por una razón "
+"específica, las banderas pueden ser útiles. Una lista completa de banderas "
+"está disponible en :class:`ProjectReadFlag "
+"<qgis.core.Qgis.ProjectReadFlag>`. Se pueden añadir varias banderas juntas."
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:170
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:171
 msgid ""
 "As an example, if we do not care about actual layers and data and simply "
 "want to access a project (e.g. for layout or 3D view settings), we can use "
-"``FlagDontResolveLayers`` to bypass the data validation step and prevent the"
-" bad layer dialog from appearing. The following can be done:"
+"``DontResolveLayers`` flag to bypass the data validation step and prevent "
+"the bad layer dialog from appearing. The following can be done:"
 msgstr ""
-"Como ejemplo, si no nos preocupamos por las capas y los datos reales y "
-"simplemente queremos acceder a un proyecto (por ejemplo, para el diseño o la"
-" configuración de la vista 3D), podemos utilizar ``FlagDontResolveLayers`` "
-"para omitir el paso de validación de datos y evitar que aparezca el cuadro "
-"de diálogo de capas incorrectas. Se puede hacer lo siguiente:"
+"Por ejemplo, si no nos importan las capas y los datos reales y simplemente "
+"queremos acceder a un proyecto (por ejemplo, para el diseño o la "
+"configuración de la vista 3D), podemos utilizar la bandera "
+"``DontResolveLayers`` para omitir el paso de validación de datos y evitar "
+"que aparezca el diálogo de capa incorrecta. Se puede hacer lo siguiente:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:182
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:183
 msgid "To add more flags the python Bitwise OR operator (``|``) must be used."
 msgstr ""
 "Para añadir más banderas se debe utilizar el operador Bitwise OR de python "
