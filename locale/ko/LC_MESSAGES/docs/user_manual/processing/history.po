@@ -1,24 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
-# Kwon.Yongchan <ruvyn@naver.com>, 2020
+# Harrissou Sant-anna, 2023
+# Kwon.Yongchan <ruvyn@naver.com>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:31+0000\n"
-"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
-"Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2023\n"
+"Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -58,6 +60,53 @@ msgstr ""
 " 있는지 알 수 있기 때문입니다."
 
 #: ../../docs/user_manual/processing/history.rst:35
+msgid "Right-click on a row and you should be able to:"
+msgstr "화살표를 오른쪽 클릭하면 다음 작업을 할 수 있을 것입니다:"
+
+#: ../../docs/user_manual/processing/history.rst:37
+msgid ""
+":guilabel:`Copy as Python Command`: allows for easy copying of the "
+"equivalent :ref:`PyQGIS command <processing_console>` run from the dialog. "
+"Same as the code displayed below the commands list."
+msgstr ""
+":guilabel:`Copy as Python Command`: 대화창에서 동등한 :ref:`PyQGIS 명령어 ` 를 쉽게 복사할 수 "
+"있습니다. 명령어 목록 아래 표시되는 코드도 마찬가지입니다."
+
+#: ../../docs/user_manual/processing/history.rst:40
+msgid ""
+":guilabel:`Copy as qgis_process Command`: allows for easy generation of "
+":ref:`qgis_process command <processing_standalone>`, including its "
+"environment settings like the distance units, area units, ellipsoid, and any"
+" tricky parameter values like GeoPackage outputs with specific layers"
+msgstr ""
+":guilabel:`Copy as qgis_process Command`: 거리 단위, 면적 단위, 타원체, 그리고 특정 레이어를 가진 "
+"GeoPackage 산출물처럼 까다로운 파라미터 값 같은 환경 설정을 포함하는 :ref:`qgis_process 명령어 "
+"<processing_standalone>` 를 쉽게 생성할 수 있습니다."
+
+#: ../../docs/user_manual/processing/history.rst:44
+msgid ""
+":guilabel:`Copy as JSON`: all the settings of the command are copied in a "
+":file:`JSON` format, ready to be consumed by qgis_process. This is a "
+"convenient way to see the expected format of the commands, even for complex "
+"parameters (like TIN interpolation parameters). You can store these easily "
+"and then restore them later by pasting the values over an algorithm dialog."
+msgstr ""
+":guilabel:`Copy as JSON`: 명령어의 모든 설정을 qgis_process가 사용할 수 있도록 :file:`JSON` "
+"서식으로 복사합니다. (TIN 보간 파라미터 같은) 복잡 파라미터의 경우에도 명령어의 예상 서식을 볼 수 있는 편리한 방법입니다. "
+":file:`JSON` 서식으로 복사된 파라미터들을 쉽게 저장할 수 있고, 나중에 알고리즘 대화창에 이 값들을 붙여넣기해서 복원할 수 "
+"있습니다."
+
+#: ../../docs/user_manual/processing/history.rst:50
+msgid ""
+":guilabel:`Create Test...` using the concerned algorithm and parameters, "
+"following instructions at :source:`Processing README file "
+"<python/plugins/processing/tests/README.md>`."
+msgstr ""
+":guilabel:`Create Test...`:  :source:`공간 처리 README 파일 "
+"<python/plugins/processing/tests/README.md>` 에 있는 지침을 따라, 의심되는 알고리즘과 파라미터를 "
+"이용하는 테스트를 생성할 수 있습니다."
+
+#: ../../docs/user_manual/processing/history.rst:54
 msgid ""
 "Apart from browsing the entries in the registry, you can also re-execute "
 "processes by simply double-clicking on the entry. The algorithm dialog then "
@@ -67,25 +116,20 @@ msgstr ""
 "레지스트리 항목 탐색 이외에도, 어느 항목을 더블클릭하는 것만으로도 해당 공간 처리를 재실행할 수 있습니다. 그러면 이미 설정된 "
 "파라미터를 담은 알고리즘 대화창이 열립니다. 사용자 필요에 따라 어느 파라미터든 변경한 다음 알고리즘을 재실행할 수 있습니다."
 
-#: ../../docs/user_manual/processing/history.rst:40
+#: ../../docs/user_manual/processing/history.rst:59
 msgid ""
 "The :guilabel:`History` dialog also provides a convenient way to contribute "
 "to the consolidation of the testing infrastructure of QGIS Processing "
-"algorithms and scripts. When you right-click on an entry, you can "
-":guilabel:`Create Test...` using the concerned algorithm and parameters, "
-"following instructions at "
-":source:`python/plugins/processing/tests/README.md`."
+"algorithms and scripts."
 msgstr ""
-":guilabel:`History` 대화창에서 QGIS 공간 처리 알고리즘 및 스크립트의 하부 구조(infrastructure)도 "
-"간단하게 통합해서 점검할 수 있습니다. 어느 항목을 오른쪽 클릭하고 :guilabel:`Create Test...` 메뉴를 선택하면, "
-":source:`python/plugins/processing/tests/README.md` 에 있는 지침에 따라 해당 알고리즘 및 "
-"파라미터를 사용해서 점검을 시작합니다."
+":guilabel:`History` 대화창은 QGIS 공간 처리 알고리즘 및 스크립트의 인프라스트럭처를 통합하는 데 기여할 수 있는 "
+"편리한 방법도 제공합니다."
 
-#: ../../docs/user_manual/processing/history.rst:49
+#: ../../docs/user_manual/processing/history.rst:65
 msgid "The processing log"
 msgstr "공간 처리 로그"
 
-#: ../../docs/user_manual/processing/history.rst:51
+#: ../../docs/user_manual/processing/history.rst:67
 msgid ""
 "The history dialog only contains the execution calls, but not the "
 "information produced by the algorithm when executed. That information is "
@@ -95,7 +139,7 @@ msgstr ""
 "이력 관리자 대화창은 알고리즘 실행시 생산된 정보가 아니라 실행 호출만 담고 있습니다. 해당 정보는 QGIS 로그에 "
 "(:menuselection:`View --> Panels --> Log Messages Panel`) 작성됩니다."
 
-#: ../../docs/user_manual/processing/history.rst:56
+#: ../../docs/user_manual/processing/history.rst:72
 msgid ""
 "Third-party algorithms are usually executed by using their command-line "
 "interfaces, which communicate with the user via the console. Although that "
@@ -107,7 +151,7 @@ msgstr ""
 "해당 콘솔을 볼 수는 없어도, 사용자가 이런 알고리즘을 실행할 때마다 로그에 콘솔의 전체 덤프를 작성합니다. 로그가 이런 정보로 채워지는"
 " 일을 피하기 위해, 공간 처리 설정 대화창에서 각 제공자별로 이 습성을 비활성화시킬 수 있습니다."
 
-#: ../../docs/user_manual/processing/history.rst:64
+#: ../../docs/user_manual/processing/history.rst:80
 msgid ""
 "Some algorithms, even if they can produce a result with the given input "
 "data, output comments or additional information to log when they detect "
