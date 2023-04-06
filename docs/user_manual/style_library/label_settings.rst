@@ -239,7 +239,7 @@ In the |labelformatting| :guilabel:`Formatting` tab, you can:
     :guilabel:`Millimeters`, :guilabel:`Points`, :guilabel:`Pixels`, 
     :guilabel:`Percentage`, or :guilabel:`Inches`.
     When line height is set to percentage it is the percentage of the 
-    default text line spacing of that font family. Typically 1.2 times the text size.  
+    default text line spacing of that font family. Typically 1.2 to 1.5 times the text size.  
   * Format the :guilabel:`Alignment`: typical values available are
     :guilabel:`Left`, :guilabel:`Right`, :guilabel:`Justify` and :guilabel:`Center`.
 
