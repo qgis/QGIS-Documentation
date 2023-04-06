@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # This script is used to register QGIS-Documentation translatable resources with Transifex
-# https://www.transifex.com
+# https://app.transifex.com
 #
 # Note that this script updates or creates entries in .tx/config file
 # so that they match expected formatting of tx-github integration slugs.
-# Used to first "tx push" existing translations to Transifex when enabling the github integration
+# Used to tx pull translations from Transifex
 #
 # Tim Sutton, March 2013
 # Update: Harrissou Sant-anna, December 2020
@@ -27,9 +27,9 @@ sphinx-intl update -p build/gettext -l en
 # Clean generated translation *.po files from obsolete strings, if any
 find $SOURCEPOFILES -type f -name '*.po' -exec sed -i '/^#~ /,/^$/d' {} \;
 
-# Clean the .tx/config files from existing references, out of the main section
+# Clean the config file from existing references, out of the main section
 # each reference is made of 5 lines and a blank line
-sed -i "/$PROJECT/,+5d" .tx/config
+sed -i "/$PROJECT/,+5d" $CONFIGFILE
 
 for POFILE in `find $SOURCEPOFILES -type f -name '*.po'`
 do
@@ -38,15 +38,13 @@ do
   GENERICFILE=`echo $POFILE | sed 's,\/en\/,\/<lang>\/,g' | sed 's,\/\/,\/,g'`
   echo $GENERICFILE
 
-  # Set the resource slug by
-  # lowering the case of the whole text
-  # appending the target branch name after double "-"
-  # and replacing "_", "/", ".", "\" and " " characters with "-" in the path
-  # so for a file like
-  #   locale/en/LC_MESSAGES/docs/user_manual/processing/3rdParty.po in release_3.22 branch
-  # we will get
-  #   locale-en-lc-messages-docs-user-manual-processing-3rdparty-po--release-3-22
-  RESOURCE=`echo "$POFILE--$TARGETBRANCH" | tr '[:upper:]' '[:lower:]' | sed 's,[_/ \.\\],-,g'`
+  # Set the resource slug as the md5 check sum of github#{full_repo_name}#{branch_name}#{source_file_path}
+  # so for a source file like
+  #   locale/en/LC_MESSAGES/docs/user_manual/processing/3rdParty.po in release_3.28 branch
+  # we calculate md5 for
+  #   github#qgis/QGIS-Documentation#release_3.28#locale/en/LC_MESSAGES/docs/user_manual/processing/3rdParty.po
+
+  RESOURCE=`echo -n "github#qgis/QGIS-Documentation#$TARGETBRANCH#$POFILE" | md5sum | sed 's/  -//'`
   echo $RESOURCE
 
   # Populate the config file
