@@ -475,7 +475,7 @@ Further reading: :ref:`expression_function_GeometryGroup_is_empty`,
    :start-after: .. end_is_empty_or_null_section
    :end-before: .. end_is_valid_section
 
-Further reading: :ref:`expression_function_GeometryGroup_make_valid`
+Further reading: :ref:`expression_function_GeometryGroup_make_valid`,
 :ref:`qgischeckvalidity` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
