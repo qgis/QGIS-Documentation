@@ -2,24 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
+# Harrissou Sant-anna, 2023
+# Kwon.Yongchan <ruvyn@naver.com>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-12 00:23+0100\n"
-"PO-Revision-Date: 2022-03-14 05:13+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2022\n"
-"Language-Team: Korean (https://www.transifex.com/qgis/teams/110551/ko/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2023\n"
+"Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -40,28 +41,28 @@ msgstr ""
 msgid "From a command line tool, run ``qgis_process`` and you should get:"
 msgstr "명령 줄에서 ``qgis_process`` 를 실행하면 다음과 같은 화면을 보게 될 것입니다:"
 
-#: ../../docs/user_manual/processing/standalone.rst:42
+#: ../../docs/user_manual/processing/standalone.rst:48
 msgid ""
-"Only installed plugins that advertize ``hasProcessingProvider=yes`` in their"
+"Only installed plugins that advertise ``hasProcessingProvider=yes`` in their"
 " :file:`metadata.txt` file are recognized and can be activated or loaded by "
 "qgis_process tool."
 msgstr ""
 "``qgis_process`` 도구는 설치된 플러그인 가운데 :file:`metadata.txt` 파일에 "
 "``hasProcessingProvider=yes`` 를 명시한 플러그인만 식별하고, 활성화시키거나 불러올 수 있습니다."
 
-#: ../../docs/user_manual/processing/standalone.rst:47
+#: ../../docs/user_manual/processing/standalone.rst:53
 msgid ""
 "The command ``list`` can be used to get a list of all available providers "
 "and algorithms."
 msgstr "``list`` 명령어를 사용하면 사용할 수 있는 모든 제공자 및 알고리즘의 목록을 얻을 수 있습니다."
 
-#: ../../docs/user_manual/processing/standalone.rst:54
+#: ../../docs/user_manual/processing/standalone.rst:60
 msgid ""
 "The command ``help`` can be used to get further information about commands "
 "or algorithms."
 msgstr "``help`` 명령어를 사용하면 명령어 또는 알고리즘에 대한 자세한 정보를 얻을 수 있습니다."
 
-#: ../../docs/user_manual/processing/standalone.rst:60
+#: ../../docs/user_manual/processing/standalone.rst:66
 msgid ""
 "The command ``run`` can be used to run an algorithm or model. Specify the "
 "name of the algorithm or a path to a model as first parameter."
@@ -69,39 +70,73 @@ msgstr ""
 "``run`` 명령어를 사용하면 알고리즘 또는 모델을 실행할 수 있습니다. 첫 번째 파라미터로 알고리즘의 이름 또는 모델을 가리키는 "
 "경로를 지정하십시오."
 
-#: ../../docs/user_manual/processing/standalone.rst:67
+#: ../../docs/user_manual/processing/standalone.rst:73
 msgid ""
 "Where a parameter accepts a list of values, set the same variable multiple "
 "times."
 msgstr "파라미터가 값 목록을 입력받는 경우, 동일 변수를 여러번 설정하십시오."
 
-#: ../../docs/user_manual/processing/standalone.rst:73
+#: ../../docs/user_manual/processing/standalone.rst:79
 msgid ""
 "While running an algorithm a text-based feedback bar is shown, and the "
-"operation can be cancelled via :kbd:`CTRL+C`. The ``run`` command also "
-"supports further parameters."
+"operation can be cancelled via :kbd:`CTRL+C`."
 msgstr ""
-"알고리즘을 실행하는 도중에 텍스트 기반 피드백 막대가 표시되며, :kbd:`CTRL+C` 단축키로 실행을 취소할 수 있습니다. "
-"``run`` 명령어는 다음과 같은 심화 파라미터들도 지원합니다."
+"알고리즘을 실행하는 도중에 텍스트 기반 피드백 막대가 표시되며, :kbd:`CTRL+C` 단축키로 실행을 취소할 수 있습니다."
 
-#: ../../docs/user_manual/processing/standalone.rst:77
+#: ../../docs/user_manual/processing/standalone.rst:82
+msgid "The ``run`` command also supports further parameters."
+msgstr "``run`` 명령어는 다음과 같은 심화 파라미터들도 지원합니다."
+
+#: ../../docs/user_manual/processing/standalone.rst:84
 msgid "``--json`` will format stdout output in a JSON structured way."
 msgstr "``--json``: 표준출력(stdout) 산출물 포맷을 JSON 구성 방식으로"
 
-#: ../../docs/user_manual/processing/standalone.rst:78
+#: ../../docs/user_manual/processing/standalone.rst:85
 msgid "``--ellipsoid`` will set the ellipsoid to the specified one."
 msgstr "``--ellipsoid``: 타원체를 지정한 타원체로 설정"
 
-#: ../../docs/user_manual/processing/standalone.rst:79
+#: ../../docs/user_manual/processing/standalone.rst:86
 msgid "``--distance_units`` will use the specified distance units."
 msgstr "``--distance_units``: 지정한 거리 단위를 사용"
 
-#: ../../docs/user_manual/processing/standalone.rst:80
+#: ../../docs/user_manual/processing/standalone.rst:87
 msgid "``--area_units`` will use the specified area units."
 msgstr "``--area_units``: 지정한 면적 단위를 사용"
 
-#: ../../docs/user_manual/processing/standalone.rst:81
+#: ../../docs/user_manual/processing/standalone.rst:88
 msgid ""
 "``--project_path`` will load the specified project for running the "
 "algorithm."
 msgstr "``--project_path``: 알고리즘을 실행하기 위해 지정한 프로젝트를 불러옵니다."
+
+#: ../../docs/user_manual/processing/standalone.rst:90
+msgid ""
+"Complex input parameters, i.e. parameter types which are themselves "
+"specified as a dictionary type object for algorithms, are supported by "
+"qgis_process. To indicate that parameters will be specified via stdin, the "
+"qgis_process command must follow the format (with a trailing ``-`` in place "
+"of the usual arguments list)."
+msgstr ""
+"``qgis_process`` 는 예를 들어 스스로를 알고리즘 용 파라미터 목록(dictionary) 유형 객체로 지정하는 파라미터 유형"
+" 같은 복잡 입력 파라미터를 지원합니다. 복잡 파라미터가 표준입력(STDIN)을 통해 지정될 것이라는 사실을 나타내기 위해, "
+"``qgis_process`` 명령어는 (일반적인 인자 목록 자리에 후행 ``-`` 가 있는) 다음 서식을 따라야만 합니다:"
+
+#: ../../docs/user_manual/processing/standalone.rst:101
+msgid ""
+"The JSON object must contain an \"inputs\" key, which is a map of the input "
+"parameter values. E.g."
+msgstr "JSON 객체는 입력 파라미터 값을 매핑하는 \"inputs\" 키를 담고 있어야만 합니다. 다음은 그 예시입니다:"
+
+#: ../../docs/user_manual/processing/standalone.rst:108
+msgid ""
+"Additionally, extra settings like the distance units, area units, ellipsoid "
+"and project path can be included in this JSON object:"
+msgstr "또한 이 JSON 객체는 거리 단위, 면적 단위, 타원체 및 프로젝트 경로 같은 추가 설정도 포함할 수 있습니다:"
+
+#: ../../docs/user_manual/processing/standalone.rst:121
+msgid ""
+"Specifying input parameters via stdin implies automatically the :file:`JSON`"
+" output format for results."
+msgstr ""
+"표준입력(STDIN)을 통해 입력 파라미터를 지정한다는 것은 자동적으로 산출물을 :file:`JSON` 포맷으로 산출한다는 것을 "
+"의미합니다."
