@@ -2,24 +2,26 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# Miyoshi Tomoya, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-16 07:30+0000\n"
-"PO-Revision-Date: 2022-03-14 05:07+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2022\n"
-"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Miyoshi Tomoya, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -72,12 +74,12 @@ msgid ""
 "by the values appearing in a particular column subset which has been "
 "identified as a candidate key. *- Wikipedia*"
 msgstr ""
-"リレーショナルデータベースとフラットファイルデータベースでは、テーブルは、縦の列（名前で識別される）と横の行のモデルを使用して構成されたデータ要素（値）のセットです。テーブルには指定された数の列がありますが、任意の数の行を持つことができます。各行は、候補キーとして識別された特定の列部分に現れる値によって識別されます。"
+"リレーショナルデータベースとフラットファイルデータベースにおいてテーブルは、（名前で識別される）縦の列と横の行のモデルを使って構成されたデータ要素（値）の集合です。テーブルの列の数は指定されますが、行の数は任意です。各行は、特定の列の部分集合に現れる候補キーとして識別された値によって識別されます。"
 " *-ウィキペディア*"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:40
 msgid "In SQL databases a table is also known as a **relation.**"
-msgstr "SQLデータベースではテーブルは **関係** としても知られている。"
+msgstr "SQLデータベースではテーブルは **関係** としても知られています。"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:43
 msgid "Columns / Fields"
@@ -92,7 +94,7 @@ msgid ""
 "refer specifically to the single item that exists at the intersection "
 "between one row and one column. *- Wikipedia*"
 msgstr ""
-"列は、特定の単純型のデータ値の集合であり、表の各行に対して1つです。列は、行を構成する構造を提供します。フィールドという用語は、多くの場合、フィールド（またはフィールド値）を使用して、1つの行と1つの列の交差点に存在する単一項目を具体的に参照する方が正しいと考えられますが、列と互換的に使用されます。"
+"列とは、特定の単純型のデータ値の集合であり、テーブルの各行に対して1つずつ存在します。列は、行を構成するための構造を提供します。フィールドという用語はしばしば列と互換的に使われますが、1つの行と1つの列の交点に存在するひとつの項目を指すときは、フィールド（またはフィールド値）を使う方が正しいと考える人も多い。"
 " *-ウィキペディア*"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:52
@@ -145,7 +147,7 @@ msgstr "``Date`` - 誰も忘れないよう、ホルストの誕生日を格納�
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:89
 msgid "``Boolean`` - to store simple true/false values"
-msgstr "``Boolean`` - シンプルな真/偽の値を格納します"
+msgstr "``Boolean`` - 単純な真/偽の値を格納します"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:91
 msgid ""
@@ -153,12 +155,20 @@ msgid ""
 "there is nothing in a field, then the field content is referred to as a "
 "**'null' value**:"
 msgstr ""
-"フィールドに何も保存しないようにデータベースに指示することができます。フィールドに何もない場合、フィールドコンテンツは **'null'値** "
+"フィールドに何も保存しないようにデータベースに指示することができます。フィールドに何もない場合、フィールドの中身は **'null'値** "
 "と呼ばれます:"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:101
 msgid "Result:"
 msgstr "結果:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:112
+msgid ""
+"There are many more datatypes you can use - `check the PostgreSQL manual! "
+"<https://www.postgresql.org/docs/current/datatype.html>`_"
+msgstr ""
+"使えるデータ型には更に多くがあります－ `PostgreSQLマニュアルを確認してください "
+"<https://www.postgresql.org/docs/current/datatype.html>`_"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:116
 msgid "Modelling an Address Database"
@@ -168,18 +178,42 @@ msgstr "住所データベースをモデル化"
 msgid ""
 "Let's use a simple case study to see how a database is constructed. We want "
 "to create an address database."
-msgstr "データベースが構築されるかを確認するために、単純なケーススタディを使用してみましょう。住所のデータベースを作成したいとします。"
+msgstr "データベースが構築されるかを確認するために、単純なケーススタディを使ってみましょう。住所のデータベースを作成したいとします。"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:122
 #: ../../docs/training_manual/database_concepts/db_intro.rst:209
 msgid "|TY| |basic|"
-msgstr "|TY| |basic|"
+msgstr ""
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:457
+msgid "basic"
+msgstr ""
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:124
 msgid ""
 "Write down the properties which make up a simple address and which we would "
 "want to store in our database."
-msgstr "簡単な住所を構成し、データベースに格納したいプロパティを書き留めます。"
+msgstr "簡単な住所を構成し、そしてデータベースに格納される、プロパティを書き出します。"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:127
+#: ../../docs/training_manual/database_concepts/db_intro.rst:216
+#: ../../docs/training_manual/database_concepts/db_intro.rst:345
+msgid "Answer"
+msgstr "答え"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:130
+msgid ""
+"For our theoretical address table, we might want to store the following "
+"properties::"
+msgstr "私たちの理論上の住所テーブルの場合、次のようなプロパティを保存しておくとよいでしょう::"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:140
+msgid ""
+"When creating the table to represent an address object, we would create "
+"columns to represent each of these properties and we would name them with "
+"SQL-compliant and possibly shortened names::"
+msgstr ""
+"住所オブジェクトを表すテーブルを作成するとき、これらのプロパティのそれぞれを表す列を作成し、SQLに準拠したできるだけ短い名前を付けます::"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:152
 msgid "Address Structure"
@@ -203,7 +237,7 @@ msgid ""
 "world; taking real world concepts and representing them in the database as "
 "entities."
 msgstr ""
-"データベースを作成するプロセスには、現実世界のモデルを作成することが含まれます。実世界の概念を取り入れ、エンティティとしてデータベースに表現します。"
+"データベースを作成するプロセスには、現実世界のモデルを作成することが含まれます。現実世界の概念を取り入れ、エンティティとしてデータベースに表現します。"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:165
 msgid "Normalisation"
@@ -223,7 +257,7 @@ msgid ""
 "characteristics - insertion, update, and deletion anomalies - that could "
 "lead to a loss of data integrity. *- Wikipedia*"
 msgstr ""
-"正規化は、データベース構造が汎用照会に適しており、挿入、更新、および削除の異常（データの整合性が失われる可能性がある）などの望ましくない特性がないことを確実にする体系的な方法です。"
+"正規化は、データベース構造が汎用的な照会に適しており、挿入、更新、および削除の異常（データの整合性が失われる可能性がある）などの望ましくない特性がないことを確実にする体系的な方法です。"
 " *-ウィキペディア*"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:175
@@ -240,13 +274,40 @@ msgid ""
 "this data is duplicated, it consumes space. Worse still, if a city name "
 "changes, you have to do a lot of work to update your database."
 msgstr ""
-"同じ名前の通りや都市の友達が多いとしましょう。このデータが複製されるたびに、領域が消費されます。さらに悪いことに、都市名が変更された場合は、データベースを更新するために多くの作業を行う必要があります。"
+"友達が同じ名前の通りや都市に多いとしましょう。このデータが複製されるたびに、領域が消費されます。さらに悪いことに、都市の名称が変わった場合は、データベースを更新するために多くの作業が必要になります。"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:210
 msgid ""
 "Redesign the theoretical `people` table above to reduce duplication and to "
 "normalise the data structure."
 msgstr "重複を低減し、データ構造を正規化するために、上記の理論 `people` テーブルを再設計します。"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:213
+msgid ""
+"You can read more about database normalisation `here "
+"<https://en.wikipedia.org/wiki/Database_normalization>`_"
+msgstr ""
+"データベースの正規化については `ここ <https://en.wikipedia.org/wiki/Database_normalization>`_"
+" に読み物があります"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:219
+msgid ""
+"The major problem with the *people* table is that there is a single address "
+"field which contains a person's entire address. Thinking about our "
+"theoretical *address* table earlier in this lesson, we know that an address "
+"is made up of many different properties. By storing all these properties in "
+"one field, we make it much harder to update and query our data. We therefore"
+" need to split the address field into the various properties. This would "
+"give us a table which has the following structure::"
+msgstr ""
+"*people* テーブルの大きな問題は、ある人の住所全体を含んだ単一のアドレスフィールドです。このレッスンで前に学んだ理論的な *address* "
+"テーブルについて考えてみると、住所は多くの異なるプロパティで構成されていることがわかります。これらのプロパティをすべて1つのフィールドに格納すると、データの更新や問い合わせが非常に困難になります。したがって、住所フィールドをさまざまなプロパティに分割する必要があります。そうすると、次のような構造を持つテーブルができます::"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:233
+msgid ""
+"In the next section, you will learn about Foreign Key relationships which "
+"could be used in this example to further improve our database's structure."
+msgstr "次のセクションでは、データベースの構造をさらに改善するために、この例で使用することができる外部キー関係について学びます。"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:237
 msgid "Indexes"
@@ -266,7 +327,7 @@ msgid ""
 "information you need. The index at the back of a book helps you to jump "
 "quickly to the page with the relevant information:"
 msgstr ""
-"たとえば教科書を読んでいて概念の説明を探してるが、その教科書には索引がなかったとします。必要な情報が見つかるまで、1つの表紙から読み始め、書籍全体を通して作業を進めなければなりません。教科書の裏にある索引は、関連情報を持つページに素早くジャンプするのに役立ちます:"
+"たとえば教科書を読んで、ある概念の説明を探しているが、その教科書には索引がなかったとします。表紙から読み始め、必要な情報が見つかるまで、本全体を通して作業を進めなければなりません。教科書の裏にある索引は、関連情報を持つページに素早くジャンプするのに役立ちます:"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:252
 msgid "Now searches on name will be faster:"
@@ -334,7 +395,11 @@ msgstr ""
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:340
 msgid "|TY| |moderate|"
-msgstr "|TY| |moderate|"
+msgstr ""
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:458
+msgid "moderate"
+msgstr ""
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:342
 msgid ""
@@ -343,6 +408,35 @@ msgid ""
 msgstr ""
 "この `people` モデルにはまだいくつかの正規化の問題があります - "
 "さらに正規化して、ER図を用いて自分の考えを示すことができるかどうか確認してみてください。"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:349
+msgid "Our *people* table currently looks like this::"
+msgstr "*people* テーブルは今このように見えます::"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:355
+msgid ""
+"The :guilabel:`street_id` column represents a 'one to many' relationship "
+"between the people object and the related street object, which is in the "
+"*streets* table."
+msgstr ""
+":guilabel:`street_id` 列は、人オブジェクトと、*streets* "
+"テーブルにある関係した通りオブジェクトの間の「一対多」の関係を表しています。"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:358
+msgid ""
+"One way to further normalise the table is to split the name field into "
+"*first_name* and *last_name*::"
+msgstr "テーブルをさらに正規化する方法のひとつは、名前フィールドを *first_name* と *last_name* に分割することです::"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:365
+msgid ""
+"We can also create separate tables for the town or city name and country, "
+"linking them to our *people* table via 'one to many' relationships::"
+msgstr "また町か市の名称と国で別々のテーブルを作り、「一対多」関係で *people* テーブルとリンクすることもできます::"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:373
+msgid "An ER Diagram to represent this would look like this:"
+msgstr "これを表すER図は次のようになるでしょう::"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:379
 msgid "Constraints, Primary Keys and Foreign Keys"
@@ -421,7 +515,7 @@ msgstr "処理の間に何か問題（例えば停電）が発生した場合、
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:435
 msgid "|IC|"
-msgstr "|IC|"
+msgstr ""
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:437
 msgid ""
@@ -431,7 +525,7 @@ msgstr "データベースを使用すると、簡単なコードの構造を使
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:441
 msgid "|WN|"
-msgstr "|WN|"
+msgstr ""
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:443
 msgid ""
