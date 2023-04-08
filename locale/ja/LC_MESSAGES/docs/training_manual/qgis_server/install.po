@@ -2,25 +2,26 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
-# Miyoshi Tomoya, 2022
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# Miyoshi Tomoya, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-16 07:30+0000\n"
-"PO-Revision-Date: 2022-03-14 05:16+0000\n"
-"Last-Translator: Miyoshi Tomoya, 2022\n"
-"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Miyoshi Tomoya, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -53,11 +54,26 @@ msgstr "|moderate| |FA| パッケージからインストールする"
 
 #: ../../docs/training_manual/qgis_server/install.rst:149
 msgid "moderate"
-msgstr "moderate"
+msgstr ""
+
+#: ../../docs/training_manual/qgis_server/install.rst:19
+msgid ""
+"In this lesson we're going to do only the install from packages as shown "
+"`here <https://qgis.org/en/site/forusers/alldownloads.html#linux>`_ ."
+msgstr ""
+"このレッスンでは、`ここ <https://qgis.org/en/site/forusers/alldownloads.html#linux>`_ "
+"にあるパッケージからのインストールのみを行います。"
 
 #: ../../docs/training_manual/qgis_server/install.rst:22
 msgid "Install QGIS Server with:"
 msgstr "QGISサーバーを以下でインストールします:"
+
+#: ../../docs/training_manual/qgis_server/install.rst:31
+msgid ""
+"QGIS Server should be used in production without QGIS Desktop (with the "
+"accompanying X Server) installed on the same machine."
+msgstr ""
+"QGIS Serverは、QGISデスクトップ（付属のXサーバーと共に）が同じマシンにインストールされていない状態で、使用する必要があります。"
 
 #: ../../docs/training_manual/qgis_server/install.rst:35
 msgid "|moderate| |FA| QGIS Server Executable"
@@ -73,9 +89,46 @@ msgstr ""
 "bin/qgis_mapserv.fcgi`` のような何かを出力する ``find / -name 'qgis_mapserv.fcgi'`` "
 "を実行して、どこにインストールされたかを確認できます。"
 
+#: ../../docs/training_manual/qgis_server/install.rst:41
+msgid ""
+"Optionally, if you want to do a command line test at this time you can run "
+"the ``/usr/lib/cgi-bin/qgis_mapserv.fcgi --version`` command which should "
+"output something like:"
+msgstr ""
+"オプションとして、この時点でコマンドラインテストを行いたい場合は、``/usr/lib/cgi-bin/qgis_mapserv.fcgi "
+"--version`` コマンドを実行すると、次のような出力が得られるはずです："
+
+#: ../../docs/training_manual/qgis_server/install.rst:59
+msgid "We'll see later on how to make WMS requests."
+msgstr "WMSのリクエストの方法は後述します。"
+
+#: ../../docs/training_manual/qgis_server/install.rst:62
+msgid "|hard| HTTP Server Configuration"
+msgstr "|hard| HTTPサーバー構築"
+
 #: ../../docs/training_manual/qgis_server/install.rst:148
 msgid "hard"
-msgstr "hard"
+msgstr ""
+
+#: ../../docs/training_manual/qgis_server/install.rst:64
+msgid ""
+"In order to access on the installed QGIS server from an Internet Browser we "
+"need to use an HTTP server. The Apache HTTP Server installation process is "
+"detailed in :ref:`httpserver` section."
+msgstr ""
+"インストールしたQGIS Serverにインターネットブラウザからアクセスするためには、HTTPサーバーを使用する必要があります。Apache HTTP"
+" サーバーのインストール方法は :ref:`httpserver` セクションで詳しく説明しています。"
+
+#: ../../docs/training_manual/qgis_server/install.rst:69
+msgid ""
+"If you installed QGIS Server without running an X Server (included in Linux "
+"Desktop) and if you also want to use the ``GetPrint`` command then you "
+"should install a fake X Server and tell QGIS Server to use it. You can do "
+"that by following the :ref:`Xvfb installation process <xvfb>`."
+msgstr ""
+"（Linuxデスクトップに含まれる）X Serverを起動せずにQGIS Serverをインストールした場合で、 ``GetPrint`` "
+"コマンドを使いたいときは、偽のXサーバをインストールして、QGIS Serverにそれを使うように指示する必要があります。これは :ref:`Xvfb "
+"installation process` に従って行うことができます。"
 
 #: ../../docs/training_manual/qgis_server/install.rst:76
 msgid "|moderate| |FA| Create another virtual host"
@@ -91,6 +144,17 @@ msgstr ""
 "QGISサーバーを指す別のApacheの仮想ホストを作成してみましょう。好きな名前を選択できます（ ``coco.bango`` 、 "
 "``super.duper.training`` 、 ``example.com``、など）が、単純化のために ``myhost`` "
 "を使用するつもりです。"
+
+#: ../../docs/training_manual/qgis_server/install.rst:82
+msgid ""
+"Let's set up the ``myhost`` name to point to the localhost IP by adding "
+"``127.0.0.1 x`` to the :file:`/etc/hosts` with the following command: ``sh "
+"-c \"echo '127.0.0.1 myhost' >> /etc/hosts\"`` or by manually editing the "
+"file with ``gedit /etc/hosts``."
+msgstr ""
+":file:`/etc/hosts` に ``127.0.0.1 x`` を追加して ``myhost`` という名前がローカルホストの IP "
+"を指すように次のコマンドで設定するか： ``sh -c \"echo '127.0.0.1 myhost' >> /etc/hosts\"`` または "
+"``gedit /etc/hosts`` でファイルを手動で編集してください。"
 
 #: ../../docs/training_manual/qgis_server/install.rst:86
 msgid ""
@@ -110,6 +174,31 @@ msgstr ""
 "したり、DebianのボックスブラウザからURLにアクセスすることによって、 ``myhost`` "
 "サイトからQGISサーバーにアクセスできるかどうか試してみましょう。おそらく得られるのは："
 
+#: ../../docs/training_manual/qgis_server/install.rst:112
+msgid ""
+"Apache doesn't know that he's supposed to answer requests pointing to the "
+"server named ``myhost``. In order to setup the virtual host the simplest way"
+" would be to make a ``myhost.conf`` file in the :file:`/etc/apache2/sites-"
+"available` directory that has the same content as :file:`qgis.demo.conf` "
+"except for the ``ServerName`` line that should be ``ServerName myhost``. You"
+" could also change where the logs go as otherwise the logs for the two "
+"virtual hosts would be shared but this is optional."
+msgstr ""
+"Apacheは ``myhost`` "
+"という名前のサーバーを指すリクエストに答えることになっていることを知りません。バーチャルホストを設定するのに一番簡単な方法は、 "
+":file:`/etc/apache2/sites-available` ディレクトリに ``myhost.conf`` "
+"ファイルを作ることです。このファイルの内容は :file:`qgis.demo.conf` と同じですが、 ``ServerName`` 行は "
+"``ServerName myhost`` "
+"にする必要があります。またこれは任意ですが、ログを保存する場所を変更することもできます。そうしないときは、2つのバーチャルホストのログが共有されます。"
+
+#: ../../docs/training_manual/qgis_server/install.rst:119
+msgid ""
+"Let's now enable the virtual host with ``a2ensite myhost.conf`` and then "
+"reload the Apache service with ``service apache2 reload``."
+msgstr ""
+"次に、``a2ensite myhost.conf`` でバーチャルホストを有効にし、``service apache2 reload`` で "
+"Apache サービスを再ロードしてみましょう。"
+
 #: ../../docs/training_manual/qgis_server/install.rst:121
 msgid ""
 "If you try again to access the http://myhost/cgi-bin/qgis_mapserv.fcgi url "
@@ -120,7 +209,7 @@ msgstr ""
 
 #: ../../docs/training_manual/qgis_server/install.rst:125
 msgid "|IC|"
-msgstr "|IC|"
+msgstr ""
 
 #: ../../docs/training_manual/qgis_server/install.rst:127
 msgid ""
@@ -131,4 +220,15 @@ msgstr ""
 
 #: ../../docs/training_manual/qgis_server/install.rst:131
 msgid "|WN|"
-msgstr "|WN|"
+msgstr ""
+
+#: ../../docs/training_manual/qgis_server/install.rst:133
+msgid ""
+"Now that you've installed QGIS Server and it's accessible through the HTTP "
+"protocol, we need to learn how to access some of the services it can offer. "
+"The topic of the next lesson is to learn how to access QGIS Server WMS "
+"services."
+msgstr ""
+"QGIS "
+"Serverをインストールし、HTTPプロトコルでアクセスできるようになったので、提供できるサービスのいくつかにアクセスする方法を学ぶ必要があります。次のレッスンのテーマは、QGIS"
+" ServerのWMSサービスにアクセスする方法を学ぶことです。"
