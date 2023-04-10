@@ -1,26 +1,29 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
-# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
+# Harrissou Sant-anna, 2023
+# vareli <ehespinosa@ya.com>, 2023
+# Eric Armijo, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 01:57+0200\n"
-"PO-Revision-Date: 2020-03-16 19:31+0000\n"
-"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
-"Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Eric Armijo, 2023\n"
+"Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/user_manual/processing/history.rst:4
 msgid "The history manager"
@@ -64,6 +67,58 @@ msgstr ""
 "se puede llamar desde la línea de comandos."
 
 #: ../../docs/user_manual/processing/history.rst:35
+msgid "Right-click on a row and you should be able to:"
+msgstr "Botón derecho sobre una fila y debería ser capaz de:"
+
+#: ../../docs/user_manual/processing/history.rst:37
+msgid ""
+":guilabel:`Copy as Python Command`: allows for easy copying of the "
+"equivalent :ref:`PyQGIS command <processing_console>` run from the dialog. "
+"Same as the code displayed below the commands list."
+msgstr ""
+":guilabel:`Copiar como Comando Python`: le permite la copia fácil del "
+"comando :ref:`PyQGIS equivalente <processing_console>` corre sobre el "
+"dialogo. Lo mismo que el código mostrado debajo de la lista de comandos."
+
+#: ../../docs/user_manual/processing/history.rst:40
+msgid ""
+":guilabel:`Copy as qgis_process Command`: allows for easy generation of "
+":ref:`qgis_process command <processing_standalone>`, including its "
+"environment settings like the distance units, area units, ellipsoid, and any"
+" tricky parameter values like GeoPackage outputs with specific layers"
+msgstr ""
+":guilabel:`Copiar como Comando qgis_process`: permite la generación fácil de"
+" comandos :ref:`qgis_process <processing_standalone>`, incluyendo sus "
+"ajustes de entorno como las unidades de distancia, unidades de áreas, "
+"elipsoide y cualquier valor de parámetro complicado como salidas GeoPackage "
+"con las capas específicas"
+
+#: ../../docs/user_manual/processing/history.rst:44
+msgid ""
+":guilabel:`Copy as JSON`: all the settings of the command are copied in a "
+":file:`JSON` format, ready to be consumed by qgis_process. This is a "
+"convenient way to see the expected format of the commands, even for complex "
+"parameters (like TIN interpolation parameters). You can store these easily "
+"and then restore them later by pasting the values over an algorithm dialog."
+msgstr ""
+":guilabel:`Copiar como JSON`: todos los parámetros del comando se copian en "
+"formato :file:`JSON`, listos para ser consumidos por qgis_process. Esta es "
+"una forma conveniente de ver el formato esperado de los comandos, incluso "
+"para parámetros complejos (como los parámetros de interpolación TIN). Puede "
+"almacenar estos fácilmente y luego restaurarlos más tarde pegando los "
+"valores sobre un diálogo de algoritmo."
+
+#: ../../docs/user_manual/processing/history.rst:50
+msgid ""
+":guilabel:`Create Test...` using the concerned algorithm and parameters, "
+"following instructions at :source:`Processing README file "
+"<python/plugins/processing/tests/README.md>`."
+msgstr ""
+":guilabel:`Crear prueba...` utilizando el algoritmo y los parámetros "
+"correspondientes, siguiendo las instrucciones del archivo "
+":source:`Processing README <python/plugins/processing/tests/README.md>`."
+
+#: ../../docs/user_manual/processing/history.rst:54
 msgid ""
 "Apart from browsing the entries in the registry, you can also re-execute "
 "processes by simply double-clicking on the entry. The algorithm dialog then "
@@ -76,27 +131,21 @@ msgstr ""
 "ya configurados y puede cambiar cualquiera de ellos para que se ajuste a sus"
 " necesidades y volver a ejecutar el algoritmo."
 
-#: ../../docs/user_manual/processing/history.rst:40
+#: ../../docs/user_manual/processing/history.rst:59
 msgid ""
 "The :guilabel:`History` dialog also provides a convenient way to contribute "
 "to the consolidation of the testing infrastructure of QGIS Processing "
-"algorithms and scripts. When you right-click on an entry, you can "
-":guilabel:`Create Test...` using the concerned algorithm and parameters, "
-"following instructions at "
-":source:`python/plugins/processing/tests/README.md`."
+"algorithms and scripts."
 msgstr ""
-"El cuadro de diálogo :guilabel:`Historial` también proporciona una manera "
-"conveniente de contribuir a la consolidación de la infraestructura de prueba"
-" de los algoritmos y scripts de procesamiento QGIS. Cuando hace clic derecho"
-" en una entrada, puede :guilabel:`Crear Prueba...` usando el algoritmo y los"
-" parámetros correspondientes, siguiendo las instrucciones en "
-":source:`python/plugins/processing/tests/README.md`."
+"El diálogo :guilabel:`Historia` también proporciona una forma cómoda de "
+"contribuir a la consolidación de la infraestructura de pruebas de algoritmos"
+" y scripts de Procesamiento de QGIS."
 
-#: ../../docs/user_manual/processing/history.rst:49
+#: ../../docs/user_manual/processing/history.rst:65
 msgid "The processing log"
 msgstr "El registro de procesamiento"
 
-#: ../../docs/user_manual/processing/history.rst:51
+#: ../../docs/user_manual/processing/history.rst:67
 msgid ""
 "The history dialog only contains the execution calls, but not the "
 "information produced by the algorithm when executed. That information is "
@@ -108,7 +157,7 @@ msgstr ""
 " escribe en el registro de QGIS (:menuselection:`Ver -> Paneles -> Panel de "
 "mensajes de registro`)."
 
-#: ../../docs/user_manual/processing/history.rst:56
+#: ../../docs/user_manual/processing/history.rst:72
 msgid ""
 "Third-party algorithms are usually executed by using their command-line "
 "interfaces, which communicate with the user via the console. Although that "
@@ -123,7 +172,7 @@ msgstr ""
 " Para evitar saturar el registro con esa información, puede desactivarlo "
 "para cada proveedor en el cuadro de diálogo de configuración."
 
-#: ../../docs/user_manual/processing/history.rst:64
+#: ../../docs/user_manual/processing/history.rst:80
 msgid ""
 "Some algorithms, even if they can produce a result with the given input "
 "data, output comments or additional information to log when they detect "
