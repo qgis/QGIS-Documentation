@@ -45,7 +45,7 @@ jobs:
     - id: create_pr
       if: github.ref == 'refs/heads/master'
       name: Create Pull Request for master
-      uses: peter-evans/create-pull-request@v4
+      uses: peter-evans/create-pull-request@v5
       with:
         commit-message: Update statistics of translation
         title: Update statistics of translation
