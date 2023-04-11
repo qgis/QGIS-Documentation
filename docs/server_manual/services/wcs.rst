@@ -50,7 +50,7 @@ URL example:
 
 .. code-block:: bash
 
-  http://localhost/qgis_server?
+  http://localhost/qgisserver?
   SERVICE=WCS
   &VERSION=1.1.1
   &REQUEST=GetCapabilities

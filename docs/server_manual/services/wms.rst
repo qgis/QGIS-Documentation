@@ -67,7 +67,7 @@ URL example:
 
 .. code-block:: bash
 
-  http://localhost/qgis_server?
+  http://localhost/qgisserver?
   SERVICE=WMS
   &VERSION=1.3.0
   &REQUEST=GetCapabilities
@@ -128,7 +128,7 @@ URL example:
 
 .. code-block:: bash
 
-  http://localhost/qgis_server?
+  http://localhost/qgisserver?
   SERVICE=WMS
   &VERSION=1.3.0
   &REQUEST=GetMap
@@ -1590,14 +1590,14 @@ The XML document looks like:
        <Version>1.1.0</Version>
        <LayerDescription>
            <owsType>wfs</owsType>
-           <se:OnlineResource xlink:href="http://localhost/qgis_server" xlink:type="simple"/>
+           <se:OnlineResource xlink:href="http://localhost/qgisserver" xlink:type="simple"/>
            <TypeName>
                <se:FeatureTypeName>my_vector_layer</se:FeatureTypeName>
            </TypeName>
        </LayerDescription>
        <LayerDescription>
            <owsType>wcs</owsType>
-           <se:OnlineResource xlink:href="http://localhost/qgis_server" xlink:type="simple"/>
+           <se:OnlineResource xlink:href="http://localhost/qgisserver" xlink:type="simple"/>
            <TypeName>
                <se:FeatureTypeName>my_raster_layer</se:FeatureTypeName>
            </TypeName>
