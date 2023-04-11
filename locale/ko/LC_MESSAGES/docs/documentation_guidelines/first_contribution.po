@@ -2,24 +2,26 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# Kwon.Yongchan <ruvyn@naver.com>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-21 02:17+0000\n"
-"PO-Revision-Date: 2022-03-14 05:11+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2022\n"
-"Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2023\n"
+"Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -83,7 +85,8 @@ msgid ""
 "Documentation/issues?q=is%3Aissue+is%3Aopen+label%3AEasy>`_."
 msgstr ""
 "처음으로 공헌하는 경우라서 어디서부터 시작해야 할지 모르겠다면, QGIS의 `초보를 위한 문제점 보고서 "
-"%3Aissue+is%3Aopen+label%3AEasy>`_ 를 살펴보는 것도 좋습니다."
+"<https://github.com/qgis/QGIS-"
+"Documentation/issues?q=is%3Aissue+is%3Aopen+label%3AEasy>`_ 를 살펴보는 것도 좋습니다."
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:36
 msgid "There are two main ways, not mutually exclusive, to modify the files:"
@@ -122,6 +125,17 @@ msgstr "주 저장소에 작성자의 변경 사항을 삽입하도록 PR 생성
 msgid "create, update, or delete branches"
 msgstr "분기(branch) 생성, 업데이트, 또는 삭제"
 
+#: ../../docs/documentation_guidelines/first_contribution.rst:53
+msgid ""
+"If you are not yet familiar with git and GitHub vocabulary, you may want to "
+"read the GitHub `Hello-world <https://docs.github.com/en/get-"
+"started/quickstart/hello-world>`_ project to learn some basic vocabulary and"
+" actions that will be used below."
+msgstr ""
+"아직 git 및 GitHub의 전문 용어에 익숙하지 않다면, 다음 단락부터 이용할 몇몇 기본 용어 및 액션을 숙지하기 위해 GitHub "
+"`Hello-world <https://docs.github.com/ko/get-started/quickstart/hello-"
+"world>`_ 프로젝트를 읽어보시기 바랍니다."
+
 #: ../../docs/documentation_guidelines/first_contribution.rst:57
 msgid "**If you are fixing a reported issue**"
 msgstr "**보고된 문제점을 고치려면**"
@@ -146,8 +160,8 @@ msgid ""
 "Assuming you already have a `GitHub account <https://github.com/join>`_, you"
 " first need to fork the source files of the documentation."
 msgstr ""
-"당신이 이미 `GitHub 계정 `_ 을 가지고 있다고 가정하고, 가장 먼저 해야 할 일은 문서 소스 파일을 포크(fork)하는 "
-"것입니다."
+"당신이 이미 `GitHub 계정 <https://github.com/join>`_ 을 가지고 있다고 가정하고, 가장 먼저 해야 할 일은 "
+"문서 소스 파일을 포크(fork)하는 것입니다."
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:70
 msgid ""
@@ -155,8 +169,12 @@ msgid ""
 "<https://github.com/qgis/QGIS-Documentation>`_ page and click on the "
 "|githubFork| button in the upper right corner."
 msgstr ""
-"`QGIS-Documentation 저장소 <https\\://github.com/qgis/QGIS-Documentation>`_ "
-"페이지로 가서 우상단에 있는 |githubFork| 버튼을 클릭하십시오."
+"`QGIS-Documentation 저장소 <https://github.com/qgis/QGIS-Documentation>`_ 페이지로 "
+"가서 우상단에 있는 |githubFork| 버튼을 클릭하십시오."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:667
+msgid "githubFork"
+msgstr "githubFork"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:74
 msgid ""
@@ -211,7 +229,20 @@ msgid ""
 "the :ref:`writing guidelines <QGIS-documentation-guidelines>`."
 msgstr ""
 "변경 사항을 작성하십시오. reStructureText 문법을 사용해서 문서를 작성하기 때문에, 당신이 작성하는 변경 사항에 따라 "
-":ref:`문서 작성 가이드 <QGIS-documentation-guidelines>`_ 를 따라야 할 경우도 있습니다."
+":ref:`문서 작성 지침 <QGIS-documentation-guidelines>` 을 따라야 할 경우도 있습니다."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:103
+msgid ""
+"When you finish, make a short comment about your changes and click on "
+":guilabel:`Propose changes`. This will generate a new `branch "
+"<https://docs.github.com/en/pull-requests/collaborating-with-pull-"
+"requests/proposing-changes-to-your-work-with-pull-requests/about-branches>`_"
+" (``patch-xxx``) in your repository."
+msgstr ""
+"수정 작업이 끝나면, 작성자가 변경한 내용에 대해 간단히 설명하는 코멘트를 작성한 다음 :guilabel:`Propose changes`"
+" 를 클릭하십시오. 작성자의 저장소에 새 `분기 <https://docs.github.com/ko/pull-"
+"requests/collaborating-with-pull-requests/proposing-changes-to-your-work-"
+"with-pull-requests/about-branches>`_ (``patch-xxx``)를 생성할 것입니다."
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:108
 msgid ""
@@ -227,8 +258,8 @@ msgid ""
 "<compare_changes>` in the :ref:`Share your changes via Pull Request "
 "<sharing_changes>` section below."
 msgstr ""
-"변경 사항 작성을 완료했다면, 아래에 있는 :ref:`PR을 통해 변경 사항 공유 <sharing_changes>`_ 부분의 :ref:`"
-" 변경 사항 비교 <compare_changes>` 로 건너뛰십시오."
+"변경 사항 작성을 완료했다면, 아래에 있는 :ref:`PR을 통해 변경 사항 공유 <sharing_changes>` 부분 아래 있는 "
+":ref:`변경 사항 비교 <compare_changes>` 로 건너뛰십시오."
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:113
 msgid ""
@@ -253,6 +284,10 @@ msgstr ""
 "|githubBranch| 버튼을 클릭한 다음 ``patch-xxx`` 분기를 검색하십시오. 해당 분기를 선택하십시오. "
 "|githubBranch| 버튼의 텍스트가 :guilabel:`Branch: patch-xxx` 로 변했을 것입니다."
 
+#: ../../docs/documentation_guidelines/first_contribution.rst:659
+msgid "githubBranch"
+msgstr "githubBranch"
+
 #: ../../docs/documentation_guidelines/first_contribution.rst:120
 msgid "Jump down to :ref:`Modify files <modify_files>` below."
 msgstr "아래 있는 :ref:`파일 수정하기 <modify_files>` 로 넘어가십시오."
@@ -271,6 +306,81 @@ msgstr "대안 2: 작성자의 문서 저장소에 애드혹(ad hoc) 분기 생�
 #: ../../docs/documentation_guidelines/first_contribution.rst:128
 msgid "You can edit files directly from your fork of the QGIS Documentation."
 msgstr "QGIS 문서의 작성자 포크(fork)에서 파일을 직접 편집할 수 있습니다."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:130
+msgid ""
+"First, make sure that your ``master`` branch is up to date with "
+"``qgis:master`` branch. To do so:"
+msgstr ""
+"먼저, 사용자의 ``master`` 분기가 ``qgis:master`` 분기의 최신 상태와 일치하는지 확인하십시오. 이를 확인하려면:"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:133
+msgid ""
+"Go to the main page of your repository, i.e. "
+"``https://github.com/<YourName>/QGIS-Documentation``. The ``master`` branch "
+"should be active with a mention whether it is up to date with ``qgis/QGIS-"
+"Documentation:master`` or not."
+msgstr ""
+"예를 들어 ``https://github.com/<YourName>/QGIS-Documentation`` 같은 사용자 저장소의 메인 "
+"페이지로 가십시오. ``master`` 분기가 활성화되어 ``qgis/QGIS-Documentation:master`` 분기의 최신 "
+"상태와 일치하는지를 알려줄 것입니다."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:137
+msgid ""
+"If it has commits ahead the upstream branch, you better use the previous "
+":ref:`shortcut button alternative <edit_on_github>` until you align your "
+"``master`` branch."
+msgstr ""
+"업스트림 분기보다 앞서 커밋한 경우 사용자의 ``master`` 브랜치를 정렬할 때까지 이전 :ref:`대안 단축키 버튼 "
+"<edit_on_github>``을 사용하는 편이 좋습니다."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:140
+msgid "If it only has commits behind:"
+msgstr "뒤쳐진 커밋만 있는 경우:"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:142
+msgid ""
+"Expand the :guilabel:`Fetch Upstream` drop-down menu on the right. You can"
+msgstr "오른쪽에 있는 :guilabel:`Fetch Upstream` 드롭다운 메뉴를 펼치십시오. 다음 작업을 할 수 있습니다:"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:144
+msgid ""
+":guilabel:`Compare` the branches and see new changes in the main repository"
+msgstr ":guilabel:`Compare`: 분기들을 비교해서 메인 저장소의 새로운 변경 사항들을 볼 수 있습니다."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:145
+msgid ""
+":guilabel:`Fetch and merge`: takes changes from the upstream branch to "
+"yours."
+msgstr ":guilabel:`Fetch and merge`: 업스트림 분기로부터 사용자 분기로 변경 사항들을 가져올 수 있습니다."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:146
+msgid ""
+"Let's click :guilabel:`Fetch and merge`: after the process, your branch is "
+"mentioned as up to date with ``qgis/QGIS-Documentation:master``."
+msgstr ""
+":guilabel:`Fetch and merge` 를 클릭해봅시다. 처리 과정이 끝나면 사용자 분기가 ``qgis/QGIS-"
+"Documentation:master`` 분기의 최신 상태와 일치한다고 표시됩니다."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:149
+msgid ""
+"Click on |githubBranch| in the upper left corner of your forked QGIS-"
+"Documentation repository and enter a unique name in the text field to create"
+" a new `branch <https://docs.github.com/en/pull-requests/collaborating-with-"
+"pull-requests/proposing-changes-to-your-work-with-pull-requests/about-"
+"branches>`_ . The name of the new branch should relate to the problem you "
+"intend to fix. The |githubBranch| button should now say :guilabel:`Branch: "
+"branch_name`"
+msgstr ""
+"작성자의 QGIS 문서 저장소의 좌상단에 있는 |githubBranch| 버튼을 클릭하고 텍스트란에 유일한 이름(unique name)을"
+" 입력해서 새 `분기(branch) <https://docs.github.com/ko/pull-requests/collaborating-"
+"with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-"
+"branches>`_ 를 생성하십시오. 새 분기의 이름은 작성자가 해결하고자 하는 문제점과 관련이 있어야 합니다. 이제 "
+"|githubBranch| 버튼이 :guilabel:`Branch: branch_name` 으로 보일 것입니다."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:154
+msgid "You are ready to start new changes on top of it."
+msgstr "이제 사용자 분기에 새로운 변경 사항을 적용할 준비가 끝났습니다."
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:156
 msgid ""
@@ -448,6 +558,24 @@ msgstr ":guilabel:`Create pull request` 버튼을 클릭하십시오."
 msgid "**If you see** |githubCantMerge|"
 msgstr "|githubCantMerge| **표시가 나타난 경우**"
 
+#: ../../docs/documentation_guidelines/first_contribution.rst:661
+msgid "githubCantMerge"
+msgstr "githubCantMerge"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:244
+msgid ""
+"This means that there are `conflicts <https://docs.github.com/en/pull-"
+"requests/collaborating-with-pull-requests/addressing-merge-conflicts>`_. The"
+" files that you are modifying are not up to date with the branch you are "
+"targeting because someone else has made a commit that conflicts with your "
+"changes. You can still create the pull request but you'll need to fix any "
+":ref:`conflicts <fix_conflicts>` to complete the merge."
+msgstr ""
+"`충돌(conflict) <https://docs.github.com/ko/pull-requests/collaborating-with-"
+"pull-requests/addressing-merge-conflicts>`_ 이 일어났다는 뜻입니다. 다른 누군가가 작성자의 변경 "
+"사항과 충돌을 일으키는 내용을 커밋했기 때문에 작성자가 수정한 파일이 병합시키고자 하는 분기와 버전이 맞지 않는 것이죠. 그래도 PR을 "
+"생성할 수는 있지만 병합을 완료하려면 모든 :ref:`충돌 <fix_conflicts>` 을 해소해줘야 할 것입니다."
+
 #: ../../docs/documentation_guidelines/first_contribution.rst:250
 msgid ""
 "Though being translated, the `latest version "
@@ -494,6 +622,24 @@ msgstr ":guilabel:`Create pull request` 를 클릭하십시오."
 msgid "Review and comment pull request"
 msgstr "PR 검토 및 논평"
 
+#: ../../docs/documentation_guidelines/first_contribution.rst:273
+msgid ""
+"As seen above, anyone can submit modifications to the documentation through "
+"pull requests. Likewise anyone can review pull requests with questions and "
+"`comments <https://docs.github.com/en/pull-requests/collaborating-with-pull-"
+"requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request>`_."
+" Perhaps the writing style doesn't match the project guidelines, the change "
+"is missing some major details or screenshots, or maybe everything looks "
+"great and is in order. Reviewing helps to improve the quality of the "
+"contribution, both in form and substance."
+msgstr ""
+"앞에서 설명한 대로, 누구나 PR을 통해 문서에 수정 사항을 제출할 수 있습니다. 마찬가지로 누구나 PR에 대해 검토하고 질문을 하거나 "
+"`논평 <https://docs.github.com/ko/pull-requests/collaborating-with-pull-"
+"requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request>`_ "
+"할 수 있습니다. 문서 작성 스타일이 프로젝트의 지침과 맞지 않을 수도 있고, 변경 사항에 일부 중요한 세부 내용이나 스크린샷이 누락됐을"
+" 수도 있고, 또는 모든 것이 제대로 되어 있을 수도 있습니다. 검토 및 논평은 형식과 내용 모든 관점에서 기고 내용의 질을 향상시키는 "
+"데 도움이 됩니다."
+
 #: ../../docs/documentation_guidelines/first_contribution.rst:281
 msgid "To review a pull request:"
 msgstr "PR을 검토하려면:"
@@ -525,6 +671,10 @@ msgstr ""
 "|githubFilesChanged| 버튼을 클릭하고 논평하고자 하는 파일을 찾으십시오. 변경 사항을 보려면 "
 ":guilabel:`Display the source diff` 를 클릭해야 할 수도 있습니다."
 
+#: ../../docs/documentation_guidelines/first_contribution.rst:665
+msgid "githubFilesChanged"
+msgstr "githubFilesChanged"
+
 #: ../../docs/documentation_guidelines/first_contribution.rst:292
 msgid ""
 "Scroll to the line you want to comment on and click on the |githubBluePlus|."
@@ -532,6 +682,10 @@ msgid ""
 msgstr ""
 "작성자가 논평을 남기고 싶은 행으로 스크롤한 다음 |githubBluePlus| 아이콘을 클릭하십시오. 작성자가 논평을 남길 수 있는 "
 "텍스트란이 열릴 것입니다."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:657
+msgid "githubBluePlus"
+msgstr "githubBluePlus"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:295
 msgid "Specific line comments can be published either:"
@@ -545,6 +699,29 @@ msgid ""
 msgstr ""
 "단일 논평이라면 :guilabel:`Add single comment` 버튼을 사용하십시오. 그대로 공개될 것입니다. 짧은 논평이거나, "
 "다른 논평에 대한 댓글일 경우에만 이 버튼을 사용하세요."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:300
+msgid ""
+"or as part of a review, pressing the :guilabel:`Start a review` button. Your"
+" comments are not automatically sent after validation, allowing you to edit "
+"or cancel them afterwards, to add a summary of the main points of the review"
+" or global instructions regarding the pull request and whether you approve "
+"it or not. This is the convenient way since it's more flexible and allows "
+"you to structure your review, edit the comments, publish when you are ready "
+"and send a single notification to the repository followers and not one "
+"notification for each comment. Get `more details "
+"<https://docs.github.com/en/pull-requests/collaborating-with-pull-"
+"requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-"
+"pull-request>`_."
+msgstr ""
+"검토의 일부라면, :guilabel:`Start a review` 버튼을 클릭하십시오. 작성자의 논평이 확인(validation) 과정을"
+" 거친 후 자동으로 공개되지 않기 때문에, 버튼을 클릭한 다음에도 논평을 편집하거나 취소하거나 주요 검토 내용 또는 PR에 대한 전반적인"
+" 지침의 개요를 추가하거나 작성자가 해당 PR의 내용을 찬성하는지 반대하는지 밝힐 수도 있습니다. 작성자가 자신의 검토 내용을 더 잘 "
+"구성할 수 있고, 논평을 편집할 수 있고, 스스로 준비됐을 때 공개할 수 있으며 저장소 팔로워들에게 각 논평마다 알림을 보내는 것이 "
+"아니라 단일 알림을 보낼 수 있기 때문에 더 유연하고 편리한 방법입니다. `더 자세한 내용 "
+"<https://docs.github.com/ko/pull-requests/collaborating-with-pull-"
+"requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-"
+"pull-request>`_ 을 참조하세요."
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:313
 msgid "Commenting a line with a change suggestion"
@@ -560,6 +737,10 @@ msgstr ""
 "행 논평에는 PR 작성자가 PR에 적용할 수도 있는 제안을 내장시킬 수 있습니다. 제안을 추가하려면, 논평 텍스트란 위에 있는 "
 "|githubSuggestions| :sup:`Insert a suggestion` 버튼을 클릭하고 제안 블록 안에서 텍스트를 "
 "수정하십시오."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:669
+msgid "githubSuggestions"
+msgstr "githubSuggestions"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:322
 msgid "**Prefer committing suggestions to your pull request as a batch**"
@@ -654,6 +835,10 @@ msgstr ""
 "PR을 변경하려면 작성자의 PR 페이지의 |githubFilesChanged| 탭을 클릭한 다음 수정하고자 하는 파일명 옆에 있는 "
 "|githubEditPencil| 연필 버튼을 클릭하십시오."
 
+#: ../../docs/documentation_guidelines/first_contribution.rst:663
+msgid "githubEditPencil"
+msgstr "githubEditPencil"
+
 #: ../../docs/documentation_guidelines/first_contribution.rst:364
 msgid ""
 "Any additional changes will be automatically added to your pull request if "
@@ -714,6 +899,10 @@ msgid ""
 msgstr ""
 "|deleteSelected| :sup:`Delete this branch` 아이콘을 클릭하면 원하지 않는 모든 분기를 삭제할 수 "
 "있습니다."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:655
+msgid "deleteSelected"
+msgstr ""
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:392
 msgid "Using Git command line tools"
@@ -806,6 +995,17 @@ msgstr "다른 방법으로는 SSH 프로토콜을 사용해서 작성자의 QGI
 #: ../../docs/documentation_guidelines/first_contribution.rst:453
 msgid "**Permission denied (publickey) error?**"
 msgstr "**권한 거부 (퍼블릭키) 오류?**"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:455
+msgid ""
+"If you get a Permission denied (publickey) error with the former command, "
+"there may be a problem with your SSH key. See `GitHub help "
+"<https://docs.github.com/en/authentication/troubleshooting-ssh/error-"
+"permission-denied-publickey>`_ for details."
+msgstr ""
+"앞의 명령어로 권한 거부 (퍼블릭키) 오류가 반환됐다면 작성자의 SSH 키에 문제가 있을 수 있습니다. 자세한 내용은 `깃허브 도움말 "
+"<https://docs.github.com/ko/authentication/troubleshooting-ssh/error-"
+"permission-denied-publickey>`_ 을 참조하십시오."
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:459
 msgid "Check the following if you used the SSH protocol:"
@@ -1005,3 +1205,47 @@ msgid ""
 "merge is possible:"
 msgstr ""
 "PR의 변경 사항이 최근 대상 분기에 푸시된 변경 사항과 충돌을 일으키는 경우, 병합할 수 있으려면 먼저 충돌을 해소해야 합니다:"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:632
+msgid ""
+"if the conflict relates to few competing lines, a :guilabel:`Resolve "
+"conflicts` button is available in the GitHub pull request page. Press the "
+"button and resolve the issue as explained at `Resolving a merge conflict on "
+"GitHub <https://docs.github.com/en/pull-requests/collaborating-with-pull-"
+"requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github>`_"
+msgstr ""
+"서로 경쟁 관계에 있는 몇몇 행에 관련된 충돌인 경우, 깃허브 PR(pull request) 페이지에 있는 "
+":guilabel:`Resolve conflicts` 버튼을 사용할 수 있습니다. 이 버튼을 클릭하면 `깃허브에서 병합 충돌 해결 "
+"<https://docs.github.com/ko/pull-requests/collaborating-with-pull-"
+"requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github>`_ "
+"에서 설명하는 대로 문제점을 해결합니다."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:636
+msgid ""
+"if the conflict involves files renaming or removal, then you'd need to "
+"resolve the conflict using git command lines. Typically, you have to first "
+"rebase your branch over the target branch using ``git rebase targetBranch`` "
+"call and fix the conflicts that are reported. Read more at `Resolving a "
+"merge conflict using the command line <https://docs.github.com/en/pull-"
+"requests/collaborating-with-pull-requests/addressing-merge-"
+"conflicts/resolving-a-merge-conflict-using-the-command-line>`_"
+msgstr ""
+"파일 재명명 또는 제거에 관련된 충돌인 경우, git 명령 줄을 사용해서 충돌을 해소해야 합니다. 일반적으로, 먼저 ``git "
+"rebase targetBranch`` 호출을 이용해서 대상 분기를 사용자 분기 기반으로 새로 설정하고 보고된 충돌을 해결해야 합니다. "
+"`명령줄을 사용하여 병합 충돌 해결 <https://docs.github.com/ko/pull-requests/collaborating-"
+"with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-"
+"using-the-command-line>`_ 에서 더 자세한 내용을 읽어보십시오."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:642
+msgid ""
+"Sometimes, at the end of the proofreading process, you may end up with "
+"changes split into multiple commits that are not necessarily worth it. Git "
+"command lines help you squash these commits to a smaller number and more "
+"meaningful commit messages. Some details at `Using git rebase on the command"
+" line <https://docs.github.com/en/get-started/using-git/using-git-rebase-on-"
+"the-command-line>`_"
+msgstr ""
+"때때로, 퇴고 과정의 끝자락에서 그럴 필요가 없는 데도 커밋 여러 개로 갈라진 변경 사항을 발견할 수도 있습니다. 이런 커밋들을 더 적은"
+" 개수와 더 의미 있는 커밋 메시지로 압축할 수 있는 git 명령 줄 도구가 있습니다. 자세한 내용은 `명령줄에서 깃 다시 지정 사용 "
+"<https://docs.github.com/ko/get-started/using-git/using-git-rebase-on-the-"
+"command-line>`_ 을 확인하세요."
