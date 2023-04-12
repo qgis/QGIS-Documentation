@@ -262,7 +262,7 @@ To create a temporal animation:
          Temporal navigation through a layer
 
    The animation can also be previewed by moving the time slider.
-   Keeping the |refresh| :sup:`Loop` button pressed will repeatedly run the
+   Checking the |unchecked| :guilabel:`Loop` checkbox will repeatedly run the
    animation while clicking |play| stops a running animation.
    A full set of video player buttons is available.
 
