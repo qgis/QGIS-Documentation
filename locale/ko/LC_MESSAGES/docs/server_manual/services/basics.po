@@ -2,54 +2,161 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
+# Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2023
+# Kwon.Yongchan <ruvyn@naver.com>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-12 00:23+0100\n"
-"PO-Revision-Date: 2022-03-14 05:09+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2022\n"
-"Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2023\n"
+"Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/server_manual/services/basics.rst:4
+msgid "Basics"
+msgstr "기본 사항"
+
+#: ../../docs/server_manual/services/basics.rst:6
+msgid ""
+"This section describes concepts and parameters mutually shared by services. "
+"Some of these are standard and defined in OGC specifications while others "
+"are very specific to QGIS Server."
+msgstr ""
+"이 장에서는 서비스들이 암묵적으로 공유하는 개념과 파라미터를 설명합니다. 이들 가운데 일부는 OGC 사양 표준으로 정의되어 있지만 일부는"
+" QGIS 서버에 매우 특화되어 있습니다."
+
+#: ../../docs/server_manual/services/basics.rst:10
+msgid "Standard concepts:"
+msgstr "표준 개념:"
+
+#: ../../docs/server_manual/services/basics.rst:1
+msgid "Concept"
+msgstr "개념"
 
 #: ../../docs/server_manual/services/basics.rst:1
 msgid "Description"
 msgstr "설명"
 
 #: ../../docs/server_manual/services/basics.rst:1
+msgid ":ref:`SERVICE <services_basics_service>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/basics.rst:1
 msgid "Name of the service"
-msgstr "서비스명"
+msgstr "서비스 이름"
+
+#: ../../docs/server_manual/services/basics.rst:1
+msgid ":ref:`REQUEST <services_basics_request>`"
+msgstr ""
 
 #: ../../docs/server_manual/services/basics.rst:1
 msgid "Name of the request"
-msgstr "요청명"
+msgstr "요청 이름"
+
+#: ../../docs/server_manual/services/basics.rst:20
+msgid "Vendor concepts:"
+msgstr "판매자 개념:"
+
+#: ../../docs/server_manual/services/basics.rst:1
+msgid ":ref:`MAP <services_basics_map>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/basics.rst:1
+msgid "QGIS project file"
+msgstr "QGIS 프로젝트 파일"
+
+#: ../../docs/server_manual/services/basics.rst:1
+msgid ":ref:`FILE_NAME <services_basics_file_name>`"
+msgstr ""
 
 #: ../../docs/server_manual/services/basics.rst:1
 msgid "File name of the downloaded file"
 msgstr "다운로드한 파일의 파일명"
 
+#: ../../docs/server_manual/services/basics.rst:1
+msgid ":ref:`Short name <services_basics_short_name>`"
+msgstr ":ref:`단축명 <services_basics_short_name>`"
+
+#: ../../docs/server_manual/services/basics.rst:1
+msgid "Short name definition"
+msgstr "단축명 정의"
+
 #: ../../docs/server_manual/services/basics.rst:34
 msgid "SERVICE"
 msgstr "SERVICE"
+
+#: ../../docs/server_manual/services/basics.rst:36
+msgid ""
+"This standard parameter allows to specify the name of the service to use for"
+" a specific :ref:`request <services_basics_request>` and has to be formed "
+"like ``SERVICE=NAME``."
+msgstr ""
+"이 표준 파라미터를 통해 특정 :ref:`요청 <services_basics_request>` 에 대해 사용할 서비스의 이름을 지정할 수"
+" 있습니다. 파라미터 서식은 ``SERVICE=NAME`` 과 같아야 합니다."
+
+#: ../../docs/server_manual/services/basics.rst:40
+msgid "URL example for the **WMS** service:"
+msgstr "다음은 **WMS** 서비스의 URL 예시입니다:"
+
+#: ../../docs/server_manual/services/basics.rst:50
+#: ../../docs/server_manual/services/basics.rst:73
+#: ../../docs/server_manual/services/basics.rst:120
+msgid ""
+"Not available for REST based services like :ref:`WFS3 (OGC API Features) "
+"<ogc_api_features>`."
+msgstr ""
+":ref:`WFS3 (OGC 피처 API) <ogc_api_features>` 같은 REST 기반 서비스에는 사용할 수 없습니다."
 
 #: ../../docs/server_manual/services/basics.rst:57
 msgid "REQUEST"
 msgstr "REQUEST"
 
+#: ../../docs/server_manual/services/basics.rst:59
+msgid ""
+"This standard parameter allows to specify the name of the request to execute"
+" for a specific :ref:`service <services_basics_service>` and has to be "
+"formed like ``REQUEST=RequestName``."
+msgstr ""
+"이 표준 파라미터를 통해 특정 :ref:`서비스 <services_basics_service>` 에 대해 실행할 요청의 이름을 지정할 수"
+" 있습니다. 파라미터 서식은 ``REQUEST=RequestName`` 과 같아야 합니다."
+
+#: ../../docs/server_manual/services/basics.rst:63
+msgid "URL example for the **GetCapabilities** request:"
+msgstr "다음은 **GetCapabilities** 요청의 URL 예시입니다:"
+
 #: ../../docs/server_manual/services/basics.rst:80
 msgid "MAP"
 msgstr "MAP"
+
+#: ../../docs/server_manual/services/basics.rst:82
+msgid ""
+"This vendor parameter allows to define the QGIS project file to use. It may "
+"be an absolute path or a path relative to the location of the server "
+"executable :file:`qgis_mapserv.fcgi`. ``MAP`` is mandatory by default "
+"because a request needs a QGIS project to actually work. However, the "
+"**QGIS_PROJECT_FILE** environment variable may be used to define a default "
+"QGIS project. In this specific case, ``MAP`` is no longer a required "
+"parameter. For further information you may refer to the "
+":ref:`server_env_variables` chapter."
+msgstr ""
+"이 판매자 파라미터를 통해 사용할 QGIS 프로젝트 파일을 정의할 수 있습니다. 절대 경로로 정의할 수도 있고, 서버의 "
+":file:`qgis_mapserv.fcgi` 실행 파일 위치를 기준으로 하는 상대 경로로 정의할 수도 있습니다. 기본적으로, "
+"``MAP`` 은 필수적으로 정의해야 합니다. 요청이 실제로 작동하려면 QGIS 프로젝트가 필요하기 때문입니다. 하지만 기본 QGIS "
+"프로젝트를 정의하는 데 **QGIS_PROJECT_FILE** 환경 변수가 쓰일 수도 있습니다. 이런 특정한 경우, ``MAP`` 은 더"
+" 이상 필수적인 파라미터가 아닙니다. 더 자세한 정보는 :ref:`server_env_variables` 장을 참조하세요."
 
 #: ../../docs/server_manual/services/basics.rst:90
 msgid "URL example:"
@@ -58,3 +165,65 @@ msgstr "URL 예시:"
 #: ../../docs/server_manual/services/basics.rst:102
 msgid "FILE_NAME"
 msgstr "FILE_NAME"
+
+#: ../../docs/server_manual/services/basics.rst:104
+msgid ""
+"If this vendor parameter is set, the server response will be sent to the "
+"client as a file attachment with the specified file name."
+msgstr "이 판매자 파라미터를 설정하면, 서버 응답을 지정한 파일명을 가진 첨부 파일로 클라이언트에 전송할 것입니다."
+
+#: ../../docs/server_manual/services/basics.rst:107
+msgid "URL example to save an XML **GetCapabilities** document:"
+msgstr "다음은 XML **GetCapabilities** 문서를 저장하는 URL 예시입니다:"
+
+#: ../../docs/server_manual/services/basics.rst:127
+msgid "Short name"
+msgstr "단축명"
+
+#: ../../docs/server_manual/services/basics.rst:129
+msgid ""
+"A number of elements have both a **short name** and a **title**. The short "
+"name is a text string used for machine-to-machine communication while the "
+"title is for the benefit of humans. For example, a dataset might have the "
+"descriptive title *“Maximum Atmospheric Temperature”* and be requested using"
+" the abbreviated short name *“ATMAX”*. You can set title, short name and "
+"abstract for:"
+msgstr ""
+"많은 요소들이 **단축명(short name)** 과 **제목(title)** 을 둘 다 가지고 있습니다. 단축명이란 기계 간 "
+"통신(machine-to-machine communication)에 쓰이는 텍스트 문자열을 말하고, 제목은 사람이 읽을 수 있는 문자열을"
+" 뜻합니다. 예를 들어 어떤 데이터셋이 *“최고 기온(Maximum Atmospheric Temperature)”* 같은 서술적인 제목을"
+" 가지고 있으면서도 데이터셋 요청 시에는 *“ATMAX”* 같은 단축명을 쓸 수도 있습니다. 사용자는 다음 요소에 대해 제목, 단축명, "
+"요약을 설정할 수 있습니다:"
+
+#: ../../docs/server_manual/services/basics.rst:136
+msgid ""
+"**Layers**: right-click on a layer and choose :menuselection:`Properties... "
+"--> QGIS Server --> Description`."
+msgstr ""
+"**레이어**: 레이어를 오른쪽 클릭하고 :menuselection:`Properties... --> QGIS Server --> "
+"Description` 메뉴 항목을 선택하십시오."
+
+#: ../../docs/server_manual/services/basics.rst:139
+msgid ""
+"**Groups**: right-click on a group and select :guilabel:`Set Group WMS data`"
+msgstr "**그룹**: 그룹을 오른쪽 클릭하고 :guilabel:`Set Group WMS data` 메뉴 항목을 선택하십시오."
+
+#: ../../docs/server_manual/services/basics.rst:141
+msgid ""
+"**Project**: go to :menuselection:`Project --> Properties... --> QGIS Server"
+" --> Service Capabilities`."
+msgstr ""
+"**프로젝트**: :menuselection:`Project --> Properties... --> QGIS Server --> "
+"Service Capabilities` 메뉴를 선택하십시오."
+
+#: ../../docs/server_manual/services/basics.rst:151
+msgid "Set group WMS data dialog"
+msgstr "그룹 WMS 데이터 설정 대화창"
+
+#: ../../docs/server_manual/services/basics.rst:154
+msgid ""
+"Thus, the short name may be used to identify these items when interacting "
+"with QGIS Server. For example with the standard ``LAYERS`` parameter:"
+msgstr ""
+"즉 QGIS 서버와 대화형 작업을 할 때 이런 항목들을 식별하기 위해 단축명이 쓰일 수도 있습니다. 다음은 표준 ``LAYERS`` "
+"파라미터를 사용해서 요청할 레이어를 지정하는 URL 예시입니다:"
