@@ -2,30 +2,53 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
+# Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2023
+# Kwon.Yongchan <ruvyn@naver.com>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-21 02:17+0000\n"
-"PO-Revision-Date: 2022-03-14 05:11+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2022\n"
-"Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2023\n"
+"Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/server_manual/services/wcs.rst:2
+msgid "Web Coverage Service (WCS)"
+msgstr "WCS(웹 커버리지 서비스)"
+
+#: ../../docs/server_manual/services/wcs.rst:4
+msgid ""
+"The **1.0.0** and **1.1.1** WCS standards implemented in QGIS Server provide"
+" a HTTP interface to access raster data, referred to as *coverage*, coming "
+"from a QGIS project."
+msgstr ""
+"QGIS 서버에 구현된 WCS **1.0.0** 및 **1.1.1** 표준은 QGIS 프로젝트로부터 나오는 *커버리지(coverage)*"
+" 라고 불리는 래스터 데이터에 접근할 수 있는 HTTP 인터페이스를 제공합니다."
 
 #: ../../docs/server_manual/services/wcs.rst:8
 msgid "Specifications:"
 msgstr "사양:"
+
+#: ../../docs/server_manual/services/wcs.rst:10
+msgid "`WCS 1.0.0 <http://docs.ogc.org/is/16-083r2/16-083r2.html>`_"
+msgstr "`WCS 1.0.0 <http://docs.ogc.org/is/16-083r2/16-083r2.html>`_"
+
+#: ../../docs/server_manual/services/wcs.rst:11
+msgid "`WCS 1.1.1 <http://docs.ogc.org/is/09-146r8/09-146r8.html>`_"
+msgstr "`WCS 1.1.1 <http://docs.ogc.org/is/09-146r8/09-146r8.html>`_"
 
 #: ../../docs/server_manual/services/wcs.rst:13
 msgid "Standard requests provided by QGIS Server:"
@@ -40,12 +63,38 @@ msgid "Description"
 msgstr "설명"
 
 #: ../../docs/server_manual/services/wcs.rst:1
+msgid ":ref:`GetCapabilities <wcs_getcapabilities>`"
+msgstr ":ref:`GetCapabilities <wcs_getcapabilities>`"
+
+#: ../../docs/server_manual/services/wcs.rst:1
 msgid "Returns XML metadata with information about the server"
-msgstr "서버에 대한 정보를 담은 XML 메타데이터를 반환합니다."
+msgstr "서버에 대한 정보를 담은 XML 메타데이터를 반환"
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid ":ref:`DescribeCoverage <wcs_describecoverage>`"
+msgstr ":ref:`DescribeCoverage <wcs_describecoverage>`"
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid "Retrieves XML document about additional information about coverages"
+msgstr "커버리지에 대한 추가 정보를 담은 XML 문서를 검색"
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid ":ref:`GetCoverage <wcs_getcoverage>`"
+msgstr ":ref:`GetCoverage <wcs_getcoverage>`"
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid "Retrieves coverage"
+msgstr "커버리지 검색"
 
 #: ../../docs/server_manual/services/wcs.rst:27
 msgid "GetCapabilities"
 msgstr "GetCapabilities"
+
+#: ../../docs/server_manual/services/wcs.rst:29
+msgid ""
+"Standard parameters for the **GetCapabilities** request according to the OGC"
+" WCS 1.1.1 specifications:"
+msgstr "OGC WCS 1.1.1 사양에 따른 **GetCapabilities** 요청용 표준 파라미터:"
 
 #: ../../docs/server_manual/services/wcs.rst:1
 msgid "Parameter"
@@ -56,8 +105,28 @@ msgid "Required"
 msgstr "필수 여부"
 
 #: ../../docs/server_manual/services/wcs.rst:1
+msgid ":ref:`SERVICE <services_basics_service>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wcs.rst:1
 msgid "Yes"
-msgstr "○"
+msgstr "Ο"
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid "Name of the service (**WCS**)"
+msgstr "서비스(**WCS**)의 이름"
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid ":ref:`REQUEST <services_basics_request>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid "Name of the request (**GetCapabilities**)"
+msgstr "요청(**GetCapabilities**)의 이름"
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid ":ref:`VERSION <wcs_version>`"
+msgstr ":ref:`VERSION <wcs_version>`"
 
 #: ../../docs/server_manual/services/wcs.rst:1
 msgid "No"
@@ -75,23 +144,248 @@ msgid ""
 "parameters:"
 msgstr "표준 파라미터 이외에도, QGIS 서버는 다음과 같은 추가 파라미터를 지원합니다:"
 
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid ":ref:`MAP <services_basics_map>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid "QGIS project file"
+msgstr "QGIS 프로젝트 파일"
+
 #: ../../docs/server_manual/services/wcs.rst:49
 #: ../../docs/server_manual/services/wcs.rst:248
 msgid "URL example:"
 msgstr "URL 예시:"
 
+#: ../../docs/server_manual/services/wcs.rst:58
+msgid ""
+"XML document example when a single raster layer (named "
+"``T20QPD_20171123T144719_TCI``) is published in the QGIS project for the WCS"
+" service:"
+msgstr ""
+"WCS 서비스를 위해 QGIS 프로젝트에서 (``T20QPD_20171123T144719_TCI`` 라는 이름의) 단일 래스터 레이어를 "
+"게시한 경우의 XML 문서 예시:"
+
 #: ../../docs/server_manual/services/wcs.rst:87
 msgid "VERSION"
 msgstr "VERSION"
+
+#: ../../docs/server_manual/services/wcs.rst:89
+msgid ""
+"This parameter allows to specify the version of the service to use. "
+"Currently, the version values is not internally used and always fallback to "
+"``1.1.1``."
+msgstr ""
+"이 파라미터를 통해 사용할 서비스의 버전을 지정할 수 있습니다. 현재 버전 값은 내부적으로 사용되지 않으며 언제나 ``1.1.1`` 로 "
+"돌아올 것입니다."
+
+#: ../../docs/server_manual/services/wcs.rst:96
+msgid "DescribeCoverage"
+msgstr "DescribeCoverage"
+
+#: ../../docs/server_manual/services/wcs.rst:98
+msgid ""
+"This request allows to retrieve additional information about coverages like "
+"the format of the underlying datasource, the number of bands, ... Standard "
+"parameters for the **DescribeCoverage** request according to the OGC WCS "
+"1.1.1 specifications:"
+msgstr ""
+"이 요청을 통해 기저 데이터소스의 포맷, 밴드 개수 등등과 같은 커버리지 관련 추가 정보를 검색할 수 있습니다. OGC WCS 1.1.1"
+" 사양을 따르는 **DescribeCoverage** 요청 용 표준 파라미터는 다음과 같습니다:"
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid "Name of the request (**DescribeCoverage**)"
+msgstr "요청(**DescribeCoverage**)의 이름"
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid ":ref:`COVERAGE <wcs_describecoverage_coverage>`"
+msgstr ":ref:`COVERAGE <wcs_describecoverage_coverage>`"
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid "Specify coverage layers (WCS 1.0.0)"
+msgstr "커버리지 레이어(WCS 1.0.0)를 지정"
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid ":ref:`IDENTIFIER <wcs_describecoverage_identifier>`"
+msgstr ":ref:`IDENTIFIER <wcs_describecoverage_identifier>`"
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid "Specify coverage layers (WCS 1.1.1)"
+msgstr "커버리지 레이어(WCS 1.1.1)를 지정"
+
+#: ../../docs/server_manual/services/wcs.rst:122
+msgid "The XML document for a 3 bands GeoTIFF raster layer looks like:"
+msgstr "밴드 3개를 가진 GeoTIFF 래스터 레이어에 대한 XML 문서의 예시:"
+
+#: ../../docs/server_manual/services/wcs.rst:166
+msgid "COVERAGE"
+msgstr "COVERAGE"
+
+#: ../../docs/server_manual/services/wcs.rst:168
+msgid ""
+"This parameter, defined in WCS ``1.0.0``, allows to specify the layers to "
+"query for additional information. Names have to be separated by a comma."
+msgstr ""
+"WCS ``1.0.0`` 에 정의된 이 파라미터를 통해 추가 정보를 쿼리할 레이어를 지정할 수 있습니다. 레이어명을 쉼표로 구분해야 "
+"합니다."
+
+#: ../../docs/server_manual/services/wcs.rst:171
+msgid ""
+"In addition, QGIS Server introduced an option to select layers by its short "
+"name. The short name of a layer may be configured through "
+":menuselection:`Properties --> Metadata` in layer menu. If the short name is"
+" defined, then it's used by default instead of the layer's name:"
+msgstr ""
+"이에 더해, QGIS 서버는 레이어의 단축명으로 레이어를 선택할 수 있는 옵션을 도입했습니다. 레이어 단축명은 레이어 메뉴에 있는 "
+":menuselection:`Properties --> Metadata` 메뉴 항목을 통해 환경 설정할 수 있습니다. 단축명을 정의한 "
+"경우, 기본적으로 레이어명 대신 단축명을 사용합니다:"
+
+#: ../../docs/server_manual/services/wcs.rst:186
+msgid "``COVERAGE`` is mandatory if ``IDENTIFIER`` is not set."
+msgstr "``IDENTIFIER`` 파라미터를 설정하지 않았다면 반드시 ``COVERAGE`` 파라미터를 설정해야만 합니다."
+
+#: ../../docs/server_manual/services/wcs.rst:192
+msgid "IDENTIFIER"
+msgstr "IDENTIFIER"
+
+#: ../../docs/server_manual/services/wcs.rst:194
+msgid ""
+"This parameter replaces the :ref:`COVERAGE <wcs_describecoverage_coverage>` "
+"parameter in WCS ``1.1.1``. But QGIS Server does not filter according to the"
+" ``VERSION`` parameter so ``IDENTIFIER`` and ``COVERAGE`` have the same "
+"effect."
+msgstr ""
+"WCS ``1.1.1`` 사양에서는 이 파라미터가 :ref:`COVERAGE <wcs_describecoverage_coverage>` "
+"를 대체합니다. 그러나 QGIS 서버는 ``VERSION`` 파라미터에 따라 필터링하지 않기 때문에 ``IDENTIFIER`` 와 "
+"``COVERAGE`` 가 동일한 효과를 보입니다."
+
+#: ../../docs/server_manual/services/wcs.rst:200
+msgid ""
+"``IDENTIFIER`` is mandatory if ``COVERAGE`` is not set. If both "
+"``IDENTIFIER`` and ``COVERAGE`` parameters are defined, ``COVERAGE`` is "
+"always used in priority."
+msgstr ""
+"``COVERAGE`` 파라미터를 설정하지 않았다면 반드시 ``IDENTIFIER`` 파라미터를 설정해야만 합니다. 만약 "
+"``IDENTIFIER`` 및 ``COVERAGE`` 둘 다 정의했다면 항상 ``COVERAGE`` 를 우선해서 사용합니다."
+
+#: ../../docs/server_manual/services/wcs.rst:208
+msgid "GetCoverage"
+msgstr "GetCoverage"
+
+#: ../../docs/server_manual/services/wcs.rst:210
+msgid ""
+"This request allows to retrieve the coverage according to specific "
+"constraints like the extent or the CRS. Standard parameters for the "
+"**DescribeCoverage** request according to the OGC WCS 1.1.1 specifications:"
+msgstr ""
+"이 요청을 통해 범위 또는 좌표계 같은 특정 제약조건을 따르는 커버리지를 검색할 수 있습니다. OGC WCS 1.1.1 사양을 따르는 "
+"**GetCoverage** 요청 용 표준 파라미터는 다음과 같습니다:"
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid "Name of the request (**GetCoverage**)"
+msgstr "요청(**GetCoverage**)의 이름"
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid ":ref:`WIDTH <wcs_getcoverage_width>`"
+msgstr ":ref:`WIDTH <wcs_getcoverage_width>`"
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid "Width of the response in pixels"
+msgstr "응답의 픽셀 단위 너비"
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid ":ref:`HEIGHT <wcs_getcoverage_height>`"
+msgstr ":ref:`HEIGHT <wcs_getcoverage_height>`"
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid "Height of the response in pixels"
+msgstr "응답의 픽셀 단위 높이"
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid ":ref:`BBOX <wcs_getcoverage_bbox>`"
+msgstr ":ref:`BBOX <wcs_getcoverage_bbox>`"
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid "Map extent in CRS units"
+msgstr "좌표계 단위로 된 맵 범위"
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid ":ref:`CRS <wcs_getcoverage_crs>`"
+msgstr ":ref:`CRS <wcs_getcoverage_crs>`"
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid "Coordinate reference system of the extent"
+msgstr "범위의 좌표계"
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid ":ref:`RESPONSE_CRS <wcs_getcoverage_responsecrs>`"
+msgstr ":ref:`RESPONSE_CRS <wcs_getcoverage_responsecrs>`"
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid "Coordinate reference system of the response"
+msgstr "응답의 좌표계"
 
 #: ../../docs/server_manual/services/wcs.rst:242
 msgid "BBOX"
 msgstr "BBOX"
 
+#: ../../docs/server_manual/services/wcs.rst:244
+msgid ""
+"This parameter allows to specify the map extent in the units of the current "
+"CRS. Coordinates have to be separated by a comma. The ``BBOX`` parameter is "
+"formed like ``minx,miny,maxx,maxy``."
+msgstr ""
+"이 파라미터를 통해 맵 범위를 현재 좌표계 단위로 지정할 수 있습니다. 좌표를 쉼표로 구분해야 합니다. ``BBOX`` 파라미터의 서식은"
+" ``minx,miny,maxx,maxy`` 와 같습니다."
+
+#: ../../docs/server_manual/services/wcs.rst:263
+msgid "CRS"
+msgstr "CRS"
+
+#: ../../docs/server_manual/services/wcs.rst:265
+msgid ""
+"This parameter allows to indicate the  Spatial Reference System of the "
+"``BBOX`` parameter and has to be formed like ``EPSG:XXXX``."
+msgstr ""
+"이 파라미터를 통해 ``BBOX`` 파라미터의 공간좌표계를 지정할 수 있습니다. ``EPSG:XXXX`` 와 같은 서식이어야 합니다."
+
+#: ../../docs/server_manual/services/wcs.rst:272
+msgid "RESPONSE_CRS"
+msgstr "RESPONSE_CRS"
+
+#: ../../docs/server_manual/services/wcs.rst:274
+msgid ""
+"This parameter allows to indicate the output response Spatial Reference "
+"System and has to be formed like ``EPSG:XXXX``. The CRS of the corresponding"
+" coverage layer is used by default."
+msgstr ""
+"이 파라미터를 통해 응답 산출물의 공간좌표계를 지정할 수 있습니다. ``EPSG:XXXX`` 와 같은 서식이어야 합니다. 기본적으로 "
+"대응하는 커버리지 레이어의 좌표계를 사용합니다."
+
 #: ../../docs/server_manual/services/wcs.rst:282
 msgid "WIDTH"
 msgstr "WIDTH"
 
+#: ../../docs/server_manual/services/wcs.rst:284
+msgid ""
+"This parameter allows to specify the width in pixels of the output image. "
+"The resolution of the response image depends on this value."
+msgstr "이 파라미터를 통해 산출 이미지의 너비를 픽셀 단위로 지정할 수 있습니다. 응답 이미지의 해상도가 이 값에 따라 달라집니다."
+
 #: ../../docs/server_manual/services/wcs.rst:291
 msgid "HEIGHT"
 msgstr "HEIGHT"
+
+#: ../../docs/server_manual/services/wcs.rst:293
+msgid ""
+"This parameter allows to specify the height in pixels of the output image. "
+"The resolution of the response image depends on this value."
+msgstr "이 파라미터를 통해 산출 이미지의 높이를 픽셀 단위로 지정할 수 있습니다. 응답 이미지의 해상도가 이 값에 따라 달라집니다."
+
+#: ../../docs/server_manual/services/wcs.rst:300
+msgid ""
+"From left to right: ``WIDTH=20&HEIGHT=20``, ``WIDTH=50&HEIGHT=50``, "
+"``WIDTH=100&HEIGHT=100``"
+msgstr ""
+"왼쪽에서 오른쪽 방향으로: ``WIDTH=20&HEIGHT=20``, ``WIDTH=50&HEIGHT=50``, "
+"``WIDTH=100&HEIGHT=100``"
