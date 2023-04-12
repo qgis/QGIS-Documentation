@@ -2,24 +2,26 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# Kwon.Yongchan <ruvyn@naver.com>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-21 02:17+0000\n"
-"PO-Revision-Date: 2022-03-14 05:06+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2022\n"
-"Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2023\n"
+"Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -41,6 +43,14 @@ msgid ""
 "Specifications document according to the version number of the service:"
 msgstr "서비스 버전에 따른 사양 문서:"
 
+#: ../../docs/server_manual/services/wfs.rst:12
+msgid "`WFS 1.0.0 <https://portal.ogc.org/files/?artifact_id=7176>`_"
+msgstr "`WFS 1.0.0 <https://portal.ogc.org/files/?artifact_id=7176>`_"
+
+#: ../../docs/server_manual/services/wfs.rst:13
+msgid "`WFS 1.1.0 <https://portal.ogc.org/files/?artifact_id=8339>`_"
+msgstr "`WFS 1.1.0 <https://portal.ogc.org/files/?artifact_id=8339>`_"
+
 #: ../../docs/server_manual/services/wfs.rst:15
 msgid "Standard requests provided by QGIS Server:"
 msgstr "QGIS 서버가 제공하는 표준 요청:"
@@ -54,16 +64,32 @@ msgid "Description"
 msgstr "설명"
 
 #: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`GetCapabilities <wfs_getcapabilities>`"
+msgstr ":ref:`GetCapabilities <wfs_getcapabilities>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
 msgid "Returns XML metadata with information about the server"
-msgstr "서버에 대한 정보를 담은 XML 메타데이터를 반환합니다."
+msgstr "서버에 대한 정보를 담은 XML 메타데이터를 반환"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`GetFeature <wfs_getfeature>`"
+msgstr ":ref:`GetFeature <wfs_getfeature>`"
 
 #: ../../docs/server_manual/services/wfs.rst:1
 msgid "Returns a selection of features"
 msgstr "피처 집합을 반환"
 
 #: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`DescribeFeatureType <wfs_describefeaturetype>`"
+msgstr ":ref:`DescribeFeatureType <wfs_describefeaturetype>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
 msgid "Returns a description of feature types and properties"
 msgstr "피처 유형 및 속성의 설명을 반환"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`Transaction <wfs_transaction>`"
+msgstr ":ref:`Transaction <wfs_transaction>`"
 
 #: ../../docs/server_manual/services/wfs.rst:1
 msgid "Allows features to be inserted, updated or deleted"
@@ -72,6 +98,12 @@ msgstr "피처를 삽입, 업데이트, 삭제 가능"
 #: ../../docs/server_manual/services/wfs.rst:30
 msgid "GetCapabilities"
 msgstr "GetCapabilities"
+
+#: ../../docs/server_manual/services/wfs.rst:32
+msgid ""
+"Standard parameters for the **GetCapabilities** request according to the OGC"
+" WFS 1.0.0 and 1.1.0 specifications:"
+msgstr "OGC WFS 1.0.0 및 1.1.0 사양에 따른 **GetCapabilities** 요청용 표준 파라미터:"
 
 #: ../../docs/server_manual/services/wfs.rst:1
 msgid "Parameter"
@@ -82,8 +114,28 @@ msgid "Required"
 msgstr "필수 여부"
 
 #: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`SERVICE <services_basics_service>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:1
 msgid "Yes"
-msgstr "○"
+msgstr "Ο"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Name of the service (**WFS**)"
+msgstr "서비스(**WFS**)의 이름"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`REQUEST <services_basics_request>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Name of the request (**GetCapabilities**)"
+msgstr "요청(**GetCapabilities**)의 이름"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`VERSION <wfs_version>`"
+msgstr ":ref:`VERSION <wfs_version>`"
 
 #: ../../docs/server_manual/services/wfs.rst:1
 msgid "No"
@@ -95,12 +147,20 @@ msgstr "서비스의 버전"
 
 #: ../../docs/server_manual/services/wfs.rst:43
 #: ../../docs/server_manual/services/wfs.rst:105
-#: ../../docs/server_manual/services/wfs.rst:536
-#: ../../docs/server_manual/services/wfs.rst:605
+#: ../../docs/server_manual/services/wfs.rst:559
+#: ../../docs/server_manual/services/wfs.rst:628
 msgid ""
 "In addition to the standard ones, QGIS Server supports the following extra "
 "parameters:"
 msgstr "표준 파라미터 이외에도, QGIS 서버는 다음과 같은 추가 파라미터를 지원합니다:"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`MAP <services_basics_map>`"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "QGIS project file"
+msgstr "QGIS 프로젝트 파일"
 
 #: ../../docs/server_manual/services/wfs.rst:57
 msgid "VERSION"
@@ -115,11 +175,11 @@ msgstr ""
 
 #: ../../docs/server_manual/services/wfs.rst:62
 msgid "``1.0.0``"
-msgstr "``1.0.0``"
+msgstr ""
 
 #: ../../docs/server_manual/services/wfs.rst:63
 msgid "``1.1.0``"
-msgstr "``1.1.0``"
+msgstr ""
 
 #: ../../docs/server_manual/services/wfs.rst:65
 msgid ""
@@ -132,14 +192,15 @@ msgstr "요청에서 버전을 지정하지 않을 경우, ``1.1.0`` 을 기본�
 #: ../../docs/server_manual/services/wfs.rst:146
 #: ../../docs/server_manual/services/wfs.rst:201
 #: ../../docs/server_manual/services/wfs.rst:260
-#: ../../docs/server_manual/services/wfs.rst:346
-#: ../../docs/server_manual/services/wfs.rst:368
-#: ../../docs/server_manual/services/wfs.rst:413
-#: ../../docs/server_manual/services/wfs.rst:463
-#: ../../docs/server_manual/services/wfs.rst:487
-#: ../../docs/server_manual/services/wfs.rst:506
-#: ../../docs/server_manual/services/wfs.rst:546
-#: ../../docs/server_manual/services/wfs.rst:626
+#: ../../docs/server_manual/services/wfs.rst:314
+#: ../../docs/server_manual/services/wfs.rst:338
+#: ../../docs/server_manual/services/wfs.rst:390
+#: ../../docs/server_manual/services/wfs.rst:435
+#: ../../docs/server_manual/services/wfs.rst:485
+#: ../../docs/server_manual/services/wfs.rst:509
+#: ../../docs/server_manual/services/wfs.rst:529
+#: ../../docs/server_manual/services/wfs.rst:569
+#: ../../docs/server_manual/services/wfs.rst:649
 msgid "URL example:"
 msgstr "URL 예시:"
 
@@ -154,52 +215,108 @@ msgid ""
 msgstr "OGC WFS 1.0.0 및 1.1.0 사양에 따른 **GetFeature** 요청용 표준 파라미터:"
 
 #: ../../docs/server_manual/services/wfs.rst:1
+msgid "Name of the request (**GetFeature**)"
+msgstr "요청(**GetFeature**)의 이름"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`TYPENAME <wfs_getfeature_typename>`"
+msgstr ":ref:`TYPENAME <wfs_getfeature_typename>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
 msgid "Name of layers"
 msgstr "레이어명"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`FEATUREID <wfs_getfeature_featureid>`"
+msgstr ":ref:`FEATUREID <wfs_getfeature_featureid>`"
 
 #: ../../docs/server_manual/services/wfs.rst:1
 msgid "Filter the features by ids"
 msgstr "피처를 ID로 필터링"
 
 #: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`OUTPUTFORMAT <wfs_getfeature_outputformat>`"
+msgstr ":ref:`OUTPUTFORMAT <wfs_getfeature_outputformat>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
 msgid "Output Format"
 msgstr "출력물 포맷"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`RESULTTYPE <wfs_getfeature_resulttype>`"
+msgstr ":ref:`RESULTTYPE <wfs_getfeature_resulttype>`"
 
 #: ../../docs/server_manual/services/wfs.rst:1
 msgid "Type of the result"
 msgstr "산출물 유형"
 
 #: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`PROPERTYNAME <wfs_getfeature_propertyname>`"
+msgstr ":ref:`PROPERTYNAME <wfs_getfeature_propertyname>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
 msgid "Name of properties to return"
-msgstr "반환할 속성의 명칭"
+msgstr "반환할 속성의 이름"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`MAXFEATURES <wfs_getfeature_maxfeatures>`"
+msgstr ":ref:`MAXFEATURES <wfs_getfeature_maxfeatures>`"
 
 #: ../../docs/server_manual/services/wfs.rst:1
 msgid "Maximum number of features to return"
 msgstr "반환할 피처의 최대 개수"
 
 #: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`SRSNAME <wfs_getfeature_srsname>`"
+msgstr ":ref:`SRSNAME <wfs_getfeature_srsname>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
 msgid "Coordinate reference system"
 msgstr "좌표계"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`FILTER <wfs_getfeature_filter>`"
+msgstr ":ref:`FILTER <wfs_getfeature_filter>`"
 
 #: ../../docs/server_manual/services/wfs.rst:1
 msgid "OGC Filter Encoding"
 msgstr "OGC 필터 인코딩"
 
 #: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`BBOX <wfs_getfeature_bbox>`"
+msgstr ":ref:`BBOX <wfs_getfeature_bbox>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
 msgid "Map Extent"
 msgstr "맵 범위"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`SORTBY <wfs_getfeature_sortby>`"
+msgstr ":ref:`SORTBY <wfs_getfeature_sortby>`"
 
 #: ../../docs/server_manual/services/wfs.rst:1
 msgid "Sort the results"
 msgstr "산출물 정렬"
 
 #: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`STARTINDEX <wfs_getfeature_startindex>`"
+msgstr ":ref:`STARTINDEX <wfs_getfeature_startindex>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
 msgid "Paging"
 msgstr "페이지 번호 붙이기"
 
 #: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`GEOMETRYNAME <wfs_getfeature_geometryname>`"
+msgstr ":ref:`GEOMETRYNAME <wfs_getfeature_geometryname>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
 msgid "Type of geometry to return"
 msgstr "반환할 도형의 유형"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`EXP_FILTER <wfs_getfeature_expfilter>`"
+msgstr ":ref:`EXP_FILTER <wfs_getfeature_expfilter>`"
 
 #: ../../docs/server_manual/services/wfs.rst:1
 msgid "Expression filtering"
@@ -209,17 +326,90 @@ msgstr "표현식 필터링"
 msgid "TYPENAME"
 msgstr "TYPENAME"
 
+#: ../../docs/server_manual/services/wfs.rst:124
+msgid ""
+"This parameter allows to specify layer names and is mandatory if "
+"``FEATUREID`` is not set."
+msgstr ""
+"이 파라미터를 통해 레이어 이름을 지정할 수 있습니다. ``FEATUREID`` 파라미터를 설정하지 않은 경우 반드시 이 파라미터를 "
+"지정해줘야만 합니다."
+
 #: ../../docs/server_manual/services/wfs.rst:141
 msgid "FEATUREID"
 msgstr "FEATUREID"
+
+#: ../../docs/server_manual/services/wfs.rst:143
+msgid ""
+"This parameter allows to specify the ID of a specific feature and is formed "
+"like ``typename.fid,typename.fid,...``."
+msgstr ""
+"이 파라미터를 통해 특정 피처의 ID를 지정할 수 있습니다. 파라미터 서식은 ``typename.fid,typename.fid,...``"
+" 와 같습니다."
+
+#: ../../docs/server_manual/services/wfs.rst:156
+msgid "XML response:"
+msgstr "XML 응답 예시:"
 
 #: ../../docs/server_manual/services/wfs.rst:180
 msgid "OUTPUTFORMAT"
 msgstr "OUTPUTFORMAT"
 
+#: ../../docs/server_manual/services/wfs.rst:183
+msgid ""
+"This parameter may be used to specify the format of the response. If "
+"``VERSION`` is greater or equal than ``1.1.0``, GML3 is the default format. "
+"Otherwise GML2 is used."
+msgstr ""
+"이 파라미터를 통해 응답 포맷을 설정할 수도 있습니다. ``VERSION`` 이 ``1.1.0`` 이상인 경우, 기본 포맷은 "
+"GML3입니다. 그렇지 않다면 GML2를 사용합니다."
+
+#: ../../docs/server_manual/services/wfs.rst:187
+msgid "Available values are:"
+msgstr "다음과 같은 값으로 설정할 수 있습니다:"
+
+#: ../../docs/server_manual/services/wfs.rst:189
+msgid "``gml2``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:190
+msgid "``text/xml; subtype=gml/2.1.2``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:191
+msgid "``gml3``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:192
+msgid "``text/xml; subtype=gml/3.1.1``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:193
+msgid "``geojson``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:194
+msgid "``application/vnd.geo+json``,"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:195
+msgid "``application/vnd.geo json``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:196
+msgid "``application/geo+json``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:197
+msgid "``application/geo json``"
+msgstr ""
+
 #: ../../docs/server_manual/services/wfs.rst:198
 msgid "``application/json``"
-msgstr "``application/json``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:212
+msgid "GeoJSON response:"
+msgstr "GeoJSON 응답 예시:"
 
 #: ../../docs/server_manual/services/wfs.rst:252
 msgid "RESULTTYPE"
@@ -243,62 +433,301 @@ msgstr "``hits``: 피처 개수만 반환"
 msgid "PROPERTYNAME"
 msgstr "PROPERTYNAME"
 
+#: ../../docs/server_manual/services/wfs.rst:277
+msgid ""
+"This parameter may be used to specify a specific property to return. A "
+"property needs to be mapped with a ``TYPENAME`` or a ``FEATUREID``:"
+msgstr ""
+"이 파라미터를 통해 반환할 특정 속성을 지정할 수도 있습니다. 이때 속성을 ``TYPENAME`` 또는 ``FEATUREID`` 와 "
+"매핑시켜줘야 합니다:"
+
+#: ../../docs/server_manual/services/wfs.rst:280
+msgid "Valid URL example:"
+msgstr "무결한 URL의 예시:"
+
+#: ../../docs/server_manual/services/wfs.rst:290
+msgid "On the contrary, the next URL will return an exception:"
+msgstr "이와는 반대로, 다음 URL은 예외를 반환할 것입니다:"
+
 #: ../../docs/server_manual/services/wfs.rst:310
 msgid "MAXFEATURES"
 msgstr "MAXFEATURES"
 
-#: ../../docs/server_manual/services/wfs.rst:323
+#: ../../docs/server_manual/services/wfs.rst:312
+msgid ""
+"This parameter allows to limit the number of features returned by the "
+"request."
+msgstr "이 파라미터를 통해 요청이 반환하는 피처 개수를 제한할 수 있습니다."
+
+#: ../../docs/server_manual/services/wfs.rst:326
+msgid ""
+"This parameter may be useful to improve performances when underlying vector "
+"layers are heavy."
+msgstr "기저 벡터 레이어가 대용량인 경우 성능을 향상시키는 데 이 파라미터가 유용할 수도 있습니다."
+
+#: ../../docs/server_manual/services/wfs.rst:333
 msgid "SRSNAME"
 msgstr "SRSNAME"
 
-#: ../../docs/server_manual/services/wfs.rst:340
+#: ../../docs/server_manual/services/wfs.rst:335
+msgid ""
+"This parameter allows to indicate the response output Spatial Reference "
+"System as well as the ``BBOX`` CRS and has to be formed like ``EPSG:XXXX``."
+msgstr ""
+"이 파라미터를 통해 응답 산출물의 공간좌표계는 물론 ``BBOX`` 좌표계를 지정할 수 있습니다. ``EPSG:XXXX`` 와 같은 "
+"서식이어야 합니다."
+
+#: ../../docs/server_manual/services/wfs.rst:352
 msgid "FILTER"
 msgstr "FILTER"
 
-#: ../../docs/server_manual/services/wfs.rst:360
+#: ../../docs/server_manual/services/wfs.rst:354
+msgid ""
+"This parameter allows to filter the response with the **Filter Encoding** "
+"language defined by the `OGC Filter Encoding standard "
+"<https://www.ogc.org/standards/filter>`_. For example:"
+msgstr ""
+"이 파라미터를 통해 `OGC 필터 인코딩 표준 <https://www.ogc.org/standards/filter>`_ 이 정의하는 "
+"**필터 인코딩(Filter Encoding)** 으로 응답을 필터링할 수 있습니다. 다음은 그 예시입니다:"
+
+#: ../../docs/server_manual/services/wfs.rst:368
+msgid ""
+"In case of multiple typenames, filters have to be enclosed in parentheses:"
+msgstr "``TYPENAME`` 이 여러 개인 경우, 필터를 다음과 같이 괄호로 묶어줘야 합니다:"
+
+#: ../../docs/server_manual/services/wfs.rst:382
 msgid "BBOX"
 msgstr "BBOX"
 
-#: ../../docs/server_manual/services/wfs.rst:362
+#: ../../docs/server_manual/services/wfs.rst:384
 msgid ""
 "This parameter allows to specify the map extent with units according to the "
 "current CRS. Coordinates have to be separated by a comma."
 msgstr "이 파라미터는 맵 범위를 현재 좌표계의 단위로 지정할 수 있습니다. 좌표를 쉼표로 구분해야 합니다."
 
-#: ../../docs/server_manual/services/wfs.rst:392
+#: ../../docs/server_manual/services/wfs.rst:387
+msgid ""
+"The ``SRSNAME`` parameter may specify the CRS of the extent. If not "
+"specified, the CRS of the layer is used."
+msgstr ""
+"``SRSNAME`` 파라미터로 범위의 좌표계를 지정할 수도 있습니다. 좌표계를 지정하지 않을 경우, 레이어 좌표계를 사용합니다."
+
+#: ../../docs/server_manual/services/wfs.rst:401
+msgid ""
+"The ``FEATUREID`` parameter cannot be used with the ``BBOX``. Any attempt "
+"will result in an exception:"
+msgstr ""
+"``BBOX`` 파라미터는 ``FEATUREID`` 파라미터와 함께 사용할 수 없습니다. 어떻게 시도하더라도 예외가 발생할 것입니다:"
+
+#: ../../docs/server_manual/services/wfs.rst:414
 msgid "SORTBY"
 msgstr "SORTBY"
 
-#: ../../docs/server_manual/services/wfs.rst:454
+#: ../../docs/server_manual/services/wfs.rst:416
+msgid ""
+"This parameter allows to sort resulting features according to property "
+"values and has to be formed like ``propertyname SORTRULE``."
+msgstr ""
+"이 파라미터를 통해 반환 피처를 속성값에 따라 정렬할 수 있습니다. ``propertyname SORTRULE`` 과 같은 서식이어야 "
+"합니다."
+
+#: ../../docs/server_manual/services/wfs.rst:419
+msgid "Available values for ``SORTRULE`` in case of descending sorting:"
+msgstr "내림차순으로 정렬하는 경우 ``SORTRULE`` 에 다음과 같은 값을 설정할 수 있습니다:"
+
+#: ../../docs/server_manual/services/wfs.rst:421
+msgid "``D``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:422
+msgid "``+D``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:423
+msgid "``DESC``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:424
+msgid "``+DESC``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:427
+msgid "Available values for ``SORTRULE`` in case of ascending sorting:"
+msgstr "오름차순으로 정렬하는 경우 ``SORTRULE`` 에 다음과 같은 값을 설정할 수 있습니다:"
+
+#: ../../docs/server_manual/services/wfs.rst:429
+msgid "``A``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:430
+msgid "``+A``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:431
+msgid "``ASC``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:432
+msgid "``+ASC``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:447
+msgid "The corresponding result:"
+msgstr "다음은 이 예시에 대응하는 결과물입니다:"
+
+#: ../../docs/server_manual/services/wfs.rst:476
 msgid "GEOMETRYNAME"
 msgstr "GEOMETRYNAME"
 
-#: ../../docs/server_manual/services/wfs.rst:456
+#: ../../docs/server_manual/services/wfs.rst:478
 msgid ""
 "This parameter can be used to specify the kind of geometry to return for "
 "features. Available values are:"
 msgstr "이 파라미터는 피처에 대해 반환할 도형의 종류를 지정할 수 있습니다. 사용할 수 있는 값은 다음과 같습니다:"
 
-#: ../../docs/server_manual/services/wfs.rst:459
+#: ../../docs/server_manual/services/wfs.rst:481
 msgid "``extent``"
-msgstr "``extent``"
+msgstr ""
 
-#: ../../docs/server_manual/services/wfs.rst:460
+#: ../../docs/server_manual/services/wfs.rst:482
 msgid "``centroid``"
-msgstr "``centroid``"
+msgstr ""
 
-#: ../../docs/server_manual/services/wfs.rst:478
+#: ../../docs/server_manual/services/wfs.rst:483
+msgid "``none``"
+msgstr ""
+
+#: ../../docs/server_manual/services/wfs.rst:500
 msgid "STARTINDEX"
 msgstr "STARTINDEX"
 
 #: ../../docs/server_manual/services/wfs.rst:502
+msgid ""
+"This parameter is standard in WFS 2.0, but it's an extension for WFS 1.0.0."
+msgstr "WFS 2.0 버전에서는 이 파라미터가 표준이지만, WFS 1.0.0 버전에서는 확장 사양입니다."
+
+#: ../../docs/server_manual/services/wfs.rst:505
+msgid ""
+"Actually, it can be used to skip some features in the result set and in "
+"combination with ``MAXFEATURES``, it provides the ability to page through "
+"results."
+msgstr ""
+"실제로 이 파라미터를 통해 결과물 집합에서 몇몇 피처를 건너뛸 수 있으며, ``MAXFEATURES`` 파라미터와 함께 사용하면 결과물을"
+" 페이지 단위로 볼 수도 있습니다."
+
+#: ../../docs/server_manual/services/wfs.rst:524
 msgid "EXP_FILTER"
 msgstr "EXP_FILTER"
 
-#: ../../docs/server_manual/services/wfs.rst:520
+#: ../../docs/server_manual/services/wfs.rst:526
+msgid ""
+"This parameter allows to filter the response with QGIS expressions. The "
+"``;`` character is used to separate filters in case of multiple typenames."
+msgstr ""
+"이 파라미터를 통해 응답을 QGIS 표현식으로 필터링할 수 있습니다. ``TYPENAME`` 이 여러 개인 경우 ``;`` 문자를 "
+"이용해서 필터를 구분합니다."
+
+#: ../../docs/server_manual/services/wfs.rst:543
 msgid "DescribeFeatureType"
 msgstr "DescribeFeatureType"
 
-#: ../../docs/server_manual/services/wfs.rst:580
+#: ../../docs/server_manual/services/wfs.rst:545
+msgid ""
+"Standard parameters for the **DescribeFeatureType** request according to the"
+" OGC WFS 1.0.0 and 1.1.0 specifications:"
+msgstr "OGC WFS 1.0.0 및 1.1.0 사양에 따른 **DescribeFeatureType** 요청용 표준 파라미터:"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Name of the request (**DescribeFeatureType**)"
+msgstr "요청(**DescribeFeatureType**)의 이름"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Format of the response"
+msgstr "응답 포맷"
+
+#: ../../docs/server_manual/services/wfs.rst:579
+msgid "Output response:"
+msgstr "산출물 응답 예시:"
+
+#: ../../docs/server_manual/services/wfs.rst:603
 msgid "Transaction"
 msgstr "Transaction"
+
+#: ../../docs/server_manual/services/wfs.rst:605
+msgid ""
+"This request allows to update, delete or add one or several features thanks "
+"to a XML document. The :ref:`delete <wfs_transaction_delete>` action may be "
+"achieved with a POST request as well as with the :ref:`OPERATION "
+"<wfs_transaction_operation>` parameter while the :ref:`add "
+"<wfs_transaction_add>` and the :ref:`update <wfs_transaction_update>` "
+"operations may be achieved through POST request only."
+msgstr ""
+"이 요청은 XML 문서를 이용해서 하나 이상의 피처를 업데이트, 삭제, 또는 추가할 수 있습니다. :ref:`삭제 "
+"<wfs_transaction_delete>` 작업은 POST 요청은 물론 :ref:`OPERATION "
+"<wfs_transaction_operation>` 파라미터로 달성할 수도 있지만, :ref:`추가 "
+"<wfs_transaction_add>` 및 :ref:`업데이트 <wfs_transaction_update>` 작업은 POST 요청을 "
+"통해서만 달성할 수 있습니다."
+
+#: ../../docs/server_manual/services/wfs.rst:613
+msgid ""
+"Standard parameters for the **Transaction** request according to the OGC WFS"
+" 1.0.0 and 1.1.0 specifications:"
+msgstr "OGC WFS 1.0.0 및 1.1.0 사양에 따른 **Transaction** 요청용 표준 파라미터:"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Name of the request (**Transaction**)"
+msgstr "요청(**Transaction**)의 이름"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`OPERATION <wfs_transaction_operation>`"
+msgstr ":ref:`OPERATION <wfs_transaction_operation>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Specify the operation"
+msgstr "작업을 지정"
+
+#: ../../docs/server_manual/services/wfs.rst:644
+msgid "OPERATION"
+msgstr "OPERATION"
+
+#: ../../docs/server_manual/services/wfs.rst:646
+msgid ""
+"This parameter allows to delete a feature without using a POST request with "
+"a dedicated XML document."
+msgstr "이 파라미터는 POST 요청을 이용하지 않고 전용 XML 문서를 통해 피처를 삭제할 수 있습니다."
+
+#: ../../docs/server_manual/services/wfs.rst:662
+msgid ""
+"``FEATUREID``, ``BBOX`` and ``FILTER`` parameters are mutually exclusive and"
+" prioritized in this order."
+msgstr "``FEATUREID``, ``BBOX``, 그리고 ``FILTER`` 파라미터는 상호 배타적이며 이 순서대로 우선합니다."
+
+#: ../../docs/server_manual/services/wfs.rst:668
+msgid "Add features"
+msgstr "피처 추가"
+
+#: ../../docs/server_manual/services/wfs.rst:670
+#: ../../docs/server_manual/services/wfs.rst:702
+#: ../../docs/server_manual/services/wfs.rst:732
+msgid "POST request example:"
+msgstr "POST 요청의 예시:"
+
+#: ../../docs/server_manual/services/wfs.rst:677
+msgid "with the *add.xml* document:"
+msgstr "*add.xml* 문서의 예시:"
+
+#: ../../docs/server_manual/services/wfs.rst:700
+msgid "Update features"
+msgstr "피처 업데이트"
+
+#: ../../docs/server_manual/services/wfs.rst:709
+msgid "with the *update.xml* document:"
+msgstr "*update.xml* 문서의 예시:"
+
+#: ../../docs/server_manual/services/wfs.rst:730
+msgid "Delete features"
+msgstr "피처 삭제"
+
+#: ../../docs/server_manual/services/wfs.rst:739
+msgid "with the *delete.xml* document:"
+msgstr "*delete.xml* 문서의 예시:"
