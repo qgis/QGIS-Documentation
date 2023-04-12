@@ -760,7 +760,7 @@ Returns a copy of the geometry with the x and y coordinates swapped. Useful for 
      - * **geometry** - a geometry
    * - Examples
      - * ``geom_to_wkt(flip_coordinates(make_point(1, 2)))`` → 'Point (2 1)'
-       * ``geom_to_wkt(flip_coordinates(geom_from_wkt('LineString(0 2, 1 0, 1 6)')))))`` → 'LineString (2 0, 0 1, 6 1)'
+       * ``geom_to_wkt(flip_coordinates(geom_from_wkt('LineString(0 2, 1 0, 1 6)')))`` → 'LineString (2 0, 0 1, 6 1)'
 
 
 .. end_flip_coordinates_section
@@ -780,7 +780,7 @@ Forces a geometry to respect the convention where exterior rings are counter-clo
    * - Arguments
      - * **geometry** - a geometry. Any non-polygon geometries are returned unchanged.
    * - Examples
-     - * ``geom_to_wkt(force_polygon_ccw(geometry:=geom_from_wkt('Polygon ((-1 -1, 0 2, 4 2, 4 0, -1 -1)))')))`` → 'Polygon ((-1 -1, 4 0, 4 2, 0 2, -1 -1))'
+     - * ``geom_to_wkt(force_polygon_ccw(geometry:=geom_from_wkt('Polygon ((-1 -1, 0 2, 4 2, 4 0, -1 -1))')))`` → 'Polygon ((-1 -1, 4 0, 4 2, 0 2, -1 -1))'
 
 
 .. end_force_polygon_ccw_section
@@ -2471,7 +2471,7 @@ Calculates the approximate pole of inaccessibility for a surface, which is the m
      - * **geometry** - a geometry
        * **tolerance** - maximum distance between the returned point and the true pole location
    * - Examples
-     - * ``geom_to_wkt(pole_of_inaccessibility( geom_from_wkt('POLYGON((0 1, 0 9, 3 10, 3 3, 10 3, 10 1, 0 1))'), 0.1))'`` → 'Point(1.546875 2.546875)'
+     - * ``geom_to_wkt(pole_of_inaccessibility( geom_from_wkt('POLYGON((0 1, 0 9, 3 10, 3 3, 10 3, 10 1, 0 1))'), 0.1))`` → 'Point(1.546875 2.546875)'
 
 
 .. end_pole_of_inaccessibility_section
