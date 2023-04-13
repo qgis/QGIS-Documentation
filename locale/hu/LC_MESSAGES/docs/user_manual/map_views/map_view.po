@@ -1,0 +1,3192 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# Báthory Péter <bathory86p@gmail.com>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-13 12:32+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Báthory Péter <bathory86p@gmail.com>, 2023\n"
+"Language-Team: Hungarian (https://app.transifex.com/qgis/teams/6144/hu/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: hu\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/user_manual/map_views/map_view.rst:6
+msgid "2D Map View"
+msgstr "2D térképnézet"
+
+#: ../../docs/user_manual/map_views/map_view.rst:14
+msgid ""
+"The 2D map view (also called **Map canvas**) is the central place where maps"
+" are displayed. QGIS opens by default with a single map view (called ``main "
+"map``), showing layers in 2D, and tightly bound to the :guilabel:`Layers` "
+"panel. That window reflects the rendering (symbology, labeling, "
+"visibilities...) you applied to the loaded layers."
+msgstr ""
+"A 2D térképnézet (más néven **térképvászon**) a térképek megjelenítésének "
+"elsődleges helye. A QGIS alapértelmezés szerint egyetlen térképnézetet (a "
+"``fő térkép``) nyit meg, amely 2D-ben mutatja a rétegeket, és szorosan a "
+":guilabel:`Rétegek` panelhez van kötve. Ez az ablak a betöltött rétegekre "
+"alkalmazott megjelenítést tükrözi (jelrendszer, címkézés, láthatóságok…)."
+
+#: ../../docs/user_manual/map_views/map_view.rst:26
+msgid "QGIS GUI"
+msgstr "A QGIS felülete"
+
+#: ../../docs/user_manual/map_views/map_view.rst:33
+msgid "Exploring the map view"
+msgstr "A térképnézet áttekintése"
+
+#: ../../docs/user_manual/map_views/map_view.rst:35
+msgid ""
+"When you add a layer (see e.g. :ref:`opening_data`), QGIS automatically "
+"looks for its CRS. If a different CRS is set by default for the project (see"
+" :ref:`project_crs`) then the layer extent is \"on-the-fly\" translated to "
+"that CRS, and the map view is zoomed to that extent if you start with a "
+"blank QGIS project. If there are already layers in the project, no map "
+"canvas resize is performed, so only features falling within the current map "
+"canvas extent will be visible."
+msgstr ""
+"Amikor a térképhez ad egy réteget (lásd :ref:`opening_data`), a QGIS "
+"automatikusan megkeresi a hozzá való koordináta-rendszert. Ha projekt "
+"koordináta-rendszere (lásd :ref:`project_crs`) ettől eltér, a réteg "
+"terjedelmét automatikusan átszámolja ebbe a koordináta-rendszerbe. Ha üres "
+"QGIS projekttel indít, a térképnézet automatikusan ráközelít a hozzáadott "
+"rétegre. Ha már vannak rétegek a projektben, akkor a térképvászon nem lesz "
+"elmozdítva, így csak az aktuális térképvászon terjedelmébe eső elemek "
+"lesznek láthatók."
+
+#: ../../docs/user_manual/map_views/map_view.rst:44
+msgid ""
+"Click on the map view and you should be able to interact with it, panning or"
+" zooming to different areas of the map. Dedicated tools are provided in the "
+":guilabel:`Navigation Toolbar` and in the :menuselection:`View` menu, with "
+"handful shortcuts from the keyboard or the mouse buttons."
+msgstr ""
+"Kattintson a térképnézetre, és máris elkezdheti vezérelni, pásztázva vagy "
+"nagyítva a térkép különböző területeire. A dedikált eszközöket a "
+":guilabel:`Navigációs eszköztár` és a :menuselection:`Nézet` menü "
+"biztosítja, kiegészítve a billentyűzetről vagy az egérgombokról elérhető "
+"hasznos gyorsbillentyűkkel."
+
+#: ../../docs/user_manual/map_views/map_view.rst:51
+msgid "Map canvas navigation tools"
+msgstr "A térképvászon navigációs eszközei"
+
+#: ../../docs/user_manual/map_views/map_view.rst:56
+#: ../../docs/user_manual/map_views/map_view.rst:751
+msgid "Tool"
+msgstr "Eszköz"
+
+#: ../../docs/user_manual/map_views/map_view.rst:57
+#: ../../docs/user_manual/map_views/map_view.rst:751
+msgid "Usage"
+msgstr "Használat"
+
+#: ../../docs/user_manual/map_views/map_view.rst:58
+msgid "|pan| :sup:`Pan Map`"
+msgstr "|pan| :sup:`Térkép eltolása`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1325
+msgid "pan"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:59
+msgid ""
+"Single left click: the map is centered on the clicked point, at the same "
+"scale"
+msgstr ""
+"Szimpla kattintás bal gombbal: a térkép a kattintott pontra lesz "
+"központosítva, a méretarány nem változik"
+
+#: ../../docs/user_manual/map_views/map_view.rst:60
+msgid "Hold down the left mouse button and drag the map canvas."
+msgstr "Tartsa lenyomva a bal egérgombot, és húzza a térképvásznat."
+
+#: ../../docs/user_manual/map_views/map_view.rst:62
+msgid "|zoomIn| :sup:`Zoom In`"
+msgstr "|zoomIn| :sup:`Nagyítás`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1384
+msgid "zoomIn"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:63
+msgid ""
+"Single left click: the map is centered on the clicked point, while the scale"
+" gets doubled"
+msgstr ""
+"Szimpla kattintás bal gombbal: a térkép a kattintott pontra lesz "
+"központosítva, a méretarány pedig megduplázva"
+
+#: ../../docs/user_manual/map_views/map_view.rst:65
+msgid ""
+"Drag a rectangle on the map canvas with the left mouse button to zoom in to "
+"an area."
+msgstr ""
+"A bal egérgombbal egy téglalapot húzva a térképvásznon ránagyít a területre."
+
+#: ../../docs/user_manual/map_views/map_view.rst:67
+msgid ""
+"Hold the :kbd:`Alt` key to switch to the |zoomOut| :sup:`Zoom Out` tool."
+msgstr ""
+"Az :kbd:`Alt` billentyűt nyomva tartva átvált a |zoomOut| :sup:`Kicsinyítés`"
+" eszközre."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1390
+msgid "zoomOut"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:69
+msgid "|zoomOut| :sup:`Zoom Out`"
+msgstr "|zoomOut| :sup:`Kicsinyítés`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:70
+msgid ""
+"Single left click: the map is centered on the clicked point, while the scale"
+" gets halved"
+msgstr ""
+"Szimpla kattintás bal gombbal: a térkép a kattintott pontra lesz "
+"központosítva, a méretarány pedig megfelezve"
+
+#: ../../docs/user_manual/map_views/map_view.rst:72
+msgid ""
+"Drag a rectangle on the map canvas with the left mouse button to zoom out "
+"from an area."
+msgstr ""
+"A bal egérgombbal egy téglalapot húzva a térképvásznon eltávolít a "
+"területről."
+
+#: ../../docs/user_manual/map_views/map_view.rst:74
+msgid "Hold the :kbd:`Alt` key to switch to the |zoomIn| :sup:`Zoom In` tool."
+msgstr ""
+"Az :kbd:`Alt` billentyűt nyomva tartva átvált a |zoomIn| :sup:`Nagyítás` "
+"eszközre."
+
+#: ../../docs/user_manual/map_views/map_view.rst:76
+msgid "|panToSelected| :sup:`Pan Map to Selection`"
+msgstr "|panToSelected| :sup:`Térkép mozgatása a kiválasztott elemekhez`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1327
+msgid "panToSelected"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:77
+msgid ""
+"Pan the map to the selected features of all the selected layers in the "
+":guilabel:`Layers` panel."
+msgstr ""
+"Térkép eltolása a :guilabel:`Rétegek` panelen kijelölt rétegek összes "
+"kiválasztott elemére."
+
+#: ../../docs/user_manual/map_views/map_view.rst:79
+msgid "|zoomToSelected| :sup:`Zoom To Selection`"
+msgstr "|zoomToSelected| :sup:`Nagyítás a kiválasztott elemekre`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1396
+msgid "zoomToSelected"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:80
+msgid ""
+"Zoom to the selected features of all the selected layers in the "
+":guilabel:`Layers` panel."
+msgstr ""
+"Nagyítás a :guilabel:`Rétegek` panelen kijelölt rétegek összes kiválasztott "
+"elemére."
+
+#: ../../docs/user_manual/map_views/map_view.rst:83
+#: ../../docs/user_manual/map_views/map_view.rst:88
+#: ../../docs/user_manual/map_views/map_view.rst:100
+msgid "*Also available in the layer contextual menu*"
+msgstr "*A rétegek helyi menüjéből is elérhető*"
+
+#: ../../docs/user_manual/map_views/map_view.rst:84
+msgid "|zoomToLayer| :sup:`Zoom To Layer(s)`"
+msgstr "|zoomToLayer| :sup:`Nagyítás a réteg(ek)re`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1394
+msgid "zoomToLayer"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:85
+msgid ""
+"Zoom to the extent of all the selected layers in the :guilabel:`Layers` "
+"panel."
+msgstr "Nagyítás a :guilabel:`Rétegek` panelen kijelölt összes rétegre."
+
+#: ../../docs/user_manual/map_views/map_view.rst:89
+msgid "|zoomFullExtent| :sup:`Zoom Full`"
+msgstr "|zoomFullExtent| :sup:`Teljes nagyítás`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1382
+msgid "zoomFullExtent"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:90
+msgid ""
+"Zoom to the extent of all the layers in the project or to the :ref:`project "
+"full extent <project_full_extent>`."
+msgstr ""
+"Nagyítás a projekt összes rétegének terjedelmére vagy a :ref:`projekt teljes"
+" terjedelmére <project_full_extent>`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:92
+msgid "|zoomLast| :sup:`Zoom Last`"
+msgstr "|zoomLast| :sup:`Előző nagyítás`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1386
+msgid "zoomLast"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:93
+msgid "Zoom the map to the previous extent in history."
+msgstr "Ránagyítja a térképet az előzményekből az előző terjedelemre."
+
+#: ../../docs/user_manual/map_views/map_view.rst:94
+msgid "|zoomNext| :sup:`Zoom Next`"
+msgstr "|zoomNext| :sup:`Következő nagyítás`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1388
+msgid "zoomNext"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:95
+msgid "Zoom the map to the next extent in history."
+msgstr "Ránagyítja a térképet az előzményekből a következő terjedelemre."
+
+#: ../../docs/user_manual/map_views/map_view.rst:96
+msgid "|zoomActual| :sup:`Zoom to Native Resolution`"
+msgstr "|zoomActual| :sup:`Nagyítás az eredeti felbontásra`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1380
+msgid "zoomActual"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:97
+msgid ""
+"Zoom the map to a level where one pixel of the active raster layer covers "
+"one screen pixel."
+msgstr ""
+"A térkép nagyítását olyan szintre állítja, hogy az aktív raszterréteg egy "
+"képpontja megegyezzen a képernyő egy képpontjának méretével."
+
+#: ../../docs/user_manual/map_views/map_view.rst:101
+msgid "Mouse wheel"
+msgstr "Egérgörgő"
+
+#: ../../docs/user_manual/map_views/map_view.rst:102
+msgid "Pan map: Hold and drag the mouse wheel."
+msgstr "Térkép mozgatása: Nyomja le a görgőt és húzza el az egeret."
+
+#: ../../docs/user_manual/map_views/map_view.rst:103
+msgid ""
+"Zoom: Roll the mouse wheel to zoom in or zoom out. With :kbd:`Ctrl` key "
+"pressed while rolling the mouse wheel results in a finer zoom."
+msgstr ""
+"Nagyítás: Az egérgörgő segítségével nagyíthat vagy kicsinyíthet. Görgetés "
+"közben lenyomva tartott :kbd:`Ctrl` billentyűvel finomabb nagyítás érhető "
+"el."
+
+#: ../../docs/user_manual/map_views/map_view.rst:106
+msgid ""
+"Press the back or forward button to browse the map canvas zoom history."
+msgstr ""
+"Nyomja meg a vissza vagy előre gombot a térképvászon nagyítási előzményeiben"
+" való navigáláshoz."
+
+#: ../../docs/user_manual/map_views/map_view.rst:107
+msgid "Keyboard"
+msgstr "Billentyűzet"
+
+#: ../../docs/user_manual/map_views/map_view.rst:108
+msgid ""
+"Pan map: Hold down the :kbd:`Space` key and move the mouse. Press the arrow "
+"keys to pan up, down, left and right."
+msgstr ""
+"Térkép mozgatása: A :kbd:`Space` billentyűt nyomva tartva mozgassa az "
+"egeret. Az irány nyilakkal mozgathatja a térképet fel, le, balra és jobbra."
+
+#: ../../docs/user_manual/map_views/map_view.rst:110
+msgid "Zoom in: Press :kbd:`PgUp` or :kbd:`Ctrl++`"
+msgstr "Nagyítás: :kbd:`PgUp` vagy :kbd:`Ctrl++` billentyűvel"
+
+#: ../../docs/user_manual/map_views/map_view.rst:111
+msgid "Zoom out: Press :kbd:`PgDown` or :kbd:`Ctrl+-`"
+msgstr "Kicsinyítés: :kbd:`PgDown` vagy :kbd:`Ctrl+-` billentyűvel"
+
+#: ../../docs/user_manual/map_views/map_view.rst:112
+msgid ""
+"Zoom to area: When certain map tools are active (Identify, Measure...), hold"
+" down :kbd:`Shift` and drag a rectangle on the map to zoom to that area. Not"
+" compatible with active selection or edit tools."
+msgstr ""
+"Nagyítás egy területre: Amikor bizonyos térképeszközök aktívak (Azonosítás, "
+"Mérés…), tartsa lenyomva a :kbd:`Shift` billentyűt, és húzzon a térképen egy"
+" téglalapot, hogy az adott területre nagyítson. Nem kompatibilis az aktív "
+"kijelölő vagy szerkesztő eszközökkel."
+
+#: ../../docs/user_manual/map_views/map_view.rst:116
+msgid ""
+"Right-click over the map and you should be able to |editCopy| "
+":guilabel:`Copy coordinates` of the clicked point in the map CRS, in WGS84 "
+"or in a custom CRS. The copied information can then be pasted in an "
+"expression, a script, text editor or spreadsheet..."
+msgstr ""
+"A térképre jobb egérgombbal kattintva a kattintás helyének koordinátáját "
+"másolhatja. A |editCopy| :guilabel:`Koordináta másolása` környezeti menüben "
+"választhat a térkép koordináta-rendszere, WGS84 vagy egyéni koordináta-"
+"rendszer között. A másolt koordinátát beillesztheti egy kifejezésbe, "
+"scriptbe, jegyzettömbbe vagy munkalapra…"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1297
+msgid "editCopy"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:127
+msgid "Controlling map rendering"
+msgstr "A térképi megjelenítés vezérlése"
+
+#: ../../docs/user_manual/map_views/map_view.rst:129
+msgid ""
+"By default, QGIS renders all visible layers whenever the map canvas is "
+"refreshed. The events that trigger a refresh of the map canvas include:"
+msgstr ""
+"Alapértelmezés szerint a QGIS minden látható réteget megjelenít a "
+"térképvászon frissítésekor. A térképvászon frissítését kiváltó események a "
+"következők:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:132
+msgid "changing the visibility of a layer"
+msgstr "egy réteg láthatóságának módosítása"
+
+#: ../../docs/user_manual/map_views/map_view.rst:133
+msgid "modifying symbology of a visible layer"
+msgstr "egy látható réteg jelrendszerének módosítása"
+
+#: ../../docs/user_manual/map_views/map_view.rst:134
+msgid "adding a layer"
+msgstr "réteg hozzáadása"
+
+#: ../../docs/user_manual/map_views/map_view.rst:135
+msgid "panning or zooming"
+msgstr "mozgatás és zoomolás"
+
+#: ../../docs/user_manual/map_views/map_view.rst:136
+msgid "resizing the QGIS window"
+msgstr "a QGIS ablakának átméretezése"
+
+#: ../../docs/user_manual/map_views/map_view.rst:138
+msgid "QGIS allows you to control the rendering process in a number of ways."
+msgstr ""
+"A QGIS számos lehetőséget biztosít a megjelenítési folyamat vezérlésére."
+
+#: ../../docs/user_manual/map_views/map_view.rst:140
+msgid "at the :ref:`global level <rendering_options>`"
+msgstr ":ref:`globálisan <rendering_options>`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:141
+msgid ""
+"per layer, using e.g. the :ref:`scale dependent rendering "
+"<label_scaledepend>`"
+msgstr ""
+"rétegenként, például :ref:`méretarányfüggő megjelenítés <label_scaledepend>`"
+" használatával"
+
+#: ../../docs/user_manual/map_views/map_view.rst:142
+msgid "or with dedicated tools in the GUI."
+msgstr "vagy a felhasználói felület beépített eszközeivel."
+
+#: ../../docs/user_manual/map_views/map_view.rst:144
+msgid ""
+"To stop the map drawing, press the :kbd:`Esc` key. This will halt the "
+"refresh of the map canvas and leave the map partially drawn. It may however "
+"take a bit of time after pressing :kbd:`Esc` for the map drawing to halt."
+msgstr ""
+"A térképkirajzolás leállításához nyomja meg az :kbd:`Esc` billentyűt. Ezzel "
+"leáll a térképvászon frissítése, és a térkép részlegesen kirajzolt "
+"állapotban marad. Az :kbd:`Esc` lenyomása után eltelhet egy kis idő, mire a "
+"kirajzolás leáll."
+
+#: ../../docs/user_manual/map_views/map_view.rst:148
+msgid ""
+"To suspend rendering, click the |checkbox| :guilabel:`Render` checkbox in "
+"the bottom-right corner of the status bar. When |checkbox| "
+":guilabel:`Render` is unchecked, QGIS does not redraw the canvas in response"
+" to any of the usual triggers mentioned earlier. Examples of when you might "
+"want to suspend rendering include:"
+msgstr ""
+"A kirajzolás szüneteltetéséhez kattintson a |checkbox| "
+":guilabel:`Megjelenít` jelölőnégyzetre az állapotsor jobb alsó sarkában. Ha "
+"a |checkbox| :guilabel:`Megjelenít` nincs bejelölve, a QGIS nem rajzolja "
+"újra a térképvászon tartalmát a korábban felsorolt események hatására. "
+"Példák arra, mikor érdemes felfüggeszteni a megjelenítést:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1289
+msgid "checkbox"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:154
+msgid "adding many layers and symbolizing them prior to drawing"
+msgstr "sok réteg hozzáadása és szimbolizálása kirajzolás előtt"
+
+#: ../../docs/user_manual/map_views/map_view.rst:155
+msgid ""
+"adding one or more large layers and setting scale dependency before drawing"
+msgstr ""
+"egy vagy több nagy méretű réteg hozzáadása és a méretarányfüggő megjelenítés"
+" beállítása kirajzolás előtt"
+
+#: ../../docs/user_manual/map_views/map_view.rst:156
+msgid ""
+"adding one or more large layers and zooming to a specific view before "
+"drawing"
+msgstr ""
+"egy vagy több nagy méretű réteg hozzáadása és egy adott nézetre nagyítás "
+"kirajzolás előtt"
+
+#: ../../docs/user_manual/map_views/map_view.rst:157
+msgid "any combination of the above"
+msgstr "a fentiek bármilyen kombinációja"
+
+#: ../../docs/user_manual/map_views/map_view.rst:159
+msgid ""
+"Checking the |checkbox| :guilabel:`Render` checkbox enables rendering and "
+"causes an immediate refresh of the map canvas."
+msgstr ""
+"A |checkbox| :guilabel:`Megjelenít` jelölőnégyzet bejelölése lehetővé teszi "
+"a kirajzolást és a térképvászon azonnali frissítését."
+
+#: ../../docs/user_manual/map_views/map_view.rst:166
+msgid "Time-based control on the map canvas"
+msgstr "Időalapú vezérlés a térképvásznon"
+
+#: ../../docs/user_manual/map_views/map_view.rst:168
+msgid ""
+"QGIS can handle temporal control on loaded layers, i.e. modify the map "
+"canvas rendering based on a time variation. To achieve this, you need:"
+msgstr ""
+"A QGIS képes kezelni a betöltött rétegek időbeli vezérlését, azaz módosítani"
+" a térképvászon megjelenítését az időbeli változások alapján. Ehhez a "
+"következőkre van szükség:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:171
+msgid ""
+"Layers that have dynamic temporal properties set. QGIS supports temporal "
+"control for different data providers, with custom settings. It's mainly "
+"about setting the time range in which the layer would display:"
+msgstr ""
+"Dinamikus időbeli tulajdonságokkal rendelkező rétegek. A QGIS támogatja a "
+"különböző adatszolgáltatók időbeli vezérlését, egyéni beállításokkal. Ez "
+"főként annak az időtartománynak a beállítását jelenti, amelyben a rétegnek "
+"meg kell jelennie:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:175
+msgid ""
+":ref:`raster layers <raster_temporal>`: controls whether to display or not "
+"the layer."
+msgstr ""
+":ref:`raszterrétegek <raster_temporal>`: szabályozza, hogy a réteg "
+"megjelenjen-e vagy sem."
+
+#: ../../docs/user_manual/map_views/map_view.rst:177
+msgid ""
+":ref:`WMTS layers <wmts_temporal>`: controls whether the data should be "
+"rendered based on a static time range or following a dynamic temporal range"
+msgstr ""
+":ref:`WMTS-rétegek <wmts_temporal>`: szabályozza, hogy az adatokat egy "
+"statikus időintervallum alapján vagy egy dinamikus időintervallumot követve "
+"kell-e megjeleníteni."
+
+#: ../../docs/user_manual/map_views/map_view.rst:179
+msgid ""
+":ref:`vector layers <vectortemporalmenu>`: features are filtered based on "
+"time values associated to their attributes"
+msgstr ""
+":ref:`vektorrétegek <vectortemporalmenu>`: az elemek szűrése az "
+"attribútumaikban lévő időértékek alapján történik"
+
+#: ../../docs/user_manual/map_views/map_view.rst:181
+msgid ""
+":ref:`mesh layers <meshtemporal>`: displays dynamically the active dataset "
+"groups values"
+msgstr ""
+":ref:`hálórétegek <meshtemporal>`: dinamikusan megjeleníti az aktív "
+"adatcsoportok értékeit"
+
+#: ../../docs/user_manual/map_views/map_view.rst:184
+msgid ""
+"When dynamic temporal options are enabled for a layer, an "
+"|indicatorTemporal| icon is displayed next to the layer in the "
+":guilabel:`Layers` panel to remind you that the layer is temporally "
+"controlled. Click the icon to update the temporal settings."
+msgstr ""
+"Ha egy réteg dinamikus időbeli beállításai engedélyezve vannak, a "
+":guilabel:`Rétegek` panelen egy |indicatorTemporal| ikon jelenik meg a réteg"
+" mellett, jelezve, hogy a réteg időbelileg vezérelt. Kattintson az ikonra az"
+" időbeli beállítások frissítéséhez."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1305
+msgid "indicatorTemporal"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:189
+msgid ""
+"Enable the temporal navigation of the map canvas using the :ref:`Temporal "
+"controller panel <temporal_controller>`. The panel is activated:"
+msgstr ""
+"A térképvászon időbeli navigációjának engedélyezése az :ref:`Időbeli vezérlő"
+" panel <temporal_controller>` használatával. A panel bekapcsolható:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:192
+msgid ""
+"using the |temporal| :sup:`Temporal controller panel` icon located in the "
+":guilabel:`Map Navigation` toolbar"
+msgstr ""
+"az :sup:`Időbeli vezérlő panel` ikonjával a :guilabel:`Térképi navigáció` "
+"eszköztáron"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1366
+msgid "temporal"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:194
+msgid ""
+"or from the :menuselection:`View --> Panels --> Temporal controller panel` "
+"menu"
+msgstr ""
+"a :menuselection:`Nézet --> Panelek --> Időbeli vezérlő panel` menüből"
+
+#: ../../docs/user_manual/map_views/map_view.rst:200
+msgid "The temporal controller panel"
+msgstr "Az időbeli vezérlő panel"
+
+#: ../../docs/user_manual/map_views/map_view.rst:202
+msgid "The :guilabel:`Temporal controller` panel has the following modes:"
+msgstr ""
+"Az :guilabel:`Időbeli vezérlés` panel a következő üzemmódokat kínálja:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:207
+msgid "Temporal Controller Panel in navigation mode"
+msgstr "Az időbeli vezérlés panel navigációs módban"
+
+#: ../../docs/user_manual/map_views/map_view.rst:209
+msgid ""
+"|temporalNavigationOff| :sup:`Turn off temporal navigation`: all the "
+"temporal settings are disabled and visible layers are rendered as usual"
+msgstr ""
+"|temporalNavigationOff| :sup:`Időbeli navigáció kikapcsolása`: az összes "
+"időbeli beállítás ki van kapcsolva, és a látható rétegek a szokásos módon "
+"kerülnek megjelenítésre."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1372
+msgid "temporalNavigationOff"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:211
+msgid ""
+"|temporalNavigationFixedRange| :sup:`Fixed range temporal navigation`: a "
+"time range is set and only layers (or features) whose temporal range "
+"overlaps with this range are displayed on the map."
+msgstr ""
+"|temporalNavigationFixedRange| :sup:`Fix tartományú időbeli navigáció`: "
+"beállít egy időbeli tartományt, és csak azok a rétegek (vagy elemek) "
+"jelennek meg a térképen, amelyek időbeli tartománya beleesik ebbe a "
+"tartományba."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1370
+msgid "temporalNavigationFixedRange"
+msgstr "temporalNavigationFixedRange"
+
+#: ../../docs/user_manual/map_views/map_view.rst:214
+msgid ""
+"|temporalNavigationAnimated| :sup:`Animated temporal navigation`: a time "
+"range is set, split into steps, and only layers (or features) whose temporal"
+" range overlaps with each frame are displayed on the map"
+msgstr ""
+"|temporalNavigationAnimated| :sup:`Animált időbeli navigáció`: beállít egy "
+"időbeli tartományt, amit képkockákra oszt, és csak azok a rétegek (vagy "
+"elemek) jelennek meg a térképen, amelyek időbeli tartománya beleesik az "
+"adott képkockába."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1368
+msgid "temporalNavigationAnimated"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:217
+msgid "|settings| :sup:`Settings` for general control of the animation"
+msgstr "|settings| :sup:`Beállítások` az animáció általános vezérléséhez"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1352
+msgid "settings"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:219
+msgid ":guilabel:`Frames rate`: number of steps that are shown per second"
+msgstr ""
+":guilabel:`Képkockasebesség`: a másodpercenként megjelenő lépések száma"
+
+#: ../../docs/user_manual/map_views/map_view.rst:221
+msgid ""
+"|unchecked| :guilabel:`Cumulative range`: all animation frames will have the"
+" same start date-time but different end dates and times. This is useful if "
+"you wish to accumulate data in your temporal visualization instead of "
+"showing a ‘moving time window’ across your data."
+msgstr ""
+"|unchecked| :guilabel:`Halmozott tartomány`: az összes animációs képkockának"
+" ugyanaz lesz a kezdő dátuma és ideje, de a végdátumok és időpontok "
+"különböznek. Ez akkor hasznos, ha az időbeli megjelenítésben az adatokat fel"
+" kívánja halmozni, ahelyett, hogy az adatoknak egy „mozgó időablakát” "
+"mutatná."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1378
+msgid "unchecked"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:229
+msgid "Animating a temporal navigation"
+msgstr "Az időbeli navigáció animálása"
+
+#: ../../docs/user_manual/map_views/map_view.rst:231
+msgid ""
+"An animation is based on a varying set of visible layers at particular times"
+" within a time range. To create a temporal animation:"
+msgstr ""
+"Az animáció egy időintervallumon belül meghatározott időpontokban látható "
+"rétegek változó halmazán alapul. Időbeli animáció létrehozása:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:235
+msgid ""
+"Toggle on the |temporalNavigationAnimated| :sup:`Animated temporal "
+"navigation`, displaying the animation player widget"
+msgstr ""
+"Kapcsolja be az |temporalNavigationAnimated| :sup:`Animált időbeli "
+"navigáció` módot; megjelenik az animációt lejátszó kezelőszerv"
+
+#: ../../docs/user_manual/map_views/map_view.rst:237
+msgid ""
+"Enter the :guilabel:`Time range` to consider. Using the |refresh| button, "
+"this can be defined as:"
+msgstr ""
+"Adja meg a figyelembe veendő :guilabel:`Időtartományt`. A |refresh| gomb "
+"használatával ez a következőképpen határozható meg:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1335
+msgid "refresh"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:240
+msgid ":guilabel:`Set to full range` of all the time enabled layers"
+msgstr ""
+":guilabel:`Beállítás teljes tartományra`, figyelembe véve az összes időbeli "
+"réteget"
+
+#: ../../docs/user_manual/map_views/map_view.rst:241
+msgid ""
+":guilabel:`Set to preset project range` as defined in the :ref:`project "
+"properties <project_temporal>`"
+msgstr ""
+":guilabel:`Beállítás a projekt előre beállított tartományára`, ahogy a "
+":ref:`projekt tulajdonságaiban <project_temporal>` be lett állítva"
+
+#: ../../docs/user_manual/map_views/map_view.rst:243
+msgid ""
+":guilabel:`Set to single layer's range` taken from a time-enabled layer"
+msgstr ""
+":guilabel:`Beállítás egyetlen réteg tartományára`, egy időbeli rétegből "
+"kiszámítva"
+
+#: ../../docs/user_manual/map_views/map_view.rst:244
+msgid ""
+"Fill in the time :guilabel:`Step` to split the time range. Different units "
+"are supported, from ``seconds`` to ``centuries``. A ``source timestamps`` "
+"option is also available as step: when selected, this causes the temporal "
+"navigation to step between all available time ranges from layers in the "
+"project. It’s useful when a project contains layers with non-contiguous "
+"available times, such as a WMS-T service which provides images that are "
+"available at irregular dates. This option will allow you to only step "
+"between time ranges where the next available image is shown."
+msgstr ""
+"Az időtartomány felosztásához adja meg a :guilabel:`Lépés` méretét. A lépés "
+"mértékegysége ``másodperctől`` ``évszázadig`` tetszőlegesen választható. "
+"Lépésként a ``forrás időbélyegei`` is megadható: ha be van jelölve, akkor az"
+" időbeli navigáció a projekt rétegeinek időtartományai között lépeget. Ez "
+"akkor hasznos, amikor egy projekt olyan rétegeket tartalmaz, amelyek "
+"időpontjai nem egybefüggőek, például egy WMS-T szolgáltatás, amely "
+"rendszertelen időpontokban elérhető képeket biztosít. Ezzel a beállítással "
+"úgy tud az időtartományok között lépkedni, hogy mindig a következő kép "
+"jelenik meg."
+
+#: ../../docs/user_manual/map_views/map_view.rst:253
+msgid ""
+"Click the |play| button to preview the animation. QGIS will generate scenes "
+"using the layers rendering at the set times. Layers display depends on "
+"whether they overlap any individual time frame."
+msgstr ""
+"Az animáció előnézetéhez nyomja meg a |play| gombot. A QGIS  elkészíti a "
+"jeleneteket a rétegek a beállított időpontjaiban látható megjelenítésében. A"
+" rétegek megjelenése attól függ, hogy beleesnek-e az egyes időkeretekbe."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1329
+msgid "play"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:262
+msgid "Temporal navigation through a layer"
+msgstr "Időbeli navigáció egy rétegen"
+
+#: ../../docs/user_manual/map_views/map_view.rst:264
+msgid ""
+"The animation can also be previewed by moving the time slider. Checking the "
+"|unchecked| :guilabel:`Loop` checkbox will repeatedly run the animation "
+"while clicking |play| stops a running animation. A full set of video player "
+"buttons is available."
+msgstr ""
+"Az animáció előnézete az idő csúszkájának mozgatásával is megtekinthető. Az "
+"|unchecked| :guilabel:`Ismétlés` bejelölésével az animáció ismételten lefut,"
+" míg a |play| gombra kattintva a futó animáció megáll. A videólejátszó "
+"gombok teljes készlete rendelkezésre áll."
+
+#: ../../docs/user_manual/map_views/map_view.rst:269
+msgid ""
+"Horizontal scrolling using the mouse wheel (where supported) with the cursor"
+" on the map canvas will also allow you to navigate, or “scrub”, the temporal"
+" navigation slider backwards and forwards."
+msgstr ""
+"A térképvászon fölött az egérkerékkel vízszintesen görgetve (ahol "
+"támogatott) is lehetséges az időbeli navigáció csúszkáját előre és hátra "
+"mozgatni."
+
+#: ../../docs/user_manual/map_views/map_view.rst:273
+msgid ""
+"Click the |fileSave| :sup:`Export animation` button if you want to generate "
+"a series of images representing the scene. They can be later combined in a "
+"video editor software:"
+msgstr ""
+"Kattintson az |fileSave| :sup:`Animáció exportálása` gombra, ha a jelenetet "
+"ábrázoló képsorozatot szeretne létrehozni. Ezeket később egy videószerkesztő"
+" szoftverben egyesítheti:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1299
+msgid "fileSave"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:280
+msgid "Exporting map canvas animation scenes to images"
+msgstr "Térképvászon animációs jeleneteinek exportálása képekbe"
+
+#: ../../docs/user_manual/map_views/map_view.rst:282
+msgid ""
+"The filename :guilabel:`Template`: the ``####`` are replaced with frame "
+"sequence number"
+msgstr ""
+"A fájlnév :guilabel:`sablon`: a ``####`` helyébe a képkocka sorszáma kerül."
+
+#: ../../docs/user_manual/map_views/map_view.rst:284
+msgid "The :guilabel:`Output directory`"
+msgstr "A :guilabel:`Kimeneti könyvtár`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:285
+msgid "Under :guilabel:`Map settings`, you can:"
+msgstr "A :guilabel:`Térképbeállítások` alatt lehetőség van:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:287
+msgid "redefine the :ref:`spatial extent <extent_selector>` to use"
+msgstr ""
+"meghatározni a használandó :ref:`térbeli terjedelmet <extent_selector>`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:288
+msgid ""
+"control the :guilabel:`Resolution` of the image (:guilabel:`Output width` "
+"and :guilabel:`Output height`)"
+msgstr ""
+"szabályozni a kép :guilabel:`Felbontását` (:guilabel:`Kimenet szélessége` és"
+" :guilabel:`Kimenet magassága`)"
+
+#: ../../docs/user_manual/map_views/map_view.rst:290
+msgid ""
+":guilabel:`Draw active decorations`: whether active :ref:`decorations "
+"<decorations>` should be kept in the output"
+msgstr ""
+":guilabel:`Aktív dekorációk megjelenítése`: az aktív :ref:`dekorációk "
+"<decorations>` legyenek-e láthatóak a kimeneten"
+
+#: ../../docs/user_manual/map_views/map_view.rst:292
+msgid "Under :guilabel:`Temporal settings`, you can redefine:"
+msgstr "Az :guilabel:`Időbeli beállítások` alatt meghatározható:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:294
+msgid "the time :guilabel:`Range` for the animation"
+msgstr "az animáció :guilabel:`Tartománya`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:295
+msgid "the :guilabel:`Step (frame length)` in the unit of your choice"
+msgstr "a :guilabel:`Lépés (képkockahossz)` a megadott mértékegységben"
+
+#: ../../docs/user_manual/map_views/map_view.rst:304
+msgid "Bookmarking extents on the map"
+msgstr "Térképi terjedelmek könyvjelzőzése"
+
+#: ../../docs/user_manual/map_views/map_view.rst:306
+msgid ""
+"Spatial Bookmarks allow you to \"bookmark\" a geographic location and return"
+" to it later. By default, bookmarks are saved in the user's profile (as "
+":guilabel:`User Bookmarks`), meaning that they are available from any "
+"project the user opens. They can also be saved for a single project (named "
+":guilabel:`Project Bookmarks`) and stored within the project file, which can"
+" be helpful if the project is to be shared with other users."
+msgstr ""
+"A Térbeli könyvjelzők lehetővé teszik, hogy földrajzi helyeket "
+"elkönyvjelzőzzön és később visszatérjen hozzájuk. Alapértelmezés szerint a "
+"könyvjelzők a felhasználói profilba kerülnek (min :guilabel:`Felhasználói "
+"könyvjelzők`), ami azt jelenti, hogy a felhasználó által megnyitott "
+"bármelyik projektből elérhetőek. Egyetlen projekthez is menthetők (vagyis "
+":guilabel:`Projekt Könyvjelzők`), ilyenkor a projektfájlon belül tárolódnak,"
+" ami hasznos, ha a projektet más felhasználókkal kell megosztani."
+
+#: ../../docs/user_manual/map_views/map_view.rst:314
+msgid "Creating a Bookmark"
+msgstr "Könyvjelző létrehozása"
+
+#: ../../docs/user_manual/map_views/map_view.rst:316
+msgid "To create a bookmark:"
+msgstr "Könyvjelző létrehozásához:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:318
+msgid "Zoom and pan to the area of interest."
+msgstr "Nagyítson a kívánt területre."
+
+#: ../../docs/user_manual/map_views/map_view.rst:319
+msgid ""
+"Select the menu option :menuselection:`View -->` |newBookmark| "
+":menuselection:`New Spatial Bookmark...`, press :kbd:`Ctrl+B` or right-click"
+" the |showBookmarks| :guilabel:`Spatial Bookmarks` entry in the "
+":guilabel:`Browser` panel and select :guilabel:`New Spatial Bookmark`. The "
+":guilabel:`Bookmark Editor` dialog opens."
+msgstr ""
+"Kattintson a :menuselection:`Nézet -->` |newBookmark| :menuselection:`Új "
+"térbeli könyvjelző…` menüpontra, nyomja meg a :kbd:`Ctrl+B` kombinációt vagy"
+" kattintson jobb gombbal a |showBookmarks| :guilabel:`Térbeli könyvjelzők` "
+"elemre :guilabel:`Böngésző` panelen és válassza az :guilabel:`Új térbeli "
+"könyvjelző` menüpontot. Megnyílik a :guilabel:`Könyvjelzőszerkesztő`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1317
+msgid "newBookmark"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1360
+msgid "showBookmarks"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:331
+msgid "The Bookmark Editor Dialog"
+msgstr "A Könyvjelzőszerkesztő párbeszédablak"
+
+#: ../../docs/user_manual/map_views/map_view.rst:333
+msgid "Enter a descriptive name for the bookmark"
+msgstr "Adjon meg a könyvjelzőnek egy beszédes nevet"
+
+#: ../../docs/user_manual/map_views/map_view.rst:334
+msgid "Enter or select a group name in which to store related bookmarks"
+msgstr ""
+"Adja meg vagy válassza ki a csoport nevét, amelyben a kapcsolódó "
+"könyvjelzőket tárolni kívánja"
+
+#: ../../docs/user_manual/map_views/map_view.rst:335
+msgid ""
+"Select the extent of the area you wish to save, using the :ref:`extent "
+"selector <extent_selector>` widget"
+msgstr ""
+"Válassza ki a menteni kívánt terület terjedelmét a :ref:`terjedelemválasztó "
+"<extent_selector>` vezérlő segítségével"
+
+#: ../../docs/user_manual/map_views/map_view.rst:337
+msgid "Indicate the :guilabel:`CRS` to use for the extent"
+msgstr "Adja meg terjedelemhez használandó :guilabel:`koordináta-rendszert`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:338
+msgid ""
+"Select whether the bookmark will be :guilabel:`Saved in` :guilabel:`User "
+"Bookmarks` or :guilabel:`Project Bookmarks` (by default, this drop-down list"
+" is set to :guilabel:`User Bookmarks`)"
+msgstr ""
+"Válassza ki, hogy a könyvjelző :guilabel:`Mentés helye` a "
+":guilabel:`Felhasználói könyvjelzők` vagy a :guilabel:`Projekt könyvjelzői` "
+"legyen (alapértelmezés szerint a :guilabel:`Felhasználói könyvjelzők` van "
+"kiválasztva)"
+
+#: ../../docs/user_manual/map_views/map_view.rst:341
+msgid "Press :guilabel:`Save` to add the bookmark to the list"
+msgstr "A könyvjelző hozzáadásához nyomja meg a :guilabel:`Mentés` gombot."
+
+#: ../../docs/user_manual/map_views/map_view.rst:343
+msgid "Note that you can have multiple bookmarks with the same name."
+msgstr "Vegye figyelembe, hogy több könyvjelzője is lehet azonos néven."
+
+#: ../../docs/user_manual/map_views/map_view.rst:346
+msgid "Working with Bookmarks"
+msgstr "A könyvjelzők használata"
+
+#: ../../docs/user_manual/map_views/map_view.rst:348
+msgid ""
+"To use and manage bookmarks, you can either use the :guilabel:`Spatial "
+"Bookmarks` panel or :guilabel:`Browser`."
+msgstr ""
+"A könyvjelzők használatához és kezeléséhez használhatja a :guilabel:`Térbeli"
+" könyvjelzők` panelt vagy a :guilabel:`Böngészőt`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:351
+msgid ""
+"Select :menuselection:`View -->` |showBookmarks| :menuselection:`Show "
+"Spatial Bookmark Manager` or press :kbd:`Ctrl+7` to open the "
+":guilabel:`Spatial Bookmarks Manager` panel. Select :menuselection:`View "
+"-->` |showBookmarks| :menuselection:`Show Bookmarks` or :kbd:`Ctrl+Shift+B` "
+"to show the |showBookmarks| :guilabel:`Spatial Bookmarks` entry in the "
+":guilabel:`Browser` panel."
+msgstr ""
+"A :guilabel:`Térbelikönyvjelző-kezelő` panel megnyitásához válassza a "
+":menuselection:`Nézet -->` |showBookmarks| "
+":menuselection:`Térbelikönyvjelző-kezelő megjelenítése` menüpontot, vagy "
+"nyomjon :kbd:`Ctrl+7` kombinációt. A :guilabel:`Böngésző` panel "
+"|showBookmarks| :guilabel:`Térbeli könyvjelzők` elemének megjelenítéséhez "
+"válassza a :menuselection:`Nézet -->` |showBookmarks| "
+":menuselection:`Könyvjelzők megjelenítése` menüpontot vagy a "
+":kbd:`Ctrl+Shift+B` kombinációt."
+
+#: ../../docs/user_manual/map_views/map_view.rst:359
+msgid "You can perform the following tasks:"
+msgstr "A következő feladatokat hajthatja végre:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:361
+msgid "Managing bookmark actions"
+msgstr "Könyvjelzőkezelő műveletek"
+
+#: ../../docs/user_manual/map_views/map_view.rst:366
+msgid "Task"
+msgstr "Feladat"
+
+#: ../../docs/user_manual/map_views/map_view.rst:367
+msgid "Spatial Bookmark Manager"
+msgstr "Térbeli könyvjelző kezelő"
+
+#: ../../docs/user_manual/map_views/map_view.rst:368
+msgid "Browser"
+msgstr "Böngésző"
+
+#: ../../docs/user_manual/map_views/map_view.rst:369
+msgid "**Zoom to a Bookmark**"
+msgstr "**Nagyítás a könyvjelzőre**"
+
+#: ../../docs/user_manual/map_views/map_view.rst:370
+msgid ""
+"Double-click on it, or select the bookmark and press the |zoomToBookmark| "
+":guilabel:`Zoom to bookmark` button."
+msgstr ""
+"Dupla kattintás rá, vagy válassza ki a könyvjelzőt és nyomja meg a "
+"|zoomToBookmark| :guilabel:`Nagyítás a könyvjelzőre` gombot. "
+
+#: ../../docs/user_manual/map_views/map_view.rst:1392
+msgid "zoomToBookmark"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:372
+msgid ""
+"Double-click on it, drag and drop it to the map canvas, or right-click the "
+"bookmark and select :guilabel:`Zoom to Bookmark`."
+msgstr ""
+"Dupla kattintás rá, fogja és vigye a térképvászonra, vagy jobb kattintás a "
+"könyvjelzőre és használja a :guilabel:`Nagyítás a könyvjelzőre` gombot."
+
+#: ../../docs/user_manual/map_views/map_view.rst:374
+msgid "**Delete a bookmark**"
+msgstr "**Könyvjelző törlése**"
+
+#: ../../docs/user_manual/map_views/map_view.rst:375
+msgid ""
+"Select the bookmark and click the |deleteSelected| :guilabel:`Delete "
+"bookmark` button. Confirm your choice."
+msgstr ""
+"Jelölje ki a könyvjelzőt és kattintson a |deleteSelected| "
+":guilabel:`Könyvjelző törlése` gombra. Erősítse meg a döntését. "
+
+#: ../../docs/user_manual/map_views/map_view.rst:1295
+msgid "deleteSelected"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:377
+msgid ""
+"Right-click the bookmark and select :guilabel:`Delete Spatial Bookmark`. "
+"Confirm your choice."
+msgstr ""
+"Jobb kattintás a könyvjelzőre és válassza a :guilabel:`Térbeli könyvjelző "
+"törlése` menüpontot. Erősítse meg a döntését. "
+
+#: ../../docs/user_manual/map_views/map_view.rst:379
+msgid "**Export bookmarks to XML**"
+msgstr "**Könyvjelzők exportálása XML-be**"
+
+#: ../../docs/user_manual/map_views/map_view.rst:380
+msgid ""
+"Click the |sharing| :guilabel:`Import/Export Bookmarks` button and select "
+"|sharingExport| :guilabel:`Export`. All the bookmarks (user or project) are "
+"saved in an xml file."
+msgstr ""
+"Kattintson a |sharing| :guilabel:`Könyvjelzők importálása/exportálása` "
+"gombra és válassza az |sharingExport| :guilabel:`Exportálást`. Az összes "
+"könyvjelző (felhasználói és projekt) el lesz mentve egy xml fájlba."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1354
+msgid "sharing"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1356
+msgid "sharingExport"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:383
+msgid ""
+"Select one or more folders (user or project) or subfolders (groups), then "
+"right-click and select |sharingExport| :guilabel:`Export Spatial "
+"Bookmarks...`. The selected bookmark subset is saved."
+msgstr ""
+"Válasszon ki egy vagy több könyvtárat (felhasználói vagy projekt), vagy "
+"alkönyvtárat (csoport), majd jobb kattintás után válassza a |sharingExport| "
+":guilabel:`Térbeli könyvjelzők exportálása…` menüpontot. A könyvjelzők "
+"kiválasztott része el lesz mentve."
+
+#: ../../docs/user_manual/map_views/map_view.rst:386
+msgid "**Import bookmarks from XML**"
+msgstr "**Könyvjelzők importálása XML-ből**"
+
+#: ../../docs/user_manual/map_views/map_view.rst:387
+msgid ""
+"Click the |sharing| :guilabel:`Import/Export Bookmarks` button and select "
+"|sharingImport| :guilabel:`Import`. All bookmarks in the XML file are "
+"imported as user bookmarks."
+msgstr ""
+"Kattintson a |sharing| :guilabel:`Könyvjelzők importálása/exportálása` "
+"gombra és válassza az |sharingImport| :guilabel:`Importálást`. Az xml "
+"fájlban található összes könyvjelző importálásra kerül felhasználói "
+"könyvjelzőként."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1358
+msgid "sharingImport"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:390
+msgid ""
+"Right-click the :guilabel:`Spatial Bookmarks` entry or one of its folders "
+"(user or project) or subfolders (groups) to determine where to import the "
+"bookmarks, then select |sharingImport| :guilabel:`Import Spatial Bookmarks`."
+" If performed on the :guilabel:`Spatial Bookmarks` entry, the bookmarks are "
+"added to :guilabel:`User Bookmarks`."
+msgstr ""
+"Jobb kattintással a :guilabel:`Térbeli könyvjelzők` elemen vagy valamelyik "
+"könyvtárán (felhasználói vagy projekt), vagy alkönyvtárán (csoport) válassza"
+" ki, hogy hova kerüljenek az importált könyvjelzők, majd válassza  a "
+"|sharingImport| :guilabel:`Térbeli könyvjelzők importálása` menüpontot. A "
+"műveletet a :guilabel:`Térbeli könyvjelzők` elemen elvégezve a könyvjelzők a"
+" :guilabel:`Felhasználói könyvjelzők` alá kerülnek."
+
+#: ../../docs/user_manual/map_views/map_view.rst:395
+msgid "**Edit bookmark**"
+msgstr "**Könyvjelző szerkesztése**"
+
+#: ../../docs/user_manual/map_views/map_view.rst:396
+msgid ""
+"You can change a bookmark by changing the values in the table. You can edit "
+"the name, the group, the extent and if it is stored in the project or not."
+msgstr ""
+"A könyvjelzőt a táblázatban szereplő értékek megváltoztatásával "
+"módosíthatja. Szerkesztheti a nevet, a csoportot, a terjedelmet és azt, hogy"
+" a projektben legyen-e tárolva."
+
+#: ../../docs/user_manual/map_views/map_view.rst:399
+msgid ""
+"Right-click the desired bookmark and select :guilabel:`Edit Spatial "
+"Bookmark...`. The :guilabel:`Bookmark Editor` will open, allowing you to "
+"redefine every aspect of the bookmark as if you were creating it for the "
+"first time."
+msgstr ""
+"Jobb kattintás a kívánt könyvjelzőre és válassza a :guilabel:`Térbeli "
+"könyvjelző szerkesztése…` menüpontot. Megnyílik a :guilabel:`Könyvjelző "
+"szerkesztő`, ahol átállíthatja a könyvjelző bármely tulajdonságát úgy, "
+"akárcsak a létrehozáskor tenné."
+
+#: ../../docs/user_manual/map_views/map_view.rst:404
+msgid ""
+"You can also drag and drop the bookmark between folders (user and project) "
+"and subfolders (groups)."
+msgstr ""
+"A könyvjelzőt a mappák (felhasználói és projekt) és az almappák (csoportok) "
+"között is áthúzhatja."
+
+#: ../../docs/user_manual/map_views/map_view.rst:407
+msgid ""
+"You can also zoom to bookmarks by typing the bookmark name in the "
+":ref:`locator <label_statusbar>`."
+msgstr ""
+"A könyvjelzőkre úgy is ránagyíthat, hogy beírja a könyvjelző nevét a "
+":ref:`locator <label_statusbar>` mezőbe."
+
+#: ../../docs/user_manual/map_views/map_view.rst:414
+msgid "Decorating the map"
+msgstr "A térkép dekorálása"
+
+#: ../../docs/user_manual/map_views/map_view.rst:416
+msgid ""
+"Decorations include Grid, Title Label, Copyright Label, Image, North Arrow, "
+"Scale Bar and Layout Extents. They are used to 'decorate' the map by adding "
+"cartographic elements."
+msgstr ""
+"A dekorációk közé tartozik a rács, a címfelirat, a copyright címke, a kép, "
+"az északjel, az aránymérték és az elrendezéshatár. A térkép „díszítésére” "
+"szolgálnak térképészeti elemek által."
+
+#: ../../docs/user_manual/map_views/map_view.rst:423
+msgid "Grid"
+msgstr "Rács"
+
+#: ../../docs/user_manual/map_views/map_view.rst:425
+msgid ""
+"|addGrid| :guilabel:`Grid` allows you to add a coordinate grid and "
+"coordinate annotations to the map canvas."
+msgstr ""
+"A |addGrid| :guilabel:`Rács` segítségével koordinátarácsot és "
+"koordinátafeliratokat adhat a térképvászonhoz."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1273
+msgid "addGrid"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:428
+msgid ""
+"Select menu option :menuselection:`View --> Decorations --> Grid...` to open"
+" the dialog."
+msgstr ""
+"A párbeszédablak megnyitásához válassza a :menuselection:`Nézet --> "
+"Dekorációk --> Rács…` menüpontot."
+
+#: ../../docs/user_manual/map_views/map_view.rst:435
+msgid "The Grid Dialog"
+msgstr "A rács párbeszédablak"
+
+#: ../../docs/user_manual/map_views/map_view.rst:437
+msgid ""
+"Tick |checkbox| :guilabel:`Enable grid` and set grid definitions according "
+"to the layers loaded in the map canvas:"
+msgstr ""
+"Jelölje be a |checkbox| :guilabel:`Rács engedélyezése` jelölőnégyzetet és "
+"állítsa be a rácsot a térképvászonra betöltött rétegeknek megfelelően:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:440
+msgid ""
+"The :guilabel:`Grid type`: it can be :guilabel:`Line` or :guilabel:`Marker`"
+msgstr ""
+"A :guilabel:`Rács típusa`: lehet :guilabel:`Vonal` vagy "
+":guilabel:`Szimbólum`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:441
+msgid ""
+"The associated :ref:`Line symbol <vector_line_symbols>` or :ref:`marker "
+"symbol <vector_marker_symbols>` used to represent the grid marks"
+msgstr ""
+"A rácsjelek ábrázolására használt :ref:`Vonal szimbólum "
+"<vector_line_symbols>` vagy :ref:`Jelölő szimbólum <vector_marker_symbols>`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:443
+msgid ""
+"The :guilabel:`Interval X` and :guilabel:`Interval Y` between the grid "
+"marks, in map units"
+msgstr ""
+"A rácsjelek közti :guilabel:`X intervallum` és :guilabel:`Y intervallum`, "
+"térképi egységekben"
+
+#: ../../docs/user_manual/map_views/map_view.rst:445
+msgid ""
+"An :guilabel:`Offset X` and :guilabel:`Offset Y` distance of the grid marks "
+"from the bottom left corner of the map canvas, in map units"
+msgstr ""
+"A rácsjelek a térképvászon bal alsó sarkától mért :guilabel:`X eltolás` és "
+":guilabel:`Y eltolás` mértéke, térképi egységben"
+
+#: ../../docs/user_manual/map_views/map_view.rst:447
+msgid "The interval and offset parameters can be set based on the:"
+msgstr ""
+"Az intervallum és eltolás paraméterek következők alapján állíthatók be:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:449
+msgid ""
+":guilabel:`Canvas Extents`: generates a grid with an interval that is "
+"approximatively 1/5 of the canvas width"
+msgstr ""
+"A :guilabel:`Vászon terjedelem`: rácsot hoz létre a vászon szélességének "
+"hozzávetőlegesen 1/5-ének megfelelő intervallummal"
+
+#: ../../docs/user_manual/map_views/map_view.rst:451
+msgid ":guilabel:`Active Raster Layer` resolution"
+msgstr ":guilabel:`Aktív raszterréteg` felbontása"
+
+#: ../../docs/user_manual/map_views/map_view.rst:452
+msgid ""
+"Tick |checkbox| :guilabel:`Draw annotations` to display the coordinates of "
+"the grid marks and set:"
+msgstr ""
+"Jelölje be a |checkbox| :guilabel:`Felirat megjelenítése` négyzetet, hogy "
+"megjelenjenek a rácsjelek koordinátái, majd állítsa be:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:455
+msgid ""
+"The :guilabel:`Annotation direction`, ie how the labels would be placed "
+"relative to their grid line. It can be:"
+msgstr ""
+"A :guilabel:`Felirat irányát`, vagyis hogy a címkék a rácsvonalakhoz "
+"viszonyítva hogy jelenjenek meg. Ez lehet:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:458
+msgid ":guilabel:`Horizontal` or :guilabel:`Vertical` for all the labels"
+msgstr ""
+"Az összes felirat :guilabel:`Vízszintesen` vagy :guilabel:`Függőlegesen` "
+
+#: ../../docs/user_manual/map_views/map_view.rst:459
+msgid ""
+":guilabel:`Horizontal and Vertical`, ie each label is parallel to the grid "
+"mark it refers to"
+msgstr ""
+":guilabel:`Vízszintes és függőleges`, vagyis minden felirat párhuzamosan "
+"azzal a rácsjellel, amelyre hivatkozik"
+
+#: ../../docs/user_manual/map_views/map_view.rst:461
+msgid ""
+":guilabel:`Boundary direction`, ie each label follows the canvas boundary, "
+"and is perpendicular to the grid mark it refers to"
+msgstr ""
+":guilabel:`Határvonal irányába`, vagyis minden felirat követi a vászon "
+"határát és merőleges arra a rácsjelre, amelyre hivatkozik"
+
+#: ../../docs/user_manual/map_views/map_view.rst:463
+msgid ""
+"The :guilabel:`Annotation font` (text formatting, buffer, shadow...) using "
+"the :ref:`font selector widget <font_selector>`"
+msgstr ""
+"A :guilabel:`Felirat betűkészlete` (szövegformázás, övezet, árnyék…) a "
+":ref:`betűkészlet-választó <font_selector>` használatával"
+
+#: ../../docs/user_manual/map_views/map_view.rst:465
+msgid ""
+"The :guilabel:`Distance to map frame`, margin between annotations and map "
+"canvas limits. Convenient when :ref:`exporting the map canvas "
+"<exportingmapcanvas>` eg to an image format or PDF, and avoid annotations to"
+" be on the \"paper\" limits."
+msgstr ""
+"A :guilabel:`Távolság a térképkerettől`, vagyis a felirat és térképvászon "
+"széle közötti margó. Kényelmes, amikor :ref:`a térképvásznat exportálja "
+"<exportingmapcanvas>` például képként vagy PDF-be, és szeretné elkerülni a "
+"feliratok levágását a „papír” széleinél."
+
+#: ../../docs/user_manual/map_views/map_view.rst:468
+msgid "The :guilabel:`Coordinate precision`"
+msgstr "A :guilabel:`Koordinátaélesség`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:470
+#: ../../docs/user_manual/map_views/map_view.rst:510
+#: ../../docs/user_manual/map_views/map_view.rst:549
+#: ../../docs/user_manual/map_views/map_view.rst:659
+msgid ""
+"Click :guilabel:`Apply` to verify that it looks as expected or "
+":guilabel:`OK` if you're satisfied."
+msgstr ""
+"Az :guilabel:`Alkalmaz` gombra kattintva ellenőrizheti, hogy a rács "
+"megfelelően néz-e ki, vagy kattintson az :guilabel:`OK` gombra, ha biztos "
+"benne."
+
+#: ../../docs/user_manual/map_views/map_view.rst:477
+msgid "Title Label"
+msgstr "Címfelirat"
+
+#: ../../docs/user_manual/map_views/map_view.rst:479
+msgid ""
+"|titleLabel| :guilabel:`Title Label` allows you to decorate your map with a "
+"**Title**."
+msgstr ""
+"A |titleLabel| :guilabel:`Címfelirat` lehetővé teszi a térkép dekorálását "
+"egy **címmel**."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1376
+msgid "titleLabel"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:481
+msgid "To add a Title Label decoration:"
+msgstr "Címfelirat dekoráció hozzáadásához:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:483
+msgid ""
+"Select menu option :menuselection:`View --> Decorations --> Title Label...` "
+"to open the dialog."
+msgstr ""
+"A párbeszédablak megnyitásához válassza a :menuselection:`Nézet --> "
+"Dekorációk --> Címfelirat…` menüpontot."
+
+#: ../../docs/user_manual/map_views/map_view.rst:491
+msgid "The Title Decoration Dialog"
+msgstr "A címdekoráció párbeszédablak"
+
+#: ../../docs/user_manual/map_views/map_view.rst:493
+msgid "Make sure |checkbox| :guilabel:`Enable Title Label` is checked"
+msgstr ""
+"Győződjön meg arról, hogy a :guilabel:`Címfelirat engedélyezése` be van "
+"jelölve"
+
+#: ../../docs/user_manual/map_views/map_view.rst:494
+msgid ""
+"Enter the title text you want to place on the map. You can make it dynamic "
+"using the :guilabel:`Insert or Edit an Expression...` button."
+msgstr ""
+"Írja be a cím szövegét, amelyet el szeretne helyezni a térképen. Dinamikussá"
+" teheti a :guilabel:`Kifejezés beszúrása vagy szerkesztése…` gombbal."
+
+#: ../../docs/user_manual/map_views/map_view.rst:497
+#: ../../docs/user_manual/map_views/map_view.rst:538
+msgid ""
+"Choose the :guilabel:`Font` for the label using the :ref:`font selector "
+"widget <font_selector>` with full access to QGIS :ref:`text formatting "
+"<text_format>` options. Quickly set the font color and opacity by clicking "
+"the black arrow to the right of the font combo box."
+msgstr ""
+"Válasszon :guilabel:`Betűtípust` a feliratnak a :ref:`betűtípus választóban "
+"<font_selector>`, kihasználva a QGIS bármely :ref:`szövegformázási "
+"<text_format>` lehetőségét. A betűtípus legördülő menü melletti fekete "
+"nyílra kattintva gyorsan tudja beállítani a betűszínt és az átlátszóságot."
+
+#: ../../docs/user_manual/map_views/map_view.rst:501
+msgid ""
+"Select the :ref:`color <color-selector>` to apply to the title's "
+":guilabel:`Background bar color`."
+msgstr ""
+"Válasszon :ref:`színt <color-selector>` a cím :guilabel:`Háttérsávjához`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:503
+msgid ""
+"Choose the :guilabel:`Placement` of the label in the canvas: options are "
+":guilabel:`Top left`, :guilabel:`Top Center` (default), :guilabel:`Top "
+"Right`, :guilabel:`Bottom left`, :guilabel:`Bottom Center` and "
+":guilabel:`Bottom Right`."
+msgstr ""
+"Válassza ki a felirat :guilabel:`Elhelyezését` a vásznon: a lehetőségek "
+":guilabel:`Balra fent`, :guilabel:`Fent középen` (alapértelmezett), "
+":guilabel:`Jobbra fent`, :guilabel:`Balra lent`, :guilabel:`Lent középen` és"
+" :guilabel:`Jobbra lent`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:507
+#: ../../docs/user_manual/map_views/map_view.rst:546
+msgid ""
+"Refine the placement of the item by setting a horizontal and/or vertical "
+":guilabel:`Margin from Edge`. These values can be in **Millimeters** or "
+"**Pixels** or set as a **Percentage** of the width or height of the map "
+"canvas."
+msgstr ""
+"Finomítsa az elem elhelyezését a vászon széléhez képesti vízszintes és/vagy "
+"függőleges :guilabel:`Margóval`. Ennek az értékei lehetnek **milliméterben**"
+" vagy **pixelben**, vagy beállíthatók a térképvászon szélességének vagy "
+"magasságának **százalékaként**."
+
+#: ../../docs/user_manual/map_views/map_view.rst:517
+msgid "Copyright Label"
+msgstr "Copyright címke"
+
+#: ../../docs/user_manual/map_views/map_view.rst:519
+msgid ""
+"|copyrightLabel| :guilabel:`Copyright Label` can be used to decorate your "
+"map with a **Copyright** label."
+msgstr ""
+"A |titleLabel| :guilabel:`Copyright címke` lehetővé teszi a térkép "
+"dekorálását egy **copyright** címkével."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1291
+msgid "copyrightLabel"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:522
+msgid "To add this decoration:"
+msgstr "A dekoráció hozzáadásához:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:524
+msgid ""
+"Select menu option :menuselection:`View --> Decorations --> Copyright "
+"Label...` to open the dialog."
+msgstr ""
+"A párbeszédablak megnyitásához válassza a :menuselection:`Nézet --> "
+"Dekorációk --> Copyright címke…` menüpontot."
+
+#: ../../docs/user_manual/map_views/map_view.rst:532
+msgid "The Copyright Decoration Dialog"
+msgstr "A copyright dekoráció párbeszédablak"
+
+#: ../../docs/user_manual/map_views/map_view.rst:534
+msgid "Make sure |checkbox| :guilabel:`Enable Copyright Label` is checked"
+msgstr ""
+"Győződjön meg arról, hogy a :guilabel:`Copyright címke engedélyezése` be van"
+" jelölve"
+
+#: ../../docs/user_manual/map_views/map_view.rst:535
+msgid ""
+"Enter the copyright text you want to place on the map. You can make it "
+"dynamic using the :guilabel:`Insert or Edit an Expression...` button."
+msgstr ""
+"Írja be a copyright szöveget, amelyet el szeretne helyezni a térképen. "
+"Dinamikussá teheti a :guilabel:`Kifejezés beszúrása vagy szerkesztése…` "
+"gombbal."
+
+#: ../../docs/user_manual/map_views/map_view.rst:542
+msgid ""
+"Choose the :guilabel:`Placement` of the label in the canvas: options are "
+":guilabel:`Top left`, :guilabel:`Top Center`, :guilabel:`Top Right`, "
+":guilabel:`Bottom left`, :guilabel:`Bottom Center`, and :guilabel:`Bottom "
+"Right` (default for Copyright decoration)"
+msgstr ""
+"Válassza ki a felirat :guilabel:`Elhelyezését` a vásznon: a lehetőségek "
+":guilabel:`Balra fent`, :guilabel:`Fent középen`, :guilabel:`Jobbra fent`, "
+":guilabel:`Balra lent`, :guilabel:`Lent középen` és :guilabel:`Jobbra lent` "
+"(alapértelmezett)."
+
+#: ../../docs/user_manual/map_views/map_view.rst:556
+msgid "Image Decoration"
+msgstr "Kép dekoráció"
+
+#: ../../docs/user_manual/map_views/map_view.rst:558
+msgid ""
+"|addImage| :guilabel:`Image` allows you to add an image (logo, legend, ..) "
+"on the map canvas."
+msgstr ""
+"A |addImage| :guilabel:`Kép` lehetővé teszi egy kép (logó, jelmagyarázat, …)"
+" elhelyezését a térképvásznon."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1275
+msgid "addImage"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:560
+msgid "To add an image:"
+msgstr "Kép hozzáadásához:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:562
+msgid ""
+"Select menu option :menuselection:`View --> Decorations --> Image...` to "
+"open the dialog."
+msgstr ""
+"A párbeszédablak megnyitásához válassza a :menuselection:`Nézet --> "
+"Dekorációk --> Kép…` menüpontot."
+
+#: ../../docs/user_manual/map_views/map_view.rst:570
+msgid "The Image Decoration Dialog"
+msgstr "A képválasztó párbeszédablak"
+
+#: ../../docs/user_manual/map_views/map_view.rst:572
+msgid "Make sure |checkbox| :guilabel:`Enable Image` is checked"
+msgstr ""
+"Győződjön meg arról, hogy a :guilabel:`Kép engedélyezése` be van jelölve"
+
+#: ../../docs/user_manual/map_views/map_view.rst:573
+msgid ""
+"Select a bitmap (e.g. png or jpg) or SVG image using the :guilabel:`...` "
+":sup:`Browse` button"
+msgstr ""
+"Válasszon egy bitképet (pl. png vagy jpg) vagy SVG képet a :guilabel:`...` "
+":sup:`Tallózás` gombbal"
+
+#: ../../docs/user_manual/map_views/map_view.rst:575
+msgid ""
+"If you have chosen a parameter enabled SVG then you can also set a "
+":guilabel:`Fill` or :guilabel:`Stroke` (outline) color. For bitmap images, "
+"the color settings are disabled."
+msgstr ""
+"Ha paraméterezhető SVG képet választott, beállíthatja a :guilabel:`Kitöltés`"
+" és :guilabel:`Körvonal` színeket. Bitmap képeknél a színbeállítás le van "
+"tiltva."
+
+#: ../../docs/user_manual/map_views/map_view.rst:578
+msgid ""
+"Set a :guilabel:`Size` of the image in mm. The width of selected image is "
+"used to resize it to given :guilabel:`Size`."
+msgstr ""
+"Állítsa be a kép :guilabel:`Méretét` mm-ben. A kiválasztott kép szélessége a"
+" megadott :guilabel:`Méretre` való átméretezésére szolgál."
+
+#: ../../docs/user_manual/map_views/map_view.rst:580
+msgid ""
+"Choose where you want to place the image on the map canvas with the "
+":guilabel:`Placement` combo box. The default position is :guilabel:`Top "
+"Left`."
+msgstr ""
+"Az :guilabel:`Elhelyezés` legördülő listából válassza ki, hová szeretné "
+"helyezni a képet a térképvásznon. Az alapértelmezett pozíció a "
+":guilabel:`Balra fent`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:582
+msgid ""
+"Set the :guilabel:`Horizontal` and :guilabel:`Vertical Margin from (Canvas) "
+"Edge`. These values can be set in **Millimeters**, **Pixels** or as a "
+"**Percentage** of the width or height of the map canvas."
+msgstr ""
+"Állítsa be a :guilabel:`Vízszintes` és :guilabel:`Függőleges` margót a "
+"vászon szélétől. Ezek az értékek megadhatóak **milliméterben**, **pixelben**"
+" vagy a térképvászon szélességének és magasságának **százalékában**."
+
+#: ../../docs/user_manual/map_views/map_view.rst:585
+#: ../../docs/user_manual/map_views/map_view.rst:616
+#: ../../docs/user_manual/map_views/map_view.rst:697
+msgid ""
+"Click :guilabel:`Apply` to verify that it looks as expected and "
+":guilabel:`OK` if you're satisfied."
+msgstr ""
+"Az :guilabel:`Alkalmaz` gombra kattintva ellenőrizheti, hogy a rács "
+"megfelelően néz-e ki, majd kattintson az :guilabel:`OK` gombra, ha biztos "
+"benne."
+
+#: ../../docs/user_manual/map_views/map_view.rst:592
+msgid "North Arrow"
+msgstr "Északjel"
+
+#: ../../docs/user_manual/map_views/map_view.rst:594
+msgid ""
+"|northArrow| :guilabel:`North Arrow` allows you to add a north arrow on the "
+"map canvas."
+msgstr ""
+"Az |northArrow| :guilabel:`Északjel` lehetővé teszi egy északi irányt mutató"
+" nyíl elhelyezését a térképvásznon."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1321
+msgid "northArrow"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:596
+msgid "To add a north arrow:"
+msgstr "Északjel hozzáadásához:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:598
+msgid ""
+"Select menu option :menuselection:`View --> Decorations --> North Arrow...` "
+"to open the dialog."
+msgstr ""
+"A párbeszédablak megnyitásához válassza a :menuselection:`Nézet --> "
+"Dekorációk --> Északjel…` menüpontot."
+
+#: ../../docs/user_manual/map_views/map_view.rst:606
+msgid "The North Arrow Dialog"
+msgstr "Az Északjel párbeszédablak"
+
+#: ../../docs/user_manual/map_views/map_view.rst:608
+msgid "Make sure |checkbox| :guilabel:`Enable north arrow` is checked"
+msgstr ""
+"Győződjön meg arról, hogy az :guilabel:`Északjel engedélyezése` be van "
+"jelölve"
+
+#: ../../docs/user_manual/map_views/map_view.rst:609
+msgid "Optionally change the color and size, or choose a custom SVG"
+msgstr ""
+"Igény szerint módosíthatja a színt és a méretet, vagy választhat egyéni "
+"SVG-t"
+
+#: ../../docs/user_manual/map_views/map_view.rst:610
+msgid ""
+"Optionally change the angle or choose **Automatic** to let QGIS determine "
+"the direction"
+msgstr ""
+"Ha szeretné, módosíthatja a szöget, vagy válassza az **Automatikus** "
+"beállítást, amivel a QGIS határozza meg az irányt"
+
+#: ../../docs/user_manual/map_views/map_view.rst:612
+msgid "Optionally choose the placement from the Placement combo box"
+msgstr "Opcionálisan válassza ki a pozíciót az Elhelyezés legördülő listából"
+
+#: ../../docs/user_manual/map_views/map_view.rst:613
+msgid ""
+"Optionally refine the placement of the arrow by setting a horizontal and/or "
+"vertical `Margin from (Canvas) Edge`. These values can be in **Millimeters**"
+" or **Pixels** or set as a **Percentage** of the width or height of the map "
+"canvas."
+msgstr ""
+"Finomítsa a jel elhelyezését a vászon széléhez képesti vízszintes és/vagy "
+"függőleges :guilabel:`Margóval`. Ennek az értékei lehetnek **milliméterben**"
+" vagy **pixelben**, vagy beállíthatók a térképvászon szélességének vagy "
+"magasságának **százalékaként**."
+
+#: ../../docs/user_manual/map_views/map_view.rst:623
+msgid "Scale Bar"
+msgstr "Aránymérték"
+
+#: ../../docs/user_manual/map_views/map_view.rst:625
+msgid ""
+"|scaleBar| :guilabel:`Scale Bar` adds a simple scale bar to the map canvas. "
+"You can control the style and placement, as well as the labelling of the "
+"bar."
+msgstr ""
+"Az |scaleBar| :guilabel:`Aránymérték` egy egyszerű vonalas aránymértéket ad "
+"hozzá a térképvászonhoz. Szabályozhatja az aránymérték stílusát és "
+"elhelyezését, valamint a címkézést."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1341
+msgid "scaleBar"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:628
+msgid ""
+"QGIS only supports displaying the scale in the same units as your map frame."
+" So, if the units of your project's CRS are meters, you can't create a scale"
+" bar in feet. Likewise, if you are using decimal degrees, you can't create a"
+" scale bar to display distance in meters."
+msgstr ""
+"A QGIS az aránymérték megjelenítéséhez csak a térképével megegyező "
+"mértékegységet támogatja. Így ha a projekt koordináta-rendszere métert "
+"használ, nem fogja tudni az aránymértéket lábban megjeleníteni. Hasonlóan ha"
+" a tizedes fokot használ, nem fogja tudni az aránymérték távolságait méterre"
+" állítani."
+
+#: ../../docs/user_manual/map_views/map_view.rst:633
+msgid "To add a scale bar:"
+msgstr "Aránymérték hozzáadásához:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:635
+msgid ""
+"Select menu option :menuselection:`View --> Decorations --> Scale Bar...` to"
+" open the dialog"
+msgstr ""
+"A párbeszédablak megnyitásához válassza a :menuselection:`Nézet --> "
+"Dekorációk --> Aránymérték…` menüpontot."
+
+#: ../../docs/user_manual/map_views/map_view.rst:643
+msgid "The Scale Bar Dialog"
+msgstr "Az Aránymérték párbeszédablak"
+
+#: ../../docs/user_manual/map_views/map_view.rst:645
+msgid "Make sure |checkbox| :guilabel:`Enable scale bar` is checked"
+msgstr ""
+"Győződjön meg arról, hogy az :guilabel:`Aránymérték engedélyezése` be van "
+"jelölve"
+
+#: ../../docs/user_manual/map_views/map_view.rst:646
+msgid ""
+"Choose a style from the :guilabel:`Scale bar style` |selectString| combo box"
+msgstr ""
+"Válasszon egy stílust az :guilabel:`Aránymérték stílusa` |selectString| "
+"legördülő listából"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1348
+msgid "selectString"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:647
+msgid ""
+"Select the :guilabel:`Color of bar` |selectColor| by choosing a fill color "
+"(default: black) and an outline color (default: white). The scale bar fill "
+"and outline can be made opaque by clicking on the down arrow to the right of"
+" the color input."
+msgstr ""
+"Adja meg a :guilabel:`Vonal színét` |selectColor| úgy, hogy kiválasztja a "
+"kitöltési színt (alapértelmezés: fekete) és a körvonal színét "
+"(alapértelmezés: fehér). Az aránymérték kitöltése és körvonala átlátszóvá "
+"tehető a színbeviteltől jobbra található lefelé mutató nyílra kattintva."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1345
+msgid "selectColor"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:651
+msgid ""
+"Select the font for the scale bar from the :guilabel:`Font of bar` "
+"|selectString| combo box"
+msgstr ""
+"Válassza ki az aránymérték betűtípusát a :guilabel:`Betűkészlet` "
+"|selectString| legördülő listával"
+
+#: ../../docs/user_manual/map_views/map_view.rst:652
+msgid "Set the :guilabel:`Size of bar` |selectNumber|"
+msgstr "Állítsa be a :guilabel:`Sáv méretét` |selectNumber|"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1346
+msgid "selectNumber"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:653
+msgid ""
+"Optionally check |checkbox| :guilabel:`Automatically snap to round number on"
+" resize` to display easy-to-read values"
+msgstr ""
+"Opcionálisan jelölje be az |checkbox| :guilabel:`Automatikus egész számra "
+"kerekítés átméretezésnél` jelölőnégyzetet, hogy mindig könnyen olvasható "
+"értékek jelenjenek meg"
+
+#: ../../docs/user_manual/map_views/map_view.rst:655
+msgid ""
+"Choose the placement from the :guilabel:`Placement` |selectString| combo box"
+msgstr ""
+"Válassza ki az elhelyezést az :guilabel:`Elhelyezés` |selectString| "
+"legördülő listából"
+
+#: ../../docs/user_manual/map_views/map_view.rst:656
+msgid ""
+"You can refine the placement of the item by setting a horizontal and/or "
+"vertical `Margin from (Canvas) Edge`. These values can be in **Millimeters**"
+" or **Pixels** or set as a **Percentage** of the width or height of the map "
+"canvas."
+msgstr ""
+"Finomítsa az elem elhelyezését a vászon széléhez képesti vízszintes és/vagy "
+"függőleges :guilabel:`Margóval`. Ennek az értékei lehetnek **milliméterben**"
+" vagy **pixelben**, vagy beállíthatók a térképvászon szélességének vagy "
+"magasságának **százalékaként**."
+
+#: ../../docs/user_manual/map_views/map_view.rst:665
+msgid "Layout Extents"
+msgstr "Elrendezéshatárok"
+
+#: ../../docs/user_manual/map_views/map_view.rst:667
+msgid ""
+"|addMap| :guilabel:`Layout Extents` adds the extents of :ref:`map item(s) "
+"<layout_map_item>` in print layout(s) to the canvas. When enabled, the "
+"extents of all map items within all print layouts are shown using a lightly "
+"dotted border labeled with the name of the print layout and map item. You "
+"can control the style and labeling of the displayed layout extents. This "
+"decoration is useful when you are tweaking the positioning of map elements "
+"such as labels, and need to know the actual visible region of print layouts."
+msgstr ""
+"Az |addMap| :guilabel:`Elrendezéshatárok` segítségével meg lehet jeleníteni "
+"a vásznon a nyomtatási elrendezés(ek) :ref:`térképelemeinek "
+"<layout_map_item>` terjedelmét. Ha engedélyezve van, akkor az összes "
+"nyomtatási elrendezésen szereplő összes térképelem terjedelme megjelenik "
+"vékony szaggatott határvonallal, valamint a nyomtatási elrendezés és a "
+"térképelem nevével. Szabályozhatja a megjelenített elrendezéshatárok "
+"stílusát és címkézését. Ez a dekoráció akkor hasznos, ha a térképelemek, "
+"például címkék elhelyezését módosítja, és ehhez tudnia kell a nyomtatási "
+"elrendezések tényleges látható területét."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1277
+msgid "addMap"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:679
+msgid ""
+"Example of layout extents displayed in a QGIS project with two print "
+"layouts. The print layout named 'Sights' contains two map items, while the "
+"other print layout contains one map item."
+msgstr ""
+"Egy példa az elrendezéshatárok megjelenítésére QGIS-ben, két nyomtatási "
+"elrendezéssel. A „Sights” elnevezésű nyomtatási elrendezés két térképelemet,"
+" míg a másik nyomtatási elrendezés egy térképelemet tartalmaz."
+
+#: ../../docs/user_manual/map_views/map_view.rst:683
+msgid "To add layout extent(s):"
+msgstr "Elrendezéshatárok hozzáadásához:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:685
+msgid ""
+"Select :menuselection:`View --> Decorations --> Layout Extents` to open the "
+"dialog"
+msgstr ""
+"A párbeszédablak megnyitásához válassza a :menuselection:`Nézet --> "
+"Dekorációk --> Elrendezéshatárok…` menüpontot."
+
+#: ../../docs/user_manual/map_views/map_view.rst:693
+msgid "The Layout Extents Dialog"
+msgstr "Az Elrendezéshatárok párbeszédablak"
+
+#: ../../docs/user_manual/map_views/map_view.rst:695
+msgid "Make sure |checkbox| :guilabel:`Show layout extents` is checked."
+msgstr ""
+"Győződjön meg arról, hogy a :guilabel:`Elrendezéshatárok megjelenítése` be "
+"van jelölve"
+
+#: ../../docs/user_manual/map_views/map_view.rst:696
+msgid "Optionally change the symbol and labeling of the extents."
+msgstr "Opcionálisan módosítsa a határok szimbólumát és címkézését."
+
+#: ../../docs/user_manual/map_views/map_view.rst:703
+msgid "**Decorations Settings**"
+msgstr "**Dekorációs beállítások**"
+
+#: ../../docs/user_manual/map_views/map_view.rst:705
+msgid ""
+"When you save a QGIS project file, any changes you have made to Grid, North "
+"Arrow, Scale Bar, Copyright and Layout Extents will be saved in the project "
+"and restored the next time you load the project."
+msgstr ""
+"Amikor elment egy QGIS projektfájlt, a Rács, Északjel, Lépték, Copyright és "
+"Elrendezéshatárok minden módosítása el lesz mentve a projektbe és a projekt "
+"következő megnyitásakor vissza lesz állítva."
+
+#: ../../docs/user_manual/map_views/map_view.rst:716
+msgid "Annotation Tools"
+msgstr "Annotációs eszközök"
+
+#: ../../docs/user_manual/map_views/map_view.rst:718
+msgid ""
+"Annotations are another type of elements added onto the map canvas to "
+"provide additional information that can not be depicted by the rendered "
+"layers. Unlike :ref:`labels <vector_labels_tab>` that rely on attribute "
+"values stored in vector layers, annotations are independent details, stored "
+"within the project file itself."
+msgstr ""
+"Az annotációk a térképvászonra helyezett elemek egy másik típusa, amelyek "
+"olyan további információkat tartalmaznak, amelyeket a megjelenített rétegek "
+"nem tudnak ábrázolni. Ellentétben a :ref:`címkékkel <vector_labels_tab>`, "
+"melyek a vektoros rétegekben tárolt attribútumértékekre támaszkodnak, az "
+"annotációk független részletek, amelyek magában a projektfájlban tárolódnak."
+
+#: ../../docs/user_manual/map_views/map_view.rst:724
+msgid "Two families of annotations are available in QGIS:"
+msgstr "A QGIS-ben két annotációs típus áll rendelkezésre:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:726
+msgid ""
+"**Feature annotations**: they are actual georeferenced features of text, "
+"marker, line or polygon type stored within a special layer type called "
+"\"annotation layer\". They are tied to a particular geographic location, "
+"meaning that moving your map, changing the scale or changing projection "
+"won’t cause your annotations to jump around the map. Rather, they’ll be "
+"locked in place to the location you’ve drawn them."
+msgstr ""
+"**Annotációs elemek**: ezek tényleges georeferált szöveges, szimbólummal "
+"jelölt, vonalas vagy felület típusú elemek, amelyek egy speciális "
+"rétegtípuson, az úgynevezett „annotációs rétegen” belül tárolódnak. Ezek egy"
+" adott földrajzi helyhez vannak kötve, ami azt jelenti, hogy a térkép "
+"mozgatása, a méretarány vagy a vetület megváltoztatása nem fogja a "
+"megjegyzések ugrálását okozni a térképen, hanem ahhoz a helyhez lesznek "
+"rögzítve, ahová rajzolták őket."
+
+#: ../../docs/user_manual/map_views/map_view.rst:731
+msgid ""
+"**Balloon annotations**: these are individuals annotations of text, form or "
+"image type placed inside a bubble. They can be associated to any layer for "
+"their visibility, are drawn on top of the map canvas. The size is dependent "
+"from the map canvas scale, and its position can be anchored."
+msgstr ""
+"**Annotációs buborékok**: ezek egy szövegbuborékban elhelyezett egyedi "
+"szöveg, űrlap vagy kép típusú annotációk. A láthatóság tekintetében bármely "
+"réteghez társíthatók, és a térképvászon tetejére rajzolódnak. A mérete a "
+"térképvászon méretarányától függ, a pozíciója pedig rögzíthető."
+
+#: ../../docs/user_manual/map_views/map_view.rst:736
+msgid "**Layout the map with annotations**"
+msgstr "**A térkép elrendezése annotációkkal**"
+
+#: ../../docs/user_manual/map_views/map_view.rst:738
+msgid ""
+"You can print or export annotations with your map to various formats using:"
+msgstr ""
+"A térképpel együtt annotációkat is nyomtathat vagy exportálhat, különböző "
+"formátumokba az alábbi módokon:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:740
+msgid "map canvas export tools available in the :menuselection:`Project` menu"
+msgstr ""
+"a :menuselection:`Projekt` menüből elérhető térképvászon exportáló "
+"eszközökkel"
+
+#: ../../docs/user_manual/map_views/map_view.rst:741
+msgid ""
+":ref:`print layout <create-output>`, in which case you need to check "
+":guilabel:`Draw map canvas items` in the corresponding map item properties"
+msgstr ""
+":ref:`nyomtatási elrendezésekkel<create-output>`, ahol be kell jelölje a "
+":guilabel:`Térképvászon elemeinek rajzolása` beállítást a megfelelő "
+"térképelem tulajdonságai közt"
+
+#: ../../docs/user_manual/map_views/map_view.rst:745
+msgid ""
+"The :guilabel:`Annotations Toolbar` provides a set of tools to create and "
+"interact with both families of annotations."
+msgstr ""
+"Az :guilabel:`Annotációs eszköztár` biztosít eszközöket mindkét fajta "
+"annotáció létrehozásához, és az azokkal való műveletekhez."
+
+#: ../../docs/user_manual/map_views/map_view.rst:748
+msgid "The Annotations Toolbar actions"
+msgstr "Az annotációs eszköztár műveletei"
+
+#: ../../docs/user_manual/map_views/map_view.rst:751
+msgid "Scope"
+msgstr "Típus"
+
+#: ../../docs/user_manual/map_views/map_view.rst:753
+msgid "|createAnnotationLayer| :sup:`New Annotation Layer`"
+msgstr "|createAnnotationLayer| :sup:`Új annotációs réteg`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1293
+msgid "createAnnotationLayer"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:753
+msgid "Create a new layer to store annotations"
+msgstr "Új réteget hoz létre annotációk tárolásához"
+
+#: ../../docs/user_manual/map_views/map_view.rst:753
+msgid "Feature annotations"
+msgstr "Annotációs elemek"
+
+#: ../../docs/user_manual/map_views/map_view.rst:755
+msgid ":sup:`Main Annotation Layer Properties`"
+msgstr ":sup:`Fő annotációs réteg tulajdonságai`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:755
+msgid "Control settings of the Main Annotation Layer"
+msgstr "A fő annotációs réteg beállításainak kezelése"
+
+#: ../../docs/user_manual/map_views/map_view.rst:757
+msgid "|select| :sup:`Modify Annotations`"
+msgstr "|select| :sup:`Annotációk módosítása`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1343
+msgid "select"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:757
+msgid "Select, move, resize and modify symbology properties of annotations"
+msgstr ""
+"Annotációk kiválasztása, mozgatása, átméretezése és jelrendszerük módosítása"
+
+#: ../../docs/user_manual/map_views/map_view.rst:759
+#: ../../docs/user_manual/map_views/map_view.rst:811
+msgid "|addPolygon| :sup:`Create Polygon Annotation`"
+msgstr "|addPolygon| :sup:`Felületannotáció létrehozása`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1281
+msgid "addPolygon"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:759
+msgid "Create an annotation as a polygon feature"
+msgstr "Annotációt készít felületelemként"
+
+#: ../../docs/user_manual/map_views/map_view.rst:761
+#: ../../docs/user_manual/map_views/map_view.rst:812
+msgid "|addPolyline| :sup:`Create Line Annotation`"
+msgstr "|addPolyline| :sup:`Vonalannotáció létrehozása`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1283
+msgid "addPolyline"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:761
+msgid "Create an annotation as a polyline feature"
+msgstr "Annotációt készít törtvonalelemként"
+
+#: ../../docs/user_manual/map_views/map_view.rst:763
+#: ../../docs/user_manual/map_views/map_view.rst:813
+msgid "|addMarker| :sup:`Create Marker Annotation`"
+msgstr "|addMarker| :sup:`Szimbólumannotáció létrehozása`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1279
+msgid "addMarker"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:763
+msgid "Create an annotation as a point feature"
+msgstr "Annotációt készít pontelemként"
+
+#: ../../docs/user_manual/map_views/map_view.rst:765
+#: ../../docs/user_manual/map_views/map_view.rst:814
+msgid "|actionText| :sup:`Create Text Annotation at Point`"
+msgstr "|actionText| :sup:`Szöveges annotáció létrehozása pontban`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1271
+msgid "actionText"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:765
+msgid "Create an annotation as a text label"
+msgstr "Annotációt készít szöveges címkeként"
+
+#: ../../docs/user_manual/map_views/map_view.rst:767
+msgid "|textAnnotation| :sup:`Text Annotation`"
+msgstr "|textAnnotation| :sup:`Szöveges annotáció`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1374
+msgid "textAnnotation"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:767
+msgid "Select and create a text formatted annotation"
+msgstr "Létrehoz vagy kiválaszt egy formázott szöveges annotációt"
+
+#: ../../docs/user_manual/map_views/map_view.rst:767
+#: ../../docs/user_manual/map_views/map_view.rst:899
+msgid "Balloon annotations"
+msgstr "Annotációs buborékok"
+
+#: ../../docs/user_manual/map_views/map_view.rst:769
+msgid "|htmlAnnotation| :sup:`HTML Annotation`"
+msgstr "|htmlAnnotation| :sup:`HTML annotáció`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1303
+msgid "htmlAnnotation"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:769
+msgid "Select and create annotation with an :file:`HTML` file's content"
+msgstr "Létrehoz vagy kiválaszt egy annotációt :file:`HTML`-fájl tartalommal"
+
+#: ../../docs/user_manual/map_views/map_view.rst:771
+msgid "|svgAnnotation| :sup:`SVG Annotation`"
+msgstr "|svgAnnotation| :sup:`SVG annotáció`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1364
+msgid "svgAnnotation"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:771
+msgid "Select and create annotation showing an :file:`SVG` file"
+msgstr "Létrehoz vagy kiválaszt egy :file:`SVG` fájlt megjelenítő annotációt"
+
+#: ../../docs/user_manual/map_views/map_view.rst:773
+msgid "|formAnnotation| :sup:`Form Annotation`"
+msgstr "|formAnnotation| :sup:`Űrlapannotáció`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1301
+msgid "formAnnotation"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:773
+msgid ""
+"Select and create annotation showing attributes of a vector layer in a "
+"custom form file"
+msgstr ""
+"Létrehoz vagy kiválaszt egy annotációt, ami egy egyéni űrlapfájl "
+"segítségével jeleníti meg egy vektoros réteg attribútumait"
+
+#: ../../docs/user_manual/map_views/map_view.rst:776
+msgid "|annotation| :sup:`Move Annotation`"
+msgstr "|annotation| :sup:`Annotáció mozgatása`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1285
+msgid "annotation"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:776
+msgid "Adjust size and position of annotation element"
+msgstr "Annotációs elem méretének és pozíciójának állítása"
+
+#: ../../docs/user_manual/map_views/map_view.rst:782
+msgid "Feature Annotations"
+msgstr "Annotációs elemek"
+
+#: ../../docs/user_manual/map_views/map_view.rst:784
+msgid ""
+"Feature annotations are stored in **annotation layers**. Unlike conventional"
+" layers, an annotation layer is available only in the current project and "
+"can contain features of different types (text, marker, line, polygon). The "
+"layer has no attributes and no symbology associated, but instead each "
+"feature can be symbolized on an item-by-item basis, through :guilabel:`Layer"
+" Styling` panel."
+msgstr ""
+"Az annotációs elemek **annotációs rétegen** tárolódnak. A hagyományos "
+"rétegektől eltérően az annotációs réteg csak az aktuális projekten belül "
+"érhető el, és eltérő típusú elemeket is tartalmazhat (szöveg, szimbólum, "
+"vonal, felület). A rétegnek nincsenek attribútumai és jelrendszere, hanem "
+"minden egyes elem külön-külön stílusozható a :guilabel:`Rétegstílus` "
+"panelen."
+
+#: ../../docs/user_manual/map_views/map_view.rst:790
+msgid "Two types of annotation layer are available in QGIS:"
+msgstr "A QGIS-ben két annotációs rétegtípus áll rendelkezésre:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:792
+msgid ""
+"A common :guilabel:`Annotation Layer`: you can create one using the "
+"|createAnnotationLayer| :sup:`New Annotation Layer` tool. It is listed in "
+"the :guilabel:`Layers` panel, allowing you to control its features' "
+"visibility, move it to show above or below particular layers in your map, "
+"like any common layer. Double-click the layer and you can access its "
+"properties."
+msgstr ""
+":guilabel:`Annotációs réteg`: az |createAnnotationLayer| :sup:`Új annotációs"
+" réteg` eszközzel hozhatja létre. Megjelenik a :guilabel:`Rétegek` panelen,"
+"  lehetővé téve az elemek láthatóságának szabályozását, a térképen lévő "
+"rétegek fölé vagy alá helyezését, akárcsak egy szokásos rétegnél. Duplán "
+"kattintva a rétegre, és hozzáférhet a tulajdonságaihoz."
+
+#: ../../docs/user_manual/map_views/map_view.rst:798
+msgid ""
+"The :guilabel:`Main Annotation Layer`: By default, this is where annotations"
+" are stored when no annotation layer is available in the project or is "
+"selected at creation time. This layer is always drawn on the very top of "
+"your map and you won't see it listed in the :guilabel:`Layers` panel "
+"alongside the other layers in your project, meaning that its features are "
+"always visible. The :guilabel:`Main Annotation Layer Properties` entry on "
+"the :guilabel:`Annotations` toolbar helps you open its properties dialog."
+msgstr ""
+":guilabel:`Fő annotációs réteg`: Alapértelmezés szerint ez az annotációk "
+"tárolásának helye, ha a projektben nincs annotációs réteg, vagy ha a "
+"létrehozáskor nincs egy ilyen kiválasztva. Ez a réteg mindig a térkép "
+"tetejére kerül és nem jelenik meg a :guilabel:`Rétegek` panelen a projekt "
+"többi rétege között, ami azt is jelenti, hogy az elemei mindig láthatóak. Az"
+" :guilabel:`Annotációk` eszköztár :guilabel:`Fő annotációs réteg "
+"tulajdonságai` eszközével nyitható meg a beállítási párbeszédablaka."
+
+#: ../../docs/user_manual/map_views/map_view.rst:807
+msgid "Interaction"
+msgstr "Műveletek"
+
+#: ../../docs/user_manual/map_views/map_view.rst:809
+msgid ""
+"The Feature annotations have dedicated tools for creation depending on their"
+" type:"
+msgstr ""
+"Az annotációs elemek típusuktól függő dedikált eszközökkel hozhatóak létre:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:816
+msgid ""
+"All the usual QGIS shortcuts for creating features apply when creating "
+"annotation items. A line or polygon annotation is drawn by left-clicking "
+"once for each vertex, with a final right mouse click to complete the shape. "
+"Snapping can be enabled while you draw, you can use the :guilabel:`Advanced "
+"Digitizing Tools` to precisely place vertices, and even switch the "
+":ref:`drawing tools <drawing_methods>` to the streaming mode for completely "
+"free-form shapes."
+msgstr ""
+"Az annotációs elemek létrehozásánál az összes szokásos QGIS-gyorsbillentyű "
+"érvényes. Egy vonal- vagy felületannotáció rajzolása úgy történik, hogy "
+"minden egyes csúcspontra egyszer bal egérgombbal kattintunk, végül jobb "
+"kattintással befejezzük a rajzolást. Rajzolás közben engedélyezhető az "
+"illesztés; a töréspontok pontos elhelyezésében segít a :guilabel:`Bővített "
+"digitalizálási eszközök`; a :ref:`rajzolási eszközök átválthatóak "
+"<drawing_methods>` folyamatos módba a teljesen szabad alakzatok "
+"rajzolásához."
+
+#: ../../docs/user_manual/map_views/map_view.rst:823
+msgid ""
+"Unlike common layers, an annotation layer does not need to be active before "
+"you select its features. Simply grab the |select| :sup:`Modify Annotations` "
+"tool and you will be able to interact with any feature annotation:"
+msgstr ""
+"A szokásos rétegektől eltérően az annotációs rétegnek nem kell aktívnak "
+"lennie, mielőtt az elemeit kiválasztaná. Egyszerűen váltson az |select| "
+":sup:`Annotációk módosítása` eszközre, és máris kezelheti bármelyik "
+"annotációs elemet:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:827
+msgid "**Selection**: simply left-click on the annotation"
+msgstr "**Kiválasztás**: egyszerűen kattintson bal gombbal az annotációra"
+
+#: ../../docs/user_manual/map_views/map_view.rst:828
+msgid ""
+"**Moving**: Left click on a selected annotation item to start moving it. A "
+"right-click or pressing :kbd:`Esc` key cancels the move, while a second left"
+" click will confirm the move. The displacement can also be controlled "
+"pressing the cursor keys:"
+msgstr ""
+"**Mozgatás**: A mozgatás megkezdéséhez kattintson bal gombbal egy "
+"kiválasztott annotációs elemre. Jobb kattintás, vagy az :kbd:`Esc` billentyű"
+" megszakítják a mozgatást, míg egy második bal kattintás véglegesíti a "
+"mozgatást. Az elmozdulás a kurzor billentyűkkel is vezérelhető:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:833
+msgid ":kbd:`Shift+key` for big movement"
+msgstr ":kbd:`Shift+nyíl`: nagy elmozdítás"
+
+#: ../../docs/user_manual/map_views/map_view.rst:834
+msgid ":kbd:`Alt+key` for ``1 px`` movement"
+msgstr ":kbd:`Alt+nyíl` ``1 px``-es elmozdítás"
+
+#: ../../docs/user_manual/map_views/map_view.rst:835
+msgid ""
+"**Geometry modification**: for line or polygon annotations, left-click on a "
+"vertex of the geometry, move and click again. Double-click a segment to add "
+"a new vertex."
+msgstr ""
+"**Geometria módosítása**: vonal- vagy felületannotáció esetén kattintson a "
+"bal gombbal a geometria egy töréspontjára, mozgassa és kattintson újra. Új "
+"töréspont hozzáadásához kattintson duplán egy szakaszra."
+
+#: ../../docs/user_manual/map_views/map_view.rst:838
+msgid ""
+"**Delete**: Pressing the :kbd:`Del` or :kbd:`Backspace` key while an "
+"annotation is selected will delete that annotation"
+msgstr ""
+"**Törlés**: A :kbd:`Del` vagy :kbd:`Backspace` billentyűt megnyomva, amikor "
+"egy annotáció ki van választva, törli az annotációt"
+
+#: ../../docs/user_manual/map_views/map_view.rst:840
+msgid ":ref:`Change feature symbology <annotation_feature_symbology>`"
+msgstr ":ref:`Elem jelrendszerének módosítása <annotation_feature_symbology>`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:845
+msgid "Feature symbology"
+msgstr "Elem jelrendszere"
+
+#: ../../docs/user_manual/map_views/map_view.rst:847
+msgid ""
+"A selected annotation will display its :guilabel:`Symbology` properties in "
+"the :guilabel:`Layer styling` panel. You can:"
+msgstr ""
+"A kiválasztott annotáció :guilabel:`Jelrendszerének` tulajdonságai a "
+":guilabel:`Rétegstílus` panelen láthatóak."
+
+#: ../../docs/user_manual/map_views/map_view.rst:850
+msgid ""
+"modify the appearance using full capabilities of the :ref:`symbol <symbol-"
+"selector>` or the :ref:`text format <text_format>` (including the text "
+"itself), depending on the type."
+msgstr ""
+"módosíthatja a kinézetét, típustól függően a :ref:`szimbólumok <symbol-"
+"selector>` vagy a :ref:`szövegformázás <text_format>` (beleértve magát a "
+"szöveget) szokásos eszközeivel."
+
+#: ../../docs/user_manual/map_views/map_view.rst:853
+msgid "configure a :guilabel:`Reference scale`"
+msgstr "beállíthat :guilabel:`Referencia-méretarányt`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:854
+msgid "set a :guilabel:`Z index`"
+msgstr "beállíthat :guilabel:`Z indexet`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:855
+msgid "modify some of the :guilabel:`Layer rendering` settings"
+msgstr "módosíthatja a :guilabel:`Rétegmegjelenítési` beállításokat"
+
+#: ../../docs/user_manual/map_views/map_view.rst:858
+msgid "Layer Properties"
+msgstr "Rétegtulajdonságok"
+
+#: ../../docs/user_manual/map_views/map_view.rst:860
+msgid ""
+"The properties dialog of an annotation layer provides the following tabs:"
+msgstr ""
+"Az annotációs réteg tulajdonságai párbeszédablak a következő lapokat "
+"tartalmazza:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:862
+msgid ""
+":guilabel:`Information`: a read-only dialog representing an interesting "
+"place to quickly grab summarized information and metadata on the current "
+"layer."
+msgstr ""
+":guilabel:`Információ`: csak olvasható párbeszédablak, ami tömör "
+"összefoglalást ad az aktuális rétegről és metaadatairól."
+
+#: ../../docs/user_manual/map_views/map_view.rst:864
+msgid ""
+":guilabel:`Source`: defines general settings for the annotation layer. You "
+"can:"
+msgstr ""
+":guilabel:`Forrás`: általános beállításokat határoz meg az annotációs "
+"rétegére vonatkozóan. Lehetőség van:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:866
+msgid ""
+"Set a :guilabel:`Layer name` that will be used to identify the layer in the "
+"project (in the :guilabel:`Layers Panel`, with expressions, ...)"
+msgstr ""
+"Beállítani a :guilabel:`Réteg nevét`: ez fogja azonosítani a réteget a "
+"projekten belül (a :guilabel:`Rétegek panelen`, a kifejezésekben, …)"
+
+#: ../../docs/user_manual/map_views/map_view.rst:868
+msgid ""
+"Display the layer's :ref:`Assigned Coordinate Reference System (CRS) "
+"<layer_crs>`: you can change the layer's CRS, selecting a recently used one "
+"in the drop-down list or clicking on |setProjection| :sup:`Select CRS` "
+"button (see :ref:`crs_selector`). Use this process only if the CRS applied "
+"to the layer is a wrong one or if none was applied."
+msgstr ""
+"Megjeleníteni a réteghez hozzárendelt :ref:`Koordináta-rendszert (CRS) "
+"<layer_crs>`: megváltoztathatja a réteg CRS-ét kiválasztva a legördülő "
+"listából egy nemrég használtat vagy rákattintva a |setProjection| "
+":sup:`Koordináta-rendszer kiválasztása` gombra (lásd :ref:`crs_selector`). "
+"Csak akkor végezze el ezt a folyamatot, ha a rétegre alkalmazott CRS "
+"helytelen, vagy ha nem volt beállítva CRS."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1350
+msgid "setProjection"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:874
+msgid ":guilabel:`Rendering`:"
+msgstr ":guilabel:`Megjelenítés`:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:876
+msgid ""
+"You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum "
+"(exclusive)` scale, defining a range of scale in which features will be "
+"visible. Out of this range, they are hidden. The |mapIdentification| "
+":sup:`Set to current canvas scale` button helps you use the current map "
+"canvas scale as boundary of the range visibility. See "
+":ref:`label_scaledepend` for more information."
+msgstr ""
+"Beállíthatja a :guilabel:`Maximum (magába foglaló)` és :guilabel:`Minimum "
+"(kizáró)` méretarányt, meghatározva vele azt a méretarány-tartományt, amin "
+"belül az elemek megjelennek. Ezen a tartományon kívül rejtve lesznek. A "
+"|mapIdentification| :sup:`Beállítás a térképvászon aktuális méretarányára` "
+"gomb segít az aktuális térképvászon méretarányát használni a tartomány "
+"láthatóságának határaként. Lásd még: :ref:`label_scaledepend`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1307
+msgid "mapIdentification"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:882
+msgid ""
+":guilabel:`Opacity`: You can make the underlying layer in the map canvas "
+"visible with this tool. Use the slider to adapt the visibility of your "
+"vector layer to your needs. You can also make a precise definition of the "
+"percentage of visibility in the menu beside the slider."
+msgstr ""
+":guilabel:`Átlátszatlanság`: Ezzel az eszközzel láthatóvá teheti a "
+"térképvásznon az alsóbb rétegeket. A csúszkával a vektorréteg láthatóságát "
+"az igényeihez igazíthatja. A csúszka melletti menüben a láthatóság "
+"százalékos mértékét is pontosan meghatározhatja."
+
+#: ../../docs/user_manual/map_views/map_view.rst:886
+msgid ""
+":guilabel:`Blending mode` at the :guilabel:`Layer` level: You can achieve "
+"special rendering effects with these tools that you may previously only know"
+" from graphics programs. The pixels of your overlaying and underlying layers"
+" are mixed through the settings described in :ref:`blend-modes`."
+msgstr ""
+":guilabel:`Keverési mód` :guilabel:`Réteg` szinten: Ezekkel az eszközökkel "
+"olyan különleges megjelenítési hatásokat érhet el, amelyeket korábban csak a"
+" grafikus programokból ismerhetett. Az átfedő és az alatta lévő rétegek "
+"pixelei a :ref:`blend-modes` pontban leírtak szerint lesznek keverve."
+
+#: ../../docs/user_manual/map_views/map_view.rst:890
+msgid ""
+"Apply :ref:`paint effects <draw_effects>` on all the layer features with the"
+" :guilabel:`Draw Effects` button."
+msgstr ""
+":ref:`Festői hatásokat <draw_effects>` alkalmazhat a réteg elemeire a "
+":guilabel:`Rajzi hatások` gombbal."
+
+#: ../../docs/user_manual/map_views/map_view.rst:893
+msgid ""
+"Some of these options are accessible from the feature annotation "
+":guilabel:`Symbology` properties."
+msgstr ""
+"Ezen opciók némelyike elérhető az annotációs elem :guilabel:`Jelrendszer` "
+"tulajdonságaiból."
+
+#: ../../docs/user_manual/map_views/map_view.rst:901
+msgid ""
+"You can add balloon annotations through :menuselection:`Edit --> Add "
+"Annotation -->` menu or from the :guilabel:`Annotations Toolbar`:"
+msgstr ""
+"Annotációs buborékot a :menuselection:`Szerkesztés --> Annotáció hozzáadása "
+"-->` menüből vagy az :guilabel:`Annotációs eszköztárról` adhat hozzá:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:904
+msgid "|textAnnotation| :sup:`Text Annotation` for custom formatted text"
+msgstr ""
+"|textAnnotation| :sup:`Szöveges annotáció` egyénileg formázott szövegekhez"
+
+#: ../../docs/user_manual/map_views/map_view.rst:905
+msgid ""
+"|htmlAnnotation| :sup:`HTML Annotation` to place the content of an "
+":file:`html` file"
+msgstr ""
+"|htmlAnnotation| :sup:`HTML-annotáció` egy :file:`html` fájl tartalmának "
+"elhelyezése"
+
+#: ../../docs/user_manual/map_views/map_view.rst:906
+msgid "|svgAnnotation| :sup:`SVG Annotation` to add an :file:`SVG` symbol"
+msgstr ""
+"|svgAnnotation| :sup:`SVG-annotáció` egy :file:`SVG` szimbólum hozzáadása"
+
+#: ../../docs/user_manual/map_views/map_view.rst:907
+msgid ""
+"|formAnnotation| :sup:`Form Annotation`: useful to display attributes of a "
+"vector layer in a customized :file:`ui` file (see "
+":numref:`figure_custom_annotation`). This is similar to the :ref:`custom "
+"attribute forms <provide_ui_file>`, but displayed in an annotation item. "
+"Also see this video "
+"https://www.youtube.com/watch?v=0pDBuSbQ02o&feature=youtu.be&t=2m25s from "
+"Tim Sutton for more information."
+msgstr ""
+"|formAnnotation| :sup:`Űrlapannotáció`: a vektorréteg attribútumainak "
+"megjelenítéséhez hasznos egy testre szabott :file:`ui` fájl segítségével "
+"(lásd :numref:`figure_custom_annotation`). Ez hasonló, mint az :ref:`Egyéni "
+"attribútuműrlapok <provide_ui_file>`, de egy annotációs buborékon belül "
+"jelenik meg. További információkért Tum Sutton videóját érdemes megnézni: "
+"https://www.youtube.com/watch?v=0pDBuSbQ02o&feature=youtu.be&t=2m25s."
+
+#: ../../docs/user_manual/map_views/map_view.rst:913
+msgid ""
+"|annotation| :sup:`Move Annotation` to adjust annotation element size or "
+"position (using click and drag)"
+msgstr ""
+"|annotation| :sup:`Annotáció mozgatása` az annotáció méretének és helyének "
+"módosításához (kattintás és húzás)"
+
+#: ../../docs/user_manual/map_views/map_view.rst:921
+msgid "Examples of balloon annotations"
+msgstr "Példák annotációs buborékra"
+
+#: ../../docs/user_manual/map_views/map_view.rst:924
+msgid ""
+"To add a balloon annotation, select the corresponding tool and click on the "
+"map canvas. An empty balloon is added. Double-click on it and a dialog opens"
+" with various options. This dialog is almost the same for all the annotation"
+" types:"
+msgstr ""
+"Annotációs buborék hozzáadásához válassza ki a megfelelő eszközt, majd "
+"kattintson a térképvászonra. Egy üres buborék jelenik meg. Kattintson rá "
+"duplán, és megnyílik az elérhető beállításokat tartalmazó párbeszédablak.  A"
+" párbeszédablak az összes annotációtípusnál nagyon hasonló:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:928
+msgid ""
+"At the top, a file selector to fill with the path to an :file:`html`, "
+":file:`svg` or :file:`ui` file depending on the type of annotation. For text"
+" annotation, you can enter your message in a text box and set its rendering "
+"with the normal font tools."
+msgstr ""
+"Felül egy fájlválasztó található, ahol megadható az annotáció típusának "
+"megfelelő :file:`html`, :file:`svg` vagy :file:`ui` fájl útvonala. Szöveges "
+"annotációhoz beírhatja az üzenetet egy szövegmezőbe, és beállíthatja annak "
+"megjelenítését a normál betűkészlet-eszközökkel."
+
+#: ../../docs/user_manual/map_views/map_view.rst:932
+msgid ""
+"|checkbox| :guilabel:`Fixed map position`: when unchecked, the balloon "
+"placement is based on a screen position (instead of the map), meaning that "
+"it's always shown regardless the map canvas extent."
+msgstr ""
+"|checkbox| :guilabel:`Térképhez rögzített pozíció`: ha nincs bejelölve, a "
+"buborék elhelyezése a képernyő pozícióján alapul (a térkép helyett), ami azt"
+" jelenti, hogy mindig megjelenik, függetlenül a térképvászon terjedelmétől."
+
+#: ../../docs/user_manual/map_views/map_view.rst:935
+msgid ""
+":guilabel:`Linked layer`: associates the annotation with a map layer, making"
+" it visible only when that layer is visible."
+msgstr ""
+":guilabel:`Kapcsolt réteg`: az annotációt egy térképréteghez társítja, és "
+"csak akkor teszi láthatóvá, ha az a réteg látható."
+
+#: ../../docs/user_manual/map_views/map_view.rst:937
+msgid ""
+":guilabel:`Map marker`: using :ref:`QGIS symbols <symbol-selector>`, sets "
+"the symbol to display at the balloon anchor position (shown only when "
+":guilabel:`Fixed map position` is checked)."
+msgstr ""
+":guilabel:`Térképi szimbólum`: :ref:`QGIS szimbólumok <symbol-selector>` "
+"segítségével beállítja a buborék horgonypozíciójában lévő jelölőt (ami csak "
+"akkor jelenik meg, ha a :guilabel:`Térképhez rögzített pozíció` be van "
+"jelölve)."
+
+#: ../../docs/user_manual/map_views/map_view.rst:940
+msgid ""
+":guilabel:`Frame style`: sets the frame background color, transparency, "
+"stroke color or width of the balloon using QGIS symbols."
+msgstr ""
+":guilabel:`Keretstílus`: beállítja a buborék keretének háttérszínét, "
+"átlátszóságát, körvonalának színét és vastagságát QGIS szimbólumok "
+"használatával."
+
+#: ../../docs/user_manual/map_views/map_view.rst:942
+msgid ""
+":guilabel:`Contents margins`: sets interior margins of the annotation frame."
+msgstr ""
+":guilabel:`Tartalom margók`: beállítja az annotációs keret belső margóit."
+
+#: ../../docs/user_manual/map_views/map_view.rst:949
+msgid "A ballon annotation text dialog"
+msgstr "Szöveges annotációs buborék párbeszédablaka"
+
+#: ../../docs/user_manual/map_views/map_view.rst:951
+msgid ""
+"Annotations can be selected when an annotation tool is enabled. They can "
+"then be moved by map position (by dragging the map marker) or by moving only"
+" the balloon. The |annotation| :sup:`Move Annotation` tool also allows you "
+"to move the balloon on the map canvas."
+msgstr ""
+"Az annotációk akkor választhatóak ki, ha egy annotációs eszköz engedélyezve "
+"van. Ezután mozgathatók térképpozíció szerint (a térképjelölő húzásával), "
+"vagy csak a buborékot mozgatva. Az |annotation| :sup:`Annotációk mozgatása` "
+"eszköz teszi lehetővé a buborékok mozgatását a térképvásznon."
+
+#: ../../docs/user_manual/map_views/map_view.rst:956
+msgid ""
+"To delete an annotation, select it and either press the :kbd:`Del` or "
+":kbd:`Backspace` button, or double-click it and press the :guilabel:`Delete`"
+" button in the properties dialog."
+msgstr ""
+"Egy annotáció törléséhez válassza ki azt, majd nyomja meg a :kbd:`Del` vagy "
+":kbd:`Backspace` billentyűt, vagy kattintson rá duplán és nyomja meg a "
+"tulajdonságok párbeszédablakban a :guilabel:`Törlés` gombot."
+
+#: ../../docs/user_manual/map_views/map_view.rst:960
+msgid ""
+"If you press :kbd:`Ctrl+T` while a balloon :guilabel:`Annotation` tool (move"
+" annotation, text annotation, form annotation) is active, the visibility "
+"states of the items are inverted."
+msgstr ""
+"A :kbd:`Ctrl+T` kombinációt megnyomva, miközben egy buborék "
+":guilabel:`Annotációs` eszköz tool (annotáció mozgatása, szöveges annotáció,"
+" űrlapannotáció) aktív, az elemek láthatóság meg lesz fordítva."
+
+#: ../../docs/user_manual/map_views/map_view.rst:970
+msgid "Measuring"
+msgstr "Mérés"
+
+#: ../../docs/user_manual/map_views/map_view.rst:973
+msgid "General information"
+msgstr "Általános információ"
+
+#: ../../docs/user_manual/map_views/map_view.rst:975
+msgid "QGIS provides four means of measuring geometries:"
+msgstr "A QGIS négy eszközt biztosít a geometriák méréséhez:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:977
+msgid "interactive measurement tools |measure|"
+msgstr "interaktív mérőeszközök |measure|"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1309
+msgid "measure"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:978
+msgid "measuring in the |calculateField| :sup:`Field Calculator`"
+msgstr "mérés a |calculateField| :sup:`Mezőkalkulátorban`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1287
+msgid "calculateField"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:979
+msgid "derived measurements in the :ref:`identify` tool"
+msgstr "származtatott mérések az :ref:`azonosítás` eszközzel"
+
+#: ../../docs/user_manual/map_views/map_view.rst:980
+msgid ""
+"the vector analysis tool: :menuselection:`Vector --> Geometry Tools --> "
+"Export/Add Geometry Columns`"
+msgstr ""
+"a vektorelemző eszköz :menuselection:`Vektor --> Geometria eszközök --> "
+"Geometriaoszlop exportálása/hozzáadása`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:983
+msgid ""
+"Measuring works within projected coordinate systems (e.g., UTM) and "
+"unprojected data. The first three measuring tools behave equally to global "
+"project settings:"
+msgstr ""
+"A mérés működik vetített koordináta-rendszereken (pl. UTM) és vetítetlen "
+"adaton. Az első három mérőeszköz a globális projektbeállításoknak "
+"megfelelően viselkedik:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:986
+msgid ""
+"Unlike most other GIS, the default measurement metric is ellipsoidal, using "
+"the ellipsoid defined in :menuselection:`Project --> Properties... --> "
+"General`. This is true both when geographic and projected coordinate systems"
+" are defined for the project."
+msgstr ""
+"A legtöbb GIS szoftvertől eltérően az alapértelmezett mérési mód "
+"ellipszoidi, a :menuselection:`Projekt --> Tulajdonságok… --> Általános` "
+"lapon megadott ellipszoidot használva. Ez akkor is így van, ha a projekthez "
+"földrajzi vagy ha vetített koordináta-rendszert adott meg."
+
+#: ../../docs/user_manual/map_views/map_view.rst:990
+msgid ""
+"If you want to calculate the projected/planimetric area or distance using "
+"cartesian maths, the measurement ellipsoid has to be set to "
+"\"None/Planimetric\" (:menuselection:`Project --> Properties... --> "
+"General`). However, with a geographic (ie unprojected) CRS defined for the "
+"data and project, area and distance measurement will be ellipsoidal."
+msgstr ""
+"Ha a vetített/síkrajzi területet vagy távolságot derékszögű koordináta-"
+"rendszerben szeretné kiszámítani, a mérési ellipszoidot "
+"„Nincs/Planimetrikus” értékre kell állítani  (:menuselection:`Projekt --> "
+"Tulajdonságok… --> Általános`). Az adatokhoz és a projekthez meghatározott "
+"földrajzi (azaz nem vetített) koordináta-rendszer esetén azonban a terület- "
+"és távolságmérés ellipszoidi lesz."
+
+#: ../../docs/user_manual/map_views/map_view.rst:996
+msgid ""
+"However, neither the identify tool nor the field calculator will transform "
+"your data to the project CRS before measuring. If you want to achieve this, "
+"you have to use the vector analysis tool: :menuselection:`Vector --> "
+"Geometry Tools --> Add Geometry Attributes...`. Here, measurement is "
+"planimetric, unless you choose the ellipsoidal measurement."
+msgstr ""
+"Azonban sem az azonosító eszköz, sem a mezőkalkulátor nem alakítja át az "
+"adatokat a mérés előtt a projekt koordináta-rendszerébe. Ha ezt szeretné "
+"elérni, akkor a vektorelemző eszközt kell használnia: :menuselection:`Vektor"
+" --> Geometria eszközök --> Geometria-attribútumok hozzáadása…`. Itt a mérés"
+" planimetrikus, hacsak nem ellipszoidi mérést választott."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1003
+msgid "Measure length, areas, bearings and angles interactively"
+msgstr "Hossz, terület, irányszög és bezárt szög mérése interaktívan"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1005
+msgid ""
+"Click the |measure| icon in the Attribute toolbar to begin measurements. The"
+" down arrow near the icon switches between |measure| length, |measureArea| "
+"area, |measureBearing| bearing or |measureAngle| angle. The default unit "
+"used in the dialog is the one set in :menuselection:`Project --> "
+"Properties... --> General` menu."
+msgstr ""
+"Kattintson a |measure| ikonra az Azonosítás eszköztáron a mérés "
+"megkezdéséhez. Az ikon melletti lefele nyíllal válthat |measure| hossz, "
+"|measureArea| terület, |measureBearing| irányszög és |measureAngle| bezárt "
+"szög mérése között. A dialógusablakban használt alapértelmezett mértékegység"
+" a :menuselection:`Projekt --> Beállítások… --> Általános` menüben "
+"beállítottak egyike."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1313
+msgid "measureArea"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1315
+msgid "measureBearing"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1311
+msgid "measureAngle"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1011
+msgid ""
+"For the :guilabel:`Measure Line` and the :guilabel:`Measure Area` the "
+"measurements can be done in |radioButtonOn| :guilabel:`Cartesian` or "
+"|radioButtonOn| :guilabel:`Ellipsoidal` measure."
+msgstr ""
+":guilabel:`Hosszmérés` és :guilabel:`Területmérés` esetén a mérések  "
+"|radioButtonOn| :guilabel:`Derékszögű` vagy |radioButtonOn| "
+":guilabel:`Ellipszoidi` számítás szerint végezhetőek."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1333
+msgid "radioButtonOn"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1015
+msgid "**Configuring the measure tool**"
+msgstr "**A mérőeszköz beállítása**"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1017
+msgid ""
+"While measuring length or area, clicking the :guilabel:`Configuration` "
+"button at the bottom of the widget opens the :menuselection:`Settings --> "
+"Options --> Map Tools` menu, where you can select the rubberband color, the "
+"precision of the measurements and the unit behavior. You can also choose "
+"your preferred measurement or angle units, but keep in mind that those "
+"values are overridden in the current project by the selection made in the "
+":menuselection:`Project --> Properties... --> General` menu, and by the "
+"selection made in the measurement widget."
+msgstr ""
+"Hossz és terület mérésekor az ablak alján lévő :guilabel:`Beállítás` gombra "
+"kattintva megnyílik a :menuselection:`Beállítások --> Beállítások… --> "
+"Térképeszközök` menü, ahol kiválaszthatja a gumiszalag színét, a mérés "
+"pontosságát és a mértékegységek viselkedését. Kiválaszthatja a kívánt mérési"
+" vagy szög mértékegységet is, de ne feledje, hogy az aktuális projektben "
+"ezeket az értékeket felülírja a :menuselection:`Projekt --> Tulajdonságok… "
+"--> Általános` menübeli választás, és a mérési ablakban végzett választás."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1026
+msgid ""
+"All measuring modules use the snapping settings from the digitizing module "
+"(see section :ref:`snapping_tolerance`). So, if you want to measure exactly "
+"along a line feature, or around a polygon feature, first set its layer "
+"snapping tolerance. Now, when using the measuring tools, each mouse click "
+"(within the tolerance setting) will snap to that layer."
+msgstr ""
+"Minden mérőmodul a digitalizáló modul illesztési beállításait használja "
+"(lásd az :ref:`snapping_tolerance` fejezetet). Tehát, ha pontosan egy "
+"vonalelem mentén vagy egy felületelem körül szeretne mérni, először állítsa "
+"be a réteg illesztésének tűrését. Így már a mérőeszközök használatakor "
+"minden egérkattintás (a tűrésbeállításon belül) az adott rétegre fog "
+"illeszteni."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1037
+msgid ""
+"The |measure| :sup:`Measure Line` measures distances between given points. "
+"The tool then allows you to click points on the map. Each segment length, as"
+" well as the total, shows up in the measure window. To stop measuring, click"
+" the right mouse button. Now it is possible to copy all your line "
+"measurements at once to the clipboard using the :guilabel:`Copy All` button."
+msgstr ""
+"A |measure| :sup:`Hosszmérés` a megadott pontok közötti távolságot méri. Az "
+"eszköz ezután lehetővé teszi, hogy rákattintson a térkép pontjaira. Az egyes"
+" szakaszok hossza, valamint a teljes összeg megjelenik a mérési ablakban. A "
+"mérés leállításához kattintson jobb egérgombbal. Ezután lehetőség van az "
+"összes vonalmérés vágólapra másolására egyben, az :guilabel:`Összes "
+"másolása` gombbal."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1044
+msgid ""
+"Note that you can use the drop-down list near the total to change the "
+"measurement units interactively while working with the measure tool "
+"('Meters', 'Kilometers', 'Feet', 'Yards', 'Miles', 'Nautical miles', "
+"'Centimeters', 'Millimeters', 'Degrees', 'Map units'). This unit is retained"
+" for the widget until a new project is created or another project is opened."
+msgstr ""
+"A teljes hossz mellett található legördülő listával módosíthatja a mérés "
+"mértékegységét, akár a mérőeszköz használata közben is ('Méter', "
+"'Kilométer', 'Láb', 'Yard', 'Mérföld', 'Tengeri mérföld', 'Centiméter', "
+"'Milliméter, 'Fok', 'Térképi egység'). Ez a mértékegység megmarad a "
+"párbeszédablakban, amíg új projektet nem hoznak létre, vagy egy másik "
+"projektet meg nem nyitnak."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1050
+msgid ""
+"The :guilabel:`Info` section in the dialog explains how calculations are "
+"made according to the CRS settings available."
+msgstr ""
+"A párbeszédablak :guilabel:`Info` szakasza elmagyarázza, hogyan történik a "
+"számítások a rendelkezésre álló koordináta-rendszer beállítások alapján."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1062
+msgid "Measure Distance"
+msgstr "Távolság mérése"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1064
+msgid ""
+"|measureArea| :sup:`Measure Area`: Areas can also be measured. In the "
+"measure window, the accumulated area size appears. Right-click to stop "
+"drawing. The Info section is also available as well as the ability to switch"
+" between different area units ('Square meters', 'Square kilometers', 'Square"
+" feet', 'Square yards', 'Square miles', 'Hectares', 'Acres', 'Square "
+"centimeters', 'Square millimeters', 'Square nautical miles', 'Square "
+"degrees', 'Map units')."
+msgstr ""
+"|measureArea| :sup:`Területmérés`: Területet is lehet mérni. A mérési "
+"ablakban látható az összesített területméret. Kattintson jobb gombbal a "
+"rajzolás leállításához. Az Info rész is elérhető, valamint lehetőség van a "
+"különböző területegységek közötti váltásra („Négyzetméter”, "
+"„Négyzetkilométer”, „Négyzetláb”, „Négyzet-yard”, „Négyzetmérföld”, "
+"„Hektár”, „Angol hold” , „Négyzetcentiméter”, „Négyzetmilliméter”, „Négyzet "
+"tengeri mérföld”, „Négyzetfok”, „Térképi egység”)."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1076
+msgid "Measure Area"
+msgstr "Területmérés"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1078
+msgid ""
+"|measureBearing| :sup:`Measure Bearing`: You can also measure bearings. The "
+"cursor becomes cross-shaped. Click to draw the first point of the bearing, "
+"then move the cursor to draw the second point. The measurement is displayed "
+"in a pop-up dialog."
+msgstr ""
+"|measureArea| :sup:`Irányszögmérés`: Irányszög mérésére is van lehetőség. A "
+"kurzor kereszt alakra vált. Kattintson az irányszög első pontjának "
+"megrajzolásához, majd mozgassa az egérmutatót a második pont "
+"megrajzolásához. A mérés megjelenik egy felugró ablakban."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1088
+msgid "Measure Bearing"
+msgstr "Irányszög mérése"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1090
+msgid ""
+"|measureAngle| :sup:`Measure Angle`: You can also measure angles. The cursor"
+" becomes cross-shaped. Click to draw the first segment of the angle you wish"
+" to measure, then move the cursor to draw the desired angle. The measurement"
+" is displayed in a pop-up dialog."
+msgstr ""
+"|measureArea| :sup:`Szögmérés`: Bezárt szög mérésére is van lehetőség. A "
+"kurzor kereszt alakra vált. Kattintson az első szakasz meghúzásához, majd "
+"mozgassa az egérmutatót és rajzolja meg a kívánt szöget. A mérés megjelenik "
+"egy felugró ablakban."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1100
+msgid "Measure Angle"
+msgstr "Bezárt szög mérése"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1106
+msgid "Setting additional map views"
+msgstr "További térképnézetek beállítása"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1108
+msgid ""
+"It is also possible to open additional map views whose content could diverge"
+" from the :guilabel:`Layers` panel current state. To add a new map view, go "
+"to :menuselection:`View -->` |newMap| :menuselection:`New Map View`. A new "
+"floating widget, mimicking the main map view's rendering, is added to QGIS. "
+"You can add as many map views as you need. They can be kept floating, placed"
+" side by side or stacked on top of each other."
+msgstr ""
+"Lehetőség van további térképnézetek megnyitására is, amelyek tartalma "
+"eltérhet a :guilabel:`Rétegek` panel aktuális állapotától. Új térképnézet "
+"hozzáadásához válassza a :menuselection:`Nézet -->` |newMap| "
+":menuselection:`Új térképnézet` menüpontot. Egy új, a fő térkép "
+"megjelenítését utánzó lebegő ablak jelenik meg. Akárhány térképnézetet "
+"hozzáadhat. Meghagyhatja őket lebegőnek, helyezheti egymás mellé, vagy "
+"egymásra."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1319
+msgid "newMap"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1122
+msgid "Multiple map views with different settings"
+msgstr "Több térképnézet eltérő beállításokkal"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1124
+msgid ""
+"At the top of an additional map canvas, there's a toolbar with the following"
+" capabilities:"
+msgstr ""
+"A további térképnézetek tetején egy eszköztár található az alábbi "
+"lehetőségekkel:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1127
+msgid ""
+"|zoomFullExtent| :sup:`Zoom Full`, |zoomToSelected| :sup:`Zoom to Selection`"
+" and |zoomToLayer| :sup:`Zoom to Layer(s)` to navigate within the view"
+msgstr ""
+"Nézeten belüli navigáció: |zoomFullExtent| :sup:`Nagyítás az egészre`, "
+"|zoomToSelected| :sup:`Nagyítás a kiválasztott elemekre` és |zoomToLayer| "
+":sup:`Nagyítás a rétegre`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1129
+msgid ""
+"|showPresets| :sup:`Set View Theme` to select the :ref:`map theme "
+"<map_themes>` to display in the map view. If set to ``(none)``, the view "
+"will follow the :guilabel:`Layers` panel changes."
+msgstr ""
+"|showPresets| :sup:`Nézet térképtémájának beállítása` segítségével "
+"beállítható, hogy a térképnézet milyen :ref:`térképtémával <map_themes>` "
+"jelenjen meg. Ha ``(egyik sem)`` van kiválasztva, a nézet követni fogja a "
+":guilabel:`Rétegek` panel módosításait."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1362
+msgid "showPresets"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1132
+msgid "|options| :sup:`View settings` to configure the map view:"
+msgstr "|options| :sup:`Nézet beállítások` a térképnézet finomhangolásához:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1323
+msgid "options"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1134
+msgid ""
+"|radioButtonOn| :guilabel:`Synchronize view center with main map`: syncs the"
+" center of the map views without changing the scale. This allows you to have"
+" an overview style or magnified map which follows the main canvas center."
+msgstr ""
+"|radioButtonOn| :guilabel:`Nézet középpontjának szinkronizálása a fő "
+"térképpel`: összeköti a nézetek középpontját a méretarány módosítása nélkül."
+" This allows you to have an overview style or magnified map which follows "
+"the main canvas center. Ez lehetővé teszi egy a fő vászon közepét követő "
+"áttekintő stílus vagy nagyított térkép létrehozását."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1138
+msgid ""
+"|radioButtonOff| :guilabel:`Synchronize view to selection`: same as zoom to "
+"selection"
+msgstr ""
+"|radioButtonOff| :guilabel:`Nézet szinkronizálása a kijelöléssel`: hasonló, "
+"mint a kiválasztott elemekre nagyítás"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1331
+msgid "radioButtonOff"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1140
+msgid ":guilabel:`Scale`"
+msgstr ":guilabel:`Méretarány`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1141
+msgid ":guilabel:`Rotation`"
+msgstr ":guilabel:`Forgatás`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1142
+msgid ":guilabel:`Magnification`"
+msgstr ":guilabel:`Nagyítás`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1143
+msgid ""
+"|unchecked| :guilabel:`Synchronize scale` with the main map scale. A "
+":guilabel:`Scale factor` can then be applied, allowing you to have a view "
+"which is e.g. always 2x the scale of the main canvas."
+msgstr ""
+"|unchecked| :guilabel:`Méretarány szinkronizálása` a fő térkép "
+"méretarányával. Hozzá lehet rendelni egy :guilabel:`Méretarány szorzót`, "
+"amivel a nézet a fő térképhez képes például mindig kétszeres nagyítással "
+"jelenik meg."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1146
+msgid "|checkbox| :guilabel:`Show annotations`"
+msgstr "|checkbox| :guilabel:`Annotációk megjelenítése`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1147
+msgid "|checkbox| :guilabel:`Show cursor position`"
+msgstr "|checkbox| :guilabel:`Kurzor helyének megjelenítése`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1148
+msgid "|unchecked| :guilabel:`Show main canvas extent`"
+msgstr "|unchecked| :guilabel:`Fő térkép terjedelmének megjelenítése`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1149
+msgid ""
+"|checkbox| :guilabel:`Show labels`: allows to hide labels regardless they "
+"are set in the displayed layers' properties"
+msgstr ""
+"|checkbox| :guilabel:`Címkék megjelenítése`: lehetővé teszi a címkék "
+"elrejtését, függetlenül attól, hogy be vannak állítva a megjelenített réteg "
+"tulajdonságaiban"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1151
+msgid ":guilabel:`Change map CRS...`"
+msgstr ":guilabel:`Térkép koordináta-rendszer változtatása…`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1152
+msgid ":guilabel:`Rename view...`"
+msgstr ":guilabel:`Nézet átnevezése…`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1158
+msgid "Exporting the map view"
+msgstr "Térképnézet exportálása"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1160
+msgid ""
+"Maps you make can be layout and exported to various formats using the "
+"advanced capabilities of the :ref:`print layout or report "
+"<label_printlayout>`. It's also possible to directly export the current "
+"rendering, without a layout. This quick \"screenshot\" of the map view has "
+"some convenient features."
+msgstr ""
+"Az elkészített térképeket elhelyezheti, és különféle formátumokba "
+"exportálhatja a :ref:`nyomtatási elrendezés vagy jelentés "
+"<label_printlayout>` segítségével. Lehetőség van az aktuális megjelenítés "
+"közvetlen exportálására is, elrendezés nélkül. A térképnézetnek ez a gyors "
+"„képernyőképe” rendelkezik néhány kényelmes funkcióval."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1167
+msgid "To export the map canvas with the current rendering:"
+msgstr "A térképvászon exportálásához az aktuális megjelenítéssel:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1169
+msgid "Go to :menuselection:`Project --> Import/Export`"
+msgstr "Kattintson a :menuselection:`Projekt --> Import/Export` menüre"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1170
+msgid "Depending on your output format, select either"
+msgstr "Az eredmény formátumtól függően válassza"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1172
+msgid "|saveMapAsImage| :guilabel:`Export Map to Image...`"
+msgstr "vagy a |saveMapAsImage| :guilabel:`Térkép exportálása képként…`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1339
+msgid "saveMapAsImage"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1173
+msgid "or |saveAsPDF| :guilabel:`Export Map to PDF...`"
+msgstr ""
+"vagy a |saveAsPDF| :guilabel:`Térkép exportálása PDF formátumba…` menüpontot"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1337
+msgid "saveAsPDF"
+msgstr ""
+
+#: ../../docs/user_manual/map_views/map_view.rst:1175
+msgid ""
+"The two tools provide you with a common set of options. In the dialog that "
+"opens:"
+msgstr ""
+"A két eszköznek vannak közös beállításai. A megjelenő párbeszédablakban:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1183
+msgid "The Save Map as Image dialog"
+msgstr "A Térkép mentése képként párbeszédablak"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1185
+msgid ""
+"Choose the :guilabel:`Extent` to export: it can be the current view extent "
+"(the default), the extent of a layer or a custom extent drawn over the map "
+"canvas. Coordinates of the selected area are displayed and manually "
+"editable."
+msgstr ""
+"Válassza ki az exportálni kívánt :guilabel:`Terjedelmet`: ez lehet az "
+"aktuális nézet terjedelme (alapértelmezett), egy réteg terjedelme, vagy egy "
+"egyéni, a térképvásznon megrajzolt terjedelem. A kiválasztott terület "
+"koordinátái megjelennek és kézzel szerkeszthetőek."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1189
+msgid ""
+"Enter the :guilabel:`Scale` of the map or select it from the "
+":ref:`predefined scales <predefinedscales>`: changing the scale will resize "
+"the extent to export (from the center)."
+msgstr ""
+"Adja meg a térkép :guilabel:`Méretarányát`, vagy válassza ki az :ref:`előre "
+"definiált méretarányok <predefinedscales>` listájából. A méretarány "
+"megváltoztatásakor megváltozik az exportálandó terjedelem."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1192
+msgid "Set the :guilabel:`Resolution` of the output"
+msgstr "Állítsa be az eredmény :guilabel:`Felbontását`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1193
+msgid ""
+"Control the :guilabel:`Output width` and :guilabel:`Output height` in pixels"
+" of the image: based by default on the current resolution and extent, they "
+"can be customized and will resize the map extent (from the center). The size"
+" ratio can be locked, which may be particularly convenient when drawing the "
+"extent on the canvas."
+msgstr ""
+"Beállíthatja a kép méreteit pixelben az :guilabel:`Eredmény szélesség` és "
+":guilabel:`Eredmény magasság` megadásával. Kezdetben az aktuális térképi "
+"terjedelem és felbontás alapján van kiszámolva, de szabadon változtatható és"
+" módosításkor átméretezi a térképi terjedelmet (a középpontból kiindulva). A"
+" méretarány zárolható, ami különösen kényelmes lehet, ha a terjedelmet a "
+"vászonra rajzolja."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1199
+msgid ""
+"|checkbox| :guilabel:`Draw active decorations`: in use :ref:`decorations "
+"<decorations>` (scale bar, title, grid, north arrow...) are exported with "
+"the map"
+msgstr ""
+"|checkbox| :guilabel:`Aktív dekorációk megjelenítése`: használatakor a "
+":ref:`dekorációkat <decorations>` (lépték, cím, rács, északjel…) is "
+"exportálja a térképre"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1202
+msgid ""
+"|checkbox| :guilabel:`Draw annotations` to export any :ref:`annotation "
+"<sec_annotations>`"
+msgstr ""
+"|checkbox| :guilabel:`Annotációk rajzolása`: exportálja a :ref:`feliratokat "
+"<sec_annotations>`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1204
+msgid ""
+"|checkbox| :guilabel:`Append georeference information (embedded or via world"
+" file)`: depending on the output format, a world file of the same name (with"
+" extension ``PNGW`` for ``PNG`` images, ``JPGW`` for ``JPG``, ...) is saved "
+"in the same folder as your image. The ``PDF`` format embeds the information "
+"in the PDF file."
+msgstr ""
+"|checkbox| :guilabel:`Georeferencia információ hozzáfűzése (beágyazva vagy "
+"world fájllal)`: a kimeneti formátumtól függően egy megegyező nevű world "
+"fájlt ment a kép mellé (``PNG`` képekhez ``PNGW``, ``JPG`` képekhez ``JPGW``"
+" kiterjesztéssel). ``PDF`` esetén az információt magába a PDF fájlba ágyazza"
+" be."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1209
+msgid ""
+"When exporting to PDF, more options are available in the :guilabel:`Save map"
+" as PDF...` dialog:"
+msgstr ""
+"PDF-be exportáláskor további lehetőségek érhetőek el a :guilabel:`Térkép "
+"mentése PDF-ként` párbeszédablakban:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1217
+msgid "The Save Map as PDF dialog"
+msgstr "A Térkép mentése PDF-ként párbeszédablak"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1219
+msgid ""
+"|checkbox| :guilabel:`Export RDF metadata` of the document such as the "
+"title, author, date, description..."
+msgstr ""
+"|checkbox| :guilabel:`RDF metaadatok exportálása`: a dokumentum metaadatai, "
+"mint cím, szerző, dátum, leírás, …"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1221
+msgid ""
+"|unchecked| :guilabel:`Create Geospatial PDF (GeoPDF)`: Generate a "
+"`georeferenced PDF file <https://gdal.org/drivers/raster/pdf.html>`_. You "
+"can:"
+msgstr ""
+"|unchecked| :guilabel:`Térinformatikai PDF készítése (GeoPDF)`: `Georeferált"
+" PDF fájlt <https://gdal.org/drivers/raster/pdf.html>`_ hoz létre. További "
+"lehetőségek:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1225
+msgid "Choose the GeoPDF :guilabel:`Format`"
+msgstr "Válasszon GeoPDF :guilabel:`Formátumot`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1226
+msgid ""
+"|checkbox| :guilabel:`Include vector feature information` in the GeoPDF "
+"file: will include all the geometry and attribute information from features "
+"visible within the map in the output GeoPDF file."
+msgstr ""
+"|checkbox| :guilabel:`Vegye bele a vektoros elem információit` a GeoPDF "
+"fájlba: az eredmény GeoPDF tartalmazni fogja a térképen látható elemek "
+"összes geometria és attribútum információit."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1233
+msgid ""
+"A GeoPDF file can also be used as a data source. For more on GeoPDF support "
+"in QGIS, see https://north-road.com/2019/09/03/qgis-3-10-loves-geopdf/."
+msgstr ""
+"A GeoPDF fájlok adatforrásként is használhatóak. Bővebben a QGIS GeoPDF "
+"támogatásáról lásd https://north-road.com/2019/09/03/qgis-3-10-loves-"
+"geopdf/."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1237
+msgid ":guilabel:`Rasterize map`"
+msgstr ":guilabel:`Térkép raszterizálása`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1238
+msgid ""
+"|checkbox| :guilabel:`Simplify geometries to reduce output file size`: "
+"Geometries will be simplified while exporting the map by removing vertices "
+"that are not discernibly different at the export resolution (e.g. if the "
+"export resolution is ``300 dpi``, vertices that are less than ``1/600 inch``"
+" apart will be removed). This can reduce the size and complexity of the "
+"export file (very large files can fail to load in other applications)."
+msgstr ""
+"|checkbox| :guilabel:`Geometria egyszerűsítése a kimeneti fájl méretének "
+"csökkentése érdekében`: A térkép exportálásakor a geometriák egyszerűsítésre"
+" kerülnek az által, hogy az exportálási felbontásban észrevehetetlenül "
+"kevéssé eltérő töréspontok el lesznek távolítva. Például ha az exportálási "
+"felbontás ``300 dpi``, akkor az egymástól kevesebb mint ``1/600 collra`` "
+"lévő töréspontok lesznek eltávolítva. Ez csökkentheti az exportált fájl "
+"méretét és összetettségét (a nagyon nagy fájlok egyes alkalmazásokban nem "
+"tölthetők be)."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1246
+msgid ""
+"Set the :guilabel:`Text export`: controls whether text labels are exported "
+"as proper text objects (:guilabel:`Always export texts as text objects`) or "
+"as paths only (:guilabel:`Always export texts as paths`). If they are "
+"exported as text objects then they can be edited in external applications "
+"(e.g. Inkscape) as normal text. BUT the side effect is that the rendering "
+"quality is decreased, AND there are issues with rendering when certain text "
+"settings like buffers are in place. That’s why exporting as paths is "
+"recommended."
+msgstr ""
+":guilabel:`Szöveg exportálása`: szabályozza, hogy a címkék szövege a "
+"megfelelő szöveg objektumként legyenek exportálva (:guilabel:`Szövegek "
+"exportálása mindig szövegobjektumként`), vagy csak útvonalként "
+"(:guilabel:`Szövegek exportálása mindig útvonalként`). Ha "
+"útvonalobjektumként exportálja, a szövegek szerkeszthetőek lesznek külső "
+"programokban (pl. Inkscape). Ennek az a MELLÉKHATÁSA, hogy csökken a "
+"megjelenítési minőség, ÉS problémák vannak egyes szövegbeállítások, például "
+"övezetek kirajzolásával is. Emiatt javasolt útvonalként exportálni."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1257
+msgid "Click :guilabel:`Save` to select file location, name and format."
+msgstr ""
+"A fájl helyének, nevének és formátumának kiválasztásához nyomja meg a  "
+":guilabel:`Mentés` gombot."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1259
+msgid ""
+"When exporting to image, it's also possible to :guilabel:`Copy to clipboard`"
+" the expected result of the above settings and paste the map in another "
+"application such as LibreOffice, GIMP..."
+msgstr ""
+"Kép exportálásakor lehetséges az eredményt :guilabel:`Vágólapra másolni`, "
+"majd beilleszteni más alkalmazásokba (LibreOffice, Gimp, …)"
