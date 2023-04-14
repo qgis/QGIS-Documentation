@@ -13,7 +13,7 @@ jobs:
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       BODY: "${{ github.event.issue.body }}"
-      MILESTONE: 2 # See https://api.github.com/repos/qgis/QGIS-Documentation/milestones
+      MILESTONE: 17 # See https://api.github.com/repos/qgis/QGIS-Documentation/milestones
     runs-on: ubuntu-latest
     steps:
       - name: Harden Runner
