@@ -5,13 +5,25 @@ on:
       - closed
       - labeled
 
+permissions:
+  contents: read
+
 jobs:
   backport:
+    env:
+      BACKPORT_TOKEN: ${{ secrets.BACKPORT_TOKEN }}
+    permissions:
+      pull-requests: write
     runs-on: ubuntu-latest
     name: Backport
     steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@1f99358870fe1c846a3ccba386cc2b2246836776 # v2.2.1
+        with:
+          egress-policy: audit # TODO: change to 'egress-policy: block' after couple of runs
+
       - name: Backport Bot
         id: backport
-        uses: m-kuhn/backport@v1.2.7
+        uses: m-kuhn/backport@7f3cab83e4b3b26aefcffda21851c3dc3d389f45  #v1.2.7
         with:
-          github_token: ${{ secrets.BACKPORT_TOKEN }}
+          github_token: ${{ BACKPORT_TOKEN }}

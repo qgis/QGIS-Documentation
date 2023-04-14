@@ -9,6 +9,9 @@ on:
     paths-ignore:
       - 'locale/**'
 
+permissions:  # added using https://github.com/step-security/secure-repo
+  contents: read
+
 jobs:
   build:
 
@@ -18,14 +21,19 @@ jobs:
         format: [html, pdf]
 
     steps:
+    - name: Harden Runner
+      uses: step-security/harden-runner@1f99358870fe1c846a3ccba386cc2b2246836776 # v2.2.1
+      with:
+        egress-policy: audit # TODO: change to 'egress-policy: block' after couple of runs
+
     - name: Check out repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@8f4b7f84864484a7bf31766abe9204da3cbe65b3 # v3.5.0
       with:
         fetch-depth: 1
-    - name: Set up Python 3.7
-      uses: actions/setup-python@v4
+    - name: Set up Python 3.9
+      uses: actions/setup-python@d27e3f3d7c64b4bbf8e4abfb9b63b83e846e0435 # v4.5.0
       with:
-        python-version: 3.7
+        python-version: 3.9
     - name: Install Requirements
       run: |
         if [[ ${{ matrix.format }} != "html" ]]; then
@@ -39,9 +47,8 @@ jobs:
       run: |
           make ${{ matrix.format }}
     - name: Upload ${{ matrix.format }} build artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@0b7f8abb1508181956e8e162db84b466c27e18ce # v3.1.2
       with:
         name: ${{ matrix.format }} build
         path: build/${{ matrix.format }}
         retention-days: 15
-
