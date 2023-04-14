@@ -12,6 +12,7 @@ jobs:
       issues: write
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      BODY: "${{ github.event.issue.body }}"
     runs-on: ubuntu-latest
     steps:
       - name: Harden Runner
@@ -19,12 +20,26 @@ jobs:
         with:
           egress-policy: audit # TODO: change to 'egress-policy: block' after couple of runs
 
-      - uses: Naturalclar/issue-action@dc881db370e1faa4bcc32ad5d3fadb6d905d8700 # v2.0.2
+      - id: find_version_label
+        name: Find Target version
+        run: |
+          LABEL=$(echo "${{ env.BODY }}" | sed -n -r "s/.*QGIS version: ([[:digit:]]\.[[:digit:]]+).*/\1/p")
+          echo "label: ${LABEL}"
+          if [[ -n "${LABEL}" ]]; then
+            echo "label=${LABEL}" >> $GITHUB_OUTPUT
+          else
+            echo "no version found so no automatic labeling"
+          fi
+
+      - id: assign_version
+        name: Assign version Label
+        if: ${{ steps.find_version_label.outputs.label }}
+        uses: actions/github-script@98814c53be79b1d30f795b907e553d8679345975 # v6.4.0
         with:
-          title-or-body: "both"
-          parameters: |
-            [ {"keywords": ["QGIS version: 3.30"], "labels": ["3.30"]},
-              {"keywords": ["QGIS version: 3.32"], "labels": ["3.32"]},
-              {"keywords": ["QGIS version: 3.34"], "labels": ["3.34"]}
-            ]
-          github-token: "${{ GH_TOKEN }}"
+          script: |
+              github.rest.issues.addLabels({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                labels: ["${{ steps.find_version_label.outputs.label }}"]
+              })
