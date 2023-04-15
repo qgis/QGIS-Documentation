@@ -31,21 +31,22 @@ Returns a map of variables from a layout item inside this print layout.
 map_credits
 ...........
 
-Returns a list of credit (usage rights) strings for the layers shown in a layout map item.
+Returns a list of credit (usage rights) strings for the layers shown in a layout, or specific layout map item.
 
 .. list-table::
    :widths: 15 85
 
    * - Syntax
-     - map_credits(id, [include_layer_names=false], [layer_name_separator=': '])
+     - map_credits([id], [include_layer_names=false], [layer_name_separator=': '])
 
        [] marks optional arguments
    * - Arguments
-     - * **id** - map item ID
+     - * **id** - Map item ID. If not specified, the layers from all maps in the layout will be used.
        * **include_layer_names** - Set to true to include layer names before their credit strings
        * **layer_name_separator** - String to insert between layer names and their credit strings, if include_layer_names is true
    * - Examples
-     - * ``array_to_string( map_credits( 'Main Map' ) )`` → comma separated list of layer credits for layers shown in the 'Main Map' layout item, e.g 'CC-BY-NC, CC-BY-SA'
+     - * ``array_to_string( map_credits() )`` → comma separated list of layer credits for all layers shown in all map items in the layout, e.g 'CC-BY-NC, CC-BY-SA'
+       * ``array_to_string( map_credits( 'Main Map' ) )`` → comma separated list of layer credits for layers shown in the 'Main Map' layout item, e.g 'CC-BY-NC, CC-BY-SA'
        * ``array_to_string( map_credits( 'Main Map', include_layer_names := true, layer_name_separator := ': ' ) )`` → comma separated list of layer names and their credits for layers shown in the 'Main Map' layout item, e.g. 'Railway lines: CC-BY-NC, Basemap: CC-BY-SA'
 
 
