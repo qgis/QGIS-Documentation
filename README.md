@@ -169,7 +169,7 @@ Some languages will also need specific fonts installed:
 
 # Translating
 
-We rely on the [Transifex platform](https://transifex.com) to store and coordinate
+We rely on the [Transifex platform](https://www.transifex.com) to store and coordinate
 our translation efforts. To be part of the translation team, please follow
 [becoming a translator](https://www.qgis.org/en/site/getinvolved/translate.html#becoming-a-translator).
 
@@ -244,7 +244,7 @@ In that case, you need to manually pull the translations from Transifex to your 
    This file should be named: ``.transifexrc`` and easiest is to put it in your home dir.
    The file should contain this:
    ```
-   [https://www.transifex.com]
+   [https://app.transifex.com]
    rest_hostname = https://rest.api.transifex.com
    token = yourtransifextoken
    ```

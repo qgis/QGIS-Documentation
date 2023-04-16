@@ -563,8 +563,12 @@ with the :ref:`Plugin Manager <plugins>`.
 Automate packaging, release and translation with qgis-plugin-ci
 ---------------------------------------------------------------
 
-`qgis-plugin-ci <https://opengisch.github.io/qgis-plugin-ci/>`_ provides a command line interface to perform automated packaging and deployment for QGIS plugins on your computer, or using continuous integration 
-like `GitHub workflows <https://docs.github.com/en/actions/using-workflows>`_ or `Gitlab-CI <https://docs.gitlab.com/ee/ci/>`_ as well as `Transifex <https://www.transifex.com/>`_ for translation.
+`qgis-plugin-ci <https://opengisch.github.io/qgis-plugin-ci/>`_ provides a command line interface
+to perform automated packaging and deployment for QGIS plugins on your computer,
+or using continuous integration
+like `GitHub workflows <https://docs.github.com/en/actions/using-workflows>`_
+or `Gitlab-CI <https://docs.gitlab.com/ee/ci/>`_
+as well as `Transifex <https://www.transifex.com/>`_ for translation.
 
 It allows releasing, translating, publishing or generating an XML plugin repository file via CLI or in CI actions. 
 
