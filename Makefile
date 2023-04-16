@@ -133,8 +133,8 @@ all: springclean
 # this will pull ALL translations (or at least from the languages we build for)
 # to your local disk, so it can be committed into github
 # in that way a build from git will contain those translation
-# tx is the python transifex cli client (pip install transifex-client)
-# because differences between chinese language codes in Sphinx and
+# tx is the python transifex cli client.
+# Because differences between chinese language codes in Sphinx and
 # transifex, we need to replace the underscores by dashes,
 # the english language is removed to avoid pulling the po source files.
 # finally, the spaces are replaced by commas. In the end we have something like this
