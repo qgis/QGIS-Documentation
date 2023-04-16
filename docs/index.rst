@@ -23,7 +23,7 @@
 .. only:: i18n
 
   .. note:: This documentation is translated from the original English version
-    by community members on `Transifex <https://transifex.com/qgis/qgis-documentation>`_.
+    by community members on `Transifex <https://explore.transifex.com/qgis/qgis-documentation>`_.
 
     Depending on the translation effort's :ref:`completion level <translation_stats>`,
     you may find paragraphs or whole pages which are still in English.

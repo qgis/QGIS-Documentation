@@ -126,7 +126,7 @@ is being translated. So when a new LTR is published, we disconnect the old one a
 - [ ] ⚠️ Make sure that the translated files from the old LTR branch have been correctly pasted
   to the new LTR branch
 - [ ] Link the new LTR branch to the QGIS-Documentation project
-  ([read docs on Transifex](https://docs.transifex.com/transifex-github-integrations/github-tx-ui))
+  ([read docs on Transifex](https://help.transifex.com/en/articles/6265125-github-via-transifex-ui))
 - [ ] If the connection above does not correctly proceed and update files in the transifex platform,
   see workaround instructions in [README](README.md) file
 </details>
