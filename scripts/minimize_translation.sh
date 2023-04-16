@@ -2,7 +2,7 @@
 
 # This script is used to pull translated resources of QGIS-Documentation
 # from Transifex, clean and keep only the translated strings in them.
-# https://www.transifex.com
+# https://app.transifex.com/qgis/qgis-documentation/dashboard/
 #
 # Run `minimize_translation.sh -l yourlanguage`
 # or `minimize_translation.sh` for all languages
