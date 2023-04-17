@@ -52,7 +52,7 @@ Returns an aggregate value calculated using features from another layer.
 
        * **expression** - sub expression or field name to aggregate
        * **filter** - optional filter expression to limit the features used for calculating the aggregate. Fields and geometry are from the features on the joined layer. The source feature can be accessed with the variable @parent.
-       * **concatenator** - optional string to use to join values for 'concatenate' aggregate
+       * **concatenator** - optional string to use to join values for 'concatenate' and 'concatenate_unique' aggregates
        * **order_by** - optional filter expression to order the features used for calculating the aggregate. Fields and geometry are from the features on the joined layer. By default, the features will be returned in an unspecified order.
    * - Examples
      - * ``aggregate(layer:='rail_stations',aggregate:='sum',expression:="passengers")`` → sum of all values from the passengers field in the rail_stations layer

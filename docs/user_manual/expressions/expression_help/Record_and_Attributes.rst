@@ -272,7 +272,7 @@ If called with a 'feature' parameter only, the function returns TRUE if the spec
      - * **feature** - The feature which should be checked for selection.
    * - Examples
      - * ``is_selected(@atlas_feature)`` → TRUE if the current atlas feature is selected.
-       * ``is_selected(get_feature('streets', 'name', 'Main St.')))`` → TRUE if the unique named "Main St." feature on the active "streets" layer is selected.
+       * ``is_selected(get_feature('streets', 'name', 'Main St.'))`` → TRUE if the unique named "Main St." feature on the active "streets" layer is selected.
        * ``is_selected(get_feature_by_id('streets', 1))`` → TRUE if the feature with the id 1 on the active "streets" layer is selected.
 
 
