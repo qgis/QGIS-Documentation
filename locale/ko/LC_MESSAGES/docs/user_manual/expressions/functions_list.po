@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-07 10:09+0000\n"
+"POT-Creation-Date: 2023-04-17 05:05+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
 "Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2023\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
@@ -938,11 +938,12 @@ msgstr ""
 "도형을 가져옵니다. 변수 @parent를 통해 소스 객체에 접근할 수 있습니다."
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:55
-#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:576
 msgid ""
 "**concatenator** - optional string to use to join values for 'concatenate' "
-"aggregate"
-msgstr "**concatenator** - '연쇄(concatenate)' 집계를 위한 값을 결합하는 데 사용할 부가적인 문자열"
+"and 'concatenate_unique' aggregates"
+msgstr ""
+"**concatenator** - '연쇄(concatenate)' 및 '유일값 연쇄(concatenate_unique)' 집계를 위한 "
+"값을 결합하는 데 사용할 부가적인 문자열"
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:56
 msgid ""
@@ -1849,6 +1850,12 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:546
 msgid "**relation** - a string, representing a relation ID"
 msgstr "**relation** - 관계 ID를 표현하는 문자열"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:576
+msgid ""
+"**concatenator** - optional string to use to join values for 'concatenate' "
+"aggregate"
+msgstr "**concatenator** - '연쇄(concatenate)' 집계를 위한 값을 결합하는 데 사용할 부가적인 문자열"
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:577
 msgid ""
@@ -7606,10 +7613,10 @@ msgstr "``geom_to_wkt(flip_coordinates(make_point(1, 2)))`` → 'Point (2 1)'"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:62
 msgid ""
 "``geom_to_wkt(flip_coordinates(geom_from_wkt('LineString(0 2, 1 0, 1 "
-"6)')))))`` → 'LineString (2 0, 0 1, 6 1)'"
+"6)')))`` → 'LineString (2 0, 0 1, 6 1)'"
 msgstr ""
 "``geom_to_wkt(flip_coordinates(geom_from_wkt('LineString(0 2, 1 0, 1 "
-"6)')))))`` → 'LineString (2 0, 0 1, 6 1)'"
+"6)')))`` → 'LineString (2 0, 0 1, 6 1)'"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:425
 msgid "Further reading: :ref:`qgisswapxy` algorithm"
@@ -7638,10 +7645,10 @@ msgstr "**geometry** - 도형. 폴리곤이 아닌 도형은 그대로 반환됩
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
 msgid ""
 "``geom_to_wkt(force_polygon_ccw(geometry:=geom_from_wkt('Polygon ((-1 -1, 0 "
-"2, 4 2, 4 0, -1 -1)))')))`` → 'Polygon ((-1 -1, 4 0, 4 2, 0 2, -1 -1))'"
+"2, 4 2, 4 0, -1 -1))')))`` → 'Polygon ((-1 -1, 4 0, 4 2, 0 2, -1 -1))'"
 msgstr ""
 "``geom_to_wkt(force_polygon_ccw(geometry:=geom_from_wkt('Polygon ((-1 -1, 0 "
-"2, 4 2, 4 0, -1 -1)))')))`` → 'Polygon ((-1 -1, 4 0, 4 2, 0 2, -1 -1))'"
+"2, 4 2, 4 0, -1 -1))')))`` → 'Polygon ((-1 -1, 4 0, 4 2, 0 2, -1 -1))'"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:431
 msgid ""
@@ -10693,10 +10700,10 @@ msgstr "**tolerance** - 반환된 포인트와 진극 위치 사이의 최장 �
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
 msgid ""
 "``geom_to_wkt(pole_of_inaccessibility( geom_from_wkt('POLYGON((0 1, 0 9, 3 "
-"10, 3 3, 10 3, 10 1, 0 1))'), 0.1))'`` → 'Point(1.546875 2.546875)'"
+"10, 3 3, 10 3, 10 1, 0 1))'), 0.1))`` → 'Point(1.546875 2.546875)'"
 msgstr ""
 "``geom_to_wkt(pole_of_inaccessibility( geom_from_wkt('POLYGON((0 1, 0 9, 3 "
-"10, 3 3, 10 3, 10 1, 0 1))'), 0.1))'`` → 'Point(1.546875 2.546875)'"
+"10, 3 3, 10 3, 10 1, 0 1))'), 0.1))`` → 'Point(1.546875 2.546875)'"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:608
 msgid "Further reading: :ref:`qgispoleofinaccessibility` algorithm"
@@ -15074,11 +15081,11 @@ msgstr "``is_selected(@atlas_feature)`` → TRUE, 현재 지도책 피처를 선
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:54
 msgid ""
-"``is_selected(get_feature('streets', 'name', 'Main St.')))`` → TRUE if the "
+"``is_selected(get_feature('streets', 'name', 'Main St.'))`` → TRUE if the "
 "unique named \"Main St.\" feature on the active \"streets\" layer is "
 "selected."
 msgstr ""
-"``is_selected(get_feature('streets', 'name', 'Main St.')))`` → TRUE, 활성화된 "
+"``is_selected(get_feature('streets', 'name', 'Main St.'))`` → TRUE, 활성화된 "
 "\"streets\" 레이어에서 유일한 \"Main St.\" 이름을 가진 피처를 선택한 경우"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:55
