@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-07 10:09+0000\n"
+"POT-Creation-Date: 2023-04-17 05:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -930,10 +930,9 @@ msgid ""
 msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:55
-#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:576
 msgid ""
 "**concatenator** - optional string to use to join values for "
-"'concatenate' aggregate"
+"'concatenate' and 'concatenate_unique' aggregates"
 msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:56
@@ -1777,6 +1776,12 @@ msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:546
 msgid "**relation** - a string, representing a relation ID"
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:576
+msgid ""
+"**concatenator** - optional string to use to join values for "
+"'concatenate' aggregate"
 msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:577
@@ -7196,7 +7201,7 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:62
 msgid ""
 "``geom_to_wkt(flip_coordinates(geom_from_wkt('LineString(0 2, 1 0, 1 "
-"6)')))))`` → 'LineString (2 0, 0 1, 6 1)'"
+"6)')))`` → 'LineString (2 0, 0 1, 6 1)'"
 msgstr ""
 
 #: ../../docs/user_manual/expressions/functions_list.rst:425
@@ -7226,8 +7231,7 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
 msgid ""
 "``geom_to_wkt(force_polygon_ccw(geometry:=geom_from_wkt('Polygon ((-1 -1,"
-" 0 2, 4 2, 4 0, -1 -1)))')))`` → 'Polygon ((-1 -1, 4 0, 4 2, 0 2, -1 "
-"-1))'"
+" 0 2, 4 2, 4 0, -1 -1))')))`` → 'Polygon ((-1 -1, 4 0, 4 2, 0 2, -1 -1))'"
 msgstr ""
 
 #: ../../docs/user_manual/expressions/functions_list.rst:431
@@ -9865,7 +9869,7 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
 msgid ""
 "``geom_to_wkt(pole_of_inaccessibility( geom_from_wkt('POLYGON((0 1, 0 9, "
-"3 10, 3 3, 10 3, 10 1, 0 1))'), 0.1))'`` → 'Point(1.546875 2.546875)'"
+"3 10, 3 3, 10 3, 10 1, 0 1))'), 0.1))`` → 'Point(1.546875 2.546875)'"
 msgstr ""
 
 #: ../../docs/user_manual/expressions/functions_list.rst:608
@@ -14009,8 +14013,8 @@ msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:54
 msgid ""
-"``is_selected(get_feature('streets', 'name', 'Main St.')))`` → TRUE if "
-"the unique named \"Main St.\" feature on the active \"streets\" layer is "
+"``is_selected(get_feature('streets', 'name', 'Main St.'))`` → TRUE if the"
+" unique named \"Main St.\" feature on the active \"streets\" layer is "
 "selected."
 msgstr ""
 
