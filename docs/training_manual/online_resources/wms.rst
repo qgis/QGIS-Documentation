@@ -236,11 +236,11 @@ Part of the difficulty of using WMS is finding a good (free) server.
 
    You may notice that many WMS servers are not always available. Sometimes this
    is temporary, sometimes it is permanent. An example of a WMS server that
-   worked at the time of writing is the :guilabel:`World Mineral Deposits` WMS
-   at http://apps1.gdr.nrcan.gc.ca/cgi-bin/worldmin_en-ca_ows. It does not
-   require fees or have access constraints, and it is global. Therefore, it does
-   satisfy the requirements. Keep in mind, however, that this is merely an
-   example. There are many other WMS servers to choose from.
+   worked at the time of writing is the :guilabel:`MapServer Demonstration Server`
+   WMS at https://demo.mapserver.org/cgi-bin/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+   . It does not require fees or have access constraints, and it is global.
+   Therefore, it does satisfy the requirements. Keep in mind, however, that this
+   is merely an example. There are many other WMS servers to choose from.
 
 
 |IC|
