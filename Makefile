@@ -106,10 +106,10 @@ pdf: latex
 	mv $(BUILDDIR)/latex/$(LANG)/QGISDocumentationGuidelines.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-DocumentationGuidelines-$(LANG).pdf || true;
 
 zip:
-	mkdir -p $(BUILDDIR)/zip/$(LANG);
+	mkdir -p $(BUILDDIR)/zip;
 	(cd $(BUILDDIR)/html; \
 	zip -r QGIS-$(VERSION)-Documentation-$(LANG).zip $(LANG)/;)
-	mv $(BUILDDIR)/html/QGIS-$(VERSION)-Documentation-$(LANG).zip $(BUILDDIR)/zip/$(LANG)/;
+	mv $(BUILDDIR)/html/QGIS-$(VERSION)-Documentation-$(LANG).zip $(BUILDDIR)/zip/;
 
 site: html zip
 	rsync -hvrzc --delete --progress $(BUILDDIR)/html/$(LANG) $(SITEDIR)/;
