@@ -634,6 +634,7 @@ extra parameters:
    ":ref:`FI_LINE_TOLERANCE <wms_filinetolerance>`", "No", "Tolerance in pixels for line layers"
    ":ref:`FI_POLYGON_TOLERANCE <wms_fipolygontolerance>`", "No", "Tolerance in pixels for polygon layers"
    ":ref:`FILTER_GEOM <wms_filtergeom>`", "No", "Geometry filtering"
+   ":ref:`WITH_DISPLAY_NAME <wms_withdisplayname>`", "No", "Add the feature display name to the output"
    ":ref:`WITH_MAPTIP <wms_withmaptip>`", "No", "Add map tips to the output"
    ":ref:`WITH_GEOMETRY <wms_withgeometry>`", "No", "Add geometry to the output"
 
@@ -761,6 +762,18 @@ FILTER_GEOM
 
 This parameter specifies a WKT geometry with which features have to
 intersect.
+
+.. _wms_withdisplayname:
+
+WITH_DISPLAY_NAME
+^^^^^^^^^^^^^^^^^
+
+This parameter specifies whether to add feature display name to the output.
+
+Available values are (not case sensitive):
+
+- ``TRUE``
+- ``FALSE``
 
 .. _wms_withmaptip:
 
