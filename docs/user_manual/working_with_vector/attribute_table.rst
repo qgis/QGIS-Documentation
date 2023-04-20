@@ -110,7 +110,7 @@ calculations to all or part of the features in the layer. This bar uses the same
 :ref:`expressions <vector_expressions>` as the |calculateField| :sup:`Field
 Calculator` (see :ref:`calculate_fields_values`).
 
-The attrbiute table support :kbd:`Shift+Mouse Wheel` scrolling in attribute table to switch to a horizontal scrolling action instead of vertical.
+The attribute table support :kbd:`Shift+Mouse Wheel` scrolling in attribute table to switch to a horizontal scrolling action instead of vertical.
 
 .. _attribute_table_view:
 
