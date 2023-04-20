@@ -112,6 +112,8 @@ Calculator` (see :ref:`calculate_fields_values`).
 
 .. _attribute_table_view:
 
+The attribute table supports horizintal scrolling with shift scroll 
+
 Table view vs Form view
 -----------------------
 
