@@ -25,7 +25,7 @@ If no replacement exists:
    (often under :source:`images/themes/default` folder)
    and paste (in ``.png`` format) under :file:`/static/common` folder.
    For convenience and update, it's advised to keep filename when possible.
-#. create the reference to the substitution in the :file:`/source/substitutions.txt`
+#. create the reference to the substitution in the :file:`/substitutions.txt`
    file following the example below. The replacement text should be in camelCase:
 
    ::
@@ -399,6 +399,7 @@ Icon                     Substitution                 Icon                     S
 |addPolygon|             ``|addPolygon|``             |addPolyline|            ``|addPolyline|``
 |addArrow|               ``|addArrow|``               |northArrow|             ``|northArrow|``
 |add3DMap|               ``|add3DMap|``               |addMap|                 ``|addMap|``
+|addElevationProfile|    ``|addElevationProfile|``    |copyElevationProfile|   ``|copyElevationProfile|``
 |addLegend|              ``|addLegend|``              |addHtml|                ``|addHtml|``
 |addManualTable|         ``|addManualTable|``         |addTable|               ``|addTable|``
 |addImage|               ``|addImage|``               |addMarker|              ``|addMarker|``
@@ -586,6 +587,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |addDelimitedTextLayer| image:: /static/common/mActionAddDelimitedTextLayer.png
    :width: 1.5em
+.. |addElevationProfile| image:: /static/common/mActionElevationProfile.png
+   :width: 1.5em   
 .. |addExpression| image:: /static/common/mActionAddExpression.png
    :width: 1.5em
 .. |addGeometryAttributes| image:: /static/common/mAlgorithmAddGeometryAttributes.png
@@ -759,6 +762,8 @@ Icon                            Substitution                        Icon        
 .. |contour| image:: /static/common/contour.png
    :width: 1.5em
 .. |convexHull| image:: /static/common/mAlgorithmConvexHull.png
+   :width: 1.5em
+.. |copyElevationProfile| image:: /static/common/mActionCopyProfileSettings.png
    :width: 1.5em
 .. |copySelected| image:: /static/common/mActionCopySelected.png
    :width: 1.5em
