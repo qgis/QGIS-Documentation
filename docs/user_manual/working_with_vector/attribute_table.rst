@@ -364,12 +364,12 @@ left of the attribute table dialog. This list offers the following filters:
   Then, only the features matching ``num_field = value`` or ``string_field ilike '%value%'``
   expression are shown in the attribute table. You can check |checkbox|
   :guilabel:`Case sensitive` to be less permissive with strings.
-* :guilabel:`Advanced filter (Expression)` - Opens the expression builder
+* |filterMap| :guilabel:`Advanced filter (Expression)` - Opens the expression builder
   dialog. Within it, you can create :ref:`complex expressions
   <vector_expressions>` to match table rows.
   For example, you can filter the table using more than one field.
   When applied, the filter expression will show up at the bottom of the form.
-* :menuselection:`Stored filter expressions -->`: a shortcut to :ref:`saved
+* |handleStoreFilterExpressionChecked| :menuselection:`Stored filter expressions -->`: a shortcut to :ref:`saved
   expressions <store_filter>` frequently used for filtering your attribute table.
 
 It is also possible to :ref:`filter features using forms <filter_select_form>`.
