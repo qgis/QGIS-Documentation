@@ -2,25 +2,26 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
-# Andrés Betancourt, 2022
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# vareli <ehespinosa@ya.com>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-12 00:23+0100\n"
-"PO-Revision-Date: 2022-03-14 05:14+0000\n"
-"Last-Translator: Andrés Betancourt, 2022\n"
-"Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: vareli <ehespinosa@ya.com>, 2023\n"
+"Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: es\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -782,32 +783,32 @@ msgid ""
 "<qgis.core.QgsVectorFileWriter.writeAsVectorFormatV3>` which saves the whole"
 " vector layer or creating an instance of the class and issue calls to "
 ":meth:`addFeature() <qgis.core.QgsVectorFileWriter.addFeature>`. This class "
-"supports all the vector formats that OGR supports (GeoPackage, Shapefile, "
+"supports all the vector formats that GDAL supports (GeoPackage, Shapefile, "
 "GeoJSON, KML and others)."
 msgstr ""
-"la clase :class:`QgsVectorFileWriter <qgis.core.QgsVectorFileWriter>`: una "
-"clase conveniente para escribir archivos vectoriales en el disco, usando una"
-" llamada estática a :meth:`writeAsVectorFormatV3() "
-"<qgis.core.QgsVectorFileWriter.writeAsVectorFormatV3>` que guarda toda la "
-"capa vectorial o crea una instancia de la clase y emite llamadas a "
-":meth:`addFeature() <qgis.core.QgsVectorFileWriter.addFeature>`. Esta clase "
-"admite todos los formatos vectoriales que admite OGR (GeoPackage, Shapefile,"
-" GeoJSON, KML y otros)."
+"la clase :class:`QgsVectorFileWriter <qgis.core.QgsVectorFileWriter>: Una "
+"clase conveniente para escribir archivos vectoriales al disco, usando o bien"
+" una llamada estática a :meth:`writeAsVectorFormatV3() "
+"<qgis.core.QgsVectorFileWriter.writeAsVectorFormatV3>` que guarda la capa "
+"vectorial entera o creando una instancia de la clase y enviando llamadas a "
+"meth:`addFeature() <qgis.core.QgsVectorFileWriter.addFeature>`. Esta clase "
+"soporta todos los formatos vectoriales que soporta GDAL s(GeoPackage, "
+"Shapefile, GeoJSON, KML y otros)."
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:739
 msgid ""
 "the :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` class: instantiates a"
 " data provider that interprets the supplied path (url) of the data source to"
 " connect to and access the data. It can be used to create temporary, memory-"
-"based layers (``memory``) and connect to OGR datasets (``ogr``), databases "
-"(``postgres``, ``spatialite``, ``mysql``, ``mssql``) and more (``wfs``, "
-"``gpx``, ``delimitedtext``...)."
+"based layers (``memory``) and connect to GDAL vector datasets (``ogr``), "
+"databases (``postgres``, ``spatialite``, ``mysql``, ``mssql``) and more "
+"(``wfs``, ``gpx``, ``delimitedtext``...)."
 msgstr ""
 "la clase :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>`: crea una "
-"instancia de un proveedor de datos que interpreta la ruta de acceso "
-"proporcionada (url) del origen de datos para conectarse a los datos y tener "
-"acceso a ellos. Se puede utilizar para crear capas temporales basadas en "
-"memoria (``memory``) y conectarse a datasets OGR (``ogr``), bases de datos "
+"instancia de un proveedor de datos que interpreta la ruta seleccionada (url)"
+" de la fuente de datos para conectar y acceder a los datos. Se puede usar "
+"para crear capas temporales, basadas en la memoria (``memoria``) y conectar "
+"a conjunto de datos vectoriales GDAL (``ogr``), bases de datos "
 "(``postgres``, ``spatialite``, ``mysql``, ``mssql``) y más (``wfs``, "
 "``gpx``, ``delimitedtext``...)."
 
@@ -1053,7 +1054,7 @@ msgstr "singleSymbol"
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:1044
 msgid ":class:`QgsSingleSymbolRenderer <qgis.core.QgsSingleSymbolRenderer>`"
-msgstr ":class:`QgsSingleSymbolRenderer <qgis.core.QgsSingleSymbolRenderer>`"
+msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:1044
 msgid "Renders all features with the same symbol"
@@ -1068,8 +1069,6 @@ msgid ""
 ":class:`QgsCategorizedSymbolRenderer "
 "<qgis.core.QgsCategorizedSymbolRenderer>`"
 msgstr ""
-":class:`QgsCategorizedSymbolRenderer "
-"<qgis.core.QgsCategorizedSymbolRenderer>`"
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:1045
 msgid "Renders features using a different symbol for each category"
@@ -1084,7 +1083,6 @@ msgstr "graduatedSymbol"
 msgid ""
 ":class:`QgsGraduatedSymbolRenderer  <qgis.core.QgsGraduatedSymbolRenderer>`"
 msgstr ""
-":class:`QgsGraduatedSymbolRenderer  <qgis.core.QgsGraduatedSymbolRenderer>`"
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:1046
 msgid "Renders features using a different symbol for each range of values"
@@ -1182,55 +1180,55 @@ msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:1104
 msgid "``circle``"
-msgstr "``circle``"
+msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:1105
 msgid "``square``"
-msgstr "``square``"
+msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:1106
 msgid "``cross``"
-msgstr "``cross``"
+msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:1107
 msgid "``rectangle``"
-msgstr "``rectangle``"
+msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:1108
 msgid "``diamond``"
-msgstr "``diamond``"
+msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:1109
 msgid "``pentagon``"
-msgstr "``pentagon``"
+msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:1110
 msgid "``triangle``"
-msgstr "``triangle``"
+msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:1111
 msgid "``equilateral_triangle``"
-msgstr "``equilateral_triangle``"
+msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:1112
 msgid "``star``"
-msgstr "``star``"
+msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:1113
 msgid "``regular_star``"
-msgstr "``regular_star``"
+msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:1114
 msgid "``arrow``"
-msgstr "``arrow``"
+msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:1115
 msgid "``filled_arrowhead``"
-msgstr "``filled_arrowhead``"
+msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:1116
 msgid "``x``"
-msgstr "``x``"
+msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:1119
 msgid ""
@@ -1464,7 +1462,7 @@ msgstr ""
 "predeterminadas son los tipos de capas de símbolo `` SimpleMarker '', `` "
 "SimpleLine '' y `` SimpleFill ''."
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1341
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1342
 msgid ""
 "The :class:`QgsSymbolLayerRegistry <qgis.core.QgsSymbolLayerRegistry>` class"
 " manages a database of all available symbol layer types."
@@ -1473,7 +1471,7 @@ msgstr ""
 "gestiona una base de datos de todos los tipos de capas de símbolos "
 "disponibles."
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1344
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1345
 msgid ""
 "To access symbol layer data, use its :meth:`properties() "
 "<qgis.core.QgsSymbolLayer.properties>` method that returns a key-value "
@@ -1498,11 +1496,11 @@ msgstr ""
 " el tamaño y el ángulo solo están disponibles para las capas de símbolo de "
 "marcador y el ancho para las capas de símbolo de línea."
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1356
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1357
 msgid "Creating Custom Symbol Layer Types"
 msgstr "Crear tipos de capas de símbolos personalizados"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1358
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1359
 msgid ""
 "Imagine you would like to customize the way how the data gets rendered. You "
 "can create your own symbol layer class that will draw the features exactly "
@@ -1514,7 +1512,7 @@ msgstr ""
 "exactamente como lo desee. Aquí hay un ejemplo de un marcador que dibuja "
 "círculos rojos con un radio especificado"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1398
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1399
 msgid ""
 "The :meth:`layerType() <qgis.core.QgsSymbolLayer.layerType>` method "
 "determines the name of the symbol layer; it has to be unique among all "
@@ -1544,7 +1542,7 @@ msgstr ""
 "renderizado. Las coordenadas de los puntos ya están transformadas a las "
 "coordenadas de salida."
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1410
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1411
 msgid ""
 "For polylines and polygons the only difference would be in the rendering "
 "method: you would use :meth:`renderPolyline() "
@@ -1562,7 +1560,7 @@ msgstr ""
 "el anillo exterior como primer parámetro y una lista de anillos interiores "
 "(o Ninguno) como segundo parámetro."
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1418
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1419
 msgid ""
 "Usually it is convenient to add a GUI for setting attributes of the symbol "
 "layer type to allow users to customize the appearance: in case of our "
@@ -1575,7 +1573,7 @@ msgstr ""
 "usuario establezca el radio del círculo. El siguiente código implementa "
 "dicho widget"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1456
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1457
 msgid ""
 "This widget can be embedded into the symbol properties dialog. When the "
 "symbol layer type is selected in symbol properties dialog, it creates an "
@@ -1599,7 +1597,7 @@ msgstr ""
 "de símbolo nuevamente mediante el diálogo de propiedades para usarla para el"
 " símbolo."
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1466
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1467
 msgid ""
 "On every change of attributes, the widget should emit the :any:`changed() "
 "<qgis.gui.QgsSymbolLayerWidget.changed>` signal to let the properties dialog"
@@ -1609,7 +1607,7 @@ msgstr ""
 "<qgis.gui.QgsSymbolLayerWidget.changed>` para permitir que el diálogo de "
 "propiedades actualice la vista previa del símbolo."
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1470
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1471
 msgid ""
 "Now we are missing only the final glue: to make QGIS aware of these new "
 "classes. This is done by adding the symbol layer to registry. It is possible"
@@ -1624,11 +1622,11 @@ msgstr ""
 "con capas de símbolo personalizadas o incapacidad para editar los atributos "
 "de la capa en la GUI."
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1476
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1477
 msgid "We will have to create metadata for the symbol layer"
 msgstr "Tendremos que crear metadatos para la capa de símbolo."
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1497
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1498
 msgid ""
 "You should pass layer type (the same as returned by the layer) and symbol "
 "type (marker/line/fill) to the constructor of the parent class. The "
@@ -1648,7 +1646,7 @@ msgstr ""
 "<qgis.core.QgsSymbolLayerAbstractMetadata.createSymbolLayerWidget>` que "
 "devuelve el widget de configuración para este tipo de capa de símbolo."
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1505
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1506
 msgid ""
 "The last step is to add this symbol layer to the registry --- and we are "
 "done."
@@ -1656,11 +1654,11 @@ msgstr ""
 "El último pase es adicionar esta capa símbolo al registro --- y estamos "
 "listos."
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1511
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1512
 msgid "Creating Custom Renderers"
 msgstr "Crear Renderizados personalizados"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1513
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1514
 msgid ""
 "It might be useful to create a new renderer implementation if you would like"
 " to customize the rules how to select symbols for rendering of features. "
@@ -1674,7 +1672,7 @@ msgstr ""
 "símbolo se determina a partir de una combinación de campos, el tamaño de los"
 " símbolos cambia según la escala actual, etc."
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1518
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1519
 msgid ""
 "The following code shows a simple custom renderer that creates two marker "
 "symbols and chooses randomly one of them for every feature"
@@ -1683,7 +1681,7 @@ msgstr ""
 "dos símbolos de marcador y elige aleatoriamente uno de ellos para cada "
 "objeto."
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1554
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1555
 msgid ""
 "The constructor of the parent :class:`QgsFeatureRenderer "
 "<qgis.core.QgsFeatureRenderer>` class needs a renderer name (which has to be"
@@ -1712,7 +1710,7 @@ msgstr ""
 "el método :meth:`clone() <qgis.core.QgsFeatureRenderer.clone>` debería "
 "devolver una copia del renderizador."
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1565
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1566
 msgid ""
 "Like with symbol layers, it is possible to attach a GUI for configuration of"
 " the renderer. It has to be derived from :class:`QgsRendererWidget "
@@ -1725,7 +1723,7 @@ msgstr ""
 " de muestra crea un botón que permite al usuario establecer el primer "
 "símbolo"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1599
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1600
 msgid ""
 "The constructor receives instances of the active layer "
 "(:class:`QgsVectorLayer <qgis.core.QgsVectorLayer>`), the global style "
@@ -1748,7 +1746,7 @@ msgstr ""
 "<qgis.gui.QgsRendererWidget.renderer>` para obtener el renderizador actual "
 "--- se asignará a la capa."
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1609
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1610
 msgid ""
 "The last missing bit is the renderer metadata and registration in registry, "
 "otherwise loading of layers with the renderer will not work and user will "
@@ -1760,7 +1758,7 @@ msgstr ""
 "funcionará y el usuario no podrá seleccionarlo de la lista de "
 "renderizadores. Terminemos nuestro ejemplo de RandomRenderer"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1639
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1640
 msgid ""
 "Similarly as with symbol layers, abstract metadata constructor awaits "
 "renderer name, name visible for users and optionally name of renderer's "
@@ -1783,7 +1781,7 @@ msgstr ""
 " de configuración. No tiene que estar presente o puede devolver ``Ninguno`` "
 "si el renderizador no viene con GUI."
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1648
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1649
 msgid ""
 "To associate an icon with the renderer you can assign it in the "
 ":class:`QgsRendererAbstractMetadata <qgis.core.QgsRendererAbstractMetadata>`"
@@ -1796,7 +1794,7 @@ msgstr ""
 "--- el constructor de la clase base en la función RandomRendererMetadata "
 ":func:`__init__` se convierte en"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1662
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1663
 msgid ""
 "The icon can also be associated at any later time using the :meth:`setIcon()"
 " <qgis.core.QgsRendererAbstractMetadata.setIcon>` method of the metadata "
@@ -1811,29 +1809,29 @@ msgstr ""
 "<https://doc.qt.io/qt-5/resources.html>`_ (PyQt5 incluye el compilador .qrc "
 "para Pitón)."
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1670
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1671
 msgid "Further Topics"
 msgstr "Más Temas"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1673
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1674
 msgid "**TODO:**"
 msgstr "**PENDIENTE:**"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1675
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1676
 msgid "creating/modifying symbols"
 msgstr "crear/modificar símbolos"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1676
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1677
 msgid "working with style (:class:`QgsStyle <qgis.core.QgsStyle>`)"
 msgstr "trabajandocon estilo (:class:`QgsStyle <qgis.core.QgsStyle>`)"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1677
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1678
 msgid ""
 "working with color ramps (:class:`QgsColorRamp <qgis.core.QgsColorRamp>`)"
 msgstr ""
 "trabajando con rampas de color (:class:`QgsColorRamp "
 "<qgis.core.QgsColorRamp>`)"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:1678
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:1679
 msgid "exploring symbol layer and renderer registries"
 msgstr "explorar la capa de símbolo y los registros de renderizado"
