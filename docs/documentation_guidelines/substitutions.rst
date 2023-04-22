@@ -399,7 +399,7 @@ Icon                     Substitution                 Icon                     S
 |addPolygon|             ``|addPolygon|``             |addPolyline|            ``|addPolyline|``
 |addArrow|               ``|addArrow|``               |northArrow|             ``|northArrow|``
 |add3DMap|               ``|add3DMap|``               |addMap|                 ``|addMap|``
-|addElevationProfile|    ``|addElevationProfile|``    |copyElevationProfile|   ``|copyElevationProfile``
+|addElevationProfile|    ``|addElevationProfile|``    |copyElevationProfile|   ``|copyElevationProfile|``
 |addLegend|              ``|addLegend|``              |addHtml|                ``|addHtml|``
 |addManualTable|         ``|addManualTable|``         |addTable|               ``|addTable|``
 |addImage|               ``|addImage|``               |addMarker|              ``|addMarker|``
