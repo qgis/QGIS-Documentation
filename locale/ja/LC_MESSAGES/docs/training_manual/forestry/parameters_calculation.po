@@ -2,25 +2,26 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
-# Miyoshi Tomoya, 2022
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# Miyoshi Tomoya, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-16 07:30+0000\n"
-"PO-Revision-Date: 2022-03-14 05:08+0000\n"
-"Last-Translator: Miyoshi Tomoya, 2022\n"
-"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Miyoshi Tomoya, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -49,7 +50,7 @@ msgstr "|basic| |FA|  調査結果を追加する"
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:200
 msgid "basic"
-msgstr "basic"
+msgstr ""
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:14
 msgid ""
@@ -80,7 +81,7 @@ msgstr "まず、QGIS プロジェクトにサンプルプロットの測定を�
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:26
 msgid "Go to :menuselection:`Layer --> Add Delimited Text Layer...`."
-msgstr ":menuselection:`レイヤー - >区切りのテキストレイヤーを追加...` に行きます。"
+msgstr ":menuselection:`レイヤ --> 区切りのテキストレイヤを追加...` に行きます。"
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:27
 msgid ""
@@ -219,7 +220,7 @@ msgid ""
 "the stand inventory. Nevertheless, you will get information for a good "
 "number of stands just using the planned plots."
 msgstr ""
-"以前にデジタイズされた別の林分のための推定値を算出するために、同じ体系的サンプルプロットを利用できます。林分の一部はどんなサンプルプロットも取得しておらず、そしてそれらについては情報は取得されないでしょう。体系的な調査を計画するときに、野外チームがこの目的のためにいくつかの余分なサンプルプロットを測定するように、いくつかの余分なサンプルプロットを計画することもできたかもしれません。あるいは後で野外チームを送って不足している林分の見積を取得することで林分の調査を完了することもできたかもしれません。それにもかかわらず、計画されたプロットを使用するだけで林分のかなりの数の情報が得られるでしょう。"
+"以前にデジタイズした林分の推定値を算出するのに、同じ体系的サンプルプロットを利用できます。林分の一部はどんなサンプルプロットも取得しておらず、それらについては情報を得ることはできません。体系的な目録を計画するときに、野外チームがこの目的のためにいくつかの余分なサンプルプロットを測定するように、いくつかの余分なサンプルプロットを計画することもできたかもしれません。あるいは後で野外チームを送って不足している林分の見積を取得することで林分の調査を完了することもできたかもしれません。それでも、計画されたプロットを使用するだけで林分のかなりの数の情報が得られるでしょう。"
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:85
 msgid ""
@@ -227,21 +228,42 @@ msgid ""
 "within each of the forest stands. When you want to combine information based"
 " on their relative locations, you perform a spatial join:"
 msgstr ""
-"必要なのは林分のそれぞれの中に落ちているサンプルプロットの平均値を取得することです。それらの相対的な位置に基づいて情報を組み合わせたいときは、空間的結合を行います："
+"必要なのは林分の中にあるサンプルプロットの平均値を取得することです。それらの相対的な位置に基づいて情報を結合したいときは、空間的結合を行います："
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:89
 msgid ""
 "Open the  :menuselection:`Vector --> Data Management --> Join attributes by "
 "location` tool."
-msgstr ":menuselection:`ベクター --> データ管理 --> 位置により属性を結合` ツールを開きます。"
+msgstr ":menuselection:`ベクタ --> データ管理 --> 位置により属性を結合` ツールを開きます。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:91
+msgid ""
+"Set ``forest_stands_2012`` as the :guilabel:`Target vector layer`. The layer"
+" you want the results for."
+msgstr ":guilabel:`ターゲットベクタレイヤ` に ``forest_stands_2012`` を設定します。結果が欲しいレイヤ。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:93
+msgid ""
+"Set ``sample_plots_results`` as the :guilabel:`Join vector layer`. The layer"
+" you want to calculate estimates from."
+msgstr ""
+"``sample_plots_results`` を :guilabel:`結合するベクタレイヤ` に設定します。推定値を計算したいレイヤ。"
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:95
 msgid "Check :guilabel:`Take summary of intersecting features`."
-msgstr ":guilabel:`交わる地物を集計` をチェックします。"
+msgstr ":guilabel:`交差する地物を集計` をチェックします。"
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:96
 msgid "Check to calculate only the :guilabel:`Mean`."
 msgstr ":guilabel:`平均` だけ計算するようチェックしてください。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:97
+msgid ""
+"Name the result as :file:`forest_stands_2012_results.shp` and save it in the"
+" :file:`exercise_data/forestry/results/` folder."
+msgstr ""
+"結果を :file:``forest_stands_2012_results.shp` として "
+":file:`exercise_data/forestry/results` フォルダーに保存します。"
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:99
 msgid ""
@@ -252,11 +274,37 @@ msgstr ""
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:102
 msgid "Accept adding the new layer to your project when prompted."
-msgstr "プロンプトが表示されたら、プロジェクトに新しいレイヤーを追加し受け入れます。"
+msgstr "プロンプトが表示されたら、プロジェクトに新しいレイヤを追加し受け入れます。"
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:103
 msgid "Close the :guilabel:`Join attributes by location` tool."
 msgstr ":guilabel:`位置によって属性を結合` ツールを閉じます。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:105
+msgid ""
+"Open the :guilabel:`Attribute table` for "
+":guilabel:`forest_stands_2012_results` and review the results you got. Note "
+"that a number of forest stands have ``NULL`` as the value for the "
+"calculations, those are the ones having no sample plots. Select them all and"
+" view them in the map, they are some of the smaller stands:"
+msgstr ""
+":guilabel:`forest_stands_2012_results` の :guilabel:`属性テーブル` "
+"を開き、得られた結果を確認してください。多くの林分が ``NULL`` "
+"を計算値として持っていることに注意してください、それらはサンプルプロットがないものです。これらをすべて選択し、マップに表示すると、小規模な林分となります："
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:114
+msgid ""
+"Lets calculate now the same averages for the whole forest as you did before,"
+" only this time you will use the averages you got for the stands as the "
+"bases for the calculation. Remember that in the previous situation, each "
+"sample plot represented a theoretical stand of ``80x80 m``. Now you have to "
+"consider the area of each of the stands individually instead. That way, "
+"again, the average values of the parameters that are in, for example, m3/ha "
+"for the volumes are converted to total volumes for the stands."
+msgstr ""
+"先ほどと同じように森林全体の平均を計算しましょう。ただし、今回は林分の平均を計算のベースとして使用します。先ほどは、各サンプルプロットが ``80x80"
+" m`` "
+"の理論上の林分を表していたことを思い出してください。その代わりに、それぞれの林分の面積を個別に考慮する必要があります。そうすることで、例えば体積をm3/haで表したパラメータの平均値が、林分の総体積に変換されるのです。"
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:122
 msgid ""
@@ -272,15 +320,43 @@ msgstr ":guilabel:`属性テーブル` 中で編集を有効にします。"
 msgid "Open the :guilabel:`Field calculator`."
 msgstr ":guilabel:`フィールド計算機` を開きます。"
 
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:127
+msgid "Create a new field called ``area``."
+msgstr "``area`` という新しいフィールドを作成します。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:128
+msgid "Set the :guilabel:`Output field type` to ``Decimal number (real)``."
+msgstr ":guilabel:`フィールド型` に ``小数点付き数値 (real)`` を設定します。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:129
+msgid "Set the :guilabel:`Precision` to ``2``."
+msgstr ":guilabel:`精度` に ``2`` を設定します。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:130
+msgid ""
+"In the :guilabel:`Expression` box, write ``$area / 10000``. This will "
+"calculate the area of the forest stands in ha."
+msgstr ":guilabel:`式` ボックスに、 ``$area / 10000`` を入力します。これは林分の面積をhaで計算します。"
+
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:134
 msgid ""
 "Now calculate a field with the total volumes and number of stems estimated "
 "for every stand:"
-msgstr "ここですべての林分について推定される体積合計および茎数合計を持つフィールドを計算します："
+msgstr "ここですべての林分について推定される体積合計および幹数合計を持つフィールドを計算します："
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:136
+msgid "Name the fields ``s_vol`` and ``s_stem``."
+msgstr "そのフィールドを ``s_vol`` と ``s_stem`` とします。"
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:137
 msgid "The fields can be integer numbers or you can use real numbers also."
 msgstr "フィールドは整数でもよいし、実数も使用できます。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:138
+msgid ""
+"Use the expressions ``\"area\"  *  \"MEANVol\"`` and ``\"area\"  *  "
+"\"MEANStems\"`` for total volumes and total stems respectively."
+msgstr "体積合計と幹数合計にそれぞれ式 ``\"area\" * \"MEANVol\"`` と ``\"area\" * \"MEANStems\"`` を使います。"
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:140
 msgid "Save the edits when you are finished."
@@ -298,7 +374,50 @@ msgid ""
 "volumes or number of stems by the sum of the areas of the stands containing "
 "information."
 msgstr ""
-"以前の状況では、すべてのサンプルプロットによって表される面積が同じだったので、サンプルプロットの平均値を計算すれば十分でした。今は見積もりを計算するためには、林分の体積または茎数の合計を必要な情報を含む林分の面積の合計で割る必要があります。"
+"以前の状況では、すべてのサンプルプロットによって表される面積が同じだったので、サンプルプロットの平均値を計算すれば十分でした。今は見積もりを計算するためには、林分の体積または幹数の合計を必要な情報を含む林分の面積の合計で割る必要があります。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:148
+msgid ""
+"In the :guilabel:`Attribute table` for the "
+":file:`forest_stands_2012_results` layer, select all the stands containing "
+"information."
+msgstr ""
+":file:`forest_stands_2012_results` レイヤの :guilabel:`属性テーブル` "
+"で情報を持っている全ての林分を選択します。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:150
+msgid ""
+"Open :menuselection:`Vector --> Analysis Tools --> Basic statistics for "
+"fields`."
+msgstr ":menuselection:`ベクタ --> 解析ツール --> 属性の基本統計量` を開きます。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:151
+msgid ""
+"Select the :file:`forest_stands_2012_results` as the :guilabel:`Input "
+"layer`."
+msgstr ":guilabel:`入力レイヤ` に :file:`forest_stands_2012_results` を選択します。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:152
+msgid "Select ``area`` as :guilabel:`Field to calculate statistics on`."
+msgstr ":guilabel:`統計量を計算する属性` に ``area`` を設定する。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:153
+msgid "Check the :guilabel:`Selected features only`"
+msgstr ":guilabel:`選択した地物のみ` をチェックする"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:159
+msgid ""
+"As you can see, the total sum of the stands' areas is ``66.04 ha``. Note "
+"that the area of the missing forest stands is only about ``7 ha``."
+msgstr ""
+"ここに見えるように、林分面積の合計は ``66.04 ha`` です。抜けている林分の面積が ``7 ha`` に過ぎないことに注意してください。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:162
+msgid ""
+"In the same way, you can calculate that the total volume for these stands is"
+" ``8908 m3/ha`` and the total number of stems is ``179594 stems``."
+msgstr ""
+"同じ方法で これらの林分の体積の合計が ``8908 m3/ha``、幹数の合計が ``179594 stems`` であることが計算できます。"
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:165
 msgid ""
@@ -306,9 +425,21 @@ msgid ""
 " from the sample plots, gives the following average estimates:"
 msgstr "サンプルプロットから、下記の平均推定値を与えることを使用して林分からの情報を使用して、代わりに直接："
 
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:168
+msgid "``184.9 m3/ha`` and"
+msgstr "``184.9 m3/ha`` と"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:169
+msgid "``2719 stems/ha``."
+msgstr "``2719 stems/ha``。"
+
+#: ../../docs/training_manual/forestry/parameters_calculation.rst:171
+msgid "Save your QGIS project, :file:`forest_inventory.qgs`."
+msgstr "QGISプロジェクト :file:`forest_inventory.qgs` を保存します。"
+
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:174
 msgid "|IC|"
-msgstr "|IC|"
+msgstr ""
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:176
 msgid ""
@@ -323,7 +454,7 @@ msgstr ""
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:183
 msgid "|WN|"
-msgstr "|WN|"
+msgstr ""
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:185
 msgid ""
