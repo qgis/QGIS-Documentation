@@ -2,24 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2022
+# Harrissou Sant-anna, 2023
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-01 02:50+0000\n"
-"PO-Revision-Date: 2022-03-14 05:11+0000\n"
-"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2022\n"
-"Language-Team: Italian (https://www.transifex.com/qgis/teams/6144/it/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2023\n"
+"Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.10.1\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: it\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -132,22 +133,42 @@ msgstr ""
 "corrente"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:132
+msgid ""
+"Calculate from layout map…: uses extent of a :ref:`layout map item "
+"<layout_map_item>` in the active project"
+msgstr ""
+"Calculare da un layout di stampa…: usa l'estensione di un :ref:`layout map "
+"item <layout_map_item>` nel progetto attivo"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:134
+msgid ""
+"Calculate from bookmark…: uses extent of a saved :ref:`bookmark "
+"<sec_bookmarks>`"
+msgstr ""
+"Calcola da segnalibro…: usa l'estensione da un :ref:`bookmark "
+"<sec_bookmarks>` salvato"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:135
 msgid "Use map canvas extent"
 msgstr "Usa l'estensione della Mappa"
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:133
-msgid "Draw on canvas"
-msgstr "Disegna nell'Area di Mappa"
+#: ../../docs/user_manual/processing_algs/algs_include.rst:136
+msgid ""
+"Draw on canvas: click and drag a rectangle delimiting the area to take into "
+"account"
+msgstr ""
+"Definisci sull'area di disegno della mappa: fai clic e trascina un "
+"rettangolo che delimiti l'area da visualizzare."
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:134
+#: ../../docs/user_manual/processing_algs/algs_include.rst:137
 msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
 msgstr "Immetti le coordinate come ``xmin, xmax, ymin, ymax``"
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:140
+#: ../../docs/user_manual/processing_algs/algs_include.rst:143
 msgid "Geometric predicates"
 msgstr "Predicati geometrici"
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:148
+#: ../../docs/user_manual/processing_algs/algs_include.rst:151
 msgid ""
 "Geometric predicates are boolean functions used to determine the spatial "
 "relation a feature has with another by comparing whether and how their "
@@ -157,11 +178,11 @@ msgstr ""
 "relazione spaziale che un elemento ha con un altro confrontando se e come le"
 " loro geometrie condividono una porzione di spazio."
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:155
+#: ../../docs/user_manual/processing_algs/algs_include.rst:158
 msgid "Looking for spatial relations between layers"
 msgstr "Cercare relazioni spaziali tra i layer"
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:157
+#: ../../docs/user_manual/processing_algs/algs_include.rst:160
 msgid ""
 "Using the figure above, we are looking for the green circles by spatially "
 "comparing them to the orange rectangle feature. Available geometric "
@@ -171,11 +192,11 @@ msgstr ""
 "spazialmente con l'elemento rettangolo arancione. I predicati geometrici "
 "disponibili sono:"
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:164
+#: ../../docs/user_manual/processing_algs/algs_include.rst:167
 msgid "*Intersect*"
 msgstr "*Intersect*"
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:162
+#: ../../docs/user_manual/processing_algs/algs_include.rst:165
 msgid ""
 "Tests whether a geometry intersects another. Returns 1 (true) if the "
 "geometries spatially intersect (share any portion of space - overlap or "
@@ -187,11 +208,11 @@ msgstr ""
 "spazio - si sovrappongono o si toccano) e 0 se non lo fanno. Nell'immagine "
 "sopra, questo restituirà i cerchi 1, 2 e 3."
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:171
+#: ../../docs/user_manual/processing_algs/algs_include.rst:174
 msgid "*Contain*"
 msgstr "*Contain*"
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:167
+#: ../../docs/user_manual/processing_algs/algs_include.rst:170
 msgid ""
 "Returns 1 (true) if and only if no points of b lie in the exterior of a, and"
 " at least one point of the interior of b lies in the interior of a. In the "
@@ -205,11 +226,11 @@ msgstr ""
 " al contrario, poiché contiene completamente il cerchio 1. Questo è il "
 "contrario di *are within*."
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:175
+#: ../../docs/user_manual/processing_algs/algs_include.rst:178
 msgid "*Disjoint*"
 msgstr "*Disjoint*"
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:174
+#: ../../docs/user_manual/processing_algs/algs_include.rst:177
 msgid ""
 "Returns 1 (true) if the geometries do not share any portion of space (no "
 "overlap, not touching). Only circle 4 is returned."
@@ -218,11 +239,11 @@ msgstr ""
 "spazio (nessuna sovrapposizione, non si toccano). Viene restituito solo il "
 "cerchio 4."
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:179
+#: ../../docs/user_manual/processing_algs/algs_include.rst:182
 msgid "*Equal*"
 msgstr "*Equal*"
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:178
+#: ../../docs/user_manual/processing_algs/algs_include.rst:181
 msgid ""
 "Returns 1 (true) if and only if geometries are exactly the same. No circles "
 "will be returned."
@@ -230,11 +251,11 @@ msgstr ""
 "Restituisce 1 (true) se e solo se le geometrie sono esattamente le stesse. "
 "Nessun cerchio verrà restituito."
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:184
+#: ../../docs/user_manual/processing_algs/algs_include.rst:187
 msgid "*Touch*"
 msgstr "*Touch*"
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:182
+#: ../../docs/user_manual/processing_algs/algs_include.rst:185
 msgid ""
 "Tests whether a geometry touches another. Returns 1 (true) if the geometries"
 " have at least one point in common, but their interiors do not intersect. "
@@ -244,11 +265,11 @@ msgstr ""
 "geometrie hanno almeno un punto in comune, ma i loro interni non si "
 "intersecano. Viene restituito solo il cerchio 3."
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:189
+#: ../../docs/user_manual/processing_algs/algs_include.rst:192
 msgid "*Overlap*"
 msgstr "*Overlap*"
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:187
+#: ../../docs/user_manual/processing_algs/algs_include.rst:190
 msgid ""
 "Tests whether a geometry overlaps another. Returns 1 (true) if the "
 "geometries share space, are of the same dimension, but are not completely "
@@ -259,11 +280,11 @@ msgstr ""
 "sono completamente contenute l'una dall'altra. Viene restituito solo il "
 "cerchio 2."
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:193
+#: ../../docs/user_manual/processing_algs/algs_include.rst:196
 msgid "*Are within*"
 msgstr "*Are within*"
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:192
+#: ../../docs/user_manual/processing_algs/algs_include.rst:195
 msgid ""
 "Tests whether a geometry is within another. Returns 1 (true) if geometry a "
 "is completely inside geometry b. Only circle 1 is returned."
@@ -272,11 +293,11 @@ msgstr ""
 " la geometria a è completamente dentro la geometria b. Viene restituito solo"
 " il cerchio 1."
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:201
+#: ../../docs/user_manual/processing_algs/algs_include.rst:204
 msgid "*Cross*"
 msgstr "*Cross*"
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:196
+#: ../../docs/user_manual/processing_algs/algs_include.rst:199
 msgid ""
 "Returns 1 (true) if the supplied geometries have some, but not all, interior"
 " points in common and the actual crossing is of a lower dimension than the "
@@ -292,24 +313,168 @@ msgstr ""
 "incrociano si incrociano come un punto (true). Due poligoni si incrociano "
 "come un poligono (false). Nell'immagine, nessun cerchio sarà restituito."
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:206
+#: ../../docs/user_manual/processing_algs/algs_include.rst:209
 msgid "Notes on algorithms"
 msgstr "Note sugli algoritmi"
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:210
+#: ../../docs/user_manual/processing_algs/algs_include.rst:213
 msgid "**Geometry modification only**"
 msgstr "**Modifica solo della geometria**"
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:212
+#: ../../docs/user_manual/processing_algs/algs_include.rst:215
 msgid ""
 "This operation modifies only the features geometry. The attribute values of "
 "the features are **not modified**, although properties such as area or "
-"length of the features will be modified by the clipping operation. If such "
+"length of the features will be modified by the overlay operation. If such "
 "properties are stored as attributes, those attributes will have to be "
 "manually updated."
 msgstr ""
 "Questa operazione modifica solo la geometria degli elementi. I valori degli "
-"attributi degli elementi **non vengono modificati**, anche se proprietà come"
-" l'area o la lunghezza degli elementi verranno modificate dall'operazione di"
-" ritaglio. Se tali proprietà sono memorizzate come attributi, questi "
+"attributi degli elementi *non vengono modificati*, anche se proprietà come "
+"l'area o la lunghezza degli elementi saranno modificate dall'operazione di "
+"sovrapposizione. Se tali proprietà sono memorizzate come attributi, questi "
 "dovranno essere aggiornati manualmente."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:226
+msgid "Raster data types"
+msgstr "Tipologie di dati raster"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:229
+msgid "Simplified list"
+msgstr "Elenco sintetico"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:237
+#: ../../docs/user_manual/processing_algs/algs_include.rst:260
+#: ../../docs/user_manual/processing_algs/algs_include.rst:289
+msgid "0 --- Byte        (Eight bit unsigned integer (quint8))"
+msgstr "0 --- Byte (intero a otto bit senza segno (quint8))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:238
+#: ../../docs/user_manual/processing_algs/algs_include.rst:261
+#: ../../docs/user_manual/processing_algs/algs_include.rst:290
+msgid "1 --- Int16       (Sixteen bit signed integer (qint16))"
+msgstr "1 --- Int16 (numero intero a sedici bit con segno (qint16))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:239
+#: ../../docs/user_manual/processing_algs/algs_include.rst:262
+#: ../../docs/user_manual/processing_algs/algs_include.rst:291
+msgid "2 --- UInt16      (Sixteen bit unsigned integer (quint16))"
+msgstr "2 --- UInt16 (intero senza segno a sedici bit (quint16))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:240
+#: ../../docs/user_manual/processing_algs/algs_include.rst:292
+msgid "3 --- UInt32      (Thirty two bit unsigned integer (quint32))"
+msgstr "3 --- UInt32 (Numero intero a trentadue bit senza segno (quint32))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:241
+#: ../../docs/user_manual/processing_algs/algs_include.rst:293
+msgid "4 --- Int32       (Thirty two bit signed integer (qint32))"
+msgstr "4 --- Int32 (Numero intero firmato a trentadue bit (qint32))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:242
+#: ../../docs/user_manual/processing_algs/algs_include.rst:265
+#: ../../docs/user_manual/processing_algs/algs_include.rst:294
+msgid "5 --- Float32     (Thirty two bit floating point (float))"
+msgstr "5 --- Float32 (Trentadue bit in virgola mobile (float))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:243
+#: ../../docs/user_manual/processing_algs/algs_include.rst:266
+#: ../../docs/user_manual/processing_algs/algs_include.rst:295
+msgid "6 --- Float64     (Sixty four bit floating point (double))"
+msgstr "6 --- Float64 (Sessantaquattro bit in virgola mobile (doppio))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:245
+#: ../../docs/user_manual/processing_algs/algs_include.rst:272
+#: ../../docs/user_manual/processing_algs/algs_include.rst:301
+#: ../../docs/user_manual/processing_algs/algs_include.rst:330
+msgid ""
+"Available options depend on the GDAL version built with QGIS (see "
+":menuselection:`Help --> About` menu)"
+msgstr ""
+"Le opzioni disponibili dipendono dalla versione di GDAL installata con QGIS "
+"(vedere il menu :menuselection:`Guida --> Informazioni`)."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:252
+msgid "Without user input (native)"
+msgstr "Senza input da parte dell'utente (nativo)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:263
+msgid "3 --- Int32       (Thirty two bit signed integer (qint32))"
+msgstr "3 --- Int32 (Numero intero a trentadue bit con segno (qint32))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:264
+#: ../../docs/user_manual/processing_algs/algs_include.rst:321
+msgid "4 --- UInt32      (Thirty two bit unsigned integer (quint32))"
+msgstr "4 --- UInt32 (Numero intero a trentadue bit senza segno (quint32))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:267
+#: ../../docs/user_manual/processing_algs/algs_include.rst:296
+msgid "7 --- CInt16      (Complex Int16)"
+msgstr "7 --- CInt16      (Complesso Int16)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:268
+#: ../../docs/user_manual/processing_algs/algs_include.rst:297
+msgid "8 --- CInt32      (Complex Int32)"
+msgstr "8 --- CInt32      (Complesso Int32)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:269
+#: ../../docs/user_manual/processing_algs/algs_include.rst:298
+msgid "9 --- CFloat32    (Complex Float32)"
+msgstr "9 --- CFloat32    (Complesso Float32)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:270
+#: ../../docs/user_manual/processing_algs/algs_include.rst:299
+msgid "10 --- CFloat64   (Complex Float64)"
+msgstr "10 --- CFloat64   (Complesso Float64)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:279
+msgid "Without user input"
+msgstr "Senza input da parte dell'utente"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:308
+msgid "With user input"
+msgstr "Con input da parte dell'utente"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:317
+msgid "0 --- Use Input Layer Data Type"
+msgstr "0 --- Usa il tipo di dati del layer in ingresso"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:318
+msgid "1 --- Byte        (Eight bit unsigned integer (quint8))"
+msgstr "1 --- Byte (intero a otto bit senza segno (quint8))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:319
+msgid "2 --- Int16       (Sixteen bit signed integer (qint16))"
+msgstr "2 --- IInt16 (numero intero a sedici bit con segno (qint16))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:320
+msgid "3 --- UInt16      (Sixteen bit unsigned integer (quint16))"
+msgstr "3 --- UInt16 (Intero senza segno a sedici bit (quint16))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:322
+msgid "5 --- Int32       (Thirty two bit signed integer (qint32))"
+msgstr "5 ---Int32 (Numero intero a trentadue bit con segno (qint32))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:323
+msgid "6 --- Float32     (Thirty two bit floating point (float))"
+msgstr "6 --- Float32 (Trentadue bit in virgola mobile (float))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:324
+msgid "7 --- Float64     (Sixty four bit floating point (double))"
+msgstr "7 --- Float64 (Sessantaquattro bit in virgola mobile (doppio))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:325
+msgid "8 --- CInt16      (Complex Int16)"
+msgstr "8 --- CInt16      (Complesso Int16)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:326
+msgid "9 --- CInt32      (Complex Int32)"
+msgstr "9 --- CInt32      (Complesso Int32)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:327
+msgid "10 --- CFloat32   (Complex Float32)"
+msgstr "10 --- CFloat32   (Complesso Float32)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:328
+msgid "11 --- CFloat64   (Complex Float64)"
+msgstr "11 --- CFloat64   (Complesso Float64)"
