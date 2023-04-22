@@ -110,7 +110,7 @@ calculations to all or part of the features in the layer. This bar uses the same
 :ref:`expressions <vector_expressions>` as the |calculateField| :sup:`Field
 Calculator` (see :ref:`calculate_fields_values`).
 
-The attribute table support :kbd:`Shift+Mouse Wheel` scrolling in attribute table to switch to a horizontal scrolling action instead of vertical.
+The attribute table supports :kbd:`Shift+Mouse Wheel` scrolling in attribute table to switch to a horizontal scrolling action instead of vertical.
 
 .. _attribute_table_view:
 
@@ -284,6 +284,9 @@ Adding new rule opens a form to define:
    pair: Attributes; Selection
 .. _interacting_features_table:
 
+When :guilabel:`Show Features with Failing Constraints` has been selected, the attribute table cells will turn dark or light orange if the field value fails to meet active constraints.
+
+
 Interacting with features in an attribute table
 ===============================================
 
@@ -352,6 +355,7 @@ left of the attribute table dialog. This list offers the following filters:
 * |openTableVisible| :guilabel:`Show Features visible on map` - same as using
   :guilabel:`Open Attribute Table (Visible Features)` from the :guilabel:`Layer`
   menu or the :guilabel:`Attributes Toolbar` or pressing :kbd:`Ctrl+F6`
+* |openTableInvalid| :guilabel:`Show Features with Failing Constraints`- features will be filtered to only show the ones which have failing (hard or soft) constraints
 * |openTableEdited| :guilabel:`Show Edited and New Features` - same as using
   :guilabel:`Open Attribute Table (Edited and New Features)` from the :guilabel:`Layer`
   menu or the :guilabel:`Attributes Toolbar`
@@ -360,12 +364,12 @@ left of the attribute table dialog. This list offers the following filters:
   Then, only the features matching ``num_field = value`` or ``string_field ilike '%value%'``
   expression are shown in the attribute table. You can check |checkbox|
   :guilabel:`Case sensitive` to be less permissive with strings.
-* :guilabel:`Advanced filter (Expression)` - Opens the expression builder
+* |filterMap| :guilabel:`Advanced filter (Expression)` - Opens the expression builder
   dialog. Within it, you can create :ref:`complex expressions
   <vector_expressions>` to match table rows.
   For example, you can filter the table using more than one field.
   When applied, the filter expression will show up at the bottom of the form.
-* :menuselection:`Stored filter expressions -->`: a shortcut to :ref:`saved
+* |handleStoreFilterExpressionChecked| :menuselection:`Stored filter expressions -->`: a shortcut to :ref:`saved
   expressions <store_filter>` frequently used for filtering your attribute table.
 
 It is also possible to :ref:`filter features using forms <filter_select_form>`.
@@ -1368,6 +1372,8 @@ from the external storage system. In that case, more details might appear in the
 .. |openTable| image:: /static/common/mActionOpenTable.png
    :width: 1.5em
 .. |openTableEdited| image:: /static/common/mActionOpenTableEdited.png
+   :width: 1.5em
+.. |openTableInvalid| image:: /static/common/mActionOpenTableInvalid.png
    :width: 1.5em
 .. |openTableSelected| image:: /static/common/mActionOpenTableSelected.png
    :width: 1.5em
