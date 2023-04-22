@@ -2,24 +2,26 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# Miyoshi Tomoya, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-16 07:30+0000\n"
-"PO-Revision-Date: 2022-03-14 05:07+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2022\n"
-"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Miyoshi Tomoya, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -40,17 +42,32 @@ msgid ""
 "You will use LAStools to extract a DEM from a LiDAR dataset and then create "
 "a hillshade raster to use in your map presentation later."
 msgstr ""
-"LAStoolsを使用してレーザー測量データセットからDEMを抽出し、その後、地図のプレゼンテーションで使用する陰影起伏ラスターを作成します。"
+"LAStoolsを使用してレーザー測量データセットからDEMを抽出し、その後、地図のプレゼンテーションで使用する陰影起伏ラスタを作成します。"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:11
 msgid ""
 "**The goal for this lesson:** Install LAStools and calculate a DEM from "
 "LiDAR data and a hillshade raster."
-msgstr "**このレッスンの目標：** LAStoolsをインストールし、レーザー測量データと陰影起伏ラスターからDEMを計算します。"
+msgstr "**このレッスンの目標：** LAStoolsをインストールし、レーザー測量データと陰影起伏ラスタからDEMを計算します。"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:16
 msgid "|basic| |FA| Installing Lastools"
 msgstr "|basic| |FA| LAStoolsをインストールする"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:200
+msgid "basic"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:18
+msgid ""
+"Managing LiDAR data within QGIS is possible using the Processing framework "
+"and the algorithms provided by `LAStools "
+"<https://rapidlasso.com/2013/09/29/how-to-install-lastools-toolbox-in-"
+"qgis>`_."
+msgstr ""
+"LiDARのデータをQGISで管理するには、プロセシングフレームワークと`LAStools "
+"<https://rapidlasso.com/2013/09/29/how-to-install-lastools-toolbox-in-"
+"qgis>`_ が提供するアルゴリズムが必要です。"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:21
 msgid ""
@@ -59,8 +76,8 @@ msgid ""
 "presentation purposes. First you will have to set up the "
 ":guilabel:`Processing` framework settings to properly work with LAStools:"
 msgstr ""
-"レーザー測量点群からデジタル標高モデル（DEM）を取得して、プレゼンテーション目的のために、視覚的により直感的な陰影起伏ラスターを作成できます。最初に、"
-" :guilabel:`プロセッシング` フレームワークの設定を、LAStoolsで動作するように適切に設定する必要があります。"
+"レーザー測量点群からデジタル標高モデル（DEM）を取得して、プレゼンテーション目的のために、視覚的により直感的な陰影起伏ラスタを作成できます。最初に、 "
+":guilabel:`プロセシング` フレームワークの設定を、LAStoolsで動作するように適切に設定する必要があります。"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:26
 msgid "Close QGIS, if you have already started it."
@@ -83,6 +100,39 @@ msgid ""
 msgstr ""
 "名前 :kbd:`lidar` のフォルダがある場合、それを削除します。これは、QGIS 2.2および2.4の一部のインストールのために有効です。"
 
+#: ../../docs/training_manual/forestry/basic_lidar.rst:35
+msgid ""
+"Go to the :file:`exercise_data\\\\forestry\\\\lidar\\\\` folder, there you "
+"can find the file :file:`QGIS_2_2_toolbox.zip`. Open it and extract the "
+":kbd:`lidar` folder to replace the one you just deleted."
+msgstr ""
+":file:`exercise_data\\\\forestry\\\\lidar\\\\` "
+"フォルダーに移動し、:file:`QGIS_2_2_toolbox.zip` ファイルを見つけます。それを開き、:kbd:`lidar` "
+"フォルダーに展開して今削除したものに置き換えます。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:38
+msgid ""
+"If you are using a different QGIS version, you can see more installation "
+"instructions in `this tutorial <https://rapidlasso.com/2013/09/29/how-to-"
+"install-lastools-toolbox-in-qgis/>`_."
+msgstr ""
+"異なるQGISのバージョンを使っている場合は、`このチュートリアル <https://rapidlasso.com/2013/09/29/how-to-"
+"install-lastools-toolbox-in-qgis/>`_ にインストールの説明が見つかります。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:41
+msgid ""
+"Now you need to install the LAStools to your computer. Get the newest "
+"*lastools* version `here "
+"<https://lastools.github.io/download/LAStools.zip>`_ and extract the content"
+" of the :file:`lastools.zip` file into a folder in your system, for example,"
+" :file:`C:\\\\lastools\\\\`. The path to the :file:`lastools` folder cannot "
+"have spaces or special characters."
+msgstr ""
+"次に、LAStoolsをコンピュータにインストールする必要があります。最新の *lastools* バージョンを `ここ "
+"<https://lastools.github.io/download/LAStools.zip>`_ から入手し、 "
+":file:`lastools.zip` ファイルの内容をシステム内のフォルダ、例えば :file:`C:`lastools` "
+"に展開します。file:`lastools` フォルダのパスには、スペースや特殊文字は使用できません。"
+
 #: ../../docs/training_manual/forestry/basic_lidar.rst:47
 msgid ""
 "Read the :kbd:`LICENSE.txt` file inside the :kbd:`lastools` folder. Some of "
@@ -91,7 +141,7 @@ msgid ""
 "evaluation purposes you can use and test LAStools as much as you need to."
 msgstr ""
 ":kbd:`lastools` フォルダ内部の :kbd:`LICENSE.txt` "
-"ファイルをお読みください。LAStoolsの一部はオープンソースであり、他は、クローズドソースであり、ほとんどの商用および政府の使用のライセンスが必要です。教育と評価の目的のためには、必要なだけLAStoolsを使用してテストできます。"
+"ファイルをお読みください。LAStoolsの一部はオープンソースであり、他は、クローズドソースであり、ほとんどの商用および政府の使用にはライセンスが必要です。教育と評価の目的のためには、必要なだけLAStoolsを使用してテストできます。"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:52
 msgid ""
@@ -152,12 +202,12 @@ msgid ""
 "Now you are going to use it to run LAStools programs:"
 msgstr ""
 "いくつかのSAGAアルゴリズムを実行するために、 :doc:`../vector_analysis/spatial_statistics` 中の "
-":menuselection:`プロセッシング` "
+":menuselection:`プロセシング` "
 "ツールボックスはすでに使用してきました。ここではLAStoolsプログラムを実行するためにそれを使用しようとしています。"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:77
 msgid "Open :menuselection:`Processing --> Toolbox`."
-msgstr ":menuselection:`プロセッシング --> ツールボックス` を開きます。"
+msgstr ":menuselection:`プロセシング --> ツールボックス` を開きます。"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:78
 msgid ""
@@ -182,6 +232,15 @@ msgid ""
 "it to open."
 msgstr ":guilabel:`lasview` アルゴリズムが見つかるまで下にスクロールし、見つかったらダブルクリックして開きます。"
 
+#: ../../docs/training_manual/forestry/basic_lidar.rst:87
+msgid ""
+"At :guilabel:`Input LAS/LAZ file`, browse to "
+":file:`exercise_data\\\\forestry\\\\lidar\\\\` and select the "
+":file:`rautjarvi_lidar.laz` file."
+msgstr ""
+":guilabel:`入力 LAS/LAZファイル` で :file:`exercise_data\\\\forestry\\\\lidar\\\\` "
+"を探し、:file:`rautjarvi_lidar.laz` ファイルを選択します。"
+
 #: ../../docs/training_manual/forestry/basic_lidar.rst:93
 msgid "Click :guilabel:`Run`."
 msgstr ":guilabel:`実行` をクリックします。"
@@ -199,6 +258,16 @@ msgid ""
 "it looks like."
 msgstr ""
 "このビューア内ではいろいろなことができますが、今はビューアをクリックおよびドラッグしてLiDAR点群にパンし、それがどのように見えるかを確認できます。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:103
+msgid ""
+"If you want to know further details on how the LAStools work, you can read "
+"the :file:`README` text files about each of the tools, in the "
+":file:`C:\\\\lastools\\\\bin\\\\` folder. Tutorials and other materials are "
+"available at the `Rapidlasso webpage <https://rapidlasso.com/>`_."
+msgstr ""
+"LAStoolsがどのように動くのか詳細が知りたいときは、:file:`C:\\\\lastools\\\\bin\\\\` フォルダーにある "
+"各ツールに関する :file:`README` テキストファイルを読むことができます。"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:107
 msgid "Close the viewer when you are ready."
@@ -227,9 +296,36 @@ msgid ""
 "this image:"
 msgstr "ダブルクリックして :guilabel:`lasground` ツールを開き、この画像のように設定します："
 
+#: ../../docs/training_manual/forestry/basic_lidar.rst:120
+msgid ""
+"The output file is saved to the same folder where the "
+":file:`rautjarvi_lidar.laz` is located and it is named "
+":file:`rautjarvi_lidar_1.las`."
+msgstr ""
+"出力ファイルが :file:`rautjarvi_lidar.laz` があるのとと同じフォルダーに "
+":file:`rautjarvi_lidar_1.las` という名前で保存されます。"
+
 #: ../../docs/training_manual/forestry/basic_lidar.rst:123
 msgid "You can open it with :guilabel:`lasview` if you want to check it."
 msgstr "それを確認したい場合は、:guilabel:`lasview` で開くことができます。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:128
+msgid ""
+"The brown points are the points classified as ground and the gray ones are "
+"the rest, you can click the letter :kbd:`g` to visualize only the ground "
+"points or the letter :kbd:`u` to see only the unclassified points. Click the"
+" letter :kbd:`a` to see all the points again. Check the "
+":file:`lasview_README.txt` file for more commands. If you are interested, "
+"also this `tutorial <https://rapidlasso.com/2014/03/02/tutorial-manual-"
+"lidar-editing/>`_ about editing LiDAR points manually will show you "
+"different operations within the viewer."
+msgstr ""
+"茶色の点は地上に分類された点で、灰色の点はそれ以外の点です。地上の点だけを表示するには :kbd:`g` "
+"という文字を、分類されていない点だけを表示するには :kbd:`u` という文字をクリックします。kbd:`a` "
+"の文字をクリックすると、すべてのポイントを再び見ることができます。その他のコマンドについては :file:`lasview_README.txt` "
+"ファイルを参照してください。もし興味があれば、LiDARポイントの手動編集に関するチュートリアル "
+"<https://rapidlasso.com/2014/03/02/tutorial-manual-lidar-editing/>`_ "
+"もご覧ください。このチュートリアルでは、ビューアでのさまざまな操作を紹介しています。"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:137
 msgid "Close the viewer again."
@@ -262,9 +358,27 @@ msgstr ""
 msgid "|basic| |FA| Creating a Terrain Hillshade"
 msgstr "|basic| |FA| 地形陰影起伏を作成する"
 
+#: ../../docs/training_manual/forestry/basic_lidar.rst:154
+msgid ""
+"For visualization purposes, a hillshade generated from a DEM gives a better"
+msgstr "可視化の目的にはDEMから生成される陰影起伏がより良い"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:154
+msgid "visualization of the terrain:"
+msgstr "地形の可視化:"
+
 #: ../../docs/training_manual/forestry/basic_lidar.rst:156
 msgid "Open :menuselection:`Raster --> Terrain analysis --> Hillshade`."
 msgstr ":menuselection:`ラスター --> 地形分析 --> 陰影` を開きます。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:157
+msgid ""
+"As the :guilabel:`Output layer`, browse to "
+":file:`exercise_data\\\\forestry\\\\lidar\\\\` and name the file "
+":file:`hillshade.tif`."
+msgstr ""
+":guilabel:`出力レイヤ` には、:file:`exercise_data\\\\forestry\\\\lidar\\\\` を選択し "
+":file:`hillshade.tif` というファイル名にします。"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:159
 msgid "Leave the rest of parameters with the default settings."
@@ -284,11 +398,23 @@ msgstr ""
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:175
 msgid "|IC|"
-msgstr "|IC|"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:177
+msgid ""
+"Using LiDAR data to get a DEM, specially in forested areas, gives good "
+"results with not much effort. You could also use ready LiDAR derived DEMs or"
+" other sources like the `SRTM 9m resolution DEMs "
+"<https://srtm.csi.cgiar.org/srtmdata/>`_. Either way, you can use them to "
+"create a hillshade raster to use in your map presentations."
+msgstr ""
+"LiDARデータを使用してDEMを取得すると、特に森林地帯では、それほど労力をかけずに良い結果が得られます。また、LiDARで取得したDEMや、`SRTM"
+" 9m解像度DEM "
+"<https://srtm.csi.cgiar.org/srtmdata/>`_のような他のソースを使用することもできます。いずれにせよ、地図プレゼンテーションで使用する陰影起伏ラスタを作成するために、それらを使用することができます。"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:184
 msgid "|WN|"
-msgstr "|WN|"
+msgstr ""
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:186
 msgid ""
