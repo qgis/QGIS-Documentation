@@ -2493,7 +2493,11 @@ in the QGIS user profile.
    :width: 2.8em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
+.. |sensor| image:: /static/common/sensor.png
+   :width: 1.5em
 .. |settings| image:: /static/common/settings.png
+   :width: 1.5em
+.. |start| image:: /static/common/mActionStart.png
    :width: 1.5em
 .. |styleManager| image:: /static/common/mActionStyleManager.png
    :width: 1.5em
