@@ -112,6 +112,8 @@ Calculator` (see :ref:`calculate_fields_values`).
 
 The attribute table support :kbd:`Shift+Mouse Wheel` scrolling in attribute table to switch to a horizontal scrolling action instead of vertical.
 
+.. note:: When it does not work on Apple MacBook, use the trackpad instead!
+
 .. _attribute_table_view:
 
 Table view vs Form view
