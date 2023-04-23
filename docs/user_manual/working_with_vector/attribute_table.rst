@@ -1373,6 +1373,8 @@ from the external storage system. In that case, more details might appear in the
    :width: 1.5em
 .. |openTableEdited| image:: /static/common/mActionOpenTableEdited.png
    :width: 1.5em
+.. |openTableInvalid| image:: /static/common/mActionOpenTableInvalid.png
+   :width: 1.5em
 .. |openTableSelected| image:: /static/common/mActionOpenTableSelected.png
    :width: 1.5em
 .. |openTableVisible| image:: /static/common/mActionOpenTableVisible.png
