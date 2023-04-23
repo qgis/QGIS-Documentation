@@ -18,12 +18,11 @@ jobs:
       pull-requests: write  # for peter-evans/create-pull-request to create a PR
     if: github.repository_owner == 'qgis'
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        target_branch: [release_3.28]
+
     env:
       TRANSIFEX_PASSWORD: ${{ secrets.TRANSIFEX_PASSWORD }}
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      BACKPORT_BRANCH: "release_3.28"
 
     steps:
     - name: Harden Runner
@@ -35,7 +34,6 @@ jobs:
       uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # v3.5.2
       with:
         fetch-depth: 1
-        ref: ${{ matrix.target_branch }}
 
     - name: Set up Python 3.9
       uses: actions/setup-python@d27e3f3d7c64b4bbf8e4abfb9b63b83e846e0435 # v4.5.0
@@ -55,9 +53,11 @@ jobs:
         commit-message: Update statistics of translation
         title: Update statistics of translation
         delete-branch: true
-        labels: Translation
+        labels: |
+          Translation
+          backport ${{ env.BACKPORT_BRANCH }}
 
     - name: Enable Pull Request Automerge
       run: gh pr merge --rebase --auto "${{ steps.create_pr.outputs.pull-request-number }}"
       env:
-        GH_TOKEN: ${{ GH_TOKEN }}
+        GH_TOKEN: ${{ env.GH_TOKEN }}
