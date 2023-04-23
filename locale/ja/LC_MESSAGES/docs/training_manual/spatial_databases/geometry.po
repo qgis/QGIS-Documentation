@@ -2,24 +2,26 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
+# Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2023
+# Miyoshi Tomoya, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-16 07:30+0000\n"
-"PO-Revision-Date: 2022-03-14 05:14+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2022\n"
-"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Miyoshi Tomoya, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -56,17 +58,21 @@ msgid ""
 " an entry in the geometry_columns table."
 msgstr ""
 ":kbd:`address` "
-"データベースに戻って、他に一致する街路テーブルを取得してみましょう。すなわち、ジオメトリ、インデックスとGEOMETRY_COLUMNSテーブル中のエントリに制約を持ちます。"
+"データベースに戻って、他に一致するstreetテーブルを取得してみましょう。すなわち、ジオメトリ、インデックスとGEOMETRY_COLUMNSテーブル中のエントリに制約を持ちます。"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:22
 msgid "|TY| |moderate|"
-msgstr "|TY| |moderate|"
+msgstr ""
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:338
+msgid "moderate"
+msgstr ""
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:24
 msgid ""
 "Modify the :kbd:`streets` table so that it has a geometry column of type "
 "ST_LineString."
-msgstr "タイプST_LineStringのジオメトリ列を持つように :kbd:`街路` テーブルを修正します。"
+msgstr "タイプST_LineStringのジオメトリ列を持つように :kbd:`street` テーブルを修正します。"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:26
 msgid ""
@@ -81,27 +87,32 @@ msgstr "また、ラインストリングでないかnullであるようなジ�
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:30
 msgid "Create a spatial index on the new geometry column"
-msgstr "新しいジオメトリ列に空間索引を作成します。"
+msgstr "新しいジオメトリ列に空間インデックスを作成します。"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:32
+#: ../../docs/training_manual/spatial_databases/geometry.rst:132
+msgid "Answer"
+msgstr "答え"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:48
 msgid ""
 "Now let's insert a linestring into our streets table. In this case we will "
 "update an existing street record:"
-msgstr "次に、街路テーブルに線ストリングを挿入しましょう。この場合、既存の道路記録を更新します："
+msgstr "次に、streetテーブルにラインストリングを挿入しましょう。この場合、既存のstreetレコードを更新します："
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:57
 msgid ""
 "Take a look at the results in QGIS. (You may need to right-click on the "
 "streets layer in the 'Layers' panel, and choose 'Zoom to layer extent'.)"
 msgstr ""
-"結果をQGISで確認してみます。('レイヤー' "
-"パネルのstreetsレイヤーを右クリックし、'レイヤーの領域にズームする'を選択する必要があるかもしれません。)"
+"結果をQGISで確認してみます。('レイヤ' "
+"パネルのstreetsレイヤを右クリックし、'レイヤの領域にズームする'を選択する必要があるかもしれません。)"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:60
 msgid ""
 "Now create some more streets entries - some in QGIS and some from the "
 "command line."
-msgstr "いくつかはQGISから、いくつかはコマンドラインから道路の要素をもう少し追加します。"
+msgstr "いくつかはQGISから、いくつかはコマンドラインからstreetのエントリをもう少し追加します。"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:65
 msgid "Creating Polygons"
@@ -128,7 +139,7 @@ msgid ""
 "dataset into QGIS, opening its attribute table, and selecting the new entry."
 " Note how the two new polygons behave like one polygon."
 msgstr ""
-"この手順に従った場合、QGISに都市データセットをロードし、属性テーブルを開き、新しいエントリを選択することで、何をしたか確認できます。二つの新しいポリゴンが1つのポリゴンのように振る舞うかに注意してください。"
+"この手順に従った場合、QGISにcitiesデータセットをロードし、属性テーブルを開き、新しいエントリを選択することで、何をしたか確認できます。二つの新しいポリゴンが1つのポリゴンのように振る舞うかに注意してください。"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:93
 msgid "Exercise: Linking Cities to People"
@@ -146,21 +157,38 @@ msgstr "peopleテーブルからすべてのデータを削除します。"
 msgid ""
 "Add a foreign key column to people that references the primary key of the "
 "cities table."
-msgstr "都市テーブルの主キーを参照する人々への外部キー列を追加します。"
+msgstr "citiesテーブルの主キーを参照するpeopleへの外部キー列を追加します。"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:100
 msgid "Use QGIS to capture some cities."
-msgstr "QGISを使用していくつかの都市をキャプチャします。"
+msgstr "QGISを使っていくつかのcitiesをキャプチャします。"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:101
 msgid ""
 "Use SQL to insert some new people records, ensuring that each has an "
 "associated street and city."
-msgstr "それぞれが関連付けられている通り、街を持っていることを確認して、いくつかの新しい人々のレコードを挿入するSQLを使用してください。"
+msgstr "SQLを使って、それぞれが関連したstreetとcityを持った、新しいpeopleレコードをいくつか挿入してください。"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:104
 msgid "Your updated people schema should look something like this:"
-msgstr "更新されたユーザーのスキーマは、次のようになります。"
+msgstr "更新されたpeopleのスキーマは、次のようになります:"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:140
+msgid "(capture cities in QGIS)"
+msgstr "（QGISでcitiesをキャプチャする）"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:168
+msgid "If you're getting the following error message:"
+msgstr "次のエラーメッセージが出た場合:"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:176
+msgid ""
+"then it means that while experimenting with creating polygons for the cities"
+" table, you must have deleted some of them and started over. Just check the "
+"entries in your cities table and use any :guilabel:`id` which exists."
+msgstr ""
+"これは、citiesテーブルのポリゴンを作成する実験中に、そのうちのいくつかを削除してやり直したことを意味します。citiesテーブルのエントリを確認して、存在する"
+" :guilabel:`id` を使ってみてください。"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:183
 msgid "Looking at Our Schema"
@@ -172,7 +200,11 @@ msgstr "スキーマはこのように見えるべきです:"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:192
 msgid "|TY| |hard|"
-msgstr "|TY| |hard|"
+msgstr ""
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:337
+msgid "hard"
+msgstr ""
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:194
 msgid ""
@@ -196,15 +228,15 @@ msgstr ""
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:206
 msgid "Transform the polygon boundary to a linestring:"
-msgstr "ポリゴン境界を線ストリングに変換する："
+msgstr "ポリゴン境界をラインストリングに変換する："
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:213
 msgid "Select the first vertex point of the resultant linestring:"
-msgstr "結果の線ストリングの最初の頂点を選択します。"
+msgstr "結果のラインストリングの最初の頂点を選択します。"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:224
 msgid "Data Processing"
-msgstr "データプロセッシング"
+msgstr "データプロセシング"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:226
 msgid ""
@@ -241,7 +273,7 @@ msgstr ""
 msgid ""
 "To create a linestring from a new point layer called 'points', you can run "
 "the following command:"
-msgstr "'points'という新しいポイントレイヤーから線ストリングを作成するには、次のコマンドを実行します。"
+msgstr "'points' という新しいポイントレイヤからラインストリングを作成するには、次のコマンドを実行します:"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:275
 msgid ""
@@ -249,11 +281,21 @@ msgid ""
 "command on the 'people' layer, although of course it would make little real-"
 "world sense to do this."
 msgstr ""
-"どのように機能するかを確認するために、「人」レイヤーにもこのコマンドを実行できたでしょう。もちろん、これを行うことに現実世界の意味はほとんどないでしょうが。"
+"どのように機能するかを新しいレイヤを作らずに確認するために、'people' "
+"レイヤにこのコマンドを実行することもできます。もちろん、これを行うことに現実世界の意味はほとんどないでしょうが。"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:283
 msgid "Geometry Cleaning"
 msgstr "ジオメトリクリーニング"
+
+#: ../../docs/training_manual/spatial_databases/geometry.rst:285
+msgid ""
+"You can get more information for this topic in `this blog entry "
+"<https://gisforthought.com/projects/postgis_tutorial/validity.html>`_."
+msgstr ""
+"このトピックについては `このブログエントリ "
+"<https://gisforthought.com/projects/postgis_tutorial/validity.html>`_ "
+"にもっと情報があります。"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:289
 msgid "Differences between tables"
@@ -289,7 +331,7 @@ msgstr "データベースを作成するときは、例えばどの表領域を
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:318
 msgid "|IC|"
-msgstr "|IC|"
+msgstr ""
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:320
 msgid ""
