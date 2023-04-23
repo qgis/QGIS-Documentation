@@ -26,11 +26,14 @@ If no replacement exists:
    and paste (in ``.png`` format) under :file:`/static/common` folder.
    For convenience and update, it's advised to keep filename when possible.
 #. create the reference to the substitution in the :file:`/substitutions.txt`
-   file following the example below. The replacement text should be in camelCase:
+   file following the example below.
+   The replacement text should be derived from file name and in camelCase:
 
    ::
 
      .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
+        :width: 1.5em
+     .. |splitLayer| image:: /static/common/split_layer.png
         :width: 1.5em
 
 #. Update the target section(s) of the docs, using your new substitution.
