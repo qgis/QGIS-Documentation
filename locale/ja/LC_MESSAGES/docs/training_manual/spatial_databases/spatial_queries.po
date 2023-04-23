@@ -2,24 +2,26 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2023
+# Miyoshi Tomoya, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 11:58+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
-"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Miyoshi Tomoya, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -42,25 +44,25 @@ msgid ""
 "similarly to \"normal\" non-spatial functions."
 msgstr "**このレッスンの目的：** 空間関数が、空間関数でない一般の関数と同様に導入できることを明らかにすること。"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:14
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:13
 msgid "Spatial Operators"
 msgstr "空間演算子"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:16
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:15
 msgid ""
 "When you want to know which points are within a distance of 2 degrees to a "
 "point(X,Y) you can do this with:"
 msgstr "ある地点(X,Y)から距離が2度内の地点を特定したい場合以下の操作ができます"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:25
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:60
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:145
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:185
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:286
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:24
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:67
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:160
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:200
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:301
 msgid "Result:"
 msgstr "結果:"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:34
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:33
 msgid ""
 "the_geom value above was truncated for space on this page. If you want to "
 "see the point in human-readable coordinates, try something similar to what "
@@ -69,58 +71,77 @@ msgstr ""
 "上記の the_geom "
 "値はこのページ上では当サイトのスペースを残すため削除されました。人が読める座標を確認したい場合、上記の「WKTとしてポイントを表示」セクションと類似の操作で確認できます。"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:38
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:37
 msgid ""
 "How do we know that the query above returns all the points within 2 "
 "*degrees*? Why not 2 *meters*? Or any other unit, for that matter?"
 msgstr ""
 "上述のクエリが2度という空間内にある地点をすべてかえすということはどうしたらわかりますでしょうか？なぜ2メートル、あるいはその他の単位ではないのでしょうか？"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:41
-msgid ":ref:`Check your results <spatial-queries-1>`"
-msgstr ":ref:`結果を確認 <spatial-queries-1>`"
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:40
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:96
+msgid "Answer"
+msgstr "答え"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:46
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:43
+msgid ""
+"The units being used by the example query are degrees, because the CRS that "
+"the layer is using is WGS 84. This is a Geographic CRS, which means that its"
+" units are in degrees. A Projected CRS, like the UTM projections, is in "
+"meters."
+msgstr ""
+"レイヤが使用しているCRSはWGS "
+"84であるため、このクエリで使用されている単位は度です。これは地理CRSで、単位は度であることを意味します。UTM図法のような投影CRSは、単位がメートルです。"
+
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:47
+msgid ""
+"Remember that when you write a query, you need to know which units the "
+"layer's CRS is in. This will allow you to write a query that will return the"
+" results that you expect."
+msgstr ""
+"クエリを書くときには、レイヤのCRSがどの単位にあるのかを知る必要があることを忘れないでください。そうすることで、期待通りの結果を返すクエリを書くことができるようになります。"
+
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:53
 msgid "Spatial Indexes"
 msgstr "空間索引"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:48
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:55
 msgid ""
 "We also can define spatial indexes. A spatial index makes your spatial "
 "queries much faster. To create a spatial index on the geometry column use:"
 msgstr "空間索引も定義できます。空間索引を使用すると、空間クエリをより迅速に作成できます。ジオメトリ列に空間索引を作成するには、次のようにします。"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:86
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:93
 msgid "|TY| |moderate|"
-msgstr "|TY| |moderate|"
+msgstr ""
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:87
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:397
+msgid "moderate"
+msgstr ""
+
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:94
 msgid "Modify the cities table so its geometry column is spatially indexed."
 msgstr "都市のテーブルを、そのジオメトリ列が空間索引付けされるように変更します。"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:89
-msgid ":ref:`Check your results <spatial-queries-2>`"
-msgstr ":ref:`結果を確認<spatial-queries-2>`"
-
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:93
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:108
 msgid "PostGIS Spatial Functions Demo"
 msgstr "PostGIS 空間関数デモ"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:95
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:110
 msgid ""
 "In order to demo PostGIS spatial functions, we'll create a new database "
 "containing some (fictional) data."
 msgstr "PostGIS の空間関数のデモを行うため、いくつかの（架空の）データを含む新しいデータベースを作成します。"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:98
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:113
 msgid "To start, create a new database (exit the psql shell first):"
 msgstr "まず、新しいデータベースを作成します（まずpsqlシェルを終了します）。"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:104
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:119
 msgid "Remember to install the postgis extensions:"
 msgstr "Postgis拡張機能をインストールすることを忘れないでください："
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:110
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:125
 msgid ""
 "Next, import the data provided in the :kbd:`exercise_data/postgis/` "
 "directory. Refer back to the previous lesson for instructions, but remember "
@@ -131,19 +152,19 @@ msgstr ""
 "次に、 :kbd:`exercise_data/postgis/` "
 "ディレクトリにあるデータをインポートします。手順については前のレッスンを参照してください。ただし、新しいデータベースへの新しいPostGIS接続を作成する必要があることに注意してください。端末またはDBマネージャからインポートできます。ファイルを次のデータベーステーブルにインポートします。"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:116
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:131
 msgid ":kbd:`points.shp` into :kbd:`building`"
 msgstr ":kbd:`points.shp` を :kbd:`building` に"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:117
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:132
 msgid ":kbd:`lines.shp` into :kbd:`road`"
 msgstr ":kbd:`lines.shp` を :kbd:`road` に"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:118
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:133
 msgid ":kbd:`polygons.shp` into :kbd:`region`"
 msgstr ":kbd:`polygons.shp` を :kbd:`region` に"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:120
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:135
 msgid ""
 "Load these three database layers into QGIS via the :guilabel:`Add PostGIS "
 "Layers` dialog, as usual. When you open their attribute tables, you'll note "
@@ -154,53 +175,53 @@ msgstr ""
 "ダイアログでこれらの3つのデータベースレイヤーをQGISにロードします。それらの属性テーブルを開くと、 :kbd:`id` "
 "フィールドとPostGISのインポートによって作成された :kbd:`gid` フィールドの両方があることに注意。"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:125
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:140
 msgid ""
 "Now that the tables are imported, we can use PostGIS to query the data. Go "
 "back to your terminal (command line) and enter the psql prompt by running::"
 msgstr ""
 "テーブルはインポートされていますので、データを照会するためのPostGISを使用できます。端末（コマンドライン）に戻って以下を実行することによりpsqlのプロンプトを入力してください::"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:130
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:145
 msgid ""
 "We'll demo some of these select statements by creating views from them, so "
 "that you can open them in QGIS and see the results."
 msgstr "QGISでそれらを開き、結果を見ることができるように、それらからのビューを作成することによってこれらのselect文の一部をデモします。"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:134
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:149
 msgid "Select by location"
 msgstr "場所による選択"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:136
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:151
 msgid "Get all the buildings in the KwaZulu region:"
 msgstr "クワズール地域のすべての建物を手に入れよう："
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:158
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:173
 msgid "Or, if we create a view from it:"
 msgstr "または、そこからビューを作成する場合は、次のようにします。"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:168
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:183
 msgid "Add the view as a layer and view it in QGIS:"
 msgstr "レイヤーとしてビューを追加し、QGISで表示："
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:174
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:189
 msgid "Select neighbors"
 msgstr "近傍の選択"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:176
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:191
 msgid "Show a list of all the names of regions adjoining the Hokkaido region:"
 msgstr "北海道地域に隣接する地域のすべての名前のリストを表示する："
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:196
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:211
 msgid "As a view:"
 msgstr "ビューとして："
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:206
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:251
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:221
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:266
 msgid "In QGIS:"
 msgstr "QGISでは:"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:211
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:226
 msgid ""
 "Note the missing region (Queensland). This may be due to a topology error. "
 "Artifacts such as this can alert us to potential problems in the data. To "
@@ -209,19 +230,19 @@ msgid ""
 msgstr ""
 "不足している地域（クイーンズランド州）に注意してください。これはトポロジエラーが原因である可能性があります。このようなアーティファクトによって、データの潜在的な問題を警告できます。データが持つ異常に巻き込まれることなくこの謎を解決するために、代わりにバッファ交差を使用できます："
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:223
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:238
 msgid "This creates a buffer of 100 meters around the region Hokkaido."
 msgstr "北海道の周囲に100mのバッファを作成します。"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:225
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:240
 msgid "The darker area is the buffer:"
 msgstr "暗いエリアがバッファです::"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:230
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:245
 msgid "Select using the buffer:"
 msgstr "バッファを使用して選択："
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:245
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:260
 msgid ""
 "In this query, the original buffer view is used as any other table would be."
 " It is given the alias :kbd:`a`, and its geometry field, :kbd:`a.the_geom`, "
@@ -233,45 +254,45 @@ msgstr ""
 ":kbd:`region` テーブル（別名 :kbd:`b` ） :kbd:`a.the_geom` "
 "が、それと交差するすべての多角形を選択するために使用されます。しかし北海道自体はこのselect文から除外されます。必要なのは北海道自体ではなく、それに隣接する領域だけなので。"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:256
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:271
 msgid ""
 "It is also possible to select all objects within a given distance, without "
 "the extra step of creating a buffer:"
 msgstr "バッファを作成する追加のステップを行うことなしに、指定された距離内のすべてのオブジェクトを選択することもできます："
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:268
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:283
 msgid ""
 "This achieves the same result, without need for the interim buffer step:"
 msgstr "これは、中間バッファステップを必要とせずに、同じ結果を達成します："
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:275
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:290
 msgid "Select unique values"
 msgstr "一意の値を選択する"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:277
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:292
 msgid ""
 "Show a list of unique town names for all buildings in the Queensland region:"
 msgstr "クイーンズランド州のすべての建物に固有の町名のリストを表示します："
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:299
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:314
 msgid "Further examples ..."
 msgstr "その他の事例"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:360
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:375
 msgid "|IC|"
-msgstr "|IC|"
+msgstr ""
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:362
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:377
 msgid ""
 "You have seen how to query spatial objects using the new database functions "
 "from PostGIS."
 msgstr "PostGISからの新しいデータベース機能を使用して、空間オブジェクトをクエリする方法を見てきました。"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:366
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:381
 msgid "|WN|"
-msgstr "|WN|"
+msgstr ""
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:368
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:383
 msgid ""
 "Next we're going to investigate the structures of more complex geometries "
 "and how to create them using PostGIS."
