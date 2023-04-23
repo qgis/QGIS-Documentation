@@ -355,7 +355,7 @@ left of the attribute table dialog. This list offers the following filters:
 * |openTableVisible| :guilabel:`Show Features visible on map` - same as using
   :guilabel:`Open Attribute Table (Visible Features)` from the :guilabel:`Layer`
   menu or the :guilabel:`Attributes Toolbar` or pressing :kbd:`Ctrl+F6`
-* :guilabel:`Show Features with Failing Constraints`- features will be filtered to only show the ones which have failing (hard or soft) constraints
+* |openTableInvalid| :guilabel:`Show Features with Failing Constraints`- features will be filtered to only show the ones which have failing (hard or soft) constraints
 * |openTableEdited| :guilabel:`Show Edited and New Features` - same as using
   :guilabel:`Open Attribute Table (Edited and New Features)` from the :guilabel:`Layer`
   menu or the :guilabel:`Attributes Toolbar`
