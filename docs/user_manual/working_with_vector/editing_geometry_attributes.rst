@@ -529,7 +529,7 @@ geometry then enter its attributes. To digitize the geometry:
      place, following existing features.
    * free-hand digitized, pressing :kbd:`R` or activating |streamingDigitize|
      :sup:`Stream Digitizing`.
-   * drawn as curve, pressing :kbd:`Ctrl+Shift+G` or activating |DigitizeWithCurve|
+   * drawn as curve, pressing :kbd:`Ctrl+Shift+G` or activating |digitizeWithCurve|
      :sup:`Digitize with Curve`.
 
    .. note::

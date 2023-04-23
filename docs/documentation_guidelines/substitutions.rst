@@ -407,7 +407,7 @@ Icon                     Substitution                 Icon                     S
 |addPolygon|             ``|addPolygon|``             |addPolyline|            ``|addPolyline|``
 |addArrow|               ``|addArrow|``               |northArrow|             ``|northArrow|``
 |add3DMap|               ``|add3DMap|``               |addMap|                 ``|addMap|``
-|addElevationProfile|    ``|addElevationProfile|``    |copyElevationProfile|   ``|copyElevationProfile|``
+|elevationProfile|       ``|elevationProfile|``       |copyProfileSettings|    ``|copyProfileSettings|``
 |addLegend|              ``|addLegend|``              |addHtml|                ``|addHtml|``
 |addManualTable|         ``|addManualTable|``         |addTable|               ``|addTable|``
 |addImage|               ``|addImage|``               |addMarker|              ``|addMarker|``
@@ -508,7 +508,7 @@ Icon                            Substitution                        Icon        
 |lineIntersections|             ``|lineIntersections|``             |mergeLayers|                   ``|mergeLayers|``
 |sumPoints|                     ``|sumPoints|``                     |sumLengthLines|                ``|sumLengthLines|``
 |randomPointsInPolygons|        ``|randomPointsInPolygons|``        |randomPointsWithinPolygon|     ``|randomPointsWithinPolygon|``
-|randomPointsOnLines|           ``|randomPointOOnLines|``           |randomPointsWithinExtent|      ``|randomPointsWithinExtent|``
+|randomPointsOnLines|           ``|randomPointsOnLines|``           |randomPointsWithinExtent|      ``|randomPointsWithinExtent|``
 |multiToSingle|                 ``|multiToSingle|``
 |grid|                          ``|grid|``                          |tiles|                         ``|tiles|``
 |merge|                         ``|merge|``                         |rasterClip|                    ``|rasterClip|``
@@ -595,8 +595,6 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |addDelimitedTextLayer| image:: /static/common/mActionAddDelimitedTextLayer.png
    :width: 1.5em
-.. |addElevationProfile| image:: /static/common/mActionElevationProfile.png
-   :width: 1.5em   
 .. |addExpression| image:: /static/common/mActionAddExpression.png
    :width: 1.5em
 .. |addGeometryAttributes| image:: /static/common/mAlgorithmAddGeometryAttributes.png
@@ -771,7 +769,7 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |convexHull| image:: /static/common/mAlgorithmConvexHull.png
    :width: 1.5em
-.. |copyElevationProfile| image:: /static/common/mActionCopyProfileSettings.png
+.. |copyProfileSettings| image:: /static/common/mActionCopyProfileSettings.png
    :width: 1.5em
 .. |copySelected| image:: /static/common/mActionCopySelected.png
    :width: 1.5em
@@ -881,6 +879,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |editableEdits| image:: /static/common/mIconEditableEdits.png
    :width: 1em
+.. |elevationProfile| image:: /static/common/mActionElevationProfile.png
+   :width: 1.5em
 .. |elevationscale| image:: /static/common/elevationscale.png
    :width: 1.5em
 .. |ellipseCenter2Points| image:: /static/common/mActionEllipseCenter2Points.png

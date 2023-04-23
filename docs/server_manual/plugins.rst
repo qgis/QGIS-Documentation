@@ -81,13 +81,13 @@ Then, you can use the ``qgis-plugin-manager`` executable from the command line:
  QGIS server version 3.19.0
  List all plugins in /var/www/qgis-server/plugins
 
- ------------------------------------------------------------------------------------------------------------------------------------------------------
- |  Folder                  |  Name            |  Version  |  Experimental  |  QGIS min  |  QGIS max  |  Author                  |  Action ⚠          |
- ------------------------------------------------------------------------------------------------------------------------------------------------------
- |wfsOutputExtension        |wfsOutputExtension|1.6.2      |                |3.0         |            |3Liz                      |                    |
- |qgis_server_render_geojson|GeoJson Renderer  |v0.4       |                |3.4         |            |Matthias Kuhn (OPENGIS.ch)|                    |
- |DataPlotly                |Data Plotly       |3.7.1      |                |3.4         |3.98        |Matteo Ghetta (Faunalia)  |Upgrade to 3.8.1    |
- ------------------------------------------------------------------------------------------------------------------------------------------------------
+ ------------------------------------------------------------------------------------------------------------------------------------------------------------
+ |  Folder                    |  Name              |  Version  |  Experimental  |  QGIS min  |  QGIS max  |  Author                    |  Action ⚠          |
+ ------------------------------------------------------------------------------------------------------------------------------------------------------------
+ |wfsOutputExtension          |wfsOutputExtension  |1.6.2      |                |3.0         |            |3Liz                        |                    |
+ |qgis_server_render_geojson  |GeoJson Renderer    |v0.4       |                |3.4         |            |Matthias Kuhn (OPENGIS.ch)  |                    |
+ |DataPlotly                  |Data Plotly         |3.7.1      |                |3.4         |3.98        |Matteo Ghetta (Faunalia)    |Upgrade to 3.8.1    |
+ ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 We suggest you to read the full documentation in the
 `readme file <https://github.com/3liz/qgis-plugin-manager/blob/master/README.md>`_ to know how to install or
