@@ -675,7 +675,7 @@ To interact with or edit a base mesh layer element, following tools are availabl
    * - |cad| :sup:`Enable Advanced Digitizing tools`
      - Turn on/off the :ref:`Advanced Digitizing Panel <advanced_digitizing_panel>`
      - :guilabel:`Advanced Digitizing` toolbar
-   * - |meshreindex| :sup:`Reindex Faces and Vertices`
+   * - |meshReindex| :sup:`Reindex Faces and Vertices`
      - Recreate index and renumber the mesh elements for optimization
      - :guilabel:`Mesh` menu
    * - |meshDigitizing| :sup:`Digitize Mesh Elements`
