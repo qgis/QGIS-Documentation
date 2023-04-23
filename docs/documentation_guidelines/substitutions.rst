@@ -22,20 +22,29 @@ If no replacement exists:
 #. check the documentation repository whether the icon is available in
    :file:`/static/common` folder. If no image, then you need to find and
    copy the icon image file from `QGIS repository <https://github.com/qgis/QGIS>`_
-   (often under :source:`images/themes/default` folder)
+   (often under :source:`default themes <images/themes/default>` folder)
    and paste (in ``.png`` format) under :file:`/static/common` folder.
    For convenience and update, it's advised to keep filename when possible.
 #. create the reference to the substitution in the :file:`/substitutions.txt`
-   file following the example below. The replacement text should be in camelCase:
+   file following the example below.
+   The replacement text should be derived from file name and in camelCase:
 
    ::
 
+     .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
+        :width: 1.5em
      .. |splitLayer| image:: /static/common/split_layer.png
         :width: 1.5em
 
-#. run the :file:`scripts/find_set_subst.py` script to update the substitution
-   definitions in the rst files and include the new substitution(s).
-#. (optional) add the reference to the icon and its substitution to the list below.
+#. Update the target section(s) of the docs, using your new substitution.
+#. (optional but highly desirable) add the substitution to the list below.
+#. Add the new substitution reference in the substitutions list at the end of the file(s)
+   it is used in, or run the convenient :file:`scripts/find_set_subst.py` script.
+
+   .. code-block:: py
+
+     # from the repository main folder
+     python3 scripts/find_set_subst.py
 
 Common Substitutions
 ====================
