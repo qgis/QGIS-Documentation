@@ -499,7 +499,7 @@ Icon                            Substitution                        Icon        
 |lineIntersections|             ``|lineIntersections|``             |mergeLayers|                   ``|mergeLayers|``
 |sumPoints|                     ``|sumPoints|``                     |sumLengthLines|                ``|sumLengthLines|``
 |randomPointsInPolygons|        ``|randomPointsInPolygons|``        |randomPointsWithinPolygon|     ``|randomPointsWithinPolygon|``
-|randomPointsOnLines|           ``|randomPointOOnLines|``           |randomPointsWithinExtent|      ``|randomPointsWithinExtent|``
+|randomPointsOnLines|           ``|randomPointsOnLines|``           |randomPointsWithinExtent|      ``|randomPointsWithinExtent|``
 |multiToSingle|                 ``|multiToSingle|``
 |grid|                          ``|grid|``                          |tiles|                         ``|tiles|``
 |merge|                         ``|merge|``                         |rasterClip|                    ``|rasterClip|``

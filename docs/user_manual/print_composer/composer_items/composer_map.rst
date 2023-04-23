@@ -88,8 +88,8 @@ functionalities:
       their geometry.
 
     You can |checkbox| :guilabel:`Force labels inside atlas feature`.
-    If you don't want to |radiobuttonoff| :guilabel:`Clip all layers` to the
-    atlas feature you can use the |radiobuttonon| :guilabel:`Clip selected layers`
+    If you don't want to |radioButtonOff| :guilabel:`Clip all layers` to the
+    atlas feature you can use the |radioButtonOn| :guilabel:`Clip selected layers`
     option.
   * |checkbox| :guilabel:`Clip to item`: it is possible to change the shape of the
     map item by using a :ref:`shape <layout_basic_shape_item>` or :ref:`polygon
