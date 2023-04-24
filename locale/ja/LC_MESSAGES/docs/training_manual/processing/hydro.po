@@ -2,25 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
-# fairtommy <fairtommy@gmail.com>, 2022
+# Harrissou Sant-anna, 2023
+# Miyoshi Tomoya, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-12 00:23+0100\n"
-"PO-Revision-Date: 2022-03-14 05:07+0000\n"
-"Last-Translator: fairtommy <fairtommy@gmail.com>, 2022\n"
-"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Miyoshi Tomoya, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -41,13 +41,13 @@ msgstr ""
 msgid ""
 "Objectives: Starting with a DEM, we are going to extract a channel network, "
 "delineate watersheds and calculate some statistics."
-msgstr "目的：DEMから始めて、チャネルネットワークを抽出し、流域を描写し、いくつかの統計を計算します。"
+msgstr "目的：DEMから始めて、水路網を抽出し、流域を描写し、いくつかの統計を計算します。"
 
 #: ../../docs/training_manual/processing/hydro.rst:15
 msgid ""
 "The first thing is to load the project with the lesson data, which just "
 "contains a DEM."
-msgstr "最初は、レッスンデータ、DEM だけが含まれている、を持つプロジェクトをロードすることです。"
+msgstr "最初にDEM だけが含まれているレッスンデータを持つプロジェクトを読み込みます。"
 
 #: ../../docs/training_manual/processing/hydro.rst:19
 msgid ""
@@ -56,19 +56,24 @@ msgid ""
 " *Catchment area*. They have different algorithms underneath, but the "
 "results are basically the same."
 msgstr ""
-"最初に実行するモジュールは *集水域* です（一部のSAGAバージョンでは、 *流れの蓄積（トップダウン）* と呼ばれます）。 *集水域* "
+"最初に実行するモジュールは *集水域* です（一部のSAGAバージョンでは、 *累積流量（トップダウン）* と呼ばれます）。 *集水域* "
 "という名前の他の任意のものを使用できます。それらは下に異なるアルゴリズムを持っていますが、結果は基本的に同じです。"
+
+#: ../../docs/training_manual/processing/hydro.rst:23
+msgid ""
+"Select the DEM in the :guilabel:`Elevation` field, and leave the default "
+"values for the rest of the parameters."
+msgstr ":guilabel:`標高`フィールドでDEMを選択し、残りのパラメータはデフォルト値のままにしておきます。"
 
 #: ../../docs/training_manual/processing/hydro.rst:28
 msgid ""
 "Some algorithms calculate many layers, but the *Catchment Area* layer is the"
 " only one we will be using. You can get rid of the other ones if you want."
-msgstr ""
-"一部のアルゴリズムは多くのレイヤーを計算しますが、使用するのは *集水域* レイヤーだけです。必要に応じて、他のものを取り除くことができます。"
+msgstr "一部のアルゴリズムは多くのレイヤを計算しますが、使用するのは *集水域* レイヤだけです。必要に応じて、他のものを取り除くことができます。"
 
 #: ../../docs/training_manual/processing/hydro.rst:31
 msgid "The rendering of the layer is not very informative."
-msgstr "レイヤーのレンダリングは非常に有益ではありません。"
+msgstr "レイヤのレンダリングは非常に有益ではありません。"
 
 #: ../../docs/training_manual/processing/hydro.rst:35
 msgid ""
@@ -81,9 +86,65 @@ msgstr ""
 "理由を知るために、ヒストグラムを見ると、値が均等に分散されていないことがわかります（非常に高い値のセルがいくつかあります。水路ネットワークに対応するものです）。"
 " :guilabel:`ラスター計算機` アルゴリズムを使用して、集水域の値の領域の対数を計算すると、より多くの情報を含むレイヤーが得られます。"
 
+#: ../../docs/training_manual/processing/hydro.rst:43
+msgid ""
+"The catchment area (also known as flow accumulation) can be used to set a "
+"threshold for channel initiation. This can be done using the "
+":guilabel:`Channel network` algorithm."
+msgstr ""
+"集水域（累積流量としても知られます）は、水路の開始の閾値を設定するために使用することができます。これは :guilabel:`水路網` "
+"アルゴリズムを使用して行うことができます。"
+
+#: ../../docs/training_manual/processing/hydro.rst:47
+msgid ""
+":guilabel:`Initiation grid`: use the catchment area layer and not the "
+"logarithm one."
+msgstr ":guilabel:`Initiation grid`: 対数ではなく、集水域のレイヤを使用します。"
+
+#: ../../docs/training_manual/processing/hydro.rst:48
+msgid ":guilabel:`Initiation threshold`: ``10.000.000``"
+msgstr ":guilabel:`Initiation threshold`: ``10.000.000``"
+
+#: ../../docs/training_manual/processing/hydro.rst:49
+msgid ":guilabel:`Initiation type`: *Greater than*"
+msgstr ":guilabel:`Initiation type`: *Greater than*"
+
+#: ../../docs/training_manual/processing/hydro.rst:53
+msgid ""
+"If you increase the :guilabel:`Initiation threshold` value, you will get a "
+"more sparse channel network. If you decrease it, you will get a denser one. "
+"With the proposed value, this is what you get."
+msgstr ""
+":guilabel:`Initiation threshold` "
+"の値を大きくすると、より疎な水路網が得られます。値を小さくすると、より密な網になります。提案された値では、このような結果になります。"
+
+#: ../../docs/training_manual/processing/hydro.rst:59
+msgid ""
+"The image above shows just the resulting vector layer and the DEM, but there"
+" should be also a raster layer with the same channel network. That raster "
+"will be, in fact, the layer we will be using."
+msgstr ""
+"上の画像は、出来上がったベクタレイヤとDEMだけですが、同じ水路網を持つラスタレイヤも存在するはずです。このラスタレイヤが、これから使用するレイヤとなります。"
+
+#: ../../docs/training_manual/processing/hydro.rst:63
+msgid ""
+"Now, we will use the :guilabel:`Watersheds basins` algorithm to delineate "
+"the subbasins corresponding to that channel network, using as outlet points "
+"all the junctions in it. Here is how you have to set the corresponding "
+"parameters dialog."
+msgstr ""
+"次に、:guilabel:`Watersheds basins` "
+"アルゴリズムを使って、水路網に対応する第二次流域を、その中のすべてのジャンクションを出口点として定義します。ここでは、対応するパラメータをダイアログで設定する必要があります。"
+
 #: ../../docs/training_manual/processing/hydro.rst:70
 msgid "And this is what you will get."
 msgstr "そして、得られるものはこれです。"
+
+#: ../../docs/training_manual/processing/hydro.rst:74
+msgid ""
+"This is a raster result. You can vectorise it using the "
+":guilabel:`Vectorising grid classes` algorithm."
+msgstr "これはラスタの結果です。:guilabel:`Vectorising grid classes` アルゴリズムを使ってベクタ化できます。"
 
 #: ../../docs/training_manual/processing/hydro.rst:82
 msgid ""
@@ -92,7 +153,7 @@ msgid ""
 "elevation within that subbasin and then pass it to the module that "
 "calculates those statistics."
 msgstr ""
-"さて、下位流域の一つで標高値についての統計を計算してみましょう。考え方は、ちょうどその下位流域内だけの標高を表しているレイヤーを得て、それをそれらの統計を計算するモジュールに渡すことです。"
+"さて、第二次流域の一つで標高値についての統計を計算してみましょう。考え方は、ちょうどその第二次流域内だけの標高を表しているレイヤを得て、それをそれらの統計を計算するモジュールに渡すことです。"
 
 #: ../../docs/training_manual/processing/hydro.rst:86
 msgid ""
@@ -102,12 +163,32 @@ msgid ""
 "can clip the DEM to the area covered by that polygon, since the algorithm is"
 " aware of the selection."
 msgstr ""
-"まず、下位流域を表すポリゴンを使用して元のDEMをクリップします。 :guilabel:`ポリゴンでラスターをクリップ` "
-"アルゴリズムを使用します。単一の下位流域ポリゴンを選択してからクリッピングアルゴリズムを呼び出すと、アルゴリズムが選択を認識しているため、DEMをそのポリゴンでカバーされる領域にクリップできます。"
+"まず、第二次流域を表すポリゴンを使用して元のDEMをクリップします。 :guilabel:`ポリゴンでラスタをクリップ` "
+"アルゴリズムを使用します。単一の第二次流域ポリゴンを選択してからクリッピングアルゴリズムを呼び出すと、アルゴリズムが選択を認識しているため、DEMをそのポリゴンでカバーされる領域にクリップできます。"
+
+#: ../../docs/training_manual/processing/hydro.rst:91
+msgid "Select a polygon"
+msgstr "ポリゴンを選びます"
+
+#: ../../docs/training_manual/processing/hydro.rst:95
+msgid "Call the clipping algorithm with the following parameters:"
+msgstr "次のパラメータでクリッピングアルゴリズムを呼び出します："
+
+#: ../../docs/training_manual/processing/hydro.rst:99
+msgid ""
+"The element selected in the input field is, of course, the DEM we want to "
+"clip."
+msgstr "入力フィールドで選択された要素は、もちろん、クリップしたいDEMです。"
 
 #: ../../docs/training_manual/processing/hydro.rst:101
 msgid "You will get something like this."
 msgstr "このようなものが得られます。"
+
+#: ../../docs/training_manual/processing/hydro.rst:105
+msgid ""
+"This layer is ready to be used in the :guilabel:`Raster layer statistics` "
+"algorithm."
+msgstr "このレイヤは :guilabel:`ラスタレイヤの統計量` アルゴリズムで使う準備ができています。"
 
 #: ../../docs/training_manual/processing/hydro.rst:109
 msgid "The resulting statistics are the following ones."
