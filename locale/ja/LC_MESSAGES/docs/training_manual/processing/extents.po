@@ -2,24 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
+# Harrissou Sant-anna, 2023
+# Miyoshi Tomoya, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-12 00:23+0100\n"
-"PO-Revision-Date: 2022-03-14 05:14+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2022\n"
-"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Miyoshi Tomoya, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -31,7 +32,7 @@ msgstr "範囲を定義する"
 msgid ""
 "In this lesson we will see how to define extents, which are needed by some "
 "algorithms, especially raster ones."
-msgstr "このレッスンでは、いくつかのアルゴリズムによって必要とされている範囲、特にラスターの範囲を定義する方法について説明します。"
+msgstr "このレッスンでは、いくつかのアルゴリズムによって必要とされている範囲、特にラスタの範囲を定義する方法について説明します。"
 
 #: ../../docs/training_manual/processing/extents.rst:7
 msgid ""
@@ -39,7 +40,7 @@ msgid ""
 "analysis they perform, and usually to define the extent of the resulting "
 "layer."
 msgstr ""
-"いくつかのアルゴリズムは、それらが行う分析によってカバーされる地域を定義する範囲、そしてたいていは結果のレイヤーの範囲を定義する範囲を必要とします。"
+"いくつかのアルゴリズムは、それらが行う解析によってカバーされる区域を定義する範囲、そしてたいていは結果のレイヤの区域を定義する範囲を必要とします。"
 
 #: ../../docs/training_manual/processing/extents.rst:10
 msgid ""
@@ -55,7 +56,19 @@ msgid ""
 "First, let's open an algorithm that requires an extent to be defined. Open "
 "the *Rasterize* algorithm, which creates a raster layer from a vector layer."
 msgstr ""
-"まずは、定義する範囲を必要とするアルゴリズムを開いてみましょう。ベクターレイヤーからラスターレイヤーを作成する *ラスター化* アルゴリズムを開きます。"
+"まずは、定義する範囲を必要とするアルゴリズムを開いてみましょう。ベクタレイヤからラスタレイヤを作成する *ラスタ化* アルゴリズムを開きます。"
+
+#: ../../docs/training_manual/processing/extents.rst:20
+msgid ""
+"All the parameters, except for the last two ones, are used to define which "
+"layer is to be rasterized, and configure how the rasterization process "
+"should work. The two last parameters, on the other hand, define the "
+"characteristics of the output layer. That means that they define the area "
+"that is covered (which is not necessarily the same area covered by the input"
+" vector layer), and the resolution/cellsize (which cannot be inferred from "
+"the vector layer, since vector layers do not have a cellsize)."
+msgstr ""
+"最後の2つのパラメータを除くすべてのパラメータは、ラスタ化するレイヤを定義し、ラスタ化処理の方法を設定するために使用されます。一方、最後の2つのパラメータは、出力レイヤの特性を定義するものです。つまり、カバーする区域（入力ベクタレイヤがカバーする区域と同じとは限らない）と、解像度/セルサイズ（ベクタレイヤにはセルサイズがないため、ベクタレイヤから推測することはできない）を定義する。"
 
 #: ../../docs/training_manual/processing/extents.rst:28
 msgid ""
