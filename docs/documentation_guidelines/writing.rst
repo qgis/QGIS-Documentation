@@ -526,8 +526,8 @@ is located in the same folder as the referencing :file:`.rst` file.
 * You can find some prepared QGIS-projects that are used to create screenshots
   in the :file:`./qgis-projects` folder of this repository.
   This makes it easier to reproduce screenshots for the next version of QGIS.
-  These projects use the QGIS `Sample Data <https://qgis.org/downloads/data/>`_
-  (aka Alaska Dataset), which should be placed in the same folder
+  These projects use the QGIS `Sample Data <https://github.com/qgis/QGIS-Sample-Data/archive/master.zip>`_
+  (aka Alaska Dataset), which should be unzipped and placed in the same folder
   as the QGIS-Documentation Repository.
 * Reduce the window to the minimal space needed to show the feature (taking the
   whole screen for a small modal window > overkill)
