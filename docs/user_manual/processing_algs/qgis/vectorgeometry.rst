@@ -4421,6 +4421,7 @@ Parameters
        when creating a mitered join as a factor of the offset distance (only applicable for miter
        join styles).
        Minimum: 1.0              
+
        .. figure:: img/buffer_miter_limit.png
           :align: center
           :width: 100%
