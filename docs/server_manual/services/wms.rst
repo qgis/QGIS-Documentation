@@ -700,7 +700,7 @@ return.
 For example if ``QUERY_LAYERS`` is set to ``layer1,layer2`` and
 ``FEATURE_COUNT`` is set to ``3`` then a maximum of 3 features from
 layer1 will be returned.
-Likewise a maximun of 3 features from layer2 will be returned.
+Likewise a maximum of 3 features from layer2 will be returned.
 
 By default, only 1 feature per layer is returned.
 
