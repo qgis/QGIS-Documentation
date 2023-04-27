@@ -23,7 +23,9 @@ import doctest
 import yaml
 import sys
 import os
+from hashlib import md5
 from sphinx.roles import MenuSelection
+
 project = 'QGIS Documentation'
 copyright = '2002-now, QGIS project'
 author = 'QGIS Authors'
@@ -191,6 +193,12 @@ extlinks = {  # api website: docs master branch points to '/' while x.y points t
     'source': ('https://github.com/qgis/QGIS/blob/{}/%s'.format(source_version), None)
 }
 
+def calculate_tx_slug(filepath):
+    """A function to calculate Transifex slug using md5 on file path"""
+
+    result = md5(filepath.encode())
+    return result.hexdigest()
+
 context = {
     # 'READTHEDOCS': True,
     'version_downloads': True,
@@ -205,10 +213,11 @@ context = {
     'github_version': 'master/',
     'github_url': 'https://github.com/qgis/QGIS-Documentation/edit/master',
     'transifex_url': 'https://app.transifex.com/qgis/qgis-documentation/translate',
+    'calculate_tx_slug': calculate_tx_slug,
 
     'pyqgis_version': pyqgis_version,
     'source_version': source_version,
-    'api_version': api_version
+    'api_version': api_version,
 }
 
 if 'html_context' in globals():
