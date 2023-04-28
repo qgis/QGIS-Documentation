@@ -63,8 +63,8 @@ The following tools are provided at the top of the 3D map view panel:
   display in the map view from predefined :ref:`map themes <map_themes>`.
 * The |options| :sup:`Options` menu provides shortcuts to:
 
-  * Add visual effects to the 3D rendering, such as :guilabel:`Show shadows`,
-    :guilabel:`Show eye dome lighting`
+  * Add visual effects to the 3D rendering, such as showing :ref:`shadows <shadows>`,
+    :ref:`eye dome lighting <eye_dome_lighting>` or :ref:`ambient occlusion <ambient_occlusion>`
   * Synchronize the views (:guilabel:`2D map view follows 3D camera` and/or
     :guilabel:`3D camera follows 2D Map view`)
   * :guilabel:`Show visible camera area in 2D map view`
@@ -175,10 +175,12 @@ From the :guilabel:`Lights` tab, press the |symbologyAdd| menu to add
 
    The 3D Map Lights Configuration dialog
 
+.. _shadows:
+
 Shadow
 ------
 
-Check |unchecked| :guilabel:`Show shadow` to display shadow within your scene,
+Check |unchecked| :guilabel:`Show shadows` to display shadows within your scene,
 given:
 
 * a :guilabel:`Directional light`
@@ -263,14 +265,60 @@ Advanced
   the map tile resolution and max. ground error).
 * |unchecked| :guilabel:`Show labels`: Toggles map labels on/off
 * |unchecked| :guilabel:`Show map tile info`: Include border and tile
-  numbers for the terrain tiles (useful for troubleshooting terrain
-  issues)
+  numbers for the terrain tiles (useful for troubleshooting terrain issues)
 * |unchecked| :guilabel:`Show bounding boxes`: Show 3D bounding boxes
   of the terrain tiles (useful for troubleshooting terrain issues)
 * |unchecked| :guilabel:`Show camera's view center`
-* |unchecked| :guilabel:`Show light sources`: shows a sphere at light source
-  origins, allowing easier repositioning and placement of light sources relative
-  to the scene contents
+* |unchecked| :guilabel:`Show camera's rotation center`
+* |unchecked| :guilabel:`Show light sources`: shows a sphere at light source origins,
+  allowing easier repositioning and placement of light sources relative to the scene contents
+* |unchecked| :guilabel:`Show frames per second (FPS)`
+* |unchecked| :guilabel:`Show debug overlay`: visual overlay which displays
+  some useful debugging and profiling information.
+  This allows in particular to quickly see the frame graph and the scene graph.
+
+.. _eye_dome_lighting:
+
+* |unchecked| :guilabel:`Show Eye Dome Lighting` (EDL):
+  a post processing effect which compares each pixel's depth (distance off the camera)
+  with neighbor pixels depth and highlights the edges according to the depth difference.
+  Affects the whole scene. Following parameters can be controlled:
+
+  * :guilabel:`Lighting strength`: increases the contrast, allowing for better depth perception
+    (needs to be adjusted when zooming in)
+  * :guilabel:`Lighting distance`: represents the distance of the used pixels off the center pixel
+    and has the effect of making edges thicker.
+
+.. _ambient_occlusion:
+
+* Add screen-space |unchecked| :guilabel:`Ambient Occlusion` (SSAO):
+  a post processing effect which nicely renders depth perception of the data in 3D
+  and can be combined with Eye dome Lighting.
+  Following parameters can be controlled:
+
+  * :guilabel:`Radius`: how far we will reach to calculate ambient occlusion
+  * :guilabel:`Intensity`: how strong the effect should be (higher values make things darker)
+  * :guilabel:`Occlusion threshold`: how many neighboring points need to be occluded for the effect to appear
+    (lower values than 50% will make the output darker, but possibly providing greater range of occlusion)
+
+.. _figure_3dmaps_edl_ssao:
+
+.. figure:: img/3dmap_edl_ssao.png
+   :align: center
+
+   Rendering Point clouds in 3D map using Eye Dome Lighting (EDL) and/or Screen-Space Ambient Occlusion (SSAO)
+
+   From top, left to right: No effect -- SSAO only -- EDL only -- SSAO and EDL
+
+* |unchecked| :guilabel:`Debug Shadow Map`: renders the scene as a red-black image
+  from the point of view of the light used for shadows (for troubleshooting). 
+  The widget is set with a proportional :guilabel:`Size` to the 3D map view's,
+  and docked in a :guilabel:`Corner`.
+* |unchecked| :guilabel:`Debug Depth Map`: renders the scene as a red-black image
+  with nearer pixels being darker (for troubleshooting).
+  The widget is set with a proportional :guilabel:`Size` to the 3D map view's,
+  and docked in a :guilabel:`Corner`.
+
 
 .. _`3d_navigation`:
 
