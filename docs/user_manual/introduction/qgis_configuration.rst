@@ -1572,8 +1572,15 @@ the display of:
 
 Available parameters are:
 
-* :guilabel:`Display coordinates using` either ``Map units`` (based on project CRS)
-  or ``Geographic (latitude/longitude)``
+* :guilabel:`Display coordinates using` either:
+
+  * ``Map Units``, based on the project CRS
+  * ``Map Geographic (degrees)``: based on the project CRS if it is of geographic type,
+    otherwise uses its associated geographic CRS. This is helpful e.g. for non-earth celestial bodies.
+  * or ``Custom Projection Units``: allows to rely on any CRS you desire for coordinates display
+
+* In the :guilabel:`Coordinate CRS` option, you can view or define the CRS to use
+  depending on your display mode.
 * :guilabel:`Coordinate format`: you can configure it as ``Decimal Degrees``,
   ``Degrees, Minutes`` or ``Degrees, Minutes, Seconds``, and whether it should display:
 
