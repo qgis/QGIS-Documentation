@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"POT-Creation-Date: 2023-04-29 06:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -253,7 +253,7 @@ msgid ""
 "Manager` dialog, either by:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:789
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:794
 msgid "wms"
 msgstr ""
 
@@ -263,7 +263,7 @@ msgid ""
 "(or pressing :kbd:`Ctrl+L`) and enabling the tab"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:771
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:774
 msgid "dataSourceManager"
 msgstr ""
 
@@ -273,7 +273,7 @@ msgid ""
 "Layers* toolbar"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:767
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:770
 msgid "addWmsLayer"
 msgstr ""
 
@@ -331,7 +331,7 @@ msgid ""
 msgstr ""
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:206
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:710
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:713
 msgid ""
 "Entering **username** and **password** in the :guilabel:`Authentication` "
 "tab will keep unprotected credentials in the connection configuration. "
@@ -359,7 +359,7 @@ msgid ""
 ":guilabel:`URL` field above."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:785
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:790
 msgid "unchecked"
 msgstr ""
 
@@ -413,11 +413,11 @@ msgid ""
 ":guilabel:`Proxy type` |selectString| drop-down menu."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:769
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:772
 msgid "checkbox"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:781
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:786
 msgid "selectString"
 msgstr ""
 
@@ -476,7 +476,7 @@ msgid ""
 "corner."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:779
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:784
 msgid "search"
 msgstr ""
 
@@ -548,7 +548,7 @@ msgid ""
 "projection of the WMS with another CRS supported by the WMS server."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:783
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:788
 msgid "setProjection"
 msgstr ""
 
@@ -640,7 +640,7 @@ msgid ""
 "with a nice slider docked in."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:777
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:782
 msgid "kde"
 msgstr ""
 
@@ -657,7 +657,7 @@ msgid ""
 "formatting of this text is dependent on the particular WMS server used."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:773
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:776
 msgid "identify"
 msgstr ""
 
@@ -830,7 +830,7 @@ msgid ""
 "controller's current time range by default."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:775
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:780
 msgid "indicatorTemporal"
 msgstr ""
 
@@ -994,7 +994,7 @@ msgid ""
 " and other query criteria."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:787
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:792
 msgid "wcs"
 msgstr ""
 
@@ -1035,10 +1035,12 @@ msgid ""
 "In QGIS, a WFS layer behaves pretty much like any other vector layer. You"
 " can identify and select features, and view the attribute table. QGIS "
 "supports WFS 1.0.0, 1.1.0, 2.0 and OGC API - Features (OAPIF), including "
-"editing (through WFS-T)."
+"editing (through WFS-T). QGIS also supports background download and "
+"progressive rendering, on-disk caching of downloaded features and version"
+" autodetection."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:658
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:660
 msgid ""
 "In general, adding a WFS layer is very similar to the procedure used with"
 " WMS. There are no default servers defined, so you have to add your own. "
@@ -1047,87 +1049,79 @@ msgid ""
 "lists with public URLs, some of them maintained and some not."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:665
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:667
 msgid "**Loading a WFS Layer**"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:667
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:669
 msgid ""
 "As an example, we use the Gateway Geomatics WFS server and display a "
 "layer."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:673
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:675
 msgid ""
 "To be able to load a WFS Layer, first create a connection to the WFS "
 "server:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:675
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:677
 msgid ""
 "Open the :guilabel:`Data Source Manager` dialog by pressing the "
 "|dataSourceManager| :sup:`Open Data Source Manager` button"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:677
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:679
 msgid "Enable the |addWfsLayer| :guilabel:`WFS/OGC API-Features` tab"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:765
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:768
 msgid "addWfsLayer"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:678
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:680
 msgid ""
 "Click on :guilabel:`New...` to open the :guilabel:`Create a New WFS "
 "Connection` dialog"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:680
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:682
 msgid "Enter ``Gateway Geomatics`` as name"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:681
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:683
 msgid "Enter the URL (see above)"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:688
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:690
 msgid "Creating a connection to a WFS server"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:690
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:692
 msgid ""
 "In case of an OGC API - Features (OAPIF), the URL to provide should be "
 "the :ref:`landing page <oapif_endpoints>`, ie the main page from which it"
 " is possible to navigate to all the available service endpoints."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:694
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:696
 msgid "In the WFS settings dialog, you can:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:696
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:698
 msgid ""
 "Indicate the WFS version of the server. If unknown, press the "
 ":guilabel:`Detect` button to automatically retrieve it."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:698
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:700
 msgid ""
 "Define the :guilabel:`maximum number of features` retrieved in a single "
 "GetFetFeature request. If empty, no limit is set."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:700
-msgid ":guilabel:`Invert axis orientation`."
-msgstr ""
-
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:701
-msgid "And depending on the WFS version:"
-msgstr ""
-
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:703
-msgid "Force to :guilabel:`Ignore axis orientation (WFS 1.1/WFS 2.0)`"
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:702
+msgid "And depending on the WFS version, indicate whether to:"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:704
@@ -1137,79 +1131,102 @@ msgid ""
 "then the server default is applied."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:718
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:707
+msgid "Force to :guilabel:`Ignore axis orientation (WFS 1.1/WFS 2.0)`"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:708
+msgid ":guilabel:`Invert axis orientation`."
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:709
+msgid ":guilabel:`Use GML2 encoding for transactions`."
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:721
 msgid "Press :guilabel:`OK` to create the connection."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:720
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:723
 msgid ""
 "Note that any proxy settings you may have set in your preferences are "
 "also recognized."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:722
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:725
 msgid "Now we are ready to load WFS layers from the above connection."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:724
-msgid ""
-"Choose 'Gateway Geomatics' from the :guilabel:`Server Connections` "
-"|selectString| drop-down list."
-msgstr ""
-
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:726
-msgid "Click :guilabel:`Connect`"
-msgstr ""
-
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:727
-msgid "Select the :guilabel:`Parks` layer in the list"
+msgid ""
+"Choose 'Gateway Geomatics' from the :guilabel:`Server Connections` drop-"
+"down list."
 msgstr ""
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:728
-msgid "You can also choose whether to:"
+msgid "Click :guilabel:`Connect`"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:729
+msgid "Select the :guilabel:`Parks` layer in the list"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:730
+msgid "You can also choose whether to:"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:732
 msgid ""
 "|unchecked| :guilabel:`Use title for layer name`, showing the layer's "
 "title as defined on the server in the :guilabel:`Layers` panel instead of"
 " its :guilabel:`Name`"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:733
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:735
 msgid "|checkbox| :guilabel:`Only request features overlapping the view extent`"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:734
-msgid "|unchecked| :guilabel:`Change` the layer's CRS"
-msgstr ""
-
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:735
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:736
 msgid ""
-"or :guilabel:`Build query` to specify particular features to retrieve, by"
-" either using the corresponding button or double-clicking the target "
-"layer."
+":guilabel:`Change...` the layer's CRS to any other supported by the "
+"service"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:739
-msgid "Click :guilabel:`Add` to add the layer to the map."
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:737
+msgid ""
+"or build a query to specify particular features to retrieve from the "
+"service: double-click on the row of the layer to open the :guilabel:`SQL "
+"Query Composer` dialog. That dialog provides widgets to write an advanced"
+" SQL query relying on available tables and columns of the service, with "
+"sorting and filtering and a bunch of SQL functions, spatial predicates "
+"and operators."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:746
-msgid "Adding a WFS layer"
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:743
+msgid ""
+"The query you build will appear after validation in the :guilabel:`SQL` "
+"column within the :guilabel:`WFS / OGC API - Features` table, and the "
+"filtered layer will display the |indicatorFilter| icon next to it in the "
+":guilabel:`Layers` panel. It is thus possibe to adjust the query at any "
+"moment."
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:778
+msgid "indicatorFilter"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:748
+msgid "Click :guilabel:`Add` to add the layer to the map."
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:755
+msgid "Adding a WFS layer"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:757
 msgid ""
 "You'll notice the download progress is visualized in the lower left of "
 "the QGIS main window. Once the layer is loaded, you can identify and "
 "select a couple of features and view the attribute table."
-msgstr ""
-
-#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:754
-msgid ""
-"QGIS supports different versions of the WFS protocol, with background "
-"download and progressive rendering, on-disk caching of downloaded "
-"features and version autodetection."
 msgstr ""
 
