@@ -764,18 +764,35 @@ You don't have to understand the full request for now but you may retrieve
 a map with some of the previous layers thanks to QGIS Server by doing something
 like this in your web browser to retrieve the *countries* layer:
 
-.. code-block:: bash
+* If you followed the above instructions to install an Apache HTTP Server:
 
-  http://qgis.demo/qgisserver?
-    MAP=/home/qgis/projects/world.qgs&
-    LAYERS=countries&
-    SERVICE=WMS&
-    VERSION=1.3.0&
-    REQUEST=GetMap&
-    CRS=EPSG:4326&
-    WIDTH=400&
-    HEIGHT=200&
-    BBOX=-90,-180,90,180
+  .. code-block:: bash
+
+    http://qgis.demo/cgi-bin/qgis_mapserv.fcgi?
+      MAP=/home/qgis/projects/world.qgs&
+      LAYERS=countries&
+      SERVICE=WMS&
+      VERSION=1.3.0&
+      REQUEST=GetMap&
+      CRS=EPSG:4326&
+      WIDTH=400&
+      HEIGHT=200&
+      BBOX=-90,-180,90,180
+
+* If you followed the above instructions to install an NGINX HTTP Server:
+
+  .. code-block:: bash
+
+    http://qgis.demo/qgisserver?
+      MAP=/home/qgis/projects/world.qgs&
+      LAYERS=countries&
+      SERVICE=WMS&
+      VERSION=1.3.0&
+      REQUEST=GetMap&
+      CRS=EPSG:4326&
+      WIDTH=400&
+      HEIGHT=200&
+      BBOX=-90,-180,90,180
 
 If you obtain the next image, then QGIS Server is running correctly:
 
