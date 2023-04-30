@@ -2,24 +2,26 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
+# Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2023
+# Miyoshi Tomoya, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-16 07:30+0000\n"
-"PO-Revision-Date: 2022-03-14 05:13+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2022\n"
-"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Miyoshi Tomoya, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -32,7 +34,7 @@ msgid ""
 "Now that we've covered all the theory, let's create a new database. This "
 "database will be used for our exercises for the lessons that will follow "
 "afterwards."
-msgstr "私たちはすべての理論をカバーしたので新しいデータベースを作成してみましょう。このデータベースは後に続くレッスンの実習で使います。"
+msgstr "すべての理論をカバーしたところで新しいデータベースを作ってみましょう。このデータベースは後に続くレッスンの実習で使います。"
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:8
 msgid ""
@@ -43,6 +45,15 @@ msgstr "**このレッスンの目標:** 必要なソフトウェアをインス
 #: ../../docs/training_manual/database_concepts/data_model.rst:12
 msgid "Install PostgreSQL"
 msgstr "PostgreSQLのインストール"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:14
+msgid ""
+"You can find PostgreSQL packages and installation instructions for your "
+"operating system at https://www.postgresql.org/download/. Please note that "
+"the documentation will assume users are running QGIS under Ubuntu."
+msgstr ""
+"お使いのオペレーティングシステムに対応したPostgreSQLのパッケージとインストール方法は、https://www.postgresql.org/download/"
+" でご覧いただけます。なお、このドキュメントでは、ユーザーがUbuntuでQGISを実行していることを想定しています。"
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:19
 #: ../../docs/training_manual/database_concepts/data_model.rst:56
@@ -62,6 +73,14 @@ msgstr ":kbd:`Y` と :kbd:`Enter` キーを押し、ダウンロードとイン�
 #: ../../docs/training_manual/database_concepts/data_model.rst:48
 msgid "Help"
 msgstr "ヘルプ"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:50
+msgid ""
+"PostgreSQL has very good `online "
+"<https://www.postgresql.org/docs/9.1/index.html>`_ documentation."
+msgstr ""
+"PostgreSQLにはとても良い `オンライン <https://www.postgresql.org/docs/9.1/index.html>`_ "
+"ドキュメントがあります。"
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:54
 msgid "Create a database user"
@@ -112,6 +131,11 @@ msgstr "新しいアカウントの確認"
 msgid "Should return something like this::"
 msgstr "このように返されるはずです::"
 
+#: ../../docs/training_manual/database_concepts/data_model.rst:115
+#: ../../docs/training_manual/database_concepts/data_model.rst:145
+msgid "Type :kbd:`Q` to exit."
+msgstr ":kbd:`Q` を入力して終了します。"
+
 #: ../../docs/training_manual/database_concepts/data_model.rst:118
 msgid "Create a database"
 msgstr "データベースの作成"
@@ -154,6 +178,15 @@ msgstr "sql コマンドのヘルプを見るには::"
 #: ../../docs/training_manual/database_concepts/data_model.rst:166
 msgid "To get help on a specific command, type (for example)::"
 msgstr "特定のコマンドのヘルプを表示するには(例)::"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:170
+msgid ""
+"See also the `Psql cheat sheet "
+"<http://www.postgresonline.com/downloads/special_feature/postgresql90_cheatsheet_A4.pdf>`_."
+msgstr ""
+"`Psql cheat sheet "
+"<http://www.postgresonline.com/downloads/special_feature/postgresql90_cheatsheet_A4.pdf>`_"
+" も参照してください。"
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:173
 msgid "Make Tables in SQL"
@@ -223,7 +256,11 @@ msgstr "ご覧のようにテーブルは現在空です。"
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:248
 msgid "|TY| |moderate|"
-msgstr "|TY| |moderate|"
+msgstr ""
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:448
+msgid "moderate"
+msgstr ""
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:250
 msgid "Use the approach shown above to make a table called people:"
@@ -235,6 +272,24 @@ msgid ""
 "valid names: change them to make them valid). Make sure you give the table "
 "an ID column with the same data-type as above."
 msgstr "電話番号、自宅住所、名前などのフィールドを追加します。上記と同じデータ型のID列も作ったか確認して下さい。"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:256
+#: ../../docs/training_manual/database_concepts/data_model.rst:385
+msgid "Answer"
+msgstr "答え"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:259
+msgid "The SQL required to create the correct people table is::"
+msgstr "正しいpeopleテーブルを作るSQLは次の通り::"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:267
+msgid "The schema for the table (enter ``\\\\d people``) looks like this::"
+msgstr "テーブルのスキーマ（``\\\\d people`` を入力）は次のようなものです::"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:282
+msgid ""
+"For illustration purposes, we have purposely omitted the fkey constraint."
+msgstr "説明のために、あえてfkey制約を省略しています。"
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:285
 msgid "Create Keys in SQL"
@@ -306,6 +361,30 @@ msgstr "SQLでテーブルを削除する"
 msgid "If you want to get rid of a table you can use the :kbd:`drop` command:"
 msgstr "テーブルを取り除きたい場合は :kbd:`drop` コマンドを使用します:"
 
+#: ../../docs/training_manual/database_concepts/data_model.rst:383
+msgid "In our current example, the above command would not work. Why not?"
+msgstr "現在の例では、上記のコマンドは機能しません。なぜダメなのでしょう？"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:388
+msgid ""
+"The reason the DROP command would not work in this case is because the "
+"*people* table has a Foreign Key constraint to the *streets* table. This "
+"means that dropping (or deleting) the *streets* table would leave the "
+"*people* table with references to non-existent *streets* data."
+msgstr ""
+"この場合、DROPコマンドが機能しないのは、*people* テーブルが *streets* "
+"テーブルに対して外部キー制約を持っているためです。つまり、*streets* テーブルをドロップ（または削除）すると、存在しない*streets* "
+"データへの参照が *people* テーブルに残ってしまうのです。"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:393
+msgid ""
+"It is possible to 'force' the *streets* table to be deleted by using the "
+"``CASCADE`` command, but this would also delete the *people* and any other "
+"table which had a relationship to the *streets* table. Use with caution!"
+msgstr ""
+"``CASCADE`` コマンドを使用することで、*streets* テーブルを「強制的に」削除することは可能ですが、この場合、*streets* "
+"テーブルと関係がある *people* やその他のテーブルも削除されます。注意して使用してください！"
+
 #: ../../docs/training_manual/database_concepts/data_model.rst:398
 msgid ""
 "If you used the same :kbd:`drop table` command on the `people` table, it "
@@ -345,7 +424,7 @@ msgstr "pgAdmin III は別のモジュールで詳しく取り上げます。"
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:427
 msgid "|IC|"
-msgstr "|IC|"
+msgstr ""
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:429
 msgid ""
@@ -355,7 +434,7 @@ msgstr "真新しいデータベースを完全にゼロから作成する方法
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:433
 msgid "|WN|"
-msgstr "|WN|"
+msgstr ""
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:435
 msgid "Next you'll learn how to use the DBMS to add new data."
