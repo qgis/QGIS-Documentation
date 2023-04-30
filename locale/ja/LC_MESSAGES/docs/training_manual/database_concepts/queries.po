@@ -2,24 +2,26 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
+# Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2023
+# Miyoshi Tomoya, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-16 07:30+0000\n"
-"PO-Revision-Date: 2022-03-14 05:14+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2022\n"
-"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Miyoshi Tomoya, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -141,7 +143,7 @@ msgid ""
 "will get a list of all possible combinations of people and streets, but no "
 "way to know who actually lives on which street!"
 msgstr ""
-"結合によって、情報が由来する2つのテーブルを、この場合は人と通りですが、常に宣言することになります。また、どの2つのキー（外部キー＆主キー）が一致しなければならないかを指定する必要があります。それを指定しない場合は、人と街のすべての可能な組み合わせの一覧が得られますが、誰が実際にその通りに住んでいるか知るすべはありません！"
+"結合によって、情報が由来する2つのテーブルを、この場合はpeopleとstreetsですが、常に宣言することになります。また、どの2つのキー（外部キー＆主キー）が一致しなければならないかを指定する必要があります。それを指定しない場合は、peopleとstreetsのすべての可能な組み合わせの一覧が得られますが、誰が実際にその通りに住んでいるか知るすべはありません！"
 
 #: ../../docs/training_manual/database_concepts/queries.rst:151
 msgid "Here is what the correct output will look like:"
@@ -202,7 +204,7 @@ msgid ""
 "typical example which tells us how many people objects are in our people "
 "table:"
 msgstr ""
-"データベースの強力な機能の1つは、そのテーブル内のデータを要約する能力です。これらの要約は集計クエリと呼ばれます。これは、人々オブジェクトが人々テーブルに何人いるかを教えてくれる代表的な例です:"
+"データベースの強力な機能の1つは、そのテーブル内のデータを要約する能力です。これらの要約は集計クエリと呼ばれます。これは、peopleオブジェクトがpeopleテーブルに何人いるかを教えてくれる代表的な例です:"
 
 #: ../../docs/training_manual/database_concepts/queries.rst:251
 msgid "If we want the counts to be summarised by street name we can do this:"
@@ -216,7 +218,11 @@ msgstr ":kbd:`ORDER BY` 句を使用しなかったため、検索結果の順�
 
 #: ../../docs/training_manual/database_concepts/queries.rst:274
 msgid "|TY| |moderate|"
-msgstr "|TY| |moderate|"
+msgstr ""
+
+#: ../../docs/training_manual/database_concepts/queries.rst:325
+msgid "moderate"
+msgstr ""
 
 #: ../../docs/training_manual/database_concepts/queries.rst:276
 msgid ""
@@ -224,9 +230,29 @@ msgid ""
 " of the street_ids."
 msgstr "通りの名前で人を要約し、street_idsの代わりに実際の通りの名前を表示してください。"
 
+#: ../../docs/training_manual/database_concepts/queries.rst:279
+msgid "Answer"
+msgstr "答え"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:282
+msgid "Here is the correct SQL statement you should use::"
+msgstr "使うべき正しいSQL文はこちらです::"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:289
+msgid "Result::"
+msgstr "結果::"
+
+#: ../../docs/training_manual/database_concepts/queries.rst:298
+msgid ""
+"You will notice that we have prefixed field names with table names (e.g. "
+"people.name and streets.name). This needs to be done whenever the field name"
+" is ambiguous (i.e. not unique across all tables in the database)."
+msgstr ""
+"フィールド名の前にテーブル名を付けていることにお気づきでしょうか（people.nameやstreet.nameなど）。これは、フィールド名があいまいな場合（つまり、データベース内のすべてのテーブルで一意でない場合）に使う必要があります。"
+
 #: ../../docs/training_manual/database_concepts/queries.rst:304
 msgid "|IC|"
-msgstr "|IC|"
+msgstr ""
 
 #: ../../docs/training_manual/database_concepts/queries.rst:306
 msgid ""
@@ -236,7 +262,7 @@ msgstr "クエリを使用して、データベース内の有用な情報を抽
 
 #: ../../docs/training_manual/database_concepts/queries.rst:310
 msgid "|WN|"
-msgstr "|WN|"
+msgstr ""
 
 #: ../../docs/training_manual/database_concepts/queries.rst:312
 msgid ""
