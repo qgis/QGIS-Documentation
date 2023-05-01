@@ -6,17 +6,17 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2023
-# Kwon.Yongchan <ruvyn@naver.com>, 2023
 # Transifex Bot <>, 2023
+# Kwon.Yongchan <ruvyn@naver.com>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"POT-Creation-Date: 2023-04-29 06:13+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2023\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -734,15 +734,25 @@ msgstr ""
 "서버에 요청하는 방법에 대해 지금 전부 이해할 필요는 없습니다. 그러나 QGIS 서버에서 이 레이어들 가운데 몇 개를 받아올 수도 "
 "있습니다. 사용자의 웹 브라우저에 다음과 같이 입력하면 '*countries*' 레이어를 받아올 수 있습니다."
 
-#: ../../docs/server_manual/getting_started.rst:780
+#: ../../docs/server_manual/getting_started.rst:767
+msgid ""
+"If you followed the above instructions to install an Apache HTTP Server:"
+msgstr "앞에서 설명한 아파치 HTTP 서버 설치 지침을 따른 경우:"
+
+#: ../../docs/server_manual/getting_started.rst:782
+msgid ""
+"If you followed the above instructions to install an NGINX HTTP Server:"
+msgstr "앞에서 설명한 엔진X HTTP 서버 설치 지침을 따른 경우:"
+
+#: ../../docs/server_manual/getting_started.rst:797
 msgid "If you obtain the next image, then QGIS Server is running correctly:"
 msgstr "웹 브라우저에 다음 이미지가 표시된다면, QGIS 서버가 바르게 실행되고 있다는 의미입니다:"
 
-#: ../../docs/server_manual/getting_started.rst:785
+#: ../../docs/server_manual/getting_started.rst:802
 msgid "Server response to a basic GetMap request"
 msgstr "기본 GetMap 요청에 대한 서버의 응답"
 
-#: ../../docs/server_manual/getting_started.rst:787
+#: ../../docs/server_manual/getting_started.rst:804
 msgid ""
 "Note that you may define **QGIS_PROJECT_FILE** environment variable to use a"
 " project by default instead of giving a **MAP** parameter (see :ref:`qgis-"
@@ -751,15 +761,15 @@ msgstr ""
 "**MAP** 파라미터를 지정하는 대신 프로젝트가 기본으로 사용할 **QGIS_PROJECT_FILE** 환경 변수를 정의해야 할 수도 "
 "있다는 사실을 기억하십시오. (:ref:`qgis-server-envvar` 를 참조하세요.)"
 
-#: ../../docs/server_manual/getting_started.rst:790
+#: ../../docs/server_manual/getting_started.rst:807
 msgid "For example with spawn-fcgi:"
 msgstr "예를 들어 'spawn-fcgi' 의 경우:"
 
-#: ../../docs/server_manual/getting_started.rst:802
+#: ../../docs/server_manual/getting_started.rst:819
 msgid "Configure your project"
 msgstr "사용자 프로젝트 환경 설정하기"
 
-#: ../../docs/server_manual/getting_started.rst:804
+#: ../../docs/server_manual/getting_started.rst:821
 msgid ""
 "To provide a new QGIS Server WMS, WFS, OAPIF or WCS, you have to create a "
 "QGIS project file with some data or use one of your current project. Define "
@@ -774,11 +784,11 @@ msgstr ""
 ":guilabel:`QGIS Server` 메뉴를 선택하고 :guilabel:`Service Capabilities` 탭에서 OWS 관련"
 " 정보를 입력하십시오."
 
-#: ../../docs/server_manual/getting_started.rst:816
+#: ../../docs/server_manual/getting_started.rst:833
 msgid "Definitions for a QGIS Server WMS/WFS/WCS project"
 msgstr "WMS/WFS/WCS를 서비스하는 QGIS 서버 프로젝트 정의하기"
 
-#: ../../docs/server_manual/getting_started.rst:818
+#: ../../docs/server_manual/getting_started.rst:835
 msgid ""
 "You have to :guilabel:`Enable Service Capabilities` first, if it is "
 "deactivated. This will appear in the GetCapabilities response of the WMS, "
@@ -791,15 +801,15 @@ msgstr ""
 ":guilabel:`Enable Service capabilities` 옵션을 활성화하지 않은 경우, QGIS 서버는 "
 ":file:`cgi-bin` 폴더에 있는 :file:`wms_metadata.xml` 파일 안에 있는 정보를 사용할 것입니다."
 
-#: ../../docs/server_manual/getting_started.rst:1035
+#: ../../docs/server_manual/getting_started.rst:1052
 msgid "checkbox"
 msgstr ""
 
-#: ../../docs/server_manual/getting_started.rst:825
+#: ../../docs/server_manual/getting_started.rst:842
 msgid "WMS capabilities"
 msgstr "WMS 케이퍼빌리티"
 
-#: ../../docs/server_manual/getting_started.rst:827
+#: ../../docs/server_manual/getting_started.rst:844
 msgid ""
 "In the :guilabel:`WMS capabilities` tab, you can define the extent "
 "advertised in the WMS GetCapabilities response by entering the minimum and "
@@ -808,11 +818,11 @@ msgstr ""
 ":guilabel:`WMS capabilities` 탭의 :guilabel:`Advertised extent` 밑에 있는 여러 란에 최소"
 " 및 최대 X/Y 값을 입력해서 WMS 의 `GetCapabilities` 응답에 선언된 범위를 정의할 수 있습니다. "
 
-#: ../../docs/server_manual/getting_started.rst:837
+#: ../../docs/server_manual/getting_started.rst:854
 msgid "Definitions in the WMS tab"
 msgstr "WMS 탭에서 정의할 수 있는 항목들"
 
-#: ../../docs/server_manual/getting_started.rst:839
+#: ../../docs/server_manual/getting_started.rst:856
 msgid ""
 "Clicking :guilabel:`Use Current Canvas Extent` sets these values to the "
 "extent currently displayed in the QGIS map canvas. By checking |checkbox| "
@@ -830,11 +840,11 @@ msgstr ""
 "수 있고, 또는 :guilabel:`Used` 버튼을 클릭해서 목록에 QGIS 프로젝트에서 사용된 적이 있는 좌표계들을 추가할 수도 "
 "있습니다."
 
-#: ../../docs/server_manual/getting_started.rst:1037
+#: ../../docs/server_manual/getting_started.rst:1054
 msgid "symbologyAdd"
 msgstr ""
 
-#: ../../docs/server_manual/getting_started.rst:849
+#: ../../docs/server_manual/getting_started.rst:866
 msgid ""
 "If you have print layouts defined in your project, they will be listed in "
 "the ``GetProjectSettings`` response, and they can be used by the GetPrint "
@@ -852,7 +862,7 @@ msgstr ""
 "아이콘을 클릭하십시오. 그러면 :guilabel:`Select print layout` 대화창이 열리는데, 이 대화창에서 인쇄 조판을 "
 "선택해서 제외될 조판 목록에 추가할 수 있습니다."
 
-#: ../../docs/server_manual/getting_started.rst:859
+#: ../../docs/server_manual/getting_started.rst:876
 msgid ""
 "If you want to exclude any layer or layer group from being published by the "
 "WMS, check |checkbox| :guilabel:`Exclude Layers` and click the "
@@ -871,7 +881,7 @@ msgstr ""
 ":kbd:`Ctrl` 키를 함께 사용하십시오. 필요하지 않은 레이어를 게시되는 레이어에서 제외시키는 편이 좋습니다. WMS "
 "`GetCapabilities` 응답의 용량을 줄여 클라이언트 쪽의 불러오기 시간을 단축시킬 수 있기 때문입니다."
 
-#: ../../docs/server_manual/getting_started.rst:869
+#: ../../docs/server_manual/getting_started.rst:886
 msgid ""
 "If you check |checkbox| :guilabel:`Use layer ids as name`, layer ids will be"
 " used to reference layers in the ``GetCapabilities`` response or ``GetMap "
@@ -882,13 +892,13 @@ msgstr ""
 "응답 또는 ``GetMap LAYERS`` 파라미터에서 레이어를 참조하는 데 레이어 ID를 사용할 것입니다. 체크하지 않으면, 레이어명 "
 "또는 단축명이 정의된 경우 (:ref:`vectorservermenu` 참조) 그 이름을 사용합니다."
 
-#: ../../docs/server_manual/getting_started.rst:874
+#: ../../docs/server_manual/getting_started.rst:891
 msgid ""
 "You can receive requested GetFeatureInfo as plain text, XML and GML. The "
 "default is XML."
 msgstr "요청한 ``GetFeatureInfo`` 를 평문 텍스트, XML 및 GML로 받을 수 있습니다."
 
-#: ../../docs/server_manual/getting_started.rst:878
+#: ../../docs/server_manual/getting_started.rst:895
 msgid ""
 "If you wish, you can check |checkbox| :guilabel:`Add geometry to feature "
 "response`. This will include the bounding box for each feature in the "
@@ -899,7 +909,7 @@ msgstr ""
 "수 있습니다. 이 옵션을 활성화하면 GetFeatureInfo 응답에 각 피처에 대한 경계 상자를 포함시킬 것입니다. "
 ":ref:`WITH_GEOMETRY <wms_getfeatureinfo>` 파라미터도 참조하십시오."
 
-#: ../../docs/server_manual/getting_started.rst:882
+#: ../../docs/server_manual/getting_started.rst:899
 msgid ""
 "As many web clients can’t display circular arcs in geometries you have the "
 "option to segmentize the geometry before sending it to the client in a "
@@ -913,7 +923,7 @@ msgstr ""
 " 강조하기 위해) 표시하게 할 수 있습니다. 이 옵션을 활성화하려면 |checkbox| :guilabel:`Segmentize "
 "feature info geometry` 를 체크해야 합니다."
 
-#: ../../docs/server_manual/getting_started.rst:888
+#: ../../docs/server_manual/getting_started.rst:905
 msgid ""
 "You can also use the :guilabel:`GetFeatureInfo geometry precision` option to"
 " set the precision of the GetFeatureInfo geometry. This enables you to save "
@@ -922,7 +932,7 @@ msgstr ""
 ":guilabel:`GetFeatureInfo geometry precision` 옵션을 사용해서 `GetFeatureInfo` 도형의 "
 "정밀도도 설정할 수 있습니다. 완전한 정밀도가 필요하지 않은 경우, 이 옵션으로 대역폭을 절약할 수 있습니다."
 
-#: ../../docs/server_manual/getting_started.rst:892
+#: ../../docs/server_manual/getting_started.rst:909
 msgid ""
 "If you want QGIS Server to advertise specific request URLs in the WMS "
 "GetCapabilities response, enter the corresponding URL in the "
@@ -931,7 +941,7 @@ msgstr ""
 "QGIS 서버가 WMS `GetCapabilities` 응답 안에 특정한 요청 URL을 선언하기를 바란다면, "
 ":guilabel:`Advertised URL` 란에 그에 해당하는 URL을 입력하십시오."
 
-#: ../../docs/server_manual/getting_started.rst:896
+#: ../../docs/server_manual/getting_started.rst:913
 msgid ""
 "Furthermore, you can restrict the maximum size of the maps returned by the "
 "GetMap request by entering the maximum width and height into the respective "
@@ -940,7 +950,7 @@ msgstr ""
 "또한 :guilabel:`Maximums for GetMap request` 밑에 있는 란에 각각 최대 너비 및 높이를 입력해서 "
 "`GetMap` 요청이 반환하는 맵의 최대 크기를 제한할 수도 있습니다."
 
-#: ../../docs/server_manual/getting_started.rst:900
+#: ../../docs/server_manual/getting_started.rst:917
 msgid ""
 "You can change the :guilabel:`Quality for JPEG images` factor. The quality "
 "factor must be in the range 0 to 100. Specify 0 for maximum compression, 100"
@@ -949,7 +959,7 @@ msgstr ""
 ":guilabel:`Quality for JPEG images` 인자를 변경할 수 있습니다. 품질 인자의 범위가 0부터 100 사이여야만"
 " 합니다. 0을 지정하면 최대 압축이고, 100을 지정하면 압축하지 않음입니다."
 
-#: ../../docs/server_manual/getting_started.rst:903
+#: ../../docs/server_manual/getting_started.rst:920
 msgid ""
 "You can change the limit for atlas features to be printed in one request by "
 "setting the :guilabel:`Maximum features for Atlas print requests` field."
@@ -957,7 +967,7 @@ msgstr ""
 ":guilabel:`Maximum features for Atlas print requests` 필드를 설정하면 요청 한 번으로 인쇄할 "
 "수 있는 지도책 객체의 개수 제한을 변경할 수 있습니다."
 
-#: ../../docs/server_manual/getting_started.rst:906
+#: ../../docs/server_manual/getting_started.rst:923
 msgid ""
 "When QGIS Server is used in tiled mode (see :ref:`TILED parameter "
 "<wms_tiled>`), you can set the :guilabel:`Tile buffer in pixels`. The "
@@ -968,7 +978,7 @@ msgstr ""
 "buffer in pixels` 를 설정할 수 있습니다. 추천 값은 사용자의 QGIS 프로젝트에서 가장 큰 심볼 또는 라인 너비의 "
 "크기입니다."
 
-#: ../../docs/server_manual/getting_started.rst:910
+#: ../../docs/server_manual/getting_started.rst:927
 msgid ""
 "If one of your layers uses the :ref:`Map Tip display <maptips>` (i.e. to "
 "show text using expressions) this will be listed inside the GetFeatureInfo "
@@ -980,11 +990,11 @@ msgstr ""
 "<https://en.wikipedia.org/wiki/Perceptual_mapping>`_)을 이용하고 있다면, 이 정보도 "
 "`GetFeatureInfo` 출력물 안에 들어 있을 것입니다."
 
-#: ../../docs/server_manual/getting_started.rst:916
+#: ../../docs/server_manual/getting_started.rst:933
 msgid "WMTS capabilities"
 msgstr "WMTS 케이퍼빌리티"
 
-#: ../../docs/server_manual/getting_started.rst:918
+#: ../../docs/server_manual/getting_started.rst:935
 msgid ""
 "In the :guilabel:`WMTS capabilities` tab you can select the layers you want "
 "to publish as WMTS and specify if you want to publish as PNG or JPEG."
@@ -992,11 +1002,11 @@ msgstr ""
 ":guilabel:`WMTS capabilities` 탭에서 사용자가 WMTS로 게시하려는 레이어를 선택하고, PNG 또는 JPEG "
 "가운데 어떤 포맷으로 게시할지 선택할 수 있습니다."
 
-#: ../../docs/server_manual/getting_started.rst:926
+#: ../../docs/server_manual/getting_started.rst:943
 msgid "Definitions in the WMTS tab"
 msgstr "WMTS 탭에서 정의할 수 있는 항목들"
 
-#: ../../docs/server_manual/getting_started.rst:928
+#: ../../docs/server_manual/getting_started.rst:945
 msgid ""
 "If you enter a URL in the :guilabel:`Advertised URL` field of the "
 ":guilabel:`WMTS capabilities` section, QGIS Server will advertise this "
@@ -1005,11 +1015,11 @@ msgstr ""
 ":guilabel:`WMTS capabilities` 부분의 :guilabel:`Advertised URL` 란에 URL을 입력한다면, "
 "QGIS 서버가 WMTS GetCapabilities 응답에 이 특정 URL을 선언할 것입니다."
 
-#: ../../docs/server_manual/getting_started.rst:933
+#: ../../docs/server_manual/getting_started.rst:950
 msgid "WFS/OAPIF capabilities"
 msgstr "WFS/OAPIF 케이퍼빌리티"
 
-#: ../../docs/server_manual/getting_started.rst:935
+#: ../../docs/server_manual/getting_started.rst:952
 msgid ""
 "In the :guilabel:`WFS/OAPIF capabilities` tab, you can select the layers you"
 " want to publish as WFS or OAPIF, and specify if they will allow update, "
@@ -1018,11 +1028,11 @@ msgstr ""
 ":guilabel:`WFS/OAPIF capabilities` 탭에서 사용자가 WFS 또는 OAPIF로 게시하려는 레이어를 선택하고, "
 "선택한 레이어에 업데이트, 삽입 및 삭제 작업을 허용할지를 지정할 수 있습니다."
 
-#: ../../docs/server_manual/getting_started.rst:944
+#: ../../docs/server_manual/getting_started.rst:961
 msgid "Definitions in the WFS/OAPIF tab"
 msgstr "WFS/OAPIF 탭에서 정의할 수 있는 항목들"
 
-#: ../../docs/server_manual/getting_started.rst:946
+#: ../../docs/server_manual/getting_started.rst:963
 msgid ""
 "If you enter a URL in the :guilabel:`Advertised URL` field of the "
 ":guilabel:`WFS capabilities` section, QGIS Server will advertise this "
@@ -1031,21 +1041,21 @@ msgstr ""
 ":guilabel:`WFS capabilities` 부분의 :guilabel:`Advertised URL` 란에 URL을 입력한다면, "
 "QGIS 서버가 WFS GetCapabilities 응답에 이 특정 URL을 선언할 것입니다."
 
-#: ../../docs/server_manual/getting_started.rst:951
+#: ../../docs/server_manual/getting_started.rst:968
 msgid "WCS capabilities"
 msgstr "WCS 케이퍼빌리티"
 
-#: ../../docs/server_manual/getting_started.rst:953
+#: ../../docs/server_manual/getting_started.rst:970
 msgid ""
 "In the :guilabel:`WCS capabilities` tab, you can select the layers that you "
 "want to publish as WCS."
 msgstr ":guilabel:`WCS capabilities` 탭에서 사용자가 WCS로 게시하려는 레이어를 선택할 수 있습니다."
 
-#: ../../docs/server_manual/getting_started.rst:961
+#: ../../docs/server_manual/getting_started.rst:978
 msgid "Definitions in the WCS tab"
 msgstr "WCS 탭에서 정의할 수 있는 항목들"
 
-#: ../../docs/server_manual/getting_started.rst:963
+#: ../../docs/server_manual/getting_started.rst:980
 msgid ""
 "If you enter a URL in the :guilabel:`Advertised URL` field of the "
 ":guilabel:`WCS capabilities` section, QGIS Server will advertise this "
@@ -1054,11 +1064,11 @@ msgstr ""
 ":guilabel:`WCS capabilities` 부분의 :guilabel:`Advertised URL` 란에 URL을 입력한다면, "
 "QGIS 서버가 WCS GetCapabilities 응답에 이 특정 URL을 선언할 것입니다."
 
-#: ../../docs/server_manual/getting_started.rst:968
+#: ../../docs/server_manual/getting_started.rst:985
 msgid "Fine tuning your OWS"
 msgstr "사용자 OWS를 미세 조정하기"
 
-#: ../../docs/server_manual/getting_started.rst:970
+#: ../../docs/server_manual/getting_started.rst:987
 msgid ""
 "For vector layers, the :guilabel:`Fields` menu of the :menuselection:`Layer "
 "--> Layer Properties` dialog allows you to define for each attribute if it "
@@ -1072,7 +1082,7 @@ msgstr ""
 " 모든 속성을 게시합니다. 특정 속성을 게시하고 싶지 않은 경우, :guilabel:`WMS` 또는 :guilabel:`WFS` 열에서 "
 "해당하는 체크박스를 체크 해제하십시오."
 
-#: ../../docs/server_manual/getting_started.rst:977
+#: ../../docs/server_manual/getting_started.rst:994
 msgid ""
 "You can overlay watermarks over the maps produced by your WMS by adding text"
 " annotations or SVG annotations to the project file. See the "
@@ -1093,11 +1103,11 @@ msgstr ""
 ":menuselection:`Project --> Properties...` 대화창의 :guilabel:`General` 메뉴에서 "
 "프로젝트가 절대 경로를 저장하도록 설정하거나 또는 SVG 이미지의 경로를 직접 수정해서 유효한 상대 경로를 나타내도록 해야 합니다."
 
-#: ../../docs/server_manual/getting_started.rst:992
+#: ../../docs/server_manual/getting_started.rst:1009
 msgid "Integration with third parties"
 msgstr "외부 소프트웨어와의 통합"
 
-#: ../../docs/server_manual/getting_started.rst:994
+#: ../../docs/server_manual/getting_started.rst:1011
 msgid ""
 "QGIS Server provides standard OGC web services like `WMS, WFS, etc. "
 "<https://www.ogc.org/docs/is>`_ thus it can be used by a wide variety of end"
@@ -1106,11 +1116,11 @@ msgstr ""
 "QGIS 서버는 `WMS, WFS 등등 <https://www.ogc.org/docs/is>`_ 같은 표준 OGC 웹 서비스를 제공하기 "
 "때문에, 수많은 종단 사용자 도구가 이를 이용할 수 있습니다."
 
-#: ../../docs/server_manual/getting_started.rst:998
+#: ../../docs/server_manual/getting_started.rst:1015
 msgid "Integration with QGIS Desktop"
 msgstr "QGIS 데스크탑과의 통합"
 
-#: ../../docs/server_manual/getting_started.rst:1000
+#: ../../docs/server_manual/getting_started.rst:1017
 msgid ""
 "QGIS Desktop is the map designer where QGIS Server is the map server. The "
 "maps or QGIS projects will be served by the QGIS Server to provide OGC "
@@ -1122,7 +1132,7 @@ msgstr ""
 "위해 서비스할 것입니다. 이런 QGIS 프로젝트는 파일 또는 데이터베이스의 항목 (QGIS 데스크탑에서 "
 ":menuselection:`Project --> Save to --> PostgreSQL` 사용) 가운데 하나일 수 있습니다."
 
-#: ../../docs/server_manual/getting_started.rst:1005
+#: ../../docs/server_manual/getting_started.rst:1022
 msgid ""
 "Furthermore, dedicated update workflow must be established to refresh a "
 "project used by a QGIS Server (ie. copy project files into server location "
@@ -1133,11 +1143,11 @@ msgstr ""
 "QGIS 서버를 재시작한다는지) 설정해야만 합니다. 지금은 아직 (메시지 큐 서비스를 통해 서버를 다시 불러오는) 자동화 프로세스가 "
 "구현되지 않았습니다."
 
-#: ../../docs/server_manual/getting_started.rst:1012
+#: ../../docs/server_manual/getting_started.rst:1029
 msgid "Integration with MapProxy"
 msgstr "MapProxy와의 통합"
 
-#: ../../docs/server_manual/getting_started.rst:1014
+#: ../../docs/server_manual/getting_started.rst:1031
 msgid ""
 "`MapProxy <https://mapproxy.org/>`_ is a tile cache server and as it can "
 "read and serve any WMS/WMTS map server, it can be directly connected to QGIS"
@@ -1146,11 +1156,11 @@ msgstr ""
 "`MapProxy <https://mapproxy.org/>`_ 는 타일 캐시 서버로 모든 WMS/WMTS 맵 서버를 읽고 서비스할 수 "
 "있기 때문에, QGIS 서버 웹 서비스에 직접 연결해서 사용자 경험을 향상시킬 수 있습니다."
 
-#: ../../docs/server_manual/getting_started.rst:1020
+#: ../../docs/server_manual/getting_started.rst:1037
 msgid "Integration with QWC2"
 msgstr "QWC2와의 통합"
 
-#: ../../docs/server_manual/getting_started.rst:1022
+#: ../../docs/server_manual/getting_started.rst:1039
 msgid ""
 "`QWC2 <https://github.com/qgis/qwc2>`_ is a responsive web application "
 "dedicated to QGIS Server. It helps you to build a highly customized map "
