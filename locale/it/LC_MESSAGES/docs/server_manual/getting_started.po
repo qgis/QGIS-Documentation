@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"POT-Creation-Date: 2023-04-29 06:13+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
 "Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2023\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
@@ -817,15 +817,28 @@ msgstr ""
 "facendo qualcosa come questo nel tuo browser web per recuperare il layer "
 "*countries*:"
 
-#: ../../docs/server_manual/getting_started.rst:780
+#: ../../docs/server_manual/getting_started.rst:767
+msgid ""
+"If you followed the above instructions to install an Apache HTTP Server:"
+msgstr ""
+"Se hai seguito le istruzioni precedenti per installare un server HTTP "
+"Apache:"
+
+#: ../../docs/server_manual/getting_started.rst:782
+msgid ""
+"If you followed the above instructions to install an NGINX HTTP Server:"
+msgstr ""
+"Se hai seguito le istruzioni precedenti per installare un server HTTP NGINX:"
+
+#: ../../docs/server_manual/getting_started.rst:797
 msgid "If you obtain the next image, then QGIS Server is running correctly:"
 msgstr "Se ottieni l'immagine seguente, QGIS Server funziona correttamente:"
 
-#: ../../docs/server_manual/getting_started.rst:785
+#: ../../docs/server_manual/getting_started.rst:802
 msgid "Server response to a basic GetMap request"
 msgstr "Risposta del server a una richiesta GetMap di base"
 
-#: ../../docs/server_manual/getting_started.rst:787
+#: ../../docs/server_manual/getting_started.rst:804
 msgid ""
 "Note that you may define **QGIS_PROJECT_FILE** environment variable to use a"
 " project by default instead of giving a **MAP** parameter (see :ref:`qgis-"
@@ -835,15 +848,15 @@ msgstr ""
 "utilizzare un progetto per impostazione predefinita, invece di fornire un "
 "parametro **MAP** (vedi :ref:`qgis-server-envvar`)."
 
-#: ../../docs/server_manual/getting_started.rst:790
+#: ../../docs/server_manual/getting_started.rst:807
 msgid "For example with spawn-fcgi:"
 msgstr "Per esempio con spawn-fcgi:"
 
-#: ../../docs/server_manual/getting_started.rst:802
+#: ../../docs/server_manual/getting_started.rst:819
 msgid "Configure your project"
 msgstr "Configura il tuo progetto"
 
-#: ../../docs/server_manual/getting_started.rst:804
+#: ../../docs/server_manual/getting_started.rst:821
 msgid ""
 "To provide a new QGIS Server WMS, WFS, OAPIF or WCS, you have to create a "
 "QGIS project file with some data or use one of your current project. Define "
@@ -859,11 +872,11 @@ msgstr ""
 "finestra di dialogo :menuselection:`Progetto --> Proprietà...` e fornisci "
 "alcune informazioni sull'OWS nella scheda :guilabel:`Service Capabilities`."
 
-#: ../../docs/server_manual/getting_started.rst:816
+#: ../../docs/server_manual/getting_started.rst:833
 msgid "Definitions for a QGIS Server WMS/WFS/WCS project"
 msgstr "Definizioni per un progetto QGIS Server WMS/WFS/WCS"
 
-#: ../../docs/server_manual/getting_started.rst:818
+#: ../../docs/server_manual/getting_started.rst:835
 msgid ""
 "You have to :guilabel:`Enable Service Capabilities` first, if it is "
 "deactivated. This will appear in the GetCapabilities response of the WMS, "
@@ -877,15 +890,15 @@ msgstr ""
 "funzionalità del servizio`, QGIS Server utilizzerà le informazioni fornite "
 "nel file :file:`wms_metadata.xml` situato nella cartella :file:`cgi-bin`."
 
-#: ../../docs/server_manual/getting_started.rst:1035
+#: ../../docs/server_manual/getting_started.rst:1052
 msgid "checkbox"
 msgstr ""
 
-#: ../../docs/server_manual/getting_started.rst:825
+#: ../../docs/server_manual/getting_started.rst:842
 msgid "WMS capabilities"
 msgstr "WMS capabilities"
 
-#: ../../docs/server_manual/getting_started.rst:827
+#: ../../docs/server_manual/getting_started.rst:844
 msgid ""
 "In the :guilabel:`WMS capabilities` tab, you can define the extent "
 "advertised in the WMS GetCapabilities response by entering the minimum and "
@@ -895,11 +908,11 @@ msgstr ""
 "pubblicizzata nella risposta WMS GetCapabilities inserendo i valori X e Y "
 "minimi e massimi nei campi sotto :guilabel:`Estensione dichiarata`."
 
-#: ../../docs/server_manual/getting_started.rst:837
+#: ../../docs/server_manual/getting_started.rst:854
 msgid "Definitions in the WMS tab"
 msgstr "Definizioni nella scheda WMS"
 
-#: ../../docs/server_manual/getting_started.rst:839
+#: ../../docs/server_manual/getting_started.rst:856
 msgid ""
 "Clicking :guilabel:`Use Current Canvas Extent` sets these values to the "
 "extent currently displayed in the QGIS map canvas. By checking |checkbox| "
@@ -921,11 +934,11 @@ msgstr ""
 "coordinate, oppure fai clic su :guilabel:`In uso` per aggiungere all'elenco "
 "i SR usati nel progetto QGIS."
 
-#: ../../docs/server_manual/getting_started.rst:1037
+#: ../../docs/server_manual/getting_started.rst:1054
 msgid "symbologyAdd"
 msgstr ""
 
-#: ../../docs/server_manual/getting_started.rst:849
+#: ../../docs/server_manual/getting_started.rst:866
 msgid ""
 "If you have print layouts defined in your project, they will be listed in "
 "the ``GetProjectSettings`` response, and they can be used by the GetPrint "
@@ -946,7 +959,7 @@ msgstr ""
 " stampa dalla finestra di dialogo :guilabel:`Seleziona layout di stampa` per"
 " aggiungerlo all'elenco dei layout esclusi."
 
-#: ../../docs/server_manual/getting_started.rst:859
+#: ../../docs/server_manual/getting_started.rst:876
 msgid ""
 "If you want to exclude any layer or layer group from being published by the "
 "WMS, check |checkbox| :guilabel:`Exclude Layers` and click the "
@@ -968,7 +981,7 @@ msgstr ""
 " dimensioni della risposta di WMS GetCapabilities, con conseguenti tempi di "
 "caricamento più rapidi sul lato client."
 
-#: ../../docs/server_manual/getting_started.rst:869
+#: ../../docs/server_manual/getting_started.rst:886
 msgid ""
 "If you check |checkbox| :guilabel:`Use layer ids as name`, layer ids will be"
 " used to reference layers in the ``GetCapabilities`` response or ``GetMap "
@@ -981,7 +994,7 @@ msgstr ""
 "viene utilizzato il nome del layer o il nome breve, se definito (vedi "
 ":ref:`vectorservermenu`)."
 
-#: ../../docs/server_manual/getting_started.rst:874
+#: ../../docs/server_manual/getting_started.rst:891
 msgid ""
 "You can receive requested GetFeatureInfo as plain text, XML and GML. The "
 "default is XML."
@@ -989,7 +1002,7 @@ msgstr ""
 "Puoi ricevere le GetFeatureInfo richieste come testo semplice, XML e GML. "
 "L'impostazione predefinita è XML."
 
-#: ../../docs/server_manual/getting_started.rst:878
+#: ../../docs/server_manual/getting_started.rst:895
 msgid ""
 "If you wish, you can check |checkbox| :guilabel:`Add geometry to feature "
 "response`. This will include the bounding box for each feature in the "
@@ -1001,7 +1014,7 @@ msgstr ""
 "nella risposta di GetFeatureInfo. Vedi anche il parametro "
 ":ref:`WITH_GEOMETRY <wms_getfeatureinfo>`."
 
-#: ../../docs/server_manual/getting_started.rst:882
+#: ../../docs/server_manual/getting_started.rst:899
 msgid ""
 "As many web clients can’t display circular arcs in geometries you have the "
 "option to segmentize the geometry before sending it to the client in a "
@@ -1017,7 +1030,7 @@ msgstr ""
 "necessario selezionare la casella di controllo :guilabel:`Segmentize feature"
 " info geometry` per attivare l'opzione."
 
-#: ../../docs/server_manual/getting_started.rst:888
+#: ../../docs/server_manual/getting_started.rst:905
 msgid ""
 "You can also use the :guilabel:`GetFeatureInfo geometry precision` option to"
 " set the precision of the GetFeatureInfo geometry. This enables you to save "
@@ -1028,7 +1041,7 @@ msgstr ""
 "risparmiare larghezza di banda quando non è necessaria la massima "
 "precisione."
 
-#: ../../docs/server_manual/getting_started.rst:892
+#: ../../docs/server_manual/getting_started.rst:909
 msgid ""
 "If you want QGIS Server to advertise specific request URLs in the WMS "
 "GetCapabilities response, enter the corresponding URL in the "
@@ -1038,7 +1051,7 @@ msgstr ""
 "risposta di WMS GetCapabilities, inserisci l'URL corrispondente nel campo "
 ":guilabel:`Advertised URL`."
 
-#: ../../docs/server_manual/getting_started.rst:896
+#: ../../docs/server_manual/getting_started.rst:913
 msgid ""
 "Furthermore, you can restrict the maximum size of the maps returned by the "
 "GetMap request by entering the maximum width and height into the respective "
@@ -1048,7 +1061,7 @@ msgstr ""
 "richiesta GetMap inserendo la larghezza e l'altezza massime nei rispettivi "
 "campi sotto :guilabel:`Maximums for GetMap request`."
 
-#: ../../docs/server_manual/getting_started.rst:900
+#: ../../docs/server_manual/getting_started.rst:917
 msgid ""
 "You can change the :guilabel:`Quality for JPEG images` factor. The quality "
 "factor must be in the range 0 to 100. Specify 0 for maximum compression, 100"
@@ -1058,7 +1071,7 @@ msgstr ""
 "di qualità deve essere compreso nell'intervallo 0-100. Specifica 0 per la "
 "massima compressione, 100 per nessuna compressione."
 
-#: ../../docs/server_manual/getting_started.rst:903
+#: ../../docs/server_manual/getting_started.rst:920
 msgid ""
 "You can change the limit for atlas features to be printed in one request by "
 "setting the :guilabel:`Maximum features for Atlas print requests` field."
@@ -1067,7 +1080,7 @@ msgstr ""
 "richiesta impostando il campo :guilabel:`Maximum features for Atlas print "
 "requests`."
 
-#: ../../docs/server_manual/getting_started.rst:906
+#: ../../docs/server_manual/getting_started.rst:923
 msgid ""
 "When QGIS Server is used in tiled mode (see :ref:`TILED parameter "
 "<wms_tiled>`), you can set the :guilabel:`Tile buffer in pixels`. The "
@@ -1079,7 +1092,7 @@ msgstr ""
 ":guilabel:`Tile buffer in pixel`. Il valore consigliato è la dimensione del "
 "simbolo o della linea più grande del progetto QGIS."
 
-#: ../../docs/server_manual/getting_started.rst:910
+#: ../../docs/server_manual/getting_started.rst:927
 msgid ""
 "If one of your layers uses the :ref:`Map Tip display <maptips>` (i.e. to "
 "show text using expressions) this will be listed inside the GetFeatureInfo "
@@ -1092,11 +1105,11 @@ msgstr ""
 "suoi attributi, anche questa informazione verrà mostrata nell'output di "
 "GetFeatureInfo."
 
-#: ../../docs/server_manual/getting_started.rst:916
+#: ../../docs/server_manual/getting_started.rst:933
 msgid "WMTS capabilities"
 msgstr "WMTS capabilities"
 
-#: ../../docs/server_manual/getting_started.rst:918
+#: ../../docs/server_manual/getting_started.rst:935
 msgid ""
 "In the :guilabel:`WMTS capabilities` tab you can select the layers you want "
 "to publish as WMTS and specify if you want to publish as PNG or JPEG."
@@ -1104,11 +1117,11 @@ msgstr ""
 "Nella scheda :guilabel:`Capacità WMTS` puoi selezionare i layer che vuoi "
 "pubblicare come WMTS e specificare se vuoi pubblicarli come PNG o JPEG."
 
-#: ../../docs/server_manual/getting_started.rst:926
+#: ../../docs/server_manual/getting_started.rst:943
 msgid "Definitions in the WMTS tab"
 msgstr "Definizioni nella scheda WMTS"
 
-#: ../../docs/server_manual/getting_started.rst:928
+#: ../../docs/server_manual/getting_started.rst:945
 msgid ""
 "If you enter a URL in the :guilabel:`Advertised URL` field of the "
 ":guilabel:`WMTS capabilities` section, QGIS Server will advertise this "
@@ -1118,11 +1131,11 @@ msgstr ""
 ":guilabel:`WMTS capabilities`, QGIS Server pubblicizzerà questo URL "
 "specifico nella risposta WMTS GetCapabilities."
 
-#: ../../docs/server_manual/getting_started.rst:933
+#: ../../docs/server_manual/getting_started.rst:950
 msgid "WFS/OAPIF capabilities"
 msgstr "WFS/OAPIF capabilities"
 
-#: ../../docs/server_manual/getting_started.rst:935
+#: ../../docs/server_manual/getting_started.rst:952
 msgid ""
 "In the :guilabel:`WFS/OAPIF capabilities` tab, you can select the layers you"
 " want to publish as WFS or OAPIF, and specify if they will allow update, "
@@ -1132,11 +1145,11 @@ msgstr ""
 "che vuoi pubblicare come WFS o OAPIF e specificare se consentiranno "
 "operazioni di aggiornamento, inserimento e cancellazione."
 
-#: ../../docs/server_manual/getting_started.rst:944
+#: ../../docs/server_manual/getting_started.rst:961
 msgid "Definitions in the WFS/OAPIF tab"
 msgstr "Definizioni nella scheda WFS/OAPIF"
 
-#: ../../docs/server_manual/getting_started.rst:946
+#: ../../docs/server_manual/getting_started.rst:963
 msgid ""
 "If you enter a URL in the :guilabel:`Advertised URL` field of the "
 ":guilabel:`WFS capabilities` section, QGIS Server will advertise this "
@@ -1146,11 +1159,11 @@ msgstr ""
 ":guilabel:`WFS capabilities`, QGIS Server pubblicizzerà questo URL specifico"
 " nella risposta WFS GetCapabilities."
 
-#: ../../docs/server_manual/getting_started.rst:951
+#: ../../docs/server_manual/getting_started.rst:968
 msgid "WCS capabilities"
 msgstr "WCS capabilities"
 
-#: ../../docs/server_manual/getting_started.rst:953
+#: ../../docs/server_manual/getting_started.rst:970
 msgid ""
 "In the :guilabel:`WCS capabilities` tab, you can select the layers that you "
 "want to publish as WCS."
@@ -1158,11 +1171,11 @@ msgstr ""
 "Nella scheda :guilabel:`Capacità WCS`, puoi selezionare i layer che vuoi "
 "pubblicare come WCS."
 
-#: ../../docs/server_manual/getting_started.rst:961
+#: ../../docs/server_manual/getting_started.rst:978
 msgid "Definitions in the WCS tab"
 msgstr "Definizioni nella scheda WCS"
 
-#: ../../docs/server_manual/getting_started.rst:963
+#: ../../docs/server_manual/getting_started.rst:980
 msgid ""
 "If you enter a URL in the :guilabel:`Advertised URL` field of the "
 ":guilabel:`WCS capabilities` section, QGIS Server will advertise this "
@@ -1172,11 +1185,11 @@ msgstr ""
 ":guilabel:`WCS capabilities`, QGIS Server pubblicizzerà questo URL specifico"
 " nella risposta WCS GetCapabilities."
 
-#: ../../docs/server_manual/getting_started.rst:968
+#: ../../docs/server_manual/getting_started.rst:985
 msgid "Fine tuning your OWS"
 msgstr "Messa a punto del tuo OWS"
 
-#: ../../docs/server_manual/getting_started.rst:970
+#: ../../docs/server_manual/getting_started.rst:987
 msgid ""
 "For vector layers, the :guilabel:`Fields` menu of the :menuselection:`Layer "
 "--> Layer Properties` dialog allows you to define for each attribute if it "
@@ -1192,7 +1205,7 @@ msgstr ""
 " attributo specifico, deselezionare la casella di controllo corrispondente "
 "nella colonna :guilabel:`WMS` o :guilabel:`WFS`."
 
-#: ../../docs/server_manual/getting_started.rst:977
+#: ../../docs/server_manual/getting_started.rst:994
 msgid ""
 "You can overlay watermarks over the maps produced by your WMS by adding text"
 " annotations or SVG annotations to the project file. See the "
@@ -1219,11 +1232,11 @@ msgstr ""
 " --> Proprietà...`) o modificare manualmente il percorso dell'immagine SVG "
 "in modo che rappresenti un percorso relativo valido."
 
-#: ../../docs/server_manual/getting_started.rst:992
+#: ../../docs/server_manual/getting_started.rst:1009
 msgid "Integration with third parties"
 msgstr "Integrazione con terze parti"
 
-#: ../../docs/server_manual/getting_started.rst:994
+#: ../../docs/server_manual/getting_started.rst:1011
 msgid ""
 "QGIS Server provides standard OGC web services like `WMS, WFS, etc. "
 "<https://www.ogc.org/docs/is>`_ thus it can be used by a wide variety of end"
@@ -1233,11 +1246,11 @@ msgstr ""
 "<https://www.ogc.org/docs/is>`_ e può quindi essere utilizzato da un'ampia "
 "gamma di strumenti per l'utente finale."
 
-#: ../../docs/server_manual/getting_started.rst:998
+#: ../../docs/server_manual/getting_started.rst:1015
 msgid "Integration with QGIS Desktop"
 msgstr "Integrazione con QGIS Desktop"
 
-#: ../../docs/server_manual/getting_started.rst:1000
+#: ../../docs/server_manual/getting_started.rst:1017
 msgid ""
 "QGIS Desktop is the map designer where QGIS Server is the map server. The "
 "maps or QGIS projects will be served by the QGIS Server to provide OGC "
@@ -1251,7 +1264,7 @@ msgstr ""
 " (utilizzando :menuselection: `Progetto --> Salva in --> PostgreSQL` in QGIS"
 " Desktop)."
 
-#: ../../docs/server_manual/getting_started.rst:1005
+#: ../../docs/server_manual/getting_started.rst:1022
 msgid ""
 "Furthermore, dedicated update workflow must be established to refresh a "
 "project used by a QGIS Server (ie. copy project files into server location "
@@ -1265,11 +1278,11 @@ msgstr ""
 "server tramite il servizio di coda di messaggi) non sono ancora stati "
 "implementati."
 
-#: ../../docs/server_manual/getting_started.rst:1012
+#: ../../docs/server_manual/getting_started.rst:1029
 msgid "Integration with MapProxy"
 msgstr "Integrazione con MapProxy"
 
-#: ../../docs/server_manual/getting_started.rst:1014
+#: ../../docs/server_manual/getting_started.rst:1031
 msgid ""
 "`MapProxy <https://mapproxy.org/>`_ is a tile cache server and as it can "
 "read and serve any WMS/WMTS map server, it can be directly connected to QGIS"
@@ -1280,11 +1293,11 @@ msgstr ""
 "collegato direttamente ai servizi web del server QGIS e migliorare "
 "l'esperienza dell'utente finale."
 
-#: ../../docs/server_manual/getting_started.rst:1020
+#: ../../docs/server_manual/getting_started.rst:1037
 msgid "Integration with QWC2"
 msgstr "Integrazione con QWC2"
 
-#: ../../docs/server_manual/getting_started.rst:1022
+#: ../../docs/server_manual/getting_started.rst:1039
 msgid ""
 "`QWC2 <https://github.com/qgis/qwc2>`_ is a responsive web application "
 "dedicated to QGIS Server. It helps you to build a highly customized map "
