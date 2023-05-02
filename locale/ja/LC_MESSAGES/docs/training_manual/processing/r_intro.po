@@ -2,24 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
+# Harrissou Sant-anna, 2023
+# Miyoshi Tomoya, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-12 00:23+0100\n"
-"PO-Revision-Date: 2022-03-14 05:09+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2022\n"
-"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Miyoshi Tomoya, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -27,16 +28,64 @@ msgstr ""
 msgid "Use R scripts in Processing"
 msgstr "プロセッシングでRスクリプトを使用する"
 
+#: ../../docs/training_manual/processing/r_intro.rst:7
+msgid ""
+"Module contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna "
+"<https://www.santannapisa.it/it>`_"
+msgstr ""
+"このモジュールは、Matteo Ghettaが提供し、`Scuola Superiore Sant'Anna "
+"<https://www.santannapisa.it/it>`_ が資金を提供しました"
+
+#: ../../docs/training_manual/processing/r_intro.rst:10
+msgid ""
+"Processing (with the ``Processing R Provider`` plugin) makes it possible to "
+"write and run R scripts inside QGIS."
+msgstr ""
+"（``Processing R Provider`` による）プロセシングは、QGISの内部でRスクリプトを書いて実行することを可能にします。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:14
+msgid ""
+"R has to be installed on your computer and the PATH has to be correctly set "
+"up. Moreover Processing just calls the external R packages, it is not able "
+"to install them. So be sure to install external packages directly in R. See "
+"the related :ref:`chapter <creating_r_scripts>` in the user manual."
+msgstr ""
+"コンピュータにRがインストールされ、PATHが正しく設定されている必要があります。さらにプロセシングは外部のRパッケージを呼び出すだけで、それをインストールすることはできません。ですから外部パッケージは必ずRで直接インストールするようにしてください。ユーザーマニュアルの関連する"
+" :ref:`章 <creating_r_scripts>` を参照してください。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:20
+msgid ""
+"If you have *package* problems, it may be related to missing *mandatory* "
+"packages required by Processing, like ``sp``, ``rgdal`` and ``raster``."
+msgstr ""
+"*パッケージ* の問題がある場合、それは ``sp``, ``rgdal``, ``raster`` などのプロセシングで必要な *必須* "
+"パッケージが欠けていることに関連しているかもしれません。"
+
 #: ../../docs/training_manual/processing/r_intro.rst:24
 msgid "Adding scripts"
 msgstr "スクリプトを追加する"
+
+#: ../../docs/training_manual/processing/r_intro.rst:26
+msgid ""
+"Adding a script is simple. The easiest way is to open the Processing toolbox"
+" and choose :menuselection:`Create new R script...` from the R menu "
+"(labelled with an R icon) at the top of the Processing Toolbox. You can also"
+" create the script in for instance a text editor and save it in your R "
+"scripts folder (:file:`processing/rscripts`). When it has been saved there, "
+"it will be available for editing by right-clicking on the script name in the"
+" processing toolbox and then choose :menuselection:`Edit Script...`)."
+msgstr ""
+"スクリプトを追加するのは簡単です。最も簡単な方法は、プロセシングツールボックスを開き、プロセシングツールボックスの上部にあるRメニュー（Rのアイコンがついている）から"
+" :menuselection:`Create new R script...` "
+"を選択することです。また、例えばテキストエディタでスクリプトを作成し、Rスクリプトフォルダ（:file:`processing/rscripts`）に保存することもできます。そこに保存されると、プロセッシングツールボックスのスクリプト名を右クリックして"
+" :menuselection:`Edit Script...`) を選択することで編集できるようになります。"
 
 #: ../../docs/training_manual/processing/r_intro.rst:39
 msgid ""
 "If you cannot see R in Processing, you have to activate it in "
 ":menuselection:`Processing --> Options --> Providers`"
 msgstr ""
-"プロセッシングの中にRが見あたらない場合は、 :menuselection:`プロセッシング --> オプション --> プロバイダー` "
+"プロセシングの中にRが見あたらない場合は、 :menuselection:`プロセシング --> オプション --> プロバイダ` "
 "を有効にする必要があります"
 
 #: ../../docs/training_manual/processing/r_intro.rst:42
@@ -53,7 +102,7 @@ msgstr "プロットを作成する"
 msgid ""
 "In this tutorial we are going to create a **boxplot** of a vector layer "
 "field."
-msgstr "このチュートリアルでは、ベクターレイヤーフィールドの  **箱ひげ図** を作成しようとしています。"
+msgstr "このチュートリアルでは、ベクタレイヤフィールドの  **箱ひげ図** を作成しようとしています。"
 
 #: ../../docs/training_manual/processing/r_intro.rst:54
 msgid ""
@@ -74,7 +123,67 @@ msgstr "エディタを開いて、それの最初に書き始めます。"
 
 #: ../../docs/training_manual/processing/r_intro.rst:63
 msgid "You **must** specify some parameters **before** the script body:"
-msgstr "スクリプト本体の **前** にいくつかのパラメーターを指定する **必要があります** 。"
+msgstr "スクリプト本体の **前** にいくつかのパラメーターを指定する **必要があります** :"
+
+#: ../../docs/training_manual/processing/r_intro.rst:65
+msgid ""
+"The name of the group (`plots` in this case) in which you want to put your "
+"script (if the group does not exist, it will be created)::"
+msgstr "スクリプトを置くグループの名前（この場合は `plots`）（グループが存在しない場合は作成されます）::"
+
+#: ../../docs/training_manual/processing/r_intro.rst:70
+msgid ""
+"You will find your script in the **plots** R group in the Processing "
+"toolbox."
+msgstr "スクリプトはプロセシングツールボックスの **plots** Rグループ内にあります。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:72
+msgid ""
+"You have to tell Processing that you want to display a plot (in this "
+"example)::"
+msgstr "プロットを（この例に）表示したいことをプロセシングに伝える必要があります::"
+
+#: ../../docs/training_manual/processing/r_intro.rst:76
+msgid ""
+"You will then find a link to the plot in the **Result Viewer** panel (can be"
+" turned on / off in :menuselection:`View --> Panels` and with "
+":menuselection:`Processing --> Results Viewer`)."
+msgstr ""
+"すると、**結果ビューア** パネルにプロットへのリンクが表示されます（ :menuselection:`ビュー --> パネル` と "
+":menuselection:`プロセシング --> 結果ビューア` でオン/オフを切り替えることができます）。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:80
+msgid ""
+"You also need to tell Processing about your input data. In this example we "
+"want to create a plot from a field of a vector layer::"
+msgstr "また、入力データについてプロセシングに伝える必要があります。この例では、ベクタレイヤのフィールドからプロットを作成したいと思います::"
+
+#: ../../docs/training_manual/processing/r_intro.rst:85
+msgid ""
+"Processing now knows that the input is a vector. The name *Layer* is not "
+"important, what matters is the **vector** parameter."
+msgstr ""
+"プロセシングは入力がベクトルであることが判りました。*Layer* という名前は重要ではなく、重要なのは **vector** というパラメータです。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:88
+msgid ""
+"Finally, you have to specify the input field of the vector layer (using the "
+"name you have provided above - *Layer*)::"
+msgstr "最後に、（上記で指定した名前 *レイヤ* を使って）ベクタレイヤの入力フィールドを指定します::"
+
+#: ../../docs/training_manual/processing/r_intro.rst:93
+msgid ""
+"Processing now knows that you need a field of *Layer*, and that you will "
+"call it **X**."
+msgstr "これでプロセシングは、*Layer* というフィールドが必要で、それを **X** と呼ぶことを知りました。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:96
+msgid "It is also possible to define the name of your script using ``name``::"
+msgstr "また、``name`` を使ってスクリプトの名前を定義することも可能です::"
+
+#: ../../docs/training_manual/processing/r_intro.rst:100
+msgid "If not defined, the file name will be used as the name of the script."
+msgstr "定義されていない場合、ファイル名がスクリプトの名前として使用されます。"
 
 #: ../../docs/training_manual/processing/r_intro.rst:103
 #: ../../docs/training_manual/processing/r_intro.rst:206
@@ -87,14 +196,65 @@ msgid ""
 "function::"
 msgstr "今、機能を追加できるスクリプトの *見出し* を設定し終わりました::"
 
+#: ../../docs/training_manual/processing/r_intro.rst:109
+msgid ""
+"**boxplot** is the name of the R function, the parameter **Layer** is the "
+"name that you have defined for the input dataset and **X** is the name you "
+"have defined for the field of that dataset."
+msgstr ""
+"**boxplot** はR関数の名前で、パラメータ **Layer** は入力データセットに定義した名前、**X** "
+"はそのデータセットのフィールドに定義した名前です。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:114
+msgid ""
+"The parameter **X** has to be within double square brackets (``[[]]``)."
+msgstr "パラメータ **X** は二重の角括弧(``[[]]``)の中に入れる必要があります。"
+
 #: ../../docs/training_manual/processing/r_intro.rst:116
 #: ../../docs/training_manual/processing/r_intro.rst:225
 msgid "The final script looks like this::"
 msgstr "最後のスクリプトは次のようになります::"
 
+#: ../../docs/training_manual/processing/r_intro.rst:126
+msgid ""
+"Save the script in the default path suggested by Processing "
+"(processing/rscripts). If you have not defined a ``name`` in the script "
+"heading, the file name you choose will become the name of the script in the "
+"Processing toolbox."
+msgstr ""
+"プロセシングが提案するデフォルトのパス(processing/rscripts)にスクリプトを保存します。スクリプトの見出しに ``name`` "
+"を定義していない場合、選択したファイル名がプロセシングツールボックスのスクリプトの名前となります。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:131
+msgid ""
+"You can save the script wherever you like, but Processing will then not be "
+"able to include it in the processing toolbox automatically, so you have to "
+"upload it manually."
+msgstr ""
+"スクリプトは好きな場所に保存できますが、その場合プロセシングでは自動的にプロセシングツールボックスに含めることができないので、手動でアップロードする必要があります。"
+
 #: ../../docs/training_manual/processing/r_intro.rst:135
 msgid "Now just run it using the button on the top of the editor window:"
 msgstr "今、エディタ・ウィンドウの上部にあるボタンを使用して、それを実行します。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:139
+msgid ""
+"Once the editor window has been closed, use the text box of Processing to "
+"find your script:"
+msgstr "エディタウィンドウを閉じたら、プロセシングのテキストボックスを使って、スクリプトを探します:"
+
+#: ../../docs/training_manual/processing/r_intro.rst:144
+msgid ""
+"You can now fill the parameters required in the Processing algorithm window:"
+msgstr "これで、プロセシングアルゴリズムウィンドウに必要なパラメータを入力することができます:"
+
+#: ../../docs/training_manual/processing/r_intro.rst:146
+msgid "for **Layer** choose *sample_points*"
+msgstr "** Layer** に *sample_points* を選びます"
+
+#: ../../docs/training_manual/processing/r_intro.rst:147
+msgid "for the **X** field choose *value*"
+msgstr "**X** フィールドに *value* を選びます"
 
 #: ../../docs/training_manual/processing/r_intro.rst:149
 msgid "Click on **Run**."
@@ -108,17 +268,103 @@ msgstr ""
 "**結果ウィンドウ** が自動的に開くはずですが、そうでない場合は :menuselection:`プロセシング --> 結果ビューア...` "
 "をクリックするだけです。"
 
+#: ../../docs/training_manual/processing/r_intro.rst:156
+msgid "Click on the link in the viewer and you will see:"
+msgstr "ビューアにあるリンクをクリックすると次が表示されます:"
+
+#: ../../docs/training_manual/processing/r_intro.rst:161
+msgid "You can open, copy and save the image by right clicking on the plot."
+msgstr "プロットで右クリックすることでその画像を開いたりコピーしたり保存することができます。"
+
 #: ../../docs/training_manual/processing/r_intro.rst:164
 msgid "Create a vector"
-msgstr "ベクターを作成する"
+msgstr "ベクタを作成する"
+
+#: ../../docs/training_manual/processing/r_intro.rst:166
+msgid ""
+"You can also create a vector layer and have it automatically loaded into "
+"QGIS."
+msgstr "また、ベクタレイヤを作成し、QGISに自動的に読み込ませることもできます。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:169
+msgid ""
+"The following example has been taken from the ``Random sampling grid`` "
+"script that can be found in the online collection of R scripts (the scripts "
+"in this online collection can be found in https://github.com/qgis/QGIS-"
+"Processing/tree/master/rscripts)."
+msgstr ""
+"以下の例は、Rスクリプトのオンラインコレクションにある ``Random sampling grid`` "
+"スクリプトから引用したものです（このオンラインコレクションのスクリプトは https://github.com/qgis/QGIS-"
+"Processing/tree/master/rscripts で見ることができます）。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:174
+msgid ""
+"The aim of this exercise is to create a random point vector layer using an "
+"input vector layer to restrict the extent using the ``spsample`` function of"
+" the ``sp`` package."
+msgstr ""
+"この演習の目的は、``sp`` パッケージの ``spsample`` "
+"関数を使用して、範囲を制限する入力ベクタレイヤを使ってランダムポイントベクタレイヤを作成することです。"
 
 #: ../../docs/training_manual/processing/r_intro.rst:182
 msgid "As before we have to set some parameters before the script body:"
 msgstr "前と同じように、スクリプト本体の前にいくつかのパラメーターを設定する必要があります。"
 
+#: ../../docs/training_manual/processing/r_intro.rst:184
+msgid ""
+"Specify the name of the group in which you want to put your script, in this "
+"case *Point pattern analysis*::"
+msgstr "スクリプトを入れるグループ名（ここでは *ポイントパターン解析*）を指定します::"
+
+#: ../../docs/training_manual/processing/r_intro.rst:188
+msgid ""
+"Define an input parameter (a vector layer) that will constrain the placement"
+" of the random points::"
+msgstr "ランダムポイントの配置を制約する入力パラメータ（ベクタレイヤ）を定義します::"
+
+#: ../../docs/training_manual/processing/r_intro.rst:193
+msgid ""
+"Set an input parameter for the number of points that are going to be created"
+" (``Size``, with a default value of ``10``)::"
+msgstr "作成するポイントの数を入力パラメータで設定します（``Size``、デフォルト値は``10``）::"
+
+#: ../../docs/training_manual/processing/r_intro.rst:198
+msgid ""
+"Since a default value (``10``) is defined, the user can change this number "
+"or can leave the parameter without a number."
+msgstr "デフォルト値（``10``）が定義されているため、ユーザーはこの数値を変更するか数値のないパラメータのままにすることもできます。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:201
+msgid "Specify that there is an output vector layer (called ``Output``)::"
+msgstr "（``Output`` と呼ばれる）出力ベクタレイヤがあることを指定します::"
+
 #: ../../docs/training_manual/processing/r_intro.rst:208
 msgid "Now you can add the body of the function:"
 msgstr "今、関数の本体を追加できます。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:210
+msgid "Use the ``spsample`` function::"
+msgstr "``spsample`` 関数を使います::"
+
+#: ../../docs/training_manual/processing/r_intro.rst:214
+msgid ""
+"The function uses the *Layer* to constrain the placement of the points (if "
+"it is a line layer, a points will have to be on one of the lines in the "
+"layer, if it is a polygon layer, a point will have to be within a polygon). "
+"The number of points is taken from the *Size* parameter. The sampling method"
+" is *random*."
+msgstr ""
+"この関数は、*Layer* "
+"を使用して、点の配置を制約します（線レイヤの場合、点はレイヤ内のいずれかの線上にある必要があり、ポリゴンレイヤの場合、点はポリゴン内にある必要があります）。点の数は"
+" *Size* パラメータで指定します。サンプリング方法は、*random* です。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:221
+msgid "Generate the output (the ``Output`` parameter)::"
+msgstr "出力（``Output``パラメータ）を生成します::"
+
+#: ../../docs/training_manual/processing/r_intro.rst:236
+msgid "Save it and run it, clicking on the run button."
+msgstr "保存し、実行ボタンをクリックして実行します。"
 
 #: ../../docs/training_manual/processing/r_intro.rst:238
 msgid "In the new window type in the right parameters:"
@@ -128,6 +374,23 @@ msgstr "新しいウィンドウで正しいパラメーターを入力し："
 msgid "and click on run."
 msgstr "そして実行をクリックしてください。"
 
+#: ../../docs/training_manual/processing/r_intro.rst:244
+msgid ""
+"The result layer will be added to the table of contents and its points will "
+"be displayed on the map canvas:"
+msgstr "結果レイヤが目次に追加され、そのポイントがマップキャンバスに表示されます:"
+
+#: ../../docs/training_manual/processing/r_intro.rst:251
+msgid "Text and graph output from R - syntax"
+msgstr "Rからのテキスト・グラフ出力 - 文法"
+
+#: ../../docs/training_manual/processing/r_intro.rst:253
+msgid ""
+"Processing (with the ``Processing R Provider plugin``) uses special syntax "
+"to get the results out of R:"
+msgstr ""
+"（``Processing R Provider plugin``を使った）プロセシング は、Rから結果を取り出すために特別な文法を使用します:"
+
 #: ../../docs/training_manual/processing/r_intro.rst:256
 msgid ""
 "``>`` before your command, as in ``>lillie.test(Layer[[Field]])`` means the "
@@ -135,3 +398,11 @@ msgid ""
 msgstr ""
 "コマンドの前に ``>`` は、 ``>lillie.test(Layer[[Field]])`` "
 "中でのように、結果がR出力（結果ビューア）に送られるべきことを意味します"
+
+#: ../../docs/training_manual/processing/r_intro.rst:258
+msgid ""
+"``+`` after a plot enables overlay plots. For example ``plot(Layer[[X]], "
+"Layer[[Y]]) + abline(h=mean(Layer[[X]]))``"
+msgstr ""
+"プロットの後に ``+`` を付けると、オーバーレイプロットを有効にします。例えば、 ``plot(Layer[[X]], Layer[[Y]]) + "
+"abline(h=mean(Layer[[X]]))`` です。"
