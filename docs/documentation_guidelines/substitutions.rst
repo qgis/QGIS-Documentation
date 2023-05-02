@@ -182,7 +182,8 @@ Icon                             Substitution                          Icon     
 |toggleEditing|                  ``|toggleEditing|``                   |allEdits|                        ``|allEdits|``
 |tracing|                        ``|tracing|``                         |snapping|                        ``|snapping|``
 |capturePoint|                   ``|capturePoint|``                    |capturePolygon|                  ``|capturePolygon|``
-|captureLine|                    ``|captureLine|``                     |deleteSelectedFeatures|          ``|deleteSelectedFeatures|``
+|captureLine|                    ``|captureLine|``                     |captureCurveFromFeature|         ``|captureCurveFromFeature|``
+|deleteSelectedFeatures|         ``|deleteSelectedFeatures|``
 |circularStringCurvePoint|       ``|circularStringCurvePoint|``        |circularStringRadius|            ``|circularStringRadius|``
 |vertexTool|                     ``|vertexTool|``                      |vertexToolActiveLayer|           ``|vertexToolActiveLayer|``
 |digitizeWithSegment|            ``|digitizeWithSegment|``             |digitizeShape|                   ``|digitizeShape|``
@@ -229,7 +230,7 @@ Icon                            Substitution                        Icon        
 |zoomActual|                    ``|zoomActual|``                    |zoomFullExtent|                ``|zoomFullExtent|``
 |zoomToLayer|                   ``|zoomToLayer|``                   |zoomToSelected|                ``|zoomToSelected|``
 |zoomLast|                      ``|zoomLast|``                      |zoomNext|                      ``|zoomNext|``
-|refresh|                       ``|refresh|``
+|zoomInXAxis|                   ``|zoomInXAxis|``                   |refresh|                       ``|refresh|``
 |identify|                      ``|identify|``                      |mapTips|                       ``|mapTips|``
 |showBookmarks|                 ``|showBookmarks|``                 |newBookmark|                   ``|newBookmark|``
 |measure|                       ``|measure|``                       |measureArea|                   ``|measureArea|``
@@ -331,6 +332,7 @@ Other basic icons
 ==============================  ==================================  ==============================  ==================================
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
+|arrowLeft|                     ``|arrowLeft|``                     |arrowRight|                    ``|arrowRight|``
 |arrowDown|                     ``|arrowDown|``                     |arrowUp|                       ``|arrowUp|``
 |symbologyAdd|                  ``|symbologyAdd|``                  |symbologyRemove|               ``|symbologyRemove|``
 |projectProperties|             ``|projectProperties|``             |options|                       ``|options|``
@@ -447,7 +449,7 @@ Icon                                Substitution                            Icon
 |labelmask|                         ``|labelmask|``                         |temporal|                     ``|temporal|``
 |legend|                            ``|legend|``                            |dependencies|                 ``|dependencies|``
 |3d|                                ``|3d|``                                |system|                       ``|system|``
-|elevationscale|                    ``|elevationscale|``
+|elevationscale|                    ``|elevationscale|``                    |layerTree|                    ``|layerTree|`` 
 |editMetadata|                      ``|editMetadata|``                      |overlay|                      ``|overlay|``
 |digitizing|                        ``|digitizing|``                        |auxiliaryStorage|             ``|auxiliaryStorage|``
 |history|                           ``|history|``                           |stylePreset|                  ``|stylePreset|``
@@ -682,6 +684,10 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
+.. |arrowLeft| image:: /static/common/mActionArrowLeft.png
+   :width: 1.2em
+.. |arrowRight| image:: /static/common/mActionArrowRight.png
+   :width: 1.2em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png
    :width: 1.5em
 .. |atlas| image:: /static/common/mIconAtlas.png
@@ -713,6 +719,8 @@ Icon                            Substitution                        Icon        
 .. |cadPerpendicular| image:: /static/common/cad_perpendicular.png
    :width: 1.5em
 .. |calculateField| image:: /static/common/mActionCalculateField.png
+   :width: 1.5em
+.. |captureCurveFromFeature| image:: /static/common/mActionCaptureCurveFromFeature.png
    :width: 1.5em
 .. |captureLine| image:: /static/common/mActionCaptureLine.png
    :width: 1.5em
@@ -1100,6 +1108,8 @@ Icon                            Substitution                        Icon        
 .. |labelplacement| image:: /static/common/labelplacement.png
    :width: 1.5em
 .. |labelshadow| image:: /static/common/labelshadow.png
+   :width: 1.5em
+.. |layerTree| image:: /static/common/miconLayerTree.png
    :width: 1.5em
 .. |layoutItem3DMap| image:: /static/common/mLayoutItem3DMap.png
    :width: 1.5em
@@ -1639,6 +1649,8 @@ Icon                            Substitution                        Icon        
 .. |zoomFullExtent| image:: /static/common/mActionZoomFullExtent.png
    :width: 1.5em
 .. |zoomIn| image:: /static/common/mActionZoomIn.png
+   :width: 1.5em
+.. |zoomInXAxis| image:: /static/common/mActionZoomInXAxis.png
    :width: 1.5em
 .. |zoomLast| image:: /static/common/mActionZoomLast.png
    :width: 1.5em
