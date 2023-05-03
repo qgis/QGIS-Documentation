@@ -88,6 +88,12 @@ several ways to define these variables. This is fully described in
      - depends on packaging
      - OAPIF/WFS3
 
+   * - QGIS_SERVER_APPLICATION_NAME
+     - Name of the application to be used, for instance when connecting to a database to identify
+       the QGIS server instance connected
+     - QGIS
+     - All
+
    * - QGIS_SERVER_API_WFS3_MAX_LIMIT
      - Maximum value for ``limit`` in a OAPIF/WFS3 features request.
      - 10000
@@ -101,6 +107,11 @@ several ways to define these variables. This is fully described in
    * - QGIS_SERVER_CACHE_SIZE
      - Sets the network cache size in MB.
      - 50 MB
+     - All
+
+   * - QGIS_SERVER_CAPABILITIES_CACHE_SIZE
+     - The maximum number of project capabilities to cache.
+     - 40
      - All
 
    * - QGIS_SERVER_DISABLE_GETPRINT
@@ -294,7 +305,7 @@ several ways to define these variables. This is fully described in
      - ''
      - WMS
 
-   * - QGIS_SERVER_WMTS_SERVICE_URL 
+   * - QGIS_SERVER_WMTS_SERVICE_URL
      - This is an option to set the service URL if it is not present in the project.
        See :ref:`QGIS_SERVER_SERVICE_URL <qgis_server_service_url>` for more information.
      - ''
