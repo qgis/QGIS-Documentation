@@ -1,8 +1,9 @@
-<!-- Transifex follows a particular logic to build target pages
-example of expected format: .../locale-en-lc-messages-docs-gentle-gis-introduction-data-capture-po--release-3-16 
-for the page ...3.16/docs/gentle_gis_introduction/data_capture.html in release_3.16 branch-->
-{%- set transifex_slug = ['locale-en-lc-messages', pagename, 'po--release', version] | join('-') | replace("/","-") | replace("_","-") | replace(".","-") | lower  %}
-<!--Make sure that mismatching languages codes are converted-->
+<!-- Transifex follows a particular logic to build target pages:
+Expected French translation link for https://docs.qgis.org/3.28/en/docs/user_manual/print_composer/overview_composer.html
+would return https://app.transifex.com/qgis/qgis-documentation/translate/#fr/aa6d8bc653526d38b295ca94bf8eee5e
+with the md5 value of "github#qgis/QGIS-Documentation#release_3.28#locale/en/LC_MESSAGES/docs/user_manual/print_composer/overview_composer.po"-->
+{%- set transifex_slug = ['github#qgis/QGIS-Documentation#release_', version, '#locale/en/LC_MESSAGES/', pagename, '.po'] | join('') %}
+<!--Make sure that mismatching language codes between Transifex and Sphinx are converted-->
 {%- set transifex_lang = language if language not in ('zh_Hant', 'zh_Hans') else (language | replace('_', '-')) %}
 
 {# Add rst-badge after rst-versions for small badge style. #}
@@ -47,7 +48,7 @@ for the page ...3.16/docs/gentle_gis_introduction/data_capture.html in release_3
           {# Display the call for translation only for the latest document. #}
           {% if not isTesting %}
           <dd>
-            <a href="{{ transifex_url }}/#{{ transifex_lang }}/{{ transifex_slug }}" target="_blank" rel="noopener noreferrer">{{ _('Translate Page') }}</a>
+            <a href="{{ transifex_url }}/#{{ transifex_lang }}/{{ calculate_tx_slug(transifex_slug) }}" target="_blank" rel="noopener noreferrer">{{ _('Translate Page') }}</a>
           </dd>
           {% endif %}
           <dd>

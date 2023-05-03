@@ -67,7 +67,7 @@ URL example:
 
 .. code-block:: bash
 
-  http://localhost/qgis_server?
+  http://localhost/qgisserver?
   SERVICE=WMS
   &VERSION=1.3.0
   &REQUEST=GetCapabilities
@@ -128,7 +128,7 @@ URL example:
 
 .. code-block:: bash
 
-  http://localhost/qgis_server?
+  http://localhost/qgisserver?
   SERVICE=WMS
   &VERSION=1.3.0
   &REQUEST=GetMap
@@ -700,7 +700,7 @@ return.
 For example if ``QUERY_LAYERS`` is set to ``layer1,layer2`` and
 ``FEATURE_COUNT`` is set to ``3`` then a maximum of 3 features from
 layer1 will be returned.
-Likewise a maximun of 3 features from layer2 will be returned.
+Likewise a maximum of 3 features from layer2 will be returned.
 
 By default, only 1 feature per layer is returned.
 
@@ -1603,14 +1603,14 @@ The XML document looks like:
        <Version>1.1.0</Version>
        <LayerDescription>
            <owsType>wfs</owsType>
-           <se:OnlineResource xlink:href="http://localhost/qgis_server" xlink:type="simple"/>
+           <se:OnlineResource xlink:href="http://localhost/qgisserver" xlink:type="simple"/>
            <TypeName>
                <se:FeatureTypeName>my_vector_layer</se:FeatureTypeName>
            </TypeName>
        </LayerDescription>
        <LayerDescription>
            <owsType>wcs</owsType>
-           <se:OnlineResource xlink:href="http://localhost/qgis_server" xlink:type="simple"/>
+           <se:OnlineResource xlink:href="http://localhost/qgisserver" xlink:type="simple"/>
            <TypeName>
                <se:FeatureTypeName>my_raster_layer</se:FeatureTypeName>
            </TypeName>

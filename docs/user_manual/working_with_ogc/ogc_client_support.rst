@@ -658,6 +658,8 @@ In QGIS, a WFS layer behaves pretty much like any other vector layer.
 You can identify and select features, and view the attribute table.
 QGIS supports WFS 1.0.0, 1.1.0, 2.0 and OGC API - Features (OAPIF),
 including editing (through WFS-T).
+QGIS also supports background download and progressive rendering,
+on-disk caching of downloaded features and version autodetection.
 
 In general, adding a WFS layer is very similar to the procedure used with WMS.
 There are no default servers defined, so you have to add your own.
@@ -701,13 +703,14 @@ To be able to load a WFS Layer, first create a connection to the WFS server:
      If unknown, press the :guilabel:`Detect` button to automatically retrieve it.
    * Define the :guilabel:`maximum number of features` retrieved in a single GetFetFeature request.
      If empty, no limit is set.
-   * :guilabel:`Invert axis orientation`.
-   * And depending on the WFS version:
+   * And depending on the WFS version, indicate whether to:
 
-     * Force to :guilabel:`Ignore axis orientation (WFS 1.1/WFS 2.0)`
      * :guilabel:`Enable feature paging` and specify the maximum number of features
        to retrieve with :guilabel:`Page size`.
        If no limit is defined, then the server default is applied.
+     * Force to :guilabel:`Ignore axis orientation (WFS 1.1/WFS 2.0)`
+     * :guilabel:`Invert axis orientation`.
+     * :guilabel:`Use GML2 encoding for transactions`.
 
    .. warning::
 
@@ -725,8 +728,7 @@ Note that any proxy settings you may have set in your preferences are also recog
 
 Now we are ready to load WFS layers from the above connection.
 
-#. Choose 'Gateway Geomatics' from the :guilabel:`Server Connections`
-   |selectString| drop-down list.
+#. Choose 'Gateway Geomatics' from the :guilabel:`Server Connections` drop-down list.
 #. Click :guilabel:`Connect`
 #. Select the :guilabel:`Parks` layer in the list
 #. You can also choose whether to:
@@ -735,10 +737,17 @@ Now we are ready to load WFS layers from the above connection.
      title as defined on the server in the :guilabel:`Layers` panel instead of
      its :guilabel:`Name`
    * |checkbox| :guilabel:`Only request features overlapping the view extent`
-   * |unchecked| :guilabel:`Change` the layer's CRS
-   * or :guilabel:`Build query` to specify particular features to retrieve,
-     by either using the corresponding button or double-clicking the target
-     layer.
+   * :guilabel:`Change...` the layer's CRS to any other supported by the service
+   * or build a query to specify particular features to retrieve from the service:
+     double-click on the row of the layer to open the :guilabel:`SQL Query Composer` dialog.
+     That dialog provides widgets to write an advanced SQL query relying on available
+     tables and columns of the service, with sorting and filtering
+     and a bunch of SQL functions, spatial predicates and operators.
+
+     The query you build will appear after validation in the :guilabel:`SQL` column
+     within the :guilabel:`WFS / OGC API - Features` table, and the filtered layer will display
+     the |indicatorFilter| icon next to it in the :guilabel:`Layers` panel.
+     It is thus possibe to adjust the query at any moment.
 
 #. Click :guilabel:`Add` to add the layer to the map.
 
@@ -752,12 +761,6 @@ Now we are ready to load WFS layers from the above connection.
 You'll notice the download progress is visualized in the lower left of the QGIS
 main window. Once the layer is loaded, you can identify and select a couple of
 features and view the attribute table.
-
-.. note::
-
-  QGIS supports different versions of the WFS protocol, with background
-  download and progressive rendering, on-disk caching of downloaded features
-  and version autodetection.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -775,6 +778,8 @@ features and view the attribute table.
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
    :width: 1.5em
 .. |identify| image:: /static/common/mActionIdentify.png
+   :width: 1.5em
+.. |indicatorFilter| image:: /static/common/mIndicatorFilter.png
    :width: 1.5em
 .. |indicatorTemporal| image:: /static/common/mIndicatorTemporal.png
    :width: 1.5em
