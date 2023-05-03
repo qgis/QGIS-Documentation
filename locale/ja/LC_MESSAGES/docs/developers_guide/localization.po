@@ -1,0 +1,183 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2023
+# Miyoshi Tomoya, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Miyoshi Tomoya, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/developers_guide/localization.rst:3
+msgid "Localization"
+msgstr "ローカライズ"
+
+#: ../../docs/developers_guide/localization.rst:5
+msgid "QGIS user interface is available in multiple languages."
+msgstr "QGISのユーザーインタフェースは、複数の言語が用意されています。"
+
+#: ../../docs/developers_guide/localization.rst:7
+msgid ""
+"A global option in the settings allows to override the user interface "
+"language which was automatically detected from the operating system."
+msgstr "設定にあるグローバルオプションによりオペレーティングシステムから自動的に検出されたユーザーインタフェース言語を上書きすることができます。"
+
+#: ../../docs/developers_guide/localization.rst:11
+msgid ""
+"The representation of numbers, currency and dates varies according to the "
+"country and it is also overrideable in the settings."
+msgstr "数字、通貨記号及び日付は国によって異なり、それも設定で上書きすることができます。"
+
+#: ../../docs/developers_guide/localization.rst:15
+msgid ""
+"Another option in the settings allows to define if the numeric thousands "
+"separator has to be used."
+msgstr "設定にある他のオプションでは、千の位のセパレータを使うかどうかを決めることができます。"
+
+#: ../../docs/developers_guide/localization.rst:18
+msgid ""
+"All these features are implemented through the `QLocale "
+"<https://doc.qt.io/qt-5/qlocale.html>`_ QT class which provides a very "
+"complete support for numeric and date types representation."
+msgstr ""
+"これらの機能の全ては、数字と日付の表現の完全なサポートを提供する `Qlocale "
+"<https://doc.qt.io/qt-5/qlocale.html>`_ QTクラスにより実装されています。"
+
+#: ../../docs/developers_guide/localization.rst:23
+msgid ""
+"In order to make this system work a few rules need to be carefully followed "
+"when displaying numeric values in the QGIS user interface and when "
+"converting user input to integral or floating point variables."
+msgstr ""
+"QGISインタフェースで数値を表示させる際やユーザーの入力を整数や浮動小数点に変換　する際にこのシステムを機能させるためには、いくつかの規則を慎重に守ることが必要です。"
+
+#: ../../docs/developers_guide/localization.rst:29
+msgid "Converting numbers to strings"
+msgstr "数字を文字に変換する"
+
+#: ../../docs/developers_guide/localization.rst:31
+msgid ""
+"For strings that are printed on the screen and visible to the users do not "
+"use ``QString::number()`` because it does not take locale options into "
+"consideration and it always uses ``C`` locale."
+msgstr ""
+"``QString::number()`` はロケールオプションを考慮せず、常に ``C`` "
+"ロケールを使用するため、画面に表示され、ユーザーから見える文字列には使用しないでください。"
+
+#: ../../docs/developers_guide/localization.rst:35
+msgid ""
+"Also do not use string interpolation unless you use the ``L`` suffix as "
+"explained in `QString documentation "
+"<https://doc.qt.io/qt-5/qstring.html#arg-5>`_."
+msgstr ""
+"また `QString documentation <https://doc.qt.io/qt-5/qstring.html#arg-5>`_ "
+"で説明されているように、 ``L`` サフィックスを使用しない限り、文字列補間は使用しないでください。"
+
+#: ../../docs/developers_guide/localization.rst:38
+msgid "Use ``QLocale().toString()`` instead."
+msgstr "代わりに ``QLocale().toString()`` を使ってください。"
+
+#: ../../docs/developers_guide/localization.rst:40
+msgid "Example:"
+msgstr "例:"
+
+#: ../../docs/developers_guide/localization.rst:53
+msgid ""
+"A notable exception to this rule is the generation of strings that will be "
+"passed to external applications or scripts that expect ``C`` number "
+"representation (dot as decimal separator and no thousands separator). "
+"``QString::number()`` must be used in this situation."
+msgstr ""
+"この規則の顕著な例外は、 ``C`` "
+"数値表現（ドットを小数の区切りとして、千の区切りがない）を期待する外部のアプリケーションやスクリプトに渡す文字列を生成することです。このような場合には "
+"``QString::number()`` を使用する必要があります。"
+
+#: ../../docs/developers_guide/localization.rst:60
+msgid "Converting user input strings to numbers"
+msgstr "ユーザー入力文字列を数字に変換する"
+
+#: ../../docs/developers_guide/localization.rst:62
+msgid ""
+"When converting strings from user input to numbers do not use "
+"``QVariant::toDouble()``, ``QString::toDouble()`` or other ``::toDouble()`` "
+"methods available in QT classes because these methods ignore locale "
+"settings. The same consideration applies to integral types and ``::toInt()``"
+" or ``::toLongLong()`` methods."
+msgstr ""
+"ユーザー入力の文字列を数値に変換する場合、 ``QVariant::toDouble()`` や ``QString::toDouble()`` "
+"、QTクラスで利用できる他の ``::toDouble()`` "
+"メソッドは使用しないでください、これらの方法はロケール設定を無視します。同じことが、整数型と ``::toInt()`` や "
+"``::toLongLong()`` のメソッドにも当てはまります。"
+
+#: ../../docs/developers_guide/localization.rst:68
+msgid ""
+"``QLocale().toDouble()`` or ``QLocale().toInt()`` and the others "
+"``QLocale()`` conversion methods can be used in this situation."
+msgstr ""
+"このような場合には ``QLocale().toDouble()`` や ``QLocale().toInt()`` などの ``QLocale()``"
+" 変換メソッドを使用することができます。"
+
+#: ../../docs/developers_guide/localization.rst:71
+msgid ""
+"As a better alternative, QGIS API provides a few classes that should be used"
+" for floating point numeric user input:"
+msgstr "より良い選択肢として、QGIS APIは、浮動小数点数値のユーザー入力に使用すべきいくつかのクラスを提供します:"
+
+#: ../../docs/developers_guide/localization.rst:74
+msgid ":class:`QgsDoubleSpinBox <qgis.gui.QgsDoubleSpinBox>`"
+msgstr ""
+
+#: ../../docs/developers_guide/localization.rst:75
+msgid ":class:`QgsDoubleValidator <qgis.gui.QgsDoubleValidator>`"
+msgstr ""
+
+#: ../../docs/developers_guide/localization.rst:78
+msgid ""
+":class:`QgsDoubleSpinBox <qgis.gui.QgsDoubleSpinBox>` displays the number "
+"according to user locale and settings and it validates the user input using "
+":class:`QgsDoubleValidator <qgis.gui.QgsDoubleValidator>`."
+msgstr ""
+":class:`QgsDoubleSpinBox <qgis.gui.QgsDoubleSpinBox>` "
+"はユーザーのロケールや設定に合わせて数字を表示し、 :class:`QgsDoubleValidator "
+"<qgis.gui.QgsDoubleValidator>` によってユーザーの入力を検証します。"
+
+#: ../../docs/developers_guide/localization.rst:82
+msgid ""
+"The validator class is tolerant and it will try to interpret the input "
+"checking first for the user locale and falling back to ``C`` locale if there"
+" is no match."
+msgstr ""
+"バリデータクラスは寛容で、まずユーザーのロケールをチェックし、 一致しない場合は ``C`` ロケールにフォールバックして入力を解釈しようと試みます。"
+
+#: ../../docs/developers_guide/localization.rst:86
+msgid ""
+"The general recommendation is to use :class:`QgsDoubleSpinBox "
+"<qgis.gui.QgsDoubleSpinBox>` for all floating point types I/O whenever it is"
+" possible because it is very well tested and it validates the input "
+"correctly. As an alternative it is possible to use the "
+":class:`QgsDoubleValidator <qgis.gui.QgsDoubleValidator>` class "
+"independently on a string obtained from another widget (e.g. a simple "
+"``QLineEdit`` widget)."
+msgstr ""
+"一般的には、全ての浮動小数点型のI/Oに対して :class:`QgsDoubleSpinBox "
+"<qgis.gui.QgsDoubleSpinBox>` "
+"を使用することをお勧めします。なぜなら非常によくテストされていて、正しく入力を検証してくれるからです。別の方法として、他のウィジェット（例えば、単純な "
+"``QLineEdit`` ウィジェット）から取得した文字列に対して :class:`QgsDoubleValidator "
+"<qgis.gui.QgsDoubleValidator>` クラスを独立して使用することが可能です。"
