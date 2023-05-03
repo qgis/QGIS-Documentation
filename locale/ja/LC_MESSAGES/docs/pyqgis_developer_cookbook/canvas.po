@@ -2,24 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
+# Harrissou Sant-anna, 2023
+# Miyoshi Tomoya, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-09 02:43+0000\n"
-"PO-Revision-Date: 2022-03-14 05:09+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2022\n"
-"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Miyoshi Tomoya, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -27,24 +28,131 @@ msgstr ""
 msgid "Using the Map Canvas"
 msgstr "マップキャンバスを使う"
 
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:15
+msgid ""
+"The code snippets on this page need the following imports if you're outside "
+"the pyqgis console:"
+msgstr "pyqgisコンソールを使わない場合、このページにあるコードスニペットは次のインポートが必要です:"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:50
+msgid ""
+"The Map canvas widget is probably the most important widget within QGIS "
+"because it shows the map composed from overlaid map layers and allows "
+"interaction with the map and layers. The canvas always shows a part of the "
+"map defined by the current canvas extent. The interaction is done through "
+"the use of **map tools**: there are tools for panning, zooming, identifying "
+"layers, measuring, vector editing and others. Similar to other graphics "
+"programs, there is always one tool active and the user can switch between "
+"the available tools."
+msgstr ""
+"マップキャンバスウィジェットはQGISで最も重要なウィジェットでしょう。なぜなら、重ね合う地図レイヤから構成される地図を表示し、地図やレイヤの対話処理を可能にするからです。キャンバスは常に、現在のキャンバスの範囲によって決まるマップの一部を表示します。対話処理は"
+" **マップツール** "
+"の使用により行われます。マップツールには:パン、ズーム、レイヤの識別、測定、ベクタ編集などがあります。他のグラフィックプログラムと同様に、常に1つのツールがアクティブで、ユーザーは利用可能なツールの間で切り替えることができます。"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:58
+msgid ""
+"The map canvas is implemented with the :class:`QgsMapCanvas "
+"<qgis.gui.QgsMapCanvas>` class in the :pyqgis:`qgis.gui <gui>` module. The "
+"implementation is based on the Qt Graphics View framework. This framework "
+"generally provides a surface and a view where custom graphics items are "
+"placed and user can interact with them.  We will assume that you are "
+"familiar enough with Qt to understand the concepts of the graphics scene, "
+"view and items. If not, please read the `overview of the framework "
+"<https://doc.qt.io/qt-5/graphicsview.html>`_."
+msgstr ""
+"マップキャンバスは :pyqgis:`qgis.gui <gui>` モジュールの :class:`QgsMapCanvas "
+"<qgis.gui.QgsMapCanvas>` クラスで実装されます。この実装は、Qt Graphics "
+"Viewフレームワークをベースにしています。このフレームワークは一般的に、カスタムグラフィックアイテムが配置され、ユーザーがそれらを操作することができるサーフェスとビューを提供します。"
+" ここでは、グラフィックシーン、ビュー、アイテムの概念を理解できるほどQtに精通していることを前提とします。もしそうでなければ、`フレームワークの概要 "
+"<https://doc.qt.io/qt-5/graphicsview.html>`_ を読んでください。"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:67
+msgid ""
+"Whenever the map has been panned, zoomed in/out (or some other action that "
+"triggers a refresh), the map is rendered again within the current extent. "
+"The layers are rendered to an image (using the :class:`QgsMapRendererJob "
+"<qgis.core.QgsMapRendererJob>` class) and that image is displayed on the "
+"canvas. The :class:`QgsMapCanvas <qgis.gui.QgsMapCanvas>` class also "
+"controls refreshing of the rendered map. Besides this item which acts as a "
+"background, there may be more **map canvas items**."
+msgstr ""
+"マップがパン、ズームイン/アウト（またはリフレッシュをトリガーする他のアクション）されるたびに、マップは現在の範囲内で再レンダリングされます。レイヤは画像にレンダリングされ（"
+" :class:`QgsMapRendererJob <qgis.core.QgsMapRendererJob>` "
+"クラスを使用）、その画像はキャンバス上に表示されます。また、 :class:`QgsMapCanvas <qgis.gui.QgsMapCanvas>`"
+" クラスはレンダリングされたマップの更新を制御します。背景として機能するこのアイテムの他にも、**マップキャンバスアイテム** がある場合があります。"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:73
+msgid ""
+"Typical map canvas items are rubber bands (used for measuring, vector "
+"editing etc.) or vertex markers. The canvas items are usually used to give "
+"visual feedback for map tools, for example, when creating a new polygon, the"
+" map tool creates a rubber band canvas item that shows the current shape of "
+"the polygon. All map canvas items are subclasses of :class:`QgsMapCanvasItem"
+" <qgis.gui.QgsMapCanvasItem>`  which adds some more functionality to the "
+"basic ``QGraphicsItem`` objects."
+msgstr ""
+"典型的なマップキャンバスアイテムは、ラバーバンド（測定、ベクター編集などに使用）または頂点マーカーです。キャンバスアイテムは通常、マップツールの視覚的なフィードバックを与えるために使用されます。例えば、新しいポリゴンを作成するとき、マップツールはポリゴンの現在の形状を示すラバーバンドのキャンバスアイテムを作成します。全てのマップキャンバスアイテムは"
+" :class:`QgsMapCanvasItem <qgis.gui.QgsMapCanvasItem>` のサブクラスで、基本的な "
+"``QGraphicsItem`` オブジェクトにさらにいくつかの機能を追加しています。"
+
 #: ../../docs/pyqgis_developer_cookbook/canvas.rst:82
 msgid "To summarize, the map canvas architecture consists of three concepts:"
-msgstr "要約すると、地図キャンバスアーキテクチャは３つのコンセプトからなります："
+msgstr "要約すると、マップキャンバスアーキテクチャは３つのコンセプトからなります:"
 
 #: ../../docs/pyqgis_developer_cookbook/canvas.rst:84
 msgid "map canvas --- for viewing of the map"
 msgstr "map canvas --- 地図の可視化"
 
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:85
+msgid ""
+"map canvas items --- additional items that can be displayed on the map "
+"canvas"
+msgstr "マップキャンバスアイテム -- マップキャンバスに表示される追加の項目"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:86
+msgid "map tools --- for interaction with the map canvas"
+msgstr "マップツール -- マップキャンバスとの対話処理用"
+
 #: ../../docs/pyqgis_developer_cookbook/canvas.rst:91
 msgid "Embedding Map Canvas"
-msgstr "地図キャンバスを埋め込む"
+msgstr "マップキャンバスを埋め込む"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:93
+msgid ""
+"Map canvas is a widget like any other Qt widget, so using it is as simple as"
+" creating and showing it."
+msgstr "マップキャンバスは他のQtウィジェットと同様にウィジェットなので、作成し表示するだけで簡単に使用できます。"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:101
+msgid ""
+"This produces a standalone window with map canvas. It can be also embedded "
+"into an existing widget or window. When using :file:`.ui` files and Qt "
+"Designer, place a ``QWidget`` on the form and promote it to a new class: set"
+" ``QgsMapCanvas`` as class name and set ``qgis.gui`` as header file. The "
+"``pyuic5`` utility will take care of it. This is a very convenient way of "
+"embedding the canvas. The other possibility is to manually write the code to"
+" construct map canvas and other widgets (as children of a main window or "
+"dialog) and create a layout."
+msgstr ""
+"マップキャンバスを持つスタンドアロンウィンドウを作成します。また、既存のウィジェットやウィンドウに埋め込むこともできます。:file:`.ui` "
+"ファイルと Qtデザイナーを使用する場合は、フォーム上に ``QWidget`` を配置し、それを新しいクラスに昇格させます: クラス名として "
+"``QgsMapCanvas`` を、ヘッダーファイルとして ``qgis.gui`` をセットしてください。``pyuic5`` "
+"ユーティリティがこれを処理します。これは、キャンバスを埋め込むためのとても便利な方法です。もう一つの可能性は、マップキャンバスと他のウィジェット（メインウィンドウやダイアログの子ウィジェットとして）を構築し、レイアウトを作成するコードを手動で書くことです。"
 
 #: ../../docs/pyqgis_developer_cookbook/canvas.rst:109
 msgid ""
 "By default, map canvas has black background and does not use anti-aliasing. "
 "To set white background and enable anti-aliasing for smooth rendering"
 msgstr ""
-"デフォルトでは、地図キャンバスの背景色は黒でありアンチエイリアスは使用されません。背景を白に設定し、投影をなめらかにするためのアンチエイリアスを有効にするには"
+"デフォルトでは、マップキャンバスの背景色は黒でありアンチエイリアスは使用されません。背景を白に設定し、投影をなめらかにするためのアンチエイリアスを有効にするには"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:117
+msgid ""
+"(In case you are wondering, ``Qt`` comes from ``PyQt.QtCore`` module and "
+"``Qt.white`` is one of the predefined ``QColor`` instances.)"
+msgstr ""
+"（不思議に思うかもしれませんが、``Qt`` は ``PyQt.QtCore`` モジュールに由来し、``Qt.white`` は定義済みの "
+"``QColor`` インスタンスの 1 つです。）"
 
 #: ../../docs/pyqgis_developer_cookbook/canvas.rst:120
 msgid ""
@@ -58,11 +166,30 @@ msgstr ""
 msgid ""
 "After executing these commands, the canvas should show the layer you have "
 "loaded."
-msgstr "これらのコマンドを実行した後、キャンバスには読み込んだレイヤーが表示されているはずです。"
+msgstr "これらのコマンドを実行した後、キャンバスには読み込んだレイヤが表示されているはずです。"
 
 #: ../../docs/pyqgis_developer_cookbook/canvas.rst:146
 msgid "Rubber Bands and Vertex Markers"
 msgstr "ラバーバンドと頂点マーカー"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:148
+msgid ""
+"To show some additional data on top of the map in canvas, use map canvas "
+"items. It is possible to create custom canvas item classes (covered below), "
+"however there are two useful canvas item classes for convenience: "
+":class:`QgsRubberBand <qgis.gui.QgsRubberBand>` for drawing polylines or "
+"polygons, and :class:`QgsVertexMarker <qgis.gui.QgsVertexMarker>` for "
+"drawing points. They both work with map coordinates, so the shape is "
+"moved/scaled automatically when the canvas is being panned or zoomed."
+msgstr ""
+"キャンバスで地図の上に追加データを表示するには、マップキャンバスアイテムを使います。カスタムのキャンバスアイテムクラスを作る（以下で説明します）ことも可能ですが、便利なキャンバスアイテムクラスが2つあります:"
+" :class:`QgsRubberBand <qgis.gui.QgsRubberBand>` でポリラインやポリゴンを、 "
+":class:`QgsVertexMarker <qgis.gui.QgsVertexMarker>` "
+"でポイントを描画できます。どちらもマップ座標で動作するため、キャンバスがパンやズームされたときにシェイプが自動的に移動/拡大縮小されます。"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:156
+msgid "To show a polyline:"
+msgstr "ポリラインを表示するには:"
 
 #: ../../docs/pyqgis_developer_cookbook/canvas.rst:164
 msgid "To show a polygon"
@@ -82,6 +209,16 @@ msgid ""
 " width"
 msgstr "ラバーバンドはいくらかカスタマイズできます、すなわち、その色と線幅を変更することがが可能です"
 
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:184
+msgid ""
+"The canvas items are bound to the canvas scene. To temporarily hide them "
+"(and show them again), use the :func:`hide` and :func:`show` combo. To "
+"completely remove the item, you have to remove it from the scene of the "
+"canvas"
+msgstr ""
+"キャンバスアイテムは、キャンバスシーンにバインドされています。一時的に隠す（そして再び表示する）には :func:`hide` と "
+":func:`show` のコンボを使います。アイテムを完全に削除するには、そのアイテムをキャンバスのシーンから削除する必要があります"
+
 #: ../../docs/pyqgis_developer_cookbook/canvas.rst:192
 msgid ""
 "(in C++ it's possible to just delete the item, however in Python ``del r`` "
@@ -91,9 +228,36 @@ msgstr ""
 "（C ++ではアイテムを削除することだけ可能ですが、Pythonでは ``del r`` "
 "は参照を削除するだけでありオブジェクトはキャンバスの所有物なのでそのまま残ります）"
 
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:196
+msgid ""
+"Rubber band can be also used for drawing points, but the "
+":class:`QgsVertexMarker <qgis.gui.QgsVertexMarker>` class is better suited "
+"for this (:class:`QgsRubberBand <qgis.gui.QgsRubberBand>` would only draw a "
+"rectangle around the desired point)."
+msgstr ""
+"ラバーバンドはポイントの描画にも使えますが、 :class:`QgsVertexMarker <qgis.gui.QgsVertexMarker>` "
+"クラスの方が適しています（ :class:`QgsRubberBand <qgis.gui.QgsRubberBand>` "
+"だと目的の点の周りに矩形を描くだけです）。"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:200
+msgid "You can use the vertex marker like this:"
+msgstr "頂点マーカーはこのように使うことができます:"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:207
+msgid ""
+"This will draw a red cross on position **[10,45]**. It is possible to "
+"customize the icon type, size, color and pen width"
+msgstr "これにより、位置 **[10,45]** に赤い十字が描かれます。アイコンの種類、サイズ、色、ペン幅はカスタマイズすることができます。"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:217
+msgid ""
+"For temporary hiding of vertex markers and removing them from canvas, use "
+"the same methods as for rubber bands."
+msgstr "頂点マーカーを一時的に隠したり、キャンバスから取り除いたりする場合は、ラバーバンドの場合と同じ方法を使用します。"
+
 #: ../../docs/pyqgis_developer_cookbook/canvas.rst:223
 msgid "Using Map Tools with Canvas"
-msgstr "地図キャンバスで地図ツールを使用する"
+msgstr "キャンバスで地図ツールを使用する"
 
 #: ../../docs/pyqgis_developer_cookbook/canvas.rst:225
 msgid ""
@@ -108,16 +272,78 @@ msgid ""
 "map tool is deselected. The map tools are activated using "
 ":meth:`setMapTool() <qgis.gui.QgsMapCanvas.setMapTool>` method."
 msgstr ""
-"以下の例では、地図キャンバスと、地図のパンニングとズームのための基本的な地図ツールを含むウィンドウを作成します。パンニングは "
+"以下の例では、マップキャンバスと、地図のパンニングとズームのための基本的な地図ツールを含むウィンドウを作成します。パンニングは "
 ":class:`QgsMapToolPan <qgis.gui.QgsMapToolPan>` で行い、ズームイン/ズームアウトは "
 ":class:`QgsMapToolZoom <qgis.gui.QgsMapToolZoom>` "
 "インスタンスのペアで行います。アクションはチェック可能に設定されており、後からツールに割り当てられ、アクションのチェック済み/チェック解除状態の自動処理を可能にします"
 " -- 地図ツールがアクティブになると、そのアクションは選択されたと印が付き、前の地図ツールのアクションは選択解除されます。地図ツールは "
 ":meth:`setMapTool() <qgis.gui.QgsMapCanvas.setMapTool>` メソッドを使って起動します。"
 
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:289
+msgid ""
+"You can try the above code in the Python console editor. To invoke the "
+"canvas window, add the following lines to instantiate the ``MyWnd`` class. "
+"They will render the currently selected layer on the newly created canvas"
+msgstr ""
+"上記のコードをPythonのコンソールエディターで試してみてください。キャンバスウィンドウを呼び出すには、次の行を追加して ``MyWnd`` "
+"クラスをインスタンス化します。これらの行は、現在選択されているレイヤを新しく作成されたキャンバス上にレンダリングします。"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:301
+msgid "Select a feature using QgsMapToolIdentifyFeature"
+msgstr "QgsMapToolIdentifyFeatureを使って地物を選択します"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:303
+msgid ""
+"You can use the map tool :class:`QgsMapToolIdentifyFeature "
+"<qgis.gui.QgsMapToolIdentifyFeature>` for asking to the user to select a "
+"feature that will be sent to a callback function."
+msgstr ""
+"マップツール :class:`QgsMapToolIdentifyFeature "
+"<qgis.gui.QgsMapToolIdentifyFeature>` "
+"を使って、コールバック関数に送られる地物をユーザーに選択させることができます。"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:325
+msgid "Add items to map canvas contextual menu"
+msgstr "マップキャンバスのコンテクストメニューに項目を追加する"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:327
+msgid ""
+"Interaction with map canvas can also be done through entries you may add to "
+"its contextual menu using the :attr:`contextMenuAboutToShow "
+"<qgis.gui.QgsMapCanvas.contextMenuAboutToShow>` signal."
+msgstr ""
+"マップキャンバスとの対話処理は、 :attr:`contextMenuAboutToShow "
+"<qgis.gui.QgsMapCanvas.contextMenuAboutToShow>` "
+"シグナルを使って、コンテキストメニューに追加した項目からも行うことができます。"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:331
+msgid ""
+"The following code adds :menuselection:`My menu --> My Action` action next "
+"to default entries when you right-click over the map canvas."
+msgstr ""
+"次のコードは、マップキャンバス上で右クリックしたときに、デフォルトのエントリーの横に :menuselection:`My menu --> My "
+"Action` アクションを追加します。"
+
 #: ../../docs/pyqgis_developer_cookbook/canvas.rst:350
 msgid "Writing Custom Map Tools"
 msgstr "カスタム地図ツールを書く"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:352
+msgid ""
+"You can write your custom tools, to implement a custom behavior to actions "
+"performed by users on the canvas."
+msgstr "カスタムツールを作成することで、ユーザーがキャンバス上で行ったアクションに対してカスタマイズした振る舞いを実装することができます。"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:355
+msgid ""
+"Map tools should inherit from the :class:`QgsMapTool <qgis.gui.QgsMapTool>`,"
+" class or any derived class, and selected as active tools in the canvas "
+"using the :meth:`setMapTool() <qgis.gui.QgsMapCanvas.setMapTool>` method as "
+"we have already seen."
+msgstr ""
+"マップツールは :class:`QgsMapTool <qgis.gui.QgsMapTool>` クラスまたは派生クラスを継承し、既に見たように "
+":meth:`setMapTool() <qgis.gui.QgsMapCanvas.setMapTool>` "
+"メソッドを用いてキャンバス上でアクティブツールとして選択しなければなりません。"
 
 #: ../../docs/pyqgis_developer_cookbook/canvas.rst:360
 msgid ""
@@ -131,4 +357,8 @@ msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/canvas.rst:434
 msgid "Writing Custom Map Canvas Items"
-msgstr "カスタム地図キャンバスアイテムを書く"
+msgstr "カスタムマップキャンバスアイテムを書く"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:436
+msgid "Here is an example of a custom canvas item that draws a circle:"
+msgstr "ここでは、円を描くカスタムキャンバスアイテムの例を紹介します:"
