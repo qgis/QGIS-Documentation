@@ -1933,9 +1933,12 @@ python scripts.
    Project Sensors tab
 
 To add a new sensor, click on the |symbologyAdd| button. A settings sub-panel
-will open and allow you to configure the sensor's name (used to retrieve sensor
-values in expressions and python scripts), the type (TCP, UDP, serial port, etc.)
-and additional type-specific details.
+will open and allow you to configure:
+
+* the :guilabel:`Sensor name`: used to retrieve sensor values in expressions and
+python scripts;
+* the :guilabel:`Sensor type`: TCP, UDP, serial port, etc.; and
+* additional type-specific details (e.g. host name and port)
 
 .. _figure_sensors_configuration:
 
@@ -1944,9 +1947,9 @@ and additional type-specific details.
 
    Sensor Settings sub-panel
 
-Once a sensor is configured, you can use the |start| button to connect the
+Once a sensor is configured, you can use the |start| :guilabel:`Start` button to connect the
 sensor. Once active, the last collected data will be displayed in the sensors
-table's last value column.
+table's :guilabel:`Last value` column.
 
 
 .. index:: Customization
