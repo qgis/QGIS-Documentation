@@ -1947,7 +1947,7 @@ python scripts;
 
    Sensor Settings sub-panel
 
-Once a sensor is configured, you can use the |start| :guilabel:`Start` button to connect the
+Once a sensor is configured, you can use the |start| :sup:`Start` button to connect the
 sensor. Once active, the last collected data will be displayed in the sensors
 table's :guilabel:`Last value` column.
 
