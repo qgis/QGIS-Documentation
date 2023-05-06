@@ -1936,7 +1936,7 @@ To add a new sensor, click on the |symbologyAdd| button. A settings sub-panel
 will open and allow you to configure:
 
 * the :guilabel:`Sensor name`: used to retrieve sensor values in expressions and
-python scripts;
+  python scripts;
 * the :guilabel:`Sensor type`: TCP, UDP, serial port, etc.; and
 * additional type-specific details (e.g. host name and port)
 
