@@ -344,7 +344,7 @@ Icon                            Substitution                        Icon        
 |browserExpand|                 ``|browserExpand|``                 |browserCollapse|               ``|browserCollapse|``
 |codeEditor|                    ``|codeEditor|``                    |add|                           ``|add|``
 |relations|                     ``|relations|``                     |layoutItem3DMap|               ``|layoutItem3DMap|``
-|stopwatch|                     ``|stopwatch|``
+|stopwatch|                     ``|stopwatch|``                     |sensor|                        ``|sensor|``
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -1102,6 +1102,8 @@ Icon                            Substitution                        Icon        
 .. |labelshadow| image:: /static/common/labelshadow.png
    :width: 1.5em
 .. |layoutItem3DMap| image:: /static/common/mLayoutItem3DMap.png
+   :width: 1.5em
+.. |sensor| image:: /static/common/sensor.png
    :width: 1.5em
 .. |layoutManager| image:: /static/common/mActionLayoutManager.png
    :width: 1.5em

@@ -1914,6 +1914,44 @@ These settings can be overwritten from the 3D map :ref:`configuration
 dialog <scene_configuration>`.
 
 
+.. index:: Sensors; Readings
+.. _project_sensors:
+
+Sensors Properties
+------------------
+
+The |sensor| :guilabel:`Sensors` tab is used to configure sensors and toggle
+their connection status. When active, sensors will passively collect data in
+the background and make available their latest data to expressions and
+python scripts.
+
+.. _figure_sensors_tab:
+
+.. figure:: img/project_sensors.png
+   :align: center
+
+   Project Sensors tab
+
+To add a new sensor, click on the |symbologyAdd| button. A settings sub-panel
+will open and allow you to configure:
+
+* the :guilabel:`Sensor name`: used to retrieve sensor values in expressions and
+  python scripts;
+* the :guilabel:`Sensor type`: TCP, UDP, serial port, etc.; and
+* additional type-specific details (e.g. host name and port)
+
+.. _figure_sensors_configuration:
+
+.. figure:: img/project_sensors_configuration.png
+   :align: center
+
+   Sensor Settings sub-panel
+
+Once a sensor is configured, you can use the |start| :sup:`Start` button to connect the
+sensor. Once active, the last collected data will be displayed in the sensors
+table's :guilabel:`Last value` column.
+
+
 .. index:: Customization
 .. _sec_customization:
 
@@ -2458,7 +2496,11 @@ in the QGIS user profile.
    :width: 2.8em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
+.. |sensor| image:: /static/common/sensor.png
+   :width: 1.5em
 .. |settings| image:: /static/common/settings.png
+   :width: 1.5em
+.. |start| image:: /static/common/mActionStart.png
    :width: 1.5em
 .. |styleManager| image:: /static/common/mActionStyleManager.png
    :width: 1.5em
