@@ -151,7 +151,7 @@ Here are some solutions for the following problems:
    :width: 1.5em
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
-.. |layerTree| image:: /static/common/miconLayerTree.png
+.. |layerTree| image:: /static/common/mIconLayerTree.png
    :width: 1.5em
 .. |layoutItem3DMap| image:: /static/common/mLayoutItem3DMap.png
    :width: 1.5em

@@ -1109,7 +1109,7 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |labelshadow| image:: /static/common/labelshadow.png
    :width: 1.5em
-.. |layerTree| image:: /static/common/miconLayerTree.png
+.. |layerTree| image:: /static/common/mIconLayerTree.png
    :width: 1.5em
 .. |layoutItem3DMap| image:: /static/common/mLayoutItem3DMap.png
    :width: 1.5em
