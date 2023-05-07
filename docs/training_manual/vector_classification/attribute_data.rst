@@ -31,19 +31,19 @@ represent **where** objects are in space, but also tells you **what** those
 objects are.
 
 From the previous exercise, you should have the ``protected_areas`` layer
-loaded in your map. If it is not loaded, then you can find the 
-:file:`protected_areas.shp` *ESRI Shapefile* format dataset in directory 
+loaded in your map. If it is not loaded, then you can find the
+:file:`protected_areas.shp` *ESRI Shapefile* format dataset in directory
 :file:`exercise_data/shapefile`.
 
 The polygons representing the protected areas constitute the **spatial data**,
 but we can learn more about the protected areas by exploring the
 **attribute table**.
 
-#. In the :guilabel:`Layers` panel, click on the ``protected_areas`` layer to 
+#. In the :guilabel:`Layers` panel, click on the ``protected_areas`` layer to
    select it.
-#. In the :guilabel:`Attributes Toolbar` click the |openTable| 
-   :sup:`Open Attribute Table` button. This will open a new window showing 
-   the attribute table of the ``protected_areas`` layer.  
+#. In the :menuselection:`Layer` menu, click the |openTable|
+   :sup:`Open Attribute Table` button (also accessible from top toolbars buttons).
+   This will open a new window showing the attribute table of the ``protected_areas`` layer.
 
    .. figure:: img/attribute_data_preview.png
      :align: center
@@ -57,64 +57,62 @@ but we can learn more about the protected areas by exploring the
    familiar with them.
 
    In the ``protected_areas`` layer, there are two **features**, which are
-   represented by the two polygons we see on the Map Canvas. 
+   represented by the two polygons we see on the Map Canvas.
 
-   .. Note:: In order to understand what the **fields** and **attribute values** 
-      represent, one may need to find documentation (or metadata) describing 
+   .. Note:: In order to understand what the **fields** and **attribute values**
+      represent, one may need to find documentation (or metadata) describing
       the meaning of the attribute values.
       This is usually available from the creator of the data set.
 
-Next, let's see how a record in the attribute table is linked to a polygon 
+Next, let's see how a record in the attribute table is linked to a polygon
 feature that we see on the Map Canvas.
 
 #. Go back to the main QGIS window.
-#. In the :guilabel:`Attributes Toolbar`, click on the |selectRectangle| 
-   :sup:`Select Feature` button.  
-#. Make sure the ``protected_areas`` layer is still selected in the 
-   :guilabel:`Layers` panel.
-#. Move your mouse to the Map Canvas and left click on the smaller  
-   of the two polygons.  The polygon will turn yellow indicating it is selected.
-   
+#. In the :guilabel:`Edit --> Select` menu, click on the |selectRectangle| :guilabel:`Select Feature(s)` button.
+#. Make sure the ``protected_areas`` layer is still selected in the :guilabel:`Layers` panel.
+#. Move your mouse to the Map Canvas and left click on the smaller of the two polygons.
+   The polygon will turn yellow indicating it is selected.
+
    .. figure:: img/select_polygon.png
       :align: center
-   
-#. Go back to the :guilabel:`Attribute Table` window, and you should see a 
-   record (row) highlighted.  These are the attribute values of the
-   selected polygon.
-   
+
+#. Go back to the :guilabel:`Attribute Table` window, and you should see a
+   record (row) highlighted.
+   These are the attribute values of the selected polygon.
+
    .. figure:: img/select_record.png
      :align: center
 
 You can also select a feature using the Attribute Table.
 
-#. In the :guilabel:`Attribute Table` window, on the far left, click on the 
-   row number of the record that is currently not selected.
+#. In the :guilabel:`Attribute Table` window, on the far left,
+   click on the row number of the record that is currently not selected.
 
    .. figure:: img/select_record2.png
      :align: center
 
-#. Go back to the main QGIS window and look at the Map Canvas. You should 
-   see the larger of the two polygons colored yellow.  
-#. To deselect the feature, go to the :guilabel:`Attribute Table` window 
+#. Go back to the main QGIS window and look at the Map Canvas. You should
+   see the larger of the two polygons colored yellow.
+#. To deselect the feature, go to the :guilabel:`Attribute Table` window
    and click on |deselectActiveLayer| :sup:`Deselect all features from the layer` button.
 
 Sometimes there are many features shown on the Map Canvas and it might be difficult
-to see which feature is selected from the Attribute Table.  Another way to 
+to see which feature is selected from the Attribute Table.  Another way to
 identify the location of a feature is to use the :guilabel:`Flash Feature`
 tool.
 
 #. In the :guilabel:`Attribute Table`, right-click on any cell in the
    row that has the attribute value ``r2855697`` for the field ``full_id``.
-#. In the context menu, click on :guilabel:`Flash Feature` and watch the 
-   Map Canvas.  
+#. In the context menu, click on :guilabel:`Flash Feature` and watch the
+   Map Canvas.
 
    .. figure:: img/flash_feature.png
      :align: center
-   
-   You should see the polygon flash red a few times.  If you missed it, 
+
+   You should see the polygon flash red a few times.  If you missed it,
    try it again.
 
-Another useful tool is the :guilabel:`Zoom to Feature` tool, that tells QGIS to 
+Another useful tool is the :guilabel:`Zoom to Feature` tool, that tells QGIS to
 zoom to the feature of interest.
 
 #. In the :guilabel:`Attribute Table`, right-click on  any cell in the
@@ -124,9 +122,9 @@ zoom to the feature of interest.
    .. figure:: img/zoom_to_feature.png
      :align: center
 
-   Look at the Map Canvas.  The polygon should now occupy the extent
-   of the Map Canvas area.  
-   
+   Look at the Map Canvas. The polygon should now occupy the extent
+   of the Map Canvas area.
+
 You may now close the attribute table.
 
 .. _backlink-vector-explore-attribute-data:
@@ -145,12 +143,13 @@ You may now close the attribute table.
    * There should be 9 fields in the :guilabel:`rivers` layer:
 
      #. Select the layer in the :guilabel:`Layers` panel.
-     #. Right-click and choose :guilabel:`Open Attribute Table`, or press the |openTable|
-        button on the :guilabel:`Attributes Toolbar`.
+     #. Right-click and choose :guilabel:`Open Attribute Table`,
+        or press the |openTable| button on the :guilabel:`Attributes Toolbar`
+        (it can be enabled from :menuselection:`View --> Toolbars` menu).
      #. Count the number of columns.
 
-     A quicker approach could be to double-click the :guilabel:`rivers` layer, 
-     open the :menuselection:`Layer properties --> Fields` tab, where you will 
+     A quicker approach could be to double-click the :guilabel:`rivers` layer,
+     open the :menuselection:`Layer properties --> Fields` tab, where you will
      find a numbered list of the table's fields.
 
    * Information about towns is available in the :guilabel:`places` layer. Open its
