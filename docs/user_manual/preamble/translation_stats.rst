@@ -153,21 +153,21 @@ Statistics of translation
 
 .. list of substitutions for the statistics:
 
-.. |today| replace:: *2023-05-02*
+.. |today| replace:: *2023-05-09*
 .. |total_strings| replace:: **29522**
 .. |nb_languages| replace:: **58**
-.. |global_percentage| replace:: **13.92%**
+.. |global_percentage| replace:: **13.98%**
 
 .. |stats_ar| replace:: 3.82
 .. |stats_az| replace:: 0.02
 .. |stats_bg| replace:: 2.62
 .. |stats_bn| replace:: 0.2
 .. |stats_ca| replace:: 1.21
-.. |stats_cs| replace:: 5.57
+.. |stats_cs| replace:: 5.58
 .. |stats_da| replace:: 0.72
 .. |stats_de| replace:: 22.08
 .. |stats_el| replace:: 0.4
-.. |stats_es| replace:: 97.24
+.. |stats_es| replace:: 97.89
 .. |stats_et| replace:: 40.02
 .. |stats_eu| replace:: 0.98
 .. |stats_fa| replace:: 0.69
@@ -177,11 +177,11 @@ Statistics of translation
 .. |stats_he| replace:: 0.82
 .. |stats_hi| replace:: 0.34
 .. |stats_hr| replace:: 0.13
-.. |stats_hu| replace:: 17.82
+.. |stats_hu| replace:: 18.6
 .. |stats_id| replace:: 2.61
 .. |stats_ig| replace:: 0.01
-.. |stats_it| replace:: 99.82
-.. |stats_ja| replace:: 76.68
+.. |stats_it| replace:: 100.0
+.. |stats_ja| replace:: 78.02
 .. |stats_ka| replace:: 0.13
 .. |stats_kab| replace:: 0.12
 .. |stats_ko| replace:: 87.22
@@ -193,11 +193,11 @@ Statistics of translation
 .. |stats_ms| replace:: 0.05
 .. |stats_my| replace:: 0.12
 .. |stats_nb| replace:: 2.91
-.. |stats_nl| replace:: 93.07
+.. |stats_nl| replace:: 93.06
 .. |stats_nqo| replace:: 1.7
 .. |stats_pa| replace:: 0.0
 .. |stats_pl| replace:: 1.91
-.. |stats_pt_BR| replace:: 70.22
+.. |stats_pt_BR| replace:: 70.54
 .. |stats_pt_PT| replace:: 7.82
 .. |stats_ro| replace:: 28.45
 .. |stats_ru| replace:: 14.74
@@ -215,5 +215,5 @@ Statistics of translation
 .. |stats_ur| replace:: 0.0
 .. |stats_vi| replace:: 0.27
 .. |stats_zh-Hans| replace:: 20.18
-.. |stats_zh-Hant| replace:: 0.74
+.. |stats_zh-Hant| replace:: 0.79
 
