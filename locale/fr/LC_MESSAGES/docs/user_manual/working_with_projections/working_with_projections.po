@@ -2,24 +2,26 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# vauchey vincent, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-16 07:30+0000\n"
-"PO-Revision-Date: 2022-03-14 05:07+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2022\n"
-"Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: vauchey vincent, 2023\n"
+"Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -92,25 +94,26 @@ msgid ""
 "data must contain information about its coordinate reference system or you "
 "will need to manually assign the correct CRS to the layer. For PostGIS "
 "layers, QGIS uses the spatial reference identifier that was specified when "
-"that PostGIS layer was created. For data supported by OGR or GDAL, QGIS "
-"relies on the presence of a recognized means of specifying the CRS. For "
-"instance, for the Shapefile format this is a file containing an ESRI Well-"
-"Known Text (:index:`WKT`) representation of the layer's CRS. This projection"
-" file has the same base name as the :file:`.shp` file and a :file:`.prj` "
-"extension. For example, :file:`alaska.shp` would have a corresponding "
-"projection file named :file:`alaska.prj`."
+"that PostGIS layer was created. For data supported by GDAL, QGIS relies on "
+"the presence of a recognized means of specifying the CRS. For instance, for "
+"the Shapefile format this is a file containing an ESRI Well-Known Text "
+"(:index:`WKT`) representation of the layer's CRS. This projection file has "
+"the same base name as the :file:`.shp` file and a :file:`.prj` extension. "
+"For example, :file:`alaska.shp` would have a corresponding projection file "
+"named :file:`alaska.prj`."
 msgstr ""
-"Afin de projeter correctement des données dans un SCR spécifique, soit vos "
-"données contiennent des informations sur leur système de coordonnées de "
-"référence soit vous devez leur assigner manuellement. Pour les couches "
-"PostGIS, QGIS utilise l'identifiant de référence spatiale qui a été défini "
-"quand la couche a été créée. Pour les données gérées par OGR ou GDAL, QGIS "
-"utilise un moyen spécifique au format pour définir le SCR. Dans le cas du "
-"format Shapefile, il s'agit d'un fichier contenant une spécification ESRI "
-"Well-Known Text (:index:`WKT`) du SCR de la couche. Ce fichier de projection"
-" a le même nom que le fichier :file:`.shp` et une extension :file:`.prj`. "
-"Par  exemple, :file:`alaska.shp` aura un fichier de projection correspondant"
-" nommé :file:`alaska.prj`.  "
+"Afin de projeter correctement les données dans un SCR cible spécifique, soit"
+" vos données doivent contenir des informations sur son système de "
+"coordonnées de référence, soit vous devrez affecter manuellement le SCR "
+"correct à la couche. Pour les couches PostGIS, QGIS utilise l'identifiant de"
+" référence spatiale qui a été spécifié lors de la création de cette couche "
+"PostGIS. Pour les données supportées par GDAL, QGIS s'appuie sur la présence"
+" d'un moyen reconnu de spécification du SCR. Par exemple, pour le format "
+"Shapefile, il s'agit d'un fichier contenant une représentation ESRI Well-"
+"Known Text (:index:`WKT`) du CRS de la couche. Ce fichier de projection a le"
+" même nom de base que le fichier :file:`.shp` et une extension :file:`.prj`."
+" Par exemple, :file:`alaska.shp` aurait un fichier de projection "
+"correspondant nommé :file:`alaska.prj`."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:58
 msgid ""
@@ -133,6 +136,10 @@ msgid ""
 msgstr ""
 "Ouvrez le menu :menuselection:`Préférences -->` |options| "
 ":menuselection:`Options... --> SCR`"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:415
+msgid "options"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:71
 msgid "The CRS tab in the QGIS Options Dialog"
@@ -169,6 +176,14 @@ msgstr ""
 "référence géographique. Il s'agit du même comportement qui s'applique à "
 "toutes les couches quand :ref:`un projet est défini sans SCR <project_crs>`."
 
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:419
+msgid "radioButtonOn"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:413
+msgid "indicatorNoCRS"
+msgstr ""
+
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:85
 msgid ""
 "|radioButtonOff| :guilabel:`Prompt for CRS`: it will prompt you to manually "
@@ -184,6 +199,10 @@ msgstr ""
 " de la Terre ! Parfois, les métadonnées associées décrivent le SCR de la "
 "couche, sinon vous devez contacter le producteur de la donnée pour connaître"
 " le SCR à utiliser."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:417
+msgid "radioButtonOff"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:91
 msgid "|radioButtonOff| :guilabel:`Use project CRS`"
@@ -358,6 +377,10 @@ msgstr ""
 "utilisé pour des cartes non terrestres, dans les jeux de rôles par exemple "
 "ou pour l'intérieur des bâtiments ou les espaces microscopiques. Avec cette "
 "option :"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:429
+msgid "unchecked"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:172
 msgid ""
@@ -541,6 +564,10 @@ msgstr ""
 " données contient également vos signets spatiaux et autres données "
 "personnalisées."
 
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:411
+msgid "customProjection"
+msgstr ""
+
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:249
 msgid ""
 "Defining a custom CRS in QGIS requires a good understanding of the PROJ "
@@ -591,6 +618,10 @@ msgstr "Pour créer un nouveau SCR :"
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:267
 msgid "Click the |symbologyAdd| :sup:`Add new CRS` button"
 msgstr "Cliquez sur le bouton |symbologyAdd| :sup:`Ajouter un nouveau SCR`"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:423
+msgid "symbologyAdd"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:268
 msgid "Enter a descriptive name"
@@ -768,6 +799,10 @@ msgstr ""
 "sélectionner une transformation depuis cette fenêtre, ce choix sera gardé en"
 " mémoire et automatiquement utilisé pour les nouveaux projets QGIS."
 
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:409
+msgid "checkbox"
+msgstr ""
+
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:351
 msgid ""
 "or defining a list of appropriate datum transformations to use as defaults "
@@ -792,6 +827,10 @@ msgid ""
 msgstr ""
 "Choisissez le :guilabel:`SCR Source` de la couche, en utilisant le menu "
 "déroulant ou le widget |setProjection| :sup:`Sélectionner le SCR`."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:421
+msgid "setProjection"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:359
 msgid "Provide the :guilabel:`Destination CRS` in the same way."
@@ -869,6 +908,14 @@ msgstr ""
 "sélectionnée pour les transformations ultérieures entre ces deux SCRs "
 "jusqu'à ce que vous la supprimiez de la liste (|symbologyRemove|) ou que "
 "vous la modifiiez (|toggleEditing|)."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:425
+msgid "symbologyRemove"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:427
+msgid "toggleEditing"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:394
 msgid ""
