@@ -112,9 +112,16 @@ Advanced parameters
      - [number]
 
        Default: 2.0
-     - Only applicable for mitered join styles, and controls
-       the maximum distance from the offset curve to use when
-       creating a mitered join.
+     - Sets the maximum distance from the offset geometry to use
+       when creating a mitered join as a factor of the offset distance (only applicable for miter
+       join styles).
+       Minimum: 1.0
+              
+       .. figure:: img/buffer_miter_limit.png
+          :align: center
+          :width: 100%
+         
+          A 10m buffer with a limit of 2 and a 10m buffer with a limit of 1
 
 Outputs
 .......

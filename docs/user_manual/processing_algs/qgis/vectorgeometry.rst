@@ -536,7 +536,7 @@ Python code
 Buffer
 ------
 Computes a buffer area for all the features in an input layer, using
-a fixed distance.
+a fixed or data defined distance.
 
 It is possible to use a negative distance for polygon input layers.
 In this case the buffer will result in a smaller polygon (setback).
@@ -629,10 +629,16 @@ Parameters
      - [number]
 
        Default: 2.0
-     - Controls the maximum distance from the offset curve to use
-       when creating a mitered join (only applicable for miter
+     - Sets the maximum distance from the offset geometry to use
+       when creating a mitered join as a factor of the offset distance (only applicable for miter
        join styles).
-       Minimum: 1.
+       Minimum: 1.0
+              
+       .. figure:: img/buffer_miter_limit.png
+          :align: center
+          :width: 100%
+         
+          A 10m buffer with a limit of 2 and a 10m buffer with a limit of 1
    * - **Dissolve result**
      - ``DISSOLVE``
      - [boolean]
@@ -4411,10 +4417,16 @@ Parameters
      - [number]
 
        Default: 2.0
-     - Controls the maximum distance from the offset curve to use
-       when creating a mitered join (only applicable for miter
+     - Sets the maximum distance from the offset geometry to use
+       when creating a mitered join as a factor of the offset distance (only applicable for miter
        join styles).
-       Minimum: 1.
+       Minimum: 1.0              
+
+       .. figure:: img/buffer_miter_limit.png
+          :align: center
+          :width: 100%
+         
+          A 10m buffer with a limit of 2 and a 10m buffer with a limit of 1
    * - **Offset**
      - ``OUTPUT``
      - [vector: line]
@@ -6356,10 +6368,16 @@ Parameters
      - [number]
 
        Default: 2.0
-     - Controls the maximum distance from the offset curve to use
-       when creating a mitered join (only applicable for miter
+     - Sets the maximum distance from the offset geometry to use
+       when creating a mitered join as a factor of the offset distance (only applicable for miter
        join styles).
        Minimum: 1.0
+                     
+       .. figure:: img/buffer_miter_limit.png
+          :align: center
+          :width: 100%
+         
+          A 10m buffer with a limit of 2 and a 10m buffer with a limit of 1
    * - **Buffer**
      - ``OUTPUT``
      - [vector: polygon]
