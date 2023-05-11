@@ -11,10 +11,8 @@ They can be of :ref:`2D <label_mapview>` or :ref:`3D <label_3dmapview>` type,
 show different scale or extent, or display a different set of the loaded layers thanks to :ref:`map themes <map_themes>`.
 
 
-.. only:: html
+.. toctree::
+   :maxdepth: 2
 
-   .. toctree::
-      :maxdepth: 2
-
-      map_view
-      3d_map_view
+   map_view
+   3d_map_view
