@@ -2,24 +2,26 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
+# Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-16 07:30+0000\n"
-"PO-Revision-Date: 2022-03-14 05:15+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2022\n"
-"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -55,6 +57,10 @@ msgstr "**このレッスンの目標：** 調査結果を提示する地図を�
 msgid "|basic| |FA| Preparing the Map Data"
 msgstr "|basic| |FA| 地図データを準備する"
 
+#: ../../docs/training_manual/forestry/results_map.rst:113
+msgid "basic"
+msgstr ""
+
 #: ../../docs/training_manual/forestry/results_map.rst:19
 msgid ""
 "Open the QGIS project from the parameters calculations lesson, "
@@ -69,7 +75,7 @@ msgstr ":kbd:`forest_stands_2012_results`."
 
 #: ../../docs/training_manual/forestry/results_map.rst:23
 msgid ":kbd:`basic_map`."
-msgstr ":kbd:`basic_map`."
+msgstr ""
 
 #: ../../docs/training_manual/forestry/results_map.rst:24
 msgid ":kbd:`rautjarvi_aerial`."
@@ -82,6 +88,21 @@ msgid ""
 msgstr ""
 ":kbd:`lakes` （それを持っていない場合は、:kbd:`exercise_data\\\\forestry\\\\` "
 "フォルダからそれを追加します）。"
+
+#: ../../docs/training_manual/forestry/results_map.rst:27
+msgid ""
+"You are going to present the average volumes of your forest stands in a map."
+" If you open the :guilabel:`Attribute table` for the "
+":kbd:`forest_stands_2012_results` layer, you can see the :kbd:`NULL` values "
+"for the stands without information. To be able to get also those stands into"
+" your symbology you should change the :kbd:`NULL` values to, for example, "
+":kbd:`-999`, knowing that those negative numbers mean there is no data for "
+"those polygons."
+msgstr ""
+"林分の平均体積を地図上に表示することになります。kbd:`forest_stands_2012_results` レイヤの "
+":guilabel:`Attribute table` を開くと、情報がない林分の :kbd:`NULL` "
+"値が表示されます。これらの林分もシンボロジに取り込むには、:kbd:`NULL` 値を例えば :kbd:`-999` "
+"に変更する必要があります。負の数は、そのポリゴンにはデータが存在しないことを意味することにします。"
 
 #: ../../docs/training_manual/forestry/results_map.rst:34
 msgid "For the :kbd:`forest_stands_2012_results` layer:"
@@ -109,6 +130,14 @@ msgstr "編集を無効にし、変更を保存します。"
 msgid "Now you can use a saved style for this layer:"
 msgstr "今、保存されたスタイルをこのレイヤーに使用できます。"
 
+#: ../../docs/training_manual/forestry/results_map.rst:44
+msgid "Go to the :guilabel:`Symbology` tab."
+msgstr ":guilabel:`シンボロジ` タブに移動します。"
+
+#: ../../docs/training_manual/forestry/results_map.rst:45
+msgid "Click on :menuselection:`Style --> Load Style...`."
+msgstr ":menuselection:`スタイル --> スタイルを読み込む...`。"
+
 #: ../../docs/training_manual/forestry/results_map.rst:46
 msgid ""
 "Select the :kbd:`forest_stands_2012_results.qml` from the "
@@ -133,11 +162,44 @@ msgstr "|basic| |TY| さまざまなブレンドモードを試す"
 msgid "The style you loaded:"
 msgstr "ロードしたスタイル:"
 
+#: ../../docs/training_manual/forestry/results_map.rst:66
+msgid ""
+"is using the :kbd:`Hard light` mode for the :guilabel:`Layer blending mode`."
+" Note that the different modes apply different filters combining the "
+"underlying and overlying layers, in this case the hillshade raster and your "
+"forest stands are used. You can read about these modes in the :ref:`User "
+"Guide <blend-modes>`."
+msgstr ""
+"これは :guilabel:` レイヤブレンディングモード`に :kbd:`Hard light` "
+"モードを使用しています。異なるモードは、下層と上層のレイヤーを組み合わせて異なるフィルタを適用することに注意してください、この場合、陰影起伏ラスタと林分が使用されています。これらのモードについては、"
+" :ref:`User Guide <blend-modes>`で説明されています。"
+
 #: ../../docs/training_manual/forestry/results_map.rst:71
 msgid ""
 "Try with different modes and see the differences in your map. Then choose "
 "the one you like better for your final map."
 msgstr "異なるモードで試してみて、地図の違いを見てください。それから、より好きな方を最終的な地図として選択してください。"
+
+#: ../../docs/training_manual/forestry/results_map.rst:76
+msgid "|basic| |TY| Using a Layout Template to Create the Map result"
+msgstr "|basic| |TY| レイアウトテンプレートを使って地図の結果を作る"
+
+#: ../../docs/training_manual/forestry/results_map.rst:78
+msgid ""
+"Use a template prepared in advanced to present the results. The template "
+":kbd:`forest_map.qpt` is located in the "
+":kbd:`exercise_data\\\\forestry\\\\results\\\\` folder. Load it using the "
+":menuselection:`Project --> Layout Manager...` dialog."
+msgstr ""
+"結果を提示するには、あらかじめ用意されたテンプレートを使います。テンプレート :kbd:`forest_map.qpt` は "
+":kbd:`exercise_data` フォルダにあります。:menuselection:`プロジェクト --> レイアウトマネージャ...` "
+"ダイアログを使用して読み込みます。"
+
+#: ../../docs/training_manual/forestry/results_map.rst:85
+msgid ""
+"Open the print layout and edit the final map to get a result you are happy "
+"with."
+msgstr "印刷レイアウトを開き、最終的なマップを編集して納得のいく仕上がりにします。"
 
 #: ../../docs/training_manual/forestry/results_map.rst:87
 msgid "The map template you are using will give a map similar to this one:"
@@ -149,7 +211,7 @@ msgstr "将来の参照のためQGISプロジェクトを保存します。"
 
 #: ../../docs/training_manual/forestry/results_map.rst:95
 msgid "|IC|"
-msgstr "|IC|"
+msgstr ""
 
 #: ../../docs/training_manual/forestry/results_map.rst:97
 msgid ""
