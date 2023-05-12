@@ -2,71 +2,131 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
+# Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2023
+# Takaki IEKURA <tacostea@gmail.com>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-21 02:56+0000\n"
-"PO-Revision-Date: 2022-03-14 05:09+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2022\n"
-"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"POT-Creation-Date: 2023-04-29 06:13+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Takaki IEKURA <tacostea@gmail.com>, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.10.3\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../docs/server_manual/getting_started.rst:3
 msgid "Getting Started"
-msgstr "はじめに"
+msgstr "最初のステップ"
 
 #: ../../docs/server_manual/getting_started.rst:12
 msgid "Installation on Debian-based systems"
-msgstr "Debianのベースのシステムへのインストール"
+msgstr "Debian ベースのシステムへのインストール"
+
+#: ../../docs/server_manual/getting_started.rst:16
+msgid ""
+"We will give a short and simple installation how-to for a minimal working "
+"configuration on Debian based systems (including Ubuntu and derivatives). "
+"However, many other distributions and OSs provide packages for QGIS Server."
+msgstr ""
+"ここでは (Ubuntuと派生ディストロを含む) Debian "
+"ベースのシステムにおいて最低限の動作をするようなインストール手順を短く簡単に紹介します。とはいえ、他の多くのディストロや OS も QGIS "
+"Server のためのパッケージを提供しています。"
+
+#: ../../docs/server_manual/getting_started.rst:20
+msgid ""
+"In Ubuntu you can use your regular user, prepending ``sudo`` to commands "
+"requiring admin permissions. In Debian you can work as admin (``root``), "
+"without using ``sudo``."
+msgstr ""
+"Ubuntu では、管理者権限を必要とするコマンドの前に ``sudo`` "
+"を付けることで、そのコマンドを一般ユーザーとして使用することができます。Debian では、``sudo`` を使用せず、管理者 (``root``) "
+"として作業することができます。"
+
+#: ../../docs/server_manual/getting_started.rst:24
+msgid ""
+"Requirements and steps to add official QGIS repositories to install QGIS "
+"Server on a Debian based system are provided in `QGIS installers page "
+"<https://qgis.org/en/site/forusers/alldownloads.html>`_. You may want to "
+"install at least the latest Long Term Release."
+msgstr ""
+"要件や Debian ベースのシステムに QGIS Server をインストールするために必要な QGIS 公式レポジトリを追加する手順は `QGIS "
+"のインストーラー <https://qgis.org/ja/site/forusers/alldownloads.html>`_ "
+"ページに記載されています。少なくとも最新の LTR ( 長期リリース ) をインストールすることをおすすめします。"
+
+#: ../../docs/server_manual/getting_started.rst:28
+msgid ""
+"Once the target version repository is configured and QGIS Server installed, "
+"you can test the installation with:"
+msgstr ""
+"対象バージョンのレポジトリを設定し、QGIS Server をインストールできたなら、以下のファイルで正常にインストールされたことを確認できます。"
+
+#: ../../docs/server_manual/getting_started.rst:35
+msgid "If you get the following output, the server is correctly installed."
+msgstr "下記のように出力されるなら、サーバは正常にインストールされたと言えます。"
+
+#: ../../docs/server_manual/getting_started.rst:37
+msgid ""
+"Depending on the version of QGIS, you might see slightly different output "
+"reported when you run ``qgis_mapserv.fcgi``."
+msgstr "QGIS のバージョンによっては、``qgis_mapserv.fcgi``を実行した時の出力はいくらか異なることがあります。"
+
+#: ../../docs/server_manual/getting_started.rst:55
+msgid ""
+"As seen below, QGIS reports a Status 400 code, which correctly identifies "
+"the request has failed because there is no active http session. This is not "
+"a bug and indicates the server is functioning properly."
+msgstr ""
+"下記の場合は QGIS がステータス400というコードを返しており、有効な HTTP "
+"セッションが存在しないためにリクエストが失敗したことを正しく認識していることが分かります。これはバグではなく、サーバが適切に機能していることを示すものです。"
+
+#: ../../docs/server_manual/getting_started.rst:80
+msgid ""
+"Let's add a sample project. You can use your own, or one from `Training demo"
+" data <https://github.com/qgis/QGIS-Training-Data/>`_:"
+msgstr ""
+"サンプルプロジェクトを追加してみましょう。自作することもできますが、下記のように `トレーニング用のデモデータ "
+"<https://github.com/qgis/QGIS-Training-Data/>`_ を使用することもできます。"
 
 #: ../../docs/server_manual/getting_started.rst:579
 msgid "Enable, start and check the status of the ``xvfb.service``:"
 msgstr "``xvfb.service`` の状態を有効にし、開始し、チェックします："
 
-#: ../../docs/server_manual/getting_started.rst:813
+#: ../../docs/server_manual/getting_started.rst:661
+msgid "Purpose"
+msgstr "目的"
+
+#: ../../docs/server_manual/getting_started.rst:663
+msgid "Replacement"
+msgstr "置換"
+
+#: ../../docs/server_manual/getting_started.rst:833
 msgid "Definitions for a QGIS Server WMS/WFS/WCS project"
 msgstr "QGISサーバーのWMS / WFS / WCSプロジェクトの定義"
 
-#: ../../docs/server_manual/getting_started.rst:825
+#: ../../docs/server_manual/getting_started.rst:1052
+msgid "checkbox"
+msgstr ""
+
+#: ../../docs/server_manual/getting_started.rst:842
 msgid "WMS capabilities"
 msgstr "WMS機能"
 
-#: ../../docs/server_manual/getting_started.rst:827
-msgid ""
-"In the :guilabel:`WMS capabilities` section, you can define the extent "
-"advertised in the WMS GetCapabilities response by entering the minimum and "
-"maximum X and Y values in the fields under :guilabel:`Advertised extent`. "
-"Clicking :guilabel:`Use Current Canvas Extent` sets these values to the "
-"extent currently displayed in the QGIS map canvas. By checking |checkbox| "
-":guilabel:`CRS restrictions`, you can restrict in which coordinate reference"
-" systems (CRS) QGIS Server will offer to render maps. It is recommended that"
-" you restrict the offered CRS as this reduces the size of the WMS "
-"GetCapabilities response. Use the |symbologyAdd| button below to select "
-"those CRSs from the Coordinate Reference System Selector, or click "
-":guilabel:`Used` to add the CRSs used in the QGIS project to the list."
+#: ../../docs/server_manual/getting_started.rst:1054
+msgid "symbologyAdd"
 msgstr ""
-"guilabel:`WMS capabilities` セクションでは、 :guilabel:`Advertised範囲` "
-"の下のフィールドに最小値と最大値の X と Y を入力することで、WMS GetCapabilities "
-"レスポンスでアドバタイズされた範囲を定義できます。guilabel:`現在のキャンバス範囲を使用` "
-"をクリックすると、これらの値はQGIS地図キャンバスに現在表示されている範囲に設定されます。 |checkbox| :guilabel:`CRS制限` "
-"をチェックすると、QGISサーバが地図をレンダリングする際に提供する座標参照系(CRS) を制限できます。提供される CRS を制限するとWMS "
-"GetCapabilities レスポンスのサイズが小さくなるため、制限することをお勧めします。以下の |symbologyAdd| "
-"ボタンを使用して、座標参照系セレクタからこれらの CRS を選択するか、 :guilabel:`使用中` をクリックして QGIS "
-"プロジェクトで使用されている CRS をリストに追加します。"
 
-#: ../../docs/server_manual/getting_started.rst:902
+#: ../../docs/server_manual/getting_started.rst:927
 msgid ""
 "If one of your layers uses the :ref:`Map Tip display <maptips>` (i.e. to "
 "show text using expressions) this will be listed inside the GetFeatureInfo "
@@ -76,37 +136,10 @@ msgstr ""
 "レイヤーの一つが :ref:`地図ヒントディスプレイ <maptips>` "
 "を使用している場合（つまり式を使ってテキストを表示するために）これはGetFeatureInfo出力内で表示されます。レイヤーは、その属性のいずれかの値マップを使用している場合は、この情報には、GetFeatureInfo出力に表示されます。"
 
-#: ../../docs/server_manual/getting_started.rst:908
-msgid "WFS capabilities"
-msgstr "WFS機能"
-
-#: ../../docs/server_manual/getting_started.rst:910
-msgid ""
-"In the :guilabel:`WFS capabilities` area you can select the layers you want "
-"to publish as WFS, and specify if they will allow update, insert and delete "
-"operations. If you enter a URL in the :guilabel:`Advertised URL` field of "
-"the :guilabel:`WFS capabilities` section, QGIS Server will advertise this "
-"specific URL in the WFS GetCapabilities response."
-msgstr ""
-":guilabel:`でWFS機能` エリアWFSとして公開し、それらが更新を許可するかどうかを指定、操作を挿入し、削除したいレイヤーを選択できます。 "
-":guilabel:` WFS機能` セクションの :guilabel:`宣伝URL` "
-"フィールドにURLを入力すると、QGIサーバーは、WFSのGetCapabilities応答中でこの特定のURLを宣伝します。"
-
-#: ../../docs/server_manual/getting_started.rst:918
+#: ../../docs/server_manual/getting_started.rst:968
 msgid "WCS capabilities"
 msgstr "WCS機能"
 
-#: ../../docs/server_manual/getting_started.rst:920
-msgid ""
-"In the :guilabel:`WCS capabilities` area, you can select the layers that you"
-" want to publish as WCS. If you enter a URL in the :guilabel:`Advertised "
-"URL` field of the :guilabel:`WCS capabilities` section, QGIS Server will "
-"advertise this specific URL in the WCS GetCapabilities response."
-msgstr ""
-":guilabel:`WCS機能` エリア、WCSとして公開したいレイヤーを選択できます。 :guilabel:`WCS機能` セクションで "
-":guilabel:`宣伝URL` "
-"フィールドにURLを入力すると、QGISサーバーはWCSのGetCapabilities応答でこの特定のURLを宣伝します。"
-
-#: ../../docs/server_manual/getting_started.rst:926
+#: ../../docs/server_manual/getting_started.rst:985
 msgid "Fine tuning your OWS"
 msgstr "OWSを微調整する"

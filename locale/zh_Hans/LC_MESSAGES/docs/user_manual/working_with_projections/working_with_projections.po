@@ -2,26 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# 徐保才 <1302638819@qq.com>, 2022
-# Nautilus Chan <cyc.sjtu@gmail.com>, 2022
-# smilevent <1028330144@qq.com>, 2022
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-16 07:30+0000\n"
-"PO-Revision-Date: 2022-03-14 05:07+0000\n"
-"Last-Translator: smilevent <1028330144@qq.com>, 2022\n"
-"Language-Team: Chinese Simplified (https://www.transifex.com/qgis/teams/6144/zh-Hans/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: zh-Hans\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -77,26 +76,6 @@ msgstr ""
 msgid "Layer Coordinate Reference Systems"
 msgstr "图层坐标参照系"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:46
-msgid ""
-"In order to correctly project data into a specific target CRS, either your "
-"data must contain information about its coordinate reference system or you "
-"will need to manually assign the correct CRS to the layer. For PostGIS "
-"layers, QGIS uses the spatial reference identifier that was specified when "
-"that PostGIS layer was created. For data supported by OGR or GDAL, QGIS "
-"relies on the presence of a recognized means of specifying the CRS. For "
-"instance, for the Shapefile format this is a file containing an ESRI Well-"
-"Known Text (:index:`WKT`) representation of the layer's CRS. This projection"
-" file has the same base name as the :file:`.shp` file and a :file:`.prj` "
-"extension. For example, :file:`alaska.shp` would have a corresponding "
-"projection file named :file:`alaska.prj`."
-msgstr ""
-"为了将数据正确投影到特定目标坐标参照系，您的数据必须包含有关其坐标参照系的信息，或者您需要手动将正确的坐标参照系分配给图层。对于 PostGIS "
-"图层，QGIS 使用创建该 PostGIS 图层时指定的空间参照标识符。对于 OGR 或 GDAL 支持的数据，QGIS "
-"依赖于公认方法指定的坐标参照系。例如，对于 Shapefile 格式，这是一个包含用ESRI Well-Known Text "
-"(:index:`WKT`) 表示的图层坐标参照系的文件。此投影文件具有与:file:`.shp` 文件相同的基本名称和 :file:`.prj` "
-"扩展名。例如，:file:`alaska.shp`将有一个名为:file:`alaska.prj`的对应投影文件。"
-
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:58
 msgid ""
 "Whenever a layer is loaded into QGIS, QGIS attempts to automatically "
@@ -117,7 +96,7 @@ msgstr "打开:menuselection:`设置 -->` |options| :menuselection:`选项... --
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:415
 msgid "options"
-msgstr "选项"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:71
 msgid "The CRS tab in the QGIS Options Dialog"
@@ -146,6 +125,14 @@ msgstr ""
 "|indicatorNoCRS|图标。它们也将是无参照的，来自该图层的坐标被视为纯数字的、非地球的值，也就是说，当:ref:`一个项目被设置为没有CRS时<project_crs>"
 " `，所有图层的行为都是一样的。"
 
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:419
+msgid "radioButtonOn"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:413
+msgid "indicatorNoCRS"
+msgstr ""
+
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:85
 msgid ""
 "|radioButtonOff| :guilabel:`Prompt for CRS`: it will prompt you to manually "
@@ -155,6 +142,14 @@ msgid ""
 "in other cases you will need to contact the original author of the data to "
 "determine the correct CRS to use."
 msgstr "|radioButtonOff| :guilabel:`提示选择CRS`:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:417
+msgid "radioButtonOff"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:91
+msgid "|radioButtonOff| :guilabel:`Use project CRS`"
+msgstr "|radioButtonOff| :guilabel:`使用工程CRS`"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:101
 msgid ""
@@ -184,3 +179,35 @@ msgstr "请注意，在此设置中更改CRS并不会修改原始数据源，而
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:117
 msgid "Project Coordinate Reference Systems"
 msgstr "投影坐标参照系"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:429
+msgid "unchecked"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:411
+msgid "customProjection"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:423
+msgid "symbologyAdd"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:409
+msgid "checkbox"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:421
+msgid "setProjection"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:382
+msgid "Click :guilabel:`OK`."
+msgstr "单击 :guilabel:`确定` 。"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:425
+msgid "symbologyRemove"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:427
+msgid "toggleEditing"
+msgstr ""

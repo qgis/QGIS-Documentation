@@ -2,25 +2,26 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
-# fairtommy <fairtommy@gmail.com>, 2022
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# Miyoshi Tomoya, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-16 07:30+0000\n"
-"PO-Revision-Date: 2022-03-14 05:11+0000\n"
-"Last-Translator: fairtommy <fairtommy@gmail.com>, 2022\n"
-"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Miyoshi Tomoya, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -66,12 +67,12 @@ msgid ""
 msgstr "以下の手順では、QGISの十分な知識を持っており、教材として使用されることを意図していないと仮定します。"
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:25
-msgid "|hard| |TY|  Create OSM based vector Files"
-msgstr "|hard| |TY|  OSMベースのベクタファイルを作成"
+msgid "|hard| |TY|  Create OSM based vector files"
+msgstr "|hard| |TY|  OSMを基にしたベクタファイルを作る"
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:246
 msgid "hard"
-msgstr "むずかしい"
+msgstr ""
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:27
 msgid ""
@@ -99,8 +100,16 @@ msgid ""
 "In the :guilabel:`Browser` tab, expand the :guilabel:`XYZ Tiles` drop-down "
 "menu and double-click the :guilabel:`OpenStreetMap` item."
 msgstr ""
-":guilabel:`Browser` タブで、 :guilabel:`XYZ Tiles` ドロップダウンメニューを展開し、 "
+":guilabel:`ブラウザ` タブで、 :guilabel:`XYZ Tiles` ドロップダウンメニューを展開し、 "
 ":guilabel:`OpenStreetMap` アイテムをダブルクリックします。"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:43
+msgid "A map of the world is now visible on the map canvas."
+msgstr "マップキャンバスに世界の地図が表示されるようになります。"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:44
+msgid "Close the :guilabel:`Data Source Manager` dialog"
+msgstr ":guilabel:`データソースマネージャ` ダイアログを閉じます"
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:45
 msgid "Move to the area you'd like to use as study area"
@@ -114,11 +123,42 @@ msgstr "データを抽出する領域ができたので、抽出ツールを有
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:54
 msgid "Go to :menuselection:`Plugins --> Manage/Install Plugins...`"
-msgstr ":menuselection:`Plugins --> Manage/Install Plugins...` に行きます"
+msgstr ":menuselection:`プラグイン --> プラグインの管理とインストール...` に移動します"
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:55
 msgid "In the :guilabel:`All` tab, type ``QuickOSM`` in the search box"
 msgstr ":guilabel:`すべて` タブで、検索ボックスに ``QuickOSM`` と入力します"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:56
+msgid ""
+"Select the QuickOSM plugin, press :guilabel:`Install Plugin` and then "
+":guilabel:`Close` the dialog."
+msgstr "QuickOSMプラグインを選択し、 :guilabel:`インストール` を押し、ダイアログを :guilabel:`閉じる` します。"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:62
+msgid ""
+"Execute the new plugin from :menuselection:`Vector --> QuickOSM --> "
+"QuickOSM...` menu"
+msgstr ""
+":menuselection:`Vector --> QuickOSM --> QuickOSM...`メニューから、新しいプラグインを実行します"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:64
+msgid ""
+"In the :guilabel:`Quick query` tab, select ``building`` in the "
+":guilabel:`Key` drop-down menu"
+msgstr ""
+":guilabel:`Quick query` タブで、 :guilabel:`Key` ドロップダウンメニューから ``building`` "
+"を選択します"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:66
+msgid ""
+"Leave the :guilabel:`Value` field empty, meaning that you are querying all "
+"buildings."
+msgstr ":guilabel:`Value` フィールドを空にして、すべてのビルに問い合わせることを意味します。"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:68
+msgid "Select :guilabel:`Canvas Extent` in the next drop-down menu"
+msgstr "次のドロップダウンメニューで :guilabel:`Canvas Extent` を選択します"
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:69
 msgid ""
@@ -136,13 +176,17 @@ msgstr ":guilabel:`クエリ実行` を押します"
 msgid ""
 "A new ``building`` layer is added to the :guilabel:`Layers` panel, showing "
 "buildings in the selected extent."
-msgstr "新しい ``建物`` レイヤーが :guilabel:`レイヤ` パネルに追加され、選択した範囲の建物が表示されます。"
+msgstr "新しい ``building`` レイヤが :guilabel:`レイヤ` パネルに追加され、選択した範囲の建物が表示されます。"
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:89
 msgid ""
 "This process adds the layers as temporary files (indicated by the "
 "|indicatorMemory| icon next to their name)."
 msgstr "このプロセスにより、レイヤーが一時ファイルとして追加されます（名前の横にある |indicatorMemory| アイコンで示されます）。"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:247
+msgid "indicatorMemory"
+msgstr ""
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:95
 msgid ""
@@ -268,10 +312,6 @@ msgid ""
 "above and that all those layers have some data."
 msgstr "重要なことは、上に示したものと一致する7つのベクターレイヤーがあり、それらすべてのレイヤーにいくつかのデータがあることです。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:179
-msgid "|hard| |TY| Create SRTM DEM tiff Files"
-msgstr "|hard| |TY| SRTM DEM tiffファイルの作成"
-
 #: ../../docs/training_manual/appendix/preparing_data.rst:181
 msgid ""
 "For modules :ref:`tm_create_vector_data` and :ref:`tm_rasters`, you'll also "
@@ -303,6 +343,14 @@ msgstr ""
 ":file:`GeoTiff` 形式のままにします。フォームに入力したら、 :guilabel:`ここをクリックして検索を開始>>` "
 "ボタンをクリックし、ファイルをダウンロードします。"
 
+#: ../../docs/training_manual/appendix/preparing_data.rst:250
+msgid "zoomToLayer"
+msgstr ""
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:244
+msgid "extents"
+msgstr ""
+
 #: ../../docs/training_manual/appendix/preparing_data.rst:195
 msgid ""
 "Once you have downloaded the required file(s), they should be saved in the "
@@ -310,10 +358,6 @@ msgid ""
 msgstr ""
 "必要なファイルをダウンロードしたら、それらを :file:`raster/SRTM` サブフォルダの下の :file:`exercise_data` "
 "ディレクトリに保存する必要があります。"
-
-#: ../../docs/training_manual/appendix/preparing_data.rst:199
-msgid "|hard| |TY| Create imagery tiff Files"
-msgstr "|hard| |TY| 画像のTIFFファイルを作成"
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:202
 msgid ""
@@ -327,18 +371,9 @@ msgstr ""
 "モジュール :ref:`tm_create_vector_data` で、 :ref:`tm_datasources` "
 "レッスンは、生徒がデジタル化するように求められる3つの学校のスポーツフィールドのクローズアップ画像を示します。したがって、新しいSRTMDEMtiffファイルを使用してこれらの画像を再現する必要があります。学校のスポーツフィールドを使用する義務はありません。3つの学校の土地利用タイプを使用できます（たとえば、異なる学校の建物、遊び場、駐車場）。"
 
-#: ../../docs/training_manual/appendix/preparing_data.rst:216
-msgid "|basic| |TY| Replace Tokens"
-msgstr "|basic| |TY| トークンの置き換え"
-
-#: ../../docs/training_manual/appendix/preparing_data.rst:218
-msgid ""
-"Having created your localised dataset, the final step is to replace the "
-"tokens in the :file:`substitutions.txt` file so that the appropriate names "
-"will appear in your localised version of the Training Manual."
+#: ../../docs/training_manual/appendix/preparing_data.rst:243
+msgid "basic"
 msgstr ""
-"ローカライズされたデータセットを作成したら、最後のステップは、 :file:`substitutions.txt` "
-"ファイルのトークンを置き換えて、ローカライズされたバージョンのトレーニングマニュアルに適切な名前が表示されるようにすることです。"
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:222
 msgid "The tokens you need to replace are as follows:"

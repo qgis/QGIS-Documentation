@@ -2,25 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
-# Miyoshi Tomoya, 2022
+# Harrissou Sant-anna, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-12 00:23+0100\n"
-"PO-Revision-Date: 2022-03-14 05:07+0000\n"
-"Last-Translator: Miyoshi Tomoya, 2022\n"
-"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -90,9 +90,9 @@ msgstr "以下のリストはベクタデータプロバイダーを使って様
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:108
 msgid ""
-"OGR library (Shapefile and many other file formats) --- data source is the "
+"GDAL library (Shapefile and many other file formats) --- data source is the "
 "path to the file:"
-msgstr "OGRライブラリ（Shapefileその他多くのファイル形式）--- データソースはファイルへのパスです:"
+msgstr "GDALライブラリ（シェープファイル他多くのファイル形式）--- データソースはファイルへのパスです:"
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:111
 msgid "for Shapefile:"
@@ -165,9 +165,9 @@ msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:209
 msgid ""
-"MySQL WKB-based geometries, through OGR --- data source is the connection "
+"MySQL WKB-based geometries, through GDAL --- data source is the connection "
 "string to the table:"
-msgstr "MySQLのWKBベースジオメトリ、OGR経由 --- データソースはテーブルへの接続文字列です:"
+msgstr "MySQL WKBベースのジオメトリ、GDAL経由 --- データソースはテーブルへの接続文字列です:"
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:221
 msgid ""
@@ -312,6 +312,35 @@ msgstr ""
 "指定されたとき（1を参照）、GetCapabilitiesが布告したGetCoverage "
 "URLを無視する。サーバーが正しく構成されたいないときに必要かもしれない。"
 
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:384
+msgid ""
+"**InvertAxisOrientation** (optional, hack) : If specified (set to 1), switch"
+" axis in GetCoverage request. May be necessary for geographic CRS if a "
+"server is using wrong axis order."
+msgstr ""
+"**InvertAxisOrientation**（オプション、ハック）: 指定されたとき（1 に設定）、GetCoverage "
+"要求で軸を切り替えます。サーバーが間違った軸の順序を使用している場合、地理的なCRSのために必要な場合があります。"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:387
+msgid ""
+"**IgnoreAxisOrientation** (optional, hack) : If specified (set to 1), do not"
+" invert axis orientation according to WCS standard for geographic CRS."
+msgstr ""
+"**IgnoreAxisOrientation**（オプション、ハック）:  指定された場合（1 に設定）、地理的 CRS の WCS "
+"標準に従って軸の向きを反転させないようにする。"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:389
+msgid ""
+"**cache** (optional) : cache load control, as described in "
+"QNetworkRequest::CacheLoadControl, but request is resend as PreferCache if "
+"failed with AlwaysCache. Allowed values: AlwaysCache, PreferCache, "
+"PreferNetwork, AlwaysNetwork. Default is AlwaysCache."
+msgstr ""
+"**cache** （オプション）: QNetworkRequest::CacheLoadControl "
+"で説明されているように、キャッシュの読み込みを制御します。ただし、AlwaysCache で失敗した場合は PreferCache "
+"としてリクエストを再送します。可能な値： "
+"AlwaysCache、PreferCache、PreferNetwork、AlwaysNetwork。デフォルトはAlwaysCacheです。"
+
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:397
 msgid ""
 "Alternatively you can load a raster layer from WMS server. However currently"
@@ -320,3 +349,7 @@ msgid ""
 msgstr ""
 "別の方法としては、WMSサーバーからラスターレイヤーを読み込むことができます。しかし現在では、 "
 "APIからGetCapabilitiesレスポンスにアクセスすることはできません---どのレイヤが必要か知っている必要があります。"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:411
+msgid "QgsProject instance"
+msgstr "QgsProject インスタンス"

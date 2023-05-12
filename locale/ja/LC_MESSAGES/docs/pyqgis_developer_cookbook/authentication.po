@@ -2,30 +2,37 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
+# Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-12 00:23+0100\n"
-"PO-Revision-Date: 2022-03-14 05:12+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2022\n"
-"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../docs/pyqgis_developer_cookbook/authentication.rst:13
 msgid "Authentication infrastructure"
 msgstr "認証インフラストラクチャ"
+
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:14
+msgid ""
+"The code snippets on this page need the following imports if you're outside "
+"the pyqgis console:"
+msgstr "pyqgisコンソールを使わない場合、このページにあるコードスニペットは次のインポートが必要です:"
 
 #: ../../docs/pyqgis_developer_cookbook/authentication.rst:50
 msgid "Introduction"
@@ -43,6 +50,14 @@ msgid ""
 "This chapter describes the best practices to use the Authentication system "
 "from a developer perspective."
 msgstr "この章では、開発者の観点から、認証システムを使用するベストプラクティスについて説明します。"
+
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:65
+msgid ":class:`QgsAuthConfigEditor <qgis.gui.QgsAuthConfigEditor>`"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:66
+msgid ":class:`QgsAuthConfigSelect <qgis.gui.QgsAuthConfigSelect>`"
+msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/authentication.rst:81
 msgid "Glossary"
@@ -186,7 +201,7 @@ msgstr ""
 "で識別保存された資格情報を使用してWMSサービスにアクセスするためには、次のコードのように、データ・ソースのURLに ``authcfg`` "
 "を使用する必要があります。"
 
-#: ../../docs/pyqgis_developer_cookbook/authentication.rst:332
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:333
 msgid ""
 "In the upper case, the ``wms`` provider will take care to expand ``authcfg``"
 " URI parameter with credential just before setting the HTTP connection."
@@ -194,48 +209,48 @@ msgstr ""
 "上の場合には、 ``wms`` プロバイダーは、単にHTTP接続を設定する前に、資格を ``authcfg`` "
 "URIパラメーターを拡張するために世話をします。"
 
-#: ../../docs/pyqgis_developer_cookbook/authentication.rst:357
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:359
 msgid ""
 "The ``False`` parameter is important to avoid URI complete expansion of the "
 "``authcfg`` id present in the URI."
 msgstr "``False`` パラメーターは、URIで ``authcfg`` IDの存在のURI完全な展開を避けるために重要です。"
 
-#: ../../docs/pyqgis_developer_cookbook/authentication.rst:363
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:365
 msgid "PKI examples with other data providers"
 msgstr "他のデータプロバイダーとPKIの例"
 
-#: ../../docs/pyqgis_developer_cookbook/authentication.rst:373
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:375
 msgid "Adapt plugins to use Authentication infrastructure"
 msgstr "認証インフラストラクチャを使用するようにプラグインを適応させる"
 
-#: ../../docs/pyqgis_developer_cookbook/authentication.rst:383
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:385
 msgid "This helper class can be used as in the following snippet:"
 msgstr "このヘルパークラスは、次のコードのように使用できます："
 
-#: ../../docs/pyqgis_developer_cookbook/authentication.rst:397
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:399
 msgid "Authentication GUIs"
 msgstr "認証のGUI"
 
-#: ../../docs/pyqgis_developer_cookbook/authentication.rst:399
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:401
 msgid ""
 "In this paragraph are listed the available GUIs useful to integrate "
 "authentication infrastructure in custom interfaces."
 msgstr "この段落では、カスタムインターフェイスで認証インフラストラクチャを統合するために役立つ利用可能なGUIが記載されています。"
 
-#: ../../docs/pyqgis_developer_cookbook/authentication.rst:405
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:407
 msgid "GUI to select credentials"
 msgstr "資格情報を選択するためのGUI"
 
-#: ../../docs/pyqgis_developer_cookbook/authentication.rst:414
-#: ../../docs/pyqgis_developer_cookbook/authentication.rst:445
-#: ../../docs/pyqgis_developer_cookbook/authentication.rst:469
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:416
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:447
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:471
 msgid "and can be used as in the following snippet:"
 msgstr "そして次のコードのように使用できます："
 
-#: ../../docs/pyqgis_developer_cookbook/authentication.rst:436
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:438
 msgid "Authentication Editor GUI"
 msgstr "認証エディタのGUI"
 
-#: ../../docs/pyqgis_developer_cookbook/authentication.rst:461
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:463
 msgid "Authorities Editor GUI"
 msgstr "認証局エディタのGUI"

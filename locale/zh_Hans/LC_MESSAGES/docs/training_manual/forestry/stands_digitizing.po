@@ -2,32 +2,33 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# 徐保才 <1302638819@qq.com>, 2022
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-16 07:30+0000\n"
-"PO-Revision-Date: 2022-03-14 05:16+0000\n"
-"Last-Translator: 徐保才 <1302638819@qq.com>, 2022\n"
-"Language-Team: Chinese Simplified (https://www.transifex.com/qgis/teams/6144/zh-Hans/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 17:53+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: zh-Hans\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:2
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:2
 msgid "|LS| Digitizing Forest Stands"
 msgstr "课: 林分数字化"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:4
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:4
 msgid ""
 "Unless you are going to use your georeferenced map as a simple background "
 "image, the next natural step is to digitize elements from it. You have "
@@ -41,27 +42,21 @@ msgstr ""
 ":doc:`../create_vector_data/create_new_vector` "
 "的有关创建矢量数据的练习中完成了此操作。在本课，您将对地图中显示为绿线的林分边界进行数字化，此地图不是使用航拍图像，而是使用配准地图。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:11
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:11
 msgid ""
 "**The goal for this lesson:** Learn a technique to help the digitizing task,"
 " digitizing forest stands and finally adding the inventory data to them."
 msgstr "**本课目标:** 学习一种帮助完成数字化任务的技术，将林分数字化，并最终将清查数据添加到其中。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:15
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:15
 msgid "|basic| |FA| Extracting the Forest Stands Borders"
 msgstr "|basic| 跟我做: 提取林分边界"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:371
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:424
 msgid "basic"
-msgstr "basic"
+msgstr ""
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:17
-msgid ""
-"Open your :kbd:`map_digitizing.qgs` project in QGIS, that you saved from the"
-" previous lesson."
-msgstr "在QGIS中打开上节课保存的 :kbd:`map_digitizing.qgs` 工程。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:19
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:20
 msgid ""
 "Once you have scanned and georeferenced your map you could start to digitize"
 " directly by looking at the image as a guide. That would most likely be the "
@@ -69,7 +64,7 @@ msgid ""
 "aerial photograph."
 msgstr "扫描和配准地图后，可以通过查看图像作为辅助直接开始数字化。例如，如果要数字化的图像是航拍照片，那么这很可能是一种方法。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:24
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:25
 msgid ""
 "If what you are using to digitize is a good map, as it is in our case, it is"
 " likely that the information is clearly displayed as lines with different "
@@ -81,114 +76,73 @@ msgstr ""
 "如果您用来数字化的是一张不错的地图，就像我们的示例一样，很可能会清晰地显示每种元素类型不同颜色的线条信息。使用类似 `GIMP "
 "<https://www.gimp.org/>`_ 这样的图像处理软件，可以相对容易地提取用来辅助数字化的单独图像，如下所示。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:30
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:31
 msgid ""
 "The first step will be to use GIMP to obtain an image that contains only the"
 " forest stands, that is, all those greenish lines that you could see in the "
 "original scanned map:"
 msgstr "第一步是使用GIMP获取仅包含林分的图像，即可以在原始扫描地图中看到的所有绿色线条："
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:34
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:35
 msgid ""
 "Open GIMP (if you don't have it installed yet, download it from the internet"
 " or ask your teacher)."
 msgstr "打开GIMP (如果您还未安装，可以从网上下载或咨询您的老师)。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:36
-msgid ""
-"Open the original map image, :menuselection:`File --> Open`, "
-":kbd:`rautjarvi_map.tif` in the :kbd:`exercise_data/forestry` folder. Note "
-"that the forest stands are represented as green lines (with the number of "
-"the stand also in green inside each polygon)."
-msgstr ""
-"单击 :menuselection:`文件 --> 打开` ，在 :kbd:`exercise_data/forestry` 文件夹中打开 "
-":kbd:`rautjarvi_map.tif` 原地图图像。请注意，林分用绿线表示 (每个多边形内的林分编号也使用绿色)。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:44
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:47
 msgid ""
 "Now you can select the pixels in the image that are making up the forest "
 "stands' borders (the greenish pixels):"
 msgstr "现在，您可以选择图像中构成林分边界的像素 (绿色像素)："
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:47
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:50
 msgid "Open the tool :menuselection:`Select --> By color`."
 msgstr "打开工具 :menuselection:`选择 --> 按颜色` 。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:48
-msgid ""
-"With the tool active, zoom into the image (:guilabel:`Ctrl + mouse wheel`) "
-"so that a forest stand line is close enough to differentiate the pixels "
-"forming the line. See the left image below."
-msgstr "激活该工具后，放大图像 (:guilabel:`Ctrl + 鼠标滚轮`)，使林分线足够近，以区分形成此线条的像素。请参见下左图。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:51
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:54
 msgid ""
 "Click and drag the mouse cursor in the middle of the line so that the tool "
 "will collect several pixel color values."
 msgstr "在线中间单击并拖动鼠标光标，以便该工具收集多个像素颜色值。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:53
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:56
 msgid ""
 "Release the mouse click and wait a few seconds. The pixels matching the "
 "colors collected by the tool will be selected through the whole image."
 msgstr "释放鼠标左键并等待几秒钟，与工具收集的颜色相匹配的像素将在整个图像中被选中。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:55
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:58
 msgid ""
 "Zoom out to see how the greenish pixels have been selected throughout the "
 "image."
 msgstr "缩小视图，查看在整个图像中绿色像素的选择情况。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:56
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:59
 msgid ""
 "If you are not happy with the result, repeat the click and drag operation."
 msgstr "如果对结果不满意，请重复单击并拖动操作。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:57
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:60
 msgid "Your pixel selection should look something like the right image below."
 msgstr "您的像素选择应该类似于下右图。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:62
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:67
 msgid ""
 "Once you are done with the selection you need to copy this selection as a "
 "new layer and then save it as separate image file:"
 msgstr "完成选择后，需要将此选择复制为新图层，然后另存为单独的图像文件："
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:65
-msgid "Copy (:guilabel:`Ctr+C`) the selected pixels."
-msgstr "复制 (:guilabel:`Ctr+C`) 所选像素。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:66
-msgid ""
-"And paste the pixels directly (:guilabel:`Ctr+V`), GIMP will display the "
-"pasted pixels as a new temporary layer in the :guilabel:`Layers - Brushes` "
-"panel as a :guilabel:`Floating Selection (Pasted Layer)`."
-msgstr ""
-"如果直接粘贴像素 (:guilabel:`Ctr+V`)，GIMP在 :guilabel:`图层` 面板将粘贴的像素显示为新的临时图层，称为 "
-":guilabel:`浮动选区 (被粘贴的图层)` 。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:69
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:74
 msgid "Right click that temporary layer and select :guilabel:`To New Layer`."
 msgstr "在临时图层上右键单击，然后选择 :guilabel:`到新图层` 。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:70
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:75
 msgid ""
 "Click the \"eye\" icon next to the original image layer to switch it off, so"
 " that only the :guilabel:`Pasted Layer` is visible:"
 msgstr "单击原图像图层旁边的 \"眼睛\" 图标将其关闭，这样只有 :guilabel:`被粘贴的图层` 可见："
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:76
-msgid ""
-"Finally, select :menuselection:`File --> Export...`, set :guilabel:`Select "
-"File Type (By Extension)` as a :guilabel:`TIFF image`, select the "
-":kbd:`digitizing` folder and name it :kbd:`rautjarvi_map_green.tif`. Select "
-"no compression when asked."
-msgstr ""
-"最后，选择 :menuselection:`文件 --> 导出...` ，在导出图像对话框中设置 :guilabel:`选择文件类型 (按扩展名)` 为"
-" :guilabel:`TIFF 图像` ，选择 :kbd:`digitizing` 文件夹并将其命名为 "
-":kbd:`rautjarvi_map_green.tif` 。询问时选择 *无* 压缩方式。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:81
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:88
 msgid ""
 "You could do the same process with other elements in the image, for example "
 "extracting the black lines that represent roads or the brown ones that "
@@ -196,54 +150,35 @@ msgid ""
 "enough."
 msgstr "您可以对图像中的其他元素执行相同的处理，例如提取表示道路的黑线或表示地形等高线的棕色线。但对我们来说，林分就足够了。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:86
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:93
 msgid "|basic| |TY| Georeference the Green Pixels Image"
 msgstr "|basic| 试一试 配准绿色像素图像"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:88
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:95
 msgid ""
 "As you did in the previous lesson, you need to georeference this new image "
 "to be able to use it with the rest of your data."
 msgstr "正如在上一课中所做的那样，您需要对该新图像进行地理配准，以便能够将其与其他数据一起使用。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:91
-msgid ""
-"Note that you don't need to digitize the ground control points any more "
-"because this image is basically the same image as the original map image, as"
-" far as the Georeferencer tool is concerned. Here are some things you should"
-" remember:"
-msgstr "请注意，您不再需要数字化地面控制点，因为就地理配准工具而言，该图像基本上与原地图图像相同。以下是您应该注意的地方："
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:95
-msgid "This image is also, of course, in :kbd:`KKJ / Finland zone 2` CRS."
-msgstr "当然，该图像也在 :kbd:`KKJ / Finland zone 2` CRS中。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:96
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:103
 msgid ""
 "You should use the ground control points you saved, :menuselection:`File -->"
 " Load GCP points`."
 msgstr "应该使用您保存的GCP :menuselection:`文件 --> 加载地面控制点` 。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:97
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:105
 msgid "Remember to review the :guilabel:`Transformation settings`."
 msgstr "请查看 :guilabel:`变换设置` 。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:98
-msgid ""
-"Name the output raster as :kbd:`rautjarvi_green_georef.tif` in the "
-":kbd:`digitizing` folder."
-msgstr ""
-"将输出栅格命名为 :kbd:`rautjarvi_green_georef.tif` ，并保存在 :kbd:`digitizing` 文件夹。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:100
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:109
 msgid "Check that the new raster is fitting nicely with the original map."
 msgstr "检查新栅格是否与原地图完美匹配。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:104
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:113
 msgid "|basic| |FA| Creating Supporting Points for Digitizing"
 msgstr "|basic| 跟我做: 为数字化创建支点"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:106
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:115
 msgid ""
 "Having in mind the digitizing tools in QGIS, you might already be thinking "
 "that it would be helpful to snap to those green pixels while digitizing. "
@@ -253,7 +188,7 @@ msgid ""
 msgstr ""
 "考虑到QGIS中的数字化工具，您可能已经认为，在数字化时捕捉这些绿色像素会很有帮助。这正是您接下来要做的，通过使用QGIS中可用的捕捉工具，从这些像素创建点，以便稍后使用它们来帮助您在数字化时跟踪林分的边界。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:112
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:121
 msgid ""
 "Use the :menuselection:`Raster --> Conversion --> Polygonize (Raster to "
 "Vector)` tool to vectorize your green lines to polygons. If you don't "
@@ -263,84 +198,40 @@ msgstr ""
 "使用 :menuselection:`栅格 --> 转换 --> 栅格矢量化 (栅格转矢量)` 工具将绿线矢量化为多边形。如果忘记如何操作，可以温习 "
 ":doc:`../complete_analysis/raster_to_vector` 。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:115
-msgid ""
-"Save as :kbd:`rautjarvi_green_polygon.shp` inside the :kbd:`digitizing` "
-"folder."
-msgstr "另存为 :kbd:`rautjarvi_green_polygon.shp` 在 :kbd:`digitizing` 文件夹中。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:117
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:126
 msgid ""
 "Zoom in and see what the polygons look like. You will get something like "
 "this:"
 msgstr "放大并查看多边形的外观，您会得到这样的结果："
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:122
-msgid ""
-"Next one option to get points out of those polygons is to get their "
-"centroids:"
-msgstr "从这些多边形获取点的下一个选项是得到它们的质心："
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:433
+msgid "polygonLayer"
+msgstr ""
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:124
-msgid "Open :menuselection:`Vector --> Geometry tools --> Polygon centroids`."
-msgstr "打开 :menuselection:`矢量 --> 几何图形工具 --> 质心` 。"
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:427
+msgid "checkbox"
+msgstr ""
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:125
-msgid "Set the polygon layer you just got as the input file for the tool."
-msgstr "将刚取得的多边形图层设置为该工具的输入文件。"
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:431
+msgid "pointLayer"
+msgstr ""
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:126
-msgid ""
-"Name the output as :kbd:`green_centroids.shp` inside the :kbd:`digitizing` "
-"folder."
-msgstr "将输出命名为 :kbd:`green_centroids.shp` ，并保存在 :kbd:`digitizing` 文件夹。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:127
-msgid "Check :menuselection:`Add result to canvas`."
-msgstr "勾选 :menuselection:`执行算法后打开输出文件` 。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:128
-msgid "Run the tool to calculate the centroids for the polygons."
-msgstr "运行该工具以计算多边形的质心。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:133
-msgid ""
-"Now you can remove the :guilabel:`rautjarvi_green_polygon` layer from the "
-"TOC."
-msgstr "现在可以从TOC移除 :guilabel:`rautjarvi_green_polygon` 图层。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:135
-msgid "Change the symbology of the centroids layer as:"
-msgstr "将质心图层的符号更改为："
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:137
-msgid "Open the :guilabel:`Layer Properties` for :guilabel:`green_centroids`."
-msgstr "打开 :guilabel:`green_centroids` 的 :guilabel:`图层属性` 。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:138
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:154
 msgid "Go to the :guilabel:`Symbology` tab."
 msgstr "转到 :guilabel:`符号化` 选项卡。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:139
-msgid "Set the :guilabel:`Unit` to Map unit."
-msgstr "将 :guilabel:`单位` 设置为地图单位。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:140
-msgid "Set the :guilabel:`Size` to 1."
-msgstr "设置 :guilabel:`大小` 为 1。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:142
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:158
 msgid ""
 "It is not necessary to differentiate points from each other, you just need "
 "them to be there for the snapping tools to use them. You can use those "
 "points now to follow the original lines much easily than without them."
 msgstr "不需要将点相互区分开，只需要它们在那里，捕捉工具就可以使用。现在，您可以使用这些点来跟随原线条，这比不使用它们要容易得多。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:147
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:163
 msgid "|basic| |FA| Digitize the Forest Stands"
 msgstr "|basic| 跟我做: 数字化林分"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:149
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:165
 msgid ""
 "Now you are ready to start with the actual digitizing work. You would start "
 "by creating a vector file of :guilabel:`polygon type`, but for this "
@@ -351,237 +242,110 @@ msgstr ""
 "现在，您可以开始真正的数字化工作了。可以先创建 :guilabel:`多边形类型` "
 "的矢量文件，但对于本练习，有一个Shapefile，其中关注区的一部分已经数字化。您只需将主要道路 (宽粉色线) 和湖泊之间剩下的一半林分数字化即可："
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:158
-msgid "Go to the :kbd:`digitizing` folder using your file manager browser."
-msgstr "使用文件管理器转到 :kbd:`digitizing` 文件夹。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:159
-msgid "Drag and drop the :kbd:`forest_stands.shp` vector file to your map."
-msgstr "将 :kbd:`forest_stands.shp` 矢量文件拖放到您的地图。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:161
-msgid ""
-"Change the new layer's symbology so that it will be easier to see what "
-"polygons have already been digitized:"
-msgstr "修改新图层的符号，便于更容易看到哪些多边形已经数字化："
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:164
-msgid "The filling of the polygon to green."
-msgstr "将多边形填充为绿色。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:165
-msgid "The polygons' borders to 1 mm."
-msgstr "多边形的边界为 1 毫米。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:166
-msgid "and set the transparency to 50%."
-msgstr "并将透明度设置为50%。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:168
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:185
 msgid ""
 "Now, if you remember past modules, we have to set up and activate the "
 "snapping options:"
 msgstr "现在，您还记得之前单元学习的内容吗？我们必须设置并激活捕捉选项："
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:170
-msgid "Go to :menuselection:`Project --> Snapping options...`."
-msgstr "转到 :menuselection:`工程 --> 捕捉选项...` 。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:171
-msgid ""
-"Activate the snapping for the :kbd:`green_centroids` and the "
-":kbd:`forest_stands` layers."
-msgstr "激活 :kbd:`green_centroids` 和 :kbd:`forest_stands` 图层的捕捉。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:172
-msgid "Set their :guilabel:`Tolerance` to 5 map units."
-msgstr "将其 :guilabel:`容差` 设置为 5 个地图单位。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:173
-msgid ""
-"Check the :guilabel:`Avoid Int.` box for the :kbd:`forest_stands` layer."
-msgstr "勾选 :kbd:`forest_stands` 图层的 :guilabel:`避免重叠` 方框。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:174
-msgid "Check :guilabel:`Enable topological editing`."
-msgstr "选中 :guilabel:`启用拓扑编辑` 。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:175
-msgid "Click :guilabel:`Apply`."
-msgstr "单击 :guilabel:`应用` 。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:180
-msgid ""
-"With these snapping settings, whenever you are digitizing and get close "
-"enough to one of the points in the centroids layer or any vertex of your "
-"digitized polygons, a pink cross will appear on the point that will be "
-"snapped to."
-msgstr "使用这些捕捉设置，无论何时进行数字化，距离质心图层中的某个点或数字化多边形的顶点足够近时，都会在要捕捉的点上显示一个粉红色的十字。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:184
-msgid ""
-"Finally, turn off the visibility of all the layers except "
-":kbd:`forest_stands` and :kbd:`rautjarvi_georef`. Make sure that the map "
-"image has not transparency any more."
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:435
+msgid "snapping"
 msgstr ""
-"最后，关闭除 :kbd:`forest_stands` 和 :kbd:`rautjarvi_georef` "
-"之外的所有图层的可见性。确保地图图像不再具有透明度。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:187
-msgid "A couple of important things to note before you start digitizing:"
-msgstr "开始数字化之前，需要注意以下几点："
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:441
+msgid "topologicalEditing"
+msgstr ""
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:189
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:422
+msgid "avoidIntersectionsLayers"
+msgstr ""
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:212
 msgid "Don't try to be too accurate with the digitizing of the borders."
 msgstr "不要试图过于精确数字化边界。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:190
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:213
 msgid ""
 "If a border is a straight line, digitize it with just two nodes. In general,"
 " digitize using as few nodes as possible."
 msgstr "如果边界是一条直线，只需两个结点即可将其数字化。通常，使用尽可能少的结点进行数字化。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:192
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:215
 msgid ""
 "Zoom in to close ranges only if you feel that you need to be accurate, for "
 "example, at some corners or when you want a polygon to connect with another "
 "polygon at a certain node."
 msgstr "仅当您认为需要精确时才放大到近距离，例如，在某些拐角处，或者当您希望某个多边形在某个结点与另一个多边形连接时。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:195
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:218
 msgid ""
 "Use the mouse's middle button to zoom in/out and to pan as you digitize."
 msgstr "在数字化时，使用鼠标中键进行放大/缩小和平移。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:196
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:219
 msgid "Digitize only one polygon at a time."
 msgstr "一次仅能数字化一个多边形。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:197
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:220
 msgid ""
 "After digitizing one polygon, write the forest stand id that you can see "
 "from the map."
 msgstr "数字化一个多边形后，写出从地图上可以看到的林分ID。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:199
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:222
 msgid "Now you can start digitizing:"
 msgstr "现在您可以开始数字化了："
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:201
-msgid "Locate the forest stand number 357 in the map window."
-msgstr "在地图窗口中找到林分编号357。"
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:439
+msgid "toggleEditing"
+msgstr ""
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:202
-msgid "Enable editing for the :kbd:`forest_stands.shp` layer."
-msgstr "激活编辑 :kbd:`forest_stands.shp` 图层。"
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:425
+msgid "capturePolygon"
+msgstr ""
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:203
-msgid "Select the :guilabel:`Add feature` tool."
-msgstr "选择 :guilabel:`添加要素` 工具。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:204
-msgid "Start digitizing the stand :kbd:`357` by connecting some of the dots."
-msgstr "通过连接一些点开始数字化林分号 :kbd:`357` 。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:205
-msgid "Note the pink crosses indicating the snapping."
-msgstr "请注意，粉红色的十字表示捕捉。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:210
-msgid "When you are done, right click to end digitizing that polygon."
-msgstr "完成后，右键单击结束对该多边形的数字化。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:211
-msgid "Enter the forest stand :kbd:`id` (in this case 357)."
-msgstr "输入林分 :kbd:`ID` (本例中为357)。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:212
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:240
 msgid "Click :guilabel:`OK`."
 msgstr "单击 :guilabel:`确定` 。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:214
-msgid ""
-"If you were not prompted for the polygon :kbd:`id` when you finished "
-"digitizing it, go to :menuselection:`Settings --> Options --> Digitizing` "
-"and make sure that the :guilabel:`Suppress attribute form pop-up after "
-"feature creation` is not checked."
-msgstr ""
-"如果完成数字化后没有提示您输入多边形 :kbd:`ID` ，请转到 :menuselection:`设置 --> 选项 --> 数字化` 并确保 "
-":guilabel:`要素创建后不要弹出属性表单` 未勾选。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:218
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:246
 msgid "Your digitized polygon will look like this:"
 msgstr "您的数字化多边形如下所示："
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:223
-msgid ""
-"Now for the second polygon, pick up the stand number 358. Make sure that the"
-" :guilabel:`Avoid int.` is checked for the :kbd:`forest_stands` layer. This "
-"option does not allow intersecting polygons at digitizing, so that if you "
-"digitize  over an existing polygon, the new polygon will be trimmed to meet "
-"the border of the already existing polygons. You can use this characteristic"
-" to automatically obtain a common border."
-msgstr ""
-"现在，数字化林分号为358的第二个多边形。确保勾选 :kbd:`forest_stands` 图层的 :guilabel:`避免重叠` "
-"。此选项不允许数字化时使多边形相交，因此，如果在现有多边形上进行数字化，新多边形将被修剪以符合现有多边形的边界。可以使用此特征自动获取公共边界。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:230
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:260
 msgid ""
 "Begin digitizing the stand 358 at one of the common corners with the stand "
 "357."
 msgstr "在林分357的一个公共角开始数字化林分358。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:231
-msgid ""
-"Then continue normally until you get to the other common corner for both "
-"stands."
-msgstr "然后继续正常操作，并到达两个林分的另一个公共角。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:232
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:262
 msgid ""
 "Finally, digitize a few points inside polygon 357 making sure that the "
 "common border is not intersected. See left image below."
 msgstr "最后，数字化多边形357内的几个点，确保公共边界不相交。见下左图。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:234
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:264
 msgid "Right click to finish editing the forest stand 358."
 msgstr "右键单击完成对林分358的编辑。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:235
-msgid "Enter the :kbd:`id` as 358."
-msgstr "输入 :kbd:`ID` 为 358。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:236
-msgid ""
-"Click :guilabel:`OK`, your new polygon should show a common border with the "
-"stand 357 as you can see in the image on the right."
-msgstr "单击 :guilabel:`确定` ，新多边形应显示与林分357的公共边界，如下右图所示。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:242
-msgid ""
-"The part of the polygon that was overlapping the existing polygon has been "
-"automatically trimmed out and you are left with a common border, as you "
-"intended it to be."
-msgstr "多边形与现有多边形重叠的部分已被自动修剪，剩下的是一个公共边界，就像您所期望的那样。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:248
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:280
 msgid "|basic| |TY| Finish Digitizing the Forest Stands"
 msgstr "|basic| 试一试 完成林分的数字化"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:250
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:282
 msgid ""
 "Now you have two forest stands ready. And a good idea on how to proceed. "
 "Continue digitizing on your own until you have digitized all the forest "
 "stands that are limited by the main road and the lake."
 msgstr "现在您已完成两个林分，和如何数字化的好方法。继续您的数字化，直到已经数字化了所有主要道路和湖泊之间的林分。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:254
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:286
 msgid ""
 "It might look like a lot of work, but you will soon get used to digitizing "
 "the forest stands. It should take you about 15 minutes."
 msgstr "这看起来工作量很大，但您很快就会习惯数字化林分。整个过程大概需要15分钟。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:257
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:289
 msgid ""
 "During the digitizing you might need to edit or delete nodes, split or merge"
 " polygons. You learned about the necessary tools in "
@@ -591,22 +355,22 @@ msgstr ""
 "在数字化过程中，可能需要编辑或删除结点、分割或合并多边形。您可在 :doc:`../create_vector_data/topo_editing` "
 "中学习了有关必要的工具，现在可能是复习的好时机。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:261
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:293
 msgid ""
 "Remember that having :guilabel:`Enable topological editing` activated, "
 "allows you to move nodes common to two polygons so that the common border is"
 " edited at the same time for both polygons."
 msgstr "请记住， :guilabel:`启用拓扑编辑` 激活后，可以移动两个多边形的公共结点，以便同时编辑两个多边形的公共边界。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:265
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:297
 msgid "Your result will look like this:"
 msgstr "您的成果将如下所示："
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:271
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:305
 msgid "|basic| |FA| Joining the Forest Stand Data"
 msgstr "|basic| 跟我做: 连接林分数据"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:273
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:307
 msgid ""
 "It is possible that the forest inventory data you have for you map is also "
 "written in paper. In that case, you would have to first write that data to a"
@@ -617,174 +381,42 @@ msgstr ""
 "有可能地图上的森林资源清查数据写在纸上。在这种情况下，您必须首先将数据录入文本文件或电子表格。对于本练习，1994年清单 (与地图相同的清单) "
 "中的信息以逗号分隔文本 (csv) 文件的形式准备就绪。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:278
-msgid ""
-"Open the :kbd:`rautjarvi_1994.csv` file from the "
-":kbd:`exercise_data\\\\forestry` directory in a text editor and note that "
-"the inventory data file has an attribute called :kbd:`ID` that has the "
-"numbers of the forest stands. Those numbers are the same as the forest "
-"stands ids you have entered for your polygons and can be used to link the "
-"data from the text file to your vector file. You can see the metadata for "
-"this inventory data in the file :kbd:`rautjarvi_1994_legend.txt` in the same"
-" folder."
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:420
+msgid "addDelimitedTextLayer"
 msgstr ""
-"使用文本编辑器从 :kbd:`exercise_data\\\\forestry` 目录打开 :kbd:`rautjarvi_1994.csv` "
-"文件，请注意，清查数据文件有一个名为 :kbd:`ID` "
-"的属性，该属性包含林分的编号。这些数字与您为多边形输入的林分ID相同，可用于将文本文件中的数据链接到矢量文件。您可以在同一文件夹的 "
-":kbd:`rautjarvi_1994_legend.txt` 文件中看到此清查数据的元数据。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:286
-msgid ""
-"Open the :kbd:`.csv` in QGIS with the :menuselection:`Layer --> Add "
-"Delimited Text Layer...` tool. In the dialog, set it as follows:"
-msgstr ""
-"在QGIS中使用 :menuselection:`图层 --> 添加分隔文本图层...` 工具打开 :kbd:`.csv` ，并在对话框中进行如下设置："
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:292
-msgid "To add the data from the :kbd:`.csv` file:"
-msgstr "从 :kbd:`.csv` 文件添加数据："
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:294
-msgid "Open the Layer Properties for the :kbd:`forest_stands` layer."
-msgstr "打开 :kbd:`forest_stands` 图层的图层属性。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:295
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:337
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:352
 msgid "Go to the :guilabel:`Joins` tab."
 msgstr "转到 :guilabel:`连接` 选项卡。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:296
-msgid "Click the plus sign on the bottom of the dialog box."
-msgstr "单击对话框底部的加号。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:297
-msgid ""
-"Select :kbd:`rautjarvi_1994.csv` as the :guilabel:`Join layer` and :kbd:`ID`"
-" as the :guilabel:`Join` field."
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:437
+msgid "symbologyAdd"
 msgstr ""
-"选择 :kbd:`rautjarvi_1994.csv` 为 :guilabel:`连接图层` ， :kbd:`ID` 为 "
-":guilabel:`连接字段` 。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:299
-msgid "Make sure that the :guilabel:`Target` field is also set to :kbd:`id`."
-msgstr "确保 :guilabel:`目标字段` 也设置为 :kbd:`ID` 。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:300
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:342
 msgid "Click :guilabel:`OK` two times."
 msgstr "单击 :guilabel:`确定` 两次。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:302
-msgid ""
-"The data from the text file should be now linked to your vector file. To see"
-" what has happened, open the attribute table for the :kbd:`forest_stands` "
-"layer. You can see that all the attributes from the inventory data file are "
-"now linked to your digitized vector layer."
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:429
+msgid "openTable"
 msgstr ""
-"文本文件的数据现在应该链接到您的矢量文件。要查看发生的变化，请打开 :kbd:`forest_stands` "
-"图层的属性表。您可以看到，清查数据文件中的所有属性现在都链接到了数字化矢量图层。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:308
-msgid "|basic| |TY| Renaming Attribute Names and Adding Area and Perimeter"
-msgstr "|basic| 试一试 重命名属性名称并添加面积和周长"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:310
-msgid ""
-"The data from the :kbd:`.csv` file is just linked to your vector file. To "
-"make this link permanent, so that the data is actually recorded to the "
-"vector file you need to save the :kbd:`forest_stands` layer as a new vector "
-"file. Close the attribute table and right click the forest_stands layer to "
-"save it as :kbd:`forest_stands_1994.shp`."
-msgstr ""
-":kbd:`.csv` 文件中的数据只是链接到您的矢量文件。要使此链接永久化，以便将数据实际记录到矢量文件，需要保存 "
-":kbd:`forest_stands` 图层为新的矢量文件。关闭属性表，右键单击 forest_stands 图层，将其保存为 "
-":kbd:`forest_stands_1994.shp` 。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:316
-msgid ""
-"Open your new :kbd:`forest_stands_1994.shp` in your map if you did not added"
-" yet. Then open the attribute table. You notice that the names of the "
-"columns that you just added are no very useful. To solve this:"
-msgstr ""
-"如果尚未添加，请在地图中打开新的 :kbd:`forest_stands_1994.shp` "
-"文件，然后打开属性表。您会注意到，刚才添加的列的名称没有多大用处。要解决这个问题："
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:320
-msgid ""
-"Add the plugin :guilabel:`Table Manager` as you have done with other plugins"
-" before."
-msgstr ""
-"添加插件 :guilabel:`Table Manager` ，就像之前使用其他插件一样。该插件更新到2016年，最新版的QGIS已不再支持。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:321
-msgid "Make sure the plugin is activated."
-msgstr "确保插件已激活。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:322
-msgid "In the TOC select the layer :kbd:`forest_stands_1994.shp`."
-msgstr "在TOC，选择 :kbd:`forest_stands_1994.shp` 图层。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:323
-msgid ""
-"Then, go to :menuselection:`Vector --> Table Manager --> Table manager`."
-msgstr "然后，转到 :menuselection:`矢量 --> Table Manager --> Table manager` 。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:324
-msgid ""
-"Use the dialogue box to edit the names of the columns to match the ones in "
-"the :kbd:`.csv` file."
-msgstr "使用对话框编辑列的名称，以匹配 :kbd:`.csv` 文件中的列名。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:329
-msgid "Click on :guilabel:`Save`."
-msgstr "单击 :guilabel:`保存` 。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:330
-msgid "Select :guilabel:`Yes` to keep the layer style."
-msgstr "选择 :guilabel:`Yes` 保留图层样式。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:331
-msgid "Close the :guilabel:`Table Manager` dialogue."
-msgstr "关闭 :guilabel:`Table Manager` 对话框。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:333
-msgid ""
-"To finish gathering the information related to these forest stands, you "
-"might calculate the area and the perimeter of the stands. You calculated "
-"areas for polygons in :doc:`../complete_analysis/analysis_exercise`. Go back"
-" to that lesson if you need to and calculate the areas for the forest "
-"stands, name the new attribute :kbd:`Area` and make sure that the values "
-"calculated are in hectares."
-msgstr ""
-"要完成收集与这些林分相关的信息，可以计算林分的面积和周长。您在 "
-":doc:`../complete_analysis/analysis_exercise` "
-"计算了多边形的面积。如果需要计算林分的面积，请返回查看该课程。命名新属性 :kbd:`Area` ，并确保计算的值以公顷为单位。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:339
-msgid ""
-"Now your :kbd:`forest_stands_1994.shp` layer is ready and packed with all "
-"the available information."
-msgstr "现在，您的 :kbd:`forest_stands_1994.shp` 图层已准备就绪，并包含所有可用信息。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:342
-msgid ""
-"Save your project to keep the current map presentation in case you need to "
-"come back later to it."
-msgstr "保存您的工程以保留当前的地图演示，防备以后需要时再返回查看。"
-
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:346
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:395
 msgid "|IC|"
-msgstr "综上所述"
+msgstr ""
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:348
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:397
 msgid ""
 "It has taken a few clicks of the mouse but you now have your old inventory "
 "data in digital format and ready for use in QGIS."
 msgstr "只需点击几下鼠标，您就有了数字格式的旧清查数据，并可以在QGIS中使用。"
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:352
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:401
 msgid "|WN|"
-msgstr "下节引言"
+msgstr ""
 
-#: ../../docs/training_manual/forestry/stands_digitazing.rst:354
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:403
 msgid ""
 "You could start doing different analysis with your brand new dataset, but "
 "you might be more interested in performing analysis in a dataset more up to "

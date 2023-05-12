@@ -2,24 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
+# Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-12 00:23+0100\n"
-"PO-Revision-Date: 2022-03-14 05:11+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2022\n"
-"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -27,15 +28,61 @@ msgstr ""
 msgid "Introduction"
 msgstr "はじめに"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:228
+#: ../../docs/pyqgis_developer_cookbook/server.rst:40
+msgid "To learn more about QGIS Server, read the :ref:`QGIS-Server-manual`."
+msgstr "QGISサーバーについて更に学ぶには、 :ref:`QGIS-Server-manual` を読んでください。"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:178
+msgid ":class:`QgsServerFilter <qgis.server.QgsServerFilter>`"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:179
+msgid ""
+":meth:`registerFilter() <qgis.server.QgsServerInterface.registerFilter>`"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:181
+msgid ":class:`QgsAccessControlFilter <qgis.server.QgsAccessControlFilter>`"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:182
+msgid ""
+":meth:`registerAccessControl() "
+"<qgis.server.QgsServerInterface.registerAccessControl>`"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:184
+msgid ":class:`QgsServerCacheFilter <qgis.server.QgsServerCacheFilter>`"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:185
+msgid ""
+":meth:`registerServerCache() "
+"<qgis.server.QgsServerInterface.registerServerCache>`"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:201
+#: ../../docs/pyqgis_developer_cookbook/server.rst:372
+msgid ":meth:`onRequestReady() <qgis.server.QgsServerFilter.onRequestReady>`"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:202
+#: ../../docs/pyqgis_developer_cookbook/server.rst:373
+msgid ""
+":meth:`onResponseComplete() "
+"<qgis.server.QgsServerFilter.onResponseComplete>`"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:203
+#: ../../docs/pyqgis_developer_cookbook/server.rst:374
+msgid ":meth:`onSendResponse() <qgis.server.QgsServerFilter.onSendResponse>`"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:234
 msgid "The following paragraphs describe the available callbacks in details."
 msgstr "次の段落では、利用可能なコールバックを詳細に説明します。"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:231
-msgid "requestReady"
-msgstr "requestReady"
-
-#: ../../docs/pyqgis_developer_cookbook/server.rst:233
+#: ../../docs/pyqgis_developer_cookbook/server.rst:239
 msgid ""
 "This is called when the request is ready: incoming URL and data have been "
 "parsed and before entering the core services (WMS, WFS etc.) switch, this is"
@@ -43,23 +90,23 @@ msgid ""
 msgstr ""
 "要求の準備ができたときに呼び出されます。受信URLとデータが解析され、コアサービス（WMS、WFSなど）スイッチに入る前に、これは入力を操作するなどのアクションを実行できるポイントです。"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:237
+#: ../../docs/pyqgis_developer_cookbook/server.rst:243
 msgid "authentication/authorization"
 msgstr "認証/認可"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:238
+#: ../../docs/pyqgis_developer_cookbook/server.rst:244
 msgid "redirects"
 msgstr "リダイレクト"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:239
+#: ../../docs/pyqgis_developer_cookbook/server.rst:245
 msgid "add/remove certain parameters (typenames for example)"
 msgstr "特定のパラメーター（例えば、型名）を追加／除去"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:240
+#: ../../docs/pyqgis_developer_cookbook/server.rst:246
 msgid "raise exceptions"
 msgstr "例外を発生させる"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:242
+#: ../../docs/pyqgis_developer_cookbook/server.rst:248
 msgid ""
 "You could even substitute a core service completely by changing **SERVICE** "
 "parameter and hence bypassing the core service completely (not that this "
@@ -68,15 +115,7 @@ msgstr ""
 "**SERVICE** "
 "パラメーターを変更することでコアサービスを完全に置き換え、それによりコアサービスを完全にバイパスすることさえできるかもしれません（とはいえ、これはあまり意味がないということ）。"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:247
-msgid "sendResponse"
-msgstr "sendResponse"
-
-#: ../../docs/pyqgis_developer_cookbook/server.rst:267
-msgid "responseComplete"
-msgstr "responseComplete"
-
-#: ../../docs/pyqgis_developer_cookbook/server.rst:291
+#: ../../docs/pyqgis_developer_cookbook/server.rst:299
 msgid ""
 "This approach basically works but it is not very \"pythonic\": a better "
 "approach would be to raise exceptions from python code and see them bubbling"
@@ -85,53 +124,53 @@ msgstr ""
 "このアプローチは、基本的に動作しますが、それは非常に「パイソン的」ではありません：より良いアプローチは、Pythonコードから例外を発生し、それらがそこで処理されるためにC"
 " ++ループに湧き上がるのを見ることでしょう。"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:298
+#: ../../docs/pyqgis_developer_cookbook/server.rst:306
 msgid "Writing a server plugin"
 msgstr "サーバー・プラグインを書く"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:321
-#: ../../docs/pyqgis_developer_cookbook/server.rst:543
+#: ../../docs/pyqgis_developer_cookbook/server.rst:329
+#: ../../docs/pyqgis_developer_cookbook/server.rst:554
 msgid "Plugin files"
 msgstr "プラグインファイル"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:336
-#: ../../docs/pyqgis_developer_cookbook/server.rst:557
+#: ../../docs/pyqgis_developer_cookbook/server.rst:344
+#: ../../docs/pyqgis_developer_cookbook/server.rst:568
 msgid "__init__.py"
 msgstr "__init__.py"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:353
+#: ../../docs/pyqgis_developer_cookbook/server.rst:361
 msgid "HelloServer.py"
 msgstr "HelloServer.py"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:355
+#: ../../docs/pyqgis_developer_cookbook/server.rst:363
 msgid ""
 "This is where the magic happens and this is how magic looks like: (e.g. "
 ":file:`HelloServer.py`)"
 msgstr "魔法が起こると、これは魔法がどのように見えるかであるところである：（例 :file:`HelloServer.py` ）"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:418
+#: ../../docs/pyqgis_developer_cookbook/server.rst:428
 msgid "The following examples cover some common use cases:"
 msgstr "次の例は、いくつかの一般的なユースケースをカバーします："
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:421
+#: ../../docs/pyqgis_developer_cookbook/server.rst:431
 msgid "Modifying the input"
 msgstr "入力を変更する"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:450
+#: ../../docs/pyqgis_developer_cookbook/server.rst:461
 msgid "This is an extract of what you see in the log file:"
 msgstr "これは、ログファイルに見るものの抽出物である:"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:462
+#: ../../docs/pyqgis_developer_cookbook/server.rst:473
 msgid ""
 "On the highlighted line the “SUCCESS” string indicates that the plugin "
 "passed the test."
 msgstr "強調表示された行の「SUCCESS」の文字列は、プラグインがテストに合格したことを示しています。"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:478
+#: ../../docs/pyqgis_developer_cookbook/server.rst:489
 msgid "Modifying or replacing the output"
 msgstr "出力を変更または置き換えする"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:480
+#: ../../docs/pyqgis_developer_cookbook/server.rst:491
 msgid ""
 "The watermark filter example shows how to replace the WMS output with a new "
 "image obtained by adding a watermark image on the top of the WMS image "
@@ -139,108 +178,104 @@ msgid ""
 msgstr ""
 "透かしフィルタの例は、WMSコアサービスによって作成されたWMS画像の上に透かし画像を加算した新たな画像でWMS出力を置き換える方法を示しています："
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:575
+#: ../../docs/pyqgis_developer_cookbook/server.rst:546
+msgid ""
+":meth:`layerFilterExpression(layer) "
+"<qgis.server.QgsAccessControlFilter.layerFilterExpression>`"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:547
+msgid ""
+":meth:`layerFilterSubsetString(layer) "
+"<qgis.server.QgsAccessControlFilter.layerFilterSubsetString>`"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:548
+msgid ""
+":meth:`layerPermissions(layer) "
+"<qgis.server.QgsAccessControlFilter.layerPermissions>`"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:549
+msgid ""
+":meth:`authorizedLayerAttributes(layer, attributes) "
+"<qgis.server.QgsAccessControlFilter.authorizedLayerAttributes>`"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:550
+msgid ""
+":meth:`allowToEdit(layer, feature) "
+"<qgis.server.QgsAccessControlFilter.allowToEdit>`"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:551
+msgid ":meth:`cacheKey() <qgis.server.QgsAccessControlFilter.cacheKey>`"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:587
 msgid "AccessControl.py"
 msgstr "AccessControl.py"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:614
+#: ../../docs/pyqgis_developer_cookbook/server.rst:626
 msgid "This example gives a full access for everybody."
 msgstr "この例では全員に完全なアクセス権を与えています。"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:616
+#: ../../docs/pyqgis_developer_cookbook/server.rst:628
 msgid "It's the role of the plugin to know who is logged on."
 msgstr "誰がログオンしているかを知るのはこのプラグインの役割です。"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:618
+#: ../../docs/pyqgis_developer_cookbook/server.rst:630
 msgid ""
 "On all those methods we have the layer on argument to be able to customise "
 "the restriction per layer."
 msgstr "これらすべての方法で私達は、レイヤーごとの制限をカスタマイズできるようにするには、引数のレイヤーを持っています。"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:623
+#: ../../docs/pyqgis_developer_cookbook/server.rst:635
 msgid "layerFilterExpression"
 msgstr "layerFilterExpression"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:625
-msgid "Used to add an Expression to limit the results, e.g.:"
-msgstr "結果を制限するために式を追加するために使用し、例えば："
-
-#: ../../docs/pyqgis_developer_cookbook/server.rst:632
-#: ../../docs/pyqgis_developer_cookbook/server.rst:645
-msgid "To limit on feature where the attribute role is equals to \"user\"."
-msgstr "属性の役割が「ユーザー」に等しい地物に制限するため。"
-
-#: ../../docs/pyqgis_developer_cookbook/server.rst:636
+#: ../../docs/pyqgis_developer_cookbook/server.rst:648
 msgid "layerFilterSubsetString"
 msgstr "layerFilterSubsetString"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:638
+#: ../../docs/pyqgis_developer_cookbook/server.rst:650
 msgid ""
 "Same than the previous but use the ``SubsetString`` (executed in the "
 "database)"
 msgstr "以前よりも同じですが、（データベース内で実行） ``SubsetString`` を使用"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:649
+#: ../../docs/pyqgis_developer_cookbook/server.rst:661
 msgid "layerPermissions"
 msgstr "layerPermissions"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:651
+#: ../../docs/pyqgis_developer_cookbook/server.rst:663
 msgid "Limit the access to the layer."
 msgstr "レイヤーへのアクセスを制限します。"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:665
-#: ../../docs/pyqgis_developer_cookbook/server.rst:685
-#: ../../docs/pyqgis_developer_cookbook/server.rst:702
-msgid "Example:"
-msgstr "例:"
-
-#: ../../docs/pyqgis_developer_cookbook/server.rst:675
-msgid "To limit everything on read only access."
-msgstr "読み取り専用のアクセスのすべてを制限します。"
-
-#: ../../docs/pyqgis_developer_cookbook/server.rst:679
+#: ../../docs/pyqgis_developer_cookbook/server.rst:689
 msgid "authorizedLayerAttributes"
 msgstr "authorizedLayerAttributes"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:681
+#: ../../docs/pyqgis_developer_cookbook/server.rst:691
 msgid "Used to limit the visibility of a specific subset of attribute."
 msgstr "属性の特定のサブセットの可視性を制限するために使用します。"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:683
+#: ../../docs/pyqgis_developer_cookbook/server.rst:693
 msgid "The argument attribute return the current set of visible attributes."
 msgstr "引数の属性が表示属性の現在のセットを返します。"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:692
-msgid "To hide the 'role' attribute."
-msgstr "「role」属性を非表示にします。"
-
-#: ../../docs/pyqgis_developer_cookbook/server.rst:696
+#: ../../docs/pyqgis_developer_cookbook/server.rst:704
 msgid "allowToEdit"
 msgstr "allowToEdit"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:698
+#: ../../docs/pyqgis_developer_cookbook/server.rst:706
 msgid "This is used to limit the editing on a subset of features."
 msgstr "これは、地物のサブセットに編集を制限するために使用されます。"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:700
+#: ../../docs/pyqgis_developer_cookbook/server.rst:708
 msgid "It is used in the ``WFS-Transaction`` protocol."
 msgstr "これは、 ``WFS-Transaction`` プロトコルで使用されています。"
 
-#: ../../docs/pyqgis_developer_cookbook/server.rst:710
-msgid ""
-"To be able to edit only feature that has the attribute role with the value "
-"user."
-msgstr "値「user」の属性「role」を持つ地物だけを編集できます。"
-
-#: ../../docs/pyqgis_developer_cookbook/server.rst:715
+#: ../../docs/pyqgis_developer_cookbook/server.rst:720
 msgid "cacheKey"
 msgstr "cacheKey"
-
-#: ../../docs/pyqgis_developer_cookbook/server.rst:717
-msgid ""
-"QGIS server maintain a cache of the capabilities then to have a cache per "
-"role you can return the role in this method. Or return ``None`` to "
-"completely disable the cache."
-msgstr ""
-"QGISサーバーは、このメソッド中に役割を返すことができる役割ごとにキャッシュを持っている能力のキャッシュを維持します。または ``None`` "
-"を返し、完全にキャッシュを無効にします。"

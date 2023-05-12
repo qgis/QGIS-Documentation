@@ -2,24 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-30 02:27+0000\n"
-"PO-Revision-Date: 2022-03-14 05:13+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2022\n"
-"Language-Team: German (https://www.transifex.com/qgis/teams/6144/de/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -98,6 +99,10 @@ msgstr ""
 "Location enthält das GRASS |grassLogo| Icon im QGIS Browser angezeigt. Gehen"
 " Sie im QGIS Browser zum Ordner :file:`grassdata` und erweitern den Ordner "
 ":file:`alaska` und das Mapset :file:`demo`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:910
+msgid "grassLogo"
+msgstr ""
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:49
 msgid ""
@@ -249,6 +254,14 @@ msgstr ""
 ":menuselection:`Erweiterungen verwalten und installieren...`, wählt dort "
 "|checkbox| :guilabel:`GRASS` und klickt auf :guilabel:`OK`."
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:938
+msgid "showPluginManager"
+msgstr ""
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:904
+msgid "checkbox"
+msgstr ""
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:110
 msgid ""
 "The following main features are provided with the GRASS menu "
@@ -261,25 +274,49 @@ msgstr ""
 msgid "|grassOpenMapset| :sup:`Open Mapset`"
 msgstr "|grassOpenMapset| :sup:`Mapset öffnen`"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:914
+msgid "grassOpenMapset"
+msgstr ""
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:114
 msgid "|grassNewMapset| :sup:`New Mapset`"
 msgstr "|grassNewMapset| :sup:`Neues Mapset`"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:912
+msgid "grassNewMapset"
+msgstr ""
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:115
 msgid "|grassCloseMapset| :sup:`Close Mapset`"
 msgstr "|grassCloseMapset| :sup:`Schließe Mapset`"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:908
+msgid "grassCloseMapset"
+msgstr ""
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:116
 msgid "|grassTools| :sup:`Open GRASS Tools`"
 msgstr "|grassTools| :sup:`GRASS-Werkzeugkiste öffnen`"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:918
+msgid "grassTools"
+msgstr ""
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:117
 msgid "|grassRegion| :sup:`Display Current GRASS Region`"
 msgstr "|grassRegion| :sup:`Aktuelle GRASS-Region darstelllen`"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:916
+msgid "grassRegion"
+msgstr ""
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:118
 msgid "|general| :sup:`GRASS Options`"
 msgstr "|general| :sup:`GRASS Optionen`"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:906
+msgid "general"
+msgstr ""
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:121
 msgid "Opening GRASS mapset"
@@ -301,43 +338,6 @@ msgstr ""
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:130
 msgid "GRASS LOCATION and MAPSET"
 msgstr "Information zur GRASS-Datenbank"
-
-#: ../../docs/user_manual/grass_integration/grass_integration.rst:132
-msgid ""
-"GRASS data are stored in a directory referred to as GISDBASE. This "
-"directory, often called :file:`grassdata`, must be created before you start "
-"working with the GRASS plugin in QGIS. Within this directory, the GRASS GIS "
-"data are organized by projects stored in subdirectories called "
-":file:`LOCATIONs`. Each :file:`LOCATION` is defined by its coordinate "
-"system, map projection and geographical boundaries. Each :file:`LOCATION` "
-"can have several :file:`MAPSETs` (subdirectories of the :file:`LOCATION`) "
-"that are used to subdivide the project into different topics or subregions, "
-"or as workspaces for individual team members (see Neteler & Mitasova 2008 in"
-" :ref:`literature_and_web`). In order to analyse vector and raster layers "
-"with GRASS modules, you generally have to import them into a GRASS "
-":file:`LOCATION`. (This is not strictly true -- with the GRASS modules "
-":file:`r.external` and :file:`v.external` you can create read-only links to "
-"external GDAL/OGR-supported datasets without importing them. This is not the"
-" usual way for beginners to work with GRASS, therefore this functionality "
-"will not be described here.)"
-msgstr ""
-"GRASS Daten werden in einem Ordner gespeichert, der als GISDBASE bezeichnet "
-"wird. Standardmäßig wird der Ordner :file:`grassdata` genannt und er muss "
-"erstellt worden sein, bevor man beginnt, mit dem GRASS Plugin in QGIS zu "
-"arbeiten. Innerhalb dieses Ordners sind die GRASS Daten als Projekte in "
-"Unterordnern genannt :file:`LOCATIONs` organisiert. Jede :file:`LOCATION` "
-"ist durch ein Koordinatenbezugssystem, Kartenprojektion und eine "
-"geographische Grenze definiert und kann darüberhinaus weitere Unterordner "
-":file:`MAPSETs` (Unterordner des Ordners :file:`LOCATION`) besitzen, um die "
-"Layer der :file:`LOCATION` weiter z.B. thematisch oder räumlich zu "
-"unterteilen (siehe Neteler & Mitasova 2008 in :ref:`literature_and_web`). Um"
-" Raster- und Vektorlayer mit den GRASS Modulen zu analysieren, müssen diese "
-"zuerst in eine passende GRASS :file:`LOCATION` importiert werden. (Dies ist "
-"nicht ganz korrekt. Mit den GRASS Modulen :file:`r.external` und "
-":file:`v.external` können Sie eine 'read-only' Verknüpfung zu externen durch"
-" GDAL/OGR-unterstützte Layer erstellen, ohne die Daten importieren zu "
-"müssen. Da dies aber nicht der normale Weg für GRASS Anfänger ist, wird auf "
-"diese Möglichkeit nicht näher eingegangen.)."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:152
 msgid "GRASS data in the alaska LOCATION"
@@ -539,6 +539,10 @@ msgstr ""
 " Dateimanagers einen neuen Ordner an. Klicken Sie dann auf "
 ":guilabel:`Weiter`."
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:928
+msgid "radioButtonOn"
+msgstr ""
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:226
 msgid ""
 "Enter a name for the :file:`LOCATION` -- we used 'alaska' -- and click "
@@ -571,6 +575,10 @@ msgstr ""
 " gespeichert haben, klicken Sie auf das |projectionEnabled| :sup:`KBS-"
 "Status` Icon in der unteren rechten Ecke der Statusleiste (siehe Abschnitt "
 ":ref:`label_projections`))."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:926
+msgid "projectionEnabled"
+msgstr ""
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:235
 msgid "In :guilabel:`Filter`, insert 2964 to select the projection."
@@ -1001,6 +1009,10 @@ msgstr "Zweck"
 msgid "|capturePoint|"
 msgstr "|capturePoint|"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:900
+msgid "capturePoint"
+msgstr ""
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:429
 msgid "New Point"
 msgstr "Neuer Punkt"
@@ -1012,6 +1024,10 @@ msgstr "Digitalisiert neuen Punkt"
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:431
 msgid "|captureLine|"
 msgstr "|captureLine|"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:898
+msgid "captureLine"
+msgstr ""
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:431
 msgid "New Line"
@@ -1049,6 +1065,10 @@ msgstr ""
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:437
 msgid "|capturePolygon|"
 msgstr "|capturePolygon|"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:902
+msgid "capturePolygon"
+msgstr ""
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:437
 msgid "New Closed Boundary"
@@ -1266,6 +1286,14 @@ msgstr ""
 "bearbeitet werden. Das liegt an einem Fehler in GRASS der es nicht erlaubt, "
 "Datenbanktreiber in zufälliger Reihenfolge zu schließen. Der Fehler wird von"
 " den GRASS Entwicklern behoben."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:922
+msgid "nix"
+msgstr ""
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:924
+msgid "osx"
+msgstr ""
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:527
 msgid "**GRASS Edit Permissions**"
@@ -1595,6 +1623,10 @@ msgstr ""
 "Geben Sie im Feld :guilabel:`Abstand zwischen den Kontourintervallen` "
 "|selectNumber| den Wert 100 an. (Dadurch werden Höhenlinien in einem Abstand"
 " von 100m erstellt.)"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:934
+msgid "selectNumber"
+msgstr ""
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:696
 msgid ""
@@ -1967,6 +1999,10 @@ msgstr ""
 "'Eindeutiger Wert' und setzen das :guilabel:`Klassifikationsfeld` auf "
 "'VEGDESC' (siehe auch die Beschreibung des Reiters Darstellung in Abschnitt "
 ":ref:`vector_style_menu` des Vektordatenabschnitts)."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:936
+msgid "selectString"
+msgstr ""
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:845
 msgid ""

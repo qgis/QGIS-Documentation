@@ -2,24 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 12:01+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
-"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -63,6 +64,10 @@ msgstr "デモデータセット"
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:42
 msgid "Loading GRASS raster and vector layers"
 msgstr "GRASSラスターおよびベクターレイヤーをロードする"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:910
+msgid "grassLogo"
+msgstr ""
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:49
 msgid ""
@@ -180,6 +185,14 @@ msgstr ""
 msgid "Starting the GRASS plugin"
 msgstr "GRASSプラグインを起動する"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:938
+msgid "showPluginManager"
+msgstr ""
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:904
+msgid "checkbox"
+msgstr ""
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:110
 msgid ""
 "The following main features are provided with the GRASS menu "
@@ -192,25 +205,49 @@ msgstr ""
 msgid "|grassOpenMapset| :sup:`Open Mapset`"
 msgstr "|grassOpenMapset| :sup:`地図セットを開く`"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:914
+msgid "grassOpenMapset"
+msgstr ""
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:114
 msgid "|grassNewMapset| :sup:`New Mapset`"
 msgstr "|grassNewMapset| :sup:`新しい地図セット`"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:912
+msgid "grassNewMapset"
+msgstr ""
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:115
 msgid "|grassCloseMapset| :sup:`Close Mapset`"
 msgstr "|grassCloseMapset| :sup:`地図セットを閉じる`"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:908
+msgid "grassCloseMapset"
+msgstr ""
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:116
 msgid "|grassTools| :sup:`Open GRASS Tools`"
 msgstr "|grassTools| :sup:`GRASS ツールを開く`"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:918
+msgid "grassTools"
+msgstr ""
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:117
 msgid "|grassRegion| :sup:`Display Current GRASS Region`"
 msgstr "|grassRegion| :sup:`現在のGRASS Regionを表示`"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:916
+msgid "grassRegion"
+msgstr ""
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:118
 msgid "|general| :sup:`GRASS Options`"
 msgstr "|general| :sup:`GRASSオプション`"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:906
+msgid "general"
+msgstr ""
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:121
 msgid "Opening GRASS mapset"
@@ -229,36 +266,6 @@ msgstr ""
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:130
 msgid "GRASS LOCATION and MAPSET"
 msgstr "GRASS[場所]と[地図セット]"
-
-#: ../../docs/user_manual/grass_integration/grass_integration.rst:132
-msgid ""
-"GRASS data are stored in a directory referred to as GISDBASE. This "
-"directory, often called :file:`grassdata`, must be created before you start "
-"working with the GRASS plugin in QGIS. Within this directory, the GRASS GIS "
-"data are organized by projects stored in subdirectories called "
-":file:`LOCATIONs`. Each :file:`LOCATION` is defined by its coordinate "
-"system, map projection and geographical boundaries. Each :file:`LOCATION` "
-"can have several :file:`MAPSETs` (subdirectories of the :file:`LOCATION`) "
-"that are used to subdivide the project into different topics or subregions, "
-"or as workspaces for individual team members (see Neteler & Mitasova 2008 in"
-" :ref:`literature_and_web`). In order to analyse vector and raster layers "
-"with GRASS modules, you generally have to import them into a GRASS "
-":file:`LOCATION`. (This is not strictly true -- with the GRASS modules "
-":file:`r.external` and :file:`v.external` you can create read-only links to "
-"external GDAL/OGR-supported datasets without importing them. This is not the"
-" usual way for beginners to work with GRASS, therefore this functionality "
-"will not be described here.)"
-msgstr ""
-"GRASSデータはGISDBASEと称するディレクトリに格納されています。このディレクトリはしばしば :file:`grassdata` "
-"と呼ばれますが、QGISでGRASSプラグインで作業を開始する前に作成する必要があります。このディレクトリ内では、GRASSのGISデータは "
-":file:`場所` と呼ばれるサブディレクトリに保存されたプロジェクトによって整理されています。各 :file:`場所` "
-"は、その座標系、地図投影と地理的境界によって定義されます。各 :file:`場所` は複数の :file:`地図セット` （ :file:`場所` "
-"のサブディレクトリ）を持つことができ、それらはさまざまなトピックまたはサブ領域にプロジェクトを細分化するために、または個々のチームメンバーのためのワークスペースとして使用されます（Neteler"
-" ＆ Mitasova 2008年 :ref:`literature_and_web` "
-"参照）。GRASSモジュールでベクターおよびラスターレイヤーを分析するためには、通常はGRASS :file:`場所` "
-"にインポートする必要があります。（これは厳密には正しくない - GRASSモジュール :file:`r.external` と "
-":file:`v.external` で、それらをインポートせずに外部の GDAL/OGR-"
-"サポートのデータセットへの読み取り専用リンクを作成できます。初心者がGRASSを操作するための通常の方法ではないので、この機能は、ここで説明されることはありません。）"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:152
 msgid "GRASS data in the alaska LOCATION"
@@ -385,6 +392,10 @@ msgstr ""
 "GRASSツールバーで、 |grassNewMapset| :sup:`地図セット` アイコンをクリックして :guilabel:`新しい地図セット` "
 "ウィザードを起動してください。"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:928
+msgid "radioButtonOn"
+msgstr ""
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:227
 msgid ""
 "Define the projection by clicking on the radio button |radioButtonOn| "
@@ -404,6 +415,10 @@ msgstr ""
 "2964によって表されていることを知ることが起こるので、検索ボックスに入力します。（注意：別のために、このプロセスを繰り返したい場合は、次の "
 ":file:`場所` と投影とEPSG IDを記憶していないが、ステータスバーの右下隅にある |projectionEnabled| :sup:`CRS"
 " Status` アイコンをクリック ）（ :ref:`label_projections` セクションを参照）。"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:926
+msgid "projectionEnabled"
+msgstr ""
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:235
 msgid "In :guilabel:`Filter`, insert 2964 to select the projection."
@@ -730,6 +745,10 @@ msgstr "目的"
 msgid "|capturePoint|"
 msgstr "|capturePoint|"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:900
+msgid "capturePoint"
+msgstr ""
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:429
 msgid "New Point"
 msgstr "新しい点"
@@ -741,6 +760,10 @@ msgstr "新しい点をデジタイズ"
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:431
 msgid "|captureLine|"
 msgstr "|captureLine|"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:898
+msgid "captureLine"
+msgstr ""
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:431
 msgid "New Line"
@@ -777,6 +800,10 @@ msgstr "新しい重心をデジタイズ (ラベルのあるエリア)"
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:437
 msgid "|capturePolygon|"
 msgstr "|capturePolygon|"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:902
+msgid "capturePolygon"
+msgstr ""
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:437
 msgid "New Closed Boundary"
@@ -948,6 +975,14 @@ msgid ""
 msgstr ""
 "|nix| |osx| LinuxおよびMac "
 "OS上でだけGRASSレイヤーを一度に一つだけ編集できます。これは、ランダムな順序でデータベースドライバを閉じられないというGRASSのバグによるものです。これは、GRASSの開発者によって解決されています。"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:922
+msgid "nix"
+msgstr ""
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:924
+msgid "osx"
+msgstr ""
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:527
 msgid "**GRASS Edit Permissions**"
@@ -1197,6 +1232,10 @@ msgid ""
 msgstr ""
 ":guilabel:`等高線水準間の増加分` に |selectNumber| "
 "値100を入力します（これで等高線が100メートルの間隔で作成されます。）"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:934
+msgid "selectNumber"
+msgstr ""
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:696
 msgid ""
@@ -1456,6 +1495,10 @@ msgstr ""
 ":guilabel:`プロパティ` ウィンドウ、:guilabel:`シンボル体系` タブの中で、 :guilabel:`凡例タイプ` から "
 "|selectString| 「ユニークな値」選び、 :guilabel:`分類フィールド` に「VEGDESC」を設定します。（ベクターセクションの "
 ":ref:`vector_style_menu` 中の記号体系タブの説明を参照してください。 ）"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:936
+msgid "selectString"
+msgstr ""
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:845
 msgid ""

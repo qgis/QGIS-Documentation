@@ -2,24 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
+# Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-12 00:23+0100\n"
-"PO-Revision-Date: 2022-03-14 05:15+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2022\n"
-"Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2023\n"
+"Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -27,31 +28,41 @@ msgstr ""
 msgid "Code Snippets"
 msgstr "코드 조각"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:50
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:28
+msgid ""
+"The code snippets on this page need the following imports if you're outside "
+"the pyqgis console:"
+msgstr "여러분이 PyQGIS 콘솔을 사용하지 않는 경우 이 페이지에 있는 코드 조각들을 다음과 같이 가져와야 합니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:60
 msgid "This section features code snippets to facilitate plugin development."
 msgstr "이 장에서는 플러그인 개발을 쉽게 할 수 있도록 도와주는 코드 조각(snippet)에 대해 설명합니다."
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:55
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:65
 msgid "How to call a method by a key shortcut"
 msgstr "단축키로 함수 메소드를 호출하는 방법"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:57
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:67
 msgid "In the plug-in add to the :func:`initGui()`"
 msgstr "플러그인 내부의 :func:`initGui()` 함수에 다음 코드를 추가하십시오."
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:66
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:76
 msgid "To :func:`unload()` add"
 msgstr ":func:`unload()` 함수에 다음 코드를 추가하십시오."
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:72
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:82
 msgid "The method that is called when CTRL+I is pressed"
 msgstr "CTRL+I 단축키를 누르면 해당 메소드를 호출합니다."
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:83
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:284
+msgid "fileOpen"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:130
 msgid "Interface for plugin in the options dialog"
 msgstr "옵션 대화창에 있는 플러그인 용 인터페이스"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:85
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:132
 msgid ""
 "You can add a custom plugin options tab to :menuselection:`Settings --> "
 "Options`. This is preferable over adding a specific main menu entry for your"
@@ -63,7 +74,7 @@ msgstr ""
 "플러그인의 옵션을 위해 특정 주 메뉴 항목을 추가하는 것보다는 이 편이 좋은데, 모든 QGIS 응용 프로그램 설정과 플러그인 설정을 단일"
 " 위치에 모아두기 때문에 사용자가 설정을 찾고 탐색하기에 더 편하기 때문입니다."
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:90
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:137
 msgid ""
 "The following snippet will just add a new blank tab for the plugin's "
 "settings, ready for you to populate with all the options and settings "
@@ -75,16 +86,12 @@ msgstr ""
 "넣을 수 있습니다. 다음 클래스들을 서로 다른 파일로 분할할 수 있습니다. 이 예제에서 우리는 주 :file:`mainPlugin.py`"
 " 파일 안에 클래스 2개를 추가할 것입니다."
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:118
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:165
 msgid ""
 "Finally we are adding the imports and modifying the ``__init__`` function:"
 msgstr "마지막으로 가져온 것들을 추가하고 ``__init__`` 함수를 수정합니다:"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:149
-msgid "**Add custom tabs to a vector layer properties dialog**"
-msgstr "**벡터 레이어 속성 대화창에 사용자 지정 탭 추가**"
-
-#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:151
+#: ../../docs/pyqgis_developer_cookbook/plugins/snippets.rst:198
 msgid ""
 "You can apply a similar logic to add the plugin custom option to the layer "
 "properties dialog using the classes :class:`QgsMapLayerConfigWidgetFactory "

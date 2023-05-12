@@ -2,24 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
+# Harrissou Sant-anna, 2023
+# stefan wolff <wolff@mellum.de>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-16 07:30+0000\n"
-"PO-Revision-Date: 2022-03-14 05:08+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2022\n"
-"Language-Team: German (https://www.transifex.com/qgis/teams/6144/de/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: stefan wolff <wolff@mellum.de>, 2023\n"
+"Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -30,6 +31,10 @@ msgstr "Kartenerstellung"
 #: ../../docs/gentle_gis_introduction/map_production.rst:6
 msgid "|gentleLogo|"
 msgstr "|gentleLogo|"
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:312
+msgid "gentleLogo"
+msgstr "gentleLogo"
 
 #: ../../docs/gentle_gis_introduction/map_production.rst:6
 msgid "Objectives:"
@@ -55,6 +60,27 @@ msgstr ""
 msgid "Overview"
 msgstr "Übersicht"
 
+#: ../../docs/gentle_gis_introduction/map_production.rst:14
+msgid ""
+"Map production is the process of arranging map elements on a sheet of paper "
+"in a way that, even without many words, the average person can understand "
+"what it is all about. Maps are usually produced for presentations and "
+"reports where the audience or reader is a politician, citizen or a learner "
+"with no professional background in GIS. Because of this, a map has to be "
+"effective in communicating spatial information. Common elements of a map are"
+" the title, map body, legend, north arrow, scale bar, acknowledgement, and "
+"map border (see :numref:`figure_map_elements`)."
+msgstr ""
+"Unter Kartenerstellung versteht man den Prozess, Kartenelemente auf einem "
+"Blatt Papier so anzuordnen, dass der Durchschnittsbürger auch ohne viele "
+"Worte versteht, worum es geht. Karten werden in der Regel für Präsentationen"
+" und Berichte erstellt, bei denen das Publikum oder der Leser ein Politiker,"
+" ein Bürger oder ein Lernender ist, der keinen professionellen Hintergrund "
+"in GIS hat. Aus diesem Grund muss eine Karte räumliche Informationen "
+"effektiv vermitteln. Gemeinsame Elemente einer Karte sind der Titel, der "
+"Kartenkörper, die Legende, der Nordpfeil, der Maßstabsbalken, die "
+"Anmerkungen und der Kartenrand (siehe :numref:`figure_map_elements`)."
+
 #: ../../docs/gentle_gis_introduction/map_production.rst:28
 msgid ""
 "Common map elements (labelled in red) are the title, map body, legend, north"
@@ -75,9 +101,9 @@ msgid ""
 "describes the subject matter and the legend relates map symbols to the "
 "mapped data."
 msgstr ""
-"Andere Elemente, die hinzugefügt werden könnten, sind z.B. A **graticule** "
-"oder **name of the map projection** (CRS). Gemeinsam helfen diese Elemente "
-"dem Kartenleser, die auf der Karte dargestellten Informationen zu "
+"Andere Elemente, die hinzugefügt werden könnten, sind z.B. ein **Raster** "
+"oder die **Bezeichnung der Kartenprojektion** (CRS). Gemeinsam helfen diese "
+"Elemente dem Kartenleser, die auf der Karte dargestellten Informationen zu "
 "interpretieren. Der Kartenkörper ist natürlich der wichtigste Teil der "
 "Karte, da er die Karteninformationen enthält. Die anderen Elemente "
 "unterstützen den Kommunikationsprozess und helfen dem Kartenleser, sich "
@@ -104,6 +130,19 @@ msgstr ""
 #: ../../docs/gentle_gis_introduction/map_production.rst:47
 msgid "Map Border in detail"
 msgstr "Kartenrahmen im Detail"
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:49
+msgid ""
+"The map border is a line that defines exactly the edges of the area shown on"
+" the map. When printing a map with a graticule (which we describe further "
+"down), you often find the coordinate information of the graticule lines "
+"along the border lines, as you can see in :numref:`figure_map_legend`."
+msgstr ""
+"Die Kartengrenze ist eine Linie, die genau die Ränder des auf der Karte "
+"dargestellten Bereichs definiert. Wenn Sie eine Karte mit einem Raster "
+"ausdrucken (das wir weiter unten beschreiben), finden Sie die "
+"Koordinateninformationen der Gitternetzlinien oft entlang der Randlinien, "
+"wie Sie in :numref:`figure_map_legend` sehen können."
 
 #: ../../docs/gentle_gis_introduction/map_production.rst:55
 msgid "Map Legend in detail"
@@ -150,6 +189,21 @@ msgstr ""
 #: ../../docs/gentle_gis_introduction/map_production.rst:97
 msgid "Scale in detail"
 msgstr "Maßstab im Detail"
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:99
+msgid ""
+"The scale of a map, is the value of a single unit of distance on the map, "
+"representing distance in the real world. The values are shown in map units "
+"(meters, feet or degrees). The scale can be expressed in several ways, for "
+"example, in words, as a ratio or as a graphical scale bar (see "
+":numref:`figure_map_scale`)."
+msgstr ""
+"Der Maßstab einer Karte ist der Wert einer einzelnen Entfernungseinheit auf "
+"der Karte, die die Entfernung in der realen Welt darstellt. Die Werte werden"
+" in Karteneinheiten (Meter, Fuß oder Grad) angegeben. Der Maßstab kann auf "
+"verschiedene Weise ausgedrückt werden, zum Beispiel in Worten, als "
+"Verhältnis oder als grafischer Maßstabsbalken (siehe "
+":numref:`figure_map_scale`)."
 
 #: ../../docs/gentle_gis_introduction/map_production.rst:114
 msgid ""
@@ -247,6 +301,25 @@ msgstr ""
 msgid "Graticule in detail"
 msgstr "Raster im Detail"
 
+#: ../../docs/gentle_gis_introduction/map_production.rst:181
+msgid ""
+"A graticule is a network of lines overlain on a map to make spatial "
+"orientation easier for the reader. The lines can be used as a reference. As "
+"an example, the lines of a graticule can represent the earth's parallels of "
+"latitude and meridians of longitude. When you want to refer to a special "
+"area on a map during your presentation or in a report you could say: 'the "
+"houses close to latitude 26.04 / longitude -32.11 are often exposed to "
+"flooding during January and February' (see :numref:`figure_map_graticule`)."
+msgstr ""
+"Ein Raster ist ein Netz von Linien, das über eine Karte gelegt wird, um dem "
+"Leser die räumliche Orientierung zu erleichtern. Die Linien können als "
+"Referenz verwendet werden. So können die Linien eines Rasters beispielsweise"
+" die Breitengrade und Längengrade der Erde darstellen. Wenn Sie bei einer "
+"Präsentation oder in einem Bericht auf ein bestimmtes Gebiet auf einer Karte"
+" hinweisen wollen, könnten Sie sagen: \"Die Häuser in der Nähe des "
+"Breitengrads 26.04 / Längengrads -32.11 sind im Januar und Februar oft "
+"Überschwemmungen ausgesetzt\" (siehe :numref:`figure_map_graticule`)."
+
 #: ../../docs/gentle_gis_introduction/map_production.rst:195
 msgid ""
 "Graticules (red lines) representing the Earth’s parallels of latitude and "
@@ -276,14 +349,44 @@ msgstr ""
 "die Erde perfekt für jeden Bereich der Welt darzustellen. Jede Projektion "
 "hat Vor- und Nachteile."
 
+#: ../../docs/gentle_gis_introduction/map_production.rst:208
+msgid ""
+"To be able to create maps as precisely as possible, people have studied, "
+"modified, and produced many different kinds of projections. In the end "
+"almost every country has developed its own map projection with the goal of "
+"improving the map accuracy for their territorial area (see "
+":numref:`figure_map_projection`)."
+msgstr ""
+"Um Karten so genau wie möglich erstellen zu können, wurden viele "
+"verschiedene Arten von Projektionen untersucht, verändert und hergestellt. "
+"Schließlich hat fast jedes Land seine eigene Kartenprojektion entwickelt, um"
+" die Genauigkeit der Karten für sein Territorium zu verbessern (siehe "
+":numref:`figure_map_projection`)."
+
 #: ../../docs/gentle_gis_introduction/map_production.rst:219
 msgid ""
 "The world in different projections. A Mollweide Equal Area projection left, "
 "a Plate Carree Equidistant Cylindrical projection on the right."
 msgstr ""
-"Die Welt in verschiedenen Projektionen. Eine Mollweide flächentreue "
-"Projektion links, eine Plate Carree abstandstreue Zylinderprojektion auf der"
-" rechten Seite."
+"Die Welt in verschiedenen Projektionen. Links eine flächentreue Projektion "
+"nach Mollweide, auf der rechten Seite eine Plattkarte oder "
+"Rektangularprojektion als abstandstreue Zylinderprojektion."
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:222
+msgid ""
+"With this in mind, we can now understand why it makes sense to add the name "
+"of the projection on a map. It allows the reader to see quickly, if one map "
+"can be compared with another. For example, features on a map in a so-called "
+"Equal Area projection appear very different to features projected in a "
+"Cylindrical Equidistant projection (see :numref:`figure_map_projection`)."
+msgstr ""
+"Damit können wir nun also verstehen, warum es sinnvoll ist, den Namen der "
+"Projektion auf einer Karte anzugeben. Sie ermöglicht es dem Leser, schnell "
+"zu erkennen, ob eine Karte mit einer anderen verglichen werden kann. So "
+"sehen zum Beispiel Merkmale auf einer Karte in einer sogenannten "
+"flächentreuen Projketion ganz anders aus als Merkmale, die in einer "
+"abstandstreuen Zylinderprojektion projiziert werden (siehe "
+":numref:`figure_map_projection`)."
 
 #: ../../docs/gentle_gis_introduction/map_production.rst:228
 msgid ""
@@ -456,6 +559,13 @@ msgid ""
 msgstr ""
 "DeMers, Michael N. (2005). Fundamentals of Geographic Information Systems. "
 "3rd Edition. Wiley. ISBN: 9814126195"
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:294
+msgid ""
+"**Website**: `Scale (map) <https://en.wikipedia.org/wiki/Scale_(map)>`_"
+msgstr ""
+"**Website**: `Maßstab (Kartografie) "
+"<https://de.wikipedia.org/wiki/Maßstab_(Kartografie)>`_"
 
 #: ../../docs/gentle_gis_introduction/map_production.rst:296
 msgid ""

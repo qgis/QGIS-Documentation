@@ -2,32 +2,40 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Steffen Hollah, 2023
+# Harrissou Sant-anna, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-01 02:50+0000\n"
-"PO-Revision-Date: 2022-03-14 05:11+0000\n"
-"Last-Translator: Steffen Hollah, 2023\n"
-"Language-Team: German (https://www.transifex.com/qgis/teams/6144/de/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2023\n"
+"Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.10.1\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:140
+#: ../../docs/user_manual/processing_algs/algs_include.rst:63
+msgid "File"
+msgstr "Datei"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:82
+msgid "Layer"
+msgstr "Layer"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:143
 msgid "Geometric predicates"
 msgstr "Geometrische Prädikate"
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:148
+#: ../../docs/user_manual/processing_algs/algs_include.rst:151
 msgid ""
 "Geometric predicates are boolean functions used to determine the spatial "
 "relation a feature has with another by comparing whether and how their "
@@ -37,11 +45,11 @@ msgstr ""
 "die räumliche Beziehung eines Features zu einem anderen zu bestimmen, indem "
 "verglichen wird, ob und wie ihre Geometrien einen Teil des Raums teilen."
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:155
+#: ../../docs/user_manual/processing_algs/algs_include.rst:158
 msgid "Looking for spatial relations between layers"
 msgstr "Suche nach räumlichen Beziehungen zwischen Layern"
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:157
+#: ../../docs/user_manual/processing_algs/algs_include.rst:160
 msgid ""
 "Using the figure above, we are looking for the green circles by spatially "
 "comparing them to the orange rectangle feature. Available geometric "
@@ -51,11 +59,11 @@ msgstr ""
 "indem wir sie räumlich mit dem orangefarbenen Rechteck-Feature vergleichen. "
 "Verfügbare geometrische Prädikate sind:"
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:164
+#: ../../docs/user_manual/processing_algs/algs_include.rst:167
 msgid "*Intersect*"
 msgstr "*Schneidet*"
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:162
+#: ../../docs/user_manual/processing_algs/algs_include.rst:165
 msgid ""
 "Tests whether a geometry intersects another. Returns 1 (true) if the "
 "geometries spatially intersect (share any portion of space - overlap or "
@@ -67,11 +75,11 @@ msgstr ""
 "überlappen oder berühren) und 0, wenn dies nicht der Fall ist. Im obigen "
 "Bild werden die Kreise 1, 2 und 3 zurückgegeben."
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:171
+#: ../../docs/user_manual/processing_algs/algs_include.rst:174
 msgid "*Contain*"
 msgstr "*Enthält*"
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:167
+#: ../../docs/user_manual/processing_algs/algs_include.rst:170
 msgid ""
 "Returns 1 (true) if and only if no points of b lie in the exterior of a, and"
 " at least one point of the interior of b lies in the interior of a. In the "
@@ -85,11 +93,11 @@ msgstr ""
 "es umgekehrt suchen würde, da es den Kreis 1 komplett enthält. Das ist das "
 "Gegenteil von *sind innerhalb*."
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:175
+#: ../../docs/user_manual/processing_algs/algs_include.rst:178
 msgid "*Disjoint*"
 msgstr "*Getrennt*"
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:174
+#: ../../docs/user_manual/processing_algs/algs_include.rst:177
 msgid ""
 "Returns 1 (true) if the geometries do not share any portion of space (no "
 "overlap, not touching). Only circle 4 is returned."
@@ -97,11 +105,11 @@ msgstr ""
 "Gibt 1 (wahr) zurück, wenn die Geometrien keinen Teil des Raums teilen "
 "(keine Überlappung, keine Berührung). Nur Kreis 4 wird zurückgegeben."
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:179
+#: ../../docs/user_manual/processing_algs/algs_include.rst:182
 msgid "*Equal*"
 msgstr "*Gleich*"
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:178
+#: ../../docs/user_manual/processing_algs/algs_include.rst:181
 msgid ""
 "Returns 1 (true) if and only if geometries are exactly the same. No circles "
 "will be returned."
@@ -109,11 +117,11 @@ msgstr ""
 "Gibt 1 (wahr) zurück, wenn und nur wenn die Geometrien genau gleich sind. Es"
 " werden keine Kreise zurückgegeben."
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:184
+#: ../../docs/user_manual/processing_algs/algs_include.rst:187
 msgid "*Touch*"
 msgstr "*Berührt*"
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:182
+#: ../../docs/user_manual/processing_algs/algs_include.rst:185
 msgid ""
 "Tests whether a geometry touches another. Returns 1 (true) if the geometries"
 " have at least one point in common, but their interiors do not intersect. "
@@ -123,11 +131,11 @@ msgstr ""
 "die Geometrien mindestens einen Punkt gemeinsam haben, aber ihre Innenräume "
 "sich nicht schneiden. Nur Kreis 3 wird zurückgegeben."
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:189
+#: ../../docs/user_manual/processing_algs/algs_include.rst:192
 msgid "*Overlap*"
 msgstr "*Überlappt*"
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:187
+#: ../../docs/user_manual/processing_algs/algs_include.rst:190
 msgid ""
 "Tests whether a geometry overlaps another. Returns 1 (true) if the "
 "geometries share space, are of the same dimension, but are not completely "
@@ -137,11 +145,11 @@ msgstr ""
 "die Geometrien sich den Raum teilen, dieselbe Dimension haben, aber nicht "
 "vollständig ineinander liegen. Nur Kreis 2 wird zurückgegeben."
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:193
+#: ../../docs/user_manual/processing_algs/algs_include.rst:196
 msgid "*Are within*"
 msgstr "*Sind innerhalb*"
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:192
+#: ../../docs/user_manual/processing_algs/algs_include.rst:195
 msgid ""
 "Tests whether a geometry is within another. Returns 1 (true) if geometry a "
 "is completely inside geometry b. Only circle 1 is returned."
@@ -150,11 +158,11 @@ msgstr ""
 "zurück, wenn sich Geometrie a vollständig innerhalb von Geometrie b "
 "befindet. Nur Kreis 1 wird zurückgegeben."
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:201
+#: ../../docs/user_manual/processing_algs/algs_include.rst:204
 msgid "*Cross*"
 msgstr "*Kreuzen*"
 
-#: ../../docs/user_manual/processing_algs/algs_include.rst:196
+#: ../../docs/user_manual/processing_algs/algs_include.rst:199
 msgid ""
 "Returns 1 (true) if the supplied geometries have some, but not all, interior"
 " points in common and the actual crossing is of a lower dimension than the "

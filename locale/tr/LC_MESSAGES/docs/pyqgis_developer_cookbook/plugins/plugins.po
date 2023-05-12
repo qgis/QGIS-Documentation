@@ -2,55 +2,31 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-04 11:11+0000\n"
-"PO-Revision-Date: 2022-03-14 05:13+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2022\n"
-"Language-Team: Turkish (https://www.transifex.com/qgis/teams/6144/tr/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Turkish (https://app.transifex.com/qgis/teams/6144/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: tr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:7
 msgid "Structuring Python Plugins"
 msgstr "Python Eklentileri Yapısı"
-
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:15
-msgid "In order to create a plugin, here are some steps to follow:"
-msgstr "Bir eklenti yazmak için takip edilmesi gereken adımlar:"
-
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:17
-msgid ""
-"*Idea*: Have an idea about what you want to do with your new QGIS plugin. "
-"Why do you do it? What problem do you want to solve? Is there already "
-"another plugin for that problem?"
-msgstr ""
-"*Fikir*: Yeni QGIS eklentinizin ne yapacağı hakkında bir fikriniz olmalı.  "
-"Neden, hangi problemi çözümleyeceksiniz? Bu problemi çözümleyen başka bir "
-"eklenti var mı?"
-
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:21
-msgid ""
-"*Create files*: some are essentials (see :ref:`plugin_files_architecture`)"
-msgstr ""
-"*Dosyaları oluşturma*: Gerekli adımlar için (see "
-":ref:`plugin_files_architecture`)"
-
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:22
-msgid "*Write code*: Write the code in appropriate files"
-msgstr "*Kod yazma*: Uygun dosyalar içerisinde kod yazma"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:23
 msgid ""
@@ -68,244 +44,109 @@ msgstr ""
 "*Yayınlama*: Eklentinizi QGIS sunucusunda yayınlayın veya kişisel \"GIS "
 "gücünüz\" olarak kişisel \"depo\" nuzda saklayın"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:31
-msgid "Writing a plugin"
-msgstr "Bir eklenti yazma"
-
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:33
-msgid ""
-"Since the introduction of Python plugins in QGIS, a number of plugins have "
-"appeared. The QGIS team maintains an :ref:`official_pyqgis_repository`. You "
-"can use their source to learn more about programming with PyQGIS or find out"
-" whether you are duplicating development effort."
-msgstr ""
-"QGIS Python eklentilerine destek vermeye başladığında bazı eklentiler "
-"oluşturuldu. QGIS takımı :ref:`official_pyqgis_repository` içerisinde "
-"bunları sunar. Bu eklentilerin kodlarından faydalanarak kendinizi eğitebilir"
-" veya üzerine eklemeler yaparak PyQGIS programlama işlemlerini "
-"kolaylaştırabilirsiniz. "
-
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:41
-msgid "Plugin files"
-msgstr "Eklenti dosyaları"
-
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:43
-msgid "Here's the directory structure of our example plugin"
-msgstr "Örnek bir eklenti için klasör içeriği:"
-
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:57
-msgid "What is the meaning of the files:"
-msgstr "Bu dosyalar ne işe yarar:"
-
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:59
-msgid ""
-":file:`__init__.py` = The starting point of the plugin. It has to have the "
-":func:`classFactory` method and may have any other initialisation code."
-msgstr ""
-":file:`__init__.py` = eklentinizin başlangıç noktasıdır. "
-":func:`classFactory` metoduna ve diğer başvurulan kodların başlatma "
-"kodlarını içermelidir. "
-
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:61
-msgid ""
-":file:`mainPlugin.py` = The main working code of the plugin. Contains all "
-"the information about the actions of the plugin and the main code."
-msgstr ""
-":file:`mainPlugin.py` = Eklentinin ana dosyasıdır. Bütün işleyicilerin "
-"bilgileri ve ana kodları içerir."
-
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:63
-msgid ""
-":file:`resources.qrc` = The .xml document created by Qt Designer. Contains "
-"relative paths to resources of the forms."
-msgstr ""
-":file:`resources.qrc` = QT Designer tarafından oluşturulabilen bir .xml "
-"dosyasıdır. Görsel arayüzlere ait kaynakların dosya yollarını barındırır."
-
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:65
-msgid ""
-":file:`resources.py` = The translation of the .qrc file described above to "
-"Python."
-msgstr ""
-":file:`resources.py` = .qrc dosyasının Python tarafından tanımlanmış "
-"çevirisidir."
-
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:67
-msgid ":file:`form.ui` = The GUI created by Qt Designer."
-msgstr ""
-":file:`form.ui` = Qt Designer tarafından oluşturulmuş kullanıcı arayüzüdür."
-
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:68
-msgid ""
-":file:`form.py` = The translation of the form.ui described above to Python."
-msgstr ""
-":file:`form.py` = form.ui dosyasının Python tarafından tanımlanmış hali."
-
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:69
-msgid ""
-":file:`metadata.txt` = Contains general info, version, name and some other "
-"metadata used by plugins website and plugin infrastructure."
-msgstr ""
-":file:`metadata.txt` = Genel bilgileri, versaiyon numarasını, adını ve "
-"eklentinin web sitesini, eklenti yapısı gibi bilgileri içerir."
-
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:72
-msgid ""
-"`Here <https://github.com/wonder-sk/qgis-minimal-plugin>`_ is a way of "
-"creating the basic files (skeleton) of a typical QGIS Python plugin."
-msgstr ""
-"`Burada <https://github.com/wonder-sk/qgis-minimal-plugin>`_ Standart QGIS "
-"Python eklentisi için temel (iskelet) dosyalarını bulabilirsiniz."
-
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:76
-msgid ""
-"There is a QGIS plugin called `Plugin Builder 3 "
-"<https://plugins.qgis.org/plugins/pluginbuilder3/>`_ that creates a plugin "
-"template for QGIS. This is the recommended option, as it produces 3.x "
-"compatible sources."
-msgstr ""
-"Ayrıca QGIS `Plugin Builder 3 "
-"<https://plugins.qgis.org/plugins/pluginbuilder3/>` eklentisi _ varsayılan "
-"özelliklerle QGIS 3.x uyumlu eklenti şablonu oluşturur. "
-
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:82
-msgid ""
-"If you plan to upload the plugin to the :ref:`official_pyqgis_repository` "
-"you must check that your plugin follows some additional rules, required for "
-"plugin :ref:`official_pyqgis_repository_validation`"
-msgstr ""
-"Eğer eklentinizi :ref:`official_pyqgis_repository` içine yüklemek "
-"istiyorsanız bazı kurallara uymalı, kurallar için "
-":ref:`official_pyqgis_repository_validation` sayfasına bakınız."
-
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:90
-msgid "Plugin content"
-msgstr "Eklenti içeriği"
-
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:92
-msgid ""
-"Here you can find information and examples about what to add in each of the "
-"files in the file structure described above."
-msgstr ""
-"Burada dosya içeriklerinde neler olması gerektiğiyle ilgili bilgi ve "
-"örnekleri bulabilirsiniz."
-
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:100
-msgid "Plugin metadata"
-msgstr "Eklenti metaadata içeriği"
-
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:102
-msgid ""
-"First, the plugin manager needs to retrieve some basic information about the"
-" plugin such as its name, description etc. File :file:`metadata.txt` is the "
-"right place to put this information."
-msgstr ""
-"Eklenti yöneticisi eklentiniz hakknda bazı basit bilgilere ihtiyaç duyar, "
-"adı, tanımlaması gibi. Bu bilgiler için  :file:`metadata.txt` doğru yerdir."
-
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:108
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:98
 msgid "All metadata must be in UTF-8 encoding."
 msgstr "Metadata dosyanız UTF-8 karakter kodlamasına sahip olmalı."
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:113
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:103
 msgid "Metadata name"
 msgstr "Metadata adı"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:113
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:103
 msgid "Required"
 msgstr "Gerekli"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:113
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:103
 msgid "Notes"
 msgstr "Notlar"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:115
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:105
 msgid "name"
 msgstr "ad"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:115
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:116
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:118
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:119
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:120
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:105
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:106
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:108
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:109
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:110
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:111
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:112
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:121
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:122
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:131
 msgid "True"
 msgstr "Evet"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:115
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:105
 msgid "a short string  containing the name of the plugin"
 msgstr "eklenti adı, kısa bir metin"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:116
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:106
 msgid "qgisMinimumVersion"
 msgstr "qgisMinimumVersion"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:116
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:106
 msgid "dotted notation of minimum QGIS version"
 msgstr "nokta notasyonu ile minimum QGIS versiyonu"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:117
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:107
 msgid "qgisMaximumVersion"
 msgstr "qgisMaximumVersion"
 
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:107
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:114
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:115
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:117
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:124
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:125
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:119
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:120
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:122
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:123
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:126
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:127
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:129
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:130
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:132
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:133
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:136
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:137
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:139
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:141
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:131
 msgid "False"
 msgstr "Hayır"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:117
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:107
 msgid "dotted notation of maximum QGIS version"
 msgstr "nokta notasyonu ile maksimum QGIS versiyonu"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:118
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:108
 msgid "description"
 msgstr "description"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:118
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:108
 msgid "short text which describes the plugin, no HTML allowed"
 msgstr "eklentinin kısa bir tanımlaması, HTML kodları kabul edilmiyor."
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:119
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:109
 msgid "about"
 msgstr "about"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:119
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:109
 msgid "longer text which describes the plugin in details, no HTML allowed"
 msgstr "eklentinin detaylı tanımlaması, HTML kodları kabul edilmiyor"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:120
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:110
 msgid "version"
 msgstr "version"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:120
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:110
 msgid "short string with the version dotted notation"
 msgstr "eklentinin versiyon numarası, nokta notasyonuyla"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:121
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:111
 msgid "author"
 msgstr "author"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:121
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:111
 msgid "author name"
 msgstr "programcı adı"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:122
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:112
 msgid "email"
 msgstr "email"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:122
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:112
 msgid ""
 "email of the author, only shown on the website to logged in users, but "
 "visible in the Plugin Manager after the plugin is installed"
@@ -313,61 +154,61 @@ msgstr ""
 "programcının mail adresi, web sitesinde oturum açmış kullanıcılara "
 "gösterilir. Eklenti yöneticisinde eklentiniz yüklendiğinde gösterilir."
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:124
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:114
 msgid "changelog"
 msgstr "changelog"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:124
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:114
 msgid "string, can be multiline, no HTML allowed"
 msgstr "değişiklikler, çok satırlı olabilir, HTML kabul edilmiyor."
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:125
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:115
 msgid "experimental"
 msgstr "experimental"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:127
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:117
 msgid "deprecated"
 msgstr "deprecated"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:129
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:119
 msgid "tags"
 msgstr "tags"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:129
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:119
 msgid "comma separated list, spaces are allowed inside individual tags"
 msgstr ""
 "etiketler listesi, virgülle ayrılmış olarak girilir. Her etiket içinde "
 "boşluk kullanılabilir. "
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:130
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:120
 msgid "homepage"
 msgstr "homepage"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:130
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:120
 msgid "a valid URL pointing to the homepage of your plugin"
 msgstr "eklentinin websitesi için URL linki."
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:131
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:121
 msgid "repository"
 msgstr "repository"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:131
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:121
 msgid "a valid URL for the source code repository"
 msgstr "kod kaynağı için bir URL linki"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:132
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:122
 msgid "tracker"
 msgstr "tracker"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:132
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:122
 msgid "a valid URL for tickets and bug reports"
 msgstr "hata bildirimleri için bir URL linki"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:133
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:123
 msgid "icon"
 msgstr "icon"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:133
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:123
 msgid ""
 "a file name or a relative path (relative to the base folder of the plugin's "
 "compressed package) of a web friendly image (PNG, JPEG)"
@@ -375,32 +216,19 @@ msgstr ""
 "görseller için simge dosyası yolu (sıkıştırılmış paketin ana dizinine bağıl "
 "yol) resim tipi (PNG, JPEG) web uyumlu olmalı"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:136
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:126
 msgid "category"
 msgstr "category"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:137
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:127
 msgid "plugin_dependencies"
 msgstr "plugin_dependencies"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:141
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:131
 msgid "hasProcessingProvider"
 msgstr "hasProcessingProvider"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:145
-msgid ""
-"By default, plugins are placed in the :menuselection:`Plugins` menu (we will"
-" see in the next section how to add a menu entry for your plugin) but they "
-"can also be placed into :menuselection:`Raster`, :menuselection:`Vector`, "
-":menuselection:`Database` and :menuselection:`Web` menus."
-msgstr ""
-"Eklentiniz varsayılan olarak :menuselection:`Plugins` menüsü içerisinde "
-"görünür. (sonraki bölümde eklenti için menü oluşturmayı göreceğiz) Seçime "
-"bağlı olarak :menuselection:`Raster`, :menuselection:`Vector`, "
-":menuselection:`Database` veya :menuselection:`Web` menüleri içerisinde "
-"görüntülenebilir."
-
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:150
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:140
 msgid ""
 "A corresponding \"category\" metadata entry exists to specify that, so the "
 "plugin can be classified accordingly. This metadata entry is used as tip for"
@@ -415,7 +243,7 @@ msgstr ""
 "eklentiniz `Raster` menüsünde olacaksa :file:`metadata.txt` içerisinde "
 "belirtin."
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:161
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:151
 msgid ""
 "If `qgisMaximumVersion` is empty, it will be automatically set to the major "
 "version plus `.99` when uploaded to the :ref:`official_pyqgis_repository`."
@@ -424,15 +252,15 @@ msgstr ""
 ":ref:`official_pyqgis_repository` içerisine yüklenirken otomatik olarak ana "
 "versiyon numarasına `.99` eklenir."
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:165
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:155
 msgid "An example for this metadata.txt"
 msgstr "Örnek metadata.txt içeriği"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:227
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:217
 msgid "__init__.py"
 msgstr "__init__.py"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:229
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:219
 msgid ""
 "This file is required by Python's import system. Also, QGIS requires that "
 "this file contains a :func:`classFactory()` function, which is called when "
@@ -449,11 +277,11 @@ msgstr ""
 "döndürmelidir --- örnekte ``TestPlugin`` (aşağıda) dosyasındaki gibi . "
 ":file:`__init__.py` dosyası nasıl olmalı:"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:246
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:236
 msgid "mainPlugin.py"
 msgstr "mainPlugin.py"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:248
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:238
 msgid ""
 "This is where the magic happens and this is how magic looks like: (e.g. "
 ":file:`mainPlugin.py`)"
@@ -461,36 +289,29 @@ msgstr ""
 "Burası sihrin gerçekleştiği yer ve işte sihrin nasıl göründüğü: (örn. "
 ":file:`mainPlugin.py`)"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:312
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:302
 msgid ""
 ":meth:`addPluginToRasterMenu() "
 "<qgis.gui.QgisInterface.addPluginToRasterMenu>`"
 msgstr ""
-":meth:`addPluginToRasterMenu() "
-"<qgis.gui.QgisInterface.addPluginToRasterMenu>`"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:313
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:303
 msgid ""
 ":meth:`addPluginToVectorMenu() "
 "<qgis.gui.QgisInterface.addPluginToVectorMenu>`"
 msgstr ""
-":meth:`addPluginToVectorMenu() "
-"<qgis.gui.QgisInterface.addPluginToVectorMenu>`"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:314
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:304
 msgid ""
 ":meth:`addPluginToDatabaseMenu() "
 "<qgis.gui.QgisInterface.addPluginToDatabaseMenu>`"
 msgstr ""
-":meth:`addPluginToDatabaseMenu() "
-"<qgis.gui.QgisInterface.addPluginToDatabaseMenu>`"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:315
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:305
 msgid ""
 ":meth:`addPluginToWebMenu() <qgis.gui.QgisInterface.addPluginToWebMenu>`"
 msgstr ""
-":meth:`addPluginToWebMenu() <qgis.gui.QgisInterface.addPluginToWebMenu>`"
 
-#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:353
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:590
 msgid "Resource File"
 msgstr "Resource Dosyası"

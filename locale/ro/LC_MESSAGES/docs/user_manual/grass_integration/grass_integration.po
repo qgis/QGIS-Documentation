@@ -2,24 +2,26 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2023
+# Sorin Călinică <scalinica@gmail.com>, 2023
+# Transifex Bot <>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 12:01+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
-"Language-Team: Romanian (https://www.transifex.com/qgis/teams/6144/ro/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Romanian (https://app.transifex.com/qgis/teams/6144/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: ro\n"
 "Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
 
@@ -35,9 +37,25 @@ msgstr "Setul de date demonstrative"
 msgid "Loading GRASS raster and vector layers"
 msgstr "Încărcarea straturilor raster și vectoriale GRASS"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:910
+msgid "grassLogo"
+msgstr ""
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:52
 msgid "**GRASS Data Loading**"
 msgstr "**Încărcarea Datelor GRASS**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:920
+msgid "import"
+msgstr "import"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:930
+msgid "rasterGroup"
+msgstr "rasterGroup"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:932
+msgid "rasterLink"
+msgstr "rasterLink"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:95
 msgid "GRASS Options"
@@ -47,21 +65,53 @@ msgstr "Opțiuni GRASS"
 msgid "Starting the GRASS plugin"
 msgstr "Startarea plugin-ului GRASS"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:938
+msgid "showPluginManager"
+msgstr ""
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:904
+msgid "checkbox"
+msgstr ""
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:914
+msgid "grassOpenMapset"
+msgstr ""
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:912
+msgid "grassNewMapset"
+msgstr ""
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:115
 msgid "|grassCloseMapset| :sup:`Close Mapset`"
 msgstr "|grassCloseMapset| :sup:`Închidere set de hărți`"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:908
+msgid "grassCloseMapset"
+msgstr ""
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:116
 msgid "|grassTools| :sup:`Open GRASS Tools`"
 msgstr "|grassTools| :sup:`Deschidere Instrumente GRASS`"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:918
+msgid "grassTools"
+msgstr ""
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:117
 msgid "|grassRegion| :sup:`Display Current GRASS Region`"
 msgstr "|grassRegion| :sup:`Afișarea regiunii curente GRASS`"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:916
+msgid "grassRegion"
+msgstr ""
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:118
 msgid "|general| :sup:`GRASS Options`"
 msgstr "|general| :sup:`Opțiuni GRASS`"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:906
+msgid "general"
+msgstr ""
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:121
 msgid "Opening GRASS mapset"
@@ -70,44 +120,6 @@ msgstr "Deschiderea Setului de hărți GRASS"
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:130
 msgid "GRASS LOCATION and MAPSET"
 msgstr "GRASS LOCATION și MAPSET"
-
-#: ../../docs/user_manual/grass_integration/grass_integration.rst:132
-msgid ""
-"GRASS data are stored in a directory referred to as GISDBASE. This "
-"directory, often called :file:`grassdata`, must be created before you start "
-"working with the GRASS plugin in QGIS. Within this directory, the GRASS GIS "
-"data are organized by projects stored in subdirectories called "
-":file:`LOCATIONs`. Each :file:`LOCATION` is defined by its coordinate "
-"system, map projection and geographical boundaries. Each :file:`LOCATION` "
-"can have several :file:`MAPSETs` (subdirectories of the :file:`LOCATION`) "
-"that are used to subdivide the project into different topics or subregions, "
-"or as workspaces for individual team members (see Neteler & Mitasova 2008 in"
-" :ref:`literature_and_web`). In order to analyse vector and raster layers "
-"with GRASS modules, you generally have to import them into a GRASS "
-":file:`LOCATION`. (This is not strictly true -- with the GRASS modules "
-":file:`r.external` and :file:`v.external` you can create read-only links to "
-"external GDAL/OGR-supported datasets without importing them. This is not the"
-" usual way for beginners to work with GRASS, therefore this functionality "
-"will not be described here.)"
-msgstr ""
-"Datele GRASS sunt stocate într-un director de tip GISDBASE. Acest director, "
-"denumit adesea :file:`grassdata`, trebuie să existe înainte de a începe "
-"lucrul cu plugin-ul GRASS din QGIS. În interiorul acestui director, datele "
-"GRASS GIS sunt organizate în proiecte stocate, la rândul lor, în "
-"subdirectoare denumite  :file:`LOCATIONs`. Fiecare :file:`LOCATION` este "
-"definită prin sistemul de coordonate, proiecția hărții și limitele "
-"geografice. Fiecare :file:`LOCATION` poate avea mai multe :file:`MAPSETs` "
-"(subdirectoare ale :file:`LOCATION`) care sunt utilizate pentru a subdiviza "
-"un proiect în diferite teme sau subregiuni, ori în spații de lucru pentru "
-"membrii individuali ai unei echipe (v. Neteler & Mitasova 2008 în "
-":ref:`literature_and_web`). Pentru a analiza straturile vectoriale și raster"
-" cu ajutorul modulelor GRASS, trebuie să le importați într-o "
-":file:`LOCATION` GRASS. (Acest lucru nu este complet adevărat - cu ajutorul "
-"modulelor GRASS :file:`r.external` și :file:`v.external` puteți crea numai "
-"link-uri read-only către seturile de date GDAL/OGR externe acceptate, fără "
-"să fie necesar importul lor. Însă, deoarece acesta nu este modul obișnuit "
-"pentru începători de a lucra cu GRASS, această opțiune nu va fi descrisă "
-"aici.)"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:152
 msgid "GRASS data in the alaska LOCATION"
@@ -165,6 +177,14 @@ msgstr ""
 "folosit pentru toate exemplele și exercițiile din următoarele secțiuni "
 "legate de GRASS. Este util să descărcați setul de date pe computerul dvs, "
 "apoi să-l instalați (v. :ref:`label_sampledata`)."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:928
+msgid "radioButtonOn"
+msgstr ""
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:926
+msgid "projectionEnabled"
+msgstr ""
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:235
 msgid "In :guilabel:`Filter`, insert 2964 to select the projection."
@@ -286,6 +306,10 @@ msgstr "Scop"
 msgid "|capturePoint|"
 msgstr "|capturePoint|"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:900
+msgid "capturePoint"
+msgstr ""
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:429
 msgid "New Point"
 msgstr "Punct Nou"
@@ -297,6 +321,10 @@ msgstr "Digitizare punct nou"
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:431
 msgid "|captureLine|"
 msgstr "|captureLine|"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:898
+msgid "captureLine"
+msgstr ""
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:431
 msgid "New Line"
@@ -310,6 +338,10 @@ msgstr "Digitizare linie nouă"
 msgid "|captureBoundary|"
 msgstr "|captureBoundary|"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:894
+msgid "captureBoundary"
+msgstr "captureBoundary"
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:433
 msgid "New Boundary"
 msgstr "Limită Nouă"
@@ -317,6 +349,10 @@ msgstr "Limită Nouă"
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:435
 msgid "|captureCentroid|"
 msgstr "|captureCentroid|"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:896
+msgid "captureCentroid"
+msgstr "captureCentroid"
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:435
 msgid "New Centroid"
@@ -329,6 +365,10 @@ msgstr "Digitizarea unui nou centroid (etichetarea zonei existente)"
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:437
 msgid "|capturePolygon|"
 msgstr "|capturePolygon|"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:902
+msgid "capturePolygon"
+msgstr ""
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:443
 msgid "**Digitizing polygons in GRASS**"
@@ -349,6 +389,14 @@ msgstr "Canvasul folosește CRS-ul stratului și la momentul editării."
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:516
 msgid "**Limitations**"
 msgstr "**Limitări**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:922
+msgid "nix"
+msgstr ""
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:924
+msgid "osx"
+msgstr ""
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:527
 msgid "**GRASS Edit Permissions**"
@@ -434,6 +482,10 @@ msgstr ""
 "În lista de de unelte pentru categorii, faceți dublu-clic pe "
 ":menuselection:`Raster --> Surface Management --> Generate vector contour "
 "lines`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:934
+msgid "selectNumber"
+msgstr ""
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:696
 msgid ""
@@ -541,6 +593,10 @@ msgid ""
 msgstr ""
 "Introduceți  'forest_areas' pentru :guilabel:`output vector map`, apoi "
 "rulați modulul."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:936
+msgid "selectString"
+msgstr ""
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:845
 msgid ""

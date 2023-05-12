@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"POT-Creation-Date: 2023-05-09 10:03+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
 "Last-Translator: Báthory Péter <bathory86p@gmail.com>, 2023\n"
 "Language-Team: Hungarian (https://app.transifex.com/qgis/teams/6144/hu/)\n"
@@ -76,14 +76,6 @@ msgstr ""
 
 #: ../../docs/documentation_guidelines/do_translations.rst:30
 msgid ""
-"These \"originals\" are then copied by the script to the :file:`locale` "
-"folders for other languages."
-msgstr ""
-"Ezeket az \"eredetiket\" a szkript átmásolja a :file:`locale` mappákba más "
-"nyelvek számára."
-
-#: ../../docs/documentation_guidelines/do_translations.rst:32
-msgid ""
 "The sentences in the :file:`.po` files are pushed to the Transifex web "
 "platform, and made available for translators who can begin to translate from"
 " English to their language with the editor."
@@ -92,60 +84,12 @@ msgstr ""
 "elérhetővé válnak a fordítók számára, akik a szerkesztővel elkezdhetnek "
 "angolról a saját nyelvükre fordítani."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:35
-msgid "At the end of the day, a script pulls back all validated translations"
-msgstr ""
-"A nap végén egy szkript visszahúzza az összes érvényesített fordítást."
-
-#: ../../docs/documentation_guidelines/do_translations.rst:36
-msgid ""
-"At the next build of the documentation (which occurs at least once a day), a"
-" script reuses the sentences to create translated output"
-msgstr ""
-"A dokumentáció következő elkészítésekor (ami naponta legalább egyszer "
-"megtörténik) egy szkript újra felhasználja a mondatokat a lefordított "
-"kimenet létrehozásához."
-
-#: ../../docs/documentation_guidelines/do_translations.rst:38
-msgid ""
-"When afterwards an :file:`.rst` document is updated a new :file:`.po` file "
-"is created in the English part. The contents of this new file will be merged"
-" with already existing :file:`.po` files for each language. This means that "
-"when a new line is added to an :file:`.rst` document that was already "
-"translated, only the new/updated sentences are added in the translated "
-":file:`.po` file and needs to be translated. The amount of work for updating"
-" translations for next release should be relatively small."
-msgstr ""
-"Amikor ezt követően egy :file:`.rst` dokumentum frissül, egy új :file:`.po` "
-"fájl jön létre angolul. Ennek az új fájlnak a tartalma egyesül a már létező "
-":file:`.po` fájlokkal minden nyelvre vonatkozóan. Ez azt jelenti, hogy "
-"amikor egy már lefordított :file:`.rst` dokumentumba új sor kerül, csak az "
-"új/frissített mondatok kerülnek a lefordított :file:`.po` fájlba, és csak "
-"azokat kell lefordítani. A fordítások frissítésének munkaigénye a következő "
-"kiadáshoz viszonylag csekély lesz."
-
-#: ../../docs/documentation_guidelines/do_translations.rst:46
-msgid ""
-"The process above is the same followed to translate QGIS website, QGIS "
-"Desktop and QGIS Server. The difference with the applications is that "
-"instead of :file:`.po` files, all the translatable strings in the "
-":file:`.py`, :file:`.cpp`, :file:`.yaml` and others... files that shape the "
-"application are pushed to and pulled from transifex as a single :file:`.ts` "
-"file."
-msgstr ""
-"A fenti folyamat a QGIS weboldal, a QGIS Desktop és a QGIS Server "
-"fordításánál is ugyanaz. A különbség az alkalmazásoknál az, hogy a "
-":file:`.po` fájlok helyett a :file:`.py`, :file:`.cpp`, :file:`.yaml` és "
-"egyéb fájlokban található összes fordítható karakterláncot egyetlen "
-":file:`.ts` fájlként másoljuk fel Transifexre, és egyetlen :file:`.ts` "
-"fájlként húzzuk le onnan."
-
-#: ../../docs/documentation_guidelines/do_translations.rst:52
+#: ../../docs/documentation_guidelines/do_translations.rst:54
 msgid "Two different tools are currently used to do translations in QGIS:"
 msgstr ""
 "Jelenleg két különböző eszköz használható a QGIS fordításának készítéséhez:"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:54
+#: ../../docs/documentation_guidelines/do_translations.rst:56
 msgid ""
 "The `Transifex web platform <https://www.transifex.com/>`_, the easiest and "
 "recommended way to translate QGIS, transparently does the process described "
@@ -160,7 +104,7 @@ msgstr ""
 "le. A lefordított fájlok a platformon tárolódnak, egészen egy újabb kiadás "
 "megjelenéséig."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:59
+#: ../../docs/documentation_guidelines/do_translations.rst:61
 msgid ""
 "`Qt Linguist <https://doc.qt.io/qt-5/qtlinguist-index.html>`_, a Qt "
 "development tool, requires the translator to pull locally the :file:`.po` "
@@ -171,16 +115,16 @@ msgstr ""
 ":file:`.po` (vagy :file:`.ts`) fájlokat a forráskódból, fordítsa le, majd "
 "töltse vissza."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:64
+#: ../../docs/documentation_guidelines/do_translations.rst:66
 msgid ""
 "Note that whatever tool you choose, rules of translations are the same."
 msgstr "Bármelyik eszközt is választja, a fordítás szabályai ugyanazok."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:69
+#: ../../docs/documentation_guidelines/do_translations.rst:71
 msgid "Translate a file"
 msgstr "Egy fájl fordítása"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:71
+#: ../../docs/documentation_guidelines/do_translations.rst:73
 msgid ""
 "To explain how translation works, we will use the heatmap plugin as an "
 "example. In this example we will translate it from English to Dutch, but it "
@@ -191,24 +135,24 @@ msgstr ""
 " de ez gyakorlatilag ugyanúgy működik más dokumentumok esetén is bármilyen "
 "nyelven."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:75
+#: ../../docs/documentation_guidelines/do_translations.rst:77
 msgid "The source of the document can be found here:"
 msgstr "A dokumentum forrása itt található:"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:81
+#: ../../docs/documentation_guidelines/do_translations.rst:83
 msgid "So why did I choose this document?"
 msgstr "Miért választottam ezt a dokumentumot?"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:83
+#: ../../docs/documentation_guidelines/do_translations.rst:85
 msgid "It includes images, captions, headers, references and replacements."
 msgstr ""
 "Tartalmaz képeket, feliratokat, fejezetcímeket, hivatkozásokat és cseréket."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:84
+#: ../../docs/documentation_guidelines/do_translations.rst:86
 msgid "I wrote it so it is easier for me to translate ;-)"
 msgstr "Én írtam, úgyhogy nekem ezt könnyebb fordítani ;-)"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:86
+#: ../../docs/documentation_guidelines/do_translations.rst:88
 msgid ""
 "The build process has created the English :file:`.po` file which can be "
 "found here::"
@@ -216,14 +160,14 @@ msgstr ""
 "Az összeállító folyamat létrehozta az angol :file:`.po` fájlt, amely itt "
 "található::"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:90
+#: ../../docs/documentation_guidelines/do_translations.rst:92
 msgid ""
 "The equivalent Dutch :file:`.po` file (basically a copy) can be found here::"
 msgstr ""
 "Az ezzel egyenértékű holland :file:`.po` fájl (gyakorlatilag egy másolat) "
 "itt található::"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:94
+#: ../../docs/documentation_guidelines/do_translations.rst:96
 msgid ""
 "Along this file you will see a tiny :file:`.mo` file which indicates that it"
 " does not hold any translations yet."
@@ -231,16 +175,16 @@ msgstr ""
 "A fájl mellett egy apró :file:`.mo` fájlt fog látni, ami azt jelzi, hogy még"
 " nem tartalmaz fordításokat."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:101
+#: ../../docs/documentation_guidelines/do_translations.rst:103
 msgid "Translation in Transifex"
 msgstr "Fordítás Transifexen"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:103
+#: ../../docs/documentation_guidelines/do_translations.rst:105
 msgid "In order to translate using Transifex, you need to:"
 msgstr ""
 "A Transifex használatával történő fordításhoz a következőkre van szükség:"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:105
+#: ../../docs/documentation_guidelines/do_translations.rst:107
 msgid ""
 "`create an account on Transifex and join the QGIS project "
 "<https://qgis.org/en/site/getinvolved/translate.html#join-a-project>`_."
@@ -248,7 +192,7 @@ msgstr ""
 "`Hozzon létre fiókot a Transifexen, és csatlakozzon a QGIS projekthez "
 "<https://qgis.org/en/site/getinvolved/translate.html#join-a-project>`_."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:107
+#: ../../docs/documentation_guidelines/do_translations.rst:109
 msgid ""
 "Once you are part of a language team, click on the corresponding project (in"
 " this case ``QGIS Documentation``). A list of available languages with their"
@@ -258,15 +202,15 @@ msgstr ""
 "projektre (ebben az esetben a ``QGIS Documentation``-re). Megjelenik a "
 "rendelkezésre álló nyelvek listája a fordítási arányukkal."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:116
+#: ../../docs/documentation_guidelines/do_translations.rst:118
 msgid "Select language for translation in the Transifex menu"
 msgstr "Válassza ki a fordítás célnyelvét a Transifex menüben"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:118
+#: ../../docs/documentation_guidelines/do_translations.rst:120
 msgid "Hover over your language and click either:"
 msgstr "Vigye a mutatót a nyelv fölé, és kattintson az alábbiakra:"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:120
+#: ../../docs/documentation_guidelines/do_translations.rst:122
 msgid ""
 ":guilabel:`View resources`: translatable :file:`.po` files with their ratio "
 "of translation, number of strings and some more metadata are now displayed."
@@ -275,7 +219,7 @@ msgstr ""
 "elkészülésének százalékával, a szöveg sorainak száma és néhány egyéb "
 "információ."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:122
+#: ../../docs/documentation_guidelines/do_translations.rst:124
 msgid ""
 "or :guilabel:`Translate`: opens the interface of translation with all the "
 "available :file:`.po` files"
@@ -283,7 +227,7 @@ msgstr ""
 "vagy a :guilabel:`Translate`: megnyitja a fordítási felületet az összes "
 "elérhető :file:`.po` fájllal"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:124
+#: ../../docs/documentation_guidelines/do_translations.rst:126
 msgid ""
 "Identify the file you'd like to translate (in our case we are looking for "
 "the ``docs_user-manual_plugins_plugins-heatmap``, the heatmap plugin file) "
@@ -296,7 +240,7 @@ msgstr ""
 "karakterláncok betöltődnek, és a felület segítségével szűrhet, fordíthat, "
 "fordítást javasolhat...."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:129
+#: ../../docs/documentation_guidelines/do_translations.rst:131
 msgid ""
 "For the documentation or the website, clicking the ``Fix me`` link in the "
 "footer of a page brings you directly to its corresponding translation page "
@@ -306,7 +250,7 @@ msgstr ""
 "me`` linkre kattintva közvetlenül a Transifex megfelelő fordítási oldalára "
 "juthat."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:133
+#: ../../docs/documentation_guidelines/do_translations.rst:135
 msgid ""
 "All you need to do is select each text and translate following the "
 ":ref:`guidelines <translate_manual>`."
@@ -314,7 +258,7 @@ msgstr ""
 "Mindössze annyit kell tennie, hogy kiválasztja az egyes szövegeket, és "
 "lefordítja őket ezt a leírást követve: :ref:`guidelines <translate_manual>`."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:136
+#: ../../docs/documentation_guidelines/do_translations.rst:138
 msgid ""
 "For further information on the use of Transifex Web Editor, see "
 "https://help.transifex.com/en/articles/6318216-translating-with-the-web-"
@@ -324,15 +268,15 @@ msgstr ""
 "https://help.transifex.com/en/articles/6318216-translating-with-the-web-"
 "editor."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:143
+#: ../../docs/documentation_guidelines/do_translations.rst:145
 msgid "Translation in Qt Linguist"
 msgstr "Fordítás a Qt Linguist programban"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:145
+#: ../../docs/documentation_guidelines/do_translations.rst:147
 msgid "With Qt Linguist, you need to:"
 msgstr "A Qt Linguist szoftvert használva a következőket kell tennie:"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:147
+#: ../../docs/documentation_guidelines/do_translations.rst:149
 msgid ""
 "manually grab the :file:`.po` or :file:`.ts`  file(s). This can be achieved "
 "by downloading the file(s) either from Transifex platform or from the "
@@ -342,15 +286,15 @@ msgstr ""
 "érheti el, hogy letölti a fájl(oka)t a Transifex platformról vagy a "
 "forráskódtároló :file:`locale/$language` mappájából (GitHubon),"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:150
+#: ../../docs/documentation_guidelines/do_translations.rst:152
 msgid "proceed to the translation locally"
 msgstr "helyben végezze el a fordítást"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:151
+#: ../../docs/documentation_guidelines/do_translations.rst:153
 msgid "upload the modified files to their sources (Transifex or GitHub)."
 msgstr "töltse fel a módosított fájlokat a forráshoz (Transifex vagy GitHub)."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:153
+#: ../../docs/documentation_guidelines/do_translations.rst:155
 msgid ""
 "While downloading and uploading translatable files can be done with "
 "Transifex, it's not advised to use this process. Since there's no versioning"
@@ -364,7 +308,7 @@ msgstr ""
 "meglévőt, ezzel potenciálisan felülírhatja a platformon időközben mások "
 "által végzett módosításokat."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:159
+#: ../../docs/documentation_guidelines/do_translations.rst:161
 msgid ""
 "When you open the file in Qt Linguist for the first time you will see the "
 "following dialog:"
@@ -372,11 +316,11 @@ msgstr ""
 "Amikor először megnyitja a fájlt a Qt Linguist programban, a következő "
 "párbeszédpanel jelenik meg:"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:167
+#: ../../docs/documentation_guidelines/do_translations.rst:169
 msgid "Select language for translation in linguist menu"
 msgstr "A fordításhoz használt nyelv kiválasztása a Qt Linguist menüjében"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:170
+#: ../../docs/documentation_guidelines/do_translations.rst:172
 msgid ""
 "The Target language should be filled correctly. The Source language can be "
 "left as is with language POSIX and Country/Region on Any Country."
@@ -385,7 +329,7 @@ msgstr ""
 "ahogy van, vagyis POSIX, és az Ország vagy régió értékét is (bármely "
 "ország)."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:173
+#: ../../docs/documentation_guidelines/do_translations.rst:175
 msgid ""
 "When you press the :guilabel:`OK` button Qt Linguist is filled with "
 "sentences and you can start translating, see "
@@ -394,17 +338,17 @@ msgstr ""
 "Amikor megnyomja a :guilabel:`OK` gombot, a Qt Linguistbe betöltődnek a "
 "mondatok, és elkezdheti a fordítást, lásd :numref:`Figure_translation_menu`."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:183
+#: ../../docs/documentation_guidelines/do_translations.rst:185
 msgid "Translate using the linguist menu"
 msgstr "Fordítás a Linguist menü használatával"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:185
+#: ../../docs/documentation_guidelines/do_translations.rst:187
 msgid "In the menu you see the following buttons which are convenient to use."
 msgstr ""
 "A menüben az alábbi gombok láthatóak, amelyek kényelmes használatot "
 "biztosítanak."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:187
+#: ../../docs/documentation_guidelines/do_translations.rst:189
 msgid ""
 "|linguist_done_next| The Translation Done Next button, is the most important"
 " button. If the item needs translation, you enter a translation in the text "
@@ -418,11 +362,11 @@ msgstr ""
 "üresen a fordítás mezőt és nyomja meg ezt a gombot, ami jelezni fogja, hogy "
 "ez az elem készen van, és folytathatja a következő elemmel."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:381
+#: ../../docs/documentation_guidelines/do_translations.rst:383
 msgid "linguist_done_next"
 msgstr "linguist_done_next"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:192
+#: ../../docs/documentation_guidelines/do_translations.rst:194
 msgid ""
 "|linguist_previous| The Goto Previous button, can be used to go to the "
 "previous translation item."
@@ -430,11 +374,11 @@ msgstr ""
 "|linguist_previous| Az Előző gomb használható az előző fordítási elemre "
 "történő visszalépésre."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:387
+#: ../../docs/documentation_guidelines/do_translations.rst:389
 msgid "linguist_previous"
 msgstr "linguist_previous"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:194
+#: ../../docs/documentation_guidelines/do_translations.rst:196
 msgid ""
 "|linguist_next| The Goto Next button, can be used to go to the next "
 "translation item."
@@ -442,11 +386,11 @@ msgstr ""
 "|linguist_next| A Következő gomb használható a következő fordítási elemre "
 "történő ugráshoz."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:383
+#: ../../docs/documentation_guidelines/do_translations.rst:385
 msgid "linguist_next"
 msgstr "linguist_next"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:196
+#: ../../docs/documentation_guidelines/do_translations.rst:198
 msgid ""
 "|linguist_next_todo| The Next Todo button, jumps to the first translation "
 "item that still needs a translation. Handy when the original document has "
@@ -456,11 +400,11 @@ msgstr ""
 "elemhez ugrik. Hasznos, amikor az eredeti dokumentum megváltozott és csak "
 "kevés új/módosított mondatot szükséges lefordítani."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:385
+#: ../../docs/documentation_guidelines/do_translations.rst:387
 msgid "linguist_next_todo"
 msgstr "linguist_next_todo"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:199
+#: ../../docs/documentation_guidelines/do_translations.rst:201
 msgid ""
 "|linguist_previous_todo| The Previous Todo button, searches backward and "
 "jumps to the first translation item it finds that still needs a translation."
@@ -468,11 +412,11 @@ msgstr ""
 "|linguist_previous_todo| Az Előző befejezetlen gomb visszafelé keres és "
 "odaugrik az előző lefordítatlan elemhez."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:389
+#: ../../docs/documentation_guidelines/do_translations.rst:391
 msgid "linguist_previous_todo"
 msgstr "linguist_previous_todo"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:202
+#: ../../docs/documentation_guidelines/do_translations.rst:204
 msgid ""
 "For further information on the use of Qt Linguist, see "
 "https://doc.qt.io/qt-5/linguist-translators.html"
@@ -480,7 +424,7 @@ msgstr ""
 "A Qt Linguist használatára vonatkozó további információkért lásd "
 "https://doc.qt.io/qt-5/linguist-translators.html"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:207
+#: ../../docs/documentation_guidelines/do_translations.rst:209
 msgid ""
 "If you want to download content to translate from the source repository, "
 "never do this in the ``master`` branch. For translations there are always "
@@ -494,15 +438,15 @@ msgstr ""
 "adott verzióhoz. Például a QGIS 2.8-as verziójának lefordításához a "
 "manual_en_v2.8 ágat kell használnia."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:217
+#: ../../docs/documentation_guidelines/do_translations.rst:219
 msgid "Translate a manual"
 msgstr "Egy kézikönyv lefordítása"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:219
+#: ../../docs/documentation_guidelines/do_translations.rst:221
 msgid "Now we start to translate the plugin_heatmap manual!"
 msgstr "Most elkezdjük lefordítani a plugin_heatmap kézikönyvet!"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:221
+#: ../../docs/documentation_guidelines/do_translations.rst:223
 msgid ""
 "Translating most of the sentences should be straightforward. During this "
 "translation session I will point out which parts (rst statements) need "
@@ -512,15 +456,15 @@ msgstr ""
 " fogunk mutatni azokra a részekre (rst utasítások) amelyek különleges "
 "fordítást igényelnek."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:225
+#: ../../docs/documentation_guidelines/do_translations.rst:227
 msgid "Below we see an interesting sentence to translate:"
 msgstr "Lentebb láthatunk egy érdekes lefordítandó mondatot:"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:235
+#: ../../docs/documentation_guidelines/do_translations.rst:237
 msgid "This sentence contains two rst statements:"
 msgstr "Ez a mondat két rst utasítást tartalmaz:"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:237
+#: ../../docs/documentation_guidelines/do_translations.rst:239
 msgid ""
 "``|heatmap|`` words between ``|`` are replacements and these should never be"
 " translated! This will be replaced by the heatmap plugin icon!"
@@ -528,7 +472,7 @@ msgstr ""
 "A ``|heatmap|`` szó ``|`` helyettesítők között van, az ilyeneket soha nem "
 "szabad lefordítani! Ez le lesz cserélve a hőtérkép modul ikonjával!"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:239
+#: ../../docs/documentation_guidelines/do_translations.rst:241
 msgid ""
 "``:sup:`Heatmap```,  the ``:sup:`` statement is a superposition statement "
 "and prints the following text a bit higher. This is used to show the popup "
@@ -543,11 +487,11 @@ msgstr ""
 "fordítva a QGIS alkalmazásban. (A holland nyelv esetében ez nincs "
 "lefordítva)."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:245
+#: ../../docs/documentation_guidelines/do_translations.rst:247
 msgid "All other plain text in this sentence can be translated!"
 msgstr "A mondaton belül minden más egyszerű szöveget  le lehet fordítani!"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:247
+#: ../../docs/documentation_guidelines/do_translations.rst:249
 msgid ""
 "The next translation item contains the ``:ref:`` statement that is commonly "
 "used to refer to another section somewhere in the manual! The text following"
@@ -559,7 +503,7 @@ msgstr ""
 "használnak. A ``:ref:`` utasítást követő szöveget soha nem szabad "
 "lefordítani, mert az egy egyedi azonosító!"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:258
+#: ../../docs/documentation_guidelines/do_translations.rst:260
 msgid ""
 "In this case ``load_core_plugin`` is a unique reference identifier placed "
 "before an rst item that has a caption. The ref statement will be replaced "
@@ -573,7 +517,7 @@ msgstr ""
 "amelyre ez a hivatkozás utal, lefordításra kerül, az összes erre rá mutató "
 "hivatkozás is automatikusan le lesz fordítva."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:264
+#: ../../docs/documentation_guidelines/do_translations.rst:266
 msgid ""
 "The next item contains the rst-tag ``:menuselection:`` followed by text "
 "actually displayed in a menu in QGIS application, this may be translated in "
@@ -583,7 +527,7 @@ msgstr ""
 "szöveg követ, ami ténylegesen megjelenik a QGIS alkalmazás menüjében, ez "
 "lefordítható az alkalmazásban, ezért itt meg is kell változtatni."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:273
+#: ../../docs/documentation_guidelines/do_translations.rst:275
 msgid ""
 "In above item \"View -->\" is actually translated to \"Beeld -->\" because "
 "this is the translation used in the Dutch localized QGIS application."
@@ -591,12 +535,12 @@ msgstr ""
 "A fenti \"View -->\" elem valóban le van fordítva erre: \"Beeld -->\", mivel"
 " ez a szó szerepel a QGIS alkalmazás holland honosításában."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:276
+#: ../../docs/documentation_guidelines/do_translations.rst:278
 msgid "A bit further we meet the following tricky translation item:"
 msgstr ""
 "Ha kicsit tovább megyünk, találkozunk a következő trükkös fordítási elemmel:"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:283
+#: ../../docs/documentation_guidelines/do_translations.rst:285
 msgid ""
 "It holds a reference to a figure ``figure_heatmap_settings_``, and like a "
 "reference to a section this reference should not be changed!! The reference "
@@ -614,12 +558,12 @@ msgstr ""
 "a ``figure_heatmap_settings``. PDF dokumentum létrehozásakor a "
 "``figure_heatmap_settings_`` helyébe az ábra száma lép."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:290
+#: ../../docs/documentation_guidelines/do_translations.rst:292
 msgid "The next translation item with rst attributes is the following item:"
 msgstr ""
 "Az alábbi fordítási elem a következő rst attribútumokkal rendelkező elem:"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:296
+#: ../../docs/documentation_guidelines/do_translations.rst:298
 msgid ""
 "Do not remove the stars in above line. It will print the text it holds in "
 "bold. The text itself is often text included in the dialog itself and may "
@@ -629,11 +573,11 @@ msgstr ""
 "félkövérrel fog megjelenni. Maga a szöveg általában a párbeszédablak "
 "tartalmának szövege, és lefordítható az alkalmazásban."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:300
+#: ../../docs/documentation_guidelines/do_translations.rst:302
 msgid "The following translation item contains the ``:guilabel:`` rst tag."
 msgstr "A következő fordítási elem tartalmazza a ``:guilabel:`` rst címkét."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:307
+#: ../../docs/documentation_guidelines/do_translations.rst:309
 msgid ""
 "The text ``Advanced`` of the guilabel tag may well be translated in the QGIS"
 " application and probably needs to be changed!"
@@ -641,7 +585,7 @@ msgstr ""
 "A guilabel címke ``Advanced`` szövege remélhetőleg le van fordítva a QGIS "
 "alkalmazásban, így feltehetőleg módosítani kell!"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:310
+#: ../../docs/documentation_guidelines/do_translations.rst:312
 msgid ""
 "The following translation item contains \\``airports\\``. The quotes are "
 "used to give the text another text font. In this case it is a literal value "
@@ -652,7 +596,7 @@ msgstr ""
 "betűtípust. Ebben az esetben ez egy szó szerinti érték, és nem szükséges "
 "lefordítani."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:323
+#: ../../docs/documentation_guidelines/do_translations.rst:325
 msgid ""
 "This item also includes a hyperlink with an url and an external "
 "presentation. The url should of course be left intact, you are allowed to "
@@ -666,11 +610,11 @@ msgstr ""
 "látható, meg lehet változtatni. Soha ne távolítsa el az aláhúzás jelet a "
 "hiperhivatkozás végéről, ami annak lényeges részét képezi!!"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:333
+#: ../../docs/documentation_guidelines/do_translations.rst:335
 msgid "Summary Rules for translation"
 msgstr "A fordítási szabályok összegzése"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:335
+#: ../../docs/documentation_guidelines/do_translations.rst:337
 msgid ""
 "Do not change text between two ``|`` characters like ``|bronze|``, "
 "``|checkbox|``, ``|labels|``, ``|selectString|``, ``|addLayer|`` ... These "
@@ -680,7 +624,7 @@ msgstr ""
 "``|bronze|``, ``|checkbox|``, ``|labels|``, ``|selectString|``, "
 "``|addLayer|`` …  Ezek a képek helyettesítésére használt speciális címkék"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:338
+#: ../../docs/documentation_guidelines/do_translations.rst:340
 msgid ""
 "Do not change references that start with roles like ``:ref:``, ``:file:``, "
 "``:numref:`` unless they include a title. In that case, you can translate "
@@ -692,7 +636,7 @@ msgstr ""
 "esetben a címet lefordíthatja, de a hivatkozást (azaz a ``<`` és ``>`` "
 "közötti szöveget) változatlanul kell hagynia."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:342
+#: ../../docs/documentation_guidelines/do_translations.rst:344
 msgid ""
 "When a title is provided for a reference, Transifex may display a number in "
 "the English source text in replacement of the link part. Click on the number"
@@ -703,7 +647,7 @@ msgstr ""
 " link rész helyett egy számot jeleníthet meg. A forrásszövegben lévő számra "
 "kattintva a lefordítandó cím mellé hozzáadhatja a referencialinket."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:346
+#: ../../docs/documentation_guidelines/do_translations.rst:348
 msgid ""
 "Do not change references that end with an underscore like "
 "``figure_labels_1_``"
@@ -711,7 +655,7 @@ msgstr ""
 "Ne változtassa meg a hivatkozásokat, amelyek aláhúzással végződnek, mint pl."
 " ``figure_labels_1_``"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:347
+#: ../../docs/documentation_guidelines/do_translations.rst:349
 msgid ""
 "Do not change the url in hyperlinks, but you may change the external "
 "description. Leave the underscore at the end of the hyperlink, without "
@@ -721,7 +665,7 @@ msgstr ""
 " külső leírást. Hagyja meg az aláhúzást a hiperhivatkozás végén, további "
 "helykitöltők használata nélkül (``>`_``)"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:350
+#: ../../docs/documentation_guidelines/do_translations.rst:352
 msgid ""
 "Change the text inside quotes following ``:index:``, ``:sup:``, "
 "``:guilabel:`` and ``:menuselection:`` tags. Check if/how it is translated "
@@ -731,7 +675,7 @@ msgstr ""
 " ``:menuselection:`` címkéket követő szöveget. Ellenőrizze, hogyan "
 "fordították le a QGIS alkalmazásban. Soha ne változtassa meg magát a címkét."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:353
+#: ../../docs/documentation_guidelines/do_translations.rst:355
 msgid ""
 "Text between double stars and double quotes often indicate values or "
 "fieldnames, sometimes they need translation sometimes not."
@@ -739,7 +683,7 @@ msgstr ""
 "A kettőzött csillagok vagy kettőzött idézőjelek között lévő szöveg gyakran "
 "értéket vagy mezőnevet jelez, néha van szükség fordításra, néha nincs."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:355
+#: ../../docs/documentation_guidelines/do_translations.rst:357
 msgid ""
 "Be aware to use exactly the same (number of) special characters of the "
 "source text such as `````, ``````, ``*``, ``**``, ``::``. These contribute "
@@ -750,7 +694,7 @@ msgstr ""
 "``````, ``*``, ``**``, ``::`` jelek. Ezek a szolgáltatott információk "
 "külalakját módosítják."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:358
+#: ../../docs/documentation_guidelines/do_translations.rst:360
 msgid ""
 "Do not begin nor end the text hold by special characters or tags with a "
 "space"
@@ -758,7 +702,7 @@ msgstr ""
 "Soha ne kezdjen vagy fejezzen be speciális karakterek vagy címkék között "
 "lévő szöveget szóközzel"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:359
+#: ../../docs/documentation_guidelines/do_translations.rst:361
 msgid ""
 "Do not end the translated strings with a new paragraph, otherwise the text "
 "will not be translated during the html generation."
@@ -766,14 +710,14 @@ msgstr ""
 "Soha ne fejezze be a lefordított karakterláncokat egy új bekezdéssel, "
 "máskülönben a szöveg nem lesz lefordítva a html generálás során."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:362
+#: ../../docs/documentation_guidelines/do_translations.rst:364
 msgid ""
 "Stick to above presented rules and the translated document will look fine!"
 msgstr ""
 "Tartsa be a fent bemutatott szabályokat, és a lefordított dokumentum jól fog"
 " kinézni!"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:364
+#: ../../docs/documentation_guidelines/do_translations.rst:366
 msgid ""
 "For any question, please contact the `QGIS Community Team <qgis-community-"
 "team@lists.osgeo.org>`_ or the `QGIS Translation Team <qgis-"
@@ -783,18 +727,18 @@ msgstr ""
 "Csapattal <qgis-community-team@lists.osgeo.org>`_ vagy a `QGIS Fordítói "
 "Csapattal <qgis-tr@lists.osgeo.org>`_."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:375
+#: ../../docs/documentation_guidelines/do_translations.rst:377
 msgid "addLayer"
 msgstr ""
 
-#: ../../docs/documentation_guidelines/do_translations.rst:377
+#: ../../docs/documentation_guidelines/do_translations.rst:379
 msgid "checkbox"
 msgstr ""
 
-#: ../../docs/documentation_guidelines/do_translations.rst:379
+#: ../../docs/documentation_guidelines/do_translations.rst:381
 msgid "heatmap"
 msgstr "heatmap"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:391
+#: ../../docs/documentation_guidelines/do_translations.rst:393
 msgid "selectString"
 msgstr "selectString"

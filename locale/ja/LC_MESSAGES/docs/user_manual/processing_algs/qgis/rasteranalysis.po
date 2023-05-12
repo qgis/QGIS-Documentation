@@ -2,30 +2,108 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2022
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-08 02:25+0000\n"
-"PO-Revision-Date: 2022-03-14 05:07+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2022\n"
-"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2
 msgid "Raster analysis"
 msgstr "ラスタ分析"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:14
+msgid "Cell stack percent rank from value"
+msgstr "ラスタ値のパーセントランク"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:16
+msgid ""
+"Calculates the cell-wise percentrank value of a stack of rasters based on a "
+"single input value and writes them to an output raster."
+msgstr "単独の入力値に基づいて、ラスタのスタックのセル単位のパーセントランク値を計算し、出力ラスタに書き込みます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:19
+msgid ""
+"At each cell location, the specified value is ranked among the respective "
+"values in the stack of all overlaid and sorted cell values from the input "
+"rasters. For values outside of the stack value distribution, the algorithm "
+"returns NoData because the value cannot be ranked among the cell values."
+msgstr ""
+"各セル位置で指定された値は、入力ラスタのセル値を重ねてソートしてできたスタックのそれぞれの数値群の中で順位付けされます。スタック値の分布から外れた値については、その値をセル値群の中で順位付けすることができないため、アルゴリズムはNoDataを返します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:24
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:349
+msgid "There are two methods for percentile calculation:"
+msgstr "百分位数の計算には二つの方法があります:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:26
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:187
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:351
+msgid "Inclusive linear interpolation (PERCENTRANK.INC)"
+msgstr "線形内挿 (PERCENTRANK.INC)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:27
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:188
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:352
+msgid "Exclusive linear interpolation (PERCENTRANK.EXC)"
+msgstr "線形内挿 (PERCENTRANK.EXC)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:29
+msgid ""
+"The linear interpolation method return the unique percent rank for different"
+" values. Both interpolation methods follow their counterpart methods "
+"implemented by `LibreOffice <https://help.libreoffice.org/latest/en-"
+"US/text/scalc/01/04060184.html?DbPAR=CALC#bm_id3148807>`_ or Microsoft "
+"Excel."
+msgstr ""
+"線形補間法は、異なる値にユニークなパーセントランクを返します。どちらの補間法も、`LibreOffice "
+"<https://help.libreoffice.org/latest/en-"
+"US/text/scalc/01/04060184.html?DbPAR=CALC#bm_id3148807>`_ や Microsoft Excel "
+"で実装されているそれぞれの方法に従っています。"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:34
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:195
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:359
+msgid ""
+"The output raster's extent and resolution is defined by a reference raster. "
+"Input raster layers that do not match the cell size of the reference raster "
+"layer will be resampled using nearest neighbor resampling. NoData values in "
+"any of the input layers will result in a NoData cell output if the \"Ignore "
+"NoData values\" parameter is not set. The output raster data type will "
+"always be ``Float32``."
+msgstr ""
+"出力ラスタの範囲と解像度は、参照ラスタによって決まります。参照ラスタレイヤのセルサイズと一致しない入力ラスタレイヤは、最近傍再サンプリングを使用して再サンプリングされます。「NoDataを無視」パラメータが設定されていない場合、入力レイヤのいずれかに"
+" NoData 値があると、NoData セル出力になります。出力されるラスタのデータ型は常に ``Float32`` となります。"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:44
+msgid "Percent ranking Value = 1. ``NoData`` cells (grey) are ignored."
+msgstr "パーセントランク値 = 1。``NoData`` セル（灰色）は無視されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:46
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:207
+msgid ""
+":ref:`qgiscellstackpercentile`, "
+":ref:`qgiscellstackpercentrankfromrasterlayer`"
+msgstr ""
+":ref:`qgiscellstackpercentile`, "
+":ref:`qgiscellstackpercentrankfromrasterlayer`"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:4
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:5
@@ -42,20 +120,20 @@ msgstr "ラスタ分析"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1421
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1578
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1790
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1952
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2112
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2248
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2357
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2462
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2585
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2729
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2855
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3001
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3146
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3250
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3359
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3439
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3517
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1944
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2096
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2231
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2340
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2445
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2568
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2712
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2838
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2976
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3113
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3217
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3326
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3406
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3484
 msgid "Parameters"
 msgstr "パラメータ"
 
@@ -68,11 +146,11 @@ msgstr "パラメータ"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:703
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1581
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1793
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1955
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2588
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2858
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3004
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3253
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1947
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2571
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2841
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2979
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3220
 msgid "Basic parameters"
 msgstr "基本パラメータ"
 
@@ -114,40 +192,40 @@ msgstr "基本パラメータ"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1646
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1800
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1840
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1877
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1962
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2002
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2039
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2119
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2214
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2254
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2279
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2363
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2397
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2469
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2514
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2595
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2642
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2670
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2736
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2810
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2865
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2917
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2974
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3011
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3051
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3108
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3152
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3206
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3260
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3310
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3329
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3365
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3404
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3445
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3490
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3524
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3587
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1869
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1954
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1994
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2023
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2103
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2198
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2237
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2262
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2346
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2380
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2452
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2497
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2578
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2625
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2653
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2719
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2793
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2848
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2900
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2949
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2986
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3026
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3075
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3119
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3173
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3227
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3277
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3296
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3332
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3371
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3412
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3457
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3491
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3554
 msgid "Label"
 msgstr "ラベル"
 
@@ -189,40 +267,40 @@ msgstr "ラベル"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1647
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1801
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1841
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1878
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1963
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2003
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2040
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2120
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2215
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2255
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2280
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2364
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2398
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2470
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2515
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2596
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2643
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2671
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2737
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2811
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2866
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2918
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2975
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3012
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3052
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3109
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3153
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3207
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3261
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3311
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3330
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3366
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3405
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3446
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3491
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3525
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3588
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1870
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1955
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1995
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2024
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2104
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2199
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2238
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2263
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2347
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2381
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2453
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2498
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2579
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2626
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2654
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2720
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2794
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2849
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2901
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2950
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2987
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3027
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3076
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3120
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3174
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3228
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3278
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3297
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3333
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3372
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3413
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3458
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3492
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3555
 msgid "Name"
 msgstr "名前"
 
@@ -264,40 +342,40 @@ msgstr "名前"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1648
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1802
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1842
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1879
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1964
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2004
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2041
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2121
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2216
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2256
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2281
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2365
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2399
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2471
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2516
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2597
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2644
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2672
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2738
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2812
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2867
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2919
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2976
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3013
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3053
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3110
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3154
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3208
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3262
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3312
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3331
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3367
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3406
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3447
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3492
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3526
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3589
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1871
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1956
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1996
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2025
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2105
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2200
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2239
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2264
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2348
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2382
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2454
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2499
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2580
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2627
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2655
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2721
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2795
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2850
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2902
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2951
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2988
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3028
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3077
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3121
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3175
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3229
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3279
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3298
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3334
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3373
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3414
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3459
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3493
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3556
 msgid "Type"
 msgstr "データ型"
 
@@ -339,40 +417,40 @@ msgstr "データ型"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1649
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1803
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1843
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1880
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1965
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2005
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2042
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2122
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2217
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2257
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2282
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2366
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2400
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2472
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2517
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2598
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2645
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2673
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2739
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2813
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2868
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2920
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2977
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3014
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3054
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3111
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3155
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3209
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3263
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3313
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3332
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3368
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3407
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3448
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3493
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3527
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3590
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1872
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1957
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1997
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2026
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2106
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2201
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2240
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2265
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2349
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2383
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2455
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2500
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2581
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2628
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2656
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2722
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2796
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2851
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2903
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2952
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2989
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3029
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3078
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3122
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3176
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3230
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3280
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3299
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3335
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3374
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3415
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3460
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3494
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3557
 msgid "Description"
 msgstr "説明"
 
@@ -381,7 +459,7 @@ msgstr "説明"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:388
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:560
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1804
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1966
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1958
 msgid "**Input layers**"
 msgstr "**入力レイヤ**"
 
@@ -396,18 +474,18 @@ msgstr "**入力レイヤ**"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1316
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1432
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1805
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1967
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2259
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2368
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2474
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2600
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2741
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3157
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3265
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3370
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3529
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1959
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2242
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2351
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2457
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2583
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2724
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3124
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3232
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3337
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3496
 msgid "``INPUT``"
-msgstr "``INPUT``"
+msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:20
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:31
@@ -418,8 +496,8 @@ msgstr "``INPUT``"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:726
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1594
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1806
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1968
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2158
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1960
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2142
 msgid "[raster] [list]"
 msgstr "[ラスタ] [リスト]"
 
@@ -438,29 +516,29 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:69
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:231
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:404
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2759
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2742
 msgid "**Method**"
 msgstr "**方法**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:70
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:232
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:405
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2760
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2743
 msgid "``METHOD``"
-msgstr "``METHOD``"
+msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:71
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:233
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:406
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:566
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1852
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2014
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2650
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2761
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2929
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2949
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3063
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3083
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2006
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2633
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2744
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2912
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2932
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3038
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3058
 msgid "[enumeration]"
 msgstr "[列挙型]"
 
@@ -470,12 +548,37 @@ msgstr "[列挙型]"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:568
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1107
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1330
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2652
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2763
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2931
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3065
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2635
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2746
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2914
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3040
 msgid "Default: 0"
 msgstr "デフォルト： 0"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:74
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:236
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:409
+msgid "Method for percentile calculation:"
+msgstr "百分位数の計算の方法"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:76
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:411
+msgid "0 --- Inclusive linear interpolation (PERCENTRANK.INC)"
+msgstr "0 --- 線形内挿 (PERCENTRANK.INC)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:77
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:412
+msgid "1 --- Exclusive linear interpolation (PERCENTRANK.EXC)"
+msgstr "1 --- 線形内挿 (PERCENTRANK.EXC)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:78
+msgid "**Value**"
+msgstr "**値**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:79
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:242
+msgid "``VALUE``"
+msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:60
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:69
@@ -509,39 +612,49 @@ msgstr "デフォルト： 0"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1450
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1634
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1846
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2008
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2170
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2285
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2306
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2322
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2326
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2330
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2334
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2403
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2407
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2411
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2430
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2434
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2438
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2442
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2532
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2688
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2704
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2708
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2753
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2816
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2820
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2824
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2923
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3057
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3168
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3174
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3182
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3270
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3286
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3316
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2000
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2154
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2268
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2289
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2305
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2309
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2313
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2317
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2386
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2390
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2394
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2413
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2417
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2421
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2425
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2515
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2671
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2687
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2691
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2736
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2799
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2803
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2807
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2906
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3032
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3135
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3141
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3149
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3237
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3253
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3283
 msgid "[number]"
 msgstr "[数値]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:82
+msgid "Default: 10.0"
+msgstr "デフォルト： 10.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:83
+msgid ""
+"Value to rank among the respective values in the stack of all overlaid and "
+"sorted cell values from the input rasters"
+msgstr "入力ラスタのセル値を重ねてソートしてできたスタックのそれぞれの数値群の中で順位付けする数値"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:27
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:35
@@ -563,7 +676,7 @@ msgstr "**nodataを無視する**"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:731
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1602
 msgid "``IGNORE_NODATA``"
-msgstr "``IGNORE_NODATA``"
+msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:29
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:37
@@ -574,9 +687,9 @@ msgstr "``IGNORE_NODATA``"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:732
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1603
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1815
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1977
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2941
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3075
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1969
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2924
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3050
 msgid "[boolean]"
 msgstr "[ブール値]"
 
@@ -587,6 +700,14 @@ msgstr "[ブール値]"
 msgid "Default: True"
 msgstr "デフォルト： True"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:90
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:253
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:418
+msgid ""
+"If unchecked, any NoData cells in the input layers will result in a NoData "
+"cell in the output raster"
+msgstr "チェックしないとき、入力レイヤのNoDataセルは出力レイヤのNoDataセルとなります"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:22
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:92
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:255
@@ -594,8 +715,8 @@ msgstr "デフォルト： True"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:589
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1596
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1808
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1970
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2646
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1962
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2629
 msgid "**Reference layer**"
 msgstr "**スナップで参照するレイヤ**"
 
@@ -605,7 +726,7 @@ msgstr "**スナップで参照するレイヤ**"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:421
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1597
 msgid "``REFERENCE_LAYER``"
-msgstr "``REFERENCE_LAYER``"
+msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:21
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:24
@@ -634,33 +755,33 @@ msgstr "``REFERENCE_LAYER``"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1652
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1810
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1822
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1916
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1972
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1984
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2077
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2198
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2220
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2260
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2369
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2475
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2601
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2612
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2742
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2871
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2900
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2980
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3017
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3033
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3114
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3158
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3189
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3212
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3266
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3293
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3335
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3375
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3451
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3534
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1908
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1964
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1976
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2061
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2182
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2204
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2243
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2352
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2458
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2584
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2595
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2725
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2854
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2883
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2955
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2992
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3008
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3081
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3125
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3156
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3179
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3233
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3260
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3302
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3342
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3418
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3501
 msgid "[raster]"
 msgstr "[ラスタ]"
 
@@ -690,9 +811,9 @@ msgstr "出力レイヤの作成に使用する参照レイヤ（範囲、CRS、
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1608
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1650
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1820
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1914
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1982
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2075
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1906
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1974
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2059
 msgid "**Output layer**"
 msgstr "**出力レイヤ**"
 
@@ -725,27 +846,27 @@ msgstr "**出力レイヤ**"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1609
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1651
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1821
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1915
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1983
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2076
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2197
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2219
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2899
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2979
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3032
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3113
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3188
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3211
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3292
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3334
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3386
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3409
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3472
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3495
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3569
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3592
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1907
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1975
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2060
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2181
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2203
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2882
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2954
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3007
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3080
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3155
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3178
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3259
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3301
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3353
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3376
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3439
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3462
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3536
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3559
 msgid "``OUTPUT``"
-msgstr "``OUTPUT``"
+msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:44
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:99
@@ -783,15 +904,15 @@ msgstr "[入力レイヤと同じ]"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1458
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1612
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1824
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1986
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2200
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2382
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2488
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2785
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2902
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3035
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3191
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3295
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1978
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2184
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2365
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2471
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2768
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2885
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3010
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3158
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3262
 msgid "Default: ``[Save to temporary file]``"
 msgstr "デフォルト： ``[一時ファイルに保存]``"
 
@@ -807,8 +928,8 @@ msgstr "デフォルト： ``[一時ファイルに保存]``"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1230
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1349
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1459
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2201
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2903
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2185
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2886
 msgid "Specification of the output raster. One of:"
 msgstr "出力ラスタレイヤを指定します。次のいずれかです："
 
@@ -831,11 +952,11 @@ msgstr "ファイルに保存..."
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:749
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1621
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1833
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1995
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2635
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2910
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3044
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3303
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1987
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2618
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2893
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3019
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3270
 msgid "Advanced parameters"
 msgstr "詳細パラメータ"
 
@@ -848,9 +969,9 @@ msgstr "詳細パラメータ"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:760
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1632
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1844
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2006
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2921
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3055
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1998
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2904
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3030
 msgid "**Output no data value**"
 msgstr "**nodataを出力する**"
 
@@ -860,7 +981,7 @@ msgstr "**nodataを出力する**"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:449
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1633
 msgid "``OUTPUT_NODATA_VALUE``"
-msgstr "``OUTPUT_NODATA_VALUE``"
+msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:62
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:71
@@ -871,9 +992,9 @@ msgstr "``OUTPUT_NODATA_VALUE``"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:766
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1636
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1848
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2010
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2925
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3059
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2002
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2908
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3034
 msgid "Default: -9999.0"
 msgstr "デフォルト： -9999.0"
 
@@ -886,7 +1007,7 @@ msgstr "デフォルト： -9999.0"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:767
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1637
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1849
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2011
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2003
 msgid "Value to use for nodata in the output layer"
 msgstr "出力レイヤのnodataに使用する値"
 
@@ -904,21 +1025,21 @@ msgstr "出力レイヤのnodataに使用する値"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1356
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1466
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1640
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1870
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2032
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2208
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2273
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2390
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2507
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2663
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2804
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2968
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3102
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3200
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3323
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3398
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3484
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3581
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1862
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2016
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2192
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2256
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2373
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2490
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2646
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2787
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2943
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3069
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3167
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3290
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3365
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3451
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3548
 msgid "Outputs"
 msgstr "出力"
 
@@ -936,8 +1057,8 @@ msgstr "出力"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1369
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1479
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1653
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1917
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2078
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1909
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2062
 msgid "Output raster layer containing the result"
 msgstr "結果が含まれる出力ラスタレイヤ"
 
@@ -955,11 +1076,11 @@ msgstr "結果が含まれる出力ラスタレイヤ"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1370
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1480
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1654
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1885
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2047
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2287
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2518
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2674
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1877
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2031
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2270
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2501
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2657
 msgid "**CRS authority identifier**"
 msgstr "**CRS権限識別子**"
 
@@ -977,13 +1098,13 @@ msgstr "**CRS権限識別子**"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1371
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1481
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1655
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1886
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2048
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2288
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2519
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2675
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1878
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2032
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2271
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2502
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2658
 msgid "``CRS_AUTHID``"
-msgstr "``CRS_AUTHID``"
+msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:82
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:86
@@ -1006,18 +1127,18 @@ msgstr "``CRS_AUTHID``"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1486
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1656
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1660
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1883
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2045
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2140
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2289
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2293
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2520
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2524
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2676
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2680
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3379
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3467
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3544
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1875
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2029
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2124
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2272
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2276
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2503
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2507
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2659
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2663
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3346
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3434
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3511
 msgid "[string]"
 msgstr "[文字列]"
 
@@ -1035,11 +1156,11 @@ msgstr "[文字列]"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1373
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1483
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1657
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1888
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2050
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2290
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2521
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2677
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1880
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2034
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2273
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2504
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2660
 msgid "The coordinate reference system of the output raster layer"
 msgstr "出力ラスタレイヤの座標参照系"
 
@@ -1057,11 +1178,11 @@ msgstr "出力ラスタレイヤの座標参照系"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1374
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1484
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1658
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1881
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2043
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2291
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2522
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2678
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1873
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2027
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2274
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2505
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2661
 msgid "**Extent**"
 msgstr "**領域**"
 
@@ -1079,14 +1200,14 @@ msgstr "**領域**"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1375
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1485
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1659
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1882
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2044
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2178
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2292
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2523
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2679
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1874
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2028
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2162
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2275
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2506
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2662
 msgid "``EXTENT``"
-msgstr "``EXTENT``"
+msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:87
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:96
@@ -1102,10 +1223,10 @@ msgstr "``EXTENT``"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1377
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1487
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1661
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1884
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2046
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2525
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2681
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1876
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2030
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2508
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2664
 msgid "The spatial extent of the output raster layer"
 msgstr "出力ラスタレイヤの空間範囲"
 
@@ -1123,11 +1244,11 @@ msgstr "出力ラスタレイヤの空間範囲"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1378
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1488
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1662
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1889
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2051
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2316
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2560
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2706
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1881
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2035
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2299
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2543
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2689
 msgid "**Width in pixels**"
 msgstr "**幅（ピクセル単位）**"
 
@@ -1145,13 +1266,13 @@ msgstr "**幅（ピクセル単位）**"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1379
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1489
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1663
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1890
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2052
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2317
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2561
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2707
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1882
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2036
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2300
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2544
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2690
 msgid "``WIDTH_IN_PIXELS``"
-msgstr "``WIDTH_IN_PIXELS``"
+msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:90
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:94
@@ -1194,26 +1315,26 @@ msgstr "``WIDTH_IN_PIXELS``"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1664
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1668
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1672
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1883
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1887
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1891
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1895
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1899
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1903
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1907
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1911
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2037
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2041
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2045
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2049
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2053
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2057
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2061
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2065
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2069
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2073
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2302
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2310
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2314
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2318
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2528
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2536
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2562
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2684
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2285
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2293
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2297
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2301
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2511
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2519
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2545
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2667
 msgid "[integer]"
 msgstr "[整数]"
 
@@ -1231,10 +1352,10 @@ msgstr "[整数]"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1381
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1491
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1665
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1892
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2054
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2563
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2709
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1884
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2038
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2546
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2692
 msgid "The number of columns in the output raster layer"
 msgstr "出力ラスタレイヤの列数"
 
@@ -1252,11 +1373,11 @@ msgstr "出力ラスタレイヤの列数"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1382
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1492
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1666
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1893
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2055
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2300
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2526
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2682
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1885
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2039
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2283
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2509
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2665
 msgid "**Height in pixels**"
 msgstr "**高さ（ピクセル単位）**"
 
@@ -1274,13 +1395,13 @@ msgstr "**高さ（ピクセル単位）**"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1383
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1493
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1667
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1894
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2056
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2301
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2527
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2683
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1886
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2040
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2284
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2510
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2666
 msgid "``HEIGHT_IN_PIXELS``"
-msgstr "``HEIGHT_IN_PIXELS``"
+msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:95
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:104
@@ -1296,10 +1417,10 @@ msgstr "``HEIGHT_IN_PIXELS``"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1385
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1495
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1669
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1896
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2058
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2529
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2685
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1888
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2042
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2512
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2668
 msgid "The number of rows in the output raster layer"
 msgstr "出力ラスタレイヤの行数"
 
@@ -1317,10 +1438,10 @@ msgstr "出力ラスタレイヤの行数"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1386
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1496
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1670
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1897
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2059
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2534
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2702
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1889
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2043
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2517
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2685
 msgid "**Total pixel count**"
 msgstr "**総ピクセル数**"
 
@@ -1338,12 +1459,12 @@ msgstr "**総ピクセル数**"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1387
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1497
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1671
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1898
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2060
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2535
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2703
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1890
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2044
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2518
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2686
 msgid "``TOTAL_PIXEL_COUNT``"
-msgstr "``TOTAL_PIXEL_COUNT``"
+msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:99
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:108
@@ -1359,10 +1480,10 @@ msgstr "``TOTAL_PIXEL_COUNT``"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1389
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1499
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1673
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1900
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2062
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2537
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2705
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1892
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2046
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2520
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2688
 msgid "The count of pixels in the output raster layer"
 msgstr "出力ラスタレイヤのピクセル数"
 
@@ -1381,21 +1502,21 @@ msgstr "出力ラスタレイヤのピクセル数"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1678
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1718
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1758
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1920
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2081
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2224
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2338
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2446
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2566
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2712
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2838
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2984
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3118
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3216
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3339
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3414
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3500
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3597
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1912
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2065
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2208
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2321
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2429
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2549
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2695
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2821
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2959
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3085
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3183
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3306
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3381
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3467
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3564
 msgid "Python code"
 msgstr "Python コード"
 
@@ -1410,11 +1531,80 @@ msgstr ""
 "dictionary* は、パラメータの「名前」とその値を指定するマッピング型です。Python "
 "コンソールからプロセシングアルゴリズムを実行する方法の詳細については、 :ref:`processing_console` を参照してください。"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:176
+msgid "Cell stack percentile"
+msgstr "セルスタックの百分位数"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:178
+msgid ""
+"Calculates the cell-wise percentile value of a stack of rasters and writes "
+"the results to an output raster. The percentile to return is determined by "
+"the percentile input value (ranges between 0 and 1). At each cell location, "
+"the specified percentile is obtained using the respective value from the "
+"stack of all overlaid and sorted cell values of the input rasters."
+msgstr ""
+"ラスタのスタックの、セル単位のパーセンタイル値を計算し、その結果を出力ラスタに書き込みます。返すパーセンタイルは、パーセンタイル入力値（0から1までの範囲）によって決まります。各セル位置で、入力ラスタのセル値を重ねてソートしてできたスタックからそれぞれの値を使って、指定されたパーセンタイルを求めます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:184
+msgid "There are three methods for percentile calculation:"
+msgstr "パーセンタイルの計算には三つの方法があります:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:186
+msgid ""
+"Nearest rank: returns the value that is nearest to the specified percentile"
+msgstr "最近傍ランク: 指定されたパーセンタイル値に最も近い値を返します"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:190
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:354
+msgid ""
+"The linear interpolation methods return the unique values for different "
+"percentiles. Both interpolation methods follow their counterpart methods "
+"implemented by `LibreOffice <https://help.libreoffice.org/latest/en-"
+"US/text/scalc/01/04060184.html?DbPAR=CALC#bm_id3148807>`_ or Microsoft "
+"Excel."
+msgstr ""
+"線形補間法は、異なるパーセンタイルにユニークな値を返します。どちらの補間法も `LibreOffice "
+"<https://help.libreoffice.org/latest/en-"
+"US/text/scalc/01/04060184.html?DbPAR=CALC#bm_id3148807>`_ やMicrosoft "
+"Excelで実装されているそれぞれの方法に従っています。"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:205
+msgid "Percentile = 0.25. ``NoData`` cells (grey) are ignored."
+msgstr "パーセンタイル = 0.25. ``NoData`` セル（灰色）は無視されます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:238
+msgid ""
+"0 --- Nearest rank: returns the value that is nearest to the specified "
+"percentile"
+msgstr "0 -- 最近傍ランク: 指定されたパーセンタイルに最も近い値を返します"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:239
+msgid "1 --- Inclusive linear interpolation (PERCENTILE.INC)"
+msgstr "1 -- 線形内挿 (PERCENTILE.INC)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:240
+msgid "2 --- Exclusive linear interpolation (PERCENTILE.EXC)"
+msgstr "2 -- 線形内挿 (PERCENTILE.EXC)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:241
+msgid "**Percentile**"
+msgstr "**百分位数**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:245
+msgid "Default: 0.25"
+msgstr "デフォルト： 0.25"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:371
+msgid ""
+":ref:`qgiscellstackpercentile`, :ref:`qgiscellstackpercentrankfromvalue`"
+msgstr ""
+":ref:`qgiscellstackpercentile`, :ref:`qgiscellstackpercentrankfromvalue`"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:20
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:395
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:715
 msgid "``INPUT_VALUE_RASTER``"
-msgstr "``INPUT_VALUE_RASTER``"
+msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:23
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:398
@@ -1422,12 +1612,16 @@ msgstr "``INPUT_VALUE_RASTER``"
 msgid "**Value raster band**"
 msgstr "**対象バンド**"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:399
+msgid "``VALUE_RASTER_BAND``"
+msgstr ""
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:402
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1113
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1336
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3023
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3272
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3278
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2998
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3239
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3245
 msgid "Default: 1"
 msgstr "デフォルト： 1"
 
@@ -1515,7 +1709,7 @@ msgstr "**統計量**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:565
 msgid "``STATISTIC``"
-msgstr "``STATISTIC``"
+msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:569
 msgid "Available statistics. Options:"
@@ -1530,12 +1724,12 @@ msgid "1 --- Count"
 msgstr "1 --- カウント（Count）"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:573
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3558
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3525
 msgid "2 --- Mean"
 msgstr "2 --- 平均"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:574
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3559
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3526
 msgid "3 --- Median"
 msgstr "3 --- 中央値"
 
@@ -1578,14 +1772,14 @@ msgstr "nodataの存在を無視してすべてのセルの統計量を計算し
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:590
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1809
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1971
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2649
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1963
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2632
 msgid "``REF_LAYER``"
-msgstr "``REF_LAYER``"
+msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:592
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1811
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1973
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1965
 msgid ""
 "The reference layer to create the output layer from (extent, CRS, pixel "
 "dimensions)"
@@ -1594,15 +1788,15 @@ msgstr "出力レイヤの作成に参照するレイヤ（範囲、CRS、ピク
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:67
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:619
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:762
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2156
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2168
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2177
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2190
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2264
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2648
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3180
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3385
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3466
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2140
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2152
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2161
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2174
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2247
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2631
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3147
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3352
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3433
 msgid "Optional"
 msgstr "オプション"
 
@@ -1610,7 +1804,7 @@ msgstr "オプション"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:620
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:763
 msgid "``OUTPUT_NO_DATA_VALUE``"
-msgstr "``OUTPUT_NO_DATA_VALUE``"
+msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:639
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:917
@@ -1619,15 +1813,15 @@ msgstr "``OUTPUT_NO_DATA_VALUE``"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1253
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1372
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1482
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1887
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2049
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2192
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1879
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2033
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2176
 msgid "[crs]"
 msgstr "[crs]"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:649
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3291
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3333
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3258
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3300
 msgid "**Output raster**"
 msgstr "**出力レイヤ**"
 
@@ -1682,7 +1876,7 @@ msgstr "サンプリングするレイヤ群に対する参照レイヤとなる
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:24
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:719
 msgid "``INPUT_VALUE_RASTER_BAND``"
-msgstr "``INPUT_VALUE_RASTER_BAND``"
+msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:25
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:720
@@ -1692,17 +1886,17 @@ msgstr "``INPUT_VALUE_RASTER_BAND``"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1208
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1321
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1437
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2266
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2373
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2479
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2605
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2618
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2746
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2875
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3021
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3162
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3455
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3538
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2249
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2356
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2462
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2588
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2601
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2729
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2858
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2996
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3129
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3422
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3505
 msgid "[raster band]"
 msgstr "[ラスタのバンド]"
 
@@ -1714,10 +1908,10 @@ msgstr "[ラスタのバンド]"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1210
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1323
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1439
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2607
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2620
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2748
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2877
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2590
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2603
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2731
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2860
 msgid "Default: The first band of the raster layer"
 msgstr "デフォルト：ラスタレイヤの1番目のバンド"
 
@@ -1738,16 +1932,16 @@ msgstr "**入力ラスタ（複数）**"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:725
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1593
 msgid "``INPUT_RASTERS``"
-msgstr "``INPUT_RASTERS``"
+msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:31
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:39
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:734
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1605
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1817
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1979
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2943
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3077
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1971
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2926
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3052
 msgid "Default: False"
 msgstr "デフォルト： False"
 
@@ -1766,7 +1960,7 @@ msgstr "**同じ出現頻度のセル数**"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:98
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:793
 msgid "``FOUND_LOCATIONS_COUNT``"
-msgstr "``FOUND_LOCATIONS_COUNT``"
+msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:109
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:804
@@ -1776,7 +1970,7 @@ msgstr "**有効セルの場所の平均頻度**"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:110
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:805
 msgid "``MEAN_FREQUENCY_PER_LOCATION``"
-msgstr "``MEAN_FREQUENCY_PER_LOCATION``"
+msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:113
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:808
@@ -1786,7 +1980,7 @@ msgstr "**値の頻度**"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:114
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:809
 msgid "``OCCURRENCE_COUNT``"
-msgstr "``OCCURRENCE_COUNT``"
+msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:822
 msgid "**Algorithm ID**: ``native:equaltofrequency``"
@@ -1833,7 +2027,7 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1202
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1315
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1431
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3156
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3123
 msgid "**Input Raster**"
 msgstr "**入力ラスタ**"
 
@@ -1843,10 +2037,10 @@ msgstr "**入力ラスタ**"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1205
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1318
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1434
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2261
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2370
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2476
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2602
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2244
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2353
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2459
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2585
 msgid "Input raster layer"
 msgstr "入力ラスタレイヤ"
 
@@ -1865,14 +2059,15 @@ msgstr "**バンド番号**"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1207
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1320
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1436
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2265
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2372
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2478
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2604
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2745
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3269
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2248
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2355
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2461
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2587
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2728
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3128
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3236
 msgid "``BAND``"
-msgstr "``BAND``"
+msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:875
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:985
@@ -1895,10 +2090,10 @@ msgstr "**Function midpoint**"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1214
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1443
 msgid "``FUZZYMIDPOINT``"
-msgstr "``FUZZYMIDPOINT``"
+msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:881
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3318
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3285
 msgid "Default: 10"
 msgstr "デフォルト： 10"
 
@@ -1918,7 +2113,7 @@ msgstr "**Function spread**"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1220
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1449
 msgid "``FUZZYSPREAD``"
-msgstr "``FUZZYSPREAD``"
+msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:887
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1223
@@ -1987,9 +2182,9 @@ msgstr "large関数の中点"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:997
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1452
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1854
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2016
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2951
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3085
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2008
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2934
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3060
 msgid "Default: 5"
 msgstr "デフォルト： 5"
 
@@ -2040,7 +2235,7 @@ msgstr "**Low fuzzy membership bound**"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1104
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1327
 msgid "``FUZZYLOWBOUND``"
-msgstr "``FUZZYLOWBOUND``"
+msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1108
 msgid "Low bound of the linear function"
@@ -2055,7 +2250,7 @@ msgstr "**High fuzzy membership bound**"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1110
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1333
 msgid "``FUZZYHIGHBOUND``"
-msgstr "``FUZZYHIGHBOUND``"
+msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1114
 msgid "High bound of the linear function"
@@ -2144,10 +2339,10 @@ msgstr "べき乗関数の上限"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1339
 msgid "``FUZZYEXPONENT``"
-msgstr "``FUZZYEXPONENT``"
+msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1342
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3288
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3255
 msgid "Default: 2"
 msgstr "デフォルト： 2"
 
@@ -2273,7 +2468,7 @@ msgstr "チェックを入れない場合、データレイヤスタックにnod
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:39
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1613
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1825
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1987
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1979
 msgid "Specification of the output raster containing the result. One of:"
 msgstr "結果の出力レイヤを指定します。つぎのいずれかです："
 
@@ -2349,7 +2544,7 @@ msgstr ""
 "``1`` になります。入力ラスタのいずれかに ``0`` 値がある場合、そのピクセルは出力ラスタで ``0`` になります。"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1777
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1939
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1931
 msgid ""
 "The reference layer parameter specifies an existing raster layer to use as a"
 " reference when creating the output raster. The output raster will have the "
@@ -2358,7 +2553,7 @@ msgstr ""
 "参照レイヤパラメータには、出力ラスタの作成時に参照として使用する既存のラスタレイヤを指定します。出力ラスタは、このレイヤと同じ範囲、CRS、およびピクセル寸法を持ちます。"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1782
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1944
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1936
 msgid ""
 "By default, a nodata pixel in ANY of the input layers will result in a "
 "nodata pixel in the output raster. If the :guilabel:`Treat nodata values as "
@@ -2374,169 +2569,106 @@ msgid ":ref:`qgisrasterbooleanor`"
 msgstr ":ref:`qgisrasterbooleanor`"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1807
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1969
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1961
 msgid "List of input raster layers"
 msgstr "入力ラスタレイヤのリスト"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1813
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1975
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1967
 msgid "**Treat nodata values as false**"
 msgstr "**nodataをfalseとみなす**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1814
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1976
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1968
 msgid "``NODATA_AS_FALSE``"
-msgstr "``NODATA_AS_FALSE``"
+msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1818
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1980
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1972
 msgid ""
 "Treat nodata values in the input files as 0 when performing the operation"
 msgstr "演算を実行する際に、入力ファイルのnodata値を0として扱います"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1845
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2007
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2922
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3056
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1999
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2905
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3031
 msgid "``NO_DATA``"
-msgstr "``NO_DATA``"
+msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1850
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2012
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2947
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3081
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2004
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2930
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3056
 msgid "**Output data type**"
 msgstr "**出力のデータ型**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1851
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2013
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2948
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3082
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2005
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2931
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3057
 msgid "``DATA_TYPE``"
-msgstr "``DATA_TYPE``"
+msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1855
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2017
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2009
 msgid "Output raster data type. Options:"
 msgstr "出力ラスタのデータ型。オプションは以下のとおり："
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1857
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2019
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2955
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3089
-msgid "0 --- Byte"
-msgstr "0 --- Byte"
-
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1858
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2020
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2956
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3090
-msgid "1 --- Int16"
-msgstr "1 --- Int16"
-
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1859
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2021
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2957
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3091
-msgid "2 --- UInt16"
-msgstr "2 --- UInt16"
-
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1862
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2024
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2960
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3094
-msgid "5 --- Float32"
-msgstr "5 --- Float32"
-
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1863
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2025
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2961
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3095
-msgid "6 --- Float64"
-msgstr "6 --- Float64"
-
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1864
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2026
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2962
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3096
-msgid "7 --- CInt16"
-msgstr "7 --- CInt16"
-
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1865
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2027
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2963
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3097
-msgid "8 --- CInt32"
-msgstr "8 --- CInt32"
-
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1866
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2028
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2964
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3098
-msgid "9 --- CFloat32"
-msgstr "9 --- CFloat32"
-
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1867
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2029
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2965
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3099
-msgid "10 --- CFloat64"
-msgstr "10 --- CFloat64"
-
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1901
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2063
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2530
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2686
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1893
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2047
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2513
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2669
 msgid "**NODATA pixel count**"
 msgstr "**nodataピクセルの数**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1902
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2064
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2531
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2687
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1894
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2048
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2514
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2670
 msgid "``NODATA_PIXEL_COUNT``"
-msgstr "``NODATA_PIXEL_COUNT``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1904
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2066
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1896
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2050
 msgid "The count of nodata pixels in the output raster layer"
 msgstr "出力ラスタレイヤのnodataピクセルの数"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1905
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2067
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1897
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2051
 msgid "**True pixel count**"
 msgstr "**Trueのピクセル数**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1906
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2068
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1898
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2052
 msgid "``TRUE_PIXEL_COUNT``"
-msgstr "``TRUE_PIXEL_COUNT``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1908
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2070
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1900
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2054
 msgid "The count of True pixels (value = 1) in the output raster layer"
 msgstr "出力ラスタレイヤのTrueピクセル（value=1）の数"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1909
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2071
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1901
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2055
 msgid "**False pixel count**"
 msgstr "**Falseのピクセル数**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1910
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2072
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1902
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2056
 msgid "``FALSE_PIXEL_COUNT``"
-msgstr "``FALSE_PIXEL_COUNT``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1912
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2074
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1904
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2058
 msgid "The count of False pixels (value = 0) in the output raster layer"
 msgstr "出力ラスタレイヤのFalseピクセル（value=0）の数"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1932
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1924
 msgid "Raster boolean OR"
 msgstr "複数ラスタのOR論理値"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1933
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1925
 msgid ""
 "Calculates the boolean ``OR`` for a set of input rasters. If all of the "
 "input rasters have a zero value for a pixel, that pixel will be set to ``0``"
@@ -2546,26 +2678,26 @@ msgstr ""
 "一連の入力ラスタの論理 ``OR`` を計算します。あるピクセルについて、すべての入力ラスタがゼロ値をもつ場合、そのピクセルは出力ラスタで ``0`` "
 "になります。入力ラスタのいずれかに ``1`` 値がある場合、そのピクセルは出力ラスタで ``1`` になります。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1949
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1941
 msgid ":ref:`qgisrasterbooleanand`"
 msgstr ":ref:`qgisrasterbooleanand`"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2093
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2077
 msgid "Raster calculator"
 msgstr "ラスタ計算機"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2094
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2078
 msgid "Performs algebraic operations using raster layers."
 msgstr "ラスタレイヤを使用して代数演算を実行します。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2096
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2080
 msgid ""
 "The resulting layer will have its values computed according to an "
 "expression. The expression can contain numerical values, operators and "
 "references to any of the layers in the current project."
 msgstr "結果のレイヤは、式に従って計算された値になります。式には、数値、演算子、現在のプロジェクト内の任意のレイヤへの参照を含めることができます。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2101
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2085
 msgid ""
 "When using the calculator in :ref:`processing_batch` or from the "
 ":ref:`console` the files to use have to be specified. The corresponding "
@@ -2578,21 +2710,21 @@ msgstr ""
 " ``path/to/my/rasterfile.tif`` にあるレイヤーを使用している場合、そのレイヤーの最初のバンドは "
 "``rasterfile.tif@1`` として参照されます。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2109
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2093
 msgid ":ref:`label_raster_calc`"
-msgstr ":ref:`label_raster_calc`"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2123
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2107
 msgid "**Layers**"
 msgstr "**レイヤ**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2124
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2134
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2146
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2108
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2118
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2130
 msgid "GUI only"
 msgstr "GUI版のみ"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2126
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2110
 msgid ""
 "Shows the list of all raster layers loaded in the legend. These can be used "
 "to fill the expression box (double click to add). Raster layers are referred"
@@ -2604,36 +2736,36 @@ msgstr ""
 "``layer_name@band_number`` のように、その名前とバンド番号で参照されます。例えば、 ``DEM`` "
 "という名前のレイヤの最初のバンドは、 ``DEM@1`` という名前で参照されます。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2133
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2117
 msgid "**Operators**"
 msgstr "**演算子**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2136
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2120
 msgid ""
 "Contains some calculator like buttons that can be used to fill the "
 "expression box."
 msgstr "電卓のようなボタンがあり、これを使って式ボックスに入力できます。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2138
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2122
 msgid "**Expression**"
 msgstr "**式**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2139
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2123
 msgid "``EXPRESSION``"
-msgstr "``EXPRESSION``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2141
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2125
 msgid ""
 "Expression that will be used to calculate the output raster layer. You can "
 "use the operator buttons provided to type directly the expression in this "
 "box."
 msgstr "出力ラスタレイヤの計算に使用する式。用意されている演算子ボタンを使用して、このボックスに式を直接入力できます。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2145
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2129
 msgid "**Predefined expressions**"
 msgstr "**定義済みの式**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2148
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2132
 msgid ""
 "You can use the predefined ``NDVI`` expression or you can define new "
 "expressions for calculations. The :guilabel:`Add...` button loads a defined "
@@ -2644,15 +2776,15 @@ msgstr ""
 "ボタンを押すと、定義済みの式を読み込みます（さらにパラメータの設定ができます）。 :guilabel:`保存...` "
 "ボタンを押すと、新しい式を定義できます。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2154
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2138
 msgid "**Reference layer(s) (used for automated extent, cellsize, and CRS)**"
 msgstr "**Reference layer(s) (used for automated extent, cellsize, and CRS)**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2157
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2141
 msgid "``LAYERS``"
-msgstr "``LAYERS``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2159
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2143
 msgid ""
 "Layer(s) that will be used to fetch extent, cell size and CRS. By choosing "
 "the layer in this box you avoid filling in all the other parameters by hand."
@@ -2664,15 +2796,15 @@ msgstr ""
 " ``layer_name@band_number`` のように、その名前とバンド番号で参照されます。例えば、 ``DEM`` "
 "という名前のレイヤの最初のバンドは、 ``DEM@1`` という名前で参照されます。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2166
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2150
 msgid "**Cell size (use 0 or empty to set it automatically)**"
 msgstr "**Cell size (use 0 or empty to set it automatically)**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2169
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2153
 msgid "``CELLSIZE``"
-msgstr "``CELLSIZE``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2171
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2155
 msgid ""
 "Cell size of the output raster layer. If the cell size is not specified, the"
 " minimum cell size of the selected reference layer(s) will be used. The cell"
@@ -2680,62 +2812,106 @@ msgid ""
 msgstr ""
 "出力ラスタレイヤのセルサイズ。セルサイズが指定されていない場合は、選択した参照レイヤの最小セルサイズが使用されます。セルサイズは、X軸とY軸の両方で同じ長さです。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2179
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2163
 msgid "[extent]"
 msgstr "[範囲]"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2188
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2172
 msgid "**Output CRS**"
 msgstr "**Output CRS**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2191
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2175
 msgid "``CRS``"
-msgstr "``CRS``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2193
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2177
 msgid ""
 "CRS of the output raster layer. If the output CRS is not specified, the CRS "
 "of the first reference layer will be used."
 msgstr "出力ラスタレイヤのCRS。出力CRSが指定されていない場合は、最初の参照レイヤのCRSが使用されます。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2196
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2218
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2180
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2202
 msgid "**Output**"
 msgstr "**出力**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2221
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2205
 msgid "Output raster file with the calculated values."
 msgstr "計算した値の出力ラスタファイル。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2226
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2210
 msgid "**Algorithm ID**: ``qgis:rastercalculator``"
 msgstr "**アルゴリズムID**: ``qgis:rastercalculator``"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2258
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2367
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2473
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3528
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2241
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2350
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2456
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3495
 msgid "**Input layer**"
 msgstr "**入力レイヤ**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2262
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2371
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2477
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2603
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2744
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2873
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3019
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3160
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3268
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3453
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2245
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2354
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2460
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2586
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2727
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2856
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2994
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3127
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3235
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3420
 msgid "**Band number**"
 msgstr "**バンド番号**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2350
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2251
+msgid "Default: Not set"
+msgstr "デフォルト：未設定"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2267
+msgid "``BAND_COUNT``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2279
+msgid "``HAS_NODATA_VALUE``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2280
+msgid "[Boolean]"
+msgstr "[ブール値]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2288
+msgid "``NODATA_VALUE``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2292
+msgid "``PIXEL_HEIGHT``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2296
+msgid "``PIXEL_WIDTH``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2304
+msgid "``X_MAX``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2308
+msgid "``X_MIN``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2312
+msgid "``Y_MAX``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2316
+msgid "``Y_MIN``"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2333
 msgid "Raster layer statistics"
 msgstr "ラスタレイヤの統計量"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2351
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2334
 msgid ""
 "Calculates basic statistics from the values in a given band of the raster "
 "layer. The output is loaded in the :menuselection:`Processing --> Results "
@@ -2744,46 +2920,46 @@ msgstr ""
 "ラスタレイヤの指定したバンドの値に関する基本統計量を計算します。結果は :menuselection:`プロセシング --> 結果ビューア` "
 "メニューに読み込まれます。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2375
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2481
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3164
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3457
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3540
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2358
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2464
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3131
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3424
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3507
 msgid "Default: The first band of the input layer"
 msgstr "デフォルト：入力レイヤの1番目のバンド"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2376
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2482
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2359
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2465
 msgid ""
 "If the raster is multiband, choose the band you want to get statistics for."
 msgstr "ラスタがマルチバンドの場合には、統計量を計算したいバンドを選択してください。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2378
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2413
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2623
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2690
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2361
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2396
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2606
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2673
 msgid "**Statistics**"
 msgstr "**統計量の出力**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2379
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2414
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2485
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2539
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2782
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2827
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2362
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2397
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2468
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2522
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2765
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2810
 msgid "``OUTPUT_HTML_FILE``"
-msgstr "``OUTPUT_HTML_FILE``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2380
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2415
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2540
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2783
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2828
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2363
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2398
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2523
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2766
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2811
 msgid "[html]"
 msgstr "[html]"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2383
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2489
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2366
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2472
 msgid "Specification of the output file:"
 msgstr "出力ファイルの指定："
 
@@ -2791,148 +2967,148 @@ msgstr "出力ファイルの指定："
 msgid "Skip Output"
 msgstr "出力をスキップ"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2401
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2384
 msgid "**Maximum value**"
 msgstr "**最大値**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2402
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2385
 msgid "``MAX``"
-msgstr "``MAX``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2405
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2388
 msgid "**Mean value**"
 msgstr "**平均値**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2406
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2389
 msgid "``MEAN``"
-msgstr "``MEAN``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2409
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2392
 msgid "**Minimum value**"
 msgstr "**最小値**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2410
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2393
 msgid "``MIN``"
-msgstr "``MIN``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2416
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2399
 msgid "The output file contains the following information:"
 msgstr "出力ファイルには以下の情報が含まれます："
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2418
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2401
 msgid "Analyzed file: path of the raster layer"
 msgstr "分析済みファイル : ラスタレイヤのパス"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2419
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2402
 msgid "Minimum value: minimum value of the raster"
 msgstr "最小値 : ラスタの最小値"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2420
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2403
 msgid "Maximum value: maximum value of the raster"
 msgstr "最大値 : ラスタの最大値"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2421
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2404
 msgid "Range: difference between the maximum and minimum values"
 msgstr "範囲 : 最大値と最小値の差"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2422
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2405
 msgid "Sum: total sum of the values"
 msgstr "合計 : 値の総和"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2423
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2406
 msgid "Mean value: mean of the values"
 msgstr "平均値 : 値の平均"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2424
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2407
 msgid "Standard deviation: standard deviation of the values"
 msgstr "標準偏差 : 値の標準偏差"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2425
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2408
 msgid ""
 "Sum of the squares: sum of the squared differences of each observation from "
 "the overall mean"
 msgstr "平方和 : 各値と全体の平均値との差の二乗の合計"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2428
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2411
 msgid "**Range**"
 msgstr "**範囲**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2429
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2412
 msgid "``RANGE``"
-msgstr "``RANGE``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2432
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2415
 msgid "**Standard deviation**"
 msgstr "**標準偏差**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2433
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2416
 msgid "``STD_DEV``"
-msgstr "``STD_DEV``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2436
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2419
 msgid "**Sum**"
 msgstr "**合計**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2437
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2420
 msgid "``SUM``"
-msgstr "``SUM``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2440
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2423
 msgid "**Sum of the squares**"
 msgstr "**平方和**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2441
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2424
 msgid "``SUM_OF_SQUARES``"
-msgstr "``SUM_OF_SQUARES``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2458
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2441
 msgid "Raster layer unique values report"
 msgstr "ラスタレイヤのユニーク値"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2459
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2442
 msgid ""
 "Returns the count and area of each unique value in a given raster layer."
 msgstr "指定したラスタレイヤの値ごとの個数と面積を返します。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2484
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2538
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2467
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2521
 msgid "**Unique values report**"
 msgstr "**ユニーク値の集計出力**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2486
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2469
 msgid "[file]"
 msgstr "[ファイル]"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2495
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2550
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2478
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2533
 msgid "**Unique values table**"
 msgstr "**ユニーク値の表**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2496
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2551
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2624
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2691
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2793
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2832
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2479
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2534
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2607
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2674
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2776
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2815
 msgid "``OUTPUT_TABLE``"
-msgstr "``OUTPUT_TABLE``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2497
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2552
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2625
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2692
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2794
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2833
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3027
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2480
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2535
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2608
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2675
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2777
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2816
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3002
 msgid "[table]"
 msgstr "[テーブル]"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2499
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2796
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2482
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2779
 msgid "Default: ``[Skip output]``"
 msgstr "デフォルト： ``[出力をスキップ]``"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2500
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2483
 msgid "Specification of the table for unique values:"
 msgstr "ユニーク値のテーブルの指定："
 
@@ -2956,213 +3132,213 @@ msgstr "データベーステーブルに保存..."
 msgid "The file encoding can also be changed here."
 msgstr "ここでファイルの文字コードを変更することもできます。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2541
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2524
 msgid "The output HTML file contains the following information:"
 msgstr "出力HTMLファイルには以下の情報が含まれます："
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2543
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2526
 msgid "Analyzed file: the path of the raster layer"
 msgstr "分析ファイル : ラスタレイヤのパス"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2544
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2527
 msgid "Extent: xmin, ymin, xmax, ymax coordinates of the extent"
 msgstr "範囲 : 範囲のx最小値、y最小値、x最大値、y最大値の座標"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2545
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2528
 msgid "Projection: projection of the layer"
 msgstr "投影法 : レイヤの投影法"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2546
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2529
 msgid "Width in pixels: number of columns and pixel width size"
 msgstr "幅（ピクセル単位）: 列の数と、ピクセルの幅サイズ"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2547
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2530
 msgid "Height in pixels: number of rows and pixel width size"
 msgstr "高さ（ピクセル単位）: 行の数と、ピクセルの高さサイズ"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2548
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2531
 msgid "Total pixel count: count of all the pixels"
 msgstr "総ピクセル数 : すべてのピクセルの個数"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2549
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2532
 msgid "NODATA pixel count: count of pixels with NODATA value"
 msgstr "nodataピクセルの数 : nodata値を持つピクセルの個数"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2553
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2536
 msgid "A table with three columns:"
 msgstr "テーブルには3つのカラムがあります："
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2555
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2538
 msgid "*value*: pixel value"
 msgstr "*value*: ピクセルの値"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2556
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2539
 msgid "*count*: count of pixels with this value"
 msgstr "*count*: その値のピクセル数"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2557
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2540
 msgid "*m*\\ :sup:`2`: total area in square meters of pixels with this value."
 msgstr "*m*\\ :sup:`2`: その値のピクセルの総面積（平方メートル単位）"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2578
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2561
 msgid "Raster layer zonal statistics"
 msgstr "ゾーン統計量（ラスタ）"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2579
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2562
 msgid ""
 "Calculates statistics for a raster layer's values, categorized by zones "
 "defined in another raster layer."
 msgstr "別のラスタレイヤで定義されたゾーンで分類して、ラスタレイヤの値の統計量を計算します。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2582
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2565
 msgid ":ref:`qgiszonalstatisticsfb`"
 msgstr ":ref:`qgiszonalstatisticsfb`"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2599
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3369
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2582
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3336
 msgid "**Input Layer**"
 msgstr "**入力レイヤ**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2608
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2591
 msgid ""
 "If the raster is multiband choose the band for which you want to calculate "
 "the statistics."
 msgstr "ラスタがマルチバンドの場合には、統計量を計算したいバンドを選択してください。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2610
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2593
 msgid "**Zones layer**"
 msgstr "**ゾーン統計の対象レイヤ**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2611
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2594
 msgid "``ZONES``"
-msgstr "``ZONES``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2613
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2596
 msgid ""
 "Raster layer defining zones. Zones are given by contiguous pixels having the"
 " same pixel value."
 msgstr "ゾーンを定義するラスタレイヤ。ゾーンとは、同じピクセル値を持つ連続したピクセルです。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2616
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2599
 msgid "**Zones band number**"
 msgstr "**対象バンド**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2617
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2600
 msgid "``ZONES_BAND``"
-msgstr "``ZONES_BAND``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2621
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2604
 msgid "If the raster is multiband, choose the band that defines the zones"
 msgstr "ラスタがマルチバンドの場合には、ゾーンを定義するバンドを選択してください。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2627
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3389
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3475
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3572
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2610
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3356
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3442
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3539
 msgid "Default: ``[Create temporary layer]``"
 msgstr "デフォルト： ``[一時レイヤを作成]``"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2653
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2636
 msgid ""
 "Raster layer used to calculate the centroids that will be used as reference "
 "when determining the zones in the output layer. One of:"
 msgstr "出力レイヤのゾーンの判定時に参照点として用いる重心の計算に使用するラスタレイヤ。次のいずれかです："
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2693
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2676
 msgid "The output layer contains the following information **for each zone**:"
 msgstr "出力レイヤには **各ゾーンについての** 以下の情報が含まれます："
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2696
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2679
 msgid "Area: the area in square raster units in the zone;"
 msgstr "m2: ゾーンの面積（単位はラスタの長さ単位の二乗）"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2697
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2680
 msgid "Sum: the total sum of the pixel values in the zone;"
 msgstr "sum: ゾーン内のピクセル値の総和"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2698
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2681
 msgid "Count: the number of pixels in the zone;"
 msgstr "count: ゾーン内のピクセルの個数"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2699
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2682
 msgid "Min: the minimum pixel value in the zone;"
 msgstr "min: ゾーン内のピクセル値の最小値"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2700
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2683
 msgid "Max: the maximum pixel value in the zone;"
 msgstr "max: ゾーン内のピクセル値の最大値"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2701
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2684
 msgid "Mean: the mean of the pixel values in the zone;"
 msgstr "mean: ゾーン内のピクセル値の平均値"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2724
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2707
 msgid "Raster surface volume"
 msgstr "ラスタのサーフェス体積"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2725
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2708
 msgid ""
 "Calculates the volume under a raster surface relative to a given base level."
 " This is mainly useful for Digital Elevation Models (DEM)."
 msgstr "指定したベースレベルを基準とした、ラスタサーフェスの下の体積を計算します。主に数値標高モデル（DEM）で便利なアルゴリズムです。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2740
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2723
 msgid "**INPUT layer**"
 msgstr "**入力レイヤ**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2743
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2726
 msgid "Input raster, representing a surface"
 msgstr "サーフェスを表す入力ラスタ"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2749
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2732
 msgid ""
 "If the raster is multiband, choose the band that shall define the surface."
 msgstr "ラスタがマルチバンドの場合には、サーフェスを定義するバンドを選択してください。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2751
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2734
 msgid "**Base level**"
 msgstr "**基準値（ベースレベル）**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2752
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2735
 msgid "``LEVEL``"
-msgstr "``LEVEL``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2755
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2738
 msgid "Default: 0.0"
 msgstr "デフォルト： 0.0"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2756
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2739
 msgid ""
 "Define a base or reference value. This base is used in the volume "
 "calculation according to the ``Method`` parameter (see below)."
 msgstr "ベース、あるいは基準値を定義します。この基準値は、 ``方法`` パラメータ（以下参照）に応じた体積計算に用いられます。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2764
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2747
 msgid ""
 "Define the method for the volume calculation given by the difference between"
 " the raster pixel value and the ``Base level``. Options:"
 msgstr "ラスタピクセル値と ``基準値`` の差による体積計算の方法を定義します。オプションは次のとおり："
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2769
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2752
 msgid ""
 "0 --- Count Only Above Base Level: only pixels above the base level will add"
 " to the volume."
 msgstr "0 --- 基準値を超える場合だけ：基準値を上回るピクセルのみが体積に加算されます。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2771
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2754
 msgid ""
 "1 --- Count Only Below Base Level: only pixels below the base level will add"
 " to the volume."
 msgstr "1 --- 基準値を下回る場合だけ：基準値を下回るピクセルのみが体積に加算されます。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2773
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2756
 msgid ""
 "2 --- Subtract Volumes Below Base level: pixels above the base level will "
 "add to the volume, pixels below the base level will subtract from the "
 "volume."
 msgstr "2 --- 基準値を下回る場合は減算：基準値を上回るピクセルは体積に加算され、基準値を下回るピクセルは体積から減算されます。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2776
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2759
 msgid ""
 "3 --- Add Volumes Below Base level: Add the volume regardless whether the "
 "pixel is above or below the base level. This is equivalent to sum the "
@@ -3172,261 +3348,261 @@ msgstr ""
 "3 --- "
 "基準値を下回る場合は加算：ピクセル値が基準値より上か下かに関わらず、体積に加算します。これは、ピクセル値と基準値の差の絶対値による合計と等しいです。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2781
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2826
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2764
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2809
 msgid "**Surface volume report**"
 msgstr "**体積計算のレポート**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2786
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2769
 msgid "Specification of the output HTML report. One of:"
 msgstr "出力HTMLレポートを指定します。次のいずれかです："
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2792
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2831
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2775
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2814
 msgid "**Surface volume table**"
 msgstr "**体積計算の表**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2797
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2780
 msgid "Specification of the output table. One of:"
 msgstr "出力テーブルを指定します。次のいずれかです："
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2814
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2797
 msgid "**Volume**"
 msgstr "**体積**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2815
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2798
 msgid "``VOLUME``"
-msgstr "``VOLUME``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2817
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2800
 msgid "The calculated volume"
 msgstr "計算された体積"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2818
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2801
 msgid "**Area**"
 msgstr "**領域（Area）**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2819
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2802
 msgid "``AREA``"
-msgstr "``AREA``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2821
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2804
 msgid "The area in square map units"
 msgstr "面積をマップ単位の2乗で表した値"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2822
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2805
 msgid "**Pixel_count**"
 msgstr "**ピクセル数**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2823
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2806
 msgid "``PIXEL_COUNT``"
-msgstr "``PIXEL_COUNT``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2825
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2808
 msgid "The total number of pixels that have been analyzed"
 msgstr "解析したピクセルの合計数"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2829
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2812
 msgid ""
 "The output report (containing volume, area and pixel count) in HTML format"
 msgstr "HTML形式の出力レポート（体積、面積、ピクセル数を含む）"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2834
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2817
 msgid "The output table (containing volume, area and pixel count)"
 msgstr "出力テーブル（体積、面積、ピクセル数を含む）"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2850
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2833
 msgid "Reclassify by layer"
 msgstr "属性テーブルによる再分類"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2851
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2834
 msgid ""
 "Reclassifies a raster band by assigning new class values based on the ranges"
 " specified in a vector table."
 msgstr "ベクタテーブルで指定された値の範囲に基づいて新しいクラス値を割り当てて、ラスタバンドを再分類します。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2869
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3015
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3449
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3532
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2852
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2990
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3416
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3499
 msgid "**Raster layer**"
 msgstr "**ラスタレイヤ**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2870
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3016
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3450
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3533
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2853
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2991
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3417
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3500
 msgid "``INPUT_RASTER``"
-msgstr "``INPUT_RASTER``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2872
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3018
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2855
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2993
 msgid "Raster layer to reclassify"
 msgstr "再分類するラスタレイヤ"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2874
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3020
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3454
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3537
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2857
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2995
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3421
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3504
 msgid "``RASTER_BAND``"
-msgstr "``RASTER_BAND``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2878
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2861
 msgid "If the raster is multiband, choose the band you want to reclassify."
 msgstr "ラスタがマルチバンドの場合には、再分類したいバンドを選択してください。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2880
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2863
 msgid "**Layer containing class breaks**"
 msgstr "**クラス区分のテーブルを含むレイヤ**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2881
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2864
 msgid "``INPUT_TABLE``"
-msgstr "``INPUT_TABLE``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2882
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2865
 msgid "[vector: any]"
 msgstr "[ベクタ：任意]"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2883
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2866
 msgid "Vector layer containing the values to use for classification."
 msgstr "分類に使用する値を含むベクタレイヤ"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2884
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2867
 msgid "**Minimum class value field**"
 msgstr "**区分の下限を示す属性（フィールド）**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2885
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2868
 msgid "``MIN_FIELD``"
-msgstr "``MIN_FIELD``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2886
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2890
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2894
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2869
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2873
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2877
 msgid "[tablefield: numeric]"
 msgstr "[テーブルのフィールド：数値]"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2887
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2870
 msgid "Field with the minimum value of the range for the class."
 msgstr "クラス範囲の最小値のフィールド"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2888
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2871
 msgid "**Maximum class value field**"
 msgstr "**区分の上限を示す属性（フィールド）**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2889
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2872
 msgid "``MAX_FIELD``"
-msgstr "``MAX_FIELD``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2891
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2874
 msgid "Field with the maximum value of the range for the class."
 msgstr "クラス範囲の最大値のフィールド"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2892
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2875
 msgid "**Output value field**"
 msgstr "**クラスを示す属性（フィールド）**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2893
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2876
 msgid "``VALUE_FIELD``"
-msgstr "``VALUE_FIELD``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2895
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2878
 msgid ""
 "Field with the value that will be assigned to the pixels that fall in the "
 "class (between the corresponding min and max values)."
 msgstr "そのクラスに該当するピクセルに割り当てられる値のフィールド（対応する最小値と最大値の間）"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2898
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2978
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3031
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3112
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2881
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2953
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3006
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3079
 msgid "**Reclassified raster**"
 msgstr "**出力ラスタ**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2926
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3060
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2909
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3035
 msgid "Value to apply to no data values."
 msgstr "nodata値に適用する値"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2927
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3061
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2910
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3036
 msgid "**Range boundaries**"
 msgstr "**分類区分の境界上の扱い**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2928
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3062
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2911
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3037
 msgid "``RANGE_BOUNDARIES``"
-msgstr "``RANGE_BOUNDARIES``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2932
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3066
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2915
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3041
 msgid "Defines comparison rules for the classification. Options:"
 msgstr "クラス分類の比較ルールを定義します。オプションは次のとおり："
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2935
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3069
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2918
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3044
 msgid "0 --- min < value <= max"
 msgstr "0 --- min < value <= max"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2936
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3070
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2919
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3045
 msgid "1 --- min <= value < max"
 msgstr "1 --- min <= value < max"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2937
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3071
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2920
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3046
 msgid "2 --- min <= value <= max"
 msgstr "2 --- min <= value <= max"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2938
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3072
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2921
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3047
 msgid "3 --- min < value < max"
 msgstr "3 --- min < value < max"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2939
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3073
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2922
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3048
 msgid "**Use no data when no range matches value**"
 msgstr "**値と一致する区分がない場合はnodata**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2940
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3074
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2923
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3049
 msgid "``NODATA_FOR_MISSING``"
-msgstr "``NODATA_FOR_MISSING``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2944
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3078
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2927
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3053
 msgid ""
 "Applies the no data value to band values that do not fall in any class. If "
 "False, the original value is kept."
 msgstr "どのクラスにも該当しないバンド値をnodata値とします。Falseの場合には、元の値を保持します。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2981
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3115
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2956
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3082
 msgid "Output raster layer with reclassified band values"
 msgstr "再分類されたバンド値を持つ出力ラスタレイヤ"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2996
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2971
 msgid "Reclassify by table"
 msgstr "区分表（テーブル）で再分類"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2997
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2972
 msgid ""
 "Reclassifies a raster band by assigning new class values based on the ranges"
 " specified in a fixed table."
 msgstr "固定テーブルで指定された値の範囲に基づいて新しいクラス値を割り当てて、ラスタバンドを再分類します。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3024
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2999
 msgid "Raster band for which you want to recalculate values."
 msgstr "値を再計算したいラスタのバンド"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3025
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3000
 msgid "**Reclassification table**"
 msgstr "**再分類の区分表（テーブル）**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3026
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3001
 msgid "``TABLE``"
-msgstr "``TABLE``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3028
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3003
 msgid ""
 "A 3-columns table to fill with the values to set the boundaries of each "
 "class (``Minimum`` and ``Maximum``) and the new ``Value`` to assign to the "
@@ -3435,16 +3611,16 @@ msgstr ""
 "値を入力する3カラムのテーブル。各クラスの境界（ ``最小値`` と ``最大`` ）と、そのクラスに該当する場合にバンド値に割り当てられる新しい "
 "``値（Value）`` を設定する。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3036
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3192
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3011
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3159
 msgid "Specification of the output raster layer. One of:"
 msgstr "出力ラスタレイヤを指定します。次のいずれかです："
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3130
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3097
 msgid "Rescale raster"
 msgstr "ラスタの範囲変更"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3131
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3098
 msgid ""
 "Rescales raster layer to a new value range, while preserving the shape "
 "(distribution) of the raster's histogram (pixel values). Input values are "
@@ -3453,103 +3629,99 @@ msgid ""
 msgstr ""
 "ラスタのヒストグラム（ピクセル値）の形状（分布）は保ったまま、ラスタレイヤを再スケーリングして新しい値の範囲に変更します。入力値は、ソースラスタのピクセル最小値・最大値から出力結果のピクセル最小・最大範囲へと線形補間でマッピングされます。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3137
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3104
 msgid ""
 "By default the algorithm preserves the original NODATA value, but there is "
 "an option to override it."
 msgstr "デフォルトでは、このアルゴリズムは元のnodata値をそのまま維持しますが、この動作を上書きするオプションがあります。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3143
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3110
 msgid "Rescaling values of a raster layer from [0 - 50] to [100 - 1000]"
 msgstr "ラスタレイヤの値の範囲を [0 - 50] から [100 - 1000] へと再スケーリング"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3159
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3126
 msgid "Raster layer to use for rescaling"
 msgstr "値の範囲を変更するラスタレイヤ"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3161
-msgid "``Band``"
-msgstr "``Band``"
-
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3165
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3458
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3132
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3425
 msgid "If the raster is multiband, choose a band."
 msgstr "ラスタがマルチバンドの場合には、バンドを選択してください。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3166
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3133
 msgid "**New minimum value**"
 msgstr "**最小値**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3167
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3134
 msgid "``MINIMUM``"
-msgstr "``MINIMUM``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3170
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3137
 msgid "Default value: 0.0"
 msgstr "デフォルト値： 0.0"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3171
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3138
 msgid "Minimum pixel value to use in the rescaled layer"
 msgstr "範囲変更後のレイヤのピクセル最小値"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3172
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3139
 msgid "**New maximum value**"
 msgstr "**最大値**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3173
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3140
 msgid "``MAXIMUM``"
-msgstr "``MAXIMUM``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3176
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3143
 msgid "Default value: 255.0"
 msgstr "デフォルト値： 255.0"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3177
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3144
 msgid "Maximum pixel value to use in the rescaled layer"
 msgstr "範囲変更後のレイヤのピクセル最大値"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3178
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3145
 msgid "**New NODATA value**"
 msgstr "**nodata値**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3181
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3148
 msgid "``NODATA``"
-msgstr "``NODATA``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3184
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3151
 msgid "Default value: Not set"
 msgstr "デフォルト値：未設定"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3185
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3152
 msgid ""
 "Value to assign to the NODATA pixels. If unset, original NODATA values are "
 "preserved."
 msgstr "NODATAのピクセルに割り当てる値。未設定の場合には、元のNODATA値が保持されます。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3187
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3210
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3154
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3177
 msgid "**Rescaled**"
 msgstr "**リスケール出力**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3213
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3180
 msgid "Output raster layer with rescaled band values"
 msgstr "範囲変更後のバンド値を持つ出力ラスタレイヤ"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3218
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3185
 msgid "**Algorithm ID**: ``native:rescaleraster``"
-msgstr "**アルゴリズムID**: ``native:rescaleraster``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3228
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3195
 msgid "Round raster"
 msgstr "ラスタを丸める"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3230
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3197
 msgid ""
 "Rounds the cell values of a raster dataset according to the specified number"
 " of decimals."
 msgstr "ラスタデータセットのセル値を指定した小数点桁数で丸めます。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3232
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3199
 msgid ""
 "Alternatively, a negative number of decimal places may be used to round "
 "values to powers of a base n. For example, with a Base value n of 10 and "
@@ -3564,7 +3736,7 @@ msgstr ""
 "の倍数に丸めるといった具合です。任意の基数を選択しても、このアルゴリズムは同じ乗法の原理を適用します。セル値を基数n "
 "の倍数に丸めることで、ラスタレイヤの値を簡略化することができます。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3240
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3207
 msgid ""
 "The algorithm preserves the data type of the input raster. Therefore "
 "byte/integer rasters can only be rounded to multiples of a base n, otherwise"
@@ -3572,288 +3744,288 @@ msgid ""
 msgstr ""
 "このアルゴリズムは、入力ラスタのデータ型を維持します。このため、byte型や整数型のラスタは基数nの倍数に丸めることしかできません。基数nの倍数に丸められない場合には警告が発生し、byte型や整数型のラスタとして、入力ラスタのコピーが返ります。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3247
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3214
 msgid "Rounding values of a raster"
 msgstr "ラスタの値の丸め"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3264
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3231
 msgid "**Input raster**"
 msgstr "**入力ラスタ**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3267
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3234
 msgid "The raster to process."
 msgstr "処理するラスタ"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3273
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3240
 msgid "The band of the raster"
 msgstr "ラスタのバンド番号"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3274
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3241
 msgid "**Rounding direction**"
 msgstr "**丸める方向**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3275
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3242
 msgid "``ROUNDING_DIRECTION``"
-msgstr "``ROUNDING_DIRECTION``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3276
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3243
 msgid "[list]"
 msgstr "[リスト]"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3279
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3246
 msgid "How to choose the target rounded value. Options are:"
 msgstr "値を丸める方法。オプションは次のとおり："
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3284
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3251
 msgid "**Number of decimals places**"
 msgstr "**小数点以下の桁数**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3285
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3252
 msgid "``DECIMAL_PLACES``"
-msgstr "``DECIMAL_PLACES``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3289
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3256
 msgid ""
 "Number of decimals places to round to. Use negative values to round cell "
 "values to a multiple of a base n"
 msgstr "丸める小数点以下の桁数。負の値を使用すると、セルの値を基数nの桁数で丸める"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3296
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3263
 msgid "Specification of the output file. One of:"
 msgstr "出力ファイルを指定します。次のいずれかです："
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3314
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3281
 msgid "**Base n for rounding to multiples of n**"
 msgstr "**基数**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3315
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3282
 msgid "``BASE_N``"
-msgstr "``BASE_N``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3319
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3286
 msgid ""
 "When the ``DECIMAL_PLACES`` parameter is negative, raster values are rounded"
 " to multiples of the base n value"
 msgstr "``DECIMAL_PLACES`` パラメータが負の場合は、ラスタの値は基数nの桁数で丸められる"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3336
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3303
 msgid "The output raster layer with values rounded for the selected band."
 msgstr "選択したバンドの値が丸められた出力ラスタレイヤ"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3341
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3308
 msgid "**Algorithm ID**: ``native:roundrastervalues``"
 msgstr "**アルゴリズムID**: ``native:roundrastervalues``"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3351
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3318
 msgid "Sample raster values"
 msgstr "ベクタレイヤにラスタ値を付加"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3352
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3319
 msgid ""
 "Extracts raster values at the point locations. If the raster layer is "
 "multiband, each band is sampled."
 msgstr "ポイントの位置におけるラスタ値を抽出します。ラスタレイヤがマルチバンドの場合には、各バンドの値がサンプリングされます。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3355
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3322
 msgid ""
 "The attribute table of the resulting layer will have as many new columns as "
 "the raster layer band count."
 msgstr "結果レイヤの属性テーブルには、ラスタレイヤのバンド数分の新しい列が追加されます。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3371
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3387
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3410
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3338
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3354
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3377
 msgid "[vector: point]"
 msgstr "[ベクタ：ポイント]"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3372
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3339
 msgid "Point vector layer to use for  sampling"
 msgstr "サンプリングに使用するポイントベクタレイヤ"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3374
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3341
 msgid "``RASTERCOPY``"
-msgstr "``RASTERCOPY``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3376
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3343
 msgid "Raster layer to sample at the given point locations."
 msgstr "与えられたポイント位置でサンプリングされるラスタレイヤ"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3377
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3463
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3542
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3344
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3430
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3509
 msgid "**Output column prefix**"
 msgstr "**ラスタ値を収納するカラム名の接頭辞**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3378
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3464
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3543
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3345
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3431
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3510
 msgid "``COLUMN_PREFIX``"
-msgstr "``COLUMN_PREFIX``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3382
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3349
 msgid "Prefix for the names of the added columns."
 msgstr "追加されるカラム名の接頭辞"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3390
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3357
 msgid "Specify the output layer containing the sampled values. One of:"
 msgstr "サンプリングされた値の出力レイヤを指定します。次のいずれかです："
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3411
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3378
 msgid "The output layer containing the sampled values."
 msgstr "サンプリングされた値の出力レイヤ"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3426
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3393
 msgid "Zonal histogram"
 msgstr "ゾーンヒストグラム"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3427
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3394
 msgid ""
 "Appends fields representing counts of each unique value from a raster layer "
 "contained within polygon features."
 msgstr "ポリゴン地物内に含まれるラスタレイヤの各ユニーク値の個数を表すフィールドを追加します。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3430
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3397
 msgid ""
 "The output layer attribute table will have as many fields as the unique "
 "values of the raster layer that intersects the polygon(s)."
 msgstr "出力レイヤの属性テーブルには、ポリゴンと交差するラスタレイヤのユニーク値の種類数分のフィールドが追加されます。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3436
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3403
 msgid "Raster layer histogram example"
 msgstr "ラスタレイヤのヒストグラムの例"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3452
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3535
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3419
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3502
 msgid "Input raster layer."
 msgstr "入力ラスタレイヤ"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3459
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3426
 msgid "**Vector layer containing zones**"
 msgstr "**ゾーンのベクタレイヤ**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3460
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3427
 msgid "``INPUT_VECTOR``"
-msgstr "``INPUT_VECTOR``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3461
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3473
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3496
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3530
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3570
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3593
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3428
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3440
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3463
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3497
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3537
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3560
 msgid "[vector: polygon]"
 msgstr "[ベクタ：ポリゴン]"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3462
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3429
 msgid "Vector polygon layer that defines the zones."
 msgstr "ゾーンを定義するベクタポリゴンレイヤ"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3469
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3436
 msgid "Default: 'HISTO\\_'"
 msgstr "デフォルト： 'HISTO\\_'"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3470
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3547
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3437
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3514
 msgid "Prefix for the output columns names."
 msgstr "出力カラム名の接頭辞"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3471
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3494
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3438
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3461
 msgid "**Output zones**"
 msgstr "**出力レイヤ**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3476
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3573
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3443
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3540
 msgid "Specify the output vector polygon layer. One of:"
 msgstr "出力ベクタポリゴンレイヤを指定します。次のいずれかです："
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3497
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3464
 msgid "The output vector polygon layer."
 msgstr "出力ベクタポリゴンレイヤ"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3512
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3479
 msgid "Zonal statistics"
 msgstr "ゾーン統計量（ベクタ）"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3513
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3480
 msgid ""
 "Calculates statistics of a raster layer for each feature of an overlapping "
 "polygon vector layer."
 msgstr "ラスタレイヤの統計量を、重なっているポリゴンベクタレイヤの地物ごとに計算します。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3531
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3498
 msgid "Vector polygon layer that contains the zones."
 msgstr "ゾーンを含むベクタポリゴンレイヤ"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3536
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3503
 msgid "**Raster band**"
 msgstr "**対象バンド**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3541
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3508
 msgid "If the raster is multiband, choose a band for the statistics."
 msgstr "ラスタがマルチバンドの場合には、統計量を計算したいバンドを選択してください。"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3546
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3513
 msgid "Default: '_'"
 msgstr "デフォルト： '_'"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3548
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3515
 msgid "**Statistics to calculate**"
 msgstr "**計算する統計量**"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3549
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3516
 msgid "``STATISTICS``"
-msgstr "``STATISTICS``"
+msgstr ""
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3550
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3517
 msgid "[enumeration] [list]"
 msgstr "[列挙型] [リスト]"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3552
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3519
 msgid "Default: [0,1,2]"
 msgstr "デフォルト： [0,1,2]"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3553
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3520
 msgid "List of statistical operator for the output. Options:"
 msgstr "出力する統計演算のリスト。オプションは以下のとおり："
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3556
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3523
 msgid "0 --- Count"
 msgstr "0 --- カウント（Count）"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3557
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3524
 msgid "1 --- Sum"
 msgstr "1 --- 合計"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3560
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3527
 msgid "4 --- St. dev."
 msgstr "4 --- 標準偏差"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3561
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3528
 msgid "5 --- Minimum"
 msgstr "5 --- 最小値"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3562
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3529
 msgid "6 --- Maximum"
 msgstr "6 --- 最大"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3563
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3530
 msgid "7 --- Range"
 msgstr "7 --- 範囲（Range）"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3564
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3531
 msgid "8 --- Minority"
 msgstr "8 --- 最稀値（Minority）"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3565
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3532
 msgid "9 --- Majority"
 msgstr "9 --- 最頻値（Majority）"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3566
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3533
 msgid "10 --- Variety"
 msgstr "10 --- 種類（Variety）"
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3567
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3534
 msgid "11 --- Variance"
 msgstr "11 --- 分散（Variance）"
 
@@ -3861,6 +4033,6 @@ msgstr "11 --- 分散（Variance）"
 msgid "Append to Layer…"
 msgstr "レイヤに追加..."
 
-#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3594
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3561
 msgid "The zone vector layer with added statistics."
 msgstr "統計量が追加されたゾーンのベクタレイヤ"

@@ -1,0 +1,342 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Transifex Bot <>, 2023
+# Harrissou Sant-anna, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:25+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2023\n"
+"Language-Team: Estonian (https://app.transifex.com/qgis/teams/6144/et/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: et\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:5
+msgid "Vector Attribute Data"
+msgstr "Vector Attribute Data"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:8
+msgid "|gentleLogo|"
+msgstr ""
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:8
+msgid "Objectives:"
+msgstr "Objectives:"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:8
+msgid ""
+"In this topic we describe how attribute data are associated with vector "
+"features and can be used to symbolise data."
+msgstr ""
+"In this topic we describe how attribute data are associated with vector "
+"features and can be used to symbolise data."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:10
+msgid "Keywords:"
+msgstr "Keywords:"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:10
+msgid "Attribute, database, fields, data, vector, symbology"
+msgstr "Attribute, database, fields, data, vector, symbology"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:14
+msgid "Overview"
+msgstr "Overview"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:16
+msgid ""
+"If every line on a map was the same colour, width, thickness, and had the "
+"same label, it would be very hard to make out what was going on. The map "
+"would also give us very little information. Take a look at "
+":numref:`figure_map_attributes` for example."
+msgstr ""
+"If every line on a map was the same colour, width, thickness, and had the "
+"same label, it would be very hard to make out what was going on. The map "
+"would also give us very little information. Take a look at "
+":numref:`figure_map_attributes` for example."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:26
+msgid ""
+"Maps come to life when colour and different symbols are used to help you to "
+"tell one type of feature from the next. Can you tell the difference between "
+"rivers, roads and contours using the map on the left? Using the map on the "
+"right it is much easier to see the different features."
+msgstr ""
+"Maps come to life when colour and different symbols are used to help you to "
+"tell one type of feature from the next. Can you tell the difference between "
+"rivers, roads and contours using the map on the left? Using the map on the "
+"right it is much easier to see the different features."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:31
+msgid ""
+"In this topic we will look at how attribute data can help us to make "
+"interesting and informative maps. In the previous topic on vector data, we "
+"briefly explained that **attribute data** are used to **describe vector "
+"features**. Take a look at the house pictures in :numref:`figure_house`."
+msgstr ""
+"In this topic we will look at how attribute data can help us to make "
+"interesting and informative maps. In the previous topic on vector data, we "
+"briefly explained that **attribute data** are used to **describe vector "
+"features**. Take a look at the house pictures in :numref:`figure_house`."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:42
+msgid ""
+"Every feature has characteristics that we can describe. These can be visible"
+" things, or things we know about the feature (e.g. year built)."
+msgstr ""
+"Every feature has characteristics that we can describe. These can be visible"
+" things, or things we know about the feature (e.g. year built)."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:45
+msgid ""
+"The geometry of these house features is a polygon (based on the floor plan "
+"of the house), the attributes we have recorded are roof colour, whether "
+"there is a balcony, and the year the house was built. Note that attributes "
+"don't have to be visible things --– they can describe things we know about "
+"the feature such as the year it was built. In a GIS Application, we can "
+"represent this feature type in a houses polygon layer, and the attributes in"
+" an attribute table (see :numref:`figure_house_gis`)."
+msgstr ""
+"The geometry of these house features is a polygon (based on the floor plan "
+"of the house), the attributes we have recorded are roof colour, whether "
+"there is a balcony, and the year the house was built. Note that attributes "
+"don't have to be visible things --– they can describe things we know about "
+"the feature such as the year it was built. In a GIS Application, we can "
+"represent this feature type in a houses polygon layer, and the attributes in"
+" an attribute table (see :numref:`figure_house_gis`)."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:58
+msgid ""
+"A houses layer. House features have attributes that describe the houses’ "
+"roof colour and other properties. The attribute table (lower image) lists "
+"the attributes for the house areas shown on the map. When a feature is "
+"highlighted in the table, it will appear as a yellow polygon on the map."
+msgstr ""
+"A houses layer. House features have attributes that describe the houses’ "
+"roof colour and other properties. The attribute table (lower image) lists "
+"the attributes for the house areas shown on the map. When a feature is "
+"highlighted in the table, it will appear as a yellow polygon on the map."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:63
+msgid ""
+"The fact that features have attributes as well geometry in a GIS Application"
+" opens up many possibilities. For example we can use the attribute values to"
+" tell the GIS what colours and style to use when drawing features (see "
+":numref:`figure_style_by_attribute`). The process of setting colours and "
+"drawing styles is often referred to as setting feature **symbology**."
+msgstr ""
+"The fact that features have attributes as well geometry in a GIS Application"
+" opens up many possibilities. For example we can use the attribute values to"
+" tell the GIS what colours and style to use when drawing features (see "
+":numref:`figure_style_by_attribute`). The process of setting colours and "
+"drawing styles is often referred to as setting feature **symbology**."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:75
+msgid ""
+"In a GIS Application, we can draw features differently depending on their "
+"attributes. On the left we have drawn house polygons with the same colour as"
+" the roof attribute. On the right we colour coded houses according to "
+"whether they have a balcony or not."
+msgstr ""
+"In a GIS Application, we can draw features differently depending on their "
+"attributes. On the left we have drawn house polygons with the same colour as"
+" the roof attribute. On the right we colour coded houses according to "
+"whether they have a balcony or not."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:80
+msgid ""
+"Attribute data can also be useful when creating **map labels**. Most GIS "
+"Applications will have a facility to select an attribute that should be used"
+" to label each feature."
+msgstr ""
+"Attribute data can also be useful when creating **map labels**. Most GIS "
+"Applications will have a facility to select an attribute that should be used"
+" to label each feature."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:84
+msgid ""
+"If you have ever **searched a map** for a place name or a specific feature, "
+"you will know how time consuming it can be. Having attribute data can make "
+"searching for a specific feature quick and easy. In "
+":numref:`figure_search_by_attribute` you can see an example of an attribute "
+"search in a GIS."
+msgstr ""
+"If you have ever **searched a map** for a place name or a specific feature, "
+"you will know how time consuming it can be. Having attribute data can make "
+"searching for a specific feature quick and easy. In "
+":numref:`figure_search_by_attribute` you can see an example of an attribute "
+"search in a GIS."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:95
+msgid ""
+"In a GIS Application, we can also search for features based on their "
+"attributes. Here we see a search for houses with black roofs. Results are "
+"shown in yellow in the map, turquoise on the table."
+msgstr ""
+"In a GIS Application, we can also search for features based on their "
+"attributes. Here we see a search for houses with black roofs. Results are "
+"shown in yellow in the map, turquoise on the table."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:99
+msgid ""
+"Finally, attribute data can be very useful in carrying out **spatial "
+"analysis**. Spatial analysis combines the spatial information stored in the "
+"geometry of features with their attribute information. This allows us to "
+"study features and how they relate to each other. There are many types of "
+"spatial analysis that can be carried out, for example, you could use GIS to "
+"find out how many red roofed houses occur in a particular area. If you have "
+"tree features, you could use GIS to try to find out which species might be "
+"affected if a piece of land is developed. We can use the attributes stored "
+"for water samples along a river course to understand where pollution is "
+"entering into the stream. The possibilities are endless! In a later topic we"
+" will be exploring spatial analysis in more detail."
+msgstr ""
+"Finally, attribute data can be very useful in carrying out **spatial "
+"analysis**. Spatial analysis combines the spatial information stored in the "
+"geometry of features with their attribute information. This allows us to "
+"study features and how they relate to each other. There are many types of "
+"spatial analysis that can be carried out, for example, you could use GIS to "
+"find out how many red roofed houses occur in a particular area. If you have "
+"tree features, you could use GIS to try to find out which species might be "
+"affected if a piece of land is developed. We can use the attributes stored "
+"for water samples along a river course to understand where pollution is "
+"entering into the stream. The possibilities are endless! In a later topic we"
+" will be exploring spatial analysis in more detail."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:110
+msgid ""
+"Before we move on to attribute data in more detail, let's take a quick "
+"recap."
+msgstr ""
+"Before we move on to attribute data in more detail, let's take a quick "
+"recap."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:112
+msgid ""
+"Features are real world things such as roads, property boundaries, "
+"electrical substation sites and so on. A **feature** has a **geometry** "
+"(which determines if it is a **point**, **polyline** or **polygon**) and "
+"**attributes** (which describe the feature). This is shown in "
+":numref:`figure_features_at_glance`."
+msgstr ""
+"Features are real world things such as roads, property boundaries, "
+"electrical substation sites and so on. A **feature** has a **geometry** "
+"(which determines if it is a **point**, **polyline** or **polygon**) and "
+"**attributes** (which describe the feature). This is shown in "
+":numref:`figure_features_at_glance`."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:123
+msgid "Vector features at a glance."
+msgstr "Vector features at a glance."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:126
+msgid "Attributes in detail"
+msgstr "Attributes in detail"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:128
+msgid ""
+"Attributes for a vector feature are stored in a **table**. A table is like a"
+" spreadsheet. Each column in the table is called a **field**. Each row in "
+"the table is a **record**. Table table_house_attributes_ shows a simple "
+"example of how an attribute table looks in a GIS. The records in the "
+"attribute table in a GIS each correspond to one feature. Usually the "
+"information in the attribute table is stored in some kind of database. The "
+"GIS application links the attribute records with the feature geometry so "
+"that you can find records in the table by selecting features on the map, and"
+" find features on the map by selecting features in the table."
+msgstr ""
+"Attributes for a vector feature are stored in a **table**. A table is like a"
+" spreadsheet. Each column in the table is called a **field**. Each row in "
+"the table is a **record**. Table table_house_attributes_ shows a simple "
+"example of how an attribute table looks in a GIS. The records in the "
+"attribute table in a GIS each correspond to one feature. Usually the "
+"information in the attribute table is stored in some kind of database. The "
+"GIS application links the attribute records with the feature geometry so "
+"that you can find records in the table by selecting features on the map, and"
+" find features on the map by selecting features in the table."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:141
+msgid "Attribute Table"
+msgstr "Attribute Table"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:141
+msgid "Field 1 : YearBuilt"
+msgstr "Field 1 : YearBuilt"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:141
+msgid "Field 2: RoofColour"
+msgstr "Field 2: RoofColour"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:141
+msgid "Field 3: Balcony"
+msgstr "Field 3: Balcony"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:143
+msgid "1998"
+msgstr "1998"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:145
+msgid "2000"
+msgstr "2000"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:147
+msgid "2001"
+msgstr "2001"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:260
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:297
+msgid "1"
+msgstr "1"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:262
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:299
+msgid "2"
+msgstr "2"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:264
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:301
+msgid "3"
+msgstr "3"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:266
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:303
+msgid "4"
+msgstr "4"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:268
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:305
+msgid "5"
+msgstr "5"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:270
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:307
+msgid "6"
+msgstr "6"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:272
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:309
+msgid "7"
+msgstr "7"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:274
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:311
+msgid "8"
+msgstr "8"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:276
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:313
+msgid "9"
+msgstr "9"

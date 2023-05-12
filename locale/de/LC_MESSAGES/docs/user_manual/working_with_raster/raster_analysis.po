@@ -2,24 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Harrissou Sant-anna, 2020
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-12 02:37+0000\n"
-"PO-Revision-Date: 2020-12-24 11:58+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2020\n"
-"Language-Team: German (https://www.transifex.com/qgis/teams/6144/de/)\n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:54+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.12.1\n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -32,53 +33,19 @@ msgstr "Rasteranalyse"
 msgid "Raster Calculator"
 msgstr "Rasterrechner"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:32
-msgid ""
-"The **Raster bands** list contains all loaded raster layers that can be "
-"used. To add a raster to the raster calculator expression field, double "
-"click its name in the Fields list. You can then use the operators to "
-"construct calculation expressions, or you can just type them into the box."
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:184
+msgid "checkbox"
 msgstr ""
-"Die **Rasterkanäle** Liste enthält alle geladenen Rasterlayer die benutzt "
-"werden können. Um einen Rasterlayer dem Rasterrechnerausdruck Feld "
-"hinzuzufügen, machen Sie einen Doppelklick auf seinen Namen in der Felder "
-"Liste. Sie können dann die Operatoren zum konstruieren von "
-"Berechnungsausdrücken benutzen oder Sie geben Sie einfach in die Box ein."
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:37
-msgid ""
-"In the **Result layer** section, you will need to define an output layer. "
-"You can then define the extent of the calculation area based on an input "
-"raster layer, or based on X,Y coordinates and on columns and rows, to set "
-"the resolution of the output layer. If the input layer has a different "
-"resolution, the values will be resampled with the nearest neighbor "
-"algorithm."
-msgstr ""
-"Im Abschnitt **Ergebnislayer** müssen Sie einen Ausgabelayer definieren. Sie"
-" können dann den Analysebereich auf Grundlage eines Eingaberasters oder "
-"basierend auf Min/Max X und Y-Koordinaten bzw. mittels Spalten und Zeilen "
-"angeben, um die Auflösung des Ausgabelayer festzulegen. Wenn die "
-"Eingabelayer eine abweichende Auflösung besitzen, werden die Werte auf Basis"
-" des nearest neighbor Algorithmus resampelt."
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:50
-msgid ""
-"With the |checkbox| :guilabel:`Add result to project` checkbox, the result "
-"layer will automatically be added to the legend area and can be visualized."
-msgstr ""
-"Mit dem Aktivieren des Kontrollkästchens |checkbox| :guilabel:`Ergebnis zum "
-"Projekt hinzufügen` wird der Ausgabelayer automatische der Legende "
-"hinzugefügt und kann somit visualisiert werden."
-
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:56
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:73
 msgid "Examples"
 msgstr "Beispiele"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:58
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:75
 msgid "**Convert elevation values from meters to feet**"
 msgstr "**Höhenwerte von Meter zu Fuß konvertieren**"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:60
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:77
 msgid ""
 "Creating an elevation raster in feet from a raster in meters, you need to "
 "use the conversion factor for meters to feet: 3.28. The expression is:"
@@ -87,11 +54,11 @@ msgstr ""
 "müssen Sie den Konvertierungsfaktor von Metern zu Fuß benutzen: 3.28. Der "
 "Ausdruck lautet:"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:67
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:84
 msgid "**Using a mask**"
 msgstr "**Eine Maske verwenden**"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:69
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:86
 msgid ""
 "If you want to mask out parts of a raster -- say, for instance, because you "
 "are only interested in elevations above 0 meters -- you can use the "
@@ -103,7 +70,7 @@ msgstr ""
 "Ausdruck zum Erstellen einer Maske und zum gleichzeitigen Anwenden auf den "
 "Rasterlayer verwenden."
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:77
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:94
 msgid ""
 "In other words, for every cell greater than or equal to 0 the conditional "
 "expression evaluates to 1, which keeps the original value by multiplying it "
@@ -115,7 +82,7 @@ msgstr ""
 " mit 1 beibehält, ansonsten wird der bedingte Ausdruck zu 0 ausgewertet, was"
 " den Rasterwert auf 0 setzt und die Maske im laufenden Betrieb erzeugt."
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:83
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:101
 msgid ""
 "If you want to classify a raster -- say, for instance into two elevation "
 "classes, you can use the following expression to create a raster with two "
@@ -125,7 +92,7 @@ msgstr ""
 "Höhenklassen, können Sie die folgenden Ausdrücke verwenden um ein Raster mit"
 " zwei Werten 1 und 2 in einem Schritt erstellen."
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:91
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:109
 msgid ""
 "In other words, for every cell less than 50 set its value to 1. For every "
 "cell greater than or equal 50 set its value to 2."
@@ -134,12 +101,12 @@ msgstr ""
 "auf 1 ein. Für jede Zelle mit einem Wert größer als oder gleich 50 stelle "
 "den Wert 2 ein. "
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:99
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:151
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:123
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:175
 msgid "Raster Alignment"
 msgstr "Raster Ausrichtung"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:101
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:125
 msgid ""
 "This tool is able to take several rasters as input and to align them "
 "perfectly, that means:"
@@ -147,38 +114,50 @@ msgstr ""
 "Dieses Tool ist in der Lage mehrere Raster als Eingabe zu nehmen und sie "
 "perfekt auszurichten, das heißt:"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:104
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:128
 msgid "reproject to the same CRS,"
 msgstr "auf gleichem KBS reprojizieren,"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:105
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:129
 msgid "resample to the same cell size and offset in the grid,"
 msgstr "zu derselben Zellengröße resamplen und in dem Gitter versetzen,"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:106
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:130
 msgid "clip to a region of interest,"
 msgstr "auf ein Interessengebiet schneiden,"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:107
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:131
 msgid "rescale values when required."
 msgstr "wenn erforderlich, Werte neu skalieren."
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:109
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:133
 msgid "All rasters will be saved in another files."
 msgstr "Alle Raster werden in anderen Dateien gespeichert."
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:117
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:186
+msgid "symbologyAdd"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:141
 msgid "**Nearest Neighbor**"
 msgstr "**Nächster Nachbar**"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:118
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:142
 msgid "**Bilinear (2x2 kernel)**"
 msgstr "**Bilinear (2x2 Kern)**"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:119
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:143
 msgid "**Cubic (4x4 kernel)**: Cubic Convolution Approximation"
 msgstr "**Kubisch (4x4 kernel)**: Cubic Convolution Approximation"
 
-#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:120
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:144
 msgid "**Cubic B-Spline (4x4 kernel)**: Cubic B-Spline Approximation"
 msgstr "**Kubisch B-Spline (4x4 kernel)**: Kubische B-Spline Annäherung"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:188
+msgid "symbologyEdit"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:190
+msgid "symbologyRemove"
+msgstr ""
