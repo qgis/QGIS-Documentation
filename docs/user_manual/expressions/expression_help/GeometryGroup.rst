@@ -184,7 +184,7 @@ Returns a geometry which represents the bounding box of an input geometry. Calcu
    * - Arguments
      - * **geometry** - a geometry
    * - Examples
-     - * ``bounds($geometry)`` → bounding box of the current feature's geometry
+     - * ``bounds(@geometry)`` → bounding box of the current feature's geometry
        * ``geom_to_wkt(bounds(geom_from_wkt('Polygon((1 1, 0 0, -1 1, 1 1))')))`` → 'Polygon ((-1 0, 1 0, 1 1, -1 1, -1 0))'
 
 
@@ -211,7 +211,7 @@ Returns the height of the bounding box of a geometry. Calculations are in the Sp
    * - Arguments
      - * **geometry** - a geometry
    * - Examples
-     - * ``bounds_height($geometry)`` → height of bounding box of the current feature's geometry
+     - * ``bounds_height(@geometry)`` → height of bounding box of the current feature's geometry
        * ``bounds_height(geom_from_wkt('Polygon((1 1, 0 0, -1 1, 1 1))'))`` → 1
 
 
@@ -232,7 +232,7 @@ Returns the width of the bounding box of a geometry. Calculations are in the Spa
    * - Arguments
      - * **geometry** - a geometry
    * - Examples
-     - * ``bounds_width($geometry)`` → width of bounding box of the current feature's geometry
+     - * ``bounds_width(@geometry)`` → width of bounding box of the current feature's geometry
        * ``bounds_width(geom_from_wkt('Polygon((1 1, 0 0, -1 1, 1 1))'))`` → 2
 
 
@@ -260,7 +260,7 @@ Returns a geometry that represents all points whose distance from this geometry 
        * **join** - join style for buffer. Valid values are 'round', 'bevel' or 'miter'.
        * **miter_limit** - miter distance limit, for use when the join style is set to 'miter'
    * - Examples
-     - * ``buffer($geometry, 10.5)`` → polygon of the current feature's geometry buffered by 10.5 units
+     - * ``buffer(@geometry, 10.5)`` → polygon of the current feature's geometry buffered by 10.5 units
 
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/buffer.png
@@ -315,7 +315,7 @@ Returns the geometric center of a geometry.
    * - Arguments
      - * **geometry** - a geometry
    * - Examples
-     - * ``centroid($geometry)`` → a point geometry
+     - * ``centroid(@geometry)`` → a point geometry
 
 
 .. end_centroid_section
@@ -900,7 +900,7 @@ Returns the Well-Known Binary (WKB) representation of a geometry
    * - Arguments
      - * **geometry** - a geometry
    * - Examples
-     - * ``geom_to_wkb( $geometry )`` → binary blob containing a geometry object
+     - * ``geom_to_wkb( @geometry )`` → binary blob containing a geometry object
 
 
 .. end_geom_to_wkb_section
@@ -963,9 +963,9 @@ Returns a feature's geometry.
    * - Arguments
      - * **feature** - a feature object
    * - Examples
-     - * `` geometry( $currentfeature )`` → the geometry of the current feature. Prefer using $geometry.
+     - * ``geometry( @feature )`` → the geometry of the current feature. Prefer using @geometry.
        * ``geom_to_wkt( geometry( get_feature_by_id( 'streets', 1 ) ) )`` → the geometry in WKT of the feature with the id 1 on the layer "streets", e.g. 'POINT(6 50)'
-       * ``intersects( $geometry, geometry( get_feature( 'streets', 'name', 'Main St.' ) ) )`` → TRUE if the current feature spatially intersects the 'Main St.' named feature in the "streets" layer
+       * ``intersects( @geometry, geometry( get_feature( 'streets', 'name', 'Main St.' ) ) )`` → TRUE if the current feature spatially intersects the 'Main St.' named feature in the "streets" layer
 
 
 .. end_geometry_section
@@ -1212,7 +1212,7 @@ Returns TRUE if a geometry is empty (without coordinates), false if the geometry
 is_empty_or_null
 ................
 
-Returns TRUE if a geometry is NULL or empty (without coordinates) or false otherwise. This function is like the expression '$geometry IS NULL or is_empty($geometry)'
+Returns TRUE if a geometry is NULL or empty (without coordinates) or false otherwise. This function is like the expression '@geometry IS NULL or is_empty(@geometry)'
 
 .. list-table::
    :widths: 15 85
@@ -1956,7 +1956,7 @@ Returns the number of vertices in a geometry.
    * - Arguments
      - * **geometry** - a geometry
    * - Examples
-     - * ``num_points($geometry)`` → number of vertices in the current feature's geometry
+     - * ``num_points(@geometry)`` → number of vertices in the current feature's geometry
 
 
 .. end_num_points_section
@@ -2002,10 +2002,10 @@ Returns a geometry formed by offsetting a linestring geometry to the side. Dista
        * **join** - join style for corners, where 1 = round, 2 = miter and 3 = bevel
        * **miter_limit** - limit on the miter ratio used for very sharp corners (when using miter joins only)
    * - Examples
-     - * ``offset_curve($geometry, 10.5)`` → line offset to the left by 10.5 units
-       * ``offset_curve($geometry, -10.5)`` → line offset to the right by 10.5 units
-       * ``offset_curve($geometry, 10.5, segments:=16, join:=1)`` → line offset to the left by 10.5 units, using more segments to result in a smoother curve
-       * ``offset_curve($geometry, 10.5, join:=3)`` → line offset to the left by 10.5 units, using a beveled join
+     - * ``offset_curve(@geometry, 10.5)`` → line offset to the left by 10.5 units
+       * ``offset_curve(@geometry, -10.5)`` → line offset to the right by 10.5 units
+       * ``offset_curve(@geometry, 10.5, segments:=16, join:=1)`` → line offset to the left by 10.5 units, using more segments to result in a smoother curve
+       * ``offset_curve(@geometry, 10.5, join:=3)`` → line offset to the left by 10.5 units, using a beveled join
 
 
 .. end_offset_curve_section
@@ -2029,7 +2029,7 @@ Orders the parts of a MultiGeometry by a given criteria
        * **orderby** - an expression string defining the order criteria
        * **ascending** - boolean, True for ascending, False for descending
    * - Examples
-     - * ``geom_to_wkt(order_parts(geom_from_wkt('MultiPolygon (((1 1, 5 1, 5 5, 1 5, 1 1)),((1 1, 9 1, 9 9, 1 9, 1 1)))'), 'area($geometry)', False))`` → 'MultiPolygon (((1 1, 9 1, 9 9, 1 9, 1 1)),((1 1, 5 1, 5 5, 1 5, 1 1)))'
+     - * ``geom_to_wkt(order_parts(geom_from_wkt('MultiPolygon (((1 1, 5 1, 5 5, 1 5, 1 1)),((1 1, 9 1, 9 9, 1 9, 1 1)))'), 'area(@geometry)', False))`` → 'MultiPolygon (((1 1, 9 1, 9 9, 1 9, 1 1)),((1 1, 5 1, 5 5, 1 5, 1 1)))'
        * ``geom_to_wkt(order_parts(geom_from_wkt('LineString(1 2, 3 2, 4 3)'), '1', True))`` → 'LineString(1 2, 3 2, 4 3)'
 
 
@@ -2107,7 +2107,7 @@ Read more on the underlying GEOS "Contains" predicate, as described in PostGIS `
        * ``overlay_contains('regions', name)`` → an array of names, for the regions contained in the current feature
        * ``array_to_string(overlay_contains('regions', name))`` → a string as a comma separated list of names, for the regions contained in the current feature
        * ``array_sort(overlay_contains(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions contained in the current feature and with a population greater than 10000
-       * ``overlay_contains(layer:='regions', expression:= geom_to_wkt($geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions contained in the current feature
+       * ``overlay_contains(layer:='regions', expression:= geom_to_wkt(@geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions contained in the current feature
 
 
 .. end_overlay_contains_section
@@ -2142,7 +2142,7 @@ Read more on the underlying GEOS "Crosses" predicate, as described in PostGIS `S
        * ``overlay_crosses('regions', name)`` → an array of names, for the regions crossed by the current feature
        * ``array_to_string(overlay_crosses('regions', name))`` → a string as a comma separated list of names, for the regions crossed by the current feature
        * ``array_sort(overlay_crosses(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions crossed by the current feature and with a population greater than 10000
-       * ``overlay_crosses(layer:='regions', expression:= geom_to_wkt($geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions crossed by the current feature
+       * ``overlay_crosses(layer:='regions', expression:= geom_to_wkt(@geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions crossed by the current feature
 
 
 .. end_overlay_crosses_section
@@ -2177,7 +2177,7 @@ Read more on the underlying GEOS "Disjoint" predicate, as described in PostGIS `
        * ``overlay_disjoint('regions', name)`` → an array of names, for the regions spatially disjoint from the current feature
        * ``array_to_string(overlay_disjoint('regions', name))`` → a string as a comma separated list of names, for the regions spatially disjoint from the current feature
        * ``array_sort(overlay_disjoint(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions spatially disjoint from the current feature and with a population greater than 10000
-       * ``overlay_disjoint(layer:='regions', expression:= geom_to_wkt($geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions spatially disjoint from the current feature
+       * ``overlay_disjoint(layer:='regions', expression:= geom_to_wkt(@geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions spatially disjoint from the current feature
 
 
 .. end_overlay_disjoint_section
@@ -2212,7 +2212,7 @@ Read more on the underlying GEOS "Equals" predicate, as described in PostGIS `ST
        * ``overlay_equals('regions', name)`` → an array of names, for the regions spatially equal to the current feature
        * ``array_to_string(overlay_equals('regions', name))`` → a string as a comma separated list of names, for the regions spatially equal to the current feature
        * ``array_sort(overlay_equals(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions spatially equal to the current feature and with a population greater than 10000
-       * ``overlay_equals(layer:='regions', expression:= geom_to_wkt($geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions spatially equal to the current feature
+       * ``overlay_equals(layer:='regions', expression:= geom_to_wkt(@geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions spatially equal to the current feature
 
 
 .. end_overlay_equals_section
@@ -2260,11 +2260,11 @@ Read more on the underlying GEOS "Intersects" predicate, as described in PostGIS
        * ``overlay_intersects('regions', name)`` → an array of names, for the regions intersected by the current feature
        * ``array_to_string(overlay_intersects('regions', name))`` → a string as a comma separated list of names, for the regions intersected by the current feature
        * ``array_sort(overlay_intersects(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions intersected by the current feature and with a population greater than 10000
-       * ``overlay_intersects(layer:='regions', expression:= geom_to_wkt($geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions intersected by the current feature
+       * ``overlay_intersects(layer:='regions', expression:= geom_to_wkt(@geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions intersected by the current feature
        * ``overlay_intersects(layer:='regions', min_overlap:=0.54)`` → TRUE if the current feature spatially intersects a region and the intersection area (of at least one of the parts in case of multipolygons) is greater or equal to 0.54
        * ``overlay_intersects(layer:='regions', min_inscribed_circle_radius:=0.54)`` → TRUE if the current feature spatially intersects a region and the intersection area maximum inscribed circle's radius (of at least one of the parts in case of multipart) is greater or equal to 0.54
-       * ``overlay_intersects(layer:='regions', expression:= geom_to_wkt($geometry), return_details:=true)`` → an array of maps containing 'id', 'result', 'overlap' and 'radius'
-       * ``overlay_intersects(layer:='regions', expression:= geom_to_wkt($geometry), sort_by_intersection_size:='des')`` → an array of geometries (in WKT) ordered by the overlap value in descending order
+       * ``overlay_intersects(layer:='regions', expression:= geom_to_wkt(@geometry), return_details:=true)`` → an array of maps containing 'id', 'result', 'overlap' and 'radius'
+       * ``overlay_intersects(layer:='regions', expression:= geom_to_wkt(@geometry), sort_by_intersection_size:='des')`` → an array of geometries (in WKT) ordered by the overlap value in descending order
 
 
 .. end_overlay_intersects_section
@@ -2336,7 +2336,7 @@ Read more on the underlying GEOS "Touches" predicate, as described in PostGIS `S
        * ``overlay_touches('regions', name)`` → an array of names, for the regions touched by the current feature
        * ``string_to_array(overlay_touches('regions', name))`` → a string as a comma separated list of names, for the regions touched by the current feature
        * ``array_sort(overlay_touches(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions touched by the current feature and with a population greater than 10000
-       * ``overlay_touches(layer:='regions', expression:= geom_to_wkt($geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions touched by the current feature
+       * ``overlay_touches(layer:='regions', expression:= geom_to_wkt(@geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions touched by the current feature
 
 
 .. end_overlay_touches_section
@@ -2371,7 +2371,7 @@ Read more on the underlying GEOS "Within" predicate, as described in PostGIS `ST
        * ``overlay_within('regions', name)`` → an array of names, for the regions containing the current feature
        * ``array_to_string(overlay_within('regions', name))`` → a string as a comma separated list of names, for the regions containing the current feature
        * ``array_sort(overlay_within(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions containing the current feature and with a population greater than 10000
-       * ``overlay_within(layer:='regions', expression:= geom_to_wkt($geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions containing the current feature
+       * ``overlay_within(layer:='regions', expression:= geom_to_wkt(@geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions containing the current feature
 
 
 .. end_overlay_within_section
@@ -2450,7 +2450,7 @@ Returns a point guaranteed to lie on the surface of a geometry.
    * - Arguments
      - * **geometry** - a geometry
    * - Examples
-     - * ``point_on_surface($geometry)`` → a point geometry
+     - * ``point_on_surface(@geometry)`` → a point geometry
 
 
 .. end_point_on_surface_section
@@ -2583,8 +2583,8 @@ Returns a rotated version of a geometry. Calculations are in the Spatial Referen
        * **center** - rotation center point. If not specified, the center of the geometry's bounding box is used.
        * **per_part** - apply rotation per part. If true, then rotation will apply around the center of each part's bounding box when the input geometry is multipart and an explicit rotation center point is not specified.
    * - Examples
-     - * ``rotate($geometry, 45, make_point(4, 5))`` → geometry rotated 45 degrees clockwise around the (4, 5) point
-       * ``rotate($geometry, 45)`` → geometry rotated 45 degrees clockwise around the center of its bounding box
+     - * ``rotate(@geometry, 45, make_point(4, 5))`` → geometry rotated 45 degrees clockwise around the (4, 5) point
+       * ``rotate(@geometry, 45)`` → geometry rotated 45 degrees clockwise around the center of its bounding box
 
 
 .. figure:: /docs/user_manual/expressions/expression_help/img/rotate.*
@@ -2636,8 +2636,8 @@ Returns a scaled version of a geometry. Calculations are in the Spatial Referenc
        * **y_scale** - y-axis scaling factor
        * **center** - scaling center point. If not specified, the center of the geometry's bounding box is used.
    * - Examples
-     - * ``scale($geometry, 2, 0.5, make_point(4, 5))`` → geometry scaled twice horizontally and halved vertically, around the (4, 5) point
-       * ``scale($geometry, 2, 0.5)`` → geometry twice horizontally and halved vertically, around the center of its bounding box
+     - * ``scale(@geometry, 2, 0.5, make_point(4, 5))`` → geometry scaled twice horizontally and halved vertically, around the (4, 5) point
+       * ``scale(@geometry, 2, 0.5)`` → geometry twice horizontally and halved vertically, around the center of its bounding box
 
 
 .. end_scale_section
@@ -2768,10 +2768,10 @@ Returns a geometry formed by buffering out just one side of a linestring geometr
        * **join** - join style for corners, where 1 = round, 2 = miter and 3 = bevel
        * **miter_limit** - limit on the miter ratio used for very sharp corners (when using miter joins only)
    * - Examples
-     - * ``single_sided_buffer($geometry, 10.5)`` → line buffered to the left by 10.5 units
-       * ``single_sided_buffer($geometry, -10.5)`` → line buffered to the right by 10.5 units
-       * ``single_sided_buffer($geometry, 10.5, segments:=16, join:=1)`` → line buffered to the left by 10.5 units, using more segments to result in a smoother buffer
-       * ``single_sided_buffer($geometry, 10.5, join:=3)`` → line buffered to the left by 10.5 units, using a beveled join
+     - * ``single_sided_buffer(@geometry, 10.5)`` → line buffered to the left by 10.5 units
+       * ``single_sided_buffer(@geometry, -10.5)`` → line buffered to the right by 10.5 units
+       * ``single_sided_buffer(@geometry, 10.5, segments:=16, join:=1)`` → line buffered to the left by 10.5 units, using more segments to result in a smoother buffer
+       * ``single_sided_buffer(@geometry, 10.5, join:=3)`` → line buffered to the left by 10.5 units, using a beveled join
 
 
 .. end_single_sided_buffer_section
@@ -3029,7 +3029,7 @@ Returns a translated version of a geometry. Calculations are in the Spatial Refe
        * **dx** - delta x
        * **dy** - delta y
    * - Examples
-     - * ``translate($geometry, 5, 10)`` → a geometry of the same type like the original one
+     - * ``translate(@geometry, 5, 10)`` → a geometry of the same type like the original one
 
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/translate_geometry.png
@@ -3247,7 +3247,7 @@ Returns the x coordinate of a point geometry, or the x coordinate of the centroi
      - * **geometry** - a geometry
    * - Examples
      - * ``x( geom_from_wkt( 'POINT(2 5)' ) )`` → 2
-       * ``x( $geometry )`` → x coordinate of the current feature's centroid
+       * ``x( @geometry )`` → x coordinate of the current feature's centroid
 
 
 .. end_x_section
@@ -3367,7 +3367,7 @@ Returns the y coordinate of a point geometry, or the y coordinate of the centroi
      - * **geometry** - a geometry
    * - Examples
      - * ``y( geom_from_wkt( 'POINT(2 5)' ) )`` → 5
-       * ``y( $geometry )`` → y coordinate of the current feature's centroid
+       * ``y( @geometry )`` → y coordinate of the current feature's centroid
 
 
 .. end_y_section

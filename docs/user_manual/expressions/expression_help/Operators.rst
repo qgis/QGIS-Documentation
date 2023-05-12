@@ -390,7 +390,7 @@ Returns TRUE if a is the same as b.
        * ``4 IS 4`` → TRUE
        * ``4 IS 2+2`` → TRUE
        * ``4 IS 2`` → FALSE
-       * ``$geometry IS NULL`` → 0, if your geometry is not NULL
+       * ``@geometry IS NULL`` → 0, if your geometry is not NULL
 
 
 .. end_IS_section

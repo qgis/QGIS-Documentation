@@ -153,7 +153,7 @@ If the function is called with both a layer and a feature, it will evaluate the 
        * **evaluate** - If the expression must be evaluated. If false, the expression will be returned as a string literal only (which could potentially be later evaluated using the 'eval' function).
    * - Examples
      - * ``display_expression( 'streets', get_feature_by_id('streets', 1))`` → The display expression of the feature with the ID 1 on the layer 'streets'.
-       * ``display_expression('a_layer_id', $currentfeature, 'False')`` → The display expression of the given feature not evaluated.
+       * ``display_expression('a_layer_id', @feature, 'False')`` → The display expression of the given feature not evaluated.
 
 
 .. end_display_expression_section
@@ -418,7 +418,7 @@ If the function is called with both a layer and a feature, it will evaluate the 
        * **evaluate** - If the expression must be evaluated. If false, the expression will be returned as a string literal only (which could potentially be later evaluated using the 'eval_template' function).
    * - Examples
      - * ``maptip('streets', get_feature_by_id('streets', 1))`` → The maptip of the feature with the ID 1 on the layer 'streets'.
-       * ``maptip('a_layer_id', $currentfeature, 'False')`` → The maptip of the given feature not evaluated.
+       * ``maptip('a_layer_id', @feature, 'False')`` → The maptip of the given feature not evaluated.
 
 
 .. end_maptip_section
