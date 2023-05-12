@@ -40,7 +40,7 @@ To set snapping options:
    .. figure:: img/zoom_to.png
       :align: center
 
-#. Digitize this new (fictional) area:
+#. Digitize this new (fictional) area shown in red:
 
    .. figure:: img/new_park_area.png
       :align: center
