@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"POT-Creation-Date: 2023-05-09 10:03+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
 "Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2023\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
@@ -70,12 +70,6 @@ msgstr ""
 
 #: ../../docs/documentation_guidelines/do_translations.rst:30
 msgid ""
-"These \"originals\" are then copied by the script to the :file:`locale` "
-"folders for other languages."
-msgstr "스크립트가 다른 언어용 :file:`locale` 폴더에 이 \"원본\" 을 복사합니다."
-
-#: ../../docs/documentation_guidelines/do_translations.rst:32
-msgid ""
 "The sentences in the :file:`.po` files are pushed to the Transifex web "
 "platform, and made available for translators who can begin to translate from"
 " English to their language with the editor."
@@ -83,50 +77,70 @@ msgstr ""
 ":file:`.po` 파일에 있는 문장들이 Transifex 웹 플랫폼으로 푸시되어, 번역자가 편집기를 통해 영어에서 자신의 언어로 "
 "번역을 시작할 수 있게 됩니다."
 
+#: ../../docs/documentation_guidelines/do_translations.rst:33
+msgid ""
+"When a file is translated at 100%, the translated strings are automatically "
+"pulled back to the documentation repository, under :file:`/QGIS-"
+"Documentation/locale/<language>`."
+msgstr ""
+"파일 번역율이 100%에 도달하면, 번역된 문자열을 자동으로 :file:`/QGIS-"
+"Documentation/locale/<language>` 에 있는 문서 저장소로 다시 끌어옵니다."
+
 #: ../../docs/documentation_guidelines/do_translations.rst:35
-msgid "At the end of the day, a script pulls back all validated translations"
-msgstr "가장 중요한 것은, 스크립트가 검증된 모든 번역을 가져온다(pull back)는 것입니다."
-
-#: ../../docs/documentation_guidelines/do_translations.rst:36
 msgid ""
-"At the next build of the documentation (which occurs at least once a day), a"
-" script reuses the sentences to create translated output"
-msgstr "다음 문서 빌드시 (하루에 적어도 한 번은 빌드합니다) 스크립트가 문장들을 재사용해서 번역된 산출물을 생성합니다."
-
-#: ../../docs/documentation_guidelines/do_translations.rst:38
-msgid ""
-"When afterwards an :file:`.rst` document is updated a new :file:`.po` file "
-"is created in the English part. The contents of this new file will be merged"
-" with already existing :file:`.po` files for each language. This means that "
-"when a new line is added to an :file:`.rst` document that was already "
-"translated, only the new/updated sentences are added in the translated "
-":file:`.po` file and needs to be translated. The amount of work for updating"
-" translations for next release should be relatively small."
+"At the next build of the documentation (which occurs at least once a day -- "
+"see time at the bottom of the page), a script reuses the sentences to create"
+" translated output."
 msgstr ""
-"이후 :file:`.rst` 문서가 업데이트되면 영어 폴더에도 새 :file:`.po` 파일이 생성됩니다. 이 새 파일의 내용은 각 "
-"언어의 기존 :file:`.po` 파일과 합쳐질 것입니다. 즉 이전에 번역된 :file:`.rst` 문서에 새 문장이 추가될 경우, "
-"새로운/업데이트된 문장만 번역된 :file:`.po` 파일에 추가되고 이 추가된 문장을 번역해야 한다는 뜻입니다. 다음 배포판을 위해 "
-"업데이트된 내용을 번역하는 데 필요한 작업량은 상대적으로 적을 것입니다."
+"다음 문서 빌드 시 (하루에 적어도 한 번은 빌드합니다 -- 이 페이지 하단에서 시간을 확인해보세요) 스크립트가 문장들을 재사용해서 "
+"번역된 산출물을 생성합니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:46
+#: ../../docs/documentation_guidelines/do_translations.rst:37
 msgid ""
-"The process above is the same followed to translate QGIS website, QGIS "
-"Desktop and QGIS Server. The difference with the applications is that "
-"instead of :file:`.po` files, all the translatable strings in the "
-":file:`.py`, :file:`.cpp`, :file:`.yaml` and others... files that shape the "
-"application are pushed to and pulled from transifex as a single :file:`.ts` "
-"file."
+"For files not fully translated, a script pulls every two weeks translated "
+"strings from Transifex to Github and these are as well published at the next"
+" build."
 msgstr ""
-"QGIS 웹사이트, QGIS 데스크탑, 그리고 QGIS 서버를 번역할 때 앞에서 설명한 이런 과정을 동일하게 따라야 합니다. 응용 "
-"프로그램의 경우 다른 점은 :file:`.po` 파일 대신, 응용 프로그램을 구성하는 :file:`.py`, :file:`.cpp`, "
-":file:`.yaml`, 그리고 기타 파일들에서 번역 가능한 모든 문자열을 단일 :file:`.ts` 파일로 Transifex에 "
-"푸시하고 풀백한다는 점입니다."
+"100% 번역되지 않은 파일의 경우, 스크립트가 2주마다 트랜시펙스(Transifex)에서 깃허브로 번역된 문자열들을 끌어와서 다음 빌드"
+" 시 번역된 문자열도 반영합니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:52
+#: ../../docs/documentation_guidelines/do_translations.rst:39
+msgid ""
+"Whenever an :file:`.rst` file is updated, the English :file:`.po` file is "
+"updated and the changes are pushed to the corresponding file in Transifex. "
+"This means that when a new paragraph is added to an :file:`.rst` document "
+"that was already translated, only the new/updated sentences are added to the"
+" translated :file:`.po` file and needs to be translated."
+msgstr ""
+":file:`.rst` 파일이 업데이트될 때마다, 영문 :file:`.po` 파일을 업데이트해서 Transifex에 있는 대응 파일로 "
+"변경 사항을 밀어냅니다. 즉 이미 번역된 :file:`.rst` 문서에 새로운 문단이 추가되는 경우, 새로운 또는 업데이트된 문장들만 "
+"번역된 :file:`.po` 파일에 추가되고 번역되어야 한다는 뜻입니다."
+
+#: ../../docs/documentation_guidelines/do_translations.rst:45
+msgid "Translating QGIS Desktop specificities"
+msgstr "QGIS 데스크탑 번역의 특징"
+
+#: ../../docs/documentation_guidelines/do_translations.rst:47
+msgid ""
+"The main difference with translating QGIS applications is that instead of "
+":file:`.po` files, all the translatable strings in the :file:`.py`, "
+":file:`.cpp`, :file:`.yaml` files that shape a particular version of the "
+"application are pushed to and pulled from Transifex as a single :file:`.ts` "
+"file (e.g. ``qgis-application/qgis_en.ts (branch release-3_30)`` ). "
+"Translations are pulled to Github in development branch (daily), and at "
+"release time (for every released versions)."
+msgstr ""
+"QGIS 응용 프로그램을 번역하는 데 있어 가장 중요한 차이점은, 응용 프로그램의 특정 버전을 형성하는 :file:`.py`, "
+":file:`.cpp`, :file:`.yaml` 파일에 들어 있는 번역할 수 있는 모든 문자열을 Transifex에서 "
+":file:`.po` 파일들이 아니라 단일 :file:`.ts` 파일 하나로 (예: ``qgis-application/qgis_ko.ts"
+" (branch release-3_30)`` ) 밀어내고 끌어온다는 점입니다. (모든 배포된 버전의) 배포 시간에 (매일) 깃허브의 개발"
+" 분기로 번역된 문자열을 끌어옵니다."
+
+#: ../../docs/documentation_guidelines/do_translations.rst:54
 msgid "Two different tools are currently used to do translations in QGIS:"
 msgstr "현재 QGIS를 번역하는 데 쓰이는 도구는 두 가지입니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:54
+#: ../../docs/documentation_guidelines/do_translations.rst:56
 msgid ""
 "The `Transifex web platform <https://www.transifex.com/>`_, the easiest and "
 "recommended way to translate QGIS, transparently does the process described "
@@ -138,7 +152,7 @@ msgstr ""
 "앞에서 설명한 과정을 투명하게 보여주며, 번역할 수 있는 모든 텍스트를 번역자를 위해 한 곳에 모아 줍니다. 번역자는 원하는 파일을 골라"
 " 번역하기만 하면 됩니다. 번역된 파일은 다음 배포판이 푸시될 때까지 플랫폼에 저장됩니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:59
+#: ../../docs/documentation_guidelines/do_translations.rst:61
 msgid ""
 "`Qt Linguist <https://doc.qt.io/qt-5/qtlinguist-index.html>`_, a Qt "
 "development tool, requires the translator to pull locally the :file:`.po` "
@@ -148,16 +162,16 @@ msgstr ""
 "사용하면, 번역자가 로컬 환경에서 소스 코드로부터 :file:`.po` (또는 :file:`.ts`) 파일을 가져와 번역한 다음 다시 "
 "푸시해야 합니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:64
+#: ../../docs/documentation_guidelines/do_translations.rst:66
 msgid ""
 "Note that whatever tool you choose, rules of translations are the same."
 msgstr "어떤 도구를 선택하든, 번역 규칙은 동일하다는 사실을 명심하십시오."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:69
+#: ../../docs/documentation_guidelines/do_translations.rst:71
 msgid "Translate a file"
 msgstr "파일 번역"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:71
+#: ../../docs/documentation_guidelines/do_translations.rst:73
 msgid ""
 "To explain how translation works, we will use the heatmap plugin as an "
 "example. In this example we will translate it from English to Dutch, but it "
@@ -166,49 +180,49 @@ msgstr ""
 "어떻게 번역 작업을 해야 하는지 설명하기 위해, 열지도 플러그인을 예시로 이용하겠습니다. 이 예시를 영어에서 네덜란드 어로 번약할 텐데,"
 " 모든 언어의 다른 문서를 번역할 때도 실질적으로 동일합니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:75
+#: ../../docs/documentation_guidelines/do_translations.rst:77
 msgid "The source of the document can be found here:"
 msgstr "문서의 소스를 다음 위치에서 찾을 수 있습니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:81
+#: ../../docs/documentation_guidelines/do_translations.rst:83
 msgid "So why did I choose this document?"
 msgstr "어째서 이 문서를 예시로 선택했을까요?"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:83
+#: ../../docs/documentation_guidelines/do_translations.rst:85
 msgid "It includes images, captions, headers, references and replacements."
 msgstr "이 문서는 이미지, 캡션, 헤더, 참조 및 별명(replacement)도 포함하고 있기 때문이고,"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:84
+#: ../../docs/documentation_guidelines/do_translations.rst:86
 msgid "I wrote it so it is easier for me to translate ;-)"
 msgstr "내가 직접 작성했으니 번역하기도 쉽기 때문이지요 ;-)"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:86
+#: ../../docs/documentation_guidelines/do_translations.rst:88
 msgid ""
 "The build process has created the English :file:`.po` file which can be "
 "found here::"
 msgstr "빌드 과정에서 영어 :file:`.po` 파일이 생성되는데, 다음 위치에서 이 파일을 찾을 수 있습니다:"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:90
+#: ../../docs/documentation_guidelines/do_translations.rst:92
 msgid ""
 "The equivalent Dutch :file:`.po` file (basically a copy) can be found here::"
 msgstr "이에 대응하는 네덜란드어 :file:`.po` 파일은 (기본적으로 복사본입니다) 다음 위치에 있습니다:"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:94
+#: ../../docs/documentation_guidelines/do_translations.rst:96
 msgid ""
 "Along this file you will see a tiny :file:`.mo` file which indicates that it"
 " does not hold any translations yet."
 msgstr ""
 "이 파일 옆에 아주 작은 :file:`.mo` 파일도 함께 있을 것이며 이것은 어떤 번역도 이루어지지 않았다는 것을 뜻합니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:101
+#: ../../docs/documentation_guidelines/do_translations.rst:103
 msgid "Translation in Transifex"
 msgstr "Transifex에서 번역"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:103
+#: ../../docs/documentation_guidelines/do_translations.rst:105
 msgid "In order to translate using Transifex, you need to:"
 msgstr "Transifex를 통해 번역하기 위해 필요한 작업:"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:105
+#: ../../docs/documentation_guidelines/do_translations.rst:107
 msgid ""
 "`create an account on Transifex and join the QGIS project "
 "<https://qgis.org/en/site/getinvolved/translate.html#join-a-project>`_."
@@ -217,7 +231,7 @@ msgstr ""
 "<https://qgis.org/en/site/getinvolved/translate.html#join-a-project>`_ 해야 "
 "합니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:107
+#: ../../docs/documentation_guidelines/do_translations.rst:109
 msgid ""
 "Once you are part of a language team, click on the corresponding project (in"
 " this case ``QGIS Documentation``). A list of available languages with their"
@@ -226,15 +240,15 @@ msgstr ""
 "번역자가 언어팀의 일원이 되었다면, 대응하는 프로젝트를 (이 경우 ``QGIS Documentation`` 을) 클릭하십시오. 번역할 수"
 " 있는 언어들이 번역률과 함께 표시됩니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:116
+#: ../../docs/documentation_guidelines/do_translations.rst:118
 msgid "Select language for translation in the Transifex menu"
 msgstr "Transifex 메뉴에서 번역할 언어 선택하기"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:118
+#: ../../docs/documentation_guidelines/do_translations.rst:120
 msgid "Hover over your language and click either:"
 msgstr "번역자의 언어 위에 마우스를 가져가서 클릭하면:"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:120
+#: ../../docs/documentation_guidelines/do_translations.rst:122
 msgid ""
 ":guilabel:`View resources`: translatable :file:`.po` files with their ratio "
 "of translation, number of strings and some more metadata are now displayed."
@@ -242,13 +256,13 @@ msgstr ""
 ":guilabel:`View resources`: 번역 가능한 :file:`.po` 파일이 번역률, 문자열 개수 및 기타 메타데이터와 "
 "함께 표시되거나"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:122
+#: ../../docs/documentation_guidelines/do_translations.rst:124
 msgid ""
 "or :guilabel:`Translate`: opens the interface of translation with all the "
 "available :file:`.po` files"
 msgstr ":guilabel:`Translate`: 번역 인터페이스가 번역할 수 있는 모든 :file:`.po` 파일과 함께 열립니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:124
+#: ../../docs/documentation_guidelines/do_translations.rst:126
 msgid ""
 "Identify the file you'd like to translate (in our case we are looking for "
 "the ``docs_user-manual_plugins_plugins-heatmap``, the heatmap plugin file) "
@@ -259,7 +273,7 @@ msgstr ""
 "파일) 또는 번역이 완료되지 않은 아무 파일을 식별해서 클릭하십시오. 파일에 있는 문자열들을 불러와서 인터페이스를 통해 필터링하거나 "
 "번역하거나 번역을 제안하거나 등등의 작업을 할 수 있습니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:129
+#: ../../docs/documentation_guidelines/do_translations.rst:131
 msgid ""
 "For the documentation or the website, clicking the ``Fix me`` link in the "
 "footer of a page brings you directly to its corresponding translation page "
@@ -268,13 +282,13 @@ msgstr ""
 "문서 또는 웹사이트의 경우, 페이지의 푸터(footer)에 있는 ``Fix me`` 링크를 클릭하면 Transifex에 있는 해당 "
 "페이지의 번역 페이지로 직접 연결됩니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:133
+#: ../../docs/documentation_guidelines/do_translations.rst:135
 msgid ""
 "All you need to do is select each text and translate following the "
 ":ref:`guidelines <translate_manual>`."
 msgstr "번역자는 각 텍스트를 선택해서 :ref:`지침 <translate_manual>` 을 따라 번역하기만 하면 됩니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:136
+#: ../../docs/documentation_guidelines/do_translations.rst:138
 msgid ""
 "For further information on the use of Transifex Web Editor, see "
 "https://help.transifex.com/en/articles/6318216-translating-with-the-web-"
@@ -284,15 +298,15 @@ msgstr ""
 "https://help.transifex.com/en/articles/6318216-translating-with-the-web-"
 "editor 를 참조하십시오."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:143
+#: ../../docs/documentation_guidelines/do_translations.rst:145
 msgid "Translation in Qt Linguist"
 msgstr "Qt Linguist로 번역"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:145
+#: ../../docs/documentation_guidelines/do_translations.rst:147
 msgid "With Qt Linguist, you need to:"
 msgstr "Qt Linguist를 사용하는 경우, 다음 작업이 필요합니다:"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:147
+#: ../../docs/documentation_guidelines/do_translations.rst:149
 msgid ""
 "manually grab the :file:`.po` or :file:`.ts`  file(s). This can be achieved "
 "by downloading the file(s) either from Transifex platform or from the "
@@ -301,15 +315,15 @@ msgstr ""
 ":file:`.po` 또는 :file:`.ts` 파일(들)을 직접 가져오십시오. Transifex 플랫폼 또는 (깃허브에 있는) 소스 "
 "저장소의 :file:`locale/$language` 폴더에서 파일(들)을 다운로드할 수 있습니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:150
+#: ../../docs/documentation_guidelines/do_translations.rst:152
 msgid "proceed to the translation locally"
 msgstr "로컬 환경에서 번역을 진행하십시오."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:151
+#: ../../docs/documentation_guidelines/do_translations.rst:153
 msgid "upload the modified files to their sources (Transifex or GitHub)."
 msgstr "수정된 파일을 대응하는 소스로 (Transifex 또는 깃허브로) 업로드하십시오."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:153
+#: ../../docs/documentation_guidelines/do_translations.rst:155
 msgid ""
 "While downloading and uploading translatable files can be done with "
 "Transifex, it's not advised to use this process. Since there's no versioning"
@@ -321,24 +335,24 @@ msgstr ""
 "관리 시스템이 없기 때문에, 번역자가 업로드한 파일이 기존 파일을 대체할 뿐입니다. 번역자가 작업하는 동안 다른 사람들이 적용시켰을 수도"
 " 있는 수정 사항들을 덮어쓸 위험이 있습니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:159
+#: ../../docs/documentation_guidelines/do_translations.rst:161
 msgid ""
 "When you open the file in Qt Linguist for the first time you will see the "
 "following dialog:"
 msgstr "처음으로 Qt Linguist에서 파일을 열었을 때 다음 대화창이 뜰 것입니다:"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:167
+#: ../../docs/documentation_guidelines/do_translations.rst:169
 msgid "Select language for translation in linguist menu"
 msgstr "Qt Linguist 메뉴에서 번역할 언어 선택하기"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:170
+#: ../../docs/documentation_guidelines/do_translations.rst:172
 msgid ""
 "The Target language should be filled correctly. The Source language can be "
 "left as is with language POSIX and Country/Region on Any Country."
 msgstr ""
 "목표 언어를 정확하게 선택해야 합니다. 소스 언어는 언어 POSIX, 국가/지역 Any Country를 그대로 놔두어도 상관없습니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:173
+#: ../../docs/documentation_guidelines/do_translations.rst:175
 msgid ""
 "When you press the :guilabel:`OK` button Qt Linguist is filled with "
 "sentences and you can start translating, see "
@@ -347,15 +361,15 @@ msgstr ""
 ":guilabel:`OK` 버튼을 클릭하면 Qt Linguist에 문장이 채워져 번역을 시작할 수 있습니다. "
 ":numref:`Figure_translation_menu` 을 참조하십시오."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:183
+#: ../../docs/documentation_guidelines/do_translations.rst:185
 msgid "Translate using the linguist menu"
 msgstr "Qt Linguist 메뉴를 사용해 번역하기"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:185
+#: ../../docs/documentation_guidelines/do_translations.rst:187
 msgid "In the menu you see the following buttons which are convenient to use."
 msgstr "메뉴에 사용하기에 편리한 다음 버튼들이 있습니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:187
+#: ../../docs/documentation_guidelines/do_translations.rst:189
 msgid ""
 "|linguist_done_next| The Translation Done Next button, is the most important"
 " button. If the item needs translation, you enter a translation in the text "
@@ -367,31 +381,31 @@ msgstr ""
 "항목을 번역해야 할 경우, 텍스트 영역에 번역을 입력한 다음 이 버튼을 클릭하십시오. 번역해야 할 항목이 아니라면 번역 텍스트 영역을 "
 "비워놓은 채 역시 이 버튼을 클릭하십시오. 항목 번역을 완료했고 다음 항목을 이어서 번역하겠다는 의미입니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:381
+#: ../../docs/documentation_guidelines/do_translations.rst:383
 msgid "linguist_done_next"
 msgstr "linguist_done_next"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:192
+#: ../../docs/documentation_guidelines/do_translations.rst:194
 msgid ""
 "|linguist_previous| The Goto Previous button, can be used to go to the "
 "previous translation item."
 msgstr "|linguist_previous| 이전 항목(Goto Previous) 버튼은 이전에 번역한 항목으로 가는 데 쓰입니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:387
+#: ../../docs/documentation_guidelines/do_translations.rst:389
 msgid "linguist_previous"
 msgstr "linguist_previous"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:194
+#: ../../docs/documentation_guidelines/do_translations.rst:196
 msgid ""
 "|linguist_next| The Goto Next button, can be used to go to the next "
 "translation item."
 msgstr "|linguist_next| 다음 항목(Goto Next) 버튼은 다음에 번역할 항목으로 가는 데 쓰입니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:383
+#: ../../docs/documentation_guidelines/do_translations.rst:385
 msgid "linguist_next"
 msgstr "linguist_next"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:196
+#: ../../docs/documentation_guidelines/do_translations.rst:198
 msgid ""
 "|linguist_next_todo| The Next Todo button, jumps to the first translation "
 "item that still needs a translation. Handy when the original document has "
@@ -400,11 +414,11 @@ msgstr ""
 "|linguist_next_todo| 다음 할 일(Next Todo) 버튼은 번역해야 할 다음 첫 번째 항목으로 넘어갑니다. 원본 문서가"
 " 변경돼 새로운/업데이트된 문장들만 번역해야 할 경우 유용합니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:385
+#: ../../docs/documentation_guidelines/do_translations.rst:387
 msgid "linguist_next_todo"
 msgstr "linguist_next_todo"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:199
+#: ../../docs/documentation_guidelines/do_translations.rst:201
 msgid ""
 "|linguist_previous_todo| The Previous Todo button, searches backward and "
 "jumps to the first translation item it finds that still needs a translation."
@@ -412,11 +426,11 @@ msgstr ""
 "|linguist_previous_todo| 이전 할 일(Previous Todo) 버튼은 이전 방향으로 검색해서 번역해야 할 첫 번째 "
 "항목으로 넘어갑니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:389
+#: ../../docs/documentation_guidelines/do_translations.rst:391
 msgid "linguist_previous_todo"
 msgstr "linguist_previous_todo"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:202
+#: ../../docs/documentation_guidelines/do_translations.rst:204
 msgid ""
 "For further information on the use of Qt Linguist, see "
 "https://doc.qt.io/qt-5/linguist-translators.html"
@@ -424,7 +438,7 @@ msgstr ""
 "Qt Languist 사용에 대한 자세한 내용은 https://doc.qt.io/qt-5/linguist-translators.html "
 "을 보십시오."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:207
+#: ../../docs/documentation_guidelines/do_translations.rst:209
 msgid ""
 "If you want to download content to translate from the source repository, "
 "never do this in the ``master`` branch. For translations there are always "
@@ -436,15 +450,15 @@ msgstr ""
 " 대한 영어 문서가 완전히 업데이트되고 나면, 작업할 수 있는 번역 분기가 언제나 존재합니다. 예를 들어, QGIS 2.8 버전의 사용자"
 " 설명서를 번역하려면 manual_en_v2.8 분기를 이용해야만 합니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:217
+#: ../../docs/documentation_guidelines/do_translations.rst:219
 msgid "Translate a manual"
 msgstr "사용자 지침서 번역"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:219
+#: ../../docs/documentation_guidelines/do_translations.rst:221
 msgid "Now we start to translate the plugin_heatmap manual!"
 msgstr "이제 열지도 플러그인 설명서를 번역해봅시다!"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:221
+#: ../../docs/documentation_guidelines/do_translations.rst:223
 msgid ""
 "Translating most of the sentences should be straightforward. During this "
 "translation session I will point out which parts (rst statements) need "
@@ -453,15 +467,15 @@ msgstr ""
 "대부분의 문장은 번역하는 데 복잡하지 않을 겁니다. 이 번역 과정에서는 어떤 부분(reST 표현)에 특별한 번역이 필요한지 "
 "짚어보겠습니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:225
+#: ../../docs/documentation_guidelines/do_translations.rst:227
 msgid "Below we see an interesting sentence to translate:"
 msgstr "다음에 번역할 문단이 흥미로워 보이는군요."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:235
+#: ../../docs/documentation_guidelines/do_translations.rst:237
 msgid "This sentence contains two rst statements:"
 msgstr "이 문단은 reST 표현을 두 개 담고 있습니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:237
+#: ../../docs/documentation_guidelines/do_translations.rst:239
 msgid ""
 "``|heatmap|`` words between ``|`` are replacements and these should never be"
 " translated! This will be replaced by the heatmap plugin icon!"
@@ -469,7 +483,7 @@ msgstr ""
 "``|heatmap|`` : ``|`` 사이에 있는 단어들은 별명으로, 이 단어들을 번역해서는 안 됩니다! 이 표현은 열지도 플러그인 "
 "아이콘으로 교체될 겁니다!"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:239
+#: ../../docs/documentation_guidelines/do_translations.rst:241
 msgid ""
 "``:sup:`Heatmap```,  the ``:sup:`` statement is a superposition statement "
 "and prints the following text a bit higher. This is used to show the popup "
@@ -481,11 +495,11 @@ msgstr ""
 " 마우스 커서를 툴바 항목 위에 올렸을 때 나타나는 팝업 텍스트를 보여주기 위해 쓰입니다. QGIS 응용 프로그램에서 실제로 번역된 경우"
 " 이 텍스트도 번역해야 할 수도 있습니다만, 이번 네덜란드 어 예시에선 번역하지 않습니다!"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:245
+#: ../../docs/documentation_guidelines/do_translations.rst:247
 msgid "All other plain text in this sentence can be translated!"
 msgstr "이 문단의 다른 모든 평문은 번역할 수 있습니다!"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:247
+#: ../../docs/documentation_guidelines/do_translations.rst:249
 msgid ""
 "The next translation item contains the ``:ref:`` statement that is commonly "
 "used to refer to another section somewhere in the manual! The text following"
@@ -495,7 +509,7 @@ msgstr ""
 "다음 번역 항목은 ``:ref:`` 표현을 담고 있는데, 설명서 안 또다른 위치를 참조하는 데 흔히 쓰이곤 하죠! ``:ref:`` 표현"
 " 뒤에 나오는 텍스트는 유일 식별자이기 때문에 번역해선 안 됩니다!"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:258
+#: ../../docs/documentation_guidelines/do_translations.rst:260
 msgid ""
 "In this case ``load_core_plugin`` is a unique reference identifier placed "
 "before an rst item that has a caption. The ref statement will be replaced "
@@ -507,7 +521,7 @@ msgstr ""
 "표현은 헤더의 텍스트로 교체되어 하이퍼링크로 변할 것입니다.이 참조가 참조하는 헤더를 번역할 경우, 이 헤더를 가리키는 모든 참조도 "
 "자동적으로 함께 번역될 겁니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:264
+#: ../../docs/documentation_guidelines/do_translations.rst:266
 msgid ""
 "The next item contains the rst-tag ``:menuselection:`` followed by text "
 "actually displayed in a menu in QGIS application, this may be translated in "
@@ -516,7 +530,7 @@ msgstr ""
 "다음 항목엔 QGIS 응용 프로그램의 메뉴에 실제로 표시되는 텍스트를 담고 있는 reST 태그 ``:menuselection:`` 이 "
 "있는데, 응용 프로그램이 번역된 경우 당연히 이 메뉴 텍스트도 번역해야겠죠."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:273
+#: ../../docs/documentation_guidelines/do_translations.rst:275
 msgid ""
 "In above item \"View -->\" is actually translated to \"Beeld -->\" because "
 "this is the translation used in the Dutch localized QGIS application."
@@ -524,11 +538,11 @@ msgstr ""
 "이 항목에서 실제로 \"View -->\"를 \"Beeld -->\"로 번역했는데, 네덜란드 어로 현지화된 QGIS 응용 프로그램에 쓰인"
 " 번역이기 때문입니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:276
+#: ../../docs/documentation_guidelines/do_translations.rst:278
 msgid "A bit further we meet the following tricky translation item:"
 msgstr "조금 더 가면 다음과 같은 까다로운 번역 항목을 보게 됩니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:283
+#: ../../docs/documentation_guidelines/do_translations.rst:285
 msgid ""
 "It holds a reference to a figure ``figure_heatmap_settings_``, and like a "
 "reference to a section this reference should not be changed!! The reference "
@@ -543,11 +557,11 @@ msgstr ""
 " 즉 도형을 가리키는 참조는 번역하면 안 된다는 뜻입니다. HTML을 생성할 경우 ``figure_heatmap_settings`` 를 "
 "보게 될 겁니다. PDF 문서를 생성할 경우 ``figure_heatmap_settings_`` 가 도형 번호를 대체하게 됩니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:290
+#: ../../docs/documentation_guidelines/do_translations.rst:292
 msgid "The next translation item with rst attributes is the following item:"
 msgstr "reST 속성을 가진, 다음으로 번역할 항목은 다음과 같습니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:296
+#: ../../docs/documentation_guidelines/do_translations.rst:298
 msgid ""
 "Do not remove the stars in above line. It will print the text it holds in "
 "bold. The text itself is often text included in the dialog itself and may "
@@ -556,11 +570,11 @@ msgstr ""
 "이 문장에서 별표를 제거하지 마십시오. 별표 사이에 담긴 텍스트는 볼드체로 표시될 것입니다. 텍스트 자체는 대화창에 포함된 텍스트일 "
 "경우가 많아, 응용 프로그램에서도 번역될 가능성이 큽니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:300
+#: ../../docs/documentation_guidelines/do_translations.rst:302
 msgid "The following translation item contains the ``:guilabel:`` rst tag."
 msgstr "다음은 ``:guilabel:`` reST 태그를 담고 있는 번역 항목입니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:307
+#: ../../docs/documentation_guidelines/do_translations.rst:309
 msgid ""
 "The text ``Advanced`` of the guilabel tag may well be translated in the QGIS"
 " application and probably needs to be changed!"
@@ -568,7 +582,7 @@ msgstr ""
 "``:guilabel:`` 태그의 텍스트 ``Advanced`` 는 QGIS 응용 프로그램에서도 번역될 가능성이 크기 때문에 번역해야 할"
 " 필요가 있을 겁니다!"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:310
+#: ../../docs/documentation_guidelines/do_translations.rst:312
 msgid ""
 "The following translation item contains \\``airports\\``. The quotes are "
 "used to give the text another text font. In this case it is a literal value "
@@ -577,7 +591,7 @@ msgstr ""
 "다음 번역 항목은 \\``airports\\`` 를 포함하고 있습니다. 이 인용 부호는 텍스트에 또다른 텍스트 폰트 속성을 부여하는 데 "
 "쓰입니다. 이 경우 \\``airports\\`` 는 글자 그대로의 값으로 번역할 필요가 없습니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:323
+#: ../../docs/documentation_guidelines/do_translations.rst:325
 msgid ""
 "This item also includes a hyperlink with an url and an external "
 "presentation. The url should of course be left intact, you are allowed to "
@@ -589,11 +603,11 @@ msgstr ""
 " 표현 텍스트인 ``https://www.qgistutorials.com`` 은 변경할 수 있습니다. 하이퍼링크 마지막에 붙는 언더바를 "
 "절대 제거하지 마십시오. 하이퍼링크의 필수적인 부분입니다!!"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:333
+#: ../../docs/documentation_guidelines/do_translations.rst:335
 msgid "Summary Rules for translation"
 msgstr "번역 규칙 요약"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:335
+#: ../../docs/documentation_guidelines/do_translations.rst:337
 msgid ""
 "Do not change text between two ``|`` characters like ``|bronze|``, "
 "``|checkbox|``, ``|labels|``, ``|selectString|``, ``|addLayer|`` ... These "
@@ -603,7 +617,7 @@ msgstr ""
 "``|addLayer|`` 와 같이 ``|`` 문자 두 개 사이의 텍스트를 변경하지 마십시오. 이미지를 대체하기 위해 쓰이는 특수 "
 "태그입니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:338
+#: ../../docs/documentation_guidelines/do_translations.rst:340
 msgid ""
 "Do not change references that start with roles like ``:ref:``, ``:file:``, "
 "``:numref:`` unless they include a title. In that case, you can translate "
@@ -614,7 +628,7 @@ msgstr ""
 "변경하지 마십시오. 제목을 포함한다면, 제목을 번역할 수는 있지만 링크 (즉: ``<`` 와 ``>`` 사이의 텍스트)를 변경하지는 "
 "마십시오."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:342
+#: ../../docs/documentation_guidelines/do_translations.rst:344
 msgid ""
 "When a title is provided for a reference, Transifex may display a number in "
 "the English source text in replacement of the link part. Click on the number"
@@ -624,13 +638,13 @@ msgstr ""
 "참조에 대한 제목이 제공되는 경우, Transifex는 영어 소스 텍스트에서 링크 부분 대신 숫자를 표시할 수도 있습니다. 소스 텍스트에"
 " 있는 숫자를 클릭하면 번역중인 제목 옆에 참조 링크를 추가합니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:346
+#: ../../docs/documentation_guidelines/do_translations.rst:348
 msgid ""
 "Do not change references that end with an underscore like "
 "``figure_labels_1_``"
 msgstr "``figure_labels_1_`` 처럼 언더바로 끝나는 참조를 변경하지 마십시오."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:347
+#: ../../docs/documentation_guidelines/do_translations.rst:349
 msgid ""
 "Do not change the url in hyperlinks, but you may change the external "
 "description. Leave the underscore at the end of the hyperlink, without "
@@ -639,7 +653,7 @@ msgstr ""
 "하이퍼링크 내부에 있는 URL을 변경하지 마십시오. 그러나 외부 설명 텍스트는 변경해도 됩니다. 하이퍼링크 마지막에 있는 언더바를 공백을"
 " 추가하지 말고 (``>`_``) 내버려두십시오."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:350
+#: ../../docs/documentation_guidelines/do_translations.rst:352
 msgid ""
 "Change the text inside quotes following ``:index:``, ``:sup:``, "
 "``:guilabel:`` and ``:menuselection:`` tags. Check if/how it is translated "
@@ -649,7 +663,7 @@ msgstr ""
 "부호 안의 텍스트를 번역하십시오. QGIS 응용 프로그램에서 해당 텍스트를 번역했는지, 했다면 어떻게 번역했는지 확인하십시오. 태그 "
 "자체는 변경하지 마십시오."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:353
+#: ../../docs/documentation_guidelines/do_translations.rst:355
 msgid ""
 "Text between double stars and double quotes often indicate values or "
 "fieldnames, sometimes they need translation sometimes not."
@@ -657,7 +671,7 @@ msgstr ""
 "이중 별표 그리고 이중 인용 부호 사이의 텍스트는 값 또는 파일명을 나타내는 경우가 많으며, 때로는 번역해야 하고 때로는 그대로 두어야 "
 "합니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:355
+#: ../../docs/documentation_guidelines/do_translations.rst:357
 msgid ""
 "Be aware to use exactly the same (number of) special characters of the "
 "source text such as `````, ``````, ``*``, ``**``, ``::``. These contribute "
@@ -666,24 +680,24 @@ msgstr ""
 "`````, ``````, ``*``, ``**``, ``::`` 과 같은 특수 문자를 소스 텍스트와 정확히 동일한 개수로 작성하도록 "
 "유의해야 합니다. 이런 특수 문자는 제공하는 정보의 스타일에 기여합니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:358
+#: ../../docs/documentation_guidelines/do_translations.rst:360
 msgid ""
 "Do not begin nor end the text hold by special characters or tags with a "
 "space"
 msgstr "특수 문자 또는 태그에 담긴 텍스트는 공백으로 시작해서도 끝나서도 안 됩니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:359
+#: ../../docs/documentation_guidelines/do_translations.rst:361
 msgid ""
 "Do not end the translated strings with a new paragraph, otherwise the text "
 "will not be translated during the html generation."
 msgstr "번역된 문자열을 새 단락으로 끝내지 마십시오. 그러지 않으면 HTML 생성 시 텍스트가 번역되지 않을 것입니다."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:362
+#: ../../docs/documentation_guidelines/do_translations.rst:364
 msgid ""
 "Stick to above presented rules and the translated document will look fine!"
 msgstr "앞에서 정리한 규칙을 준수한다면 보기 좋은 번역 문서를 얻게 될 겁니다!"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:364
+#: ../../docs/documentation_guidelines/do_translations.rst:366
 msgid ""
 "For any question, please contact the `QGIS Community Team <qgis-community-"
 "team@lists.osgeo.org>`_ or the `QGIS Translation Team <qgis-"
@@ -692,18 +706,18 @@ msgstr ""
 "질문이 있다면, `QGIS 커뮤니티 팀 <qgis-community-team@lists.osgeo.org>`_ 또는 `QGIS 번역 팀 "
 "<qgis-tr@lists.osgeo.org>`_ 으로 연락해주십시오."
 
-#: ../../docs/documentation_guidelines/do_translations.rst:375
+#: ../../docs/documentation_guidelines/do_translations.rst:377
 msgid "addLayer"
 msgstr ""
 
-#: ../../docs/documentation_guidelines/do_translations.rst:377
+#: ../../docs/documentation_guidelines/do_translations.rst:379
 msgid "checkbox"
 msgstr ""
 
-#: ../../docs/documentation_guidelines/do_translations.rst:379
+#: ../../docs/documentation_guidelines/do_translations.rst:381
 msgid "heatmap"
 msgstr "heatmap"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:391
+#: ../../docs/documentation_guidelines/do_translations.rst:393
 msgid "selectString"
 msgstr "selectString"
