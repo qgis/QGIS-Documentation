@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -56,6 +57,34 @@ msgstr ""
 "はQGIS開発チームによって維持管理され、自動的にすべてのQGISディストリビューションの一部になっています。それらは **C++** と "
 "**Python** という２つの言語の、いずれかで書かれています。"
 
+#: ../../docs/user_manual/plugins/plugins.rst:29
+msgid ""
+"Most of External Plugins are currently written in Python. They are stored "
+"either in the 'Official' QGIS Repository at "
+"https://plugins.qgis.org/plugins/ or in external repositories and are "
+"maintained by the individual authors. Detailed documentation about the "
+"usage, minimum QGIS version, home page, authors, and other important "
+"information are provided for the plugins in the Official repository. For "
+"other external repositories, documentation might be available with the "
+"external plugins themselves. External plugins documentation is not included "
+"in this manual."
+msgstr ""
+"外部プラグインのほとんどは、現在Pythonで書かれています。これらは、https://plugins.qgis.org/plugins/ "
+"の「公式」QGISリポジトリ、または外部リポジトリに保存され、個々の作者によって管理されています。公式リポジトリにあるプラグインについては、使用方法、QGISの最小バージョン、ホームページ、作者、その他の重要な情報についての詳細な文書が提供されています。その他の外部リポジトリについては、外部プラグイン自体にドキュメントが用意されている場合があります。外部プラグインのドキュメントは、本マニュアルには含まれていません。"
+
+#: ../../docs/user_manual/plugins/plugins.rst:38
+msgid ""
+"To install or activate a plugin, go to :menuselection:`Plugins` menu and "
+"select |showPluginManager| :menuselection:`Manage and install plugins...`. "
+"Installed external python plugins are placed under the "
+":file:`python/plugins` folder of the active :ref:`user profile "
+"<user_profiles>` path."
+msgstr ""
+"プラグインをインストールまたは有効化するには、 :menuselection:`プラグイン` メニューから |showPluginManager| "
+":menuselection:`プラグインの管理とインストール...` を選択してください。インストールされた外部Pythonプラグインは、アクティブな"
+" :ref:`user profile <user_profiles>` パスの :file:`python/plugins` "
+"フォルダの下に配置されます。"
+
 #: ../../docs/user_manual/plugins/plugins.rst:225
 msgid "showPluginManager"
 msgstr ""
@@ -75,13 +104,70 @@ msgstr "プラグインダイアログ"
 msgid "The Settings tab"
 msgstr "[設定]タブ"
 
+#: ../../docs/user_manual/plugins/plugins.rst:60
+msgid ""
+"At the bottom of the left panel, the |transformSettings| "
+":guilabel:`Settings` tab is the main place you can configure which plugins "
+"can be displayed in your application. You can use the following options:"
+msgstr ""
+"左パネルの下部にある |transformSettings| :guilabel:`設定` "
+"タブは、アプリケーションで表示できるプラグインを設定する主な場所です。以下のオプションを使用することができます:"
+
 #: ../../docs/user_manual/plugins/plugins.rst:233
 msgid "transformSettings"
 msgstr "transformSettings"
 
+#: ../../docs/user_manual/plugins/plugins.rst:64
+msgid ""
+"|checkbox| :guilabel:`Check for Updates on Startup`. Whenever an installed "
+"plugin has update available, QGIS will inform you :guilabel:`Every Time QGIS"
+" starts`, :guilabel:`Once a Day`, :guilabel:`Every 3 Days`, :guilabel:`Every"
+" Week`, :guilabel:`Every 2 Weeks` or :guilabel:`Every month`."
+msgstr ""
+"|checkbox| :guilabel:`起動時に更新を確認する`。インストールされているプラグインにアップデートがある場合、QGISは "
+":guilabel:`QGIS 起動時`、:guilabel:`1日1回`, :guilabel:`3日に1回`, :guilabel:`毎週`、 "
+":guilabel:`2週間毎` または :guilabel:`毎月` に通知します。"
+
 #: ../../docs/user_manual/plugins/plugins.rst:211
 msgid "checkbox"
 msgstr ""
+
+#: ../../docs/user_manual/plugins/plugins.rst:68
+msgid ""
+"|checkbox| :guilabel:`Show also Experimental Plugins`. QGIS will show you "
+"plugins in early stages of development, which are generally unsuitable for "
+"production use. For these plugins, you can install either the stable or the "
+"experimental version, and at any moment switch from one to the other."
+msgstr ""
+"|checkbox| "
+":guilabel:`実験的プラグインも表示`。QGISでは、一般的に実運用には適さない開発初期段階のプラグインを表示します。これらのプラグインについては、安定版と実験版のどちらかをインストールし、いつでも切り替えることができます。"
+
+#: ../../docs/user_manual/plugins/plugins.rst:72
+msgid ""
+"|checkbox| :guilabel:`Show also Deprecated Plugins`. These plugins are "
+"usually unmaintained because they have replacement functions in QGIS, a lack"
+" of maintainers, they rely on functions that are no longer available in "
+"QGIS... They are generally unsuitable for production use and appear grayed "
+"in the plugins list."
+msgstr ""
+"|checkbox| "
+":guilabel:`非推奨プラグインも表示`。これらのプラグインは、QGISの機能を代替している、メンテナが不足している、QGISで利用できなくなった機能に依存している...などの理由から、通常メンテナンスされていません。これらのプラグインは一般的に実運用には適さず、プラグインリストでは灰色で表示されます。"
+
+#: ../../docs/user_manual/plugins/plugins.rst:78
+msgid ""
+"By default, in the :guilabel:`Plugin Repositories` section, QGIS provides "
+"you with its official plugin repository with the URL "
+"``https://plugins.qgis.org/plugins/plugins.xml?qgis=version`` (where "
+"``<version>`` represents the exact QGIS version you are running). To add "
+"external author repositories, click |symbologyAdd| :guilabel:`Add...` and "
+"fill in the :guilabel:`Repository Details` form with a name and the URL. The"
+" URL can be of ``http://`` or ``file://`` protocol type."
+msgstr ""
+"デフォルトでは、:guilabel:`プラグインリボジトリ` セクションで、QGISはURL "
+"``https://plugins.qgis.org/plugins/plugins.xml?qgis=version`` "
+"（ここで``<version>``はあなたが実行している正確なQGISバージョンを示します）を持つ公式プラグインリポジトリを提供します。外部の作者のリポジトリを追加するには、"
+" |symbologyAdd| :guilabel:`追加...` をクリックし、 :guilabel:`リポジトリの詳細` フォームに名前と URL "
+"を入力します。URLは ``http://`` または ``file://`` プロトコルタイプになります。"
 
 #: ../../docs/user_manual/plugins/plugins.rst:227
 msgid "symbologyAdd"
@@ -98,6 +184,16 @@ msgstr ""
 "デフォルトのQGISリポジトリはオープンなリポジトリで、アクセスするための認証は必要ありません。ただし、独自のプラグインリポジトリを展開して認証（基本認証、PKI）を必要にすることができます。"
 " QGIS認証のサポートに関する詳細は :ref:`認証` の章を参照してください。"
 
+#: ../../docs/user_manual/plugins/plugins.rst:91
+msgid ""
+"If you do not want one or more of the added repositories, they can be "
+"disabled from the Settings tab via the |symbologyEdit| :guilabel:`Edit...` "
+"button, or completely removed with the |symbologyRemove| :guilabel:`Delete` "
+"button."
+msgstr ""
+"追加されたリポジトリのうち1つ以上が不要な場合は、設定タブから |symbologyEdit| :guilabel:`編集...` "
+"ボタンを使って無効にしたり、 |symbologyRemove| :guilabel:`削除` ボタンを使って完全に削除することができます。"
+
 #: ../../docs/user_manual/plugins/plugins.rst:229
 msgid "symbologyEdit"
 msgstr ""
@@ -110,9 +206,122 @@ msgstr ""
 msgid "The |transformSettings| :guilabel:`Settings` tab"
 msgstr "|transformSettings| :guilabel:`設定` タブ"
 
+#: ../../docs/user_manual/plugins/plugins.rst:103
+msgid "Browsing the plugins"
+msgstr "プラグインを眺める"
+
+#: ../../docs/user_manual/plugins/plugins.rst:106
+msgid "The tabs"
+msgstr "タブ"
+
+#: ../../docs/user_manual/plugins/plugins.rst:108
+msgid ""
+"The upper tabs in the :guilabel:`Plugins` dialog provide you with lists of "
+"plugins based on their install, creation or update status. Depending on the "
+"plugins settings, available tabs can be:"
+msgstr ""
+":guilabel:`プラグイン` "
+"ダイアログの上部のタブは、インストール、作成、更新のステータスに基づいたプラグインのリストを提供します。プラグインの設定により、利用可能なタブは以下の通りです:"
+
+#: ../../docs/user_manual/plugins/plugins.rst:112
+msgid ""
+"|showPluginManager| :guilabel:`All`: shows all the available plugins in the "
+"enabled repositories"
+msgstr "|showPluginManager| :guilabel:`すべて`: 有効なリポジトリにある利用可能なすべてのプラグインを表示します"
+
+#: ../../docs/user_manual/plugins/plugins.rst:114
+msgid ""
+"|pluginInstalled| :guilabel:`Installed`: shows both the plugins you "
+"installed and the core plugins that are installed by default and you can not"
+" uninstall"
+msgstr ""
+"|pluginInstalled| :guilabel:`インストール済`: "
+"インストールしたプラグインと、デフォルトでインストールされアンインストールできないコアプラグインの両方を表示します"
+
+#: ../../docs/user_manual/plugins/plugins.rst:223
+msgid "pluginInstalled"
+msgstr "pluginInstalled"
+
+#: ../../docs/user_manual/plugins/plugins.rst:116
+msgid ""
+"|plugin| :guilabel:`Not installed`: shows uninstalled or not yet installed "
+"plugins in the enabled repositories"
+msgstr ""
+"|plugin| :guilabel:`未インストール`: "
+"有効なリポジトリにある、アンインストールまたは未だインストールされていないプラグインを表示します"
+
+#: ../../docs/user_manual/plugins/plugins.rst:215
+msgid "plugin"
+msgstr "plugin"
+
+#: ../../docs/user_manual/plugins/plugins.rst:118
+msgid ""
+"|plugin-new| :guilabel:`New`: shows plugins released since the last "
+":guilabel:`Check for Updates on Startup`"
+msgstr ""
+"|plugin-new| :guilabel:`新規`: 前回の :guilabel:`起動時に更新を確認する` "
+"からリリースされたプラグインを表示します"
+
 #: ../../docs/user_manual/plugins/plugins.rst:217
 msgid "plugin-new"
 msgstr ""
+
+#: ../../docs/user_manual/plugins/plugins.rst:120
+msgid ""
+"|plugin-upgrade| :guilabel:`Upgradeable`: shows installed plugins that have "
+"published a more recent version in the repository"
+msgstr ""
+"|plugin-upgrade| :guilabel:`Upgradeable`: "
+"インストールされているプラグインのうち、リポジトリでより新しいバージョンを公開しているものを表示します"
+
+#: ../../docs/user_manual/plugins/plugins.rst:219
+msgid "plugin-upgrade"
+msgstr "plugin-upgrade"
+
+#: ../../docs/user_manual/plugins/plugins.rst:122
+msgid ""
+"|pluginIncompatible| :guilabel:`Invalid`: shows all installed plugins that "
+"are currently broken for any reason (missing dependency, errors while "
+"loading, incompatible functions with QGIS version...)"
+msgstr ""
+"|pluginIncompatible| :guilabel:`Invalid`: "
+"インストールされているプラグインのうち、何らかの理由で現在壊れているもの（依存関係がない、読み込み中にエラーが出る、QGISバージョンと互換性のない機能...）をすべて表示します"
+
+#: ../../docs/user_manual/plugins/plugins.rst:221
+msgid "pluginIncompatible"
+msgstr "pluginIncompatible"
+
+#: ../../docs/user_manual/plugins/plugins.rst:126
+msgid ""
+"At the top of the tabs, a :guilabel:`Search` function helps you find any "
+"plugin using metadata information (author, name, description, tag,...)."
+msgstr ""
+"タブの上部には :guilabel:`検索` 機能があり、メタデータ情報（作者、名前、説明、タグ、...）から任意のプラグインを探すことができます。"
+
+#: ../../docs/user_manual/plugins/plugins.rst:134
+msgid "Searching a plugin from the |showPluginManager| :guilabel:`All` tab"
+msgstr "|showPluginManager|:guilabel:`すべて` タブからプラグインを検索する"
+
+#: ../../docs/user_manual/plugins/plugins.rst:137
+msgid "The Plugins"
+msgstr "プラグイン"
+
+#: ../../docs/user_manual/plugins/plugins.rst:139
+msgid ""
+"Select a plugin and you will have some metadata displayed in the right "
+"panel:"
+msgstr "プラグインを選択すると、右のパネルにいくつかのメタデータが表示されます:"
+
+#: ../../docs/user_manual/plugins/plugins.rst:141
+msgid ""
+"information on whether the plugin is experimental or has an experimental "
+"version available (if :guilabel:`Show also Experimental Plugins` is checked)"
+msgstr ""
+"プラグインが実験的であるか、実験版が利用可能であるかについての情報（ :guilabel:`実験的プラグインも表示` がチェックされている場合）"
+
+#: ../../docs/user_manual/plugins/plugins.rst:143
+msgid "summary and description"
+msgstr "サマリと説明"
 
 #: ../../docs/user_manual/plugins/plugins.rst:144
 msgid "rating vote(s) (you can vote for your preferred plugin!)"
@@ -129,3 +338,147 @@ msgstr "ホームページ、トラッカーやコードリポジトリにはい
 #: ../../docs/user_manual/plugins/plugins.rst:147
 msgid "author(s)"
 msgstr "作者"
+
+#: ../../docs/user_manual/plugins/plugins.rst:148
+msgid ""
+"version(s) available with link to download page in the repository, or path "
+"to local folder for installed plugins"
+msgstr "利用可能なバージョンと、リポジトリ内のダウンロードページへのリンク、またはインストールされたプラグインのローカルフォルダへのパス"
+
+#: ../../docs/user_manual/plugins/plugins.rst:151
+msgid ""
+"The :guilabel:`Plugin Manager` dialog allows you to interact with the latest"
+" version of the plugins. When enabled, the experimental version can be shown"
+" only if it is more recent than the latest stable version. Depending on the "
+"active tab, whether the selected plugin is installed, you will be given some"
+" of the following options:"
+msgstr ""
+":guilabel:`プラグインマネージャ` "
+"ダイアログでは、最新バージョンのプラグインを操作することができます。有効にすると、実験版は、最新の安定版よりも新しい場合にのみ表示されます。アクティブなタブに応じて、選択したプラグインがインストールされているかどうか、以下のオプションのいくつかが表示されます:"
+
+#: ../../docs/user_manual/plugins/plugins.rst:157
+msgid ""
+":guilabel:`Install`: installs the latest stable version of the selected "
+"plugin"
+msgstr ":guilabel:`インストール`: 選択したプラグインの最新の安定版をインストールします"
+
+#: ../../docs/user_manual/plugins/plugins.rst:158
+msgid ""
+":guilabel:`Install Experimental Plugin`: installs the experimental version "
+"of the selected plugin"
+msgstr ":guilabel:`実験的なプラグインをインストール`: 選択したプラグインの実験版をインストールします"
+
+#: ../../docs/user_manual/plugins/plugins.rst:160
+msgid ""
+":guilabel:`Reinstall Plugin`: installs the same stable version of the plugin"
+" e.g. after it has failed to load"
+msgstr ":guilabel:`再インストール`: 同じ安定したバージョンのプラグインをインストールします 例: ロードに失敗した後"
+
+#: ../../docs/user_manual/plugins/plugins.rst:162
+msgid ""
+":guilabel:`Reinstall Experimental Plugin`: installs the same stable version "
+"of the plugin e.g. after it has failed to load"
+msgstr ":guilabel:`実験的なプラグインを再インストール`: 同じ安定版のプラグインをインストールします 例: ロードに失敗した後"
+
+#: ../../docs/user_manual/plugins/plugins.rst:164
+msgid ""
+":guilabel:`Upgrade Plugin`: upgrades selected plugin to its latest stable "
+"version"
+msgstr ":guilabel:`プラグインをアップグレード`: 選択したプラグインを最新の安定版にアップグレードします"
+
+#: ../../docs/user_manual/plugins/plugins.rst:165
+msgid ""
+":guilabel:`Upgrade Experimental Plugin`: upgrades selected plugin to its "
+"experimental version"
+msgstr ":guilabel:`実験的なプラグインをアップグレード`: 選択したプラグインを実験版にアップグレードします"
+
+#: ../../docs/user_manual/plugins/plugins.rst:167
+msgid ""
+":guilabel:`Upgrade All`: upgrades all installed plugins to their more recent"
+" stable or experimental version (depending on whether their previously "
+"installed version was stable or experimental)."
+msgstr ""
+":guilabel:`すべてアップグレード`: "
+"インストールされているすべてのプラグインを、より新しい安定版または実験版にアップグレードします（以前にインストールされていたバージョンが安定版か実験版かによって異なります）。"
+
+#: ../../docs/user_manual/plugins/plugins.rst:170
+msgid ""
+":guilabel:`Downgrade Plugin`: moves from the experimental version of the "
+"plugin to its previous stable version"
+msgstr ":guilabel:`Downgrade Plugin`: プラグインの実験版から、以前の安定版に移行します"
+
+#: ../../docs/user_manual/plugins/plugins.rst:172
+msgid ""
+":guilabel:`Downgrade Experimental Plugin`: moves from an experimental "
+"version of the plugin to its latest published experimental version. This may"
+" occur when playing with a not yet published version."
+msgstr ""
+":guilabel:`Downgrade Experimental Plugin`: "
+"プラグインの実験版から、その最新の公開済みの実験版に移動します。これは、まだ公開されていないバージョンで遊んでいるときに発生する可能性があります。"
+
+#: ../../docs/user_manual/plugins/plugins.rst:175
+msgid ""
+":guilabel:`Uninstall Plugin`: removes the installed plugin from the user "
+"profile"
+msgstr ":guilabel:`アンインストール`: インストールされたプラグインをユーザープロファイルから削除します"
+
+#: ../../docs/user_manual/plugins/plugins.rst:177
+msgid ""
+"An installed plugin displays a |checkbox| checkbox on its left. Uncheck it "
+"to temporarily deactivate the plugin."
+msgstr ""
+"インストールされたプラグインは、その左側に |checkbox| "
+"チェックボックスが表示されます。チェックを外すと、一時的にプラグインを停止することができます。"
+
+#: ../../docs/user_manual/plugins/plugins.rst:180
+msgid ""
+"Right-click on a plugin in the list and you will be able to sort the plugins"
+" list by various metadata. The new order applies to all the tabs. Sort "
+"options are:"
+msgstr ""
+"リスト内のプラグインを右クリックすると、プラグインリストを様々なメタデータでソートできるようになります。新しい順序は、すべてのタブに適用されます。ソートオプションは以下の通りです:"
+
+#: ../../docs/user_manual/plugins/plugins.rst:183
+msgid ":guilabel:`Sort by Name`"
+msgstr ":guilabel:`名前で並び替え`"
+
+#: ../../docs/user_manual/plugins/plugins.rst:184
+msgid ":guilabel:`Sort by Downloads`"
+msgstr ":guilabel:`ダウンロード数で並べ替え`"
+
+#: ../../docs/user_manual/plugins/plugins.rst:185
+msgid ":guilabel:`Sort by Vote`"
+msgstr ":guilabel:`投票数で並べ替え`"
+
+#: ../../docs/user_manual/plugins/plugins.rst:186
+msgid ":guilabel:`Sort by Status`"
+msgstr ":guilabel:`状態で並べ替え`"
+
+#: ../../docs/user_manual/plugins/plugins.rst:187
+msgid ":guilabel:`Sort by Date Created`"
+msgstr ":guilabel:`作成日時で並べ替え`"
+
+#: ../../docs/user_manual/plugins/plugins.rst:188
+msgid ":guilabel:`Sort by Date Updated`"
+msgstr ":guilabel:`更新日時で並べ替え`"
+
+#: ../../docs/user_manual/plugins/plugins.rst:192
+msgid "The Install from ZIP tab"
+msgstr "ZIPからインストールタブ"
+
+#: ../../docs/user_manual/plugins/plugins.rst:194
+msgid ""
+"The |installPluginFromZip| :guilabel:`Install from ZIP` tab provides a file "
+"selector widget to import plugins in a zipped format, e.g. plugins "
+"downloaded directly from their repository. Encrypted files are supported."
+msgstr ""
+"|installPluginFromZip| :guilabel:`ZIPからインストール` "
+"タブは、リポジトリから直接ダウンロードしたプラグインなど、zip形式のプラグインをインポートするためのファイルセレクタウィジェットを提供します。暗号化されたファイルもサポートされています。"
+
+#: ../../docs/user_manual/plugins/plugins.rst:213
+msgid "installPluginFromZip"
+msgstr "installPluginFromZip"
+
+#: ../../docs/user_manual/plugins/plugins.rst:203
+msgid "The |installPluginFromZip| :guilabel:`Install from zip` tab"
+msgstr "installPluginFromZip|:guilabel:`zipからインストール` タブ"
