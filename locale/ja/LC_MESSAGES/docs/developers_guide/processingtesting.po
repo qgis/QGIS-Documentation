@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2023\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,9 +24,20 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#: ../../docs/developers_guide/processingtesting.rst:5
+msgid "Processing Algorithms Testing"
+msgstr "プロセシングアルゴリズムをテストする"
+
 #: ../../docs/developers_guide/processingtesting.rst:11
 msgid "Algorithm tests"
 msgstr "アルゴリズムのテスト"
+
+#: ../../docs/developers_guide/processingtesting.rst:13
+msgid ""
+"The original version of these instructions is available at "
+":source:`python/plugins/processing/tests/README.md`"
+msgstr ""
+"この説明のオリジナル版は :source:`python/plugins/processing/tests/README.md` から入手できます"
 
 #: ../../docs/developers_guide/processingtesting.rst:16
 msgid ""
@@ -34,6 +46,32 @@ msgid ""
 "adding tests is required."
 msgstr ""
 "QGISでは、プロセッシングフレームワークの下にいくつかのアルゴリズムを提供しています。このリストは独自のアルゴリズムで拡張できます。そして新しい機能と同様、テストを追加することが必要です。"
+
+#: ../../docs/developers_guide/processingtesting.rst:20
+msgid ""
+"To test algorithms you can add entries into "
+":file:`testdata/qgis_algorithm_tests.yaml` or "
+":file:`testdata/gdal_algorithm_tests.yaml` as appropriate."
+msgstr ""
+"アルゴリズムをテストするには、 :file:`testdata/qgis_algorithm_tests.yaml` または "
+":file:`testdata/gdal_algorithm_tests.yaml` に適切なエントリーを追加することができます。"
+
+#: ../../docs/developers_guide/processingtesting.rst:23
+msgid "This file is structured with `yaml syntax <https://yaml.org/>`_."
+msgstr "このファイルは `yaml 文法 <https://yaml.org/>`_ で構成されています。"
+
+#: ../../docs/developers_guide/processingtesting.rst:25
+msgid ""
+"A basic test appears under the top level key ``tests`` and looks like this:"
+msgstr "基本的なテストは、トップレベルのキー ``tests`` の下に表示され、次のようになります:"
+
+#: ../../docs/developers_guide/processingtesting.rst:42
+msgid "How To"
+msgstr "方法"
+
+#: ../../docs/developers_guide/processingtesting.rst:44
+msgid "To add a new test please follow these steps:"
+msgstr "新しいテストを追加する場合は、以下の手順で行ってください:"
 
 #: ../../docs/developers_guide/processingtesting.rst:46
 msgid ""
@@ -52,6 +90,40 @@ msgstr ""
 "にリダイレクトします。入力レイヤには、フォルダ :file:`testdata` に既にあるものを優先的に使用します。追加のデータが必要な場合は、それを"
 " :file:`testdata/custom` に入れてください。"
 
+#: ../../docs/developers_guide/processingtesting.rst:53
+msgid ""
+"When you have run the algorithm, go to :menuselection:`Processing --> "
+"History` and find the algorithm which you have just run."
+msgstr "アルゴリズムを実行したら、 :menuselection:`プロセシング --> 履歴` で、今実行したアルゴリズムを探します。"
+
+#: ../../docs/developers_guide/processingtesting.rst:55
+msgid ""
+"Right click the algorithm and click :guilabel:`Create Test`. A new window "
+"will open with a text definition."
+msgstr ""
+"アルゴリズムを右クリックし、 :guilabel:`Create Test` をクリックします。新しいウィンドウが開き、テキスト定義が表示されます。"
+
+#: ../../docs/developers_guide/processingtesting.rst:57
+msgid ""
+"Open the file "
+":file:`python/plugins/processing/tests/testdata/algorithm_tests.yaml`, copy "
+"the text definition there."
+msgstr ""
+"ファイル :file:`python/plugins/processing/tests/testdata/algorithm_tests.yaml` "
+"を開き、そこのテキスト定義をコピーします。"
+
+#: ../../docs/developers_guide/processingtesting.rst:60
+msgid ""
+"The first string from the command goes to the key ``algorithm``, the "
+"subsequent ones to ``params`` and the last one(s) to ``results``."
+msgstr ""
+"コマンドの最初の文字列は ``algorithm`` というキーに、その後の文字列は ``params`` に、最後の文字列は ``results`` "
+"に送られます。"
+
+#: ../../docs/developers_guide/processingtesting.rst:63
+msgid "The above translates to"
+msgstr "上記は次に解釈されます"
+
 #: ../../docs/developers_guide/processingtesting.rst:79
 msgid ""
 "It is also possible to create tests for Processing scripts. Scripts should "
@@ -63,9 +135,25 @@ msgstr ""
 ":file:`python/plugins/processing/tests/testdata/` の :file:`scripts` "
 "サブディレクトリに配置する必要があります。スクリプトファイル名は、スクリプトアルゴリズム名と一致する必要があります。"
 
+#: ../../docs/developers_guide/processingtesting.rst:85
+msgid "Parameters and results"
+msgstr "パラメータと結果"
+
+#: ../../docs/developers_guide/processingtesting.rst:88
+msgid "Trivial type parameters"
+msgstr "Trivial型のパラメータ"
+
 #: ../../docs/developers_guide/processingtesting.rst:90
 msgid "Parameters and results are specified as lists or dictionaries:"
 msgstr "パラメータと結果はリストまたは辞書として指定されます："
+
+#: ../../docs/developers_guide/processingtesting.rst:99
+msgid "or"
+msgstr "または"
+
+#: ../../docs/developers_guide/processingtesting.rst:109
+msgid "Layer type parameters"
+msgstr "レイヤ型のパラメータ"
 
 #: ../../docs/developers_guide/processingtesting.rst:111
 msgid ""
@@ -77,6 +165,18 @@ msgstr "多くの場合、レイヤをパラメータとして指定する必要
 msgid "the type, ie ``vector`` or ``raster``"
 msgstr "種類、すなわち ``vector`` または ``raster``"
 
+#: ../../docs/developers_guide/processingtesting.rst:115
+msgid "a name, with a relative path like :file:`expected/polys_centroid.gml`"
+msgstr "名前。 :file:`expected/polys_centroid.gml` のような相対パスで指定されます"
+
+#: ../../docs/developers_guide/processingtesting.rst:117
+msgid "This is what it looks like in action:"
+msgstr "実際に使ってみると、こんな感じです:"
+
+#: ../../docs/developers_guide/processingtesting.rst:131
+msgid "File type parameters"
+msgstr "ファイル型のパラメータ"
+
 #: ../../docs/developers_guide/processingtesting.rst:133
 msgid ""
 "If you need an external file for the algorithm test, you need to specify the"
@@ -87,13 +187,33 @@ msgstr "アルゴリズムのテストに外部ファイルが必要な場合は
 msgid "Results"
 msgstr "結果"
 
+#: ../../docs/developers_guide/processingtesting.rst:150
+msgid "Results are specified very similarly."
+msgstr "結果は同じように指定されます。"
+
+#: ../../docs/developers_guide/processingtesting.rst:153
+msgid "Basic vector files"
+msgstr "基本的なベクタファイル"
+
+#: ../../docs/developers_guide/processingtesting.rst:155
+msgid "It couldn't be more trivial"
+msgstr "これはとても簡単です"
+
+#: ../../docs/developers_guide/processingtesting.rst:164
+msgid "Add the expected GML and XSD files in the folder."
+msgstr "フォルダ内に想定されるGMLファイルやXSDファイルを追加します。"
+
+#: ../../docs/developers_guide/processingtesting.rst:167
+msgid "Vector with tolerance"
+msgstr "許容範囲内のベクタ"
+
 #: ../../docs/developers_guide/processingtesting.rst:169
 msgid ""
 "Sometimes different platforms create slightly different results which are "
 "still acceptable. In this case (but only then) you may also use additional "
 "properties to define how a layer is compared."
 msgstr ""
-"プラットフォームによって、わずかに異なる結果が作成される場合がありますが、それでも依然として許容範囲です。この場合（ただしその場合のみ）、追加のプロパティを使用して、レイヤーの比較方法を定義することもできます。"
+"プラットフォームによって、わずかに異なる結果が作成される場合がありますが、それでも依然として許容範囲です。この場合（ただしその場合のみ）、追加のプロパティを使用して、レイヤの比較方法を定義することもできます。"
 
 #: ../../docs/developers_guide/processingtesting.rst:173
 msgid ""
@@ -109,17 +229,45 @@ msgstr ""
 "プロパティを指定できます。この比較プロパティには、「フィールド」のサブプロパティを含めることができます。これには、特定のフィールドがどの程度正確に比較されるか（「精度」）、またはフィールドを完全に「スキップ」することもできます。すべてのフィールドに特定の許容値を適用する特別なフィールド名"
 " ``__all__`` があります。別に、各頂点に適用される「精度」も受け入れるプロパティ「ジオメトリ」があります。"
 
+#: ../../docs/developers_guide/processingtesting.rst:196
+msgid "Raster files"
+msgstr "ラスタファイル"
+
 #: ../../docs/developers_guide/processingtesting.rst:198
 msgid ""
 "Raster files are compared with a hash checksum. This is calculated when you "
 "create a test from the processing history."
 msgstr "ラスタファイルはハッシュチェックサムと比較されます。これは、プロセッシングの履歴からテストを作成するときに計算されます。"
 
+#: ../../docs/developers_guide/processingtesting.rst:208
+msgid "Files"
+msgstr "ファイル"
+
 #: ../../docs/developers_guide/processingtesting.rst:210
 msgid ""
 "You can compare the content of an output file to an expected result "
 "reference file"
 msgstr "出力ファイルの内容を予想される結果参照ファイルと比較できます"
+
+#: ../../docs/developers_guide/processingtesting.rst:219
+msgid ""
+"Or you can use one or more regular expressions that will be `matched "
+"<https://docs.python.org/3/library/re.html#re.search>`_ against the file "
+"content"
+msgstr ""
+"または、ファイルの内容に対して `マッチする "
+"<https://docs.python.org/3/library/re.html#re.search>`_ "
+"1つ以上の正規表現を使用することができます。"
+
+#: ../../docs/developers_guide/processingtesting.rst:233
+msgid "Directories"
+msgstr "ディレクトリ"
+
+#: ../../docs/developers_guide/processingtesting.rst:235
+msgid ""
+"You can compare the content of an output directory with an expected result "
+"reference directory"
+msgstr "出力ディレクトリの内容を、期待される結果の参照ディレクトリと比較することができます"
 
 #: ../../docs/developers_guide/processingtesting.rst:245
 msgid "Algorithm Context"
@@ -130,3 +278,34 @@ msgid ""
 "There are a few more definitions that can modify the context of the "
 "algorithm - these can be specified at the top level of test:"
 msgstr "アルゴリズムのコンテキストを変更できる定義がいくつかあります。これらはテストの最上位で指定できます："
+
+#: ../../docs/developers_guide/processingtesting.rst:250
+msgid ""
+"``project`` - will load a specified QGIS project file before running the "
+"algorithm. If not specified, the algorithm will run with an empty project"
+msgstr ""
+"``project`` - "
+"アルゴリズムを実行する前に、指定されたQGISプロジェクトファイルを読み込みます。指定しない場合、アルゴリズムは空のプロジェクトで実行されます。"
+
+#: ../../docs/developers_guide/processingtesting.rst:252
+msgid ""
+"``project_crs`` - overrides the default project CRS - e.g. ``EPSG:27700``"
+msgstr "``project_crs`` - デフォルトのプロジェクトCRSを上書きします - 例: ``EPSG:27700``"
+
+#: ../../docs/developers_guide/processingtesting.rst:253
+msgid ""
+"``ellipsoid`` - overrides the default project ellipsoid used for "
+"measurements, e.g. ``GRS80``"
+msgstr "``elipsoid`` - 測定に使用するプロジェクトのデフォルトの楕円体を上書きします。例 ``GRS80``"
+
+#: ../../docs/developers_guide/processingtesting.rst:258
+msgid "Running tests locally"
+msgstr "テストをローカルで実行する"
+
+#: ../../docs/developers_guide/processingtesting.rst:264
+msgid ""
+"or one of the following values listed in the :source:`CMakelists.txt "
+"<python/plugins/processing/tests/CMakeLists.txt>`"
+msgstr ""
+"または :source:`CMakelists.txt "
+"<python/plugins/processing/tests/CMakeLists.txt>` に記載されている以下の値のいずれか1つです"
