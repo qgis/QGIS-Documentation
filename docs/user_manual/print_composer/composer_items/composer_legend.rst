@@ -198,10 +198,10 @@ of a specific symbol, to enhance it in the legend or have a symbol independent f
 This custom symbol will override the legend symbol, but will take into account the symbol :guilabel:`Patch` specified. 
 
 
-Fonts
------
+Fonts and text formatting
+-------------------------
 
-The :guilabel:`Fonts` group of the legend :guilabel:`Item Properties` panel
+The :guilabel:`Fonts and text formatting` group of the legend :guilabel:`Item Properties` panel
 provides the following functionalities:
 
 .. _figure_layout_legend_fonts:
@@ -212,14 +212,12 @@ provides the following functionalities:
    Legend Fonts properties
 
 * You can change the font of the legend title, group, subgroup and item (feature)
-  in the legend item using the :ref:`font selector <font_selector>` widget
-* For each of these levels you can set the text :guilabel:`Alignment`: it can
-  be :guilabel:`Left` (default for left-to-right based locales),
-  :guilabel:`Center` or :guilabel:`Right` (default for right-to-left based
-  locales).
-* You set the :guilabel:`Color` of the labels using the :ref:`color selector
-  <color-selector>` widget. The selected color will apply to all the font items
-  in the legend.
+  in the legend item using the :ref:`font selector <font_selector>` widget,
+  providing all the capabilities of :ref:`text formatting <text_format>`
+  (font spacing control, mixed HTML formatting, coloring, blending, background, text buffer, shadow, ...)
+* For each of these levels you can set the text :guilabel:`Alignment`:
+  it can be :guilabel:`Left` (default for left-to-right based locales),
+  :guilabel:`Center` or :guilabel:`Right` (default for right-to-left based locales).
 
 
 Columns
