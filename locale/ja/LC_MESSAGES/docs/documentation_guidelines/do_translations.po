@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-09 10:03+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -74,6 +75,62 @@ msgid ""
 msgstr ""
 ":file:`.po` ファイルの中の文が Transifex "
 "のウェブプラットフォームにプッシュされ、英語から各言語へと、翻訳者がエディターを使って翻訳できるようになります。 "
+
+#: ../../docs/documentation_guidelines/do_translations.rst:33
+msgid ""
+"When a file is translated at 100%, the translated strings are automatically "
+"pulled back to the documentation repository, under :file:`/QGIS-"
+"Documentation/locale/<language>`."
+msgstr ""
+"ファイルが100%翻訳されると、翻訳された文字列は自動的にドキュメントリポジトリの :file:`/QGIS-Documentation/locale/"
+" <language>` 配下にプルバックされます。"
+
+#: ../../docs/documentation_guidelines/do_translations.rst:35
+msgid ""
+"At the next build of the documentation (which occurs at least once a day -- "
+"see time at the bottom of the page), a script reuses the sentences to create"
+" translated output."
+msgstr "次のドキュメントのビルド（1日に1回以上発生します－時刻はページの下部を参照）で、スクリプトが文章を再利用して翻訳出力を作成します。"
+
+#: ../../docs/documentation_guidelines/do_translations.rst:37
+msgid ""
+"For files not fully translated, a script pulls every two weeks translated "
+"strings from Transifex to Github and these are as well published at the next"
+" build."
+msgstr ""
+"完全に翻訳されていないファイルについては、2週間ごとにスクリプトがTransifexからGithubに翻訳された文字列を取り込み、次のビルドで同様に公開されます。"
+
+#: ../../docs/documentation_guidelines/do_translations.rst:39
+msgid ""
+"Whenever an :file:`.rst` file is updated, the English :file:`.po` file is "
+"updated and the changes are pushed to the corresponding file in Transifex. "
+"This means that when a new paragraph is added to an :file:`.rst` document "
+"that was already translated, only the new/updated sentences are added to the"
+" translated :file:`.po` file and needs to be translated."
+msgstr ""
+":file:`.rst` ファイルが更新されるたびに、英語の :file:`.po` ファイルが更新され、その変更が Transifex "
+"の対応するファイルにプッシュされます。つまり、すでに翻訳された :file:`.rst` "
+"文書に新しい段落が追加されたとき、新しい/更新された文章だけが翻訳された :file:`.po` "
+"ファイルに追加され、翻訳する必要があることを意味します。"
+
+#: ../../docs/documentation_guidelines/do_translations.rst:45
+msgid "Translating QGIS Desktop specificities"
+msgstr "QGISデスクトップの仕様を翻訳する"
+
+#: ../../docs/documentation_guidelines/do_translations.rst:47
+msgid ""
+"The main difference with translating QGIS applications is that instead of "
+":file:`.po` files, all the translatable strings in the :file:`.py`, "
+":file:`.cpp`, :file:`.yaml` files that shape a particular version of the "
+"application are pushed to and pulled from Transifex as a single :file:`.ts` "
+"file (e.g. ``qgis-application/qgis_en.ts (branch release-3_30)`` ). "
+"Translations are pulled to Github in development branch (daily), and at "
+"release time (for every released versions)."
+msgstr ""
+"QGISアプリケーションの翻訳と大きく異なる点は、 :file:`.po` ファイルの代わりに、特定のバージョンのアプリケーションを構成する "
+":file:`.py`, :file:`.cpp`, :file:`.yaml` ファイル内のすべての翻訳可能文字列が、単一の :file:`.ts` "
+"ファイル（例：`qgis-application/qgis_jp (branch release-3_30)`` ）として Transifex "
+"へプッシュ、プルすることです。翻訳は、開発ブランチ（毎日）、とリリース時（リリースされたバージョンごとに）にGithubにプルされます。"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:54
 msgid "Two different tools are currently used to do translations in QGIS:"
