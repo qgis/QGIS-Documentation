@@ -96,11 +96,11 @@ msgstr "GDALライブラリ（シェープファイル他多くのファイル�
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:111
 msgid "for Shapefile:"
-msgstr "Shapefileの場合:"
+msgstr "シェープファイルの場合:"
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:118
 msgid "for dxf (note the internal options in data source uri):"
-msgstr "dxf (note the internal options in data source uri)の場合:"
+msgstr "dxf（データソースuri中の内部オプションに注意）の場合:"
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:129
 msgid ""
@@ -353,3 +353,57 @@ msgstr ""
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:411
 msgid "QgsProject instance"
 msgstr "QgsProject インスタンス"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:413
+msgid ""
+"If you would like to use the opened layers for rendering, do not forget to "
+"add them to the :class:`QgsProject <qgis.core.QgsProject>` instance. The "
+":class:`QgsProject <qgis.core.QgsProject>` instance takes ownership of "
+"layers and they can be later accessed from any part of the application by "
+"their unique ID. When the layer is removed from the project, it gets "
+"deleted, too. Layers can be removed by the user in the QGIS interface, or "
+"via Python using the :meth:`removeMapLayer() "
+"<qgis.core.QgsProject.removeMapLayer>` method."
+msgstr ""
+"開いたレイヤをレンダリングに使用したい場合は、 :class:`QgsProject <qgis.core.QgsProject>` "
+"インスタンスに追加することを忘れないようにしてください。:class:`QgsProject <qgis.core.QgsProject>` "
+"インスタンスはレイヤの所有権を持ち、後でアプリケーションのどの部分からでも一意のIDによってアクセスすることができます。レイヤがプロジェクトから削除されると、レイヤも削除されます。レイヤはQGISインターフェイスでユーザーが削除することもできますし、Pythonで"
+" :meth:`removeMapLayer() <qgis.core.QgsProject.removeMapLayer>` "
+"メソッドを使用しても削除できます。"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:423
+msgid ""
+"Adding a layer to the current project is done using the :meth:`addMapLayer()"
+" <qgis.core.QgsProject.addMapLayer>` method:"
+msgstr ""
+"現在のプロジェクトにレイヤを追加するには、 :meth:`addMapLayer() "
+"<qgis.core.QgsProject.addMapLayer>` メソッドを用います:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:430
+msgid "To add a layer at an absolute position:"
+msgstr "絶対位置にレイヤーを追加する:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:441
+msgid ""
+"If you want to delete the layer use the :meth:`removeMapLayer() "
+"<qgis.core.QgsProject.removeMapLayer>` method:"
+msgstr ""
+"レイヤを削除したい場合は、 :meth:`removeMapLayer() <qgis.core.QgsProject.removeMapLayer>`"
+" メソッドを使用します:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:448
+msgid ""
+"In the above code, the layer id is passed (you can get it calling the "
+":meth:`id() <qgis.core.QgsMapLayer.id>` method of the layer), but you can "
+"also pass the layer object itself."
+msgstr ""
+"上記のコードでは、レイヤのIDを渡していますが（レイヤの :meth:`id() <qgis.core.QgsMapLayer.id>` "
+"メソッドで取得できます）、レイヤオブジェクトそのものを渡すことも可能です。"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:451
+msgid ""
+"For a list of loaded layers and layer ids, use the :meth:`mapLayers() "
+"<qgis.core.QgsProject.mapLayers>` method:"
+msgstr ""
+"ロードされたレイヤのリストとレイヤIDについては、 :meth:`mapLayers() "
+"<qgis.core.QgsProject.mapLayers>` メソッドを使用してください:"
