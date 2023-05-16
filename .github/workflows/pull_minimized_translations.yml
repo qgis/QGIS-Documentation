@@ -2,8 +2,8 @@ name: Pull translations
 # Download partially translated files from Transifex
 
 on:
-  schedule: #run at 23:00 on day-of-month 1 and 15
-    - cron:  '0 23 1,15 * *'
+  schedule: #run every 2 weeks, on sunday
+    - cron: '0 */336 * * 0'
 
   workflow_dispatch:
 
@@ -17,12 +17,9 @@ jobs:
       contents: write  # for Git to git push
     if: github.repository_owner == 'qgis'
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        # only pull to the translated branch
-        target_branch: [release_3.28]
     env:
-      TRANSIFEX_PASSWORD: ${{ secrets.TRANSIFEX_PASSWORD }}
+      # only pull to the branch we translate
+      TARGET_BRANCH: "release_3.28"
 
     steps:
     - name: Harden Runner
@@ -34,7 +31,7 @@ jobs:
       uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # v3.5.2
       with:
         fetch-depth: 1
-        ref: ${{ matrix.target_branch }}
+        ref: ${{ env.TARGET_BRANCH }}
 
     - name: Install Transifex client
       run: |
@@ -43,8 +40,10 @@ jobs:
 
     - shell: bash
       name: create .transifexrc file
+      env:
+        TRANSIFEX_PASSWORD: ${{ secrets.TRANSIFEX_PASSWORD }}
       run: |
-        sudo echo -e "[https://www.transifex.com]\nrest_hostname = https://rest.api.transifex.com\ntoken = $TRANSIFEX_PASSWORD" > ~/.transifexrc
+        sudo echo -e "[https://app.transifex.com]\nrest_hostname = https://rest.api.transifex.com\ntoken = $TRANSIFEX_PASSWORD" > ~/.transifexrc
 
     - name: Download and sanitize files and folders
       run: bash ./scripts/minimize_translation.sh
@@ -60,7 +59,7 @@ jobs:
         if git add locale/* && git commit -m "Loading new translations"; then
           git push
         else
-         echo "no new translations"
+         echo "No new translations"
         fi
 
 
@@ -69,17 +68,3 @@ jobs:
     #   with:
     #       token: ${{ secrets.TRANSIFEX_PASSWORD }}
     #       args: pull --force --mode onlytranslated -l fr
-
-    # - name: Commit the changes in the PO files
-    #   id: "auto-commit-action"
-    #   uses: stefanzweifel/git-auto-commit-action@3ea6ae190baf489ba007f7c92608f33ce20ef04a # v4.16.0
-    #   with:
-    #     commit_message: 'Load translated strings'
-
-    # - name: "Inform that changes have been made"
-    #   if: steps.auto-commit-action.outputs.changes_detected == 'true'
-    #   run: echo "Changes committed!"
-
-    # - name: "Inform that no changes were performed"
-    #   if: steps.auto-commit-action.outputs.changes_detected == 'false'
-    #   run: echo "No Changes detected!"
