@@ -1837,11 +1837,10 @@ following options:
   to the widget (available only in some contexts)
 * :guilabel:`Font Size` in the associated unit
 * :menuselection:`Recent Fonts -->` menu with the active font checked (at the top)
-* :guilabel:`Configure Format...`: same as pressing the font selector widget. It
-  opens a dialog to set text format parameters. Depending on the context, it can
-  be the OS default :guilabel:`Text format` dialog or the QGIS custom dialog
-  with advanced formatting options (opacity, orientation, buffer, background,
-  shadow, ...) as described in section :ref:`text_format`.
+* :guilabel:`Configure Format...`: same as pressing the font selector widget.
+  It opens the :ref:`Text format <text_format>` dialog,
+  providing advanced formatting options such as color, opacity, orientation, HTML notation,
+  buffer, background, shadow, ...
 * :guilabel:`Copy Format` of the text
 * :guilabel:`Paste Format` to the text, speeding configuration
 * the :ref:`color widget <color_widget>` for quick color setting
