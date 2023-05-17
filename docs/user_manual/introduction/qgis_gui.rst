@@ -1887,10 +1887,6 @@ Each toolbar item has pop-up help available.
 Hover your mouse over the item and a short description of the tool's
 purpose will be displayed.
 
-Every toolbar can be moved around according to your needs.
-Additionally, they can be switched off using the right mouse button
-context menu, or by holding the mouse over the toolbars.
-
 Available toolbars are:
 
 .. csv-table:: QGIS Toolbars
