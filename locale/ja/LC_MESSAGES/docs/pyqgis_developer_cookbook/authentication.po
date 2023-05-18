@@ -5,8 +5,9 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
-# Transifex Bot <>, 2023
 # Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2023\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -51,6 +52,23 @@ msgid ""
 "from a developer perspective."
 msgstr "この章では、開発者の観点から、認証システムを使用するベストプラクティスについて説明します。"
 
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:58
+msgid ""
+"The authentication system is widely used in QGIS Desktop by data providers "
+"whenever credentials are required to access a particular resource, for "
+"example when a layer establishes a connection to a Postgres database."
+msgstr ""
+"認証システムは、例えばレイヤがPostgresデータベースへの接続を確立するときなど、特定のリソースへのアクセスに認証情報が必要なときにデータプロバイダーによってQGIS"
+" Desktopで広く使用されています。"
+
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:62
+msgid ""
+"There are also a few widgets in the QGIS gui library that plugin developers "
+"can use to easily integrate the authentication infrastructure into their "
+"code:"
+msgstr ""
+"また、QGISのguiライブラリには、プラグイン開発者が認証インフラをコードに簡単に統合するために使用できるウィジェットがいくつか用意されています:"
+
 #: ../../docs/pyqgis_developer_cookbook/authentication.rst:65
 msgid ":class:`QgsAuthConfigEditor <qgis.gui.QgsAuthConfigEditor>`"
 msgstr ""
@@ -58,6 +76,25 @@ msgstr ""
 #: ../../docs/pyqgis_developer_cookbook/authentication.rst:66
 msgid ":class:`QgsAuthConfigSelect <qgis.gui.QgsAuthConfigSelect>`"
 msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:67
+msgid ":class:`QgsAuthSettingsWidget <qgis.gui.QgsAuthSettingsWidget>`"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:69
+msgid ""
+"A good code reference can be read from the authentication infrastructure "
+":source:`tests code <tests/src/python/test_qgsauthsystem.py>`."
+msgstr ""
+"良いコードリファレンスは、認証基盤 :source:`tests code "
+"<tests/src/python/test_qgsauthsystem.py>` から読むことができます。"
+
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:74
+msgid ""
+"Due to the security constraints that were taken into account during the "
+"authentication infrastructure design, only a selected subset of the internal"
+" methods are exposed to Python."
+msgstr "認証基盤の設計時に考慮されたセキュリティ上の制約により、内部メソッドの選択されたサブセットのみがPythonに公開されます。"
 
 #: ../../docs/pyqgis_developer_cookbook/authentication.rst:81
 msgid "Glossary"
@@ -82,6 +119,15 @@ msgstr "アクセスを許可し、QGIS認証DBに保存された資格情報を
 msgid "Authentication Database"
 msgstr "認証データベース"
 
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:92
+msgid ""
+"A :term:`Master Password` crypted sqlite db :file:`qgis-auth.db` where "
+":term:`Authentication Configuration` are stored. e.g user/password, personal"
+" certificates and keys, Certificate Authorities"
+msgstr ""
+" :term:`マスターパスワード` で暗号化された sqlite db :file:`qgis-auth.db` `認証設定` が保存されます。例 "
+"ユーザー/パスワード、個人証明書と鍵、認証局"
+
 #: ../../docs/pyqgis_developer_cookbook/authentication.rst:95
 msgid "Authentication DB"
 msgstr "認証DB"
@@ -100,6 +146,10 @@ msgid ""
 " Basic authentication method stores the couple of user/password."
 msgstr ""
 "認証データの構成は :term:`認証メソッド` によって異なります。例えばベーシック認証の場合は、ユーザー/パスワードの対が格納されます。"
+
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:102
+msgid "Authentication Config"
+msgstr "認証設定"
 
 #: ../../docs/pyqgis_developer_cookbook/authentication.rst:104
 msgid ":term:`Authentication Configuration`"
@@ -122,6 +172,25 @@ msgstr ""
 msgid "QgsAuthManager the entry point"
 msgstr "エントリポイントQgsAuthManager"
 
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:118
+msgid ""
+"The :class:`QgsAuthManager <qgis.core.QgsAuthManager>` singleton is the "
+"entry point to use the credentials stored in the QGIS encrypted "
+":term:`Authentication DB`, i.e. the :file:`qgis-auth.db` file under the "
+"active :ref:`user profile <user_profiles>` folder."
+msgstr ""
+":class:`QgsAuthManager <qgis.core.QgsAuthManager>` シングルトンは、QGISの暗号化された "
+":term:`Authentication DB` （アクティブな :ref:`user profile <user_profiles>` "
+"フォルダー下の :file:`qgis-auth.db` ファイル）に格納されている認証情報を使用するエントリポイントです。"
+
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:123
+msgid ""
+"This class takes care of the user interaction: by asking to set a master "
+"password or by transparently using it to access encrypted stored "
+"information."
+msgstr ""
+"このクラスは、マスターパスワードの設定を求めたり、暗号化された保存情報にアクセスするためにマスターパスワードを透過的に使用したりすることで、ユーザーとの対話を行います。"
+
 #: ../../docs/pyqgis_developer_cookbook/authentication.rst:129
 msgid "Init the manager and set the master password"
 msgstr "マネージャを初期化し、マスターパスワードを設定する"
@@ -138,17 +207,65 @@ msgstr ""
 msgid "Populate authdb with a new Authentication Configuration entry"
 msgstr "認証データベースに新しい認証構成項目を設定する"
 
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:168
+msgid ""
+"Any stored credential is a :term:`Authentication Configuration` instance of "
+"the :class:`QgsAuthMethodConfig <qgis.core.QgsAuthMethodConfig>` class "
+"accessed using a unique string like the following one::"
+msgstr ""
+"保存された資格情報は :class:`QgsAuthMethodConfig <qgis.core.QgsAuthMethodConfig>` クラスの"
+" :term:`Authentication Configuration` インスタンスで、次のような一意の文字列を使ってアクセスします::"
+
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:174
+msgid ""
+"that string is generated automatically when creating an entry using the QGIS"
+" API or GUI, but it might be useful to manually set it to a known value in "
+"case the configuration must be shared (with different credentials) between "
+"multiple users within an organization."
+msgstr ""
+"この文字列は、QGIS "
+"APIやGUIを使用してエントリーを作成する際に自動的に生成されますが、（異なる資格情報で）組織内の複数のユーザー間で設定を共有する必要がある場合、手動で既知の値に設定することが有用な場合があります。"
+
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:179
+msgid ""
+":class:`QgsAuthMethodConfig <qgis.core.QgsAuthMethodConfig>` is the base "
+"class for any :term:`Authentication Method`. Any Authentication Method sets "
+"a configuration hash map where authentication information will be stored. "
+"Hereafter a useful snippet to store PKI-path credentials for a hypothetical "
+"alice user:"
+msgstr ""
+":class:`QgsAuthMethodConfig <qgis.core.QgsAuthMethodConfig>` は任意の "
+":term:`Authentication Method` "
+"のベースクラスです。任意の認証方法は、認証情報が格納されるコンフィギュレーションハッシュマップを設定します。以下は、仮想的なaliceユーザのPKI-"
+"path認証情報を格納するための便利なスニペットです:"
+
 #: ../../docs/pyqgis_developer_cookbook/authentication.rst:207
 msgid "Available Authentication methods"
 msgstr "利用可能な認証方法"
+
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:209
+msgid ""
+":term:`Authentication Method` libraries are loaded dynamically during "
+"authentication manager init. Available authentication methods are:"
+msgstr ""
+":term:`Authentication Method` "
+"ライブラリは、認証マネージャの初期化時に動的にロードされます。利用可能な認証方式は以下の通りです:"
 
 #: ../../docs/pyqgis_developer_cookbook/authentication.rst:212
 msgid "``Basic`` User and password authentication"
 msgstr "``Basic`` ユーザーとパスワード認証"
 
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:213
+msgid "``Esri-Token`` ESRI token based authentication"
+msgstr "``Esri-Token`` ESRIトークン型認証"
+
 #: ../../docs/pyqgis_developer_cookbook/authentication.rst:214
 msgid "``Identity-Cert`` Identity certificate authentication"
 msgstr "``Identity-Cert`` アイデンティティ証明書認証"
+
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:215
+msgid "``OAuth2`` OAuth2 authentication"
+msgstr "``OAuth2`` OAuth2認証"
 
 #: ../../docs/pyqgis_developer_cookbook/authentication.rst:216
 msgid "``PKI-Paths`` PKI paths authentication"
@@ -166,11 +283,32 @@ msgstr "認証局の導入"
 msgid "Manage PKI bundles with QgsPkiBundle"
 msgstr "QgsPkiBundleでPKIバンドルを管理する"
 
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:243
+msgid ""
+"A convenience class to pack PKI bundles composed on SslCert, SslKey and CA "
+"chain is the :class:`QgsPkiBundle <qgis.core.QgsPkiBundle>` class. Hereafter"
+" a snippet to get password protected:"
+msgstr ""
+"SslCert、SslKey、CAチェーンで構成されるPKIバンドルをパックする便利なクラスは :class:`QgsPkiBundle "
+"<qgis.core.QgsPkiBundle>` クラスです。以下は、パスワードで保護されるようにするためのスニペットです:"
+
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:259
+msgid ""
+"Refer to :class:`QgsPkiBundle <qgis.core.QgsPkiBundle>` class documentation "
+"to extract cert/key/CAs from the bundle."
+msgstr ""
+"バンドルから証明書/鍵/CAsを取り出すには、 :class:`QgsPkiBundle <qgis.core.QgsPkiBundle>` "
+"クラスドキュメントを参照してください。"
+
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:265
+msgid "Remove an entry from authdb"
+msgstr "authdbからエントリを削除する"
+
 #: ../../docs/pyqgis_developer_cookbook/authentication.rst:266
 msgid ""
 "We can remove an entry from :term:`Authentication Database` using it's "
 "``authcfg`` identifier with the following snippet:"
-msgstr "以下が :term:`認証データベース` からエントリをその ``authcfg`` 識別子を使用して削除するコード例です："
+msgstr "次のスニペットは、``authcfg`` 識別子を使って :term:`認証データベース` からエントリを 削除します："
 
 #: ../../docs/pyqgis_developer_cookbook/authentication.rst:277
 msgid "Leave authcfg expansion to QgsAuthManager"
@@ -191,6 +329,24 @@ msgstr ""
 "を利用する最良の方法は "
 "認証マネージャによって自動的に管理されたままにすることです。保存された構成の一般的な用途は、WMSまたはWFSまたはDBの接続時の認証を行いサービスに接続することです。"
 
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:290
+msgid ""
+"Take into account that not all QGIS data providers are integrated with the "
+"Authentication infrastructure. Each authentication method, derived from the "
+"base class :class:`QgsAuthMethod <qgis.core.QgsAuthMethod>` and support a "
+"different set of Providers. For example the :meth:`certIdentity() "
+"<qgis.core.QgsAuthManager.certIdentity>` method supports the following list "
+"of providers:"
+msgstr ""
+"すべてのQGISデータプロバイダーが認証インフラストラクチャに統合されているわけではないことを考慮してください。各認証メソッドは基本クラス "
+":class:`QgsAuthMethod <qgis.core.QgsAuthMethod>` "
+"から派生し、異なるプロバイダのセットをサポートします。例えば、 :meth:`certIdentity() "
+"<qgis.core.QgsAuthManager.certIdentity>` メソッドは以下のプロバイダのリストをサポートしています:"
+
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:302
+msgid "Sample output:"
+msgstr "サンプル出力:"
+
 #: ../../docs/pyqgis_developer_cookbook/authentication.rst:308
 msgid ""
 "For example, to access a WMS service using stored credentials identified "
@@ -198,8 +354,8 @@ msgid ""
 "data source URL like in the following snippet:"
 msgstr ""
 "例えば、 ``authcfg = 'fm1s770'`` "
-"で識別保存された資格情報を使用してWMSサービスにアクセスするためには、次のコードのように、データ・ソースのURLに ``authcfg`` "
-"を使用する必要があります。"
+"で識別される、保存された資格情報を使ってWMSサービスにアクセスするためには、次のコードのように、データ・ソースのURLに ``authcfg`` "
+"を使う必要があります。"
 
 #: ../../docs/pyqgis_developer_cookbook/authentication.rst:333
 msgid ""
@@ -208,6 +364,24 @@ msgid ""
 msgstr ""
 "上の場合には、 ``wms`` プロバイダーは、単にHTTP接続を設定する前に、資格を ``authcfg`` "
 "URIパラメーターを拡張するために世話をします。"
+
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:338
+msgid ""
+"The developer would have to leave ``authcfg`` expansion to the "
+":class:`QgsAuthManager <qgis.core.QgsAuthManager>`, in this way he will be "
+"sure that expansion is not done too early."
+msgstr ""
+"開発者は ``authcfg`` の拡張を :class:`QgsAuthManager <qgis.core.QgsAuthManager>` "
+"に任せる必要があるでしょう。このようにすれば、拡張が早すぎることはないでしょう。"
+
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:341
+msgid ""
+"Usually an URI string, built using the :class:`QgsDataSourceURI "
+"<qgis.core.QgsDataSourceUri>` class, is used to set a data source in the "
+"following way:"
+msgstr ""
+"通常、データソースの設定には :class:`QgsDataSourceURI <qgis.core.QgsDataSourceUri>` "
+"クラスを用いて構築された URI 文字列を以下のように使用することができます:"
 
 #: ../../docs/pyqgis_developer_cookbook/authentication.rst:359
 msgid ""
@@ -219,13 +393,48 @@ msgstr "``False`` パラメーターは、URIで ``authcfg`` IDの存在のURI�
 msgid "PKI examples with other data providers"
 msgstr "他のデータプロバイダーとPKIの例"
 
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:367
+msgid ""
+"Other example can be read directly in the QGIS tests upstream as in "
+":source:`test_authmanager_pki_ows "
+"<tests/src/python/test_authmanager_pki_ows.py>` or "
+":source:`test_authmanager_pki_postgres "
+"<tests/src/python/test_authmanager_pki_postgres.py>`."
+msgstr ""
+"その他の例は、 :source:`test_authmanager_pki_ows "
+"<tests/src/python/test_authmanager_pki_ows.py>` や "
+":source:`test_authmanager_pki_postgres "
+"<tests/src/python/test_authmanager_pki_postgres.py>` "
+"というようにQGISテストアップストリームで直接読むことができます。"
+
 #: ../../docs/pyqgis_developer_cookbook/authentication.rst:375
 msgid "Adapt plugins to use Authentication infrastructure"
 msgstr "認証インフラストラクチャを使用するようにプラグインを適応させる"
 
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:377
+msgid ""
+"Many third party plugins are using httplib2 or other Python networking "
+"libraries to manage HTTP connections instead of integrating with "
+":class:`QgsNetworkAccessManager <qgis.core.QgsNetworkAccessManager>` and its"
+" related Authentication Infrastructure integration."
+msgstr ""
+"多くのサードパーティプラグインは、HTTP接続を管理するために、 :class:`QgsNetworkAccessManager "
+"<qgis.core.QgsNetworkAccessManager>` "
+"とそれに関連する認証基盤の統合の代わりに、httplib2や他のPythonネットワークライブラリを使用しています。"
+
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:381
+msgid ""
+"To facilitate this integration a helper Python function has been created "
+"called ``NetworkAccessManager``. Its code can be found `here "
+"<https://github.com/rduivenvoorde/pdokservicesplugin/blob/master/networkaccessmanager.py>`_."
+msgstr ""
+"この統合を容易にするために、``NetworkAccessManager`` というPythonのヘルパー関数が作られました。このコードは、`ここ "
+"<https://github.com/rduivenvoorde/pdokservicesplugin/blob/master/networkaccessmanager.py>`_"
+" にあります。"
+
 #: ../../docs/pyqgis_developer_cookbook/authentication.rst:385
 msgid "This helper class can be used as in the following snippet:"
-msgstr "このヘルパークラスは、次のコードのように使用できます："
+msgstr "このヘルパークラスは、次のスニペットのように使うことができます:"
 
 #: ../../docs/pyqgis_developer_cookbook/authentication.rst:399
 msgid "Authentication GUIs"
@@ -241,16 +450,64 @@ msgstr "この段落では、カスタムインターフェイスで認証イン
 msgid "GUI to select credentials"
 msgstr "資格情報を選択するためのGUI"
 
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:409
+msgid ""
+"If it's necessary to select a :term:`Authentication Configuration` from the "
+"set stored in the :term:`Authentication DB` it is available in the GUI class"
+" :class:`QgsAuthConfigSelect <qgis.gui.QgsAuthConfigSelect>`."
+msgstr ""
+":term:`Authentication DB` に格納されているセットから :term:`Authentication Configuration`"
+" を選択する必要がある場合は、GUIクラス :class:`QgsAuthConfigSelect "
+"<qgis.gui.QgsAuthConfigSelect>` で利用可能です。"
+
 #: ../../docs/pyqgis_developer_cookbook/authentication.rst:416
 #: ../../docs/pyqgis_developer_cookbook/authentication.rst:447
 #: ../../docs/pyqgis_developer_cookbook/authentication.rst:471
 msgid "and can be used as in the following snippet:"
 msgstr "そして次のコードのように使用できます："
 
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:429
+msgid ""
+"The above example is taken from the QGIS source :source:`code "
+"<src/providers/postgres/qgspgnewconnection.cpp#L42>`. The second parameter "
+"of the GUI constructor refers to data provider type. The parameter is used "
+"to restrict the compatible :term:`Authentication Method`\\s with the "
+"specified provider."
+msgstr ""
+"上記の例は、QGISのソース :source:`code "
+"<src/providers/postgres/qgspgnewconnection.cpp#L42>` "
+"から引用しています。GUIコンストラクタの第2パラメータは、データプロバイダタイプを指します。このパラメータは、指定したプロバイダと互換性のある "
+":term:`Authentication Method` を制限するために使用されます。"
+
 #: ../../docs/pyqgis_developer_cookbook/authentication.rst:438
 msgid "Authentication Editor GUI"
 msgstr "認証エディタのGUI"
 
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:440
+msgid ""
+"The complete GUI used to manage credentials, authorities and to access to "
+"Authentication utilities is managed by the :class:`QgsAuthEditorWidgets "
+"<qgis.gui.QgsAuthEditorWidgets>` class."
+msgstr ""
+"資格情報、認証局を管理し、認証ユーティリティにアクセスするための完全なGUIは :class:`QgsAuthEditorWidgets "
+"<qgis.gui.QgsAuthEditorWidgets>` クラスによって管理されています。"
+
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:457
+msgid ""
+"An integrated example can be found in the related :source:`test "
+"<tests/src/python/test_qgsauthsystem.py#L80>`."
+msgstr ""
+"統合された例は、関連する :source:`test <tests/src/python/test_qgsauthsystem.py#L80>` "
+"で見つけることができます。"
+
 #: ../../docs/pyqgis_developer_cookbook/authentication.rst:463
 msgid "Authorities Editor GUI"
 msgstr "認証局エディタのGUI"
+
+#: ../../docs/pyqgis_developer_cookbook/authentication.rst:465
+msgid ""
+"A GUI used to manage only authorities is managed by the "
+":class:`QgsAuthAuthoritiesEditor <qgis.gui.QgsAuthAuthoritiesEditor>` class."
+msgstr ""
+"認証局だけを管理するためのGUIは :class:`QgsAuthAuthoritiesEditor "
+"<qgis.gui.QgsAuthAuthoritiesEditor>` クラスで管理します。"
