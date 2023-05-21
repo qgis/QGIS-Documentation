@@ -628,7 +628,6 @@ To configure QGIS processing to find the OTB library:
 #. You can see OTB under "Providers":
 
    #. Expand the :guilabel:`OTB` tab
-   #. Tick the :guilabel:`Activate` option
    #. Set the :guilabel:`OTB folder`. This is the location of your OTB installation.
    #. Set the :guilabel:`OTB application folder`. This is the location of your OTB
       applications ( :file:`<PATH_TO_OTB_INSTALLATION>/lib/otb/applications`)
@@ -640,9 +639,6 @@ If settings are correct, OTB algorithms will be available in the
 Documentation of OTB settings available in QGIS Processing
 ...........................................................
 
-
-* **Activate**: This is a checkbox to activate or deactivate the OTB provider.
-  An invalid OTB setting will uncheck this when saved.
 
 * **OTB folder**: This is the directory where OTB is available. 
 
