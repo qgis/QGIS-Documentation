@@ -54,8 +54,8 @@ Basic parameters
      - ``PIXEL_SIZE``
      - [number]
 
-       Default: 0.1
-     - Pixel size (X=Y) in map units. Minimum value: 0.01
+       Default: 1.0
+     - Pixel size (X=Y) in map units.
    * - **Constant value**
      - ``NUMBER``
      - [number]
@@ -174,8 +174,8 @@ Basic parameters
      - ``PIXEL_SIZE``
      - [number]
 
-       Default: 0.1
-     - Pixel size (X=Y) in map units. Minimum value: 0.01
+       Default: 1.0
+     - Pixel size (X=Y) in map units.
    * - **Output raster**
      - ``OUTPUT``
      - [raster]
@@ -299,7 +299,7 @@ Basic parameters
      - [number]
 
        Default: 1.0
-     - Pixel size (X=Y) in map units. Minimum value: 0.01
+     - Pixel size (X=Y) in map units.
    * - **Output raster**
      - ``OUTPUT``
      - [raster]
@@ -413,7 +413,7 @@ Basic parameters
      - [number]
 
        Default: 1.0
-     - Pixel size (X=Y) in map units. Minimum value: 0.01
+     - Pixel size (X=Y) in map units.
    * - **Output raster**
      - ``OUTPUT``
      - [raster]
@@ -534,7 +534,7 @@ Basic parameters
      - [number]
 
        Default: 1.0
-     - Pixel size (X=Y) in map units. Minimum value: 0.01
+     - Pixel size (X=Y) in map units.
    * - **Output raster**
      - ``OUTPUT``
      - [raster]
@@ -653,7 +653,7 @@ Basic parameters
      - [number]
 
        Default: 1.0
-     - Pixel size (X=Y) in map units. Minimum value: 0.01
+     - Pixel size (X=Y) in map units.
    * - **Output raster**
      - ``OUTPUT``
      - [raster]
@@ -777,7 +777,7 @@ Basic parameters
      - [number]
 
        Default: 1.0
-     - Pixel size (X=Y) in map units. Minimum value: 0.01
+     - Pixel size (X=Y) in map units.
    * - **Output raster**
      - ``OUTPUT``
      - [raster]
@@ -898,7 +898,7 @@ Basic parameters
      - [number]
 
        Default: 1.0
-     - Pixel size (X=Y) in map units. Minimum value: 0.01
+     - Pixel size (X=Y) in map units.
    * - **Output raster**
      - ``OUTPUT``
      - [raster]
@@ -1018,7 +1018,7 @@ Basic parameters
      - [number]
 
        Default: 1.0
-     - Pixel size (X=Y) in map units. Minimum value: 0.01
+     - Pixel size (X=Y) in map units.
    * - **Output raster**
      - ``OUTPUT``
      - [raster]
