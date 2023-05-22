@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -88,8 +89,9 @@ msgid ""
 " be accessed from Python subclasses, since protected members cannot be used "
 "from the Python bindings."
 msgstr ""
-"すべてのクラスメンバはプライベートにしましょう。公開クラスメンバは極力避けるようにしてください。保護メンバーは Python "
-"バインディングから使用できないため、メンバーが Python のサブクラスからアクセスする必要がある場合は、保護メンバを使用しないでください。"
+"すべてのクラスメンバはprivateにしましょう。publicクラスメンバは極力避けるようにしてください。protectedメンバは Python "
+"バインディングから使用できないため、メンバが Python "
+"のサブクラスからアクセスする必要がある場合は、protectedメンバを使用しないでください。"
 
 #: ../../docs/developers_guide/codingstandards.rst:43
 msgid ""
@@ -201,7 +203,7 @@ msgstr ""
 
 #: ../../docs/developers_guide/codingstandards.rst:100
 msgid "Function Return Values"
-msgstr "関数の返値"
+msgstr "関数の戻り値"
 
 #: ../../docs/developers_guide/codingstandards.rst:102
 msgid ""
@@ -254,6 +256,16 @@ msgid ""
 "It is required to write API documentation for every class, method, enum and "
 "other code that is available in the public API."
 msgstr "公開 API で利用可能なすべてのクラス、メソッド、列挙型などのコードについては、 API ドキュメントを書く必要があります。"
+
+#: ../../docs/developers_guide/codingstandards.rst:122
+msgid ""
+"QGIS uses `Doxygen <https://www.doxygen.nl/index.html>`_ or documentation. "
+"Write descriptive and meaningful comments that give a reader information "
+"about what to expect, what happens in edge cases and give hints about other "
+"interfaces he could be looking for, best practices and code samples."
+msgstr ""
+"QGISは `Doxygen <https://www.doxygen.nl/index.html>`_ "
+"またはドキュメントを使用します。説明的で意味のあるコメントを書き、読者に何を期待するか、エッジケースで何が起こるか、読者が探しているかもしれない他のインターフェース、ベストプラクティス、コードサンプルについてのヒントを与える情報を提供します。"
 
 #: ../../docs/developers_guide/codingstandards.rst:129
 msgid "Methods"
@@ -366,6 +378,20 @@ msgid ""
 "following example:"
 msgstr "各ソースファイルには以下の例に従ってパターン化されたヘッダセクションがあるようにしてください:"
 
+#: ../../docs/developers_guide/codingstandards.rst:252
+msgid ""
+"There is a template for Qt Creator in git repository. To use it, copy it "
+"from :source:`qt_creator_license_template "
+"<editors/QtCreator/qt_creator_license_template>` to a local location, adjust"
+" the mail address and - if required - the name and configure QtCreator to "
+"use it: :menuselection:`Tools --> Options --> C++ --> File Naming`."
+msgstr ""
+"gitリポジトリにはQt Creatorのためのテンプレートがあります。それを使用するには、 それを "
+":source:`qt_creator_license_template "
+"<editors/QtCreator/qt_creator_license_template>` "
+"からローカルの場所にコピーし、メールアドレスと（必要ならば）名前を修正し、それを使用するようにQtCreatorを設定します: "
+":menuselection:`ツール --> オプション --> C++ --> ファイル命名` 。"
+
 #: ../../docs/developers_guide/codingstandards.rst:260
 msgid "Variable Names"
 msgstr "変数名"
@@ -474,6 +500,19 @@ msgstr "vim では、 ``set expandtab ts=2`` でこれを実行できます"
 msgid "Indentation"
 msgstr "字下げ"
 
+#: ../../docs/developers_guide/codingstandards.rst:343
+msgid ""
+"Source code should be indented to improve readability. There is a "
+":source:`prepare_commit.sh <scripts/prepare_commit.sh>` file that looks up "
+"the changed files and reindents them using astyle. This should be run before"
+" committing. You can also use :source:`astyle.sh <scripts/astyle.sh>` to "
+"indent individual files."
+msgstr ""
+"ソースコードは読みやすくするために字下げされるべきです。変更されたファイルを検索し、 astyle を使用してそれらを字下げし直す "
+":source:`prepare_commit.sh <scripts/prepare_commit.sh>` "
+"ファイルがあります。これは、コミットする前に実行すべきです。また、個々のファイルを字下げするために :source:`astyle.sh "
+"<scripts/astyle.sh>` を使用できます。"
+
 #: ../../docs/developers_guide/codingstandards.rst:349
 msgid ""
 "As newer versions of astyle indent differently than the version used to do a"
@@ -499,6 +538,13 @@ msgstr "API の互換性"
 #: ../../docs/developers_guide/codingstandards.rst:375
 msgid "There is :api:`API documentation <>` for C++."
 msgstr "C++用の :api:`API documentation <>` があります。"
+
+#: ../../docs/developers_guide/codingstandards.rst:377
+msgid ""
+"We try to keep the API stable and backwards compatible. Cleanups to the API "
+"should be done in a manner similar to the Qt source code e.g."
+msgstr ""
+"私たちは、APIを安定させ、後方互換性を保つように努めています。APIのクリーンアップは、Qtのソースコードと同じような方法で行ってください。例"
 
 #: ../../docs/developers_guide/codingstandards.rst:417
 msgid "SIP Bindings"
@@ -594,6 +640,14 @@ msgstr ""
 "``SIP_PYTYPE(type)``  は、Pythonのメソッドの引数のための別の型を定義するために使用することができます。型がコンマ ``,``"
 " を含む場合は、型はシングルクォート ``'`` で囲まなければなりません。"
 
+#: ../../docs/developers_guide/codingstandards.rst:453
+msgid ""
+"A demo file, :source:`sipifyheader.h "
+"<tests/code_layout/sipify/sipifyheader.h>`, is also available."
+msgstr ""
+"デモファイル、:source:`sipifyheader.h <tests/code_layout/sipify/sipifyheader.h>` "
+"も利用できます。"
+
 #: ../../docs/developers_guide/codingstandards.rst:457
 msgid "Generating the SIP file"
 msgstr "SIP ファイルを生成する"
@@ -602,13 +656,91 @@ msgstr "SIP ファイルを生成する"
 msgid "The SIP file can be generated using a dedicated script. For instance:"
 msgstr "SIP ファイルはそのための専用スクリプトを使って生成することができます。例えば次のようにします。"
 
+#: ../../docs/developers_guide/codingstandards.rst:465
+msgid ""
+"To automatically generate the SIP file of a newly added C++ file "
+":source:`sip_include.sh <scripts/sip_include.sh>` needs to be executed."
+msgstr ""
+"新しく追加されたC++ファイルのSIPファイルを自動生成するには、 :source:`sip_include.sh "
+"<scripts/sip_include.sh>` を実行する必要があります。"
+
+#: ../../docs/developers_guide/codingstandards.rst:468
+msgid ""
+"As soon as a SIP file is added to one of the source file "
+"(:source:`core_auto.sip <python/core/core_auto.sip>`, :source:`gui_auto.sip "
+"<python/gui/gui_auto.sip>` or :source:`analysis_auto.sip "
+"<python/analysis/analysis_auto.sip>`), it will be considered as generated "
+"automatically. A test on will ensure that this file is up to date with its "
+"corresponding header."
+msgstr ""
+"SIP ファイルがソースファイル (:source:`core_auto.sip <python/core/core_auto.sip>`, "
+":source:`gui_auto.sip <python/gui/gui_auto.sip>` または "
+":source:`analysis_auto.sip <python/analysis_auto.sip>`) "
+"のいずれかに追加されると同時に自動的に生成されたと見なされます。テストオンは、このファイルが対応するヘッダと更新されたことを確認します。"
+
+#: ../../docs/developers_guide/codingstandards.rst:475
+msgid ""
+"To force recreation of SIP files, :source:`sipify_all.sh "
+"<scripts/sipify_all.sh>` shall be executed."
+msgstr ""
+"SIPファイルを強制的に再生成するためには、 :source:`sipify_all.sh <scripts/sipify_all.sh>` "
+"を実行しなければなりません。"
+
 #: ../../docs/developers_guide/codingstandards.rst:479
 msgid "Improving sipify script"
 msgstr "sipify スクリプトを改善する"
 
+#: ../../docs/developers_guide/codingstandards.rst:481
+msgid ""
+"If some improvements are required for sipify script, please add the missing "
+"bits to the demo file :source:`sipifyheader.h "
+"<tests/code_layout/sipify/sipifyheader.h>` and create the expected header "
+":source:`sipifyheader.expected.sip "
+"<tests/code_layout/sipify/sipifyheader.expected.sip>`. This will also be "
+"automatically tested as a unit test of the script itself."
+msgstr ""
+"もし、sipifyスクリプトに何らかの改良が必要であれば、デモファイルに足りない部分を追加してください :source:`sipifyheader.h "
+"<tests/code_layout/sipify/sipifyheader.h>` そして、期待されるヘッダー "
+":source:`sipifyheader.expected.sip "
+"<tests/code_layout/sipify/sipifyheader.expected.sip>` "
+"を作成します。これは、スクリプト自体のユニットテストとしても自動的にテストされることになります。"
+
 #: ../../docs/developers_guide/codingstandards.rst:489
 msgid "Settings"
 msgstr "設定"
+
+#: ../../docs/developers_guide/codingstandards.rst:491
+msgid ""
+"QGIS code base offers a mechanism to declare, register and use settings."
+msgstr "QGISのコードベースには、設定を宣言、登録、利用するための仕組みが用意されています。"
+
+#: ../../docs/developers_guide/codingstandards.rst:493
+msgid ""
+"settings should be defined using one of the available implementations "
+"(:api:`QgsSettingsEntryString <classQgsSettingsEntryString.html>`, "
+":api:`QgsSettingsEntryInteger <classQgsSettingsEntryInteger.html>`, …)."
+msgstr ""
+"設定は、利用可能な実装（:api:`QgsSettingsEntryString "
+"<classQgsSettingsEntryString.html>`, :api:`QgsSettingsEntryInteger "
+"<classQgsSettingsEntryInteger.html>`, ...)のいずれかを使用して定義しなければいけません。"
+
+#: ../../docs/developers_guide/codingstandards.rst:496
+msgid ""
+"they are declared as ``const static`` either in a dedicated class or in the "
+"registry directly (core, gui, app, …)."
+msgstr "それらは、専用のクラスかレジストリ（core、gui、app、...）で直接 ``const static`` として宣言されます。"
+
+#: ../../docs/developers_guide/codingstandards.rst:498
+msgid ""
+"they always must be added to the registry using ``addSettingsEntry`` method "
+"of  :api:`QgsSettingsRegistry <classQgsSettingsRegistry.html>`."
+msgstr ""
+":api:`QgsSettingsRegistry <classQgsSettingsRegistry.html>` の "
+"``addSettingsEntry`` メソッドを使用してレジストリに追加する必要があります。"
+
+#: ../../docs/developers_guide/codingstandards.rst:500
+msgid "the setting key should be using a ``kebab-case``."
+msgstr "設定キーは、``kebab-case`` を使用する必要があります。"
 
 #: ../../docs/developers_guide/codingstandards.rst:503
 msgid "Coding Style"
@@ -688,6 +820,13 @@ msgstr "より読みやすいのは、こちら:"
 msgid "or this:"
 msgstr "またはこちら："
 
+#: ../../docs/developers_guide/codingstandards.rst:554
+msgid ""
+":source:`prepare_commit.sh <scripts/prepare_commit.sh>` script will take "
+"care of this."
+msgstr ""
+":source:`prepare_commit.sh <scripts/prepare_commit.sh>` スクリプトがこの処理を行います。"
+
 #: ../../docs/developers_guide/codingstandards.rst:559
 msgid "Put commands on separate lines"
 msgstr "コマンドは別々の行に入れましょう"
@@ -727,6 +866,38 @@ msgstr ""
 msgid "Book recommendations"
 msgstr "お奨めの読み物"
 
+#: ../../docs/developers_guide/codingstandards.rst:608
+msgid ""
+"`Effective Modern C++ <https://www.oreilly.com/library/view/effective-"
+"modern-c/9781491908419/>`_, Scott Meyers"
+msgstr ""
+"`Effective Modern C++ <https://www.oreilly.com/library/view/effective-"
+"modern-c/9781491908419/>`_, Scott Meyers"
+
+#: ../../docs/developers_guide/codingstandards.rst:609
+msgid ""
+"`More Effective C++ <https://www.informit.com/store/more-effective-c-plus-"
+"plus-35-new-ways-to-improve-your-9780201633719>`_, Scott Meyers"
+msgstr ""
+"`More Effective C++ <https://www.informit.com/store/more-effective-c-plus-"
+"plus-35-new-ways-to-improve-your-9780201633719>`_, Scott Meyers"
+
+#: ../../docs/developers_guide/codingstandards.rst:610
+msgid ""
+"`Effective STL <https://www.informit.com/store/effective-stl-50-specific-"
+"ways-to-improve-your-use-9780201749625>`_, Scott Meyers"
+msgstr ""
+"`Effective STL <https://www.informit.com/store/effective-stl-50-specific-"
+"ways-to-improve-your-use-9780201749625>`_, Scott Meyers"
+
+#: ../../docs/developers_guide/codingstandards.rst:611
+msgid ""
+"`Design Patterns <https://www.amazon.com/Design-Patterns-Elements-Reusable-"
+"Object-Oriented/dp/0201633612>`_, GoF"
+msgstr ""
+"`Design Patterns <https://www.amazon.com/Design-Patterns-Elements-Reusable-"
+"Object-Oriented/dp/0201633612>`_, GoF"
+
 #: ../../docs/developers_guide/codingstandards.rst:613
 msgid ""
 "You should also really read this article from Qt Quarterly on `designing Qt "
@@ -762,3 +933,11 @@ msgstr ""
 #: ../../docs/developers_guide/codingstandards.rst:631
 msgid "adding their name to:"
 msgstr "以下に自分の名前を追加すること："
+
+#: ../../docs/developers_guide/codingstandards.rst:633
+msgid ":source:`doc/CONTRIBUTORS`"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:634
+msgid ":source:`doc/AUTHORS`"
+msgstr ""
