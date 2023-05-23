@@ -88,35 +88,31 @@ We first need to load the data to work with.
 
 #. Zoom to the layer extent to see |majorUrbanName|, South Africa
 
-   Before proceeding we will filter the :guilabel:`roads` layer, in
-   order to have only some specific road types to work with.
+   Before proceeding we will filter the :guilabel:`roads` layer,
+   in order to have only some specific road types to work with.
 
    Some roads in OSM datasets are listed as ``unclassified``,
    ``tracks``, ``path`` and ``footway``.
-   We want to exclude these from our dataset and focus on the other
-   road types, more suitable for this exercise.
+   We want to exclude these from our dataset and focus on the other road types,
+   more suitable for this exercise.
 
-   Moreover, OSM data might not be updated everywhere, and we will
-   also exclude ``NULL`` values.
+   Moreover, OSM data might not be updated everywhere,
+   and we will also exclude ``NULL`` values.
 
-#. Right click on the ``roads`` layer and choose
-   :guilabel:`Filter...`.
-#. In the dialog that pops up we filter these features with the
-   following expression::
+#. Right click on the ``roads`` layer and choose :guilabel:`Filter...`.
+#. In the dialog that pops up we filter these features with the following expression::
 
      "highway" NOT IN ('footway', 'path', 'unclassified', 'track') AND "highway" IS NOT NULL
 
    The concatenation of the two operators ``NOT`` and ``IN`` excludes
-   all the features that have these attribute values in the
-   ``highway`` field.
+   all the features that have these attribute values in the ``highway`` field.
 
    ``IS NOT NULL`` combined with the ``AND`` operator excludes roads with
    no value in the ``highway`` field.
 
-   Note the |indicatorFilter| icon next to the :guilabel:`roads`
-   layer.
-   It helps you remember that this layer has a filter activated, so
-   some features may not be available in the project.
+   Note the |indicatorFilter| icon next to the :guilabel:`roads` layer.
+   It helps you remember that this layer has a filter activated,
+   so some features may not be available in the project.
 
 The map with all the data should look like the following one:
 
@@ -158,17 +154,19 @@ Feel free to choose the best workflow for yourself.
    .. figure:: img/save_roads_34S.png
       :align: center
 
-   This will create the new GeoPackage database and add the
-   ``roads_34S`` layer.
+   This will create the new GeoPackage database and add the ``roads_34S`` layer.
 
 #. Repeat this process for each layer, creating a new layer in the
-   :file:`vector_analysis.gpkg` GeoPackage file with ``_34S`` appended
-   to the original name and removing each of the old layers from the
-   project.
+   :file:`vector_analysis.gpkg` GeoPackage file with ``_34S`` appended to the original name.
+   
+   On macOS, press the :guilabel:`Replace` button in the dialog that pops up
+   to allow QGIS to overwrite the existing GeoPackage.
 
-   .. note:: When you choose to save a layer to an existing
-      GeoPackage, QGIS will **append** that layer to the GeoPackage.
+   .. note:: When you choose to save a layer to an existing GeoPackage,
+      QGIS will **add** that layer next to the existing layers in the GeoPackage,
+      if no layer of the same name already exists.
 
+#. Remove each of the old layers from the project
 #. Once you have completed the process for all the layers, right click
    on any layer and click :guilabel:`Zoom to layer extent` to focus
    the map to the area of interest.
