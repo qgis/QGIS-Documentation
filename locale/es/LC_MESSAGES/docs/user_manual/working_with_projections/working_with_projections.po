@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# Eric Armijo, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: Eric Armijo, 2023\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -88,6 +89,33 @@ msgstr ""
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:44
 msgid "Layer Coordinate Reference Systems"
 msgstr "Sistemas de Coordenadas de Capas"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:46
+msgid ""
+"In order to correctly project data into a specific target CRS, either your "
+"data must contain information about its coordinate reference system or you "
+"will need to manually assign the correct CRS to the layer. For PostGIS "
+"layers, QGIS uses the spatial reference identifier that was specified when "
+"that PostGIS layer was created. For data supported by GDAL, QGIS relies on "
+"the presence of a recognized means of specifying the CRS. For instance, for "
+"the Shapefile format this is a file containing an ESRI Well-Known Text "
+"(:index:`WKT`) representation of the layer's CRS. This projection file has "
+"the same base name as the :file:`.shp` file and a :file:`.prj` extension. "
+"For example, :file:`alaska.shp` would have a corresponding projection file "
+"named :file:`alaska.prj`."
+msgstr ""
+"Para proyectar correctamente los datos en un SRC de destino específico, o "
+"bien sus datos deben contener información sobre su sistema de referencia de "
+"coordenadas, o bien tendrá que asignar manualmente el CRS correcto a la "
+"capa. Para las capas PostGIS, QGIS utiliza el identificador de referencia "
+"espacial que se especificó cuando se creó la capa PostGIS. Para los datos "
+"soportados por GDAL, QGIS se basa en la presencia de un medio reconocido "
+"para especificar el SRC. Por ejemplo, para el formato Shapefile se trata de "
+"un archivo que contiene una representación ESRI Well-Known Text "
+"(:index:`WKT`) del SRC de la capa. Este archivo de proyección tiene el mismo"
+" nombre base que el archivo :file:`.shp` y una extensión :file:`.prj`. Por "
+"ejemplo, :file:`alaska.shp` tendría un archivo de proyección correspondiente"
+" llamado :file:`alaska.prj`."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:58
 msgid ""
