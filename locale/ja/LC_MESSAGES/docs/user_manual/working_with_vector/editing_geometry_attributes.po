@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# tomoya miyoshi, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-23 10:17+0000\n"
 "PO-Revision-Date: 2023-03-19 14:53+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: tomoya miyoshi, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,6 +29,15 @@ msgstr ""
 msgid "Editing"
 msgstr "編集"
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:12
+msgid ""
+"QGIS has various capabilities for editing OGR, SpatiaLite, PostGIS, MS SQL "
+"Server and Oracle Spatial vector layers and tables. They can be of 2D or 3D "
+"geometry type."
+msgstr ""
+"QGISは、OGR、SpatiaLite、PostGIS、MS SQL Server、Oracle "
+"Spatialのベクタレイヤやテーブルを編集する様々な機能を備えています。これらは、2Dまたは3Dジオメトリタイプのものです。"
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:17
 msgid ""
 "The procedure for editing GRASS layers is different - see section "
@@ -37,6 +47,12 @@ msgstr "GRASSレイヤを編集する手順は異なります。詳細は  :ref:
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:22
 msgid "**Concurrent Edits**"
 msgstr "**同時編集**"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:24
+msgid ""
+"QGIS does not track if somebody else is editing the same feature at the same"
+" time as you are. The last person to save the edits wins."
+msgstr "QGISは、他の人があなたと同時に同じ地物を編集していても追跡しません。最後に編集を保存した人が勝ちます。"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:30
 msgid "**Validating Edits**"
@@ -119,6 +135,20 @@ msgstr ""
 msgid "Snapping and Digitizing Options"
 msgstr "スナップとデジタイズのオプション"
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:85
+msgid ""
+"Global :ref:`snapping and digitizing settings <digitizing_options>` "
+"(snapping mode, tolerance value, and units...) can be overridden in the "
+"project from the :menuselection:`Project --> Snapping Options...` menu. In "
+"the :guilabel:`Snapping and Digitizing Options`, you can also configure some"
+" other properties (snapping layers, scale limit, topology...) The "
+":guilabel:`Snapping Toolbar` gives access to most of these features."
+msgstr ""
+"グローバルな :ref:`Snapping and Digitizing Settings <digitizing_options>` "
+"(スナップモード、許容値、単位...) は、プロジェクト内で :menuselection:`プロジェクト --> スナップオプション... ` "
+"メニューからオーバーライドすることができます。:guilabel:`Snapping and Digitizing Options` "
+"では、その他のプロパティ（スナップレイヤー、スケールリミット、トポロジ...）も設定することができます。"
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:92
 msgid ""
 "By default, snapping is disabled in a project until you press the |snapping|"
@@ -182,6 +212,10 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:123
 msgid "QGIS will show different *snap* icons depending on the kind of *snap*:"
 msgstr "QGISでは *スナップ* の種類に応じてさまざまな *スナップ* アイコンを表示します："
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:125
+msgid "Snapping icons"
+msgstr "スナップのアイコン"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:130
 msgid "Snapping to a vertex: box icon"
@@ -409,6 +443,12 @@ msgid ""
 "Topological editing works with features from different layers, as long as "
 "the layers are visible and in editing mode."
 msgstr "トポロジ編集は、レイヤが表示されていて編集モードであれば、別のレイヤの地物でも機能します。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:275
+msgid ""
+"In layer with Z or M values, topological editing will interpolate the Z or M"
+" value of the vertex based on the value of the edge used for the connection."
+msgstr "Z値やM値のあるレイヤーでは、トポロジ編集で、接続に使用したエッジの値に基づいて、頂点のZ値やM値を補間します。"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:282
 msgid "Overlapping control"
@@ -651,6 +691,10 @@ msgid ""
 "Using the basic digitizing tools, you can perform the following functions:"
 msgstr "基本のデジタイズツールには、以下の機能があります："
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:412
+msgid "Vector layer basic editing toolbar"
+msgstr "ベクタレイヤの基本的な編集ツールバー"
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:415
 msgid "Tool"
 msgstr "ツール"
@@ -662,7 +706,7 @@ msgstr "目的"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:417
 msgid "|allEdits|"
-msgstr "|allEdits|"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2066
 msgid "allEdits"
@@ -676,7 +720,7 @@ msgstr "全レイヤまたは選択レイヤを同時に保存・ロールバッ
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:417
 msgid "|toggleEditing|"
-msgstr "|toggleEditing|"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2228
 msgid "toggleEditing"
@@ -690,7 +734,7 @@ msgstr "アクティブなレイヤのステータスに基づいて、選択し
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:420
 msgid "|saveEdits|"
-msgstr "|saveEdits|"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2204
 msgid "saveEdits"
@@ -709,12 +753,20 @@ msgid "digitizeWithSegment"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:422
+msgid "Digitize using straight segments"
+msgstr "直線のセグメントでデジタイズする"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:422
 msgid "|digitizeWithCurve|"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2116
 msgid "digitizeWithCurve"
 msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:422
+msgid "Digitize using curve lines"
+msgstr "曲がった線を使ってデジタイズする"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:424
 msgid "|streamingDigitize|"
@@ -725,12 +777,20 @@ msgid "streamingDigitize"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:424
+msgid "Enable freehand digitizing"
+msgstr "フリーハンドによるデジタイズを有効にする"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:424
 msgid "|digitizeShape|"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2114
 msgid "digitizeShape"
 msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:424
+msgid "Digitize polygon of regular shape"
+msgstr "正多角形のポリゴンをデジタイズする"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:426
 msgid "|newTableRow|"
@@ -746,7 +806,7 @@ msgstr "レコードを追加"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:426
 msgid "|capturePoint|"
-msgstr "|capturePoint|"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2086
 msgid "capturePoint"
@@ -758,7 +818,7 @@ msgstr "地物を追加：ポイントをキャプチャ"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:428
 msgid "|captureLine|"
-msgstr "|captureLine|"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2084
 msgid "captureLine"
@@ -770,7 +830,7 @@ msgstr "地物を追加：ラインをキャプチャ"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:428
 msgid "|capturePolygon|"
-msgstr "|capturePolygon|"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2088
 msgid "capturePolygon"
@@ -782,7 +842,7 @@ msgstr "地物を追加：ポリゴンをキャプチャ"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:430
 msgid "|vertexTool|"
-msgstr "|vertexTool|"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2240
 msgid "vertexTool"
@@ -794,7 +854,7 @@ msgstr "頂点ツール（全レイヤ）"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:430
 msgid "|vertexToolActiveLayer|"
-msgstr "|vertexToolActiveLayer|"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2242
 msgid "vertexToolActiveLayer"
@@ -804,13 +864,21 @@ msgstr ""
 msgid "Vertex Tool (Current Layer)"
 msgstr "頂点ツール（現在のレイヤ）"
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:432
+msgid "|checkbox| :guilabel:`Show Vertex Editor`"
+msgstr "|checkbox| :guilabel:`頂点エディタを表示`"
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2090
 msgid "checkbox"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:432
+msgid "Set whether the vertex editor panel should auto-open"
+msgstr "頂点エディタパネルを自動的に開くかどうかを設定する"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:432
 msgid "|multiEdit|"
-msgstr "|multiEdit|"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2166
 msgid "multiEdit"
@@ -822,7 +890,7 @@ msgstr "全選択地物の属性一括変更"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:435
 msgid "|deleteSelectedFeatures|"
-msgstr "|deleteSelectedFeatures|"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2110
 msgid "deleteSelectedFeatures"
@@ -834,7 +902,7 @@ msgstr "選択した地物をアクティブレイヤから削除"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:435
 msgid "|editCut|"
-msgstr "|editCut|"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2122
 msgid "editCut"
@@ -846,7 +914,7 @@ msgstr "地物をアクティブレイヤから切り取り"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:437
 msgid "|editCopy|"
-msgstr "|editCopy|"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2120
 msgid "editCopy"
@@ -858,7 +926,7 @@ msgstr "選択した地物をアクティブレイヤからコピー"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:437
 msgid "|editPaste|"
-msgstr "|editPaste|"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2124
 msgid "editPaste"
@@ -870,7 +938,7 @@ msgstr "地物をアクティブレイヤに貼り付け"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:439
 msgid "|undo|"
-msgstr "|undo|"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2238
 msgid "undo"
@@ -882,7 +950,7 @@ msgstr "アクティブレイヤの変更を元に戻す"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:439
 msgid "|redo|"
-msgstr "|redo|"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2186
 msgid "redo"
@@ -935,6 +1003,66 @@ msgstr ""
 "定期的に |saveEdits| :sup:`レイヤ編集内容の保存` "
 "で保存するのを忘れないでください。また、これはデータソースが変更をすべて受け入れ可能かどうかをチェックします。"
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:471
+msgid "Geometry editing techniques"
+msgstr "ジオメトリを編集するテクニック"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:473
+msgid ""
+"When a geometry drawing tool (mainly the ones that add, split, reshape "
+"features) is enabled for a line or polygon based layer, you can select the "
+"technique for adding new vertices:"
+msgstr ""
+"ジオメトリ描画ツール（主に地物の追加、分割、再形成を行うもの）がライン又はポリゴン型のレイヤで有効になっている場合、新しい頂点を追加する手法を選択することができます:"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:477
+msgid ""
+"The |digitizeWithSegment| :sup:`Digitize with Segment`: draws straight "
+"segment whose start and end points are defined by left clicks."
+msgstr ""
+"|digitizeWithSegment| :sup:`セグメントでデジタイズ`: "
+"左クリックで開始点と終了点が定義された直線状のセグメントを描画します。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:479
+msgid ""
+"The |digitizeWithCurve| :sup:`Digitize with Curve`: draws curve line based "
+"on three consecutive nodes defined by left clicks (start, point along the "
+"arc, end). If the geometry type does not support curves, then consecutive "
+"smaller segments are used to approximate the curvature."
+msgstr ""
+"|digitizeWithCurve| :sup:`曲線でデジタイズ`: "
+"左クリックで定義された3つの連続したノード（開始、弧に沿った点、終了）に基づいて曲がった線を描きます。ジオメトリタイプが曲線をサポートしていない場合、連続した小さなセグメントが曲率を近似するために使用されます。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:483
+msgid ""
+"The |streamingDigitize| :sup:`Stream Digitizing`: draws lines in freehand "
+"mode, i.e. nodes are added following cursor movement in the map canvas and a"
+" :guilabel:`Streaming Tolerance`. The streaming tolerance defines the "
+"spacing between consecutive vertices. Currently, the only supported unit is "
+"pixels (``px``). Only the starting left click and the ending right click are"
+" necessary in this mode."
+msgstr ""
+"|streamingDigitize| :sup:`ストリーム・デジタイジング`: フリーハンドで線を描きます。つまり、マップキャンバスのカーソル移動と"
+" :guilabel:`ストリーム許容値` "
+"に従ってノードを追加します。ストリーム許容値は、連続する頂点の間隔を定義します。現在、サポートされている単位はピクセル (``px``) "
+"のみです。このモードでは、開始時の左クリックと終了時の右クリックのみが必要です。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:489
+msgid ""
+"The |digitizeShape| :sup:`Digitize Shape`: triggers tools on the :ref:`Shape"
+" Digitizing Toolbar <shape_edit>` to draw a polygon of a regular shape."
+msgstr ""
+"|digitizeShape| :sup:`シェープをデジタイズ`: :ref:`シェープデジタイジングツールバー <shape_edit>` "
+"のツールをトリガーして、正多角形のポリゴンを描画することができます。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:492
+msgid ""
+"The selected technique remains while switching among the digitizing tools. "
+"You can combine any of the first three methods while drawing the same "
+"geometry."
+msgstr ""
+"デジタイジングツールを切り替えても、選択した技法は残ります。同じジオメトリを描くときに、最初の3つの方法のいずれかを組み合わせることができます。"
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:500
 msgid "Adding Features"
 msgstr "地物の追加"
@@ -965,6 +1093,13 @@ msgid ""
 msgstr ""
 "空間的なツールで地物を作成するには、最初にジオメトリをデジタイズし、それから属性値を入力します。ジオメトリをデジタイズするには、以下の手順で操作します："
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:513
+msgid ""
+"(Optional as it is the default) Select the |digitizeWithSegment| "
+":sup:`Digitize With Segment` geometry drawing method"
+msgstr ""
+"(デフォルトなのでオプション）|digitizeWithSegment| :sup:`セグメントでデジタイズ` ジオメトリ描画方法を選択します"
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:515
 msgid ""
 "Left-click on the map area to create the first point of your new feature. "
@@ -984,6 +1119,51 @@ msgstr ""
 "ラインやポリゴンジオメトリの場合は、左クリックでキャプチャしたい点の追加を続けます。 :ref:`地物へのスナップ "
 "<snapping_options>` オプションや :ref:`グリッドへのスナップ <snap_to_grid>` 、 :ref:`先進的デジタイズ"
 " <advanced_digitizing_panel>` パネルに頼ることで、各頂点を正確な位置に落とすことができます。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:524
+msgid ""
+"Along with drawing straight segments between nodes you click one by one, "
+"lines and polygons can be:"
+msgstr "ラインやポリゴンは、ひとつずつクリックしたノードを直線のセグメントで結ぶほか:"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:527
+msgid ""
+":ref:`traced automatically <tracing>`, accelerating the digitization. This "
+"will create consecutive straight lines between the vertices you place, "
+"following existing features."
+msgstr ""
+":ref:`自動トレース <tracing>` は、デジタイズを加速します。配置した頂点の間に、既存の地物に沿った連続した直線を作成します。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:530
+msgid ""
+"free-hand digitized, pressing :kbd:`R` or activating |streamingDigitize| "
+":sup:`Stream Digitizing`."
+msgstr ""
+"フリーハンドデジタイズは、 :kbd:`R` を押すか、 |streamingDigitize| :sup:`ストリーム・デジタイジング` "
+"を起動します。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:532
+msgid ""
+"drawn as curve, pressing :kbd:`Ctrl+Shift+G` or activating "
+"|digitizeWithCurve| :sup:`Digitize with Curve`."
+msgstr ""
+"曲線として描画するには、 :kbd:`Ctrl+Shift+G` を押すか、 |digitizeWithCurve| :sup:`曲線でデジタイズ` "
+"を起動します。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:536
+msgid ""
+"While digitizing line or polygon geometries, you can switch back and forth "
+"between the geometry drawing methods, allowing you to create features mixing"
+" straight segments, free-hand ones and curved parts."
+msgstr ""
+"ラインやポリゴンのジオメトリをデジタイズしながら、ジオメトリの描画方法を切り替えられるので、直線的なセグメント、フリーハンドのもの、曲線的なパーツを混ぜた地物を作成できます。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:540
+msgid ""
+"Press :kbd:`Delete` or :kbd:`Backspace` key to revert the last node(s) you "
+"may wrongly add."
+msgstr ""
+":kbd:`Delete` キーまたは :kbd:`Backspace` キーを押すと、間違って追加した最後のノードを元に戻すことができます。"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:542
 msgid ""
@@ -1283,13 +1463,133 @@ msgstr ""
 msgid "The Vertex Editor Panel"
 msgstr "頂点エディタパネル"
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:725
+msgid ""
+"With enabling a vertex tool, you also open the :guilabel:`Vertex Editor` "
+"panel. Right-clicking over a feature fills the panel with the list of all "
+"the vertices of the feature with their :guilabel:`x`, :guilabel:`y` "
+"(:guilabel:`z`, :guilabel:`m` if applicable) coordinates and :guilabel:`r` "
+"(for the radius, in case of circular geometry). The feature is also made "
+"exclusive for editing, meaning that the edit of any other features is "
+"disabled:"
+msgstr ""
+"頂点ツールを有効にすると、 :guilabel:`頂点エディタ` パネルも表示されます。地物の上で右クリックすると、その地物のすべての頂点と "
+":guilabel:`x`, :guilabel:`y` （該当する場合は :guilabel:`z`, :guilabel:`m` ）座標、 "
+":guilabel:`r` （円形の場合は半径）のリストがパネルに表示されます。また、この地物は編集専用になり、他の地物の編集はできなくなります："
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:731
+msgid ""
+"Selecting a row in the table does select the corresponding vertex in the map"
+" canvas, and vice versa."
+msgstr "テーブルの行を選択すると、マップキャンバスの対応する頂点が選択され、その逆もまた然りです。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:732
+msgid ""
+"Clicking or dragging over the map canvas will only select or move vertices "
+"and segments of that feature"
+msgstr "マップキャンバス上でクリックまたはドラッグすると、その地物の頂点とセグメントのみが選択または移動されます"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:733
+msgid ""
+"Change a coordinate in the table and the vertex position is updated. This is"
+" a convenient way to edit Z coordinate or M value on vertices."
+msgstr "テーブルの座標を変更すると、頂点の位置が更新されます。頂点のZ座標やM値を編集するのに便利な方法です。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:735
+msgid "You can also select multiple rows and delete them altogether."
+msgstr "また複数の行を選択し、まとめて削除することもできます。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:736
+msgid "New vertices can only be added to the bound feature"
+msgstr "新しい頂点は、囲んだ地物にのみ追加できます"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:738
+msgid ""
+"If you do not want the :guilabel:`Vertex Editor` panel to immediately show "
+"each time you interact with vertex tools (and potentially hide other panels "
+"or disturb panels placement), uncheck the :guilabel:`Auto-open table` entry "
+"in the |hamburgerMenu| :sup:`Options` menu at the top of the panel. You can "
+"then also close the panel. To reopen the panel, you would need to right-"
+"click over a panel or toolbar and select it in the list or tick the "
+":guilabel:`Show vertex editor` entry in the :guilabel:`Digitizing toolbar`."
+msgstr ""
+"頂点ツールを操作するたびに :guilabel:`頂点エディタ` "
+"パネルをすぐに表示させたくない場合（他のパネルを隠したり、パネルの配置を邪魔する可能性がある）、パネル上部の |hamburgerMenu| "
+":sup:`オプション` メニューで :guilabel:`Auto-open table` "
+"エントリーのチェックを外してください。その後、パネルを閉じることもできます。パネルを再び開くには、パネルやツールバーの上で右クリックしてリストから選択するか、"
+" :guilabel:`デジタイジングツールバー` の :guilabel:`頂点エディタを表示` エントリにチェックを入れる必要があるでしょう。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2144
+msgid "hamburgerMenu"
+msgstr "hamburgerMenu"
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:753
 msgid "Vertex editor panel showing selected nodes"
 msgstr "選択したノードを示す頂点エディタパネル"
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:759
+msgid "Rules of Z coordinate or M value assignment"
+msgstr "Z座標またはM値の割り当てルール"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:761
+msgid ""
+"Digitizing 3D vector features or features with M value is not that different"
+" from (X,Y) 2D layers'. Tools and options described in this chapter are "
+"still available and help you place the vertex or point in a planar "
+"environment. Then you may need to handle the Z coordinate (or M value) "
+"assignment:"
+msgstr ""
+"3Dベクタ地物やM値を持つ地物のデジタイズは、（X,Y）2Dレイヤのものとさほど変わりありません。この章で説明したツールやオプションはここでも利用可能で、頂点やポイントを平面的な環境に配置するのに役立ちます。その後、Z座標（またはM値）の割り当てを処理する必要がある場合があります："
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:766
+msgid ""
+"By default, QGIS will assign to new vertices the :guilabel:`Default Z value`"
+" (respectively :guilabel:`Default M value`) set in the "
+":menuselection:`Settings --> Options --> Digitizing` tab. If the "
+":ref:`Advanced Digitizing Panel <advanced_digitizing_panel>` is in use, then"
+" the value is taken from its :guilabel:`z` (respectively :guilabel:`m`) "
+"widget."
+msgstr ""
+"デフォルトでは、QGISは新しい頂点に :menuselection:`設定 --> オプション --> デジタイズ` タブで設定された "
+":guilabel:`デフォルトのZ値` （それぞれ :guilabel:`デフォルトのM値` ） を割り当てます。ref:`高度なデジタイズパネル "
+"<advanced_digitizing_panel>` が使用されている場合は、その :guilabel:`z` （それぞれ "
+":guilabel:`m` ）ウィジェットから値が取得されます。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:772
+msgid ""
+"When snapping to a vertex, the new or moved vertex takes the snapped one's Z"
+" or M value."
+msgstr "頂点にスナップする場合、新しい頂点または移動した頂点はスナップした頂点のZまたはMの値を取ります。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:773
+msgid ""
+"When snapping to a segment while the topological editing is on, then the new"
+" vertex Z or M value is interpolated along the segment."
+msgstr "トポロジー編集がオンの状態でセグメントにスナップすると、新しい頂点のZ値またはM値がセグメントに沿って補間されます。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:775
+msgid ""
+"If the :guilabel:`z` (respectively :guilabel:`m`) widget of the "
+":guilabel:`Advanced Digitizing Panel` is |locked| locked, then its value is "
+"applied to the vertex, taking precedence over any snapped vertex or segment "
+"Z or M value."
+msgstr ""
+":guilabel:`高度なデジタイズパネル` の :guilabel:`z` （それぞれ :guilabel:`m` ）ウィジェットが "
+"|locked| ロックされている場合、その値が頂点に適用され、スナップした頂点やセグメントのZやMの値よりも優先されます。"
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2148
 msgid "locked"
 msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:780
+msgid ""
+"To edit Z or M values of an existing feature, you can use the :ref:`Vertex "
+"editor panel <vertex_editor_panel>`. To create features with custom Z or M "
+"values you may want to rely on the :guilabel:`Advanced Digitizing Panel`."
+msgstr ""
+"既存の地物のZ値やM値を編集するには、 :ref:`頂点編集パネル <vertex_editor_panel>` "
+"を使うことができます。カスタムZ値やカスタムM値を持つ地物を作成するには、 :guilabel:`高度なデジタイズパネル` "
+"を利用するとよいかもしれません。"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:789
 msgid "Cutting, Copying and Pasting Features"
@@ -1415,6 +1715,18 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:855
 msgid "**Copy string attribute into another**"
 msgstr "**文字列属性を他のレイヤにコピーする**"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:857
+msgid ""
+"If you have created a new column in your attribute table with type 'string' "
+"and want to paste values from another attribute column that has a greater "
+"length the length of the column size will be extended to the same amount. "
+"This is because the GDAL Shapefile driver knows to auto-extend string and "
+"integer fields to dynamically  accommodate for the length of the data to be "
+"inserted."
+msgstr ""
+"属性テーブルに「文字列」型の新しいカラムを作成し、それより長さの大きい属性カラムから値を貼り付ける場合、そのカラムサイズの長さは同じ長さに拡張されます。これは、GDAL"
+" Shapefileドライバが、挿入されるデータの長さに動的に対応するために、文字列と整数フィールドを自動拡張することを知っているためです。"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:868
 msgid "Deleting Selected Features"
@@ -1590,7 +1902,11 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:966
 msgid "Advanced digitizing"
-msgstr "先進的デジタイズ"
+msgstr "高度なデジタイズ"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:969
+msgid "Vector layer advanced editing toolbar"
+msgstr "ベクタレイヤの高度な編集ツールバー"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:972
 msgid "Icon"
@@ -1598,7 +1914,7 @@ msgstr "アイコン"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:974
 msgid "|cad|"
-msgstr "|cad|"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2074
 msgid "cad"
@@ -1606,11 +1922,11 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:974
 msgid "Enable Advanced Digitizing Tools"
-msgstr "先進的デジタイズツールの有効化"
+msgstr "高度なデジタイズツールの有効化"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:976
 msgid "|moveFeature| |moveFeatureLine| |moveFeaturePoint|"
-msgstr "|moveFeature| |moveFeatureLine| |moveFeaturePoint|"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2154
 msgid "moveFeature"
@@ -1631,7 +1947,7 @@ msgstr "地物の移動"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:976
 msgid "|moveFeatureCopy| |moveFeatureCopyLine| |moveFeatureCopyPoint|"
-msgstr "|moveFeatureCopy| |moveFeatureCopyLine| |moveFeatureCopyPoint|"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2156
 msgid "moveFeatureCopy"
@@ -1647,11 +1963,11 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:976
 msgid "Copy and Move Feature(s)"
-msgstr "地物のコピーと移動"
+msgstr "地物をコピー／移動"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:980
 msgid "|rotateFeature|"
-msgstr "|rotateFeature|"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2200
 msgid "rotateFeature"
@@ -1660,11 +1976,11 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:980
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1048
 msgid "Rotate Feature(s)"
-msgstr "地物の回転"
+msgstr "地物を回転"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:980
 msgid "|simplify|"
-msgstr "|simplify|"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2214
 msgid "simplify"
@@ -1673,11 +1989,11 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:980
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1093
 msgid "Simplify Feature"
-msgstr "地物の簡素化"
+msgstr "地物を簡素化"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:982
 msgid "|scaleFeature|"
-msgstr "|scaleFeature|"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2206
 msgid "scaleFeature"
@@ -1716,7 +2032,7 @@ msgstr "部分を追加"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:986
 msgid "|fillRing|"
-msgstr "|fillRing|"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2140
 msgid "fillRing"
@@ -1725,11 +2041,11 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:986
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1194
 msgid "Fill Ring"
-msgstr "リングの充填"
+msgstr "リングを充填"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:986
 msgid "|reverseLine|"
-msgstr "|reverseLine|"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2196
 msgid "reverseLine"
@@ -1737,11 +2053,11 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:986
 msgid "Swap direction"
-msgstr "線の向きの反転"
+msgstr "線の向きを反転"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:988
 msgid "|deleteRing|"
-msgstr "|deleteRing|"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2108
 msgid "deleteRing"
@@ -1750,11 +2066,11 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:988
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1220
 msgid "Delete Ring"
-msgstr "リングの削除"
+msgstr "リングを削除"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:988
 msgid "|deletePart|"
-msgstr "|deletePart|"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2106
 msgid "deletePart"
@@ -1763,11 +2079,11 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:988
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1162
 msgid "Delete Part"
-msgstr "部分の削除"
+msgstr "部分を削除"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:990
 msgid "|offsetCurve|"
-msgstr "|offsetCurve|"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2170
 msgid "offsetCurve"
@@ -1775,11 +2091,11 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:990
 msgid "Offset Curve"
-msgstr "曲線のオフセット"
+msgstr "曲線をオフセット"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:990
 msgid "|reshape|"
-msgstr "|reshape|"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2194
 msgid "reshape"
@@ -1792,7 +2108,7 @@ msgstr "地物の変形"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:992
 msgid "|splitParts|"
-msgstr "|splitParts|"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2224
 msgid "splitParts"
@@ -1804,7 +2120,7 @@ msgstr "部分の分割"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:992
 msgid "|splitFeatures|"
-msgstr "|splitFeatures|"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2222
 msgid "splitFeatures"
@@ -1817,7 +2133,7 @@ msgstr "地物を分割"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:994
 msgid "|mergeFeatureAttributes|"
-msgstr "|mergeFeatureAttributes|"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2150
 msgid "mergeFeatureAttributes"
@@ -1829,7 +2145,7 @@ msgstr "選択地物の属性結合"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:994
 msgid "|mergeFeatures|"
-msgstr "|mergeFeatures|"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2152
 msgid "mergeFeatures"
@@ -1837,11 +2153,11 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:994
 msgid "Merge Selected Features"
-msgstr "選択地物の結合"
+msgstr "選択地物を結合"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:996
 msgid "|rotatePointSymbols|"
-msgstr "|rotatePointSymbols|"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2202
 msgid "rotatePointSymbols"
@@ -1850,11 +2166,11 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:996
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1427
 msgid "Rotate Point Symbols"
-msgstr "点のシンボルの回転"
+msgstr "点のシンボルを回転"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:996
 msgid "|offsetPointSymbols|"
-msgstr "|offsetPointSymbols|"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2172
 msgid "offsetPointSymbols"
@@ -1867,7 +2183,7 @@ msgstr "点のシンボルのオフセット"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:998
 msgid "|trimExtend|"
-msgstr "|trimExtend|"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2234
 msgid "trimExtend"
@@ -1899,7 +2215,7 @@ msgid ""
 "<advanced_digitizing_panel>` to accurately set the origin point coordinates."
 " In that case:"
 msgstr ""
-":ref:`先進的デジタイズによる制限 <advanced_digitizing_panel>` "
+":ref:`高度なデジタイズによる制限 <advanced_digitizing_panel>` "
 "を活用して、原点座標を正確に設定することもできます。この場合には、次のようにします："
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1020
@@ -2741,9 +3057,57 @@ msgstr ""
 msgid "Shape digitizing"
 msgstr "シェープデジタイジング"
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1547
+msgid ""
+"The :guilabel:`Shape Digitizing` toolbar is synchronized with the "
+"|digitizeShape| :sup:`Digitize Shape` :ref:`geometry drawing method "
+"<drawing_methods>` you can select on the :guilabel:`Advanced Digitizing "
+"Toolbar`. It offers a set of tools to draw lines or polygons features of "
+"regular shape."
+msgstr ""
+":guilabel:`シェープデジタイジング` ツールバーは、|digitizeShape| :sup:`シェープをデジタイズ` "
+":ref:`geometry drawing method <drawing_methods>` が :guilabel:`高度なデジタイズツールバー`"
+" で選択したものと同期しています。これは、規則的な形状のライン又はポリゴン地物を描くための一連のツールを提供します。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1556
+msgid "Circular string by radius"
+msgstr "Circular string by radius"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1558
+msgid ""
+"The |circularStringRadius| :sup:`Circular string by radius` button allows to"
+" add line or polygon features with a circular geometry, given two nodes on "
+"the curve and a radius:"
+msgstr ""
+"|circularStringRadius| :sup:`Circular string by radius` "
+"ボタンは、曲線上の2つのノードと半径を指定して、円形のジオメトリを持つライン又はポリゴン地物を追加することができます："
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2102
 msgid "circularStringRadius"
 msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1562
+msgid "Left click twice to place the two points on the geometry."
+msgstr "左クリックを2回すると、ジオメトリ上に2点が配置されます。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1563
+msgid ""
+"A :guilabel:`Radius` widget in the top right corner of the map canvas "
+"displays current radius (corresponding to distance between the points). Edit"
+" that field to the value you want."
+msgstr ""
+"マップキャンバスの右上にある :guilabel:`半径` "
+"ウィジェットは、現在の半径（ポイント間の距離に相当）を表示します。そのフィールドを好きな値に編集してください。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1566
+msgid ""
+"An overview of the arcs matching these constraints is displayed while moving"
+" around the cursor. Right-click to validate when the expected arc is shown."
+msgstr "カーソルを移動すると、これらの制約に一致する円弧の概要が表示されます。期待した円弧が表示されたら、右クリックして検証します。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1569
+msgid "Add a new point to start shaping another arc."
+msgstr "新しい点を追加して、別の円弧のシェーピングを開始します。"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1571
 msgid ""
@@ -2777,21 +3141,69 @@ msgstr ""
 "円は円形ストリングに変換されます。従って、 :ref:`add_circular_string` "
 "で説明したように、データプロバイダが対応しているならばこれは曲線ジオメトリとして保存され、対応していないならばQGISは円弧をセグメント化します。"
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1591
+msgid ""
+"|circle2Points| :sup:`Circle from 2 points`: The two points define the "
+"diameter and the orientation of  the circle. (Left-click, right-click)"
+msgstr "|circle2Points| :sup:`2点から円`： 2点は円の直径と向きを定義します。（左クリック、右クリック）"
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2092
 msgid "circle2Points"
 msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1593
+msgid ""
+"|circle3Points| :sup:`Circle from 3 points`: Draws a circle from three known"
+" points on the circle. (Left-click, left-click, right-click)"
+msgstr "|circle3Points| :sup:`3点から円`： 円上の既知の3点から円を描画します。（左クリック、左クリック、右クリック）"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2096
 msgid "circle3Points"
 msgstr ""
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1595
+msgid ""
+"|circleCenterPoint| :sup:`Circle from center and a point`: Draws a circle "
+"with a given center and a point on the circle (Left-click, right-click). "
+"When used with the :ref:`advanced_digitizing_panel` this tool can become a "
+"\"Add circle from center and radius\" tool by setting and locking the "
+"distance value after first click."
+msgstr ""
+"|circleCenterPoint| :sup:`中心点と別の点で円`： "
+"指定された中心と円上の点を持つ円を描画します（左クリック、右クリック）。ref:`advanced_digitizing_panel` "
+"と共に使用すると、最初のクリックの後に距離の値を設定しロックすることで、このツールは「中心と半径から円を追加する」ツールになることができます。"
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2100
 msgid "circleCenterPoint"
 msgstr ""
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1600
+msgid ""
+"|circle3Tangents| :sup:`Circle from 3 tangents`: Draws a circle that is "
+"tangential to three segments. **Note that you must activate snapping to "
+"segments** (See :ref:`snapping_tolerance`). Click on a segment to add a "
+"tangent. If two tangents are parallel, the coordinates of the click on the "
+"first parallel tangent are used to determine the positioning of the circle. "
+"If three tangents are parallel, an error message appears and the input is "
+"cleared. (Left-click, left-click, right-click)"
+msgstr ""
+"|circle3Tangents| :sup:`3本の接線から円`： "
+"3つのセグメントの接線上にある円を描きます。**セグメントにスナップを必ず有効にすることに注意** （:ref:`snapping_tolerance`"
+" を参照。） "
+"セグメントをクリックすると、接線を追加することができます。2つの接線が平行である場合、最初の平行な接線をクリックした座標が円の位置を決定するのに使われます。3本の接線が平行な場合は、エラーメッセージが表示され、入力はクリアされます。（左クリック、左クリック、右クリック）"
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2098
 msgid "circle3Tangents"
 msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1607
+msgid ""
+"|circle2TangentsPoint| :sup:`Circle from 2 tangents and a point`: Similar to"
+" circle from 3 tangents, except that you have to select two tangents, enter "
+"a radius and select the desired center."
+msgstr ""
+"|circle2TangentsPoint| :sup:`2本の接線と点から円`： "
+"3本の接線から円と似ていますが、2つの接線を選択し、半径を入力し、希望の中心を選択する必要がある点が異なります。"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2094
 msgid "circle2TangentsPoint"
@@ -2812,17 +3224,51 @@ msgid ""
 "segmented."
 msgstr "楕円は円形ストリングに変換することができないため、これは常にセグメント化されます。"
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1623
+msgid ""
+"|ellipseCenter2Points| :sup:`Ellipse from center and two points`: Draws an "
+"ellipse with a given center, major axis and minor axis. (Left-click, left-"
+"click, right-click)"
+msgstr ""
+"|ellipseCenter2Points| :sup:`中心と2点から楕円`： "
+"指定された中心、長軸、短軸を持つ楕円を描画します。（左クリック、左クリック、右クリック）"
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2128
 msgid "ellipseCenter2Points"
 msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1626
+msgid ""
+"|ellipseCenterPoint| :sup:`Ellipse from center and a point`: Draws an "
+"ellipse into a bounding box with the center and a corner. (Left-click, "
+"right-click)"
+msgstr ""
+"|ellipseCenterPoint| :sup:`中心と点から楕円`： "
+"楕円を中心と角のあるバウンディングボックスに描画します。（左クリック、右クリック）"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2130
 msgid "ellipseCenterPoint"
 msgstr ""
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1629
+msgid ""
+"|ellipseExtent| :sup:`Ellipse from extent`: Draws an ellipse into a bounding"
+" box with two opposite corners. (Left-click, right-click)"
+msgstr ""
+"|ellipseExtent| :sup:`領域範囲から楕円`： "
+"楕円を対向する2つの角を持つバウンディングボックスに描画します。（左クリック、右クリック）"
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2132
 msgid "ellipseExtent"
 msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1631
+msgid ""
+"|ellipseFoci| :sup:`Ellipse from foci`: Draws an ellipse by 2 points for "
+"foci and a point on the ellipse. (Left-click, left-click, right-click)"
+msgstr ""
+"|ellipseFoci| :sup:`フォーカスから楕円`： "
+"焦点となる2点と楕円上の1点により楕円を描画します。（左クリック、左クリック、右クリック）"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2134
 msgid "ellipseFoci"
@@ -2947,12 +3393,34 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1689
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1702
 msgid "The Advanced Digitizing panel"
-msgstr "先進的デジタイズパネル"
+msgstr "高度なデジタイズパネル"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1691
+msgid ""
+"When capturing, reshaping, splitting new or existing geometries you also "
+"have the possibility to use the Advanced Digitizing panel. You can digitize "
+"lines exactly parallel or perpendicular to a particular angle or lock lines "
+"to specific angles. Furthermore, you can make a precise definition of your "
+"new geometry by entering X and Y coordinates as well as Z  for 3D features, "
+"or M values."
+msgstr ""
+"新規または既存のジオメトリをキャプチャ、リシェイプ、分割する際、高度なデジタイズパネルを使用することもできます。特定の角度に平行または垂直な線を正確にデジタイズしたり、特定の角度に線をロックすることができます。さらに、X、Y座標、3D地物の場合はZ座標、M値を入力することで、新しいジオメトリを正確に定義することができます。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1704
+msgid ""
+"The :guilabel:`Advanced Digitizing` panel can be opened either with a right-"
+"click on the toolbar, from :menuselection:`View --> Panels -->` menu or "
+"pressing :kbd:`Ctrl+4`. Once the panel is visible, click the |cad| "
+":sup:`Enable advanced digitizing tools` button to activate the set of tools."
+msgstr ""
+"guilabel:`高度なデジタイズ` パネルは、ツールバー上で右クリックするか、 :menuselection:`ビュー --> パネル -->` "
+"メニューから、または :kbd:`Ctrl+4` を押すことで開くことができます。パネルが表示されたら、|cad| "
+":sup:`高度なデジタイズツールの有効化` ボタンをクリックして、ツールのセットを有効にします。"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1709
 msgid ""
 "The tools are not enabled if the map view is in geographic coordinates."
-msgstr "このツールは、マップビューが地理的座標系の場合には無効です。"
+msgstr "このツールは、マップビューが地理的座標系の場合には有効になりません。"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1711
 msgid ""
@@ -3001,7 +3469,7 @@ msgid ""
 "|cadParallel| :sup:`Parallel` to draw a line parallel to an existing one "
 "(more at :ref:`parallel_or_perpendicular`)"
 msgstr ""
-"|cadParallel| :sup:`Parallel` 既存の線に平行な線を引くために使用します（詳細は "
+"|cadParallel| :sup:`平行` 既存の線に平行な線を引くために使用します（詳細は "
 ":ref:`parallel_or_perpendicular` 参照）"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2078
@@ -3037,13 +3505,92 @@ msgstr ""
 msgid "settings"
 msgstr ""
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1737
+msgid ""
+"|floater| :sup:`Toggle Floater`: displays a live preview of the coordinates "
+"right next to the cursor, allowing quick digitizing. The values can be "
+"accessed using the :ref:`panel's shortcuts <digitizing_panel_shortcuts>`, "
+"edited and |locked| :sup:`Locked` after validation (pressing :kbd:`Enter`)."
+msgstr ""
+"|floater| :sup:`Floaterを切り替え`: カーソルのすぐ横に座標のライブプレビューを表示し、素早くデジタル化することができます。値は"
+" :ref:`パネルのショートカット <digitizing_panel_shortcuts>` を使ってアクセスすることができ、編集したり、検証（ "
+":kbd:`Enter` を押す）後に |locked| :sup:`ロック` したりすることができます。"
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2142
 msgid "floater"
 msgstr ""
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1741
+msgid ""
+"|extractVertices| :sup:`Construction Tools` provides a couple of options "
+"that constrain the vertices placement based on extrapolated coordinates of "
+"existing elements:"
+msgstr ""
+"|extractVertices| :sup:`作図ツール`は、既存の要素の外挿座標に基づいて頂点の配置を制約するいくつかのオプションを提供します："
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2136
 msgid "extractVertices"
 msgstr ""
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1745
+msgid ""
+"|unchecked| :guilabel:`Line Extension`: hover over a segment and you get a "
+"purple dotted line extending the segment across the map canvas. You can snap"
+" the vertex anywhere on this virtual line."
+msgstr ""
+"|unchecked| :guilabel:`Line Extension`: "
+"セグメントにカーソルを合わせると、マップキャンバスにセグメントを延長する紫の点線が表示されます。この仮想線上の任意の場所に頂点をスナップすることができます。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1748
+msgid ""
+"|unchecked| :guilabel:`X/Y Point`: hover over a vertex and you get a purple "
+"dotted line along its X or Y coordinate, across the map canvas. You can snap"
+" the vertex anywhere on this virtual line. It is even possible to hover over"
+" two different vertices, generating virtual coordinate lines for both, and "
+"snap to their intersection."
+msgstr ""
+"|unchecked| :guilabel:`X/Y Point`: "
+"頂点にカーソルを合わせると、そのXまたはY座標に沿って、マップキャンバス上に紫色の点線が表示されます。この仮想線上の任意の場所に頂点をスナップすることができます。2つの異なる頂点にカーソルを合わせると、両方の仮想座標線が生成され、その交点にスナップすることも可能です。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1754
+msgid ""
+"Below the toolbar, you will find a number of text boxes whose value reflects"
+" by default the position or movement of the cursor in the map canvas. "
+"Editing these values helps you constrain the position of the items you edit:"
+msgstr ""
+"ツールバーの下には、デフォルトでマップキャンバス内のカーソルの位置や移動が反映されたテキストボックスが多数用意されています。これらの値を編集することで、編集するアイテムの位置を固定することができます："
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1758
+msgid ""
+":guilabel:`d` for the distance from a reference position, usually the last "
+"edited vertex"
+msgstr ":guilabel:`d` 基準となる位置（通常は最後に編集した頂点）からの距離"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1760
+msgid ""
+":guilabel:`a` for the angle (absolute or relative) from a reference "
+"position, usually the last edited segment"
+msgstr ":guilabel:`a` 基準となる位置（通常は最後に編集したセグメント）からの角度（絶対または相対）"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1762
+msgid ":guilabel:`x` for the X coordinate of the pointer"
+msgstr ":guilabel:`x` ポインタのX座標"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1763
+msgid ":guilabel:`y` for the Y coordinate of the pointer"
+msgstr ":guilabel:`y` ポインタのY座標"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1764
+msgid ""
+":guilabel:`z` for the default Z value or the Z coordinate of the vertex or "
+"segment under the pointer"
+msgstr ":guilabel:`z` でデフォルトのZ値、またはポインタの下にある頂点またはセグメントのZ座標を指定します。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1766
+msgid ""
+":guilabel:`m` for the default M value or the M value of the vertex or "
+"segment under the pointer"
+msgstr ":guilabel:`m` はデフォルトのM値、またはポインタの下にある頂点やセグメントのM値"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1773
 msgid "Keyboard shortcuts"
@@ -3053,7 +3600,11 @@ msgstr "キーボードショートカット"
 msgid ""
 "To speed up the use of Advanced Digitizing Panel, there are a couple of "
 "keyboard shortcuts available:"
-msgstr "先進的デジタイズパネルを使った作業をスピードアップするためのキーボードショートカットがいくつかあります："
+msgstr "高度なデジタイズパネルを使った作業をスピードアップするためのキーボードショートカットがいくつかあります："
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1778
+msgid "Keyboard shortcuts of the Advanced Digitizing Panel tools"
+msgstr "高度なデジタイズパネルツールのキーボードショートカット"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1781
 msgid "Key"
@@ -3236,9 +3787,55 @@ msgstr ""
 "開始したいY座標の値を入力し、 :kbd:`Enter` を押すか、右にある |locked| "
 "ボタンをクリックして、マップキャンバス上でマウスのY軸をロックします。"
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1822
+msgid ""
+"If the layer has Z coordinate or M values, the corresponding :guilabel:`z` "
+"or :guilabel:`m` widget is enabled and displays its default value, as set in"
+" :menuselection:`Settings --> Options --> Digitizing` tab."
+msgstr ""
+"レイヤーにZ座標またはM値がある場合、対応する :guilabel:`z` または :guilabel:`m` ウィジェットが有効になり、 "
+":menuselection:`設定 --> オプション --> デジタイズ` タブで設定したデフォルト値を表示します。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1826
+msgid ""
+"Click the :guilabel:`z` or :guilabel:`m` text box (or use respectively the "
+":kbd:`Z` or :kbd:`M` keyboard shortcut)."
+msgstr ""
+":guilabel:`z` または :guilabel:`m` テキストボックスをクリックします（または :kbd:`Z` や :kbd:`M` "
+"キーボードショートカットを使います）。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1828
+msgid ""
+"Type the coordinate value you want and press :kbd:`Enter` or click the "
+"|locked| button to their right to lock the value in the widget."
+msgstr ""
+"欲しい座標値を入力して :kbd:`Enter` を押すか、その右にある |locked| ボタンをクリックしてウィジェットに値をロックします。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1831
+msgid ""
+"Read :ref:`digitizing_zm` for details on how Z coordinate and M values are "
+"automatically determined from existing features."
+msgstr "既存の地物からZ座標とM値を自動的に決定する方法については、 :ref:`digitizing_zm` を参照してください。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1834
+msgid ""
+"Two blue dotted lines and a green cross identify the exact coordinates you "
+"entered. Click on the map canvas to add a vertex at the green cross "
+"position."
+msgstr "2本の青い点線と緑の十字は、入力された正確な座標を識別します。マップキャンバス上でクリックすると、緑の十字の位置に頂点が追加されます。"
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1841
 msgid "Start drawing at given coordinates"
 msgstr "指定の座標から描画を開始"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1843
+msgid ""
+"You can proceed as above, adding a new set of coordinates for the next "
+"vertex, or switch to another :ref:`mode of digitizing <drawing_methods>` "
+"(e.g. segment, curve or stream)."
+msgstr ""
+"上記のように、次の頂点のために新しい座標セットを追加して進むこともできますし、別の :ref:`mode of digitizing "
+"<drawing_methods>`（セグメント、曲線、ストリームなど）に切り替えることもできます。"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1847
 msgid "If you want to draw a segment of a given length:"
