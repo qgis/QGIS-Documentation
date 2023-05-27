@@ -680,7 +680,7 @@ To be able to load a WFS Layer, first create a connection to the WFS server:
 
 #. Open the :guilabel:`Data Source Manager` dialog by pressing the
    |dataSourceManager| :sup:`Open Data Source Manager` button
-#. Enable the |addWfsLayer| :guilabel:`WFS/OGC API-Features` tab
+#. Enable the |addWfsLayer| :guilabel:`WFS / OGC API - Features` tab
 #. Click on :guilabel:`New...` to open the :guilabel:`Create a New WFS
    Connection` dialog
 #. Enter ``Gateway Geomatics`` as name
