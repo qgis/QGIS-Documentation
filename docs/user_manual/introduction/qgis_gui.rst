@@ -1021,7 +1021,7 @@ copy or paste layer properties (style, scale, CRS...).
      - :guilabel:`Manage Layers`
      - :ref:`ogc-wcs`
    * - :menuselection:`-->` |addWfsLayer|
-       :guilabel:`Add WFS Layer...`
+       :guilabel:`Add WFS / OGC API - Features Layer...`
      -
      - :guilabel:`Manage Layers`
      - :ref:`ogc-wfs`
