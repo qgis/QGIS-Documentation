@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2023
 # Transifex Bot <>, 2023
+# Tomas Straupis, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-03 15:20+0000\n"
 "PO-Revision-Date: 2023-03-19 14:25+0000\n"
-"Last-Translator: Transifex Bot <>, 2023\n"
+"Last-Translator: Tomas Straupis, 2023\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -496,6 +497,10 @@ msgstr ""
 msgid "**Environment**"
 msgstr "**Aplinka**"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:204
+msgid "System environment variables"
+msgstr "Sisteminiai aplinkos kintamieji"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:206
 msgid ""
 "System environment variables can be viewed, and many configured, in the "
@@ -513,6 +518,21 @@ msgstr ""
 "valdo apdorojimo įrankinė (pvz., SAGA, GRASS), bei įjungiant tinkinimo "
 "išvestį konkrečioms išeities kodo dalims."
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:214
+msgid ""
+"Check |checkbox| :guilabel:`Use custom variables (restart required - include"
+" separators)` and you can |symbologyAdd| :sup:`Add` and |symbologyRemove| "
+":sup:`Remove` environment variables. For each new item, you can configure a "
+":guilabel:`Variable` name, its :guilabel:`Value` and the :guilabel:`Apply` "
+"method to use, among which:"
+msgstr ""
+"Įjunkite varnelę |checkbox| :guilabel:`Naudoti savus kintamuosius (reikia "
+"paleisti iš naujo - su skirtukais)` ir jūs galėsite |symbologyAdd| "
+":sup:`Pridėti` ir |symbologyRemove| :sup:`Išimti` aplinkos kintamuosius. "
+"Kiekvienam naujam elementui jūs galite sukonfigūruoti :guilabel:`Kintamojo` "
+"pavadinimą, jo :guilabel:`Reikšmę` ir naudojamą :guilabel:`Pritaikymo` būdą,"
+" tarp kurių yra:"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2467
 msgid "symbologyAdd"
 msgstr ""
@@ -520,6 +540,61 @@ msgstr ""
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2471
 msgid "symbologyRemove"
 msgstr ""
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:220
+msgid ":guilabel:`Overwrite`: replace any preexisting value of the variable"
+msgstr ":guilabel:`Perrašyti`: pakeisti bet kokią esamą kintamojo reikšmę"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:221
+msgid ""
+":guilabel:`If undefined`: use this value for the variable if not already "
+"defined at a higher level (e.g. OS or application levels)"
+msgstr ""
+":guilabel:`Jei nenustatyta`: naudoti šią reikšme kintamajam, jei kintamasis "
+"dar neapibrėžtas aukštesniame lygmenyje (pvz. OS ar aplikacijos lygiuose)"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:223
+msgid ""
+":guilabel:`Unset`: remove the variable from the environment (the "
+":guilabel:`Value` parameter is not used)"
+msgstr ""
+":guilabel:`Panaikinti`: panaikinti kintamąjį iš aplinkos (parametro "
+":guilabel:`Reikšmė` nenaudojama)"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:224
+msgid ""
+":guilabel:`Prepend`: prepend the value to the preexisting value of the "
+"variable"
+msgstr ""
+":guilabel:`Pridėti priekyje`: pridėti reikšmę prieš jau esamo kintamojo"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:225
+msgid ""
+":guilabel:`Append`: append the value to the preexisting value of the "
+"variable"
+msgstr ":guilabel:`Pridėti gale`: pridėti reikšmę į esamo kintamojo pabaigą"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:226
+msgid ""
+":guilabel:`Skip`: the item is kept in the list for future reference but "
+"unused"
+msgstr ""
+":guilabel:`Praleisti`: elementas paliekamas sąraše ateičiai, bet kol kas "
+"nenaudojamas"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:228
+msgid ""
+"Already defined environment variables are displayed in :guilabel:`Current "
+"environment variables`, and it's possible to filter them by activating "
+"|checkbox| :guilabel:`Show only QGIS-specific variables`."
+msgstr ""
+"Jau apibrėžti aplinkos kintamieji rodomi skiltyje :guilabel:`Dabartiniai "
+"aplinkos kintamieji`, kur juos galima filtruoti įjungus varnelę |checkbox| "
+":guilabel:`Rodyti tik su QGIS susijusius kintamuosius`."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:236
+msgid "CRS and Transforms Settings"
+msgstr "CRS ir transformavimo nustatymai"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:238
 msgid ""
@@ -529,6 +604,18 @@ msgstr ""
 "Daugiau informacijos apie tai, kaip QGIS tvarko sluoksnių projekcijas, "
 "rasite skyriuje :ref:`label_projections`."
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:242
+msgid "CRS Handling"
+msgstr "CRS valdymas"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:244
+msgid ""
+"In the |crs| :guilabel:`CRS Handling` tab you can configure which CRS will "
+"be used for a new project or layer."
+msgstr ""
+"Kortelėje |crs| :guilabel:`CRS valdymas` jūs galite sukonfigūruoti CRS, kuri"
+" bus naudojama naujam projekte ar sluoksnyje."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2389
 msgid "crs"
 msgstr ""
@@ -536,6 +623,10 @@ msgstr ""
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:252
 msgid "CRS Settings"
 msgstr "CRS nustatymai"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:254
+msgid "**CRS for Projects**"
+msgstr "**CRS projektams**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:256
 msgid "There is an option to automatically set new project’s CRS:"
@@ -569,6 +660,10 @@ msgstr ""
 "koordinačių atskaitos sistemą galime permušti kortelėje "
 ":menuselection:`Projektas --> Savybės... --> CRS`."
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:268
+msgid "**CRS for Layers**"
+msgstr "**CRS sluoksniams**"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:270
 msgid ""
 ":guilabel:`Default CRS for layers`: select a default CRS to use when you "
@@ -598,6 +693,45 @@ msgstr "|radioButtonOff| :guilabel:`Klausti CRS`"
 msgid "|radioButtonOff| :guilabel:`Use project CRS`"
 msgstr "|radioButtonOff| :guilabel:`Naudoti projekto CRS`"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:279
+msgid "|radioButtonOff| :guilabel:`Use default layer CRS`"
+msgstr "|radioButtonOff| :guilabel:`Naudoti numatytąją sluoksnių CRS`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:283
+msgid "**Accuracy Warnings**"
+msgstr "**Tikslumo įspėjimai**"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:291
+msgid ""
+":guilabel:`Only show CRS accuracy warnings for inaccuracies which exceed` a "
+"given distance: occurs when you are explicitly creating or modifying a "
+"dataset and select a CRS based on a datum ensemble with lower accuracy. The "
+"default is to ``Always show`` the warning if any inaccuracy. Requires a QGIS"
+" version using at least `PROJ 8.0 <https://proj.org/index.html>`_."
+msgstr ""
+":guilabel:`CRS tikslumo įspėjimus rodyti tik netikslumams, viršijantiems` "
+"nurodytą atstumą: atsitinka tik tada, kai jūs konkrečiai sukuriate ar "
+"keičiate duomenų rinkinį ir parenkate CRS naudojančią duomenų ansamblį su "
+"mažesniu tikslumu. Numatytoji reikšmė yra ``Visada rodyti`` įspėjimą esant "
+"bet kokiam netikslumui. Reikalauja QGIS versijos, naudojančios bent `PROJ "
+"8.0 <https://proj.org/index.html>`_."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:297
+msgid ""
+"|unchecked| :guilabel:`Show CRS accuracy warning for layers in project "
+"legend`: If checked, any layer with a CRS with accuracy issues (i.e. a "
+"dynamic crs with no coordinate epoch available, or a CRS based on a datum "
+"ensemble with inherent inaccuracy exceeding the user-set limit) will have "
+"the |indicatorLowAccuracy| warning icon in the :guilabel:`Layers` panel "
+"reflecting that it is a low-accuracy layer."
+msgstr ""
+"|unchecked| :guilabel:`Rodyti CRS tikslumo įspėjimus sluoksniams projekto "
+"legendoje`: įjungus šią parinktį bet koks sluoksnis su CRS tikslumo "
+"problemomis (pvz. dinaminis crs be prieinamos koordinačių epochos arba CRS "
+"paremta duomenų ansamblius su netikslumu viršijančiu naudotojo nurodytą) "
+"turės |indicatorLowAccuracy| įspėjimo piktogramą :guilabel:`Sluoksnių` "
+"skydelyje, rodantį, kad tai mažo tikslumo sluoksnis."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2411
 msgid "indicatorLowAccuracy"
 msgstr ""
@@ -620,9 +754,36 @@ msgstr ""
 "|unchecked| :guilabel:`Planimetriniai matavimai`: nurodo numatytąją savybės "
 "„planimetriniai matavimai“ reikšmę naujai sukurtiems projektams."
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:314
+msgid "Coordinate Transforms"
+msgstr "Koordinačių transformavimas"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:316
+msgid ""
+"The |transformation| :guilabel:`Coordinate Transforms` tab helps you set "
+"coordinate transformations and operations to apply when loading a layer to a"
+" project or reprojecting a layer."
+msgstr ""
+"Kortelė |transformation| :guilabel:`Koordinačių transformacijos` padeda "
+"nurodyti koordinačių transformacijas ir veiksmus, vykdomus įkeliant sluoksnį"
+" į projektą ar perprojektuojant sluoksnį."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2477
 msgid "transformation"
 msgstr ""
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:325
+msgid "Transformations settings"
+msgstr "Transformacijų nustatymai"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:327
+msgid "**Default Datum Transformations**"
+msgstr "**Numatytosios datum transformacijos**"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:329
+msgid ""
+"Here you can control whether reprojecting layers to another CRS should be:"
+msgstr "Čia galite valdyti, ar perprojektuojant sluoksnius į kitą CRS reikia:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:331
 msgid "automatically processed using QGIS default transformations settings;"
@@ -648,17 +809,101 @@ msgstr ""
 "taikyti iš anksto nurodytą datum transformaciją. Daugiau informacijos rasite"
 " skyriuje :ref:`datum_transformation`."
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:339
+msgid ""
+"You can |symbologyAdd| :sup:`Add`, |symbologyRemove| :sup:`Remove` or "
+"|toggleEditing| :sup:`Edit` transformations, which will be used in any newly"
+" created project."
+msgstr ""
+"Jūs galite |symbologyAdd| :sup:`Pridėti`, |symbologyRemove| :sup:`Išimti` ar"
+" |toggleEditing| :sup:`Keisti` transformacijas, kurios bus naudojamos bet "
+"kuriame naujai sukurtame projekte."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2475
 msgid "toggleEditing"
 msgstr ""
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:345
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:355
+msgid "User Defined CRS"
+msgstr "Naudotojo apibrėžtos CRS"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:347
+msgid ""
+"The |customProjection| :guilabel:`User Defined CRS` tab helps you to define "
+"a custom CRS which must conform to a WKT or Proj string format."
+msgstr ""
+"Kortelėje |customProjection| :guilabel:`Naudotojo apibrėžtos CRS` jūs galite"
+" apibrė-ti savo CRS, kuri turi atitikti WKT arba Proj formatą."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:357
+msgid ""
+"Set a :guilabel:`Name` and use |symbologyAdd| :sup:`Add new CRS`. If you "
+"want to delete an existing one you can use |symbologyRemove| :sup:`Remove "
+"CRS`."
+msgstr ""
+"Įrašykite :guilabel:`Pavadinimą` ir spauskite |symbologyAdd| :sup:`Pridėti "
+"naują CRS`. Jei norite ištrinti jau esamą CRS, galite spausti  "
+"|symbologyRemove| :sup:`Išimti CRS`."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:360
+msgid "**Definition**"
+msgstr "**Apibrėžimas**"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:364
+msgid ":guilabel:`Format`"
+msgstr ":guilabel:`Formatas`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:363
+msgid "WKT (Recommended)"
+msgstr "WKT (Rekomenduojama)"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:364
+msgid "Proj String (Legacy - Not Recommended)"
+msgstr "Proj eilutė (senas - nerekomenduojama)"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:368
+msgid ":guilabel:`Parameters`"
+msgstr ":guilabel:`Parametrai`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:367
+msgid "|editCopy| Copy parameters from an existing CRS."
+msgstr "|editCopy| Kopijuoti parametrus iš esamos CRS."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2393
 msgid "editCopy"
 msgstr ""
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:368
+msgid ":guilabel:`Validate` tests if your expression is correct."
+msgstr ":guilabel:`Tikrinti` patikrina, ar jūsų įvesta išraiška yra teisinga."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:370
+msgid "**Test**"
+msgstr "**Tikrinti**"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:372
+msgid ""
+"Here you can test your created CRS definition by Latitude and Longitude. Use"
+" a known coordinate to control if your definition is accurate."
+msgstr ""
+"Čia galite patikrinti jūsų sukurtą CRS apibrėžimą pagal Platumą ir Ilgumą. "
+"Naudokite žinomą koordinatę, kad pamatytumėte, ar jūsų apibrėžimas yra "
+"tikslus."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:379
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:386
+msgid "Data Sources settings"
+msgstr "Duomenų šaltinių nustatymai"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:389
 msgid "**Feature attributes and table**"
 msgstr "**Geoobjektų atributai ir lentelė**"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:391
+msgid "|checkbox| :guilabel:`Open attribute table as docked window`"
+msgstr ""
+"|checkbox| :guilabel:`Atributų lenteles atverti prijungtuose languose`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:392
 msgid ""
@@ -769,6 +1014,21 @@ msgstr ""
 "|selectString| nurodo, kokio detalumo yra valdiklio informacija Naršyklės "
 "skydelio apačioje tikrinant tokius failus. Galimos parinktys yra "
 "„Netikrinti“, „Paprastas tikrinimas“ ir „Pilnas tikrinimas“."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:431
+msgid ""
+":guilabel:`Prompt for sublayers when opening`. Some rasters support "
+"sublayers --- they are called subdatasets in GDAL. An example is netCDF "
+"files --- if there are many netCDF variables, GDAL sees every variable as a "
+"subdataset. The option allows you to control how to deal with sublayers when"
+" a file with sublayers is opened. You have the following choices:"
+msgstr ""
+":guilabel:`Atidarant paprašyti posluoksnių`. Kai kurie rastrai palaiko "
+"posluoksnius --- jie GDAL'e vadinami duomenų poaibiais. Tokie, pavyzdžiui, "
+"yra netCDF failai --- jei yra daug netCDF kintamųjų, GDAL mato visus "
+"kintamuosius kaip poaibius. Ši parinktis leidžia jums valdyti, ką daryti su "
+"posluoksniais, kai atidaromas failas su posluoksniais. Jūs turite tokius "
+"pasirinkimus:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:437
 msgid "‘Always’: Always ask (if there are existing sublayers)"
