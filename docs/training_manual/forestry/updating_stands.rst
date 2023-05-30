@@ -167,131 +167,107 @@ You can add some extra information about conservation regulations that need to b
 |basic| |FA| Updating Forest Stands with Conservation Information
 -------------------------------------------------------------------------------
 
-For the area you are working in, there are some
-conservation regulations must be taken into account when doing the forest planning:
+For the area you are working in, there are some conservation regulations
+that must be taken into account when doing the forest planning:
 
-* Two locations of a protected species of Siberian flying squirrel (Pteromys volans)
-  have been identified. According to the regulation, an area of 15 meters around
-  the spots must be left untouched.
-* A riparian forest of special interest that is growing along a stream in the area must
-  be protected. In a visit to the field, it was found that 20 meters to both
-  sides of the stream must be protected.
+* Two locations of a protected species of Siberian flying squirrel (Pteromys volans) have been identified.
+  According to the regulation, an area of 15 meters around the spots must be left untouched.
+* A riparian forest of special interest that is growing along a stream in the area must be protected.
+  In a visit to the field, it was found that 20 meters to both sides of the stream must be protected.
 
 You have a vector file containing the information about the squirrel locations
-and another containing the digitized stream running from the North area towards
-the lake. Add these files to the project.
+and another containing the digitized stream running from the North area towards the lake.
 
-	#. Go to the :file:`exercise_data\\forestry\\` folder using your file manager browser
-	#. Drag and drop the files :file:`squirrel.shp` and :file:`stream.shp` to your map
+#. From the :file:`exercise_data\\forestry\\` folder, add the :file:`squirrel.shp`
+   and :file:`stream.shp` files to the project.
+#. Use the |openTable| :sup:`Open Attribute Table` tool to view the ``squirrel`` layer
 
-For the protection of the squirrels locations, you are going to add a new
-attribute (column) to your new forest stands that will contain information
-about locations that have to be protected. This information will then be
-available whenever a forest operation is planned, and the field team will be
-able to mark the area that has to be left untouched before the work starts. 
+   You can see that there are two locations that are defined as Siberian flying squirrel,
+   and that the area to be protected is indicated by a distance of 15 meters from the locations.
 
-* Use the |openTable| :sup:`Open Attribute Table` tool to view the ``squirrel`` layer
+Let's more accurately delimitate that area to protect.
+We will create a buffer around the point locations, using the protection distance.
 
-You can see that there are two locations that are defined as Siberian flying 
-squirrel, and that the area to be protected is indicated by a distance of
-15 meters from the locations.
+#. Open :menuselection:`Vector --> Geoprocessing Tools --> Buffer`.
+#. Set :guilabel:`Input layer` to |pointLayer| :guilabel:`squirrel`
+#. Set :guilabel:`Distance` to ``15 meters``
+#. Set :guilabel:`Buffered` to :file:`exercise_data\\forestry\\squirrel_15m.shp`
+#. Check |checkbox| :guilabel:`Open output file afer running algorithm`
+#. Click :guilabel:`Run`
+#. Once the process is completed, click :guilabel:`Close`
 
-To join the information about the squirrels to your forest stands, you can use
-the :guilabel:`Join attributes by location`:
+     .. figure:: img/squirrel_15m.png
+      :align: center
 
-* Open :menuselection:`Vector --> Data Management Tools --> Join attributes by location`.
-* Set :guilabel:`Base layer` to |polygonLayer| ``forest_stands_2012``
-* Set :guilabel:`Join layer` to |pointLayer| ``squirrel``
-* In :guilabel:`Geometric predicate`, check |checkbox| ``intersects``
-* Set :guilabel:`Join type` as ``Take attributes of the first matching feature only (one-to-one)``
-* Set :guilabel:`Joined layer [optional]` to ``stands_squirrel.shp``
-* Check |checkbox| ``Open output file afer running algorithm``
-
-* Click :guilabel:`Run`
-
-* Once the process is completed, click :guilabel:`Close`
-
-
-.. figure:: img/join_squirrel_point.png
-   :align: center
-
-|
-
-Now you have a new forest stands layer, |polygonLayer| ``stands_squirrel`` showing the protection information for the
-Siberian flying squirrel.
-
-* Use the |openTable| :sup:`Open Attribute Table` tool to view the ``stands_squirrel`` layer
-* Click on :guilabel:`point_pr` attribute in the table header.
-
-You can see that there are two forest stands where the squirrels have been located:
-
-.. figure:: img/joined_squirrel_point.png
-   :align: center
-
-|
-
-This is a good start, but you know that you need to create a buffer of
-15 meters around the squirrels' location:
-
-* Open :menuselection:`Vector --> Geoprocessing Tools --> Buffer`.
-* Set :guilabel:`Input layer` to |pointLayer| ``squirrel`` 
-* Set :guilabel:`Distance` to ``15`` ``meters`` 
-* Set :guilabel:`Buffered` to ``squirrel_15m.shp``
-* Check |checkbox| ``Open output file afer running algorithm``
-
-* Click :guilabel:`Run`
-
-* Once the process is completed, click :guilabel:`Close`
-
-.. figure:: img/squirrel_15m.png
-   :align: center
-
-|
-
-If you zoom in to the location in the northern part of the area, you will notice that the buffer area extends to the neighbouring stand as well. This means that
-whenever a forest operation takes place in that stand, the protected
-location should also be taken into account.
+If you zoom in to the location in the northern part of the area,
+you will notice that the buffer area extends over two neighbouring stands.
+This means that whenever a forest operation takes place in that stand,
+the protected location should also be taken into account.
 
 .. figure:: img/north_squirrel_buffer.png
    :align: center
 
 |
 
-From your previous analysis, the neighbouring stand did not contain information
-about the protection status. To change this:
+For the protection of the squirrels locations, you are going to add a new
+attribute (column) to your new forest stands that will contain information
+about locations that have to be protected. This information will then be
+available whenever a forest operation is planned, and the field team will be
+able to mark the area that has to be left untouched before the work starts.
 
-* Run the :guilabel:`Join attributes by location` tool again.
-* This time, set :guilabel:`Join layer` to |polygonLayer| ``squirrel_15m``
+To join the information about the squirrels to your forest stands,
+you can use the :guilabel:`Join attributes by location` algorithm:
 
-* Set :guilabel:`Joined layer [optional]` to ``stands_squirrel_15m.shp``.
+#. Open :menuselection:`Vector --> Data Management Tools --> Join attributes by location`.
+#. Set :guilabel:`Join to features in` to |polygonLayer| :guilabel:`forest_stands_2012`
+#. In :guilabel:`Geometric predicate`, check |checkbox| :guilabel:`intersect`
+#. Set :guilabel:`By comparing to` to |polygonLayer| :guilabel:`squirrel_15m`
+#. Set :guilabel:`Join type` as :guilabel:`Take attributes of the first matching feature only (one-to-one)`
+#. Leave unchecked :guilabel:`Discard records which could not be joined`
+#. Set :guilabel:`Joined layer` to :file:`exercise_data\\forestry\\stands_squirrel.shp`
+#. Check |checkbox| :guilabel:`Open output file afer running algorithm`
+#. Click :guilabel:`Run`
+#. Once the process is completed, you can :guilabel:`Close` the dialog.
 
-.. figure:: img/joined_squirrel_buffer.png
-   :align: center
+   .. figure:: img/joined_squirrel_buffer.png
+      :align: center
 
-|
+Now you have a new forest stands layer, :file:`stands_squirrel.shp`
+showing the protection information for the Siberian flying squirrel.
 
-When you open the attribute table for the new layer, you will see that there are now 
-three forest stands that have the information about the protection locations.
-The information in the forest stands data will indicate to the forest manager
-that there are protection considerations to be taken into account. Then he or
-she can get the location from the :kbd:`squirrel` dataset, and visit the area
-to mark the corresponding buffer around the location so that the operators in
-the field can avoid disturbing the squirrels environment.
+#. Open the attribute table of the ``stands_squirrel`` layer
+#. Sort the table by clicking on :guilabel:`point_pr` field in the table header.
+
+   .. figure:: img/stands_squirrel_table.png
+      :align: center
+
+   You can see that there are some forest stands that have the information
+   about the protection locations.
+   The information in the forest stands data will indicate to the forest manager
+   that there are protection considerations to be taken into account.
+   Then he or she can get the location from the :guilabel:`squirrel` dataset,
+   and visit the area to mark the corresponding buffer around the location
+   so that the operators in the field can avoid disturbing the squirrels environment.
+
+.. Todo? Consider doing an intersection between the buffer and stands layers
+ to actually delimitate area people should not go to?
+
 
 |basic| |TY| Updating Forest Stands with Distance to the Stream
 -------------------------------------------------------------------------------
 
 Following the same approach as for the protected squirrel locations
-you can now update your forest stands with protection information related to
-the stream. A few points:
+you can now update your forest stands with protection information related to the stream.
+A few points:
 
 * Remember the buffer is ``20`` meters around the stream
 * You want to have all the protection information in the same vector file,
-  so use |polygonLayer| ``stands_squirrel_15m`` as the Base layer
-* Name your output as ``forest_stands_2012_protect.shp``
+  so use :file:`stands_squirrel.shp` as the base layer
+* Name your output as :file:`forest_stands_2012_protect.shp`
 
-Once the process is completed, open the attribute table for ``forest_stands_2012_protect`` and confirm that you have
-all the protection information for the riparian forest stands associated with the stream.
+Once the process is completed, open the attribute table of the output layer
+and confirm that you have all the protection information for the riparian forest stands
+associated with the stream.
 
 When you are happy with the results, save your QGIS project.
 
